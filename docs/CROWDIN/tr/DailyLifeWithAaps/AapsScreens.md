@@ -1,4 +1,4 @@
-# AAPS screens
+# AAPS ekranları
 
 ```{contents}
 :backlinks: entry
@@ -7,33 +7,33 @@
 
 (the-homescreen)= (AapsScreens-the-homescreen)=
 
-## The main screen
+## Ana ekran
 
-![Main screen](../images/Home_Homescreen.png)
+![Ana ekran](../images/Home_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+Bu, **AAPS**'i açtığınızda karşılaşacağınız ilk ekrandır ve günlük olarak ihtiyaç duyacağınız bilgilerin çoğunu içerir.
 
-### Section A - Top bar
+### Bölüm A - Üst çubuk
 
-* The **menu** (☰) on the left opens the navigation drawer with **Treatments history**, **History browser**, **Statistics**, **Profile helper**, **Maintenance**, **Setup Wizard**, **Configuration** and more.
-* The **search bar** finds settings, dialogs and documentation — just start typing (see [Global search](../DailyLifeWithAaps/GlobalSearch.md)).
-* The **Settings** (gear) icon on the right opens all [settings](../SettingUpAaps/Preferences.md).
+* Soldaki **menü** (☰), **Tedavi geçmişi**, **Geçmiş tarayıcısı**, **İstatistikler**, **Profil yardımcısı**, **Bakım**, **Kurulum Sihirbazı**, **Konfigürasyon** ve diğer öğeleri içeren gezinme çekmecesini açar.
+* **Arama çubuğu** ayarları, iletişim kutularını ve dokümantasyonu bulur; yazmaya başlamanız yeterlidir (bkz. [Genel arama](../DailyLifeWithAaps/GlobalSearch.md)).
+* Sağdaki **Ayarlar** (dişli) simgesi tüm [ayarları](../SettingUpAaps/Preferences.md) açar.
 
 (aaps-screens-profile--target)=
 
-### Section B - Status block
+### Bölüm B - Durum bloğu
 
 #### Current blood glucose
 
-The latest blood glucose reading from your CGM is shown in the big circle on the left, together with the difference to the previous reading (delta) and the age of the reading.
+CGM'nizden gelen son kan şekeri ölçümü, soldaki büyük dairede gösterilir; yanında önceki ölçüme göre fark (delta) ve ölçümün yaşı yer alır.
 
-The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
+KŞ değerinin rengi, tanımlanan [aralığa](#Preferences-range-for-visualization) göre durumu yansıtır.
 
-* green = in range
-* red = below range
-* yellow = above range
+* yeşil = aralık içerisinde
+* kırmızı = aralığın altında
+* sarı = aralığın üstünde
 
-![BG circle in range, green](../images/Home_Delta.png) ![BG circle above range, yellow](../images/Home_Delta_high.png) ![BG circle below range, red](../images/Home_Delta_low.png)
+![Aralık içinde KŞ dairesi, yeşil](../images/Home_Delta.png) ![Aralığın üstünde KŞ dairesi, sarı](../images/Home_Delta_high.png) ![Aralığın altında KŞ dairesi, kırmızı](../images/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
@@ -41,348 +41,348 @@ The color of the BG value reflects the status to the defined [range](#Preference
 
 ![Loop status](../images/Home2020_LoopStatus.png)
 
-Next to the BG circle, an icon shows the running mode of the loop (from top to bottom in the picture):
+KŞ dairesinin yanındaki bir simge, döngünün çalışma modunu gösterir (resimde yukarıdan aşağıya):
 
-1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
-3. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
-4. Red circle with cross = loop disabled (not working permanently)
-5. Red pause icon = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown next to the icon
-6. Grey circle with plug = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown next to the icon
+1. Yeşil daire = [kapalı döngü](#KeyAapsFeatures-ClosedLoop), döngü çalışıyor
+2. Noktalı çizgili mor daire = [düşük glikoz duraklatma (LGS)](#KeyAapsFeatures-LGS)
+3. Noktalı çizgili mavi daire = [açık döngü](#KeyAapsFeatures-OpenLoop)
+4. Çarpılı kırmızı daire = döngü devre dışı (kalıcı olarak çalışmıyor)
+5. Kırmızı duraklatma simgesi = döngü askıya alındı (geçici olarak durdu ama bazal insülin verilir) - kalan süre simgenin yanında gösterilir
+6. Fişli gri daire = pompa bağlantısı kesildi (geçici olarak hiç insülin verilmez) - kalan süre simgenin yanında gösterilir
 
-Press the icon to open the Loop dialog. The dialog's content depends on the current state:
+Döngü iletişim kutusunu açmak için simgeye basın. İletişim kutusunun içeriği mevcut duruma bağlıdır:
 
-* While the loop is **running** (closed, open or LGS), you can switch the running mode (Closed Loop, Low Glucose Suspend, Open Loop or Disable loop), **suspend** the loop or **disconnect** the pump for a chosen duration.
-* While the loop is **disabled**, you can re-enable it by selecting a running mode, or disconnect the pump.
-* While the loop is **suspended**, you can **resume** it, disconnect the pump, or pick a new duration under **Suspend loop** to extend the suspension.
-* While the pump is **disconnected**, you can **reconnect** the pump, or pick a new duration under **Disconnect pump** to extend the disconnection.
+* Döngü **çalışırken** (kapalı, açık veya LGS), çalışma modunu değiştirebilir (Kapalı Döngü, Düşük Glikoz Duraklatma, Açık Döngü veya Döngüyü devre dışı bırak), seçilen bir süre için döngüyü **askıya alabilir** veya pompanın **bağlantısını kesebilirsiniz**.
+* Döngü **devre dışıyken**, bir çalışma modu seçerek onu yeniden etkinleştirebilir veya pompanın bağlantısını kesebilirsiniz.
+* Döngü **askıya alınmışken**, ona **devam edebilir**, pompanın bağlantısını kesebilir veya askıya almayı uzatmak için **Döngüyü askıya al** altında yeni bir süre seçebilirsiniz.
+* Pompanın **bağlantısı kesilmişken**, pompayı **tekrar bağlayabilir** veya bağlantı kesmeyi uzatmak için **Pompa bağlantısını kes** altında yeni bir süre seçebilirsiniz.
 
-When you extend a suspension or a disconnection, the new duration **starts from now**: it replaces the remaining time, it is not added to it. You do not have to resume or reconnect first.
+Askıya almayı veya bağlantı kesmeyi uzattığınızda yeni süre **şimdiden başlar**: kalan sürenin yerine geçer, ona eklenmez. Önce devam etmeniz veya tekrar bağlamanız gerekmez.
 
-The dialog while the loop is running in closed loop:
+Döngü kapalı döngüde çalışırken iletişim kutusu:
 
-![Loop dialog in closed loop](../images/loop/loop_dialog_closed_loop.png)
+![Kapalı döngüde döngü iletişim kutusu](../images/loop/loop_dialog_closed_loop.png)
 
-The dialog while the loop is suspended, with **Resume** and the durations to extend the suspension:
+Döngü askıya alınmışken, **Devam et** ve askıya almayı uzatma süreleriyle iletişim kutusu:
 
-![Loop dialog while the loop is suspended](../images/loop/loop_dialog_suspended.png)
+![Döngü askıya alınmışken döngü iletişim kutusu](../images/loop/loop_dialog_suspended.png)
 
-The dialog while the pump is disconnected, with **Reconnect Pump** and the durations to extend the disconnection:
+Pompanın bağlantısı kesilmişken, **Pompayı tekrar bağla** ve bağlantı kesmeyi uzatma süreleriyle iletişim kutusu:
 
-![Loop dialog while the pump is disconnected](../images/loop/loop_dialog_disconnected.png)
+![Pompanın bağlantısı kesilmişken döngü iletişim kutusu](../images/loop/loop_dialog_disconnected.png)
 
-The dialog in Low Glucose Suspend, in open loop and while the loop is disabled only differs in the running modes it offers:
+Düşük Glikoz Duraklatma modunda, açık döngüde ve döngü devre dışıyken iletişim kutusu yalnızca sunduğu çalışma modlarında farklıdır:
 
-![Loop dialog in Low Glucose Suspend](../images/loop/loop_dialog_lgs.png)
+![Düşük Glikoz Duraklatma modunda döngü iletişim kutusu](../images/loop/loop_dialog_lgs.png)
 
-![Loop dialog in open loop](../images/loop/loop_dialog_open_loop.png)
+![Açık döngüde döngü iletişim kutusu](../images/loop/loop_dialog_open_loop.png)
 
-![Loop dialog while the loop is disabled](../images/loop/loop_dialog_disabled.png)
+![Döngü devre dışıyken döngü iletişim kutusu](../images/loop/loop_dialog_disabled.png)
 
-This is how the main screen looks in each mode. The color band at the top of the graph changes at the time of the switch.
+Ana ekran her modda böyle görünür. Grafiğin üstündeki renk şeridi, geçiş anında değişir.
 
-Low Glucose Suspend:
+Düşük Glikoz Duraklatma:
 
-![Main screen in Low Glucose Suspend](../images/main/main_screen_loop_lgs.png)
+![Düşük Glikoz Duraklatma modunda ana ekran](../images/main/main_screen_loop_lgs.png)
 
-Open loop:
+Açık Döngü:
 
-![Main screen in open loop](../images/main/main_screen_loop_open.png)
+![Açık döngüde ana ekran](../images/main/main_screen_loop_open.png)
 
-Loop disabled:
+Döngü devre dışı:
 
-![Main screen with the loop disabled](../images/main/main_screen_loop_disabled.png)
+![Döngü devre dışıyken ana ekran](../images/main/main_screen_loop_disabled.png)
 
-Loop suspended — the remaining time is shown next to the icon:
+Döngü askıya alındı — kalan süre simgenin yanında gösterilir:
 
-![Main screen with the loop suspended](../images/main/main_screen_loop_suspended.png)
+![Döngü askıya alınmışken ana ekran](../images/main/main_screen_loop_suspended.png)
 
-Pump disconnected — the remaining time is shown next to the icon. The treatment buttons stay in the QuickLaunch toolbar, so you can still record insulin given with a pen or carbs:
+Pompa bağlantısı kesildi — kalan süre simgenin yanında gösterilir. Tedavi düğmeleri Hızlı Başlatma araç çubuğunda kalır; böylece kalemle verilen insülini veya karbonhidratları yine de kaydedebilirsiniz:
 
-![Main screen with the pump disconnected](../images/main/main_screen_pump_disconnected.png)
+![Pompanın bağlantısı kesilmişken ana ekran](../images/main/main_screen_pump_disconnected.png)
 
-A validation is required after each selection.
+Her seçimden sonra bir onay gerekir.
 
-```{admonition} Alarm: the pump did not accept the zero temp basal :class: warning While the pump is disconnected, **AAPS** keeps a zero temporary basal on the pump and sets it again if it is missing. If this still fails after 10 minutes, **AAPS** raises an urgent alarm: *"The pump did not accept the zero temp basal. It may still be giving basal insulin. Check the pump."* The alarm repeats every 15 minutes until the zero temporary basal is set or the disconnection ends. If you see it, check your pump: it may be delivering basal insulin although **AAPS** shows it as disconnected.
+```{admonition} Alarm: pompa sıfır geçici bazalı kabul etmedi :class: warning Pompanın bağlantısı kesilmişken **AAPS** pompada sıfır geçici bazal tutar ve eksikse yeniden ayarlar. Bu 10 dakika sonra hâlâ başarısız olursa **AAPS** acil bir alarm verir: *"Pompa sıfır geçici bazalı kabul etmedi. Hâlâ bazal insülin veriyor olabilir. Pompayı kontrol edin."* Alarm, sıfır geçici bazal ayarlanana veya bağlantı kesme bitene kadar her 15 dakikada bir tekrarlanır. Bu alarmı görürseniz pompanızı kontrol edin: **AAPS** bağlantının kesildiğini gösterse de pompa bazal insülin veriyor olabilir.
 
-    <br />Note: the modes offered depend on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) — Closed Loop and LGS only become available as you complete them.
+    <br />Not: Sunulan modlar [Görevler](../SettingUpAaps/CompletingTheObjectives.md) içindeki ilerlemenize bağlıdır — Kapalı Döngü ve LGS ancak görevleri tamamladıkça kullanılabilir hale gelir.
     
     (aaps-screens-bg-warning-sign)=
-    #### BG warning sign
+    #### KŞ uyarı işareti
     
-    If **AAPS** detects a problem with the BG readings it receives, a shortcut to your BG source (named after it, for example **xDrip+ BG**) appears in the bottom bar of the main screen, with a red warning badge. Tap it to open the [BG source screen](#aaps-screens-bg-source).
+    **AAPS** aldığı KŞ ölçümlerinde bir sorun algılarsa, ana ekranın alt çubuğunda KŞ kaynağınıza giden bir kısayol (kaynağın adını taşır, örneğin **xDrip+ KŞ**) kırmızı bir uyarı rozetiyle görünür. [KŞ kaynağı ekranını](#aaps-screens-bg-source) açmak için ona dokunun.
     
-    ##### Duplicate BG data
+    ##### Yinelenen KŞ verileri
     
-    The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which prevents the loop from doing its work right. **AAPS** cannot calculate your BG trend reliably from duplicated readings, so it stops correcting.
+    Kırmızı uyarı işareti, hemen harekete geçmeniz gerektiğini bildirir: **Yinelenen KŞ verileri** alıyorsunuz ve bu, döngünün işini doğru yapmasını engeller. **AAPS** yinelenen ölçümlerden KŞ eğiliminizi güvenilir şekilde hesaplayamaz, bu yüzden düzeltme yapmayı durdurur.
     
-    If your loop was closed, **AAPS** switches it to [Low Glucose Suspend (LGS)](#KeyAapsFeatures-LGS) mode: the loop icon turns purple.
+    Döngünüz kapalıysa **AAPS** onu [Düşük Glikoz Duraklatma (LGS)](#KeyAapsFeatures-LGS) moduna geçirir: döngü simgesi mor olur.
     
-      ![Duplicate BG data: LGS loop icon and the BG source shortcut with a red warning badge](../images/bg_warn_red.png)
+      ![Yinelenen KŞ verileri: LGS döngü simgesi ve kırmızı uyarı rozetli KŞ kaynağı kısayolu](../images/bg_warn_red.png)
     
-    Press the loop icon: the **Constraints** card at the top tells you why: "BgQualityCheck: LGS mode due to doubled values in BG source".
+    Döngü simgesine basın: üstteki **Kısıtlamalar** kartı nedenini söyler: "BgQualityCheck: KŞ kaynağında iki katına çıkmış değerler nedeniyle LGS modu".
     
-      ![Running mode dialog: LGS due to doubled values](../images/main/bg_doubled_constraint.png)
+      ![Çalışma modu iletişim kutusu: iki katına çıkmış değerler nedeniyle LGS](../images/main/bg_doubled_constraint.png)
     
-    ```{admonition} Your loop is running in Low Glucose Suspend
+    ```{admonition} Döngünüz Düşük Glikoz Duraklatma modunda çalışıyor
     :class: note
-    Your loop keeps running, but only to protect you against lows: **AAPS** can still reduce or suspend your basal, and it will not give any correction insulin until you solve this issue !
+    Döngünüz çalışmaya devam eder, ancak yalnızca sizi düşük şekerlere karşı korumak için: **AAPS** bazalınızı yine azaltabilir veya durdurabilir, ancak bu sorunu çözene kadar hiç düzeltme insülini vermez!
     
 
 Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
-* Last resort: In [NSClient settings](#Preferences-nsclient), select the Synchronization settings and disable the "Receive CGM data from NS" option.
+* Nightscout sitenizde Dexcom bridge etkin mi? Nightscout kurulumunuzun yönetim panelinde "enable" değişkenini düzenleyin ve oradaki "bridge" kısmını silerek bridge'i devre dışı bırakın. (Heroku için [ayrıntıları burada bulabilirsiniz](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* KŞ'nizi Nightscout'a birden fazla kaynak mı yüklüyor? BYODA uygulamasını kullanıyorsanız, yüklemeyi **AAPS**'te etkinleştirin, ancak xDrip kullanıyorsanız orada etkinleştirmeyin.
+* KŞ'nizi alan ama onu Nightscout sitenize tekrar yükleyen takipçileriniz var mı?
+* Son çare: [NSClient ayarlarında](#Preferences-nsclient) Senkronizasyon ayarlarını seçin ve "NS'den CGM verilerini al" seçeneğini devre dışı bırakın.
 
-To remove the warning immediately and get your loop correcting again, delete the duplicate entries from the BG source screen: tap the shortcut in the bottom bar. The duplicate reading is highlighted in red. Long press a reading to start selecting, tick the duplicates and tap the trash icon at the top right.
+Uyarıyı hemen kaldırmak ve döngünün yeniden düzeltme yapmasını sağlamak için yinelenen kayıtları KŞ kaynağı ekranından silin: alt çubuktaki kısayola dokunun. Yinelenen ölçüm kırmızı ile vurgulanır. Seçmeye başlamak için bir ölçüme uzun basın, yinelenenleri işaretleyin ve sağ üstteki çöp kutusu simgesine dokunun.
 
-![BG source screen: duplicates selected for deletion](../images/main/bg_source_delete_duplicates.png)
+![KŞ kaynağı ekranı: silmek için seçilmiş yinelenen ölçümler](../images/main/bg_source_delete_duplicates.png)
 
 Ancak, çok sayıda kopya olduğunda, aşağıdakileri yapmak daha kolay olabilir
 
-* [backup your settings](../Maintenance/ExportImportSettings.md),
+* [ayarlarınızı yedekleyin](../Maintenance/ExportImportSettings.md),
 * bakım menüsünde veritabanınızı sıfırlayın ve
-* [import your settings](../Maintenance/ExportImportSettings.md) again
+* [ayarlarınızı](../Maintenance/ExportImportSettings.md) tekrar içe aktarın
 
-    {admonition} Switch back to Closed Loop yourself
+    {admonition} Kapalı Döngü'ye kendiniz geri dönün
     :class: important
-    **AAPS** does not return to **Closed Loop** on its own once the duplicates are gone. Press the loop icon on the main screen and select **Closed Loop** again.
+    Yinelenen veriler gittikten sonra **AAPS** kendiliğinden **Kapalı Döngü**'ye geri dönmez. Ana ekrandaki döngü simgesine basın ve tekrar **Kapalı Döngü**'yü seçin.
 
-##### Flat BG data
+##### Düz KŞ verileri
 
-With some BG sources (Libre 1, AiDEX, Glutec, Medtronic and sources that do not report their sensor type), **AAPS** also checks for readings that do not change: if your BG has changed by less than 2 mg/dL (0.1 mmol/L) for 45 minutes, the data is considered wrong. The BG source shortcut then shows a red flat-trend badge, and the loop stops any high temporary basal and gives no correction insulin until the readings change again. Check your sensor and the app that sends the readings.
+Bazı KŞ kaynaklarında (Libre 1, AiDEX, Glutec, Medtronic ve sensör tipini bildirmeyen kaynaklar) **AAPS** değişmeyen ölçümleri de kontrol eder: KŞ'niz 45 dakika boyunca 2 mg/dL'den (0,1 mmol/L) az değiştiyse veriler yanlış kabul edilir. Bu durumda KŞ kaynağı kısayolunda kırmızı bir düz eğilim rozeti görünür ve döngü, ölçümler tekrar değişene kadar yüksek geçici bazalları durdurur ve hiç düzeltme insülini vermez. Sensörünüzü ve ölçümleri gönderen uygulamayı kontrol edin.
 
-##### Irregular BG data
+##### Düzensiz KŞ verileri
 
-When readings arrive at irregular intervals or some are missing, **AAPS** recalculates 5-minute values from the readings it has. This happens for example after a sensor change, or with Libre sensors, whose timing slips a minute or two every few hours. The loop keeps working and you do not have to take any action. **AAPS** 4 no longer shows a yellow warning sign for this.
+Ölçümler düzensiz aralıklarla geldiğinde veya bazıları eksik olduğunda **AAPS**, elindeki ölçümlerden 5 dakikalık değerleri yeniden hesaplar. Bu örneğin bir sensör değişiminden sonra veya zamanlaması birkaç saatte bir bir iki dakika kayan Libre sensörlerinde olur. Döngü çalışmaya devam eder ve sizin bir şey yapmanız gerekmez. **AAPS** 4 bunun için artık sarı bir uyarı işareti göstermez.
 
 #### Current Profile
 
-The current profile is displayed next to the star icon.
+Geçerli profil yıldız simgesinin yanında gösterilir.
 
-Tap the profile name to open the [Profile screen](#aaps-screens-profile), where you can view the profile details and [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Profil ayrıntılarını görebileceğiniz ve [farklı profiller arasında geçiş yapabileceğiniz](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) [Profil ekranını](#aaps-screens-profile) açmak için profil adına dokunun.
 
-To **change the profile percentage** (and its duration), tap the profile name, then tap the round **▶** (Activate) button at the bottom right of the Profile screen. In **AAPS** 3.x this screen opened with a long press on the profile name; in **AAPS** 4 a long press does nothing. Step by step: [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+**Profil yüzdesini değiştirmek** (ve süresini ayarlamak) için profil adına dokunun, sonra Profil ekranının sağ altındaki yuvarlak **▶** (Etkinleştir) düğmesine dokunun. **AAPS** 3.x'te bu ekran profil adına uzun basılarak açılırdı; **AAPS** 4'te uzun basmanın bir etkisi yoktur. Adım adım: [Profil yüzdesini değiştirme](#ProfileSwitch-change-percentage).
 
-![Profile with an active profile switch](../images/Home2020_ProfileSwitch.png)
+![Etkin profil değişimi olan profil](../images/Home2020_ProfileSwitch.png)
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a specific percentage of 90% and a remaining duration of 9 minutes — the profile name turns yellow while a temporary profile switch is running.
-3. Profile switch with a time shift of 1 hour and a remaining duration of 9 minutes.
+1. Standart profil etkinleştirmesiyle normal görünüm.
+2. %90 yüzdeli ve 9 dakika kalan süreli profil değişimi — geçici bir profil değişimi çalışırken profil adı sarıya döner.
+3. 1 saatlik zaman kaydırmalı ve 9 dakika kalan süreli profil değişimi.
 
 #### Target
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Geçici hedefin kalan süresi](../images/Home2020_TT.png)
 
-The current target blood glucose level is displayed below the profile name.
+Geçerli hedef kan şekeri seviyesi profil adının altında gösterilir.
 
-Short press the target to open the **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)** screen.
+**[Geçici Hedef](../DailyLifeWithAaps/TempTargets.md)** ekranını açmak için hedefe kısa basın.
 
-1. Regular display: the target range defined in your profile.
-2. If a temp target is set, the target turns yellow/orange with the icon of the used preset, and the remaining time in minutes is shown in brackets.
+1. Normal görünüm: profilinizde tanımlanan hedef aralığı.
+2. Geçici hedef ayarlıysa hedef, kullanılan ön ayarın simgesiyle birlikte sarı/turuncu olur ve kalan süre dakika olarak parantez içinde gösterilir.
 
 (AapsScreens-visualization-of-dynamic-target-adjustment)=
 
 #### Visualization of Dynamic target adjustment
 
-When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+[SMB algoritması](#Config-Builder-aps) ve [Otoduyarlılık](#Open-APS-features-autosens) işlevi kullanıldığında **AAPS**, hedefinizi duyarlılığa göre dinamik olarak ayarlayabilir.
 
-Enable either one or both of the following options in [OpenAPS SMB settings](#Preferences-openaps-smb-settings):
+[OpenAPS SMB ayarlarında](#Preferences-openaps-smb-settings) aşağıdaki seçeneklerden birini veya ikisini etkinleştirin:
 
-* "Sensitivity raises target" and/or
-* "Resistance lowers target"
+* "Duyarlılık hedefi yükseltir" ve/veya
+* "Direnç hedefi düşürür"
 
-If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile, and the displayed target changes color to indicate the adjustment.
+**AAPS** direnç veya duyarlılık algılarsa hedef, profilde ayarlanandan farklı olur ve gösterilen hedefin rengi bu ayarlamayı belirtmek için değişir.
 
 (aaps-screens-iob-cob-basal-sens)=
 
-#### IOB, COB, basal and sensitivity
+#### AİNS, AKRB, bazal ve duyarlılık
 
-![IOB, COB, basal and sensitivity](../images/Home2020_TBR.png)
+![AİNS, AKRB, bazal ve duyarlılık](../images/Home2020_TBR.png)
 
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
+1. **Şırınga**: aktif insülin (AİNS) - vücudunuzdaki aktif insülin miktarı  
+    Yalnızca standart bazalınız çalışıyor olsaydı ve önceki boluslardan kalan insülin olmasaydı, aktif insülin değeri sıfır olurdu. 
     * Yakın zamanda bazalınız düşürülmüşse, (AİNS) aktif insülin negatif olabilir.
-    * Press the chip to see the split of bolus and basal insulin (first dialog in the picture — here with a negative IOB after a period of reduced basal)
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before
-3. The teal button on the right reflects the **current basal delivery**: a flat line when the profile basal is running, a changed icon while a temporary basal rate is active
-4. The **percentage row** shows the current sensitivity ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)). When the loop changes your ISF, the row also shows the profile ISF, an arrow and the ISF the loop uses now, for example "80% 2.0 ↗ 2.5". Press it to see the Autosens value and the effective ISF (second dialog in the picture). If the loop works with a different value than the last Autosens result (for example because a temp target changes your sensitivity), the dialog also shows that value as **Autosens in algorithm**. When Autosens is off, the loop keeps your profile ISF and no effective ISF is shown.
+    * Bolus ve bazal insülinin dağılımını görmek için çipe basın (resimdeki ilk iletişim kutusu — burada azaltılmış bazal döneminden sonra negatif AİNS ile)
+2. **Başak**: [aktif karbonhidrat (AKRB)](../DailyLifeWithAaps/CobCalculation.md) - daha önce yediğiniz, henüz emilmemiş karbonhidratlar
+3. Sağdaki camgöbeği düğme **mevcut bazal iletimini** yansıtır: profil bazalı çalışırken düz bir çizgi, geçici bazal oranı etkinken değişen bir simge
+4. **Yüzde satırı** mevcut duyarlılığı gösterir ([Otoduyarlılık](#Open-APS-features-autosens) / [Dinamik İDF](../DailyLifeWithAaps/DynamicISF.md)). Döngü İDF'nizi değiştirdiğinde satır, profil İDF'sini, bir oku ve döngünün şu anda kullandığı İDF'yi de gösterir, örneğin "80% 2,0 ↗ 2,5". Otoduyarlılık değerini ve etkin İDF'yi görmek için ona basın (resimdeki ikinci iletişim kutusu). Döngü son Otoduyarlılık sonucundan farklı bir değerle çalışıyorsa (örneğin geçici bir hedef duyarlılığınızı değiştirdiği için), iletişim kutusu bu değeri **Algoritmadaki otoduyarlılık** olarak da gösterir. Otoduyarlılık kapalıyken döngü profil İDF'nizi korur ve etkin İDF gösterilmez.
 
-The IOB dialog, opened by pressing the IOB chip:
+AİNS çipine basılarak açılan AİNS iletişim kutusu:
 
-![IOB dialog with bolus IOB and basal IOB](../images/main/main_chip_iob.png)
+![Bolus AİNS'i ve bazal AİNS'i ile AİNS iletişim kutusu](../images/main/main_chip_iob.png)
 
-Press the teal button to see the temporary basal rate that is running, when it started and how long it has been running:
+Çalışan geçici bazal oranını, ne zaman başladığını ve ne kadar süredir çalıştığını görmek için camgöbeği düğmeye basın:
 
-![Temp basal dialog](../images/main/main_chip_temp_basal.png)
+![Geçici bazal iletişim kutusu](../images/main/main_chip_temp_basal.png)
 
 (aaps-screens-carbs-required)=
 
 #### Karbonhidrat İhtiyacı
 
-![Carbs required shown in the COB chip](../images/main/main_screen_carbs_required.png)
+![AKRB çipinde gösterilen gerekli karbonhidrat](../images/main/main_screen_carbs_required.png)
 
-Algoritma, Kş'nizin çok düşmesini önlemek için bir şeyler yemeniz gerektiğini anlarsa, önerilen karbonhidrat miktarı görüntülenir.
+Referans tasarım karbonhidrat gerektiğini algıladığında karbonhidrat önerileri verilir.
 
-This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
+Bu durumda oref algoritması sizi sıfır geçici bazal ile kurtaramayacağını düşünür ve düzeltmek için karbonhidrat almanız gerekir.
 
-Karbonhidrat bildirimleri, bolus hesaplayıcılardan çok daha karmaşıktır. You might see a carbs suggestion while the bolus calculator does not show missing carbs.
+Karbonhidrat bildirimleri, bolus hesaplayıcısının bildirimlerinden çok daha gelişmiştir. Bolus hesaplayıcısı eksik karbonhidrat göstermezken bir karbonhidrat önerisi görebilirsiniz.
 
-İstenirse karbonhidrat ihtiyacı bildirimleri Nightscout'a iletilebilir, bu durumda bir anons gösterilir ve yayınlanır.
+İstenirse karbonhidrat ihtiyacı bildirimleri Nightscout'a gönderilebilir; bu durumda bir duyuru gösterilir ve yayınlanır.
 
-### Section C - Status row
+### Bölüm C - Durum satırı
 
-![Status row](../images/Home2020_StatusLights.png)
+![Durum satırı](../images/Home2020_StatusLights.png)
 
-The status row gives a visual warning for
+Durum satırı şunlar için görsel uyarı verir
 
 * Kanül yaşı
-* Insulin age (days reservoir is used) and reservoir level (units)
+* İnsülin yaşı (rezervuarın kaç gündür kullanıldığı) ve rezervuar seviyesi (ünite)
 * Sensör yaşı
-* Pump battery age and level (%)
+* Pompa pili yaşı ve seviyesi (%)
 
 Eşik uyarısı aşılırsa değerler sarı renkte gösterilecektir.
 
 Kritik eşik aşılırsa değerler kırmızı ile gösterilir.
 
-The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+Yaş, ekran boyutu ne olursa olsun her zaman kısa biçimde gösterilir: ilk gün *4h*, daha sonra *3d4h*.
 
-Thresholds can be changed via the small **Settings** icon shown when the status row is **expanded** (chevron on the right) — see [Status lights](#Preferences-status-lights).
+Eşikler, durum satırı **genişletildiğinde** (sağdaki ok) görünen küçük **Ayarlar** simgesiyle değiştirilebilir — bkz. [Durum ışıkları](#Preferences-status-lights).
 
-The expanded status panel also has a button at the end of some rows to record a change, which resets the corresponding age: **Add** on the **Sensor** row records a sensor insertion. If your pump supports it, **Prime/Fill** appears on the **Cannula** (or **Patch pump**) and **Insulin** rows, and **Add** on the **Pump battery** row.
+Genişletilmiş durum panelinde bazı satırların sonunda, bir değişimi kaydeden ve ilgili yaşı sıfırlayan bir düğme de vardır: **Sensör** satırındaki **Ekle** bir sensör yerleştirmeyi kaydeder. Pompanız destekliyorsa **Kanül** (veya **Patch pompa**) ve **İnsülin** satırlarında **Hazırla/doldur**, **Pompa pili** satırında ise **Ekle** görünür.
 
-![Expanded status panel with Prime/Fill on the Cannula and Insulin rows and Add on the Sensor and Pump battery rows](../images/main/main_status_row_expanded.png)
+![Kanül ve İnsülin satırlarında Hazırla/doldur, Sensör ve Pompa pili satırlarında Ekle olan genişletilmiş durum paneli](../images/main/main_status_row_expanded.png)
 
-Depending on the pump you use, you may not have all of these icons.
+Kullandığınız pompaya bağlı olarak bu simgelerin hepsini göremeyebilirsiniz.
 
 (screens-sensor-level-battery)=
 
 #### Sensör seviyesi (pil)
 
-Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically sensor has to send battery level information to xDrip.)
+MiaoMiao 2 gibi ek bir vericisi olan CGM'lerde çalışır. (Teknik olarak sensörün pil seviyesi bilgisini xDrip'e göndermesi gerekir.)
 
-Thresholds can be set in [Status lights](#Preferences-status-lights).
+Eşikler [Durum ışıkları](#Preferences-status-lights) içinde ayarlanabilir.
 
 (aaps-screens-main-graph)=
 
-### Section D - Main graph
+### Bölüm D - Ana grafik
 
-![Main graph](../images/main/main_graph.png)
+![Ana grafik](../images/main/main_graph.png)
 
-The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
+Grafik, glikoz monitörünüzden (CGM) okunan kan şekerinizi (KŞ) gösterir.
 
-Use scroll and pinch-zoom gestures on the graph to change the visible time frame.
+Görünen zaman aralığını değiştirmek için grafikte kaydırma ve iki parmakla yakınlaştırma hareketlerini kullanın.
 
 Yeşil alan hedef aralığınızı yansıtmaktadır.
 
-This information is also shown on this graph :
+Bu bilgiler de bu grafikte gösterilir:
 
-* Manual boluses: blue triangle just above the BG curve, pointing down at the reading of that moment, with the insulin amount
-* Carbs entries: orange triangle just below the BG curve, pointing up at the reading, with the carb amount. A meal entered with its bolus looks like one marker, split by the reading.
-* The triangles come in three sizes (small, medium, large), following the amount compared with the largest of the day. If there is no BG reading at that time (sensor gap), the triangle is drawn at the bottom of the graph.
-* BG checks and calibrations: drawn at their own measured value, so you can compare them with the sensor curve
-* Target as defined in the profile or modified by temporary target: green line
-* Profile switches: star icons at the top of the graph
-* Loop status: color band at the top of the graph when the [running mode](#AapsScreens-loop-status) is anything else than closed loop: blue = open loop, purple = LGS, red = loop disabled, yellow = loop suspended, grey = pump disconnected, orange = superbolus (in the screenshot: purple, then yellow). The history of these changes is listed in [Running mode](#AapsScreens-running-mode)
-* [SMBs](#Open-APS-features-super-micro-bolus-smb) are not drawn on the BG graph (there would be one every few minutes): they are shown on the [IOB graph](#aaps-screens-iob).
+* Manuel boluslar: KŞ eğrisinin hemen üstünde, o anki ölçümü aşağı doğru gösteren, insülin miktarıyla birlikte mavi üçgen
+* Karbonhidrat girişleri: KŞ eğrisinin hemen altında, ölçümü yukarı doğru gösteren, karbonhidrat miktarıyla birlikte turuncu üçgen. Bolusuyla birlikte girilen bir öğün, ölçümle ikiye ayrılmış tek bir işaret gibi görünür.
+* Üçgenler, günün en büyük miktarına göre üç boyutta (küçük, orta, büyük) gösterilir. O anda KŞ ölçümü yoksa (sensör boşluğu), üçgen grafiğin altına çizilir.
+* KŞ kontrolleri ve kalibrasyonlar: sensör eğrisiyle karşılaştırabilmeniz için kendi ölçülen değerlerinde çizilir
+* Profilde tanımlanan veya geçici hedefle değiştirilen hedef: yeşil çizgi
+* Profil değişimleri: grafiğin üstünde yıldız simgeleri
+* Döngü durumu: [çalışma modu](#AapsScreens-loop-status) kapalı döngüden farklı olduğunda grafiğin üstünde renk şeridi: mavi = açık döngü, mor = LGS, kırmızı = döngü devre dışı, sarı = döngü askıya alındı, gri = pompa bağlantısı kesildi, turuncu = süperbolus (ekran görüntüsünde: önce mor, sonra sarı). Bu değişikliklerin geçmişi [Çalışma modu](#AapsScreens-running-mode) bölümünde listelenir
+* [SMB'ler](#Open-APS-features-super-micro-bolus-smb) KŞ grafiğine çizilmez (birkaç dakikada bir tane olurdu): [AİNS grafiğinde](#aaps-screens-iob) gösterilir.
 
-Tap a **BG check** in the graph to see its value, and its note if you wrote one.
+Değerini ve yazdıysanız notunu görmek için grafikteki bir **KŞ kontrolüne** dokunun.
 
 (aaps-screens-graph-press-and-hold)=
 
-#### See the values at a given time
+#### Belirli bir zamandaki değerleri görme
 
-**Press and hold** the BG graph for a moment to see the values at one reading. A dot marks the nearest reading, a dashed line is drawn at that time in all the graphs, and a pop-up at the top of the graph shows:
+Bir ölçümdeki değerleri görmek için KŞ grafiğine bir süre **basılı tutun**. Bir nokta en yakın ölçümü işaretler, tüm grafiklerde o zamana kesikli bir çizgi çizilir ve grafiğin üstündeki bir açılır pencere şunları gösterir:
 
-* the time and the BG value
-* IOB, COB (only when it is above 0 g) and the basal rate at that time — the basal icon shows whether a temporary basal rate was running, as on the main screen
-* any bolus, SMB or carbs at that time, with the same triangles as in the graphs
+* saat ve KŞ değeri
+* O andaki AİNS, AKRB (yalnızca 0 g'ın üstündeyse) ve bazal oranı — bazal simgesi, ana ekrandaki gibi, geçici bazal oranının çalışıp çalışmadığını gösterir
+* o andaki bolus, SMB veya karbonhidratlar, grafiklerdekiyle aynı üçgenlerle
 
-Keep your finger on the screen and move it left or right to go from one reading to the next. You feel a light tick at each reading, and the graph does not scroll while you do this. The pop-up stays for 2 seconds after you lift your finger.
+Bir ölçümden diğerine geçmek için parmağınızı ekranda tutun ve sola veya sağa kaydırın. Her ölçümde hafif bir titreşim hissedersiniz ve bunu yaparken grafik kaymaz. Açılır pencere, parmağınızı kaldırdıktan sonra 2 saniye kalır.
 
-This works the same way on the [additional graphs](#aaps-screens-additional-graphs) below the BG graph (IOB, COB...): press and hold any of them.
+Bu, KŞ grafiğinin altındaki [ek grafiklerde](#aaps-screens-additional-graphs) (AİNS, AKRB...) de aynı şekilde çalışır: herhangi birine basılı tutun.
 
-![Press and hold the BG graph: the pop-up shows time, BG, IOB and basal](../images/main/graph_press_and_hold.png)
+![KŞ grafiğine basılı tutun: açılır pencere saati, KŞ'yi, AİNS'i ve bazali gösterir](../images/main/graph_press_and_hold.png)
 
 (aaps-screens-graph-clock-change)=
 
-#### Clock changes
+#### Saat değişiklikleri
 
-When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+Telefonun saati ileri veya geri atladığında (yaz saati değişikliğinde veya yeni bir saat diliminde), KŞ grafiğinde bu anı kesikli dikey bir çizgi gösterir; çizginin altında küçük bir saat simgesi vardır. Aynı kesikli çizgi, aşağıdaki [ek grafiklerden](#aaps-screens-additional-graphs) de geçer.
 
-![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
+![Saat değişikliği işareti: şimdiki zaman çizgisinin yanında, saat simgeli kesikli bir çizgi](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
 #### İsteğe bağlı bilgileri etkinleştir
 
-Press the **pencil** icon in the top-right corner of the graph to open the graph settings:
+Grafik ayarlarını açmak için grafiğin sağ üst köşesindeki **kalem** simgesine basın:
 
-![Main graph setting](../images/Home2020_MainGraphSetting.png)
+![Ana grafik ayarı](../images/Home2020_MainGraphSetting.png)
 
-* **Graph height** adjusts how tall the graph is drawn.
-* **ACT** overlays the insulin activity curve: a solid yellow-green line <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (not to be confused with the dotted yellow UAM prediction)
-* **PRED** overlays the [prediction lines](#aaps-screens-prediction-lines) (see below)
+* **Grafik yüksekliği**, grafiğin ne kadar yüksek çizileceğini ayarlar.
+* **AKTİVİTE**, insülin aktivite eğrisini üste ekler: düz sarı-yeşil bir çizgi <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (noktalı sarı UAM tahminiyle karıştırılmamalıdır)
+* **TAHMİN**, [tahmin çizgilerini](#aaps-screens-prediction-lines) üste ekler (aşağıya bakın)
 
 (aaps-screens-prediction-lines)=
 
 #### Tahmin çizgileri
 
-When **PRED** is on, AAPS draws its predictions as **dotted lines** to the right of the "now" line. Each prediction has its own color. The dark theme uses lighter shades of the same colors, and a line inside the green target range can look slightly greener.
+**TAHMİN** açıkken AAPS, tahminlerini "şimdi" çizgisinin sağında **noktalı çizgiler** olarak çizer. Her tahminin kendi rengi vardır. Koyu tema aynı renklerin daha açık tonlarını kullanır ve yeşil hedef aralığının içindeki bir çizgi biraz daha yeşil görünebilir.
 
-| Line                   | Light theme                                                                                                                       | Dark theme                                                                                                                         | What it predicts            |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| **IOB** (blue)         | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | insulin only                |
-| **COB** (orange)       | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | carbs on board              |
-| **UAM** (yellow)       | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | unannounced meal            |
-| **ZT** (cyan)          | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | zero-temp (insulin stopped) |
-| **aCOB** (pale orange) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | older AMA algorithm only    |
+| Çizgi                    | Açık tema                                                                                                                         | Koyu tema                                                                                                                          | Neyi tahmin eder                        |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| **AİNS** (mavi)          | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | yalnızca insülin                        |
+| **AKRB** (turuncu)       | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | aktif karbonhidrat                      |
+| **UAM** (sarı)           | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | bildirilmemiş öğün                      |
+| **ZT** (camgöbeği)       | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | sıfır geçici bazal (insülin durduruldu) |
+| **aCOB** (soluk turuncu) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | yalnızca eski AMA algoritması           |
 
-When two predictions give the same values, their dots overlap and you only see one of the colors (for example, UAM on top of IOB when BG is flat).
+İki tahmin aynı değerleri verdiğinde noktaları üst üste biner ve renklerden yalnızca birini görürsünüz (örneğin KŞ düz olduğunda AİNS'in üstünde UAM).
 
-* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
+* **AKRB** çizgisi (turuncu): [aktif karbonhidrat](CobCalculation.md) (turuncu, AAPS'in her yerinde AKRB ve karbonhidratlar için kullanılır)
     
-    This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. Bu çizgi yalnızca bilinen AKRB (Aktif Karbonhidrat) varsa görünür.
+    Bu tahmin çizgisi, karbonhidrat emiliminden kaynaklanan sapmaların sabit kaldığı varsayılarak, geçerli **Profil** ayarlarına göre KŞ'nizin (AKRB'nin kendisinin değil!) nereye gideceğini gösterir. Bu çizgi yalnızca bilinen AKRB (Aktif Karbonhidrat) varsa görünür.
 
-* **IOB** line (blue): insulin on board (blue is used throughout AAPS for IOB and insulin)
+* **AİNS** çizgisi (mavi): aktif insülin (mavi, AAPS'in her yerinde AİNS ve insülin için kullanılır)
     
-    This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
+    Bu tahmin çizgisi, yalnızca insülinin etkisi altında ne olacağını gösterir. Örneğin biraz insülin verdiyseniz ve sonra hiç karbonhidrat yemediyseniz.
 
-* **ZT** line (cyan): zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **ZT** çizgisi (camgöbeği): sıfır geçici bazal (%0 geçici bazal oranı ayarlansaydı tahmin edilen KŞ)
     
-    This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR). The line stops once it rises above your target.
+    Bu tahmin çizgisi, pompa tüm insülin iletimini durdursaydı (%0 GBO) KŞ eğrisinin nasıl değişeceğini gösterir. Çizgi, hedefinizin üstüne çıktığında biter.
     
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+    *Bu çizgi yalnızca [SMB](#Config-Builder-aps) algoritması kullanıldığında görünür.*
 
-* **UAM** line (yellow): [unannounced meals](#SensitivityDetectionAndCob-sensitivity-oref1)
+* **UAM** çizgisi (sarı): [bildirilmemiş öğünler](#SensitivityDetectionAndCob-sensitivity-oref1)
     
-    Bildirilmemiş öğünlerin anlamı, öğün, adrenalin veya diğer etkiler nedeniyle glikoz seviyelerinde önemli bir artışın tespit edilmesidir. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+    Bildirilmemiş öğünlerin anlamı, öğün, adrenalin veya diğer etkiler nedeniyle glikoz seviyelerinde önemli bir artışın tespit edilmesidir. Tahmin çizgisi **turuncu AKRB çizgisine** benzer, ancak sapmaların sabit bir hızla azalacağını varsayar (mevcut azalma hızını uzatarak).
     
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used, **Enable UAM** is on in the OpenAPS SMB settings, and BG is rising more than insulin alone explains.*
+    *Bu çizgi yalnızca [SMB](#Config-Builder-aps) algoritması kullanıldığında, OpenAPS SMB ayarlarında **UAM (Bildirilmemiş Öğünler) etkinleştir** açık olduğunda ve KŞ, yalnızca insülinin açıklayabileceğinden fazla yükseldiğinde görünür.*
 
-* **aCOB** line (pale, see-through orange): accelerated carbohydrate absorption
+* **aCOB** çizgisi (soluk, yarı saydam turuncu): hızlandırılmış karbonhidrat emilimi
     
-    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Kullanımdan kaldırılmış ve sınırlı yararlılık.
+    AKRB'ye benzer, ancak sabit 10 mg/dL/5dk (0,555 mmol/L/5dk) karbonhidrat emilim hızı varsayar. Kullanımdan kaldırıldı ve yararı sınırlıdır.
     
-    *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
+    *Bu çizgi yalnızca eski [AMA](#Config-Builder-aps) algoritması kullanıldığında görünür.*
 
 Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en çok benzeyen varsayımlarda bulunanın yakınında biter.
 
 (aaps-screens-how-predictions-become-a-dosing-decision)=
 
-#### How AAPS turns predictions into a dosing decision
+#### AAPS tahminleri nasıl bir doz kararına dönüştürür
 
-AAPS doesn't dose insulin based on your current BG alone — every loop cycle (roughly every 5 minutes) it looks at all of the prediction lines above together and works out the safest course of action.
+AAPS insülin dozunu yalnızca mevcut KŞ'nize göre vermez — her döngü çalışmasında (yaklaşık 5 dakikada bir) yukarıdaki tüm tahmin çizgilerine birlikte bakar ve en güvenli yolu belirler.
 
-The core rule is **safety first**: if *any* prediction line, in any time frame, dips below your low safety threshold, AAPS issues a zero-temp (0% temporary basal rate) and withholds further insulin, even if your current BG is high. Only once every prediction line stays above that threshold will AAPS consider giving more insulin.
+Temel kural **önce güvenlik**tir: *herhangi bir* tahmin çizgisi, herhangi bir zaman diliminde düşük güvenlik eşiğinizin altına inerse, mevcut KŞ'niz yüksek olsa bile AAPS sıfır geçici bazal (%0 geçici bazal oranı) uygular ve daha fazla insülin vermez. AAPS, ancak tüm tahmin çizgileri bu eşiğin üstünde kaldığında daha fazla insülin vermeyi düşünür.
 
-When it is safe to give more insulin, AAPS looks at where BG is ultimately predicted to end up (the **eventual BG**) across the blended predictions, and works out how much correction is needed to bring that eventual BG back to target — delivered either as an increased temporary basal rate, or (if the oref1/[SMB](#Open-APS-features-super-micro-bolus-smb) algorithm is enabled) as a small immediate bolus. If BG is high now but is already trending down enough on its own, AAPS will hold off, or may even reduce the basal rate, rather than add insulin that would only push a later low even lower.
+Daha fazla insülin vermek güvenli olduğunda AAPS, birleştirilmiş tahminlere göre KŞ'nin sonunda nereye varacağına (**nihai KŞ**) bakar ve bu nihai KŞ'yi hedefe geri getirmek için ne kadar düzeltme gerektiğini hesaplar — bu düzeltme ya artırılmış bir geçici bazal oranı olarak ya da (oref1/[SMB](#Open-APS-features-super-micro-bolus-smb) algoritması etkinse) küçük, hemen verilen bir bolus olarak iletilir. KŞ şu anda yüksek ama zaten kendiliğinden yeterince düşüyorsa AAPS, daha sonraki bir düşük şekeri daha da düşürecek insülin eklemek yerine bekler, hatta bazal oranını azaltabilir.
 
-For worked examples of this decision logic with real screenshots, see the [dosing scenarios in the Clinician's guide](#clinicianguide-dosing-scenarios) — they were written for a clinician audience but apply to any AAPS user.
+Bu karar mantığının gerçek ekran görüntüleriyle çalışılmış örnekleri için [Klinisyen kılavuzundaki doz senaryolarına](#clinicianguide-dosing-scenarios) bakın — klinisyenler için yazılmıştır, ancak her AAPS kullanıcısı için geçerlidir.
 
-*For the full technical treatment of how these predictions and the resulting dosing decision are calculated, see [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html).*
+*Bu tahminlerin ve sonuçtaki doz kararının nasıl hesaplandığına dair tam teknik açıklama için [OpenAPS determine-basal dokümantasyonuna](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) bakın.*
 
 #### Bazallar
 
@@ -390,184 +390,184 @@ For worked examples of this decision logic with real screenshots, see the [dosin
 
 **noktalı mavi** çizgi, geçici bazal ayarlamalar (GBO'lar) olmasaydı bazal oranın ne olacağıdır.
 
-When the standard basal rate is given, the area under the curve is shown in dark blue. When the basal rate is temporarily adjusted (increased or decreased), the area under the curve is shown in light blue.
+Standart bazal oran verildiğinde, eğrinin altındaki alan koyu mavi gösterilir. Bazal oran geçici olarak değiştirildiğinde (artırıldığında veya azaltıldığında), eğrinin altındaki alan açık mavi gösterilir.
 
 #### Aktivite
 
 **İnce sarı** çizgi, insülin aktivitesini gösterir.
 
-Başka hiçbir faktör (karbonhidrat gibi) mevcut değilse, sisteminizdeki insülinin KŞ'nde beklenen düşüşe dayanır.
+Başka hiçbir etken (karbonhidrat gibi) yoksa, vücudunuzdaki insülinin KŞ'de yol açması beklenen düşüşe dayanır.
 
 (AapsScreens-section-g-additional-graphs)= (aaps-screens-additional-graphs)=
 
-### Section E - Additional graphs
+### Bölüm E - Ek grafikler
 
-You can activate additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and cannot be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
+Ana grafiğin altında ek grafikleri etkinleştirebilirsiniz. [Basit mod](#preferences-simple-mode)'dayken ek grafikler önceden ayarlıdır ve değiştirilemez. Ek grafikleri kendiniz yapılandırmak istiyorsanız **Basit mod**'u kapatın.
 
-The additional graphs follow the main graph: when you scroll or zoom the BG graph, they move with it. A sideways drag on an additional graph also scrolls all the graphs. They have no time labels of their own — read the time on the BG graph.
+Ek grafikler ana grafiği takip eder: KŞ grafiğini kaydırdığınızda veya yakınlaştırdığınızda onlar da birlikte hareket eder. Bir ek grafikte yana doğru sürükleme de tüm grafikleri kaydırır. Kendi zaman etiketleri yoktur — zamanı KŞ grafiğinden okuyun.
 
-To configure an additional graph, press the **pencil** icon in its top-right corner:
+Bir ek grafiği yapılandırmak için sağ üst köşesindeki **kalem** simgesine basın:
 
 ![Ek grafik ayarları](../images/Home2020_AdditionalGraphSetting.png)
 
-Select the chips corresponding to the data you want to see on this graph; the **Remove** button deletes the graph.
+Bu grafikte görmek istediğiniz verilere karşılık gelen çipleri seçin; **Kaldır** düğmesi grafiği siler.
 
-To create one more graph, press **Add graph** below the last graph and select its chips in the same way:
+Bir grafik daha oluşturmak için son grafiğin altındaki **Grafik ekle**'ye basın ve çiplerini aynı şekilde seçin:
 
-![Add graph](../images/main/graph_add.png)
+![Grafik ekle](../images/main/graph_add.png)
 
-The new graph is added below the others — here a second additional graph with **SENS%** and **DEV**:
+Yeni grafik diğerlerinin altına eklenir — burada **DYRLLK%** ve **SAPMA** içeren ikinci bir ek grafik:
 
-![Main screen with a second additional graph](../images/main/main_screen_additional_graph.png)
+![İkinci bir ek grafik içeren ana ekran](../images/main/main_screen_additional_graph.png)
 
-Most users find the following configuration of additional graphs to be adequate :
+Çoğu kullanıcı ek grafikler için aşağıdaki yapılandırmayı yeterli bulur:
 
-* Graph 1 with IOB, COB, Sensitivity change
-* Graph 2 with Deviations and BGI.
+* AİNS, AKRB, Duyarlılık değişikliği ile Grafik 1
+* Sapmalar ve KŞ etkisi ile Grafik 2.
 
-#### Absolute insulin (ABS)
+#### Mutlak insülin (MUTLAK)
 
 Boluslar dahil aktif insülin **ve bazal**.
 
 (aaps-screens-iob)=
 
-#### Insulin on board (IOB)
+#### Aktif insülin (AİNS)
 
 Aktif insülini gösterir (= vücudunuzdaki aktif insülin). Bolus ve geçici bazaldan alınan insülini içerir (**ancak profilinizde ayarlanan bazal oranları hariçtir**).
 
-If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+İES süresi boyunca hiç [SMB](#Open-APS-features-super-micro-bolus-smb), bolus ve GBO olmasaydı bu değer sıfır olurdu.
 
-SMBs are shown on this graph as blue triangles, in three sizes following the amount compared with the largest SMB of the day.
+SMB'ler bu grafikte, günün en büyük SMB'sine göre üç boyutta mavi üçgenler olarak gösterilir.
 
 Daha uzun bir süre boyunca bolus kalmazsa ve sıfır/düşük geçici bazal devam ederse AİNS negatif olabilir.
 
-Decaying depends on your [DIA and insulin type settings](#Config-Builder-insulin-dia).
+Azalma, [İES ve insülin tipi ayarlarınıza](#Config-Builder-insulin-dia) bağlıdır.
 
-#### Carbs On Board (COB)
+#### Aktif Karbonhidrat (AKRB)
 
-Aktif karbonhidratları gösterir (= vücudunuzdaki aktif, henüz bozulmamış karbonhidratlar).
+Aktif karbonhidratları gösterir (= vücudunuzdaki aktif, henüz emilmemiş karbonhidratlar).
 
-Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/CobCalculation.md).
+Azalma, [algoritmanın algıladığı sapmalara](../DailyLifeWithAaps/CobCalculation.md) bağlıdır.
 
-Beklenenden daha yüksek bir karbonhidrat emilimi tespit edilirse, insülin verilecek ve bu aktif insülini artıracaktır (güvenlik ayarlarınıza bağlı olarak daha fazla veya daha az).
+Beklenenden daha yüksek bir karbonhidrat emilimi algılanırsa insülin verilir ve bu AİNS'i artırır (güvenlik ayarlarınıza bağlı olarak daha fazla veya daha az).
 
-#### Sensitivity change (SENS%)
+#### Duyarlılık değişikliği (DYRLLK%)
 
-Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
+[Otoduyarlılığın](#Open-APS-features-autosens) algıladığı duyarlılığı gösterir.
 
 Duyarlılık, egzersiz, hormonlar vb. sonucunda insüline duyarlılığın hesaplanmasıdır.
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+Duyarlılık algılaması/[Otoduyarlılık](#Open-APS-features-autosens) özelliğinin verilen insülin miktarını otomatik olarak ayarlayabilmesi için [8. Görev](#objectives-objective8) aşamasında olmanız gerektiğini unutmayın. Bu göreve ulaşmadan önce grafiğinizdeki çizgi yalnızca bilgi amaçlı gösterilir.
 
-### Variable sensitivity (VSENS)
+### Değişken duyarlılık (DDYRLLK)
 
-Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
+[Dinamik İDF](../DailyLifeWithAaps/DynamicISF.md) tarafından hesaplanan duyarlılığı gösterir. Yalnızca bu özelliği kullanıyorsanız doldurulur.
 
 (screen-heart-rate-steps)=
 
-#### Heart rate (HR) & Steps
+#### Nabız & Adımlar
 
-This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
+Bu veriler bir [Wear akıllı saat](../WearOS/WearOsSmartwatch.md) kullanırken mevcut olabilir. Bunları **AAPS** Wear uygulamasında etkinleştirin ve sağlık verileri için izin verin.
 
-Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+Adımlar sütun olarak, kalp atış hızı ise saatin veri göndermediği yerlerde kesilen eğri bir çizgi olarak çizilir.
 
-#### Deviations (DEV)
+#### Sapmalar (SAPMA)
 
-* **Grey** bars show a deviation due to carbs.
-* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
-* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
-* **Yellow** bars show a deviation due to UAM.
-* **Black** bars show small deviations not taken into account for sensitivity
+* **Gri** çubuklar karbonhidrattan kaynaklanan bir sapmayı gösterir.
+* **Yeşil** çubuklar, KŞ'nin algoritmanın beklediğinden yüksek olduğunu gösterir. Yeşil çubuklar, [Otoduyarlılıkta](#Open-APS-features-autosens) direnci artırmak için kullanılır.
+* **Kırmızı** çubuklar, KŞ'nin algoritmanın beklediğinden düşük olduğunu gösterir. Kırmızı çubuklar, [Otoduyarlılıkta](#Open-APS-features-autosens) duyarlılığı artırmak için kullanılır.
+* **Sarı** çubuklar UAM'dan kaynaklanan bir sapmayı gösterir.
+* **Siyah** çubuklar duyarlılık için dikkate alınmayan küçük sapmaları gösterir
 
-#### Blood Glucose Impact (-BGI)
+#### Kan Şekeri Etkisi (KŞEtkisi)
 
-This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
+Bu çizgi, yalnızca insülin aktivitesine göre KŞ'nin ne kadar yükselmesi veya düşmesi ‘gerektiğini’ gösterir.
 
-![Deviations and BGI](../images/main/graph_dev_bgi.png)
+![Sapmalar ve KŞ etkisi](../images/main/graph_dev_bgi.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are well above the BGI line: BG rises more than insulin activity alone explains (for example after carbs). At the time marked **2**, the Deviation bars are below zero (red): BG is lower than the algorithm expected.
+Bu çizgiyi Sapma çubuklarıyla birlikte göstermek iyi bir kombinasyondur. Aynı ölçeği paylaşırlar, ancak bu ölçek diğer isteğe bağlı verilerinkinden farklıdır; bu yüzden onları yukarıda gösterildiği gibi ayrı bir grafikte göstermek iyi bir fikirdir. KŞ etkisi çizgisini ve Sapma çubuklarını karşılaştırmak, **KŞ**'nin nasıl dalgalandığını anlamanın başka bir yoludur. Burada **1** ile işaretlenen zamanda Sapma çubukları KŞ etkisi çizgisinin çok üstündedir: KŞ, yalnızca insülin aktivitesinin açıklayabileceğinden fazla yükselir (örneğin karbonhidrattan sonra). **2** ile işaretlenen zamanda Sapma çubukları sıfırın altındadır (kırmızı): KŞ, algoritmanın beklediğinden düşüktür.
 
-### Section F - QuickLaunch toolbar
+### Bölüm F - Hızlı Başlatma araç çubuğu
 
-![QuickLaunch toolbar](../images/Home2020_Buttons.png)
+![Hızlı Başlatma araç çubuğu](../images/Home2020_Buttons.png)
 
-The floating toolbar at the bottom of the screen holds your **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)** actions. The small **gear** opens the QuickLaunch configuration where you choose which buttons are shown (treatments, careportal entries, CGM actions, the screens of the **Manage** sheet, [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md) buttons, [Scenes](../DailyLifeWithAaps/Scenes.md) and more).
+Ekranın altındaki kayan araç çubuğu **[Hızlı Başlatma](../DailyLifeWithAaps/QuickLaunch.md)** eylemlerinizi içerir. Küçük **dişli**, hangi düğmelerin gösterileceğini seçtiğiniz Hızlı Başlatma yapılandırmasını açar (tedaviler, careportal kayıtları, CGM eylemleri, **Yönet** panelinin ekranları, [Hızlı Asistan](../DailyLifeWithAaps/QuickWizards.md) düğmeleri, [Senaryolar](../DailyLifeWithAaps/Scenes.md) ve daha fazlası).
 
-A typical configuration is shown above: **Insulin**, **Carbs** and the **Bolus wizard**.
+Yukarıda tipik bir yapılandırma gösterilmiştir: **İnsülin**, **Karbonhidrat** ve **Bolus sihirbazı**.
 
-While the pump is **disconnected**, the treatment buttons stay in the toolbar, for example to record insulin given with a pen (see [Insulin](#aaps-screens-buttons-insulin) below). The same actions are also available in the [Treatments sheet](#aaps-screens-treatments-sheet) of the bottom navigation.
+Pompanın **bağlantısı kesilmişken** tedavi düğmeleri araç çubuğunda kalır, örneğin kalemle verilen insülini kaydetmek için (aşağıdaki [İnsülin](#aaps-screens-buttons-insulin) bölümüne bakın). Aynı eylemler alt gezinme çubuğundaki [Tedaviler panelinde](#aaps-screens-treatments-sheet) de bulunur.
 
 (aaps-screens-buttons-insulin)=
 
 #### İnsülin
 
-![Insulin dialog](../images/Home2020_ButtonInsulin.png)
+![İnsülin iletişim kutusu](../images/Home2020_ButtonInsulin.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
+[Bolus hesaplayıcısını](#aaps-screens-bolus-wizard) kullanmadan belirli bir miktarda insülin vermek için.
 
-By enabling **Start Eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
+**Yakında Yenecek GH başlat** seçeneğini etkinleştirerek [yakında yemek geçici hedefinizi](#TempTargets-eating-soon-temp-target) otomatik olarak başlatabilirsiniz.
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". An additional **Time** row, set to **Now**, lets you record an insulin injection made in the past: use **-** / **+** to change it, or tap the chevron to type the minutes or pick a date and time.
+Pompa üzerinden bolus yapmak istemiyor, yalnızca bir insülin miktarını kaydetmek istiyorsanız (örneğin kalemle verilen insülin) "**Bolus yalnızca kaydedilecektir (pompa ile iletilmez)**" seçeneğini etkinleştirin. **Şimdi** olarak ayarlı ek bir **Zaman** satırı, geçmişte yapılmış bir insülin enjeksiyonunu kaydetmenizi sağlar: değiştirmek için **-** / **+** kullanın veya dakikaları yazmak ya da bir tarih ve saat seçmek için oka dokunun.
 
-![The Time row, folded](../images/v4/Screens/insulin_dialog_record_only_time.png) ![The Time row, opened with the chevron](../images/v4/Screens/insulin_dialog_time_open.png)
+![Zaman satırı, kapalı](../images/v4/Screens/insulin_dialog_record_only_time.png) ![Zaman satırı, okla açılmış](../images/v4/Screens/insulin_dialog_time_open.png)
 
-You can use the **+0.5 / +1.0 / +2.0** buttons to quickly increase the insulin quantity. The increment values can be changed in the [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result).
+İnsülin miktarını hızlıca artırmak için **+0,5 / +1,0 / +2,0** düğmelerini kullanabilirsiniz. Artış değerleri [Bolus sihirbazı ayarlarında](#Preferences-deliver-this-part-of-bolus-wizard-result) değiştirilebilir.
 
-The insulin dialog can be used when the pump is suspended or disconnected as well, e.g. to record insulin injected with a pen. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
+İnsülin iletişim kutusu, pompa askıya alınmışken veya bağlantısı kesilmişken de kullanılabilir; örneğin kalemle enjekte edilen insülini kaydetmek için. Bu durumda "**Bolus yalnızca kaydedilecektir (pompa ile iletilmez)**" zorunlu olarak açıktır (kırmızı gösterilir) ve insülin tipini ve geçmişte yapılmış bir enjeksiyon için **Zaman** farkını seçmek üzere ek alanlar görünür:
 
-![Insulin dialog with pump disconnected](../images/main/insulin_dialog_pump_disconnected.png)
+![Pompa bağlantısı kesilmişken insülin iletişim kutusu](../images/main/insulin_dialog_pump_disconnected.png)
 
 #### Karbonhidrat
 
-![Carbs dialog](../images/Home2020_ButtonCarbs.png)
+![Karbonhidrat iletişim kutusu](../images/Home2020_ButtonCarbs.png)
 
 Karbonhidratları bolus olmadan kaydetmek için kullanılır.
 
-Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) (Hypo, Eating soon, Activity) can be started directly with the switches on top.
+Bazı [ön ayarlı geçici hedefler](#TempTargets-hypo-temp-target) (Hipo, Yakında Yenecek, Aktivite) doğrudan üstteki anahtarlarla başlatılabilir.
 
-**Carb time**: When will you / have you been eating carbs.
+**Karb. zamanı**: Karbonhidratları ne zaman yiyeceksiniz / ne zaman yediniz.
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). This row is folded, so that you do not type the grams into it by mistake: use **-** / **+** to change it, or tap the chevron to open it and type a value.
+**Süre**: ["yayma karbonhidratlar"](ExtendedCarbs.md) için kullanılır. Bu satır, gramları yanlışlıkla içine yazmamanız için kapalıdır: değiştirmek için **-** / **+** kullanın veya açmak ve bir değer yazmak için oka dokunun.
 
-You can use the **+5 / +10 / +20** buttons to quickly increase the carb amount.
+Karbonhidrat miktarını hızlıca artırmak için **+5 / +10 / +20** düğmelerini kullanabilirsiniz.
 
 #### Hızlı Asistan
 
-Easily enter amount of carbs and set calculation basics with a single pre-configured button.
+Önceden yapılandırılmış tek bir düğmeyle karbonhidrat miktarını kolayca girin ve hesaplama temellerini ayarlayın.
 
-Details are set up in [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md).
+Ayrıntılar [Hızlı Asistan](../DailyLifeWithAaps/QuickWizards.md) içinde ayarlanır.
 
 (aaps-screens-treatments-sheet)=
 
-### Section G - Bottom navigation
+### Bölüm G - Alt gezinme çubuğu
 
-The bottom navigation bar gives access to:
+Alt gezinme çubuğu şunlara erişim sağlar:
 
-* **Treatments** — a quick-actions sheet with your treatment actions:
+* **Tedaviler** — tedavi eylemlerinizi içeren hızlı eylem paneli:
     
-    ![Treatments sheet](../images/v4/Screens/treatments_sheet.png)
+    ![Tedaviler paneli](../images/v4/Screens/treatments_sheet.png)
 
-* **Scenes** — shown only when you have at least one [scene](../DailyLifeWithAaps/Scenes.md) or an **Automation** rule marked as **User action**. It opens a sheet from which you can start them; a badge shows how many you can start right now. The **pencil** at the top of the sheet opens **Manage → Scenes**.
+* **Senaryolar** — yalnızca en az bir [senaryonuz](../DailyLifeWithAaps/Scenes.md) veya **Kullanıcı eylemi** olarak işaretlenmiş bir **Otomasyon** kuralınız varsa gösterilir. Bunları başlatabileceğiniz bir panel açar; bir rozet şu anda kaç tanesini başlatabileceğinizi gösterir. Panelin üstündeki **kalem**, **Yönet → Senaryolar** ekranını açar.
 
-* **Manage** — the hub for everything you manage in **AAPS**: Profile, Insulin settings, Temp Target, QuickWizard, Scenes, Automation, Food, Site Rotation, Pump and Authorized clients. Below them are device and basal actions such as Sensor Insert and Temp Basal. Some items only appear when they apply to your setup — for example Prime/Fill and battery change depend on your pump, and Temp Basal, Extended Bolus and the Careportal entries are hidden in [Simple Mode](#preferences-simple-mode):
+* **Yönet** — **AAPS**'te yönettiğiniz her şeyin merkezi: Profil, İnsülin ayarları, Geçici Hedef, Hızlı Asistan, Senaryolar, Otomasyon, Yiyecek, Bölge Rotasyonu, Pompa ve Yetkili istemciler. Bunların altında Sensör yerleştirme ve Geçici Bazal gibi cihaz ve bazal eylemleri bulunur. Bazı öğeler yalnızca kurulumunuz için geçerli olduklarında görünür — örneğin Hazırla/doldur ve pil değişimi pompanıza bağlıdır; Geçici Bazal, Yayma Bolus ve Careportal kayıtları ise [Basit mod](#preferences-simple-mode)'da gizlenir:
     
-    ![Manage sheet](../images/v4/Screens/manage_sheet.png)
+    ![Yönet paneli](../images/v4/Screens/manage_sheet.png)
 
-* **Objectives** — your progress through the [Objectives](../SettingUpAaps/CompletingTheObjectives.md); a badge shows how many are completed. This item disappears once all objectives are finished, and is not present on **AAPSClient**.
+* **Görevler** — [Görevler](../SettingUpAaps/CompletingTheObjectives.md) içindeki ilerlemeniz; bir rozet kaç tanesinin tamamlandığını gösterir. Bu öğe tüm görevler bitince kaybolur ve **AAPSClient**'ta bulunmaz.
 
 (aaps-screens-notifications)=
 
 #### Notifications
 
-A **notification bubble** may appear above the bottom bar, on the right. It collects the active notifications of **AAPS**; the small number shows how many there are. Its color follows the most important one: red for an urgent message, green for a simple information.
+Alt çubuğun üstünde, sağda bir **bildirim balonu** görünebilir. Balon **AAPS**'in etkin bildirimlerini toplar; küçük sayı kaç tane olduğunu gösterir. Rengi en önemli bildirime göre değişir: acil bir mesaj için kırmızı, basit bir bilgi için yeşil.
 
-![Main screen with the notification bubble](../images/main/main_screen_notification_bubble.png)
+![Bildirim balonlu ana ekran](../images/main/main_screen_notification_bubble.png)
 
-Tap the bubble to open the **Notification** panel. Each message shows the time it was raised. Press **Dismiss** below a message to remove it; some messages have another button instead, to take you to the setting that needs your attention.
+**Bildirim** panelini açmak için balona dokunun. Her mesaj oluştuğu zamanı gösterir. Bir mesajı kaldırmak için altındaki **Kapat**'a basın; bazı mesajlarda bunun yerine, sizi ilgilenmeniz gereken ayara götüren başka bir düğme vardır.
 
-![Notification panel with one message and its Dismiss button](../images/main/notification_panel.png)
+![Bir mesaj ve Kapat düğmesi olan bildirim paneli](../images/main/notification_panel.png)
 
-![Notification panel](../images/main/main_notification_panel.png)
+![Bildirim paneli](../images/main/main_notification_panel.png)
 
 (bolus-wizard)= (aaps-screens-bolus-wizard)=
 
@@ -575,144 +575,144 @@ Tap the bubble to open the **Notification** panel. Each message shows the time i
 
 ![Bolus sihirbazı](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus, this is where you will normally make it from.
+Yemek bolusu yapmak istediğinizde normalde bunu buradan yaparsınız.
 
 ### Bölüm I
 
-The **Calculation** header shows the calculated bolus. Aktif insülin miktarı hesaplanan bolusu aşarsa, o zaman sadece gerekli olan karbonhidrat miktarını gösterecektir.
+**Hesaplama** başlığı hesaplanan bolusu gösterir. Aktif insülin miktarı hesaplanan bolusu aşarsa, o zaman sadece gerekli olan karbonhidrat miktarını gösterecektir.
 
-The bolus calculator can be used whatever your current **BG**, including when it is too high or too low. If **BG** is above target, a correction is added to the meal bolus. If **BG** is below target, the bolus is reduced and, if the insulin already on board is more than needed, the calculator tells you how many carbs are still required instead of proposing insulin.
+Bolus hesaplayıcısı, mevcut **KŞ**'niz ne olursa olsun kullanılabilir; çok yüksek veya çok düşük olduğunda da. **KŞ** hedefin üstündeyse yemek bolusuna bir düzeltme eklenir. **KŞ** hedefin altındaysa bolus azaltılır ve vücuttaki aktif insülin gerekenden fazlaysa hesaplayıcı, insülin önermek yerine hâlâ kaç gram karbonhidrat gerektiğini söyler.
 
-The icon row below the header shows which inputs enter the calculation (BG, trend, IOB, temporary target, COB). Pressing an icon enables / disables this entry from the calculation; the **(i)** icon shows the detailed numbers behind the calculation.
+Başlığın altındaki simge satırı, hesaplamaya hangi girdilerin katıldığını gösterir (KŞ, eğilim, AİNS, geçici hedef, AKRB). Bir simgeye basmak bu girdiyi hesaplamaya dahil eder / hesaplamadan çıkarır; **(i)** simgesi hesaplamanın arkasındaki ayrıntılı sayıları gösterir.
 
 #### AKRB ve AİNS kombinasyonları ve ne anlama geldikleri
 
-* For safety reasons, the IOB input cannot be disabled when COB is enabled as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
-* If you enable COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you enable IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. Bu işareleme 'eksik karbonhidrat' bildirimine yol açar.
-* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. Bu şekilde, ana öğün henüz tam olarak emilmemiş olduğundan yalnızca yeni karbonhidratlar ilave edilir, bu nedenle aktif insülin, yemek bolusundan kısa bir süre sonra aktif karbonhidrat ile tam olarak eşleşmeyecektir.
-* For safety reasons, a **temporary target** is only included in the calculation if you enable its input manually.
+* Güvenlik nedeniyle AKRB etkinken AİNS girdisi devre dışı bırakılamaz; çünkü **AAPS** önceden verilmiş insülini hesaba katmazsa çok fazla insülin alma riskiyle karşılaşabilirsiniz.
+* AKRB ve AİNS'i etkinleştirirseniz, henüz insülinle karşılanmamış emilmemiş karbonhidratlar + GBO veya SMB olarak verilmiş tüm insülin hesaba katılır.
+* AKRB olmadan AİNS'i etkinleştirirseniz **AAPS** önceden verilmiş insülini hesaba katar, ancak bunu henüz emilecek karbonhidratlarla dengelemez. Bu, 'eksik karbonhidrat' bildirimine yol açar.
+* Bir yemek bolusundan kısa süre sonra **ek yiyecek** için bolus yaparsanız (örneğin ek tatlı), **tüm girdileri devre dışı bırakmak** faydalı olabilir. Bu şekilde, ana öğün henüz tam olarak emilmemiş olduğundan yalnızca yeni karbonhidratlar ilave edilir, bu nedenle aktif insülin, yemek bolusundan kısa bir süre sonra aktif karbonhidrat ile tam olarak eşleşmeyecektir.
+* Güvenlik nedeniyle **geçici hedef**, yalnızca girdisini elle etkinleştirirseniz hesaplamaya dahil edilir.
 
 (AapsScreens-section-j)=
 
-### Section J - Entry fields
+### Bölüm J - Giriş alanları
 
-In the **Carbs** field, you add your estimate of the amount of carbs, **in grams**, that you want to bolus for; the **+** buttons below it add carbs quickly. **AAPS** only works with grams: if you count in bread units or exchanges (*e.g.* DAFNE "CHO" exchanges), convert them to grams before entering them. See the [note about bread units](#your-aaps-profile-insulin-to-carbs-ratio) on the profile page.
+**Karbonhidrat** alanına, bolus yapmak istediğiniz karbonhidrat miktarının tahminini **gram olarak** girersiniz; altındaki **+** düğmeleri hızlıca karbonhidrat ekler. **AAPS** yalnızca gramla çalışır: ekmek birimi veya değişim birimi (*örneğin* DAFNE "CHO" değişimleri) sayıyorsanız, girmeden önce bunları grama çevirin. Profil sayfasındaki [ekmek birimleriyle ilgili nota](#your-aaps-profile-insulin-to-carbs-ratio) bakın.
 
-#### Carbs type: bread, cake or pizza
+#### Karbonhidrat tipi: ekmek, kek veya pizza
 
-Below the **Carbs** field, the **Bread**, **Cake** and **Pizza** buttons tell **AAPS** how fast the meal is absorbed. With **Cake** and **Pizza**, the bolus covers only a part of the carbs now and the rest is added later as eCarbs. See [Carbs type: bread, cake or pizza](#AapsScreens-carbs-type) on the Extended carbs page for the percentages and timing.
+**Karbonhidrat** alanının altındaki **Ekmek**, **Kek** ve **Pizza** düğmeleri **AAPS**'e öğünün ne kadar hızlı emileceğini söyler. **Kek** ve **Pizza** ile bolus şimdi karbonhidratların yalnızca bir kısmını karşılar, geri kalanı daha sonra yKarb olarak eklenir. Yüzdeler ve zamanlama için Yayma karbonhidratlar sayfasındaki [Karbonhidrat tipi: ekmek, kek veya pizza](#AapsScreens-carbs-type) bölümüne bakın.
 
-The **Correction** row is if you want to modify the end dosage for some reason.
+**Düzeltme** satırı, herhangi bir nedenle son dozu değiştirmek istediğinizde kullanılır.
 
-Only the **Carbs** field is always open. The other rows (**Correction**, **Carb time**, **BG** and **Use percentage**) are folded: they show their value with **-** / **+** buttons, so you can change it in small steps. Tap the chevron to open a row and type a value, and tap it again to close the row. This avoids typing grams into the **Correction** field by mistake.
+Yalnızca **Karbonhidrat** alanı her zaman açıktır. Diğer satırlar (**Düzeltme**, **Karb. zamanı**, **KŞ** ve **Yüzde kullanın**) kapalıdır: değerlerini **-** / **+** düğmeleriyle gösterirler, böylece değeri küçük adımlarla değiştirebilirsiniz. Bir satırı açıp değer yazmak için oka dokunun, satırı kapatmak için tekrar dokunun. Bu, **Düzeltme** alanına yanlışlıkla gram yazmanızı önler.
 
-![Folded rows in the bolus wizard](../images/v4/Screens/bolus_wizard_bottom.png)
+![Bolus sihirbazındaki kapalı satırlar](../images/v4/Screens/bolus_wizard_bottom.png)
 
-Tap anywhere on the **Profile** row to open the list of your profiles, then tap a name to use that profile for this calculation.
+Profillerinizin listesini açmak için **Profil** satırının herhangi bir yerine dokunun, sonra bu hesaplamada o profili kullanmak için bir ada dokunun.
 
-![The list of profiles in the bolus wizard](../images/v4/Screens/bolus_wizard_profile_list.png)
+![Bolus sihirbazındaki profil listesi](../images/v4/Screens/bolus_wizard_profile_list.png)
 
-The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Yenmiş karbonhidratlar için bolus yapıyorsanız, bu alana negatif bir sayı girebilirsiniz.
+**Karb. zamanı** alanı ön bolus içindir; böylece sisteme karbonhidratların gelmesinden önce bir gecikme olacağını söyleyebilirsiniz. Yenmiş karbonhidratlar için bolus yapıyorsanız, bu alana negatif bir sayı girebilirsiniz.
 
-**Set alarm** (eating reminder): when a carb time in the future is entered, a "**Set alarm**" switch appears so that you are reminded at the given time, when to eat the carbs you have input into **AAPS**:
+**Alarmı ayarla** (yemek hatırlatıcısı): gelecekte bir karbonhidrat zamanı girildiğinde, **AAPS**'e girdiğiniz karbonhidratları ne zaman yiyeceğinizin belirtilen zamanda size hatırlatılması için "**Alarmı ayarla**" anahtarı görünür:
 
-![Set alarm for future carbs](../images/Home2021_BolusWizard_EatingReminder.png)
+![Gelecekteki karbonhidratlar için alarm ayarlama](../images/Home2021_BolusWizard_EatingReminder.png)
 
-The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
+Hatırlatıcı, bolus iletildiğinde başlar. Hatırlatıcı çalışırken ana ekrandaki **Yemek vakti** çubuğu geri sayar; çubukta **Durdur** ve **+5 dk** düğmeleri vardır. **+5 dk**, beklemenin sonunu beş dakika ileri alır ve çubuk toplam bekleme süresini gösterir. Süre dolduğunda hatırlatıcı kendi sesiyle, yumuşak bir mutfak zamanlayıcısı sesiyle çalar. Alarm ekranında **Alarmı sessize al** (ekran açık kalır) ve **Sessize al ve kapat** düğmelerinin yanında, yeni bir beş dakikalık bekleme başlatan **+5 dk** düğmesi de vardır. Alarm çaldıktan sonra çubukta *Süre doldu* yazar ve **+5 dk** ile **Kapat** düğmeleri görünür; **Sessize al ve kapat** çubuğu da kaldırır. Çubuk ve alarm **AAPSClient**'ta ve [saatte](#WearOsSmartwatch-wizard-carb-time) de gösterilir. Hatırlatıcı, telefonunuzun saat uygulamasında bir zamanlayıcı oluşturmaz. Android, **AAPS**'in alarm ayarlamasına izin vermiyorsa, sihirbaz sizden Android ayarlarında **AAPS** için *Alarmlar ve hatırlatıcılar* iznini vermenizi ister. Geçmişteki bir karbonhidrat zamanı için zil seçeneği sunulmaz.
 
-![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
+![Ana ekrandaki Yemek vakti çubuğu, +5 dk ve Durdur ile](../images/main/main_eat_reminder_bar.png)
 
-![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+![Yemek vakti alarm ekranı: +5 dk, Alarmı sessize al, Sessize al ve kapat](../images/main/eat_reminder_alarm.png)
 
-The **BG** field is normally already populated with the latest reading from your CGM. Çalışan bir CGM'niz yoksa boş olacaktır. When the reading is recent, the **BG** row stays folded. The field follows new readings while the wizard is open, until you change it yourself.
+**KŞ** alanı normalde CGM'nizden gelen son ölçümle zaten doldurulmuştur. Çalışan bir CGM'niz yoksa boş olacaktır. Ölçüm yeniyse **KŞ** satırı kapalı kalır. Sihirbaz açıkken, siz kendiniz değiştirene kadar bu alan yeni değerleri takip eder.
 
-The result button at the bottom shows the proposed bolus; pressing it asks for confirmation before any insulin is delivered. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
+Alttaki sonuç düğmesi önerilen bolusu gösterir; ona basınca herhangi bir insülin verilmeden önce onay istenir. Onay beklenirken döngü SMB vermez; böylece onayladığınız bolus hâlâ doğrudur. O anda bir SMB iletiliyorsa, **Tamam** bu SMB bitene kadar bekler.
 
-Good to know:
+Bilmekte fayda var:
 
-* If the calculated bolus is above your **[Maximum bolus](#Preferences-maximum-bolus)**, it is reduced to the max bolus, and the confirmation shows the warning "Bolus constraint applied". A [QuickWizard](../DailyLifeWithAaps/QuickWizards.md) is refused instead.
-* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
-* A bolus you give by hand has priority over an [SMB](#Open-APS-features-super-micro-bolus-smb) that is waiting to be delivered: the SMB is dropped and the loop calculates again. If an SMB is being delivered right now, your bolus is refused with the message "An SMB is being delivered right now. Try again when it has finished." No insulin is given, and carbs entered with that bolus are not saved: wait a moment and enter them again.
+* Hesaplanan bolus **[Maksimum bolus](#Preferences-maximum-bolus)** değerinizin üstündeyse maksimum bolusa düşürülür ve onay ekranında "Bolus kısıtlaması uygulandı" uyarısı gösterilir. Bir [Hızlı Asistan](../DailyLifeWithAaps/QuickWizards.md) ise bunun yerine reddedilir.
+* Bolus yalnızca kaydedildiğinde (örneğin pompanın bağlantısı kesilmişken), "**Bolus yalnızca kaydedilecektir (pompa ile iletilmez)**" uyarısı, kaydırdığınızda da iletişim kutusunun üstünde kalır.
+* Elle verdiğiniz bir bolus, iletilmeyi bekleyen bir [SMB](#Open-APS-features-super-micro-bolus-smb)'den önceliklidir: SMB iptal edilir ve döngü yeniden hesaplar. Şu anda bir SMB iletiliyorsa bolusunuz "Şu anda bir SMB iletiliyor. İşlem tamamlandığında tekrar deneyin." mesajıyla reddedilir. Hiç insülin verilmez ve o bolusla girilen karbonhidratlar kaydedilmez: biraz bekleyin ve onları tekrar girin.
 
 (AapsScreens-wrong-cob-detection)=
 
-#### Yanlış Aktif Karbonhidrat tespiti
+#### Yanlış AKRB tespiti
 
 ![Yavaş karbonhidrat emilimi](../images/Calculator_SlowCarbAbsorption.png)
 
-If you see the warning above after using bolus wizard, **AAPS** has detected that the calculated COB value may be wrong. So, if you want to bolus again after a previous meal with COB, you should be aware of overdosing!
+Bolus sihirbazını kullandıktan sonra yukarıdaki uyarıyı görürseniz, **AAPS** hesaplanan AKRB değerinin yanlış olabileceğini algılamıştır. Yani önceki bir öğünden sonra AKRB varken tekrar bolus yapmak isterseniz aşırı doza karşı dikkatli olun!
 
-For details, see the hints on [COB calculation page](#CobCalculation-detection-of-wrong-cob-values).
+Ayrıntılar için [AKRB hesaplaması sayfasındaki](#CobCalculation-detection-of-wrong-cob-values) ipuçlarına bakın.
 
-Looking for the **Actions** tab of **AAPS** 3.x? Its functions moved to the main screen, the **Manage** sheet and the QuickLaunch toolbar: see [Where did the Actions tab go?](#screens-action-tab).
+**AAPS** 3.x'in **Eylemler** sekmesini mi arıyorsunuz? İşlevleri ana ekrana, **Yönet** paneline ve Hızlı Başlatma araç çubuğuna taşındı: bkz. [Eylemler sekmesi nereye gitti?](#screens-action-tab).
 
 (aaps-screens-careportal)=
 
-## Careportal entries
+## Careportal kayıtları
 
-The ages and levels shown in the [status row](#screens-sensor-level-battery) (sensor, insulin, cannula, pump battery) are based on careportal entries: **Prime/Fill** (records pump site and insulin cartridge changes), **Sensor Insert** and **Pump Battery Change**.
+[Durum satırında](#screens-sensor-level-battery) gösterilen yaşlar ve seviyeler (sensör, insülin, kanül, pompa pili) careportal kayıtlarına dayanır: **Hazırla/doldur** (pompa bölgesi ve insülin kartuşu değişimlerini kaydeder), **Sensör yerleştirme** ve **Pompa Pil Değişimi**.
 
-You can record them from the expanded status panel on the main screen, from the **Manage** sheet, or with [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
+Bunları ana ekrandaki genişletilmiş durum panelinden, **Yönet** panelinden veya [Hızlı Başlatma](../DailyLifeWithAaps/QuickLaunch.md) düğmeleriyle kaydedebilirsiniz.
 
-**Prime/Fill** records a pump site change and/or an insulin cartridge change, and can deliver a prime amount:
+**Hazırla/doldur** bir pompa bölgesi değişimini ve/veya insülin kartuşu değişimini kaydeder ve bir doldurma miktarı verebilir:
 
-![Prime/Fill dialog](../images/dialogs/prime_fill.png)
+![Hazırla/doldur iletişim kutusu](../images/dialogs/prime_fill.png)
 
-**Sensor Insert** and **Pump Battery Change** only ask for the time of the event:
+**Sensör yerleştirme** ve **Pompa Pil Değişimi** yalnızca olayın zamanını sorar:
 
-![Sensor Insert dialog](../images/dialogs/sensor_insert.png)
+![Sensör yerleştirme iletişim kutusu](../images/dialogs/sensor_insert.png)
 
-![Pump Battery Change dialog](../images/dialogs/pump_battery_change.png) Exercise, announcement, question and note entries reflect the Nightscout careportal and are special forms of notes.
+![Pompa Pil Değişimi iletişim kutusu](../images/dialogs/pump_battery_change.png) Egzersiz, duyuru, soru ve not kayıtları Nightscout careportal'ını yansıtır ve notların özel biçimleridir.
 
-In the **Manage** sheet, scroll down and press **Careportal** to show these entries: **BG Check**, **Note**, **Exercise**, **Question** and **Announcement**.
+Bu kayıtları göstermek için **Yönet** panelinde aşağı kaydırın ve **Careportal**'a basın: **KŞ Kontrol**, **Not**, **Egzersiz**, **Soru** ve **Duyuru**.
 
-![Careportal section of the Manage sheet](../images/v4/Screens/manage_sheet_careportal.png)
+![Yönet panelinin Careportal bölümü](../images/v4/Screens/manage_sheet_careportal.png)
 
-**BG Check**, **Question** and **Announcement** let you enter a glucose value (from a meter, the sensor or another source), a note and the time of the event. In **Question** and **Announcement**, the glucose row is folded and shows the meter type next to the value: if you change the value, the type changes from **Sensor** to **Meter**.
+**KŞ Kontrol**, **Soru** ve **Duyuru**, bir glikoz değeri (glikometreden, sensörden veya başka bir kaynaktan), bir not ve olayın zamanını girmenizi sağlar. **Soru** ve **Duyuru**'da glikoz satırı kapalıdır ve değerin yanında ölçüm tipini gösterir: değeri değiştirirseniz tip **Sensör**'den **GlkMetre**'ye değişir.
 
-![Question with the folded glucose row](../images/dialogs/careportal_question.png)
+![Kapalı glikoz satırıyla Soru](../images/dialogs/careportal_question.png)
 
-![BG Check dialog](../images/dialogs/careportal_bg_check.png)
+![KŞ Kontrol iletişim kutusu](../images/dialogs/careportal_bg_check.png)
 
-**Note** and **Exercise** let you enter a duration (a folded row: use **-** / **+**, or tap the chevron to type it), a note and the time of the event:
+**Not** ve **Egzersiz**, bir süre (kapalı bir satır: **-** / **+** kullanın veya yazmak için oka dokunun), bir not ve olayın zamanını girmenizi sağlar:
 
-![Exercise dialog](../images/dialogs/careportal_exercise.png)
+![Egzersiz iletişim kutusu](../images/dialogs/careportal_exercise.png)
 
-In all these dialogs (**Prime/Fill**, **Sensor Insert**, **Pump Battery Change** and the careportal entries), the time of the event uses the same **Time** row as the [insulin dialog](#aaps-screens-buttons-insulin) and the bolus wizard: use **-** / **+** to move the time in 5-minute steps (up to one week back and 12 hours ahead), or tap the chevron to pick any date and time.
+Tüm bu iletişim kutularında (**Hazırla/doldur**, **Sensör yerleştirme**, **Pompa Pil Değişimi** ve careportal kayıtları) olayın zamanı, [insülin iletişim kutusu](#aaps-screens-buttons-insulin) ve bolus sihirbazıyla aynı **Zaman** satırını kullanır: zamanı 5 dakikalık adımlarla (bir hafta geriye ve 12 saat ileriye kadar) değiştirmek için **-** / **+** kullanın veya herhangi bir tarih ve saat seçmek için oka dokunun.
 
-## Site Rotation
+## Bölge Rotasyonu
 
-**Manage → Site Rotation** records where each cannula and sensor was placed on a body map, so you can rotate your sites: see [Site Rotation](#Aapsscreens-site-rotation) on the Pumps and cannulas page.
+**Yönet → Bölge Rotasyonu**, her kanülün ve sensörün vücut haritasında nereye yerleştirildiğini kaydeder; böylece bölgelerinizi değiştirebilirsiniz: Pompalar ve kanüller sayfasındaki [Bölge Rotasyonu](#Aapsscreens-site-rotation) bölümüne bakın.
 
-**TDD** (total daily dose) and the basal/bolus ratio rule of thumb are explained with the [Statistics Insulin tab](#reviewing-tdd).
+**GTD** (günlük toplam doz) ve bazal/bolus oranı için genel kural [İstatistikler İnsülin sekmesi](#reviewing-tdd) ile açıklanır.
 
 (AapsScreens-insulin-profile)=
 
 ## İnsülin
 
-![Insulin screen](../images/manage/insulin_profile.png)
+![İnsülin ekranı](../images/manage/insulin_profile.png)
 
-**Manage → Insulin settings** shows and manages your insulin configurations. Each configuration is shown on a card with its **peak time** and **[DIA](#Config-Builder-insulin-dia)**; the one in use is marked **ACTIVE**. Below the card you see the activity curve. You can edit the nickname, peak and DIA of any configuration except the active one: to change the insulin you are using, [add a new configuration and activate it](#Config-Builder-insulin-change-active).
+**Yönet → İnsülin ayarları** insülin yapılandırmalarınızı gösterir ve yönetir. Her yapılandırma, **tepe zamanı** ve **[İES](#Config-Builder-insulin-dia)** değeriyle bir kartta gösterilir; kullanımdaki **AKTİF** olarak işaretlenir. Kartın altında aktivite eğrisini görürsünüz. Etkin olan dışındaki herhangi bir yapılandırmanın takma adını, tepe zamanını ve İES'ini düzenleyebilirsiniz: kullandığınız insülini değiştirmek için [yeni bir yapılandırma ekleyin ve etkinleştirin](#Config-Builder-insulin-change-active).
 
-See [Duration of insulin action](#Config-Builder-insulin-dia) to learn more about what it is and how to set it.
+Ne olduğu ve nasıl ayarlanacağı hakkında daha fazla bilgi için [İnsülin etki süresi](#Config-Builder-insulin-dia) bölümüne bakın.
 
 ## Pompa Durumu
 
-![Virtual Pump status screen](../images/v4/Pumps/virtual_pump_screen.png)
+![Sanal pompa durum ekranı](../images/v4/Pumps/virtual_pump_screen.png)
 
-**Manage → Pump** (or **Configuration → Pump → Open plugin**) shows the status of your pump: last connection, base basal rate, battery, reservoir...
+**Yönet → Pompa** (veya **Konfigürasyon → Pompa → Eklentiyi aç**) pompanızın durumunu gösterir: son bağlantı, temel bazal oranı, pil, rezervuar...
 
 * Görüntülenen bilgiler pompa modelinize bağlıdır.
-* See [pumps page](../Getting-Started/CompatiblePumps.md) for details.
+* Ayrıntılar için [pompalar sayfasına](../Getting-Started/CompatiblePumps.md) bakın.
 
 ## Döngü, AMA / SMB
 
-**Configuration → Loop → Open plugin** (and **Configuration → APS → Open plugin**) show details about the algorithm's calculations and why **AAPS** acts the way it does: last run, the resulting request, and the constraints. The **Loop** screen lists only the constraints that actually limited the delivered temp basal rate or SMB (and why closed loop is not allowed, if that is the case); the **APS** screen lists every constraint that went into the calculation.
+**Konfigürasyon → Döngü → Eklentiyi aç** (ve **Konfigürasyon → APS (YPS) → Eklentiyi aç**), algoritmanın hesaplamaları ve **AAPS**'in neden böyle davrandığı hakkında ayrıntıları gösterir: son çalışma, sonuçtaki istek ve kısıtlamalar. **Döngü** ekranı yalnızca verilen geçici bazal oranını veya SMB'yi gerçekten sınırlayan kısıtlamaları (ve geçerliyse kapalı döngüye neden izin verilmediğini) listeler; **APS (YPS)** ekranı ise hesaplamaya giren tüm kısıtlamaları listeler.
 
-Calculations are run each time the system gets a fresh reading from the CGM.
+Hesaplamalar, sistem CGM'den her yeni ölçüm aldığında yapılır.
 
-For more details see the [APS section of the Configuration page](#Config-Builder-aps).
+Daha fazla ayrıntı için [Konfigürasyon sayfasının APS bölümüne](#Config-Builder-aps) bakın.
 
 (aaps-screens-profile)=
 
@@ -720,45 +720,45 @@ For more details see the [APS section of the Configuration page](#Config-Builder
 
 ![Profile](../images/Screenshots_Profile.png)
 
-**Manage → Profile** (or a tap on the profile name on the main screen) opens the Profile screen: your profiles as a swipeable card carousel, with buttons to add, edit, clone, delete and **activate** a profile.
+**Yönet → Profil** (veya ana ekranda profil adına dokunmak) Profil ekranını açar: profilleriniz kaydırılabilir kartlar halinde gösterilir; bir profili eklemek, düzenlemek, klonlamak, silmek ve **etkinleştirmek** için düğmeler vardır.
 
-Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
+Profil, kişisel diyabet ayarlarınızla ilgili bilgileri içerir; daha fazla bilgi için ayrıntılı **[Profil](../SettingUpAaps/YourAapsProfile.md)** sayfasına bakın.
 
 ## Otomasyon
 
 ![Otomasyon](../images/v4/Screens/automation_overview.png)
 
-**Manage → Automation** lists your automation rules. See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
+**Yönet → Otomasyon** otomasyon kurallarınızı listeler. [Buradaki](../DailyLifeWithAaps/Automations.md) ayrı sayfaya bakın.
 
 ## NSClient
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-**Configuration → Communication → NSClientV3 → Open plugin** displays the status of the connection with your Nightscout site: URL, websocket status, queue and a log of the synchronization activity.
+**Konfigürasyon → İletişim → NSClientV3 → Eklentiyi aç**, Nightscout sitenizle bağlantının durumunu gösterir: URL, websocket durumu, kuyruk ve senkronizasyon etkinliğinin günlüğü.
 
-Settings can be changed in [NSClient settings](#Preferences-nsclient).
+Ayarlar [NSClient ayarlarında](#Preferences-nsclient) değiştirilebilir.
 
-For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
+Sorun giderme için bu [sayfaya](../GettingHelp/TroubleshootingNsClient.md) bakın.
 
 (aaps-screens-bg-source)=
 
-## BG Source - xDrip, BYODA...
+## KŞ kaynağı - xDrip, BYODA...
 
-![BG Source screen](../images/Screenshots_BGSource.png)
+![KŞ kaynağı ekranı](../images/Screenshots_BGSource.png)
 
-**Configuration → BG Source → Open plugin** shows the history of CGM readings and offers the option to remove readings in case of failure (i.e. compression low) or duplicate readings.
+**Konfigürasyon → KŞ kaynağı → Eklentiyi aç**, CGM ölçümlerinin geçmişini gösterir ve hata (örneğin sıkışmaya bağlı düşük değer) veya yinelenen ölçüm durumunda ölçümleri silme seçeneği sunar.
 
-## Treatments history
+## Tedavi geçmişi
 
-Open the **menu** (☰) and select **Treatments history** to view, check and correct everything **AAPS** has recorded: carbs and boluses, temp basals, temporary targets, profile switches, careportal entries, loop mode changes and user entries. See [Treatments history](#aaps-screens-treatments) on the Reviewing your data page.
+**AAPS**'in kaydettiği her şeyi görmek, kontrol etmek ve düzeltmek için **menüyü** (☰) açın ve **Tedavi geçmişi**'ni seçin: karbonhidratlar ve boluslar, geçici bazallar, geçici hedefler, profil değişimleri, careportal kayıtları, döngü modu değişiklikleri ve kullanıcı girdileri. Verilerinizi inceleme sayfasındaki [Tedavi geçmişi](#aaps-screens-treatments) bölümüne bakın.
 
 ## Geçmiş Tarayıcısı
 
-![History browser](../images/v4/Screens/history_browser.png)
+![Geçmiş tarayıcısı](../images/v4/Screens/history_browser.png)
 
-Open the **menu** (☰) and select **History browser**.
+**Menüyü** (☰) açın ve **Geçmiş tarayıcısı**'nı seçin.
 
-Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
+**AAPS** geçmişinde geriye gitmenizi sağlar. [Verilerinizi inceleme > Geçmiş tarayıcısı](../Maintenance/Reviewing.md) sayfasına bakın.
 
 (aaps-screens-statistics)=
 
@@ -766,24 +766,24 @@ Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing y
 
 ![Statistics](../images/v4/Screens/statistics.png)
 
-Open the **menu** (☰) and select **Statistics**.
+**Menüyü** (☰) açın ve **İstatistikler**'i seçin.
 
-Gives you statistics about your Total Daily Dose, Time In Range, your glucose profile over the day (AGP) and your insulin cycle pattern, on four tabs. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
+Dört sekmede günlük toplam dozunuz, hedef aralıktaki süreniz, gün içindeki glikoz profiliniz (AGP) ve insülin döngüsü düzeniniz hakkında istatistikler verir. [Verilerinizi inceleme > İstatistikler](#reviewing-statistics) sayfasına bakın.
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Profil yardımcısı
 
-Open the **menu** (☰) and select **Profile helper**.
+**Menüyü** (☰) açın ve **Profil yardımcısı**'nı seçin.
 
-![Profile helper](../images/screens/profile_helper.png)
+![Profil yardımcısı](../images/screens/profile_helper.png)
 
-The Profile helper lets you compare profiles and generate starting profiles for children. See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) — sections [Build a Profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid) and [Compare two Profiles](#your-aaps-profile-compare-profiles).
+Profil yardımcısı, profilleri karşılaştırmanızı ve çocuklar için başlangıç profilleri oluşturmanızı sağlar. [AAPS profiliniz](../SettingUpAaps/YourAapsProfile.md) sayfasına bakın — [Bir çocuk için sıfırdan profil oluşturma](#your-aaps-profile-profile-from-scratch-for-a-kid) ve [İki profili karşılaştırma](#your-aaps-profile-compare-profiles) bölümleri.
 
 (aaps-screens-widgets)=
 
-## Home screen widgets
+## Ana ekran widget'ları
 
-**AAPS** provides five widgets that you can add to your phone's home screen, to see your data without opening the app. See the dedicated page [Home screen widgets](../DailyLifeWithAaps/Widgets.md).
+**AAPS**, uygulamayı açmadan verilerinizi görmek için telefonunuzun ana ekranına ekleyebileceğiniz beş widget sunar. [Ana ekran widget'ları](../DailyLifeWithAaps/Widgets.md) sayfasına bakın.
 
-![AAPS widgets on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![Ana ekranda AAPS widget'ları](../images/widgets/home_widgets_full_circle_small.png)
