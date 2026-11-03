@@ -1,4 +1,4 @@
-# A dedicated Google account for AAPS (optional)
+# חשבון Google ייעודי ל-AAPS (לא חובה)
 
 Some **AAPS** users prefer to use their main email account for **AAPS** as well. Alternatively, some **AAPS** users (or their caregivers) set-up a dedicated **AAPS** email account - this is optional, we give an example of how to do it below.
 
@@ -7,8 +7,8 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
-- Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
+- שטח Google Drive ייעודי מאפשר להימנע ממילוי מכסת Google Drive האישית באמצעות **ייצוא הגדרות**.
+- כל גרסה של **AAPS** (ושל אפליקציות תומכות כמו xDrip, BYODA וכו') תישמר במקום אחד, שאינו תלוי בחומרת המחשב שלכם. If your PC or phone is stolen/lost/broken you will still have access.
 - By harmonizing the setup, it will make online support simpler across users with similar folder structure.
 - Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
 - Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
@@ -23,7 +23,7 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 
 Requirements:
 
-* You have a Windows’ PC (Windows 10 or newer) and an Android phone (Android 12 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
+* יש לכם מחשב Windows (Windows 10 ומעלה) וטלפון Android (Android 12 ומעלה), שבו תותקן אפליקציית **AAPS**. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
 * The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
 
 ```{admonition} Things to consider when setting up your new account
@@ -39,19 +39,19 @@ Requirements:
 
 ```{admonition} Video Walkthrough!
 :class: note
-Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
+לחצו [כאן](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) לצפייה בסרטון הדרכה על יצירת חשבון Google ייעודי.
 ```
 
  These are the steps outlined in the video:
 
 In this example: 
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
+- חשבון Google ה“_יום־יומי_” הקיים שלכם הוא <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Go to <https://myaccount.google.com> 
+### עברו ל־<https://myaccount.google.com> 
 
- If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
+ If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) לחצו על תמונת הפרופיל שלכם בפינה העליונה של הדף (במקרה זה, תמונה פשוטה ![](../images/Building-the-App/building_0002.png)) (2) בחרו “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -59,8 +59,8 @@ In this example: 
 ### Enter your NEW dedicated account details: 
 
 - Enter the new account: 
-- Create Account
-- for my personal use. 
+- יצירת חשבון
+- לשימוש האישי שלי. 
 
 
 ### Enter your persona:
@@ -73,7 +73,7 @@ In this example: 
 This example appends “.AAPS” to Donald Muck’s existing one…\
 Set a password
 
-### Enter a phone number which can receive the SMS verification
+### הזינו מספר טלפון שיכול לקבל את הודעת ה־SMS לאימות
 
 Gmail will now send you a unique code to enter for validation.
 
@@ -87,7 +87,7 @@ Gmail will display the account name. It will ask you to accept Gmail’s terms a
 
 ### Customize the new profile display
 
-At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
+At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. The profile picture will be set by default to the first letter of your name. שנו אותה למשהו ייחודי כדי למנוע בלבול… בדוגמה זו, Donald.Muck.AAPS החליף את ![](../images/Building-the-App/building_0002.png) ב־![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ This part can be a bit confusing, since you will have to switch back and forth b
 2. Right click on your Browser logo in your taskbar
 3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
 
-Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Open <https://gmail.com> in each browser window. ודאו שהחשבון האישי נמצא למעלה והחשבון החדש הייעודי ל־**AAPS** נמצא למטה, וניתן לזהותו בקלות לפי תמונת הפרופיל בפינה העליונה. במידת הצורך, תמיד אפשר להחליף חשבון בלחיצה על תמונת הפרופיל ובחירת החשבון הנכון.
 
 ![](../images/Building-the-App/building_0009.png)
 
@@ -110,7 +110,7 @@ Your Gmail homepages screen should look like this:\
 
  ### In the new Gmail account (bottom window), open Gmail settings…
 
-- Click on the gear on the left of the profile picture
+- לחצו על גלגל השיניים שליד תמונת הפרופיל
 - then select “**See all Settings**”
 
 ![](../images/Building-the-App/building_0011.png)
@@ -144,4 +144,4 @@ There is quite a bit of back and forth between the windows but this will ensure 
 
 ![](../images/Building-the-App/building_0014.png)
 
-מזל טוב! Now you have created an AAPS-dedicated Google account. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
+מזל טוב! Now you have created an AAPS-dedicated Google account. השלב הבא הוא [בניית אפליקציית AAPS](../SettingUpAaps/BuildingAaps.md).
