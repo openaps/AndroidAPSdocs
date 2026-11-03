@@ -1,250 +1,250 @@
-# Completing the Objectives
+# Görevleri tamamlama
 
-**AAPS** has a series of **Objectives** required to be completed to help the user progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **Objectives** aims to ensure you have:
+**AAPS**'te, kullanıcının temel açık döngüden hibrit kapalı döngüye ve **AAPS**'in tüm işlevlerine adım adım ilerlemesine yardım eden ve tamamlanması gereken bir dizi **Görev** vardır. **Görevler**'i tamamlamanın amacı şunlardan emin olmaktır:
 
-* Configured everything correctly in your **AAPS** setup;
-* Learned about the essential features of **AAPS**; and
-* A basic understanding of what your system can do, in order to help instill confidence when using **AAPS**.
+* **AAPS** kurulumunuzda her şeyi doğru yapılandırdınız;
+* **AAPS**'in temel özelliklerini öğrendiniz ve
+* **AAPS**'i kullanırken güven duymanıza yardım etmek için sisteminizin neler yapabildiğini temel düzeyde anladınız.
 
-When **AAPS** is installed for the first time, each objective must be completed before moving on to the next one. New features will gradually be unlocked as progress is made through each **Objective**.
+**AAPS** ilk kez kurulduğunda, bir sonrakine geçmeden önce her görevin tamamlanması gerekir. Her **Görev**'de ilerledikçe yeni özellikler adım adım açılır.
 
-**Objectives 1 to 8** will guide you from configuring **AAPS** on your smartphone to “basic” hybrid closed looping. This will take about 6 weeks to complete. You can proceed up to **Objective 5** using a virtual pump (and using some other method of insulin delivery in the meantime). **Objectives 9 and 10** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. Further details on an estimated breakdown of time can be obtained here: [How long will it take?](#preparing-how-long-will-it-take)
+**1. - 8. Görevler**, akıllı telefonunuzda **AAPS**'i yapılandırmaktan “temel” hibrit kapalı döngüye kadar size yol gösterir. Bunun tamamlanması yaklaşık 6 hafta sürer. **5. Görev**'e kadar sanal pompa kullanarak ilerleyebilirsiniz (bu sırada insülini başka bir yöntemle verirsiniz). **9. ve 10. Görevler**, diyabetinizi daha iyi kontrol etmek amacıyla **AAPS**'in daha ileri özelliklerini denemek için hazırlanmıştır. Bunların tamamlanması 3 aya kadar, belki daha uzun sürer. Tahmini süre dağılımı hakkında daha fazla ayrıntıyı burada bulabilirsiniz: [Ne kadar sürer?](#preparing-how-long-will-it-take)
 
-As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
+**Görevler**'de ilerlemenin yanı sıra, gerekirse ilerlemenizi silebilir ve [daha önceki bir göreve geri dönebilirsiniz](#CompletingTheObjectives-go-back-in-objectives).
 
-## Backup your settings
+## Ayarlarınızı yedekleyin
 
 ```{admonition} Note
 :class: note
 
-Exporting your **AAPS** settings is recommended after completing each **Objective**!
+Her **Görev**'i tamamladıktan sonra **AAPS** ayarlarınızı dışa aktarmanız önerilir!
 ```
 
-It is strongly recommended that you [export your settings](../Maintenance/ExportImportSettings.md) after completing each objective to avoid losing any progress made in **AAPS**. This exporting process creates a **settings file** (.json) which should be backed-up in one or more safe places (e.g. Google Drive, hard disk, email attachment _etc._). This ensures that any progress made in **AAPS** is saved. If your phone is lost or if you accidentally delete your progress, the json file can be re-loaded to **AAPS** by importing a recent settings file. Having a backup **settings file** is also required if a new **AAPS** smartphone is required for any reason (upgrading/lost/broken phone _etc._)
+**AAPS**'te yaptığınız ilerlemeyi kaybetmemek için her görevi tamamladıktan sonra [ayarlarınızı dışa aktarmanız](../Maintenance/ExportImportSettings.md) şiddetle önerilir. Bu dışa aktarma işlemi bir **ayar dosyası** (.json) oluşturur. Bu dosyanın bir veya daha fazla güvenli yerde yedeklenmesi gerekir (örn. Google Drive, sabit disk, e-posta eki _vb._). Böylece **AAPS**'te yaptığınız tüm ilerleme kaydedilmiş olur. Telefonunuz kaybolursa veya ilerlemenizi yanlışlıkla silerseniz, yakın tarihli bir ayar dosyasını içe aktararak json dosyasını **AAPS**'e yeniden yükleyebilirsiniz. Herhangi bir nedenle (telefonun yükseltilmesi/kaybolması/bozulması _vb._) yeni bir **AAPS** akıllı telefonu gerekirse de yedek bir **ayar dosyası** gerekir.
 
-The **settings** file will save not only your progress through the **Objectives**, but also all your **AAPS** settings such as **max bolus** _etc._
+**Ayar** dosyası yalnızca **Görevler**'deki ilerlemenizi değil, **maksimum bolus** _vb._ gibi tüm **AAPS** ayarlarınızı da kaydeder.
 
-The **Objectives** will need to be restarted from the beginning should you fail to have a backup of your settings and anything happens to your **AAPS** smartphone. Progressing through the **Objectives** takes time, and having to re-complete them again because for example you lost your smartphone, is a situation to be best avoided.
+Ayarlarınızın yedeği yoksa ve **AAPS** akıllı telefonunuza bir şey olursa, **Görevler**'e baştan yeniden başlamanız gerekir. **Görevler**'de ilerlemek zaman alır. Örneğin akıllı telefonunuzu kaybettiğiniz için hepsini yeniden tamamlamak zorunda kalmak, en iyisi kaçınılması gereken bir durumdur.
 
 (objectives-objective1)=
-## Objective 1: Setting up visualization and monitoring, analyzing basals and ratios
+## 1. Görev: Görselleştirme ve izlemeyi kurma, bazalları ve oranları analiz etme
 
-**Objective 1** requires the user to set up their basic technical setup in **AAPS**. No progress can be made until this step has been completed.
+**1. Görev**, kullanıcının **AAPS**'teki temel teknik kurulumunu yapmasını ister. Bu adım tamamlanmadan ilerleme kaydedilemez.
 
-- Select the correct CGM/FGM in [Configuration → BG Source](#Config-Builder-bg-source). See [BG Source](../Getting-Started/CompatiblesCgms.md) for more information.
-- Select the correct Pump in [Configuration → Pump](#Config-Builder-pump) to ensure your pump can communicate with **AAPS**. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **Objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/CompatiblePumps.md) for more information.
-- If using Nightscout:
-  - Follow instructions in [Nightscout](../SettingUpAaps/Nightscout.md) page to ensure **Nightscout** can receive and display **AAPS** data.
-  - Note that the URL in **NSClientV3** must be **_without_ "/api/v1/"** at the end - see [Settings → NSClientV3](#Preferences-nsclient).
-- If using Tidepool:
-  - Follow instructions in [Tidepool](../SettingUpAaps/Tidepool.md) page to ensure **Tidepool** can receive and display **AAPS** data.
+- Doğru CGM/FGM'yi [Konfigürasyon → KŞ kaynağı](#Config-Builder-bg-source) içinde seçin. Daha fazla bilgi için [KŞ kaynağı](../Getting-Started/CompatiblesCgms.md) sayfasına bakın.
+- Pompanızın **AAPS** ile iletişim kurabilmesi için doğru pompayı [Konfigürasyon → Pompa](#Config-Builder-pump) içinde seçin. Döngü için **AAPS** sürücüsü olmayan bir pompa modeli kullanıyorsanız veya ilk **Görevler**'de insülini başka bir sistemle verirken ilerlemek istiyorsanız **sanal pompa**'yı seçin. Daha fazla bilgi için [insülin pompası](../Getting-Started/CompatiblePumps.md) sayfasına bakın.
+- Nightscout kullanıyorsanız:
+  - **Nightscout**'un **AAPS** verilerini alıp gösterebildiğinden emin olmak için [Nightscout](../SettingUpAaps/Nightscout.md) sayfasındaki talimatları izleyin.
+  - **NSClientV3**'teki URL'nin sonunda **"/api/v1/" _olmaması_** gerektiğine dikkat edin - bkz. [Ayarlar → NSClientV3](#Preferences-nsclient).
+- Tidepool kullanıyorsanız:
+  - **Tidepool**'un **AAPS** verilerini alıp gösterebildiğinden emin olmak için [Tidepool](../SettingUpAaps/Tidepool.md) sayfasındaki talimatları izleyin.
 
-Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
+Not: ***AAPS**'in sensörü tanıması için bir sonraki sensör glikoz değerinin gelmesini beklemeniz gerekebilir.*
 
 (objectives-objective2)=
-## Objective 2: Learn how to control AAPS
+## 2. Görev: AAPS'i kontrol etmeyi öğrenme
 
-**Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below. Each task shows its status (**1**): the orange "**Not completed yet**" turns into "**Completed, well done!**" as soon as **AAPS** has registered the action. Tap **Hint** (**2**) underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
+**2. Görev**, aşağıdaki ekran görüntüsünde gösterildiği gibi birkaç ‘işin’ yapılmasını ister. Her iş kendi durumunu gösterir (**1**): **AAPS** işlemi kaydeder kaydetmez turuncu "**Henüz tamamlanmadı**" yazısı "**Tamamlandı, tebrikler!**" olarak değişir. Belirli bir işlemi henüz bilmiyorsanız, ilgili dokümantasyonu açmak için bir işin altındaki **İpucu**'na (**2**) dokunun.
 
-![Screenshot objective 2](../images/Objective2_V2_5.png)
+![2. Görev ekran görüntüsü](../images/Objective2_V2_5.png)
 
-Tasks to complete **Objective 2** are:
-- Set your **Profile** to 90% for a duration of 10 min.
-  - _Hint_: Tap your Profile name on the main screen to open the **Profile** screen, then use the **Activate** (▶) button and set percentage and duration. More information in [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Note_: **AAPS** does not accept basal rates below 0.05U/hr. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Switch back to your normal **Profile** after completing this task.
-- Simulate "taking a shower" by [disconnecting your pump](#AapsScreens-loop-status) in **AAPS** for a duration of 1h.
-  - _Hint_: press the loop icon on the main screen to open the Loop dialog, then choose a duration under **Disconnect pump**.
-- End "taking a shower" by reconnecting your pump.
-  - _Hint_: press the "disconnected"-icon to open the loop dialog again and choose **Reconnect Pump**.
-- Set a custom [**Temporary Target**](../DailyLifeWithAaps/TempTargets.md) with a duration of 10 min.
-  - _Hint_: press the target range on the main screen to bring up the temporary target screen.
-- Display the **Loop** plugin's content.
-  - _Hint_: open **Configuration → Loop** and tap "**Open plugin**".
-- Use scroll or zoom on the BG chart to look at larger or smaller time frames.
+**2. Görev**'i tamamlamak için yapılacak işler şunlardır:
+- **Profil**'inizi 10 dakika süreyle %90'a ayarlayın.
+  - _İpucu_: **Profil** ekranını açmak için ana ekranda profil adınıza dokunun, ardından **Etkinleştir** (▶) düğmesini kullanın ve yüzdeyi ve süreyi ayarlayın. Daha fazla bilgi: [Profil değişimi ve profil yüzdesi](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+  - _Not_: **AAPS**, 0,05 Ü/sa altındaki bazal oranları kabul etmez. **Profil**'iniz 0,05 Ü/sa veya daha düşük oranlar içeriyorsa, bu işi tamamlamadan önce daha yüksek bazal oranları olan geçici bir **Profil** oluşturmanız gerekir. Bu işi tamamladıktan sonra normal **Profil**'inize geri dönün.
+- **AAPS**'te 1 saat süreyle [pompanızın bağlantısını keserek](#AapsScreens-loop-status) "duş almayı" taklit edin.
+  - _İpucu_: Döngü iletişim kutusunu açmak için ana ekrandaki döngü simgesine basın, ardından **Pompa bağlantısını kes** altında bir süre seçin.
+- "Duş alma"yı pompanızı yeniden bağlayarak bitirin.
+  - _İpucu_: Döngü iletişim kutusunu yeniden açmak için "bağlantı kesildi" simgesine basın ve **Pompayı tekrar bağla**'yı seçin.
+- 10 dakika süreli özel bir [**Geçici Hedef**](../DailyLifeWithAaps/TempTargets.md) ayarlayın.
+  - _İpucu_: Geçici hedef ekranını açmak için ana ekrandaki hedef aralığına basın.
+- **Döngü** eklentisinin içeriğini görüntüleyin.
+  - _İpucu_: **Konfigürasyon → Döngü**'yü açın ve "**Eklentiyi aç**"a dokunun.
+- Daha uzun veya daha kısa zaman aralıklarına bakmak için KŞ grafiğinde kaydırma veya yakınlaştırma kullanın.
 
 
 (objectives-objective3)=
 ## Görev 3: Bilginizi kanıtlayın
 
-**Objective 3** requires the user to pass a multiple-choice exam which is designed to test your **AAPS** knowledge.
+**3. Görev**, kullanıcının **AAPS** bilgisini sınamak için hazırlanmış çoktan seçmeli bir sınavı geçmesini ister.
 
-Some users find **Objective 3** to be the most difficult objective to complete. Please read the **AAPS** documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group for "Objective 3" (because it is likely that your question has been asked before - and answered by the group). These groups can provide friendly hints, or redirect you to the relevant part of the **AAPS** documents.
+Bazı kullanıcılar **3. Görev**'i tamamlanması en zor görev olarak görür. Lütfen soruları yanıtlarken **AAPS** dokümantasyonunu da okuyun. **AAPS** dokümantasyonunu araştırdıktan sonra gerçekten takıldıysanız, lütfen [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) veya [Discord](https://discord.gg/4fQUWHZ4Mw) grubunda "Objective 3" diye arayın (çünkü sorunuz büyük olasılıkla daha önce sorulmuş ve grup tarafından yanıtlanmıştır). Bu gruplar size dostça ipuçları verebilir veya sizi **AAPS** dokümantasyonunun ilgili bölümüne yönlendirebilir.
 
-In the meantime :
-- To reduce the number of notifications / decisions you are asked to make (temporary basal rates) while in Open Loop, set a wide target range in your **Profile** _e.g._ 90 - 150 mg/dL or 5.0 - 8.5 mmol/L.
-- You might want to set a wider upper limit, or even disable Open Loop, at night.
+Bu arada:
+- Açık Döngü'deyken sizden istenen bildirim / karar (geçici bazal oranları) sayısını azaltmak için **Profil**'inizde geniş bir hedef aralığı ayarlayın, _örn._ 90 - 150 mg/dL veya 5,0 - 8,5 mmol/L.
+- Geceleri üst sınırı daha geniş ayarlamak, hatta Açık Döngü'yü kapatmak isteyebilirsiniz.
 
-To proceed with **Objective 3**, tap a question row to open it. Please read each question carefully and select your answer(s).
+**3. Görev**'e devam etmek için bir soru satırına dokunarak soruyu açın. Lütfen her soruyu dikkatle okuyun ve yanıtınızı (yanıtlarınızı) seçin.
 
-For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for 1 hour before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
+Her soru için birden fazla doğru yanıt olabilir! Yanlış bir yanıt seçilirse, soru 1 saat boyunca kilitlenir; bu süreden sonra geri dönüp soruyu yeniden yanıtlayabilirsiniz. Bir sonraki denemenizde yanıtların sırası değişmiş olabilir; bunun amacı yanıtları dikkatle okumanızı ve her yanıtın doğru olup olmadığını gerçekten anlamanızı sağlamaktır.
 
 ```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: note
-From time to time, new features are added to **AAPS** which may require a new question to be added to the **Objectives**, particularly **Objective 3**. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other **Objectives** remain completed.
+Zaman zaman **AAPS**'e yeni özellikler eklenir. Bu da **Görevler**'e, özellikle **3. Görev**'e yeni bir soru eklenmesini gerektirebilir. Bu nedenle **3. Görev**'e eklenen her yeni soru “tamamlanmadı” olarak işaretlenir, çünkü **AAPS** bu soruyu yanıtlamanızı ister. Endişelenmeyin: her **Görev** bağımsız olduğu için, diğer **Görevler** tamamlanmış kaldığı sürece **AAPS'in mevcut işlevlerini kaybetmezsiniz**.
 ```
 
-## Görev 4: Bir Açık döngüye başlamak
+## 4. Görev: Açık döngüye başlama
 
-The purpose of **Objective 4** is to recognize how often **AAPS** will evaluate the user's basal rate against glucose levels, and recommend temporary basal rate adjustments. As part of this **Objective**, you will activate open looping for the first time, and will accept 20 proposed temporary basal rate changes, and if required, apply these manually on your pump. You will also observe the impact of [**Temporary Targets**](../DailyLifeWithAaps/TempTargets.md). If you are not familiar with setting a temporary basal rate change in **AAPS** yet, see the pump actions in the **Manage** sheet ([Where did the Actions tab go?](#screens-action-tab)).
+**4. Görev**'in amacı, **AAPS**'in kullanıcının bazal oranını glikoz değerlerine göre ne sıklıkla değerlendirdiğini ve geçici bazal oran ayarlamaları önerdiğini görmektir. Bu **Görev**'in bir parçası olarak açık döngüyü ilk kez etkinleştireceksiniz, önerilen 20 geçici bazal oran değişikliğini kabul edeceksiniz ve gerekirse bunları pompanızda elle uygulayacaksınız. Ayrıca [**Geçici Hedefler**](../DailyLifeWithAaps/TempTargets.md)'in etkisini gözlemleyeceksiniz. **AAPS**'te geçici bazal oran değişikliği ayarlamayı henüz bilmiyorsanız, **Yönet** panelindeki pompa işlemlerine bakın ([Eylemler sekmesi nereye gitti?](#screens-action-tab)).
 
-The minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective**, even if all basal rate changes were enacted already.
+Bu görevi tamamlamak için en kısa süre: **7 gün**. Bu zorunlu bir bekleme süresidir. Tüm bazal oran değişiklikleri zaten uygulanmış olsa bile bir sonraki **Görev**'e geçmek mümkün değildir.
 
-- Select Open Loop by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Open Loop** as running mode.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Ensure these basal rate adjustments show up in **AAPS** and **Nightscout**.
-- Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
-- If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
+- Açık Döngü'ye geçmek için ana ekrandaki [Döngü simgesine](#AapsScreens-loop-status) basın ve çalışma modu olarak **Açık Döngü**'yü seçin.
+- 7 gün içinde en az 20 geçici bazal oran önerisini elle uygulayın; bunları (fiziksel) pompanıza girin ve AAPS'te kabul ettiğinizi onaylayın. Bu bazal oran ayarlamalarının **AAPS**'te ve **Nightscout**'ta göründüğünden emin olun.
+- Gerektiğinde [**Geçici Hedefler**](../DailyLifeWithAaps/TempTargets.md)'i kullanın. Bir hipoyu tedavi ettikten sonra, sistemin geri sıçrama sırasında aşırı düzeltme yapmasını önlemek için önceden tanımlı "hipo geçici hedefini" kullanın.
+- Bu noktada hâlâ [Basit mod](#preferences-simple-mode)'daysanız, şimdi onu kapatmak için muhtemelen iyi bir zamandır.
 
-To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. The higher the value, the fewer change notifications you will receive.
+Açık Döngü'deyken önerilen bazal oran değişikliklerinin sayısını azaltmak için [**3. Görev**](#objectives-objective3)'de anlatılan ipuçlarını yine kullanabilirsiniz. Ayrıca, önerilen bazal oran değişiklikleri için en küçük yüzdeyi **Ayarlar → Döngü** içindeki "**Açık modda minimum değişiklik**" ayarı ile değiştirebilirsiniz. Değer ne kadar yüksekse o kadar az değişiklik bildirimi alırsınız.
 
-![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
+![Açık Döngü en küçük istek değişikliği](../images/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
 
-You don't need to action each and every system recommendation!
+Sistemin her önerisini tek tek uygulamanız gerekmez!
 ```
 (objectives-objective5)=
 ## Görev 5: Geçici bazal önerileri de dahil olmak üzere açık döngünüzü anlamak
 
-As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](#aaps-screens-how-predictions-become-a-dosing-decision), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at the detailed calculations shown on the **OpenAPS SMB** plugin screen (**Configuration → APS → Open plugin**).
+**5. Görev**'in bir parçası olarak geçici bazal önerilerinin nasıl oluşturulduğunu anlamaya başlayacaksınız. Buna [bazal mantığının belirlenmesi](#aaps-screens-how-predictions-become-a-dosing-decision), [**AAPS Genel Bakış** ekranındaki tahmin çizgilerini](#aaps-screens-prediction-lines) (veya Nightscout'u) gözlemleyerek etkiyi analiz etmek ve **OpenAPS SMB** eklenti ekranında (**Konfigürasyon → APS (YPS) → Eklentiyi aç**) gösterilen ayrıntılı hesaplamalara bakmak dahildir.
 
-Estimated time to complete this objective: **7 days**.
+Bu görevi tamamlamak için tahmini süre: **7 gün**.
 
-This **Objective** requires you to determine and set your “Maximum basal rate” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). This value can be set in [Settings → OpenAPS SMB](#Preferences-openaps-smb-settings). In [simple mode](#preferences-simple-mode), **AAPS** sets this value automatically and you don't need to change it. If you are still using a virtual pump, make sure this safety setting is set in both **AAPS** and your insulin pump.
+Bu **Görev**, [OpenAPS özellikleri](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to) bölümünde anlatıldığı gibi “Maksimum bazal oran” (max-basal) değerinizi belirlemenizi ve ayarlamanızı ister. Bu değer [Ayarlar → OpenAPS SMB](#Preferences-openaps-smb-settings) içinde ayarlanabilir. [Basit mod](#preferences-simple-mode)'da **AAPS** bu değeri otomatik olarak ayarlar ve sizin değiştirmeniz gerekmez. Hâlâ sanal pompa kullanıyorsanız, bu güvenlik ayarının hem **AAPS**'te hem de insülin pompanızda yapıldığından emin olun.
 
-You might wish to set your [**Profile** BG target](#profile-glucose-targets) higher than usual until you are comfortable with **AAPS**' calculations and settings. You may wish to experiment with adjusting your **BG target** in your **Profile** being in a tighter range (say, 1 or less mmol/L [20 mg/dL or less] wide) and observe the resulting behavior.
+**AAPS**'in hesaplamalarına ve ayarlarına alışana kadar [**Profil** KŞ hedefinizi](#profile-glucose-targets) normalden daha yüksek ayarlamak isteyebilirsiniz. **Profil**'inizdeki **KŞ hedefi**'ni daha dar bir aralıkta (örneğin 1 mmol/L [20 mg/dL] veya daha dar) ayarlamayı deneyebilir ve ortaya çıkan davranışı gözlemleyebilirsiniz.
 
-![Stop sign](../images/sign_stop.png)
+![Dur işareti](../images/sign_stop.png)
 
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-If you are open looping with a virtual pump **stop here**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
+Sanal pompa ile açık döngü kullanıyorsanız **burada durun**. Bu **Görev**'in sonundaki **Doğrula**'ya ancak insülin veren "gerçek" bir pompaya geçtikten sonra dokunun.
 
 ```
 
-![blank](../images/blank.png)
+![boş](../images/blank.png)
 
 (objectives-objective6)=
 ## Görev 6: Düşük KŞ'de Duraklatma ile döngüyü kapatmaya başlamak
 
-![Warning sign](../images/sign_warning.png)
+![Uyarı işareti](../images/sign_warning.png)
 ```{admonition} Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
 :class: note
-You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
+Yüksek KŞ değerlerini yine kendiniz düzeltmeniz gerekecek (pompa veya kalemle elle düzeltme yaparak)!
 ```
 
-As part of **Objective 6** you will close the loop and activate its **Low Glucose Suspend** (LGS) mode while [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero. You have to remain in LGS mode for 5 days to complete this **objective**. You should use this time to check if your **Profile** settings are accurate and LGS events are not triggered too often.
+**6. Görev**'in bir parçası olarak, [maks. AİNS](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) sıfıra ayarlıyken döngüyü kapatacak ve **Düşük Glikoz Duraklatma** (LGS) modunu etkinleştireceksiniz. Bu **görev**i tamamlamak için 5 gün boyunca LGS modunda kalmanız gerekir. Bu süreyi, **Profil** ayarlarınızın doğru olup olmadığını ve LGS olaylarının çok sık tetiklenmediğini kontrol etmek için kullanmalısınız.
 
-Minimal time to complete this objective: **5 days**. This is a mandatory wait time. You cannot proceed to the next **Objective** before this time is up.
+Bu görevi tamamlamak için en kısa süre: **5 gün**. Bu zorunlu bir bekleme süresidir. Bu süre dolmadan bir sonraki **Görev**'e geçemezsiniz.
 
-It is crucial that your current **Profile** (basal, ISF, IC) have been well tested before you close your loop in **LGS** mode. Incorrect **Profile** settings might force you into hypo situations which have to be treated manually. An accurate **Profile** will help reduce the need for low glucose treatments during the 5 days period.
+Döngünüzü **LGS** modunda kapatmadan önce mevcut **Profil**'inizin (bazal, İDF, IC) iyi test edilmiş olması çok önemlidir. Yanlış **Profil** ayarları sizi elle tedavi edilmesi gereken hipo durumlarına sokabilir. Doğru bir **Profil**, 5 günlük süre boyunca düşük glikoz tedavilerine olan ihtiyacı azaltmaya yardım eder.
 
-**If you still observe frequent or severe low glucose episodes consider refining your [insulin type's DIA](#Config-Builder-insulin-dia), basal, ISF and carb ratios.** Please refer to the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group which has much discussion on this.
+**Hâlâ sık veya ağır düşük glikoz atakları görüyorsanız, [insülin tipinizin İES'sini](#Config-Builder-insulin-dia), bazalı, İDF'yi ve karbonhidrat oranlarını iyileştirmeyi düşünün.** Lütfen bu konuda çok tartışma bulunan [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) veya [Discord](https://discord.gg/4fQUWHZ4Mw) grubuna başvurun.
 
 
-During **Objective 6**, **AAPS** will override the maxIOB setting to zero. **This override will end when moving to Objective 7.**
+**6. Görev** sırasında **AAPS**, maxIOB ayarını sıfır olarak geçersiz kılar. **Bu geçersiz kılma 7. Görev'e geçildiğinde sona erer.**
 
-This means that when you are on **Objective 6**, if sensor glucose levels are dropping, **AAPS** will reduce your basal insulin delivery for you. But, if sensor glucose levels are rising, **AAPS** will increase the basal rate above your **Profile** value only if **basal IOB** is negative as a result of a previous **LGS**. Otherwise, **AAPS** will not increase basal above your current profile value, even if glucose levels are rising. This caution is to avoid hypos as you are learning to use **AAPS**.
+Bu, **6. Görev**'deyken sensör glikoz değerleri düşüyorsa **AAPS**'in bazal insülin iletiminizi sizin için azaltacağı anlamına gelir. Ancak sensör glikoz değerleri yükseliyorsa, **AAPS** bazal oranı yalnızca önceki bir **LGS** nedeniyle **bazal AİNS** negatifse **Profil** değerinizin üstüne çıkarır. Bunun dışında, glikoz değerleri yükselse bile **AAPS** bazalı mevcut profil değerinizin üstüne çıkarmaz. Bu önlem, **AAPS**'i kullanmayı öğrenirken hipolardan kaçınmak içindir.
 
-**As a consequence, you have to handle high glucose values with manual insulin bolus corrections.**
+**Bu nedenle yüksek glikoz değerlerini elle verilen düzeltme bolusları ile yönetmeniz gerekir.**
 
-- If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
+- AİNS'iniz negatifse (aşağıdaki ekran görüntüsüne bakın), **6. Görev**'de > %100 olan bir geçici bazal oranı (GBO) tetiklenebilir.
 
-![Example negative IOB](../images/Objective6_negIOB.png)
+![Negatif AİNS örneği](../images/Objective6_negIOB.png)
 
-- Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
-- Enable 'Low Glucose Suspend' mode by pressing the Loop icon on the main screen and choosing **Low Glucose Suspend** as running mode.
-- Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
-- You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
+- Güvenli olmak ve bir güvenlik payı eklemek için hedef aralığınızı normalde hedeflediğinizden biraz daha yüksek ayarlayın.
+- 'Düşük Glikoz Duraklatma' modunu etkinleştirmek için ana ekrandaki Döngü simgesine basın ve çalışma modu olarak **Düşük Glikoz Duraklatma**'yı seçin.
+- Etkin geçici bazalları GENEL BAKIŞ ekranındaki turkuaz bazal metnine veya GENEL BAKIŞ grafiğindeki turkuaz bazal çizimine bakarak izleyin.
+- Tedavi edilen hipolardan sonra, geri sıçrama sırasında bazallar artırılamadığı için geçici olarak ani yükselmeler yaşayabilirsiniz.
 
 (objectives-objective7)=
 ## Görev 7: Kapalı döngüyü ayarlamak, maksimum AİNS'i 0'ın üzerine çıkarmak ve KŞ hedeflerini kademeli olarak düşürmek
 
-To complete **Objective 7** you have to close your loop and raise your [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS** will start to use your defined maxIOB value to correct high glucose values. In [simple mode](#preferences-simple-mode), **AAPS** sets maxIOB automatically and you don't need to change it.
+**7. Görev**'i tamamlamak için döngünüzü kapatmanız ve [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) değerinizi yükseltmeniz gerekir. **maxIOB**, Düşük Glikoz Duraklatma modu nedeniyle **6. Görev**'de otomatik olarak sıfırlanmıştı. Artık durum böyle değildir. **AAPS**, yüksek glikoz değerlerini düzeltmek için tanımladığınız maxIOB değerini kullanmaya başlar. [Basit mod](#preferences-simple-mode)'da **AAPS** maxIOB'yi otomatik olarak ayarlar ve sizin değiştirmeniz gerekmez.
 
-Minimal time to complete this objective: **1 day**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
+Bu görevi tamamlamak için en kısa süre: **1 gün**. Bu zorunlu bir bekleme süresidir. Bu süre dolana kadar bir sonraki **Görev**'e geçmek mümkün değildir.
 
-- Select **Closed Loop** by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Closed Loop** as running mode. Stay in **Closed Loop** over a period of 1 day.
+- **Kapalı Döngü**'ye geçmek için ana ekrandaki [Döngü simgesine](#AapsScreens-loop-status) basın ve çalışma modu olarak **Kapalı Döngü**'yü seçin. 1 gün boyunca **Kapalı Döngü**'de kalın.
 
-- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
+- En iyi çalışan ayarları bulana kadar 'SMB için maks AİNS' değerinizi (OpenAPS'te 'max-iob') yavaş yavaş 0'ın üzerine çıkarın.
 
-The default recommendation for this setting is “**average meal bolus + 3x max daily basal**”, where “max daily basal” is the maximum hourly value in any time segment of the day.
+Bu ayar için varsayılan öneri “**ortalama öğün bolusu + 3 x maksimum günlük bazal**” şeklindedir. Burada “maksimum günlük bazal”, günün herhangi bir zaman dilimindeki en yüksek saatlik değerdir.
 
-![max daily basal](../images/MaxDailyBasal2.png)
+![maksimum günlük bazal](../images/MaxDailyBasal2.png)
 
-Bu öneri bir başlangıç noktası olarak görülmelidir. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
-* lower the "Max IOB for SMB" value;
-* review your **Profile** settings, only making one adjustment at a time.
+Bu öneri bir başlangıç noktası olarak görülmelidir. Bu kuralı kullanıyorsanız ancak glikoz düzeyleri yükselirken AAPS'in çok fazla insülin verdiğini görüyorsanız şunları yapmanız gerekebilir:
+* "SMB için maks AİNS" değerini düşürün;
+* **Profil** ayarlarınızı gözden geçirin ve her seferinde yalnızca bir ayarlama yapın.
 
-Alternatively, if you are very insulin resistant, raise the **maxIOB** value very cautiously.
+Ya da insüline çok dirençliyseniz **maxIOB** değerini çok dikkatli bir şekilde yükseltin.
 
-Once confident on how much **maxIOB** suits your looping patterns, lower your **BG targets** to your desired level.
+Döngü kullanımınıza ne kadar **maxIOB** uyduğundan emin olduğunuzda, **KŞ hedeflerinizi** istediğiniz düzeye indirin.
 
 (objectives-objective8)=
-## Objective 8: Adjust basals and ratios if needed, and then enable Autosens
+## 8. Görev: Gerekirse bazalları ve oranları ayarlama, ardından Otoduyarlılık'ı etkinleştirme
 
-As part of this **objective**, you will revisit your **Profile**'s performance and will use [Autosens](#Open-APS-features-autosens) functionality as an indicator for wrong settings.
+Bu **görev**in bir parçası olarak **Profil**'inizin performansını yeniden gözden geçirecek ve [Otoduyarlılık](#Open-APS-features-autosens) işlevini yanlış ayarların bir göstergesi olarak kullanacaksınız.
 
-Minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
+Bu görevi tamamlamak için en kısa süre: **7 gün**. Bu zorunlu bir bekleme süresidir. Bu süre dolana kadar bir sonraki **Görev**'e geçmek mümkün değildir.
 
-Enable [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days (in [simple mode](#preferences-simple-mode) it is enabled by default) and watch [**Overview**'s graph white line](#AapsScreens-section-g-additional-graphs) showing your insulin sensitivity rising or falling due to exercise or hormones etc. Keep an eye on the **OpenAPS SMB** plugin screen (**Configuration → APS → Open plugin**) which shows **AAPS** adjusting the sensitivity, basals and targets accordingly.
+[Otoduyarlılık](../DailyLifeWithAaps/KeyAapsFeatures.md)'ı 7 gün boyunca etkinleştirin ([Basit mod](#preferences-simple-mode)'da varsayılan olarak etkindir) ve [**Genel Bakış** grafiğindeki beyaz çizginin](#AapsScreens-section-g-additional-graphs) egzersiz, hormonlar vb. nedeniyle insülin duyarlılığınızın arttığını veya azaldığını göstermesini izleyin. **AAPS**'in duyarlılığı, bazalları ve hedefleri buna göre ayarladığını gösteren **OpenAPS SMB** eklenti ekranını (**Konfigürasyon → APS (YPS) → Eklentiyi aç**) takip edin.
 
-This is a good time to review your settings for [Sensitivity Detection](#Config-Builder-sensitivity-detection). You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs).
+[Duyarlılık algılaması](#Config-Builder-sensitivity-detection) ayarlarınızı gözden geçirmek için iyi bir zamandır. Duyarlılığınızı ana ekranda bir [ek grafikte](#AapsScreens-section-g-additional-graphs) görebilirsiniz.
 
-Additionally, you can use [Autotune](#autotune-how-autotune-calculates-adjustments) as a one off to check your basals remain accurate or do a traditional basal test.
+Ayrıca bazallarınızın hâlâ doğru olduğunu kontrol etmek için [OtoAyar](#autotune-how-autotune-calculates-adjustments)'ı bir kez kullanabilir veya geleneksel bir bazal testi yapabilirsiniz.
 
 (objectives-objective9)=
 ## Görev 9: Süper mikro bolus (SMB) gibi gündüz kullanımı için ek oref1 özelliklerinin etkinleştirilmesi
 
-In **Objective 9**, you will tackle and use **"Super Micro Bolus (SMB)"** as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, and why basal is set to zero temporarily after SMBs are given (zero-temping).
+**9. Görev**'de temel işlevlerden biri olan **"Süper Mikro Bolus (SMB)"** ile çalışacak ve onu kullanacaksınız. Zorunlu okumaları tamamladıktan sonra SMB'lerin ne olduğunu, nasıl çalıştığını ve SMB verildikten sonra bazalın neden geçici olarak sıfıra ayarlandığını (sıfır geçici bazal, zero-temping) iyi anlamış olacaksınız.
 
-Minimal time to complete this objective: **28 days**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+Bu görevi tamamlamak için en kısa süre: **28 gün**. Bu zorunlu bir bekleme süresidir. Bu süre dolmadan bir sonraki Görev'e geçemezsiniz.
 
-- The [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand **SMB** and the concept of **zero-temping**.
-- Once done, you can [raise maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) to get **SMBs** working more effectively. maxIOB now includes all **IOB**, not just accumulated basal. This threshold pauses **SMBs** until IOB drops below this value (_e.g._ **maxIOB** is set to 7U and a bolus of 8U is given to cover a meal: SMBs will be paused and not given unless **IOB** drops below 7U). A good start is setting **maxIOB** = **average meal bolus + 3x max daily basal** where "max daily basal" is the maximum hourly value in any time segment of the day. See [objective 7](#objectives-objective7) as reference.
-- Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Settings → Absorption settings → min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
+- **SMB**'yi ve **sıfır geçici bazal** (zero-temping) kavramını anlamak için [bu dokümantasyondaki SMB bölümü](#Open-APS-features-super-micro-bolus-smb) ve [openAPS dokümantasyonundaki oref1 bölümü](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) mutlaka okunmalıdır.
+- Bunu yaptıktan sonra **SMB**'lerin daha etkili çalışması için [maxIOB'yi yükseltebilirsiniz](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). maxIOB artık yalnızca birikmiş bazalı değil, tüm **AİNS**'i kapsar. Bu eşik, AİNS bu değerin altına düşene kadar **SMB**'leri duraklatır (_örn._ **maxIOB** 7 Ü olarak ayarlıdır ve bir öğünü karşılamak için 8 Ü bolus verilir: **AİNS** 7 Ü'nin altına düşmedikçe SMB'ler duraklatılır ve verilmez). İyi bir başlangıç, **maxIOB** = **ortalama öğün bolusu + 3 x maksimum günlük bazal** olarak ayarlamaktır. Burada "maksimum günlük bazal", günün herhangi bir zaman dilimindeki en yüksek saatlik değerdir. Başvuru için [7. görev](#objectives-objective7)'e bakın.
+- Karbonhidrat emilim hızınızı değerlendirin ve çok yavaş veya çok hızlı bulursanız [Ayarlar → Emilim ayarları → min_5m_carbimpact](#Preferences-min_5m_carbimpact) içindeki “min_5m_carbimpact” parametresini değiştirmeyi düşünün.
 
 (objectives-objective10)=
-## Görev 10: Otomasyon
+## 10. Görev: Otomasyon
 
-**Automations** become available when **Objective 10** is started.
+**Otomasyonlar**, **10. Görev** başlatıldığında kullanılabilir hâle gelir.
 
-Minimal time to complete this objective: **28 days**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+Bu görevi tamamlamak için en kısa süre: **28 gün**. Bu zorunlu bir bekleme süresidir. Bu süre dolmadan bir sonraki Görev'e geçemezsiniz.
 
-Read the documentation page [Automation](../DailyLifeWithAaps/Automations.md) first.
+Önce [Otomasyon](../DailyLifeWithAaps/Automations.md) dokümantasyon sayfasını okuyun.
 
-Set up the most basic automation rule; for example trigger an Android notification in a few minutes:
-- Open **Manage → Automation** and tap the **+** button (**Add rule**).
-- Enter a **Task name**, for example "My first automation notification".
-- Under **Condition**, tap "**EDIT**".
-  - Tap "**Add trigger**" and select "**Time**". **AAPS** creates an entry for today at the current time.
-  - Change the time so that it triggers in a few minutes.
-  - Tap the **Save** icon (top right) to go back to the rule.
-- Under **Action**, tap "**ADD**" and select "**Notification**".
-  - Enter a message in the action card, for example "My first automation".
-- Tap the **Save** icon (top right) and make sure the rule is **Enabled**.
-- Wait until the time triggers the notification (note that depending on your phone, it can be a few minutes late)
+En basit otomasyon kuralını kurun; örneğin birkaç dakika sonra bir Android bildirimi tetikleyin:
+- **Yönet → Otomasyon**'u açın ve **+** düğmesine (**Kural ekle**) dokunun.
+- Bir **Görev adı** girin, örneğin "İlk otomasyon bildirimim".
+- **Koşul** altında "**DÜZENLE**"ye dokunun.
+  - "**Tetikleyici ekle**"ye dokunun ve "**Zaman**"ı seçin. **AAPS**, bugün için şu anki saatte bir giriş oluşturur.
+  - Saati, birkaç dakika sonra tetiklenecek şekilde değiştirin.
+  - Kurala geri dönmek için **Kaydet** simgesine (sağ üstte) dokunun.
+- **Eylem** altında "**EKLE**"ye dokunun ve "**Bildirim**"i seçin.
+  - Eylem kartına bir mesaj girin, örneğin "İlk otomasyonum".
+- **Kaydet** simgesine (sağ üstte) dokunun ve kuralın **Etkin** olduğundan emin olun.
+- Zamanın bildirimi tetiklemesini bekleyin (telefonunuza bağlı olarak bildirimin birkaç dakika gecikebileceğini unutmayın)
 
-You can then experiment with setting up a more useful **Automation**. The documentation page gives a few examples, and you can search for "Automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. There is also a dedicated channel in the [Discord](https://discord.gg/4fQUWHZ4Mw) community.
+Ardından daha kullanışlı bir **Otomasyon** kurmayı deneyebilirsiniz. Dokümantasyon sayfasında birkaç örnek vardır. Ayrıca [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) grubunda "Automation" ekran görüntülerini arayabilirsiniz. [Discord](https://discord.gg/4fQUWHZ4Mw) topluluğunda bu konuya ayrılmış bir kanal da vardır.
 
-For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
+Örneğin her sabah okul/iş öncesinde aynı saatte kahvaltıda aynı şeyi yiyorsanız, kahvaltıdan 30 dakika önce biraz daha düşük bir **Geçici Hedef** ayarlayan "kahvalti-oncesi-hedef" gibi bir **Otomasyon** oluşturabilirsiniz. Böyle bir durumda koşulunuz büyük olasılıkla "yinelenen zaman" içerir; bu, haftanın belirli günlerini (Pazartesi, Salı, Çarşamba, Perşembe, Cuma) ve belirli bir saati (06:30) seçmekten oluşur. Eylem, normalden daha düşük bir hedef değeri ve 30 dakikalık süresi olan "Geçici hedefi başlat" olacaktır.
 
-## When all objectives are completed
+## Tüm görevler tamamlandığında
 
-Once you have accomplished all the **Objectives**, the list shows each of them with a tick and the date it was accomplished. The **Objectives** item disappears from the bottom navigation; you can still open the list with **Configuration → Constraints → Objectives → Open plugin**.
+Tüm **Görevler**'i tamamladığınızda liste her birini bir onay işareti ve tamamlandığı tarihle gösterir. **Görevler** öğesi alttaki gezinme çubuğundan kaybolur; listeyi yine **Konfigürasyon → Kısıtlamalar → Görevler → Eklentiyi aç** ile açabilirsiniz.
 
-![All objectives accomplished](../images/objectives/objectives_completed.png)
+![Tüm görevler tamamlandı](../images/objectives/objectives_completed.png)
 
-Press "**More**" under an objective to see its tasks again:
+Bir görevin işlerini yeniden görmek için o görevin altındaki "**Daha fazla**"ya basın:
 
-![Details of an accomplished objective](../images/objectives/objective_1_details.png)
+![Tamamlanmış bir görevin ayrıntıları](../images/objectives/objective_1_details.png)
 
 (CompletingTheObjectives-go-back-in-objectives)=
 ## Görevlere geri dön
 
-If you wish to go back in the **Objectives** for whatever reason, open the finished **Objective** with "**More**" and tap "**Reset finished state**":
+Herhangi bir nedenle **Görevler**'de geri gitmek isterseniz, tamamlanmış **Görev**'i "**Daha fazla**" ile açın ve "**Bitmiş durumu sıfırla**"ya dokunun:
 
 ![Görevlere geri dön](../images/Objective_ClearFinished.png)
 
-In the same way, the **Objective** you are currently working on can be restarted with "**Reset started state**".
+Aynı şekilde, şu anda üzerinde çalıştığınız **Görev** "**Başlatılmış durumu sıfırla**" ile yeniden başlatılabilir.
