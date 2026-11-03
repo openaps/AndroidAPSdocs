@@ -131,7 +131,7 @@
 
 Трябва да откриете защо получавате дублирани стойности на КЗ:
 
-* Включен ли е Dexcom bridge във вашия сайт Nightscout? Изключете bridge: отворете административния панел на вашия Nightscout, редактирайте променливата „enable“ и премахнете от нея частта „bridge“. (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Включен ли е Dexcom bridge във вашия сайт Nightscout? Изключете bridge: отворете административния панел на вашия Nightscout, редактирайте променливата „enable“ и премахнете от нея частта „bridge“. (За Heroku [подробности има тук](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Качват ли няколко източника вашата КЗ в Nightscout? Ако използвате приложението BYODA, включете качването в **AAPS**, но не го включвайте в xDrip, ако използвате и него.
 * Имате ли последователи, които получават вашата КЗ, но и я качват отново във вашия сайт Nightscout?
 * Последна мярка: в [настройките на NSClient](#Preferences-nsclient) изберете настройките за синхронизация и изключете опцията „Получаване на КЗ от Nightscout“.
@@ -247,7 +247,7 @@
 
 Ако критичният праг е надвишен, стойностите се показват в червено.
 
-The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+Възрастта винаги се показва в кратка форма, независимо от размера на екрана: *4h* през първия ден, *3d4h* по-късно.
 
 Праговете могат да се променят чрез малката икона **Настройки**, която се показва, когато редът за статус е **разгънат** (стрелката вдясно) – вижте [Индикатори](#Preferences-status-lights).
 
@@ -308,11 +308,11 @@ The age is always shown in its short form, whatever the screen size: *4h* on the
 
 (aaps-screens-graph-clock-change)=
 
-#### Clock changes
+#### Смяна на часа
 
-When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+Когато часовникът на телефона прескочи – при смяна на лятно/зимно часово време или в нова часова зона – пунктирана вертикална линия отбелязва този момент на графиката на КЗ, с малка иконка на часовник в долния ѝ край. Същата пунктирана линия минава и през [допълнителните графики](#aaps-screens-additional-graphs) по-долу.
 
-![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
+![Маркерът за смяна на часа: пунктирана линия с иконка на часовник, до линията за текущия момент](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -342,7 +342,7 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 Когато две прогнози дават еднакви стойности, точките им се припокриват и виждате само единия цвят (например UAM върху IOB, когато КЗ е равна).
 
-* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
+* Линия **COB** (оранжева): [активни въглехидрати](CobCalculation.md) (оранжевото се използва навсякъде в AAPS за COB и въглехидрати)
     
     Тази линия на прогнозата показва накъде ще отиде КЗ (а не самият COB!) според текущите настройки на **Профил**, като се приема, че отклоненията поради усвояването на въглехидратите остават постоянни. Тази линия се показва само ако има известни COB.
 
@@ -364,7 +364,7 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 * Линия **aCOB** (бледа, полупрозрачна оранжева): ускорено усвояване на въглехидратите
     
-    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Остаряло и с ограничена полезност.
+    Подобна на COB, но приема постоянна скорост на усвояване на въглехидратите 10 mg/dl за 5 мин (0,555 mmol/l за 5 мин). Остаряло и с ограничена полезност.
     
     *Тази линия се показва само когато се използва по-старият алгоритъм [AMA](#Config-Builder-aps).*
 
@@ -469,7 +469,7 @@ IOB може да е отрицателен, ако нямате оставащ 
 
 Тези данни може да са налични, когато използвате [смарт часовник с Wear OS](../WearOS/WearOsSmartwatch.md). Включете ги в приложението **AAPS** Wear и дайте разрешение за данните за здравето.
 
-Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+Стъпките се рисуват като колони, а сърдечният ритъм – като крива линия, която прекъсва там, където часовникът не е изпратил данни.
 
 #### Отклонения (Откл)
 
@@ -485,7 +485,7 @@ Steps are drawn as columns, and the heart rate as a curved line that breaks wher
 
 ![Отклонения и BGI](../images/main/graph_dev_bgi.png)
 
-Добра комбинация е тази линия да се показва заедно със стълбчетата на отклоненията. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Сравняването на линията BGI и стълбчетата на отклоненията е още един начин да разберете как се колебае **КЗ**. Тук, в момента, отбелязан с **1**, стълбчетата на отклоненията са много над линията BGI: КЗ се покачва повече, отколкото обяснява само активността на инсулина (например след въглехидрати). В момента, отбелязан с **2**, стълбчетата на отклоненията са под нулата (червени): КЗ е по-ниска, отколкото алгоритъмът е очаквал.
+Добра комбинация е тази линия да се показва заедно със стълбчетата на отклоненията. Те използват една и съща скала, но тя е различна от тази на другите допълнителни данни, затова е добре да ги показвате на отделна графика, както е показано по-горе. Сравняването на линията BGI и стълбчетата на отклоненията е още един начин да разберете как се колебае **КЗ**. Тук, в момента, отбелязан с **1**, стълбчетата на отклоненията са много над линията BGI: КЗ се покачва повече, отколкото обяснява само активността на инсулина (например след въглехидрати). В момента, отбелязан с **2**, стълбчетата на отклоненията са под нулата (червени): КЗ е по-ниска, отколкото алгоритъмът е очаквал.
 
 ### Раздел F – Лента QuickLaunch
 
@@ -507,13 +507,13 @@ Steps are drawn as columns, and the heart rate as a curved line that breaks wher
 
 Като включите **Старт на вр. цел за хранене**, можете автоматично да стартирате вашата [временна цел „Преди хранене“](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Допълнителен ред **Време**, зададен на **Сега**, ви позволява да запишете инжекция с инсулин, направена в миналото: използвайте **-** / **+**, за да го промените, или докоснете стрелката, за да въведете минутите или да изберете дата и час.
+Ако не искате да подадете болус чрез помпата, а само да запишете количество инсулин (т.е. инсулин, подаден с писалка), включете „**Само запиши (без да го стартираш в помпата)**“. Допълнителен ред **Време**, зададен на **Сега**, ви позволява да запишете инжекция с инсулин, направена в миналото: използвайте **-** / **+**, за да го промените, или докоснете стрелката, за да въведете минутите или да изберете дата и час.
 
 ![Редът Време, сгънат](../images/v4/Screens/insulin_dialog_record_only_time.png) ![Редът Време, отворен със стрелката](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Можете да използвате бутоните **+0,5 / +1,0 / +2,0**, за да увеличите бързо количеството инсулин. Стъпките на увеличаване могат да се променят в [настройките на болус калкулатора](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-Диалогът Инсулин може да се използва и когато помпата е спряна или разкачена, напр. за да запишете инсулин, инжектиран с писалка. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
+Диалогът Инсулин може да се използва и когато помпата е спряна или разкачена, напр. за да запишете инсулин, инжектиран с писалка. В този случай „**Само запиши (без да го стартираш в помпата)**“ е включено задължително (показано в червено) и се появяват допълнителни полета за избор на вида инсулин и отместване **Време** за инжекция, направена в миналото:
 
 ![Диалог Инсулин при разкачена помпа](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -527,7 +527,7 @@ If you do not want to bolus through the pump but record an insulin amount (i.e. 
 
 **Започват от**: кога ще ядете / кога сте яли въглехидратите.
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). Този ред е сгънат, за да не въведете по грешка грамовете в него: използвайте **-** / **+**, за да го промените, или докоснете стрелката, за да го отворите и да въведете стойност.
+**Продължителност**: използва се за [„удължени въглехидрати“](ExtendedCarbs.md). Този ред е сгънат, за да не въведете по грешка грамовете в него: използвайте **-** / **+**, за да го промените, или докоснете стрелката, за да го отворите и да въведете стойност.
 
 Можете да използвате бутоните **+5 / +10 / +20**, за да увеличите бързо количеството въглехидрати.
 
@@ -590,7 +590,7 @@ If you do not want to bolus through the pump but record an insulin amount (i.e. 
 * От съображения за безопасност данните за IOB не могат да се изключат, когато COB е включен, защото рискувате да получите твърде много инсулин, ако **AAPS** не отчита вече подадения.
 * Ако включите COB и IOB, ще се вземат предвид неусвоените въглехидрати, които още не са покрити с инсулин, + целият инсулин, подаден като TBR или SMB.
 * Ако включите IOB без COB, **AAPS** отчита вече подадения инсулин, но няма да го съпостави с въглехидратите, които още не са усвоени. Това води до съобщение за „липсващи въглехидрати“.
-* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. Така се добавят само новите въглехидрати, тъй като основното хранене не е задължително усвоено и затова IOB няма да съответства точно на COB скоро след болус за хранене.
+* Ако давате болус за **допълнителна храна** скоро след болус за хранене (напр. допълнителен десерт), може да е полезно да **изключите всички данни**. Така се добавят само новите въглехидрати, тъй като основното хранене не е задължително усвоено и затова IOB няма да съответства точно на COB скоро след болус за хранене.
 * От съображения за безопасност **временна цел** се включва в изчислението само ако включите тези данни ръчно.
 
 (AapsScreens-section-j)=
@@ -619,20 +619,20 @@ If you do not want to bolus through the pump but record an insulin amount (i.e. 
 
 ![Напомняне за въглехидрати в бъдещето](../images/Home2021_BolusWizard_EatingReminder.png)
 
-The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
+Напомнянето започва, когато болусът е подаден. Докато то тече, лента **Време е за ядене** на главния екран отброява оставащото време, с бутони **Стоп** и **+5 мин**. **+5 мин** премества края на чакането с пет минути по-късно, а лентата показва общото време на чакане. Когато времето дойде, напомнянето звъни със собствен звук – тих кухненски таймер. Освен **Заглуши алармата** (екранът остава отворен) и **Заглуши и затвори**, екранът на алармата предлага и **+5 мин**, което започва ново чакане от пет минути. След като е звъннало, лентата показва *Времето изтече* с **+5 мин** и **Откажи**; **Заглуши и затвори** премахва и лентата. Лентата и алармата се показват също в **AAPSClient** и на [часовника](#WearOsSmartwatch-wizard-carb-time). Напомнянето не създава таймер в приложението за часовник на телефона ви. Ако Android не позволява на **AAPS** да задава аларми, калкулаторът ви моли да разрешите *Аларми и напомняния* за **AAPS** в настройките на Android. Звънчето не се предлага, ако времето на въглехидратите е в миналото.
 
-![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
+![Лентата „Време е за ядене“ на главния екран, с +5 мин и Стоп](../images/main/main_eat_reminder_bar.png)
 
-![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+![Екранът на алармата „Време е за ядене“: +5 мин, Заглуши алармата, Заглуши и затвори](../images/main/eat_reminder_alarm.png)
 
-Полето **КЗ** обикновено вече е попълнено с последната стойност от вашия CGM. Ако нямате работещ CGM, полето ще е празно. Когато стойността е скорошна, редът **КЗ** остава сгънат. The field follows new readings while the wizard is open, until you change it yourself.
+Полето **КЗ** обикновено вече е попълнено с последната стойност от вашия CGM. Ако нямате работещ CGM, полето ще е празно. Когато стойността е скорошна, редът **КЗ** остава сгънат. Докато калкулаторът е отворен, полето следва новите измервания, докато не го промените сами.
 
-Бутонът с резултата долу показва предложения болус; при натискането му се иска потвърждение, преди да се подаде инсулин. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
+Бутонът с резултата долу показва предложения болус; при натискането му се иска потвърждение, преди да се подаде инсулин. Докато потвърждението чака, кръгът не подава SMB, така че болусът, който потвърждавате, остава правилен. Ако в този момент се подава SMB, **ОК** изчаква, докато той завърши.
 
 Добре е да знаете:
 
 * Ако изчисленият болус е над вашия **[Максимален болус](#Preferences-maximum-bolus)**, той се намалява до максималния болус и потвърждението показва предупреждението „Приложено болус ограничение“. В този случай бутон от [Бързи действия](../DailyLifeWithAaps/QuickWizards.md) се отказва.
-* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
+* Когато болусът само се записва (например докато помпата е разкачена), предупреждението „**Само запиши (без да го стартираш в помпата)**“ остава в горната част на диалога, също и когато превъртате.
 * Болус, който давате ръчно, има предимство пред [SMB](#Open-APS-features-super-micro-bolus-smb), който чака да бъде подаден: SMB се отменя и кръгът изчислява отново. Ако в момента се подава SMB, болусът ви се отказва със съобщението „В момента се доставя SMB. Опитайте отново, когато приключи.“ Не се подава инсулин, а въглехидратите, въведени с този болус, не се запазват: изчакайте малко и ги въведете отново.
 
 (AapsScreens-wrong-cob-detection)=
