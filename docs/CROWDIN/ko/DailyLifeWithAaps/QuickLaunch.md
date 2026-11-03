@@ -1,154 +1,154 @@
 (quicklaunch)=
-# QuickLaunch (overview quick-action toolbar)
+# QuickLaunch (개요 화면의 빠른 작업 툴바)
 
-**QuickLaunch** is the small **quick-action toolbar** that floats at the bottom of the **AAPS** overview, just above the bottom navigation. It is a customizable row of one-tap buttons: you decide which actions live there, in which order, so the things you do most often are always one tap away on the main screen.
+**QuickLaunch**는 **AAPS** 개요 화면 아래쪽, 하단 내비게이션 바로 위에 떠 있는 작은 **빠른 작업 툴바**입니다. 한 번 탭으로 실행하는 버튼을 사용자가 정할 수 있는 줄입니다: 어떤 동작을 어떤 순서로 둘지 직접 정하므로, 가장 자주 하는 일을 메인 화면에서 항상 한 번 탭으로 할 수 있습니다.
 
 ```{contents} Table of contents
 :depth: 2
 :local: true
 ```
 
-![The QuickLaunch toolbar on the overview](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
+![개요 화면의 QuickLaunch 툴바](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
 
 ---
 
-## Using the toolbar
+## 툴바 사용하기
 
-The toolbar sits on the **overview**, between the graphs and the bottom navigation:
+툴바는 **개요** 화면에서 그래프와 하단 내비게이션 사이에 있습니다:
 
-![The QuickLaunch toolbar in place on the overview](../images/v4/QuickLaunch/quicklaunch_overview.png)
+![개요 화면에 배치된 QuickLaunch 툴바](../images/v4/QuickLaunch/quicklaunch_overview.png)
 
-- **Tap** an icon to run its action — exactly as if you had opened it from its normal screen (a bolus or treatment still shows its usual confirmation first).
-- **Long-press** an icon to see a **tooltip** with the action's name and a short description.
-- If you add **more buttons than fit** on screen, the extra ones move into an **overflow menu** (the **⋮** button at the end of the toolbar).
-- Each icon keeps its action's **color** (e.g. insulin, carbs, temp target), so it is recognizable at a glance.
+- 아이콘을 **탭**하면 그 동작이 실행됩니다 — 원래 화면에서 연 것과 똑같습니다(볼러스나 처치는 여전히 평소의 확인을 먼저 표시합니다).
+- 아이콘을 **길게 누르면** 동작의 이름과 짧은 설명이 있는 **도움말**이 표시됩니다.
+- 화면에 **들어갈 수 있는 것보다 많은 버튼**을 추가하면, 남는 버튼은 **더보기 메뉴**(툴바 끝의 **⋮** 버튼)로 이동합니다.
+- 각 아이콘은 동작의 **색**(예: 인슐린, 탄수화물, 임시 목표)을 유지하므로 한눈에 알아볼 수 있습니다.
 
 ```{admonition} The toolbar is always there
 :class: note
-The last button is always **Configure QuickLaunch** (the **⚙️** gear). It cannot be removed, so you can always reach the configuration screen straight from the toolbar. By default the toolbar contains just two buttons — the **Bolus wizard** and this gear.
+마지막 버튼은 항상 **QuickLaunch 설정**(**⚙️** 톱니바퀴)입니다. 이 버튼은 삭제할 수 없으므로, 툴바에서 항상 바로 설정 화면으로 갈 수 있습니다. 기본적으로 툴바에는 **볼러스 마법사**와 이 톱니바퀴, 두 개의 버튼만 있습니다.
 ```
 
 ---
 
-## Configuring QuickLaunch
+## QuickLaunch 설정하기
 
-Tap the **⚙️** gear on the toolbar (or open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → … → Configure QuickLaunch**) to open the **Configure QuickLaunch** screen (*“Customize quick-action buttons on overview”*).
+툴바의 **⚙️** 톱니바퀴를 탭하거나(또는 **[구성](../SettingUpAaps/ConfigBuilder.md) → … → QuickLaunch 설정**을 열어) **QuickLaunch 설정** 화면(*“개요 화면의 빠른 작업 버튼 사용자 지정”*)을 여십시오.
 
-![Configure QuickLaunch — Selected actions, then the catalog of actions to add](../images/v4/QuickLaunch/quicklaunch_config.png)
+![QuickLaunch 설정 — 선택된 동작, 그 아래에 추가할 동작 목록](../images/v4/QuickLaunch/quicklaunch_config.png)
 
-The screen has two parts:
+화면은 두 부분으로 되어 있습니다:
 
-- **Selected actions** (at the top) — the buttons currently on your toolbar, in toolbar order.
-- A **catalog** below it — every action you can add, grouped by category. Each catalog entry has a **➕** button to add it.
+- **선택된 동작**(위쪽) — 현재 툴바에 있는 버튼이 툴바 순서대로 표시됩니다.
+- 그 아래의 **목록** — 추가할 수 있는 모든 동작이 범주별로 묶여 있습니다. 목록의 각 항목에는 추가하기 위한 **➕** 버튼이 있습니다.
 
-### Selected actions — reorder, edit, remove
+### 선택된 동작 — 순서 변경, 편집, 삭제
 
-Each selected action has:
+선택된 각 동작에는 다음이 있습니다:
 
-- a **⠿ drag handle** — press and drag to **reorder** the buttons (the order here is the order on the toolbar),
-- a **−** button — **remove** it from the toolbar,
-- and, for a **Profile** shortcut only, a **✏️** button to edit its percentage/duration (see [Profile shortcuts](#profile-shortcuts)).
+- **⠿ 끌기 핸들** — 눌러서 끌면 버튼의 **순서를 바꿀** 수 있습니다(여기의 순서가 툴바의 순서입니다),
+- **−** 버튼 — 툴바에서 **삭제**합니다,
+- 그리고 **프로파일** 바로가기에만 퍼센트/기간을 편집하는 **✏️** 버튼이 있습니다([프로파일 바로가기](#profile-shortcuts) 참조).
 
-Changes take effect **immediately** — there is no separate *Save*. Adding an action drops it at the end of the toolbar; reorder it from there.
+변경 사항은 **즉시** 적용됩니다 — 별도의 *저장*은 없습니다. 동작을 추가하면 툴바 끝에 놓입니다. 그다음에 순서를 바꾸십시오.
 
 ---
 
-## The action categories
+## 동작 범주
 
-The catalog groups everything you can add into the following categories, in this order. Categories that have nothing to offer (e.g. you have no scenes) are simply not shown.
+목록은 추가할 수 있는 모든 항목을 다음 범주로, 이 순서대로 묶습니다. 제공할 항목이 없는 범주(예: 장면이 하나도 없는 경우)는 표시되지 않습니다.
 
-### Treatment
+### 처치
 
-The everyday treatment and CGM dialogs:
+일상적인 처치와 CGM 대화 상자:
 
-- **Insulin** — deliver a bolus manually.
-- **Carbs** — record carbs without insulin.
-- **Bolus wizard** — open the bolus calculator.
-- **Treatment** — record insulin and carbs together.
-- **CGM** — open your CGM app (e.g. xDrip).
-- **Calibration** — calibrate the CGM sensor.
+- **인슐린** — 볼러스를 직접 주입합니다.
+- **탄수화물** — 인슐린 없이 탄수화물을 기록합니다.
+- **볼러스 마법사** — 볼러스 계산기를 엽니다.
+- **처치** — 인슐린과 탄수화물을 함께 기록합니다.
+- **CGM** — CGM 앱(예: xDrip)을 엽니다.
+- **보정** — CGM 센서를 보정합니다.
 
-### Care Portal
+### 케어포털
 
-The care-portal events and device-maintenance records:
+케어포털 이벤트와 기기 관리 기록:
 
-- **BG Check**, **Note**, **Exercise**, **Question**, **Announcement**,
-- **Sensor Insert**, **Pump Battery Change**, **Pump Site Change**, **Prime/Fill**, **Site Rotation**.
+- **혈당 체크**, **노트**, **운동**, **질문**, **공지**,
+- **센서 삽입**, **펌프 배터리 교체**, **펌프 위치 변경**, **프라임/채우기**, **위치 순환**.
 
-**Prime/Fill** and **Pump Battery Change** are only offered when your pump uses them. Patch pumps, for example, fill and change the battery in their own activation steps, so these entries are not shown for them (as in the **Manage** sheet).
+**프라임/채우기**와 **펌프 배터리 교체**는 펌프가 이 기능을 사용할 때만 제공됩니다. 예를 들어 패치 펌프는 자체 활성화 단계에서 채우기와 배터리 교체를 하므로, 이 항목이 표시되지 않습니다(**관리** 시트와 같습니다).
 
-![The Care Portal category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
+![목록의 케어포털 범주](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
 
-These are the same entries you would otherwise reach through the **[Treatments](#v4changes-treatments)** and **[Manage](#v4changes-manage)** sheets — QuickLaunch just puts the ones you use on the overview.
+이 항목들은 원래 **[처치](#v4changes-treatments)** 시트와 **[관리](#v4changes-manage)** 시트에서 여는 것과 같습니다 — QuickLaunch는 사용하는 항목을 개요 화면에 놓아 줄 뿐입니다.
 
-### Manage
+### 관리
 
-The screens of the **[Manage](#v4changes-manage)** sheet, in the same order, so you can open the one you use most from the toolbar:
+**[관리](#v4changes-manage)** 시트의 화면이 같은 순서로 있으므로, 가장 많이 쓰는 화면을 툴바에서 열 수 있습니다:
 
-- **Profile**, **Insulin settings** (manage and activate insulin configurations — named differently from **Insulin** on purpose, because that button delivers a bolus), **Temp Target**, **QuickWizard**, **Scenes**, **Automation**, **Food**,
-- **Running mode** — close or open the loop, suspend it, or disconnect the pump,
-- **Authorized clients** — only on a master or a paired client.
+- **프로파일**, **인슐린 설정**(인슐린 구성을 관리하고 활성화 — 볼러스를 주입하는 **인슐린** 버튼과 구별하기 위해 일부러 다른 이름을 씁니다), **임시 목표**, **빠른 마법사**, **장면**, **자동화**, **음식**,
+- **실행 모드** — 루프를 폐쇄 또는 개방하거나, 일시 중지하거나, 펌프 연결을 해제합니다,
+- **허가된 클라이언트** — 마스터 또는 페어링된 클라이언트에서만 표시됩니다.
 
-These buttons open the screen; they do not start anything by themselves. To start a scene or a QuickWizard in one tap, add it from the **Scenes** or **Quick Wizard** category below.
+이 버튼들은 화면을 열기만 하며, 스스로 아무것도 시작하지 않습니다. 장면이나 빠른 마법사를 한 번 탭으로 시작하려면 아래의 **장면** 또는 **빠른 마법사** 범주에서 추가하십시오.
 
-![The Manage category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![The Manage category, continued](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
+![목록의 관리 범주](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![관리 범주(계속)](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
 
-### Quick Wizard
+### 빠른 마법사
 
-Each of your **[QuickWizard](QuickWizards.md)** presets can be added as a button, so a recurring meal is one tap from the overview. The button carries the preset's name and shows the carbs/insulin amount; tapping it runs the QuickWizard with its usual confirmation.
+각 **[빠른 마법사](QuickWizards.md)** 프리셋을 버튼으로 추가할 수 있으므로, 자주 먹는 식사를 개요 화면에서 한 번 탭으로 처리할 수 있습니다. 버튼에는 프리셋 이름과 탄수화물/인슐린 양이 표시되며, 탭하면 평소의 확인과 함께 빠른 마법사가 실행됩니다.
 
-QuickWizards set to show on the watch only are not offered. A QuickWizard button on the toolbar follows the same rules as in the **Treatments** sheet: it is hidden outside its [valid time range](#quickwizard_validity) and for a short time after use. It stays in your toolbar configuration and comes back when the QuickWizard can be used again.
+워치에서만 표시하도록 설정한 빠른 마법사는 제공되지 않습니다. 툴바의 빠른 마법사 버튼은 **처치** 시트와 같은 규칙을 따릅니다: [유효 시간 범위](#quickwizard_validity) 밖에서는, 그리고 사용한 직후 잠시 동안은 숨겨집니다. 버튼은 툴바 설정에 남아 있으며, 빠른 마법사를 다시 사용할 수 있게 되면 다시 나타납니다.
 
-### Scenes
+### 장면
 
-Each enabled **[scene](Scenes.md)** can be added as a button. Tapping it asks for confirmation, then activates the scene (the same bundle of actions you would get from the Scenes screen). This category appears only if you have at least one scene.
+활성화된 각 **[장면](Scenes.md)**을 버튼으로 추가할 수 있습니다. 탭하면 확인을 요청한 다음 장면을 활성화합니다(장면 화면에서 실행할 때와 같은 동작 묶음). 이 범주는 장면이 하나 이상 있을 때만 나타납니다.
 
-The tooltip and the catalog show the same summary as **Manage → Scenes**, for example *"3 actions, 2 h → Cooldown"*, where the name after the arrow is the follow-up scene.
+도움말과 목록에는 **관리 → 장면**과 같은 요약이 표시됩니다. 예: *"동작 3개, 2시간 → Cooldown"*. 화살표 뒤의 이름은 후속 장면입니다.
 
 ### Automation
 
-Your **user-action** automation rules (the ones you trigger by hand) can be added as buttons. Tapping one asks for confirmation, then runs that rule's actions.
+**사용자 동작** 자동화 규칙(직접 실행하는 규칙)을 버튼으로 추가할 수 있습니다. 탭하면 확인을 요청한 다음 그 규칙의 동작을 실행합니다.
 
 ```{admonition} Automation buttons run on the master
 :class: note
-Automation executes on the **master**, so automation shortcuts are offered and run only on the master. They are not available on a paired **[client](../RemoteFeatures/ClientMasterControl.md)**.
+자동화는 **마스터**에서 실행되므로, 자동화 바로가기는 마스터에서만 제공되고 실행됩니다. 페어링된 **[클라이언트](../RemoteFeatures/ClientMasterControl.md)**에서는 사용할 수 없습니다.
 ```
 
-### Temp Target Presets
+### 임시 목표 프리셋
 
-Each of your **[Temp Target](TempTargets.md)** presets can be added as a button (its name, its target and its duration are shown, for example *"Eating soon — 5.0 mmol/L, 45 min"*). Tapping it asks for confirmation, then starts that temp target.
+각 **[임시 목표](TempTargets.md)** 프리셋을 버튼으로 추가할 수 있습니다(이름, 목표, 기간이 표시됩니다. 예: *"식사직전 — 5.0 mmol/L, 45분"*). 탭하면 확인을 요청한 다음 그 임시 목표를 시작합니다.
 
-![The dynamic categories — Quick Wizard and Temp Target Presets (Scenes and Automation appear when you have some)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
+![동적 범주 — 빠른 마법사와 임시 목표 프리셋(장면과 자동화는 항목이 있을 때 나타납니다)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
 
 (profile-shortcuts)=
 ### Profile
 
-Every **[profile](ProfileSwitch-ProfilePercentage.md)** can be added as a **shortcut** that performs a **profile switch** in one tap. Unlike most shortcuts, a Profile shortcut carries its own **percentage** and **duration**, which you set after adding it with the **✏️** button:
+모든 **[프로파일](ProfileSwitch-ProfilePercentage.md)**을 한 번 탭으로 **프로파일 전환**을 실행하는 **바로가기**로 추가할 수 있습니다. 대부분의 바로가기와 달리 프로파일 바로가기에는 자체 **퍼센트**와 **기간**이 있으며, 추가한 후 **✏️** 버튼으로 설정합니다:
 
-- **Percentage** (30–250 %, in steps of 5 %) — scale the profile when it is applied. 100 % uses it as-is.
-- **Duration** (0–10080 min, that is up to 7 days, in steps of 10 min) — how long the switch lasts. **0 = Permanent** (until you switch again).
+- **퍼센트**(30–250 %, 5 % 단위) — 적용할 때 프로파일의 크기를 조정합니다. 100 %는 프로파일을 그대로 사용합니다.
+- **기간**(0–10080분, 즉 최대 7일, 10분 단위) — 전환이 얼마나 지속되는지 정합니다. **0 = 영구**(다시 전환할 때까지).
 
-![Profile shortcuts and plugin categories in the catalog](../images/v4/QuickLaunch/quicklaunch_categories.png)
+![목록의 프로파일 바로가기와 플러그인 범주](../images/v4/QuickLaunch/quicklaunch_categories.png)
 
-This lets you keep several buttons for the **same** profile at different strengths — for example *“Profile 100 %”* and *“Profile 70 % for 2 h”* — and apply either with a single tap. (You can add the same profile more than once with different settings.)
+이렇게 하면 **같은** 프로파일에 대해 강도가 다른 버튼을 여러 개 둘 수 있습니다 — 예: *“프로파일 100 %”*와 *“프로파일 70 %, 2시간”* — 그리고 둘 중 하나를 한 번 탭으로 적용할 수 있습니다. (같은 프로파일을 다른 설정으로 여러 번 추가할 수 있습니다.)
 
-### Plugins
+### 플러그인
 
-![Plugin shortcuts in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
+![목록의 플러그인 바로가기](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
 
-Finally, any **enabled plugin** that has its own screen can be added as a shortcut to open it directly. These are grouped by plugin type — **Pump**, **BG Source**, **APS**, **Loop**, **Sensitivity detection**, **Smoothing**, **Calibration**, **Constraints**, **Communication** and **General** — so you can, for instance, jump straight to your pump or loop screen from the overview.
+마지막으로, 자체 화면이 있는 **활성화된 플러그인**은 그 화면을 바로 여는 바로가기로 추가할 수 있습니다. 이 바로가기는 플러그인 종류별로 묶여 있습니다 — **펌프**, **혈당 출처**, **APS**, **루프**, **민감도 감지**, **평활화**, **보정**, **제한**, **통신**, **일반** — 그래서 예를 들어 개요 화면에서 펌프나 루프 화면으로 바로 갈 수 있습니다.
 
 ---
 
-## QuickLaunch and Master/Client
+## QuickLaunch와 마스터/클라이언트
 
-Unlike most of your settings, the **QuickLaunch toolbar is configured per device** — it is stored **locally and is not synced** between your master and paired clients, so each device keeps its own set of buttons. (It *is* included in a settings **backup/export**, so a restore brings it back on the same device.)
+대부분의 설정과 달리 **QuickLaunch 툴바는 기기마다 따로 설정됩니다** — **로컬에 저장되며 동기화되지 않으므로** 마스터와 페어링된 클라이언트 사이에서 각 기기가 자체 버튼 세트를 유지합니다. (설정 **백업/내보내기**에는 *포함됩니다*. 그래서 같은 기기에서 복원하면 다시 돌아옵니다.)
 
-What each device can put on its toolbar still depends on what it has: QuickWizards, scenes, temp-target presets and profiles all sync, so a client's catalog offers the same items — you simply choose them per device. A few details to know:
+각 기기가 툴바에 둘 수 있는 항목은 그 기기에 있는 것에 따라 달라집니다: 빠른 마법사, 장면, 임시 목표 프리셋, 프로파일은 모두 동기화되므로 클라이언트의 목록에도 같은 항목이 있습니다 — 기기마다 고르기만 하면 됩니다. 알아 둘 몇 가지:
 
-- Buttons whose target no longer exists (a deleted QuickWizard, scene or preset, a disabled rule) are **skipped automatically**.
-- **Automation** shortcuts are offered and run only on the **master** (automation executes on the master). Scene, QuickWizard, temp-target and profile buttons are available on a client.
-- When you tap a button on a client that must run on the master (a bolus, temp target, profile switch or scene), the **master** carries it out and authors the confirmation. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md).
+- 대상이 더 이상 없는 버튼(삭제된 빠른 마법사, 장면 또는 프리셋, 비활성화된 규칙)은 **자동으로 건너뜁니다**.
+- **자동화** 바로가기는 **마스터**에서만 제공되고 실행됩니다(자동화는 마스터에서 실행됩니다). 장면, 빠른 마법사, 임시 목표, 프로파일 버튼은 클라이언트에서 사용할 수 있습니다.
+- 마스터에서 실행해야 하는 버튼(볼러스, 임시 목표, 프로파일 전환 또는 장면)을 클라이언트에서 탭하면, **마스터**가 이를 실행하고 확인을 만듭니다. [마스터 ↔ 클라이언트 제어](../RemoteFeatures/ClientMasterControl.md)를 참조하십시오.
 
 ---
 
