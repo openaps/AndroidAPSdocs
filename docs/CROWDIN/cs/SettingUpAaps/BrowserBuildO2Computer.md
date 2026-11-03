@@ -28,7 +28,7 @@ Použijte počítač (podporuje Windows/Mac/Linux)
   </div>
 </div>
 
-Install Simple Web Server<br/><br/> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store. Pokud se prohlížeč zeptá, zda otevřít aplikaci obchodu, povolte to.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/><br/>
+Nainstalujte Simple Web Server<br/><br/> Pokud používáte Windows nebo Mac, můžete ho nainstalovat z Microsoft Store nebo Mac App Store. Pokud se prohlížeč zeptá, zda otevřít aplikaci obchodu, povolte to.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/><br/>
 
 Příklad na Macu:
 
@@ -42,9 +42,9 @@ Příklad na Macu:
 
 - Pokud vidíte tuto obrazovku, server byl spuštěn.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
 
-- Nezavírejte Simple Web Server. Please switch to your browser and open<br/><br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
+- Nezavírejte Simple Web Server. Přepněte se do prohlížeče a otevřete<br/><br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
-- For the subsequent steps, please refer to the video below, starting from 2 minutes 18 seconds.<br/><br/>
+- Další kroky najdete ve videu níže, od času 2 minuty 18 sekund.<br/><br/>
   <!--crowdin: exclude-->
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
     <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
