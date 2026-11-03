@@ -10,7 +10,7 @@ Wyłącz optymalizację baterii i pozwól aplikacji xDrip działać w tle.
 
 Nie pozwalaj żadnej innej aplikacji wysyłać danych (glikemii i leczenia) do Nightscout.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
+→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → przełącz `Enabled` na **OFF** (5)
 
 ![Podstawowe ustawienia xDrip 1](../images/xDrip_Basic1.png)
 
@@ -34,7 +34,7 @@ Opcja `Alert on failures` też powinna być wyłączona (10). W przeciwnym razie
 
 ### **Inter-app Settings** (Broadcast)
 
-If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
+Jeśli używasz AAPS, musisz włączyć wysyłanie (broadcast) w ustawieniach Inter-App w xDrip, aby dane były przekazywane do AAPS.
 
 → Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
 
@@ -99,7 +99,7 @@ Postępuj według instrukcji:
 #### Wymiana nadajnika
 
 - Wyłącz oryginalny odbiornik Dexcom (jeśli go używasz) i nie włączaj go ponownie, zanim xDrip nie pokaże odczytów.
-- Forget the device in xDrip (System Status → Forget Device) AND in the smartphone's Bluetooth settings (shown as DexcomXX where XX are the last two digits of the transmitter serial number).
+- Usuń urządzenie w xDrip (System Status → Forget Device) ORAZ w ustawieniach Bluetooth smartfona (widoczne jako DexcomXX, gdzie XX to dwie ostatnie cyfry numeru seryjnego nadajnika).
 - Trzymaj stary nadajnik poza zasięgiem Bluetooth, aby nie połączył się ponownie.
 - Następnie postępuj według [Uruchomienie nadajnika G6 lub ONE](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
