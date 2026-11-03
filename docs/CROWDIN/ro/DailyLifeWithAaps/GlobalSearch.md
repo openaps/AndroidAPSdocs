@@ -1,7 +1,7 @@
 (global-search)=
-# Global search
+# Căutare globală
 
-**AAPS** v4 has a **global search** box at the top of the main screen. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
+**AAPS** v4 are o casetă de **căutare globală** în partea de sus a ecranului principal. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,11 +10,11 @@
 
 ---
 
-## Opening search
+## Deschiderea căutării
 
 Tap the **🔍 Search** field at the top of the **Overview** (next to the ☰ menu). Start typing and results appear as you type (after a short pause), grouped by category:
 
-![Global search results, grouped by category](../images/v4/Search/search_results.png)
+![Rezultatele căutării globale, grupate pe categorii](../images/v4/Search/search_results.png)
 
 Clear the box with the **✕**, or close search with the device **Back** button.
 
@@ -34,10 +34,10 @@ This means a guide or forum post written in English still leads you to the right
 
 ## What search covers
 
-Results are grouped into these categories:
+Rezultatele sunt grupate în aceste categorii:
 
 - **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](../SettingUpAaps/ConfigBuilder.md)). Each plugin row carries its **enable switch**, so you can enable or disable a plugin right from the results — tapping the row of a disabled (toggleable) plugin enables it.
-- **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Screens that don't apply to your build are left out (for example *Pair with master* on a master, *Authorized clients* on a client).
+- **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Ecranele care nu se aplică versiunii dumneavoastră sunt omise (de exemplu *Asociați cu dispozitivul principal* pe un dispozitiv principal, *Clienți autorizați* pe un client).
 - **Preference categories** — the settings **screens** and sub-screens, both built-in (General, Appearance, Protection, Alerts, Maintenance, …) and from plugins, plus the small settings groups reached from dialogs (Fill buttons, Insulin/Carbs button steps, status-light thresholds, wizard settings, …).
 - **Preferences** — every **individual setting** that has a title. These are filtered to your build/mode, so you only see settings that actually apply (APS / NSClient / pump-control).
 - **Documentation** — pages from the online **AndroidAPS docs** (see below).
@@ -51,19 +51,19 @@ A preference whose plugin is currently **disabled** still shows up — **greyed 
 
 ---
 
-## Documentation results (online)
+## Rezultate din documentație (online)
 
 While the local search runs, **AAPS** also queries the official **AndroidAPS documentation** (hosted on ReadTheDocs) in parallel. Matching pages appear in a **Documentation** group at the bottom, each with a 📖 icon, the section title and a short snippet:
 
 ![Documentation (wiki) results with snippets](../images/v4/Search/search_documentation.png)
 
-- If the documentation is translated into your app language, **AAPS** searches the translated pages and the English pages at the same time. Pages in your language come first, then the English pages that were not already found.
+- If the documentation is translated into your app language, **AAPS** searches the translated pages and the English pages at the same time. Paginile în limba dumneavoastră apar primele, apoi paginile în engleză care nu au fost deja găsite.
 - Tapping a documentation result opens that page in your **browser**.
 - Documentation search needs **internet** — when you are offline you get a *“Documentation search requires internet connection”* note instead, and the local (in-app) results still work normally.
 
 ---
 
-## Opening a result
+## Deschiderea unui rezultat
 
 Tap a result to go straight to it:
 
@@ -71,7 +71,7 @@ Tap a result to go straight to it:
 - **Dialog** → opens that screen or dialog.
 - **Preference category** → opens that settings screen.
 - **Preference** → opens the setting **in place** (jumps to it within its screen).
-- **Documentation** → opens the page in your browser.
+- **Documentație** → deschide pagina în browser.
 
 Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
 
