@@ -12,7 +12,7 @@ Otwórz ekran NSClient (**Konfiguracja** > **Komunikacja** > **NSClientV3** > **
 
 * Restart
 
-As a first step, restart Nightscout and then your phone to see if the issue is permanent.
+Najpierw uruchom ponownie Nightscout, a potem telefon. Sprawdź, czy problem nadal występuje.
 
 Jeśli Twój Nightscout działa na Heroku, możesz go uruchomić ponownie tak: zaloguj się do Heroku, kliknij nazwę swojej aplikacji Nightscout, kliknij menu 'More', a potem 'Restart all dynos'.
 
@@ -38,6 +38,6 @@ Jeśli **AAPS** poprawnie łączy się z Nightscout, ale BG jest wyświetlana ja
 
 * Jeśli nadal masz błąd...
 
-Sprawdź rozmiar swojej bazy danych w MongoDB (lub przez wtyczkę rozmiaru bazy danych w Nightscout). Jeśli używasz darmowego planu MongoDB, 496 MB oznacza, że baza jest pełna i trzeba ją wyczyścić. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
+Sprawdź rozmiar swojej bazy danych w MongoDB (lub przez wtyczkę rozmiaru bazy danych w Nightscout). Jeśli używasz darmowego planu MongoDB, 496 MB oznacza, że baza jest pełna i trzeba ją wyczyścić. [Postępuj według tych instrukcji Nightscout, aby sprawdzić rozmiar bazy danych i usunąć dane](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Zanim usuniesz dane z bazy, a jeszcze tego nie zrobiłeś, rozważ przekazanie swoich danych AAPS do projektu Open Humans (do badań naukowych). Instrukcje są na stronie [Open Humans Uploader](../SupportingAaps/OpenHumans.md).
