@@ -1,27 +1,27 @@
 # Timezone Change and Daylight Saving
 
-When the time zone of your phone changes, **AAPS** calculates **IOB**, basal and sensitivity for the past again from scratch, about 10 seconds after the change. While this runs, the graphs and values on the main screen may take a moment to update.
+Pasikeitus telefono laiko juostai, **AAPS** maždaug po 10 sekundžių iš naujo perskaičiuoja praeities **AIO**, valandinę bazę ir jautrumą. Kol tai vyksta, grafikai ir reikšmės pagrindiniame ekrane gali atsinaujinti ne iš karto.
 
 (timezone-traveling-with-pumps)=
 
 ## Timezone change for Omnipod Dash
 
-* Refresh the pump status in **Manage → Pump**
-* Temporarily select a different **Profile** and then switch back to your original or desired **Profile**
+* Atnaujinkite pompos būseną: **Valdymas → Pompa**
+* Laikinai pasirinkite kitą **profilį**, tada vėl pasirinkite ankstesnį arba norimą **profilį**
 
 ## Timezone change for DanaR, Korean DanaR
 
-Nėra jokių problemų dėl laiko zonos keitimo telefone, nes pompa nenaudoja telefono istorijos
+Laiko juostos keitimas telefone nesukelia problemų, nes pompa nenaudoja istorijos
 
 (timezone-traveling-danarv2-danars)=
 
-## Timezone change for DanaRv2, DanaRS, Dana-i
+## Laiko juostos keitimas naudojant DanaRv2, DanaRS, Dana-i
 
 These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
 
-To avoid this there are two possibilities:
+Kad to išvengtumėte, yra du būdai:
 
-### Pasirinkimas Nr. 1: "Namų" laiko nustatymas ir laiko poslinkio nustatymas profilyje
+### 1 variantas: namų laiko išlaikymas ir profilio laiko perstūmimas
 
 * Turn off 'Automatic date and time' in your phone's settings (manual time zone change).
 
@@ -29,20 +29,20 @@ To avoid this there are two possibilities:
 
 * Time-shift your **Profile** according to time difference between home time and destination time.
    
-   * Tap the **Profile** name on the main screen to open the [Profile screen](#ProfileSwitch-manage-v4)
-   * Select your **Profile** and tap **▶ Activate**
-   * Set '**Time shift**' according to your destination and tap **Activate**.
+   * Bakstelėkite **profilio** pavadinimą pagrindiniame ekrane, kad atidarytumėte [Profilio ekraną](#ProfileSwitch-manage-v4)
+   * Pasirinkite savo **profilį** ir bakstelėkite **▶ Aktyvuoti**
+   * Nustatykite '**Laiko perstūmimas**' pagal kelionės tikslą ir bakstelėkite **Aktyvuoti**.
    
-   ![Profilio perjungimas su laiko perjungimu](../images/ProfileSwitchTimeShift2.png)
+   ![Profilio keitimas su laiko perstūmimu](../images/ProfileSwitchTimeShift2.png)
    
-   * e.g. Vienna -> New York: **Profile Switch** +6 hours
-   * e.g. Vienna -> Sydney: **Profile Switch** -8 hours
+   * pvz., Viena -> Niujorkas: **Profilio keitimas** +6 valandos
+   * pvz., Viena -> Sidnėjus: **Profilio keitimas** -8 valandos
 
-### Pasirinkimas Nr. 2: Pompos istorijos ištrynimas
+### 2 variantas: pompos istorijos ištrynimas
 
-* Išjunkite "Automatinį laiko ir datos" nustatymą telefone (rankinis laiko zonos pasirinkimas)
+* Telefono nustatymuose išjunkite 'Automatic date and time' (laiko juostos keitimas rankiniu būdu)
 
-When you get off the plane:
+Išlipę iš lėktuvo:
 
 * išjunkite pompą
 * pakeiskite laiko juostą telefone
@@ -56,79 +56,79 @@ When you get off the plane:
 
 ## Timezone Change for Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Tvarkyklė automatiškai pritaiko pompos laiką prie telefono laiko.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in **AAPS** despite the time change.
+Insight pompa taip pat įrašo į istoriją, kada buvo pakeistas laikas ir iš kokio (seno) laiko į kokį (naują) laiką. So the correct time can be determined in **AAPS** despite the time change.
 
-It may cause inaccuracies in the **TDDs**. But it shouldn't be a problem.
+Dėl to **BPD** reikšmės gali būti netikslios. Tačiau tai neturėtų sukelti problemų.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+Taigi Insight naudotojams nereikia nerimauti dėl laiko juostos ir laiko pakeitimų. Yra viena šios taisyklės išimtis: Insight pompa turi mažą vidinę bateriją, kuri maitina laikrodį ir kt. kol keičiate „tikrąją“ bateriją. Jei baterijos keitimas užtrunka per ilgai, ši vidinė baterija išsikrauna, laikrodis nustatomas iš naujo ir įdėjus naują bateriją jūsų paprašoma įvesti laiką ir datą. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
 
 ## Timezone Change for Accu-Chek Combo
 
-The [Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+[Combo tvarkyklė](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatiškai pritaiko pompos laiką prie telefono laiko. Combo negali saugoti laiko juostų, tik vietinį laiką, ir būtent jį tvarkyklė įrašo į pompą. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
 
 Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
 
 ## Timezone Change for Medtrum
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Tvarkyklė automatiškai pritaiko pompos laiką prie telefono laiko.
 
-Time zone changes keep the history intact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and **IOB**. If you change time manually double check the **IOB**.
+Pakeitus laiko juostą, istorija lieka nepakitusi. Tai gali paveikti tik BPD. Rankiniu būdu pakeitus telefono laiką, gali kilti problemų su istorija ir **AIO**. Jei laiką keičiate rankiniu būdu, dar kartą patikrinkite **AIO**.
 
-When the time zone or time changes running **TBRs** are stopped.
+Pakeitus laiko juostą ar laiką, tuo metu veikiančios **laikinos bazės** sustabdomos.
 
 (time-adjustment-daylight-savings-time-dst)=
 
 ## DAYLIGHT SAVING (DST)
 
-Time adjustment for daylight savings time.
+Laiko pakeitimas dėl vasaros laiko.
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. For some pumps it is better to make time zone adjustments while awake before DST takes place and not during the night.
+Priklausomai nuo jūsų pompos ir NGJ sąrankos, laiko šuoliai gali sutrikdyti tinkamą **AAPS** veikimą. Kai kurių pompų atveju laiko juostą geriau pakeisti dieną, kol nemiegate, prieš laiko persukimą, o ne naktį.
 
 ### DST automatic adjustment for most pumps
 
-* However, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
-* After DST has taken place, make a **Profile Switch** to the desired **Profile** to enable the **Loop**: tap the profile name on the main screen, then the round **▶** button (see [Activating a profile](#ProfileSwitch-manage-v4)).
-* You will also receive a notification on **AAPS** main screen prior to DST change that the **Loop** has been disabled temporarily. This message will appear without beep, vibration or similar sound.
+* Tačiau **ciklas** bus išjungtas 3 valandoms PO laiko persukimo (paprastai nuo 1 val. nakties), ir **AAPS** naudos įprastą valandinę bazę, nustatytą jūsų **profilyje**. Tai daroma saugumo sumetimais: **AIO** gali būti per didelis, nes prieš laiko persukimą leistas bolusas gali būti įrašytas du kartus.
+* Po laiko persukimo atlikite **profilio keitimą** į norimą **profilį**, kad įjungtumėte **ciklą**: bakstelėkite profilio pavadinimą pagrindiniame ekrane, tada apvalų mygtuką **▶** (žr. [Profilio aktyvavimas](#ProfileSwitch-manage-v4)).
+* Prieš laiko persukimą **AAPS** pagrindiniame ekrane taip pat gausite pranešimą, kad **ciklas** laikinai išjungtas. Šis pranešimas pasirodys be garso signalo, vibracijos ar panašaus garso.
 
-If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
+Jei bolusą leidžiate su **AAPS** skaičiuotuvu, nenaudokite **AAO** ir **AIO** duomenų, nebent esate tikri, kad jie visiškai teisingi. Būkite atsargūs ir nenaudokite šios funkcijos porą valandų po laiko persukimo.
 
 ### DST for Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* Laikas persukamas (DST) automatiškai. Nieko daryti nereikia.
 
 ### DST for Accu-Chek Combo
 
-* Change to DST is done automatically. No action required.
+* Laikas persukamas (DST) automatiškai. Nieko daryti nereikia.
 
-### DST for Medtrum
+### Vasaros laikas naudojant Medtrum
 
-* Change to DST is done automatically. No action required.
+* Laikas persukamas (DST) automatiškai. Nieko daryti nereikia.
 
-### DST for Omnipod Dash
+### Vasaros laikas naudojant Omnipod Dash
 
-* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. NOTE THIS OPTION MAY CAUSE YOUR POD TO PREMATURELY EXPIRE. PLEASE HAVE SUPPLIES WITH YOU IF OPTING FOR THE FEATURE BELOW.
+* Galite leisti **AAPS** po laiko persukimo laikinai naudoti įprastą profilio valandinę bazę, kaip paaiškinta anksčiau.
+* Jei nenorite, kad **AAPS** naktį laikinai naudotų įprastą profilio valandinę bazę, laiko juostą galite pakeisti dieną prieš laiko persukimą. Taip išvengsite sutrikimų naktį. ATKREIPKITE DĖMESĮ: DĖL ŠIOS PARINKTIES JŪSŲ POD GALI NUSTOTI VEIKTI PER ANKSTI. PASIRINKĘ TOLIAU APRAŠYTĄ FUNKCIJĄ, TURĖKITE PRIEMONIŲ SU SAVIMI.
 
 #### Actions to take before the clock change
 
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a desired time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
+1. IŠJUNKITE visus telefono nustatymus, kurie automatiškai nustato telefono laiko juostą, kad galėtumėte pasirinkti norimą laiko juostą, kurioje nenaudojamas vasaros laikas. How to enable this will depend on your smartphone and Android version.
    
-   * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF: **Set automatically** under **Time zone** in the screenshot below).
-   * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+   * Kai kuriuose telefonuose yra du nustatymai: vienas automatiškai nustato laiką (geriausia jį palikti įjungtą), kitas automatiškai nustato laiko juostą (jį turite IŠJUNGTI: **Set automatically** skiltyje **Time zone** toliau pateiktoje ekrano kopijoje).
+   * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. Kol kas šį nustatymą turėsite išjungti.
 
 ![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
 2. Find a timezone that has the same time as your current location but doesn't use DST.
    
    * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Congo). Change your phone's timezone to Congo.
+   * Centrinės Europos laikui (CET) tai galėtų būti "Brazzaville" (Kongas). Pakeiskite telefono laiko juostą į Kongo laiko juostą.
 
 ![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
-3. In **AAPS** refresh your pump and switch to your desired **Profile**.
+3. **AAPS** programėlėje atnaujinkite pompos būseną ir perjunkite į norimą **profilį**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
+4. Patikrinkite **AAPS** **AIO** ir **AAO**. Jei jie netikslūs, išjunkite **ciklą** bent vienai IVT arba maksimaliam angliavandenių įsisavinimo laikui (**Ilgiausia įsisavinimo trukmė**), pagal tai, kuris ilgesnis.
 
-5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
+5. Actions to take after the clock change. Tinkamas metas grįžti prie vietinės laiko juostos – kai **AIO** mažas. E.g. an hour before a meal such as breakfast. Geriausia, kad tiek **AAO**, tiek **AIO** būtų artimi nuliui.
