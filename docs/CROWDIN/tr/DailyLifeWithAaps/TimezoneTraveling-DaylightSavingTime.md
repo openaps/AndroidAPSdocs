@@ -1,134 +1,134 @@
-# Timezone Change and Daylight Saving
+# Saat dilimi değişikliği ve yaz saati uygulaması
 
-When the time zone of your phone changes, **AAPS** calculates **IOB**, basal and sensitivity for the past again from scratch, about 10 seconds after the change. While this runs, the graphs and values on the main screen may take a moment to update.
+Telefonunuzun saat dilimi değiştiğinde **AAPS**, değişiklikten yaklaşık 10 saniye sonra geçmişe ait **AİNS**, bazal ve duyarlılığı baştan yeniden hesaplar. Bu sırada ana ekrandaki grafiklerin ve değerlerin güncellenmesi biraz zaman alabilir.
 
 (timezone-traveling-with-pumps)=
 
-## Timezone change for Omnipod Dash
+## Omnipod Dash için saat dilimi değişikliği
 
-* Refresh the pump status in **Manage → Pump**
-* Temporarily select a different **Profile** and then switch back to your original or desired **Profile**
+* Pompa durumunu **Yönet → Pompa** içinde yenileyin
+* Geçici olarak farklı bir **Profil** seçin, ardından asıl veya istediğiniz **Profil**e geri dönün
 
-## Timezone change for DanaR, Korean DanaR
+## DanaR, Kore DanaR için saat dilimi değişikliği
 
 Pompa geçmişi kullanmadığı için telefonda saat dilimini değiştirmekle ilgili bir sorun yok
 
 (timezone-traveling-danarv2-danars)=
 
-## Timezone change for DanaRv2, DanaRS, Dana-i
+## DanaRv2, DanaRS, Dana-i için saat dilimi değişikliği
 
-These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
+Bu pompalar özel dikkat gerektirir, çünkü **AAPS** pompanın geçmişini kullanır, ancak pompadaki kayıtlarda saat dilimi bilgisi yoktur. **Bu, telefonunuzda saat dilimini değiştirirseniz kayıtların farklı bir saat dilimiyle okunacağı ve iki kez görüneceği anlamına gelir.**
 
 Bunu önlemek için iki olasılık vardır:
 
 ### Seçenek 1: Yerel saati koruyarak profilde zaman kaydırma
 
-* Turn off 'Automatic date and time' in your phone's settings (manual time zone change).
+* Telefonunuzun ayarlarında 'Otomatik tarih ve saat' özelliğini kapatın (manuel saat dilimi değişikliği).
 
-* Your phone must keep your standard time as at home for the whole travel period.
+* Telefonunuz tüm seyahat boyunca evdeki standart saatinizi korumalıdır.
 
-* Time-shift your **Profile** according to time difference between home time and destination time.
+* **Profil**inizi ev saatiniz ile varış yerinin saati arasındaki farka göre zaman kaydırın.
    
-   * Tap the **Profile** name on the main screen to open the [Profile screen](#ProfileSwitch-manage-v4)
-   * Select your **Profile** and tap **▶ Activate**
-   * Set '**Time shift**' according to your destination and tap **Activate**.
+   * [Profil ekranını](#ProfileSwitch-manage-v4) açmak için ana ekranda **Profil** adına dokunun
+   * **Profil**inizi seçin ve **▶ Etkinleştir** düğmesine dokunun
+   * '**Zaman kaydırma**' değerini varış yerinize göre ayarlayın ve **Etkinleştir** düğmesine dokunun.
    
-   ![Zaman kaydırmalı profil değişikliği](../images/ProfileSwitchTimeShift2.png)
+   ![Zaman kaydırmalı profil değişimi](../images/ProfileSwitchTimeShift2.png)
    
-   * e.g. Vienna -> New York: **Profile Switch** +6 hours
-   * e.g. Vienna -> Sydney: **Profile Switch** -8 hours
+   * ör. Viyana -> New York: **Profil değişimi** +6 saat
+   * ör. Viyana -> Sidney: **Profil değişimi** -8 saat
 
 ### Seçenek 2: Pompa geçmişini sil
 
-* Telefon ayarlarınızda 'Otomatik tarih ve saat'i özelliğini kapatın (manuel saat dilimi değişikliği)
+* Telefon ayarlarınızda 'Otomatik tarih ve saat' özelliğini kapatın (manuel saat dilimi değişikliği)
 
-When you get off the plane:
+Uçaktan indiğinizde:
 
 * pompayı kapatın
 * telefonda saat dilimini değiştirin
 * telefonu kapatın, pompayı açın
-* pompadaki geçmişini temizleyin
+* pompadaki geçmişi temizleyin
 * pompadaki zamanı değiştirin
 * telefonu açın
-* telefonun pompaya bağlanmasına ve zaman ince ayarının yapmasına izin verin
+* telefonun pompaya bağlanmasına ve saatin ince ayarını yapmasına izin verin
 
 (timezone-traveling-insight)=
 
-## Timezone Change for Insight
+## Insight için saat dilimi değişikliği
 
 Sürücü, pompanın saatini telefonun saatine göre otomatik olarak ayarlar.
 
-Insight, aynı zamanda, hangi andaki zamanın ve hangi (eski) zamandan hangi (yeni) zamana değiştirildiği geçmiş girdilerini de kaydeder. So the correct time can be determined in **AAPS** despite the time change.
+Insight ayrıca saatin hangi anda ve hangi (eski) saatten hangi (yeni) saate değiştirildiğini geçmiş kayıtlarına yazar. Böylece saat değişikliğine rağmen **AAPS** doğru zamanı belirleyebilir.
 
-It may cause inaccuracies in the **TDDs**. Ama sorun olmamalı.
+Bu, **GTD** değerlerinde hatalara neden olabilir. Ama sorun olmamalı.
 
-Böylece Insight kullanıcısının saat dilimi değişiklikleri ve saat değişiklikleri konusunda endişelenmesine gerek kalmaz. Bu kuralın bir istisnası vardır: Insight pompasının esas pilini değiştirirken zaman vb. bilgileri hafızasında tutması için küçük bir dahili pili vardır. If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. Bu durumda, pil değişimi öncesindeki tüm girişler, doğru zaman tam olarak tanımlanamadığı için AAPS'deki hesaplamada atlanır.
+Böylece Insight kullanıcısının saat dilimi değişiklikleri ve saat değişiklikleri konusunda endişelenmesine gerek kalmaz. Bu kuralın bir istisnası vardır: Insight pompasının esas pilini değiştirirken zaman vb. bilgileri hafızasında tutması için küçük bir dahili pili vardır. Pil değişimi çok uzun sürerse bu dahili pilin enerjisi biter, saat sıfırlanır ve yeni pil taktıktan sonra sizden tarih ve saati girmeniz istenir. Bu durumda, doğru zaman tam olarak belirlenemediği için pil değişiminden önceki tüm kayıtlar AAPS'teki hesaplamada atlanır.
 
-## Timezone Change for Accu-Chek Combo
+## Accu-Chek Combo için saat dilimi değişikliği
 
-The [Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. Kullanıcının herhangi bir şey yapmasına gerek yoktur; Combo'daki saat, telefonun geçerli saatinden çok fazla saparsa, pompanın saati otomatik olarak ayarlanır.
+[Combo sürücüsü](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md), pompanın saatini otomatik olarak telefonun saatine göre ayarlar. Combo saat dilimlerini saklayamaz, yalnızca yerel saati saklar. Sürücünün pompaya yazdığı da tam olarak budur. Ayrıca pompanın yerel saatini, saat dilimi farkını içeren tam bir zaman damgasına çevirebilmek için saat dilimini yerel AAPS tercihlerinde saklar. Kullanıcının herhangi bir şey yapmasına gerek yoktur; Combo'daki saat, telefonun geçerli saatinden çok fazla saparsa, pompanın saati otomatik olarak ayarlanır.
 
 Bununla birlikte, yalnızca genellikle yavaş olan uzak terminal modunda yapılabildiğinden, bunun biraz zaman aldığını unutmayın. Bu aşılamayan bir Combo sınırlamasıdır.
 
-## Timezone Change for Medtrum
+## Medtrum için saat dilimi değişikliği
 
 Sürücü, pompanın saatini telefonun saatine göre otomatik olarak ayarlar.
 
-Time zone changes keep the history intact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and **IOB**. If you change time manually double check the **IOB**.
+Saat dilimi değişiklikleri geçmişi bozmaz, yalnızca GTD etkilenebilir. Telefondaki saati elle değiştirmek geçmişte ve **AİNS** değerinde sorunlara neden olabilir. Saati elle değiştirirseniz **AİNS** değerini iki kez kontrol edin.
 
-When the time zone or time changes running **TBRs** are stopped.
+Saat dilimi veya saat değiştiğinde çalışan **GBO'lar** (geçici bazal oranları) durdurulur.
 
 (time-adjustment-daylight-savings-time-dst)=
 
-## DAYLIGHT SAVING (DST)
+## YAZ SAATİ UYGULAMASI (DST)
 
-Time adjustment for daylight savings time.
+Yaz saati uygulaması için saat ayarı.
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. For some pumps it is better to make time zone adjustments while awake before DST takes place and not during the night.
+Pompanıza ve CGM kurulumunuza bağlı olarak, saatteki ani değişiklikler **AAPS**'in doğru çalışmasında sorunlara yol açabilir. Bazı pompalarda saat dilimi ayarlarını gece değil, yaz saati değişikliğinden önce uyanıkken yapmak daha iyidir.
 
-### DST automatic adjustment for most pumps
+### Çoğu pompa için yaz saatine otomatik uyum
 
-* However, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
-* After DST has taken place, make a **Profile Switch** to the desired **Profile** to enable the **Loop**: tap the profile name on the main screen, then the round **▶** button (see [Activating a profile](#ProfileSwitch-manage-v4)).
-* You will also receive a notification on **AAPS** main screen prior to DST change that the **Loop** has been disabled temporarily. This message will appear without beep, vibration or similar sound.
+* Ancak yaz saati değişikliği gerçekleştikten (genellikle saat 01:00'den itibaren) SONRA **Döngü** 3 saat boyunca devre dışı kalır ve **AAPS**, **Profil**inizde seçili olan temel bazala döner. Bu, güvenlik nedeniyle yapılır: yaz saati değişikliğinden önceki bolus iki kez sayılabileceği için **AİNS** çok yüksek olabilir.
+* Yaz saati değişikliği gerçekleştikten sonra **Döngü**'yü etkinleştirmek için istediğiniz **Profil**e bir **Profil değişimi** yapın: ana ekranda profil adına, ardından yuvarlak **▶** düğmesine dokunun (bkz. [Bir profili etkinleştirme](#ProfileSwitch-manage-v4)).
+* Yaz saati değişikliğinden önce **AAPS** ana ekranında **Döngü**'nün geçici olarak devre dışı bırakıldığına dair bir bildirim de alırsınız. Bu mesaj bip sesi, titreşim veya benzeri bir ses olmadan görünür.
 
-If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
+**AAPS** hesaplayıcısı ile bolus yapıyorsanız, bu verilerin kesinlikle doğru olduğundan emin değilseniz **AKRB** ve **AİNS** verilerini kullanmayın. Dikkatli olun ve yaz saati değişikliğinden sonraki birkaç saat boyunca bu özelliği kullanmayın.
 
-### DST for Accu-Chek Insight
-
-* DST'ye geçiş otomatik olarak yapılır. Herhangi bir işlem gerekmez.
-
-### DST for Accu-Chek Combo
+### Accu-Chek Insight için yaz saati
 
 * DST'ye geçiş otomatik olarak yapılır. Herhangi bir işlem gerekmez.
 
-### DST for Medtrum
+### Accu-Chek Combo için yaz saati
 
 * DST'ye geçiş otomatik olarak yapılır. Herhangi bir işlem gerekmez.
 
-### DST for Omnipod Dash
+### Medtrum için yaz saati
 
-* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. NOTE THIS OPTION MAY CAUSE YOUR POD TO PREMATURELY EXPIRE. PLEASE HAVE SUPPLIES WITH YOU IF OPTING FOR THE FEATURE BELOW.
+* DST'ye geçiş otomatik olarak yapılır. Herhangi bir işlem gerekmez.
+
+### Omnipod Dash için yaz saati
+
+* Ya yukarıda açıklandığı gibi yaz saati değişikliğinden sonra **AAPS**'in geçici olarak temel bazala dönmesine izin verin.
+* Ya da **AAPS**'in gece boyunca geçici olarak temel bazala dönmesini istemiyorsanız, gece kesinti olmaması için saat dilimini yaz saati değişikliğinden bir gün önce değiştirebilirsiniz. BU SEÇENEĞİN POD'UNUZUN ERKEN SONA ERMESİNE NEDEN OLABİLECEĞİNİ UNUTMAYIN. AŞAĞIDAKİ ÖZELLİĞİ SEÇERSENİZ LÜTFEN YANINIZDA YEDEK MALZEME BULUNDURUN.
 
 #### Saat değişmeden önce yapılması gerekenler
 
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a desired time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
+1. Telefonun saat dilimini otomatik olarak ayarlayan tüm telefon ayarlarını KAPATIN. Böylece yaz saati uygulamayan istediğiniz bir saat dilimine geçebilirsiniz. Bunu nasıl etkinleştireceğiniz telefonunuza ve Android sürümünüze bağlıdır.
    
-   * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF: **Set automatically** under **Time zone** in the screenshot below).
-   * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. Bunu şimdilik kapatmanız gerekecek.
+   * Bazı telefonlarda iki ayar vardır: biri saatin otomatik ayarı için (ideal olarak açık kalmalıdır), diğeri saat diliminin otomatik ayarı için (bunu KAPATMALISINIZ: aşağıdaki ekran görüntüsünde **Time zone** (Saat dilimi) altındaki **Set automatically** (Otomatik olarak ayarla)).
+   * Ne yazık ki bazı Android sürümlerinde hem saatin hem de saat diliminin otomatik ayarı için tek bir anahtar vardır. Bunu şimdilik kapatmanız gerekecek.
 
 ![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
-2. Find a timezone that has the same time as your current location but doesn't use DST.
+2. Bulunduğunuz yerle aynı saati kullanan, ancak yaz saati uygulamayan bir saat dilimi bulun.
    
    * Bu ülkelerin listesi mevcuttur [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Congo). Change your phone's timezone to Congo.
+   * Orta Avrupa Saati (CET) için bu, "Brazzaville" (Kongo) olabilir. Telefonunuzun saat dilimini Kongo olarak değiştirin.
 
 ![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
-3. In **AAPS** refresh your pump and switch to your desired **Profile**.
+3. **AAPS**'te pompanızı yenileyin ve istediğiniz **Profil**e geçin.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
+4. **AAPS**'in **AİNS** ve **AKRB** değerlerini kontrol edin. Doğru değilse **Döngü**'yü en az bir İES süresi veya en uzun karbonhidrat emilim süresi (**Emilim max süre**) boyunca devre dışı bırakın; hangisi daha uzunsa onu esas alın.
 
-5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
+5. Actions to take after the clock change. Yerel saat dilimine geri dönmek için iyi bir zaman, **AİNS** değerinin düşük olduğu zamandır. Örneğin kahvaltı gibi bir öğünden bir saat önce. İdeal olarak **AKRB** ve **AİNS** değerlerinin ikisi de sıfıra yakın olmalıdır.
