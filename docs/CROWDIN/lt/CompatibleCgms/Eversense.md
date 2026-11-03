@@ -63,7 +63,7 @@ xDrip gali skaityti gamintojo programėlės pranešimus, kaip tai daro ESEL. Tr�
 - Sureguliuokite xDrip nustatymus pagal paaiškinimus xDrip nustatymų puslapyje [xDrip nustatymai](../CompatibleCgms/xDrip.md).
 - AAPS įjunkite [eksponentinį glodinimą](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-## Notification Reader
+## Pranešimų skaitytuvas
 
 **AAPS** gali nuskaityti gliukozės reikšmes tiesiai iš oficialios Eversense programėlės pranešimų, be jokios kitos programėlės tarp jų. Trūkstamų duomenų užpildymas negalimas.
 
