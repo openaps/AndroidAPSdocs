@@ -30,7 +30,7 @@ Dexcom BYODA je teraz veľmi stará verzia aplikácie a nedá sa aktualizovať. 
 -   Odinštalujte pôvodnú aplikáciu Dexcom
 -   Nainštalujte stiahnutý súbor apk
 -   Zadajte kód senzora v upravenej aplikácii
--   After a short time BYODA should pick up the sensor signal.
+-   Po krátkom čase by BYODA mala zachytiť signál senzora.
 
 (DexcomG7-xdrip-companion-app)=
 
