@@ -12,61 +12,61 @@ Tlačítka níže otevírají GitHub na nové kartě Chromu. Pro návrat na tuto
 
 ## Krok 1 – Vytvořte si soukromý repozitář pro sestavení
 
-This creates your own private copy of AAPS Builder in your GitHub account: a repository with the build workflow already in it. Jen vy vidíte jeho obsah a aplikace, které v něm vzniknou. **Nemusíte** vytvářet fork AndroidAPS: zdrojový kód AAPS se při každém sestavení stáhne z oficiálního repozitáře AndroidAPS.
+Tímto si ve svém účtu GitHub vytvoříte vlastní soukromou kopii AAPS Builder: repozitář, ve kterém už je sestavovací workflow. Jen vy vidíte jeho obsah a aplikace, které v něm vzniknou. **Nemusíte** vytvářet fork AndroidAPS: zdrojový kód AAPS se při každém sestavení stáhne z oficiálního repozitáře AndroidAPS.
 
-<label class="aapsb-label" for="aapsb-user">Your GitHub username</label>
+<label class="aapsb-label" for="aapsb-user">Vaše uživatelské jméno na GitHubu</label>
 <input class="aapsb-input" type="text" id="aapsb-user" autocomplete="username" spellcheck="false" placeholder="my-github-name" />
 <span class="aapsb-msg" id="aapsb-userMsg"></span>
 
 Nejprve se v tomto prohlížeči přihlaste na github.com (nemáte účet? vytvořte si ho zdarma). Potom se sem vraťte. Použijte své uživatelské jméno (je uvedené ve vašem profilu GitHub), ne e-mail: stránka se GitHubu zeptá, zda toto uživatelské jméno existuje.
 
-<label class="aapsb-label" for="aapsb-repo">Name of your repository</label>
+<label class="aapsb-label" for="aapsb-repo">Název vašeho repozitáře</label>
 <input class="aapsb-input" type="text" id="aapsb-repo" spellcheck="false" placeholder="my-aaps" />
 
 Ponechte navržený název. Už jste repozitář vytvořili s jiným názvem? Zadejte sem přesně tento název.
 
 ```{note}
-**Already have an AAPS Builder repository** (made with an earlier version of this page)? Do not create a new one: type its exact name here, skip the button below, and update its workflow once: see **Updating your copy** at the end of this step. Your secrets stay as they are.
+**Už máte repozitář AAPS Builder** (vytvořený starší verzí této stránky)? Nevytvářejte nový: zadejte sem jeho přesný název, tlačítko níže přeskočte a jednou aktualizujte jeho workflow: viz rámeček **Updating your copy** na konci tohoto kroku. Vaše secrety zůstanou, jak jsou.
 
-If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+Pokud přesto chcete nový repozitář, zvolte název, který ještě nemáte, například `my-aaps-2`, a v kroku 2 použijte stejné úložiště klíčů.
 
-Do not type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+Nezadávejte název svého forku AndroidAPS: fork je veřejný a už se sestavuje vlastním workflow **AAPS CI**.
 ```
 
-Your repository:<code class="aapsb-repoUrl"></code>
+Váš repozitář: <code class="aapsb-repoUrl"></code>
 
-Check this name before you use the buttons below: the page remembers the name from your last visit.
+Než použijete tlačítka níže, zkontrolujte tento název: stránka si pamatuje název z vaší poslední návštěvy.
 
 <a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Create my private repository</a>
 
-On the GitHub page that opens, everything is already filled in: the template `nightscout/aaps-builder`, your account as owner, the name of your repository, and **Private**. Do not change anything, and leave **Include all branches** unticked.
+Na stránce GitHubu, která se otevře, je už vše vyplněné: šablona `nightscout/aaps-builder`, váš účet jako vlastník, název vašeho repozitáře a **Private**. Nic neměňte a volbu **Include all branches** nechte nezaškrtnutou.
 
 1. Klepněte na zelené tlačítko **Create repository**.
-2. GitHub shows your new repository with a folder `.github` and a file `README.md`: the build workflow is in it. Kvůli kroku 2 se vraťte na tuto stránku.
+2. GitHub zobrazí váš nový repozitář se složkou `.github` a souborem `README.md`: v něm je sestavovací workflow. Kvůli kroku 2 se vraťte na tuto stránku.
 
 ```{admonition} Your new repository is empty (no files)?
 :class: warning
 
-It was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** again.
+Nebyl vytvořen ze šablony. Smažte ho (**Settings** → dole na stránce → **Delete this repository**) a potom znovu klepněte na **Create my private repository**.
 ```
 
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
-The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Your `KEYSTORE_SET` secret stays as it is.
+Kroky sestavení se aktualizují za vás: při každém sestavení váš repozitář spustí verzi, kterou vydali vývojáři AAPS v nightscout/aaps-builder, a ve vašem repozitáři se nic nezmění. Svůj soubor workflow nahradíte jen tehdy, když to oznámí stránka [Aktualizace a změny dokumentace](../Maintenance/DocumentationUpdate.md) (například kvůli nové variantě sestavení), nebo jednou, pokud byl váš repozitář vytvořen starší verzí této stránky nebo ze staré šablony. Váš secret `KEYSTORE_SET` zůstává beze změny.
 
 1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
 
-   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
+   Na počítači klikněte na **ikonu kopírování** („Copy raw file“) vpravo nahoře u souboru. Na telefonu místo toho otevřete <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">verzi jako prostý text</a>, podržte prst na textu → **Vybrat vše** → **Kopírovat**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code> for editing.
-3. Replace the whole text with the copied workflow (on a phone: press and hold → **Select all** → **Paste**), then click **Commit changes…** twice. The first line of the file shows its version.
+   Otevře soubor `.github/workflows/build.yml` v <code class="aapsb-repoUrl"></code> k úpravám.
+3. Nahraďte celý text zkopírovaným workflow (na telefonu: podržte prst → **Vybrat vše** → **Vložit**) a potom dvakrát klikněte na **Commit changes…**. První řádek souboru ukazuje jeho verzi.
 ```
 
 (aaps-builder-setup-step2)=
 
-## Step 2 – Your signing key
+## Krok 2 – Váš podpisový klíč
 
 Aplikace musí být podepsaná vaším vlastním klíčem. Vždy používejte stejný klíč, jinak budete muset pro aktualizaci AAPS odinstalovat (a přijít o jeho nastavení). Zvolte jednu ze dvou karet.
 
@@ -75,21 +75,21 @@ Aplikace musí být podepsaná vaším vlastním klíčem. Vždy používejte st
 ````{tab-item} I already have a keystore
 Například z Android Studia (.jks).
 
-<label class="aapsb-label" for="aapsb-ksFile">Keystore file</label>
+<label class="aapsb-label" for="aapsb-ksFile">Soubor úložiště klíčů</label>
 <input type="file" id="aapsb-ksFile" accept=".jks,.keystore,.p12,.pfx,application/octet-stream">
 
-<label class="aapsb-label" for="aapsb-ksPass">Keystore password</label>
+<label class="aapsb-label" for="aapsb-ksPass">Heslo úložiště klíčů</label>
 <input class="aapsb-input" type="password" id="aapsb-ksPass" autocomplete="off">
 
-<label class="aapsb-label" for="aapsb-ksAlias">Key alias</label>
+<label class="aapsb-label" for="aapsb-ksAlias">Alias klíče</label>
 <select class="aapsb-input" id="aapsb-ksAliasSel" hidden></select>
 <input class="aapsb-input" type="text" id="aapsb-ksAlias" autocomplete="off" spellcheck="false" placeholder="key0">
 
-<label class="aapsb-check"><input type="checkbox" id="aapsb-samePass" checked> Key password is the same as the keystore password</label>
+<label class="aapsb-check"><input type="checkbox" id="aapsb-samePass" checked> Heslo klíče je stejné jako heslo úložiště klíčů</label>
 
 <div id="aapsb-keyPassWrap" hidden>
 
-<label class="aapsb-label" for="aapsb-keyPass">Key password</label>
+<label class="aapsb-label" for="aapsb-keyPass">Heslo klíče</label>
 <input class="aapsb-input" type="password" id="aapsb-keyPass" autocomplete="off">
 
 </div>
@@ -127,22 +127,22 @@ Všechny tři budete potřebovat, pokud budete někdy sestavovat AAPS jiným zp�
 
 `````
 (aaps-builder-setup-step3)=
-## Step 3 – Give the key to your repository
-<span id="aapsb-s3wait">Finish step 2 first.</span>
+## Krok 3 – Předejte klíč svému repozitáři
+<span id="aapsb-s3wait">Nejprve dokončete krok 2.</span>
 
 <div id="aapsb-s3ready" hidden>
   1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Open the secrets page</a> Otevře: <code class="aapsb-repoUrl"></code> GitHub ukazuje „Page not found“ (404)? Nejprve zkontrolujte, že jste v tomto prohlížeči přihlášeni na github.com: GitHub ukazuje 404 u soukromých repozitářů, když nejste přihlášeni. Jinak vaše uživatelské jméno nebo název repozitáře v kroku 1 neodpovídá vašemu repozitáři: zkontrolujte je na github.com a zadejte je v kroku 1. 2. Klepněte na „Copy name“ a vložte ho do malého pole „Name“: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copy name</button> 3. Klepněte na „Copy secret“ a vložte dlouhý kód do velkého pole „Secret“: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copy secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> Secret je velmi dlouhý kód (tisíce znaků), NE slovo KEYSTORE_SET. Nejprve zkopírujte a vložte název, potom dlouhý kód. 4. Klepněte na „Add secret“. Hotovo, tento krok už nikdy nemusíte opakovat.
 </div>
 (aaps-builder-setup-step4)=
-## Step 4 – Build the app
+## Krok 4 – Sestavte aplikaci
 
 1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">Open the build page</a>
 
    Otevře: <code class="aapsb-repoUrl"></code>
 
    GitHub ukazuje „Page not found“ (404)? Nejprve zkontrolujte, že jste v tomto prohlížeči přihlášeni na github.com: GitHub ukazuje 404 u soukromých repozitářů, když nejste přihlášeni. Jinak vaše uživatelské jméno nebo název repozitáře v kroku 1 neodpovídá vašemu repozitáři: zkontrolujte je na github.com a zadejte je v kroku 1. Místo toho se otevřela aplikace GitHub? Klepněte na „RUN WORKFLOW“, zkontrolujte verzi a variantu a znovu klepněte na „RUN WORKFLOW“. Pokud aplikace stále ukazuje „Nothing to see here“, stáhněte seznam dolů a uvidíte své sestavení.
-2. If asked, click the green button to enable workflows.
-The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
+2. Pokud se objeví výzva, klepněte na zelené tlačítko pro povolení workflow.
+Seznam workflow obsahuje dvě položky: použijte „Build AAPS“. „AAPS Builder“ ignorujte: obsahuje kroky sestavení a nemá tlačítko „Run workflow“.
 3. Klepněte na „Run workflow“ a potom na zelené tlačítko „Run workflow“. „latest“ sestaví nejnovější verzi AAPS. ***tip:*** *jinou verzi sestavíte tak, že místo „latest“ zadáte název jejího [tagu](https://github.com/nightscout/AndroidAPS/tags)*
 4. Počkejte asi 15–30 minut. Zelená fajfka znamená, že je sestavení hotové.
 Chcete e-mail, když je sestavení hotové? GitHub vám pošle e-mail jen tehdy, když sestavení selže. Pokud chcete e-mail dostat i po úspěšném sestavení: na github.com otevřete svůj profilový obrázek → Settings → Notifications → System → Actions a zrušte zaškrtnutí „Only notify for failed workflows“.
@@ -150,13 +150,13 @@ Chcete e-mail, když je sestavení hotové? GitHub vám pošle e-mail jen tehdy,
 ```{admonition} No "Build AAPS" / "Run workflow" button?
 :class: warning
 
-1. Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-setup-step1) again with the button.
+1. Otevřete svůj repozitář a zkontrolujte, že obsahuje složku `.github` se souborem `workflows/build.yml`. Pokud je repozitář prázdný, nebyl vytvořen ze šablony: smažte ho (**Settings** → dole na stránce → **Delete this repository**) a znovu proveďte [krok 1](#aaps-builder-setup-step1) pomocí tlačítka.
 2. Otevřete kartu Actions. Pokud je tam napsáno, že workflow jsou vypnutá, klepněte na zelené tlačítko pro jejich povolení. Potom v seznamu klepněte na „Build AAPS“.
 ```
 
 (aaps-builder-setup-step5)=
 
-## Step 5 – Install on your phone
+## Krok 5 – Nainstalujte aplikaci do telefonu
 
 ```{admonition} Before every update: back up your settings!
 :class: warning
@@ -183,31 +183,31 @@ Chcete e-mail, když je sestavení hotové? GitHub vám pošle e-mail jen tehdy,
 
 APK se v repozitáři nezobrazuje v části „Code“, jen na stránce sestavení. Zůstává tam 14 dní.
 
-Nová verze AAPS? Back up your settings, then build it with [step 4](#aaps-builder-setup-step4). Váš repozitář nikdy nic nesestaví sám.
+Nová verze AAPS? Zálohujte si nastavení a potom ji sestavte podle [kroku 4](#aaps-builder-setup-step4). Váš repozitář nikdy nic nesestaví sám.
 
 (aaps-builder-setup-step6)=
 
-## Step 6 – Optional: get the app in Google Drive
+## Krok 6 – Volitelné: získejte aplikaci na Disk Google
 
-Chcete, aby se APK objevilo na vašem Disku Google (a zůstalo tam natrvalo)? Add one more secret, GDRIVE_OAUTH2. This page gets it from Google for you. AAPS can then only see and change the files it creates in your Google Drive, nothing else.
+Chcete, aby se APK objevilo na vašem Disku Google (a zůstalo tam natrvalo)? Přidejte ještě jeden secret, GDRIVE_OAUTH2. Tato stránka ho pro vás získá od Googlu. AAPS pak na vašem Disku Google uvidí a může měnit jen soubory, které samo vytvoří, nic jiného.
 
 1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Connect Google Drive</a>
 
-   Google opens in a new tab. Choose your Google account and allow AAPS to see and change its own files. If Google says the app is not verified, tap "Advanced", then "Go to …".
-2. Then the new tab shows an error like **"This site can't be reached"** or **"127.0.0.1 refused to connect"**. **This is expected.** Google's answer is in the address of that tab.
+   Google se otevře na nové kartě. Zvolte svůj účet Google a povolte AAPS zobrazovat a měnit jeho vlastní soubory. Pokud Google hlásí, že aplikace není ověřená, klepněte na „Rozšířená nastavení“ („Advanced“) a potom na „Přejít na …“ („Go to …“).
+2. Pak nová karta zobrazí chybu, například **„Tento web není dostupný“** („This site can't be reached“) nebo **„127.0.0.1 refused to connect“**. **Tak to má být.** Odpověď Googlu je v adrese této karty.
 
-   Tap the address bar of that tab, select all of the address and copy it. It starts with `http://127.0.0.1:47913/`. Come back to this page within a few minutes: the answer is only valid for a short time.
-3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
+   Klepněte na adresní řádek této karty, označte celou adresu a zkopírujte ji. Začíná na `http://127.0.0.1:47913/`. Během několika minut se vraťte na tuto stránku: odpověď platí jen krátkou dobu.
+3. <label class="aapsb-label" for="aapsb-googleUrl">Sem vložte zkopírovanou adresu</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
 
 4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Open the secrets page</a>
 
-   Opens: <code class="aapsb-repoUrl"></code>
+   Otevře: <code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? Nejprve zkontrolujte, že jste v tomto prohlížeči přihlášeni na github.com: GitHub ukazuje 404 u soukromých repozitářů, když nejste přihlášeni. Jinak vaše uživatelské jméno nebo název repozitáře v kroku 1 neodpovídá vašemu repozitáři: zkontrolujte je na github.com a zadejte je v kroku 1.
-5. Tap "Copy name", then paste it into the small "Name" field: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name</button>
-6. Tap "Copy secret", then paste the code into the big "Secret" box: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Copy secret</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
+   GitHub ukazuje „Page not found“ (404)? Nejprve zkontrolujte, že jste v tomto prohlížeči přihlášeni na github.com: GitHub ukazuje 404 u soukromých repozitářů, když nejste přihlášeni. Jinak vaše uživatelské jméno nebo název repozitáře v kroku 1 neodpovídá vašemu repozitáři: zkontrolujte je na github.com a zadejte je v kroku 1.
+5. Klepněte na „Copy name“ a vložte ho do malého pole „Name“: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name</button>
+6. Klepněte na „Copy secret“ a vložte kód do velkého pole „Secret“: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Copy secret</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
 7. Klepněte na „Add secret“.
 
 </div>
@@ -215,7 +215,7 @@ Chcete, aby se APK objevilo na vašem Disku Google (a zůstalo tam natrvalo)? Ad
 ```{admonition} Already have a GDRIVE_OAUTH2 value?
 :class: dropdown
 
-A value from the AAPS preparation page of the other browser build works too: open the secrets page, add the name `GDRIVE_OAUTH2` and paste your value. See [Save the builds in Google Drive](#aaps-builder-google-drive).
+Funguje i hodnota z přípravné stránky AAPS pro druhý způsob sestavení v prohlížeči: otevřete stránku secretů, přidejte název `GDRIVE_OAUTH2` a vložte svou hodnotu. Viz [Uložení sestavení na Disk Google](#aaps-builder-google-drive).
 ```
 
 Od příštího sestavení se soubory APK ukládají také na Disk Google do složky AAPS/&lt;version&gt;.
@@ -224,39 +224,39 @@ Pokud 6 měsíců nic nesestavíte nebo změníte heslo ke Googlu, Google přís
 
 ----
 
-Vše na této stránce běží ve vašem prohlížeči. Váš klíč a hesla se nikdy nikam neposílají, kromě míst, kam je sami vložíte. GitHubu se posílá jen vaše uživatelské jméno, aby se ověřilo, že existuje. In step 6, the Google answer is sent only to Google, to get GDRIVE_OAUTH2. The build workflow is maintained by the AAPS developers in [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), based on AAPS Builder (AGPL-3.0).
+Vše na této stránce běží ve vašem prohlížeči. Váš klíč a hesla se nikdy nikam neposílají, kromě míst, kam je sami vložíte. GitHubu se posílá jen vaše uživatelské jméno, aby se ověřilo, že existuje. V kroku 6 se odpověď Googlu posílá jen Googlu, aby se získal GDRIVE_OAUTH2. Sestavovací workflow spravují vývojáři AAPS v [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) a vychází z AAPS Builder (AGPL-3.0).
 
 <div id="aapsb-msgs" hidden>
 
 - <span data-aapsb-msg="copied">Dlouhý kód zkopírován: vložte ho do velkého pole „Secret“ a potom klepněte na „Add secret“.</span>
 - <span data-aapsb-msg="copiedName">Název zkopírován: vložte ho do malého pole „Name“.</span>
-- <span data-aapsb-msg="userOk">✓ GitHub user found.</span>
-- <span data-aapsb-msg="userBad">✗ No GitHub user with this name. Use your username (shown in your GitHub profile), not your e-mail.</span>
-- <span data-aapsb-msg="copiedShort">Copied ✓</span>
-- <span data-aapsb-msg="needUser">Enter your GitHub username in step 1 first.</span>
-- <span data-aapsb-msg="errPipe">Passwords and alias cannot contain the character |</span>
-- <span data-aapsb-msg="errNoFile">Choose your keystore file.</span>
-- <span data-aapsb-msg="errEmpty">Fill in password and alias.</span>
-- <span data-aapsb-msg="errPass">Wrong keystore password.</span>
-- <span data-aapsb-msg="errKeyPass">Wrong key password.</span>
-- <span data-aapsb-msg="errAlias">Alias not found in the keystore. Dostupné: {aliases}</span>
+- <span data-aapsb-msg="userOk">✓ Uživatel GitHubu nalezen.</span>
+- <span data-aapsb-msg="userBad">✗ Uživatel GitHubu s tímto jménem neexistuje. Použijte své uživatelské jméno (je uvedené ve vašem profilu GitHub), ne e-mail.</span>
+- <span data-aapsb-msg="copiedShort">Zkopírováno ✓</span>
+- <span data-aapsb-msg="needUser">Nejprve v kroku 1 zadejte své uživatelské jméno na GitHubu.</span>
+- <span data-aapsb-msg="errPipe">Hesla a alias nesmí obsahovat znak |</span>
+- <span data-aapsb-msg="errNoFile">Vyberte svůj soubor úložiště klíčů.</span>
+- <span data-aapsb-msg="errEmpty">Vyplňte heslo a alias.</span>
+- <span data-aapsb-msg="errPass">Špatné heslo úložiště klíčů.</span>
+- <span data-aapsb-msg="errKeyPass">Špatné heslo klíče.</span>
+- <span data-aapsb-msg="errAlias">Alias nebyl v úložišti klíčů nalezen. Dostupné: {aliases}</span>
 - <span data-aapsb-msg="errFormat">Toto nevypadá jako soubor úložiště klíčů.</span>
-- <span data-aapsb-msg="okHave">Keystore OK! Continue with step 3.</span>
-- <span data-aapsb-msg="okHaveUnchecked">Keystore read. Heslo bude zkontrolováno při sestavení. Continue with step 3.</span>
-- <span data-aapsb-msg="errShort">The password must be at least 8 characters.</span>
-- <span data-aapsb-msg="errAscii">Use only a–z, A–Z, 0–9 and symbols such as ! ? # – bez mezer, bez písmen s diakritikou a bez |</span>
+- <span data-aapsb-msg="okHave">Úložiště klíčů je v pořádku! Pokračujte krokem 3.</span>
+- <span data-aapsb-msg="okHaveUnchecked">Úložiště klíčů načteno. Heslo bude zkontrolováno při sestavení. Pokračujte krokem 3.</span>
+- <span data-aapsb-msg="errShort">Heslo musí mít alespoň 8 znaků.</span>
+- <span data-aapsb-msg="errAscii">Používejte jen a–z, A–Z, 0–9 a symboly jako ! ? # – bez mezer, bez písmen s diakritikou a bez |</span>
 - <span data-aapsb-msg="errMatch">Hesla se neshodují.</span>
 - <span data-aapsb-msg="working">Vytváří se klíč…</span>
-- <span data-aapsb-msg="okNew">Key created. Download the backup below, then continue with step 3.</span>
-- <span data-aapsb-msg="gNoUrl">Paste the whole address of the Google tab first.</span>
-- <span data-aapsb-msg="gNoCode">This address has no answer from Google. Copy the whole address of the tab that shows the error, starting with http://127.0.0.1:47913/</span>
-- <span data-aapsb-msg="gDenied">Google access was not allowed. Tap "Connect Google Drive" again and allow access.</span>
-- <span data-aapsb-msg="gOldUrl">This address belongs to an older attempt. Tap "Connect Google Drive" again and use the new address.</span>
-- <span data-aapsb-msg="gWorking">Asking Google…</span>
-- <span data-aapsb-msg="gFailed">Google did not accept it ({error}). The answer is valid only for a few minutes and only once: tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gNoRefresh">Google sent no long-term access. Tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 is ready. Add it as a secret below.</span>
-- <span data-aapsb-msg="gCopied">Code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
+- <span data-aapsb-msg="okNew">Klíč vytvořen. Stáhněte si zálohu níže a potom pokračujte krokem 3.</span>
+- <span data-aapsb-msg="gNoUrl">Nejprve vložte celou adresu karty Googlu.</span>
+- <span data-aapsb-msg="gNoCode">V této adrese není odpověď od Googlu. Zkopírujte celou adresu karty, která zobrazuje chybu. Začíná na http://127.0.0.1:47913/</span>
+- <span data-aapsb-msg="gDenied">Přístup ke Googlu nebyl povolen. Klepněte znovu na „Connect Google Drive“ a povolte přístup.</span>
+- <span data-aapsb-msg="gOldUrl">Tato adresa patří ke staršímu pokusu. Klepněte znovu na „Connect Google Drive“ a použijte novou adresu.</span>
+- <span data-aapsb-msg="gWorking">Ptám se Googlu…</span>
+- <span data-aapsb-msg="gFailed">Google odpověď nepřijal ({error}). Odpověď platí jen několik minut a jen jednou: klepněte znovu na „Connect Google Drive“.</span>
+- <span data-aapsb-msg="gNoRefresh">Google neposlal dlouhodobý přístup. Klepněte znovu na „Connect Google Drive“.</span>
+- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 je připraven. Přidejte ho níže jako secret.</span>
+- <span data-aapsb-msg="gCopied">Kód zkopírován: vložte ho do velkého pole „Secret“ a potom klepněte na „Add secret“.</span>
 
 </div>
 
