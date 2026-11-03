@@ -1,7 +1,7 @@
 (global-search)=
-# Global search
+# Ricerca globale
 
-**AAPS** v4 has a **global search** box at the top of the main screen. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
+**AAPS** v4 ha una casella di **ricerca globale** in alto nella schermata principale. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,11 +10,11 @@
 
 ---
 
-## Opening search
+## Aprire la ricerca
 
 Tap the **🔍 Search** field at the top of the **Overview** (next to the ☰ menu). Start typing and results appear as you type (after a short pause), grouped by category:
 
-![Global search results, grouped by category](../images/v4/Search/search_results.png)
+![Risultati della ricerca globale, raggruppati per categoria](../images/v4/Search/search_results.png)
 
 Clear the box with the **✕**, or close search with the device **Back** button.
 
@@ -32,9 +32,9 @@ This means a guide or forum post written in English still leads you to the right
 
 ---
 
-## What search covers
+## Cosa copre la ricerca
 
-Results are grouped into these categories:
+I risultati sono raggruppati in queste categorie:
 
 - **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](../SettingUpAaps/ConfigBuilder.md)). Each plugin row carries its **enable switch**, so you can enable or disable a plugin right from the results — tapping the row of a disabled (toggleable) plugin enables it.
 - **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Screens that don't apply to your build are left out (for example *Pair with master* on a master, *Authorized clients* on a client).
@@ -51,9 +51,9 @@ A preference whose plugin is currently **disabled** still shows up — **greyed 
 
 ---
 
-## Documentation results (online)
+## Risultati della documentazione (online)
 
-While the local search runs, **AAPS** also queries the official **AndroidAPS documentation** (hosted on ReadTheDocs) in parallel. Matching pages appear in a **Documentation** group at the bottom, each with a 📖 icon, the section title and a short snippet:
+While the local search runs, **AAPS** also queries the official **AndroidAPS documentation** (hosted on ReadTheDocs) in parallel. Le pagine trovate compaiono in un gruppo **Documentazione** in fondo, ognuna con un'icona 📖, il titolo della sezione e un breve estratto:
 
 ![Documentation (wiki) results with snippets](../images/v4/Search/search_documentation.png)
 
@@ -63,23 +63,23 @@ While the local search runs, **AAPS** also queries the official **AndroidAPS doc
 
 ---
 
-## Opening a result
+## Aprire un risultato
 
 Tap a result to go straight to it:
 
-- **Plugin** → opens that plugin.
-- **Dialog** → opens that screen or dialog.
-- **Preference category** → opens that settings screen.
+- **Plugin** → apre quel plugin.
+- **Finestra di dialogo** → apre quella schermata o finestra.
+- **Categoria di preferenze** → apre quella schermata delle impostazioni.
 - **Preference** → opens the setting **in place** (jumps to it within its screen).
 - **Documentation** → opens the page in your browser.
 
-Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
+L'apertura delle impostazioni e delle azioni protette rispetta sempre la tua **[protezione](#Preferences-protection)** (PIN/password), proprio come se ci fossi arrivato a mano. After you act on a result you can press **Back** to return to your search results.
 
 ---
 
-## Power-user shortcuts
+## Scorciatoie per utenti esperti
 
-Two special queries list a whole category at once:
+Due ricerche speciali elencano un'intera categoria in una volta:
 
 - `%PLUGINS%` — list **all** plugins.
 - `%DIALOGS%` — list **all** dialogs/action screens.
