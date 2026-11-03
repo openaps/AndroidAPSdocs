@@ -1,45 +1,45 @@
 (github-build-apk)=
 
-# Browser build – Step 4: Build the APK
+# Bygge i webbläsaren – Steg 4: Bygg APK-filen
 
 ```{note}
-This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md).
+Detta är **steg 4** av [Bygge i webbläsaren](BrowserBuild.md). Gör först klart [Steg 3 – Auktorisera Google Drive](BrowserBuildGoogleDrive.md).
 ```
 
-## AAPS-CI GitHub Actions to Build the AAPS APK
- - Suitable for general users.
+## Bygg APK-filen för AAPS med AAPS-CI i GitHub Actions
+ - Passar för de flesta användare.
 
 ```{tab-set}
 
 :::{tab-item} Wiki
-### Run the Workflow to Build the Signed APK
+### Kör arbetsflödet som bygger den signerade APK-filen
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+1. I din kopia av AndroidAPS på GitHub väljer du Actions.
+2. Fäll ut All Workflows.
+3. Välj AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Scrolla ned och tryck på Run Workflow.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Leave **Use workflow from** on the master branch. In **Select AAPS Version**, select the **AAPS** version you want to build (normally the newest one). Select the [variant](#browserbuild-variant) (fullRelease) and tap Run workflow.
+5. Låt **Use workflow from** (använd arbetsflödet från) stå kvar på master-grenen. I **Select AAPS Version** (välj AAPS-version) väljer du den **AAPS**-version som du vill bygga (oftast den senaste). Välj [variant](#browserbuild-variant) (fullRelease) och tryck på Run workflow.
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of Android APS.
+6. Du ser meddelandet Workflow run was successfully requested. Uppdatera sidan i webbläsaren, så kan du följa hur bygget går. När körningen är klar visar AAPS CI en grön bock. Nu har du byggt den uppdaterade versionen av Android APS.
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![Följ arbetsflödet](../images/update/CI/GitHubActions4.png)
 
-### Install the AAPS APK
+### Installera APK-filen för AAPS
 
-1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+1. Öppna din Google Drive
+2. Gå till mappen AAPS och välj mappen för den nya versionen. Där hittar du både telefonversionen och versionen för Android Wear.
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+![Plats i Google Drive](../images/update/CI/GitHubActions5.png)
 :::  
 
 :::{tab-item} Video
@@ -58,37 +58,37 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ```
 
-## Build Version selection
+## Välj version att bygga
 
-**Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
+**Bara AAPS-versioner från och med 3.3.2.1 kan byggas i webbläsaren.**
 
-Tap **Select AAPS Version** and pick the version to build. The newest version is at the top of the list.
+Tryck på **Select AAPS Version** och välj den version som ska byggas. Den senaste versionen ligger överst i listan.
 
-![Select AAPS Version list](../images/Building-the-App/CI/BrowserBuildVariant2.png)
+![Listan Select AAPS Version](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
 (browserbuild-variant)=
 
-## Build Variants selection
+## Välj byggvariant
 
-*Note: both Android and Android Wear apps will be built automatically.*
+*Obs! Både Android-appen och Android Wear-appen byggs automatiskt.*
 
-  - Select the variant you need:
-    - fullRelease: For regular pump usage with full functionality.
-    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
-    - pumpcontrolRelease: To replace your pump app/controller
+  - Välj den variant du behöver:
+    - fullRelease: För vanlig användning med pump, med alla funktioner.
+    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): För anhöriga och vårdare (kräver [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` bygger **AAPSClient3**, som finns från och med **AAPS** version 4.0 (se [Om AAPSClient, AAPSClient2 och AAPSClient3](#remotecontrol-aapsclient-versions)).
+    - pumpcontrolRelease: För att ersätta pumpens app/handenhet
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicate that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+Varianter som slutar på ”Debug” betyder att APK-filen byggs i felsökningsläge (debug), vilket är användbart för utvecklare som letar efter fel.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
 ----
 
-Once the build succeeds, the apk is saved to your Google Drive. Continue with [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+När bygget lyckas sparas APK-filen i din Google Drive. Fortsätt med [Överföra och installera AAPS](TransferringAndInstallingAaps.md).
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+Från september 2026 kan Googles [verifiering av Android-utvecklare](#android-developer-verification) blockera installationen av APK-filen när du trycker på filen, beroende på vilket land du bor i. Kostnadsfria sätt att komma runt detta förklaras på den sidan.
 ```
 
-If the build fails, first [find out what went wrong in the build log](#aaps-ci-read-the-logs), then see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md). To include a specific commit in your build, see [cherry-pick a commit](#github-cherry-pick).
+Om bygget misslyckas: [ta först reda på vad som gick fel i byggloggen](#aaps-ci-read-the-logs), och läs sedan [Bygge i webbläsaren: felsökning](../GettingHelp/BrowserBuildTroubleshooting.md). Om du vill ta med en viss commit i ditt bygge, se [cherry-picka en commit](#github-cherry-pick).
