@@ -6,7 +6,7 @@ tocdepth: 1
 
 ## Październik 2026
 
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 8, now maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository. Setting up is one step shorter: [step 1](#aaps-builder-step1) of the [setup page](#aaps-builder-setup) creates your private repository as a copy of that repository, with the build workflow already in it, so there is no workflow to add any more. From now on the build steps are updated for you: your repository runs the version released by the AAPS developers at every build, without any change on your side (and still no automatic build). The build itself does not change, and your existing repository keeps working. To get these automatic updates, replace your `.github/workflows/build.yml` once as explained in [Updating AAPS](#aaps-builder-updates). Your `KEYSTORE_SET` secret stays as it is. The optional [Google Drive step](#aaps-builder-google-drive) now works on the setup page itself, on a phone or a computer: no preparation file needed @psonnera
+- [Budowanie w przeglądarce z AAPS Builder](#aaps-builder): workflow budowania w wersji 8, teraz utrzymywany przez deweloperów AAPS w repozytorium [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder). Konfiguracja jest o jeden krok krótsza: [krok 1](#aaps-builder-step1) [strony konfiguracji](#aaps-builder-setup) tworzy Twoje prywatne repozytorium jako kopię tamtego repozytorium, z workflow budowania już w środku, więc nie musisz już dodawać workflow. Od teraz kroki budowania są aktualizowane za Ciebie: przy każdym budowaniu Twoje repozytorium używa wersji wydanej przez deweloperów AAPS, bez żadnych zmian z Twojej strony (i nadal bez automatycznego budowania). Samo budowanie się nie zmienia, a Twoje obecne repozytorium nadal działa. Aby dostawać te automatyczne aktualizacje, jeden raz zastąp swój plik `.github/workflows/build.yml` zgodnie z opisem w [Aktualizowanie AAPS](#aaps-builder-updates). Twój sekret `KEYSTORE_SET` zostaje bez zmian. Opcjonalny [krok z Dyskiem Google](#aaps-builder-google-drive) działa teraz na samej stronie konfiguracji, na telefonie lub komputerze: plik przygotowawczy nie jest już potrzebny @psonnera
 - [Smartwatche i AAPS](#watches-external-companion-apps): sekcja **Samsung Tizen** zmienia się w **Zewnętrzne aplikacje towarzyszące** i wymienia aplikacje, które odczytują dane rozgłaszane przez **AAPS** (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 i nowsze łączą się bezpośrednio z **AAPS** bez xDrip+: dodano kroki konfiguracji, opisane też krótko w [Konfiguracji](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) i [Zdalnym monitoringu](../RemoteFeatures/RemoteMonitoring.md). Zegarki Bluejay: model GTS wycofany, zaktualizowano obecny model @psonnera
 - [Budowanie w przeglądarce z AAPS Builder](#aaps-builder): workflow budowania w wersji 6. Kroki budowania używają teraz dokładnych, sprawdzonych wersji narzędzi GitHub i maszyny budującej. Gdy do sekretu `KEYSTORE_SET` wklejono zły tekst, budowanie jasno to wyjaśnia. [Strona konfiguracji](#aaps-builder-setup) jest teraz częścią dokumentacji i jest tłumaczona. Sprawdza Twoją nazwę użytkownika GitHub i ma jaśniejszą pomoc dotyczącą sekretu, błędu „Page not found” (404) i aplikacji GitHub. Jeśli Twój plik `.github/workflows/build.yml` ma wersję 5 lub starszą, zastąp go zgodnie z opisem w [Aktualizowanie AAPS](#aaps-builder-updates) @psonnera
 - [Instalator webowy AAPS](#web-installer): teraz jest stroną dokumentacji, tłumaczoną tak jak inne. Stary adres nadal działa @psonnera
@@ -38,7 +38,7 @@ tocdepth: 1
 
 ## Styczeń 2025
 
-- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
+- Wersja [3.4](#version3400) i zbiorcza aktualizacja dokumentacji (Kreator, wersje do budowania na komputerze, Konfiguracja (Config Builder))
 - Aktualizacja listy CGM. Usunięto Dexcom G5, Tomato i Glimp.
 - [Interfejs rotacji miejsc wkłucia](#Aapsscreens-site-rotation)
 - [Tryb pracy](#AapsScreens-running-mode)
@@ -52,7 +52,7 @@ tocdepth: 1
 
 - DiaKEM: nowe instalacje nie działają po aktualizacji serwerów @psonnera
 - Usunięto zmodyfikowaną aplikację Libre 2 (patched, przestarzała): nie działa z nowymi sensorami @psonnera
-- Reworked Omnipod DASH page @XiTatiON
+- Nowa wersja strony Omnipod DASH @XiTatiON
 
 ## Sierpień 2025
 
@@ -76,15 +76,15 @@ tocdepth: 1
 ## Listopad 2024
 
 - Aktualizacja strony [Twój profil AAPS](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
+- Nowy układ treści o [smartwatchach z Wear OS](../WearOS/BuildingAapsWearOS.md) @psonnera
 
 ## Październik 2024
 
 - Aktualizacja kilku stron:
-  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [Ile to potrwa](#preparing-how-long-will-it-take), [Przegląd komponentów](../Getting-Started/ComponentOverview.md), [Ukończenie zadań](../SettingUpAaps/CompletingTheObjectives.md), [Twój profil AAPS](../SettingUpAaps/YourAapsProfile.md), [Konfiguracja (Config Builder)](../SettingUpAaps/ConfigBuilder.md) i [Ustawienia (Preferencje)](../SettingUpAaps/Preferences.md), [Ekrany AAPS](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [Obliczanie COB](../DailyLifeWithAaps/CobCalculation.md), [Dynamiczny ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Instrukcje budowania dla Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
+- Prace techniczne (proces publikacji dokumentacji, organizacja plików...) @psonnera i @emilise
 
 ***
 
