@@ -1,6 +1,6 @@
 # Accu-Chek Insight
 
-**Aceasta aplicatie face parte dintr-o soluție de pancreas artificial DIY (Do-it-Yourself), realizata personal) care nu este un produs finit, ceea ce inseamna ca va trebui ca TU sa citesti, să studiezi si să înțelegi sistemul, inclusiv cum să îl folosesti. Nu este ceva creat pentru a gestiona in totalitate tratamentul diabetul, dar permite îmbunătățirea calitatii vieții cu diabet, dacă acordati timpul necesar. Nu te grăbi să o faci, dar acorda-ți timp să înveți. Doar tu esti responsabil de utilizarea acestui sistem.**
+**Aceasta aplicatie face parte dintr-o soluție de pancreas artificial DIY (Do-it-Yourself), realizata personal) care nu este un produs finit, ceea ce inseamna ca va trebui ca TU sa citesti, să studiezi si să înțelegi sistemul, inclusiv cum să îl folosesti. Nu este ceva creat pentru a gestiona in totalitate tratamentul diabetul, dar permite îmbunătățirea calitatii vieții cu diabet, dacă acordati timpul necesar. Nu vă grăbiți, ci acordați-vă timp să învățați. Doar tu esti responsabil de utilizarea acestui sistem.**
 
 ```{admonition} Accu-Chek Insight is being phased out :class: note
 
@@ -10,12 +10,12 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
     Before **AAPS** had a native Insight driver, the Insight was controlled through the separate [SightRemote](https://github.com/TebbeUbben/SightRemote) app. SightRemote is no longer needed or maintained: if you still have it installed from those days, uninstall it and use a current version of **AAPS** instead.
     
 
-```{contents} Table of contents :depth: 1 :local: true
+```{contents} Cuprins :depth: 1 :local: true
 
     <br />## Pump capabilities with AAPS
     
     * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-    * Automatic DST and timezone handling.
+    * Gestionare automată a orei de vară și a fusului orar.
     
     ## Hardware and software requirements
     
@@ -23,12 +23,12 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
     
     Note: AAPS will write data always in **first basal rate profile in the pump**.
     
-    * An Android phone running Android 12 or newer (see [Phones](../Getting-Started/Phones.md))
-    * The AAPS app installed on your phone
+    * Un telefon Android cu Android 12 sau mai nou (vedeți [Telefoane](../Getting-Started/Phones.md))
+    * Aplicația AAPS instalată pe telefon
     
-    ## Setup
+    ## Configurare
     
-    * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: **Menu** > **Settings** > **Communication** > **Remove device**.
+    * Pompa Insight trebuie conectată la un singur dispozitiv în același timp. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: **Menu** > **Settings** > **Communication** > **Remove device**.
     
        ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
     
@@ -42,7 +42,7 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
     
        **Settings** opens the settings of the Accu-Chek Insight driver (see [Settings in AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
     
-       **Open plugin** (or **Manage → Pump**) opens the Accu-Chek Insight pump screen. Before a pump is paired it looks like this:
+       **Deschideți modulul** (sau **Gestionați → Pompă**) deschide ecranul pompei Accu-Chek Insight. Before a pump is paired it looks like this:
     
        ![Accu-Chek Insight pump screen before pairing](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
     
@@ -50,15 +50,15 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
     ### Pairing
     
     * On the pump screen, tap **Insight pairing**. The pairing wizard opens and searches for nearby Bluetooth devices (top of the picture below).
-    * On the Insight pump, go to **Menu** > **Settings** > **Communication** > **Add Device**. The pump shows the following screen (bottom of the picture below) with the serial number of the pump.
+    * Pe pompa Insight, mergeți la **Menu** > **Settings** > **Communication** > **Add Device**. The pump shows the following screen (bottom of the picture below) with the serial number of the pump.
     
        ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
     
-    * Back on your phone, tap the pump serial number in the list of Bluetooth devices. If Android asks you to confirm the pairing, tap **Pair**.
+    * Back on your phone, tap the pump serial number in the list of Bluetooth devices. Dacă Android vă cere să confirmați asocierea, apăsați **Asociați**.
     
        ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
     
-    * The pump and the phone both show a code. Check that the codes are the same on both devices. Confirm on the pump, and tap **Yes** on the phone. (Tap **No** if the codes do not match.)
+    * The pump and the phone both show a code. Check that the codes are the same on both devices. Confirmați pe pompă și apăsați **Da** pe telefon. (Tap **No** if the codes do not match.)
     
        ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
     
@@ -84,11 +84,11 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
     
     Open the settings with **Settings** on the **Accu-Chek Insight** card in **Configuration** > **Pump**, or with the gear icon in the top-right corner of the pump screen.
     
-    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![Setările driverului Accu-Chek Insight](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    In the Insight settings in **AAPS** you can enable the following options:
+    În setările Insight din **AAPS** puteți activa următoarele opțiuni:
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
+    * **Înregistrați schimbările de rezervor**: înregistrează automat o schimbare a cartușului de insulină când schimbați cartușul în pompă.
     
     * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
     
@@ -96,7 +96,7 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
     
     * **Log battery changes**: records a battery change when you put a new battery in the pump.
     
-    * **Log operating mode changes**: adds a note to the **AAPS** database whenever you start, stop or pause the pump.
+    * **Înregistrați schimbările modului de operare**: adaugă o notă în baza de date **AAPS** de fiecare dată când porniți, opriți sau puneți pompa în pauză.
     
     * **Log alerts**: adds a note to the **AAPS** database whenever the pump issues an alert (except reminders, bolus and TBR cancellation, which are not recorded).
     
@@ -108,8 +108,8 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
     
     * **Disable vibrations on automated bolus delivery**: stops the Insight pump from vibrating when it delivers an automatic bolus (SMB or temp basal with TBR emulation). Only available with Insight firmware 3.x.
     
-    * **Min. recovery duration [s]** and **Max. recovery duration [s]**: how long **AAPS** waits before trying again after a failed connection attempt. Poți alege de la 0 la 20 de secunde. If you have connection problems, choose a longer wait time.
-        <br><br>Example for min. minim = 5 sec. și recovery duration = 20
+    * **Min. recovery duration [s]** and **Max. recovery duration [s]**: how long **AAPS** waits before trying again after a failed connection attempt. Poți alege de la 0 la 20 de secunde. Dacă aveți probleme de conexiune, alegeți un timp de așteptare mai lung.
+        <br><br>Example for min. de restabilire = 5 și timpul max. recovery duration = 20
         <br><br>no connection -> wait <b>5</b> sec.
           <br>  retry -> no connection -> wait <b>6</b> sec.
           <br>  retry -> no connection -> wait <b>7</b> sec.
@@ -119,9 +119,9 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
           <br>retry -> no connection -> wait <b>20</b> sec.
           <br>...
     
-    * **Disconnect delay [s]**: how long (in seconds) **AAPS** waits before disconnecting from the pump after an operation is finished. You can choose from 0 to 15 seconds. The default value is 5 seconds.
+    * **Disconnect delay [s]**: how long (in seconds) **AAPS** waits before disconnecting from the pump after an operation is finished. Puteți alege între 0 și 15 secunde. Valoarea implicită este de 5 secunde.
     
-    For periods when the pump was stopped, **AAPS** logs a temporary basal rate of 0%.
+    Pentru perioadele în care pompa a fost oprită, **AAPS** înregistrează o rată bazală temporară de 0%.
     
     ### The pump screen
     
@@ -135,7 +135,7 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
     
     ```{admonition} Older screenshot
     :class: note
-    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different and also has an **Unpair** button.
+    The screenshot above is from an earlier **AAPS** version. În **AAPS** 4, ecranul pompei arată diferit și are și un buton **Dezasociați**.
     
 
 ## Setările pompei
@@ -146,7 +146,7 @@ Configurați alarmele în pompă după cum urmează:
 * Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
 * Menu > Modes > Signal mode > Quiet
 
-Aceasta va reduce la tăcere toate alarmele din pompă, permițând AAPS să decidă dacă o alarmă este relevantă pentru dumneavoastră. Dacă în AAPS nu se ține seama de o alarmă, volumul său va crește (prima dată semnal sonor, apoi vibrații).
+Aceasta va reduce la tăcere toate alarmele din pompă, permițând AAPS să decidă dacă o alarmă este relevantă pentru dumneavoastră. Dacă AAPS nu confirmă o alarmă, volumul acesteia va crește (mai întâi semnal sonor, apoi vibrații).
 
 (Accu-Chek-Insight-Pump-vibration)=
 
@@ -162,7 +162,7 @@ Versiunea de firmware poate fi găsită în meniu.
 
 ## Înlocuire baterie
 
-Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. Utilizatorul care a raportat acest lucru utilizează baterii cu litiu de tip Energizer.
+Durata de viață a bateriei pentru Insight în buclă este între 10 și 14 zile, cel mult 20 de zile. Utilizatorul care a raportat acest lucru utilizează baterii cu litiu de tip Energizer.
 
 Pompa Insight are o baterie internă mică pentru a păstra funcțiile esențiale precum ceasul care rulează în timp ce se schimbă bateria detașabilă. Dacă schimbarea bateriei durează prea mult, această baterie internă se poate termina, ceasul se va reseta, și după introducerea unei baterii noi vi se va cere să completați din nou ora și data. Dacă se întâmplă acest lucru, toate intrările in AndroidAPS înainte de schimbarea bateriei nu vor mai fi incluse în calcule, deoarece timpul corect nu poate fi identificat corespunzător.
 
@@ -172,11 +172,11 @@ Pompa Insight are o baterie internă mică pentru a păstra funcțiile esențial
 
 ### Bolus extins
 
-Utilizați doar un bolus extins la un moment dat deoarece mai multe boluri extinse în același timp ar putea cauza erori.
+Utilizați doar un bolus extins la un moment dat, deoarece mai multe bolusuri extinse în același timp ar putea cauza erori.
 
 ### Pauză
 
-Sometimes the Insight pump does not answer while **AAPS** sets up the connection. **AAPS** then shows the notification "Timeout during handshake - reset bluetooth".
+Uneori pompa Insight nu răspunde în timp ce **AAPS** stabilește conexiunea. **AAPS** then shows the notification "Timeout during handshake - reset bluetooth".
 
 ![Resetare Bluetooth Insight](../images/Insight_ResetBT.png)
 
@@ -184,14 +184,14 @@ If this happens, turn off Bluetooth on the pump AND on the phone for about 10 se
 
 ## Traversarea fusurilor orare cu pompa Insight
 
-Pentru informații despre călătoriile prin diverse fusuri orare, vedeți secțiunea [Călătorit prin fusuri orare cu pompa](#timezone-traveling-insight).
+Pentru informații despre călătoriile prin diverse fusuri orare, vedeți secțiunea [Călătorii de-a lungul fusurilor orare cu pompe](#timezone-traveling-insight).
 
 ## Unde să obțineți ajutor
 
-Development of the Insight driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Development of the Insight driver is done by the community on a **volunteer** basis. Înainte de a cere ajutor, vă rugăm:
 
 1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
+2. **Întrebați** pe canalul *#AAPS* de pe [Discord](https://discord.gg/4fQUWHZ4Mw) sau pe unul dintre celelalte [canale ale comunității](../GettingHelp/WhereCanIGetHelp.md).
 3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
 
 When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
