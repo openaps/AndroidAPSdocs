@@ -1,75 +1,75 @@
 # Eversense
 
-There are four different methods to access the readings from Eversense:
+Eversense의 측정값을 받는 방법은 네 가지가 있습니다:
 
-- ESEL companion mode
-- ESEL patched mode
-- xDrip companion app
-- Notification Reader (built into **AAPS**)
+- ESEL 동반 모드(companion mode)
+- ESEL 패치 모드(patched mode)
+- xDrip 동반 앱(companion app)
+- 알림 읽기(**AAPS**에 내장)
 
 ## ESEL
 
-Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
+[ESEL 앱](https://github.com/BernhardRo/Esel/tree/master/apk)을 받아 이 [안내](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel)에 따라 설치하십시오.
 
-- In ESEL, open the three dots menu (⋮) at the top right and select **Settings** (also available from the ☰ menu). In the settings:
-  - Enable "Send to AAPS and xDrip"
-  - **Disable** "Send to Nightscout"
-  - As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
+- ESEL에서 오른쪽 위의 점 세 개 메뉴(⋮)를 열고 **Settings**를 선택하십시오(☰ 메뉴에서도 열 수 있습니다). 설정에서:
+  - "Send to AAPS and xDrip"를 켜십시오
+  - "Send to Nightscout"를 **끄십시오**
+  - Eversense의 혈당 데이터는 노이즈가 많을 수 있으므로 ESEL에서 "Smooth Data"를 켜는 것을 권장합니다.
 
 ![ESEL Broadcast](../images/ESEL.png)
 
-### Companion Mode
+### 동반 모드(Companion Mode)
 
-Reads the data from the Eversense app notifications (works with the standard Eversense App, available since ESEL version 3.0.1).
+Eversense 앱의 알림에서 데이터를 읽습니다(표준 Eversense 앱과 함께 작동하며, ESEL 버전 3.0.1부터 사용할 수 있습니다).
 
-1. Use the official Eversense App from the Google Play Store
-   - Optional, but required for backfilling: Login to your Eversense account
-   - In Sync, enable Auto synchronization
-2. Configuration of ESEL:
-   - Disable the setting "Get data from patched Eversense App"
-   - For backfilling: Enable "Fill missing data from eversensedms.com"
-   - Provide as Email address and password your Eversense login data
-3. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
+1. Google Play 스토어의 공식 Eversense 앱을 사용하십시오
+   - 선택 사항이지만 백필에는 필요: Eversense 계정에 로그인하십시오
+   - Sync에서 Auto synchronization을 켜십시오
+2. ESEL 설정:
+   - "Get data from patched Eversense App" 설정을 끄십시오
+   - 백필을 사용하려면: "Fill missing data from eversensedms.com"을 켜십시오
+   - 이메일 주소와 비밀번호로 Eversense 로그인 정보를 입력하십시오
+3. [**구성 → 혈당 출처**](#Config-Builder-bg-source)에서 혈당 출처로 "MM640g"를 설정하십시오.
 
-### Patched Eversense App
+### 패치된 Eversense 앱
 
- Requires a patched version of the Eversense App (works completely offline, including backfilling).
+ 패치된 버전의 Eversense 앱이 필요합니다(백필을 포함하여 완전히 오프라인으로 작동합니다).
 
-1. Uninstall the Eversense App (Warning: your local historical data (older than 1 week) will be lost!)
+1. Eversense 앱을 삭제하십시오(경고: 휴대폰에 저장된 과거 데이터(1주일보다 오래된 것)는 사라집니다!)
 
-2. Install the [patched Eversense app](https://cr4ck3d3v3r53n53.club) and use it as described by the vendor
+2. [패치된 Eversense 앱](https://cr4ck3d3v3r53n53.club)을 설치하고 제공자의 설명대로 사용하십시오
 
-   - Start the Eversense App, login, connect to your transmitter and use it just like the normal app.
+   - Eversense 앱을 시작하고 로그인한 다음 트랜스미터에 연결하여 일반 앱과 똑같이 사용하십시오.
 
-3. Configuration of ESEL:
+3. ESEL 설정:
 
-   - Enable the setting "Get data from patched Eversense App"
+   - "Get data from patched Eversense App" 설정을 켜십시오
 
 
 
 ![ESEL Broadcast](../images/ESELpatch.png)
 
-If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
+새로 설치한 Eversense와 함께 ESEL을 처음 실행하면, 첫 값이 xDrip에 나타날 때까지 최대 15분이 걸릴 수 있습니다!
 
-4. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
+4. [**구성 → 혈당 출처**](#Config-Builder-bg-source)에서 혈당 출처로 "MM640g"를 설정하십시오.
 
 ## xDrip
 
-xDrip can read notifications from the vendor app, like ESEL does. No backfilling available.
+xDrip은 ESEL처럼 제조사 앱의 알림을 읽을 수 있습니다. 백필을 사용할 수 없습니다.
 
-- Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip “Companion App” must be selected.
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
-- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
-- Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
+- xDrip을 다운로드하여 설치하십시오: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- xDrip의 데이터 소스로 “Companion App”을 선택해야 합니다.
+- [**구성 → 혈당 출처**](#Config-Builder-bg-source)에서 xDrip을 선택하십시오.
+- xDrip 설정 페이지 [xDrip 설정](../CompatibleCgms/xDrip.md)의 설명에 따라 xDrip 설정을 조정하십시오.
+- AAPS에서 [지수 평활화](../CompatibleCgms/SmoothingBloodGlucoseData.md)를 켜십시오.
 
-## Notification Reader
+## 알림 읽기
 
-**AAPS** can read the glucose values directly from the notifications posted by the official Eversense app, without any other app in between. No backfilling available.
+**AAPS**는 중간에 다른 앱 없이, 공식 Eversense 앱이 올린 알림에서 혈당값을 직접 읽을 수 있습니다. 백필을 사용할 수 없습니다.
 
-- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and grant **AAPS** access to notifications when asked.
-- Make sure the Eversense app shows the current glucose value in its notification.
+- [**구성 → 혈당 출처**](#Config-Builder-bg-source)에서 **알림 읽기**를 선택하고, 요청이 나오면 **AAPS**에 알림 접근 권한을 허용하십시오.
+- Eversense 앱의 알림에 현재 혈당값이 표시되는지 확인하십시오.
 
 ```{warning}
-BG values reading frequency is not always 5 minutes and duplicates can occur.
+혈당값을 읽는 간격이 항상 5분은 아니며, 중복된 값이 생길 수 있습니다.
 ```
