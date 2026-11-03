@@ -1,49 +1,49 @@
 # DanaR
 
-*다음 지침은 다나R에서 앱과 펌프를 구성하기 위한 것입니다. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*
+*다음 지침은 DanaR를 사용하는 경우 앱과 펌프를 구성하는 방법입니다. 2017년에 출시된 DanaRS를 사용한다면 [DanaRS, Dana-i 및 Dana-i2](./DanaRS-Insulin-Pump.md)를 참조하십시오.*
 
-## Pump capabilities with AAPS
+## AAPS에서 사용할 수 있는 펌프 기능
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Timezone and DST changes need no special action, as the pump does not use its own history.
+* 추가 통신 장치 없이 휴대폰의 자체 블루투스로 **AAPS**와 통신합니다.
+* 펌프가 자체 이력을 사용하지 않으므로 시간대 변경과 서머타임(DST) 변경 시 특별한 조치가 필요 없습니다.
 
 ## 설정
 
 * 펌프에서 Main Menu > Setting > User Option 으로 이동하세요.
-* “8. Extended Bolus”을 On으로 변경하세요. 
+* "8. Extended Bolus"을 On으로 설정하십시오.
 
-![다나R 펌프](../images/danar1.png)
+![DanaR 펌프](../images/danar1.png)
 
-* Menu > Setting > Discovery 으로 이동하세요.
-* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). 만약 검색을 해도 DanaR이 표시되지 않으면 스마트폰을 재시작한다음, DanaR펌프 배터리를 꺼내고 교체한 후 이 두 단계를 다시 시작합니다.
+* 펌프에서 Main Menu > Setting > Discovery로 이동하십시오.
+* 휴대폰 설정에서 Bluetooth로 이동하여 주변 기기를 검색한 다음, DanaR 시리얼 번호를 선택하고 암호를 입력하십시오(페어링 암호는 0000입니다). 만약 검색을 해도 DanaR이 표시되지 않으면 스마트폰을 재시작한다음, DanaR펌프 배터리를 꺼내고 교체한 후 이 두 단계를 다시 시작합니다.
 
-* In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **Pump** and select the type of DanaR you have (**DanaR**, **DanaR Korean** or **DanaRv2**).
+* **AAPS**에서 왼쪽 위의 **메뉴**(☰)를 열고 **구성** > **펌프**로 이동한 다음 사용하는 DanaR 종류(**다나R**, **다나R 한글** 또는 **다나R v2**)를 선택하십시오.
   
-  ![Configuration > Pump with the DanaR plugins](../images/v4/Configuration/configuration_pump_list_1.png)
+  ![DanaR 플러그인이 있는 구성 > 펌프 화면](../images/v4/Configuration/configuration_pump_list_1.png)
 
-* Open the pump screen: tap **Open plugin** on the DanaR card (or go to **Manage** > **Pump**).
+* 펌프 화면을 여십시오. DanaR 카드에서 **플러그인 열기**를 누르십시오(또는 **관리** > **펌프**로 이동하십시오).
 
-* Tap **Pairing**. On the pairing screen: 
-  * Enter your pump password under **Pump password** (default password is 1234).
-  * Under **Select paired device**, tap your DanaR serial number. If the list is empty, tap **Open Bluetooth settings** and pair the pump with your phone first (see the step above). When you come back to **AAPS**, the pump appears in the list. If it does not, tap the refresh icon.
-  * Tap **Pairing**. **AAPS** connects to the pump and checks the password.
-* To change the driver settings, tap **Settings** on the DanaR card in **Configuration** > **Pump**: 
-  * **Bolus speed** (DanaR and DanaRv2): change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
-  * **Use extended boluses for >200%** (DanaR and DanaR Korean): enable this if you want **AAPS** to allow a basal rate above 200%. Note this means you cannot loop with high TBRs while using extended boluses for food.
-* 펌프의 Basal 단위를 0.01U/h로 하세요.
-* Set bolus step on pump to 0.1 U. **AAPS** reads the bolus step from the pump and uses it for every bolus.
-* 펌프에서 확장Bolus를 활성화하세요.
+* **페어링**을 누르십시오. 페어링 화면에서: 
+  * **펌프 비밀번호**에 펌프 비밀번호를 입력하십시오(기본 비밀번호는 1234입니다).
+  * **페어링된 기기 선택**에서 DanaR 일련번호를 누르십시오. 목록이 비어 있으면 **블루투스 설정 열기**를 누르고 먼저 펌프를 휴대폰과 페어링하십시오(위 단계 참조). **AAPS**로 돌아오면 펌프가 목록에 나타납니다. 나타나지 않으면 새로 고침 아이콘을 누르십시오.
+  * **페어링**을 누르십시오. **AAPS**가 펌프에 연결하고 비밀번호를 확인합니다.
+* 드라이버 설정을 변경하려면 **구성** > **펌프**의 DanaR 카드에서 **설정**을 누르십시오: 
+  * **볼러스 속도**(DanaR 및 DanaRv2): 기본 볼러스 속도(12 s/U, 30 s/U 또는 60 s/U)를 변경합니다.
+  * **>200%에 확장 볼러스 사용**(DanaR 및 DanaR Korean): **AAPS**가 200%를 넘는 기저 주입량을 허용하게 하려면 이 옵션을 활성화하십시오. 이 경우 음식에 확장 볼러스를 사용하는 동안에는 높은 TBR로 루프를 실행할 수 없습니다.
+* 펌프의 기저 단위를 0.01 U/h로 설정하십시오.
+* 펌프의 볼러스 단위를 0.1 U로 설정하십시오. **AAPS**는 펌프에서 볼러스 단위를 읽어 모든 볼러스에 사용합니다.
+* 펌프에서 확장 볼러스를 활성화하십시오.
 
-## 다나R 펌프 사용시 다른 시간대 국가로의 여행
+## DanaR 펌프로 시간대 이동하기
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+여러 시간대를 넘어 여행하는 방법은 [펌프로 시간대 이동하기](#timezone-traveling-danarv2-danars) 섹션을 참조하십시오.
 
-## Where to get help
+## 도움을 받을 수 있는 곳
 
-Development of the DanaR driver is done by the community on a **volunteer** basis. Before requesting help, please:
+DanaR 드라이버는 커뮤니티가 **자원봉사**로 개발합니다. 도움을 요청하기 전에:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. 이 문서의 관련 섹션을 **읽고** 기능이 어떻게 작동해야 하는지 확인하십시오.
+2. [Discord](https://discord.gg/4fQUWHZ4Mw)의 *#AAPS* 채널이나 다른 [커뮤니티 채널](../GettingHelp/WhereCanIGetHelp.md)에서 **질문하십시오**.
+3. [기존 이슈](https://github.com/nightscout/AndroidAPS/issues)를 검색하여 **버그를 보고하십시오**. 해당 이슈가 없으면 [새 이슈](https://github.com/nightscout/AndroidAPS/issues)를 열고 [로그 파일](../GettingHelp/AccessingLogFiles.md)을 첨부하십시오.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+도움을 요청할 때는 휴대폰 제조사와 모델, Android 버전, **AAPS** 버전, 그리고 문제에 대한 쉬운 영어 설명(무엇이 바뀌었는지, 마지막으로 언제 작동했는지)을 포함하십시오.
