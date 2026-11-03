@@ -1,290 +1,290 @@
-# Your AAPS profile
+# AAPS profiliniz
 
-Your **AAPS Profile** is a set of four key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates:
-* [glucose targets](#profile-glucose-targets),
-* [basal rates](#your-aaps-profile-basal-rates) (BR),
-* [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
-* [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR).
+**AAPS Profiliniz**, **AAPS**'in sensör glikoz düzeylerinize göre insülini nasıl vereceğini belirleyen dört temel parametreden oluşan bir settir. Bunlar **AAPS**'in üzerine kurulduğu ana parametrelerdir. **Görevler**'de ilerledikçe değiştirebileceğiniz ek parametrelerin (SMB ayarları gibi) kilidini açarsınız, ancak bu özelliklerin iyi çalışması temeldeki **Profil**'inizin doğru olmasına bağlıdır. **Profil** şunları içerir:
+* [glikoz hedefleri](#profile-glucose-targets),
+* [bazal oranlar](#your-aaps-profile-basal-rates) (BR),
+* [insülin duyarlılık faktörleri](#your-aaps-profile-insulin-sensitivity-factor) (İDF) ve
+* [karbonhidrat insülin oranları](#your-aaps-profile-insulin-to-carbs-ratio) (IC veya ICR).
 
 ```{admonition} Where did DIA go?
 :class: note
-The **duration of insulin action (DIA)** is no longer part of your **Profile**. It is set per insulin instead — see [Manage → Insulin settings](#Config-Builder-insulin-dia).
+**İnsülin etki süresi (İES)** artık **Profil**'inizin bir parçası değildir. Bunun yerine her insülin için ayrı ayarlanır — bkz. [Yönet → İnsülin ayarları](#Config-Builder-insulin-dia).
 ```
 
-As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Diğerini değiştirmeden hemen önce bir ayarı almayı hedefleyin. Tek seferde büyük değişiklikler yapmak yerine küçük adımlarla çalışın. Don't forget to activate the new profile after each change. Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your settings.
+**AAPS** yönetiminin bir parçası olarak kullanıcılar, **Profil** ayarlarının doğruluğunu sürekli olarak değerlendirmeli ve dikkatle incelemelidir. Ayarları burada verilen sırayla ele almanız önerilir. Başka bir ayarı değiştirmeden önce bir ayarı doğru yapmayı hedefleyin. Tek seferde büyük değişiklikler yapmak yerine küçük adımlarla çalışın. Her değişiklikten sonra yeni profili etkinleştirmeyi unutmayın. Ayarlarınızı dışa aktararak [**Profil** ayarlarınızı düzenli olarak yedekleyin](#YourAapsProfile_Profile-backup).
 
-Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
+**Profil** ayarlarınız birbirini etkiler - bazı durumlarda birlikte iyi çalışan ama başka durumlarda çalışmayan 'yanlış' ayarlarınız olabilir. Örneğin çok yüksek bir bazal, çok yüksek bir **CR** ile aynı zamana denk geldiğinde. Bu, ayarları tek tek ele almanız ve çeşitli durumlarda birbiriyle uyum içinde çalıştıklarını kontrol etmeniz gerektiği anlamına gelir.
 
-[Otoayar](https://autotuneweb.azurewebsites.net/)'ı düşüncenize rehberlik etmesi için kullanabilirsiniz, ancak körü körüne takip edilmemelidir: sizin için veya her durumda iyi çalışmayabilir.
+[OtoAyar](https://autotuneweb.azurewebsites.net/)'ı düşüncenize rehberlik etmesi için kullanabilirsiniz, ancak körü körüne takip edilmemelidir: sizin için veya her durumda iyi çalışmayabilir.
 
 ```{admonition} Your diabetes may vary
 :class: note
-**Profiles** vary significantly from person-to-person.
+**Profiller** kişiden kişiye çok farklıdır.
 
-For basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+Bazal oranlar (BR), insülin duyarlılık faktörleri (İDF) ve karbonhidrat insülin oranları (IC veya ICR) için mutlak değerler ve insülin ihtiyacındaki eğilimler kişiden kişiye çok farklıdır; bu, biyolojinize, cinsiyetinize, yaşınıza, kondisyonunuza vb. ve ayrıca hastalık ve yakın zamanda yapılan egzersiz gibi kısa süreli etkenlere bağlıdır. Bu konuda daha fazla rehberlik için Adam Brown'ın [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) kitabı okunması çok iyi bir kitaptır.
 
 ```
 
-The four last parameters (glucose targets, basal rates, insulin sensitivity factors and insulin-to-carb ratios) can be set to different values, changing hourly if required, over a 24-hour period.
+Son dört parametre (glikoz hedefleri, bazal oranlar, insülin duyarlılık faktörleri ve karbonhidrat insülin oranları) 24 saatlik bir süre boyunca farklı değerlere ayarlanabilir, gerekirse saatlik olarak değiştirilebilir.
 
-![Hourly change of basal](../images/MaxDailyBasal2.png)
+![Bazalın saatlik değişimi](../images/MaxDailyBasal2.png)
 
-Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
+Aşağıda **AAPS**'ten _örnek_ bir profilin ekran görüntüleri gösterilmektedir. Lütfen dikkat: aşağıdaki örnek profil çok sayıda zaman noktası gösterir. **AAPS** ile yeni başladığınızda profiliniz muhtemelen çok daha basit olacaktır.
 
-![Example active profile](../images/Profile-Example-Active.png)
+![Örnek etkin profil](../images/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
-## Glucose targets
+## Glikoz hedefleri
 
 ### Description
 
-Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
+**KŞ hedefiniz** temel bir değerdir ve **AAPS**'in tüm hesaplamaları buna dayanır. Bu, kan şekerinizi genellikle içinde tutmayı hedeflediğiniz hedef aralıktan farklıdır. Hedef, **AAPS** hesaplamalarında kullanılır: **AAPS**, **KŞ**'nizin hedef aralığın dışına çıkacağını tahmin ederse, sizi bu aralığa geri getirmek için harekete geçer.
 
-The targets can be defined within those boundaries :
+Hedefler şu sınırlar içinde tanımlanabilir:
 
-|         | _Low_ target           | _High_ target            |
-| ------- | ---------------------- | ------------------------ |
-| Minimum | 4.4 mmol/L or 80 mg/dL | 5 mmol/L or 90 mg/dL     |
-| Maximum | 10 mmol/L or 180 mg/dL | 11.1 mmol/L or 200 mg/dL |
+|          | _Düşük_ hedef            | _Yüksek_ hedef             |
+| -------- | ------------------------ | -------------------------- |
+| Minimum  | 4,4 mmol/L veya 80 mg/dL | 5 mmol/L veya 90 mg/dL     |
+| Maksimum | 10 mmol/L veya 180 mg/dL | 11,1 mmol/L veya 200 mg/dL |
 
 ### Impact
 
-If the target in your **Profile** is very wide (say, 3 or more mmol/L [50 mg/dL or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
+**Profil**'inizdeki hedef çok genişse (örneğin 3 mmol/L [50 mg/dL] veya daha geniş), genellikle **AAPS**'in çok az işlem yaptığını görürsünüz. Bunun nedeni, **KŞ** düzeyinin bu geniş aralıkta bir yerde olacağının tahmin edilmesidir; bu yüzden **AAPS**'in geçici bazal oranı uygulaması pek olası değildir.
 
-### How to set it
+### Nasıl ayarlanır
 
-The **figure below** shows an example of how the target can be set in an **AAPS** profile.
+**Aşağıdaki şekil**, hedefin bir **AAPS** profilinde nasıl ayarlanabileceğine dair bir örnek gösterir.
 
 ![Target](../images/Profile_Target.png)
 
-**BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+**KŞ** hedefleri kişisel tercihlerinize ve ihtiyaçlarınıza göre ayarlanır. Örneğin geceleri hipolardan endişe ediyorsanız, hedefinizi 21:00 - 07:00 arası için biraz daha yüksek, 117 mg/dL (6,5 mmol/L) olarak ayarlayabilirsiniz. Kahvaltı bolusundan önce sabah yeterince aktif insülininiz (AİNS) olduğundan emin olmak istiyorsanız, sabah 7 ile 8 arası için daha düşük bir hedef, 81 mg/dL (4,5 mmol/L) ayarlayabilirsiniz.
 
-When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+[Açık Döngü](#KeyAapsFeatures-OpenLoop)'deyken, özellikle [ilk görevlerde](../SettingUpAaps/CompletingTheObjectives.md) ilerlerken, **AAPS**'in nasıl davrandığını öğrenirken ve **Profil**'inizi ayarlarken geniş aralıklı bir hedef kullanmak iyi bir seçenek olabilir.<br/> [Kapalı Döngü](#KeyAapsFeatures-ClosedLoop)'deyken (**[6. Görev](#objectives-objective6)**'den itibaren), **AAPS**'in **KŞ** dalgalanmalarına hızla tepki vermesini sağlamak için, günün her saati için tek bir hedefiniz olana kadar aralığı daraltmanız önerilir (_Düşük_ hedef = _Yüksek_ hedef).
 
 (your-aaps-profile-basal-rates)=
 
-## Basal rates
+## Bazal oranlar
 
 ### Description
 
-Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
+Bazal insülin oranınız (Ünite/saat) arka plan insülinini sağlar ve yemek veya egzersiz olmadığında glikoz düzeylerinizi sabit tutar.
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+İnsülin pompası, karaciğerin çok fazla glikoz salmasını önlemek ve glikozu vücut hücrelerine taşımak için birkaç dakikada bir az miktarda hızlı etkili insülin verir. Bazal insülin, diyetinize bağlı olarak genellikle toplam günlük dozunuzun (TGD) %40 - 50'sini oluşturur ve genellikle bir sirkadiyen ritim izler; 24 saat içinde insülin ihtiyacında bir tepe ve bir çukur vardır. Daha fazla bilgi için Gary Scheiner'ın [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) kitabının 6. bölümü çok faydalıdır.
 
-Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimize your ISF and ICR.
+Çoğu tip 1 diyabet eğitmeni (ve tip 1 diyabetli kişiler!), İDF ve ICR'nizi iyileştirmeye çalışmadan önce bazal oranlarınızı doğru ayarlamanız gerektiği konusunda hemfikirdir.
 
 ### Impact
 
-Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
+Doğru bazal oranlar, aralık içinde uyanmanızı ve öğünleri atlamanızı ya da günün daha erken veya geç saatlerinde yemenizi, yükselme veya düşme olmadan mümkün kılar.
 
-Çok yüksek bazal oran, düşük KŞ'lere yol açabilir. And vice versa.
+Çok yüksek bazal oran, düşük KŞ'lere yol açabilir. Tersi de geçerlidir.
 
-**AAPS** ‘baselines’ against the default basal rate. Bazal oran çok yüksekse, bir 'sıfır geçici' (bazal hızı AAPS ile geçici olarak kapatır), olması gerekenden daha yüksek bir negatif AİNS (metabolizmada aktif insülin) ile sonuçlanır. This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
+**AAPS**, varsayılan bazal oranı temel çizgi olarak alır. Bazal oran çok yüksekse, 'sıfır geçici bazal' olması gerekenden daha büyük bir negatif AİNS olarak sayılır. Bu, **AAPS**'in sonunda AİNS'i sıfıra getirmek için gerekenden daha fazla ek düzeltme yapmasına yol açar.
 
-So, a basal rate too high will create low **BGs** both with the default rate, but also some hours hence as **AAPS** corrects to target.
+Yani çok yüksek bir bazal oran, hem varsayılan oranla hem de birkaç saat sonra **AAPS** hedefe doğru düzeltme yaparken düşük **KŞ** değerlerine neden olur.
 
-Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+Tersine, çok düşük bir bazal oran yüksek KŞ değerlerine ve değerlerin hedefe indirilememesine yol açabilir.
 
-### How to set it
+### Nasıl ayarlanır
 
-The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
+**Aşağıdaki şekil**, bazal oranların bir **AAPS** profilinde nasıl ayarlanabileceğine dair bir örnek gösterir.
 
-![Basal rates](../images/Profile_BasalRates.png)
+![Bazal oranlar](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
+Bazal oranlarınızı doğru ayarlamak deneme yanılma ile yapılır ve diyabet ekibinize danışılarak yapılmalıdır.
 
-There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast over 3 different days for a period of 8 hours.
+Genellikle 24 saatlik bir süre içinde <u>aralıklı</u> açlık sırasında bazal oranlarınızı ve insülin ihtiyacınızı gözlemlemeye dayanan bazal test yöntemleri vardır. Bazal oranlarınızı günün tamamı için test etmeniz gerekse de, 24 saat boyunca aralıksız aç kalmanız önerilmez. Bunun nedeni, vücudun bunu dengelemek için hormonlar gibi mekanizmaları devreye sokmasıdır. Önerilen yöntemlerden biri, 3 farklı günde 8 saatlik bir süre boyunca aç kalmaktır.
 
-The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
+Önerilen yöntem döngüyü askıya almaktır (güvenlik için, düşükleri önlemek amacıyla AAPS'i [**LGS**](#KeyAapsFeatures-LGS) moduna alabilirsiniz; [6. görev](#objectives-objective6) için yapıldığı gibi); bu durumda varsayılan arka plan bazal oranınıza geri dönülür. **KŞ**'nizin nasıl değiştiğini gözlemleyin: düşüyorsa bazal oran çok yüksektir. Tersi de geçerlidir.<br/> Başka bir yöntem (daha zor olabilir) döngüyü çalışır durumda tutmak ve **AİNS**'in nasıl değiştiğini izlemektir. **AİNS** negatifse bazal oranınız çok yüksektir. Tersi de geçerlidir. Bu yöntemin **KŞ**'yi düzeltmek için **İDF**'ye dayandığını unutmayın; bu yüzden başarılı olması için diğer değişkenlerin de makul ölçüde doğru ayarlanmış olması gerekir.<br/> Bazal oranlarınızı ayarlamanın bir başka yolu, tüm AKRB tükendikten sonra gece boyunca döngünün ne yaptığını izlemektir. Bu yöntem özellikle çocuklar için, aç kalmanın zor olduğu veya insülin ihtiyacının sık değiştiği durumlarda faydalıdır. [Tidepool'dan Dr. Saleh Adi](https://www.youtube.com/watch?v=-fpWnGRhLSo), bazal oranlarınızı iyileştirmek için gece KŞ çizgilerinin nasıl analiz edileceğine dair faydalı yollar anlatıyor.
 
-See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, analyzing patterns in closed loop.
+Kapalı döngüdeki düzenleri analiz ederek bazal profilinizde nasıl ince ayar yapacağınızı [burada](../GettingHelp/ProfileTuning.md) görebilirsiniz.
 
-When taking action on the result of your basal testing, changes in the **Profile** should be done 1 to 2 hours (depends on your insulin type) before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
+Bazal testinizin sonucuna göre işlem yaparken, **Profil**'deki değişiklikler yükselişten/düşüşten 1 ila 2 saat önce (insülin tipinize bağlı olarak) yapılmalıdır. **Bazal oranlar** ayarlarınızdan emin olana kadar testi gerektiği kadar tekrarlayın.
 
 (your-aaps-profile-basal-not-compatible)=
-#### Message: "Basal rate is not compatible with the current pump"
+#### Mesaj: "Bazal oran mevcut pompa ile uyumlu değildir"
 
-Each pump has limits: a lowest and a highest basal rate it can deliver and, for some pumps (for example Dana, Accu-Chek Combo, Medtronic and Diaconn G8), basal rates that can only change on the full hour. **AAPS** checks your profile against the pump you use, **after** applying the percentage you choose.
+Her pompanın sınırları vardır: verebileceği en düşük ve en yüksek bazal oran ve bazı pompalarda (örneğin Dana, Accu-Chek Combo, Medtronic ve Diaconn G8) yalnızca tam saatte değişebilen bazal oranlar. **AAPS**, seçtiğiniz yüzdeyi uyguladıktan **sonra** profilinizi kullandığınız pompaya göre kontrol eder.
 
-If a basal rate is outside these limits, the **Activate** screen shows this message and the **Activate** button stays grey:
+Bir bazal oran bu sınırların dışındaysa, **Etkinleştir** ekranı bu mesajı gösterir ve **Etkinleştir** düğmesi gri kalır:
 
-![Activate screen with the message "Basal rate is not compatible with the current pump"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
+!["Bazal oran mevcut pompa ile uyumlu değildir" mesajını gösteren Etkinleştir ekranı](../images/v4/Profiles/profile_activate_pump_incompatible.png)
 
-For example, with a basal rate of 0.10 U/h in the night and a profile percentage of 35 %, **AAPS** would have to deliver 0.035 U/h. This is less than a Dana pump can deliver (0.04 U/h).
+Örneğin gece 0,10 Ü/sa bazal oran ve %35 profil yüzdesi ile **AAPS**'in 0,035 Ü/sa vermesi gerekir. Bu, bir Dana pompasının verebileceğinden (0,04 Ü/sa) daha azdır.
 
-To solve it, either:
+Bunu çözmek için şunlardan birini yapın:
 
-* choose another percentage: a **higher** one if a basal rate becomes too low, a **lower** one if a basal rate becomes too high, or
-* [edit the profile](#your-aaps-profile-create-and-edit-profiles) and change the basal rate.
+* başka bir yüzde seçin: bir bazal oran çok düşük oluyorsa **daha yüksek** bir yüzde, bir bazal oran çok yüksek oluyorsa **daha düşük** bir yüzde, veya
+* [profili düzenleyin](#your-aaps-profile-create-and-edit-profiles) ve bazal oranı değiştirin.
 
-The profile editor only lets you start basal rates on a full hour. A basal rate starting at e.g. 06:30 can only come from an older profile, for example after you change to a pump that does not support it.
+Profil düzenleyicisi, bazal oranları yalnızca tam saatte başlatmanıza izin verir. Örneğin 06:30'da başlayan bir bazal oran yalnızca eski bir profilden gelebilir; örneğin bunu desteklemeyen bir pompaya geçtikten sonra.
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## İnsülin duyarlılık faktörü (İDF)
 
 ### Description
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
+İnsülin duyarlılık faktörü (bazen düzeltme faktörü de denir), 1 ünite insülinin kan şekeri düzeyinizi ne kadar düşüreceğinin ölçüsüdür.
 
-**In mg/dL units:** If you have an **ISF** of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
+**mg/dL biriminde:** **İDF**'niz 40 ise, her ünite insülin kan şekerinizi yaklaşık 40 mg/dL düşürür (örneğin kan şekeriniz 140 mg/dL'den 100 mg/dL'ye düşer).
 
-**In mmol/L units:** If you have an **ISF** of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
+**mmol/L biriminde:** **İDF**'niz 1,5 ise, her ünite insülin kan şekerinizi yaklaşık 1,5 mmol/L düşürür (örneğin 8 mmol/L'den 6,5 mmol/L'ye).
 
-From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dL) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+Bu örneklerden görebileceğiniz gibi, **İDF** değeri ne kadar _küçükse_, insüline o kadar az duyarlısınız. Yani İDF'nizi 40'tan 35'e (mg/dL) veya 1,5'ten 1,3'e (mmol/L) düşürürseniz, buna genellikle **İDF**'nizi güçlendirmek denir. Tersine, **İDF** değerini 40'tan 45'e (mg/dL) veya 1,5'ten 1,8'e (mmol/L) artırmak **İDF**'nizi zayıflatmaktır.
 
 ### Impact
 
-A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
+**Daha düşük / daha güçlü bir İDF** (örneğin 50 yerine 40), insülinin ünite başına **KŞ**'nizi daha az düşürdüğü anlamına gelir. This leads to a more aggressive / stronger correction from the loop with **more insulin**. **İDF**'niz çok güçlüyse (küçük değer), bu düşük **KŞ**'ye yol açabilir.
 
-A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
+**Daha yüksek / daha zayıf bir İDF** (örneğin 35 yerine 45), insülinin ünite başına **KŞ**'nizi daha fazla düşürdüğü anlamına gelir. This leads to a less aggressive / weaker correction from the loop with **less insulin**. **İDF**'niz çok zayıfsa (büyük değer), bu yüksek **KŞ**'ye yol açabilir.
 
-**Example:**
-* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
-* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
-* If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
-* If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 units of insulin
+**Örnek:**
+* **KŞ** 190 mg/dL (10,5 mmol/L) ve hedef 100 mg/dL (5,6 mmol/L).
+* Yani `190 - 100 = 90 mg/dL` veya `10.5 - 5.6 = 4.9 mmol/L` kadar bir düzeltme istiyorsunuz
+* `ISF = 30` -> `90 / 30 = 3` veya `ISF = 1.63` -> `4.9 / 1.63 = 3` ise: 3 ünite insülin
+* `ISF = 45` -> `90 / 45 = 2` veya `ISF = 2.45` -> `4.9 / 2.45 = 2` ise: 2 ünite insülin
 
-An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
+Çok düşük (ve bu yüzden daha agresif, nadir olmayan) bir **İDF** 'aşırı düzeltmelere' yol açabilir, çünkü **AAPS** kullanıcının yüksek bir **KŞ**'yi düzeltmek için gerçekte gerekenden daha fazla insüline ihtiyacı olduğunu hesaplar. Bu, aşağıdaki resimde görüldüğü gibi 'hız treni' şeklinde KŞ düzeylerine yol açabilir (özellikle aç karnına). Bu durumda **AAPS**'i daha az agresif yapmak için **İDF** değeri artırılmalıdır. Böylece **AAPS** daha küçük düzeltme dozları verir ve yüksek bir **KŞ**'yi aşırı düzelterek düşük **KŞ**'ye neden olmaktan kaçınır.
 
 ![İDF çok düşük](../images/isf.jpg)
 
-Conversely, an **ISF** set too high can result in under-corrections, meaning your **BG** remains above target – particularly noticeable overnight.
+Tersine, çok yüksek ayarlanmış bir **İDF** yetersiz düzeltmelere yol açabilir; yani **KŞ**'niz hedefin üzerinde kalır – bu özellikle gece belirgindir.
 
-### How to set it
+### Nasıl ayarlanır
 
-See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
+İDF değerlerinin bir **AAPS** profilinde nasıl ayarlanabileceğine dair bir örnek için **aşağıdaki şekle** bakın.
 
-![Profile ISF](../images/Profile_ISF.png)
+![Profil İDF](../images/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+Gündüz İDF'nizi belirlemek için temel bir başlangıç noktası, onu 1.700 (94) kuralını kullanarak toplam günlük dozunuza (TGD) dayandırmaktır. Daha fazla bilgi Gary Scheiner'ın [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) kitabının 7. bölümünde verilmiştir.
 
-| 1700 (if measuring in mg/dL) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dL) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                 |
+| 1700 (mg/dL ile ölçüyorsanız) veya 94 (mmol/L) / GTD = yaklaşık İDF.<br/><br/>Örnek: GTD = 40 Ü<br/>Yaklaşık İDF (mg/dL) = 1700/40 = 43<br/>Yaklaşık İDF (mmol/L) = 94/40 = 2,4 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                         |
 
-Assuming your basal levels are correct, you can test this by suspending the loop, checking **IOB** is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+Bazal düzeylerinizin doğru olduğunu varsayarak bunu şöyle test edebilirsiniz: döngüyü askıya alın, **AİNS**'in sıfır olduğunu kontrol edin ve sabit bir 'yüksek' düzeye ulaşmak için birkaç glikoz tableti alın.
 
-Ardından, hedef KŞ'nize ulaşmak için tahmini miktarda insülin (mevcut 1/İDF'ine göre) alın.
+Ardından, hedef KŞ'nize ulaşmak için tahmini miktarda insülin (mevcut 1/İDF değerine göre) alın.
 
-Bu genellikle çok düşük ayarlandığından dikkatli olun. Çok düşük ayarlamak, 1 Ü insülininin, KŞ'ni beklenenden daha hızlı düşüreceği anlamına gelir.
+Bu genellikle çok düşük ayarlandığından dikkatli olun. Çok düşük olması, 1 Ü insülinin KŞ'yi beklenenden daha hızlı düşüreceği anlamına gelir.
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## İnsülin karbonhidrat oranı (IC)
 
 ### Description
 
-The **ICR** is a measure of how many grams of carbohydrate are covered by one unit of insulin.
+**ICR**, bir ünite insülinin kaç gram karbonhidratı karşıladığının ölçüsüdür.
 
-Some people also use **I:C** as an abbreviation instead of **ICR**, or talk about carb ratio : **CR**.
+Bazı kişiler **ICR** yerine kısaltma olarak **I:C** kullanır veya karbonhidrat oranından söz eder: **CR**.
 
-For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
+Örneğin 1'e 10 (1:10) insülin-karbonhidrat oranı, yenen her 10 gram karbonhidrat için 1 Ü insülin aldığınız anlamına gelir. 25 g karbonhidratlık bir öğün için 2,5 Ü insülin gerekir.
 
-If your **ICR** is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+**ICR**'niz daha zayıfsa (daha yüksek değer), örneğin 1:20, 10 g karbonhidratı karşılamak için yalnızca 0,5 Ü insüline ihtiyacınız olur. 25 g karbonhidratlık bir öğün için 25/20 = 1,25 Ü insülin gerekir.
 
-It is common to have different **ICR** at different times of day due to hormone levels and physical activity. Many people find they have their lowest/strongest **ICR** around breakfast time because they tend to be more insulin resistant. So, for example, one adult user's **ICR** could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller **ICR** then.
+Hormon düzeyleri ve fiziksel aktivite nedeniyle günün farklı saatlerinde farklı **ICR** değerlerine sahip olmak yaygındır. Birçok kişi en düşük/en güçlü **ICR** değerinin kahvaltı saatinde olduğunu görür, çünkü bu saatte insüline daha dirençli olma eğilimindedirler. Örneğin yetişkin bir kullanıcının **ICR** değeri kahvaltı için 1:8, öğle yemeği için 1:10 ve akşam yemeği için 1:10 olabilir; ancak bu düzenler herkes için geçerli değildir ve bazı kişiler akşam yemeğinde insüline daha dirençlidir ve o saatte daha güçlü/daha küçük bir **ICR** gerektirir.
 
 > **NOT:**
 > 
 > Bazı Avrupa ülkelerinde, gıda için ne kadar insüline ihtiyaç olduğunun belirlenmesi için dilim ekmek birimi kullanılmıştır. Başlangıçta 1 dilim ekmek 12 gr karbonhidrata eşitken, bazıları daha sonra 10 gr karbonhidrata dönüştürdü.
 > 
-> Bu modelde karbonhidrat miktarı sabit ve insülin miktarı değişkendi. ("Bir dilim ekmeğin üstesinden gelebilmek için ne kadar insülin gerekir?")
+> Bu modelde karbonhidrat miktarı sabit ve insülin miktarı değişkendi. ("Bir dilim ekmek birimini karşılamak için ne kadar insülin gerekir?")
 > 
-> When using **ICR** the amount of insulin is fixed and the amount of carbs is variable. ("Bir ünite insülin kaç gram karbonhidratı karşılayabilir?")
+> **ICR** kullanıldığında insülin miktarı sabit, karbonhidrat miktarı değişkendir. ("Bir ünite insülin kaç gram karbonhidratı karşılayabilir?")
 > 
-> Example:
+> Örnek:
 > 
-> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> Dilim ekmek birimi faktörü (BU = 12 g karbonhidrat): 2,4 Ü/BU -> Bir dilim ekmek birimi yediğinizde 2,4 ünite insüline ihtiyacınız vardır.
 > 
-> Corresponding **ICR**: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
+> Karşılık gelen **ICR**: 12 g / 2,4 Ü = 5,0 g/Ü -> 5,0 g karbonhidrat bir ünite insülinle karşılanabilir.
 > 
-> BU factor 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
+> BU faktörü 2,4 Ü / 12 g   ===>   IC = 12 g / 2,4 Ü = 5,0 g/Ü
 > 
-> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Dönüşüm tabloları çevrimiçi olarak mevcuttur, örneğin [buradan](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf) ulaşabilirsiniz.
 
 ### Impact
 
-A **lower / stronger ICR** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. 'Daha agresif' olarak da adlandırılabilir. If your IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
+**Daha düşük / daha güçlü bir ICR**, ünite başına daha az yiyecek demektir; yani sabit bir karbonhidrat miktarı için daha fazla insülin alırsınız. 'Daha agresif' olarak da adlandırılabilir. IC'niz çok güçlüyse, çok fazla insülin alıyorsunuz demektir; bu düşük **KŞ** değerlerine yol açabilir.
 
-A **higher / weaker ICR** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. "Daha az agresif" olarak da adlandırılabilir. If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
+**Daha yüksek / daha zayıf bir ICR** = ünite başına daha fazla yiyecek; yani sabit bir karbonhidrat miktarı için daha az insülin alırsınız. "Daha az agresif" olarak da adlandırılabilir. IC'niz çok zayıfsa, ihtiyacınızdan daha az insülin alıyorsunuz demektir; bu yüksek **KŞ** değerlerine yol açabilir.
 
-### How to set it
+### Nasıl ayarlanır
 
-The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+**Aşağıdaki şekil**, bir kullanıcının **ICR** değerinin bir örneğini ve bunun bir **AAPS Profili**'nde nasıl ayarlanabileceğini gösterir. Bu değerleri girerken oranın son kısmını gireriz; yani 1:3,5'lik bir karbonhidrat insülin oranı yalnızca “3,5” olarak girilir.
 
-![Profile ICR](../images/Profile_ICR.png)
+![Profil ICR](../images/Profile_ICR.png)
 
-If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are your **ICR** is too weak (_i.e._ the number is too high and should be gradually lowered). Conversely, if your **BG** is lower than before food, **ICR** is too strong (_i.e._ the number is too small and should be gradually increased).
+Bir öğün sindirildikten ve **AİNS** sıfıra döndükten sonra **KŞ**'niz yemekten öncekinden yüksek kalıyorsa, **ICR**'niz büyük olasılıkla çok zayıftır (_yani_ sayı çok yüksektir ve yavaş yavaş düşürülmelidir). Tersine, **KŞ**'niz yemekten öncekinden düşükse **ICR** çok güçlüdür (_yani_ sayı çok küçüktür ve yavaş yavaş artırılmalıdır).
 
-Assuming your basal rates are correct, you can test by checking if **IOB** is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food you normally eat at that time of day and count its carbs precisely.
+Bazal oranlarınızın doğru olduğunu varsayarak şöyle test edebilirsiniz: **AİNS**'in sıfır olduğunu ve hedef aralıkta olduğunuzu kontrol edin, karbonhidrat miktarı tam olarak bilinen bir yiyecek yiyin ve mevcut karbonhidrat insülin oranına göre tahmini miktarda insülin alın. En iyisi, günün o saatinde normalde yediğiniz yiyecekleri yemek ve karbonhidratlarını tam olarak saymaktır.
 
-## Common questions related to the Profile
+## Profille ilgili sık sorulan sorular
 
 ```{contents} Common questions related to the Profile
 :depth: 1
 :local: true
 ```
 
-### About the importance of getting your profile right
+### Profilinizi doğru ayarlamanın önemi
 
-**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+**Profil ayarlarımı neden doğru yapmaya çalışmalıyım? Döngü bunu kendi başına halledemez mi?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimize poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+Hibrit kapalı döngü, yanlış **Profil** değerlerinden kaynaklanan kötü glisemik kontrolü en aza indirmek için insülin dağıtımında ayarlamalar yapmayı _deneyebilir_. Bunu örneğin, hipoya gidiyorsanız insülin iletimini durdurarak yapabilir. Ancak **Profil** ayarlarınız vücudunuzun ihtiyacına zaten olabildiğince yakınsa çok daha iyi bir glisemik kontrol elde edebilirsiniz. Bu, **AAPS**'in açık döngüden hibrit kapalı döngüye adım adım geçmek için aşamalı görevler kullanmasının nedenlerinden biridir. Ayrıca döngüyü açmanız gereken zamanlar olacaktır (sensör ısınması, sensör arızası _vb._), bazen gecenin ortasında; bu durumlar için ayarlarınızın doğru olmasını isteyeceksiniz.
 
-If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (**BR**), insulin sensitivity factors (**ISF**) and insulin-to-carb ratios (**ICR**).
+**AAPS**'e başka bir açık veya kapalı döngü pompa sisteminden geçiyorsanız, bazal oranlar (**BR**), insülin duyarlılık faktörleri (**İDF**) ve karbonhidrat insülin oranları (**ICR**) için hangi değerleri kullanacağınız hakkında zaten makul bir fikriniz olacaktır.
 
-If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+İğneden (MDI) **AAPS**'e geçiyorsanız, önce MDI'dan pompaya geçişin nasıl yapılacağını okumanız ve geçişi diyabet ekibinize danışarak dikkatle planlayıp yapmanız iyi bir fikirdir. John Walsh ve Ruth Roberts'ın ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) ve Gary Scheiner'ın [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) kitapları çok faydalıdır.
 
 ### What causes high postprandial peaks in closed loop?
-Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. If it is correct and your **BG** is falling to reach your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/> If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **ICR** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your **ICR** and an appropriate pre-bolus time with your endocrinologist.
+Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. Doğruysa ve karbonhidratlar tamamen emildikten sonra **KŞ**'niz hedefinize ulaşmak için düşüyorsa, öğünden bir süre önce **AAPS**'te 'Yakında Yenecek' geçici hedefi ayarlamayı deneyin veya endokrinoloğunuzla uygun bir ön bolus zamanı üzerine düşünün. <br/> Öğünden sonra **KŞ**'niz çok yüksekse ve karbonhidratlar tamamen emildikten sonra da çok yüksek kalıyorsa, endokrinoloğunuzla birlikte **ICR**'nizi düşürmeyi düşünün. **AKRB** varken **KŞ**'niz çok yüksek, karbonhidratlar tamamen emildikten sonra ise çok düşükse, endokrinoloğunuzla birlikte **ICR**'nizi artırmayı ve uygun bir ön bolus zamanını düşünün.
 
-### I'm stuck high and the loop does not bring me down
-The possible reasons for **AAPS** not giving enough insulin are:
-* **ISF** is not strong enough
-* Basal rate might not be strong enough
-* A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
-* Automation has been set up and has overridden **AAPS**.
+### KŞ'm yüksekte kalıyor ve döngü onu düşürmüyor
+**AAPS**'in yeterli insülin vermemesinin olası nedenleri şunlardır:
+* **İDF** yeterince güçlü değil
+* Bazal oran yeterince güçlü olmayabilir
+* **maxIOB** gibi bir güvenlik ayarı devreye girmiş olabilir. Veya ayarlarınıza bağlı olarak **SMB** şu anda devre dışıdır.
+* Bir otomasyon kurulmuş ve **AAPS**'i geçersiz kılmıştır.
 
-See also [Tweaking the AAPS Profile](../GettingHelp/ProfileTuning.md).
+Ayrıca bkz. [AAPS profilinde ince ayar](../GettingHelp/ProfileTuning.md).
 
-### I have negative IOB, is this an issue ?
-Negative **IOB** means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the **BG** starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
+### AİNS'im negatif, bu bir sorun mu?
+Negatif **AİNS**, vücudunuzdaki mutlak insülin miktarının (bazal + bolus) bazalden daha az olduğu anlamına gelir. Bu, **KŞ** yükselmeye başlar başlamaz **AAPS**'in daha fazla insülin göndermesine neden olur, çünkü insülinin eksik olduğunu düşünür; bu da daha sonra düşük **KŞ**'ye yol açabilir.
 
-Here are some reasons why you may have negative IOB, and what action to take:
-* a too strong basal: tweak your **Profile**
-* too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
-* DIA set too short on your insulin type, resulting in insulin stacking: tweak it in [Manage → Insulin settings](#Config-Builder-insulin-dia)
-* physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
+Negatif AİNS'inizin olmasının bazı nedenleri ve ne yapmanız gerektiği:
+* çok güçlü bir bazal: **Profil**'inizde ince ayar yapın
+* önceki öğünde çok fazla bolus: **Profil**'inizde ince ayar yapın veya bolusu doğru zamanda yapıp yapmadığınızı kontrol edin.
+* İnsülin tipiniz için İES çok kısa ayarlanmış ve bu insülin birikmesine yol açıyor: [Yönet → İnsülin ayarları](#Config-Builder-insulin-dia) bölümünde ince ayar yapın
+* fiziksel aktivite: bir dahaki sefere, artan duyarlılığı hesaba katmak için aktivite sırasında daha düşük bir [Profil yüzdesi](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) kullanmayı düşünün.
 
-## Manage your Profiles
+## Profillerinizi yönetin
 
 ```{contents} Operations that you can perform on your **Profiles** in **AAPS**
 :depth: 1
 :local: true
 ```
 (your-aaps-profile-create-and-edit-profiles)=
-### Create and edit Profiles
+### Profil oluşturma ve düzenleme
 
-In **AAPS** v4 your profiles live on the **Manage** screen (bottom navigation) → **Profile**, shown as a swipeable card carousel with an action bar (**➕ Add**, **✏️ Edit**, **⧉ Clone**, **🗑️ Delete**, **▶ Activate**). For managing and activating a profile, see [Managing and activating profiles](#ProfileSwitch-manage-v4). Coming from **AAPS** v3, where profiles had their own tab? See [What changed in AAPS v4](#v4changes-manage).
+**AAPS** v4'te profilleriniz **Yönet** ekranında (alt gezinme çubuğu) → **Profil** altında bulunur; bir eylem çubuğuna (**➕ Ekle**, **✏️ Düzenle**, **⧉ Klon**, **🗑️ Sil**, **▶ Etkinleştir**) sahip, kaydırılabilen bir kart karuseli olarak gösterilir. Bir profili yönetmek ve etkinleştirmek için bkz. [Profilleri yönetme ve etkinleştirme](#ProfileSwitch-manage-v4). Profillerin kendi sekmesi olduğu **AAPS** v3'ten mi geliyorsunuz? Bkz. [AAPS v4'te neler değişti](#v4changes-manage).
 
-Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**, then fill in the four schedules using the tabs:
+**✏️ Düzenle**'ye dokunmak düzenleyiciyi açar. Profil **adını** ve **birimlerini** ayarlayın, ardından sekmeleri kullanarak dört çizelgeyi doldurun:
 
-- **IC** — insulin-to-carb ratio (g/U)
-- **ISF** — insulin sensitivity factor
-- **BAS** — basal rates
-- **TARG** — target range
+- **IC** — karbonhidrat insülin oranı (g/Ü)
+- **İDF** — insülin duyarlılık faktörü
+- **BAZAL** — bazal oranlar
+- **HDF** — hedef aralık
 
-![The profile editor — IC / ISF / BAS / TARG tabs](../images/setup-wizard/Wizard-Profile-IC.png)
+![Profil düzenleyicisi — IC / İDF / BAZAL / HDF sekmeleri](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Each schedule is a list of **time blocks**: add a block, set its start time and value, then **Save**.
+Her çizelge bir **zaman blokları** listesidir: bir blok ekleyin, başlangıç saatini ve değerini ayarlayın, ardından **Kaydet**'e dokunun.
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**: the card of the profile in use is marked **ACTIVE**, but the card selected on screen may be another one.
+**Profil**'inizde herhangi bir değişiklik yaparsanız, doğru **Profil**'i düzenlediğinizden emin olun: kullanılan profilin kartı **AKTİF** olarak işaretlenir, ancak ekranda seçili kart başka bir kart olabilir.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
-### Build a Profile from scratch for a kid
+### Bir çocuk için sıfırdan profil oluşturma
 
-The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) may help you to create a profile for a child (up to 18 years).
+[Profil yardımcısı](#aaps-screens-profile-helper) (menü ☰ → **Profil yardımcısı**), bir çocuk (18 yaşına kadar) için profil oluşturmanıza yardımcı olabilir.
 
 **Önemli Not:**
 
@@ -294,62 +294,62 @@ Profil yardımcısı, 18 yaşına kadar olan çocuğunuzun ilk profilini bulmas�
 
 ![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
 
-1. Make sure you are on the **Profile 1** tab.
-2. In **Profile type**, make sure you have "Default profile" selected.
+1. **Profil 1** sekmesinde olduğunuzdan emin olun.
+2. **Profil tipi** alanında "Varsayılan profil" seçili olduğundan emin olun.
 3. Çocukların yaşını ve GTD (günlük toplam doz) **veya** ağırlığını girerek Varsayılan profili (hastane veri setine göre) ayarlayın.
-4. Change to the **Profile 2** tab.
-5. Press **Profile type** and select "DPV Default profile".
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
-7. Open the **Comparison** tab. Comparison of the two adjusted profiles will be displayed (see screenshot below).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
+4. **Profil 2** sekmesine geçin.
+5. **Profil tipi**'ne basın ve "DPV Varsayılan profil" seçin.
+6. Çocuğun yaşını, GTD'yi ve bazal yüzdesini girerek DPV Varsayılan profili (başka bir hastanenin veri setine göre) ayarlayın. DPV veri setinin yalnızca **bazal oranları** sağladığını unutmayın; bu yüzden bu profil için IC ve İDF sıfır olarak gösterilir.
+7. **Karşılaştırma** sekmesini açın. Ayarlanan iki profilin karşılaştırması görüntülenir (aşağıdaki ekran görüntüsüne bakın).
+8. Profilinizde bu önerilerden birine göre ince ayar yapmaya başlamak istiyorsanız, karşılaştırmanın altındaki **Klon** düğmesini kullanın.
 
 ![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
 
-### Switch Profile
+### Profil değiştirme
 
-See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Bkz. [Profil değişimi ve profil yüzdesi](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 (your-aaps-profile-clone-profile-switch)=
-### Clone a Profile switch to a new Profile
+### Bir Profil değişimini yeni bir Profile klonlama
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profil değişimi](../images/TreatmentsView4.png)
 
-The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **2**.
+[Tedavi geçmişi](#aaps-screens-treatments) tüm geçmiş **Profil değişimlerini** gösterir. **Profil değişimi** sekmesine gittiğinizde, yeni bir **Profil** oluşturmak için geçmiş bir **Profil değişimini** temel olarak kullanabilirsiniz. Bu durumda zaman kayması ve yüzde yeni yerel profile uygulanır. **2**. satırda gösterilen **Klon** düğmesini kullanın.
 
-You can now go to the [Profile screen](#your-aaps-profile-create-and-edit-profiles) (**Manage → Profile**) to edit the newly created Profile.
+Artık yeni oluşturulan Profili düzenlemek için [Profil ekranına](#your-aaps-profile-create-and-edit-profiles) (**Yönet → Profil**) gidebilirsiniz.
 
 (YourAapsProfile_Profile-backup)=
-### Profile backup
+### Profil yedeği
 
-Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
+Döngü sisteminizin temel ayarı olan **Profilleriniz** çok hassastır ve kesinlikle kaybetmek istemeyeceğiniz bir şeydir.
 
-* Your **Profiles** are stored in the **AAPS** database.
-* When **NSClientV3** is set up (see [Synchronization](#SetupWizard-synchronization-with-the-reporting-server-and-more)), your **Profiles** are also uploaded to Nightscout automatically.
-* They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
+* **Profilleriniz** **AAPS** veritabanında saklanır.
+* **NSClientV3** kurulduğunda (bkz. [Senkronizasyon](#SetupWizard-synchronization-with-the-reporting-server-and-more)), **Profilleriniz** otomatik olarak Nightscout'a da yüklenir.
+* Profiller [dışa aktarılan ayarların](../Maintenance/ExportImportSettings.md) da bir parçasıdır. So make sure to have a backup in a safe place.
 
-### Editing Profiles from Nightscout
+### Profilleri Nightscout'tan düzenleme
 
-If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The setting is called "**Receive profile store from NS**" and is part of the **Nightscout data acceptance** options (accepting data from Nightscout is turned off by default, see the [Client control step of the Setup Wizard](../SettingUpAaps/SetupWizard.md)); you can find it quickly with the **search bar** on the main screen. While client control is on, the setting is hidden and **AAPS** takes no profile changes from Nightscout ([hardened mode](#client-master-control-hardened-mode)); edit the profile on a paired client instead, or load it once with **Full sync**.
+Etkinleştirilmişse, doğrudan Nightscout'ta yapılan **Profil** değişiklikleri **AAPS**'e alınabilir. Bu ayarın adı "**NS'den profil deposunu al**" olup **Nightscout veri kabulü** seçeneklerinin bir parçasıdır (Nightscout'tan veri kabul etme varsayılan olarak kapalıdır, bkz. [Kurulum Sihirbazının İstemci kontrolü adımı](../SettingUpAaps/SetupWizard.md)); ana ekrandaki **arama çubuğu** ile bu ayarı hızlıca bulabilirsiniz. İstemci kontrolü açıkken bu ayar gizlidir ve **AAPS** Nightscout'tan hiçbir profil değişikliği almaz ([güçlendirilmiş mod](#client-master-control-hardened-mode)); bunun yerine profili eşleştirilmiş bir istemcide düzenleyin veya bir kez **Tam senkronizasyon** ile yükleyin.
 
-This can be helpful when about to make major changes to a more extensive **Profile**. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
+Bu, daha kapsamlı bir **Profil**'de büyük değişiklikler yapmak üzereyken faydalı olabilir. Profiller web arayüzü üzerinden daha kolay girilebilir, _örneğin_ verileri bir hesap tablosundan elle kopyalamak için.
 
-To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Ancak bunu yapmak için, Nightscout düzenleyicisinde birkaç profilden oluşan **veritabanı kaydının** tamamını klonlamak önemlidir (aşağıdaki ekran görüntüsündeki mavi ok). Yeni veritabanı kayıtları bu durumda güncel tarihi taşır. Kaydettikten sonra, değiştirilen/yeni **Profil** **AAPS**'te normal bir [Profil değişimi](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) ile etkinleştirilebilir.
 
 ![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
-### Compare two Profiles
+### İki Profili karşılaştırma
 
-You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+[Profil yardımcısını](#aaps-screens-profile-helper) (menü ☰ → **Profil yardımcısı**) iki farklı profili veya profil değişimini (daha önce bir [profil değişiminde](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) kullanılan profillerinizden birinin yüzdesi) karşılaştırmak için de kullanabilirsiniz.
 
-![Profile Helper 1](../images/ProfileHelper1.png)
+![Profil yardımcısı 1](../images/ProfileHelper1.png)
 
-1. Make sure you are on the **Profile 1** tab.
-2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
-3. Choose the **Profile** you want to compare from.
-4. Change to the **Profile 2** tab.
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
-6. Choose the **Profile Switch** you want to compare to.
-7. Open the **Comparison** tab. Comparison of the two profiles will be displayed (see screenshot below).
+1. **Profil 1** sekmesinde olduğunuzdan emin olun.
+2. **Profil tipi** alanında, kayıtlı tüm **Profiller** arasından seçim yapmak için "Kullanılabilir profil" seçin.
+3. Karşılaştırmak istediğiniz ilk **Profil**'i seçin.
+4. **Profil 2** sekmesine geçin.
+5. **Profil tipi** alanında, tüm **Profil değişimlerinizin** geçmişinden seçim yapmak için "Profil değişimi" seçin.
+6. Karşılaştırmak istediğiniz **Profil değişimi**'ni seçin.
+7. **Karşılaştırma** sekmesini açın. İki profilin karşılaştırması görüntülenir (aşağıdaki ekran görüntüsüne bakın).
 
-![Profile Helper 2](../images/ProfileHelper2.png)
+![Profil yardımcısı 2](../images/ProfileHelper2.png)
