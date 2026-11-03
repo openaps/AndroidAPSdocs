@@ -41,7 +41,7 @@ tocdepth: 1
 - [3.4](#version3400) Veröffentlichung und Dokumentation aktualisiert Roll-up (Einrichtungsasssistent, Computer Build-Versionen, Konfiguration)
 - Update der CGM-Liste. Dexcom G5, Tomato, Glimp entfernt.
 - [Oberfläche für Setzstellen-Wechsel](#Aapsscreens-site-rotation)
-- [Betriebsmodus](#AapsScreens-running-mode)
+- [AAPS-Modus](#AapsScreens-running-mode)
 - [Autotune](../AdvancedOptions/Autotune.md)
 
 ## Dezember 2025
