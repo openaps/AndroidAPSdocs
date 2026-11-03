@@ -1,9 +1,9 @@
-# State of translation for the app and the documentation
+# Starea traducerii pentru aplicație și documentație
 
 Starea este actualizată o dată pe oră și reflectă doar starea din Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
+Atenție: procentajul de corectare este întotdeauna mai mic sau egal cu procentajul de traducere, dar Crowdin îl afișează deasupra traducerilor.
 Este mai bine să privim doar la nivelul procentual al traducerilor pentru a vedea dacă mai este de lucru.
 ```
 
@@ -13,14 +13,14 @@ După traducerea Crowdin o sincronizare în Github este programată în fiecare 
 The acceptance of the PR is a manual task which will be done as fast as possible.
 ```
 
-## starea traducerii aplicației
+## Starea traducerii aplicației
 
 Starea traducerii **aplicației** per limbă (cod de țară, procentaj traducere, procentaj corectare).
 
-![starea traducerii aplicației](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![Starea traducerii aplicației](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## Stadiul traducerii documentației
+## Starea traducerii documentației
 
 Starea traducerii **documentației** per limbă (cod de țară, procentaj traducere, procentaj corectare).
 
-![Stadiul traducerii documentației](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![Starea traducerii documentației](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
