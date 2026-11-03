@@ -1,25 +1,25 @@
-# Search the documentation
+# 문서 검색
 
-The documentation contains a lot of information. If you are looking for a specific topic, term or setting, using the search feature is often faster than browsing through the menu.
+이 문서에는 많은 정보가 담겨 있습니다. 특정 주제, 용어 또는 설정을 찾는 경우 메뉴를 하나씩 살펴보는 것보다 검색 기능을 사용하는 것이 대개 더 빠릅니다.
 
-## How to search
+## 검색 방법
 
-The search box is located at the top of the navigation panel on the left side of the screen.
+검색 상자는 화면 왼쪽에 있는 탐색 패널의 맨 위에 있습니다.
 
 ```{note}
-On smaller screens (such as a phone) the navigation panel is hidden. Tap the menu (☰) icon in the top left corner to open it and reveal the search box.
+작은 화면(예: 휴대폰)에서는 탐색 패널이 숨겨져 있습니다. 왼쪽 위 모서리의 메뉴(☰) 아이콘을 누르면 탐색 패널이 열리고 검색 상자가 보입니다.
 ```
 
-1. Type one or more keywords into the search box.
-2. Press `Enter` or tap the search icon.
-3. A results page opens, listing every page where your keywords appear. Click a result to jump to the matching page.
+1. 검색 상자에 키워드를 하나 이상 입력하십시오.
+2. `Enter`를 누르거나 검색 아이콘을 누르십시오.
+3. 결과 페이지가 열리고 키워드가 나오는 모든 페이지가 표시됩니다. 결과를 클릭하면 해당 페이지로 이동합니다.
 
-## Tips for better results
+## 더 좋은 결과를 얻기 위한 팁
 
-- Use specific terms (for example `temp target` or `autosens`) rather than full sentences.
-- Searching with several keywords returns the pages containing those words. Start broad and add keywords to narrow the results.
-- The search only covers the language and version of the documentation you are currently reading. If you cannot find something, try switching to the English version, which is the most complete (see [Change language and version](./ChangeLanguageVersion.md)).
+- 전체 문장보다는 구체적인 용어(예: `temp target` 또는 `autosens`)를 사용하십시오.
+- 여러 키워드로 검색하면 그 단어들이 들어 있는 페이지가 표시됩니다. 처음에는 넓게 검색하고, 키워드를 추가하여 결과를 좁히십시오.
+- 검색은 지금 읽고 있는 문서의 언어와 버전만 대상으로 합니다. 찾는 내용이 없으면 가장 완전한 영어 버전으로 바꿔 보십시오([언어와 버전 변경](./ChangeLanguageVersion.md) 참조).
 
 ```{note}
-The search index is built automatically. Very recently added content may take some time to become searchable.
+검색 색인은 자동으로 만들어집니다. 아주 최근에 추가된 내용은 검색되기까지 시간이 걸릴 수 있습니다.
 ```
