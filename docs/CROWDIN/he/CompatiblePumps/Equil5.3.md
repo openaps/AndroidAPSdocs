@@ -9,123 +9,123 @@ These instructions are for configuring the Equil insulin pump.
 
 ## Pump capabilities with AAPS
 
-* Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights, and **Prime/Fill** and **Pump battery change** are not offered. Filling, priming and changing the battery are done in the pump wizards.
-* While the pump is suspended or stopped, **AAPS** records a 0 U/h temporary basal, so no basal insulin is counted in IOB.
-* DST and timezone changes must be handled manually.
+* משאבת פאץ' ללא צינורית שמתקשרת עם **AAPS** דרך ה-Bluetooth המובנה של הטלפון, ללא מכשיר תקשורת נוסף.
+* **AAPS** מתייחס ל-Equil כמשאבת פאץ' עם מכל של 200 U: המסך הראשי מציג את נורות המצב של משאבת פאץ', והאפשרויות **תיחול/מילוי** ו**החלפת סוללת משאבה** לא מוצעות. מילוי, תיחול והחלפת סוללה נעשים באשפי המשאבה.
+* כשהמשאבה מושהית או עצורה, **AAPS** רושם בזאלי זמני של 0 U/h, כך שאינסולין בזאלי לא נספר ב-IOB.
+* את המעבר לשעון קיץ/חורף ואת שינויי אזור הזמן יש לבצע ידנית.
 
 ## Hardware and software requirements
 * **Compatible Equil hardware**
 
-  Currently Equil 5.3 and 5.4 are supported.
+  כרגע נתמכות Equil 5.3 ו-5.4.
 
-* **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
+* **AAPS** שנבנה והותקן לפי ההוראות ב[בניית ה-APK](../SettingUpAaps/BuildingAaps.md)
 
 ## תצורה
 
 ### Select Equil pump
 
-Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
+יש לפתוח את **התפריט** (☰) בפינה העליונה של המסך, לבחור **[הגדרות תצורה](#Config-Builder-pump)**, ותחת **משאבה** לבחור **Equil**.
 
-Once it is selected, the **Equil** card shows two buttons, **Settings** and **Open plugin**:
+לאחר הבחירה, בכרטיס **Equil** מופיעים שני לחצנים, **הגדרות** ו**פתיחת תוסף**:
 
-![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
+![התוסף Equil נבחר בהגדרות תצורה > משאבה](../images/v4/Pumps/equil_enabled.png)
 
-**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+**פתיחת תוסף** (או **ניהול** ← **משאבה**) פותח את מסך המשאבה Equil. לפני צימוד משאבה, המסך נראה כך:
 
-![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
+![מסך המשאבה Equil לפני הצימוד](../images/v4/Pumps/equil_pump_screen.png)
 
 ### הגדרות
 
-Open the Equil settings with **Settings** on the **Equil** card, or with the gear icon in the top-right corner of the pump screen.
+אפשר לפתוח את הגדרות Equil עם **הגדרות** בכרטיס **Equil**, או עם סמל גלגל השיניים בפינה העליונה של מסך המשאבה.
 
-![Equil driver settings](../images/v4/Pumps/equil_settings.png)
+![הגדרות מנהל ההתקן Equil](../images/v4/Pumps/equil_settings.png)
 
-* **Low battery alarm**: warns you when the pump battery is low.
-* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
-* **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
-* **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
+* **התראת סוללה חלשה**: מזהירה כשסוללת המשאבה חלשה.
+* **התראת כמות אינסולין נמוכה**: מזהירה כשכמות האינסולין במכל נמוכה.
+* **אופן ההתראה**: איך המשאבה מתריעה: **השתק**, **רטט בלבד**, **צליל בלבד** או **צליל ורטט**.
+* **מהירות הזרקת הבולוס**: באיזו מהירות ניתן בולוס: **1.5 יח'/דקה (רגיל)**, **3 יח'/דקה**, **6 יח'/דקה** או **12 יח'/דקה**. בולוס מהיר יותר עלול לגרום ליותר התראות חסימה.
 
-![The Bolus speed choices in the Equil settings](../images/v4/Pumps/equil_bolus_speed.png)
+![האפשרויות של מהירות הזרקת הבולוס בהגדרות Equil](../images/v4/Pumps/equil_bolus_speed.png)
 
 ```{admonition} Max basal and max bolus on the patch
 :class: note
-The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [setting](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
+הפאץ' עצמו דוחה כל קצב בזאלי שגבוה מערך מרבי ש-**AAPS** מתכנת בו. **AAPS** לוקח את הגבוה מבין [ההגדרה](../SettingUpAaps/Preferences.md) **בזאלי מרבי** שלכם והקצב הבזאלי השעתי הגבוה ביותר ב**פרופיל**, כך שהפאץ' תמיד מקבל את הפרופיל ואת הבזאלים הזמניים שהלולאה מבקשת. **AAPS** שולח לפאץ' גם את הבולוס המרבי המותר שלכם.
 
-When you change your **max basal** or **max bolus**, **AAPS** sends the new values to the patch automatically. They are also sent with every profile switch. There is nothing to set on the patch itself.
+כשמשנים את **בזאלי מרבי** או **בולוס מרבי**, **AAPS** שולח את הערכים החדשים לפאץ' באופן אוטומטי. הם נשלחים גם בכל החלפת פרופיל. אין צורך להגדיר דבר בפאץ' עצמו.
 ```
 
-### Pair the pump
+### צימוד המשאבה
 
-On the pump screen, press **Pair**. A wizard guides you through each step. The row of dots at the top shows how far along you are.
+במסך המשאבה, יש ללחוץ על **צימוד**. אשף מדריך אתכם בכל שלב. שורת הנקודות בחלק העליון מראה כמה התקדמתם.
 
-If Android asks whether **AAPS** may find and connect to nearby devices, press **Allow**. **AAPS** needs this to find the pump.
+אם Android שואל אם **AAPS** רשאי למצוא מכשירים קרובים ולהתחבר אליהם, יש ללחוץ על **Allow** (אישור). **AAPS** צריך הרשאה זו כדי למצוא את המשאבה.
 
-![Android asking for permission to find nearby devices](../images/Equil/activate1.png)
+![Android מבקש הרשאה למצוא מכשירים קרובים](../images/Equil/activate1.png)
 
-The wizard has these steps. Press **Next** to move on, or **Cancel** to leave the wizard.
+אלה השלבים של האשף. יש ללחוץ על **הבא** כדי להמשיך, או על **ביטול** כדי לצאת מהאשף.
 
-1. **Profile required**: only shown if you have never activated a **Profile** in **AAPS**. Select the profile to use and press **Activate profile**.
-1. **Assemble pump**: put together the pump, the filled reservoir and the charged battery.
+1. **נדרש פרופיל**: מוצג רק אם מעולם לא הפעלתם **פרופיל** ב-**AAPS**. יש לבחור את הפרופיל לשימוש וללחוץ על **הפעלת פרופיל**.
+1. **הרכבת המשאבה**: להרכיב יחד את המשאבה, את המכל המלא ואת הסוללה הטעונה.
 
-   ![Assemble pump step](../images/Equil/activate2.png)
+   ![השלב הרכבת המשאבה](../images/Equil/activate2.png)
 
-1. **Find Pump**: **AAPS** scans for nearby Equil pumps. Select your pump from the list.
+1. **מציאת משאבה**: **AAPS** מחפש משאבות Equil בקרבת מקום. יש לבחור את המשאבה שלכם מהרשימה.
 
-   ![Find Pump step with an Equil pump in the list](../images/Equil/find_pump.png)
-1. **Pair device**: you can enter a pairing password in **Set pair password**. It must be 4 characters long, chosen from `ABCDEF0123456789`. Press **Pair**.
+   ![השלב מציאת משאבה עם משאבת Equil ברשימה](../images/Equil/find_pump.png)
+1. **צימוד משאבה**: אפשר להזין סיסמת צימוד ב**הגדרת סיסמת צימוד**. היא חייבת להיות באורך 4 תווים, מתוך `ABCDEF0123456789`. יש ללחוץ על **צימוד**.
 
-   ![Pair device step with the pairing password](../images/Equil/activate3.png)
+   ![השלב צימוד משאבה עם סיסמת הצימוד](../images/Equil/activate3.png)
 
-1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
-1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+1. **בחירת אינסולין**: מוצג רק אם הוגדר יותר מאינסולין אחד. יש לבחור את האינסולין שבמכל.
+1. **תיחול / מילוי**: המשאבה **לא** צריכה להיות על בסיס ההדבקה. יש ללחוץ על **תיחול/מילוי** ולתחל את המכל עד שמופיעה טיפת אינסולין בקצה המחט. יש ללחוץ על **הבא**.
 
-   ![Prime / Fill step](../images/Equil/prime_fill.png)
-1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
-1. **Attach pump**: attach the pump to its base plate.
+   ![השלב תיחול / מילוי](../images/Equil/prime_fill.png)
+1. **סבב אתרי עירוי**: מוצג רק אם **ניהול סבב אתרי משאבה** מופעל בהגדרות סבב האתרים. יש להקיש על המקום שבו תחברו את המשאבה, או ללחוץ על **דילוג**.
+1. **חיבור המשאבה**: לחבר את המשאבה לבסיס ההדבקה שלה.
 
-   ![Attach pump step](../images/Equil/attach_pump.png)
-1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+   ![השלב חיבור המשאבה](../images/Equil/attach_pump.png)
+1. **תיחול צינורית**: כשהמשאבה על בסיס ההדבקה, יש ללחוץ על **ניקוז אוויר** כדי להוציא אוויר מהצינורית. יש ללחוץ על **הבא**.
 
-   ![Prime cannula step with the Purge air button](../images/Equil/prime_cannula.png)
+   ![השלב תיחול צינורית עם הלחצן ניקוז אוויר](../images/Equil/prime_cannula.png)
 
-1. **Confirm**: put the pump on your body and press **Finish**.
+1. **אישור**: להדביק את המשאבה לגוף וללחוץ על **סיום**.
 
-   ![Confirm step with the Finish button](../images/Equil/confirm.png)
+   ![השלב אישור עם הלחצן סיום](../images/Equil/confirm.png)
 
 ```{warning}
-If you set your own pairing password (recommended for your safety), store it somewhere safe. The password is saved in the pump. The pump asks for it at every new pairing until you unpair it properly in **AAPS**. Until then, the pump also cannot be used with the original handheld controller (PDA).
+אם הגדרתם סיסמת צימוד משלכם (מומלץ לבטיחותכם), יש לשמור אותה במקום בטוח. הסיסמה נשמרת במשאבה. המשאבה מבקשת אותה בכל צימוד חדש, עד שמבטלים את הצימוד כראוי ב-**AAPS**. עד אז, אי אפשר גם להשתמש במשאבה עם השלט המקורי (PDA).
 ```
 
-### Pump screen after pairing
+### מסך המשאבה אחרי הצימוד
 
-Once the pump is paired, the pump screen shows these buttons:
+אחרי שהמשאבה מצומדת, מסך המשאבה מציג את הלחצנים האלה:
 
-* **Refresh**: reads the state and the history of the pump now.
-* **Suspend** / **Resume delivery**: stop or restart insulin delivery.
-* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir (and, if needed, a new battery), priming and attaching it again. The first step asks *Will you also put on a new infusion set (base plate and cannula)?*
-  * **Yes, new infusion set**: you choose the site, the cannula is primed, and **AAPS** records an insulin change and a cannula change.
-  * **No, only reservoir or battery**: the cannula is not primed and **AAPS** records only an insulin change.
+* **רענן**: קורא עכשיו את המצב ואת ההיסטוריה של המשאבה.
+* **השהיה** / **חידוש מתן אינסולין**: עצירה או חידוש של מתן האינסולין.
+* **החלפת מכל**: מדריך אתכם בניתוק המשאבה, בהרכבת מכל חדש (ואם צריך, סוללה חדשה), בתיחול ובחיבור מחדש. השלב הראשון שואל *האם תרכיבו גם סט אינפוזיה חדש (בסיס ופרפרית)?*
+  * **כן סט אינפוזיה חדש**: בוחרים את האתר, הצינורית מתוחלת, ו-**AAPS** רושם החלפת אינסולין והחלפת צינורית.
+  * **לא, רק מכל או סוללה**: הצינורית לא מתוחלת, ו-**AAPS** רושם רק החלפת אינסולין.
 
-  After a reservoir change the battery level shows **-** until **AAPS** reads it again from the pump.
+  אחרי החלפת מכל, רמת הסוללה מוצגת כ-**-** עד ש-**AAPS** קורא אותה שוב מהמשאבה.
 
-  ![The first step of Change reservoir asks about a new infusion set](../images/Equil/change_reservoir_question.png)
+  ![השלב הראשון של החלפת מכל שואל על סט אינפוזיה חדש](../images/Equil/change_reservoir_question.png)
 
-* **History**: shows the events recorded by the pump.
-* **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
+* **היסטוריה**: מציג את האירועים שהמשאבה רשמה.
+* **ביטול צימוד המשאבה**: מדריך אתכם בניתוק המשאבה ובביטול הצימוד שלה מ-**AAPS**. פעולה זו עוצרת את מתן האינסולין, מחזירה את בוכנת המשאבה לתחתית ומוחקת את הצימוד.
 
 ### Alarms
 
-* The low insulin alarm sounds once at each level (10 U, 5 U and 2 U) and when the reservoir is empty. The low battery alarm sounds once at 10% and once at 5%. Each level alarms only once until the next reservoir change.
-* Pump alarms and stops are also recorded as announcements in the treatments, at the time the pump logged them, so you can see later when and why the pump stopped.
-* If the reservoir runs empty during a bolus, **AAPS** records only the insulin given until then and tells you both amounts.
+* התראת האינסולין הנמוך נשמעת פעם אחת בכל רמה (10 U, 5 U ו-2 U) וכשהמכל ריק. התראת הסוללה החלשה נשמעת פעם אחת ב-10% ופעם אחת ב-5%. כל רמה מתריעה פעם אחת בלבד, עד החלפת המכל הבאה.
+* התראות ועצירות של המשאבה נרשמות גם כהודעות בטיפולים, בזמן שבו המשאבה רשמה אותן, כך שאפשר לראות אחר כך מתי ולמה המשאבה נעצרה.
+* אם המכל מתרוקן במהלך בולוס, **AAPS** רושם רק את האינסולין שניתן עד אז ומציג לכם את שתי הכמויות.
 
 ## Where to get help
 
-Development of the Equil driver is done by the community on a **volunteer** basis. Before requesting help, please:
+הפיתוח של מנהל ההתקן Equil נעשה על ידי הקהילה על בסיס **התנדבותי**. לפני שמבקשים עזרה, יש:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **לקרוא** את החלק הרלוונטי בתיעוד הזה כדי לוודא איך התכונה אמורה לעבוד.
+2. **לשאול** בערוץ *#AAPS* ב-[Discord](https://discord.gg/4fQUWHZ4Mw), או באחד [מערוצי הקהילה](../GettingHelp/WhereCanIGetHelp.md) האחרים.
+3. **לדווח על באג**: לחפש ב[דיווחים הקיימים](https://github.com/nightscout/AndroidAPS/issues); אם הבעיה לא מופיעה, לפתוח [דיווח חדש](https://github.com/nightscout/AndroidAPS/issues) ולצרף את [קובצי היומן](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+בבקשת עזרה, יש לציין את יצרן ודגם הטלפון, גרסת Android, גרסת **AAPS** ותיאור פשוט של הבעיה (מה השתנה, מתי זה עבד בפעם האחרונה).
