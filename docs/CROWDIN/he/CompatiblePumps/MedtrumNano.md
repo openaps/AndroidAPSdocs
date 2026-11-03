@@ -11,396 +11,396 @@ These instructions are for configuring the Medtrum insulin pump.
 ## Pump capabilities with AAPS
 * All loop functionality supported (SMB, TBR etc)
 * Automatic DST and timezone handling
-* Extended bolus is not supported by AAPS driver
+* בולוס ממושך אינו נתמך במנהל ההתקן של AAPS
 
 ## Hardware and software requirements
-* **Compatible Medtrum pumpbase and reservoir patches**
+* **בסיסי משאבה של Medtrum ופאצ'ים (מכלים) תואמים**
     - Currently supported:
-        - Medtrum TouchCare Nano 200U with pumpbase refs: **MD0201** and **MD8201**.
-        - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
+        - Medtrum TouchCare Nano 200U עם בסיסי משאבה מדגמים **MD0201** ו־**MD8201**.
+        - Medtrum TouchCare 300U עם בסיס משאבה מדגם **MD8301**.
         - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
+* **AAPS בנוי ומותקן** לפי ההוראות ב־[בניית ה־APK](../SettingUpAaps/BuildingAaps.md).
 * **טלפון Android תואם** עם חיבור בלוטות' (BLE)
     - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
 
 ## Before you begin
 
-**SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra patches, insulin, and pump control devices are must-haves).
+**בטיחות קודמת לכל** אין לבצע תהליך זה בסביבה שבה לא ניתן להתאושש משגיאה (חובה שיהיו פאצ'ים נוספים, אינסולין ומכשירים לשליטה במשאבה).
 
-**The PDM and Medtrum App will not work with a patch that is activated by AAPS.** Previously you may have used your PDM or Medtrum app to send commands to your pump. For security reasons you can only use the activated patch with the device or app that was used to activate it.
+**ה־PDM ואפליקציית Medtrum לא יעבדו עם פאץ' שהופעל באמצעות AAPS.** ייתכן שבעבר השתמשתם ב־PDM או באפליקציית Medtrum כדי לשלוח פקודות למשאבה. מטעמי אבטחה, ניתן להשתמש בפאץ' שהופעל רק עם המכשיר או האפליקציה שבאמצעותם הוא הופעל.
 
 *This does NOT mean that you should throw away your PDM. It is recommended to keep it somewhere safe as a backup in case of emergencies, for instance if your phone gets lost or AAPS is not working correctly.*
 
-**Your pump will not stop delivering insulin when it is not connected to AAPS** Default basal rates are programmed on the pump as defined in the current active profile. As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
+**Your pump will not stop delivering insulin when it is not connected to AAPS** Default basal rates are programmed on the pump as defined in the current active profile. As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. אם מסיבה כלשהי המשאבה אינה מקבלת פקודות חדשות (למשל, כי התקשורת אבדה עקב המרחק בין המשאבה לטלפון), היא תחזור לקצב הבזאלי המוגדר בה כברירת מחדל לאחר סיום הבזאלי הזמני.
 
-**The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. לדוגמה, אם יש מינון בזאלי של למשל 1.1 יחידות שמתחיל בשעה 09:30 ויש לו משך של שעתיים ומסתיים בשעה 11:30, זה לא יעבוד. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Medtrum pump hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
+**פרופיל AAPS אינו תומך במשבצות זמן של 30 דקות לקצב הבזאלי** אם AAPS חדש עבורכם ואתם מגדירים את פרופיל הקצב הבזאלי בפעם הראשונה, שימו לב: קצבים בזאליים שמתחילים בחצי שעה אינם נתמכים, ויש להתאים את פרופיל הקצב הבזאלי כך שכל מינון יתחיל בשעה עגולה. לדוגמה, אם יש קצב בזאלי של 1.1 יחידות שמתחיל בשעה 09:30, נמשך שעתיים ומסתיים בשעה 11:30, זה לא יעבוד. יהיה עליכם לשנות את טווח הזמן של קצב בזאלי זה, 1.1 יחידות, ל־9:00-11:00 או ל־10:00-12:00. אף שחומרת משאבת Medtrum עצמה תומכת במקטעים של 30 דקות בפרופיל הקצב הבזאלי, האלגוריתמים של AAPS אינם יכולים כרגע להתחשב בהם.
 
-**0U/h profile basal rates are NOT supported in AAPS** While the Medtrum pump does support a zero basal rate, AAPS uses multiples of the profile basal rate to determine automated treatment and therefore cannot function with a zero basal rate. The minimum profile basal rate is 0.05 U/h.
+**קצבים בזאליים בפרופיל של 0U/h אינם נתמכים ב־AAPS** אף שמשאבת Medtrum תומכת בקצב בזאלי אפס, AAPS משתמש בכפולות של הקצב הבזאלי שבפרופיל לקביעת הטיפול האוטומטי, ולכן אינו יכול לפעול עם קצב בזאלי אפס. הקצב הבזאלי המינימלי בפרופיל הוא 0.05 U/h.
 
-A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
+ניתן להשיג קצב בזאלי זמני אפס באמצעות הפונקציה "ניתוק המשאבה" או באמצעות שילוב של השבתת לולאה/בזאלי זמני או השהיית הלולאה/בזאלי זמני.
 
 ## תצורה
 
 ```{caution}
-When you activate a patch with **AAPS**, you **MUST** turn off every other device that can talk to the Medtrum pump base, for example an active PDM or the Medtrum app.
+כאשר מפעילים פאץ' עם **AAPS**, **חובה** לכבות כל מכשיר אחר שיכול לתקשר עם בסיס המשאבה של Medtrum, למשל PDM פעיל או אפליקציית Medtrum.
 ```
 
 ### Step 1: Select Medtrum pump
 
 #### Option 1: New installations
 
-If you are installing **AAPS** for the first time, the **Setup Wizard** guides you through the setup. Select **Medtrum** when you reach the **Pump** step.
+אם מתקינים את **AAPS** בפעם הראשונה, **אשף ההתקנה** מנחה אתכם לאורך ההגדרה. יש לבחור **Medtrum** כשמגיעים לשלב **משאבה**.
 
-If in doubt, you can also select **Virtual Pump** and select **Medtrum** later, after setting up **AAPS** (see option 2).
+אם אינכם בטוחים, אפשר גם לבחור **משאבה וירטואלית** ולבחור **Medtrum** מאוחר יותר, לאחר הגדרת **AAPS** (ראו אפשרות 2).
 
-![Setup Wizard pump step](../images/setup-wizard/Wizard-Pump.png)
+![שלב המשאבה באשף ההתקנה](../images/setup-wizard/Wizard-Pump.png)
 
-#### Option 2: The Configuration screen
+#### אפשרות 2: מסך הגדרות התצורה
 
-On an existing installation you can select the **Medtrum** pump in [Configuration > Pump](#Config-Builder-pump):
+בהתקנה קיימת ניתן לבחור את המשאבה **Medtrum** ב־[הגדרות תצורה > משאבה](#Config-Builder-pump):
 
-Open the top-left **menu** (☰), tap **Configuration** > **Pump**, and select the **Medtrum** card. Only one pump can be active at a time.
+יש לפתוח את **התפריט** (☰) בפינה העליונה של המסך, ללחוץ על **הגדרות תצורה** > **משאבה** ולבחור את הכרטיס **Medtrum**. רק משאבה אחת יכולה להיות פעילה בכל פעם.
 
-![Configuration > Pump with the Medtrum plugin](../images/v4/Configuration/configuration_pump_list_4.png)
+![הגדרות תצורה > משאבה עם התוסף Medtrum](../images/v4/Configuration/configuration_pump_list_4.png)
 
-Once it is selected, the **Medtrum** card shows two buttons, **Settings** and **Open plugin**:
+לאחר הבחירה, בכרטיס **Medtrum** מופיעים שני לחצנים: **הגדרות** ו־**פתיחת תוסף**:
 
-![The Medtrum plugin selected in Configuration > Pump](../images/v4/Pumps/medtrum_enabled.png)
+![התוסף Medtrum נבחר בהגדרות תצורה > משאבה](../images/v4/Pumps/medtrum_enabled.png)
 
-**Open plugin** (or **Manage → Pump**) opens the Medtrum pump screen. You use it to change patches and to see the pump status. Before a patch is activated it looks like this:
+**פתיחת תוסף** (או **ניהול ← משאבה**) פותח את מסך המשאבה של Medtrum. המסך משמש להחלפת פאצ'ים ולצפייה במצב המשאבה. לפני הפעלת פאץ' המסך נראה כך:
 
-![Medtrum pump screen before pairing](../images/v4/Pumps/medtrum_pump_screen.png)
+![מסך המשאבה של Medtrum לפני צימוד](../images/v4/Pumps/medtrum_pump_screen.png)
 
 (medtrum-step-2)=
 ### Step 2: Change Medtrum settings
 
-Tap **Settings** on the **Medtrum** card in **Configuration** > **Pump**. You can also tap the gear icon in the top-right corner of the Medtrum pump screen. This opens the **Medtrum pump settings**:
+יש ללחוץ על **הגדרות** בכרטיס **Medtrum** ב־**הגדרות תצורה** > **משאבה**. אפשר גם ללחוץ על סמל גלגל השיניים בפינה העליונה של מסך המשאבה של Medtrum. כך נפתחות **הגדרות משאבת Medtrum**:
 
-![Medtrum driver settings](../images/v4/Pumps/medtrum_settings.png)
+![הגדרות מנהל ההתקן של Medtrum](../images/v4/Pumps/medtrum_settings.png)
 
 ```{note}
-There is no **Serial Number** setting any more. **AAPS** finds your pump base with a Bluetooth scan the first time you activate a patch (see [Step 3](#medtrum-activate-patch)), and remembers its serial number. To use a different pump base, see [Unpair](#medtrum-unpair).
+אין יותר הגדרה של **מספר סידורי**. **AAPS** מוצא את בסיס המשאבה בסריקת Bluetooth בפעם הראשונה שמפעילים פאץ' (ראו [שלב 3](#medtrum-activate-patch)), וזוכר את המספר הסידורי שלו. כדי להשתמש בבסיס משאבה אחר, ראו [ביטול צימוד](#medtrum-unpair).
 ```
 
-#### Alarm Settings
+#### הגדרות התראה
 
-***Default: Beep.***
+***ברירת מחדל: צפצוף.***
 
-This setting changes the way that the pump alerts you when there is a warning or error.
+הגדרה זו משנה את האופן שבו המשאבה מתריעה כאשר יש אזהרה או שגיאה.
 
-- **Beep**: the patch beeps on alarms and warnings.
-- **Silent**: the patch does not alert you on alarms and warnings.
+- **צפצוף**: הפאץ' מצפצף בהתראות ובאזהרות.
+- **שקט**: הפאץ' אינו מתריע בהתראות ובאזהרות.
 
-Note: In silent mode **AAPS** still sounds the alarm, depending on your phone's volume settings. If you do not respond to the alarm, the patch eventually beeps.
+הערה: במצב שקט **AAPS** עדיין משמיע את ההתראה, בהתאם להגדרות עוצמת הקול של הטלפון. אם לא מגיבים להתראה, הפאץ' יצפצף בסופו של דבר.
 
 #### Notification on pump warning
 
 ***Default: Enabled.***
 
-This setting changes the way **AAPS** shows notifications for non-critical pump warnings. When enabled, a notification is shown on the phone when a pump warning occurs, including:
+הגדרה זו משנה את האופן שבו **AAPS** מציג הודעות על אזהרות משאבה שאינן קריטיות. כאשר ההגדרה מופעלת, מוצגת הודעה בטלפון כאשר מתרחשת אזהרת משאבה, כולל:
 - Low battery
-- Low reservoir (20 units)
-- Patch expires soon
+- מכל נמוך (20 יחידות)
+- הפאץ' יפוג בקרוב
 
-We recommend leaving this enabled when the pump alarms are set to **Silent**. In either case these warnings are also shown on the Medtrum pump screen under [Active alarms](#medtrum-active-alarms).
+מומלץ להשאיר הגדרה זו מופעלת כאשר התראות המשאבה מוגדרות ל**שקט**. בכל מקרה, אזהרות אלה מוצגות גם במסך המשאבה של Medtrum תחת [התראות פעילות](#medtrum-active-alarms).
 
 (medtrum-patch-expiration)=
-#### Patch Expiration
+#### תפוגת הפאץ'
 
 ***Default: Enabled.***
 
-This setting changes the behavior of the patch. When enabled, the patch expires after 3 days and gives an audible warning if you have sound enabled. After 3 days and 8 hours the patch stops working.
+הגדרה זו משנה את התנהגות הפאץ'. כאשר ההגדרה מופעלת, תוקף הפאץ' פג לאחר 3 ימים, והוא נותן אזהרה קולית אם הצליל מופעל. לאחר 3 ימים ו־8 שעות הפאץ' מפסיק לפעול.
 
-If this setting is disabled, the patch does not warn you before it stops. With recent pump base firmware, a patch runs for 5 days at most.
+אם הגדרה זו מושבתת, הפאץ' אינו מזהיר לפני שהוא מפסיק לפעול. עם קושחה עדכנית של בסיס המשאבה, פאץ' פועל 5 ימים לכל היותר.
 
-#### Pump expiry warning [hours]
+#### אזהרת תפוגת משאבה [שעות]
 
 ***Default: 72 hours.***
 
-This setting changes the time of the expiration warning. When [Patch Expiration](#medtrum-patch-expiration) is enabled, **AAPS** shows a notification this many hours after activation.
+הגדרה זו משנה את מועד אזהרת התפוגה. כאשר [תפוגת הפאץ'](#medtrum-patch-expiration) מופעלת, **AAPS** מציג הודעה מספר זה של שעות לאחר ההפעלה.
 
-#### Hourly Maximum Insulin [Units]
+#### אינסולין מקסימלי לשעה [יחידות]
 
 ***Default: 25U.***
 
-This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded, the patch suspends and gives an alarm. You can reset the alarm with the **Reset alarms** button on the pump screen, see [Reset alarms](#nano-reset-alarms).
+This setting changes the maximum amount of insulin that can be delivered in one hour. אם חורגים ממגבלה זו, הפאץ' מושהה ומפעיל התראה. ניתן לאפס את ההתראה בעזרת הלחצן **איפוס התראות** במסך המשאבה, ראו [איפוס התראות](#nano-reset-alarms).
 
 Set this to a sensible value for your insulin requirements.
 
-#### Daily Maximum Insulin [Units]
+#### מקסימום אינסולין יומי [יחידות]
 
 ***Default: 80U.***
 
-This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded, the patch suspends and gives an alarm. You can reset the alarm with the **Reset alarms** button on the pump screen, see [Reset alarms](#nano-reset-alarms).
+This setting changes the maximum amount of insulin that can be delivered in one day. אם חורגים ממגבלה זו, הפאץ' מושהה ומפעיל התראה. ניתן לאפס את ההתראה בעזרת הלחצן **איפוס התראות** במסך המשאבה, ראו [איפוס התראות](#nano-reset-alarms).
 
 Set this to a sensible value for your insulin requirements.
 
-#### Scan on connection error
+#### סריקה בשגיאת חיבור
 
 ***Default: Off.***
 
 Located under **Advanced Settings**.
 
-Only enable this if you have connection problems. When enabled, the driver scans for the pump again before trying to reconnect to it. Make sure the Location permission for **AAPS** is set to "Allow all the time".
+יש להפעיל הגדרה זו רק אם יש בעיות חיבור. כאשר ההגדרה מופעלת, מנהל ההתקן סורק שוב לאיתור המשאבה לפני שהוא מנסה להתחבר אליה מחדש. יש לוודא שהרשאת המיקום של **AAPS** מוגדרת ל־"Allow all the time" (לאפשר כל הזמן).
 
-### Step 2b: AAPS alert settings
+### שלב 2b: הגדרות ההתראה של AAPS
 
-These settings are not part of the Medtrum driver. Open them from the **Settings** (gear) icon in the top-right corner of the main screen. See [Settings](../SettingUpAaps/Preferences.md) for more.
+הגדרות אלה אינן חלק ממנהל ההתקן של Medtrum. פותחים אותן דרך סמל **הגדרות** (גלגל השיניים) בפינה העליונה של המסך הראשי. למידע נוסף ראו [הגדרות](../SettingUpAaps/Preferences.md).
 
-#### BT Watchdog
+#### מנגנון ניטור בלוטות׳
 
-Open **Settings** > **Pump**:
+יש לפתוח את **הגדרות** > **משאבה**:
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![הגדרות > משאבה](../images/preferences/settings_pump.png)
 
-**BT Watchdog** switches off the phone's Bluetooth for one second if **AAPS** cannot connect to the pump. This may help on some phones where Bluetooth freezes.
+**מנגנון ניטור בלוטות׳** מכבה את ה־Bluetooth של הטלפון לשנייה אחת אם **AAPS** אינו מצליח להתחבר למשאבה. זה עשוי לעזור בחלק מהטלפונים שבהם ה־Bluetooth נתקע.
 
-Enable this setting if you often have connection problems with your pump.
+יש להפעיל הגדרה זו אם יש לעתים קרובות בעיות חיבור עם המשאבה.
 
 #### התראות מקומיות
 
-Open **Settings** > **Local alerts**:
+יש לפתוח את **הגדרות** > **התראות מקומיות**:
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![הגדרות > התראות מקומיות](../images/preferences/settings_local_alerts.png)
 
-##### Alert if pump is unreachable
+##### התראה כאשר המשאבה אינה זמינה
 
 ***Default: Enabled.***
 
-This setting is forced on when the Medtrum driver is enabled. It alerts you when the pump is unreachable. This can happen when the pump is out of range, or when it is not responding because of a faulty patch or pump base, for example when water leaks between the pump base and the patch.
+הגדרה זו מופעלת באופן קבוע כאשר מנהל ההתקן של Medtrum פעיל. היא מתריעה כאשר המשאבה אינה זמינה. מצב זה יכול לקרות כאשר המשאבה מחוץ לטווח, או כאשר היא אינה מגיבה בגלל פאץ' או בסיס משאבה תקולים, למשל כאשר מים חודרים בין בסיס המשאבה לפאץ'.
 
 For safety reasons this setting cannot be disabled.
 
-##### Pump unreachable threshold
+##### סף למשאבה לא זמינה
 
 ***Default: 30 min.***
 
-This setting changes how long **AAPS** waits before alerting you that the pump is unreachable.
+הגדרה זו קובעת כמה זמן **AAPS** ממתין לפני שהוא מתריע שהמשאבה אינה זמינה.
 
-You can change this setting when using the Medtrum pump, but we recommend keeping it at 30 minutes for safety reasons.
+ניתן לשנות הגדרה זו בשימוש במשאבת Medtrum, אך מטעמי בטיחות מומלץ להשאיר אותה על 30 דקות.
 
 (medtrum-activate-patch)=
-### Step 3: Activate patch
+### שלב 3: הפעלת פאץ'
 
 **Before you continue:**
-- Have your Medtrum pump base and a new reservoir patch ready.
-- Turn off other devices that can talk to the Medtrum pump (PDM and Medtrum app).
-- Ideally, make sure **AAPS** is set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). If no profile is active, the activation starts with a **Profile required** step where you choose the profile to activate.
+- יש להכין את בסיס המשאבה של Medtrum ופאץ' מכל חדש.
+- יש לכבות מכשירים אחרים שיכולים לתקשר עם משאבת Medtrum (PDM ואפליקציית Medtrum).
+- רצוי לוודא ש־**AAPS** מוגדר ושיש [פרופיל מופעל](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). אם אין פרופיל פעיל, ההפעלה מתחילה בשלב **נדרש פרופיל**, שבו בוחרים את הפרופיל להפעלה.
 
-#### Start the activation
+#### התחלת ההפעלה
 
-Open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**. If you have set up [settings protection](#Preferences-protection), you must enter your password or PIN first.
+יש לפתוח את [מסך המשאבה של Medtrum](#nano-overview) (**ניהול ← משאבה**) וללחוץ על **החלפת פאץ'**. אם הגדרתם [הגנה על הגדרות](#Preferences-protection), יש להזין קודם את הסיסמה או את קוד ה־PIN.
 
-If a patch is already active, you are asked to deactivate it first, see [Deactivate patch](#nano-deactivate-patch).
+אם כבר יש פאץ' פעיל, תתבקשו להשבית אותו קודם, ראו [השבתת הפאץ'](#nano-deactivate-patch).
 
-The activation is a step-by-step wizard. Follow the prompts to fill and activate a new patch. Tap **Cancel** at any step to stop.
+ההפעלה היא אשף שלב אחר שלב. יש לפעול לפי ההנחיות כדי למלא ולהפעיל פאץ' חדש. בכל שלב אפשר ללחוץ על **ביטול** כדי לעצור.
 
 ```{important}
-Only put the patch on your body and insert the cannula when the wizard tells you to (after priming is complete).
+יש להדביק את הפאץ' לגוף ולהחדיר את הצינורית רק כשהאשף מורה על כך (לאחר שהתיחול הושלם).
 ```
 
-The first steps you see depend on your setup:
+השלבים הראשונים שיוצגו תלויים בהגדרות שלכם:
 
-1. **Profile required**: only if no profile is active. Select the profile to apply, then continue.
-2. **Find Pump**: only the first time, or after you used [Unpair](#medtrum-unpair). Connect the pump base to a fresh patch to power it on. **AAPS** scans for nearby Medtrum pump bases (their names start with `MT`). Tap yours in the list. **AAPS** saves its serial number, then goes straight to filling the patch.
+1. **נדרש פרופיל**: רק אם אין פרופיל פעיל. יש לבחור את הפרופיל שיופעל, ואז להמשיך.
+2. **מציאת משאבה**: רק בפעם הראשונה, או לאחר שימוש ב־[ביטול צימוד](#medtrum-unpair). יש לחבר את בסיס המשאבה לפאץ' חדש כדי להפעיל אותו. **AAPS** סורק לאיתור בסיסי משאבה של Medtrum בקרבת מקום (השמות שלהם מתחילים ב־`MT`). יש ללחוץ על הבסיס שלכם ברשימה. **AAPS** שומר את המספר הסידורי שלו, ועובר ישר למילוי הפאץ'.
 
-   ![Find Pump step scanning for a Medtrum pump base](../images/medtrum/activation/FindPump.png)
+   ![שלב מציאת משאבה בזמן סריקה לאיתור בסיס משאבה של Medtrum](../images/medtrum/activation/FindPump.png)
 
-3. **Activate Patch**: only when **AAPS** already knows your pump base. The screen says "No active patch. Press **Next** to begin the activation process." Make sure the pump base is **not** connected to the patch yet, then tap **Next**.
+3. **הפעלת פאץ'**: רק כאשר **AAPS** כבר מכיר את בסיס המשאבה. במסך כתוב "אין פאץ' פעיל. לחצו על **הבא** כדי להתחיל בתהליך ההפעלה." יש לוודא שבסיס המשאבה **לא** מחובר עדיין לפאץ', ואז ללחוץ על **הבא**.
 
 ![Start Activation](../images/medtrum/activation/StartActivation.png)
 
-#### Connect and fill the patch
+#### חיבור ומילוי הפאץ'
 
-![Fill the patch](../images/medtrum/activation/FillPatch.png)
+![מילוי הפאץ'](../images/medtrum/activation/FillPatch.png)
 
-Connect the pump base to the patch, remove the residual air and fill the patch with insulin. A minimum of 70 units is needed for activation. The screen shows the reservoir level. Do not attach the patch to your body yet.
+יש לחבר את בסיס המשאבה לפאץ', להוציא את האוויר שנותר ולמלא את הפאץ' באינסולין. נדרשות לפחות 70 יחידות להפעלה. המסך מציג את מפלס המכל. עדיין אין להדביק את הפאץ' לגוף.
 
-When the patch is detected and filled, the **Next** button appears. Tap it.
+כאשר הפאץ' מזוהה ומלא, מופיע הלחצן **הבא**. יש ללחוץ עליו.
 
-#### Select insulin
+#### בחירת אינסולין
 
-This step only appears if you have more than one insulin set up in **AAPS**. Select the insulin you are filling the patch with. **AAPS** applies a profile switch with this insulin after activation.
+שלב זה מופיע רק אם הוגדר יותר מאינסולין אחד ב־**AAPS**. יש לבחור את האינסולין שבו ממלאים את הפאץ'. **AAPS** מבצע החלפת פרופיל עם אינסולין זה לאחר ההפעלה.
 
-#### Prime the patch
+#### תיחול הפאץ'
 
 ![Half press](../images/medtrum/activation/HalfPress.png)
 
-Do **not** remove the safety lock. Half-press the needle button on the patch, then tap **Next** to start priming.
+**אין** להסיר את נעילת הבטיחות. יש ללחוץ חצי לחיצה על לחצן המחט בפאץ', ואז ללחוץ על **הבא** כדי להתחיל בתיחול.
 
 ![Prime progress](../images/medtrum/activation/PrimeProgress.png)
 
-Wait for priming to complete.
+יש להמתין להשלמת התיחול.
 
 ![Prime complete](../images/medtrum/activation/PrimeComplete.png)
 
-When priming is complete, tap **Next** to continue.
+כאשר התיחול הושלם, יש ללחוץ על **הבא** כדי להמשיך.
 
-#### Site Rotation
+#### סבב אתרי עירוי
 
-This step only appears if you manage pump sites with [Site Rotation](#Aapsscreens-site-rotation) (setting **Manage pump site rotation**). Choose where you place the patch on your body, or skip this step.
+שלב זה מופיע רק אם מנהלים את אתרי המשאבה באמצעות [סבב אתרי עירוי](#Aapsscreens-site-rotation) (ההגדרה **ניהול סבב אתרי משאבה**). יש לבחור היכן מניחים את הפאץ' על הגוף, או לדלג על שלב זה.
 
-#### Attach patch
+#### הדבקת הפאץ'
 
-![Attach patch](../images/medtrum/activation/AttachPatch.png)
+![הדבקת הפאץ'](../images/medtrum/activation/AttachPatch.png)
 
-Clean the skin and remove the stickers. Remove the safety lock, attach the patch to your body, and press the needle button to insert the cannula.
+יש לנקות את העור ולהסיר את המדבקות. יש להסיר את נעילת הבטיחות, להדביק את הפאץ' לגוף וללחוץ על לחצן המחט כדי להחדיר את הצינורית.
 
-Tap **Next** to activate the patch.
+יש ללחוץ על **הבא** כדי להפעיל את הפאץ'.
 
-#### Activate patch
+#### הפעלת הפאץ'
 
-![Activate patch](../images/medtrum/activation/ActivatePatch.png)
+![הפעלת הפאץ'](../images/medtrum/activation/ActivatePatch.png)
 
-**AAPS** activates the pump and sets the initial basal rate. Please wait. When activation is complete, the following screen appears:
+**AAPS** מפעיל את המשאבה ומגדיר את הקצב הבזאלי ההתחלתי. יש להמתין. כאשר ההפעלה הושלמה, מופיע המסך הבא:
 
 ![Activation complete](../images/medtrum/activation/ActivationComplete.png)
 
 ```{admonition} Older screenshot
 :class: note
-Apart from **Find Pump**, the activation screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+מלבד **מציאת משאבה**, צילומי המסך של ההפעלה שלמעלה הם מגרסה קודמת של **AAPS** וייתכן שייראו אחרת ב־**AAPS** 4.
 ```
 
-It shows how many units are left in the patch. Tap **OK** to return to the pump screen.
+הוא מציג כמה יחידות נותרו בפאץ'. יש ללחוץ על **אישור** כדי לחזור למסך המשאבה.
 
 ```{tip}
-After a new activation, [export your settings](../Maintenance/ExportImportSettings.md). This lets you recover this patch session later, for example on a new phone.
+לאחר הפעלה חדשה, יש [לייצא את ההגדרות](../Maintenance/ExportImportSettings.md). כך ניתן לשחזר מאוחר יותר את סשן הפאץ' הזה, למשל בטלפון חדש.
 ```
 
 (nano-deactivate-patch)=
 
-### Deactivate patch
+### השבתת הפאץ'
 
-To deactivate the active patch, open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**.
+כדי להשבית את הפאץ' הפעיל, יש לפתוח את [מסך המשאבה של Medtrum](#nano-overview) (**ניהול ← משאבה**) וללחוץ על **החלפת פאץ'**.
 
-![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
+![השבתת הפאץ'](../images/medtrum/activation/DeactivatePatch.png)
 
-You are asked to confirm that you want to deactivate the current patch. **This cannot be undone.** Tap **Next** to deactivate, or **Cancel** to return to the pump screen.
+תתבקשו לאשר שברצונכם להשבית את הפאץ' הנוכחי. **לא ניתן לבטל פעולה זו.** יש ללחוץ על **הבא** כדי להשבית, או על **ביטול** כדי לחזור למסך המשאבה.
 
 ![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
 
-If **AAPS** cannot deactivate the patch (for example because the pump base has already been removed from the patch), tap **Discard** to forget the current patch session. You can then activate a new patch.
+אם **AAPS** אינו יכול להשבית את הפאץ' (למשל כי בסיס המשאבה כבר הוסר מהפאץ'), יש ללחוץ על **השלכה** כדי לשכוח את סשן הפאץ' הנוכחי. לאחר מכן ניתן להפעיל פאץ' חדש.
 
 ![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
 
-When deactivation is complete, retract the needle and remove the patch from your body. Remove the pump base and dispose of the used patch. Tap **OK** to return to the pump screen, or **Next** to start activating a new patch.
+כאשר ההשבתה הושלמה, יש להחזיר את המחט לאחור ולהסיר את הפאץ' מהגוף. יש להסיר את בסיס המשאבה ולהשליך את הפאץ' המשומש. יש ללחוץ על **אישור** כדי לחזור למסך המשאבה, או על **הבא** כדי להתחיל בהפעלת פאץ' חדש.
 
 (nano-resume-interrupted-activation)=
 
 ### Resume interrupted activation
 
-If a patch activation is interrupted, for example because the phone battery runs out, you can resume it. Open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**.
+אם הפעלת פאץ' נקטעת, למשל כי הסוללה של הטלפון נגמרה, ניתן להמשיך אותה. יש לפתוח את [מסך המשאבה של Medtrum](#nano-overview) (**ניהול ← משאבה**) וללחוץ על **החלפת פאץ'**.
 
 ![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
 
-Tap **Next** to resume the activation. Tap **Discard** to reset the activation status, so you can activate a new patch.
+יש ללחוץ על **הבא** כדי להמשיך בהפעלה. יש ללחוץ על **השלכה** כדי לאפס את מצב ההפעלה, כך שניתן יהיה להפעיל פאץ' חדש.
 
 ![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots in **Deactivate patch** and **Resume interrupted activation** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+צילומי המסך בסעיפים **השבתת הפאץ'** ו־**חידוש הפעלה שנקטעה** הם מגרסה קודמת של **AAPS** וייתכן שייראו אחרת ב־**AAPS** 4.
 ```
 
-The driver reads the activation status from the pump. If this works, the wizard continues at the step where it stopped.
+מנהל ההתקן קורא את מצב ההפעלה מהמשאבה. אם זה מצליח, האשף ממשיך מהשלב שבו נעצר.
 
 (nano-overview)=
 
-## Pump screen
+## מסך המשאבה
 
-The Medtrum pump screen (**Manage → Pump**) shows the current status of the Medtrum patch. It also has buttons to change the patch, reset alarms and refresh the status. A banner at the top shows important states, for example **Patch not activated** or **Pump is suspended**.
+מסך המשאבה של Medtrum (**ניהול ← משאבה**) מציג את המצב הנוכחי של הפאץ' של Medtrum. יש בו גם לחצנים להחלפת הפאץ', לאיפוס התראות ולרענון המצב. פס בחלק העליון מציג מצבים חשובים, למשל **הפאץ' לא הופעל** או **המשאבה מושהית**.
 
-![Medtrum pump screen with an active patch](../images/v4/Pumps/medtrum_pump_screen_active.png)
+![מסך המשאבה של Medtrum עם פאץ' פעיל](../images/v4/Pumps/medtrum_pump_screen_active.png)
 
-The screen can show these rows. Some rows only appear when they have a value.
+המסך יכול להציג את השורות הבאות. חלק מהשורות מופיעות רק כאשר יש להן ערך.
 
-- **Last connection**: how long ago **AAPS** last connected to the pump.
-- **Last bolus**: the last bolus that was delivered.
-- **Battery**: the current battery voltage of the patch.
-- **Reservoir**: the current reservoir level.
-- **Serial number**: the serial number of your pump base.
-- **Pump state**: the current state of the pump. For example **Active** (the patch is activated and running normally) or **Stopped** (the patch is not activated).
-- **Base basal rate**: the basal rate from your profile that is running now.
-- **Temp basal**: the temporary basal rate, if one is running.
-- **Active bolus**: the bolus that is being delivered right now.
-- **Active alarms**: see [below](#medtrum-active-alarms).
-- **Pump type**: the model of your pump base.
-- **FW version**: the firmware version of the pump base.
-- **Patch no**: the sequence number of the activated patch. It goes up by one every time you activate a new patch.
-- **Activation**: the date and time the patch was activated, and how long ago that was.
-- **Patch expires**: the date and time when the patch expires. Shows **Not enabled** if [Patch Expiration](#medtrum-patch-expiration) is off.
+- **התחברות אחרונה**: לפני כמה זמן **AAPS** התחבר למשאבה בפעם האחרונה.
+- **בולוס אחרון**: הבולוס האחרון שניתן.
+- **סוללה**: מתח הסוללה הנוכחי של הפאץ'.
+- **מכל**: מפלס המכל הנוכחי.
+- **מספר סידורי**: המספר הסידורי של בסיס המשאבה.
+- **מצב המשאבה**: המצב הנוכחי של המשאבה. למשל **פעיל** (הפאץ' הופעל ופועל כרגיל) או **נעצר** (הפאץ' לא הופעל).
+- **בזאלי בסיסי**: הקצב הבזאלי מהפרופיל שפועל כעת.
+- **בזאלי זמני**: הקצב הבזאלי הזמני, אם יש כזה שפועל.
+- **בולוס פעיל**: הבולוס שניתן ברגע זה.
+- **התראות פעילות**: ראו [בהמשך](#medtrum-active-alarms).
+- **סוג המשאבה**: הדגם של בסיס המשאבה.
+- **גרסת קושחה**: גרסת הקושחה של בסיס המשאבה.
+- **מספר הפאץ'**: המספר הרץ של הפאץ' שהופעל. הוא עולה באחד בכל פעם שמפעילים פאץ' חדש.
+- **הפעלה**: התאריך והשעה שבהם הפאץ' הופעל, וכמה זמן עבר מאז.
+- **תפוגת הפאץ'**: התאריך והשעה שבהם תוקף הפאץ' פג. מוצג **לא מופעל** אם [תפוגת הפאץ'](#medtrum-patch-expiration) כבויה.
 
 (medtrum-active-alarms)=
-### Active alarms
+### התראות פעילות
 
-This row shows any alarms that are active right now, for example a low reservoir or an expiring patch.
+שורה זו מציגה את כל ההתראות שפעילות ברגע זה, למשל מכל נמוך או פאץ' שתוקפו עומד לפוג.
 
-### Refresh
+### רענן
 
-This button refreshes the status of the patch. It is only available when a patch is active and **AAPS** is not connected to the pump at that moment.
+לחצן זה מרענן את מצב הפאץ'. הוא זמין רק כאשר יש פאץ' פעיל ו־**AAPS** אינו מחובר למשאבה באותו רגע.
 
-### Change Patch
+### החלפת פאץ'
 
-This button starts the wizard to change the patch. See [Activate patch](#medtrum-activate-patch) for more information.
+לחצן זה מפעיל את האשף להחלפת הפאץ'. למידע נוסף ראו [הפעלת פאץ'](#medtrum-activate-patch).
 
 (medtrum-unpair)=
-### Unpair
+### ביטול צימוד
 
-This button only appears when **AAPS** knows a pump base. It clears the stored pump base serial number and disconnects. The next time you activate a patch, **AAPS** scans for a pump base again (the **Find Pump** step). Use this if you switch to a different pump base. Only do this when no patch is active.
+לחצן זה מופיע רק כאשר **AAPS** מכיר בסיס משאבה. הוא מוחק את המספר הסידורי השמור של בסיס המשאבה ומנתק את החיבור. בפעם הבאה שמפעילים פאץ', **AAPS** סורק שוב לאיתור בסיס משאבה (השלב **מציאת משאבה**). יש להשתמש בזה כאשר עוברים לבסיס משאבה אחר. יש לעשות זאת רק כאשר אין פאץ' פעיל.
 
 (nano-reset-alarms)=
 
 ### Reset alarms
 
-The **Reset alarms** button only appears on the pump screen when the patch has suspended itself, for example after a maximum daily insulin alarm. Tap it to reset the alarms and resume insulin delivery.
+הלחצן **איפוס התראות** מופיע במסך המשאבה רק כאשר הפאץ' השהה את עצמו, למשל לאחר התראה על חריגה מהאינסולין היומי המרבי. יש ללחוץ עליו כדי לאפס את ההתראות ולחדש את מתן האינסולין.
 
 ![Reset alarms](../images/medtrum/ResetAlarms.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different, but the **Reset alarms** button works the same way.
+צילום המסך למעלה הוא מגרסה קודמת של **AAPS**. ב־**AAPS** 4 מסך המשאבה נראה אחרת, אבל הלחצן **איפוס התראות** פועל באותו אופן.
 ```
 
 ## Switching phone, export/import settings
 
-When you switch to a new phone, do the following:
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone.
-* Transfer the settings file from the old phone to the new phone, and import it into **AAPS**. Tick **Also replace pump settings** on the import screen, otherwise the patch session is not transferred to the new phone.
+כאשר עוברים לטלפון חדש, יש לבצע את הפעולות הבאות:
+* [ייצוא הגדרות](../Maintenance/ExportImportSettings.md) בטלפון הישן.
+* יש להעביר את קובץ ההגדרות מהטלפון הישן לטלפון החדש ולייבא אותו ל־**AAPS**. יש לסמן את **גם החלף את הגדרות המשאבה** במסך הייבוא, אחרת סשן הפאץ' לא יועבר לטלפון החדש.
 
-The imported settings file must be from the patch session you are using now, otherwise the patch will not connect (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
+קובץ ההגדרות המיובא חייב להיות מסשן הפאץ' שבו אתם משתמשים כעת, אחרת הפאץ' לא יתחבר (ראו [משאבות ללא צינורית](#ExportImportSettings-tubeless-pumps)).
 
-After a settings import, the driver syncs the history with the pump. This can take a while, depending on the age of the settings file. The progress ("Syncing records, ... left") is shown on the main screen:
+לאחר ייבוא הגדרות, מנהל ההתקן מסנכרן את ההיסטוריה עם המשאבה. זה יכול לקחת זמן, בהתאם לגיל קובץ ההגדרות. ההתקדמות ("מסנכרן רשומות, ... נותרו לסיום") מוצגת במסך הראשי:
 
 ![Sync progress](../images/medtrum/SyncProgress.png)
 
 (medtrum-nano-troubleshooting)=
 
-## Troubleshooting
+## פתרון תקלות
 
 ### Connection issues
 
-If you have connection timeouts or other connection problems:
-- In the Android app settings for **AAPS**, set the Location permission to "Allow all the time".
-- Try enabling **Scan on connection error** (Medtrum settings > **Advanced Settings**) and **BT Watchdog** (**Settings** > **Pump**), see [Step 2](#medtrum-step-2).
+אם יש פסקי זמן בחיבור או בעיות חיבור אחרות:
+- בהגדרות האפליקציה של Android עבור **AAPS**, יש להגדיר את הרשאת המיקום ל־"Allow all the time" (לאפשר כל הזמן).
+- כדאי לנסות להפעיל את **סריקה בשגיאת חיבור** (הגדרות Medtrum > **הגדרות מתקדמות**) ואת **מנגנון ניטור בלוטות׳** (**הגדרות** > **משאבה**), ראו [שלב 2](#medtrum-step-2).
 
 ### Bluetooth issues
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+לבעיות מוכרות בחיבורי Bluetooth, לניתוקים של משאבות/פודים או לבעיות בהפעלה ובחיבור, ראו [פתרון תקלות Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ### Activation interrupted
 
-If the activation is interrupted, for example by an empty phone battery or a phone crash, you can resume it. Tap **Change Patch** on the pump screen and follow the steps in [Resume interrupted activation](#nano-resume-interrupted-activation).
+אם ההפעלה נקטעת, למשל בגלל סוללת טלפון ריקה או קריסה של הטלפון, ניתן להמשיך אותה. יש ללחוץ על **החלפת פאץ'** במסך המשאבה ולפעול לפי השלבים ב־[חידוש הפעלה שנקטעה](#nano-resume-interrupted-activation).
 
-### Preventing patch faults
+### מניעת תקלות בפאץ'
 
-The patch can give a variety of errors. To prevent frequent errors:
-- Make sure the pumpbase is properly seated in the patch and no gaps are visible.
-- When filling the patch do not apply excessive force to the plunger. Do not try to fill the patch beyond the maximum that applies to your model.
+הפאץ' עלול להציג מגוון שגיאות. To prevent frequent errors:
+- יש לוודא שבסיס המשאבה יושב כראוי בפאץ' ושאין רווחים נראים לעין.
+- בעת מילוי הפאץ', אין להפעיל כוח רב מדי על הבוכנה. אין לנסות למלא את הפאץ' מעבר לכמות המרבית של הדגם שלכם.
 
 ## Where to get help
 
 All of the development work for the Medtrum driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
 
--  **רמה 0** קראו את הסעיף הרלוונטי בתיעוד זה כדי להבטיח שאתם מבינים כיצד להשתמש במה שאתם מתקשים איתו.
+-  **רמה 0:** קראו את הסעיף הרלוונטי בתיעוד זה כדי להבין כיצד אמור לפעול הדבר שבו אתם מתקשים.
 -  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues). If it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
+-  **רמה 2:** חפשו בדיווחים הקיימים כדי לבדוק אם הבעיה שלכם כבר דווחה ב-[Issues](https://github.com/nightscout/AAPS/issues). אם קיים דיווח, אשרו שגם אצלכם קיימת הבעיה, הגיבו או הוסיפו מידע על הבעיה שלכם. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
 -  **היו סבלניים - רוב חברי הקהילה שלנו מורכבים ממתנדבים בעלי אופי טוב, ופתרון בעיות דורש לעתים קרובות זמן וסבלנות מצד המשתמשים והמפתחים כאחד.**
