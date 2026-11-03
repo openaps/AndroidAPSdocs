@@ -1,250 +1,250 @@
-# Completing the Objectives
+# Mokymo etapų atlikimas
 
-**AAPS** has a series of **Objectives** required to be completed to help the user progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **Objectives** aims to ensure you have:
+**AAPS** turi seriją **mokymo etapų**, kuriuos reikia atlikti. Jie padeda naudotojui pereiti nuo paprasto atviro ciklo prie hibridinio uždaro ciklo ir visų **AAPS** funkcijų. Atlikdami **mokymo etapus** užtikrinsite, kad:
 
-* Configured everything correctly in your **AAPS** setup;
-* Learned about the essential features of **AAPS**; and
-* A basic understanding of what your system can do, in order to help instill confidence when using **AAPS**.
+* teisingai sukonfigūravote viską savo **AAPS** sąrankoje;
+* susipažinote su svarbiausiomis **AAPS** funkcijomis; ir
+* iš esmės suprantate, ką gali jūsų sistema, kad galėtumėte drąsiau naudoti **AAPS**.
 
-When **AAPS** is installed for the first time, each objective must be completed before moving on to the next one. New features will gradually be unlocked as progress is made through each **Objective**.
+Kai **AAPS** įdiegiama pirmą kartą, kiekvieną mokymo etapą reikia atlikti prieš pereinant prie kito. Einant per kiekvieną **mokymo etapą**, palaipsniui atrakinamos naujos funkcijos.
 
-**Objectives 1 to 8** will guide you from configuring **AAPS** on your smartphone to “basic” hybrid closed looping. This will take about 6 weeks to complete. You can proceed up to **Objective 5** using a virtual pump (and using some other method of insulin delivery in the meantime). **Objectives 9 and 10** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. Further details on an estimated breakdown of time can be obtained here: [How long will it take?](#preparing-how-long-will-it-take)
+**1–8 mokymo etapai** padės jums nueiti kelią nuo **AAPS** konfigūravimo telefone iki „paprasto“ hibridinio uždaro ciklo. Tai užtruks apie 6 savaites. Iki **5 mokymo etapo** galite eiti naudodami virtualią pompą (o insuliną tuo metu leisti kitu būdu). **9 ir 10 mokymo etapai** skirti išbandyti pažangesnes **AAPS** funkcijas, kad geriau valdytumėte diabetą. Jiems atlikti reikės iki 3 mėnesių, galbūt ir ilgiau. Daugiau informacijos apie numatomą laiko paskirstymą rasite čia: [Kiek laiko tai užtruks?](#preparing-how-long-will-it-take)
 
-As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
+Be to, kad einate per **mokymo etapus**, prireikus galite ir panaikinti savo pažangą bei [grįžti į ankstesnį mokymo etapą](#CompletingTheObjectives-go-back-in-objectives).
 
-## Backup your settings
+## Nustatymų atsarginė kopija
 
 ```{admonition} Note
 :class: note
 
-Exporting your **AAPS** settings is recommended after completing each **Objective**!
+Po kiekvieno **mokymo etapo** rekomenduojama eksportuoti **AAPS** nustatymus!
 ```
 
-It is strongly recommended that you [export your settings](../Maintenance/ExportImportSettings.md) after completing each objective to avoid losing any progress made in **AAPS**. This exporting process creates a **settings file** (.json) which should be backed-up in one or more safe places (e.g. Google Drive, hard disk, email attachment _etc._). This ensures that any progress made in **AAPS** is saved. If your phone is lost or if you accidentally delete your progress, the json file can be re-loaded to **AAPS** by importing a recent settings file. Having a backup **settings file** is also required if a new **AAPS** smartphone is required for any reason (upgrading/lost/broken phone _etc._)
+Primygtinai rekomenduojama po kiekvieno mokymo etapo [eksportuoti nustatymus](../Maintenance/ExportImportSettings.md), kad neprarastumėte **AAPS** pasiektos pažangos. Eksportuojant sukuriamas **nustatymų failas** (.json), kurio atsarginę kopiją reikia laikyti vienoje ar keliose saugiose vietose (pvz., Google Drive, standžiajame diske, el. laiško priede _ir t. t._). Taip užtikrinama, kad visa **AAPS** pasiekta pažanga bus išsaugota. Jei pametate telefoną arba netyčia ištrinate savo pažangą, json failą galima vėl įkelti į **AAPS**, importuojant naujausią nustatymų failą. Atsarginis **nustatymų failas** taip pat būtinas, jei dėl kokios nors priežasties reikia naujo **AAPS** telefono (naujesnis, pamestas ar sugedęs telefonas _ir t. t._)
 
-The **settings** file will save not only your progress through the **Objectives**, but also all your **AAPS** settings such as **max bolus** _etc._
+**Nustatymų** faile išsaugoma ne tik jūsų pažanga **mokymo etapuose**, bet ir visi jūsų **AAPS** nustatymai, pvz., **maks. bolusas** _ir t. t._
 
-The **Objectives** will need to be restarted from the beginning should you fail to have a backup of your settings and anything happens to your **AAPS** smartphone. Progressing through the **Objectives** takes time, and having to re-complete them again because for example you lost your smartphone, is a situation to be best avoided.
+Jei neturėsite nustatymų atsarginės kopijos ir kas nors nutiks jūsų **AAPS** telefonui, **mokymo etapus** teks pradėti iš naujo. **Mokymo etapams** atlikti reikia laiko. Geriau išvengti situacijos, kai juos tenka atlikti dar kartą, pavyzdžiui, nes pametėte telefoną.
 
 (objectives-objective1)=
-## Objective 1: Setting up visualization and monitoring, analyzing basals and ratios
+## 1 mokymo etapas: vizualizavimo ir stebėjimo nustatymas, valandinės bazės ir santykių analizė
 
-**Objective 1** requires the user to set up their basic technical setup in **AAPS**. No progress can be made until this step has been completed.
+**1 mokymo etape** naudotojas turi atlikti pagrindinę techninę **AAPS** sąranką. Kol šis žingsnis neatliktas, toliau eiti negalima.
 
-- Select the correct CGM/FGM in [Configuration → BG Source](#Config-Builder-bg-source). See [BG Source](../Getting-Started/CompatiblesCgms.md) for more information.
-- Select the correct Pump in [Configuration → Pump](#Config-Builder-pump) to ensure your pump can communicate with **AAPS**. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **Objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/CompatiblePumps.md) for more information.
-- If using Nightscout:
-  - Follow instructions in [Nightscout](../SettingUpAaps/Nightscout.md) page to ensure **Nightscout** can receive and display **AAPS** data.
-  - Note that the URL in **NSClientV3** must be **_without_ "/api/v1/"** at the end - see [Settings → NSClientV3](#Preferences-nsclient).
-- If using Tidepool:
-  - Follow instructions in [Tidepool](../SettingUpAaps/Tidepool.md) page to ensure **Tidepool** can receive and display **AAPS** data.
+- Pasirinkite tinkamą NGJ/FGM skiltyje [Konfigūracija → Glikemijos šaltinis](#Config-Builder-bg-source). Daugiau informacijos rasite skyriuje [Glikemijos šaltinis](../Getting-Started/CompatiblesCgms.md).
+- Pasirinkite tinkamą pompą skiltyje [Konfigūracija → Pompa](#Config-Builder-pump), kad jūsų pompa galėtų bendrauti su **AAPS**. Pasirinkite **virtualią pompą**, jei naudojate pompos modelį, kuriam nėra **AAPS** tvarkyklės ciklui, arba jei norite atlikti pirmuosius **mokymo etapus**, o insuliną leisti kita sistema. Daugiau informacijos rasite skyriuje [insulino pompa](../Getting-Started/CompatiblePumps.md).
+- Jei naudojate Nightscout:
+  - Vadovaukitės puslapio [Nightscout](../SettingUpAaps/Nightscout.md) instrukcijomis, kad **Nightscout** galėtų gauti ir rodyti **AAPS** duomenis.
+  - Atkreipkite dėmesį, kad **NSClientV3** URL adreso gale **_neturi_ būti „/api/v1/“** – žr. [Nustatymai → NSClientV3](#Preferences-nsclient).
+- Jei naudojate Tidepool:
+  - Vadovaukitės puslapio [Tidepool](../SettingUpAaps/Tidepool.md) instrukcijomis, kad **Tidepool** galėtų gauti ir rodyti **AAPS** duomenis.
 
-Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
+Pastaba: *gali tekti palaukti, kol ateis kitas jutiklio gliukozės rodmuo, kad **AAPS** jį atpažintų.*
 
 (objectives-objective2)=
-## Objective 2: Learn how to control AAPS
+## 2 mokymo etapas: Išmokite valdyti AAPS
 
-**Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below. Each task shows its status (**1**): the orange "**Not completed yet**" turns into "**Completed, well done!**" as soon as **AAPS** has registered the action. Tap **Hint** (**2**) underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
+**2 mokymo etape** reikia atlikti kelias „užduotis“, kaip parodyta ekrano kopijoje žemiau. Prie kiekvienos užduoties rodoma jos būsena (**1**): oranžinis užrašas „**Dar nebaigta**“ pasikeičia į „**Užbaigta, puiku!**“, kai tik **AAPS** užregistruoja veiksmą. Jei dar nežinote, kaip atlikti tam tikrą veiksmą, palieskite **Užuomina** (**2**) po užduotimi – atsidarys susijusi dokumentacija.
 
-![Screenshot objective 2](../images/Objective2_V2_5.png)
+![2 mokymo etapo ekrano kopija](../images/Objective2_V2_5.png)
 
-Tasks to complete **Objective 2** are:
-- Set your **Profile** to 90% for a duration of 10 min.
-  - _Hint_: Tap your Profile name on the main screen to open the **Profile** screen, then use the **Activate** (▶) button and set percentage and duration. More information in [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Note_: **AAPS** does not accept basal rates below 0.05U/hr. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Switch back to your normal **Profile** after completing this task.
-- Simulate "taking a shower" by [disconnecting your pump](#AapsScreens-loop-status) in **AAPS** for a duration of 1h.
-  - _Hint_: press the loop icon on the main screen to open the Loop dialog, then choose a duration under **Disconnect pump**.
-- End "taking a shower" by reconnecting your pump.
-  - _Hint_: press the "disconnected"-icon to open the loop dialog again and choose **Reconnect Pump**.
-- Set a custom [**Temporary Target**](../DailyLifeWithAaps/TempTargets.md) with a duration of 10 min.
-  - _Hint_: press the target range on the main screen to bring up the temporary target screen.
-- Display the **Loop** plugin's content.
-  - _Hint_: open **Configuration → Loop** and tap "**Open plugin**".
-- Use scroll or zoom on the BG chart to look at larger or smaller time frames.
+**2 mokymo etapo** užduotys:
+- Nustatykite **profilį** 90 % 10 min. trukmei.
+  - _Užuomina_: pagrindiniame ekrane palieskite savo profilio pavadinimą, kad atvertumėte ekraną **Profilis**, tada naudokite mygtuką **Aktyvuoti** (▶) ir nustatykite procentą bei trukmę. Daugiau informacijos puslapyje [Profilio keitimas ir profilio procentas](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+  - _Pastaba_: **AAPS** nepriima valandinės bazės, mažesnės nei 0,05 V/val. Jei jūsų **profilyje** yra 0,05 V/val. ar mažesnių valandinių bazių, prieš atlikdami šią užduotį turėsite sukurti laikiną **profilį** su didesnėmis valandinėmis bazėmis. Atlikę šią užduotį, grįžkite prie savo įprasto **profilio**.
+- Imituokite „dušą“ – [atjunkite pompą](#AapsScreens-loop-status) **AAPS** programėlėje 1 val. trukmei.
+  - _Užuomina_: pagrindiniame ekrane paspauskite ciklo piktogramą, kad atvertumėte ciklo langą, tada skiltyje **Atjungti pompą** pasirinkite trukmę.
+- „Dušą“ užbaikite vėl prijungdami pompą.
+  - _Užuomina_: paspauskite piktogramą „atjungta“, kad vėl atvertumėte ciklo langą, ir pasirinkite **Prijungti pompą**.
+- Nustatykite pasirinktinį [**laikiną tikslą**](../DailyLifeWithAaps/TempTargets.md) 10 min. trukmei.
+  - _Užuomina_: pagrindiniame ekrane paspauskite tikslo intervalą, kad atvertumėte laikino tikslo langą.
+- Atverkite įskiepio **Ciklas** turinį.
+  - _Užuomina_: atverkite **Konfigūracija → Ciklas** ir palieskite „**Atidaryti įskiepį**“.
+- Slinkite arba keiskite KG grafiko mastelį, kad matytumėte ilgesnius ar trumpesnius laiko tarpus.
 
 
 (objectives-objective3)=
-## Objective 3: Prove your knowledge
+## 3 mokymo etapas: Pasitikrinkite žinias
 
-**Objective 3** requires the user to pass a multiple-choice exam which is designed to test your **AAPS** knowledge.
+**3 mokymo etape** naudotojas turi išlaikyti testą su keliais atsakymų variantais. Jis skirtas patikrinti jūsų **AAPS** žinias.
 
-Some users find **Objective 3** to be the most difficult objective to complete. Please read the **AAPS** documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group for "Objective 3" (because it is likely that your question has been asked before - and answered by the group). These groups can provide friendly hints, or redirect you to the relevant part of the **AAPS** documents.
+Kai kuriems naudotojams **3 mokymo etapas** yra sunkiausias. Atsakydami į klausimus, skaitykite **AAPS** dokumentaciją. Jei, ieškodami **AAPS** dokumentacijoje, tikrai nerandate atsakymo, paieškokite „Objective 3“ [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) arba [Discord](https://discord.gg/4fQUWHZ4Mw) grupėje (tikėtina, kad jūsų klausimas jau buvo užduotas ir grupė į jį atsakė). Šios grupės gali draugiškai patarti arba nukreipti jus į reikiamą **AAPS** dokumentacijos vietą.
 
-In the meantime :
-- To reduce the number of notifications / decisions you are asked to make (temporary basal rates) while in Open Loop, set a wide target range in your **Profile** _e.g._ 90 - 150 mg/dL or 5.0 - 8.5 mmol/L.
-- You might want to set a wider upper limit, or even disable Open Loop, at night.
+Tuo tarpu:
+- Kad atviro ciklo režimu sumažintumėte pranešimų / sprendimų, kuriuos turite priimti (laikinos valandinės bazės), skaičių, savo **profilyje** nustatykite platų tikslo intervalą, _pvz.,_ 90–150 mg/dL arba 5,0–8,5 mmol/l.
+- Naktį galite nustatyti platesnę viršutinę ribą arba net išjungti atvirą ciklą.
 
-To proceed with **Objective 3**, tap a question row to open it. Please read each question carefully and select your answer(s).
+Norėdami tęsti **3 mokymo etapą**, palieskite klausimo eilutę, kad ją atvertumėte. Atidžiai perskaitykite kiekvieną klausimą ir pasirinkite atsakymą (-us).
 
-For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for 1 hour before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
+Į kiekvieną klausimą gali būti daugiau nei vienas teisingas atsakymas! Pasirinkus neteisingą atsakymą, klausimas užrakinamas 1 valandai. Tik tada galėsite grįžti ir vėl į jį atsakyti. Atminkite, kad kitą kartą atsakant atsakymų tvarka gali būti pasikeitusi. Taip siekiama, kad juos atidžiai perskaitytumėte ir tikrai suprastumėte, ar kiekvienas atsakymas teisingas.
 
 ```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: note
-From time to time, new features are added to **AAPS** which may require a new question to be added to the **Objectives**, particularly **Objective 3**. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other **Objectives** remain completed.
+Kartais į **AAPS** pridedamos naujos funkcijos, dėl kurių prie **mokymo etapų**, ypač **3 mokymo etapo**, gali tekti pridėti naują klausimą. Todėl bet kuris naujas klausimas, pridėtas prie **3 mokymo etapo**, bus pažymėtas kaip „neatliktas“, nes **AAPS** prašys į jį atsakyti. Nesijaudinkite: kiekvienas **mokymo etapas** yra savarankiškas, todėl **neprarasite esamų AAPS funkcijų**, jei kiti **mokymo etapai** liks atlikti.
 ```
 
-## Tikslas 4: pradėkite naudoti Atvirą ciklą
+## 4 mokymo etapas: Aktyvuojamas atviras ciklas
 
-The purpose of **Objective 4** is to recognize how often **AAPS** will evaluate the user's basal rate against glucose levels, and recommend temporary basal rate adjustments. As part of this **Objective**, you will activate open looping for the first time, and will accept 20 proposed temporary basal rate changes, and if required, apply these manually on your pump. You will also observe the impact of [**Temporary Targets**](../DailyLifeWithAaps/TempTargets.md). If you are not familiar with setting a temporary basal rate change in **AAPS** yet, see the pump actions in the **Manage** sheet ([Where did the Actions tab go?](#screens-action-tab)).
+**4 mokymo etapo** tikslas – suprasti, kaip dažnai **AAPS** įvertina naudotojo valandinę bazę pagal gliukozės reikšmes ir rekomenduoja laikinos valandinės bazės pakeitimus. Šiame **mokymo etape** pirmą kartą įjungsite atvirą ciklą, priimsite 20 siūlomų laikinos valandinės bazės pakeitimų ir prireikus juos rankiniu būdu nustatysite pompoje. Taip pat stebėsite, kaip veikia [**laikini tikslai**](../DailyLifeWithAaps/TempTargets.md). Jei dar nežinote, kaip **AAPS** nustatyti laikinos valandinės bazės pakeitimą, žr. pompos veiksmus meniu **Valdymas** ([Kur dingo skirtukas Veiksmai?](#screens-action-tab)).
 
-The minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective**, even if all basal rate changes were enacted already.
+Trumpiausias laikas šiam mokymo etapui atlikti: **7 dienos**. Tai privalomas laukimo laikas. Pereiti prie kito **mokymo etapo** negalima, net jei visi valandinės bazės pakeitimai jau buvo įvykdyti.
 
-- Select Open Loop by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Open Loop** as running mode.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Ensure these basal rate adjustments show up in **AAPS** and **Nightscout**.
-- Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
-- If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
+- Atvirą ciklą pasirinkite pagrindiniame ekrane paspausdami [ciklo piktogramą](#AapsScreens-loop-status) ir kaip veikimo režimą pasirinkdami **Atviras ciklas**.
+- Per 7 dienas rankiniu būdu įvykdykite bent 20 laikinos valandinės bazės pasiūlymų: įveskite juos savo (fizinėje) pompoje ir AAPS patvirtinkite, kad juos priėmėte. Įsitikinkite, kad šie valandinės bazės pakeitimai rodomi **AAPS** ir **Nightscout**.
+- Prireikus naudokite [**laikinus tikslus**](../DailyLifeWithAaps/TempTargets.md). Išgydę hipoglikemiją, naudokite iš anksto nustatytą „Hipo laikinas tikslas“, kad sistema neperkoreguotų, kai gliukozė vėl kils.
+- Jei šiuo metu vis dar naudojate [paprastąjį režimą](#preferences-simple-mode), dabar turbūt tinkamas laikas jį išjungti.
 
-To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. The higher the value, the fewer change notifications you will receive.
+Kad sumažintumėte siūlomų valandinės bazės pakeitimų skaičių atviro ciklo režimu, vis tiek galite naudoti patarimus, aprašytus [**3 mokymo etape**](#objectives-objective3). Be to, mažiausią procentinį rekomenduojamų valandinės bazės pakeitimų dydį galite pakeisti nustatymu „**Mažiausias pokytis atvirojo ciklo režimu**“, esančiu **Nustatymai → Ciklas**. Kuo didesnė reikšmė, tuo mažiau pranešimų apie pakeitimus gausite.
 
-![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
+![Mažiausias pokytis atvirojo ciklo režimu](../images/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
 
-You don't need to action each and every system recommendation!
+Nebūtina vykdyti kiekvienos sistemos rekomendacijos!
 ```
 (objectives-objective5)=
 ## Tikslas 5: perpraskite atvirojo ciklo veikimą bei laikinos bazės rekomendacijas
 
-As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](#aaps-screens-how-predictions-become-a-dosing-decision), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at the detailed calculations shown on the **OpenAPS SMB** plugin screen (**Configuration → APS → Open plugin**).
+**5 mokymo etape** pradėsite suprasti, kaip sudaromos laikinos valandinės bazės rekomendacijos. Tai apima [valandinės bazės nustatymo logiką](#aaps-screens-how-predictions-become-a-dosing-decision), poveikio analizę stebint [prognozių linijas **AAPS pagrindiniame ekrane**](#aaps-screens-prediction-lines) (arba Nightscout) ir išsamius skaičiavimus, rodomus įskiepio **OpenAPS SMB** ekrane (**Konfigūracija → DKS → Atidaryti įskiepį**).
 
-Estimated time to complete this objective: **7 days**.
+Numatomas laikas šiam mokymo etapui atlikti: **7 dienos**.
 
-This **Objective** requires you to determine and set your “Maximum basal rate” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). This value can be set in [Settings → OpenAPS SMB](#Preferences-openaps-smb-settings). In [simple mode](#preferences-simple-mode), **AAPS** sets this value automatically and you don't need to change it. If you are still using a virtual pump, make sure this safety setting is set in both **AAPS** and your insulin pump.
+Šiame **mokymo etape** turite nustatyti savo „Didžiausią valandinę bazę“ (max-basal) reikšmę, kaip aprašyta [OpenAPS funkcijose](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Šią reikšmę galima nustatyti skiltyje [Nustatymai → OpenAPS SMB](#Preferences-openaps-smb-settings). [Paprastuoju režimu](#preferences-simple-mode) **AAPS** šią reikšmę nustato automatiškai, ir jums nereikia jos keisti. Jei vis dar naudojate virtualią pompą, įsitikinkite, kad šis saugos nustatymas nustatytas ir **AAPS**, ir jūsų insulino pompoje.
 
-You might wish to set your [**Profile** BG target](#profile-glucose-targets) higher than usual until you are comfortable with **AAPS**' calculations and settings. You may wish to experiment with adjusting your **BG target** in your **Profile** being in a tighter range (say, 1 or less mmol/L [20 mg/dL or less] wide) and observe the resulting behavior.
+Kol neprisiprasite prie **AAPS** skaičiavimų ir nustatymų, galite nustatyti savo [**profilio** KG tikslą](#profile-glucose-targets) aukštesnį nei įprastai. Galite pabandyti savo **profilyje** nustatyti siauresnį **KG tikslo** intervalą (pvz., 1 mmol/l [20 mg/dL] pločio ar siauresnį) ir stebėti, kaip sistema elgiasi.
 
-![Stop sign](../images/sign_stop.png)
+![Ženklas „Stop“](../images/sign_stop.png)
 
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-If you are open looping with a virtual pump **stop here**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
+Jei naudojate atvirą ciklą su virtualia pompa, **sustokite čia**. Spauskite **Patikrinti** šio **mokymo etapo** pabaigoje tik tada, kai pereisite prie „tikros“ pompos, kuri leidžia insuliną.
 
 ```
 
-![blank](../images/blank.png)
+![tuščia](../images/blank.png)
 
 (objectives-objective6)=
 ## Tikslas 6: pradėkite Uždaro ciklo (Closed Loop) režimą su pompos stabdymu esant žemai gliukozei
 
-![Warning sign](../images/sign_warning.png)
+![Įspėjamasis ženklas](../images/sign_warning.png)
 ```{admonition} Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
 :class: note
-You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
+Aukštas KG reikšmes vis tiek turėsite koreguoti patys (rankiniu būdu, korekcijomis pompa arba švirkštikliu)!
 ```
 
-As part of **Objective 6** you will close the loop and activate its **Low Glucose Suspend** (LGS) mode while [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero. You have to remain in LGS mode for 5 days to complete this **objective**. You should use this time to check if your **Profile** settings are accurate and LGS events are not triggered too often.
+**6 mokymo etape** uždarysite ciklą ir įjungsite jo režimą **Stabdymas esant žemai glikemijai** (LGS), kol [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) nustatytas lygus nuliui. Kad atliktumėte šį **mokymo etapą**, LGS režimu turite išbūti 5 dienas. Per šį laiką patikrinkite, ar jūsų **profilio** nustatymai tikslūs ir ar LGS įvykiai nesuveikia per dažnai.
 
-Minimal time to complete this objective: **5 days**. This is a mandatory wait time. You cannot proceed to the next **Objective** before this time is up.
+Trumpiausias laikas šiam mokymo etapui atlikti: **5 dienos**. Tai privalomas laukimo laikas. Kol šis laikas nepraėjo, negalite pereiti prie kito **mokymo etapo**.
 
-It is crucial that your current **Profile** (basal, ISF, IC) have been well tested before you close your loop in **LGS** mode. Incorrect **Profile** settings might force you into hypo situations which have to be treated manually. An accurate **Profile** will help reduce the need for low glucose treatments during the 5 days period.
+Labai svarbu, kad jūsų dabartinis **profilis** (valandinė bazė, JIF, IA) būtų gerai patikrintas prieš uždarant ciklą **LGS** režimu. Dėl neteisingų **profilio** nustatymų galite patekti į hipoglikemijos situacijas, kurias teks gydyti rankiniu būdu. Tikslus **profilis** padės per tas 5 dienas rečiau gydyti žemą glikemiją.
 
-**If you still observe frequent or severe low glucose episodes consider refining your [insulin type's DIA](#Config-Builder-insulin-dia), basal, ISF and carb ratios.** Please refer to the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group which has much discussion on this.
+**Jei vis dar dažnai ar sunkiai pasitaiko žema glikemija, apsvarstykite galimybę patikslinti [insulino tipo IVT](#Config-Builder-insulin-dia), valandinę bazę, JIF ir IA.** Kreipkitės į [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) arba [Discord](https://discord.gg/4fQUWHZ4Mw) grupę, kur apie tai daug diskutuojama.
 
 
-During **Objective 6**, **AAPS** will override the maxIOB setting to zero. **This override will end when moving to Objective 7.**
+**6 mokymo etape** **AAPS** nepaisys maxIOB nustatymo ir nustatys jį lygų nuliui. **Šis apribojimas baigsis, kai pereisite prie 7 mokymo etapo.**
 
-This means that when you are on **Objective 6**, if sensor glucose levels are dropping, **AAPS** will reduce your basal insulin delivery for you. But, if sensor glucose levels are rising, **AAPS** will increase the basal rate above your **Profile** value only if **basal IOB** is negative as a result of a previous **LGS**. Otherwise, **AAPS** will not increase basal above your current profile value, even if glucose levels are rising. This caution is to avoid hypos as you are learning to use **AAPS**.
+Tai reiškia, kad **6 mokymo etape**, jei jutiklio gliukozės reikšmės krinta, **AAPS** sumažins jums bazinio insulino tiekimą. Tačiau jei jutiklio gliukozės reikšmės kyla, **AAPS** padidins valandinę bazę virš **profilio** reikšmės tik tada, jei **bazės AIO** yra neigiamas dėl ankstesnio **LGS**. Kitu atveju **AAPS** nedidins valandinės bazės virš dabartinės profilio reikšmės, net jei gliukozės reikšmės kyla. Šis atsargumas skirtas išvengti hipoglikemijos, kol mokotės naudoti **AAPS**.
 
-**As a consequence, you have to handle high glucose values with manual insulin bolus corrections.**
+**Todėl aukštas gliukozės reikšmes turėsite koreguoti rankiniais korekciniais insulino bolusais.**
 
-- If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
+- Jei jūsų AIO yra neigiamas (žr. ekrano kopiją žemiau), **6 mokymo etape** gali būti nustatyta laikina valandinė bazė (TBR) > 100 %.
 
-![Example negative IOB](../images/Objective6_negIOB.png)
+![Neigiamo AIO pavyzdys](../images/Objective6_negIOB.png)
 
-- Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
-- Enable 'Low Glucose Suspend' mode by pressing the Loop icon on the main screen and choosing **Low Glucose Suspend** as running mode.
-- Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
-- You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
+- Saugumo dėlei nustatykite tikslinį intervalą šiek tiek aukštesnį nei įprastai – taip turėsite papildomą saugos atsargą.
+- Įjunkite režimą „Stabdymas esant žemai glikemijai“: pagrindiniame ekrane paspauskite ciklo piktogramą ir kaip veikimo režimą pasirinkite **Stabdymas esant žemai glikemijai**.
+- Stebėkite aktyvias laikinas valandines bazes: žiūrėkite turkio spalvos bazės tekstą PAGRINDINIAME ekrane arba turkio spalvos bazės liniją PAGRINDINIO ekrano grafike.
+- Po hipoglikemijos gydymo laikinai galite matyti gliukozės šuolius, nes atšokimo metu bazės padidinti negalima.
 
 (objectives-objective7)=
 ## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
 
-To complete **Objective 7** you have to close your loop and raise your [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS** will start to use your defined maxIOB value to correct high glucose values. In [simple mode](#preferences-simple-mode), **AAPS** sets maxIOB automatically and you don't need to change it.
+Kad atliktumėte **7 mokymo etapą**, turite uždaryti ciklą ir padidinti [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **6 mokymo etape** **maxIOB** buvo automatiškai nustatytas lygus nuliui dėl režimo Stabdymas esant žemai glikemijai. Dabar taip nebėra. **AAPS** pradės naudoti jūsų nustatytą maxIOB reikšmę aukštoms gliukozės reikšmėms koreguoti. [Paprastuoju režimu](#preferences-simple-mode) **AAPS** maxIOB nustato automatiškai, ir jums nereikia jo keisti.
 
-Minimal time to complete this objective: **1 day**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
+Trumpiausias laikas šiam mokymo etapui atlikti: **1 diena**. Tai privalomas laukimo laikas. Kol šis laikas nepraėjo, pereiti prie kito **mokymo etapo** negalima.
 
-- Select **Closed Loop** by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Closed Loop** as running mode. Stay in **Closed Loop** over a period of 1 day.
+- **Uždarą ciklą** pasirinkite pagrindiniame ekrane paspausdami [ciklo piktogramą](#AapsScreens-loop-status) ir kaip veikimo režimą pasirinkdami **Uždaras ciklas**. Būkite **uždaro ciklo** režimu 1 dieną.
 
-- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
+- Pamažu didinkite „Didžiausias AIO naudojant SMB“ (OpenAPS vadinamas „max-iob“) virš 0, kol rasite jums geriausiai tinkančius nustatymus.
 
-The default recommendation for this setting is “**average meal bolus + 3x max daily basal**”, where “max daily basal” is the maximum hourly value in any time segment of the day.
+Numatytoji šio nustatymo rekomendacija yra „**vidutinis valgio bolusas + 3 × didžiausia paros valandinė bazė**“, kur „didžiausia paros valandinė bazė“ yra didžiausia valandinė reikšmė bet kuriame paros intervale.
 
-![max daily basal](../images/MaxDailyBasal2.png)
+![didžiausia paros valandinė bazė](../images/MaxDailyBasal2.png)
 
-Ši rekomendacija turėtų būti laikoma atskaitos tašku. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
-* lower the "Max IOB for SMB" value;
-* review your **Profile** settings, only making one adjustment at a time.
+Ši rekomendacija turėtų būti laikoma atskaitos tašku. Jei naudojate šią taisyklę, bet kylant gliukozei AAPS suleidžia per daug insulino, gali tekti:
+* sumažinti „Didžiausias AIO naudojant SMB“ reikšmę;
+* peržiūrėkite savo **profilio** nustatymus ir vienu metu keiskite tik vieną dalyką.
 
-Alternatively, if you are very insulin resistant, raise the **maxIOB** value very cautiously.
+Arba, jei esate labai rezistentiškas insulinui, labai atsargiai didinkite **maxIOB** reikšmę.
 
-Once confident on how much **maxIOB** suits your looping patterns, lower your **BG targets** to your desired level.
+Kai būsite tikri, kokia **maxIOB** reikšmė tinka jūsų ciklo dėsningumams, sumažinkite savo **KG tikslus** iki norimo lygio.
 
 (objectives-objective8)=
-## Objective 8: Adjust basals and ratios if needed, and then enable Autosens
+## 8 mokymo etapas: jei reikia, pakoreguokite valandinę bazę ir santykius, tada įjunkite Autosens
 
-As part of this **objective**, you will revisit your **Profile**'s performance and will use [Autosens](#Open-APS-features-autosens) functionality as an indicator for wrong settings.
+Šiame **mokymo etape** dar kartą įvertinsite, kaip veikia jūsų **profilis**, ir naudosite [Autosens](#Open-APS-features-autosens) funkciją kaip neteisingų nustatymų rodiklį.
 
-Minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
+Trumpiausias laikas šiam mokymo etapui atlikti: **7 dienos**. Tai privalomas laukimo laikas. Kol šis laikas nepraėjo, pereiti prie kito **mokymo etapo** negalima.
 
-Enable [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days (in [simple mode](#preferences-simple-mode) it is enabled by default) and watch [**Overview**'s graph white line](#AapsScreens-section-g-additional-graphs) showing your insulin sensitivity rising or falling due to exercise or hormones etc. Keep an eye on the **OpenAPS SMB** plugin screen (**Configuration → APS → Open plugin**) which shows **AAPS** adjusting the sensitivity, basals and targets accordingly.
+7 dienas naudokite [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) ([paprastuoju režimu](#preferences-simple-mode) jis įjungtas pagal numatymą) ir stebėkite [baltą liniją **pagrindinio ekrano** grafike](#AapsScreens-section-g-additional-graphs), rodančią, kaip jūsų jautrumas insulinui didėja ar mažėja dėl sporto, hormonų ir pan. Stebėkite įskiepio **OpenAPS SMB** ekraną (**Konfigūracija → DKS → Atidaryti įskiepį**), kuriame matyti, kaip **AAPS** atitinkamai koreguoja jautrumą, valandines bazes ir tikslus.
 
-This is a good time to review your settings for [Sensitivity Detection](#Config-Builder-sensitivity-detection). You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs).
+Tai tinkamas laikas peržiūrėti [jautrumo nustatymo](#Config-Builder-sensitivity-detection) nustatymus. Savo jautrumą galite matyti pagrindiniame ekrane [papildomame grafike](#AapsScreens-section-g-additional-graphs).
 
-Additionally, you can use [Autotune](#autotune-how-autotune-calculates-adjustments) as a one off to check your basals remain accurate or do a traditional basal test.
+Be to, galite vienkartinai pasinaudoti [Autotune](#autotune-how-autotune-calculates-adjustments), kad patikrintumėte, ar jūsų valandinės bazės vis dar tikslios, arba atlikti įprastą valandinės bazės testą.
 
 (objectives-objective9)=
 ## Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
 
-In **Objective 9**, you will tackle and use **"Super Micro Bolus (SMB)"** as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, and why basal is set to zero temporarily after SMBs are given (zero-temping).
+**9 mokymo etape** išbandysite ir naudosite **„supermikrobolusą (SMB)“** kaip vieną pagrindinių funkcijų. Perskaitę privalomą medžiagą gerai suprasite, kas yra SMB, kaip jie veikia ir kodėl po SMB bazė laikinai nustatoma lygi nuliui (nulinė laikina bazė).
 
-Minimal time to complete this objective: **28 days**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+Trumpiausias laikas šiam mokymo etapui atlikti: **28 dienos**. Tai privalomas laukimo laikas. Kol šis laikas nesibaigs, negalėsite pereiti prie kito mokymo etapo.
 
-- The [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand **SMB** and the concept of **zero-temping**.
-- Once done, you can [raise maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) to get **SMBs** working more effectively. maxIOB now includes all **IOB**, not just accumulated basal. This threshold pauses **SMBs** until IOB drops below this value (_e.g._ **maxIOB** is set to 7U and a bolus of 8U is given to cover a meal: SMBs will be paused and not given unless **IOB** drops below 7U). A good start is setting **maxIOB** = **average meal bolus + 3x max daily basal** where "max daily basal" is the maximum hourly value in any time segment of the day. See [objective 7](#objectives-objective7) as reference.
-- Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Settings → Absorption settings → min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
+- [SMB skyrių šioje dokumentacijoje](#Open-APS-features-super-micro-bolus-smb) ir [oref1 aprašymą openAPS dokumentacijoje](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) būtina perskaityti, kad suprastumėte **SMB** ir **nulinės laikinos bazės** (zero-temping) principą.
+- Tai atlikę, galite [padidinti maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over), kad **SMB** veiktų veiksmingiau. Dabar maxIOB apima visą **AIO**, ne tik sukauptą bazinį insuliną. Ši riba sustabdo **SMB**, kol AIO nukrenta žemiau šios reikšmės (_pvz.,_ **maxIOB** nustatytas 7 V ir valgiui padengti suleidžiamas 8 V bolusas: SMB bus sustabdyti ir neleidžiami, kol **AIO** nenukris žemiau 7 V). Gera pradžia – nustatyti **maxIOB** = **vidutinis valgio bolusas + 3 × didžiausia paros valandinė bazė**, kur „didžiausia paros valandinė bazė“ yra didžiausia valandinė reikšmė bet kuriame paros intervale. Žr. [7 mokymo etapą](#objectives-objective7).
+- Įvertinkite angliavandenių įsisavinimo greitį ir, jei jis jums atrodo per lėtas ar per greitas, apsvarstykite galimybę pakeisti parametrą „min_5m_carbimpact“ skiltyje [Nustatymai → Angliavandenių įsisavinimo parametrai → min_5m_carbimpact](#Preferences-min_5m_carbimpact).
 
 (objectives-objective10)=
-## Objective 10: Automation
+## 10 mokymo etapas: Automatizacija
 
-**Automations** become available when **Objective 10** is started.
+**Automatizacijos** tampa prieinamos, kai pradedamas **10 mokymo etapas**.
 
-Minimal time to complete this objective: **28 days**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+Trumpiausias laikas šiam mokymo etapui atlikti: **28 dienos**. Tai privalomas laukimo laikas. Kol šis laikas nesibaigs, negalėsite pereiti prie kito mokymo etapo.
 
-Read the documentation page [Automation](../DailyLifeWithAaps/Automations.md) first.
+Pirmiausia perskaitykite dokumentacijos puslapį [Automatizacija](../DailyLifeWithAaps/Automations.md).
 
-Set up the most basic automation rule; for example trigger an Android notification in a few minutes:
-- Open **Manage → Automation** and tap the **+** button (**Add rule**).
-- Enter a **Task name**, for example "My first automation notification".
-- Under **Condition**, tap "**EDIT**".
-  - Tap "**Add trigger**" and select "**Time**". **AAPS** creates an entry for today at the current time.
-  - Change the time so that it triggers in a few minutes.
-  - Tap the **Save** icon (top right) to go back to the rule.
-- Under **Action**, tap "**ADD**" and select "**Notification**".
-  - Enter a message in the action card, for example "My first automation".
-- Tap the **Save** icon (top right) and make sure the rule is **Enabled**.
-- Wait until the time triggers the notification (note that depending on your phone, it can be a few minutes late)
+Sukurkite pačią paprasčiausią automatizacijos taisyklę, pavyzdžiui, kad po kelių minučių būtų parodytas Android pranešimas:
+- Atverkite **Valdymas → Automatizacija** ir palieskite mygtuką **+** (**Pridėti taisyklę**).
+- Įveskite **Užduoties pavadinimas**, pavyzdžiui, „Mano pirmasis automatizacijos pranešimas“.
+- Po **Sąlyga** palieskite „**Keisti**“.
+  - Palieskite „**Pridėti sąlygą**“ ir pasirinkite „**Laikas**“. **AAPS** sukuria įrašą šiandienai su dabartiniu laiku.
+  - Pakeiskite laiką taip, kad sąlyga suveiktų po kelių minučių.
+  - Palieskite piktogramą **Išsaugoti** (viršuje dešinėje), kad grįžtumėte į taisyklę.
+- Po **Veiksmas** palieskite „**PRIDĖTI**“ ir pasirinkite „**Pranešimas**“.
+  - Veiksmo kortelėje įveskite pranešimą, pavyzdžiui, „Mano pirmoji automatizacija“.
+- Palieskite piktogramą **Išsaugoti** (viršuje dešinėje) ir įsitikinkite, kad taisyklė yra **Įjungta**.
+- Palaukite, kol nustatytu laiku pasirodys pranešimas (priklausomai nuo telefono, jis gali vėluoti kelias minutes)
 
-You can then experiment with setting up a more useful **Automation**. The documentation page gives a few examples, and you can search for "Automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. There is also a dedicated channel in the [Discord](https://discord.gg/4fQUWHZ4Mw) community.
+Tada galite išbandyti naudingesnės **automatizacijos** sukūrimą. Dokumentacijos puslapyje yra keli pavyzdžiai, be to, [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) grupėje galite paieškoti „Automation“ ekrano kopijų. [Discord](https://discord.gg/4fQUWHZ4Mw) bendruomenėje taip pat yra tam skirtas kanalas.
 
-For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
+Pavyzdžiui, jei kiekvieną rytą prieš mokyklą ar darbą tuo pačiu metu valgote tuos pačius pusryčius, galite sukurti **automatizaciją**, pvz., „tikslas-prieš-pusryčius“, kuri likus 30 minučių iki pusryčių nustatytų šiek tiek žemesnį **laikiną tikslą**. Tokiu atveju jūsų sąlygoje greičiausiai bus „pasikartojantis laikas“: pasirenkamos konkrečios savaitės dienos (pirmadienis, antradienis, trečiadienis, ketvirtadienis, penktadienis) ir konkretus laikas (06:30). Veiksmas bus „Pradėti laikiną tikslą“ su žemesne nei įprastai tikslo reikšme ir 30 minučių trukme.
 
-## When all objectives are completed
+## Kai visi mokymo etapai atlikti
 
-Once you have accomplished all the **Objectives**, the list shows each of them with a tick and the date it was accomplished. The **Objectives** item disappears from the bottom navigation; you can still open the list with **Configuration → Constraints → Objectives → Open plugin**.
+Kai atliksite visus **mokymo etapus**, sąraše prie kiekvieno iš jų bus rodoma varnelė ir atlikimo data. Punktas **Mokymo etapai** dingsta iš apatinės navigacijos; sąrašą vis tiek galite atverti per **Konfigūracija → Apribojimai → Mokymo etapai → Atidaryti įskiepį**.
 
-![All objectives accomplished](../images/objectives/objectives_completed.png)
+![Visi mokymo etapai atlikti](../images/objectives/objectives_completed.png)
 
-Press "**More**" under an objective to see its tasks again:
+Paspauskite „**Daugiau**“ po mokymo etapu, kad vėl pamatytumėte jo užduotis:
 
-![Details of an accomplished objective](../images/objectives/objective_1_details.png)
+![Atlikto mokymo etapo informacija](../images/objectives/objective_1_details.png)
 
 (CompletingTheObjectives-go-back-in-objectives)=
 ## Grįžti į tikslus
 
-If you wish to go back in the **Objectives** for whatever reason, open the finished **Objective** with "**More**" and tap "**Reset finished state**":
+Jei dėl kokios nors priežasties norite grįžti atgal **mokymo etapuose**, atverkite atliktą **mokymo etapą** mygtuku „**Daugiau**“ ir palieskite „**Išvalyti užbaigimą**“:
 
 ![Grįžti į tikslus](../images/Objective_ClearFinished.png)
 
-In the same way, the **Objective** you are currently working on can be restarted with "**Reset started state**".
+Taip pat **mokymo etapą**, kurį dabar atliekate, galima pradėti iš naujo mygtuku „**Išvalyti pradžią**“.
