@@ -1,539 +1,539 @@
-# AAPS Setup Wizard
+# Installationsguiden i AAPS
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
+När du startar **AAPS** första gången guidas du av "**Installationsguiden**", så att du snabbt kan göra alla grundinställningar i appen på en gång. **Installationsguiden** leder dig steg för steg, så att du inte glömmer något viktigt. Till exempel är **behörighetsinställningarna** grundläggande för att ställa in **AAPS** rätt.
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimize/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+Men du behöver inte ställa in allt helt första gången du använder **Installationsguiden**. Du kan lätt lämna guiden och komma tillbaka till den senare. Efter **Installationsguiden** finns tre sätt att optimera eller ändra konfigurationen vidare. De förklaras i nästa avsnitt. Så det gör inget om du hoppar över några punkter i installationsguiden. Du kan enkelt ställa in dem senare.
 
-During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
+Under och direkt efter **Installationsguiden** märker du kanske inga stora förändringar i **AAPS**. För att aktivera din **AAPS**-loop måste du följa stegen i **Mål** och aktivera en funktion i taget. Du startar **Mål 1** i slutet av Installationsguiden. Det är du som styr **AAPS**, inte tvärtom.
 
 ```{admonition} Preview Objectives
 :class: note
-If you are keen to know the structure of the objectives, please read [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) but then come back here to run the Setup Wizard first.
+Om du vill veta hur målen är uppbyggda kan du läsa [Slutföra målen](../SettingUpAaps/CompletingTheObjectives.md), men kom sedan tillbaka hit och kör Installationsguiden först.
 
 ```
 
-From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
+Vi vet av erfarenhet att nya användare ofta stressar sig själva för att ställa in **AAPS** så snabbt som möjligt. Det kan leda till frustration, eftersom det finns mycket att lära sig.
 
-So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
+Ta därför god tid på dig när du ställer in din loop. Fördelarna med en väl fungerande **AAPS**-loop är stora.
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+Om det finns ett fel i dokumentationen, eller om du har en bättre idé om hur något kan förklaras, kan du be communityn om hjälp, se [Kontakta andra användare](../GettingHelp/WhereCanIGetHelp.md).
 ```
-## Welcome message
+## Välkomstmeddelande
 
-When the Setup Wizard opens, it greets you with a short welcome message and immediately shows a "**Permissions Required**" panel at the bottom of the screen (see next section).
+När Installationsguiden öppnas visar den ett kort välkomstmeddelande och direkt en panel, "**Behörigheter krävs**", längst ned på skärmen (se nästa avsnitt).
 
-Once you have granted the permissions, the panel closes and the welcome screen shows a "**Next**" button. Press "**NEXT**" to continue:
+När du har beviljat behörigheterna stängs panelen och välkomstskärmen visar knappen "**Nästa**". Tryck på "**Nästa**" för att fortsätta:
 
 ![Welcome](../images/setup-wizard/Wizard-Welcome.png)
 
-## Required permissions
+## Behörigheter som krävs
 
-**AAPS** needs a few permissions to operate correctly. The Wizard groups them on a single "**Permissions Required**" panel, each with its own "**Grant**" button. Grant them one by one — the icon next to each item turns into a tick once it is done.
+**AAPS** behöver några behörigheter för att fungera rätt. Guiden samlar dem i en panel, "**Behörigheter krävs**", och var och en har en egen knapp "**Bevilja**". Bevilja dem en i taget. Ikonen bredvid varje rad blir en bock när den är klar.
 
-![Permissions](../images/setup-wizard/Wizard-Permissions.png)
+![Behörigheter](../images/setup-wizard/Wizard-Permissions.png)
 
-### Battery optimization
+### Batterioptimering
 
-Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+Batteriförbrukningen på smartphones är viktig att tänka på, eftersom batteriernas prestanda fortfarande är ganska begränsad. Därför är Android-systemet på din smartphone restriktivt med att låta appar köras och använda processortid och därmed batteri.
 
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be excluded from battery optimization.
+Men **AAPS** måste köras regelbundet, _t.ex._ för att ta emot glukosvärdena med några minuters mellanrum och sedan använda algoritmen för att bestämma hur dina glukosnivåer ska hanteras, utifrån dina inställningar. Därför måste appen undantas från batterioptimering.
 
-Press "**Grant**" next to "**Battery Optimization**", then select "**Allow**" on the "Let app always run in background?" dialog:
+Tryck på "**Bevilja**" bredvid "**Batterioptimering**" och välj sedan "**Allow**" (Tillåt) i dialogrutan "Let app always run in background?" (Vill du låta appen alltid köras i bakgrunden?):
 
-![Allow Background](../images/setup-wizard/Wizard-Permissions-Battery.png)
+![Tillåt i bakgrunden](../images/setup-wizard/Wizard-Permissions-Battery.png)
 
 (SetupWizard-StoragePermission)=
 
-### AAPS Directory
+### AAPS-katalog
 
-**AAPS** needs to store its settings and log information on the permanent storage of your smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+**AAPS** måste spara sina inställningar och logginformation i telefonens permanenta lagring. Permanent lagring betyder att informationen finns kvar även efter att du har startat om telefonen. Annan information går helt enkelt förlorad, eftersom den inte sparas permanent.
 
-Press "**Grant**" next to "**AAPS Directory**". This opens the file system on your phone and lets you choose where **AAPS** stores its information.
+Tryck på "**Bevilja**" bredvid "**AAPS-katalog**". Då öppnas filsystemet på telefonen, och du kan välja var **AAPS** sparar sin information.
 
 ```{tip}
-Choosing the default AAPS directory is recommended.</br>
-Do **not** select a subdirectory of AAPS.
+Vi rekommenderar att du väljer standardkatalogen AAPS.</br>
+Välj **inte** en underkatalog till AAPS.
 ```
 
-The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it and choose "**USE THIS FOLDER**":
+Standardkatalogen är **AAPS**, men du kan använda vilken egen katalog du vill. Skapa katalogen om det behövs, öppna den och välj "**USE THIS FOLDER**" (ANVÄND DEN HÄR MAPPEN):
 
-![Select folder](../images/setup-wizard/Wizard-Permissions-Directory.png)
+![Välj mapp](../images/setup-wizard/Wizard-Permissions-Directory.png)
 
-Confirm with "**ALLOW**" that you wish to grant access to **AAPS** to the selected directory:
+Bekräfta med "**ALLOW**" (TILLÅT) att du vill ge **AAPS** åtkomst till den valda katalogen:
 
-![Allow access to the folder](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
+![Tillåt åtkomst till mappen](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
 
-### Notifications
+### Aviseringar
 
-Android requires special permission for apps if they want to send you notifications.
+Android kräver en särskild behörighet för appar som vill skicka aviseringar till dig.
 
-While it is a good feature to disable notifications _e.g._ from social media apps, it is essential that you allow **AAPS** to send you notifications.
+Det kan vara bra att stänga av aviseringar, _t.ex._ från sociala medier, men det är mycket viktigt att du låter **AAPS** skicka aviseringar till dig.
 
-Press "**Grant**" next to "**Notifications**" and select "**Allow**" at the system prompt:
+Tryck på "**Bevilja**" bredvid "**Aviseringar**" och välj "**Allow**" (Tillåt) i systemfrågan:
 
-![Allow notifications](../images/setup-wizard/Wizard-Permissions-Notifications.png)
+![Tillåt aviseringar](../images/setup-wizard/Wizard-Permissions-Notifications.png)
 
-### Alarms and reminders
+### Alarm och påminnelser
 
-On **Android 14 and newer**, **AAPS** needs the "**Alarms and reminders**" permission so that alarms can wake the screen while **AAPS** is in the background, and so that reminders (for example from an **Automation**) ring on time.
+På **Android 14 och senare** behöver **AAPS** behörigheten "**Alarm och påminnelser**", så att larm kan väcka skärmen medan **AAPS** körs i bakgrunden, och så att påminnelser (till exempel från en **Automation**) ljuder i rätt tid.
 
-This item is only shown while it is needed. Once **AAPS** is excluded from battery optimization (see above), Android grants exact alarms automatically and the item disappears. If it is still listed, press "**Grant**" next to "**Alarms and reminders**". This opens a system settings screen for **AAPS**; enable the toggle and return to **AAPS**. On Android 13 and older this item does not appear and no action is needed.
+Den här raden visas bara när den behövs. När **AAPS** är undantagen från batterioptimering (se ovan) beviljar Android exakta alarm automatiskt, och raden försvinner. Om den fortfarande finns i listan, tryck på "**Bevilja**" bredvid "**Alarm och påminnelser**". Då öppnas en skärm i systeminställningarna för **AAPS**. Slå på reglaget och gå tillbaka till **AAPS**. På Android 13 och äldre visas inte den här raden, och du behöver inte göra något.
 
-Once all the permissions show a tick (three, or four on Android 14 and newer), the "**Permissions Required**" panel closes by itself and you can press "**NEXT**" on the welcome screen to continue.
+När alla behörigheter visar en bock (tre, eller fyra på Android 14 och senare) stängs panelen "**Behörigheter krävs**" av sig själv, och du kan trycka på "**Nästa**" på välkomstskärmen för att fortsätta.
 
 (setup-wizard-bluetooth-battery-optimisation)=
-### Bluetooth battery optimization
+### Batterioptimering för Bluetooth
 
 ```{admonition} Extra Android setting, not part of the Wizard
 :class: note
-The following is additional Android configuration done outside of the Setup Wizard. It is not one of the "Grant" buttons above, but it is important for a reliable pump connection.
+Följande är extra Android-inställningar som görs utanför Installationsguiden. Det är inte en av knapparna "Bevilja" ovan, men det är viktigt för en stabil pumpanslutning.
 ```
 
-Newer versions of Android have added battery optimization to the system Bluetooth application too.
+Nyare Android-versioner har lagt till batterioptimering även för systemappen Bluetooth.
 
-As well as disabling battery optimization for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
+Förutom att stänga av batterioptimering för **AAPS** behöver du troligen också stänga av den för systemappen Bluetooth. Om du inte gör detta kan pumpanslutningen brytas och andra problem kan uppstå.
 
-***NOTE: The xDrip documentation covers how to do this here: [xDrip documentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
+***OBS! xDrip-dokumentationen beskriver hur du gör detta här: [xDrip-dokumentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
 
-Follow these steps on Android 16; other versions will vary slightly from the provided screenshots:
+Följ de här stegen på Android 16. Andra versioner skiljer sig lite från skärmbilderna:
 
-1. Open Android settings and search for **Apps**, and open the Apps settings.
+1. Öppna Android-inställningarna, sök efter **Apps** (Appar) och öppna inställningarna för appar.
 
    ![settings_apps](../images/setup-wizard/settings_apps.png)
 
-2. You will see the App settings, however we need to expand to see all apps, click on **See all apps** to expand.
+2. Du ser nu appinställningarna, men vi måste visa alla appar. Klicka på **See all apps** (Visa alla appar).
 
    ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
 
-3. As the Bluetooth app is a system app, it's hidden by default, so we need to show system apps. Click on the **three dots** (⋮) on the top right (1). Then click on **Show system** (2).
+3. Bluetooth-appen är en systemapp och är därför dold som standard, så vi måste visa systemappar. Klicka på **de tre prickarna** (⋮) uppe till höger (1). Klicka sedan på **Show system** (Visa system) (2).
 
    ![settings_apps](../images/setup-wizard/show_system.png)
 
-4. Search for the `Bluetooth` app and click on `Bluetooth` and/or `Legacy Bluetooth` if both are present ensure the procedure is followed for both.
+4. Sök efter appen `Bluetooth` och klicka på `Bluetooth` och/eller `Legacy Bluetooth`. Om båda finns, gör stegen för båda.
 
-   ***NOTE: It's safe to ignore the `Bluetooth MIDI Service` this is not used by AAPS***
+   ***OBS! Du kan ignorera `Bluetooth MIDI Service`. Den används inte av AAPS***
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. På Android 12 klickar du på `Battery` (Batteri), på Android 13+ på `App battery usage` (Appens batterianvändning).
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
-5. On Android 12+ select the `Unrestricted` option, on Android 15+ you need to expand the `Allow background usage` setting, click on the section highlighted in red to do this then follow step 6 to complete.
+5. På Android 12+ väljer du alternativet `Unrestricted` (Obegränsad). På Android 15+ måste du först fälla ut inställningen `Allow background usage` (Tillåt användning i bakgrunden): klicka på området som är markerat med rött och följ sedan steg 6 för att slutföra.
 
    ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
 
-6. On Android 16 Select `Unrestricted`
+6. På Android 16 väljer du `Unrestricted` (Obegränsad)
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
-## License agreement
+## Licensavtal
 
-In the end user license agreement there is important information about the legal aspects of using **AAPS**. Please read it carefully.
+Licensavtalet för slutanvändare innehåller viktig information om de juridiska aspekterna av att använda **AAPS**. Läs det noga.
 
-If you don't understand, or can't agree to the end user license agreement please don't use **AAPS** at all!
+Om du inte förstår eller inte kan godkänna licensavtalet för slutanvändare ska du inte använda **AAPS** alls!
 
-If you understand and agree, please press the "**I UNDERSTAND AND AGREE**" button and follow the Setup Wizard:
+Om du förstår och godkänner, tryck på knappen "**JAG FÖRSTÅR OCH GODKÄNNER**" och följ Installationsguiden:
 
-![EULA](../images/setup-wizard/Wizard-EULA.png)
+![Licensavtal (EULA)](../images/setup-wizard/Wizard-EULA.png)
 
-A "**Next**" button appears once you have agreed. Press "**NEXT**".
+Knappen "**Nästa**" visas när du har godkänt. Tryck på "**Nästa**".
 
-The next screen, "**Permissions**", lists the permissions again. They should all show a tick, as you granted them at the start. If one is missing, press "**Grant**" next to it. Press "**NEXT**" to continue:
+Nästa skärm, "**Behörigheter**", visar behörigheterna igen. Alla bör visa en bock, eftersom du beviljade dem i början. Om någon saknas, tryck på "**Bevilja**" bredvid den. Tryck på "**Nästa**" för att fortsätta:
 
-![Permissions granted](../images/setup-wizard/Wizard-Permissions-Granted.png)
+![Behörigheter beviljade](../images/setup-wizard/Wizard-Permissions-Granted.png)
 
-## Master password
+## Huvudlösenord
 
-As the configuration of **AAPS** contains some sensitive data (_e.g._ the access token for your Nightscout server) it is encrypted by a password you set here.
+Eftersom konfigurationen av **AAPS** innehåller känsliga data (_t.ex._ åtkomsttoken till din Nightscout-server) krypteras den med ett lösenord som du ställer in här.
 
-The Wizard shows "**Password not set**". Press "**Set**":
+Guiden visar "**Lösenord inte inställt**". Tryck på "**Ställ in**":
 
-![Master password not set](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
+![Huvudlösenord inte inställt](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
 
-This opens the "**Protection**" screen. Press "**Master password**" (shown as "Password not set"):
+Då öppnas skärmen "**Skydd**". Tryck på "**Huvudlösenord**" (visas som "Lösenord inte inställt"):
 
-![Protection](../images/setup-wizard/Wizard-Protection.png)
+![Skydd](../images/setup-wizard/Wizard-Protection.png)
 
-Enter the same password in both fields and press "**OK**":
+Ange samma lösenord i båda fälten och tryck på "**OK**":
 
 ![Password](../images/setup-wizard/Wizard-Password.png)
 
-Go back with the arrow in the top left corner. The Wizard now shows "**Password set!**":
+Gå tillbaka med pilen i det övre vänstra hörnet. Guiden visar nu "**Lösenord sparat!**":
 
-![Master password set](../images/setup-wizard/Wizard-MasterPassword-Set.png)
+![Huvudlösenord inställt](../images/setup-wizard/Wizard-MasterPassword-Set.png)
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+**TAPPA INTE BORT DITT HUVUDLÖSENORD**. Skriv ner det, _t.ex._ på Google Drive. Det är ett bra ställe, eftersom Google säkerhetskopierar det åt dig. Din telefon eller dator kan krascha, och då kanske du inte har någon aktuell kopia. Om du glömmer ditt huvudlösenord kan det vara svårt att senare återställa din profilkonfiguration och dina framsteg i **Mål**.
 ```
 
-When you are done, press "**NEXT**" to go to the next screen.
+När du är klar, tryck på "**Nästa**" för att gå till nästa skärm.
 
 (setup-wizard-import-settings)=
 ## Import settings
 
-This screen is only shown when **AAPS** finds settings exported earlier in the **AAPS** directory ("Stored settings found"), for example when you reinstall the app or move to a new phone.
+Den här skärmen visas bara när **AAPS** hittar tidigare exporterade inställningar i **AAPS**-katalogen ("Tidigare sparade inställningar hittade"), till exempel när du installerar om appen eller byter till en ny telefon.
 
-- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md).
-- To start with a new configuration, press "**NEXT**" and continue with the Wizard.
+- Om du vill återställa din tidigare konfiguration, tryck på "**Importera inställningar**" — se [Skapa och återställa säkerhetskopior](../Maintenance/ExportImportSettings.md).
+- Om du vill börja med en ny konfiguration, tryck på "**Nästa**" och fortsätt med guiden.
 
 ![Import settings](../images/setup-wizard/Wizard-ImportSettings.png)
 
-## Units (mg/dL <-> mmol/L)
+## Enheter (mg/dl <-> mmol/l)
 
-Please select if your glucose values are in mg/dL or mmol/L, then press the "**NEXT**" button:
+Välj om dina glukosvärden ska visas i mg/dl eller mmol/l och tryck sedan på knappen "**Nästa**":
 
-![Units](../images/setup-wizard/Wizard-Units.png)
+![Enheter](../images/setup-wizard/Wizard-Units.png)
 
-## Display Settings
+## Visningsinställningar
 
-Here you set the "**LOW mark**" and "**HIGH mark**" for the sensor glucose display. Glucose values between these two marks are shown as "in range". You can leave the default values (72 and 180 mg/dL) for now, and edit them later.
+Här ställer du in "**LÅG-markering**" och "**HÖG-markering**" för visningen av sensorns glukosvärden. Glukosvärden mellan dessa två markeringar visas som "inom målområdet". Du kan behålla standardvärdena (72 och 180 mg/dl) tills vidare och ändra dem senare.
 
-The values you choose only affect the graphical presentation of the diagram, and nothing else.
+Värdena du väljer påverkar bara hur diagrammet visas, inget annat.
 
-Your glucose target _e.g._ is configured separately in your profile.
+_T.ex._ ställs ditt målvärde för glukos in separat i din profil.
 
-Your range to analyze TIR (time in range) is configured separately in your reporting server.
+Området för att analysera TIR (tid inom målområdet) ställer du in separat i din rapportserver.
 
-Adjust the marks with the "−" / "+" buttons if needed, then press the "**NEXT**" button:
+Justera markeringarna med knapparna "−" / "+" vid behov och tryck sedan på knappen "**Nästa**":
 
-![Display Settings](../images/setup-wizard/Wizard-Display.png)
+![Visningsinställningar](../images/setup-wizard/Wizard-Display.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-## Communication
+## Kommunikation
 
-The "**Communication**" screen lists the plugins used to upload, synchronize and broadcast your data:
+Skärmen "**Kommunikation**" visar de plugin som används för att ladda upp, synkronisera och sända ut dina data:
 
-- **SMS Communicator** – remote control of **AAPS** using SMS commands
-- **NSClientV3** – synchronizes your data with Nightscout using the v3 API
-- **Tidepool** – uploads data to Tidepool
-- **xDrip** – sends data to xDrip
-- **Open Humans** – upload and donate your diabetes data to scientific projects
-- **Wear** – monitor and control **AAPS** from a WearOS watch
-- **External Companion Apps** – data broadcasting to various external apps
-- **Garmin** – connection to a Garmin device
+- **SMS-kommunikation** – fjärrstyrning av **AAPS** med SMS-kommandon
+- **NSClientV3** – synkroniserar dina data med Nightscout via API v3
+- **Tidepool** – laddar upp data till Tidepool
+- **xDrip** – skickar data till xDrip
+- **Open Humans** – ladda upp och donera dina diabetesdata till vetenskapliga projekt
+- **Klocka (Wear)** – övervaka och styr **AAPS** från en Wear OS-klocka
+- **Externa hjälpappar** – sänder ut data till olika externa appar
+- **Garmin** – anslutning till en Garmin-enhet
 
-![Communication](../images/setup-wizard/Wizard-Communication.png)
+![Kommunikation](../images/setup-wizard/Wizard-Communication.png)
 
-Scroll down to see the rest of the list:
+Skrolla nedåt för att se resten av listan:
 
-![Communication more](../images/setup-wizard/Wizard-Communication-More.png)
+![Kommunikation, fler](../images/setup-wizard/Wizard-Communication-More.png)
 
-You could configure several of these now, but for the first run we will just focus on the reporting server. If you are not able to set it up at the moment, skip it for now — you can configure it later.
+Du kan ställa in flera av dessa nu, men första gången fokuserar vi bara på rapportservern. Om du inte kan ställa in den just nu, hoppa över den så länge — du kan ställa in den senare.
 
-In this example we use Nightscout as reporting server. Tick the box on the right of "**NSClientV3**" to enable it. For Tidepool it is even simpler, as you only need your personal login information.
+I det här exemplet använder vi Nightscout som rapportserver. Markera rutan till höger om "**NSClientV3**" för att aktivera den. För Tidepool är det ännu enklare, eftersom du bara behöver dina personliga inloggningsuppgifter.
 
-Once enabled, press "**Settings**" below NSClientV3 to configure it:
+När den är aktiverad, tryck på "**Inställningar**" under NSClientV3 för att ställa in den:
 
 ![NSClientV3](../images/setup-wizard/Wizard-Communication-NSClient.png)
 
-Here you configure the Nightscout reporting server. The NSClientV3 settings are shown as one scrollable page:
+Här ställer du in Nightscout-rapportservern. Inställningarna för NSClientV3 visas som en sida som du kan rulla:
 
-![NSClientV3 settings](../images/setup-wizard/Wizard-NSClientV3.png)
+![Inställningar för NSClientV3](../images/setup-wizard/Wizard-NSClientV3.png)
 
-Press "**Nightscout URL**" and enter your personal Nightscout server address (the URL you set up yourself, or were given by your service provider). Confirm with "**OK**".
+Tryck på "**Nightscout-URL**" och ange adressen till din egen Nightscout-server (den URL som du själv har ställt in eller har fått från din tjänsteleverantör). Bekräfta med "**OK**".
 
-Press "**Nightscout access token**" and enter the access token for your Nightscout server. Without this token, access will not work. If you don't have it yet, please check the documentation for setting up the reporting server.
+Tryck på "**Nightscout åtkomsttoken**" och ange åtkomsttoken för din Nightscout-server. Utan denna token fungerar inte åtkomsten. Om du inte har den ännu, läs dokumentationen om hur du ställer in rapportservern.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout.
+Låt "**Använd websockets**" vara på för kommunikation i realtid med Nightscout.
 
-The remaining sections can be left at their defaults for now. They are described here so you know where to find them later:
+Övriga avsnitt kan ha kvar sina standardvärden tills vidare. De beskrivs här så att du vet var du hittar dem senare:
 
-**Alarm options** — Nightscout alarms, announcements and stale-data thresholds. Leave the switches off for now; we only open them so you are aware of the options.
+**Larminställningar** — Nightscout-larm, notiser och gränser för inaktuell data. Låt reglagen vara av tills vidare. Vi öppnar dem bara så att du känner till alternativen.
 
-**Connection settings** — choose how data is transferred. Caregivers must enable "**Use cellular data**", otherwise the phone of the person they care for (_e.g._ a child) cannot upload outside Wi-Fi range, _e.g._ on the way to school. Other users can disable cellular transfer to save data or battery. If in doubt, leave everything enabled.
+**Anslutningsinställningar** — välj hur data överförs. Anhöriga måste slå på "**Använd mobildata**". Annars kan telefonen hos den de tar hand om (_t.ex._ ett barn) inte ladda upp utanför Wi-Fi-räckvidd, _t.ex._ på väg till skolan. Andra användare kan stänga av överföring via mobilnätet för att spara data eller batteri. Om du är osäker, låt allt vara på.
 
-![Connection settings](../images/setup-wizard/Wizard-NSClientV3-Connection.png)
+![Anslutningsinställningar](../images/setup-wizard/Wizard-NSClientV3-Connection.png)
 
-**Advanced Settings** — enable "**Log app start event**" if you want to see in Nightscout when the app restarts (useful for caregivers). Keep "**Create announcements from errors**" and "**Create announcements from carbs required**" enabled. Leave "**Use slow sync**" off; you would only use it if the Nightscout server is slow to process a large amount of data.
+**Avancerade inställningar** — slå på "**Logga appstart**" om du vill se i Nightscout när appen startar om (bra för anhöriga). Låt "**Skapa notiser vid fel**" och "**Skapa notiser vid behov av kolhydrater**" vara på. Låt "**Använd långsam synkronisering**" vara av. Du behöver det bara om Nightscout-servern är långsam med att hantera stora mängder data.
 
-![Advanced settings](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
+![Avancerade inställningar](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
 
-Go back to the list of plugins and press "**NEXT**" to go to the next screen.
+Gå tillbaka till listan med plugin och tryck på "**Nästa**" för att gå till nästa skärm.
 
-## Client control
+## Klientkontroll
 
-From **AAPS** version 4, client devices running **AAPSClient** can be **paired** with this phone (the **master**) and control it with signed commands sent over Nightscout. This is the new recommended way to control **AAPS** remotely — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for the full explanation and setup.
+Från **AAPS** version 4 kan klientenheter som kör **AAPSClient** **parkopplas** med den här telefonen (**huvudenheten**) och styra den med signerade kommandon som skickas via Nightscout. Detta är det nya rekommenderade sättet att styra **AAPS** på distans — se [Styrning huvudenhet ↔ klient](../RemoteFeatures/ClientMasterControl.md) för hela förklaringen och inställningen.
 
-There is nothing you have to configure on this screen now; you can pair clients at any time later from **Manage → Authorized clients**. There you add a client with a **QR code** (it sets up Nightscout on the client too) or with a **PIN**, and give it a **role**.
+Du behöver inte ställa in något på den här skärmen nu. Du kan parkoppla klienter när som helst senare från **Hantera → Auktoriserade klienter**. Där lägger du till en klient med en **QR-kod** (den ställer också in Nightscout på klienten) eller med en **PIN-kod**, och ger den en **roll**.
 
-- "**Authorized clients**" — manage the paired client devices allowed to control this master.
-- "**Nightscout data acceptance**" — accepting treatments and data entered directly in Nightscout (the old, less secure way) is now turned off by default. Only open these settings if you still need it, _e.g._ to enter data through Nightscout or third-party apps.
+- "**Auktoriserade klienter**" — hantera de parkopplade klientenheter som får styra den här huvudenheten.
+- "**Godkännande av Nightscout-data**" — att ta emot behandlingar och data som matas in direkt i Nightscout (det gamla, mindre säkra sättet) är nu avstängt som standard. Öppna bara de här inställningarna om du fortfarande behöver det, _t.ex._ för att mata in data via Nightscout eller appar från tredje part.
 
-When client control is already on — always in [Simple Mode](#preferences-simple-mode) — this phone is in [hardened mode](#client-master-control-hardened-mode): it takes changes only from paired clients, so the screen explains hardened mode instead of offering the "**Nightscout data acceptance**" settings.
+När klientstyrning redan är på — alltid i [Enkelt läge](#preferences-simple-mode) — är den här telefonen i [härdat läge](#client-master-control-hardened-mode): den tar bara emot ändringar från parkopplade klienter. Därför förklarar skärmen härdat läge i stället för att visa inställningarna "**Godkännande av Nightscout-data**".
 
-![Client control](../images/setup-wizard/Wizard-ClientControl.png)
+![Klientkontroll](../images/setup-wizard/Wizard-ClientControl.png)
 
-"**Nightscout data acceptance**" opens the "**Synchronization**" settings, where each kind of data received from Nightscout has its own switch:
+"**Godkännande av Nightscout-data**" öppnar inställningarna för "**Synkronisering**", där varje typ av data som tas emot från Nightscout har ett eget reglage:
 
-![Nightscout data acceptance settings](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
+![Inställningar för godkännande av Nightscout-data](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
 
-Press "**NEXT**" to go to the next screen.
+Tryck på "**Nästa**" för att gå till nästa skärm.
 
 (setup-wizard-instance-name)=
-## Who is using this phone?
+## Vem använder den här telefonen?
 
-Here you enter the name of the person using this phone. It tells this **AAPS** instance apart from others in reports and when synchronizing, for example if two children in your family use **AAPS**. It is also used in the names of exported settings files and shown on the watch.
+Här anger du namnet på personen som använder den här telefonen. Namnet skiljer den här **AAPS**-instansen från andra i rapporter och vid synkronisering, till exempel om två barn i din familj använder **AAPS**. Det används också i namnen på exporterade inställningsfiler och visas på klockan.
 
-It can be anything. You can change it later in **Settings → General → Instance name**.
+Det kan vara vad som helst. Du kan ändra det senare i **Inställningar → Generellt → Instansnamn**.
 
-Press "**NEXT**" to go to the next screen.
+Tryck på "**Nästa**" för att gå till nästa skärm.
 
-![Name](../images/setup-wizard/Wizard-Name.png)
+![Namn](../images/setup-wizard/Wizard-Name.png)
 
-## Patient type
+## Patienttyp
 
-Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
+Här väljer du "Patienttyp". Det är viktigt, eftersom **AAPS** har olika gränser beroende på patientens ålder. Det är viktigt av säkerhetsskäl.
 
-Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for a meal.
+Här ställer du också in **Maximal bolus** för en måltid. Alltså den största bolus du behöver ge för att täcka dina vanliga måltider. Det är en säkerhetsfunktion som hjälper dig att undvika att råka ge för mycket insulin när du tar bolus för en måltid.
 
-The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
+Den andra gränsen fungerar på liknande sätt, men gäller den största mängd kolhydrater du räknar med att äta.
 
-After setting these values, press "**NEXT**" to go to the next screen:
+När du har ställt in dessa värden, tryck på "**Nästa**" för att gå till nästa skärm:
 
 ![Patient](../images/setup-wizard/Wizard-PatientType.png)
 
 ## Insulin
 
-Here you configure the insulin used in your pump. New insulin profiles require a **DIA of at least 5 h**.
+Här ställer du in insulinet som används i din pump. Nya insulinprofiler kräver en **DIA på minst 5 h**.
 
-Press the "**Insulin**" button to open the insulin editor:
+Tryck på knappen "**Insulin**" för att öppna insulinredigeraren:
 
 ![Insulin](../images/setup-wizard/Wizard-Insulin.png)
 
-In the editor you can give the insulin a **nickname** and set its **Peak** (in minutes) and **DIA** (in hours). The quickest way is to load a preset with "**Load peak from**" — choose **Novorapid**, **Fiasp** or **Lyumjev** — and the peak is filled in for you. The graph at the bottom previews the resulting insulin activity curve.
+I redigeraren kan du ge insulinet ett **smeknamn** och ställa in dess **Topp** (i minuter) och **DIA** (i timmar). Det snabbaste sättet är att läsa in en förinställning med "**Ladda topp från**" — välj **Novorapid**, **Fiasp** eller **Lyumjev** — så fylls toppen i åt dig. Grafen längst ned visar en förhandsvisning av insulinets aktivitetskurva.
 
-![Insulin editor](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
+![Insulinredigerare](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
 
-Pick the preset that matches your insulin, for example **Fiasp**:
+Välj den förinställning som passar ditt insulin, till exempel **Fiasp**:
 
 ![Insulin Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
 
 ```{admonition} Use your insulin brand's preset peak
 :class: danger
-Please don't change the peak unless you are an expert — usually the preset values work well for each branded insulin.
+Ändra inte toppen om du inte är expert — de förinställda värdena fungerar oftast bra för varje insulinmärke.
 ```
 
-If you are a new **AAPS** user, set **DIA** to 9 hours — see [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to understand why.
+Om du är ny **AAPS**-användare, ställ in **DIA** på 9 timmar — se [Insulinets verkningstid (DIA) och topp](#Config-Builder-insulin-dia) för att förstå varför.
 
 ```{admonition} "Insulin configuration changed" dialog
 :class: note
-If a paired client (_e.g._ another phone) has changed the insulin configuration, a dialog appears. Press **OK** to load their changes, or **Cancel** to keep editing (your next save will overwrite theirs).
+Om en parkopplad klient (_t.ex._ en annan telefon) har ändrat insulinkonfigurationen visas en dialogruta. Tryck på **OK** för att läsa in ändringarna, eller på **Avbryt** för att fortsätta redigera (nästa gång du sparar skrivs deras ändringar över).
 ```
 
-![Insulin changed](../images/setup-wizard/Wizard-Insulin-Changed.png)
+![Insulinkonfiguration ändrad](../images/setup-wizard/Wizard-Insulin-Changed.png)
 
-Press the save icon (top right), then press "**NEXT**" to go to the next screen.
+Tryck på spara-ikonen (uppe till höger) och tryck sedan på "**Nästa**" för att gå till nästa skärm.
 
-## Blood sugar source
+## BG-källa
 
-Here you select where **AAPS** gets its glucose data from. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
+Här väljer du varifrån **AAPS** får sina glukosdata. Läs dokumentationen för din [BG-källa](../Getting-Started/CompatiblesCgms.md).
 
-Many sources are available — scroll through the list and select the one you use:
+Det finns många källor — rulla genom listan och välj den som du använder:
 
 ![BG Source](../images/setup-wizard/Wizard-BGSource.png)
 
-Once you select a source, its card expands and shows two buttons: "**Settings**" to adjust how the data is received, and "**Open plugin**" to open the source's own screen. In the example below, **BYODA** is selected. Some sources have nothing to configure at this stage, so you can usually go straight to the next screen:
+När du väljer en källa fälls dess kort ut och visar två knappar: "**Inställningar**" för att justera hur data tas emot, och "**Öppna plugin**" för att öppna källans egen skärm. I exemplet nedan är **BYODA** vald. Vissa källor har inget att ställa in i det här steget, så du kan oftast gå direkt till nästa skärm:
 
-![BG Source settings](../images/setup-wizard/Wizard-BGSource-Settings.png)
+![Inställningar för BG-källa](../images/setup-wizard/Wizard-BGSource-Settings.png)
 
-After making your selection, press "**NEXT**" to go to the next screen.
+När du har gjort ditt val, tryck på "**Nästa**" för att gå till nästa skärm.
 
 (setup-wizard-profile)=
-## Profile
+## Profil
 
-Now we are entering a very important part of the Setup Wizard.
+Nu kommer vi till en mycket viktig del av installationsguiden.
 
-Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
+Läs dokumentationen om [profiler](../SettingUpAaps/YourAapsProfile.md) innan du försöker ange dina profiluppgifter på nästa skärm.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-An accurate profile is necessary to control the safe action of **AAPS**.
+En korrekt profil krävs för att **AAPS** ska fungera säkert.
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
+Du måste ha tagit fram och diskuterat din profil med din läkare, och den måste ha visat sig fungera genom lyckade tester av basal, ISF och KH-kvot!
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+Om en robot får felaktig indata blir resultatet fel – varje gång. **AAPS** kan bara arbeta med den information som den får. Om din profil är för stark riskerar du hypoglykemi, och om den är för svag riskerar du hyperglykemi. 
 ```
 
-Press the "**Profile**" button to open the profile editor:
+Tryck på knappen "**Profil**" för att öppna profilredigeraren:
 
-![Profile](../images/setup-wizard/Wizard-Profile.png)
+![Profil](../images/setup-wizard/Wizard-Profile.png)
 
-The editor opens empty ("No records available"). Press the "**+**" button at the bottom to create a new profile:
+Redigeraren öppnas tom ("Inga poster tillgängliga"). Tryck på knappen "**+**" längst ned för att skapa en ny profil:
 
-![Profile empty](../images/setup-wizard/Wizard-Profile-Empty.png)
+![Tom profil](../images/setup-wizard/Wizard-Profile-Empty.png)
 
-You can have several profiles in the long-term if needed. We only create one here.
+Du kan ha flera profiler på längre sikt om det behövs. Här skapar vi bara en.
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: note
-The example profile here is only to show you how to enter data.
+Exempelprofilen här visar bara hur du matar in data.
 
-It is not intended to be an accurate profile or something very well optimized, because each person's needs are so different.
+Den är inte tänkt att vara en korrekt eller väl optimerad profil, eftersom varje persons behov är så olika.
 
-Don't use it for actually looping!
+Använd den inte för att loopa på riktigt!
 ```
 
-The new profile (for example "**LocalProfile1**") has four tabs: **IC**, **ISF**, **BAS** and **TARG**. Press the pencil next to the profile name to rename it. Fill in every tab — a tab stays red and shows an error message until it contains valid values:
+Den nya profilen (till exempel "**LocalProfile1**") har fyra flikar: **IC**, **ISF**, **BAS** och **MÅL**. Tryck på pennan bredvid profilnamnet för att byta namn på profilen. Fyll i alla flikar — en flik förblir röd och visar ett felmeddelande tills den innehåller giltiga värden:
 
-![New profile with errors](../images/setup-wizard/Wizard-Profile-New-Error.png)
+![Ny profil med fel](../images/setup-wizard/Wizard-Profile-New-Error.png)
 
-Press "**IC**" and enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values. Use the "**+**" button to add more time blocks:
+Tryck på "**IC**" och ange dina värden för [KH-kvot](#your-aaps-profile-insulin-to-carbs-ratio). Använd knappen "**+**" för att lägga till fler tidsblock:
 
 ![IC](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Press "**ISF**" and enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
+Tryck på "**ISF**" och ange dina [ISF-värden](#your-aaps-profile-insulin-sensitivity-factor):
 
 ![ISF](../images/setup-wizard/Wizard-Profile-ISF.png)
 
-Press "**BAS**" and enter your [basal values](#your-aaps-profile-basal-rates):
+Tryck på "**BAS**" och ange dina [basalvärden](#your-aaps-profile-basal-rates):
 
 ![BAS](../images/setup-wizard/Wizard-Profile-BAS.png)
 
-Press "**TARG**" and enter your blood sugar target values.
+Tryck på "**MÅL**" och ange dina målvärden för blodsocker.
 
-For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
+Vid öppen loop kan målet vara ett bredare intervall. Annars ber **AAPS** dig hela tiden att ändra den tillfälliga basalen eller någon annan inställning, och det kan bli tröttsamt.
 
-Later, for closed looping, you will generally have only one value for top and bottom. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
+Senare, med sluten loop, har du oftast bara ett värde för övre och nedre gräns. Det gör det lättare för **AAPS** att nå målet och ger dig bättre diabeteskontroll totalt sett.
 
-![TARG](../images/setup-wizard/Wizard-Profile-TARG.png)
+![MÅL](../images/setup-wizard/Wizard-Profile-TARG.png)
 
-When all four tabs are valid, the **save icon** (top right) becomes active. Press it to save the profile:
+När alla fyra flikar är giltiga blir **spara-ikonen** (uppe till höger) aktiv. Tryck på den för att spara profilen:
 
-![Save icon](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
+![Spara-ikon](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
 
-Close the editor with the "**X**" in the top left corner. The profile summary then shows its name, its total daily basal (∑), the units and the IC and ISF values with their graphs:
+Stäng redigeraren med "**X**" i det övre vänstra hörnet. Profilsammanfattningen visar sedan namnet, den totala basalen per dygn (∑), enheterna och värdena för KH-kvot och ISF med sina grafer:
 
-![Save](../images/setup-wizard/Wizard-Profile-Save.png)
+![Spara](../images/setup-wizard/Wizard-Profile-Save.png)
 
 ```{admonition} Several defined but only one active profile
 :class: note
-You can have several profiles defined, but only one activated profile running at any given time.
+Du kan ha flera profiler, men bara en aktiverad profil åt gången.
 ```
 
-Press the "**▶**" (activate) button at the bottom right. The "**Activate**" screen opens. As no insulin is in use yet, it first asks you to select the insulin you are using, so that the profile switch can record it. The "**Activate**" button stays greyed out until you do:
+Tryck på knappen "**▶**" (aktivera) längst ned till höger. Skärmen "**Aktivera**" öppnas. Eftersom inget insulin används ännu ber den dig först välja det insulin du använder, så att profilbytet kan registrera det. Knappen "**Aktivera**" är gråtonad tills du har gjort det:
 
-![Select the insulin first](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
+![Välj insulinet först](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
 
-Press "**Select Insulin**" and choose the insulin you configured earlier. Leave the percentage at 100 % and press "**Activate**":
+Tryck på "**Välj insulin**" och välj det insulin som du ställde in tidigare. Låt procenten vara 100 % och tryck på "**Aktivera**":
 
-![Activate](../images/setup-wizard/Wizard-Profile-Activate.png)
+![Aktivera](../images/setup-wizard/Wizard-Profile-Activate.png)
 
-A profile switch dialog appears. In this case let it stay as preset and confirm with "**OK**":
+En dialogruta för profilbyte visas. Låt den vara som den är förinställd i det här fallet och bekräfta med "**OK**":
 
 ```{admonition} Profile switch dialog
 :class: note
-You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile to suit the circumstances.
+Senare lär du dig hur du använder den här allmänna dialogrutan i situationer som sjukdom eller träning, när du behöver ändra din profil efter omständigheterna.
 ```
 
-![Switch](../images/setup-wizard/Wizard-Profile-Switch.png)
+![Byte](../images/setup-wizard/Wizard-Profile-Switch.png)
 
-Your profile is now active. Press "**NEXT**" to go to the next screen.
+Din profil är nu aktiv. Tryck på "**Nästa**" för att gå till nästa skärm.
 
-## Insulin pump
+## Insulinpump
 
-Now you select your insulin pump. Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
+Nu väljer du din insulinpump. Läs dokumentationen för din [insulinpump](../Getting-Started/CompatiblePumps.md).
 
-Scroll the list and select your pump. In this example we use the "**Virtual Pump**", which is useful while you are still learning and have not connected a real pump yet:
+Rulla i listan och välj din pump. I det här exemplet använder vi "**Virtuell pump**". Den är bra medan du fortfarande lär dig och inte har anslutit en riktig pump än:
 
 ![Pump](../images/setup-wizard/Wizard-Pump.png)
 
-Many pumps are supported — scroll down to find yours:
+Många pumpar stöds — rulla nedåt för att hitta din:
 
-![Pump more](../images/setup-wizard/Wizard-Pump-More.png)
+![Pump, fler](../images/setup-wizard/Wizard-Pump-More.png)
 
-When you select a real pump, **AAPS** asks for a confirmation, because it will copy the basal rates of your profile to the pump and overwrite the basal rates stored there. Press "**OK**" only if the basal rates in your **AAPS** profile are correct; otherwise press "**Cancel**" and switch to the pump later:
+När du väljer en riktig pump ber **AAPS** om en bekräftelse, eftersom basaldoserna i din profil då kopieras till pumpen och skriver över de basaldoser som finns sparade där. Tryck bara på "**OK**" om basaldoserna i din **AAPS**-profil är rätt. Annars trycker du på "**Avbryt**" och byter till pumpen senare:
 
-![Confirmation when selecting a hardware pump](../images/setup-wizard/Wizard-Pump-Confirmation.png)
+![Bekräftelse när du väljer en riktig pump](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
+Om pumpen du väljer kommunicerar via Bluetooth ber **AAPS** om behörighet att ansluta till enheter i närheten när du har slutfört guiden (se [Bluetooth-behörighet](#setup-wizard-bluetooth-permission)).
 
-If you have already set up your profile and know how to connect your pump, feel free to connect it now. Otherwise leave it on **Virtual Pump** for the moment — you can change it anytime, or leave the Setup Wizard using the arrow in the top left corner and let **AAPS** first show you some blood glucose values.
+Om du redan har ställt in din profil och vet hur du ansluter din pump kan du gärna ansluta den nu. Annars låter du den stå på **Virtuell pump** så länge — du kan ändra det när som helst, eller lämna Installationsguiden med pilen i det övre vänstra hörnet och låta **AAPS** först visa dig några blodsockervärden.
 
-Press "**NEXT**" to go to the next screen.
+Tryck på "**Nästa**" för att gå till nästa skärm.
 
-## APS algorithm
+## APS-algoritm
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name, the SMB feature of the algorithm is disabled until you are familiar with AAPS and have worked through the first objectives. OpenAPS SMB is newer and generally better than OpenAPS AMA anyway.
+Använd algoritmen OpenAPS SMB som din APS-algoritm. Trots namnet är algoritmens SMB-funktion avstängd tills du känner till AAPS och har gått igenom de första målen. OpenAPS SMB är ändå nyare och i allmänhet bättre än OpenAPS AMA.
 
-SMB is disabled at the start because the SMB feature reacts faster to a blood sugar increase, using a Super Micro Bolus instead of increasing the basal rate percentage. Because your profile is generally not as good in the beginning as it is after some experience, the feature is disabled at first.
+SMB är avstängd i början eftersom SMB-funktionen reagerar snabbare på en blodsockerökning. Den använder en supermikrobolus i stället för att höja basalens procent. Eftersom din profil oftast inte är lika bra i början som efter en tids erfarenhet är funktionen avstängd från början.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: note
-OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+OpenAPS AMA är den mest grundläggande algoritmen och stöder inte mikrobolusar för att korrigera höga värden. Det kan finnas situationer där det är bättre att använda den här algoritmen, men det är inte rekommendationen.
 ```
 
-Select "**OpenAPS SMB**", then press "**Settings**" to see the details:
+Välj "**OpenAPS SMB**" och tryck sedan på "**Inställningar**" för att se detaljerna:
 
 ![APS](../images/setup-wizard/Wizard-APS.png)
 
-The only option here is "**Use dynamic sensitivity**". Leave it off and change nothing for now — just read the text.
+Det enda alternativet här är "**Använd dynamisk känslighet**". Låt det vara av och ändra inget just nu — läs bara texten.
 
-Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
+På grund av begränsningarna i **Mål** kan du ändå inte använda "sluten loop" eller "SMB-funktioner" just nu.
 
-Go back and press "**NEXT**" to go to the next screen:
+Gå tillbaka och tryck på "**Nästa**" för att gå till nästa skärm:
 
-![APS settings](../images/setup-wizard/Wizard-APS-Settings.png)
+![APS-inställningar](../images/setup-wizard/Wizard-APS-Settings.png)
 
-## Sensitivity detection
+## Känslighetsdetektering
 
-Leave "**Sensitivity Oref1**" selected as the standard sensitivity plugin:
+Låt "**Oref1**" vara valt som standardplugin för känslighet:
 
-![Sensitivity](../images/setup-wizard/Wizard-Sensitivity.png)
+![Känslighet](../images/setup-wizard/Wizard-Sensitivity.png)
 
-If you press "**Settings**" you can review the absorption settings; the defaults (_e.g._ a 6 h absorption cutoff) are fine for now.
+Om du trycker på "**Inställningar**" kan du se absorptionsinställningarna. Standardvärdena (_t.ex._ en absorptionsgräns på 6 h) räcker för tillfället.
 
-![Sensitivity settings](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
+![Känslighetsinställningar](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
 
-Press "**NEXT**" to go to the next screen.
+Tryck på "**Nästa**" för att gå till nästa skärm.
 
-## Start Objective 1
+## Starta Mål 1
 
-You are now entering the Objectives — the qualification for access to further **AAPS** features.
+Nu kommer du till målen — kvalificeringen för att få tillgång till fler funktioner i **AAPS**.
 
-Press "**Open Objectives**":
+Tryck på "**Öppna mål**":
 
-![Objectives](../images/setup-wizard/Wizard-Objectives.png)
+![Mål](../images/setup-wizard/Wizard-Objectives.png)
 
-Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective. But this is the start.
+Här startar vi Mål 1, även om vår konfiguration ännu inte är helt klar för att slutföra det här Målet. Men det är början.
 
-Press the "**Start**" button of **Objective 1**:
+Tryck på knappen "**Starta**" för **Mål 1**:
 
-![Objectives list](../images/setup-wizard/Wizard-Objectives-List.png)
+![Lista över mål](../images/setup-wizard/Wizard-Objectives-List.png)
 
-The objective expands to show its individual checks. You can see that you already made some progress, while other items are still to be done:
+Målet fälls ut och visar sina enskilda kontroller. Du ser att du redan har gjort vissa framsteg, medan andra punkter återstår:
 
-![Objective started](../images/setup-wizard/Wizard-Objectives-Started.png)
+![Mål startat](../images/setup-wizard/Wizard-Objectives-Started.png)
 
-Go back, then press "**FINISH**" to complete the Setup Wizard:
+Gå tillbaka och tryck sedan på "**Slutför**" för att slutföra Installationsguiden:
 
-![Finish](../images/setup-wizard/Wizard-Objectives-Finish.png)
+![Slutför](../images/setup-wizard/Wizard-Objectives-Finish.png)
 
-After pressing "**FINISH**" you arrive at the main screen of **AAPS**. A "**Notification**" panel may open with information messages, for example about the profile switch you just made — press "**Dismiss**" below each message to clear it.
+När du har tryckt på "**Slutför**" kommer du till huvudskärmen i **AAPS**. En panel, "**Avisering**", kan öppnas med informationsmeddelanden, till exempel om profilbytet du just gjorde — tryck på "**Avfärda**" under varje meddelande för att ta bort det.
 
-If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
+Om du råkar lämna Installationsguiden någon gång kan du antingen starta om guiden eller ändra [konfigurationen av AAPS-loopen](../SettingUpAaps/ChangeAapsConfiguration.md) manuellt.
 
 (setup-wizard-bluetooth-permission)=
-## Bluetooth permission
+## Bluetooth-behörighet
 
-If you select a pump that connects over Bluetooth (for example **Omnipod Dash**), a banner reminds you that **AAPS** needs Bluetooth permission. You can press "**Dismiss**" for now — the permission is granted after you finish the Wizard:
+Om du väljer en pump som ansluter via Bluetooth (till exempel **Omnipod Dash**) påminner en banner dig om att **AAPS** behöver Bluetooth-behörighet. Du kan trycka på "**Avfärda**" tills vidare — behörigheten beviljas när du har slutfört guiden:
 
-![Bluetooth needed](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
+![Bluetooth behövs](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
 
-Once the Setup Wizard is finished, the **AAPS** main screen shows a "**Permissions Required**" panel. The other permissions are already granted; press "**Grant**" next to "**Bluetooth**":
+När Installationsguiden är klar visar huvudskärmen i **AAPS** en panel, "**Behörigheter krävs**". De andra behörigheterna är redan beviljade. Tryck på "**Bevilja**" bredvid "**Bluetooth**":
 
-![Bluetooth Grant](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
+![Bevilja Bluetooth](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
 
-Select "**Allow**" so **AAPS** can find and connect to your pump:
+Välj "**Allow**" (Tillåt) så att **AAPS** kan hitta och ansluta till din pump:
 
-![Bluetooth Allow](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
+![Tillåt Bluetooth](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
 
-If your **AAPS** loop is now fully setup, please move on to the next section ["Completing the objectives"](../SettingUpAaps/CompletingTheObjectives.md).
+Om din **AAPS**-loop nu är helt inställd, gå vidare till nästa avsnitt ["Slutföra målen"](../SettingUpAaps/CompletingTheObjectives.md).
