@@ -1,16 +1,16 @@
-# How to configure a Huawei phone
+# Come configurare un telefono Huawei
 
 **Which phones this page covers:** Huawei phones running **EMUI 12 to EMUI 15**. All of these are based on Android 12, the minimum for the current version of **AAPS**. On a phone with an older EMUI version, you can only use an [older AAPS version](#maintenance-android-version-aaps-version).
 
-```{admonition} HarmonyOS NEXT / HarmonyOS 5 phones :class: warning
+```{admonition} Telefoni con HarmonyOS NEXT / HarmonyOS 5 :class: warning
 
-Recent Huawei phones sold in China run HarmonyOS NEXT (HarmonyOS 5 and above). This system is not Android anymore and cannot run **AAPS**. ```
+I telefoni Huawei recenti venduti in Cina usano HarmonyOS NEXT (HarmonyOS 5 e successivi). This system is not Android anymore and cannot run **AAPS**. ```
 
 Huawei phones close apps running in the background very aggressively. Apply all the settings below to **AAPS** and to your CGM app (for example xDrip+ or Juggluco), otherwise the loop and glucose readings may stop when the screen is off.
 
 Menu names can differ slightly between models. If you can't find a setting, type its name in the search bar at the top of **Settings**.
 
-The screenshots below come from an older EMUI version. The settings are the same on EMUI 12 to 15.
+The screenshots below come from an older EMUI version. Le impostazioni sono le stesse su EMUI da 12 a 15.
 
 ## Ignore battery optimization
 
@@ -32,26 +32,26 @@ The screenshots below come from an older EMUI version. The settings are the same
     - **Run in background**
 4. Repeat for your CGM app.
 
-![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+![Huawei - opzioni della batteria](../images/Huawei_BatteryOptions.png)
 
 ## Lock AAPS in the recent apps
 
 Locked apps are not closed when you clear the recent apps list.
 
 1. Open the recent apps list.
-2. Swipe down on the **AAPS** card. A lock symbol appears on the card.
+2. Scorri verso il basso sulla scheda di **AAPS**. A lock symbol appears on the card.
 3. Do the same for your CGM app.
 
 ![Huawei - lock app](../images/Huawei_LockApp.png)
 
-## Power saving mode
+## Modalità risparmio energetico
 
 Keep **Power saving mode** and **Ultra power saving** turned off (**Settings > Battery**). They close background apps regardless of the settings above.
 
-## If AAPS still stops in the background
+## Se AAPS si ferma ancora in background
 
 See [Don't kill my app](https://dontkillmyapp.com/huawei) for more Huawei-specific solutions.
 
-## Honor phones
+## Telefoni Honor
 
 Honor is a separate brand now and its phones run MagicOS instead of EMUI. The background settings are very similar: look for **App launch** in the app's battery settings, turn off **Manage automatically** and allow all three options, then remove the app from battery optimization.
