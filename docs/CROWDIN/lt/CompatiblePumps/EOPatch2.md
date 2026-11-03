@@ -1,278 +1,278 @@
 # EOPatch2
 
-The patch needs rapid-acting U-100 insulin, such as NovoRapid or Humalog. Use the rapid-acting insulin your doctor has prescribed for you.
+Pompai reikia greito veikimo U-100 insulino, pavyzdžiui, NovoRapid ar Humalog. Naudokite greito veikimo insuliną, kurį jums paskyrė gydytojas.
 
-The smallest dose the patch can deliver is 0.05 U. Set every basal rate in your **Profile** to at least 0.05 U/hr, in steps of 0.05 U/hr. Otherwise **AAPS** rounds each rate to the nearest 0.05 U/hr (never down to 0) and uses the rates the patch really gives, so the total insulin per day differs slightly from your **Profile**. In the same way, boluses must be at least 0.05 U.
+Mažiausia dozė, kurią pompa gali suleisti, yra 0,05 V. Visas valandines bazes savo **profilyje** nustatykite ne mažesnes nei 0,05 V/val., 0,05 V/val. žingsniais. Kitaip **AAPS** kiekvieną reikšmę suapvalina iki artimiausių 0,05 V/val. (niekada iki 0) ir naudoja tas reikšmes, kurias pompa iš tikrųjų suleidžia, todėl bendras insulino kiekis per parą šiek tiek skiriasi nuo jūsų **profilio**. Taip pat ir bolusai turi būti ne mažesni nei 0,05 V.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Pompos galimybės su AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually.
+* Ryšį su **AAPS** palaiko per telefono vidinį Bluetooth, be papildomo ryšio įrenginio.
+* Vasaros laiko ir laiko juostos pakeitimus reikia tvarkyti rankiniu būdu.
 
-## Pump setup
+## Pompos sąranka
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. In the **Pump** section, select **EOPatch2**.
-1. Press the Back key to return to the main screen.
+1. Atidarykite **meniu** (☰) viršutiniame kairiajame **AAPS** pagrindinio ekrano kampe ir pasirinkite **Konfigūracija**.
+1. Skiltyje **Pompa** pasirinkite **EOPatch2**.
+1. Paspauskite mygtuką „Atgal“, kad grįžtumėte į pagrindinį ekraną.
 
-![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png) ![Configuration > Pump with the EOPatch2 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![Meniu su punktu „Konfigūracija“](../images/v4/Configuration/configuration_menu.png) ![Konfigūracija > Pompa su EOPatch2 įskiepiu](../images/v4/Configuration/configuration_pump_list_3.png)
 
-Once it is selected, the **EOPatch2** card shows two buttons, **Settings** and **Open plugin**:
+Kai jis pasirinktas, **EOPatch2** kortelėje rodomi du mygtukai: **Parametrai** ir **Atidaryti įskiepį**:
 
-![The EOPatch2 plugin selected in Configuration > Pump](../images/v4/Pumps/eopatch2_enabled.png)
+![EOPatch2 įskiepis, pasirinktas skiltyje Konfigūracija > Pompa](../images/v4/Pumps/eopatch2_enabled.png)
 
 ## Parametrai
 
-Open the EOPatch2 settings in one of two ways:
+EOPatch2 nustatymus galite atidaryti dviem būdais:
 
-* press **Settings** on the **EOPatch2** card in **Configuration**, or
-* open the pump screen (**Manage** → **Pump**) and press the gear icon in the top-right corner.
+* **Konfigūracija** ekrane **EOPatch2** kortelėje spauskite **Parametrai** arba
+* atidarykite pompos ekraną (**Valdymas** → **Pompa**) ir spauskite krumpliaračio piktogramą viršutiniame dešiniajame kampe.
 
-There are three settings:
+Yra trys nustatymai:
 
-![EOPatch2 settings](../images/v4/Pumps/eopatch_settings.png)
+![EOPatch2 nustatymai](../images/v4/Pumps/eopatch_settings.png)
 
 ### Low reservoir Alerts
 
-A warning appears when the insulin left in the patch drops to this amount or less. You can set it from 10 to 50 U, in steps of 5 U. The default is 10 U.
+Įspėjimas rodomas, kai pompoje likęs insulino kiekis sumažėja iki šio kiekio ar mažiau. Galite nustatyti nuo 10 iki 50 V, 5 V žingsniais. Numatyta reikšmė yra 10 V.
 
-### Patch expiration Reminder
+### Priminimas apie pompos galiojimą
 
-Reminds you how much time is left before the current patch expires. You can set it from 1 to 24 hours, in steps of 1 hour. The default is 4 hours.
+Primena, kiek laiko liko, kol baigsis dabartinės pompos galiojimas. Galite nustatyti nuo 1 iki 24 valandų, 1 valandos žingsniais. Numatyta reikšmė yra 4 valandos.
 
-### Patch buzzer Reminders
+### Garsiniai priminimai
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. It has no effect on your normal basal. The default is off.
+Kai ši parinktis įjungta, pompa pypteli, kai bolusas, ištęstas bolusas ar laikina bazė prasideda ir kai baigiasi. Įprastai valandinei bazei tai neturi jokios įtakos. Numatyta: išjungta.
 
-## Activating a new patch
+## Naujos pompos aktyvavimas
 
-### Open the activation wizard
+### Atidarykite aktyvavimo vedlį
 
-Open the pump screen with **Manage** → **Pump** (or press **Open plugin** on the **EOPatch2** card in **Configuration**). When no patch is active, the screen shows **Not activated** and an **Activate Patch** button at the bottom.
+Atidarykite pompos ekraną per **Valdymas** → **Pompa** (arba **Konfigūracija** ekrane **EOPatch2** kortelėje spauskite **Atidaryti įskiepį**). Kai nėra aktyvios pompos, ekrane rodoma **Neaktyvuota**, o apačioje mygtukas **Aktyvuoti pompą**.
 
-Press **Activate Patch** to start the wizard.
+Spauskite **Aktyvuoti pompą**, kad paleistumėte vedlį.
 
-![The EOPatch2 pump screen with the Activate Patch button](../images/v4/Pumps/eopatch_pump_screen.png)
+![EOPatch2 pompos ekranas su mygtuku „Aktyvuoti pompą“](../images/v4/Pumps/eopatch_pump_screen.png)
 
-The wizard guides you through each step. The row of dots at the top shows how far along you are.
+Vedlys padės atlikti kiekvieną žingsnį. Taškų eilutė viršuje rodo, kiek žingsnių jau atlikote.
 
 ```{note}
-If you have never activated a **Profile** in **AAPS**, the wizard first shows a **Profile required** page. Select the profile to use and press **Activate profile**.
+Jei **AAPS** dar niekada neaktyvavote **profilio**, vedlys pirmiausia parodo puslapį **Reikalingas profilis**. Pasirinkite norimą profilį ir spauskite **Aktyvuoti profilį**.
 ```
 
-### Filling Insulin
+### Pildomas insulinas
 
-Insert the syringe needle into the insulin fill port on the patch. Slowly push the plunger to fill the patch. Once there is more than 80 U in the patch, it beeps once and starts up (boots).
+Įdurkite švirkšto adatą į pompos insulino pildymo angą. Lėtai spauskite stūmoklį, kad pripildytumėte pompą. Kai pompoje bus daugiau nei 80 V, ji vieną kartą pypteli ir įsijungia.
 
-When you hear the beep, press **Start pairing**.
+Išgirdę pyptelėjimą, spauskite **Pradėti susiejimą**.
 
-![The Filling Insulin step with the Start pairing button](../images/v4/Pumps/eopatch_activate_filling.png)
+![Žingsnis „Pildomas insulinas“ su mygtuku „Pradėti susiejimą“](../images/v4/Pumps/eopatch_activate_filling.png)
 
 ```{warning}
-- Do not turn the needle action lever until the wizard tells you to. Turning it too early can cause serious problems during filling or the safety check.
-- The patch holds 80 to 200 U. If you put in less than 80 U, the patch does not work.
-- Take the insulin out of the refrigerator 15 to 30 minutes before filling, so it reaches room temperature. The insulin must be at least 10°C.
+- Nesukite adatos įvedimo svirtelės, kol vedlys to nepaprašys. Pasukus ją per anksti, pildymo ar saugos patikros metu gali kilti rimtų problemų.
+- Į pompą telpa nuo 80 iki 200 V. Jei įpilsite mažiau nei 80 V, pompa neveiks.
+- Išimkite insuliną iš šaldytuvo 15–30 minučių prieš pildymą, kad jis sušiltų iki kambario temperatūros. Insulino temperatūra turi būti ne žemesnė nei 10 °C.
 ```
 
-### Patch pairing
+### Pompa susiejama
 
-**AAPS** now tries to pair with the patch automatically. During pairing, two Android Bluetooth pairing requests appear. Press **OK** on the first one. Press **OK** again on the second one, which shows a passkey.
+**AAPS** dabar automatiškai bando susieti pompą. Susiejimo metu atsiranda dvi Android Bluetooth susiejimo užklausos. Pirmojoje spauskite **OK**. Antrojoje, kurioje rodomas prieigos kodas, vėl spauskite **OK**.
 
 ```{warning}
-- Keep the patch and your phone within 30 cm of each other while pairing.
-- After the patch has booted, it beeps every 3 minutes until pairing is complete.
-- You must finish activating the patch within 60 minutes of it booting. If you cannot, discard the patch.
+- Susiejimo metu pompą ir telefoną laikykite ne toliau kaip 30 cm vienas nuo kito.
+- Pompai įsijungus, ji pypteli kas 3 minutes, kol susiejimas baigiamas.
+- Pompos aktyvavimą turite užbaigti per 60 minučių nuo jos įsijungimo. Jei nespėsite, pompą pašalinkite.
 ```
 
-![Patch pairing step](../images/EOPatch/Bild6.png) ![First Bluetooth pairing request](../images/EOPatch/Bild7.png) ![Second Bluetooth pairing request with the passkey](../images/EOPatch/Bild8.png)
+![Žingsnis „Pompa susiejama“](../images/EOPatch/Bild6.png) ![Pirmoji Bluetooth susiejimo užklausa](../images/EOPatch/Bild7.png) ![Antroji Bluetooth susiejimo užklausa su prieigos kodu](../images/EOPatch/Bild8.png)
 
 ```{admonition} Older screenshot
 :class: note
-The two Bluetooth pairing screenshots are from an earlier **AAPS** version: the **AAPS** screen behind the Android pairing request looks different in **AAPS** 4.
+Šios dvi Bluetooth susiejimo ekrano kopijos yra iš ankstesnės **AAPS** versijos: **AAPS** ekranas už Android susiejimo užklausos **AAPS** 4 versijoje atrodo kitaip.
 ```
 
-### Select insulin
+### Insulino pasirinkimas
 
-Select the insulin you filled the patch with and press **Next**. **AAPS** applies a profile switch with this insulin after activation.
+Pasirinkite insuliną, kuriuo pripildėte pompą, ir spauskite **Toliau**. Po aktyvavimo **AAPS** su šiuo insulinu atlieka profilio keitimą.
 
-### Prepare for attaching the Patch
+### Pasiruoškite priklijuoti pompą
 
-Remove the adhesive tape from the patch, then press **Next**.
+Nuo pompos nuimkite lipnią juostą ir spauskite **Toliau**.
 
-If a needle sticks out, or if the patch is wet, dirty or its adhesive tape is folded, press **Discard** instead and use a new patch.
+Jei adata kyšo arba pompa šlapia, nešvari ar jos lipni juosta užlenkta, spauskite **Pašalinti** ir naudokite naują pompą.
 
-![Prepare for attaching the Patch step](../images/EOPatch/Bild9.png)
+![Žingsnis „Pasiruoškite priklijuoti pompą“](../images/EOPatch/Bild9.png)
 
-### Site location
+### Infuzijos vieta
 
-This step only appears if **Manage pump site rotation** is turned on in the site rotation settings. Tap the place on the body diagram where you will attach the patch and press **Next**, or press **Skip**.
+Šis žingsnis rodomas tik tada, jei vietų rotacijos nustatymuose įjungta **Valdyti infuzijos vietų rotaciją**. Kūno schemoje palieskite vietą, kur priklijuosite pompą, ir spauskite **Toliau** arba spauskite **Praleisti**.
 
-### Attaching the Patch
+### Pompos priklijavimas
 
-Insulin should go into a spot with fatty tissue under the skin, but few nerves or blood vessels. The abdomen, arm or thigh are good choices. Clean and dry the site, then attach the patch to your skin.
+Insulinas turi patekti į vietą, kur po oda yra riebalinio audinio, bet mažai nervų ar kraujagyslių. Tinka pilvas, ranka arba šlaunis. Nuvalykite ir nusausinkite vietą, tada priklijuokite pompą prie odos.
 
-Check the infusion site, then press **Start safety check**.
+Patikrinkite infuzijos vietą ir spauskite **Pradėti saugos patikrą**.
 
 ```{warning}
-- Press down the edges of the patch tape evenly, so the whole patch sticks firmly to your skin.
-- If the patch does not stick completely, air can get between the patch and your skin. This weakens the adhesive and the water resistance of the patch.
+- Tolygiai prispauskite pompos lipnios juostos kraštus, kad visa pompa tvirtai prisitvirtintų prie odos.
+- Jei pompa prilimpa ne visa, tarp pompos ir odos gali patekti oro. Tai susilpnina pompos lipnumą ir atsparumą vandeniui.
 ```
 
-![Attaching the Patch step](../images/EOPatch/Bild10.png)
+![Žingsnis „Pompos priklijavimas“](../images/EOPatch/Bild10.png)
 
-### Safety check
+### Saugos patikra
 
-The safety check takes about 30 seconds. When it is finished, the patch beeps once. If it fails, press **Retry**.
+Saugos patikra trunka apie 30 sekundžių. Kai ji baigiama, pompa vieną kartą pypteli. Jei patikra nepavyksta, spauskite **Bandyti dar kartą**.
 
 ```{warning}
-For safe use, do not turn the needle action lever until the safety check is complete.
+Saugos sumetimais nesukite adatos įvedimo svirtelės, kol saugos patikra nebaigta.
 ```
 
-![Attaching the Patch step with the Start safety check button](../images/EOPatch/Bild11.png) ![Safety check in progress](../images/EOPatch/Bild12.png)
+![Žingsnis „Pompos priklijavimas“ su mygtuku „Pradėti saugos patikrą“](../images/EOPatch/Bild11.png) ![Vykdoma saugos patikra](../images/EOPatch/Bild12.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots from **Prepare for attaching the Patch** to **Safety check** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+Ekrano kopijos nuo **Pasiruoškite priklijuoti pompą** iki **Saugos patikra** yra iš ankstesnės **AAPS** versijos ir **AAPS** 4 versijoje gali atrodyti kitaip.
 ```
 
 ### Inserting the needle
 
-Hold the patch firmly. Turn the needle action lever upward by more than 100° to insert the needle. The patch beeps once when the needle is inserted correctly. Then keep turning the lever all the way to remove it. Press **Next**.
+Tvirtai laikykite pompą. Pasukite adatos įvedimo svirtelę į viršų daugiau nei 100°, kad įvestumėte adatą. Kai adata įvesta teisingai, pompa vieną kartą pypteli. Tada sukite svirtelę iki galo, kad ją nuimtumėte. Paspauskite **Toliau**.
 
 ```{caution}
-If you go to the next step without hearing the beep, a **Needle insertion Error** appears. Check for the beep and press **Retry**. If the error remains, press **Discard** to deactivate the patch.
+Jei pereisite prie kito žingsnio neišgirdę pyptelėjimo, atsiras **Adatos įvedimo klaida**. Įsitikinkite, kad pasigirdo pyptelėjimas, ir spauskite **Bandyti dar kartą**. Jei klaida neišnyksta, spauskite **Pašalinti**, kad išjungtumėte pompą.
 ```
 
-### Patch activation completed
+### Pompa aktyvuota
 
-The last page confirms that the patch is active and that it will remind you when it nears its expiration time. Press **Finish** to go back to the pump screen.
+Paskutinis puslapis patvirtina, kad pompa aktyvi ir kad ji jums primins, kai artės jos galiojimo pabaiga. Spauskite **Baigti**, kad grįžtumėte į pompos ekraną.
 
-## Discarding the patch
+## Pompos pašalinimas
 
-Replace the patch when it is low on insulin, when it expires, or if it is faulty. We recommend using each patch for no more than 84 hours after it boots.
+Pakeiskite pompą, kai joje mažai insulino, kai baigiasi jos galiojimas arba jei ji sugedo. Rekomenduojame kiekvieną pompą naudoti ne ilgiau kaip 84 valandas nuo jos įsijungimo.
 
-1. Open the pump screen (**Manage** → **Pump**). While a patch is active, press **Discard Patch**.
-1. The **Discard Patch** page shows the time left and the insulin left in the patch. Press **Discard Patch**.
-1. A dialog asks you to confirm. Press **Discard Patch** again.
-1. When the patch has been deactivated, the wizard shows **Discarding the patch is completed.** Remove the patch from your body and press **Confirm**.
+1. Atidarykite pompos ekraną (**Valdymas** → **Pompa**). Kol pompa aktyvi, spauskite **Pašalinti pompą**.
+1. Puslapyje **Pašalinti pompą** rodomas likęs laikas ir pompoje likęs insulinas. Spauskite **Pašalinti pompą**.
+1. Atsiranda langas, kuriame prašoma patvirtinti. Dar kartą spauskite **Pašalinti pompą**.
+1. Kai pompa išjungta, vedlys rodo **Pompa pašalinta.** Nuimkite pompą nuo kūno ir spauskite **Patvirtinti**.
 
-After that, the wizard continues straight on to activating a new patch (see above). Press the back arrow if you want to stop here.
+Po to vedlys iš karto pereina prie naujos pompos aktyvavimo (žr. aukščiau). Jei norite čia sustoti, spauskite rodyklę atgal.
 
-While no patch is active, **AAPS** shows the pump as suspended and records a 0 U/hr temporary basal, so no basal insulin is counted in IOB until the next patch is activated.
+Kol nėra aktyvios pompos, **AAPS** rodo pompą kaip sustabdytą ir įrašo 0 V/val. laikiną bazę, todėl iki kitos pompos aktyvavimo į AIO neįskaičiuojamas joks bazinis insulinas.
 
-![The EOPatch2 pump screen with the DISCARD/CHANGE PATCH button](../images/EOPatch/Bild13.png) ![Discard Patch page](../images/EOPatch/Bild14.png) ![Discard Patch confirmation dialog](../images/EOPatch/Bild15.png) ![Discarding the patch is completed](../images/EOPatch/Bild16.png)
+![EOPatch2 pompos ekranas su mygtuku DISCARD/CHANGE PATCH (pašalinti / keisti pompą)](../images/EOPatch/Bild13.png) ![Puslapis „Pašalinti pompą“](../images/EOPatch/Bild14.png) ![Pompos pašalinimo patvirtinimo langas](../images/EOPatch/Bild15.png) ![Pompa pašalinta](../images/EOPatch/Bild16.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Discard Patch**.
+Aukščiau esančios ekrano kopijos yra iš ankstesnės **AAPS** versijos. **AAPS** 4 versijoje pompos ekraną atidarote per **Valdymas** → **Pompa**, o mygtukas jame vadinasi **Pašalinti pompą**.
 ```
 
 ```{admonition} If the patch does not respond
 :class: warning
-If **AAPS** cannot reach the patch, it may show a page about turning off the patch's alarm by hand: remove the patch from your body, peel off the adhesive tape, and use a clip to press firmly into the hole next to the insulin fill port.
+Jei **AAPS** negali susisiekti su pompa, gali būti rodomas puslapis apie pompos aliarmo išjungimą rankiniu būdu: nuimkite pompą nuo kūno, nulupkite lipnią juostą ir smeigtuku tvirtai įspauskite į skylutę šalia insulino pildymo angos.
 
-The **Discard Patch** page also has a **Force Reset** button. It only clears the patch from **AAPS**, without sending any command to the patch. The patch keeps delivering insulin until its battery runs out or you turn it off by hand. Use it only if a normal discard fails, and remove the patch from your body.
+Puslapyje **Pašalinti pompą** taip pat yra mygtukas **Priverstinai nustatyti iš naujo**. Jis tik pašalina pompą iš **AAPS**, nesiųsdamas pompai jokios komandos. Pompa toliau leidžia insuliną, kol išsikrauna jos baterija arba kol ją išjungsite rankiniu būdu. Naudokite jį tik tada, jei įprastas pašalinimas nepavyksta, ir nuimkite pompą nuo kūno.
 ```
 
-## Suspending and resuming insulin delivery
+## Insulino tiekimo sustabdymas ir atnaujinimas
 
-Suspending insulin delivery also cancels any extended bolus and temporary basal. When you resume, these are **not** restarted. While insulin delivery is suspended, the patch beeps every 15 minutes.
+Sustabdžius insulino tiekimą, taip pat atšaukiamas ištęstas bolusas ir laikina bazė. Atnaujinus tiekimą, jie **nėra** paleidžiami iš naujo. Kol insulino tiekimas sustabdytas, pompa pypteli kas 15 minučių.
 
-### Suspending insulin delivery
+### Insulino tiekimo sustabdymas
 
-1. Open the pump screen (**Manage** → **Pump**) and press **Suspend pump**.
-1. A dialog explains what will be suspended. Press **Confirm**.
-1. In the **Basal Suspending Time** dialog, choose how long to suspend: 30 min, 1 hr, 1 hr 30 min or 2 hr. Press **Confirm**.
+1. Atidarykite pompos ekraną (**Valdymas** → **Pompa**) ir spauskite **Sustabdyti pompą**.
+1. Langas paaiškina, kas bus sustabdyta. Spauskite **Patvirtinti**.
+1. Lange **Bazės sustabdymo laikas** pasirinkite, kiek laiko stabdyti: 30 min., 1 val., 1 val. 30 min. arba 2 val. Spauskite **Patvirtinti**.
 
-Insulin delivery is suspended for the time you chose.
+Insulino tiekimas sustabdomas jūsų pasirinktam laikui.
 
-![The EOPatch2 pump screen with the SUSPEND button](../images/EOPatch/Bild17.png) ![Suspend confirmation dialog](../images/EOPatch/Bild18.png) ![Basal Suspending Time dialog](../images/EOPatch/Bild19.png)
+![EOPatch2 pompos ekranas su mygtuku SUSPEND (sustabdyti)](../images/EOPatch/Bild17.png) ![Sustabdymo patvirtinimo langas](../images/EOPatch/Bild18.png) ![Langas „Bazės sustabdymo laikas“](../images/EOPatch/Bild19.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Suspend pump**.
+Aukščiau esančios ekrano kopijos yra iš ankstesnės **AAPS** versijos. **AAPS** 4 versijoje pompos ekraną atidarote per **Valdymas** → **Pompa**, o mygtukas jame vadinasi **Sustabdyti pompą**.
 ```
 
-### Resuming insulin delivery
+### Insulino tiekimo atnaujinimas
 
-1. Open the pump screen (**Manage** → **Pump**) and press **Resume pump**.
-1. In the **Resume insulin delivery** dialog, press **Confirm**.
+1. Atidarykite pompos ekraną (**Valdymas** → **Pompa**) ir spauskite **Atnaujinti pompos veikimą**.
+1. Lange **Atnaujinti insulino tiekimą** spauskite **Patvirtinti**.
 
-![The EOPatch2 pump screen with the RESUME button](../images/EOPatch/Bild20.png) ![Resume insulin delivery dialog](../images/EOPatch/Bild21.png)
+![EOPatch2 pompos ekranas su mygtuku RESUME (atnaujinti)](../images/EOPatch/Bild20.png) ![Langas „Atnaujinti insulino tiekimą“](../images/EOPatch/Bild21.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Resume pump**.
+Aukščiau esančios ekrano kopijos yra iš ankstesnės **AAPS** versijos. **AAPS** 4 versijoje pompos ekraną atidarote per **Valdymas** → **Pompa**, o mygtukas jame vadinasi **Atnaujinti pompos veikimą**.
 ```
 
 ```{warning}
-When the suspend time ends, **AAPS** shows an **End of insulin suspend** warning. Insulin delivery does **not** restart until you confirm it. If you do not, you could develop hyperglycemia.
+Kai sustabdymo laikas baigiasi, **AAPS** rodo įspėjimą **Insulino tiekimo sustabdymo pabaiga**. Insulino tiekimas **nėra** atnaujinamas, kol jo nepatvirtinsite. Jei to nepadarysite, gali išsivystyti hiperglikemija.
 ```
 
 (eopatch2-alarms-and-warnings)=
 
-## Alarms and warnings
+## Aliarmai ir įspėjimai
 
 ### Alarms
 
-Alarms are for urgent, top-priority situations and need your action straight away. **AAPS** sounds an alarm that keeps going until you acknowledge it, and shows the message as a notification on the **Overview** screen. An alarm means there is a problem with the patch in use. In many cases the patch has to be discarded and replaced with a new one.
+Aliarmai skirti skubioms, svarbiausioms situacijoms, ir į juos reikia reaguoti nedelsiant. **AAPS** skleidžia aliarmą, kuris skamba tol, kol jį patvirtinsite, ir rodo pranešimą **pagrindiniame ekrane**. Aliarmas reiškia, kad yra problema su naudojama pompa. Daugeliu atvejų pompą reikia pašalinti ir pakeisti nauja.
 
-When you press **Confirm** on the notification, **AAPS** handles the alarm. For most alarms, this deactivates the patch. For an **Inappropriate temperature** alarm, the button is **Retry**.
+Kai pranešime spaudžiate **Patvirtinti**, **AAPS** apdoroja aliarmą. Daugumos aliarmų atveju tai išjungia pompą. Aliarmo **Netinkama temperatūra** atveju mygtukas yra **Bandyti dar kartą**.
 
-![EOPatch2 alarm](../images/EOPatch/Bild22.png) ![EOPatch2 alarm after the patch was deactivated](../images/EOPatch/Bild23.png)
-
-```{admonition} Older screenshot
-:class: note
-The alarm screenshots are from an earlier **AAPS** version and may look different in **AAPS** 4.
-```
-
-The different alarms are explained below.
-
-| Alarm                      | Explanation                                                                                                                                                    |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | The patch has run out of insulin.                                                                                                                              |
-| Patch expired              | The patch's usage time is over, and it cannot deliver any more insulin.                                                                                        |
-| Occlusion                  | The patch's insulin path seems to be blocked.                                                                                                                  |
-| Power on self-test failure | The patch found an unexpected error during its self-test after booting.                                                                                        |
-| Inappropriate temperature  | The patch is outside its normal operating temperature while you activate or use it. Move the patch to a place with a suitable temperature (4.4 to 37°C).       |
-| Needle insertion Error     | The needle was not inserted correctly during activation. Check that the needle insertion edge of the patch and the needle action lever are in a straight line. |
-| Patch battery Error        | The patch's internal battery is about to run out and the patch will power off.                                                                                 |
-| Patch activation Error     | The patch was not fully activated within 60 minutes of booting.                                                                                                |
-| Patch Error                | The patch found an unexpected error while being activated or used.                                                                                             |
-
-### Warnings
-
-Warnings are for medium- or low-priority situations. A warning appears as a notification on the **Overview** screen.
-
-![EOPatch2 warning shown on the Overview screen](../images/EOPatch/Bild24.png)
+![EOPatch2 aliarmas](../images/EOPatch/Bild22.png) ![EOPatch2 aliarmas po pompos išjungimo](../images/EOPatch/Bild23.png)
 
 ```{admonition} Older screenshot
 :class: note
-This screenshot is from an earlier **AAPS** version: in **AAPS** 4 the warning appears on the main screen, which looks different.
+Aliarmų ekrano kopijos yra iš ankstesnės **AAPS** versijos ir **AAPS** 4 versijoje gali atrodyti kitaip.
 ```
 
-The different warnings are explained below.
+Toliau paaiškinti įvairūs aliarmai.
 
-| Warning                      | Explanation                                                                                                                   |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | The suspend time you chose is over. Press **Resume pump** on the notification to restart insulin delivery.                    |
-| Low reservoir                | The insulin left in the patch is below the amount set in **Low reservoir Alerts**.                                            |
-| Patch operating life expired | The patch's usage period is over.                                                                                             |
-| Patch will expire soon       | The patch must be discarded in 1 hour.                                                                                        |
-| Incomplete Patch activation  | Patch activation was interrupted for more than 3 minutes after pairing. Open the pump screen and finish activating the patch. |
-| Patch battery low            | The patch's battery is low.                                                                                                   |
+| Alarm                             | Paaiškinimas                                                                                                                                            |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Empty reservoir                   | Pompoje baigėsi insulinas.                                                                                                                              |
+| Pompos naudojimo laikas pasibaigė | Pompos naudojimo laikas baigėsi, ir ji nebegali leisti insulino.                                                                                        |
+| Occlusion                         | Atrodo, kad pompos insulino kelias užsikimšęs.                                                                                                          |
+| Įjungimo savikontrolės klaida     | Pompa, įsijungusi, savikontrolės metu aptiko netikėtą klaidą.                                                                                           |
+| Netinkama temperatūra             | Aktyvuojant ar naudojant pompą, jos temperatūra yra už įprasto veikimo ribų. Perkelkite pompą į vietą, kurioje tinkama temperatūra (nuo 4,4 iki 37 °C). |
+| Needle insertion Error            | Aktyvavimo metu adata buvo įvesta netinkamai. Patikrinkite, ar pompos adatos įvedimo kraštas ir adatos įvedimo svirtelė yra vienoje tiesioje linijoje.  |
+| Pompos baterijos klaida           | Pompos vidinė baterija tuoj išsikraus, ir pompa išsijungs.                                                                                              |
+| Pompos aktyvavimo klaida          | Pompa nebuvo visiškai aktyvuota per 60 minučių nuo įsijungimo.                                                                                          |
+| Pompos klaida                     | Aktyvuojant ar naudojant pompą, ji aptiko netikėtą klaidą.                                                                                              |
 
-## Where to get help
+### Įspėjimai
 
-Development of the EOPatch2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Įspėjimai skirti vidutinio ar žemo prioriteto situacijoms. Įspėjimas rodomas kaip pranešimas **pagrindiniame ekrane**.
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+![EOPatch2 įspėjimas pagrindiniame ekrane](../images/EOPatch/Bild24.png)
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+```{admonition} Older screenshot
+:class: note
+Ši ekrano kopija yra iš ankstesnės **AAPS** versijos: **AAPS** 4 versijoje įspėjimas rodomas pagrindiniame ekrane, kuris atrodo kitaip.
+```
+
+Toliau paaiškinti įvairūs įspėjimai.
+
+| Įspėjimas                                | Paaiškinimas                                                                                                                          |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Insulino tiekimo sustabdymo pabaiga      | Jūsų pasirinktas sustabdymo laikas baigėsi. Pranešime spauskite **Atnaujinti pompos veikimą**, kad vėl paleistumėte insulino tiekimą. |
+| Mažai insulino                           | Pompoje likęs insulino kiekis yra mažesnis nei nustatytas parinktyje **Senkančio rezervuaro perspėjimai**.                            |
+| Pompos naudojimo laikas baigėsi          | Pompos naudojimo laikotarpis baigėsi.                                                                                                 |
+| Pompos naudojimo laikas netrukus baigsis | Pompą reikia pašalinti per 1 valandą.                                                                                                 |
+| Pompa nepilnai aktyvuota                 | Pompos aktyvavimas po susiejimo buvo nutrauktas ilgiau nei 3 minutėms. Atidarykite pompos ekraną ir užbaikite pompos aktyvavimą.      |
+| Pompos baterija senka                    | Pompos baterija senka.                                                                                                                |
+
+## Kur gauti pagalbos
+
+EOPatch2 tvarkyklę kuria bendruomenė **savanoriškai**. Prieš prašydami pagalbos:
+
+1. **Perskaitykite** atitinkamą šios dokumentacijos skyrių ir įsitikinkite, kaip funkcija turi veikti.
+2. **Klauskite** kanale *#AAPS* [Discord](https://discord.gg/4fQUWHZ4Mw) serveryje arba kitame [bendruomenės kanale](../GettingHelp/WhereCanIGetHelp.md).
+3. **Praneškite apie klaidą**: paieškokite tarp [esamų problemų (issues)](https://github.com/nightscout/AndroidAPS/issues); jei jūsų problemos ten nėra, sukurkite [naują problemą (issue)](https://github.com/nightscout/AndroidAPS/issues) ir pridėkite [žurnalų failus](../GettingHelp/AccessingLogFiles.md).
+
+Prašydami pagalbos nurodykite telefono gamintoją ir modelį, Android versiją, **AAPS** versiją ir paprastai, angliškai aprašykite problemą (kas pasikeitė, kada paskutinį kartą veikė).
