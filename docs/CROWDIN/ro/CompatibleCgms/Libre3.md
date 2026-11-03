@@ -22,33 +22,33 @@ This method uses Juggluco to receive raw, 1-minute interval data from the sensor
 ### Pasul 1: Configurare Juggluco
 Descărcați și instalați aplicația Juggluco de [aici](https://www.juggluco.nl/Juggluco/download.html). Urmați instrucțiunile de [aici](https://www.juggluco.nl/Juggluco/libre3/)
 
-Make sure you send the glucose values to xDrip: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip.
+Make sure you send the glucose values to xDrip: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco poate trimite trei tipuri de astfel de difuzări: **difuzarea aplicației modificate Libre** a fost la origine utilizată de aplicația modificată Librelink și poate fi folosită pentru a trimite valori ale glicemiei către xDrip.
 
 ### Pasul 2: Configurare xDrip
 
-The blood glucose values are received by the xDrip app on the smartphone.
+Valorile glicemiei sunt primite de aplicația xDrip de pe telefon.
 
 - If not already set up then download [xDrip](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
 - In xDrip select "Libre2 (patched app)" as data source.
-- Dacă este necesar, introduceți "BgReading:d,xdrip libre_receiver:v" sub Setări mai puțin obișnuite → Setări de logare extra → etichete extra pentru logare. Aceasta va înregistra mesaje de eroare suplimentare pentru depanare.
+- Dacă este necesar, introduceți "BgReading:d,xdrip libre_receiver:v" în Less Common Settings → Extra Logging Settings → Extra tags for logging. Aceasta va înregistra mesaje de eroare suplimentare pentru depanare.
 
 ![xDrip LibreLink logging](../images/Libre2_Tags.png)
 
-- Technically, the current blood sugar value is transmitted to xDrip every minute. Un filtru de medie ponderată calculează o valoare uniformizată pe baza ultimelor 25 de minute, în mod implicit. Puteți schimba perioada din meniul de caracteristici NFC.
+- Technically, the current blood sugar value is transmitted to xDrip every minute. Un filtru de medie ponderată calculează o valoare netezită pe baza ultimelor 25 de minute, în mod implicit. Puteți schimba perioada din meniul NFC Scan features.
 
-  → Meniu Hamburger → Setări → Caracteristici scanare NFC → Uniformizați libre 3 când se utilizează metoda xxx
+  → Meniu hamburger → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![xDrip advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+  ![Setări avansate xDrip pentru Libre 2 & valori brute](../images/xDrip_Libre3_Smooth.png)
 
 
 
 ### Pasul 3: Porniți senzorul în xDrip
 
-In xDrip start the sensor with "Start Sensor" and "not today". Nu este necesar să țineți telefonul mobil pe senzor. De fapt, "Start Senzor" nu va porni fizic niciun senzor Libre 3 sau nu va interacționa cu aceștia în vreun caz. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. Valorile pierdute, spre exemplu pentru că ați fost prea departe de telefon, nu vor fi recuperate înapoi.
+In xDrip start the sensor with "Start Sensor" and "not today". Nu este necesar să țineți telefonul mobil pe senzor. De fapt, "Start Senzor" nu va porni fizic niciun senzor Libre 3 sau nu va interacționa cu aceștia în vreun caz. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. Dacă este posibil, introduceți două valori măsurate din sânge pentru calibrarea inițială. Acum valorile glicemiei ar trebui să fie afișate în xDrip la fiecare 5 minute. Valorile pierdute, spre exemplu pentru că ați fost prea departe de telefon, nu vor fi recuperate înapoi.
 
 Așteptați cel puțin 15-20 minute dacă nu există încă date.
 
-After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
+After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. Puteți verifica glicemia după activare și puteți face o nouă calibrare inițială.
 
 ### Step 4: Configure AAPS
 
@@ -59,7 +59,7 @@ After a sensor change xDrip will automatically detect the new sensor and will de
 
 ## Schimbări ulterioare ale senzorilor
 
-1. Deschide Juggluco și notează numărul de serie al senzorului existent
+1. Deschideți Juggluco și notați numărul de serie al senzorului existent
 
 ![Număr de serie Libre](../images/libre3/step_13.jpg)
 
@@ -69,7 +69,7 @@ After a sensor change xDrip will automatically detect the new sensor and will de
 
 ![Opriți senzorul](../images/libre3/step_14.jpg)
 
-Note: When two sensors are active Juggluco will send the most recent value from either sensor to xDrip. If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. Dacă închideți senzorul greșit, îl puteți reactiva prin simpla scanare a senzorului.
+Notă: Când doi senzori sunt activi, Juggluco va trimite către xDrip cea mai recentă valoare de la oricare dintre senzori. Dacă senzorii nu sunt calibrați să citească glicemia în mod asemănător, acest lucru poate duce la valori ale glicemiei care sar brusc în xDrip. Dacă închideți senzorul greșit, îl puteți reactiva prin simpla scanare a senzorului.
 
 ## Comutați senzorul între aplicațiile Libre 3 și Juggluco
 
@@ -86,11 +86,11 @@ Pentru a trece de la aplicația Libre 3 la Juggluco, trebuie să opriți forțat
 (libre3-experiences-and-troubleshooting)=
 ## Experiențe și depanări
 
-### Depanarea Libre3 -> Conexiune Juggluco
+### Depanarea conexiunii Libre3 -> Juggluco
 
 - Asigurați-vă că folosiți o versiune curentă a aplicației Juggluco
 - Verificați setările în conformitate cu acest ghid
-- Uneori ar trebui să forțați oprirea aplicației Libre 3 și Juggluco și repornirea acesteia.
+- Uneori poate fi necesar să opriți forțat aplicațiile Libre 3 și Juggluco și să le reporniți.
 - Dezactivați Bluetooth și activați-l din nou
 - Așteptați ceva timp sau încercați să închideți Juggluco
 - Versiunile mai vechi de Juggluco (sub 2.9.6) nu trimit date ulterioare de la senzorul Libre3 la dispozitive conectate (spre exemplu Juggluco pe WearOS). Este posibil să fie nevoie să apăsați pe "Retrimiteți datele" în aplicația Libre3 modificată (meniul Juggluco).
@@ -99,4 +99,4 @@ Pentru a trece de la aplicația Libre 3 la Juggluco, trebuie să opriți forțat
 
 Instrucțiuni originale: [jkaltes website](https://www.juggluco.nl/Juggluco/libre3/)
 
-Additional GitHub repo: [GitHub link](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Depozit GitHub suplimentar: [Link GitHub](https://github.com/maheini/FreeStyle-Libre-3-patch)
