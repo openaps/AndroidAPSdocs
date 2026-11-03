@@ -5,18 +5,18 @@ orphan: true
 # sprint testi için dahili sanal alan dosyası 1
 
 ```{admonition} no need to translate this
-:class: Not
+:class: note
 
-Bunu tercüme etmenize gerek yok.
+Bunu çevirmenize gerek yok.
 ```
 
 ```{danger}
-Here is danger on the road.
+Yolda tehlike var.
 ```
 
-Test for Setup
+Kurulum testi
 
-"The number 42 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
+"Douglas Adams'ın Otostopçunun Galaksi Rehberi kitabında 42 sayısı, Deep Thought adlı devasa bir süper bilgisayarın 7,5 milyon yılda hesapladığı "Hayata, Evrene ve Her Şeye Dair Nihai Sorunun Cevabı"dır." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
 Bu, dokümantasyon ekibinin test etmesi için dahili bir sanal alan dosyasıdır
 
@@ -24,11 +24,11 @@ Bu, dokümantasyon ekibinin test etmesi için dahili bir sanal alan dosyasıdır
 
 1. aşağıdakiler için arka plan süreci
     1. CROWDIN çevirisi ve
-    2. Dok. dağıtımını okuyun.
+    2. Read The Docs yayınlaması.
 
-You can directly jump from here to the second label in this file - ["Jump"](#this-is-another-test) or [tag jump](#sandbox1-this-is-another-test).
+Buradan doğrudan bu dosyadaki ikinci etikete atlayabilirsiniz - ["Atla"](#this-is-another-test) veya [etiket ile atla](#sandbox1-this-is-another-test).
 
-And you can jump to the first label too - ["Jump"](#this-is-a-test) or [tag jump](#sandbox1-this-is-a-test).
+İlk etikete de atlayabilirsiniz - ["Atla"](#this-is-a-test) veya [etiket ile atla](#sandbox1-this-is-a-test).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -52,14 +52,14 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-Label in the middle of [nowhere](#sandbox1-in-the-middle-of-nowhere) This instead is the label to [](#sandbox1-this-is-another-test) and it should display its name
+[Hiçbir yerin](#sandbox1-in-the-middle-of-nowhere) ortasındaki etiket Bu ise [](#sandbox1-this-is-another-test) için etikettir ve adını göstermesi gerekir
 
-Links with anchor:
-- [how long will it take?](#preparing-how-long-will-it-take)
-- [NSClient settings in Preferences](#Preferences-nsclient).
-- [prediction lines in AAPS OVERVIEW](#aaps-screens-prediction-lines) to header level 4
+Bağlantı hedefli linkler:
+- [ne kadar sürer?](#preparing-how-long-will-it-take)
+- [Tercihler'deki NSClient ayarları](#Preferences-nsclient).
+- [AAPS GENEL BAKIŞ ekranındaki tahmin çizgileri](#aaps-screens-prediction-lines), başlık düzeyi 4
 - [Screenshots](../DailyLifeWithAaps/AapsScreens.md)
-- [Screenshot main graph](#aaps-screens-main-graph) to header level 3
-- [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
-- [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
-- [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb)
+- [Ana grafiğin ekran görüntüsü](#aaps-screens-main-graph), başlık düzeyi 3
+- [OpenAPS özellikleri](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
+- [maks AİNS](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
+- [bu dokümantasyondaki SMB bölümü](#Open-APS-features-super-micro-bolus-smb)
