@@ -1,195 +1,195 @@
-# Reviewing your data
+# Duomenų peržiūra
 
-## AAPS History Browser
+## AAPS istorija
 
-**AAPS** keeps all your history (**BG**, treatments, basal, targets, **Profile Switch**, …) in a local database on the phone. This database is not part of the [settings export](../Maintenance/ExportImportSettings.md). You can review it in **AAPS** itself with the **History browser** and the **Statistics** screen described below. For long-term reviews and reports, upload your data to [Nightscout](../SettingUpAaps/Nightscout.md) or [Tidepool](../SettingUpAaps/Tidepool.md).
+**AAPS** visą jūsų istoriją (**KG**, terapiją, valandinę bazę, tikslus, **Profilio keitimas** įrašus, …) saugo vietinėje telefono duomenų bazėje. Ši duomenų bazė neįeina į [nustatymų eksportą](../Maintenance/ExportImportSettings.md). Ją galite peržiūrėti pačios **AAPS** ekranuose **Istorija** ir **Statistika**, kurie aprašyti toliau. Ilgalaikei peržiūrai ir ataskaitoms siųskite savo duomenis į [Nightscout](../SettingUpAaps/Nightscout.md) arba [Tidepool](../SettingUpAaps/Tidepool.md).
 
-**AAPS** history can be reviewed in the **History browser**: open the **menu** (☰) and select **History browser**.
+**AAPS** istoriją galima peržiūrėti ekrane **Istorija**: atverkite **meniu** (☰) ir pasirinkite **Istorija**.
 
-![History browser](../images/v4/Screens/history_browser.png)
+![Istorija](../images/v4/Screens/history_browser.png)
 
-- Tap the **date card** to pick the day you want to review.
-- The graphs open zoomed out to show the **whole selected day**. Pinch to zoom in on part of it.
-- Use the **<** and **>** arrows to move one day back or forward, and **Now** to return to the current day.
-- The graphs show the same data as the main screen graphs (BG, treatments, basal, IOB, COB, activity, deviations...).
+- Palieskite **datos kortelę** ir pasirinkite dieną, kurią norite peržiūrėti.
+- Atsidarę grafikai rodo **visą pasirinktą dieną**. Norėdami padidinti dalį grafiko, suspauskite arba išskleiskite du pirštus.
+- Rodyklėmis **<** ir **>** pereikite viena diena atgal arba pirmyn, o mygtuku **Dabar** grįžkite į šiandieną.
+- Grafikai rodo tuos pačius duomenis kaip pagrindinio ekrano grafikai (KG, terapiją, valandinę bazę, AIO, AAO, aktyvumą, nuokrypius...).
 
 (reviewing-statistics)=
-## AAPS Statistics
+## AAPS statistika
 
-**AAPS** provides basic monitoring statistics.
+**AAPS** pateikia pagrindinę stebėjimo statistiką.
 
-Most values are referenced by ADA 2023 [recommendations](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes).
+Dauguma reikšmių remiasi ADA 2023 [rekomendacijomis](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes).
 
-To open them, open the **menu** (☰) and select **Statistics**.
+Norėdami ją atverti, atverkite **meniu** (☰) ir pasirinkite **Statistika**.
 
-![Menu with Statistics](../images/Maintenance/statistics.png)
+![Meniu su punktu Statistika](../images/Maintenance/statistics.png)
 
-The **Statistics** screen has four tabs: **Insulin**, **Time in Range**, **Glucose** and **Cycle**. Tap a tab, or swipe left or right to move between them.
+Ekrane **Statistika** yra keturi skirtukai: **Insulinas**, **Laikas tikslinėse ribose**, **Glikemija** ir **BPD ciklas**. Palieskite skirtuką arba braukite kairėn ar dešinėn, kad pereitumėte tarp jų.
 
 (reviewing-tdd)=
-### Insulin tab: Total Daily Dose
+### Skirtukas Insulinas: bendra paros dozė
 
-The **Total Daily Dose** card shows one line per day for the previous days (up to one week) for which **AAPS** has insulin data, then their **Average**, then **Today** so far. Right after installing **AAPS**, only **Today** is shown. The columns are:
+Kortelėje **Bendra paros dozė** rodoma po vieną eilutę kiekvienai ankstesnei dienai (iki vienos savaitės), kurios insulino duomenis **AAPS** turi, tada jų **Vidurkis**, o tada **Šiandien** iki šios akimirkos. Iškart įdiegus **AAPS** rodoma tik eilutė **Šiandien**. Stulpeliai:
 
-- **Basal**: only basal.
-- **Bolus**: the sum of bolus treatments and SMBs.
-- **TDD Total**: the Total Daily Dose of insulin (**TDD**), the sum of bolus and basal insulin delivered during the day.
-- **Carbs**: declared carbs and eCarbs treatments.
+- **Valandinė bazė**: tik valandinė bazė.
+- **Bolusas**: bolusų ir SMB suma.
+- **BPD viso**: bendra paros insulino dozė (**BPD**), per dieną suleisto boluso ir bazės insulino suma.
+- **Angliavandeniai**: įvesti angliavandeniai ir i-AV įrašai.
 
-The **TDD** section is calculated when you open the page and takes a few seconds to compute. Tap **Recalculate** to compute it again.
+**BPD** dalis skaičiuojama atvėrus puslapį, skaičiavimas užtrunka kelias sekundes. Norėdami skaičiuoti iš naujo, palieskite **Perskaičiuoti**.
 
-![Statistics: the Insulin tab with the Total Daily Dose](../images/Maintenance/statistics2.png)
+![Statistika: skirtukas Insulinas su bendra paros doze](../images/Maintenance/statistics2.png)
 
-The **TDD** is your bolus plus basal insulin per day. Some doctors use - especially for new pumpers - a basal-bolus ratio of 50:50: the total base basal (**TBB**, the sum of your basal rates over 24 hours) should then be about half of the TDD. Others prefer a TBB of 32 % to 37 % of the TDD.
+**BPD** yra jūsų per parą suleisto boluso ir bazės insulino suma. Kai kurie gydytojai – ypač naujiems pompų naudotojams – taiko bazės ir boluso santykį 50:50: tada bendra bazinė dozė (**TBB**, jūsų valandinių bazių suma per 24 valandas) turėtų būti maždaug pusė BPD. Kiti teikia pirmenybę TBB, kuri sudaro 32–37 % BPD.
 
-Like most rules of thumb, this is of limited real validity. Your diabetes may vary!
+Kaip dauguma apytikslių taisyklių, ši taisyklė yra tik ribotai patikima. Jūsų diabetas gali skirtis!
 
-### Time in Range tab
+### Skirtukas Laikas tikslinėse ribose
 
-Time In Range (**TIR**): 70-180 mg/dL or 3.9-10 mmol/L.
+Laikas tikslo intervale (**TIR**): 70-180 mg/dL arba 3,9-10 mmol/l.
 
-**TIR** information is available for 7 and 30 days, depending on the amount of data available within the **AAPS** database.
+**TIR** informacija pateikiama už 7 ir 30 dienų, priklausomai nuo to, kiek duomenų yra **AAPS** duomenų bazėje.
 
-Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are available below (the screen shows this range as 70-141).
+Žemiau pateikiama laiko siaurame tikslo intervale (TITR) 70-140 mg/dL arba 3,9-7,8 mmol/l statistika (ekrane šis intervalas rodomas kaip 70-141).
 
-**Discuss targets with your endo**
+**Aptarkite tikslus su savo endokrinologu**
 
-Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
+Jūsų diabetas gali skirtis. Visus siūlomus tikslus aptarkite su savo endokrinologu arba gydymo komanda. Teisingai naudojama AAPS statistika gali būti veiksminga priemonė __KG__ tendencijoms sekti ir pažangai stebėti.
 
 ![Statistics](../images/Maintenance/statistics3.png)
 
-Below, the **Dexcom TIR** card shows detailed 14 days **TIR** statistics.
+Dar žemiau kortelėje **Dexcom TIR** rodoma išsami 14 dienų **TIR** statistika.
 
-**SD**: Standard Deviation, an [indicator](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) of BG variability (the highest = the worst).
+**SD**: standartinis nuokrypis, KG svyravimų [rodiklis](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) (kuo didesnis, tuo blogiau).
 
-HbA1c: the estimate of the resulting glycated hemoglobin, based on the average of CGM measurements. This is an indicative value that might not match blood HbA1c tests.
+HbA1c: apskaičiuotas glikuoto hemoglobino įvertis pagal NGJ matavimų vidurkį. Tai tik orientacinė reikšmė, ji gali nesutapti su HbA1c kraujo tyrimo rezultatais.
 
 ![Statistics](../images/Maintenance/statistics4.png)
 
 (reviewing-statistics-agp)=
-### Glucose tab: Ambulatory Glucose Profile (AGP)
+### Skirtukas Glikemija: ambulatorinis gliukozės profilis (AGP)
 
-The **Ambulatory Glucose Profile** (**AGP**) shows how your glucose usually moves over the day. Choose the period with the buttons at the top: **Today**, **24h**, **7d**, **30d** or **90d**.
+**Ambulatorinis gliukozės profilis** (**AGP**) rodo, kaip jūsų gliukozė paprastai kinta per dieną. Laikotarpį pasirinkite mygtukais viršuje: **Šiandien**, **24 val.**, **7 d**, **30 d** arba **90 d**.
 
-- **The chart**: one day from midnight to midnight. The line is the **Median** (half of your readings at that hour were lower, half were higher). Around it, one band holds the middle half of your readings (**25–75%**) and a wider band most of them (**10–90%**). A narrow band means your glucose is similar from day to day at that hour. Dashed lines mark your **LOW mark**, 140 mg/dL (7.8 mmol/L) and your **HIGH mark**.
-- **Glycemic overview**: the time spent in your range, in the tight range (70–140 mg/dL or 3.9–7.8 mmol/L), above your range and below it, then your **Average** and **Median** glucose. Your range is the **LOW mark** and **HIGH mark** set in [Range for visualization](#Preferences-range-for-visualization).
-- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings. Like the HbA1c above, they might not match your blood HbA1c tests.
-- **SD** (standard deviation) and **CV** (coefficient of variation): how much your glucose varies. A lower value means steadier glucose.
-- **Days**: how many days of CGM data were used.
+- **Grafikas**: viena para nuo vidurnakčio iki vidurnakčio. Linija yra **Mediana** (pusė jūsų rodmenų tą valandą buvo mažesni, pusė – didesni). Aplink ją viena juosta apima vidurinę jūsų rodmenų pusę (**25–75 %**), o platesnė juosta – didžiąją jų dalį (**10–90 %**). Siaura juosta reiškia, kad tą valandą jūsų gliukozė kiekvieną dieną yra panaši. Brūkšninės linijos žymi jūsų ribas: **Žemoji riba**, 140 mg/dL (7,8 mmol/l) ir **Aukštoji riba**.
+- **Glikemijos apžvalga**: laikas jūsų intervale, siaurame intervale (70–140 mg/dL arba 3,9–7,8 mmol/l), virš jūsų intervalo ir žemiau jo, tada jūsų gliukozės **Vidurkis** ir **Mediana**. Jūsų intervalą sudaro **Žemoji riba** ir **Aukštoji riba**, nustatytos parametre [Vizualizacijos diapazonas](#Preferences-range-for-visualization).
+- **eA1c** ir **GMI**: du HbA1c įverčiai, apskaičiuoti pagal jūsų NGJ rodmenis. Kaip ir aukščiau aprašytas HbA1c, jie gali nesutapti su jūsų HbA1c kraujo tyrimų rezultatais.
+- **SD** (standartinis nuokrypis) ir **CV** (variacijos koeficientas): kiek svyruoja jūsų gliukozė. Mažesnė reikšmė reiškia stabilesnę gliukozę.
+- **D.**: kiek dienų NGJ duomenų panaudota.
 
-![Statistics: the Glucose tab with the AGP chart](../images/Maintenance/statistics_agp.png) ![Statistics: Glycemic overview and glucose metrics](../images/Maintenance/statistics_agp2.png)
+![Statistika: skirtukas Glikemija su AGP grafiku](../images/Maintenance/statistics_agp.png) ![Statistika: glikemijos apžvalga ir gliukozės rodikliai](../images/Maintenance/statistics_agp2.png)
 
-Below the AGP, the **Glucose Pentagon (CGP)** card draws five measures of your last 14 days of glucose as a pentagon. A smaller pentagon means better glucose control.
+Po AGP kortelėje **Išsamus gliukozės penkiakampis (CGP)** penkiakampiu pavaizduoti penki jūsų paskutinių 14 dienų gliukozės rodikliai. Mažesnis penkiakampis reiškia geresnę gliukozės kontrolę.
 
-![Statistics: the Glucose Pentagon](../images/Maintenance/statistics_cgp.png)
+![Statistika: gliukozės penkiakampis](../images/Maintenance/statistics_cgp.png)
 
-### Cycle tab: TDD Cycle Pattern
+### Skirtukas BPD ciklas: BPD ciklo dėsningumas
 
-**TDD Cycle Pattern** overlays your daily insulin totals in 28-day cycles, to help you spot recurring patterns. Each cycle is drawn as a line (**Individual cycles**), together with their average.
+**BPD ciklo dėsningumas** sudeda jūsų paros insulino kiekius 28 dienų ciklais vieną ant kito, kad lengviau pastebėtumėte pasikartojančius dėsningumus. Kiekvienas ciklas rodomas kaip linija (**Atskiri ciklai**), kartu su jų vidurkiu.
 
-- **Raw TDD** / **Cleaned TDD**: choose the total daily dose as delivered, or the TDD minus insulin for carbs.
-- **Cycle offset**: moves the start of the cycle (0 to 27 days).
+- **Neapdorota BPD** / **Išvalyta BPD**: pasirinkite bendrą paros dozę tokią, kokia suleista, arba BPD be insulino angliavandeniams.
+- **Ciklo poslinkis**: perkelia ciklo pradžią (nuo 0 iki 27 dienų).
 
-At least 56 days of data (2 cycles) are needed. With less data, the card shows **Not enough data (need at least 56 days for 2 cycles)**. The pattern is calculated only when you open the **Cycle** tab, because it reads 168 days of data.
+Reikia bent 56 dienų duomenų (2 ciklų). Jei duomenų mažiau, kortelėje rodoma **Nepakanka duomenų (2 ciklams reikia bent 56 dienų)**. Dėsningumas skaičiuojamas tik atvėrus skirtuką **BPD ciklas**, nes jam nuskaitomi 168 dienų duomenys.
 
 (aaps-screens-treatments)=
-## Treatments history
+## Terapijos istorija
 
-Open the **menu** (☰) in the top-left corner of the main screen and select **Treatments history**. In this view, you can view and alter the history of the following treatments, each on its own tab (swipe the tab row to see all of them):
+Pagrindinio ekrano viršutiniame kairiajame kampe atverkite **meniu** (☰) ir pasirinkite **Terapijos istorija**. Šiame rodinyje galite peržiūrėti ir keisti šios terapijos istoriją, kiekvieną atskirame skirtuke (braukite skirtukų eilutę, kad pamatytumėte visus):
 
-* Carbs and bolus
+* AV ir bolusai
 * [Ištęstas bolusas](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temp basal
+* Laikina bazė
 * [Temporary target](../DailyLifeWithAaps/TempTargets.md)
 * [Profilio keitimas](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes and careportal entries
-* Running mode : history of loop status
-* User entry: other notes that are not sent to Nightscout
+* Terapija: pastabos ir terapijos įrašai
+* Veikimo režimas: ciklo būsenos istorija
+* Naudotojo įrašas: kitos pastabos, kurios nesiunčiamos į Nightscout
 
-At the end of each line, small icons show where the data comes from or has been sent to:
-* **Nightscout** icon (the Nightscout logo): the data comes from or has been recorded to Nightscout
-* **Pump** icon: the data comes from the pump history (it has been processed by the pump)
-* **Trash can** icon: the entry has been deleted (it is shown only when you display deleted entries with the **eye** icon at the top right)
+Kiekvienos eilutės gale mažos piktogramos rodo, iš kur duomenys gauti arba kur jie išsiųsti:
+* **Nightscout** piktograma (Nightscout logotipas): duomenys gauti iš Nightscout arba įrašyti į Nightscout
+* **Pompos** piktograma: duomenys gauti iš pompos istorijos (juos apdorojo pompa)
+* **Šiukšliadėžės** piktograma: įrašas ištrintas (rodoma tik tada, kai ištrintus įrašus įjungiate **akies** piktograma viršutiniame dešiniajame kampe)
 
 (screens-bolus-carbs)=
-### Carbs and bolus
+### AV ir bolusai
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![AV ir bolusai](../images/TreatmentsView1.png)
 
-On this tab you can view the bolus and carbs log. Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
-* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionality
+Šiame skirtuke galite peržiūrėti bolusų ir angliavandenių žurnalą. Prie kiekvieno boluso (**1** eilutė) šalia insulino kiekio rodomas su juo susijęs likęs AIO. Bolusas gali būti:
+* Valgiui (įvestas rankiniu būdu mygtukais Insulinas, Greitasis vedlys arba Boluso patarėjas)
+* SMB, kai naudojama SMB funkcija
 
-The carbs entries (line **2**) are shown with their amount in grams.
+Angliavandenių įrašai (**2** eilutė) rodomi su kiekiu gramais.
 
-If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text on the bolus line to show the details of how the bolus was calculated.
+Jei insulino dozei apskaičiuoti naudojote [Boluso patarėją](#aaps-screens-bolus-wizard), boluso eilutėje galite paspausti tekstą „Calc“ ir pamatyti, kaip bolusas buvo apskaičiuotas.
 
-Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
+Priklausomai nuo pompos, insulinas ir angliavandeniai gali būti rodomi vienoje eilutėje arba keliose eilutėse: viena skaičiavimo detalėms, viena angliavandeniams, viena pačiam bolusui.
 
-The Treatments history can be used to correct faulty carb entries (_i.e._ you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
+Terapijos istoriją galima naudoti klaidingiems angliavandenių įrašams taisyti (_pvz._, jei angliavandenių kiekį pervertinote arba nepakankamai įvertinote). Esamo įrašo redaguoti negalima, todėl atlikite šiuos veiksmus:
 
-1. Check and remember actual COB and IOB on the main screen.
-2. Depending on pump, carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount: press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.
-4. Make sure carbs are removed successfully by checking COB on the main screen again.
-5. Do the same for IOB if there is just one line including carbs and insulin.
+1. Pagrindiniame ekrane patikrinkite ir įsiminkite esamus AAO ir AIO.
+2. Priklausomai nuo pompos, angliavandeniai gali būti rodomi kartu su insulinu vienoje eilutėje arba kaip atskiras įrašas (pvz., su Dana RS).
+3. Ištrinkite įrašą su klaidingu angliavandenių kiekiu: paspauskite šiukšliadėžės piktogramą, pažymėkite eilutes, kurias norite ištrinti, ir dar kartą paspauskite šiukšliadėžės piktogramą, kad patvirtintumėte.
+4. Pagrindiniame ekrane dar kartą patikrinkite AAO ir įsitikinkite, kad angliavandeniai sėkmingai ištrinti.
+5. Tą patį padarykite su AIO, jei yra tik viena eilutė su angliavandeniais ir insulinu.
 
-   → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+   → Jei angliavandeniai nebuvo ištrinti, kaip tikėtasi, ir pridėsite papildomų angliavandenių, kaip čia aprašyta (6.), AAO bus per didelis, o tai gali lemti per didelę insulino dozę.
 
-6. Enter the correct carb amount again (**Treatments → Carbs** in the bottom navigation, or a [QuickLaunch](#quicklaunch) **Carbs** button) and make sure to set the correct event time.
-7. If there is just one line including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on the main screen after confirming the new entry.
+6. Vėl įveskite teisingą angliavandenių kiekį (apatinėje navigacijoje **Terapija → Angliavandeniai** arba [QuickLaunch](#quicklaunch) mygtuku **Angliavandeniai**) ir būtinai nustatykite teisingą įvykio laiką.
+7. Jei yra tik viena eilutė su angliavandeniais ir insulinu, turite pridėti ir insulino kiekį. Būtinai nustatykite teisingą įvykio laiką ir, patvirtinę naują įrašą, pagrindiniame ekrane patikrinkite AIO.
 
-### Temp basal
+### Laikina bazė
 
-![Temp Basal](../images/TreatmentsView2.png)
+![Laikina bazė](../images/TreatmentsView2.png)
 
-The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). It can be:
-* Positive IOB if the temp basal was higher than the one set in the Profile
-* Negative IOB for a zero-temp (as on line **1**) or if the temp basal was lower than the one set in the Profile
+Čia rodomos ciklo nustatytos **laikinos bazės**. Kai įrašas vis dar turi įtakos AIO, ši informacija rodoma šalia bazės dydžio (**1** eilutė). Ji gali būti:
+* Teigiamas AIO, jei laikina bazė buvo didesnė už nustatytą profilyje
+* Neigiamas AIO, kai nustatyta nulinė laikina bazė (kaip **1** eilutėje) arba jei laikina bazė buvo mažesnė už nustatytą profilyje
 
-Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
+Įrašų ištrynimas paveikia tik jūsų ataskaitas Nightscout, tačiau greičiausiai iškreips jūsų tikrąjį AIO – to daryti nerekomenduojama.
 
-On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
+Raudona S raidė eilutės kairėje reiškia „Suspend“ (sustabdyta): taip būna, kai valandinė bazė šiuo metu netiekiama. Tai įprasta situacija, pavyzdžiui, keičiant Pod.
 
 ### Temporary target
 
 ![Temporary target](../images/TreatmentsView3.png)
 
-The history of temporary targets can be seen here.
+Čia matoma laikinų tikslų istorija.
 
 ### Profilio keitimas
 
 ![Profile Switch](../images/TreatmentsView4.png)
 
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
+Čia matoma profilio keitimų istorija. Kiekvieną kartą keičiant profilį galite matyti kelis įrašus: **1** eilutė, įrašyta ir NS, ir pompos istorijoje, atitinka faktinį keitimą. **2** eilutė, įrašyta Nightscout, bet ne pompos istorijoje, atitinka naudotojo pateiktą profilio keitimo užklausą.
 
-Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
+Įrašų ištrynimas paveikia tik jūsų ataskaitas Nightscout ir niekada nepakeičia esamo profilio.
 
-You can use the **Clone** button shown on line **2** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
+Mygtuku **Klonuoti**, rodomu **2** eilutėje, galite sukurti **Profilio keitimas** įrašo kopiją. Daugiau informacijos rasite skyriuje [Jūsų AAPS profilis > Profilių valdymas](#your-aaps-profile-clone-profile-switch).
 
-### Careportal
+### Terapija
 
-![Care portal](../images/TreatmentsView5.png)
+![Terapija](../images/TreatmentsView5.png)
 
-This tab shows all notes and careportal entries recorded in Nightscout.
+Šiame skirtuke rodomos visos Nightscout įrašytos pastabos ir terapijos įrašai.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
-### Running mode
+### Veikimo režimas
 
-![Running mode](../images/TreatmentsView6.png)
+![Veikimo režimas](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
+Šiame skirtuke rodoma [ciklo būsenos](#AapsScreens-loop-status) pokyčių istorija: atviras, uždaras, LGS, sustabdytas, atjungtas.
 
-### User entry
+### Naudotojo įrašas
 
-![User entry](../images/screens/treatments_user_entry.png)
+![Naudotojo įrašas](../images/screens/treatments_user_entry.png)
 
-This tab lists the actions made in **AAPS** by the user or by an **Automation** (loop mode changes, profile switches, treatments, settings exports...). These entries are not sent to Nightscout.
+Šiame skirtuke pateikiami veiksmai, kuriuos **AAPS** atliko naudotojas arba **Automatizacija** (ciklo režimo pakeitimai, profilio keitimai, terapija, nustatymų eksportas...). Šie įrašai nesiunčiami į Nightscout.
 
 ------
 
-## What is the difference between Nightscout vs Tidepool?
+## Kuo skiriasi Nightscout ir Tidepool?
 
-Nightscout can facilitate the user’s storage of **AAPS’** data and offers a wide range of [reporting tools](https://nightscout.github.io/nightscout/reports/).
+Nightscout padeda naudotojui saugoti **AAPS** duomenis ir siūlo daug [ataskaitų įrankių](https://nightscout.github.io/nightscout/reports/).
 
-Whereas, Tidepool allows the user to [review their data](https://www.tidepool.org/viewing-your-data) and provides [simple sharing with your endo team](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
+Tuo tarpu Tidepool leidžia naudotojui [peržiūrėti savo duomenis](https://www.tidepool.org/viewing-your-data) ir suteikia [paprastą būdą dalytis jais su gydymo komanda](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
