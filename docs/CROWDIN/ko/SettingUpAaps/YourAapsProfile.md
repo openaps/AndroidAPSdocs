@@ -1,355 +1,355 @@
-# Your AAPS profile
+# AAPS 프로파일
 
-Your **AAPS Profile** is a set of four key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates:
-* [glucose targets](#profile-glucose-targets),
-* [basal rates](#your-aaps-profile-basal-rates) (BR),
-* [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
-* [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR).
+**AAPS 프로파일**은 센서 혈당 수치에 따라 **AAPS**가 인슐린을 어떻게 주입할지 정하는 네 가지 핵심 매개변수의 모음입니다. 이것은 **AAPS**의 바탕이 되는 주요 매개변수입니다. **목표**를 진행하면 추가로 바꿀 수 있는 매개변수(SMB 설정 등)가 열립니다. 그러나 이 기능들이 잘 작동하려면 기본이 되는 **프로파일**이 정확해야 합니다. **프로파일**에는 다음이 포함됩니다:
+* [혈당 목표](#profile-glucose-targets),
+* [기저 주입량](#your-aaps-profile-basal-rates) (BR),
+* [인슐린 민감도 계수](#your-aaps-profile-insulin-sensitivity-factor) (ISF),
+* [인슐린 대 탄수화물 비율](#your-aaps-profile-insulin-to-carbs-ratio) (IC 또는 ICR).
 
 ```{admonition} Where did DIA go?
 :class: note
-The **duration of insulin action (DIA)** is no longer part of your **Profile**. It is set per insulin instead — see [Manage → Insulin settings](#Config-Builder-insulin-dia).
+**인슐린 작용 시간(DIA)**은 더 이상 **프로파일**의 일부가 아닙니다. 대신 인슐린마다 설정합니다. [관리 → 인슐린 설정](#Config-Builder-insulin-dia)을 보십시오.
 ```
 
-As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change. Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your settings.
+**AAPS** 관리의 일부로, 사용자는 **프로파일** 설정이 정확한지 계속 평가하고 꼼꼼히 확인해야 합니다. 설정은 여기에 나온 순서대로 맞추는 것을 권장합니다. 다른 설정을 바꾸기 전에 한 가지 설정을 먼저 정확하게 맞추십시오. 한 번에 크게 바꾸지 말고 조금씩 단계적으로 진행하십시오. 바꿀 때마다 새 프로파일을 활성화하는 것을 잊지 마십시오. 설정을 내보내서 [**프로파일**을 정기적으로 백업](#YourAapsProfile_Profile-backup)하십시오.
 
-Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
+**프로파일** 설정은 서로 영향을 줍니다. '잘못된' 설정들이 어떤 상황에서는 함께 잘 작동하지만 다른 상황에서는 그렇지 않을 수 있습니다. 예를 들어 너무 높은 기저가 너무 높은 **CR**과 우연히 같은 시간에 있는 경우입니다. 따라서 각 설정을 하나씩 살펴보고, 여러 상황에서 서로 잘 맞게 작동하는지 확인해야 합니다.
 
-You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances.
+[Autotune](https://autotuneweb.azurewebsites.net/)을 생각의 길잡이로 사용할 수 있습니다. 그러나 무조건 따라서는 안 됩니다. 사용자에게 잘 맞지 않거나 모든 상황에서 잘 작동하지 않을 수 있습니다.
 
 ```{admonition} Your diabetes may vary
 :class: note
-**Profiles** vary significantly from person-to-person.
+**프로파일**은 사람마다 크게 다릅니다.
 
-For basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+기저 주입량(BR), 인슐린 민감도 계수(ISF), 인슐린 대 탄수화물 비율(IC 또는 ICR)의 절대값과 인슐린 필요량의 추세는 사람마다 크게 다릅니다. 이는 몸의 특성, 성별, 나이, 체력 등과 질병, 최근 운동 같은 단기 요인에 따라 달라집니다. 이에 대한 더 많은 안내는 Adam Brown의 책 [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/)를 읽어 보십시오. 아주 좋은 책입니다.
 
 ```
 
-The four last parameters (glucose targets, basal rates, insulin sensitivity factors and insulin-to-carb ratios) can be set to different values, changing hourly if required, over a 24-hour period.
+마지막 네 가지 매개변수(혈당 목표, 기저 주입량, 인슐린 민감도 계수, 인슐린 대 탄수화물 비율)는 24시간 동안 필요하면 매시간 다른 값으로 설정할 수 있습니다.
 
-![Hourly change of basal](../images/MaxDailyBasal2.png)
+![기저의 시간별 변경](../images/MaxDailyBasal2.png)
 
-Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
+아래는 **AAPS**의 _예시_ 프로파일 스크린샷입니다. 아래의 예시 프로파일에는 시간 지점이 매우 많습니다. **AAPS**를 처음 시작할 때는 프로파일이 이보다 훨씬 단순할 것입니다.
 
-![Example active profile](../images/Profile-Example-Active.png)
+![활성 프로파일 예시](../images/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
-## Glucose targets
+## 혈당 목표
 
-### Description
+### 설명
 
-Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
+**혈당 목표**는 핵심 값이며, **AAPS**의 모든 계산은 이 값을 바탕으로 합니다. 이것은 보통 혈당을 유지하려고 하는 목표 범위와는 다릅니다. 목표는 **AAPS** 계산에 사용됩니다. **AAPS**가 **혈당**이 목표 범위를 벗어날 것으로 예측하면, 다시 그 범위 안으로 돌아오도록 조치합니다.
 
-The targets can be defined within those boundaries :
+목표는 다음 범위 안에서 정할 수 있습니다:
 
-|         | _Low_ target           | _High_ target            |
-| ------- | ---------------------- | ------------------------ |
-| Minimum | 4.4 mmol/L or 80 mg/dL | 5 mmol/L or 90 mg/dL     |
-| Maximum | 10 mmol/L or 180 mg/dL | 11.1 mmol/L or 200 mg/dL |
+|    | _낮은_ 목표                | _높은_ 목표                  |
+| -- | ---------------------- | ------------------------ |
+| 최소 | 4.4 mmol/L 또는 80 mg/dL | 5 mmol/L 또는 90 mg/dL     |
+| 최대 | 10 mmol/L 또는 180 mg/dL | 11.1 mmol/L 또는 200 mg/dL |
 
 ### Impact
 
-If the target in your **Profile** is very wide (say, 3 or more mmol/L [50 mg/dL or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
+**프로파일**의 목표가 매우 넓으면(예를 들어 3 mmol/L 이상 [50 mg/dL 이상]), **AAPS**가 거의 동작하지 않는 경우가 많습니다. 이는 **혈당**이 그 넓은 범위 어딘가에 있을 것으로 예측되므로, **AAPS**가 임시 기저를 실행할 가능성이 낮기 때문입니다.
 
-### How to set it
+### 설정 방법
 
-The **figure below** shows an example of how the target can be set in an **AAPS** profile.
+**아래 그림**은 **AAPS** 프로파일에서 목표를 설정하는 예를 보여 줍니다.
 
-![Target](../images/Profile_Target.png)
+![목표](../images/Profile_Target.png)
 
-**BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+**혈당** 목표는 개인의 선호와 필요에 따라 설정합니다. 예를 들어 밤에 저혈당이 걱정된다면, 오후 9시부터 오전 7시까지 목표를 117 mg/dL (6.5 mmol/L)로 약간 높게 설정할 수 있습니다. 아침 식사 볼러스 전에 아침에 활성 인슐린(IOB)이 충분히 있도록 하려면, 오전 7시 - 8시에 더 낮은 목표인 81 mg/dL (4.5 mmol/L)을 설정할 수 있습니다.
 
-When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+[개방 루프](#KeyAapsFeatures-OpenLoop)에서, 특히 [처음 목표들](../SettingUpAaps/CompletingTheObjectives.md)을 진행하는 동안에는, **AAPS**가 어떻게 동작하는지 배우고 **프로파일**을 조정하는 동안 넓은 범위의 목표를 사용하는 것이 좋은 방법일 수 있습니다.<br/> [폐쇄 루프](#KeyAapsFeatures-ClosedLoop)에서는(**[목표 6](#objectives-objective6)**부터) **AAPS**가 **혈당** 변동에 빠르게 반응하도록, 하루의 각 시간마다 하나의 목표(_낮은_ 목표 = _높은_ 목표)가 될 때까지 범위를 줄이는 것을 권장합니다.
 
 (your-aaps-profile-basal-rates)=
 
-## Basal rates
+## 기저 주입량
 
-### Description
+### 설명
 
-Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
+기저 주입량(단위/시간)은 배경 인슐린을 제공하여, 음식이나 운동이 없을 때 혈당을 안정적으로 유지합니다.
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+인슐린 펌프는 몇 분마다 소량의 초속효성 인슐린을 주입하여, 간이 포도당을 너무 많이 내보내지 않도록 하고 포도당이 몸의 세포로 들어가게 합니다. 기저 인슐린은 식단에 따라 보통 하루 총 인슐린량(TDD)의 40 - 50%를 차지하며, 대개 24시간 동안 인슐린 필요량이 한 번 높아지고 한 번 낮아지는 일주기 리듬을 따릅니다. 더 자세한 정보는 Gary Scheiner의 [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) 6장이 매우 유용합니다.
 
-Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimize your ISF and ICR.
+대부분의 제1형 당뇨병 교육자(그리고 제1형 당뇨병이 있는 사람들!)는 ISF와 ICR을 최적화하기 전에 먼저 기저 주입량을 정확하게 맞추어야 한다는 데 동의합니다.
 
 ### Impact
 
-Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
+기저 주입량이 정확하면 아침에 목표 범위 안에서 일어나고, 식사를 건너뛰거나 하루 중 더 이르게 또는 늦게 먹어도 혈당이 높아지거나 낮아지지 않습니다.
 
-Too high basal rate can lead to low BGs. And vice versa.
+기저 주입량이 너무 높으면 저혈당이 생길 수 있습니다. 반대의 경우도 마찬가지입니다.
 
-**AAPS** ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
+**AAPS**는 기본 기저 주입량을 ‘기준선’으로 삼습니다. 기저 주입량이 너무 높으면 ‘0 임시 기저’가 실제보다 더 큰 음의 IOB로 계산됩니다. 그러면 **AAPS**는 IOB를 결국 0으로 만들기 위해 필요한 것보다 더 많은 보정을 이어서 하게 됩니다.
 
-So, a basal rate too high will create low **BGs** both with the default rate, but also some hours hence as **AAPS** corrects to target.
+따라서 기저 주입량이 너무 높으면 기본 주입량 자체로도 **저혈당**이 생기고, **AAPS**가 목표로 보정하는 몇 시간 뒤에도 저혈당이 생깁니다.
 
-Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+반대로 기저 주입량이 너무 낮으면 고혈당이 생기고, 혈당을 목표까지 내리지 못할 수 있습니다.
 
-### How to set it
+### 설정 방법
 
-The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
+**아래 그림**은 **AAPS** 프로파일에서 기저 주입량을 설정하는 예를 보여 줍니다.
 
-![Basal rates](../images/Profile_BasalRates.png)
+![기저 주입량](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
+기저 주입량은 시행착오를 거쳐 맞추며, 당뇨병 치료팀과 상의하여 해야 합니다.
 
-There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast over 3 different days for a period of 8 hours.
+기저 테스트 방법이 여러 가지 있으며, 보통 24시간에 걸친 <u>간헐적</u> 금식 동안 기저 주입량과 인슐린 필요량을 관찰합니다. 하루 전체의 기저 주입량을 테스트해야 하지만, 24시간 동안 계속 굶는 것은 권장하지 않습니다. 몸이 이를 보상하기 위해 호르몬 같은 기전을 작동시키기 때문입니다. 권장 방법은 서로 다른 3일 동안 8시간씩 금식하는 것입니다.
 
-The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
+권장 방법은 루프를 일시 중지하는 것입니다(안전을 위해 [목표 6](#objectives-objective6)을 달성할 때처럼 AAPS를 [**LGS**](#KeyAapsFeatures-LGS)로 설정하여 저혈당을 피할 수 있습니다). 그러면 기본 배경 기저 주입량으로 돌아갑니다. **혈당**이 어떻게 변하는지 관찰하십시오. 혈당이 떨어지면 기저 주입량이 너무 높은 것입니다. 반대의 경우도 마찬가지입니다.<br/> 다른 방법(더 어려울 수 있음)은 루프를 계속 실행하면서 **IOB**가 어떻게 변하는지 보는 것입니다. **IOB**가 음수이면 기저 주입량이 너무 높은 것입니다. 반대의 경우도 마찬가지입니다. 이 방법은 **혈당** 보정에 **ISF**를 사용하므로, 성공하려면 다른 변수도 어느 정도 잘 설정되어 있어야 합니다.<br/> 기저 주입량을 조정하는 또 다른 방법은 모든 COB가 사라진 밤 동안 루프의 동작을 지켜보는 것입니다. 이 방법은 특히 굶기가 어렵거나 인슐린 필요량이 자주 바뀌는 어린이에게 유용합니다. [Tidepool의 Saleh Adi 박사](https://www.youtube.com/watch?v=-fpWnGRhLSo)가 기저 주입량을 최적화하기 위해 밤 동안의 혈당 선을 분석하는 유용한 방법을 알려 줍니다.
 
-See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, analyzing patterns in closed loop.
+폐쇄 루프에서 패턴을 분석하여 기저 프로파일을 조정하는 방법은 [여기](../GettingHelp/ProfileTuning.md)를 보십시오.
 
-When taking action on the result of your basal testing, changes in the **Profile** should be done 1 to 2 hours (depends on your insulin type) before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
+기저 테스트 결과에 따라 조치할 때는, **프로파일** 변경을 혈당이 오르거나 떨어지기 1~2시간 전(인슐린 종류에 따라 다름)에 해야 합니다. **기저 주입량** 설정에 확신이 들 때까지 필요한 만큼 테스트를 반복하십시오.
 
 (your-aaps-profile-basal-not-compatible)=
-#### Message: "Basal rate is not compatible with the current pump"
+#### 메시지: "기저 주입량이 현재 펌프와 맞지 않아 활성화할 수 없습니다"
 
-Each pump has limits: a lowest and a highest basal rate it can deliver and, for some pumps (for example Dana, Accu-Chek Combo, Medtronic and Diaconn G8), basal rates that can only change on the full hour. **AAPS** checks your profile against the pump you use, **after** applying the percentage you choose.
+펌프마다 한계가 있습니다. 주입할 수 있는 가장 낮은 기저 주입량과 가장 높은 기저 주입량이 있고, 일부 펌프(예: Dana, Accu-Chek Combo, Medtronic, Diaconn G8)는 기저 주입량을 정각에만 바꿀 수 있습니다. **AAPS**는 선택한 퍼센트를 적용한 **후에** 프로파일이 사용 중인 펌프에 맞는지 확인합니다.
 
-If a basal rate is outside these limits, the **Activate** screen shows this message and the **Activate** button stays grey:
+기저 주입량이 이 한계를 벗어나면 **활성화** 화면에 이 메시지가 표시되고 **활성화** 버튼은 회색으로 남습니다:
 
-![Activate screen with the message "Basal rate is not compatible with the current pump"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
+!["기저 주입량이 현재 펌프와 맞지 않아 활성화할 수 없습니다" 메시지가 표시된 활성화 화면](../images/v4/Profiles/profile_activate_pump_incompatible.png)
 
-For example, with a basal rate of 0.10 U/h in the night and a profile percentage of 35 %, **AAPS** would have to deliver 0.035 U/h. This is less than a Dana pump can deliver (0.04 U/h).
+예를 들어 밤의 기저 주입량이 0.10 U/h이고 프로파일 퍼센트가 35 %이면, **AAPS**는 0.035 U/h를 주입해야 합니다. 이것은 Dana 펌프가 주입할 수 있는 양(0.04 U/h)보다 적습니다.
 
-To solve it, either:
+해결하려면 다음 중 하나를 하십시오:
 
-* choose another percentage: a **higher** one if a basal rate becomes too low, a **lower** one if a basal rate becomes too high, or
-* [edit the profile](#your-aaps-profile-create-and-edit-profiles) and change the basal rate.
+* 다른 퍼센트를 선택하십시오. 기저 주입량이 너무 낮아지면 **더 높은** 퍼센트를, 너무 높아지면 **더 낮은** 퍼센트를 선택합니다. 또는
+* [프로파일을 편집](#your-aaps-profile-create-and-edit-profiles)하여 기저 주입량을 바꾸십시오.
 
-The profile editor only lets you start basal rates on a full hour. A basal rate starting at e.g. 06:30 can only come from an older profile, for example after you change to a pump that does not support it.
+프로파일 편집기에서는 기저 주입량을 정각에만 시작할 수 있습니다. 예를 들어 06:30에 시작하는 기저 주입량은 이전 프로파일에서만 올 수 있습니다. 예를 들어 이를 지원하지 않는 펌프로 바꾼 뒤입니다.
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## 인슐린 민감도 계수 (ISF)
 
-### Description
+### 설명
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
+인슐린 민감도 계수(보정 계수라고도 함)는 인슐린 1단위가 혈당을 얼마나 낮추는지를 나타내는 값입니다.
 
-**In mg/dL units:** If you have an **ISF** of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
+**mg/dL 단위의 경우:** **ISF**가 40이면 인슐린 1단위가 혈당을 약 40 mg/dL 내립니다(예를 들어 혈당이 140 mg/dL에서 100 mg/dL로 떨어집니다).
 
-**In mmol/L units:** If you have an **ISF** of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
+**mmol/L 단위의 경우:** **ISF**가 1.5이면 인슐린 1단위가 혈당을 약 1.5 mmol/L 내립니다(예를 들어 8 mmol/L에서 6.5 mmol/L로).
 
-From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dL) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+이 예에서 알 수 있듯이 **ISF** 값이 _작을수록_ 인슐린에 덜 민감한 것입니다. 따라서 ISF를 40에서 35 (mg/dL)로, 또는 1.5에서 1.3 (mmol/L)으로 줄이는 것을 흔히 **ISF**를 강하게 한다고 합니다. 반대로 **ISF** 값을 40에서 45 (mg/dL)로, 또는 1.5에서 1.8 (mmol/L)로 높이는 것은 **ISF**를 약하게 하는 것입니다.
 
 ### Impact
 
-A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
+**더 낮은 / 더 강한 ISF**(예: 50 대신 40)는 인슐린 1단위가 **혈당**을 덜 내린다는 뜻입니다. 그래서 루프는 **더 많은 인슐린**으로 더 공격적이고 강하게 보정합니다. **ISF**가 너무 강하면(값이 작으면) **저혈당**이 생길 수 있습니다.
 
-A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
+**더 높은 / 더 약한 ISF**(예: 35 대신 45)는 인슐린 1단위가 **혈당**을 더 많이 내린다는 뜻입니다. 그래서 루프는 **더 적은 인슐린**으로 덜 공격적이고 약하게 보정합니다. **ISF**가 너무 약하면(값이 크면) **고혈당**이 생길 수 있습니다.
 
-**Example:**
-* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
-* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
-* If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
-* If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 units of insulin
+**예시:**
+* **혈당**이 190 mg/dL (10.5 mmol/L)이고 목표가 100 mg/dL (5.6 mmol/L)입니다.
+* 따라서 `190 - 100 = 90 mg/dL` 또는 `10.5 - 5.6 = 4.9 mmol/L`만큼 보정해야 합니다
+* `ISF = 30` -> `90 / 30 = 3` 또는 `ISF = 1.63` -> `4.9 / 1.63 = 3`인 경우: 인슐린 3단위
+* `ISF = 45` -> `90 / 45 = 2` 또는 `ISF = 2.45` -> `4.9 / 2.45 = 2`인 경우: 인슐린 2단위
 
-An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
+**ISF**가 너무 낮으면(따라서 더 공격적이며, 흔한 경우입니다) ‘과잉 보정’이 생길 수 있습니다. **AAPS**가 높은 **혈당**을 보정하는 데 실제보다 더 많은 인슐린이 필요하다고 계산하기 때문입니다. 그러면 아래 그림처럼 혈당이 ‘롤러코스터’처럼 오르내릴 수 있습니다(특히 굶을 때). 이런 경우에는 **AAPS**가 덜 공격적이 되도록 **ISF** 값을 높여야 합니다. 그러면 **AAPS**가 더 적은 보정량을 주입하여, 높은 **혈당**을 과잉 보정해 **저혈당**이 되는 것을 막습니다.
 
-![ISF too low](../images/isf.jpg)
+![너무 낮은 ISF](../images/isf.jpg)
 
-Conversely, an **ISF** set too high can result in under-corrections, meaning your **BG** remains above target – particularly noticeable overnight.
+반대로 **ISF**를 너무 높게 설정하면 보정이 부족해져 **혈당**이 목표보다 높게 남습니다. 특히 밤에 잘 보입니다.
 
-### How to set it
+### 설정 방법
 
-See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
+**AAPS** 프로파일에서 ISF 값을 설정하는 예는 **아래 그림**을 보십시오.
 
-![Profile ISF](../images/Profile_ISF.png)
+![프로파일 ISF](../images/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+낮 시간 ISF를 정하는 기본 출발점은 1,700(94) 규칙을 사용하여 하루 총 인슐린량(TDD)을 기준으로 하는 것입니다. 자세한 내용은 Gary Scheiner의 [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) 7장에 있습니다.
 
-| 1700 (if measuring in mg/dL) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dL) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                 |
+| 1700 (mg/dL로 측정하는 경우) 또는 94 (mmol/L) / TDD = 대략의 ISF.<br/><br/>예: TDD = 40 U<br/>대략의 ISF (mg/dL) = 1700/40 = 43<br/>대략의 ISF (mmol/L) = 94/40 = 2.4 |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                            |
 
-Assuming your basal levels are correct, you can test this by suspending the loop, checking **IOB** is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+기저 주입량이 정확하다고 가정하면, 루프를 일시 중지하고 **IOB**가 0인지 확인한 다음, 포도당 정제 몇 개를 먹어 안정된 ‘높은’ 수준에 도달하여 테스트할 수 있습니다.
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+그런 다음 목표 혈당에 도달하도록 예상한 양의 인슐린(현재 1/ISF 기준)을 주입하십시오.
 
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+이 값은 너무 낮게 설정되는 경우가 많으므로 주의하십시오. 너무 낮으면 1 U가 예상보다 혈당을 더 빨리 내립니다.
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## 인슐린 대 탄수화물 비율 (ICR)
 
-### Description
+### 설명
 
-The **ICR** is a measure of how many grams of carbohydrate are covered by one unit of insulin.
+**ICR**은 인슐린 1단위가 탄수화물 몇 그램을 처리하는지를 나타냅니다.
 
-Some people also use **I:C** as an abbreviation instead of **ICR**, or talk about carb ratio : **CR**.
+**ICR** 대신 **I:C**라는 약어를 쓰거나, 탄수화물 비율 **CR**이라고 부르는 사람도 있습니다.
 
-For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
+예를 들어 인슐린 대 탄수화물 비율이 1 대 10(1:10)이면 탄수화물 10그램을 먹을 때마다 인슐린 1U를 주입한다는 뜻입니다. 탄수화물 25g 식사에는 인슐린 2.5U가 필요합니다.
 
-If your **ICR** is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+**ICR**이 더 약하면(값이 더 크면), 예를 들어 1:20이면 탄수화물 10g에 인슐린 0.5U만 필요합니다. 탄수화물 25g 식사에는 인슐린 25/20 = 1.25U가 필요합니다.
 
-It is common to have different **ICR** at different times of day due to hormone levels and physical activity. Many people find they have their lowest/strongest **ICR** around breakfast time because they tend to be more insulin resistant. So, for example, one adult user's **ICR** could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller **ICR** then.
+호르몬 수준과 신체 활동 때문에 하루 중 시간마다 **ICR**이 다른 것은 흔합니다. 많은 사람은 인슐린 저항성이 더 큰 경향이 있어서 아침 식사 시간쯤에 **ICR**이 가장 낮습니다/가장 강합니다. 예를 들어 어떤 성인 사용자의 **ICR**은 아침 1:8, 점심 1:10, 저녁 1:10일 수 있습니다. 그러나 이 패턴이 모두에게 맞는 것은 아닙니다. 어떤 사람은 저녁 시간에 인슐린 저항성이 더 커서 그때 더 강한/더 작은 **ICR**이 필요합니다.
 
 > **참고:**
 > 
-> 일부 유럽 국가들에서는 얼마나 많은 인슐린이 필요한지 결정하기 위해 빵 단위(bread units)를 사용합니다. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
+> 일부 유럽 국가들에서는 얼마나 많은 인슐린이 필요한지 결정하기 위해 빵 단위(bread units)를 사용합니다. 처음에는 1 빵 단위가 탄수화물 12g이었고, 나중에 일부는 10g으로 바꾸었습니다.
 > 
 > 이 빵단위 모델에서는 탄수화물의 양은 고정되어있고 인슐린의 양이 가변적입니다. ("1 빵단위(bread unit)를 처리하기 위해 얼마나 많은 인슐린이 필요합니까?")
 > 
-> When using **ICR** the amount of insulin is fixed and the amount of carbs is variable. ("1유닛의 인슐린이 얼마나 많은 탄수화물(g)을 처리할 수 있습니까?")
+> **ICR**을 사용할 때는 인슐린 양이 고정되고 탄수화물 양이 바뀝니다. ("1유닛의 인슐린이 얼마나 많은 탄수화물(g)을 처리할 수 있습니까?")
 > 
-> Example:
+> 예시:
 > 
-> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> 빵 단위 계수(BU = 탄수화물 12g): 2.4 U/BU -> 빵 단위 1개를 먹을 때 인슐린 2.4단위가 필요합니다.
 > 
-> Corresponding **ICR**: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
+> 해당하는 **ICR**: 12g / 2.4 U = 5.0 g/U -> 인슐린 1단위로 탄수화물 5.0g을 처리할 수 있습니다.
 > 
-> BU factor 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
+> BU 계수 2.4 U / 12g   ===>   IC = 12g / 2.4 U = 5.0 g/U
 > 
-> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> 환산표는 온라인에서 찾을 수 있습니다. 예: [여기](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Impact
 
-A **lower / stronger ICR** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’. If your IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
+**더 낮은 / 더 강한 ICR**은 1단위당 음식이 더 적다는 뜻입니다. 즉 같은 양의 탄수화물에 인슐린을 더 많이 받습니다. ‘더 공격적’이라고도 합니다. IC가 너무 강하면 인슐린을 너무 많이 받게 되어 **저혈당**이 생길 수 있습니다.
 
-A **higher / weaker ICR** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’. If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
+**더 높은 / 더 약한 ICR** = 1단위당 음식이 더 많다는 뜻입니다. 즉 같은 양의 탄수화물에 인슐린을 더 적게 받습니다. ‘덜 공격적’이라고도 합니다. IC가 너무 약하면 필요한 것보다 인슐린을 적게 받게 되어 **고혈당**이 생길 수 있습니다.
 
-### How to set it
+### 설정 방법
 
-The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+**아래 그림**은 한 사용자의 **ICR**과 이를 **AAPS 프로파일**에서 설정하는 예를 보여 줍니다. 이 값을 입력할 때는 비율의 마지막 부분만 입력합니다. 그래서 인슐린 대 탄수화물 비율 1:3.5는 그냥 “3.5”로 입력합니다.
 
-![Profile ICR](../images/Profile_ICR.png)
+![프로파일 ICR](../images/Profile_ICR.png)
 
-If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are your **ICR** is too weak (_i.e._ the number is too high and should be gradually lowered). Conversely, if your **BG** is lower than before food, **ICR** is too strong (_i.e._ the number is too small and should be gradually increased).
+식사가 소화되고 **IOB**가 0으로 돌아온 뒤에도 **혈당**이 식사 전보다 높게 남아 있다면, **ICR**이 너무 약할 가능성이 큽니다(_즉_ 숫자가 너무 크므로 조금씩 낮추어야 합니다). 반대로 **혈당**이 식사 전보다 낮다면 **ICR**이 너무 강한 것입니다(_즉_ 숫자가 너무 작으므로 조금씩 높여야 합니다).
 
-Assuming your basal rates are correct, you can test by checking if **IOB** is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food you normally eat at that time of day and count its carbs precisely.
+기저 주입량이 정확하다고 가정하면, **IOB**가 0이고 범위 안에 있는지 확인한 뒤, 탄수화물 양을 정확히 아는 음식을 먹고, 현재 인슐린 대 탄수화물 비율에 따라 예상한 양의 인슐린을 주입하여 테스트할 수 있습니다. 그 시간에 평소 먹는 음식을 먹고 탄수화물을 정확하게 세는 것이 가장 좋습니다.
 
-## Common questions related to the Profile
+## 프로파일에 관한 자주 묻는 질문
 
 ```{contents} Common questions related to the Profile
 :depth: 1
 :local: true
 ```
 
-### About the importance of getting your profile right
+### 프로파일을 올바르게 설정하는 것이 중요한 이유
 
-**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+**왜 프로파일 설정을 정확하게 맞추어야 합니까? 루프가 알아서 처리하면 되지 않습니까?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimize poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+하이브리드 폐쇄 루프는 잘못된 **프로파일** 값 때문에 생기는 나쁜 혈당 조절을 줄이기 위해 인슐린 주입을 조정하려고 시도_할 수_ 있습니다. 예를 들어 저혈당이 올 것 같으면 인슐린 주입을 멈추는 방법으로 이렇게 할 수 있습니다. 그러나 **프로파일** 설정이 이미 몸에 필요한 값에 최대한 가까우면 혈당을 훨씬 더 잘 조절할 수 있습니다. 이것이 **AAPS**가 개방 루프 펌프 사용에서 하이브리드 폐쇄 루프로 넘어갈 때 단계별 목표를 사용하는 이유 중 하나입니다. 또한 루프를 열어야 할 때가 있습니다(센서 워밍업, 센서 고장 _등_). 때로는 한밤중일 수도 있으며, 이런 상황을 위해 설정이 정확해야 합니다.
 
-If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (**BR**), insulin sensitivity factors (**ISF**) and insulin-to-carb ratios (**ICR**).
+다른 개방 또는 폐쇄 루프 펌프 시스템을 사용하다가 **AAPS**를 시작한다면, 기저 주입량(**BR**), 인슐린 민감도 계수(**ISF**), 인슐린 대 탄수화물 비율(**ICR**)에 어떤 값을 써야 할지 이미 어느 정도 알고 있을 것입니다.
 
-If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+주사(MDI)에서 **AAPS**로 바꾸는 경우, 먼저 MDI에서 펌프로 옮기는 방법을 공부하고, 당뇨병 치료팀과 상의하여 신중하게 계획하고 옮기는 것이 좋습니다. John Walsh & Ruth Roberts의 ["Pumping insulin"](https://amzn.eu/d/iaCsFa2)과 Gary Scheiner의 [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe)가 매우 유용합니다.
 
-### What causes high postprandial peaks in closed loop?
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your **BG** is falling to reach your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/> If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **ICR** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your **ICR** and an appropriate pre-bolus time with your endocrinologist.
+### 폐쇄 루프에서 식후 혈당이 크게 오르는 원인은 무엇입니까?
+먼저 기저 주입량을 확인하고, 탄수화물 없이 기저 주입량 테스트를 하십시오. ICR이 정확하고 탄수화물이 모두 흡수된 뒤 **혈당**이 목표까지 떨어진다면, 식사 얼마 전에 **AAPS**에서 '식사 직전' 임시 목표를 설정하거나, 내분비내과 의사와 적절한 사전 볼러스 시간을 상의해 보십시오. <br/> 식사 후 **혈당**이 너무 높고 탄수화물이 모두 흡수된 뒤에도 여전히 너무 높다면, 내분비내과 의사와 상의하여 **ICR**을 낮추는 것을 고려하십시오. **COB**가 있는 동안 **혈당**이 너무 높고 탄수화물이 모두 흡수된 뒤에는 너무 낮다면, 내분비내과 의사와 **ICR**을 높이는 것과 적절한 사전 볼러스 시간을 상의해 보십시오.
 
-### I'm stuck high and the loop does not bring me down
-The possible reasons for **AAPS** not giving enough insulin are:
-* **ISF** is not strong enough
-* Basal rate might not be strong enough
-* A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
-* Automation has been set up and has overridden **AAPS**.
+### 혈당이 높은 채로 있고 루프가 내리지 못합니다
+**AAPS**가 인슐린을 충분히 주지 않는 이유는 다음과 같을 수 있습니다:
+* **ISF**가 충분히 강하지 않음
+* 기저 주입량이 충분히 강하지 않을 수 있음
+* **maxIOB** 같은 안전 설정이 작동했을 수 있습니다. 또는 설정에 따라 이 시간에 **SMB**가 비활성화되어 있습니다.
+* 자동화가 설정되어 **AAPS**를 무시했습니다.
 
-See also [Tweaking the AAPS Profile](../GettingHelp/ProfileTuning.md).
+[AAPS 프로파일 조정](../GettingHelp/ProfileTuning.md)도 보십시오.
 
-### I have negative IOB, is this an issue ?
-Negative **IOB** means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the **BG** starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
+### IOB가 음수입니다. 문제가 됩니까?
+음의 **IOB**는 몸에 있는 전체 인슐린 양(기저 + 볼러스)이 기저보다 적다는 뜻입니다. 그러면 **AAPS**는 인슐린이 부족하다고 판단하여 **혈당**이 오르기 시작하자마자 더 많은 인슐린을 보냅니다. 이 때문에 나중에 **저혈당**이 생길 수 있습니다.
 
-Here are some reasons why you may have negative IOB, and what action to take:
-* a too strong basal: tweak your **Profile**
-* too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
-* DIA set too short on your insulin type, resulting in insulin stacking: tweak it in [Manage → Insulin settings](#Config-Builder-insulin-dia)
-* physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
+IOB가 음수가 되는 이유와 해야 할 조치는 다음과 같습니다:
+* 너무 강한 기저: **프로파일**을 조정하십시오
+* 이전 식사의 볼러스가 너무 많음: **프로파일**을 조정하거나 볼러스를 적절한 시간에 하는지 확인하십시오.
+* 사용하는 인슐린 종류에 DIA가 너무 짧게 설정되어 인슐린이 쌓임: [관리 → 인슐린 설정](#Config-Builder-insulin-dia)에서 조정하십시오
+* 신체 활동: 다음에는 활동 중에 늘어나는 민감도를 고려하여 더 낮은 [프로파일 퍼센트](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)를 사용하는 것을 고려하십시오.
 
-## Manage your Profiles
+## 프로파일 관리
 
 ```{contents} Operations that you can perform on your **Profiles** in **AAPS**
 :depth: 1
 :local: true
 ```
 (your-aaps-profile-create-and-edit-profiles)=
-### Create and edit Profiles
+### 프로파일 만들기와 편집
 
-In **AAPS** v4 your profiles live on the **Manage** screen (bottom navigation) → **Profile**, shown as a swipeable card carousel with an action bar (**➕ Add**, **✏️ Edit**, **⧉ Clone**, **🗑️ Delete**, **▶ Activate**). For managing and activating a profile, see [Managing and activating profiles](#ProfileSwitch-manage-v4). Coming from **AAPS** v3, where profiles had their own tab? See [What changed in AAPS v4](#v4changes-manage).
+**AAPS** v4에서 프로파일은 **관리** 화면(하단 내비게이션) → **프로파일**에 있습니다. 동작 표시줄(**➕ 추가**, **✏️ 편집**, **⧉ 복사**, **🗑️ 삭제**, **▶ 활성화**)이 있는, 밀어 넘기는 카드 캐러셀로 표시됩니다. 프로파일을 관리하고 활성화하는 방법은 [프로파일 관리와 활성화](#ProfileSwitch-manage-v4)를 보십시오. 프로파일에 별도의 탭이 있던 **AAPS** v3에서 오셨습니까? [AAPS v4의 변경 사항](#v4changes-manage)을 보십시오.
 
-Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**, then fill in the four schedules using the tabs:
+**✏️ 편집**을 누르면 편집기가 열립니다. 프로파일 **이름**과 **단위**를 설정한 다음, 탭을 사용하여 네 가지 일정을 채우십시오:
 
-- **IC** — insulin-to-carb ratio (g/U)
-- **ISF** — insulin sensitivity factor
-- **BAS** — basal rates
-- **TARG** — target range
+- **IC** — 인슐린 대 탄수화물 비율 (g/U)
+- **ISF** — 인슐린 민감도 계수
+- **BAS** — 기저 주입량
+- **TARG** — 목표 범위
 
-![The profile editor — IC / ISF / BAS / TARG tabs](../images/setup-wizard/Wizard-Profile-IC.png)
+![프로파일 편집기 — IC / ISF / BAS / TARG 탭](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Each schedule is a list of **time blocks**: add a block, set its start time and value, then **Save**.
+각 일정은 **시간대** 목록입니다. 시간대를 추가하고 시작 시간과 값을 설정한 다음 **저장**하십시오.
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**: the card of the profile in use is marked **ACTIVE**, but the card selected on screen may be another one.
+**프로파일**을 바꿀 때는 올바른 **프로파일**을 편집하고 있는지 확인하십시오. 사용 중인 프로파일의 카드에는 **활성** 표시가 있지만, 화면에서 선택된 카드는 다른 카드일 수 있습니다.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
-### Build a Profile from scratch for a kid
+### 어린이를 위한 프로파일을 처음부터 만들기
 
-The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) may help you to create a profile for a child (up to 18 years).
+[프로파일 도우미](#aaps-screens-profile-helper)(메뉴 ☰ → **프로파일 도우미**)는 어린이(18세까지)를 위한 프로파일을 만드는 데 도움이 될 수 있습니다.
 
 **Important note:**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**프로파일 도우미는 어린이의 첫 프로파일을 찾는 것을 돕기 위한 것입니다. 두 병원의 데이터 세트를 바탕으로 하지만, 새 프로파일을 사용하기 전에 항상 의료진과 상의하십시오!**
 
-Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
+프로파일 도우미는 두 병원의 어린이 데이터 세트를 제공하여 18세까지의 어린이에게 맞는 첫 프로파일을 찾도록 돕습니다.
 
-![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
+![어린이용 프로파일 도우미 1](../images/ProfileHelperKids1.png)
 
-1. Make sure you are on the **Profile 1** tab.
-2. In **Profile type**, make sure you have "Default profile" selected.
-3. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
-4. Change to the **Profile 2** tab.
-5. Press **Profile type** and select "DPV Default profile".
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
-7. Open the **Comparison** tab. Comparison of the two adjusted profiles will be displayed (see screenshot below).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
+1. **프로파일 1** 탭에 있는지 확인하십시오.
+2. **프로파일 종류**에서 "기본 프로파일"이 선택되어 있는지 확인하십시오.
+3. 어린이의 나이와 총 TDD **또는** 체중을 입력하여 기본 프로파일(병원 데이터 세트 기반)을 조정하십시오.
+4. **프로파일 2** 탭으로 바꾸십시오.
+5. **프로파일 종류**를 누르고 "DPV 기본 프로파일"을 선택하십시오.
+6. 어린이의 나이, 총 TDD, 기저 퍼센트를 입력하여 DPV 기본 프로파일(다른 병원 데이터 세트 기반)을 조정하십시오. DPV 데이터 세트는 **기저 주입량**만 제공하므로, 이 프로파일에서는 IC와 ISF가 0으로 표시됩니다.
+7. **비교** 탭을 여십시오. 조정된 두 프로파일의 비교가 표시됩니다(아래 스크린샷 참조).
+8. 이 제안 중 하나를 바탕으로 프로파일 조정을 시작하려면, 비교 화면 아래에 있는 **복사** 버튼을 사용하십시오.
 
-![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
+![어린이용 프로파일 도우미 2](../images/ProfileHelperKids2.png)
 
-### Switch Profile
+### 프로파일 전환
 
-See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+[프로파일 전환과 프로파일 퍼센트](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)를 보십시오.
 
 (your-aaps-profile-clone-profile-switch)=
-### Clone a Profile switch to a new Profile
+### 프로파일 전환을 새 프로파일로 복사하기
 
-![Profile Switch](../images/TreatmentsView4.png)
+![프로파일 전환](../images/TreatmentsView4.png)
 
-The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **2**.
+[처치 이력](#aaps-screens-treatments)에는 지난 모든 **프로파일 전환**이 표시됩니다. **프로파일 전환** 탭으로 가면, 지난 **프로파일 전환**을 바탕으로 새 **프로파일**을 만들 수 있습니다. 이 경우 시간 이동과 퍼센트가 새 로컬 프로파일에 적용됩니다. **2**번 줄에 표시된 **복사** 버튼을 사용하십시오.
 
-You can now go to the [Profile screen](#your-aaps-profile-create-and-edit-profiles) (**Manage → Profile**) to edit the newly created Profile.
+이제 [프로파일 화면](#your-aaps-profile-create-and-edit-profiles)(**관리 → 프로파일**)으로 가서 새로 만든 프로파일을 편집할 수 있습니다.
 
 (YourAapsProfile_Profile-backup)=
-### Profile backup
+### 프로파일 백업
 
-Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
+**프로파일**은 루프 시스템의 핵심 설정이므로 매우 중요하며, 절대 잃어버리고 싶지 않은 것입니다.
 
-* Your **Profiles** are stored in the **AAPS** database.
-* When **NSClientV3** is set up (see [Synchronization](#SetupWizard-synchronization-with-the-reporting-server-and-more)), your **Profiles** are also uploaded to Nightscout automatically.
-* They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
+* **프로파일**은 **AAPS** 데이터베이스에 저장됩니다.
+* **NSClientV3**이 설정되어 있으면([동기화](#SetupWizard-synchronization-with-the-reporting-server-and-more) 참조), **프로파일**도 Nightscout에 자동으로 업로드됩니다.
+* 프로파일은 [내보낸 설정](../Maintenance/ExportImportSettings.md)에도 포함됩니다. 따라서 백업을 안전한 곳에 보관하십시오.
 
-### Editing Profiles from Nightscout
+### Nightscout에서 프로파일 편집하기
 
-If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The setting is called "**Receive profile store from NS**" and is part of the **Nightscout data acceptance** options (accepting data from Nightscout is turned off by default, see the [Client control step of the Setup Wizard](../SettingUpAaps/SetupWizard.md)); you can find it quickly with the **search bar** on the main screen. While client control is on, the setting is hidden and **AAPS** takes no profile changes from Nightscout ([hardened mode](#client-master-control-hardened-mode)); edit the profile on a paired client instead, or load it once with **Full sync**.
+활성화되어 있으면, Nightscout에서 직접 바꾼 **프로파일**을 **AAPS**에서 받을 수 있습니다. 이 설정의 이름은 "**NS에서 프로파일 저장소 받기**"이며 **Nightscout 데이터 수신** 옵션의 일부입니다(Nightscout에서 데이터를 받는 것은 기본적으로 꺼져 있습니다. [설정 마법사의 클라이언트 제어 단계](../SettingUpAaps/SetupWizard.md)를 보십시오). 메인 화면의 **검색 창**으로 빠르게 찾을 수 있습니다. 클라이언트 제어가 켜져 있는 동안에는 이 설정이 숨겨지고 **AAPS**는 Nightscout에서 프로파일 변경을 받지 않습니다([강화 모드](#client-master-control-hardened-mode)). 대신 페어링된 클라이언트에서 프로파일을 편집하거나, **전체 동기화**로 한 번 불러오십시오.
 
-This can be helpful when about to make major changes to a more extensive **Profile**. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
+이것은 큰 **프로파일**을 크게 바꾸려고 할 때 도움이 될 수 있습니다. 웹 인터페이스에서는 프로파일을 더 쉽게 입력할 수 있습니다. _예를 들어_ 스프레드시트의 데이터를 직접 복사할 수 있습니다.
 
-To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+그러려면 Nightscout 편집기에서 여러 프로파일로 이루어진 **데이터베이스 레코드** 전체를 복사하는 것이 중요합니다(아래 스크린샷의 파란 화살표). 그러면 새 데이터베이스 레코드에는 현재 날짜가 붙습니다. 저장한 후, 바뀐/새 **프로파일**은 **AAPS**에서 일반적인 [프로파일 전환](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)으로 활성화할 수 있습니다.
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![데이터베이스 레코드 복사](../images/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
-### Compare two Profiles
+### 두 프로파일 비교하기
 
-You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+[프로파일 도우미](#aaps-screens-profile-helper)(메뉴 ☰ → **프로파일 도우미**)를 사용하여 서로 다른 두 프로파일 또는 프로파일 전환(이전에 [프로파일 전환](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)에서 사용한 프로파일의 퍼센트)을 비교할 수도 있습니다.
 
-![Profile Helper 1](../images/ProfileHelper1.png)
+![프로파일 도우미 1](../images/ProfileHelper1.png)
 
-1. Make sure you are on the **Profile 1** tab.
-2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
-3. Choose the **Profile** you want to compare from.
-4. Change to the **Profile 2** tab.
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
-6. Choose the **Profile Switch** you want to compare to.
-7. Open the **Comparison** tab. Comparison of the two profiles will be displayed (see screenshot below).
+1. **프로파일 1** 탭에 있는지 확인하십시오.
+2. **프로파일 종류**에서 "사용 가능한 프로파일"을 선택하여 저장된 모든 **프로파일** 중에서 고르십시오.
+3. 비교할 기준 **프로파일**을 선택하십시오.
+4. **프로파일 2** 탭으로 바꾸십시오.
+5. **프로파일 종류**에서 "프로파일 전환"을 선택하여 모든 **프로파일 전환** 이력 중에서 고르십시오.
+6. 비교 대상 **프로파일 전환**을 선택하십시오.
+7. **비교** 탭을 여십시오. 두 프로파일의 비교가 표시됩니다(아래 스크린샷 참조).
 
-![Profile Helper 2](../images/ProfileHelper2.png)
+![프로파일 도우미 2](../images/ProfileHelper2.png)
