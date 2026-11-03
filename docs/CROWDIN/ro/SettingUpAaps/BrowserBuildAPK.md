@@ -7,7 +7,7 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 ```
 
 ## AAPS-CI GitHub Actions to Build the AAPS APK
- - Suitable for general users.
+ - Potrivit pentru utilizatorii obișnuiți.
 
 ```{tab-set}
 
@@ -15,8 +15,8 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 ### Run the Workflow to Build the Signed APK
 
 1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+2. Extindeți All Workflows.
+3. Selectați AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
@@ -30,13 +30,13 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of Android APS.
+6. Veți vedea mesajul Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. Când acțiunea se termină, acțiunea AAPS CI va afișa o bifă verde. You have successfully built the updated version of Android APS.
 
 ![Monitor Workflow](../images/update/CI/GitHubActions4.png)
 
 ### Install the AAPS APK
 
-1. Open your Google Drive
+1. Deschideți Google Drive
 2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
 
 ![Google Drive Location](../images/update/CI/GitHubActions5.png)
@@ -62,9 +62,9 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 **Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
 
-Tap **Select AAPS Version** and pick the version to build. The newest version is at the top of the list.
+Apăsați **Select AAPS Version** (selectați versiunea AAPS) și alegeți versiunea de construit. Cea mai nouă versiune este în partea de sus a listei.
 
-![Select AAPS Version list](../images/Building-the-App/CI/BrowserBuildVariant2.png)
+![Lista Select AAPS Version](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
 (browserbuild-variant)=
 
@@ -72,7 +72,7 @@ Tap **Select AAPS Version** and pick the version to build. The newest version is
 
 *Note: both Android and Android Wear apps will be built automatically.*
 
-  - Select the variant you need:
+  - Selectați varianta de care aveți nevoie:
     - fullRelease: For regular pump usage with full functionality.
     - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
     - pumpcontrolRelease: To replace your pump app/controller
@@ -85,7 +85,7 @@ Variants ending with “Debug” indicate that the APK will be built in debug mo
 
 ----
 
-Once the build succeeds, the apk is saved to your Google Drive. Continue with [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+După ce construirea reușește, fișierul apk este salvat în Google Drive. Continue with [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
 
 ```{note}
 From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
