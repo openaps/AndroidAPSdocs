@@ -1,4 +1,4 @@
-# Tweaking the AAPS' Profile
+# Ajustarea profilului AAPS
 
 ```{admonition} This is NOT a medical advice
 :class: avertizare
@@ -17,30 +17,30 @@ Using **closed loop** may make basal testing easier and may significantly reduce
 3. Keep an eye out for patterns with **AAPS** that happen around the same time (almost) everyday.
 4. It's important to do this over several days. Poor results tend to be yielded from using data observed on a single day to make __Profile’s__ adjustment decisions.
 5. After you have observed a repeatable pattern of behavior, e.g. at 1PM you see a spike in __BG__ or a negative __IOB__ value, only then start to make small changes to your __Profile__.
-6. It's important to limit the changes you make to one thing at a time. Spre exemplu increase your basal by 10% around 1PM.
+6. It's important to limit the changes you make to one thing at a time. De exemplu increase your basal by 10% around 1PM.
 7. After every change, it's important to monitor the impact on your __BG__ and __IOB__ for the next few days.
-8. Repeat this pattern, observe, decide, tweak again if needed
+8. Repetați acest tipar: observați, decideți, ajustați din nou dacă este nevoie
 
-Don't rush, go slow!
+Nu vă grăbiți, mergeți încet!
 
 ## Recommended settings and advice while tweaking basal
 
-- Do all testing with [closed loop enabled](#AapsScreens-loop-status).
+- Faceți toate testele cu [bucla închisă activată](#AapsScreens-loop-status).
 - **Turn <u>OFF</u> all [automations](../DailyLifeWithAaps/Automations.md)**
 - **Turn <u>OFF</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)** so that they will not try to adapt your profile.
 - Do not make manual user actions (manual bolus, temp targets etc…) while testing: let the system use the **Profile** settings only.
-- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board, Carbs On Board (and Sensitivity change). On graph 2, use Deviations and Blood Glucose Impact. When asking for advice, always include those on your screenshots.
+- Pentru [graficele suplimentare](#AapsScreens-section-g-additional-graphs): pe graficul 1, folosiți Insulină activă, Carbohidrați la bord (și Modificarea sensibilității). Pe graficul 2, folosiți Deviații și Impactul asupra glicemiei. Când cereți sfaturi, includeți întotdeauna aceste grafice în capturile de ecran.
 - COB=0[*](#profiletuning-cob-zero)
 
 Other considerations that should ideally be avoided, as they influence the data and can lead to poor conclusions:
-- No physical activities.
+- Fără activitate fizică.
 - Fără stres.
 - Fără boală.
 - No extreme weather like high or low temperatures.
 - No failed pump or CGM sessions.
-- No unannounced carbs.
+- Fără carbohidrați neanunțați.
 
-Also note:
+De reținut și:
 - If your [basal rate profile](#your-aaps-profile-basal-rates) is correct, when you are on target with COB=0[*](#profiletuning-cob-zero) and IOB=0, you will remain constantly on target whatever your **ISF** (**ISF** is only used when you are higher than your **BG** target).
 - You need to check the actual **IOB** but also the **IOB** chart, to observe how the **IOB** evolved during the past few hours.
 
@@ -52,7 +52,7 @@ Meaning that the meal is digested, and there are no more carbs in your body.
 
 **AAPS** might indicate [COB=0 while you still have carbs on board](../DailyLifeWithAaps/CobCalculation.md).
 
-## [Profile](../SettingUpAaps/YourAapsProfile.md) definitions
+## Definiții ale [profilului](../SettingUpAaps/YourAapsProfile.md)
 
 A too **strong Profile** indicates some combination of the following:
 
@@ -66,22 +66,22 @@ A too **strong Profile** indicates some combination of the following:
 
 If you observe the following patterns after a few days, consider the following changes:
 
-### IOB positive
+### IOB pozitiv
 
 - **Profile** basal might not be strong enough (this could also be because of things like unannounced food, illness, bad site absorption, etc.)
 
-![Positive IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
+![IOB pozitiv](../images/troubleshooting/profiletuning/PositiveInsulin.png)
 
-### IOB negative
+### IOB negativ
 
-- Default basal too strong.
+- Bazala implicită este prea puternică.
 - May be the effect from past exercise/physical activity.
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin.png)
+![IOB negativ](../images/troubleshooting/profiletuning/NegativeInsulin.png)
 
-- Previous meal: too much bolus (which resulted in a very long zero temp basal)
+- Masa anterioară: prea mult bolus (care a dus la o bazală temporară zero foarte lungă)
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
+![IOB negativ](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
 
 ## BG Target Observations
 
@@ -92,7 +92,7 @@ If you observe the following patterns after a few days, consider the following c
 ![Stuck High](../images/troubleshooting/profiletuning/StuckHigh.png)
 
 - __Profile__ basal might not be strong enough (**SMBs** do not have enough "basal stock" to use)
-- A security ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) might have kicked in and is limiting insulin injection. Verify in the **APS** plugin screen (**Configuration → APS → Open plugin**); see [SMB](#Open-APS-features-super-micro-bolus-smb).
+- Este posibil să fi intervenit o limită de siguranță ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) care limitează administrarea insulinei. Verify in the **APS** plugin screen (**Configuration → APS → Open plugin**); see [SMB](#Open-APS-features-super-micro-bolus-smb).
 - Technical issue: site absorption, infusion set, ...
 
 ### Stuck Low
@@ -102,17 +102,17 @@ If you observe the following patterns after a few days, consider the following c
 
 ### Rollercoaster (ups and downs)
 
-- **ISF** too strong? See your [AAPS Profile](#your-aaps-profile-insulin-sensitivity-factor)
+- **ISF** prea puternic? See your [AAPS Profile](#your-aaps-profile-insulin-sensitivity-factor)
 
 ![Rollercoaster](../images/troubleshooting/profiletuning/StrongISF.png)
 
-## BG After Meals Observations
+## Observații privind glicemia după mese
 
 ### Fast rise and BG going high
 
 - Food contains fast carbs (like fruit juice).
 - Consider doing a pre-bolus or a slightly earlier pre-bolus.
-- Bolus (IC or injected %) not strong enough.
+- Bolusul (IC sau % injectat) nu este suficient de puternic.
 
 ![Rise High](../images/troubleshooting/profiletuning/FastRise.png)
 
@@ -127,16 +127,16 @@ If you observe the following patterns after a few days, consider the following c
 
 1. First, you need the correct default basal settings in your **Profile**.
 2. Start on target, better without negative IOB.
-3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Very accurately measure a known portion of carbs, and record the start time and Start IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). Don't forget to eat the carbs ;)
+3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Very accurately measure a known portion of carbs, and record the start time and Start IOB. Apoi introduceți în **AAPS** informațiile despre carbohidrați și bolus folosind asistentul (cu I:C configurat în prezent). Nu uitați să mâncați carbohidrații ;)
 4. After some hours, when COB=0[*](#profiletuning-cob-zero) and you're back on target, record end time, and note down the End IOB, check the total insulin given as before and call it End insulin. *NOTE: The time frame is NOT important, as long as it is longer than your digestion*
 5. From the difference between Start and End insulin amount, subtract/add the difference end IOB - start IOB. Then subtract the basal insulin calculated from your **Profile's** settings.
-6. If __BG__ is in target, you'll have the total insulin used to “digest” your carbs. Calculate your **I:C**.
+6. If __BG__ is in target, you'll have the total insulin used to “digest” your carbs. Calculați **I:C**.
 
 ### Explanations for the I:C calculations
 
-- With a **Profile** that has the correct default basal rate, during any time frame, you should stay on target and have an IOB near 0. You get your **Profile** basal only.
-- You add carbs and bolus to this mix. Wait till your body digests all the carbs and be back on **BG** target. Your insulin usage will be the sum of your basal + the insulin needed for the carbs. You calculate the insulin used for your basal (by using your **Profile**) and the surplus will be the insulin used to digest the carbs.
-- If the time frame is too short, there will be carbs undigested, thus your "insulin needed for the carbs" will be wrong.
-- If the time frame is too long, nothing bad will happen. You'll use all your carbs and you'll get more basal. At the end, you'll subtract the basal from the total insulin used, the extended time frame (with more basal use) will not affect the result.
+- With a **Profile** that has the correct default basal rate, during any time frame, you should stay on target and have an IOB near 0. Primiți doar bazala din **profil**.
+- La aceasta adăugați carbohidrați și bolus. Wait till your body digests all the carbs and be back on **BG** target. Your insulin usage will be the sum of your basal + the insulin needed for the carbs. You calculate the insulin used for your basal (by using your **Profile**) and the surplus will be the insulin used to digest the carbs.
+- Dacă intervalul de timp este prea scurt, vor rămâne carbohidrați nedigerați, deci „insulina necesară pentru carbohidrați” va fi greșită.
+- Dacă intervalul de timp este prea lung, nu se întâmplă nimic rău. Veți folosi toți carbohidrații și veți primi mai multă bazală. At the end, you'll subtract the basal from the total insulin used, the extended time frame (with more basal use) will not affect the result.
 
 Originally written up by @Robby (Discord) on tips and tricks to help tune your **AAPS Profile**, reviewed and edited by the community (thank you!).
