@@ -49,7 +49,7 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * Musí se zobrazit zpráva s nainstalovanou verzí Gitu, jak vidíte na snímku obrazovky výše. V takovém případě přejděte na [Krok 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get a message saying
+  * Pokud se zobrazí zpráva
     ```
     Git: command not found
     ```
@@ -57,15 +57,15 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * [Kontrola instalace Gitu](#BuildingAaps-steps-for-installing-git)
 
-  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
+  * Pokud používáte Windows a Git jste právě nainstalovali, restartujte počítač, aby byl Git po instalaci dostupný všude
 
-  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
+  * Pokud je Git nainstalovaný, restartovali jste počítač (ve Windows) a Git se stále nedá najít:
 
   * Vyhledejte v počítači soubor „git.exe“.
 
     Poznamenejte si, ve kterém adresáři je uložený.
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Přidejte adresář, ve kterém jste našli instalaci Gitu.
+  * Ve Windows přejděte do proměnných prostředí (Environment variables), vyberte proměnnou „PATH“ a klikněte na Upravit (edit). Přidejte adresář, ve kterém jste našli instalaci Gitu.
 
   * Uložte a zavřete.
 
@@ -139,7 +139,7 @@ Nebo:
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
+Pokud vidíte výše uvedenou chybovou zprávu, musíte před novým pokusem o sestavení stáhnout správnou verzi JVM:
 
 1.  V [tabulce požadavků](#Building-APK-recommended-specification-of-computer-for-building-apk-file) zjistěte, jakou verzi JVM potřebujete pro verzi **AAPS**, kterou sestavujete, a poznamenejte si ji.
 
@@ -212,7 +212,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Generate Signed APK: úspěšně vytvořeno s 0 variantami sestavení
 
-When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
+Při vytváření podepsaného apk se může zobrazit oznámení, že vytvoření proběhlo úspěšně, ale bylo vytvořeno „0 build variants“ (0 variant sestavení):
 
 ![APK vytvořeno s 0 variantami sestavení](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -237,7 +237,7 @@ Vaše apk bylo úspěšně sestaveno a můžete ho přenést do telefonu!
 
 ## Apk není nainstalováno
 
-![phone app not installed](../images/Update_AppNotInstalled.png)
+![aplikace v telefonu není nainstalována](../images/Update_AppNotInstalled.png)
 
 * Ujistěte se, že jste do telefonu přenesli soubor „app-full-release.apk“.
 * Tato chyba obvykle znamená, že nové apk je podepsané jiným úložištěm klíčů než vaše nainstalovaná aplikace **AAPS**. Pokud ještě máte své předchozí úložiště klíčů, vyberte ho a sestavte znovu. Jinak viz [Přeinstalace AAPS s novým úložištěm klíčů](#reinstall-aaps).
@@ -252,7 +252,7 @@ Vaše apk bylo úspěšně sestaveno a můžete ho přenést do telefonu!
 
 ## Apk je nainstalováno, ale ve staré verzi
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
+Pokud jste aplikaci úspěšně sestavili, přenesli do telefonu a úspěšně nainstalovali, ale číslo verze zůstává stejné, možná jste zapomněli [aktualizovat svou místní kopii](#Update-to-new-version-update-your-local-copy)
 
 ## Nic z výše uvedeného nepomohlo
 
