@@ -1,69 +1,69 @@
-# Where can I get help?
+# Var kan jag få hjälp?
 
-## I'm stuck; what should I do? Who can I ask?
+## Jag har kört fast. Vad ska jag göra? Vem kan jag fråga?
 
-This project is based on volunteer work and a few rules apply to any requests for help to avoid unnecessary time being wasted by those who kindly pay it forward:
+Projektet bygger på frivilligt arbete. Därför gäller några regler för alla frågor om hjälp, så att de som vänligt hjälper andra inte slösar tid i onödan:
 
-* level 1: Read the docs (i.e. this Wiki) - there is now a search function to help you!
-* level 2: Search the Facebook group, if there is not already an answer then ask your question in the [AndroidAPS Users Facebook group](https://www.facebook.com/groups/1900195340201874/)
-* level 3: If Facebook did not get results then ask in [discord](https://discord.gg/4fQUWHZ4Mw). Direct crossposts will be ignored/deleted on both channels to avoid duplicate answers. Don't forget that the majority of developers are in Europe so the response may not be 24/7; you may have to wait for several hours especially over weekends and holidays.
-* level 4: Create an [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md)
-* level 5: email *developers@aaps.app* (only if personal data is involved that should not go in a public channel and your problems have not been resolved in the other levels)
+* Nivå 1: Läs dokumentationen (alltså denna wiki). Det finns nu en sökfunktion som hjälper dig!
+* Nivå 2: Sök i Facebook-gruppen. Om det inte redan finns ett svar, ställ din fråga i [Facebook-gruppen AndroidAPS Users](https://www.facebook.com/groups/1900195340201874/)
+* Nivå 3: Om du inte fick svar på Facebook, fråga på [Discord](https://discord.gg/4fQUWHZ4Mw). Samma inlägg i båda kanalerna samtidigt ignoreras eller tas bort, för att undvika dubbla svar. Tänk på att de flesta utvecklare finns i Europa, så du får inte alltid svar dygnet runt. Du kan behöva vänta flera timmar, särskilt under helger och helgdagar.
+* Nivå 4: Skapa ett [ärende](https://github.com/nightscout/AndroidAPS/issues) och bifoga dina [loggfiler](../GettingHelp/AccessingLogFiles.md)
+* Nivå 5: skicka e-post till *developers@aaps.app* (bara om det gäller personliga data som inte ska finnas i en offentlig kanal, och om dina problem inte har lösts på de andra nivåerna)
 
-For support on CGM sources please use the Facebook groups or Discord channels for that specific system (e.g. [xDrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
+För hjälp med CGM-källor, använd Facebook-grupperna eller Discord-kanalerna för just det systemet (t.ex. [xDrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)). För hjälp med Nightscout, använd [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/). Användarna där har mer kunskap om sina system än personerna här, som alla använder olika system.
 
-## Make sure to join the AndroidAPS users group on Facebook or Discord!
+## Gå med i användargruppen för AndroidAPS på Facebook eller Discord!
 
-Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and/or [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
+Gå med i den stora [Facebook-gruppen för AndroidAPS](https://www.facebook.com/groups/1900195340201874/) och/eller [AndroidAPS på Discord](https://discord.gg/4fQUWHZ4Mw). Här kan du ställa alla frågor om algoritmen, om problem med att ställa in Android Studio och bygga APK-filen, om hur du använder appen och tips om hur du får ut mest av den. Det finns också en grupp för användare av Combo-pumpen, [AAPSCombo](https://www.facebook.com/groups/127507891261169/), som har en lite mer specifik konfiguration.
 
-Please note that Facebook has recently removed external links shared within the **AAPS** Facebook group and this includes current and historic posts which contain external links to the **AAPS** Notes / Read the docs. For new users who are working through the Objectives and reviewing historic **AAPS** Facebook posts please search key terms as discussed within the **AAPS** notes for further assistance.
+Observera att Facebook nyligen har tagit bort externa länkar som delats i Facebook-gruppen för **AAPS**. Det gäller både nya och gamla inlägg med externa länkar till anteckningarna / dokumentationen för **AAPS**. Nya användare som arbetar sig igenom målen och läser gamla inlägg om **AAPS** på Facebook: sök efter de viktiga begreppen som beskrivs i anteckningarna för **AAPS** för att få mer hjälp.
 
-## Other resources in English
+## Andra resurser på engelska
 
-* [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): covers all DIY closed loop systems (OpenAPS, Loop and AndroidAPS)
+* [Facebook-gruppen Looped](https://www.facebook.com/groups/TheLoopedGroup): omfattar alla DIY-system med sluten loop (OpenAPS, Loop och AndroidAPS)
 * [xDrip - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
-* [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
+* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM i allmänhet
+* [AndroidAPS på Discord](https://discord.gg/4fQUWHZ4Mw)
 
-## Country / language specific resources
+## Resurser för olika länder och språk
 
-### Australia
+### Australien
 
-* [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australian users of OpenAPS, Loop and AndroidAPS
+* [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): australiska användare av OpenAPS, Loop och AndroidAPS
 
-### Czech and Slovak
+### Tjeckien och Slovakien
 
-* [AAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech-speaking users of AndroidAPS
+* [AAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): tjeckisktalande användare av AndroidAPS
 
-### France
+### Frankrike
 
 * [AndroidAPS France (Toutes Pompes)](https://www.facebook.com/groups/268922660715266)
-* [DIY AndroidAPS, parents d'enfants Dt1](https://www.facebook.com/groups/262497886779069) : French support group for AAPS for children
+* [DIY AndroidAPS, parents d'enfants Dt1](https://www.facebook.com/groups/262497886779069) : fransk stödgrupp för AAPS för barn
 
-### Germany
+### Tyskland
 
-* [Open Source Looper Community](https://de.loopercommunity.org/): German looper community for Open Source Loop, diabetes in general, communication, support and local meet-up
-* [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
-* [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
+* [Open Source Looper Community](https://de.loopercommunity.org/): tysk community för loopare med Open Source Loop, diabetes i allmänhet, kommunikation, stöd och lokala träffar
+* [Facebook-gruppen Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre som CGM/FGM
+* [Facebook-gruppen NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
 * [Looped-DE](https://www.facebook.com/groups/loopedDE/)
 
-### Netherlands
+### Nederländerna
 
-* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch-speaking users of OpenAPS, Loop and AndroidAPS
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): nederländsktalande användare av OpenAPS, Loop och AndroidAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
 
-### Norway
+### Norge
 
 * [Looped Norge](https://www.facebook.com/groups/loopednorge/)
 
-### Poland
+### Polen
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): polsk AAPS-community och stödgrupp för diabetes
 
-### Sweden
+### Sverige
 
-* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
+* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (användare i Sverige av OpenAPS, Loop och AndroidAPS)
 
-### UK
+### Storbritannien
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (användare i Storbritannien av OpenAPS, Loop och AndroidAPS)
