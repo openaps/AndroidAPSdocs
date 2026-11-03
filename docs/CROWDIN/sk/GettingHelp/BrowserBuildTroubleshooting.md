@@ -107,8 +107,8 @@ Keď ste príčinu opravili, nemusíte začínať od začiatku: otvorte beh, kto
   - [Aktualizujte secret `GDRIVE_OAUTH2`](#aaps-ci-update-secret) vo svojom repozitári na GitHube novým tokenom a potom [spustite zostavenie znova](#aaps-ci-rerun).
 
 (aaps-ci-disable-software)=
-### Disable Software That May Interfere With OAuth Verification
-  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAuth key.
+### Vypnite softvér, ktorý môže rušiť overenie OAuth
+  - Skôr než sa pokúsite získať kľúč OAuth, vypnite v telefóne všetky VPN a bezpečnostné aplikácie (firewall, antimalvér, ...).
 
 (aaps-ci-actions-permission)=
 ### Skontrolujte nastavenia povolení GitHub Actions
