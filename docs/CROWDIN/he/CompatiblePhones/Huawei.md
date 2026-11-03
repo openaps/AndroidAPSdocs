@@ -1,57 +1,57 @@
-# How to configure a Huawei phone
+# הגדרת טלפון Huawei
 
-**Which phones this page covers:** Huawei phones running **EMUI 12 to EMUI 15**. All of these are based on Android 12, the minimum for the current version of **AAPS**. On a phone with an older EMUI version, you can only use an [older AAPS version](#maintenance-android-version-aaps-version).
+**לאילו טלפונים מתאים הדף:** טלפוני Huawei עם **EMUI 12 עד EMUI 15**. כל הגרסאות האלה מבוססות על Android 12, שהיא הגרסה המינימלית לגרסה הנוכחית של **AAPS**. בטלפון עם גרסת EMUI ישנה יותר ניתן להשתמש רק ב[גרסת AAPS ישנה יותר](#maintenance-android-version-aaps-version).
 
-```{admonition} HarmonyOS NEXT / HarmonyOS 5 phones :class: warning
+```{admonition} טלפוני HarmonyOS NEXT / HarmonyOS 5 :class: warning
 
-Recent Huawei phones sold in China run HarmonyOS NEXT (HarmonyOS 5 and above). This system is not Android anymore and cannot run **AAPS**. ```
+טלפוני Huawei חדשים שנמכרים בסין פועלים עם HarmonyOS NEXT (HarmonyOS 5 ומעלה). מערכת זו כבר אינה Android, ולא ניתן להריץ עליה את **AAPS**. ```
 
-Huawei phones close apps running in the background very aggressively. Apply all the settings below to **AAPS** and to your CGM app (for example xDrip+ or Juggluco), otherwise the loop and glucose readings may stop when the screen is off.
+טלפוני Huawei סוגרים אפליקציות שפועלות ברקע באופן אגרסיבי מאוד. יש להחיל את כל ההגדרות שלהלן על **AAPS** ועל אפליקציית ה־CGM שלכם (לדוגמה xDrip+ או Juggluco). אחרת הלולאה וקריאות הסוכר עלולות להיעצר כשהמסך כבוי.
 
-Menu names can differ slightly between models. If you can't find a setting, type its name in the search bar at the top of **Settings**.
+שמות התפריטים יכולים להיות שונים מעט בין דגמים. אם לא מוצאים הגדרה, הקלידו את השם שלה בשורת החיפוש בחלק העליון של **הגדרות**.
 
-The screenshots below come from an older EMUI version. The settings are the same on EMUI 12 to 15.
+צילומי המסך שלהלן לקוחים מגרסת EMUI ישנה יותר. ההגדרות זהות ב־EMUI 12 עד 15.
 
-## Ignore battery optimization
+## החרגה מאופטימיזציית סוללה
 
-1. Open **Settings > Apps > Apps**.
-2. Tap the menu **⋮** in the top right corner and select **Special access > Battery optimization**.
-3. Tap the arrow at the top of the list and select **All apps**.
-4. Select **AAPS** and choose **Don't allow**. Huawei won't optimize apps in this list anymore.
-5. Repeat for your CGM app.
+1. פתחו את **הגדרות > אפליקציות > אפליקציות** (Settings > Apps > Apps).
+2. הקישו על התפריט **⋮** בפינה העליונה של המסך ובחרו **גישה מיוחדת > אופטימיזציית סוללה** (Special access > Battery optimization).
+3. הקישו על החץ בראש הרשימה ובחרו **כל האפליקציות** (All apps).
+4. בחרו **AAPS** ואז **לא לאפשר** (Don't allow). Huawei לא ימטב יותר את האפליקציות שברשימה הזו.
+5. חזרו על הפעולה עבור אפליקציית ה־CGM.
 
-![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+![Huawei - החרגה מאופטימיזציית סוללה](../images/Huawei_BatteryOptimization.png)
 
-## App launch: allow running in the background
+## הפעלת אפליקציות: לאפשר פעולה ברקע
 
-1. Open **Settings > Battery > App launch** (or **Settings > Apps > Apps >** select the app **> Battery > App launch**).
-2. Find **AAPS** and turn off **Manage automatically**.
-3. In the **Manage manually** window, turn on all three options: 
-    - **Auto-launch**
-    - **Secondary launch** (can be launched by other apps)
-    - **Run in background**
-4. Repeat for your CGM app.
+1. פתחו את **הגדרות > סוללה > הפעלת אפליקציות** (Settings > Battery > App launch), או **הגדרות > אפליקציות > אפליקציות >** בחרו את האפליקציה **> סוללה > הפעלת אפליקציות**.
+2. מצאו את **AAPS** וכבו את **ניהול אוטומטי** (Manage automatically).
+3. בחלון **ניהול ידני** (Manage manually) הפעילו את שלוש האפשרויות: 
+    - **הפעלה אוטומטית (Auto-launch)**
+    - **הפעלה משנית** (Secondary launch) - אפליקציות אחרות יכולות להפעיל אותה
+    - **פעולה ברקע (Run in background)**
+4. חזרו על הפעולה עבור אפליקציית ה־CGM.
 
 ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
 
-## Lock AAPS in the recent apps
+## נעילת AAPS ברשימת האפליקציות האחרונות
 
-Locked apps are not closed when you clear the recent apps list.
+אפליקציות נעולות לא נסגרות כשמנקים את רשימת האפליקציות האחרונות.
 
-1. Open the recent apps list.
-2. Swipe down on the **AAPS** card. A lock symbol appears on the card.
-3. Do the same for your CGM app.
+1. פתחו את רשימת האפליקציות האחרונות.
+2. החליקו כלפי מטה על הכרטיס של **AAPS**. על הכרטיס יופיע סמל של מנעול.
+3. עשו את אותו הדבר עבור אפליקציית ה־CGM.
 
-![Huawei - lock app](../images/Huawei_LockApp.png)
+![Huawei - נעילת האפליקציה](../images/Huawei_LockApp.png)
 
-## Power saving mode
+## מצב חיסכון בחשמל
 
-Keep **Power saving mode** and **Ultra power saving** turned off (**Settings > Battery**). They close background apps regardless of the settings above.
+השאירו את **מצב חיסכון בחשמל** (Power saving mode) ואת **חיסכון מרבי בחשמל** (Ultra power saving) כבויים (**הגדרות > סוללה**). מצבים אלה סוגרים אפליקציות ברקע, בלי קשר להגדרות שלמעלה.
 
-## If AAPS still stops in the background
+## אם AAPS עדיין נעצר ברקע
 
-See [Don't kill my app](https://dontkillmyapp.com/huawei) for more Huawei-specific solutions.
+ראו את [Don't kill my app](https://dontkillmyapp.com/huawei) לפתרונות נוספים שמיועדים ל־Huawei.
 
-## Honor phones
+## טלפוני Honor
 
-Honor is a separate brand now and its phones run MagicOS instead of EMUI. The background settings are very similar: look for **App launch** in the app's battery settings, turn off **Manage automatically** and allow all three options, then remove the app from battery optimization.
+Honor היא כעת מותג נפרד, והטלפונים שלה פועלים עם MagicOS ולא עם EMUI. הגדרות הרקע דומות מאוד: חפשו את **הפעלת אפליקציות** (App launch) בהגדרות הסוללה של האפליקציה, כבו את **ניהול אוטומטי** ואפשרו את שלוש האפשרויות. לאחר מכן הוציאו את האפליקציה מאופטימיזציית הסוללה.
