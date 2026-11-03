@@ -4,7 +4,7 @@
 
 ## Požiadavky
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
+**AAPS** používa funkciu Android Auto, ktorá umožňuje posielať správy z aplikácií v mobile na displej audiosystému auta.
 
 To znamená, že:
 
@@ -15,7 +15,7 @@ To znamená, že:
 
 (androidauto-check-that-aaps-can-show-notifications)=
 
-## Check that AAPS can show notifications
+## Kontrola, či AAPS môže zobrazovať notifikácie
 
 **AAPS** vždy zobrazuje notifikáciu stavu s aktuálnou glykémiou, IOB a COB. Práve túto notifikáciu zobrazuje Android Auto v aute. V **AAPS** netreba nič zapínať, ale Android musí **AAPS** povoliť zobrazovať notifikácie.
 
@@ -33,11 +33,11 @@ Pred cestou k autu teraz skontrolujte, či v telefóne vidíte notifikáciu stav
 
 (androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
-## Allow the use of "unknown sources" with Android Auto.
+## Povolenie „neznámych zdrojov“ (unknown sources) v Android Auto.
 
 Keďže **AAPS** nie je oficiálna aplikácia pre Android Auto, notifikácie je potrebné v Android Auto povoliť pre „neznáme zdroje“ (unknown sources). Robí sa to pomocou režimu vývojára, ktorý vám tu ukážeme.
 
-Go to your car and connect your mobile with the car's audio system.
+Choďte k autu a pripojte mobil k audiosystému auta.
 
 Teraz by ste mali vidieť obrazovku podobnú tejto.
 
@@ -83,4 +83,4 @@ Vaše CGM dáta sa zobrazia takto:
 
 ## Riešenie problémov:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
+* Ak notifikáciu nevidíte, skontrolujte, či ste v Androide [povolili AAPS zobrazovať notifikácie](#androidauto-check-that-aaps-can-show-notifications) a či [Android Auto má prístup k notifikáciám](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
