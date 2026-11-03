@@ -1,9 +1,9 @@
 (aaps-builder)=
 
-# Browser build with AAPS Builder
+# Bygge i webbläsaren med AAPS Builder
 
 ```{note}
-This is the recommended way to build AAPS from an **Android phone**. It also works from any computer browser. For the other ways to build from a computer or an iPhone, see the [Browser build](BrowserBuild.md) overview.
+Det här är det rekommenderade sättet att bygga AAPS från en **Android-telefon**. Det fungerar också i webbläsaren på vilken dator som helst. Andra sätt att bygga från en dator eller en iPhone finns i översikten [Bygge i webbläsaren](BrowserBuild.md).
 ```
 
 ```{contents} In this page
@@ -11,360 +11,360 @@ This is the recommended way to build AAPS from an **Android phone**. It also wor
 :depth: 2
 ```
 
-**AAPS Builder** builds the AAPS app for you in GitHub, the free code-hosting website. There is nothing to install on your phone, and no preparation file to open.
+**AAPS Builder** bygger AAPS-appen åt dig på GitHub, den kostnadsfria webbplatsen för källkod. Du behöver inte installera något på telefonen, och det finns ingen förberedelsefil att öppna.
 
-A setup page walks you through it. It takes about 10 minutes the first time:
+En inställningssida guidar dig genom det. Första gången tar det ungefär 10 minuter:
 
-1. Create your own **private copy** of AAPS Builder in your GitHub account: the setup page opens GitHub with everything filled in, you only confirm. The build workflow, the file that tells GitHub how to build AAPS, is already in it.
-2. Create or upload your **signing key** (the keystore).
-3. Give the key to your repository as a GitHub **secret**.
-4. **Build** the app. One build takes 15 to 30 minutes.
-5. **Download and install** the app on your phone.
+1. Skapa din egen **privata kopia** av AAPS Builder i ditt GitHub-konto: inställningssidan öppnar GitHub med allt ifyllt, du behöver bara bekräfta. Byggarbetsflödet, filen som talar om för GitHub hur AAPS ska byggas, finns redan i den.
+2. Skapa eller ladda upp din **signeringsnyckel** (din keystore).
+3. Ge nyckeln till ditt repo som en **hemlighet** på GitHub.
+4. **Bygg** appen. Ett bygge tar 15 till 30 minuter.
+5. **Ladda ned och installera** appen på telefonen.
 
-You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from the official AndroidAPS repository at every build. You also do **not** need Google Drive: you download the app directly from GitHub.
+Du behöver **inte** göra en fork av AndroidAPS: AAPS källkod laddas ned från det officiella AndroidAPS-repot vid varje bygge. Du behöver **inte** heller Google Drive: du laddar ned appen direkt från GitHub.
 
 ```{admonition} Where the code comes from
 :class: note
 
-The build workflow is maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository, and your repository is a copy of it. The [workflow](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) in your copy is short: it runs the [build steps](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml) kept in that repository, so improvements reach you without any change to your repository. You can read both files. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
+Byggarbetsflödet underhålls av AAPS-utvecklarna i repot [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), och ditt repo är en kopia av det. [Arbetsflödet](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) i din kopia är kort: det kör [byggstegen](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml) som finns i det repot, så att förbättringar når dig utan att något ändras i ditt repo. Du kan läsa båda filerna. När arbetsflödet bygger laddar det bara ned AAPS officiella källkod och GitHubs egna byggverktyg. Din keystore lämnar aldrig din webbläsare och ditt privata repo.
 ```
 
 (aaps-builder-before-you-start)=
 
-## Before you start
+## Innan du börjar
 
-You will need:
+Du behöver:
 
-- A **GitHub account** (free). If you don't have one, create it on [github.com](https://github.com/signup) first.
-- A **web browser**: Chrome on your phone, or any browser on a computer. Log in to github.com in that browser before you start.
-- **GitHub app on your phone?** You can keep it. Some buttons of the setup page then open the app instead of Chrome. Building works in the app, but the app **cannot download** the finished AAPS: [step 5](#aaps-builder-step5) shows how to switch to Chrome for the download.
-- Your **existing keystore** (`.jks` file), its password and its alias, if you built AAPS before and want to update it without reinstalling.
+- Ett **GitHub-konto** (gratis). Om du inte har något, skapa det först på [github.com](https://github.com/signup).
+- En **webbläsare**: Chrome på telefonen, eller valfri webbläsare på en dator. Logga in på github.com i den webbläsaren innan du börjar.
+- **Har du GitHub-appen på telefonen?** Du kan behålla den. Vissa knappar på inställningssidan öppnar då appen i stället för Chrome. Byggandet fungerar i appen, men appen **kan inte ladda ned** den färdiga AAPS: [steg 5](#aaps-builder-step5) visar hur du byter till Chrome för nedladdningen.
+- Din **befintliga keystore** (`.jks`-fil), dess lösenord och dess alias, om du har byggt AAPS tidigare och vill uppdatera utan att installera om.
 
 ```{warning}
-**Your build repository must stay private.** Everything a build produces is visible to anyone who can see the repository. The setup page creates a private repository for you. Never change it to public, and don't **fork** AAPS Builder instead: a fork is always public.
+**Ditt byggrepo måste vara privat.** Allt som ett bygge skapar syns för alla som kan se repot. Inställningssidan skapar ett privat repo åt dig. Ändra det aldrig till offentligt, och gör inte en **fork** av AAPS Builder i stället: en fork är alltid offentlig.
 
-A private repository gets 2000 free GitHub Actions minutes per month, which is enough for several builds.
+Ett privat repo får 2000 kostnadsfria minuter i GitHub Actions per månad, vilket räcker till flera byggen.
 ```
 
 ```{warning}
-**New key or existing key: this decides whether you can update AAPS.**
+**Ny nyckel eller befintlig nyckel: det avgör om du kan uppdatera AAPS.**
 
-- **You already have AAPS on your phone, built with a keystore you still have**: choose **I already have a keystore** on the setup page and upload it. Your next build will update AAPS in place. Built AAPS with the previous browser build (your own fork)? Your keystore is in your fork: [get a copy of it first](#aaps-builder-from-fork).
-- **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+- **Du har redan AAPS på telefonen, byggd med en keystore som du fortfarande har**: välj **I already have a keystore** (jag har redan en keystore) på inställningssidan och ladda upp den. Nästa bygge uppdaterar då den AAPS som redan är installerad. Har du byggt AAPS med det tidigare bygget i webbläsaren (din egen fork)? Din keystore finns i din fork: [hämta först en kopia av den](#aaps-builder-from-fork).
+- **Du bygger AAPS för första gången, eller du har tappat bort din keystore eller dess lösenord**: välj **Create a new key** (skapa en ny nyckel). En app som är signerad med en ny nyckel **kan inte uppdatera** en AAPS som är signerad med en annan nyckel. Du måste exportera dina inställningar, kopiera filen till en plats utanför telefonen, avinstallera den gamla AAPS, installera den nya och sedan importera dina inställningar: se [Installera om AAPS med en ny keystore](#reinstall-aaps).
 
-Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password and its alias (`key0`) somewhere safe, off your phone.
+Fortsätt sedan alltid att använda samma nyckel. När du skapar en ny nyckel, ladda ned säkerhetskopian som sidan erbjuder och förvara den tillsammans med lösenordet och aliaset (`key0`) på en säker plats utanför telefonen.
 ```
 
 (aaps-builder-from-fork)=
 
-## Coming from the previous browser build (fork)
+## Om du kommer från det tidigare bygget i webbläsaren (fork)
 
-Skip this section if you never built AAPS with the previous browser build method (your own copy, or fork, of AndroidAPS in GitHub, with the preparation file and Google Drive).
+Hoppa över detta avsnitt om du aldrig har byggt AAPS med den tidigare metoden för bygge i webbläsaren (din egen kopia, eller fork, av AndroidAPS på GitHub, med förberedelsefilen och Google Drive).
 
-Your keystore is stored as secrets in your fork. GitHub never shows a secret again, so you can't copy it to your new repository. Get a copy of your keystore first, then use it in [step 2](#aaps-builder-step2) with **I already have a keystore**.
+Din keystore är sparad som hemligheter i din fork. GitHub visar aldrig en hemlighet igen, så du kan inte kopiera den till ditt nya repo. Hämta först en kopia av din keystore och använd den sedan i [steg 2](#aaps-builder-step2) med **I already have a keystore** (jag har redan en keystore).
 
 ```{warning}
-Don't choose **Create a new key**. AAPS built with a new key cannot update the AAPS on your phone.
+Välj inte **Create a new key** (skapa en ny nyckel). AAPS som byggs med en ny nyckel kan inte uppdatera AAPS på din telefon.
 ```
 
-Which case is yours?
+Vilket fall gäller dig?
 
-- **You used Option 2** (you uploaded your own keystore from Android Studio), and you still have the `.jks` file, its passwords and its alias: nothing to do here. Use that file in step 2.
-- **You used Option 1** (the preparation file created your key), or you no longer have your keystore file: export it from your fork as below.
+- **Du använde alternativ 2** (du laddade upp din egen keystore från Android Studio), och du har fortfarande `.jks`-filen, dess lösenord och dess alias: du behöver inte göra något här. Använd den filen i steg 2.
+- **Du använde alternativ 1** (förberedelsefilen skapade din nyckel), eller så har du inte längre kvar din keystore-fil: exportera den från din fork enligt nedan.
 
-To export your keystore from your fork:
+Så här exporterar du din keystore från din fork:
 
-1. In your fork, open **Settings** → **Secrets and variables** → **Actions** and add a secret named `ZIP_PASSWORD`. Choose a password with only English letters and numbers. It protects the file you are about to create.
-2. Open the **Actions** tab of your fork, tap **CI Keystore Export**, then **Run workflow**. More details: [Export your keystore](#ci-keystore-export).
-3. When the run has a green check, open your Google Drive: the file `keystore.zip` is in the folder **AAPS** → **KeyStore**. If the run fails at the Google Drive step, your fork's Google Drive access has expired: see [Google refresh token expired](#aaps-ci-google-token-expired).
-4. Download `keystore.zip` and open it with your `ZIP_PASSWORD`: on a computer, or on your phone with a file manager app that can open password-protected ZIP files. It contains:
-   - `keystore.jks`: your keystore,
-   - `keyStoreInfo.txt`: your `KEYSTORE_PASSWORD`, `KEY_PASSWORD` and `ALIAS` (usually `key0`).
-5. Copy `keystore.jks` to your phone (or to Google Drive, so you can pick it from there).
+1. Öppna **Settings** → **Secrets and variables** → **Actions** i din fork och lägg till en hemlighet med namnet `ZIP_PASSWORD`. Välj ett lösenord med bara engelska bokstäver (inte å, ä, ö) och siffror. Det skyddar filen som du nu ska skapa.
+2. Öppna fliken **Actions** i din fork, tryck på **CI Keystore Export** och sedan på **Run workflow**. Mer information: [Exportera din keystore](#ci-keystore-export).
+3. När körningen har en grön bock, öppna din Google Drive: filen `keystore.zip` ligger i mappen **AAPS** → **KeyStore**. Om körningen misslyckas i steget för Google Drive har din forks åtkomst till Google Drive gått ut: se [Googles uppdateringstoken har gått ut](#aaps-ci-google-token-expired).
+4. Ladda ned `keystore.zip` och öppna den med ditt `ZIP_PASSWORD`: på en dator, eller på telefonen med en filhanterarapp som kan öppna lösenordsskyddade ZIP-filer. Den innehåller:
+   - `keystore.jks`: din keystore,
+   - `keyStoreInfo.txt`: ditt `KEYSTORE_PASSWORD`, `KEY_PASSWORD` och `ALIAS` (oftast `key0`).
+5. Kopiera `keystore.jks` till telefonen (eller till Google Drive, så att du kan välja den därifrån).
 
-In [step 2](#aaps-builder-step2) of the setup page:
+I [steg 2](#aaps-builder-step2) på inställningssidan:
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose `keystore.jks`.
-3. In **Keystore password**, type the `KEYSTORE_PASSWORD` from `keyStoreInfo.txt`.
-4. In **Key alias**, pick or type the `ALIAS` from `keyStoreInfo.txt`.
-5. If `KEY_PASSWORD` is different from `KEYSTORE_PASSWORD`, untick **Key password is the same as the keystore password** and type the `KEY_PASSWORD`.
+1. Tryck på **I already have a keystore** (jag har redan en keystore).
+2. I **Keystore file** (keystore-fil) väljer du `keystore.jks`.
+3. I **Keystore password** (keystore-lösenord) skriver du `KEYSTORE_PASSWORD` från `keyStoreInfo.txt`.
+4. I **Key alias** (nyckelns alias) väljer eller skriver du `ALIAS` från `keyStoreInfo.txt`.
+5. Om `KEY_PASSWORD` skiljer sig från `KEYSTORE_PASSWORD`, avmarkera **Key password is the same as the keystore password** (nyckelns lösenord är samma som keystore-lösenordet) och skriv `KEY_PASSWORD`.
 
-Keep `keystore.zip` and its `ZIP_PASSWORD` somewhere safe, off your phone: it is the backup of your key.
+Förvara `keystore.zip` och dess `ZIP_PASSWORD` på en säker plats utanför telefonen: det är säkerhetskopian av din nyckel.
 
-To also save the builds of AAPS Builder in Google Drive, do [step 6](#aaps-builder-google-drive): the setup page gets a new `GDRIVE_OAUTH2` for you. You can keep your fork until AAPS built with AAPS Builder is installed on your phone.
+Om du också vill spara byggen från AAPS Builder i Google Drive, gör [steg 6](#aaps-builder-google-drive): inställningssidan hämtar ett nytt `GDRIVE_OAUTH2` åt dig. Du kan behålla din fork tills AAPS som har byggts med AAPS Builder är installerad på telefonen.
 
-## Open the setup page
+## Öppna inställningssidan
 
-**→ [Open the AAPS Builder setup page](#aaps-builder-setup)**
+**→ [Öppna inställningssidan för AAPS Builder](#aaps-builder-setup)**
 
-The setup page is part of this documentation, in your language. Keep this page open in another tab as well: the sections below explain each step of the setup page in more detail, with screenshots.
+Inställningssidan är en del av denna dokumentation, på ditt språk. Ha också denna sida öppen i en annan flik: avsnitten nedan förklarar varje steg på inställningssidan mer detaljerat, med skärmbilder.
 
-The setup page opens each GitHub page in a new Chrome tab. To come back to the setup page, tap the tab button next to Chrome's address bar (the square with a number) and choose the AAPS Builder setup page.
+Inställningssidan öppnar varje GitHub-sida i en ny flik i Chrome. För att gå tillbaka till inställningssidan, tryck på flikknappen bredvid adressfältet i Chrome (fyrkanten med en siffra) och välj inställningssidan för AAPS Builder.
 
-The setup page runs entirely in your browser: your key and passwords are never sent anywhere, except into the GitHub secret you paste them into yourself. Only your GitHub username is sent to GitHub, to check that it exists. It remembers your GitHub username and repository name, so you can come back to it at any time to reopen your secrets page or your builds.
+Inställningssidan körs helt i din webbläsare: din nyckel och dina lösenord skickas aldrig någonstans, förutom till den GitHub-hemlighet som du själv klistrar in dem i. Bara ditt användarnamn på GitHub skickas till GitHub, för att kontrollera att det finns. Den kommer ihåg ditt användarnamn på GitHub och namnet på ditt repo, så att du när som helst kan gå tillbaka och öppna sidan med dina hemligheter eller dina byggen igen.
 
-![The AAPS Builder setup page](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
+![Inställningssidan för AAPS Builder](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
 
 (aaps-builder-step1)=
 
-## Step 1 – Create your private build repository
+## Steg 1 – Skapa ditt privata byggrepo
 
-This step creates your own private copy of AAPS Builder in your GitHub account, with the build workflow already in it. Only you can see it and the apps it builds.
+Det här steget skapar din egen privata kopia av AAPS Builder i ditt GitHub-konto, med byggarbetsflödet redan på plats. Bara du kan se det och apparna som det bygger.
 
-1. Make sure you are logged in to github.com in this browser.
+1. Kontrollera att du är inloggad på github.com i den här webbläsaren.
 
-2. In **Your GitHub username**, type your GitHub username, not your e-mail. The page checks it with GitHub: **✓ GitHub user found** means it is right.
+2. I **Your GitHub username** (ditt användarnamn på GitHub) skriver du ditt användarnamn på GitHub, inte din e-postadress. Sidan kontrollerar det hos GitHub: **✓ GitHub-användaren hittades** betyder att det är rätt.
 
-3. In **Name of your repository**, keep the suggestion `my-aaps`. If you already created your repository with another name, type that exact name.
+3. I **Name of your repository** (namnet på ditt repo) behåller du förslaget `my-aaps`. Om du redan har skapat ditt repo med ett annat namn, skriv exakt det namnet.
 
    ```{note}
-   **Already have an AAPS Builder repository** (made with an earlier version of the setup page)? Don't create a new one: type its exact name, skip **Create my private repository**, and update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). Your secrets stay as they are. If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+   **Har du redan ett repo för AAPS Builder** (skapat med en tidigare version av inställningssidan)? Skapa inte ett nytt: skriv dess exakta namn, hoppa över **Create my private repository** (skapa mitt privata repo) och uppdatera dess arbetsflöde en gång enligt [Uppdatera AAPS](#aaps-builder-updates). Dina hemligheter förblir som de är. Om du ändå vill ha ett nytt repo, välj ett namn som du inte redan har, till exempel `my-aaps-2`, och använd samma keystore i steg 2.
 
-   Don't type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+   Skriv inte namnet på din fork av AndroidAPS: en fork är offentlig, och den bygger redan med sitt eget arbetsflöde **AAPS CI**.
    ```
 
-   ![Setup page step 1 filled in](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
+   ![Steg 1 på inställningssidan ifyllt](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
 
-4. Check the line **Your repository:** it shows `github.com/<your username>/my-aaps`. The setup page remembers the name from your last visit: check it every time before you use its buttons.
+4. Kontrollera raden **Your repository:** (ditt repo): den visar `github.com/<your username>/my-aaps`. Inställningssidan kommer ihåg namnet från ditt förra besök: kontrollera det varje gång innan du använder knapparna.
 
-5. Tap **Create my private repository**.
+5. Tryck på **Create my private repository** (skapa mitt privata repo).
 
-   ![The repository line and the Create my private repository button](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
+   ![Raden med repot och knappen Skapa mitt privata repo](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
 
-6. GitHub opens **Create a new repository** in a new tab. Everything is already filled in: under **Start with a template**, the template `nightscout/aaps-builder` with **Include all branches** off, and under **General**, your account as **Owner** and the name you chose.
+6. GitHub öppnar **Create a new repository** (skapa ett nytt repo) i en ny flik. Allt är redan ifyllt: under **Start with a template** (börja med en mall) mallen `nightscout/aaps-builder` med **Include all branches** avstängt, och under **General** ditt konto som **Owner** (ägare) och namnet som du valde.
 
-   ![GitHub Create a new repository page](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
+   ![GitHub-sidan Create a new repository](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
 
-   Don't change anything.
+   Ändra ingenting.
 
-7. Scroll down: under **Configuration**, **Choose visibility** is already **Private**. Tap the green **Create repository** button.
+7. Scrolla nedåt: under **Configuration** är **Choose visibility** (välj synlighet) redan **Private** (privat). Tryck på den gröna knappen **Create repository**.
 
-   ![Visibility Private and the Create repository button](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
+   ![Synligheten Private och knappen Create repository](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
 
-   GitHub shows your new repository: it contains a folder `.github` (with the build workflow) and a file `README.md`. **Go back to the setup page tab** for step 2: tap the tab button next to Chrome's address bar and choose the setup page.
+   GitHub visar ditt nya repo: det innehåller en mapp `.github` (med byggarbetsflödet) och en fil `README.md`. **Gå tillbaka till fliken med inställningssidan** för steg 2: tryck på flikknappen bredvid adressfältet i Chrome och välj inställningssidan.
 
 ```{warning}
-**Your new repository is empty**, with no files? It was not created from the template, and it cannot build. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** on the setup page again.
+**Är ditt nya repo tomt**, utan filer? Det skapades inte från mallen, och det kan inte bygga. Ta bort det (**Settings** → längst ned på sidan → **Delete this repository**) och tryck sedan på **Create my private repository** (skapa mitt privata repo) på inställningssidan igen.
 ```
 
 (aaps-builder-step2)=
 
-## Step 2 – Your signing key
+## Steg 2 – Din signeringsnyckel
 
-The app must be signed with your own key. Choose one of the two tabs. Read the [new key or existing key warning](#aaps-builder-before-you-start) first.
+Appen måste signeras med din egen nyckel. Välj en av de två flikarna. Läs först [varningen om ny eller befintlig nyckel](#aaps-builder-before-you-start).
 
-![Setup page step 2: the two key options](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
+![Steg 2 på inställningssidan: de två alternativen för nyckeln](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
 
-### I already have a keystore
+### Jag har redan en keystore
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose your `.jks` file (or `.keystore`, `.p12`, `.pfx`). On a phone, copy the file to your phone or to Google Drive first.
-3. In **Keystore password**, type the keystore password.
-4. In **Key alias**, pick your alias from the list, or type it if there is no list. For keystores made with Android Studio it is usually `key0`.
-5. If your key password is different from the keystore password, untick **Key password is the same as the keystore password** and type the key password.
-6. Tap **Check and continue**.
+1. Tryck på **I already have a keystore** (jag har redan en keystore).
+2. I **Keystore file** (keystore-fil) väljer du din `.jks`-fil (eller `.keystore`, `.p12`, `.pfx`). På en telefon: kopiera först filen till telefonen eller till Google Drive.
+3. I **Keystore password** (keystore-lösenord) skriver du lösenordet för din keystore.
+4. I **Key alias** (nyckelns alias) väljer du ditt alias i listan, eller skriver det om det inte finns någon lista. För keystores som har skapats med Android Studio är det oftast `key0`.
+5. Om lösenordet för nyckeln skiljer sig från lösenordet för din keystore, avmarkera **Key password is the same as the keystore password** (nyckelns lösenord är samma som keystore-lösenordet) och skriv lösenordet för nyckeln.
+6. Tryck på **Check and continue** (kontrollera och fortsätt).
 
-The page checks the password and the alias on your device. **Keystore OK! Continue with step 3.** means everything is right. If it says the password will be checked when you build, continue anyway: the build tells you if something is wrong.
+Sidan kontrollerar lösenordet och aliaset på din enhet. **Keystore OK! Fortsätt med steg 3.** betyder att allt är rätt. Om det står att lösenordet kontrolleras när du bygger, fortsätt ändå: bygget säger till om något är fel.
 
-### Create a new key
+### Skapa en ny nyckel
 
-1. Tap **Create a new key**.
+1. Tryck på **Create a new key** (skapa en ny nyckel).
 
-2. Choose a password and type it twice. Rules: at least 8 characters, only the letters a–z and A–Z, the digits 0–9 and symbols such as `! ? #`. No spaces, no accented letters, and not the `|` character.
+2. Välj ett lösenord och skriv det två gånger. Regler: minst 8 tecken, bara bokstäverna a–z och A–Z, siffrorna 0–9 och symboler som `! ? #`. Inga mellanslag, inga bokstäver med accent eller prickar (alltså inte å, ä, ö) och inte tecknet `|`.
 
-3. Tap **Create key**. It takes a few seconds before **Key created** appears.
+3. Tryck på **Create key** (skapa nyckel). Det tar några sekunder innan **Key created** (nyckeln har skapats) visas.
 
-   ![New key form with the password typed twice](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
+   ![Formulär för ny nyckel med lösenordet inskrivet två gånger](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
-4. Tap **Download backup (aaps-keystore.jks)**. If Chrome asks **Download file again?**, an older backup with the same name is already on your phone: tap **Download again**. Chrome then saves the new key as `aaps-keystore (1).jks`: that is the file that goes with this key, keep it and don't mix it up with the older one.
+4. Tryck på **Download backup (aaps-keystore.jks)** (ladda ned säkerhetskopia). Om Chrome frågar **Download file again?** (ladda ned filen igen?) finns redan en äldre säkerhetskopia med samma namn på telefonen: tryck på **Download again** (ladda ned igen). Chrome sparar då den nya nyckeln som `aaps-keystore (1).jks`: det är filen som hör till den här nyckeln, så behåll den och blanda inte ihop den med den äldre.
 
-   Keep these three together, somewhere safe off your phone (for example your own cloud storage):
+   Förvara de här tre sakerna tillsammans, på en säker plats utanför telefonen (till exempel din egen molnlagring):
 
-   - the file `aaps-keystore.jks`,
-   - your password,
-   - the alias of the key: **`key0`**.
+   - filen `aaps-keystore.jks`,
+   - ditt lösenord,
+   - nyckelns alias: **`key0`**.
 
-   You need all three if you ever build AAPS another way, for example with Android Studio. Keys created with an earlier version of the setup page have the alias `aaps`.
+   Du behöver alla tre om du någon gång bygger AAPS på ett annat sätt, till exempel med Android Studio. Nycklar som har skapats med en tidigare version av inställningssidan har aliaset `aaps`.
 
-   ![Key created and the backup box](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
+   ![Nyckeln har skapats, med rutan för säkerhetskopian](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
 
 (aaps-builder-step3)=
 
-## Step 3 – Give the key to your repository
+## Steg 3 – Ge nyckeln till ditt repo
 
-Step 3 unlocks when step 2 is done. Your key, its passwords and its alias are packed into one value, the `KEYSTORE_SET` secret.
+Steg 3 låses upp när steg 2 är klart. Din nyckel, dess lösenord och dess alias packas ihop till ett enda värde, hemligheten `KEYSTORE_SET`.
 
-1. Tap **Open the secrets page**.
+1. Tryck på **Open the secrets page** (öppna sidan för hemligheter).
 
-![Setup page step 3](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
+![Steg 3 på inställningssidan](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
 
-2. GitHub opens the **New secret** page of your repository. On a phone, it is below the settings menu: scroll down.
+2. GitHub öppnar sidan **New secret** (ny hemlighet) i ditt repo. På en telefon ligger den under inställningsmenyn: scrolla nedåt.
 
-![GitHub New secret form](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
+![GitHub-formuläret New secret](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
 
-3. Switch to the setup page tab and tap **Copy name**. Switch back to the GitHub tab and paste it into the small **Name** field. The name is `KEYSTORE_SET`.
+3. Byt till fliken med inställningssidan och tryck på **Copy name** (kopiera namn). Byt tillbaka till fliken med GitHub och klistra in det i det lilla fältet **Name** (namn). Namnet är `KEYSTORE_SET`.
 
-4. Switch to the setup page tab and tap **Copy secret**. Switch back to the GitHub tab and paste it into the big **Secret** box (long press on a phone). The secret is a very long code, thousands of characters: the setup page shows its first characters next to the button. Don't paste the word `KEYSTORE_SET` there.
+4. Byt till fliken med inställningssidan och tryck på **Copy secret** (kopiera hemlighet). Byt tillbaka till fliken med GitHub och klistra in den i den stora rutan **Secret** (hemlighet). På en telefon trycker du länge. Hemligheten är en mycket lång kod, tusentals tecken: inställningssidan visar de första tecknen bredvid knappen. Klistra inte in ordet `KEYSTORE_SET` där.
 
-5. Tap **Add secret**. `KEYSTORE_SET` now shows under **Repository secrets**.
+5. Tryck på **Add secret** (lägg till hemlighet). `KEYSTORE_SET` visas nu under **Repository secrets** (hemligheter i repot).
 
-![Repository secrets list with KEYSTORE_SET](../images/Building-the-App/CI/AapsBuilder13_SecretList.png)
+![Listan Repository secrets med KEYSTORE_SET](../images/Building-the-App/CI/AapsBuilder13_SecretList.png)
 
-You only need to do this once.
+Du behöver bara göra detta en gång.
 
 ```{tip}
-GitHub shows **Page not found** (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise the username or repository name in step 1 doesn't match your repository. Check the name on github.com, correct it in step 1, and tap the button again.
+Visar GitHub **Page not found** (404)? Kontrollera först att du är inloggad på github.com i den här webbläsaren: GitHub visar 404 för privata repon när du inte är inloggad. Annars stämmer inte användarnamnet eller namnet på repot i steg 1 med ditt repo. Kontrollera namnet på github.com, rätta det i steg 1 och tryck på knappen igen.
 ```
 
 (aaps-builder-step4)=
 
-## Step 4 – Build the app
+## Steg 4 – Bygg appen
 
-1. On the setup page, tap **Open the build page**. GitHub opens the **Build AAPS** page of your repository.
+1. Tryck på **Open the build page** (öppna byggsidan) på inställningssidan. GitHub öppnar sidan **Build AAPS** i ditt repo.
 
-   ![GitHub Build AAPS page with the Run workflow button](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
+   ![GitHub-sidan Build AAPS med knappen Run workflow](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
 
-   If the **GitHub app** opens instead: tap **RUN WORKFLOW**, check the version and the variant, and tap **RUN WORKFLOW** again. The app may still show **Nothing to see here**: pull the list down to refresh it and see your build. Then continue with step 4 below.
+   Om **GitHub-appen** öppnas i stället: tryck på **RUN WORKFLOW**, kontrollera version och variant och tryck på **RUN WORKFLOW** igen. Appen kan fortfarande visa **Nothing to see here**: dra ned listan för att uppdatera den och se ditt bygge. Fortsätt sedan med steg 4 nedan.
 
-2. If GitHub asks, tap the green button to enable workflows.
+2. Om GitHub frågar, tryck på den gröna knappen för att aktivera arbetsflöden.
 
-   The list of workflows shows two entries: use **Build AAPS**. Ignore **AAPS Builder**: it holds the build steps and has no **Run workflow** button.
+   Listan med arbetsflöden visar två poster: använd **Build AAPS**. Bry dig inte om **AAPS Builder**: det innehåller byggstegen och har ingen knapp **Run workflow**.
 
-3. Tap **Run workflow**. A small form opens:
-   - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
-   - **Variant**: keep `fullRelease` for normal use with a pump. The other variants are explained in [build variants](#browserbuild-variant). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
-   - Tap the green **Run workflow** button.
+3. Tryck på **Run workflow** (kör arbetsflöde). Ett litet formulär öppnas:
+   - **Version**: behåll `latest` för att bygga den senaste AAPS-versionen, eller skriv ett versionsnummer, till exempel `4.0.0`.
+   - **Variant**: behåll `fullRelease` för normal användning med pump. De andra varianterna förklaras under [byggvarianter](#browserbuild-variant). `aapsclient3Release` bygger **AAPSClient3**, som finns från och med **AAPS** version 4.0 (se [Om AAPSClient, AAPSClient2 och AAPSClient3](#remotecontrol-aapsclient-versions)).
+   - Tryck på den gröna knappen **Run workflow**.
 
-   ![Run workflow form with latest and fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
+   ![Formuläret Run workflow med latest och fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
 
-4. The build starts and shows **In progress**, with two parts: **AAPS / Check**, then **AAPS / Build AAPS**.
+4. Bygget startar och visar **In progress** (pågår), med två delar: först **AAPS / Check**, sedan **AAPS / Build AAPS**.
 
-   ![Build in progress](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
+   ![Bygget pågår](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
 
-5. Wait 15 to 30 minutes. A green check means the build is done. A red cross means it failed: open the build to read the message, then see [troubleshooting](#aaps-builder-troubleshooting).
+5. Vänta 15 till 30 minuter. En grön bock betyder att bygget är klart. Ett rött kryss betyder att det misslyckades: öppna bygget och läs meddelandet, och se sedan [felsökning](#aaps-builder-troubleshooting).
 
-   ![Finished build with a green check](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
+   ![Färdigt bygge med en grön bock](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
 
    ```{tip}
-   **E-mail when a build is done:** GitHub only e-mails you when a build fails. To also get an e-mail when it succeeds: on github.com, open your profile picture → **Settings** → **Notifications** → **System** → **Actions**, and untick **Only notify for failed workflows**.
+   **E-post när ett bygge är klart:** GitHub skickar bara e-post när ett bygge misslyckas. För att också få e-post när det lyckas: på github.com, öppna din profilbild → **Settings** → **Notifications** → **System** → **Actions** och avmarkera **Only notify for failed workflows**.
    ```
 
-If there is no **Build AAPS** or **Run workflow** button:
+Om det inte finns någon knapp **Build AAPS** eller **Run workflow**:
 
-- Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the button.
-- Open the **Actions** tab. If it says workflows are disabled, tap the green button to enable them, then tap **Build AAPS** in the list.
+- Öppna ditt repo och kontrollera att det har en mapp `.github` med filen `workflows/build.yml`. Om repot är tomt skapades det inte från mallen: ta bort det (**Settings** → längst ned på sidan → **Delete this repository**) och gör [steg 1](#aaps-builder-step1) igen med knappen.
+- Öppna fliken **Actions**. Om det står att arbetsflöden är inaktiverade, tryck på den gröna knappen för att aktivera dem och tryck sedan på **Build AAPS** i listan.
 
 (aaps-builder-step5)=
 
-## Step 5 – Install the app on your phone
+## Steg 5 – Installera appen på telefonen
 
 ```{warning}
-**Before every update**, [export your settings](#ExportImportSettings-Automating-Settings-Export) in AAPS and copy the file **off the phone** (Google Drive, Dropbox…). Keep several older exports and the APK files there too, so you can always go back.
+**Före varje uppdatering**: [exportera dina inställningar](#ExportImportSettings-Automating-Settings-Export) i AAPS och kopiera filen **till en plats utanför telefonen** (Google Drive, Dropbox…). Spara också flera äldre exporter och APK-filerna där, så att du alltid kan gå tillbaka.
 ```
 
-1. On your phone, open the setup page in **Chrome**. Log in to github.com if asked.
-2. Tap **Open my builds**, then the newest build with a green check.
+1. Öppna inställningssidan i **Chrome** på telefonen. Logga in på github.com om du blir ombedd.
+2. Tryck på **Open my builds** (öppna mina byggen) och sedan på det senaste bygget med en grön bock.
 
    ```{admonition} The GitHub app opened instead of Chrome?
    :class: note
 
-   The GitHub app cannot download builds. In the app, open the newest build, then tap **Artifacts ↗**, or tap the share icon at the top and choose **Chrome** (or **Copy link**, then paste the link in Chrome's address bar). The build opens in Chrome: continue with the next step there.
+   GitHub-appen kan inte ladda ned byggen. I appen, öppna det senaste bygget och tryck sedan på **Artifacts ↗**, eller tryck på delningsikonen högst upp och välj **Chrome** (eller **Copy link** och klistra sedan in länken i adressfältet i Chrome). Bygget öppnas i Chrome: fortsätt med nästa steg där.
 
-   To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
+   För att GitHub-länkar inte ska öppnas i appen: Android **Settings** (Inställningar) → **Apps** (Appar) → **GitHub** → **Open by default** (Öppna som standard) → stäng av **Open supported links** (Öppna länkar som stöds).
    ```
 
-   ![Finished build: status Success and 2 artifacts](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
+   ![Färdigt bygge: status Success och 2 artefakter](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
 
-3. Scroll down to the build summary and tap the **Download AAPS** link.
+3. Scrolla ned till byggsammanfattningen och tryck på länken **Download AAPS** (ladda ned AAPS).
 
-   ![Build summary with the Download AAPS link](../images/Building-the-App/CI/AapsBuilder51_DownloadLink.png)
+   ![Byggsammanfattning med länken Download AAPS](../images/Building-the-App/CI/AapsBuilder51_DownloadLink.png)
 
    ```{tip}
-   Scroll with your finger on the text, not on the diagram of the build steps: the diagram moves instead of the page.
+   Scrolla med fingret på texten, inte på diagrammet med byggstegen: annars flyttas diagrammet i stället för sidan.
    ```
 
-   You can also scroll further down to **Artifacts** and tap the download icon next to `aaps-….apk`.
+   Du kan också scrolla längre ned till **Artifacts** (artefakter) och trycka på nedladdningsikonen bredvid `aaps-….apk`.
 
-   ![Artifacts with the phone and watch apps](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
+   ![Artifacts med apparna för telefon och klocka](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
-4. When the download is done, open Chrome's menu **⋮** → **Downloads**, tap `aaps-….apk` and choose **Install**. If asked, allow installing apps from this source.
+4. När nedladdningen är klar, öppna Chromes meny **⋮** → **Downloads** (nedladdningar), tryck på `aaps-….apk` och välj **Install** (installera). Om du blir tillfrågad, tillåt installation av appar från den här källan.
 
-   ![Chrome Downloads with the AAPS APK](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
+   ![Nedladdningar i Chrome med APK-filen för AAPS](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
 
-`aaps-wear-….apk` is the smartwatch app. Skip it if you don't use one.
+`aaps-wear-….apk` är appen för smartklockan. Hoppa över den om du inte använder någon smartklocka.
 
-The app is kept on the build page for **14 days**. It is not shown under **Code** in your repository. Copy it somewhere safe, off your phone, together with your settings exports.
+Appen sparas på byggsidan i **14 dagar**. Den visas inte under **Code** i ditt repo. Kopiera den till en säker plats utanför telefonen, tillsammans med dina exporterade inställningar.
 
-For more ways to install the app, see [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+Fler sätt att installera appen finns i [Överföra och installera AAPS](TransferringAndInstallingAaps.md).
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+Från september 2026 kan Googles [verifiering av Android-utvecklare](#android-developer-verification) blockera installationen av APK-filen när du trycker på filen, beroende på vilket land du bor i. Kostnadsfria sätt att komma runt detta förklaras på den sidan.
 ```
 
 (aaps-builder-google-drive)=
 
-## Step 6 (optional) – Also save the app in Google Drive
+## Steg 6 (valfritt) – Spara också appen i Google Drive
 
-You can also have each build saved to your Google Drive, in the folder `AAPS/<version>`. This is optional: the app is always available on the build page.
+Du kan också låta varje bygge sparas i din Google Drive, i mappen `AAPS/<version>`. Detta är valfritt: appen finns alltid på byggsidan.
 
-It needs one more secret, `GDRIVE_OAUTH2`. Step 6 of the setup page gets it from Google for you, on a phone or a computer. **AAPS** can then only see and change the files it creates in your Google Drive, nothing else.
+Det kräver ytterligare en hemlighet, `GDRIVE_OAUTH2`. Steg 6 på inställningssidan hämtar den från Google åt dig, på en telefon eller en dator. **AAPS** kan då bara se och ändra de filer som den själv skapar i din Google Drive, inget annat.
 
-1. On the setup page, tap **Connect Google Drive**. Google opens in a new tab.
-2. Choose your Google account and allow access. If Google says the app is not verified, tap **Advanced**, then **Go to …**.
-3. The new tab then shows an error such as **This site can't be reached** or **127.0.0.1 refused to connect**. **This is expected:** Google's answer is in the address of that tab. Tap the address bar, select the whole address (it starts with `http://127.0.0.1:47913/`) and copy it.
-4. Go back to the setup page tab within a few minutes: Google's answer is only valid for a short time, and only once. Paste the address into **Paste the copied address here** and tap **Get GDRIVE_OAUTH2**. The page shows **GDRIVE_OAUTH2 is ready**.
-5. Tap **Open the secrets page**. Tap **Copy name**, then paste it into the small **Name** field (the name is `GDRIVE_OAUTH2`). Tap **Copy secret**, paste it into the big **Secret** box and tap **Add secret**.
+1. Tryck på **Connect Google Drive** (anslut Google Drive) på inställningssidan. Google öppnas i en ny flik.
+2. Välj ditt Google-konto och tillåt åtkomst. Om Google säger att appen inte är verifierad, tryck på **Advanced** (avancerat) och sedan på **Go to …** (gå till …).
+3. Den nya fliken visar då ett fel, till exempel **This site can't be reached** eller **127.0.0.1 refused to connect**. **Detta är väntat:** Googles svar finns i adressen till den fliken. Tryck på adressfältet, markera hela adressen (den börjar med `http://127.0.0.1:47913/`) och kopiera den.
+4. Gå tillbaka till fliken med inställningssidan inom några minuter: Googles svar gäller bara en kort tid, och bara en gång. Klistra in adressen i **Paste the copied address here** (klistra in den kopierade adressen här) och tryck på **Get GDRIVE_OAUTH2** (hämta GDRIVE_OAUTH2). Sidan visar **GDRIVE_OAUTH2 är klar**.
+5. Tryck på **Open the secrets page** (öppna sidan för hemligheter). Tryck på **Copy name** (kopiera namn) och klistra sedan in det i det lilla fältet **Name** (namnet är `GDRIVE_OAUTH2`). Tryck på **Copy secret** (kopiera hemlighet), klistra in den i den stora rutan **Secret** och tryck på **Add secret**.
 
-From the next build, the APKs are also saved in Google Drive.
+Från och med nästa bygge sparas APK-filerna också i Google Drive.
 
-Already have a `GDRIVE_OAUTH2` value from the preparation file of the other browser build methods? It works too: add it as the `GDRIVE_OAUTH2` secret.
+Har du redan ett värde för `GDRIVE_OAUTH2` från förberedelsefilen för de andra metoderna för bygge i webbläsaren? Det fungerar också: lägg till det som hemligheten `GDRIVE_OAUTH2`.
 
-Google stops the access if you don't build for 6 months, or if you change your Google password. The build then tells you so: redo these steps. See [Google refresh token expired](#aaps-ci-google-token-expired).
+Google stänger av åtkomsten om du inte bygger på 6 månader, eller om du byter ditt lösenord för Google. Bygget säger då till: gör om de här stegen. Se [Googles uppdateringstoken har gått ut](#aaps-ci-google-token-expired).
 
 (aaps-builder-updates)=
 
-## Updating AAPS
+## Uppdatera AAPS
 
-Your repository never builds anything by itself: you decide when to build, which version and which variant. When a new AAPS version is released:
+Ditt repo bygger aldrig något av sig självt: du bestämmer när du bygger, vilken version och vilken variant. När en ny AAPS-version släpps:
 
-1. [Back up your settings](#aaps-builder-step5) as explained in step 5.
-2. Build the new version as in [step 4](#aaps-builder-step4). Keep `latest`, or type the release number.
-3. Download and install it as in [step 5](#aaps-builder-step5).
+1. [Säkerhetskopiera dina inställningar](#aaps-builder-step5) enligt steg 5.
+2. Bygg den nya versionen som i [steg 4](#aaps-builder-step4). Behåll `latest` eller skriv versionsnumret.
+3. Ladda ned och installera den som i [steg 5](#aaps-builder-step5).
 
-**Updates of the build steps** reach you by themselves: at every build, your repository runs the build steps released by the AAPS developers in nightscout/aaps-builder. Nothing changes in your repository, and there is no automatic build.
+**Uppdateringar av byggstegen** når dig av sig själva: vid varje bygge kör ditt repo de byggsteg som AAPS-utvecklarna har släppt i nightscout/aaps-builder. Ingenting ändras i ditt repo, och inget bygge startar automatiskt.
 
-**Updates of your workflow file** are rare: only when the **Run workflow** form changes, for example for a new build variant, or once if your repository was made with an earlier version of the setup page (an empty repository with a short workflow file) or from the old template. The [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. Your `KEYSTORE_SET` secret stays as it is. On the setup page, open **Updating your copy** at the end of step 1:
+**Uppdateringar av din arbetsflödesfil** är sällsynta: bara när formuläret **Run workflow** ändras, till exempel för en ny byggvariant, eller en gång om ditt repo skapades med en tidigare version av inställningssidan (ett tomt repo med en kort arbetsflödesfil) eller från den gamla mallen. Sidan [Uppdateringar och ändringar i dokumentationen](../Maintenance/DocumentationUpdate.md) talar om när det behövs. Din hemlighet `KEYSTORE_SET` förblir som den är. Öppna **Updating your copy** (uppdatera din kopia) i slutet av steg 1 på inställningssidan:
 
-1. Tap **Open the newest workflow**. On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the **plain-text version** instead, press and hold the text, then **Select all** and **Copy**.
-2. Tap **Open my workflow file**.
-3. Replace the whole text with the copied workflow (long press on a phone: **Select all**, then **Paste**).
-4. Tap **Commit changes…**, then **Commit changes**.
+1. Tryck på **Open the newest workflow** (öppna det senaste arbetsflödet). På en dator klickar du på **kopieringsikonen** ("Copy raw file") uppe till höger i filen. På en telefon öppnar du i stället **versionen med ren text**, trycker länge på texten och väljer sedan **Markera alla** och **Kopiera**.
+2. Tryck på **Open my workflow file** (öppna min arbetsflödesfil).
+3. Ersätt hela texten med det kopierade arbetsflödet (tryck länge på en telefon: **Markera alla**, sedan **Klistra in**).
+4. Tryck på **Commit changes…** och sedan på **Commit changes**.
 
-The first line of the file shows its version.
+Filens första rad visar dess version.
 
 (aaps-builder-troubleshooting)=
 
-## Troubleshooting
+## Felsökning
 
-To see why a build failed, [read the build log](#aaps-ci-read-the-logs): the step names are different, but you find the error the same way. You can also [update a secret](#aaps-ci-update-secret) and [run the build again](#aaps-ci-rerun) the same way.
+För att se varför ett bygge misslyckades, [läs byggloggen](#aaps-ci-read-the-logs): stegen har andra namn, men du hittar felet på samma sätt. Du kan också [uppdatera en hemlighet](#aaps-ci-update-secret) och [köra bygget igen](#aaps-ci-rerun) på samma sätt.
 
-- **No "Build AAPS" or "Run workflow" button, or the repository is empty**: the repository was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the **Create my private repository** button.
-- **The build stops with "This repository is PUBLIC"**: in your repository, open **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, then build again.
-- **"Secret KEYSTORE_SET is missing"**: do step 3 of the setup page.
-- **"The secret is too short"**, **"The secret is not a valid code"** or **"The secret does not contain a keystore"**: the wrong text was pasted into the secret, often the word `KEYSTORE_SET` itself, or only part of the code. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 2 of the setup page first if you closed it).
-- **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 2 and 3 of the setup page.
-- **"Version … does not exist"**: the version you typed is not an AAPS release. Use `latest`, or check the release number.
-- **"Variant … is not supported"**: your workflow file is an older version. Replace it as explained in [Updating AAPS](#aaps-builder-updates).
-- **"Page not found" (404) when the setup page opens GitHub**: log in to github.com in the same browser (GitHub shows 404 for private repositories when you are not logged in). If you are logged in, the username or repository name in step 1 of the setup page does not match your repository. Type the exact names.
-- **"No GitHub user with this name"** in step 1: type your GitHub username, as shown in your GitHub profile, not your e-mail.
-- **No Download link, or the GitHub app opened**: the GitHub app cannot download builds. Open the build in Chrome as explained in [step 5](#aaps-builder-step5). To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
-- **"Google Drive access has expired or was revoked"**: redo [step 6](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
+- **Ingen knapp "Build AAPS" eller "Run workflow", eller repot är tomt**: repot skapades inte från mallen. Ta bort det (**Settings** → längst ned på sidan → **Delete this repository**) och gör [steg 1](#aaps-builder-step1) igen med knappen **Create my private repository** (skapa mitt privata repo).
+- **Bygget stoppar med "This repository is PUBLIC"**: öppna **Settings** (inställningar) → **General** → **Danger Zone** → **Change visibility** (ändra synlighet) → **Private** (privat) i ditt repo och bygg sedan igen.
+- **"Secret KEYSTORE_SET is missing"**: gör steg 3 på inställningssidan.
+- **"The secret is too short"**, **"The secret is not a valid code"** eller **"The secret does not contain a keystore"**: fel text klistrades in i hemligheten, ofta själva ordet `KEYSTORE_SET`, eller bara en del av koden. Öppna **Settings** → **Secrets and variables** → **Actions** i ditt repo, redigera `KEYSTORE_SET` och klistra in den långa koden från **Copy secret** (kopiera hemlighet) igen (gör först om steg 2 på inställningssidan om du har stängt den).
+- **"Keystore, password or alias is wrong"**: kontrollera lösenordet och aliaset för din keystore och gör sedan om steg 2 och 3 på inställningssidan.
+- **"Version … does not exist"**: versionen som du skrev är ingen AAPS-version. Använd `latest` eller kontrollera versionsnumret.
+- **"Variant … is not supported"**: din arbetsflödesfil är en äldre version. Ersätt den enligt [Uppdatera AAPS](#aaps-builder-updates).
+- **"Page not found" (404) när inställningssidan öppnar GitHub**: logga in på github.com i samma webbläsare (GitHub visar 404 för privata repon när du inte är inloggad). Om du är inloggad stämmer inte användarnamnet eller namnet på repot i steg 1 på inställningssidan med ditt repo. Skriv de exakta namnen.
+- **"Det finns ingen GitHub-användare med det här namnet"** i steg 1: skriv ditt användarnamn på GitHub, så som det visas i din GitHub-profil, inte din e-postadress.
+- **Ingen länk Download, eller GitHub-appen öppnades**: GitHub-appen kan inte ladda ned byggen. Öppna bygget i Chrome enligt [steg 5](#aaps-builder-step5). För att GitHub-länkar inte ska öppnas i appen: Android **Settings** (Inställningar) → **Apps** (Appar) → **GitHub** → **Open by default** (Öppna som standard) → stäng av **Open supported links** (Öppna länkar som stöds).
+- **"Google Drive access has expired or was revoked"**: gör om [steg 6](#aaps-builder-google-drive) och uppdatera hemligheten `GDRIVE_OAUTH2`.
 
-For other GitHub and Google Drive issues, see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+För andra problem med GitHub och Google Drive, se [Bygge i webbläsaren: felsökning](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ```{toctree}
 :hidden:
 
-AAPS Builder setup page <BrowserBuildAapsBuilderSetup.md>
+Inställningssidan för AAPS Builder <BrowserBuildAapsBuilderSetup.md>
 ```
