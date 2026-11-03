@@ -1,154 +1,154 @@
 (quicklaunch)=
-# QuickLaunch (overview quick-action toolbar)
+# Hızlı Başlatma (genel bakış ekranındaki hızlı işlem araç çubuğu)
 
-**QuickLaunch** is the small **quick-action toolbar** that floats at the bottom of the **AAPS** overview, just above the bottom navigation. It is a customizable row of one-tap buttons: you decide which actions live there, in which order, so the things you do most often are always one tap away on the main screen.
+**Hızlı Başlatma**, **AAPS** genel bakış ekranının altında, alt gezinme çubuğunun hemen üstünde duran küçük **hızlı işlem araç çubuğudur**. Tek dokunuşla çalışan düğmelerden oluşan, özelleştirilebilir bir satırdır: hangi eylemlerin burada olacağına ve sıralarına siz karar verirsiniz. Böylece en sık yaptığınız işler ana ekranda her zaman tek dokunuş uzaklıktadır.
 
 ```{contents} Table of contents
 :depth: 2
 :local: true
 ```
 
-![The QuickLaunch toolbar on the overview](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
+![Genel bakış ekranındaki Hızlı Başlatma araç çubuğu](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
 
 ---
 
-## Using the toolbar
+## Araç çubuğunu kullanma
 
-The toolbar sits on the **overview**, between the graphs and the bottom navigation:
+Araç çubuğu **genel bakış ekranında**, grafikler ile alt gezinme çubuğu arasında durur:
 
-![The QuickLaunch toolbar in place on the overview](../images/v4/QuickLaunch/quicklaunch_overview.png)
+![Genel bakış ekranında yerindeki Hızlı Başlatma araç çubuğu](../images/v4/QuickLaunch/quicklaunch_overview.png)
 
-- **Tap** an icon to run its action — exactly as if you had opened it from its normal screen (a bolus or treatment still shows its usual confirmation first).
-- **Long-press** an icon to see a **tooltip** with the action's name and a short description.
-- If you add **more buttons than fit** on screen, the extra ones move into an **overflow menu** (the **⋮** button at the end of the toolbar).
-- Each icon keeps its action's **color** (e.g. insulin, carbs, temp target), so it is recognizable at a glance.
+- Eylemini çalıştırmak için bir simgeye **dokunun** — tam olarak eylemi normal ekranından açmışsınız gibi çalışır (bolus veya tedavi yine önce olağan onayını gösterir).
+- Eylemin adını ve kısa açıklamasını içeren bir **ipucu** görmek için bir simgeye **uzun basın**.
+- Ekrana **sığmayacak kadar çok düğme** eklerseniz, fazla olanlar bir **taşma menüsüne** (araç çubuğunun sonundaki **⋮** düğmesi) taşınır.
+- Her simge, eyleminin **rengini** korur (ör. insülin, karbonhidrat, geçici hedef), böylece bir bakışta tanınır.
 
 ```{admonition} The toolbar is always there
 :class: note
-The last button is always **Configure QuickLaunch** (the **⚙️** gear). It cannot be removed, so you can always reach the configuration screen straight from the toolbar. By default the toolbar contains just two buttons — the **Bolus wizard** and this gear.
+Son düğme her zaman **Hızlı Başlatma'yı yapılandırın** düğmesidir (**⚙️** dişli). Bu düğme kaldırılamaz, böylece yapılandırma ekranına her zaman doğrudan araç çubuğundan ulaşabilirsiniz. Varsayılan olarak araç çubuğunda yalnızca iki düğme vardır — **Bolus sihirbazı** ve bu dişli.
 ```
 
 ---
 
-## Configuring QuickLaunch
+## Hızlı Başlatma'yı yapılandırma
 
-Tap the **⚙️** gear on the toolbar (or open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → … → Configure QuickLaunch**) to open the **Configure QuickLaunch** screen (*“Customize quick-action buttons on overview”*).
+Araç çubuğundaki **⚙️** dişliye dokunarak (veya **[Konfigürasyon](../SettingUpAaps/ConfigBuilder.md) → … → Hızlı Başlatma'yı yapılandırın** yolunu açarak) **Hızlı Başlatma'yı yapılandırın** ekranını açın (*“Genel bakış ekranındaki hızlı işlem düğmelerini özelleştirin”*).
 
-![Configure QuickLaunch — Selected actions, then the catalog of actions to add](../images/v4/QuickLaunch/quicklaunch_config.png)
+![Hızlı Başlatma'yı yapılandırın — Seçili eylemler, ardından eklenebilecek eylemlerin kataloğu](../images/v4/QuickLaunch/quicklaunch_config.png)
 
-The screen has two parts:
+Ekranın iki bölümü vardır:
 
-- **Selected actions** (at the top) — the buttons currently on your toolbar, in toolbar order.
-- A **catalog** below it — every action you can add, grouped by category. Each catalog entry has a **➕** button to add it.
+- **Seçili eylemler** (üstte) — şu anda araç çubuğunuzda olan düğmeler, araç çubuğundaki sırayla.
+- Altında bir **katalog** — ekleyebileceğiniz tüm eylemler, kategorilere göre gruplanmış olarak. Her katalog girdisinde, girdiyi eklemek için bir **➕** düğmesi vardır.
 
-### Selected actions — reorder, edit, remove
+### Seçili eylemler — yeniden sıralama, düzenleme, kaldırma
 
-Each selected action has:
+Her seçili eylemde şunlar vardır:
 
-- a **⠿ drag handle** — press and drag to **reorder** the buttons (the order here is the order on the toolbar),
-- a **−** button — **remove** it from the toolbar,
-- and, for a **Profile** shortcut only, a **✏️** button to edit its percentage/duration (see [Profile shortcuts](#profile-shortcuts)).
+- bir **⠿ sürükleme tutamacı** — düğmeleri **yeniden sıralamak** için basılı tutup sürükleyin (buradaki sıra, araç çubuğundaki sıradır),
+- bir **−** düğmesi — eylemi araç çubuğundan **kaldırır**,
+- ve yalnızca **Profil** kısayolu için, yüzde/süresini düzenlemek üzere bir **✏️** düğmesi (bkz. [Profil kısayolları](#profile-shortcuts)).
 
-Changes take effect **immediately** — there is no separate *Save*. Adding an action drops it at the end of the toolbar; reorder it from there.
+Değişiklikler **hemen** geçerli olur — ayrıca bir *Kaydet* yoktur. Eklenen bir eylem araç çubuğunun sonuna yerleşir; oradan yeniden sıralayabilirsiniz.
 
 ---
 
-## The action categories
+## Eylem kategorileri
 
-The catalog groups everything you can add into the following categories, in this order. Categories that have nothing to offer (e.g. you have no scenes) are simply not shown.
+Katalog, ekleyebileceğiniz her şeyi aşağıdaki kategorilerde, bu sırayla gruplar. Sunacak bir şeyi olmayan kategoriler (ör. hiç senaryonuz yoksa) gösterilmez.
 
-### Treatment
+### Tedavi
 
-The everyday treatment and CGM dialogs:
+Günlük tedavi ve CGM iletişim kutuları:
 
-- **Insulin** — deliver a bolus manually.
-- **Carbs** — record carbs without insulin.
-- **Bolus wizard** — open the bolus calculator.
-- **Treatment** — record insulin and carbs together.
-- **CGM** — open your CGM app (e.g. xDrip).
-- **Calibration** — calibrate the CGM sensor.
+- **İnsülin** — elle bolus verir.
+- **Karbonhidrat** — insülin olmadan karbonhidrat kaydeder.
+- **Bolus sihirbazı** — bolus hesaplayıcısını açar.
+- **Tedavi** — insülin ve karbonhidratı birlikte kaydeder.
+- **CGM** — CGM uygulamanızı açar (ör. xDrip).
+- **Kalibrasyon** — CGM sensörünü kalibre eder.
 
-### Care Portal
+### Careportal
 
-The care-portal events and device-maintenance records:
+Careportal olayları ve cihaz bakım kayıtları:
 
-- **BG Check**, **Note**, **Exercise**, **Question**, **Announcement**,
-- **Sensor Insert**, **Pump Battery Change**, **Pump Site Change**, **Prime/Fill**, **Site Rotation**.
+- **KŞ Kontrol**, **Not**, **Egzersiz**, **Soru**, **Duyuru**,
+- **Sensör yerleştirme**, **Pompa Pil Değişimi**, **Pompa Kanül Değişimi**, **Hazırla/doldur**, **Bölge Rotasyonu**.
 
-**Prime/Fill** and **Pump Battery Change** are only offered when your pump uses them. Patch pumps, for example, fill and change the battery in their own activation steps, so these entries are not shown for them (as in the **Manage** sheet).
+**Hazırla/doldur** ve **Pompa Pil Değişimi** yalnızca pompanız bunları kullanıyorsa sunulur. Örneğin Patch pompalar doldurma ve pil değişimini kendi etkinleştirme adımlarında yapar, bu yüzden bu girdiler onlar için gösterilmez (**Yönet** panelinde olduğu gibi).
 
-![The Care Portal category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
+![Katalogdaki Careportal kategorisi](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
 
-These are the same entries you would otherwise reach through the **[Treatments](#v4changes-treatments)** and **[Manage](#v4changes-manage)** sheets — QuickLaunch just puts the ones you use on the overview.
+Bunlar, normalde **[Tedaviler](#v4changes-treatments)** ve **[Yönet](#v4changes-manage)** panellerinden ulaşacağınız girdilerin aynısıdır — Hızlı Başlatma yalnızca kullandıklarınızı genel bakış ekranına koyar.
 
-### Manage
+### Yönet
 
-The screens of the **[Manage](#v4changes-manage)** sheet, in the same order, so you can open the one you use most from the toolbar:
+**[Yönet](#v4changes-manage)** panelindeki ekranlar, aynı sırayla; böylece en çok kullandığınızı araç çubuğundan açabilirsiniz:
 
-- **Profile**, **Insulin settings** (manage and activate insulin configurations — named differently from **Insulin** on purpose, because that button delivers a bolus), **Temp Target**, **QuickWizard**, **Scenes**, **Automation**, **Food**,
-- **Running mode** — close or open the loop, suspend it, or disconnect the pump,
-- **Authorized clients** — only on a master or a paired client.
+- **Profil**, **İnsülin ayarları** (insülin yapılandırmalarını yönetin ve etkinleştirin — **İnsülin** düğmesinden bilerek farklı adlandırılmıştır, çünkü o düğme bolus verir), **Geçici Hedef**, **Hızlı Asistan**, **Senaryolar**, **Otomasyon**, **Yiyecek**,
+- **Çalışma modu** — döngüyü kapatın veya açın, askıya alın ya da pompa bağlantısını kesin,
+- **Yetkili istemciler** — yalnızca ana birimde veya eşleştirilmiş bir istemcide.
 
-These buttons open the screen; they do not start anything by themselves. To start a scene or a QuickWizard in one tap, add it from the **Scenes** or **Quick Wizard** category below.
+Bu düğmeler ekranı açar; kendi başlarına hiçbir şey başlatmazlar. Bir senaryoyu veya bir Hızlı Asistan'ı tek dokunuşla başlatmak için onu aşağıdaki **Senaryolar** veya **Hızlı Asistan** kategorisinden ekleyin.
 
-![The Manage category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![The Manage category, continued](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
+![Katalogdaki Yönet kategorisi](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![Yönet kategorisi, devamı](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
 
 ### Hızlı Asistan
 
-Each of your **[QuickWizard](QuickWizards.md)** presets can be added as a button, so a recurring meal is one tap from the overview. The button carries the preset's name and shows the carbs/insulin amount; tapping it runs the QuickWizard with its usual confirmation.
+Her **[Hızlı Asistan](QuickWizards.md)** ön ayarınız bir düğme olarak eklenebilir, böylece düzenli bir öğün genel bakış ekranından tek dokunuş uzaklıkta olur. Düğme ön ayarın adını taşır ve karbonhidrat/insülin miktarını gösterir; düğmeye dokunmak Hızlı Asistan'ı olağan onayıyla çalıştırır.
 
-QuickWizards set to show on the watch only are not offered. A QuickWizard button on the toolbar follows the same rules as in the **Treatments** sheet: it is hidden outside its [valid time range](#quickwizard_validity) and for a short time after use. It stays in your toolbar configuration and comes back when the QuickWizard can be used again.
+Yalnızca saatte gösterilecek şekilde ayarlanmış Hızlı Asistan'lar sunulmaz. Araç çubuğundaki bir Hızlı Asistan düğmesi, **Tedaviler** panelindekiyle aynı kurallara uyar: [geçerli zaman aralığı](#quickwizard_validity) dışında ve kullanıldıktan sonra kısa bir süre gizlenir. Araç çubuğu yapılandırmanızda kalır ve Hızlı Asistan yeniden kullanılabilir olduğunda geri gelir.
 
-### Scenes
+### Senaryolar
 
-Each enabled **[scene](Scenes.md)** can be added as a button. Tapping it asks for confirmation, then activates the scene (the same bundle of actions you would get from the Scenes screen). This category appears only if you have at least one scene.
+Etkin her **[senaryo](Scenes.md)** bir düğme olarak eklenebilir. Düğmeye dokunduğunuzda onay istenir, ardından senaryo etkinleştirilir (Senaryolar ekranından alacağınız aynı eylem grubu). Bu kategori yalnızca en az bir senaryonuz varsa görünür.
 
-The tooltip and the catalog show the same summary as **Manage → Scenes**, for example *"3 actions, 2 h → Cooldown"*, where the name after the arrow is the follow-up scene.
+İpucu ve katalog, **Yönet → Senaryolar** ile aynı özeti gösterir, örneğin *"3 eylem, 2 sa → Soğuma"*. Burada oktan sonraki ad, devam senaryosudur.
 
 ### Otomasyon
 
-Your **user-action** automation rules (the ones you trigger by hand) can be added as buttons. Tapping one asks for confirmation, then runs that rule's actions.
+**Kullanıcı eylemi** otomasyon kurallarınız (elle tetiklediğiniz kurallar) düğme olarak eklenebilir. Birine dokunduğunuzda onay istenir, ardından o kuralın eylemleri çalıştırılır.
 
 ```{admonition} Automation buttons run on the master
 :class: note
-Automation executes on the **master**, so automation shortcuts are offered and run only on the master. They are not available on a paired **[client](../RemoteFeatures/ClientMasterControl.md)**.
+Otomasyon **ana birimde** çalışır, bu yüzden otomasyon kısayolları yalnızca ana birimde sunulur ve çalıştırılır. Eşleştirilmiş bir **[istemcide](../RemoteFeatures/ClientMasterControl.md)** kullanılamazlar.
 ```
 
-### Temp Target Presets
+### Geçici Hedef Ön Ayarları
 
-Each of your **[Temp Target](TempTargets.md)** presets can be added as a button (its name, its target and its duration are shown, for example *"Eating soon — 5.0 mmol/L, 45 min"*). Tapping it asks for confirmation, then starts that temp target.
+Her **[Geçici Hedef](TempTargets.md)** ön ayarınız bir düğme olarak eklenebilir (adı, hedefi ve süresi gösterilir, örneğin *"Yakında Yenecek — 5,0 mmol/L, 45 dk"*). Düğmeye dokunduğunuzda onay istenir, ardından o geçici hedef başlatılır.
 
-![The dynamic categories — Quick Wizard and Temp Target Presets (Scenes and Automation appear when you have some)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
+![Dinamik kategoriler — Hızlı Asistan ve Geçici Hedef Ön Ayarları (Senaryolar ve Otomasyon, bunlardan sizde varsa görünür)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
 
 (profile-shortcuts)=
 ### Profile
 
-Every **[profile](ProfileSwitch-ProfilePercentage.md)** can be added as a **shortcut** that performs a **profile switch** in one tap. Unlike most shortcuts, a Profile shortcut carries its own **percentage** and **duration**, which you set after adding it with the **✏️** button:
+Her **[profil](ProfileSwitch-ProfilePercentage.md)**, tek dokunuşla bir **profil değişimi** yapan bir **kısayol** olarak eklenebilir. Çoğu kısayoldan farklı olarak, bir Profil kısayolu kendi **yüzdesini** ve **süresini** taşır. Bunları ekledikten sonra **✏️** düğmesiyle ayarlarsınız:
 
-- **Percentage** (30–250 %, in steps of 5 %) — scale the profile when it is applied. 100 % uses it as-is.
-- **Duration** (0–10080 min, that is up to 7 days, in steps of 10 min) — how long the switch lasts. **0 = Permanent** (until you switch again).
+- **Yüzde** (%30–250, %5'lik adımlarla) — profil uygulanırken onu ölçekler. %100 profili olduğu gibi kullanır.
+- **Süre** (0–10080 dk, yani en fazla 7 gün, 10 dk'lık adımlarla) — değişimin ne kadar süreceği. **0 = Kalıcı** (yeniden değiştirene kadar).
 
-![Profile shortcuts and plugin categories in the catalog](../images/v4/QuickLaunch/quicklaunch_categories.png)
+![Katalogdaki profil kısayolları ve eklenti kategorileri](../images/v4/QuickLaunch/quicklaunch_categories.png)
 
-This lets you keep several buttons for the **same** profile at different strengths — for example *“Profile 100 %”* and *“Profile 70 % for 2 h”* — and apply either with a single tap. (You can add the same profile more than once with different settings.)
+Bu sayede **aynı** profil için farklı güçlerde birkaç düğme tutabilirsiniz — örneğin *“Profil %100”* ve *“2 sa için Profil %70”* — ve ikisinden birini tek dokunuşla uygulayabilirsiniz. (Aynı profili farklı ayarlarla birden fazla kez ekleyebilirsiniz.)
 
-### Plugins
+### Eklentiler
 
-![Plugin shortcuts in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
+![Katalogdaki eklenti kısayolları](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
 
-Finally, any **enabled plugin** that has its own screen can be added as a shortcut to open it directly. These are grouped by plugin type — **Pump**, **BG Source**, **APS**, **Loop**, **Sensitivity detection**, **Smoothing**, **Calibration**, **Constraints**, **Communication** and **General** — so you can, for instance, jump straight to your pump or loop screen from the overview.
+Son olarak, kendi ekranı olan her **etkin eklenti**, ekranını doğrudan açan bir kısayol olarak eklenebilir. Bunlar eklenti türüne göre gruplanır — **Pompa**, **KŞ kaynağı**, **APS**, **Döngü**, **Duyarlılık algılaması**, **Yumuşatma**, **Kalibrasyon**, **Kısıtlamalar**, **İletişim** ve **Genel** — böylece örneğin genel bakış ekranından doğrudan pompa veya döngü ekranınıza geçebilirsiniz.
 
 ---
 
-## QuickLaunch and Master/Client
+## Hızlı Başlatma ve Ana birim/İstemci
 
-Unlike most of your settings, the **QuickLaunch toolbar is configured per device** — it is stored **locally and is not synced** between your master and paired clients, so each device keeps its own set of buttons. (It *is* included in a settings **backup/export**, so a restore brings it back on the same device.)
+Ayarlarınızın çoğundan farklı olarak **Hızlı Başlatma araç çubuğu cihaz başına yapılandırılır** — ana biriminiz ile eşleştirilmiş istemciler arasında **yerel olarak saklanır ve senkronize edilmez**, böylece her cihaz kendi düğme setini korur. (Ancak ayarların **yedeğine/dışa aktarımına** *dahildir*, böylece geri yükleme onu aynı cihazda geri getirir.)
 
-What each device can put on its toolbar still depends on what it has: QuickWizards, scenes, temp-target presets and profiles all sync, so a client's catalog offers the same items — you simply choose them per device. A few details to know:
+Her cihazın araç çubuğuna koyabileceği şeyler yine de o cihazda neler olduğuna bağlıdır: Hızlı Asistan'lar, senaryolar, geçici hedef ön ayarları ve profillerin hepsi senkronize edilir, bu yüzden bir istemcinin kataloğu aynı öğeleri sunar — siz yalnızca bunları her cihaz için ayrı seçersiniz. Bilinmesi gereken birkaç ayrıntı:
 
-- Buttons whose target no longer exists (a deleted QuickWizard, scene or preset, a disabled rule) are **skipped automatically**.
-- **Automation** shortcuts are offered and run only on the **master** (automation executes on the master). Scene, QuickWizard, temp-target and profile buttons are available on a client.
-- When you tap a button on a client that must run on the master (a bolus, temp target, profile switch or scene), the **master** carries it out and authors the confirmation. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md).
+- Hedefi artık var olmayan düğmeler (silinmiş bir Hızlı Asistan, senaryo veya ön ayar, devre dışı bırakılmış bir kural) **otomatik olarak atlanır**.
+- **Otomasyon** kısayolları yalnızca **ana birimde** sunulur ve çalıştırılır (otomasyon ana birimde çalışır). Senaryo, Hızlı Asistan, geçici hedef ve profil düğmeleri bir istemcide kullanılabilir.
+- Bir istemcide ana birimde çalışması gereken bir düğmeye (bolus, geçici hedef, profil değişimi veya senaryo) dokunduğunuzda, işlemi **ana birim** yapar ve onayı da o hazırlar. Bkz. [Ana birim ↔ İstemci kontrolü](../RemoteFeatures/ClientMasterControl.md).
 
 ---
 
