@@ -1,67 +1,67 @@
 <!-- Android Studio Build, FKA Computer Build. Preserve filenames to avoid breaking URLs. -->
 
-# Android Studio Build
+# Android Studio ile oluşturma
 
-This is the traditional method to build your AAPS app.
+Bu, AAPS uygulamanızı oluşturmanın geleneksel yöntemidir.
 
-You can build the app without a computer using the [Browser Build](./BrowserBuild.md) method.
+[Tarayıcı ile oluşturma](./BrowserBuild.md) yöntemini kullanarak uygulamayı bilgisayar olmadan oluşturabilirsiniz.
 
-## Programı İndirmek yerine kendiniz oluşturun...
+## İndirmek yerine kendiniz oluşturun
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz!**
+**Tıbbi cihazlarla ilgili düzenlemeler nedeniyle AAPS uygulaması (bir apk dosyası) indirilemez. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Ayrıntılar için [SSS sayfasına](../UsefulLinks/FAQ.md) bakın.
 
 ---
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
-## Computer and software specifications for building AAPS
+## AAPS'i oluşturmak için bilgisayar ve yazılım gereksinimleri
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
+* Apk'yı oluşturmak için belirli bir **[Android Studio](https://developer.android.com/studio/)** sürümü gerekebilir. Aşağıdaki tabloya bakın:
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                             | tested up to Quail 4                                   | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | tested up to Quail 4                                   | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | tested up to Quail 4                                   | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | tested up to Quail 4                                   | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                   | tested up to Quail 4                                   | 8.13   | 21  |
-| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                   | tested up to Quail 4                                   | 9      | 21  |
-| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                  | Latest                                                 | 9.8    | 21  |
+| AAPS Sürümü             | Önerilen<br/>Android Studio<br/>Sürümü | Alternatif<br/>Android Studio<br/>Sürümü | Gradle | JVM |
+| ----------------------- | -------------------------------------------------- | ---------------------------------------------------- | ------ |:--- |
+| 2.6.2                   | 3.6.1                                              |                                                      | 5.6.4  | 11  |
+| 2.8.2.1                 | 4.1.1                                              |                                                      | 6.1.1  | 13  |
+| [3.1.0.3](#version3100) | 2020.3.1                                           | Quail 4'e kadar test edildi                          | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                | Quail 4'e kadar test edildi                          | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                    | Quail 4'e kadar test edildi                          | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                 | Quail 4'e kadar test edildi                          | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                 | Quail 4'e kadar test edildi                          | 8.13   | 21  |
+| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                 | Quail 4'e kadar test edildi                          | 9      | 21  |
+| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                | En son                                               | 9.8    | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+"Önerilen sürüm" uygun JVM sürümüyle birlikte gelir. Önerilen sürüm, **AAPS**'i oluşturmak için kullanabileceğiniz en düşük sürümdür. "Önerilen" sürümden daha eski bir sürümle oluşturma **YAPAMAZSINIZ**. Farklı bir sürüm kullanırsanız JVM sürümüyle ilgili sorunlarla karşılaşabilirsiniz. Bu sorunları çözmenize yardım etmesi için [Android Studio'da Sorun Giderme](#troubleshooting_androidstudio-uncommitted-changes) sayfasına bakın. Mevcut Android Studio sürümünüz tabloda yoksa önce onu güncellemelisiniz.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+Gradle sürümü kaynak koda bağlıdır. Kaynak kodu indirirken / güncellerken her zaman doğru Gradle sürümünü alırsınız. Burada yalnızca bilgi için verilmiştir, bununla ilgili bir şey yapmanız gerekmez.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* [Windows 32 bit sistemler](#troubleshooting_androidstudio-unable-to-start-daemon-process) Android Studio tarafından desteklenmez. Lütfen unutmayın: **64 bit işlemci ve 64 bit işletim sistemi zorunlu koşuldur.** Sisteminiz bu koşulu KARŞILAMIYORSA ilgili donanımı veya yazılımı ya da tüm sistemi değiştirmeniz gerekir.
 
 <table class="tg">
 <tbody>
   <tr>
     <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 10 or higher</td>
-    <td class="tg-baqh">macOS 12 or higher</td>
-    <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
+    <td class="tg-baqh">Windows 10 veya üstü</td>
+    <td class="tg-baqh">macOS 12 veya üstü</td>
+    <td class="tg-baqh">Gnome, KDE veya Unity DE destekleyen herhangi bir Linux dağıtımı;&nbsp;&nbsp;GNU C Library (glibc) 2.31 veya üstü</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
-    <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <td class="tg-baqh"><a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">Sanallaştırma desteği</a> (Intel VT-x veya AMD-V) BIOS'ta etkin olan, 2017 veya daha yeni bir x86_64 işlemci (Intel 8. nesil Core i5, AMD Ryzen veya daha yenisi)</td>
+    <td class="tg-baqh">Apple Silicon (M1 veya daha yenisi) ya da 6. nesil Intel Core veya daha yenisi (Intel Mac desteği aşamalı olarak kaldırılıyor)</td>
+    <td class="tg-baqh">Sanallaştırma desteği (Intel VT-x veya AMD-V) BIOS'ta etkin olan, 2017 veya daha yeni bir x86_64 işlemci (Intel 8. nesil Core i5, AMD Ryzen veya daha yenisi)</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
+    <th class="tg-baqh"><p align="center">Bellek (RAM)</th>
+    <td class="tg-baqh" colspan="3"><p align="center">16 GB veya daha fazla (8 GB yalnızca Android Studio için kesin en düşük değerdir, 32 GB önerilir)</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. SSD is recommended.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">En az 32 GB boş alan. SSD is recommended.</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">En az 1280 x 800 (1920 x 1080 önerilir)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
@@ -70,20 +70,20 @@ The Gradle version is linked to the source code, you will always get the correct
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**HDD (Sabit Disk Sürücüsü) yerine SSD (Katı Hal Sürücüsü) kullanmanız kesinlikle önerilir (zorunlu değildir), çünkü AAPS apk dosyasını oluşturmak daha kısa sürer.**  **AAPS** apk dosyasını oluştururken yine de HDD kullanabilirsiniz. Bunu yaparsanız oluşturma işlemi uzun sürebilir, ancak bir kez başladıktan sonra işlemi kendi başına çalışır durumda bırakabilirsiniz.
 
-## Help and support during the building process
+## Oluşturma sırasında yardım ve destek
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) section, please consult that first.
+**AAPS** uygulamasını oluştururken zorluklarla karşılaşırsanız, bu konuya ayrılmış bir [**Android Studio'da sorun giderme**](../GettingHelp/TroubleshootingAndroidStudio.md) bölümü vardır; lütfen önce oraya bakın.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Oluşturma talimatlarında bir şeyin yanlış, eksik veya kafa karıştırıcı olduğunu düşünüyorsanız ya da hâlâ zorlanıyorsanız, lütfen [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) veya [Discord](https://discord.gg/4fQUWHZ4Mw) üzerindeki diğer **AAPS** kullanıcı gruplarına ulaşın. Bir şeyi kendiniz değiştirmek isterseniz (ekran görüntülerini güncellemek _vb._), lütfen bir [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md) gönderin.
 
-## Step-by-step guide to building the AAPS app
+## AAPS uygulamasını oluşturmak için adım adım kılavuz
 
 ```{admonition} WARNING
 :class: warning
-If you have built AAPS before, you don't need to take all the following steps again.
-Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
+AAPS'i daha önce oluşturduysanız, aşağıdaki adımların hepsini yeniden yapmanız gerekmez.
+Lütfen doğrudan [güncelleme kılavuzuna](../Maintenance/UpdateToNewVersion.md) geçin!
 ```
 
 ```{contents} The overall steps for building the **AAPS** apk file
@@ -91,347 +91,347 @@ Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)
 :local: true
 ```
 
-In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow.
+Bu kılavuzda **AAPS** apk dosyasının oluşturulmasına ait _örnek_ ekran görüntüleri bulacaksınız. **AAPS** apk'sını oluşturmak için kullandığımız yazılım olan  **Android Studio** düzenli olarak güncellendiği için bu ekran görüntüleri sizin kurulumunuzla aynı olmayabilir, ancak yine de izlenebilir olmaları gerekir.
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
+**Android Studio** Windows, Mac OS X ve Linux platformlarında çalıştığı için farklı platformlarda adımlar arasında küçük farklar da olabilir.
 
 (install-git-if-you-dont-have-it)=
-### Install Git
+### Git'i yükleyin
 
 ```{admonition} Why Git? 
 :class: dropdown
 
-Git is known as a “_Versioning Control System_” (VCS).\
-Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
+Git, bir “_Sürüm Kontrol Sistemi_” (Versioning Control System, VCS) olarak bilinir.\
+Git, koddaki değişiklikleri izlemenizi ve başkalarıyla birlikte çalışmanızı sağlayan bir programdır. Git'i, **AAPS** kaynak kodunun bir kopyasını GitHub web sitesinden kendi bilgisayarınıza almak için kullanacaksınız. Ardından **AAPS** uygulamasını (apk) oluşturmak için bilgisayarınızda Android Studio'yu kullanacaksınız. 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
-#### Steps for Installing Git
+#### Git'i yükleme adımları
 
-1.  Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
+1.  **Git**'in zaten yüklü olmadığını kontrol edin. Bunu Windows arama çubuğuna “git” yazarak yapabilirsiniz – **“Git bash”** veya Git'in başka bir biçimini görürseniz Git zaten yüklüdür ve doğrudan [Android Studio'nun yüklenmesine](#Building-APK-install-android-studio) geçebilirsiniz:
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
+2. Git yüklü değilse, sisteminiz için en son sürümü [**buradaki**](https://git-scm.com/downloads) "Download" bölümünden indirip yükleyin. Güncel her Git sürümü çalışmalıdır; sisteminize uygun sürümü seçin: Mac, Windows veya Linux.
 
-**Note for Mac users:** the Git webpage will also guide you to install an additional program called "homebrew" to aid the installation. If you install Git via homebrew, there is no need to change any preferences.
+**Mac kullanıcıları için not:** Git web sayfası, yüklemeye yardım etmesi için "homebrew" adlı ek bir programı yüklemeniz konusunda da size yol gösterir. Git'i homebrew ile yüklerseniz hiçbir tercihi değiştirmeniz gerekmez.
 
 (Make_a_note_of_Git_path)=
 
-* During the installation, when you are asked to "select destination location" make a note of _where_ Git is being installed (the "**installation path**") you will need to check it in the next step. It will be something similar to "C:\Program Files\Git\cmd\git.exe"
+* Yükleme sırasında "select destination location" (hedef konumu seçin) sorulduğunda, Git'in _nereye_ yüklendiğini (“**installation path**”, yükleme yolu) not edin; bir sonraki adımda bunu kontrol etmeniz gerekecek. "C:\Program Files\Git\cmd\git.exe" benzeri bir yol olacaktır
 
-*  As you proceed through several steps of the Git installation, just accept all the default options.
+*  Git yüklemesinin birkaç adımında tüm varsayılan seçenekleri kabul etmeniz yeterlidir.
 
-*  After the install, if you forgot to make a note of the where Git was installed, you can find it as follows: type "git" into the PC search bar, right click on "Git bash", select "open file location" hover over the "Git bash" icon with your mouse, which will then reveal where it is installed.
+*  Yüklemeden sonra Git'in nereye yüklendiğini not etmeyi unuttuysanız şu şekilde bulabilirsiniz: bilgisayarın arama çubuğuna "git" yazın, "Git bash" üzerine sağ tıklayın, "open file location" (dosya konumunu aç) seçeneğini seçin ve fareyle "Git bash" simgesinin üzerine gelin; yüklendiği yer görünecektir.
 
-* Reboot your computer before the next step.
+* Bir sonraki adımdan önce bilgisayarınızı yeniden başlatın.
 
 (Building-APK-install-android-studio)=
 ### Android Studio'yu yükleyin
 
-- **You have to be online all of the time during the following steps, as Android Studio downloads several updates**
+- **Aşağıdaki adımlar sırasında sürekli çevrimiçi olmanız gerekir, çünkü Android Studio birkaç güncelleme indirir**
 
 ```{admonition} What is Android Studio?
 :class: dropdown
-Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
+Android Studio, bilgisayarınızda çalışan bir programdır. İnternetten kaynak kodu indirmenizi (Git kullanarak) ve akıllı telefon (ve akıllı saat) uygulamaları oluşturmanızı sağlar. Bilgisayarınızda Android Studio ile yeni veya güncellenmiş bir uygulama oluşturarak akıllı telefonunuzda çalışan, döngü yapan mevcut **AAPS** sürümünü "bozamazsınız"; bunlar tamamen ayrı işlemlerdir. 
 ```
 
-One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
+Android Studio'yu yüklerken en önemli şeylerden biri **sabırlı olmaktır!** Yükleme ve kurulum sırasında Android Studio çok sayıda dosya indirir ve bu zaman alır.
 
 ```{admonition} Different UI
 :class: warning
-Important note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+Önemli not: Android Studio son sürümlerde arayüzünü değiştirdi. Bu kılavuz adımları *yeni arayüz* ile gösterir. Ekran görüntüleri "Ladybug" ile alındı, bu yüzden daha yeni sürümler biraz farklı görünebilir. Hâlâ eski arayüzü kullanıyorsanız, önce [bu talimatları](#computerbuild-NewUI) izleyerek Android Studio'yu yeni arayüze geçirmek isteyebilirsiniz.
 ```
 
-The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
+Android Studio sürümü çok önemlidir. Doğru Android Studio sürümünü seçmek için [yukarıdaki talimatlara](#Building-APK-recommended-specification-of-computer-for-building-apk-file) bakın.
 
-Download the [current version of Android Studio](https://developer.android.com/studio) or an older version from the [**Archives**](https://developer.android.com/studio/archive) and accept the download agreements.
+[Android Studio'nun güncel sürümünü](https://developer.android.com/studio) veya [**Archives**](https://developer.android.com/studio/archive) (arşiv) sayfasından daha eski bir sürümü indirin ve indirme sözleşmelerini kabul edin.
 
 ![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
-Once the download is finished, start the downloaded application to install it on your computer. You might need to accept/confirm some warnings about downloaded apps from Windows!
+İndirme bittiğinde, bilgisayarınıza yüklemek için indirilen uygulamayı başlatın. Windows'un indirilen uygulamalarla ilgili bazı uyarılarını kabul etmeniz/onaylamanız gerekebilir!
 
-Install Android Studio by clicking "Next", as shown in the following screenshots. You do **not** need to change any settings!
+Aşağıdaki ekran görüntülerinde gösterildiği gibi "Next" (İleri) düğmesine tıklayarak Android Studio'yu yükleyin. Hiçbir ayarı değiştirmeniz **gerekmez**!
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+Disk alanından tasarruf etmek istiyorsanız Android Virtual Device (sanal Android cihazı) seçeneğinin işaretini kaldırabilirsiniz: **AAPS**'i oluşturmak için kullanılmaz.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
 ![Configuration_Settings](../images/Building-the-App/013_InstallLadybug.png)
 
-Now click on "Install":
+Şimdi "Install" (yükle) düğmesine tıklayın:
 
 ![Choose_start_Menu_Folder](../images/Building-the-App/014_InstallLadybug.png)
 
-Once it's completed, press "Next"
+Tamamlandığında "Next" (İleri) düğmesine basın
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finish" to start Android Studio for the first time.
+Son adımda, Android Studio'yu ilk kez başlatmak için "Finish"e tıklayın.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
-You will be asked if you want to help improve Android Studio. Choose the option to your liking, it won't make any difference for the following steps.
+Android Studio'nun geliştirilmesine yardım etmek isteyip istemediğiniz sorulacaktır. İstediğiniz seçeneği seçin; bu, sonraki adımları etkilemez.
 
 ![Help_improve_Android_Studio](../images/Building-the-App/020_ImproveAS.png)
 
-The welcome screen greets you to the installation of Android Studio. Press "Next".
+Karşılama ekranı sizi Android Studio kurulumuna davet eder. "Next" (İleri) düğmesine basın.
 
 ![Welcome](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
 
-Select "Standard" as installation type.
+Kurulum türü olarak "Standard" (standart) seçin.
 
 ![Install_Type](../images/Building-the-App/023_DefaultInstallation.png)
 
-Verify the settings by clicking "Next" again.
+Ayarları yeniden "Next" (İleri) düğmesine tıklayarak onaylayın.
 
 ![Verify_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
-Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
+Şimdi lisans sözleşmelerini kabul etmeniz gerekiyor. Solda, sırayla seçmeniz gereken iki bölüm (1 + 3) vardır; her biri için sağda "Accept" (kabul et) (2 + 4) seçeneğini seçin.
 
-Then the "Finish" (5) button can be clicked.
+Ardından "Finish" (bitir) (5) düğmesine tıklanabilir.
 
 ![License_Agreement](../images/Building-the-App/025_LicenseAgreement.png)
 
-Some Android packages will now be downloaded and installed. Be patient and wait.
+Şimdi bazı Android paketleri indirilecek ve yüklenecek. Sabırlı olun ve bekleyin.
 
-When it's finished, you will find the following screen where you can select "Finish" again.
+Bittiğinde, yeniden "Finish" (bitir) seçeneğini seçebileceğiniz aşağıdaki ekranı göreceksiniz.
 
 ![Downloading_Components](../images/Building-the-App/026_DownloadFinished.png)
 
-You will now see the Welcome screen of Android Studio.
+Şimdi Android Studio'nun karşılama ekranını göreceksiniz.
 
 ![Welcome_to_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
 
 (Building-APK-download-AAPS-code)=
-### Download the AAPS code
+### AAPS kodunu indirin
 
 ```{admonition} Why can it take a long time to download the AAPS code?
 :class: dropdown
 
-The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
+**AAPS** ilk kez indirilirken Android Studio, **AAPS** kaynak kodunu indirmek için internet üzerinden Github web sitesine bağlanır. Bu yaklaşık 1 dakika sürer. 
 
-Android Studio will then use **Gradle** (a development tool for Android apps) to identify other components needed to build these items on your computer. 
+Ardından Android Studio, bunları bilgisayarınızda oluşturmak için gereken diğer bileşenleri belirlemek üzere **Gradle**'ı (Android uygulamaları için bir geliştirme aracı) kullanır. 
 ```
 
-On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left.
+Android Studio karşılama ekranında, solda "**Projects**" (projeler) (1) öğesinin vurgulandığını kontrol edin.
 
-Then click "**Clone Repository**" (2) on the right:
+Ardından sağdaki "**Clone Repository**" (depoyu klonla) (2) düğmesine tıklayın:
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
-We will now tell Android Studio where to get the code from:
+Şimdi Android Studio'ya kodu nereden alacağını söyleyeceğiz:
 
 ![Get from Version Control](../images/Building-the-App/033_CloneGit.png)
 
-* "Repository URL" should be selected (by default) on the left (1).
-* "Git" should be selected (by default) as version control (2).
-* Now copy this URL:
+* Solda (1) "Repository URL" (depo URL'si) seçili olmalıdır (varsayılan olarak).
+* Sürüm kontrolü (2) olarak "Git" seçili olmalıdır (varsayılan olarak).
+* Şimdi bu URL'yi kopyalayın:
     ```
     https://github.com/nightscout/AndroidAPS.git
     ```
-    and paste it into the URL textbox (3).
+    ve URL metin kutusuna (3) yapıştırın.
 
-* Check the (default) directory for saving the cloned code does not already exist on your computer (4). You can change it to some directory, but please remember where you stored it!
-* Now click the button "Clone" (5).
+* Klonlanan kodun kaydedileceği (varsayılan) dizinin bilgisayarınızda zaten bulunmadığını kontrol edin (4). Bunu başka bir dizinle değiştirebilirsiniz, ancak lütfen nereye kaydettiğinizi unutmayın!
+* Şimdi "Clone" (klonla) düğmesine (5) tıklayın.
 
 ```{admonition} INFORMATION
 :class: note
-Make a note of the directory. It is where your sourcecode is stored!
+Dizini not edin. Kaynak kodunuz orada saklanır!
 ```
 
-You will now see a screen telling you that the repository is being cloned:
+Şimdi deponun klonlandığını bildiren bir ekran göreceksiniz:
 
 ![cloning_repository](../images/Building-the-App/034_CloningProgress.png)
 
-At some point, Android Studio will close and start again. You may be asked whether you want to trust the project. Click on "Trust project":
+Bir noktada Android Studio kapanıp yeniden açılacaktır. Projeye güvenmek isteyip istemediğiniz sorulabilir. "Trust project" (projeye güven) seçeneğine tıklayın:
 
   ![Trust project](../images/Building-the-App/035_TrustProject.png)
 
 
-Only for Windows users: If your firewall asks for permission, grant access:
+Yalnızca Windows kullanıcıları için: Güvenlik duvarınız izin isterse erişim izni verin:
 
- ![Firewall permission java](../images/AndroidStudio361_18.png)
+ ![Java için güvenlik duvarı izni](../images/AndroidStudio361_18.png)
 
 After the repository is cloned successfully, Android Studio will open the cloned project.
 
 (computerbuild-NewUI)=
 ```{admonition} New UI
 :class: note
-Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
+Android Studio kısa süre önce arayüzünü değiştirdi. Android Studio'nun yeni kurulumları varsayılan olarak yeni arayüzü kullanır!
 
-Only if your Android Studio looks different, you might need to switch to the new UI:
-Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
-In **Appearance & Behavior**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
+Yalnızca Android Studio'nuz farklı görünüyorsa yeni arayüze geçmeniz gerekebilir:
+Sol üstteki hamburger menüye tıklayın, ardından **Settings**'i (Apple bilgisayarlarda **Preferences**'ı) seçin.
+**Appearance & Behavior** (görünüm ve davranış) içinde **New UI**'a gidin ve **Enable new UI** (yeni arayüzü etkinleştir) kutusunu işaretleyin. Ardından kullanmaya başlamak için Android Studio'yu yeniden başlatın.
 
-If you don't find the option **New UI** don't worry: you are already using it!
+**New UI** seçeneğini bulamazsanız endişelenmeyin: zaten yeni arayüzü kullanıyorsunuz!
 ```
 
 
-When Android Studio opened, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
+Android Studio açıldığında sabırla bekleyin (bu birkaç dakika sürebilir) ve özellikle açılır pencerede önerildiği gibi projeyi **güncellemeyin**.
 
-Android Studio will start a "Gradle project sync" automatically, which will take a couple of minutes to finish. You can see it (still) running:
+Android Studio otomatik olarak bir "Gradle project sync" (gradle senkronizasyonu) başlatır; bunun bitmesi birkaç dakika sürer. Hâlâ çalıştığını görebilirsiniz:
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
 ```{admonition} NEVER UPDATE GRADLE!
 :class: warning
 
-Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+Android Studio, gradle sistemini güncellemenizi önerebilir. **Gradle'ı asla güncellemeyin!** Bu sorunlara yol açar.
 ```
 
-Only on windows computers: You might get a notification about windows defender running: Click on **Automatically** and confirm, it will make the build run faster!
+Yalnızca Windows bilgisayarlarda: Windows Defender'ın çalıştığına dair bir bildirim alabilirsiniz: **Automatically** (otomatik olarak) seçeneğine tıklayın ve onaylayın, bu oluşturmayı hızlandırır!
 
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
 
-You can leave the gradle sync running and follow the next steps already.
+Gradle senkronizasyonunu çalışır durumda bırakıp sonraki adımlara şimdiden geçebilirsiniz.
 
 (Building-APK-set-git-path-in-preferences)=
-### Set Git path in Android Studio preferences
+### Android Studio tercihlerinde Git yolunu ayarlayın
 
-Now we will tell Android studio where to find Git, which you installed [earlier](#install-git-if-you-dont-have-it).
+Şimdi Android Studio'ya, [daha önce](#install-git-if-you-dont-have-it) yüklediğiniz Git'i nerede bulacağını söyleyeceğiz.
 
-* Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
+* Yalnızca Windows kullanıcıları: [Git'i yükledikten](#install-git-if-you-dont-have-it) sonra bilgisayarınızı yeniden başlattığınızdan emin olun. Yapmadıysanız şimdi yeniden başlatın ve Android Studio'yu yeniden açın
 
-In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git** (2)
+**Android Studio**'nun sol üst köşesinde hamburger menüyü açın ve **File** > **Settings** (Windows'ta) veya **Android Studio** > **Preferences** (Mac'te) yoluna gidin. Bu, aşağıdaki pencereyi açar. **Version Control** (sürüm kontrolü) (1) adlı açılır listeyi genişletmek için tıklayın ve **Git** (2) öğesini seçin
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
+"Test" düğmesine (1) tıklayarak **Android Studio**'nun doğru **Path to Git executable** (Git programının yolu) değerini otomatik olarak bulup bulamadığını kontrol edin:
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
 
-If the automatic setting is successful, your current version of **Git** will be displayed next to the path.
+Otomatik ayar başarılı olursa, **Git**'in mevcut sürümü yolun yanında gösterilir.
 
    ![Git_version_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
 
-If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
-* manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
-* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
-* Verify your settings with the **Test** button!
+**git.exe** otomatik olarak bulunamazsa veya "Test" düğmesine tıklamak bir hatayla sonuçlanırsa şunları yapabilirsiniz:
+* [daha önce](#BuildingAaps-steps-for-installing-git) kaydettiğiniz yolu elle girebilir veya
+* klasör simgesine (1) tıklayın ve **git.exe**'nin [daha önce](#BuildingAaps-steps-for-installing-git) yüklendiği dizine elle gidin
+* Ayarlarınızı **Test** düğmesiyle doğrulayın!
 
   ![Git not found](../images/Building-the-App/039_GitTestError.png)
 
 (Building-APK-generate-signed-apk)=
-### Build the AAPS "signed" APK
+### İmzalı ("signed") AAPS APK'sını oluşturun
 
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
-Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
+Android, her uygulamanın _imzalanmasını_ ister. Böylece uygulama daha sonra yalnızca orijinal uygulamayı yayınlayan aynı güvenilir kaynaktan güncellenebilir. Bu konu hakkında daha fazla bilgi için [bu bağlantıyı](https://developer.android.com/studio/publish/app-signing.html#generate-key) izleyin. 
 
-For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+Bizim amacımız için bu yalnızca şu anlama gelir: bir imzalama dosyası, yani "anahtar deposu" (keystore) dosyası oluştururuz ve **AAPS** uygulamasını oluştururken bunu kullanırız.
 ```
 
 
-**Important: Make sure the gradle sync is finished successfully before proceeding!**
+**Önemli: Devam etmeden önce gradle senkronizasyonunun başarıyla bittiğinden emin olun!**
 
 
-Click the hamburger menu on the top left to open the menu bar. Select **Build** (1), then select **Generate Signed App Bundle / APK** (2)
+Menü çubuğunu açmak için sol üstteki hamburger menüye tıklayın. **Build** (1) öğesini, ardından **Generate Signed App Bundle / APK** (2) öğesini seçin
 
-![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
+![APK oluşturma](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Select "APK" (1) instead of "Android App Bundle" and click "Next" (2):
+"Android App Bundle" yerine "APK" (1) seçeneğini seçin ve "Next" (ileri) (2) düğmesine tıklayın:
 
 ![APK instead of bundle](../images/Building-the-App/041_APK.png)
 
-In the next screen, make sure that "Module" is set to "AndroidAPS.app" (1). The part before ".app" is the name of the folder you cloned the code into.
+Sonraki ekranda "Module" değerinin "AndroidAPS.app" (1) olarak ayarlandığından emin olun. ".app" öncesindeki kısım, kodu klonladığınız klasörün adıdır.
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
 :class: note
-If you want to create the apk for your watch, you now need to select AndroidAPS.wear!
+Saatiniz için apk oluşturmak istiyorsanız, şimdi AndroidAPS.wear'ı seçmeniz gerekir!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
-Click "Create new..." (2) to start creating your key store.
+"Create new..." (yeni oluştur) seçeneğine tıklayın (2) ve anahtar deponuzu oluşturmaya başlayın.
 
 ```{admonition} INFORMATION!
 :class: note
-You will only need to create the keystore once.
-If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+Anahtar deposunu yalnızca bir kez oluşturmanız gerekir.
+AAPS'i daha önce oluşturduysanız yeni bir anahtar deposu OLUŞTURMAYIN; mevcut anahtar deponuzu seçin ve parolalarını girin!
 ```
 
-**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
+**_Not:_** Anahtar deposu (key store), uygulamayı imzalamak için gereken bilgilerin saklandığı bir dosyadır. Şifrelenmiştir ve bilgiler parolalarla korunur.
 
-![Create key store](../images/Building-the-App/043_Keystore.png)
+![Anahtar deposu oluşturma](../images/Building-the-App/043_Keystore.png)
 
-* Click the "folder" symbol (1) to select a path on your computer for your key store.
+* Bilgisayarınızda anahtar deponuz için bir yol seçmek üzere "klasör" simgesine (1) tıklayın.
 
-  Do **not** use the directory where you stored your sourcecode but some directory that you would also transfer to a new computer.
+  Kaynak kodunuzu sakladığınız dizini **kullanmayın**; bunun yerine yeni bir bilgisayara da taşıyacağınız bir dizin kullanın.
 
 ```{admonition} WARNING!
 :class: warning
-Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AAPS update!
+Anahtar deponuzun nerede saklandığını kendiniz için not etmeyi unutmayın. Bir sonraki AAPS güncellemesini oluştururken buna ihtiyacınız olacak!
 ```
 
-* Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
+* Şimdi basit bir parola seçin (ve not edin), parola kutusuna (2) girin ve onaylayın (2).
 
-  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+  Anahtar deposu ve anahtar parolalarının karmaşık olması gerekmez. İleride parolanızı kaybederseniz [Yeni bir anahtar deposuyla AAPS'i yeniden yükleme](#reinstall-aaps) bölümüne bakın.
 
 ```{warning}
-**Avoid special characters in your passwords.** Use only letters and digits for the keystore and key passwords. In particular, do not use `$`, a backtick, `"` or `\`. If you later switch to the [Browser build](#aaps-ci-option2) and reuse this keystore, these characters can make the signing step fail, see [Browser build troubleshooting](#aaps-ci-password-special-characters).
+**Parolalarınızda özel karakterler kullanmayın.** Anahtar deposu ve anahtar parolaları için yalnızca harf ve rakam kullanın. Özellikle `$`, ters tırnak (backtick), `"` veya `\` kullanmayın. Daha sonra [Tarayıcı ile oluşturma](#aaps-ci-option2) yöntemine geçer ve bu anahtar deposunu yeniden kullanırsanız, bu karakterler imzalama adımının başarısız olmasına neden olabilir; bkz. [Tarayıcı ile oluşturma: sorun giderme](#aaps-ci-password-special-characters).
 ```
 
-* The default alias (3) for your key is "key0", leave this unchanged.
+* Anahtarınızın varsayılan takma adı (alias) (3) "key0"dır; bunu değiştirmeyin.
 
-* You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
+* Şimdi anahtarınız için bir parolaya ihtiyacınız var. İşi basit tutmak için isterseniz yukarıda anahtar deponuz için kullandığınız parolanın aynısını kullanabilirsiniz. Bir parola (4) girin ve onaylayın.
 
 ```{admonition} WARNING!
 :class: warning
-Note down these passwords! You will need them when you build the next AAPS update!
+Bu parolaları not edin! Bir sonraki AAPS güncellemesini oluştururken bunlara ihtiyacınız olacak!
 ```
 
-* The validity is 25 years by default, leave it as it is.
+* Geçerlilik süresi varsayılan olarak 25 yıldır; olduğu gibi bırakın.
 
-* Enter your first and last name (5). No other information needs to be added but you are free to do (6-7).
+* Adınızı ve soyadınızı (5) girin. Başka bilgi eklemeniz gerekmez, ancak isterseniz ekleyebilirsiniz (6-7).
 
-* Click "OK" (8) to continue:
-
-
-On the **Generate signed App Bundle or APK** page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
-
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+* Devam etmek için "OK" (Tamam) (8) düğmesine tıklayın:
 
 
-On the next screen, select build variant "fullRelease" (1) and click "Create" (3). You should remember the destination folder displayed at (2), as later you will find your built apk file there!
+**Generate signed App Bundle or APK** sayfasında artık anahtar deponuzun yolu gösterilir. Şimdi Key Store password (anahtar deposu parolası) (1) ve Key password (anahtar parolası) (2) alanlarına parolaları yeniden girin ve parolaları hatırlamak için kutuyu (3) işaretleyin; böylece apk'yı bir sonraki oluşturuşunuzda (ör. yeni bir AAPS sürümüne güncellerken) bunları yeniden girmeniz gerekmez. "Next" (İleri) (4) düğmesine tıklayın:
 
-   ![Select build variant](../images/Building-the-App/045_BuildPath.png)
+![Parolaları hatırlama](../images/Building-the-App/044_RememberPwd.png)
 
-Android Studio will now build the **AAPS** apk. It will show "Gradle Build running" (2) at the bottom right. The process takes some time, depending on your computer and internet connection, so **be patient!** If you want to watch the progress of the build, click on the small hammer "build" (1) at the bottom of Android Studio:
+
+Sonraki ekranda "fullRelease" (1) oluşturma varyantını seçin ve "Create" (oluştur) (3) düğmesine tıklayın. (2)'de gösterilen hedef klasörü hatırlamalısınız, çünkü oluşturduğunuz apk dosyasını daha sonra orada bulacaksınız!
+
+   ![Oluşturma varyantını seçin](../images/Building-the-App/045_BuildPath.png)
+
+Android Studio şimdi **AAPS** apk'sını oluşturacak. Sağ altta "Gradle Build running" (gradle oluşturma çalışıyor) (2) yazısı görünür. İşlem, bilgisayarınıza ve internet bağlantınıza bağlı olarak biraz zaman alır, bu yüzden **sabırlı olun!** Oluşturmanın ilerlemesini izlemek isterseniz Android Studio'nun altındaki küçük çekiç simgesine, "build"e (1) tıklayın:
 
 ![Gradle Running](../images/Building-the-App/046_BuildRunning.png)
 
-Now you can watch the building progress:
+Şimdi oluşturmanın ilerlemesini izleyebilirsiniz:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification icon (1) to bring up the Notifications, and then on **locate** (2):
+Oluşturma bittiğinde Android Studio "BUILD SUCCESSFUL" (oluşturma başarılı) bilgisini gösterir. "locate" (bul) seçeneğini seçmek için tıklayabileceğiniz bir açılır bildirim görebilirsiniz. Bunu kaçırırsanız, bildirimleri açmak için bildirim simgesine (1), ardından **locate** (bul) (2) bağlantısına tıklayın:
 
-![Build finished](../images/Building-the-App/049_ReopenNotification.png)
+![Oluşturma tamamlandı](../images/Building-the-App/049_ReopenNotification.png)
 
-**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio.md)._**
+**_Oluşturma başarılı olmadıysa [Android Studio'da Sorun Giderme bölümüne](../GettingHelp/TroubleshootingAndroidStudio.md) bakın._**
 
-In the Notifications box, click on the blue link "locate":
+Bildirimler kutusunda mavi "locate" (bul) bağlantısına tıklayın:
 
-![Locate build](../images/Building-the-App/048_BuildFinished.png) Your file manager will open and show you the build apk file that you have just built.
+![Oluşturulan dosyayı bulma](../images/Building-the-App/048_BuildFinished.png) Dosya yöneticiniz açılır ve az önce oluşturduğunuz apk dosyasını gösterir.
 
-   ![File location apk](../images/Building-the-App/050_LocateAPK.png)
+   ![APK dosyasının konumu](../images/Building-the-App/050_LocateAPK.png)
 
-Tebrikler! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs.
+Tebrikler! Artık **AAPS** apk dosyasını oluşturdunuz. Dokümantasyonun bir sonraki bölümünde bu dosyayı akıllı telefonunuza aktaracaksınız.
 
 ```{tip}
-If you think you might want to use an Android Wear smartwatch in the future, this is the best time to build the AAPS Wear apk to be sure it will be synchronized with your AAPS apk.
+İleride bir Android Wear akıllı saat kullanmak isteyebileceğinizi düşünüyorsanız, AAPS apk'nızla uyumlu olduğundan emin olmak için AAPS Wear apk'sını oluşturmanın en iyi zamanı şimdidir.
 ```
 
-Move to the next stage of [Transferring and Installing **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
+[**AAPS**'i aktarma ve yükleme](../SettingUpAaps/TransferringAndInstallingAaps.md) adlı sonraki aşamaya geçin.
 
 
 
