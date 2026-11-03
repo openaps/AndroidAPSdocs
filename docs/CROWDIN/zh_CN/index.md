@@ -29,7 +29,7 @@ Section **4) [Configure AAPS](./SettingUpAaps/SetupWizard.md)** covers setting u
 
 Section **5) [Daily life with AAPS](./DailyLifeWithAaps/AapsScreens.md)** covers key **AAPS** features, to help you use (and customize) **AAPS**. This includes understanding the screens, carbs-on-board, sensitivity, DynamicISF, profile switching, temp targets, extended carbs (or eCarbs), automations, and [reviewing your data](./Maintenance/Reviewing.md) in the history browser and statistics. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, [traveling with AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md), and sports. 常见问答详见故障排查章节。
 
-Section **6) [Remote AAPS features](./RemoteFeatures/RemoteControl.md)** highlights a real strength of **AAPS**. 用户可通过多种方式远程发送指令或单纯查看**AAPS**数据，该功能既适用于想用 **AAPS**孩子血糖的家长，也便于成年糖尿病患者通过智能手表、车载设备_等_多端便捷监测血糖及其他指标，同时支持重要亲友共同查看数据。这一节还提供了Android Auto的使用指南，实现车载血糖监测。
+Section **6) [Remote AAPS features](./RemoteFeatures/RemoteControl.md)** highlights a real strength of **AAPS**. 用户可通过多种方式远程发送指令或单纯查看**AAPS**数据，该功能不仅适用于想用 **AAPS**管控孩子血糖的家长，也适用于希望通过（手表、车载设备_等_）更方便地监测血糖（及其他指标）的成年糖尿病患者，也可以支持重要亲友共同查看数据。这一节还提供了Android Auto的使用指南，实现车载血糖监测。
 
 Section **7) [Wear OS smartwatches](./WearOS/BuildingAapsWearOS.md)** gives information and procedures to use an Android **Wear OS** smartwatch with the dedicated **AAPS** watchfaces or custom watchfaces, either as a remote control of your phone or just a display indicator.
 
