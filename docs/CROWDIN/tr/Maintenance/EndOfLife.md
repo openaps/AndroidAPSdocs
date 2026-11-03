@@ -1,40 +1,40 @@
-# End of life
+# Kullanım ömrünün sonu
 
-Even if your current AAPS system works exactly the way you like, upgrading is still worth it because newer releases bring safety fixes and bug corrections you may never notice until they matter, keep compatibility with new phone OS versions, CGM apps, pump firmware and Nightscout changes, add algorithm improvements and features that have been tested by the wider community, and ensure you stay on a version that is still supported and that others can actually help you troubleshoot. Some previous AAPS versions deliberately have no expiration date so they can keep working on older Android versions, so the lack of an expiration warning is not a sign that your version is still up to date or supported.
+Mevcut AAPS sisteminiz tam istediğiniz gibi çalışsa bile güncellemeye değer. Yeni sürümler, önemli bir an gelene kadar hiç fark etmeyebileceğiniz güvenlik düzeltmeleri ve hata düzeltmeleri getirir. Yeni telefon işletim sistemi sürümleri, CGM uygulamaları, pompa üretici yazılımı ve Nightscout değişiklikleriyle uyumluluğu korur. Daha geniş topluluk tarafından test edilmiş algoritma iyileştirmeleri ve özellikler ekler. Ayrıca hâlâ desteklenen ve başkalarının sorun gidermede size gerçekten yardım edebileceği bir sürümde kalmanızı sağlar. Bazı eski AAPS sürümlerinin, eski Android sürümlerinde çalışmaya devam edebilmeleri için bilerek bir bitiş tarihi yoktur. Bu nedenle bir süre sonu uyarısının olmaması, sürümünüzün hâlâ güncel veya destekleniyor olduğu anlamına gelmez.
 
-Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#version-enforcement). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
+Her AAPS sürümünün bir bitiş tarihi olabilir. Bu tarihten sonra AAPS [döngüyü sınırlayabilir](#version-enforcement). AAPS, bir sürümün süresi dolmadan önce sizi uyarır. Bitiş tarihinden önce güncellemeyi planlayın ve [güncelleme kılavuzunu](UpdateToNewVersion.md) izleyin.
 
-## How to use this page
+## Bu sayfa nasıl kullanılır
 
-1. In AAPS, open the **menu** (☰) at the top left and choose **About**. You will see your AAPS version there.
-2. Find the same version in the first table below. Read the end date next to it. Dates are written as **year-month-day**. For example, `2026-10-30` means 30 October 2026.
-3. Check the [Release Notes](ReleaseNotes.md) and the [update guide](UpdateToNewVersion.md) before you update. The version you can use also depends on your phone's Android version.
+1. AAPS'te sol üstteki **menüyü** (☰) açın ve **Hakkında** seçeneğini seçin. Orada AAPS sürümünüzü göreceksiniz.
+2. Aynı sürümü aşağıdaki ilk tabloda bulun. Yanındaki bitiş tarihini okuyun. Tarihler **yıl-ay-gün** olarak yazılır. Örneğin `2026-10-30`, 30 Ekim 2026 anlamına gelir.
+3. Güncellemeden önce [Sürüm notlarını](ReleaseNotes.md) ve [güncelleme kılavuzunu](UpdateToNewVersion.md) kontrol edin. Kullanabileceğiniz sürüm, telefonunuzun Android sürümüne de bağlıdır.
 
-The table does not show an end date for every AAPS version. If your version is missing, its end date may not have been set yet. This does not mean it will be supported forever.
+Tablo, her AAPS sürümü için bir bitiş tarihi göstermez. Sürümünüz listede yoksa, bitiş tarihi henüz belirlenmemiş olabilir. Bu, sürümün sonsuza kadar destekleneceği anlamına gelmez.
 
-## AAPS version end dates
+## AAPS sürümlerinin bitiş tarihleri
 
-<div id="aaps-eol-status" role="status" aria-live="polite">Loading AAPS version data…</div>
+<div id="aaps-eol-status" role="status" aria-live="polite">AAPS sürüm verileri yükleniyor…</div>
 <noscript>
-  Turn on JavaScript to see the tables.
+  Tabloları görmek için JavaScript'i açın.
 </noscript>
 
 <div id="aaps-eol-versions" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">AAPS version</th><th scope="col">End date</th></tr></thead>
+    <thead><tr><th scope="col">AAPS sürümü</th><th scope="col">Bitiş tarihi</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
 
-## Android API levels
+## Android API seviyeleri
 
-Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
+Android, her sistem sürümüne bir **API seviyesi** verir. Bu, uygulamaların kullandığı bir sayıdır. Örneğin API seviyesi 30, Android 11'dir. Aşağıdaki tablo, AAPS sürüm verilerindeki API seviyelerini kullanır. Her satırdaki AAPS sürümü, gösterilen API seviyesi için listelenen değerdir. Bu, yükleyebileceğiniz sürümlerin tam listesi değildir.
 
 To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">Android API level</th><th scope="col">AAPS version listed</th></tr></thead>
+    <thead><tr><th scope="col">Android API seviyesi</th><th scope="col">Listelenen AAPS sürümü</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     ]));
     status.remove();
   } catch {
-    status.textContent = 'Could not load AAPS version data. Please try again later.';
+    status.textContent = 'Could not load AAPS version data. Lütfen daha sonra tekrar deneyin.';
   }
 });
 </script>
