@@ -86,7 +86,7 @@ Nevýhody (podle zkušeností uživatelů)
 
 * Vyžaduje Android 5.0 nebo novější.
 
-* It has a dark UI, large readings and buttons, designed for usage at night.
+* Má tmavé rozhraní, velké hodnoty a tlačítka, vše navržené pro používání v noci.
 
 ### xDrip (Android)
 
@@ -114,7 +114,7 @@ Pokud vaším zdrojem dat pro **AAPS** není xDrip, ale xDrip umí zobrazit data
 
 ![obrázek](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
+xDripSwift vznikla převedením původní aplikace xDrip na iOS a vyvinula se v „xDrip for iOS“, psáno jako **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ Pokud chcete, můžete se pak stát „releaserem“ a [sdílet osobní Testflig
 * Apple iPad (vyžaduje verzi systému 13.0 nebo novější)
 * Google Android (webovou aplikaci si uložte na domovskou obrazovku)
 
-Uživatelé Sugarmate uvádějí, že v USA ji lze používat s Apple CarPlay a během řízení zobrazovat hodnoty glykémie. Zatím není známo, zda je to možné i v jiných zemích než v USA. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
+Uživatelé Sugarmate uvádějí, že v USA ji lze používat s Apple CarPlay a během řízení zobrazovat hodnoty glykémie. Zatím není známo, zda je to možné i v jiných zemích než v USA. Pokud o tom víte více, doplňte prosím podrobnosti sem do dokumentace pomocí [pull requestu](../SupportingAaps/HowToEditTheDocs.md), což je rychlé a snadné.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
@@ -200,7 +200,7 @@ SugarPixel je zařízení, které slouží jako druhý displej a systém výstra
 ![Sledování s Nightscout Clock](../images/FollowingNightscoutClock.png)
 
 * Hodiny podporují jednotky mmol/l i mg/dl a mají zvukové alarmy.
-* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
+* K dispozici je několik zobrazení, přehled najdete na [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it).
 * Nastavení a konfigurace zařízení zahrnuje jen několik jednoduchých kroků. Po nastavení potřebuje ke své funkci jen napájení a Wi-Fi.
 * Zařízení Ulanzi TC001 je výrazně levnější než SugarPixel.
 * Software i s návodem k instalaci najdete na [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
