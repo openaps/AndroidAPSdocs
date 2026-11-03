@@ -1,22 +1,22 @@
 (github-build-apk)=
 
-# Browser build – Step 4: Build the APK
+# בנייה בדפדפן – שלב 4: בניית ה-APK
 
 ```{note}
-This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md).
+זהו **שלב 4** של [בנייה בדפדפן](BrowserBuild.md). קודם יש להשלים את [שלב 3 – אישור Google Drive](BrowserBuildGoogleDrive.md).
 ```
 
-## AAPS-CI GitHub Actions to Build the AAPS APK
- - Suitable for general users.
+## בניית ה-APK של AAPS עם GitHub Actions של AAPS-CI
+ - מתאים לרוב המשתמשים.
 
 ```{tab-set}
 
-:::{tab-item} Wiki
-### Run the Workflow to Build the Signed APK
+:::{tab-item} ויקי
+### הרצת ה-workflow לבניית APK חתום
 
 1. In your GitHub copy of AndroidAPS, select Actions.
 2. Expand All Workflows.
-3. Select AAPS-CI
+3. יש לבחור ב-AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
@@ -24,7 +24,7 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Leave **Use workflow from** on the master branch. In **Select AAPS Version**, select the **AAPS** version you want to build (normally the newest one). Select the [variant](#browserbuild-variant) (fullRelease) and tap Run workflow.
+5. יש להשאיר את **Use workflow from** על הענף master. ב-**Select AAPS Version** יש לבחור את גרסת **AAPS** שרוצים לבנות (בדרך כלל החדשה ביותר). יש לבחור את ה[וריאנט](#browserbuild-variant) (fullRelease) ולהקיש על Run workflow.
 
 
 
@@ -32,17 +32,17 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of Android APS.
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![מעקב אחרי ה-workflow](../images/update/CI/GitHubActions4.png)
 
-### Install the AAPS APK
+### התקנת ה-APK של AAPS
 
-1. Open your Google Drive
+1. יש לפתוח את Google Drive שלכם
 2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+![המיקום ב-Google Drive](../images/update/CI/GitHubActions5.png)
 :::  
 
-:::{tab-item} Video
+:::{tab-item} סרטון
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
@@ -58,37 +58,37 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ```
 
-## Build Version selection
+## בחירת גרסת הבנייה
 
-**Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
+**רק גרסאות AAPS מ-3.3.2.1 ומעלה נבנות בשיטת הדפדפן.**
 
-Tap **Select AAPS Version** and pick the version to build. The newest version is at the top of the list.
+יש להקיש על **Select AAPS Version** ולבחור את הגרסה לבנייה. הגרסה החדשה ביותר נמצאת בראש הרשימה.
 
-![Select AAPS Version list](../images/Building-the-App/CI/BrowserBuildVariant2.png)
+![הרשימה Select AAPS Version](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
 (browserbuild-variant)=
 
-## Build Variants selection
+## בחירת וריאנט הבנייה
 
-*Note: both Android and Android Wear apps will be built automatically.*
+*הערה: גם האפליקציה ל-Android וגם האפליקציה ל-Android Wear נבנות באופן אוטומטי.*
 
-  - Select the variant you need:
-    - fullRelease: For regular pump usage with full functionality.
-    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
-    - pumpcontrolRelease: To replace your pump app/controller
+  - יש לבחור את הווריאנט הדרוש:
+    - fullRelease: לשימוש רגיל עם משאבה, עם כל האפשרויות.
+    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): למטפלים (דורש [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` בונה את **AAPSClient3**, שזמין מגרסה 4.0 של **AAPS** (ראו [על AAPSClient, AAPSClient2 ו-AAPSClient3](#remotecontrol-aapsclient-versions)).
+    - pumpcontrolRelease: במקום האפליקציה או השלט של המשאבה שלכם
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicate that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+וריאנטים שמסתיימים ב-"Debug" נבנים במצב debug (ניפוי באגים), שמועיל למפתחים לפתרון תקלות.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
 ----
 
-Once the build succeeds, the apk is saved to your Google Drive. Continue with [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+כשהבנייה מצליחה, קובץ ה-APK נשמר ב-Google Drive שלכם. המשיכו אל [העברה והתקנה של AAPS](TransferringAndInstallingAaps.md).
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+מספטמבר 2026, [אימות מפתחים ב-Android](#android-developer-verification) של Google עלול לחסום התקנה של ה-APK בהקשה על הקובץ, תלוי במדינה שלכם. פתרונות עקיפה בחינם מוסברים בדף ההוא.
 ```
 
-If the build fails, first [find out what went wrong in the build log](#aaps-ci-read-the-logs), then see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md). To include a specific commit in your build, see [cherry-pick a commit](#github-cherry-pick).
+אם הבנייה נכשלת, קודם [בדקו ביומן הבנייה מה השתבש](#aaps-ci-read-the-logs), ואז ראו [בנייה בדפדפן: פתרון תקלות](../GettingHelp/BrowserBuildTroubleshooting.md). כדי לכלול קומיט מסוים בבנייה, ראו [cherry-pick של קומיט](#github-cherry-pick).
