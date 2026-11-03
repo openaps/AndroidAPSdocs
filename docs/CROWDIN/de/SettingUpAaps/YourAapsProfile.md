@@ -1,6 +1,6 @@
 # Dein AAPS-Profil
 
-Your **AAPS Profile** is a set of four key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. Dies sind die Hauptparameter auf denen **AAPS** aufbaut. Während Du Dich durch die **Ziele** arbeitest, wirst Du weitere einstellbare Parameter (wie SMB-Einstellungen) freischalten. Die Wirksamkeit dieser Funktionen hängt aber hauptsächlich davon ab, dass Dein zugrundeliegendes **Profil** korrekt ist. Das **Profil** enthält:
+Dein **AAPS-Profil** besteht aus vier wichtigen Parametern, die festlegen, wie **AAPS** Insulin als Reaktion auf Deine Sensor-Glukosewerte abgeben soll. Dies sind die Hauptparameter auf denen **AAPS** aufbaut. Während Du Dich durch die **Ziele** arbeitest, wirst Du weitere einstellbare Parameter (wie SMB-Einstellungen) freischalten. Die Wirksamkeit dieser Funktionen hängt aber hauptsächlich davon ab, dass Dein zugrundeliegendes **Profil** korrekt ist. Das **Profil** enthält:
 * [Glukoseziele](#profile-glucose-targets),
 * [Basalraten](#your-aaps-profile-basal-rates) (BR),
 * [Insulinempfindlichkeits- / Korrekturfaktoren](#your-aaps-profile-insulin-sensitivity-factor) (ISF; engl. insulin sensitivity factors) und
@@ -8,10 +8,10 @@ Your **AAPS Profile** is a set of four key parameters which define how **AAPS** 
 
 ```{admonition} Where did DIA go?
 :class: note
-The **duration of insulin action (DIA)** is no longer part of your **Profile**. It is set per insulin instead — see [Manage → Insulin settings](#Config-Builder-insulin-dia).
+Die **Insulinwirkdauer (DIA)** ist nicht mehr Teil Deines **Profils**. Sie wird stattdessen für jedes Insulin eingestellt – siehe [Bearbeiten → Insulineinstellungen](#Config-Builder-insulin-dia).
 ```
 
-As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. Es wird empfohlen, die Einstellungen in der Reihenfolge vorzunehmen, wie es hier dargestellt ist. Stelle sicher, dass die Einstellung wirklich richtig ist, bevor Du die jeweils nächste in Angriff nimmst. Taste dich in kleinen Schritten voran, statt zu viele Änderungen auf einmal vorzunehmen. Vergiss nicht nach jeder Änderung Dein Profil auch zu aktivieren. Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your settings.
+Im Rahmen des Umgangs mit **AAPS** solltest Du die Genauigkeit Deiner **Profil**-Einstellungen laufend prüfen und hinterfragen. Es wird empfohlen, die Einstellungen in der Reihenfolge vorzunehmen, wie es hier dargestellt ist. Stelle sicher, dass die Einstellung wirklich richtig ist, bevor Du die jeweils nächste in Angriff nimmst. Taste dich in kleinen Schritten voran, statt zu viele Änderungen auf einmal vorzunehmen. Vergiss nicht nach jeder Änderung Dein Profil auch zu aktivieren. Sichere [Deine **Profil**](#YourAapsProfile_Profile-backup)-Einstellungen regelmäßig, indem Du die Einstellungen exportierst.
 
 Deine **Profil**-Einstellungen hängen voneinander ab - Du kannst u. U. „schiefe“ Einstellungen haben, die in bestimmten Situationen gut zueinander passen, aber in anderen Situationen überhaupt nicht funktionieren. Wenn zum Beispiel ein zu hohes Basal auf einen zu hohen (schwachen) **CR** (Mahlzeit-Faktor) trifft. Das bedeutet, dass Du die Einstellungen individuell betrachten und überprüfen musst, ob sie unter den verschiedenen Bedingungen gut funktionieren.
 
@@ -19,9 +19,9 @@ Du kannst [Autotune](https://autotuneweb.azurewebsites.net/) zwar als Ausgangspu
 
 ```{admonition} Your diabetes may vary
 :class: note
-**Profiles** vary significantly from person-to-person.
+**Profile** unterscheiden sich von Person zu Person sehr.
 
-Für die restlichen drei Parameter Basalrate (BR), Insulinempfindlichkeitsfaktoren (ISF) und Insulin-Kohlenhydrat-Verhätnisse bzw. Mahlzeitenfaktoren (IC oder ICR), variieren die absoluten Werte und Trends Deines Insulinbedarfs. Der Insulinbedarf ist dabei abhängig von Deiner Biologie, Geschlecht, Alter, Fitnessgrad usw., aber auch von vorübergehenden Einflüssen wie Krankheit und sportlicher Aktivitität und variiert mitunter erheblich. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+Für die restlichen drei Parameter Basalrate (BR), Insulinempfindlichkeitsfaktoren (ISF) und Insulin-Kohlenhydrat-Verhätnisse bzw. Mahlzeitenfaktoren (IC oder ICR), variieren die absoluten Werte und Trends Deines Insulinbedarfs. Der Insulinbedarf ist dabei abhängig von Deiner Biologie, Geschlecht, Alter, Fitnessgrad usw., aber auch von vorübergehenden Einflüssen wie Krankheit und sportlicher Aktivitität und variiert mitunter erheblich. Für tiefere Einblicke in das Thema ist das Buch [„Bright Spots and Landmines“](https://diatribe.org/bright-spots-and-landmines/) von Adam Brown sehr empfehlenswert (englisch).
 
 ```
 
@@ -40,16 +40,16 @@ Die vier letzten Parameter (Glukoseziele, Basalraten, Insulinempfindlichkeitsfak
 
 Dein **Glukoseziel** ist der zentrale Wert. Alle **AAPS**-Berechnungen basieren darauf. Er ist nicht der Zielbereich, in dem Du normalerweise versuchst Deine Glukosewerte zu halten. Das Glukoseziel wird in **AAPS**-Berechnungen verwendet: Wenn **AAPS** voraussagt, dass Dein **Glukosewert** außerhalb des Zielbereichs landen wird, wird es Maßnahmen ergreifen, um wieder in den Bereich zurückzukommen.
 
-The targets can be defined within those boundaries :
+Die Ziele können innerhalb dieser Grenzen definiert werden:
 
-|         | _Unteres_ Ziel         | _Oberes_ Ziel            |
-| ------- | ---------------------- | ------------------------ |
-| Minimum | 4.4 mmol/L or 80 mg/dL | 5 mmol/L or 90 mg/dL     |
-| Maximum | 10 mmol/L or 180 mg/dL | 11.1 mmol/L or 200 mg/dL |
+|         | _Unteres_ Ziel           | _Oberes_ Ziel              |
+| ------- | ------------------------ | -------------------------- |
+| Minimum | 4,4 mmol/l oder 80 mg/dl | 5 mmol/l oder 90 mg/dl     |
+| Maximum | 10 mmol/l oder 180 mg/dl | 11,1 mmol/l oder 200 mg/dl |
 
 ### Auswirkung
 
-If the target in your **Profile** is very wide (say, 3 or more mmol/L [50 mg/dL or more] wide), you will often find little **AAPS** action. Das liegt daran, dass der vorhergesagte **Glukosewert** innerhalb des weiten Bereichs befindet und es daher unwahrscheinlich ist, dass **AAPS** mit Änderungen der temporären Basalrate reagieren wird.
+Ist der Zielbereich in Deinem **Profil** sehr breit (sagen wir 3 mmol/l oder mehr [50 mg/dl oder mehr]), wird **AAPS** oft kaum eingreifen. Das liegt daran, dass der vorhergesagte **Glukosewert** innerhalb des weiten Bereichs befindet und es daher unwahrscheinlich ist, dass **AAPS** mit Änderungen der temporären Basalrate reagieren wird.
 
 ### Wie es eingestellt wird
 
@@ -71,7 +71,7 @@ Deine Basalrate ist die Insulinmenge (Einheiten pro Stunde), die abgegeben wird,
 
 Die Insulinpumpe liefert alle paar Minuten kleine Mengen schnell wirkendes Insulins, um die durch die Leber abgegebene Glukose entsprechend in die Körperzellen zu bringen. Basalinsulin macht typischerweise 40 - 50% Deines täglichen Gesamtinsulinbedarfs (TDD) aus und ist abhängig von Deinen Ernährungsgewohnheiten. Es folgt üblicherweise Deinem Biorhythmus (cirkadianes Muster) mit einer Spitze und einem Tal im täglichen Insulinbedarf. Für weitere Informationen ist das Kapitel 6 des englischsprachigen Buches [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) von Gary Scheiner lesenswert.
 
-Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimize your ISF and ICR.
+Die meisten Diabetesberater (und Menschen mit Typ-1-Diabetes!) sind sich einig, dass Du zuerst Deine Basalraten richtig einstellen solltest, bevor Du ISF und ICR optimierst.
 
 ### Auswirkung
 
@@ -91,9 +91,9 @@ Die **Abbildung unten** zeigt ein Beispiel, wie im **AAPS**-Profil die Basalrate
 
 ![Basalraten](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
+Die richtigen Basalraten findest Du durch Ausprobieren („Trial and Error“), und das sollte in Abstimmung mit Deinem Diabetes-Team geschehen.
 
-Basalraten-Tests bringen es normalerweise mit sich, während einer <u>begrenzten</u> Fastenperiode in einem 24-Stunden Zeitraum die Basalrate und den Insulinbedarf zu beobachten. Auch wenn die Basalrate für einen ganzen Tag getestet werden muss, ist es nicht empfehlenswert 24 Stunden am Stück zu fasten. Das liegt daran, dass der Körper über spezielle Mechanismen versuchen wird das Fasten (z. B. durch Hormonausschüttung) auszugleichen. A recommended way is to fast over 3 different days for a period of 8 hours.
+Basalraten-Tests bringen es normalerweise mit sich, während einer <u>begrenzten</u> Fastenperiode in einem 24-Stunden Zeitraum die Basalrate und den Insulinbedarf zu beobachten. Auch wenn die Basalrate für einen ganzen Tag getestet werden muss, ist es nicht empfehlenswert 24 Stunden am Stück zu fasten. Das liegt daran, dass der Körper über spezielle Mechanismen versuchen wird das Fasten (z. B. durch Hormonausschüttung) auszugleichen. Empfohlen wird, an 3 verschiedenen Tagen jeweils 8 Stunden zu fasten.
 
 Das empfohlene Vorgehen ist, den Loop zu deaktivieren (als Vorsichtsmaßnahme kann AAPS - wie Du es schon zum Erreichen des [Ziel 6](#objectives-objective6) gemacht hast - in den Modus [**LGS**](#KeyAapsFeatures-LGS) gebracht werden). So kannst Du niedrige Werte vermeiden und es wird später automatisch auf die hinterlegte Standard-Basalrate zurückgekehrt. Beobachte wie sich Dein **Glukosewert** entwickelt: Sinkt er, ist die Basalrate zu hoch. Und umgekehrt.<br/> Eine andere (möglicherweise schwierigere) Methode ist, den Loop aktiv zu lassen und zu beobachten, wie sich das **IOB** verändert. Wenn das **IOB** negativ ist, ist Deine Basalrate zu hoch. Und umgekehrt. Beachte, dass diese Methode den **ISF** nutzt, um damit den **Glukosewert** zu korrigieren. Damit hängt der Erfolg von mehreren Variablen (und nicht nur von der Basalrate) ab.<br/> Eine weitere Möglichkeit die Basalrate anzuzupassen ist, die Loop-Aktionen während der Nacht, wenn keine Kohlenhydrate mehr aktiv sind, zu beobachten. Diese Methode ist besonders für Kinder, für die Fasten oft schwierig ist oder deren Insulinbedarf sich oft ändert, geeignet. [Dr. Saleh Adi von Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) bietet hilfreiche Wege, wie Du nächtliche Glukoseverläufe analysieren kannst und daraus Optimierungen der Basalrate ableiten kannst, an.
 
@@ -102,22 +102,22 @@ Das empfohlene Vorgehen ist, den Loop zu deaktivieren (als Vorsichtsmaßnahme ka
 Wenn Du auf Basis der Ergebnisse des Basalratentests Veränderungen vornehmen möchtest, sollten diese im **Profil** 1 bis 2 Stunden (abhängig vom Insulintyp) vor dem Anfstieg/Abfall eingearbeitet werden. Wiederhole den Test so lange, bis Du mit Deiner **Basalraten**-Einstellungen zufrieden bist.
 
 (your-aaps-profile-basal-not-compatible)=
-#### Message: "Basal rate is not compatible with the current pump"
+#### Meldung: „Die Basalrate ist mit der aktuellen Pumpe nicht kompatibel“
 
-Each pump has limits: a lowest and a highest basal rate it can deliver and, for some pumps (for example Dana, Accu-Chek Combo, Medtronic and Diaconn G8), basal rates that can only change on the full hour. **AAPS** checks your profile against the pump you use, **after** applying the percentage you choose.
+Jede Pumpe hat Grenzen: eine niedrigste und eine höchste Basalrate, die sie abgeben kann, und bei manchen Pumpen (zum Beispiel Dana, Accu-Chek Combo, Medtronic und Diaconn G8) Basalraten, die sich nur zur vollen Stunde ändern können. **AAPS** prüft Dein Profil gegen die verwendete Pumpe, und zwar **nachdem** der gewählte Prozentsatz angewendet wurde.
 
-If a basal rate is outside these limits, the **Activate** screen shows this message and the **Activate** button stays grey:
+Liegt eine Basalrate außerhalb dieser Grenzen, zeigt der Bildschirm **Aktivieren** diese Meldung an, und der Knopf **Aktivieren** bleibt grau:
 
 ![Activate screen with the message "Basal rate is not compatible with the current pump"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
 
-For example, with a basal rate of 0.10 U/h in the night and a profile percentage of 35 %, **AAPS** would have to deliver 0.035 U/h. This is less than a Dana pump can deliver (0.04 U/h).
+Bei einer Basalrate von 0,10 IE/h in der Nacht und einem Prozentsatz des Profils von 35 % müsste **AAPS** zum Beispiel 0,035 IE/h abgeben. Das ist weniger, als eine Dana-Pumpe abgeben kann (0,04 IE/h).
 
-To solve it, either:
+Um das zu lösen, kannst Du entweder:
 
-* choose another percentage: a **higher** one if a basal rate becomes too low, a **lower** one if a basal rate becomes too high, or
-* [edit the profile](#your-aaps-profile-create-and-edit-profiles) and change the basal rate.
+* einen anderen Prozentsatz wählen: einen **höheren**, wenn eine Basalrate zu niedrig wird, einen **niedrigeren**, wenn eine Basalrate zu hoch wird, oder
+* [das Profil bearbeiten](#your-aaps-profile-create-and-edit-profiles) und die Basalrate ändern.
 
-The profile editor only lets you start basal rates on a full hour. A basal rate starting at e.g. 06:30 can only come from an older profile, for example after you change to a pump that does not support it.
+Im Profil-Editor kannst Du Basalraten nur zur vollen Stunde beginnen lassen. Eine Basalrate, die z. B. um 06:30 Uhr beginnt, kann nur aus einem älteren Profil stammen, zum Beispiel nachdem Du zu einer Pumpe gewechselt hast, die das nicht unterstützt.
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
@@ -131,17 +131,17 @@ Der Insulinempfindlichkeitsfaktor (manchmal auch Korrekturfaktor genannt) ist ei
 
 **In mmol/l-Einheiten:** Wenn Dein **ISF** 1,5 ist, senkt jede Insulineinheit Deinen Glukosewert um 1,5 mmol/l (z. B. von 8 mmol/l auf 6,5 mmol/l).
 
-An diesen Beispielen kannst Du erkennen, dass _kleinerer_ **ISF**-Werte geringere Insulinempfindlichkeit bedeutet. So if you reduce your ISF from 40 to 35 (mg/dL) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+An diesen Beispielen kannst Du erkennen, dass _kleinerer_ **ISF**-Werte geringere Insulinempfindlichkeit bedeutet. Wenn Du also Deinen ISF von 40 auf 35 (mg/dl) oder von 1,5 auf 1,3 (mmol/l) senkst, nennt man das oft ein Verstärken des **ISF**. Umgekehrt schwächt eine Erhöhung des **ISF**-Werts von 40 auf 45 (mg/dl) oder von 1,5 auf 1,8 (mmol/l) Deinen **ISF**.
 
 ### Auswirkung
 
-A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. Dies führt dazu, dass der Loop mit **mehr Insulin** aggressiver / stärker korrigiert. Ist Dein **ISF** zu stark (kleiner Wert), kann das zu niedrigen **Glukosewerten** führen.
+Ein **niedrigerer / stärkerer ISF** (z. B. 40 statt 50) bedeutet, dass das Insulin Deinen **Glukosewert** pro Einheit weniger stark senkt. Dies führt dazu, dass der Loop mit **mehr Insulin** aggressiver / stärker korrigiert. Ist Dein **ISF** zu stark (kleiner Wert), kann das zu niedrigen **Glukosewerten** führen.
 
-A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. Dies führt zu einer weniger aggressiven / schwächeren Korrektur des Loops mit **weniger Insulin**. Ist Dein **ISF** zu schwach (großer Wert), kann dies zu hohen **Glukosewerten** führen.
+Ein **höherer / schwächerer ISF** (z. B. 45 statt 35) bedeutet, dass das Insulin Deinen **Glukosewert** pro Einheit stärker senkt. Dies führt zu einer weniger aggressiven / schwächeren Korrektur des Loops mit **weniger Insulin**. Ist Dein **ISF** zu schwach (großer Wert), kann dies zu hohen **Glukosewerten** führen.
 
 **Beispiel:**
-* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
-* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
+* Der **Glukosewert** ist 190 mg/dl (10.5 mmol/l) und das Ziel ist 100 mg/dl (5.6 mmol/l).
+* Du möchtest also eine Korrektur um `190 - 100 = 90 mg/dl` oder `10.5 - 5.6 = 4,9 mmol/l`
 * Wenn `ISF = 30` -> `90 / 30 = 3` oder `ISF = 1,3` -> `4,9 / 1,63 = 3`: 3 Einheiten Insulin
 * Wenn `ISF = 45` -> `90 / 45 = 2` oder `ISF = 2,45` -> `4,9 / 2,45 = 2`: 2 Einheiten Insulin
 
@@ -159,9 +159,9 @@ Die **Abbildung unten** zeigt an einem Beispiel, wie ISF-Werte in einem **AAPS**
 
 Eine Möglichkeit einen ersten Wert für den ISF am Tage zu ermitteln, nutzt Deinen tägliches Gesamtinsulinbedarf (TDD) und die 1700- bzw. 94-Regel. Für weitere Informationen ist das Kapitel 7 des englischsprachigen Buches [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) von Gary Scheiner lesenswert.
 
-| 1700 (if measuring in mg/dL) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dL) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                 |
+| 1700 (beim Messen in mg/dl) oder 94 (mmol/l) / TDD = ca. ISF.<br/><br/>Beispiel: TDD = 40 IE<br/>Ungefährer ISF (mg/dl) = 1700/40 = 43<br/>Ungefährer ISF (mmol/l) = 94/40 = 2,4 |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                          |
 
 Wenn Du der Meinung bist, dass Deine Basalrate passt, kannst Du sie testen, indem Du den Loop pausierst, sicherstellst, dass das **IOB** Null ist, und Du Deinen Glukosewert z. B. mit Traubenzucker auf ein hohes und stabiles Niveau bringst.
 
@@ -201,7 +201,7 @@ Aufgrund von Hormonen und sportlichen Aktivitäten ist es normal, über den Tag 
 > 
 > BE-Faktor 2,4 IE / 12 g   ===>   IC = 12 g / 2,4 IE = 5,0 g/IE
 > 
-> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Umrechnungstabellen gibt es online, z. B. [hier](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Auswirkung
 
@@ -211,7 +211,7 @@ Ein **höheres / schwächeres ICR** = mehr Kohlenhydrate pro Insulineinheit, d.h
 
 ### Wie es eingestellt wird
 
-Die **Abbildung unten** zeigt beispielhaft das **ICR** einer Person und wie es in einem **AAPS-Profil** eingetragen werden kann. When entering these values, we enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+Die **Abbildung unten** zeigt beispielhaft das **ICR** einer Person und wie es in einem **AAPS-Profil** eingetragen werden kann. Bei der Eingabe dieser Werte geben wir nur den letzten Teil des Verhältnisses ein, ein Insulin-zu-Kohlenhydrat-Verhältnis von 1:3,5 wird also einfach als „3.5“ eingegeben.
 
 ![Profile ICR](../images/Profile_ICR.png)
 
@@ -226,11 +226,11 @@ Wenn Du annimmst, dass Deine Basalrate stimmt, Dein **IOB** Null ist und Du im Z
 :local: true
 ```
 
-### About the importance of getting your profile right
+### Über die Bedeutung einer korrekten Profilgestaltung
 
 **Warum sollte ich versuchen, meine Profileinstellungen richtig zu haben? Kann sich der Loop nicht darum kümmern?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimize poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. Du kannst eine deutlich bessere glykämische Kontrolle erreichen, wenn Deine **Profil**werte so nah wie möglich am Bedarf Deines Körpers sind. Dies ist einer der Gründe, warum **AAPS** abgestufte Ziele für den Übergang vom Open Loop zum Hybrid Closed Loop setzt. Zusätzlich gibt es Situationen (Sensor-Aufwärmphase, Sensorfehler _etc._), in denen der Loop geöffnet bzw. unterbrochen werden muss. Manchmal passiert das mitten in der Nacht und Du wirst dann für die richtigen Einstellungen dankbar sein.
+Ein Hybrid Closed Loop _kann_ versuchen, die Insulinabgabe so anzupassen, dass eine schlechte Glukoseeinstellung durch falsche **Profil**-Werte möglichst gering bleibt. Dies kann beispielsweise dadurch geschehen, dass die Insulinabgabe unterbrochen wird, wenn eine Unterzuckerung droht. Du kannst eine deutlich bessere glykämische Kontrolle erreichen, wenn Deine **Profil**werte so nah wie möglich am Bedarf Deines Körpers sind. Dies ist einer der Gründe, warum **AAPS** abgestufte Ziele für den Übergang vom Open Loop zum Hybrid Closed Loop setzt. Zusätzlich gibt es Situationen (Sensor-Aufwärmphase, Sensorfehler _etc._), in denen der Loop geöffnet bzw. unterbrochen werden muss. Manchmal passiert das mitten in der Nacht und Du wirst dann für die richtigen Einstellungen dankbar sein.
 
 Wenn Du von einem anderen Open oder Closed Loop Pumpensystem auf **AAPS** umsteigst, hast Du vermutlich schon eine recht gute Vorstellung von Deiner Basalrate (**BR**), Deinen Insulinempfindlichkeitsfaktoren (**ISF**) und Deinen Insulin-Kohlenhydrat-Faktoren bzw. Mahlzeitenfaktoren (**ICR**).
 
@@ -242,11 +242,11 @@ Zuerst solltest du deine Basalrate prüfen und einen Basalratentest ohne Kohlenh
 ### Ich stecke in hohen Werten fest und der Loop bringt mich nicht herunter
 Die möglichen Gründe dafür, dass **AAPS** nicht genug Insulin abgibt, sind:
 * **ISF** ist nicht stark genug
-* Basal rate might not be strong enough
+* Die Basalrate ist möglicherweise nicht stark genug
 * Eine Sicherheitseinstellung (z. B. **maxIOB**) kann ausgelöst haben. Oder **SMB** sind zu diesem Zeitpunkt ausgeschaltet. Das ist von Deinen Einstellungen abhängig.
 * Eine Automatisierung ist aktiv und hat die **AAPS**-Entscheidung überschrieben.
 
-See also [Tweaking the AAPS Profile](../GettingHelp/ProfileTuning.md).
+Siehe auch [Feinabstimmung des AAPS-Profils](../GettingHelp/ProfileTuning.md).
 
 ### Ich habe negatives IOB, ist das ein Problem?
 Negatives **IOB** bedeutet, dass die Gesamtmenge des in Deinem Körper aktiven Insulins (Basal + Bolus) kleiner ist als das Basal. Das wird dazu führen, dass **AAPS**, sobald die **Glukosewerte** steigen mehr Insulin abgeben wird, um das vorher zurückgehaltene Insulin „aufzuholen“. Das kann in der Folge dann zu niedrigen **Glukosewerten** führen.
@@ -254,7 +254,7 @@ Negatives **IOB** bedeutet, dass die Gesamtmenge des in Deinem Körper aktiven I
 Hier jetzt einige Gründe für das Entstehen negativen IOBs und mögliche Reaktionen darauf:
 * Ein zu starkes Basal: Optimiere Dein **Profil**
 * Ein zu großer Mahlzeiten-Bolus: Optimiere Dein **Profil** oder überprüfe, ob Du zum richtigen Zeitpunkt bolst.
-* DIA set too short on your insulin type, resulting in insulin stacking: tweak it in [Manage → Insulin settings](#Config-Builder-insulin-dia)
+* DIA für Deine Insulinart zu kurz eingestellt, wodurch sich Insulin aufaddiert (stapelt): Passe sie unter [Bearbeiten → Insulineinstellungen](#Config-Builder-insulin-dia) an
 * Bewegung: Beim nächsten Mal solltest Du während (eventuell bereits vor) der Aktivität ein reduziertes [prozentuales Profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) nutzen, um so der höheren Insulin-Empfindlichkeit gerecht zu werden.
 
 ## Deine Profile verwalten
@@ -266,25 +266,25 @@ Hier jetzt einige Gründe für das Entstehen negativen IOBs und mögliche Reakti
 (your-aaps-profile-create-and-edit-profiles)=
 ### Profile erstellen und bearbeiten
 
-In **AAPS** v4 your profiles live on the **Manage** screen (bottom navigation) → **Profile**, shown as a swipeable card carousel with an action bar (**➕ Add**, **✏️ Edit**, **⧉ Clone**, **🗑️ Delete**, **▶ Activate**). For managing and activating a profile, see [Managing and activating profiles](#ProfileSwitch-manage-v4). Coming from **AAPS** v3, where profiles had their own tab? See [What changed in AAPS v4](#v4changes-manage).
+In **AAPS** v4 befinden sich Deine Profile im Bildschirm **Bearbeiten** (untere Navigationsleiste) → **Profil**, als Kartenkarussell zum Wischen mit einer Aktionsleiste (**➕ Hinzufügen**, **✏️ Bearbeiten**, **⧉ Klonen**, **🗑️ Löschen**, **▶ Aktivieren**). Wie Du ein Profil verwaltest und aktivierst, steht unter [Profile verwalten und aktivieren](#ProfileSwitch-manage-v4). Du kommst von **AAPS** v3, wo die Profile einen eigenen Reiter hatten? Siehe [Änderungen mit AAPS Version 4](#v4changes-manage).
 
-Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**, then fill in the four schedules using the tabs:
+Ein Tippen auf **✏️ Bearbeiten** öffnet den Editor. Lege **Name** und **Einheiten** des Profils fest und fülle dann über die Reiter die vier Zeitpläne aus:
 
-- **IC** — insulin-to-carb ratio (g/U)
-- **ISF** — insulin sensitivity factor
-- **BAS** — basal rates
-- **TARG** — target range
+- **IC** – Insulin-Kohlenhydrat-Verhältnis (g/IE)
+- **ISF** – Insulinsensitivitätsfaktor (Korrekturfaktor)
+- **BAS** – Basalraten
+- **TARG** – Zielbereich
 
 ![The profile editor — IC / ISF / BAS / TARG tabs](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Each schedule is a list of **time blocks**: add a block, set its start time and value, then **Save**.
+Jeder Zeitplan ist eine Liste von **Zeitblöcken**: Füge einen Block hinzu, lege Startzeit und Wert fest und tippe dann auf **Speichern**.
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**: the card of the profile in use is marked **ACTIVE**, but the card selected on screen may be another one.
+Wenn Du Änderungen an Deinem **Profil** vornimmst, achte darauf, dass Du das richtige **Profil** bearbeitest: Die Karte des verwendeten Profils ist mit **AKTIV** markiert, die auf dem Bildschirm ausgewählte Karte kann aber eine andere sein.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
 ### Ein völlig neues Profil für ein Kind erstellen
 
-The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) may help you to create a profile for a child (up to 18 years).
+Der [Profil-Helfer](#aaps-screens-profile-helper) (Menü ☰ → **Profil-Helfer**) kann Dir helfen, ein Profil für ein Kind (bis 18 Jahre) zu erstellen.
 
 **Wichtiger Hinweis:**
 
@@ -294,14 +294,14 @@ Profil-Helfer bietet Datensätze von zwei verschiedenen Kinderkrankenhäusern an
 
 ![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
 
-1. Make sure you are on the **Profile 1** tab.
+1. Achte darauf, dass Du Dich im Reiter **Profil 1** befindest.
 2. Als **Profil-Typ**, wählst Du „Standard-Profil“ aus.
 3. Passe das Standardprofil (basierend auf dem Krankenhausdatensatz) an, indem Du das Alter des Kindes eingibst sowie entweder das Gesamt-TDD **oder** das Gewicht eingibst.
-4. Change to the **Profile 2** tab.
+4. Wechsle zum Reiter **Profil 2**.
 5. Tippe auf **Profil-Typ** und wähle das „DPV-Standard-Profil“ aus.
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
-7. Open the **Comparison** tab. Ein Vergleich der beiden angepassten Profile wird angezeigt (siehe Screenshot unten).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
+6. Passe das DPV-Standard-Profil (basierend auf einem anderen Krankenhaus-Datensatz) an, indem Du Alter des Kindes, Gesamt-TDD und Basal-Anteil in Prozent eingibst. Beachte, dass der DPV-Datensatz nur **Basalraten** liefert; IC und ISF werden für dieses Profil deshalb als null angezeigt.
+7. Öffne den Reiter **Vergleich**. Ein Vergleich der beiden angepassten Profile wird angezeigt (siehe Screenshot unten).
+8. Möchtest Du Dein Profil ausgehend von einem dieser Vorschläge anpassen, verwende den Knopf **Klonen** unten im Vergleich.
 
 ![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
 
@@ -314,9 +314,9 @@ Mehr Informationen findest Du im Abschnitt [Profilwechsel & Prozentuale Profilan
 
 ![Profile Switch](../images/TreatmentsView4.png)
 
-The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. Zeitverschiebung und Prozentsatz des Profilwechsels werden in das lokale neue Profil übernommen. Use the **Clone** button shown on line **2**.
+Der [Behandlungsverlauf](#aaps-screens-treatments) zeigt alle bisherigen **Profilwechsel**. Wenn Du zum Reiter **Profilwechsel** gehst, kannst Du einen bereits erfolgten **Profilwechsel** als Basis für ein neues **Profil** nutzen. Zeitverschiebung und Prozentsatz des Profilwechsels werden in das lokale neue Profil übernommen. Tippe auf den Knopf **Klonen** in Zeile **2**.
 
-You can now go to the [Profile screen](#your-aaps-profile-create-and-edit-profiles) (**Manage → Profile**) to edit the newly created Profile.
+Jetzt kannst Du zum [Profil-Bildschirm](#your-aaps-profile-create-and-edit-profiles) (**Bearbeiten → Profil**) gehen und das neu erstellte Profil bearbeiten.
 
 (YourAapsProfile_Profile-backup)=
 ### Sicherung Deines Profils
@@ -324,12 +324,12 @@ You can now go to the [Profile screen](#your-aaps-profile-create-and-edit-profil
 Die Profile sind die wichtigste Einstellung Deines Loop-Systems. Die **Profile** sind höchst empfindlich und etwas, was Du auf keinen Fall verlieren möchtest.
 
 * Deine **Profile** werden in der **AAPS**-Datenbank gespeichert.
-* When **NSClientV3** is set up (see [Synchronization](#SetupWizard-synchronization-with-the-reporting-server-and-more)), your **Profiles** are also uploaded to Nightscout automatically.
+* Ist **NSClientV3** eingerichtet (siehe [Synchronisierung](#SetupWizard-synchronization-with-the-reporting-server-and-more)), werden Deine **Profile** auch automatisch zu Nightscout hochgeladen.
 * Sie sind auch in den [exportierten Einstellungen](../Maintenance/ExportImportSettings.md) enthalten. Stelle also sicher, dass Du immer ein Backup an einem sicheren Ort hast.
 
 ### Profile über Nightscout bearbeiten
 
-If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The setting is called "**Receive profile store from NS**" and is part of the **Nightscout data acceptance** options (accepting data from Nightscout is turned off by default, see the [Client control step of the Setup Wizard](../SettingUpAaps/SetupWizard.md)); you can find it quickly with the **search bar** on the main screen. While client control is on, the setting is hidden and **AAPS** takes no profile changes from Nightscout ([hardened mode](#client-master-control-hardened-mode)); edit the profile on a paired client instead, or load it once with **Full sync**.
+Wenn aktiviert, können **Profil**änderungen, die direkt in Nightscout vorgenommen wurden, in **AAPS** empfangen werden. Die Einstellung heißt „**Profil-Speicher von NS empfangen**“ und gehört zu den Optionen **Annahme von Nightscout-Daten** (das Annehmen von Daten aus Nightscout ist standardmäßig ausgeschaltet, siehe [Schritt Client-Steuerung im Einrichtungsassistenten](../SettingUpAaps/SetupWizard.md)); Du findest sie schnell über das **Suchfeld** auf dem Startbildschirm. Solange die Client-Steuerung eingeschaltet ist, ist die Einstellung ausgeblendet, und **AAPS** übernimmt keine Profiländerungen aus Nightscout ([Geschützter Modus](#client-master-control-hardened-mode)); bearbeite das Profil dann auf einem gekoppelten Client oder lade es einmalig mit **Vollständige Synchronisierung**.
 
 Wenn Du gravierende Änderungen an einem umfangreichen **Profil** vorgenommen hast, kann diese Funktion hilfreich sein. Es ist in der Regel deutlich einfacher diese Änderungen, _z.B._ Daten aus einem Arbeitsblatt zu kopieren, über das Web-Interface zu machen.
 
@@ -340,16 +340,16 @@ Es ist dabei wichtig, den gesamten **-Datenbank-Datensatz**, der aus mehreren Pr
 (your-aaps-profile-compare-profiles)=
 ### Vergleiche zwei Profile
 
-You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+Mit dem [Profil-Helfer](#aaps-screens-profile-helper) (Menü ☰ → **Profil-Helfer**) kannst Du auch zwei verschiedene Profile oder Profilwechsel vergleichen (Prozentsatz eines Deiner Profile, das zuvor in einem [Profilwechsel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) verwendet wurde).
 
 ![Profile Helper 1](../images/ProfileHelper1.png)
 
-1. Make sure you are on the **Profile 1** tab.
+1. Achte darauf, dass Du Dich im Reiter **Profil 1** befindest.
 2. Wähle im **Profil-Typ** „Verfügbares Profil" aus und wähle aus allen gespeicherten **Profilen** aus.
 3. Wähle das **Profil** aus, gegen das Du vergleichen möchtest.
-4. Change to the **Profile 2** tab.
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
+4. Wechsle zum Reiter **Profil 2**.
+5. Wähle unter **Profil-Typ** „Profilwechsel“, um im Verlauf aus allen Deinen **Profilwechseln** auszuwählen.
 6. Wähle das **Profilwechsel** aus, gegen den Du vergleichen möchtest.
-7. Open the **Comparison** tab. Comparison of the two profiles will be displayed (see screenshot below).
+7. Öffne den Reiter **Vergleich**. Ein Vergleich der beiden Profile wird angezeigt (siehe Screenshot unten).
 
 ![Profile Helper 2](../images/ProfileHelper2.png)
