@@ -1,12 +1,12 @@
 (aaps-ci-preparation)=
 
-# Browser build – Step 2: Create your signing keystore
+# Construirea în browser – Pasul 2: Creați keystore-ul de semnare
 
 ```{note}
-This is **Step 2** of the [Browser build](BrowserBuild.md). First complete [Step 1 – Create your GitHub fork](BrowserBuildFork.md).
+Acesta este **Pasul 2** din [Construirea în browser](BrowserBuild.md). First complete [Step 1 – Create your GitHub fork](BrowserBuildFork.md).
 ```
 
-AAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. This is the most important decision of the whole process, because it determines whether you will be able to **upgrade** AAPS later without reinstalling.
+AAPS trebuie semnat cu chei private păstrate într-un **Java KeyStore (JKS)**. This is the most important decision of the whole process, because it determines whether you will be able to **upgrade** AAPS later without reinstalling.
 
 ```{note}
 In the next steps you will store private information (your keystore, and later your Google Drive access) inside GitHub as **secrets**. A secret is simply an encrypted value that only your own build can read – nobody else, not even people looking at your fork, can see it. This is what keeps your build yours.
@@ -14,21 +14,21 @@ In the next steps you will store private information (your keystore, and later y
 
 ## Choose your keystore strategy
 
-Read both options and pick the one that matches your situation.
+Citiți ambele opțiuni și alegeți-o pe cea care se potrivește situației dumneavoastră.
 
-### Option 1 – Generate a new keystore (new users)
+### Opțiunea 1 – Generați un keystore nou (utilizatori noi)
 
-Choose this if **any** of these is true:
+Alegeți această opțiune dacă **oricare** dintre următoarele este adevărată:
 
 - This is your **first time** building AAPS.
 - You don't have a keystore from a previous Android Studio (computer) build.
-- You have forgotten your keystore password or alias.
+- Ați uitat parola sau aliasul keystore-ului.
 
 ```{warning}
-Building AAPS with **Option 1** creates a brand-new keystore, so it **will not allow you to upgrade your existing AAPS** in place. To move to this new build you must export your settings, uninstall the old AAPS, install the new one and import your settings again. Follow the steps in [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Building AAPS with **Option 1** creates a brand-new keystore, so it **will not allow you to upgrade your existing AAPS** in place. To move to this new build you must export your settings, uninstall the old AAPS, install the new one and import your settings again. Urmați pașii din [Reinstalarea AAPS cu un keystore nou](#reinstall-aaps).
 ```
 
-**→ [Continue with Option 1 – Generate a new keystore](BrowserBuildO1.md)**
+**→ [Continuați cu Opțiunea 1 – Generați un keystore nou](BrowserBuildO1.md)**
 
 ### Option 2 – Upload your existing keystore (existing / past users)
 
@@ -36,7 +36,7 @@ Choose this if you **already have** the `.jks` keystore you used on a previous b
 
 This keeps your current AAPS install upgradeable: future updates will use the same keystore.
 
-**→ [Continue with Option 2 – Upload your existing keystore](BrowserBuildO2.md)**
+**→ [Continuați cu Opțiunea 2 – Încărcați keystore-ul existent](BrowserBuildO2.md)**
 
 ----
 
@@ -50,7 +50,7 @@ On the next page you will pick your device (computer or iPhone). Each device pag
 
 (ci-keystore-export)=
 
-## Export your keystore (optional)
+## Exportați keystore-ul (opțional)
 
 If you want to export your stored keystore, use this method.
 
@@ -62,7 +62,7 @@ Before using this export method, make sure your keystore and Google Drive settin
 
 ### Pași:
 
-1. **Add ZIP Password Secret:**
+1. **Adăugați secretul pentru parola ZIP:**
    - Go to your repository's **Settings** → **Secrets and variables** → **Actions**
    - Click **New repository secret**
    - In the **Name** field, enter: `ZIP_PASSWORD`
@@ -74,9 +74,9 @@ Before using this export method, make sure your keystore and Google Drive settin
 
 2. **Run Export Workflow:**
    - Go to the **Actions** tab in your repository
-   - Select **CI Keystore Export**
+   - Selectați **CI Keystore Export**
    - Click **Run workflow**
-   - The exported keystore ZIP file will be saved to your Google Drive
+   - Fișierul ZIP cu keystore-ul exportat va fi salvat în Google Drive
 
    ![aaps_ci_keystore_export.png](../images/Building-the-App/CI/aaps_ci_keystore_export.png)
 
@@ -85,6 +85,6 @@ Before using this export method, make sure your keystore and Google Drive settin
 ```{toctree}
 :hidden:
 
-Option 1 – Generate a new keystore <BrowserBuildO1.md>
-Option 2 – Upload your existing keystore <BrowserBuildO2.md>
+Opțiunea 1 – Generați un keystore nou <BrowserBuildO1.md>
+Opțiunea 2 – Încărcați keystore-ul existent <BrowserBuildO2.md>
 ```
