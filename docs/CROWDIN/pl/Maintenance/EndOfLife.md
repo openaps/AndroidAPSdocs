@@ -30,7 +30,7 @@ Tabela nie pokazuje daty końca wsparcia dla każdej wersji AAPS. Jeśli Twojej 
 
 Android nadaje każdej wersji systemu **poziom API**. Jest to liczba, której używają aplikacje. Na przykład poziom API 30 to Android 11. Tabela poniżej używa poziomów API z danych o wersjach AAPS. Wersja AAPS w każdym wierszu to wartość podana dla pokazanego poziomu API. To nie jest pełna lista wersji, które możesz zainstalować.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
+Aby wybrać wersję AAPS dla swojego telefonu, skorzystaj ze [wskazówek dotyczących wersji Androida w Informacjach o wersji](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
