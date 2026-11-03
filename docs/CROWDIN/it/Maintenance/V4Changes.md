@@ -1,5 +1,5 @@
 (v4-changes)=
-# What changed in AAPS v4
+# Cosa è cambiato in AAPS v4
 
 This page collects the notable **changes in behavior** between **AAPS** v3 and v4 — things that work differently, have moved, or have been removed — so existing users know what to expect when they update. See also the [Release Notes](ReleaseNotes.md) and the [update manual](UpdateToNewVersion.md).
 
@@ -10,14 +10,14 @@ This page collects the notable **changes in behavior** between **AAPS** v3 and v
 
 ---
 
-## NSClient v1 has been removed
+## NSClient v1 è stato rimosso
 
 **AAPS** v3 shipped **two** Nightscout synchronization plugins:
 
 - **NSClient** — the legacy client (the old Nightscout REST / socket.io API, also called *“v1”*), and
 - **NSClientV3** — the client for the newer Nightscout **API v3**.
 
-In **AAPS** v4 the legacy **NSClient (v1)** plugin has been **removed**. Only **NSClientV3** remains for synchronizing with Nightscout.
+In **AAPS** v4 il vecchio plugin **NSClient (v1)** è stato **rimosso**. Only **NSClientV3** remains for synchronizing with Nightscout.
 
 ```{admonition} What you need to do
 :class: important
@@ -44,13 +44,13 @@ In **AAPS** v4 the tabs are gone, and so is the eye checkbox in the Config Build
 
 The **Treatments** sheet is where you record or deliver a treatment: **Bolus wizard**, **Insulin** (manual bolus), **Carbs**, **Treatment** (insulin + carbs together), **Calibration**, **CGM** (open your CGM app, when one is configured), and your **[QuickWizards](../DailyLifeWithAaps/QuickWizards.md)**.
 
-![The Treatments bottom sheet](../images/v4/BehavioralChanges/treatments_sheet.png)
+![Il pannello Trattamenti](../images/v4/BehavioralChanges/treatments_sheet.png)
 
-On a **Wear OS watch** the same treatments are entered from the watch's **AAPS menu** (Bolus wizard / Calculator, eCarbs, Treatment, …):
+Su uno **smartwatch Wear OS** gli stessi trattamenti si inseriscono dal **menu AAPS** dell'orologio (Calcolatore, CHO estesi, Trattamento, …):
 
-![The treatment actions in the watch's AAPS menu](../images/v4/BehavioralChanges/treatments_watch.png)
+![Le azioni di trattamento nel menu AAPS dell'orologio](../images/v4/BehavioralChanges/treatments_watch.png)
 
-### Scenes
+### Scene
 
 Your situation presets — see [Scenes](../DailyLifeWithAaps/Scenes.md).
 
@@ -59,42 +59,42 @@ Your situation presets — see [Scenes](../DailyLifeWithAaps/Scenes.md).
 
 The **Manage** sheet is where you manage and activate everything else: **[Profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulin settings** (your insulin configurations), **[Temp Target](../DailyLifeWithAaps/TempTargets.md)**, **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)** presets, **[Scenes](../DailyLifeWithAaps/Scenes.md)**, **Automation**, **Food**, **Site Rotation**, **Pump**, **[Authorized clients](../RemoteFeatures/ClientMasterControl.md)** — plus the pump actions that used to be on the *Actions* tab (**Extended Bolus**, **cancel temp basal**, **Prime/Fill**, **Sensor Insert**, **Pump Battery Change**).
 
-![The Manage bottom sheet](../images/v4/BehavioralChanges/manage_sheet.png)
+![Il pannello Gestisci](../images/v4/BehavioralChanges/manage_sheet.png)
 
 All of your existing automation rules and food entries are kept; only the way you reach these features has changed.
 
 (screens-action-tab)=
-#### Where did the Actions tab go?
+#### Dov'è finita la scheda Azioni?
 
-**AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
+**AAPS** 3.x aveva una scheda "Azioni". In **AAPS** 4 its functions live in other places:
 
-* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
-* **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
+* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. Vedi [Cambiare la percentuale del profilo](#ProfileSwitch-change-percentage).
+* **Target temporaneo**: premi il [target](#aaps-screens-profile--target) nella schermata principale, oppure **Gestisci → Target Temporaneo**.
 * **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
-* **History browser**, **Statistics** (TDD): in the **menu** (☰).
+* **Navigatore della cronologia**, **Statistiche** (TDD): nel **menu** (☰).
 
 ```{admonition} Profile switch and profile percentage
 :class: note
-In **AAPS** v3, a long press on the profile name opened the profile switch dialog (percentage, duration, Activity temp target). In **AAPS** v4, **tap** the profile name (or **Manage → Profile**), then tap the round **▶** button at the bottom right to open the same settings. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+In **AAPS** v3, a long press on the profile name opened the profile switch dialog (percentage, duration, Activity temp target). In **AAPS** v4, **tap** the profile name (or **Manage → Profile**), then tap the round **▶** button at the bottom right to open the same settings. Vedi [Cambiare la percentuale del profilo](#ProfileSwitch-change-percentage).
 ```
 
 ---
 
 (v4changes-read-only-management)=
-## Settings protection now also locks the management screens
+## La protezione delle impostazioni ora blocca anche le schermate di gestione
 
 In **AAPS** v3, [Settings protection](#Preferences-settings-protection) asked for your password only when you opened the settings. You could still add or edit profiles in the **Local Profile** tab without it.
 
-In **AAPS** v4, Settings protection also covers editing on the management screens: **Profile**, **Insulin settings**, **Temp Target** and **QuickWizard**. If your settings are locked, these screens open **read-only**:
+In **AAPS** v4, Settings protection also covers editing on the management screens: **Profile**, **Insulin settings**, **Temp Target** and **QuickWizard**. Se le tue impostazioni sono bloccate, queste schermate si aprono in **sola lettura**:
 
 - You can browse the entries and **▶ Activate** or use them.
-- The **Add / Edit / Clone / Delete** buttons are **hidden**. Only the **✏️ pencil** in the top bar shows that you can unlock editing.
+- I pulsanti **Aggiungi / Modifica / Clona / Cancella** sono **nascosti**. Only the **✏️ pencil** in the top bar shows that you can unlock editing.
 
 ![The read-only Profile screen — only Activate at the bottom, pencil in the top bar](../images/v4/Profiles/profile_manage_readonly.png)
 
 ```{admonition} What you need to do
 :class: important
-To add, edit, clone or delete an entry, tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics). The buttons appear.
+To add, edit, clone or delete an entry, tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics). I pulsanti compaiono.
 
 If you don't need to protect your settings, you can turn Settings protection off in **Settings → Protection**.
 ```
@@ -102,7 +102,7 @@ If you don't need to protect your settings, you can turn Settings protection off
 ---
 
 (v4changes-active-insulin)=
-## The insulin in use can't be edited
+## L'insulina in uso non si può modificare
 
 In **AAPS** v3, you could change the DIA of the insulin you were using at any time.
 
@@ -112,7 +112,7 @@ When you upgrade, **AAPS** keeps the insulin and DIA that your v3 profile switch
 
 ```{admonition} What you need to do
 :class: important
-To change the DIA or peak, add a new insulin with **+**, adjust it, save it and **▶ Activate** it. See [Changing the insulin in use](#Config-Builder-insulin-change-active).
+To change the DIA or peak, add a new insulin with **+**, adjust it, save it and **▶ Activate** it. Vedi [Cambiare l'insulina in uso](#Config-Builder-insulin-change-active).
 ```
 
 ---
@@ -122,7 +122,7 @@ To change the DIA or peak, add a new insulin with **+**, adjust it, save it and 
 
 In **AAPS** v3, **AAPSClient** controlled **AAPS** by writing care-portal treatments to Nightscout, and could not deliver a bolus.
 
-In **AAPS** v4, the client and the main phone are **paired** once, and every command is signed. The main phone checks and confirms each command, and a client can now also deliver a bolus.
+In **AAPS** v4, the client and the main phone are **paired** once, and every command is signed. Il telefono principale controlla e conferma ogni comando, e ora un client può anche erogare un bolo.
 
 - Each client has a **[role](#client-master-control-roles)** that limits what it may do.
 - While client control is on, the main phone is in **[hardened mode](#client-master-control-hardened-mode)**: treatments and changes typed directly into Nightscout (the website, other apps) are no longer applied.
@@ -141,7 +141,7 @@ When **AAPS** receives the same BG reading twice (a red warning badge on the BG 
 
 In **AAPS** v3 this happened quietly in the background: your loop still showed as **Closed Loop**, even though it could no longer correct.
 
-In **AAPS** v4 the change is visible. A closed loop is switched to **Low Glucose Suspend** mode, and the loop dialog tells you why: *"LGS mode due to doubled values in BG source"*. **AAPS** can still reduce or suspend your basal to protect you against lows.
+In **AAPS** v4 il cambiamento è visibile. A closed loop is switched to **Low Glucose Suspend** mode, and the loop dialog tells you why: *"LGS mode due to doubled values in BG source"*. **AAPS** can still reduce or suspend your basal to protect you against lows.
 
 ```{admonition} What you need to do
 :class: important
@@ -157,7 +157,7 @@ Once they are gone, **AAPS** stays in **Low Glucose Suspend**. It does not go ba
 
 In **AAPS** v3, the data uploaded to [Tidepool](../SettingUpAaps/Tidepool.md) was shown in Tidepool under another device name.
 
-In **AAPS** v4, the data is shown under the device name **AAPS**. After the update, **AAPS** starts a new data set in Tidepool. Your older data stays in Tidepool under the old device name.
+In **AAPS** v4, the data is shown under the device name **AAPS**. Dopo l'aggiornamento, **AAPS** inizia un nuovo set di dati in Tidepool. Your older data stays in Tidepool under the old device name.
 
 ```{admonition} What you need to do
 :class: important
