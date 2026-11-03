@@ -1,104 +1,104 @@
-# How to translate strings for the AAPS app or the documentation
+# AAPS 앱 또는 문서의 문자열을 번역하는 방법
 
-* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* 앱에서 쓰는 문자열을 번역하려면 <https://crowdin.com/project/androidaps>에 가서 GitHub 계정으로 로그인하십시오
+* 문서를 번역하려면 <https://crowdin.com/project/androidapsdocs>에 가서 GitHub 계정으로 로그인하십시오
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* 문서 팀에 참여 요청을 보내십시오. 요청하려면 원하는 언어의 국기를 누른 다음, 다음 페이지의 오른쪽 위에 있는 "Join"(참여) 버튼을 누르십시오. 언어를 적고, 자신과 AAPS 사용 경험에 대해 조금 알려 주십시오. 그리고 번역자가 되고 싶은지 검수자가 되고 싶은지 적어 주십시오(검수자는 번역을 잘하고 AAPS를 깊이 아는 사용자만 가능합니다).
 
-```{admonition} Time for Approval :class: note
+```{admonition} 승인에 걸리는 시간 :class: note
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+승인은 사람이 직접 합니다. 비영리 단체이므로 처리 기간(SLA)을 보장하지 않지만, 보통은 < 1일 안에 승인됩니다. 그렇지 않으면 Facebook 또는 Discord로 문서 팀에 연락하십시오.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](../images/translation_flags.png)
+    <br />* 승인되면 국기를 누르십시오
+       ![승인되면 국기를 누르십시오](../images/translation_flags.png)
     
-    ## Translation of the app
+    ## 앱 번역
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### AAPS 앱의 문자열 번역하기
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * 번역할 문자열을 따로 정하지 않았다면 "Translate All"(모두 번역) 버튼을 눌러 시작하십시오. 번역이 필요한 문자열이 표시됩니다.
     
-       ![Click translate all](../images/translations-click-translate-all.png)
+       ![Translate All 누르기](../images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * 파일 하나만 번역하려면 검색 창이나 트리 구조에서 파일을 찾은 다음, 파일 이름을 눌러 그 파일의 문자열 번역을 시작하십시오.
     
-       ![Click strings.xml](../images/translations-click-strings.png)
+       ![strings.xml 누르기](../images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * 왼쪽에서 문장을 번역하십시오. 새 번역을 입력하거나 제안을 사용 & 편집합니다
     
-       ![Translation app](../images/translations-translate.png)
-    
-    
-    ### Proofread strings for AAPS app
-    
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
-    
-       ![Proofreading mode app](../images/translations-proofreading-mode.png) 
+       ![앱 번역](../images/translations-translate.png)
     
     
-      and approve translated texts 
+    ### AAPS 앱의 문자열 검수하기
     
-       ![approve text](../images/translations-proofreading.png)
+    * 검수자는 언어 홈 화면에서 "Proofread"(검수)를 선택해서 시작합니다.
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+       ![앱 검수 모드](../images/translations-proofreading-mode.png)
+    
+    
+      그리고 번역된 텍스트를 승인합니다
+    
+       ![텍스트 승인](../images/translations-proofreading.png)
+    
+    검수자가 번역을 승인하면 그 번역은 AAPS의 다음 버전에 들어갑니다.
     
     (translations-translation-of-the-documentation)=
-    ## Translation of the documentation
+    ## 문서 번역
     
-    * Click the name of the docs page you want to translate
+    * 번역할 문서 페이지의 이름을 누르십시오
     
-    ![Click docs page](../images/translation_WikiPage.png)
+    ![문서 페이지 누르기](../images/translation_WikiPage.png)
     
     
-    * Translate sentences by sentence
+    * 문장을 하나씩 번역하십시오
     
-        1. The yellow text is the text you are working at the moment.
+        1. 노란색 텍스트는 지금 작업 중인 텍스트입니다.
     
-        1. The green text is already translated. You don't need to do this again.
+        1. 초록색 텍스트는 이미 번역되었습니다. 이것은 다시 번역할 필요가 없습니다.
     
-        1. The red text is the remaining text which have to be translated.
+        1. 빨간색 텍스트는 아직 번역해야 하는 텍스트입니다.
     
-        1. This is the source text you are working on at the moment
+        1. 지금 작업 중인 원본 텍스트입니다
     
-        1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
+        1. 여기에 번역을 작성합니다. 위의 텍스트를 복사하거나 아래의 제안 중 하나를 선택할 수 있습니다.
     
-        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
-        1. Press the "save" button to save a proposal for the translation. It will then be passed to a proofreader for final check.
+        1. 번역 제안입니다. 특히 Crowdin이 얼마나 잘 맞는다고 평가하는지, 또는 예전에 이미 번역되었고 텍스트가 바뀐 것이 아니라 옮겨졌기 때문에 다시 나타난 것인지 볼 수 있습니다.
+        1. "save"(저장) 버튼을 눌러 번역 제안을 저장하십시오. 그다음 검수자에게 전달되어 마지막 확인을 받습니다.
     
-    ![Translation docs](../images/translation_WikiTranslate.png)
+    ![문서 번역](../images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * 번역된 페이지는 다음 조건이 모두 끝나야 문서에 게시됩니다
     
-        1. the translation is proofread
+        1. 번역이 검수되었을 때
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
+        1. Crowdin과 GitHub 사이의 동기화(1시간에 한 번)가 끝나서 GitHub에 PR이 만들어졌을 때
     
-        1. the PR in Github was approved.
+        1. GitHub에서 그 PR이 승인되었을 때
     
-    In general this needs 1 - 3 days but might during holiday take a little bit longer.
+    보통 1 - 3일이 걸리지만, 휴가 기간에는 조금 더 걸릴 수 있습니다.
     
-    ### Translating links
+    ### 링크 번역하기
     
-    ```{admonition} Links are not translated anymore
+    ```{admonition} 링크는 더 이상 번역하지 않습니다
     :class: note
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    링크는 더 이상 번역하지 않습니다. 예전에는 여기에 이 주제에 대한 설명이 있었지만, 이제는 없습니다. Markdown과 myst_parser로 옮기면서 영어 텍스트에 레이블을 직접 만들고, 이 레이블이 내부에서 자동으로 다른 언어에 전달되기 때문입니다.
     
     
 
-You are translating the text which represents the link. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
+번역하는 것은 링크를 나타내는 텍스트입니다. 링크를 나타내는 `<0></0>` 태그 한 쌍(한 문단에 링크가 여러 개라면 다른 번호)을 지우지 **않도록** 주의하십시오.
 
-It's the proofreaders job to have a special look on this!
+이 부분은 검수자가 특히 주의해서 확인해야 합니다!
 
-### Proofreading
+### 검수
 
-* Proofreaders have to switch to Proofreading mode
+* 검수자는 검수 모드(Proofreading mode)로 바꿔야 합니다
     
-    ![Proofreading mode docs](../images/translation_WikiProofreadingmode.png)
+    ![문서 검수 모드](../images/translation_WikiProofreadingmode.png)
     
-    and approve translated texts
+    번역된 텍스트를 승인합니다
     
-    ![approve text](../images/translations-proofreading.png)
+    ![텍스트 승인](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. To speed up the process you can inform docs team about new translations.
+* 검수자가 번역을 승인하면 그 번역은 다음 문서 빌드에 들어갑니다. 문서 빌드는 정해진 일정 없이 필요할 때 하며, 휴가 기간을 빼면 대략 1주일에 한 번입니다. 과정을 빠르게 하려면 새 번역이 있다고 문서 팀에 알려 주십시오.
