@@ -1,12 +1,12 @@
-# Useful resources to read before you start
+# Resurse utile de citit înainte de a începe
 
 Before you build your rig, you're going to have to do a lot of reading in order to understand how everything works and to get the best out of it. We've put together a list of places you can go to get you started and hopefully answer a lot of your questions.
 
-## Further reading
+## Lecturi suplimentare
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[Documentația OpenAPS - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Loop Docs - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
@@ -26,9 +26,9 @@ Before you build your rig, you're going to have to do a lot of reading in order 
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+[„Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) de Adam Brown
 
-[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
+[„Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) de Gary Scheiner
 
 ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts
 
@@ -40,7 +40,7 @@ Before you build your rig, you're going to have to do a lot of reading in order 
 
 <https://btvnovinite.bg/video/bulgaria/dnes-e-svetovnijat-den-za-borba-s-diabeta.html>
 
-## Stuff on YouTube
+## Materiale pe YouTube
 
 [Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
 
