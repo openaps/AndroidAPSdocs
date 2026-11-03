@@ -1,26 +1,26 @@
-# Updating to AAPS 3.2.0.4
+# AAPS 3.2.0.4 sürümüne güncelleme
 
 (update-aaps-3204)=
 
-## Programı İndirmek yerine kendiniz oluşturun...
+## İndirmek yerine kendiniz oluşturun
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz!**
+**Tıbbi cihazlarla ilgili düzenlemeler nedeniyle AAPS uygulaması (bir apk dosyası) indirilemez. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Ayrıntılar için [SSS sayfasına](../UsefulLinks/FAQ.md) bakın.
 
-## Computer and software specifications for building AAPS 3.2.0.4
+## AAPS 3.2.0.4'ü oluşturmak için bilgisayar ve yazılım özellikleri
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk.
+* Apk'yı oluşturmak için belirli bir **[Android Studio](https://developer.android.com/studio/)** sürümü gerekebilir.
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | up to Meerkat                                          | 8.2    | 17  |
+| AAPS Sürümü             | Önerilen<br/>Android Studio<br/>Sürümü | Alternatif<br/>Android Studio<br/>Sürümü | Gradle | JVM |
+| ----------------------- | -------------------------------------------------- | ---------------------------------------------------- | ------ |:--- |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                | Meerkat'e kadar                                      | 8.2    | 17  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+"Önerilen sürüm" uygun JVM sürümüyle birlikte gelir. Önerilen sürüm, **AAPS**'i oluşturmak için kullanabileceğiniz en düşük sürümdür. "Önerilen" sürümden daha eski bir sürümle oluşturma **YAPAMAZSINIZ**. Farklı bir sürüm kullanırsanız JVM sürümüyle ilgili sorunlarla karşılaşabilirsiniz. Bu sorunları çözmek için [Android Studio'da Sorun Giderme](#incompatible-gradle-jvm) sayfasına bakın. Mevcut Android Studio sürümünüz tabloda yoksa önce onu güncellemelisiniz.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+Gradle sürümü kaynak koda bağlıdır. Kaynak kodu indirirken / güncellerken her zaman doğru Gradle sürümünü alırsınız. Burada yalnızca bilgi için verilmiştir, bununla ilgili bir şey yapmanız gerekmez.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* [Windows 32 bit sistemler](#troubleshooting_androidstudio-unable-to-start-daemon-process) Android Studio tarafından desteklenmez. Lütfen unutmayın: **64 bit işlemci ve 64 bit işletim sistemi zorunlu koşuldur.** Sisteminiz bu koşulu KARŞILAMIYORSA ilgili donanımı veya yazılımı ya da tüm sistemi değiştirmeniz gerekir.
 
 <table class="tg">
 <tbody>
@@ -28,17 +28,17 @@ The Gradle version is linked to the source code, you will always get the correct
     <th class="tg-baqh">OS (Only 64 bit)</th>
     <td class="tg-baqh">Windows 8 or higher</td>
     <td class="tg-baqh">Mac OS 10.14 or higher</td>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
+    <td class="tg-baqh">Gnome, KDE veya Unity DE destekleyen herhangi bir Linux;&nbsp;&nbsp;GNU C Library 2.31 veya üstü</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">x86_64 CPU mimarisi; 2. nesil Intel Core veya daha yenisi ya da şu desteğe sahip AMD işlemci: <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">ARM tabanlı yongalar veya şu desteğe sahip 2. nesil Intel Core ya da daha yenisi: <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
     <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <th class="tg-baqh"><p align="center">Bellek (RAM)</th>
+    <td class="tg-baqh" colspan="3"><p align="center">8 GB veya daha fazla</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disk</th>
@@ -55,42 +55,42 @@ The Gradle version is linked to the source code, you will always get the correct
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**HDD (Sabit Disk Sürücüsü) yerine SSD (Katı Hal Sürücüsü) kullanmanız kesinlikle önerilir (zorunlu değildir), çünkü AAPS apk dosyasını oluşturmak daha kısa sürer.**  **AAPS** apk dosyasını oluştururken yine de HDD kullanabilirsiniz. Bunu yaparsanız oluşturma işlemi uzun sürebilir, ancak bir kez başladıktan sonra işlemi kendi başına çalışır durumda bırakabilirsiniz.
 
-## Help and support during 3.2.0.4 building process
+## 3.2.0.4 oluşturma sürecinde yardım ve destek
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html) section, please consult that first.
+**AAPS** uygulamasını oluştururken zorluk yaşarsanız özel bir [**Android Studio'da sorun giderme**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html) bölümü vardır, lütfen önce ona bakın.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Oluşturma talimatlarında bir şeyin yanlış, eksik veya kafa karıştırıcı olduğunu düşünüyorsanız ya da hâlâ zorlanıyorsanız, lütfen [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) veya [Discord](https://discord.gg/4fQUWHZ4Mw) üzerindeki diğer **AAPS** kullanıcı gruplarına ulaşın. Bir şeyi kendiniz değiştirmek isterseniz (ekran görüntülerini güncellemek _vb._), lütfen bir [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md) gönderin.
 
 ```{note}
-This page provides both example pictures for the **New** and old (**Classic**) Android Studio user interfaces.
+Bu sayfada hem **yeni** hem de eski (**klasik**) Android Studio kullanıcı arayüzü için örnek resimler vardır.
 ```
 
-## Overview for updating 3.2.0.x to 3.2.0.4
+## 3.2.0.x sürümünden 3.2.0.4 sürümüne güncellemeye genel bakış
 
 ```{contents} Steps for updating to 3.2.0.4
 :depth: 1
 :local: true
 ```
 
-### Export your current settings
+### Mevcut ayarlarınızı dışa aktarın
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Telefonunuzdaki mevcut **AAPS** sürümünden ayarlarınızı dışa aktarın. Belki gerekmez ama tedbirli olmak daha iyidir.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Bunu nasıl yapacağınızı hatırlamıyorsanız [Ayarları dışa ve içe aktarma](ExportImportSettings.md) sayfasına bakın.
 
-### Update your local AAPS copy
+### Yerel AAPS kopyanızı güncelleyin
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Mevcut AAPS projenizi Android Studio ile açın. You might need to select your project. AAPS projesine (çift) tıklayın.
 
-![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
+![Android Studio - Proje seçme](../images/update/01_ProjectSelection.png)
 
 <br>
 
-![Android Studio - Select Project](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
+![Android Studio - Proje seçme](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
 
-* In the menu bar of Android Studio, select Git -> Fetch
+* Android Studio menü çubuğunda Git -> Fetch seçin
 
 ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
 
@@ -98,7 +98,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio Menu - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* Sağ alt köşede Fetch işleminin başarılı olduğunu bildiren bir mesaj göreceksiniz.
 
 ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
 
@@ -106,7 +106,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio Menu - Git - Fetch successful](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
 
-* In the menu bar, now select Git -> Pull
+* Şimdi menü çubuğunda Git -> Pull seçin
 
 ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
 
@@ -114,7 +114,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio Menu - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* Tüm seçenekleri olduğu gibi bırakın (origin/master) ve Pull seçin
 
 ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
 
@@ -122,20 +122,20 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - Git - Pull dialog](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. Tamamlandığında, bir başarı mesajı göreceksiniz.
+* İndirme sürerken bekleyin. Bunu alt çubukta bilgi olarak göreceksiniz. Tamamlandığında, bir başarı mesajı göreceksiniz.
 
   ```{note}
-  The files that were updated may vary! This is not an indication of a problem.
+  Güncellenen dosyalar farklı olabilir! Bu bir sorun olduğunu göstermez.
   ```
 
 
-![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+![Android Studio - Pull başarılı](../images/update/06_GitPullSuccess.png)
 
 <br>
 
-![Android Studio - Pull successful](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
+![Android Studio - Pull başarılı](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Tamamlanana kadar bekleyin.
+* Bazı bağımlılıkları indirmek için Gradle Sync çalışacaktır. Tamamlanana kadar bekleyin.
 
 ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
@@ -143,69 +143,69 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - Gradle Sync](https://androidaps.readthedocs.io/en/3.1/_images/40_BackgroundTasks.png)
 
-### Select JVM version 17
+### JVM sürüm 17'yi seçin
 
-- Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+- Android Studio'nun sağ tarafındaki fil simgesine (1) tıklayarak Gradle görünümünü açın, ayarları (2) açın ve **Gradle Settings**'i (3) seçin:
 
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
-
-<br>
-
-![Open Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
-
-- In **Gradle JDK** field (1), check if the appropriate version: **jbr-17** is selected. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
-
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
-
-
-
-- In Version (1), select **17**. In Vendor (2) select JetBrains Runtime or any Vendor. Location (3): do not change.
-
-![Select JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
-
-- Close the **Settings** dialog with **OK**.
-
-### Select the AAPS 3.2.0.4 branch
-
-- At the bottom left, select the Git symbol, right-click on 3.2.0.4 and Checkout.
-
-![Select Download JDK](../images/studioTroubleshooting/17_Checkout.png)
+![Gradle Settings'i açma](../images/studioTroubleshooting/161_GradleSettings.png)
 
 <br>
 
-![Select Download JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
+![Gradle Settings'i açma](../images/studioTroubleshooting/09_GradleSettings.png)
 
-### Sync project with Gradle
+- **Gradle JDK** alanında (1) uygun sürümün, yani **jbr-17**'nin seçili olup olmadığını kontrol edin. Seçili değilse alana tıklayın ve listede zaten olup olmadığına bakın. Listede yoksa (aşağıdaki ekran görüntüsü yalnızca **jbr-21**'in bulunduğu bir bilgisayarı gösteriyor) **Download JDK...** (2) seçin.
+
+![Download JDK seçimi](../images/studioTroubleshooting/162_DownloadJDK.png)
+
+
+
+- Version (1) alanında **17** seçin. Vendor (2) alanında JetBrains Runtime veya herhangi bir sağlayıcı seçin. Location (3): değiştirmeyin.
+
+![JDK 17 seçimi](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
+
+- **Settings** iletişim kutusunu **OK** ile kapatın.
+
+### AAPS 3.2.0.4 dalını seçin
+
+- Sol altta Git simgesini seçin, 3.2.0.4 üzerine sağ tıklayın ve Checkout seçin.
+
+![Download JDK seçimi](../images/studioTroubleshooting/17_Checkout.png)
+
+<br>
+
+![Download JDK seçimi](../images/studioTroubleshooting/17_CheckoutOld.png)
+
+### Projeyi Gradle ile senkronize edin
 
 ```{admonition} WARNING!
 :class: warning
-**Never update Gradle.** Always sync it with the project.
+**Gradle'ı asla güncellemeyin.** Her zaman projeyle senkronize edin.
 ```
 
-Use the elephant icon and Sync Project with Gradle Files (or follow [this](#gradle-resync)) for the new UI.
+Yeni arayüzde fil simgesini ve Sync Project with Gradle Files seçeneğini kullanın (veya [bunu](#gradle-resync) izleyin).
 
 ![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephant.png)
 
-Or ([this](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)) for the classic UI.
+Klasik arayüz için ise ([bunu](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)) izleyin.
 
 ![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephantOld.png)
 
-### Build the Signed 3.2.0.4 APK
+### İmzalı 3.2.0.4 APK'yı oluşturun
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Kaynak kodunuz artık yayınlanmış güncel sürümdür ve tüm ön koşullar kontrol edilmiştir. Şimdi imzalı apk'yı [imzalı apk oluşturma bölümünde](#Building-APK-generate-signed-apk) anlatıldığı gibi oluşturma zamanı.
 
-### Transfer and install the 3.2.0.4 APK
+### 3.2.0.4 APK'yı aktarın ve yükleyin
 
-You need to transfer the apk to your phone so you can install it.
+Yükleyebilmek için apk'yı telefonunuza aktarmanız gerekir.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. Apk'yi kurduğunuzda, güncellemeleri yüklemek için talimatları izleyin.
-Android Studio'da yeni bir anahtar deposu oluşturarak imzaladığınız apk senaryosu için, apk'yi yüklemeden önce eski uygulamayı silmeniz gerekecektir. **Make sure to export your settings!**
+Oluşturmayı Android Studio'da aynı mevcut anahtar deposuyla yaptıysanız telefonunuzdaki mevcut uygulamayı kaldırmanız gerekmez. Apk'yi kurduğunuzda, güncellemeleri yüklemek için talimatları izleyin.
+Diğer durumlarda, örneğin imzalı apk'nız için Android Studio'da yeni bir anahtar deposu oluşturduysanız, apk'yı yüklemeden önce eski uygulamayı silmeniz gerekir. **Ayarlarınızı mutlaka dışa aktarın!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
+[AAPS'i aktarma ve yükleme](../SettingUpAaps/TransferringAndInstallingAaps.md) talimatlarına bakın
 
-### Check AAPS version 3.2.0.4 on phone
+### Telefonda AAPS sürüm 3.2.0.4'ü kontrol edin
 
 Yeni apk'yı yükledikten sonra, sağ üstteki üç nokta menüsüne ve ardından Hakkında'ya tıklayarak telefonunuzdaki AAPS sürümünü kontrol edebilirsiniz. Mevcut sürümü görmelisiniz.
 
