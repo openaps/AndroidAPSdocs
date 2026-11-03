@@ -110,7 +110,7 @@ Erscheinungsdatum: 31.10.2026
 - „CustomWatchface“ kann jetzt 5 Komplikationsslots, die Du anpassen kannst, haben (neue Funktion nur für ältere Smartwatches verfügbar) @Philoul
 - Neues, [auf AAPS-Komplikationen bassierendes, WFF-Watchface](#wearos-complications-watchface-setup) @olorinmaia
 - Korrekturen im Bolus-Rechne und dem Ergebnis des Schnell-Assistenten Ergebnis @olorinmaia
-- Neues BZ-Diagramm und Betriebsmodus-Aktivität im Hauptmenü @olorinmaia
+- Neues BZ-Diagramm und AAPS-Modus-Aktivität im Hauptmenü @olorinmaia
 - Bolus-Rechner: [Mahlzeittyp](#WearOsSmartwatch-wizard-meal-type)-Seite auf der Smartwatch, die die Kohlenhydrate wie der Bolus-Rechner des Smartphones aufteilt und [KH-Zeit](#WearOsSmartwatch-wizard-carb-time) mit der *Essens*-Erinnerung auf die Smartwatch bringt @olorinmaia
 - [Smartphone-Alarme auf der Smartwatch](#WearOsSmartwatch-phone-alarms): Die Smartwatch zeigt den Smartphone-Alarm an und er kann „schlummern“ oder für 5 Min. stumm geschaltet werden @olorinmaia
 
@@ -269,9 +269,9 @@ Erscheinungsdatum: 31.12.2025
 
 **Neue Funktionen**
 
-* Betriebsmodus @MilosKozak
+* AAPS-Modus @MilosKozak
   * Zeige die [Lopp-Status-Historie](#AapsScreens-running-mode) bei den „Behandlungen“
-  * Anzeigen und ändern des [Loop-Status mit dem AAPSClient](#RemoteControl_aapsclient).<br>Beachte: Muss mit der Einstellung [NSClient > Synchronisation > Empfangen von Betriebsmodus-Ereignissen](#Preferences-nsclient-synchronization)
+  * Anzeigen und Ändern des [Loop-Status mit dem AAPSClient](#RemoteControl_aapsclient).<br>Hinweis: Benötigt die Einstellung [NSClient > Synchronisierung > AAPS-Modus von Nightscout empfangen](#Preferences-nsclient-synchronization)
 * [Neue CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
 * Unterstützung von [Setzstellen-Wechseln](#Aapsscreens-site-rotation) @Philoul
 * Neue [Automatisierungsaktion](#automations-automation-action) : SMBs aktivieren oder deaktivieren @MilosKozak
