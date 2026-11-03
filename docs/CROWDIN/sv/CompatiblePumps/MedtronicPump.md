@@ -1,242 +1,242 @@
-# Medtronic Pumps
+# Medtronic-pumpar
 
-The driver does not work with any newer models, including all models ending in G (530G, 600-series [630G, 640G, 670G], 700-series [770G, 780G], etc.).
+Drivrutinen fungerar inte med nyare modeller, inklusive alla modeller som slutar på G (530G, 600-serien [630G, 640G, 670G], 700-serien [770G, 780G] osv.).
 
-The following model and firmware combinations are compatible:
+Följande kombinationer av modell och firmware är kompatibla:
 
-- 512/712 (any firmware version)
-- 515/715 (any firmware version)
-- 522/722 (any firmware version)
-- 523/723 (firmware 2.4A or lower)
-- 554/754 EU release (firmware 2.6A or lower)
-- 554/754 Canada release (firmware 2.7A or lower)
+- 512/712 (alla firmwareversioner)
+- 515/715 (alla firmwareversioner)
+- 522/722 (alla firmwareversioner)
+- 523/723 (firmware 2.4A eller lägre)
+- 554/754 EU-version (firmware 2.6A eller lägre)
+- 554/754 kanadensisk version (firmware 2.7A eller lägre)
 
-You can find out how to check the firmware on the pumps at [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) or [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
+Hur du kontrollerar pumpens firmware står i [OpenAPS-dokumentationen](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) eller i [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
-    {contents} Table of contents
+    {contents} Innehåll
     :depth: 1
     :local: true
 
-## Pump capabilities with AAPS
+## Pumpens funktioner med AAPS
 
-* Requires a RileyLink-compatible device to communicate with **AAPS**.
-* Automatic DST and timezone handling.
+* Kräver en RileyLink-kompatibel enhet för att kommunicera med **AAPS**.
+* Automatisk hantering av sommartid och tidszoner.
 
-## Hardware and software requirements
+## Krav på hårdvara och programvara
 
-- **Phone:** The Medtronic driver should work with any android phone that supports Bluetooth connections. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary. For example, some phones will handle enabling/disabling Bluetooth differently. This can impact the user experience when AAPS needs to reconnect to your Rileylink type device.**
-- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a separate device to handle communications. This device will link with your phone via Bluetooth and with your pump via a compatible radio connection. The first such device was called a Rileylink but a number of other options are now available which can offer additional functionality.
+- **Telefon:** Medtronic-drivrutinen bör fungera med alla Android-telefoner som har stöd för Bluetooth-anslutningar. **VIKTIGT: Telefontillverkare implementerar Bluetooth på olika sätt, så varje telefonmodell kan bete sig olika. Till exempel hanterar vissa telefoner på- och avstängning av Bluetooth på olika sätt. Det kan påverka hur det fungerar när AAPS behöver ansluta igen till din RileyLink-enhet.**
+- **RileyLink-kompatibel enhet:** Android-telefoner kan inte kommunicera med Medtronic-pumpar utan en separat enhet som sköter kommunikationen. Enheten ansluter till telefonen via Bluetooth och till pumpen via en kompatibel radioanslutning. Den första sådana enheten hette RileyLink, men nu finns flera andra alternativ som kan ha fler funktioner.
     
-    - Rileylink available at [getrileylink.org](https://getrileylink.org/product/rileylink916)
-    - Orangelink available at [getrileylink.org](https://getrileylink.org/product/orangelink)
-    - Emalink (multiple model options) available at [github.com](https://github.com/sks01/EmaLink)
-    - Gnarl (some additional DIY required) details available at [github.com](https://github.com/ecc1/gnarl)
+    - RileyLink finns på [getrileylink.org](https://getrileylink.org/product/rileylink916)
+    - Orangelink finns på [getrileylink.org](https://getrileylink.org/product/orangelink)
+    - Emalink (flera modeller) finns på [github.com](https://github.com/sks01/EmaLink)
+    - Gnarl (kräver lite extra gör-det-själv-arbete), mer information finns på [github.com](https://github.com/ecc1/gnarl)
 
-A comparison chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
+En jämförelsetabell för olika RileyLink-kompatibla enheter finns på [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
 (MedtronicPump-configuration-of-the-pump)=
 
-## Configuration of the pump
+## Konfiguration av pumpen
 
-The following settings should be configured on the pump in order for AAPS to remotely send commands. The steps necessary to make each change on a Medtronic 715 are shown in brackets for each setting. The exact steps may vary based on pump type and/or firmware version.
+Följande inställningar ska göras på pumpen för att AAPS ska kunna skicka kommandon på distans. Stegen för att göra varje ändring på en Medtronic 715 står inom parentes för varje inställning. De exakta stegen kan variera beroende på pumptyp och/eller firmwareversion.
 
-- **Enable remote mode on Pump** (On the pump press Act and go to Utilities -> Remote Options, Select On, and on next screen do Add ID and add any random id such as 111111). At least one ID must be on the Remote ID list in order for the pump to expect remote communication.
-- **Set Max Basal** (On the pump press Act and go to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
-- **Set Max Bolus** (On the pump press Act and go to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. The maximum value permitted by the pump is 25.
-- **Set profile to Standard**. (On the pump press Act and go to Basal and then Select Patterns) The pump will only need one profile as AAPS will manage different profiles on your phone. No other patterns are required.
-- **Set Temporary Basal Rate type** (On the pump press Act and go to Basal and then Temp Basal Type). Select Absolute (not Percent).
+- **Aktivera fjärrläge på pumpen** (tryck på Act på pumpen och gå till Utilities -> Remote Options, välj On och gör Add ID på nästa skärm och lägg till ett valfritt ID, till exempel 111111). Minst ett ID måste finnas i listan Remote ID för att pumpen ska ta emot fjärrkommunikation.
+- **Ställ in Max Basal** (tryck på Act på pumpen och gå till Basal och välj sedan Max Basal Rate) Om du till exempel sätter värdet till fyra gånger din högsta standardbasal kan du få en tillfällig basal på 400 %. Det högsta värdet som pumpen tillåter är 34,9 enheter per timme.
+- **Ställ in Max Bolus** (tryck på Act på pumpen och gå till Bolus och välj sedan Max Bolus) Det här är den största bolus som pumpen tar emot. Det högsta värdet som pumpen tillåter är 25.
+- **Ställ in profilen på Standard**. (Tryck på Act på pumpen och gå till Basal och sedan Select Patterns) Pumpen behöver bara en profil, eftersom AAPS hanterar olika profiler på telefonen. Inga andra mönster (patterns) behövs.
+- **Ställ in typ av tillfällig basal** (tryck på Act på pumpen och gå till Basal och sedan Temp Basal Type). Välj Absolute (inte Percent).
 
-## Medtronic Configuration of Phone/AAPS
+## Konfiguration av telefon/AAPS för Medtronic
 
-- **Do not pair RileyLink compatible device with the Bluetooth menu on your phone.** Pairing via the Bluetooth menu on your phone will stop AAPS from seeing your Rileylink Compatible device when you follow the instructions below.
-- Disable automatic screen rotation on your phone. On certain devices automatic screen rotation causes Bluetooth sessions to restart which would cause issues for your Medtronic pump. 
-- There are two ways to configure your Medtronic pump in AAPS:
+- **Parkoppla inte den RileyLink-kompatibla enheten via Bluetooth-menyn på telefonen.** Om du parkopplar via Bluetooth-menyn på telefonen kan AAPS inte se din RileyLink-kompatibla enhet när du följer instruktionerna nedan.
+- Stäng av automatisk skärmrotation på telefonen. På vissa enheter gör automatisk skärmrotation att Bluetooth-sessioner startar om, vilket kan ge problem med din Medtronic-pump. 
+- Det finns två sätt att konfigurera din Medtronic-pump i AAPS:
 
-1. Using the setup wizard as part of a fresh install
-2. In **Configuration** > **Pump**, by selecting **Medtronic**
+1. Använd installationsguiden vid en ny installation
+2. I **Konfiguration** > **Pump**, genom att välja **Medtronic**
     
-    ![Configuration > Pump with the Medtronic plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+    ![Konfiguration > Pump med Medtronic-pluginet](../images/v4/Configuration/configuration_pump_list_3.png)
     
-    Once it is selected, the **Medtronic** card shows two buttons, **Settings** and **Open plugin**:
+    När det är valt visar kortet **Medtronic** två knappar, **Inställningar** och **Öppna plugin**:
     
-    ![The Medtronic plugin selected in Configuration > Pump](../images/v4/Pumps/medtronic_enabled.png)
+    ![Medtronic-pluginet valt i Konfiguration > Pump](../images/v4/Pumps/medtronic_enabled.png)
     
-    **Settings** opens the settings of the Medtronic driver:
+    **Inställningar** öppnar inställningarna för Medtronic-drivrutinen:
     
-    ![Medtronic driver settings](../images/v4/Pumps/medtronic_settings.png)
+    ![Inställningar för Medtronic-drivrutinen](../images/v4/Pumps/medtronic_settings.png)
     
-    **Open plugin** (or **Manage** > **Pump**) opens the Medtronic pump screen. Before a pump is paired it looks like this:
+    **Öppna plugin** (eller **Hantera** > **Pump**) öppnar pumpskärmen för Medtronic. Innan en pump har parkopplats ser den ut så här:
     
-    ![Medtronic pump screen before pairing](../images/v4/Pumps/medtronic_pump_screen.png)
+    ![Pumpskärmen för Medtronic före parkoppling](../images/v4/Pumps/medtronic_pump_screen.png)
 
-When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot successfully connect to the pump). Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.
+När du konfigurerar Medtronic-pumpen med installationsguiden kan det hända att du inte kan slutföra installationen på grund av Bluetooth-problem (t.ex. att du inte kan ansluta till pumpen). Om det händer ska du välja alternativet virtuell pump för att slutföra konfigurationen och sedan felsöka vidare med alternativ 2.
 
-While setting up AAPS to work with your medtronic pump you need to set the following items in **Settings** (see the settings picture above):
+När du ställer in AAPS för din Medtronic-pump måste du ställa in följande i **Inställningar** (se bilden på inställningarna ovan):
 
-- **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alphabetic characters (e.g. 123456).
-- **Pump Type**: The model pump you are using (e.g. 522). 
-- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select: 
-    - for US & Canada, frequency used is 916 MHz
-    - for Worldwide, frequency used is 868 MHz
-- **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above). Again this setting must be carefully selected as it will determine how much AAPS can deliver via your basal rate. This will effectively set the maximum temporary basal rate. As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
-- **Max Bolus on Pump (U)** (in an hour): This needs to match the setting set on your pump (see Configuration of the pump above). This setting should be carefully considered as it determines how large a bolus AAPS can ever set.
-- **Delay before Bolus is started (s)**: The number of seconds after a bolus is issued before the command is actually sent to the pump. This period of time allows the user to cancel the bolus in the event a bolus command is sent in error. It is not possible to cancel a bolus that has started via AAPS. The only way to cancel a bolus that has already started is to suspend the pump manually followed by resuming it.
-- **Medtronic Encoding**: Determines where the Medtronic encoding is carried out (hardware or software). Selecting Hardware encoding (i.e. carried out by the Rileylink compatible device) is preferred as this results in less data being sent. Selecting Software encoding (i.e. carried out by AAPS) can help in the event frequent disconnects are seen. This setting will be ignored if you have firmware version 0.x on Rileylink devices.
-- **Battery Type (Power View)**: In order to correctly determine the remaining battery power level you should select the type of AAA battery in use. When a value other than simple view is selected AAPS will display the remaining calculated battery percentage level and volts. The following options are available:
+- **Serienummer på pumpen**: Står på baksidan av pumpen och börjar med SN. Ange bara de 6 siffrorna, utan bokstäver (t.ex. 123456).
+- **Pumptyp**: Den pumpmodell som du använder (t.ex. 522). 
+- **Pumpfrekvens**: Det finns två alternativ, beroende på var pumpen ursprungligen såldes. Läs [Vanliga frågor](#MedtronicPump-faq) om du är osäker på vilket alternativ du ska välja: 
+    - för USA & Kanada används frekvensen 916 MHz
+    - för resten av världen används frekvensen 868 MHz
+- **Max basal på pumpen (U/h)**: Måste vara samma som inställningen på pumpen (se Konfiguration av pumpen ovan). Välj även den här inställningen noga, eftersom den bestämmer hur mycket AAPS kan ge via din basal. Det här sätter i praktiken den högsta möjliga tillfälliga basalen. Om du till exempel sätter värdet till fyra gånger din högsta standardbasal kan du få en tillfällig basal på 400 %. Det högsta värdet som pumpen tillåter är 34,9 enheter per timme.
+- **Max bolus på pumpen (U)** (per timme): Måste vara samma som inställningen på pumpen (se Konfiguration av pumpen ovan). Tänk noga igenom den här inställningen, eftersom den bestämmer hur stor bolus AAPS någonsin kan ge.
+- **Fördröjning innan bolus startas (s)**: Antal sekunder från att en bolus ges tills kommandot faktiskt skickas till pumpen. Under den tiden kan du avbryta bolusen om ett boluskommando skickades av misstag. Det går inte att avbryta en bolus som har startat via AAPS. Det enda sättet att avbryta en bolus som redan har startat är att pausa pumpen manuellt och sedan återuppta den.
+- **Medtronic-kodning**: Bestämmer var Medtronic-kodningen görs (i hårdvara eller i mjukvara). Det är bäst att välja hårdvarukodning (dvs. att den RileyLink-kompatibla enheten gör kodningen), eftersom mindre data då skickas. Att välja programvarukodning (dvs. att AAPS gör kodningen) kan hjälpa om anslutningen ofta bryts. Den här inställningen ignoreras om din RileyLink-enhet har firmwareversion 0.x.
+- **Batterityp (Power View)**: För att den återstående batterinivån ska beräknas rätt ska du välja vilken typ av AAA-batteri du använder. När något annat än enkel vy är valt visar AAPS den beräknade återstående batterinivån i procent och volt. Följande alternativ finns:
     
-    - Not selected (Simple view)
-    - Alkaline (Extended view)
-    - Lithium (Extended view)
-    - NiZn (Extended view)
-    - NiMH (Extended view)
-- **Use Scanning**: Activates Bluetooth scanning before connecting with your Rileylink Compatible devices. This should improve the reliability of your connection to the device.
+    - Ej vald (enkel vy)
+    - Alkaliskt (utökad vy)
+    - Litium (utökad vy)
+    - NiZn (utökad vy)
+    - NiMH (utökad vy)
+- **Använd sökning**: Aktiverar Bluetooth-sökning innan anslutning till dina RileyLink-kompatibla enheter. Det här bör göra anslutningen till enheten mer pålitlig.
 
-- **Show battery level reported by OrangeLink/EmaLink/DiaLink**: This feature is only supported on newer link devices such as the EmaLink or OrangeLink. The value is shown as **RileyLink Battery** on the Medtronic pump screen.
-- **Set neutral temp basals**: By default Medtronic pumps beep on the hour when a temporary basal rate is active. Enabling this option can help reduce the number of beeps heard by interrupting a temporary basal at the hour change in order to suppress the beep.
+- **Visa batterinivå som rapporteras av OrangeLink/EmaLink/DiaLink**: Den här funktionen stöds bara av nyare link-enheter som EmaLink eller OrangeLink. Värdet visas som **RileyLink-batteri** på pumpskärmen för Medtronic.
+- **Sätt neutrala tillfälliga basaler**: Som standard piper Medtronic-pumpar varje hel timme när en tillfällig basal är aktiv. Om du aktiverar det här alternativet hör du färre pip, eftersom en tillfällig basal avbryts vid timskiftet så att pipet inte hörs.
 
 (pairing-your-rileylink-compatible-device)=
 
-### Pairing your RileyLink compatible device
+### Parkoppla din RileyLink-kompatibla enhet
 
-Your RileyLink compatible device is paired from the Medtronic pump screen, not from the Bluetooth menu of your phone:
+Din RileyLink-kompatibla enhet parkopplas från pumpskärmen för Medtronic, inte från Bluetooth-menyn på telefonen:
 
-- Open the pump screen (**Manage** > **Pump**, or **Open plugin** on the Medtronic card in **Configuration** > **Pump**).
-- Tap **Pair RileyLink**. **AAPS** scans for nearby RileyLink compatible devices.
-- Tap your device in the list. When **RileyLink paired successfully** is shown, tap **OK**.
+- Öppna pumpskärmen (**Hantera** > **Pump**, eller **Öppna plugin** på kortet Medtronic i **Konfiguration** > **Pump**).
+- Tryck på **Parkoppla RileyLink**. **AAPS** söker efter RileyLink-kompatibla enheter i närheten.
+- Tryck på din enhet i listan. När **RileyLink-parkoppling lyckades** visas trycker du på **OK**.
 
-## Medtronic pump screen
+## Pumpskärmen för Medtronic
 
-To open the Medtronic pump screen, go to **Manage** > **Pump**. The pump screen displays the current pump status information along with some Medtronic specific actions (see the pump screen picture above).
+Gå till **Hantera** > **Pump** för att öppna pumpskärmen för Medtronic. Pumpskärmen visar aktuell pumpstatus och några åtgärder som är specifika för Medtronic (se bilden på pumpskärmen ovan).
 
-- **RileyLink Status**: The current status of the connection between your phone and Rileylink compatible device. This should show as Connected at all times. Any other status may require user intervention. 
-- **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device. Only shown if **Show battery level reported by OrangeLink/EmaLink/DiaLink** is enabled in the Medtronic settings.
-- **Pump Status**: The current status of the pump connection. As the pump will not be constantly connected this will primarily show the sleep icon. There are a number of possible other status including "Waking Up" when AAPS is trying to issue a command or other possible pump commands such as "Get Time", "Set TBR", etc.
-- **Battery**: Shows battery status based on the value chosen for **Battery Type (Power View)** in the Medtronic settings.
-- **Last connection**: How long ago the last successful pump connection happened.
-- **Last Bolus**: How long ago the last successful bolus was delivered.
-- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour in your active Profile.
-- **Temp basal**: Temp basal currently being delivered which can be 0 units per hour.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- **RileyLink-status**: Aktuell status för anslutningen mellan telefonen och den RileyLink-kompatibla enheten. Den bör alltid visa Ansluten. Alla andra statusar kan kräva att du gör något. 
+- **RileyLink-batteri**: Aktuell batterinivå för din EmaLink eller OrangeLink. Visas bara om **Visa batterinivå som rapporteras av OrangeLink/EmaLink/DiaLink** är aktiverat i Medtronic-inställningarna.
+- **Pumpstatus**: Aktuell status för anslutningen till pumpen. Eftersom pumpen inte är ansluten hela tiden visas oftast sovikonen. Det finns flera andra möjliga statusar, till exempel "Väcker" när AAPS försöker skicka ett kommando, eller andra pumpkommandon som "Hämta tid", "Ställ in tillfällig basal" osv.
+- **Batterinivå**: Visar batteristatus utifrån värdet som har valts för **Batterityp (Power View)** i Medtronic-inställningarna.
+- **Senast ansluten**: Hur länge sedan den senaste lyckade anslutningen till pumpen var.
+- **Senaste bolus**: Hur länge sedan den senaste lyckade bolusen gavs.
+- **Profilens basaldos**: Den basaldos som pumpen ger den här timmen enligt din aktiva profil.
+- **Tillfällig basal**: Den tillfälliga basal som ges just nu. Den kan vara 0 enheter per timme.
+- **Reservoar**: Hur mycket insulin som finns i reservoaren (uppdateras minst en gång per timme).
+- **Fel**: Felmeddelande om det finns ett problem (visas oftast vid fel i konfigurationen).
 
-At the bottom of the screen there are these buttons:
+Längst ner på skärmen finns dessa knappar:
 
-- **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pair RileyLink**: Finds and pairs your RileyLink compatible device (see [above](#pairing-your-rileylink-compatible-device)).
-- **Pump history**: Shows pump history (see [below](#MedtronicPump-pump-history)).
-- **RL Stats**: Shows RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status)).
-- **Wake and Tune Up** and **Reset RileyLink**: See [Actions](#medtronic-actions) below.
-- **Clear Bolus Block**: Only shown for a short time after a bolus, while **AAPS** waits for the pump to finish delivering it. Tapping it ends this wait.
+- **Uppdatera** uppdaterar pumpens aktuella status. Använd den bara om anslutningen har varit bruten länge, eftersom all data då måste hämtas igen (hämta historik, hämta/ställa in tid, hämta profil, hämta batteristatus osv.).
+- **Parkoppla RileyLink**: Hittar och parkopplar din RileyLink-kompatibla enhet (se [ovan](#pairing-your-rileylink-compatible-device)).
+- **Pumphistorik**: Visar pumphistoriken (se [nedan](#MedtronicPump-pump-history)).
+- **RL-statistik**: Visar RL-statistik (se [nedan](#MedtronicPump-rl-status-rileylink-status)).
+- **Väck och finjustera frekvens** och **Återställ RileyLink**: Se [Åtgärder](#medtronic-actions) nedan.
+- **Ta bort bolusblockering**: Visas bara en kort stund efter en bolus, medan **AAPS** väntar på att pumpen ska ge klart bolusen. Om du trycker på den avslutas väntan.
 
 (MedtronicPump-pump-history)=
 
-## Pump History
+## Pumphistorik
 
-![Pump history screen with its filter buttons](../images/Medtronic03.png)
+![Skärmen Pumphistorik med filterknapparna](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. This allows for a convenient way to see pump behavior should that be required. The only items stored are those relevant to AAPS and will not include a configuration function that has no relevance.
+Pumphistoriken hämtas var 5:e minut och sparas lokalt. Bara historik för de senaste 24 timmarna sparas. Här kan du enkelt se hur pumpen har betett sig, om det behövs. Bara poster som är relevanta för AAPS sparas, så konfigurationsfunktioner som inte är relevanta finns inte med.
 
-Tap **Pump history** on the pump screen to open it. By default **All** is selected. Tap one of the filter buttons at the top (for example **Boluses**, **Basals** or **Alarms**) to show only one type of entry.
+Tryck på **Pumphistorik** på pumpskärmen för att öppna den. Som standard är **Alla** valt. Tryck på en av filterknapparna högst upp (till exempel **Bolusar**, **Basaldoser** eller **Larm**) för att bara visa en typ av poster.
 
 (MedtronicPump-rl-status-rileylink-status)=
 
-## RL Status (RileyLink Status)
+## RL-status (RileyLink-status)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![RileyLink-status - Inställningar](../images/Medtronic04.png) ![RileyLink-status - Historik](../images/Medtronic05.png)
 
-The RL Status dialog has two tabs:
+Dialogrutan RL-status har två flikar:
 
-- **Settings**: Shows settings about the RileyLink compatible device: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
-- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- **Inställningar**: Visar inställningar för den RileyLink-kompatibla enheten: konfigurerad adress, ansluten enhet, anslutningsstatus, anslutningsproblem och RileyLinks firmwareversioner. Enhetstyp är alltid Medtronicpump, Modell är din modell, Serienummer är det konfigurerade serienumret, Pumpfrekvens visar vilken frekvens du använder och Senaste frekvens är den frekvens som användes senast.
+- **Historik**: Visar kommunikationshistoriken. Poster med RileyLink visar tillståndsändringar för RileyLink och poster med Medtronic visar vilka kommandon som skickades till pumpen.
 
 (medtronic-actions)=
 
 ## Actions
 
-When the Medtronic driver is used, two additional actions are available on the pump screen (**Manage** > **Pump**):
+När Medtronic-drivrutinen används finns två extra åtgärder på pumpskärmen (**Hantera** > **Pump**):
 
-- **Wake and Tune Up** - In the event that AAPS hasn't connected to your pump for a sustained period (it should connect every 5 minutes), you can force a Tune Up. This will try to contact your pump, by searching all of the possible radio frequencies used by your pump. In the event a successful connection is made the successful frequency will be set as the default. While the tune-up runs, the RileyLink status on the pump screen shows it. If a tune-up fails (for example because the pump was out of range), **AAPS** tries again by itself about every 10 minutes.
-- **Reset RileyLink** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
+- **Väck och finjustera frekvens** - Om AAPS inte har anslutit till pumpen på länge (den ska ansluta var 5:e minut) kan du tvinga fram en frekvensjustering (Tune Up). Det här försöker nå pumpen genom att söka igenom alla radiofrekvenser som pumpen kan använda. Om en anslutning lyckas sparas den frekvens som fungerade som standard. Medan frekvensjusteringen pågår visas det i RileyLink-status på pumpskärmen. Om en frekvensjustering misslyckas (till exempel för att pumpen var utom räckhåll) försöker **AAPS** igen av sig själv ungefär var 10:e minut.
+- **Återställ RileyLink** - Om du återställer din RileyLink-kompatibla enhet kan du behöva använda den här åtgärden så att enheten konfigureras igen (frekvens, frekvenstyp och kodning ställs in).
 
-## Important notes
+## Viktigt att veta
 
-### Special attention in NS configuration needed
+### Var särskilt noga med NS-konfigurationen
 
-AAPS is using serial number for synchronization and serial number is exposed to NS. Because knowledge of serial number of old Medtronic pump can be used to control the pump remotely take special care to hardening NS site preventing leakage of SN of your pump. See https://nightscout.github.io/nightscout/security/
+AAPS använder serienumret för synkronisering, och serienumret syns i NS. Den som känner till serienumret på en gammal Medtronic-pump kan använda det för att styra pumpen på distans. Var därför extra noga med att skydda din NS-sida så att pumpens serienummer inte läcker ut. Se https://nightscout.github.io/nightscout/security/
 
-### OpenAPS users
+### OpenAPS-användare
 
-OpenAPS users should note that AAPS with Medtronic uses a completely different approach than OpenAPS. Using AAPS the primary method of interacting with the pump is via your phone. In normal use cases it is likely that the only time it is required to use the pump menu is when changing reservoirs. This is very different when using OpenAPS where at least some of a bolus is usually delivered via the quick bolus buttons. In the event the pump is used to manually deliver a bolus there can be issues if AAPS attempts to deliver one at the same time. There are checks to try and prevent issues in such cases but this should still be avoided where possible.
+OpenAPS-användare bör notera att AAPS med Medtronic fungerar på ett helt annat sätt än OpenAPS. Med AAPS sker kontakten med pumpen främst via telefonen. Vid normal användning behöver du troligen bara använda pumpens meny när du byter reservoar. Det är mycket annorlunda mot OpenAPS, där åtminstone en del av en bolus oftast ges med pumpens knappar för snabb bolus. Om pumpen används för att ge en bolus manuellt kan det bli problem om AAPS försöker ge en bolus samtidigt. Det finns kontroller som ska förhindra problem i sådana fall, men du bör ändå undvika det så långt det går.
 
-### Logging
+### Loggning
 
-In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintenance and Log Settings. For troubleshooting any Medtronic issues Pump, PumpComm, PumpBTComm should be checked.
+Om du behöver felsöka din Medtronic-pump väljer du menyikonen uppe till vänster på skärmen och väljer Underhåll och Loggningsinställningar. Vid felsökning av Medtronic-problem ska Pump, PumpComm och PumpBTComm kontrolleras.
 
 ### Medtronic CGM
 
-Medtronic CGM is currently NOT supported.
+Medtronic CGM stöds för närvarande INTE.
 
-### Manual use of pump
+### Manuell användning av pumpen
 
-You should avoid manually bolusing or setting TBRs on your pump. All such commands should be sent via AAPS. In the event manual commands are used there must be a delay of at least 3 minutes between them in order to reduce the risk of any issues.
+Undvik att ge bolus eller ställa in tillfälliga basaler manuellt på pumpen. Alla sådana kommandon ska skickas via AAPS. Om du ändå ger kommandon manuellt måste det gå minst 3 minuter mellan dem för att minska risken för problem.
 
-### Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AAPS
+### Byte av tidszon och sommartid (DST), eller resor med Medtronic-pump och AAPS
 
-AAPS will automatically detect Timezone changes and will update the Pump's time when your phone switches to the new time.
+AAPS upptäcker automatiskt byte av tidszon och uppdaterar pumpens tid när telefonen byter till den nya tiden.
 
-Traveling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2), which will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Traveling west, however, can result in issues as you are effectively going back in time, which can result in incorrect IOB data.
+Om du reser österut lägger du till timmar till aktuell tid (t.ex. från GMT+0 till GMT+2). Det ger inga problem eftersom det inte blir någon överlappning (det går t.ex. inte att få samma timme två gånger). Att resa västerut kan däremot ge problem, eftersom du i praktiken går tillbaka i tiden. Det kan ge felaktiga IOB-data.
 
-The issues seen when traveling west are known to the developers and work on a possible solution is ongoing. See https://github.com/andyrozman/RileyLinkAAPS/issues/145 for more detail. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
+Utvecklarna känner till problemen vid resor västerut och arbetar på en möjlig lösning. Se https://github.com/andyrozman/RileyLinkAAPS/issues/145 för mer information. Tills vidare: tänk på att problemet kan uppstå och övervaka noga när du byter tidszon.
 
-### Is a GNARL a fully compatible Rileylink compatible device?
+### Är GNARL en helt kompatibel RileyLink-kompatibel enhet?
 
-The GNARL code fully supports all of the functions used by the Medtronic driver in AAPS which means it is fully compatible. It is important to note that this will require additional work as you will have to source compatible hardware and then load the GNARL code on to the device.
+GNARL-koden stöder fullt ut alla funktioner som Medtronic-drivrutinen i AAPS använder, vilket betyder att den är helt kompatibel. Observera att det här kräver extra arbete, eftersom du måste skaffa kompatibel hårdvara och sedan ladda GNARL-koden till enheten.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Kommentar från författaren:** Observera att GNARL-programvaran fortfarande är experimentell och lite testad, och den ska inte anses vara lika säker att använda som en RileyLink.
 
 (MedtronicPump-faq)=
 
-## FAQ
+## Vanliga frågor (FAQ)
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
-### What to do if I lose connection to RileyLink and/or pump?
+### Vad gör jag om jag tappar anslutningen till RileyLink och/eller pumpen?
 
-There are a number of options to try and resolve connectivity issues.
+Det finns flera saker du kan prova för att lösa anslutningsproblem.
 
-- Tap **Wake and Tune Up** on the pump screen (**Manage** > **Pump**) as detailed above.
-- Disable Bluetooth on your phone, wait 10 seconds and then enable it again. This will force the Rileylink device to reconnect to the phone.
-- Reset the Rileylink device. You must then tap **Reset RileyLink** on the pump screen (**Manage** > **Pump**).
-- Other users have found the following steps to be effective in restoring connectivity when other methods have not: 
-    1. Restart the phone
-    2. *While* the phone is restarting restart the Rileylink device
-    3. Open AAPS and allow the connection to restore
+- Tryck på **Väck och finjustera frekvens** på pumpskärmen (**Hantera** > **Pump**) enligt beskrivningen ovan.
+- Stäng av Bluetooth på telefonen, vänta 10 sekunder och slå sedan på det igen. Då tvingas RileyLink-enheten att ansluta till telefonen igen.
+- Återställ RileyLink-enheten. Sedan måste du trycka på **Återställ RileyLink** på pumpskärmen (**Hantera** > **Pump**).
+- Andra användare har sett att följande steg kan återställa anslutningen när andra metoder inte har fungerat: 
+    1. Starta om telefonen
+    2. *Medan* telefonen startar om, starta om RileyLink-enheten
+    3. Öppna AAPS och låt anslutningen återställas
 
-### How to determine what Frequency my pump uses
+### Så tar du reda på vilken frekvens din pump använder
 
-![Pump Model](../images/Medtronic06.png)
+![Pumpmodell](../images/Medtronic06.png)
 
-On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
+På baksidan av pumpen finns en rad med ditt modellnummer och en särskild kod på 3 bokstäver. De två första bokstäverna anger frekvenstypen och den sista anger färgen. Möjliga värden för frekvens:
 
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 MHz)")
+- NA - Nordamerika (i frekvensvalet ska du välja "USA & Kanada (916 MHz)")
+- CA - Kanada (i frekvensvalet ska du välja "USA & Kanada (916 MHz)")
+- WW - Hela världen (i frekvensvalet ska du välja "Resten av världen (868 MHz)")
 
 (MedtronicPump-pump-unreachable)=
 
-### How to fix the "pump unreachable" error
+### Så åtgärdar du felet "Pumpen kan inte nås"
 
-Some Medtronic pumps report a "pump unreachable" error after an **AAPS** update. To fix it, change the encoding type:
+Vissa Medtronic-pumpar rapporterar felet "Pumpen kan inte nås" efter en uppdatering av **AAPS**. Åtgärda det genom att byta kodningstyp:
 
-1. Go to **Configuration** > **Pump** and tap **Settings** on the **Medtronic** card.
-2. Set **Medtronic Encoding** to **Hardware 4b6b Encoding**.
+1. Gå till **Konfiguration** > **Pump** och tryck på **Inställningar** på kortet **Medtronic**.
+2. Ställ in **Medtronic-kodning** på **Hårdvara 4b6b-kodning**.
 
-## Where to get help
+## Var du kan få hjälp
 
-Development of the Medtronic driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Medtronic-drivrutinen utvecklas av communityn på **frivillig** basis. Innan du ber om hjälp:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Läs** det avsnitt i den här dokumentationen som gäller, för att se hur funktionen är tänkt att fungera.
+2. **Fråga** i kanalen *#AAPS* på [Discord](https://discord.gg/4fQUWHZ4Mw) eller i någon av de andra [kanalerna i communityn](../GettingHelp/WhereCanIGetHelp.md).
+3. **Rapportera en bugg** genom att först söka bland [befintliga ärenden](https://github.com/nightscout/AndroidAPS/issues). Om ditt problem inte finns där, skapa ett [nytt ärende](https://github.com/nightscout/AndroidAPS/issues) och bifoga dina [loggfiler](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+När du ber om hjälp, ange telefonens märke och modell, Android-version, version av **AAPS** och en enkel och tydlig beskrivning av problemet (vad som ändrades, när det senast fungerade).
