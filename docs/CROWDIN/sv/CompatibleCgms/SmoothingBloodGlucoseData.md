@@ -1,44 +1,44 @@
-# Smoothing blood glucose data
+# Utjämning av blodsockerdata
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Om **BG**-värdena hoppar eller har mycket brus kan **AAPS** dosera fel mängd insulin, vilket kan ge höga eller låga värden. Om du ser fel eller om värdena från din CGM hoppar är det viktigt att du stänger av loopen tills problemet är löst. Beroende på din CGM kan sådana problem bero på CGM-inställningarna i **AAPS** (se förklaringen längre ned) eller på ett problem med sensorns placering (då kan du behöva byta CGM-sensorn).
 
-## Smoothing data within AAPS
+## Utjämning av data i AAPS
 
-**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
+**AAPS** kan utjämna data i **AAPS** i stället för i CGM-appen. Öppna **menyn** (☰), välj [**Konfiguration**](../SettingUpAaps/ConfigBuilder.md) och sedan **Utjämning**. Det finns fyra alternativ, och bara ett kan vara aktivt åt gången: **Ingen utjämning**, **Exponentiell utjämning**, **Genomsnittlig utjämning** och **Unscented Kalman Filter**.
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![Konfiguration > Utjämning](../images/v4/Configuration/configuration_smoothing.png)
 
-### Exponential smoothing
+### Exponentiell utjämning
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+Generellt är detta det rekommenderade alternativet att börja med, eftersom det tar bort brus mest effektivt och skriver om det senaste värdet. Se dock tabellen nedan för andra specifika rekommendationer.
 
-### Average smoothing
+### Genomsnittlig utjämning
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
+Det här alternativet fungerar ungefär som den bakåtutjämning som tidigare fanns på vissa CGM-plattformar. Det reagerar snabbare på nya ändringar i BG-värdet och kan därför oftare reagera fel på CGM-data med brus.
 
-### No Smoothing
+### Ingen utjämning
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Använd bara detta alternativ om dina CGM-data redan utjämnas ordentligt av din insamlingsapp innan de skickas till **AAPS**.
 
 ### Unscented Kalman Filter (UKF)
 
-This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+Detta alternativ använder en statistisk modell för att hela tiden uppskatta ditt verkliga glukosvärde och hur snabbt det ändras utifrån de inkommande värdena (som kan ha brus). Den anpassar sig automatiskt efter hur mycket brus din sensor har just nu. Den upptäcker också plötsliga avvikande värden och tar bort dem. Det är ett mer avancerat alternativ till Exponentiell och Genomsnittlig utjämning. Det är användbart om du vill att utjämningen ska anpassa sig efter sensorns ändrade brusnivå i stället för att använda en fast metod.
 
 (smoothing-xdrip-dexcom-g6)=
 
-## Suggestions to use smoothing
+## Förslag på utjämning
 
-You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
+Du kan också byta utjämningsmetod automatiskt, till exempel beroende på sensorns ålder, med [automationsåtgärden](#automations-automation-action) **Ändra utjämning**.
 
-|               | Exponential |  Average  | No Smoothing |
-| ------------- |:-----------:|:---------:|:------------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended  |
-| G7/ONE+/Stelo |  If noisy   | If stable |              |
+|               | Exponentiell | Genomsnittlig | Ingen utjämning |
+| ------------- |:------------:|:-------------:|:---------------:|
+| G5/G6/ONE     |   Vid brus   |               |  Rekommenderas  |
+| G7/ONE+/Stelo |   Vid brus   |   Om stabil   |                 |
 
-Libre sensors are noisy and can require smoothing. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Libre-sensorer har mycket brus och kan behöva utjämning. När du använder xDrip med direkt anslutning eller datakällan patchad app (som tar emot data från en annan app, även Juggluco) [är data redan utjämnade i appen](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
-| -------------------- |:--------:|:------------:|:------------:|:-----------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.     |   Average    |       N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None     |   Average    |       None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.     |     N.A.     |       None        |
+| Sensor/datakälla     |    Juggluco    |  xDrip direkt  |  xDrip brygga  | xDrip patchad app |
+| -------------------- |:--------------:|:--------------:|:--------------:|:-----------------:|
+| Libre 1/14 dagar/Pro | Ej tillämpligt | Ej tillämpligt | Genomsnittlig  |  Ej tillämpligt   |
+| Libre 2/2+ (EU)      | Genomsnittlig  |     Ingen      | Genomsnittlig  |       Ingen       |
+| Libre 2/2+/3/3+      | Genomsnittlig  | Ej tillämpligt | Ej tillämpligt |       Ingen       |
