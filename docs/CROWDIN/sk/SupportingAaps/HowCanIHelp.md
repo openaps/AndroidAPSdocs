@@ -2,7 +2,7 @@
 
 ## AAPS funguje výlučne vďaka dobrovoľníkom a nemá žiadnych platených zamestnancov.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. Vývojári venujú svoj voľný čas zadarmo, ale je trochu nespravodlivé očakávať, že budú mať aj ďalšie náklady na to, aby niečo také úžasné bolo s otvoreným zdrojovým kódom a zadarmo pre všetkých.
+Vývojári sú rodičia, opatrovatelia, blízki a ľudia s diabetom, ktorí spoločne vyvíjajú a zlepšujú riešenie veľmi bežnej potreby. Vývojári venujú svoj voľný čas zadarmo, ale je trochu nespravodlivé očakávať, že budú mať aj ďalšie náklady na to, aby niečo také úžasné bolo s otvoreným zdrojovým kódom a zadarmo pre všetkých.
 
 *Aby mohli vývojári nové zariadenie (rig) poriadne otestovať, potrebujú náhradný telefón a náhradnú pumpu, pretože kým nie je stabilné, nemôže sa používať na človeku. Postupne ako sa objavujú nové modely, musia sa testovať. Časť z darovaných peňazí sa použije aj na prepravu zariadení medzi krajinami k vývojárom. Niekedy je tiež príjemné prispieť k nákladom vývojárov, aby opustili svoje zatemnené miestnosti a stretli sa na konferenciách a podujatiach a aby sa ich kreatívne a analytické mozgy mohli navzájom podporiť.*
 
@@ -23,7 +23,7 @@ Ak prekladáte prvýkrát, začnite prosím prekladom reťazcov aplikácie. Je t
 
 Prekladať dokumentáciu môžete začať súčasne alebo neskôr.
 
-You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
+Stav prekladov aplikácie a dokumentácie pre jednotlivé jazyky si môžete pozrieť [tu](StateOfTranslations.md).
 
 * Ak chcete prekladať **aplikáciu** do iného jazyka (ďakujeme), prosím použite [crowdin](https://crowdin.com/project/androidaps).
 * Ak chcete prekladať **dokumentáciu** do iného jazyka (ďakujeme), prosím použite [crowdin](https://crowdin.com/project/androidapsdocs). 
