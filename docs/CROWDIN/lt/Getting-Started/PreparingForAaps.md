@@ -6,19 +6,19 @@ Welcome. This documentation aims to guide users who are preparing to set up and 
 
 An **index** and explanation of the documentation structure can be found [here](../index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. There you will find an overview of the purpose of the different documentation sections. You can also use the headings to the left of this page to navigate through the documentation. Finally, there is a handy search function, directly below the **AAPS** symbol.
 
-We aim to make it easy to determine both the capabilities and limitations of **AAPS**. It can be disappointing to discover after investing time in reading the documentation that you might not have a compatible insulin pump or CGM, or that **AAPS** offers different functionality than hoped for.
+We aim to make it easy to determine both the capabilities and limitations of **AAPS**. Skyrę laiko dokumentacijai skaityti galite nusivilti sužinoję, kad neturite suderinamos insulino pompos ar NGJ arba kad **AAPS** funkcijos skiriasi nuo tų, kurių tikėjotės.
 
 Many experience-related details in the **AAPS** documentation make more sense when you are actually using **AAPS** in real-time. Just as it is difficult to learn a sport only by reading the rules, it takes a combination of learning the foundations of the rules for safely operating **AAPS** and then learning how best to apply those rules as you start to use **AAPS**.
 
 (preparing-safety-first)=
 
-## Safety First
+## Saugumas – svarbiausia
 “With great power comes great responsibility…”
 
 ### Technical safety
-**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
+**AAPS** has an extensive set of safety features. Šios funkcijos taiko apribojimus, kurie panaikinami palaipsniui, kai įveikiate [mokymo etapus](../SettingUpAaps/CompletingTheObjectives.md). Juose tikrinami konkretūs parametrai ir atsakoma į klausimus su keliais atsakymų variantais. **AAPS** funkcijos atrakinamos sėkmingai įveikus mokymo etapus. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
 
-The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimize these issues.
+[Mokymo etapai](../SettingUpAaps/CompletingTheObjectives.md) sukurti tam, kad kuo geriau supažindintų su **AAPS**. Juos kuriant atsižvelgta į dažnas klaidas ir bendras tendencijas, kurias **AAPS** kūrėjai pastebėjo tarp naujų naudotojų. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. [Mokymo etapai](../SettingUpAaps/CompletingTheObjectives.md) padeda sumažinti šias problemas.
 
 ### Medical safety
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -28,21 +28,21 @@ Caution is advised concerning rapid improvements in blood glucose control and lo
 
 An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicians make their patients aware of this issue.
 
-This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 11.1 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
+This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. Pradžioje **AAPS** galite lengvai nustatyti aukštesnes tikslines gliukozės reikšmes (šiuo metu didžiausia pasirenkama reikšmė yra 11,1 mmol/l, bet prireikus taip pat galite naudoti sąmoningai silpną profilį), o bėgant mėnesiams tikslinę reikšmę mažinti.
 
 #### How quickly can I reduce my HbA1c without risking permanent damage?
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
+Viename retrospektyviajame 76 pacientų [tyrime](https://pubmed.ncbi.nlm.nih.gov/1464975/) nustatyta, kad retinopatijos progresavimo rizika padidėjo 1,6, 2,4 ir 3,8 karto, jei HbA1c per 6 mėnesių laikotarpį sumažėjo atitinkamai 1 %, 2 % arba 3 %. Tyrėjai siūlė, kad **„HbA1c reikšmės sumažėjimas per bet kurį 6 mėnesių laikotarpį turėtų būti mažesnis nei 2 %, kad būtų išvengta retinopatijos progresavimo....Pernelyg greitas sumažėjimas pradėjus kontroliuoti glikemiją gali smarkiai arba laikinai pasunkinti retinopatijos progresavimą.“**
 
 N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for an HbA1c calculator tool.
 
 In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
 
-**"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."**
+**„HbA1c sumažėjus 2–3 procentiniais punktais per 3 mėnesius, absoliuti gydymo sukeltos diabetinės neuropatijos rizika buvo 20 %. HbA1c sumažėjus >4 procentiniais punktais per 3 mėnesius, absoliuti gydymo sukeltos diabetinės neuropatijos rizika viršijo 80 %.“**
 
-A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read other reviews on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) and [here](https://www.mdpi.com/1999-4923/15/7/1791).
+Šio darbo [komentare](https://academic.oup.com/brain/article/138/1/2/340563) pritarta, kad, siekiant išvengti komplikacijų, **tikslas turėtų būti sumažinti A1c <2 % per 3 mėnesius.** Kitas šios temos apžvalgas galite skaityti [čia](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) ir [čia](https://www.mdpi.com/1999-4923/15/7/1791).
 
-It is generally recognized that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
+Paprastai pripažįstama, kad _naujai_ diagnozuoto 1 tipo diabeto atveju (kai HbA1c diagnozės metu, prieš pradedant gydymą insulinu, dažnai būna labai didelis) HbA1c, atrodo, galima sparčiai sumažinti iškart po diagnozės, nepatiriant šios rizikos tokiu pat mastu, nes gliukozės kiekis kraujyje nebuvo padidėjęs taip ilgai. However, it is still a consideration which you should discuss with your clinician.
 
 (PreparingForAaps-no-sglt-2-inhibitors)=
 ### No SGLT-2 inhibitors
@@ -51,12 +51,12 @@ It is generally recognized that _newly_ diagnosed type 1 diabetics (who often ha
 :class: danger
 SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. The problem is that, unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs. This leaves your body with too much insulin compared to the absorbed carbs, resulting in hypoglycemia.
+Trumpai:
+- **1 pavyzdys: hipoglikemijos rizika**
+>Per pietus naudodami **AAPS** suleidžiate bolusą, apskaičiuotą 45 g angliavandenių. Problema ta, kad inhibitoriai priverčia organizmą pašalinti dalį angliavandenių, o AAPS apie tai nežino. Todėl organizme lieka per daug insulino, palyginti su įsisavintais angliavandeniais, ir ištinka hipoglikemija.
 
-- **Example 2: risk of Ketoacidosis**
->The inhibitors eliminate some of the carbs in the background, causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake, including basal. Over time this can result in your BG remaining below target value, to the point where the body does not have enough background insulin to absorb any carbs, resulting in ketoacidosis. Ordinarily, ketoacidosis develops in T1D patients because their pump fails, which would trigger alerts on their phone and be noticeable due to a high BG value. However, the danger with gliflozins is that there would be no AAPS alerts, as the pump remains operational and the BG potentially remains within target.
+- **2 pavyzdys: ketoacidozės rizika**
+>Inhibitoriai fone pašalina dalį angliavandenių, todėl jūsų KG sumažėja. **AAPS** automatiškai nurodys pompai sumažinti tiekiamo insulino kiekį, įskaitant valandinę bazę. Laikui bėgant jūsų KG gali išlikti žemiau tikslinės reikšmės tiek, kad organizmui pritrūks foninio insulino angliavandeniams įsisavinti, ir išsivystys ketoacidozė. Paprastai 1 tipo diabetu sergantiems žmonėms ketoacidozė išsivysto sugedus pompai. Tada telefone suveiktų įspėjimai, o aukšta KG būtų pastebima. Tačiau gliflozinų pavojus tas, kad AAPS nerodytų jokių įspėjimų, nes pompa veikia, o KG gali išlikti tikslinėse ribose.
 
 Common brand names of SGLT-2 inhibitors include: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro, and Xigduo XR, others.
 ```
@@ -64,23 +64,23 @@ Common brand names of SGLT-2 inhibitors include: Invokana, Farxiga, Jardiance, G
 
 ### Key principles of looping with AAPS
 
-The key principles and concepts of looping must be understood before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there!
+The key principles and concepts of looping must be understood before using **AAPS**. Tam skirkite laiko **AAPS** dokumentacijai skaityti ir mokymo etapams įveikti. Jie padeda sukurti tvirtą pagrindą saugiai ir veiksmingai naudoti **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there!
 
-The speed of progression will depend upon the individual, but be aware that completion of all the objectives typically takes 6 - 9 weeks. Many people start to build, install and set up **AAPS** well in advance of starting to use it. To aid with this, the system has a "virtual pump" which can be used during completion of the early objectives, so that you can become familiar with **AAPS** without actually using it to deliver insulin. A detailed breakdown of the timeline is given below, be aware that by objective 7 of **AAPS** you are closed looping, the later objectives add in additional features like **SMB** and **automations** which are useful to some users, but not essential to the core function of **AAPS**.
+Kaip greitai pažengsite, priklauso nuo žmogaus, tačiau žinokite, kad visi mokymo etapai paprastai įveikiami per 6–9 savaites. Many people start to build, install and set up **AAPS** well in advance of starting to use it. Tam sistemoje yra „Virtuali pompa“. Ją galima naudoti per pirmuosius mokymo etapus ir susipažinti su **AAPS**, iš tikrųjų netiekiant insulino. Toliau pateiktas išsamus laiko planas. Atkreipkite dėmesį, kad pasiekus 7 **AAPS** mokymo etapą ciklas jau yra uždaras. Vėlesni mokymo etapai prideda papildomų funkcijų, pavyzdžiui, **SMB** ir **automatizacijas**. Kai kuriems naudotojams jos naudingos, bet pagrindiniam **AAPS** veikimui nebūtinos.
 
-Success with **AAPS** requires a proactive approach, a willingness to reflect on the BG data and flexibility to make the necessary adjustments to **AAPS** in order to improve your outcomes. Just as it is nearly impossible to learn to play a sport by reading about the rules alone, the same can be said of **AAPS**.
+Norint sėkmingai naudoti **AAPS**, reikia aktyviai dalyvauti, analizuoti KG duomenis ir būti pasirengus keisti **AAPS** nustatymus, kad pagerintumėte rezultatus. Just as it is nearly impossible to learn to play a sport by reading about the rules alone, the same can be said of **AAPS**.
 
 #### Plan for delays and minor issues in getting everything set up and running
 
-In the preliminary stages of getting started with **AAPS**, you may experience difficulties getting all the components of the loop communicating effectively with each other (and potential followers), and when fine-tuning your settings. Some glitches cannot be resolved until **AAPS** is used in everyday life, but plenty of help is available on the Facebook group and Discord. Please plan accordingly and choose "good" times, like a quiet morning of a weekend (i.e. not late at night or when you are tired, or before a big meeting or travel) to troubleshoot and resolve issues.
+Pradėdami naudoti **AAPS**, galite susidurti su sunkumais užtikrinant visų ciklo komponentų (ir galimų sekėjų) tarpusavio ryšį bei tikslinant nustatymus. Some glitches cannot be resolved until **AAPS** is used in everyday life, but plenty of help is available on the Facebook group and Discord. Please plan accordingly and choose "good" times, like a quiet morning of a weekend (i.e. not late at night or when you are tired, or before a big meeting or travel) to troubleshoot and resolve issues.
 
 #### Technology compatibility
 
-**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](../Getting-Started/CompatiblesCgms.md), [pump](../Getting-Started/CompatiblePumps.md) and [phone](../Getting-Started/Phones.md) sections.
+**AAPS** suderinama tik su tam tikromis insulino pompomis, NGJ ir telefonais, o kai kurios technologijos ne visose šalyse prieinamos. Kad nepatirtumėte nusivylimo ar susierzinimo, perskaitykite skyrius apie [NGJ](../Getting-Started/CompatiblesCgms.md), [pompas](../Getting-Started/CompatiblePumps.md) ir [telefonus](../Getting-Started/Phones.md).
 
 #### App build time and progressing to full looping
 
-The time to build the **AAPS** app depends on your level of expertise and technical ability. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build **AAPS**. The process will significantly speed up for newer **AAPS** versions, as you become more experienced.
+**AAPS** programėlės kūrimo trukmė priklauso nuo jūsų žinių ir techninių gebėjimų. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build **AAPS**. The process will significantly speed up for newer **AAPS** versions, as you become more experienced.
 
 Several parts of this documentation are dedicated to helping you through the build process:
 
@@ -88,7 +88,7 @@ Several parts of this documentation are dedicated to helping you through the bui
 
 - the [FAQ](../UsefulLinks/FAQ.md) answers common questions and explains the errors most likely to occur; and
 
-- the [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) hub collects solutions to the most frequent problems, organised by topic.
+- [Bendrojo trikčių šalinimo](../GettingHelp/GeneralTroubleshooting.md) puslapyje pagal temas surinkti dažniausių problemų sprendimai.
 
 How long it takes to get to closed looping depends on the individual; an approximate timeline for reaching full looping with **AAPS** is given [below](#preparing-how-long-will-it-take).
 
@@ -105,9 +105,9 @@ How you save the keystore depends on your build method:
 
 - **Android Studio (computer) build**: the keystore is created during the build — see [Generate signed APK](#Building-APK-generate-signed-apk) for instructions on where to save it.
 - **AAPS Builder**: keep the backup file `aaps-keystore.jks` the setup page offered when you created your key, with its password and alias. If you uploaded your own keystore, keep that file.
-- **Browser build with a fork**: use the dedicated [Export keystore](#ci-keystore-export) workflow to download a copy to your Google Drive.
+- **Kūrimas naršyklėje naudojant fork**: norėdami atsisiųsti kopiją į savo „Google Drive“, naudokite tam skirtą darbo eigą (workflow) [Export keystore](#ci-keystore-export).
 
-This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year.
+This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. Vidutiniškai **AAPS** reikės atnaujinti 2 kartus per metus.
 
 In addition, **AAPS** provides the ability to [export all your configuration settings](../Maintenance/ExportImportSettings.md). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
 
@@ -123,7 +123,7 @@ Please feel free to reach out to the AAPS community if there is anything you fee
 
 
 
-#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
+#### [Kur gauti pagalbos](../GettingHelp/WhereCanIGetHelp.md)?
 
 This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
 
@@ -138,7 +138,7 @@ This diagram provides an overview of the key components (both hardware and softw
 ![preparing_overview](../images/preparing_images/AAPS_preparing_overview_01.png)
 
 
-In addition to the three basic hardware components (phone, pump, glucose sensor), we also need: 1) The **AAPS** app 2) A reporting server and 3) A continuous glucose monitor (CGM) app
+Be trijų pagrindinių aparatinės įrangos komponentų (telefono, pompos, gliukozės jutiklio), dar reikia: 1) **AAPS** programėlės 2) ataskaitų serverio ir 3) nuolatinio gliukozės jutiklio (NGJ) programėlės
 
 ### 1) An Android Phone Application: **AAPS**
 
@@ -146,51 +146,51 @@ In addition to the three basic hardware components (phone, pump, glucose sensor)
 
 ### 2) A reporting server: Nightscout (Tidepool*)
 
-In order to fully take advantage of **AAPS**, you need to set up a Nightscout server. You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout is used to collect data from **AAPS** over time and can generate detailed reports correlating CGM and insulin patterns. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. Attempting to analyze your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene. Tidepool is also available as an alternative to Nightscout.
+Kad galėtumėte visapusiškai naudotis **AAPS**, turite sukonfigūruoti Nightscout serverį. You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout laikui bėgant kaupia duomenis iš **AAPS** ir gali rengti išsamias ataskaitas, susiejančias NGJ bei insulino duomenų tendencijas. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. Bandymas vertinti diabeto kontrolę atskirai žiūrint NGJ ir pompos duomenis primena automobilį su aklu vairuotoju, kuriam keleivis apibūdina vaizdą. Vietoj Nightscout taip pat galima naudoti Tidepool.
 
-### 3) CGM sensor app
+### 3) NGJ jutiklio programėlė
 
-Depending on your glucose sensor/CGM, you will need a compatible app for receiving glucose readings and sending them to **AAPS**. The different options are shown below and more information is given in the [compatible CGMs section](../Getting-Started/CompatiblesCgms.md):
+Priklausomai nuo gliukozės jutiklio / NGJ, reikės suderinamos programėlės, kuri priimtų gliukozės rodmenis ir siųstų juos į **AAPS**. Skirtingi variantai pateikti toliau. Daugiau informacijos rasite skyriuje [Suderinami NGJ](../Getting-Started/CompatiblesCgms.md):
 
 ![dexcom_options](../images/preparing_images/AAPS_connectivity_Dex_02.png) ![libre_options](../images/preparing_images/AAPSconnectivity_libre.png) ![eversense_options](../images/preparing_images/AAPS_connectivity_eversense.png)
 
 ### Maintenance of the **AAPS** system
 
-Both **Nightscout** and **AAPS** must be updated approximately once a year, as improved versions are released. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Notification of these updates will be given on the Facebook groups and Discord servers. The release notes will make it clear what the scenario is. There are likely to be many people asking similar questions to you at update time, and you will have support for performing the updates.
+Tiek **Nightscout**, tiek **AAPS** reikia atnaujinti maždaug kartą per metus, kai išleidžiamos patobulintos versijos. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Notification of these updates will be given on the Facebook groups and Discord servers. Versijų pastabose bus aiškiai nurodyta, kuris atvejis taikomas. There are likely to be many people asking similar questions to you at update time, and you will have support for performing the updates.
 
 (preparing-how-long-will-it-take)=
 ## How long will it take to set everything up?
 
-As mentioned earlier, using **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
+As mentioned earlier, using **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Šiuo metu numatoma, kad **AAPS** programėlės kūrimas, **AAPS** ir **NGJ** programinės įrangos diegimas bei konfigūravimas ir perėjimas nuo atviro ciklo prie hibridinio uždaro ciklo su **AAPS** iš viso užtrunka maždaug 4–6 mėnesius. Todėl rekomenduojama kuo greičiau imtis **AAPS** programėlės kūrimo ir pirmųjų mokymo etapų, net jei vis dar naudojate kitą insulino tiekimo sistemą (iki 5 mokymo etapo galite naudoti virtualią pompą).
 
-Some of the objectives require a given amount of days to pass to make sure you understand the new functionality. It is not possible to bypass this waiting time; these minimum waiting times have been set for your own safety.
+Kai kuriuose mokymo etapuose reikia palaukti nustatytą dienų skaičių, kad įsitikintumėte, jog suprantate naują funkciją. Šio laukimo laiko apeiti neįmanoma. Šie mažiausi laukimo laikai nustatyti jūsų pačių saugumui.
 
 Here is an approximate timeframe:
 
-| Tasks                                                         |           Approx time            |
-| ------------------------------------------------------------- |:--------------------------------:|
-| Initial reading of the documentation                          |             1-2 days             |
-| Configuring GitHub to allow the browser build                 |            1-4 hours             |
-| Setting up a reporting server                                 |              1 hour              |
-| Installing a CGM app (xDrip, BYODA, …)                        |              1 hour              |
-| Configuring CGM → xDrip → AAPS initially                      |              1 hour              |
-| Configuring AAPS → pump initially                             |              1 hour              |
-| Configuring AAPS → Nightscout/Tidepool (reporting only)       |              1 hour              |
-| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers     |              1 hour              |
-| Objective 1: Setting up visualization and monitoring          |              1 hour              |
-| Objective 2: Learn how to control AAPS                        |             2 hours              |
-| Objective 3: Prove your knowledge                             |          Up to 14 days           |
-| Tikslas 4: pradėkite naudoti Atvirą ciklą                     |        Minimum of 7 days         |
-| Objective 5: Understanding your open loop                     |              7 days              |
-| Objective 6: Starting to close the loop (Low Glucose Suspend) |   Minimum of 5, up to 14 days    |
-| Objective 7: Tuning the closed loop                           |  Minimum of 1 day, up to 7 days  |
-| Objective 8: Adjust basals and ratios, enable Autosens        | Minimum of 7 days, up to 14 days |
-| Objective 9: Enabling Super Micro Bolus (SMB)                 |        Minimum of 28 days        |
-| Objective 10: Automation                                      |        Minimum of 28 days        |
+| Tasks                                                                        |           Approx time            |
+| ---------------------------------------------------------------------------- |:--------------------------------:|
+| Initial reading of the documentation                                         |             1-2 days             |
+| GitHub konfigūravimas, kad būtų galima kurti programėlę naršyklėje           |           1-4 valandos           |
+| Setting up a reporting server                                                |              1 hour              |
+| NGJ programėlės diegimas (xDrip, BYODA, …)                                   |              1 hour              |
+| Pradinis NGJ → xDrip → AAPS konfigūravimas                                   |              1 hour              |
+| Configuring AAPS → pump initially                                            |              1 hour              |
+| Configuring AAPS → Nightscout/Tidepool (reporting only)                      |              1 hour              |
+| Pasirinktinai: Nightscout ↔ **AAPS** & NSFollowers konfigūravimas            |              1 hour              |
+| 1 mokymo etapas: vizualizacijos ir stebėjimo nustatymas                      |              1 hour              |
+| 2 mokymo etapas: Išmokite valdyti AAPS                                       |            2 valandos            |
+| 3 mokymo etapas: Pasitikrinkite žinias                                       |          Up to 14 days           |
+| 4 mokymo etapas: Aktyvuojamas atviras ciklas                                 |        Minimum of 7 days         |
+| 5 mokymo etapas: supraskite savo atvirą ciklą                                |             7 dienos             |
+| 6 mokymo etapas: pradėkite uždaryti ciklą (Stabdymas esant žemai glikemijai) |   Minimum of 5, up to 14 days    |
+| 7 mokymo etapas: uždaro ciklo derinimas                                      |  Minimum of 1 day, up to 7 days  |
+| 8 mokymo etapas: koreguokite valandinę bazę ir santykius, įjunkite Autosens  | Minimum of 7 days, up to 14 days |
+| 9 mokymo etapas: supermikroboluso (SMB) įjungimas                            |        Minimum of 28 days        |
+| 10 mokymo etapas: Automatizacija                                             |        Minimum of 28 days        |
 
 Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
 
-## Requirements
+## Reikalavimai
 
 ### Medical considerations
 
@@ -198,20 +198,20 @@ In addition to the medical warnings in the [safety section](#preparing-safety-fi
 
 #### Insulin choice
 
-**AAPS** calculations are based on insulin concentrations of 100U/ml (same as pump’s standard). You configure your insulin in **Manage → Insulin settings**: set its **Peak** and **DIA**, or use **Load peak from** to fill in the standard peak time of one of the presets:
+**AAPS** skaičiavimai grindžiami 100 V/ml insulino koncentracija (tokia pati kaip standartinė pompos koncentracija). Insuliną nustatote skiltyje **Valdymas → Insulino nustatymai**: įveskite **Pikas** ir **IVT** reikšmes arba naudokite **Įkelti piko reikšmę iš**, kad būtų įrašytas vieno iš ruošinių standartinis piko laikas:
 
-- **Novorapid** (also for Humalog and NovoLog)
+- **Novorapid** (taip pat Humalog ir NovoLog)
 - **Fiasp**
 - **Lyumjev**
 
-Advanced users can enter any peak time (35 to 120 minutes) directly, for example for a mixture of insulins. See [Insulin settings](#Config-Builder-insulin).
+Patyrę naudotojai gali tiesiogiai įvesti bet kokį piko laiką (nuo 35 iki 120 minučių), pavyzdžiui, kai naudojamas insulinų mišinys. Žr. [Insulino nustatymai](#Config-Builder-insulin).
 
 
 ### Technical
 
 This documentation aims to reduce the technical expertise required to an absolute minimum. To build the **AAPS** app, you have several options — see [Building AAPS](../SettingUpAaps/BuildingAaps.md) for an overview:
 
-- **Browser build** (recommended): build the app directly from your smartphone using GitHub Actions, with no computer or Android Studio required. With [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) you only need a GitHub account: you download the app directly from GitHub. The fork method also needs a Google account to store the app in your Google Drive.
+- **Browser build** (recommended): build the app directly from your smartphone using GitHub Actions, with no computer or Android Studio required. Naudojant [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) reikia tik GitHub paskyros: programėlę atsisiunčiate tiesiai iš GitHub. Fork metodui taip pat reikia Google paskyros programėlei išsaugoti Google Drive.
 - **Android Studio build**: build the app on your computer using Android Studio. This is mostly used by developers who intend to make code changes.
 - **Command-line build**: for users who prefer to build locally without installing Android Studio.
 
@@ -221,29 +221,29 @@ Beyond building the app, you also need to set up a reporting server, configure s
 
 #### AAPS and Android Versions
 
-The current version of **AAPS** (4.0) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), Android 16 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+Dabartinei **AAPS** versijai (4.0) reikalingas išmanusis telefonas su Google **Android 12.0 arba naujesne versija**. If you are considering buying a new phone, (as of January 2026), Android 16 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. Tačiau naudotojams, negalintiems naudoti įrenginio su Android 12.0 ar naujesne versija, vis dar prieinamos ankstesnės **AAPS** versijos, suderinamos su senesnėmis Android versijomis. Žr. [versijų pastabas](#maintenance-android-version-aaps-version).
 
 #### Smartphone model choice
 The exact model you buy depends on the desired function(s). You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
 
-Users are encouraged to keep their phone Android version up-to-date, including with security parameters. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
+Naudotojams rekomenduojama nuolat atnaujinti telefono Android versiją, įskaitant saugos naujinimus. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
 
 ```{admonition} Delaying Samsung phone updates
 :class: warning
-Samsung has an unfortunate track record of forcing updates on their phones, which can cause Bluetooth connectivity issues. To disable these forced updates, you need to switch the phone to "developer mode":
+Deja, Samsung yra žinoma tuo, kad priverstinai atnaujina savo telefonus, o tai gali sukelti Bluetooth ryšio problemų. Norėdami išjungti šiuos priverstinius atnaujinimus, telefone turite įjungti kūrėjo režimą („developer mode“):
 
-1. Go to **Settings** > **About phone** > **Software information**, then tap **Build number** until it confirms you have unlocked developer mode.
-2. Go back to the main **Settings** menu, where you should see a new **Developer options** menu item.
-3. Open **Developer options**, scroll to find **Auto system update**, and turn it off.
+1. Eikite į **Settings** > **About phone** > **Software information**, tada kelis kartus palieskite **Build number** (versijos numeris), kol bus patvirtinta, kad kūrėjo režimas atrakintas.
+2. Grįžkite į pagrindinį **Settings** (nustatymų) meniu. Jame turėtų atsirasti naujas meniu punktas **Developer options** (kūrėjo parinktys).
+3. Atidarykite **Developer options**, suraskite **Auto system update** (automatinis sistemos atnaujinimas) ir jį išjunkite.
 ```
 
 ```{admonition} Google Play Protect potential issue
 :class: warning
-There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. If this happens, you will have to go to the Google Play options and disable **Google Play Protect**. Not all phone models or all Android versions are affected.
+There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. Jei taip nutinka, eikite į Google Play parinktis ir išjunkite **Google Play Protect**. Tai paliečia ne visus telefonų modelius ir ne visas Android versijas.
 ```
 
 ```{admonition} Android developer verification
 :class: note
-From September 2026, Google is gradually introducing [Android developer verification](#android-developer-verification), which changes how a self-built app is installed on the phone. Building **AAPS** is not affected, and free installation methods remain available — see the linked page for details.
+Nuo 2026 m. rugsėjo Google palaipsniui diegia [Android kūrėjų tapatybės patikrinimą](#android-developer-verification), kuris keičia, kaip savarankiškai sukurta programėlė įdiegiama telefone. Tai neturi įtakos **AAPS** kūrimui, o nemokami įdiegimo būdai lieka prieinami. Daugiau informacijos rasite susietame puslapyje.
 ```
 
