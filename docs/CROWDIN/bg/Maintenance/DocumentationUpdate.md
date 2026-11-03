@@ -6,7 +6,7 @@ tocdepth: 1
 
 ## Октомври 2026 г.
 
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 8, now maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository. Setting up is one step shorter: [step 1](#aaps-builder-step1) of the [setup page](#aaps-builder-setup) creates your private repository as a copy of that repository, with the build workflow already in it, so there is no workflow to add any more. From now on the build steps are updated for you: your repository runs the version released by the AAPS developers at every build, without any change on your side (and still no automatic build). The build itself does not change, and your existing repository keeps working. To get these automatic updates, replace your `.github/workflows/build.yml` once as explained in [Updating AAPS](#aaps-builder-updates). Your `KEYSTORE_SET` secret stays as it is. The optional [Google Drive step](#aaps-builder-google-drive) now works on the setup page itself, on a phone or a computer: no preparation file needed @psonnera
+- [Компилиране в браузъра с AAPS Builder](#aaps-builder): работен процес за компилиране (build workflow) версия 8, която вече се поддържа от разработчиците на AAPS в хранилището (repository) [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder). Настройването е с една стъпка по-кратко: [стъпка 1](#aaps-builder-step1) на [страницата за настройка](#aaps-builder-setup) създава вашето частно хранилище като копие на това хранилище, в което вече има работния процес за компилиране, така че вече не трябва да добавяте работен процес. Отсега нататък стъпките за компилиране се актуализират вместо вас: при всяка компилация вашето хранилище използва версията, издадена от разработчиците на AAPS, без да променяте нищо (и все още няма автоматично компилиране). Самото компилиране не се променя и вашето съществуващо хранилище продължава да работи. За да получавате тези автоматични актуализации, заменете веднъж своя `.github/workflows/build.yml`, както е обяснено в [Актуализиране на AAPS](#aaps-builder-updates). Вашият секрет `KEYSTORE_SET` остава непроменен. Незадължителната [стъпка за Google Drive](#aaps-builder-google-drive) вече работи на самата страница за настройка, на телефон или на компютър: не е нужен подготвителен файл @psonnera
 - [Смарт часовници и AAPS](#watches-external-companion-apps): разделът **Samsung Tizen** става **Външни приложения за проследяване** и изброява приложенията, които четат излъчването на **AAPS** (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 и по-новите версии се свързват директно с **AAPS** без xDrip+: добавени са стъпки за настройка, обобщени и в [Конфигурация](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) и [Дистанционно наблюдение](../RemoteFeatures/RemoteMonitoring.md). Часовници Bluejay: GTS е спрян от производство, актуализиран е текущият модел @psonnera
 - [Компилиране в браузъра с AAPS Builder](#aaps-builder): работен процес за компилиране (build workflow) версия 6. Стъпките на компилирането вече използват точни, проверени версии на инструментите и машината за компилиране на GitHub, а компилацията ясно обяснява, когато в секрета `KEYSTORE_SET` е поставен грешен текст. [Страницата за настройка](#aaps-builder-setup) вече е част от документацията и е преведена, проверява потребителското ви име в GitHub и има по-ясна помощ за секрета, за „Page not found“ (404) и за приложението GitHub. Ако във вашия `.github/workflows/build.yml` пише версия 5 или по-стара, заменете го, както е обяснено в [Актуализиране на AAPS](#aaps-builder-updates) @psonnera
 - [Уеб инсталатор на AAPS](#web-installer): вече е страница от документацията, преведена като другите. Старият адрес продължава да работи @psonnera
@@ -38,7 +38,7 @@ tocdepth: 1
 
 ## Януари 2025 г.
 
-- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
+- Версия [3.4](#version3400) и обобщена актуализация на документацията (Съветник, версии за компилиране с компютър, Config Builder)
 - Актуализация на списъка с CGM. Премахнати са Dexcom G5, Tomato и Glimp.
 - [Интерфейс за смяна на мястото](#Aapsscreens-site-rotation)
 - [Текущ режим](#AapsScreens-running-mode)
@@ -52,7 +52,7 @@ tocdepth: 1
 
 - DiaKEM: новите инсталации не работят след надграждането на сървърите @psonnera
 - Премахнато е модифицираното приложение за Libre 2 (остаряло): не работи с новите сензори @psonnera
-- Reworked Omnipod DASH page @XiTatiON
+- Преработена е страницата за Omnipod DASH @XiTatiON
 
 ## Август 2025 г.
 
@@ -76,15 +76,15 @@ tocdepth: 1
 ## Ноември 2024 г.
 
 - Актуализация на [Вашият профил в AAPS](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
+- Преработено е съдържанието за [смарт часовниците с Wear OS](../WearOS/BuildingAapsWearOS.md) @psonnera
 
 ## Октомври 2024 г.
 
 - Актуализация на няколко страници:
-  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [Колко време ще отнеме?](#preparing-how-long-will-it-take), [Преглед на компонентите](../Getting-Started/ComponentOverview.md), [Изпълнение на целите](../SettingUpAaps/CompletingTheObjectives.md), [Вашият профил в AAPS](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) и [Опции](../SettingUpAaps/Preferences.md), [Екраните на AAPS](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [Калкулиране на COB](../DailyLifeWithAaps/CobCalculation.md), [Динамично ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Указания за компилиране с Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
+- Техническа работа (процес за публикуване на документацията, организация на файловете...) @psonnera и @emilise
 
 ***
 
