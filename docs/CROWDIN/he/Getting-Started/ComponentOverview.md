@@ -1,6 +1,6 @@
 # Component Overview
 
-**AAPS** is not just a (self-built) application; it is one of several modules of your closed loop system. Before deciding on components, it is a good idea to look at the component documentation.
+**AAPS** הוא לא רק אפליקציה (שבונים בעצמכם); הוא אחד מכמה רכיבים של מערכת הלולאה הסגורה שלכם. לפני שבוחרים רכיבים, כדאי לקרוא את התיעוד של כל רכיב.
 
 ![Components overview](../images/modules.png)
 
@@ -11,79 +11,79 @@ The foundation of **AAPS** safety features discussed in this documentation is bu
 
 Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
 
-Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
+Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. השילוב עם מערכת שמפחיתה קצבים בזאליים כדי להעלות את רמת הסוכר מסוכן במיוחד, מכיוון שבגלל הגליפלוזין עלייה זו ברמת הסוכר עלולה לא להתרחש, ועלול להיווצר מצב מסוכן של חוסר באינסולין. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
 ## Necessary Modules
 
 ### Good individual dosage algorithm for your diabetes therapy
 
-Even though this is not something to create or buy, it is probably the most underestimated 'module' — but it is essential. When you let an algorithm help manage your diabetes, it needs to know the right settings so it does not make severe mistakes. Even if you are still missing other modules, you can already verify and adapt your **Profile** in collaboration with your diabetes team.
+זה לא משהו שיוצרים או קונים, אבל זה כנראה ה"רכיב" שהכי ממעיטים בחשיבותו - והוא חיוני. כשנותנים לאלגוריתם לעזור בניהול הסוכרת, הוא צריך לדעת את ההגדרות הנכונות, כדי שלא יעשה טעויות חמורות. Even if you are still missing other modules, you can already verify and adapt your **Profile** in collaboration with your diabetes team.
 
 The **Profile** includes:
 
-- BR (Basal rates): provides background insulin;
+- BR (קצבים בזאליים): מספק אינסולין רקע;
 - ISF (insulin sensitivity factor): how much your blood glucose level will be reduced by 1 unit of insulin;
-- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin.
+- CR (יחס פחמימות): כמה גרם פחמימות מכוסים על ידי יחידת אינסולין אחת.
 
 Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
 
-Alongside your **Profile**, you also need to configure your **insulin** in **Manage → Insulin settings**, including its DIA (duration of insulin action) — see [Insulin settings](#Config-Builder-insulin-dia).
+בנוסף ל**פרופיל**, יש להגדיר גם את ה**אינסולין** ב-**ניהול ← הגדרות אינסולין**, כולל ה-DIA שלו (משך פעולת האינסולין) - ראו [הגדרות אינסולין](#Config-Builder-insulin-dia).
 
-More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
+מידע נוסף על ה**פרופיל** [בדף המיוחד לנושא](../SettingUpAaps/YourAapsProfile.md).
 
 ### Phone
 
-See the dedicated page [Phones](../Getting-Started/Phones.md).
+ראו את הדף המיוחד [טלפונים](../Getting-Started/Phones.md).
 
 ### Insulin pump
 
-See the dedicated page [Compatible Pumps](../Getting-Started/CompatiblePumps.md).
+ראו את הדף המיוחד [משאבות תואמות](../Getting-Started/CompatiblePumps.md).
 
-**Advantages and disadvantages of some pump models**
+**יתרונות וחסרונות של כמה דגמי משאבות**
 
-The Combo, the Insight and the older Medtronic are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. And the battery is a default one you can buy at any gas station, 24-hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+ה-Combo, ה-Insight וה-Medtronic הישנות הן משאבות אמינות, ומתאימות ללולאה. היתרון של ה-Combo הוא שאפשר לבחור מבין סוגים רבים יותר של סטים לאינפוזיה, כי יש לה חיבור Luer-Lock סטנדרטי. והסוללה שלה רגילה: אפשר לקנות אותה בכל תחנת דלק או בכל חנות נוחות שפתוחה 24 שעות, ואם ממש צריך, אפשר "לשאול" אותה מהשלט של הטלוויזיה בחדר המלון ;-).
 
-The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
+אבל היתרונות של DanaR/RS ו-Dana-i לעומת ה-Combo כמשאבה המועדפת הם:
 
 - Initial pairing is simpler with the Dana-i/RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
-- So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time when the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
+- So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. עם זאת, נדרש זמן חיבור ארוך יותר, ולכן יש יותר זמן שבו חיבור ה-BT עלול להתנתק. זה לא נוח אם מתרחקים מהטלפון בזמן מתן בולוס ובישול.
 - The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. At nighttime, you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable so that it does neither beep nor vibrate.
 - Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon as some CGM values are in.
 - All pumps **AAPS** can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
 
 ### מקור ערכי הסוכר
 
-See the dedicated page [Compatible CGMs](../Getting-Started/CompatiblesCgms.md).
+ראו את הדף המיוחד [מערכות CGM תואמות](../Getting-Started/CompatiblesCgms.md).
 
 ### **AAPS**-.apk file
 
-The main component of the system. In order to install the app, you have to build the apk-file yourself first. Instructions are [here](../SettingUpAaps/BuildingAaps.md).
+הרכיב הראשי של המערכת. כדי להתקין את האפליקציה, צריך קודם לבנות את קובץ ה-apk בעצמכם. ההוראות נמצאות [כאן](../SettingUpAaps/BuildingAaps.md).
 
 ### Reporting server
 
-A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS: [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
+שרת דיווח מציג את נתוני הסוכר והטיפולים שלכם, ויוצר דוחות לניתוח מפורט. כרגע יש שני שרתי דיווח שאפשר להשתמש בהם עם AAPS: [Nightscout](#SettingUpTheReportingServer-nightscout) ו-[Tidepool](#SettingUpTheReportingServer-tidepool). שניהם מאפשרים להציג את נתוני הסוכרת שלכם לאורך זמן, ונותנים סטטיסטיקות על **זמן בטווח** (TIR) ומדדים אחרים.
 
-The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set one up, as it is required to fulfill [**Objective 1**](#objectives-objective1).
+שרת הדיווח אינו תלוי ברכיבים האחרים. אם לא רוצים להשתמש בשרת דיווח, חשוב לדעת שהוא אינו חובה להפעלת **AAPS** לאורך זמן. אבל עדיין צריך להגדיר שרת כזה, כי הוא נדרש כדי להשלים את [**משימה 1**](#objectives-objective1).
 
-Additional information on how to set up your reporting server can be found [here](../SettingUpAaps/SettingUpTheReportingServer.md).
+מידע נוסף על הגדרת שרת הדיווח נמצא [כאן](../SettingUpAaps/SettingUpTheReportingServer.md).
 
 ## Optional Modules
 
 ### Smartwatch
 
-You can choose any smartwatch running **Wear OS 3** or newer. See [Watches](../Getting-Started/Watches.md) for details.
+אפשר לבחור כל שעון חכם עם **Wear OS 3** ומעלה. פרטים נוספים בדף [שעונים חכמים](../Getting-Started/Watches.md).
 
-Users are creating a [list of tested phones and watches](#Phones-list-of-tested-phones). There are different watchfaces for use with **AAPS**, which you can find [here](../WearOS/WearOsSmartwatch.md).
+המשתמשים יוצרים [רשימה של טלפונים ושעונים שנבדקו](#Phones-list-of-tested-phones). יש פני שעון שונים לשימוש עם **AAPS**, ואפשר למצוא אותם [כאן](../WearOS/WearOsSmartwatch.md).
 
 ### xDrip
 
-Even if you don't need the xDrip app as your **BG Source**, you can still use it, for example for alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when an alarm should be active, choose whether it can override silent mode, etc. Some xDrip information can be found [here](../CompatibleCgms/xDrip.md). Please be aware that the documentation for this app is not always up to date, as it changes quickly.
+גם אם אין צורך באפליקציית xDrip כ**מקור ערכי הסוכר**, עדיין אפשר להשתמש בה, למשל להתראות או לתצוגה אחרת של רמת הסוכר. אפשר להגדיר כמה התראות שרוצים, לקבוע מתי כל התראה פעילה, לבחור אם היא יכולה לעקוף את מצב השקט, ועוד. מידע על xDrip נמצא [כאן](../CompatibleCgms/xDrip.md). שימו לב: התיעוד של האפליקציה הזו לא תמיד מעודכן, כי היא משתנה מהר.
 
 ## What to do while waiting for modules
 
-It sometimes takes a while to get all the modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
+לפעמים לוקח זמן להשיג את כל הרכיבים שנדרשים כדי לסגור את הלולאה. אבל אין מה לדאוג, יש הרבה דברים שאפשר לעשות בזמן ההמתנה. **חובה** לבדוק ולהתאים (לפי הצורך) את הקצבים הבזאליים (BR), יחס האינסולין לפחמימות (IC), גורמי הרגישות לאינסולין (ISF) וכו'. ואולי לולאה פתוחה היא דרך טובה לבדוק את המערכת ולהכיר את **AAPS**. במצב זה, **AAPS** נותן המלצות לטיפול, ואתם מבצעים אותן ידנית.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../UsefulLinks/BackgroundReading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+אפשר להמשיך לקרוא כאן את התיעוד, ליצור קשר עם משתמשי לולאה אחרים ברשת או מחוצה לה, [לקרוא](../UsefulLinks/BackgroundReading.md) מסמכים או את מה שמשתמשי לולאה אחרים כותבים (אבל צריך להיזהר: לא כל מה שכתוב נכון, ולא הכול מתאים לכם).
 
-**Done?** If you have your **AAPS** components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective, and set up your hardware.
+**סיימתם?** אם כל רכיבי ה-**AAPS** שלכם מוכנים (מזל טוב!), או לפחות מספיק רכיבים כדי להתחיל במצב לולאה פתוחה, קודם יש לקרוא את [תיאור המשימות](../SettingUpAaps/CompletingTheObjectives.md) לפני כל משימה חדשה, ולהגדיר את החומרה.
