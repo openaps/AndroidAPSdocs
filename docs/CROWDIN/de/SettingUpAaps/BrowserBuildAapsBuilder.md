@@ -233,7 +233,7 @@ GitHub zeigt **Page not found** (404)? Prüfe zuerst, ob Du in diesem Browser be
 
 3. Tippe auf **Run workflow**. Ein kleines Formular öffnet sich:
    - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
-   - **Variant**: Behalte `fullRelease` für die normale Nutzung mit einer Pumpe. Die anderen Varianten werden unter [Build-Varianten](#browserbuild-variant) erklärt. `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
+   - **Variant**: Behalte `fullRelease` für die normale Nutzung mit einer Pumpe. Die anderen Varianten werden unter [Build-Varianten](#browserbuild-variant) erklärt. `aapsclient3Release` erstellt **AAPSClient3**, verfügbar ab **AAPS** Version 4.0 (siehe [Über AAPSClient, AAPSClient2 und AAPSClient3](#remotecontrol-aapsclient-versions)).
    - Tippe auf die grüne Schaltfläche **Run workflow**.
 
    ![Run workflow form with latest and fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
