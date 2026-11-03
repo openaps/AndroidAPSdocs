@@ -1,25 +1,25 @@
-# Search the documentation
+# Dokümantasyonda arama
 
-The documentation contains a lot of information. If you are looking for a specific topic, term or setting, using the search feature is often faster than browsing through the menu.
+Dokümantasyon çok fazla bilgi içerir. Belirli bir konu, terim veya ayar arıyorsanız, arama özelliğini kullanmak menüde gezinmekten çoğu zaman daha hızlıdır.
 
-## How to search
+## Nasıl aranır
 
-The search box is located at the top of the navigation panel on the left side of the screen.
+Arama kutusu, ekranın sol tarafındaki gezinme panelinin en üstündedir.
 
 ```{note}
-On smaller screens (such as a phone) the navigation panel is hidden. Tap the menu (☰) icon in the top left corner to open it and reveal the search box.
+Daha küçük ekranlarda (örneğin bir telefonda) gezinme paneli gizlidir. Paneli açmak ve arama kutusunu göstermek için sol üst köşedeki menü (☰) simgesine dokunun.
 ```
 
-1. Type one or more keywords into the search box.
-2. Press `Enter` or tap the search icon.
-3. A results page opens, listing every page where your keywords appear. Click a result to jump to the matching page.
+1. Arama kutusuna bir veya daha fazla anahtar kelime yazın.
+2. `Enter` tuşuna basın veya arama simgesine dokunun.
+3. Anahtar kelimelerinizin geçtiği tüm sayfaları listeleyen bir sonuç sayfası açılır. Eşleşen sayfaya gitmek için bir sonuca tıklayın.
 
-## Tips for better results
+## Daha iyi sonuçlar için ipuçları
 
-- Use specific terms (for example `temp target` or `autosens`) rather than full sentences.
-- Searching with several keywords returns the pages containing those words. Start broad and add keywords to narrow the results.
-- The search only covers the language and version of the documentation you are currently reading. If you cannot find something, try switching to the English version, which is the most complete (see [Change language and version](./ChangeLanguageVersion.md)).
+- Tam cümleler yerine belirli terimler kullanın (örneğin `temp target` veya `autosens`).
+- Birkaç anahtar kelimeyle arama yaptığınızda, bu kelimeleri içeren sayfalar gösterilir. Geniş bir aramayla başlayın ve sonuçları daraltmak için anahtar kelimeler ekleyin.
+- Arama yalnızca şu anda okuduğunuz dokümantasyonun dilini ve sürümünü kapsar. Bir şey bulamazsanız, en eksiksiz olan İngilizce sürüme geçmeyi deneyin (bkz. [Dili ve sürümü değiştirme](./ChangeLanguageVersion.md)).
 
 ```{note}
-The search index is built automatically. Very recently added content may take some time to become searchable.
+Arama dizini otomatik olarak oluşturulur. Çok yeni eklenen içeriğin aramada çıkması biraz zaman alabilir.
 ```
