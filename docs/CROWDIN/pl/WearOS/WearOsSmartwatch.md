@@ -2,7 +2,7 @@
 
 Poniższe instrukcje dotyczą apk **AAPS Wear**, który musisz zbudować. Jeśli jeszcze go nie zbudowałeś, zobacz instrukcję [tutaj](../WearOS/BuildingAapsWearOS.md). Podczas budowania użyj tego samego pliku magazynu kluczy (keystore), którego użyłeś dla apk **AAPS** na telefon.
 
-Część tych informacji przyda się też dla apk **AAPSClient** i **PumpControl** **Wear**. Each **Wear** app will communicate with its matching phone app. Na przykład: aplikacji **AAPSClient Wear** możesz użyć do wyświetlania danych z **AAPSClient**, a nie z **AAPS**. Gdy obok siebie zainstalowanych jest kilka wersji klienta (**AAPSClient**, **AAPSClient2**, **AAPSClient3**), kafelki każdej z nich mają mały nagłówek w kolorze tej wersji, dzięki czemu odróżnisz je podczas przesuwania.
+Część tych informacji przyda się też dla apk **AAPSClient** i **PumpControl** **Wear**. Każda aplikacja **Wear** komunikuje się z pasującą do niej aplikacją na telefonie. Na przykład: aplikacji **AAPSClient Wear** możesz użyć do wyświetlania danych z **AAPSClient**, a nie z **AAPS**. Gdy obok siebie zainstalowanych jest kilka wersji klienta (**AAPSClient**, **AAPSClient2**, **AAPSClient3**), kafelki każdej z nich mają mały nagłówek w kolorze tej wersji, dzięki czemu odróżnisz je podczas przesuwania.
 
 ## Wersje Wear OS i zgodność
 
@@ -91,7 +91,7 @@ Zainstaluj apk **AAPS Wear** przez [Wear Installer 2](https://youtu.be/abgN4jQqH
 
 ```{admonition} Wear OS 5
 :class: warning
-Na Wear OS 5 tarczę AAPS trzeba wybrać przez Wear Installer 2 zaraz po instalacji aplikacji Wear: na końcu instalacji instalator proponuje tarczę **AAPS (Custom)**. Jeśli przypadkiem przełączysz na inną tarczę, powtórz instalację. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
+Na Wear OS 5 tarczę AAPS trzeba wybrać przez Wear Installer 2 zaraz po instalacji aplikacji Wear: na końcu instalacji instalator proponuje tarczę **AAPS (Custom)**. Jeśli przypadkiem przełączysz na inną tarczę, powtórz instalację. Zmiana ustawień tarczy (Tryb ciemny, Separator pod kolor itp.) może nie być możliwa.
 
 Jeśli klasyczna tarcza teraz u Ciebie działa, **wyłącz automatyczne aktualizacje zegarka**: następna aktualizacja oprogramowania prawdopodobnie ją zepsuje. Jeśli mimo to zaktualizujesz do Wear OS 6, przeczytaj sekcję powyżej: **AAPS** zainstaluje wtedy własną tarczę w nowym formacie.
 ```
@@ -104,7 +104,7 @@ Przykład: Galaxy Watch 4 i nowsze z One UI 8 Watch, Pixel Watch po aktualizacji
 
 Zainstaluj apk **AAPS Wear** przez [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). Klasyczne tarcze nie są dostępne. **AAPS** automatycznie instaluje tarczę wybraną na telefonie, zobacz [tarcza instalowana przez AAPS](#wearos-aaps-v4-watchface). Brak ograniczeń w działaniu **AAPS Wear**.
 
-## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
+## Jak skonfigurować smartwatch Samsung Galaxy Watch 4 z **AAPS**
 
 Ta sekcja jest dla osób, które dopiero zaczynają ze smartwatchami. Najpierw przedstawia podstawy popularnego zegarka **Galaxy Watch 4**, a potem krok po kroku pokazuje, jak skonfigurować **AAPS** na zegarku.
 
@@ -114,17 +114,17 @@ Tu znajdziesz podstawowe instrukcje konfiguracji dla [Galaxy Watch 5](https://ww
 
 ## Podstawowa znajomość smartwatcha
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+Po podstawowej konfiguracji zegarka według powyższego filmu otwórz Sklep Play na telefonie i pobierz te aplikacje: "Galaxy Wearable", „Samsung” oraz „Easy Fire tools” albo "Wear Installer 2".
 
 Na YouTube jest wiele filmów innych autorów, które pomogą Ci poznać nowy smartwatch, na przykład:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-Aplikacja „Galaxy Wearable” ma też sekcję z instrukcją obsługi. Otwórz Galaxy Wearable na telefonie, wyszukaj zegarek i spróbuj sparować zegarek z telefonem. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Zainstaluj ją na telefonie, a potem jeszcze raz spróbuj sparować zegarek z telefonem w aplikacji Wearable. Przejdź przez kilka menu i zaznacz różne ustawienia.
+Aplikacja „Galaxy Wearable” ma też sekcję z instrukcją obsługi. Otwórz Galaxy Wearable na telefonie, wyszukaj zegarek i spróbuj sparować zegarek z telefonem. Zależnie od wersji możesz zostać poproszony o instalację jeszcze jednej aplikacji, „galaxy watch 4 plugin”, ze Sklepu Play (pobieranie trwa chwilę). Zainstaluj ją na telefonie, a potem jeszcze raz spróbuj sparować zegarek z telefonem w aplikacji Wearable. Przejdź przez kilka menu i zaznacz różne ustawienia.
 
 ## Zakładanie konta Samsung
 
-Upewnij się, że konto e-mail, którego używasz do założenia konta Samsung, ma taką datę urodzenia, że użytkownik ma co najmniej 13 lat. W przeciwnym razie bardzo trudno zatwierdzić uprawnienia Samsung. Jeśli Twoje dziecko poniżej 13 lat ma konto Gmail i używasz tego adresu e-mail, nie możesz po prostu zmienić go na konto dla dorosłych. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. Następnego dnia konto zmieni się w konto dla dorosłych i możesz kontynuować zakładanie konta Samsung.
+Upewnij się, że konto e-mail, którego używasz do założenia konta Samsung, ma taką datę urodzenia, że użytkownik ma co najmniej 13 lat. W przeciwnym razie bardzo trudno zatwierdzić uprawnienia Samsung. Jeśli Twoje dziecko poniżej 13 lat ma konto Gmail i używasz tego adresu e-mail, nie możesz po prostu zmienić go na konto dla dorosłych. Jednym z obejść jest zmiana obecnej daty urodzenia tak, aby wiek wynosił 12 lat i 364 dni. Następnego dnia konto zmieni się w konto dla dorosłych i możesz kontynuować zakładanie konta Samsung.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
@@ -218,7 +218,7 @@ Pojawi się kod parowania Wi-Fi oraz adres IP i port:
 - Zobaczysz odpowiedź:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
 - W terminalu wpisz: <br>`adb devices`.<br> Powinieneś zobaczyć coś takiego:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
+- Teraz przejdź do folderu na komputerze, w którym jest apk Wear, i wpisz<br> `adb install wear-full.apk` <br>zamieniając wear-full.apk na nazwę swojego pliku apk.
 - Zobaczysz:<br> `Performing Streamed Install`<br> `Success`
 
 
@@ -235,7 +235,7 @@ Pojawi się kod parowania Wi-Fi oraz adres IP i port:
 **Parowanie:**
 
 - Zegarek: Debugowanie bezprzewodowe: zapisz adres IP.
-- Wear Installer: Enter the IP in the Wear Installer app.
+- Wear Installer: wpisz adres IP w aplikacji Wear Installer.
 - Wybierz parowanie nowego urządzenia, zapisz wyświetlony kod parowania i numer portu.
 - Wear Installer: wpisz kod parowania + spację + numer portu.
 - Wear Installer powinien zgłosić, że parowanie się udało. Jeśli nie, zamknij Wear Installer i spróbuj ponownie.
@@ -260,7 +260,7 @@ Ostatni krok to konfiguracja **AAPS** na telefonie, aby współpracował z **Wea
 
 Aby podawać bolus lub wykonywać inne akcje z zegarka, włącz też **Sterowanie z zegarka** w [Ustawienia > Wear](#preferences-wear).
 
-To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Następnie przesuwaj w prawo, aż dojdziesz do wszystkich tarcz **AAPS**.
+Aby zmienić tarczę zegarka na inną tarczę **AAPS**, przytrzymaj tarczę na ekranie głównym zegarka i dotknij **Dostosuj**. Następnie przesuwaj w prawo, aż dojdziesz do wszystkich tarcz **AAPS**.
 
 Jeśli plik **AAPS** Wear.apk został poprawnie zainstalowany na smartwatchu, będzie to wyglądać tak:
 
@@ -334,7 +334,7 @@ F - bateria telefonu
 
 G - dawka bazowa (w U/h przy standardowej dawce i w % przy TBR)
 
-H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - BGI (blood glucose impact, wpływ na glikemię) -> jak bardzo BG „powinna” rosnąć lub spadać tylko z powodu działania insuliny.
 
 I - węglowodany (aktywne węglowodany | e-carbs w przyszłości)
 
