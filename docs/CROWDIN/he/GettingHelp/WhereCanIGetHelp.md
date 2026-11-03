@@ -1,22 +1,22 @@
-# Where can I get help?
+# איפה אפשר לקבל עזרה?
 
-## I'm stuck; what should I do? Who can I ask?
+## נתקעתי. מה לעשות? Who can I ask?
 
-This project is based on volunteer work and a few rules apply to any requests for help to avoid unnecessary time being wasted by those who kindly pay it forward:
+הפרויקט מבוסס על עבודה התנדבותית, ולכן יש כמה כללים לכל בקשת עזרה. כך לא מבזבזים לשווא את הזמן של מי שעוזרים לאחרים בהתנדבות:
 
-* level 1: Read the docs (i.e. this Wiki) - there is now a search function to help you!
+* רמה 1: קראו את התיעוד (כלומר את ה-Wiki הזה) - יש בו עכשיו חיפוש שיעזור לכם!
 * level 2: Search the Facebook group, if there is not already an answer then ask your question in the [AndroidAPS Users Facebook group](https://www.facebook.com/groups/1900195340201874/)
-* level 3: If Facebook did not get results then ask in [discord](https://discord.gg/4fQUWHZ4Mw). Direct crossposts will be ignored/deleted on both channels to avoid duplicate answers. Don't forget that the majority of developers are in Europe so the response may not be 24/7; you may have to wait for several hours especially over weekends and holidays.
+* רמה 3: אם ב-Facebook לא נמצאה תשובה, שאלו ב-[discord](https://discord.gg/4fQUWHZ4Mw). פרסום של אותה שאלה ישירות בשני הערוצים ייענה בהתעלמות או יימחק בשניהם, כדי להימנע מתשובות כפולות. Don't forget that the majority of developers are in Europe so the response may not be 24/7; you may have to wait for several hours especially over weekends and holidays.
 * level 4: Create an [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md)
 * level 5: email *developers@aaps.app* (only if personal data is involved that should not go in a public channel and your problems have not been resolved in the other levels)
 
-For support on CGM sources please use the Facebook groups or Discord channels for that specific system (e.g. [xDrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
+לתמיכה במקורות CGM, השתמשו בקבוצות Facebook או בערוצי Discord של המערכת הספציפית (למשל [xDrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)). לתמיכה ב-Nightscout השתמשו ב-[CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/), כי למשתמשים שם יש ידע רב יותר מאשר לאנשים כאן, שכולם משתמשים במערכות שונות.
 
 ## Make sure to join the AndroidAPS users group on Facebook or Discord!
 
-Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and/or [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
+Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and/or [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw). ניתן לפרסם כאן כל שאלה על האלגוריתם, כל בעיה בהגדרת Android Studio ובבניית ה־APK, כל שאלה על השימוש באפליקציה וטיפים איך להפיק ממנה את המרב. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
 
-Please note that Facebook has recently removed external links shared within the **AAPS** Facebook group and this includes current and historic posts which contain external links to the **AAPS** Notes / Read the docs. For new users who are working through the Objectives and reviewing historic **AAPS** Facebook posts please search key terms as discussed within the **AAPS** notes for further assistance.
+שימו לב: לאחרונה הוסרו ב-Facebook קישורים חיצוניים ששותפו בקבוצת ה-Facebook של **AAPS**. זה כולל פוסטים חדשים וישנים עם קישורים חיצוניים אל **AAPS** Notes / Read the docs. משתמשים חדשים שעובדים על המשימות וקוראים פוסטים ישנים של **AAPS** ב-Facebook: לעזרה נוספת, חפשו את מילות המפתח כפי שהן מוסברות בהערות של **AAPS**.
 
 ## Other resources in English
 
@@ -58,7 +58,7 @@ Please note that Facebook has recently removed external links shared within the 
 
 ### Poland
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): קהילת AAPS דוברת פולנית וקבוצת תמיכה בסוכרת
 
 ### Sweden
 
