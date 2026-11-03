@@ -18,9 +18,9 @@
 
 **APK** = Android application Package (balík aplikácie pre Android). Inštalačný súbor softvéru. Ďalšie informácie → [Wiki – „Zostavenie AAPS“](../SettingUpAaps/BuildingAaps.md).
 
-**Autosens** = calculation of sensitivity to insulin over a 24-hour and an 8-hour window etc. Ďalšie informácie → [DIABETTECH – **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Autosens** = výpočet citlivosti na inzulín v 24-hodinovom a 8-hodinovom okne atď. Ďalšie informácie → [DIABETTECH – **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
-**Azure** = cloud computing platform to host **Nightscout** web app → see also **Nightscout**.
+**Azure** = cloudová platforma na hosťovanie webovej aplikácie **Nightscout** → pozrite aj **Nightscout**.
 
 **BAT** = stavová kontrolka slabej batérie pumpy, zobrazená v riadku stavu na hlavnej obrazovke **AAPS** → pozrite aj **CAN** / **RES** / **SEN**.
 
@@ -42,7 +42,7 @@
 
 **CGM** = Continuous Glucose Monitor (systém kontinuálneho monitorovania glukózy) → pozrite aj **FGM**.
 
-**Closed Loop** = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an **AAPS’s** algorithm and the user’s **Profile** settings without requiring the user’s approval. Further info → [Wiki - 'closed loop'](#KeyAapsFeatures-ClosedLoop) and see also **HCL** / **FCL**.
+**Uzavretý okruh** (Closed Loop) = systém uzavretého okruhu, ktorý automaticky upravuje podávanie bazálu používateľa podľa algoritmu **AAPS** a nastavení **profilu** používateľa, bez toho, aby to musel používateľ schváliť. Ďalšie informácie → [Wiki – „uzavretý okruh“](#KeyAapsFeatures-ClosedLoop) a pozrite aj **HCL** / **FCL**.
 
 **COB** = Carbs On Board (aktívne sacharidy). Je to množstvo sacharidov, ktoré sú práve k dispozícii na trávenie → pozrite aj IOB.
 
@@ -50,21 +50,21 @@
 
 **DIA** = Duration of Insulin Action (doba pôsobenia inzulínu). Ďalšie informácie → [Wiki – „DIA“](#Config-Builder-insulin-dia) a pozrite aj → [DIABETTECH – „DIA“](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/).
 
-**DST** = Daylight Saving Time. Pozrite [Wiki – Zmena časového pásma a letný čas](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
+**DST** = Daylight Saving Time (letný čas). Pozrite [Wiki – Zmena časového pásma a letný čas](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
 
 **Dynamická ISF (alebo DynISF)** (Dynamic ISF) = funkcia **AAPS**, ktorá dynamicky prispôsobuje citlivosť na inzulín (**ISF**) podľa **TDD** a **glykémie** používateľa.
 
-**eCarbs** = extended Carbs (predĺžené sacharidy, v aplikácii eSacharidy). Carbs split up over several hours (e.g. to cover fat/protein), which lets **AAPS** spread the insulin like an extended bolus. Ďalšie informácie → [Wiki – „Predĺžené sacharidy“](../DailyLifeWithAaps/ExtendedCarbs.md)
+**eCarbs** = extended Carbs (predĺžené sacharidy, v aplikácii eSacharidy). Sacharidy rozložené do niekoľkých hodín (napr. na pokrytie tukov a bielkovín), vďaka čomu môže **AAPS** rozložiť inzulín podobne ako pri predĺženom boluse. Ďalšie informácie → [Wiki – „Predĺžené sacharidy“](../DailyLifeWithAaps/ExtendedCarbs.md)
 
-**FCL** = Full Closed Loop (plne uzavretý okruh). Okruh, ktorý od používateľa nepotrebuje žiadne zadávanie k jedlu: žiadne počítanie sacharidov ani bolus k jedlu. Further info → [Wiki - 'full closed loop'](../AdvancedOptions/FullClosedLoop.md) and see also **HCL**.
+**FCL** = Full Closed Loop (plne uzavretý okruh). Okruh, ktorý od používateľa nepotrebuje žiadne zadávanie k jedlu: žiadne počítanie sacharidov ani bolus k jedlu. Ďalšie informácie → [Wiki – „plne uzavretý okruh“](../AdvancedOptions/FullClosedLoop.md) a pozrite aj **HCL**.
 
-**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. Further info → [Wiki - 'BG source'](#Config-Builder-bg-source) and see also 'CGM'.
+**FGM** = Flash Glucose Monitor (systém okamžitého monitorovania glukózy), napríklad Abbott Freestyle Libre. Ďalšie informácie → [Wiki – „zdroj glykémie“](#Config-Builder-bg-source) a pozrite aj „CGM“.
 
-**git** = a tool used to store and download the **AAPS’** source code.
+**git** = nástroj na ukladanie a sťahovanie zdrojového kódu **AAPS**.
 
-**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. Further info → [Wiki - 'update APK'](../Maintenance/UpdateToNewVersion.md).
+**GitHub** = webová služba, ktorá hostí zdrojový kód **AAPS** a jeho správu verzií (sledovanie zmien v súboroch a koordinácia práce na nich, najmä v tímoch) a dokáže aplikáciu aj zostaviť. Je potrebný aj na aktualizácie **APK**. Ďalšie informácie → [Wiki – „aktualizácia APK“](../Maintenance/UpdateToNewVersion.md).
 
-**Glimp** = an app to collect values from Freestyle Libre.
+**Glimp** = aplikácia na zbieranie hodnôt zo senzora Freestyle Libre.
 
 **HCL (alebo Hybrid Closed Loop)** = hybridný uzavretý okruh: okruh, ktorý automatizuje podávanie inzulínu medzi jedlami, ale k jedlu si musí používateľ stále podať bolus. Takmer každý systém v bežnom používaní, vrátane **AAPS**, je hybridný uzavretý okruh → pozrite aj **FCL** / **uzavretý okruh**.
 
@@ -74,7 +74,7 @@
 
 **ISF** = Insulin Sensitivity Factor (citlivosť na inzulín). Očakávaný pokles glykémie po podaní jednej jednotky inzulínu. Jednotka je buď mg/dl/U, alebo mmol/l/U. Bez prepočtu tieto hodnoty nie sú rovnocenné!
 
-**Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuild).
+**Úložisko kľúčov (alebo JKS)** (Keystore) = Java Key Store, šifrovaný súbor, v ktorom sú uložené vaše osobné vývojárske certifikáty a kľúče potrebné na zostavenie (a opätovné zostavenie) **AAPS**.
 
 **LGS** = Low Glucose Suspend (ochrana pred nízkou glykémiou). Pozrite [Wiki – Ochrana pred nízkou glykémiou](#KeyAapsFeatures-LGS)
 
@@ -84,9 +84,9 @@
 
 **maxIOB** = maximálny celkový IOB. Je to bezpečnostná funkcia, ktorá bráni **AAPS** podať viac inzulínu, než dovoľujú nastavenia používateľa. Ďalšie informácie → [Wiki – „Maximálny celkový IOB, ktorý OpenAPS nemôže prekročiť“](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
 
-**min_5m_carbimpact** = bezpečnostná funkcia, ktorá počíta predvolený úbytok sacharidov, keď sa ich vstrebávanie nedá určiť z reakcie glykémie používateľa. Further info → [Wiki - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
+**min_5m_carbimpact** = bezpečnostná funkcia, ktorá počíta predvolený úbytok sacharidov, keď sa ich vstrebávanie nedá určiť z reakcie glykémie používateľa. Ďalšie informácie → [Wiki – „min_5m_carbimpact“](#Preferences-min_5m_carbimpact).
 
-**Nightscout** = projekt s otvoreným zdrojovým kódom na prístup k údajom **CGM** a ich vyhodnocovanie. The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
+**Nightscout** = projekt s otvoreným zdrojovým kódom na prístup k údajom **CGM** a ich vyhodnocovanie. Centrálne miesto pre údaje **AAPS** používateľa. Dokáže vytvárať reporty s historickými údajmi **Nightscoutu** používateľa, napríklad očakávaný HbA1c alebo čas v rozsahu, a hľadať v údajoch vzory pomocou percentilového grafu atď.
 
 **Nightscout** → pozrite aj **Nightscout Reporter**. Je to užitočné najmä pre rodičov, ktorí sledujú liečbu diabetu svojho dieťaťa.
 
@@ -98,7 +98,7 @@
 
 **Otvorený okruh** (Open Loop system) = funkcia **AAPS**, ktorá odporúča úpravy, ktoré musí používateľ vykonať ručne v **AAPS**. Ďalšie informácie → [Wiki – „Otvorený okruh“](#KeyAapsFeatures-OpenLoop).
 
-**Oref0 / Oref1** = detekcia citlivosti a „reference design implementation version 0/1“ (referenčná implementácia, verzia 0/1). It is the key algorithm behind OpenAPS. Further info → [Wiki - 'sensitivity detection'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
+**Oref0 / Oref1** = detekcia citlivosti a „reference design implementation version 0/1“ (referenčná implementácia, verzia 0/1). Je to kľúčový algoritmus, na ktorom stojí OpenAPS. Ďalšie informácie → [Wiki – „Detekcia citlivosti“](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
 
 **OS-AID** = Open-Source Automated Insulin Delivery (automatizované podávanie inzulínu s otvoreným zdrojovým kódom). Systém **AID** zostavený zo softvéru s otvoreným zdrojovým kódom, napríklad **AAPS**, **OpenAPS**, Loop alebo Trio. Tieto systémy nie sú formálne schválené zdravotníckymi úradmi (FDA, NHS atď.) → pozrite aj **AID**.
 
@@ -110,19 +110,19 @@
 
 **Profil** (Profile) = základné nastavenia liečby používateľa (bazálna dávka, **DIA**, **IC**, **ISF**, cieľová **glykémia**). **AAPS** používa iba profily vytvorené v **AAPS** (**Spravovať** → **Profil**), ale **profily** z **Nightscoutu** sa dajú skopírovať (synchronizovať) do **AAPS**. Ďalšie informácie → [Wiki – „Váš profil AAPS“](../SettingUpAaps/YourAapsProfile.md).
 
-**Profile switch** = (temporary) switch of the user’s **Profile** to a different **Profile** saved within **AAPS**.
+**Prepnutie profilu** (Profile switch) = (dočasné) prepnutie **profilu** používateľa na iný **profil** uložený v **AAPS**.
 
-**Profile Percentage** = a (temporary) percentage increase or decrease applied to a user’s **Profile** for a selected time period.
+**Percento profilu** (Profile Percentage) = (dočasné) percentuálne zvýšenie alebo zníženie **profilu** používateľa na zvolené obdobie.
 
 **RES** = stavová kontrolka, ktorá upozorňuje, že výmena zásobníka je po termíne; zobrazuje sa v riadku stavu na hlavnej obrazovke **AAPS** → pozrite aj **BAT** / **CAN** / **SEN**.
 
-**RileyLink** = open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication.
+**RileyLink** = hardvérové zariadenie s otvoreným zdrojovým kódom, ktoré prepája Bluetooth Low Energy (BLE) s bezdrôtovou komunikáciou na 916 MHz (pre staré pumpy Medtronic) alebo 433 MHz (pre pumpy Omnipod Eros).
 
 **SAGE** = sensor age (vek senzora). Zobrazuje sa na hlavnej obrazovke **AAPS** a v **Nightscoute** na základe záznamov **Zavedenie senzora** používateľa v Starostlivosti → pozrite aj **Nightscout**.
 
 **SEN** = stavová kontrolka, ktorá upozorňuje, že výmena senzora je po termíne; zobrazuje sa v riadku stavu na hlavnej obrazovke **AAPS** → pozrite aj **BAT** / **CAN** / **RES**.
 
-**Sensitivity detection** = calculation of sensitivity to insulin as a result of exercise, hormones etc. pozrite aj → [DIABETTECH – „Autosens“](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Detekcia citlivosti** (Sensitivity detection) = výpočet citlivosti na inzulín, ktorá sa mení vplyvom pohybu, hormónov atď. pozrite aj → [DIABETTECH – „Autosens“](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
 **Šum senzora** (Sensor noise) = pojem pre nestabilné hodnoty **CGM**, pri ktorých hodnoty **glykémie** „skáču“. Ďalšie informácie → [Wiki – „Vyhladzovanie údajov glykémie“](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
@@ -132,15 +132,15 @@
 
 **TBB** = total base basal, celková základná bazálna dávka (súčet bazálnej dávky za 24 hodín) → pozrite aj **TBR** / **TDD**.
 
-**TBR** = temporary basal rate → see also **TBB** / **TDD**.
+**TBR** = temporary basal rate (dočasný bazál) → pozrite aj **TBB** / **TDD**.
 
 **TDD** = total daily dose, celková denná dávka (v aplikácii CDD; bolus + bazál za deň) → pozrite aj **TBB** / **TBR**.
 
-**TT** = temporary target: temporary increase/decrease of the user’s **BG** target (range) e.g. for eating or sport activities. Ďalšie informácie → [Wiki – „Dočasné ciele“](../DailyLifeWithAaps/TempTargets.md).
+**TT** = temporary target (dočasný cieľ): dočasné zvýšenie alebo zníženie cieľovej **glykémie** (rozsahu) používateľa, napr. pred jedlom alebo pri športe. Ďalšie informácie → [Wiki – „Dočasné ciele“](../DailyLifeWithAaps/TempTargets.md).
 
 **UAM** = unannounced meals (neohlásené jedlá). Rozpoznanie výrazného vzostupu **glykémie** vplyvom jedla, adrenalínu alebo iných vplyvov a pokus o jeho úpravu. Ďalšie informácie → [Wiki – „UAM“](#enable-uam) a pozrite aj **SMB**.
 
-**Virtual pump** = an **AAPS** feature which allows the user to try **AAPS’** functions, or lets PWD whose pump model has no **AAPS** driver use **AAPS** as an open loop → see also **Open Loop**.
+**Virtuálna pumpa** (Virtual pump) = funkcia **AAPS**, ktorá používateľovi umožňuje vyskúšať funkcie **AAPS** alebo ľuďom s diabetom, ktorých model pumpy nemá ovládač v **AAPS**, používať **AAPS** ako otvorený okruh → pozrite aj **Otvorený okruh**.
 
 **Tapeta** (Wallpaper) = obrázok na pozadí **AAPS**, pozrite stránku o telefónoch.
 
