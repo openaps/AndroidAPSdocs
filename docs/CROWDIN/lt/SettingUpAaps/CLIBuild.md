@@ -1,24 +1,24 @@
-# Build instructions for the command-line
+# Kūrimo instrukcijos naudojant komandinę eilutę
 
 ```{admonition} For users familiar with the command-line and git
 :class: note
 
-The simplest option to build AAPS is the [Browser build](./BrowserBuild.md) alternative.
+Paprasčiausias būdas sukurti AAPS yra [Kūrimas naršyklėje](./BrowserBuild.md).
 ```
 
-Tested with Fedora and Debian Linux, other systems should work with minimal adjustments.
+Išbandyta su Fedora ir Debian Linux, kitose sistemose turėtų veikti su nedideliais pakeitimais.
 
 ## Reikalavimai
 
-Consult the minimum required Java version from [this table](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Install the appropriate OpenJDK package using the system package manager. For example in Debian, the packages are named like `openjdk-21-jdk`. It should include `javac` and `keytool` binaries.
+Mažiausią reikalingą Java versiją rasite [šioje lentelėje](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Įdiekite tinkamą OpenJDK paketą sistemos paketų tvarkykle. Pavyzdžiui, Debian sistemoje paketai vadinami panašiai kaip `openjdk-21-jdk`. Jame turi būti `javac` ir `keytool` vykdomieji failai.
 
-Download the *Android Command line tools* package from the [Android Studio page](https://developer.android.com/studio#command-line-tools-only). Android Studio itself is not required. More information about installing this package is found in [sdkmanager docs](https://developer.android.com/tools/sdkmanager). After the package is installed, you should manually set two [environment variables](https://developer.android.com/tools/variables): `ANDROID_HOME` and `PATH`. Finally, run `sdkmanager --licenses` to finish the installation.
+Atsisiųskite *Android Command line tools* paketą iš [Android Studio puslapio](https://developer.android.com/studio#command-line-tools-only). Pačios Android Studio nereikia. Daugiau informacijos apie šio paketo įdiegimą rasite [sdkmanager dokumentacijoje](https://developer.android.com/tools/sdkmanager). Įdiegę paketą, rankiniu būdu nustatykite du [aplinkos kintamuosius](https://developer.android.com/tools/variables): `ANDROID_HOME` ir `PATH`. Galiausiai paleiskite `sdkmanager --licenses`, kad užbaigtumėte įdiegimą.
 
-## Building AAPS with Gradle wrapper
+## AAPS kūrimas su Gradle wrapper
 
-### 1. Generate a Java keystore file for signing AAPS
+### 1. Sugeneruokite Java raktų saugyklos failą AAPS pasirašymui
 
-If you already have a keystore file for signing AAPS, reuse that.
+Jei jau turite raktų saugyklos failą AAPS pasirašymui, naudokite jį.
 
 ```sh
 keytool -genkeypair -v \
@@ -29,19 +29,19 @@ keytool -genkeypair -v \
   -validity 20000
 ```
 
-You will need the keystore file and passphrase every time you update AAPS.
+Raktų saugyklos failo ir slaptafrazės jums reikės kiekvieną kartą atnaujinant AAPS.
 
-### 2. Compile the AAPS APK file
+### 2. Sukompiliuokite AAPS APK failą
 
-Clone the [git repo](https://github.com/nightscout/AndroidAPS) if not already cloned. AAPS uses the master branch for the latest stable version; ensure you are on the branch/tag you want to build.
+Klonuokite [git saugyklą](https://github.com/nightscout/AndroidAPS), jei dar to nepadarėte. AAPS naudoja master atšaką naujausiai stabiliai versijai; įsitikinkite, kad esate toje atšakoje / žymėje (tag), kurią norite kurti.
 
-Run `./gradlew :app:assembleFullRelease` in the repo. It automatically downloads Gradle, dependencies, and then compiles the code. When the build succeeds, you should have an unsigned APK at `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. It should have also installed an `apksigner` binary to `$ANDROID_HOME`. Update your `PATH` again.
+Saugykloje paleiskite `./gradlew :app:assembleFullRelease`. Jis automatiškai atsisiunčia Gradle, priklausomybes ir tada sukompiliuoja kodą. Kai kūrimas pavyksta, turėtumėte gauti nepasirašytą APK failą `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. Taip pat turėjo būti įdiegtas `apksigner` vykdomasis failas į `$ANDROID_HOME`. Dar kartą atnaujinkite `PATH`.
 
-### 3. Create a signed APK file from the unsigned one
+### 3. Sukurkite pasirašytą APK failą iš nepasirašyto
 
 <!-- Suggest building outside the git repo, to minimize risk of accidental APK commits -->
 
-Change to your home directory and create a signed APK file:
+Pereikite į savo namų aplanką ir sukurkite pasirašytą APK failą:
 
 ```sh
 apksigner sign \
@@ -51,4 +51,4 @@ apksigner sign \
   ./AndroidAPS/app/build/outputs/apk/full/release/app-full-release-unsigned.apk
 ```
 
-Now you have `app-full-release-signed.apk` ready for installation or upgrade.
+Dabar turite `app-full-release-signed.apk`, paruoštą įdiegti arba atnaujinti.
