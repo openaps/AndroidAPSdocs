@@ -1,150 +1,150 @@
 (bluetoothtroubleshooting-bluetooth-related-issues)=
 
-# Bluetooth related issues
+# 블루투스 관련 문제
 
-Some users have been running into issues with Omnipod DASH activation failures, Medtrum Nano connectivity problems, and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues.
+일부 사용자는 블루투스와 관련된 Omnipod DASH 활성화 실패, Medtrum Nano 연결 문제와 그 밖의 Pod 오류를 겪고 있습니다. 이 문제의 대부분은 아래 원인 중 하나로 설명할 수 있습니다.
 
-Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medtrum Nano has known issues with nearby device permission as well as the Omnipod DASH.
+이 문제 중 일부는 다른 블루투스 인슐린 펌프에도 해당될 수 있습니다. Omnipod DASH와 마찬가지로 Medtrum Nano도 근처 기기 권한과 관련된 알려진 문제가 있습니다.
 
 ---
 
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
-## Cannot start Omnipod with Android 16
-- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this version has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
+## Android 16에서 Omnipod를 시작할 수 없음
+- Android 16에서 Omnipod DASH가 올바르게 작동하려면 **AAPS** 버전이 최소 3.3.2.1이어야 합니다. 이 버전에는 Android 16에서 생긴 Omnipod 관련 알려진 문제를 해결하기 위한 수정이 들어 있습니다.
 
 ---
 
 (bluetoothtroubleshooting-bluetooth-battery-optimisation)=
 
-## Bluetooth Battery Optimisation
+## 블루투스 배터리 최적화
 
-Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. This is known to cause some issues for Bluetooth pumps and CGMs.
+새 버전의 Android는 시스템 블루투스 앱에 배터리 최적화를 켜 두었습니다. 이 설정은 블루투스 펌프와 CGM에 일부 문제를 일으키는 것으로 알려져 있습니다.
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
+[설정 마법사](../SettingUpAaps/SetupWizard.md)를 따라 하고 [블루투스 배터리 최적화](#setup-wizard-bluetooth-battery-optimisation) 섹션의 설정을 따랐다면 이 설정은 올바를 것입니다. 그러나 이 가이드의 이전 버전을 따랐다면 이 설정을 바꾸지 않았을 수 있습니다.
 
-Verify this is correctly configured if you have pump and CGM disconnections.
+펌프와 CGM 연결이 끊긴다면 이 설정이 올바른지 확인하십시오.
 
 ---
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission)=
 
-## Apps that use the "Nearby devices" Android permission can cause connection drops and Pod activation problems
+## "근처 기기" Android 권한을 사용하는 앱은 연결 끊김과 Pod 활성화 문제를 일으킬 수 있습니다
 
-Android allows you to control what each app is able to do or access on your phone via a permission model. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to Bluetooth, scan for nearby devices etc.
+Android에서는 권한 모델을 통해 각 앱이 휴대폰에서 무엇을 하거나 무엇에 접근할 수 있는지 제어할 수 있습니다. 설치된 각 앱마다 특정 권한을 허용하거나 거부할 수 있습니다. 예를 들어 기기의 파일 접근, 블루투스 접근, 근처 기기 검색 등입니다.
 
-**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
+**AAPS**가 작동하려면 여러 특정 권한이 필요합니다. 그중 Pod가 작동하는 데 꼭 필요한 권한이 "근처 기기" 권한입니다. 이 권한이 필요한 다른 앱도 많습니다. 커뮤니티에서는 여러 앱이 이 권한을 받으면 일부 기기에서 새 Pod 활성화에 문제를 일으킬 수 있다는 것을 확인하고 있습니다.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
-### Apps that use "Nearby device" permissions and are known to have caused problems:
+### "근처 기기" 권한을 사용하고 문제를 일으킨 것으로 알려진 앱:
 
-Apps in this list have been discussed in one or more places in the community as causing problems for Omnipod DASH devices and in some cases Medtrum Nano too.
+이 목록의 앱은 커뮤니티의 한 곳 이상에서 Omnipod DASH 기기에, 그리고 일부 경우에는 Medtrum Nano에도 문제를 일으키는 앱으로 논의되었습니다.
 
 ```{admonition} Updating the list
 :class: note
-Ping @XiTatiON on #omnipod-dash Discord channel to discuss apps to be added to this list.
+이 목록에 추가할 앱을 논의하려면 #omnipod-dash Discord 채널에서 @XiTatiON에게 연락하십시오.
 ```
 
-- **myBMW** MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
+- **myBMW** MyBMW가 Medtrum Nano와 Omnipod DASH를 방해했습니다. MyBMW 앱은 "근처 기기 찾기" 권한을 한 번만 묻습니다. 권한을 허용하지 않아도 앱은 완전히 정상적으로 작동합니다
 
-- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
+- **Amazon Alexa**  일부 사용자는 Alexa 앱에서 "근처 기기" 권한을 없애서 문제를 해결했습니다. 그러나 그러면 Matter IoT 기기를 페어링할 수 없게 됩니다
 
-- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
+- **MINI app**  이 앱은 myBMW 앱을 바탕으로 만들어진 것으로 보이며, 그래서 같은 동작을 할 수 있습니다
 
-- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
+- **BM2** 일부 캠핑카와 캠핑용 태양광 설비에서 쓰는 태양광 배터리 모니터링 앱입니다. 이 앱이 실행 중일 때 새 Pod를 활성화할 수 없었습니다. 새 Pod를 활성화하는 동안 앱을 강제 중지하면 이 문제를 피할 수 있습니다. 그 뒤에 앱을 실행해도 Dash 기능에는 방해가 되지 않는 것으로 보였습니다(Android 16을 실행하는 Pixel 8 Pro에서).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
-### How to revoke "Nearby device" permissions for other apps:
-If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
+### 다른 앱의 "근처 기기" 권한을 없애는 방법:
+새 Pod 활성화에 문제가 있고 사용하는 Android 버전에 맞는 올바른 **AAPS** 버전을 실행하고 있다면, 새 Pod를 활성화하는 동안 다른 앱의 권한을 없애야 할 수도 있습니다.
 
-Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
+**AAPS**를 제외한 모든 앱의 "근처 기기" 권한을 없애려면 다음 절차를 따르십시오:
 
 ```{admonition} Menus and settings
 :class: note
-The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
+이 가이드의 스크린샷과 설명은 Google Pixel 8 Pro에 설치된 순정(Vanilla) Android 16의 것입니다. 다른 제조사와 기기에서는 메뉴와 설정 설명이 정확히 같지 않을 가능성이 높습니다. 가지고 있는 기기에 맞게 단계를 조정하십시오. 막히면 커뮤니티에 도움을 요청하는 방법은 [Dash 도움을 받을 수 있는 곳](#omnipod-dash-where-to-get-help-for-dash) 섹션을 참조하십시오.
 ```
 
-1. Open Android settings on your phone, scroll down and press on **Security and privacy (1)**.
+1. 휴대폰에서 Android 설정을 열고 아래로 스크롤하여 **Security and privacy**(보안 및 개인정보 보호) (1)을 누르십시오.
 
     ![android_settings_sec_priv](../images/android_16/android_settings_sec_priv.png)
 
-2. Scroll down and press on **Privacy controls (1)**.
+2. 아래로 스크롤하여 **Privacy controls**(개인정보 보호 관리) (1)를 누르십시오.
 
    ![android_sec_priv](../images/android_16/android_sec_priv.png)
 
-3. Press on **Permission manager (1)**.
+3. **Permission manager**(권한 관리자) (1)를 누르십시오.
 
    ![android_priv_control](../images/android_16/android_priv_control.png)
 
-3. Scroll down and press on **Nearby devices (1)**.
+3. 아래로 스크롤하여 **Nearby devices**(근처 기기) (1)를 누르십시오.
 
    ![android_perm_man_nearby_dev](../images/android_16/android_perm_man_nearby_dev.png)
 
-4. Browse the list of apps and press on the app you wish to revoke **Nearby devices** permissions for.
+4. 앱 목록을 살펴보고 **Nearby devices**(근처 기기) 권한을 없앨 앱을 누르십시오.
 
-   In this guide **Android Auto (1)** is the app we will revoke the permission on.
+   이 가이드에서는 **Android Auto (1)**에서 권한을 없앱니다.
 
-   To avoid bricking more pods we advise everyone initially to revoke the permission on all apps except **AAPS**.
+   Pod를 더 이상 망가뜨리지 않도록, 처음에는 **AAPS**를 제외한 모든 앱에서 권한을 없애기를 권장합니다.
 
 ```{admonition} Which app to select?
 :class: tip
-If you are unsure which app is causing you an issue, disable them all (remember to check the list of known problem apps too and start with those) and if you can spare a few bricked pods on the way, enable the permission on one new app before every new Pod activation, until you can narrow down which app specifically causes your Pod issues. If you do identify new problematic apps please let us know on the #omnipod-dash Discord channel.
+어떤 앱이 문제를 일으키는지 확실하지 않으면 모든 앱에서 권한을 끄십시오(알려진 문제 앱 목록도 확인하고 그 앱부터 시작하십시오). 그 과정에서 Pod 몇 개를 잃어도 괜찮다면, 새 Pod를 활성화하기 전마다 앱 하나에서만 권한을 다시 켜십시오. 이렇게 해서 어느 앱이 Pod 문제를 일으키는지 찾을 때까지 범위를 좁히십시오. 문제가 되는 새 앱을 찾으면 #omnipod-dash Discord 채널에 알려 주십시오.
 ```
 
    ![android_nearby_dev](../images/android_16/android_nearby_dev.png)
 
-5. To revoke the permission Press on **Don't allow (1)**, then Press on **Don't allow anyway (2)**. If done correctly you should see **Don't allow (3)** as the selected Toggle option. You can now go back to the **Nearby device** menu by pressing the **Back arrow (4)** and change this setting on other apps if required.
+5. 권한을 없애려면 **Don't allow**(허용 안함) (1)을 누른 다음 **Don't allow anyway**(허용 안함) (2)을 누르십시오. 올바르게 했다면 선택된 옵션으로 **Don't allow**(허용 안함) (3)이 보입니다. 이제 **Back arrow**(뒤로 화살표) (4)를 눌러 **Nearby device**(근처 기기) 메뉴로 돌아갈 수 있습니다. 필요하면 다른 앱에서도 이 설정을 바꾸십시오.
 
    ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dev.png) ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow_anyway.png)  ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow.png)
 
 (bluetoothtroubleshooting-re-enable-nearby-device-permission)=
 
-### How to re-enable "Nearby device" permissions for system apps and other apps:
+### 시스템 앱과 다른 앱의 "근처 기기" 권한을 다시 켜는 방법:
 
-1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
+1. 필요하면 앱 개인정보 설정으로 가는 방법은 **"다른 앱의 '근처 기기' 권한을 없애는 방법"** 섹션을 참조하십시오. **Nearby device**(근처 기기) 설정에 들어가면 2단계로 진행하십시오.
 
-2. Browse the list of apps and press on the app you wish to allow **Nearby devices** permissions for.
+2. 앱 목록을 살펴보고 **Nearby devices**(근처 기기) 권한을 허용할 앱을 누르십시오.
 
-   In this guide **Android Auto (1)** is the app we will allow the permission on.
+   이 가이드에서는 **Android Auto (1)**에서 권한을 허용합니다.
 
-   You will notice that **Android Auto (1)** is missing in the app list after the permission is revoked. This is because the **Android Auto** app is a **System app** and by default system apps are hidden.
+   권한을 없앤 뒤에는 앱 목록에서 **Android Auto (1)**가 보이지 않는 것을 알 수 있습니다. **Android Auto** 앱은 **System app**(시스템 앱)이고, 기본적으로 시스템 앱은 숨겨져 있기 때문입니다.
 
    ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)
 
-3. To show hidden system apps press the **three-dot menu (⋮) (1)** in the top right corner, then press **"Show system" (2)**. You should now be able to see the hidden system app in the list **Android Auto (3)**.
+3. 숨겨진 시스템 앱을 보려면 오른쪽 위의 **three-dot menu (⋮)**(점 3개 메뉴) (1)를 누른 다음 **"Show system"**(시스템 표시) (2)을 누르십시오. 이제 목록에서 숨겨진 시스템 앱 **Android Auto (3)**을 볼 수 있습니다.
 
 ```{admonition} Find your app
 :class: tip
-If an app is revoked you will need to scroll down until you see the list of revoked apps lower down in the list.
+권한을 없앤 앱은 목록 아래쪽에 있는 허용 안 된 앱 목록이 보일 때까지 아래로 스크롤해야 합니다.
 ```
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. Follow the guidance in **"How to revoke 'Nearby device' permissions for other apps"** in reverse to re-enable permissions for each app.
+5. 각 앱의 권한을 다시 켜려면 **"다른 앱의 '근처 기기' 권한을 없애는 방법"**의 안내를 거꾸로 따라 하십시오.
 
 ---
 
 (bluetoothtroubleshooting-android-15-bluetooth-connection-problems)=
 
-## Android 15 Frequent Bluetooth connection problems
+## Android 15에서 잦은 블루투스 연결 문제
 
-After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. To turn it on:
+Android를 업그레이드하거나 최신 휴대폰으로 바꾼 뒤, **AAPS**가 펌프와의 블루투스 연결을 자주 잃습니다. 휴대폰을 다시 시작하면 문제가 잠시 사라집니다. **Omnipod DASH**를 사용하고 휴대폰이 Android 15를 실행한다면, **블루투스 본딩** 설정을 켜면 블루투스 연결이 더 안정될 수 있습니다. 켜는 방법:
 
 ```{admonition} Android 16
 :class: warning
-Only turn on **Bluetooth bonding** on Android 15, and only if you experience connectivity issues. DO NOT turn on bonding on Android 16.
+**블루투스 본딩**은 Android 15에서만, 그리고 연결 문제가 있을 때만 켜십시오. Android 16에서는 본딩을 켜지 마십시오.
 ```
 
-1. Open the [Dash settings](#omnipod-dash-settings): open the DASH pump screen with **Manage** > **Pump** and press the **Settings** (gear) icon in the top-right corner.
+1. [Dash 설정](#omnipod-dash-settings)을 여십시오: **관리** > **펌프**로 DASH 펌프 화면을 열고 오른쪽 위의 **설정**(톱니바퀴) 아이콘을 누르십시오.
 
-   ![The DASH pump screen](../images/v4/Pumps/dash_pump_screen.png)
+   ![DASH 펌프 화면](../images/v4/Pumps/dash_pump_screen.png)
 
-2. Open the **Advanced Settings** section and turn on **Bluetooth bonding**.
+2. **고급 설정** 섹션을 열고 **블루투스 본딩**을 켜십시오.
 
-   ![Bluetooth bonding in the Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
+   ![고급 설정 섹션의 블루투스 본딩](../images/v4/Pumps/dash_settings_advanced.png)
 
-3. If the phone shows a pairing request, accept it.
+3. 휴대폰에 페어링 요청이 표시되면 수락하십시오.
 
-4. Restart your phone.
+4. 휴대폰을 다시 시작하십시오.
