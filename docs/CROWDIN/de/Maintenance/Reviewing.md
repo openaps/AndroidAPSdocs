@@ -174,9 +174,9 @@ Mit dem Knopf **Klonen** in Zeile **2** kannst Du eine Kopie eines **Profilwechs
 Dieser Reiter zeigt alle Notizen und Careportal-Einträge, die in Nightscout erfasst wurden.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
-### Betriebsmodus
+### AAPS-Modus
 
-![Betriebsmodus](../images/TreatmentsView6.png)
+![AAPS-Modus](../images/TreatmentsView6.png)
 
 Dieser Reiter zeigt den Verlauf der Änderungen des [Loop-Status](#AapsScreens-loop-status): Open, Closed, LGS, Unterbrechung, Getrennt.
 
