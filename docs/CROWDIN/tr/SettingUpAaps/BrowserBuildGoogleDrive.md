@@ -1,77 +1,77 @@
 (aaps-ci-google-drive-auth)=
 
-# Browser build – Step 3: Authorize Google Drive
+# Tarayıcı ile oluşturma – Adım 3: Google Drive'ı yetkilendirin
 
 ```{note}
-This is **Step 3** of the [Browser build](BrowserBuild.md). First complete [Step 2 – Create your signing keystore](BrowserBuildKeystore.md).
+Bu, [Tarayıcı ile oluşturma](BrowserBuild.md) yönteminin **Adım 3**'üdür. Önce [Adım 2 – İmzalama anahtar deponuzu oluşturun](BrowserBuildKeystore.md) bölümünü tamamlayın.
 ```
 
 ```{warning}
-No matter which of the prior sets of instructions you followed (Option 1 or Option 2), you MUST add the Google Drive authorization to successfully use the Browser Build.
+Önceki talimatlardan hangisini izlediğiniz fark etmez (Seçenek 1 veya Seçenek 2): Tarayıcı ile oluşturmayı başarıyla kullanmak için Google Drive yetkilendirmesini MUTLAKA eklemelisiniz.
 ```
 
-Note: If you already followed this part in the video, you can now skip to [Step 4 – Build the APK](BrowserBuildAPK.md).
+Not: Bu bölümü videoda zaten yaptıysanız şimdi doğrudan [Adım 4 – APK'yı oluşturun](BrowserBuildAPK.md) bölümüne geçebilirsiniz.
 
 ```{warning}
-If the Google authorization does not start or the preparation page fails, close the preparation page, open `aaps-ci-preparation.html` again the same way as in Step 2, and start this step again. See [troubleshooting](#aaps-ci-preparation-web).
+Google yetkilendirmesi başlamazsa veya hazırlık sayfası hata verirse hazırlık sayfasını kapatın, `aaps-ci-preparation.html` dosyasını 2. adımdaki gibi yeniden açın ve bu adıma yeniden başlayın. Bkz. [sorun giderme](#aaps-ci-preparation-web).
 ```
 
-Return to the preparation page tab.
+Hazırlık sayfası sekmesine geri dönün.
 
-Scroll down to the Google Drive Auth section and tap Start Auth.
+Google Drive Auth bölümüne kadar aşağı kaydırın ve Start Auth (yetkilendirmeyi başlat) düğmesine dokunun.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep44.png)
 
-Select your Google account.
+Google hesabınızı seçin.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH1.png)
 
-Scroll down and accept the access. The web page needs it to obtain the Google Drive authentication key.
+Aşağı kaydırın ve erişimi kabul edin. Web sayfası, Google Drive kimlik doğrulama anahtarını almak için buna ihtiyaç duyar.
 
-Tap Continue.
+Continue (Devam) düğmesine dokunun.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH2.png)
 
-The `GDRIVE_OAUTH2` field will populate, tap the top Copy button.
+`GDRIVE_OAUTH2` alanı dolar; üstteki Copy (kopyala) düğmesine dokunun.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH3.png)
 
-Switch back to the GitHub tab.
+GitHub sekmesine geri geçin.
 
-Scroll down to Repository secrets and tap New repository secret.
+Repository secrets (depo secret'ları) bölümüne kadar aşağı kaydırın ve New repository secret (yeni depo secret'ı) düğmesine dokunun.
 
-If you followed Option 1 you should see this:
+Seçenek 1'i izlediyseniz şunu görmelisiniz:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4.png)
 
-If you followed Option 2 there will be more keys:
+Seçenek 2'yi izlediyseniz daha fazla anahtar olur:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4b.png)
 
-In the Name field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+Name (ad) alanına az önce kopyaladığınız metni yapıştırın. Yapıştırma menüsünü göstermek için metin kutusuna uzun basın.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH5.png)
 
-Switch to the preparation page tab.
+Hazırlık sayfası sekmesine geçin.
 
-Tap the second Copy button.
+İkinci Copy (kopyala) düğmesine dokunun.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH6.png)
 
-Switch back to the GitHub tab.
+GitHub sekmesine geri geçin.
 
-1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+1. Secret alanına az önce kopyaladığınız metni yapıştırın. Yapıştırma menüsünü göstermek için metin kutusuna uzun basın.
 
-2. Tap Add secret.
+2. Add secret (secret ekle) düğmesine dokunun.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
 
-You should have either two (option 1) or five (option 2) secrets entries now.
+Artık iki (Seçenek 1) veya beş (Seçenek 2) secret kaydınız olmalıdır.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH8.png)
 
-GitHub will now be able to store the AAPS apk file in your Google Drive, once built.
+GitHub artık oluşturulan AAPS apk dosyasını Google Drive'ınıza kaydedebilecek.
 
 ----
 
-**Next: [Step 4 – Build the APK](BrowserBuildAPK.md) →**
+**Sonraki: [Adım 4 – APK'yı oluşturun](BrowserBuildAPK.md) →**
