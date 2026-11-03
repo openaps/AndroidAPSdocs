@@ -1,87 +1,87 @@
-# Creating and restoring back-ups
+# Atsarginių kopijų kūrimas ir atkūrimas
 
-When installing AAPS on your phone it becomes a "medical device" you rely on daily. It is highly recommended to have an emergency backup plan for when your phone gets defective, stolen or lost. Therefore, it is essential to prepare by asking yourself: "What if?"
+Įdiegta jūsų telefone, AAPS tampa „medicinos priemone“, kuria pasikliaujate kasdien. Labai rekomenduojama turėti atsarginį planą tam atvejui, jei telefonas suges, bus pavogtas ar pamestas. Todėl būtina pasiruošti, užduodant sau klausimą: „O kas, jei…?“
 
-To restore your AAPS setup to an existing or new phone, it's important to keep following items in a secure location (read: not on your phone). Best practice is to keep at least two separate backups: on a local hard drive, USB stick and (preferred) on Cloud storage like Google Drive or Microsoft 365 OneDrive. By storing your backups in the cloud you'll always have everything needed accessible from your phone to restore your setup anywhere and anytime.
+Norint atkurti AAPS sąranką esamame ar naujame telefone, svarbu šiuos dalykus laikyti saugioje vietoje (t. y. ne telefone). Geriausia laikyti bent dvi atskiras atsargines kopijas: vietiniame standžiajame diske, USB atmintinėje ir (geriausia) debesų saugykloje, pvz., Google Drive ar Microsoft 365 OneDrive. Jei atsargines kopijas laikysite debesyje, viską, ko reikia sąrankai atkurti, visada pasieksite iš telefono bet kur ir bet kada.
 
-Consider acquiring a secondary backup phone and practicing restoring AAPS to ensure the backup phone works as expected. This step will give you confidence that your emergency plan is effective and that you can seamlessly continue using AAPS if your primary phone becomes unavailable.
+Apsvarstykite galimybę įsigyti atsarginį telefoną ir pasipraktikuoti į jį atkurti AAPS, kad įsitikintumėte, jog jis veikia taip, kaip tikitės. Šis žingsnis suteiks pasitikėjimo, kad atsarginis planas veikia ir kad galėsite be pertraukų toliau naudoti AAPS, jei pagrindinis telefonas taptų nepasiekiamas.
 
 ```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
 :class: warning
 Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
 ```
 
-To be able to restore, having the following items at hand is important:
+Kad galėtumėte atkurti sistemą, svarbu turėti po ranka:
 
-- Your **Android Studio keystore file** and associated **password**: Needed for (re)building the AAPS .APK installer file.
-- A recent copy of the **AAPS installer .APK**
-- A recent **settings export** file: For restoring important settings (which includes your objectives!).
-- Your **AAPS master password**
-- Backups of additional utilities: Such as BYODA and/or xDrip.
-- Personal notes on your setup.
+- Savo **Android Studio raktų saugyklos failą** ir jo **slaptažodį**: jų reikia AAPS .APK diegimo failui (iš naujo) sukurti.
+- Naujausią **AAPS .APK diegimo failo** kopiją
+- Naujausią **eksportuotų nustatymų** failą: svarbiems nustatymams atkurti (į jį įeina ir jūsų mokymo etapai!).
+- Savo **AAPS pagrindinį slaptažodį**
+- Papildomų priemonių atsarginės kopijos: pvz., BYODA ir (arba) xDrip.
+- Asmenines pastabas apie savo sąranką.
 
-Below are the items that are recommended for keeping back-ups.
+Toliau nurodyta, kurių dalykų atsargines kopijas rekomenduojama laikyti.
 
-## Creating back-ups
+## Atsarginių kopijų kūrimas
 
-### Keystore file from the computer you used to build the APK
-When building your .APK installer file from Android Studio, it uses the **keystore file and password to sign the .APK installer file**. To update your current AAPS installation, it is required to sign the update .APK installer file with the same keystore used for the initial installation. When updating, all settings and the AAPS database will be kept. Note that without this, you are required to first uninstall the current application and then [reinstall](#reinstall-aaps) and reconfigure AAPS.
+### Raktų saugyklos (keystore) failas iš kompiuterio, kuriuo kūrėte APK
+Kai Android Studio kuria .APK diegimo failą, jis **pasirašo .APK diegimo failą raktų saugyklos failu ir slaptažodžiu**. Norint atnaujinti esamą AAPS, atnaujinimo .APK diegimo failas turi būti pasirašytas ta pačia raktų saugykla, kuri buvo naudota pirmą kartą diegiant. Atnaujinant visi nustatymai ir AAPS duomenų bazė išlieka. Atminkite, kad be jos pirmiausia turėsite pašalinti esamą programėlę, o tada [iš naujo įdiegti](#reinstall-aaps) ir iš naujo sukonfigūruoti AAPS.
 
-Maintaining the keystore and associated password will greatly reduce the complexity of updating the APK in the future, especially if you need to build the app from a new computer. See the [Updating AAPS](../Maintenance/UpdateToNewVersion.md) section for details on using the keystore when building a new APK.
+Jei išsaugosite raktų saugyklą ir jos slaptažodį, ateityje atnaujinti APK bus daug paprasčiau, ypač jei programėlę reikės kurti naujame kompiuteryje. Kaip naudoti raktų saugyklą kuriant naują APK, žr. skyrių [AAPS atnaujinimas](../Maintenance/UpdateToNewVersion.md).
 
-**When to back-up:** The keystore should be backed up after you first build the **AAPS** .APK installer file.
+**Kada daryti atsarginę kopiją:** raktų saugyklos atsarginę kopiją reikia padaryti pirmą kartą sukūrus **AAPS** .APK diegimo failą.
 
-**How to back-up:** Locate your keystore path. If you don’t remember it you can find it in Android Studio by selecting **Build > APK > Next**. The path will be listed in “Key store path”. Using your file explorer, navigate to this path and make a copy of your keystore file (ending in file extension `.jks`). Save it to a safe cloud location should your computer become unavailable. Make sure to also record your key store password, key alias and key password.
+**Kaip daryti atsarginę kopiją:** suraskite raktų saugyklos kelią. Jei jo neprisimenate, galite jį rasti Android Studio pasirinkę **Build > APK > Next**. Kelias bus nurodytas lauke „Key store path“. Failų naršykle eikite šiuo keliu ir padarykite savo raktų saugyklos failo (su plėtiniu `.jks`) kopiją. Išsaugokite jį saugioje vietoje debesyje, jei kompiuteris taptų nepasiekiamas. Taip pat būtinai užsirašykite raktų saugyklos slaptažodį (key store password), rakto pseudonimą (key alias) ir rakto slaptažodį (key password).
 
-### Copies of the most recent APK
-In case your main **AAPS** phone is lost or damaged, having a copy of the APK available will allow you to quickly resume using **AAPS** with a new phone. Note: you will also need your preferences backed up as noted below.
+### Naujausio APK kopijos
+Jei pagrindinis **AAPS** telefonas pamestas ar sugadintas, turėdami APK kopiją galėsite greitai vėl naudoti **AAPS** naujame telefone. Pastaba: taip pat reikės nustatymų atsarginės kopijos, kaip aprašyta toliau.
 
-**When to back-up:** You should maintain a back-up of the most recent APK that you installed on your main **AAPS** phone. You may want to also maintain one earlier version in case you need to roll back to that for any reason.
+**Kada daryti atsarginę kopiją:** laikykite naujausio APK, kurį įdiegėte pagrindiniame **AAPS** telefone, atsarginę kopiją. Galite pasilikti ir vieną ankstesnę versiją, jei dėl kokios nors priežasties prireiktų prie jos grįžti.
 
-**How to back-up:** Maintain a copy on the computer used to build the APK with Android Studio. Additionally, it is recommended to use a cloud platform to store a copy of the installer APK. Make sure you know how to locate both backups when needed. Consider setting up dedicated folders to store these backups.
+**Kaip daryti atsarginę kopiją:** laikykite kopiją kompiuteryje, kuriame APK kūrėte su Android Studio. Be to, rekomenduojama diegimo APK kopiją laikyti debesų saugykloje. Įsitikinkite, kad prireikus mokėsite rasti abi atsargines kopijas. Apsvarstykite galimybę šioms atsarginėms kopijoms sukurti atskirus aplankus.
 
-### AAPS settings file (also referred to as 'Preferences')
+### AAPS nustatymų failas (dar vadinamas 'Preferences')
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).
+Savo nustatymus rasite **AAPS aplanke**, kurį pasirinkote per [AAPS sąranką](#SetupWizard-StoragePermission).</br>
+**AAPS aplanką** taip pat galite pakeisti ekrane **Servisas** (**meniu** (☰) > **Servisas**), žr. [Vietinio AAPS aplanko nustatymas](#preferences-maintenance-logdirectory).
 ```
 
-With a copy of the APK installer file (see above) and your **Settings** file, you can quickly get up and running on an existing or new phone.
+Turėdami APK diegimo failo kopiją (žr. aukščiau) ir savo **nustatymų** failą, galite greitai pradėti naudoti AAPS esamame ar naujame telefone.
 
-The **Settings** file is used to customize the AAPS application to fit your specific setup. They encompass details such as your **Configuration** settings, objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
+**Nustatymų** failas naudojamas AAPS programėlei pritaikyti jūsų sąrankai. Jame yra tokie duomenys kaip skilties **Konfigūracija** nustatymai, mokymo etapų būsena, ryšio su trečiųjų šalių paslaugomis nustatymai (pvz., Nightscout, Tidepool), automatizacijos ir profiliai.
 
-Exporting the AAPS settings to file enables you to restore its configuration to a specific point in time. As mentioned, in addition to all configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AAPS. Without this you will be required to redo all objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings for undoing any configuration changes.
+Eksportavę AAPS nustatymus į failą, galite atkurti konfigūraciją tokią, kokia ji buvo tam tikru metu. Kaip minėta, be visų konfigūracijos nustatymų, eksporto faile yra ir jūsų mokymo etapų būsena, kurią reikia atkurti **(iš naujo) diegiant** AAPS. Be jos, norėdami įjungti uždarą ciklą, turėsite iš naujo atlikti visus mokymo etapus. Nustatymų failai taip pat leidžia atkurti „paskutinius gerai veikusius“ nustatymus ir atšaukti konfigūracijos pakeitimus.
 
-**When to back-up AAPS settings:**
-* Each time you complete an objective to prevent losing your progress. _Without a copy of your **Settings** you will have to complete all objectives again in the event you need to re-install AAPS or replace your phone._
+**Kada daryti AAPS nustatymų atsarginę kopiją:**
+* Kiekvieną kartą užbaigę mokymo etapą, kad neprarastumėte pažangos. _Jei neturėsite **nustatymų** kopijos, perdiegę AAPS arba pakeitę telefoną turėsite vėl atlikti visus mokymo etapus._
 
-* Any time you plan to make significant changes to your configuration (change SMB settings, change insulin types, change pump, make changes to automations) you should back up your **Settings** before and after making the changes. This way you have your most recent settings as well as a copy of what they were before the changes in case you need to revert back to them.
+* Kiekvieną kartą, kai planuojate didelius konfigūracijos pakeitimus (keičiate SMB nustatymus, insulino tipą, pompą, automatizacijas), padarykite **nustatymų** atsarginę kopiją prieš pakeitimus ir po jų. Taip turėsite naujausius nustatymus ir jų kopiją, kokie jie buvo prieš pakeitimus, jei prireiktų prie jų grįžti.
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
+* Tik pompų be vamzdelio (pvz., Omnipod ir Medtrum) naudotojams: **nustatymų** faile yra dabartinio Pod ryšio duomenys, todėl su juo galima atkurti ryšį su tuo Pod naujame telefone. Jei neturite nustatymų, eksportuotų jau pradėjus naudoti dabartinį Pod, keisdami telefoną turėsite pradėti naują Pod.
 
-**How to back-up manually:**
+**Kaip daryti atsarginę kopiją rankiniu būdu:**
 
-1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Settings** back-ups without this password._
+1. Jei **nustatymus** importuojate ar eksportuojate pirmą kartą, turėsite nustatyti pagrindinį slaptažodį [Nustatymai > Apsauga](#Preferences-master-password). Nustatykite slaptažodį ir užsirašykite jį saugioje vietoje. _Be šio slaptažodžio negalėsite pasiekti savo **nustatymų** atsarginių kopijų._
 
-2. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance**. Choose where to save the file with the **Local** and **Cloud** chips next to **Export settings** (see **Exporting or Importing Settings** below), then tap **Export settings**. **AAPS** shows where the file will go: the file name for **Local**, **Google Drive** for **Cloud**. Tap **OK**.
+2. **AAPS** pagrindiniame ekrane atidarykite **meniu** (☰) > **Servisas**. Ženkleliais **Vietinė saugykla** ir **Debesis** šalia **Eksportuoti nustatymus** pasirinkite, kur išsaugoti failą (žr. **Nustatymų eksportavimas ir importavimas** toliau), tada bakstelėkite **Eksportuoti nustatymus**. **AAPS** parodo, kur bus išsaugotas failas: pasirinkus **Vietinė saugykla** – failo pavadinimą, pasirinkus **Debesis** – **Google Drive**. Bakstelėkite **OK**.
 
-   ![Export settings to a local file](../images/Maintenance/export_settings_confirm_local.png)
+   ![Nustatymų eksportavimas į vietinį failą](../images/Maintenance/export_settings_confirm_local.png)
 
-   ![Export settings to Google Drive](../images/Maintenance/export_settings_confirm_cloud.png)
+   ![Nustatymų eksportavimas į Google Drive](../images/Maintenance/export_settings_confirm_cloud.png)
 
-   Type the master password set above and tap **OK**.
+   Įveskite aukščiau nustatytą pagrindinį slaptažodį ir bakstelėkite **OK**.
 
-   ![Master password for the export](../images/Maintenance/export_settings_password.png)
+   ![Pagrindinis slaptažodis eksportavimui](../images/Maintenance/export_settings_password.png)
 
-   **Settings exported** (local) or **Cloud export successful** (cloud) confirms the export.
+   Eksportavimą patvirtina pranešimas **Nustatymai eksportuoti** (vietinė saugykla) arba **Sėkmingai eksportuota į debesį** (debesis).
 
-   ![Settings exported message](../images/Maintenance/export_settings_done_local.png)
+   ![Pranešimas „Nustatymai eksportuoti“](../images/Maintenance/export_settings_done_local.png)
 
-   ![Cloud export successful message](../images/Maintenance/export_settings_done_cloud.png)
+   ![Pranešimas „Sėkmingai eksportuota į debesį“](../images/Maintenance/export_settings_done_cloud.png)
 
-3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be `YYYY-MM-DD_Time_appname.json`. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
+3. Telefono failų naršykle (dažniausiai vadinama „Files“ arba „Mano failai“) eikite į Internal Storage > AAPS > preferences. Čia matysite visų eksportuotų nustatymų failų kopijas. Failo pavadinimas turi būti `YYYY-MM-DD_Time_appname.json`. Įkelkite šį failą į pasirinktą debesų saugyklą. Tada iš debesų saugyklos atsisiųskite kopiją ir į savo kompiuterį.
 
 (ExportImportSettings-Settings-Export)=
 
@@ -89,106 +89,106 @@ Exporting the AAPS settings to file enables you to restore its configuration to 
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).
+Savo nustatymus rasite **AAPS aplanke**, kurį pasirinkote per [AAPS sąranką](#SetupWizard-StoragePermission).</br>
+**AAPS aplanką** taip pat galite pakeisti ekrane **Servisas** (**meniu** (☰) > **Servisas**), žr. [Vietinio AAPS aplanko nustatymas](#preferences-maintenance-logdirectory).
 ```
 
-It is recommended to do regular settings exports, especially before and after making configuration changes. You can choose to do exports **manually or (preferred) through automation**. Make sure to take a note of your AAPS master password and to backup your settings files by copying them off your phone to for instance a cloud storage location.
+Rekomenduojama reguliariai eksportuoti nustatymus, ypač prieš konfigūracijos pakeitimus ir po jų. Eksportuoti galite **rankiniu būdu arba (geriau) per automatizaciją**. Būtinai užsirašykite AAPS pagrindinį slaptažodį ir darykite nustatymų failų atsargines kopijas – nukopijuokite juos iš telefono, pavyzdžiui, į debesų saugyklą.
 
-**Note**: _The exported settings will be encrypted with your AAPS master password: without the master password used for exporting you will be unable to import the settings file!_
+**Pastaba**: _Eksportuoti nustatymai užšifruojami jūsų AAPS pagrindiniu slaptažodžiu: be pagrindinio slaptažodžio, kuris buvo naudotas eksportuojant, nustatymų failo importuoti negalėsite!_
 
-### Exporting or Importing Settings
-To export or import settings, open the **menu** (☰) and select **Maintenance**. Under **File management**, the **Local** and **Cloud** chips next to **Export settings** and **Import settings** choose where the settings file is saved to or read from: **Local** is the AAPS directory on your phone, **Cloud** is available once a [Cloud Directory](#preferences-maintenance-cloud) is set up. Tapping a chip turns it on or off; at least one always stays selected, and both rows share the same choice. Then tap **Export settings** or **Import settings** itself to start.
+### Nustatymų eksportavimas ir importavimas
+Norėdami eksportuoti ar importuoti nustatymus, atidarykite **meniu** (☰) ir pasirinkite **Servisas**. Skiltyje **Failų tvarkymas** ženkleliai **Vietinė saugykla** ir **Debesis** šalia **Eksportuoti nustatymus** ir **Importuoti nustatymus** nurodo, kur nustatymų failas išsaugomas arba iš kur nuskaitomas: **Vietinė saugykla** – tai AAPS aplankas jūsų telefone, **Debesis** galima naudoti, kai nustatytas [Debesies aplankas](#preferences-maintenance-cloud). Bakstelėjus ženklelį, jis įjungiamas arba išjungiamas; bent vienas visada lieka pasirinktas, o abiem eilutėms galioja tas pats pasirinkimas. Tada bakstelėkite pačią eilutę **Eksportuoti nustatymus** arba **Importuoti nustatymus**, kad pradėtumėte.
 
-![Maintenance menu with the Export settings and Import settings rows](../images/Maintenance/maintenance_export_import.png)
+![Meniu Servisas su eilutėmis „Eksportuoti nustatymus“ ir „Importuoti nustatymus“](../images/Maintenance/maintenance_export_import.png)
 
 (ExportImportSettings-Automating-Settings-Export)=
-### Automating Settings Export
+### Automatinis nustatymų eksportavimas
 
-To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
+Norėdami nustatymus eksportuoti automatiškai [(**žr. Automatizacija**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), atidarykite [**Nustatymai** > **Servisas**](#preferences-maintenance-settings), išskleiskite **Automatinis nustatymų eksportavimas** ir įjunkite **Įjungti automatinį nustatymų eksportavimą**.
 
-You can now configure [Automation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) to export settings, either on a regular basis (_i.e._ each week), or after a pod change.
+Dabar galite nustatyti [automatizaciją](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), kuri eksportuotų nustatymus reguliariai (_pvz._, kas savaitę) arba po Pod keitimo.
 
-_**Note:** On importing settings, the user always needs to enter the AAPS master password!_
+_**Pastaba:** importuojant nustatymus, visada reikia įvesti AAPS pagrindinį slaptažodį!_
 
-![Settings > Maintenance > Unattended Settings Export with the Enable automated settings export switch](../images/Maintenance/settings_unattended_export.png)
+![Nustatymai > Servisas > Automatinis nustatymų eksportavimas su jungikliu „Įjungti automatinį nustatymų eksportavimą“](../images/Maintenance/settings_unattended_export.png)
 
 (ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
-## Restoring from your backups on a new phone or fresh installation of AAPS
+## Atkūrimas iš atsarginių kopijų naujame telefone arba po naujo AAPS įdiegimo
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).</br>
-If **AAPS** loses access to that directory (this can happen after a reinstall or after clearing the app's storage), it shows an **Access to the AAPS directory was lost** notification and stops saving settings to the phone until you [select the directory again](#preferences-maintenance-logdirectory).
+Savo nustatymus rasite **AAPS aplanke**, kurį pasirinkote per [AAPS sąranką](#SetupWizard-StoragePermission).</br>
+**AAPS aplanką** taip pat galite pakeisti ekrane **Servisas** (**meniu** (☰) > **Servisas**), žr. [Vietinio AAPS aplanko nustatymas](#preferences-maintenance-logdirectory).</br>
+Jei **AAPS** praranda prieigą prie šio aplanko (taip gali nutikti perdiegus programėlę arba išvalius jos saugyklą), rodomas pranešimas **Prarasta prieiga prie AAPS aplanko** ir nustatymai telefone nebeišsaugomi, kol [vėl nepasirinksite aplanko](#preferences-maintenance-logdirectory).
 ```
 
-Use these instructions if you have a back-up of your APK and **Settings** that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
+Vadovaukitės šiomis instrukcijomis, jei turite APK ir **nustatymų** atsarginę kopiją, kurią norite įkelti į naują telefoną, arba jei dėl kokios nors priežasties reikėjo pašalinti ir iš naujo įdiegti APK esamame telefone.
 
-_If you are updating **AAPS** using an APK built with the same keystore you should not need to follow this process. However, it is still advised to create a back-up before you apply the update._
+_Jei atnaujinate **AAPS** APK failu, sukurtu su ta pačia raktų saugykla, šių veiksmų atlikti nereikia. Vis dėlto prieš atnaujinant vis tiek patariama sukurti atsarginę kopiją._
 
-If you are updating **AAPS** after you lost or replaced your original keystore (i.e. using a new build computer without transferring the keystore), ensure that you back up all settings per the above and then uninstall the existing version of **AAPS** on your phone. See [Reinstalling AAPS with a new keystore](#reinstall-aaps) for the full procedure.
+Jei atnaujinate **AAPS** po to, kai pametėte ar pakeitėte pradinę raktų saugyklą (pvz., naudojate naują kompiuterį APK kurti ir neperkėlėte raktų saugyklos), pirmiausia sukurkite visų nustatymų atsargines kopijas, kaip aprašyta aukščiau, o tada pašalinkite esamą **AAPS** versiją iš telefono. Visą procedūrą rasite skyriuje [AAPS perdiegimas su nauja raktų saugykla](#reinstall-aaps).
 
-If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) prior to the steps listed below
+Jei reikia, prieš atlikdami toliau nurodytus veiksmus [nustatykite savo NGJ / glikemijos šaltinio imtuvą](../Getting-Started/CompatiblesCgms.md)
 
 (ExportImportSettings-tubeless-pumps)=
 ```{admonition} Tubeless pumps (Omnipod and Medtrum) users
 :class: warning
-The **Preferences** file contains the session of the pod or patch that was active when you exported it.
-- **Export right after every pod or patch activation** and copy the file off your phone.
-- **Same phone, pod still running:** leave **Also replace pump settings** unticked. Your current pod is kept and only the other settings are imported.
-- **New phone taking over the pod:** tick **Also replace pump settings**, and only use a file exported during the pod you are wearing now. A file from an earlier pod replaces your current pod session, and you will need to start a new pod.
-- **An old pod session was imported by mistake:** **AAPS** keeps trying to reach that pod and you cannot activate a new one. Deactivate it; if that fails, discard it (see for example [Discarding a pod](#omnipod-dash-discard-pod) for Omnipod DASH).
+**Nustatymų** (Preferences) faile yra Pod arba pompos (patch) sesija, kuri buvo aktyvi, kai failą eksportavote.
+- **Eksportuokite iš karto po kiekvieno Pod ar pompos (patch) aktyvavimo** ir nukopijuokite failą iš telefono.
+- **Tas pats telefonas, Pod vis dar veikia:** laukelio **Taip pat pakeisti pompos nustatymus** nežymėkite. Dabartinis Pod išlieka, importuojami tik kiti nustatymai.
+- **Naujas telefonas perima Pod:** pažymėkite **Taip pat pakeisti pompos nustatymus** ir naudokite tik failą, eksportuotą naudojant tą Pod, kurį nešiojate dabar. Failas iš ankstesnio Pod pakeičia dabartinio Pod sesiją, ir jums teks pradėti naują Pod.
+- **Per klaidą importuota sena Pod sesija:** **AAPS** vis bando susisiekti su tuo Pod, ir jūs negalite aktyvuoti naujo. Išjunkite jį; jei nepavyksta, pašalinkite jį (pvz., Omnipod DASH atveju žr. [Pod pašalinimas](#omnipod-dash-discard-pod)).
 ```
 
 ```{admonition} Pump settings are kept unless you say otherwise
 :class: note
-By default, an import leaves your pump settings alone: the pump selected in **Configuration**, its pairing and all its other settings stay as they are on this phone. Tick **Also replace pump settings** on the import screen only when you restore onto a new phone that should take over the same pump. Settings that are not in the file are never deleted by an import.
+Pagal numatytuosius nustatymus importas pompos nustatymų nekeičia: **Konfigūracija** pasirinkta pompa, jos susiejimas ir visi kiti jos nustatymai šiame telefone lieka tokie, kokie buvo. Laukelį **Taip pat pakeisti pompos nustatymus** importavimo ekrane pažymėkite tik tada, kai atkuriate nustatymus naujame telefone, kuris turi perimti tą pačią pompą. Nustatymai, kurių faile nėra, importuojant niekada neištrinami.
 ```
 
-1. Using the back-up copy of your APK from above, follow the instructions for a [new installation](../SettingUpAaps/TransferringAndInstallingAaps.md)
+1. Naudodami aukščiau minėtą APK atsarginę kopiją, vadovaukitės [naujo įdiegimo](../SettingUpAaps/TransferringAndInstallingAaps.md) instrukcijomis
 
-2. Launch **AAPS** and allow any requested permissions
+2. Paleiskite **AAPS** ir suteikite visus prašomus leidimus
 
-3. Exit the Setup Wizard. We will be importing all the necessary settings from the back-up copy of **Settings**
+3. Išeikite iš sąrankos vedlio. Importuosime visus reikiamus nustatymus iš **nustatymų** atsarginės kopijos
 
-4. From the **AAPS** main screen press **Grant** and allow all permissions listed in the **Permissions Required** panel on the top
+4. **AAPS** pagrindiniame ekrane paspauskite **Suteikti** ir suteikite visus leidimus, išvardytus viršuje esančiame skydelyje **Reikalingi leidimai**
 
-5. From the **AAPS** main screen, set the master password in [Settings > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
+5. **AAPS** pagrindiniame ekrane nustatykite pagrindinį slaptažodį [Nustatymai > Apsauga](#Preferences-master-password) – tokį patį, kokį naudojote atsarginėms kopijoms.
 
-6. If you haven't done it yet, [set the **AAPS directory**](#preferences-maintenance-logdirectory): from the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **AAPS directory**.
+6. Jei dar to nepadarėte, [nustatykite **AAPS aplanką**](#preferences-maintenance-logdirectory): **AAPS** pagrindiniame ekrane atidarykite **meniu** (☰) > **Servisas** > **AAPS aplankas**.
 
-7. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **Export settings** > type in the master password set above > **OK**. This will create the preferences folder if it does not already exist on your phone.
+7. **AAPS** pagrindiniame ekrane atidarykite **meniu** (☰) > **Servisas** > **Eksportuoti nustatymus** > įveskite aukščiau nustatytą pagrindinį slaptažodį > **OK**. Taip telefone bus sukurtas aplankas preferences, jei jo dar nėra.
 
-8. Download the back-up of your **Preferences** file from your cloud platform.
+8. Iš debesų saugyklos atsisiųskite savo **nustatymų** failo atsarginę kopiją.
 
-9. Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to `/internal storage/AAPS/preferences` if your **AAPS Directory** has been set `/internal storage/AAPS`
+9. Failų naršykle (dažniausiai vadinama „Files“ arba „Mano failai“) perkelkite failą iš atsisiuntimų į `/internal storage/AAPS/preferences`, jei jūsų **AAPS aplankas** nustatytas į `/internal storage/AAPS`
 
-10. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** and tap **Import settings**. Select the preferences file you want to restore from (the newest is at the top). Make sure you select the correct preferences file, all .json files from the preferences folder (or from the cloud directory, with **Cloud**) will be shown.
+10. **AAPS** pagrindiniame ekrane atidarykite **meniu** (☰) > **Servisas** ir bakstelėkite **Importuoti nustatymus**. Pasirinkite nustatymų failą, iš kurio norite atkurti nustatymus (naujausias yra viršuje). Įsitikinkite, kad pasirinkote tinkamą nustatymų failą: bus rodomi visi .json failai iš aplanko preferences (arba iš debesies aplanko, jei pasirinkta **Debesis**).
 
-    ![List of settings files to import](../images/Maintenance/import_settings_files.png)
+    ![Importuojamų nustatymų failų sąrašas](../images/Maintenance/import_settings_files.png)
 
-    **AAPS** shows the details of the file. Type the master password set above and tap **Decrypt & Review**.
+    **AAPS** parodo failo informaciją. Įveskite aukščiau nustatytą pagrindinį slaptažodį ir bakstelėkite **Iššifruoti & peržiūrėti**.
 
-11. Once the file is decrypted, decide what to do with the pump settings. On a new phone that takes over the same pump, tick **Also replace pump settings** so the pairing and the pump settings come from the file. Leave the box unticked to keep the pump this phone is already paired with. Then tap **Import**.
+11. Kai failas iššifruotas, nuspręskite, ką daryti su pompos nustatymais. Naujame telefone, kuris perima tą pačią pompą, pažymėkite **Taip pat pakeisti pompos nustatymus**, kad susiejimas ir pompos nustatymai būtų paimti iš failo. Nežymėkite laukelio, jei norite palikti pompą, su kuria šis telefonas jau susietas. Tada bakstelėkite **Importuoti**.
 
-    ![Decrypted settings file with the Also replace pump settings box and the Import button](../images/Maintenance/import_settings_review.png)
+    ![Iššifruotas nustatymų failas su laukeliu „Taip pat pakeisti pompos nustatymus“ ir mygtuku „Importuoti“](../images/Maintenance/import_settings_review.png)
 
-12. **AAPS** asks **Apply imported settings?** and tells you how many settings will change and, if you left the box unticked, how many pump settings are kept. Nothing has been written yet, so **Cancel** leaves your phone exactly as it was. Tap **OK** to apply.
+12. **AAPS** klausia **Taikyti importuotus nustatymus?** ir parodo, kiek nustatymų pasikeis, o jei laukelio nepažymėjote – kiek pompos nustatymų bus išsaugota. Kol kas niekas neįrašyta, todėl **Atšaukti** palieka telefoną lygiai tokį, koks jis buvo. Bakstelėkite **OK**, kad pritaikytumėte.
 
-    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
+    ![Langas „Taikyti importuotus nustatymus?“](../images/Maintenance/import_settings_apply.png)
 
-13. **AAPS** applies the imported settings straight away, without restarting. Only the plugins whose settings changed are restarted. While this runs, **AAPS** shows **Applying settings…**; if the pump is busy, it shows **Waiting for pump…** and applies the settings once the pump is idle. If the pump is still busy after one minute, **AAPS** offers to try again. A **Settings applied** message confirms that the imported settings are in use. Any treatment you had queued while the import ran is dropped and **AAPS** tells you that it was cancelled, so nothing is sent to the pump twice.
+13. **AAPS** importuotus nustatymus pritaiko iš karto, nepaleisdama programėlės iš naujo. Iš naujo paleidžiami tik tie įskiepiai, kurių nustatymai pasikeitė. Kol tai vyksta, **AAPS** rodo **Taikomi nustatymai…**; jei pompa užimta, rodoma **Laukiama pompos…**, o nustatymai pritaikomi, kai pompa atsilaisvina. Jei pompa po vienos minutės vis dar užimta, **AAPS** pasiūlo bandyti dar kartą. Pranešimas **Nustatymai pritaikyti** patvirtina, kad importuoti nustatymai naudojami. Visos terapijos, kurios laukė eilėje importo metu, atmetamos, ir **AAPS** praneša, kad jos atšauktos, todėl niekas nėra siunčiama į pompą du kartus.
 
-    ![Settings applied message](../images/Maintenance/import_settings_applied.png)
+    ![Pranešimas „Nustatymai pritaikyti“](../images/Maintenance/import_settings_applied.png)
 
-If the file selected a pump that this version of **AAPS** does not have, **AAPS** falls back to the **Virtual Pump** and tells you so. Select your pump again in **Configuration** and check its settings.
+Jei faile pasirinkta pompa, kurios ši **AAPS** versija neturi, **AAPS** perjungia į **Virtuali pompa** ir apie tai praneša. Vėl pasirinkite savo pompą skiltyje **Konfigūracija** ir patikrinkite jos nustatymus.
 
-14. Tubeless pumps (Omnipod and Medtrum) users only - if you ticked **Also replace pump settings** and your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
+14. Tik pompų be vamzdelio (Omnipod ir Medtrum) naudotojams: jei pažymėjote **Taip pat pakeisti pompos nustatymus**, o jūsų **nustatymų** atsarginė kopija buvo padaryta ne su tuo Pod, kurį dabar naudojate, insulino tiekimui pradėti turėsite pradėti naują Pod.
 
-**Troubleshooting:** if you are unable to get an active profile set from the **AAPS** main screen, open the **menu** (☰) in the top left > **Configuration** > **Pump** > switch to **Virtual Pump** > then switch back to your pump type
+**Trikčių šalinimas:** jei **AAPS** pagrindiniame ekrane nepavyksta nustatyti aktyvaus profilio, atidarykite **meniu** (☰) viršuje kairėje > **Konfigūracija** > **Pompa** > perjunkite į **Virtuali pompa** > tada vėl perjunkite į savo pompos tipą
 
 ### Pastaba Dana RS vartotojams
 
-- If you ticked **Also replace pump settings**, the pump connection settings are imported too: **AAPS** on your new phone will already "know" the pump and therefore not start a Bluetooth scan.
-- Please pair new phone and pump manually.
+- Jei pažymėjote **Taip pat pakeisti pompos nustatymus**, importuojami ir pompos ryšio nustatymai: **AAPS** naujame telefone jau „žinos“ pompą, todėl Bluetooth paieškos nepradės.
+- Naują telefoną ir pompą susiekite rankiniu būdu.
