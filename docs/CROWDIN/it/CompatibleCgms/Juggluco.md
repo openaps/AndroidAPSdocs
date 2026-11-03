@@ -2,9 +2,9 @@
 
 If not already set up, then download [Juggluco](https://www.juggluco.nl/Juggluco/download.html).
 
-Follow the [instructions](https://www.juggluco.nl/Jugglucohelp/introhelp.html) to connect your sensor.
+Segui le [istruzioni](https://www.juggluco.nl/Jugglucohelp/introhelp.html) per collegare il tuo sensore.
 
-## Basic settings for all CGM systems
+## Impostazioni di base per tutti i sistemi CGM
 
 ### Disable Nightscout uploader
 
@@ -16,7 +16,7 @@ Disable any active uploader to Nightscout in Juggluco.
 
 (juggluco-to-aaps)=
 
-## Juggluco to AAPS
+## Da Juggluco ad AAPS
 
 Juggluco can send blood glucose directly to AAPS, enabling SMBs always if you are using a [trusted sensor](#GettingStarted-TrustedBGSource).
 
@@ -26,16 +26,16 @@ Enable xDrip broadcast in Juggluco (do not enable Patched Libre), confirm and sa
 
 Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS.
 
-![Juggluco to AAPS](../images/juggluco/Juggluco-AAPS.png)
+![Da Juggluco ad AAPS](../images/juggluco/Juggluco-AAPS.png)
 
 (juggluco-to-xdrip)=
 
-## Juggluco to xDrip
+## Da Juggluco a xDrip
 
-Juggluco can send blood glucose to xDrip which will then send them to AAPS.
+Juggluco può inviare la glicemia a xDrip, che poi la invia ad AAPS.
 
 Enable Patched Libre in Juggluco (do not enable xDrip broadcast), confirm and save the dexdrip package information. Select the xDrip BG data source in AAPS.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary. When using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute readings to 5-minute readings and [also smooth](#libre2-value-smoothing-raw-values) them.
+Se serve, applica uno [smoothing](./SmoothingBloodGlucoseData.md) sufficiente in AAPS. Con un sensore Libre 2/2+/3/3+, xDrip fa la media delle letture di ogni minuto per ottenere letture ogni 5 minuti e [applica anche uno smoothing](#libre2-value-smoothing-raw-values).
 
-![Juggluco to xDrip](../images/juggluco/Juggluco-xDrip+.png)
+![Da Juggluco a xDrip](../images/juggluco/Juggluco-xDrip+.png)
