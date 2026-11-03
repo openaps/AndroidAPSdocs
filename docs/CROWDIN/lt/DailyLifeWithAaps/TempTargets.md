@@ -2,85 +2,85 @@
 
 ## Kokie yra laikini tikslai ir kaip juos naudoti bei nustatyti?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+**Laikinas tikslas** (trumpiau **LT**) yra **AAPS** funkcija, leidžianti pakeisti [**KG** tikslinį intervalą](#profile-glucose-targets) planuojamai veiklai. This is achieved by **AAPS** manipulating the user’s insulin usage.
 
 A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
 
 Temporary targets can be defined within those boundaries :
 
-|         | Temporary target       |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/L or 72 mg/dL   |
-| Maximum | 10 mmol/L or 180 mg/dL |
+|                    | Temporary target       |
+| ------------------ | ---------------------- |
+| Mažiausia reikšmė  | 4 mmol/l arba 72 mg/dL |
+| Didžiausia reikšmė | 10 mmol/L or 180 mg/dL |
 
-**AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). They live on the **Temp Target** screen (**Manage** → **Temp Target**), which you can also open by simply tapping the **target chip** on the main screen.
+**AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). Juos rasite ekrane **Laikinas tikslas** (**Valdymas** → **Laikinas tikslas**), kurį taip pat galite atidaryti tiesiog bakstelėję **tikslo ženklelį** pagrindiniame ekrane.
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. Ar pavyks pasiekti norimą **KG** tikslą, priklauso nuo daugelio veiksnių: naudotojo **AAPS** nustatymų patikimumo, bendros **KG** kontrolės, **AIO**, jautrumo ir atsparumo insulinui, fizinio krūvio intensyvumo ir kitų veiksnių.
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+Norimam **KG** tikslui pasiekti naudojant **laikiną tikslą** gali prireikti maždaug 30 minučių ar ilgiau. **AAPS** negali pasiekti **KG** tikslo iš karto. Rinkdamiesi **laikiną tikslą**, naudotojai turėtų tai prisiminti.
 
-The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. The values shown are the shipped defaults — you can [adjust each preset](#TempTargets-change-preset-defaults) to your own needs.
+Toliau trumpai aprašomos **laikino tikslo „Sportas“**, **laikino tikslo „Netrukus valgysiu“** ir **laikino tikslo „Hipo“** ypatybės. The values shown are the shipped defaults — you can [adjust each preset](#TempTargets-change-preset-defaults) to your own needs.
 
-### TT - Activity
+### LT – Sportas
 
-![TT Activity](../images/TempTarget2.png)
+![LT sportas](../images/TempTarget2.png)
 
-**BG Target (default preset, adjustable)**
+**KG tikslas (numatytasis ruošinys, keičiamas)**
 
-AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
+AAPS 1 val. 30 min. sieks 140 mg/dL arba 7,8 mmol/l tikslo
 
-**Other considerations users may wish to factor in when selecting**:
+**Ką dar naudotojai gali norėti įvertinti renkantis**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+Priklausomai nuo **KG** lygio, **AAPS** „sumažins“ insulino tiekimą, kad pasiektų **KG** tikslą. Jei **KG** tikslas nėra intervale (t. y. yra aukščiau už naudotojo **profilyje** pasirinktą **KG** tikslą), **AAPS** gali palikti valandinę bazę įjungtą.
 
-In closed loop mode, **SMB**:
+Uždaro ciklo režimu **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *gali būti* išjungti (plačiau aptariama toliau); ir (arba)
+- valandinė bazė gali būti įjungta, jei **AAPS** rodo neigiamą **AIO**, arba <0.
 
-Users may also wish to consider:
+Naudotojai taip pat gali apsvarstyti:
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- šį **LT** *pasirinkti* 1–2 valandas prieš planuojamą sportą, kad AIO būtų mažesnis (tinkamas šio LT laikas kiekvienam žmogui skiriasi); ir
+- planuojamos veiklos laikui *pasirinkti* laikiną profilį (sumažintą), kad **AIO** būtų mažesnis;
+- *užtikrinti*, kad **LT** būtų *išjungtas* netrukus prieš sportą, nes **AIO** jau sumažėjęs, o kai kuriems naudotojams po sporto **KG** greitai pakyla.
 
-### TT - Eating soon
+### LT – Netrukus valgysiu
 
-![TT Eating soon](../images/TempTarget1.png)
+![LT Netrukus valgysiu](../images/TempTarget1.png)
 
-**BG Target (default preset, adjustable)**
+**KG tikslas (numatytasis ruošinys, keičiamas)**
 
-AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
+AAPS 45 minutes sieks 90 mg/dL arba 5,0 mmol/l tikslo
 
-**Other considerations users may wish to factor in when selecting**:
+**Ką dar naudotojai gali norėti įvertinti renkantis**:
 
-In closed loop mode, **SMB**:
+Uždaro ciklo režimu **SMB**:
 
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
+- liks įjungti; ir (arba)
+- priklausomai nuo naudotojo **profilio** nustatymų, taip pat gali būti įjungta valandinė bazė.
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+Priklausomai nuo **KG** lygio, **AAPS** „padidins“ insulino tiekimą neviršydama naudotojo **AAPS** nustatymų ribų, kad pasiektų norimą **KG** tikslą.
 
-### TT - Hypo
+### LT – Hipo
 
-![TT Hypo](../images/TempTarget3.png)
+![LT Hipo](../images/TempTarget3.png)
 
-**BG Target (default preset, adjustable)**
+**KG tikslas (numatytasis ruošinys, keičiamas)**
 
-AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
+AAPS 1 valandą sieks 160 mg/dL arba 8,9 mmol/l tikslo
 
-**Other considerations users may wish to factor in when selecting**:
+**Ką dar naudotojai gali norėti įvertinti renkantis**:
 
-In closed loop mode, **SMB**:
+Uždaro ciklo režimu **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *gali būti* išjungti (plačiau aptariama toliau); ir (arba)
+- valandinė bazė gali būti įjungta, jei **AAPS** rodo neigiamą **AIO**, arba <0.
 
 (TempTargets-manage-v4)=
 
 ## Setting and managing temporary targets (Manage → Temp Target)
 
-In **AAPS** v4 you manage your TT **presets** and start a temporary target from the **Manage** screen (bottom navigation) → **Temp Target** (*“Manage and set temporary targets”*).
+**AAPS** v4 laikino tikslo **ruošinius** tvarkote ir laikiną tikslą pradedate ekrane **Valdymas** (apatinė navigacija) → **Laikinas tikslas** (*„Tvarkyti ir nustatyti laikinus tikslus“*).
 
 ![The Temp Target screen — preset carousel, editor and action bar](../images/v4/TempTarget/tt_management.png)
 
@@ -133,40 +133,40 @@ Your presets are part of the synced configuration, so they are shared across you
 
 A temporary target can also be set without opening this screen:
 
-- with the **TT toggles in the Carbs dialog** — see [below](#TempTargets-carbs-dialog),
+- naudojant **LT jungiklius lange Angliavandeniai** – žr. [toliau](#TempTargets-carbs-dialog),
 - with a **preset button on the [QuickLaunch toolbar](QuickLaunch.md)** — the *Temp Target Presets* category in *Configure QuickLaunch* offers a one-tap button for each of your presets,
 - from a **Wear OS watch** (the **Temp Target** menu item / tile),
 - from a paired **client** — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md),
-- as part of a **[scene](Scenes.md)** (the *Temporary target* action), or
+- kaip **[scenarijaus](Scenes.md)** dalį (veiksmas *Laikinas tikslas*) arba
 - from an **Automation** rule (*Start temp target* / *Stop temp target*).
 
 * * *
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
-## Where can I select a Temp-Target?
+## Kur galiu pasirinkti laikiną tikslą?
 
-The quickest way is to tap the **target chip** on the main screen (it shows your current target range):
+Greičiausias būdas – bakstelėti **tikslo ženklelį** pagrindiniame ekrane (jame rodomas dabartinis tikslo intervalas):
 
-![Target chip on the main screen](../images/TempTarget6.png)
+![Tikslo ženklelis pagrindiniame ekrane](../images/TempTarget6.png)
 
 This opens the **Temp Target** screen described above — swipe to a preset and tap **▶ Activate**. The same screen is also reachable via **Manage** → **Temp Target**.
 
-(TempTargets-carbs-dialog)= When entering carbs, you don't need to open the **Temp Target** screen at all: the **Carbs dialog** (**Treatments** → **Carbs**) has **Start Hypo TT**, **Start Eating soon TT** and **Start Activity TT** toggles at the top. Switch one on and the corresponding preset is activated together with the carb entry:
+(TempTargets-carbs-dialog)= Įvesdami angliavandenius, ekrano **Laikinas tikslas** galite visai neatidaryti: lango **Angliavandeniai** (**Terapija** → **Angliavandeniai**) viršuje yra jungikliai **Pradėti Hipo LT**, **Pradėti Netrukus valgysiu LT** ir **Pradėti Sporto LT**. Switch one on and the corresponding preset is activated together with the carb entry:
 
-![TT toggles in the Carbs dialog](../images/TempTarget5.png)
+![LT jungikliai lange Angliavandeniai](../images/TempTarget5.png)
 
-    {admonition} Automatic Hypo TT
+    {admonition} Automatinis Hipo LT
     :class: note
-    If you open the **Carbs dialog** while your glucose is below 72 mg/dL (4 mmol/L), **AAPS** pre-selects the **Start Hypo TT** toggle for you (unless a higher temporary target with a longer remaining duration is already running).
+    Jei atidarote **langą Angliavandeniai**, kai jūsų gliukozė žemesnė nei 72 mg/dL (4 mmol/l), **AAPS** už jus iš anksto įjungia jungiklį **Pradėti Hipo LT** (nebent jau veikia aukštesnis laikinas tikslas, kurio likęs laikas ilgesnis).
 
 (TempTargets-change-preset-defaults)=
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## Kur galiu pakeisti numatytąjį laikiną tikslą ir pritaikyti jį savo poreikiams?
 
 Each preset's **target** and **duration** are edited directly on the **Temp Target** screen — there is no separate preferences entry for this anymore:
 
-1. Open the **Temp Target** screen (tap the target chip, or **Manage** → **Temp Target**).
+1. Atidarykite ekraną **Laikinas tikslas** (bakstelėkite tikslo ženklelį arba pasirinkite **Valdymas** → **Laikinas tikslas**).
 2. Swipe to the preset you want to change.
 3. Adjust **Temporary target** and/or **Duration** in the editor.
 4. Tap the **Save** icon that appears in the top toolbar.
@@ -175,9 +175,9 @@ Each preset's **target** and **duration** are edited directly on the **Temp Targ
 
 While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
 
-## How do I cancel a Temp-Target?
+## Kaip atšaukti laikiną tikslą?
 
-While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Tap it and confirm:
+Kol laikinas tikslas aktyvus, pagrindinio ekrano tikslo ženklelyje rodomas tikslas ir likęs laikas. Bakstelėkite jį – ekrane **Laikinas tikslas** aktyvus ruošinys pažymėtas **AKTYVUS**, o apačioje esančios įrankių juostos gale, iškart į kairę nuo mygtuko **▶ Aktyvuoti**, rodomas raudonas mygtukas **✗ Atšaukti**. Tap it and confirm:
 
 ![Cancelling a running temp target](../images/TempTarget9.png)
 
@@ -185,52 +185,52 @@ A running temporary target can also be stopped from a **Wear OS watch**, from a 
 
 (TempTargets-hypo-temp-target)=
 
-## Hipo Laikinas tikslas
+## Laikinas tikslas „Hipo“
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. Jei naudotojas numato, kad jo **KG** sumažės, paprastai **AAPS** turėtų tai suvaldyti, tačiau daug kas priklauso nuo naudotojo **AAPS** nustatymų stabilumo. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
 
-Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
+Kartais suvalgius angliavandenių hipoglikemijai gydyti naudotojo **KG** gali greitai padidėti, o **AAPS** į šį greitą **KG** kilimą reaguos skirdama **SMB**.
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating *'Enable SMB with high temp target'* in **Settings** → **OpenAPS SMB** (see further below):
+Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. Tai daroma išjungiant *„Naudoti SMB esant aukštesniam laikinam gliukozės tikslui“* skiltyje **Nustatymai** → **OpenAPS SMB** (žr. toliau):
 
-- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- Pažengusiems, 9 mokymo etapas: naudotojas gali įjungti *„Aukštas laikinas tikslas padidina JIF“* **laikiniems tikslams**, kurie yra 100 mg/dL (5,6 mmol/l) ar aukštesni, naudojant OpenAPS SMB – tada **AAPS** bus jautresnė.
 
-- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- Pažengusiems, 9 mokymo etapas: naudotojas gali išjungti *„Naudoti SMB esant aukštesniam laikinam gliukozės tikslui“*. Tada, net jei **AAPS** rodo AAO > 0, įjungta „Naudoti SMB esant žemesniam laikinam gliukozės tikslui“ arba „Naudoti SMB visada“ ir aktyvus OpenAPS SMB, **AAPS** neskirs SMB, kol aktyvūs aukšti laikini tikslai.
 
-Note: if you open the **Carbs dialog** while your blood glucose is less than 72 mg/dL or 4 mmol/L, **AAPS** pre-selects the **Start Hypo TT** toggle automatically.
+Pastaba: jei atidarote **langą Angliavandeniai**, kai jūsų gliukozė kraujyje žemesnė nei 72 mg/dL arba 4 mmol/l, **AAPS** automatiškai iš anksto įjungia jungiklį **Pradėti Hipo LT**.
 
 (TempTargets-activity-temp-target)=
 
-## Aktyvumo laikinas tikslas
+## Laikinas tikslas „Sportas“
 
 Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
 
-To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia.
+Kad naudoti **laikiną tikslą „Sportas“** būtų paprasčiau, naudotojas gali nustatyti numatytąjį **laikiną tikslą „Sportas“**, kuris mažina insulino tiekimą, kad **KG** padidėtų, sulėtėtų **KG** mažėjimas ir būtų išvengta hipoglikemijos.
 
-New users to **AAPS** may need to experiment and personalize their **Temp-Target Activity** default settings in order to optimize this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports).
+Naujiems **AAPS** naudotojams gali tekti eksperimentuoti ir individualiai pritaikyti numatytuosius **laikino tikslo „Sportas“** nustatymus, kad ši funkcija jiems veiktų geriausiai. Everyone is different when it comes to attaining stable BG control during exercise. Taip pat žr. [DUK skyrių apie sportą](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Kai kurie naudotojai taip pat mieliau aktyvuoja **profilio keitimą** (sumažintą profilį < 100 %, kad **AAPS** tiektų mažiau insulino) prieš įjungdami **laikiną tikslą „Sportas“** ir kol jis aktyvus. Abu galite pradėti vienu žingsniu: pagrindiniame ekrane bakstelėkite profilio pavadinimą, bakstelėkite apvalų mygtuką **▶**, nustatykite **Procentais** mažiau nei 100 % ir **Trukmę**, tada įjunkite **Laikinas tikslas / Sportas**. Žr. [Profilio procento keitimas](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. Then **AAPS** is more sensitive.
+Pažengusiems, 9 mokymo etapas: naudotojai gali įjungti *„Aukštas laikinas tikslas padidina JIF“* **laikiniems tikslams**, kurie yra 100 mg/dL (5,6 mmol/l) ar aukštesni, naudojant OpenAPS **SMB**. 99 mg/dL (5,5 mmol/l) tikslas yra įprastas tikslas – nei aukštas, nei žemas. Tada **AAPS** yra jautresnė.
 
-Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS **SMB** active.
+Be to, jei *„Naudoti SMB esant aukštesniam laikinam gliukozės tikslui“* išjungta, **AAPS** neskirs **SMB**, net jei AAO > 0, įjungta *„Naudoti SMB esant žemesniam laikinam gliukozės tikslui“* arba *„Naudoti SMB visada“* ir aktyvus OpenAPS **SMB**.
 
 (TempTargets-eating-soon-temp-target)=
 
-## Netrukus valgysiu Laikinas tikslas
+## Laikinas tikslas „Netrukus valgysiu“
 
-**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**Laikinas tikslas „Netrukus valgysiu“** gali padėti pamažu sumažinti **KG** ir užtikrinti, kad prieš valgį būtų pakankamai **AIO**.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
+Tai gali būti svarbi priemonė naudotojams, kurie nesileidžia išankstinio boluso, tačiau **laikino tikslo „Netrukus valgysiu“** veiksmingumas priklausys nuo daugelio veiksnių: naudotojo nustatymų, ar jis laikosi mažai angliavandenių turinčios dietos ir ar naudoja greito veikimo insuliną (pvz., Fiasp ar Lyumjev), kad išankstinio boluso nereikėtų. Paprastai, kol naudotojai nėra įgiję patirties su **AAPS**, naudodami **laikiną tikslą „Netrukus valgysiu“** jie turėtų tikėtis, kad reikės suleisti bolusą prieš valgį. Tai ypač svarbu, jei racione daug angliavandenių.
 
-You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+Daugiau apie „Netrukus valgysiu“ režimą galite perskaityti straipsnyje ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (anglų k.) arba [čia](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be 98 mg/dL (5.4 mmol/L) or lower.
+Pažengusiems, [9 mokymo etapas](#objectives-objective9): jei naudojate OpenAPS SMB ir įjungtas nustatymas *„Žemas laikinas tikslas sumažina JIF“*, **AAPS** veikia šiek tiek agresyviau. Šiai parinkčiai reikia, kad **laikinas tikslas** būtų 98 mg/dL (5,4 mmol/l) ar žemesnis.
 
-## How do I turn off SMB during Temp-Targets?
+## Kaip išjungti SMB, kai aktyvus laikinas tikslas?
 
-To action this open **Settings** → **OpenAPS SMB** and deactivate *'Enable SMB with high temp target'*.
+Norėdami tai padaryti, atidarykite **Nustatymai** → **OpenAPS SMB** ir išjunkite *„Naudoti SMB esant aukštesniam laikinam gliukozės tikslui“*.
 
-![Enable SMB with high temp target preference](../images/TempTargetSMB.png)
+![Nustatymas „Naudoti SMB esant aukštesniam laikinam gliukozės tikslui“](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS SMB active.
+Taip **AAPS** neskirs **SMB**, net jei AAO > 0, įjungta *„Naudoti SMB esant žemesniam laikinam gliukozės tikslui“* arba *„Naudoti SMB visada“* ir aktyvus OpenAPS SMB.
