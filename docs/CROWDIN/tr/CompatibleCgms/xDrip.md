@@ -1,193 +1,193 @@
-# xDrip settings
+# xDrip ayarları
 
-If not already set up, download and install the latest xDrip release from the [xDrip releases page](https://github.com/NightscoutFoundation/xDrip/releases).
+Henüz kurulmadıysa en son xDrip sürümünü [xDrip sürümler sayfasından](https://github.com/NightscoutFoundation/xDrip/releases) indirip yükleyin.
 
-Disable battery optimization and allow background activity for the xDrip app.
+xDrip uygulaması için pil optimizasyonunu devre dışı bırakın ve arka plan etkinliğine izin verin.
 
 ## Tüm CGM & FGM sistemleri için temel ayarlar
 
-### Disable Nightscout upload
+### Nightscout yüklemesini devre dışı bırakın
 
-You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Başka hiçbir uygulamanın Nightscout'a veri (kan şekeri ve tedaviler) yüklemesine izin vermemelisiniz.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
+→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → `Enabled` seçeneğini **KAPALI** konuma getirin (5)
 
-![xDrip Basic Settings 1](../images/xDrip_Basic1.png)
+![xDrip temel ayarları 1](../images/xDrip_Basic1.png)
 
-#### Disable automatic calibration and treatments
+#### Otomatik kalibrasyonu ve tedavileri devre dışı bırakın
 
-Make sure `Automatic Calibration` (7) is deactivated. If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
+`Automatic Calibration` (7) seçeneğinin devre dışı olduğundan emin olun. `Automatic Calibration` onay kutusu işaretliyse `Download treatments` (6) seçeneğini bir kez etkinleştirin, ardından `Automatic Calibration` onay kutusunun işaretini kaldırın ve `Download treatments` seçeneğini yeniden devre dışı bırakın.
 
-![xDrip Basic Settings 2](../images/xDrip_Basic2.png)
+![xDrip temel ayarları 2](../images/xDrip_Basic2.png)
 
-Tap `Extra Options`(8)
+`Extra Options` öğesine dokunun (8)
 
-    {admonition} Safety warning
+    {admonition} Güvenlik uyarısı
     :class: warning
-    You must deactivate "Upload treatments" from xDrip, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
+    xDrip'te "Upload treatments" seçeneğini devre dışı bırakmalısınız. Aksi halde tedaviler AAPS'te iki kez kaydedilebilir ve AKRB ile AİNS yanlış olur.
 
-Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
+`Upload treatments` (9) seçeneğini devre dışı bırakın ve `Back-fill data` (11) seçeneğini **KULLANMAYACAĞINIZDAN** emin olun.
 
-Option `Alert on failures` should also be deactivated (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
+`Alert on failures` seçeneği de devre dışı bırakılmalıdır (10). Aksi halde Wi-Fi/mobil ağ sorunlarında veya sunucuya ulaşılamadığında her 5 dakikada bir alarm alırsınız.
 
-![xDrip Basic Settings 3](../images/xDrip_Basic3.png)
+![xDrip temel ayarları 3](../images/xDrip_Basic3.png)
 
-### **Inter-app Settings** (Broadcast)
+### **Inter-app Settings** (uygulamalar arası ayarlar, yayın)
 
-If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
+AAPS kullanıyorsanız, verilerin AAPS'e iletilmesi için xDrip'in Inter-App settings bölümünde yayını (broadcast) etkinleştirmeniz gerekir.
 
-→ Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
+→ Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **AÇIK** (4)
 
-In order for the values to be identical in AAPS with respect to xDrip, you should activate `Send the displayed glucose value` (5).
+AAPS'teki değerlerin xDrip'tekilerle aynı olması için `Send the displayed glucose value` (5) seçeneğini etkinleştirmelisiniz.
 
-Enable Compatible Broadcast (6).
+Compatible Broadcast seçeneğini etkinleştirin (6).
 
-![xDrip Basic Settings 4](../images/xDrip_Basic4.png)
+![xDrip temel ayarları 4](../images/xDrip_Basic4.png)
 
-If you have also activated `Accept treatments` in xDrip and `Enable broadcasts to xDrip` in AAPS xDrip plugin, then xDrip will receive insulin, carbs and basal rate information from AAPS.
+xDrip'te `Accept treatments` ve AAPS xDrip eklentisinde `Enable broadcasts to xDrip` seçeneklerini de etkinleştirdiyseniz xDrip, AAPS'ten insülin, karbonhidrat ve bazal oran bilgilerini alır.
 
-If you enable `Accept Calibrations`, xDrip will use the calibrations from AAPS. Be careful when you use this feature with Dexcom sensors: read [this](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) first.
+`Accept Calibrations` seçeneğini etkinleştirirseniz xDrip, AAPS'teki kalibrasyonları kullanır. Bu özelliği Dexcom sensörleriyle kullanırken dikkatli olun: önce [bunu](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) okuyun.
 
-Remember to disable Import Sounds to avoid xDrip making a ringtone every time AAPS sends a basal/profile change.
+AAPS her bazal/profil değişikliği gönderdiğinde xDrip'in zil sesi çalmaması için Import Sounds seçeneğini devre dışı bırakmayı unutmayın.
 
-![xDrip Basic Settings 5](../images/xDrip_Basic5.png)
+![xDrip temel ayarları 5](../images/xDrip_Basic5.png)
 
 (xdrip-identify-receiver)=
 
 #### Alıcı tanımlama
 
-- If you discover problems with local broadcast (AAPS not receiving BG values from xDrip) go to → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
-- Lütfen Dikkat: Otomatik düzeltme bazen i'yi büyük harfe çevirme eğilimindedir. `info.nightscout.androidaps` yazarken **yalnızca küçük harf kullanmalısınız** (veya PumpControl için `info.nightscout.aapspumpcontrol`). Capital I would prevent the App from receiving BG values from xDrip.
+- Yerel yayınla ilgili sorunlar fark ederseniz (AAPS, xDrip'ten KŞ değerlerini almıyorsa) → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) yolunu izleyin ve AAPS sürümü için `info.nightscout.androidaps` girin (PumpControl sürümünü kullanıyorsanız bunun yerine `info.nightscout.aapspumpcontrol` girin!!).
+- Lütfen Dikkat: Otomatik düzeltme bazen i'yi büyük harfe çevirme eğilimindedir. `info.nightscout.androidaps` yazarken **yalnızca küçük harf kullanmalısınız** (veya PumpControl için `info.nightscout.aapspumpcontrol`). Büyük I harfi, uygulamanın xDrip'ten KŞ değerlerini almasını engeller.
     
     ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-## Use AAPS to calibrate in xDrip
+## xDrip'te kalibrasyon için AAPS'i kullanma
 
-- If you want to be able to use AAPS to calibrate then in xDrip go to Settings → Interapp Compatibility → Accept Calibrations and select ON. 
-- You may also want to review the options in Settings → Less Common Settings → Advanced Calibration Settings.
+- Kalibrasyon için AAPS'i kullanabilmek istiyorsanız xDrip'te Settings → Interapp Compatibility → Accept Calibrations yolunu izleyin ve ON (açık) seçin. 
+- Settings → Less Common Settings → Advanced Calibration Settings içindeki seçenekleri de gözden geçirmek isteyebilirsiniz.
 
 ## Dexcom sensors
 
-Everything related to the Dexcom sensor and transmitter themselves (starting, stopping, replacing, calibrating, troubleshooting) is documented and kept up to date in the [xDrip Dexcom documentation](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Follow those instructions for the sensor; the settings connecting xDrip to **AAPS** (described above on this page) are the only AAPS-specific part.
+Dexcom sensörü ve vericisiyle ilgili her şey (başlatma, durdurma, değiştirme, kalibrasyon, sorun giderme) [xDrip Dexcom belgelerinde](https://navid200.github.io/xDrip/docs/Dexcom_page.html) anlatılır ve güncel tutulur. Sensör için bu talimatları izleyin; xDrip'i **AAPS**'e bağlayan ayarlar (bu sayfada yukarıda anlatılanlar) AAPS'e özgü olan tek kısımdır.
 
-### Dexcom G6 and ONE
+### Dexcom G6 ve ONE
 
-- Set up xDrip following the [recommended settings](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html).
-- The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-- When using xDrip as receiver uninstall the Dexcom app first. **You cannot connect xDrip and the Dexcom app with the transmitter at the same time!**
-- If you need Clarity and want to profit from xDrip features, use the [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip, or use xDrip as a Companion app receiving notifications from the official Dexcom app (with possible delays in BG readings).
+- xDrip'i [önerilen ayarlara](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html) göre kurun.
+- Dexcom G6 ve ONE vericileri aynı anda Dexcom alıcısına (veya t:slim pompaya) ve telefonunuzdaki bir uygulamaya bağlanabilir.
+- xDrip'i alıcı olarak kullanırken önce Dexcom uygulamasını kaldırın. **xDrip'i ve Dexcom uygulamasını aynı anda vericiye bağlayamazsınız!**
+- Clarity'ye ihtiyacınız varsa ve xDrip özelliklerinden yararlanmak istiyorsanız, xDrip'e yerel yayın ile [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) kullanın veya xDrip'i resmi Dexcom uygulamasından bildirim alan bir yardımcı uygulama (companion app) olarak kullanın (KŞ ölçümlerinde gecikmeler olabilir).
 
-#### Sensor restarts
+#### Sensörü yeniden başlatma
 
-- xDrip always uses the transmitter's [native algorithm](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) with current transmitters; there is no reason to disable it.
-- [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) only function on old transmitters (firmware 1.6.5.25 or earlier), where they are needed to prevent the sensor stopping after 10 days. Recent (Firefly) transmitters ignore them.
-- Restarting a sensor on a Firefly transmitter requires [removing the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) and readings can be significantly in error after the restart, which is dangerous when looping: read [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) in full and [calibrate carefully](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
+- xDrip, güncel vericilerde her zaman vericinin [yerleşik algoritmasını](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) kullanır; bunu kapatmak için bir neden yoktur.
+- [Önleyici yeniden başlatmalar](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) yalnızca eski vericilerde (ürün yazılımı 1.6.5.25 veya daha eski) çalışır; bu vericilerde sensörün 10 gün sonra durmasını önlemek için gereklidir. Yeni (Firefly) vericiler bunları yok sayar.
+- Firefly vericide bir sensörü yeniden başlatmak için [vericiyi çıkarmanız](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) gerekir. Yeniden başlatmadan sonra ölçümler ciddi şekilde hatalı olabilir ve bu, döngü kullanırken tehlikelidir: [Sensörü yeniden başlatma](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) sayfasını baştan sona okuyun ve [dikkatle kalibre edin](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
 
 (xdrip-connect-g6-transmitter-for-the-first-time)=
 
-#### Start, stop and replace sensors
+#### Sensörleri başlatma, durdurma ve değiştirme
 
-Follow the instructions:
+Talimatları izleyin:
 
-- [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html)
-- [Stop and start a G6 or ONE sensor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)
-- [Remove the transmitter from a sensor](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)
-- [Transmitter lifetime](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) can only be extended ([hard reset](https://navid200.github.io/xDrip/docs/Hard-Reset.html)) on rebatteried or modified transmitters, not on Firefly.
+- [G6 veya ONE vericiyi başlatma](https://navid200.github.io/xDrip/docs/Starting-G6.html)
+- [G6 veya ONE sensörü durdurma ve başlatma](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)
+- [Vericiyi sensörden çıkarma](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)
+- [Verici ömrü](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) yalnızca pili yenilenmiş veya modifiye edilmiş vericilerde uzatılabilir ([donanımsal sıfırlama](https://navid200.github.io/xDrip/docs/Hard-Reset.html)), Firefly vericilerde uzatılamaz.
 
 (xdrip-replace-transmitter)=
 
-#### Replace a transmitter
+#### Vericiyi değiştirme
 
-- Turn the original Dexcom receiver off (if used) and do not turn it back on before xDrip shows readings.
-- Forget the device in xDrip (System Status → Forget Device) AND in the smartphone's Bluetooth settings (shown as DexcomXX where XX are the last two digits of the transmitter serial number).
-- Keep the old transmitter out of Bluetooth range to prevent reconnection.
-- Then follow [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+- Orijinal Dexcom alıcısını (kullanıyorsanız) kapatın ve xDrip ölçümleri gösterene kadar yeniden açmayın.
+- Cihazı xDrip'te (System Status → Forget Device) VE akıllı telefonun Bluetooth ayarlarında unutun (DexcomXX olarak görünür; XX, verici seri numarasının son iki hanesidir).
+- Yeniden bağlanmayı önlemek için eski vericiyi Bluetooth menzilinin dışında tutun.
+- Ardından [G6 veya ONE vericiyi başlatma](https://navid200.github.io/xDrip/docs/Starting-G6.html) talimatlarını izleyin.
 
-### Dexcom G7, ONE+ and Stelo
+### Dexcom G7, ONE+ ve Stelo
 
-- Follow the [G7, ONE+ and Stelo instructions](https://navid200.github.io/xDrip/docs/Dexcom/G7.html) (a recent xDrip release is required — see the linked page).
-- See also the [Dexcom G7, ONE+ and Stelo page](../CompatibleCgms/DexcomG7.md) for the available setups with **AAPS**.
+- [G7, ONE+ ve Stelo talimatlarını](https://navid200.github.io/xDrip/docs/Dexcom/G7.html) izleyin (güncel bir xDrip sürümü gerekir — bağlantılı sayfaya bakın).
+- **AAPS** ile kullanılabilecek kurulumlar için [Dexcom G7, ONE+ ve Stelo sayfasına](../CompatibleCgms/DexcomG7.md) da bakın.
 
 (xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
-### Troubleshooting Dexcom and xDrip
+### Dexcom ve xDrip sorun giderme
 
-- [G6/ONE connectivity troubleshooting](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)
-- [G7/ONE+/Stelo troubleshooting](https://navid200.github.io/xDrip/docs/Dexcom/G7_Troubleshooting.html)
-- [Problem when starting a new sensor](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html)
-- Full list: see **Troubleshooting** on the [xDrip Dexcom page](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+- [G6/ONE bağlantı sorunlarını giderme](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)
+- [G7/ONE+/Stelo sorun giderme](https://navid200.github.io/xDrip/docs/Dexcom/G7_Troubleshooting.html)
+- [Yeni bir sensörü başlatırken sorun](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html)
+- Tam liste: [xDrip Dexcom sayfasındaki](https://navid200.github.io/xDrip/docs/Dexcom_page.html) **Troubleshooting** (sorun giderme) bölümüne bakın.
 
 ## Libre 1
 
-- Setup your NFC to Bluetooth bridge in xDrip
+- xDrip'te NFC-Bluetooth köprünüzü kurun
     
     → Hamburger Menu (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
 
-- In Bluetooth Settings set the checkboxes exactly as in the screenshots below (5)
+- Bluetooth Settings içinde onay kutularını aşağıdaki ekran görüntülerinde olduğu gibi tam olarak ayarlayın (5)
     
-    - Disable watchdogs as they will reset the phone Bluetooth and interrupt your pump connection.
+    - Watchdog seçeneklerini devre dışı bırakın, çünkü bunlar telefonun Bluetooth'unu sıfırlar ve pompa bağlantınızı keser.
     
-    ![xDrip Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+    ![xDrip Libre Bluetooth ayarları 1](../images/xDrip_Libre_BTSettings1.png)
 
-- You can try to enable the following settings (7)
+- Aşağıdaki ayarları etkinleştirmeyi deneyebilirsiniz (7)
     
     - Taramayı kullan
     - Trust Auto-Connect
     - Use Background Scans
 
-- If you easily lose connection to the bridge or have difficulties recovering connection, **DISABLE THEM** (8).
+- Köprüyle bağlantınız kolayca kopuyorsa veya bağlantıyı yeniden kurmakta zorlanıyorsanız **BUNLARI DEVRE DIŞI BIRAKIN** (8).
     
-    ![xDrip Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+    ![xDrip Libre Bluetooth ayarları 2](../images/xDrip_Libre_BTSettings2.png)
 
-- Leave all other options disabled unless you know why you want to enable them.
+- Neden etkinleştirmek istediğinizi bilmiyorsanız diğer tüm seçenekleri devre dışı bırakın.
     
-    ![xDrip Libre Bluetooth Settings 3](../images/xDrip_Libre_BTSettings3.png)
+    ![xDrip Libre Bluetooth ayarları 3](../images/xDrip_Libre_BTSettings3.png)
 
 ### Libre akıllı okuyucu pil seviyesi
 
-- Battery level of bridges such as MiaoMiao and Bubble can be displayed in AAPS (not Blucon).
-- Details can be found on [screenshots page](#screens-sensor-level-battery).
+- MiaoMiao ve Bubble gibi köprülerin pil seviyesi AAPS'te gösterilebilir (Blucon hariç).
+- Ayrıntıları [ekran görüntüleri sayfasında](#screens-sensor-level-battery) bulabilirsiniz.
 
 ### Libre Vericiyi Bağla & sensörü başlat
 
-- If your sensor requires it (Libre 2 EU and Libre 1 US) install the latest out of process algorithm.
+- Sensörünüz gerektiriyorsa (Libre 2 EU ve Libre 1 US) en son out of process algoritmasını (OOP) yükleyin.
 
-- Your sensor must be already started using the vendor app or the reader (xDrip cannot start or stop Libre sensors).
+- Sensörünüz üretici uygulaması veya okuyucu ile önceden başlatılmış olmalıdır (xDrip, Libre sensörlerini başlatamaz veya durduramaz).
 
-- Set the data source to Libre Bluetooth.
+- Veri kaynağını Libre Bluetooth olarak ayarlayın.
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre Bluetooth in Hardware Data source (3)
+    → Hamburger Menu (1) → Settings (2) → Hardware Data source içinde Libre Bluetooth seçin (3)
     
-    ![xDrip Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+    ![xDrip Libre vericiyi ve sensörü başlatma 1](../images/xDrip_Libre_Transmitter01.png)
 
-- Scan Bluetooth and connect the bridge.
+- Bluetooth taraması yapın ve köprüyü bağlayın.
     
     → Hamburger Menu (1) → Scan Bluetooth (2) → Scan (3)
     
-    - If xDrip can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
+    - xDrip köprüyü bulamazsa köprünün üretici uygulamasına bağlı olmadığından emin olun. Köprüyü şarja takın ve sıfırlayın.
     
-    ![xDrip Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+    ![xDrip Libre vericiyi ve sensörü başlatma 2](../images/xDrip_Libre_Transmitter02.png)
 
-- Start the sensor in xDrip.
+- Sensörü xDrip'te başlatın.
     
-        {admonition} Safety warning
+        {admonition} Güvenlik uyarısı
         :class: warning
-        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
+        Bir saatlik ısınma süresi bitmeden sensör verilerini kullanmayın: değerler aşırı yüksek olabilir ve AAPS'in yanlış kararlar vermesine neden olabilir.
     
-    → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
+    → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Sensörü okuyucu veya üretici uygulamasıyla başlattığınız tam zamanı ayarlayın. Sensörü bugün başlatmadıysanız "Not Today" yanıtını verin (4).
 
 ![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
 (xdrip-libre2-patched-app)=
 
-## Libre 2 patched app
+## Libre 2 yamalı uygulama
 
-- Set the data source to Libre patched app.
+- Veri kaynağını Libre patched app (yamalı uygulama) olarak ayarlayın.
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre (patched App) in Hardware Data source (3)
+    → Hamburger Menu (1) → Settings (2) → Hardware Data source içinde Libre (patched App) seçin (3)
     
-    ![xDrip Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
+    ![xDrip Libre yamalı uygulama 1](../images/xDrip_Libre_Patched01.png)
 
-- You can add `BgReading:d,xdrip libre_receiver:v` under Less Common Settings->Extra Logging Settings->Extra tags for logging. Bu, sorun giderme için ek hata mesajlarını günlüğe kaydeder.
+- `BgReading:d,xdrip libre_receiver:v` değerini Less Common Settings->Extra Logging Settings->Extra tags for logging altına ekleyebilirsiniz. Bu, sorun giderme için ek hata mesajlarını günlüğe kaydeder.
 
-![xDrip LibreLink logging](../images/Libre2_Tags.png)
+![xDrip LibreLink günlük kaydı](../images/Libre2_Tags.png)
