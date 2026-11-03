@@ -4,32 +4,32 @@
 :depth: 2
 ```
 
-Most remote adjustments (temp targets, carbs, profile switches and, once the client is paired, boluses) can be made with the [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection, see [Master ↔ Client control](#client-master-control) (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). SMS commands remain an alternative that works without internet, and the only remote option if you use an iPhone as a follower and do not have **AAPSClient** yet.
+את רוב השינויים מרחוק (יעדים זמניים, פחמימות, החלפות פרופיל, ואחרי צימוד של מכשיר הלקוח גם בולוסים) אפשר לבצע עם [האפליקציה **AAPSClient**](../RemoteFeatures/RemoteMonitoring.md) בטלפון Android עם חיבור לאינטרנט, ראו [שליטה בין מכשיר ראשי ↔ מכשיר לקוח](#client-master-control) (גרסת iPhone של **AAPSClient** נמצאת בפיתוח, ראו [AAPSClient](AapsClient.md)). פקודות SMS נשארות חלופה שעובדת בלי אינטרנט, והן האפשרות היחידה לשליטה מרחוק אם משתמשים ב-iPhone כטלפון עוקב ועדיין אין **AAPSClient**.
 
 **SMS commands are really useful:**
 1. For routine remote control
 
-2. If you want to remotely bolus insulin without a paired **AAPSClient**
+2. אם רוצים לתת בולוס אינסולין מרחוק בלי **AAPSClient** מצומד
 
 3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
 
-4. If your other method of remote control (**AAPSClient**) is temporarily not working
+4. אם שיטת השליטה מרחוק האחרת (**AAPSClient**) לא עובדת זמנית
 
 ## Safety First
 
-If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to export **AAPS** settings).
+אם מפעילים את **תקשורת SMS** ב-**AAPS**, יש לזכור שהטלפון שהוגדר לשליחת פקודות מרחוק עלול להיגנב ו/או לשמש אדם אחר. Always lock your phone handset with at least a PIN. מומלץ מאוד להשתמש בסיסמה חזקה ו/או בנעילה ביומטרית, ולוודא שהן שונות מהסיסמה הראשית (Master password) של ה-APK (הסיסמה הנדרשת לייצוא הגדרות **AAPS**).
 
-Additionally, it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. This way, you can use the second number to [disable](#SMSCommands-other) SMS communicator in case your main remote phone gets compromised.
+Additionally, it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. כך אפשר להשתמש במספר השני כדי [להשבית](#SMSCommands-other) את תקשורת SMS, אם הטלפון הראשי לשליטה מרחוק נפרץ או נפל לידיים אחרות.
 
-The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
+זמן ההמתנה המינימלי המוגדר כברירת מחדל בין פקודות בולוס הוא 15 דקות, החל מהרגע שבו המשאבה מקבלת בולוס. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
 
 AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
 
-**If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
+**אם נותנים בולוס באמצעות פקודות SMS, חובה להזין את הפחמימות בנפרד (SMS שני, AAPSClient...)!** אם לא עושים זאת, האינסולין הפעיל (IOB) יהיה נכון אבל הפחמימות הפעילות (COB) יהיו נמוכות מדי. כתוצאה מכך ייתכן שבולוס תיקון לא יינתן, כי **AAPS** יחשוב שיש יותר מדי אינסולין פעיל.
 
 For the sensitive commands, an authenticator app with a time-based one-time password must be used to increase safety.
 
-If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “[Reset Authenticators](#sms-commands-authenticator-setup)” in **AAPS** or send the SMS command “[SMS stop](#SMSCommands-other)”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
+אם רוצים לבטל לטלפון של מטפל את האפשרות לשלוח פקודות SMS, יש להשתמש בלחצן החירום "[איפוס מאמתים](#sms-commands-authenticator-setup)" ב-**AAPS**, או לשלוח את פקודת ה-SMS "[SMS stop](#SMSCommands-other)". By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
 
 ## Setup SMS commands
 
@@ -59,10 +59,10 @@ On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phon
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
-Android can block the **SMS** permission for apps that were not installed from an app store, like **AAPS**. If you see this message when you grant the **SMS** permission, open the phone's **Settings > Apps > AAPS**, tap the **⋮** menu (top right) and select **Allow restricted settings**. Then grant the **SMS** permission again.
+Android יכולה לחסום את ההרשאה **SMS** לאפליקציות שלא הותקנו מחנות אפליקציות, כמו **AAPS**. אם ההודעה הזו מופיעה כשנותנים את ההרשאה **SMS**, יש לפתוח בטלפון את **Settings > Apps > AAPS** (הגדרות ← אפליקציות ← AAPS), ללחוץ על התפריט **⋮** (בחלק העליון של המסך) ולבחור **Allow restricted settings** (לאפשר הגדרות מוגבלות). אחר כך יש לתת שוב את ההרשאה **SMS**.
 ```
 
-![App was denied access to SMS](../images/sms_permission_restricted.png)
+![App was denied access to SMS (האפליקציה לא קיבלה גישה ל-SMS)](../images/sms_permission_restricted.png)
 
 ### Date and time syncing
 
@@ -76,13 +76,13 @@ Some options may be greyed out, due to needing admin via a family account if the
 
 ### AAPS settings
 
-Now that the phone settings have been checked, in the **AAPS** app itself, go to [**Configuration** → **Communication**](../SettingUpAaps/ConfigBuilder.md) and enable the **SMS Communicator** plugin.
+אחרי בדיקת הגדרות הטלפון, באפליקציית **AAPS** עצמה יש לעבור אל [**הגדרות תצורה** ← **תקשורת**](../SettingUpAaps/ConfigBuilder.md) ולהפעיל את התוסף **תקשורת SMS**.
 
-Open the **SMS Communicator** settings.
+יש לפתוח את ההגדרות של **תקשורת SMS**.
 
-Enable **Allow remote commands via SMS**. The **Additional mandatory PIN at token end** and **Authenticator setup** options only appear once this is enabled:
+יש להפעיל את **הפעלת פקודות מרחוק באמצעות SMS**. האפשרויות **תוספת PIN חובה בסוף האסימון** ו-**הגדרת מאמת** מופיעות רק אחרי שהאפשרות הזו מופעלת:
 
-![SMS Communicator settings](../images/sms_communicator_settings.png)
+![הגדרות תקשורת SMS](../images/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Allowed phone numbers
@@ -93,15 +93,15 @@ Enter the caregiver phone number(s). Include the country code and exclude the fi
 * FR phone number:  +33612344567
 * _etc._
 
-Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format on the **SMS Communicator** plugin screen (**Configuration** → **Communication** → **SMS Communicator** → **Open plugin**).
+Note that the “+” in front of the number may or may not be required based on your location. כדי לבדוק זאת, יש לשלוח הודעת ניסיון. הפורמט שהתקבל יוצג במסך התוסף **תקשורת SMS** (**הגדרות תצורה** ← **תקשורת** ← **תקשורת SMS** ← **פתיחת תוסף**).
 
-If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select **OK**:
+If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). יש לבחור **אישור**:
 
 ![Allowed phone numbers](../images/sms_allowed_numbers.png)
 
-#### Remote bolus min distance
+#### מרחק מינימלי לבולוס מרחוק
 
-- You can define the minimum delay (in minutes) between two boluses issued via SMS.
+- אפשר להגדיר את זמן ההמתנה המינימלי (בדקות) בין שני בולוסים שניתנים באמצעות SMS.
 - For safety reasons you have to add at least two authorized phone numbers to edit this value.
 
 #### Additional mandatory PIN at token end
@@ -110,67 +110,67 @@ For safety reasons, the reply code must be followed by a PIN. Choose a PIN which
 
 PIN requirements are:
 
-* at least 6 digits
-* digits only
+* לפחות 6 ספרות
+* ספרות בלבד
 
-For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a sequence (_e.g._ 123456).
+כדי שה-PIN יהיה בטוח יותר, לא כדאי להשתמש באותה ספרה פעמים רבות (_למשל_ 111111) או ברצף (_למשל_ 123456).
 
 ![Additional mandatory PIN at token end](../images/sms_pin.png)
 
 #### Authenticator setup
 
-* Tap **Authenticator setup** and follow the step-by-step instructions on the screen.
+* יש ללחוץ על **הגדרת מאמת** ולבצע את ההוראות שעל המסך, שלב אחר שלב.
 * Open your installed authenticator app on the _caregiver’s phone_, set up a new connection and
-* Use the caregiver phone to scan the QR code shown under **Scan code to setup AAPS OTP codes**.
+* יש להשתמש בטלפון המטפל כדי לסרוק את קוד ה-QR שמוצג תחת **סרקו את הקוד כדי להגדיר את קודי ה-OTP של AAPS**.
 
-![Authenticator setup with QR code](../images/sms_authenticator_setup.png)
+![הגדרת מאמת עם קוד QR](../images/sms_authenticator_setup.png)
 
-* Under **Test One-Time-Password**, enter the one-time passcode from the authenticator app on the caregiver phone followed by your PIN in **Code to check**:
+* תחת **בדיקת סיסמה חד-פעמית**, יש להזין בשדה **קוד לבדיקה** את הסיסמה החד-פעמית מאפליקציית האימות בטלפון המטפל, ואחריה את ה-PIN שלכם:
 
-Example:
+לדוגמה:
 * The token from the authenticator app is 457051
 * Your mandatory PIN is 2401
-* Code to check: 4570512401
+* קוד לבדיקה: 4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
+אם הקוד נכון, הטקסט האדום "קוד PIN שגוי" יתחלף אוטומטית ל-"אישור" בירוק. **אין לחצן שצריך ללחוץ עליו!** התהליך הסתיים. אחרי הזנת הקוד אין לחצן "אישור" שצריך ללחוץ עליו:
 
-![Test One-Time-Password and Reset Authenticators](../images/sms_authenticator_test.png)
+![בדיקת סיסמה חד-פעמית ואיפוס מאמתים](../images/sms_authenticator_test.png)
 
-You should now be set up with SMS commands.
+עכשיו פקודות ה-SMS אמורות להיות מוגדרות.
 
-Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
+אם רוצים להסיר מאמתים שהוגדרו, יש להשתמש בלחצן **איפוס מאמתים** בתחתית המסך **הגדרת מאמת**. (איפוס המאמתים הופך את כל המאמתים שהוגדרו כלא חוקיים. תצטרכו להגדירם מחדש.)
 
 ## SMS commands usage
 
 ### First steps using SMS commands
 
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
+1)  כדי לבדוק שהכול הוגדר נכון, יש לבדוק את החיבור: לשלוח מטלפון המטפל לטלפון **AAPS** הודעת SMS עם הטקסט "bg". אמורה להגיע תגובה דומה לזו שמוצגת כאן:
 
 ![image](../images/remote-control-06.png)
 
-If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
+אם לא מגיעה שום תגובה, ראו את החלק [פתרון תקלות](#SMSCommands-troubleshooting) שלמטה.
 
-2)  Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of twelve digits in total, assuming your PIN has 6 digits).
+2)  עכשיו כדאי לנסות פקודת SMS שדורשת אימות, _למשל_ "target hypo". טלפון המטפל יקבל הודעת תשובה שמבקשת להזין את **הסיסמה בת שש הספרות** מאפליקציית האימות, ואחריה את **ה-PIN** הסודי הנוסף, שרק המטפלים/העוקבים מכירים (בסך הכול מחרוזת של שתים עשרה ספרות, אם ה-PIN שלכם בן 6 ספרות).
 
-When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
+בפעם הראשונה ששולחים פקודת SMS, כדאי לעשות זאת ליד טלפון **AAPS**, כדי לראות איך זה עובד:
 
 ![image](../images/remote-control-16.png)
 
-The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully.
+טלפון המטפל יקבל מ-**AAPS** הודעת SMS בתשובה, שמאשרת אם פקודת ה-SMS מרחוק בוצעה בהצלחה.
 
-If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message. See [Troubleshooting](#SMSCommands-troubleshooting) below for common errors.
+אם הפקודה הצליחה, תגיע תשובה שמאשרת זאת. אם יש בעיה, תגיע הודעת שגיאה. שגיאות נפוצות מופיעות בחלק [פתרון תקלות](#SMSCommands-troubleshooting) שלמטה.
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**טיפ**: אם שולחים הרבה הודעות SMS, כדאי שתהיה חבילת SMS ללא הגבלה בתוכנית הסלולר (לכל טלפון שמשתמשים בו).
 
 ### Delivering mealtime boluses through SMS commands
 
-Remote bolusing of insulin can be done via **SMS Commands** or through a paired **AAPSClient** (see [Master ↔ Client control](#client-master-control)); it cannot be done through the Nightscout website. Carbs can be announced through SMS or **AAPSClient** as well. With SMS, it is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
+אפשר לתת בולוס אינסולין מרחוק באמצעות **פקודות SMS** או דרך **AAPSClient** מצומד (ראו [שליטה בין מכשיר ראשי ↔ מכשיר לקוח](#client-master-control)); אי אפשר לעשות זאת דרך אתר Nightscout. גם פחמימות אפשר להזין דרך SMS או דרך **AAPSClient**. ב-SMS אי אפשר לשלוח פקודת פחמימות ופקודת אינסולין באותה הודעה. יש לשלוח את הפקודות האלה בנפרד, כך:
 
-1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to **Treatments** → **Insulin** in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to **Treatments** → **Carbs** in **AAPS**.
+1)  שליחת בולוס האינסולין (_למשל_ "bolus 2" ייתן בולוס של 2 יחידות) באמצעות פקודות SMS שקולה ל-**טיפולים** ← **אינסולין** ב-**AAPS**. 2)  שליחת הפחמימות (_למשל_ "carbs 20" יזין 20 גרם פחמימות). זה שקול ל-**טיפולים** ← **פחמימות** ב-**AAPS**.
 
-To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
+כדי למנוע היפוגליקמיה, כדאי להתחיל בזהירות ולתת בולוס עם **פחות אינסולין** ממה שנדרש לפי יחס הפחמימות שלכם, כי החישוב לא לוקח בחשבון את רמת הסוכר הנוכחית או את המגמה שלה.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can combine **AAPSClient** with SMS commands: carbs entered on a paired **AAPSClient** need no authentication code and are therefore quicker than SMS commands. Carbs or other treatments entered on the Nightscout website are **not** applied while client control is on; **AAPS** is then in [hardened mode](#client-master-control-hardened-mode).
+**הסדר שבו שולחים את הפקודות האלה חשוב**. אם מזינים כמות גדולה של פחמימות בכל דרך שהיא, ו-SMB מופעל, **AAPS** עלול להגיב מיד ולתת בולוס חלקי של אינסולין. לכן, אם מנסים לשלוח בולוס אינסולין _אחרי_ הזנת הפחמימות, ייתכן עיכוב מתסכל והודעה "bolus in progress" (בולוס בביצוע), ואז יש לבדוק מה כבר ניתן כ-SMB. או, אם לא שמים לב ש-SMB ניתן, והבולוס ששולחים אחר כך גם מצליח, ייתכן שבסך הכול יינתן יותר מדי אינסולין לארוחה. לכן, כשנותנים בולוס לארוחה מרחוק, תמיד יש לשלוח את בולוס האינסולין _לפני_ הזנת הפחמימות. אם רוצים, אפשר לשלב **AAPSClient** עם פקודות SMS: פחמימות שמזינים ב-**AAPSClient** מצומד לא צריכות קוד אימות, ולכן זה מהיר יותר מפקודות SMS. פחמימות או טיפולים אחרים שמזינים באתר Nightscout **לא** מוחלים כשהשליטה ממכשיר לקוח מופעלת; אז **AAPS** נמצא ב[מצב מוקשח](#client-master-control-hardened-mode).
 
 (SMSCommands-commands)=
 ## Commands
@@ -180,39 +180,39 @@ To avoid hypos, it is a good idea to start conservatively, by bolusing **less in
 :local: true
 ```
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app). The commands are not case-sensitive, you can use lower or upper case.
+יש לשלוח את הפקודות באנגלית. התגובה תגיע בשפה שלכם, אם טקסט התגובה כבר [תורגם](#translations-translate-strings-for-AAPS-app). אין הבדל בין אותיות גדולות לקטנות בפקודות, אפשר להשתמש בשתיהן.
 
-![SMS Commands Example](../images/SMSCommands.png)
+![דוגמה לפקודות SMS](../images/SMSCommands.png)
 
-The **SMS Commands Tables** below show all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the **AAPS** app itself.
+**טבלאות פקודות ה-SMS** שלמטה מציגות את כל פקודות ה-SMS האפשריות. _ערכים לדוגמה_ מופיעים כדי לעזור להבין. לפקודות יש אותו טווח ערכים אפשריים (יעדים, אחוז פרופיל וכו') כמו באפליקציית **AAPS** עצמה.
 
 (authentication-or-not)=
 ### Authentication or not?
 
-Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
+חלק מפקודות ה-SMS מקבלות תגובה מיידית, וחלק מהן דורשות **אימות** חזק דרך אפליקציית האימות. שאלה פשוטה כמו "**BG**" (שמבקשת את רמת הסוכר הנוכחית) מהירה להקלדה, לא צריכה אימות, ומחזירה את פרטי המצב של **AAPS** שמוצגים למטה:
 
 ![image](../images/remote-control-06.png)
 
-Commands which need more security require a code to be entered, for example:
+פקודות שצריכות יותר אבטחה דורשות להזין קוד, לדוגמה:
 
-![SMS authenticated](../images/remote-control-07.png)
+![SMS עם אימות](../images/remote-control-07.png)
 
-The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
+העמודה *אימות* בטבלאות שלמטה מציינת אם כל פקודה דורשת אימות חזק כזה.
 
 ### CGM data
 
-| Command    | Auth | Function & *Response*                                                                                                                                                                                                             |
-| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | No   | Returns: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                                                                                   |
-| CAL 5.6/90 | Yes  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
+| Command    | Auth | Function & *Response*                                                                                                                                                                    |
+| ---------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | No   | מחזירה: ערך סוכר אחרון, דלתא, אינסולין פעיל (בולוס ובזאלי), פחמימות פעילות<br/>*סוכר אחרון: 5.6 לפני 4 דקות, דלתא: -0,2 mmol, אינסולין פעיל: 0.20U (בולוס: 0.10U בזאלי: 0.10U)*    |
+| CAL 5.6/90 | Yes  | תכייל את ה-CGM עם ערך 5.6/90<br/>(השתמשו בערך המתאים ליחידות הגלוקוז שלכם)<br/>פועלת רק אם הוגדרה כראוי ב-**AAPS**.<br/>*הכיול נשלח. יש לאשר את קבלת כיולים ב-xDrip+.* |
 
 ### Pump
 
-| Command              | Auth | Function & *Response*                                                                                |
-| -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| PUMP                 | No   | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Yes  | To disconnect pump for *30* minutes                                                                  |
-| PUMP CONNECT         | Yes  | Pump reconnected                                                                                     |
+| Command              | Auth | Function & *Response*                                                                                                   |
+| -------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------- |
+| PUMP                 | No   | חיבור אחרון: לפני 1 דקות<br/>בזאלי זמני: 0.00U/h @11:38 5/30min<br/>אינסולין פעיל: 0.5U מכל: 34U סוללה: 100 |
+| PUMP DISCONNECT *30* | Yes  | To disconnect pump for *30* minutes                                                                                     |
+| PUMP CONNECT         | Yes  | Pump reconnected                                                                                                        |
 
 ### Basal
 
@@ -224,32 +224,32 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 | BASAL 30% 50      | Yes  | To start basal 30% for 50 min    |
 | BASAL STOP/CANCEL | Yes  | To stop temp basal               |
 
-Some pumps take a temp basal only in percent, others only in U/h. If you use the other form, **AAPS** answers *"This pump takes a temp basal only in percent, not in U/h."* (or the reverse) and sets nothing. The duration must be a multiple of your pump's temp basal duration step.
+חלק מהמשאבות מקבלות בזאלי זמני רק באחוזים, ואחרות רק ב-U/h. אם משתמשים בצורה האחרת, **AAPS** עונה *"משאבה זו מקבלת בזאלי זמני באחוזים בלבד, ולא ביח׳/שעה."* (או להפך) ולא מגדיר שום דבר. המשך חייב להיות כפולה של צעד המשך של הבזאלי הזמני במשאבה שלכם.
 
 
 ### לולאה
 
-| Command           | Auth | Function & *Response*                                                                                                                                                                                                                                                              |
-| ----------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | No   | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
-| LOOP STOP/DISABLE | Yes  | The pump will revert to the pre-programmed basal rate.<br/>*Loop has been disabled*                                                                                                                                                                                          |
-| LOOP SUSPEND 20   | Yes  | *Loop suspended*                                                                                                                                                                                                                                                                   |
-| LOOP RESUME       | Yes  | *Loop resumed*                                                                                                                                                                                                                                                                     |
-| LOOP CLOSED       | Yes  | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
-| LOOP LGS          | Yes  | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
+| Command           | Auth | Function & *Response*                                                                                                                                                                                                             |
+| ----------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | No   | התגובה תלויה במצב בפועל:<br/> - *הלולאה מושבתת* אם הלולאה מושבתת<br/> - *לולאה פעילה* אם הלולאה סגורה, פתוחה או במצב LGS<br/> - *המשאבה מנותקת* אם המשאבה מנותקת<br/> - *מושהה (10 דק')* אם הלולאה מושהית |
+| LOOP STOP/DISABLE | Yes  | המשאבה תחזור לקצב הבזאלי שתוכנת מראש.<br/>*הלולאה הושבתה*                                                                                                                                                                   |
+| LOOP SUSPEND 20   | Yes  | *לולאה מושהית*                                                                                                                                                                                                                    |
+| LOOP RESUME       | Yes  | *Loop resumed*                                                                                                                                                                                                                    |
+| LOOP CLOSED       | Yes  | *מצב ההפעלה הנוכחי: לולאה סגורה*                                                                                                                                                                                                  |
+| LOOP LGS          | Yes  | *מצב ההפעלה הנוכחי: השהיה עקב ערך סוכר נמוך*                                                                                                                                                                                      |
 
 ### Bolus
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
+לא ניתן לבצע בולוס מרחוק בתוך 15 דקות (ניתן לשנות ערך זה רק לאחר הוספת 2 מספרי טלפונים) לאחר הפקודה מרחוק או פקודת הבולוס האחרונה! במקרה כזה התגובה תהיה *בולוס מרחוק אינו זמין. נסו שוב מאוחר יותר.* התגובה הזו נשלחת גם כשהמשאבה נותנת בולוס באותו רגע.
 
-| Command              | Auth | Function & *Response*                                                                                                                                             |
-| -------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BOLUS 1.2            | Yes  |                                                                                                                                                                   |
-| BOLUS 0.60 MEAL      | Yes  | Delivers the specified 0.60U bolus<br/>**and** sets the [Eating Soon TempTarget](#TempTargets-eating-soon-temp-target)                                      |
-| CARBS 5              | Yes  | To enter 5g, without a bolus                                                                                                                                      |
-| CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35.<br/>The acceptable time format depends<br/> on the time setting (12h/24h) on the phone.                                         |
-| EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
-| EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                                                            |
+| Command              | Auth | Function & *Response*                                                                                                                                         |
+| -------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BOLUS 1.2            | Yes  |                                                                                                                                                               |
+| BOLUS 0.60 MEAL      | Yes  | נותנת את הבולוס שצוין, 0.60U<br/>**וגם** מגדירה את [היעד הזמני לאכילה בקרוב](#TempTargets-eating-soon-temp-target)                                      |
+| CARBS 5              | Yes  | To enter 5g, without a bolus                                                                                                                                  |
+| CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35.<br/>The acceptable time format depends<br/> on the time setting (12h/24h) on the phone.                                     |
+| EXTENDED 2 120       | Yes  | להתחלת בולוס ממושך של 2U למשך 120 דקות.<br/>רק עבור [משאבות תואמות](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
+| EXTENDED STOP/CANCEL | Yes  | לעצירת בולוס ממושך                                                                                                                                            |
 
 ### Profile
 
@@ -260,28 +260,28 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 | PROFILE 1      | Yes  | To switch profile to profile 1 in the list.<br/>Use the numbers as returned by the **PROFILE LIST**,<br/>not the profile names as you saved them |
 | PROFILE 2 30   | Yes  | To switch profile to Profile2 30%                                                                                                                            |
 
-The percentage must be between 30 and 250 %, as in the app. A value outside this range is refused before you are asked for the authentication code.
+האחוז חייב להיות בין 30 ל-250 %, כמו באפליקציה. ערך מחוץ לטווח הזה נדחה עוד לפני שמבקשים את קוד האימות.
 
-### Temporary Targets
+### יעדים זמניים
 
-| Command                   | Auth | Function & *Response*                     |
-| ------------------------- | ---- | ----------------------------------------- |
-| TARGET MEAL/ACTIVITY/HYPO | Yes  | To set the Temp Target MEAL/ACTIVITY/HYPO |
-| TARGET STOP/CANCEL        | Yes  | To cancel Temp Target                     |
+| Command                   | Auth | Function & *Response*                |
+| ------------------------- | ---- | ------------------------------------ |
+| TARGET MEAL/ACTIVITY/HYPO | Yes  | להגדרת היעד הזמני MEAL/ACTIVITY/HYPO |
+| TARGET STOP/CANCEL        | Yes  | לביטול היעד הזמני                    |
 
 
 (SMSCommands-other)=
 ### אחר
 
-| Command          | Auth | Function & *Response*                                                                                                                                                                                                                                                  |
-| ---------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RESTART          | Yes  | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                                                                                                      |
-| SMS DISABLE/STOP | Yes  | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll be able to reactivate it directly<br/>from the **AAPS** master smartphone only.                                                                                       |
-| HELP             | No   | Returns all functions available for interrogation:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Send further ***HELP ***FUNCTION****** command to list<br/>all options available in this section. |
-| HELP BOLUS       |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                                   |
+| Command          | Auth | Function & *Response*                                                                                                                                                                                                                                    |
+| ---------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RESTART          | Yes  | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                                                                                        |
+| SMS DISABLE/STOP | Yes  | לביטול שירות השליטה מרחוק באמצעות SMS, יש להשיב עם הקוד.<br/>יש לזכור שאפשר להפעיל אותו מחדש<br/>רק ישירות מהסמארטפון הראשי של **AAPS**.                                                                                                     |
+| HELP             | No   | מחזירה את כל הפונקציות שאפשר לשאול עליהן:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>כדי לקבל רשימה של כל האפשרויות בחלק מסוים, יש לשלוח<br/>את הפקודה ***HELP ***FUNCTION******. |
+| HELP BOLUS       |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                     |
 
 (SMSCommands-troubleshooting)=
-## Troubleshooting and FAQ
+## פתרון תקלות ושאלות נפוצות
 
 ```{contents} List of questions and issues
 :depth: 1
@@ -290,37 +290,37 @@ The percentage must be between 30 and 250 %, as in the app. A value outside this
 
 ### What _can’t_ we do with SMS commands?
 
-1)  **You cannot set a _temporary_ profile switch** (so for example, setting "profile exercise" for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profile switches can instead be set through **AAPSClient**.
+1)  **אי אפשר להגדיר החלפת פרופיל _זמנית_** (למשל להגדיר "profile exercise" למשך 60 דקות), אבל אפשר לעבור לצמיתות ל-"profile exercise". במקום זאת, אפשר להגדיר החלפות פרופיל זמניות דרך **AAPSClient**.
 
-2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the **AAPS** phone. If the high temporary target of 7.0 is started by the automation, and you cancel it (on the **AAPS** phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
+2)  **אי אפשר לבטל אוטומציות** או **להגדיר יעדים לפי בחירה**, אבל יש פתרונות בקירוב: לדוגמה, נניח שהיעד הרגיל בפרופיל הוא 5.5. הגדרתם אוטומציה ב-AAPS שתמיד מגדירה יעד גבוה של 7.0 בין 14:30 ל-15:30 בגלל שיעור ספורט בבית הספר, ואחד התנאים של האוטומציה הוא "אין יעד זמני קיים". השבוע הודיעו לכם ברגע האחרון ששיעור הספורט בוטל, ובמקומו יש ארוחת פיצה, אבל הילד כבר בבית הספר עם טלפון **AAPS**. אם האוטומציה הפעילה את היעד הזמני הגבוה של 7.0, ומבטלים אותו (בטלפון **AAPS** או מרחוק), התנאים של האוטומציה עדיין מתקיימים, ו-**AAPS** פשוט יגדיר שוב את היעד הגבוה דקה אחר כך.
 
-**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min by pressing on the target on the main screen, or via **Manage** → **Temp Target**. This would prevent the automation from setting the high target of 7.0.
+**אם הייתה לכם גישה לטלפון AAPS**, הייתם יכולים לבטל את הסימון של האוטומציה או לשנות אותה. אם לא רוצים לעשות זאת, אפשר פשוט להגדיר יעד זמני חדש של 5.6 למשך 60 דקות, בלחיצה על היעד במסך הראשי או דרך **ניהול** ← **יעד זמני**. כך האוטומציה לא תגדיר את היעד הגבוה של 7.0.
 
-**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** to do this.
+**אם אין לכם גישה לטלפון AAPS**, אפשר להשתמש בפקודות SMS לפתרון בקירוב: למשל, בפקודה "target meal" כדי להגדיר יעד של 5.0 למשך 45 דקות (יעדי ברירת המחדל האחרים הם 8.0 לפעילות או להיפוגליקמיה, ראו טבלה). אבל בפקודות SMS אי אפשר לקבוע ערך יעד _מסוים_ (למשל 5.6 למשך 60 דקות). לשם כך צריך להשתמש ב-**AAPSClient**.
 
 ### What happens if I change my mind about a command I have just sent?
 
-**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. **AAPS** will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
+**AAPS** יבצע רק את הפקודה האחרונה. לכן, אם מקלידים "bolus 1.5", ואז, בלי לאמת, שולחים פקודה חדשה "bolus 1", הפקודה הקודמת של 1.5 לא תבוצע. **AAPS** תמיד ישלח לטלפון המטפל תגובה שמאשרת מהי פקודת ה-SMS, לפני שמתבקשים להזין את קוד האימות, וגם תגובה אחרי הפעולה.
 
 ### Why didn't I get a response to an SMS command?
 
-It could be for one of these reasons:
+ייתכן שזה קורה מאחת הסיבות האלה:
 
-1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The **AAPS** phone does not have a good Bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
+1)  ההודעה לא הגיעה לטלפון (בעיות רשת). 2)  **AAPS** עדיין מעבד את הבקשה (_למשל_ בולוס, שמתן שלו יכול לקחת זמן, בהתאם לקצב הבולוס). 3)  לטלפון **AAPS** אין חיבור Bluetooth טוב למשאבה כשהפקודה מתקבלת, והפקודה נכשלה (בדרך כלל זה יוצר התראה בטלפון **AAPS**).
 
 ### No response whatsoever for SMS commands
 
-On the caregiver phone and/or **AAPS** phone, try disabling the following options :
-* **Send as chat message** ![Disable SMS as chat message](../images/SMSdisableChat.png)
+בטלפון המטפל ו/או בטלפון **AAPS**, כדאי לנסות להשבית את האפשרויות הבאות:
+* **Send as chat message** (שליחה כהודעת צ'אט) ![Disable SMS as chat message](../images/SMSdisableChat.png)
 * If using Android Messages App or Google Messages App, disable RCS messaging:
   - open the specific SMS conversation in Messages
-  - Select the options ellipsis in the top right corner
+  - יש לבחור בסמל שלוש הנקודות של האפשרויות בחלק העליון של המסך
   - select "Details"
   - Activate "Only send SMS and MMS messages" ![Disable RCS as chat message](../images/SMSdisableRCS.png)
 
 ### Errors carrying out commands
 
-There are several possible reasons the command may not be successful:
+יש כמה סיבות אפשריות לכך שהפקודה לא מצליחה:
 
 * SMS commands setup isn’t complete/correct
 * You sent a command which had an incorrect format (like “disconnect pump 45” instead of “pump disconnect 45”)
@@ -329,25 +329,25 @@ There are several possible reasons the command may not be successful:
 * The **AAPS** phone is out of range/contact with the pump
 * The system is already busy delivering a bolus
 
-Common errors are shown in the examples below:
+שגיאות נפוצות מוצגות בדוגמאות שלמטה:
 
 ![image](../images/remote-control-17.png)
 
 ### How can I stop a command once it has been authenticated?
 
-You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
+אי אפשר. עם זאת, אפשר לבטל בולוס שנשלח ב-SMS בטלפון **AAPS** עצמו, פשוט בביטול בחלון הקופץ של הבולוס, אם מספיקים בזמן. את רוב פקודות ה-SMS (חוץ ממתן בולוס והזנת פחמימות) קל לבטל, או לנקוט פעולות כדי להקטין השפעות לא רצויות אם נעשתה טעות.
 
-For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
+גם בטעויות במתן בולוס ובהזנת פחמימות אפשר עדיין לפעול. למשל, אם הזנתם 20 גרם פחמימות אבל הילד אכל רק 10 גרם, ואתם (או מטפל שנמצא במקום) לא יכולים למחוק את הטיפול ישירות בטלפון **AAPS**, אפשר להגדיר יעד זמני גבוה או פרופיל מופחת, כדי ש-**AAPS** יפעל בצורה פחות אגרסיבית.
 
 ### Multiple SMS
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip, for example. If so, please ensure that xDrip (or any other app) does not upload treatments to NightScout.
+אם אותה הודעה מגיעה שוב ושוב (_למשל_ החלפת פרופיל), ייתכן שנוצרה בטעות לולאה עם אפליקציות אחרות. למשל, זו יכולה להיות xDrip. במקרה כזה, יש לוודא ש-xDrip (או כל אפליקציה אחרת) לא מעלה טיפולים ל-NightScout.
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+אם האפליקציה האחרת מותקנת בכמה טלפונים, יש להשבית את ההעלאה בכולם.
 
 (sms-commands-too-many-messages)=
-### I am getting far too many text messages from SMS Commands. Can I reduce the frequency, or make them stop?
+### מגיעות אליי יותר מדי הודעות טקסט מפקודות SMS. Can I reduce the frequency, or make them stop?
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
+שימוש בפקודות SMS עלול ליצור הרבה הודעות אוטומטיות מטלפון **AAPS** לטלפון המטפל. יגיעו גם הודעות כמו "הפרופיל הבזאלי עודכן במשאבה", אם הוגדרו אוטומציות ב-**AAPS**. אם נשלחות הרבה הודעות SMS, כדאי שתהיה חבילת SMS ללא הגבלה בתוכנית הסלולר של טלפון **AAPS** (ושל כל טלפון מטפל), וכדאי להשבית את הצלילים, ההתראות או הרטט של הודעות SMS בכל הטלפונים. אי אפשר להשתמש בפקודות SMS בלי לקבל את העדכונים האלה. לכן ייתכן שתרצו דרך אחרת לתקשר ישירות עם הילד (אם הוא מספיק גדול), במקום SMS. אפליקציות תקשורת חלופיות נפוצות שמטפלים ב-**AAPS** משתמשים בהן הן WhatsApp, LINE, Telegram ו-Facebook Messenger.
 
-It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+אפשר להשבית את הודעת ה-SMS "הפרופיל הבזאלי עודכן במשאבה", כשהשינוי בפרופיל הגיע מ-Nightscout. לשם כך, יש ליצור קובץ בשם **בדיוק**  `do_not_send_sms_on_profile_change` בתיקייה `extra` שבתיקיית AAPS שלכם.
