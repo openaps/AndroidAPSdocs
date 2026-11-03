@@ -1,37 +1,37 @@
-# Temp-Targets
+# יעדים זמניים
 
-## What are Temp-Targets and where can I set and configure them?
+## מהם יעדים זמניים, והיכן מגדירים אותם?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+**יעד זמני** (או בקיצור **TT**) הוא תכונה של **AAPS** שמאפשרת לשנות את [טווח היעד של **הסוכר בדם**](#profile-glucose-targets) עבור פעילויות מתוכננות. This is achieved by **AAPS** manipulating the user’s insulin usage.
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+יעד גלוקוז, במיוחד אם הוא לטווח קצר בלבד (משך של פחות מ-4 שעות), אינו חייב להיות *הערך בפועל* שאליו אתם מצפים או רוצים שרמת הגלוקוז תגיע. זו דרך טובה להורות ל-**AAPS** לפעול באופן אגרסיבי יותר או פחות, תוך שמירה על רמות הגלוקוז בטווח.
 
-Temporary targets can be defined within those boundaries :
+ניתן להגדיר יעדים זמניים בגבולות האלה:
 
-|         | ערך מטרה זמני          |
+|         | יעד זמני               |
 | ------- | ---------------------- |
-| Minimum | 4 mmol/L or 72 mg/dL   |
+| Minimum | 4 mmol/L או 72 mg/dL   |
 | Maximum | 10 mmol/L or 180 mg/dL |
 
-**AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). They live on the **Temp Target** screen (**Manage** → **Temp Target**), which you can also open by simply tapping the **target chip** on the main screen.
+**AAPS** מציע שלוש הגדרות מוכנות מובנות של **יעד זמני**, שמתאימות לפעילות גופנית (**פעילות**), לארוחות (**אכילה בקרוב**) ולהיפוגליקמיה צפויה (**היפוגליקמיה**). הן נמצאות במסך **יעד זמני** (**ניהול** ← **יעד זמני**), שאפשר לפתוח גם בלחיצה פשוטה על **שבב היעד** במסך הראשי.
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+יש לשמור על ציפיות מציאותיות לגבי התוצאות שאפשר להשיג בבחירת **יעד זמני** ב-**AAPS**. ההצלחה בהשגת יעד **הסוכר בדם** הרצוי תשתנה בהתאם לגורמים רבים, ובהם אמינות הגדרות **AAPS** של המשתמש, איזון **הסוכר בדם** הכללי, **אינסולין פעיל**, רגישות לאינסולין, תנגודת לאינסולין, רמת המאמץ בפעילות הגופנית וכן הלאה.
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+לאחר הגדרת **יעד זמני**, ייתכן שיידרשו כ-30 דקות או יותר כדי להגיע ליעד **הסוכר בדם** הרצוי. **AAPS** אינו יכול להגיע ליעד **הסוכר בדם** באופן מיידי, ויש לזכור זאת בעת בחירת **יעד זמני**.
 
-The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. The values shown are the shipped defaults — you can [adjust each preset](#TempTargets-change-preset-defaults) to your own needs.
+החלקים הבאים מסכמים את התכונות של **יעד זמני - פעילות**, **יעד זמני - אכילה בקרוב** ו**יעד זמני - היפוגליקמיה**. הערכים שמוצגים הם ערכי ברירת המחדל: אפשר [לשנות כל הגדרה מוכנה](#TempTargets-change-preset-defaults) לפי הצרכים שלכם.
 
 ### TT - Activity
 
 ![TT Activity](../images/TempTarget2.png)
 
-**BG Target (default preset, adjustable)**
+**יעד סוכר (הגדרה מוכנה כברירת מחדל, ניתנת לשינוי)**
 
-AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
+AAPS ינסה להגיע ל-140 mg/dL או 7.8 mmol/L למשך שעה ו-30 דקות
 
 **Other considerations users may wish to factor in when selecting**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+בהתאם לרמת **הסוכר בדם**, **AAPS** "יפחית" את מתן האינסולין כדי להגיע ליעד **הסוכר בדם**. אם יעד **הסוכר בדם** אינו בטווח (כלומר מעל יעד **הסוכר בדם** שנבחר ב**פרופיל** של המשתמש), **AAPS** עשוי להשאיר את הבזאלי פעיל.
 
 In closed loop mode, **SMB**:
 
@@ -42,15 +42,15 @@ Users may also wish to consider:
 
 - *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
 - *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- *הקפדה* על כך שה-**TT** *יסתיים* זמן קצר לפני הפעילות, כי **האינסולין הפעיל** כבר מופחת, וחלק מהמשתמשים חווים עלייה מהירה ב**סוכר בדם** אחרי הפעילות.
 
 ### TT - Eating soon
 
-![TT Eating soon](../images/TempTarget1.png)
+![TT אכילה בקרוב](../images/TempTarget1.png)
 
-**BG Target (default preset, adjustable)**
+**יעד סוכר (הגדרה מוכנה כברירת מחדל, ניתנת לשינוי)**
 
-AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
+AAPS ינסה להגיע ל-90 mg/dL או 5.0 mmol/L למשך 45 דקות
 
 **Other considerations users may wish to factor in when selecting**:
 
@@ -59,15 +59,15 @@ In closed loop mode, **SMB**:
 - will remain activated; and/or
 - basal may be also activated depending on the user's **Profile's** settings.
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+בהתאם לרמת **הסוכר בדם**, **AAPS** "יגדיל" את מתן האינסולין במסגרת פרמטרי ההגדרות של **AAPS** של המשתמש, כדי להגיע ליעד **הסוכר בדם** הרצוי.
 
 ### TT - Hypo
 
-![TT Hypo](../images/TempTarget3.png)
+![TT היפוגליקמיה](../images/TempTarget3.png)
 
-**BG Target (default preset, adjustable)**
+**יעד סוכר (הגדרה מוכנה כברירת מחדל, ניתנת לשינוי)**
 
-AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
+AAPS ינסה להגיע ל-160 mg/dL או 8.9 mmol/L למשך שעה אחת
 
 **Other considerations users may wish to factor in when selecting**:
 
@@ -78,159 +78,159 @@ In closed loop mode, **SMB**:
 
 (TempTargets-manage-v4)=
 
-## Setting and managing temporary targets (Manage → Temp Target)
+## הגדרה וניהול של יעדים זמניים (ניהול ← יעד זמני)
 
-In **AAPS** v4 you manage your TT **presets** and start a temporary target from the **Manage** screen (bottom navigation) → **Temp Target** (*“Manage and set temporary targets”*).
+ב-**AAPS** v4 מנהלים את **ההגדרות המוכנות** של TT ומפעילים יעד זמני ממסך **ניהול** (בסרגל הניווט התחתון) ← **יעד זמני** (*"ניהול והגדרת יעדים זמניים"*).
 
-![The Temp Target screen — preset carousel, editor and action bar](../images/v4/TempTarget/tt_management.png)
+![מסך היעד הזמני: קרוסלת ההגדרות המוכנות, העורך וסרגל הפעולות](../images/v4/TempTarget/tt_management.png)
 
-The screen has three parts:
+במסך יש שלושה חלקים:
 
-1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
-2. **Editor** (middle) — the **Temporary target** and **Duration** that will actually be applied, plus an **Activation** date/time.
-3. **Action bar** (bottom) — **➕ add**, **‘️ delete** and the **▶ activate** button.
+1. **קרוסלת ההגדרות המוכנות** (למעלה): החלקה בין ההגדרות המוכנות של TT. כל כרטיס מציג את **השם**, **היעד** ו**משך הזמן** של ההגדרה המוכנה; ה-TT שפועל כרגע מודגש.
+2. **העורך** (באמצע): **יעד זמני** ו**משך** שיופעלו בפועל, וגם תאריך/שעת **הפעלה**.
+3. **סרגל הפעולות** (למטה): **➕ הוספה**, **‘️ מחיקה** והלחצן **▶ הפעלה**.
 
-Selecting a preset card loads its **target** and **duration** into the editor.
+בחירה בכרטיס של הגדרה מוכנה טוענת לעורך את **היעד** ואת **משך הזמן** שלה.
 
-```{admonition} Built-in vs custom presets :class: note The built-in presets — **Eating Soon**, **Activity** and **Hypo** — always exist and **cannot be deleted** (you can change their values and save, though). Any presets you create yourself are **custom** and can be edited or deleted freely.
+```{admonition} הגדרות מוכנות מובנות לעומת הגדרות מותאמות אישית :class: note ההגדרות המוכנות המובנות, **אכילה בקרוב**, **פעילות** ו**היפוגליקמיה**, קיימות תמיד ו**אי אפשר למחוק אותן** (אבל אפשר לשנות את הערכים שלהן ולשמור). הגדרות מוכנות שיוצרים בעצמכם הן **מותאמות אישית**, ואפשר לערוך או למחוק אותן בחופשיות.
 
-    <br />### Activating a temporary target
+    <br />### הפעלת יעד זמני
     
-    Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. A confirmation shows the exact target, duration and reason before anything starts:
+    יש להחליק אל ההגדרה המוכנה הרצויה (הערכים שלה נטענים לעורך), אם רוצים לשנות את **היעד**/**משך הזמן** בעורך, ואז ללחוץ על **▶ הפעלה**. מוצג אישור עם היעד, משך הזמן והסיבה המדויקים לפני שמשהו מתחיל:
     
     ![Activation confirmation](../images/TempTarget8.png)
     
-    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+    אחרי האישור היעד הזמני מתחיל מיד (או בזמן **הפעלה** שנבחר) ופועל לאורך **משך** הזמן שהוגדר.
     
-    ```{admonition} Editing the numbers is a one-off — it does not change the preset
+    ```{admonition} שינוי המספרים הוא חד-פעמי: הוא לא משנה את ההגדרה המוכנה
     :class: important
-    The **target** and **duration** in the editor are the values **Activate** will use *right now*. If you change them, that change is **temporary**: it applies only to this activation and **does not modify the saved preset**. This lets you "tweak and activate" a one-off TT (for example activate *Activity* at a slightly different target today) without permanently altering the preset.
+    ערכי **היעד** ו**משך הזמן** בעורך הם הערכים שהלחצן **הפעלה** ישתמש בהם *עכשיו*. אם משנים אותם, השינוי הוא **זמני**: הוא חל רק על ההפעלה הזאת ו**לא משנה את ההגדרה המוכנה השמורה**. כך אפשר "לשנות ולהפעיל" TT חד-פעמי (למשל להפעיל היום *פעילות* עם יעד מעט שונה) בלי לשנות את ההגדרה המוכנה לצמיתות.
     
 
-### Saving changes to a preset
+### שמירת שינויים בהגדרה מוכנה
 
-If you *do* want to keep an edited value, **Save** it: when the editor differs from the selected preset, a **Save** icon appears in the top toolbar. Tapping it stores the current **target** and **duration** (and name, for custom presets) back into the selected preset. For the built-in presets, a **Revert to defaults** button (↺) also appears in the action bar: it brings back the preset's default values.
+אם *כן* רוצים לשמור ערך ששונה, יש **לשמור** אותו: כאשר העורך שונה מההגדרה המוכנה שנבחרה, מופיע הסמל **שמירה** בסרגל הכלים העליון. לחיצה עליו שומרת את **היעד** ואת **משך הזמן** הנוכחיים (ואת השם, בהגדרות מותאמות אישית) בהגדרה המוכנה שנבחרה. בהגדרות המוכנות המובנות מופיע בסרגל הפעולות גם הלחצן **חזרה לברירות המחדל** (↺): הוא מחזיר את ערכי ברירת המחדל של ההגדרה המוכנה.
 
-![Temp Target screen with the Save icon and the Revert to defaults button](../images/v4/TempTarget/tt_preset_save_revert.png)
+![מסך היעד הזמני עם הסמל שמירה והלחצן חזרה לברירות המחדל](../images/v4/TempTarget/tt_preset_save_revert.png)
 
-So the rule of thumb is:
+לכן הכלל הפשוט הוא:
 
-- **Activate** → use the numbers **once** (preset unchanged).
-- **Save** → make the numbers the preset's **new defaults**.
+- **הפעלה** ← שימוש במספרים **פעם אחת** (ההגדרה המוכנה לא משתנה).
+- **שמירה** ← המספרים הופכים ל**ברירות המחדל החדשות** של ההגדרה המוכנה.
 
-To put a built-in preset back the way it shipped, select it and tap the **↺ Revert** button — it appears in the action bar only for a **built-in** preset whose values currently differ from its factory defaults, and it restores that preset's original **target** and **duration**.
+כדי להחזיר הגדרה מוכנה מובנית למצב המקורי שלה, יש לבחור אותה וללחוץ על הלחצן **↺ חזרה לברירות המחדל**. הוא מופיע בסרגל הפעולות רק עבור הגדרה מוכנה **מובנית** שהערכים שלה שונים כרגע מערכי היצרן, והוא משחזר את **היעד** ואת **משך הזמן** המקוריים של ההגדרה.
 
-### Adding and removing presets
+### הוספה והסרה של הגדרות מוכנות
 
-- **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
-- **‘️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
+- **➕ הוספה**: יצירת **הגדרה מוכנה מותאמת אישית חדשה** מהערכים הנוכחיים בעורך. הכרטיס החדש מופיע בקרוסלה.
+- **‘️ מחיקה**: הסרת ההגדרה המוכנה **המותאמת אישית** שנבחרה. אי אפשר למחוק הגדרות מוכנות מובנות (*אכילה בקרוב*, *פעילות*, *היפוגליקמיה*).
 
-Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+כאשר יש לפחות שתי הגדרות מוכנות **מותאמות אישית**, אפשר גם לשנות את הסדר שלהן בקרוסלה: יש ללחוץ על הסמל **שינוי סדר** (⇅) בסרגל העליון, להזיז את הכרטיס שבמרכז בעזרת **לחצני ההזזה ◀ / ▶**, ואז לאשר עם **✓**. ההגדרות המוכנות המובנות נשארות במקומן: אפשר להזיז רק הגדרות מותאמות אישית. (הפקדים נראים כמו ב[שינוי סדר הפרופילים](ProfileSwitch-ProfilePercentage.md).)
 
-Your presets are part of the synced configuration, so they are shared across your master and paired clients.
+ההגדרות המוכנות הן חלק מההגדרות המסונכרנות, ולכן הן משותפות למכשיר הראשי ולמכשירי הלקוח המצומדים.
 
-### Other ways to set a temporary target
+### דרכים נוספות להגדיר יעד זמני
 
-A temporary target can also be set without opening this screen:
+אפשר להגדיר יעד זמני גם בלי לפתוח את המסך הזה:
 
-- with the **TT toggles in the Carbs dialog** — see [below](#TempTargets-carbs-dialog),
-- with a **preset button on the [QuickLaunch toolbar](QuickLaunch.md)** — the *Temp Target Presets* category in *Configure QuickLaunch* offers a one-tap button for each of your presets,
-- from a **Wear OS watch** (the **Temp Target** menu item / tile),
-- from a paired **client** — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md),
-- as part of a **[scene](Scenes.md)** (the *Temporary target* action), or
-- from an **Automation** rule (*Start temp target* / *Stop temp target*).
+- עם **מתגי ה-TT בחלון פחמימות**: ראו [בהמשך](#TempTargets-carbs-dialog),
+- עם **לחצן הגדרה מוכנה ב[סרגל ההפעלה המהירה](QuickLaunch.md)**: הקטגוריה *יעדים זמניים מוגדרים מראש* ב*הגדרת הפעלה מהירה* מציעה לחצן בלחיצה אחת לכל אחת מההגדרות המוכנות,
+- מ**שעון Wear OS** (פריט התפריט / האריח **יעד זמני**),
+- ממכשיר **לקוח** מצומד: ראו [שליטה בין מכשיר ראשי ↔ מכשיר לקוח](../RemoteFeatures/ClientMasterControl.md),
+- כחלק מ**[תרחיש](Scenes.md)** (הפעולה *יעד זמני*), או
+- מכלל **אוטומציה** (*הפעלת יעד זמני* / *הפסקת יעד זמני*).
 
 * * *
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
-## Where can I select a Temp-Target?
+## היכן ניתן לבחור יעד זמני?
 
-The quickest way is to tap the **target chip** on the main screen (it shows your current target range):
+הדרך המהירה ביותר היא ללחוץ על **שבב היעד** במסך הראשי (הוא מציג את טווח היעד הנוכחי):
 
-![Target chip on the main screen](../images/TempTarget6.png)
+![שבב היעד במסך הראשי](../images/TempTarget6.png)
 
-This opens the **Temp Target** screen described above — swipe to a preset and tap **▶ Activate**. The same screen is also reachable via **Manage** → **Temp Target**.
+כך נפתח מסך **יעד זמני** שתואר למעלה: יש להחליק אל הגדרה מוכנה וללחוץ על **▶ הפעלה**. אפשר להגיע לאותו מסך גם דרך **ניהול** ← **יעד זמני**.
 
-(TempTargets-carbs-dialog)= When entering carbs, you don't need to open the **Temp Target** screen at all: the **Carbs dialog** (**Treatments** → **Carbs**) has **Start Hypo TT**, **Start Eating soon TT** and **Start Activity TT** toggles at the top. Switch one on and the corresponding preset is activated together with the carb entry:
+(TempTargets-carbs-dialog)= בזמן הזנת פחמימות אין צורך לפתוח את מסך **יעד זמני** בכלל: ב**חלון פחמימות** (**טיפולים** ← **פחמימות**) יש בחלק העליון את המתגים **התחלת יעד זמני להיפו**, **התחלת יעד זמני לאכילה בקרוב** ו**התחלת יעד זמני לפעילות**. כאשר מפעילים אחד מהם, ההגדרה המוכנה המתאימה מופעלת יחד עם רישום הפחמימות:
 
-![TT toggles in the Carbs dialog](../images/TempTarget5.png)
+![מתגי TT בחלון פחמימות](../images/TempTarget5.png)
 
-    {admonition} Automatic Hypo TT
+    {admonition} יעד זמני אוטומטי להיפוגליקמיה
     :class: note
-    If you open the **Carbs dialog** while your glucose is below 72 mg/dL (4 mmol/L), **AAPS** pre-selects the **Start Hypo TT** toggle for you (unless a higher temporary target with a longer remaining duration is already running).
+    אם פותחים את **חלון פחמימות** כאשר רמת הסוכר מתחת ל-72 mg/dL (4 mmol/L), **AAPS** בוחר מראש את המתג **התחלת יעד זמני להיפו** (אלא אם כבר פועל יעד זמני גבוה יותר עם זמן נותר ארוך יותר).
 
 (TempTargets-change-preset-defaults)=
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## היכן ניתן לשנות את היעד הזמני המוגדר כברירת מחדל ולהחליף אותו בהגדרות משלי?
 
-Each preset's **target** and **duration** are edited directly on the **Temp Target** screen — there is no separate preferences entry for this anymore:
+**היעד** ו**משך הזמן** של כל הגדרה מוכנה נערכים ישירות במסך **יעד זמני**; אין יותר פריט נפרד בהעדפות עבור זה:
 
-1. Open the **Temp Target** screen (tap the target chip, or **Manage** → **Temp Target**).
-2. Swipe to the preset you want to change.
-3. Adjust **Temporary target** and/or **Duration** in the editor.
-4. Tap the **Save** icon that appears in the top toolbar.
+1. יש לפתוח את מסך **יעד זמני** (לחיצה על שבב היעד, או **ניהול** ← **יעד זמני**).
+2. להחליק אל ההגדרה המוכנה שרוצים לשנות.
+3. לשנות את **יעד זמני** ו/או את **משך** בעורך.
+4. ללחוץ על הסמל **שמירה** שמופיע בסרגל הכלים העליון.
 
-![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/TempTarget7.png)
+![עריכת הגדרה מוכנה: הסמל שמירה בסרגל הכלים, חזרה לברירות המחדל בסרגל הפעולות](../images/TempTarget7.png)
 
-While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
+כל עוד העורך שונה מערכי היצרן של הגדרה מוכנה מובנית, מופיע בסרגל הפעולות גם הלחצן **↺ חזרה לברירות המחדל**. לחיצה עליו משחזרת את היעד ואת משך הזמן המקוריים של ההגדרה.
 
-## How do I cancel a Temp-Target?
+## כיצד מבטלים יעד זמני?
 
-While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Tap it and confirm:
+כל עוד יעד זמני פועל, שבב היעד במסך הראשי מציג את היעד ואת הזמן שנותר לו. יש ללחוץ עליו: במסך **יעד זמני** ההגדרה המוכנה שפועלת מסומנת כ**פעיל**, ולחצן אדום **✗ ביטול** מופיע בסוף סרגל הכלים התחתון, ממש ליד הלחצן **▶ הפעלה**. יש ללחוץ עליו ולאשר:
 
-![Cancelling a running temp target](../images/TempTarget9.png)
+![ביטול יעד זמני פעיל](../images/TempTarget9.png)
 
-A running temporary target can also be stopped from a **Wear OS watch**, from a paired **client**, or by an **Automation** rule (*Stop temp target*).
+אפשר לעצור יעד זמני פעיל גם מ**שעון Wear OS**, ממכשיר **לקוח** מצומד, או באמצעות כלל **אוטומציה** (*הפסקת יעד זמני*).
 
 (TempTargets-hypo-temp-target)=
 
-## Hypo Temp-Target
+## יעד זמני להיפוגליקמיה
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+**יעד זמני להיפוגליקמיה** מאפשר ל-**AAPS** למנוע סוכר נמוך באמצעות הפחתת מתן האינסולין. אם צפוי ש**הסוכר בדם** ירד: בדרך כלל **AAPS** אמור לטפל בכך, אבל הרבה תלוי ביציבות ההגדרות של **AAPS**. **יעד זמני להיפוגליקמיה** מאפשר להקדים את הירידה הצפויה ולעדכן את **AAPS** להפחית אינסולין.
 
 Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating *'Enable SMB with high temp target'* in **Settings** → **OpenAPS SMB** (see further below):
+חלק מהמשתמשים רוצים להימנע ממתן **SMBs** בזמן **יעד זמני להיפוגליקמיה**. עושים זאת על ידי השבתה של *'הפעלת SMB עם יעד זמני גבוה'* ב**הגדרות** ← **OpenAPS SMB** (ראו בהמשך):
 
-- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- מתקדם, משימה 9: אפשר להפעיל את *"יעד זמני גבוה מעלה את הרגישות"* עבור **יעדים זמניים** של 100 mg/dL (5.6 mmol/L) ומעלה ב-OpenAPS SMB, ואז **AAPS** יהיה רגיש יותר.
 
-- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- מתקדם, משימה 9: אפשר להשבית את *"הפעלת SMB עם יעד זמני גבוה"*, כך שגם אם ל-**AAPS** יש COB > 0, "הפעלת SMB עם יעד זמני נמוך" או "הפעלת SMB תמיד" מופעלות ו-OpenAPS SMB פעיל, **AAPS** לא ייתן SMB כל עוד יעדים זמניים גבוהים פעילים.
 
-Note: if you open the **Carbs dialog** while your blood glucose is less than 72 mg/dL or 4 mmol/L, **AAPS** pre-selects the **Start Hypo TT** toggle automatically.
+הערה: אם פותחים את **חלון פחמימות** כאשר רמת הסוכר בדם נמוכה מ-72 mg/dL או 4 mmol/L, **AAPS** בוחר מראש את המתג **התחלת יעד זמני להיפו** באופן אוטומטי.
 
 (TempTargets-activity-temp-target)=
 
-## Activity Temp-Target
+## יעד זמני לפעילות
 
-Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
+לפני פעילות גופנית ובמהלכה, ייתכן שיהיה צורך ביעד גבוה יותר כדי למנוע היפוגליקמיה בזמן הפעילות.
 
-To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia.
+כדי לפשט את השימוש ב**יעד זמני לפעילות**, ניתן להגדיר **יעד זמני - פעילות** כברירת מחדל, להעלאת רמות **הסוכר בדם** באמצעות הפחתת מתן האינסולין, כדי להאט את ירידת **הסוכר בדם** ולהימנע מהיפוגליקמיה.
 
-New users to **AAPS** may need to experiment and personalize their **Temp-Target Activity** default settings in order to optimize this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports).
+משתמשים חדשים ב-**AAPS** עשויים להזדקק לניסויים ולהתאמה אישית של הגדרות ברירת המחדל של **יעד זמני לפעילות**, כדי שהתכונה תעבוד בצורה הטובה ביותר עבורם. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+חלק מהמשתמשים מעדיפים גם להפעיל **החלפת פרופיל** (הפחתת פרופיל < 100% כדי להפחית את מתן האינסולין על ידי **AAPS**) לפני ובמהלך **יעד זמני לפעילות**. אפשר להפעיל את שניהם בשלב אחד: יש ללחוץ על שם הפרופיל במסך הראשי, ללחוץ על הלחצן העגול **▶**, להגדיר **אחוזים** מתחת ל-100 % ו**משך**, ואז להפעיל את **יעד זמני / פעילות**. ראו [שינוי אחוז הפרופיל](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. Then **AAPS** is more sensitive.
+מתקדם, משימה 9: אפשר להפעיל את *'יעד זמני גבוה מעלה את הרגישות'* עבור **יעדים זמניים** של 100 mg/dL (5.6 mmol/L) ומעלה ב-OpenAPS **SMB**. יעד של 99 mg/dL (5.5 mmol/L) הוא יעד רגיל, לא גבוה ולא נמוך. Then **AAPS** is more sensitive.
 
-Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS **SMB** active.
+בנוסף, אם *'הפעלת SMB עם יעד זמני גבוה'* מושבת, **AAPS** לא ייתן **SMB**, גם עם COB > 0, כאשר *'הפעלת SMB עם יעד זמני נמוך'* או *'הפעלת SMB תמיד'* מופעלות ו-OpenAPS **SMB** פעיל.
 
 (TempTargets-eating-soon-temp-target)=
 
-## Eating soon Temp-Target
+## יעד זמני לאכילה בקרוב
 
-**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**יעד זמני - אכילה בקרוב** יכול לעזור להוריד את **הסוכר בדם** בעדינות ולהבטיח שיש מספיק **אינסולין פעיל** לפני האכילה.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
+זה יכול להיות כלי חשוב למשתמשים שלא נותנים בולוס מראש, אבל היעילות של **יעד זמני - אכילה בקרוב** תלויה בכמה גורמים, ובהם: ההגדרות של המשתמש, האם התזונה דלת פחמימות, והאם משתמשים באינסולין מהיר (כמו Fiasp או Lyumjev) כדי לבטל את הצורך בבולוס מראש. בדרך כלל, עד שצוברים ניסיון ב-**AAPS**, יש לצפות לתת בולוס מראש בעת שימוש ב**יעד זמני - אכילה בקרוב**, במיוחד בתזונה עשירה בפחמימות.
 
 You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be 98 mg/dL (5.4 mmol/L) or lower.
+מתקדם, [משימה 9](#objectives-objective9): אם משתמשים ב-OpenAPS SMB ומפעילים את *'יעד זמני נמוך מפחית רגישות'*, **AAPS** פועל באופן מעט אגרסיבי יותר. לאפשרות הזאת נדרש ש**היעד הזמני** יהיה 98 mg/dL (5.4 mmol/L) או פחות.
 
-## How do I turn off SMB during Temp-Targets?
+## כיצד להשבית SMB בזמן יעדים זמניים?
 
-To action this open **Settings** → **OpenAPS SMB** and deactivate *'Enable SMB with high temp target'*.
+לשם כך יש לפתוח את **הגדרות** ← **OpenAPS SMB** ולהשבית את *'הפעלת SMB עם יעד זמני גבוה'*.
 
-![Enable SMB with high temp target preference](../images/TempTargetSMB.png)
+![ההגדרה הפעלת SMB עם יעד זמני גבוה](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS SMB active.
+כך **AAPS** לא ייתן **SMB**, גם עם COB > 0, כאשר *'הפעלת SMB עם יעד זמני נמוך'* או *'הפעלת SMB תמיד'* מופעלות ו-OpenAPS SMB פעיל.
