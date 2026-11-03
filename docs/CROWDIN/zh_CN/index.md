@@ -1,4 +1,4 @@
-# 欢迎使用 AAPS 说明文档
+# Welcome to the AAPS documentation
 
 ![image](./images/basic-outline-of-AAPS.png)
 
@@ -34,9 +34,9 @@ Section **6) [Remote AAPS features](./RemoteFeatures/RemoteControl.md)** highlig
 Section **7) [Wear OS smartwatches](./WearOS/BuildingAapsWearOS.md)** gives information and procedures to use an Android **Wear OS** smartwatch with the dedicated **AAPS** watchfaces or custom watchfaces, either as a remote control of your phone or just a display indicator.
 
 
-Section **8) [Maintenance of AAPS](./Maintenance/ExportImportSettings.md)** covers how to export and back up your settings (which is very important in case you lose/break your phone), gives the latest version notes, details how to update **AAPS** and explains what happens when a version reaches its end of life. 预计每年发布1个新版本及2-3次强制更新，跟其他所有软件一样，您需要及时更新**AAPS**以修复潜在问题并优化系统性能。本节设有“更新”问题排查专区，解答常见疑问。
+Section **8) [Maintenance of AAPS](./Maintenance/ExportImportSettings.md)** covers how to export and back up your settings (which is very important in case you lose/break your phone), gives the latest version notes, details how to update **AAPS** and explains what happens when a version reaches its end of life. 预计每年发布一个新版本并推送 2–3 次强制更新。跟其他所有软件一样，您需要及时更新**AAPS**以修复BUG并优化AAPS功能。本节设有“更新”问题排查专区，解答常见疑问。
 
-Section **9) [Help & Troubleshooting](GettingHelp/WhereCanIGetHelp.md)** should help direct you to the best places to go to find general help with **AAPS**. It is the single place to go when something is not working: the [Troubleshooting](GettingHelp/GeneralTroubleshooting.md) hub collects, by topic, the solutions to the most common problems, and the [FAQ](UsefulLinks/FAQ.md) answers frequent questions. 该指南能帮助您快速联系社区成员，解答疑问并规避常见问题。尽管很多人已经顺利用上了**AAPS**，但遇到疑难时仍需寻求帮助。得益于庞大的用户群，问题提出以后通常几个小时内就能收到回复。不要因为觉着自己的问题太低级就不好意思开口求助，没有不能问的问题。无论使用者经验水平如何，我们都鼓励积极提问以确保安全使用。本节包括 **AAPS** 和 **AAPSClient**（其配套数据查看应用）常见故障的排查方案，并说明当**AAPS**系统出现技术故障时，如何向开发者发送**AAPS**数据（日志文件）进行分析。
+Section **9) [Help & Troubleshooting](GettingHelp/WhereCanIGetHelp.md)** should help direct you to the best places to go to find general help with **AAPS**. It is the single place to go when something is not working: the [Troubleshooting](GettingHelp/GeneralTroubleshooting.md) hub collects, by topic, the solutions to the most common problems, and the [FAQ](UsefulLinks/FAQ.md) answers frequent questions. This is very important so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls. 尽管很多人已经顺利用上了**AAPS**，但遇到疑难时仍需寻求帮助。得益于庞大的用户群，问题提出以后通常几个小时内就能收到回复。不要因为觉着自己的问题太低级就不好意思开口求助，没有不能问的问题。无论使用者经验水平如何，我们都鼓励积极提问以确保安全使用。本节包括 **AAPS** 和 **AAPSClient**（其配套数据查看应用）常见故障的排查方案，并说明当**AAPS**系统出现技术故障时，如何向开发者发送**AAPS**数据（日志文件）进行分析。
 
 Section **10)** covers **[Advanced AAPS options](./AdvancedOptions/FullClosedLoop.md)** such as how to progress from using **AAPS** for hybrid-closed looping (bolusing for meals _etc._) to full closed looping (no bolusing), how to [tune your profile](./GettingHelp/ProfileTuning.md) and use Autotune, and details development and engineering modes. 对绝大多数用户来说，**AAPS**的主版本（"Master"版）即可满足需求，但总会有些大牛，即便已经用的很好了，还想着继续折腾更深入的功能，这一节的内容主要是给他们看的。
 
