@@ -1,539 +1,539 @@
-# AAPS Setup Wizard
+# AAPS Kurulum Sihirbazı
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
+**AAPS**'i ilk kez başlattığınızda "**Kurulum Sihirbazı**" size yol gösterir. Böylece uygulamanızın tüm temel ayarlarını tek seferde hızlıca yapabilirsiniz. **Kurulum Sihirbazı**, önemli bir şeyi unutmamanız için size yol gösterir. Örneğin **izin ayarları**, **AAPS**'i doğru kurmak için çok önemlidir.
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimize/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+Ancak **Kurulum Sihirbazı**'nı ilk kullanışınızda her şeyi tam olarak ayarlamanız zorunlu değildir. Sihirbazdan kolayca çıkabilir ve daha sonra ona geri dönebilirsiniz. **Kurulum Sihirbazı**'ndan sonra yapılandırmayı daha da iyileştirmek veya değiştirmek için üç yol vardır. Bunlar bir sonraki bölümde açıklanacaktır. Bu nedenle Kurulum Sihirbazı'nda bazı adımları atlamanızda bir sakınca yoktur; bunları daha sonra kolayca yapılandırabilirsiniz.
 
-During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
+**Kurulum Sihirbazı**'nı kullanırken ve hemen sonrasında **AAPS**'te gözle görülür büyük değişiklikler fark etmeyebilirsiniz. **AAPS** döngünüzü etkinleştirmek için **Görevler**'i takip etmeli ve özellikleri tek tek etkinleştirmelisiniz. Kurulum Sihirbazı'nın sonunda **1. Görev**'e başlayacaksınız. **AAPS**'i siz yönetirsiniz, o sizi değil.
 
 ```{admonition} Preview Objectives
 :class: note
-If you are keen to know the structure of the objectives, please read [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) but then come back here to run the Setup Wizard first.
+Görevlerin yapısını merak ediyorsanız lütfen [Görevleri tamamlama](../SettingUpAaps/CompletingTheObjectives.md) sayfasını okuyun. Ama sonra, önce Kurulum Sihirbazı'nı çalıştırmak için buraya geri dönün.
 
 ```
 
-From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
+Deneyimlerimizden biliyoruz ki yeni başlayanlar **AAPS**'i olabildiğince hızlı kurmak için çoğu zaman kendilerini baskı altına sokar. Öğrenilecek çok şey olduğu için bu, hayal kırıklığına yol açabilir.
 
-So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
+Bu yüzden lütfen döngünüzü ayarlarken acele etmeyin. İyi çalışan bir **AAPS** döngüsünün faydaları çok büyüktür.
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+Dokümantasyonda bir hata varsa veya bir şeyin nasıl daha iyi açıklanabileceğine dair daha iyi bir fikriniz varsa, [Diğer kullanıcılarla iletişim kurun](../GettingHelp/WhereCanIGetHelp.md) bölümünde anlatıldığı gibi topluluktan yardım isteyebilirsiniz.
 ```
-## Welcome message
+## Karşılama mesajı
 
-When the Setup Wizard opens, it greets you with a short welcome message and immediately shows a "**Permissions Required**" panel at the bottom of the screen (see next section).
+Kurulum Sihirbazı açıldığında sizi kısa bir karşılama mesajıyla selamlar ve ekranın altında hemen bir "**Gerekli İzinler**" paneli gösterir (bir sonraki bölüme bakın).
 
-Once you have granted the permissions, the panel closes and the welcome screen shows a "**Next**" button. Press "**NEXT**" to continue:
+İzinleri verdikten sonra panel kapanır ve karşılama ekranında "**İleri**" düğmesi görünür. Devam etmek için "**İLERİ**" düğmesine basın:
 
 ![Welcome](../images/setup-wizard/Wizard-Welcome.png)
 
-## Required permissions
+## Gerekli izinler
 
-**AAPS** needs a few permissions to operate correctly. The Wizard groups them on a single "**Permissions Required**" panel, each with its own "**Grant**" button. Grant them one by one — the icon next to each item turns into a tick once it is done.
+**AAPS**'in doğru çalışması için birkaç izne ihtiyacı vardır. Sihirbaz bunları tek bir "**Gerekli İzinler**" panelinde toplar. Her birinin kendi "**İzin ver**" düğmesi vardır. İzinleri tek tek verin — her öğenin yanındaki simge, izin verildiğinde onay işaretine dönüşür.
 
-![Permissions](../images/setup-wizard/Wizard-Permissions.png)
+![İzinler](../images/setup-wizard/Wizard-Permissions.png)
 
-### Battery optimization
+### Pil optimizasyonu
 
-Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+Akıllı telefonlarda pil tüketimi önemli bir konudur, çünkü pillerin performansı hâlâ oldukça sınırlıdır. Bu nedenle akıllı telefonunuzdaki Android işletim sistemi, uygulamaların çalışmasına ve işlemci zamanı, dolayısıyla pil gücü harcamasına sınırlı izin verir.
 
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be excluded from battery optimization.
+Ancak **AAPS**'in düzenli olarak çalışması gerekir. _Örneğin_ birkaç dakikada bir glikoz değerlerini almalı ve sonra sizin ayarlarınıza göre glikoz seviyelerinize ne yapılacağına karar vermek için algoritmayı uygulamalıdır. Bu nedenle pil optimizasyonundan hariç tutulmalıdır.
 
-Press "**Grant**" next to "**Battery Optimization**", then select "**Allow**" on the "Let app always run in background?" dialog:
+"**Pil optimizasyonu**" yanındaki "**İzin ver**" düğmesine basın, ardından "Let app always run in background?" (uygulamanın her zaman arka planda çalışmasına izin verilsin mi?) penceresinde "**Allow**" (izin ver) seçeneğini seçin:
 
-![Allow Background](../images/setup-wizard/Wizard-Permissions-Battery.png)
+![Arka planda çalışmaya izin ver](../images/setup-wizard/Wizard-Permissions-Battery.png)
 
 (SetupWizard-StoragePermission)=
 
-### AAPS Directory
+### AAPS Dizini
 
-**AAPS** needs to store its settings and log information on the permanent storage of your smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+**AAPS**'in ayarlarını ve günlük bilgilerini akıllı telefonunuzun kalıcı depolama alanına kaydetmesi gerekir. Kalıcı depolama, verilerin akıllı telefonunuz yeniden başlatıldıktan sonra da kullanılabilir olacağı anlamına gelir. Diğer bilgiler kalıcı depolamaya kaydedilmediği için kaybolur.
 
-Press "**Grant**" next to "**AAPS Directory**". This opens the file system on your phone and lets you choose where **AAPS** stores its information.
+"**AAPS Dizini**" yanındaki "**İzin ver**" düğmesine basın. Bu, telefonunuzun dosya sistemini açar ve **AAPS**'in bilgilerini nereye kaydedeceğini seçmenizi sağlar.
 
 ```{tip}
-Choosing the default AAPS directory is recommended.</br>
-Do **not** select a subdirectory of AAPS.
+Varsayılan AAPS dizinini seçmeniz önerilir.</br>
+AAPS'in bir alt dizinini **seçmeyin**.
 ```
 
-The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it and choose "**USE THIS FOLDER**":
+Varsayılan dizin **AAPS**'tir, ancak istediğiniz başka bir ayrı dizini de kullanabilirsiniz. Gerekirse dizini oluşturun, dizine girin ve "**USE THIS FOLDER**" (bu klasörü kullan) seçeneğini seçin:
 
-![Select folder](../images/setup-wizard/Wizard-Permissions-Directory.png)
+![Klasör seçin](../images/setup-wizard/Wizard-Permissions-Directory.png)
 
-Confirm with "**ALLOW**" that you wish to grant access to **AAPS** to the selected directory:
+**AAPS**'e seçilen dizine erişim izni vermek istediğinizi "**ALLOW**" ile onaylayın:
 
-![Allow access to the folder](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
+![Klasöre erişime izin verin](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
 
 ### Notifications
 
-Android requires special permission for apps if they want to send you notifications.
+Android, size bildirim göndermek isteyen uygulamalar için özel izin gerektirir.
 
-While it is a good feature to disable notifications _e.g._ from social media apps, it is essential that you allow **AAPS** to send you notifications.
+Bildirimleri kapatmak, _örneğin_ sosyal medya uygulamaları için iyi bir özellik olsa da **AAPS**'in size bildirim göndermesine izin vermeniz çok önemlidir.
 
-Press "**Grant**" next to "**Notifications**" and select "**Allow**" at the system prompt:
+"**Bildirimler**" yanındaki "**İzin ver**" düğmesine basın ve sistem sorusunda "**Allow**" seçeneğini seçin:
 
-![Allow notifications](../images/setup-wizard/Wizard-Permissions-Notifications.png)
+![Bildirimlere izin verin](../images/setup-wizard/Wizard-Permissions-Notifications.png)
 
-### Alarms and reminders
+### Alarmlar ve hatırlatıcılar
 
-On **Android 14 and newer**, **AAPS** needs the "**Alarms and reminders**" permission so that alarms can wake the screen while **AAPS** is in the background, and so that reminders (for example from an **Automation**) ring on time.
+**Android 14 ve daha yeni** sürümlerde **AAPS**'in "**Alarmlar ve hatırlatıcılar**" iznine ihtiyacı vardır. Böylece **AAPS** arka plandayken alarmlar ekranı açabilir ve hatırlatıcılar (örneğin bir **Otomasyon**'dan) zamanında çalar.
 
-This item is only shown while it is needed. Once **AAPS** is excluded from battery optimization (see above), Android grants exact alarms automatically and the item disappears. If it is still listed, press "**Grant**" next to "**Alarms and reminders**". This opens a system settings screen for **AAPS**; enable the toggle and return to **AAPS**. On Android 13 and older this item does not appear and no action is needed.
+Bu öğe yalnızca gerektiğinde gösterilir. **AAPS** pil optimizasyonundan hariç tutulduğunda (yukarıya bakın) Android tam zamanlı alarmlara otomatik olarak izin verir ve öğe kaybolur. Hâlâ listede görünüyorsa "**Alarmlar ve hatırlatıcılar**" yanındaki "**İzin ver**" düğmesine basın. Bu, **AAPS** için bir sistem ayarları ekranı açar. Anahtarı açın ve **AAPS**'e geri dönün. Android 13 ve daha eski sürümlerde bu öğe görünmez ve bir şey yapmanız gerekmez.
 
-Once all the permissions show a tick (three, or four on Android 14 and newer), the "**Permissions Required**" panel closes by itself and you can press "**NEXT**" on the welcome screen to continue.
+Tüm izinlerde onay işareti göründüğünde (üç izin, Android 14 ve daha yeni sürümlerde dört izin) "**Gerekli İzinler**" paneli kendiliğinden kapanır. Devam etmek için karşılama ekranında "**İLERİ**" düğmesine basabilirsiniz.
 
 (setup-wizard-bluetooth-battery-optimisation)=
-### Bluetooth battery optimization
+### Bluetooth pil optimizasyonu
 
 ```{admonition} Extra Android setting, not part of the Wizard
 :class: note
-The following is additional Android configuration done outside of the Setup Wizard. It is not one of the "Grant" buttons above, but it is important for a reliable pump connection.
+Aşağıdakiler, Kurulum Sihirbazı dışında yapılan ek Android ayarlarıdır. Yukarıdaki "İzin ver" düğmelerinden biri değildir, ancak güvenilir bir pompa bağlantısı için önemlidir.
 ```
 
-Newer versions of Android have added battery optimization to the system Bluetooth application too.
+Android'in yeni sürümleri, sistemdeki Bluetooth uygulamasına da pil optimizasyonu ekledi.
 
-As well as disabling battery optimization for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
+**AAPS** için pil optimizasyonunu kapatmanın yanı sıra, büyük olasılıkla Bluetooth sistem uygulaması için de kapatmanız gerekecektir. Bunu yapmazsanız pompa bağlantısı kopabilir ve sorunlar çıkabilir.
 
-***NOTE: The xDrip documentation covers how to do this here: [xDrip documentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
+***NOT: Bunun nasıl yapılacağı xDrip dokümantasyonunda anlatılmıştır: [xDrip dokümantasyonu](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
 
-Follow these steps on Android 16; other versions will vary slightly from the provided screenshots:
+Android 16'da şu adımları izleyin; diğer sürümlerde ekranlar, buradaki ekran görüntülerinden biraz farklı olacaktır:
 
-1. Open Android settings and search for **Apps**, and open the Apps settings.
+1. Android ayarlarını açın, **Apps** (Uygulamalar) için arama yapın ve uygulama ayarlarını açın.
 
    ![settings_apps](../images/setup-wizard/settings_apps.png)
 
-2. You will see the App settings, however we need to expand to see all apps, click on **See all apps** to expand.
+2. Uygulama ayarlarını göreceksiniz, ancak tüm uygulamaları görmek için listeyi genişletmemiz gerekir. Genişletmek için **See all apps** (Tüm uygulamaları gör) seçeneğine tıklayın.
 
    ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
 
-3. As the Bluetooth app is a system app, it's hidden by default, so we need to show system apps. Click on the **three dots** (⋮) on the top right (1). Then click on **Show system** (2).
+3. Bluetooth uygulaması bir sistem uygulaması olduğu için varsayılan olarak gizlidir. Bu yüzden sistem uygulamalarını göstermemiz gerekir. Sağ üstteki **üç noktaya** (⋮) tıklayın (1). Ardından **Show system** (sistemi göster) seçeneğine tıklayın (2).
 
    ![settings_apps](../images/setup-wizard/show_system.png)
 
-4. Search for the `Bluetooth` app and click on `Bluetooth` and/or `Legacy Bluetooth` if both are present ensure the procedure is followed for both.
+4. `Bluetooth` uygulamasını arayın ve `Bluetooth` ve/veya `Legacy Bluetooth` üzerine tıklayın. İkisi de varsa, işlemi ikisi için de yapın.
 
-   ***NOTE: It's safe to ignore the `Bluetooth MIDI Service` this is not used by AAPS***
+   ***NOT: `Bluetooth MIDI Service` güvenle göz ardı edilebilir, AAPS bunu kullanmaz***
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. Android 12'de `Battery` (pil), Android 13 ve üzerinde `App battery usage` (uygulama pil kullanımı) seçeneğine tıklayın.
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
-5. On Android 12+ select the `Unrestricted` option, on Android 15+ you need to expand the `Allow background usage` setting, click on the section highlighted in red to do this then follow step 6 to complete.
+5. Android 12 ve üzerinde `Unrestricted` (kısıtlamasız) seçeneğini seçin. Android 15 ve üzerinde `Allow background usage` (arka planda kullanıma izin ver) ayarını genişletmeniz gerekir. Bunun için kırmızıyla işaretlenmiş bölüme tıklayın, ardından işlemi tamamlamak için 6. adımı izleyin.
 
    ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
 
-6. On Android 16 Select `Unrestricted`
+6. Android 16'da `Unrestricted` (kısıtlamasız) seçeneğini seçin
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
-## License agreement
+## Lisans sözleşmesi
 
-In the end user license agreement there is important information about the legal aspects of using **AAPS**. Please read it carefully.
+Son kullanıcı lisans sözleşmesinde **AAPS** kullanımının yasal yönleri hakkında önemli bilgiler vardır. Lütfen dikkatle okuyun.
 
-If you don't understand, or can't agree to the end user license agreement please don't use **AAPS** at all!
+Son kullanıcı lisans sözleşmesini anlamıyorsanız veya kabul edemiyorsanız lütfen **AAPS**'i hiç kullanmayın!
 
-If you understand and agree, please press the "**I UNDERSTAND AND AGREE**" button and follow the Setup Wizard:
+Anlıyor ve kabul ediyorsanız lütfen "**ANLADIM VE KABUL EDİYORUM**" düğmesine basın ve Kurulum Sihirbazı'nı izleyin:
 
 ![EULA](../images/setup-wizard/Wizard-EULA.png)
 
-A "**Next**" button appears once you have agreed. Press "**NEXT**".
+Kabul ettiğinizde bir "**İleri**" düğmesi görünür. "**İLERİ**" düğmesine basın.
 
-The next screen, "**Permissions**", lists the permissions again. They should all show a tick, as you granted them at the start. If one is missing, press "**Grant**" next to it. Press "**NEXT**" to continue:
+Bir sonraki ekran olan "**İzinler**", izinleri yeniden listeler. Başta izinleri verdiğiniz için hepsinde onay işareti görünmelidir. Biri eksikse yanındaki "**İzin ver**" düğmesine basın. Devam etmek için "**İLERİ**" düğmesine basın:
 
-![Permissions granted](../images/setup-wizard/Wizard-Permissions-Granted.png)
+![İzinler verildi](../images/setup-wizard/Wizard-Permissions-Granted.png)
 
 ## Master password
 
-As the configuration of **AAPS** contains some sensitive data (_e.g._ the access token for your Nightscout server) it is encrypted by a password you set here.
+**AAPS** yapılandırması bazı hassas veriler içerdiği için (_örneğin_ Nightscout sunucunuzun erişim belirteci) burada belirlediğiniz bir parola ile şifrelenir.
 
-The Wizard shows "**Password not set**". Press "**Set**":
+Sihirbaz "**Parola ayarlanmadı**" gösterir. "**Uygula**" düğmesine basın:
 
-![Master password not set](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
+![Ana parola ayarlanmadı](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
 
-This opens the "**Protection**" screen. Press "**Master password**" (shown as "Password not set"):
+Bu, "**Koruma**" ekranını açar. "**Ana parola**" seçeneğine basın ("Parola ayarlanmadı" olarak gösterilir):
 
-![Güvenlik](../images/setup-wizard/Wizard-Protection.png)
+![Koruma](../images/setup-wizard/Wizard-Protection.png)
 
-Enter the same password in both fields and press "**OK**":
+Her iki alana da aynı parolayı girin ve "**Tamam**" düğmesine basın:
 
 ![Parola](../images/setup-wizard/Wizard-Password.png)
 
-Go back with the arrow in the top left corner. The Wizard now shows "**Password set!**":
+Sol üst köşedeki okla geri dönün. Sihirbaz artık "**Parola belirlendi!**" gösterir:
 
-![Master password set](../images/setup-wizard/Wizard-MasterPassword-Set.png)
+![Ana parola belirlendi](../images/setup-wizard/Wizard-MasterPassword-Set.png)
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+Lütfen **ANA PAROLANIZI KAYBETMEYİN**. Parolanızı bir yere not edin, _örneğin_ Google Drive'a. Google Drive iyi bir yerdir, çünkü Google onu sizin için yedekler. Akıllı telefonunuz veya bilgisayarınız çökebilir ve elinizde güncel bir kopya olmayabilir. Ana parolanızı unutursanız, profil yapılandırmanızı ve **Görevler**'deki ilerlemenizi daha sonra geri yüklemek zor olabilir.
 ```
 
-When you are done, press "**NEXT**" to go to the next screen.
+İşiniz bittiğinde bir sonraki ekrana geçmek için "**İLERİ**" düğmesine basın.
 
 (setup-wizard-import-settings)=
 ## Ayarları içe aktarın
 
-This screen is only shown when **AAPS** finds settings exported earlier in the **AAPS** directory ("Stored settings found"), for example when you reinstall the app or move to a new phone.
+Bu ekran yalnızca **AAPS**, **AAPS** dizininde daha önce dışa aktarılmış ayarlar bulduğunda gösterilir ("Saklanan ayarlar bulundu"). Örneğin uygulamayı yeniden yüklediğinizde veya yeni bir telefona geçtiğinizde.
 
-- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md).
-- To start with a new configuration, press "**NEXT**" and continue with the Wizard.
+- Önceki yapılandırmanızı geri yüklemek için "**Ayarları içe aktar**" düğmesine basın — bkz. [Ayarları dışa ve içe aktarma](../Maintenance/ExportImportSettings.md).
+- Yeni bir yapılandırma ile başlamak için "**İLERİ**" düğmesine basın ve sihirbaza devam edin.
 
 ![Ayarları içe aktarın](../images/setup-wizard/Wizard-ImportSettings.png)
 
-## Units (mg/dL <-> mmol/L)
+## Birimler (mg/dL <-> mmol/L)
 
-Please select if your glucose values are in mg/dL or mmol/L, then press the "**NEXT**" button:
+Lütfen glikoz değerlerinizin mg/dL mi yoksa mmol/L mi olduğunu seçin, ardından "**İLERİ**" düğmesine basın:
 
-![Units](../images/setup-wizard/Wizard-Units.png)
+![Birimler](../images/setup-wizard/Wizard-Units.png)
 
-## Display Settings
+## Görüntü Ayarları
 
-Here you set the "**LOW mark**" and "**HIGH mark**" for the sensor glucose display. Glucose values between these two marks are shown as "in range". You can leave the default values (72 and 180 mg/dL) for now, and edit them later.
+Burada sensör glikoz gösterimi için "**DÜŞÜK işareti**" ve "**YÜKSEK işareti**" değerlerini ayarlarsınız. Bu iki işaret arasındaki glikoz değerleri "hedef aralıkta" olarak gösterilir. Şimdilik varsayılan değerleri (72 ve 180 mg/dL) bırakabilir ve daha sonra değiştirebilirsiniz.
 
-The values you choose only affect the graphical presentation of the diagram, and nothing else.
+Seçtiğiniz değerler yalnızca grafiğin görsel sunumunu etkiler, başka hiçbir şeyi etkilemez.
 
-Your glucose target _e.g._ is configured separately in your profile.
+_Örneğin_ glikoz hedefiniz profilinizde ayrıca ayarlanır.
 
-Your range to analyze TIR (time in range) is configured separately in your reporting server.
+TIR (time in range, aralıkta geçen süre) analizi için kullandığınız aralık, raporlama sunucunuzda ayrıca yapılandırılır.
 
-Adjust the marks with the "−" / "+" buttons if needed, then press the "**NEXT**" button:
+Gerekirse işaretleri "−" / "+" düğmeleriyle ayarlayın, ardından "**İLERİ**" düğmesine basın:
 
-![Display Settings](../images/setup-wizard/Wizard-Display.png)
+![Görüntü Ayarları](../images/setup-wizard/Wizard-Display.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-## Communication
+## İletişim
 
-The "**Communication**" screen lists the plugins used to upload, synchronize and broadcast your data:
+"**İletişim**" ekranı, verilerinizi yüklemek, senkronize etmek ve yayınlamak için kullanılan eklentileri listeler:
 
-- **SMS Communicator** – remote control of **AAPS** using SMS commands
-- **NSClientV3** – synchronizes your data with Nightscout using the v3 API
-- **Tidepool** – uploads data to Tidepool
-- **xDrip** – sends data to xDrip
-- **Open Humans** – upload and donate your diabetes data to scientific projects
-- **Wear** – monitor and control **AAPS** from a WearOS watch
-- **External Companion Apps** – data broadcasting to various external apps
-- **Garmin** – connection to a Garmin device
+- **SMS Komünikatör** – SMS komutlarıyla **AAPS**'in uzaktan kontrolü
+- **NSClientV3** – verilerinizi v3 API ile Nightscout'a senkronize eder
+- **Tidepool** – verileri Tidepool'a yükler
+- **xDrip** – verileri xDrip'e gönderir
+- **Open Humans** – diyabet verilerinizi yükleyin ve bilimsel projelere bağışlayın
+- **Wear** – **AAPS**'i bir WearOS saatinden izleyin ve kontrol edin
+- **Harici yardımcı uygulamalar** – verilerin çeşitli harici uygulamalara yayınlanması
+- **Garmin** – bir Garmin cihazına bağlantı
 
-![Communication](../images/setup-wizard/Wizard-Communication.png)
+![İletişim](../images/setup-wizard/Wizard-Communication.png)
 
-Scroll down to see the rest of the list:
+Listenin geri kalanını görmek için aşağı kaydırın:
 
-![Communication more](../images/setup-wizard/Wizard-Communication-More.png)
+![İletişim, devamı](../images/setup-wizard/Wizard-Communication-More.png)
 
-You could configure several of these now, but for the first run we will just focus on the reporting server. If you are not able to set it up at the moment, skip it for now — you can configure it later.
+Bunların birkaçını şimdi ayarlayabilirsiniz, ancak ilk kurulumda yalnızca raporlama sunucusuna odaklanacağız. Şu anda kuramıyorsanız şimdilik atlayın — daha sonra ayarlayabilirsiniz.
 
-In this example we use Nightscout as reporting server. Tick the box on the right of "**NSClientV3**" to enable it. For Tidepool it is even simpler, as you only need your personal login information.
+Bu örnekte raporlama sunucusu olarak Nightscout kullanıyoruz. Etkinleştirmek için "**NSClientV3**" sağındaki kutuyu işaretleyin. Tidepool için bu daha da basittir, çünkü yalnızca kişisel oturum açma bilgilerinize ihtiyacınız vardır.
 
-Once enabled, press "**Settings**" below NSClientV3 to configure it:
+Etkinleştirdikten sonra, ayarlamak için NSClientV3'ün altındaki "**Ayarlar**" düğmesine basın:
 
 ![NSClientV3](../images/setup-wizard/Wizard-Communication-NSClient.png)
 
-Here you configure the Nightscout reporting server. The NSClientV3 settings are shown as one scrollable page:
+Burada Nightscout raporlama sunucusunu ayarlarsınız. NSClientV3 ayarları kaydırılabilir tek bir sayfada gösterilir:
 
-![NSClientV3 settings](../images/setup-wizard/Wizard-NSClientV3.png)
+![NSClientV3 ayarları](../images/setup-wizard/Wizard-NSClientV3.png)
 
-Press "**Nightscout URL**" and enter your personal Nightscout server address (the URL you set up yourself, or were given by your service provider). Confirm with "**OK**".
+"**Nightscout URL**" seçeneğine basın ve kişisel Nightscout sunucunuzun adresini girin (kendi kurduğunuz veya hizmet sağlayıcınızın verdiği URL). "**Tamam**" ile onaylayın.
 
-Press "**Nightscout access token**" and enter the access token for your Nightscout server. Without this token, access will not work. If you don't have it yet, please check the documentation for setting up the reporting server.
+"**Nightscout erişim belirteci**" seçeneğine basın ve Nightscout sunucunuzun erişim belirtecini girin. Bu belirteç olmadan erişim çalışmaz. Henüz yoksa lütfen raporlama sunucusunun kurulumuyla ilgili dokümantasyona bakın.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout.
+Nightscout ile gerçek zamanlı iletişim için "**Websocket'leri kullan**" seçeneğini açık bırakın.
 
-The remaining sections can be left at their defaults for now. They are described here so you know where to find them later:
+Diğer bölümleri şimdilik varsayılan değerlerinde bırakabilirsiniz. Daha sonra nerede bulacağınızı bilmeniz için burada açıklanmıştır:
 
-**Alarm options** — Nightscout alarms, announcements and stale-data thresholds. Leave the switches off for now; we only open them so you are aware of the options.
+**Alarm seçenekleri** — Nightscout alarmları, duyuruları ve eski veri eşikleri. Anahtarları şimdilik kapalı bırakın; bu seçenekleri yalnızca var olduklarını bilmeniz için açıyoruz.
 
-**Connection settings** — choose how data is transferred. Caregivers must enable "**Use cellular data**", otherwise the phone of the person they care for (_e.g._ a child) cannot upload outside Wi-Fi range, _e.g._ on the way to school. Other users can disable cellular transfer to save data or battery. If in doubt, leave everything enabled.
+**Bağlantı Ayarları** — verilerin nasıl aktarılacağını seçin. Bakım verenler "**Hücresel veri kullan**" seçeneğini açmalıdır. Aksi halde baktıkları kişinin (_örneğin_ bir çocuğun) telefonu Wi-Fi kapsamı dışında, _örneğin_ okul yolunda, veri yükleyemez. Diğer kullanıcılar veri veya pil tasarrufu için hücresel aktarımı kapatabilir. Emin değilseniz her şeyi açık bırakın.
 
 ![Connection settings](../images/setup-wizard/Wizard-NSClientV3-Connection.png)
 
-**Advanced Settings** — enable "**Log app start event**" if you want to see in Nightscout when the app restarts (useful for caregivers). Keep "**Create announcements from errors**" and "**Create announcements from carbs required**" enabled. Leave "**Use slow sync**" off; you would only use it if the Nightscout server is slow to process a large amount of data.
+**Gelişmiş Ayarlar** — uygulama yeniden başladığında bunu Nightscout'ta görmek istiyorsanız "**Uygulama başlatma olayını günlüğe kaydet**" seçeneğini açın (bakım verenler için yararlıdır). "**Hatalardan duyurular oluştur**" ve "**Gereken karbonhidratlardan duyurular oluştur**" seçeneklerini açık tutun. "**Yavaş senk. kullan**" seçeneğini kapalı bırakın; bunu yalnızca Nightscout sunucusu büyük miktarda veriyi yavaş işliyorsa kullanırsınız.
 
-![Advanced settings](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
+![Gelişmiş Ayarlar](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
 
-Go back to the list of plugins and press "**NEXT**" to go to the next screen.
+Eklenti listesine geri dönün ve bir sonraki ekrana geçmek için "**İLERİ**" düğmesine basın.
 
-## Client control
+## İstemci kontrolü
 
-From **AAPS** version 4, client devices running **AAPSClient** can be **paired** with this phone (the **master**) and control it with signed commands sent over Nightscout. This is the new recommended way to control **AAPS** remotely — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for the full explanation and setup.
+**AAPS** 4 sürümünden itibaren, **AAPSClient** çalıştıran istemci cihazlar bu telefonla (**ana birim**) **eşleştirilebilir** ve Nightscout üzerinden gönderilen imzalı komutlarla onu kontrol edebilir. Bu, **AAPS**'i uzaktan kontrol etmenin önerilen yeni yoludur — ayrıntılı açıklama ve kurulum için [Ana birim ↔ İstemci kontrolü](../RemoteFeatures/ClientMasterControl.md) sayfasına bakın.
 
-There is nothing you have to configure on this screen now; you can pair clients at any time later from **Manage → Authorized clients**. There you add a client with a **QR code** (it sets up Nightscout on the client too) or with a **PIN**, and give it a **role**.
+Bu ekranda şimdi ayarlamanız gereken bir şey yoktur; istemcileri daha sonra istediğiniz zaman **Yönet → Yetkili istemciler** bölümünden eşleştirebilirsiniz. Orada bir istemciyi **QR kodu** ile (bu, istemcide Nightscout'u da kurar) veya **PIN** ile ekler ve ona bir **rol** verirsiniz.
 
-- "**Authorized clients**" — manage the paired client devices allowed to control this master.
-- "**Nightscout data acceptance**" — accepting treatments and data entered directly in Nightscout (the old, less secure way) is now turned off by default. Only open these settings if you still need it, _e.g._ to enter data through Nightscout or third-party apps.
+- "**Yetkili istemciler**" — bu ana birimi kontrol etmesine izin verilen eşleştirilmiş istemci cihazları yönetin.
+- "**Nightscout veri kabulü**" — doğrudan Nightscout'ta girilen tedavilerin ve verilerin kabul edilmesi (eski ve daha az güvenli yol) artık varsayılan olarak kapalıdır. Bu ayarları yalnızca hâlâ buna ihtiyacınız varsa açın, _örneğin_ verileri Nightscout veya üçüncü taraf uygulamalar üzerinden girmek için.
 
-When client control is already on — always in [Simple Mode](#preferences-simple-mode) — this phone is in [hardened mode](#client-master-control-hardened-mode): it takes changes only from paired clients, so the screen explains hardened mode instead of offering the "**Nightscout data acceptance**" settings.
+İstemci kontrolü zaten açıksa — [Basit mod](#preferences-simple-mode)'da her zaman açıktır — bu telefon [güçlendirilmiş mod](#client-master-control-hardened-mode)'dadır: değişiklikleri yalnızca eşleştirilmiş istemcilerden alır. Bu yüzden ekran "**Nightscout veri kabulü**" ayarlarını sunmak yerine güçlendirilmiş modu açıklar.
 
-![Client control](../images/setup-wizard/Wizard-ClientControl.png)
+![İstemci kontrolü](../images/setup-wizard/Wizard-ClientControl.png)
 
-"**Nightscout data acceptance**" opens the "**Synchronization**" settings, where each kind of data received from Nightscout has its own switch:
+"**Nightscout veri kabulü**", "**Senkronizasyon**" ayarlarını açar. Burada Nightscout'tan alınan her veri türünün kendi anahtarı vardır:
 
-![Nightscout data acceptance settings](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
+![Nightscout veri kabulü ayarları](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
 
-Press "**NEXT**" to go to the next screen.
+Bir sonraki ekrana geçmek için "**İLERİ**" düğmesine basın.
 
 (setup-wizard-instance-name)=
-## Who is using this phone?
+## Bu telefonu kim kullanıyor?
 
-Here you enter the name of the person using this phone. It tells this **AAPS** instance apart from others in reports and when synchronizing, for example if two children in your family use **AAPS**. It is also used in the names of exported settings files and shown on the watch.
+Burada bu telefonu kullanan kişinin adını girersiniz. Bu ad, raporlarda ve senkronizasyon sırasında bu **AAPS** kurulumunu diğerlerinden ayırır, örneğin ailenizde iki çocuk **AAPS** kullanıyorsa. Ayrıca dışa aktarılan ayar dosyalarının adlarında kullanılır ve saatte gösterilir.
 
-It can be anything. You can change it later in **Settings → General → Instance name**.
+Herhangi bir şey olabilir. Bunu daha sonra **Ayarlar → Genel → Kurulum adı** bölümünden değiştirebilirsiniz.
 
-Press "**NEXT**" to go to the next screen.
+Bir sonraki ekrana geçmek için "**İLERİ**" düğmesine basın.
 
 ![Name](../images/setup-wizard/Wizard-Name.png)
 
 ## Patient type
 
-Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
+Burada "Hasta tipi"ni seçersiniz. Bu önemlidir, çünkü **AAPS** yazılımı hastanın yaşına göre farklı sınırlar kullanır. Bu, güvenlik ve emniyet açısından önemlidir.
 
-Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for a meal.
+Bir öğün için **izin verilen maksimum bolus** da burada ayarlanır. Yani tipik öğünlerinizi karşılamak için vermeniz gereken en büyük bolus. Bu, bir öğün için bolus yaparken yanlışlıkla aşırı doz vermenizi önlemeye yardımcı olan bir güvenlik özelliğidir.
 
-The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
+İkinci sınır benzer bir mantığa sahiptir, ancak beklediğiniz en yüksek karbonhidrat alımıyla ilgilidir.
 
-After setting these values, press "**NEXT**" to go to the next screen:
+Bu değerleri ayarladıktan sonra bir sonraki ekrana geçmek için "**İLERİ**" düğmesine basın:
 
-![Patient](../images/setup-wizard/Wizard-PatientType.png)
+![Hasta](../images/setup-wizard/Wizard-PatientType.png)
 
 ## İnsülin
 
-Here you configure the insulin used in your pump. New insulin profiles require a **DIA of at least 5 h**.
+Burada pompanızda kullanılan insülini ayarlarsınız. Yeni insülin profilleri **en az 5 sa İES** gerektirir.
 
-Press the "**Insulin**" button to open the insulin editor:
+İnsülin düzenleyicisini açmak için "**İnsülin**" düğmesine basın:
 
 ![İnsülin](../images/setup-wizard/Wizard-Insulin.png)
 
-In the editor you can give the insulin a **nickname** and set its **Peak** (in minutes) and **DIA** (in hours). The quickest way is to load a preset with "**Load peak from**" — choose **Novorapid**, **Fiasp** or **Lyumjev** — and the peak is filled in for you. The graph at the bottom previews the resulting insulin activity curve.
+Düzenleyicide insüline bir **takma ad** verebilir, **Tepe** (dakika olarak) ve **İES** (saat olarak) değerlerini ayarlayabilirsiniz. En hızlı yol, "**Tepe değerini şuradan yükle**" ile hazır bir ayar yüklemektir — **Novorapid**, **Fiasp** veya **Lyumjev** seçin — ve tepe değeri sizin için doldurulur. Alttaki grafik, ortaya çıkan insülin etki eğrisini önceden gösterir.
 
-![Insulin editor](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
+![İnsülin düzenleyicisi](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
 
-Pick the preset that matches your insulin, for example **Fiasp**:
+İnsülininize uyan hazır ayarı seçin, örneğin **Fiasp**:
 
-![Insulin Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
+![İnsülin Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
 
 ```{admonition} Use your insulin brand's preset peak
 :class: danger
-Please don't change the peak unless you are an expert — usually the preset values work well for each branded insulin.
+Uzman değilseniz lütfen tepe değerini değiştirmeyin — her insülin markası için hazır değerler genellikle iyi çalışır.
 ```
 
-If you are a new **AAPS** user, set **DIA** to 9 hours — see [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to understand why.
+Yeni bir **AAPS** kullanıcısıysanız **İES** değerini 9 saat olarak ayarlayın — nedenini anlamak için [İnsülin etki süresi (İES) ve tepe](#Config-Builder-insulin-dia) bölümüne bakın.
 
 ```{admonition} "Insulin configuration changed" dialog
 :class: note
-If a paired client (_e.g._ another phone) has changed the insulin configuration, a dialog appears. Press **OK** to load their changes, or **Cancel** to keep editing (your next save will overwrite theirs).
+Eşleştirilmiş bir istemci (_örneğin_ başka bir telefon) insülin yapılandırmasını değiştirdiyse bir pencere açılır. Onun değişikliklerini yüklemek için **Tamam** düğmesine, düzenlemeye devam etmek için **Vazgeç** düğmesine basın (bir sonraki kaydetmeniz onun değişikliklerinin üzerine yazar).
 ```
 
-![Insulin changed](../images/setup-wizard/Wizard-Insulin-Changed.png)
+![İnsülin değişti](../images/setup-wizard/Wizard-Insulin-Changed.png)
 
-Press the save icon (top right), then press "**NEXT**" to go to the next screen.
+Kaydet simgesine (sağ üst) basın, ardından bir sonraki ekrana geçmek için "**İLERİ**" düğmesine basın.
 
-## Blood sugar source
+## Kan şekeri kaynağı
 
-Here you select where **AAPS** gets its glucose data from. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
+Burada **AAPS**'in glikoz verilerini nereden alacağını seçersiniz. Lütfen [KŞ kaynağınızın](../Getting-Started/CompatiblesCgms.md) dokümantasyonunu okuyun.
 
-Many sources are available — scroll through the list and select the one you use:
+Birçok kaynak vardır — listeyi kaydırın ve kullandığınız kaynağı seçin:
 
 ![KŞ kaynağı](../images/setup-wizard/Wizard-BGSource.png)
 
-Once you select a source, its card expands and shows two buttons: "**Settings**" to adjust how the data is received, and "**Open plugin**" to open the source's own screen. In the example below, **BYODA** is selected. Some sources have nothing to configure at this stage, so you can usually go straight to the next screen:
+Bir kaynak seçtiğinizde kartı genişler ve iki düğme gösterir: verilerin nasıl alınacağını ayarlamak için "**Ayarlar**" ve kaynağın kendi ekranını açmak için "**Eklentiyi aç**". Aşağıdaki örnekte **BYODA** seçilmiştir. Bazı kaynaklarda bu aşamada ayarlanacak bir şey yoktur, bu yüzden genellikle doğrudan bir sonraki ekrana geçebilirsiniz:
 
-![BG Source settings](../images/setup-wizard/Wizard-BGSource-Settings.png)
+![KŞ kaynağı ayarları](../images/setup-wizard/Wizard-BGSource-Settings.png)
 
-After making your selection, press "**NEXT**" to go to the next screen.
+Seçiminizi yaptıktan sonra bir sonraki ekrana geçmek için "**İLERİ**" düğmesine basın.
 
 (setup-wizard-profile)=
 ## Profile
 
-Now we are entering a very important part of the Setup Wizard.
+Şimdi Kurulum Sihirbazı'nın çok önemli bir bölümüne giriyoruz.
 
-Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
+Bir sonraki ekranda profil bilgilerinizi girmeye çalışmadan önce lütfen [profiller](../SettingUpAaps/YourAapsProfile.md) hakkındaki dokümantasyonu okuyun.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-An accurate profile is necessary to control the safe action of **AAPS**.
+**AAPS**'in güvenli çalışması için doğru bir profil gereklidir.
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
+Profilinizi belirlemiş ve doktorunuzla konuşmuş olmanız gerekir. Ayrıca profilin başarılı bazal oran, İDF ve IC testleriyle çalıştığı kanıtlanmış olmalıdır!
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+Bir robota yanlış veri girilirse başarısız olur - her seferinde. **AAPS** yalnızca kendisine verilen bilgilerle çalışabilir. Profiliniz çok güçlüyse hipoglisemi, çok zayıfsa hiperglisemi riskiniz olur. 
 ```
 
-Press the "**Profile**" button to open the profile editor:
+Profil düzenleyicisini açmak için "**Profil**" düğmesine basın:
 
 ![Profile](../images/setup-wizard/Wizard-Profile.png)
 
-The editor opens empty ("No records available"). Press the "**+**" button at the bottom to create a new profile:
+Düzenleyici boş açılır ("Kayıt mevcut değil"). Yeni bir profil oluşturmak için alttaki "**+**" düğmesine basın:
 
-![Profile empty](../images/setup-wizard/Wizard-Profile-Empty.png)
+![Boş profil](../images/setup-wizard/Wizard-Profile-Empty.png)
 
-You can have several profiles in the long-term if needed. We only create one here.
+Gerekirse uzun vadede birden fazla profiliniz olabilir. Burada yalnızca bir tane oluşturuyoruz.
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: note
-The example profile here is only to show you how to enter data.
+Buradaki örnek profil yalnızca verilerin nasıl girileceğini göstermek içindir.
 
-It is not intended to be an accurate profile or something very well optimized, because each person's needs are so different.
+Doğru veya çok iyi ayarlanmış bir profil olması amaçlanmamıştır, çünkü her kişinin ihtiyaçları çok farklıdır.
 
-Don't use it for actually looping!
+Gerçek döngü için bunu kullanmayın!
 ```
 
-The new profile (for example "**LocalProfile1**") has four tabs: **IC**, **ISF**, **BAS** and **TARG**. Press the pencil next to the profile name to rename it. Fill in every tab — a tab stays red and shows an error message until it contains valid values:
+Yeni profilin (örneğin "**LocalProfile1**") dört sekmesi vardır: **IC**, **İDF**, **BAZAL** ve **HDF**. Profili yeniden adlandırmak için profil adının yanındaki kaleme basın. Her sekmeyi doldurun — bir sekme geçerli değerler içerene kadar kırmızı kalır ve bir hata mesajı gösterir:
 
-![New profile with errors](../images/setup-wizard/Wizard-Profile-New-Error.png)
+![Hatalı yeni profil](../images/setup-wizard/Wizard-Profile-New-Error.png)
 
-Press "**IC**" and enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values. Use the "**+**" button to add more time blocks:
+"**IC**" sekmesine basın ve [IC](#your-aaps-profile-insulin-to-carbs-ratio) değerlerinizi girin. Daha fazla zaman dilimi eklemek için "**+**" düğmesini kullanın:
 
 ![IC](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Press "**ISF**" and enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
+"**İDF**" sekmesine basın ve [İDF değerlerinizi](#your-aaps-profile-insulin-sensitivity-factor) girin:
 
-![ISF](../images/setup-wizard/Wizard-Profile-ISF.png)
+![İDF](../images/setup-wizard/Wizard-Profile-ISF.png)
 
-Press "**BAS**" and enter your [basal values](#your-aaps-profile-basal-rates):
+"**BAZAL**" sekmesine basın ve [bazal değerlerinizi](#your-aaps-profile-basal-rates) girin:
 
-![BAS](../images/setup-wizard/Wizard-Profile-BAS.png)
+![BAZAL](../images/setup-wizard/Wizard-Profile-BAS.png)
 
-Press "**TARG**" and enter your blood sugar target values.
+"**HDF**" sekmesine basın ve kan şekeri hedef değerlerinizi girin.
 
-For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
+Açık döngüde bu hedef daha geniş bir aralık olabilir. Aksi halde **AAPS** sizi sürekli olarak geçici bazal oranını veya başka bir ayarı değiştirmeniz için uyarır ve bu yorucu olabilir.
 
-Later, for closed looping, you will generally have only one value for top and bottom. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
+Daha sonra, kapalı döngüde, genellikle alt ve üst sınır için tek bir değeriniz olacaktır. Bu, **AAPS**'in hedefe ulaşmasını kolaylaştırır ve size genel olarak daha iyi bir diyabet kontrolü sağlar.
 
-![TARG](../images/setup-wizard/Wizard-Profile-TARG.png)
+![HDF](../images/setup-wizard/Wizard-Profile-TARG.png)
 
-When all four tabs are valid, the **save icon** (top right) becomes active. Press it to save the profile:
+Dört sekmenin tümü geçerli olduğunda **kaydet simgesi** (sağ üst) etkin hale gelir. Profili kaydetmek için ona basın:
 
-![Save icon](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
+![Kaydet simgesi](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
 
-Close the editor with the "**X**" in the top left corner. The profile summary then shows its name, its total daily basal (∑), the units and the IC and ISF values with their graphs:
+Sol üst köşedeki "**X**" ile düzenleyiciyi kapatın. Profil özeti, profilin adını, toplam günlük bazalını (∑), birimleri ve IC ile İDF değerlerini grafikleriyle birlikte gösterir:
 
 ![Save](../images/setup-wizard/Wizard-Profile-Save.png)
 
 ```{admonition} Several defined but only one active profile
 :class: note
-You can have several profiles defined, but only one activated profile running at any given time.
+Birden fazla profil tanımlayabilirsiniz, ancak aynı anda yalnızca bir profil etkin olarak çalışır.
 ```
 
-Press the "**▶**" (activate) button at the bottom right. The "**Activate**" screen opens. As no insulin is in use yet, it first asks you to select the insulin you are using, so that the profile switch can record it. The "**Activate**" button stays greyed out until you do:
+Sağ alttaki "**▶**" (etkinleştir) düğmesine basın. "**Etkinleştir**" ekranı açılır. Henüz kullanımda bir insülin olmadığı için, profil değişiminin bunu kaydedebilmesi amacıyla önce kullandığınız insülini seçmenizi ister. Siz seçene kadar "**Etkinleştir**" düğmesi gri kalır:
 
-![Select the insulin first](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
+![Önce insülini seçin](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
 
-Press "**Select Insulin**" and choose the insulin you configured earlier. Leave the percentage at 100 % and press "**Activate**":
+"**İnsülin Seçin**" düğmesine basın ve daha önce ayarladığınız insülini seçin. Yüzdeyi %100'de bırakın ve "**Etkinleştir**" düğmesine basın:
 
-![Activate](../images/setup-wizard/Wizard-Profile-Activate.png)
+![Etkinleştir](../images/setup-wizard/Wizard-Profile-Activate.png)
 
-A profile switch dialog appears. In this case let it stay as preset and confirm with "**OK**":
+Bir profil değişimi penceresi açılır. Bu durumda ayarları olduğu gibi bırakın ve "**Tamam**" ile onaylayın:
 
 ```{admonition} Profile switch dialog
 :class: note
-You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile to suit the circumstances.
+Bu genel pencereyi, hastalık veya spor gibi profilinizi koşullara uydurmanız gereken durumlarda nasıl kullanacağınızı daha sonra öğreneceksiniz.
 ```
 
-![Switch](../images/setup-wizard/Wizard-Profile-Switch.png)
+![Değiştir](../images/setup-wizard/Wizard-Profile-Switch.png)
 
-Your profile is now active. Press "**NEXT**" to go to the next screen.
+Profiliniz artık etkin. Bir sonraki ekrana geçmek için "**İLERİ**" düğmesine basın.
 
 ## İnsülin pompası
 
-Now you select your insulin pump. Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
+Şimdi insülin pompanızı seçersiniz. Lütfen [insülin pompanızın](../Getting-Started/CompatiblePumps.md) dokümantasyonunu okuyun.
 
-Scroll the list and select your pump. In this example we use the "**Virtual Pump**", which is useful while you are still learning and have not connected a real pump yet:
+Listeyi kaydırın ve pompanızı seçin. Bu örnekte "**Sanal pompa**" kullanıyoruz. Bu, hâlâ öğrenirken ve henüz gerçek bir pompa bağlamadığınızda yararlıdır:
 
 ![Pump](../images/setup-wizard/Wizard-Pump.png)
 
-Many pumps are supported — scroll down to find yours:
+Birçok pompa desteklenir — kendi pompanızı bulmak için aşağı kaydırın:
 
-![Pump more](../images/setup-wizard/Wizard-Pump-More.png)
+![Pompa, devamı](../images/setup-wizard/Wizard-Pump-More.png)
 
-When you select a real pump, **AAPS** asks for a confirmation, because it will copy the basal rates of your profile to the pump and overwrite the basal rates stored there. Press "**OK**" only if the basal rates in your **AAPS** profile are correct; otherwise press "**Cancel**" and switch to the pump later:
+Gerçek bir pompa seçtiğinizde **AAPS** onay ister, çünkü profilinizin bazal oranlarını pompaya kopyalayacak ve pompada kayıtlı bazal oranlarının üzerine yazacaktır. "**Tamam**" düğmesine yalnızca **AAPS** profilinizdeki bazal oranları doğruysa basın; aksi halde "**Vazgeç**" düğmesine basın ve pompaya daha sonra geçin:
 
-![Confirmation when selecting a hardware pump](../images/setup-wizard/Wizard-Pump-Confirmation.png)
+![Gerçek bir pompa seçildiğinde onay](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
+Seçtiğiniz pompa Bluetooth ile iletişim kuruyorsa, **AAPS** sihirbazı bitirdiğinizde yakındaki cihazlara bağlanmak için izin ister (bkz. [Bluetooth izni](#setup-wizard-bluetooth-permission)).
 
-If you have already set up your profile and know how to connect your pump, feel free to connect it now. Otherwise leave it on **Virtual Pump** for the moment — you can change it anytime, or leave the Setup Wizard using the arrow in the top left corner and let **AAPS** first show you some blood glucose values.
+Profilinizi zaten ayarladıysanız ve pompanızı nasıl bağlayacağınızı biliyorsanız, şimdi bağlayabilirsiniz. Aksi halde şimdilik **Sanal pompa**'da bırakın — bunu istediğiniz zaman değiştirebilirsiniz. Ya da sol üst köşedeki okla Kurulum Sihirbazı'ndan çıkın ve **AAPS**'in önce size birkaç kan şekeri değeri göstermesini bekleyin.
 
-Press "**NEXT**" to go to the next screen.
+Bir sonraki ekrana geçmek için "**İLERİ**" düğmesine basın.
 
 ## APS algorithm
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name, the SMB feature of the algorithm is disabled until you are familiar with AAPS and have worked through the first objectives. OpenAPS SMB is newer and generally better than OpenAPS AMA anyway.
+APS algoritmanız olarak OpenAPS SMB algoritmasını kullanın. Adına rağmen, algoritmanın SMB özelliği siz AAPS'i tanıyana ve ilk görevleri tamamlayana kadar kapalıdır. OpenAPS SMB zaten OpenAPS AMA'dan daha yenidir ve genel olarak daha iyidir.
 
-SMB is disabled at the start because the SMB feature reacts faster to a blood sugar increase, using a Super Micro Bolus instead of increasing the basal rate percentage. Because your profile is generally not as good in the beginning as it is after some experience, the feature is disabled at first.
+SMB başta kapalıdır, çünkü SMB özelliği kan şekeri artışına daha hızlı tepki verir: bazal oran yüzdesini artırmak yerine Süper Mikro Bolus kullanır. Profiliniz başlangıçta, biraz deneyim kazandıktan sonraki kadar iyi olmadığı için bu özellik ilk başta kapalıdır.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: note
-OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+OpenAPS AMA, yüksek değerleri düzeltmek için mikro bolusları desteklemeyen en temel algoritmadır. Bu algoritmayı kullanmanın daha iyi olduğu durumlar olabilir, ancak önerilen bu değildir.
 ```
 
-Select "**OpenAPS SMB**", then press "**Settings**" to see the details:
+"**OpenAPS SMB**" seçin, ardından ayrıntıları görmek için "**Ayarlar**" düğmesine basın:
 
 ![APS (YPS)](../images/setup-wizard/Wizard-APS.png)
 
-The only option here is "**Use dynamic sensitivity**". Leave it off and change nothing for now — just read the text.
+Buradaki tek seçenek "**Dinamik hassasiyet kullanın**" seçeneğidir. Bunu kapalı bırakın ve şimdilik hiçbir şeyi değiştirmeyin — yalnızca metni okuyun.
 
-Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
+**Görevler**'in koyduğu sınırlar nedeniyle şu anda zaten ne "kapalı döngü" ne de "SMB özellikleri"ni kullanabilirsiniz.
 
-Go back and press "**NEXT**" to go to the next screen:
+Geri dönün ve bir sonraki ekrana geçmek için "**İLERİ**" düğmesine basın:
 
-![APS settings](../images/setup-wizard/Wizard-APS-Settings.png)
+![APS ayarları](../images/setup-wizard/Wizard-APS-Settings.png)
 
 ## Duyarlılık algılama
 
-Leave "**Sensitivity Oref1**" selected as the standard sensitivity plugin:
+Standart duyarlılık eklentisi olarak "**Oref1 duyarlılık**" seçili kalsın:
 
 ![Sensitivity](../images/setup-wizard/Wizard-Sensitivity.png)
 
-If you press "**Settings**" you can review the absorption settings; the defaults (_e.g._ a 6 h absorption cutoff) are fine for now.
+"**Ayarlar**" düğmesine basarsanız emilim ayarlarını gözden geçirebilirsiniz; varsayılan değerler (_örneğin_ 6 sa emilim kesme) şimdilik uygundur.
 
-![Sensitivity settings](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
+![Duyarlılık ayarları](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
 
-Press "**NEXT**" to go to the next screen.
+Bir sonraki ekrana geçmek için "**İLERİ**" düğmesine basın.
 
-## Start Objective 1
+## 1. Görev'i başlatın
 
-You are now entering the Objectives — the qualification for access to further **AAPS** features.
+Şimdi Görevler'e giriyorsunuz — diğer **AAPS** özelliklerine erişmek için gereken yeterlilik.
 
-Press "**Open Objectives**":
+"**Görevleri Aç**" düğmesine basın:
 
 ![Objectives](../images/setup-wizard/Wizard-Objectives.png)
 
-Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective. But this is the start.
+Kurulumumuz şu anda bu Görev'i başarıyla tamamlamak için tam olarak hazır olmasa bile burada 1. Görev'i başlatıyoruz. Ama bu bir başlangıç.
 
-Press the "**Start**" button of **Objective 1**:
+**1. Görev**'in "**Başlat**" düğmesine basın:
 
-![Objectives list](../images/setup-wizard/Wizard-Objectives-List.png)
+![Görev listesi](../images/setup-wizard/Wizard-Objectives-List.png)
 
-The objective expands to show its individual checks. You can see that you already made some progress, while other items are still to be done:
+Görev genişler ve tek tek kontrollerini gösterir. Bazı adımlarda zaten ilerleme kaydettiğinizi, diğerlerinin ise henüz yapılmadığını görebilirsiniz:
 
-![Objective started](../images/setup-wizard/Wizard-Objectives-Started.png)
+![Görev başladı](../images/setup-wizard/Wizard-Objectives-Started.png)
 
-Go back, then press "**FINISH**" to complete the Setup Wizard:
+Geri dönün, ardından Kurulum Sihirbazı'nı tamamlamak için "**BİTİR**" düğmesine basın:
 
-![Finish](../images/setup-wizard/Wizard-Objectives-Finish.png)
+![Bitir](../images/setup-wizard/Wizard-Objectives-Finish.png)
 
-After pressing "**FINISH**" you arrive at the main screen of **AAPS**. A "**Notification**" panel may open with information messages, for example about the profile switch you just made — press "**Dismiss**" below each message to clear it.
+"**BİTİR**" düğmesine bastıktan sonra **AAPS**'in ana ekranına gelirsiniz. Bilgi mesajlarıyla birlikte bir "**Bildirim**" paneli açılabilir, örneğin az önce yaptığınız profil değişimi hakkında. Mesajı silmek için her mesajın altındaki "**Kapat**" düğmesine basın.
 
-If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
+Kurulum Sihirbazı'ndan herhangi bir anda yanlışlıkla çıkarsanız sihirbazı yeniden başlatabilir veya [AAPS döngüsünün yapılandırmasını](../SettingUpAaps/ChangeAapsConfiguration.md) elle değiştirebilirsiniz.
 
 (setup-wizard-bluetooth-permission)=
 ## Bluetooth permission
 
-If you select a pump that connects over Bluetooth (for example **Omnipod Dash**), a banner reminds you that **AAPS** needs Bluetooth permission. You can press "**Dismiss**" for now — the permission is granted after you finish the Wizard:
+Bluetooth ile bağlanan bir pompa seçerseniz (örneğin **Omnipod Dash**), bir bant **AAPS**'in Bluetooth iznine ihtiyacı olduğunu hatırlatır. Şimdilik "**Kapat**" düğmesine basabilirsiniz — izin, sihirbazı bitirdikten sonra verilir:
 
-![Bluetooth needed](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
+![Bluetooth gerekli](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
 
-Once the Setup Wizard is finished, the **AAPS** main screen shows a "**Permissions Required**" panel. The other permissions are already granted; press "**Grant**" next to "**Bluetooth**":
+Kurulum Sihirbazı bittiğinde **AAPS** ana ekranında bir "**Gerekli İzinler**" paneli gösterilir. Diğer izinler zaten verilmiştir; "**Bluetooth**" yanındaki "**İzin ver**" düğmesine basın:
 
-![Bluetooth Grant](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
+![Bluetooth için izin ver](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
 
-Select "**Allow**" so **AAPS** can find and connect to your pump:
+**AAPS**'in pompanızı bulup ona bağlanabilmesi için "**Allow**" seçeneğini seçin:
 
-![Bluetooth Allow](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
+![Bluetooth izin ver](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
 
-If your **AAPS** loop is now fully setup, please move on to the next section ["Completing the objectives"](../SettingUpAaps/CompletingTheObjectives.md).
+**AAPS** döngünüz artık tam olarak kurulduysa lütfen bir sonraki bölüme geçin: ["Görevleri tamamlama"](../SettingUpAaps/CompletingTheObjectives.md).
