@@ -2,7 +2,7 @@
 
 Plugin Autotune je implementácia algoritmu autotune z OpenAPS v AAPS. Analyzuje vašu nedávnu históriu v AAPS a navrhuje úpravy bazálnych dávok, ISF a sacharidového pomeru.
 
-Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+Plugin Autotune je dostupný vo verziách AAPS od [3.4](#version3400), ale predvolene je skrytý.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## Ako Autotune vypočítava úpravy
@@ -27,7 +27,7 @@ Autotune sa dá spustiť tromi spôsobmi: ručne jednorazovo priamo v plugine (a
 
 V podpriečinku `extra` vo vašom [AAPS priečinku](#preferences-maintenance-settings) v telefóne vytvorte prázdny súbor s názvom `enable_autotune`.
 
-***NOTE: Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one. Several users have put the file into the wrong folder.***
+***POZNÁMKA: V nastaveniach AAPS si overte, kde je váš AAPS priečinok a či ste súbor uložili do správneho priečinka. Viacerí používatelia dali súbor do nesprávneho priečinka.***
 
 ![Zapnutie Autotune](../images/Autotune/Autotune_0.png)
 
@@ -78,7 +78,7 @@ Reštartujte **AAPS**. Potom otvorte **ponuku** (☰), zvoľte **Konfigurácia**
 
 - Ak výsledkom dôverujete (malé percento zmeny medzi vstupným a výstupným profilom), môžete kliknúť na tlačidlo „Aktivovať profil“ a potom to potvrdiť tlačidlom OK.
 
-  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
+  - „Aktivovať profil“ automaticky vytvorí vo vašom zozname profilov (**Spravovať → Profil**) nový profil „Vyladené“.
   - Ak už máte v **Spravovať → Profil** profil s názvom „Vyladené“, tento profil sa pred aktiváciou aktualizuje vypočítaným profilom Autotune
 
   ![Autotune – aktivácia profilu](../images/Autotune/Autotune_6.png)
@@ -97,11 +97,11 @@ Reštartujte **AAPS**. Potom otvorte **ponuku** (☰), zvoľte **Konfigurácia**
 
 - Ak chcete nahradiť vstupný profil výsledkom Autotune, kliknite na tlačidlo „Aktualizovať vstupný profil“ a potvrďte okno tlačidlom OK
 
-  - Note: if you click on "Activate profile" after "Update input profile", then you will activate your updated profile and not the default "Tuned" profile.
+  - Poznámka: ak kliknete na „Aktivovať profil“ po „Aktualizovať vstupný profil“, aktivujete svoj aktualizovaný profil, a nie predvolený profil „Vyladené“.
 
   ![Autotune – aktualizácia vstupného profilu](../images/Autotune/Autotune_9.png)
 
-- Ak ste vstupný profil aktualizovali, tlačidlo „Aktualizovať vstupný profil“ sa nahradí tlačidlom „Vrátiť vstupný profil“ (pozrite snímku obrazovky nižšie). Takto hneď uvidíte, či váš aktuálny vstupný profil v **Spravovať → Profil** už obsahuje výsledok posledného výpočtu, alebo nie. You also have the possibility to recover your input profile without autotune result with this button
+- Ak ste vstupný profil aktualizovali, tlačidlo „Aktualizovať vstupný profil“ sa nahradí tlačidlom „Vrátiť vstupný profil“ (pozrite snímku obrazovky nižšie). Takto hneď uvidíte, či váš aktuálny vstupný profil v **Spravovať → Profil** už obsahuje výsledok posledného výpočtu, alebo nie. Týmto tlačidlom môžete tiež obnoviť svoj vstupný profil bez výsledku Autotune
 
   ![Autotune – aktualizácia vstupného profilu](../images/Autotune/Autotune_10.png)
 
@@ -123,7 +123,7 @@ Funkcia **Automatické prepnutie profilu** je dostupná iba v režime Dev/Engine
 - **Automatické prepnutie profilu** (predvolene vypnuté): pozrite [Spustenie Autotune pomocou pravidla automatizácie](#autotune-run-autotune-with-an-automation-rule) nižšie. Ak toto nastavenie zapnete, vstupný profil sa automaticky aktualizuje profilom Vyladené a aktivuje sa.
   - **Buďte opatrní: po aktualizácii a aktivácii profilu Vyladené bez úprav musíte niekoľko nasledujúcich dní overovať, či sa tým váš okruh zlepšuje, a až potom mu dôverovať**
 
-- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). Keď je vypnuté, zabráni zaradeniu UAM ako bazálu.
+- **Započítavať UAM ako bazál** (predvolene vypnuté): Toto nastavenie je pre používateľov, ktorí používajú AAPS bez zadávania sacharidov (úplné UAM). Keď je vypnuté, zabráni zaradeniu UAM ako bazálu.
   - Poznámka: ak je počas dňa zistená aspoň jedna hodina vstrebávania sacharidov, všetky dáta zaradené ako „UAM“ sa zaradia ako bazál bez ohľadu na toto nastavenie (zapnuté alebo vypnuté)
 - **Predvolený počet dní pre ladenie** (predvolene 5): Týmto nastavením môžete určiť predvolenú hodnotu. Pri každom výbere nového profilu v plugine Autotune sa **Počet dní s dátami** nahradí touto predvolenou hodnotou
 - **Použiť cirkadiánne IC/ISF** (predvolene vypnuté): pozrite [Cirkadiánny profil IC alebo ISF](#autotune-circadian-ic-or-isf-profile) nižšie.
@@ -157,7 +157,7 @@ Funkcia **Automatické prepnutie profilu** je dostupná iba v režime Dev/Engine
 
 - Ak ťuknete na ikonu **oka** vpravo od poľa **Počet dní s dátami**, zobrazí sa výber dní. Môžete určiť, ktoré dni v týždni sa majú zahrnúť do výpočtu Autotune (na snímke obrazovky nižšie vidíte príklad pre „pracovné dni“, kde sú sobota a nedeľa z výpočtu Autotune vyradené)
   - Ak je počet dní zahrnutých do výpočtu Autotune nižší ako **Počet dní s dátami**, vpravo od výberu dní uvidíte, koľko dní bude zahrnutých (v príklade nižšie 10 dní)
-  - This setting gives good results only if the number of remaining days is not too small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
+  - Toto nastavenie dáva dobré výsledky iba vtedy, keď počet zostávajúcich dní nie je príliš malý (napríklad ak ladíte profil iba pre víkendové dni a vyberiete iba sobotu a nedeľu, mali by ste nastaviť **Počet dní s dátami** aspoň na 21 alebo 28, aby sa do výpočtu Autotune zahrnulo 6 alebo 8 dní)
 
   ![Predvolená obrazovka Autotune](../images/Autotune/Autotune_14b.png)
 
@@ -188,7 +188,7 @@ Poznámka: viac informácií o nastavení pravidla automatizácie nájdete [tu](
 
   ![Predvolená obrazovka Autotune](../images/Autotune/Autotune_17.png)
 
-- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
+- Potom môžete vybrať akciu **Spustiť Autotune** (v skupine **Uzavretý okruh & inzulín**)
 
   ![Predvolená obrazovka Autotune](../images/Autotune/Autotune_18.png)
 
@@ -212,7 +212,7 @@ Autotune pracuje s informáciami, ktoré sú vo vašej databáze. Ak ste práve 
 
 Autotune je iba pomôcka; je dôležité pravidelne kontrolovať, či s vypočítaným profilom súhlasíte. Ak máte akékoľvek pochybnosti, zmeňte nastavenia Autotune (napríklad počet dní) alebo skopírujte výsledky do miestneho profilu a profil pred použitím upravte.
 
-Autotune vždy niekoľko dní spúšťajte ručne a výsledky skontrolujte, skôr než ich použijete. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
+Autotune vždy niekoľko dní spúšťajte ručne a výsledky skontrolujte, skôr než ich použijete. A až keď výsledkom Autotune plne dôverujete a rozdiel medzi predchádzajúcim a vypočítaným profilom je už veľmi malý, začnite používať automatizáciu (nikdy skôr)
 
 - Autotune môže niektorým používateľom fungovať veľmi dobre a iným nie, preto: **Ak výsledku Autotune nedôverujete, nepoužívajte ho**
 
