@@ -1,25 +1,25 @@
 (aaps-ci-option1-computer)=
 
-# Option 1 · Computer – Generate a new keystore
+# Opțiunea 1 · Computer – Generați un keystore nou
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on a **computer** (Windows / Mac / Linux).
+[Opțiunea 1](BrowserBuildO1.md) (generați un keystore nou) pe un **computer** (Windows / Mac / Linux).
 ```
 
-## 1. Download the preparation file
+## 1. Descărcați fișierul de pregătire
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Start a local server and generate the keystore
+## 2. Porniți un server local și generați keystore-ul
 
-Use a computer (supports Windows/Mac/Linux)
+Folosiți un computer (Windows/Mac/Linux)
 
 Deschideți pagina web [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
 
-Install Simple Web Server<br/> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store.<br/> If your browser asks whether to open the store app, allow it.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
+Instalați Simple Web Server<br/> Dacă folosiți Windows sau Mac, îl puteți instala din Microsoft Store sau din Mac App Store.<br/> Dacă browserul vă întreabă dacă să deschidă aplicația magazinului, permiteți acest lucru.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
 
-Example on Mac:
+Exemplu pe Mac:
 
 - get → install → open<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)<br/><br/>
 
@@ -31,9 +31,9 @@ Example on Mac:
 
 - Seeing this screen means the server has been started.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
 
-- Do not close Simple Web Server. Please switch to your browser and open<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
+- Nu închideți Simple Web Server. Treceți la browser și deschideți<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
-- For the subsequent steps, please refer to the video below, starting from 1 minute 37 seconds.
+- Pentru pașii următori, urmăriți videoclipul de mai jos, începând de la minutul 1:37.
 
   <!--crowdin: exclude-->
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
