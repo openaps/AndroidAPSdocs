@@ -1,14 +1,14 @@
 (aaps-ci-option2)=
 
-# Option 2 – Upload your existing keystore
+# Opțiunea 2 – Încărcați keystore-ul existent
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Asigurați-vă că ați citit [alegerea între Opțiunea 1 și Opțiunea 2](#aaps-ci-preparation).
 ```
 
 Option 2 reuses the JKS you already created on a previous build of AAPS from a computer in Android Studio. It is suitable for users who already have a JKS and know the JKS password and alias.
 
-For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub – those from Android Studio, see below where you used them.
+Pentru `KEYSTORE_PASSWORD`, `KEY_ALIAS` și `KEY_PASSWORD`, introduceți în GitHub parola și aliasul dumneavoastră reale – cele din Android Studio; vedeți mai jos unde le-ați folosit.
 
 ```{warning}
 **Passwords with special characters.** Enter your passwords exactly as they are. Do not add a backslash or any other escape character: the build workflow keeps every character intact, and an added backslash becomes part of the password.
@@ -19,18 +19,18 @@ If the build still fails at the signing step and your password contains `$`, a b
 ```{admonition} KEY + PASSWORDS
 :class: dropdown
 
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+![Rețineți parolele](../images/Building-the-App/044_RememberPwd.png)
 ```
 
-## Choose your device
+## Alegeți dispozitivul
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Construiți de pe un **telefon Android**? Folosiți în schimb [AAPS Builder](BrowserBuildAapsBuilder.md): nu are nevoie de fișier de pregătire.
 ```
 
 Follow the page that matches the device you are building from:
 
-- **[Computer](BrowserBuildO2Computer.md)** – Windows, Mac or Linux.
+- **[Computer](BrowserBuildO2Computer.md)** – Windows, Mac sau Linux.
 
 ```{tip}
 You can switch device at any time – just open the matching page.
