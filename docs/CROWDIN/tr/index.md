@@ -5,69 +5,69 @@
 ```{admonition} Latest Release
 :class: note
 
-31 October 2026: Version 4.0.0 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+31 Ekim 2026: 4.0.0 sürümü yayınlandı. Yenilikleri görmek için [Sürüm notları](#latestrelease) sayfasına bakın ve güncellemek için [güncelleme kılavuzundaki](./Maintenance/UpdateToNewVersion.md) talimatları izleyin.
 
 ```
 
-Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones. **AAPS** uses an OpenAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. To use **AAPS** you need **three** compatible devices: **(1)** an Android phone, **(2)** a continuous glucose monitor (CGM), and **(3)** an FDA/CE approved insulin pump. You can also add **(4)** cloud services to remotely control **AAPS**, share your data, and store it on a reporting server, and **(5)** a smartwatch.
+Android APS (**AAPS**), insüline bağımlı diyabetle yaşayan kişiler için açık kaynaklı bir uygulamadır. Android akıllı telefonlarda çalışan bir yapay pankreas sistemidir (APS). **AAPS** bir OpenAPS yazılım algoritması kullanır ve gerçek bir pankreasın yaptığını yapmayı amaçlar: otomatik insülin dozlaması ile kan şekeri düzeylerini sağlıklı sınırlar içinde tutmak. **AAPS**'i kullanmak için **üç** uyumlu cihaza ihtiyacınız vardır: **(1)** bir Android telefon, **(2)** bir sürekli glikoz monitörü (CGM) ve **(3)** FDA/CE onaylı bir insülin pompası. Ayrıca **AAPS**'i uzaktan kontrol etmek, verilerinizi paylaşmak ve bir raporlama sunucusunda saklamak için **(4)** bulut hizmetleri ve **(5)** bir akıllı saat ekleyebilirsiniz.
 
-This documentation explains how to set up and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy **Search docs** function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
+Bu dokümantasyon, **AAPS**'in nasıl kurulacağını ve kullanılacağını açıklar. **AAPS** dokümantasyonunda soldaki menüyü (ve kullanışlı **dokümantasyonda arama** işlevini) veya bu sayfanın altındaki [dizini](#index-aaps-documentation-index) kullanarak gezinebilirsiniz.
 
-## Overview of the AAPS documentation ("The docs")
+## AAPS dokümantasyonuna genel bakış ("Dokümanlar")
 
-Section **1) Getting Started**, the [Introduction](Getting-Started/Introduction.md) explains the general concept of what an artificial pancreas system (APS) is designed to do. It outlines the background of looping in general, why **AAPS** was developed, compares **AAPS** to other systems, and addresses safety. It gives suggestions about how to talk to your clinical team about **AAPS**, explains why you need to build the **AAPS** app yourself rather than just downloading it, and gives an overview of the typical connectivity of an **AAPS** system. It also addresses accessibility, and who is likely to benefit from **AAPS**.
+**1) Başlarken** bölümünde [APS ve AAPS'e giriş](Getting-Started/Introduction.md), bir yapay pankreas sisteminin (APS) ne yapmak için tasarlandığına dair genel kavramı açıklar. Genel olarak döngü kullanımının arka planını, **AAPS**'in neden geliştirildiğini anlatır, **AAPS**'i diğer sistemlerle karşılaştırır ve güvenlik konusunu ele alır. Klinik ekibinizle **AAPS** hakkında nasıl konuşabileceğiniz konusunda öneriler verir, **AAPS** uygulamasını neden sadece indirmek yerine kendiniz oluşturmanız gerektiğini açıklar ve tipik bir **AAPS** sisteminin bağlantılarına genel bir bakış sunar. Ayrıca erişilebilirliği ve **AAPS**'ten kimlerin yararlanabileceğini de ele alır.
 
-[Preparing for AAPS](./Getting-Started/PreparingForAaps.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. It gives an overview of the process you will go through, and provides an approximate timeline for gaining full functionality of **AAPS**. This section gets you technically prepared to assemble your **AAPS** setup as quickly and efficiently as possible. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
+[AAPS ile başlamaya hazırlık](./Getting-Started/PreparingForAaps.md), güvenlikle ilgili konular ve **AAPS** ile uyumlu telefonlar, CGM'ler (Sürekli Glikoz Monitörleri) ve insülin pompaları hakkında daha fazla bilgi verir. İzleyeceğiniz sürece genel bir bakış sunar ve **AAPS**'in tüm işlevlerini kullanabilmeniz için gereken yaklaşık süreyi verir. Bu bölüm, **AAPS** kurulumunuzu olabildiğince hızlı ve verimli bir şekilde bir araya getirmeniz için sizi teknik olarak hazırlar. [Uyumlu CGM'ler](./Getting-Started/CompatiblesCgms.md) alt bölümü, CGM kurulumunuzu nasıl en iyi hale getireceğinizi ve hangi yumuşatma seçeneklerinin en iyi olduğunu açıklar.
 
-Now that you have a solid understanding of the process, you can start assembling your **AAPS** loop.
+Artık süreci iyi anladığınıza göre **AAPS** döngünüzü kurmaya başlayabilirsiniz.
 
-Section **2) Build the app** explains why you need to build the **AAPS** app yourself rather than just downloading it, and takes you step-by-step through [building it](./SettingUpAaps/BuildingAaps.md) (using a browser, Android Studio, or the command line) and then transferring and installing it on your phone. It starts with an optional step, setting up a [dedicated Google account](./UsefulLinks/DedicatedGoogleAccountForAaps.md) to hold your builds and backups. It also explains [Android developer verification](#android-developer-verification), a change Google is rolling out from September 2026 that affects how self-built apps are installed.
+**2) Uygulamayı oluşturma** bölümü, **AAPS** uygulamasını neden sadece indirmek yerine kendiniz oluşturmanız gerektiğini açıklar ve sizi adım adım [AAPS'i oluşturma](./SettingUpAaps/BuildingAaps.md) (tarayıcı, Android Studio veya komut satırı ile) ve ardından uygulamayı telefonunuza aktarma ve yükleme sürecinden geçirir. Bölüm, isteğe bağlı bir adımla başlar: oluşturduğunuz uygulamaları ve yedeklerinizi saklamak için [ayrı bir Google hesabı](./UsefulLinks/DedicatedGoogleAccountForAaps.md) açmak. Ayrıca [Android geliştirici doğrulamasını](#android-developer-verification) da açıklar. Bu, Google'ın Eylül 2026'dan itibaren kullanıma sunduğu ve kendi oluşturduğunuz uygulamaların nasıl yüklendiğini etkileyen bir değişikliktir.
 
-Section **3) Setting up the reporting server** covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data.
+**3) Raporlama sunucusunu kurma** bölümü, verilerinizi inceleyip paylaşabilmeniz için raporlama sunucunuzu (Nightscout veya Tidepool) seçmeyi ve [raporlama sunucusunu kurmayı](./SettingUpAaps/SettingUpTheReportingServer.md) anlatır.
 
-Section **4) [Configure AAPS](./SettingUpAaps/SetupWizard.md)** covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. You are then introduced to everything **AAPS** can do, through a safe, carefully paced, step-by-step process. This makes sure that you (or your child) are thoroughly familiar and comfortable navigating all the different levels and menu configurations before moving on to the next phase, commonly called the next "Objective". You keep progressing this way until you have enough experience to begin using the more advanced options in the app. These Objectives are specially designed in such a way that will gradually unlock more possibilities of **AAPS** and switch from Open Loop to Closed Loop.
+**4) [AAPS'i yapılandırma](./SettingUpAaps/SetupWizard.md)** bölümü, **AAPS** uygulamasını Kurulum Sihirbazı ile kurmayı, uygulamayı CGM uygulamanıza ve gerçek ya da sanal bir insülin pompasına bağlamayı ve **AAPS**'i raporlama sunucunuza bağlamayı anlatır. Ardından güvenli, dikkatle ayarlanmış, adım adım bir süreçle **AAPS**'in yapabildiği her şeyi öğrenirsiniz. Bu süreç, bir sonraki aşamaya, yani genellikle bir sonraki "Görev" olarak adlandırılan aşamaya geçmeden önce, sizin (veya çocuğunuzun) tüm farklı seviyeleri ve menü ayarlarını iyice tanımanızı ve rahatça kullanmanızı sağlar. Uygulamadaki daha gelişmiş seçenekleri kullanmaya başlamak için yeterli deneyime sahip olana kadar bu şekilde ilerlemeye devam edersiniz. Bu Görevler, **AAPS**'in daha fazla özelliğini adım adım açmak ve Açık Döngü'den Kapalı Döngü'ye geçmek için özel olarak tasarlanmıştır.
 
-Section **5) [Daily life with AAPS](./DailyLifeWithAaps/AapsScreens.md)** covers key **AAPS** features, to help you use (and customize) **AAPS**. This includes understanding the screens, carbs-on-board, sensitivity, DynamicISF, profile switching, temp targets, extended carbs (or eCarbs), automations, and [reviewing your data](./Maintenance/Reviewing.md) in the history browser and statistics. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, [traveling with AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md), and sports. Common questions and answers are located within the troubleshooting section.
+**5) [AAPS ile günlük yaşam](./DailyLifeWithAaps/AapsScreens.md)** bölümü, **AAPS**'i kullanmanıza (ve kendinize göre ayarlamanıza) yardımcı olmak için **AAPS**'in temel özelliklerini anlatır. Buna ekranları anlamak, aktif karbonhidrat (AKRB), duyarlılık, Dinamik İDF, profil değişimi, geçici hedefler, yayma karbonhidratlar (veya yKarb), otomasyonlar ve [verilerinizi](./Maintenance/Reviewing.md) geçmiş tarayıcısında ve istatistiklerde inceleme dahildir. Ayrıca farklı öğün türlerinin nasıl yönetileceği, kanül ve sensör değişimleri, akıllı telefon güncellemeleri, yaz saati değişiklikleri, [AAPS ile seyahat](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) ve spor gibi sık karşılaşılan konuları da ele alır. Sık sorulan sorular ve yanıtları sorun giderme bölümündedir.
 
-Section **6) [Remote AAPS features](./RemoteFeatures/RemoteControl.md)** highlights a real strength of **AAPS**. There are a wide range of possibilities for remotely sending commands to, or simply following the data from **AAPS**. This is equally useful for carers who want to use **AAPS** for minors, and for adults with diabetes who either want to monitor their sugars (and other metrics) more conveniently than just on their phone (on a watch, in the car _etc._), or wish to have significant others to also monitor the data. This section also provides guidance for using Android Auto so you can view glucose levels in the car.
+**6) [AAPS'in uzaktan özellikleri](./RemoteFeatures/RemoteControl.md)** bölümü, **AAPS**'in gerçek bir güçlü yönünü öne çıkarır. **AAPS**'e uzaktan komut göndermek veya sadece verilerini takip etmek için çok sayıda seçenek vardır. Bu, **AAPS**'i çocuklar için kullanmak isteyen bakıcılar için de, şekerlerini (ve diğer değerleri) sadece telefonda değil daha rahat bir şekilde (saatte, arabada _vb._) izlemek isteyen veya yakınlarının da verileri izlemesini isteyen diyabetli yetişkinler için de aynı derecede yararlıdır. Bu bölüm ayrıca glikoz değerlerini arabada görebilmeniz için Android Auto kullanımını da anlatır.
 
-Section **7) [Wear OS smartwatches](./WearOS/BuildingAapsWearOS.md)** gives information and procedures to use an Android **Wear OS** smartwatch with the dedicated **AAPS** watchfaces or custom watchfaces, either as a remote control of your phone or just a display indicator.
-
-
-Section **8) [Maintenance of AAPS](./Maintenance/ExportImportSettings.md)** covers how to export and back up your settings (which is very important in case you lose/break your phone), gives the latest version notes, details how to update **AAPS** and explains what happens when a version reaches its end of life. You can expect that there will be one new version and 2-3 required updates per year. You are required to do these updates as with all software, as any minor bugs are ironed out, and improvements to **AAPS** are made. There is a dedicated "updating" troubleshooting section with the common queries.
-
-Section **9) [Help & Troubleshooting](GettingHelp/WhereCanIGetHelp.md)** should help direct you to the best places to go to find general help with **AAPS**. It is the single place to go when something is not working: the [Troubleshooting](GettingHelp/GeneralTroubleshooting.md) hub collects, by topic, the solutions to the most common problems, and the [FAQ](UsefulLinks/FAQ.md) answers frequent questions. This is very important so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls. A lot of people are already using **AAPS** successfully, but everyone has a question at some point that they couldn't solve on their own. Due to the large number of users, the response times to questions are usually very quick, typically only a few hours. Don’t worry about asking for help, there is no such thing as a dumb question! Herhangi bir deneyim düzeyindeki tüm kullanıcıları, güvenli bir şekilde çalışmaya başlamalarına yardımcı olmak için gerekli olduğunu düşündükleri kadar çok soru sormaya teşvik ediyoruz. This section includes general troubleshooting for **AAPS** and **AAPSClient** (a companion following app) as well as explaining how to send your **AAPS** data (logfiles) to the developers for investigation, if you think a technical issue with **AAPS** needs looking at.
-
-Section **10)** covers **[Advanced AAPS options](./AdvancedOptions/FullClosedLoop.md)** such as how to progress from using **AAPS** for hybrid-closed looping (bolusing for meals _etc._) to full closed looping (no bolusing), how to [tune your profile](./GettingHelp/ProfileTuning.md) and use Autotune, and details development and engineering modes. Most users get on just fine with the main or "Master" **AAPS** version without looking into these options, this section is for users who already have good control and are looking to further improve their setup.
-
-In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. You can donate money, equipment or expertise. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
-
-Section **12) Resources**, contains archived or additional documentation, including a subsection for [clinicians](UsefulLinks/ClinicianGuideToAaps.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are also contained in this section. It includes the [Glossary](./UsefulLinks/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. This is where to go to find out what the terms ISF or TT, stand for, for example.
+**7) [Wear OS akıllı saatler](./WearOS/BuildingAapsWearOS.md)** bölümü, bir Android **Wear OS** akıllı saati özel **AAPS** saat arayüzleri veya özel saat arayüzleri ile, telefonunuz için uzaktan kumanda olarak veya sadece bir gösterge olarak kullanmak için bilgi ve yöntemler verir.
 
 
- ### Interested in getting started with **AAPS**? Read more about **AAPS** in the [Introduction](Getting-Started/Introduction.md).
+**8) [AAPS'in bakımı](./Maintenance/ExportImportSettings.md)** bölümü, ayarlarınızı nasıl dışa aktaracağınızı ve yedekleyeceğinizi (telefonunuzu kaybederseniz veya bozarsanız çok önemlidir) anlatır, en son sürüm notlarını verir, **AAPS**'i nasıl güncelleyeceğinizi ayrıntılı olarak anlatır ve bir sürümün kullanım ömrü sona erdiğinde ne olduğunu açıklar. Her yıl bir yeni sürüm ve 2-3 zorunlu güncelleme bekleyebilirsiniz. Tüm yazılımlarda olduğu gibi bu güncellemeleri yapmanız gerekir, çünkü küçük hatalar giderilir ve **AAPS** iyileştirilir. Sık sorulan konuları içeren, "güncelleme" için ayrı bir sorun giderme bölümü vardır.
+
+**9) [Yardım ve sorun giderme](GettingHelp/WhereCanIGetHelp.md)** bölümü, **AAPS** ile ilgili genel yardım bulabileceğiniz en iyi yerlere sizi yönlendirir. Bir şey çalışmadığında başvuracağınız tek yer burasıdır: [Sorun giderme](GettingHelp/GeneralTroubleshooting.md) merkezi en sık görülen sorunların çözümlerini konulara göre toplar ve [SSS](UsefulLinks/FAQ.md) sık sorulan soruları yanıtlar. Bu çok önemlidir, çünkü böylece başkalarıyla olabildiğince hızlı iletişim kurabilir, sorularınızı netleştirebilir ve sık görülen sorunları çözebilirsiniz. Pek çok kişi **AAPS**'i zaten başarıyla kullanıyor, ancak herkesin bir noktada kendi başına çözemediği bir sorusu olur. Kullanıcı sayısı çok fazla olduğu için sorulara genellikle çok hızlı, çoğu zaman sadece birkaç saat içinde yanıt verilir. Yardım istemekten çekinmeyin, aptalca soru diye bir şey yoktur! Herhangi bir deneyim düzeyindeki tüm kullanıcıları, güvenli bir şekilde çalışmaya başlamalarına yardımcı olmak için gerekli olduğunu düşündükleri kadar çok soru sormaya teşvik ediyoruz. Bu bölüm, **AAPS** ve **AAPSClient** (yardımcı takip uygulaması) için genel sorun giderme bilgilerini içerir. Ayrıca **AAPS** ile ilgili teknik bir sorunun incelenmesi gerektiğini düşünüyorsanız, **AAPS** verilerinizi (günlük dosyalarını) inceleme için geliştiricilere nasıl göndereceğinizi açıklar.
+
+**10)** bölümü **[AAPS'in gelişmiş seçenekleri](./AdvancedOptions/FullClosedLoop.md)** konusunu ele alır: örneğin **AAPS**'i hibrit kapalı döngü (öğünler için bolus _vb._) olarak kullanmaktan tam kapalı döngüye (bolus yok) nasıl geçileceği, [profilinize nasıl ince ayar yapılacağı](./GettingHelp/ProfileTuning.md) ve OtoAyar'ın nasıl kullanılacağı. Ayrıca geliştirme ve mühendislik modlarını ayrıntılı olarak anlatır. Çoğu kullanıcı bu seçeneklere bakmadan ana sürüm, yani "Master" **AAPS** sürümü ile çok iyi idare eder. Bu bölüm, kontrolü zaten iyi olan ve kurulumunu daha da iyileştirmek isteyen kullanıcılar içindir.
+
+**11) [AAPS'i nasıl destekleyebilirsiniz](SupportingAaps/HowCanIHelp.md)** bölümünde bu projeyi destekleyebilmeniz için bilgi veriyoruz. Para, ekipman veya uzmanlık bağışlayabilirsiniz. Dokümantasyonda kendiniz değişiklik önerebilir veya yapabilir, [dokümantasyonun çevirisine](SupportingAaps/Translations.md) yardım edebilir ve Open Humans projesi aracılığıyla verilerinizi paylaşabilirsiniz.
+
+**12) Kaynaklar** bölümü, arşivlenmiş veya ek dokümantasyon içerir. Buna **AAPS** gibi açık kaynaklı yapay pankreas teknolojisine ilgi gösteren [klinisyenler](UsefulLinks/ClinicianGuideToAaps.md) veya bu bilgileri klinisyenleriyle paylaşmak isteyen hastalar için bir alt bölüm de dahildir. Bu konu girişte de ele alınmıştır. Bu bölümde diyabet ve döngü ile ilgili daha fazla kaynak ve bilgi de bulunur. Bu bölümde, **AAPS** genelinde kullanılan kısaltmaların (veya kısa adların) listesi olan [Sözlük](./UsefulLinks/Glossary.md) de bulunur. Örneğin İDF veya GH gibi terimlerin ne anlama geldiğini burada bulabilirsiniz.
+
+
+ ### **AAPS** ile başlamak mı istiyorsunuz? **AAPS** hakkında daha fazla bilgiyi [APS ve AAPS'e giriş](Getting-Started/Introduction.md) sayfasında okuyun.
 
 ```{admonition} SAFETY NOTICE
 :class: danger
-The safety of **AAPS** relies on the safety features of your hardware (phone, pump, CGM). Only use a fully functioning FDA/CE approved insulin pump and CGM. Do not use broken, modified or self-built insulin pumps or CGM receivers. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user. 
+**AAPS**'in güvenliği, donanımınızın (telefon, pompa, CGM) güvenlik özelliklerine dayanır. Yalnızca tam olarak çalışan, FDA/CE onaylı bir insülin pompası ve CGM kullanın. Bozuk, değiştirilmiş veya kendi yaptığınız insülin pompalarını ya da CGM alıcılarını kullanmayın. Yalnızca üreticinin pompanız ve CGM'niz ile kullanım için onayladığı orijinal sarf malzemelerini (yerleştiriciler, kanüller ve insülin rezervuarları) kullanın. Test edilmemiş veya değiştirilmiş sarf malzemeleri kullanmak ölçüm hatalarına ve insülin dozlama hatalarına yol açabilir. Bu, kullanıcı için ciddi bir risktir. 
 
-Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+SGLT-2 inhibitörleri (gliflozinler) kullanıyorsanız **AAPS**'i kullanmayın, çünkü bu ilaçlar kan şekeri düzeylerini düşürür. Azalan insülin verilmesi nedeniyle diyabetik ketoasidoz (DKA) riskini ve düşen kan şekeri düzeyleri nedeniyle hipoglisemi riskini artırırsınız. 
 ```
 
 ```{admonition} Disclaimer
 :class: note
 
-- All information and code described here is for informational and educational purposes only. Use [Nightscout](https://nightscout.github.io/) and **AAPS** at your own risk, and do not use the information or code to make medical decisions. Nightscout şu anda HIPAA gizlilik uyumluluğu için herhangi bir girişimde bulunmamaktadır. 
-- Use of code from github.com is without warranty or formal support of any kind. Ayrıntılar için lütfen bu deponun LİSANSINI gözden geçirin.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Kullanımları bilgi amaçlıdır ve onlar tarafından herhangi bir bağlantı veya onay anlamına gelmez.
+- Burada anlatılan tüm bilgiler ve kodlar yalnızca bilgi ve eğitim amaçlıdır. [Nightscout](https://nightscout.github.io/) ve **AAPS**'i kullanma riski size aittir. Bilgileri veya kodu tıbbi kararlar vermek için kullanmayın. Nightscout şu anda HIPAA gizlilik uyumluluğu için herhangi bir girişimde bulunmamaktadır. 
+- Use of code from github.com is without warranty or formal support of any kind. Ayrıntılar için lütfen bu deponun LICENSE dosyasını okuyun.
+- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Bu adlar yalnızca bilgi vermek için kullanılır. Bu, onlarla herhangi bir bağlantımız olduğu veya onların bizi desteklediği anlamına gelmez.
 
-**AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/), [Medtronic](https://www.medtronic.com/), [Diaconn](https://www.diaconn.com/en/index.html), [EOFlow](http://www.eoflow.com/), [MicroTech Medical (Equil)](https://www.microtechmd.com/), [Medtrum](https://www.medtrum.com/), [Senseonics (Eversense)](https://www.senseonics.com/), [i-SENS (CareSens)](https://i-sens.com/), [POCTech](https://poctechcorp.com/en/), [Ottai](https://ottai.com/) or [Syai](https://www.syai.com/).
+**AAPS**'in şu şirketlerle hiçbir bağlantısı yoktur ve bu şirketler tarafından desteklenmez: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/), [Medtronic](https://www.medtronic.com/), [Diaconn](https://www.diaconn.com/en/index.html), [EOFlow](http://www.eoflow.com/), [MicroTech Medical (Equil)](https://www.microtechmd.com/), [Medtrum](https://www.medtrum.com/), [Senseonics (Eversense)](https://www.senseonics.com/), [i-SENS (CareSens)](https://i-sens.com/), [POCTech](https://poctechcorp.com/en/), [Ottai](https://ottai.com/) veya [Syai](https://www.syai.com/).
 
 ```
 
 (index-aaps-documentation-index)=
 
-## AAPS Documentation Index
+## AAPS dokümantasyon dizini
 
 ```{toctree}
 :caption: Using this documentation
@@ -78,145 +78,145 @@ Search the documentation <./NavigateDoc/SearchDoc.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
-:caption: 1) Getting started
+:caption: 1) Başlarken
 
-Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
-Component Overview <./Getting-Started/ComponentOverview.md>
-- Compatible pumps <./Getting-Started/CompatiblePumps.md>
-- Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
-- Compatible phones  <./Getting-Started/Phones.md>
-- Compatible watches  <./Getting-Started/Watches.md>
+APS ve AAPS'e giriş <./Getting-Started/Introduction.md>
+AAPS ile başlamaya hazırlık <./Getting-Started/PreparingForAaps.md>
+Bileşenlere Genel Bakış <./Getting-Started/ComponentOverview.md>
+- Uyumlu pompalar <./Getting-Started/CompatiblePumps.md>
+- Uyumlu CGM'ler <./Getting-Started/CompatiblesCgms.md>
+- Telefonlar  <./Getting-Started/Phones.md>
+- Akıllı saatler ve AAPS  <./Getting-Started/Watches.md>
 ```
 
 ```{toctree}
-:caption: 2) Build the app
+:caption: 2) Uygulamayı oluşturma
 
-Dedicated Google account for AAPS (optional) <./UsefulLinks/DedicatedGoogleAccountForAaps.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
-- CLI Build <./SettingUpAaps/CLIBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+AAPS için ayrı bir Google hesabı (isteğe bağlı) <./UsefulLinks/DedicatedGoogleAccountForAaps.md>
+AAPS'i oluşturma <./SettingUpAaps/BuildingAaps.md>
+- Tarayıcı ile oluşturma <./SettingUpAaps/BrowserBuild.md>
+- Android Studio ile oluşturma <./SettingUpAaps/ComputerBuild.md>
+- Komut satırı ile oluşturma talimatları <./SettingUpAaps/CLIBuild.md>
+AAPS'i akıllı telefonunuza aktarma ve yükleme <./SettingUpAaps/TransferringAndInstallingAaps.md>
 ```
 ```{toctree}
-:caption: 3) Setting up the reporting server
+:caption: 3) Raporlama sunucusunu kurma
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+Raporlama sunucusunu kurma <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Configure AAPS
+:caption: 4) AAPS'i yapılandırma
 
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Settings <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+AAPS Kurulum Sihirbazı <./SettingUpAaps/SetupWizard.md>
+AAPS profiliniz <./SettingUpAaps/YourAapsProfile.md>
+AAPS yapılandırmanızda değişiklik yapma <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Konfigürasyon (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Ayarlar <./SettingUpAaps/Preferences.md>
+Görevleri tamamlama <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
-:caption: 5) Daily Life with AAPS
+:caption: 5) AAPS ile günlük yaşam
 
-AAPS Screens <./DailyLifeWithAaps/AapsScreens.md>
-Key AAPS Features <./DailyLifeWithAaps/KeyAapsFeatures.md>
-COB calculation <./DailyLifeWithAaps/CobCalculation.md>
-Sensitivity detection <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
-Profile Switch & Profile Percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
-Temp-Targets <./DailyLifeWithAaps/TempTargets.md>
-Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
-QuickWizards <./DailyLifeWithAaps/QuickWizards.md>
-Scenes <./DailyLifeWithAaps/Scenes.md>
-Automations <./DailyLifeWithAaps/Automations.md>
-QuickLaunch toolbar <./DailyLifeWithAaps/QuickLaunch.md>
-Home screen widgets <./DailyLifeWithAaps/Widgets.md>
-Food database <./DailyLifeWithAaps/Food.md>
-Global search <./DailyLifeWithAaps/GlobalSearch.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS for children <./DailyLifeWithAaps/AapsForChildren.md>
-Pumps and cannulas <./DailyLifeWithAaps/PumpsAndCannulas.md>
-Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
+AAPS ekranları <./DailyLifeWithAaps/AapsScreens.md>
+AAPS'in temel özellikleri <./DailyLifeWithAaps/KeyAapsFeatures.md>
+AKRB hesaplaması <./DailyLifeWithAaps/CobCalculation.md>
+Duyarlılık algılama <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
+Dinamik İDF (DynISF) <./DailyLifeWithAaps/DynamicISF.md>
+Profil değişimi ve profil yüzdesi <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+Geçici-Hedefler <./DailyLifeWithAaps/TempTargets.md>
+Yayma karbonhidratlar / "yKarb" <./DailyLifeWithAaps/ExtendedCarbs.md>
+Hızlı Asistanlar (tek dokunuşla bolus) <./DailyLifeWithAaps/QuickWizards.md>
+Senaryolar (duruma göre ön ayarlar) <./DailyLifeWithAaps/Scenes.md>
+Otomasyon <./DailyLifeWithAaps/Automations.md>
+Hızlı Başlatma (genel bakış ekranındaki hızlı işlem araç çubuğu) <./DailyLifeWithAaps/QuickLaunch.md>
+Ana ekran widget'ları <./DailyLifeWithAaps/Widgets.md>
+Yiyecek (yiyecek veritabanınız) <./DailyLifeWithAaps/Food.md>
+Genel arama <./DailyLifeWithAaps/GlobalSearch.md>
+Verilerinizi inceleme <./Maintenance/Reviewing.md>
+Çocuklar için AAPS <./DailyLifeWithAaps/AapsForChildren.md>
+Pompalar ve kanüller <./DailyLifeWithAaps/PumpsAndCannulas.md>
+Saat dilimi değişikliği ve yaz saati uygulaması <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 
 ```
 
 ```{toctree}
-:caption: 6) Remote AAPS features
+:caption: 6) AAPS'in uzaktan özellikleri
 
-Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
-Following Only <./RemoteFeatures/FollowingOnly.md>
+Uzaktan İzleme <./RemoteFeatures/RemoteMonitoring.md>
+AAPS'i takip etme (AAPS sistemiyle etkileşim olmadan) <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
-Remote control <./RemoteFeatures/RemoteControl.md>
-The AAPSClient app <./RemoteFeatures/AapsClient.md>
-Master ↔ Client control <./RemoteFeatures/ClientMasterControl.md>
-SMS Commands <./RemoteFeatures/SMSCommands.md>
+AAPS'in uzaktan kontrolü <./RemoteFeatures/RemoteControl.md>
+AAPSClient uygulaması <./RemoteFeatures/AapsClient.md>
+Ana birim ↔ İstemci kontrolü (imzalı uzaktan kumanda) <./RemoteFeatures/ClientMasterControl.md>
+SMS Komutları <./RemoteFeatures/SMSCommands.md>
 
 ```
 ```{toctree}
-:caption: 7) Wear OS Smartwatches
+:caption: 7) Wear OS akıllı saatler
 
-AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
-Use the smartwatch <./WearOS/WearOsSmartwatch.md>
-Remote control <./RemoteFeatures/RemoteControlWearOS.md>
-Custom watchfaces reference <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
-
-```
-
-```{toctree}
-:caption: 8) Maintenance of AAPS
-
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-What changed in AAPS v4 <./Maintenance/V4Changes.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
-End of life <./Maintenance/EndOfLife.md>
+Wear AAPS uygulamasını oluşturma <./WearOS/BuildingAapsWearOS.md>
+Wear OS saatinizde AAPS kurulumu <./WearOS/WearOsSmartwatch.md>
+Wear OS akıllı saatiniz üzerinden AAPS'in kullanımı <./RemoteFeatures/RemoteControlWearOS.md>
+Özel Saat Arayüzü Başvuru Belgesi <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
+Özel saat arayüzleri için paylaşım sayfası <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
 ```{toctree}
-:caption: 9) Help & Troubleshooting
+:caption: 8) AAPS'in bakımı
 
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-Troubleshooting (start here) <./GettingHelp/GeneralTroubleshooting.md>
-- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
-- Troubleshooting NSClient <./GettingHelp/TroubleshootingNsClient.md>
-- Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
-- Reinstalling AAPS (new keystore) <./GettingHelp/ReinstallAaps.md>
-- Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
-FAQ <./UsefulLinks/FAQ.md>
+Yedek oluşturma ve geri yükleme <./Maintenance/ExportImportSettings.md>
+Sürüm notları <./Maintenance/ReleaseNotes.md>
+AAPS v4'te neler değişti <./Maintenance/V4Changes.md>
+Yeni bir sürüme veya dala güncelleme <./Maintenance/UpdateToNewVersion.md>
+- Tarayıcı ile güncelleme (fork) <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio ile güncelleme <./Maintenance/UpdateComputerBuild.md>
+Kullanım ömrünün sonu <./Maintenance/EndOfLife.md>
+
 ```
 
 ```{toctree}
-:caption: 10) Advanced AAPS options
+:caption: 9) Yardım ve sorun giderme
 
-Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
-Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
-Autotune <./AdvancedOptions/Autotune.md>
-Insulin concentration <./AdvancedOptions/InsulinConcentration.md>
-Dev branch <./AdvancedOptions/DevBranch.md>
-Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
+Nereden yardım alabilirim? <./GettingHelp/WhereCanIGetHelp.md>
+Sorun giderme <./GettingHelp/GeneralTroubleshooting.md>
+- Bluetooth ile ilgili sorunlar <./GettingHelp/BluetoothTroubleshooting.md>
+- NSClient'te Sorun Giderme <./GettingHelp/TroubleshootingNsClient.md>
+- Android Studio'da Sorun Giderme <./GettingHelp/TroubleshootingAndroidStudio.md>
+- Tarayıcı ile oluşturma: sorun giderme <./GettingHelp/BrowserBuildTroubleshooting.md>
+- Yeni bir anahtar deposuyla AAPS'i yeniden yükleme <./GettingHelp/ReinstallAaps.md>
+- Günlük dosyalarına erişim <./GettingHelp/AccessingLogFiles.md>
+Döngü kullanıcıları için SSS <./UsefulLinks/FAQ.md>
+```
+
+```{toctree}
+:caption: 10) AAPS'in gelişmiş seçenekleri
+
+Tam Kapalı Döngü <./AdvancedOptions/FullClosedLoop.md>
+AAPS profilinde ince ayar <./GettingHelp/ProfileTuning.md>
+OtoAyar eklentisi nasıl kullanılır? <./AdvancedOptions/Autotune.md>
+İnsülin Konsantrasyonu <./AdvancedOptions/InsulinConcentration.md>
+Geliştirme dalı <./AdvancedOptions/DevBranch.md>
+Tarayıcı ile oluşturma: bir commit'i cherry-pick ile ekleme <./AdvancedOptions/BrowserBuildCherryPick.md>
 
 ```
 ```{toctree}
-:caption: 11) How to support AAPS
+:caption: 11) AAPS'i nasıl destekleyebilirsiniz
 
-How to help <./SupportingAaps/HowCanIHelp.md>
-Editing the docs <./SupportingAaps/HowToEditTheDocs.md>
-Translating the app and docs <./SupportingAaps/Translations.md>
-State of translations <./SupportingAaps/StateOfTranslations.md>
+AAPS'e nasıl katkıda bulunurum? <./SupportingAaps/HowCanIHelp.md>
+Dokümanlar nasıl düzenlenir <./SupportingAaps/HowToEditTheDocs.md>
+AAPS uygulaması veya dokümantasyon için dizeler nasıl çevrilir <./SupportingAaps/Translations.md>
+uygulama ve dokümantasyonun çeviri durumu <./SupportingAaps/StateOfTranslations.md>
 Open Humans Uploader <./SupportingAaps/OpenHumans.md>
 
 ```
 ```{toctree}
-:caption: 12) Resources
+:caption: 12) Kaynaklar
 
-Glossary <./UsefulLinks/Glossary.md>
-General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
-For Clinicians <./UsefulLinks/ClinicianGuideToAaps.md>
+Sözlük <./UsefulLinks/Glossary.md>
+Başlamadan önce okumak için faydalı kaynaklar <./UsefulLinks/BackgroundReading.md>
+Klinisyenler İçin – AAPS'e Genel Giriş ve Kılavuz <./UsefulLinks/ClinicianGuideToAaps.md>
 ```
