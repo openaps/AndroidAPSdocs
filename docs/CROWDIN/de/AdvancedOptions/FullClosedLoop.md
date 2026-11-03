@@ -171,7 +171,7 @@ Der untenstehende Abschnitt enthält Anleitungen, wie man die **Automatisierungs
 
 Der Schlüssel zum erfolgreichen **FCL**: **Zu Beginn eines mahlzeitbedingten Glukoseanstiegs muss der Loop so schnell wie möglich sehr große automatische SMBs abgeben**, um das benötigte **IOB** „aufzuholen“ (vergleiche mit Deinem üblichen Bolus für eine ähnliche Mahlzeit im **HCL**!)
 
-To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might not be meal-related and which might be.
+Dazu solltest Du die Daten aus Deinem **HCL** auswerten, um festzustellen, welche **Deltas** wahrscheinlich nicht mit Mahlzeiten zusammenhängen und welche schon.
 
 - Da Du die **Automatisierung** auch nur in einem vordefinierten Zeitfenster ausführen lassen kannst, musst Du auch nur in diesem analysieren.
 - Wenn Deine Mahlzeiten in der Zusammensetzung sehr unterschiedlich sind (z.B. ein eher kohlenhydratreiches Frühstück, aber ein kohlenhydratarmes Mittagessen), kannst Du Dich dafür entscheiden für jedes der Zeitfenster zwei verschiedene **Automatisierungen** (bzw. Automatisierungsgruppen) zu erstellen.
@@ -218,7 +218,7 @@ Sensible **IOB-Schwellenwerte**, bei denen Du die Aggressivität Deines Loops re
 
 Der **IOB**-Schwellenwert kann in Deiner **Automatisierung** schnell angepasst werden, um auch außergewöhnliche Mahlzeiten abzudecken oder um ihn für eine folgende Sporteinheit zu senken.
 
-Automation (#3), "iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
+Automatisierung (#3), „iobTH erreicht => **SMBs** aus“, beendet das aggressive Boosten der **SMBs** (oder pausiert es, bis eine weitere kohlenhydratbedingte Anstiegswelle kommt).
 
 ![Automation #3: IOB of 5.5 or more with no temp target running starts a temp target of 111 mg/dl](../images/fullClosedLoop04.png)
 
