@@ -73,7 +73,7 @@ Naciśnij wynik, aby przejść prosto do niego:
 - **Ustawienie** → otwiera ustawienie **na miejscu** (przewija do niego na jego ekranie).
 - **Dokumentacja** → otwiera stronę w przeglądarce.
 
-Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. Po wykonaniu akcji z wyniku możesz nacisnąć **Wstecz**, aby wrócić do wyników wyszukiwania.
+Otwieranie ustawień i chronionych akcji nadal uwzględnia Twoją **[ochronę](#Preferences-protection)** (PIN/hasło), dokładnie tak, jak gdybyś przeszedł tam ręcznie. Po wykonaniu akcji z wyniku możesz nacisnąć **Wstecz**, aby wrócić do wyników wyszukiwania.
 
 ---
 
