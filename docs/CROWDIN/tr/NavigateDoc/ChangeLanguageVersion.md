@@ -1,23 +1,23 @@
-# Change language and version
+# Dili ve sürümü değiştirme
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+Şu anda okuduğunuz dokümantasyon birkaç dilde mevcuttur ve belirli bir **AAPS** sürümüne aittir. Hem dil hem de sürüm, ekranın sağ alt köşesindeki menüden değiştirilebilir.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+Dil ve sürüm seçim menüsünü açmak için ekranın sağ alt köşesindeki çubuğa tıklayın.
 ```
 
-![Open language menu](../images/documentation_language_menu.png)
+![Dil menüsünü açın](../images/documentation_language_menu.png)
 
 ## Dili değiştir
 
-In the menu, select the language you want to read the documentation in.
+Menüde, dokümantasyonu okumak istediğiniz dili seçin.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+Dokümantasyonu kendi dilinize çevirmeye yardım etmek için [Crowdin](https://crowdin.com/project/androidapsdocs) çevirmenlerine ve düzeltmenlerine katılabilirsiniz.
 
-## Change version
+## Sürümü değiştirme
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version and select the version you need.
+Geçerli sürüm, ekranın sağ alt köşesinde gösterilir. Başka bir sürüme geçmek için geçerli sürüme tıklayın ve ihtiyacınız olan sürümü seçin.
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+Dili ve/veya sürümü değiştirdiğinizde, o dilde veya sürümde sayfa yoksa 404 - Sayfa bulunamadı hatası alabilirsiniz. Bu durum sürüm değiştirirken sık olur, ancak dil değiştirirken olmamalıdır: sayfa henüz çevrilmemişse İngilizce gösterilir.
 ```
