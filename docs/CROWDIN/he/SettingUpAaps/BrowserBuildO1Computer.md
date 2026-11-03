@@ -1,39 +1,39 @@
 (aaps-ci-option1-computer)=
 
-# Option 1 · Computer – Generate a new keystore
+# אפשרות 1 · מחשב – יצירת keystore חדש
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on a **computer** (Windows / Mac / Linux).
+[אפשרות 1](BrowserBuildO1.md) (יצירת keystore חדש) ב**מחשב** (Windows / Mac / Linux).
 ```
 
-## 1. Download the preparation file
+## 1. הורדת קובץ ההכנה
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Start a local server and generate the keystore
+## 2. הפעלת שרת מקומי ויצירת ה-keystore
 
 Use a computer (supports Windows/Mac/Linux)
 
 Open the webpage [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
 
-Install Simple Web Server<br/> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store.<br/> If your browser asks whether to open the store app, allow it.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
+התקינו את Simple Web Server<br/> משתמשי Windows או Mac יכולים להתקין אותו מ-Microsoft Store או מ-Mac App Store.<br/> אם הדפדפן שואל אם לפתוח את אפליקציית החנות, אשרו זאת.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
 
 Example on Mac:
 
 - get → install → open<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)<br/><br/>
 
-- Click Get Started<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)<br/><br/>
+- לחצו על Get Started<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)<br/><br/>
 
-- Click New Server<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
+- לחצו על New Server<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
 
-- In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)<br/><br/>
+- ב-Folder Path, בחרו את התיקייה שבה נמצא הקובץ aaps-ci-preparation.html, ואז לחצו על Create Server.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)<br/><br/>
 
-- Seeing this screen means the server has been started.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
+- המסך הזה מראה שהשרת הופעל.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
 
-- Do not close Simple Web Server. Please switch to your browser and open<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
+- אין לסגור את Simple Web Server. עברו לדפדפן ופתחו<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
-- For the subsequent steps, please refer to the video below, starting from 1 minute 37 seconds.
+- לשלבים הבאים, צפו בסרטון למטה, החל מ-1 דקה ו-37 שניות.
 
   <!--crowdin: exclude-->
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -50,4 +50,4 @@ Example on Mac:
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**הבא: [שלב 3 – אישור Google Drive](BrowserBuildGoogleDrive.md) →**
