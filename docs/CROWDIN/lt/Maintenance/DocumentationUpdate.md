@@ -16,7 +16,7 @@ tocdepth: 1
 - [Kūrimas naršyklėje su AAPS Builder](#aaps-builder): kūrimo darbo eiga dabar yra šios dokumentacijos dalis. Nebėra šablono saugyklos: sukuriate tuščią privačią saugyklą ir pridedate darbo eigą iš sąrankos puslapio (naujas 2 žingsnis). Darbo eiga nebetikrina atnaujinimų išorinėje saugykloje. Jei saugyklą sukūrėte iš ankstesnio šablono, pakeiskite `.github/workflows/build.yml` darbo eiga iš sąrankos puslapio, kaip paaiškinta skyriuje [AAPS atnaujinimas](#aaps-builder-updates) @psonnera
 - Naujas puslapis [Kūrimas naršyklėje su AAPS Builder](#aaps-builder): AAPS kūrimas iš Android telefono naudojant šioje svetainėje esantį sąrankos puslapį, su automatiniais savaitiniais kūrimais ir be paruošimo failo. Jis pakeičia kūrimo naršyklėje Android instrukcijas (File Manager Plus puslapiai pašalinti). AAPS Builder sukūrė @dio99, dokumentaciją – @psonnera
 
-## August 2026
+## 2026 m. rugpjūtis
 
 - [AAPS perkėlimas ir įdiegimas](../SettingUpAaps/TransferringAndInstallingAaps.md): puslapis *Android kūrėjų tapatybės patikrinimas* sujungtas su diegimo instrukcija, pridėta [žiniatinklio diegimo programa](#android-developer-verification-web) (APK įdiegiamas tiesiai iš naršyklės, be patikrinimo) ir belaidis ADB @psonnera
 
