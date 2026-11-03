@@ -42,7 +42,7 @@ Na trh sa dostalo aj niekoľko komerčných systémov s hybridným uzavretým ok
 
 **Obrázok 1**. Základný prehľad systému umelého pankreasu (APS) pre systém Android, AAPS.
 
-Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System (APS). Dávky inzulínu počíta pomocou overených algoritmov [OpenAPS](https://openaps.org/) (súbor pravidiel), ktoré vyvinula komunita T1D #WeAreNotWaiting.
+Android APS (**AAPS**) je hybridný uzavretý okruh, teda systém umelého pankreasu (APS). Dávky inzulínu počíta pomocou overených algoritmov [OpenAPS](https://openaps.org/) (súbor pravidiel), ktoré vyvinula komunita T1D #WeAreNotWaiting.
 
 Keďže OpenAPS je kompatibilný len s niektorými staršími inzulínovými pumpami, **AAPS** (ktorý sa dá použiť s väčším počtom inzulínových púmp) vznikol v roku 2016 pre člena rodiny s diabetom 1. typu. Od prvých dní systém **AAPS** neustále vyvíja a zdokonaľuje tím dobrovoľných počítačových vývojárov a ďalších nadšencov, ktorí majú spojenie so svetom diabetu 1. typu. Dnes **AAPS** používa mnoho tisíc ľudí na celom svete. Je to vysoko prispôsobiteľný a všestranný systém a keďže je open-source, je tiež ľahko kompatibilný s mnohými inými open-source softvérmi a platformami pre diabetes. Základné komponenty súčasného systému **AAPS** sú uvedené na **Obrázku 1** vyššie.
 
@@ -54,7 +54,7 @@ Keďže OpenAPS je kompatibilný len s niektorými staršími inzulínovými pum
 
 Na **smartfóne so systémom Android** bude potrebné mať nainštalovanú aj ďalšiu aplikáciu okrem **AAPS**. Táto [ďalšia aplikácia](../Getting-Started/CompatiblesCgms.md) prijíma údaje o glykémii zo senzora (**2**) cez Bluetooth a potom ich v rámci telefónu posiela do **aplikácie AAPS**.
 
-**Aplikácia AAPS** používa rozhodovací proces (**algoritmus**) z OpenAPS. Beginners start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. Ktorý algoritmus použijete (oref0 alebo oref1), závisí od toho, ktorý najlepšie vyhovuje vašej konkrétnej situácii.  V oboch prípadoch algoritmus zohľadňuje viacero faktorov a vykonáva rýchle výpočty vždy, keď zo senzora príde nový údaj. Algoritmus potom cez Bluetooth posiela inzulínovej pumpe (**3**) pokyny, koľko inzulínu má podať. Všetky informácie je možné posielať cez mobilné dáta alebo Wi-Fi na internet (**4**). Tieto údaje je možné v prípade potreby zdieľať aj so sledujúcimi a/alebo zhromažďovať na účely analýzy. Voliteľne môžete s telefónom spárovať aj [inteligentné hodinky](../Getting-Started/Watches.md) (**5**), aby ste svoje údaje videli na prvý pohľad. S niektorými hodinkami môžete do **AAPS** posielať aj základné príkazy.
+**Aplikácia AAPS** používa rozhodovací proces (**algoritmus**) z OpenAPS. Začiatočníci začínajú so základným algoritmom **oref0**, ale keď s AAPS pokročíte, môžete prejsť na novší algoritmus **oref1**. Ktorý algoritmus použijete (oref0 alebo oref1), závisí od toho, ktorý najlepšie vyhovuje vašej konkrétnej situácii.  V oboch prípadoch algoritmus zohľadňuje viacero faktorov a vykonáva rýchle výpočty vždy, keď zo senzora príde nový údaj. Algoritmus potom cez Bluetooth posiela inzulínovej pumpe (**3**) pokyny, koľko inzulínu má podať. Všetky informácie je možné posielať cez mobilné dáta alebo Wi-Fi na internet (**4**). Tieto údaje je možné v prípade potreby zdieľať aj so sledujúcimi a/alebo zhromažďovať na účely analýzy. Voliteľne môžete s telefónom spárovať aj [inteligentné hodinky](../Getting-Started/Watches.md) (**5**), aby ste svoje údaje videli na prvý pohľad. S niektorými hodinkami môžete do **AAPS** posielať aj základné príkazy.
 
 ## Aké sú výhody systému AAPS?
 
@@ -98,13 +98,13 @@ Používatelia môžu jednoducho pridávať alebo odoberať moduly alebo funkcie
 
  a) Možnosť nastaviť nižší cieľ **glykémie** 30 min pred jedlom; cieľ môžete nastaviť až na 72 mg/dl (4,0 mmol/l).
 
- b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). Automatizácia bude trvať podľa nastaveného naplánovaného času. Takáto automatizácia by sa dala nastaviť tak, aby bola aktívna iba v určité dni v týždni, v určitých denných hodinách a dokonca aj na určitých miestach.
+ b) Ak máte inzulínovú rezistenciu, ktorá spôsobuje vysokú glykémiu, **AAPS** vám umožní nastaviť pravidlo **automatizácie**, ktoré sa spustí, keď glykémia stúpne nad 8 mmol/l (144 mg/dl), a prepne napríklad na profil 120 % (to znamená o 20 % vyšší bazál a silnejšie aj ostatné faktory v porovnaní s vaším bežným nastavením **profilu**). Automatizácia bude trvať podľa nastaveného naplánovaného času. Takáto automatizácia by sa dala nastaviť tak, aby bola aktívna iba v určité dni v týždni, v určitých denných hodinách a dokonca aj na určitých miestach.
 
- c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin suspension for a set time period, directly via the phone.
+ c) Ak vaše dieťa bez ohlásenia skáče na trampolíne, **AAPS** umožňuje pozastaviť podávanie inzulínu na nastavený čas priamo z telefónu.
 
- d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. Akýkoľvek nepotrebný inzulín je možné prepísať jednoduchým „zrušením“ vynechanej bazálnej dávky.
+ d) Keď znova pripojíte pumpu s hadičkou, ktorá bola odpojená kvôli plávaniu, **AAPS** vypočíta bazálny inzulín, ktorý ste počas odpojenia nedostali, a opatrne ho podá podľa vašej aktuálnej glykémie. Akýkoľvek nepotrebný inzulín je možné prepísať jednoduchým „zrušením“ vynechanej bazálnej dávky.
 
- e) **AAPS** vám umožňuje nastaviť rôzne profily pre rôzne situácie a jednoducho medzi nimi prepínať. For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”) and unannounced meals (“**UAM**”)) can be set to only work during the daytime, if you are worried about night-time hypos.
+ e) **AAPS** vám umožňuje nastaviť rôzne profily pre rôzne situácie a jednoducho medzi nimi prepínať. Napríklad funkcie, s ktorými algoritmus rýchlejšie zníži vysokú glykémiu (ako Super Micro Bolusy („**SMB**“) a neohlásené jedlá („**UAM**“)), môžete nastaviť tak, aby fungovali iba cez deň, ak sa obávate nočných hypoglykémií.
 
 Toto všetko sú príklady, celá škála funkcií poskytuje obrovskú flexibilitu pre každodenný život vrátane športu, choroby, hormonálnych cyklov _atď_. V konečnom dôsledku je na používateľovi, aby sa rozhodol, ako túto flexibilitu využije, a na tento účel neexistuje univerzálne automatizované riešenie pre všetkých.
 
@@ -252,7 +252,7 @@ Ak máte pocit, že vás váš tím pri používaní okruhu s **AAPS** nepodporu
 
 a) Systém **AAPS** navrhli pacienti a ich opatrovatelia. Bol navrhnutý predovšetkým s ohľadom na bezpečnosť, ale aj na základe rozsiahlych skúseností pacientov. Na celom svete sú mnohé tisíce používateľov **AAPS**. Preto je pravdepodobné, že aj medzi pacientmi vašej ambulancie sú ďalší ľudia s okruhom OS-AID (či o tom vedia, alebo nie).
 
-b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) which highlight the progress of the OS-AID looping community.
+b) Nedávne recenzované usmernenie, uverejnené v medzinárodne poprednom lekárskom časopise [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_), potvrdilo, že okruhy OS-AID sú **bezpečné** a **účinne zlepšujú kontrolu diabetu**, vrátane času v rozsahu. V popredných časopisoch, ako je [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_), pravidelne vychádzajú články, ktoré ukazujú pokrok komunity používateľov okruhov OS-AID.
 
 c) Začiatok s **AAPS** znamená _postupný_ prechod z liečby pumpou s „otvoreným“ okruhom cez Ochranu pred nízkou glykémiou až po hybridný „uzavretý“ okruh, a to splnením viacerých cieľov. Preto existuje štruktúrovaný program, ktorý od používateľa vyžaduje, aby v každej fáze preukázal určitú úroveň zručností a doladil svoje základné nastavenia (bazál, ISF a ICR) predtým, ako môže uzavrieť okruh.
 
@@ -264,7 +264,7 @@ f) Ak váš lekár stále namieta, odovzdajte mu výtlačky referenčných člá
 
 #### Podpora okruhov OS-AID zo strany iných lekárov
 
-The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (co-led by King’s and Guy’s and St Thomas’ NHS Foundation Trust, and co-led by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
+Článok uverejnený v časopise [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (na jeho vedení sa podieľali King’s a Guy’s and St Thomas’ NHS Foundation Trust a Dr. Sufyan Hussain, diabetológ a čestný hlavný lektor z King’s v Londýne) poskytuje:
 
 a) **Uistenie** pre odborníkov, že systémy umelého pankreasu OS-AID / s otvoreným zdrojovým kódom sú „bezpečnou a účinnou možnosťou liečby“ diabetu 1. typu, a usmernenia k odporúčaniam, rozhovorom, podpore a dokumentácii;
 
@@ -295,9 +295,9 @@ Lekári (aspoň v Spojenom kráľovstve) nemajú zakázané predpisovať nelicen
 3. Svojpomocne vyrobený „bionický pankreas“ mení starostlivosť o diabetes – čo bude ďalej? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
 4. Predpisovanie neschválených zdravotníckych pomôcok? Prípad DIY systémov umelého pankreasu [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
 5. [Stanovisko Berlin Institute of Health, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
-6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_ (2023), _47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
+6. Automatizované podávanie inzulínu „urob si sám“: príručka pre zdravotníckych pracovníkov (stanovisko a príručka Diabetes Canada) [_Canadian Journal of Diabetes_ (2023), _47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
 7.  Holandsko (EN/NL) – pre lekárov - [how to help people on open source automated insulin delivery systems](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
-8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
+8. Prvé použitie automatizovaného podávania inzulínu s otvoreným zdrojovým kódom AndroidAPS v režime plne uzavretého okruhu: randomizovaná pilotná štúdia Pancreas4ALL [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
 9. Deti predškolského a školského veku profitujú z prechodu z pumpy so senzorom na hybridný uzavretý okruh AndroidAPS: retrospektívna analýza [_Pediatr. Diabetes_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
 10. Výsledky projektu OPEN, projektu financovaného EÚ zameraného na výsledky dôkazov pacientov s novou DIY technológiou umelého pankreasu (https://www.open-diabetes.eu/publications)
 
@@ -379,7 +379,7 @@ alebo:
 
 2) Stlačte kláves Windows a do vyhľadávacieho poľa zadajte „Ovládací panel“, otvorte ho klávesom Enter. Otvorí sa: „Všetky položky v ovládacom paneli“.
 
-Press the letter E to get to “Ease of Access Centre”, open with Enter.
+Stlačením písmena E sa dostanete do „Centra zjednodušenia prístupu“, otvorte ho klávesom Enter.
 
 Potom pomocou Enteru otvorte možnosť „Používať počítač bez displeja“.
 
