@@ -1,35 +1,35 @@
-# SMS Commands
+# SMS komandos
 
 ```{contents} Table of contents
 :depth: 2
 ```
 
-Most remote adjustments (temp targets, carbs, profile switches and, once the client is paired, boluses) can be made with the [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection, see [Master ↔ Client control](#client-master-control) (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). SMS commands remain an alternative that works without internet, and the only remote option if you use an iPhone as a follower and do not have **AAPSClient** yet.
+Daugumą nuotolinių pakeitimų (laikinus tikslus, angliavandenius, profilio keitimus ir, kai klientas susietas, bolusus) galima atlikti [**AAPSClient** programėle](../RemoteFeatures/RemoteMonitoring.md) Android telefone su interneto ryšiu, žr. [Pagrindinio įrenginio ↔ kliento valdymas](#client-master-control) (**AAPSClient** versija iPhone telefonui kuriama, žr. [AAPSClient](AapsClient.md)). SMS komandos lieka alternatyva, kuri veikia be interneto, ir vienintelė nuotolinio valdymo galimybė, jei kaip sekėjo telefoną naudojate iPhone ir dar neturite **AAPSClient**.
 
-**SMS commands are really useful:**
-1. For routine remote control
+**SMS komandos labai naudingos:**
+1. Įprastam nuotoliniam valdymui
 
-2. If you want to remotely bolus insulin without a paired **AAPSClient**
+2. Jei norite nuotoliniu būdu suleisti insulino bolusą be susieto **AAPSClient**
 
-3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
+3. Vietovėse, kur prastas interneto ryšys: SMS žinutės pasiekia gavėją, bet mobilusis internetas veikia ribotai. Tai labai naudinga keliaujant į atokias vietoves (pvz., stovyklaujant, slidinėjant).
 
-4. If your other method of remote control (**AAPSClient**) is temporarily not working
+4. Jei kitas jūsų nuotolinio valdymo būdas (**AAPSClient**) laikinai neveikia
 
-## Safety First
+## Saugumas – svarbiausia
 
-If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to export **AAPS** settings).
+Jei **AAPS** įjungiate **SMS komandos**, atminkite, kad telefonas, iš kurio siunčiamos nuotolinės komandos, gali būti pavogtas ir (arba) juo gali naudotis kas nors kitas. Visada užrakinkite savo telefoną bent PIN kodu. Labai rekomenduojamas stiprus slaptažodis ir (arba) biometrinis užraktas; jis turi skirtis nuo jūsų APK pagrindinio slaptažodžio (slaptažodžio, kurio reikia **AAPS** nustatymams eksportuoti).
 
-Additionally, it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. This way, you can use the second number to [disable](#SMSCommands-other) SMS communicator in case your main remote phone gets compromised.
+Be to, SMS komandoms rekomenduojama leisti [antrą telefono numerį](#SMSCommands-authorized-phone-numbers). Tada antruoju numeriu galėsite [išjungti](#SMSCommands-other) SMS komandas, jei jūsų pagrindinis nuotolinio valdymo telefonas būtų pažeistas.
 
-The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
+The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. Dėl saugumo turite pridėti bent du autorizuotus telefono numerius, jei norite šį laiko tarpą sutrumpinti. Jei bandysite nuotoliniu būdu vėl suleisti bolusą per 15 minučių po ankstesnio boluso, gausite atsakymą „Nuotolinis bolusas negalimas. Bandykite vėliau.“
 
-AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Patartina tai nustatyti taip, kad patvirtinimo tekstai būtų siunčiami bent dviem skirtingais telefono numeriais, jei pavogtas vienas iš priimančių telefonų.
+AAPS taip pat SMS žinute praneš, ar jūsų nuotolinės komandos, pvz., bolusas ar profilio keitimas, buvo įvykdytos. Patartina tai nustatyti taip, kad patvirtinimo tekstai būtų siunčiami bent dviem skirtingais telefono numeriais, jei pavogtas vienas iš priimančių telefonų.
 
-**If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
+**Jei bolusą suleidžiate SMS komandomis, angliavandenius turite įvesti atskirai (antra SMS, AAPSClient...)!** Jei to nepadarysite, AIO bus teisingas, bet AAO per mažas, todėl korekcinis bolusas gali būti nesuleistas, nes **AAPS** manys, kad turite per daug aktyvaus insulino.
 
-For the sensitive commands, an authenticator app with a time-based one-time password must be used to increase safety.
+Jautrioms komandoms saugumui padidinti būtina naudoti autentifikavimo programėlę su laiko pagrindu sukuriamu vienkartiniu slaptažodžiu.
 
-If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “[Reset Authenticators](#sms-commands-authenticator-setup)” in **AAPS** or send the SMS command “[SMS stop](#SMSCommands-other)”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
+Jei norite atimti iš prižiūrinčio asmens telefono galimybę siųsti SMS komandas, **AAPS** naudokite avarinį mygtuką „[Atstatyti autentikatorius](#sms-commands-authenticator-setup)“ arba išsiųskite SMS komandą „[SMS stop](#SMSCommands-other)“. Iš naujo nustatę autentifikatorius, VISUS prižiūrinčių asmenų telefonus padarysite negaliojančiais. You will need to set them up again.
 
 ## Setup SMS commands
 
@@ -43,134 +43,134 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 
 Two-factor authentication is used to improve safety.
 
-On the caregiver phone, download (from the App store or Google play) and install an Authenticator app. Popular free apps are:
+Prižiūrinčio asmens telefone atsisiųskite (iš App Store arba Google Play) ir įdiekite autentifikavimo programėlę. Populiarios nemokamos programėlės:
   - [Authy](https://authy.com/download/)
-  - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
+  - Google Authenticator – [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
-These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
+Šios autentifikavimo programėlės sukuria ribotą laiką galiojantį vienkartinį 6 skaitmenų slaptažodį, panašiai kaip mobiliojoje bankininkystėje ar apsiperkant internetu. Galite naudoti ir kitą autentifikavimo programėlę, jei ji palaiko RFC 6238 TOTP prieigos raktus. Microsoft Authenticator neveikia.
 
-### Check phone settings
+### Patikrinkite telefono nustatymus
 
-On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phone** are allowed.
+Telefone eikite į **Apps > AAPS > Permissions** (programėlės, leidimai). Įsitikinkite, kad **SMS** ir **Phone** (telefonas) leidžiami.
 
 ![image](../images/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
-Android can block the **SMS** permission for apps that were not installed from an app store, like **AAPS**. If you see this message when you grant the **SMS** permission, open the phone's **Settings > Apps > AAPS**, tap the **⋮** menu (top right) and select **Allow restricted settings**. Then grant the **SMS** permission again.
+Android gali blokuoti leidimą **SMS** programėlėms, kurios buvo įdiegtos ne iš programėlių parduotuvės, pavyzdžiui, **AAPS**. Jei suteikdami leidimą **SMS** matote šį pranešimą, atidarykite telefono **Settings > Apps > AAPS** (nustatymai, programėlės), bakstelėkite meniu **⋮** (viršuje dešinėje) ir pasirinkite **Allow restricted settings** (leisti ribotus nustatymus). Tada vėl suteikite leidimą **SMS**.
 ```
 
-![App was denied access to SMS](../images/sms_permission_restricted.png)
+![Programėlei uždrausta prieiga prie SMS](../images/sms_permission_restricted.png)
 
-### Date and time syncing
+### Datos ir laiko sinchronizavimas
 
-The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
+The time on both phones must be synchronized. Geriausia laiką nustatyti automatiškai pagal tinklą. Dėl laiko skirtumų gali kilti autentifikavimo problemų.
 
-On both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific device, you may need to try out different settings.
+Ir **AAPS** telefone, ir prižiūrinčio asmens telefone patikrinkite, ar data ir laikas sinchronizuoti. Kaip tai padaryti, priklauso nuo jūsų įrenginio, gali tekti išbandyti skirtingus nustatymus.
 
-Example (for Samsung S23): **Settings > General management > Date and time**: make sure that **Automatic date and time** is checked.
+Pavyzdys (Samsung S23): **Settings > General management > Date and time** (nustatymai, bendrasis valdymas, data ir laikas): įsitikinkite, kad pažymėta **Automatic date and time** (automatinė data ir laikas).
 
-Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterward if it seems to be causing problems (ask for help if needed).
+Kai kurios parinktys gali būti pilkos (neaktyvios), nes, jei telefonas nustatytas kaip vaiko paskyra, jas keisti gali tik administratorius per šeimos paskyrą. Prižiūrinčio asmens / tėvų iPhone telefone šis datos ir laiko nustatymas vadinasi „Set automatically“ (nustatyti automatiškai). Jei nesate tikri, ar telefonai sinchronizuoti, nesijaudinkite: galite nustatyti SMS komandas, o jei atrodys, kad kyla problemų, vėliau jas išspręsti (jei reikia, paprašykite pagalbos).
 
-### AAPS settings
+### AAPS nustatymai
 
-Now that the phone settings have been checked, in the **AAPS** app itself, go to [**Configuration** → **Communication**](../SettingUpAaps/ConfigBuilder.md) and enable the **SMS Communicator** plugin.
+Patikrinę telefono nustatymus, pačioje **AAPS** programėlėje eikite į [**Konfigūracija** → **Ryšys**](../SettingUpAaps/ConfigBuilder.md) ir įjunkite įskiepį **SMS komandos**.
 
-Open the **SMS Communicator** settings.
+Atidarykite **SMS komandos** nustatymus.
 
-Enable **Allow remote commands via SMS**. The **Additional mandatory PIN at token end** and **Authenticator setup** options only appear once this is enabled:
+Įjunkite **Leisti nuotolines komandas SMS žinutėmis**. Parinktys **Papildomas privalomas PIN kodas žymeklio gale** ir **Autentifikavimo sąrankos nustatymas** atsiranda tik tai įjungus:
 
-![SMS Communicator settings](../images/sms_communicator_settings.png)
+![SMS komandos nustatymai](../images/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
-#### Allowed phone numbers
+#### Patvirtinti telefono numeriai
 
-Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
-* UK phone number: +447976304596
-* US phone number: +11234567890
-* FR phone number:  +33612344567
-* _etc._
+Įveskite prižiūrinčio asmens telefono numerį (-ius). Įrašykite šalies kodą ir praleiskite pirmąjį telefono numerio „0“, kaip parodyta pavyzdžiuose:
+* JK telefono numeris: +447976304596
+* JAV telefono numeris: +11234567890
+* Prancūzijos telefono numeris:  +33612344567
+* _ir t. t._
 
-Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format on the **SMS Communicator** plugin screen (**Configuration** → **Communication** → **SMS Communicator** → **Open plugin**).
+Atminkite, kad „+“ prieš numerį, priklausomai nuo jūsų vietovės, gali būti reikalingas arba nereikalingas. Kad tai sužinotumėte, išsiųskite bandomąją žinutę: gautas formatas bus parodytas įskiepio **SMS komandos** ekrane (**Konfigūracija** → **Ryšys** → **SMS komandos** → **Atidaryti įskiepį**).
 
-If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select **OK**:
+Jei norite pridėti daugiau nei vieną telefono numerį, atskirkite juos kabliataškiais, **BE tarpų tarp numerių** (tai labai svarbu!). Pasirinkite **OK**:
 
-![Allowed phone numbers](../images/sms_allowed_numbers.png)
+![Patvirtinti telefono numeriai](../images/sms_allowed_numbers.png)
 
-#### Remote bolus min distance
+#### Mažiausias intervalas tarp nuotolinių bolusų
 
-- You can define the minimum delay (in minutes) between two boluses issued via SMS.
-- For safety reasons you have to add at least two authorized phone numbers to edit this value.
+- Galite nustatyti mažiausią laiko tarpą (minutėmis) tarp dviejų bolusų, išsiųstų SMS žinutėmis.
+- Dėl saugumo turite pridėti bent du autorizuotus telefono numerius, kad galėtumėte keisti šią reikšmę.
 
 #### Additional mandatory PIN at token end
 
-For safety reasons, the reply code must be followed by a PIN. Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
+Dėl saugumo po atsakymo kodo turi būti įvestas PIN kodas. Pasirinkite PIN kodą, kurį jūs (ir kiti prižiūrintys asmenys) rašysite autentifikavimo kodo gale, kai siųsite SMS komandą.
 
-PIN requirements are:
+Reikalavimai PIN kodui:
 
-* at least 6 digits
-* digits only
+* bent 6 skaitmenys
+* tik skaitmenys
 
-For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a sequence (_e.g._ 123456).
+Saugesniam PIN kodui nenaudokite to paties skaitmens daug kartų (_pvz._, 111111) arba skaitmenų sekos (_pvz._, 123456).
 
 ![Additional mandatory PIN at token end](../images/sms_pin.png)
 
 #### Authenticator setup
 
-* Tap **Authenticator setup** and follow the step-by-step instructions on the screen.
-* Open your installed authenticator app on the _caregiver’s phone_, set up a new connection and
-* Use the caregiver phone to scan the QR code shown under **Scan code to setup AAPS OTP codes**.
+* Bakstelėkite **Autentifikavimo sąrankos nustatymas** ir vykdykite ekrane pateikiamus nurodymus žingsnis po žingsnio.
+* _Prižiūrinčio asmens telefone_ atidarykite įdiegtą autentifikavimo programėlę, nustatykite naują ryšį ir
+* Prižiūrinčio asmens telefonu nuskenuokite QR kodą, rodomą skiltyje **Skanuokite kodą AAPS OTP kodų nustatymui**.
 
-![Authenticator setup with QR code](../images/sms_authenticator_setup.png)
+![Autentifikavimo sąranka su QR kodu](../images/sms_authenticator_setup.png)
 
-* Under **Test One-Time-Password**, enter the one-time passcode from the authenticator app on the caregiver phone followed by your PIN in **Code to check**:
+* Skiltyje **Patikrinti vienkartinį slaptažodį** į laukelį **Kodas patikrinimui** įveskite vienkartinį slaptažodį iš prižiūrinčio asmens telefono autentifikavimo programėlės ir po jo – savo PIN kodą:
 
-Example:
-* The token from the authenticator app is 457051
+Pavyzdys:
+* Autentifikavimo programėlės kodas yra 457051
 * Your mandatory PIN is 2401
-* Code to check: 4570512401
+* Kodas patikrinimui: 4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
+Jei įvedėte teisingai, raudonas užrašas „NETEISINGAS PIN“ automatiškai pasikeis į žalią „OK“. **Nėra jokio mygtuko, kurį reikėtų paspausti!** Procesas baigtas, įvedus kodą nereikia spausti jokio mygtuko „OK“:
 
-![Test One-Time-Password and Reset Authenticators](../images/sms_authenticator_test.png)
+![Vienkartinio slaptažodžio patikrinimas ir autentifikatorių atstatymas](../images/sms_authenticator_test.png)
 
-You should now be set up with SMS commands.
+Dabar SMS komandos turėtų būti nustatytos.
 
-Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
+Jei norite pašalinti sukurtus autentifikatorius, naudokite mygtuką **Atstatyti autentikatorius** ekrano **Autentifikavimo sąrankos nustatymas** apačioje. (Iš naujo nustatę autentifikatorius, VISUS jau sukurtus autentifikatorius padarysite negaliojančiais. Jums reikės juos nustatyti dar kartą.)
 
-## SMS commands usage
+## SMS komandų naudojimas
 
-### First steps using SMS commands
+### Pirmieji žingsniai naudojant SMS komandas
 
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
+1)  Kad patikrintumėte, ar viską nustatėte teisingai, išbandykite ryšį: iš prižiūrinčio asmens telefono į **AAPS** telefoną išsiųskite SMS žinutę „bg“. Turėtumėte gauti atsakymą, panašų į parodytą čia:
 
 ![image](../images/remote-control-06.png)
 
-If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
+Jei negavote jokio atsakymo, žr. toliau skyrių [Trikčių šalinimas](#SMSCommands-troubleshooting).
 
-2)  Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of twelve digits in total, assuming your PIN has 6 digits).
+2)  Dabar išbandykite SMS komandą, kuriai reikia autentifikavimo, _pvz._, „target hypo“. Prižiūrinčio asmens telefonas gaus atsakymo žinutę, kurioje bus prašoma įvesti **šešių skaitmenų autentifikavimo slaptažodį** iš autentifikavimo programėlės ir po jo papildomą slaptą **PIN kodą**, kurį žino tik prižiūrintys asmenys / sekėjai (iš viso dvylika skaitmenų, jei jūsų PIN kodas turi 6 skaitmenis).
 
-When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
+Kai SMS komandą siunčiate pirmą kartą, išbandykite ją būdami šalia **AAPS** telefono, kad pamatytumėte, kaip tai veikia:
 
 ![image](../images/remote-control-16.png)
 
-The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully.
+Prižiūrinčio asmens telefonas gaus atsakymo SMS iš **AAPS**, patvirtinančią, ar nuotolinė SMS komanda sėkmingai įvykdyta.
 
-If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message. See [Troubleshooting](#SMSCommands-troubleshooting) below for common errors.
+Jei komanda įvykdyta sėkmingai, gausite tai patvirtinantį atsakymą. Jei kilo problema, gausite klaidos pranešimą. Dažnas klaidas rasite toliau, skyriuje [Trikčių šalinimas](#SMSCommands-troubleshooting).
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Patarimas**: jei bus siunčiama daug SMS, naudinga turėti neribotų SMS mokėjimo planą (kiekvienam naudojamam telefonui).
 
-### Delivering mealtime boluses through SMS commands
+### Bolusų valgymui suleidimas SMS komandomis
 
-Remote bolusing of insulin can be done via **SMS Commands** or through a paired **AAPSClient** (see [Master ↔ Client control](#client-master-control)); it cannot be done through the Nightscout website. Carbs can be announced through SMS or **AAPSClient** as well. With SMS, it is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
+Nuotoliniu būdu insulino bolusą galima suleisti **SMS komandomis** arba per susietą **AAPSClient** (žr. [Pagrindinio įrenginio ↔ kliento valdymas](#client-master-control)); per Nightscout svetainę to padaryti negalima. Angliavandenius taip pat galima įvesti SMS žinute arba per **AAPSClient**. SMS žinutėmis negalima vienoje SMS žinutėje išsiųsti ir angliavandenių, ir insulino komandų. Šias komandas reikia siųsti atskirai, taip:
 
-1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to **Treatments** → **Insulin** in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to **Treatments** → **Carbs** in **AAPS**.
+1)  Insulino boluso siuntimas SMS komanda (_pvz._, „bolus 2“ suleis 2 vienetų bolusą) atitinka **Terapija** → **Insulinas** **AAPS** programėlėje. 2)  Išsiųskite angliavandenius (_pvz._, „carbs 20“ įves 20 g angliavandenių). Tai atitinka **Terapija** → **Angliavandeniai** **AAPS** programėlėje.
 
-To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
+Kad išvengtumėte hipoglikemijos, verta pradėti atsargiai ir suleisti **mažiau insulino**, nei reikėtų pagal jūsų IA, nes neatsižvelgiate į dabartinį gliukozės lygį ar jo tendenciją.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can combine **AAPSClient** with SMS commands: carbs entered on a paired **AAPSClient** need no authentication code and are therefore quicker than SMS commands. Carbs or other treatments entered on the Nightscout website are **not** applied while client control is on; **AAPS** is then in [hardened mode](#client-master-control-hardened-mode).
+**Svarbu, kokia tvarka siunčiate šias komandas**. Jei bet kokiu būdu įvedate didelį angliavandenių kiekį ir turite įjungtą SMB, **AAPS** gali iš karto sureaguoti ir suleisti dalį insulino boluso. Todėl, jei _po_ angliavandenių įvedimo bandysite išsiųsti insulino bolusą, gali tekti nemaloniai palaukti ir gausite pranešimą „bolus in progress“ (leidžiamas bolusas), o tada turėsite patikrinti, kiek buvo suleista kaip SMB. Arba, jei nepastebėsite, kad leidžiamas SMB, ir jūsų paties vėlesnis bolusas taip pat bus sėkmingas, valgiui iš viso gali būti suleista per daug insulino. Todėl, leisdami bolusą valgiui nuotoliniu būdu, visada išsiųskite insulino bolusą _prieš_ angliavandenių įvedimą. Jei norite, galite derinti **AAPSClient** ir SMS komandas: angliavandeniams, įvestiems susietame **AAPSClient**, autentifikavimo kodo nereikia, todėl tai greičiau nei SMS komandomis. Angliavandeniai ar kiti terapijos įrašai, įvesti Nightscout svetainėje, **nepritaikomi**, kol įjungtas kliento valdymas; tada **AAPS** veikia [sustiprintos apsaugos režimu](#client-master-control-hardened-mode).
 
 (SMSCommands-commands)=
 ## Commands
@@ -180,174 +180,174 @@ To avoid hypos, it is a good idea to start conservatively, by bolusing **less in
 :local: true
 ```
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app). The commands are not case-sensitive, you can use lower or upper case.
+Komandas reikia siųsti anglų kalba, o atsakymas bus jūsų kalba, jei atsakymo eilutė jau [išversta](#translations-translate-strings-for-AAPS-app). Komandose didžiosios ir mažosios raidės nesvarbios, galite rašyti mažosiomis arba didžiosiomis raidėmis.
 
-![SMS Commands Example](../images/SMSCommands.png)
+![SMS komandų pavyzdys](../images/SMSCommands.png)
 
-The **SMS Commands Tables** below show all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the **AAPS** app itself.
+Toliau pateiktose **SMS komandų lentelėse** nurodytos visos galimos SMS komandos. Kad būtų lengviau suprasti, pateiktos _pavyzdinės reikšmės_. Komandoms galioja tos pačios galimų reikšmių ribos (tikslai, profilio procentas ir kt.), kurios leidžiamos pačioje **AAPS** programėlėje.
 
 (authentication-or-not)=
-### Authentication or not?
+### Su autentifikavimu ar be jo?
 
-Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
+Į kai kurias SMS komandas atsakoma iš karto, o kai kurioms SMS komandoms reikia griežto **autentifikavimo** per autentifikavimo programėlę. Paprastą užklausą, pvz., „**BG**“ (kuria prašoma dabartinės gliukozės reikšmės), greita parašyti, jai nereikia autentifikavimo, o atsakyme gaunama toliau parodyta **AAPS** būsenos informacija:
 
 ![image](../images/remote-control-06.png)
 
-Commands which need more security require a code to be entered, for example:
+Komandoms, kurioms reikia daugiau saugumo, reikia įvesti kodą, pavyzdžiui:
 
-![SMS authenticated](../images/remote-control-07.png)
+![SMS su autentifikavimu](../images/remote-control-07.png)
 
-The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
+Toliau pateiktų lentelių stulpelyje *Autent.* nurodyta, ar kiekvienai komandai reikia tokio griežto autentifikavimo.
 
 ### CGM data
 
-| Command    | Auth | Function & *Response*                                                                                                                                                                                                             |
-| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | No   | Returns: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                                                                                   |
-| CAL 5.6/90 | Yes  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
+| Komanda    | Autent. | Funkcija ir *atsakymas*                                                                                                                                                                                                                       |
+| ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | No      | Grąžina: paskutinę KG, pokytį, AIO (boluso ir valandinės bazės), AAO<br/>*Paskutinė KG: 5,6 prieš 4min, Pokytis: -0,2 mmol, AIO: 0,20V (Bolusas: 0,10V Valandinė bazė: 0,10V)*                                                          |
+| CAL 5.6/90 | Yes     | Sukalibruos NGJ reikšme 5.6/90<br/>(naudokite reikšmę, tinkančią jūsų gliukozės vienetams)<br/>Veikia tik tada, jei **AAPS** tinkamai nustatyta.<br/>*Kalibracija išsiųsta. xDrip+ programoje turi būti įgalintas gavimas.* |
 
 ### Pump
 
-| Command              | Auth | Function & *Response*                                                                                |
-| -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| PUMP                 | No   | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Yes  | To disconnect pump for *30* minutes                                                                  |
-| PUMP CONNECT         | Yes  | Pump reconnected                                                                                     |
+| Komanda              | Autent. | Funkcija ir *atsakymas*                                                                             |
+| -------------------- | ------- | --------------------------------------------------------------------------------------------------- |
+| PUMP                 | No      | Ryšys prieš: 1 min<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | Yes     | Atjungti pompą *30* minučių                                                                         |
+| PUMP CONNECT         | Yes     | Pump reconnected                                                                                    |
 
-### Basal
+### Valandinė bazė
 
-| Command           | Auth | Function & *Response*            |
-| ----------------- | ---- | -------------------------------- |
-| BASAL 0.3         | Yes  | To start basal 0.3U/h for 30 min |
-| BASAL 0.3 20      | Yes  | To start basal 0.3U/h for 20 min |
-| BASAL 30%         | Yes  | To start basal 30% for 30 min    |
-| BASAL 30% 50      | Yes  | To start basal 30% for 50 min    |
-| BASAL STOP/CANCEL | Yes  | To stop temp basal               |
+| Komanda           | Autent. | Funkcija ir *atsakymas*        |
+| ----------------- | ------- | ------------------------------ |
+| BASAL 0.3         | Yes     | Pradėti 0,3 V/val. bazę 30 min |
+| BASAL 0.3 20      | Yes     | Pradėti 0,3 V/val. bazę 20 min |
+| BASAL 30%         | Yes     | Pradėti 30% bazę 30 min        |
+| BASAL 30% 50      | Yes     | Pradėti 30% bazę 50 min        |
+| BASAL STOP/CANCEL | Yes     | Sustabdyti laikiną bazę        |
 
-Some pumps take a temp basal only in percent, others only in U/h. If you use the other form, **AAPS** answers *"This pump takes a temp basal only in percent, not in U/h."* (or the reverse) and sets nothing. The duration must be a multiple of your pump's temp basal duration step.
+Kai kurios pompos laikiną bazę priima tik procentais, kitos – tik V/val. Jei naudosite kitą formą, **AAPS** atsakys *„Ši pompa laikiną bazę nustato procentais, o ne V/val.“* (arba atvirkščiai) ir nieko nenustatys. Trukmė turi būti jūsų pompos laikinos bazės trukmės žingsnio kartotinis.
 
 
 ### Ciklas
 
-| Command           | Auth | Function & *Response*                                                                                                                                                                                                                                                              |
-| ----------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | No   | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
-| LOOP STOP/DISABLE | Yes  | The pump will revert to the pre-programmed basal rate.<br/>*Loop has been disabled*                                                                                                                                                                                          |
-| LOOP SUSPEND 20   | Yes  | *Loop suspended*                                                                                                                                                                                                                                                                   |
-| LOOP RESUME       | Yes  | *Loop resumed*                                                                                                                                                                                                                                                                     |
-| LOOP CLOSED       | Yes  | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
-| LOOP LGS          | Yes  | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
+| Komanda           | Autent. | Funkcija ir *atsakymas*                                                                                                                                                                                                                                                          |
+| ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | No      | Atsakymas priklauso nuo tikrosios būsenos:<br/> - *Ciklas išjungtas*, jei ciklas išjungtas<br/> - *Ciklas įjungtas*, jei ciklas uždaras, atviras arba LGS<br/> - *Pompa atjungta*, jei pompa atjungta<br/> - *Sustabdyta (10 m)*, jei ciklas sustabdytas |
+| LOOP STOP/DISABLE | Yes     | Pompa grįš prie iš anksto užprogramuotos valandinės bazės.<br/>*Ciklas buvo išjungtas*                                                                                                                                                                                     |
+| LOOP SUSPEND 20   | Yes     | *Ciklas sustabdytas*                                                                                                                                                                                                                                                             |
+| LOOP RESUME       | Yes     | *Loop resumed*                                                                                                                                                                                                                                                                   |
+| LOOP CLOSED       | Yes     | *Dabartinis veikimo režimas: Uždaras ciklas*                                                                                                                                                                                                                                     |
+| LOOP LGS          | Yes     | *Dabartinis veikimo režimas: Stabdymas esant žemai glikemijai*                                                                                                                                                                                                                   |
 
 ### Bolus
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
+Nuotolinis bolusas neleidžiamas per 15 min. po paskutinės boluso komandos ar nuotolinių komandų (šią reikšmę galima keisti tik pridėjus 2 telefono numerius)! Šiuo atveju atsakymas būtų *Nuotolinis bolusas negalimas. Bandykite vėliau.* Šis atsakymas siunčiamas ir tada, kai pompa tuo metu leidžia bolusą.
 
-| Command              | Auth | Function & *Response*                                                                                                                                             |
-| -------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BOLUS 1.2            | Yes  |                                                                                                                                                                   |
-| BOLUS 0.60 MEAL      | Yes  | Delivers the specified 0.60U bolus<br/>**and** sets the [Eating Soon TempTarget](#TempTargets-eating-soon-temp-target)                                      |
-| CARBS 5              | Yes  | To enter 5g, without a bolus                                                                                                                                      |
-| CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35.<br/>The acceptable time format depends<br/> on the time setting (12h/24h) on the phone.                                         |
-| EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
-| EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                                                            |
+| Komanda              | Autent. | Funkcija ir *atsakymas*                                                                                                                                      |
+| -------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| BOLUS 1.2            | Yes     |                                                                                                                                                              |
+| BOLUS 0.60 MEAL      | Yes     | Suleidžia nurodytą 0,60 V bolusą<br/>**ir** nustato [laikiną tikslą „Netrukus valgysiu“](#TempTargets-eating-soon-temp-target)                         |
+| CARBS 5              | Yes     | Įvesti 5 g be boluso                                                                                                                                         |
+| CARBS 5 17:35/5:35PM | Yes     | Įvesti 5 g 17:35 val.<br/>Tinkamas laiko formatas priklauso<br/> nuo telefono laiko nustatymo (12 val. / 24 val.).                               |
+| EXTENDED 2 120       | Yes     | Pradėti 2 V ištęstą bolusą 120 min.<br/>Tik [suderinamoms pompoms](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
+| EXTENDED STOP/CANCEL | Yes     | Sustabdyti ištęstą bolusą                                                                                                                                    |
 
 ### Profile
 
-| Command        | Auth | Function & *Response*                                                                                                                                        |
-| -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| PROFILE STATUS | No   | Current profile and percentage                                                                                                                               |
-| PROFILE LIST   | No   | The current list of profiles in **AAPS**, e.g.:<br/>1. Profile1<br/> 2. Profile2                                                                 |
-| PROFILE 1      | Yes  | To switch profile to profile 1 in the list.<br/>Use the numbers as returned by the **PROFILE LIST**,<br/>not the profile names as you saved them |
-| PROFILE 2 30   | Yes  | To switch profile to Profile2 30%                                                                                                                            |
+| Komanda        | Autent. | Funkcija ir *atsakymas*                                                                                                                                     |
+| -------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PROFILE STATUS | No      | Dabartinis profilis ir procentas                                                                                                                            |
+| PROFILE LIST   | No      | Dabartinis **AAPS** profilių sąrašas, pvz.:<br/>1. Profile1<br/> 2. Profile2                                                                    |
+| PROFILE 1      | Yes     | Perjungti į 1 profilį sąraše.<br/>Naudokite numerius, kuriuos grąžina **PROFILE LIST**,<br/>o ne profilių pavadinimus, kuriais juos išsaugojote |
+| PROFILE 2 30   | Yes     | Perjungti į Profile2 30%                                                                                                                                    |
 
-The percentage must be between 30 and 250 %, as in the app. A value outside this range is refused before you are asked for the authentication code.
+Procentas turi būti nuo 30 iki 250 %, kaip ir programėlėje. Reikšmė už šių ribų atmetama dar prieš paprašant autentifikavimo kodo.
 
 ### Temporary Targets
 
-| Command                   | Auth | Function & *Response*                     |
-| ------------------------- | ---- | ----------------------------------------- |
-| TARGET MEAL/ACTIVITY/HYPO | Yes  | To set the Temp Target MEAL/ACTIVITY/HYPO |
-| TARGET STOP/CANCEL        | Yes  | To cancel Temp Target                     |
+| Komanda                   | Autent. | Funkcija ir *atsakymas*                     |
+| ------------------------- | ------- | ------------------------------------------- |
+| TARGET MEAL/ACTIVITY/HYPO | Yes     | Nustatyti laikiną tikslą MEAL/ACTIVITY/HYPO |
+| TARGET STOP/CANCEL        | Yes     | Atšaukti laikiną tikslą                     |
 
 
 (SMSCommands-other)=
 ### Kiti
 
-| Command          | Auth | Function & *Response*                                                                                                                                                                                                                                                  |
-| ---------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RESTART          | Yes  | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                                                                                                      |
-| SMS DISABLE/STOP | Yes  | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll be able to reactivate it directly<br/>from the **AAPS** master smartphone only.                                                                                       |
-| HELP             | No   | Returns all functions available for interrogation:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Send further ***HELP ***FUNCTION****** command to list<br/>all options available in this section. |
-| HELP BOLUS       |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                                   |
+| Komanda          | Autent. | Funkcija ir *atsakymas*                                                                                                                                                                                                                                                        |
+| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| RESTART          | Yes     | Paleidžia AAPS iš naujo. Naudinga, jei kilo problemų, kurias paprastai išsprendžia paleidimas iš naujo.                                                                                                                                                                        |
+| SMS DISABLE/STOP | Yes     | Norėdami išjungti SMS nuotolinį valdymą, atsakykite kodu.<br/>Atminkite, kad vėl jį įjungti galėsite<br/>tik pagrindiniame **AAPS** išmaniajame telefone.                                                                                                          |
+| HELP             | No      | Grąžina visas funkcijas, apie kurias galima teirautis:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Išsiųskite komandą ***HELP ***FUNCTION******, kad gautumėte<br/>visų šios funkcijos parinkčių sąrašą. |
+| HELP BOLUS       |         | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                                           |
 
 (SMSCommands-troubleshooting)=
-## Troubleshooting and FAQ
+## Trikčių šalinimas ir DUK
 
 ```{contents} List of questions and issues
 :depth: 1
 :local: true
 ```
 
-### What _can’t_ we do with SMS commands?
+### Ko _negalima_ padaryti SMS komandomis?
 
-1)  **You cannot set a _temporary_ profile switch** (so for example, setting "profile exercise" for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profile switches can instead be set through **AAPSClient**.
+1)  **Negalite nustatyti _laikino_ profilio keitimo** (pavyzdžiui, nustatyti profilį „exercise“ 60 minučių), nors galite visam laikui perjungti į profilį „exercise“. Laikinus profilio keitimus galima nustatyti per **AAPSClient**.
 
-2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the **AAPS** phone. If the high temporary target of 7.0 is started by the automation, and you cancel it (on the **AAPS** phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
+2)  **Negalite atšaukti automatizacijų** ar **nustatyti savo pasirinktų tikslų**, bet yra apytikslių sprendimų: Pavyzdžiui, tarkime, įprastas profilio tikslas yra 5,5. AAPS nustatėte automatizaciją, kuri dėl kūno kultūros pamokos mokykloje visada nustato aukštą 7,0 tikslą nuo 14:30 iki 15:30, o viena iš automatizacijos sąlygų yra „laikinas tikslas neegzistuoja“. Šią savaitę jums netikėtai pranešė, kad kūno kultūros pamoka atšaukta ir vietoj jos bus valgoma pica, bet jūsų vaikas jau mokykloje su **AAPS** telefonu. Jei automatizacija pradeda aukštą 7,0 laikiną tikslą, o jūs jį atšaukiate (**AAPS** telefone arba nuotoliniu būdu), automatizacijos sąlygos vis tiek tenkinamos, ir **AAPS** po minutės paprasčiausiai vėl nustatys aukštą tikslą.
 
-**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min by pressing on the target on the main screen, or via **Manage** → **Temp Target**. This would prevent the automation from setting the high target of 7.0.
+**Jei turėtumėte prieigą prie AAPS telefono**, galėtumėte išjungti / pakeisti automatizaciją, o jei to daryti nenorite, galėtumėte tiesiog nustatyti naują 5,6 laikiną tikslą 60 min, paspausdami tikslą pagrindiniame ekrane arba per **Valdymas** → **Laikinas tikslas**. Tada automatizacija nebenustatytų aukšto 7,0 tikslo.
 
-**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** to do this.
+**Jei neturite prieigos prie AAPS telefono**, SMS komandomis galima rasti apytikslį sprendimą: pavyzdžiui, komanda „target meal“ nustatyti 5,0 tikslą 45 min (kiti numatytieji tikslai yra 8,0 sportui arba hipoglikemijai, žr. lentelę). Tačiau SMS komandomis negalite nurodyti _konkrečios_ tikslo reikšmės (pavyzdžiui, 5,6 60 minučių), tam reikėtų naudoti **AAPSClient**.
 
-### What happens if I change my mind about a command I have just sent?
+### Kas bus, jei persigalvosiu dėl ką tik išsiųstos komandos?
 
-**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. **AAPS** will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
+**AAPS** įvykdys tik paskutinę komandą. Taigi, jei parašote „bolus 1.5“, o tada, nepatvirtinę autentifikavimo kodu, išsiunčiate naują komandą „bolus 1“, ankstesnė 1.5 komanda bus ignoruojama. **AAPS** visada išsiųs prižiūrinčio asmens telefonui atsakymą, patvirtinantį, kokia yra SMS komanda, prieš paprašydama įvesti autentifikavimo kodą, taip pat atsakymą po veiksmo.
 
-### Why didn't I get a response to an SMS command?
+### Kodėl negavau atsakymo į SMS komandą?
 
-It could be for one of these reasons:
+Tam gali būti viena iš šių priežasčių:
 
-1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The **AAPS** phone does not have a good Bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
+1)  Žinutė nepasiekė telefono (tinklo problemos). 2)  **AAPS** vis dar apdoroja užklausą (_pvz._, bolusą, kurio suleidimas gali užtrukti, priklausomai nuo jūsų boluso greičio). 3)  Gavus komandą, **AAPS** telefono Bluetooth ryšys su pompa buvo prastas, ir komanda nepavyko (paprastai dėl to **AAPS** telefone suveikia aliarmas).
 
-### No response whatsoever for SMS commands
+### Visiškai jokio atsakymo į SMS komandas
 
-On the caregiver phone and/or **AAPS** phone, try disabling the following options :
-* **Send as chat message** ![Disable SMS as chat message](../images/SMSdisableChat.png)
-* If using Android Messages App or Google Messages App, disable RCS messaging:
-  - open the specific SMS conversation in Messages
-  - Select the options ellipsis in the top right corner
-  - select "Details"
-  - Activate "Only send SMS and MMS messages" ![Disable RCS as chat message](../images/SMSdisableRCS.png)
+Prižiūrinčio asmens telefone ir (arba) **AAPS** telefone pabandykite išjungti šias parinktis:
+* **Send as chat message** (siųsti kaip pokalbio pranešimą) ![Disable SMS as chat message](../images/SMSdisableChat.png)
+* Jei naudojate Android Messages arba Google Messages programėlę, išjunkite RCS pranešimus:
+  - atidarykite konkretų SMS pokalbį programėlėje Messages
+  - Pasirinkite parinkčių meniu (trys taškai) viršutiniame dešiniajame kampe
+  - pasirinkite „Details“ (išsami informacija)
+  - Įjunkite „Only send SMS and MMS messages“ (siųsti tik SMS ir MMS žinutes) ![Išjunkite RCS kaip pokalbio pranešimą](../images/SMSdisableRCS.png)
 
-### Errors carrying out commands
+### Klaidos vykdant komandas
 
-There are several possible reasons the command may not be successful:
+Yra kelios galimos priežastys, kodėl komanda gali būti neįvykdyta:
 
-* SMS commands setup isn’t complete/correct
-* You sent a command which had an incorrect format (like “disconnect pump 45” instead of “pump disconnect 45”)
-* You used an incorrect, or expired authenticator code (it is usually good to wait a few seconds for a fresh code, if the current one is about to expire)
-* The code+PIN was OK, but there was a delay in the SMS leaving/arriving, which led **AAPS** to calculate that the authenticator code had expired
-* The **AAPS** phone is out of range/contact with the pump
-* The system is already busy delivering a bolus
+* SMS komandų sąranka neužbaigta / neteisinga
+* Išsiuntėte netinkamo formato komandą (pvz., „disconnect pump 45“ vietoj „pump disconnect 45“)
+* Panaudojote neteisingą arba nebegaliojantį autentifikavimo kodą (paprastai verta palaukti kelias sekundes naujo kodo, jei dabartinis netrukus nustos galioti)
+* Kodas + PIN buvo teisingi, bet SMS buvo išsiųsta arba pristatyta pavėluotai, todėl **AAPS** apskaičiavo, kad autentifikavimo kodas nebegalioja
+* **AAPS** telefonas yra per toli nuo pompos / neturi ryšio su ja
+* Sistema jau leidžia bolusą
 
-Common errors are shown in the examples below:
+Dažnos klaidos parodytos toliau pateiktuose pavyzdžiuose:
 
 ![image](../images/remote-control-17.png)
 
-### How can I stop a command once it has been authenticated?
+### Kaip sustabdyti komandą, kai ji jau patvirtinta autentifikavimo kodu?
 
-You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
+Negalite. Tačiau SMS žinute išsiųstą bolusą galite atšaukti pačiame **AAPS** telefone, jei suspėsite: tiesiog atšaukite jį boluso iškylančiame lange. Daugelį SMS komandų (išskyrus bolusus ir angliavandenių įvedimą) galima lengvai atšaukti arba, jei suklydote, imtis veiksmų nenumatytam poveikiui sumažinti.
 
-For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
+Suklydę leisdami bolusą ar įvesdami angliavandenius, vis tiek galite imtis veiksmų. Pavyzdžiui, jei įvedėte 20 g angliavandenių, bet jūsų vaikas suvalgė tik 10 g, o jūs (arba šalia esantis prižiūrintis asmuo) negalite ištrinti įrašo tiesiai **AAPS** telefone, galite nustatyti aukštą laikiną tikslą arba silpnesnį profilį, kad **AAPS** veiktų mažiau agresyviai.
 
 ### Multiple SMS
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip, for example. If so, please ensure that xDrip (or any other app) does not upload treatments to NightScout.
+Jei vis gaunate tą pačią žinutę (_pvz._, apie profilio keitimą), galbūt netyčia sukūrėte uždarą ratą su kitomis programėlėmis. Pavyzdžiui, tai gali būti xDrip. Jei taip, įsitikinkite, kad xDrip (ar bet kuri kita programėlė) neįkelia terapijos įrašų į Nightscout.
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Jei kita programėlė įdiegta keliuose telefonuose, būtinai išjunkite įkėlimą visuose.
 
 (sms-commands-too-many-messages)=
-### I am getting far too many text messages from SMS Commands. Can I reduce the frequency, or make them stop?
+### Gaunu per daug SMS žinučių iš SMS komandų. Ar galiu sumažinti jų dažnumą arba jas sustabdyti?
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
+Naudojant SMS komandas, iš **AAPS** telefono į prižiūrinčio asmens telefoną gali būti siunčiama daug automatinių žinučių. Taip pat gausite žinučių, pavyzdžiui, „Bazės profilis pompoje atnaujintas“, jei **AAPS** nustatytos automatizacijos. Jei bus siunčiama daug SMS, naudinga turėti neribotų SMS mokėjimo planą **AAPS** telefonui (ir kiekvienam naudojamam prižiūrinčio asmens telefonui), taip pat visuose telefonuose išjungti SMS pranešimus, garsinius signalus ar vibraciją. Neįmanoma naudoti SMS komandų ir negauti šių pranešimų. Todėl, užuot naudoję SMS, galbūt norėsite kito būdo tiesiogiai bendrauti su vaiku (jei jis pakankamai didelis). **AAPS** prižiūrintys asmenys dažnai bendrauja ir kitomis programėlėmis, pvz., WhatsApp, LINE, Telegram ir Facebook Messenger.
 
-It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+Galima išjungti SMS „Bazės profilis pompoje atnaujintas“, kai profilio keitimas atėjo iš Nightscout. Tam sukurkite failą, kurio pavadinimas yra **tiksliai**  `do_not_send_sms_on_profile_change`, savo AAPS aplanko `extra` poaplankyje.
