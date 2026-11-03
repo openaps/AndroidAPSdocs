@@ -1,6 +1,6 @@
-# Freestyle Libre 2 and 2+
+# Freestyle Libre 2 e 2+
 
-The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
+The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. Ci sono diverse soluzioni per usarlo con AAPS.
 
 ## 1. Use a Bluetooth bridge and OOP
 
@@ -17,14 +17,14 @@ There are some good reasons to use a Bluetooth transmitter:
 
     → Hamburger Menu → Settings → Less common settings → Other misc. options
 
-![OOP2 Calibration](../images/Libre2_OOP2Calibration.png)
+![Calibrazione OOP2](../images/Libre2_OOP2Calibration.png)
 
 -   The Libre 2 sensor can be used 14.5 days as the Libre 1
 -   8 hours backfilling is fully supported
 
 Remark: The transmitter can be used in parallel to the LibreLink app without interfering with it.
 
-### Start sensor
+### Avviare il sensore
 
 - → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Answer "Not Today" (4).
 
@@ -40,34 +40,34 @@ After a sensor change xDrip will automatically detect the new sensor and will de
 
 ![Configuration > BG Source with xDrip+ BG selected](../images/v4/Configuration/configuration_bg_source.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
+-   Se AAPS non riceve i valori della glicemia quando il telefono è in modalità aereo, usa 'Identify receiver' come descritto nella pagina [Impostazioni di xDrip](#xdrip-identify-receiver).
 
-## 2. Use xDrip direct connection
+## 2. Usare la connessione diretta di xDrip
 
 ```{admonition} Libre 2 EU only
 :class: warning
 xDrip doesn't support direct connection to Libre 2 US and AUS.
-Only Libre 2 and 2+ **EU** models.
+Solo i modelli Libre 2 e 2+ **EU**.
 ```
 
 - Follow [these instructions](./Libre2MinimalL00per.md) to setup xDrip as the original documentation links to an obsolete OOP2  version.
 - Follow setup instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
 
--   Select xDrip+ in [Configuration > BG Source](#Config-Builder-bg-source).
+-   Seleziona xDrip+ in [Configurazione > Sorgente Glicemia](#Config-Builder-bg-source).
 
 (libre2-value-smoothing-raw-values)=
 
 ### Value smoothing & raw values
 
-Technically, the current blood sugar value is transmitted to xDrip every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+Technically, the current blood sugar value is transmitted to xDrip every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. Puoi cambiare il periodo nel menu NFC Scan features.
 
 → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
 ![xDrip advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
 
-This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
+This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip graph in order to be able to react in time to rapid changes. Attiva Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" e "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
 
-The raw values are very helpful when the blood sugar is moving fast. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
+The raw values are very helpful when the blood sugar is moving fast. Anche se i punti saltano di più, vedi la tendenza molto meglio che con la linea smussata, e puoi prendere decisioni di terapia corrette.
 
 → Hamburger menu → Settings → Less common settings → Advanced settings for Libre 2
 
@@ -75,18 +75,18 @@ The raw values are very helpful when the blood sugar is moving fast. Even if the
 
 
 
-#### Calibration
+#### Calibrazione
 
-You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). The slope isn't changeable. Please check by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If the sensor is completely off after a few days, it should then be replaced.
+Puoi calibrare il Libre2 **con uno scostamento da -40 mg/dL a +20 mg/dL \[da -2.2 mmol/L a +1.1 mmol/L\]** (intercetta). La pendenza (slope) non si può cambiare. Please check by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If the sensor is completely off after a few days, it should then be replaced.
 
-## 3. Use Diabox
+## 3. Usare Diabox
 
-- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, enable Share data with other apps.
+- Installa [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, attiva Share data with other apps.
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in [Configuration > BG Source](#Config-Builder-bg-source).
+- Seleziona xDrip+ in [Configurazione > Sorgente Glicemia](#Config-Builder-bg-source).
 
-## 4. Use Juggluco
+## 4. Usare Juggluco
 
-See [here](./Juggluco.md).
+Vedi [qui](./Juggluco.md).
