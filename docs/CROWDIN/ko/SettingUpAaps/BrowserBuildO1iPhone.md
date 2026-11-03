@@ -1,19 +1,19 @@
 (aaps-ci-ios-ipad)=
 
-# Option 1 · iPhone / iPad – Generate a new keystore
+# 옵션 1 · iPhone / iPad – 새 키 저장소 생성하기
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on **iPhone / iPad** (iPad shown as an example).
+**iPhone / iPad**에서 [옵션 1](BrowserBuildO1.md)(새 키 저장소 생성하기)을 진행합니다(예로 iPad를 보여 줍니다).
 ```
 
-## 1. Download the preparation file
+## 1. 준비 파일 다운로드하기
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Open the preparation file and generate the keystore
+## 2. 준비 파일을 열고 키 저장소 생성하기
 
-Compatible with iOS (using iPad as an example)
+iOS 호환(iPad를 예로 사용)
 <!--crowdin: exclude-->
 
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -30,4 +30,4 @@ Compatible with iOS (using iPad as an example)
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**다음: [3단계 – Google Drive 인증하기](BrowserBuildGoogleDrive.md) →**
