@@ -112,7 +112,7 @@ Ensure you have read and understand this whole guide, have read and understand t
 
 (omnipod-dash-tab)=
 
-## The DASH pump screen
+## מסך המשאבה DASH
 
 במסך המשאבה DASH מנהלים את הפודים: מפעילים ומשביתים אותם, מרעננים את סטטוס הפוד, משתיקים התראות וצופים בהיסטוריית הפוד. ניתן לפתוח אותו דרך **ניהול** > **משאבה**, או דרך **פתיחת תוסף** בכרטיס **Omnipod Dash** ב**הגדרות תצורה** > **משאבה**.
 
