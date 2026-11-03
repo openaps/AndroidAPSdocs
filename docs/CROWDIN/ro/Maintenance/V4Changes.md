@@ -1,5 +1,5 @@
 (v4-changes)=
-# What changed in AAPS v4
+# Ce s-a schimbat în AAPS v4
 
 This page collects the notable **changes in behavior** between **AAPS** v3 and v4 — things that work differently, have moved, or have been removed — so existing users know what to expect when they update. See also the [Release Notes](ReleaseNotes.md) and the [update manual](UpdateToNewVersion.md).
 
@@ -10,14 +10,14 @@ This page collects the notable **changes in behavior** between **AAPS** v3 and v
 
 ---
 
-## NSClient v1 has been removed
+## NSClient v1 a fost eliminat
 
 **AAPS** v3 shipped **two** Nightscout synchronization plugins:
 
 - **NSClient** — the legacy client (the old Nightscout REST / socket.io API, also called *“v1”*), and
 - **NSClientV3** — the client for the newer Nightscout **API v3**.
 
-In **AAPS** v4 the legacy **NSClient (v1)** plugin has been **removed**. Only **NSClientV3** remains for synchronizing with Nightscout.
+In **AAPS** v4 the legacy **NSClient (v1)** plugin has been **removed**. Pentru sincronizarea cu Nightscout a rămas doar **NSClientV3**.
 
 ```{admonition} What you need to do
 :class: important
@@ -25,7 +25,7 @@ If you (or your **AAPSClient** follower) were still synchronizing with the old *
 
 - Open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → Communication → NSClientV3**.
 - Enter your **Nightscout URL** and an **access token** (NSClientV3 uses an access token, *not* the old API secret — see [creating a token](https://nightscout.github.io/nightscout/security/#create-a-token)).
-- Your Nightscout site must support the **API v3** (Nightscout 15 or newer).
+- Site-ul dumneavoastră Nightscout trebuie să accepte **API v3** (Nightscout 15 sau mai nou).
 - If you use **websockets**, enable or disable them on **both** the master and the follower — never on only one.
 ```
 
@@ -40,7 +40,7 @@ In **AAPS** v3 you moved around the app with a row of **tabs** (Overview, Action
 In **AAPS** v4 the tabs are gone, and so is the eye checkbox in the Config Builder that showed a plugin as a tab. The main screen is the **Overview**, and a **bottom navigation** gives you three sheets. **Actions, Automation and Food are no longer plugins** — there is nothing to enable in [Configuration](../SettingUpAaps/ConfigBuilder.md) (the renamed Config Builder); their functions now live in these sheets.
 
 (v4changes-treatments)=
-### Treatments — enter and deliver
+### Tratamente — introducere și administrare
 
 The **Treatments** sheet is where you record or deliver a treatment: **Bolus wizard**, **Insulin** (manual bolus), **Carbs**, **Treatment** (insulin + carbs together), **Calibration**, **CGM** (open your CGM app, when one is configured), and your **[QuickWizards](../DailyLifeWithAaps/QuickWizards.md)**.
 
@@ -48,14 +48,14 @@ The **Treatments** sheet is where you record or deliver a treatment: **Bolus wiz
 
 On a **Wear OS watch** the same treatments are entered from the watch's **AAPS menu** (Bolus wizard / Calculator, eCarbs, Treatment, …):
 
-![The treatment actions in the watch's AAPS menu](../images/v4/BehavioralChanges/treatments_watch.png)
+![Acțiunile pentru tratamente din meniul AAPS al ceasului](../images/v4/BehavioralChanges/treatments_watch.png)
 
-### Scenes
+### Scenarii
 
 Your situation presets — see [Scenes](../DailyLifeWithAaps/Scenes.md).
 
 (v4changes-manage)=
-### Manage — manage and activate
+### Gestionați — gestionare și activare
 
 The **Manage** sheet is where you manage and activate everything else: **[Profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulin settings** (your insulin configurations), **[Temp Target](../DailyLifeWithAaps/TempTargets.md)**, **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)** presets, **[Scenes](../DailyLifeWithAaps/Scenes.md)**, **Automation**, **Food**, **Site Rotation**, **Pump**, **[Authorized clients](../RemoteFeatures/ClientMasterControl.md)** — plus the pump actions that used to be on the *Actions* tab (**Extended Bolus**, **cancel temp basal**, **Prime/Fill**, **Sensor Insert**, **Pump Battery Change**).
 
@@ -64,12 +64,12 @@ The **Manage** sheet is where you manage and activate everything else: **[Profil
 All of your existing automation rules and food entries are kept; only the way you reach these features has changed.
 
 (screens-action-tab)=
-#### Where did the Actions tab go?
+#### Unde a dispărut fila Acțiuni?
 
-**AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
+**AAPS** 3.x avea o filă „Acțiuni”. In **AAPS** 4 its functions live in other places:
 
-* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
-* **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
+* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. Vedeți [Schimbarea procentajului profilului](#ProfileSwitch-change-percentage).
+* **Țintă temporară**: apăsați [ținta](#aaps-screens-profile--target) pe ecranul principal sau **Gestionați → Țintă temporară**.
 * **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
 * **History browser**, **Statistics** (TDD): in the **menu** (☰).
 
@@ -81,20 +81,20 @@ In **AAPS** v3, a long press on the profile name opened the profile switch dialo
 ---
 
 (v4changes-read-only-management)=
-## Settings protection now also locks the management screens
+## Protecția setărilor blochează acum și ecranele de gestionare
 
 In **AAPS** v3, [Settings protection](#Preferences-settings-protection) asked for your password only when you opened the settings. You could still add or edit profiles in the **Local Profile** tab without it.
 
-In **AAPS** v4, Settings protection also covers editing on the management screens: **Profile**, **Insulin settings**, **Temp Target** and **QuickWizard**. If your settings are locked, these screens open **read-only**:
+In **AAPS** v4, Settings protection also covers editing on the management screens: **Profile**, **Insulin settings**, **Temp Target** and **QuickWizard**. Dacă setările dumneavoastră sunt blocate, aceste ecrane se deschid **doar pentru citire**:
 
 - You can browse the entries and **▶ Activate** or use them.
-- The **Add / Edit / Clone / Delete** buttons are **hidden**. Only the **✏️ pencil** in the top bar shows that you can unlock editing.
+- Butoanele **Adăugați / Editați / Clonați / Ștergeți** sunt **ascunse**. Doar **✏️ creionul** din bara de sus arată că puteți debloca editarea.
 
 ![The read-only Profile screen — only Activate at the bottom, pencil in the top bar](../images/v4/Profiles/profile_manage_readonly.png)
 
 ```{admonition} What you need to do
 :class: important
-To add, edit, clone or delete an entry, tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics). The buttons appear.
+To add, edit, clone or delete an entry, tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics). Butoanele apar.
 
 If you don't need to protect your settings, you can turn Settings protection off in **Settings → Protection**.
 ```
@@ -108,7 +108,7 @@ In **AAPS** v3, you could change the DIA of the insulin you were using at any ti
 
 In **AAPS** v4, the insulin marked **ACTIVE** in **Manage → Insulin settings** is greyed out: you cannot edit or delete it.
 
-When you upgrade, **AAPS** keeps the insulin and DIA that your v3 profile switches already stored. If it finds older records whose insulin is known but whose DIA is not, it uses a default DIA for them and shows a message once, for example *Older records had no insulin duration, so 9.0 hours was used for Lyumjev. Check your insulin settings — already migrated records are not updated afterwards.* Check your insulin settings when you see it.
+When you upgrade, **AAPS** keeps the insulin and DIA that your v3 profile switches already stored. Dacă găsește înregistrări mai vechi la care insulina este cunoscută, dar DIA nu, folosește pentru ele un DIA implicit și afișează o singură dată un mesaj, de exemplu *Înregistrările mai vechi nu aveau durata de acțiune a insulinei, așa că pentru Lyumjev s-au folosit 9,0 ore. Check your insulin settings — already migrated records are not updated afterwards.* Check your insulin settings when you see it.
 
 ```{admonition} What you need to do
 :class: important
@@ -122,7 +122,7 @@ To change the DIA or peak, add a new insulin with **+**, adjust it, save it and 
 
 In **AAPS** v3, **AAPSClient** controlled **AAPS** by writing care-portal treatments to Nightscout, and could not deliver a bolus.
 
-In **AAPS** v4, the client and the main phone are **paired** once, and every command is signed. The main phone checks and confirms each command, and a client can now also deliver a bolus.
+În **AAPS** v4, clientul și telefonul principal sunt **asociate** o singură dată, iar fiecare comandă este semnată. The main phone checks and confirms each command, and a client can now also deliver a bolus.
 
 - Each client has a **[role](#client-master-control-roles)** that limits what it may do.
 - While client control is on, the main phone is in **[hardened mode](#client-master-control-hardened-mode)**: treatments and changes typed directly into Nightscout (the website, other apps) are no longer applied.
@@ -135,7 +135,7 @@ Pair each **AAPSClient** with the main phone: see [Master ↔ Client control](#c
 
 ---
 
-## Duplicate BG data now switches the loop to Low Glucose Suspend
+## Datele de glicemie duplicate trec acum bucla în Suspendare la glicemie scăzută
 
 When **AAPS** receives the same BG reading twice (a red warning badge on the BG source shortcut in the bottom bar), it cannot calculate your trend reliably, so it stops giving correction insulin.
 
@@ -153,7 +153,7 @@ Once they are gone, **AAPS** stays in **Low Glucose Suspend**. It does not go ba
 ---
 
 (v4changes-tidepool)=
-## Tidepool: data now shows under the device name AAPS
+## Tidepool: datele apar acum sub numele de dispozitiv AAPS
 
 In **AAPS** v3, the data uploaded to [Tidepool](../SettingUpAaps/Tidepool.md) was shown in Tidepool under another device name.
 
@@ -161,9 +161,9 @@ In **AAPS** v4, the data is shown under the device name **AAPS**. After the upda
 
 ```{admonition} What you need to do
 :class: important
-Usually nothing: new data simply appears under **AAPS**.
+De obicei nu trebuie să faceți nimic: datele noi apar pur și simplu sub **AAPS**.
 
-Do **not** run "**Full synchronization**" while the old data is still in Tidepool: the same data would then be there twice. If you want all your data under the new name, use the "**Purge all data**" button on the [Tidepool screen](#tidepool-menu) first (it also deletes the old data uploaded by **AAPS**), then run "**Full synchronization**". Only the data still stored in **AAPS** on your phone can be uploaded again.
+**Nu** rulați „**Sincronizare completă**” cât timp datele vechi sunt încă în Tidepool: aceleași date ar apărea atunci de două ori. Dacă doriți toate datele sub noul nume, folosiți mai întâi butonul „**Ștergeți toate datele**” de pe [ecranul Tidepool](#tidepool-menu) (acesta șterge și datele vechi încărcate de **AAPS**), apoi rulați „**Sincronizare completă**”. Only the data still stored in **AAPS** on your phone can be uploaded again.
 ```
 
 ---
