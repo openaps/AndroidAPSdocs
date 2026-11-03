@@ -4,53 +4,53 @@
 
 ## Saugumo svarba
 
-Nightscout is the reporting and monitoring server of **AAPS**: **AAPS** uploads your data to it, and you or your caregivers look at it on the Nightscout website or in follower apps. It holds your medical data, profiles and treatments, so it is worth thinking about securing your Nightscout website.
+Nightscout yra **AAPS** ataskaitų ir stebėjimo serveris: **AAPS** į jį įkelia jūsų duomenis, o jūs arba jus prižiūrintys asmenys juos peržiūrite Nightscout svetainėje arba sekėjo programėlėse. Jame saugomi jūsų medicininiai duomenys, profiliai ir terapijos įrašai, todėl verta pagalvoti, kaip apsaugoti savo Nightscout svetainę.
 
-In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Remote commands come from a paired **AAPSClient** instead — see [Master ↔ Client control](#client-master-control).
+**AAPS** 4 versijoje nuotolinis valdymas nevyksta per Nightscout svetainę. Kol įjungtas kliento valdymas ([sustiprintos apsaugos režimas](#client-master-control-hardened-mode)), terapijos įrašų ar tikslų, įvestų tiesiogiai Nightscout, **AAPS** **netaiko**. Vietoj to nuotolinės komandos ateina iš susietos **AAPSClient** programėlės – žr. [Pagrindinio įrenginio ↔ kliento valdymas](#client-master-control).
 
-Exercise maximum caution if using Nightscout as your AAPS BG data source.
+Būkite itin atsargūs, jei Nightscout naudojate kaip AAPS glikemijos duomenų šaltinį.
 
-### Nightscout settings
+### Nightscout nustatymai
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security): make sure you only share your URL with a `readable` token, never with an `admin` token.
+Viešą prieigą prie savo Nightscout svetainės galite uždrausti naudodami [autentifikavimo vaidmenis](https://nightscout.github.io/nightscout/security): savo URL dalinkitės tik su `readable` prieigos raktu, niekada su `admin` prieigos raktu.
 
-Nightscout `API_SECRET` is your site main password: don't share it publicly.
+Nightscout `API_SECRET` yra pagrindinis jūsų svetainės slaptažodis: niekam jo viešai neatskleiskite.
 
 (Nightscout-aaps-settings)=
 
-### AAPS settings
+### AAPS nustatymai
 
-Accepting data from Nightscout (profile changes, treatments, ...) is optional and turned off by default. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
+Duomenų iš Nightscout priėmimas (profilio pakeitimai, terapijos įrašai, ...) yra pasirenkamas ir pagal numatymą išjungtas. Toliau aprašyti jungikliai paslėpti, kol įjungtas kliento valdymas (sustiprintos apsaugos režimas), ir [paprastajame režime](#preferences-simple-mode).
 
-* Access the **Synchronization** settings of the NSClientV3 plugin with either 1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or 2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
-* Enable "Upload data to NS".
-* "Upload BG data to NS" is in the settings of your BG source (**Configuration → BG Source → Settings**). Enable it, unless your AAPS BG data source is Nightscout: in that case **do not** enable it.
-* Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
+* NSClientV3 įskiepio **Sinchronizacija** nustatymus atidarykite vienu iš būdų: 1) **Nustatymai** (krumpliaračio piktograma pagrindiniame ekrane) -> **NSClientV3** -> **Sinchronizacija** arba 2) **Konfigūracija** (meniu ☰) -> **Ryšys** -> „**Parametrai**“ prie NSClientV3.
+* Įjunkite „Įkelti duomenis į NS“.
+* „Įkelti glikemijos duomenis į NS“ yra jūsų glikemijos šaltinio nustatymuose (**Konfigūracija → Glikemijos šaltinis → Parametrai**). Įjunkite šią parinktį, nebent jūsų AAPS glikemijos duomenų šaltinis yra Nightscout: tokiu atveju jos **neįjunkite**.
+* Neįjunkite „Gauti NGJ duomenis iš NS“, nebent Nightscout yra jūsų glikemijos duomenų šaltinis.
 
-#### Do not sync from Nightscout
+#### Nesinchronizuoti iš Nightscout
 
-Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
+Kai visos parinktys „Gauti … iš NS“ lieka išjungtos, AAPS tikrai nenaudos jokių Nightscout pakeitimų:
 
-![Nightscout upload only](../images/preferences/settings_nsclient_sync.png)
+![Tik įkėlimas į Nightscout](../images/preferences/settings_nsclient_sync.png)
 
-#### Accept changes from Nightscout
+#### Priimti pakeitimus iš Nightscout
 
-Enabling these options allows you to change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS. They are only shown when client control and simple mode are off.  
-Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
+Įjungę šias parinktis, AAPS nustatymus galite keisti per Nightscout, pvz., keisti ir perjungti profilius, nustatyti laikinus tikslus ir pridėti angliavandenius, kuriuos AAPS įtrauks į skaičiavimus. Jos rodomos tik tada, kai kliento valdymas ir paprastasis režimas išjungti.  
+Atminkite, kad insulino įrašai bus naudojami tik skaičiavimams, kaip „Neleisti boluso, tik įrašyti“.
 
-![Nightscout receive options enabled](../images/NSsafety3.png)
+![Įjungtos Nightscout duomenų gavimo parinktys](../images/NSsafety3.png)
 
 ### Tolimesni saugumo nustatymai
 
-Keep your phone up to date as described in [safety first](#preparing-safety-first).
+Nuolat atnaujinkite savo telefoną, kaip aprašyta skyriuje [Saugumas svarbiausia](#preparing-safety-first).
 
 (Nightscout-manual-nightscout-setup)=
 
 ## Rankinis Nightscout diegimas
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
+Daroma prielaida, kad jau turite Nightscout svetainę. Jei ne, visas diegimo instrukcijas rasite [Nightscout](http://nightscout.github.io/nightscout/new_user/) puslapyje. Toliau pateikti nustatymai, kuriuos taip pat reikės įrašyti į savo Nightscout svetainę. Jūsų Nightscout svetainė turi būti bent 15 versijos, todėl patikrinkite, ar naudojate [naujausią versiją](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version), kitaip AAPS programėlėje matysite klaidos pranešimą.
 
-* [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
+* [Kintamųjų redagavimas](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
 * Pridėti arba redaguoti kintamuosius taip:
   
@@ -58,16 +58,16 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
   * `DEVICESTATUS_ADVANCED` = `true`
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * Galima nustatyti įvairius aliarmus [pompos stebėsenai](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring). Ypač rekomenduojamas baterijos % aliarmas: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-* Save the modifications. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
+* Išsaugokite pakeitimus. Dabar jūsų Nightscout svetainėje turėtų būti galima rodyti informacines žymas (pills). Kad jos būtų rodomos pagal numatymą, įrašykite jas į `SHOW_PLUGINS`.
   
   * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   
-  ![Nightscout Pills](../images/nightscout1.png)
+  ![Nightscout informacinės žymos (pills)](../images/nightscout1.png)
 
-## Nightscout as a paid SaaS (Software as a Service)
+## Nightscout kaip mokama SaaS paslauga (Software as a Service)
 
-Use the vendor web interface to set the variables. Contact the vendor support service if necessary.
+Kintamuosius nustatykite paslaugos teikėjo žiniatinklio sąsajoje. Jei reikia, kreipkitės į paslaugos teikėjo pagalbos tarnybą.
