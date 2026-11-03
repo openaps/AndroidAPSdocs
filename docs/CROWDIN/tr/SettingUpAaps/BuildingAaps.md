@@ -1,50 +1,50 @@
-# Building AAPS
+# AAPS'i oluşturma
 
-## Programı İndirmek yerine kendiniz oluşturun...
+## İndirmek yerine kendiniz oluşturun
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz!**
+**Tıbbi cihazlarla ilgili düzenlemeler nedeniyle AAPS uygulaması (bir apk dosyası) indirilemez. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Ayrıntılar için [SSS sayfasına](../UsefulLinks/FAQ.md) bakın.
 
 ---
 
-Three methods are available to build the AAPS app:
+AAPS uygulamasını oluşturmak için üç yöntem vardır:
 
-### Build with a browser (recommended)
+### Tarayıcı ile oluşturma (önerilir)
 
-You can build the app in a web browser using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Uygulamayı bir web tarayıcısında GitHub Actions kullanarak oluşturabilirsiniz. Bir Android telefonda [AAPS Builder](#aaps-builder) kurulum sayfası size adım adım yol gösterir ve her oluşturmayı kendiniz başlatırsınız. Bir bilgisayardan veya iPhone'dan, bir fork ile de oluşturabilir ve uygulamayı Google Drive'ınıza kaydedebilirsiniz.
 
-**[Follow these instructions.](./BrowserBuild.md)**
-
-----
-
-### Build with Android Studio
-
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
-
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Bu talimatları izleyin.](./BrowserBuild.md)**
 
 ----
 
-### Build using the command-line
+### Android Studio ile oluşturma
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Uygulamayı bilgisayarınızda Android Studio ile oluşturabilirsiniz. Eskiden tek oluşturma yöntemi buydu, bugün Android Studio'yu çoğunlukla kodda değişiklik yapmayı düşünen geliştiriciler kullanıyor.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Bu talimatları izleyin.](./ComputerBuild.md)**
+
+----
+
+### Komut satırı ile oluşturma
+
+Bu seçenek, AAPS'i Android Studio yüklemeden yerel komut satırında oluşturmayı tercih edenler içindir.
+
+**[Bu talimatları izleyin.](./CLIBuild.md)**
 
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## Oluşturma başarısız olursa
 
-Each build method has its own troubleshooting section:
+Her oluşturma yönteminin kendi sorun giderme bölümü vardır:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**: [AAPS Builder sorun giderme](#aaps-builder-troubleshooting)
+* Bilgisayardan veya iPhone'dan **Tarayıcı ile oluşturma**: [Tarayıcı ile oluşturma: sorun giderme](#aaps-ci-troubleshooting)
+* **Android Studio**: [Android Studio'da Sorun Giderme](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Anahtar deponuzu veya parolasını mı kaybettiniz? Bkz. [Yeni bir anahtar deposuyla AAPS'i yeniden yükleme](#reinstall-aaps).
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+Uygulama oluşturuldu ama telefonunuza yüklenmiyorsa [AAPS'i aktarma ve yükleme](TransferringAndInstallingAaps.md) sayfasına bakın.
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Sorununuz burada yoksa [Nereden yardım alabilirim?](../GettingHelp/WhereCanIGetHelp.md) sayfasına bakın.
