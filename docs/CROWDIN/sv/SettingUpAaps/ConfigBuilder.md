@@ -1,51 +1,51 @@
-# Configuration (Config Builder)
+# Konfiguration (Config Builder)
 
-```{admonition} Coming from AAPS v3? :class: note The **Config Builder** is now called **Configuration** and is in the **menu** (☰). See [What changed in AAPS v4](#v4-changes).
+```{admonition} Kommer du från AAPS v3? :class: note **Config Builder** heter nu **Konfiguration** och finns i **menyn** (☰). Se [Vad har ändrats i AAPS v4](#v4-changes).
 
-    <br />**Configuration** is where you choose which plugins are active (CGM, pump, APS algorithm, sensitivity, sync, …) and open each plugin and its settings. The [walkthrough](#configuration-v4) is below; the rest of this page describes each section in detail.
+    <br />I **Konfiguration** väljer du vilka plugins som är aktiva (CGM, pump, APS-algoritm, känslighet, synkronisering, …) och öppnar varje plugin och dess inställningar. [Genomgången](#configuration-v4) finns nedan; resten av sidan beskriver varje avsnitt i detalj.
     
     (configuration-v4)=
-    ## Configuration in AAPS v4
+    ## Konfiguration i AAPS v4
     
-    In **AAPS** v4, tap the **menu** (☰) in the **top-left** corner of the main screen and choose **Configuration** (*“Set up your configuration (CGM, pump, …) and enable features”*).
+    I **AAPS** v4 trycker du på **menyn** (☰) i det **övre vänstra** hörnet av huvudskärmen och väljer **Konfiguration** (*”Ställ in din konfiguration (CGM, pump, ...) och aktivera funktioner”*).
     
-    ![The top-left menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+    ![Menyn uppe till vänster med posten Konfiguration](../images/v4/Configuration/configuration_menu.png)
     
-    Plugins are grouped by **category** — for example *Smoothing*, *Calibration*, *Sensitivity detection*, *APS*, *Communication* and *General*. Each row shows the category name and the **currently active** plugin (e.g. *APS → OpenAPS SMB*). Tap a row to open a category.
+    Plugins är grupperade i **kategorier** – till exempel *Utjämning*, *Kalibrering*, *Känslighetsdetektering*, *APS*, *Kommunikation* och *Generellt*. Varje rad visar kategorins namn och det plugin som är **aktivt just nu** (t.ex. *APS → OpenAPS SMB*). Tryck på en rad för att öppna en kategori.
     
-    ![The Configuration screen, listing plugin categories](../images/v4/Configuration/configuration_plugins.png)
+    ![Skärmen Konfiguration med listan över pluginkategorier](../images/v4/Configuration/configuration_plugins.png)
     
-    Inside a category you see the plugins available for it. For single-choice categories you pick the active one; some categories are multi-select (*“Choose any that apply”*). Each plugin offers two actions:
+    I en kategori ser du de plugins som finns för den. I kategorier med ett enda val väljer du det aktiva pluginet. Vissa kategorier tillåter flera val (*”Välj alla som är tillämpliga”*). Varje plugin har två åtgärder:
     
-    - **Open plugin** — opens the plugin's own screen.
-    - **Settings** — opens the plugin's preferences (settings may be grouped into expandable sections).
+    - **Öppna plugin** – öppnar pluginets egen skärm.
+    - **Inställningar** – öppnar pluginets inställningar (inställningarna kan vara grupperade i utfällbara avsnitt).
     
-    ![A category showing its plugins, each with “Open plugin” and “Settings”](../images/v4/Configuration/configuration_open_plugin.png)
+    ![En kategori med sina plugins, var och en med ”Öppna plugin” och ”Inställningar”](../images/v4/Configuration/configuration_open_plugin.png)
     
     (configuration_sync_icon)=
-    ### The mobile icon — “synced from the master”
+    ### Mobilikonen – ”synkroniseras från huvudenheten”
     
-    A small **mobile (phone) icon** next to a category or setting means that item is **synchronized from the master** — its value/selection is delivered to this device over the NSClientV3 (Nightscout) channel.
+    En liten **mobilikon (telefonikon)** bredvid en kategori eller inställning betyder att posten **synkroniseras från huvudenheten** – dess värde eller val skickas till den här enheten via kanalen NSClientV3 (Nightscout).
     
-    On a **client** (**AAPSClient**) these items are **kept in sync with the master**. The icon is only shown on a client, so it does not appear in the screenshot above, which was taken on the main **AAPS** app. On a client it typically appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS*. Exactly how the master and clients stay aligned — and which settings you can change from either side — is covered under [Master ↔ Client control](#client-master-config-prefs).
+    På en **klient** (**AAPSClient**) **hålls de här posterna synkroniserade med huvudenheten**. Ikonen visas bara på en klient, så den syns inte i skärmbilden ovan, som togs i huvudappen **AAPS**. På en klient visas den oftast vid *Utjämning*, *Kalibrering*, *Känslighetsdetektering* och *APS*. Exakt hur huvudenheten och klienterna hålls i takt – och vilka inställningar du kan ändra från vilken sida – beskrivs under [Styrning huvudenhet ↔ klient](#client-master-config-prefs).
     
-    The same icon also appears **inside the settings**, next to the individual preferences that are synced. In the example below *Absorption cutoff* carries the icon; settings without the icon are configured per device:
+    Samma ikon visas också **inne i inställningarna**, bredvid de enskilda inställningar som synkroniseras. I exemplet nedan har *Absorptionsgräns* ikonen; inställningar utan ikonen ställs in per enhet:
     
-    ![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+    ![Ett plugins inställningar – mobilikonen markerar de synkroniserade inställningarna](../images/v4/ClientMaster/preferences_synced_icon.png)
     
-    Items **without** the icon are configured **per device**. The most important example is the **NSClientV3 (Communication)** connection itself — the **Nightscout URL**, **access token** and **websockets** are set on each phone individually, so they do **not** show the mobile icon.
+    Poster **utan** ikonen ställs in **per enhet**. Det viktigaste exemplet är själva anslutningen **NSClientV3 (Kommunikation)** – **Nightscout-URL**, **åtkomsttoken** och **websockets** ställs in på varje telefon för sig, så de visar **inte** mobilikonen.
     
     ---
     
     (Config-Builder-tab-or-hamburger-menu)=
-    ## Opening a plugin screen
+    ## Öppna en pluginskärm
     
-    Each plugin screen is opened in one of these ways (the tabs and the eye checkbox of **AAPS** v3 are gone, see [What changed in AAPS v4](#v4-changes)):
+    Varje pluginskärm öppnas på ett av dessa sätt (flikarna och ögonrutan i **AAPS** v3 finns inte längre, se [Vad har ändrats i AAPS v4](#v4-changes)):
     
-    - **Configuration** → the plugin's category → **Open plugin**,
-    - the **Manage** sheet of the bottom navigation, for the screens you use most (Profile, Insulin settings, Pump, Automation, Food...),
-    - a [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) button that you add yourself,
-    - the **search bar** on the main screen.
+    - **Konfiguration** → pluginets kategori → **Öppna plugin**,
+    - panelen **Hantera** i den nedre navigeringen, för de skärmar du använder mest (Profil, Insulininställningar, Pump, Automation, Matdatabas...),
+    - en [Snabbstart](../DailyLifeWithAaps/QuickLaunch.md)-knapp som du själv lägger till,
+    - **sökfältet** på huvudskärmen.
     
     ```{contents}
     :backlinks: entry
@@ -54,422 +54,422 @@
 
 (ConfigBuilder_Profile)=
 
-## Profile
+## Profil
 
-This module cannot be disabled as it is a core part of **AAPS**.
+Den här modulen kan inte inaktiveras eftersom den är en central del av **AAPS**.
 
-See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
+Läs [Din AAPS-profil](../SettingUpAaps/YourAapsProfile.md) för att få en grundläggande förståelse för vad som ingår i din **profil**.
 
 (insulin)= (Config-Builder-insulin)=
 
 ## Insulin
 
-![Insulin settings](../images/manage/insulin_settings.png)
+![Insulininställningar](../images/manage/insulin_settings.png)
 
-In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Open **Manage → Insulin settings** to set up the insulin you are using.
+I **AAPS** 4 är insulinet inte längre ett plugin som väljs i **Konfiguration**. Öppna **Hantera → Insulininställningar** för att ställa in det insulin du använder.
 
-The insulin editor lets you:
+I insulinredigeraren kan du:
 
-* give the insulin an **Insulin nickname** so it is easy to recognise,
-* set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Action, in hours), either by typing the value or using the **–** / **+** buttons,
-* tap a **Load peak from** preset button — **Novorapid** (75 min), **Fiasp** (55 min) or **Lyumjev** (45 min) — to fill in the standard peak time for that insulin in one step.
+* ge insulinet ett namn i **Insulinets smeknamn** så att det är lätt att känna igen,
+* ställa in **Topp** (tid till högsta insulinaktivitet, i minuter) och **DIA** (insulinets verkningstid, i timmar), antingen genom att skriva in värdet eller med knapparna **–** / **+**,
+* trycka på en förinställningsknapp under **Ladda topp från** – **Novorapid** (75 min), **Fiasp** (55 min) eller **Lyumjev** (45 min) – för att fylla i standardtiden till topp för det insulinet i ett steg.
 
-The allowed ranges are the same whatever insulin you use:
+De tillåtna intervallen är desamma oavsett vilket insulin du använder:
 
-* **DIA**: 5 to 9 hours (5 to 10 hours if the patient type is set to **Pregnant**). See [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to choose a value.
-* **Peak**: 35 to 120 minutes.
+* **DIA**: 5 till 9 timmar (5 till 10 timmar om patienttypen är inställd på **Gravid**). Se [Insulinets verkningstid (DIA) och topp](#Config-Builder-insulin-dia) för att välja ett värde.
+* **Topp**: 35 till 120 minuter.
 
-The **IOB** (insulin on board) and **Activity** curves shown at the bottom of the editor update as you change the values, so you can see straight away how your settings shape the insulin action.
+Kurvorna för **IOB** (aktivt insulin) och **Insulinaktivitet** längst ned i redigeraren uppdateras när du ändrar värdena, så att du direkt ser hur dina inställningar formar insulinets verkan.
 
-More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
+Mer information om insulinprofilen som den visas i **AAPS** finns [här](#AapsScreens-insulin-profile).
 
 (Config-Builder-insulin-change-active)=
 
-### Changing the insulin in use (DIA or peak)
+### Byta insulinet som används (DIA eller topp)
 
-The insulin marked **ACTIVE** is the one your running profile uses. Its fields are greyed out: you cannot edit or delete it. This way, the insulin name shown in your running profile always matches the settings actually in use.
+Insulinet som är märkt **AKTIV** är det som din aktiva profil använder. Dess fält är nedtonade: du kan inte ändra eller radera det. På så sätt stämmer insulinnamnet som visas i din aktiva profil alltid med de inställningar som faktiskt används.
 
-To change the DIA or peak you are using:
+Så här ändrar du den DIA eller topp som du använder:
 
-1. Open **Manage → Insulin settings**. If the screen opens read-only (a **✏️ pencil** in the top bar), tap the pencil and unlock your settings.
-2. Tap **+** (*Add new insulin*). **AAPS** creates a copy of the insulin shown on screen.
-3. Set the new **Peak** and/or **DIA**, then tap the save icon (top right).
-4. Tap **▶** (*Activate insulin*) and confirm. The new insulin becomes **ACTIVE**.
+1. Öppna **Hantera → Insulininställningar**. Om skärmen öppnas skrivskyddad (en **✏️ penna** i det övre fältet), tryck på pennan och lås upp dina inställningar.
+2. Tryck på **+** (*Lägg till nytt insulin*). **AAPS** skapar en kopia av insulinet som visas på skärmen.
+3. Ställ in den nya **Topp** och/eller **DIA** och tryck sedan på spara-ikonen (uppe till höger).
+4. Tryck på **▶** (*Aktivera insulin*) och bekräfta. Det nya insulinet blir **AKTIV**.
 
-```{admonition} The name includes peak and DIA :class: note **AAPS** adds the peak, DIA and concentration to the insulin name automatically (for example *Fiasp 55m 8h U100*), so you can tell your configurations apart at a glance.
+```{admonition} Namnet innehåller topp och DIA :class: note **AAPS** lägger automatiskt till topp, DIA och koncentration i insulinets namn (till exempel *Fiasp 55m 8h U100*), så att du snabbt kan skilja dina konfigurationer åt.
 
-    <br />You can delete the old insulin once it is no longer active.
+    <br />Du kan radera det gamla insulinet när det inte längre är aktivt.
     
-    ### The "Load peak from" presets
+    ### Förinställningarna ”Ladda topp från”
     
-    In **AAPS** 4 there is no list of insulin types to choose from. Every insulin uses the same exponential activity curve; only its **Peak** and **DIA** differ. The **Load peak from** presets in the insulin editor fill in the recommended peak for the most common insulins in one tap (the small ⓘ next to **Load peak from** lists them with their peak values). You can still adjust the **Peak** and **DIA** afterwards.
+    I **AAPS** 4 finns ingen lista med insulintyper att välja mellan. Alla insuliner använder samma exponentiella aktivitetskurva; bara **Topp** och **DIA** skiljer sig. Förinställningarna under **Ladda topp från** i insulinredigeraren fyller i den rekommenderade toppen för de vanligaste insulinerna med ett tryck (den lilla ⓘ bredvid **Ladda topp från** listar dem med deras toppvärden). Du kan fortfarande justera **Topp** och **DIA** efteråt.
     
-    Only change the peak away from its recommended value if you understand the effect of doing so. The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the curves.
+    Ändra bara toppen från det rekommenderade värdet om du förstår vilken effekt det får. [Grafen över insulinkurvan](#AapsScreens-insulin-profile) hjälper dig att förstå kurvorna.
     
     #### Novorapid
     
-    ![Insulin curve with the Novorapid peak](../images/Profile/ConfBuild_Insulin_RAO.png)
+    ![Insulinkurva med toppen för Novorapid](../images/Profile/ConfBuild_Insulin_RAO.png)
     
-    * recommended for Humalog, Novolog and Novorapid (called *Rapid-Acting Oref* in **AAPS** v3)
-    * Peak = 75 minutes after injection
+    * rekommenderas för Humalog, Novolog och Novorapid (hette *Rapid-Acting Oref* i **AAPS** v3)
+    * Topp = 75 minuter efter injektionen
     
     #### Fiasp
     
-    ![Insulin curve with the Fiasp peak](../images/Profile/ConfBuild_Insulin_URO.png)
+    ![Insulinkurva med toppen för Fiasp](../images/Profile/ConfBuild_Insulin_URO.png)
     
-    * recommended for Fiasp (called *Ultra-Rapid Oref* in **AAPS** v3)
-    * Peak = 55 minutes after injection
+    * rekommenderas för Fiasp (hette *Ultra-Rapid Oref* i **AAPS** v3)
+    * Topp = 55 minuter efter injektionen
     
     (Config-Builder-lyumjev)=
     #### Lyumjev
     
-    ![Insulin curve with the Lyumjev peak](../images/Profile/ConfBuild_Insulin_L.png)
+    ![Insulinkurva med toppen för Lyumjev](../images/Profile/ConfBuild_Insulin_L.png)
     
-    * recommended for Lyumjev
-    * Peak = 45 minutes after injection
+    * rekommenderas för Lyumjev
+    * Topp = 45 minuter efter injektionen
     
-    #### Custom peak
+    #### Egen topp
     
-    * There is no separate "Free-Peak Oref" insulin type in **AAPS** 4: enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a preset.
-    * A custom peak is useful if you use an insulin that is not in the list, or a mixture of different insulins.
+    * Det finns ingen separat insulintyp ”Free-Peak Oref” i **AAPS** 4: ange valfri **Topp** (35 till 120 minuter) direkt i [insulinredigeraren](#Config-Builder-insulin), utan att använda en förinställning.
+    * En egen topp är användbar om du använder ett insulin som inte finns i listan, eller en blandning av olika insuliner.
     
     (Config-Builder-insulin-dia)=
-    ### Duration of insulin action (DIA) and peak
+    ### Insulinets verkningstid (DIA) och topp
     
     ```{warning}
-    In looping, decreasing DIA or peak will always increase administered insulin. DIA works differently in AAPS than in commercial AID systems, and careless changes to these settings can change insulin dosing in a way which is much larger or smaller than expected.
+    När du loopar leder en kortare DIA eller en tidigare topp alltid till att mer insulin ges. DIA fungerar annorlunda i AAPS än i kommersiella AID-system, och slarviga ändringar av de här inställningarna kan ändra insulindoseringen mycket mer eller mycket mindre än väntat.
     
 
-AAPS models the timeline of insulin action with a mathematical formula, configured using **DIA** and the closely related **peak** settings. DIA is the theoretical duration until IOB reaches zero and peak is the point in time when the effect of insulin is strongest. This yields an IOB curve and an activity curve, which is simply the **rate** of IOB decay.
+AAPS beskriver insulinets verkan över tid med en matematisk formel, som ställs in med **DIA** och den närliggande inställningen **topp**. DIA är den teoretiska tiden tills IOB når noll, och toppen är den tidpunkt då insulinets effekt är som starkast. Detta ger en IOB-kurva och en aktivitetskurva, som helt enkelt är **hastigheten** med vilken IOB minskar.
 
-Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). This missing basal insulin is fully subtracted from the IOB, explaining why IOB will in practice reach zero many hours earlier than the configured DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
+Tänk på att det är normalt med perioder med [tillfällig basal på noll](#Open-APS-features-super-micro-bolus-smb) när AAPS loopar. Det basalinsulin som då saknas dras helt av från IOB. Det förklarar varför IOB i praktiken når noll många timmar tidigare än den inställda DIA. Du kan se [bolus-IOB och basal-IOB](#aaps-screens-iob-cob-basal-sens) var för sig från huvudskärmen.
 
-To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin settings**. AAPS displays the active insulin configuration like this:
+För att ställa in DIA och topp trycker du på **Hantera** på huvudskärmen och sedan på **Insulininställningar**. AAPS visar den aktiva insulinkonfigurationen så här:
 
-![Sample insulin configuration](../images/manage/insulin_profile.png)
+![Exempel på insulinkonfiguration](../images/manage/insulin_profile.png)
 
-In this example, the peak setting is 55 minutes, DIA is 8 hours and [insulin concentration](#Insulin-Concentration) is the standard 100 IU/mL.
+I det här exemplet är toppen inställd på 55 minuter, DIA är 8 timmar och [insulinkoncentrationen](#Insulin-Concentration) är standardvärdet 100 IU/ml.
 
-Due to the influence of zero-temping explained above and the formula used for IOB decay in AAPS, most users set a clearly higher DIA than in commercial systems. In general, many people find that a **DIA** of 9h works well for them. After you have more experience with AAPS and have a well-tuned profile, you can try to find personalized DIA and peak settings with the information below.
+På grund av effekten av tillfällig basal på noll som förklaras ovan, och formeln som AAPS använder för hur IOB minskar, ställer de flesta användare in en klart längre DIA än i kommersiella system. Många tycker att en **DIA** på 9 h fungerar bra för dem. När du har mer erfarenhet av AAPS och en väl finjusterad profil kan du försöka hitta personliga inställningar för DIA och topp med hjälp av informationen nedan.
 
-````{admonition} Details on the impact of DIA and peak configuration :class: dropdown
+````{admonition} Detaljer om hur inställningarna för DIA och topp påverkar :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+Eftersom basalen indirekt påverkar hur IOB minskar i AAPS, kan för hög basal dölja en för lång DIA, och tvärtom. Det är klokt att först noggrant finjustera basalen innan du justerar DIA och topp. Tänk också på att inställningarna för DIA och topp påverkar varandra: effekten av DIA beror på toppen, och tvärtom.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+De här diagrammen visar exakt hur DIA och topp påverkar IOB-kurvorna, över hela intervallet av tillåtna värden.
 
-Adjusting DIA:
+Justera DIA:
 
 ```{image} ../images/iob_remaining_static_peak.png :width: 400px
 
-    <br />Adjusting peak:
+    <br />Justera topp:
     
     ```{image} ../images/iob_remaining_static_dia.png
     :width: 400px
     
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Till sist en jämförelse där DIA och topp justeras samtidigt. Tanken är att båda värdena justeras lika mycket i förhållande till sig själva, så att `49/35 ~ 7/5`. Eller på samma sätt `120/93 ~ 9/7`. Intervallen blir desamma oavsett utgångsvärdet för DIA eller topp, så länge den relativa ändringen är lika stor för båda.
 
 ```{image} ../images/iob_remaining_uniform.png :width: 400px
 
-    <br />Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+    <br />Observera att när DIA och topp justeras på det här sättet flyttas varje punkt på kurvan lika mycket i förhållande till sitt värde.
     
     ````
     
-    #### Further reading on DIA and peak configuration
+    #### Mer att läsa om inställning av DIA och topp
     
-    * [Technical details and historical background from the AAPS predecessor, OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
-    * [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
-    * [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
-    * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
+    * [Tekniska detaljer och historisk bakgrund från föregångaren till AAPS, OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
+    * [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) på Diabettech.
+    * [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) på See My CGM (arkiv).
+    * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) och andra artiklar på Bionic Wookie, som rekommenderar en DIA på 9 h för Lyumjev, Fiasp, NovoRapid och Humalog.
     
     (Config-Builder-bg-source)=
-    ## BG Source
-    Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+    ## BG-källa
+    Välj den blodsockerkälla du använder. Se sidan [Kompatibla CGM-system](../Getting-Started/CompatiblesCgms.md) för mer information om inställningen.
     
-    ![Configuration > BG Source](../images/v4/Configuration/configuration_bg_source.png)
+    ![Konfiguration > BG-källa](../images/v4/Configuration/configuration_bg_source.png)
     
-    Scroll down to see the other sources:
+    Skrolla nedåt för att se de andra källorna:
     
-    ![Configuration > BG Source, continued](../images/v4/Configuration/configuration_bg_source_2.png)
+    ![Konfiguration > BG-källa, fortsättning](../images/v4/Configuration/configuration_bg_source_2.png)
     
-    ![Configuration > BG Source, end of the list](../images/v4/Configuration/configuration_bg_source_3.png)
+    ![Konfiguration > BG-källa, slutet av listan](../images/v4/Configuration/configuration_bg_source_3.png)
     
-    * [xDrip+ BG](../CompatibleCgms/xDrip.md) - also for compatible apps such as [Juggluco](../CompatibleCgms/Juggluco.md)
-    * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
+    * [xDrip+ BG](../CompatibleCgms/xDrip.md) – även för kompatibla appar som [Juggluco](../CompatibleCgms/Juggluco.md)
+    * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) – bara om du vet vad du gör, se [Kompatibla CGM-system](../Getting-Started/CompatiblesCgms.md).
     * [MM640g](../CompatibleCgms/MM640g.md)
-    * Glimp - only version 4.15.57 and newer are supported
+    * Glimp – bara version 4.15.57 och nyare stöds
     * [BYODA (Build Your Own Dexcom App)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
-    * MicroTech CGM App - for the Aidex / LinX CGM
+    * MicroTech CGM App – för Aidex / LinX CGM
     * [Poctech](../CompatibleCgms/PocTech.md)
-    * Tomato (MiaoMiao) - Tomato App for MiaoMiao device
-    * [Glunovo](https://infinovo.com/) - Glunovo App for Glunovo CGM system
-    * Intelligo - Intelligo App
-    * Syai/Ottai - for the Syai and Ottai apps (see [Syai Tag](../CompatibleCgms/SyaiTagX1.md) and [Ottai](../CompatibleCgms/OttaiM8.md))
-    * SI App - patched SI App or Sibionics App for Sibionics CGM
-    * Sino App - patched app for Sinocare CGM
-    * Notification Reader - reads glucose values from the notifications shown by official CGM apps (Dexcom, Medtronic, Eversense, etc.)
-    * Instara - Instara App
-    * Random BG - generates random BG data for testing. It can only be enabled in an engineering (developer) build with the **Virtual Pump**, so in a normal **AAPS** installation it cannot be used.
+    * Tomato (MiaoMiao) – appen Tomato för MiaoMiao-enheten
+    * [Glunovo](https://infinovo.com/) – appen Glunovo för CGM-systemet Glunovo
+    * Intelligo – appen Intelligo
+    * Syai/Ottai – för apparna Syai och Ottai (se [Syai X1](../CompatibleCgms/SyaiTagX1.md) och [Ottai M8](../CompatibleCgms/OttaiM8.md))
+    * SI App – patchad SI App eller Sibionics App för Sibionics CGM
+    * Sino App – patchad app för Sinocare CGM
+    * Läsare för aviseringar – läser glukosvärden från aviseringarna som visas av officiella CGM-appar (Dexcom, Medtronic, Eversense osv.)
+    * Instara – appen Instara
+    * Slumpmässig BG – skapar slumpmässiga BG-data för test. Den kan bara aktiveras i ett engineering-bygge (utvecklarbygge) med **Virtuell pump**, så i en vanlig **AAPS**-installation går den inte att använda.
     
-    ## Smoothing
+    ## Utjämning
     
-    ![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+    ![Konfiguration > Utjämning](../images/v4/Configuration/configuration_smoothing.png)
     
-    See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+    Se [Utjämning av blodsockerdata](../CompatibleCgms/SmoothingBloodGlucoseData.md).
     
-    ## Calibration
+    ## Kalibrering
     
-    Choose how **AAPS** treats the values it receives from your sensor:
+    Välj hur **AAPS** ska hantera värdena som kommer från din sensor:
     
-    - **No calibration**: the sensor values are used as they are. Use this when the sensor is already factory-calibrated and accurate. This is the default.
-    - **Linear calibration**: **AAPS** corrects the sensor values with a slope and an offset that it computes from your fingerstick entries.
+    - **Ingen kalibrering**: sensorvärdena används som de är. Använd detta när sensorn redan är fabrikskalibrerad och korrekt. Detta är standardvalet.
+    - **Linjär kalibrering**: **AAPS** korrigerar sensorvärdena med en lutning och en förskjutning (offset) som räknas ut från dina fingersticksmätningar.
     
-    How to use **Linear calibration**:
+    Så här använder du **Linjär kalibrering**:
     
-    1. Select **Linear calibration** in the **Calibration** category.
-    2. When you insert a new sensor, log the sensor change: use **Log sensor change** on the calibration screen, or enter a CGM sensor insert in the Careportal. This tells **AAPS** when the sensor session started. If **AAPS** notices a gap of more than 30 minutes in the readings, it may ask you to mark a sensor change; this prompt appears on the master only, not on a client.
-    3. Open the plugin and tap **Add calibration**. Enter your fingerstick value. **AAPS** pairs it with the sensor value from the last 10 minutes.
+    1. Välj **Linjär kalibrering** i kategorin **Kalibrering**.
+    2. När du sätter in en ny sensor ska du logga sensorbytet: använd **Logga sensorbyte** på kalibreringsskärmen, eller registrera en insättning av CGM-sensor i Careportal. Då vet **AAPS** när sensorsessionen startade. Om **AAPS** ser ett glapp på mer än 30 minuter i mätvärdena kan den be dig att markera ett sensorbyte. Den frågan visas bara på mastern, inte på en klient.
+    3. Öppna pluginet och tryck på **Lägg till kalibrering**. Ange ditt fingersticksvärde. **AAPS** parar ihop det med sensorvärdet från de senaste 10 minuterna.
     
-    A calibration is accepted only when:
+    En kalibrering godtas bara när:
     
-    - a sensor change is logged and at least **2 hours** have passed since then (warm-up),
-    - your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
-    - there is a CGM reading from the last 10 minutes,
-    - it is for the current moment. You cannot enter older fingerstick values.
+    - ett sensorbyte är loggat och minst **2 timmar** har gått sedan dess (uppvärmning),
+    - ditt glukosvärde är stabilt. Om det ändras för snabbt visar dialogen det och anger gränsen,
+    - det finns ett CGM-värde från de senaste 10 minuterna,
+    - det gäller just nu. Du kan inte ange äldre fingersticksvärden.
     
-    How the correction works:
+    Så fungerar korrigeringen:
     
-    - **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
-    - Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. The line therefore follows your sensor as it drifts.
-    - At least **2 pairs** are needed.
-    - If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
-    - The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
-    - Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. This protects you from a wrong entry.
+    - **AAPS** drar en rät linje genom paren för den aktuella sensorn: `corrected value = slope × sensor value + offset`.
+    - Nyare par väger tyngre än äldre: ett par som är 2 dagar gammalt väger ungefär 37 %, ett par som är 4 dagar gammalt ungefär 14 %. Därför följer linjen sensorn när den driver.
+    - Det krävs minst **2 par**.
+    - Om paren ligger nära varandra (mindre än 54 mg/dl / 3 mmol/l från varandra) flyttas bara värdena (förskjutning, ingen lutning).
+    - Lutningen hålls mellan 0,55 och 1,6. En lutning utanför detta intervall begränsas till närmaste värde.
+    - Säkerhetsgräns: om korrigeringen vid 100 mg/dl (5,5 mmol/l) skulle bli mer än ±30 mg/dl (1,7 mmol/l) görs ingen korrigering. Det skyddar dig mot en felaktig mätning.
     
-    What it changes:
+    Vad den ändrar:
     
-    - The corrected value is used everywhere: the BG on the main screen, the graph and the loop. The sensor readings themselves are not changed. The correction is applied on top, also to the earlier readings of the current sensor.
-    - A new sensor change starts from zero. Pairs from earlier sensors no longer count.
-    - On the graph, a calibration is shown as a marker at the fingerstick value.
-    - Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
+    - Det korrigerade värdet används överallt: BG på huvudskärmen, grafen och loopen. Själva sensorvärdena ändras inte. Korrigeringen läggs ovanpå, även på tidigare värden från den aktuella sensorn.
+    - Ett nytt sensorbyte börjar om från noll. Par från tidigare sensorer räknas inte längre.
+    - I grafen visas en kalibrering som en markering vid fingersticksvärdet.
+    - Kalibreringar synkroniseras via Nightscout, så att dina klienter visar samma korrigerade värden.
     
-    Check and remove entries:
+    Kontrollera och ta bort mätningar:
     
-    - **Open plugin** shows the status (for example *Slope 0.85, mid-range correction -0.4*), a chart of your pairs with the line, and the list of entries.
-    - If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. The line is calculated again at once.
+    - **Öppna plugin** visar status (till exempel *Lutning 0,85, korrektion i mellanområdet -0,4*), ett diagram med dina par och linjen, och listan med mätningar.
+    - Om en mätning är fel (till exempel om du hade socker på fingret) trycker du på papperskorgsikonen bredvid den. Linjen beräknas om direkt.
     
-    ```{admonition} Using xDrip+ as BG source?
+    ```{admonition} Använder du xDrip+ som BG-källa?
     :class: note
-    xDrip+ has its own calibration. Calibrate in one place only, so that the sensor values are not corrected twice.
+    xDrip+ har en egen kalibrering. Kalibrera bara på ett ställe, så att sensorvärdena inte korrigeras två gånger.
     
 
-    {admonition} Calibrate with care
+    {admonition} Kalibrera försiktigt
     :class: warning
-    A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Wash your hands before measuring, and do not calibrate while your glucose is changing fast.
+    Ett felaktigt fingersticksvärde ger felaktiga glukosvärden och därmed felaktig insulindosering. Tvätta händerna innan du mäter, och kalibrera inte när ditt glukosvärde ändras snabbt.
 
-![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)
+![Konfiguration > Kalibrering](../images/v4/Configuration/configuration_calibration.png)
 
 (Config-Builder-pump)=
 
 ## Pump
 
-Select the pump you are using. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
+Välj den pump du använder. Se sidan [Kompatibla pumpar](../Getting-Started/CompatiblePumps.md) för mer information om inställningen.
 
-![Configuration > Pump](../images/v4/Configuration/configuration_pump_list_1.png)
+![Konfiguration > Pump](../images/v4/Configuration/configuration_pump_list_1.png)
 
-Scroll down to see all the pump drivers:
+Skrolla nedåt för att se alla pumpdrivrutiner:
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_2.png)
+![Konfiguration > Pump, fortsättning](../images/v4/Configuration/configuration_pump_list_2.png)
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_3.png)
+![Konfiguration > Pump, fortsättning](../images/v4/Configuration/configuration_pump_list_3.png)
 
-![Configuration > Pump, end of the list](../images/v4/Configuration/configuration_pump_list_4.png)
+![Konfiguration > Pump, slutet av listan](../images/v4/Configuration/configuration_pump_list_4.png)
 
-When you select another pump, **AAPS** asks you to confirm the change:
+När du väljer en annan pump ber **AAPS** dig att bekräfta bytet:
 
-![Switch plugin confirmation](../images/v4/Pumps/switch_plugin_dialog.png)
+![Bekräftelse av byte av plugin](../images/v4/Pumps/switch_plugin_dialog.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
+* Dana R Korea (för den koreanska DanaR-pumpen)
+* Dana R v2 (DanaR-pump med inofficiell uppgradering av den fasta programvaran)
 * [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 * [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
-* Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
-* Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+* Omnipod för [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
+* Dash för [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
 * [Medtronic](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * [Carelevo](../CompatiblePumps/CareLevo.md)
-* Virtual pump: open loop - **AAPS** suggestions only 
-  * as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
-  * for pump which doesn't have any driver yet
+* Virtuell pump: öppen loop – **AAPS** ger bara förslag 
+  * när du tar dina första steg med **AAPS**, under de första [målen](../SettingUpAaps/CompletingTheObjectives.md)
+  * för en pump som ännu inte har någon drivrutin
 
 (config-builder-wrong-pump-data)=
 
-### Message: "Data is coming from different pump"
+### Meddelande: "Data kommer från en annan pump"
 
-**AAPS** remembers the pump it is connected to (pump type and serial number). If it receives data from another pump, for example after your pump was replaced by a new one of the same model, it shows this message and ignores the data from that pump:
+**AAPS** kommer ihåg pumpen som den är ansluten till (pumptyp och serienummer). Om den tar emot data från en annan pump, till exempel efter att din pump har bytts ut mot en ny av samma modell, visar den det här meddelandet och ignorerar data från den pumpen:
 
-![Data is coming from different pump](../images/Screen_DifferentPump.png)
+![Data kommer från en annan pump](../images/Screen_DifferentPump.png)
 
-To use the new pump, change the pump driver: select **Virtual pump**, confirm, then select your pump again. **AAPS** then registers the pump it is connected to now.
+För att använda den nya pumpen byter du pumpdrivrutin: välj **Virtuell pump**, bekräfta och välj sedan din pump igen. **AAPS** registrerar då pumpen som den är ansluten till nu.
 
 (Config-Builder-sensitivity-detection)=
 
-## Sensitivity Detection
+## Känslighetsdetektering
 
-![Configuration > Sensitivity detection](../images/v4/Configuration/configuration_sensitivity_detection.png)
+![Konfiguration > Känslighetsdetektering](../images/v4/Configuration/configuration_sensitivity_detection.png)
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about how the sensitivity ratio itself is calculated can be found in [Key AAPS Features > Autosens](#Open-APS-features-autosens).
+Välj typ av känslighetsdetektering. Mer information om de olika varianterna [finns här](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Den analyserar historiska data löpande och gör justeringar om den märker att du reagerar känsligare (eller tvärtom mer resistent) på insulin än vanligt. Mer information om hur själva känslighetskvoten räknas ut finns i [Viktiga funktioner i AAPS > Autosens](#Open-APS-features-autosens).
 
-You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SENS% and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+Du kan se din känslighet på huvudskärmen i en [extra graf](#AapsScreens-section-g-additional-graphs) genom att välja SENS% och titta på den vita linjen. Observera att du måste vara på [Mål 8](#objectives-objective8) för att känslighetsdetektering/[Autosens](#Open-APS-features-autosens) ska kunna justera mängden insulin som ges automatiskt. Innan du når det målet visas Autosens-procenten / linjen i din graf bara som information.
 
-### Absorption settings
+### Absorptionsinställningar
 
-If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+Om du använder Oref1 med **SMB** måste du ändra **min_5m_carbimpact** till 8. Värdet används bara när det saknas **CGM**-värden eller när fysisk aktivitet ”förbrukar” hela den blodsockerökning som annars skulle få **AAPS** att räkna ned COB. När [kolhydratupptagningen](../DailyLifeWithAaps/CobCalculation.md) inte kan räknas ut dynamiskt utifrån hur ditt blodsocker reagerar, används en standardnedräkning av dina kolhydrater. Det är alltså en säkerhetsspärr.
 
 (Config-Builder-aps)=
 
 ## APS
 
-![Configuration > APS](../images/v4/Configuration/configuration_aps.png)
+![Konfiguration > APS](../images/v4/Configuration/configuration_aps.png)
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm with **Open plugin**.
+Välj vilken APS-algoritm som ska användas för att justera behandlingen. Du kan se aktuella detaljer för den valda algoritmen med **Öppna plugin**.
 
 * OpenAPS AMA 
-  * Advanced Meal Assist: older algorithm not recommended anymore.
-  * In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
+  * Advanced Meal Assist: äldre algoritm som inte längre rekommenderas.
+  * Enkelt uttryckt är fördelen att systemet efter en måltidsbolus snabbare kan ge en hög tillfällig basal, OM du anger kolhydraterna på ett pålitligt sätt.
 * [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb) 
-  * Super Micro Bolus: most recent algorithm recommended for all users.
-  * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
-  * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
+  * Super Micro Bolus: den senaste algoritmen, rekommenderas för alla användare.
+  * Till skillnad från AMA använder SMB inte i första hand tillfälliga basaler för att styra glukosnivån, utan främst små **supermikrobolusar** (Super Micro Boluses).
+  * Obs! Vi rekommenderar att du använder den här algoritmen från början, även om du inte får några SMB:er förrän du når [Mål 9](#objectives-objective9).
 * [Auto ISF](#Open-APS-features-auto-isf) 
-  * Experimental algorithm for advanced users. It is only listed once the objectives are completed.
+  * Experimentell algoritm för avancerade användare. Den visas bara i listan när målen är slutförda.
 
-If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manually to **8** (default value for SMB) in [Settings → Absorption settings](#Preferences-min_5m_carbimpact).
+Om du byter från algoritmen AMA till SMB måste *min_5m_carbimpact* ändras manuellt till **8** (standardvärdet för SMB) i [Inställningar → Absorptionsinställningar](#Preferences-min_5m_carbimpact).
 
 ## Loop
 
-This module cannot be disabled as it is a core part of **AAPS**.
+Den här modulen kan inte inaktiveras eftersom den är en central del av **AAPS**.
 
-![Configuration > Loop](../images/v4/Configuration/configuration_loop.png)
+![Konfiguration > Loop](../images/v4/Configuration/configuration_loop.png)
 
-## Constraints
+## Begränsningar
 
-![Configuration > Constraints](../images/v4/Configuration/configuration_constraints.png)
+![Konfiguration > Begränsningar](../images/v4/Configuration/configuration_constraints.png)
 
-### Objectives
+### Mål
 
-**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system.
+**AAPS** har ett utbildningsprogram (en serie mål) som du måste klara steg för steg. Det ska leda dig säkert genom inställningen av ett system med sluten loop.
 
-See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
+Se sidan [Mål](../SettingUpAaps/CompletingTheObjectives.md) för mer information.
 
-## Communication
+## Kommunikation
 
-In this category (called **Synchronization** in **AAPS** v3), you choose if/where you want **AAPS** to send your data to.
+I den här kategorin (som hette **Synkronisering** i **AAPS** v3) väljer du om och vart **AAPS** ska skicka dina data.
 
-![Configuration > Communication](../images/v4/Configuration/configuration_communication.png)
+![Konfiguration > Kommunikation](../images/v4/Configuration/configuration_communication.png)
 
-Scroll down to see the rest of the list:
+Skrolla nedåt för att se resten av listan:
 
-![Configuration > Communication, continued](../images/v4/Configuration/configuration_communication_2.png)
+![Konfiguration > Kommunikation, fortsättning](../images/v4/Configuration/configuration_communication_2.png)
 
 ### NSClientV3
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md).
+Kan användas som [rapportserver](../SettingUpAaps/SettingUpTheReportingServer.md) och/eller för [fjärrövervakning](../RemoteFeatures/RemoteMonitoring.md) och [fjärrstyrning](../RemoteFeatures/RemoteControl.md).
 
-See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to set up NSClientV3 synchronization.
+Se [Synkronisering med rapportservern](#SetupWizard-synchronization-with-the-reporting-server-and-more) för att ställa in synkronisering med NSClientV3.
 
 ### Tidepool
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+Kan användas som [rapportserver](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-See [Tidepool](../SettingUpAaps/Tidepool.md).
+Se [Tidepool](../SettingUpAaps/Tidepool.md).
 
 ### xDrip
 
-Used to **send** data such as glucose values and treatments to xDrip+ on the same phone. Its settings also hold **Send status to xDrip+**, a status line with IOB and COB that xDrip+ and some watch companion apps display.
+Används för att **skicka** data som glukosvärden och behandlingar till xDrip+ på samma telefon. I dess inställningar finns också **Skicka status till xDrip+**, en statusrad med IOB och COB som xDrip+ och vissa hjälpappar för klockor visar.
 
 ### Open Humans
 
-See [Open Humans](../SupportingAaps/OpenHumans.md).
+Se [Open Humans](../SupportingAaps/OpenHumans.md).
 
 (Config-Builder-wear)=
 
-### Wear
+### Klocka (Wear)
 
-Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is explained on [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md). After enabling the plugin, choose its options in [Settings > Wear](#preferences-wear). Using the watch is explained on [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
+Övervaka och styr **AAPS** från en klocka med Wear OS. Hur du ställer in klockan förklaras på [Smartklocka med Wear OS](../WearOS/WearOsSmartwatch.md). När du har aktiverat pluginet väljer du dess alternativ i [Inställningar > Klocka (Wear)](#preferences-wear). Hur du använder klockan förklaras på [Styra AAPS från din smartklocka med Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
 (external-companion-apps)=
 
-### External Companion Apps
+### Externa hjälpappar
 
-Broadcasts **AAPS** status data on the phone so that other apps installed on it can display it — for example watch or widget companion apps. The broadcast includes glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Enable it only if a companion app you use asks for this data.
+Sänder ut statusdata från **AAPS** på telefonen så att andra appar som är installerade där kan visa dem – till exempel hjälpappar för klockor eller widgets. Sändningen innehåller glukosvärde och trend, IOB, COB, basal och tillfällig basal, profilnamn, loopstatus, telefonens och pumpens batteri, reservoarnivå och bolusförlopp. Aktivera det bara om en hjälpapp som du använder behöver de här data.
 
-Apps known to read this broadcast are [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi and Amazfit watches), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS complications and widgets, and Android Auto through GlucoDataAuto) and the G-Watch app. Their setup is described on [Smartwatches and AAPS](#watches-external-companion-apps). Some of them also use **Send status to xDrip+** from the **xDrip** plugin above for a status line with IOB and COB.
+Appar som vi vet läser den här sändningen är [WatchDrip+](https://bigdigital.home.blog/) (klockor från Xiaomi och Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (komplikationer och widgets för Wear OS, och Android Auto via GlucoDataAuto) och appen G-Watch. Hur de ställs in beskrivs på [Smartklockor och AAPS](#watches-external-companion-apps). Några av dem använder också **Skicka status till xDrip+** från pluginet **xDrip** ovan för en statusrad med IOB och COB.
 
-In earlier versions this plugin was called **Samsung Tizen**, after the [G-Watch app for Samsung Tizen watches](#Watchfaces-tizen) it was first made for.
+I tidigare versioner hette det här pluginet **Samsung Tizen**, efter [appen G-Watch för Samsung Tizen-klockor](#Watchfaces-tizen) som det först gjordes för.
 
 ### Garmin
 
-Connection to Garmin device (Fenix, Edge...)
+Anslutning till en Garmin-enhet (Fenix, Edge...)
 
 ## Treatments
 
-Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through **Treatments → Carbs** in the bottom navigation (see [Carbs](#screens-bolus-carbs)).
+Öppna **menyn** (☰) och välj [Behandlingshistorik](#aaps-screens-treatments) för att se de behandlingar som har loggats. Om du vill ändra eller radera en post (t.ex. om du åt mindre kolhydrater än du trodde) väljer du 'Ta bort' och anger det nya värdet (ändra tiden om det behövs) via **Behandlingar → Kolhydrater** i den nedre navigeringen (se [Kolhydrater](#screens-bolus-carbs)).
 
-## General
+## Allmänt
 
-In **AAPS** 4 the **General** category of **Configuration** only lists **Autotune**. The other features described below are always available and no longer need to be enabled here; each paragraph says where to find them.
+I **AAPS** 4 listar kategorin **Generellt** i **Konfiguration** bara **Autotune**. De andra funktionerna som beskrivs nedan finns alltid och behöver inte längre aktiveras här; varje stycke talar om var du hittar dem.
 
-![Configuration > General](../images/v4/Configuration/configuration_general.png)
+![Konfiguration > Generellt](../images/v4/Configuration/configuration_general.png)
 
 ### Overview
 
-The [main screen](#AapsScreens-the-homescreen) of **AAPS** is not a plugin any more and has no settings of its own in **Configuration**. The options that used to be here are in **Settings** (gear icon): [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs), [Status lights](#Preferences-status-lights) and the [Bolus percentage](#Preferences-deliver-this-part-of-bolus-wizard-result) used by the bolus wizard. The super bolus option of **AAPS** 3.x is [not available as a setting](#Preferences-advanced-settings-overview) in **AAPS** 4.
+[Huvudskärmen](#AapsScreens-the-homescreen) i **AAPS** är inte längre ett plugin och har inga egna inställningar i **Konfiguration**. Alternativen som tidigare fanns här finns nu i **Inställningar** (kugghjulsikonen): [Visa anteckningar i dialogrutor](#Preferences-show-notes-field-in-treatments-dialogs), [Statuslampor](#Preferences-status-lights) och [Bolusprocent](#Preferences-deliver-this-part-of-bolus-wizard-result) som används av kalkylatorn. Superbolus-alternativet i **AAPS** 3.x är [inte tillgängligt som inställning](#Preferences-advanced-settings-overview) i **AAPS** 4.
 
 (Config-Builder-actions)=
 
 ### Actions
 
-The Actions tab of **AAPS** 3.x no longer exists. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
+Fliken Åtgärder i **AAPS** 3.x finns inte längre. Dess knappar finns nu i panelen **Hantera** – se [Vart tog fliken Åtgärder vägen?](#screens-action-tab).
 
 ### Automation
 
-**Manage → Automation** lets you manage your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
+Med **Hantera → Automation** hanterar du dina [automatiseringar](../DailyLifeWithAaps/Automations.md), från och med [Mål 10](#objectives-objective10).
 
 (Config-Builder-sms-communicator)=
 
-### SMS Communicator
+### SMS-kommunikation
 
-Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
+Gör det möjligt för anhöriga att på distans styra vissa funktioner i **AAPS** via SMS. Se [SMS-kommandon](../RemoteFeatures/SMSCommands.md) för mer information om inställningen.
 
-### Food
+### Matdatabas
 
-**Manage → Food** displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+**Hantera → Matdatabas** visar de förinställda livsmedlen som är definierade i matdatabasen i Nightscout, se [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) för mer information om inställningen.
 
-Note: Entries cannot be used in the **AAPS** calculator. (View only)
+Obs! Posterna kan inte användas i kalkylatorn i **AAPS**. (Endast visning)
 
 (Config-Builder-autotune)=
 
 ### Autotune
 
-You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+Du kan aktivera Autotune, se [här](../AdvancedOptions/Autotune.md).
 
-### Maintenance
+### Underhåll
 
-Open the **menu** (☰) and select **Maintenance** to export / import settings and manage log files.
+Öppna **menyn** (☰) och välj **Underhåll** för att exportera / importera inställningar och hantera loggfiler.
 
-![Maintenance screen, log files](../images/screens/maintenance.png)
+![Skärmen Underhåll, loggfiler](../images/screens/maintenance.png)
 
-![Maintenance screen, file management](../images/screens/maintenance_2.png)
+![Skärmen Underhåll, filhantering](../images/screens/maintenance_2.png)
 
-![Maintenance screen, database management](../images/screens/maintenance_3.png)
+![Skärmen Underhåll, databashantering](../images/screens/maintenance_3.png)
 
 ### Config Builder
 
-Now called **Configuration**: this current page.
+Heter nu **Konfiguration**: den här sidan.
