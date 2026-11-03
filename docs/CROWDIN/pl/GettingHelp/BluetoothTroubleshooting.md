@@ -2,7 +2,7 @@
 
 # Rozwiązywanie problemów z Bluetooth
 
-Niektórzy użytkownicy mają problemy z nieudaną aktywacją Omnipod DASH, z połączeniem z Medtrum Nano oraz inne błędy podów związane z Bluetooth. Wiele z tych problemów ma jedną z przyczyn opisanych poniżej.
+Niektórzy użytkownicy mają problemy z nieudaną aktywacją Omnipod DASH, z połączeniem z Medtrum Nano oraz inne błędy Podów związane z Bluetooth. Wiele z tych problemów ma jedną z przyczyn opisanych poniżej.
 
 Część z tych problemów dotyczy prawdopodobnie także innych pomp insulinowych z Bluetooth. Medtrum Nano, tak jak Omnipod DASH, ma znane problemy z uprawnieniem „Urządzenia w pobliżu”.
 
@@ -11,7 +11,7 @@ Część z tych problemów dotyczy prawdopodobnie także innych pomp insulinowyc
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
 ## Nie można uruchomić Omnipod na Androidzie 16
-- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this version has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
+- Omnipod DASH na Androidzie 16 działa poprawnie dopiero od wersji **AAPS** 3.3.2.1, bo ta wersja zawiera poprawki znanych problemów, które Android 16 wprowadził dla Omnipod.
 
 ---
 
@@ -19,21 +19,21 @@ Część z tych problemów dotyczy prawdopodobnie także innych pomp insulinowyc
 
 ## Optymalizacja baterii dla Bluetooth
 
-Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. Wiadomo, że powoduje to problemy z pompami i systemami CGM na Bluetooth.
+Nowsze wersje Androida włączają optymalizację baterii dla systemowej aplikacji Bluetooth. Wiadomo, że powoduje to problemy z pompami i systemami CGM na Bluetooth.
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
+Jeśli przeszedłeś przez [Kreator konfiguracji AAPS](../SettingUpAaps/SetupWizard.md) i ustawiłeś wszystko zgodnie z sekcją [Optymalizacja baterii dla Bluetooth](#setup-wizard-bluetooth-battery-optimisation), to ustawienie powinno być poprawne. Jeśli jednak korzystałeś ze starszej wersji tego przewodnika, możliwe, że tego ustawienia nie zmieniłeś.
 
-Verify this is correctly configured if you have pump and CGM disconnections.
+Jeśli pompa lub CGM traci połączenie, sprawdź, czy to ustawienie jest poprawne.
 
 ---
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission)=
 
-## Aplikacje z uprawnieniem Androida „Urządzenia w pobliżu” mogą powodować utratę połączenia i problemy z aktywacją poda
+## Aplikacje z uprawnieniem Androida „Urządzenia w pobliżu” mogą powodować utratę połączenia i problemy z aktywacją Poda
 
 Android pozwala Ci kontrolować, co każda aplikacja może robić lub do czego ma dostęp w telefonie. Służą do tego uprawnienia. Dla każdej zainstalowanej aplikacji możesz zezwolić na konkretne uprawnienia albo ich odmówić, np. dostęp do plików na urządzeniu, dostęp do Bluetooth, wyszukiwanie urządzeń w pobliżu itd.
 
-**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. Wiele innych aplikacji też potrzebuje tego uprawnienia. Społeczność zauważyła, że niektóre aplikacje z tym uprawnieniem mogą na niektórych urządzeniach powodować problemy z aktywacją nowych podów.
+**AAPS** potrzebuje kilku konkretnych uprawnień, aby działać. Jedno z nich, potrzebne do pracy Podów, to uprawnienie „Urządzenia w pobliżu”. Wiele innych aplikacji też potrzebuje tego uprawnienia. Społeczność zauważyła, że niektóre aplikacje z tym uprawnieniem mogą na niektórych urządzeniach powodować problemy z aktywacją nowych Podów.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
@@ -48,22 +48,22 @@ Napisz do @XiTatiON na kanale Discord #omnipod-dash, aby omówić aplikacje, kt�
 
 - **myBMW** Aplikacja MyBMW zakłócała pracę Medtrum Nano i Omnipod DASH. Aplikacja MyBMW pyta o uprawnienie „znajdowanie urządzeń w pobliżu” tylko raz. Jeśli go nie przyznasz, nadal działa zupełnie dobrze.
 
-- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
+- **Amazon Alexa**  Usunięcie uprawnienia „Urządzenia w pobliżu” dla aplikacji Alexa rozwiązało problem u części osób, ale wyłącza możliwość parowania urządzeń IoT Matter.
 
-- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
+- **MINI app**  Wygląda na to, że ta aplikacja jest oparta na aplikacji myBMW i dlatego może zachowywać się tak samo.
 
-- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. Późniejsze uruchomienie aplikacji nie zakłócało pracy Dash (na Pixel 8 Pro z Androidem 16).
+- **BM2** Aplikacja do monitorowania akumulatora solarnego, używana w niektórych kamperach i zestawach solarnych na kemping. Gdy aplikacja działała, nie dało się aktywować nowego Poda. Obejściem problemu jest wymuszenie zatrzymania aplikacji na czas aktywacji nowego Poda. Późniejsze uruchomienie aplikacji nie zakłócało pracy Dash (na Pixel 8 Pro z Androidem 16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
 ### Jak odebrać uprawnienie „Urządzenia w pobliżu” innym aplikacjom:
-If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
+Jeśli masz problemy z aktywacją nowego Poda, a używasz właściwej, obsługiwanej wersji **AAPS** dla Twojej wersji Androida, może być konieczne odebranie tego uprawnienia innym aplikacjom na czas aktywacji nowego Poda.
 
-Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
+Wykonaj te kroki, aby odebrać uprawnienie „Urządzenia w pobliżu” wszystkim aplikacjom oprócz **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
-Zrzuty ekranu i instrukcje w tym przewodniku pochodzą z czystego Androida 16 (Vanilla) na Google Pixel 8 Pro. Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
+Zrzuty ekranu i instrukcje w tym przewodniku pochodzą z czystego Androida 16 (Vanilla) na Google Pixel 8 Pro. U innych producentów i na innych urządzeniach menu i opisy ustawień prawdopodobnie nie będą dokładnie takie same. Dostosuj kroki do swojego urządzenia. Jeśli utkniesz, zajrzyj do sekcji [Gdzie uzyskać pomoc dla Dash](#omnipod-dash-where-to-get-help-for-dash), aby dowiedzieć się, jak poprosić społeczność o pomoc.
 ```
 
 1. Otwórz ustawienia Androida w telefonie, przewiń w dół i naciśnij **Bezpieczeństwo i prywatność (1)** (Security and privacy).
@@ -86,11 +86,11 @@ Zrzuty ekranu i instrukcje w tym przewodniku pochodzą z czystego Androida 16 (V
 
    W tym przewodniku odbieramy uprawnienie aplikacji **Android Auto (1)**.
 
-   Aby nie zniszczyć kolejnych podów, radzimy wszystkim na początek odebrać to uprawnienie wszystkim aplikacjom oprócz **AAPS**.
+   Aby nie zniszczyć kolejnych Podów, radzimy wszystkim na początek odebrać to uprawnienie wszystkim aplikacjom oprócz **AAPS**.
 
 ```{admonition} Which app to select?
 :class: tip
-Jeśli nie wiesz, która aplikacja powoduje problem, wyłącz uprawnienie wszystkim (sprawdź też listę znanych problematycznych aplikacji i zacznij od nich). Jeśli możesz poświęcić kilka zniszczonych podów, przed każdą aktywacją nowego poda włączaj uprawnienie jednej kolejnej aplikacji, aż ustalisz, która dokładnie aplikacja powoduje problemy z podem. Jeśli znajdziesz nowe problematyczne aplikacje, daj nam znać na kanale Discord #omnipod-dash.
+Jeśli nie wiesz, która aplikacja powoduje problem, wyłącz uprawnienie wszystkim (sprawdź też listę znanych problematycznych aplikacji i zacznij od nich). Jeśli możesz poświęcić kilka zniszczonych Podów, przed każdą aktywacją nowego Poda włączaj uprawnienie jednej kolejnej aplikacji, aż ustalisz, która dokładnie aplikacja powoduje problemy z Podem. Jeśli znajdziesz nowe problematyczne aplikacje, daj nam znać na kanale Discord #omnipod-dash.
 ```
 
    ![android_nearby_dev](../images/android_16/android_nearby_dev.png)
@@ -103,7 +103,7 @@ Jeśli nie wiesz, która aplikacja powoduje problem, wyłącz uprawnienie wszyst
 
 ### Jak ponownie włączyć uprawnienie „Urządzenia w pobliżu” dla aplikacji systemowych i innych aplikacji:
 
-1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
+1. W razie potrzeby zajrzyj do sekcji **„Jak odebrać uprawnienie »Urządzenia w pobliżu« innym aplikacjom”**, aby dowiedzieć się, jak dojść do ustawień prywatności aplikacji. Gdy będziesz w ustawieniach **Urządzenia w pobliżu**, przejdź do kroku 2.
 
 2. Przejrzyj listę aplikacji i naciśnij aplikację, której chcesz przyznać uprawnienie **Urządzenia w pobliżu**.
 
@@ -122,7 +122,7 @@ Jeśli aplikacja ma odebrane uprawnienie, przewiń w dół, aż zobaczysz listę
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. Follow the guidance in **"How to revoke 'Nearby device' permissions for other apps"** in reverse to re-enable permissions for each app.
+5. Aby ponownie przyznać uprawnienia każdej aplikacji, wykonaj kroki z sekcji **„Jak odebrać uprawnienie »Urządzenia w pobliżu« innym aplikacjom”** w odwrotnej kolejności.
 
 ---
 
