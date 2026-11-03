@@ -1,65 +1,65 @@
-# Pumps and cannulas
+# משאבות וצינוריות
 
 ## Changing infusion sets: insulin reservoirs and cannulas
 
-The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. This procedure is sometimes referred to as a "set change", with a "full" set change including the insulin reservoir and cannula, and a "partial" set change referring to a change of cannula only.
+The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. לפעולה הזו קוראים לפעמים "החלפת סט" (set change): החלפת סט "מלאה" כוללת את מכל האינסולין ואת הצינורית, והחלפת סט "חלקית" היא החלפה של הצינורית בלבד.
 
-Patch pumps fill and prime themselves in their own activation wizard, and their cannula is already in the body. **AAPS** does not offer a prime for them: **Prime/Fill** is not shown in the **Manage** sheet or in QuickLaunch. See the page of your pump in [Compatible pumps](../Getting-Started/CompatiblePumps.md).
+משאבות פאץ' ממלאות ומתחלות את עצמן באשף ההפעלה שלהן, והצינורית שלהן כבר נמצאת בגוף. **AAPS** לא מציע עבורן תיחול: **תיחול/מילוי** לא מוצג בחלון **ניהול** ולא בהפעלה המהירה (QuickLaunch). את הדף של המשאבה שלכם אפשר למצוא ב-[משאבות תואמות](../Getting-Started/CompatiblePumps.md).
 
 Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be carried out via the pump directly. These need to be logged in **AAPS** manually, once completed.
 
 (pumps-cannulas-changing-reservoir-and-cannula)=
 ### Guide for changing both the pump reservoir and cannula
 
-1. In **AAPS**, disconnect the pump: press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** for 1 hour. The icon changes to a grey plug icon, indicating that the pump is disconnected.
+1. ב-**AAPS** יש לנתק את המשאבה: ללחוץ על [סמל הלולאה](#AapsScreens-loop-status) במסך הראשי ולבחור **ניתוק המשאבה** למשך שעה אחת. הסמל משתנה לסמל תקע אפור, שמראה שהמשאבה מנותקת.
 
 2. Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
 
 3. Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
 
-4. Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
+4. Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. כדי לרשום זאת ב-**AAPS** ולתחל את האתר: יש לפתוח את **תיחול/מילוי** (בלוח המצב המורחב במסך הראשי, בחלון **ניהול**, או כלחצן [הפעלה מהירה](QuickLaunch.md)) ולסמן את **רישום החלפת אתר עירוי** ו/או **רישום החלפת מכל אינסולין**, לפי הצורך, כדי לרשום את ההחלפה. עכשיו יש ללחוץ על כמות התיחול של הצינורית שמוגדרת כברירת מחדל (בדרך כלל בערך 0.3 U, אבל יש לוודא שהערך הזה נכון לצינורית שלכם) ולבחור **אישור**. יש לקרוא את הודעת הסיכום ולאשר את ביצוע התיחול בלחיצה על **אישור**.
 
-   ![Prime/Fill in the Manage sheet with a tube pump](../images/v4/Screens/manage_sheet_tube_pump.png)
+   ![תיחול/מילוי בחלון הניהול, עם משאבה עם צינורית](../images/v4/Screens/manage_sheet_tube_pump.png)
 
 
-5. Reconnect the pump in **AAPS**: press the grey plug icon and select **Reconnect pump** to continue looping.
+5. יש לחבר מחדש את המשאבה ב-**AAPS**: ללחוץ על סמל התקע האפור ולבחור **חיבור המשאבה מחדש** כדי להמשיך בלולאה.
 
 ### Useful information concerning insulin/cannula changes
 
-* Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** main screen.
+* רישום של החלפת אתר עירוי במשאבה מאפס את Autosens ל-100%. הוא גם מאפס את אורות החיווי ואת הגיל של הצינורית/האינסולין במסך הראשי של **AAPS**.
 
-* You can set/adjust the default prime amounts in the **Prime/Fill** settings — type "prime" in the main screen search bar to open them (see [Preferences](../SettingUpAaps/Preferences.md)). See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
+* ניתן להגדיר/לשנות את כמויות התיחול שמוגדרות כברירת מחדל בהגדרות **תיחול/מילוי** — יש להקליד "prime" בשורת החיפוש במסך הראשי כדי לפתוח אותן (ראו [הגדרות](../SettingUpAaps/Preferences.md)). See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
 
-* Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the [Treatments history](#aaps-screens-treatments) as "Prime".
+* **AAPS** לא מתחשב באינסולין שניתן בפונקציית התיחול כשהוא מחשב את האינסולין הפעיל בגוף (IOB), והאינסולין הזה מסומן ב[היסטוריית טיפולים](#aaps-screens-treatments) כ"תיחול" (Prime).
 
-* Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) in the **Insulin** dialog (see [To announce delivered insulin without actually bolusing](#pumps-cannulas-announce-insulin) below).
+* גם אינסולין שניתן כבולוס ישירות מהמשאבה בזמן שהמשאבה מנותקת לא נלקח בחשבון על ידי **AAPS**. אם נתתם בולוס ישירות מהמשאבה בזמן ש-**AAPS** היה מנותק, אחרי חיבור המשאבה מחדש אפשר לרשום את האינסולין הזה (בלי לתת אותו שוב) בחלון **אינסולין** (ראו [רישום אינסולין שכבר ניתן, בלי לתת בולוס בפועל](#pumps-cannulas-announce-insulin) בהמשך).
 
 ### Cannula, infusion site, tubing and/or pump issues
 
-If you are confident that you haven't received any insulin for a period of time, despite **AAPS** recording that you have, and you know exactly when the issue started (_e.g._ you remove the cannula and see that the cannula was kinked during the insertion process) you can correct this in **AAPS**, while being aware that the insulin may in fact have been delivered but may be slow to act for some reason.
+אם אתם בטוחים שלא קיבלתם אינסולין במשך פרק זמן מסוים, למרות ש-**AAPS** רשם שקיבלתם, ואתם יודעים בדיוק מתי הבעיה התחילה (_למשל_ הסרתם את הצינורית וראיתם שהיא התקפלה בזמן ההחדרה), אפשר לתקן זאת ב-**AAPS**. עם זאת, יש לזכור שייתכן שהאינסולין כן ניתן, אבל הוא פועל לאט מסיבה כלשהי.
 
 ```{admonition} Caution - Risk of Hypoglycemia
 :class: danger
 Only delete insulin delivery from **AAPS** with EXTREME caution, in case insulin _has_ actually been delivered, and monitor BG closely for the next 24 h.
 ```
 
-To remove boluses and SMBs which you know have not been delivered, open the **menu** (☰), select [Treatments history](#aaps-screens-treatments) and, on the **Carbs and bolus** tab, conservatively delete the logged boluses starting from the point the incident happened. This will correct the "insulin on board" (IOB) value which is key for **AAPS**' calculations; if you now return to the main screen you will see that the IOB has reduced. Be aware that you cannot delete basal insulin which **AAPS** calculates to have been delivered, so that will still be taken into account by **AAPS**.
+כדי להסיר בולוסים ו-SMB שאתם יודעים שלא ניתנו, יש לפתוח את **התפריט** (☰), לבחור [היסטוריית טיפולים](#aaps-screens-treatments), ובלשונית **פחמימות ובולוס** למחוק בזהירות את הבולוסים שנרשמו, החל מהרגע שבו האירוע קרה. כך מתוקן ערך "האינסולין הפעיל בגוף" (IOB), שהוא ערך מרכזי בחישובים של **AAPS**; אם תחזרו עכשיו למסך הראשי, תראו שה-IOB ירד. Be aware that you cannot delete basal insulin which **AAPS** calculates to have been delivered, so that will still be taken into account by **AAPS**.
 
-In less obvious cases of insulin delivery problems _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. You may detect these issues either by "smelling" the insulin, seeing a wet adhesive, encountering high glucose values or by getting an alarm. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs to be deducted from the current "insulin on board" (IOB) value. One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
+במקרים פחות ברורים של בעיות במתן אינסולין, _למשל_ דליפות, חסימות או מנהור (tunneling), שבהם אתם לא בטוחים מתי הבעיה התחילה, או חושבים שחלק מהאינסולין כן ניתן, יש לנהוג בזהירות. אפשר לזהות בעיות כאלה לפי "ריח" של אינסולין, מדבקה רטובה, ערכי סוכר גבוהים או התראה. מכיוון שלעולם לא תדעו כמה אינסולין נכנס לעור (ואולי יתחיל לפעול אחרי זמן מה), יהיה קשה לקבוע כמה אינסולין בדיוק יש להפחית מערך "האינסולין הפעיל בגוף" (IOB) הנוכחי. One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
 
 (pumps-cannulas-disconnecting)=
 ## Disconnecting the pump for showering or activity
 
-If you take your pump off for showering, bathing, swimming, contact sports or other activities you must let **AAPS** know that no insulin is being delivered, to keep the IOB correct. The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, open the same dialog again and pick a new duration under **Disconnect pump**: the disconnection is extended and the new duration starts from now. You do not need to reconnect first.
+If you take your pump off for showering, bathing, swimming, contact sports or other activities you must let **AAPS** know that no insulin is being delivered, to keep the IOB correct. אפשר לנתק את המשאבה בעזרת [סמל הלולאה](#AapsScreens-loop-status) במסך הראשי: יש ללחוץ עליו ולבחור **ניתוק המשאבה** עם משך הזמן הדרוש. אם הפעילות נמשכת יותר מהמתוכנן, יש לפתוח שוב את אותו חלון ולבחור משך חדש תחת **ניתוק המשאבה**: הניתוק מוארך, והמשך החדש מתחיל מעכשיו. אין צורך לחבר מחדש קודם.
 
-As you are not getting any insulin while the pump is disconnected, you should reconnect every two hours to catch up for the missing basal. You can do this by connecting, bolusing the missing basal amounts (_e.g._ of the last two hours) before disconnecting again. This should help to avoid a severe lack of insulin which could result in diabetic ketoacidosis (DKA). If it is inconvenient to reconnect the pump during activity (cannula site is covered by wearing a wetsuit _etc._), consider a pen injection instead. This manual injection can be logged in **AAPS**, and doesn't have to be logged at the time of injection (just make a note of the time of injection) since you can announce the insulin and backdate the time the insulin was actually given when you reconnect the pump.
+As you are not getting any insulin while the pump is disconnected, you should reconnect every two hours to catch up for the missing basal. You can do this by connecting, bolusing the missing basal amounts (_e.g._ of the last two hours) before disconnecting again. This should help to avoid a severe lack of insulin which could result in diabetic ketoacidosis (DKA). If it is inconvenient to reconnect the pump during activity (cannula site is covered by wearing a wetsuit _etc._), consider a pen injection instead. אפשר לרשום את ההזרקה הידנית הזו ב-**AAPS**, ואין צורך לרשום אותה ברגע ההזרקה (רק לרשום לעצמכם את שעת ההזרקה), כי כשמחברים מחדש את המשאבה אפשר לרשום את האינסולין ולהחזיר אחורה את השעה שבה הוא ניתן בפועל.
 
 (pumps-cannulas-announce-insulin)=
 ## To announce delivered insulin without actually bolusing
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
+כדי לרשום אינסולין שניתן מהמשאבה בזמן ש-**AAPS** היה מנותק, או אינסולין מהזרקות בעט: יש לפתוח את [חלון האינסולין](#aaps-screens-buttons-insulin) (**טיפולים** בסרגל הניווט התחתון, או לחצן בהפעלה המהירה), להזין את הכמות ביחידות ולהפעיל את **בולוס רשום בלבד (לא מוזרק על ידי המשאבה)**. לאחר מכן מופיעה שורת **זמן** (עם הערך **עכשיו**), שבה אפשר לרשום את השעה האמיתית של ההזרקה: אם ההזרקה ניתנה לפני זמן קצר, אפשר להתעלם ממנה. אם הבולוס ניתן לפני זמן מה, יש להשתמש ב-**-** כדי להחזיר את השעה אחורה (_למשל_ -30 דקות), או לפתוח את השורה בעזרת החץ ולבחור את התאריך והשעה המדויקים. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
 
-If you are using **AAPS** as a caregiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as "pump disconnect 120" and "pump connect 120". The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.
+אם אתם משתמשים ב-**AAPS** כמטפלים, אפשר לנתק (ולחבר מחדש) את המשאבה מרחוק בקלות רבה באמצעות [פקודת SMS](../RemoteFeatures/SMSCommands.md), עם פקודות כמו "pump disconnect 120" ו-"pump connect 120". The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.
 
 ## Reconnecting the pump after activity
 
@@ -69,48 +69,48 @@ a) Just reconnect the pump in **AAPS** (grey-to-green, for closed loop) and leav
 
 _or_
 
-b) If you want to be more aggressive (for example, you are heading for hyperglycemia), you can open the [Bolus wizard](#aaps-screens-bolus-wizard) and bolus for zero carbs, to immediately deliver the calculated missing insulin as a bolus.
+b) אם רוצים לפעול בצורה אגרסיבית יותר (למשל, הסוכר עולה לכיוון היפרגליקמיה), אפשר לפתוח את [אשף בולוס](#aaps-screens-bolus-wizard) ולתת בולוס לאפס פחמימות, כדי לתת מיד כבולוס את האינסולין החסר שחושב.
 
 Which strategy you prefer is highly personal, and is best determined by trial and error.
 
 
 (Aapsscreens-site-rotation)=
-## Site Rotation
+## סבב אתרי עירוי
 
-**Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
+**ניהול ← סבב אתרי עירוי** פותח את חלון סבב אתרי העירוי במצב תצוגה:
 
-- With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
-- All Cannula change and Sensor change events from the past 45 days are available.
-- Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-- Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
+- בעזרת שני הלחצנים בחלק העליון (סמל צינורית וסמל חיישן) אפשר להציג רק אתרי צינורית, רק אתרי חיישן, או את שניהם
+- כל אירועי החלפת הצינורית והחלפת החיישן מ-45 הימים האחרונים זמינים.
+- יש ללחוץ על אזור באיור, או על רשומה ברשימה שמתחת, כדי לסנן את הרשימה ולהציג רק את הרשומות באזור שנבחר. האזור שנבחר מסומן בצבע ירוק בהיר.
+- יש ללחוץ על סמל **העיפרון** ליד רשומה כדי לפתוח את מצב העריכה ולעדכן את מיקום האתר, את החץ או את ההערה שלה
 
-![View Mode](../images/SiteRotation/ViewMode.png)
+![מצב תצוגה](../images/SiteRotation/ViewMode.png)
 
-- The **cog** icon (upper right) opens the settings: **User profile for site rotation** opens a dialog where you choose **Man**, **Woman** or **Child**, and the **Manage pump site rotation** and **Manage CGM site rotation** switches select which sites you manage.
+- סמל **גלגל השיניים** (בפינה העליונה) פותח את ההגדרות: **פרופיל משתמש לסבב אתרים** פותח חלון שבו בוחרים **גבר**, **אישה** או **ילד**, והמתגים **ניהול סבב אתרי משאבה** ו-**ניהול סבב אתרי CGM** קובעים אילו אתרים מנהלים.
 
 ![הגדרות](../images/SiteRotation/Settings.png)
 
-![User profile for site rotation dialog](../images/SiteRotation/Type.png)
+![החלון פרופיל משתמש לסבב אתרים](../images/SiteRotation/Type.png)
 
-*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
+*הערה: ההגדרה הזו קובעת אם חלון סבב אתרי העירוי (מצב עריכה) ייפתח אוטומטית כשנוצרת רשומה חדשה עם הלחצן "תיחול/מילוי" או הלחצן "הכנסת חיישן".*
 
-- For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+- להחלפת אתר שבוצעה ישירות במשאבה, יש לפתוח את מצב התצוגה ולערוך את הרשומה החדשה כדי לבחור מיקום וחץ
 
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+מצב עריכה מאפשר לבחור מיקום, חץ והערה עבור הרשומה שנבחרה:
 
-- The entry being edited is shown below the body images, with its type icon (cannula or sensor)
-- Front and back views are shown side by side: tap the area where you placed it
-- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
+- הרשומה שנערכת מוצגת מתחת לאיורי הגוף, עם סמל הסוג שלה (צינורית או חיישן)
+- מבט מלפנים ומבט מאחור מוצגים זה לצד זה: יש ללחוץ על האזור שבו מיקמתם אותה
+- לאחר בחירת אתר (מסומן בירוק), הרשימה שמתחת מציגה את כל הרשומות שנוצרו באתר הזה ב-45 הימים האחרונים.
 
-![Edit Mode](../images/SiteRotation/EditMode.png)
+![מצב עריכה](../images/SiteRotation/EditMode.png)
 
-- You can add an optional arrow by tapping the arrow icon at the right of the entry: the **Select Arrow** dialog lets you specify a sub-location or the pod orientation
+- אפשר להוסיף חץ (לא חובה) בלחיצה על סמל החץ ליד הרשומה: החלון **בחירת חץ** מאפשר לציין מיקום משנה או את כיוון הפוד
 
-![Position](../images/SiteRotation/EditModeSub.png)
+![מיקום](../images/SiteRotation/EditModeSub.png)
 
-- You can also add a **Note** about the selected site
-- Tap the **save** icon (upper right) to record the site
+- אפשר גם להוסיף **הערה** על האתר שנבחר
+- יש ללחוץ על סמל **השמירה** (בפינה העליונה) כדי לשמור את האתר
 
-Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+אפשר לסנן באופן גרפי על האיור, או בלחיצה על אירוע טיפול ברשימה כדי לבטל את הסינון, פשוט ללחוץ על האיור מחוץ לכל האתרים
 
-![Filtering](../images/SiteRotation/Filtering.png)
+![סינון](../images/SiteRotation/Filtering.png)
