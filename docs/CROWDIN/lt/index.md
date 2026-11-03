@@ -1,73 +1,73 @@
-# Welcome to the AAPS documentation
+# Sveiki atvykę į AAPS dokumentaciją
 
 ![image](./images/basic-outline-of-AAPS.png)
 
 ```{admonition} Latest Release
 :class: note
 
-31 October 2026: Version 4.0.0 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+2026 m. spalio 31 d.: išleista 4.0.0 versija. Peržiūrėkite [versijų pastabas](#latestrelease), kad sužinotumėte, kas naujo, ir atnaujinkite pagal [atnaujinimo instrukcijas](./Maintenance/UpdateToNewVersion.md).
 
 ```
 
-Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones. **AAPS** uses an OpenAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. To use **AAPS** you need **three** compatible devices: **(1)** an Android phone, **(2)** a continuous glucose monitor (CGM), and **(3)** an FDA/CE approved insulin pump. You can also add **(4)** cloud services to remotely control **AAPS**, share your data, and store it on a reporting server, and **(5)** a smartwatch.
+Android APS (**AAPS**) yra atvirojo kodo programėlė žmonėms, sergantiems nuo insulino priklausomu diabetu. Tai dirbtinės kasos sistema (APS), veikianti Android išmaniuosiuose telefonuose. **AAPS** naudoja OpenAPS programinės įrangos algoritmą ir siekia daryti tai, ką daro tikra kasa: automatiškai dozuodama insuliną palaikyti sveiką glikemiją. Norint naudoti **AAPS**, reikia **trijų** suderinamų įrenginių: **(1)** Android telefono, **(2)** nuolatinės gliukozės matavimo sistemos (NGJ) ir **(3)** FDA/CE patvirtintos insulino pompos. Taip pat galite pridėti **(4)** debesijos paslaugas, kad galėtumėte nuotoliniu būdu valdyti **AAPS**, dalytis duomenimis ir saugoti juos ataskaitų serveryje, ir **(5)** išmanųjį laikrodį.
 
-This documentation explains how to set up and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy **Search docs** function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
+Šioje dokumentacijoje paaiškinama, kaip nustatyti ir naudoti **AAPS**. Po **AAPS** dokumentaciją galite naršyti per meniu kairėje (ir patogią paieškos funkciją **Search docs**) arba per šio puslapio apačioje esantį [turinį](#index-aaps-documentation-index).
 
-## Overview of the AAPS documentation ("The docs")
+## AAPS dokumentacijos apžvalga
 
-Section **1) Getting Started**, the [Introduction](Getting-Started/Introduction.md) explains the general concept of what an artificial pancreas system (APS) is designed to do. It outlines the background of looping in general, why **AAPS** was developed, compares **AAPS** to other systems, and addresses safety. It gives suggestions about how to talk to your clinical team about **AAPS**, explains why you need to build the **AAPS** app yourself rather than just downloading it, and gives an overview of the typical connectivity of an **AAPS** system. It also addresses accessibility, and who is likely to benefit from **AAPS**.
+**1) Pradžia** skyriuje esantis [Įvadas į APS ir AAPS](Getting-Started/Introduction.md) paaiškina bendrą dirbtinės kasos sistemos (APS) paskirtį. Jame aprašomas ciklo naudojimo pagrindas, kodėl buvo sukurta **AAPS**, **AAPS** palyginimas su kitomis sistemomis ir saugumo klausimai. Jame rasite patarimų, kaip kalbėtis apie **AAPS** su savo gydytojais, paaiškinama, kodėl **AAPS** programėlę turite susikurti patys, o ne tiesiog atsisiųsti, ir pateikiama įprastų **AAPS** sistemos ryšių apžvalga. Jame taip pat aptariamas prieinamumas ir tai, kam **AAPS** gali būti naudinga.
 
-[Preparing for AAPS](./Getting-Started/PreparingForAaps.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. It gives an overview of the process you will go through, and provides an approximate timeline for gaining full functionality of **AAPS**. This section gets you technically prepared to assemble your **AAPS** setup as quickly and efficiently as possible. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
+Puslapyje [Pasirengimas pradėti naudoti AAPS](./Getting-Started/PreparingForAaps.md) išsamiau aprašomi saugumo klausimai, taip pat telefonai, NGJ (nuolatinės gliukozės matavimo sistemos) ir insulino pompos, suderinami su **AAPS**. Jame pateikiama viso proceso apžvalga ir apytikris laikas, per kurį pasieksite visas **AAPS** funkcijas. Šis skyrius techniškai paruošia jus kuo greičiau ir efektyviau surinkti savo **AAPS** sistemą. Poskyris [Suderinami NGJ](./Getting-Started/CompatiblesCgms.md) paaiškina, kaip optimaliai nustatyti NGJ ir kurios glodinimo parinktys geriausios.
 
-Now that you have a solid understanding of the process, you can start assembling your **AAPS** loop.
+Dabar, kai gerai suprantate procesą, galite pradėti rinkti savo **AAPS** ciklą.
 
-Section **2) Build the app** explains why you need to build the **AAPS** app yourself rather than just downloading it, and takes you step-by-step through [building it](./SettingUpAaps/BuildingAaps.md) (using a browser, Android Studio, or the command line) and then transferring and installing it on your phone. It starts with an optional step, setting up a [dedicated Google account](./UsefulLinks/DedicatedGoogleAccountForAaps.md) to hold your builds and backups. It also explains [Android developer verification](#android-developer-verification), a change Google is rolling out from September 2026 that affects how self-built apps are installed.
+Skyriuje **2) Programėlės kūrimas** paaiškinama, kodėl **AAPS** programėlę turite susikurti patys, o ne tiesiog atsisiųsti, ir žingsnis po žingsnio aprašoma, kaip [ją sukurti](./SettingUpAaps/BuildingAaps.md) (naršyklėje, su Android Studio arba komandine eilute), o paskui perkelti ir įdiegti telefone. Jis prasideda nebūtinu žingsniu – [atskiros Google paskyros](./UsefulLinks/DedicatedGoogleAccountForAaps.md) sukūrimu, kurioje bus saugomi jūsų sukurti failai ir atsarginės kopijos. Jame taip pat paaiškinamas [Android kūrėjų tapatybės patikrinimas](#android-developer-verification) – pakeitimas, kurį Google diegia nuo 2026 m. rugsėjo ir kuris paveikia pačių sukurtų programėlių diegimą.
 
-Section **3) Setting up the reporting server** covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data.
+Skyriuje **3) Ataskaitų serverio nustatymas** aprašoma, kaip pasirinkti ir [nustatyti ataskaitų serverį](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout arba Tidepool), kad galėtumėte peržiūrėti savo duomenis ir jais dalytis.
 
-Section **4) [Configure AAPS](./SettingUpAaps/SetupWizard.md)** covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. You are then introduced to everything **AAPS** can do, through a safe, carefully paced, step-by-step process. This makes sure that you (or your child) are thoroughly familiar and comfortable navigating all the different levels and menu configurations before moving on to the next phase, commonly called the next "Objective". You keep progressing this way until you have enough experience to begin using the more advanced options in the app. These Objectives are specially designed in such a way that will gradually unlock more possibilities of **AAPS** and switch from Open Loop to Closed Loop.
+Skyriuje **4) [AAPS konfigūravimas](./SettingUpAaps/SetupWizard.md)** aprašoma, kaip nustatyti **AAPS** programėlę su sąrankos vedliu, susieti ją su NGJ programėle ir tikra arba virtualia insulino pompa, taip pat kaip susieti **AAPS** su ataskaitų serveriu. Paskui saugiai, atsargiai ir žingsnis po žingsnio susipažinsite su viskuo, ką gali **AAPS**. Taip užtikrinama, kad jūs (arba jūsų vaikas) gerai susipažintumėte ir drąsiai naršytumėte visus lygius ir meniu nustatymus prieš pereidami į kitą etapą, paprastai vadinamą kitu mokymo etapu. Taip tęsiate tol, kol įgysite pakankamai patirties pradėti naudoti išplėstines programėlės parinktis. Šie mokymo etapai sukurti taip, kad palaipsniui atrakintų vis daugiau **AAPS** galimybių ir padėtų pereiti nuo atviro ciklo prie uždaro ciklo.
 
-Section **5) [Daily life with AAPS](./DailyLifeWithAaps/AapsScreens.md)** covers key **AAPS** features, to help you use (and customize) **AAPS**. This includes understanding the screens, carbs-on-board, sensitivity, DynamicISF, profile switching, temp targets, extended carbs (or eCarbs), automations, and [reviewing your data](./Maintenance/Reviewing.md) in the history browser and statistics. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, [traveling with AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md), and sports. Common questions and answers are located within the troubleshooting section.
+Skyriuje **5) [Kasdienis gyvenimas su AAPS](./DailyLifeWithAaps/AapsScreens.md)** aprašomos pagrindinės **AAPS** funkcijos, kad galėtumėte naudoti (ir pritaikyti sau) **AAPS**. Čia aprašoma, kaip suprasti ekranus, aktyvius angliavandenius (AAO), jautrumą, dinaminį JIF, profilio keitimą, laikinus tikslus, ištęstus angliavandenius (i-AV), automatizaciją ir kaip [peržiūrėti savo duomenis](./Maintenance/Reviewing.md) istorijoje ir statistikoje. Taip pat aptariamos dažnos temos: kaip elgtis su skirtingų tipų valgiais, kaniulės ir jutiklio keitimu, telefono atnaujinimais, vasaros laiko pakeitimais, [kelionėmis su AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) ir sportu. Dažni klausimai ir atsakymai yra trikčių šalinimo skyriuje.
 
-Section **6) [Remote AAPS features](./RemoteFeatures/RemoteControl.md)** highlights a real strength of **AAPS**. There are a wide range of possibilities for remotely sending commands to, or simply following the data from **AAPS**. This is equally useful for carers who want to use **AAPS** for minors, and for adults with diabetes who either want to monitor their sugars (and other metrics) more conveniently than just on their phone (on a watch, in the car _etc._), or wish to have significant others to also monitor the data. This section also provides guidance for using Android Auto so you can view glucose levels in the car.
+Skyriuje **6) [AAPS nuotolinės funkcijos](./RemoteFeatures/RemoteControl.md)** parodoma viena tikrų **AAPS** stiprybių. Yra daug būdų nuotoliniu būdu siųsti komandas į **AAPS** arba tiesiog sekti jos duomenis. Tai taip pat naudinga prižiūrintiems asmenims, kurie nori naudoti **AAPS** nepilnamečiams, ir suaugusiesiems su diabetu, kurie nori patogiau stebėti savo glikemiją (ir kitus rodiklius) ne tik telefone (laikrodyje, automobilyje _ir pan._) arba nori, kad jų duomenis stebėtų ir artimi žmonės. Šiame skyriuje taip pat rasite nurodymus, kaip naudoti Android Auto, kad galėtumėte matyti glikemiją automobilyje.
 
-Section **7) [Wear OS smartwatches](./WearOS/BuildingAapsWearOS.md)** gives information and procedures to use an Android **Wear OS** smartwatch with the dedicated **AAPS** watchfaces or custom watchfaces, either as a remote control of your phone or just a display indicator.
-
-
-Section **8) [Maintenance of AAPS](./Maintenance/ExportImportSettings.md)** covers how to export and back up your settings (which is very important in case you lose/break your phone), gives the latest version notes, details how to update **AAPS** and explains what happens when a version reaches its end of life. You can expect that there will be one new version and 2-3 required updates per year. You are required to do these updates as with all software, as any minor bugs are ironed out, and improvements to **AAPS** are made. There is a dedicated "updating" troubleshooting section with the common queries.
-
-Section **9) [Help & Troubleshooting](GettingHelp/WhereCanIGetHelp.md)** should help direct you to the best places to go to find general help with **AAPS**. It is the single place to go when something is not working: the [Troubleshooting](GettingHelp/GeneralTroubleshooting.md) hub collects, by topic, the solutions to the most common problems, and the [FAQ](UsefulLinks/FAQ.md) answers frequent questions. This is very important so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls. A lot of people are already using **AAPS** successfully, but everyone has a question at some point that they couldn't solve on their own. Due to the large number of users, the response times to questions are usually very quick, typically only a few hours. Don’t worry about asking for help, there is no such thing as a dumb question! We encourage users of any/all levels of experience to ask as many questions as they feel is necessary to help get them up and running safely. This section includes general troubleshooting for **AAPS** and **AAPSClient** (a companion following app) as well as explaining how to send your **AAPS** data (logfiles) to the developers for investigation, if you think a technical issue with **AAPS** needs looking at.
-
-Section **10)** covers **[Advanced AAPS options](./AdvancedOptions/FullClosedLoop.md)** such as how to progress from using **AAPS** for hybrid-closed looping (bolusing for meals _etc._) to full closed looping (no bolusing), how to [tune your profile](./GettingHelp/ProfileTuning.md) and use Autotune, and details development and engineering modes. Most users get on just fine with the main or "Master" **AAPS** version without looking into these options, this section is for users who already have good control and are looking to further improve their setup.
-
-In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. You can donate money, equipment or expertise. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
-
-Section **12) Resources**, contains archived or additional documentation, including a subsection for [clinicians](UsefulLinks/ClinicianGuideToAaps.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are also contained in this section. It includes the [Glossary](./UsefulLinks/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. This is where to go to find out what the terms ISF or TT, stand for, for example.
+Skyriuje **7) [Wear OS išmanieji laikrodžiai](./WearOS/BuildingAapsWearOS.md)** pateikiama informacija ir nurodymai, kaip naudoti Android **Wear OS** išmanųjį laikrodį su specialiais **AAPS** ciferblatais arba pasirinktiniais ciferblatais – telefonui valdyti nuotoliniu būdu arba tik duomenims rodyti.
 
 
- ### Interested in getting started with **AAPS**? Read more about **AAPS** in the [Introduction](Getting-Started/Introduction.md).
+Skyriuje **8) [AAPS priežiūra](./Maintenance/ExportImportSettings.md)** aprašoma, kaip eksportuoti nustatymus ir sukurti jų atsarginę kopiją (tai labai svarbu, jei telefoną pamestumėte ar sugadintumėte), pateikiamos naujausios versijų pastabos, išsamiai aprašoma, kaip atnaujinti **AAPS**, ir paaiškinama, kas nutinka, kai versijos galiojimas baigiasi. Galite tikėtis vienos naujos versijos ir 2–3 privalomų atnaujinimų per metus. Kaip ir su visa programine įranga, šiuos atnaujinimus atlikti privaloma, nes juose ištaisomos smulkios klaidos ir patobulinama **AAPS**. Yra atskiras trikčių šalinimo skyrius apie atnaujinimą su dažnais klausimais.
+
+Skyrius **9) [Pagalba ir trikčių šalinimas](GettingHelp/WhereCanIGetHelp.md)** padės rasti geriausias vietas, kur gauti bendros pagalbos dėl **AAPS**. Tai vienintelė vieta, į kurią reikia kreiptis, kai kas nors neveikia: puslapyje [Bendrasis trikčių šalinimas](GettingHelp/GeneralTroubleshooting.md) pagal temas surinkti dažniausių problemų sprendimai, o [DUK](UsefulLinks/FAQ.md) atsako į dažnus klausimus. Tai labai svarbu, kad galėtumėte kuo greičiau susisiekti su kitais, išsiaiškinti klausimus ir išspręsti įprastas problemas. Daug žmonių jau sėkmingai naudoja **AAPS**, tačiau kiekvienam kada nors kyla klausimas, kurio jis negali išspręsti pats. Kadangi naudotojų yra daug, į klausimus paprastai atsakoma labai greitai, dažniausiai per kelias valandas. Nebijokite prašyti pagalbos, kvailų klausimų nebūna! Raginame visų patirties lygių naudotojus užduoti tiek klausimų, kiek reikia, kad galėtų saugiai pradėti naudoti sistemą. Šiame skyriuje rasite bendrą **AAPS** ir **AAPSClient** (papildomos sekimo programėlės) trikčių šalinimą, taip pat paaiškinimą, kaip nusiųsti savo **AAPS** duomenis (žurnalų failus) kūrėjams, jei manote, kad **AAPS** techninę problemą reikia ištirti.
+
+Skyriuje **10)** aprašomos **[išplėstinės AAPS parinktys](./AdvancedOptions/FullClosedLoop.md)**, pavyzdžiui, kaip nuo **AAPS** naudojimo hibridiniu uždaru ciklu (bolusai valgiui _ir pan._) pereiti prie visiškai uždaro ciklo (be bolusų), kaip [derinti profilį](./GettingHelp/ProfileTuning.md) ir naudoti Autotune, taip pat išsamiai aprašomi kūrimo ir inžineriniai režimai. Daugumai naudotojų visiškai pakanka pagrindinės („Master“) **AAPS** versijos be šių parinkčių. Šis skyrius skirtas naudotojams, kurie jau gerai kontroliuoja diabetą ir nori dar labiau patobulinti savo sistemą.
+
+Skyriuje **11) [Kaip prisidėti prie AAPS](SupportingAaps/HowCanIHelp.md)** pateikiame informaciją, kaip galite paremti šį projektą. Galite paaukoti pinigų, įrangos arba pasidalyti savo žiniomis. Galite patys siūlyti ar daryti dokumentacijos pakeitimus, padėti [versti dokumentaciją](SupportingAaps/Translations.md) ir pateikti savo duomenis per Open Humans projektą.
+
+Skyriuje **12) Ištekliai** rasite archyvinę ar papildomą dokumentaciją, įskaitant poskyrį [gydytojams](UsefulLinks/ClinicianGuideToAaps.md), kurie domisi atvirojo kodo dirbtinės kasos technologijomis, tokiomis kaip **AAPS**, arba pacientams, kurie nori pasidalyti tokia informacija su savo gydytojais. Ši tema aptariama ir įvade. Šiame skyriuje taip pat rasite daugiau informacijos ir išteklių apie diabetą ir ciklo naudojimą. Jame yra [Terminų žodynas](./UsefulLinks/Glossary.md) – visoje **AAPS** naudojamų santrumpų (arba trumpinių) sąrašas. Čia sužinosite, pavyzdžiui, ką reiškia terminai JIF (ISF) arba LT (TT).
+
+
+ ### Norite pradėti naudoti **AAPS**? Daugiau apie **AAPS** skaitykite skyriuje [Įvadas į APS ir AAPS](Getting-Started/Introduction.md).
 
 ```{admonition} SAFETY NOTICE
 :class: danger
-The safety of **AAPS** relies on the safety features of your hardware (phone, pump, CGM). Only use a fully functioning FDA/CE approved insulin pump and CGM. Do not use broken, modified or self-built insulin pumps or CGM receivers. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user. 
+**AAPS** saugumas priklauso nuo jūsų įrangos (telefono, pompos, NGJ) saugumo funkcijų. Naudokite tik visiškai veikiančią FDA/CE patvirtintą insulino pompą ir NGJ. Nenaudokite sugedusių, modifikuotų ar pačių pasigamintų insulino pompų ar NGJ imtuvų. Naudokite tik originalias gamintojo patvirtintas jūsų pompai ir NGJ skirtas eksploatacines medžiagas (įvediklius, kaniules ir insulino rezervuarus). Neišbandytos ar modifikuotos eksploatacinės medžiagos gali sukelti netikslumų ir insulino dozavimo klaidų, o tai naudotojui labai pavojinga. 
 
-Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+Nenaudokite **AAPS**, jei vartojate SGLT-2 inhibitorius (gliflozinus), nes jie mažina glikemiją. Tai didina diabetinės ketoacidozės (DKA) riziką dėl sumažėjusio insulino tiekimo ir hipoglikemijos riziką dėl sumažėjusios glikemijos. 
 ```
 
 ```{admonition} Disclaimer
 :class: note
 
-- All information and code described here is for informational and educational purposes only. Use [Nightscout](https://nightscout.github.io/) and **AAPS** at your own risk, and do not use the information or code to make medical decisions. Nightscout neatitinka jokių privatumo reikalavimų sveikatos priežiūros srityje. 
-- Use of code from github.com is without warranty or formal support of any kind. Norėdami gauti daugiau informacijos, perskaitykite šios saugyklos LICENCIJĄ.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Jie naudojami tik informaciniais tikslais ir nereiškia, kad AAPS priklauso jiems ir kad jie yra palaikomi.
+- Visa čia aprašyta informacija ir kodas skirti tik informavimo ir mokymo tikslams. [Nightscout](https://nightscout.github.io/) ir **AAPS** naudojate savo rizika. Nenaudokite šios informacijos ar kodo medicininiams sprendimams priimti. Nightscout šiuo metu nesiekia atitikti HIPAA privatumo reikalavimų. 
+- Kodas iš github.com naudojamas be jokių garantijų ir be jokio oficialaus palaikymo. Norėdami gauti daugiau informacijos, perskaitykite šios saugyklos LICENCIJĄ.
+- Visi gaminių ir įmonių pavadinimai, prekių ženklai, paslaugų ženklai, registruoti prekių ženklai ir registruoti paslaugų ženklai priklauso atitinkamiems jų savininkams. Jie naudojami tik informaciniais tikslais ir nereiškia jokio ryšio su jais ar jų pritarimo.
 
-**AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/), [Medtronic](https://www.medtronic.com/), [Diaconn](https://www.diaconn.com/en/index.html), [EOFlow](http://www.eoflow.com/), [MicroTech Medical (Equil)](https://www.microtechmd.com/), [Medtrum](https://www.medtrum.com/), [Senseonics (Eversense)](https://www.senseonics.com/), [i-SENS (CareSens)](https://i-sens.com/), [POCTech](https://poctechcorp.com/en/), [Ottai](https://ottai.com/) or [Syai](https://www.syai.com/).
+**AAPS** nėra susijusi su šiomis įmonėmis ir jos nepalaiko: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/), [Medtronic](https://www.medtronic.com/), [Diaconn](https://www.diaconn.com/en/index.html), [EOFlow](http://www.eoflow.com/), [MicroTech Medical (Equil)](https://www.microtechmd.com/), [Medtrum](https://www.medtrum.com/), [Senseonics (Eversense)](https://www.senseonics.com/), [i-SENS (CareSens)](https://i-sens.com/), [POCTech](https://poctechcorp.com/en/), [Ottai](https://ottai.com/) ar [Syai](https://www.syai.com/).
 
 ```
 
 (index-aaps-documentation-index)=
 
-## AAPS Documentation Index
+## AAPS dokumentacijos turinys
 
 ```{toctree}
 :caption: Using this documentation
@@ -78,31 +78,31 @@ Search the documentation <./NavigateDoc/SearchDoc.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
-:caption: 1) Getting started
+:caption: 1) Pradžia
 
-Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
-Component Overview <./Getting-Started/ComponentOverview.md>
-- Compatible pumps <./Getting-Started/CompatiblePumps.md>
-- Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
-- Compatible phones  <./Getting-Started/Phones.md>
-- Compatible watches  <./Getting-Started/Watches.md>
+Įvadas į APS ir AAPS <./Getting-Started/Introduction.md>
+Pasirengimas pradėti naudoti AAPS <./Getting-Started/PreparingForAaps.md>
+Komponentų apžvalga <./Getting-Started/ComponentOverview.md>
+- Suderinamos pompos <./Getting-Started/CompatiblePumps.md>
+- Suderinami NGJ <./Getting-Started/CompatiblesCgms.md>
+- Suderinami telefonai  <./Getting-Started/Phones.md>
+- Suderinami išmanieji laikrodžiai  <./Getting-Started/Watches.md>
 ```
 
 ```{toctree}
-:caption: 2) Build the app
+:caption: 2) Programėlės kūrimas
 
-Dedicated Google account for AAPS (optional) <./UsefulLinks/DedicatedGoogleAccountForAaps.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
-- CLI Build <./SettingUpAaps/CLIBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Atskira Google paskyra AAPS (nebūtina) <./UsefulLinks/DedicatedGoogleAccountForAaps.md>
+AAPS kūrimas <./SettingUpAaps/BuildingAaps.md>
+- Kūrimas naršyklėje <./SettingUpAaps/BrowserBuild.md>
+- Kūrimas su Android Studio <./SettingUpAaps/ComputerBuild.md>
+- Kūrimas komandine eilute (CLI) <./SettingUpAaps/CLIBuild.md>
+AAPS perkėlimas ir įdiegimas <./SettingUpAaps/TransferringAndInstallingAaps.md>
 ```
 ```{toctree}
-:caption: 3) Setting up the reporting server
+:caption: 3) Ataskaitų serverio nustatymas
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+Ataskaitų serverio nustatymas <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
@@ -118,50 +118,50 @@ Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
-:caption: 5) Daily Life with AAPS
+:caption: 5) Kasdienis gyvenimas su AAPS
 
-AAPS Screens <./DailyLifeWithAaps/AapsScreens.md>
-Key AAPS Features <./DailyLifeWithAaps/KeyAapsFeatures.md>
-COB calculation <./DailyLifeWithAaps/CobCalculation.md>
-Sensitivity detection <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
-Profile Switch & Profile Percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
-Temp-Targets <./DailyLifeWithAaps/TempTargets.md>
-Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
-QuickWizards <./DailyLifeWithAaps/QuickWizards.md>
-Scenes <./DailyLifeWithAaps/Scenes.md>
-Automations <./DailyLifeWithAaps/Automations.md>
-QuickLaunch toolbar <./DailyLifeWithAaps/QuickLaunch.md>
-Home screen widgets <./DailyLifeWithAaps/Widgets.md>
-Food database <./DailyLifeWithAaps/Food.md>
-Global search <./DailyLifeWithAaps/GlobalSearch.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS for children <./DailyLifeWithAaps/AapsForChildren.md>
-Pumps and cannulas <./DailyLifeWithAaps/PumpsAndCannulas.md>
-Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
+AAPS ekranai <./DailyLifeWithAaps/AapsScreens.md>
+Pagrindinės AAPS funkcijos <./DailyLifeWithAaps/KeyAapsFeatures.md>
+AAO apskaičiavimas <./DailyLifeWithAaps/CobCalculation.md>
+Jautrumo nustatymas <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
+Dinaminis JIF <./DailyLifeWithAaps/DynamicISF.md>
+Profilio keitimas ir profilio procentas <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+Laikini tikslai <./DailyLifeWithAaps/TempTargets.md>
+Ištęsti angliavandeniai <./DailyLifeWithAaps/ExtendedCarbs.md>
+Greitasis vedlys <./DailyLifeWithAaps/QuickWizards.md>
+Scenarijai <./DailyLifeWithAaps/Scenes.md>
+Automatizacija <./DailyLifeWithAaps/Automations.md>
+QuickLaunch įrankių juosta <./DailyLifeWithAaps/QuickLaunch.md>
+Pagrindinio ekrano valdikliai <./DailyLifeWithAaps/Widgets.md>
+Maisto duomenų bazė <./DailyLifeWithAaps/Food.md>
+Visuotinė paieška <./DailyLifeWithAaps/GlobalSearch.md>
+Duomenų peržiūra <./Maintenance/Reviewing.md>
+AAPS vaikams <./DailyLifeWithAaps/AapsForChildren.md>
+Pompos ir kaniulės <./DailyLifeWithAaps/PumpsAndCannulas.md>
+Laiko juostos keitimas ir vasaros laikas <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 
 ```
 
 ```{toctree}
-:caption: 6) Remote AAPS features
+:caption: 6) AAPS nuotolinės funkcijos
 
-Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
-Following Only <./RemoteFeatures/FollowingOnly.md>
+Nuotolinis stebėjimas <./RemoteFeatures/RemoteMonitoring.md>
+Tik sekimas <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
-Remote control <./RemoteFeatures/RemoteControl.md>
-The AAPSClient app <./RemoteFeatures/AapsClient.md>
-Master ↔ Client control <./RemoteFeatures/ClientMasterControl.md>
-SMS Commands <./RemoteFeatures/SMSCommands.md>
+Nuotolinis valdymas <./RemoteFeatures/RemoteControl.md>
+Programėlė AAPSClient <./RemoteFeatures/AapsClient.md>
+Pagrindinio įrenginio ↔ kliento valdymas <./RemoteFeatures/ClientMasterControl.md>
+SMS komandos <./RemoteFeatures/SMSCommands.md>
 
 ```
 ```{toctree}
-:caption: 7) Wear OS Smartwatches
+:caption: 7) Wear OS išmanieji laikrodžiai
 
-AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
-Use the smartwatch <./WearOS/WearOsSmartwatch.md>
-Remote control <./RemoteFeatures/RemoteControlWearOS.md>
-Custom watchfaces reference <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
+AAPS Wear OS laikrodžiams <./WearOS/BuildingAapsWearOS.md>
+Išmaniojo laikrodžio naudojimas <./WearOS/WearOsSmartwatch.md>
+Nuotolinis valdymas <./RemoteFeatures/RemoteControlWearOS.md>
+Pasirinktinio ciferblato žinynas <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
+Pasirinktinių ciferblatų mainų svetainė <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
@@ -179,44 +179,44 @@ End of life <./Maintenance/EndOfLife.md>
 ```
 
 ```{toctree}
-:caption: 9) Help & Troubleshooting
+:caption: 9) Pagalba ir trikčių šalinimas
 
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-Troubleshooting (start here) <./GettingHelp/GeneralTroubleshooting.md>
-- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
-- Troubleshooting NSClient <./GettingHelp/TroubleshootingNsClient.md>
-- Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
-- Reinstalling AAPS (new keystore) <./GettingHelp/ReinstallAaps.md>
-- Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
-FAQ <./UsefulLinks/FAQ.md>
+Kur gauti pagalbos dėl AAPS <./GettingHelp/WhereCanIGetHelp.md>
+Bendrasis trikčių šalinimas (pradėkite čia) <./GettingHelp/GeneralTroubleshooting.md>
+- Bluetooth trikčių šalinimas <./GettingHelp/BluetoothTroubleshooting.md>
+- NSClient trikčių šalinimas <./GettingHelp/TroubleshootingNsClient.md>
+- Android Studio trikčių šalinimas <./GettingHelp/TroubleshootingAndroidStudio.md>
+- Kūrimas naršyklėje: trikčių šalinimas <./GettingHelp/BrowserBuildTroubleshooting.md>
+- AAPS įdiegimas iš naujo (nauja raktų saugykla) <./GettingHelp/ReinstallAaps.md>
+- Žurnalų failų gavimas <./GettingHelp/AccessingLogFiles.md>
+DUK <./UsefulLinks/FAQ.md>
 ```
 
 ```{toctree}
-:caption: 10) Advanced AAPS options
+:caption: 10) Išplėstinės AAPS parinktys
 
-Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
-Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
+Visiškai uždaras ciklas <./AdvancedOptions/FullClosedLoop.md>
+Profilio derinimo vadovas <./GettingHelp/ProfileTuning.md>
 Autotune <./AdvancedOptions/Autotune.md>
-Insulin concentration <./AdvancedOptions/InsulinConcentration.md>
-Dev branch <./AdvancedOptions/DevBranch.md>
-Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
+Insulino koncentracija <./AdvancedOptions/InsulinConcentration.md>
+Kūrimo atšaka (dev) <./AdvancedOptions/DevBranch.md>
+Kūrimas naršyklėje: vieno pakeitimo įtraukimas (cherry-pick) <./AdvancedOptions/BrowserBuildCherryPick.md>
 
 ```
 ```{toctree}
-:caption: 11) How to support AAPS
+:caption: 11) Kaip prisidėti prie AAPS
 
-How to help <./SupportingAaps/HowCanIHelp.md>
-Editing the docs <./SupportingAaps/HowToEditTheDocs.md>
-Translating the app and docs <./SupportingAaps/Translations.md>
-State of translations <./SupportingAaps/StateOfTranslations.md>
-Open Humans Uploader <./SupportingAaps/OpenHumans.md>
+Kaip padėti <./SupportingAaps/HowCanIHelp.md>
+Kaip redaguoti dokumentaciją <./SupportingAaps/HowToEditTheDocs.md>
+Programėlės ir dokumentacijos vertimas <./SupportingAaps/Translations.md>
+Vertimų būsena <./SupportingAaps/StateOfTranslations.md>
+Open Humans duomenų įkėlimas <./SupportingAaps/OpenHumans.md>
 
 ```
 ```{toctree}
-:caption: 12) Resources
+:caption: 12) Ištekliai
 
-Glossary <./UsefulLinks/Glossary.md>
-General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
-For Clinicians <./UsefulLinks/ClinicianGuideToAaps.md>
+Terminų žodynas <./UsefulLinks/Glossary.md>
+Bendri diabeto ir ciklo ištekliai <./UsefulLinks/BackgroundReading.md>
+Gydytojams <./UsefulLinks/ClinicianGuideToAaps.md>
 ```
