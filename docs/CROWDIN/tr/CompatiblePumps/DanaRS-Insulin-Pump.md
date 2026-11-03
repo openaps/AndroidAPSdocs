@@ -1,76 +1,76 @@
-# DanaRS, Dana-i and Dana-i2
+# DanaRS, Dana-i ve Dana-i2
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards, a Dana-i or a Dana-i2. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*
+*Bu talimatlar, 2017 ve sonrası bir DanaRS, bir Dana-i veya bir Dana-i2 pompanız varsa uygulamayı ve pompanızı yapılandırmak içindir. Bunun yerine orijinal DanaR pompanız varsa [DanaR İnsülin Pompası](./DanaR-Insulin-Pump.md) sayfasına bakın.*
 
-**Dana-i2 can be used from AAPS version 4.0 onwards.** It uses the same **Dana-i/RS** driver as the Dana-i.
+**Dana-i2, AAPS 4.0 sürümünden itibaren kullanılabilir.** Dana-i ile aynı **Dana-i/RS** sürücüsünü kullanır.
 
-* In DanaRS/i/i2 pump "BASAL A" is used by the app. Existing data gets overwritten.
+* DanaRS/i/i2 pompasında uygulama "BASAL A" profilini kullanır. Mevcut veriler üzerine yazılır.
 
-    {contents} Table of contents
+    {contents} İçindekiler
     :depth: 1
     :local: true
 
-## Pump capabilities with AAPS
+## AAPS ile pompa özellikleri
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually (see [Timezone traveling](#timezone-traveling-danarv2-danars)).
+* Ek bir iletişim cihazı olmadan, telefonunuzun yerleşik Bluetooth'u üzerinden **AAPS** ile iletişim kurar.
+* Yaz saati (DST) ve saat dilimi değişiklikleri elle yapılmalıdır (bkz. [Saat dilimi değiştirerek seyahat](#timezone-traveling-danarv2-danars)).
 
 (DanaRS-Insulin-Pump-pairing-pump)=
 
 ## Pompa eşleştirme
 
-* Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-* Tap **Pump** and select **Dana-i/RS**.
+* **AAPS** ana ekranının sol üst köşesindeki **menüyü** (☰) açın ve **Konfigürasyon** seçeneğini seçin.
+* **Pompa** seçeneğine dokunun ve **Dana-i/RS** seçeneğini seçin.
     
-    ![Configuration > Pump with the Dana-i/RS plugin](../images/v4/Configuration/configuration_pump_list_2.png)
+    ![Dana-i/RS eklentisiyle Konfigürasyon > Pompa](../images/v4/Configuration/configuration_pump_list_2.png)
     
-    Once it is selected, the **Dana-i/RS** card shows two buttons, **Settings** and **Open plugin**:
+    Seçildikten sonra **Dana-i/RS** kartında iki düğme görünür: **Ayarlar** ve **Eklentiyi aç**:
     
-    ![The Dana-i/RS plugin selected in Configuration > Pump](../images/v4/Pumps/dana_i_rs_enabled.png)
+    ![Konfigürasyon > Pompa içinde seçili Dana-i/RS eklentisi](../images/v4/Pumps/dana_i_rs_enabled.png)
     
-    **Settings** opens the settings of the Dana-i/RS driver:
+    **Ayarlar**, Dana-i/RS sürücüsünün ayarlarını açar:
     
-    ![Dana-i/RS driver settings](../images/v4/Pumps/dana_i_rs_settings.png)
+    ![Dana-i/RS sürücü ayarları](../images/v4/Pumps/dana_i_rs_settings.png)
     
-    **Open plugin** (or **Manage** > **Pump**) opens the Dana-i/RS pump screen. Before a pump is paired it looks like this:
+    **Eklentiyi aç** (veya **Yönet** > **Pompa**), Dana-i/RS pompa ekranını açar. Pompa eşleştirilmeden önce ekran şöyle görünür:
     
-    ![Dana-i/RS pump screen before pairing](../images/v4/Pumps/dana_i_rs_pump_screen.png)
+    ![Eşleştirmeden önce Dana-i/RS pompa ekranı](../images/v4/Pumps/dana_i_rs_pump_screen.png)
 
-* On the pump screen, tap **Pairing**. **AAPS** scans for nearby pumps.
+* Pompa ekranında **Eşleştirme** düğmesine dokunun. **AAPS** yakındaki pompaları tarar.
 
-* Tap the entry for your pump in the list.
+* Listede pompanızın kaydına dokunun.
     
-    ![The Pairing screen listing a Dana pump found by the scan](../images/DanaRS_i_Pairing.png)
+    ![Taramada bulunan bir Dana pompasını listeleyen eşleştirme ekranı](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** This works the same way as other Bluetooth pairings you may know (for example, smartphone and car audio).
+* **Eşleştirmeyi pompada onaylamanız gerekir!** Bu, bildiğiniz diğer Bluetooth eşleştirmeleriyle aynı şekilde çalışır (örneğin akıllı telefon ve araba ses sistemi).
     
     ![Dana RS eşleştirme onayı](../images/DanaRS_Pairing.png)
 
 * Pompanızın tipine ve yazılımına göre eşleştirme sürecini takip edin:
     
-    * For DanaRS v1, **AAPS** asks for the **Pump password (v1 only)**. Enter your pump password (see [Default password](#DanaRS-Insulin-Pump-default-password)).
-    * For DanaRS v3, **AAPS** asks you to press OK on the pump and type the 2 sequences of numbers and letters shown on the pump. Keep the pump display on by pressing the minus button until you have finished. Then tap **Done**.
-    * For Dana-i and Dana-i2, the standard Android pairing dialog appears. Enter the 6-digit number shown on the pump.
+    * DanaRS v1 için **AAPS**, **Pompa şifresi (yalnızca v1)** ister. Pompa parolanızı girin (bkz. [Varsayılan parola](#DanaRS-Insulin-Pump-default-password)).
+    * DanaRS v3 için **AAPS**, pompada OK düğmesine basmanızı ve pompada gösterilen 2 sayı ve harf dizisini yazmanızı ister. İşiniz bitene kadar eksi düğmesine basarak pompa ekranını açık tutun. Ardından **Tamam** düğmesine dokunun.
+    * Dana-i ve Dana-i2 için standart Android eşleştirme penceresi açılır. Pompada gösterilen 6 haneli sayıyı girin.
 
-* When **Pairing successful!** is shown, tap **Done**.
+* **Eşleştirme başarılı!** yazısı görününce **Tamam** düğmesine dokunun.
     
-    ![Pairing successful!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
+    ![Eşleştirme başarılı!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
     
-    You are back on the pump screen, which now shows your pump's status.
+    Pompa ekranına geri dönersiniz; bu ekran artık pompanızın durumunu gösterir.
     
-    ![Dana-i/RS pump screen after pairing](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
+    ![Eşleştirmeden sonra Dana-i/RS pompa ekranı](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
 
-* In **Settings**, select **Bolus speed** to change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
+* Varsayılan bolus hızını (12 sn/Ü, 30 sn/Ü veya 60 sn/Ü) değiştirmek için **Ayarlar** içinde **Bolus hızı** seçeneğini seçin.
 
-* Doktorlar menüsünü kullanarak pompadaki bazal adımı 0,01 Ü/s olarak ayarlayın (pompa kullanım kılavuzuna bakın).
-* Set bolus step on pump to 0.05 U using Doctors menu (see pump user guide). **AAPS** reads the basal and bolus steps from the pump and uses them for every bolus, so a bolus always matches the step set on the pump. The pump screen shows them in the **Basal/Bolus step** row.
+* Doktor menüsünü kullanarak pompadaki bazal adımını 0,01 Ü/sa olarak ayarlayın (pompa kullanım kılavuzuna bakın).
+* Doktor menüsünü kullanarak pompadaki bolus adımını 0,05 Ü olarak ayarlayın (pompa kullanım kılavuzuna bakın). **AAPS** bazal ve bolus adımlarını pompadan okur ve her bolus için kullanır; böylece bolus her zaman pompada ayarlanan adıma uyar. Pompa ekranı bunları **Bazal/bolus adımı** satırında gösterir.
 * Pompada yayma bolusları etkinleştir
 
-### Options shown only for some models
+### Yalnızca bazı modellerde gösterilen seçenekler
 
-* **Auto lock**: on a Dana-i2, the **User options** screen (on the pump screen, **Manage** > **Pump**) has an **Auto lock** switch for the pump's auto lock setting. Press **Save options to pump** after changing it.
-* **Easy mode**: on pump models that have an easy menu mode, the pump screen shows an **Easy mode** row with **On** or **Off**.
-* If a Dana-i2 refuses a bolus, **AAPS** shows the reason, for example *Pump is not primed*, *Not enough insulin in the reservoir* or *Easy sleep mode is on in the pump*.
+* **Otomatik Kilit**: Dana-i2'de **Kullanıcı seçenekleri** ekranında (pompa ekranında, **Yönet** > **Pompa**) pompanın otomatik kilit ayarı için bir **Otomatik Kilit** anahtarı vardır. Değiştirdikten sonra **Seçenekleri pompaya kaydet** düğmesine basın.
+* **Kolay mod**: Kolay menü modu olan pompa modellerinde pompa ekranı **Açık** veya **Kapalı** değerli bir **Kolay mod** satırı gösterir.
+* Bir Dana-i2 bolusu reddederse **AAPS** nedenini gösterir, örneğin *Pompa hazırlanmamış*, *Rezervuarda yeterli insülin yok* veya *Pompada Easy sleep modu açık*.
 
 (DanaRS-Insulin-Pump-default-password)=
 
@@ -79,36 +79,36 @@
 * Pompa yazılımı v1 ve v2'ye sahip DanaRS için varsayılan parola 1234'tür.
 * v3 cihaz yazılımlı DanaRS veya Dana-i'ye sahip olanlar için varsayılan parola üretim tarihinden çıkarılır ve MMDD olarak hesaplanır; burada MM ay, DD ise pompanın üretildiği gündür (yani '0124', 01. ayı ve 24. günü temsil eder).
     
-    * MAIN MENU'den REVIEW'i seçin ve alt menüden SHIPPING INFORMATION'nu açın.
-    * Number 3 is manufacturing date. 
-    * v3/i için bu şifre sadece pompada menüyü kilitlemek için kullanılır. İletişim veya AAPS'e girmek için gerekli değildir.
+    * MAIN MENU'den REVIEW'u seçin, ardından alt menüden SHIPPING INFORMATION'ı açın
+    * 3 numara üretim tarihidir. 
+    * v3/i için bu parola sadece pompada menüyü kilitlemek için kullanılır. İletişim için kullanılmaz ve AAPS'e girilmesi gerekmez.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
 
-## Pompa şifresi değiştirme
+## Pompa parolasını değiştirme
 
 * Pompadaki OK düğmesine basın
 * Ana menüde "OPTION" (seçenek) öğesini seçin (sağ ok düğmesine birkaç kez basarak sağa hareket edin)
     
     ![DanaRS Ana Menü](../images/DanaRSPW_01_MainMenu.png)
 
-* Seçenekler menüsünde "USER OPTION" "kullanıcı seçeneği"ni seçin
+* Seçenekler menüsünde "USER OPTION" (kullanıcı seçeneği) öğesini seçin
     
     ![DanaRS Seçenek Menüsü](../images/DanaRSPW_02_OptionMenu.png)
 
-* "11. password'e (parolaya) inmek için sağ ok düğmesini kullanın"
+* Ok düğmesiyle aşağı inerek "11. password" seçeneğine gidin
     
     ![DanaRS 11. Parola](../images/DanaRSPW_03_11PW.png)
 
-* Eski şifreyi girmek için Tamam'a basın.
+* Eski parolayı girmek için OK düğmesine basın.
 
-* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
+* **Eski parolayı** girin (varsayılan parola için [yukarıya](#DanaRS-Insulin-Pump-default-password) bakın) ve OK düğmesine basın
     
     ![DanaRS Eski parola girişi](../images/DanaRSPW_04_11PWenter.png)
 
-* Buraya yanlış şifre girilirse, başarısız olduğunuzu belirten bir mesaj almayacaksınız!
+* Buraya yanlış parola girilirse, başarısız olduğunuzu belirten bir mesaj almayacaksınız!
 
-* **Yeni şifre** belirleyin (+ & - düğmeleriyle sayıları değiştirin / sağa gitmek için sağ ok butonuna basın).
+* **Yeni parola** belirleyin (+ & - düğmeleriyle sayıları değiştirin / sağa gitmek için sağ ok butonuna basın).
     
     ![DanaRS Yeni parola](../images/DanaRSPW_05_PWnew.png)
 
@@ -118,7 +118,7 @@
     
     ![DanaRS Yeni parolayı kaydet](../images/DanaRSPW_06_PWnewSave.png)
 
-* "14. EXIT" çıkışa gelin ve OK butonuna basın.
+* Aşağı inerek "14. EXIT" seçeneğine gelin ve çıkmak için OK düğmesine basın.
     
     ![DanaRS Çıkış](../images/DanaRSPW_07_Exit.png)
 
@@ -133,39 +133,39 @@ Bolus insülin iletimi sırasında AAPS ile Dana RS arasındaki bağlantının k
 ![İnsülin iletimi alarmı](../images/DanaRS_Error_bolus.png)
 
 * Çoğu durumda bu sadece bir iletişim sorunudur ve doğru miktarda insülin verilir.
-* Check in the pump history that the correct bolus was given. You can do this on the pump itself, or in **AAPS** on the pump screen (**Manage** > **Pump**) > **Pump history** > **Boluses**.
-* Delete the error entry in [treatments](#screens-bolus-carbs) if you wish.
-* The real amount is read and recorded at the next connection. To force this, tap **Refresh** on the pump screen, or just wait for the next connection.
+* Doğru bolusun verildiğini pompa geçmişinden kontrol edin. Bunu pompanın kendisinde veya **AAPS**'te pompa ekranında (**Yönet** > **Pompa**) > **Pompa geçmişi** > **Boluslar** bölümünde yapabilirsiniz.
+* İsterseniz hatalı kaydı [tedaviler](#screens-bolus-carbs) içinden silin.
+* Gerçek miktar bir sonraki bağlantıda okunur ve kaydedilir. Bunu hemen yaptırmak için pompa ekranında **Yenile** düğmesine dokunun veya bir sonraki bağlantıyı bekleyin.
 
 ## Telefon değiştirirken özel not
 
 Yeni bir telefona geçerken aşağıdaki adımları yapmanız gerekir:
 
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
+* Eski telefonunuzda [ayarları dışa aktarın](../Maintenance/ExportImportSettings.md)
 * Ayarları eski telefondan yeni telefona aktarın
 
 ### DanaRS v1
 
 * Dana RS'i yeni telefonla **manuel olarak eşleştirin**
-* If you tick **Also replace pump settings** when importing, the pump connection settings are imported too and AAPS on your new phone will already "know" the pump and therefore not start a Bluetooth scan. Bu nedenle yeni telefon ve pompa manuel olarak eşleştirilmelidir.
+* İçe aktarırken **Pompa ayarlarını da değiştir** seçeneğini işaretlerseniz pompa bağlantı ayarları da içe aktarılır ve yeni telefonunuzdaki AAPS pompayı zaten "tanır", bu yüzden Bluetooth taraması başlatmaz. Bu nedenle yeni telefon ve pompa manuel olarak eşleştirilmelidir.
 * AAPS'i yeni telefona yükleyin.
-* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
+* Yeni telefonunuzda [ayarları içe aktarın](../Maintenance/ExportImportSettings.md)
 
 ### DanaRS v3, Dana-i, Dana-i2
 
-* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
-* Sometimes you may need to clear the pairing information in **AAPS** first. On the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**. Then tap **Pairing** again.
+* Eşleştirme işlemini [yukarıda](#DanaRS-Insulin-Pump-pairing-pump) anlatıldığı gibi başlatın.
+* Bazen önce **AAPS**'teki eşleştirme bilgilerini silmeniz gerekebilir. Pompa ekranında (**Yönet** > **Pompa**) **Eşleşmeyi Kaldır** düğmesine dokunun ve **Eşleştirme bilgileri sıfırlansın mı?** sorusunu onaylayın. Ardından yeniden **Eşleştirme** düğmesine dokunun.
 
-## Timezone traveling with DanaRS, Dana-i and Dana-i2 pumps
+## DanaRS, Dana-i ve Dana-i2 pompalarıyla saat dilimi değiştirerek seyahat
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+Saat dilimleri arasında seyahat hakkında bilgi için [Pompalarla saat dilimi değiştirerek seyahat](#timezone-traveling-danarv2-danars) bölümüne bakın.
 
-## Where to get help
+## Nereden yardım alabilirsiniz?
 
-Development of the DanaRS/Dana-i/Dana-i2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+DanaRS/Dana-i/Dana-i2 sürücüsünün geliştirilmesi topluluk tarafından **gönüllü** olarak yapılır. Yardım istemeden önce lütfen:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. Özelliğin nasıl çalışması gerektiğini doğrulamak için bu dokümantasyonun ilgili bölümünü **okuyun**.
+2. [Discord](https://discord.gg/4fQUWHZ4Mw)'daki *#AAPS* kanalında veya diğer [topluluk kanallarından](../GettingHelp/WhereCanIGetHelp.md) birinde **sorun**.
+3. [Mevcut sorunlar](https://github.com/nightscout/AndroidAPS/issues) arasında arama yaparak **bir hata bildirin**; sizinki listede yoksa [yeni bir sorun (issue)](https://github.com/nightscout/AndroidAPS/issues) açın ve [günlük dosyalarınızı](../GettingHelp/AccessingLogFiles.md) ekleyin.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Yardım isterken telefonunuzun markasını ve modelini, Android sürümünü, **AAPS** sürümünü ve sorunun sade bir açıklamasını (ne değişti, en son ne zaman çalıştı) ekleyin.
