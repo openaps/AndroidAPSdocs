@@ -8,9 +8,9 @@ Building AAPS with GitHub Actions.
 
 ## Kurti sau, o ne parsisiųsti
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**AAPS programėlės (apk failo) negalima atsisiųsti dėl medicinos prietaisų reglamentų. Sukurti programėlę savo reikmėms yra teisėta, bet jos kopijos negalima duoti kitiems!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Daugiau informacijos rasite [DUK puslapyje](../UsefulLinks/FAQ.md).
 
 (Building-APK-without-a-computer)=
 
