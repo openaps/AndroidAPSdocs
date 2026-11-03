@@ -97,7 +97,7 @@ A QuickWizard is refused when its dose is above your max bolus, or when its carb
 - **⧉ Clone** — duplicate one as a starting point.
 - **🗑️ Delete** — remove one.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (Die Bedienung ist dieselbe wie beim [Ändern der Reihenfolge der Profile](ProfileSwitch-ProfilePercentage.md).)
 
 QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
 
