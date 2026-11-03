@@ -9,7 +9,7 @@ Takéto jedlá však treba stále nejako zvládnuť. Preto AAPS podporuje tzv. p
 
 eSacharidy sú sacharidy rozdelené na niekoľko hodín. Pri bežných jedlách, ktoré majú viac sacharidov ako tukov a bielkovín, zvyčajne stačí zadať sacharidy vopred (a v prípade potreby znížiť úvodný bolus), aby sa inzulín nepodal príliš skoro.  Pri pomalšie vstrebávaných jedlách, pri ktorých by zadanie všetkých sacharidov vopred viedlo k príliš vysokému IOB zo SMB, však môžete použiť eSacharidy. Tie presnejšie napodobnia, ako sa sacharidy (a všetky sacharidové ekvivalenty, ktoré zadáte za iné živiny) vstrebávajú a ovplyvňujú glykémiu. Vďaka týmto informáciám môže okruh podávať SMB postupnejšie, aby tieto sacharidy pokryl. Dá sa to chápať ako dynamický predĺžený bolus (malo by to fungovať aj bez SMB, ale pravdepodobne menej účinne).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Poznámka:** eSacharidy nie sú iba pre tučné jedlá alebo jedlá s veľkým množstvom bielkovín: môžu pomôcť v každej situácii, keď glykémiu zvyšujú iné vplyvy, napr. iné lieky, ako sú kortikosteroidy.
 
 ## Ako sa eSacharidy používajú
 
@@ -26,7 +26,7 @@ eSacharidy na hlavnej obrazovke: číslo v zátvorke v poli **COB** ukazuje sach
 
 V [Bolusovej kalkulačke](#aaps-screens-bolus-wizard) môžete tromi tlačidlami pod poľom **Sacharidy** vybrať, ako rýchlo sa vaše jedlo vstrebáva. Pred potvrdením jedno vyberte. Podľa typu **AAPS** berie časť zadaných sacharidov ako bežné sacharidy a pri pomalých, výdatných jedlách neskôr pridá [predĺžené sacharidy („eSacharidy“)](#Extended-Carbs-extended-carbs-ecarbs). Ťuknite na ikonu **(i)** vedľa tlačidiel. Uvidíte typické jedlá pre vybraný typ a to, ako mení vaše sacharidy.
 
-| Typ                     | Typical foods (examples from the app)                                                                      | Sacharidy teraz, použité pre bolus | Pridané eSacharidy                                      |
+| Typ                     | Typické jedlá (príklady z aplikácie)                                                                       | Sacharidy teraz, použité pre bolus | Pridané eSacharidy                                      |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------- |
 | **Chlieb** (predvolený) | Chlieb, slané pečivo, jogurt, ovocie, zemiaky, ryža, ovsené vločky, zelenina                               | 100 %                              | Žiadne                                                  |
 | **Koláč**               | Halušky, cestoviny, ázijské jedlá bohaté na sacharidy a tuky, sladké a kysnuté pečivo, cereálie, med, džem | 90 %                               | 20 %, začiatok o 60 minút neskôr, rozložené na 2 hodiny |
@@ -60,9 +60,9 @@ Rýchlejšie to ide, ak eSacharidy pridá za vás *Bolusová kalkulačka*: pod p
 **Dôležité poznámky:** Samozrejme si budete musieť vyskúšať, aké konkrétne hodnoty vám vyhovujú. Na to, aby bol algoritmus viac alebo menej agresívny, môžete tiež opatrne upraviť nastavenie *Maximálny počet minút bazálu, ktorými sa limituje SMB*. Pri jedlách s malým množstvom sacharidov a veľa tukmi a bielkovinami môže stačiť použiť iba eSacharidy bez ručných bolusov (pozrite vyššie uvedený blog). Pri vytvorení eSacharidov sa vytvorí aj poznámka v Starostlivosti so všetkými zadanými údajmi, aby ste mohli zadávanie ľahšie skúšať a zlepšovať.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Extended boluses and why they don't work in a closed-loop environment
+## Predĺžené bolusy a prečo v uzavretom okruhu nefungujú
 
-Ako bolo spomenuté vyššie, predĺžené ani viacvlnové (multiwave) bolusy v uzavretom okruhu naozaj nefungujú. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+Ako bolo spomenuté vyššie, predĺžené ani viacvlnové (multiwave) bolusy v uzavretom okruhu naozaj nefungujú. Podrobnosti nájdete [nižšie](#why-extended-boluses-won-t-work-in-a-closed-loop-environment)
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Predĺžený bolus a prepnutie na otvorený okruh – iba pumpy Dana a Insight
