@@ -1,43 +1,43 @@
-# Yeni bir ana sürüme veya yan sürüme güncelleme
+# Yeni bir sürüme veya dala güncelleme
 
-## Programı İndirmek yerine kendiniz oluşturun...
+## İndirmek yerine kendiniz oluşturun
 
-**AAPS** is not available to download, due to regulations concerning medical devices. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Tıbbi cihazlarla ilgili düzenlemeler nedeniyle **AAPS** indirilmeye hazır olarak sunulmaz. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz! Ayrıntılar için [SSS sayfasına](../UsefulLinks/FAQ.md) bakın.
 
 ## Önemli notlar
 
-- Please update to the new version of **AAPS** as soon as possible after a new release is available.
-- When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-- The new version will also be announced on Facebook at the time of release.
-- Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-- Updating from **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
-- Do not forget to [export your settings](ExportImportSettings.md). When you import them again after the update, you choose whether the pump settings are replaced too.
+- Yeni bir sürüm yayınlandıktan sonra lütfen **AAPS**'i mümkün olan en kısa sürede yeni sürüme güncelleyin.
+- Yeni bir sürüm yayınlandığında **AAPS** uygulamasının içinde yeni sürümle ilgili bir bilgi bandı göreceksiniz.
+- Yeni sürüm, yayınlandığı anda Facebook'ta da duyurulur.
+- Sürüm yayınlandıktan sonra, güncellemeye başlamadan önce lütfen [Sürüm notlarını](ReleaseNotes.md) ayrıntılı okuyun ve sorularınızı Facebook veya Discord'da toplulukla netleştirin.
+- **AAPS** 3.x'ten mi güncelliyorsunuz? Önce [AAPS v4'te neler değişti](V4Changes.md) sayfasını okuyun: taşınan, adı değişen veya kaldırılan özellikleri listeler.
+- [Ayarlarınızı dışa aktarmayı](ExportImportSettings.md) unutmayın. Güncellemeden sonra bunları yeniden içe aktardığınızda, pompa ayarlarının da değiştirilip değiştirilmeyeceğini siz seçersiniz.
 
-## Update AAPS with browser build
+## AAPS'i tarayıcı ile oluşturarak güncelleme
 
-You already built your AAPS app with a browser? Follow the instructions for the method you used:
+AAPS uygulamanızı zaten tarayıcı ile mi oluşturdunuz? Kullandığınız yöntemin talimatlarını izleyin:
 
-- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
-- **Fork and preparation file**: you run the **AAPS-CI** workflow in your own copy (fork) of AndroidAPS, a repository named `AndroidAPS` in your GitHub account, and the app lands in your Google Drive. Follow [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder**: uygulamayı özel deponuzun (genellikle `my-aaps` adlıdır) **Build AAPS** sayfasından oluşturur ve GitHub'dan indirirsiniz. [AAPS'i AAPS Builder ile güncelleme](#aaps-builder-updates) bölümündeki adımları izleyin. Senkronize edilecek bir fork yoktur.
+- **Fork ve hazırlık dosyası**: **AAPS-CI** iş akışını AndroidAPS'in kendi kopyanızda (fork), yani GitHub hesabınızdaki `AndroidAPS` adlı depoda çalıştırırsınız ve uygulama Google Drive'ınıza gelir. [Tarayıcı ile güncelleme (fork)](./UpdateBrowserBuild.md) sayfasındaki adımları izleyin.
 
-## Update AAPS with Android Studio
+## AAPS'i Android Studio ile güncelleme
 
-Follow [these instructions](./UpdateComputerBuild.md).
+[Bu talimatları](./UpdateComputerBuild.md) izleyin.
 
-## Update AAPS with the command-line
+## AAPS'i komut satırı ile güncelleme
 
-Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
+AAPS'i daha önce oluştururken kullandığınız [talimatların aynısını](../SettingUpAaps/CLIBuild.md) kullanın, ancak yeni değişiklikleri git ile çekin (pull).
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-## After the update
+## Güncellemeden sonra
 
-These steps are the same for every build method. Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+Bu adımlar her oluşturma yöntemi için aynıdır. Güncellemeden sonra özel talimatlar olup olmadığını [Sürüm notlarında](../Maintenance/ReleaseNotes.md) kontrol edin.
 
-After you installed the new apk:
+Yeni apk'yı yükledikten sonra:
 
-- you can check the **AAPS** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The current **AAPS** version can be viewed;
-- make sure you have imported your settings; and
-- please check your **AAPS** settings under **Settings** and ensure these remain accurate.
+- sol üstteki **menüyü** (☰) ve ardından **Hakkında**'yı açarak telefonunuzdaki **AAPS** sürümünü kontrol edebilirsiniz (aşağıdaki ekran görüntüsünde olduğu gibi). Güncel **AAPS** sürümünü görebilirsiniz;
+- ayarlarınızı içe aktardığınızdan emin olun; ve
+- lütfen **Ayarlar** altındaki **AAPS** ayarlarınızı kontrol edin ve hâlâ doğru olduklarından emin olun.
 
-![About dialog with the AAPS version installed](../images/about_dialog_version.png)
+![Yüklü AAPS sürümünü gösteren Hakkında iletişim kutusu](../images/about_dialog_version.png)
