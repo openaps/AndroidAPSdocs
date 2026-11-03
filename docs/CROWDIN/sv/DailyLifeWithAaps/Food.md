@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# Mat (din matdatabas)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+**Matdatabasen** är din personliga lista med sparade livsmedel. Varje post sparar ett livsmedels **kolhydrater** (och om du vill även fett, protein, energi och en kategori). Då kan du ha det du ofta äter på ett ställe och starta en bolus från ett sparat livsmedel där kolhydraterna redan är ifyllda.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## Öppna matdatabasen
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+Öppna skärmen **Hantera** (navigeringen längst ner) och välj **Matdatabas** (*”Hantera matdatabasposter”*). I **AAPS** v4 är matdatabasen **inte längre en plugin**. Det finns inget att aktivera; det är en egen skärm som du når från [menyn Hantera](#v4changes-manage).
 
 ---
 
-## Adding and editing a food
+## Listan med livsmedel
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+Dina livsmedel visas i en lista som du kan rulla. Varje rad visar livsmedlets **namn**, dess **portion / enhet / kategori** och dess **kolhydrater**:
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![Listan i matdatabasen, med sökning och knappen för att lägga till](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 Sök** (överst) - filtrera listan efter **namn** (skiftlägesokänsligt).
+- **Kategorifilter** - med knappar (chips) kan du begränsa listan till en **kategori**. När du har valt en kategori visas knappar för dess **underkategorier**. (Tryck på en vald knapp igen för att ta bort valet.)
+- **➕** (nere till höger) - lägg till ett nytt livsmedel (se nedan).
+- Tryck på en rad för att **redigera** livsmedlet.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+Om listan (eller det aktuella filtret) inte har några poster visar skärmen **Inga data**.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## Lägga till och redigera ett livsmedel
+
+Tryck på **➕** för att lägga till, eller tryck på en befintlig rad för att redigera. En redigerare öppnas som ett ark längst ner (**Lägg till mat** / **Redigera mat**):
+
+![Redigeraren för livsmedel - namn, kategori, portion, kolhydrater och makronäringsämnen](../images/v4/Food/food_editor.png)
+
+Fälten är:
+
+- **Namn** - krävs (du kan inte spara utan det).
+- **Kategori** och **Underkategori** - valfria, används för att gruppera/filtrera livsmedel.
+- **Portion** och **Enhet** - den vanliga portionsstorleken. **Enhet** är **g** som standard.
+- **Kolhydrater (g)** - mängden kolhydrater i livsmedlet.
+- **Fett (g)**, **Protein (g)**, **Energi (kJ)** - valfria näringsvärden.
+
+Tryck på **Spara** för att spara, eller på **Avbryt** för att slänga ändringarna. När du redigerar ett befintligt livsmedel har redigeraren också knappen **Radera**.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+När du raderar ett livsmedel visas meddelandet **”Matvara borttagen”** med åtgärden **Ångra**, så du kan lätt ångra en radering av misstag.
 ```
 
 ---
 
-## Using a food for a bolus
+## Använda ett livsmedel för en bolus
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+Varje rad med livsmedel har en knapp för **kalkylatorn**. Om du trycker på den öppnas **kalkylatorn** med livsmedlets **kolhydrater** redan ifyllda och livsmedlets **namn** som anteckning för behandlingen. Du bekräftar och ger bolusen utan att skriva kolhydraterna igen.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+Det sparade antalet **kolhydrater** skickas direkt till kalkylatorn. **AAPS** multiplicerar det inte med portionen eller med hur mycket du åt. Om du har en annan mängd, justera kolhydraterna i kalkylatorn innan du bekräftar. (Det finns inget val av livsmedel *inne i* kalkylatorn eller dialogen för kolhydrater; du startar från raden med livsmedlet här.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## Var livsmedlen kommer ifrån (synkronisering med Nightscout)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+Matdatabasen delas via **Nightscout**, men **bara i en riktning**:
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **Hämta:** **AAPS** **läser** livsmedel från **matdatabasen** på din Nightscout-sida och håller den lokala listan synkroniserad med den. Detta körs som en del av synkroniseringen i NSClient, så en parkopplad **klient/följare** får också samma livsmedel.
+- **Ladda upp:** **AAPS** skickar **inte** livsmedel **till** Nightscout. NSClient har inget stöd för att ladda upp livsmedelsposter. Livsmedel som du skapar eller redigerar **i AAPS** stannar därför **på den enheten** och skickas inte vidare till Nightscout eller till dina andra enheter.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+Eftersom matdatabasen **bara hämtas**, är sättet att dela en lista med livsmedel mellan din telefon, din följare/[klient](../RemoteFeatures/ClientMasterControl.md) och resten av ditt system att sköta den i **Nightscout** (dess inbyggda redigerare för mat). **AAPS** hämtar sedan dessa poster. Ett livsmedel som bara har lagts till i **AAPS** finns bara på den enheten, och det ligger kvar: en hämtning matchar Nightscout-poster med deras Nightscout-ID. Den lägger alltså till och uppdaterar dessa poster, men skriver aldrig över eller tar bort ett livsmedel som du har skapat lokalt (ett livsmedel tas bara bort när dess kopia i Nightscout raderas i Nightscout).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+Observera att matdatabasen **inte** heller är en del av den signerade kontrollkanalen mellan huvudenhet ↔ klient. Den skickas bara som Nightscout-data.
 ```
 
 ---
 
-## Not on the watch
+## Inte på klockan
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+Matdatabasen är en funktion i **telefonen**. Det finns ingen bläddring bland livsmedel, ingen bricka (tile) och ingen meny på en **Wear OS-klocka**.
 
 ---
 
