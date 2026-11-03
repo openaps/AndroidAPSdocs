@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# 음식 (음식 데이터베이스)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+**음식** 데이터베이스는 저장된 음식의 개인 목록입니다. 각 항목에는 음식의 **탄수화물**(그리고 선택적으로 지방, 단백질, 에너지, 분류)이 저장됩니다. 그래서 자주 먹는 음식을 한곳에 모아 두고, 저장된 음식에서 탄수화물이 이미 입력된 상태로 볼러스를 시작할 수 있습니다.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## 음식 데이터베이스 열기
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+**관리** 화면(하단 내비게이션)을 열고 **음식**(*“음식 데이터베이스 항목 관리”*)을 선택하십시오. **AAPS** v4에서 음식은 **더 이상 플러그인이 아닙니다** — 활성화할 것이 없습니다. [관리 시트](#v4changes-manage)에서 여는 독립된 화면입니다.
 
 ---
 
-## Adding and editing a food
+## 음식 목록
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+음식은 스크롤할 수 있는 목록으로 표시됩니다. 각 행에는 음식의 **이름**, **1회 분량 / 단위 / 분류**, **탄수화물**이 표시됩니다:
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![검색과 추가 버튼이 있는 음식 데이터베이스 목록](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 검색**(위쪽) — **이름**으로 목록을 필터링합니다(대소문자 구분 없음).
+- **분류 필터** — 칩으로 목록을 한 **분류**로 좁힐 수 있습니다. 분류를 선택하면 그 분류의 **하위 분류** 칩이 나타납니다. (선택한 칩을 다시 누르면 선택이 해제됩니다.)
+- **➕**(오른쪽 아래) — 새 음식을 추가합니다(아래 참조).
+- 행을 누르면 그 음식을 **편집**합니다.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+목록(또는 현재 필터)에 항목이 없으면 화면에 **데이터 없음**이 표시됩니다.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## 음식 추가와 편집
+
+추가하려면 **➕**를 누르고, 편집하려면 기존 행을 누르십시오. 편집기가 하단 시트로 열립니다(**음식 추가** / **음식 편집**):
+
+![음식 편집기 — 이름, 분류, 1회 분량, 탄수화물과 다른 영양소](../images/v4/Food/food_editor.png)
+
+항목은 다음과 같습니다:
+
+- **이름** — 필수입니다(이름이 없으면 저장할 수 없습니다).
+- **분류**와 **하위 분류** — 선택 사항이며, 음식을 묶거나 필터링하는 데 사용합니다.
+- **1회 분량**과 **단위** — 보통 먹는 양입니다. **단위**의 기본값은 **g**입니다.
+- **탄수화물 (g)** — 음식의 탄수화물 양입니다.
+- **지방 (g)**, **단백질 (g)**, **에너지 (kJ)** — 선택 사항인 영양 값입니다.
+
+저장하려면 **저장**을, 버리려면 **취소**를 누르십시오. 기존 음식을 편집할 때는 편집기에 **삭제** 버튼도 있습니다.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+음식을 삭제하면 **실행 취소** 동작이 있는 **“음식이 삭제되었습니다”** 메시지가 표시되므로, 실수로 삭제해도 쉽게 되돌릴 수 있습니다.
 ```
 
 ---
 
-## Using a food for a bolus
+## 볼러스에 음식 사용하기
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+각 음식 행에는 **계산기** 버튼이 있습니다. 이 버튼을 누르면 그 음식의 **탄수화물**이 이미 입력되고 음식의 **이름**이 처치 노트로 추가된 상태로 **볼러스 마법사**가 열립니다 — 그래서 탄수화물을 다시 입력하지 않고 확인하고 주입할 수 있습니다.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+음식에 저장된 **탄수화물** 숫자는 그대로 마법사에 전달됩니다 — **AAPS**는 이 숫자에 1회 분량이나 실제로 먹은 양을 곱하지 않습니다. 양이 다르면 확인하기 전에 마법사에서 탄수화물을 조정하십시오. (볼러스 마법사나 탄수화물 대화 상자 *안에는* 음식 선택 기능이 없습니다. 여기 음식 행에서 시작합니다.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## 음식은 어디에서 오는가 (Nightscout 동기화)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+음식 데이터베이스는 **Nightscout**를 통해 공유되지만, **한 방향으로만** 공유됩니다:
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **다운로드:** **AAPS**는 Nightscout 사이트의 **음식 데이터베이스**에서 음식을 **읽어 오고**, 로컬 목록을 그것과 동기화된 상태로 유지합니다. 이 작업은 NSClient 동기화의 일부로 실행되므로, 페어링된 **클라이언트/팔로워**도 같은 음식을 갖게 됩니다.
+- **업로드:** **AAPS**는 음식을 Nightscout**로** 보내지 **않습니다** — NSClient는 음식 항목 업로드를 지원하지 않습니다. 따라서 **AAPS 안에서** 만들거나 편집한 음식은 **그 장치에만** 남고, Nightscout나 다른 장치로 전달되지 않습니다.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+음식은 **다운로드 전용**이므로, 휴대폰, 팔로워/[클라이언트](../RemoteFeatures/ClientMasterControl.md), 그리고 나머지 구성에서 하나의 음식 목록을 공유하려면 **Nightscout**(내장 음식 편집기)에서 목록을 관리해야 합니다. 그러면 **AAPS**가 그 항목을 받아 옵니다. **AAPS**에서만 추가한 음식은 그 장치에만 있으며 그대로 유지됩니다: 다운로드는 Nightscout 항목을 Nightscout ID로 대조하므로, 그 항목을 추가하고 업데이트할 뿐 로컬에서 만든 음식을 덮어쓰거나 삭제하지 않습니다(음식은 Nightscout에서 그 Nightscout 사본이 삭제될 때만 삭제됩니다).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+음식 데이터베이스는 마스터 ↔ 클라이언트 서명된 제어 채널에도 **포함되지 않습니다** — 순수하게 Nightscout 데이터로만 전달됩니다.
 ```
 
 ---
 
-## Not on the watch
+## 워치에서는 사용할 수 없음
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+음식 데이터베이스는 **휴대폰** 기능입니다 — **Wear OS 워치**에는 음식 브라우저, 타일 또는 메뉴가 없습니다.
 
 ---
 
