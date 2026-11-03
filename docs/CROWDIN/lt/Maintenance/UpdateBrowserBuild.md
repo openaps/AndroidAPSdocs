@@ -97,7 +97,7 @@ Dabar savo kopiją sinchronizavote (atnaujinote) su naujausia **AAPS** versija. 
 ![Vieta Google Drive](../images/update/CI/GitHubActions5.png)
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+Nuo 2026 m. rugsėjo Google [Android kūrėjų tapatybės patikrinimas](#android-developer-verification), priklausomai nuo jūsų šalies, gali neleisti įdiegti APK paspaudus failą. Nemokami apėjimo būdai aprašyti tame puslapyje.
 ```
 
 Tęskite [čia](#Update-to-new-version-check-aaps-version-on-phone)
