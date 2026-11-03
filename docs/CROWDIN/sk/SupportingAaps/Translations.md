@@ -1,6 +1,6 @@
 # Ako prekladať reťazce aplikácie AAPS alebo dokumentácie
 
-* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
+* Pre reťazce používané v aplikácii prejdite na <https://crowdin.com/project/androidaps> a prihláste sa pomocou svojho účtu GitHub
 * Pre dokumentáciu navštívte <https://crowdin.com/project/androidapsdocs> a prihláste sa pomocou svojho účtu GitHub
 
 * Pošlite tímu dokumentácie žiadosť o pripojenie. Kliknite na vlajku požadovaného jazyka a potom na tlačidlo „Join“ v pravom hornom rohu ďalšej stránky. Uveďte jazyk, napíšte niečo o sebe a svojich skúsenostiach s AAPS a či chcete byť prekladateľom alebo korektorom (iba ľudia so skúsenosťami s prekladom + pokročilí používatelia AAPS).
@@ -63,8 +63,8 @@ Schválenie je ručný krok. Ako nezisková organizácia neposkytujeme SLA (zaru
     
         1. Toto je preklad, ktorý pripravujete. Text môžete skopírovať zhora alebo vybrať jeden z návrhov nižšie.
     
-        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
-        1. Stlačte tlačidlo „save“ a uložte návrh prekladu. It will then be passed to a proofreader for final check.
+        1. Toto sú návrhy prekladu. Najmä tu uvidíte, ako dobre podľa Crowdinu návrh zodpovedá, alebo či už bol text preložený v minulosti a vrátil sa iba preto, že sa presunul, nie zmenil.
+        1. Stlačte tlačidlo „save“ a uložte návrh prekladu. Potom ho dostane korektor na konečnú kontrolu.
     
     ![Preklad dokumentácie](../images/translation_WikiTranslate.png)
     
@@ -72,7 +72,7 @@ Schválenie je ručný krok. Ako nezisková organizácia neposkytujeme SLA (zaru
     
         1. korektor preklad skontroluje
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
+        1. prebehne synchronizácia medzi Crowdinom a GitHubom (raz za hodinu), ktorá vytvorí PR na GitHube.
     
         1. je PR na GitHube schválený.
     
@@ -83,11 +83,11 @@ Schválenie je ručný krok. Ako nezisková organizácia neposkytujeme SLA (zaru
     ```{admonition} Odkazy sa už neprekladajú
     :class: note
     
-    Odkazy sa už neprekladajú. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Odkazy sa už neprekladajú. Predtým tu k tomu bola samostatná téma, ale to už neplatí: po prechode na Markdown a myst_parser v anglickom texte výslovne vytvárame štítky (labels) a tie sa automaticky prenášajú do ostatných jazykov.
     
     
 
-Prekladáte text, ktorý predstavuje odkaz. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
+Prekladáte text, ktorý predstavuje odkaz. Dávajte prosím pozor, aby ste **neodstránili** odkaz, ktorý predstavuje dvojica značiek `<0></0>` (alebo iné čísla, ak je v odseku viac odkazov).
 
 Na to sa musia korektori osobitne pozrieť!
 
@@ -101,4 +101,4 @@ Na to sa musia korektori osobitne pozrieť!
     
     ![schválenie textu](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. Ak chcete proces urýchliť, môžete tím dokumentácie informovať o nových prekladoch.
+* Keď korektor schváli preklad, pridá sa do najbližšieho zostavenia dokumentácie. To prebieha podľa potreby bez pevného rozvrhu, ale približne raz za týždeň, okrem sviatkov. Ak chcete proces urýchliť, môžete tím dokumentácie informovať o nových prekladoch.
