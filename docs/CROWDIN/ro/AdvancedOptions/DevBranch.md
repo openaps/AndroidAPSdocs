@@ -6,13 +6,13 @@ Ramura dev este doar pentru dezvoltarea în viitor a AAPS. Ar trebui folosită p
 
 Cea mai stabilă versiune de AAPS este cea din [Ramura principală](https://github.com/nightscout/AndroidAPS/tree/master). Este recomandat să rămâneți pe ramura principală pentru folosirea propriu-zisă a buclei.
 
-Versiunea dev a AAPS este doar pentru dezvoltatori și cei care testează care sunt confortabili cu urmărirea stivei, cu căutarea în fișierele de jurnal și poate cu pornirea depanatorului pentru a produce rapoarte de erori care sunt de ajutor pentru dezvoltatori (pe scurt: oameni care știu ce fac fără a fi ajutați!). Prin urmare, multe caracteristici nefinalizate sunt dezactivate. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in the directory /AAPS/extra. Activarea modului de inginerie poate strica complet bucla.
+Versiunea dev a AAPS este doar pentru dezvoltatori și cei care testează care sunt confortabili cu urmărirea stivei, cu căutarea în fișierele de jurnal și poate cu pornirea depanatorului pentru a produce rapoarte de erori care sunt de ajutor pentru dezvoltatori (pe scurt: oameni care știu ce fac fără a fi ajutați!). Prin urmare, multe caracteristici nefinalizate sunt dezactivate. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in the directory /AAPS/extra. Activarea modului inginer poate strica complet bucla.
 
 Cu toate acestea, versiunea dev este un loc bun pentru a vedea care sunt funcțiile testate și pentru a ajuta la remedierea erorilor și a oferi sugestii cu privire la funcționarea practică a noilor caracteristici. Adesea, oamenii vor testa ramura dev pe un telefon vechi și pe o pompă până când vor avea încredere că este stabilă - orice utilizare a acesteia este pe propriul risc. Când testați orice caracteristici noi, țineți minte că alegeți să testați o caracteristică încă în dezvoltare. Faceți acest lucru pe propriul risc & cu grija cuvenită pentru a vă menține în siguranță.
 
 Dacă găsiți o eroare sau credeți că s-a întâmplat ceva greșit atunci când folosiți ramura Dev, atunci vedeți [secțiunea probleme](https://github.com/nightscout/AndroidAPS/issues) pentru a verifica dacă altcineva a găsit-o sau pentru a o adăuga chiar dumneavoastră dacă nu a fost semnalată încă. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md)). Noile caracteristici pot fi de asemenea discutate pe [discord](https://discord.gg/4fQUWHZ4Mw).
 
-O versiune dev are o dată de expirare. Acest lucru pare deranjant atunci când o folosiți în mod satisfăcător, dar servește unui scop. When a single dev version is doing the rounds, it is easier to keep track of bugs that people are reporting. Dezvoltatorii nu doresc să se afle într-o poziție în care circulă trei versiuni de dev unde erorile sunt reparate în unele și în altele nu, iar oamenii continuă să le raporteze pe cele corectate.
+O versiune dev are o dată de expirare. Acest lucru pare deranjant atunci când o folosiți în mod satisfăcător, dar servește unui scop. Când circulă o singură versiune dev, este mai ușor să urmăriți erorile raportate de utilizatori. Dezvoltatorii nu doresc să se afle într-o poziție în care circulă trei versiuni de dev unde erorile sunt reparate în unele și în altele nu, iar oamenii continuă să le raporteze pe cele corectate.
 
 (branch-ci-test)=
 
@@ -51,21 +51,21 @@ Disponibil de la 3.3.2.1.dev
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- Target repository: the repository that contains the PR, in the format owner/repo. Leave the default **nightscout/AndroidAPS** unless you were told to use another repository (only developers should do this).
+- Target repository: the repository that contains the PR, in the format owner/repo. Lăsați valoarea implicită **nightscout/AndroidAPS**, cu excepția cazului în care vi s-a spus să folosiți alt depozit (doar dezvoltatorii ar trebui să facă acest lucru).
 
 - Numărul PR: Vă rugăm să introduceți numărul PR pe care doriți să-l testați.
 
 - Tipuri de referință PR: tipurile de referință PR includ două opțiuni:
     
     - head:
-    - Preia conținutul real din ramura autorului PR, adică istoricul original al comiterii fără operațiuni de îmbinare).
+    - Preia conținutul real din ramura autorului PR (adică istoricul original al comiterilor, fără operațiuni de îmbinare).
     - Aceasta este echivalentă cu starea originală a ramurei PR, ca și cum ar fi fost preluată direct de pe o copie derivată sau o ramură cu caracteristici.
     
-    - fuzionare:
+    - merge:
     
-    - Preia rezultatul fuzionării presimulate a PR a GitHub-ului în ramura țintă (de exemplu, dev).
+    - Preia rezultatul îmbinării PR în ramura țintă (de exemplu, dev), simulată în prealabil de GitHub.
     - Aceasta este o comitere de îmbinare virtuală creată automat de GitHub.
-    - Această confirmare există doar atunci când cererea de integrare nu are conflicte și poate fi îmbinată.
+    - Această comitere există doar atunci când PR nu are conflicte și poate fi îmbinat.
     
     - variant:
     
