@@ -22,38 +22,38 @@ Your QuickWizards are shown as a **swipeable card carousel** (each card shows th
 
 ![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
 
-The editor's main fields are:
+Câmpurile principale ale editorului sunt:
 
-- **Button text** — the label shown on the button.
-- **Carbs** and **Carb Time** — the carb amount and its time offset.
+- **Text buton** — eticheta afișată pe buton.
+- **Carbohidrați** și **Timp carbohidrați** — cantitatea de carbohidrați și decalajul ei în timp.
 - **Valid Time Range** — see [Validity](#quickwizard_validity).
 - **Calculator Options** and **Device Selection** — see below.
 
 ---
 
-## The three modes
+## Cele trei moduri
 
 The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
 
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
+- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). Administrează bolusul *calculat* și înregistrează carbohidrații. Acesta este asistentul rapid clasic.
 - **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
-- **Carbs** — records the configured **carbs only**, with **no bolus**.
+- **Carbohidrați** — înregistrează **doar carbohidrații** configurați, **fără bolus**.
 
 ---
 
-## Calculator Options (Wizard mode)
+## Opțiuni calculator (modul Asistent)
 
 For a **Wizard**-mode button you choose which inputs the calculation uses:
 
-- **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
+- **Utilizați glicemia**, **Utilizați COB**, **Utilizați IOB** (cu *Doar IOB pozitiv*), **Utilizați tendința** (*Toate / Doar pozitiv / Doar negativ*), **Utilizați Ținta Temporară**, **Utilizați alarma**.
 - **Bolus percentage** — scale the calculated bolus.
-- **Add eCarbs** — also schedule extended carbs.
+- **Adăugați carbohidrați extinși** — programează și carbohidrați extinși.
 
 ![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
 
 ---
 
-## Validity — when the button appears
+## Valabilitate — când apare butonul
 
 (quickwizard_validity)= The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet and from the [QuickLaunch toolbar](QuickLaunch.md). A toolbar button is not deleted: it comes back when the window opens again.
 
@@ -95,9 +95,9 @@ A QuickWizard is refused when its dose is above your max bolus, or when its carb
 
 - **➕ Add** — create a new QuickWizard.
 - **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **🗑️ Ștergeți** — eliminați unul.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (Comenzile arată la fel ca la [reordonarea profilurilor](ProfileSwitch-ProfilePercentage.md).)
 
 QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
 
