@@ -2,7 +2,7 @@
 
 ## Darujte svá data vědě
 
-Můžete pomoci komunitě tím, že darujete svá data výzkumným projektům! This helps scientists to pay it forward, develop new scientific ideas and make open source closed loop systems better known. AAPS umí synchronizovat vaše data s [Open Humans](https://www.openhumans.org). Je to platforma, na kterou můžete nahrávat, propojovat a ukládat svá osobní data – například genetická data, data o aktivitě a zdravotní data.
+Můžete pomoci komunitě tím, že darujete svá data výzkumným projektům! Pomáhá to vědcům předávat znalosti dál, rozvíjet nové vědecké nápady a více zviditelnit systémy uzavřené smyčky s otevřeným zdrojovým kódem. AAPS umí synchronizovat vaše data s [Open Humans](https://www.openhumans.org). Je to platforma, na kterou můžete nahrávat, propojovat a ukládat svá osobní data – například genetická data, data o aktivitě a zdravotní data.
 
 Zachováváte si plnou kontrolu nad tím, co se stane s vašimi daty, a jaké projekty chcete podpořit tím, že jim udělíte přístup k vašim datům. V závislosti na projektu, ke kterému jste se připojili, jsou údaje vyhodnocovány a používány různými způsoby a v různém rozsahu.
 
@@ -76,7 +76,7 @@ Snímek obrazovky výše je ze starší verze **AAPS**. V **AAPS** 4 jsou potvrz
 
 Projekt "OPEN" spojuje mezinárodní a mezioborové konsorcium inovátorů z řad pacientů, klinických pracovníků, sociálních vědců, počítačových vědců a organizací hájících zájmy pacientů s cílem prozkoumat různé aspekty DIY APS (systémy umělé slinivky typu udělej-si-sám), které používá stále více lidí s diabetem. Více informací najdete na jejich [webu](https://www.open-diabetes.eu/).
 
-In September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. [Návod](https://open-diabetes.eu/en/open-survey/survey-tutorials/), jak darovat svá data projektu 'OPEN', je k dispozici na jejich webu i přímo v průzkumu.
+V září 2020 spustil projekt 'OPEN' [průzkum](https://survey.open-diabetes.eu/), který zahrnuje i možnost darovat data, která jste nahráli do Open Humans. [Návod](https://open-diabetes.eu/en/open-survey/survey-tutorials/), jak darovat svá data projektu 'OPEN', je k dispozici na jejich webu i přímo v průzkumu.
 
 ### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
 
@@ -98,7 +98,7 @@ Viz také [Podmínky Open Humans](https://www.openhumans.org/terms/).
 
 ## Ochrana dat
 
-Open Humans se stará o ochranu vašeho soukromí tím, že vám pro každý projekt přidělí číselné ID. This allows projects to recognize but not identify you. ID aplikace, které AAPS nahrává, je podobné a slouží jen ke správě dat. Další informace naleznete zde:
+Open Humans se stará o ochranu vašeho soukromí tím, že vám pro každý projekt přidělí číselné ID. Díky tomu vás projekty mohou rozpoznat, ale ne zjistit, kdo jste. ID aplikace, které AAPS nahrává, je podobné a slouží jen ke správě dat. Další informace naleznete zde:
 
 - [Zásady využití dat Open Humans](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)
