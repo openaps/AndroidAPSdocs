@@ -2,7 +2,7 @@
 
 The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with its matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
+You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with its matching phone app. Pavyzdžiui, programėlė **AAPSClient Wear** gali rodyti **AAPSClient** duomenis, bet ne **AAPS** duomenis. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
 
 ## Wear OS Versions and compatibility
 
@@ -55,14 +55,14 @@ The **Complications watchface** has seven complication slots. Long-press the wat
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | ![Complications watchface, default setup](../images/wearos/complications_watchface_default.png) | ![Complications watchface, alternative setup](../images/wearos/complications_watchface_alternative.png) |
 
-| Slot | Position  | Default                                                             | Alternative                           |
+| Slot | Padėtis   | Default                                                             | Alternative                           |
 | ---- | --------- | ------------------------------------------------------------------- | ------------------------------------- |
 | 1    | Left      | IoB Icon                                                            | CoB & IoB                             |
 | 2    | Centre    | Blood Glucose                                                       | Blood Glucose                         |
 | 3    | Right     | CoB Icon                                                            | BR & Target                           |
 | 4    | Graph     | BG Graph                                                            | BG Graph                              |
 | 5    | Bottom    | BR & Target                                                         | Uploader/Phone Battery                |
-| 6    | Top-left  | Running mode                                                        | Running mode                          |
+| 6    | Top-left  | Veikimo režimas                                                     | Veikimo režimas                       |
 | 7    | Top-right | Uploader/Phone Battery, or an app shortcut to **AAPS Snooze Alert** | App shortcut to **AAPS Snooze Alert** |
 
 The **AAPS Snooze Alert** shortcut is picked from the watch's own **App shortcut** complications. Tapping it snoozes the alarm that is sounding on the phone.
@@ -106,35 +106,35 @@ Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQq
 
 ## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
 
-This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
+Šiame skyriuje laikoma, kad išmanieji laikrodžiai jums visai nauji. Čia rasite trumpą populiaraus laikrodžio **Galaxy Watch 4** apžvalgą, o po jos – žingsnis po žingsnio vadovą, kaip laikrodyje nustatyti **AAPS**.
 
 _This guide was written for a Galaxy Watch running Wear OS 3._ On Wear OS 4 and later the watch asks for a **pairing code** when a phone or computer connects over ADB. Wear Installer 2 and the terminal procedure [below](#BuildingAapsWearOs-WearOS5-TShoot) both support it.
 
-Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+Čia rasite pagrindinius nustatymo vadovus laikrodžiams [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) ir [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
-## Basic smartwatch familiarity
+## Pirmoji pažintis su išmaniuoju laikrodžiu
 
 After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
-There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
+YouTube yra daug kitų autorių vaizdo įrašų, kurie padės susipažinti su nauju išmaniuoju laikrodžiu, pavyzdžiui:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
+Programėlėje „Galaxy Wearable“ taip pat yra naudojimo instrukcija. Telefone atidarykite Galaxy Wearable, suraskite laikrodį ir pabandykite susieti laikrodį su telefonu. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Įdiekite ją telefone ir vėl pabandykite susieti laikrodį su telefonu programėlėje Wearable. Pereikite per kelis meniu ir pažymėkite norimus nustatymus.
 
-## Setting up a Samsung account
+## Samsung paskyros sukūrimas
 
-You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
+El. pašto paskyroje, kurią naudojate Samsung paskyrai sukurti, turi būti nurodyta tokia gimimo data, kad naudotojui būtų bent 13 metų. Kitaip Samsung leidimus patvirtinti labai sunku. Jei vaikui iki 13 metų sukūrėte Gmail paskyrą ir naudojate šį el. pašto adresą, jos negalite paprasčiausiai pakeisti į suaugusiojo paskyrą. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. Kitą dieną paskyra bus pakeista į suaugusiojo paskyrą, ir galėsite tęsti Samsung paskyros kūrimą.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
-## Transferring the **AAPS** Wear app onto your **AAPS** phone
+## **AAPS** Wear programėlės perkėlimas į **AAPS** telefoną
 
-Loading the Wear.apk from Android Studio to your phone can be done either by:
+Wear.apk failą iš Android Studio į telefoną galite perkelti vienu iš būdų:
 
-a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
+a) USB laidu nukopijuokite **AAPS** Wear APK failą į telefoną, o tada įdiekite jį į laikrodį rankiniu būdu (side-load). Perkelkite Wear.apk USB laidu į telefono aplanką „Atsisiuntimai“ (Downloads); arba
 
-b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
+b) iškirpkite Wear.apk iš Android Studio ir įklijuokite į savo Google Drive.
 
 
 To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained. If Wear Installer 2 does not work for you, try Easy Fire Tools or ADB, both described below.
@@ -143,7 +143,7 @@ To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy
 
  ![Wear Installer 2 app icon](../images/wearos/wear_installer2_icon.png)
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+Wear Installer 2, kurią sukūrė [Malcolm Bryant](https://www.youtube.com/@Freepoc), galima atsisiųsti iš Google Play į telefoną. Su ja AAPS Wear programėlę galima rankiniu būdu įdiegti į laikrodį. Programėlėje yra patogus [vaizdo įrašas](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) apie diegimą rankiniu būdu.
 
 ```{tip}
 For Wear OS 5 watches follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk).
@@ -152,7 +152,7 @@ See troubleshooting tips [below](#BuildingAapsWearOs-WearOS5-TShoot).
 
 This provides all the necessary detail (best to open the video on a separate device so you can watch it while setting up the phone).
 
-As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+Kaip sakoma vaizdo įraše, baigę laikrodyje išjunkite ADB derinimą, kad be reikalo neeikvotumėte išmaniojo laikrodžio baterijos.
 
 Alternatively, but not for Wear OS 5, you can:
 
@@ -182,7 +182,7 @@ STEP 3)     Enter IP address _e.g._ **192.168.1.214** into Easy Fire tools on th
 
 ![image](../images/wearos/easyfire05.png)
 
-Then click the plug socket icon on the top right. It will turn green when connected.
+Tada spauskite kištukinio lizdo piktogramą viršuje dešinėje. It will turn green when connected.
 
 ![image](../images/wearos/easyfire06.png)
 
@@ -246,23 +246,23 @@ Once paired you should be able to install the AAPS wear apk:
 - On wireless debug, note the IP and Port number and make sure you check/enter the IP and port number in Wear Installer.
 - Note: the port number is different from the one used for pairing!
 
-## Setting up the connection between the watch and the phone from **AAPS**
+## Ryšio tarp laikrodžio ir telefono nustatymas **AAPS** programėlėje
 
 The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. To do this, enable the Wear plugin:
 
-* Go to the **AAPS** app on the phone
+* Telefone atidarykite **AAPS** programėlę
 
 * Open the **menu** (☰) in the top-left corner and go to **Configuration** > **Communication**
 
 * Tick the **Wear** box
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![Konfigūracija > Ryšys su įjungtu Wear](../images/v4/Configuration/configuration_communication_wear.png)
 
 To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
 
-To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Then swipe right until you get to all the **AAPS**  faces.
+To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Tada braukite į dešinę, kol pamatysite visus **AAPS** ciferblatus.
 
-If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
+Jei **AAPS** Wear.apk sėkmingai įdiegtas į išmanųjį laikrodį, tai atrodys taip:
 
 
 ![Wear plugin showing the connected Galaxy Watch, and the AAPS app on the watch](../images/wearos/wear_apk_installed.png)
@@ -277,11 +277,11 @@ For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Sa
 ### Troubleshooting the **AAPS** watch- **AAPS** phone communication
 
 1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
-2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
-3.  Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
-4.  It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
+2.  Patikrinkite, ar išmanusis laikrodis prijungtas prie interneto (o ne tik prie telefono per Bluetooth).
+3.  Patikrinkite, ar **AAPS** telefonas ir išmanusis laikrodis susieti Samsung programėlėje.
+4.  Taip pat gali padėti telefono ir išmaniojo laikrodžio paleidimas iš naujo (t. y. išjungti ir vėl įjungti)
 5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** Wear apk onto the watch: the watch app of a browser build is the `aaps-wear-….apk` file, see [Building the Wear app](../WearOS/BuildingAapsWearOS.md). If the file you installed is any of the following: a) an **AAPSClient** Wear apk (while the phone runs **AAPS**); b) a `.aab` file; or c) a file with the word ‘debug’ in its name, you have not selected the correct Wear OS apk during the build.
-6.  Check that your router is not isolating the devices from one another.
+6.  Patikrinkite, ar maršrutizatorius neizoliuoja įrenginių vienas nuo kito.
 
 More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
