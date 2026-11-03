@@ -1,43 +1,43 @@
 (aaps-ci-option2)=
 
-# Option 2 – Upload your existing keystore
+# אפשרות 2 – העלאת ה-keystore הקיים שלכם
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+זה חלק מ-[שלב 2 – יצירת keystore לחתימה](BrowserBuildKeystore.md) של [בנייה בדפדפן](BrowserBuild.md). יש לוודא שקראתם את [ההחלטה בין אפשרות 1 לאפשרות 2](#aaps-ci-preparation).
 ```
 
-Option 2 reuses the JKS you already created on a previous build of AAPS from a computer in Android Studio. It is suitable for users who already have a JKS and know the JKS password and alias.
+אפשרות 2 משתמשת שוב ב-JKS שכבר יצרתם בבנייה קודמת של AAPS במחשב ב-Android Studio. היא מתאימה למשתמשים שכבר יש להם JKS ושיודעים את הסיסמה ואת ה-alias שלו.
 
-For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub – those from Android Studio, see below where you used them.
+עבור `KEYSTORE_PASSWORD`, `KEY_ALIAS` ו-`KEY_PASSWORD`, יש להזין ב-GitHub את הסיסמה ואת ה-alias האמיתיים שלכם – אלה מ-Android Studio. בתמונה למטה רואים איפה השתמשתם בהם.
 
 ```{warning}
-**Passwords with special characters.** Enter your passwords exactly as they are. Do not add a backslash or any other escape character: the build workflow keeps every character intact, and an added backslash becomes part of the password.
+**סיסמאות עם תווים מיוחדים.** יש להזין את הסיסמאות בדיוק כפי שהן. אין להוסיף לוכסן הפוך (backslash) או כל תו מילוט (escape) אחר: ה-workflow של הבנייה שומר כל תו בלי שינוי, ולוכסן הפוך שנוסף הופך לחלק מהסיסמה.
 
-If the build still fails at the signing step and your password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is outdated. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev and re-run the build. See [Browser build troubleshooting](#aaps-ci-password-special-characters).
+אם הבנייה עדיין נכשלת בשלב החתימה, והסיסמה שלכם מכילה `$`, גרש הפוך (backtick), `"` או `\`, קובץ ה-workflow ב-fork שלכם ישן. יש [לסנכרן את ה-fork שלכם](#Update-to-new-version-update-your-repo) עם ה-dev העדכני, ואז להריץ שוב את הבנייה. ראו [בנייה בדפדפן: פתרון תקלות](#aaps-ci-password-special-characters).
 ```
 
 ```{admonition} KEY + PASSWORDS
 :class: dropdown
 
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+![זכירת סיסמאות](../images/Building-the-App/044_RememberPwd.png)
 ```
 
-## Choose your device
+## בחירת המכשיר
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+בונים מ**טלפון Android**? השתמשו במקום זה ב-[AAPS Builder](BrowserBuildAapsBuilder.md): הוא לא צריך קובץ הכנה.
 ```
 
-Follow the page that matches the device you are building from:
+פעלו לפי הדף שמתאים למכשיר שממנו אתם בונים:
 
-- **[Computer](BrowserBuildO2Computer.md)** – Windows, Mac or Linux.
+- **[מחשב](BrowserBuildO2Computer.md)** – Windows, Mac או Linux.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+אפשר להחליף מכשיר בכל זמן – פשוט פותחים את הדף המתאים.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO2Computer.md>
+מחשב <BrowserBuildO2Computer.md>
 ```
