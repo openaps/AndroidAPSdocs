@@ -2,7 +2,7 @@
 
 **Tento popis platí iba pre úpravy anglickej dokumentácie. Všetky nové informácie sa musia najprv pridať v angličtine. Ak chcete prekladať do iných jazykov (ďakujeme), použite prosím [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
+Rady, ako formátovať text (nadpis, tučné písmo...) a vkladať odkazy, nájdete v časti [„Syntax kódu“](#edit-the-docs-code-syntax) na tejto stránke.
 
 ## Všeobecne
 
@@ -34,11 +34,11 @@ Alebo kliknite na ikonu ceruzky, ktorá sa zobrazí v hornej lište obsahu strá
 
 3. Ktorákoľvek z možností v kroku 2 vytvorí vo VAŠOM repozitári novú vetvu, do ktorej sa uložia vaše úpravy. Upravte súbor.
 
-Pre stránky dokumentácie používame Markdown. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+Pre stránky dokumentácie používame Markdown. Súbory majú príponu „.md“. Špecifikácia Markdownu nie je pevne daná a pre naše súbory Markdown teraz používame myst_parser. Dbajte na správnu syntax, ako je [popísané nižšie](#edit-the-docs-code-syntax).
 
 ![úprava vo vetve](../images/PR3.png)
 
-4. Doteraz ste pracovali na karte „<>Edit file“. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Ak vidíte, že treba niečo vylepšiť, vráťte sa na kartu úprav a urobte ďalšie úpravy. 
+4. Doteraz ste pracovali na karte „<>Edit file“. Vyberte kartu „Preview changes“ a pozrite sa na text znova, aby ste si overili, že všetko, čo ste zmenili, vyzerá tak, ako ste chceli (skontrolujte preklepy). Ak vidíte, že treba niečo vylepšiť, vráťte sa na kartu úprav a urobte ďalšie úpravy. 
 
 ![režim náhľadu](../images/PR5.png)
 
@@ -54,7 +54,7 @@ Pre stránky dokumentácie používame Markdown. The files have the suffix ".md"
 
 ![sledovanie PR](../images/PR7.png)
 
-PS: Váš fork a vetva zostanú vo vašom osobnom účte GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Ak budete pri ďalších úpravách postupovať takto, úpravy vždy začnú z aktuálnej verzie repozitárov AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Keďže ľudia často zabúdajú svoje repozitáre aktualizovať, odporúčame používať vyššie opísaný postup PR, kým sa s „compare“ (porovnaním) nezoznámite.
+PS: Váš fork a vetva zostanú vo vašom osobnom účte GitHub. Keď dostanete upozornenie, že váš PR bol zlúčený, môžete svoju vetvu odstrániť, ak ju už nepotrebujete (v oblasti upozornení z kroku 7 bude odkaz na odstránenie vetvy, keď bude PR uzavretý alebo zlúčený). Ak budete pri ďalších úpravách postupovať takto, úpravy vždy začnú z aktuálnej verzie repozitárov AndroidAPSdocs. Ak na vytvorenie PR zvolíte iný postup (napr. úpravy, ktoré začínajú vo vetve master vášho forku), musíte sa uistiť, že váš repozitár je aktuálny: najprv vykonajte „compare“ (porovnanie) a zlúčte všetky zmeny, ktoré vznikli od poslednej aktualizácie vášho forku. Keďže ľudia často zabúdajú svoje repozitáre aktualizovať, odporúčame používať vyššie opísaný postup PR, kým sa s „compare“ (porovnaním) nezoznámite.
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ Autor napr. iba označí nadpis ako nadpis 1. úrovne a procesor Markdownu pri s
 Myšlienka je taká, že
 
 - autor má najprv myslieť na text, a nie na formátovanie,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
+- text Markdown sa dá vymieňať medzi rôznymi nástrojmi Markdown, na rozdiel napr. od uzavretých nástrojov, ako je Microsoft Word, a
 - z jedného súboru Markdown môžete vytvoriť viac výstupných formátov.
 
 Markdown nie je 100 % pevný štandard a snažíme sa držať čo najbližšie k štandardu, aby sme
@@ -147,10 +147,10 @@ Na vloženie obrázkov použite túto syntax Markdown.
 
 Obrázok má byť vo formáte PNG alebo JPEG.
 
-Image names should conform to one of the following naming rules. V príklade používam príponu png. Ak použijete JPEG, použite namiesto toho príponu jpeg.
+Názvy obrázkov majú zodpovedať jednému z nasledujúcich pravidiel pomenovania. V príklade používam príponu png. Ak použijete JPEG, použite namiesto toho príponu jpeg.
 
 - `filename-image-xx.png`, kde xx je jedinečné dvojciferné číslo obrázka v tomto súbore.
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png`, kde xx je zmysluplný názov, ktorý zvolí autor súboru md.
 
 Obrázky sú uložené v priečinku images pre anglický jazyk a Crowdin ich automaticky prenesie do ostatných jazykov. Nemusíte pre to nič robiť!
 
@@ -199,7 +199,7 @@ Potom na tento odkaz odkážte v texte, ktorý píšete, pomocou tohto typu odka
 
 Do dokumentácie môžete pridať rámčeky s poznámkami a varovaniami.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Používajte ich opatrne, pretože dokumentácia má byť čo najľahšie čitateľná.
+Okrem toho môžete pridať zbaliteľné poznámky s podrobnými informáciami, aby používateľov, ktorých podrobnosti nezaujímajú, neodradili od čítania textu. Používajte ich opatrne, pretože dokumentácia má byť čo najľahšie čitateľná.
 
 #### Poznámky
 
@@ -219,9 +219,9 @@ Furthermore you can add collapsing notes for detailed information, so that users
     Toto je varovanie.
     
 
-    ```{admonition} Warning headline
+    ```{admonition} Nadpis varovania
     :class: warning
-    This is a warning.
+    Toto je varovanie.
     ```
     
     #### Zbaliteľné poznámky
@@ -244,7 +244,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ## Tabuľky
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Nepoužívajte tabuľky s dlhými textami: obsah sa v Markdowne ťažko zadáva, tabuľky sa zvyčajne nezmestia na šírku obrazovky mobilu a po preklade sa pravdepodobne nezobrazia rovnako.
 
 ## Príručka štýlu
 
@@ -262,9 +262,9 @@ Avoid using tables with long texts as the content is difficult to set in Markdow
 
 Kde sa dá, používajte jednoduchú angličtinu. Pomáha to čitateľom, pre ktorých angličtina nie je materinský jazyk, a tiež uľahčuje preklad dokumentov AAPS do iných jazykov. Píšte tak, akoby ste sa s používateľom rozprávali. Predstavte si, že sedíte pri stole oproti človeku, pre ktorého píšete. Pamätajte – väčšina používateľov AAPS nemá skúsenosti s programovaním. Aj samotný diabetes má veľa odborných výrazov a skratiek. Myslite na to, že niektorí ľudia môžu mať diabetes len krátko, nemusia mať s diabetom toľko skúseností ako vy, alebo mohli o diabete dostať iné školenie. Ak použijete skrátený výraz alebo skratku, pri prvom použití ju napíšte celú a skratku uveďte hneď za ňou v zátvorke, napríklad „super micro bolus (SMB)“. Odkážte aj na slovník. Odborné výrazy, ktoré čitateľ nemusí poznať, môžete tiež doplniť do zátvorky.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+Namiesto: *“What causes high postprandial BG peaks in closed loop?”*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+Použite: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
 ##### Používajte jednoduché slová, ktorým rozumie každý
 
@@ -296,7 +296,7 @@ Najmä keď nahrávate video alebo robíte snímky obrazovky, dajte pozor, aby s
 
 Príkazy sú najrýchlejší spôsob, ako dávať pokyny, ale autori sa niekedy príkazov boja a namiesto „do this“ píšu „you should do this“. Možno sa ľudia obávajú, že príkazy znejú príliš tvrdo. Často to vyriešite tak, že na začiatok pridáte slovo „please“. Ak sa však niečo urobiť musí, je lepšie „please“ nepísať, pretože to čitateľovi dáva možnosť odmietnuť.
 
-Instead of: *“You should just think of it as a complete statement.”*
+Namiesto: *“You should just think of it as a complete statement.”*
 
 Použite: *“Think of it as a complete statement.”*
 
@@ -312,7 +312,7 @@ Príklad slovesa v **trpnom rode**:
 
 - *“The insulin (subject) is delivered (verb) by the pump (object).”*
 
-*“delivered”* is a passive verb here. Podmet a predmet sú v porovnaní s vetou v činnom rode vymenené. Vetu sme museli predĺžiť pridaním „is“ a „by the“. Zvážte tiež, či vetu nezačať slovesom v činnom rode.
+*“delivered”* je tu sloveso v trpnom rode. Podmet a predmet sú v porovnaní s vetou v činnom rode vymenené. Vetu sme museli predĺžiť pridaním „is“ a „by the“. Zvážte tiež, či vetu nezačať slovesom v činnom rode.
 
 Namiesto: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
@@ -403,7 +403,7 @@ Výukový materiál (tutorial) pomáha žiakovi získať základné zručnosti. 
 
 - Ignorujte možnosti/alternatívy/…. Žiadna nejednoznačnosť
 
-- Prechody medzi krokmi: krok ukončite vetou, ktorá logicky vedie k ďalšiemu kroku. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Prechody medzi krokmi: krok ukončite vetou, ktorá logicky vedie k ďalšiemu kroku. Príklad: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
 - **Výukový materiál**: názov (nadpis 1. úrovne)
 
@@ -453,7 +453,7 @@ Cieľom návodu je pomôcť používateľovi, ktorý už má potrebné znalosti,
 
 - AKO
 
-- narrator directly talks to the reader: In this guide **you** will
+- rozprávač sa priamo obracia na čitateľa: In this guide **you** will
 
 - Budúci čas -> na ukázanie konečného cieľa
 
@@ -527,7 +527,7 @@ Vysvetlenie objasňuje, prehlbuje a rozširuje to, ako čitateľ rozumie danej t
     
     *W is better than z, because…*
     
-    Offer judgements and even opinions where appropriate.
+    Kde je to vhodné, uveďte hodnotenia a dokonca aj názory.
     
     *An x in system y is analogous to a w in system z. However…*
     
