@@ -1,10 +1,10 @@
 # Glukosewerte
 
-Wenn die **Glukosewerte** Sprünge haben oder verrauscht sind, kann es dazu kommen, dass **AAPS** das Insulin falsch dosiert. Das kann zu Unter- und Überzuckerungen führen. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Abhängig vom verwendeten Sensor können die Probleme in der CGM-Konfiguration in **AAPS** (wie unten beschrieben) liegen oder auf ein Problem mit der Sensorsetzstelle (so dass er eventuell ersetzt werden muss) hindeuten.
+Wenn die **Glukosewerte** Sprünge haben oder verrauscht sind, kann es dazu kommen, dass **AAPS** das Insulin falsch dosiert. Das kann zu Unter- und Überzuckerungen führen. Wenn Du Fehler oder sprunghafte/verrauschte Werte bei Deinem CGM feststellst, ist es wichtig, den Loop zu deaktivieren, bis das Problem behoben ist. Abhängig vom verwendeten Sensor können die Probleme in der CGM-Konfiguration in **AAPS** (wie unten beschrieben) liegen oder auf ein Problem mit der Sensorsetzstelle (so dass er eventuell ersetzt werden muss) hindeuten.
 
 ## Daten innerhalb AAPS glätten
 
-**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
+**AAPS** bietet die Möglichkeit, die Daten in **AAPS** statt in der CGM-App zu glätten. Öffne das **Menü** (☰), wähle [**Konfiguration**](../SettingUpAaps/ConfigBuilder.md) und dann **Glättung**. Es gibt vier Optionen, von denen jeweils nur eine aktiv sein kann: **Ohne Glättung**, **Exponentielle Glättung**, **Durchschnittliche Glättung** und **Unscented Kalman Filter**.
 
 ![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
 
@@ -22,23 +22,23 @@ Verwende diese Option nur dann, wenn Deine CGM-Daten bereits (in einer Collector
 
 ### Unscented Kalman Filter (UKF)
 
-This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+Diese Option nutzt ein statistisches Modell, um aus den eingehenden (möglicherweise verrauschten) Messwerten fortlaufend Deinen tatsächlichen Glukosewert und dessen Änderungsrate zu schätzen. Dabei passt sie sich automatisch daran an, wie stark Dein Sensor gerade rauscht. Außerdem erkennt und verwirft sie plötzliche Ausreißer. Sie ist eine weiterentwickelte Alternative zur exponentiellen und durchschnittlichen Glättung und eignet sich, wenn sich die Glättung selbst an das wechselnde Rauschen Deines Sensors anpassen soll, statt eine feste Methode zu verwenden.
 
 (smoothing-xdrip-dexcom-g6)=
 
 ## Vorschläge zur Verwendung des Glättens
 
-You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
+Du kannst die Glättungsmethode auch automatisch ändern, zum Beispiel abhängig vom Sensoralter, mit der [Automatisierungsaktion](#automations-automation-action) **Glättung ändern**.
 
 |               |  Exponentiell   | Durchschnitt | Ohne Glättung |
 | ------------- |:---------------:|:------------:|:-------------:|
 | G5/G6/ONE     | Wenn verrauscht |              |   Empfohlen   |
 | G7/ONE+/Stelo | Wenn verrauscht | Falls stabil |               |
 
-Die Werte der Libre Sensoren sind verrauscht und müssen geglättet werden. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Die Werte der Libre Sensoren sind verrauscht und müssen geglättet werden. Wenn Du die xDrip-Direktverbindung oder die Datenquelle „gepatchte App“ (Empfang von einer anderen App, einschließlich Juggluco) nutzt, [erfolgt die Glättung bereits in der App](#libre2-value-smoothing-raw-values).
 
-| Sensor / Datenquelle |   Juggluco   | xDrip direct | xDrip bridge | xDrip patched app |
-| -------------------- |:------------:|:------------:|:------------:|:-----------------:|
-| Libre 1/14 Tage/Pro  |     N.A.     |     N.A.     | Durchschnitt |       N.A.        |
-| Libre 2/2+ (EU)      | Durchschnitt |    Keine     | Durchschnitt |       Keine       |
-| Libre 2/2+/3/3+      | Durchschnitt |     N.A.     |     N.A.     |       Keine       |
+| Sensor / Datenquelle |   Juggluco   | xDrip direkt | xDrip Bridge | xDrip gepatchte App |
+| -------------------- |:------------:|:------------:|:------------:|:-------------------:|
+| Libre 1/14 Tage/Pro  |     N.A.     |     N.A.     | Durchschnitt |        N.A.         |
+| Libre 2/2+ (EU)      | Durchschnitt |    Keine     | Durchschnitt |        Keine        |
+| Libre 2/2+/3/3+      | Durchschnitt |     N.A.     |     N.A.     |        Keine        |
