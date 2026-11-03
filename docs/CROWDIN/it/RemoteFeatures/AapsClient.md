@@ -1,11 +1,11 @@
 (aapsclient-app)=
-# The AAPSClient app
+# L'app AAPSClient
 
 **AAPSClient** is the accessory app of **AAPS**: a companion app for a second phone — typically a caregiver's — that **follows** the person using **AAPS**. From **AAPS** version 4, the caregiver can also **control** the loop remotely through signed commands. Both phones communicate through your **Nightscout** site; no direct connection between the phones is needed.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Client** = a phone running **AAPSClient**.
+- **Client** = un telefono con **AAPSClient**.
 - **Master** = the main **AAPS** phone that owns the pump and runs the loop.
 ```
 
@@ -19,7 +19,7 @@ From **AAPS** version 4, **AAPSClient** runs on Android phones and tablets, on W
 :local: true
 ```
 
-## What AAPSClient is (and is not)
+## Cos'è AAPSClient (e cosa non è)
 
 **AAPSClient** looks and feels like **AAPS**, but it has **no loop of its own**:
 
@@ -29,7 +29,7 @@ From **AAPS** version 4, **AAPSClient** runs on Android phones and tablets, on W
 
 Everything you trigger from **AAPSClient** is checked, capped, confirmed and **executed by the master** (the phone with the pump). The dedicated [Master ↔ Client control](ClientMasterControl.md) page explains how this works: how to pair the two phones, how the master writes the confirmation text you see, how a bolus started on the client is delivered, and what happens when the master is offline.
 
-## Versions: AAPSClient, AAPSClient2 and AAPSClient3
+## Versioni: AAPSClient, AAPSClient2 e AAPSClient3
 
 Up to three client apps can be installed side by side on the same follower phone, each following a **different** person: **AAPSClient** (yellow owl icon), **AAPSClient2** (blue owl) and — new in **AAPS** version 4 — **AAPSClient3** (green owl). They are functionally identical. Only the name and the color differ (app icon, widget background and the status section on the home screen), so you can tell them apart. Each app is paired with its own master. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions) for details.
 
@@ -38,14 +38,14 @@ Up to three client apps can be installed side by side on the same follower phone
 
 All the ready-made files are in the *Assets* list of the latest release on [GitHub](https://github.com/nightscout/AndroidAPS/releases/) (click *Assets* at the bottom of the release to expand it). In the table, *x.y.z* stands for the version number. Choose the file that matches your device:
 
-| Device                  | File to download                    | Notes                                                                                                                                                                                        |
+| Dispositivo             | File to download                    | Note                                                                                                                                                                                         |
 | ----------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Android phone or tablet | `app-aapsclient-release_x.y.z.apk`  | Install it like the main app: see [Download and installation of AAPSClient](#RemoteControl_aapsclient) and [Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md). |
 | Wear OS watch           | `wear-aapsclient-release_x.y.z.apk` | Goes with the AAPSClient app on the phone. See [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md).                                                                                          |
 | Windows computer        | `AAPSClient-x.y.z.msi`              | Open the file to install.                                                                                                                                                                    |
 | Mac                     | `AAPSClient-x.y.z.dmg`              | See the note on macOS below the table.                                                                                                                                                       |
 | Linux (Debian, Ubuntu)  | `aapsclient_x.y.z_amd64.deb`        | Install it with your package manager.                                                                                                                                                        |
-| iPhone                  | none                                | There is no App Store version and no download. You build the app yourself, see [AAPSClient on an iPhone](#aapsclient-iphone).                                                                |
+| iPhone                  | nessuno                             | There is no App Store version and no download. You build the app yourself, see [AAPSClient on an iPhone](#aapsclient-iphone).                                                                |
 
 **Following two people?** Each file above also exists as *aapsclient2* / *AAPSClient2*. It is a second client app that installs next to the first one, so one device can follow two people (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). **AAPSClient3** is not in the release assets: build it yourself ([build variants](#browserbuild-variant)).
 
@@ -83,11 +83,11 @@ On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAP
 
    ![Communication step on the client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
-5. **Pair with master** — this step exists **only** on the client. It connects this device to the master over the secure command channel, with the PIN, and takes the name the phone was added with on the master, like the QR code. **After the pairing, the setup is finished.** You can also skip it and pair at any time later from **Manage → Pair with master**.
+5. **Pair with master** — this step exists **only** on the client. Collega questo dispositivo al master tramite il canale sicuro dei comandi, con il PIN, e prende il nome con cui il telefono è stato aggiunto sul master, come con il codice QR. **After the pairing, the setup is finished.** You can also skip it and pair at any time later from **Manage → Pair with master**.
 
    ![Pair with master step in the client wizard](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
 
-6. **Who is using this phone?** — only when you did not pair in the wizard: the name of the person using this phone. It tells this instance apart in reports and synchronization.
+6. **Who is using this phone?** — only when you did not pair in the wizard: the name of the person using this phone. Serve a distinguere questa istanza nei report e nella sincronizzazione.
 
 (aapsclient-pairing-with-the-master)=
 
@@ -95,7 +95,7 @@ On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAP
 
 On the **master**, open **Manage → Authorized clients** and add a client. There are two ways to pair:
 
-- **With a QR code** (the quickest, if the phone has a camera): scan the code in the wizard step "**Set up from the master**" or from **Manage → Pair with master → Scan QR code**, and confirm with "**Use**". It sets up Nightscout too.
+- **With a QR code** (the quickest, if the phone has a camera): scan the code in the wizard step "**Set up from the master**" or from **Manage → Pair with master → Scan QR code**, and confirm with "**Use**". Configura anche Nightscout.
 - **With the PIN**: on the **client**, open the wizard step above (or **Manage → Pair with master**), type the one-time PIN shown on the master and press "**Pair**". The client then shows who it is about to trust — confirm with "**Pair**":
 
 ![Confirmation on the client before completing the pairing](../images/v4/AapsClient/aapsclient_pair_confirm.png)
@@ -108,18 +108,18 @@ After pairing, the client gets a Nightscout token of its own from the master (if
 
 The master decides what this phone may do with its **[role](#client-master-control-roles)** (Read-only, Meals, Caregiver or Admin). **Manage → Pair with master** shows the phone's role.
 
-## The home screen
+## La schermata principale
 
 The client's home screen mirrors the followed loop:
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![Schermata principale di AAPSClient](../images/v4/AapsClient/aapsclient_home.png)
 
 - **BG, graphs, IOB/COB and profile** come from Nightscout, just as the master uploaded them.
-- The **loop status** shown is the **master's** (a client has no loop of its own). Until the client has received the master's running mode from Nightscout, the running mode chip shows a **question mark** (unknown).
+- Lo **stato del loop** mostrato è quello del **master** (un client non ha un loop proprio). Until the client has received the master's running mode from Nightscout, the running mode chip shows a **question mark** (unknown).
 - The **status card** shows the **followed pump's** reservoir and battery and the uploader battery, taken from the Nightscout device status — a client has no pump, so there is no local pump status and no pump management anywhere in the app.
 - The bottom bar offers **Treatments**, **Scenes** and **Manage** once the client is paired (only **Manage** before pairing) — there are no pump or objectives tabs.
 
-## Treatments and actions
+## Trattamenti e azioni
 
 Everything under **Manage** works like on the main app, with one important difference: on a client, actions that would change therapy (bolus, carbs, temp targets, scenes…) are **hidden until the device is paired**, and once paired they are **relayed to the master** for confirmation and execution — see [Using remote control](#client-master-control).
 
@@ -129,7 +129,7 @@ On an **unpaired** client, **Manage** only offers **Profile** and **Pair with ma
 
 ![The Manage screen on an unpaired client: only Profile and Pair with master](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
 
-The red banner "*Master device unreachable. Editing is disabled until the connection is restored.*" also appears on an unpaired client. This is expected: there is no master to reach yet. The banner disappears once the client is paired and the master is online.
+The red banner "*Master device unreachable. Editing is disabled until the connection is restored.*" also appears on an unpaired client. È normale: non c'è ancora nessun master da raggiungere. The banner disappears once the client is paired and the master is online.
 
 Once the client is paired, the therapy actions appear:
 
@@ -141,10 +141,10 @@ If the master is not reachable, the same banner appears on a paired client: the 
 
 ![The Manage screen on a paired client while the master is offline: actions greyed out under the banner](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
 
-## Settings synchronized with the master
+## Impostazioni sincronizzate con il master
 
 The active plugin **configuration** and many **preferences** are kept in sync between the master and its paired clients; synced items are marked with a small **phone icon** and are disabled (with a "*Master device unreachable*" banner) while the master cannot be reached. This is described in [Changing configuration and preferences](#client-master-config-prefs).
 
-## AAPSClient on a smartwatch
+## AAPSClient su uno smartwatch
 
 A Wear OS watch can be paired with the **client** phone; its actions are relayed through the client to the master. See [Wear OS](../WearOS/WearOsSmartwatch.md) and the [smartwatch options in Remote control](#RemoteControl_smartwatches).
