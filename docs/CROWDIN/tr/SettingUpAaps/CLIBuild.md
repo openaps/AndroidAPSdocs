@@ -1,24 +1,24 @@
-# Build instructions for the command-line
+# Komut satırı ile oluşturma talimatları
 
 ```{admonition} For users familiar with the command-line and git
 :class: note
 
-The simplest option to build AAPS is the [Browser build](./BrowserBuild.md) alternative.
+AAPS'i oluşturmanın en basit yolu [Tarayıcı ile oluşturma](./BrowserBuild.md) seçeneğidir.
 ```
 
-Tested with Fedora and Debian Linux, other systems should work with minimal adjustments.
+Fedora ve Debian Linux ile test edilmiştir; diğer sistemler de küçük değişikliklerle çalışmalıdır.
 
 ## Requirements
 
-Consult the minimum required Java version from [this table](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Install the appropriate OpenJDK package using the system package manager. For example in Debian, the packages are named like `openjdk-21-jdk`. It should include `javac` and `keytool` binaries.
+Gereken en düşük Java sürümünü [bu tablodan](#Building-APK-recommended-specification-of-computer-for-building-apk-file) öğrenin. Uygun OpenJDK paketini sistemin paket yöneticisiyle yükleyin. Örneğin Debian'da paketlerin adı `openjdk-21-jdk` gibidir. Paket `javac` ve `keytool` programlarını içermelidir.
 
-Download the *Android Command line tools* package from the [Android Studio page](https://developer.android.com/studio#command-line-tools-only). Android Studio itself is not required. More information about installing this package is found in [sdkmanager docs](https://developer.android.com/tools/sdkmanager). After the package is installed, you should manually set two [environment variables](https://developer.android.com/tools/variables): `ANDROID_HOME` and `PATH`. Finally, run `sdkmanager --licenses` to finish the installation.
+*Android Command line tools* paketini [Android Studio sayfasından](https://developer.android.com/studio#command-line-tools-only) indirin. Android Studio'nun kendisi gerekmez. Bu paketin yüklenmesiyle ilgili daha fazla bilgi [sdkmanager belgelerinde](https://developer.android.com/tools/sdkmanager) bulunur. Paket yüklendikten sonra iki [ortam değişkenini](https://developer.android.com/tools/variables) elle ayarlamalısınız: `ANDROID_HOME` ve `PATH`. Son olarak yüklemeyi bitirmek için `sdkmanager --licenses` komutunu çalıştırın.
 
-## Building AAPS with Gradle wrapper
+## AAPS'i Gradle wrapper ile oluşturma
 
-### 1. Generate a Java keystore file for signing AAPS
+### 1. AAPS'i imzalamak için bir Java anahtar deposu dosyası oluşturun
 
-If you already have a keystore file for signing AAPS, reuse that.
+AAPS'i imzalamak için zaten bir anahtar deposu dosyanız varsa onu yeniden kullanın.
 
 ```sh
 keytool -genkeypair -v \
@@ -29,19 +29,19 @@ keytool -genkeypair -v \
   -validity 20000
 ```
 
-You will need the keystore file and passphrase every time you update AAPS.
+AAPS'i her güncellediğinizde anahtar deposu dosyasına ve parolasına ihtiyacınız olacak.
 
-### 2. Compile the AAPS APK file
+### 2. AAPS APK dosyasını derleyin
 
-Clone the [git repo](https://github.com/nightscout/AndroidAPS) if not already cloned. AAPS uses the master branch for the latest stable version; ensure you are on the branch/tag you want to build.
+Henüz klonlamadıysanız [git deposunu](https://github.com/nightscout/AndroidAPS) klonlayın. AAPS en son kararlı sürüm için master dalını kullanır; oluşturmak istediğiniz dalda/etikette (branch/tag) olduğunuzdan emin olun.
 
-Run `./gradlew :app:assembleFullRelease` in the repo. It automatically downloads Gradle, dependencies, and then compiles the code. When the build succeeds, you should have an unsigned APK at `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. It should have also installed an `apksigner` binary to `$ANDROID_HOME`. Update your `PATH` again.
+Depo klasöründe `./gradlew :app:assembleFullRelease` komutunu çalıştırın. Komut Gradle'ı ve bağımlılıkları kendisi indirir, sonra kodu derler. Oluşturma başarılı olduğunda `app/build/outputs/apk/full/release/app-full-release-unsigned.apk` konumunda imzalanmamış bir APK olmalıdır. Ayrıca `$ANDROID_HOME` içine bir `apksigner` programı da yüklemiş olmalıdır. `PATH` değişkeninizi yeniden güncelleyin.
 
-### 3. Create a signed APK file from the unsigned one
+### 3. İmzalanmamış APK'dan imzalı bir APK dosyası oluşturun
 
 <!-- Suggest building outside the git repo, to minimize risk of accidental APK commits -->
 
-Change to your home directory and create a signed APK file:
+Ana dizininize geçin ve imzalı bir APK dosyası oluşturun:
 
 ```sh
 apksigner sign \
@@ -51,4 +51,4 @@ apksigner sign \
   ./AndroidAPS/app/build/outputs/apk/full/release/app-full-release-unsigned.apk
 ```
 
-Now you have `app-full-release-signed.apk` ready for installation or upgrade.
+Artık `app-full-release-signed.apk` dosyanız yükleme veya güncelleme için hazır.
