@@ -1,69 +1,69 @@
-# Where can I get help?
+# 어디에서 도움을 받을 수 있습니까?
 
-## I'm stuck; what should I do? Who can I ask?
+## 막혔습니다. 어떻게 해야 합니까? 누구에게 물어볼 수 있습니까?
 
-This project is based on volunteer work and a few rules apply to any requests for help to avoid unnecessary time being wasted by those who kindly pay it forward:
+이 프로젝트는 자원봉사로 운영됩니다. 친절하게 도움을 주는 사람들의 시간이 불필요하게 낭비되지 않도록, 도움 요청에는 몇 가지 규칙이 있습니다:
 
-* level 1: Read the docs (i.e. this Wiki) - there is now a search function to help you!
-* level 2: Search the Facebook group, if there is not already an answer then ask your question in the [AndroidAPS Users Facebook group](https://www.facebook.com/groups/1900195340201874/)
-* level 3: If Facebook did not get results then ask in [discord](https://discord.gg/4fQUWHZ4Mw). Direct crossposts will be ignored/deleted on both channels to avoid duplicate answers. Don't forget that the majority of developers are in Europe so the response may not be 24/7; you may have to wait for several hours especially over weekends and holidays.
-* level 4: Create an [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md)
-* level 5: email *developers@aaps.app* (only if personal data is involved that should not go in a public channel and your problems have not been resolved in the other levels)
+* 레벨 1: 문서(즉, 이 Wiki)를 읽으십시오 - 이제 검색 기능이 있어 도움이 됩니다!
+* 레벨 2: Facebook 그룹을 검색하십시오. 답이 아직 없다면 [AndroidAPS Users Facebook 그룹](https://www.facebook.com/groups/1900195340201874/)에 질문하십시오
+* 레벨 3: Facebook에서 답을 얻지 못했다면 [discord](https://discord.gg/4fQUWHZ4Mw)에서 질문하십시오. 중복 답변을 피하기 위해, 두 채널에 그대로 동시에 올린 글은 무시되거나 삭제됩니다. 대부분의 개발자는 유럽에 있으므로 항상(24시간, 7일) 답변을 받을 수는 없다는 점을 기억하십시오. 특히 주말과 휴일에는 몇 시간을 기다려야 할 수도 있습니다.
+* 레벨 4: [이슈](https://github.com/nightscout/AndroidAPS/issues)를 만들고 [로그 파일](../GettingHelp/AccessingLogFiles.md)을 첨부하십시오
+* 레벨 5: *developers@aaps.app*로 이메일을 보내십시오 (공개 채널에 올리면 안 되는 개인 데이터가 관련되어 있고, 다른 레벨에서 문제가 해결되지 않은 경우에만)
 
-For support on CGM sources please use the Facebook groups or Discord channels for that specific system (e.g. [xDrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
+CGM 데이터 소스에 대한 지원은 해당 시스템의 Facebook 그룹이나 Discord 채널(예: [xDrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/))을 이용하십시오. Nightscout에 대한 지원은 [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/)를 이용하십시오. 그곳 사용자들은 서로 다른 시스템을 사용하는 이곳 사람들보다 더 높은 전문 지식을 가지고 있습니다.
 
-## Make sure to join the AndroidAPS users group on Facebook or Discord!
+## Facebook 또는 Discord의 AndroidAPS 사용자 그룹에 꼭 가입하십시오!
 
-Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and/or [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
+메인 [AndroidAPS Facebook 그룹](https://www.facebook.com/groups/1900195340201874/) 및/또는 [Discord의 AndroidAPS](https://discord.gg/4fQUWHZ4Mw)에 가입하십시오. 알고리즘에 대한 질문, Android Studio와 APK 빌드에서 생긴 설정 문제, 앱 사용에 대한 질문, 앱을 가장 잘 사용하기 위한 팁 등 무엇이든 여기에 올릴 수 있습니다. Combo 펌프 사용자를 위한 그룹 [AAPSCombo](https://www.facebook.com/groups/127507891261169/)도 있습니다. 이 펌프는 설정이 조금 더 특수합니다.
 
-Please note that Facebook has recently removed external links shared within the **AAPS** Facebook group and this includes current and historic posts which contain external links to the **AAPS** Notes / Read the docs. For new users who are working through the Objectives and reviewing historic **AAPS** Facebook posts please search key terms as discussed within the **AAPS** notes for further assistance.
+참고: Facebook은 최근 **AAPS** Facebook 그룹 안에서 공유된 외부 링크를 삭제했습니다. 여기에는 **AAPS** 노트 / Read the docs로 연결되는 외부 링크가 들어 있는 현재 게시물과 이전 게시물이 포함됩니다. 목표를 진행하면서 이전 **AAPS** Facebook 게시물을 검토하는 새 사용자는, 더 많은 도움을 얻으려면 **AAPS** 노트에서 다루는 핵심 용어로 검색하십시오.
 
-## Other resources in English
+## 영어로 된 기타 자료
 
-* [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): covers all DIY closed loop systems (OpenAPS, Loop and AndroidAPS)
+* [Looped Facebook 그룹](https://www.facebook.com/groups/TheLoopedGroup): 모든 DIY 폐쇄 루프 시스템(OpenAPS, Loop, AndroidAPS)을 다룹니다
 * [xDrip - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
-* [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
+* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM 전반
+* [Discord의 AndroidAPS](https://discord.gg/4fQUWHZ4Mw)
 
-## Country / language specific resources
+## 국가 / 언어별 자료
 
-### Australia
+### 오스트레일리아
 
-* [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australian users of OpenAPS, Loop and AndroidAPS
+* [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): OpenAPS, Loop, AndroidAPS의 오스트레일리아 사용자
 
-### Czech and Slovak
+### 체코어와 슬로바키아어
 
-* [AAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech-speaking users of AndroidAPS
+* [AAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): AndroidAPS의 체코어 사용자
 
-### France
+### 프랑스
 
 * [AndroidAPS France (Toutes Pompes)](https://www.facebook.com/groups/268922660715266)
-* [DIY AndroidAPS, parents d'enfants Dt1](https://www.facebook.com/groups/262497886779069) : French support group for AAPS for children
+* [DIY AndroidAPS, parents d'enfants Dt1](https://www.facebook.com/groups/262497886779069) : 어린이 AAPS 사용을 위한 프랑스 지원 그룹
 
-### Germany
+### 독일
 
-* [Open Source Looper Community](https://de.loopercommunity.org/): German looper community for Open Source Loop, diabetes in general, communication, support and local meet-up
-* [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
-* [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
+* [Open Source Looper Community](https://de.loopercommunity.org/): 오픈 소스 Loop, 당뇨병 전반, 소통, 지원, 지역 모임을 위한 독일 루프 사용자 커뮤니티
+* [Freestyle Libre Freaks Facebook 그룹](https://www.facebook.com/groups/FreestyleLibreFreaks/): CGM/FGM으로서의 Libre
+* [NightscoutDE Facebook 그룹](https://www.facebook.com/groups/nightscoutDE/)
 * [Looped-DE](https://www.facebook.com/groups/loopedDE/)
 
-### Netherlands
+### 네덜란드
 
-* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch-speaking users of OpenAPS, Loop and AndroidAPS
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): OpenAPS, Loop, AndroidAPS의 네덜란드어 사용자
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
 
-### Norway
+### 노르웨이
 
 * [Looped Norge](https://www.facebook.com/groups/loopednorge/)
 
-### Poland
+### 폴란드
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): 폴란드 AAPS 커뮤니티 및 당뇨병 지원 그룹
 
-### Sweden
+### 스웨덴
 
-* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
+* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (스웨덴에 있는 OpenAPS, Loop, AndroidAPS 사용자)
 
-### UK
+### 영국
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (영국에 있는 OpenAPS, Loop, AndroidAPS 사용자)
