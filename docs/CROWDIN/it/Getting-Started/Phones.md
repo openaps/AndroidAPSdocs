@@ -1,4 +1,4 @@
-# Phones
+# Telefoni
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -26,11 +26,11 @@ We maintain a list of the [tested hardware setups](https://docs.google.com/sprea
 
 This list provides user feedback on the usage of a phone along with **AAPS** and a given pump and CGM. It can help you check if your phone / pump / CGM has been used successfully by other users.
 
-The document is read-only. With CTRL-F, you can search in the text of the Google sheet.
+Il documento è di sola lettura. Con CTRL-F puoi cercare nel testo del foglio Google.
 
 To record your test of a hardware setup, please fill in this [form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). After you fill in the form data, the sheet is updated automatically every 5 minutes.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
+Per qualsiasi problema con il foglio di calcolo, contatta chi lo gestisce, *@theodoor5137*, su Discord, oppure consulta la pagina su [come trovare aiuto](../GettingHelp/WhereCanIGetHelp.md).
 
 ## I didn't find my phone
 
