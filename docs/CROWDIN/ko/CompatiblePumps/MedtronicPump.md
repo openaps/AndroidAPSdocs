@@ -1,198 +1,198 @@
 # Medtronic Pumps
 
-The driver does not work with any newer models, including all models ending in G (530G, 600-series [630G, 640G, 670G], 700-series [770G, 780G], etc.).
+이 드라이버는 G로 끝나는 모든 모델(530G, 600 시리즈 [630G, 640G, 670G], 700 시리즈 [770G, 780G] 등)을 포함한 최신 모델에서는 작동하지 않습니다.
 
-The following model and firmware combinations are compatible:
+다음 모델과 펌웨어 조합이 호환됩니다:
 
-- 512/712 (any firmware version)
-- 515/715 (any firmware version)
-- 522/722 (any firmware version)
-- 523/723 (firmware 2.4A or lower)
-- 554/754 EU release (firmware 2.6A or lower)
-- 554/754 Canada release (firmware 2.7A or lower)
+- 512/712 (모든 펌웨어 버전)
+- 515/715 (모든 펌웨어 버전)
+- 522/722 (모든 펌웨어 버전)
+- 523/723 (펌웨어 2.4A 이하)
+- 554/754 유럽 출시 버전 (펌웨어 2.6A 이하)
+- 554/754 캐나다 출시 버전 (펌웨어 2.7A 이하)
 
-You can find out how to check the firmware on the pumps at [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) or [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
+펌프의 펌웨어를 확인하는 방법은 [OpenAPS 문서](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) 또는 [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware)에서 볼 수 있습니다.
 
-    {contents} Table of contents
+    {contents} 목차
     :depth: 1
     :local: true
 
-## Pump capabilities with AAPS
+## AAPS에서 사용할 수 있는 펌프 기능
 
-* Requires a RileyLink-compatible device to communicate with **AAPS**.
-* Automatic DST and timezone handling.
+* **AAPS**와 통신하려면 RileyLink 호환 장치가 필요합니다.
+* DST와 시간대를 자동으로 처리합니다.
 
 ## 하드웨어와 소프트웨어의 필요 요건
 
-- **Phone:** The Medtronic driver should work with any android phone that supports Bluetooth connections. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary. For example, some phones will handle enabling/disabling Bluetooth differently. This can impact the user experience when AAPS needs to reconnect to your Rileylink type device.**
-- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a separate device to handle communications. This device will link with your phone via Bluetooth and with your pump via a compatible radio connection. The first such device was called a Rileylink but a number of other options are now available which can offer additional functionality.
+- **휴대폰:** Medtronic 드라이버는 블루투스 연결을 지원하는 모든 Android 휴대폰에서 작동해야 합니다. **중요: 휴대폰 제조사마다 블루투스 구현 방식이 다를 수 있으므로 휴대폰 모델마다 동작이 다를 수 있습니다. 예를 들어, 일부 휴대폰은 블루투스 켜기/끄기를 다르게 처리합니다. 이는 AAPS가 Rileylink 계열 장치에 다시 연결해야 할 때 사용자 경험에 영향을 줄 수 있습니다.**
+- **RileyLink 호환 장치:** Android 휴대폰은 통신을 처리하는 별도 장치 없이는 Medtronic 펌프와 통신할 수 없습니다. 이 장치는 블루투스로 휴대폰과 연결되고, 호환되는 무선 연결로 펌프와 연결됩니다. 이런 장치 중 첫 번째가 Rileylink였지만, 지금은 추가 기능을 제공하는 다른 여러 장치도 있습니다.
     
-    - Rileylink available at [getrileylink.org](https://getrileylink.org/product/rileylink916)
-    - Orangelink available at [getrileylink.org](https://getrileylink.org/product/orangelink)
-    - Emalink (multiple model options) available at [github.com](https://github.com/sks01/EmaLink)
-    - Gnarl (some additional DIY required) details available at [github.com](https://github.com/ecc1/gnarl)
+    - Rileylink 구입처: [getrileylink.org](https://getrileylink.org/product/rileylink916)
+    - Orangelink 구입처: [getrileylink.org](https://getrileylink.org/product/orangelink)
+    - Emalink (여러 모델 선택 가능) 구입처: [github.com](https://github.com/sks01/EmaLink)
+    - Gnarl (추가 DIY 작업 필요) 자세한 내용: [github.com](https://github.com/ecc1/gnarl)
 
-A comparison chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
+여러 Rileylink 호환 장치의 비교표는 [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)에서 볼 수 있습니다
 
 (MedtronicPump-configuration-of-the-pump)=
 
-## Configuration of the pump
+## 펌프 설정
 
-The following settings should be configured on the pump in order for AAPS to remotely send commands. The steps necessary to make each change on a Medtronic 715 are shown in brackets for each setting. The exact steps may vary based on pump type and/or firmware version.
+AAPS가 원격으로 명령을 보낼 수 있도록 펌프에서 다음 설정을 해야 합니다. Medtronic 715에서 각 설정을 변경하는 단계는 각 설정 옆의 괄호 안에 있습니다. 정확한 단계는 펌프 타입이나 펌웨어 버전에 따라 다를 수 있습니다.
 
-- **Enable remote mode on Pump** (On the pump press Act and go to Utilities -> Remote Options, Select On, and on next screen do Add ID and add any random id such as 111111). At least one ID must be on the Remote ID list in order for the pump to expect remote communication.
-- **Set Max Basal** (On the pump press Act and go to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
-- **Set Max Bolus** (On the pump press Act and go to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. The maximum value permitted by the pump is 25.
-- **Set profile to Standard**. (On the pump press Act and go to Basal and then Select Patterns) The pump will only need one profile as AAPS will manage different profiles on your phone. No other patterns are required.
-- **Set Temporary Basal Rate type** (On the pump press Act and go to Basal and then Temp Basal Type). Select Absolute (not Percent).
+- **펌프에서 원격 모드 활성화** (펌프에서 Act를 누르고 Utilities -> Remote Options로 이동하여 On을 선택하고, 다음 화면에서 Add ID를 선택하여 111111과 같은 임의의 ID를 추가하십시오). 펌프가 원격 통신을 받으려면 Remote ID 목록에 ID가 하나 이상 있어야 합니다.
+- **최대 기저 설정** (펌프에서 Act를 누르고 Basal로 이동한 다음 Max Basal Rate를 선택하십시오) 예를 들어, 이 값을 최대 표준 기저 주입량의 4배로 설정하면 400% 임시 기저 주입량이 가능합니다. 펌프가 허용하는 최대값은 34.9 U/h입니다.
+- **최대 볼러스 설정** (펌프에서 Act를 누르고 Bolus로 이동한 다음 Max Bolus를 선택하십시오) 펌프가 받아들이는 가장 큰 볼러스입니다. 펌프가 허용하는 최대값은 25입니다.
+- **프로파일을 Standard로 설정**. (펌프에서 Act를 누르고 Basal로 이동한 다음 Select Patterns를 선택하십시오) AAPS가 휴대폰에서 여러 프로파일을 관리하므로 펌프에는 프로파일이 하나만 필요합니다. 다른 패턴은 필요하지 않습니다.
+- **임시 기저 주입량 유형 설정** (펌프에서 Act를 누르고 Basal로 이동한 다음 Temp Basal Type으로 이동하십시오). Absolute를 선택하십시오(Percent가 아님).
 
-## Medtronic Configuration of Phone/AAPS
+## 휴대폰/AAPS에서 Medtronic 설정
 
-- **Do not pair RileyLink compatible device with the Bluetooth menu on your phone.** Pairing via the Bluetooth menu on your phone will stop AAPS from seeing your Rileylink Compatible device when you follow the instructions below.
-- Disable automatic screen rotation on your phone. On certain devices automatic screen rotation causes Bluetooth sessions to restart which would cause issues for your Medtronic pump. 
-- There are two ways to configure your Medtronic pump in AAPS:
+- **RileyLink 호환 장치를 휴대폰의 블루투스 메뉴에서 페어링하지 마십시오.** 휴대폰의 블루투스 메뉴에서 페어링하면, 아래 안내를 따를 때 AAPS가 Rileylink 호환 장치를 찾지 못합니다.
+- 휴대폰의 화면 자동 회전을 끄십시오. 일부 기기에서는 화면 자동 회전으로 블루투스 세션이 다시 시작되어 Medtronic 펌프에 문제가 생길 수 있습니다. 
+- AAPS에서 Medtronic 펌프를 설정하는 방법은 두 가지입니다:
 
-1. Using the setup wizard as part of a fresh install
-2. In **Configuration** > **Pump**, by selecting **Medtronic**
+1. 새로 설치할 때 설정 마법사 사용하기
+2. **구성** > **펌프**에서 **Medtronic**을 선택하여
     
-    ![Configuration > Pump with the Medtronic plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+    ![Medtronic 플러그인이 있는 구성 > 펌프](../images/v4/Configuration/configuration_pump_list_3.png)
     
-    Once it is selected, the **Medtronic** card shows two buttons, **Settings** and **Open plugin**:
+    선택하면 **Medtronic** 카드에 **설정**과 **플러그인 열기** 버튼 두 개가 표시됩니다:
     
-    ![The Medtronic plugin selected in Configuration > Pump](../images/v4/Pumps/medtronic_enabled.png)
+    ![구성 > 펌프에서 선택한 Medtronic 플러그인](../images/v4/Pumps/medtronic_enabled.png)
     
-    **Settings** opens the settings of the Medtronic driver:
+    **설정**은 Medtronic 드라이버의 설정을 엽니다:
     
-    ![Medtronic driver settings](../images/v4/Pumps/medtronic_settings.png)
+    ![Medtronic 드라이버 설정](../images/v4/Pumps/medtronic_settings.png)
     
-    **Open plugin** (or **Manage** > **Pump**) opens the Medtronic pump screen. Before a pump is paired it looks like this:
+    **플러그인 열기**(또는 **관리** > **펌프**)는 Medtronic 펌프 화면을 엽니다. 펌프를 페어링하기 전에는 다음과 같이 보입니다:
     
-    ![Medtronic pump screen before pairing](../images/v4/Pumps/medtronic_pump_screen.png)
+    ![페어링 전의 Medtronic 펌프 화면](../images/v4/Pumps/medtronic_pump_screen.png)
 
-When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot successfully connect to the pump). Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.
+설정 마법사로 Medtronic 펌프를 설정할 때 블루투스 문제(예: 펌프에 연결할 수 없음) 때문에 설정을 끝내지 못할 수 있습니다. 이 경우 가상 펌프 옵션을 선택하여 설정을 끝내고, 방법 2를 사용하여 계속 문제를 해결하십시오.
 
-While setting up AAPS to work with your medtronic pump you need to set the following items in **Settings** (see the settings picture above):
+Medtronic 펌프와 함께 작동하도록 AAPS를 설정할 때 **설정**에서 다음 항목을 설정해야 합니다(위의 설정 그림 참조):
 
-- **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alphabetic characters (e.g. 123456).
-- **Pump Type**: The model pump you are using (e.g. 522). 
-- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select: 
-    - for US & Canada, frequency used is 916 MHz
-    - for Worldwide, frequency used is 868 MHz
-- **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above). Again this setting must be carefully selected as it will determine how much AAPS can deliver via your basal rate. This will effectively set the maximum temporary basal rate. As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
-- **Max Bolus on Pump (U)** (in an hour): This needs to match the setting set on your pump (see Configuration of the pump above). This setting should be carefully considered as it determines how large a bolus AAPS can ever set.
-- **Delay before Bolus is started (s)**: The number of seconds after a bolus is issued before the command is actually sent to the pump. This period of time allows the user to cancel the bolus in the event a bolus command is sent in error. It is not possible to cancel a bolus that has started via AAPS. The only way to cancel a bolus that has already started is to suspend the pump manually followed by resuming it.
-- **Medtronic Encoding**: Determines where the Medtronic encoding is carried out (hardware or software). Selecting Hardware encoding (i.e. carried out by the Rileylink compatible device) is preferred as this results in less data being sent. Selecting Software encoding (i.e. carried out by AAPS) can help in the event frequent disconnects are seen. This setting will be ignored if you have firmware version 0.x on Rileylink devices.
-- **Battery Type (Power View)**: In order to correctly determine the remaining battery power level you should select the type of AAA battery in use. When a value other than simple view is selected AAPS will display the remaining calculated battery percentage level and volts. The following options are available:
+- **펌프 일련번호**: 펌프 뒷면에 표시되어 있으며 SN으로 시작합니다. 표시된 숫자 6개만 입력하고 알파벳 문자는 입력하지 마십시오(예: 123456).
+- **펌프 타입**: 사용 중인 펌프 모델입니다(예: 522). 
+- **펌프 주파수**: 펌프가 처음 유통된 지역에 따라 두 가지 옵션이 있습니다. 어떤 옵션을 선택해야 할지 모르겠다면 [FAQ](#MedtronicPump-faq)를 확인하십시오: 
+    - 미국 및 캐나다는 916 MHz 주파수를 사용합니다
+    - 전 세계는 868 MHz 주파수를 사용합니다
+- **펌프의 최대 기저(U/h)**: 펌프에 설정된 값과 같아야 합니다(위의 펌프 설정 참조). AAPS가 기저 주입량으로 주입할 수 있는 양을 이 값이 정하므로, 이 설정도 신중하게 선택해야 합니다. 이 값이 사실상 최대 임시 기저 주입량을 정합니다. 예를 들어, 이 값을 최대 표준 기저 주입량의 4배로 설정하면 400% 임시 기저 주입량이 가능합니다. 펌프가 허용하는 최대값은 34.9 U/h입니다.
+- **펌프의 최대 볼러스(U)** (1시간 기준): 펌프에 설정된 값과 같아야 합니다(위의 펌프 설정 참조). AAPS가 설정할 수 있는 볼러스의 최대 크기를 이 값이 정하므로 신중하게 정해야 합니다.
+- **볼러스 시작 전 지연 시간(초)**: 볼러스를 요청한 후 명령이 실제로 펌프에 전송되기까지의 초 수입니다. 이 시간 동안 볼러스 명령이 잘못 전송된 경우 사용자가 볼러스를 취소할 수 있습니다. AAPS로는 이미 시작된 볼러스를 취소할 수 없습니다. 이미 시작된 볼러스를 취소하는 유일한 방법은 펌프를 수동으로 일시 중단한 다음 다시 재개하는 것입니다.
+- **Medtronic 인코딩**: Medtronic 인코딩을 어디에서 수행할지(하드웨어 또는 소프트웨어) 정합니다. 하드웨어 인코딩(즉, Rileylink 호환 장치에서 수행)을 선택하는 것이 좋습니다. 전송되는 데이터가 더 적기 때문입니다. 소프트웨어 인코딩(즉, AAPS에서 수행)을 선택하면 연결이 자주 끊길 때 도움이 될 수 있습니다. Rileylink 장치의 펌웨어 버전이 0.x이면 이 설정은 무시됩니다.
+- **배터리 타입(파워뷰)**: 남은 배터리 잔량을 정확하게 계산하려면 사용 중인 AAA 배터리의 종류를 선택해야 합니다. 심플뷰가 아닌 값을 선택하면 AAPS는 계산된 남은 배터리 잔량(%)과 전압(V)을 표시합니다. 다음 옵션을 사용할 수 있습니다:
     
     - Not selected (Simple view)
     - Alkaline (Extended view)
     - Lithium (Extended view)
-    - NiZn (Extended view)
-    - NiMH (Extended view)
-- **Use Scanning**: Activates Bluetooth scanning before connecting with your Rileylink Compatible devices. This should improve the reliability of your connection to the device.
+    - NiZn (확장뷰)
+    - NiMH (확장뷰)
+- **스캔 사용하기**: Rileylink 호환 장치에 연결하기 전에 블루투스 스캔을 활성화합니다. 이렇게 하면 장치와의 연결이 더 안정적이 됩니다.
 
-- **Show battery level reported by OrangeLink/EmaLink/DiaLink**: This feature is only supported on newer link devices such as the EmaLink or OrangeLink. The value is shown as **RileyLink Battery** on the Medtronic pump screen.
-- **Set neutral temp basals**: By default Medtronic pumps beep on the hour when a temporary basal rate is active. Enabling this option can help reduce the number of beeps heard by interrupting a temporary basal at the hour change in order to suppress the beep.
+- **OrangeLink/EmaLink/DiaLink에서 보고한 배터리 잔량 나타내기**: 이 기능은 EmaLink나 OrangeLink 같은 새로운 link 장치에서만 지원됩니다. 이 값은 Medtronic 펌프 화면에 **RileyLink 배터리**로 표시됩니다.
+- **중립 임시 기저 설정**: 기본적으로 Medtronic 펌프는 임시 기저 주입량이 활성 상태이면 정시마다 비프음을 냅니다. 이 옵션을 활성화하면 정시에 임시 기저를 잠시 중단하여 비프음을 막으므로, 들리는 비프음 횟수를 줄일 수 있습니다.
 
 (pairing-your-rileylink-compatible-device)=
 
-### Pairing your RileyLink compatible device
+### RileyLink 호환 장치 페어링
 
-Your RileyLink compatible device is paired from the Medtronic pump screen, not from the Bluetooth menu of your phone:
+RileyLink 호환 장치는 휴대폰의 블루투스 메뉴가 아니라 Medtronic 펌프 화면에서 페어링합니다:
 
-- Open the pump screen (**Manage** > **Pump**, or **Open plugin** on the Medtronic card in **Configuration** > **Pump**).
-- Tap **Pair RileyLink**. **AAPS** scans for nearby RileyLink compatible devices.
-- Tap your device in the list. When **RileyLink paired successfully** is shown, tap **OK**.
+- 펌프 화면을 여십시오(**관리** > **펌프**, 또는 **구성** > **펌프**의 Medtronic 카드에서 **플러그인 열기**).
+- **RileyLink 페어링**을 누르십시오. **AAPS**가 근처의 RileyLink 호환 장치를 검색합니다.
+- 목록에서 장치를 누르십시오. **RileyLink 페어링 성공**이 표시되면 **확인**을 누르십시오.
 
-## Medtronic pump screen
+## Medtronic 펌프 화면
 
-To open the Medtronic pump screen, go to **Manage** > **Pump**. The pump screen displays the current pump status information along with some Medtronic specific actions (see the pump screen picture above).
+Medtronic 펌프 화면을 열려면 **관리** > **펌프**로 이동하십시오. 펌프 화면에는 현재 펌프 상태 정보와 몇 가지 Medtronic 전용 동작이 표시됩니다(위의 펌프 화면 그림 참조).
 
-- **RileyLink Status**: The current status of the connection between your phone and Rileylink compatible device. This should show as Connected at all times. Any other status may require user intervention. 
-- **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device. Only shown if **Show battery level reported by OrangeLink/EmaLink/DiaLink** is enabled in the Medtronic settings.
-- **Pump Status**: The current status of the pump connection. As the pump will not be constantly connected this will primarily show the sleep icon. There are a number of possible other status including "Waking Up" when AAPS is trying to issue a command or other possible pump commands such as "Get Time", "Set TBR", etc.
-- **Battery**: Shows battery status based on the value chosen for **Battery Type (Power View)** in the Medtronic settings.
-- **Last connection**: How long ago the last successful pump connection happened.
-- **Last Bolus**: How long ago the last successful bolus was delivered.
-- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour in your active Profile.
-- **Temp basal**: Temp basal currently being delivered which can be 0 units per hour.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- **RileyLink 상태**: 휴대폰과 Rileylink 호환 장치 사이의 현재 연결 상태입니다. 항상 연결됨으로 표시되어야 합니다. 다른 상태가 표시되면 사용자가 조치해야 할 수 있습니다. 
+- **RileyLink 배터리**: EmaLink 또는 OrangeLink 장치의 현재 배터리 잔량입니다. Medtronic 설정에서 **OrangeLink/EmaLink/DiaLink에서 보고한 배터리 잔량 나타내기**가 활성화된 경우에만 표시됩니다.
+- **펌프 상태**: 펌프 연결의 현재 상태입니다. 펌프는 항상 연결되어 있지 않으므로 대부분 절전 아이콘이 표시됩니다. 그 밖에도 AAPS가 명령을 보내려고 할 때의 "깨우는 중"이나, "시간 받기", "임시 기저 설정" 등 다른 펌프 명령 상태가 표시될 수 있습니다.
+- **배터리**: Medtronic 설정의 **배터리 타입(파워뷰)**에서 선택한 값에 따라 배터리 상태를 표시합니다.
+- **마지막 연결**: 마지막으로 펌프 연결에 성공한 후 지난 시간입니다.
+- **마지막 볼러스**: 마지막으로 볼러스 주입에 성공한 후 지난 시간입니다.
+- **기본 기저 주입량**: 활성 프로파일에서 현재 시간에 펌프에서 실행되는 기본 기저 주입량입니다.
+- **임시 기저**: 현재 주입 중인 임시 기저이며, 시간당 0 단위일 수도 있습니다.
+- **레저버**: 레저버에 남은 인슐린 양입니다(최소 1시간마다 업데이트됨).
+- **오류**: 문제가 있을 때 표시되는 오류 문구입니다(대부분 설정에 오류가 있을 때 표시됨).
 
-At the bottom of the screen there are these buttons:
+화면 아래쪽에는 다음 버튼이 있습니다:
 
-- **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pair RileyLink**: Finds and pairs your RileyLink compatible device (see [above](#pairing-your-rileylink-compatible-device)).
-- **Pump history**: Shows pump history (see [below](#MedtronicPump-pump-history)).
-- **RL Stats**: Shows RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status)).
-- **Wake and Tune Up** and **Reset RileyLink**: See [Actions](#medtronic-actions) below.
-- **Clear Bolus Block**: Only shown for a short time after a bolus, while **AAPS** waits for the pump to finish delivering it. Tapping it ends this wait.
+- **새로고침**은 펌프의 현재 상태를 새로 고칩니다. 전체 데이터를 다시 가져와야 하므로(이력 가져오기, 시간 읽기/설정, 프로파일 가져오기, 배터리 상태 가져오기 등) 연결이 오랫동안 끊겼을 때만 사용해야 합니다.
+- **RileyLink 페어링**: RileyLink 호환 장치를 찾아 페어링합니다([위](#pairing-your-rileylink-compatible-device) 참조).
+- **펌프 이력**: 펌프 이력을 표시합니다([아래](#MedtronicPump-pump-history) 참조).
+- **RL 통계**: RileyLink 통계를 표시합니다([아래](#MedtronicPump-rl-status-rileylink-status) 참조).
+- **켜기 및 튜닝**과 **RileyLink 초기화**: 아래의 [동작](#medtronic-actions)을 참조하십시오.
+- **볼러스 블록 해제**: 볼러스 후 **AAPS**가 펌프의 볼러스 주입 완료를 기다리는 짧은 시간 동안에만 표시됩니다. 이 버튼을 누르면 기다리기를 끝냅니다.
 
 (MedtronicPump-pump-history)=
 
-## Pump History
+## 펌프 이력
 
-![Pump history screen with its filter buttons](../images/Medtronic03.png)
+![필터 버튼이 있는 펌프 이력 화면](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. This allows for a convenient way to see pump behavior should that be required. The only items stored are those relevant to AAPS and will not include a configuration function that has no relevance.
+펌프 이력은 5분마다 가져와서 휴대폰에 저장됩니다. 최근 24시간의 이력만 저장됩니다. 필요할 때 펌프의 동작을 편리하게 확인할 수 있습니다. AAPS와 관련된 항목만 저장되며, 관련 없는 설정 기능은 포함되지 않습니다.
 
-Tap **Pump history** on the pump screen to open it. By default **All** is selected. Tap one of the filter buttons at the top (for example **Boluses**, **Basals** or **Alarms**) to show only one type of entry.
+열려면 펌프 화면에서 **펌프 이력**을 누르십시오. 기본적으로 **전체**가 선택되어 있습니다. 위쪽의 필터 버튼 중 하나(예: **볼러스**, **기저** 또는 **알람**)를 누르면 한 종류의 항목만 표시됩니다.
 
 (MedtronicPump-rl-status-rileylink-status)=
 
 ## RL Status (RileyLink Status)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![RileyLink 상태 - 설정](../images/Medtronic04.png) ![RileyLink 상태 - 이력](../images/Medtronic05.png)
 
-The RL Status dialog has two tabs:
+RL 상태 대화 상자에는 탭이 두 개 있습니다:
 
-- **Settings**: Shows settings about the RileyLink compatible device: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
-- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- **설정**: RileyLink 호환 장치에 대한 설정을 표시합니다: 설정된 주소, 연결된 장치, 연결 상태, 연결 오류, RileyLink 펌웨어 버전. 장치 타입은 항상 Medtronic 펌프이고, 모델은 사용 중인 모델, 일련번호는 설정된 일련번호, 펌프 주파수는 사용 중인 주파수, 마지막 주파수는 마지막으로 사용된 주파수입니다.
+- **이력**: 통신 이력을 표시합니다. RileyLink 항목은 RileyLink의 상태 변경을 표시하고, Medtronic 항목은 펌프로 전송된 명령을 표시합니다.
 
 (medtronic-actions)=
 
-## 실행
+## 동작
 
-When the Medtronic driver is used, two additional actions are available on the pump screen (**Manage** > **Pump**):
+Medtronic 드라이버를 사용하면 펌프 화면(**관리** > **펌프**)에서 두 가지 동작을 추가로 사용할 수 있습니다:
 
-- **Wake and Tune Up** - In the event that AAPS hasn't connected to your pump for a sustained period (it should connect every 5 minutes), you can force a Tune Up. This will try to contact your pump, by searching all of the possible radio frequencies used by your pump. In the event a successful connection is made the successful frequency will be set as the default. While the tune-up runs, the RileyLink status on the pump screen shows it. If a tune-up fails (for example because the pump was out of range), **AAPS** tries again by itself about every 10 minutes.
-- **Reset RileyLink** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
+- **켜기 및 튜닝** - AAPS가 오랫동안 펌프에 연결하지 못한 경우(5분마다 연결해야 함), 튜닝을 강제로 실행할 수 있습니다. 펌프가 사용할 수 있는 모든 무선 주파수를 검색하여 펌프와 연결을 시도합니다. 연결에 성공하면, 성공한 주파수가 기본값으로 설정됩니다. 튜닝이 진행되는 동안 펌프 화면의 RileyLink 상태에 표시됩니다. 튜닝이 실패하면(예: 펌프가 범위 밖에 있어서) **AAPS**가 약 10분마다 스스로 다시 시도합니다.
+- **RileyLink 초기화** - RileyLink 호환 장치를 리셋한 경우, 장치를 다시 설정(주파수 설정, 주파수 유형 설정, 인코딩 설정)하기 위해 이 동작을 사용해야 할 수 있습니다.
 
-## Important notes
+## 중요 사항
 
-### Special attention in NS configuration needed
+### NS 설정에 특별한 주의 필요
 
-AAPS is using serial number for synchronization and serial number is exposed to NS. Because knowledge of serial number of old Medtronic pump can be used to control the pump remotely take special care to hardening NS site preventing leakage of SN of your pump. See https://nightscout.github.io/nightscout/security/
+AAPS는 동기화에 일련번호를 사용하며, 일련번호는 NS에 노출됩니다. 오래된 Medtronic 펌프는 일련번호를 알면 원격으로 제어할 수 있으므로, 펌프의 SN이 유출되지 않도록 NS 사이트의 보안을 특히 강화하십시오. https://nightscout.github.io/nightscout/security/ 를 참조하십시오.
 
 ### OpenAPS users
 
-OpenAPS users should note that AAPS with Medtronic uses a completely different approach than OpenAPS. Using AAPS the primary method of interacting with the pump is via your phone. In normal use cases it is likely that the only time it is required to use the pump menu is when changing reservoirs. This is very different when using OpenAPS where at least some of a bolus is usually delivered via the quick bolus buttons. In the event the pump is used to manually deliver a bolus there can be issues if AAPS attempts to deliver one at the same time. There are checks to try and prevent issues in such cases but this should still be avoided where possible.
+OpenAPS 사용자는 Medtronic을 사용하는 AAPS가 OpenAPS와 완전히 다른 방식을 사용한다는 점에 유의해야 합니다. AAPS를 사용할 때 펌프를 다루는 주된 방법은 휴대폰입니다. 일반적인 사용에서 펌프 메뉴를 사용해야 하는 경우는 레저버를 교체할 때뿐일 것입니다. 이는 OpenAPS를 사용할 때와 매우 다릅니다. OpenAPS에서는 보통 볼러스의 적어도 일부를 퀵 볼러스 버튼으로 주입합니다. 펌프에서 수동으로 볼러스를 주입하는 경우, AAPS가 같은 시간에 볼러스를 주입하려고 하면 문제가 생길 수 있습니다. 이런 경우 문제를 막기 위한 검사가 있지만, 가능하면 이런 상황은 피해야 합니다.
 
 ### Logging
 
-In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintenance and Log Settings. For troubleshooting any Medtronic issues Pump, PumpComm, PumpBTComm should be checked.
+Medtronic 펌프 기능의 문제를 해결해야 하면, 화면 왼쪽 위의 메뉴 아이콘을 누르고 정비와 로그 설정을 선택하십시오. Medtronic 문제를 해결하려면 Pump, PumpComm, PumpBTComm을 확인해야 합니다.
 
 ### Medtronic CGM
 
-Medtronic CGM is currently NOT supported.
+Medtronic CGM은 현재 지원되지 않습니다.
 
 ### Manual use of pump
 
-You should avoid manually bolusing or setting TBRs on your pump. All such commands should be sent via AAPS. In the event manual commands are used there must be a delay of at least 3 minutes between them in order to reduce the risk of any issues.
+펌프에서 수동으로 볼러스를 주입하거나 TBR을 설정하지 마십시오. 이런 명령은 모두 AAPS를 통해 보내야 합니다. 수동 명령을 사용하는 경우, 문제 위험을 줄이기 위해 명령 사이에 최소 3분의 간격을 두어야 합니다.
 
-### Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AAPS
+### 시간대 변경과 DST(일광 절약 시간), 또는 Medtronic 펌프와 AAPS로 여행하기
 
-AAPS will automatically detect Timezone changes and will update the Pump's time when your phone switches to the new time.
+AAPS는 시간대 변경을 자동으로 감지하고, 휴대폰이 새 시간으로 바뀌면 펌프 시간을 업데이트합니다.
 
-Traveling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2), which will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Traveling west, however, can result in issues as you are effectively going back in time, which can result in incorrect IOB data.
+동쪽으로 여행하면 현재 시간에 시간을 더하게 됩니다(예: GMT+0에서 GMT+2로). 이 경우 겹치는 시간이 없으므로(즉, 같은 시간이 두 번 있을 수 없음) 문제가 생기지 않습니다. 그러나 서쪽으로 여행하면 사실상 시간을 거슬러 가므로 문제가 생길 수 있으며, IOB 데이터가 잘못될 수 있습니다.
 
-The issues seen when traveling west are known to the developers and work on a possible solution is ongoing. See https://github.com/andyrozman/RileyLinkAAPS/issues/145 for more detail. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
+서쪽으로 여행할 때의 문제는 개발자들이 알고 있으며, 해결 방법을 찾는 작업이 진행 중입니다. 자세한 내용은 https://github.com/andyrozman/RileyLinkAAPS/issues/145 를 참조하십시오. 지금은 이 문제가 생길 수 있다는 점을 알고, 시간대를 바꿀 때 주의 깊게 확인하십시오.
 
-### Is a GNARL a fully compatible Rileylink compatible device?
+### GNARL은 완전히 호환되는 Rileylink 호환 장치입니까?
 
-The GNARL code fully supports all of the functions used by the Medtronic driver in AAPS which means it is fully compatible. It is important to note that this will require additional work as you will have to source compatible hardware and then load the GNARL code on to the device.
+GNARL 코드는 AAPS의 Medtronic 드라이버가 사용하는 모든 기능을 완전히 지원하므로 완전히 호환됩니다. 호환 하드웨어를 직접 구하고 GNARL 코드를 장치에 올려야 하므로 추가 작업이 필요하다는 점에 유의하십시오.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**제작자 노트:** GNARL 소프트웨어는 아직 실험 단계이고 테스트가 적게 되었으므로, RileyLink만큼 안전하다고 생각해서는 안 됩니다.
 
 (MedtronicPump-faq)=
 
@@ -200,43 +200,43 @@ The GNARL code fully supports all of the functions used by the Medtronic driver 
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
-### What to do if I lose connection to RileyLink and/or pump?
+### RileyLink 및/또는 펌프와 연결이 끊기면 어떻게 해야 합니까?
 
-There are a number of options to try and resolve connectivity issues.
+연결 문제를 해결하기 위해 시도할 수 있는 방법이 여러 가지 있습니다.
 
-- Tap **Wake and Tune Up** on the pump screen (**Manage** > **Pump**) as detailed above.
-- Disable Bluetooth on your phone, wait 10 seconds and then enable it again. This will force the Rileylink device to reconnect to the phone.
-- Reset the Rileylink device. You must then tap **Reset RileyLink** on the pump screen (**Manage** > **Pump**).
-- Other users have found the following steps to be effective in restoring connectivity when other methods have not: 
-    1. Restart the phone
-    2. *While* the phone is restarting restart the Rileylink device
-    3. Open AAPS and allow the connection to restore
+- 위에서 설명한 대로 펌프 화면(**관리** > **펌프**)에서 **켜기 및 튜닝**을 누르십시오.
+- 휴대폰의 블루투스를 끄고 10초 기다린 다음 다시 켜십시오. 이렇게 하면 Rileylink 장치가 휴대폰에 강제로 다시 연결됩니다.
+- Rileylink 장치를 리셋하십시오. 그런 다음 펌프 화면(**관리** > **펌프**)에서 **RileyLink 초기화**를 눌러야 합니다.
+- 다른 방법이 효과가 없을 때, 다른 사용자들은 다음 단계로 연결을 복구할 수 있었습니다: 
+    1. 휴대폰을 다시 시작하십시오
+    2. 휴대폰이 다시 시작되는 *동안* Rileylink 장치를 다시 시작하십시오
+    3. AAPS를 열고 연결이 복구될 때까지 기다리십시오
 
-### How to determine what Frequency my pump uses
+### 내 펌프가 사용하는 주파수를 확인하는 방법
 
 ![Pump Model](../images/Medtronic06.png)
 
-On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
+펌프 뒷면에는 모델 번호와 특별한 3글자 코드가 적힌 줄이 있습니다. 처음 두 글자는 주파수 유형을, 마지막 글자는 색상을 나타냅니다. Here are possible values for Frequency:
 
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 MHz)")
+- NA - 북아메리카 (주파수 선택에서 "미국 및 캐나다 (916 MHz)"를 선택해야 합니다)
+- CA - 캐나다 (주파수 선택에서 "미국 및 캐나다 (916 MHz)"를 선택해야 합니다)
+- WW - 전 세계 (주파수 선택에서 "전 세계 (868 MHz)"를 선택해야 합니다)
 
 (MedtronicPump-pump-unreachable)=
 
-### How to fix the "pump unreachable" error
+### "pump unreachable" 오류를 해결하는 방법
 
-Some Medtronic pumps report a "pump unreachable" error after an **AAPS** update. To fix it, change the encoding type:
+일부 Medtronic 펌프는 **AAPS** 업데이트 후 "pump unreachable" 오류를 보고합니다. 해결하려면 인코딩 유형을 변경하십시오:
 
-1. Go to **Configuration** > **Pump** and tap **Settings** on the **Medtronic** card.
-2. Set **Medtronic Encoding** to **Hardware 4b6b Encoding**.
+1. **구성** > **펌프**로 이동하여 **Medtronic** 카드에서 **설정**을 누르십시오.
+2. **Medtronic 인코딩**을 **하드웨어 4b6b 인코딩**으로 설정하십시오.
 
-## Where to get help
+## 도움을 받을 수 있는 곳
 
-Development of the Medtronic driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Medtronic 드라이버는 커뮤니티가 **자원봉사**로 개발합니다. 도움을 요청하기 전에:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. 이 문서의 관련 섹션을 **읽고** 기능이 어떻게 작동해야 하는지 확인하십시오.
+2. [Discord](https://discord.gg/4fQUWHZ4Mw)의 *#AAPS* 채널이나 다른 [커뮤니티 채널](../GettingHelp/WhereCanIGetHelp.md)에서 **질문하십시오**.
+3. [기존 이슈](https://github.com/nightscout/AndroidAPS/issues)를 검색하여 **버그를 보고하십시오**. 해당 이슈가 없으면 [새 이슈](https://github.com/nightscout/AndroidAPS/issues)를 열고 [로그 파일](../GettingHelp/AccessingLogFiles.md)을 첨부하십시오.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+도움을 요청할 때는 휴대폰 제조사와 모델, Android 버전, **AAPS** 버전, 그리고 문제에 대한 쉬운 영어 설명(무엇이 바뀌었는지, 마지막으로 언제 작동했는지)을 포함하십시오.
