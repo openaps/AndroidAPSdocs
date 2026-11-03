@@ -1,7 +1,7 @@
 (widgets)=
 # Pagrindinio ekrano valdikliai
 
-**AAPS** provides widgets that you can add to your phone's home screen. A widget shows your current data without opening the app. Tap a widget to open **AAPS**.
+**AAPS** turi valdiklius, kuriuos galite pridėti į telefono pagrindinį ekraną. Valdiklis rodo dabartinius duomenis neatidarius programėlės. Bakstelėkite valdiklį, kad atidarytumėte **AAPS**.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,70 +10,70 @@
 
 ---
 
-## Available widgets
+## Galimi valdikliai
 
-Five widgets are available. They are listed under **AAPS** in the Android widget picker:
+Yra penki valdikliai. Android valdiklių sąraše jie pateikiami po **AAPS**:
 
-![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
+![AAPS valdikliai Android valdiklių sąraše](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Default size | What it shows                                                                                                                                                                                                                                              |
-| --------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                   | 5 × 2        | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
-| **AAPS glucose circle**           | 2 × 2        | The BG circle of the main screen: a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading.                                                                                                                     |
-| **AAPS Small**                    | 2 × 2        | Profile name, BG with trend arrow, time since the last reading, delta, IOB and COB.                                                                                                                                                                        |
-| **AAPS BG + IOB + COB (compact)** | 4 × 1        | One line with BG and trend arrow, IOB and COB.                                                                                                                                                                                                             |
-| **AAPS BG graph**                 | 3 × 1        | The BG value with a small graph of the recent readings.                                                                                                                                                                                                    |
+| Valdiklis                                    | Numatytasis dydis | Ką rodo                                                                                                                                                                                                                                                    |
+| -------------------------------------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AAPS valdiklis**                           | 5 × 2             | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
+| **AAPS gliukozės apskritimas**               | 2 × 2             | Pagrindinio ekrano KG apskritimas: KG spalvos žiedas, tendencijos lankas, pokytis, KG reikšmė ir laikas nuo paskutinio rodmens.                                                                                                                            |
+| **Mažas AAPS valdiklis**                     | 2 × 2             | Profilio pavadinimas, KG su tendencijos rodykle, laikas nuo paskutinio rodmens, pokytis, AIO ir AAO.                                                                                                                                                       |
+| **AAPS gliukozė + AIO + AAO (kompaktiškas)** | 4 × 1             | Viena eilutė su KG ir tendencijos rodykle, AIO ir AAO.                                                                                                                                                                                                     |
+| **AAPS gliukozės grafikas**                  | 3 × 1             | KG reikšmė su mažu paskutinių rodmenų grafiku.                                                                                                                                                                                                             |
 
-The **AAPS widget**, the **glucose circle** and the **Small** widget on a home screen:
+**AAPS valdiklis**, **gliukozės apskritimas** ir **Mažas** valdiklis pagrindiniame ekrane:
 
-![AAPS widget, glucose circle and Small widget on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![AAPS valdiklis, gliukozės apskritimas ir Mažas valdiklis pagrindiniame ekrane](../images/widgets/home_widgets_full_circle_small.png)
 
-The **compact** widget and the **BG graph** widget:
+**Kompaktiškas** valdiklis ir **gliukozės grafiko** valdiklis:
 
-![Compact widget and BG graph widget on the home screen](../images/widgets/home_widgets_compact_graph.png)
+![Kompaktiškas valdiklis ir gliukozės grafiko valdiklis pagrindiniame ekrane](../images/widgets/home_widgets_compact_graph.png)
 
-BG values use the same colours as in **AAPS**: green in range, yellow above range, red below range.
-
----
-
-## Adding a widget
-
-The exact steps depend on your phone and its launcher. On most phones:
-
-1. Long-press an empty area of the home screen and select **Widgets**.
-
-   ![The widget picker](../images/widgets/widget_picker_list.png)
-
-2. Open **AAPS** in the list and tap the widget you want.
-3. Press **Add** (or drag the widget to the place you want).
-
-   ![The Add button below the selected widget](../images/widgets/widget_picker_add_button.png)
-
-The widget is placed on the home screen. Right after adding it, it is shown with handles: drag a handle to **resize** the widget, or drag the widget to move it. The glucose circle can be resized to any size.
-
-![A widget just added, with its resize handles and the settings button](../images/widgets/widget_glucose_circle_added.png)
-
-If the home screen page is full, the phone puts the widget on a new page.
+KG reikšmės rodomos tokiomis pačiomis spalvomis kaip **AAPS**: žalia – intervale, geltona – virš intervalo, raudona – žemiau intervalo.
 
 ---
 
-## Widget configuration
+## Valdiklio pridėjimas
 
-Tap the **pencil** button shown on the widget just after you added it. Later, long-press the widget to get the handles and the pencil back.
+Tikslūs veiksmai priklauso nuo jūsų telefono ir jo paleidimo programos (launcher). Daugumoje telefonų:
 
-The **Widget configuration** dialog has two settings:
+1. Ilgai palaikykite tuščią pagrindinio ekrano vietą ir pasirinkite **Widgets** (valdikliai).
 
-- **Configure opacity** — how opaque the background of the widget is. A low value lets the wallpaper show through.
-- **Use black color** — use a black background instead of the default one.
+   ![Valdiklių sąrašas](../images/widgets/widget_picker_list.png)
 
-![Widget configuration](../images/widgets/widget_configuration.png)
+2. Sąraše atidarykite **AAPS** ir bakstelėkite norimą valdiklį.
+3. Paspauskite **Add** (pridėti) arba nuvilkite valdiklį į norimą vietą.
 
-Each widget has its own configuration.
+   ![Mygtukas Add po pasirinktu valdikliu](../images/widgets/widget_picker_add_button.png)
+
+Valdiklis padedamas pagrindiniame ekrane. Iškart po pridėjimo jis rodomas su rankenėlėmis: vilkite rankenėlę, kad **pakeistumėte** valdiklio dydį, arba vilkite valdiklį, kad jį perkeltumėte. Gliukozės apskritimą galima padaryti bet kokio dydžio.
+
+![Ką tik pridėtas valdiklis su dydžio keitimo rankenėlėmis ir nustatymų mygtuku](../images/widgets/widget_glucose_circle_added.png)
+
+Jei pagrindinio ekrano puslapyje nebėra vietos, telefonas valdiklį padeda naujame puslapyje.
 
 ---
 
-## Good to know
+## Valdiklio konfigūracija
 
-- A widget only **displays** data. You cannot bolus or change anything from a widget.
-- The widget is refreshed by **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
-- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Raise the opacity in the widget configuration if the color is hard to see. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions).
+Bakstelėkite **pieštuko** mygtuką, kuris rodomas ant valdiklio iškart po jo pridėjimo. Vėliau ilgai palaikykite valdiklį, kad vėl pasirodytų rankenėlės ir pieštukas.
+
+Lange **Valdiklio konfigūracija** yra du nustatymai:
+
+- **Derinti nepermatomumą** – kiek valdiklio fonas nepermatomas. Kai reikšmė maža, pro foną matosi ekrano užsklanda.
+- **Naudoti juodą spalvą** – naudoti juodą foną vietoj numatytojo.
+
+![Valdiklio konfigūracija](../images/widgets/widget_configuration.png)
+
+Kiekvienas valdiklis turi savo konfigūraciją.
+
+---
+
+## Naudinga žinoti
+
+- Valdiklis tik **rodo** duomenis. Per valdiklį negalima leisti boluso ar ką nors keisti.
+- Valdiklį atnaujina **AAPS**. Jei **AAPS** neveikia arba Android riboja programėlės veikimą fone, valdiklis gali rodyti senus duomenis. Patikrinkite laiką nuo paskutinio rodmens ir įsitikinkite, kad **AAPS** netaikomas [baterijos optimizavimas](#SetupWizard-StoragePermission).
+- Naudojant **AAPSClient**, **AAPSClient2** ir **AAPSClient3**, valdiklio fonas yra geltonas, mėlynas arba žalias, kad galėtumėte atskirti programėles. Jei spalvą sunku įžiūrėti, valdiklio konfigūracijoje padidinkite nepermatomumą. Žr. [Apie AAPSClient, AAPSClient2 ir AAPSClient3](#remotecontrol-aapsclient-versions).
