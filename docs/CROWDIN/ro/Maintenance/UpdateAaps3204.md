@@ -1,10 +1,10 @@
-# Updating to AAPS 3.2.0.4
+# Actualizarea la AAPS 3.2.0.4
 
 (update-aaps-3204)=
 
-## Construiți-vă în loc să descărcați
+## Construiți aplicația, nu o descărcați
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Aplicația AAPS (un fișier apk) nu este disponibilă pentru descărcare, din cauza reglementărilor privind dispozitivele medicale. It is legal to build the app for your own use, but you must not give a copy to others!**
 
 See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
@@ -12,11 +12,11 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 * A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk.
 
-| Versiune AAPS           | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | up to Meerkat                                          | 8.2    | 17  |
+| Versiune AAPS           | Versiunea<br/>Android Studio<br/>preferată | Versiunea<br/>Android Studio<br/>alternativă | Gradle | JVM |
+| ----------------------- | ------------------------------------------------------ | -------------------------------------------------------- | ------ |:--- |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                    | până la Meerkat                                          | 8.2    | 17  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+The "preferred version" is packaged with the appropriate JVM version. Versiunea preferată este și versiunea minimă pe care o puteți folosi pentru a construi **AAPS**. **NU** veți putea construi cu o versiune mai veche decât cea „preferată”. Dacă folosiți o altă versiune, pot apărea probleme legate de versiunea JVM. See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
 
 The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
 
@@ -57,9 +57,9 @@ The Gradle version is linked to the source code, you will always get the correct
 
 **It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. Dacă o faceți, procesul de construire poate dura mult timp până se finalizează, dar odată ce a început, îl puteți lăsa nesupravegheat.
 
-## Help and support during 3.2.0.4 building process
+## Ajutor și asistență în timpul construirii versiunii 3.2.0.4
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html) section, please consult that first.
+Dacă întâmpinați dificultăți în procesul de construire a aplicației **AAPS**, există o secțiune dedicată [**Depanare Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html); vă rugăm să o consultați mai întâi.
 
 If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
@@ -90,7 +90,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - Select Project](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
 
-* In the menu bar of Android Studio, select Git -> Fetch
+* În bara de meniu din Android Studio, selectați Git -> Fetch
 
 ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
 
@@ -135,7 +135,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - Pull successful](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Gradle Sync will be running to download some dependencies. Așteptați până se termină.
 
 ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
@@ -143,7 +143,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - Gradle Sync](https://androidaps.readthedocs.io/en/3.1/_images/40_BackgroundTasks.png)
 
-### Select JVM version 17
+### Selectați versiunea JVM 17
 
 - Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
 
@@ -153,33 +153,33 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Open Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-- In **Gradle JDK** field (1), check if the appropriate version: **jbr-17** is selected. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
+- În câmpul **Gradle JDK** (1), verificați dacă este selectată versiunea potrivită: **jbr-17**. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
 
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+![Selectați Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
 
 
-- In Version (1), select **17**. In Vendor (2) select JetBrains Runtime or any Vendor. Location (3): do not change.
+- La Version (1), selectați **17**. In Vendor (2) select JetBrains Runtime or any Vendor. Location (3): do not change.
 
-![Select JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
+![Selectați JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
 
 - Close the **Settings** dialog with **OK**.
 
-### Select the AAPS 3.2.0.4 branch
+### Selectați ramura AAPS 3.2.0.4
 
-- At the bottom left, select the Git symbol, right-click on 3.2.0.4 and Checkout.
+- În stânga jos, selectați simbolul Git, faceți clic dreapta pe 3.2.0.4 și alegeți Checkout.
 
-![Select Download JDK](../images/studioTroubleshooting/17_Checkout.png)
+![Selectați Download JDK](../images/studioTroubleshooting/17_Checkout.png)
 
 <br>
 
-![Select Download JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
+![Selectați Download JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
 
-### Sync project with Gradle
+### Sincronizați proiectul cu Gradle
 
 ```{admonition} WARNING!
 :class: warning
-**Never update Gradle.** Always sync it with the project.
+**Nu actualizați niciodată Gradle.** Sincronizați-l întotdeauna cu proiectul.
 ```
 
 Use the elephant icon and Sync Project with Gradle Files (or follow [this](#gradle-resync)) for the new UI.
@@ -190,22 +190,22 @@ Or ([this](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingA
 
 ![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephantOld.png)
 
-### Build the Signed 3.2.0.4 APK
+### Construiți APK-ul semnat 3.2.0.4
 
 Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
 
-### Transfer and install the 3.2.0.4 APK
+### Transferați și instalați APK-ul 3.2.0.4
 
-You need to transfer the apk to your phone so you can install it.
+Trebuie să transferați fișierul apk pe telefon pentru a-l putea instala.
 
 ```{note}
 If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Nu uitați să exportați setările!**
 ```
 
 See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
-### Check AAPS version 3.2.0.4 on phone
+### Verificați versiunea AAPS 3.2.0.4 pe telefon
 
 After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
 
