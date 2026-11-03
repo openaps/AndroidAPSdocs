@@ -73,9 +73,9 @@ Solltest Du SGLT-2-Hemmer (Gliflozine) nehmen, kannst Du **AAPS** aufgrund der G
 :caption: Using this documentation
 :titlesonly:
 
-Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
-Search the documentation <./NavigateDoc/SearchDoc.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
+Sprache und Version ändern <./NavigateDoc/ChangeLanguageVersion.md>
+Durchsuchen der Dokumentation <./NavigateDoc/SearchDoc.md>
+Dokumentationsaktualisierungen <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Erste Schritte
