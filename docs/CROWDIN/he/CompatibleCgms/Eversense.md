@@ -1,17 +1,17 @@
 # Eversense
 
-There are four different methods to access the readings from Eversense:
+יש ארבע שיטות שונות לקבל את הערכים מ-Eversense:
 
 - ESEL companion mode
 - ESEL patched mode
-- xDrip companion app
-- Notification Reader (built into **AAPS**)
+- xDrip כאפליקציה נלווית (companion app)
+- קורא התראות (מובנה ב-**AAPS**)
 
 ## ESEL
 
 Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- In ESEL, open the three dots menu (⋮) at the top right and select **Settings** (also available from the ☰ menu). In the settings:
+- ב-ESEL, פתחו את תפריט שלוש הנקודות (⋮) בחלק העליון של המסך ובחרו **Settings** (זמין גם מהתפריט ☰). בהגדרות:
   - Enable "Send to AAPS and xDrip"
   - **Disable** "Send to Nightscout"
   - As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
@@ -29,7 +29,7 @@ Reads the data from the Eversense app notifications (works with the standard Eve
    - Disable the setting "Get data from patched Eversense App"
    - For backfilling: Enable "Fill missing data from eversensedms.com"
    - Provide as Email address and password your Eversense login data
-3. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
+3. בחרו "Minimed 640G" (MM640g) כמקור ערכי הסוכר ב-[**הגדרות תצורה ← מקור ערכי הסוכר**](#Config-Builder-bg-source).
 
 ### Patched Eversense App
 
@@ -49,26 +49,26 @@ Reads the data from the Eversense app notifications (works with the standard Eve
 
 ![ESEL Broadcast](../images/ESELpatch.png)
 
-If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
+אם מפעילים את ESEL בפעם הראשונה עם התקנה חדשה של Eversense, ייתכן שיעברו עד 15 דקות עד שהערכים הראשונים יופיעו ב-xDrip!
 
-4. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
+4. בחרו "Minimed 640G" (MM640g) כמקור ערכי הסוכר ב-[**הגדרות תצורה ← מקור ערכי הסוכר**](#Config-Builder-bg-source).
 
 ## xDrip
 
-xDrip can read notifications from the vendor app, like ESEL does. No backfilling available.
+xDrip יכול לקרוא התראות מאפליקציית היצרן, כמו ש-ESEL עושה. No backfilling available.
 
-- Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip “Companion App” must be selected.
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
-- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
+- הורידו והתקינו את xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- ב-xDrip יש לבחור “Companion App” כמקור הנתונים.
+- בחרו xDrip ב-[**הגדרות תצורה ← מקור ערכי הסוכר**](#Config-Builder-bg-source).
+- התאימו את הגדרות xDrip לפי ההסברים בדף [הגדרות xDrip](../CompatibleCgms/xDrip.md).
 - Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
 
-## Notification Reader
+## קורא התראות
 
-**AAPS** can read the glucose values directly from the notifications posted by the official Eversense app, without any other app in between. No backfilling available.
+**AAPS** יכול לקרוא את ערכי הסוכר ישירות מההתראות שאפליקציית Eversense הרשמית מציגה, בלי אפליקציה נוספת באמצע. No backfilling available.
 
-- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and grant **AAPS** access to notifications when asked.
-- Make sure the Eversense app shows the current glucose value in its notification.
+- בחרו **קורא התראות** ב-[**הגדרות תצורה ← מקור ערכי הסוכר**](#Config-Builder-bg-source) ואשרו ל-**AAPS** גישה להתראות כשהבקשה מופיעה.
+- ודאו שאפליקציית Eversense מציגה את ערך הסוכר הנוכחי בהתראה שלה.
 
 ```{warning}
 BG values reading frequency is not always 5 minutes and duplicates can occur.
