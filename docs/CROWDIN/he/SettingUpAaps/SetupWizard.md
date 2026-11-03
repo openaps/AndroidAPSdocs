@@ -1,19 +1,19 @@
-# AAPS Setup Wizard
+# אשף ההתקנה של AAPS
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
+בהפעלה הראשונה של **AAPS**, "**אשף ההתקנה**" מנחה אתכם כדי להגדיר במהירות ובבת אחת את כל ההגדרות הבסיסיות של האפליקציה. **אשף ההתקנה** מנחה אתכם כדי שלא תשכחו דבר חשוב. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimize/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+עם זאת, אין חובה להשלים את כל ההגדרות בהפעלה הראשונה של **אשף ההתקנה**, וניתן לצאת בקלות מהאשף ולחזור אליו בהמשך. אחרי **אשף ההתקנה** יש שלוש דרכים לשפר או לשנות את התצורה. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
 
-During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
+במהלך השימוש ב**אשף ההתקנה** ומיד לאחריו, ייתכן שלא תבחינו בשינויים משמעותיים ב־**AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. תתחילו את **משימה 1** בסיום אשף ההתקנה. You are the master of **AAPS**, not the other way around.
 
 ```{admonition} Preview Objectives
 :class: note
-If you are keen to know the structure of the objectives, please read [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) but then come back here to run the Setup Wizard first.
+אם ברצונכם להכיר את מבנה המשימות, קראו את [השלמת המשימות](../SettingUpAaps/CompletingTheObjectives.md), אך חזרו לכאן כדי להפעיל תחילה את אשף ההתקנה.
 
 ```
 
@@ -27,25 +27,25 @@ If there is an error in the documentation or you have a better idea for how some
 ```
 ## Welcome message
 
-When the Setup Wizard opens, it greets you with a short welcome message and immediately shows a "**Permissions Required**" panel at the bottom of the screen (see next section).
+כאשר אשף ההתקנה נפתח, הוא מציג הודעת פתיחה קצרה, ומיד מופיע בתחתית המסך החלון "**נדרשות הרשאות**" (ראו בסעיף הבא).
 
-Once you have granted the permissions, the panel closes and the welcome screen shows a "**Next**" button. Press "**NEXT**" to continue:
+אחרי מתן ההרשאות, החלון נסגר ובמסך הפתיחה מופיע הלחצן "**הבא**". יש ללחוץ על "**הבא**" כדי להמשיך:
 
 ![Welcome](../images/setup-wizard/Wizard-Welcome.png)
 
 ## Required permissions
 
-**AAPS** needs a few permissions to operate correctly. The Wizard groups them on a single "**Permissions Required**" panel, each with its own "**Grant**" button. Grant them one by one — the icon next to each item turns into a tick once it is done.
+**AAPS** צריך כמה הרשאות כדי לפעול כראוי. האשף מרכז אותן בחלון אחד, "**נדרשות הרשאות**", ולכל אחת יש לחצן "**מתן הרשאה**" משלה. יש לתת אותן אחת אחרי השנייה — הסמל ליד כל פריט הופך לסימן וי כשהפעולה הושלמה.
 
 ![Permissions](../images/setup-wizard/Wizard-Permissions.png)
 
-### Battery optimization
+### אופטימיזציית סוללה
 
-Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. לכן מערכת ההפעלה Android בטלפון החכם מגבילה את האפשרות של אפליקציות לפעול ולצרוך זמן מעבד, וכך גם חשמל מהסוללה.
 
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be excluded from battery optimization.
+However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. לכן יש להחריג אותו מאופטימיזציית הסוללה.
 
-Press "**Grant**" next to "**Battery Optimization**", then select "**Allow**" on the "Let app always run in background?" dialog:
+יש ללחוץ על "**מתן הרשאה**" ליד "**אופטימיזציית סוללה**", ואז לבחור "**Allow**" (אישור) בחלון "Let app always run in background?" (לאפשר לאפליקציה לפעול תמיד ברקע?):
 
 ![Allow Background](../images/setup-wizard/Wizard-Permissions-Battery.png)
 
@@ -53,76 +53,76 @@ Press "**Grant**" next to "**Battery Optimization**", then select "**Allow**" on
 
 ### AAPS Directory
 
-**AAPS** needs to store its settings and log information on the permanent storage of your smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+**AAPS** צריך לשמור את ההגדרות ואת נתוני היומן שלו בזיכרון הקבוע של הטלפון. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
 
-Press "**Grant**" next to "**AAPS Directory**". This opens the file system on your phone and lets you choose where **AAPS** stores its information.
+יש ללחוץ על "**מתן הרשאה**" ליד "**תיקיית AAPS**". כך נפתחת מערכת הקבצים של הטלפון, וניתן לבחור היכן **AAPS** ישמור את המידע שלו.
 
 ```{tip}
 Choosing the default AAPS directory is recommended.</br>
 Do **not** select a subdirectory of AAPS.
 ```
 
-The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it and choose "**USE THIS FOLDER**":
+The default directory is **AAPS**, but you can use any dedicated directory of your liking. אם צריך, יש ליצור את התיקייה, להיכנס אליה ולבחור "**USE THIS FOLDER**" (שימוש בתיקייה זו):
 
 ![Select folder](../images/setup-wizard/Wizard-Permissions-Directory.png)
 
-Confirm with "**ALLOW**" that you wish to grant access to **AAPS** to the selected directory:
+יש לאשר עם "**ALLOW**" (אישור) שברצונכם לתת ל-**AAPS** גישה לתיקייה שנבחרה:
 
-![Allow access to the folder](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
+![מתן גישה לתיקייה](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
 
 ### Notifications
 
 Android requires special permission for apps if they want to send you notifications.
 
-While it is a good feature to disable notifications _e.g._ from social media apps, it is essential that you allow **AAPS** to send you notifications.
+טוב לכבות הודעות, _למשל_ מאפליקציות של רשתות חברתיות, אבל חובה לאפשר ל-**AAPS** לשלוח לכם הודעות.
 
-Press "**Grant**" next to "**Notifications**" and select "**Allow**" at the system prompt:
+יש ללחוץ על "**מתן הרשאה**" ליד "**התראות**" ולבחור "**Allow**" (אישור) בחלון של המערכת:
 
-![Allow notifications](../images/setup-wizard/Wizard-Permissions-Notifications.png)
+![מתן הרשאה להתראות](../images/setup-wizard/Wizard-Permissions-Notifications.png)
 
-### Alarms and reminders
+### שעונים מעוררים ותזכורות
 
-On **Android 14 and newer**, **AAPS** needs the "**Alarms and reminders**" permission so that alarms can wake the screen while **AAPS** is in the background, and so that reminders (for example from an **Automation**) ring on time.
+ב-**Android 14 ומעלה**, **AAPS** צריך את ההרשאה "**שעונים מעוררים ותזכורות**", כדי שהתראות יוכלו להעיר את המסך כאשר **AAPS** פועל ברקע, וכדי שתזכורות (למשל מ**אוטומציה**) יופעלו בזמן.
 
-This item is only shown while it is needed. Once **AAPS** is excluded from battery optimization (see above), Android grants exact alarms automatically and the item disappears. If it is still listed, press "**Grant**" next to "**Alarms and reminders**". This opens a system settings screen for **AAPS**; enable the toggle and return to **AAPS**. On Android 13 and older this item does not appear and no action is needed.
+פריט זה מוצג רק כאשר יש בו צורך. אחרי ש-**AAPS** הוחרג מאופטימיזציית הסוללה (ראו למעלה), Android נותן הרשאה לשעונים מעוררים מדויקים באופן אוטומטי, והפריט נעלם. אם הפריט עדיין מופיע ברשימה, יש ללחוץ על "**מתן הרשאה**" ליד "**שעונים מעוררים ותזכורות**". כך נפתח מסך הגדרות מערכת עבור **AAPS**; יש להפעיל את המתג ולחזור אל **AAPS**. ב-Android 13 ומטה הפריט הזה לא מופיע ואין צורך לעשות דבר.
 
-Once all the permissions show a tick (three, or four on Android 14 and newer), the "**Permissions Required**" panel closes by itself and you can press "**NEXT**" on the welcome screen to continue.
+כאשר ליד כל ההרשאות מופיע סימן וי (שלוש, או ארבע ב-Android 14 ומעלה), החלון "**נדרשות הרשאות**" נסגר מעצמו, ואפשר ללחוץ על "**הבא**" במסך הפתיחה כדי להמשיך.
 
 (setup-wizard-bluetooth-battery-optimisation)=
-### Bluetooth battery optimization
+### אופטימיזציית סוללה של Bluetooth
 
 ```{admonition} Extra Android setting, not part of the Wizard
 :class: note
-The following is additional Android configuration done outside of the Setup Wizard. It is not one of the "Grant" buttons above, but it is important for a reliable pump connection.
+הפעולות הבאות הן הגדרות Android נוספות, שמבצעים מחוץ לאשף ההתקנה. זה לא אחד מלחצני "מתן הרשאה" שלמעלה, אבל זה חשוב לחיבור יציב למשאבה.
 ```
 
-Newer versions of Android have added battery optimization to the system Bluetooth application too.
+בגרסאות חדשות של Android נוספה אופטימיזציית סוללה גם לאפליקציית המערכת Bluetooth.
 
-As well as disabling battery optimization for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
+בנוסף להשבתת אופטימיזציית הסוללה עבור **AAPS**, סביר שיהיה צורך להשבית אותה גם עבור אפליקציית המערכת Bluetooth. Failure to do this may lead to pump connection dropouts and issues.
 
 ***NOTE: The xDrip documentation covers how to do this here: [xDrip documentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
 
-Follow these steps on Android 16; other versions will vary slightly from the provided screenshots:
+יש לבצע את השלבים הבאים ב-Android 16; בגרסאות אחרות המסכים יהיו מעט שונים מצילומי המסך:
 
-1. Open Android settings and search for **Apps**, and open the Apps settings.
+1. פתחו את הגדרות Android, חפשו **Apps** (אפליקציות) ופתחו את הגדרות האפליקציות.
 
    ![settings_apps](../images/setup-wizard/settings_apps.png)
 
-2. You will see the App settings, however we need to expand to see all apps, click on **See all apps** to expand.
+2. יוצגו הגדרות האפליקציות, אבל יש להרחיב את הרשימה כדי לראות את כל האפליקציות. לחצו על **See all apps** (הצגת כל האפליקציות) כדי להרחיב.
 
    ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
 
-3. As the Bluetooth app is a system app, it's hidden by default, so we need to show system apps. Click on the **three dots** (⋮) on the top right (1). Then click on **Show system** (2).
+3. אפליקציית Bluetooth היא אפליקציית מערכת, ולכן היא מוסתרת כברירת מחדל. לכן יש להציג את אפליקציות המערכת. לחצו על **שלוש הנקודות** (⋮) בחלק העליון של המסך (1). ואז לחצו על **Show system** (הצגת אפליקציות מערכת) (2).
 
    ![settings_apps](../images/setup-wizard/show_system.png)
 
-4. Search for the `Bluetooth` app and click on `Bluetooth` and/or `Legacy Bluetooth` if both are present ensure the procedure is followed for both.
+4. חפשו את האפליקציה `Bluetooth` ולחצו על `Bluetooth` ו/או `Legacy Bluetooth`. אם שתיהן קיימות, יש לבצע את התהליך עבור שתיהן.
 
    ***NOTE: It's safe to ignore the `Bluetooth MIDI Service` this is not used by AAPS***
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. ב־Android 12 לחצו על `Battery`, וב־Android 13+ לחצו על `App battery usage`.
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
@@ -140,212 +140,212 @@ In the end user license agreement there is important information about the legal
 
 If you don't understand, or can't agree to the end user license agreement please don't use **AAPS** at all!
 
-If you understand and agree, please press the "**I UNDERSTAND AND AGREE**" button and follow the Setup Wizard:
+אם אתם מבינים ומסכימים, יש ללחוץ על הלחצן "**אני מבין/ה ומסכים/ה**" ולהמשיך לפי אשף ההתקנה:
 
-![EULA](../images/setup-wizard/Wizard-EULA.png)
+![הסכם רישיון למשתמש (EULA)](../images/setup-wizard/Wizard-EULA.png)
 
-A "**Next**" button appears once you have agreed. Press "**NEXT**".
+אחרי ההסכמה מופיע הלחצן "**הבא**". יש ללחוץ על "**הבא**".
 
-The next screen, "**Permissions**", lists the permissions again. They should all show a tick, as you granted them at the start. If one is missing, press "**Grant**" next to it. Press "**NEXT**" to continue:
+המסך הבא, "**הרשאות**", מציג שוב את רשימת ההרשאות. ליד כולן אמור להופיע סימן וי, כי נתתם אותן בהתחלה. אם אחת חסרה, יש ללחוץ על "**מתן הרשאה**" לידה. יש ללחוץ על "**הבא**" כדי להמשיך:
 
-![Permissions granted](../images/setup-wizard/Wizard-Permissions-Granted.png)
+![ההרשאות ניתנו](../images/setup-wizard/Wizard-Permissions-Granted.png)
 
 ## Master password
 
-As the configuration of **AAPS** contains some sensitive data (_e.g._ the access token for your Nightscout server) it is encrypted by a password you set here.
+התצורה של **AAPS** כוללת נתונים רגישים (_למשל_ אסימון הגישה לשרת ה-Nightscout שלכם), ולכן היא מוצפנת בסיסמה שמגדירים כאן.
 
-The Wizard shows "**Password not set**". Press "**Set**":
+האשף מציג "**הסיסמה לא הוגדרה**". יש ללחוץ על "**הגדרה**":
 
-![Master password not set](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
+![הסיסמה הראשית לא הוגדרה](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
 
-This opens the "**Protection**" screen. Press "**Master password**" (shown as "Password not set"):
+כך נפתח המסך "**הגנה בסיסמאות**". יש ללחוץ על "**סיסמה ראשית**" (מוצג כ-"הסיסמה לא הוגדרה"):
 
-![Protection (הגנה בסיסמאות)](../images/setup-wizard/Wizard-Protection.png)
+![הגנה בסיסמאות](../images/setup-wizard/Wizard-Protection.png)
 
-Enter the same password in both fields and press "**OK**":
+יש להזין את אותה הסיסמה בשני השדות וללחוץ על "**אישור**":
 
 ![Password](../images/setup-wizard/Wizard-Password.png)
 
-Go back with the arrow in the top left corner. The Wizard now shows "**Password set!**":
+יש לחזור אחורה עם החץ בפינה העליונה של המסך. עכשיו האשף מציג "**הסיסמה הוגדרה!**":
 
-![Master password set](../images/setup-wizard/Wizard-MasterPassword-Set.png)
+![הסיסמה הראשית הוגדרה](../images/setup-wizard/Wizard-MasterPassword-Set.png)
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+**אסור לאבד את הסיסמה הראשית**. כדאי לרשום אותה, _למשל_ ב-Google Drive. זה מקום טוב, כי Google מגבה אותו עבורכם. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
 ```
 
-When you are done, press "**NEXT**" to go to the next screen.
+בסיום, יש ללחוץ על "**הבא**" כדי לעבור למסך הבא.
 
 (setup-wizard-import-settings)=
 ## ייבוא הגדרות
 
-This screen is only shown when **AAPS** finds settings exported earlier in the **AAPS** directory ("Stored settings found"), for example when you reinstall the app or move to a new phone.
+המסך הזה מוצג רק כאשר **AAPS** מוצא בתיקיית **AAPS** הגדרות שיוצאו קודם ("נמצאו הגדרות שמורות"), למשל כאשר מתקינים מחדש את האפליקציה או עוברים לטלפון חדש.
 
-- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md).
-- To start with a new configuration, press "**NEXT**" and continue with the Wizard.
+- כדי לשחזר את התצורה הקודמת, יש ללחוץ על "**ייבוא הגדרות**" — ראו [ייצוא וייבוא הגדרות](../Maintenance/ExportImportSettings.md).
+- כדי להתחיל עם תצורה חדשה, יש ללחוץ על "**הבא**" ולהמשיך באשף.
 
 ![ייבוא הגדרות](../images/setup-wizard/Wizard-ImportSettings.png)
 
 ## Units (mg/dL <-> mmol/L)
 
-Please select if your glucose values are in mg/dL or mmol/L, then press the "**NEXT**" button:
+יש לבחור אם ערכי הסוכר שלכם הם ב-mg/dL או ב-mmol/L, ואז ללחוץ על הלחצן "**הבא**":
 
 ![Units](../images/setup-wizard/Wizard-Units.png)
 
-## Display Settings
+## הגדרות תצוגה
 
-Here you set the "**LOW mark**" and "**HIGH mark**" for the sensor glucose display. Glucose values between these two marks are shown as "in range". You can leave the default values (72 and 180 mg/dL) for now, and edit them later.
+כאן מגדירים את "**סימון נמוך**" ואת "**סימון גבוה**" לתצוגת ערכי הסוכר מהחיישן. ערכי סוכר שבין שני הסימונים האלה מוצגים כ"בטווח". אפשר להשאיר בינתיים את ערכי ברירת המחדל (72 ו-180 mg/dL) ולשנות אותם מאוחר יותר.
 
 The values you choose only affect the graphical presentation of the diagram, and nothing else.
 
-Your glucose target _e.g._ is configured separately in your profile.
+יעד הסוכר שלכם, _למשל_, מוגדר בנפרד בפרופיל.
 
 Your range to analyze TIR (time in range) is configured separately in your reporting server.
 
-Adjust the marks with the "−" / "+" buttons if needed, then press the "**NEXT**" button:
+אם צריך, יש לשנות את הסימונים בעזרת הלחצנים "−" / "+", ואז ללחוץ על הלחצן "**הבא**":
 
-![Display Settings](../images/setup-wizard/Wizard-Display.png)
+![הגדרות תצוגה](../images/setup-wizard/Wizard-Display.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-## Communication
+## תקשורת
 
-The "**Communication**" screen lists the plugins used to upload, synchronize and broadcast your data:
+המסך "**תקשורת**" מציג את התוספים שמשמשים להעלאה, לסנכרון ולשידור של הנתונים שלכם:
 
-- **SMS Communicator** – remote control of **AAPS** using SMS commands
-- **NSClientV3** – synchronizes your data with Nightscout using the v3 API
-- **Tidepool** – uploads data to Tidepool
-- **xDrip** – sends data to xDrip
-- **Open Humans** – upload and donate your diabetes data to scientific projects
-- **Wear** – monitor and control **AAPS** from a WearOS watch
-- **External Companion Apps** – data broadcasting to various external apps
-- **Garmin** – connection to a Garmin device
+- **תקשורת SMS** – שליטה מרחוק ב-**AAPS** בעזרת פקודות SMS
+- **NSClientV3** – מסנכרן את הנתונים שלכם עם Nightscout בעזרת API v3
+- **Tidepool** – מעלה נתונים ל-Tidepool
+- **xDrip** – שולח נתונים ל-xDrip
+- **Open Humans** – העלאה ותרומה של נתוני הסוכרת שלכם לפרויקטים מדעיים
+- **Wear** – ניטור ושליטה ב-**AAPS** משעון WearOS
+- **אפליקציות נלוות חיצוניות** – שידור נתונים לאפליקציות חיצוניות שונות
+- **Garmin** – חיבור למכשיר Garmin
 
-![Communication](../images/setup-wizard/Wizard-Communication.png)
+![תקשורת](../images/setup-wizard/Wizard-Communication.png)
 
-Scroll down to see the rest of the list:
+יש לגלול למטה כדי לראות את שאר הרשימה:
 
-![Communication more](../images/setup-wizard/Wizard-Communication-More.png)
+![תקשורת - עוד](../images/setup-wizard/Wizard-Communication-More.png)
 
-You could configure several of these now, but for the first run we will just focus on the reporting server. If you are not able to set it up at the moment, skip it for now — you can configure it later.
+אפשר להגדיר עכשיו כמה מהם, אבל בהפעלה הראשונה נתמקד רק בשרת הדיווח. אם אי אפשר להגדיר אותו כרגע, אפשר לדלג עליו בינתיים — ניתן להגדיר אותו מאוחר יותר.
 
-In this example we use Nightscout as reporting server. Tick the box on the right of "**NSClientV3**" to enable it. For Tidepool it is even simpler, as you only need your personal login information.
+בדוגמה הזו משתמשים ב-Nightscout כשרת דיווח. יש לסמן את התיבה ליד "**NSClientV3**" כדי להפעיל אותו. For Tidepool it is even simpler, as you only need your personal login information.
 
-Once enabled, press "**Settings**" below NSClientV3 to configure it:
+אחרי ההפעלה, יש ללחוץ על "**הגדרות**" מתחת ל-NSClientV3 כדי להגדיר אותו:
 
 ![NSClientV3](../images/setup-wizard/Wizard-Communication-NSClient.png)
 
-Here you configure the Nightscout reporting server. The NSClientV3 settings are shown as one scrollable page:
+כאן מגדירים את שרת הדיווח Nightscout. ההגדרות של NSClientV3 מוצגות בדף אחד שאפשר לגלול:
 
-![NSClientV3 settings](../images/setup-wizard/Wizard-NSClientV3.png)
+![הגדרות NSClientV3](../images/setup-wizard/Wizard-NSClientV3.png)
 
-Press "**Nightscout URL**" and enter your personal Nightscout server address (the URL you set up yourself, or were given by your service provider). Confirm with "**OK**".
+יש ללחוץ על "**כתובת Nightscout**" ולהזין את הכתובת של שרת ה-Nightscout האישי שלכם (הכתובת שהגדרתם בעצמכם, או שקיבלתם מספק השירות). יש לאשר עם "**אישור**".
 
-Press "**Nightscout access token**" and enter the access token for your Nightscout server. Without this token, access will not work. If you don't have it yet, please check the documentation for setting up the reporting server.
+יש ללחוץ על "**אסימון גישה של Nightscout**" ולהזין את אסימון הגישה של שרת ה-Nightscout שלכם. Without this token, access will not work. אם עדיין אין לכם אסימון, יש לעיין בתיעוד על הגדרת שרת הדיווח.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout.
+יש להשאיר את "**שימוש ב־WebSockets**" מופעל, לתקשורת בזמן אמת עם Nightscout.
 
-The remaining sections can be left at their defaults for now. They are described here so you know where to find them later:
+את שאר החלקים אפשר להשאיר בינתיים עם ערכי ברירת המחדל. הם מתוארים כאן כדי שתדעו איפה למצוא אותם בהמשך:
 
-**Alarm options** — Nightscout alarms, announcements and stale-data thresholds. Leave the switches off for now; we only open them so you are aware of the options.
+**אפשרויות התראה** — התראות Nightscout, הכרזות וספים לנתונים ישנים. יש להשאיר את המתגים כבויים בינתיים; פותחים אותם רק כדי להכיר את האפשרויות.
 
-**Connection settings** — choose how data is transferred. Caregivers must enable "**Use cellular data**", otherwise the phone of the person they care for (_e.g._ a child) cannot upload outside Wi-Fi range, _e.g._ on the way to school. Other users can disable cellular transfer to save data or battery. If in doubt, leave everything enabled.
+**הגדרות חיבור** — בחירה איך הנתונים מועברים. מטפלים חייבים להפעיל את "**שימוש בנתונים סלולריים**", אחרת הטלפון של מי שהם מטפלים בו (_למשל_ ילד) לא יכול להעלות נתונים מחוץ לטווח ה-Wi-Fi, _למשל_ בדרך לבית הספר. משתמשים אחרים יכולים להשבית העברה בנתונים סלולריים כדי לחסוך בנתונים או בסוללה. אם יש ספק, יש להשאיר הכול מופעל.
 
 ![Connection settings](../images/setup-wizard/Wizard-NSClientV3-Connection.png)
 
-**Advanced Settings** — enable "**Log app start event**" if you want to see in Nightscout when the app restarts (useful for caregivers). Keep "**Create announcements from errors**" and "**Create announcements from carbs required**" enabled. Leave "**Use slow sync**" off; you would only use it if the Nightscout server is slow to process a large amount of data.
+**הגדרות מתקדמות** — יש להפעיל את "**רישום אירוע הפעלת האפליקציה**" כדי לראות ב-Nightscout מתי האפליקציה מופעלת מחדש (שימושי למטפלים). יש להשאיר את "**יצירת הכרזות משגיאות**" ואת "**יצירת הכרזות מדרישות לפחמימות**" מופעלים. יש להשאיר את "**שימוש בסנכרון איטי**" כבוי; משתמשים בו רק אם שרת ה-Nightscout איטי בעיבוד של כמות גדולה של נתונים.
 
-![Advanced settings](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
+![הגדרות מתקדמות](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
 
-Go back to the list of plugins and press "**NEXT**" to go to the next screen.
+יש לחזור לרשימת התוספים וללחוץ על "**הבא**" כדי לעבור למסך הבא.
 
-## Client control
+## שליטה ממכשיר לקוח
 
-From **AAPS** version 4, client devices running **AAPSClient** can be **paired** with this phone (the **master**) and control it with signed commands sent over Nightscout. This is the new recommended way to control **AAPS** remotely — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for the full explanation and setup.
+החל מגרסה 4 של **AAPS**, מכשירי לקוח שמריצים את **AAPSClient** יכולים להיות **מצומדים** לטלפון הזה (**המכשיר הראשי**) ולשלוט בו בעזרת פקודות חתומות שנשלחות דרך Nightscout. זו הדרך החדשה והמומלצת לשלוט ב-**AAPS** מרחוק — ההסבר המלא וההגדרה נמצאים ב-[שליטה בין מכשיר ראשי ↔ מכשיר לקוח](../RemoteFeatures/ClientMasterControl.md).
 
-There is nothing you have to configure on this screen now; you can pair clients at any time later from **Manage → Authorized clients**. There you add a client with a **QR code** (it sets up Nightscout on the client too) or with a **PIN**, and give it a **role**.
+אין צורך להגדיר דבר במסך הזה עכשיו; אפשר לצמד מכשירי לקוח בכל זמן מאוחר יותר דרך **ניהול ← לקוחות מורשים**. שם מוסיפים מכשיר לקוח בעזרת **קוד QR** (הוא גם מגדיר את Nightscout במכשיר הלקוח) או בעזרת **PIN**, ונותנים לו **תפקיד**.
 
-- "**Authorized clients**" — manage the paired client devices allowed to control this master.
-- "**Nightscout data acceptance**" — accepting treatments and data entered directly in Nightscout (the old, less secure way) is now turned off by default. Only open these settings if you still need it, _e.g._ to enter data through Nightscout or third-party apps.
+- "**לקוחות מורשים**" — ניהול מכשירי הלקוח המצומדים שמורשים לשלוט במכשיר הראשי הזה.
+- "**קבלת נתונים מ־Nightscout**" — קבלה של טיפולים ונתונים שהוזנו ישירות ב-Nightscout (הדרך הישנה והפחות בטוחה) כבויה עכשיו כברירת מחדל. יש לפתוח את ההגדרות האלה רק אם עדיין צריך אותן, _למשל_ כדי להזין נתונים דרך Nightscout או דרך אפליקציות של צד שלישי.
 
-When client control is already on — always in [Simple Mode](#preferences-simple-mode) — this phone is in [hardened mode](#client-master-control-hardened-mode): it takes changes only from paired clients, so the screen explains hardened mode instead of offering the "**Nightscout data acceptance**" settings.
+כאשר השליטה ממכשיר לקוח כבר מופעלת — תמיד ב[מצב פשוט](#preferences-simple-mode) — הטלפון הזה נמצא ב[מצב מוקשח](#client-master-control-hardened-mode): הוא מקבל שינויים רק ממכשירי לקוח מצומדים, ולכן המסך מסביר על המצב המוקשח במקום להציג את ההגדרות "**קבלת נתונים מ־Nightscout**".
 
-![Client control](../images/setup-wizard/Wizard-ClientControl.png)
+![שליטה ממכשיר לקוח](../images/setup-wizard/Wizard-ClientControl.png)
 
-"**Nightscout data acceptance**" opens the "**Synchronization**" settings, where each kind of data received from Nightscout has its own switch:
+"**קבלת נתונים מ־Nightscout**" פותח את ההגדרות "**סנכרון**", ושם לכל סוג של נתונים שמתקבלים מ-Nightscout יש מתג משלו:
 
-![Nightscout data acceptance settings](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
+![הגדרות קבלת נתונים מ-Nightscout](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
 
-Press "**NEXT**" to go to the next screen.
+יש ללחוץ על "**הבא**" כדי לעבור למסך הבא.
 
 (setup-wizard-instance-name)=
-## Who is using this phone?
+## מי משתמש בטלפון זה?
 
-Here you enter the name of the person using this phone. It tells this **AAPS** instance apart from others in reports and when synchronizing, for example if two children in your family use **AAPS**. It is also used in the names of exported settings files and shown on the watch.
+כאן מזינים את השם של מי שמשתמש בטלפון הזה. השם מבדיל בין מופע **AAPS** זה לבין מופעים אחרים בדוחות ובזמן סנכרון, למשל אם שני ילדים במשפחה משתמשים ב-**AAPS**. השם משמש גם בשמות של קובצי ההגדרות המיוצאים, ומוצג בשעון.
 
-It can be anything. You can change it later in **Settings → General → Instance name**.
+It can be anything. אפשר לשנות אותו מאוחר יותר ב-**הגדרות ← כללי ← שם המופע**.
 
-Press "**NEXT**" to go to the next screen.
+יש ללחוץ על "**הבא**" כדי לעבור למסך הבא.
 
 ![Name](../images/setup-wizard/Wizard-Name.png)
 
 ## Patient type
 
-Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
+כאן בוחרים את "סוג המטופל/ת". זו בחירה חשובה, מכיוון שבתוכנת **AAPS** יש מגבלות שונות בהתאם לגיל המטופל. This is important for security and safety reasons.
 
-Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for a meal.
+Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. זו תכונת בטיחות שעוזרת למנוע מינון יתר בטעות כשנותנים בולוס לארוחה.
 
 The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
 
-After setting these values, press "**NEXT**" to go to the next screen:
+אחרי הגדרת הערכים האלה, יש ללחוץ על "**הבא**" כדי לעבור למסך הבא:
 
 ![Patient](../images/setup-wizard/Wizard-PatientType.png)
 
 ## אינסולין
 
-Here you configure the insulin used in your pump. New insulin profiles require a **DIA of at least 5 h**.
+כאן מגדירים את האינסולין שמשמש במשאבה שלכם. פרופילי אינסולין חדשים דורשים **DIA של 5 שעות לפחות**.
 
-Press the "**Insulin**" button to open the insulin editor:
+יש ללחוץ על הלחצן "**אינסולין**" כדי לפתוח את עורך האינסולין:
 
 ![אינסולין](../images/setup-wizard/Wizard-Insulin.png)
 
-In the editor you can give the insulin a **nickname** and set its **Peak** (in minutes) and **DIA** (in hours). The quickest way is to load a preset with "**Load peak from**" — choose **Novorapid**, **Fiasp** or **Lyumjev** — and the peak is filled in for you. The graph at the bottom previews the resulting insulin activity curve.
+בעורך אפשר לתת לאינסולין **כינוי** ולהגדיר את ה**שיא** שלו (בדקות) ואת ה-**DIA** (בשעות). הדרך המהירה ביותר היא לטעון הגדרה מוכנה עם "**טעינת שיא מתוך**" — לבחור **נובוראפיד**, **פיאספ** או **ליומג'ב** — והשיא ימולא עבורכם. הגרף בתחתית מציג מראש את עקומת פעילות האינסולין שמתקבלת.
 
-![Insulin editor](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
+![עורך האינסולין](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
 
-Pick the preset that matches your insulin, for example **Fiasp**:
+יש לבחור את ההגדרה המוכנה שמתאימה לאינסולין שלכם, למשל **פיאספ**:
 
-![Insulin Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
+![אינסולין פיאספ](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
 
 ```{admonition} Use your insulin brand's preset peak
 :class: danger
-Please don't change the peak unless you are an expert — usually the preset values work well for each branded insulin.
+אין לשנות את השיא אלא אם אתם מומחים — בדרך כלל הערכים המוכנים מתאימים היטב לכל סוג אינסולין.
 ```
 
-If you are a new **AAPS** user, set **DIA** to 9 hours — see [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to understand why.
+אם אתם משתמשים חדשים ב-**AAPS**, יש להגדיר **DIA** של 9 שעות — ההסבר נמצא ב-[משך פעולת האינסולין (DIA) והשיא](#Config-Builder-insulin-dia).
 
 ```{admonition} "Insulin configuration changed" dialog
 :class: note
-If a paired client (_e.g._ another phone) has changed the insulin configuration, a dialog appears. Press **OK** to load their changes, or **Cancel** to keep editing (your next save will overwrite theirs).
+אם מכשיר לקוח מצומד (_למשל_ טלפון אחר) שינה את תצורת האינסולין, יופיע חלון. יש ללחוץ על **אישור** כדי לטעון את השינויים שלו, או על **ביטול** כדי להמשיך לערוך (השמירה הבאה שלכם תדרוס את השינויים שלו).
 ```
 
-![Insulin changed](../images/setup-wizard/Wizard-Insulin-Changed.png)
+![האינסולין השתנה](../images/setup-wizard/Wizard-Insulin-Changed.png)
 
-Press the save icon (top right), then press "**NEXT**" to go to the next screen.
+יש ללחוץ על סמל השמירה (בחלק העליון של המסך), ואז ללחוץ על "**הבא**" כדי לעבור למסך הבא.
 
 ## Blood sugar source
 
-Here you select where **AAPS** gets its glucose data from. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
+כאן בוחרים מאיפה **AAPS** מקבל את נתוני הסוכר. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
-Many sources are available — scroll through the list and select the one you use:
+יש מקורות רבים — יש לגלול ברשימה ולבחור את המקור שבו אתם משתמשים:
 
 ![מקור ערכי הסוכר](../images/setup-wizard/Wizard-BGSource.png)
 
-Once you select a source, its card expands and shows two buttons: "**Settings**" to adjust how the data is received, and "**Open plugin**" to open the source's own screen. In the example below, **BYODA** is selected. Some sources have nothing to configure at this stage, so you can usually go straight to the next screen:
+אחרי בחירת מקור, הכרטיס שלו נפתח ומציג שני לחצנים: "**הגדרות**" כדי לשנות את אופן קבלת הנתונים, ו"**פתיחת תוסף**" כדי לפתוח את המסך של המקור. בדוגמה שלמטה נבחר **BYODA**. בחלק מהמקורות אין מה להגדיר בשלב הזה, ולכן בדרך כלל אפשר לעבור ישר למסך הבא:
 
-![BG Source settings](../images/setup-wizard/Wizard-BGSource-Settings.png)
+![הגדרות מקור ערכי הסוכר](../images/setup-wizard/Wizard-BGSource-Settings.png)
 
-After making your selection, press "**NEXT**" to go to the next screen.
+אחרי הבחירה, יש ללחוץ על "**הבא**" כדי לעבור למסך הבא.
 
 (setup-wizard-profile)=
 ## Profile
@@ -358,182 +358,182 @@ Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.
 :class: danger
 An accurate profile is necessary to control the safe action of **AAPS**.
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
+נדרש שתקבעו את הפרופיל ותדונו בו עם הרופא, ושהוכח שהוא עובד באמצעות בדיקות מוצלחות של הקצב הבזאלי, ISF ו-IC!
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+If a robot has an incorrect input it will fail - consistently. **AAPS** יכול לפעול רק על בסיס המידע שניתן לו. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
 ```
 
-Press the "**Profile**" button to open the profile editor:
+יש ללחוץ על הלחצן "**פרופיל**" כדי לפתוח את עורך הפרופילים:
 
 ![Profile](../images/setup-wizard/Wizard-Profile.png)
 
-The editor opens empty ("No records available"). Press the "**+**" button at the bottom to create a new profile:
+העורך נפתח ריק ("אין רישומים זמינים"). יש ללחוץ על הלחצן "**+**" בתחתית המסך כדי ליצור פרופיל חדש:
 
-![Profile empty](../images/setup-wizard/Wizard-Profile-Empty.png)
+![פרופיל ריק](../images/setup-wizard/Wizard-Profile-Empty.png)
 
 You can have several profiles in the long-term if needed. We only create one here.
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: note
-The example profile here is only to show you how to enter data.
+הפרופיל לדוגמה כאן נועד רק להראות איך מזינים נתונים.
 
-It is not intended to be an accurate profile or something very well optimized, because each person's needs are so different.
+הוא לא אמור להיות פרופיל מדויק או מותאם היטב, כי הצרכים של כל אדם שונים מאוד.
 
 Don't use it for actually looping!
 ```
 
-The new profile (for example "**LocalProfile1**") has four tabs: **IC**, **ISF**, **BAS** and **TARG**. Press the pencil next to the profile name to rename it. Fill in every tab — a tab stays red and shows an error message until it contains valid values:
+לפרופיל החדש (למשל "**LocalProfile1**") יש ארבע לשוניות: **IC**, **ISF**, **בזאלי** ו-**יעד**. יש ללחוץ על העיפרון ליד שם הפרופיל כדי לשנות את השם. יש למלא כל לשונית — לשונית נשארת אדומה ומציגה הודעת שגיאה עד שיש בה ערכים תקינים:
 
-![New profile with errors](../images/setup-wizard/Wizard-Profile-New-Error.png)
+![פרופיל חדש עם שגיאות](../images/setup-wizard/Wizard-Profile-New-Error.png)
 
-Press "**IC**" and enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values. Use the "**+**" button to add more time blocks:
+יש ללחוץ על "**IC**" ולהזין את ערכי ה-[IC](#your-aaps-profile-insulin-to-carbs-ratio) שלכם. בעזרת הלחצן "**+**" אפשר להוסיף עוד פרקי זמן:
 
 ![IC](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Press "**ISF**" and enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
+יש ללחוץ על "**ISF**" ולהזין את [ערכי ה-ISF](#your-aaps-profile-insulin-sensitivity-factor) שלכם:
 
 ![ISF](../images/setup-wizard/Wizard-Profile-ISF.png)
 
-Press "**BAS**" and enter your [basal values](#your-aaps-profile-basal-rates):
+יש ללחוץ על "**בזאלי**" ולהזין את [הערכים הבזאליים](#your-aaps-profile-basal-rates) שלכם:
 
-![BAS](../images/setup-wizard/Wizard-Profile-BAS.png)
+![בזאלי](../images/setup-wizard/Wizard-Profile-BAS.png)
 
-Press "**TARG**" and enter your blood sugar target values.
+יש ללחוץ על "**יעד**" ולהזין את ערכי יעד הסוכר שלכם.
 
-For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
+בלולאה פתוחה היעד יכול להיות טווח רחב יותר, אחרת **AAPS** יודיע לכם כל הזמן לשנות את הבזאלי הזמני או הגדרה אחרת, ודבר זה עלול להיות מתיש.
 
-Later, for closed looping, you will generally have only one value for top and bottom. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
+Later, for closed looping, you will generally have only one value for top and bottom. כך קל יותר ל-**AAPS** להגיע ליעד ולתת לכם איזון סוכרת כללי טוב יותר.
 
-![TARG](../images/setup-wizard/Wizard-Profile-TARG.png)
+![יעד](../images/setup-wizard/Wizard-Profile-TARG.png)
 
-When all four tabs are valid, the **save icon** (top right) becomes active. Press it to save the profile:
+כאשר כל ארבע הלשוניות תקינות, **סמל השמירה** (בחלק העליון של המסך) הופך לפעיל. יש ללחוץ עליו כדי לשמור את הפרופיל:
 
-![Save icon](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
+![סמל השמירה](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
 
-Close the editor with the "**X**" in the top left corner. The profile summary then shows its name, its total daily basal (∑), the units and the IC and ISF values with their graphs:
+יש לסגור את העורך עם ה-"**X**" בפינה העליונה של המסך. אחר כך סיכום הפרופיל מציג את השם שלו, את סך הבזאלי היומי (∑), את היחידות ואת ערכי ה-IC וה-ISF עם הגרפים שלהם:
 
 ![Save](../images/setup-wizard/Wizard-Profile-Save.png)
 
 ```{admonition} Several defined but only one active profile
 :class: note
-You can have several profiles defined, but only one activated profile running at any given time.
+אפשר להגדיר כמה פרופילים, אבל בכל רגע רק פרופיל אחד מופעל ופועל.
 ```
 
-Press the "**▶**" (activate) button at the bottom right. The "**Activate**" screen opens. As no insulin is in use yet, it first asks you to select the insulin you are using, so that the profile switch can record it. The "**Activate**" button stays greyed out until you do:
+יש ללחוץ על הלחצן "**▶**" (הפעלה) בתחתית המסך. המסך "**הפעלה**" נפתח. מכיוון שעדיין אין אינסולין בשימוש, המסך מבקש קודם לבחור את האינסולין שבו אתם משתמשים, כדי שהחלפת הפרופיל תוכל לרשום אותו. הלחצן "**הפעלה**" נשאר באפור עד שעושים זאת:
 
-![Select the insulin first](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
+![קודם יש לבחור את האינסולין](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
 
-Press "**Select Insulin**" and choose the insulin you configured earlier. Leave the percentage at 100 % and press "**Activate**":
+יש ללחוץ על "**בחירת אינסולין**" ולבחור את האינסולין שהגדרתם קודם. יש להשאיר את האחוז על 100% וללחוץ על "**הפעלה**":
 
-![Activate](../images/setup-wizard/Wizard-Profile-Activate.png)
+![הפעלה](../images/setup-wizard/Wizard-Profile-Activate.png)
 
-A profile switch dialog appears. In this case let it stay as preset and confirm with "**OK**":
+מופיע חלון של החלפת פרופיל. במקרה הזה יש להשאיר את ההגדרות כפי שהן ולאשר עם "**אישור**":
 
 ```{admonition} Profile switch dialog
 :class: note
-You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile to suit the circumstances.
+בהמשך תלמדו איך להשתמש בחלון הכללי הזה במצבים כמו מחלה או ספורט, שבהם צריך לשנות את הפרופיל כדי להתאים אותו לנסיבות.
 ```
 
 ![Switch](../images/setup-wizard/Wizard-Profile-Switch.png)
 
-Your profile is now active. Press "**NEXT**" to go to the next screen.
+הפרופיל שלכם פעיל עכשיו. יש ללחוץ על "**הבא**" כדי לעבור למסך הבא.
 
 ## Insulin pump
 
-Now you select your insulin pump. Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
+עכשיו בוחרים את משאבת האינסולין. Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
 
-Scroll the list and select your pump. In this example we use the "**Virtual Pump**", which is useful while you are still learning and have not connected a real pump yet:
+יש לגלול ברשימה ולבחור את המשאבה שלכם. בדוגמה הזו משתמשים ב"**משאבה וירטואלית**". היא שימושית כל עוד אתם לומדים ועדיין לא חיברתם משאבה אמיתית:
 
 ![Pump](../images/setup-wizard/Wizard-Pump.png)
 
-Many pumps are supported — scroll down to find yours:
+יש תמיכה במשאבות רבות — יש לגלול למטה כדי למצוא את שלכם:
 
-![Pump more](../images/setup-wizard/Wizard-Pump-More.png)
+![משאבה - עוד](../images/setup-wizard/Wizard-Pump-More.png)
 
-When you select a real pump, **AAPS** asks for a confirmation, because it will copy the basal rates of your profile to the pump and overwrite the basal rates stored there. Press "**OK**" only if the basal rates in your **AAPS** profile are correct; otherwise press "**Cancel**" and switch to the pump later:
+כאשר בוחרים משאבה אמיתית, **AAPS** מבקש אישור, כי הוא יעתיק את הקצבים הבזאליים מהפרופיל שלכם למשאבה וידרוס את הקצבים הבזאליים ששמורים בה. יש ללחוץ על "**אישור**" רק אם הקצבים הבזאליים בפרופיל **AAPS** שלכם נכונים; אחרת יש ללחוץ על "**ביטול**" ולעבור למשאבה מאוחר יותר:
 
-![Confirmation when selecting a hardware pump](../images/setup-wizard/Wizard-Pump-Confirmation.png)
+![אישור בעת בחירת משאבה אמיתית](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
+אם המשאבה שבחרתם מתקשרת דרך Bluetooth, **AAPS** מבקש הרשאה להתחבר למכשירים בקרבת מקום אחרי שמסיימים את האשף (ראו [הרשאת Bluetooth](#setup-wizard-bluetooth-permission)).
 
-If you have already set up your profile and know how to connect your pump, feel free to connect it now. Otherwise leave it on **Virtual Pump** for the moment — you can change it anytime, or leave the Setup Wizard using the arrow in the top left corner and let **AAPS** first show you some blood glucose values.
+אם כבר הגדרתם את הפרופיל ואתם יודעים איך לחבר את המשאבה, אפשר לחבר אותה עכשיו. אחרת, יש להשאיר בינתיים **משאבה וירטואלית** — אפשר לשנות זאת בכל זמן, או לצאת מאשף ההתקנה בעזרת החץ בפינה העליונה של המסך, ולתת ל-**AAPS** להציג קודם כמה ערכי סוכר.
 
-Press "**NEXT**" to go to the next screen.
+יש ללחוץ על "**הבא**" כדי לעבור למסך הבא.
 
 ## APS algorithm
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name, the SMB feature of the algorithm is disabled until you are familiar with AAPS and have worked through the first objectives. OpenAPS SMB is newer and generally better than OpenAPS AMA anyway.
+Use the OpenAPS SMB algorithm as your APS algorithm. למרות השם, תכונת ה-SMB של האלגוריתם מושבתת עד שתכירו את AAPS ותשלימו את המשימות הראשונות. בכל מקרה, OpenAPS SMB חדש יותר ובדרך כלל טוב יותר מ-OpenAPS AMA.
 
-SMB is disabled at the start because the SMB feature reacts faster to a blood sugar increase, using a Super Micro Bolus instead of increasing the basal rate percentage. Because your profile is generally not as good in the beginning as it is after some experience, the feature is disabled at first.
+SMB מושבת בהתחלה, כי תכונת ה-SMB מגיבה מהר יותר לעלייה ברמת הסוכר, בעזרת Super Micro Bolus (מיקרו-בולוס) במקום להעלות את אחוז הקצב הבזאלי. מכיוון שבהתחלה הפרופיל בדרך כלל פחות טוב מאשר אחרי שצוברים ניסיון, התכונה מושבתת בהתחלה.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: note
-OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+OpenAPS AMA הוא האלגוריתם הבסיסי ביותר, והוא לא תומך במיקרו-בולוסים לתיקון ערכים גבוהים. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
 ```
 
-Select "**OpenAPS SMB**", then press "**Settings**" to see the details:
+יש לבחור "**OpenAPS SMB**", ואז ללחוץ על "**הגדרות**" כדי לראות את הפרטים:
 
 ![APS](../images/setup-wizard/Wizard-APS.png)
 
-The only option here is "**Use dynamic sensitivity**". Leave it off and change nothing for now — just read the text.
+האפשרות היחידה כאן היא "**שימוש ברגישות דינמית**". יש להשאיר אותה כבויה ולא לשנות דבר בינתיים — רק לקרוא את הטקסט.
 
 Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
 
-Go back and press "**NEXT**" to go to the next screen:
+יש לחזור אחורה וללחוץ על "**הבא**" כדי לעבור למסך הבא:
 
-![APS settings](../images/setup-wizard/Wizard-APS-Settings.png)
+![הגדרות APS](../images/setup-wizard/Wizard-APS-Settings.png)
 
 ## זיהוי רגישות
 
-Leave "**Sensitivity Oref1**" selected as the standard sensitivity plugin:
+יש להשאיר את "**רגישות Oref1**" מסומן כתוסף הרגישות הרגיל:
 
 ![Sensitivity](../images/setup-wizard/Wizard-Sensitivity.png)
 
-If you press "**Settings**" you can review the absorption settings; the defaults (_e.g._ a 6 h absorption cutoff) are fine for now.
+אם לוחצים על "**הגדרות**" אפשר לבדוק את הגדרות הספיגה; ערכי ברירת המחדל (_למשל_ סף הפסקת חישוב ספיגה של 6 שעות) מתאימים בינתיים.
 
-![Sensitivity settings](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
+![הגדרות רגישות](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
 
-Press "**NEXT**" to go to the next screen.
+יש ללחוץ על "**הבא**" כדי לעבור למסך הבא.
 
 ## Start Objective 1
 
-You are now entering the Objectives — the qualification for access to further **AAPS** features.
+עכשיו אתם נכנסים למשימות — התנאי לקבלת גישה לתכונות נוספות של **AAPS**.
 
-Press "**Open Objectives**":
+יש ללחוץ על "**פתיחת משימות**":
 
 ![Objectives](../images/setup-wizard/Wizard-Objectives.png)
 
 Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective. But this is the start.
 
-Press the "**Start**" button of **Objective 1**:
+יש ללחוץ על הלחצן "**התחלה**" של **משימה 1**:
 
-![Objectives list](../images/setup-wizard/Wizard-Objectives-List.png)
+![רשימת המשימות](../images/setup-wizard/Wizard-Objectives-List.png)
 
-The objective expands to show its individual checks. You can see that you already made some progress, while other items are still to be done:
+המשימה נפתחת ומציגה את הבדיקות שלה. אפשר לראות שכבר התקדמתם מעט, ושפריטים אחרים עוד צריך להשלים:
 
-![Objective started](../images/setup-wizard/Wizard-Objectives-Started.png)
+![המשימה התחילה](../images/setup-wizard/Wizard-Objectives-Started.png)
 
-Go back, then press "**FINISH**" to complete the Setup Wizard:
+יש לחזור אחורה, ואז ללחוץ על "**סיום**" כדי להשלים את אשף ההתקנה:
 
-![Finish](../images/setup-wizard/Wizard-Objectives-Finish.png)
+![סיום](../images/setup-wizard/Wizard-Objectives-Finish.png)
 
-After pressing "**FINISH**" you arrive at the main screen of **AAPS**. A "**Notification**" panel may open with information messages, for example about the profile switch you just made — press "**Dismiss**" below each message to clear it.
+אחרי לחיצה על "**סיום**" מגיעים למסך הראשי של **AAPS**. ייתכן שייפתח חלון "**הודעה**" עם הודעות מידע, למשל על החלפת הפרופיל שביצעתם עכשיו — יש ללחוץ על "**סגירה**" מתחת לכל הודעה כדי לנקות אותה.
 
-If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
+אם יצאתם בטעות מאשף ההתקנה בשלב כלשהו, ניתן פשוט להפעיל את האשף מחדש, או לשנות ידנית את [התצורה של לולאת AAPS](../SettingUpAaps/ChangeAapsConfiguration.md).
 
 (setup-wizard-bluetooth-permission)=
-## Bluetooth permission
+## הרשאת Bluetooth
 
-If you select a pump that connects over Bluetooth (for example **Omnipod Dash**), a banner reminds you that **AAPS** needs Bluetooth permission. You can press "**Dismiss**" for now — the permission is granted after you finish the Wizard:
+אם בוחרים משאבה שמתחברת דרך Bluetooth (למשל **Omnipod Dash**), באנר מזכיר ש-**AAPS** צריך הרשאת Bluetooth. אפשר ללחוץ בינתיים על "**סגירה**" — ההרשאה ניתנת אחרי סיום האשף:
 
-![Bluetooth needed](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
+![נדרש Bluetooth](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
 
-Once the Setup Wizard is finished, the **AAPS** main screen shows a "**Permissions Required**" panel. The other permissions are already granted; press "**Grant**" next to "**Bluetooth**":
+אחרי סיום אשף ההתקנה, המסך הראשי של **AAPS** מציג את החלון "**נדרשות הרשאות**". שאר ההרשאות כבר ניתנו; יש ללחוץ על "**מתן הרשאה**" ליד "**בלוטות'**":
 
-![Bluetooth Grant](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
+![מתן הרשאת Bluetooth](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
 
-Select "**Allow**" so **AAPS** can find and connect to your pump:
+יש לבחור "**Allow**" (אישור) כדי ש-**AAPS** יוכל למצוא את המשאבה ולהתחבר אליה:
 
-![Bluetooth Allow](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
+![אישור Bluetooth](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
 
 If your **AAPS** loop is now fully setup, please move on to the next section ["Completing the objectives"](../SettingUpAaps/CompletingTheObjectives.md).
