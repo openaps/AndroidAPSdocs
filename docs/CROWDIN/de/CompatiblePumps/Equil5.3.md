@@ -31,7 +31,7 @@ Once it is selected, the **Equil** card shows two buttons, **Settings** and **Op
 
 ![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
 
-**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Bevor eine Pumpe gekoppelt ist, sieht er so aus:
 
 ![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
 
