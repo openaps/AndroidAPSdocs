@@ -1,23 +1,23 @@
-# Change language and version
+# Byt språk och version
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+Dokumentationen som du läser nu finns på flera språk och gäller en viss version av **AAPS**. Du kan byta både språk och version i menyn längst ned till höger på skärmen.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+Klicka på fältet längst ned till höger på skärmen för att öppna menyn där du väljer språk och version.
 ```
 
-![Open language menu](../images/documentation_language_menu.png)
+![Öppna språkmenyn](../images/documentation_language_menu.png)
 
-## Change language
+## Byt språk
 
-In the menu, select the language you want to read the documentation in.
+Välj i menyn det språk som du vill läsa dokumentationen på.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+Du är välkommen att gå med bland översättarna och korrekturläsarna på [Crowdin](https://crowdin.com/project/androidapsdocs) och hjälpa till att översätta dokumentationen till ditt språk.
 
-## Change version
+## Byt version
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version and select the version you need.
+Den aktuella versionen visas längst ned till höger på skärmen. Om du vill byta till en annan version klickar du på den aktuella versionen och väljer den version du behöver.
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+När du byter språk och/eller version kan du få felet 404 - Sidan hittades inte, om sidan inte finns på det språket eller i den versionen. Det händer ofta när du byter version, men bör inte hända när du byter språk: sidan visas på engelska om den inte har översatts än.
 ```
