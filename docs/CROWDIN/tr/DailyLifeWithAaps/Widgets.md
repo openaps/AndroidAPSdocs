@@ -1,7 +1,7 @@
 (widgets)=
-# Home screen widgets
+# Ana ekran widget'ları
 
-**AAPS** provides widgets that you can add to your phone's home screen. A widget shows your current data without opening the app. Tap a widget to open **AAPS**.
+**AAPS**, telefonunuzun ana ekranına ekleyebileceğiniz widget'lar sunar. Bir widget, uygulamayı açmadan güncel verilerinizi gösterir. **AAPS**'i açmak için bir widget'a dokunun.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,70 +10,70 @@
 
 ---
 
-## Available widgets
+## Mevcut widget'lar
 
-Five widgets are available. They are listed under **AAPS** in the Android widget picker:
+Beş widget vardır. Android widget seçicide **AAPS** altında listelenirler:
 
-![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
+![Android widget seçicide AAPS widget'ları](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Default size | What it shows                                                                                                                                                                                                                                              |
-| --------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                   | 5 × 2        | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
-| **AAPS glucose circle**           | 2 × 2        | The BG circle of the main screen: a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading.                                                                                                                     |
-| **AAPS Small**                    | 2 × 2        | Profile name, BG with trend arrow, time since the last reading, delta, IOB and COB.                                                                                                                                                                        |
-| **AAPS BG + IOB + COB (compact)** | 4 × 1        | One line with BG and trend arrow, IOB and COB.                                                                                                                                                                                                             |
-| **AAPS BG graph**                 | 3 × 1        | The BG value with a small graph of the recent readings.                                                                                                                                                                                                    |
+| Widget                              | Varsayılan boyut | Ne gösterir                                                                                                                                                                                                                                      |
+| ----------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **AAPS widget**                     | 5 × 2            | Ana ekrandaki durum bloğu: eğilim ve delta ile KŞ, profil adının yanında simge olarak döngü modu, hedef, duyarlılık (ana ekrandaki gibi gösterilir), AİNS ve AKRB. Metinler, kesilmek yerine widget'a verdiğiniz boyuta sığacak şekilde küçülür. |
+| **AAPS glikoz dairesi**             | 2 × 2            | Ana ekrandaki KŞ dairesi: KŞ renginde bir halka, eğilim yayı, delta, KŞ değeri ve son ölçümden bu yana geçen süre.                                                                                                                               |
+| **AAPS Küçük**                      | 2 × 2            | Profil adı, eğilim oku ile KŞ, son ölçümden bu yana geçen süre, delta, AİNS ve AKRB.                                                                                                                                                             |
+| **AAPS KŞ + AİNS + AKRB (kompakt)** | 4 × 1            | KŞ ve eğilim oku, AİNS ve AKRB içeren tek bir satır.                                                                                                                                                                                             |
+| **AAPS KŞ grafiği**                 | 3 × 1            | Son ölçümlerin küçük bir grafiği ile birlikte KŞ değeri.                                                                                                                                                                                         |
 
-The **AAPS widget**, the **glucose circle** and the **Small** widget on a home screen:
+Ana ekranda **AAPS widget**, **glikoz dairesi** ve **Küçük** widget:
 
-![AAPS widget, glucose circle and Small widget on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![Ana ekranda AAPS widget, glikoz dairesi ve Küçük widget](../images/widgets/home_widgets_full_circle_small.png)
 
-The **compact** widget and the **BG graph** widget:
+**Kompakt** widget ve **KŞ grafiği** widget'ı:
 
-![Compact widget and BG graph widget on the home screen](../images/widgets/home_widgets_compact_graph.png)
+![Ana ekranda kompakt widget ve KŞ grafiği widget'ı](../images/widgets/home_widgets_compact_graph.png)
 
-BG values use the same colours as in **AAPS**: green in range, yellow above range, red below range.
-
----
-
-## Adding a widget
-
-The exact steps depend on your phone and its launcher. On most phones:
-
-1. Long-press an empty area of the home screen and select **Widgets**.
-
-   ![The widget picker](../images/widgets/widget_picker_list.png)
-
-2. Open **AAPS** in the list and tap the widget you want.
-3. Press **Add** (or drag the widget to the place you want).
-
-   ![The Add button below the selected widget](../images/widgets/widget_picker_add_button.png)
-
-The widget is placed on the home screen. Right after adding it, it is shown with handles: drag a handle to **resize** the widget, or drag the widget to move it. The glucose circle can be resized to any size.
-
-![A widget just added, with its resize handles and the settings button](../images/widgets/widget_glucose_circle_added.png)
-
-If the home screen page is full, the phone puts the widget on a new page.
+KŞ değerleri **AAPS**'teki renklerin aynısını kullanır: hedef aralıkta yeşil, aralığın üstünde sarı, aralığın altında kırmızı.
 
 ---
 
-## Widget configuration
+## Widget ekleme
 
-Tap the **pencil** button shown on the widget just after you added it. Later, long-press the widget to get the handles and the pencil back.
+Tam adımlar telefonunuza ve başlatıcı uygulamanıza (launcher) bağlıdır. Çoğu telefonda:
 
-The **Widget configuration** dialog has two settings:
+1. Ana ekranda boş bir alana uzun basın ve **Widget'lar** seçeneğini seçin.
 
-- **Configure opacity** — how opaque the background of the widget is. A low value lets the wallpaper show through.
-- **Use black color** — use a black background instead of the default one.
+   ![Widget seçici](../images/widgets/widget_picker_list.png)
 
-![Widget configuration](../images/widgets/widget_configuration.png)
+2. Listede **AAPS**'i açın ve istediğiniz widget'a dokunun.
+3. **Ekle** düğmesine basın (veya widget'ı istediğiniz yere sürükleyin).
 
-Each widget has its own configuration.
+   ![Seçilen widget'ın altındaki Ekle düğmesi](../images/widgets/widget_picker_add_button.png)
+
+Widget ana ekrana yerleştirilir. Ekledikten hemen sonra widget tutamaçlarla gösterilir: widget'ı **yeniden boyutlandırmak** için bir tutamacı sürükleyin veya taşımak için widget'ı sürükleyin. Glikoz dairesi herhangi bir boyuta getirilebilir.
+
+![Yeni eklenmiş bir widget, yeniden boyutlandırma tutamaçları ve ayarlar düğmesi ile](../images/widgets/widget_glucose_circle_added.png)
+
+Ana ekran sayfası doluysa telefon widget'ı yeni bir sayfaya yerleştirir.
 
 ---
 
-## Good to know
+## Widget yapılandırması
 
-- A widget only **displays** data. You cannot bolus or change anything from a widget.
-- The widget is refreshed by **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
-- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Raise the opacity in the widget configuration if the color is hard to see. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions).
+Widget'ı ekledikten hemen sonra üzerinde görünen **kalem** düğmesine dokunun. Daha sonra tutamaçları ve kalemi tekrar görmek için widget'a uzun basın.
+
+**Widget yapılandırması** iletişim kutusunda iki ayar vardır:
+
+- **Şeffaflığı yapılandır**: widget arka planının ne kadar opak (saydam olmayan) olduğu. Düşük bir değer duvar kağıdının arkadan görünmesini sağlar.
+- **Siyah renk kullanın**: varsayılan arka plan yerine siyah bir arka plan kullanır.
+
+![Widget yapılandırması](../images/widgets/widget_configuration.png)
+
+Her widget'ın kendi yapılandırması vardır.
+
+---
+
+## Bilmekte fayda var
+
+- Bir widget yalnızca verileri **gösterir**. Bir widget'tan bolus yapamaz veya herhangi bir şeyi değiştiremezsiniz.
+- Widget **AAPS** tarafından yenilenir. **AAPS** çalışmıyorsa veya Android onu arka planda kısıtlıyorsa, widget eski verileri gösterebilir. Son ölçümden bu yana geçen süreyi kontrol edin ve **AAPS**'in [pil optimizasyonu](#SetupWizard-StoragePermission) dışında tutulduğundan emin olun.
+- **AAPSClient**, **AAPSClient2** ve **AAPSClient3** ile widget arka planı sarı, mavi veya yeşildir. Böylece uygulamaları birbirinden ayırt edebilirsiniz. Renk zor görünüyorsa widget yapılandırmasında opaklığı artırın. Bkz. [AAPSClient, AAPSClient2 ve AAPSClient3 hakkında](#remotecontrol-aapsclient-versions).
