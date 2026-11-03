@@ -1,131 +1,131 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump.
+이 안내는 Equil 인슐린 펌프를 구성하는 방법입니다.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## AAPS에서 사용할 수 있는 펌프 기능
 
-* Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights, and **Prime/Fill** and **Pump battery change** are not offered. Filling, priming and changing the battery are done in the pump wizards.
-* While the pump is suspended or stopped, **AAPS** records a 0 U/h temporary basal, so no basal insulin is counted in IOB.
-* DST and timezone changes must be handled manually.
+* 추가 통신 장치 없이 휴대폰의 자체 블루투스로 **AAPS**와 통신하는 튜브 없는 패치 펌프입니다.
+* **AAPS**는 Equil을 200 U 레저버가 있는 패치 펌프로 취급합니다: 메인 화면에 패치 펌프 상태 표시등이 나타나고, **프라임/채우기**와 **펌프 배터리 교체**는 제공되지 않습니다. 채우기, 프라임, 배터리 교체는 펌프 마법사에서 합니다.
+* 펌프가 일시 중지되거나 멈춘 동안 **AAPS**는 0 U/h 임시 기저를 기록합니다. 그래서 기저 인슐린이 IOB에 포함되지 않습니다.
+* 서머타임(DST)과 시간대 변경은 수동으로 처리해야 합니다.
 
 ## 하드웨어와 소프트웨어의 필요 요건
-* **Compatible Equil hardware**
+* **호환되는 Equil 하드웨어**
 
-  Currently Equil 5.3 and 5.4 are supported.
+  현재 Equil 5.3과 5.4를 지원합니다.
 
-* **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
+* [APK 빌드](../SettingUpAaps/BuildingAaps.md) 안내에 따라 빌드하고 설치한 **AAPS**
 
 ## 설정
 
-### Select Equil pump
+### Equil 펌프 선택
 
-Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
+왼쪽 위의 **메뉴**(☰)를 열고 **[구성](#Config-Builder-pump)**을 선택한 다음, **펌프**에서 **Equil**을 선택하십시오.
 
-Once it is selected, the **Equil** card shows two buttons, **Settings** and **Open plugin**:
+선택하면 **Equil** 카드에 **설정**과 **플러그인 열기** 두 버튼이 표시됩니다:
 
-![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
+![구성 > 펌프에서 선택된 Equil 플러그인](../images/v4/Pumps/equil_enabled.png)
 
-**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+**플러그인 열기**(또는 **관리** → **펌프**)는 Equil 펌프 화면을 엽니다. 펌프를 페어링하기 전에는 다음과 같이 보입니다:
 
-![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
+![페어링 전의 Equil 펌프 화면](../images/v4/Pumps/equil_pump_screen.png)
 
-### Settings
+### 설정
 
-Open the Equil settings with **Settings** on the **Equil** card, or with the gear icon in the top-right corner of the pump screen.
+**Equil** 카드의 **설정**이나 펌프 화면 오른쪽 위의 톱니바퀴 아이콘으로 Equil 설정을 여십시오.
 
-![Equil driver settings](../images/v4/Pumps/equil_settings.png)
+![Equil 드라이버 설정](../images/v4/Pumps/equil_settings.png)
 
-* **Low battery alarm**: warns you when the pump battery is low.
-* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
-* **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
-* **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
+* **배터리 부족 알람**: 펌프 배터리가 부족하면 경고합니다.
+* **인슐린 부족 알람**: 레저버의 인슐린이 부족하면 경고합니다.
+* **알림음**: 펌프가 알리는 방식입니다: **무음**, **진동만**, **소리만** 또는 **진동과 소리**.
+* **볼러스 속도**: 볼러스를 주입하는 속도입니다: **1.5 U/min (표준)**, **3 U/min**, **6 U/min** 또는 **12 U/min**. 볼러스가 빠를수록 막힘 알람이 더 자주 날 수 있습니다.
 
-![The Bolus speed choices in the Equil settings](../images/v4/Pumps/equil_bolus_speed.png)
+![Equil 설정의 볼러스 속도 선택 항목](../images/v4/Pumps/equil_bolus_speed.png)
 
 ```{admonition} Max basal and max bolus on the patch
 :class: note
-The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [setting](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
+패치 자체는 **AAPS**가 패치에 설정한 최대값보다 높은 기저 주입량을 거부합니다. **AAPS**는 **최대 기저** [설정](../SettingUpAaps/Preferences.md)과 **프로파일**의 가장 높은 시간당 기저 주입량 중 더 높은 값을 사용합니다. 그래서 패치는 항상 프로파일과 루프가 요청하는 임시 기저를 받아들입니다. **AAPS**는 최대 허용 볼러스도 패치로 보냅니다.
 
-When you change your **max basal** or **max bolus**, **AAPS** sends the new values to the patch automatically. They are also sent with every profile switch. There is nothing to set on the patch itself.
+**최대 기저**나 **최대 볼러스**를 바꾸면 **AAPS**가 새 값을 자동으로 패치로 보냅니다. 프로파일 전환 때마다 이 값도 함께 보냅니다. 패치 자체에서 설정할 것은 없습니다.
 ```
 
-### Pair the pump
+### 펌프 페어링
 
-On the pump screen, press **Pair**. A wizard guides you through each step. The row of dots at the top shows how far along you are.
+펌프 화면에서 **페어링**을 누르십시오. 마법사가 각 단계를 안내합니다. 위쪽의 점들은 어디까지 진행했는지 보여 줍니다.
 
-If Android asks whether **AAPS** may find and connect to nearby devices, press **Allow**. **AAPS** needs this to find the pump.
+**AAPS**가 주변 기기를 찾고 연결해도 되는지 Android가 물으면 **Allow**(허용)를 누르십시오. **AAPS**가 펌프를 찾으려면 이 권한이 필요합니다.
 
-![Android asking for permission to find nearby devices](../images/Equil/activate1.png)
+![주변 기기 찾기 권한을 요청하는 Android 화면](../images/Equil/activate1.png)
 
-The wizard has these steps. Press **Next** to move on, or **Cancel** to leave the wizard.
+마법사는 다음 단계로 이루어집니다. 다음 단계로 가려면 **다음**을, 마법사를 나가려면 **취소**를 누르십시오.
 
-1. **Profile required**: only shown if you have never activated a **Profile** in **AAPS**. Select the profile to use and press **Activate profile**.
-1. **Assemble pump**: put together the pump, the filled reservoir and the charged battery.
+1. **프로파일 필요**: **AAPS**에서 **프로파일**을 한 번도 활성화한 적이 없을 때만 표시됩니다. 사용할 프로파일을 선택하고 **프로파일 활성화**를 누르십시오.
+1. **펌프 조립**: 펌프, 채운 레저버, 충전한 배터리를 조립합니다.
 
-   ![Assemble pump step](../images/Equil/activate2.png)
+   ![펌프 조립 단계](../images/Equil/activate2.png)
 
-1. **Find Pump**: **AAPS** scans for nearby Equil pumps. Select your pump from the list.
+1. **펌프 찾기**: **AAPS**가 주변의 Equil 펌프를 검색합니다. 목록에서 펌프를 선택하십시오.
 
-   ![Find Pump step with an Equil pump in the list](../images/Equil/find_pump.png)
-1. **Pair device**: you can enter a pairing password in **Set pair password**. It must be 4 characters long, chosen from `ABCDEF0123456789`. Press **Pair**.
+   ![목록에 Equil 펌프가 있는 펌프 찾기 단계](../images/Equil/find_pump.png)
+1. **기기 페어링**: **페어링 비밀번호 설정**에서 페어링 비밀번호를 입력할 수 있습니다. `ABCDEF0123456789` 중에서 고른 4자리여야 합니다. **페어링**을 누르십시오.
 
-   ![Pair device step with the pairing password](../images/Equil/activate3.png)
+   ![페어링 비밀번호가 있는 기기 페어링 단계](../images/Equil/activate3.png)
 
-1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
-1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+1. **인슐린 선택**: 인슐린이 두 개 이상 설정되어 있을 때만 표시됩니다. 레저버에 든 인슐린을 선택하십시오.
+1. **프라임 / 채우기**: 펌프가 베이스 플레이트에 **없어야** 합니다. **프라임/채우기**를 누르고 바늘 끝에 인슐린 방울이 맺힐 때까지 레저버를 프라임하십시오. **다음**을 누르십시오.
 
-   ![Prime / Fill step](../images/Equil/prime_fill.png)
-1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
-1. **Attach pump**: attach the pump to its base plate.
+   ![프라임 / 채우기 단계](../images/Equil/prime_fill.png)
+1. **위치 순환**: 위치 순환 설정에서 **펌프 위치 순환 관리**가 켜져 있을 때만 표시됩니다. 펌프를 붙일 곳을 누르거나 **건너뛰기**를 누르십시오.
+1. **펌프 부착**: 펌프를 베이스 플레이트에 부착합니다.
 
-   ![Attach pump step](../images/Equil/attach_pump.png)
-1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+   ![펌프 부착 단계](../images/Equil/attach_pump.png)
+1. **캐뉼라 프라임**: 펌프가 베이스 플레이트에 부착되면 **공기 제거**를 눌러 캐뉼라에서 공기를 빼십시오. **다음**을 누르십시오.
 
-   ![Prime cannula step with the Purge air button](../images/Equil/prime_cannula.png)
+   ![공기 제거 버튼이 있는 캐뉼라 프라임 단계](../images/Equil/prime_cannula.png)
 
-1. **Confirm**: put the pump on your body and press **Finish**.
+1. **확인**: 펌프를 몸에 붙이고 **완료**를 누르십시오.
 
-   ![Confirm step with the Finish button](../images/Equil/confirm.png)
+   ![완료 버튼이 있는 확인 단계](../images/Equil/confirm.png)
 
 ```{warning}
-If you set your own pairing password (recommended for your safety), store it somewhere safe. The password is saved in the pump. The pump asks for it at every new pairing until you unpair it properly in **AAPS**. Until then, the pump also cannot be used with the original handheld controller (PDA).
+직접 페어링 비밀번호를 설정했다면(안전을 위해 권장) 안전한 곳에 보관하십시오. 비밀번호는 펌프에 저장됩니다. **AAPS**에서 펌프를 올바르게 페어링 해제할 때까지, 펌프는 새로 페어링할 때마다 이 비밀번호를 묻습니다. 그때까지는 원래의 휴대용 컨트롤러(PDA)로도 펌프를 사용할 수 없습니다.
 ```
 
-### Pump screen after pairing
+### 페어링 후의 펌프 화면
 
-Once the pump is paired, the pump screen shows these buttons:
+펌프가 페어링되면 펌프 화면에 다음 버튼이 표시됩니다:
 
-* **Refresh**: reads the state and the history of the pump now.
-* **Suspend** / **Resume delivery**: stop or restart insulin delivery.
-* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir (and, if needed, a new battery), priming and attaching it again. The first step asks *Will you also put on a new infusion set (base plate and cannula)?*
-  * **Yes, new infusion set**: you choose the site, the cannula is primed, and **AAPS** records an insulin change and a cannula change.
-  * **No, only reservoir or battery**: the cannula is not primed and **AAPS** records only an insulin change.
+* **새로고침**: 지금 펌프의 상태와 이력을 읽습니다.
+* **일시 중지** / **주입 재개**: 인슐린 주입을 멈추거나 다시 시작합니다.
+* **레저버 교체**: 펌프 분리, 새 레저버 장착(필요하면 새 배터리도), 프라임, 다시 부착하는 과정을 안내합니다. 첫 단계에서 *새 주입 세트(베이스 플레이트와 캐뉼라)도 부착하시겠습니까?*라고 묻습니다.
+  * **예, 새 주입 세트**: 위치를 선택하고 캐뉼라를 프라임하며, **AAPS**가 인슐린 교체와 캐뉼라 교체를 기록합니다.
+  * **아니요, 레저버 또는 배터리만**: 캐뉼라는 프라임하지 않으며 **AAPS**는 인슐린 교체만 기록합니다.
 
-  After a reservoir change the battery level shows **-** until **AAPS** reads it again from the pump.
+  레저버 교체 후에는 **AAPS**가 펌프에서 배터리 잔량을 다시 읽을 때까지 배터리 잔량이 **-**로 표시됩니다.
 
-  ![The first step of Change reservoir asks about a new infusion set](../images/Equil/change_reservoir_question.png)
+  ![새 주입 세트에 대해 묻는 레저버 교체의 첫 단계](../images/Equil/change_reservoir_question.png)
 
-* **History**: shows the events recorded by the pump.
-* **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
+* **이력**: 펌프가 기록한 이벤트를 보여 줍니다.
+* **기기 페어링 해제**: 펌프를 분리하고 **AAPS**에서 페어링을 해제하는 과정을 안내합니다. 이 과정은 인슐린 주입을 멈추고, 펌프 플런저를 맨 아래로 되돌리고, 페어링을 삭제합니다.
 
 ### Alarms
 
-* The low insulin alarm sounds once at each level (10 U, 5 U and 2 U) and when the reservoir is empty. The low battery alarm sounds once at 10% and once at 5%. Each level alarms only once until the next reservoir change.
-* Pump alarms and stops are also recorded as announcements in the treatments, at the time the pump logged them, so you can see later when and why the pump stopped.
-* If the reservoir runs empty during a bolus, **AAPS** records only the insulin given until then and tells you both amounts.
+* 인슐린 부족 알람은 각 단계(10 U, 5 U, 2 U)마다 한 번, 그리고 레저버가 비었을 때 울립니다. 배터리 부족 알람은 10%에서 한 번, 5%에서 한 번 울립니다. 각 단계의 알람은 다음 레저버 교체 전까지 한 번만 울립니다.
+* 펌프 알람과 정지는 펌프가 기록한 시각으로 처치에 공지로도 기록됩니다. 그래서 나중에 펌프가 언제, 왜 멈췄는지 볼 수 있습니다.
+* 볼러스 중에 레저버가 비면 **AAPS**는 그때까지 주입된 인슐린만 기록하고 두 양을 모두 알려 줍니다.
 
-## Where to get help
+## 도움을 받을 수 있는 곳
 
-Development of the Equil driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Equil 드라이버는 커뮤니티가 **자원봉사**로 개발합니다. 도움을 요청하기 전에:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. 기능이 어떻게 작동해야 하는지 확인하려면 이 문서의 관련 부분을 **읽으십시오**.
+2. [Discord](https://discord.gg/4fQUWHZ4Mw)의 *#AAPS* 채널이나 다른 [커뮤니티 채널](../GettingHelp/WhereCanIGetHelp.md)에서 **질문하십시오**.
+3. [기존 이슈](https://github.com/nightscout/AndroidAPS/issues)를 검색하여 **버그를 보고하십시오**. 목록에 없으면 [새 이슈](https://github.com/nightscout/AndroidAPS/issues)를 열고 [로그 파일](../GettingHelp/AccessingLogFiles.md)을 첨부하십시오.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+도움을 요청할 때는 휴대폰 제조사와 모델, Android 버전, **AAPS** 버전, 그리고 문제를 쉬운 말로 설명한 내용(무엇이 바뀌었는지, 마지막으로 정상 작동한 때가 언제인지)을 포함하십시오.
