@@ -21,7 +21,7 @@ Jako vodítko můžete použít nástroj [Autotune](https://autotuneweb.azureweb
 :class: note
 **Profily** se u jednotlivých lidí velmi liší.
 
-U bazálních dávek (BR), citlivosti na inzulín (ISF) a inzulínosacharidových poměrů (IC nebo ICR) se absolutní hodnoty i trendy potřeby inzulínu u každého člověka velmi liší. Závisí na vaší biologii, pohlaví, věku, kondici atd. a také na krátkodobých faktorech, jako je nemoc nebo nedávný pohyb. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+U bazálních dávek (BR), citlivosti na inzulín (ISF) a inzulínosacharidových poměrů (IC nebo ICR) se absolutní hodnoty i trendy potřeby inzulínu u každého člověka velmi liší. Závisí na vaší biologii, pohlaví, věku, kondici atd. a také na krátkodobých faktorech, jako je nemoc nebo nedávný pohyb. Další rady k tomu najdete ve výborné knize [„Bright Spots and Landmines“](https://diatribe.org/bright-spots-and-landmines/) od Adama Browna.
 
 ```
 
@@ -91,7 +91,7 @@ Naopak příliš nízký bazál může vést k vysokým glykémiím a k tomu, ž
 
 ![Bazální dávky](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
+Správné bazální dávky se nastavují metodou pokusu a omylu a mělo by se to dělat po dohodě s vaším diabetologickým týmem.
 
 Existují metody testování bazálu, které obvykle spočívají ve sledování bazálů a potřeby inzulínu během <u>přerušovaného</u> hladovění v průběhu 24 hodin. I když musíte bazály otestovat pro celý den, nedoporučujeme hladovět 24 hodin v kuse. Tělo totiž spouští mechanismy, například hormony, které to kompenzují. Doporučený způsob je hladovět ve 3 různých dnech, vždy po dobu 8 hodin.
 
@@ -131,17 +131,17 @@ Faktor citlivosti na inzulín (někdy nazývaný korekční faktor) říká, o k
 
 **V jednotkách mmol/l:** Pokud máte **ISF** 1,5, každá jednotka inzulínu sníží vaši glykémii přibližně o 1,5 mmol/l (například z 8 mmol/l na 6,5 mmol/l).
 
-Z těchto příkladů vidíte, že čím _menší_ je hodnota **ISF**, tím jste na inzulín méně citliví. Pokud tedy snížíte ISF ze 40 na 35 (mg/dl) nebo z 1,5 na 1,3 (mmol/l), často se tomu říká zesílení **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+Z těchto příkladů vidíte, že čím _menší_ je hodnota **ISF**, tím jste na inzulín méně citliví. Pokud tedy snížíte ISF ze 40 na 35 (mg/dl) nebo z 1,5 na 1,3 (mmol/l), často se tomu říká zesílení **ISF**. Naopak zvýšení hodnoty **ISF** ze 40 na 45 (mg/dl) nebo z 1,5 na 1,8 (mmol/l) vaši **ISF** oslabuje.
 
 ### Dopad
 
-A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. To vede k agresivnější / silnější korekci smyčky s vydáním **více inzulínu**. Pokud je vaše **ISF** příliš silná (malá hodnota), může to vést k nízké **glykémii**.
+**Nižší / silnější ISF** (např. 40 místo 50) znamená, že inzulín sníží vaši **glykémii** na jednotku méně. To vede k agresivnější / silnější korekci smyčky s vydáním **více inzulínu**. Pokud je vaše **ISF** příliš silná (malá hodnota), může to vést k nízké **glykémii**.
 
-A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. To vede k méně agresivní / slabší korekci smyčky s vydáním **méně inzulínu**. Pokud je vaše **ISF** příliš slabá (velká hodnota), může to vést k vysoké **glykémii**.
+**Vyšší / slabší ISF** (např. 45 místo 35) znamená, že inzulín sníží vaši **glykémii** na jednotku více. To vede k méně agresivní / slabší korekci smyčky s vydáním **méně inzulínu**. Pokud je vaše **ISF** příliš slabá (velká hodnota), může to vést k vysoké **glykémii**.
 
-**Example:**
-* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
-* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
+**Příklad:**
+* **Glykémie** je 190 mg/dl (10,5 mmol/l) a cíl je 100 mg/dl (5,6 mmol/l).
+* Chcete tedy korekci `190 - 100 = 90 mg/dL` nebo `10.5 - 5.6 = 4.9 mmol/L`
 * Pokud `ISF = 30` -> `90 / 30 = 3` nebo `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 jednotky inzulínu
 * Pokud `ISF = 45` -> `90 / 45 = 2` nebo `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 jednotky inzulínu
 
@@ -193,7 +193,7 @@ Je běžné mít v různou denní dobu různý **ICR** kvůli hladinám hormonů
 > 
 > Při použití **ICR** je množství inzulínu pevné a množství sacharidů se mění. („Kolik g sacharidů lze pokrýt jednou jednotkou inzulínu?“)
 > 
-> Example:
+> Příklad:
 > 
 > Faktor výměnné jednotky (BU = 12 g sacharidů): 2,4 U/BU -> Když sníte jednu výměnnou jednotku, potřebujete 2,4 jednotky inzulínu.
 > 
@@ -201,7 +201,7 @@ Je běžné mít v různou denní dobu různý **ICR** kvůli hladinám hormonů
 > 
 > Faktor BU 2,4 U / 12 g   ===>   IC = 12 g / 2,4 U = 5,0 g/U
 > 
-> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Převodní tabulky najdete online, např. [zde](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Dopad
 
@@ -300,7 +300,7 @@ Pomocník s profilem nabízí datové sady dětských pacientů do 18 let ze dvo
 4. Přepněte na záložku **Profil 2**.
 5. Klepněte na **Typ profilu** a vyberte „Výchozí profil DPV“.
 6. Upravte Výchozí profil DPV (připravený z dat jiné nemocnice) zadáním věku dítěte, CDD celkem a procenta bazálu. Datová sada DPV obsahuje pouze **bazální dávky**, proto se u tohoto profilu I:C a ISF zobrazují jako nula.
-7. Open the **Comparison** tab. Zobrazí se porovnání obou upravených profilů (viz snímek obrazovky níže).
+7. Otevřete kartu **Porovnání**. Zobrazí se porovnání obou upravených profilů (viz snímek obrazovky níže).
 8. Pokud chcete začít ladit svůj profil podle jednoho z těchto návrhů, použijte tlačítko **Klonovat** pod porovnáním.
 
 ![Pomocník profilu pro děti 2](../images/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ Pomocí [Pomocníka s profilem](#aaps-screens-profile-helper) (menu ☰ → **Po
 4. Přepněte na záložku **Profil 2**.
 5. V poli **Typ profilu** vyberte „Přepnutí profilu“, abyste mohli vybírat z historie všech svých **Přepnutí profilu**.
 6. Vyberte **Přepnutí profilu**, se kterým ho chcete porovnat.
-7. Open the **Comparison** tab. Zobrazí se porovnání obou profilů (viz snímek obrazovky níže).
+7. Otevřete kartu **Porovnání**. Zobrazí se porovnání obou profilů (viz snímek obrazovky níže).
 
 ![Pomocník s profilem 2](../images/ProfileHelper2.png)
