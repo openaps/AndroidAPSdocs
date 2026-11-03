@@ -8,7 +8,7 @@ Aceasta este o operațiune opțională, avansată. Funcționează doar dacă con
 
 Folosiți această opțiune doar atunci când un dezvoltator vă cere să testați o anumită modificare (vă dă unul sau mai multe chei de verificare de modificare) înainte ca ea să apară într-o versiune lansată.
 
-## Before you start
+## Înainte de a începe
 
 - [Sincronizați furca](#Update-to-new-version-update-your-repo): acest flux de lucru construiește starea curentă a ramurii dumneavoastră, nu o versiune pe care o alegeți dintr-o listă.
 - Google Drive trebuie să fie autorizat ([Pasul 3](../SettingUpAaps/BrowserBuildGoogleDrive.md)): aplicația construită este salvată acolo, ca la o construire normală.
