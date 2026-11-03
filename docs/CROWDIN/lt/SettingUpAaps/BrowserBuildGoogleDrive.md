@@ -1,77 +1,77 @@
 (aaps-ci-google-drive-auth)=
 
-# Browser build – Step 3: Authorize Google Drive
+# Kūrimas naršyklėje – 3 žingsnis: Suteikite prieigą prie Google Drive
 
 ```{note}
-This is **Step 3** of the [Browser build](BrowserBuild.md). First complete [Step 2 – Create your signing keystore](BrowserBuildKeystore.md).
+Tai puslapio [Kūrimas naršyklėje](BrowserBuild.md) **3 žingsnis**. Pirmiausia užbaikite šį žingsnį: [2 žingsnis – Sukurkite pasirašymo raktų saugyklą](BrowserBuildKeystore.md).
 ```
 
 ```{warning}
-No matter which of the prior sets of instructions you followed (Option 1 or Option 2), you MUST add the Google Drive authorization to successfully use the Browser Build.
+Nesvarbu, kurias ankstesnes instrukcijas vykdėte (1 variantą ar 2 variantą), kad kūrimas naršyklėje veiktų, PRIVALOTE pridėti Google Drive prieigos leidimą.
 ```
 
-Note: If you already followed this part in the video, you can now skip to [Step 4 – Build the APK](BrowserBuildAPK.md).
+Pastaba: jei šią dalį jau atlikote pagal vaizdo įrašą, dabar galite pereiti prie kito žingsnio: [4 žingsnis – Sukurkite APK](BrowserBuildAPK.md).
 
 ```{warning}
-If the Google authorization does not start or the preparation page fails, close the preparation page, open `aaps-ci-preparation.html` again the same way as in Step 2, and start this step again. See [troubleshooting](#aaps-ci-preparation-web).
+Jei Google autorizacija neprasideda arba paruošimo puslapis neveikia, uždarykite paruošimo puslapį, vėl atidarykite `aaps-ci-preparation.html` taip pat, kaip 2 žingsnyje, ir pradėkite šį žingsnį iš naujo. Žr. skyrių [Trikčių šalinimas](#aaps-ci-preparation-web).
 ```
 
-Return to the preparation page tab.
+Grįžkite į paruošimo puslapio skirtuką.
 
-Scroll down to the Google Drive Auth section and tap Start Auth.
+Slinkite žemyn iki skyriaus „Google Drive Auth“ ir spauskite „Start Auth“.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep44.png)
 
-Select your Google account.
+Pasirinkite savo Google paskyrą.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH1.png)
 
-Scroll down and accept the access. The web page needs it to obtain the Google Drive authentication key.
+Slinkite žemyn ir leiskite prieigą. Jos reikia tinklalapiui, kad jis gautų Google Drive autentifikavimo raktą.
 
-Tap Continue.
+Spauskite „Continue“.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH2.png)
 
-The `GDRIVE_OAUTH2` field will populate, tap the top Copy button.
+Laukas `GDRIVE_OAUTH2` bus užpildytas; spauskite viršutinį mygtuką „Copy“.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH3.png)
 
-Switch back to the GitHub tab.
+Grįžkite į GitHub skirtuką.
 
-Scroll down to Repository secrets and tap New repository secret.
+Slinkite žemyn iki „Repository secrets“ ir spauskite „New repository secret“.
 
-If you followed Option 1 you should see this:
+Jei vykdėte 1 variantą, turėtumėte matyti štai ką:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4.png)
 
-If you followed Option 2 there will be more keys:
+Jei vykdėte 2 variantą, raktų bus daugiau:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4b.png)
 
-In the Name field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+Lauke „Name“ įklijuokite ką tik nukopijuotą tekstą. Kad atsirastų įklijavimo meniu, palaikykite pirštą ant teksto lauko.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH5.png)
 
-Switch to the preparation page tab.
+Pereikite į paruošimo puslapio skirtuką.
 
-Tap the second Copy button.
+Spauskite antrąjį mygtuką „Copy“.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH6.png)
 
-Switch back to the GitHub tab.
+Grįžkite į GitHub skirtuką.
 
-1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+1. Lauke „Secret“ įklijuokite ką tik nukopijuotą tekstą. Kad atsirastų įklijavimo meniu, palaikykite pirštą ant teksto lauko.
 
-2. Tap Add secret.
+2. Spauskite „Add secret“.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
 
-You should have either two (option 1) or five (option 2) secrets entries now.
+Dabar turėtumėte turėti dvi (1 variantas) arba penkias (2 variantas) slaptąsias reikšmes (secrets).
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH8.png)
 
-GitHub will now be able to store the AAPS apk file in your Google Drive, once built.
+Kai APK bus sukurtas, GitHub galės išsaugoti AAPS apk failą jūsų Google Drive.
 
 ----
 
-**Next: [Step 4 – Build the APK](BrowserBuildAPK.md) →**
+**Toliau: [4 žingsnis – Sukurkite APK](BrowserBuildAPK.md) →**
