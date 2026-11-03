@@ -4,7 +4,7 @@
 
 ## בנייה עצמית במקום הורדה
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. בנייה עצמית של היישום לשימוש אישי הינה חוקית אך אסור לתת את היישום לאחרים!**
+**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. בנייה עצמית של האפליקציה לשימוש אישי הינה חוקית אך אסור לתת את האפליקציה לאחרים!**
 
 See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
@@ -16,7 +16,7 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 | ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
 | [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | up to Meerkat                                          | 8.2    | 17  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+The "preferred version" is packaged with the appropriate JVM version. הגרסה המועדפת היא גם הגרסה המינימלית שניתן להשתמש בה לבניית **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. ראו את הדף [פתרון תקלות ב-Android Studio](#incompatible-gradle-jvm) לעזרה בפתרון בעיות אלה. If your current Android Studio version is not listed in the table, you must update it first.
 
 The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
 
@@ -59,7 +59,7 @@ The Gradle version is linked to the source code, you will always get the correct
 
 ## Help and support during 3.2.0.4 building process
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html) section, please consult that first.
+אם אתם נתקלים בקשיים בבניית אפליקציית **AAPS**, קיים סעיף ייעודי של [**פתרון תקלות ב-Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html). עיינו בו תחילה.
 
 If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
@@ -125,7 +125,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 * Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
 
   ```{note}
-  The files that were updated may vary! This is not an indication of a problem.
+  The files that were updated may vary! זה לא מעיד על בעיה.
   ```
 
 
@@ -153,7 +153,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Open Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-- In **Gradle JDK** field (1), check if the appropriate version: **jbr-17** is selected. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
+- בשדה **Gradle JDK** (1), יש לבדוק שהגרסה המתאימה, **jbr-17**, נבחרה. אם לא, יש ללחוץ על השדה ולבדוק אם היא כבר זמינה ברשימה. אם היא לא ברשימה (בצילום המסך למטה מוצג מחשב שבו רק **jbr-21** זמינה), יש לבחור **Download JDK...** (2).
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
@@ -199,13 +199,13 @@ Your sourcecode is now the current released version, and all prerequisites have 
 You need to transfer the apk to your phone so you can install it.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+אם השלמתם את הבנייה עם אותו keystore קיים ב-Android Studio, אין צורך להסיר את האפליקציה הקיימת בטלפון שלכם. When you install the apk, follow the prompts to install updates.
+במקרים אחרים, כגון יצירת keystore חדש ב-Android Studio עבור ה-apk החתום שלכם, תצטרכו למחוק את האפליקציה הישנה לפני התקנת ה-apk. **Make sure to export your settings!**
 ```
 
 See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 ### Check AAPS version 3.2.0.4 on phone
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+לאחר התקנת ה-apk החדש, ניתן לבדוק את גרסת AAPS בטלפון: יש ללחוץ על תפריט שלוש הנקודות בחלק העליון של המסך ולאחר מכן על "אודות". You should see the current version.
 
