@@ -1,17 +1,17 @@
 (aaps-ci-option1)=
 
-# Option 1 – Generate a new keystore
+# Opzione 1 – Genera un nuovo keystore
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Controlla di aver letto la [scelta tra Opzione 1 e Opzione 2](#aaps-ci-preparation).
 ```
 
-Option 1 generates a brand-new signing keystore for you. It is suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+L'Opzione 1 genera per te un keystore di firma completamente nuovo. It is suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
 
-## Choose your device
+## Scegli il tuo dispositivo
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Fai la build da un **telefono Android**? Usa invece [AAPS Builder](BrowserBuildAapsBuilder.md): non serve il file di preparazione.
 ```
 
 Follow the page that matches the device you are building from:
