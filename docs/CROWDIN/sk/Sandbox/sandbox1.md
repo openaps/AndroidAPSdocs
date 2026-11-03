@@ -16,7 +16,7 @@ Na ceste je nebezpečenstvo.
 
 Test pre nastavenie
 
-"The number 42 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
+"Číslo 42 je v knihe Stopárov sprievodca galaxiou od Douglasa Adamsa „Odpoveď na základnú otázku života, vesmíru a vôbec“, ktorú počas 7,5 milióna rokov vypočítal obrovský superpočítač Deep Thought." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
 Toto je interný testovací súbor (sandbox) pre tím dokumentácie na testovanie
 
@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Štítok uprostred [ničoho](#sandbox1-in-the-middle-of-nowhere) Toto je naopak štítok k [](#sandbox1-this-is-another-test) a mal by zobraziť svoj názov
 
-Links with anchor:
+Odkazy s kotvou:
 - [ako dlho to bude trvať?](#preparing-how-long-will-it-take)
 - [Nastavenia NSClient v Nastaveniach](#Preferences-nsclient).
 - [predikčné čiary v PREHĽADE AAPS](#aaps-screens-prediction-lines) na nadpis 4. úrovne
