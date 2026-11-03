@@ -1,7 +1,7 @@
 (global-search)=
-# Global search
+# 전체 검색
 
-**AAPS** v4 has a **global search** box at the top of the main screen. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
+**AAPS** v4에는 메인 화면 위쪽에 **전체 검색** 창이 있습니다. 단어를 입력하면 앱 전체 — 플러그인, 대화 상자, 설정 화면, 개별 설정 — 를 한 번에 검색하고, 온라인 상태이면 **AndroidAPS 문서**도 검색합니다. 설정이나 화면이 어디에 있는지 기억하지 않아도 바로 이동할 수 있는 가장 빠른 방법입니다.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,85 +10,85 @@
 
 ---
 
-## Opening search
+## 검색 열기
 
-Tap the **🔍 Search** field at the top of the **Overview** (next to the ☰ menu). Start typing and results appear as you type (after a short pause), grouped by category:
+**개요** 위쪽(☰ 메뉴 옆)의 **🔍 검색** 필드를 누르십시오. 입력을 시작하면 입력하는 동안(잠시 멈춘 후) 결과가 범주별로 묶여 나타납니다:
 
-![Global search results, grouped by category](../images/v4/Search/search_results.png)
+![범주별로 묶인 전체 검색 결과](../images/v4/Search/search_results.png)
 
-Clear the box with the **✕**, or close search with the device **Back** button.
-
----
-
-## Search in English *or* your own language
-
-This is the part worth knowing: search matches against **both** the text in your **selected language** **and** the original **English** text.
-
-- If your app is in, say, German or Czech, you can type the **localized** word **or** the **English** word — either finds the setting.
-- A match on the **localized** title ranks highest, then the **English** title, then the localized and English **descriptions**.
-- Matching ignores **accents/diacritics** (so *ů* matches *u*, *é* matches *e*) and is **case-insensitive**.
-
-This means a guide or forum post written in English still leads you to the right setting even when your phone shows everything translated.
+**✕**로 검색 창을 지우거나, 장치의 **뒤로** 버튼으로 검색을 닫으십시오.
 
 ---
 
-## What search covers
+## 영어 *또는* 자신의 언어로 검색
 
-Results are grouped into these categories:
+꼭 알아 둘 부분입니다: 검색은 **선택한 언어**의 텍스트**와** 원래의 **영어** 텍스트 **둘 다**에서 찾습니다.
 
-- **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](../SettingUpAaps/ConfigBuilder.md)). Each plugin row carries its **enable switch**, so you can enable or disable a plugin right from the results — tapping the row of a disabled (toggleable) plugin enables it.
-- **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Screens that don't apply to your build are left out (for example *Pair with master* on a master, *Authorized clients* on a client).
-- **Preference categories** — the settings **screens** and sub-screens, both built-in (General, Appearance, Protection, Alerts, Maintenance, …) and from plugins, plus the small settings groups reached from dialogs (Fill buttons, Insulin/Carbs button steps, status-light thresholds, wizard settings, …).
-- **Preferences** — every **individual setting** that has a title. These are filtered to your build/mode, so you only see settings that actually apply (APS / NSClient / pump-control).
-- **Documentation** — pages from the online **AndroidAPS docs** (see below).
+- 예를 들어 앱이 독일어나 체코어로 되어 있으면, **번역된** 단어**나** **영어** 단어를 입력할 수 있습니다 — 어느 쪽이든 설정을 찾습니다.
+- **번역된** 제목과 일치하는 결과가 가장 위에 오고, 그다음 **영어** 제목, 그다음 번역된 **설명**과 영어 설명 순서입니다.
+- 검색은 **악센트/발음 구별 기호**를 무시하고(그래서 *ů*는 *u*와, *é*는 *e*와 일치합니다) **대소문자를 구분하지 않습니다**.
+
+그래서 휴대폰에 모든 것이 번역되어 표시되더라도, 영어로 쓰인 안내서나 포럼 글을 보고 올바른 설정을 찾을 수 있습니다.
+
+---
+
+## 검색 범위
+
+결과는 다음 범주로 묶입니다:
+
+- **플러그인** — 사용자의 빌드에서 보이는 모든 플러그인([구성](../SettingUpAaps/ConfigBuilder.md)에 나오는 것과 같은 플러그인). 각 플러그인 행에는 **활성화 스위치**가 있어서 결과에서 바로 플러그인을 활성화하거나 비활성화할 수 있습니다 — 비활성화된 (켜고 끌 수 있는) 플러그인의 행을 누르면 그 플러그인이 활성화됩니다.
+- **대화 상자** — 처치/동작 화면과 관리 화면(볼러스 마법사, 인슐린, 확장 볼러스, 보정, 임시 목표, 프로파일, …). 사용자의 빌드에 해당하지 않는 화면은 빠집니다(예: 마스터에서는 *마스터와 페어링*, 클라이언트에서는 *허가된 클라이언트*).
+- **설정 범주** — 기본 제공(일반, 외관, 보안, 경고, 정비, …) 및 플러그인의 설정 **화면**과 하위 화면, 그리고 대화 상자에서 여는 작은 설정 그룹(채우기 버튼, 인슐린/탄수화물 버튼 증가량, 상태 등 기준값, 마법사 설정, …).
+- **설정** — 제목이 있는 모든 **개별 설정**. 이 결과는 사용자의 빌드/모드에 맞게 필터링되므로, 실제로 해당하는 설정만 보입니다(APS / NSClient / 펌프 제어).
+- **문서** — 온라인 **AndroidAPS 문서**의 페이지(아래 참조).
 
 ```{admonition} Settings that belong to a disabled plugin
 :class: note
-A preference whose plugin is currently **disabled** still shows up — **greyed out** and not tappable — with a *“Plugin … disabled”* note, so you can tell the setting exists and which plugin to enable to reach it.
+플러그인이 현재 **비활성화**된 설정도 표시됩니다 — **회색으로** 표시되고 누를 수 없으며 *“플러그인 … 비활성화됨”* 메모가 붙습니다. 그래서 그 설정이 있다는 것과, 그 설정을 사용하려면 어떤 플러그인을 활성화해야 하는지 알 수 있습니다.
 
-![A greyed-out setting from a disabled plugin](../images/v4/Search/search_disabled_plugin.png)
+![비활성화된 플러그인의 회색 설정](../images/v4/Search/search_disabled_plugin.png)
 ```
 
 ---
 
-## Documentation results (online)
+## 문서 결과 (온라인)
 
-While the local search runs, **AAPS** also queries the official **AndroidAPS documentation** (hosted on ReadTheDocs) in parallel. Matching pages appear in a **Documentation** group at the bottom, each with a 📖 icon, the section title and a short snippet:
+로컬 검색이 실행되는 동안 **AAPS**는 공식 **AndroidAPS 문서**(ReadTheDocs에서 호스팅)도 동시에 검색합니다. 일치하는 페이지는 아래쪽의 **문서** 그룹에 나타나며, 각 페이지에는 📖 아이콘, 섹션 제목, 짧은 발췌문이 표시됩니다:
 
-![Documentation (wiki) results with snippets](../images/v4/Search/search_documentation.png)
+![발췌문이 있는 문서(위키) 결과](../images/v4/Search/search_documentation.png)
 
-- If the documentation is translated into your app language, **AAPS** searches the translated pages and the English pages at the same time. Pages in your language come first, then the English pages that were not already found.
-- Tapping a documentation result opens that page in your **browser**.
-- Documentation search needs **internet** — when you are offline you get a *“Documentation search requires internet connection”* note instead, and the local (in-app) results still work normally.
-
----
-
-## Opening a result
-
-Tap a result to go straight to it:
-
-- **Plugin** → opens that plugin.
-- **Dialog** → opens that screen or dialog.
-- **Preference category** → opens that settings screen.
-- **Preference** → opens the setting **in place** (jumps to it within its screen).
-- **Documentation** → opens the page in your browser.
-
-Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
+- 문서가 앱 언어로 번역되어 있으면, **AAPS**는 번역된 페이지와 영어 페이지를 동시에 검색합니다. 자신의 언어로 된 페이지가 먼저 나오고, 그다음 아직 찾지 않은 영어 페이지가 나옵니다.
+- 문서 결과를 누르면 그 페이지가 **브라우저**에서 열립니다.
+- 문서 검색에는 **인터넷**이 필요합니다 — 오프라인이면 대신 *“문서를 검색하려면 인터넷 연결이 필요합니다”* 메모가 표시되며, 로컬(앱 안) 결과는 계속 정상적으로 작동합니다.
 
 ---
 
-## Power-user shortcuts
+## 결과 열기
 
-Two special queries list a whole category at once:
+결과를 누르면 바로 이동합니다:
 
-- `%PLUGINS%` — list **all** plugins.
-- `%DIALOGS%` — list **all** dialogs/action screens.
+- **플러그인** → 그 플러그인을 엽니다.
+- **대화 상자** → 그 화면이나 대화 상자를 엽니다.
+- **설정 범주** → 그 설정 화면을 엽니다.
+- **설정** → 설정을 **그 자리에서** 엽니다(설정 화면 안의 그 설정으로 바로 이동합니다).
+- **문서** → 브라우저에서 페이지를 엽니다.
+
+설정과 보호된 동작을 열 때도 직접 찾아갔을 때와 똑같이 **[보안](#Preferences-protection)**(PIN/비밀번호)이 적용됩니다. 결과에서 작업을 한 후 **뒤로**를 누르면 검색 결과로 돌아갈 수 있습니다.
+
+---
+
+## 고급 사용자를 위한 단축 검색어
+
+두 가지 특수 검색어는 한 범주 전체를 한 번에 보여 줍니다:
+
+- `%PLUGINS%` — **모든** 플러그인을 보여 줍니다.
+- `%DIALOGS%` — **모든** 대화 상자/동작 화면을 보여 줍니다.
 
 ---
 
 ```{admonition} The index stays current
 :class: note
-The search index is built the first time you search and kept ready after that. It is rebuilt automatically when you **enable/disable a plugin** or **change the app language**, so results always reflect your current setup.
+검색 색인은 처음 검색할 때 만들어지고, 그 후에는 준비된 상태로 유지됩니다. **플러그인을 활성화/비활성화**하거나 **앱 언어를 변경**하면 색인이 자동으로 다시 만들어지므로, 결과는 항상 현재 구성을 반영합니다.
 ```
 
 ---
