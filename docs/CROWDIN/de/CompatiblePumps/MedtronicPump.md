@@ -13,7 +13,7 @@ Die folgenden Modell- und Firmware-Kombinationen sind kompatibel:
 
 Hinweise, wie die Firmware der Pumpe ermittelt werden kann, findest Du in den [OpenAPS Docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) und [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
-    {contents} Table of contents
+    {contents} Inhaltsverzeichnis
     :depth: 1
     :local: true
 
@@ -65,7 +65,7 @@ Damit AAPS Befehle remote verschicken kann, solltest Du die folgenden Pumpeneins
     
     ![Medtronic driver settings](../images/v4/Pumps/medtronic_settings.png)
     
-    **Open plugin** (or **Manage** > **Pump**) opens the Medtronic pump screen. Before a pump is paired it looks like this:
+    **Open plugin** (or **Manage** > **Pump**) opens the Medtronic pump screen. Bevor eine Pumpe gekoppelt ist, sieht er so aus:
     
     ![Medtronic pump screen before pairing](../images/v4/Pumps/medtronic_pump_screen.png)
 
