@@ -86,7 +86,7 @@ Wady (według użytkowników)
 
 * Wymaga Androida 5.0 lub nowszego.
 
-* It has a dark UI, large readings and buttons, designed for usage at night.
+* Ma ciemny interfejs, duże wartości i przyciski, jest przeznaczona do używania w nocy.
 
 ### xDrip (Android)
 
@@ -114,7 +114,7 @@ Jeśli źródłem danych **AAPS** nie jest xDrip, ale xDrip może pokazywać dan
 
 ![image](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
+xDripSwift powstał przez przeniesienie oryginalnej aplikacji xDrip na iOS i rozwinął się w „xDrip for iOS”, zapisywany jako **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ Jeśli chcesz, możesz potem zostać „releaserem” (osobą udostępniającą 
 * Apple iPad (wymaga systemu w wersji 13.0 lub nowszej)
 * Google Android (zapisz aplikację webową na ekranie głównym)
 
-Użytkownicy Sugarmate zgłaszają, że w USA można go używać z Apple CarPlay, aby wyświetlać wartości glukozy podczas jazdy. Nie wiadomo jeszcze, czy jest to możliwe w krajach poza USA. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
+Użytkownicy Sugarmate zgłaszają, że w USA można go używać z Apple CarPlay, aby wyświetlać wartości glukozy podczas jazdy. Nie wiadomo jeszcze, czy jest to możliwe w krajach poza USA. Jeśli wiesz o tym więcej, dodaj szczegóły do dokumentacji, tworząc [pull request](../SupportingAaps/HowToEditTheDocs.md). To szybkie i proste.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
@@ -200,7 +200,7 @@ SugarPixel to urządzenie do dodatkowego wyświetlania wartości glukozy i alarm
 ![Obserwowanie z Nightscout Clock](../images/FollowingNightscoutClock.png)
 
 * Zegar obsługuje jednostki mmol/l i mg/dl oraz ma alarmy dźwiękowe.
-* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
+* Dostępnych jest kilka widoków ekranu. Przegląd znajdziesz na [GitHub nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it).
 * Konfiguracja urządzenia wymaga tylko kilku prostych kroków. Po konfiguracji potrzebuje do działania tylko zasilania i Wi-Fi.
 * Urządzenie Ulanzi TC001 jest dużo tańsze niż SugarPixel.
 * Oprogramowanie i instrukcję instalacji znajdziesz na [GitHub nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
