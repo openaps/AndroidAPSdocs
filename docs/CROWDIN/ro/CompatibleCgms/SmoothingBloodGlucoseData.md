@@ -1,12 +1,12 @@
-# Smoothing blood glucose data
+# Netezirea datelor de glicemie
 
 Dacă datele **glicemice** sunt săltărețe/zgomotoase, **AAPS** poate doza incorect insulina ceea ce duce la valori mari sau mici ale glicemiei. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. În funcție de CGM, astfel de probleme se pot datora configurației CGM din **AAPS** (după cum se explică mai jos); sau o problemă a locului de inserare al senzorului CGM (care poate necesita înlocuirea senzorului CGM).
 
 ## Omogenizarea datelor în AAPS
 
-**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
+**AAPS** oferă opțiunea de a netezi datele în **AAPS**, nu în aplicația CGM. Deschideți **meniul** (☰), selectați [**Configurație**](../SettingUpAaps/ConfigBuilder.md), apoi **Netezire**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![Configurație > Netezire](../images/v4/Configuration/configuration_smoothing.png)
 
 ### Omogenizare exponențială
 
@@ -18,7 +18,7 @@ Această opțiune funcționează similar cu netezirea care a fost implementată 
 
 ### Fără netezire
 
-Utilizați această opțiune numai dacă datele CGM sunt uniformizate corespunzător de aplicația colector înainte de a fi transmise la **AAPS**.
+Utilizați această opțiune numai dacă datele CGM sunt netezite corespunzător de aplicația colector înainte de a fi transmise la **AAPS**.
 
 ### Unscented Kalman Filter (UKF)
 
