@@ -21,7 +21,7 @@ Możesz użyć [Autotune](https://autotuneweb.azurewebsites.net/) jako pomocy, a
 :class: note
 **Profile** bardzo się różnią u różnych osób.
 
-Dawki bazowe (BR), współczynniki wrażliwości na insulinę (ISF) i współczynniki insulina/węglowodany (IC lub ICR) – ich wartości i zmiany zapotrzebowania na insulinę bardzo się różnią u różnych osób. Zależą od organizmu, płci, wieku, kondycji itp., a także od czynników krótkoterminowych, jak choroba czy niedawny wysiłek. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+Dawki bazowe (BR), współczynniki wrażliwości na insulinę (ISF) i współczynniki insulina/węglowodany (IC lub ICR) – ich wartości i zmiany zapotrzebowania na insulinę bardzo się różnią u różnych osób. Zależą od organizmu, płci, wieku, kondycji itp., a także od czynników krótkoterminowych, jak choroba czy niedawny wysiłek. Więcej wskazówek na ten temat znajdziesz w świetnej książce [„Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) Adama Browna.
 
 ```
 
@@ -91,7 +91,7 @@ I odwrotnie: za niska dawka bazowa może prowadzić do wysokich glikemii i braku
 
 ![Dawki bazowe](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
+Dawki bazowe ustawia się metodą prób i błędów, w porozumieniu z zespołem diabetologicznym.
 
 Istnieją metody testowania bazy, które zwykle polegają na obserwowaniu dawek bazowych i zapotrzebowania na insulinę w czasie <u>przerywanej</u> głodówki w ciągu 24 godzin. Chociaż musisz sprawdzić dawki bazowe dla całej doby, nie zalecamy głodówki przez 24 godziny bez przerwy. Powodem jest to, że organizm uruchamia mechanizmy wyrównawcze, np. hormony. Zalecany sposób to głodówka przez 8 godzin w 3 różne dni.
 
@@ -131,17 +131,17 @@ Współczynnik wrażliwości na insulinę (ISF), czasem nazywany współczynniki
 
 **W jednostkach mmol/l:** Jeśli Twój **ISF** wynosi 1,5, każda jednostka insuliny obniży glikemię o ok. 1,5 mmol/l (na przykład z 8 mmol/l do 6,5 mmol/l).
 
-Z tych przykładów widać, że im _mniejsza_ wartość **ISF**, tym mniej jesteś wrażliwy na insulinę. Jeśli więc zmniejszysz ISF z 40 do 35 (mg/dl) lub z 1,5 do 1,3 (mmol/l), często nazywa się to wzmocnieniem **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+Z tych przykładów widać, że im _mniejsza_ wartość **ISF**, tym mniej jesteś wrażliwy na insulinę. Jeśli więc zmniejszysz ISF z 40 do 35 (mg/dl) lub z 1,5 do 1,3 (mmol/l), często nazywa się to wzmocnieniem **ISF**. I odwrotnie: zwiększenie wartości **ISF** z 40 do 45 (mg/dl) lub z 1,5 do 1,8 (mmol/l) to osłabienie **ISF**.
 
 ### Wpływ
 
-A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. To prowadzi do bardziej agresywnej / silniejszej korekty przez pętlę, z **większą ilością insuliny**. Jeśli Twój **ISF** jest za silny (mała wartość), może to prowadzić do niskiej **BG**.
+**Niższy / silniejszy ISF** (np. 40 zamiast 50) oznacza, że jedna jednostka insuliny obniża **BG** mniej. To prowadzi do bardziej agresywnej / silniejszej korekty przez pętlę, z **większą ilością insuliny**. Jeśli Twój **ISF** jest za silny (mała wartość), może to prowadzić do niskiej **BG**.
 
-A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. To prowadzi do mniej agresywnej / słabszej korekty przez pętlę, z **mniejszą ilością insuliny**. Jeśli Twój **ISF** jest za słaby (duża wartość), może to prowadzić do wysokiej **BG**.
+**Wyższy / słabszy ISF** (np. 45 zamiast 35) oznacza, że jedna jednostka insuliny obniża **BG** bardziej. To prowadzi do mniej agresywnej / słabszej korekty przez pętlę, z **mniejszą ilością insuliny**. Jeśli Twój **ISF** jest za słaby (duża wartość), może to prowadzić do wysokiej **BG**.
 
-**Example:**
-* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
-* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
+**Przykład:**
+* **BG** wynosi 190 mg/dl (10,5 mmol/l), a cel to 100 mg/dl (5,6 mmol/l).
+* Potrzebujesz więc korekty o `190 - 100 = 90 mg/dL` lub `10.5 - 5.6 = 4.9 mmol/L`
 * Jeśli `ISF = 30` -> `90 / 30 = 3` lub `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 jednostki insuliny
 * Jeśli `ISF = 45` -> `90 / 45 = 2` lub `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 jednostki insuliny
 
@@ -193,7 +193,7 @@ Często **ICR** jest różny o różnych porach dnia, z powodu poziomu hormonów
 > 
 > Przy **ICR** ilość insuliny jest stała, a ilość węglowodanów zmienna. („Ile g węglowodanów pokrywa jedna jednostka insuliny?”)
 > 
-> Example:
+> Przykład:
 > 
 > Przelicznik WW (WW = 12 g węglowodanów): 2,4 U/WW -> Potrzebujesz 2,4 jednostki insuliny, gdy jesz jeden wymiennik węglowodanowy.
 > 
@@ -201,7 +201,7 @@ Często **ICR** jest różny o różnych porach dnia, z powodu poziomu hormonów
 > 
 > Przelicznik WW 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
 > 
-> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Tabele przeliczeniowe są dostępne w internecie, np. [tutaj](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Wpływ
 
@@ -300,7 +300,7 @@ Pomocnik profilu oferuje dane dzieci z dwóch różnych szpitali, aby znaleźć 
 4. Przejdź do zakładki **Profil 2**.
 5. Naciśnij **Typ profilu** i wybierz „Domyślny profil DPV”.
 6. Dostosuj Domyślny profil DPV (oparty na danych innego szpitala), wpisując wiek dziecka, TDD Całkowita i procent bazy. Pamiętaj, że dane DPV podają tylko **dawki bazowe**, więc IC i ISF są dla tego profilu pokazane jako zero.
-7. Open the **Comparison** tab. Wyświetli się porównanie dwóch dostosowanych profili (zobacz zrzut ekranu poniżej).
+7. Otwórz zakładkę **Porównanie**. Wyświetli się porównanie dwóch dostosowanych profili (zobacz zrzut ekranu poniżej).
 8. Jeśli chcesz zacząć dostrajać profil na podstawie jednej z tych propozycji, użyj przycisku **Sklonuj** na dole porównania.
 
 ![Pomocnik profilu – dzieci 2](../images/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ Możesz też użyć [Pomocnika profilu](#aaps-screens-profile-helper) (menu ☰ 
 4. Przejdź do zakładki **Profil 2**.
 5. W **Typ profilu** wybierz „Zmiana profilu”, aby wybierać z historii wszystkich **Zmian profilu**.
 6. Wybierz **Zmianę profilu**, z którą chcesz porównać.
-7. Open the **Comparison** tab. Wyświetli się porównanie dwóch profili (zobacz zrzut ekranu poniżej).
+7. Otwórz zakładkę **Porównanie**. Wyświetli się porównanie dwóch profili (zobacz zrzut ekranu poniżej).
 
 ![Pomocnik profilu 2](../images/ProfileHelper2.png)
