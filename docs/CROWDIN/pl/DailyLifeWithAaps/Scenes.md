@@ -99,7 +99,7 @@ Aktywuj scenę z listy **Sceny** (przycisk **▶**) albo z pozycji **Sceny** na 
 
 ![Panel Sceny na dolnym pasku nawigacji](../images/v4/Scenes/scenes_sheet.png)
 
-If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+Jeśli włączona jest [ochrona bolusa](#Preferences-protection), **AAPS** prosi o nią przed rozpoczęciem lub zakończeniem sceny. Do zmiany sceny potrzebna jest natomiast [ochrona ustawień](#Preferences-settings-protection).
 
 Zanim cokolwiek zostanie wykonane, zobaczysz **potwierdzenie** z dokładną listą tego, co zrobi scena, więc możesz to sprawdzić:
 
