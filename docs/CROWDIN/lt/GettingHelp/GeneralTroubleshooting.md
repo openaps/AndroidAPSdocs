@@ -2,16 +2,16 @@
 
 # Troubleshooting
 
-**Start here when something is not working.** Troubleshooting information lives on many pages across the documentation. This page brings it together: it is a single collection of links, sorted by topic, to help you solve the most common problems.
+**Pradėkite čia, kai kas nors neveikia.** Informacija apie trikčių šalinimą yra daugelyje dokumentacijos puslapių. Šiame puslapyje ji surinkta į vieną vietą: tai nuorodų rinkinys, surūšiuotas pagal temas, kuris padės išspręsti dažniausias problemas.
 
-If you do not find your answer below, also check:
+Jei toliau atsakymo nerandate, taip pat peržiūrėkite:
 
-* the [FAQ](../UsefulLinks/FAQ.md) for answers to frequent questions, and
-* the [Profile tuning guide](ProfileTuning.md) if your loop runs but your glucose control needs improving.
+* [DUK](../UsefulLinks/FAQ.md) – atsakymus į dažnus klausimus, ir
+* [profilio derinimo vadovą](ProfileTuning.md), jei ciklas veikia, bet gliukozės kontrolę reikia pagerinti.
 
 ```{admonition} Still stuck?
 :class: tip
-If none of the links solve your problem, see [Where can I get help](WhereCanIGetHelp.md) to ask the community (Facebook, Discord), or send your [log files](AccessingLogFiles.md) to the developers.
+Jei nė viena nuoroda problemos neišsprendžia, skaitykite [Kur gauti pagalbos?](WhereCanIGetHelp.md) ir klauskite bendruomenės (Facebook, Discord) arba nusiųskite savo [žurnalų failus](AccessingLogFiles.md) kūrėjams.
 ```
 
 ---
@@ -22,123 +22,123 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 
 ### Building & updating
 
-* If the build fails, see [If the build fails](#building-aaps-troubleshooting): it lists the troubleshooting section for each build method:
+* Jei kūrimas nepavyksta, žr. [Jei kūrimas nepavyksta](#building-aaps-troubleshooting): ten nurodytas kiekvieno kūrimo būdo trikčių šalinimo skyrius:
   * [AAPS Builder](#aaps-builder-troubleshooting)
   * [Browser build](#aaps-ci-troubleshooting)
   * [Android Studio](TroubleshootingAndroidStudio.md)
-* Lost keystore, or new keystore: [Reinstalling AAPS](#reinstall-aaps)
-* Updating **AAPS**: [with AAPS Builder](#aaps-builder-updates), [with a browser build (fork)](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
+* Prarasta raktų saugykla arba nauja raktų saugykla: [AAPS įdiegimas iš naujo](#reinstall-aaps)
+* **AAPS** atnaujinimas: [su AAPS Builder](#aaps-builder-updates), [kuriant naršyklėje (fork)](#update-browser-build-troubleshooting), [su Android Studio](#update-computer-build-troubleshooting)
 
 ### Installing
 
-* [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
-* Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
+* [Google Play Protect įspėjimas](#transferring-installing-play-protect-warning): programėlė pažymėta kaip nesaugi.
+* Diegimas **užblokuotas** su pranešimu apie nepatvirtintą kūrėją: nemokamus diegimo būdus rasite skyriuje [Android kūrėjų tapatybės patikrinimas](#android-developer-verification).
 
 ### Parametrai
 
-* [Profile: "Basal rate is not compatible with the current pump"](#your-aaps-profile-basal-not-compatible)
-* [Pump: "Data is coming from different pump"](#config-builder-wrong-pump-data)
-* [Nightscout Client](TroubleshootingNsClient.md)
+* [Profilis: „Bazė nesuderinama su šiuo metu naudojama pompa“](#your-aaps-profile-basal-not-compatible)
+* [Pompa: „Duomenys gaunami iš kitos pompos“](#config-builder-wrong-pump-data)
+* [Nightscout klientas (NSClient)](TroubleshootingNsClient.md)
 * **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
 
-### Usage
+### Naudojimas
 
-* [Wrong carb values (slow carbs absorption)](#CobCalculation-detection-of-wrong-cob-values)
-* [Automations](#automations-troubleshooting)
-* [Full closed loop](#full-closed-loop-troubleshooting)
+* [Neteisingos angliavandenių reikšmės (lėtas angliavandenių įsisavinimas)](#CobCalculation-detection-of-wrong-cob-values)
+* [Automatizacijos](#automations-troubleshooting)
+* [Visiškai uždaras ciklas](#full-closed-loop-troubleshooting)
 
 ---
 
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## Bluetooth related issues
+## Su Bluetooth susijusios problemos
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Dėl žinomų Bluetooth ryšio problemų, pompos / Pod ryšio nutrūkimų arba aktyvavimo ir prisijungimo problemų žr. [Bluetooth trikčių šalinimas](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (generaltroubleshooting-android-related-issues)=
 
-## Android Related Issues
+## Su Android susijusios problemos
 
-### Battery optimization
+### Baterijos optimizavimas
 
-**AAPS** can help you find the right settings for your phone: open the **menu** (☰) > **About** and tap **Don't kill my app?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). The [setup wizard](#setup-wizard-bluetooth-battery-optimisation) also asks you to turn off battery optimization for **AAPS** and Bluetooth.
+**AAPS** gali padėti rasti tinkamus nustatymus jūsų telefonui: atidarykite **meniu** (☰) > **Apie** ir paspauskite **Don't kill my app?**. Atsidarys jūsų telefono gamintojo instrukcijos svetainėje [Don't kill my app](https://dontkillmyapp.com/). [Sąrankos vedlys](#setup-wizard-bluetooth-battery-optimisation) taip pat paprašo išjungti baterijos optimizavimą **AAPS** ir Bluetooth.
 
-Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
+Android turi baterijos taupymo nustatymus, kurie įjungti iš anksto. Šie nustatymai automatiškai sustabdo programėles, kurios nėra būtinos sistemos veikimui. Taip taupoma baterija, kurią naudoja programėlės, neturinčios veikti visą laiką.
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip**.
+Kai jis įjungtas, labai tikėtina, kad kils problemų **AAPS** ir kitoms pagalbinėms programėlėms, pvz., **xDrip**.
 
-It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
+Svarbu išjungti baterijos optimizavimą, kad **AAPS** ir kitos pagalbinės programėlės visada veiktų.
 
 Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+***PASTABA:** jei jūsų telefone yra ši galimybė, atlikite toliau nurodytus veiksmus ir išjunkite baterijos optimizavimą Bluetooth paslaugai. Tais pačiais veiksmais galite jį išjungti ir **AAPS** bei kitoms programėlėms, tačiau ekrano kopijose parodyta tik Bluetooth paslauga.*
 
-#### Pixel phones (stock Android)
+#### Pixel telefonai (standartinė Android versija)
 
-* Go to the Android settings, select "Apps".
+* Atidarykite Android nustatymus ir pasirinkite „Apps“.
 
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
+  ![Android nustatymai¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
 
 * Select "See all apps"
 
-  ![See all apps](../images/troubleshooting/pixel/02_apps.png)
+  ![Visos programėlės (See all apps)](../images/troubleshooting/pixel/02_apps.png)
 
 * On the menu on the right, select "Show system" apps.
 
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
+  ![Sistemos programėlių rodymas (Show system apps)](../images/troubleshooting/pixel/03_allapps.png)
 
 * Now search and select the app "Bluetooth".
 
-  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
+  ![Bluetooth programėlė](../images/troubleshooting/pixel/03_bluetooth.png)
 
-* Click the "App battery usage" and select "Unrestricted" (called "Not optimized" on some older Android versions).
+* Paspauskite „App battery usage“ ir pasirinkite „Unrestricted“ (kai kuriose senesnėse Android versijose – „Not optimized“).
 
-  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
+  ![Bluetooth baterijos optimizavimas](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### Samsung phones
+#### Samsung telefonai
 
-* Go to the android settings, select "Apps"
+* Atidarykite Android nustatymus ir pasirinkite „Apps“.
 
-* On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
+* Paspauskite piktogramą, kuri keičia rūšiavimą (1), ir pasirinkite „Show system apps“ (2).
 
   ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![Sistemos programėlių rodymas (Show system apps)](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* Now search the Bluetooth app and select it to see its settings.
+* Dabar suraskite Bluetooth programėlę ir ją pasirinkite, kad pamatytumėte jos nustatymus.
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![Bluetooth programėlė](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
 * Select "battery".
 
   ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* Set it to "Unrestricted" (called "Not optimized" on some older Android versions).
+* Nustatykite „Unrestricted“ (kai kuriose senesnėse Android versijose – „Not optimized“).
 
   ![Unrestricted](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### Huawei phones
+#### Huawei telefonai
 
-See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+Žr. vadovą [Huawei: Bluetooth ir baterijos optimizavimas](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-cgm)=
 
-## Continuous Glucose Monitor (CGM)
+## Nuolatinis gliukozės jutiklis (NGJ)
 
-Useful links to known issues and steps to resolve for CGMs.
+Naudingos nuorodos į žinomas NGJ problemas ir jų sprendimo veiksmus.
 
-* [General](#general-cgm-troubleshooting)
+* [Bendra informacija](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
-* [Libre 2 with Minimal Looper](#minimallooper-troubleshooting)
+* [Libre 2 su Minimal Looper](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [xDrip - no CGM data](#xdrip-identify-receiver)
-* [xDrip - Dexcom troubleshooting](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip – nėra NGJ duomenų](#xdrip-identify-receiver)
+* [xDrip – Dexcom trikčių šalinimas](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ---
 
@@ -146,7 +146,7 @@ Useful links to known issues and steps to resolve for CGMs.
 
 ## Pompos
 
-Useful links to known issues and steps to resolve for Pumps
+Naudingos nuorodos į žinomas pompų problemas ir jų sprendimo veiksmus
 
 * [Accu-Chek Combo](#combov2-tips-for-basic-usage)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
@@ -165,11 +165,11 @@ Useful links to known issues and steps to resolve for Pumps
 
 ## Telefonai
 
-Useful links to known issues and steps to resolve for Phones
+Naudingos nuorodos į žinomas telefonų problemas ir jų sprendimo veiksmus
 
 * [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [Huawei: Bluetooth ir baterijos optimizavimas](../CompatiblePhones/Huawei.md)
 
 ---
 
@@ -177,8 +177,8 @@ Useful links to known issues and steps to resolve for Phones
 
 ## Remote control
 
-* [AAPSClient and remote control (pairing, commands not received)](#client-master-control-troubleshooting)
-* ['Nightscout access token' issues](#remotecontrol-nightscout-access-token)
+* [AAPSClient ir nuotolinis valdymas (susiejimas, komandos negaunamos)](#client-master-control-troubleshooting)
+* [Problemos su 'Nightscout prieigos raktu'](#remotecontrol-nightscout-access-token)
 * [SMS commands](#SMSCommands-troubleshooting)
 * [Android Auto](#android-auto-troubleshooting)
 
@@ -188,9 +188,9 @@ Useful links to known issues and steps to resolve for Phones
 
 ## Išmanieji laikrodžiai
 
-Useful links to known issues and steps to resolve for Smartwatches
+Naudingos nuorodos į žinomas išmaniųjų laikrodžių problemas ir jų sprendimo veiksmus
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
-* [Watch and phone do not communicate](#wear-os-watch-phone-communication)
+* [Wear programėlės trikčių šalinimas](#Watchfaces-troubleshooting-the-wear-app)
+* [Laikrodis ir telefonas nesusisiekia](#wear-os-watch-phone-communication)
 * [Wear OS 5](#wear-os-5-troubleshooting)
 * [Building the Wear app](#building-aaps-wear-os-troubleshooting)
