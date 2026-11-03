@@ -14,7 +14,7 @@ The smallest dose the patch can deliver is 0.05 U. Set every basal rate in your 
 * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
 * DST and timezone changes must be handled manually.
 
-## Pump setup
+## Pumpen-Einrichtung
 
 1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
 1. In the **Pump** section, select **EOPatch2**.
@@ -79,7 +79,7 @@ When you hear the beep, press **Start pairing**.
 - Take the insulin out of the refrigerator 15 to 30 minutes before filling, so it reaches room temperature. The insulin must be at least 10°C.
 ```
 
-### Patch pairing
+### Pod koppeln
 
 **AAPS** now tries to pair with the patch automatically. During pairing, two Android Bluetooth pairing requests appear. Press **OK** on the first one. Press **OK** again on the second one, which shows a passkey.
 
@@ -148,7 +148,7 @@ Hold the patch firmly. Turn the needle action lever upward by more than 100° to
 If you go to the next step without hearing the beep, a **Needle insertion Error** appears. Check for the beep and press **Retry**. If the error remains, press **Discard** to deactivate the patch.
 ```
 
-### Patch activation completed
+### Pod-Aktivierung abgeschlossen
 
 The last page confirms that the patch is active and that it will remind you when it nears its expiration time. Press **Finish** to go back to the pump screen.
 
