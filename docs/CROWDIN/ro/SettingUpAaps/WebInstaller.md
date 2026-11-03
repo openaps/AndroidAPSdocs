@@ -1,8 +1,8 @@
 (web-installer)=
 
-# AAPS web installer
+# Instalatorul web AAPS
 
-Install the **AAPS** APK you built onto your Android phone, straight from this browser, over a USB cable. No command line, nothing to download. Installed this way (the ADB way), apps are **exempt from Google's Android developer verification**.
+Instalați APK-ul **AAPS** pe care l-ați construit pe telefonul dumneavoastră Android, direct din acest browser, printr-un cablu USB. No command line, nothing to download. Installed this way (the ADB way), apps are **exempt from Google's Android developer verification**.
 
 ```{admonition} This page runs entirely in your browser
 :class: tip
@@ -18,30 +18,30 @@ Your APK file and your phone's data never leave this computer: the page cannot s
 
 <div id="aapsi-unsupported" class="aapsi-box aapsi-error" hidden>
 
-**This browser cannot talk to USB devices.** Please open this page in **Google Chrome**, **Microsoft Edge** or **Opera**, on a computer or an Android device. Firefox, Safari and all iPhone browsers do not support WebUSB.
+**This browser cannot talk to USB devices.** Please open this page in **Google Chrome**, **Microsoft Edge** or **Opera**, on a computer or an Android device. Firefox, Safari și toate browserele de pe iPhone nu acceptă WebUSB.
 
 </div>
 
 (web-installer-prepare)=
 
-## Step 1 – Before you start
+## Pasul 1 – Înainte de a începe
 
 - **Enable USB debugging** on the phone (one-time setup):
   - Go to **Settings** > **About phone** and tap **Build number** seven times, until the phone confirms you are a developer.
   - Back in the main **Settings**, open **Developer options** and switch on **USB debugging**.
 - Connect the phone with a **data-capable USB cable** (some charging cables cannot transfer data: if the phone is never detected, try another cable).
-- **Close Android Studio** and any other program that uses ADB: only one program can talk to the phone at a time.
-- Have your **AAPS APK file** ready on this computer (for the browser build, download it from your Google Drive first).
+- **Închideți Android Studio** și orice alt program care folosește ADB: un singur program poate comunica cu telefonul la un moment dat.
+- Pregătiți **fișierul APK AAPS** pe acest computer (pentru construirea în browser, descărcați-l mai întâi din Google Drive).
 
-No computer? This page also works from Chrome on *another Android phone*, connected with a USB-C to USB-C cable.
+Nu aveți computer? Această pagină funcționează și din Chrome pe *un alt telefon Android*, conectat cu un cablu USB-C la USB-C.
 
 (web-installer-connect)=
 
-## Step 2 – Connect your phone
+## Pasul 2 – Conectați telefonul
 
 Click the button, then pick your phone in the list the browser shows.
 
-<button class="aapsi-btn" type="button" id="aapsi-connect-btn">Connect phone</button> <button class="aapsi-btn aapsi-secondary" type="button" id="aapsi-disconnect-btn" hidden>Disconnect</button>
+<button class="aapsi-btn" type="button" id="aapsi-connect-btn">Conectare telefon</button> <button class="aapsi-btn aapsi-secondary" type="button" id="aapsi-disconnect-btn" hidden>Deconectare</button>
 
 <span class="aapsi-status" id="aapsi-connect-status"></span>
 
@@ -53,7 +53,7 @@ Click the button, then pick your phone in the list the browser shows.
 
 <div id="aapsi-connect-help" hidden>
 
-```{admonition} The phone doesn't show up, or connecting fails?
+```{admonition} Telefonul nu apare sau conectarea eșuează?
 :class: note
 
 - Check that **USB debugging** is on ([step 1](#web-installer-prepare)) and the cable is a data cable.
@@ -65,7 +65,7 @@ Click the button, then pick your phone in the list the browser shows.
 
 (web-installer-file)=
 
-## Step 3 – Choose your AAPS APK file
+## Pasul 3 – Alegeți fișierul APK AAPS
 
 <input type="file" id="aapsi-apk-input" accept=".apk" disabled />
 
@@ -73,11 +73,11 @@ Click the button, then pick your phone in the list the browser shows.
 
 (web-installer-install)=
 
-## Step 4 – Install
+## Pasul 4 – Instalare
 
 Updating an existing **AAPS**? All its settings and history are kept, exactly like `adb install -r`.
 
-<button class="aapsi-btn" type="button" id="aapsi-install-btn" disabled>Install on phone</button>
+<button class="aapsi-btn" type="button" id="aapsi-install-btn" disabled>Instalare pe telefon</button>
 
 <div id="aapsi-progress-wrap" hidden>
 
@@ -88,7 +88,7 @@ Updating an existing **AAPS**? All its settings and history are kept, exactly li
 
 <div class="aapsi-box aapsi-success" id="aapsi-result-success" hidden>
 
-**AAPS is installed.** You can unplug the phone. If this was your first installation, continue with the [Setup Wizard](SetupWizard.md).
+**AAPS este instalat.** Puteți deconecta telefonul. If this was your first installation, continue with the [Setup Wizard](SetupWizard.md).
 
 </div>
 
@@ -96,7 +96,7 @@ Updating an existing **AAPS**? All its settings and history are kept, exactly li
 
 <span id="aapsi-error-message"></span>
 
-Technical details:
+Detalii tehnice:
 
 <pre id="aapsi-error-details"></pre>
 
@@ -104,7 +104,7 @@ Technical details:
 
 ----
 
-Part of the **AAPS** documentation. Built on the open-source [Tango (ya-webadb)](https://github.com/yume-chan/ya-webadb) libraries (MIT license). Page source and build instructions: [openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs).
+Part of the **AAPS** documentation. Construit pe bibliotecile open-source [Tango (ya-webadb)](https://github.com/yume-chan/ya-webadb) (licență MIT). Sursa paginii și instrucțiunile de construire: [openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs).
 
 **AAPS** is a DIY system, not a commercial product: you build it, you install it, you are responsible for it. This page is provided by the community without any warranty.
 
@@ -116,11 +116,11 @@ Part of the **AAPS** documentation. Built on the open-source [Tango (ya-webadb)]
 - <span data-aapsi-msg="errStorage">There is not enough free storage on the phone. Free up some space and try again.</span>
 - <span data-aapsi-msg="errInvalidApk">The phone does not recognize this file as a valid APK. Check that you selected the right file and that the download completed.</span>
 - <span data-aapsi-msg="errOldSdk">The Android version on this phone is too old for this APK.</span>
-- <span data-aapsi-msg="errCanceled">The installation was declined on the phone. Watch the phone's screen and allow the installation when asked.</span>
-- <span data-aapsi-msg="errBusy">Another program is using the phone's ADB connection. Close Android Studio (or run "adb kill-server"), unplug and replug the cable, then try again.</span>
+- <span data-aapsi-msg="errCanceled">The installation was declined on the phone. Urmăriți ecranul telefonului și permiteți instalarea când vi se cere.</span>
+- <span data-aapsi-msg="errBusy">Un alt program folosește conexiunea ADB a telefonului. Close Android Studio (or run "adb kill-server"), unplug and replug the cable, then try again.</span>
 - <span data-aapsi-msg="errLost">The connection to the phone was lost. Check the cable, then connect again.</span>
-- <span data-aapsi-msg="errGeneric">The installation failed. See the technical details below, and ask for help on the AAPS community channels if needed.</span>
-- <span data-aapsi-msg="errDisconnectedDuringInstall">The phone was disconnected during the installation. Reconnect it and try again: nothing is broken.</span>
+- <span data-aapsi-msg="errGeneric">The installation failed. Consultați detaliile tehnice de mai jos și, dacă este nevoie, cereți ajutor pe canalele comunității AAPS.</span>
+- <span data-aapsi-msg="errDisconnectedDuringInstall">Telefonul a fost deconectat în timpul instalării. Reconnect it and try again: nothing is broken.</span>
 - <span data-aapsi-msg="waitingPick">Waiting for you to pick a device…</span>
 - <span data-aapsi-msg="noDevice">No device selected. Is USB debugging enabled, and is the cable a data cable?</span>
 - <span data-aapsi-msg="connecting">Connecting…</span>
@@ -133,8 +133,8 @@ Part of the **AAPS** documentation. Built on the open-source [Tango (ya-webadb)]
 - <span data-aapsi-msg="emptyFile">This file is empty. Please check the download and select it again.</span>
 - <span data-aapsi-msg="notRealApk">"{file}" does not look like a real APK file. Did you select the right file?</span>
 - <span data-aapsi-msg="selected">Selected: {file} ({size})</span>
-- <span data-aapsi-msg="copying">Copying to phone… {done} of {total}</span>
-- <span data-aapsi-msg="installingOnPhone">Installing on the phone… (this can take a minute)</span>
+- <span data-aapsi-msg="copying">Copying to phone… {done} din {total}</span>
+- <span data-aapsi-msg="installingOnPhone">Se instalează pe telefon… (this can take a minute)</span>
 - <span data-aapsi-msg="megabytes">{n} MB</span>
 
 </div>
