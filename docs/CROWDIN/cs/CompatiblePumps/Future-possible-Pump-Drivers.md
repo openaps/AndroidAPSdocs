@@ -1,6 +1,6 @@
 # Budoucí (možné) ovladače pump
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+Toto je seznam některých pump na trhu, stav jejich podpory v jiných systémech smyčky a jejich stav v AAPS. Na konci najdete informace o tom, co pumpa potřebuje, aby ji šlo provozovat se smyčkou.
 
     {contents} Obsah
     :depth: 1
@@ -42,7 +42,7 @@ Tandem: t:Mobi ([Domovská stránka](https://www.tandemdiabetes.com/))
 
 ### Inzulínová pumpa Willcare ([Domovská stránka](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+**Stav smyčky:** Zatím není kandidátem na smyčku, ale pracovníci výrobce nás kontaktovali a mají zájem pumpu pro smyčku upravit (zdá se, že chybí jen příkazy pro čtení a nastavení profilu).
 
 **Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
 
