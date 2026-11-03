@@ -1,250 +1,250 @@
-# Completing the Objectives
+# 목표 완료하기
 
-**AAPS** has a series of **Objectives** required to be completed to help the user progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **Objectives** aims to ensure you have:
+**AAPS**에는 완료해야 하는 일련의 **목표**가 있습니다. 목표는 사용자가 기본적인 개방 루프에서 하이브리드 폐쇄 루프와 **AAPS**의 전체 기능까지 단계적으로 나아가도록 돕습니다. **목표**를 완료하면 다음을 확실히 할 수 있습니다:
 
-* Configured everything correctly in your **AAPS** setup;
-* Learned about the essential features of **AAPS**; and
-* A basic understanding of what your system can do, in order to help instill confidence when using **AAPS**.
+* **AAPS** 설정에서 모든 것을 올바르게 구성했습니다.
+* **AAPS**의 핵심 기능을 배웠습니다.
+* 시스템이 무엇을 할 수 있는지 기본적으로 이해하여 **AAPS**를 사용할 때 자신감을 가질 수 있습니다.
 
-When **AAPS** is installed for the first time, each objective must be completed before moving on to the next one. New features will gradually be unlocked as progress is made through each **Objective**.
+**AAPS**를 처음 설치하면 다음 목표로 넘어가기 전에 각 목표를 완료해야 합니다. 각 **목표**를 진행하면서 새 기능이 단계적으로 잠금 해제됩니다.
 
-**Objectives 1 to 8** will guide you from configuring **AAPS** on your smartphone to “basic” hybrid closed looping. This will take about 6 weeks to complete. You can proceed up to **Objective 5** using a virtual pump (and using some other method of insulin delivery in the meantime). **Objectives 9 and 10** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. Further details on an estimated breakdown of time can be obtained here: [How long will it take?](#preparing-how-long-will-it-take)
+**목표 1~8**은 휴대폰에서 **AAPS**를 구성하는 것부터 "기본" 하이브리드 폐쇄 루프까지 안내합니다. 완료하는 데 약 6주가 걸립니다. 가상 펌프를 사용하여(그동안 다른 방법으로 인슐린을 주입하면서) **목표 5**까지 진행할 수 있습니다. **목표 9와 10**은 당뇨를 더 잘 관리하기 위해 더 고급 **AAPS** 기능을 시험해 보도록 만들어졌습니다. 완료하는 데 최대 3개월, 어쩌면 더 오래 걸립니다. 예상 소요 시간에 대한 자세한 내용은 여기에서 볼 수 있습니다: [얼마나 걸립니까?](#preparing-how-long-will-it-take)
 
-As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
+**목표**를 진행하는 것 외에도, 필요하면 진행 상황을 지우고 [이전 목표로 돌아갈](#CompletingTheObjectives-go-back-in-objectives) 수도 있습니다.
 
-## Backup your settings
+## 설정 백업하기
 
 ```{admonition} Note
 :class: note
 
-Exporting your **AAPS** settings is recommended after completing each **Objective**!
+각 **목표**를 완료한 후에는 **AAPS** 설정을 내보내는 것을 권장합니다!
 ```
 
-It is strongly recommended that you [export your settings](../Maintenance/ExportImportSettings.md) after completing each objective to avoid losing any progress made in **AAPS**. This exporting process creates a **settings file** (.json) which should be backed-up in one or more safe places (e.g. Google Drive, hard disk, email attachment _etc._). This ensures that any progress made in **AAPS** is saved. If your phone is lost or if you accidentally delete your progress, the json file can be re-loaded to **AAPS** by importing a recent settings file. Having a backup **settings file** is also required if a new **AAPS** smartphone is required for any reason (upgrading/lost/broken phone _etc._)
+**AAPS**에서 이룬 진행 상황을 잃지 않도록 각 목표를 완료한 후 [설정을 내보내는](../Maintenance/ExportImportSettings.md) 것을 강력히 권장합니다. 내보내기를 하면 **설정 파일**(.json)이 만들어집니다. 이 파일은 하나 이상의 안전한 곳(예: Google Drive, 하드 디스크, 이메일 첨부 파일 _등_)에 백업해야 합니다. 이렇게 하면 **AAPS**에서 이룬 진행 상황이 저장됩니다. 휴대폰을 잃어버리거나 실수로 진행 상황을 지운 경우, 최근 설정 파일을 가져와서 json 파일을 **AAPS**에 다시 불러올 수 있습니다. 어떤 이유로든(업그레이드, 분실, 고장 _등_) 새 **AAPS** 휴대폰이 필요할 때에도 백업한 **설정 파일**이 있어야 합니다.
 
-The **settings** file will save not only your progress through the **Objectives**, but also all your **AAPS** settings such as **max bolus** _etc._
+**설정** 파일에는 **목표** 진행 상황뿐만 아니라 **최대 볼러스** _등_ 모든 **AAPS** 설정이 저장됩니다.
 
-The **Objectives** will need to be restarted from the beginning should you fail to have a backup of your settings and anything happens to your **AAPS** smartphone. Progressing through the **Objectives** takes time, and having to re-complete them again because for example you lost your smartphone, is a situation to be best avoided.
+설정을 백업하지 않았는데 **AAPS** 휴대폰에 문제가 생기면 **목표**를 처음부터 다시 시작해야 합니다. **목표**를 진행하는 데에는 시간이 걸립니다. 예를 들어 휴대폰을 잃어버려서 목표를 다시 완료해야 하는 상황은 피하는 것이 가장 좋습니다.
 
 (objectives-objective1)=
-## Objective 1: Setting up visualization and monitoring, analyzing basals and ratios
+## 목표 1: 시각화와 모니터링 설정, 기저와 비율 분석
 
-**Objective 1** requires the user to set up their basic technical setup in **AAPS**. No progress can be made until this step has been completed.
+**목표 1**에서는 **AAPS**의 기본 기술 설정을 해야 합니다. 이 단계를 완료할 때까지는 다음으로 진행할 수 없습니다.
 
-- Select the correct CGM/FGM in [Configuration → BG Source](#Config-Builder-bg-source). See [BG Source](../Getting-Started/CompatiblesCgms.md) for more information.
-- Select the correct Pump in [Configuration → Pump](#Config-Builder-pump) to ensure your pump can communicate with **AAPS**. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **Objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/CompatiblePumps.md) for more information.
-- If using Nightscout:
-  - Follow instructions in [Nightscout](../SettingUpAaps/Nightscout.md) page to ensure **Nightscout** can receive and display **AAPS** data.
-  - Note that the URL in **NSClientV3** must be **_without_ "/api/v1/"** at the end - see [Settings → NSClientV3](#Preferences-nsclient).
-- If using Tidepool:
-  - Follow instructions in [Tidepool](../SettingUpAaps/Tidepool.md) page to ensure **Tidepool** can receive and display **AAPS** data.
+- [구성 → 혈당 출처](#Config-Builder-bg-source)에서 올바른 CGM/FGM을 선택하십시오. 자세한 내용은 [혈당 출처](../Getting-Started/CompatiblesCgms.md)를 참조하십시오.
+- 펌프가 **AAPS**와 통신할 수 있도록 [구성 → 펌프](#Config-Builder-pump)에서 올바른 펌프를 선택하십시오. 루프용 **AAPS** 드라이버가 없는 펌프 모델을 사용하거나, 다른 시스템으로 인슐린을 주입하면서 초기 **목표**를 진행하려면 **가상 펌프**를 선택하십시오. 자세한 내용은 [인슐린 펌프](../Getting-Started/CompatiblePumps.md)를 참조하십시오.
+- Nightscout를 사용하는 경우:
+  - [Nightscout](../SettingUpAaps/Nightscout.md) 페이지의 안내에 따라 **Nightscout**가 **AAPS** 데이터를 받아서 표시할 수 있는지 확인하십시오.
+  - **NSClientV3**의 URL 끝에는 **"/api/v1/"이 _없어야_** 합니다. [설정 → NSClientV3](#Preferences-nsclient)을 참조하십시오.
+- Tidepool을 사용하는 경우:
+  - [Tidepool](../SettingUpAaps/Tidepool.md) 페이지의 안내에 따라 **Tidepool**이 **AAPS** 데이터를 받아서 표시할 수 있는지 확인하십시오.
 
-Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
+참고: ***AAPS**가 센서 혈당을 인식하려면 다음 센서 혈당 값이 들어올 때까지 기다려야 할 수 있습니다.*
 
 (objectives-objective2)=
-## Objective 2: Learn how to control AAPS
+## 목표 2: AAPS를 사용하는 방법 배우기
 
-**Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below. Each task shows its status (**1**): the orange "**Not completed yet**" turns into "**Completed, well done!**" as soon as **AAPS** has registered the action. Tap **Hint** (**2**) underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
+**목표 2**에서는 아래 스크린샷과 같이 여러 '작업'을 수행해야 합니다. 각 작업에는 상태(**1**)가 표시됩니다. **AAPS**가 동작을 기록하면 주황색 "**아직 완료되지 않았습니다.**"가 "**완료되었습니다, 잘 하셨습니다!**"로 바뀝니다. 특정 동작을 아직 잘 모르는 경우, 작업 아래의 **힌트**(**2**)를 눌러 관련 문서를 여십시오.
 
-![Screenshot objective 2](../images/Objective2_V2_5.png)
+![목표 2 스크린샷](../images/Objective2_V2_5.png)
 
-Tasks to complete **Objective 2** are:
-- Set your **Profile** to 90% for a duration of 10 min.
-  - _Hint_: Tap your Profile name on the main screen to open the **Profile** screen, then use the **Activate** (▶) button and set percentage and duration. More information in [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Note_: **AAPS** does not accept basal rates below 0.05U/hr. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Switch back to your normal **Profile** after completing this task.
-- Simulate "taking a shower" by [disconnecting your pump](#AapsScreens-loop-status) in **AAPS** for a duration of 1h.
-  - _Hint_: press the loop icon on the main screen to open the Loop dialog, then choose a duration under **Disconnect pump**.
-- End "taking a shower" by reconnecting your pump.
-  - _Hint_: press the "disconnected"-icon to open the loop dialog again and choose **Reconnect Pump**.
-- Set a custom [**Temporary Target**](../DailyLifeWithAaps/TempTargets.md) with a duration of 10 min.
-  - _Hint_: press the target range on the main screen to bring up the temporary target screen.
-- Display the **Loop** plugin's content.
-  - _Hint_: open **Configuration → Loop** and tap "**Open plugin**".
-- Use scroll or zoom on the BG chart to look at larger or smaller time frames.
+**목표 2**를 완료하기 위한 작업은 다음과 같습니다:
+- **프로파일**을 10분 동안 90%로 설정합니다.
+  - _힌트_: 메인 화면에서 프로파일 이름을 눌러 **프로파일** 화면을 연 다음, **활성화**(▶) 버튼을 사용하여 퍼센트와 기간을 설정하십시오. 자세한 내용은 [프로파일 전환과 프로파일 퍼센트](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)를 참조하십시오.
+  - _참고_: **AAPS**는 0.05U/hr 미만의 기저 주입량을 받아들이지 않습니다. **프로파일**에 0.05U/hr 이하의 주입량이 있으면, 이 작업을 완료하기 전에 기저 주입량이 더 높은 임시 **프로파일**을 만들어야 합니다. 이 작업을 완료한 후 평소의 **프로파일**로 다시 전환하십시오.
+- **AAPS**에서 1시간 동안 [펌프 연결을 해제](#AapsScreens-loop-status)하여 "샤워하기"를 시뮬레이션합니다.
+  - _힌트_: 메인 화면에서 루프 아이콘을 눌러 루프 대화 상자를 연 다음, **펌프 연결 해제** 아래에서 기간을 선택하십시오.
+- 펌프를 다시 연결하여 "샤워"를 끝내십시오.
+  - _힌트_: "연결 해제됨" 아이콘을 눌러 루프 대화 상자를 다시 열고 **펌프 재연결**을 선택하십시오.
+- 기간이 10분인 사용자 지정 [**임시 목표**](../DailyLifeWithAaps/TempTargets.md)를 설정합니다.
+  - _힌트_: 메인 화면에서 목표 범위를 눌러 임시 목표 화면을 여십시오.
+- **루프** 플러그인의 내용을 표시합니다.
+  - _힌트_: **구성 → 루프**를 열고 "**플러그인 열기**"를 누르십시오.
+- 혈당 차트에서 스크롤 또는 확대/축소를 사용하여 더 길거나 더 짧은 시간 범위를 보십시오.
 
 
 (objectives-objective3)=
 ## Objective 3: Prove your knowledge
 
-**Objective 3** requires the user to pass a multiple-choice exam which is designed to test your **AAPS** knowledge.
+**목표 3**에서는 **AAPS** 지식을 확인하기 위한 객관식 시험을 통과해야 합니다.
 
-Some users find **Objective 3** to be the most difficult objective to complete. Please read the **AAPS** documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group for "Objective 3" (because it is likely that your question has been asked before - and answered by the group). These groups can provide friendly hints, or redirect you to the relevant part of the **AAPS** documents.
+일부 사용자는 **목표 3**을 가장 완료하기 어려운 목표라고 생각합니다. 질문과 함께 **AAPS** 문서를 읽으십시오. **AAPS** 문서를 찾아본 뒤에도 정말 막혔다면 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 또는 [Discord](https://discord.gg/4fQUWHZ4Mw) 그룹에서 "Objective 3"(목표 3)를 검색하십시오. 같은 질문이 이전에 나왔고 그룹에서 답을 했을 가능성이 높습니다. 이 그룹들은 친절한 힌트를 주거나 **AAPS** 문서의 관련 부분을 알려 줄 수 있습니다.
 
-In the meantime :
-- To reduce the number of notifications / decisions you are asked to make (temporary basal rates) while in Open Loop, set a wide target range in your **Profile** _e.g._ 90 - 150 mg/dL or 5.0 - 8.5 mmol/L.
-- You might want to set a wider upper limit, or even disable Open Loop, at night.
+그동안:
+- 개방 루프에서 받는 알림 / 결정해야 하는 횟수(임시 기저 주입량)를 줄이려면 **프로파일**에서 목표 범위를 넓게 설정하십시오. _예:_ 90 - 150 mg/dL 또는 5.0 - 8.5 mmol/L.
+- 밤에는 상한을 더 넓게 설정하거나, 개방 루프를 아예 끄는 것이 좋을 수 있습니다.
 
-To proceed with **Objective 3**, tap a question row to open it. Please read each question carefully and select your answer(s).
+**목표 3**을 진행하려면 질문 행을 눌러 여십시오. 각 질문을 주의 깊게 읽고 답을 선택하십시오.
 
-For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for 1 hour before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
+질문마다 정답이 둘 이상일 수 있습니다! 틀린 답을 선택하면 그 질문은 1시간 동안 잠기며, 그 후에 다시 답할 수 있습니다. 다음에 다시 답할 때는 답의 순서가 바뀌어 있을 수 있습니다. 이는 답을 주의 깊게 읽고 각 답이 맞는지 틀리는지를 제대로 이해하도록 하기 위한 것입니다.
 
 ```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: note
-From time to time, new features are added to **AAPS** which may require a new question to be added to the **Objectives**, particularly **Objective 3**. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other **Objectives** remain completed.
+**AAPS**에 새 기능이 추가되면 때때로 **목표**, 특히 **목표 3**에 새 질문을 추가해야 할 수 있습니다. 따라서 **목표 3**에 새로 추가된 질문은 "미완료"로 표시됩니다. **AAPS**가 이 질문에 답하도록 요구하기 때문입니다. 걱정하지 마십시오. 각 **목표**는 서로 독립되어 있으므로, 다른 **목표**가 완료 상태로 남아 있으면 **AAPS의 기존 기능을 잃지 않습니다**.
 ```
 
-## Objective 4: Starting on an open loop
+## 목표 4: 개방 루프 시작
 
-The purpose of **Objective 4** is to recognize how often **AAPS** will evaluate the user's basal rate against glucose levels, and recommend temporary basal rate adjustments. As part of this **Objective**, you will activate open looping for the first time, and will accept 20 proposed temporary basal rate changes, and if required, apply these manually on your pump. You will also observe the impact of [**Temporary Targets**](../DailyLifeWithAaps/TempTargets.md). If you are not familiar with setting a temporary basal rate change in **AAPS** yet, see the pump actions in the **Manage** sheet ([Where did the Actions tab go?](#screens-action-tab)).
+**목표 4**의 목적은 **AAPS**가 얼마나 자주 사용자의 기저 주입량을 혈당 수치와 비교하여 평가하고, 임시 기저 주입량 조정을 권장하는지 알아보는 것입니다. 이 **목표**에서는 처음으로 개방 루프를 활성화하고, 제안된 임시 기저 주입량 변경을 20번 승인합니다. 필요하면 이 변경을 펌프에 직접 적용합니다. [**임시 목표**](../DailyLifeWithAaps/TempTargets.md)의 영향도 관찰합니다. **AAPS**에서 임시 기저 주입량 변경을 설정하는 방법을 아직 잘 모른다면 **관리** 시트의 펌프 동작을 보십시오([동작 탭은 어디로 갔습니까?](#screens-action-tab)).
 
-The minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective**, even if all basal rate changes were enacted already.
+이 목표를 완료하는 데 필요한 최소 시간: **7일**. 이것은 필수 대기 시간입니다. 모든 기저 주입량 변경을 이미 실행했더라도 다음 **목표**로 넘어갈 수 없습니다.
 
-- Select Open Loop by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Open Loop** as running mode.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Ensure these basal rate adjustments show up in **AAPS** and **Nightscout**.
-- Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
-- If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
+- 메인 화면에서 [루프 아이콘](#AapsScreens-loop-status)을 누르고 실행 모드로 **개방 루프**를 선택하여 개방 루프를 선택하십시오.
+- 7일 동안 임시 기저 주입량 제안을 최소 20번 직접 실행하십시오. 제안을 (실제) 펌프에 입력하고, AAPS에서 제안을 수락했다고 확인하십시오. 이 기저 주입량 조정이 **AAPS**와 **Nightscout**에 표시되는지 확인하십시오.
+- 필요할 때 [**임시 목표**](../DailyLifeWithAaps/TempTargets.md)를 사용하십시오. 저혈당을 처치한 후에는 미리 정의된 "저혈당 임시 목표"를 사용하여, 혈당이 반등할 때 시스템이 과잉 교정하지 않도록 하십시오.
+- 이 시점에 아직 [간단 모드](#preferences-simple-mode)를 사용하고 있다면, 지금 끄는 것이 좋습니다.
 
-To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. The higher the value, the fewer change notifications you will receive.
+개방 루프에서 제안되는 기저 주입량 변경 횟수를 줄이려면 [**목표 3**](#objectives-objective3)에 설명된 팁을 계속 사용할 수 있습니다. 또한 **설정 → 루프**의 "**개방 루프 최소 변경량**" 설정으로 권장 기저 주입량 변경의 최소 퍼센트를 바꿀 수 있습니다. 값이 클수록 변경 알림을 더 적게 받습니다.
 
-![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
+![개방 루프 최소 변경량 요청](../images/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
 
-You don't need to action each and every system recommendation!
+시스템의 권장 사항을 하나하나 모두 실행할 필요는 없습니다!
 ```
 (objectives-objective5)=
-## Objective 5: Understanding your open loop, including its temp basal recommendations
+## 목표 5: 임시 기저 추천을 포함하여 개방 루프 이해하기
 
-As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](#aaps-screens-how-predictions-become-a-dosing-decision), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at the detailed calculations shown on the **OpenAPS SMB** plugin screen (**Configuration → APS → Open plugin**).
+**목표 5**에서는 임시 기저 권장 값이 어떻게 계산되는지 이해하기 시작합니다. 여기에는 [기저 결정 로직](#aaps-screens-how-predictions-become-a-dosing-decision), [**AAPS 개요**의 예측 선](#aaps-screens-prediction-lines)(또는 Nightscout)을 관찰하여 영향을 분석하는 것, 그리고 **OpenAPS SMB** 플러그인 화면(**구성 → APS → 플러그인 열기**)에 표시되는 자세한 계산을 살펴보는 것이 포함됩니다.
 
-Estimated time to complete this objective: **7 days**.
+이 목표를 완료하는 데 예상되는 시간: **7일**.
 
-This **Objective** requires you to determine and set your “Maximum basal rate” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). This value can be set in [Settings → OpenAPS SMB](#Preferences-openaps-smb-settings). In [simple mode](#preferences-simple-mode), **AAPS** sets this value automatically and you don't need to change it. If you are still using a virtual pump, make sure this safety setting is set in both **AAPS** and your insulin pump.
+이 **목표**에서는 [OpenAPS 기능](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)에 설명된 대로 "최대 기저 주입량"(max-basal) 값을 정하고 설정해야 합니다. 이 값은 [설정 → OpenAPS SMB](#Preferences-openaps-smb-settings)에서 설정할 수 있습니다. [간단 모드](#preferences-simple-mode)에서는 **AAPS**가 이 값을 자동으로 설정하므로 바꿀 필요가 없습니다. 아직 가상 펌프를 사용하는 경우, 이 안전 설정을 **AAPS**와 인슐린 펌프 양쪽에 모두 설정했는지 확인하십시오.
 
-You might wish to set your [**Profile** BG target](#profile-glucose-targets) higher than usual until you are comfortable with **AAPS**' calculations and settings. You may wish to experiment with adjusting your **BG target** in your **Profile** being in a tighter range (say, 1 or less mmol/L [20 mg/dL or less] wide) and observe the resulting behavior.
+**AAPS**의 계산과 설정에 익숙해질 때까지 [**프로파일** 혈당 목표](#profile-glucose-targets)를 평소보다 높게 설정하는 것이 좋을 수 있습니다. **프로파일**의 **혈당 목표**를 더 좁은 범위(예: 폭이 1 mmol/L 이하 [20 mg/dL 이하])로 조정해 보고 그 결과를 관찰해 볼 수 있습니다.
 
-![Stop sign](../images/sign_stop.png)
+![정지 표지판](../images/sign_stop.png)
 
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-If you are open looping with a virtual pump **stop here**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
+가상 펌프로 개방 루프를 사용하는 경우 **여기에서 멈추십시오**. 인슐린을 주입하는 "실제" 펌프로 바꾼 후에만 이 **목표**의 마지막에서 **확인**을 누르십시오.
 
 ```
 
-![blank](../images/blank.png)
+![빈 이미지](../images/blank.png)
 
 (objectives-objective6)=
-## Objective 6: Starting to close the loop with Low Glucose Suspend
+## 목표 6: 저혈당 주입 정지(LGS)로 폐쇄 루프 시작
 
-![Warning sign](../images/sign_warning.png)
+![경고 표지판](../images/sign_warning.png)
 ```{admonition} Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
 :class: note
-You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
+높은 혈당 값은 여전히 직접 교정해야 합니다(펌프나 펜으로 수동 교정)!
 ```
 
-As part of **Objective 6** you will close the loop and activate its **Low Glucose Suspend** (LGS) mode while [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero. You have to remain in LGS mode for 5 days to complete this **objective**. You should use this time to check if your **Profile** settings are accurate and LGS events are not triggered too often.
+**목표 6**에서는 [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)가 0으로 설정된 상태에서 루프를 닫고 **저혈당 주입 정지**(LGS) 모드를 활성화합니다. 이 **목표**를 완료하려면 LGS 모드로 5일 동안 지내야 합니다. 이 기간 동안 **프로파일** 설정이 정확한지, LGS 이벤트가 너무 자주 발생하지 않는지 확인하십시오.
 
-Minimal time to complete this objective: **5 days**. This is a mandatory wait time. You cannot proceed to the next **Objective** before this time is up.
+이 목표를 완료하는 데 필요한 최소 시간: **5일**. 이것은 필수 대기 시간입니다. 이 시간이 지나기 전에는 다음 **목표**로 넘어갈 수 없습니다.
 
-It is crucial that your current **Profile** (basal, ISF, IC) have been well tested before you close your loop in **LGS** mode. Incorrect **Profile** settings might force you into hypo situations which have to be treated manually. An accurate **Profile** will help reduce the need for low glucose treatments during the 5 days period.
+**LGS** 모드로 루프를 닫기 전에 현재 **프로파일**(기저, ISF, IC)을 충분히 테스트하는 것이 매우 중요합니다. **프로파일** 설정이 잘못되면 저혈당 상황이 생길 수 있고, 이를 직접 처치해야 합니다. 정확한 **프로파일**은 5일 동안 저혈당 처치가 필요한 경우를 줄이는 데 도움이 됩니다.
 
-**If you still observe frequent or severe low glucose episodes consider refining your [insulin type's DIA](#Config-Builder-insulin-dia), basal, ISF and carb ratios.** Please refer to the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group which has much discussion on this.
+**저혈당이 여전히 자주 또는 심하게 생기면 [인슐린 종류의 DIA](#Config-Builder-insulin-dia), 기저, ISF, 탄수화물 비율을 다듬는 것을 고려하십시오.** 이에 대한 논의가 많은 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 또는 [Discord](https://discord.gg/4fQUWHZ4Mw) 그룹을 참조하십시오.
 
 
-During **Objective 6**, **AAPS** will override the maxIOB setting to zero. **This override will end when moving to Objective 7.**
+**목표 6** 동안 **AAPS**는 maxIOB 설정을 0으로 덮어씁니다. **이 덮어쓰기는 목표 7로 넘어가면 끝납니다.**
 
-This means that when you are on **Objective 6**, if sensor glucose levels are dropping, **AAPS** will reduce your basal insulin delivery for you. But, if sensor glucose levels are rising, **AAPS** will increase the basal rate above your **Profile** value only if **basal IOB** is negative as a result of a previous **LGS**. Otherwise, **AAPS** will not increase basal above your current profile value, even if glucose levels are rising. This caution is to avoid hypos as you are learning to use **AAPS**.
+즉, **목표 6**에 있을 때 센서 혈당 수치가 떨어지면 **AAPS**가 기저 인슐린 주입을 줄여 줍니다. 하지만 센서 혈당 수치가 오르는 경우, **AAPS**는 이전 **LGS** 때문에 **기저 IOB**가 음수일 때에만 기저 주입량을 **프로파일** 값보다 높입니다. 그 밖의 경우에는 혈당 수치가 오르더라도 **AAPS**는 기저를 현재 프로파일 값보다 높이지 않습니다. 이렇게 조심하는 이유는 **AAPS** 사용법을 배우는 동안 저혈당을 피하기 위해서입니다.
 
-**As a consequence, you have to handle high glucose values with manual insulin bolus corrections.**
+**따라서 높은 혈당 값은 수동 인슐린 교정 볼러스로 처리해야 합니다.**
 
-- If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
+- IOB가 음수이면(아래 스크린샷 참조) **목표 6**에서 임시 기저 주입량(TBR) > 100%가 실행될 수 있습니다.
 
-![Example negative IOB](../images/Objective6_negIOB.png)
+![음수 IOB의 예](../images/Objective6_negIOB.png)
 
-- Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
-- Enable 'Low Glucose Suspend' mode by pressing the Loop icon on the main screen and choosing **Low Glucose Suspend** as running mode.
-- Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
-- You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
+- 안전을 위해, 그리고 안전 여유를 두기 위해 목표 범위를 평소 목표보다 조금 높게 설정하십시오.
+- 메인 화면에서 루프 아이콘을 누르고 실행 모드로 **저혈당 주입 정지**를 선택하여 '저혈당 주입 정지' 모드를 활성화하십시오.
+- 개요 화면의 청록색 기저 텍스트나 개요 그래프의 청록색 기저 표시를 보고 활성 임시 기저를 확인하십시오.
+- 저혈당을 처치한 후 반등 시 기저를 늘릴 수 없으므로 일시적으로 혈당이 급상승할 수 있습니다.
 
 (objectives-objective7)=
-## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
+## 목표 7: 폐쇄 루프 조정, maxIOB를 0보다 높이고 혈당 목표를 점차 낮추기
 
-To complete **Objective 7** you have to close your loop and raise your [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS** will start to use your defined maxIOB value to correct high glucose values. In [simple mode](#preferences-simple-mode), **AAPS** sets maxIOB automatically and you don't need to change it.
+**목표 7**을 완료하려면 루프를 닫고 [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)를 올려야 합니다. **목표 6**에서는 저혈당 주입 정지 모드 때문에 **maxIOB**가 자동으로 0이 되었습니다. 이제는 더 이상 그렇지 않습니다. **AAPS**는 높은 혈당 값을 교정하기 위해 사용자가 정한 maxIOB 값을 사용하기 시작합니다. [간단 모드](#preferences-simple-mode)에서는 **AAPS**가 maxIOB를 자동으로 설정하므로 바꿀 필요가 없습니다.
 
-Minimal time to complete this objective: **1 day**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
+이 목표를 완료하는 데 필요한 최소 시간: **1일**. 이것은 필수 대기 시간입니다. 이 기간이 지나기 전에는 다음 **목표**로 넘어갈 수 없습니다.
 
-- Select **Closed Loop** by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Closed Loop** as running mode. Stay in **Closed Loop** over a period of 1 day.
+- 메인 화면에서 [루프 아이콘](#AapsScreens-loop-status)을 누르고 실행 모드로 **폐쇄 루프**를 선택하여 **폐쇄 루프**를 선택하십시오. 1일 동안 **폐쇄 루프**로 지내십시오.
 
-- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
+- 'SMB 최대 IOB'(OpenAPS에서는 'max-iob')를 0보다 천천히 높이면서, 자신에게 가장 잘 맞는 설정을 찾으십시오.
 
-The default recommendation for this setting is “**average meal bolus + 3x max daily basal**”, where “max daily basal” is the maximum hourly value in any time segment of the day.
+이 설정의 기본 권장 값은 "**평균 식사 볼러스 + 3 x 하루 최대 기저**"입니다. 여기서 "하루 최대 기저"는 하루 중 모든 시간대에서 시간당 가장 높은 값입니다.
 
-![max daily basal](../images/MaxDailyBasal2.png)
+![하루 최대 기저](../images/MaxDailyBasal2.png)
 
-This recommendation should be seen as a starting point. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
-* lower the "Max IOB for SMB" value;
-* review your **Profile** settings, only making one adjustment at a time.
+이 권장 사항은 출발점으로 보아야 합니다. 이 규칙을 사용하는데 혈당이 오를 때 AAPS가 인슐린을 너무 많이 주입한다면 다음이 필요할 수 있습니다:
+* "SMB 최대 IOB" 값을 낮추십시오;
+* **프로파일** 설정을 검토하십시오. 한 번에 하나씩만 조정하십시오.
 
-Alternatively, if you are very insulin resistant, raise the **maxIOB** value very cautiously.
+또는 인슐린 저항성이 매우 높다면 **maxIOB** 값을 아주 조심스럽게 올리십시오.
 
-Once confident on how much **maxIOB** suits your looping patterns, lower your **BG targets** to your desired level.
+어느 정도의 **maxIOB**가 자신의 루프 패턴에 맞는지 확신이 들면, **혈당 목표**를 원하는 수준으로 낮추십시오.
 
 (objectives-objective8)=
-## Objective 8: Adjust basals and ratios if needed, and then enable Autosens
+## 목표 8: 필요하면 기저와 비율을 조정한 다음 Autosens 활성화
 
-As part of this **objective**, you will revisit your **Profile**'s performance and will use [Autosens](#Open-APS-features-autosens) functionality as an indicator for wrong settings.
+이 **목표**에서는 **프로파일**의 성능을 다시 점검하고, 잘못된 설정을 알려 주는 지표로 [Autosens](#Open-APS-features-autosens) 기능을 사용합니다.
 
-Minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
+이 목표를 완료하는 데 필요한 최소 시간: **7일**. 이것은 필수 대기 시간입니다. 이 기간이 지나기 전에는 다음 **목표**로 넘어갈 수 없습니다.
 
-Enable [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days (in [simple mode](#preferences-simple-mode) it is enabled by default) and watch [**Overview**'s graph white line](#AapsScreens-section-g-additional-graphs) showing your insulin sensitivity rising or falling due to exercise or hormones etc. Keep an eye on the **OpenAPS SMB** plugin screen (**Configuration → APS → Open plugin**) which shows **AAPS** adjusting the sensitivity, basals and targets accordingly.
+7일 동안 [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md)를 활성화하고([간단 모드](#preferences-simple-mode)에서는 기본으로 활성화되어 있음), 운동이나 호르몬 등으로 인슐린 민감도가 오르내리는 것을 보여 주는 [**개요** 그래프의 흰색 선](#AapsScreens-section-g-additional-graphs)을 지켜보십시오. **OpenAPS SMB** 플러그인 화면(**구성 → APS → 플러그인 열기**)을 계속 살펴보십시오. 이 화면에서 **AAPS**가 민감도, 기저, 목표를 그에 맞게 조정하는 것을 볼 수 있습니다.
 
-This is a good time to review your settings for [Sensitivity Detection](#Config-Builder-sensitivity-detection). You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs).
+지금이 [민감도 감지](#Config-Builder-sensitivity-detection) 설정을 검토하기에 좋은 때입니다. 메인 화면의 [추가 그래프](#AapsScreens-section-g-additional-graphs)에서 민감도를 볼 수 있습니다.
 
-Additionally, you can use [Autotune](#autotune-how-autotune-calculates-adjustments) as a one off to check your basals remain accurate or do a traditional basal test.
+또한 [Autotune](#autotune-how-autotune-calculates-adjustments)을 한 번 사용하여 기저가 여전히 정확한지 확인하거나, 전통적인 기저 테스트를 할 수 있습니다.
 
 (objectives-objective9)=
-## Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+## 목표 9: 낮 시간 사용을 위한 추가 oref1 기능(예: 슈퍼 마이크로 볼러스(SMB)) 활성화
 
-In **Objective 9**, you will tackle and use **"Super Micro Bolus (SMB)"** as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, and why basal is set to zero temporarily after SMBs are given (zero-temping).
+**목표 9**에서는 핵심 기능의 하나인 **"슈퍼 마이크로 볼러스(SMB)"**를 익히고 사용합니다. 필수 자료를 읽고 나면 SMB가 무엇인지, 어떻게 작동하는지, 그리고 SMB를 준 후 왜 기저를 일시적으로 0으로 설정하는지(0 임시 기저, zero-temping) 잘 이해하게 됩니다.
 
-Minimal time to complete this objective: **28 days**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+이 목표를 완료하는 데 필요한 최소 시간: **28일**. 이것은 필수 대기 시간입니다. 이 시간이 끝나기 전에는 다음 목표로 넘어갈 수 없습니다.
 
-- The [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand **SMB** and the concept of **zero-temping**.
-- Once done, you can [raise maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) to get **SMBs** working more effectively. maxIOB now includes all **IOB**, not just accumulated basal. This threshold pauses **SMBs** until IOB drops below this value (_e.g._ **maxIOB** is set to 7U and a bolus of 8U is given to cover a meal: SMBs will be paused and not given unless **IOB** drops below 7U). A good start is setting **maxIOB** = **average meal bolus + 3x max daily basal** where "max daily basal" is the maximum hourly value in any time segment of the day. See [objective 7](#objectives-objective7) as reference.
-- Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Settings → Absorption settings → min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
+- **SMB**와 **0 임시 기저(zero-temping)** 개념을 이해하려면 [이 문서의 SMB 섹션](#Open-APS-features-super-micro-bolus-smb)과 [openAPS 문서의 oref1 설명](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)을 꼭 읽어야 합니다.
+- 다 읽은 후 **SMB**가 더 효과적으로 작동하도록 [maxIOB를 올릴](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) 수 있습니다. 이제 maxIOB에는 쌓인 기저뿐만 아니라 모든 **IOB**가 포함됩니다. 이 임계값은 IOB가 이 값 아래로 떨어질 때까지 **SMB**를 멈춥니다(_예:_ **maxIOB**가 7U로 설정되어 있고 식사를 위해 8U 볼러스를 주입하면, **IOB**가 7U 아래로 떨어질 때까지 SMB가 멈추고 주입되지 않습니다). 좋은 시작 값은 **maxIOB** = **평균 식사 볼러스 + 3 x 하루 최대 기저**입니다. 여기서 "하루 최대 기저"는 하루 중 모든 시간대에서 시간당 가장 높은 값입니다. 참고로 [목표 7](#objectives-objective7)을 보십시오.
+- 탄수화물 흡수 속도를 평가하고, 너무 느리거나 너무 빠르다고 생각되면 [설정 → 흡수 설정 → min_5m_carbimpact](#Preferences-min_5m_carbimpact)에서 "min_5m_carbimpact" 매개 변수를 바꾸는 것을 고려하십시오.
 
 (objectives-objective10)=
-## Objective 10: Automation
+## 목표 10: 자동화
 
-**Automations** become available when **Objective 10** is started.
+**목표 10**을 시작하면 **자동화**를 사용할 수 있습니다.
 
-Minimal time to complete this objective: **28 days**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+이 목표를 완료하는 데 필요한 최소 시간: **28일**. 이것은 필수 대기 시간입니다. 이 시간이 끝나기 전에는 다음 목표로 넘어갈 수 없습니다.
 
-Read the documentation page [Automation](../DailyLifeWithAaps/Automations.md) first.
+먼저 [자동화](../DailyLifeWithAaps/Automations.md) 문서 페이지를 읽으십시오.
 
-Set up the most basic automation rule; for example trigger an Android notification in a few minutes:
-- Open **Manage → Automation** and tap the **+** button (**Add rule**).
-- Enter a **Task name**, for example "My first automation notification".
-- Under **Condition**, tap "**EDIT**".
-  - Tap "**Add trigger**" and select "**Time**". **AAPS** creates an entry for today at the current time.
-  - Change the time so that it triggers in a few minutes.
-  - Tap the **Save** icon (top right) to go back to the rule.
-- Under **Action**, tap "**ADD**" and select "**Notification**".
-  - Enter a message in the action card, for example "My first automation".
-- Tap the **Save** icon (top right) and make sure the rule is **Enabled**.
-- Wait until the time triggers the notification (note that depending on your phone, it can be a few minutes late)
+가장 기본적인 자동화 규칙을 설정하십시오. 예를 들어 몇 분 후에 Android 알림을 실행하는 규칙입니다:
+- **관리 → 자동화**를 열고 **+** 버튼(**규칙 추가하기**)을 누르십시오.
+- **작업명**을 입력하십시오. 예: "나의 첫 자동화 알림".
+- **조건** 아래에서 "**편집**"을 누르십시오.
+  - "**트리거 추가**"를 누르고 "**시간**"을 선택하십시오. **AAPS**가 오늘 현재 시간으로 항목을 만듭니다.
+  - 몇 분 후에 실행되도록 시간을 바꾸십시오.
+  - **저장** 아이콘(오른쪽 위)을 눌러 규칙으로 돌아가십시오.
+- **동작** 아래에서 "**추가**"를 누르고 "**알림**"을 선택하십시오.
+  - 동작 카드에 메시지를 입력하십시오. 예: "나의 첫 자동화".
+- **저장** 아이콘(오른쪽 위)을 누르고 규칙이 **활성화됨** 상태인지 확인하십시오.
+- 설정한 시간에 알림이 올 때까지 기다리십시오(휴대폰에 따라 몇 분 늦을 수 있습니다)
 
-You can then experiment with setting up a more useful **Automation**. The documentation page gives a few examples, and you can search for "Automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. There is also a dedicated channel in the [Discord](https://discord.gg/4fQUWHZ4Mw) community.
+그다음 더 유용한 **자동화**를 설정해 볼 수 있습니다. 문서 페이지에 몇 가지 예가 있으며, [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 그룹에서 "Automation" 스크린샷을 검색할 수도 있습니다. [Discord](https://discord.gg/4fQUWHZ4Mw) 커뮤니티에도 전용 채널이 있습니다.
 
-For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
+예를 들어 매일 아침 학교나 직장에 가기 전에 같은 시간에 같은 아침 식사를 한다면, "아침 식사 전 목표" 같은 **자동화**를 만들어 아침 식사 30분 전에 조금 낮은 **임시 목표**를 설정할 수 있습니다. 이 경우 조건에는 보통 "반복 시간"이 들어가며, 특정 요일(월, 화, 수, 목, 금)과 특정 시간(오전 06:30)을 선택합니다. 동작은 평소보다 낮은 목표 값과 30분 지속 시간으로 "임시 목표 시작"을 하는 것입니다.
 
-## When all objectives are completed
+## 모든 목표를 완료한 경우
 
-Once you have accomplished all the **Objectives**, the list shows each of them with a tick and the date it was accomplished. The **Objectives** item disappears from the bottom navigation; you can still open the list with **Configuration → Constraints → Objectives → Open plugin**.
+모든 **목표**를 완료하면, 목록에 각 목표가 체크 표시와 완료 날짜와 함께 표시됩니다. **목표** 항목은 하단 내비게이션에서 사라집니다. **구성 → 제한 → 목표 → 플러그인 열기**로 목록을 계속 열 수 있습니다.
 
-![All objectives accomplished](../images/objectives/objectives_completed.png)
+![모든 목표 완료](../images/objectives/objectives_completed.png)
 
-Press "**More**" under an objective to see its tasks again:
+목표 아래의 "**펼치기**"를 누르면 그 목표의 작업을 다시 볼 수 있습니다:
 
-![Details of an accomplished objective](../images/objectives/objective_1_details.png)
+![완료한 목표의 자세한 내용](../images/objectives/objective_1_details.png)
 
 (CompletingTheObjectives-go-back-in-objectives)=
-## Go back in objectives
+## 이전 목표로 돌아가기
 
-If you wish to go back in the **Objectives** for whatever reason, open the finished **Objective** with "**More**" and tap "**Reset finished state**":
+어떤 이유로든 **목표**를 되돌리려면, "**펼치기**"로 완료한 **목표**를 열고 "**완료 상태 초기화**"를 누르십시오:
 
-![Go back in objectives](../images/Objective_ClearFinished.png)
+![이전 목표로 돌아가기](../images/Objective_ClearFinished.png)
 
-In the same way, the **Objective** you are currently working on can be restarted with "**Reset started state**".
+같은 방법으로, 지금 진행 중인 **목표**는 "**시작 상태 초기화**"로 다시 시작할 수 있습니다.
