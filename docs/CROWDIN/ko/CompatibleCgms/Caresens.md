@@ -1,29 +1,29 @@
 # CareSens
 
-There are different ways to use CareSens data with **AAPS**:
+**AAPS**에서 CareSens 데이터를 사용하는 방법은 여러 가지가 있습니다:
 
 - xDrip
 - Juggluco
 
-**Note:** You do not need the Sens365 follower app to connect to AAPS.
+**참고:** AAPS에 연결하기 위해 Sens365 팔로워 앱은 필요하지 않습니다.
 
 ## 1. xDrip
 
-1. Install and set up the official CareSens app.
-2. In CareSens app, go to settings -> Manage Data and Connections -> turn on xDrip switch. If preferred, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others".
+1. 공식 CareSens 앱을 설치하고 설정하십시오.
+2. CareSens 앱에서 설정 -> Manage Data and Connections -> 로 이동하여 xDrip 스위치를 켜십시오. 원하면 "others"에서 CareLevo, DIA:CONN, CloudLoop 등으로의 데이터 연결을 끌 수 있습니다.
 
-![CareSens App Data Connections](../images/eversenseapp-dataconnections.png)
+![CareSens 앱 데이터 연결](../images/eversenseapp-dataconnections.png)
 
 
-2. Install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
-3. In xDrip, go to settings -> hardware data source, select `Companion App` as data source.
-4. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+2. xDrip을 설치하십시오: [xDrip](https://github.com/NightscoutFoundation/xDrip).
+3. xDrip에서 settings -> hardware data source 로 이동하여 데이터 소스로 `Companion App`을 선택하십시오.
+4. **AAPS**의 [**구성 → 혈당 출처**](#Config-Builder-bg-source)에서 xDrip을 선택하십시오.
 
 
 ## 2. Juggluco
 
-1. Install the Juggluco app.
-2. In Juggluco, open the left menu and select `Photo`
-3. Scan the QR code on the package of the sensor.
-4. In left menu -> settings -> exchange data make sure xDrip broadcast is turned on.
-5. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+1. Juggluco 앱을 설치하십시오.
+2. Juggluco에서 왼쪽 메뉴를 열고 `Photo`를 선택하십시오.
+3. 센서 포장에 있는 QR 코드를 스캔하십시오.
+4. 왼쪽 메뉴 -> settings -> exchange data 에서 xDrip broadcast가 켜져 있는지 확인하십시오.
+5. **AAPS**의 [**구성 → 혈당 출처**](#Config-Builder-bg-source)에서 xDrip을 선택하십시오.
