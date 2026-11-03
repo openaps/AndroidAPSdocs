@@ -1,195 +1,195 @@
-# Reviewing your data
+# Granska dina data
 
-## AAPS History Browser
+## Historikläsaren i AAPS
 
-**AAPS** keeps all your history (**BG**, treatments, basal, targets, **Profile Switch**, …) in a local database on the phone. This database is not part of the [settings export](../Maintenance/ExportImportSettings.md). You can review it in **AAPS** itself with the **History browser** and the **Statistics** screen described below. For long-term reviews and reports, upload your data to [Nightscout](../SettingUpAaps/Nightscout.md) or [Tidepool](../SettingUpAaps/Tidepool.md).
+**AAPS** sparar all din historik (**BG**, behandlingar, basal, målvärden, **Profilbyte**, …) i en lokal databas på telefonen. Databasen ingår inte i [exporten av inställningar](../Maintenance/ExportImportSettings.md). Du kan granska den i **AAPS** med **Historikläsare** och skärmen **Statistik** som beskrivs nedan. För granskning och rapporter över längre tid kan du ladda upp dina data till [Nightscout](../SettingUpAaps/Nightscout.md) eller [Tidepool](../SettingUpAaps/Tidepool.md).
 
-**AAPS** history can be reviewed in the **History browser**: open the **menu** (☰) and select **History browser**.
+Historiken i **AAPS** kan granskas i **Historikläsare**: öppna **menyn** (☰) och välj **Historikläsare**.
 
-![History browser](../images/v4/Screens/history_browser.png)
+![Historikläsare](../images/v4/Screens/history_browser.png)
 
-- Tap the **date card** to pick the day you want to review.
-- The graphs open zoomed out to show the **whole selected day**. Pinch to zoom in on part of it.
-- Use the **<** and **>** arrows to move one day back or forward, and **Now** to return to the current day.
-- The graphs show the same data as the main screen graphs (BG, treatments, basal, IOB, COB, activity, deviations...).
+- Tryck på **datumkortet** för att välja den dag du vill granska.
+- Graferna öppnas utzoomade och visar **hela den valda dagen**. Nyp med två fingrar för att zooma in på en del av dagen.
+- Använd pilarna **<** och **>** för att gå en dag bakåt eller framåt, och **Nu** för att gå tillbaka till i dag.
+- Graferna visar samma data som graferna på huvudskärmen (BG, behandlingar, basal, IOB, COB, aktivitet, avvikelser ...).
 
 (reviewing-statistics)=
-## AAPS Statistics
+## Statistik i AAPS
 
-**AAPS** provides basic monitoring statistics.
+**AAPS** ger grundläggande statistik för uppföljning.
 
-Most values are referenced by ADA 2023 [recommendations](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes).
+De flesta värden bygger på [rekommendationerna](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes) från ADA 2023.
 
-To open them, open the **menu** (☰) and select **Statistics**.
+Öppna dem genom att öppna **menyn** (☰) och välja **Statistik**.
 
-![Menu with Statistics](../images/Maintenance/statistics.png)
+![Menyn med Statistik](../images/Maintenance/statistics.png)
 
-The **Statistics** screen has four tabs: **Insulin**, **Time in Range**, **Glucose** and **Cycle**. Tap a tab, or swipe left or right to move between them.
+Skärmen **Statistik** har fyra flikar: **Insulin**, **Tid i målområde**, **Glukos** och **Cykel**. Tryck på en flik, eller svep åt vänster eller höger för att byta flik.
 
 (reviewing-tdd)=
-### Insulin tab: Total Daily Dose
+### Fliken Insulin: Total daglig dos
 
-The **Total Daily Dose** card shows one line per day for the previous days (up to one week) for which **AAPS** has insulin data, then their **Average**, then **Today** so far. Right after installing **AAPS**, only **Today** is shown. The columns are:
+Kortet **Total daglig dos** visar en rad per dag för de senaste dagarna (upp till en vecka) som **AAPS** har insulindata för, sedan deras **Medel** och sist **Idag** hittills. Direkt efter att du har installerat **AAPS** visas bara **Idag**. Kolumnerna är:
 
-- **Basal**: only basal.
-- **Bolus**: the sum of bolus treatments and SMBs.
-- **TDD Total**: the Total Daily Dose of insulin (**TDD**), the sum of bolus and basal insulin delivered during the day.
-- **Carbs**: declared carbs and eCarbs treatments.
+- **Basal**: bara basal.
+- **Bolus**: summan av bolusbehandlingar och SMB:er.
+- **TDD totalt**: total daglig insulindos (**TDD**), summan av bolus- och basalinsulin som gavs under dagen.
+- **Kolhydrater**: angivna kolhydrater och eCarbs.
 
-The **TDD** section is calculated when you open the page and takes a few seconds to compute. Tap **Recalculate** to compute it again.
+Avsnittet **TDD** beräknas när du öppnar sidan, och beräkningen tar några sekunder. Tryck på **Räkna om** för att beräkna det igen.
 
-![Statistics: the Insulin tab with the Total Daily Dose](../images/Maintenance/statistics2.png)
+![Statistik: fliken Insulin med total daglig dos](../images/Maintenance/statistics2.png)
 
-The **TDD** is your bolus plus basal insulin per day. Some doctors use - especially for new pumpers - a basal-bolus ratio of 50:50: the total base basal (**TBB**, the sum of your basal rates over 24 hours) should then be about half of the TDD. Others prefer a TBB of 32 % to 37 % of the TDD.
+**TDD** är ditt bolus- plus basalinsulin per dag. Vissa läkare använder – särskilt för nya pumpanvändare – en fördelning mellan basal och bolus på 50:50: den totala basen för basal (**TBB**, summan av dina basaldoser under 24 timmar) bör då vara ungefär hälften av TDD. Andra föredrar en TBB på 32 % till 37 % av TDD.
 
-Like most rules of thumb, this is of limited real validity. Your diabetes may vary!
+Som de flesta tumregler har detta begränsad verklig giltighet. Din diabetes kan skilja sig från andras!
 
-### Time in Range tab
+### Fliken Tid i målområde
 
-Time In Range (**TIR**): 70-180 mg/dL or 3.9-10 mmol/L.
+Tid i målområde (**TIR**): 70-180 mg/dl eller 3,9-10 mmol/l.
 
-**TIR** information is available for 7 and 30 days, depending on the amount of data available within the **AAPS** database.
+Information om **TIR** finns för 7 och 30 dagar, beroende på hur mycket data som finns i databasen i **AAPS**.
 
-Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are available below (the screen shows this range as 70-141).
+Statistik för tid i snävt målområde (TITR) 70-140 mg/dl eller 3,9-7,8 mmol/l finns nedan (skärmen visar detta intervall som 70-141).
 
-**Discuss targets with your endo**
+**Diskutera målen med din diabetesläkare**
 
-Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
+Din diabetes kan skilja sig från andras. Diskutera alla föreslagna mål med din diabetesläkare eller ditt vårdteam. Om du använder statistiken i AAPS rätt kan den vara ett bra verktyg för att följa trender i __BG__ och se hur det går.
 
-![Statistics](../images/Maintenance/statistics3.png)
+![Statistik](../images/Maintenance/statistics3.png)
 
-Below, the **Dexcom TIR** card shows detailed 14 days **TIR** statistics.
+Längre ner visar kortet **Dexcom TIR** detaljerad statistik för **TIR** under 14 dagar.
 
-**SD**: Standard Deviation, an [indicator](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) of BG variability (the highest = the worst).
+**SD**: standardavvikelse, ett [mått](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) på hur mycket BG varierar (högst = sämst).
 
-HbA1c: the estimate of the resulting glycated hemoglobin, based on the average of CGM measurements. This is an indicative value that might not match blood HbA1c tests.
+HbA1c: en uppskattning av det glykerade hemoglobinet, baserad på medelvärdet av CGM-mätningarna. Detta är ett riktvärde som kanske inte stämmer med HbA1c från blodprov.
 
-![Statistics](../images/Maintenance/statistics4.png)
+![Statistik](../images/Maintenance/statistics4.png)
 
 (reviewing-statistics-agp)=
-### Glucose tab: Ambulatory Glucose Profile (AGP)
+### Fliken Glukos: ambulatorisk glukosprofil (AGP)
 
-The **Ambulatory Glucose Profile** (**AGP**) shows how your glucose usually moves over the day. Choose the period with the buttons at the top: **Today**, **24h**, **7d**, **30d** or **90d**.
+**Ambulatorisk glukosprofil** (**AGP**) visar hur ditt glukos brukar röra sig under dagen. Välj period med knapparna högst upp: **Idag**, **24h**, **7d**, **30d** eller **90d**.
 
-- **The chart**: one day from midnight to midnight. The line is the **Median** (half of your readings at that hour were lower, half were higher). Around it, one band holds the middle half of your readings (**25–75%**) and a wider band most of them (**10–90%**). A narrow band means your glucose is similar from day to day at that hour. Dashed lines mark your **LOW mark**, 140 mg/dL (7.8 mmol/L) and your **HIGH mark**.
-- **Glycemic overview**: the time spent in your range, in the tight range (70–140 mg/dL or 3.9–7.8 mmol/L), above your range and below it, then your **Average** and **Median** glucose. Your range is the **LOW mark** and **HIGH mark** set in [Range for visualization](#Preferences-range-for-visualization).
-- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings. Like the HbA1c above, they might not match your blood HbA1c tests.
-- **SD** (standard deviation) and **CV** (coefficient of variation): how much your glucose varies. A lower value means steadier glucose.
-- **Days**: how many days of CGM data were used.
+- **Diagrammet**: ett dygn från midnatt till midnatt. Linjen är **Medianvärde** (hälften av dina värden vid den timmen var lägre, hälften var högre). Runt linjen visar ett band den mittersta hälften av dina värden (**25–75%**) och ett bredare band de flesta av dem (**10–90%**). Ett smalt band betyder att ditt glukos är ungefär detsamma från dag till dag vid den timmen. Streckade linjer visar din **LÅG-markering**, 140 mg/dl (7,8 mmol/l) och din **HÖG-markering**.
+- **Glykemisk översikt**: tiden inom ditt målområde, inom det snäva målområdet (70–140 mg/dl eller 3,9–7,8 mmol/l), över ditt målområde och under det, sedan ditt **Medelvärde** och **Medianvärde** för glukos. Ditt målområde är **LÅG-markering** och **HÖG-markering** som ställs in i [Gränsvärden för visualisering](#Preferences-range-for-visualization).
+- **eA1c** och **GMI**: två uppskattningar av HbA1c som beräknas från dina CGM-värden. Precis som HbA1c ovan stämmer de kanske inte med HbA1c från dina blodprov.
+- **SD** (standardavvikelse) och **CV** (variationskoefficient): hur mycket ditt glukos varierar. Ett lägre värde betyder jämnare glukos.
+- **Dagar**: hur många dagar med CGM-data som användes.
 
-![Statistics: the Glucose tab with the AGP chart](../images/Maintenance/statistics_agp.png) ![Statistics: Glycemic overview and glucose metrics](../images/Maintenance/statistics_agp2.png)
+![Statistik: fliken Glukos med AGP-diagrammet](../images/Maintenance/statistics_agp.png) ![Statistik: Glykemisk översikt och glukosmått](../images/Maintenance/statistics_agp2.png)
 
-Below the AGP, the **Glucose Pentagon (CGP)** card draws five measures of your last 14 days of glucose as a pentagon. A smaller pentagon means better glucose control.
+Under AGP ritar kortet **Glukospentagon (CGP)** fem mått på ditt glukos under de senaste 14 dagarna som en femhörning. En mindre femhörning betyder bättre glukoskontroll.
 
-![Statistics: the Glucose Pentagon](../images/Maintenance/statistics_cgp.png)
+![Statistik: Glukospentagon](../images/Maintenance/statistics_cgp.png)
 
-### Cycle tab: TDD Cycle Pattern
+### Fliken Cykel: Cykliskt TDD-mönster
 
-**TDD Cycle Pattern** overlays your daily insulin totals in 28-day cycles, to help you spot recurring patterns. Each cycle is drawn as a line (**Individual cycles**), together with their average.
+**Cykliskt TDD-mönster** lägger dina dagliga insulinsummor ovanpå varandra i cykler på 28 dagar, så att du lättare ser mönster som återkommer. Varje cykel ritas som en linje (**Individuella cykler**), tillsammans med deras medelvärde.
 
-- **Raw TDD** / **Cleaned TDD**: choose the total daily dose as delivered, or the TDD minus insulin for carbs.
-- **Cycle offset**: moves the start of the cycle (0 to 27 days).
+- **Rå TDD** / **Filtrerad TDD**: välj total daglig dos som den gavs, eller TDD minus insulinet för kolhydrater.
+- **Cykeloffset**: flyttar starten på cykeln (0 till 27 dagar).
 
-At least 56 days of data (2 cycles) are needed. With less data, the card shows **Not enough data (need at least 56 days for 2 cycles)**. The pattern is calculated only when you open the **Cycle** tab, because it reads 168 days of data.
+Det behövs minst 56 dagar med data (2 cykler). Med mindre data visar kortet **Inte tillräckligt med data (behöver minst 56 dagar för 2 cykler)**. Mönstret beräknas bara när du öppnar fliken **Cykel**, eftersom det läser data för 168 dagar.
 
 (aaps-screens-treatments)=
-## Treatments history
+## Behandlingshistorik
 
-Open the **menu** (☰) in the top-left corner of the main screen and select **Treatments history**. In this view, you can view and alter the history of the following treatments, each on its own tab (swipe the tab row to see all of them):
+Öppna **menyn** (☰) i det övre vänstra hörnet av huvudskärmen och välj **Behandlingshistorik**. I den här vyn kan du se och ändra historiken för följande behandlingar, var och en på sin egen flik (svep raden med flikar för att se alla):
 
-* Carbs and bolus
+* Kolhydrater och bolus
 * [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temp basal
-* [Temporary target](../DailyLifeWithAaps/TempTargets.md)
-* [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes and careportal entries
-* Running mode : history of loop status
-* User entry: other notes that are not sent to Nightscout
+* Tillfällig basal
+* [Tillfälligt målvärde](../DailyLifeWithAaps/TempTargets.md)
+* [Profilbyte](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
+* Careportal: anteckningar och Careportal-poster
+* Körläge: historik över loopstatus
+* Angivet av användare: andra anteckningar som inte skickas till Nightscout
 
-At the end of each line, small icons show where the data comes from or has been sent to:
-* **Nightscout** icon (the Nightscout logo): the data comes from or has been recorded to Nightscout
-* **Pump** icon: the data comes from the pump history (it has been processed by the pump)
-* **Trash can** icon: the entry has been deleted (it is shown only when you display deleted entries with the **eye** icon at the top right)
+I slutet av varje rad visar små ikoner varifrån data kommer eller vart de har skickats:
+* Ikonen **Nightscout** (Nightscouts logotyp): data kommer från eller har sparats i Nightscout
+* Ikonen **Pump**: data kommer från pumphistoriken (pumpen har behandlat dem)
+* Ikonen **Papperskorg**: posten har raderats (den visas bara när du visar raderade poster med ikonen **öga** uppe till höger)
 
 (screens-bolus-carbs)=
-### Carbs and bolus
+### Kolhydrater och bolus
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![Kolhydrater och bolus](../images/TreatmentsView1.png)
 
-On this tab you can view the bolus and carbs log. Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
-* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionality
+På den här fliken ser du loggen över bolusar och kolhydrater. Varje bolus (rad **1**) visar kvarvarande IOB för bolusen bredvid insulinmängden. Bolusen kan komma från:
+* Måltid (angiven manuellt med knapparna Insulin, Snabbknapp eller Kalkylator)
+* SMB, när du använder SMB-funktionen
 
-The carbs entries (line **2**) are shown with their amount in grams.
+Kolhydratposterna (rad **2**) visas med sin mängd i gram.
 
-If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text on the bolus line to show the details of how the bolus was calculated.
+Om du har använt [Kalkylator](#aaps-screens-bolus-wizard) för att beräkna insulindosen kan du trycka på texten ”Calc” på bolusraden för att se hur bolusen beräknades.
 
-Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
+Beroende på vilken pump du använder kan insulin och kolhydrater visas på en enda rad, eller på flera rader: en för beräkningen, en för kolhydraterna och en för själva bolusen.
 
-The Treatments history can be used to correct faulty carb entries (_i.e._ you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
+Behandlingshistoriken kan användas för att rätta felaktiga kolhydratposter (_t.ex._ om du har över- eller underskattat kolhydraterna). Observera att det inte går att redigera en befintlig post. Gör så här i stället:
 
-1. Check and remember actual COB and IOB on the main screen.
-2. Depending on pump, carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount: press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.
-4. Make sure carbs are removed successfully by checking COB on the main screen again.
-5. Do the same for IOB if there is just one line including carbs and insulin.
+1. Kontrollera och kom ihåg aktuell COB och IOB på huvudskärmen.
+2. Beroende på pumpen kan kolhydrater visas på samma rad som insulinet eller som en egen post (t.ex. med Dana RS).
+3. Ta bort posten med fel mängd kolhydrater: tryck på papperskorgsikonen, välj raderna som ska tas bort och tryck sedan på papperskorgsikonen igen för att slutföra.
+4. Kontrollera att kolhydraterna verkligen har tagits bort genom att titta på COB på huvudskärmen igen.
+5. Gör samma sak för IOB om det bara finns en rad med både kolhydrater och insulin.
 
-   → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+   → Om kolhydraterna inte tas bort som du tänkt, och du lägger till nya kolhydrater enligt beskrivningen här (6.), blir COB för högt och det kan leda till för mycket insulin.
 
-6. Enter the correct carb amount again (**Treatments → Carbs** in the bottom navigation, or a [QuickLaunch](#quicklaunch) **Carbs** button) and make sure to set the correct event time.
-7. If there is just one line including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on the main screen after confirming the new entry.
+6. Ange rätt mängd kolhydrater igen (**Behandlingar → Kolhydrater** i den nedre navigeringen, eller en knapp **Kolhydrater** i [Snabbstart](#quicklaunch)) och se till att ange rätt tid för händelsen.
+7. Om det bara finns en rad med både kolhydrater och insulin måste du också lägga till insulinmängden. Se till att ange rätt tid för händelsen och kontrollera IOB på huvudskärmen när du har bekräftat den nya posten.
 
-### Temp basal
+### Tillfällig basal
 
-![Temp Basal](../images/TreatmentsView2.png)
+![Tillfällig basal](../images/TreatmentsView2.png)
 
-The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). It can be:
-* Positive IOB if the temp basal was higher than the one set in the Profile
-* Negative IOB for a zero-temp (as on line **1**) or if the temp basal was lower than the one set in the Profile
+De **tillfälliga basaler** som loopen har satt visas här. När en post fortfarande påverkar IOB visas informationen bredvid dosen (rad **1**). Det kan vara:
+* Positiv IOB om den tillfälliga basalen var högre än den som är inställd i profilen
+* Negativ IOB för en tillfällig basal på noll (som på rad **1**) eller om den tillfälliga basalen var lägre än den som är inställd i profilen
 
-Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
+Att radera posterna påverkar bara dina rapporter i Nightscout och förvränger troligen din verkliga IOB – det rekommenderas inte.
 
-On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
+Till vänster på en rad betyder ett rött S ”Suspend” (pausad): det händer när basal inte ges just nu. Det är normalt till exempel medan du byter pod.
 
-### Temporary target
+### Tillfälligt målvärde
 
-![Temporary target](../images/TreatmentsView3.png)
+![Tillfälligt målvärde](../images/TreatmentsView3.png)
 
-The history of temporary targets can be seen here.
+Här ser du historiken över tillfälliga målvärden.
 
-### Profile switch
+### Profilbyte
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profilbyte](../images/TreatmentsView4.png)
 
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
+Här ser du historiken över profilbyten. Du kan se flera poster varje gång du byter profil: rad **1**, som sparas både i NS och i pumphistoriken, motsvarar själva bytet. Rad **2**, som sparas i Nightscout men inte i pumphistoriken, motsvarar användarens begäran om ett profilbyte.
 
-Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
+Att radera posterna påverkar bara dina rapporter i Nightscout och ändrar aldrig den aktuella profilen.
 
-You can use the **Clone** button shown on line **2** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
+Du kan använda knappen **Klona** på rad **2** för att göra en kopia av ett **Profilbyte**. Se [Din AAPS-profil > Hantera dina profiler](#your-aaps-profile-clone-profile-switch) för mer information.
 
 ### Careportal
 
-![Care portal](../images/TreatmentsView5.png)
+![Careportal](../images/TreatmentsView5.png)
 
-This tab shows all notes and careportal entries recorded in Nightscout.
+Den här fliken visar alla anteckningar och Careportal-poster som har sparats i Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
-### Running mode
+### Körläge
 
-![Running mode](../images/TreatmentsView6.png)
+![Körläge](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
+Den här fliken visar historiken över ändringar av [loopstatus](#AapsScreens-loop-status): öppen, sluten, LGS, pausad, frånkopplad.
 
-### User entry
+### Angivet av användare
 
-![User entry](../images/screens/treatments_user_entry.png)
+![Angivet av användare](../images/screens/treatments_user_entry.png)
 
-This tab lists the actions made in **AAPS** by the user or by an **Automation** (loop mode changes, profile switches, treatments, settings exports...). These entries are not sent to Nightscout.
+Den här fliken listar åtgärder som har gjorts i **AAPS** av användaren eller av en **Automation** (byte av loopläge, profilbyten, behandlingar, export av inställningar ...). De här posterna skickas inte till Nightscout.
 
 ------
 
-## What is the difference between Nightscout vs Tidepool?
+## Vad är skillnaden mellan Nightscout och Tidepool?
 
-Nightscout can facilitate the user’s storage of **AAPS’** data and offers a wide range of [reporting tools](https://nightscout.github.io/nightscout/reports/).
+Nightscout kan lagra data från **AAPS** åt dig och har många [rapportverktyg](https://nightscout.github.io/nightscout/reports/).
 
-Whereas, Tidepool allows the user to [review their data](https://www.tidepool.org/viewing-your-data) and provides [simple sharing with your endo team](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
+Tidepool låter dig däremot [granska dina data](https://www.tidepool.org/viewing-your-data) och gör det [enkelt att dela dem med ditt diabetesteam](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
