@@ -49,7 +49,7 @@ Naklonujte zdrojový kód znova podľa návodu vo wiki a nepovoľte aktualizáci
 
   * Musíte dostať správu o tom, aká verzia Gitu je nainštalovaná, ako vidíte na snímke obrazovky vyššie. V tomto prípade prejdite na [krok 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get a message saying
+  * Ak sa zobrazí správa
     ```
     Git: command not found
     ```
@@ -57,15 +57,15 @@ Naklonujte zdrojový kód znova podľa návodu vo wiki a nepovoľte aktualizáci
 
   * [Kontrola inštalácie Gitu](#BuildingAaps-steps-for-installing-git)
 
-  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
+  * Ak používate Windows a Git ste práve nainštalovali, reštartujte počítač, aby bol Git po inštalácii dostupný všade
 
-  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
+  * Ak je Git nainštalovaný, reštartovali ste počítač (vo Windows) a Git sa stále nedá nájsť:
 
   * Vyhľadajte vo svojom počítači súbor „git.exe“.
 
     Poznačte si, v ktorom priečinku je uložený.
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Pridajte priečinok, v ktorom ste našli svoju inštaláciu Gitu.
+  * Vo Windows prejdite do premenných prostredia (Environment variables), vyberte premennú „PATH“ a kliknite na Upraviť (Edit). Pridajte priečinok, v ktorom ste našli svoju inštaláciu Gitu.
 
   * Uložte a zatvorte.
 
@@ -139,7 +139,7 @@ Alebo:
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
+Ak vidíte vyššie uvedenú chybovú správu, pred novým pokusom o zostavenie si musíte stiahnuť správnu verziu JVM:
 
 1.  V [tabuľke požiadaviek](#Building-APK-recommended-specification-of-computer-for-building-apk-file) si overte, ktorú verziu JVM potrebujete pre verziu **AAPS**, ktorú zostavujete, a poznačte si ju.
 
@@ -212,7 +212,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Generate Signed APK generated successfully with 0 build variants
 
-When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
+Pri generovaní podpísaného APK sa môže zobraziť notifikácia, že generovanie prebehlo úspešne, ale vygenerovalo sa „0 build variants“ (0 variantov zostavenia):
 
 ![APK vygenerované s 0 variantmi zostavenia](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -237,7 +237,7 @@ Vaše APK sa úspešne zostavilo a môžete ho preniesť do telefónu!
 
 ## APK sa nenainštalovalo
 
-![phone app not installed](../images/Update_AppNotInstalled.png)
+![aplikácia v telefóne nie je nainštalovaná](../images/Update_AppNotInstalled.png)
 
 * Uistite sa, že ste do telefónu preniesli súbor „app-full-release.apk“.
 * Táto chyba zvyčajne znamená, že nové APK je podpísané iným úložiskom kľúčov ako váš nainštalovaný **AAPS**. Ak ešte máte svoje predchádzajúce úložisko kľúčov, vyberte ho a zostavte APK znova. Inak pozrite [Preinštalovanie AAPS s novým úložiskom kľúčov](#reinstall-aaps).
@@ -252,7 +252,7 @@ Vaše APK sa úspešne zostavilo a môžete ho preniesť do telefónu!
 
 ## APK je nainštalované, ale verzia je stará
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
+Ak ste aplikáciu úspešne zostavili, preniesli do telefónu a úspešne nainštalovali, ale číslo verzie zostáva rovnaké, možno ste zabudli [aktualizovať svoju lokálnu kópiu](#Update-to-new-version-update-your-local-copy)
 
 ## Nič z uvedeného nepomohlo
 
