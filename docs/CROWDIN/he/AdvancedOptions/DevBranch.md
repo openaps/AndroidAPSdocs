@@ -6,13 +6,13 @@ Dev branch is for the further development of AAPS only. It should be used on a s
 
 The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
 
-The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in the directory /AAPS/extra. Enabling the engineering mode might break the loop entirely.
+The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. כדי להפעיל תכונות אלה, יש להיכנס ל**מצב הנדסה** (Engineering Mode) באמצעות יצירת קובץ בשם `engineering_mode` בתיקייה /AAPS/extra. Enabling the engineering mode might break the loop entirely.
 
-However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. עשו זאת באחריותכם בלבד ובזהירות הראויה כדי לשמור על בטיחותכם.
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md)). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
+If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. ככל שמשתפים כאן יותר מידע, כך ייטב (אל תשכחו שייתכן שיהיה צורך לשתף את [קובצי היומן](../GettingHelp/AccessingLogFiles.md)). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version is doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. כאשר בשימוש רק גרסת dev אחת, קל יותר לעקוב אחר הבאגים שאנשים מדווחים עליהם. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
 
 (branch-ci-test)=
 
@@ -51,7 +51,7 @@ Available from 3.3.2.1.dev
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- Target repository: the repository that contains the PR, in the format owner/repo. Leave the default **nightscout/AndroidAPS** unless you were told to use another repository (only developers should do this).
+- Target repository: המאגר שמכיל את ה-PR, בתבנית owner/repo. יש להשאיר את ברירת המחדל **nightscout/AndroidAPS**, אלא אם התבקשתם להשתמש במאגר אחר (רק מפתחים צריכים לעשות זאת).
 
 - PR number: Please enter the PR number that you want to test.
 
@@ -59,7 +59,7 @@ Available from 3.3.2.1.dev
     
     - head:
     - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
-    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+    - הדבר שקול למצב המקורי של ענף ה-PR, כאילו אוחזר ישירות מ-fork או מענף תכונה.
     
     - merge:
     
