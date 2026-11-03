@@ -1,70 +1,70 @@
-# Dexcom G6 and ONE
+# Dexcom G6 ir ONE
 
 ## Pirmiausia pagrindai
 
--   Follow general CGM hygiene and setting sensor recommendation [here](../CompatibleCgms/GeneralCGMRecommendation.md).
+-   Laikykitės bendrųjų NGJ higienos ir jutiklio įvedimo rekomendacijų, pateiktų [čia](../CompatibleCgms/GeneralCGMRecommendation.md).
 
-## General hints for looping with G6 and ONE
+## Bendri patarimai, kaip naudoti ciklą su G6 ir ONE
 
-- Recent transmitters are called Firefly. Sensors cannot be restarted without removing the transmitter, which itself cannot be reset, they also do not generate raw data.
+- Naujesni siųstuvai vadinami Firefly. Jutiklių negalima paleisti iš naujo nenuėmus siųstuvo, o paties siųstuvo negalima atstatyti. Be to, jie neteikia neapdorotų (raw) duomenų.
 
-- If you are restarting sensors, ensure you are ready to calibrate and keep an eye on variation.
+- Jei jutiklius paleidžiate iš naujo, būkite pasiruošę kalibruoti ir stebėkite reikšmių svyravimus.
 
-- Pre-soaking of the G6/ONE with factory calibration is likely to give variation in results. Jei sensorių įvedate anksčiau, nei jį startuojate, gali reikėti jį kalibruoti, kad gautumėte geriausius rezultatus.
+- Jei G6/ONE su gamykline kalibracija įvedate iš anksto (pre-soak), reikšmės greičiausiai svyruos. Jei jutiklį įvedate anksčiau, nei jį startuojate, gali reikėti jį kalibruoti, kad gautumėte geriausius rezultatus.
 
-Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+Daugiau skaitykite [straipsnyje](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/), kurį Tim Street paskelbė svetainėje [www.diabettech.com](https://www.diabettech.com).
 
-## If using G6 or ONE with xDrip
+## Jei naudojate G6 arba ONE su xDrip
 
-- If not already set up, download [xDrip](https://github.com/NightscoutFoundation/xDrip) and adjust its settings following the [xDrip settings page](../CompatibleCgms/xDrip.md).
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
-- The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-- When using xDrip as receiver uninstall the Dexcom app first. **You cannot connect xDrip and Dexcom app with the transmitter at the same time!**
-- If you need Clarity and want to profit from xDrip alarms use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip.
-- You can also use xDrip as a companion app of the official Dexcom app, but you might experience delays in BG readings.
-- xDrip always uses the transmitter's [native algorithm](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) with current transmitters; there is no reason to disable it. [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) only function on old transmitters (firmware 1.6.5.25 or earlier), where they are needed to prevent the sensor stopping after 10 days; recent (Firefly) transmitters ignore them. See [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) before attempting any restart.
-- Everything related to the sensor and transmitter themselves is documented on the [xDrip Dexcom page](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+- Jei dar nenustatėte, atsisiųskite [xDrip](https://github.com/NightscoutFoundation/xDrip) ir pakeiskite jo nustatymus pagal [xDrip nustatymų puslapį](../CompatibleCgms/xDrip.md).
+- Pasirinkite xDrip skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source).
+- Dexcom G6 ir ONE siųstuvai vienu metu gali būti prijungti prie Dexcom imtuvo (arba t:slim pompos) ir prie vienos programėlės jūsų telefone.
+- Kai xDrip naudojate kaip imtuvą, pirmiausia pašalinkite Dexcom programėlę. **Negalite vienu metu prijungti prie siųstuvo ir xDrip, ir Dexcom programėlės!**
+- Jei jums reikia Clarity ir norite naudotis xDrip aliarmais, naudokite [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (tik G6) su vietiniu transliavimu (local broadcast) į xDrip.
+- xDrip taip pat galite naudoti kaip oficialios Dexcom programėlės pagalbinę programėlę (companion app), tačiau KG reikšmės gali vėluoti.
+- Su dabartiniais siųstuvais xDrip visada naudoja siųstuvo [vidinį algoritmą](https://navid200.github.io/xDrip/docs/Native-Algorithm.html); jo išjungti nėra jokios priežasties. [Prevenciniai paleidimai iš naujo](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) veikia tik su senais siųstuvais (programinė įranga 1.6.5.25 ar senesnė), kur jie reikalingi, kad jutiklis nesustotų po 10 dienų; naujesni (Firefly) siųstuvai jų nepaiso. Prieš bandydami paleisti jutiklį iš naujo, perskaitykite [Jutiklio paleidimas iš naujo](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html).
+- Viskas, kas susiję su pačiu jutikliu ir siųstuvu, aprašyta [xDrip Dexcom puslapyje](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
-## If using G6 with Build Your Own Dexcom App
+## Jei naudojate G6 su Build Your Own Dexcom App
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated.
+Dexcom BYODA yra labai sena programėlės versija, jos atnaujinti negalima.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) palaiko vietinį duomenų transliavimą į AAPS ir (arba) xDrip
 
--   This app lets you use your Dexcom G6 with any Android smartphone.
--   Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously (**do not stop** the currently running sensor)
--   Install the downloaded apk
--   Enter sensor code and transmitter serial no. in patched app.
--   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
--   After a short time BYODA should pick up the transmitter signal.
+-   Ši programėlė leidžia naudoti Dexcom G6 su bet kuriuo Android išmaniuoju telefonu.
+-   Pašalinkite originalią arba pakeistą Dexcom programėlę, jei anksčiau naudojote vieną iš jų (**nestabdykite** šiuo metu veikiančio jutiklio)
+-   Įdiekite atsisiųstą apk
+-   Pakeistoje programėlėje įveskite jutiklio kodą ir siųstuvo serijos numerį.
+-   Telefono nustatymuose atverkite apps > Dexcom G6 > permissions > additional permissions ir paspauskite 'Access Dexcom app'.
+-   Netrukus BYODA turėtų pagauti siųstuvo signalą.
 
-### Settings for AAPS
+### AAPS nustatymai
 
--   Select **BYODA** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+-   Skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source) pasirinkite **BYODA**.
 
--   If you don't receive any values select any other data source, then re-select **BYODA** to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+-   Jei negaunate jokių reikšmių, pasirinkite bet kurį kitą duomenų šaltinį, tada vėl pasirinkite **BYODA**, kad būtų paprašyta leidimų, reikalingų ryšiui tarp AAPS ir BYODA transliacijos sukurti.
 
-### Settings for xDrip
+### xDrip nustatymai
 
--   Select '640G/Eversense' as data source.
--   Command 'start sensor' must be performed in xDrip in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+-   Kaip duomenų šaltinį pasirinkite '640G/Eversense'.
+-   Kad gautumėte reikšmes, xDrip programėlėje reikia įvykdyti komandą 'start sensor'. Tai nepaveiks dabartinio jutiklio, kurį valdo Build Your Own Dexcom App.
 
 
 (DexcomG6-troubleshooting-g6)=
-## Troubleshooting G6 and ONE
+## G6 ir ONE trikčių šalinimas
 
-### Dexcom G6/ONE specific troubleshooting
+### Dexcom G6/ONE trikčių šalinimas
 
--   Scroll down to **Troubleshooting** [here](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+-   Slinkite žemyn iki **Troubleshooting** [čia](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
-### General troubleshooting
+### Bendrasis trikčių šalinimas
 
-General Troubleshooting for CGMs can be found [here](#general-cgm-troubleshooting).
+Bendrąjį NGJ trikčių šalinimą rasite [čia](#general-cgm-troubleshooting).
 
-### Naujas siųstuvas su veikiančiu sensoriumi
+### Naujas siųstuvas su veikiančiu jutikliu
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found [here](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). If you opt for [this solution](https://youtu.be/tx-kTsrkNUM) instead, you must be careful to avoid [damaging sensor contacts](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html) with the strip.
+Jei keisite siųstuvą, kai jutiklis veikia, galite pabandyti jį nuimti nepažeisdami paties jutiklio platformos. Vaizdo įrašą rasite [čia](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). Jei vietoj to pasirinksite [šį sprendimą](https://youtu.be/tx-kTsrkNUM), būkite atsargūs, kad juostele nepažeistumėte [jutiklio kontaktų](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html).
