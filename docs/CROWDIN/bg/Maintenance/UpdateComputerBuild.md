@@ -5,7 +5,7 @@
 **AAPS** не може да се изтегли готово заради правилата за медицинските изделия. Законно е да компилирате приложението за собствена употреба, но НЕ БИВА да давате копие на други хора! Вижте [страницата с често задавани въпроси](../UsefulLinks/FAQ.md) за подробности.
 
 ```{note}
-In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. След това следвайте [процедурата за първоначално компилиране на **AAPS**](../SettingUpAaps/BuildingAaps.md) вместо това ръководство. Единствената разлика е, че вместо да създавате ново хранилище за ключове, можете да изберете това, което сте копирали на новия компютър.
+Ако искате да компилирате **AAPS** на нов компютър: копирайте резервното копие на файла на хранилището за ключове на новия компютър. След това следвайте [процедурата за първоначално компилиране на **AAPS**](../SettingUpAaps/BuildingAaps.md) вместо това ръководство. Единствената разлика е, че вместо да създавате ново хранилище за ключове, можете да изберете това, което сте копирали на новия компютър.
 ```
 
 ## Преглед на актуализирането до нова версия на AAPS с Android Studio
@@ -53,7 +53,7 @@ In case you want to build **AAPS** on a new computer: copy your back-up keystore
 * Изчакайте, докато изтеглянето приключи. Ще виждате информация за това в долната лента. Когато приключи, ще видите съобщение за успех.
 
   ```{note}
-  Обновените файлове може да са различни! This is not an indication of a problem.
+  Обновените файлове може да са различни! Това не означава, че има проблем.
   ```
 
    ![Android Studio – Pull е успешен](../images/update/06_GitPullSuccess.png)
@@ -95,6 +95,6 @@ In case you want to build **AAPS** on a new computer: copy your back-up keystore
 
 Поемете си дъх!
 
-Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+След това проверете дали проблемът ви вече е описан на отделната страница [Отстраняване на неизправности в Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 Ако ви трябва още помощ, моля, обърнете се към други потребители на **AAPS** във [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) или [Discord](https://discord.gg/4fQUWHZ4Mw).
