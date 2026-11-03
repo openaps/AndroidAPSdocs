@@ -1,9 +1,9 @@
 (aaps-builder)=
 
-# Browser build with AAPS Builder
+# AAPS Builder ile tarayıcıda oluşturma
 
 ```{note}
-This is the recommended way to build AAPS from an **Android phone**. It also works from any computer browser. For the other ways to build from a computer or an iPhone, see the [Browser build](BrowserBuild.md) overview.
+Bu, AAPS'i bir **Android telefondan** oluşturmanın önerilen yoludur. Her bilgisayar tarayıcısından da çalışır. Bilgisayardan veya iPhone'dan oluşturmanın diğer yolları için [Tarayıcı ile oluşturma](BrowserBuild.md) genel bakışına bakın.
 ```
 
 ```{contents} In this page
@@ -11,360 +11,360 @@ This is the recommended way to build AAPS from an **Android phone**. It also wor
 :depth: 2
 ```
 
-**AAPS Builder** builds the AAPS app for you in GitHub, the free code-hosting website. There is nothing to install on your phone, and no preparation file to open.
+**AAPS Builder**, AAPS uygulamasını sizin için ücretsiz kod barındırma sitesi olan GitHub'da oluşturur. Telefonunuza yüklenecek bir şey ve açılacak bir hazırlık dosyası yoktur.
 
-A setup page walks you through it. It takes about 10 minutes the first time:
+Bir kurulum sayfası size adım adım yol gösterir. İlk seferde yaklaşık 10 dakika sürer:
 
-1. Create your own **private copy** of AAPS Builder in your GitHub account: the setup page opens GitHub with everything filled in, you only confirm. The build workflow, the file that tells GitHub how to build AAPS, is already in it.
-2. Create or upload your **signing key** (the keystore).
-3. Give the key to your repository as a GitHub **secret**.
-4. **Build** the app. One build takes 15 to 30 minutes.
-5. **Download and install** the app on your phone.
+1. GitHub hesabınızda AAPS Builder'ın kendinize ait **özel bir kopyasını** oluşturun: kurulum sayfası GitHub'ı her şey doldurulmuş olarak açar, siz yalnızca onaylarsınız. GitHub'a AAPS'in nasıl oluşturulacağını söyleyen dosya olan oluşturma iş akışı zaten içindedir.
+2. **İmzalama anahtarınızı** (anahtar deposu) oluşturun veya yükleyin.
+3. Anahtarı deponuza bir GitHub **secret**'ı olarak verin.
+4. Uygulamayı **oluşturun**. Bir oluşturma 15 ila 30 dakika sürer.
+5. Uygulamayı telefonunuza **indirin ve yükleyin**.
 
-You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from the official AndroidAPS repository at every build. You also do **not** need Google Drive: you download the app directly from GitHub.
+AndroidAPS'i fork etmeniz **gerekmez**: AAPS kaynak kodu her oluşturmada resmi AndroidAPS deposundan indirilir. Google Drive'a da **gerek yoktur**: uygulamayı doğrudan GitHub'dan indirirsiniz.
 
 ```{admonition} Where the code comes from
 :class: note
 
-The build workflow is maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository, and your repository is a copy of it. The [workflow](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) in your copy is short: it runs the [build steps](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml) kept in that repository, so improvements reach you without any change to your repository. You can read both files. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
+Oluşturma iş akışı AAPS geliştiricileri tarafından [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) deposunda bakımı yapılır ve sizin deponuz onun bir kopyasıdır. Kopyanızdaki [iş akışı](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) kısadır: o depoda tutulan [oluşturma adımlarını](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml) çalıştırır. Böylece iyileştirmeler deponuzda hiçbir değişiklik yapmadan size ulaşır. İki dosyayı da okuyabilirsiniz. İş akışı oluşturma sırasında yalnızca resmi AAPS kaynak kodunu ve GitHub'ın kendi oluşturma araçlarını indirir. Anahtar deponuz tarayıcınızdan ve özel deponuzdan hiçbir zaman dışarı çıkmaz.
 ```
 
 (aaps-builder-before-you-start)=
 
-## Before you start
+## Başlamadan önce
 
-You will need:
+İhtiyacınız olanlar:
 
-- A **GitHub account** (free). If you don't have one, create it on [github.com](https://github.com/signup) first.
-- A **web browser**: Chrome on your phone, or any browser on a computer. Log in to github.com in that browser before you start.
-- **GitHub app on your phone?** You can keep it. Some buttons of the setup page then open the app instead of Chrome. Building works in the app, but the app **cannot download** the finished AAPS: [step 5](#aaps-builder-step5) shows how to switch to Chrome for the download.
-- Your **existing keystore** (`.jks` file), its password and its alias, if you built AAPS before and want to update it without reinstalling.
+- Bir **GitHub hesabı** (ücretsiz). Hesabınız yoksa önce [github.com](https://github.com/signup) adresinde bir hesap oluşturun.
+- Bir **web tarayıcısı**: telefonunuzda Chrome veya bilgisayarda herhangi bir tarayıcı. Başlamadan önce bu tarayıcıda github.com'a giriş yapın.
+- **Telefonunuzda GitHub uygulaması mı var?** Onu tutabilirsiniz. Bu durumda kurulum sayfasının bazı düğmeleri Chrome yerine uygulamayı açar. Oluşturma uygulamada çalışır, ancak uygulama bitmiş AAPS'i **indiremez**: indirme için Chrome'a nasıl geçileceğini [5. adım](#aaps-builder-step5) gösterir.
+- Daha önce AAPS oluşturduysanız ve yeniden yüklemeden güncellemek istiyorsanız **mevcut anahtar deponuz** (`.jks` dosyası), parolası ve takma adı (alias).
 
 ```{warning}
-**Your build repository must stay private.** Everything a build produces is visible to anyone who can see the repository. The setup page creates a private repository for you. Never change it to public, and don't **fork** AAPS Builder instead: a fork is always public.
+**Oluşturma deponuz özel (private) kalmalıdır.** Bir oluşturmanın ürettiği her şeyi, depoyu görebilen herkes görebilir. Kurulum sayfası sizin için özel bir depo oluşturur. Onu asla herkese açık (public) yapmayın ve bunun yerine AAPS Builder'ı **fork** etmeyin: bir fork her zaman herkese açıktır.
 
-A private repository gets 2000 free GitHub Actions minutes per month, which is enough for several builds.
+Özel bir depo her ay 2000 ücretsiz GitHub Actions dakikası alır. Bu, birkaç oluşturma için yeterlidir.
 ```
 
 ```{warning}
-**New key or existing key: this decides whether you can update AAPS.**
+**Yeni anahtar mı, mevcut anahtar mı: AAPS'i güncelleyip güncelleyemeyeceğinizi bu belirler.**
 
-- **You already have AAPS on your phone, built with a keystore you still have**: choose **I already have a keystore** on the setup page and upload it. Your next build will update AAPS in place. Built AAPS with the previous browser build (your own fork)? Your keystore is in your fork: [get a copy of it first](#aaps-builder-from-fork).
-- **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+- **Telefonunuzda zaten AAPS var ve onu hâlâ elinizde olan bir anahtar deposuyla oluşturdunuz**: kurulum sayfasında **I already have a keystore** (zaten bir anahtar deposum var) seçeneğini seçin ve dosyayı yükleyin. Bir sonraki oluşturmanız AAPS'i yerinde günceller. AAPS'i önceki tarayıcı ile oluşturma yöntemiyle (kendi fork'unuzla) mı oluşturdunuz? Anahtar deponuz fork'unuzdadır: [önce onun bir kopyasını alın](#aaps-builder-from-fork).
+- **AAPS'i ilk kez oluşturuyorsunuz veya anahtar deponuzu ya da parolasını kaybettiniz**: **Create a new key** (yeni bir anahtar oluştur) seçeneğini seçin. Yeni bir anahtarla imzalanan bir uygulama, başka bir anahtarla imzalanmış AAPS'i **güncelleyemez**. Ayarlarınızı dışa aktarmalı, dosyayı telefonunuzun dışına kopyalamalı, eski AAPS'i kaldırmalı, yenisini yüklemeli ve ardından ayarlarınızı içe aktarmalısınız: bkz. [Yeni bir anahtar deposuyla AAPS'i yeniden yükleme](#reinstall-aaps).
 
-Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password and its alias (`key0`) somewhere safe, off your phone.
+Bundan sonra hep aynı anahtarı kullanmaya devam edin. Yeni bir anahtar oluşturduğunuzda sayfanın sunduğu yedeği indirin ve parolası ve takma adıyla (`key0`) birlikte telefonunuzun dışında güvenli bir yerde saklayın.
 ```
 
 (aaps-builder-from-fork)=
 
-## Coming from the previous browser build (fork)
+## Önceki tarayıcı ile oluşturmadan gelenler (fork)
 
-Skip this section if you never built AAPS with the previous browser build method (your own copy, or fork, of AndroidAPS in GitHub, with the preparation file and Google Drive).
+AAPS'i hiç önceki tarayıcı ile oluşturma yöntemiyle oluşturmadıysanız (GitHub'da AndroidAPS'in kendi kopyanız, yani fork'unuz, hazırlık dosyası ve Google Drive ile) bu bölümü atlayın.
 
-Your keystore is stored as secrets in your fork. GitHub never shows a secret again, so you can't copy it to your new repository. Get a copy of your keystore first, then use it in [step 2](#aaps-builder-step2) with **I already have a keystore**.
+Anahtar deponuz fork'unuzda secret olarak saklanır. GitHub bir secret'ı bir daha hiç göstermez, bu yüzden onu yeni deponuza kopyalayamazsınız. Önce anahtar deponuzun bir kopyasını alın, ardından onu [2. adımda](#aaps-builder-step2) **I already have a keystore** ile kullanın.
 
 ```{warning}
-Don't choose **Create a new key**. AAPS built with a new key cannot update the AAPS on your phone.
+**Create a new key** seçeneğini seçmeyin. Yeni bir anahtarla oluşturulan AAPS, telefonunuzdaki AAPS'i güncelleyemez.
 ```
 
-Which case is yours?
+Sizin durumunuz hangisi?
 
-- **You used Option 2** (you uploaded your own keystore from Android Studio), and you still have the `.jks` file, its passwords and its alias: nothing to do here. Use that file in step 2.
-- **You used Option 1** (the preparation file created your key), or you no longer have your keystore file: export it from your fork as below.
+- **Seçenek 2'yi kullandınız** (Android Studio'dan kendi anahtar deponuzu yüklediniz) ve `.jks` dosyası, parolaları ve takma adı hâlâ sizde: burada yapacak bir şey yok. Bu dosyayı 2. adımda kullanın.
+- **Seçenek 1'i kullandınız** (anahtarınızı hazırlık dosyası oluşturdu) veya anahtar deposu dosyanız artık sizde değil: aşağıdaki gibi onu fork'unuzdan dışa aktarın.
 
-To export your keystore from your fork:
+Anahtar deponuzu fork'unuzdan dışa aktarmak için:
 
-1. In your fork, open **Settings** → **Secrets and variables** → **Actions** and add a secret named `ZIP_PASSWORD`. Choose a password with only English letters and numbers. It protects the file you are about to create.
-2. Open the **Actions** tab of your fork, tap **CI Keystore Export**, then **Run workflow**. More details: [Export your keystore](#ci-keystore-export).
-3. When the run has a green check, open your Google Drive: the file `keystore.zip` is in the folder **AAPS** → **KeyStore**. If the run fails at the Google Drive step, your fork's Google Drive access has expired: see [Google refresh token expired](#aaps-ci-google-token-expired).
-4. Download `keystore.zip` and open it with your `ZIP_PASSWORD`: on a computer, or on your phone with a file manager app that can open password-protected ZIP files. It contains:
-   - `keystore.jks`: your keystore,
-   - `keyStoreInfo.txt`: your `KEYSTORE_PASSWORD`, `KEY_PASSWORD` and `ALIAS` (usually `key0`).
-5. Copy `keystore.jks` to your phone (or to Google Drive, so you can pick it from there).
+1. Fork'unuzda **Settings** → **Secrets and variables** → **Actions** yolunu açın ve `ZIP_PASSWORD` adlı bir secret ekleyin. Yalnızca İngilizce harfler ve rakamlardan oluşan bir parola seçin. Bu parola, oluşturmak üzere olduğunuz dosyayı korur.
+2. Fork'unuzun **Actions** sekmesini açın, **CI Keystore Export** öğesine, ardından **Run workflow** düğmesine dokunun. Daha fazla ayrıntı: [Anahtar deponuzu dışa aktarın](#ci-keystore-export).
+3. Çalıştırmada yeşil bir onay işareti görününce Google Drive'ınızı açın: `keystore.zip` dosyası **AAPS** → **KeyStore** klasöründedir. Çalıştırma Google Drive adımında başarısız olursa fork'unuzun Google Drive erişiminin süresi dolmuştur: [Google yenileme belirtecinin süresi doldu](#aaps-ci-google-token-expired) bölümüne bakın.
+4. `keystore.zip` dosyasını indirin ve `ZIP_PASSWORD` ile açın: bir bilgisayarda veya telefonunuzda parola korumalı ZIP dosyalarını açabilen bir dosya yöneticisi uygulamasıyla. İçinde şunlar vardır:
+   - `keystore.jks`: anahtar deponuz,
+   - `keyStoreInfo.txt`: `KEYSTORE_PASSWORD`, `KEY_PASSWORD` ve `ALIAS` değerleriniz (genellikle `key0`).
+5. `keystore.jks` dosyasını telefonunuza (veya oradan seçebilmek için Google Drive'a) kopyalayın.
 
-In [step 2](#aaps-builder-step2) of the setup page:
+Kurulum sayfasının [2. adımında](#aaps-builder-step2):
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose `keystore.jks`.
-3. In **Keystore password**, type the `KEYSTORE_PASSWORD` from `keyStoreInfo.txt`.
-4. In **Key alias**, pick or type the `ALIAS` from `keyStoreInfo.txt`.
-5. If `KEY_PASSWORD` is different from `KEYSTORE_PASSWORD`, untick **Key password is the same as the keystore password** and type the `KEY_PASSWORD`.
+1. **I already have a keystore** (zaten bir anahtar deposum var) sekmesine dokunun.
+2. **Keystore file** alanında `keystore.jks` dosyasını seçin.
+3. **Keystore password** alanına `keyStoreInfo.txt` içindeki `KEYSTORE_PASSWORD` değerini yazın.
+4. **Key alias** (anahtar takma adı) alanında `keyStoreInfo.txt` içindeki `ALIAS` değerini seçin veya yazın.
+5. `KEY_PASSWORD`, `KEYSTORE_PASSWORD` değerinden farklıysa **Key password is the same as the keystore password** işaretini kaldırın ve `KEY_PASSWORD` değerini yazın.
 
-Keep `keystore.zip` and its `ZIP_PASSWORD` somewhere safe, off your phone: it is the backup of your key.
+`keystore.zip` dosyasını ve `ZIP_PASSWORD` parolasını telefonunuzun dışında güvenli bir yerde saklayın: bu, anahtarınızın yedeğidir.
 
-To also save the builds of AAPS Builder in Google Drive, do [step 6](#aaps-builder-google-drive): the setup page gets a new `GDRIVE_OAUTH2` for you. You can keep your fork until AAPS built with AAPS Builder is installed on your phone.
+AAPS Builder oluşturmalarını Google Drive'a da kaydetmek için [6. adımı](#aaps-builder-google-drive) yapın: kurulum sayfası sizin için yeni bir `GDRIVE_OAUTH2` alır. AAPS Builder ile oluşturulan AAPS telefonunuza yüklenene kadar fork'unuzu tutabilirsiniz.
 
-## Open the setup page
+## Kurulum sayfasını açın
 
-**→ [Open the AAPS Builder setup page](#aaps-builder-setup)**
+**→ [AAPS Builder kurulum sayfasını açın](#aaps-builder-setup)**
 
-The setup page is part of this documentation, in your language. Keep this page open in another tab as well: the sections below explain each step of the setup page in more detail, with screenshots.
+Kurulum sayfası bu dokümantasyonun bir parçasıdır ve sizin dilinizdedir. Bu sayfayı da başka bir sekmede açık tutun: aşağıdaki bölümler kurulum sayfasının her adımını ekran görüntüleriyle daha ayrıntılı açıklar.
 
-The setup page opens each GitHub page in a new Chrome tab. To come back to the setup page, tap the tab button next to Chrome's address bar (the square with a number) and choose the AAPS Builder setup page.
+Kurulum sayfası her GitHub sayfasını yeni bir Chrome sekmesinde açar. Kurulum sayfasına dönmek için Chrome'un adres çubuğunun yanındaki sekme düğmesine (içinde sayı olan kare) dokunun ve AAPS Builder kurulum sayfasını seçin.
 
-The setup page runs entirely in your browser: your key and passwords are never sent anywhere, except into the GitHub secret you paste them into yourself. Only your GitHub username is sent to GitHub, to check that it exists. It remembers your GitHub username and repository name, so you can come back to it at any time to reopen your secrets page or your builds.
+Kurulum sayfası tamamen tarayıcınızda çalışır: anahtarınız ve parolalarınız hiçbir yere gönderilmez; yalnızca kendiniz yapıştırdığınız GitHub secret'ına girer. GitHub'a yalnızca GitHub kullanıcı adınız gönderilir; bu, kullanıcı adının var olup olmadığını kontrol etmek içindir. GitHub kullanıcı adınızı ve depo adınızı hatırlar. Böylece secrets sayfanızı veya oluşturmalarınızı yeniden açmak için istediğiniz zaman ona dönebilirsiniz.
 
-![The AAPS Builder setup page](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
+![AAPS Builder kurulum sayfası](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
 
 (aaps-builder-step1)=
 
-## Step 1 – Create your private build repository
+## Adım 1 – Özel oluşturma deponuzu oluşturun
 
-This step creates your own private copy of AAPS Builder in your GitHub account, with the build workflow already in it. Only you can see it and the apps it builds.
+Bu adım, GitHub hesabınızda oluşturma iş akışı zaten içinde olan, AAPS Builder'ın size ait özel bir kopyasını oluşturur. Onu ve oluşturduğu uygulamaları yalnızca siz görebilirsiniz.
 
-1. Make sure you are logged in to github.com in this browser.
+1. Bu tarayıcıda github.com'a giriş yaptığınızdan emin olun.
 
-2. In **Your GitHub username**, type your GitHub username, not your e-mail. The page checks it with GitHub: **✓ GitHub user found** means it is right.
+2. **Your GitHub username** (GitHub kullanıcı adınız) alanına e-posta adresinizi değil, GitHub kullanıcı adınızı yazın. Sayfa bunu GitHub ile kontrol eder: **✓ GitHub user found** (GitHub kullanıcısı bulundu) doğru olduğu anlamına gelir.
 
-3. In **Name of your repository**, keep the suggestion `my-aaps`. If you already created your repository with another name, type that exact name.
+3. **Name of your repository** (deponuzun adı) alanında önerilen `my-aaps` adını bırakın. Deponuzu daha önce başka bir adla oluşturduysanız tam olarak o adı yazın.
 
    ```{note}
-   **Already have an AAPS Builder repository** (made with an earlier version of the setup page)? Don't create a new one: type its exact name, skip **Create my private repository**, and update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). Your secrets stay as they are. If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+   **Zaten bir AAPS Builder deponuz mu var** (kurulum sayfasının daha eski bir sürümüyle yapılmış)? Yeni bir tane oluşturmayın: tam adını yazın, **Create my private repository** adımını atlayın ve iş akışını [AAPS'i güncelleme](#aaps-builder-updates) bölümünde açıklandığı gibi bir kez güncelleyin. Secret'larınız olduğu gibi kalır. Yine de yeni bir depo istiyorsanız henüz sahip olmadığınız bir ad seçin, örneğin `my-aaps-2`, ve 2. adımda aynı anahtar deposunu kullanın.
 
-   Don't type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+   AndroidAPS fork'unuzun adını yazmayın: bir fork herkese açıktır ve zaten kendi **AAPS CI** iş akışıyla oluşturma yapar.
    ```
 
-   ![Setup page step 1 filled in](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
+   ![Kurulum sayfasının doldurulmuş 1. adımı](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
 
-4. Check the line **Your repository:** it shows `github.com/<your username>/my-aaps`. The setup page remembers the name from your last visit: check it every time before you use its buttons.
+4. **Your repository:** (deponuz) satırını kontrol edin: `github.com/<your username>/my-aaps` gösterir. Kurulum sayfası son ziyaretinizdeki adı hatırlar: düğmelerini kullanmadan önce her seferinde kontrol edin.
 
-5. Tap **Create my private repository**.
+5. **Create my private repository** (özel depomu oluştur) düğmesine dokunun.
 
-   ![The repository line and the Create my private repository button](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
+   ![Depo satırı ve Create my private repository düğmesi](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
 
-6. GitHub opens **Create a new repository** in a new tab. Everything is already filled in: under **Start with a template**, the template `nightscout/aaps-builder` with **Include all branches** off, and under **General**, your account as **Owner** and the name you chose.
+6. GitHub yeni bir sekmede **Create a new repository** (yeni depo oluştur) sayfasını açar. Her şey zaten doldurulmuştur: **Start with a template** (bir şablonla başla) altında **Include all branches** (tüm dalları dahil et) kapalı olarak `nightscout/aaps-builder` şablonu, **General** (genel) altında **Owner** (sahip) olarak hesabınız ve seçtiğiniz ad.
 
-   ![GitHub Create a new repository page](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
+   ![GitHub Create a new repository (yeni depo oluşturma) sayfası](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
 
-   Don't change anything.
+   Hiçbir şeyi değiştirmeyin.
 
-7. Scroll down: under **Configuration**, **Choose visibility** is already **Private**. Tap the green **Create repository** button.
+7. Aşağı kaydırın: **Configuration** (yapılandırma) altında **Choose visibility** (görünürlüğü seçin) zaten **Private** (özel) olarak ayarlıdır. Yeşil **Create repository** (depo oluştur) düğmesine dokunun.
 
-   ![Visibility Private and the Create repository button](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
+   ![Private görünürlüğü ve Create repository düğmesi](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
 
-   GitHub shows your new repository: it contains a folder `.github` (with the build workflow) and a file `README.md`. **Go back to the setup page tab** for step 2: tap the tab button next to Chrome's address bar and choose the setup page.
+   GitHub yeni deponuzu gösterir: içinde bir `.github` klasörü (oluşturma iş akışıyla) ve bir `README.md` dosyası vardır. 2. adım için **kurulum sayfası sekmesine geri dönün**: Chrome'un adres çubuğunun yanındaki sekme düğmesine dokunun ve kurulum sayfasını seçin.
 
 ```{warning}
-**Your new repository is empty**, with no files? It was not created from the template, and it cannot build. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** on the setup page again.
+**Yeni deponuz boş mu**, hiç dosya yok mu? Şablondan oluşturulmamıştır ve oluşturma yapamaz. Onu silin (**Settings** → sayfanın en altı → **Delete this repository** (bu depoyu sil)), ardından kurulum sayfasında yeniden **Create my private repository** düğmesine dokunun.
 ```
 
 (aaps-builder-step2)=
 
-## Step 2 – Your signing key
+## Adım 2 – İmzalama anahtarınız
 
-The app must be signed with your own key. Choose one of the two tabs. Read the [new key or existing key warning](#aaps-builder-before-you-start) first.
+Uygulama kendi anahtarınızla imzalanmalıdır. İki sekmeden birini seçin. Önce [yeni anahtar veya mevcut anahtar uyarısını](#aaps-builder-before-you-start) okuyun.
 
-![Setup page step 2: the two key options](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
+![Kurulum sayfası 2. adım: iki anahtar seçeneği](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
 
 ### I already have a keystore
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose your `.jks` file (or `.keystore`, `.p12`, `.pfx`). On a phone, copy the file to your phone or to Google Drive first.
-3. In **Keystore password**, type the keystore password.
-4. In **Key alias**, pick your alias from the list, or type it if there is no list. For keystores made with Android Studio it is usually `key0`.
-5. If your key password is different from the keystore password, untick **Key password is the same as the keystore password** and type the key password.
-6. Tap **Check and continue**.
+1. **I already have a keystore** (zaten bir anahtar deposum var) sekmesine dokunun.
+2. **Keystore file** (anahtar deposu dosyası) alanında `.jks` dosyanızı (veya `.keystore`, `.p12`, `.pfx`) seçin. Telefonda önce dosyayı telefonunuza veya Google Drive'a kopyalayın.
+3. **Keystore password** (anahtar deposu parolası) alanına anahtar deposu parolasını yazın.
+4. **Key alias** alanında listeden takma adınızı seçin veya liste yoksa yazın. Android Studio ile yapılan anahtar depolarında bu genellikle `key0`'dır.
+5. Anahtar parolanız anahtar deposu parolasından farklıysa **Key password is the same as the keystore password** (anahtar parolası, anahtar deposu parolasıyla aynı) işaretini kaldırın ve anahtar parolasını yazın.
+6. **Check and continue** (kontrol et ve devam et) düğmesine dokunun.
 
-The page checks the password and the alias on your device. **Keystore OK! Continue with step 3.** means everything is right. If it says the password will be checked when you build, continue anyway: the build tells you if something is wrong.
+Sayfa parolayı ve takma adı cihazınızda kontrol eder. **Keystore OK! Continue with step 3.** (anahtar deposu tamam, 3. adımla devam edin) her şeyin doğru olduğu anlamına gelir. Parolanın oluşturma sırasında kontrol edileceğini söylerse yine de devam edin: bir sorun varsa oluşturma bunu size bildirir.
 
 ### Create a new key
 
-1. Tap **Create a new key**.
+1. **Create a new key** (yeni bir anahtar oluştur) sekmesine dokunun.
 
-2. Choose a password and type it twice. Rules: at least 8 characters, only the letters a–z and A–Z, the digits 0–9 and symbols such as `! ? #`. No spaces, no accented letters, and not the `|` character.
+2. Bir parola seçin ve iki kez yazın. Kurallar: en az 8 karakter; yalnızca a–z ve A–Z harfleri, 0–9 rakamları ve `! ? #` gibi semboller. Boşluk, aksanlı harf (ç, ğ, ı, ö, ş, ü gibi) ve `|` karakteri olmamalıdır.
 
-3. Tap **Create key**. It takes a few seconds before **Key created** appears.
+3. **Create key** (anahtar oluştur) düğmesine dokunun. **Key created** (anahtar oluşturuldu) mesajının görünmesi birkaç saniye sürer.
 
-   ![New key form with the password typed twice](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
+   ![Parolanın iki kez yazıldığı yeni anahtar formu](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
-4. Tap **Download backup (aaps-keystore.jks)**. If Chrome asks **Download file again?**, an older backup with the same name is already on your phone: tap **Download again**. Chrome then saves the new key as `aaps-keystore (1).jks`: that is the file that goes with this key, keep it and don't mix it up with the older one.
+4. **Download backup (aaps-keystore.jks)** (yedeği indir) düğmesine dokunun. Chrome **Download file again?** (dosya yeniden indirilsin mi?) diye sorarsa, aynı adlı daha eski bir yedek zaten telefonunuzdadır: **Download again** (yeniden indir) seçeneğine dokunun. Chrome bu durumda yeni anahtarı `aaps-keystore (1).jks` olarak kaydeder: bu anahtara ait dosya budur; onu saklayın ve eskisiyle karıştırmayın.
 
-   Keep these three together, somewhere safe off your phone (for example your own cloud storage):
+   Bu üçünü birlikte, telefonunuzun dışında güvenli bir yerde saklayın (örneğin kendi bulut depolamanızda):
 
-   - the file `aaps-keystore.jks`,
-   - your password,
-   - the alias of the key: **`key0`**.
+   - `aaps-keystore.jks` dosyası,
+   - parolanız,
+   - anahtarın takma adı (alias): **`key0`**.
 
-   You need all three if you ever build AAPS another way, for example with Android Studio. Keys created with an earlier version of the setup page have the alias `aaps`.
+   AAPS'i bir gün başka bir yolla, örneğin Android Studio ile oluşturursanız üçüne de ihtiyacınız olur. Kurulum sayfasının daha eski bir sürümüyle oluşturulan anahtarların takma adı `aaps`'tir.
 
-   ![Key created and the backup box](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
+   ![Oluşturulan anahtar ve yedek kutusu](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
 
 (aaps-builder-step3)=
 
-## Step 3 – Give the key to your repository
+## Adım 3 – Anahtarı deponuza verin
 
-Step 3 unlocks when step 2 is done. Your key, its passwords and its alias are packed into one value, the `KEYSTORE_SET` secret.
+3. adım, 2. adım bitince açılır. Anahtarınız, parolaları ve takma adı tek bir değerde, `KEYSTORE_SET` secret'ında toplanır.
 
-1. Tap **Open the secrets page**.
+1. **Open the secrets page** (secrets sayfasını aç) düğmesine dokunun.
 
-![Setup page step 3](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
+![Kurulum sayfası 3. adım](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
 
-2. GitHub opens the **New secret** page of your repository. On a phone, it is below the settings menu: scroll down.
+2. GitHub, deponuzun **New secret** (yeni secret) sayfasını açar. Telefonda bu, ayarlar menüsünün altındadır: aşağı kaydırın.
 
-![GitHub New secret form](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
+![GitHub New secret formu](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
 
-3. Switch to the setup page tab and tap **Copy name**. Switch back to the GitHub tab and paste it into the small **Name** field. The name is `KEYSTORE_SET`.
+3. Kurulum sayfası sekmesine geçin ve **Copy name** (adı kopyala) düğmesine dokunun. GitHub sekmesine geri dönün ve küçük **Name** (ad) alanına yapıştırın. Adı `KEYSTORE_SET`'tir.
 
-4. Switch to the setup page tab and tap **Copy secret**. Switch back to the GitHub tab and paste it into the big **Secret** box (long press on a phone). The secret is a very long code, thousands of characters: the setup page shows its first characters next to the button. Don't paste the word `KEYSTORE_SET` there.
+4. Kurulum sayfası sekmesine geçin ve **Copy secret** (secret'ı kopyala) düğmesine dokunun. GitHub sekmesine geri dönün ve büyük **Secret** kutusuna yapıştırın (telefonda uzun basın). Secret, binlerce karakterden oluşan çok uzun bir koddur: kurulum sayfası ilk karakterlerini düğmenin yanında gösterir. Oraya `KEYSTORE_SET` kelimesini yapıştırmayın.
 
-5. Tap **Add secret**. `KEYSTORE_SET` now shows under **Repository secrets**.
+5. **Add secret** (secret ekle) düğmesine dokunun. `KEYSTORE_SET` artık **Repository secrets** (depo secret'ları) altında görünür.
 
-![Repository secrets list with KEYSTORE_SET](../images/Building-the-App/CI/AapsBuilder13_SecretList.png)
+![KEYSTORE_SET ile Repository secrets listesi](../images/Building-the-App/CI/AapsBuilder13_SecretList.png)
 
-You only need to do this once.
+Bunu yalnızca bir kez yapmanız gerekir.
 
 ```{tip}
-GitHub shows **Page not found** (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise the username or repository name in step 1 doesn't match your repository. Check the name on github.com, correct it in step 1, and tap the button again.
+GitHub **Page not found** (sayfa bulunamadı, 404) mu gösteriyor? Önce bu tarayıcıda github.com'da oturum açtığınızı kontrol edin: oturum açmadığınızda GitHub, özel depolar için 404 gösterir. Aksi halde 1. adımdaki kullanıcı adı veya depo adı deponuzla eşleşmiyordur. Adı github.com'da kontrol edin, 1. adımda düzeltin ve düğmeye yeniden dokunun.
 ```
 
 (aaps-builder-step4)=
 
-## Step 4 – Build the app
+## Adım 4 – Uygulamayı oluşturun
 
-1. On the setup page, tap **Open the build page**. GitHub opens the **Build AAPS** page of your repository.
+1. Kurulum sayfasında **Open the build page** (oluşturma sayfasını aç) düğmesine dokunun. GitHub, deponuzun **Build AAPS** (AAPS'i oluştur) sayfasını açar.
 
-   ![GitHub Build AAPS page with the Run workflow button](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
+   ![Run workflow düğmesiyle GitHub Build AAPS sayfası](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
 
-   If the **GitHub app** opens instead: tap **RUN WORKFLOW**, check the version and the variant, and tap **RUN WORKFLOW** again. The app may still show **Nothing to see here**: pull the list down to refresh it and see your build. Then continue with step 4 below.
+   Bunun yerine **GitHub uygulaması** açılırsa: **RUN WORKFLOW** düğmesine dokunun, sürümü ve varyantı kontrol edin ve yeniden **RUN WORKFLOW** düğmesine dokunun. Uygulama yine de **Nothing to see here** (burada görülecek bir şey yok) gösterebilir: listeyi yenilemek için aşağı çekin ve oluşturmanızı görün. Ardından aşağıdaki 4. adımla devam edin.
 
-2. If GitHub asks, tap the green button to enable workflows.
+2. GitHub sorarsa iş akışlarını etkinleştirmek için yeşil düğmeye dokunun.
 
-   The list of workflows shows two entries: use **Build AAPS**. Ignore **AAPS Builder**: it holds the build steps and has no **Run workflow** button.
+   İş akışları listesinde iki öğe vardır: **Build AAPS** öğesini kullanın. **AAPS Builder** öğesini dikkate almayın: oluşturma adımlarını içerir ve **Run workflow** düğmesi yoktur.
 
-3. Tap **Run workflow**. A small form opens:
-   - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
-   - **Variant**: keep `fullRelease` for normal use with a pump. The other variants are explained in [build variants](#browserbuild-variant). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
-   - Tap the green **Run workflow** button.
+3. **Run workflow** (iş akışını çalıştır) düğmesine dokunun. Küçük bir form açılır:
+   - **Version** (sürüm): en yeni AAPS sürümünü oluşturmak için `latest` olarak bırakın veya `4.0.0` gibi bir sürüm numarası yazın.
+   - **Variant** (varyant): pompayla normal kullanım için `fullRelease` olarak bırakın. Diğer varyantlar [oluşturma varyantları](#browserbuild-variant) bölümünde açıklanmıştır. `aapsclient3Release`, **AAPS** 4.0 sürümünden itibaren kullanılabilen **AAPSClient3** uygulamasını oluşturur (bkz. [AAPSClient, AAPSClient2 ve AAPSClient3 hakkında](#remotecontrol-aapsclient-versions)).
+   - Yeşil **Run workflow** düğmesine dokunun.
 
-   ![Run workflow form with latest and fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
+   ![latest ve fullRelease seçili Run workflow formu](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
 
-4. The build starts and shows **In progress**, with two parts: **AAPS / Check**, then **AAPS / Build AAPS**.
+4. Oluşturma başlar ve iki bölümle **In progress** (devam ediyor) gösterir: önce **AAPS / Check**, sonra **AAPS / Build AAPS**.
 
-   ![Build in progress](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
+   ![Devam eden oluşturma](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
 
-5. Wait 15 to 30 minutes. A green check means the build is done. A red cross means it failed: open the build to read the message, then see [troubleshooting](#aaps-builder-troubleshooting).
+5. 15 ila 30 dakika bekleyin. Yeşil bir onay işareti, oluşturmanın bittiği anlamına gelir. Kırmızı bir çarpı, başarısız olduğu anlamına gelir: mesajı okumak için oluşturmayı açın, ardından [sorun giderme](#aaps-builder-troubleshooting) bölümüne bakın.
 
-   ![Finished build with a green check](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
+   ![Yeşil onay işaretiyle biten oluşturma](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
 
    ```{tip}
-   **E-mail when a build is done:** GitHub only e-mails you when a build fails. To also get an e-mail when it succeeds: on github.com, open your profile picture → **Settings** → **Notifications** → **System** → **Actions**, and untick **Only notify for failed workflows**.
+   **Oluşturma bitince e-posta:** GitHub size yalnızca bir oluşturma başarısız olduğunda e-posta gönderir. Başarılı olduğunda da e-posta almak için: github.com'da profil resminizi → **Settings** → **Notifications** → **System** → **Actions** açın ve **Only notify for failed workflows** (yalnızca başarısız iş akışları için bildir) işaretini kaldırın.
    ```
 
-If there is no **Build AAPS** or **Run workflow** button:
+**Build AAPS** veya **Run workflow** düğmesi yoksa:
 
-- Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the button.
-- Open the **Actions** tab. If it says workflows are disabled, tap the green button to enable them, then tap **Build AAPS** in the list.
+- Deponuzu açın ve içinde `workflows/build.yml` dosyasını içeren bir `.github` klasörü olup olmadığını kontrol edin. Depo boşsa şablondan oluşturulmamıştır: onu silin (**Settings** → sayfanın en altı → **Delete this repository**) ve [1. adımı](#aaps-builder-step1) düğmeyle yeniden yapın.
+- **Actions** sekmesini açın. İş akışlarının devre dışı olduğunu söylüyorsa, etkinleştirmek için yeşil düğmeye dokunun, ardından listede **Build AAPS** öğesine dokunun.
 
 (aaps-builder-step5)=
 
-## Step 5 – Install the app on your phone
+## Adım 5 – Uygulamayı telefonunuza yükleyin
 
 ```{warning}
-**Before every update**, [export your settings](#ExportImportSettings-Automating-Settings-Export) in AAPS and copy the file **off the phone** (Google Drive, Dropbox…). Keep several older exports and the APK files there too, so you can always go back.
+**Her güncellemeden önce** AAPS'te [ayarlarınızı dışa aktarın](#ExportImportSettings-Automating-Settings-Export) ve dosyayı **telefonun dışına** kopyalayın (Google Drive, Dropbox…). Her zaman geri dönebilmek için birkaç eski dışa aktarmayı ve APK dosyalarını da orada saklayın.
 ```
 
-1. On your phone, open the setup page in **Chrome**. Log in to github.com if asked.
-2. Tap **Open my builds**, then the newest build with a green check.
+1. Telefonunuzda kurulum sayfasını **Chrome**'da açın. İstenirse github.com'a giriş yapın.
+2. **Open my builds** (oluşturmalarımı aç) düğmesine, ardından yeşil onay işaretli en yeni oluşturmaya dokunun.
 
    ```{admonition} The GitHub app opened instead of Chrome?
    :class: note
 
-   The GitHub app cannot download builds. In the app, open the newest build, then tap **Artifacts ↗**, or tap the share icon at the top and choose **Chrome** (or **Copy link**, then paste the link in Chrome's address bar). The build opens in Chrome: continue with the next step there.
+   GitHub uygulaması oluşturmaları indiremez. Uygulamada en yeni oluşturmayı açın, ardından **Artifacts ↗** öğesine dokunun veya üstteki paylaşma simgesine dokunup **Chrome**'u seçin (ya da **Copy link** (bağlantıyı kopyala) seçip bağlantıyı Chrome'un adres çubuğuna yapıştırın). Oluşturma Chrome'da açılır: orada bir sonraki adımla devam edin.
 
-   To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
+   GitHub bağlantılarının uygulamada açılmasını durdurmak için: Android **Settings** (Ayarlar) → **Apps** (Uygulamalar) → **GitHub** → **Open by default** (Varsayılan olarak aç) → **Open supported links** (Desteklenen bağlantıları aç) seçeneğini kapatın.
    ```
 
-   ![Finished build: status Success and 2 artifacts](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
+   ![Biten oluşturma: Success durumu ve 2 artifact](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
 
-3. Scroll down to the build summary and tap the **Download AAPS** link.
+3. Oluşturma özetine kadar aşağı kaydırın ve **Download AAPS** (AAPS'i indir) bağlantısına dokunun.
 
-   ![Build summary with the Download AAPS link](../images/Building-the-App/CI/AapsBuilder51_DownloadLink.png)
+   ![Download AAPS bağlantısıyla oluşturma özeti](../images/Building-the-App/CI/AapsBuilder51_DownloadLink.png)
 
    ```{tip}
-   Scroll with your finger on the text, not on the diagram of the build steps: the diagram moves instead of the page.
+   Parmağınızla oluşturma adımlarının şeması üzerinde değil, metin üzerinde kaydırın: aksi halde sayfa yerine şema hareket eder.
    ```
 
-   You can also scroll further down to **Artifacts** and tap the download icon next to `aaps-….apk`.
+   Ayrıca **Artifacts** (oluşturulan dosyalar) bölümüne kadar aşağı kaydırıp `aaps-….apk` yanındaki indirme simgesine de dokunabilirsiniz.
 
-   ![Artifacts with the phone and watch apps](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
+   ![Telefon ve saat uygulamalarını içeren Artifacts](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
-4. When the download is done, open Chrome's menu **⋮** → **Downloads**, tap `aaps-….apk` and choose **Install**. If asked, allow installing apps from this source.
+4. İndirme bitince Chrome menüsünü **⋮** → **Downloads** (İndirilenler) açın, `aaps-….apk` dosyasına dokunun ve **Install** (Yükle) seçin. İstenirse bu kaynaktan uygulama yüklenmesine izin verin.
 
-   ![Chrome Downloads with the AAPS APK](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
+   ![AAPS APK'sıyla Chrome Downloads](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
 
-`aaps-wear-….apk` is the smartwatch app. Skip it if you don't use one.
+`aaps-wear-….apk` akıllı saat uygulamasıdır. Akıllı saat kullanmıyorsanız atlayın.
 
-The app is kept on the build page for **14 days**. It is not shown under **Code** in your repository. Copy it somewhere safe, off your phone, together with your settings exports.
+Uygulama oluşturma sayfasında **14 gün** saklanır. Deponuzda **Code** altında görünmez. Onu ayar dışa aktarmalarınızla birlikte telefonunuzun dışında güvenli bir yere kopyalayın.
 
-For more ways to install the app, see [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+Uygulamayı yüklemenin diğer yolları için [AAPS'i aktarma ve yükleme](TransferringAndInstallingAaps.md) sayfasına bakın.
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+Eylül 2026'dan itibaren Google'ın [Android geliştirici doğrulaması](#android-developer-verification), ülkenize bağlı olarak APK'yı dosyaya dokunarak yüklemeyi engelleyebilir. Ücretsiz çözüm yolları o sayfada açıklanmıştır.
 ```
 
 (aaps-builder-google-drive)=
 
-## Step 6 (optional) – Also save the app in Google Drive
+## Adım 6 (isteğe bağlı) – Uygulamayı Google Drive'a da kaydedin
 
-You can also have each build saved to your Google Drive, in the folder `AAPS/<version>`. This is optional: the app is always available on the build page.
+Her oluşturmanın Google Drive'ınıza, `AAPS/<version>` klasörüne kaydedilmesini de sağlayabilirsiniz. Bu isteğe bağlıdır: uygulama her zaman oluşturma sayfasında bulunur.
 
-It needs one more secret, `GDRIVE_OAUTH2`. Step 6 of the setup page gets it from Google for you, on a phone or a computer. **AAPS** can then only see and change the files it creates in your Google Drive, nothing else.
+Bunun için bir secret daha gerekir: `GDRIVE_OAUTH2`. Kurulum sayfasının 6. adımı bunu sizin için Google'dan alır; telefonda da bilgisayarda da. **AAPS** bundan sonra Google Drive'ınızda yalnızca kendi oluşturduğu dosyaları görebilir ve değiştirebilir, başka hiçbir şeyi değil.
 
-1. On the setup page, tap **Connect Google Drive**. Google opens in a new tab.
-2. Choose your Google account and allow access. If Google says the app is not verified, tap **Advanced**, then **Go to …**.
-3. The new tab then shows an error such as **This site can't be reached** or **127.0.0.1 refused to connect**. **This is expected:** Google's answer is in the address of that tab. Tap the address bar, select the whole address (it starts with `http://127.0.0.1:47913/`) and copy it.
-4. Go back to the setup page tab within a few minutes: Google's answer is only valid for a short time, and only once. Paste the address into **Paste the copied address here** and tap **Get GDRIVE_OAUTH2**. The page shows **GDRIVE_OAUTH2 is ready**.
-5. Tap **Open the secrets page**. Tap **Copy name**, then paste it into the small **Name** field (the name is `GDRIVE_OAUTH2`). Tap **Copy secret**, paste it into the big **Secret** box and tap **Add secret**.
+1. Kurulum sayfasında **Connect Google Drive** (Google Drive'ı bağla) düğmesine dokunun. Google yeni bir sekmede açılır.
+2. Google hesabınızı seçin ve erişime izin verin. Google uygulamanın doğrulanmadığını söylerse **Advanced** (gelişmiş), ardından **Go to …** (… sitesine git) seçeneğine dokunun.
+3. Yeni sekme bu durumda **This site can't be reached** (bu siteye ulaşılamıyor) veya **127.0.0.1 refused to connect** (127.0.0.1 bağlanmayı reddetti) gibi bir hata gösterir. **Bu beklenen bir durumdur:** Google'ın yanıtı o sekmenin adresindedir. Adres çubuğuna dokunun, adresin tamamını seçin (`http://127.0.0.1:47913/` ile başlar) ve kopyalayın.
+4. Birkaç dakika içinde kurulum sayfası sekmesine geri dönün: Google'ın yanıtı yalnızca kısa bir süre ve yalnızca bir kez geçerlidir. Adresi **Paste the copied address here** (kopyalanan adresi buraya yapıştırın) alanına yapıştırın ve **Get GDRIVE_OAUTH2** (GDRIVE_OAUTH2 al) düğmesine dokunun. Sayfa **GDRIVE_OAUTH2 is ready** (GDRIVE_OAUTH2 hazır) gösterir.
+5. **Open the secrets page** (secrets sayfasını aç) düğmesine dokunun. **Copy name** düğmesine dokunun, ardından küçük **Name** alanına yapıştırın (ad `GDRIVE_OAUTH2`'dir). **Copy secret** düğmesine dokunun, büyük **Secret** kutusuna yapıştırın ve **Add secret** düğmesine dokunun.
 
-From the next build, the APKs are also saved in Google Drive.
+Bir sonraki oluşturmadan itibaren APK'lar Google Drive'a da kaydedilir.
 
-Already have a `GDRIVE_OAUTH2` value from the preparation file of the other browser build methods? It works too: add it as the `GDRIVE_OAUTH2` secret.
+Diğer tarayıcı ile oluşturma yöntemlerinin hazırlık dosyasından elde ettiğiniz bir `GDRIVE_OAUTH2` değeriniz zaten var mı? O da çalışır: onu `GDRIVE_OAUTH2` secret'ı olarak ekleyin.
 
-Google stops the access if you don't build for 6 months, or if you change your Google password. The build then tells you so: redo these steps. See [Google refresh token expired](#aaps-ci-google-token-expired).
+6 ay boyunca oluşturma yapmazsanız veya Google parolanızı değiştirirseniz Google erişimi durdurur. Oluşturma bunu size bildirir: bu adımları yeniden yapın. [Google yenileme belirtecinin süresi doldu](#aaps-ci-google-token-expired) bölümüne bakın.
 
 (aaps-builder-updates)=
 
 ## Updating AAPS
 
-Your repository never builds anything by itself: you decide when to build, which version and which variant. When a new AAPS version is released:
+Deponuz kendi kendine hiçbir şey oluşturmaz: ne zaman, hangi sürümü ve hangi varyantı oluşturacağınıza siz karar verirsiniz. Yeni bir AAPS sürümü yayınlandığında:
 
-1. [Back up your settings](#aaps-builder-step5) as explained in step 5.
-2. Build the new version as in [step 4](#aaps-builder-step4). Keep `latest`, or type the release number.
-3. Download and install it as in [step 5](#aaps-builder-step5).
+1. 5. adımda açıklandığı gibi [ayarlarınızı yedekleyin](#aaps-builder-step5).
+2. Yeni sürümü [4. adımdaki](#aaps-builder-step4) gibi oluşturun. `latest` olarak bırakın veya sürüm numarasını yazın.
+3. Onu [5. adımdaki](#aaps-builder-step5) gibi indirin ve yükleyin.
 
-**Updates of the build steps** reach you by themselves: at every build, your repository runs the build steps released by the AAPS developers in nightscout/aaps-builder. Nothing changes in your repository, and there is no automatic build.
+**Oluşturma adımlarının güncellemeleri** size kendiliğinden ulaşır: deponuz her oluşturmada AAPS geliştiricilerinin nightscout/aaps-builder içinde yayınladığı oluşturma adımlarını çalıştırır. Deponuzda hiçbir şey değişmez ve otomatik oluşturma yoktur.
 
-**Updates of your workflow file** are rare: only when the **Run workflow** form changes, for example for a new build variant, or once if your repository was made with an earlier version of the setup page (an empty repository with a short workflow file) or from the old template. The [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. Your `KEYSTORE_SET` secret stays as it is. On the setup page, open **Updating your copy** at the end of step 1:
+**İş akışı dosyanızın güncellemeleri** nadirdir: yalnızca **Run workflow** formu değiştiğinde (örneğin yeni bir oluşturma varyantı için) veya deponuz kurulum sayfasının daha eski bir sürümüyle (kısa bir iş akışı dosyası olan boş bir depo) ya da eski şablondan yapıldıysa bir kez. [Doküman güncellemeleri & değişiklikleri](../Maintenance/DocumentationUpdate.md) sayfası bunu bildirir. `KEYSTORE_SET` secret'ınız olduğu gibi kalır. Kurulum sayfasında, 1. adımın sonundaki **Updating your copy** (kopyanızı güncelleme) bölümünü açın:
 
-1. Tap **Open the newest workflow**. On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the **plain-text version** instead, press and hold the text, then **Select all** and **Copy**.
-2. Tap **Open my workflow file**.
-3. Replace the whole text with the copied workflow (long press on a phone: **Select all**, then **Paste**).
-4. Tap **Commit changes…**, then **Commit changes**.
+1. **Open the newest workflow** (en yeni iş akışını aç) düğmesine dokunun. Bilgisayarda dosyanın sağ üstündeki **kopyalama simgesine** ("Copy raw file") tıklayın. Telefonda bunun yerine **düz metin sürümünü** açın, metne basılı tutun, ardından **Select all** (tümünü seç) ve **Copy** (kopyala) seçin.
+2. **Open my workflow file** (iş akışı dosyamı aç) düğmesine dokunun.
+3. Metnin tamamını kopyaladığınız iş akışıyla değiştirin (telefonda uzun basın: **Select all**, ardından **Paste** (yapıştır)).
+4. **Commit changes…** düğmesine, ardından **Commit changes** (değişiklikleri kaydet) düğmesine dokunun.
 
-The first line of the file shows its version.
+Dosyanın ilk satırı sürümünü gösterir.
 
 (aaps-builder-troubleshooting)=
 
 ## Troubleshooting
 
-To see why a build failed, [read the build log](#aaps-ci-read-the-logs): the step names are different, but you find the error the same way. You can also [update a secret](#aaps-ci-update-secret) and [run the build again](#aaps-ci-rerun) the same way.
+Bir oluşturmanın neden başarısız olduğunu görmek için [oluşturma günlüğünü okuyun](#aaps-ci-read-the-logs): adım adları farklıdır, ancak hatayı aynı şekilde bulursunuz. Ayrıca aynı şekilde [bir secret'ı güncelleyebilir](#aaps-ci-update-secret) ve [oluşturmayı yeniden çalıştırabilirsiniz](#aaps-ci-rerun).
 
-- **No "Build AAPS" or "Run workflow" button, or the repository is empty**: the repository was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the **Create my private repository** button.
-- **The build stops with "This repository is PUBLIC"**: in your repository, open **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, then build again.
-- **"Secret KEYSTORE_SET is missing"**: do step 3 of the setup page.
-- **"The secret is too short"**, **"The secret is not a valid code"** or **"The secret does not contain a keystore"**: the wrong text was pasted into the secret, often the word `KEYSTORE_SET` itself, or only part of the code. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 2 of the setup page first if you closed it).
-- **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 2 and 3 of the setup page.
-- **"Version … does not exist"**: the version you typed is not an AAPS release. Use `latest`, or check the release number.
-- **"Variant … is not supported"**: your workflow file is an older version. Replace it as explained in [Updating AAPS](#aaps-builder-updates).
-- **"Page not found" (404) when the setup page opens GitHub**: log in to github.com in the same browser (GitHub shows 404 for private repositories when you are not logged in). If you are logged in, the username or repository name in step 1 of the setup page does not match your repository. Type the exact names.
-- **"No GitHub user with this name"** in step 1: type your GitHub username, as shown in your GitHub profile, not your e-mail.
-- **No Download link, or the GitHub app opened**: the GitHub app cannot download builds. Open the build in Chrome as explained in [step 5](#aaps-builder-step5). To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
-- **"Google Drive access has expired or was revoked"**: redo [step 6](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
+- **"Build AAPS" veya "Run workflow" düğmesi yok ya da depo boş**: depo şablondan oluşturulmamıştır. Onu silin (**Settings** → sayfanın en altı → **Delete this repository**) ve **Create my private repository** düğmesiyle [1. adımı](#aaps-builder-step1) yeniden yapın.
+- **Oluşturma "This repository is PUBLIC" (bu depo herkese açık) mesajıyla duruyor**: deponuzda **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private** yolunu açın (görünürlüğü özel yapın), ardından yeniden oluşturun.
+- **"Secret KEYSTORE_SET is missing"** (KEYSTORE_SET secret'ı eksik): kurulum sayfasının 3. adımını yapın.
+- **"The secret is too short"** (secret çok kısa), **"The secret is not a valid code"** (secret geçerli bir kod değil) veya **"The secret does not contain a keystore"** (secret bir anahtar deposu içermiyor): secret'a yanlış metin yapıştırılmıştır; çoğu zaman `KEYSTORE_SET` kelimesinin kendisi veya kodun yalnızca bir kısmı. Deponuzda **Settings** → **Secrets and variables** → **Actions** yolunu açın, `KEYSTORE_SET` öğesini düzenleyin ve **Copy secret** ile aldığınız uzun kodu yeniden yapıştırın (kurulum sayfasını kapattıysanız önce 2. adımı yeniden yapın).
+- **"Keystore, password or alias is wrong"** (anahtar deposu, parola veya takma ad yanlış): anahtar deponuzun parolasını ve takma adını kontrol edin, ardından kurulum sayfasının 2. ve 3. adımlarını yeniden yapın.
+- **"Version … does not exist"** (sürüm … mevcut değil): yazdığınız sürüm bir AAPS sürümü değil. `latest` kullanın veya sürüm numarasını kontrol edin.
+- **"Variant … is not supported"** (varyant … desteklenmiyor): iş akışı dosyanız daha eski bir sürümdür. Onu [AAPS'i güncelleme](#aaps-builder-updates) bölümünde açıklandığı gibi değiştirin.
+- **Kurulum sayfası GitHub'ı açtığında "Page not found" (404)**: aynı tarayıcıda github.com'a giriş yapın (giriş yapmadığınızda GitHub özel depolar için 404 gösterir). Giriş yaptıysanız, kurulum sayfasının 1. adımındaki kullanıcı adı veya depo adı deponuzla eşleşmiyordur. Adları tam olarak yazın.
+- 1. adımda **"No GitHub user with this name"** (bu adla bir GitHub kullanıcısı yok): e-posta adresinizi değil, GitHub profilinizde gösterildiği şekliyle GitHub kullanıcı adınızı yazın.
+- **Download bağlantısı yok veya GitHub uygulaması açıldı**: GitHub uygulaması oluşturmaları indiremez. Oluşturmayı [5. adımda](#aaps-builder-step5) açıklandığı gibi Chrome'da açın. GitHub bağlantılarının uygulamada açılmasını durdurmak için: Android **Settings** (Ayarlar) → **Apps** (Uygulamalar) → **GitHub** → **Open by default** (Varsayılan olarak aç) → **Open supported links** (Desteklenen bağlantıları aç) seçeneğini kapatın.
+- **"Google Drive access has expired or was revoked"** (Google Drive erişiminin süresi doldu veya erişim geri alındı): [6. adımı](#aaps-builder-google-drive) yeniden yapın ve `GDRIVE_OAUTH2` secret'ını güncelleyin.
 
-For other GitHub and Google Drive issues, see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Diğer GitHub ve Google Drive sorunları için [Tarayıcı ile oluşturma: sorun giderme](../GettingHelp/BrowserBuildTroubleshooting.md) sayfasına bakın.
 
 ```{toctree}
 :hidden:
 
-AAPS Builder setup page <BrowserBuildAapsBuilderSetup.md>
+AAPS Builder kurulum sayfası <BrowserBuildAapsBuilderSetup.md>
 ```
