@@ -1,197 +1,197 @@
 # Accu-Chek Insight
 
-**이 소프트웨어는 DIY 인공 췌장 솔루션의 일부이며 판매용 제품이 아닙니다. 하지만 사용법을 읽고 배우고 이해 하셔야합니다. 이 소프트웨어는 당뇨관리를 대신 해주는 것은 아니지만, 시간을 들여 숙지하신 후 용하신다면 당뇨관리를 용이하게 도와주며 삶의 질을 향상시키는데 큰 도움을 줍니다. 성급하게 생각하지 마시고, 사용법을 숙지하시기를 권장합니다. 서용자가 소프트웨어 활용과 관련하여 대한 책임을 집니다.**
+**이 소프트웨어는 DIY 인공 췌장 솔루션의 일부이며 제품이 아닙니다. 하지만 여러분이 직접 사용법을 포함하여 시스템을 읽고, 배우고, 이해해야 합니다. 이 소프트웨어가 당뇨 관리를 모두 대신해 주지는 않지만, 필요한 시간을 들일 준비가 되어 있다면 당뇨 관리와 삶의 질을 개선하는 데 도움이 됩니다. 서두르지 마시고, 배울 시간을 충분히 가지십시오. 이 소프트웨어로 하는 일에 대한 책임은 오직 사용자 본인에게 있습니다.**
 
-```{admonition} Accu-Chek Insight is being phased out :class: note
+```{admonition} Accu-Chek Insight는 단계적으로 판매가 중단되고 있습니다 :class: note
 
-Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. Support for the Insight is already listed as ended (see [Pumps no longer sold](./Future-possible-Pump-Drivers.md)). If you rely on this pump, plan ahead for a transition to a supported pump.
+Roche는 당뇨 제품을 Accu-Chek SmartGuide CGM에 다시 집중하기 위해 인슐린 펌프 시장에서 철수하고 있습니다. Roche는 Accu-Chek Combo와 Accu-Chek Insight 펌프의 판매 종료를 알렸습니다. 남아 있는 Accu-Chek Solo 마이크로펌프도 단계적으로 중단되고 있습니다(독일에서는 2025년 말에 마지막 공급). 이 변경은 독일을 시작으로 지역별로 진행되며, 다른 유럽 시장도 뒤따를 것으로 예상됩니다. Insight 지원은 이미 종료된 것으로 표시되어 있습니다([더 이상 판매되지 않는 펌프](./Future-possible-Pump-Drivers.md) 참조). 이 펌프를 사용하고 있다면 지원되는 펌프로 바꿀 계획을 미리 세우십시오.
 
     <br />```{note}
-    Before **AAPS** had a native Insight driver, the Insight was controlled through the separate [SightRemote](https://github.com/TebbeUbben/SightRemote) app. SightRemote is no longer needed or maintained: if you still have it installed from those days, uninstall it and use a current version of **AAPS** instead.
+    **AAPS**에 자체 Insight 드라이버가 생기기 전에는 별도의 [SightRemote](https://github.com/TebbeUbben/SightRemote) 앱으로 Insight를 제어했습니다. SightRemote는 더 이상 필요하지 않으며 유지 관리되지 않습니다. 그때 설치한 앱이 아직 있다면 삭제하고 최신 버전의 **AAPS**를 사용하십시오.
     
 
-```{contents} Table of contents :depth: 1 :local: true
+```{contents} 목차 :depth: 1 :local: true
 
-    <br />## Pump capabilities with AAPS
+    <br />## AAPS와 함께 사용할 때 펌프 기능
     
-    * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-    * Automatic DST and timezone handling.
+    * 추가 통신 장치 없이 휴대폰의 자체 블루투스로 **AAPS**와 통신합니다.
+    * 서머타임(DST)과 시간대 변경을 자동으로 처리합니다.
     
-    ## Hardware and software requirements
+    ## 하드웨어 및 소프트웨어 요구 사항
     
-    * A Roche Accu-Chek Insight pump (any firmware, they all work)
+    * Roche Accu-Chek Insight 펌프(모든 펌웨어에서 작동합니다)
     
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
+    참고: AAPS는 데이터를 항상 **펌프의 첫 번째 기저 주입량 프로파일**에 씁니다.
     
-    * An Android phone running Android 12 or newer (see [Phones](../Getting-Started/Phones.md))
-    * The AAPS app installed on your phone
+    * Android 12 이상을 실행하는 Android 휴대폰([스마트폰](../Getting-Started/Phones.md) 참조)
+    * 휴대폰에 설치된 AAPS 앱
     
-    ## Setup
+    ## 설정
     
-    * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: **Menu** > **Settings** > **Communication** > **Remove device**.
+    * Insight 펌프는 한 번에 하나의 기기에만 연결해야 합니다. 이전에 Insight 리모컨(측정기)을 사용했다면 펌프의 페어링된 기기 목록에서 측정기를 제거해야 합니다: **Menu** > **Settings** > **Communication** > **Remove device**.
     
-       ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
+       ![Insight 측정기 제거 스크린샷](../images/Insight_RemoveMeter.png)
     
-    * In [Configuration > Pump](#Config-Builder-pump), select the **Accu-Chek Insight** card. Only one pump can be active at a time.
+    * [구성 > 펌프](#Config-Builder-pump)에서 **아큐-첵 Insight** 카드를 선택하십시오. 한 번에 하나의 펌프만 활성화할 수 있습니다.
     
-       ![Configuration > Pump with the Accu-Chek Insight plugin](../images/v4/Configuration/configuration_pump_list_1.png)
+       ![Accu-Chek Insight 플러그인이 있는 구성 > 펌프](../images/v4/Configuration/configuration_pump_list_1.png)
     
-       Once it is selected, the **Accu-Chek Insight** card shows two buttons, **Settings** and **Open plugin**:
+       선택하면 **아큐-첵 Insight** 카드에 **설정**과 **플러그인 열기** 두 버튼이 표시됩니다:
     
-       ![The Accu-Chek Insight plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_insight_enabled.png)
+       ![구성 > 펌프에서 선택된 Accu-Chek Insight 플러그인](../images/v4/Pumps/accu_chek_insight_enabled.png)
     
-       **Settings** opens the settings of the Accu-Chek Insight driver (see [Settings in AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
+       **설정**은 Accu-Chek Insight 드라이버의 설정을 엽니다([AAPS 설정](#Accu-Chek-Insight-Pump-settings-in-aaps) 참조).
     
-       **Open plugin** (or **Manage → Pump**) opens the Accu-Chek Insight pump screen. Before a pump is paired it looks like this:
+       **플러그인 열기**(또는 **관리 → 펌프**)는 Accu-Chek Insight 펌프 화면을 엽니다. 펌프를 페어링하기 전에는 다음과 같이 보입니다:
     
-       ![Accu-Chek Insight pump screen before pairing](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
+       ![페어링 전의 Accu-Chek Insight 펌프 화면](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
     
     (accu-chek-insight-pairing)=
-    ### Pairing
+    ### 페어링
     
-    * On the pump screen, tap **Insight pairing**. The pairing wizard opens and searches for nearby Bluetooth devices (top of the picture below).
-    * On the Insight pump, go to **Menu** > **Settings** > **Communication** > **Add Device**. The pump shows the following screen (bottom of the picture below) with the serial number of the pump.
+    * 펌프 화면에서 **Insight 페어링**을 누르십시오. 페어링 마법사가 열리고 주변의 블루투스 기기를 검색합니다(아래 그림의 위쪽).
+    * Insight 펌프에서 **Menu** > **Settings** > **Communication** > **Add Device**로 이동하십시오. 펌프에 펌프 일련번호가 있는 다음 화면이 표시됩니다(아래 그림의 아래쪽).
     
-       ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
+       ![Insight 페어링 1 스크린샷](../images/Insight_Pairing1.png)
     
-    * Back on your phone, tap the pump serial number in the list of Bluetooth devices. If Android asks you to confirm the pairing, tap **Pair**.
+    * 휴대폰으로 돌아와 블루투스 기기 목록에서 펌프 일련번호를 누르십시오. Android가 페어링을 확인하라고 요청하면 **페어링**을 누르십시오.
     
-       ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
+       ![Insight 페어링 2 스크린샷](../images/Insight_Pairing2.png)
     
-    * The pump and the phone both show a code. Check that the codes are the same on both devices. Confirm on the pump, and tap **Yes** on the phone. (Tap **No** if the codes do not match.)
+    * 펌프와 휴대폰에 모두 코드가 표시됩니다. 두 기기의 코드가 같은지 확인하십시오. 펌프에서 확인하고, 휴대폰에서 **네**를 누르십시오. (코드가 일치하지 않으면 **아니요**를 누르십시오.)
     
-       ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
+       ![Insight 페어링 3 스크린샷](../images/Insight_Pairing3.png)
     
-    * The phone shows **Pairing completed**. Tap **Exit** to return to the pump screen.
+    * 휴대폰에 **페어링 완료**가 표시됩니다. **종료**를 눌러 펌프 화면으로 돌아가십시오.
     
-       ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
+       ![Insight 페어링 4 스크린샷](../images/Insight_Pairing4.png)
     
-    * To check that all is well, look at the pump screen (**Manage → Pump**). Once the pump is paired, it shows information about the pump, such as **Serial number**, **Manufacturing date**, **Release software version** and **Bluetooth address**.
+    * 모든 것이 잘 되었는지 펌프 화면(**관리 → 펌프**)에서 확인하십시오. 펌프가 페어링되면 **일련번호**, **제조일**, **출시 소프트웨어 버전**, **블루투스 주소**와 같은 펌프 정보가 표시됩니다.
     
-       ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
+       ![Insight 페어링 정보 스크린샷](../images/Insight_PairingInformation.png)
     
-       ```{admonition} Older screenshot
+       ```{admonition} 이전 스크린샷
        :class: note
-       Apart from the top of the first picture, the pairing screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+       첫 번째 그림의 위쪽을 제외하면, 위의 페어링 스크린샷은 이전 **AAPS** 버전의 것이며 **AAPS** 4에서는 다르게 보일 수 있습니다.
        ```
     
-    * To remove the pairing, tap **Unpair** on the pump screen and confirm **Reset pairing information?**. The **Insight pairing** button then appears again.
+    * 페어링을 제거하려면 펌프 화면에서 **페어링 해제**를 누르고 **페어링 정보를 초기화하시겠습니까?**를 확인하십시오. 그러면 **Insight 페어링** 버튼이 다시 나타납니다.
     
-    Note: There is no permanent connection between the pump and the phone. **AAPS** only connects when needed (for example to set a temporary basal rate, give a bolus or read the pump history). Otherwise the batteries of the phone and the pump would drain far too fast.
+    참고: 펌프와 휴대폰은 계속 연결되어 있지 않습니다. **AAPS**는 필요할 때만 연결합니다(예: 임시 기저 설정, 볼러스 주입, 펌프 이력 읽기). 그렇지 않으면 휴대폰과 펌프의 배터리가 너무 빨리 닳습니다.
     
     (Accu-Chek-Insight-Pump-settings-in-aaps)=
-    ## Settings in AAPS
+    ## AAPS 설정
     
-    Open the settings with **Settings** on the **Accu-Chek Insight** card in **Configuration** > **Pump**, or with the gear icon in the top-right corner of the pump screen.
+    **구성** > **펌프**의 **아큐-첵 Insight** 카드에서 **설정**을 누르거나, 펌프 화면 오른쪽 위의 톱니바퀴 아이콘을 눌러 설정을 여십시오.
     
-    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![Accu-Chek Insight 드라이버 설정](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    In the Insight settings in **AAPS** you can enable the following options:
+    **AAPS**의 Insight 설정에서 다음 옵션을 활성화할 수 있습니다:
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
+    * **레저버 교체 기록**: 펌프에서 카트리지를 교체하면 인슐린 카트리지 교체를 자동으로 기록합니다.
     
-    * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
+    * **튜브 교체 기록**: 펌프에서 "tube filling" 프로그램을 실행하면 **AAPS** 데이터베이스에 노트를 추가합니다.
     
-    * **Log site changes**: adds a note to the **AAPS** database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+    * **위치 변경 기록**: 펌프에서 "cannula filling" 프로그램을 실행하면 **AAPS** 데이터베이스에 노트를 추가합니다. **참고: 위치 변경은 Autosens도 초기화합니다.**
     
-    * **Log battery changes**: records a battery change when you put a new battery in the pump.
+    * **배터리 교체 기록**: 펌프에 새 배터리를 넣으면 배터리 교체를 기록합니다.
     
-    * **Log operating mode changes**: adds a note to the **AAPS** database whenever you start, stop or pause the pump.
+    * **작동 모드 변경 기록**: 펌프를 시작, 정지 또는 일시 중지할 때마다 **AAPS** 데이터베이스에 노트를 추가합니다.
     
-    * **Log alerts**: adds a note to the **AAPS** database whenever the pump issues an alert (except reminders, bolus and TBR cancellation, which are not recorded).
+    * **경고 기록**: 펌프가 경고를 낼 때마다 **AAPS** 데이터베이스에 노트를 추가합니다(알림, 볼러스 및 TBR 취소는 기록되지 않습니다).
     
-    * **Enable TBR emulation**: the Insight pump can only set temporary basal rates (TBRs) up to 250%. To get around this limit, TBR emulation tells the pump to deliver an extended bolus for the extra insulin if a TBR of more than 250% is requested.
+    * **임시 기저 에뮬레이션 활성화**: Insight 펌프는 임시 기저(TBR)를 최대 250%까지만 설정할 수 있습니다. 이 제한을 피하기 위해, 250%를 넘는 TBR이 요청되면 TBR 에뮬레이션은 추가 인슐린을 확장 볼러스로 주입하도록 펌프에 지시합니다.
     
-      **Note: Only use one extended bolus at a time. Several extended boluses at the same time might cause errors.**
+      **참고: 확장 볼러스는 한 번에 하나만 사용하십시오. 여러 확장 볼러스를 동시에 사용하면 오류가 생길 수 있습니다.**
     
-    * **Disable vibrations on manual bolus delivery**: stops the Insight pump from vibrating when it delivers a manual bolus (or extended bolus). Only available with Insight firmware 3.x.
+    * **수동 볼러스 주입 시 진동 비활성화**: Insight 펌프가 수동 볼러스(또는 확장 볼러스)를 주입할 때 진동하지 않게 합니다. Insight 펌웨어 3.x에서만 사용할 수 있습니다.
     
-    * **Disable vibrations on automated bolus delivery**: stops the Insight pump from vibrating when it delivers an automatic bolus (SMB or temp basal with TBR emulation). Only available with Insight firmware 3.x.
+    * **자동 볼러스 주입 시 진동 비활성화**: Insight 펌프가 자동 볼러스(SMB 또는 TBR 에뮬레이션을 사용한 임시 기저)를 주입할 때 진동하지 않게 합니다. Insight 펌웨어 3.x에서만 사용할 수 있습니다.
     
-    * **Min. recovery duration [s]** and **Max. recovery duration [s]**: how long **AAPS** waits before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you have connection problems, choose a longer wait time.
-        <br><br>Example for min. recovery duration = 5 and max. recovery duration = 20
-        <br><br>no connection -> wait <b>5</b> sec.
-          <br>  retry -> no connection -> wait <b>6</b> sec.
-          <br>  retry -> no connection -> wait <b>7</b> sec.
-          <br>  retry -> no connection -> wait <b>8</b> sec.
+    * **최소 복구 시간 [초]** 및 **최대 복구 시간 [초]**: 연결 시도가 실패한 후 **AAPS**가 다시 시도하기 전에 기다리는 시간입니다. 0초에서 20초까지 선택할 수 있습니다. 연결 문제가 있으면 더 긴 대기 시간을 선택하십시오.
+        <br><br>예시: 최소 복구 시간 = 5, 최대 복구 시간 = 20
+        <br><br>연결 없음 -> <b>5</b>초 대기
+          <br>  재시도 -> 연결 없음 -> <b>6</b>초 대기
+          <br>  재시도 -> 연결 없음 -> <b>7</b>초 대기
+          <br>  재시도 -> 연결 없음 -> <b>8</b>초 대기
           <br>...
-          <br>retry -> no connection -> wait <b>20</b> sec.
-          <br>retry -> no connection -> wait <b>20</b> sec.
+          <br>재시도 -> 연결 없음 -> <b>20</b>초 대기
+          <br>재시도 -> 연결 없음 -> <b>20</b>초 대기
           <br>...
     
-    * **Disconnect delay [s]**: how long (in seconds) **AAPS** waits before disconnecting from the pump after an operation is finished. You can choose from 0 to 15 seconds. The default value is 5 seconds.
+    * **연결 해제 지연 [초]**: 작업이 끝난 후 **AAPS**가 펌프와의 연결을 끊기 전에 기다리는 시간(초)입니다. 0초에서 15초까지 선택할 수 있습니다. 기본값은 5초입니다.
     
-    For periods when the pump was stopped, **AAPS** logs a temporary basal rate of 0%.
+    펌프가 정지된 기간에 대해 **AAPS**는 0% 임시 기저를 기록합니다.
     
-    ### The pump screen
+    ### 펌프 화면
     
-    The Accu-Chek Insight pump screen (**Manage → Pump**) shows the current status of the pump, for example **Status**, **Last connected**, **Operating mode**, **Battery**, **Reservoir level**, today's total daily doses (**TDD Bolus**, **TDD Basal**), basal rates and the last bolus. Once the pump is paired, it has these buttons:
+    Accu-Chek Insight 펌프 화면(**관리 → 펌프**)에는 **상태**, **마지막 연결**, **작동 모드**, **배터리**, **레저버 잔량**, 오늘의 총 일일 용량(**TDD 볼러스**, **TDD 기저**), 기저 주입량, 마지막 볼러스 등 펌프의 현재 상태가 표시됩니다. 펌프가 페어링되면 다음 버튼이 있습니다:
     
-    * **Refresh**: refreshes the pump status.
-    * **Enable notification of TBR end (pump setting)** / **Disable notification of TBR end (pump setting)**: a standard Insight pump sounds an alarm when a TBR finishes. This button turns that alarm on or off without the need for configuration software.
-    * **Unpair**: removes the pairing with the pump (see [Pairing](#accu-chek-insight-pairing)).
+    * **새로고침**: 펌프 상태를 새로 고칩니다.
+    * **임시 기저 종료 알림 활성화 (펌프 설정)** / **임시 기저 종료 알림 비활성화 (펌프 설정)**: 기본 Insight 펌프는 TBR이 끝나면 알람을 울립니다. 이 버튼은 설정 소프트웨어 없이 이 알람을 켜거나 끕니다.
+    * **페어링 해제**: 펌프와의 페어링을 제거합니다([페어링](#accu-chek-insight-pairing) 참조).
     
-    ![Screenshot of Insight Status](../images/Insight_Status2.png)
+    ![Insight 상태 스크린샷](../images/Insight_Status2.png)
     
-    ```{admonition} Older screenshot
+    ```{admonition} 이전 스크린샷
     :class: note
-    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different and also has an **Unpair** button.
+    위 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 펌프 화면이 다르게 보이며 **페어링 해제** 버튼도 있습니다.
     
 
 ## 펌프 설정
 
-Configure alarms in the pump as follows:
+펌프의 알람을 다음과 같이 설정하십시오:
 
 * Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
-* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
+* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (막대를 모두 제거)
 * Menu > Modes > Signal mode > Quiet
 
-This will silence all alarms from the pump, allowing AAPS to decide if an alarm is relevant to you. If AAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+이렇게 하면 펌프의 모든 알람이 무음이 되며, 알람이 사용자에게 중요한지는 AAPS가 판단합니다. AAPS가 알람을 확인하지 않으면 알람이 점점 강해집니다(먼저 신호음, 그다음 진동).
 
 (Accu-Chek-Insight-Pump-vibration)=
 
-### Vibration
+### 진동
 
-Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AAPS issues an SMB or TBR emulation delivers an extended bolus).
+펌프의 펌웨어 버전에 따라 Insight는 볼러스가 주입될 때마다 짧게 진동합니다(예: AAPS가 SMB를 주입하거나 TBR 에뮬레이션이 확장 볼러스를 주입할 때).
 
-* Firmware 1.x: No vibration by design.
-* Firmware 2.x: Vibration cannot be disabled.
-* Firmware 3.x: AAPS delivers bolus silently.
+* 펌웨어 1.x: 설계상 진동이 없습니다.
+* 펌웨어 2.x: 진동을 끌 수 없습니다.
+* 펌웨어 3.x: AAPS는 볼러스를 조용히 주입합니다.
 
-Firmware version can be found in the menu.
+펌웨어 버전은 메뉴에서 확인할 수 있습니다.
 
-## 베터리 교체
+## 배터리 교체
 
-Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. The user reporting this is using Energizer lithium batteries.
+루프 사용 시 Insight의 배터리 수명은 10일에서 14일이며, 최대 20일입니다. 이 내용을 보고한 사용자는 Energizer 리튬 배터리를 사용합니다.
 
-The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. 이런 경우 올바른 시간을 정확히 알 수 없으므로, 배터리 교체 전에 AAPS에 기록된 모든 항목은 더 이상 계산에 포함되지 않습니다.
 
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
 
-## Insight specific errors
+## Insight 관련 오류
 
-### 확장 Bolus
+### 확장 볼러스
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+여러 확장 볼러스를 동시에 사용하면 오류가 생길 수 있으므로, 한 번에 하나의 확장 볼러스만 사용하십시오.
 
 ### Time out
 
-Sometimes the Insight pump does not answer while **AAPS** sets up the connection. **AAPS** then shows the notification "Timeout during handshake - reset bluetooth".
+**AAPS**가 연결을 설정하는 동안 Insight 펌프가 응답하지 않을 때가 있습니다. 그러면 **AAPS**에 "핸드셰이크 중 시간 초과 - 블루투스 재설정" 알림이 표시됩니다.
 
 ![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-If this happens, turn off Bluetooth on the pump AND on the phone for about 10 seconds, then turn it back on.
+이 경우 펌프와 휴대폰 모두에서 블루투스를 약 10초 동안 끈 다음 다시 켜십시오.
 
-## Crossing time zones with Insight pump
+## Insight 펌프로 시간대 이동하기
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-insight).
+여러 시간대를 넘어 여행하는 방법은 [펌프로 시간대 이동하기](#timezone-traveling-insight) 섹션을 참조하십시오.
 
-## Where to get help
+## 도움을 받을 수 있는 곳
 
-Development of the Insight driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Insight 드라이버는 커뮤니티가 **자원봉사**로 개발합니다. 도움을 요청하기 전에:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. 이 문서의 관련 섹션을 **읽고** 기능이 어떻게 작동해야 하는지 확인하십시오.
+2. [Discord](https://discord.gg/4fQUWHZ4Mw)의 *#AAPS* 채널이나 다른 [커뮤니티 채널](../GettingHelp/WhereCanIGetHelp.md)에서 **질문하십시오**.
+3. [기존 이슈](https://github.com/nightscout/AndroidAPS/issues)를 검색하여 **버그를 보고하십시오**. 해당 이슈가 없으면 [새 이슈](https://github.com/nightscout/AndroidAPS/issues)를 열고 [로그 파일](../GettingHelp/AccessingLogFiles.md)을 첨부하십시오.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+도움을 요청할 때는 휴대폰 제조사와 모델, Android 버전, **AAPS** 버전, 그리고 문제에 대한 쉬운 영어 설명(무엇이 바뀌었는지, 마지막으로 언제 작동했는지)을 포함하십시오.
