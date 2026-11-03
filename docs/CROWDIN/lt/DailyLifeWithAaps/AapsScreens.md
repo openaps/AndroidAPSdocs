@@ -431,7 +431,7 @@ Active insulin including boluses **and basal**.
 
 (aaps-screens-iob)=
 
-#### Insulin on board (IOB)
+#### Aktyvus insulinas organizme (AIO)
 
 Rodo aktyvų insuliną organizme (= insulinas, kuris dar veikia jūsų kūne). Į jį įeina bolusų ir laikinų bazių insulinas (**bet neįeina profilyje nustatyta valandinė bazė**).
 
@@ -629,7 +629,7 @@ Laukas **KG** paprastai jau užpildytas paskutiniu NGJ rodmeniu. Jei neturite ve
 
 Rezultato mygtukas apačioje rodo siūlomą bolusą; jį paspaudus, prieš suleidžiant insuliną prašoma patvirtinimo. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
 
-Good to know:
+Naudinga žinoti:
 
 * Jei apskaičiuotas bolusas viršija jūsų **[Didžiausią bolusą](#Preferences-maximum-bolus)**, jis sumažinamas iki didžiausio boluso, o patvirtinimo lange rodomas įspėjimas „Pritaikytas boluso apribojimas“. [Greitasis vedlys](../DailyLifeWithAaps/QuickWizards.md) tokiu atveju atmetamas.
 * Kai bolusas tik įrašomas (pavyzdžiui, kai pompa atjungta), įspėjimas „**Bolusas bus tik įrašytas (nebus suleistas)**“ lieka lango viršuje, net kai slenkate.
