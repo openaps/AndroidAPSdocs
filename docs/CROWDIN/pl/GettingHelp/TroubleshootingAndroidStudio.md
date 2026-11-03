@@ -49,7 +49,7 @@ Sklonuj źródła ponownie, jak opisano w dokumentacji, i nie zezwalaj na aktual
 
   * Musisz dostać komunikat z zainstalowaną wersją Git, tak jak na zrzucie ekranu powyżej. W takim przypadku przejdź do [Kroku 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get a message saying
+  * Jeśli dostaniesz komunikat
     ```
     Git: command not found
     ```
@@ -57,15 +57,15 @@ Sklonuj źródła ponownie, jak opisano w dokumentacji, i nie zezwalaj na aktual
 
   * [Sprawdź instalację Git](#BuildingAaps-steps-for-installing-git)
 
-  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
+  * Jeśli używasz Windows i Git został właśnie zainstalowany, uruchom ponownie komputer, aby Git był dostępny w całym systemie
 
-  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
+  * Jeśli Git jest zainstalowany, ponownie uruchomiłeś komputer (w Windows), a Git nadal nie jest znaleziony:
 
   * Wyszukaj na komputerze plik „git.exe”.
 
     Zanotuj sobie, w jakim katalogu jest zapisany.
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Dodaj katalog, w którym znalazłeś swoją instalację Git.
+  * Przejdź do zmiennych środowiskowych w Windows, wybierz zmienną „PATH” i kliknij Edytuj. Dodaj katalog, w którym znalazłeś swoją instalację Git.
 
   * Zapisz i zamknij.
 
@@ -139,7 +139,7 @@ Lub:
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
+Jeśli widzisz powyższy komunikat o błędzie, musisz pobrać właściwą wersję JVM, zanim spróbujesz zbudować ponownie:
 
 1.  Sprawdź w [tabeli wymagań](#Building-APK-recommended-specification-of-computer-for-building-apk-file), której wersji JVM potrzebujesz dla budowanej wersji **AAPS**, i zanotuj ją.
 
@@ -212,7 +212,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Generate Signed APK zakończone sukcesem z 0 wariantami budowania
 
-When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
+Gdy generujesz podpisany apk, możesz dostać powiadomienie, że generowanie się udało, ale wygenerowano „0 build variants” (0 wariantów budowania):
 
 ![APK wygenerowany z 0 wariantami budowania](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -237,7 +237,7 @@ Twój apk został zbudowany poprawnie i możesz go przenieść na telefon!
 
 ## Apk nie został zainstalowany
 
-![phone app not installed](../images/Update_AppNotInstalled.png)
+![aplikacja na telefonie nie została zainstalowana](../images/Update_AppNotInstalled.png)
 
 * Upewnij się, że plik „app-full-release.apk” jest przeniesiony na telefon.
 * Ten błąd zwykle oznacza, że nowy apk jest podpisany innym magazynem kluczy niż zainstalowany **AAPS**. Jeśli wciąż masz poprzedni magazyn kluczy, wybierz go i zbuduj ponownie. W przeciwnym razie zobacz [Ponowna instalacja AAPS z nowym magazynem kluczy](#reinstall-aaps).
@@ -252,7 +252,7 @@ Twój apk został zbudowany poprawnie i możesz go przenieść na telefon!
 
 ## Apk zainstalowany, ale stara wersja
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
+Jeśli aplikacja zbudowała się poprawnie, przeniosłeś ją na telefon i zainstalowałeś bez błędów, ale numer wersji się nie zmienił, to być może zapomniałeś o kroku [aktualizacji lokalnej kopii](#Update-to-new-version-update-your-local-copy)
 
 ## Nic z powyższych nie pomogło
 
