@@ -1,62 +1,62 @@
-# Setting up the Reporting Server
+# Ataskaitų serverio nustatymas
 
-There are currently two reporting servers available for use with **AAPS**:
+Šiuo metu su **AAPS** galima naudoti du ataskaitų serverius:
 
 - [Nightscout](https://nightscout.github.io/)
 - [Tidepool](https://www.tidepool.org/)
 
-![Reporting Servers](../images/Building-the-App/ReportingServer.png)
+![Ataskaitų serveriai](../images/Building-the-App/ReportingServer.png)
 
-We recommend using Nightscout.
+Rekomenduojame naudoti Nightscout.
 
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
+Nightscout yra žiniatinklio programa, kuri gali įrašyti ir rodyti jūsų NGJ ir **AAPS** duomenis bei kurti ataskaitas. Tai galinga platforma, kuri jau daug metų yra integruota į **AAPS**. Jis leidžia naudotojams ir globėjams beveik realiuoju laiku sekti paciento diabeto duomenis (jei visų susijusių komponentų interneto ryšys pakankamas, nuo duomenų gavimo iki jų pateikimo gali praeiti vos kelios sekundės). Juo taip pat perduodamos nuotolinės komandos, kurias prižiūrintys asmenys siunčia į **AAPS** iš **AAPSClient** (žr. [Pagrindinio įrenginio ↔ kliento valdymas](#client-master-control)).
 
-Nightscout is provided as open-source software. Anyone can create and operate a Nightscout server, using either free or paid-for services.
+Nightscout yra atvirojo kodo programinė įranga. Nightscout serverį gali susikurti ir valdyti bet kas, naudodamas nemokamas arba mokamas paslaugas.
 
-You can find more information on the [website of the Nightscout project](http://nightscout.github.io/).
+Daugiau informacijos rasite [Nightscout projekto svetainėje](http://nightscout.github.io/).
 
-### Option 1 - Set up your Nightscout server yourself
+### 1 variantas – Nightscout serverį nustatykite patys
 
-Creating your Nightscout reporting server can require one or more web-based applications that will require maintenance. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
+Kuriant Nightscout ataskaitų serverį, gali prireikti vienos ar kelių žiniatinklio programų, kurias reikės prižiūrėti. Jei norite, kad paslauga būtų visiškai nemokama, gali tekti perkelti savo Nightscout svetainę ir duomenis, jei ir kai paslaugų teikėjai panaikins nemokamą planą.
 
-A description of how you can set up Nightscout with the advantages and disadvantages of the various operating options, including an estimate of the costs, can be found [here](https://nightscout.github.io/nightscout/new_user/#free-diy).
+Kaip nustatyti Nightscout, kokie yra įvairių veikimo variantų privalumai ir trūkumai, taip pat apytikslės išlaidos, aprašyta [čia](https://nightscout.github.io/nightscout/new_user/#free-diy).
 
-### Option 2 - Pay for a hosted Nightscout service
+### 2 variantas – mokėkite už Nightscout talpinimo paslaugą
 
-There are also options from different service providers who host Nightscout for you, with a monthly fee. The costs are manageable, and the advantage of a hosted option is that you do not need to be IT-literate, or have any operating infrastructure.
+Taip pat yra įvairių paslaugų teikėjų, kurie už mėnesinį mokestį talpina Nightscout už jus. Kaina nedidelė, o talpinimo paslaugos privalumas – jums nereikia IT žinių ar savos veikiančios infrastruktūros.
 
 
-Existing Nightscout users can reconsider where and how their Nightscout server is hosted from time to time, and change to a different option if it becomes more suitable.
+Esami Nightscout naudotojai kartais gali peržiūrėti, kur ir kaip talpinamas jų Nightscout serveris, ir pereiti prie kito varianto, jei jis tinka geriau.
 
-Some Nightscout hosted services are listed [here](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
+Kai kurie paslaugos teikėjai, siūlantys Nightscout, išvardyti [čia](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
 
-### Further configuration of Nightscout
+### Tolesnis Nightscout konfigūravimas
 
-Once you have your Nightscout instance up and running, see [Nightscout configuration page](../SettingUpAaps/Nightscout.md) for additional considerations.
+Kai jūsų Nightscout egzempliorius jau veiks, papildomų patarimų rasite [Nightscout konfigūravimo puslapyje](../SettingUpAaps/Nightscout.md).
 
 (SettingUpTheReportingServer-tidepool)=
 ## Tidepool
 
-Tidepool has been available in **AAPS** since version 3.2 which was released in late 2023.
+Tidepool galima naudoti **AAPS** nuo 3.2 versijos, kuri buvo išleista 2023 m. pabaigoje.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
-On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
+Kai naudojate **AAPS**, tarp duomenų gavimo ir jų rodymo ataskaitose praeina trys valandos, todėl Tidepool netinka dalytis realaus laiko informacija su prižiūrinčiais asmenimis.  
+Kita vertus, jei Nightscout netinka, Tidepool gali būti puikus sprendimas dalytis ataskaitomis su paciento endokrinologu.  
 ```
 
-Tidepool is an [open source](https://github.com/tidepool-org) project. It offers to run an account free of charge on the Tidepool servers.
+Tidepool yra [atvirojo kodo](https://github.com/tidepool-org) projektas. Ji leidžia nemokamai naudoti paskyrą Tidepool serveriuose.
 
-More information about setting up Tidepool with AAPS [here](../SettingUpAaps/Tidepool.md).
+Daugiau informacijos apie Tidepool nustatymą su AAPS rasite [čia](../SettingUpAaps/Tidepool.md).
 
 ```{admonition} **AAPS** has the uploader for Tidepool integrated
 :class: note
-You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
+Jums **nereikia** naudoti Tidepool įkėlimo programėlės: **AAPS** pats įkels gliukozės kraujyje duomenis, terapiją ir valandinę bazę. Jums reikia tik asmeninės Tidepool paskyros. Neįkelkite duomenų atskiru Tidepool įkėlimo įrankiu, nes atsiras pasikartojančių reikšmių.  
 ```
 
-## Next step
+## Kitas žingsnis
 
-Once you have set up your reporting server, you can configure **AAPS** on your phone with the [Setup Wizard](./SetupWizard.md), which will also link **AAPS** to your reporting server.
+Kai ataskaitų serveris bus nustatytas, galėsite sukonfigūruoti **AAPS** savo telefone su [Sąrankos vedliu](./SetupWizard.md), kuris taip pat susies **AAPS** su jūsų ataskaitų serveriu.
