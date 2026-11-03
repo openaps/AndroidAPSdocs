@@ -1,10 +1,10 @@
 # Freestyle Libre 1
 
-Pentru a folosi senzorul dumneavoastră Libre ca pe un CGM, anume să primiți valori ale glicemiei la fiecare 5 minute fără să fie nevoie să scanați senzorul, trebuie să cumpărați o punte de tip NFC către Bluetooth (dispozitive disponibile comercial, bazate pe proiectul învechit [LimiTTer](https://github.com/JoernL/LimiTTer)).
+Pentru a folosi senzorul dumneavoastră Libre ca pe un CGM, care primește valori noi ale glicemiei la fiecare 5 minute fără să fie nevoie să scanați senzorul, trebuie să cumpărați o punte de tip NFC către Bluetooth (dispozitive disponibile comercial, bazate pe proiectul învechit [LimiTTer](https://github.com/JoernL/LimiTTer)).
 
 ```{admonition} Libre 2, Libre 1 US and Libre Pro
-:class: avertizare
-Verificați puntea și aplicația pe care doriți să o utilizați este compatibilă cu senzorul dumneavoastră.  
+:class: warning
+Verificați dacă puntea și aplicația pe care doriți să le utilizați sunt compatibile cu senzorul dumneavoastră.  
 ```
 
 Unele punți sunt încă disponibile pe piață:
@@ -13,13 +13,13 @@ Unele punți sunt încă disponibile pe piață:
 -   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) de la vânzătorii europeni ([BubbleShop](https://bubbleshop.eu/)) sau pentru utilizatorii ruși [aici](https://vk.com/saharmonitor/). De asemenea, este disponibil pe AliExpress.
 -   Atom pentru utilizatorii ruși.
 
-## 1. Using xDrip
+## 1. Utilizarea xDrip
 
--   xDrip supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
+-   xDrip acceptă Miaomiao, Bubble, Blucon, Atom și LibreAlarm.
 -   Puteți descărca în siguranță [ultimul APK (stabil)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) dacă nu aveți nevoie de caracteristici recente, caz în care ar trebui să utilizați cel mai recent [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
--   Follow setup instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
+-   Urmați instrucțiunile de configurare de pe [pagina de setări xDrip](../CompatibleCgms/xDrip.md).
 -    De asemenea, aveți nevoie de OOP2 pentru Libre 1 SUA (și Libre 2 UE).
--   Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+-   Selectați xDrip în [**Configurație → Sursă glicemie**](#Config-Builder-bg-source).
 
 ## 2. Utilizarea Diabox
 
@@ -28,4 +28,4 @@ Unele punți sunt încă disponibile pe piață:
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Selectați xDrip în [**Configurație → Sursă glicemie**](#Config-Builder-bg-source).
