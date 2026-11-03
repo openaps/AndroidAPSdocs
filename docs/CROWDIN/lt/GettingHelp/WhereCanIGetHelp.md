@@ -1,28 +1,28 @@
-# Where can I get help?
+# Kur gauti pagalbos?
 
-## I'm stuck; what should I do? Who can I ask?
+## Įstrigau. Ką daryti? Who can I ask?
 
 This project is based on volunteer work and a few rules apply to any requests for help to avoid unnecessary time being wasted by those who kindly pay it forward:
 
 * level 1: Read the docs (i.e. this Wiki) - there is now a search function to help you!
-* 2 etapas: ieškokite Facebook grupėje; jei ten dar nebuvo atsakyta į jūsų klausimą, paklauskite [AndroidAPS Users Facebook group](https://www.facebook.com/groups/1900195340201874/)
-* level 3: If Facebook did not get results then ask in [discord](https://discord.gg/4fQUWHZ4Mw). Abiejų kanalų pranešimų kopijos ignoruojamos/ištrinamos, kad būtų išvengta pasikartojančių atsakymų. Atminkite, kad dauguma kūrėjų yra Europoje, todėl jiems neįmanoma visą parą; skirkite jiems kelias valandas atsakymui, ypač savaitgaliais ir atostogų metu.
-* level 4: Create an [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md)
-* level 5: email *developers@aaps.app* (only if personal data is involved that should not go in a public channel and your problems have not been resolved in the other levels)
+* 2 lygis: ieškokite Facebook grupėje; jei ten dar nėra atsakymo, užduokite klausimą grupėje [AndroidAPS Users Facebook group](https://www.facebook.com/groups/1900195340201874/)
+* 3 lygis: jei Facebook nepadėjo, klauskite [Discord](https://discord.gg/4fQUWHZ4Mw). Abiejų kanalų pranešimų kopijos ignoruojamos/ištrinamos, kad būtų išvengta pasikartojančių atsakymų. Atminkite, kad dauguma kūrėjų gyvena Europoje, todėl atsakymas gali ateiti ne bet kuriuo paros metu. Gali tekti palaukti kelias valandas, ypač savaitgaliais ir per šventes.
+* 4 lygis: sukurkite [pranešimą apie problemą (issue)](https://github.com/nightscout/AndroidAPS/issues) ir pridėkite [žurnalų failus](../GettingHelp/AccessingLogFiles.md)
+* 5 lygis: parašykite el. laišką adresu *developers@aaps.app* (tik jei problema susijusi su asmeniniais duomenimis, kurių negalima skelbti viešai, ir jei jos nepavyko išspręsti ankstesniuose lygiuose)
 
-For support on CGM sources please use the Facebook groups or Discord channels for that specific system (e.g. [xDrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
+Dėl NGJ duomenų šaltinių kreipkitės į tos sistemos Facebook grupes ar Discord kanalus (pvz., [xDrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)). Dėl pagalbos su Nightscout kreipkitės į [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/): ten naudotojai šias sistemas išmano geriau nei čia esantys žmonės, kurie naudoja labai įvairias sistemas.
 
 ## Make sure to join the AndroidAPS users group on Facebook or Discord!
 
 Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and/or [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
 
-Please note that Facebook has recently removed external links shared within the **AAPS** Facebook group and this includes current and historic posts which contain external links to the **AAPS** Notes / Read the docs. For new users who are working through the Objectives and reviewing historic **AAPS** Facebook posts please search key terms as discussed within the **AAPS** notes for further assistance.
+Atkreipkite dėmesį, kad Facebook neseniai pašalino išorines nuorodas, bendrintas **AAPS** Facebook grupėje. Tai liečia ir naujus, ir senus įrašus su išorinėmis nuorodomis į **AAPS** dokumentaciją (Notes / Read the docs). Jei esate naujas naudotojas, atliekate mokymo etapus ir skaitote senus **AAPS** Facebook įrašus, papildomos pagalbos ieškokite **AAPS** dokumentacijoje pagal pagrindinius žodžius.
 
 ## Other resources in English
 
-* [Looped Facebook grupė](https://www.facebook.com/groups/TheLoopedGroup): apima visus Pasidaryk Pats uždarojo ciklo sistemas (OpenAPS, Loop ir AndroidAPS)
-* [xDrip - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
+* [Looped Facebook grupė](https://www.facebook.com/groups/TheLoopedGroup): apie visas „pasidaryk pats“ uždaro ciklo sistemas (OpenAPS, Loop ir AndroidAPS)
+* [xDrip – Facebook](https://www.facebook.com/groups/xDripG5/)
+* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): apie NGJ apskritai
 * [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
 ## Country / language specific resources
@@ -43,8 +43,8 @@ Please note that Facebook has recently removed external links shared within the 
 ### Vokietija
 
 * [Open Source Looper Community](https://de.loopercommunity.org/): Vokietijos uždaro ciklo naudotojai bendrauja dėl atviro kodo naudojimo, diabeto bendrai, komunikacijos, palaikymo ir vietinių susirinkimų
-* [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
-* [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
+* [Freestyle Libre Freaks Facebook grupė](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre kaip NGJ/FGM
+* [NightscoutDE Facebook grupė](https://www.facebook.com/groups/nightscoutDE/)
 * [Looped-DE](https://www.facebook.com/groups/loopedDE/)
 
 ### Netherlands
@@ -58,7 +58,7 @@ Please note that Facebook has recently removed external links shared within the 
 
 ### Poland
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): lenkų AAPS bendruomenė ir diabeto pagalbos grupė
 
 ### Sweden
 
