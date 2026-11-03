@@ -1,35 +1,35 @@
-# How to help with AAPS
+# איך לעזור ל-AAPS
 
-## AAPS operates entirely on volunteer efforts and has no paid staff.
+## AAPS פועל כולו בזכות מתנדבים, ואין לו עובדים בשכר.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+המפתחים הם הורים, מטפלים, בני משפחה ואנשים עם סוכרת, שעובדים יחד כדי לפתח ולשפר פתרון לצורך נפוץ מאוד. המפתחים תורמים את זמנם הפנוי בחינם, אבל לא הוגן לצפות שהם גם ישלמו עלויות נוספות כדי שמשהו כל כך טוב יהיה קוד פתוח וחינמי לכולם.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*כדי לבדוק מערכת חדשה עד הסוף, המפתחים צריכים טלפון נוסף ומשאבה נוספת, כי אי אפשר להשתמש במערכת על אדם עד שהיא יציבה. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. לפעמים נחמד גם לעזור במימון העלויות של המפתחים, כדי שיוכלו לצאת מהחדרים החשוכים שלהם ולהיפגש בכנסים ובאירועים, ולהחליף רעיונות יצירתיים ואנליטיים זה עם זה.*
 
-## I can write code! How do I participate?
+## אני יודע/ת לכתוב קוד! איך משתתפים?
 
-Yay! Look at the issues, ask in the discord channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Yay! עיינו ב-issues (בעיות פתוחות) ושאלו בערוץ Discord. תמיד יש הרבה מה לעשות! בחרו קודם משימה קטנה והגישו את בקשת המשיכה (pull request) הראשונה שלכם! :)
 
-## I know the system and can write documentation!
+## אני מכיר/ה את המערכת ויכול/ה לכתוב תיעוד!
 
-Great, this is a highly appreciated thing and a good way to pay it forward!
+מצוין! זו עזרה שמוערכת מאוד, ודרך טובה להעביר הלאה את העזרה שקיבלתם!
 
 * The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
+* מדריך לביצוע commits בוויקי באנגלית נמצא כאן: [איך ליצור PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
 
-## I do speak multiple languages and want to translate the app or the documentation
+## אני דובר/ת כמה שפות ורוצה לתרגם את האפליקציה או את התיעוד
 
 If you are translating something for the first time, please start with translating the strings for the app, as this is easier and you will get results faster.
 
 You are welcome to start as a translator for the documentation in parallel or later.
 
-You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
+ניתן לבדוק את מצב התרגומים בשפות השונות לאפליקציה ולתיעוד [כאן](StateOfTranslations.md).
 
 * If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
 * If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
 
 Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
 
-## Are there other ways to help?
+## יש דרכים אחרות לעזור?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+צריך אנשים עם כישורים בעיצוב גרפי, עיצוב חוויית משתמש (UX), תרגום ועריכת הוויקי. אפשר גם פשוט להעביר הלאה את העזרה: לענות על שאלות פשוטות ב-Discord & Facebook, וכך לתת למפתחים זמן ומקום להתמקד בדברים הקשים יותר.
