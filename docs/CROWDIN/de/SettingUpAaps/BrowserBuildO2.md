@@ -3,7 +3,7 @@
 # Option 2 – Upload your existing keystore
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+Das ist Teil von [Schritt 2 – Deinen Signatur-Keystore erstellen](BrowserBuildKeystore.md) des [Browser-Builds](BrowserBuild.md). Achte darauf, dass Du die [Entscheidung zwischen Option 1 und Option 2](#aaps-ci-preparation) gelesen hast.
 ```
 
 Option 2 reuses the JKS you already created on a previous build of AAPS from a computer in Android Studio. It is suitable for users who already have a JKS and know the JKS password and alias.
@@ -22,18 +22,18 @@ If the build still fails at the signing step and your password contains `$`, a b
 ![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
 ```
 
-## Choose your device
+## Wähle Dein Gerät
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Du erstellst auf einem **Android-Smartphone**? Verwende stattdessen [AAPS Builder](BrowserBuildAapsBuilder.md): Dafür brauchst Du keine Vorbereitungsdatei.
 ```
 
-Follow the page that matches the device you are building from:
+Folge der Seite, die zu dem Gerät passt, auf dem Du erstellst:
 
 - **[Computer](BrowserBuildO2Computer.md)** – Windows, Mac or Linux.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Du kannst das Gerät jederzeit wechseln – öffne einfach die passende Seite.
 ```
 
 ```{toctree}
