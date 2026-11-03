@@ -12,7 +12,7 @@ We recommend using Nightscout.
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
+Nightscout הוא אפליקציית אינטרנט שיכולה לתעד ולהציג את נתוני ה-CGM ואת נתוני **AAPS** שלכם, ולהפיק דוחות. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). Nightscout גם מעביר את הפקודות מרחוק שמטפלים שולחים ל-**AAPS** מ-**AAPSClient** (ראו [שליטה בין מכשיר ראשי ↔ מכשיר לקוח](#client-master-control)).
 
 Nightscout is provided as open-source software. Anyone can create and operate a Nightscout server, using either free or paid-for services.
 
@@ -22,7 +22,7 @@ You can find more information on the [website of the Nightscout project](http://
 
 Creating your Nightscout reporting server can require one or more web-based applications that will require maintenance. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
 
-A description of how you can set up Nightscout with the advantages and disadvantages of the various operating options, including an estimate of the costs, can be found [here](https://nightscout.github.io/nightscout/new_user/#free-diy).
+תיאור של הגדרת Nightscout, עם היתרונות והחסרונות של אפשרויות ההפעלה השונות, כולל הערכת עלויות, זמין [כאן](https://nightscout.github.io/nightscout/new_user/#free-diy).
 
 ### Option 2 - Pay for a hosted Nightscout service
 
@@ -44,7 +44,7 @@ Tidepool has been available in **AAPS** since version 3.2 which was released in 
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
+כאשר משתמשים ב-**AAPS**, יש עיכוב של שלוש שעות בין קבלת הנתונים לבין הצגתם בדוחות. לכן Tidepool אינו מתאים לשיתוף מידע בזמן אמת עם מטפלים.  
 On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
 ```
 
@@ -54,9 +54,9 @@ More information about setting up Tidepool with AAPS [here](../SettingUpAaps/Tid
 
 ```{admonition} **AAPS** has the uploader for Tidepool integrated
 :class: note
-You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
+**אין** צורך להשתמש באפליקציית ההעלאה של Tidepool: **AAPS** יעלה עבורכם את ערכי הסוכר בדם, הטיפולים והבזאלי. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
 ```
 
 ## Next step
 
-Once you have set up your reporting server, you can configure **AAPS** on your phone with the [Setup Wizard](./SetupWizard.md), which will also link **AAPS** to your reporting server.
+לאחר הגדרת שרת הדיווח, ניתן להגדיר את **AAPS** בטלפון בעזרת [אשף ההתקנה](./SetupWizard.md), שגם יקשר את **AAPS** לשרת הדיווח שלכם.
