@@ -22,7 +22,7 @@ Tento spôsob používa Juggluco na prijímanie surových dát zo senzora v 1-mi
 ### Krok 1: Nastavenie Juggluco
 Aplikáciu Juggluco si stiahnite a nainštalujte [odtiaľto](https://www.juggluco.nl/Juggluco/download.html). Postupujte podľa návodu [tu](https://www.juggluco.nl/Juggluco/libre3/)
 
-Uistite sa, že posielate hodnoty glykémie do xDrip: v nastaveniach Juggluco môžete nastaviť, aby Juggluco posielal hodnoty glykémie iným aplikáciám. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip.
+Uistite sa, že posielate hodnoty glykémie do xDrip: v nastaveniach Juggluco môžete nastaviť, aby Juggluco posielal hodnoty glykémie iným aplikáciám. Juggluco môže posielať tri typy takéhoto vysielania: **Patched Libre broadcast** pôvodne používala upravená aplikácia Librelink a dá sa použiť na posielanie hodnôt glykémie do xDrip.
 
 ### Krok 2: Nastavenie xDrip
 
@@ -44,11 +44,11 @@ Hodnoty glykémie prijíma aplikácia xDrip v smartfóne.
 
 ### Krok 3: Spustenie senzora v xDrip
 
-V xDrip spustite senzor pomocou „Start Sensor“ a „not today“. Mobilný telefón nie je potrebné držať pri senzore. „Start Sensor“ v skutočnosti fyzicky nespustí žiadny senzor Libre 3 ani s ním nijako nekomunikuje. Slúži to iba na to, aby xDrip vedel, že nový senzor posiela hodnoty glykémie. If available, enter two blood-measured values for the initial calibration. Teraz by sa hodnoty glykémie mali v xDrip zobrazovať každých 5 minút. Vynechané hodnoty, napr. preto, že ste boli príliš ďaleko od telefónu, sa nebudú spätne dopĺňať.
+V xDrip spustite senzor pomocou „Start Sensor“ a „not today“. Mobilný telefón nie je potrebné držať pri senzore. „Start Sensor“ v skutočnosti fyzicky nespustí žiadny senzor Libre 3 ani s ním nijako nekomunikuje. Slúži to iba na to, aby xDrip vedel, že nový senzor posiela hodnoty glykémie. Ak je to možné, zadajte pri úvodnej kalibrácii dve hodnoty namerané z krvi. Teraz by sa hodnoty glykémie mali v xDrip zobrazovať každých 5 minút. Vynechané hodnoty, napr. preto, že ste boli príliš ďaleko od telefónu, sa nebudú spätne dopĺňať.
 
 Ak stále nie sú žiadne dáta, počkajte aspoň 15–20 minút.
 
-Po výmene senzora xDrip automaticky rozpozná nový senzor a vymaže všetky kalibračné dáta. You may check your blood glucose after activation and make a new initial calibration.
+Po výmene senzora xDrip automaticky rozpozná nový senzor a vymaže všetky kalibračné dáta. Po aktivácii si môžete skontrolovať glykémiu a urobiť novú úvodnú kalibráciu.
 
 ### Krok 4: Nastavenie AAPS
 
@@ -69,7 +69,7 @@ Po výmene senzora xDrip automaticky rozpozná nový senzor a vymaže všetky ka
 
 ![Ukončenie senzora](../images/libre3/step_14.jpg)
 
-Poznámka: Keď sú aktívne dva senzory, Juggluco posiela do xDrip najnovšiu hodnotu z ktoréhokoľvek z nich. If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. Ak ukončíte nesprávny senzor, môžete ho znova aktivovať jednoduchým naskenovaním senzora.
+Poznámka: Keď sú aktívne dva senzory, Juggluco posiela do xDrip najnovšiu hodnotu z ktoréhokoľvek z nich. Ak senzory nie sú nakalibrované tak, aby merali glykémiu podobne, xDrip môže dostávať skákajúce hodnoty glykémie. Ak ukončíte nesprávny senzor, môžete ho znova aktivovať jednoduchým naskenovaním senzora.
 
 ## Prepínanie senzora medzi aplikáciou Libre 3 a Juggluco
 
@@ -99,4 +99,4 @@ Ak chcete prejsť z aplikácie Libre 3 na Juggluco, musíte aplikáciu Libre 3 v
 
 Pôvodný návod: [webová stránka jkaltes](https://www.juggluco.nl/Juggluco/libre3/)
 
-Additional GitHub repo: [GitHub link](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Ďalší repozitár na GitHube: [odkaz na GitHub](https://github.com/maheini/FreeStyle-Libre-3-patch)
