@@ -1,100 +1,100 @@
-# Update with Android Studio
+# Atnaujinimas su Android Studio
 
 ## Kurti sau, o ne parsisiųsti
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** negalima atsisiųsti dėl medicinos prietaisams taikomų teisės aktų. Sukurti programėlę savo reikmėms yra teisėta, bet jos kopijos negalima duoti kitiems! Daugiau informacijos rasite [DUK puslapyje](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+Jei norite kurti **AAPS** naujame kompiuteryje, nukopijuokite atsarginę raktų saugyklos failo kopiją į naują kompiuterį. Tada vietoj šio vadovo vadovaukitės [pirmojo **AAPS** kūrimo instrukcijomis](../SettingUpAaps/BuildingAaps.md). Vienintelis skirtumas: užuot kūrę naują raktų saugyklą, galite pasirinkti tą, kurią nukopijavote į naują kompiuterį.
 ```
 
-## Overview for updating to a new version of AAPS with Android Studio
+## AAPS atnaujinimo į naują versiją su Android Studio apžvalga
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Jei kyla problemų, žr. atskirą puslapį [Android Studio trikčių šalinimas](../GettingHelp/TroubleshootingAndroidStudio.md).
 
-### Export your settings
+### Eksportuokite nustatymus
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Eksportuokite nustatymus iš dabartinės **AAPS** versijos savo telefone. Galbūt to neprireiks, bet geriau būti atsargiems.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Jei neprisimenate, kaip tai padaryti, žr. puslapį [Nustatymų eksportavimas ir importavimas](ExportImportSettings.md).
 
-### Check your Android Studio version
+### Patikrinkite Android Studio versiją
 
-The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+Mažiausia reikalinga versija nurodyta [kūrimo instrukcijose](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Jei jūsų versija senesnė, pirmiausia [atnaujinkite Android Studio](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
 ### Update your local copy
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Atidarykite esamą AAPS projektą su Android Studio. Gali reikėti pasirinkti projektą. (Dukart) spustelėkite AAPS projektą.
 
-  ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
+  ![Android Studio – projekto pasirinkimas (Select Project)](../images/update/01_ProjectSelection.png)
 
-* In the menu bar of Android Studio, select Git -> Fetch
+* Android Studio meniu juostoje pasirinkite Git -> Fetch
 
-   ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+   ![Android Studio meniu – Git – Fetch](../images/update/02_GitFetch.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* Apatiniame dešiniajame kampe pamatysite pranešimą, kad Fetch pavyko.
 
-   ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+   ![Android Studio meniu – Git – Fetch pavyko](../images/update/03_GitFetchSuccessful.png)
 
-* In the menu bar, now select Git -> Pull
+* Dabar meniu juostoje pasirinkite Git -> Pull
 
-   ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+   ![Android Studio meniu – Git – Pull](../images/update/04_GitPull.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* Visas parinktis palikite kaip yra (origin/master) ir pasirinkite Pull
 
-   ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+   ![Android Studio – Git – Pull langas](../images/update/05_GitPullOptions.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* Palaukite, kol baigsis atsisiuntimas. Eigą matysite apatinėje juostoje. Kai bus baigta, pamatysite pranešimą apie sėkmę.
 
   ```{note}
-  The files that were updated may vary! This is not an indication of a problem.
+  Atnaujinti failai gali skirtis! Tai nereiškia, kad yra problema.
   ```
 
-   ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+   ![Android Studio – Pull pavyko](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Gradle Sync atsisiųs kai kurias priklausomybes. Palaukite, kol jis baigsis.
 
-  ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
+  ![Android Studio – Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM version
+### Patikrinkite JVM versiją
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+Šį patikrinimą ypač verta atlikti, jei tame pačiame kompiuteryje jau esate kūrę ankstesnę **AAPS** versiją.
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+[Kūrimo instrukcijose](#Building-APK-recommended-specification-of-computer-for-building-apk-file) patikrinkite, kokios JVM versijos reikia **AAPS** versijai, kurią dabar kuriate. Tada atlikite skyriuje [Incompatible Gradle JVM](#incompatible-gradle-jvm) aprašytus veiksmus ir įsitikinkite, kad dabar naudojate tinkamą versiją.
 
 (Update-to-new-version-build-the-signed-apk)=
-### Build the Signed APK
+### Sukurkite pasirašytą APK
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Jūsų šaltinio kodas dabar yra dabartinė išleista versija, ir visos būtinos sąlygos patikrintos. Laikas sukurti pasirašytą apk, kaip aprašyta [pasirašyto apk kūrimo skyriuje](#Building-APK-generate-signed-apk).
 
 (Update-to-new-version-transfer-and-install)=
 
-### Transfer and install the apk
-You need to transfer the apk to your phone so you can install it.
+### Perkelkite ir įdiekite apk
+Apk reikia perkelti į telefoną, kad galėtumėte jį įdiegti.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+Jei kūrėte su ta pačia esama raktų saugykla Android Studio, esamos programėlės telefone šalinti nereikia. Diegdami apk, vadovaukitės nurodymais ekrane, kad įdiegtumėte atnaujinimą.
+Kitais atvejais, pavyzdžiui, jei pasirašytam apk Android Studio sukūrėte naują raktų saugyklą, prieš diegdami apk turėsite pašalinti senąją programėlę. **Būtinai eksportuokite nustatymus!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
+Žr. [AAPS perkėlimo ir įdiegimo](../SettingUpAaps/TransferringAndInstallingAaps.md) instrukcijas. Kur taikomas Google [Android kūrėjų tapatybės patikrinimas](#android-developer-verification) (nuo 2026 m. rugsėjo, priklausomai nuo jūsų šalies), įdiekite per [ADB](#android-developer-verification-adb), o ne paliesdami APK failą.
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
+Tęskite [čia](#Update-to-new-version-check-aaps-version-on-phone).
 
 (update-computer-build-troubleshooting)=
 
 ## Troubleshooting
 
-If anything goes wrong, don't panic.
+Jei kas nors nepavyksta, nepanikuokite.
 
-Take a breath!
+Giliai įkvėpkite!
 
-Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Tada atskirame puslapyje [Android Studio trikčių šalinimas](../GettingHelp/TroubleshootingAndroidStudio.md) patikrinkite, ar jūsų problema jau aprašyta.
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Jei reikia daugiau pagalbos, kreipkitės į kitus **AAPS** naudotojus [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) arba [Discord](https://discord.gg/4fQUWHZ4Mw).
