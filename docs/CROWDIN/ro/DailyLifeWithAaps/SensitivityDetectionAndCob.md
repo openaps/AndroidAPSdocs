@@ -12,11 +12,11 @@
 
 ### Sensibilitate AAPS
 
-Sensitivity is calculated the same way as in Oref1, but you can specify the time range to look back on. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences.
+Sensitivity is calculated the same way as in Oref1, but you can specify the time range to look back on. Absorbția minimă a carbohidraților este calculată din timpul maxim de absorbție a carbohidraților setat în preferințe.
 
 ### Sensibilitate estimată prin mediere
 
-Sensitivity is calculated as a weighted average of the deviations. You can specify the time range to look back on. Newer deviations have a higher weight. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences. This algorithm is the fastest in following sensitivity changes.
+Sensitivity is calculated as a weighted average of the deviations. You can specify the time range to look back on. Newer deviations have a higher weight. Absorbția minimă a carbohidraților este calculată din timpul maxim de absorbție a carbohidraților setat în preferințe. This algorithm is the fastest in following sensitivity changes.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
@@ -31,4 +31,4 @@ Oref1 is the recommended option: it is the only one that can detect UAM and work
 There is a significant difference between the Sensitivity AAPS and WeightedAverage algorithms on one side, and Oref1 on the other, when several meals overlap.
 
 * Oref1 expects only one meal decaying at a time: the second meal starts decaying after the first meal is completely decayed.
-* Sensitivity AAPS and WeightedAverage start decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to the meal size and the max absorption time. The minimum absorption will accordingly be higher in comparison to Oref1.
+* Sensitivity AAPS and WeightedAverage start decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to the meal size and the max absorption time. În consecință, absorbția minimă va fi mai mare în comparație cu Oref1.
