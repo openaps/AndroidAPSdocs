@@ -1,406 +1,406 @@
 (medtrum-nano-300u)=
 # Medtrum Nano 200U / 300U
 
-These instructions are for configuring the Medtrum insulin pump.
+Bu talimatlar Medtrum insülin pompasının yapılandırılması içindir.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
-* All loop functionality supported (SMB, TBR etc)
-* Automatic DST and timezone handling
-* Extended bolus is not supported by AAPS driver
+## AAPS ile pompa özellikleri
+* Tüm döngü işlevleri desteklenir (SMB, GBO vb.)
+* Otomatik yaz saati (DST) ve saat dilimi yönetimi
+* Yayma bolus AAPS sürücüsü tarafından desteklenmez
 
 ## Donanım ve yazılım gereksinimleri
-* **Compatible Medtrum pumpbase and reservoir patches**
-    - Currently supported:
-        - Medtrum TouchCare Nano 200U with pumpbase refs: **MD0201** and **MD8201**.
-        - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
-        - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
+* **Uyumlu Medtrum pompa tabanı ve rezervuar Patch'leri**
+    - Şu anda desteklenenler:
+        - Pompa tabanı referansları **MD0201** ve **MD8201** olan Medtrum TouchCare Nano 200U.
+        - Pompa tabanı referansı **MD8301** olan Medtrum TouchCare 300U.
+        - Desteklenmeyen bir modeliniz varsa ve donanım bağışlamak veya testlere yardım etmek istiyorsanız lütfen discord üzerinden [buradan](https://discordapp.com/channels/629952586895851530/1076120802476441641) bizimle iletişime geçin.
+* [APK oluşturma](../SettingUpAaps/BuildingAaps.md) talimatlarına göre **oluşturulmuş ve kurulmuş AAPS**.
 * BLE Bluetooth bağlantısına sahip **Uyumlu Android telefon**
-    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
+    - AAPS [Sürüm notlarına](../Maintenance/ReleaseNotes.md) bakın
 
 ## Başlamadan önce
 
-**SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra patches, insulin, and pump control devices are must-haves).
+**ÖNCE GÜVENLİK** Bu işlemi, bir hatayı düzeltemeyeceğiniz bir ortamda denemeyin (yedek Patch'ler, insülin ve pompa kontrol cihazları mutlaka yanınızda olmalıdır).
 
-**The PDM and Medtrum App will not work with a patch that is activated by AAPS.** Previously you may have used your PDM or Medtrum app to send commands to your pump. For security reasons you can only use the activated patch with the device or app that was used to activate it.
+**PDM ve Medtrum uygulaması, AAPS ile etkinleştirilen bir Patch ile çalışmaz.** Daha önce pompanıza komut göndermek için PDM'nizi veya Medtrum uygulamasını kullanmış olabilirsiniz. Güvenlik nedeniyle etkinleştirilmiş Patch'i yalnızca onu etkinleştiren cihaz veya uygulama ile kullanabilirsiniz.
 
-*This does NOT mean that you should throw away your PDM. It is recommended to keep it somewhere safe as a backup in case of emergencies, for instance if your phone gets lost or AAPS is not working correctly.*
+*Bu, PDM'nizi atmanız gerektiği anlamına GELMEZ. Acil durumlar için, örneğin telefonunuz kaybolursa veya AAPS düzgün çalışmazsa, PDM'yi yedek olarak güvenli bir yerde saklamanız önerilir.*
 
-**Your pump will not stop delivering insulin when it is not connected to AAPS** Default basal rates are programmed on the pump as defined in the current active profile. As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
+**Pompanız AAPS'e bağlı olmadığında insülin vermeyi durdurmaz** Varsayılan bazal oranları, o anda etkin olan profilde tanımlandığı şekilde pompaya programlanır. AAPS çalıştığı sürece, en fazla 120 dakika süren geçici bazal oranı komutları gönderir. Pompa herhangi bir nedenle yeni komut almazsa (örneğin pompa ile telefon arasındaki mesafe nedeniyle iletişim kesildiği için), geçici bazal oranı bittiğinde pompa, üzerinde programlı olan varsayılan bazal oranına geri döner.
 
-**The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. Örneğin, 09:30'da başlayan ve 11:30'da biten 2 saatlik bir süresi olan 1,1 birimlik bir bazal oranınız varsa, bu çalışmayacaktır. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Medtrum pump hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
+**AAPS Profili 30 dakikalık bazal oranı zaman dilimini desteklemez** AAPS'te yeniyseniz ve bazal oranı profilinizi ilk kez ayarlıyorsanız, yarım saatte başlayan bazal oranlarının desteklenmediğini unutmayın; bazal oranı profilinizi saat başında başlayacak şekilde ayarlamanız gerekir. Örneğin, 09:30'da başlayan ve 11:30'da biten 2 saatlik bir süresi olan 1,1 birimlik bir bazal oranınız varsa, bu çalışmayacaktır. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Medtrum pompa donanımı 30 dakikalık bazal oranı profil adımlarını desteklese de AAPS şu anda bunları algoritmalarında dikkate alamaz.
 
-**0U/h profile basal rates are NOT supported in AAPS** While the Medtrum pump does support a zero basal rate, AAPS uses multiples of the profile basal rate to determine automated treatment and therefore cannot function with a zero basal rate. The minimum profile basal rate is 0.05 U/h.
+**0 Ü/sa profil bazal oranları AAPS'te DESTEKLENMEZ** Medtrum pompa sıfır bazal oranını desteklese de AAPS, otomatik tedaviyi belirlemek için profil bazal oranının katlarını kullanır; bu nedenle sıfır bazal oranıyla çalışamaz. Profildeki en düşük bazal oranı 0,05 Ü/sa olabilir.
 
-A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
+Geçici sıfır bazal oranı, "Pompa bağlantısını kes" işleviyle ya da Döngüyü devre dışı bırak/Geçici bazal oranı veya Döngüyü askıya al/Geçici bazal oranı birleşimiyle elde edilebilir.
 
 ## Kurulum
 
 ```{caution}
-When you activate a patch with **AAPS**, you **MUST** turn off every other device that can talk to the Medtrum pump base, for example an active PDM or the Medtrum app.
+**AAPS** ile bir Patch etkinleştirdiğinizde, Medtrum pompa tabanıyla iletişim kurabilen diğer tüm cihazları (örneğin etkin bir PDM'yi veya Medtrum uygulamasını) **MUTLAKA** kapatmalısınız.
 ```
 
-### Step 1: Select Medtrum pump
+### 1. Adım: Medtrum pompayı seçin
 
 #### Option 1: New installations
 
-If you are installing **AAPS** for the first time, the **Setup Wizard** guides you through the setup. Select **Medtrum** when you reach the **Pump** step.
+**AAPS**'i ilk kez kuruyorsanız **Kurulum Sihirbazı** size kurulum boyunca yol gösterir. **Pompa** adımına geldiğinizde **Medtrum**'u seçin.
 
-If in doubt, you can also select **Virtual Pump** and select **Medtrum** later, after setting up **AAPS** (see option 2).
+Emin değilseniz **Sanal pompa**'yı da seçebilir ve **AAPS**'i kurduktan sonra **Medtrum**'u seçebilirsiniz (bkz. seçenek 2).
 
-![Setup Wizard pump step](../images/setup-wizard/Wizard-Pump.png)
+![Kurulum Sihirbazı pompa adımı](../images/setup-wizard/Wizard-Pump.png)
 
-#### Option 2: The Configuration screen
+#### Seçenek 2: Konfigürasyon ekranı
 
-On an existing installation you can select the **Medtrum** pump in [Configuration > Pump](#Config-Builder-pump):
+Mevcut bir kurulumda **Medtrum** pompayı [Konfigürasyon > Pompa](#Config-Builder-pump) içinde seçebilirsiniz:
 
-Open the top-left **menu** (☰), tap **Configuration** > **Pump**, and select the **Medtrum** card. Only one pump can be active at a time.
+Sol üst köşedeki **menüyü** (☰) açın, **Konfigürasyon** > **Pompa** seçeneğine dokunun ve **Medtrum** kartını seçin. Aynı anda yalnızca bir pompa etkin olabilir.
 
-![Configuration > Pump with the Medtrum plugin](../images/v4/Configuration/configuration_pump_list_4.png)
+![Medtrum eklentisiyle Konfigürasyon > Pompa](../images/v4/Configuration/configuration_pump_list_4.png)
 
-Once it is selected, the **Medtrum** card shows two buttons, **Settings** and **Open plugin**:
+Seçildikten sonra **Medtrum** kartında iki düğme görünür: **Ayarlar** ve **Eklentiyi aç**:
 
-![The Medtrum plugin selected in Configuration > Pump](../images/v4/Pumps/medtrum_enabled.png)
+![Konfigürasyon > Pompa içinde seçilmiş Medtrum eklentisi](../images/v4/Pumps/medtrum_enabled.png)
 
-**Open plugin** (or **Manage → Pump**) opens the Medtrum pump screen. You use it to change patches and to see the pump status. Before a patch is activated it looks like this:
+**Eklentiyi aç** (veya **Yönet → Pompa**) Medtrum pompa ekranını açar. Patch'leri değiştirmek ve pompa durumunu görmek için bu ekranı kullanırsınız. Bir Patch etkinleştirilmeden önce ekran şöyle görünür:
 
-![Medtrum pump screen before pairing](../images/v4/Pumps/medtrum_pump_screen.png)
+![Eşleştirmeden önce Medtrum pompa ekranı](../images/v4/Pumps/medtrum_pump_screen.png)
 
 (medtrum-step-2)=
-### Step 2: Change Medtrum settings
+### 2. Adım: Medtrum ayarlarını değiştirin
 
-Tap **Settings** on the **Medtrum** card in **Configuration** > **Pump**. You can also tap the gear icon in the top-right corner of the Medtrum pump screen. This opens the **Medtrum pump settings**:
+**Konfigürasyon** > **Pompa** içindeki **Medtrum** kartında **Ayarlar**'a dokunun. Medtrum pompa ekranının sağ üst köşesindeki dişli simgesine de dokunabilirsiniz. Bu, **Medtrum pompa ayarları** ekranını açar:
 
-![Medtrum driver settings](../images/v4/Pumps/medtrum_settings.png)
+![Medtrum sürücü ayarları](../images/v4/Pumps/medtrum_settings.png)
 
 ```{note}
-There is no **Serial Number** setting any more. **AAPS** finds your pump base with a Bluetooth scan the first time you activate a patch (see [Step 3](#medtrum-activate-patch)), and remembers its serial number. To use a different pump base, see [Unpair](#medtrum-unpair).
+Artık **Seri numarası** ayarı yoktur. **AAPS**, ilk kez bir Patch etkinleştirdiğinizde pompa tabanınızı Bluetooth taramasıyla bulur (bkz. [3. Adım](#medtrum-activate-patch)) ve seri numarasını hatırlar. Farklı bir pompa tabanı kullanmak için bkz. [Eşleşmeyi Kaldır](#medtrum-unpair).
 ```
 
-#### Alarm Settings
+#### Alarm Ayarları
 
-***Default: Beep.***
+***Varsayılan: Bip sesi.***
 
-This setting changes the way that the pump alerts you when there is a warning or error.
+Bu ayar, bir uyarı veya hata olduğunda pompanın sizi uyarma şeklini değiştirir.
 
-- **Beep**: the patch beeps on alarms and warnings.
-- **Silent**: the patch does not alert you on alarms and warnings.
+- **Bip sesi**: Patch, alarm ve uyarılarda bip sesi çıkarır.
+- **Sessiz**: Patch, alarm ve uyarılarda sizi uyarmaz.
 
-Note: In silent mode **AAPS** still sounds the alarm, depending on your phone's volume settings. If you do not respond to the alarm, the patch eventually beeps.
+Not: Sessiz modda **AAPS**, telefonunuzun ses ayarlarına bağlı olarak alarmı yine de çalar. Alarma yanıt vermezseniz Patch sonunda bip sesi çıkarır.
 
 #### Notification on pump warning
 
-***Default: Enabled.***
+***Varsayılan: Etkin.***
 
-This setting changes the way **AAPS** shows notifications for non-critical pump warnings. When enabled, a notification is shown on the phone when a pump warning occurs, including:
+Bu ayar, **AAPS**'in kritik olmayan pompa uyarıları için bildirimleri gösterme şeklini değiştirir. Etkinleştirildiğinde, şu pompa uyarılarından biri oluşursa telefonda bir bildirim gösterilir:
 - Low battery
-- Low reservoir (20 units)
-- Patch expires soon
+- Düşük rezervuar (20 Ü)
+- Patch'in süresi yakında doluyor
 
-We recommend leaving this enabled when the pump alarms are set to **Silent**. In either case these warnings are also shown on the Medtrum pump screen under [Active alarms](#medtrum-active-alarms).
+Pompa alarmları **Sessiz** olarak ayarlandığında bu ayarı etkin bırakmanızı öneririz. Her iki durumda da bu uyarılar Medtrum pompa ekranında [Aktif alarmlar](#medtrum-active-alarms) altında da gösterilir.
 
 (medtrum-patch-expiration)=
 #### Patch Expiration
 
-***Default: Enabled.***
+***Varsayılan: Etkin.***
 
-This setting changes the behavior of the patch. When enabled, the patch expires after 3 days and gives an audible warning if you have sound enabled. After 3 days and 8 hours the patch stops working.
+Bu ayar Patch'in davranışını değiştirir. Etkinleştirildiğinde Patch'in süresi 3 gün sonra dolar ve ses açıksa sesli bir uyarı verir. 3 gün 8 saat sonra Patch çalışmayı durdurur.
 
-If this setting is disabled, the patch does not warn you before it stops. With recent pump base firmware, a patch runs for 5 days at most.
+Bu ayar devre dışıysa Patch, durmadan önce sizi uyarmaz. Yeni pompa tabanı üretici yazılımıyla bir Patch en fazla 5 gün çalışır.
 
-#### Pump expiry warning [hours]
+#### Pompa sona erme süresi uyarısı [saat]
 
-***Default: 72 hours.***
+***Varsayılan: 72 saat.***
 
-This setting changes the time of the expiration warning. When [Patch Expiration](#medtrum-patch-expiration) is enabled, **AAPS** shows a notification this many hours after activation.
+Bu ayar, süre sonu uyarısının zamanını değiştirir. [Patch süre sonu](#medtrum-patch-expiration) etkinse **AAPS**, etkinleştirmeden bu kadar saat sonra bir bildirim gösterir.
 
-#### Hourly Maximum Insulin [Units]
+#### Saatlik Maksimum İnsülin [Ü]
 
-***Default: 25U.***
+***Varsayılan: 25 Ü.***
 
-This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded, the patch suspends and gives an alarm. You can reset the alarm with the **Reset alarms** button on the pump screen, see [Reset alarms](#nano-reset-alarms).
+Bu ayar, bir saatte verilebilecek en yüksek insülin miktarını değiştirir. Bu sınır aşılırsa Patch askıya alınır ve alarm verir. Alarmı pompa ekranındaki **Alarmları sıfırla** düğmesiyle sıfırlayabilirsiniz, bkz. [Alarmları sıfırla](#nano-reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Bunu insülin ihtiyacınıza uygun bir değere ayarlayın.
 
-#### Daily Maximum Insulin [Units]
+#### Günlük Maksimum İnsülin [Ü]
 
-***Default: 80U.***
+***Varsayılan: 80 Ü.***
 
-This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded, the patch suspends and gives an alarm. You can reset the alarm with the **Reset alarms** button on the pump screen, see [Reset alarms](#nano-reset-alarms).
+Bu ayar, bir günde verilebilecek en yüksek insülin miktarını değiştirir. Bu sınır aşılırsa Patch askıya alınır ve alarm verir. Alarmı pompa ekranındaki **Alarmları sıfırla** düğmesiyle sıfırlayabilirsiniz, bkz. [Alarmları sıfırla](#nano-reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Bunu insülin ihtiyacınıza uygun bir değere ayarlayın.
 
-#### Scan on connection error
+#### Bağlantı hatasında tara
 
-***Default: Off.***
+***Varsayılan: Kapalı.***
 
-Located under **Advanced Settings**.
+**Gelişmiş Ayarlar** altında bulunur.
 
-Only enable this if you have connection problems. When enabled, the driver scans for the pump again before trying to reconnect to it. Make sure the Location permission for **AAPS** is set to "Allow all the time".
+Bunu yalnızca bağlantı sorunlarınız varsa etkinleştirin. Etkinleştirildiğinde sürücü, pompaya yeniden bağlanmayı denemeden önce pompayı tekrar tarar. **AAPS** için Konum izninin "Her zaman izin ver" olarak ayarlandığından emin olun.
 
-### Step 2b: AAPS alert settings
+### 2b. Adım: AAPS uyarı ayarları
 
-These settings are not part of the Medtrum driver. Open them from the **Settings** (gear) icon in the top-right corner of the main screen. See [Settings](../SettingUpAaps/Preferences.md) for more.
+Bu ayarlar Medtrum sürücüsünün bir parçası değildir. Bunları ana ekranın sağ üst köşesindeki **Ayarlar** (dişli) simgesinden açın. Daha fazla bilgi için [Ayarlar](../SettingUpAaps/Preferences.md) sayfasına bakın.
 
 #### BT Watchdog
 
-Open **Settings** > **Pump**:
+**Ayarlar** > **Pompa** bölümünü açın:
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![Ayarlar > Pompa](../images/preferences/settings_pump.png)
 
-**BT Watchdog** switches off the phone's Bluetooth for one second if **AAPS** cannot connect to the pump. This may help on some phones where Bluetooth freezes.
+**BT Watchdog**, **AAPS** pompaya bağlanamazsa telefonun Bluetooth'unu bir saniyeliğine kapatır. Bu, Bluetooth'un donduğu bazı telefonlarda yardımcı olabilir.
 
-Enable this setting if you often have connection problems with your pump.
+Pompanızla sık sık bağlantı sorunu yaşıyorsanız bu ayarı etkinleştirin.
 
 #### Yerel uyarılar
 
-Open **Settings** > **Local alerts**:
+**Ayarlar** > **Yerel uyarılar** bölümünü açın:
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![Ayarlar > Yerel uyarılar](../images/preferences/settings_local_alerts.png)
 
 ##### Alert if pump is unreachable
 
-***Default: Enabled.***
+***Varsayılan: Etkin.***
 
-This setting is forced on when the Medtrum driver is enabled. It alerts you when the pump is unreachable. This can happen when the pump is out of range, or when it is not responding because of a faulty patch or pump base, for example when water leaks between the pump base and the patch.
+Medtrum sürücüsü etkinken bu ayar zorunlu olarak açıktır. Pompaya ulaşılamadığında sizi uyarır. Bu durum, pompa menzil dışındayken veya hatalı bir Patch ya da pompa tabanı nedeniyle yanıt vermediğinde (örneğin pompa tabanı ile Patch arasına su sızdığında) oluşabilir.
 
-For safety reasons this setting cannot be disabled.
+Güvenlik nedeniyle bu ayar devre dışı bırakılamaz.
 
-##### Pump unreachable threshold
+##### Pompa ulaşılamaz eşiği
 
-***Default: 30 min.***
+***Varsayılan: 30 dk.***
 
-This setting changes how long **AAPS** waits before alerting you that the pump is unreachable.
+Bu ayar, **AAPS**'in pompaya ulaşılamadığını size bildirmeden önce ne kadar bekleyeceğini değiştirir.
 
-You can change this setting when using the Medtrum pump, but we recommend keeping it at 30 minutes for safety reasons.
+Medtrum pompayı kullanırken bu ayarı değiştirebilirsiniz, ancak güvenlik nedeniyle 30 dakikada bırakmanızı öneririz.
 
 (medtrum-activate-patch)=
-### Step 3: Activate patch
+### 3. Adım: Patch'i etkinleştirin
 
-**Before you continue:**
-- Have your Medtrum pump base and a new reservoir patch ready.
-- Turn off other devices that can talk to the Medtrum pump (PDM and Medtrum app).
-- Ideally, make sure **AAPS** is set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). If no profile is active, the activation starts with a **Profile required** step where you choose the profile to activate.
+**Devam etmeden önce:**
+- Medtrum pompa tabanınızı ve yeni bir rezervuar Patch'ini hazır bulundurun.
+- Medtrum pompayla iletişim kurabilen diğer cihazları (PDM ve Medtrum uygulaması) kapatın.
+- En iyisi, **AAPS**'in kurulu olduğundan ve [bir profilin etkinleştirildiğinden](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) emin olun. Etkin profil yoksa etkinleştirme, etkinleştirilecek profili seçtiğiniz bir **Profil gerekli** adımıyla başlar.
 
-#### Start the activation
+#### Etkinleştirmeyi başlatın
 
-Open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**. If you have set up [settings protection](#Preferences-protection), you must enter your password or PIN first.
+[Medtrum pompa ekranını](#nano-overview) (**Yönet → Pompa**) açın ve **Patch'i Değiştir** düğmesine dokunun. [Ayarların güvenliğini](#Preferences-protection) ayarladıysanız önce parolanızı veya PIN'inizi girmeniz gerekir.
 
-If a patch is already active, you are asked to deactivate it first, see [Deactivate patch](#nano-deactivate-patch).
+Zaten etkin bir Patch varsa önce onu devre dışı bırakmanız istenir, bkz. [Patch'i devre dışı bırakma](#nano-deactivate-patch).
 
-The activation is a step-by-step wizard. Follow the prompts to fill and activate a new patch. Tap **Cancel** at any step to stop.
+Etkinleştirme, adım adım ilerleyen bir sihirbazdır. Yeni bir Patch'i doldurmak ve etkinleştirmek için ekrandaki yönergeleri izleyin. Durdurmak için herhangi bir adımda **Vazgeç** düğmesine dokunun.
 
 ```{important}
-Only put the patch on your body and insert the cannula when the wizard tells you to (after priming is complete).
+Patch'i vücudunuza yalnızca sihirbaz söylediğinde (hazırlama tamamlandıktan sonra) takın ve kanülü yerleştirin.
 ```
 
-The first steps you see depend on your setup:
+Gördüğünüz ilk adımlar kurulumunuza bağlıdır:
 
-1. **Profile required**: only if no profile is active. Select the profile to apply, then continue.
-2. **Find Pump**: only the first time, or after you used [Unpair](#medtrum-unpair). Connect the pump base to a fresh patch to power it on. **AAPS** scans for nearby Medtrum pump bases (their names start with `MT`). Tap yours in the list. **AAPS** saves its serial number, then goes straight to filling the patch.
+1. **Profil gerekli**: yalnızca etkin profil yoksa. Uygulanacak profili seçin ve devam edin.
+2. **Pompa Bul**: yalnızca ilk kez veya [Eşleşmeyi Kaldır](#medtrum-unpair) düğmesini kullandıktan sonra. Pompa tabanını çalıştırmak için yeni bir Patch'e bağlayın. **AAPS** yakındaki Medtrum pompa tabanlarını tarar (adları `MT` ile başlar). Listede kendi pompa tabanınıza dokunun. **AAPS** seri numarasını kaydeder, ardından doğrudan Patch'in doldurulmasına geçer.
 
-   ![Find Pump step scanning for a Medtrum pump base](../images/medtrum/activation/FindPump.png)
+   ![Medtrum pompa tabanını tarayan Pompa Bul adımı](../images/medtrum/activation/FindPump.png)
 
-3. **Activate Patch**: only when **AAPS** already knows your pump base. The screen says "No active patch. Press **Next** to begin the activation process." Make sure the pump base is **not** connected to the patch yet, then tap **Next**.
+3. **Patch'i Etkinleştir**: yalnızca **AAPS** pompa tabanınızı zaten tanıyorsa. Ekranda şu yazı görünür: "Aktif patch yok. Etkinleştirme işlemine başlamak için **İleri**'ye basın." Pompa tabanının henüz Patch'e bağlı **olmadığından** emin olun, ardından **İleri**'ye dokunun.
 
-![Start Activation](../images/medtrum/activation/StartActivation.png)
+![Etkinleştirmeyi başlatın](../images/medtrum/activation/StartActivation.png)
 
-#### Connect and fill the patch
+#### Patch'i bağlayın ve doldurun
 
-![Fill the patch](../images/medtrum/activation/FillPatch.png)
+![Patch'i doldurun](../images/medtrum/activation/FillPatch.png)
 
-Connect the pump base to the patch, remove the residual air and fill the patch with insulin. A minimum of 70 units is needed for activation. The screen shows the reservoir level. Do not attach the patch to your body yet.
+Pompa tabanını Patch'e bağlayın, kalan havayı çıkarın ve Patch'i insülinle doldurun. Etkinleştirme için en az 70 Ü gereklidir. Ekranda rezervuar seviyesi gösterilir. Patch'i henüz vücudunuza takmayın.
 
-When the patch is detected and filled, the **Next** button appears. Tap it.
+Patch algılanıp doldurulduğunda **İleri** düğmesi görünür. Bu düğmeye dokunun.
 
-#### Select insulin
+#### İnsülin seçin
 
-This step only appears if you have more than one insulin set up in **AAPS**. Select the insulin you are filling the patch with. **AAPS** applies a profile switch with this insulin after activation.
+Bu adım yalnızca **AAPS**'te birden fazla insülin ayarladıysanız görünür. Patch'i doldurduğunuz insülini seçin. **AAPS**, etkinleştirmeden sonra bu insülinle bir Profil değişimi uygular.
 
-#### Prime the patch
+#### Patch'i hazırlayın (prime)
 
-![Half press](../images/medtrum/activation/HalfPress.png)
+![Yarım basma](../images/medtrum/activation/HalfPress.png)
 
-Do **not** remove the safety lock. Half-press the needle button on the patch, then tap **Next** to start priming.
+Güvenlik kilidini **çıkarmayın**. Patch üzerindeki iğne düğmesine yarım basın, ardından hazırlamayı (prime) başlatmak için **İleri**'ye dokunun.
 
-![Prime progress](../images/medtrum/activation/PrimeProgress.png)
+![Hazırlanıyor](../images/medtrum/activation/PrimeProgress.png)
 
-Wait for priming to complete.
+Hazırlamanın tamamlanmasını bekleyin.
 
-![Prime complete](../images/medtrum/activation/PrimeComplete.png)
+![Hazırlama tamamlandı](../images/medtrum/activation/PrimeComplete.png)
 
-When priming is complete, tap **Next** to continue.
+Hazırlama tamamlandığında devam etmek için **İleri**'ye dokunun.
 
-#### Site Rotation
+#### Bölge Rotasyonu
 
-This step only appears if you manage pump sites with [Site Rotation](#Aapsscreens-site-rotation) (setting **Manage pump site rotation**). Choose where you place the patch on your body, or skip this step.
+Bu adım yalnızca pompa bölgelerini [Bölge Rotasyonu](#Aapsscreens-site-rotation) ile yönetiyorsanız görünür (**Pompa bölge rotasyonunu yönetin** ayarı). Patch'i vücudunuzda nereye yerleştireceğinizi seçin veya bu adımı atlayın.
 
-#### Attach patch
+#### Patch'i Takın
 
-![Attach patch](../images/medtrum/activation/AttachPatch.png)
+![Patch'i Takın](../images/medtrum/activation/AttachPatch.png)
 
-Clean the skin and remove the stickers. Remove the safety lock, attach the patch to your body, and press the needle button to insert the cannula.
+Cildi temizleyin ve yapışkan yüzeyin koruyucu kağıtlarını çıkarın. Güvenlik kilidini çıkarın, Patch'i vücudunuza takın ve kanülü yerleştirmek için iğne düğmesine basın.
 
-Tap **Next** to activate the patch.
+Patch'i etkinleştirmek için **İleri**'ye dokunun.
 
-#### Activate patch
+#### Patch'i Etkinleştir
 
-![Activate patch](../images/medtrum/activation/ActivatePatch.png)
+![Patch'i Etkinleştir](../images/medtrum/activation/ActivatePatch.png)
 
-**AAPS** activates the pump and sets the initial basal rate. Please wait. When activation is complete, the following screen appears:
+**AAPS** pompayı etkinleştirir ve başlangıç bazal oranını ayarlar. Lütfen bekleyin. Etkinleştirme tamamlandığında şu ekran görünür:
 
-![Activation complete](../images/medtrum/activation/ActivationComplete.png)
+![Etkinleştirme tamamlandı](../images/medtrum/activation/ActivationComplete.png)
 
 ```{admonition} Older screenshot
 :class: note
-Apart from **Find Pump**, the activation screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+**Pompa Bul** dışında, yukarıdaki etkinleştirme ekran görüntüleri daha eski bir **AAPS** sürümüne aittir ve **AAPS** 4'te farklı görünebilir.
 ```
 
-It shows how many units are left in the patch. Tap **OK** to return to the pump screen.
+Ekran, Patch'te kalan insülin miktarını (Ü) gösterir. Pompa ekranına dönmek için **Tamam**'a dokunun.
 
 ```{tip}
-After a new activation, [export your settings](../Maintenance/ExportImportSettings.md). This lets you recover this patch session later, for example on a new phone.
+Yeni bir etkinleştirmeden sonra [ayarlarınızı dışa aktarın](../Maintenance/ExportImportSettings.md). Böylece bu Patch oturumunu daha sonra, örneğin yeni bir telefonda, kurtarabilirsiniz.
 ```
 
 (nano-deactivate-patch)=
 
-### Deactivate patch
+### Patch'i devre dışı bırakma
 
-To deactivate the active patch, open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**.
+Etkin Patch'i devre dışı bırakmak için [Medtrum pompa ekranını](#nano-overview) (**Yönet → Pompa**) açın ve **Patch'i Değiştir** düğmesine dokunun.
 
-![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
+![Patch'i devre dışı bırakma](../images/medtrum/activation/DeactivatePatch.png)
 
-You are asked to confirm that you want to deactivate the current patch. **This cannot be undone.** Tap **Next** to deactivate, or **Cancel** to return to the pump screen.
+Mevcut Patch'i devre dışı bırakmak istediğinizi onaylamanız istenir. **Bu işlem geri alınamaz.** Devre dışı bırakmak için **İleri**'ye, pompa ekranına dönmek için **Vazgeç**'e dokunun.
 
-![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
+![Devre dışı bırakılıyor](../images/medtrum/activation/DeactivateProgress.png)
 
-If **AAPS** cannot deactivate the patch (for example because the pump base has already been removed from the patch), tap **Discard** to forget the current patch session. You can then activate a new patch.
+**AAPS** Patch'i devre dışı bırakamazsa (örneğin pompa tabanı Patch'ten zaten çıkarıldığı için), mevcut Patch oturumunu unutmak için **Çıkar**'a dokunun. Ardından yeni bir Patch etkinleştirebilirsiniz.
 
-![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
+![Patch devre dışı bırakıldı](../images/medtrum/activation/DeactivateComplete.png)
 
-When deactivation is complete, retract the needle and remove the patch from your body. Remove the pump base and dispose of the used patch. Tap **OK** to return to the pump screen, or **Next** to start activating a new patch.
+Devre dışı bırakma tamamlandığında iğneyi geri çekin ve Patch'i vücudunuzdan çıkarın. Pompa tabanını çıkarın ve kullanılmış Patch'i atın. Pompa ekranına dönmek için **Tamam**'a, yeni bir Patch'i etkinleştirmeye başlamak için **İleri**'ye dokunun.
 
 (nano-resume-interrupted-activation)=
 
-### Resume interrupted activation
+### Yarıda kalan etkinleştirmeyi sürdürme
 
-If a patch activation is interrupted, for example because the phone battery runs out, you can resume it. Open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**.
+Bir Patch etkinleştirmesi yarıda kalırsa (örneğin telefonun pili biterse) etkinleştirmeyi sürdürebilirsiniz. [Medtrum pompa ekranını](#nano-overview) (**Yönet → Pompa**) açın ve **Patch'i Değiştir** düğmesine dokunun.
 
-![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
+![Yarıda kalan etkinleştirmeyi sürdürme](../images/medtrum/activation/ActivationInProgress.png)
 
-Tap **Next** to resume the activation. Tap **Discard** to reset the activation status, so you can activate a new patch.
+Etkinleştirmeyi sürdürmek için **İleri**'ye dokunun. Etkinleştirme durumunu sıfırlayıp yeni bir Patch etkinleştirebilmek için **Çıkar**'a dokunun.
 
-![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
+![Etkinleştirme durumu okunuyor](../images/medtrum/activation/ReadingActivationStatus.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots in **Deactivate patch** and **Resume interrupted activation** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+**Patch'i devre dışı bırakma** ve **Yarıda kalan etkinleştirmeyi sürdürme** bölümlerindeki ekran görüntüleri daha eski bir **AAPS** sürümüne aittir ve **AAPS** 4'te farklı görünebilir.
 ```
 
-The driver reads the activation status from the pump. If this works, the wizard continues at the step where it stopped.
+Sürücü, etkinleştirme durumunu pompadan okur. Bu başarılı olursa sihirbaz, durduğu adımdan devam eder.
 
 (nano-overview)=
 
-## Pump screen
+## Pompa ekranı
 
-The Medtrum pump screen (**Manage → Pump**) shows the current status of the Medtrum patch. It also has buttons to change the patch, reset alarms and refresh the status. A banner at the top shows important states, for example **Patch not activated** or **Pump is suspended**.
+Medtrum pompa ekranı (**Yönet → Pompa**) Medtrum Patch'inin güncel durumunu gösterir. Ekranda ayrıca Patch'i değiştirmek, alarmları sıfırlamak ve durumu yenilemek için düğmeler vardır. Üstteki bir şerit önemli durumları gösterir; örneğin **Patch etkinleştirilmedi** veya **Pompa askıya alındı**.
 
-![Medtrum pump screen with an active patch](../images/v4/Pumps/medtrum_pump_screen_active.png)
+![Etkin bir Patch ile Medtrum pompa ekranı](../images/v4/Pumps/medtrum_pump_screen_active.png)
 
-The screen can show these rows. Some rows only appear when they have a value.
+Ekranda şu satırlar görünebilir. Bazı satırlar yalnızca bir değerleri olduğunda görünür.
 
-- **Last connection**: how long ago **AAPS** last connected to the pump.
-- **Last bolus**: the last bolus that was delivered.
-- **Battery**: the current battery voltage of the patch.
-- **Reservoir**: the current reservoir level.
-- **Serial number**: the serial number of your pump base.
-- **Pump state**: the current state of the pump. For example **Active** (the patch is activated and running normally) or **Stopped** (the patch is not activated).
-- **Base basal rate**: the basal rate from your profile that is running now.
-- **Temp basal**: the temporary basal rate, if one is running.
-- **Active bolus**: the bolus that is being delivered right now.
-- **Active alarms**: see [below](#medtrum-active-alarms).
-- **Pump type**: the model of your pump base.
-- **FW version**: the firmware version of the pump base.
-- **Patch no**: the sequence number of the activated patch. It goes up by one every time you activate a new patch.
-- **Activation**: the date and time the patch was activated, and how long ago that was.
-- **Patch expires**: the date and time when the patch expires. Shows **Not enabled** if [Patch Expiration](#medtrum-patch-expiration) is off.
+- **Son bağlantı**: **AAPS**'in pompaya en son ne kadar zaman önce bağlandığı.
+- **Son bolus**: verilen son bolus.
+- **Pil**: Patch'in güncel pil gerilimi.
+- **Rezervuar**: güncel rezervuar seviyesi.
+- **Seri numarası**: pompa tabanınızın seri numarası.
+- **Pompa durumu**: pompanın güncel durumu. Örneğin **Etkin** (Patch etkinleştirildi ve normal çalışıyor) veya **Durduruldu** (Patch etkinleştirilmedi).
+- **Temel bazal oranı**: profilinizde şu anda geçerli olan bazal oranı.
+- **Geçici Bazal**: çalışıyorsa geçici bazal oranı.
+- **Aktif bolus**: şu anda verilmekte olan bolus.
+- **Aktif alarmlar**: [aşağıya](#medtrum-active-alarms) bakın.
+- **Pompa tipi**: pompa tabanınızın modeli.
+- **Üretici yazılımı sürümü**: pompa tabanının üretici yazılımı sürümü.
+- **Patch no**: etkinleştirilen Patch'in sıra numarası. Her yeni Patch etkinleştirdiğinizde bir artar.
+- **Etkinleştirme**: Patch'in etkinleştirildiği tarih ve saat ile bunun ne kadar zaman önce olduğu.
+- **Patch süresi doluyor**: Patch'in süresinin dolacağı tarih ve saat. [Patch süre sonu](#medtrum-patch-expiration) kapalıysa **Etkin değil** gösterir.
 
 (medtrum-active-alarms)=
-### Active alarms
+### Aktif alarmlar
 
-This row shows any alarms that are active right now, for example a low reservoir or an expiring patch.
+Bu satır şu anda etkin olan alarmları gösterir; örneğin düşük rezervuar veya süresi dolmak üzere olan bir Patch.
 
-### Refresh
+### Yenile
 
-This button refreshes the status of the patch. It is only available when a patch is active and **AAPS** is not connected to the pump at that moment.
+Bu düğme Patch'in durumunu yeniler. Yalnızca bir Patch etkinken ve **AAPS** o anda pompaya bağlı değilken kullanılabilir.
 
-### Change Patch
+### Patch'i Değiştir
 
-This button starts the wizard to change the patch. See [Activate patch](#medtrum-activate-patch) for more information.
+Bu düğme, Patch'i değiştirmek için sihirbazı başlatır. Daha fazla bilgi için [Patch'i etkinleştirin](#medtrum-activate-patch) bölümüne bakın.
 
 (medtrum-unpair)=
-### Unpair
+### Eşleşmeyi Kaldır
 
-This button only appears when **AAPS** knows a pump base. It clears the stored pump base serial number and disconnects. The next time you activate a patch, **AAPS** scans for a pump base again (the **Find Pump** step). Use this if you switch to a different pump base. Only do this when no patch is active.
+Bu düğme yalnızca **AAPS** bir pompa tabanını tanıyorsa görünür. Kayıtlı pompa tabanı seri numarasını siler ve bağlantıyı keser. Bir sonraki Patch etkinleştirmenizde **AAPS** yeniden pompa tabanı arar (**Pompa Bul** adımı). Farklı bir pompa tabanına geçerseniz bunu kullanın. Bunu yalnızca etkin Patch yokken yapın.
 
 (nano-reset-alarms)=
 
 ### Reset alarms
 
-The **Reset alarms** button only appears on the pump screen when the patch has suspended itself, for example after a maximum daily insulin alarm. Tap it to reset the alarms and resume insulin delivery.
+**Alarmları sıfırla** düğmesi, pompa ekranında yalnızca Patch kendini askıya aldığında görünür; örneğin günlük maksimum insülin alarmından sonra. Alarmları sıfırlamak ve insülin iletimini sürdürmek için bu düğmeye dokunun.
 
 ![Reset alarms](../images/medtrum/ResetAlarms.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different, but the **Reset alarms** button works the same way.
+Yukarıdaki ekran görüntüsü eski bir **AAPS** sürümüne aittir. **AAPS** 4'te pompa ekranı farklı görünür, ancak **Alarmları sıfırla** düğmesi aynı şekilde çalışır.
 ```
 
-## Switching phone, export/import settings
+## Telefon değiştirme, ayarları dışa/içe aktarma
 
-When you switch to a new phone, do the following:
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone.
-* Transfer the settings file from the old phone to the new phone, and import it into **AAPS**. Tick **Also replace pump settings** on the import screen, otherwise the patch session is not transferred to the new phone.
+Yeni bir telefona geçtiğinizde şunları yapın:
+* Eski telefonunuzda [ayarları dışa aktarın](../Maintenance/ExportImportSettings.md).
+* Ayar dosyasını eski telefondan yeni telefona aktarın ve **AAPS**'e içe aktarın. İçe aktarma ekranında **Pompa ayarlarını da değiştir** seçeneğini işaretleyin; aksi halde Patch oturumu yeni telefona aktarılmaz.
 
-The imported settings file must be from the patch session you are using now, otherwise the patch will not connect (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
+İçe aktarılan ayar dosyası şu anda kullandığınız Patch oturumuna ait olmalıdır; aksi halde Patch bağlanmaz (bkz. [Hortumsuz pompalar](#ExportImportSettings-tubeless-pumps)).
 
-After a settings import, the driver syncs the history with the pump. This can take a while, depending on the age of the settings file. The progress ("Syncing records, ... left") is shown on the main screen:
+Ayarlar içe aktarıldıktan sonra sürücü, geçmişi pompayla senkronize eder. Bu işlem, ayar dosyasının ne kadar eski olduğuna bağlı olarak biraz zaman alabilir. İlerleme ("Kayıtlar senkronize ediliyor, ... kaldı") ana ekranda gösterilir:
 
-![Sync progress](../images/medtrum/SyncProgress.png)
+![Senkronizasyon ilerlemesi](../images/medtrum/SyncProgress.png)
 
 (medtrum-nano-troubleshooting)=
 
 ## Troubleshooting
 
-### Connection issues
+### Bağlantı sorunları
 
-If you have connection timeouts or other connection problems:
-- In the Android app settings for **AAPS**, set the Location permission to "Allow all the time".
-- Try enabling **Scan on connection error** (Medtrum settings > **Advanced Settings**) and **BT Watchdog** (**Settings** > **Pump**), see [Step 2](#medtrum-step-2).
+Bağlantı zaman aşımları veya başka bağlantı sorunları yaşıyorsanız:
+- **AAPS** için Android uygulama ayarlarında Konum iznini "Her zaman izin ver" olarak ayarlayın.
+- **Bağlantı hatasında tara** (Medtrum ayarları > **Gelişmiş Ayarlar**) ve **BT Watchdog** (**Ayarlar** > **Pompa**) ayarlarını etkinleştirmeyi deneyin, bkz. [2. Adım](#medtrum-step-2).
 
-### Bluetooth issues
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+### Bluetooth sorunları
+Bluetooth bağlantılarıyla, pompa/Pod bağlantısının kopmasıyla veya etkinleştirme ve bağlantı sorunlarıyla ilgili bilinen sorunlar için: [Bluetooth sorunlarını giderme](../GettingHelp/BluetoothTroubleshooting.md)
 
-### Activation interrupted
+### Etkinleştirme yarıda kaldı
 
-If the activation is interrupted, for example by an empty phone battery or a phone crash, you can resume it. Tap **Change Patch** on the pump screen and follow the steps in [Resume interrupted activation](#nano-resume-interrupted-activation).
+Etkinleştirme yarıda kalırsa (örneğin telefon pili bittiği veya telefon çöktüğü için) etkinleştirmeyi sürdürebilirsiniz. Pompa ekranında **Patch'i Değiştir** düğmesine dokunun ve [Yarıda kalan etkinleştirmeyi sürdürme](#nano-resume-interrupted-activation) bölümündeki adımları izleyin.
 
-### Preventing patch faults
+### Patch hatalarını önleme
 
-The patch can give a variety of errors. To prevent frequent errors:
-- Make sure the pumpbase is properly seated in the patch and no gaps are visible.
-- When filling the patch do not apply excessive force to the plunger. Do not try to fill the patch beyond the maximum that applies to your model.
+Patch çeşitli hatalar verebilir. Sık hataları önlemek için:
+- Pompa tabanının Patch'e düzgün oturduğundan ve görünür bir boşluk olmadığından emin olun.
+- Patch'i doldururken pistona aşırı kuvvet uygulamayın. Patch'i, modeliniz için geçerli olan en yüksek miktarın üzerinde doldurmaya çalışmayın.
 
-## Where to get help
+## Nereden yardım alabilirsiniz?
 
-All of the development work for the Medtrum driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
+Medtrum sürücüsünün tüm geliştirme çalışmaları topluluk tarafından **gönüllü** olarak yapılmaktadır; yardım istemeden önce bunu hatırlamanızı ve aşağıdaki kurallara uymanızı rica ediyoruz:
 
 -  **Seviye 0:** Sorun yaşadığınız işlevin nasıl çalışması gerektiğini anladığınızdan emin olmak için bu dokümantasyonun ilgili bölümünü okuyun.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues). If it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
+-  **Seviye 1:** Bu belgeyi kullanarak çözemediğiniz sorunlar yaşamaya devam ediyorsanız lütfen [bu davet bağlantısını](https://discord.gg/4fQUWHZ4Mw) kullanarak **Discord**'daki *#Medtrum* kanalına gidin.
+-  **Seviye 2:** Sorununuzun daha önce bildirilip bildirilmediğini görmek için [Issues](https://github.com/nightscout/AAPS/issues) sayfasındaki mevcut sorunları arayın. Sorun zaten varsa lütfen onaylayın, yorum yazın veya sorununuzla ilgili bilgi ekleyin. Yoksa lütfen [yeni bir sorun (issue)](https://github.com/nightscout/AndroidAPS/issues) oluşturun ve [günlük dosyalarınızı](../GettingHelp/AccessingLogFiles.md) ekleyin.
 -  **Sabırlı olun - topluluğumuzun üyelerinin çoğu iyi huylu gönüllülerden oluşur ve sorunları çözmek genellikle hem kullanıcılar hem de geliştiriciler için zaman ve sabır gerektirir.**
