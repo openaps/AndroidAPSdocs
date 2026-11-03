@@ -4,70 +4,70 @@
 
 ## Security considerations
 
-Nightscout is the reporting and monitoring server of **AAPS**: **AAPS** uploads your data to it, and you or your caregivers look at it on the Nightscout website or in follower apps. It holds your medical data, profiles and treatments, so it is worth thinking about securing your Nightscout website.
+Nightscout는 **AAPS**의 리포팅 및 모니터링 서버입니다. **AAPS**가 데이터를 Nightscout에 업로드하면, 사용자나 보호자가 Nightscout 웹사이트나 팔로워 앱에서 데이터를 봅니다. Nightscout에는 의료 데이터, 프로파일, 처치가 저장되므로 Nightscout 웹사이트의 보안을 생각해 두는 것이 좋습니다.
 
-In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Remote commands come from a paired **AAPSClient** instead — see [Master ↔ Client control](#client-master-control).
+**AAPS** 4에서는 원격 제어가 Nightscout 웹사이트를 거치지 않습니다. 클라이언트 제어가 켜져 있는 동안([강화 모드](#client-master-control-hardened-mode)), Nightscout에 직접 입력한 처치나 목표는 **AAPS**에서 **적용되지 않습니다**. 원격 명령은 대신 페어링된 **AAPSClient**에서 옵니다. [마스터 ↔ 클라이언트 제어](#client-master-control)를 참조하십시오.
 
-Exercise maximum caution if using Nightscout as your AAPS BG data source.
+Nightscout를 AAPS의 혈당 데이터 소스로 사용한다면 최대한 주의하십시오.
 
 ### Nightscout settings
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security): make sure you only share your URL with a `readable` token, never with an `admin` token.
+[인증 역할](https://nightscout.github.io/nightscout/security)을 사용하면 Nightscout 사이트에 대한 공개 접근을 막을 수 있습니다. URL은 반드시 `readable` 토큰과 함께만 공유하고, `admin` 토큰과 함께 공유하지 마십시오.
 
-Nightscout `API_SECRET` is your site main password: don't share it publicly.
+Nightscout `API_SECRET`은 사이트의 주 비밀번호입니다. 공개적으로 공유하지 마십시오.
 
 (Nightscout-aaps-settings)=
 
-### AAPS settings
+### AAPS 설정
 
-Accepting data from Nightscout (profile changes, treatments, ...) is optional and turned off by default. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
+Nightscout의 데이터(프로파일 변경, 처치 등)를 받아들이는 것은 선택 사항이며 기본으로 꺼져 있습니다. 아래에 설명된 스위치는 클라이언트 제어가 켜져 있는 동안(강화 모드)과 [간단 모드](#preferences-simple-mode)에서는 숨겨집니다.
 
-* Access the **Synchronization** settings of the NSClientV3 plugin with either 1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or 2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
-* Enable "Upload data to NS".
-* "Upload BG data to NS" is in the settings of your BG source (**Configuration → BG Source → Settings**). Enable it, unless your AAPS BG data source is Nightscout: in that case **do not** enable it.
-* Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
+* NSClientV3 플러그인의 **동기화** 설정은 다음 방법 중 하나로 엽니다. 1) **설정**(메인 화면의 톱니바퀴 아이콘) -> **NSClientV3** -> **동기화**, 또는 2) **구성**(☰ 메뉴) -> **통신** -> NSClientV3 아래의 "**설정**".
+* "NS에 데이터 업로드"를 활성화하십시오.
+* "혈당 데이터를 NS에 업로드"는 혈당 출처의 설정(**구성 → 혈당 출처 → 설정**)에 있습니다. 이 설정을 활성화하십시오. 단, AAPS의 혈당 데이터 소스가 Nightscout라면 활성화하지 **마십시오**.
+* Nightscout가 혈당 데이터 소스가 아니라면 "NS에서 CGM 데이터 받기"를 활성화하지 마십시오.
 
-#### Do not sync from Nightscout
+#### Nightscout에서 동기화하지 않기
 
-Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
+"NS에서 … 받기" 옵션을 모두 비활성화해 두면 AAPS는 Nightscout의 변경 사항을 전혀 사용하지 않습니다:
 
-![Nightscout upload only](../images/preferences/settings_nsclient_sync.png)
+![Nightscout에 업로드만](../images/preferences/settings_nsclient_sync.png)
 
-#### Accept changes from Nightscout
+#### Nightscout의 변경 사항 받아들이기
 
-Enabling these options allows you to change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS. They are only shown when client control and simple mode are off.  
-Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
+이 옵션들을 활성화하면 Nightscout를 통해 AAPS 설정을 바꿀 수 있습니다. 예를 들어 프로파일 수정과 전환, 임시 목표, 탄수화물 추가가 AAPS에 반영됩니다. 이 옵션들은 클라이언트 제어와 간단 모드가 꺼져 있을 때만 표시됩니다.  
+인슐린 처치는 "볼러스하지 않고 기록만" 같은 계산에만 사용된다는 점에 유의하십시오.
 
-![Nightscout receive options enabled](../images/NSsafety3.png)
+![Nightscout 받기 옵션 활성화됨](../images/NSsafety3.png)
 
-### Further security settings
+### 추가 보안 설정
 
-Keep your phone up to date as described in [safety first](#preparing-safety-first).
+[안전 우선](#preparing-safety-first)에 설명된 대로 휴대폰을 최신 상태로 유지하십시오.
 
 (Nightscout-manual-nightscout-setup)=
 
-## Manual Nightscout setup
+## Nightscout 수동 설정
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
+이미 Nightscout 사이트가 있다고 가정합니다. 없다면 설정 방법 전체는 [Nightscout](http://nightscout.github.io/nightscout/new_user/) 페이지를 참조하십시오. 아래 안내는 Nightscout 사이트에도 추가해야 하는 설정입니다. Nightscout 사이트는 최소 버전 15여야 합니다. [최신 버전](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version)을 사용하는지 확인하십시오. 그렇지 않으면 AAPS 앱에 오류 메시지가 표시됩니다.
 
-* [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
+* [변수 편집](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
-* Add or edit the variables as follows:
+* 다음과 같이 변수를 추가하거나 편집하십시오:
   
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * [펌프 모니터링](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring)을 위해 여러 알람을 설정할 수 있습니다. 특히 배터리 % 알람을 권장합니다: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-* Save the modifications. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
+* 변경 사항을 저장하십시오. 이제 Nightscout 사이트에 필(pill)이 표시됩니다. `SHOW_PLUGINS`에 추가하면 기본으로 표시되게 할 수 있습니다.
   
   * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   
-  ![Nightscout Pills](../images/nightscout1.png)
+  ![Nightscout 필(pill)](../images/nightscout1.png)
 
-## Nightscout as a paid SaaS (Software as a Service)
+## 유료 SaaS(Software as a Service)로 사용하는 Nightscout
 
-Use the vendor web interface to set the variables. Contact the vendor support service if necessary.
+변수는 업체의 웹 인터페이스에서 설정하십시오. 필요하면 업체 지원 서비스에 문의하십시오.
