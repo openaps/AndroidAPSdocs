@@ -1,56 +1,56 @@
-# Full Closed Loop
+# Helt sluten loop
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-The main attraction of Full Closed Looping **FCL** is that it has the potential to mimic an artificial pancreas and make daily management easier without having the need to bolus for meals.
+Den största fördelen med helt sluten loop **FCL** är att den kan efterlikna en artificiell bukspottkörtel och göra den dagliga hanteringen enklare, utan att du behöver ge bolus till måltider.
 
-Whilst **hybrid closed loop** ('HCL') is algorithm based, it still requires the user to manually deliver boluses prior to meals. As a result, the loop may go into a temporary shut-off (temporary zero basal) to prevent over delivery of insulin.
+Även om **hybrid sluten loop** ('HCL') bygger på en algoritm, kräver den fortfarande att användaren själv ger bolus före måltider. Därför kan loopen gå in i ett tillfälligt stopp (tillfällig basal på noll) för att undvika att för mycket insulin ges.
 
-In **FCL** mealsize-related bolus are no longer required: leave it to the algorithm!  **AAPS** can handle meals without the user giving any bolus, and without making carb inputs, in a mode called ‘un-announced meals’ **(‘UAM’)**. **UAM** allows **AAPS** to better tolerate incorrect carb inputs by being more aggressive.
+I **FCL** behövs inte längre någon bolus efter måltidens storlek: låt algoritmen sköta det!  **AAPS** kan hantera måltider utan att användaren ger någon bolus och utan att mata in kolhydrater, i ett läge som kallas ‘oannonserade måltider’ **(‘UAM’)**. **UAM** gör att **AAPS** klarar felaktigt inmatade kolhydrater bättre genom att vara mer aggressiv.
 
-## What to expect?
+## Vad kan du förvänta dig?
 
-There are many published studies on the favourable results **FCL** can achieve. For further reading refer to the following:
+Det finns många publicerade studier om de goda resultat som **FCL** kan ge. Mer att läsa finns här:
 
 1) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ![PubMed](../images/US-NLM-PubMed-Logo.png) National Library of Medicine, PubMed [First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study](https://pubmed.ncbi.nlm.nih.gov/36826996/);
 
-2) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ClinicalTrials.gov National Library of Medicine, Clinical Trial [Feasibility and Safety Study of the Automated Insulin Delivery Closed Loop System Pancreas4ALL (ASAP)](https://www.clinicaltrials.gov/study/NCT04835350?term=Feasibility%20and%20Safety%20Study%20of%20the%20Automated%20Insulin%20Delivery%20Closed%20Loop%20System%20Pancreas4ALL%20(ASAP)&rank=1)
+2) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ClinicalTrials.gov National Library of Medicine, klinisk prövning [Feasibility and Safety Study of the Automated Insulin Delivery Closed Loop System Pancreas4ALL (ASAP)](https://www.clinicaltrials.gov/study/NCT04835350?term=Feasibility%20and%20Safety%20Study%20of%20the%20Automated%20Insulin%20Delivery%20Closed%20Loop%20System%20Pancreas4ALL%20(ASAP)&rank=1)
 
-Success for **FCL** requires the user to:
+För att lyckas med **FCL** behöver användaren:
 
-- check whether they met the **FCL** requisites;
-- set up **Automations** that are tailored for  their daily management’s needs; and
-- fine tune and adjust the **AAPS** settings (notably **Automations**).
-
-
-## General considerations why (not to) move from HCL to FCL
-
-**FCL** is not for everyone:
-
-- Some **FCL** users achieve TIR (70-180) around 90% and HbA1c under 6%, however other users prefer tighter control. Notably, minimizing values over 140 mg/dL at diets with rapid carbs probably requires pre-bolusing.
-- **AAPS** tuning can be challenging. It is not for those users who feel overwhelmed by AAPS.  You will need to dedicate a few weeks in order to adjust and fine tune your **FCL**. Investing such time can yield better results and **BG** control.
-- Meal management may become easier, however exercise can still be challenging in **FCL**. Most of us like to limit sports snacks in an attempt to control body weight.
-- Difficulties still remain to establish a **FCL** for kids (discussed below).
+- kontrollera om förutsättningarna för **FCL** är uppfyllda;
+- ställa in **automatiseringar** som är anpassade efter behoven i den dagliga hanteringen; och
+- finjustera inställningarna i **AAPS** (särskilt **automatiseringar**).
 
 
-## Well-tuned hybrid closed loop
+## Allmänna överväganden om varför man (inte) ska gå från HCL till FCL
 
-It is advisable to first establish a well-tuned **HCL** before considering the transition to **FCL**.  Success with **FCL** requires a highly personalised individualised tuning of the user’s setting so that **AAPS** can give insulin to closely mimic YOUR successful hybrid closed loop mode.
+**FCL** passar inte alla:
 
-**FCL** requires the user to set up and tune their **Automations**. However the user must have a confident understanding of their insulin management needs before embarking on **FCL**. Errors can be masked with counter-errors. This can create an unstable **FCL** system, and make it hard to later correct. You should expect to reach a comparable %TIR with your FCL as you see today in your **HCL**.
+- Vissa **FCL**-användare når TIR (70-180) runt 90 % och HbA1c under 6 %, men andra användare föredrar en striktare kontroll. Särskilt krävs troligen förbolus för att minimera värden över 140 mg/dl vid kost med snabba kolhydrater.
+- Att justera **AAPS** kan vara svårt. Det passar inte användare som känner sig överväldigade av AAPS.  Du behöver avsätta några veckor för att justera och finjustera din **FCL**. Att lägga den tiden kan ge bättre resultat och bättre **BG**-kontroll.
+- Måltiderna kan bli enklare att hantera, men träning kan fortfarande vara svårt med **FCL**. De flesta av oss vill begränsa mellanmål vid träning för att hålla vikten.
+- Det är fortfarande svårt att få till en **FCL** för barn (se nedan).
 
-**FCL is a DIY set up of Automations determined by the user by analyzing their data from both their successful HCL and  initial FCL experience when tuning your settings.**
 
-## Fast insulin (Lyumjev, Fiasp)
+## Väl inställd hybrid sluten loop
 
-**FCL** requires fast insulin.  This is so that at the start of meal-related **BG** rise, **FCL** is able to keep **BG** in range (by common definition, under 180 mg/dL (10 mmol/L)).
+Det är klokt att först få till en väl inställd **HCL** innan du funderar på att gå över till **FCL**.  För att lyckas med **FCL** krävs en mycket personlig justering av användarens inställningar, så att **AAPS** kan ge insulin på ett sätt som nära efterliknar DIN fungerande hybrida slutna loop.
 
-A modelling study (details see LINK FullLoop V2/March2023; there section 2.2) can show in quantitative terms that *faster insulins*
+**FCL** kräver att användaren ställer in och justerar sina **automatiseringar**. Men du måste ha god förståelse för dina insulinbehov innan du börjar med **FCL**. Fel kan döljas av andra fel som tar ut dem. Det kan skapa ett instabilt **FCL**-system som är svårt att rätta till senare. Du kan räkna med att nå ungefär samma %TIR med din FCL som du har i dag med din **HCL**.
 
-Source:
+**FCL är en egen (DIY) uppsättning automatiseringar som användaren bestämmer genom att analysera sina data, både från sin fungerande HCL och från de första erfarenheterna av FCL, när inställningarna justeras.**
+
+## Snabbt insulin (Lyumjev, Fiasp)
+
+**FCL** kräver snabbt insulin.  Detta är för att **FCL** i början av en måltidsrelaterad **BG**-stegring ska kunna hålla **BG** inom målområdet (enligt vanlig definition under 180 mg/dl (10 mmol/l)).
+
+En modellstudie (detaljer i LINK FullLoop V2/March2023, avsnitt 2.2) kan visa i siffror att *snabbare insuliner*
+
+Källa:
 
 ![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg)
 
@@ -58,290 +58,290 @@ Source:
 
 IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
-- will result in significantly lower **BG** peaks than slower insulins;
-- tolerate a couple of minutes delayed first meal bolus while not incurring unacceptable height of peaks; and
-- minimize the effect on **BG** peak from different carb loads (meal sizes).
+- ger betydligt lägre **BG**-toppar än långsammare insuliner;
+- klara en första måltidsbolus som kommer några minuter senare, utan att topparna blir oacceptabelt höga; och
+- minimera effekten på **BG**-toppen från olika mängder kolhydrater (måltidsstorlekar).
 
-**FCL** is unlikely to be effective with insulin other than Lyumjev or Fiasp, unless the user is on a very moderate to low carb diet.
+**FCL** är troligen inte effektiv med annat insulin än Lyumjev eller Fiasp, om inte användaren äter mycket måttligt med kolhydrater eller lågkolhydratkost.
 
-However, Fiasp or Lyumjev can result in frequent pump occlusions, even after optimizing things like needle length. It is important to have an eye on the cannula or pod time. Many users find 48 hours to be the efficacy insulin limit before resulting in cannula/pod failure.
+Men Fiasp eller Lyumjev kan ge täta ocklusioner i pumpen, även efter att man har optimerat t.ex. nållängden. Det är viktigt att hålla koll på hur länge kanylen eller podden har suttit. Många användare upplever att insulinet verkar bra i högst 48 timmar, sedan börjar kanylen/podden fungera sämre.
 
-## Prerequisites
+## Förutsättningar
 
-**BG** values and stable Bluetooth connectivity are required to ensure **AAPS** can optimally perform without losing valuable time. **FCL** requires a 24/7 technically stable system:
+**BG**-värden och en stabil Bluetooth-anslutning krävs för att **AAPS** ska kunna fungera optimalt utan att förlora värdefull tid. **FCL** kräver ett tekniskt stabilt system dygnet runt:
 
-- your **CGM’s performance**. Your CGM should not produce jumpy **BG** values that could be misinterpreted by **FCL** as a sign of a starting meal. Similarly, **CGM** calibrations can produce jumpy results.
-- how and where any **CGM** smoothing is done, and what this might imply for your tuning. Notably how delta is defined, and AAPS recognizing this as being sign of a starting meal.
-- Bluetooth stability for the pump and CGM;
-- avoiding (or at least early recognition of) pump occlusion;
-- data flow and your phone's apps used and difference between days of sensor usage;
-- keeping all **AAPS** components well charged and in spare parts close proximity; and
-- actioning cannula (or pod) changes always early enough to lower the risk of occlusion;
+- **hur väl din CGM fungerar**. Din CGM får inte ge hoppiga **BG**-värden som **FCL** kan misstolka som tecken på att en måltid börjar. På samma sätt kan kalibreringar av **CGM** ge hoppiga värden.
+- hur och var eventuell utjämning av **CGM**-data görs, och vad det kan betyda för din justering. Särskilt hur delta definieras, och att AAPS känner igen detta som tecken på att en måltid börjar.
+- Bluetooth-stabilitet för pump och CGM;
+- att undvika (eller åtminstone tidigt upptäcka) stopp i pumpen (ocklusion);
+- dataflödet och de appar som används i din telefon, samt skillnader mellan sensorns användningsdagar;
+- att hålla alla **AAPS**-komponenter väl laddade och ha reservdelar nära till hands; och
+- att alltid byta kanyl (eller pod) i god tid för att minska risken för ocklusion;
 
-The above will vary depending on your **AAPS** component system and your lifestyle.
+Detta varierar beroende på dina **AAPS**-komponenter och din livsstil.
 
-## Meal-related limitations
+## Begränsningar som gäller måltider
 
-- Setting up a **FCL** may be easier for people whose diets do not consist of food components with a rapid high effect on **BG**, and meal patterns that do not wildly vary day-to-day. This does not necessarily mean low carb.
+- Det kan vara enklare att ställa in en **FCL** för personer vars kost inte innehåller livsmedel med snabb och stor effekt på **BG**, och vars måltidsmönster inte varierar kraftigt från dag till dag. Det betyder inte nödvändigtvis lågkolhydratkost.
 
-- Fat or protein rich diets, or slow digestion/gastroparesis, make things easier rather than harder for **FCL**  because late carbs nicely cover for inevitable “tails” of late action from bolus needed around peak time.
+- Kost rik på fett eller protein, eller långsam matsmältning/gastropares, gör det snarare lättare än svårare för **FCL**, eftersom sena kolhydrater fint täcker de oundvikliga “svansarna” av sen verkan från den bolus som behövs runt toppen.
 
-### Glycemic index and effect on blood glucose
+### Glykemiskt index och effekt på blodsockret
 
-The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose' ('EBG')
+Utmaningen för **UAM**-läget ökar med ökande 'Effekt på blodsockret' ('EBG')
 
-- Start moderate/low, and tune your **Profile's** settings. Only then, "test" meals with high **EBG**.
-- Consider a < 50% initial bolus if consuming very high **EBG**.
+- Börja måttligt/lågt och justera inställningarna i din **profil**. Först därefter kan du "testa" måltider med hög **EBG**.
+- Överväg en första bolus på < 50 % om du äter något med mycket hög **EBG**.
 
-1) **No EBG**: e.g. fresh meat, fish, eggs, bacon, oils, cheese. 2) **Low EBG**: e.g. fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese. 3) **Moderate EBG**: e.g. whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) **High EBG**: e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Very High EBG**: e.g. sugar, sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
+1) **Ingen EBG**: t.ex. färskt kött, fisk, ägg, bacon, oljor, ost. 2) **Låg EBG**: t.ex. färska grönsaker och bär, svamp, nötter, mjölk, yoghurt, keso. 3) **Måttlig EBG**: t.ex. fullkornsbröd/fullkornspasta, potatis, vildris, havre, torkad frukt. 4) **Hög EBG**: t.ex. vetebröd, baguette, rostbröd, våfflor, kakor, potatismos, pasta, ris. 5) **Mycket hög EBG**: t.ex. socker, söta drycker, fruktjuice, cornflakes, godis, sötsaker, potatischips, salta kringelpinnar.
 
-![Glycemic index and effect on blood glucose](../images/fullClosedLoop01.png)
+![Glykemiskt index och effekt på blodsockret](../images/fullClosedLoop01.png)
 
-The most difficult meals for **FCL** are those foods exclusively very high and high **EBG** components (see red in the picture): Not only does **BG** shoot up rapidly, but also there is little fat/protein/fibre component to balance the inevitable “tail” of insulin activity that would come with attempts to control the high glucose earlier on.
+De svåraste måltiderna för **FCL** är de som bara består av livsmedel med mycket hög och hög **EBG** (se rött i bilden): **BG** stiger inte bara snabbt, det finns också lite fett/protein/fibrer som kan balansera den oundvikliga “svansen” av insulinaktivitet som kommer när man försöker hålla nere det höga glukosvärdet tidigt.
 
-Erratic consumption of snacks and sweet drinks that are loaded with fast absorbing carbs is problematic for **FCL**.
-
-
-## Preparing for activity/sports
-
-When exercising or being active, with a pump or hybrid closed loop it is recommended that the user reduces **IOB** prior to exercise.
-
-With **FCL**, the algorithm is tuned to detect **UAM** and automatically deliver insulin to counter **BG** rises.  A high **Temp Target** and lower **Profile Percentage** (effective already around meal start) should be set well in advance of any activity.
-
-Unusual or erratic exercise activity levels present difficulties for **FCL**. Planning ahead is required for exercise (especially if you want to reduce the need for rescue carbs/snacks during sports low). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dL) **BG**  target, with **Enable SMB with high temp target** switched off in **AAPS** **Settings**.
-
-## Hurdles for kids
-
-**FCL** can present extra challenges for children and these include:
-
-- Lyumjev or Fiasp may not be available or well tolerated.
-- Hourly basal rate may be very low, providing a poor basis for big **SMBs**.
-- Diet may be rich in sweet components. With the typical low blood volume of a small body, strong tendency towards very high **BG** spikes.
-- Growth hormones and going through marked changes of insulin sensitivity makes it difficult to keep the **FCL** accurately tuned.
+Oregelbundet ätande av mellanmål och söta drycker med mycket snabba kolhydrater är ett problem för **FCL**.
 
 
-## Enabling boosted SMBs: safety
+## Förbereda för aktivitet/träning
 
-In **HCL** safety restrictions are implemented regarding bolus sizes that can be automatically given by the loop.
+Vid träning eller fysisk aktivitet med pump eller hybrid sluten loop rekommenderas att användaren minskar **IOB** före träningen.
 
-**FCL** loopers no longer need to give a sizable bolus around meal start. The impact of this means that restrictions in size limits for **SMBs** must be widened to make the loop capable of delivering large enough **SMBs**.
+Med **FCL** är algoritmen inställd för att upptäcka **UAM** och automatiskt ge insulin mot stigande **BG**.  Ett högt **Tillfälligt målvärde** och en lägre **Procent av profil** (som verkar redan runt måltidens början) bör ställas in i god tid före all aktivitet.
 
-If you are operating with **AAPS** in the Master release, it is suggested **AAPS**' **Settings** are set up with the maximum allowed **SMB** size so that **FCL** can give (maxUAMSMBBasalMinutes=120, i.e. 2 hours worth of basal at that daytime).
+Ovanlig eller oregelbunden träning är svår för **FCL**. Träning kräver planering (särskilt om du vill minska behovet av extra kolhydrater/mellanmål vid låga värden under träning). Efter en aktiv dag rekommenderas att en lägre **Procent av profil** ställs in för natten när kvällsmåltiden är helt smält: ställ i **automatiseringar** in ett förhöjt (>100 mg/dL) **BG**-målvärde, med **Aktivera SMB vid högt tillfälligt målvärde** avstängt under **Inställningar** i **AAPS**.
 
-If your basal rate is very low, the resulting **SMB** limits might be too low to allow sufficient control to tackle postprandial **BG** rises. One possible solution is to avoid diets that cause strong **BG** spikes. The [Auto ISF](#Open-APS-features-auto-isf) algorithm (only available in a dev build with engineering mode) has a **SMB max range extension** setting that expands the standard maximum of 2 hours worth of basal by a factor of >1, and lets you raise the default 50% **SMB delivery ratio**.
+## Hinder för barn
 
-**Follow the instructions to enable AAPS to mimic your bolussing via a couple of SMBs**.
+**FCL** kan ge extra utmaningar för barn, till exempel:
 
-Check the **APS** plugin screen (**Configuration → APS → Open plugin**) periodically to see whether your **SMBs** are allowed to be sufficient enough to deliver the required insulin needed for the loop around meal starts.
+- Lyumjev eller Fiasp kanske inte finns tillgängligt eller tolereras dåligt.
+- Basaldosen per timme kan vara mycket låg, vilket ger en dålig grund för stora **SMB:er**.
+- Kosten kan innehålla mycket sött. Med den låga blodvolymen i en liten kropp finns en stark tendens till mycket höga **BG**-toppar.
+- Tillväxthormoner och stora förändringar i insulinkänslighet gör det svårt att hålla **FCL** rätt inställd.
 
-If not, your tuning efforts will sometimes come to nothing!
+
+## Aktivera förstärkta SMB:er: säkerhet
+
+I **HCL** finns säkerhetsbegränsningar för hur stora bolusar loopen kan ge automatiskt.
+
+**FCL**-loopare behöver inte längre ge en stor bolus runt måltidens början. Det betyder att storleksgränserna för **SMB:er** måste vidgas så att loopen kan ge tillräckligt stora **SMB:er**.
+
+Om du använder **AAPS** i Master-versionen rekommenderas att **Inställningar** i **AAPS** ställs in med den största tillåtna **SMB**-storlek som **FCL** kan ge (maxUAMSMBBasalMinutes=120, dvs. basal för 2 timmar vid den tiden på dygnet).
+
+Om din basaldos är mycket låg kan de resulterande **SMB**-gränserna bli för låga för att ge tillräcklig kontroll över stigande **BG** efter måltid. En möjlig lösning är att undvika kost som ger kraftiga **BG**-toppar. Algoritmen [Auto ISF](#Open-APS-features-auto-isf) (finns bara i en dev-version med Engineering Mode) har inställningen **Utökning av SMB maxintervall**, som utökar standardmaximum på basal för 2 timmar med en faktor >1, och låter dig höja standardvärdet 50 % för **SMB leveransförhållande**.
+
+**Följ instruktionerna för att låta AAPS efterlikna din bolus med ett par SMB:er**.
+
+Kontrollera regelbundet pluginskärmen för **APS** (**Konfiguration → APS → Öppna plugin**) för att se om dina **SMB:er** får vara tillräckligt stora för att ge det insulin som loopen behöver runt måltidens början.
+
+Om inte, kommer dina försök att justera inställningarna ibland inte att ge något resultat!
 
 
 ```{admonition} Boosting **ISF** can become dangerous
 :class: danger
 
-Carefully observe/analyze the **SMB** sizes shortly after your meal commences. Tune in steps, and do not vary more than 1 or 2 parameters at a time.
+Följ noga och analysera storleken på **SMB:er** strax efter att måltiden har börjat. Justera i steg och ändra inte mer än 1 eller 2 parametrar åt gången.
 
-Your **AAPS'** setting must be sufficiently set up to cope with your (!) variety of meals.
+Inställningarna i **AAPS** måste vara tillräckligt bra för att klara din (!) variation av måltider.
 ```
 
-## Meal detection/your Automations for boosting
+## Upptäckt av måltider/dina automatiseringar för förstärkning
 
-For successful **FCL**, **ISF** is the key tuning parameter. When utilising **AAPS** Master + **Automations**, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened **ISF**.
+För en lyckad **FCL** är **ISF** den viktigaste parametern att justera. När du använder **AAPS** Master + **automatiseringar** måste **en profiländring till > 100 % startas automatiskt när en måltid känns igen** (via glukosdelta) och ge ett skärpt **ISF**.
 
-**AAPS** Master allows up to 130% temporary **Profile** in **HCL** mode. Boosting the **ISF** is done in 3 steps:
+**AAPS** Master tillåter upp till 130 % tillfällig **profil** i **HCL**-läge. Att förstärka **ISF** görs i 3 steg:
 
-- Step 1 -  review the **ISF** applicable for this meal time hour within the **Profile**, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body.
-- Step 2 - apply a factor (1/Profile%, as set in **Automation**) to boost **ISF**.
-- Step 3 - check that the suggested **ISF** falls within set safety limits.
+- Steg 1 - granska det **ISF** som gäller för den här måltidstimmen i **profilen**, och se om t.ex. Autosens föreslår en ändring som tar hänsyn till kroppens aktuella insulinkänslighet (de senaste timmarna).
+- Steg 2 - använd en faktor (1/Profil%, som ställs in i **automatiseringen**) för att förstärka **ISF**.
+- Steg 3 - kontrollera att det föreslagna **ISF** ligger inom de inställda säkerhetsgränserna.
 
-### FCL's Automation templates
+### Mallar för automatiseringar i FCL
 
-Boxes to tick at the top. You have the option:
+Rutor att bocka i högst upp. Du kan välja:
 
-- In your **Automation** list, you can tick the check-mark (to the left of each field) OFF => This de-activates that **Automation**. For instance you can do this for all breakfast related **FCL** **Automations** to go to **HCL** for breakfast(s).
+- I din lista med **automatiseringar** kan du bocka ur kryssrutan (till vänster om varje rad) => Då inaktiveras den **automatiseringen**. Du kan till exempel göra detta för alla **FCL**-**automatiseringar** för frukost, för att använda **HCL** vid frukost.
 
-- For each **Automation** rule you can tick the box for User action => then the defined Actions will not automatically be executed when Conditions apply. Rather, the **AAPS** main screen will alert you whenever your **FCL** would automatically give a **SMB**. You have the opportunity then to say ‘yes’ or ‘no’. This is extremely useful in your tuning phase.
+- För varje **automatiseringsregel** kan du bocka i rutan för Användaråtgärd => då körs de angivna åtgärderna inte automatiskt när villkoren är uppfyllda. I stället varnar huvudskärmen i **AAPS** dig varje gång din **FCL** skulle ge en **SMB** automatiskt. Du kan då svara ‘ja’ eller ‘nej’. Detta är mycket användbart under justeringsfasen.
 
-This feature can be useful for certain situations like “foot to floor” syndrome where there is a sudden rise in **BG** when getting up in the morning, but the user wants to prevent a fully automatic “breakfast started” response.
+Den här funktionen kan vara användbar i vissa situationer, som “foot to floor”-syndromet, där **BG** plötsligt stiger när man stiger upp på morgonen, men användaren vill undvika en helt automatisk reaktion som om “frukosten har börjat”.
 
-The section below provides guidance how to bundle **Automation’s** Conditions and how to tackle situations in which the **AAPS** should increase (or decrease) insulin delivery. As **ISF** cannot directly be tuned, raising **Profile Percentage** over 100% will do the same for our purposes.
+Avsnittet nedan ger vägledning om hur du kombinerar villkor i **automatiseringar** och hur du hanterar situationer där **AAPS** bör öka (eller minska) insulintillförseln. Eftersom **ISF** inte kan justeras direkt, ger en höjning av **Procent av profil** över 100 % samma effekt för vårt syfte.
 
-### Automated big SMBs at bg rise
+### Automatiska stora SMB:er när bg stiger
 
-The key to successful **FCL**: **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
+Nyckeln till en lyckad **FCL**: **i början av BG-stegringar från måltider måste loopen ge mycket stora automatiska SMB:er så snabbt som möjligt** för att “komma ikapp” med den **IOB** som behövs (jämför med din vanliga bolus för en liknande måltid i **HCL**!)
 
-To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might not be meal-related and which might be.
+För att uppnå detta bör data från din **HCL** analyseras för att avgöra vilka **delta** som troligen inte är måltidsrelaterade och vilka som kan vara det.
 
-- As you can define the **Automation** within a pre-defined time-window, you need only to analyze there.
-- If you do very different kinds of meals (e.g. a rather high carb breakfast, but low carb lunch) you can choose to do two different (sets of) **Automations** for each of the time slots.
-- Exclude the nights if you see occasional jumps from a compression lows
-- Usually, just using the delta of the past 5 minutes suffices.
-- But you can also make use one of the average deltas. By comparing the deltas in the conditions of your **Automations** you could even define actions of different aggressiveness depending on whether the **BG** rises in an accelerated way or not.
+- Eftersom du kan ange att **automatiseringen** gäller inom ett förbestämt tidsfönster, behöver du bara analysera där.
+- Om du äter mycket olika måltider (t.ex. en frukost med mycket kolhydrater men en lunch med lite kolhydrater) kan du välja att göra två olika (uppsättningar av) **automatiseringar** för varje tidsintervall.
+- Uteslut nätterna om du ibland ser hopp på grund av falska låga värden när du ligger på sensorn (compression lows)
+- Oftast räcker det att använda deltat för de senaste 5 minuterna.
+- Men du kan också använda ett av medeldeltana. Genom att jämföra deltan i villkoren för dina **automatiseringar** kan du till och med ange åtgärder med olika aggressivitet beroende på om **BG** stiger allt snabbare eller inte.
 
-> ( delta – short avg delta )>n   is a term that could be used for acceleration detection , to trigger first **SMB** at earliest sign of rising **BG**. -                                                                             
-> Caution: not possible to use with poor or highly smoothened **CGM** values!
+> ( delta – short avg delta )>n   är ett uttryck som kan användas för att upptäcka acceleration, för att starta första **SMB** vid första tecken på stigande **BG**. -                                                                             
+> Obs: går inte att använda med dåliga eller kraftigt utjämnade **CGM**-värden!
 
-A **CGM** with patchy data puts the user in a bad spot because, to be on the safe side,  you need to „sandbag“ your definition which delta is surely a sign of a started meal. This means:
+En **CGM** med ojämna data sätter användaren i en dålig sits, eftersom du för säkerhets skull måste ta i („sandbag“) när du bestämmer vilket delta som säkert är ett tecken på att en måltid har börjat. Det betyder:
 
-- **FCL** loses additional time, resulting in higher **BG** peaks and lower %**TIR**;
-- you cannot use an earlier or smaller delta which could trigger, also without a meal, the **SMBs** that are supposed to make up for a user bolus in **FCL**.
+- **FCL** förlorar ytterligare tid, vilket ger högre **BG**-toppar och lägre %**TIR**;
+- du kan inte använda ett tidigare eller mindre delta, som även utan måltid skulle kunna starta de **SMB:er** som ska ersätta användarens bolus i **FCL**.
 
-Furthermore, first rises after a meal are characterized by **low iob** present. With that in mind, an Automation(#1) for a dinner might look like this:
+Dessutom är **iob låg** vid de första stegringarna efter en måltid. Med detta i åtanke kan en automatisering (#1) för middagen se ut så här:
 
-![Automation #1: delta of 8 or more and IOB below 4 in the evening starts profile 130% for 12 min](../images/fullClosedLoop02.png)
+![Automatisering #1: delta på 8 eller mer och IOB under 4 på kvällen startar profil 130 % i 12 min](../images/fullClosedLoop02.png)
 
-Automation #1
+Automatisering #1
 
-If Conditions apply, **AAPS** would give 1 or 2 **SMBs** in the next 12 minutes, using a boosted **ISF** according to the set elevated **Profile Percentage** (in the example, a 30% boost of insulinReq). As long as these Conditions apply, the **Automation**  rule extends by another 12 minutes. A low carb meal might have slower **BG** rise characteristics. It would benefit from another Automation (#2) that kicks in at lower delta, and gives a weaker insulin boost.
+Om villkoren är uppfyllda ger **AAPS** 1 eller 2 **SMB:er** under de närmaste 12 minuterna, med ett förstärkt **ISF** enligt den inställda förhöjda **Procent av profil** (i exemplet en förstärkning av insulinReq med 30 %). Så länge villkoren är uppfyllda förlängs **automatiseringsregeln** med ytterligare 12 minuter. En måltid med lite kolhydrater kan ge en långsammare **BG**-stegring. Det är bra att ha ytterligare en automatisering (#2) som startar vid ett lägre delta och ger en svagare insulinökning.
 
-![Automation #2: delta of 5 or more and IOB below 5.5 starts profile 115% for 12 min](../images/fullClosedLoop03.png)
+![Automatisering #2: delta på 5 eller mer och IOB under 5,5 startar profil 115 % i 12 min](../images/fullClosedLoop03.png)
 
-The same **Automation** probably will kick in also in higher carb meals, once the steep rise as defined in Automation#1 is over.
+Samma **automatisering** startar troligen även vid måltider med mer kolhydrater, när den branta stegringen som anges i automatisering #1 är över.
 
-You need to “stage” these two (+ maybe a third) **Automations** to fit with what you see in your meal (variety) => Setting appropriate jump sizes, **iob** criteria, and amplifications will be an iterative tuning process.  Also, if you include appropriate time slots in the Conditions, you can easy do different Automations for your different daily meals times (breakfast, lunch, dinner).
+Du behöver “trappa” dessa två (+ kanske en tredje) **automatiseringar** så att de passar det du ser i dina måltider (variation) => Att ställa in lämpliga hoppstorlekar, **iob**-kriterier och förstärkningar blir en stegvis justeringsprocess.  Om du lägger in lämpliga tidsintervall i villkoren kan du dessutom enkelt göra olika automatiseringar för dina olika måltider under dagen (frukost, lunch, middag).
 
-Note that, still in the rise phase (!), the "overflow" of **iob** must be blocked so that the late effects of the **insulin** (the "**tail**" after 3-5 hours) will not exceed the braking capacity of the loop through zero-temping (“taking away” basal, to reduce hypo risk).
+Observera att ett "överflöd" av **iob** måste stoppas redan i stegringsfasen (!), så att de sena effekterna av **insulinet** ("**svansen**" efter 3-5 timmar) inte blir större än vad loopen kan bromsa med tillfällig basal på noll (“ta bort” basal för att minska risken för hypo).
 
-With large meals there is **sometimes a second increase**. By then, usually also the iob has dropped a bit, and the more aggressive Automations take effect again. (Check that your iob condition in Automation #2 is not set too low for this to happen).
+Vid stora måltider kommer det **ibland en andra stegring**. Då har oftast också iob sjunkit lite, och de mer aggressiva automatiseringarna börjar verka igen. (Kontrollera att ditt iob-villkor i automatisering #2 inte är för lågt inställt för att detta ska kunna hända).
 
-Soon after a few initial **SMBs** are given comes a **balanced phase** where moderate delivery of insulin should cover the additional carbs absorbed. (Except in low carb meals, where the loop might see too weak of a **BG** rise, and go into zero-temping right away already now).
+Strax efter att några första **SMB:er** har getts kommer en **balanserad fas**, där en måttlig insulintillförsel bör täcka de extra kolhydrater som tas upp. (Utom vid måltider med lite kolhydrater, där loopen kanske ser en för svag **BG**-stegring och redan nu går över till tillfällig basal på noll).
 
-The **AAPS** main screen (where you see cob=0 in **UAM** full loop) might in this phase ask for more carbs required. In **UAM** mode that simply means, you could make a very rough plausibility check: Is that amount of carbs likely in your body, un-absorbed from your meal just about an hour ago (about which you gave your loop no info)?
+Huvudskärmen i **AAPS** (där du ser cob=0 i **UAM** full loop) kan i denna fas be om fler kolhydrater. I **UAM**-läget betyder det bara att du kan göra en mycket grov rimlighetskontroll: Är det troligt att så mycket kolhydrater finns kvar i kroppen, ännu inte upptagna, från måltiden för ungefär en timme sedan (som du inte gav loopen någon information om)?
 
 
-### iob threshold
+### iob-tröskel
 
-Often, **Automations** #1 and/or #2 make iob rise to heights that typically are enough for **your** meals. For personalised tuning, look in your **HCL** data at the max iob values that occur with well-managed meals (often: your meal bolus), and above which magnitude a hypo (or requirement for extra carbs) occurred at the end.
+Ofta får **automatiseringarna** #1 och/eller #2 iob att stiga till nivåer som oftast räcker för **dina** måltider. För personlig justering, titta i dina **HCL**-data på de högsta iob-värdena vid väl hanterade måltider (ofta: din måltidsbolus), och över vilken nivå det blev hypo (eller behov av extra kolhydrater) i slutet.
 
-Sensible **iob thresholds** at which you should reduce aggressiveness of your loop, might not be the same for every meal. But especially in the first hour after the start of a meal, which is very crucial in the **UAM** mode. It will differ for each user. For some users just about 30g/hour get absorbed, and to define a meaningful **iob** independent of the exact meal can be possible.
+Rimliga **iob-trösklar**, där du bör minska hur aggressiv din loop är, är kanske inte desamma för alla måltider. Men särskilt under den första timmen efter att måltiden har börjat, som är mycket avgörande i **UAM**-läget. Det skiljer sig för varje användare. För vissa användare tas bara ungefär 30 g/timme upp, och då kan det gå att bestämma en meningsfull **iob** som inte beror på den exakta måltiden.
 
-For exceptional meals, or to lower it if sports follow, the **iob** threshold can rapidly be set differently in your **Automation**.
+För ovanliga måltider, eller för att sänka den om träning följer, kan **iob**-tröskeln snabbt ändras i din **automatisering**.
 
-Automation (#3), "iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
+Automatisering (#3), ”iobTH nådd => **SMB:er** av”, är gjord för att avsluta (eller pausa, tills nästa kolhydratrelaterade stegring kommer) den aggressiva **SMB**-förstärkningen.
 
-![Automation #3: IOB of 5.5 or more with no temp target running starts a temp target of 111 mg/dL](../images/fullClosedLoop04.png)
+![Automatisering #3: IOB på 5,5 eller mer utan aktivt tillfälligt målvärde startar ett tillfälligt målvärde på 111 mg/dl](../images/fullClosedLoop04.png)
 
-Automation #3
+Automatisering #3
 
-It tells the loop that above your set **iob threshold** it's better not to use any more **SMBs**
+Den talar om för loopen att det är bättre att inte använda fler **SMB:er** över din inställda **iob-tröskel**
 
-- The given example does that by setting TT=111 (which is kind of arbitrary; pick a number>100 that you easy recognize as your automated **SMB** shut-off)
-- In **AAPS**' [Settings → OpenAPS SMB](#Preferences-openaps-smb-settings), generally do not allow **SMB** at elevated target.                                                                                                                   
-  The insulin required will then have to be delivered with much more caution through the bottleneck of **TBRs**
+- Exemplet gör detta genom att ställa in TT=111 (vilket är ganska godtyckligt; välj ett tal >100 som du lätt känner igen som din automatiska **SMB**-avstängning)
+- Under [Inställningar → OpenAPS SMB](#Preferences-openaps-smb-settings) i **AAPS** ska du i allmänhet inte tillåta **SMB** vid förhöjt målvärde.                                                                                                                   
+  Det insulin som behövs måste då ges mycket mer försiktigt genom flaskhalsen **tillfälliga basaler**
 
-**Caution: Automation #3 only works when there is no active TT.** So, in case you worked with EatingSoonTT, it must be ended by that time, which usually should be 30-40 minutes after meal start.
+**Obs: Automatisering #3 fungerar bara när inget tillfälligt målvärde (TT) är aktivt.** Så om du har använt EatingSoonTT måste det vara avslutat vid den tidpunkten, vilket oftast bör vara 30-40 minuter efter att måltiden har börjat.
 
-One way to do this is to set up an **Automation** Condition that ends an eventually running EatingSoonTT under the Condition **iob**>65% * iobTH.
-> Ways to work with EatingSoonTT Some loopers set (by pressing the TT button, or automated via a lowered **Profile** **BG** target if eating time slots are fairly fixed) an EatingSoonTT roughly an hour or more before meal start, just to guarantee a low starting **BG** and slightly increased  **iob**. But, assuming the **FCL** is always en route towards target, this might not yield much and you may prefer to define an **Automation** that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). A low **TT** is important in this stage because any **SMB** is calculated by your loop using (predicted glucose minus TT)/sens, so a small TT makes the resulting insulinReq bigger.
+Ett sätt att göra detta är att skapa ett villkor i en **automatisering** som avslutar ett eventuellt pågående EatingSoonTT med villkoret **iob**>65% * iobTH.
+> Sätt att arbeta med EatingSoonTT Vissa loopare ställer in ett EatingSoonTT ungefär en timme eller mer före måltiden (genom att trycka på TT-knappen, eller automatiskt via ett sänkt **BG**-målvärde i **profilen** om måltiderna är på ganska fasta tider), bara för att säkert få ett lågt **BG** vid start och lite mer **iob**. Men om man utgår från att **FCL** alltid är på väg mot målvärdet, ger detta kanske inte så mycket, och du kanske hellre vill skapa en **automatisering** som ställer in ett EatingSoonTT när måltidens början känns igen (glukosdelta, eller acceleration = delta > avg delta). Ett lågt **TT** är viktigt i detta skede, eftersom loopen beräknar varje **SMB** med (förutsagt glukos minus TT)/sens, så ett lågt TT gör det resulterande insulinReq större.
 
-After the first boosted **SMB**s were given, your set iobTH and **Automation** #3 should strike a good balance of limiting the glucose peak, but also not leading to a hypo after the meal.
+Efter att de första förstärkta **SMB**:erna har getts bör ditt inställda iobTH och **automatisering** #3 ge en bra balans: glukostoppen begränsas, men det blir inte heller hypo efter måltiden.
 
-If your breakfast substantially deviates in carb content from your average dinner, you may benefit from defining **Automations** that apply in the respective times of day, and have different **iobTH** (possibly also different deltas, and different **Percentage Profile** set). Both, you with defining your meal spectrum and settings (notably, **iobTH**), and the loop managing the unfolding **BG** curve, must accept certain peak heights for reducing hypo danger towards the end of the **DIAs** from **SMBs**.
+Om din frukost har ett helt annat kolhydratinnehåll än din vanliga middag kan du ha nytta av att skapa **automatiseringar** som gäller vid respektive tid på dygnet och har olika **iobTH** (kanske också olika delta och olika inställd **Procent av profil**). Både du, när du bestämmer ditt måltidsspektrum och dina inställningar (särskilt **iobTH**), och loopen, som hanterar **BG**-kurvan när den utvecklas, måste acceptera vissa topphöjder för att minska risken för hypo mot slutet av **DIA** för **SMB:erna**.
 
-### Stagnation at high bg values
+### Stillastående höga bg-värden
 
-In case, after a “rich” meal, a long-lasting stagnation with **high BG** value is seen, **Automation** #4 (below), “post-meal High”, helps deal with fatty acid resistance: After multi-course meals, large greasy pizza, raclette evening, the glucose curve can form two humps or, very often, an elongated high plateau.
+Om du efter en “rik” måltid ser en långvarig stagnation med **högt BG**-värde hjälper **automatisering** #4 (nedan), “post-meal High”, mot insulinresistens från fettsyror: Efter måltider med flera rätter, stor flottig pizza eller en raclettekväll kan glukoskurvan få två pucklar eller, mycket ofta, en lång hög platå.
 
-![Automation #4: glucose above 160 mg/dL and Autosens below 120% starts profile 120% for 15 min](../images/fullClosedLoop05.png)
+![Automatisering #4: glukos över 160 mg/dl och Autosens under 120 % startar profil 120 % i 15 min](../images/fullClosedLoop05.png)
 
-Automation #4
+Automatisering #4
 
-![Automation #5: profile at 120% and glucose below 150 mg/dL switches back to the normal profile](../images/fullClosedLoop06.png)
+![Automatisering #5: profil på 120 % och glukos under 150 mg/dl växlar tillbaka till normal profil](../images/fullClosedLoop06.png)
 
-Automation #5
+Automatisering #5
 
-Automation #4, “post-meal High”, is also suitable in hybrid closed loop.
+Automatisering #4, “post-meal High”, passar också i hybrid sluten loop.
 
-In addition, a termination-Automation #5, “Stop pmH”, is needed, so that the aggressiveness of the insulin administration is reduced, as soon as the glucose value is falling. (However, often the loop will limit more insulin anyways for hypo prevention because predicted glucose runs low already).
+Dessutom behövs en automatisering #5 som avslutar, “Stop pmH”, så att insulintillförseln blir mindre aggressiv så snart glukosvärdet sjunker. (Men ofta begränsar loopen ändå ytterligare insulin för att förhindra hypo, eftersom det förutsagda glukosvärdet redan är lågt).
 
-## Hypo prevention
+## Förebygga hypo
 
-The core problem is that the **UAM** **FCL** (without carb inputs) can have **no idea how many g of carbs are still available** for absorption, and might use up that “tail” insulin, without you going into a hypo from it.
+Kärnproblemet är att **UAM**-**FCL** (utan inmatade kolhydrater) **inte kan veta hur många g kolhydrater som fortfarande finns kvar** att ta upp, och som kanske kan förbruka den “svansen” av insulin utan att du får hypo av den.
 
-Using boosted **SMBs**, the **FCL** “caught up” with what we formerly did with a meal bolus. But, **at the “tail” end of insulin activity, hypo prevention can become a serious topic**.
+Med förstärkta **SMB:er** har **FCL** “kommit ikapp” med det vi tidigare gjorde med en måltidsbolus. Men **i slutet av insulinets verkan (“svansen”) kan risken för hypo bli ett allvarligt problem**.
 
-In preparation for **FCL**, the user must take a closer look at the **time course of iob** for typical meals, and judge **when it becomes too much, and how you can catch that by tuning your Automations**. That is possible because we have several adjusting screws. It can be a challenge to get this right
+Som förberedelse för **FCL** måste användaren titta närmare på **hur iob förändras över tid** vid typiska måltider, och bedöma **när det blir för mycket och hur du kan fånga det genom att justera dina automatiseringar**. Det är möjligt eftersom vi har flera inställningar att justera med. Det kan vara svårt att få detta rätt
 
-Generally, it makes no sense to keep optimizing settings for one kind of meal. Once you have a good-enough setting e.g. for one kind of lunch you frequently have, test how this works with other kinds, and how you would “compromise”.
+I allmänhet är det ingen idé att fortsätta optimera inställningarna för en enda sorts måltid. När du har en tillräckligt bra inställning, t.ex. för en sorts lunch som du ofta äter, testa hur den fungerar med andra sorters måltider och hur du skulle “kompromissa”.
 
-In order to prevent hypo in post-meal hours 3 – 5, reduce the aggressiveness before too much iob comes together. Specific approaches:
+För att förhindra hypo under timme 3 – 5 efter måltiden, minska aggressiviteten innan det samlas för mycket iob. Konkreta metoder:
 
-- Become milder and milder with the **ISF** already during the glucose rise, as in Automation examples #1 and #2 given.
-- Define the iob threshold, from which **AAPS** is made significantly more cautious (Automation #3, above). Note this **iob** can be exceeded, by the last **SMB** before it went into effect; and then further by TBRs if the loop sees insulinReq. Carbs getting absorbed will provide a counter-movement towards lower iob.
-- The iob threshold could be differentiated according to meals: By cloning the automations, you could easily differentiate for breakfast, lunch, and dinner time slots (or even for geo-locations, like company cafeteria, or at mother-in-law etc)
-> You could differentiate within these time slots even further by setting different TTs for low carb vs. fast carb, etc., and thus be able to “code for” different meal classes that may occur at this time of day, and call them up with **Automations** specially tuned for them. This is probably not necessary, unless your diet habits do vary a lot.
+- Bli mildare och mildare med **ISF** redan medan glukosvärdet stiger, som i exemplen med automatisering #1 och #2.
+- Bestäm iob-tröskeln, över vilken **AAPS** blir betydligt försiktigare (automatisering #3, ovan). Observera att denna **iob** kan överskridas av den sista **SMB** som gavs innan den började gälla, och sedan ytterligare av tillfälliga basaler om loopen ser ett insulinReq. Kolhydrater som tas upp ger en motrörelse mot lägre iob.
+- Iob-tröskeln kan skilja sig mellan måltider: Genom att klona automatiseringarna kan du enkelt skilja mellan tidsintervall för frukost, lunch och middag (eller till och med platser, som personalmatsalen eller hos svärmor osv.)
+> Inom dessa tidsintervall kan du skilja ännu mer genom att ställa in olika TT för lågkolhydratmåltider respektive snabba kolhydrater osv., och på så sätt “koda” olika typer av måltider som kan förekomma vid den tiden på dagen, och starta dem med **automatiseringar** som är särskilt anpassade för dem. Detta behövs troligen inte, om inte dina matvanor varierar mycket.
 
-Before a special meal challenge, you can raise your **iob** threshold, or make another change in any of your Automations within under 5 seconds, right on your AAPS phone (**Manage → Automation**).
+Inför en speciell måltid kan du höja din **iob**-tröskel, eller göra en annan ändring i någon av dina automatiseringar på under 5 sekunder, direkt i din AAPS-telefon (**Hantera → Automation**).
 
-The hypo danger some hours after the meal is essentially a question of whether your meal composition was such, that the **insulin tails from fighting the bulk of carbs** will be **consumed by “extended carbs”** (excessive/delayed carb absorption/protein/fat/fibre).
+Risken för hypo några timmar efter måltiden handlar i grunden om huruvida måltiden var sammansatt så att **insulinsvansarna från kampen mot huvuddelen av kolhydraterna** kommer att **förbrukas av “förlängda kolhydrater”** (för stort/fördröjt kolhydratupptag/protein/fett/fibrer).
 
-Over time you will learn patterns, tune your Automations – maybe even adjust your eating habits a bit, e.g. just enjoy the occasional late little(!) snack that may help maintain a good **balance of insulin activity and carb absorption** for the **entire** meal (digestion, absorption) time, and thus make life for your loop (and for yourself) easier.
+Med tiden lär du dig mönster och justerar dina automatiseringar – kanske ändrar du till och med dina matvanor lite, t.ex. genom att ibland äta ett litet(!) sent mellanmål, som kan hjälpa till att hålla en bra **balans mellan insulinaktivitet och kolhydratupptag** under **hela** måltidens tid (matsmältning, upptag). Det gör livet lättare för din loop (och för dig själv).
 
-### Order of programmed Automations
+### Ordning på programmerade automatiseringar
 
-Problems can arise with overlapping definitions in **Automations**. Example: The problem is that delta >8 is also delta >5, i.e. there may be two competing **Automations** What does the loop do then? It always decides according to the sequence in which your **Automations** appear in **Manage → Automation**.  Example: The delta > +8 rule must come first (and launch the strongest boost if all conditions apply); then comes the check for delta >5 (and a milder response). If done the other way round, the delta>8 rule would never come into effect because the delta>5 already applies, case closed.
-> Tip for Automations: Order changes are very easy to make. In **Manage → Automation**, touch and hold the **=** handle on the right of a rule and drag it to another position.
+Problem kan uppstå om definitionerna i **automatiseringar** överlappar varandra. Exempel: Problemet är att delta >8 också är delta >5, dvs. det kan finnas två konkurrerande **automatiseringar**. Vad gör loopen då? Den bestämmer alltid enligt den ordning som dina **automatiseringar** visas i under **Hantera → Automation**.  Exempel: Regeln delta > +8 måste komma först (och starta den starkaste förstärkningen om alla villkor är uppfyllda); sedan kommer kontrollen av delta >5 (och en mildare reaktion). Om ordningen är den omvända kommer regeln delta>8 aldrig att gälla, eftersom delta>5 redan gäller och saken är avgjord.
+> Tips för automatiseringar: Det är mycket enkelt att ändra ordningen. I **Hantera → Automation**, tryck och håll på handtaget **=** till höger om en regel och dra den till en annan plats.
 
-Also it is very easy and quick to adjust any conditions or actions at any time, within seconds, just on your AAPS smartphone; for instance if you head into a very special eating event. (But don’t forget to set it back to normal on/for the next day).
+Det är också mycket enkelt och snabbt att ändra villkor eller åtgärder när som helst, på några sekunder, direkt i din AAPS-telefon; till exempel inför en mycket speciell måltid. (Men glöm inte att ställa tillbaka det till det normala för nästa dag).
 
 (full-closed-loop-troubleshooting)=
 
-## Troubleshooting
+## Felsökning
 
-### How to get back into Hybrid Closed Loop
+### Hur du går tillbaka till hybrid sluten loop
 
-You can untick the checkboxes of the **Automations** related to your **FCL**, and go back to bolusing for meals and make carb inputs again. If you had removed the **Insulin** or **Calculator** buttons from your main screen, add them back in the [QuickLaunch toolbar](#quicklaunch) configuration (they always remain available under **Treatments** in the bottom navigation). Be aware that now it is again up to you to bolus for meals.
+Du kan bocka ur kryssrutorna för de **automatiseringar** som hör till din **FCL**, och gå tillbaka till att ge bolus till måltider och mata in kolhydrater igen. Om du hade tagit bort knapparna **Insulin** eller **Kalkylator** från huvudskärmen, lägg tillbaka dem i inställningarna för [verktygsfältet Snabbstart](#quicklaunch) (de finns alltid kvar under **Behandlingar** i navigeringsfältet längst ner). Kom ihåg att det nu återigen är du som måste ge bolus till måltider.
 
-It may be wise to do **FCL** only for meals (time slots) where **Automations** are fully defined and clicked on, and un-click only those for the other meal times when you like to do **HCL** (or have none defined yet, in your transition period).
+Det kan vara klokt att bara använda **FCL** för måltider (tidsintervall) där **automatiseringarna** är helt definierade och ikryssade, och bara bocka ur dem för andra måltider när du vill använda **HCL** (eller inte har definierat några än, under din övergångsperiod).
 
-For instance, it is perfectly possible, without any extra steps after **Automations** for dinner time slots are defined, to do **FCL** only for dinners, while breakfast and lunch are done in a **HCL** as you are used to.
-
-
-
-### Are the pre-conditions for FCL still given?
-
-- Is the basic **Profile** still correct?
-- Has the **CGM** quality deteriorated
-- Refer to pre-requisites (above).
-
-### Glucose goes too high
-
-- Meals are not recognized asap
-    - Check regarding Bluetooth (in)stability
-    - Check whether you could set smaller deltas to trigger first **SMB**
-    - Experiment with an aperitif, soup a couple of minutes before meal start
-- SMBs are too weak
-    - Check order of **Automations** (e.g.: big delta before small delta)
-    - Check (real-time) in the **APS** plugin screen whether hourly profile basal and set minutes (max 120) limit allowed SMB size
-    - Check (real-time) in the **APS** plugin screen whether %profile must  be set bigger
-- If all your settings are at the limit, you may have to live with the temporary high, or adjust your diet.
-> If you are ready to test a dev build, [Auto ISF](#Open-APS-features-auto-isf) also allows further expanded SMB sizes. Some users also resort to using a small pre-bolus in their “FCL”. However, this interferes with how glucose curve and hence detection of rises and triggered **SMBs** behave, and is therefore not easy to implement with convincing overall benefit.
-- An important observation by pilot users was, that how your glucose and iob curves approach meal start matters a lot regarding how you peak from carbs: Going down (e.g. towards a set EatingSoonTT), building some iob, and curving already towards strong positive acceleration seems very helpful to keep peaks low.
-
-### Glucose goes too low
-
-- Meals are falsely recognized
-    - Check whether you could set bigger deltas to trigger first **SMB**
-    - Click “User action” in the related Automation, so in the future you can ad hoc decide to block execution of the Automation if not meal-related
-    - To prevent snacks from triggering **SMBs** as for a meal, set a TT>100 when snacking (as you would do in sports and for anti-hypo snacks, anyways)
-- SMBs deliver overall too much insulin
-    - Check (real-time) in the **APS** plugin screen whether **SMB max range extension** must be set smaller
-    - Check (real-time) in the **APS** plugin screen whether **Percentage Profile** must  be set smaller
-    - SMB delivery ratio probably can be set smaller. Note in this case, it works across the board for all **SMBs** (all time slots),
-- Problems with insulin “tail” after meals
-    - You may need to take a snack (seeing hypo prediction) or glucose tablets (if already in hypo zone). But note that the carbs required the loop might tell you at some point are very likely exaggerated as the loop has absolutely zero info on your carb intake (while you may be able to guess how much more, incl. from fats and proteins) is still waiting to be absorbed.
-    - A valuable information would be whether the problem originates mostly in the bg rise phase already. Then setting a lower iobTH might be an easy remedy.
-    - If the need for additional carbs happens frequently, note down how many grams were needed (not counting what you eventually took too much and required extra insulin again).  Then use your profile IC value to estimate how much insulin less the **SMB** should have delivered, and go with this info into your tuning (regarding the **Percentage Profile** in **Automations**, or maybe also your set iobTH). This may relate to the **SMBs** given when glucose was high, or also to the **SMBs** during the **BG** rise.
-    - It could well be that you simply have to accept higher **BG** peaks for not going low. Or change diet to something with lower amounts of carbs, and higher amount of protein and fats.
+Det går till exempel utmärkt, utan några extra steg efter att **automatiseringar** för middagens tidsintervall har definierats, att bara använda **FCL** för middagar, medan frukost och lunch görs i **HCL** som du är van vid.
 
 
-### More info
 
-Make sure you stay in touch with other **FCL** users.
+### Är förutsättningarna för FCL fortfarande uppfyllda?
 
-Discussion Full Closed Loop using Automations:
+- Stämmer den grundläggande **profilen** fortfarande?
+- Har kvaliteten på **CGM**-data blivit sämre
+- Se förutsättningarna (ovan).
 
-- English:   [Discord Channel](https://discord.gg/ChXj8BaKwA)
+### Glukos blir för högt
 
-- German:  [German Looper Community](https://de.loopercommunity.org/t/ueber-die-kategorie-full-loop/10107)
+- Måltider känns inte igen tillräckligt snabbt
+    - Kontrollera om Bluetooth är (o)stabilt
+    - Kontrollera om du kan ställa in mindre delta för att starta första **SMB**
+    - Experimentera med en aperitif eller soppa några minuter innan måltiden börjar
+- SMB:erna är för svaga
+    - Kontrollera ordningen på **automatiseringarna** (t.ex.: stort delta före litet delta)
+    - Kontrollera (i realtid) på pluginskärmen för **APS** om profilens basal per timme och inställda minuter (max 120) begränsar tillåten SMB-storlek
+    - Kontrollera (i realtid) på pluginskärmen för **APS** om %profil måste ställas högre
+- Om alla dina inställningar redan är vid gränsen kan du behöva leva med det tillfälligt höga värdet, eller ändra din kost.
+> Om du är redo att testa en dev-version tillåter [Auto ISF](#Open-APS-features-auto-isf) också ännu större SMB:er. Vissa användare ger också en liten förbolus i sin “FCL”. Men detta påverkar hur glukoskurvan, och därmed upptäckten av stegringar och de startade **SMB:erna**, beter sig, och är därför inte lätt att använda med en övertygande total nytta.
+- En viktig iakttagelse från pilotanvändarna var att det har stor betydelse hur dina glukos- och iob-kurvor ser ut när måltiden börjar, för hur höga topparna från kolhydraterna blir: Att gå nedåt (t.ex. mot ett inställt EatingSoonTT), bygga upp lite iob och redan ha en kurva som böjer sig mot stark positiv acceleration verkar hjälpa mycket för att hålla topparna låga.
+
+### Glukos blir för lågt
+
+- Måltider känns igen felaktigt
+    - Kontrollera om du kan ställa in större delta för att starta första **SMB**
+    - Klicka i “Användaråtgärd” i den aktuella automatiseringen, så att du i framtiden kan bestämma direkt om automatiseringen ska blockeras om den inte är måltidsrelaterad
+    - För att mellanmål inte ska starta **SMB:er** som för en måltid, ställ in ett TT>100 när du äter mellanmål (som du ändå skulle göra vid träning och för mellanmål mot hypo)
+- SMB:erna ger totalt sett för mycket insulin
+    - Kontrollera (i realtid) på pluginskärmen för **APS** om **Utökning av SMB maxintervall** måste ställas lägre
+    - Kontrollera (i realtid) på pluginskärmen för **APS** om **Procent av profil** måste ställas lägre
+    - SMB leveransförhållande kan troligen ställas lägre. Observera att det i detta fall gäller för alla **SMB:er** (alla tidsintervall),
+- Problem med insulinets “svans” efter måltider
+    - Du kan behöva äta ett mellanmål (när du ser en hypoprognos) eller druvsockertabletter (om du redan är i hypoområdet). Men observera att den mängd kolhydrater som loopen ibland säger att du behöver troligen är överdriven, eftersom loopen inte har någon som helst information om hur mycket kolhydrater du har ätit (medan du kanske kan gissa hur mycket mer, inkl. från fett och protein, som fortfarande väntar på att tas upp).
+    - Det vore värdefullt att veta om problemet främst uppstår redan när bg stiger. Då kan ett lägre iobTH vara en enkel lösning.
+    - Om behovet av extra kolhydrater uppstår ofta, skriv ner hur många gram som behövdes (räkna inte med det du kanske åt för mycket och som krävde extra insulin igen).  Använd sedan KH-kvoten (IC) i din profil för att uppskatta hur mycket mindre insulin **SMB** borde ha gett, och använd den informationen i din justering (av **Procent av profil** i **automatiseringar**, eller kanske också ditt inställda iobTH). Detta kan gälla de **SMB:er** som gavs när glukosvärdet var högt, eller också de **SMB:er** som gavs under **BG**-stegringen.
+    - Det kan mycket väl vara så att du helt enkelt måste acceptera högre **BG**-toppar för att inte gå för lågt. Eller ändra kosten till något med mindre kolhydrater och mer protein och fett.
+
+
+### Mer information
+
+Se till att hålla kontakten med andra **FCL**-användare.
+
+Diskussion om helt sluten loop med automatiseringar:
+
+- Engelska:   [Discord-kanal](https://discord.gg/ChXj8BaKwA)
+
+- Tyska:  [German Looper Community](https://de.loopercommunity.org/t/ueber-die-kategorie-full-loop/10107)
