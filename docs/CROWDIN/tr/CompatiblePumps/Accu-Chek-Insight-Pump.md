@@ -1,141 +1,141 @@
 # Accu-Chek Insight
 
-**Bu yazılım bir DIY (Kendin Yap) çözümünün parçasıdır ve bir ürün değildir, ancak nasıl kullanılacağı da dahil olmak üzere sistemi okumanızı, öğrenmenizi ve anlamanızı gerektirir. Tüm diyabet yönetimini sizin için yapan bir şey değildir, ancak gerekli zamanı ayırmaya istekliyseniz diyabetinizi ve yaşam kalitenizi iyileştirmenize izin verir. Acele etmeyin, ancak öğrenmek için kendinize zaman tanıyın. Yazılımla yaptıklarınızdan yalnızca siz sorumlusunuz.**
+**Bu yazılım bir DIY (Kendin Yap) yapay pankreas çözümünün parçasıdır ve bir ürün değildir, ancak nasıl kullanılacağı da dahil olmak üzere sistemi SİZİN okumanızı, öğrenmenizi ve anlamanızı gerektirir. Tüm diyabet yönetiminizi sizin yerinize yapan bir şey değildir, ancak diyabetinizi ve yaşam kalitenizi iyileştirmenize yardımcı olur, yeter ki gereken zamanı ayırmaya istekli olun. Acele etmeyin, öğrenmek için kendinize zaman tanıyın. Bununla yaptıklarınızdan yalnızca siz sorumlusunuz.**
 
-```{admonition} Accu-Chek Insight is being phased out :class: note
+```{admonition} Accu-Chek Insight kullanımdan kalkıyor :class: note
 
-Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. Support for the Insight is already listed as ended (see [Pumps no longer sold](./Future-possible-Pump-Drivers.md)). If you rely on this pump, plan ahead for a transition to a supported pump.
+Roche, diyabet ürünlerini Accu-Chek SmartGuide CGM üzerinde yoğunlaştırmak için insülin pompası pazarından çekiliyor. Roche, hem Accu-Chek Combo hem de Accu-Chek Insight pompalarının satışının sona erdiğini duyurdu; kalan Accu-Chek Solo mikro pompası da aşamalı olarak kaldırılıyor (Almanya'da son teslimatlar 2025 sonunda). Bu değişiklik bölge bölge uygulanıyor; Almanya'da başladı, diğer Avrupa pazarlarının da izlemesi bekleniyor. Insight desteği zaten sona ermiş olarak listeleniyor (bkz. [Artık satılmayan pompalar](./Future-possible-Pump-Drivers.md)). Bu pompaya güveniyorsanız, desteklenen bir pompaya geçişi önceden planlayın.
 
     <br />```{note}
-    Before **AAPS** had a native Insight driver, the Insight was controlled through the separate [SightRemote](https://github.com/TebbeUbben/SightRemote) app. SightRemote is no longer needed or maintained: if you still have it installed from those days, uninstall it and use a current version of **AAPS** instead.
+    **AAPS**'in yerleşik bir Insight sürücüsü olmadan önce Insight, ayrı bir uygulama olan [SightRemote](https://github.com/TebbeUbben/SightRemote) ile kontrol ediliyordu. SightRemote artık gerekli değildir ve bakımı yapılmamaktadır: O günlerden kalma bir kurulumunuz varsa onu kaldırın ve bunun yerine **AAPS**'in güncel bir sürümünü kullanın.
     
 
-```{contents} Table of contents :depth: 1 :local: true
+```{contents} İçindekiler :depth: 1 :local: true
 
-    <br />## Pump capabilities with AAPS
+    <br />## AAPS ile pompanın özellikleri
     
-    * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-    * Automatic DST and timezone handling.
+    * Ek bir iletişim cihazı olmadan, telefonunuzun yerleşik Bluetooth'u üzerinden **AAPS** ile iletişim kurar.
+    * Yaz saati (DST) ve saat dilimi değişikliklerini otomatik olarak yönetir.
     
-    ## Hardware and software requirements
+    ## Donanım ve yazılım gereksinimleri
     
-    * A Roche Accu-Chek Insight pump (any firmware, they all work)
+    * Bir Roche Accu-Chek Insight pompası (tüm üretici yazılımı sürümleri çalışır)
     
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
+    Not: AAPS verileri her zaman **pompadaki ilk bazal oranı profiline** yazar.
     
-    * An Android phone running Android 12 or newer (see [Phones](../Getting-Started/Phones.md))
-    * The AAPS app installed on your phone
+    * Android 12 veya daha yeni bir sürümü çalıştıran bir Android telefon (bkz. [Telefonlar](../Getting-Started/Phones.md))
+    * Telefonunuzda yüklü AAPS uygulaması
     
-    ## Setup
+    ## Kurulum
     
-    * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: **Menu** > **Settings** > **Communication** > **Remove device**.
+    * Insight pompası aynı anda yalnızca bir cihaza bağlı olmalıdır. Daha önce Insight uzaktan kumandasını (ölçüm cihazı) kullandıysanız, ölçüm cihazını pompanızın eşleştirilmiş cihazlar listesinden kaldırmanız gerekir: **Menu** > **Settings** > **Communication** > **Remove device** (pompa menüsü).
     
        ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
     
-    * In [Configuration > Pump](#Config-Builder-pump), select the **Accu-Chek Insight** card. Only one pump can be active at a time.
+    * [Konfigürasyon > Pompa](#Config-Builder-pump) bölümünde **Accu-Chek Insight** kartını seçin. Aynı anda yalnızca bir pompa etkin olabilir.
     
        ![Configuration > Pump with the Accu-Chek Insight plugin](../images/v4/Configuration/configuration_pump_list_1.png)
     
-       Once it is selected, the **Accu-Chek Insight** card shows two buttons, **Settings** and **Open plugin**:
+       Seçildikten sonra **Accu-Chek Insight** kartında iki düğme görünür: **Ayarlar** ve **Eklentiyi aç**:
     
        ![The Accu-Chek Insight plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_insight_enabled.png)
     
-       **Settings** opens the settings of the Accu-Chek Insight driver (see [Settings in AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
+       **Ayarlar**, Accu-Chek Insight sürücüsünün ayarlarını açar (bkz. [AAPS'teki ayarlar](#Accu-Chek-Insight-Pump-settings-in-aaps)).
     
-       **Open plugin** (or **Manage → Pump**) opens the Accu-Chek Insight pump screen. Before a pump is paired it looks like this:
+       **Eklentiyi aç** (veya **Yönet → Pompa**), Accu-Chek Insight pompa ekranını açar. Pompa eşleştirilmeden önce ekran şöyle görünür:
     
        ![Accu-Chek Insight pump screen before pairing](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
     
     (accu-chek-insight-pairing)=
-    ### Pairing
+    ### Eşleştirme
     
-    * On the pump screen, tap **Insight pairing**. The pairing wizard opens and searches for nearby Bluetooth devices (top of the picture below).
-    * On the Insight pump, go to **Menu** > **Settings** > **Communication** > **Add Device**. The pump shows the following screen (bottom of the picture below) with the serial number of the pump.
+    * Pompa ekranında **Insight eşleştirme** düğmesine dokunun. Eşleştirme sihirbazı açılır ve yakındaki Bluetooth cihazlarını arar (aşağıdaki resmin üst kısmı).
+    * Insight pompasında **Menu** > **Settings** > **Communication** > **Add Device** yolunu izleyin. Pompa, pompanın seri numarasıyla birlikte aşağıdaki ekranı gösterir (aşağıdaki resmin alt kısmı).
     
        ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
     
-    * Back on your phone, tap the pump serial number in the list of Bluetooth devices. If Android asks you to confirm the pairing, tap **Pair**.
+    * Telefonunuza dönün ve Bluetooth cihazları listesinde pompanın seri numarasına dokunun. Android eşleştirmeyi onaylamanızı isterse **Eşle** düğmesine dokunun.
     
        ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
     
-    * The pump and the phone both show a code. Check that the codes are the same on both devices. Confirm on the pump, and tap **Yes** on the phone. (Tap **No** if the codes do not match.)
+    * Pompa ve telefon bir kod gösterir. Kodların iki cihazda da aynı olduğunu kontrol edin. Pompada onaylayın ve telefonda **Evet** düğmesine dokunun. (Kodlar uyuşmuyorsa **Hayır** düğmesine dokunun.)
     
        ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
     
-    * The phone shows **Pairing completed**. Tap **Exit** to return to the pump screen.
+    * Telefonda **Eşleştirme tamamlandı** yazısı görünür. Pompa ekranına dönmek için **Çıkış** düğmesine dokunun.
     
        ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
     
-    * To check that all is well, look at the pump screen (**Manage → Pump**). Once the pump is paired, it shows information about the pump, such as **Serial number**, **Manufacturing date**, **Release software version** and **Bluetooth address**.
+    * Her şeyin yolunda olduğunu kontrol etmek için pompa ekranına bakın (**Yönet → Pompa**). Pompa eşleştirildikten sonra ekranda pompa ile ilgili bilgiler görünür, örneğin **Seri numarası**, **Üretim tarihi**, **Yayın yazılım sürümü** ve **Bluetooth adresi**.
     
        ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
     
-       ```{admonition} Older screenshot
+       ```{admonition} Eski ekran görüntüsü
        :class: note
-       Apart from the top of the first picture, the pairing screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+       İlk resmin üst kısmı dışında, yukarıdaki eşleştirme ekran görüntüleri daha eski bir **AAPS** sürümünden alınmıştır ve **AAPS** 4'te farklı görünebilir.
        ```
     
-    * To remove the pairing, tap **Unpair** on the pump screen and confirm **Reset pairing information?**. The **Insight pairing** button then appears again.
+    * Eşleştirmeyi kaldırmak için pompa ekranında **Eşleşmeyi Kaldır** düğmesine dokunun ve **Eşleştirme bilgileri sıfırlansın mı?** sorusunu onaylayın. Ardından **Insight eşleştirme** düğmesi yeniden görünür.
     
-    Note: There is no permanent connection between the pump and the phone. **AAPS** only connects when needed (for example to set a temporary basal rate, give a bolus or read the pump history). Otherwise the batteries of the phone and the pump would drain far too fast.
+    Not: Pompa ile telefon arasında sürekli bir bağlantı yoktur. **AAPS** yalnızca gerektiğinde bağlanır (örneğin geçici bazal oranı ayarlamak, bolus vermek veya pompa geçmişini okumak için). Aksi halde telefonun ve pompanın pilleri çok hızlı biterdi.
     
     (Accu-Chek-Insight-Pump-settings-in-aaps)=
-    ## Settings in AAPS
+    ## AAPS'teki ayarlar
     
-    Open the settings with **Settings** on the **Accu-Chek Insight** card in **Configuration** > **Pump**, or with the gear icon in the top-right corner of the pump screen.
+    Ayarları **Konfigürasyon** > **Pompa** içindeki **Accu-Chek Insight** kartında bulunan **Ayarlar** ile veya pompa ekranının sağ üst köşesindeki dişli simgesiyle açın.
     
     ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    In the Insight settings in **AAPS** you can enable the following options:
+    **AAPS**'teki Insight ayarlarında aşağıdaki seçenekleri etkinleştirebilirsiniz:
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
+    * **Rezervuar değişimini kayıt altına al**: Pompada kartuşu değiştirdiğinizde insülin kartuşu değişimini otomatik olarak kaydeder.
     
-    * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
+    * **Hortum değişimlerini kaydet**: Pompada "tube filling" (hortumu doldurma) programını çalıştırdığınızda **AAPS** veritabanına bir not ekler.
     
-    * **Log site changes**: adds a note to the **AAPS** database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+    * **İnfüzyon değişimini kayıt altına al**: Pompada "cannula filling" (kanülü doldurma) programını çalıştırdığınızda **AAPS** veritabanına bir not ekler. **Not: Kanül değişimi Otoduyarlılık'ı da sıfırlar.**
     
-    * **Log battery changes**: records a battery change when you put a new battery in the pump.
+    * **Pil değişimlerini kaydet**: Pompaya yeni bir pil taktığınızda pil değişimini kaydeder.
     
-    * **Log operating mode changes**: adds a note to the **AAPS** database whenever you start, stop or pause the pump.
+    * **Çalışma modu değişikliklerini günlüğe kaydet**: Pompayı başlattığınızda, durdurduğunuzda veya duraklattığınızda **AAPS** veritabanına bir not ekler.
     
-    * **Log alerts**: adds a note to the **AAPS** database whenever the pump issues an alert (except reminders, bolus and TBR cancellation, which are not recorded).
+    * **Uyarıları kaydet**: Pompa bir uyarı verdiğinde **AAPS** veritabanına bir not ekler (hatırlatmalar, bolus iptali ve GBO iptali kaydedilmez).
     
-    * **Enable TBR emulation**: the Insight pump can only set temporary basal rates (TBRs) up to 250%. To get around this limit, TBR emulation tells the pump to deliver an extended bolus for the extra insulin if a TBR of more than 250% is requested.
+    * **GBO emülasyonunu etkinleştir**: Insight pompası geçici bazal oranlarını (GBO) yalnızca %250'ye kadar ayarlayabilir. Bu sınırı aşmak için, %250'den yüksek bir GBO istendiğinde GBO emülasyonu pompaya ek insülini yayma bolus olarak vermesini söyler.
     
-      **Note: Only use one extended bolus at a time. Several extended boluses at the same time might cause errors.**
+      **Not: Aynı anda yalnızca bir yayma bolus kullanın. Aynı anda birden fazla yayma bolus hatalara neden olabilir.**
     
-    * **Disable vibrations on manual bolus delivery**: stops the Insight pump from vibrating when it delivers a manual bolus (or extended bolus). Only available with Insight firmware 3.x.
+    * **Manuel bolus iletiminde titreşimleri devre dışı bırakın**: Insight pompası manuel bir bolus (veya yayma bolus) verirken titreşmez. Yalnızca Insight üretici yazılımı 3.x ile kullanılabilir.
     
-    * **Disable vibrations on automated bolus delivery**: stops the Insight pump from vibrating when it delivers an automatic bolus (SMB or temp basal with TBR emulation). Only available with Insight firmware 3.x.
+    * **Otomatik bolus iletiminde titreşimleri devre dışı bırakın**: Insight pompası otomatik bir bolus (SMB veya GBO emülasyonlu geçici bazal) verirken titreşmez. Yalnızca Insight üretici yazılımı 3.x ile kullanılabilir.
     
-    * **Min. recovery duration [s]** and **Max. recovery duration [s]**: how long **AAPS** waits before trying again after a failed connection attempt. 0 ila 20 saniye arasında seçim yapabilirsiniz. If you have connection problems, choose a longer wait time.
-        <br><br>Example for min. kurtarma süresi = 5 ve maks. recovery duration = 20
-        <br><br>no connection -> wait <b>5</b> sec.
-          <br>  retry -> no connection -> wait <b>6</b> sec.
-          <br>  retry -> no connection -> wait <b>7</b> sec.
-          <br>  retry -> no connection -> wait <b>8</b> sec.
+    * **Min. kurtarma süresi [sn]** ve **Maks. kurtarma süresi [sn]**: Başarısız bir bağlantı denemesinden sonra **AAPS**'in yeniden denemeden önce ne kadar beklediği. 0 ila 20 saniye arasında seçim yapabilirsiniz. Bağlantı sorunlarınız varsa daha uzun bir bekleme süresi seçin.
+        <br><br>Örnek: min. kurtarma süresi = 5 ve maks. kurtarma süresi = 20
+        <br><br>bağlantı yok -> <b>5</b> sn bekle.
+          <br>  yeniden dene -> bağlantı yok -> <b>6</b> sn bekle.
+          <br>  yeniden dene -> bağlantı yok -> <b>7</b> sn bekle.
+          <br>  yeniden dene -> bağlantı yok -> <b>8</b> sn bekle.
           <br>...
-          <br>retry -> no connection -> wait <b>20</b> sec.
-          <br>retry -> no connection -> wait <b>20</b> sec.
+          <br>yeniden dene -> bağlantı yok -> <b>20</b> sn bekle.
+          <br>yeniden dene -> bağlantı yok -> <b>20</b> sn bekle.
           <br>...
     
-    * **Disconnect delay [s]**: how long (in seconds) **AAPS** waits before disconnecting from the pump after an operation is finished. You can choose from 0 to 15 seconds. The default value is 5 seconds.
+    * **Bağlantı kesme gecikmesi [sn]**: Bir işlem bittikten sonra **AAPS**'in pompayla bağlantıyı kesmeden önce ne kadar (saniye olarak) beklediği. 0 ila 15 saniye arasında seçim yapabilirsiniz. Varsayılan değer 5 saniyedir.
     
-    For periods when the pump was stopped, **AAPS** logs a temporary basal rate of 0%.
+    Pompanın durdurulduğu süreler için **AAPS** %0'lık bir geçici bazal oranı kaydeder.
     
-    ### The pump screen
+    ### Pompa ekranı
     
-    The Accu-Chek Insight pump screen (**Manage → Pump**) shows the current status of the pump, for example **Status**, **Last connected**, **Operating mode**, **Battery**, **Reservoir level**, today's total daily doses (**TDD Bolus**, **TDD Basal**), basal rates and the last bolus. Once the pump is paired, it has these buttons:
+    Accu-Chek Insight pompa ekranı (**Yönet → Pompa**) pompanın güncel durumunu gösterir, örneğin **Durum**, **Son bağlantı**, **Çalışma Modu**, **Pil**, **Rezervuar seviyesi**, bugünün günlük toplam dozları (**GTD Bolus**, **GTD Bazal**), bazal oranları ve son bolus. Pompa eşleştirildikten sonra şu düğmeler bulunur:
     
-    * **Refresh**: refreshes the pump status.
-    * **Enable notification of TBR end (pump setting)** / **Disable notification of TBR end (pump setting)**: a standard Insight pump sounds an alarm when a TBR finishes. This button turns that alarm on or off without the need for configuration software.
-    * **Unpair**: removes the pairing with the pump (see [Pairing](#accu-chek-insight-pairing)).
+    * **Yenile**: Pompa durumunu yeniler.
+    * **GBO bitti bildirimini etkinleştir (pompa ayarlarında)** / **GBO bitti bildirimini devre dışı bırak (pompa ayarlarında)**: Standart bir Insight pompası bir GBO bittiğinde alarm verir. Bu düğme, yapılandırma yazılımına gerek kalmadan bu alarmı açar veya kapatır.
+    * **Eşleşmeyi Kaldır**: Pompayla eşleştirmeyi kaldırır (bkz. [Eşleştirme](#accu-chek-insight-pairing)).
     
     ![Screenshot of Insight Status](../images/Insight_Status2.png)
     
-    ```{admonition} Older screenshot
+    ```{admonition} Eski ekran görüntüsü
     :class: note
-    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different and also has an **Unpair** button.
+    Yukarıdaki ekran görüntüsü daha eski bir **AAPS** sürümünden alınmıştır. **AAPS** 4'te pompa ekranı farklı görünür ve ayrıca bir **Eşleşmeyi Kaldır** düğmesi vardır.
     
 
 ## Pompadaki ayarlar
@@ -146,25 +146,25 @@ Pompadaki alarmları aşağıdaki gibi yapılandırın:
 * Menü > Ayarlar > Cihaz ayarları > Mod ayarları > Sessiz > Ses > 0 (tüm çubukları kaldırın)
 * Menü > Modlar > Sinyal modu > Sessiz
 
-This will silence all alarms from the pump, allowing AAPS to decide if an alarm is relevant to you. If AAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+Bu, pompadaki tüm alarmları susturur ve bir alarmın sizin için önemli olup olmadığına AAPS karar verir. AAPS bir alarmı onaylamazsa alarmın sesi artar (önce bip sesi, sonra titreşim).
 
 (Accu-Chek-Insight-Pump-vibration)=
 
 ### Titreşim
 
-Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AAPS issues an SMB or TBR emulation delivers an extended bolus).
+Pompanızın üretici yazılımı sürümüne bağlı olarak Insight, her bolus verildiğinde kısa bir süre titrer (örneğin AAPS bir SMB verdiğinde veya GBO emülasyonu bir yayma bolus verdiğinde).
 
 * Firmware 1.x: Tasarımda titreşim yok.
 * Firmware 2.x: Titreşim devre dışı bırakılamaz.
-* Firmware 3.x: AAPS delivers bolus silently.
+* Üretici yazılımı 3.x: AAPS bolusu sessiz verir.
 
 Donanım yazılımı sürümünü menüde bulabilirsiniz.
 
 ## Pil değiştirme
 
-Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. Energizer lityum pil kullanan kullanıcılar bunu bildirmişlerdir.
+Döngü kullanırken Insight'ın pil ömrü 10 ile 14 gün arasındadır, en fazla 20 gündür. Bunu bildiren kullanıcı Energizer lityum pil kullanıyor.
 
-Insight pompası, çıkarılabilir pili değiştirirken saat gibi temel işlevleri çalışır durumda tutmak için küçük bir dahili pile sahiptir. Pilin değiştirilmesi çok uzun sürerse, bu dahili pilin gücü tükenebilir. Saat sıfırlanırsa yeni bir pil taktıktan sonra yeni bir saat ve tarih girmeniz istenecektir. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+Insight pompası, çıkarılabilir pili değiştirirken saat gibi temel işlevleri çalışır durumda tutmak için küçük bir dahili pile sahiptir. Pilin değiştirilmesi çok uzun sürerse, bu dahili pilin gücü tükenebilir. Saat sıfırlanırsa yeni bir pil taktıktan sonra yeni bir saat ve tarih girmeniz istenecektir. Bu olursa, doğru zaman belirlenemediği için AAPS'teki pil değişiminden önceki tüm kayıtlar artık hesaplamalara dahil edilmez.
 
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
 
@@ -176,22 +176,22 @@ Aynı anda birden fazla yayma bolus hatalara neden olabileceğinden, bir seferde
 
 ### Zaman aşımı (Time out)
 
-Sometimes the Insight pump does not answer while **AAPS** sets up the connection. **AAPS** then shows the notification "Timeout during handshake - reset bluetooth".
+Bazen Insight pompası, **AAPS** bağlantıyı kurarken yanıt vermez. **AAPS** bu durumda "El sıkışma sırasında zaman aşımı - Bluetooth'u sıfırla" bildirimini gösterir.
 
 ![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-If this happens, turn off Bluetooth on the pump AND on the phone for about 10 seconds, then turn it back on.
+Bu olursa, Bluetooth'u pompada VE telefonda yaklaşık 10 saniyeliğine kapatın, sonra yeniden açın.
 
 ## Insight pompasıyla zaman dilimlerini geçme
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-insight).
+Saat dilimleri arasında seyahat hakkında bilgi için [Pompalarla saat dilimi değiştirerek seyahat](#timezone-traveling-insight) bölümüne bakın.
 
-## Where to get help
+## Nereden yardım alabilirsiniz?
 
-Development of the Insight driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Insight sürücüsünün geliştirilmesi topluluk tarafından **gönüllü** olarak yapılır. Yardım istemeden önce lütfen:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. Özelliğin nasıl çalışması gerektiğini doğrulamak için bu dokümantasyonun ilgili bölümünü **okuyun**.
+2. [Discord](https://discord.gg/4fQUWHZ4Mw)'daki *#AAPS* kanalında veya diğer [topluluk kanallarından](../GettingHelp/WhereCanIGetHelp.md) birinde **sorun**.
+3. [Mevcut sorunlar](https://github.com/nightscout/AndroidAPS/issues) arasında arama yaparak **bir hata bildirin**; sizinki listede yoksa [yeni bir sorun (issue)](https://github.com/nightscout/AndroidAPS/issues) açın ve [günlük dosyalarınızı](../GettingHelp/AccessingLogFiles.md) ekleyin.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Yardım isterken telefonunuzun markasını ve modelini, Android sürümünü, **AAPS** sürümünü ve sorunun sade bir açıklamasını (ne değişti, en son ne zaman çalıştı) ekleyin.
