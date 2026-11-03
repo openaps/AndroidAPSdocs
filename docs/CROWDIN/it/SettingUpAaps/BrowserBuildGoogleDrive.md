@@ -3,7 +3,7 @@
 # Browser build – Step 3: Authorize Google Drive
 
 ```{note}
-This is **Step 3** of the [Browser build](BrowserBuild.md). First complete [Step 2 – Create your signing keystore](BrowserBuildKeystore.md).
+This is **Step 3** of the [Browser build](BrowserBuild.md). Prima completa il [Passo 2 – Crea il tuo keystore di firma](BrowserBuildKeystore.md).
 ```
 
 ```{warning}
@@ -16,17 +16,17 @@ Note: If you already followed this part in the video, you can now skip to [Step 
 If the Google authorization does not start or the preparation page fails, close the preparation page, open `aaps-ci-preparation.html` again the same way as in Step 2, and start this step again. See [troubleshooting](#aaps-ci-preparation-web).
 ```
 
-Return to the preparation page tab.
+Torna alla scheda della pagina di preparazione.
 
 Scroll down to the Google Drive Auth section and tap Start Auth.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep44.png)
 
-Select your Google account.
+Seleziona il tuo account Google.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH1.png)
 
-Scroll down and accept the access. The web page needs it to obtain the Google Drive authentication key.
+Scorri in basso e accetta l'accesso. La pagina web ne ha bisogno per ottenere la chiave di autenticazione di Google Drive.
 
 Tap Continue.
 
@@ -36,7 +36,7 @@ The `GDRIVE_OAUTH2` field will populate, tap the top Copy button.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH3.png)
 
-Switch back to the GitHub tab.
+Torna alla scheda di GitHub.
 
 Scroll down to Repository secrets and tap New repository secret.
 
@@ -52,15 +52,15 @@ In the Name field, paste the text you just copied. Use a long touch on the text 
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH5.png)
 
-Switch to the preparation page tab.
+Passa alla scheda della pagina di preparazione.
 
-Tap the second Copy button.
+Tocca il secondo pulsante Copy.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH6.png)
 
-Switch back to the GitHub tab.
+Torna alla scheda di GitHub.
 
-1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+1. Nel campo Secret incolla il testo che hai appena copiato. Use a long touch on the text box to show the paste menu.
 
 2. Tap Add secret.
 
