@@ -1,10 +1,10 @@
 <!-- Android Studio Build, FKA Computer Build. Preserve filenames to avoid breaking URLs. -->
 
-# Android Studio Build
+# Kūrimas su Android Studio
 
-This is the traditional method to build your AAPS app.
+Tai tradicinis AAPS programėlės kūrimo būdas.
 
-You can build the app without a computer using the [Browser Build](./BrowserBuild.md) method.
+Programėlę galite sukurti ir be kompiuterio, naudodami būdą [Kūrimas naršyklėje](./BrowserBuild.md).
 
 ## Kurti sau, o ne parsisiųsti
 
@@ -15,23 +15,23 @@ Daugiau informacijos rasite [DUK puslapyje](../UsefulLinks/FAQ.md).
 ---
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
-## Computer and software specifications for building AAPS
+## Kompiuterio ir programinės įrangos reikalavimai AAPS kūrimui
 
-* Norint sukurti apk, gali reikėti konkrečios **[Android Studio](https://developer.android.com/studio/)** versijos. See table below :
+* Norint sukurti apk, gali reikėti konkrečios **[Android Studio](https://developer.android.com/studio/)** versijos. Žr. lentelę žemiau:
 
 | AAPS Version            | Rekomenduojama<br/>Android Studio<br/>versija | Alternatyvi<br/>Android Studio<br/>versija | Gradle | JVM |
 | ----------------------- | --------------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
 | 2.6.2                   | 3.6.1                                                     |                                                        | 5.6.4  | 11  |
 | 2.8.2.1                 | 4.1.1                                                     |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                                  | tested up to Quail 4                                   | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                       | tested up to Quail 4                                   | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                           | tested up to Quail 4                                   | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                        | tested up to Quail 4                                   | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                        | tested up to Quail 4                                   | 8.13   | 21  |
-| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                        | tested up to Quail 4                                   | 9      | 21  |
+| [3.1.0.3](#version3100) | 2020.3.1                                                  | išbandyta iki Quail 4                                  | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                       | išbandyta iki Quail 4                                  | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                           | išbandyta iki Quail 4                                  | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                        | išbandyta iki Quail 4                                  | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                        | išbandyta iki Quail 4                                  | 8.13   | 21  |
+| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                        | išbandyta iki Quail 4                                  | 9      | 21  |
 | [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                       | Latest                                                 | 9.8    | 21  |
 
-„Rekomenduojamoje versijoje“ jau yra tinkama JVM versija. Rekomenduojama versija kartu yra ir mažiausia versija, kurią galite naudoti **AAPS** kūrimui. Su senesne nei „rekomenduojama“ versija kurti **NEGALĖSITE**. Jei naudojate kitą versiją, gali kilti problemų dėl JVM versijos. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. Jei jūsų dabartinės Android Studio versijos lentelėje nėra, pirmiausia ją atnaujinkite.
+„Rekomenduojamoje versijoje“ jau yra tinkama JVM versija. Rekomenduojama versija kartu yra ir mažiausia versija, kurią galite naudoti **AAPS** kūrimui. Su senesne nei „rekomenduojama“ versija kurti **NEGALĖSITE**. Jei naudojate kitą versiją, gali kilti problemų dėl JVM versijos. Kaip išspręsti šias problemas, žr. puslapį [Android Studio trikčių šalinimas](#troubleshooting_androidstudio-uncommitted-changes). Jei jūsų dabartinės Android Studio versijos lentelėje nėra, pirmiausia ją atnaujinkite.
 
 Gradle versija susieta su šaltinio kodu: atsisiųsdami arba atnaujindami šaltinio kodą, visada gausite tinkamą Gradle versiją. Ji nurodyta tik informacijai, nieko daryti nereikia.
 
@@ -72,18 +72,18 @@ Gradle versija susieta su šaltinio kodu: atsisiųsdami arba atnaujindami šalti
 
 **Labai rekomenduojama (bet neprivaloma) naudoti SSD (Solid State Disk), o ne HDD (Hard Disk Drive), nes AAPS apk failo kūrimas užtruks trumpiau.**  **AAPS** apk failą vis tiek galite kurti ir naudodami HDD. Tokiu atveju kūrimas gali užtrukti ilgai, bet kai jis prasidės, galėsite palikti jį veikti be priežiūros.
 
-## Help and support during the building process
+## Pagalba kūrimo metu
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) section, please consult that first.
+Jei kuriant **AAPS** programėlę kyla sunkumų, yra atskiras skyrius [**Android Studio trikčių šalinimas**](../GettingHelp/TroubleshootingAndroidStudio.md) – pirmiausia peržiūrėkite jį.
 
 Jei manote, kad kūrimo instrukcijose kažkas neteisinga, trūksta ar neaišku, arba jums vis dar nesiseka, kreipkitės į kitus **AAPS** naudotojus grupėje [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) arba [Discord](https://discord.gg/4fQUWHZ4Mw). Jei norite ką nors pakeisti patys (atnaujinti ekrano nuotraukas _ir pan._), pateikite [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
-## Step-by-step guide to building the AAPS app
+## AAPS programėlės kūrimo instrukcija žingsnis po žingsnio
 
 ```{admonition} WARNING
 :class: warning
-If you have built AAPS before, you don't need to take all the following steps again.
-Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
+Jei AAPS jau kūrėte anksčiau, visų toliau nurodytų žingsnių kartoti nereikia.
+Eikite tiesiai į [atnaujinimo instrukciją](../Maintenance/UpdateToNewVersion.md)!
 ```
 
 ```{contents} The overall steps for building the **AAPS** apk file
@@ -91,347 +91,347 @@ Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)
 :local: true
 ```
 
-In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow.
+Šioje instrukcijoje rasite **AAPS** apk failo kūrimo ekrano kopijų _pavyzdžių_. Kadangi **Android Studio** – programa, kuria kuriame **AAPS** apk, – nuolat atnaujinama, šios ekrano kopijos gali skirtis nuo jūsų įdiegtos versijos, tačiau jomis vis tiek turėtų būti galima vadovautis.
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
+Kadangi **Android Studio** veikia Windows, Mac OS X ir Linux platformose, žingsniai skirtingose platformose taip pat gali šiek tiek skirtis.
 
 (install-git-if-you-dont-have-it)=
-### Install Git
+### Git įdiegimas
 
 ```{admonition} Why Git? 
 :class: dropdown
 
-Git is known as a “_Versioning Control System_” (VCS).\
-Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
+Git vadinama „_versijų valdymo sistema_“ (VCS).\
+Git – tai programa, leidžianti sekti kodo pakeitimus ir dirbti kartu su kitais. Su Git nukopijuosite **AAPS** šaltinio kodą iš GitHub svetainės į savo kompiuterį. Tada savo kompiuteryje su Android Studio sukursite **AAPS** programėlę (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
-#### Steps for Installing Git
+#### Git diegimo žingsniai
 
-1.  Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
+1.  Patikrinkite, ar **Git** dar nėra įdiegta. Tai galite padaryti Windows paieškos juostoje įvedę „git“. Jei matote **„Git bash“** ar kitą Git formą, ji jau įdiegta ir galite pereiti tiesiai prie [Android Studio įdiegimo](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
+2. Jei Git neįdiegta, atsisiųskite ir įdiekite naujausią savo sistemai skirtą versiją iš skilties „Download“ [**čia**](https://git-scm.com/downloads). Turėtų tikti bet kuri nauja Git versija. Pasirinkite versiją pagal savo sistemą: Mac, Windows arba Linux.
 
-**Note for Mac users:** the Git webpage will also guide you to install an additional program called "homebrew" to aid the installation. If you install Git via homebrew, there is no need to change any preferences.
+**Pastaba Mac naudotojams:** Git svetainė taip pat nurodys įdiegti papildomą programą „homebrew“, kuri padeda diegti. Jei Git diegiate per homebrew, jokių nustatymų keisti nereikia.
 
 (Make_a_note_of_Git_path)=
 
-* During the installation, when you are asked to "select destination location" make a note of _where_ Git is being installed (the "**installation path**") you will need to check it in the next step. It will be something similar to "C:\Program Files\Git\cmd\git.exe"
+* Diegimo metu, kai bus paprašyta „select destination location“ (pasirinkti paskirties vietą), užsirašykite, _kur_ diegiama Git (tai „**diegimo kelias**“) – jį reikės patikrinti kitame žingsnyje. Jis bus panašus į „C:\Program Files\Git\cmd\git.exe“
 
-*  As you proceed through several steps of the Git installation, just accept all the default options.
+*  Diegdami Git, per visus žingsnius tiesiog palikite numatytąsias parinktis.
 
-*  After the install, if you forgot to make a note of the where Git was installed, you can find it as follows: type "git" into the PC search bar, right click on "Git bash", select "open file location" hover over the "Git bash" icon with your mouse, which will then reveal where it is installed.
+*  Jei įdiegę pamiršote užsirašyti, kur įdiegta Git, galite tai rasti taip: kompiuterio paieškos juostoje įveskite „git“, dešiniuoju pelės mygtuku spustelėkite „Git bash“, pasirinkite „open file location“ (atidaryti failo vietą) ir užveskite pelę ant „Git bash“ piktogramos – bus parodyta, kur ji įdiegta.
 
-* Reboot your computer before the next step.
+* Prieš kitą žingsnį iš naujo paleiskite kompiuterį.
 
 (Building-APK-install-android-studio)=
 ### Android Studio įdiegimas
 
-- **You have to be online all of the time during the following steps, as Android Studio downloads several updates**
+- **Atliekant toliau nurodytus žingsnius, visą laiką turite būti prisijungę prie interneto, nes Android Studio atsisiunčia kelis atnaujinimus**
 
 ```{admonition} What is Android Studio?
 :class: dropdown
-Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
+Android Studio – tai programa, veikianti jūsų kompiuteryje. Ji leidžia atsisiųsti šaltinio kodą iš interneto (naudojant Git) ir sukurti telefono (ir išmaniojo laikrodžio) programėles. Kurdami naują ar atnaujintą programėlę kompiuteryje su Android Studio, negalite „sugadinti“ dabartinės, cikle veikiančios **AAPS** versijos, kurią galbūt naudojate telefone – tai visiškai atskiri procesai. 
 ```
 
-One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
+Diegiant Android Studio, vienas svarbiausių dalykų – **būkite kantrūs!** Diegimo ir sąrankos metu Android Studio atsisiunčia daug dalykų, o tai užtrunka.
 
 ```{admonition} Different UI
 :class: warning
-Important note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+Svarbi pastaba: per paskutines versijas Android Studio pakeitė savo sąsają. Šioje instrukcijoje žingsniai rodomi su *naująja sąsaja*. Ekrano kopijos padarytos su „Ladybug“, todėl naujesnės versijos gali atrodyti šiek tiek kitaip. Jei vis dar naudojate senąją sąsają, pirmiausia galite perjungti Android Studio į naująją sąsają pagal [šias instrukcijas](#computerbuild-NewUI).
 ```
 
-The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
+Android Studio versija yra labai svarbi. Kaip pasirinkti tinkamą Android Studio versiją, žr. [instrukcijas aukščiau](#Building-APK-recommended-specification-of-computer-for-building-apk-file).
 
-Download the [current version of Android Studio](https://developer.android.com/studio) or an older version from the [**Archives**](https://developer.android.com/studio/archive) and accept the download agreements.
+Atsisiųskite [dabartinę Android Studio versiją](https://developer.android.com/studio) arba senesnę versiją iš [**Archives**](https://developer.android.com/studio/archive) (archyvo) ir sutikite su atsisiuntimo sąlygomis.
 
 ![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
-Once the download is finished, start the downloaded application to install it on your computer. You might need to accept/confirm some warnings about downloaded apps from Windows!
+Kai atsisiuntimas baigsis, paleiskite atsisiųstą programą, kad ją įdiegtumėte kompiuteryje. Gali tekti priimti arba patvirtinti kelis Windows įspėjimus apie atsisiųstas programas!
 
-Install Android Studio by clicking "Next", as shown in the following screenshots. You do **not** need to change any settings!
+Įdiekite Android Studio spustelėdami „Next“, kaip parodyta tolesnėse ekrano kopijose. Jokių nustatymų keisti **nereikia**!
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+Jei norite taupyti vietą standžiajame diske, galite nuimti žymėjimą nuo Android Virtual Device: jis nenaudojamas **AAPS** kurti.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
 ![Configuration_Settings](../images/Building-the-App/013_InstallLadybug.png)
 
-Now click on "Install":
+Dabar spustelėkite „Install“:
 
 ![Choose_start_Menu_Folder](../images/Building-the-App/014_InstallLadybug.png)
 
-Once it's completed, press "Next"
+Kai diegimas baigsis, spauskite „Next“
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finish" to start Android Studio for the first time.
+Paskutiniame žingsnyje spustelėkite „Finish“, kad pirmą kartą paleistumėte Android Studio.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
-You will be asked if you want to help improve Android Studio. Choose the option to your liking, it won't make any difference for the following steps.
+Jūsų bus paklausta, ar norite padėti tobulinti Android Studio. Pasirinkite, kaip jums patinka, – tai neturės įtakos tolesniems žingsniams.
 
 ![Help_improve_Android_Studio](../images/Building-the-App/020_ImproveAS.png)
 
-The welcome screen greets you to the installation of Android Studio. Press "Next".
+Pirmiausia matysite Android Studio diegimo pasveikinimo ekraną. Spauskite „Next“.
 
 ![Welcome](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
 
-Select "Standard" as installation type.
+Kaip diegimo tipą pasirinkite „Standard“.
 
 ![Install_Type](../images/Building-the-App/023_DefaultInstallation.png)
 
-Verify the settings by clicking "Next" again.
+Patikrinkite nustatymus ir vėl spustelėkite „Next“.
 
 ![Verify_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
-Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
+Dabar turite sutikti su licencijos sutartimis. Kairėje yra dvi skiltys (1 ir 3): pasirinkite jas vieną po kitos ir kiekvienai dešinėje pasirinkite „Accept“ (2 ir 4).
 
-Then the "Finish" (5) button can be clicked.
+Tada galima spustelėti mygtuką „Finish“ (5).
 
 ![License_Agreement](../images/Building-the-App/025_LicenseAgreement.png)
 
-Some Android packages will now be downloaded and installed. Be patient and wait.
+Dabar bus atsisiųsti ir įdiegti keli Android paketai. Būkite kantrūs ir palaukite.
 
-When it's finished, you will find the following screen where you can select "Finish" again.
+Kai tai baigsis, pamatysite ekraną, kuriame vėl galėsite pasirinkti „Finish“.
 
 ![Downloading_Components](../images/Building-the-App/026_DownloadFinished.png)
 
-You will now see the Welcome screen of Android Studio.
+Dabar matysite Android Studio pasveikinimo ekraną.
 
 ![Welcome_to_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
 
 (Building-APK-download-AAPS-code)=
-### Download the AAPS code
+### AAPS kodo atsisiuntimas
 
 ```{admonition} Why can it take a long time to download the AAPS code?
 :class: dropdown
 
-The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
+Pirmą kartą atsisiunčiant **AAPS**, Android Studio per internetą prisijungs prie GitHub svetainės ir atsisiųs **AAPS** šaltinio kodą. Tai turėtų užtrukti apie 1 minutę. 
 
-Android Studio will then use **Gradle** (a development tool for Android apps) to identify other components needed to build these items on your computer. 
+Tada Android Studio naudos **Gradle** (Android programėlių kūrimo įrankį), kad nustatytų kitus komponentus, reikalingus šiems elementams sukurti jūsų kompiuteryje. 
 ```
 
-On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left.
+Android Studio pasveikinimo ekrane patikrinkite, ar kairėje pažymėta „**Projects**“ (1).
 
-Then click "**Clone Repository**" (2) on the right:
+Tada dešinėje spustelėkite „**Clone Repository**“ (2):
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
-We will now tell Android Studio where to get the code from:
+Dabar nurodysime Android Studio, iš kur gauti kodą:
 
 ![Get from Version Control](../images/Building-the-App/033_CloneGit.png)
 
-* "Repository URL" should be selected (by default) on the left (1).
-* "Git" should be selected (by default) as version control (2).
-* Now copy this URL:
+* Kairėje turi būti pažymėta (pagal numatytuosius nustatymus) „Repository URL“ (1).
+* Kaip versijų valdymo sistema turi būti pasirinkta (pagal numatytuosius nustatymus) „Git“ (2).
+* Dabar nukopijuokite šį URL:
     ```
     https://github.com/nightscout/AndroidAPS.git
     ```
-    and paste it into the URL textbox (3).
+    ir įklijuokite jį į URL lauką (3).
 
-* Check the (default) directory for saving the cloned code does not already exist on your computer (4). You can change it to some directory, but please remember where you stored it!
-* Now click the button "Clone" (5).
+* Patikrinkite, ar (numatytasis) aplankas, kuriame bus išsaugotas nukopijuotas kodas, dar neegzistuoja jūsų kompiuteryje (4). Galite jį pakeisti į kitą aplanką, bet būtinai atsiminkite, kur išsaugojote kodą!
+* Dabar spustelėkite mygtuką „Clone“ (5).
 
 ```{admonition} INFORMATION
 :class: note
-Make a note of the directory. It is where your sourcecode is stored!
+Užsirašykite aplanką. Čia saugomas jūsų šaltinio kodas!
 ```
 
-You will now see a screen telling you that the repository is being cloned:
+Dabar matysite ekraną, kuriame rašoma, kad saugykla klonuojama:
 
 ![cloning_repository](../images/Building-the-App/034_CloningProgress.png)
 
-At some point, Android Studio will close and start again. You may be asked whether you want to trust the project. Click on "Trust project":
+Tam tikru metu Android Studio užsidarys ir vėl pasileis. Jūsų gali būti paklausta, ar pasitikite projektu. Spustelėkite „Trust project“:
 
-  ![Trust project](../images/Building-the-App/035_TrustProject.png)
+  ![Pasitikėti projektu (Trust project)](../images/Building-the-App/035_TrustProject.png)
 
 
-Only for Windows users: If your firewall asks for permission, grant access:
+Tik Windows naudotojams: jei ugniasienė prašo leidimo, suteikite prieigą:
 
  ![Firewall permission java](../images/AndroidStudio361_18.png)
 
-After the repository is cloned successfully, Android Studio will open the cloned project.
+Sėkmingai klonavus saugyklą, Android Studio atidarys klonuotą projektą.
 
 (computerbuild-NewUI)=
 ```{admonition} New UI
 :class: note
-Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
+Android Studio neseniai pakeitė savo sąsają. Naujose Android Studio versijose naujoji sąsaja įjungta pagal numatymą!
 
-Only if your Android Studio looks different, you might need to switch to the new UI:
-Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
-In **Appearance & Behavior**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
+Tik jei jūsų Android Studio atrodo kitaip, gali tekti perjungti į naująją sąsają:
+Spustelėkite meniu (☰) viršuje kairėje, tada pasirinkite **Settings** (Apple kompiuteriuose – **Preferences**).
+Skiltyje **Appearance & Behavior** eikite į **New UI** ir pažymėkite **Enable new UI**. Tada iš naujo paleiskite Android Studio ir pradėkite ją naudoti.
 
-If you don't find the option **New UI** don't worry: you are already using it!
+Jei nerandate parinkties **New UI**, nesijaudinkite: jūs jau naudojate naująją sąsają!
 ```
 
 
-When Android Studio opened, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
+Kai Android Studio atsidarys, kantriai palaukite (tai gali užtrukti kelias minutes) ir ypač **neatnaujinkite** projekto, kaip siūloma iškylančiame lange.
 
-Android Studio will start a "Gradle project sync" automatically, which will take a couple of minutes to finish. You can see it (still) running:
+Android Studio automatiškai pradės „Gradle project sync“ (Gradle projekto sinchronizavimą), kuris užtruks kelias minutes. Galite matyti, kad jis (vis dar) vyksta:
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
 ```{admonition} NEVER UPDATE GRADLE!
 :class: warning
 
-Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+Android Studio gali rekomenduoti atnaujinti gradle sistemą. **Niekada neatnaujinkite gradle!** Dėl to kils sunkumų.
 ```
 
-Only on windows computers: You might get a notification about windows defender running: Click on **Automatically** and confirm, it will make the build run faster!
+Tik Windows kompiuteriuose: galite gauti pranešimą apie veikiantį Windows Defender. Spustelėkite **Automatically** ir patvirtinkite – kūrimas vyks greičiau!
 
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
 
-You can leave the gradle sync running and follow the next steps already.
+Galite palikti gradle sinchronizavimą veikti ir jau atlikti tolesnius žingsnius.
 
 (Building-APK-set-git-path-in-preferences)=
-### Set Git path in Android Studio preferences
+### Git kelio nustatymas Android Studio nustatymuose
 
-Now we will tell Android studio where to find Git, which you installed [earlier](#install-git-if-you-dont-have-it).
+Dabar nurodysime Android Studio, kur rasti Git, kurią įdiegėte [anksčiau](#install-git-if-you-dont-have-it).
 
-* Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
+* Tik Windows naudotojams: įsitikinkite, kad [įdiegę Git](#install-git-if-you-dont-have-it) iš naujo paleidote kompiuterį. Jei ne, iš naujo paleiskite kompiuterį ir vėl atidarykite Android Studio
 
-In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git** (2)
+Viršutiniame kairiajame **Android Studio** kampe atverkite meniu (☰) ir eikite į **File** > **Settings** (Windows) arba **Android Studio** > **Preferences** (Mac). Atsidarys toks langas. Spustelėkite, kad išskleistumėte sąrašą **Version Control** (1), ir pasirinkite **Git** (2)
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
+Patikrinkite, ar **Android Studio** gali automatiškai rasti teisingą **Path to Git executable** (kelią iki Git programos), spustelėdami mygtuką „Test“ (1):
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
 
-If the automatic setting is successful, your current version of **Git** will be displayed next to the path.
+Jei automatinis nustatymas pavyko, šalia kelio bus parodyta jūsų dabartinė **Git** versija.
 
    ![Git_version_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
 
-If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
-* manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
-* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
-* Verify your settings with the **Test** button!
+Jei **git.exe** nerandama automatiškai arba paspaudus „Test“ gaunama klaida, galite arba
+* rankiniu būdu įvesti kelią, kurį užsirašėte [anksčiau](#BuildingAaps-steps-for-installing-git), arba
+* spustelėti aplanko piktogramą (1) ir rankiniu būdu nueiti į aplanką, kuriame [anksčiau](#BuildingAaps-steps-for-installing-git) buvo įdiegta **git.exe**
+* Patikrinkite nustatymus mygtuku **Test**!
 
-  ![Git not found](../images/Building-the-App/039_GitTestError.png)
+  ![Git nerasta](../images/Building-the-App/039_GitTestError.png)
 
 (Building-APK-generate-signed-apk)=
-### Build the AAPS "signed" APK
+### „Pasirašyto“ AAPS APK kūrimas
 
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
-Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
+Android reikalauja, kad kiekviena programėlė būtų _pasirašyta_. Taip užtikrinama, kad vėliau ją būtų galima atnaujinti tik iš to paties patikimo šaltinio, kuris išleido pradinę programėlę. Daugiau informacijos šia tema rasite [šioje nuorodoje](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
 
-For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+Mums tai tiesiog reiškia, kad sugeneruojame pasirašymo arba „raktų saugyklos“ (keystore) failą ir naudojame jį kurdami **AAPS** programėlę.
 ```
 
 
-**Important: Make sure the gradle sync is finished successfully before proceeding!**
+**Svarbu: prieš tęsdami įsitikinkite, kad Gradle sinchronizavimas sėkmingai baigtas!**
 
 
-Click the hamburger menu on the top left to open the menu bar. Select **Build** (1), then select **Generate Signed App Bundle / APK** (2)
+Spustelėkite meniu piktogramą (☰) viršuje kairėje, kad atidarytumėte meniu juostą. Pasirinkite **Build** (1), tada pasirinkite **Generate Signed App Bundle / APK** (2)
 
-![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
+![APK kūrimas](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Select "APK" (1) instead of "Android App Bundle" and click "Next" (2):
+Pasirinkite „APK“ (1) vietoj „Android App Bundle“ ir spustelėkite „Next“ (2):
 
 ![APK instead of bundle](../images/Building-the-App/041_APK.png)
 
-In the next screen, make sure that "Module" is set to "AndroidAPS.app" (1). The part before ".app" is the name of the folder you cloned the code into.
+Kitame ekrane įsitikinkite, kad „Module“ nustatyta į „AndroidAPS.app“ (1). Dalis prieš „.app“ yra aplanko, į kurį nukopijavote kodą, pavadinimas.
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
 :class: note
-If you want to create the apk for your watch, you now need to select AndroidAPS.wear!
+Jei norite sukurti apk savo laikrodžiui, dabar turite pasirinkti AndroidAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
-Click "Create new..." (2) to start creating your key store.
+Spustelėkite „Create new...“ (2), kad pradėtumėte kurti raktų saugyklą.
 
 ```{admonition} INFORMATION!
 :class: note
-You will only need to create the keystore once.
-If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+Raktų saugyklą reikės sukurti tik vieną kartą.
+Jei AAPS jau kūrėte anksčiau, NEKURKITE naujos raktų saugyklos, o pasirinkite esamą ir įveskite jos slaptažodžius!
 ```
 
-**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
+**_Pastaba:_** raktų saugykla – tai failas, kuriame saugoma programėlės pasirašymo informacija. Ji užšifruota, o informacija apsaugota slaptažodžiais.
 
 ![Create key store](../images/Building-the-App/043_Keystore.png)
 
-* Click the "folder" symbol (1) to select a path on your computer for your key store.
+* Spustelėkite „aplanko“ piktogramą (1) ir pasirinkite vietą kompiuteryje savo raktų saugyklai.
 
-  Do **not** use the directory where you stored your sourcecode but some directory that you would also transfer to a new computer.
+  **Nenaudokite** aplanko, kuriame saugote šaltinio kodą, o pasirinkite aplanką, kurį taip pat perkeltumėte į naują kompiuterį.
 
 ```{admonition} WARNING!
 :class: warning
-Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AAPS update!
+Būtinai užsirašykite, kur saugoma jūsų raktų saugykla. Jos prireiks, kai kursite kitą AAPS atnaujinimą!
 ```
 
-* Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
+* Dabar pasirinkite paprastą slaptažodį (ir jį užsirašykite), įveskite jį slaptažodžio lauke (2) ir patvirtinkite (2).
 
-  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+  Raktų saugyklos ir rakto slaptažodžiai neturi būti sudėtingi. Jei ateityje pamiršite slaptažodį, žr. [AAPS įdiegimas iš naujo su nauja raktų saugykla](#reinstall-aaps).
 
 ```{warning}
-**Avoid special characters in your passwords.** Use only letters and digits for the keystore and key passwords. In particular, do not use `$`, a backtick, `"` or `\`. If you later switch to the [Browser build](#aaps-ci-option2) and reuse this keystore, these characters can make the signing step fail, see [Browser build troubleshooting](#aaps-ci-password-special-characters).
+**Slaptažodžiuose venkite specialiųjų simbolių.** Raktų saugyklos ir rakto slaptažodžiams naudokite tik raides ir skaitmenis. Ypač nenaudokite `$`, atvirkštinės kabutės (backtick), `"` ar `\`. Jei vėliau pereisite prie [kūrimo naršyklėje](#aaps-ci-option2) ir vėl naudosite šią raktų saugyklą, dėl šių simbolių pasirašymo žingsnis gali nepavykti, žr. [Kūrimas naršyklėje: trikčių šalinimas](#aaps-ci-password-special-characters).
 ```
 
-* The default alias (3) for your key is "key0", leave this unchanged.
+* Numatytasis jūsų rakto alias (3) yra „key0“ – jo nekeiskite.
 
-* You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
+* Dabar jūsų raktui reikia slaptažodžio. Paprastumo dėlei, jei norite, galite naudoti tą patį slaptažodį, kurį aukščiau naudojote raktų saugyklai. Įveskite slaptažodį (4) ir jį patvirtinkite.
 
 ```{admonition} WARNING!
 :class: warning
-Note down these passwords! You will need them when you build the next AAPS update!
+Užsirašykite šiuos slaptažodžius! Jų prireiks, kai kursite kitą AAPS atnaujinimą!
 ```
 
-* The validity is 25 years by default, leave it as it is.
+* Pagal numatytuosius nustatymus galiojimas yra 25 metai – palikite taip, kaip yra.
 
-* Enter your first and last name (5). No other information needs to be added but you are free to do (6-7).
+* Įveskite savo vardą ir pavardę (5). Kitos informacijos pridėti nereikia, bet galite, jei norite (6–7).
 
-* Click "OK" (8) to continue:
+* Norėdami tęsti, spustelėkite „OK“ (8):
 
 
-On the **Generate signed App Bundle or APK** page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
+Puslapyje **Generate signed App Bundle or APK** dabar bus rodomas kelias iki jūsų raktų saugyklos. Dabar vėl įveskite raktų saugyklos slaptažodį (1) ir rakto slaptažodį (2) ir pažymėkite langelį (3), kad slaptažodžiai būtų įsiminti. Tada kitą kartą kurdami apk (pvz., atnaujindami į naują AAPS versiją) nebeturėsite jų įvesti. Click "Next" (4):
 
 ![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
 
 
-On the next screen, select build variant "fullRelease" (1) and click "Create" (3). You should remember the destination folder displayed at (2), as later you will find your built apk file there!
+Kitame ekrane pasirinkite kūrimo variantą „fullRelease“ (1) ir spustelėkite „Create“ (3). Įsiminkite paskirties aplanką, rodomą (2), nes vėliau ten rasite sukurtą apk failą!
 
-   ![Select build variant](../images/Building-the-App/045_BuildPath.png)
+   ![Kūrimo varianto pasirinkimas](../images/Building-the-App/045_BuildPath.png)
 
-Android Studio will now build the **AAPS** apk. It will show "Gradle Build running" (2) at the bottom right. The process takes some time, depending on your computer and internet connection, so **be patient!** If you want to watch the progress of the build, click on the small hammer "build" (1) at the bottom of Android Studio:
+Dabar Android Studio sukurs **AAPS** apk. Apačioje dešinėje bus rodoma „Gradle Build running“ (2). Procesas užtrunka, priklausomai nuo jūsų kompiuterio ir interneto ryšio, todėl **būkite kantrūs!** Jei norite stebėti kūrimo eigą, spustelėkite mažą plaktuką „build“ (1) Android Studio apačioje:
 
-![Gradle Running](../images/Building-the-App/046_BuildRunning.png)
+![Gradle veikia](../images/Building-the-App/046_BuildRunning.png)
 
-Now you can watch the building progress:
+Dabar galite stebėti kūrimo eigą:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification icon (1) to bring up the Notifications, and then on **locate** (2):
+Baigus kūrimą, Android Studio parodys pranešimą „BUILD SUCCESSFUL“. Gali pasirodyti iššokantis pranešimas, kurį spustelėję galėsite pasirinkti „locate“. Jei to nepastebėjote, spustelėkite pranešimų piktogramą (1), kad atvertumėte pranešimus, tada spustelėkite **locate** (2):
 
-![Build finished](../images/Building-the-App/049_ReopenNotification.png)
+![Kūrimas baigtas](../images/Building-the-App/049_ReopenNotification.png)
 
-**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio.md)._**
+**_Jei kūrimas nepavyko, žr. skyrių [Android Studio trikčių šalinimas](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
-In the Notifications box, click on the blue link "locate":
+Pranešimų lange spustelėkite mėlyną nuorodą „locate“:
 
-![Locate build](../images/Building-the-App/048_BuildFinished.png) Your file manager will open and show you the build apk file that you have just built.
+![Sukurto failo radimas](../images/Building-the-App/048_BuildFinished.png) Atsidarys failų tvarkyklė ir parodys ką tik sukurtą apk failą.
 
    ![File location apk](../images/Building-the-App/050_LocateAPK.png)
 
-Sveikiname! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs.
+Sveikiname! Sukūrę **AAPS** apk failą, kitoje dokumentacijos dalyje perkelsite jį į savo telefoną.
 
 ```{tip}
-If you think you might want to use an Android Wear smartwatch in the future, this is the best time to build the AAPS Wear apk to be sure it will be synchronized with your AAPS apk.
+Jei manote, kad ateityje galbūt norėsite naudoti Android Wear išmanųjį laikrodį, dabar geriausias laikas sukurti AAPS Wear apk, kad jis tikrai būtų suderintas su jūsų AAPS apk.
 ```
 
-Move to the next stage of [Transferring and Installing **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
+Pereikite prie kito etapo: [**AAPS** perkėlimas ir įdiegimas](../SettingUpAaps/TransferringAndInstallingAaps.md).
 
 
 
