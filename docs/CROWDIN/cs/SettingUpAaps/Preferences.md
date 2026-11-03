@@ -28,12 +28,12 @@ V **AAPS** v4 najdete předvolby na obrazovce **Nastavení**. Dostanete se k nim
 
 **Jazyk**
 
-- By default **AAPS** follows the language of the phone (recommended).
+- Ve výchozím stavu **AAPS** používá jazyk telefonu (doporučeno).
 
-- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
+- Pokud chcete mít **AAPS** v jiném jazyce než telefon, vyberte ho zde. V Androidu 13 a novějším **AAPS** zaregistruje tento jazyk v Androidu jako vlastní jazyk aplikace, takže se jím řídí všechny jeho obrazovky, hlavní obrazovka, widgety i způsob zápisu čísel.
 
 - Když změníte jazyk, texty **AAPS** se ihned přepnou do nového jazyka. Pokud se některé texty stále zobrazují ve starém jazyce, restartujte **AAPS**.
-- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
+- V Androidu 12 se toto nastavení nezobrazuje: **AAPS** vždy používá jazyk telefonu.
 - Nastavení je skryté v [zjednodušeném režimu](#preferences-simple-mode).
 
 (preferences-simple-mode)= **Zjednodušený režim**
@@ -136,7 +136,7 @@ Pokud zadáte špatné heslo, **AAPS** se okamžitě ukončí – ale dál pobě
 
 - Bezpečnostní limity jsou nastaveny na základě věku, který jste zvolili v tomto nastavení.
 - Pokud začnete narážet na pevně nastavené limity (jako například na maximální bolus), je čas posunout se o stupeň výš.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
+- Zvolit vyšší věk, než je skutečný, je špatný nápad, protože to může vést k předávkování při zadání chybné hodnoty v dialogu Inzulín (například když vynecháte desetinnou čárku).
 - Chcete-li znát přesné hodnoty těchto pevně nastavených bezpečnostních limitů, najděte funkci algoritmu, kterou používáte, [na této stránce](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -275,7 +275,7 @@ Podle nastavení v [Konfigurace > APS](../SettingUpAaps/ConfigBuilder.md) si mů
 - [Vylepšený asistent pro jídlo (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - stav algoritmu v roce 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - nejnovější algoritmus, doporučený pro začátečníky
 
-As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
+Od [**AAPS** verze 3.3](#version3300) je funkce [Dynamická ISF](../DailyLifeWithAaps/DynamicISF.md) přesunuta do OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -364,10 +364,10 @@ Plugin NSClient (v nabídce konfigurace zobrazený jako **NSClientV3**) synchron
 ```{admonition} Data uploaders
 :class: warning
 
-Když používáte NSClientV3, musí všechny uploadery používat Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+Když používáte NSClientV3, musí všechny uploadery používat Nightscout API v3. Pokud jiný uploader (například vaše aplikace pro CGM) nepodporuje API v3, **nechte AAPS nahrávat všechna data** (glykémie, ošetření, ...) do Nightscoutu a tento uploader vypněte.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
+- Nastavte *URL Nightscoutu* (např. <https://yoursitename.yourplatform.dom>).
 - **Ujistěte se, že adresa URL na konci NEOBSAHUJE /api/v1/.**
 - V Nightscoutu vytvořte *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (pro API V3 je potřeba [Nightscout 15](https://nightscout.github.io/update/update/)) a zadejte ho do pole **Přístupový token Nightscoutu** (ne váš API Secret!). V **AAPSClient** můžete místo toho naskenovat QR kód z hlavního telefonu, který nastaví vlastní token klienta. Klient spárovaný pomocí PINu dostane po spárování vlastní token z hlavního telefonu. Viz [Vlastní Nightscout token klienta](#client-master-control-own-token).
 - Toto umožňuje čtení a zápis dat mezi webem Nightscout a **AAPS**.
@@ -411,7 +411,7 @@ Přepínač „**Povolit ovládání z klienta**“ už v tomto nastavení není
 - Chcete-li smazat všechna SSID, zadejte do pole mezeru.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClientV3)
+### Rozšířená nastavení (NSClientV3)
 
 ![Rozšířená nastavení NSClient](../images/preferences/settings_nsclient_advanced.png)
 
@@ -470,9 +470,9 @@ Vyberte, jaká služba určování polohy se použije:
 
 Nastavení by měla být srozumitelná sama o sobě.
 
-**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+**Přebít režim Nerušit** (ve výchozím stavu zapnuto): alarmy **AAPS** zvoní, i když je telefon ztlumený nebo v režimu Nerušit. Vypněte to, pokud má **AAPS** tyto režimy respektovat: alarmy pak nezvoní a v režimu Nerušit jen vibrují, v telefonu i na hodinkách. Návrhy smyčky, které přijdou během režimu Nerušit, se zobrazí bez zvuku.
 
-When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
+Když alarm zvoní, obrazovka alarmu nabízí **Ztišit alarm** (obrazovka zůstane otevřená, takže si můžete přečíst zprávu) a **Ztišit a zavřít**. Když oznámení alarmu na panelu oznámení odsunete, alarm se ztlumí. Když později otevřete **AAPS**, alarm, na který jste nereagovali, se zobrazí znovu.
 
 (preferences-maintenance-settings)=
 ## Nastavení údržby
@@ -489,7 +489,7 @@ When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays
 
 Můžete pomoci s dalším vývojem **AAPS** tím, že budete vývojářům posílat hlášení o pádech.
 
-**Bezobslužný export nastavení**<br/> Zapnutím této funkce dovolíte **AAPS** provádět export nastavení bez zásahu uživatele. For this the master password is securely stored on your phone (only) at the next manual export. Uložené heslo se bude používat nejvýše 4 týdny. Po 4 týdnech dostanete upozornění, že platnost hesla brzy skončí. Během 1týdenní lhůty pak můžete heslo obnovit tím, že ručně exportujete nastavení z nabídky Údržba.
+**Bezobslužný export nastavení**<br/> Zapnutím této funkce dovolíte **AAPS** provádět export nastavení bez zásahu uživatele. K tomu se hlavní heslo při příštím ručním exportu bezpečně uloží ve vašem telefonu (a jen tam). Uložené heslo se bude používat nejvýše 4 týdny. Po 4 týdnech dostanete upozornění, že platnost hesla brzy skončí. Během 1týdenní lhůty pak můžete heslo obnovit tím, že ručně exportujete nastavení z nabídky Údržba.
 
 Po uplynutí 1týdenní lhůty platnost uloženého hesla skončí a každý automatický export nastavení se přeruší a upozorní uživatele, aby znovu zadal heslo. [(**Automatické exporty nastavení**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) se zaznamenají do seznamů **AAPS** „Péče“ a „Uživatelský záznam“ v Ošetřeních.
 
