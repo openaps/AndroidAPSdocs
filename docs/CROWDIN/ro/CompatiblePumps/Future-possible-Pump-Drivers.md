@@ -1,62 +1,62 @@
 # Controlere de pompe (posibile) viitoare
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+Aceasta este o listă cu unele pompe de pe piață, stadiul suportului lor în alte sisteme de buclă și stadiul lor în AAPS. La final găsiți câteva informații despre ce îi trebuie unei pompe pentru a fi „compatibilă cu bucla”.
 
-    {contents} Table of contents
+    {contents} Cuprins
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## Pompe în faza de integrare în AAPS
 
 **Coming soon:** drivers for these pumps are in development and already running in test builds.
 
-Omnipod 5 ([Homepage](https://www.omnipod.com/))
+Omnipod 5 ([Pagina de pornire](https://www.omnipod.com/))
 
 ![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
 
-Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+Tandem: t:Mobi ([Pagina de pornire](https://www.tandemdiabetes.com/))
 
 ![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
 
-## Pompe care pot fi folosită în buclă
+## Pompe care pot fi folosite în buclă
 
 ### Kaleido ([Pagina de pornire](https://www.hellokaleido.com/))
 
-**Stare buclă:** Pompa este un candidat la buclă, dar protocolul este necunoscut în acest moment. Niciun interes pentru sursă deschisă din partea vânzătorului.
+**Stare buclă:** Pompa este un candidat la buclă, dar protocolul este necunoscut în acest moment. Producătorul nu are niciun interes pentru sursa deschisă.
 
-**Cerință hardware pentru AAPS:** Nici una. Se pare că este activată prin Bluetooth.
+**Cerință hardware pentru AAPS:** Nici una. Se pare că are Bluetooth.
 
-### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:slim X3 ([Pagina de pornire](https://www.tandemdiabetes.com/about-us/pipeline))
 
 **Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
 
-**Cerință hardware pentru AAPS:** Nici una. It is expected to be Bluetooth enabled.
+**Cerință hardware pentru AAPS:** Nici una. Se așteaptă să aibă Bluetooth.
 
 **Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
 
-### Twiist ([Homepage](https://www.twiist.com/))
+### Twiist ([Pagina de pornire](https://www.twiist.com/))
 
 **Loop status:** Loop candidate.
 
-**Cerință hardware pentru AAPS:** Nici una. It is Bluetooth enabled.
+**Cerință hardware pentru AAPS:** Nici una. Are Bluetooth.
 
-### Pompă de insulină Willcare ([Pagina de start](http://shinmyungmedi.com/en/))
+### Pompă de insulină Willcare ([Pagina de pornire](http://shinmyungmedi.com/en/))
 
 **Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
 
-**Cerință hardware pentru AAPS:** Nici una. Se pare că este activată prin Bluetooth.
+**Cerință hardware pentru AAPS:** Nici una. Se pare că are Bluetooth.
 
 **Comentarii:** Deoarece firma este interesată de integrarea cu AAPS, ar putea face implementarea chiar ei.
 
-### Ypsopump ([Homepage](https://www.ypsomed.com/))
+### Ypsopump ([Pagina de pornire](https://www.ypsomed.com/))
 
 **Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
 
-**Cerință hardware pentru AAPS:** Nici una. It is Bluetooth enabled.
+**Cerință hardware pentru AAPS:** Nici una. Are Bluetooth.
 
 **Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
 
-## Pompele nu se mai vând (companiile nu mai funcționează)
+## Pompe care nu se mai vând (companii care nu mai funcționează)
 
 ### Animas Vibe
 
@@ -76,7 +76,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Tandem: t:slim X2 ([Pagina de pornire](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**Comentarii:** Protocolul Bluetooth Tandem a fost descifrat prin inginerie inversă, dar pe t:slim X2 se pot administra doar bolusuri — administrarea bazalei nu poate fi controlată — deci nu poate fi folosită în siguranță pentru buclă. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
 
 ### Accu-Chek Solo
 
@@ -86,32 +86,32 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 **Cerințe preliminare**
 
-- Pompa trebuie să accepte un fel de control la distanță. (BT, radio frecvență etc.)
+- Pompa trebuie să accepte un fel de control de la distanță. (BT, radio frecvență etc.)
 - Protocolul este descifrat/documentat/șamd
 
 **Cerință minimă**
 
-- Setează Rata Bazală Temporară
+- Setarea ratei bazale temporare
 - Preia Starea
 - Anulează Rata Bazală Temporară
 
 **Pentru oref1(SMB) sau Bolus:**
 
-- Setează bolusul
+- Setarea bolusului
 
 **Bine de avut**
 
 - Anulează Bolus
 - Preia Profilul Bazalei (aproape obligatoriu)
 - Setare Profil Bazală (bine de avut)
-- Citește Istoric 
+- Citirea istoricului 
 
 **Altele (nu sunt necesare, dar bune de avut)**
 
 - Setați bolus extins
-- Renunță la bolusul extins
-- Citește Istoric
-- Citiți DTZ (Doză Totală Zilnică)
+- Anulează bolusul extins
+- Citirea istoricului
+- Citirea DZT (doza zilnică totală)
 
 ### Suport pentru alte pompe
 
