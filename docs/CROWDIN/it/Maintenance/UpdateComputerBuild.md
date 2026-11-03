@@ -5,10 +5,10 @@
 **AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 ```{note}
-In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+Se vuoi fare la build di **AAPS** su un nuovo computer: copia il file di backup del tuo keystore sul nuovo computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. L'unica differenza è che, invece di creare un nuovo keystore, puoi selezionare quello che hai copiato sul nuovo computer.
 ```
 
-## Overview for updating to a new version of AAPS with Android Studio
+## Panoramica dell'aggiornamento a una nuova versione di AAPS con Android Studio
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
@@ -25,40 +25,40 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ### Check your Android Studio version
 
-The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Se la tua versione è più vecchia, [aggiorna prima Android Studio](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
-### Update your local copy
+### Aggiorna la tua copia locale
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Apri il tuo progetto AAPS esistente con Android Studio. You might need to select your project. (Double) click on the AAPS project.
 
   ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
 
 * In the menu bar of Android Studio, select Git -> Fetch
 
-   ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+   ![Menu di Android Studio - Git - Fetch](../images/update/02_GitFetch.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* In basso a destra vedrai un messaggio che dice che il Fetch è riuscito.
 
-   ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+   ![Menu di Android Studio - Git - Fetch riuscito](../images/update/03_GitFetchSuccessful.png)
 
 * In the menu bar, now select Git -> Pull
 
-   ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+   ![Menu di Android Studio - Git - Pull](../images/update/04_GitPull.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* Lascia tutte le opzioni come sono (origin/master) e seleziona Pull
 
    ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* Wait while download is in progress, you will see this as info in the bottom bar. Quando ha finito, vedrai un messaggio di successo.
 
   ```{note}
-  The files that were updated may vary! This is not an indication of a problem.
+  I file aggiornati possono essere diversi! Questo non indica un problema.
   ```
 
-   ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+   ![Android Studio - Pull riuscito](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Gradle Sync will be running to download some dependencies. Aspetta che finisca.
 
   ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
@@ -76,7 +76,7 @@ Your sourcecode is now the current released version, and all prerequisites have 
 (Update-to-new-version-transfer-and-install)=
 
 ### Transfer and install the apk
-You need to transfer the apk to your phone so you can install it.
+Devi trasferire l'apk sul telefono per poterlo installare.
 
 ```{note}
 If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
@@ -85,13 +85,13 @@ For other scenarios such as establishing a new key store in Android Studio for y
 
 See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
+Continua [qui](#Update-to-new-version-check-aaps-version-on-phone).
 
 (update-computer-build-troubleshooting)=
 
 ## Troubleshooting
 
-If anything goes wrong, don't panic.
+Se qualcosa va storto, niente panico.
 
 Take a breath!
 
