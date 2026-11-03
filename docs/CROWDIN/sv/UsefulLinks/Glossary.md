@@ -1,151 +1,151 @@
 # Glossary
 
-**AAPS** = AndroidAPS is the name of the Android app.
+**AAPS** = AndroidAPS är namnet på Android-appen.
 
-**AAPSClient** = the follower app for caregivers. On a follower phone it follows a user’s **AAPS** through the user’s **Nightscout** site and, once paired with the **AAPS** phone, controls it remotely. Not to be confused with **NSClient**. Further info → [Wiki - 'The AAPSClient app'](../RemoteFeatures/AapsClient.md) and [Master ↔ Client control](#client-master-control).
+**AAPSClient** = följarappen för anhöriga och andra som hjälper till med vården. På en följartelefon följer den din **AAPS** via din **Nightscout**-sida, och när den har parkopplats med **AAPS**-telefonen kan den styra den på distans. Ska inte förväxlas med **NSClient**. Mer info → [Wiki - 'Appen AAPSClient'](../RemoteFeatures/AapsClient.md) och [Styrning huvudenhet ↔ klient](#client-master-control).
 
-**Activity** = Insulin activity, representing the speed of decay of IOB. See [Wiki - 'DIA'](#Config-Builder-insulin-dia) and the related **BGI**.
+**Aktivitet** (Activity) = insulinaktivitet, som visar hur snabbt IOB minskar. Se [Wiki - 'DIA'](#Config-Builder-insulin-dia) och den relaterade **BGI**.
 
-**AID** = Automated Insulin Delivery. The term generally used in clinical practice and research for a system which automatically adjusts insulin delivery using **CGM** data. **APS** and **closed loop** mean the same thing → see also **OS-AID**.
+**AID** = automatiserad insulintillförsel (Automated Insulin Delivery). Den term som oftast används i klinisk praxis och forskning för ett system som automatiskt justerar insulintillförseln utifrån **CGM**-data. **APS** och **sluten loop** betyder samma sak → se även **OS-AID**.
 
-**APS** = Artificial Pancreas System → see also **AID**.
+**APS** = system för artificiell bukspottkörtel (Artificial Pancreas System) → se även **AID**.
 
-**AMA** = Advanced Meal Assist. An algorithm which allows **AAPS** to increase the user’s basal more aggressively after a meal bolus. Further info → [Wiki - 'Advanced Meal Assist (AMA)'](#Open-APS-features-advanced-meal-assist-ama).
+**AMA** = Advanced Meal Assist. En algoritm som gör att **AAPS** kan höja din basal mer aggressivt efter en måltidsbolus. Mer info → [Wiki - 'Advanced Meal Assist (AMA)'](#Open-APS-features-advanced-meal-assist-ama).
 
-**Adjustment Factor** = used within **DynamicISF** and is a value set within a user's **Settings** between 1% and 300%. This acts as a multiplier on the **TDD** value. See [Wiki - DynamicISF adjustment factor](#dyn-isf-adjustment-factor)
+**Justeringsfaktor** (Adjustment Factor) = används i **DynamicISF** och är ett värde mellan 1 % och 300 % som du ställer in under **Inställningar**. Detta fungerar som en multiplikator på **TDD**-värdet. Se [Wiki - DynamicISF justeringsfaktor](#dyn-isf-adjustment-factor)
 
-**Android Auto** = a system used to host certain functions of an Android smartphone’s features, including **AAPS**, within a car's display. Further info → [Wiki - 'android auto'](../RemoteFeatures/AndroidAuto.md).
+**Android Auto** = ett system som visar vissa funktioner från en Android-telefon, bland annat **AAPS**, på bilens skärm. Mer info → [Wiki - 'Android Auto'](../RemoteFeatures/AndroidAuto.md).
 
-**APK** = Android application Package. A software installation file. Further info → [Wiki - 'Building APK'](../SettingUpAaps/BuildingAaps.md).
+**APK** = Android application Package (installationspaket för Android-appar). En installationsfil för programvara. Mer info → [Wiki - 'Bygga AAPS'](../SettingUpAaps/BuildingAaps.md).
 
-**Autosens** = calculation of sensitivity to insulin over a 24-hour and an 8-hour window etc. Further info → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Autosens** = beräkning av känsligheten för insulin över ett tidsfönster på 24 timmar och ett på 8 timmar osv. Mer info → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
-**Azure** = cloud computing platform to host **Nightscout** web app → see also **Nightscout**.
+**Azure** = molnplattform där webbappen **Nightscout** kan köras → se även **Nightscout**.
 
-**BAT** = status light for low pump battery, shown in the status row of **AAPS'** main screen → see also **CAN** / **RES** / **SEN**.
+**BAT** = statuslampa för lågt pumpbatteri, visas i statusraden på huvudskärmen i **AAPS** → se även **CAN** / **RES** / **SEN**.
 
-**BG** = blood glucose.
+**BG** = blodsocker (blood glucose).
 
-**BGI** = blood glucose impact. The degree to which **BG** 'should' rise or fall based on insulin activity alone.
+**BGI** = blood glucose impact (påverkan på blodsockret). Hur mycket **BG** ”borde” stiga eller sjunka enbart utifrån insulinaktiviteten.
 
-**BG source** = An AAPS setting for configuring the source for blood glucose data. See [Wiki - BG Source](#Config-Builder-bg-source)
+**BG-källa** (BG source) = en inställning i AAPS där du väljer varifrån blodsockerdata hämtas. Se [Wiki - BG-källa](#Config-Builder-bg-source)
 
-**Bridge** = an additional device transforming **FGM** to **CGM**.
+**Brygga** (Bridge) = en extra enhet som gör om en **FGM** till en **CGM**.
 
-**BR** = Basal Rate. The amount of insulin in a given time block to maintain **BG** at a stable level. → see also **IC** / **ISF**.
+**BR** = basaldos (Basal Rate). Mängden insulin i ett visst tidsblock som håller **BG** på en stabil nivå. → se även **IC** / **ISF**.
 
-**BYODA** = Build Your Own Dexcom App. A way to generate the user’s own Dexcom App for reading out the sensor data Dexcom G6.
+**BYODA** = Build Your Own Dexcom App. Ett sätt att bygga en egen Dexcom-app som läser av sensordata från Dexcom G6.
 
-**CAGE** = Cannula AGE. Displayed on **AAPS'** main screen and in Nightscout, based on the user's **Prime/Fill** careportal entries → see also **Nightscout**.
+**CAGE** = kanylålder (Cannula AGE). Visas på huvudskärmen i **AAPS** och i Nightscout, utifrån dina Careportal-poster för **Förfyllning** → se även **Nightscout**.
 
-**CAN** = status light for overdue cannula change, shown in the status row of **AAPS'** main screen → see also **BAT** / **RES** / **SEN**.
+**CAN** = statuslampa för försenat kanylbyte, visas i statusraden på huvudskärmen i **AAPS** → se även **BAT** / **RES** / **SEN**.
 
-**CGM** = Continuous Glucose Monitor → see also **FGM**.
+**CGM** = kontinuerlig glukosmätare (Continuous Glucose Monitor) → se även **FGM**.
 
-**Closed Loop** = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an **AAPS’s** algorithm and the user’s **Profile** settings without requiring the user’s approval. Further info → [Wiki - 'closed loop'](#KeyAapsFeatures-ClosedLoop) and see also **HCL** / **FCL**.
+**Sluten loop** (Closed Loop) = ett system med sluten loop som automatiskt justerar din basaltillförsel utifrån algoritmen i **AAPS** och inställningarna i din **profil**, utan att du behöver godkänna ändringarna. Mer info → [Wiki - 'sluten loop'](#KeyAapsFeatures-ClosedLoop) och se även **HCL** / **FCL**.
 
-**COB** = Carbs On Board. This is the amount of carbohydrates currently available for the user's digestion → see also IOB.
+**COB** = aktiva kolhydrater (Carbs On Board). Mängden kolhydrater som just nu finns kvar att tas upp i kroppen → se även IOB.
 
-**CSF** =Carbs Sensitivity Factor. i.e. how much does the user’s **BG** increase for 1g of carbs absorbed.
+**CSF** = Carbs Sensitivity Factor (kolhydratkänslighet). dvs. hur mycket ditt **BG** stiger för 1 g kolhydrater som tas upp.
 
-**DIA** = Duration of Insulin Action. Further info → [Wiki - 'DIA'](#Config-Builder-insulin-dia) and see also → [DIABETTECH - 'DIA'](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/).
+**DIA** = insulinets verkningstid (Duration of Insulin Action). Mer info → [Wiki - 'DIA'](#Config-Builder-insulin-dia) och se även → [DIABETTECH - 'DIA'](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/).
 
-**DST** = Daylight Saving Time. See [Wiki - Timezone Change and Daylight Saving](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
+**DST** = sommartid (Daylight Saving Time). Se [Wiki - Byte av tidszon och sommartid](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
 
-**Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s **TDD** and **BG**.
+**Dynamisk ISF (Dynamic ISF, eller DynISF)** = en funktion i **AAPS** som anpassar insulinkänslighetsfaktorn (**ISF**) dynamiskt utifrån din **TDD** och ditt **BG**.
 
-**eCarbs** = extended Carbs. Carbs split up over several hours (e.g. to cover fat/protein), which lets **AAPS** spread the insulin like an extended bolus. Further info → [Wiki - 'Extended Carbs'](../DailyLifeWithAaps/ExtendedCarbs.md)
+**eCarbs** = förlängda kolhydrater (extended Carbs). Kolhydrater som delas upp över flera timmar (t.ex. för fett och protein), så att **AAPS** kan sprida ut insulinet som en förlängd bolus. Mer info → [Wiki - 'Förlängda kolhydrater'](../DailyLifeWithAaps/ExtendedCarbs.md)
 
-**FCL** = Full Closed Loop. A loop which needs no mealtime input from the user: no carb counting and no meal bolus. Further info → [Wiki - 'full closed loop'](../AdvancedOptions/FullClosedLoop.md) and see also **HCL**.
+**FCL** = helt sluten loop (Full Closed Loop). En loop där du inte behöver mata in något vid måltider: ingen kolhydraträkning och ingen måltidsbolus. Mer info → [Wiki - 'helt sluten loop'](../AdvancedOptions/FullClosedLoop.md) och se även **HCL**.
 
-**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. Further info → [Wiki - 'BG source'](#Config-Builder-bg-source) and see also 'CGM'.
+**FGM** = Flash Glucose Monitor (flash-glukosmätare), till exempel Abbott Freestyle Libre. Mer info → [Wiki - 'BG-källa'](#Config-Builder-bg-source) och se även 'CGM'.
 
-**git** = a tool used to store and download the **AAPS’** source code.
+**git** = ett verktyg som används för att lagra och ladda ned källkoden för **AAPS**.
 
-**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. Further info → [Wiki - 'update APK'](../Maintenance/UpdateToNewVersion.md).
+**GitHub** = en webbtjänst där källkoden för **AAPS** och dess versionshantering finns (den spårar ändringar i filer och samordnar arbetet med dem, särskilt i team). Den kan också bygga appen. Den behövs också för uppdateringar av **APK**-filen. Mer info → [Wiki - 'uppdatera APK'](../Maintenance/UpdateToNewVersion.md).
 
-**Glimp** = an app to collect values from Freestyle Libre.
+**Glimp** = en app som samlar in värden från Freestyle Libre.
 
-**HCL (or Hybrid Closed Loop)** = a loop which automates insulin delivery between meals, but still requires the user to bolus for meals. Nearly every system in everyday use, including **AAPS**, is a hybrid closed loop → see also **FCL** / **Closed Loop**.
+**HCL (hybrid sluten loop, Hybrid Closed Loop)** = en loop som automatiserar insulintillförseln mellan måltiderna, men där du fortfarande måste ta bolus till måltider. Nästan alla system som används i vardagen, även **AAPS**, är system med hybrid sluten loop → se även **FCL** / **Sluten loop**.
 
-**IC (I:C, ICR, CR, carb ratio)** = Insulin to Carb ratio. Note that this is conventionally g/U despite the acronym suggesting inverse.
+**IC (I:C, ICR, CR, KH-kvot)** = kolhydratkvot (Insulin to Carb ratio). Observera att den vanligtvis anges i g/U, fast förkortningen antyder det omvända.
 
-**IOB** = Insulin On Board. Insulin active in the user’s body. See [Wiki - Insulin on Board](#aaps-screens-iob)
+**IOB** = aktivt insulin (Insulin On Board). Insulin som är aktivt i din kropp. Se [Wiki - Aktivt insulin](#aaps-screens-iob)
 
-**ISF** = Insulin Sensitivity Factor. The expected decrease in BG as a result of one unit of insulin. Unit is either mg/dL/U or mmol/L/U. These are not equivalent without a conversion!
+**ISF** = insulinkänslighetsfaktor (Insulin Sensitivity Factor). Hur mycket BG väntas sjunka av en enhet insulin. Enheten är antingen mg/dl/U eller mmol/l/U. De är inte likvärdiga utan omräkning!
 
-**Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuild).
+**Keystore (eller JKS)** = ett Java Key Store, en krypterad fil där dina personliga utvecklarcertifikat och nycklar sparas. Den behövs för att bygga (och bygga om) **AAPS**.
 
-**LGS** = Low Glucose Suspend. See [Wiki - Low Glucose Suspend](#KeyAapsFeatures-LGS)
+**LGS** = Paus vid lågt blodsocker (Low Glucose Suspend). Se [Wiki - Paus vid lågt blodsocker](#KeyAapsFeatures-LGS)
 
-**LineageOS** = free and open-source operating system for smartphones etc. When using Accu-Chek Combo see [Wiki - Combo pump](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md).
+**LineageOS** = fritt operativsystem med öppen källkod för smarttelefoner m.m. Om du använder Accu-Chek Combo, se [Wiki - Combo-pump](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md).
 
-**Log files** = **AAPS’** records of the user's actions (useful for troubleshooting and debugging). Further info → [Wiki - 'log files'](../GettingHelp/AccessingLogFiles.md).
+**Loggfiler** (Log files) = det som **AAPS** sparar om dina åtgärder (användbart vid felsökning och debuggning). Mer info → [Wiki - 'loggfiler'](../GettingHelp/AccessingLogFiles.md).
 
-**maxIOB** = maximum total IOB. This is a safety feature and prevents **AAPS** delivering insulin over the user’s settings. Further info → [Wiki - 'Maximum total IOB OpenAPS can’t go over'](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
+**maxIOB** = maximal total IOB. Detta är en säkerhetsfunktion som hindrar **AAPS** från att ge mer insulin än dina inställningar tillåter. Mer info → [Wiki - 'Maximal total IOB som OpenAPS inte kan överskrida'](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
 
-**min_5m_carbimpact** = safety feature that is a calculation of default carb decay when carb absorption cannot be determined based on the user’s blood’s reactions. Further info → [Wiki - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
+**min_5m_carbimpact** = en säkerhetsfunktion: en beräkning av standardupptaget av kolhydrater när upptaget inte kan bestämmas utifrån hur ditt blodsocker reagerar. Mer info → [Wiki - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
 
-**Nightscout** = open source project to access and report **CGM** data. The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
+**Nightscout** = ett projekt med öppen källkod för att komma åt och rapportera **CGM**-data. Det centrala navet för dina **AAPS**-data. Det kan skapa rapporter över dina historiska data i **Nightscout**, till exempel förväntat HbA1c och tid i målområde, och du kan söka efter mönster i data med percentildiagram osv.
 
-**Nightscout** → see also **Nightscout Reporter**. This is particularly useful for parents following their child's diabetes management.
+**Nightscout** → se även **Nightscout Reporter**. Detta är särskilt användbart för föräldrar som följer sitt barns diabetesbehandling.
 
-**Nightscout Reporter Tool** = a tool which generates PDFs reports from Nightscout web app data. See 'Nightscout Reporter', 'NS Reporter' @ Facebook.
+**Nightscout Reporter Tool** = ett verktyg som skapar PDF-rapporter från data i webbappen Nightscout. Se 'Nightscout Reporter', 'NS Reporter' på Facebook.
 
-**NSClient** (**NSClientV3**) = the **AAPS** plugin that synchronizes data with **Nightscout** (**Configuration** → **Communication**). It is not the same as **AAPSClient**, the follower app. Further info → [Wiki - 'NSClient'](#Preferences-nsclient).
+**NSClient** (**NSClientV3**) = pluginet i **AAPS** som synkroniserar data med **Nightscout** (**Konfiguration** → **Kommunikation**). Det är inte samma sak som **AAPSClient**, följarappen. Mer info → [Wiki - 'NSClient'](#Preferences-nsclient).
 
-**OpenAPS** = Open Artificial Pancreas System, the predecessor project and basis of AAPS.
+**OpenAPS** = Open Artificial Pancreas System, föregångarprojektet och grunden för AAPS.
 
-**Open Loop system** = an **AAPS** feature that will recommend adjustments and which must be performed manually by the user on **AAPS**. Further info → [Wiki - 'Open Loop'](#KeyAapsFeatures-OpenLoop).
+**Öppen loop** (Open Loop system) = en funktion i **AAPS** som föreslår justeringar som du själv måste utföra i **AAPS**. Mer info → [Wiki - 'Öppen loop'](#KeyAapsFeatures-OpenLoop).
 
-**Oref0 / Oref1** = sensitivity detection and "reference design implementation version 0/1". It is the key algorithm behind OpenAPS. Further info → [Wiki - 'sensitivity detection'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
+**Oref0 / Oref1** = känslighetsdetektering och ”reference design implementation version 0/1”. Det är den centrala algoritmen bakom OpenAPS. Mer info → [Wiki - 'känslighetsdetektering'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
 
-**OS-AID** = Open-Source Automated Insulin Delivery. An **AID** system built from open-source software, such as **AAPS**, **OpenAPS**, Loop or Trio. These systems are not formally approved by health bodies (FDA, NHS etc.) → see also **AID**.
+**OS-AID** = automatiserad insulintillförsel med öppen källkod (Open-Source Automated Insulin Delivery). Ett **AID**-system byggt av programvara med öppen källkod, till exempel **AAPS**, **OpenAPS**, Loop eller Trio. Dessa system är inte formellt godkända av hälsomyndigheter (FDA, NHS osv.) → se även **AID**.
 
-**Peak time** = time of maximum effect of insulin given. Further info → [Wiki - 'Duration of insulin action (DIA) and peak'](#Config-Builder-insulin-dia).
+**Tid till insulintopp** (Peak time) = den tid då det givna insulinet har störst effekt. Mer info → [Wiki - 'Insulinets verkningstid (DIA) och topp'](#Config-Builder-insulin-dia).
 
-**PH** = Pump History. This can be accessed in **AAPS’** treatments history: open the **menu** (☰) at the top left of the main screen and select **Treatments**.
+**PH** = pumphistorik (Pump History). Du hittar den i behandlingshistoriken i **AAPS**: öppna **menyn** (☰) uppe till vänster på huvudskärmen och välj **Behandlingar**.
 
-**Predictions** = predictions for **BG** in the future based on different calculations. Further info → [Wiki - 'prediction lines'](#aaps-screens-prediction-lines).
+**Prognoser** (Predictions) = prognoser för framtida **BG** utifrån olika beräkningar. Mer info → [Wiki - 'prognoslinjer'](#aaps-screens-prediction-lines).
 
-**Profile** = the user’s basic treatment settings (basal rate, **DIA**, **IC**, **ISF**, **BG** target). **AAPS** only uses profiles created within **AAPS** (**Manage** → **Profile**), but **Nightscout** **Profiles** can be copied (synchronised) to **AAPS**. Further info → [Wiki - 'Your AAPS profile'](../SettingUpAaps/YourAapsProfile.md).
+**Profil** (Profile) = dina grundläggande behandlingsinställningar (basaldos, **DIA**, **IC**, **ISF**, **BG**-målvärde). **AAPS** använder bara profiler som har skapats i **AAPS** (**Hantera** → **Profil**), men **profiler** från **Nightscout** kan kopieras (synkroniseras) till **AAPS**. Mer info → [Wiki - 'Din AAPS-profil'](../SettingUpAaps/YourAapsProfile.md).
 
-**Profile switch** = (temporary) switch of the user’s **Profile** to a different **Profile** saved within **AAPS**.
+**Profilbyte** (Profile switch) = (tillfälligt) byte från din **profil** till en annan **profil** som är sparad i **AAPS**.
 
-**Profile Percentage** = a (temporary) percentage increase or decrease applied to a user’s **Profile** for a selected time period.
+**Procent av profil** (Profile Percentage) = en (tillfällig) procentuell höjning eller sänkning av din **profil** under en vald tidsperiod.
 
-**RES** = status light for overdue reservoir change, shown in the status row of **AAPS'** main screen → see also **BAT** / **CAN** / **SEN**.
+**RES** = statuslampa för försenat reservoarbyte, visas i statusraden på huvudskärmen i **AAPS** → se även **BAT** / **CAN** / **SEN**.
 
-**RileyLink** = open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication.
+**RileyLink** = hårdvara med öppen källkod som kopplar ihop Bluetooth Low Energy (BLE) med trådlös kommunikation på 916 MHz (används för äldre Medtronic-pumpar) eller 433 MHz (används för Omnipod Eros-pumpar).
 
-**SAGE** = sensor age. This is displayed on the main screen of **AAPS** and in **Nightscout**, based on the user's **Sensor Insert** careportal entries → see also **Nightscout**.
+**SAGE** = sensorålder (sensor age). Detta visas på huvudskärmen i **AAPS** och i **Nightscout**, utifrån dina Careportal-poster för **Sensorinsättning** → se även **Nightscout**.
 
-**SEN** = status light for overdue sensor change, shown in the status row of **AAPS'** main screen → see also **BAT** / **CAN** / **RES**.
+**SEN** = statuslampa för försenat sensorbyte, visas i statusraden på huvudskärmen i **AAPS** → se även **BAT** / **CAN** / **RES**.
 
-**Sensitivity detection** = calculation of sensitivity to insulin as a result of exercise, hormones etc. see also → [DIABETTECH - 'Autosens'](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Känslighetsdetektering** (Sensitivity detection) = beräkning av känsligheten för insulin, som påverkas av träning, hormoner osv. se även → [DIABETTECH - 'Autosens'](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
-**Sensor noise** = a term used to describe the unstable **CGM’s** readings leading to "jumping" **BG** values. Further info → [Wiki - 'Smoothing blood glucose data'](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+**Sensorbrus** (Sensor noise) = används om instabila värden från en **CGM** som ger ”hoppande” **BG**-värden. Mer info → [Wiki - 'Utjämning av blodsockerdata'](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-**SMB** = Super Micro Bolus. An **AAPS** feature for faster insulin delivery in order to adjust **BG**. Further info → [Wiki - '**SMB**'](#Open-APS-features-super-micro-bolus-smb) and see also **UAM**.
+**SMB** = supermikrobolus (Super Micro Bolus). En funktion i **AAPS** som ger insulin snabbare för att justera **BG**. Mer info → [Wiki - '**SMB**'](#Open-APS-features-super-micro-bolus-smb) och se även **UAM**.
 
-**Super bolus** = shift of basal to bolus insulin for faster **BG** adjustment.
+**Superbolus** (Super bolus) = basalinsulin flyttas till bolus för att justera **BG** snabbare.
 
-**TBB** = total base basal (sum of basal rate within 24 hours) → see also **TBR** / **TDD**.
+**TBB** = total basal (summan av basaldosen under 24 timmar, total base basal) → se även **TBR** / **TDD**.
 
-**TBR** = temporary basal rate → see also **TBB** / **TDD**.
+**TBR** = tillfällig basal (temporary basal rate) → se även **TBB** / **TDD**.
 
-**TDD** = total daily dose (bolus + basal per day) → see also **TBB** / **TBR**.
+**TDD** = total daglig dos (total daily dose, bolus + basal per dygn) → se även **TBB** / **TBR**.
 
-**TT** = temporary target: temporary increase/decrease of the user’s **BG** target (range) e.g. for eating or sport activities. Further info → [Wiki - 'temp targets'](../DailyLifeWithAaps/TempTargets.md).
+**TT** = tillfälligt målvärde (temporary target): tillfällig höjning eller sänkning av ditt **BG**-målvärde (målområde), t.ex. inför måltider eller träning. Mer info → [Wiki - 'tillfälliga målvärden'](../DailyLifeWithAaps/TempTargets.md).
 
-**UAM** = unannounced meals. Detection of significant increase in **BG** levels due to meals, adrenaline or other influences and attempt to adjust this. Further info → [Wiki - 'UAM'](#enable-uam) and see also **SMB**.
+**UAM** = oannonserade måltider (unannounced meals). Upptäcker en tydlig ökning av **BG** som beror på måltider, adrenalin eller annan påverkan och försöker justera för den. Mer info → [Wiki - 'UAM'](#enable-uam) och se även **SMB**.
 
-**Virtual pump** = an **AAPS** feature which allows the user to try **AAPS’** functions, or lets PWD whose pump model has no **AAPS** driver use **AAPS** as an open loop → see also **Open Loop**.
+**Virtuell pump** (Virtual pump) = en funktion i **AAPS** som låter dig prova funktionerna i **AAPS**, eller som låter personer med diabetes (PWD) vars pumpmodell saknar drivrutin i **AAPS** använda **AAPS** som öppen loop → se även **Öppen loop**.
 
-**Wallpaper** = **AAPS** background image see phones page.
+**Bakgrundsbild** (Wallpaper) = bakgrundsbild för **AAPS**, se sidan om telefoner.
 
-**xDrip** = open source software to read **CGM** systems.
+**xDrip** = programvara med öppen källkod som läser av **CGM**-system.
 
-**Zero-temp** = temporary basal rate with 0% (no basal insulin delivery).
+**Tillfällig basal på noll** (Zero-temp) = tillfällig basaldos på 0 % (inget basalinsulin ges).
 
-→ see also [the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)
+→ se även [OpenAPS-dokumentationen](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)
