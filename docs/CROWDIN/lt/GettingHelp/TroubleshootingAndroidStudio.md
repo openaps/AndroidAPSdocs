@@ -1,6 +1,6 @@
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
 
-# Android Studio trikčių diagnostika
+# Android Studio trikčių šalinimas
 
 ```{contents} List of common issues
 :depth: 2
@@ -9,26 +9,26 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Prarasta raktų saugykla
-If you lost your keystore or its password, an apk signed with a new keystore cannot update your current **AAPS**: you have to uninstall and reinstall it. See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Jei praradote raktų saugyklą arba jos slaptažodį, apk, pasirašytas nauja raktų saugykla, negali atnaujinti dabartinės **AAPS**: ją reikia pašalinti ir įdiegti iš naujo. Žr. [AAPS įdiegimas iš naujo su nauja raktų saugykla](#reinstall-aaps).
 
-## Gradle Sync failed
-Gradle Sync can fail for various reasons. When you receive a message saying that 'gradle sync failed', open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
+## Nepavyko Gradle Sync
+Gradle Sync gali nepavykti dėl įvairių priežasčių. Kai gaunate pranešimą „gradle sync failed“, Android Studio apačioje atidarykite skirtuką „Build“ (1) ir patikrinkite, koks klaidos pranešimas (2) rodomas.
 
-![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+![Gradle nepavyko](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 ```{contents} Likely reasons for gradle sync failures are:
 :depth: 1
 :local: true
 ```
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*Svarbu*: Atlikę savo problemos sprendimo veiksmus, turite dar kartą paleisti [gradle sinchronizavimą](#gradle-resync).
 
 (troubleshooting_androidstudio-uncommitted-changes)=
-### Uncommitted changes
+### Neįtraukti pakeitimai (uncommitted changes)
 
-If you receive a failure message like this one:
+Jei gaunate tokį klaidos pranešimą:
 
-![Gradle Uncommitted Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Gradle neįtraukti pakeitimai](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 ```
 Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
@@ -37,90 +37,90 @@ There are uncommitted changes.
 Clone sources again as described in wiki and do not allow gradle update
 ```
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal (2).
+#### 1 žingsnis – patikrinkite git įdiegimą
+  * Android Studio apačioje atidarykite terminalo skirtuką (1), nukopijuokite šį tekstą ir įklijuokite arba įveskite jį terminale (2).
     ```
     git --version
     ```
 
-    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
+    ![Gradle Git versija](../images/studioTroubleshooting/03_GitVersion.png)
 
-    Note: There is a space and two hyphens between Git and version!
+    Pastaba: tarp Git ir version yra tarpas ir du brūkšneliai!
 
-  * You must receive a message saying what Git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
+  * Turite gauti pranešimą, kokia Git versija įdiegta, kaip matyti ekrano kopijoje aukščiau. Tokiu atveju eikite į [2 žingsnį](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get a message saying
+  * Jei gaunate pranešimą
     ```
     Git: command not found
     ```
-    your Git installation is not right.
+    jūsų Git įdiegtas netinkamai.
 
-  * [Check git installation](#BuildingAaps-steps-for-installing-git)
+  * [Patikrinkite git įdiegimą](#BuildingAaps-steps-for-installing-git)
 
-  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
+  * Jei naudojate Windows ir Git ką tik įdiegėte, iš naujo paleiskite kompiuterį, kad po įdiegimo Git būtų pasiekiamas visur
 
-  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
+  * Jei Git įdiegtas, kompiuterį paleidote iš naujo (jei naudojate Windows), bet Git vis tiek nerandamas:
 
-  * Search your computer for a file "git.exe".
+  * Kompiuteryje suraskite failą „git.exe“.
 
-    Note for yourself, which directory it is saved in.
+    Užsirašykite, kuriame aplanke jis yra.
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Add the directory where you have found your Git installation.
+  * Windows sistemoje atidarykite aplinkos kintamuosius (Environment variables), pasirinkite kintamąjį „PATH“ ir spauskite „Edit“. Pridėkite aplanką, kuriame radote savo Git įdiegimą.
 
-  * Save and close.
+  * Išsaugokite ir uždarykite.
 
-  * Restart Android Studio.
+  * Iš naujo paleiskite Android Studio.
 
 (troubleshooting-android-studio-check-for-uncommitted-changes)=
-#### Step 2: Check for uncommitted changes.
+#### 2 žingsnis: patikrinkite, ar nėra neįtrauktų pakeitimų.
 
-  * In Android Studio, open the 'Commit' tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either "Changes" (called "Default changeset" in older Android Studio versions) (2) or "Unversioned Files" (3):
+  * Android Studio kairėje pusėje atidarykite skirtuką „Commit“ (1). ![Commit skirtukas: neįtraukti pakeitimai](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * Matysite arba „Changes“ (senesnėse Android Studio versijose – „Default changeset“) (2), arba „Unversioned Files“ (3):
 
-    * For "Changes", you probably updated 'Gradle' or changed some of the file contents by mistake.
+    * Jei matote „Changes“, tikriausiai atnaujinote „Gradle“ arba per klaidą pakeitėte kai kurių failų turinį.
 
-    * Right click on "Changes" and select "Rollback…" (1)
+    * Dešiniuoju pelės mygtuku spustelėkite „Changes“ ir pasirinkite „Rollback…“ (1)
 
-      ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
+      ![Commit skirtukas: pakeitimų atšaukimas (Rollback)](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+    * Failai iš naujo atsisiunčiami iš Git serverio. Jei Commit skirtuke kitų pakeitimų nėra, eikite į [3 žingsnį](#gradle-resync).
 
-  * If you can see "Unversioned Files", you might have stored files in your source code directory by mistake. Maybe they are important files: like your keystore file, that should be moved elsewhere. If you don't know what those files are and you have not created them yourself, you can delete them.
+  * Jei matote „Unversioned Files“, galbūt per klaidą išsaugojote failų savo išeities kodo aplanke. Gali būti, kad tai svarbūs failai, pvz., jūsų raktų saugyklos failas, kurį reikia perkelti kitur. Jei nežinote, kas tai per failai, ir jų nesukūrėte patys, galite juos ištrinti.
 
-    * Use your regular file explorer on your computer to move or cut and paste that file to a safe place.
+    * Įprasta kompiuterio failų naršykle perkelkite arba iškirpkite ir įklijuokite tą failą į saugią vietą.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the **AAPS** directory anymore.
+    * Grįžkite į Android Studio ir Commit skirtuke spustelėkite mygtuką Refresh (4), kad įsitikintumėte, jog failo **AAPS** aplanke nebėra.
 
-      If there are no other changes in the Commit tab, go to [Step 3](#gradle-resync).
+      Jei Commit skirtuke kitų pakeitimų nėra, eikite į [3 žingsnį](#gradle-resync).
 
 
-#### Step 3: Resync Gradle (again)
+#### 3 žingsnis: (dar kartą) sinchronizuokite Gradle
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+Vadovaukitės instrukcijomis skyriuje [Gradle sinchronizavimas iš naujo](#gradle-resync).
 
 ### Git Pull Failed - Please tell me who you are
 
-If you see this message, Git needs you to identify yourself.
+Jei matote šį pranešimą, Git reikia, kad nurodytumėte, kas esate.
 
-![Git identification](../images/studioTroubleshooting/164_Git_Identify.png)
+![Git identifikavimas](../images/studioTroubleshooting/164_Git_Identify.png)
 
-Open the terminal and type the following two commands, one after the other.
+Atidarykite terminalą ir vieną po kitos įveskite šias dvi komandas.
 
 ```
 git config --global user.name "Your name here"
 git config --global user.email your.email@here.com
 ```
 
-Your name needs to be written between quotation marks.
+Vardas turi būti rašomas kabutėse.
 
-![Git identification fix](../images/studioTroubleshooting/164_Git_Identify2.png)
+![Git identifikavimo pataisymas](../images/studioTroubleshooting/164_Git_Identify2.png)
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 (incompatible-gradle-jvm)=
-### Incompatible Gradle JVM
+### Nesuderinama Gradle JVM
 
-![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
+![Nesuderinama Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
 
 ```
 Your build is currently configured to use incompatible Java 21.0.3 and Gradle 8.2.
@@ -139,141 +139,141 @@ Or:
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
+Jei gaunate aukščiau parodytą klaidos pranešimą, prieš bandydami kurti iš naujo turite atsisiųsti tinkamą JVM versiją:
 
-1.  Check in the [requirement table](#Building-APK-recommended-specification-of-computer-for-building-apk-file) which JVM version you need for the **AAPS** version you are building, and make a note of it.
+1.  [Reikalavimų lentelėje](#Building-APK-recommended-specification-of-computer-for-building-apk-file) patikrinkite, kurios JVM versijos reikia jūsų kuriamai **AAPS** versijai, ir ją užsirašykite.
 
-2. Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+2. Atidarykite Gradle rodinį spustelėdami dramblį (1) dešinėje Android Studio pusėje, atidarykite nustatymus (2) ir pasirinkite **Gradle Settings** (3):
 
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
+![Gradle Settings atidarymas](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select **Download JDK** (2).
+3.  Lauke **Gradle JDK** patikrinkite, ar pasirinkta tinkama versija (1). Jei ne, spustelėkite lauką ir pažiūrėkite, ar ji jau yra sąraše. Toliau pateiktame pavyzdyje JVM 21 pažymėta kaip „jbr-21“. Jei ją randate, tiesiog pasirinkite, ir viskas. Jei jos nėra, pasirinkite **Download JDK** (2).
 
 
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+![Pasirinkite Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select any Vendor. Location (3): do not change. Click **Download** (4).
+4. Laukelyje Version (1) pasirinkite JDK, kurio reikia jūsų **AAPS** versijai (tą, kurią užsirašėte tikrindami reikalavimų lentelę). Laukelyje Vendor (2) pasirinkite bet kurį tiekėją. Location (3): nekeiskite. Spustelėkite **Download** (4).
 
-![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
+![Pasirinkite JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
-5.  Close the **Settings** dialog with **OK**.
-6. You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](#gradle-resync).
+5.  Uždarykite langą **Settings** mygtuku **OK**.
+6. Dabar reikia iš naujo paleisti Gradle Sync. Vadovaukitės instrukcijomis skyriuje [Gradle sinchronizavimas iš naujo](#gradle-resync).
 
 (incompatible-version-of-android-gradle-plugin)=
-### Incompatible version of Android Gradle plugin
+### Nesuderinama Android Gradle įskiepio versija
 
-  If you experience the following error message
+  Jei gaunate šį klaidos pranešimą
 
 `The project is using an incompatible version (AGP x.x.x) of the Android Gradle plugin. Latest supported version is AGP x.x.x`
 
-  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+  ![Nesuderinama Android Gradle įskiepio versija](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
-  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
+  Naudojate pasenusią Android Studio versiją. Meniu eikite į Help > Check for updates ir įdiekite visus rastus Android Studio ir jos įskiepių atnaujinimus.
 
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
-### Could not resolve/No cached version
+### Could not resolve / No cached version
 
-  You might get this error message:
+  Galite gauti šį klaidos pranešimą:
 
 ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
-  * On the right side, open the Gradle tab (1).
+  * Dešinėje pusėje atidarykite Gradle skirtuką (1).
 
-    Make sure the button shown at (2) is *NOT* selected.
+    Įsitikinkite, kad (2) pažymėtas mygtukas *NĖRA* pasirinktas.
 
-    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+    ![Gradle neprisijungus režimas (Offline Mode)](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+  * Dabar reikia paleisti [Gradle sinchronizavimą iš naujo](#gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
-  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately there is nothing that the **AAPS** developers can do about this!
+  Jei matote tokį klaidos pranešimą kaip toliau, tikriausiai naudojate 32 bitų Windows 10 sistemą. Android Studio 3.5.1 ir naujesnės versijos to nepalaiko, ir, deja, **AAPS** kūrėjai nieko negali padaryti!
 
-  There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  Internete yra informacijos, kaip nustatyti, ar jūsų OS yra 32 bitų, ar 64 bitų, pvz., [ši](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Ekrano kopija: Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
-### Gradle Resync
+### Gradle sinchronizavimas iš naujo
 
-  If you can still see the message that the gradle sync failed, now select the link **Try again** (1). ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  Jei vis dar matote pranešimą, kad gradle sync nepavyko, pasirinkite nuorodą **Try again** (1). ![Gradle Sync nepavyko](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
-  If you don't see the message anymore, you can still trigger this manually:
+  Jei pranešimo nebematote, sinchronizavimą galite paleisti rankiniu būdu:
 
-  * Open the Gradle tab (1) on the right border of Android Studio.
+  * Atidarykite Gradle skirtuką (1) dešiniajame Android Studio krašte.
 
     ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-  * Right-click on AAPS (2)
+  * Dešiniuoju pelės mygtuku spustelėkite AAPS (2)
 
-  * Click on "Reload Gradle Project" (3)
+  * Spauskite „Reload Gradle Project“ (3)
 
-## Generate Signed APK generated successfully with 0 build variants
+## Generate Signed APK sėkmingai baigtas su 0 build variants
 
-When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
+Kai kuriate pasirašytą apk, galite gauti pranešimą, kad kūrimas pavyko, bet sukurta „0 build variants“:
 
-![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
+![APK sukurtas su 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-This is a false warning. Check the directory for your selected "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
-
-
-## App was created with compiler/kotlin warnings
-
-If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
-
- ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
-
-Your apk was built successfully and can be transferred to your phone!
+Tai klaidingas įspėjimas. Patikrinkite aplanką, kurį pasirinkote kaip „Destination folder“ (žingsnis [Generate Signed APK](#Building-APK-generate-signed-apk)), ir ten rasite sukurtą apk!
 
 
-## No CGM data is received by AAPS
+## Programėlė sukurta su kompiliatoriaus / kotlin įspėjimais
 
-* If you are using patched Dexcom G6 app: this app is outdated. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
+Jei kūrimas baigėsi sėkmingai, bet gaunate kompiliatoriaus ar kotlin įspėjimus (pažymėtus geltonu ar mėlynu šauktuku), šių įspėjimų galite nepaisyti.
 
-* If you are using xDrip: identify receiver as described on [xDrip settings page](#xdrip-identify-receiver).
+ ![Gradle baigė darbą su įspėjimais](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+
+Jūsų apk sukurtas sėkmingai ir jį galima perkelti į telefoną!
 
 
-## Apk not installed
+## AAPS negauna NGJ duomenų
 
-![phone app not installed](../images/Update_AppNotInstalled.png)
+* Jei naudojate pataisytą Dexcom G6 programėlę: ši programėlė pasenusi. Vietoj jos naudokite [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) programėlę.
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
-* If "App not installed" is displayed on your phone follow these steps:
+* Jei naudojate xDrip: nustatykite imtuvą (Identify receiver), kaip aprašyta [xDrip nustatymų puslapyje](#xdrip-identify-receiver).
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
-2. Uninstall **AAPS** on your phone.
-3. Enable airplane mode & turn off Bluetooth.
-4. Install new version (“app-full-release.apk”)
+
+## Apk neįdiegtas
+
+![Telefone programėlė neįdiegta](../images/Update_AppNotInstalled.png)
+
+* Įsitikinkite, kad į telefoną perkėlėte failą „app-full-release.apk“.
+* Ši klaida dažniausiai reiškia, kad naujas apk pasirašytas kita raktų saugykla nei įdiegta **AAPS**. Jei vis dar turite ankstesnę raktų saugyklą, pasirinkite ją ir sukurkite iš naujo. Kitu atveju žr. [AAPS įdiegimas iš naujo su nauja raktų saugykla](#reinstall-aaps).
+* Jei telefone rodoma „App not installed“ (programėlė neįdiegta), atlikite šiuos veiksmus:
+
+1. [Eksportuokite nustatymus](../Maintenance/ExportImportSettings.md) (telefone jau įdiegtoje AAPS versijoje)
+2. Pašalinkite **AAPS** iš telefono.
+3. Įjunkite lėktuvo režimą ir išjunkite Bluetooth.
+4. Įdiekite naują versiją („app-full-release.apk“)
 5. [Importuokite nustatymus](../Maintenance/ExportImportSettings.md)
-6. Turn Bluetooth back on and disable airplane mode
+6. Vėl įjunkite Bluetooth ir išjunkite lėktuvo režimą
 
-## Apk installed but old version
+## Apk įdiegtas, bet versija sena
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
+Jei sėkmingai sukūrėte programėlę, perkėlėte ją į telefoną ir sėkmingai įdiegėte, bet versijos numeris nepasikeitė, galbūt pamiršote [atnaujinti vietinę kopiją](#Update-to-new-version-update-your-local-copy)
 
-## None of the above worked
+## Niekas iš to, kas nurodyta aukščiau, nepadėjo
 
-If none of the above tips helped you might consider building the apk from scratch:
+Jei nė vienas iš aukščiau pateiktų patarimų nepadėjo, galite pabandyti sukurti apk iš naujo:
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
+1. [Eksportuokite nustatymus](../Maintenance/ExportImportSettings.md) (telefone jau įdiegtoje AAPS versijoje)
 
-2. Have your key password and key store password ready.
+2. Pasiruoškite rakto slaptažodį (key password) ir raktų saugyklos slaptažodį (key store password).
 
-    Or you just use a new keystore.
+    Arba tiesiog naudokite naują raktų saugyklą.
 
-3. Build the apk from scratch as described [here](#Building-APK-download-AAPS-code).
+3. Sukurkite apk iš naujo, kaip aprašyta [čia](#Building-APK-download-AAPS-code).
 
-4. When you have built the apk successfully delete the existing apk on your phone, transfer the new apk to your phone and install.
-5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
-6. You should check your battery optimization options and disable them again.
+4. Sėkmingai sukūrę apk, ištrinkite esamą apk telefone, perkelkite naują apk į telefoną ir įdiekite.
+5. Vėl [importuokite nustatymus](../Maintenance/ExportImportSettings.md), kad atkurtumėte mokymo etapus ir nustatymus.
+6. Patikrinkite baterijos optimizavimo nustatymus ir vėl jį išjunkite.
 
-## Worst case scenario
+## Blogiausias atvejis
 
-If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scratch.  Some users find that this can resolve their build problem.  When deleting Android Studio, do not delete Android user settings and **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+Jei tai neišsprendžia kūrimo problemos, galite pabandyti visiškai pašalinti Android Studio ir viską sukurti iš naujo.  Kai kuriems naudotojams tai padeda išspręsti kūrimo problemą.  Šalindami Android Studio, neištrinkite Android naudotojo nustatymų ir **būtinai pašalinkite visus su Android Studio susijusius failus.** Jei Android Studio nepašalinsite visiškai su visais paslėptais failais, pašalinimas gali sukelti naujų problemų, užuot išsprendęs esamas. Visiško pašalinimo instrukcijų galima rasti internete, pvz.:
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
+Įdiekite Android Studio iš naujo, kaip aprašyta [čia](#Building-APK-install-android-studio).
