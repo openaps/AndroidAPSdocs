@@ -11,7 +11,7 @@ Niektoré z týchto problémov sa pravdepodobne týkajú aj iných inzulínovýc
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
 ## Omnipod sa s Androidom 16 nedá spustiť
-- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this version has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
+- Android 16 potrebuje na správne fungovanie Omnipod DASH minimálne **AAPS** verzie 3.3.2.1, pretože táto verzia obsahuje opravy, ktoré riešia známe problémy, ktoré Android 16 spôsobil pri Omnipode.
 
 ---
 
@@ -19,11 +19,11 @@ Niektoré z týchto problémov sa pravdepodobne týkajú aj iných inzulínovýc
 
 ## Optimalizácia batérie pre Bluetooth
 
-Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. Je známe, že to spôsobuje problémy s pumpami a CGM, ktoré používajú Bluetooth.
+Novšie verzie Androidu majú zapnutú optimalizáciu batérie pre systémovú aplikáciu Bluetooth. Je známe, že to spôsobuje problémy s pumpami a CGM, ktoré používajú Bluetooth.
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
+Ak ste postupovali podľa [Sprievodcu nastavením](../SettingUpAaps/SetupWizard.md) a podľa nastavení v časti [Optimalizácia batérie pre Bluetooth](#setup-wizard-bluetooth-battery-optimisation), toto nastavenie by malo byť správne. Ak ste však postupovali podľa staršej verzie tohto návodu, je možné, že ste toto nastavenie nezmenili.
 
-Verify this is correctly configured if you have pump and CGM disconnections.
+Ak sa vám odpája pumpa a CGM, overte, či je toto nastavenie správne.
 
 ---
 
@@ -33,7 +33,7 @@ Verify this is correctly configured if you have pump and CGM disconnections.
 
 Android vám pomocou povolení umožňuje určiť, čo môže každá aplikácia v telefóne robiť alebo k čomu má prístup. Pre každú nainštalovanú aplikáciu môžete povoliť alebo zakázať konkrétne povolenia, napr. prístup k súborom v zariadení, prístup k Bluetooth, vyhľadávanie zariadení v okolí atď.
 
-**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. Toto povolenie vyžaduje aj mnoho iných aplikácií. Komunita zistila, že niektoré aplikácie, ktoré toto povolenie dostanú, môžu na niektorých zariadeniach spôsobovať problémy s aktiváciou nových Podov.
+**AAPS** potrebuje na svoju činnosť viacero konkrétnych povolení. Jedno z nich, ktoré je potrebné na správne fungovanie Podov, je povolenie „Zariadenia v okolí“. Toto povolenie vyžaduje aj mnoho iných aplikácií. Komunita zistila, že niektoré aplikácie, ktoré toto povolenie dostanú, môžu na niektorých zariadeniach spôsobovať problémy s aktiváciou nových Podov.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
@@ -48,22 +48,22 @@ Ak chcete navrhnúť aplikácie na doplnenie do tohto zoznamu, napíšte @XiTati
 
 - **myBMW** MyBMW rušila Medtrum Nano a Omnipod DASH. Aplikácia MyBMW sa na povolenie „vyhľadávať zariadenia v okolí“ pýta iba raz. Ak ho neudelíte, funguje stále úplne v poriadku
 
-- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
+- **Amazon Alexa**  Odobratie povolenia „Zariadenia v okolí“ aplikácii Alexa niektorým ľuďom vyriešilo problém, ale znemožní to párovanie zariadení Matter IoT
 
-- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
+- **Aplikácia MINI**  Zdá sa, že aplikácia vychádza z aplikácie myBMW, a preto sa môže správať rovnako
 
-- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. Keď bola aplikácia potom znova spustená, fungovanie Dash zrejme nerušila (na Pixel 8 Pro s Androidom 16).
+- **BM2** Aplikácia na sledovanie solárnej batérie, ktorá sa používa v niektorých solárnych zostavách v obytných dodávkach a pri kempovaní: keď aplikácia bežala, bránila aktivácii nového Podu. Problém sa dá obísť tak, že počas aktivácie nového Podu aplikáciu vynútene zastavíte (Force stop). Keď bola aplikácia potom znova spustená, fungovanie Dash zrejme nerušila (na Pixel 8 Pro s Androidom 16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
 ### Ako odobrať povolenie „Zariadenia v okolí“ iným aplikáciám:
-If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
+Ak máte problémy s aktiváciou nového Podu a používate správnu podporovanú verziu **AAPS** pre vašu verziu Androidu, možno bude počas aktivácie nového Podu potrebné odobrať toto povolenie ostatným aplikáciám.
 
-Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
+Podľa tohto postupu odoberte povolenie „Zariadenia v okolí“ všetkým aplikáciám okrem **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
-Snímky obrazovky a pokyny v tomto návode pochádzajú z čistého Androidu 16 (Vanilla) na Google Pixel 8 Pro. Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
+Snímky obrazovky a pokyny v tomto návode pochádzajú z čistého Androidu 16 (Vanilla) na Google Pixel 8 Pro. Ponuky a nastavenia u iných výrobcov a na iných zariadeniach pravdepodobne nebudú presne zodpovedať tomuto popisu. Prispôsobte postup svojmu zariadeniu. Ak si neviete rady, v časti [Kde získať pomoc pre Dash](#omnipod-dash-where-to-get-help-for-dash) nájdete, ako požiadať komunitu o pomoc.
 ```
 
 1. Otvorte v telefóne nastavenia Androidu, posuňte sa nadol a ťuknite na **Zabezpečenie a ochrana súkromia (Security and privacy) (1)**.
@@ -103,7 +103,7 @@ Ak neviete, ktorá aplikácia vám spôsobuje problém, vypnite povolenie všetk
 
 ### Ako znova povoliť povolenie „Zariadenia v okolí“ systémovým a ďalším aplikáciám:
 
-1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
+1. V prípade potreby si v časti **„Ako odobrať povolenie ‚Zariadenia v okolí‘ iným aplikáciám“** pozrite, ako sa dostať k nastaveniam súkromia aplikácií. Keď budete v nastaveniach **Zariadenia v okolí**, pokračujte krokom 2.
 
 2. Prejdite zoznam aplikácií a ťuknite na aplikáciu, ktorej chcete povoliť **Zariadenia v okolí**.
 
@@ -122,7 +122,7 @@ Ak má aplikácia povolenie odobraté, musíte sa posunúť nadol, kým neuvidí
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. Follow the guidance in **"How to revoke 'Nearby device' permissions for other apps"** in reverse to re-enable permissions for each app.
+5. Ak chcete povolenia pre jednotlivé aplikácie znova povoliť, postupujte podľa časti **„Ako odobrať povolenie ‚Zariadenia v okolí‘ iným aplikáciám“** v opačnom poradí.
 
 ---
 
