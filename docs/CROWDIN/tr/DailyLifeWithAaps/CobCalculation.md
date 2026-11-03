@@ -2,97 +2,97 @@
 
 ## AAPS AKRB değerini nasıl hesaplar?
 
-When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). This is not a feature within the user’s **Profile** but is calculated by **AAPS** according to **ISF/I:C** setup, and is determined by how many mg/dL 1 g of carbs will raise the user’s **BG**.
+Kullanıcı bir öğün veya karbonhidrat düzeltmesi için karbonhidrat girdiğinde, **AAPS** bu miktarı mevcut aktif karbonhidrata (**AKRB**) ekler. **AAPS** daha sonra kullanıcının karbonhidrat emilimini, kullanıcının **KŞ** değerlerinde görülen sapmalara göre hesaplar. Emilim hızı, karbonhidrat duyarlılık faktörüne (**CSF**) bağlıdır. Bu, kullanıcının **Profil**'indeki bir ayar değildir. **AAPS** bunu **İDF/IC** ayarlarına göre hesaplar. Değer, 1 g karbonhidratın kullanıcının **KŞ**'sini kaç mg/dL yükselteceğini gösterir.
 
-## Carb Sensitivity Factor
+## Karbonhidrat Duyarlılık Faktörü
 
-The formula adopted by **AAPS** is:
+**AAPS**'in kullandığı formül şudur:
 
 - absorbed_carbs = deviation * ic / isf.
 
-The effect on the user’s **Profile** will:
+Kullanıcının **Profil**'i üzerindeki etkisi şöyledir:
 
-- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- **IC**'yi _artırmak_ - her 5 dakikada emilen karbonhidratı artırır ve böylece toplam emilim süresini kısaltır;
 
-- _increase_ **ISF** - by decreasing the carbs absorbed every 5 minutes thus prolong total time of absorption; and
+- **İDF**'yi _artırmak_ - her 5 dakikada emilen karbonhidratı azaltır ve böylece toplam emilim süresini uzatır; ve
 
-- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
+- **Profil yüzdesi**'ni _değiştirmek_ - iki değeri de birlikte artırır/azaltır, bu yüzden karbonhidrat emilim süresini etkilemez.
 
-For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
+Örneğin, kullanıcının **Profil**'indeki **İDF** 100 ve **IC** 5 ise, kullanıcının Karbonhidrat Duyarlılık Faktörü 20 olur. Kullanıcının **KŞ**'si her 20 mg/dL yükseldiğinde, **AAPS** 1 g karbonhidratı emilmiş olarak hesaplar. Pozitif **AİNS** de **AKRB** hesaplamasını etkiler. Yani **AAPS**, **AİNS** nedeniyle kullanıcının **KŞ**'sinin 20 mg/dL düşeceğini tahmin ederse ve KŞ bunun yerine sabit kalırsa, **AAPS** yine 1 g karbonhidratı emilmiş olarak hesaplar.
 
-Carbs will also be absorbed via the methods described below based on which sensitivity algorithm has been selected within the user's **AAPS**.
+Karbonhidratlar ayrıca, kullanıcının **AAPS**'inde hangi duyarlılık algoritmasının seçildiğine bağlı olarak aşağıda anlatılan yöntemlerle de emilmiş sayılır.
 
-## Carbs Sensitivity - Oref1
+## Karbonhidrat Duyarlılığı - Oref1
 
-Unabsorbed carbs are cut off after specified time:
+Emilmeyen karbonhidratlar belirlenen süreden sonra kesilir:
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
-![COB graph with Oref1 cut-off](../images/cob_oref0_orange_I.png)
+![Oref1 kesmesi ile AKRB grafiği](../images/cob_oref0_orange_I.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the graphs look slightly different, but the **COB** graph carries the same information.
+Yukarıdaki ekran görüntüsü daha eski bir **AAPS** sürümüne aittir. **AAPS** 4'te grafikler biraz farklı görünür, ama **AKRB** grafiği aynı bilgiyi gösterir.
 ```
 
 
-## Carbs Sensitivity - WeightedAverage
+## Karbonhidrat Duyarlılığı - WeightedAverage (Ağırlıklı Ortalama)
 
-Absorption is calculated to have COB = 0 after specified time:
+Emilim, belirlenen süreden sonra AKRB = 0 olacak şekilde hesaplanır:
 
-![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
+![AAPS, WeightedAverage (Ağırlıklı Ortalama)](../images/cob_aaps2_orange_II.png)
 
-If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
+**KŞ** sapmalarından hesaplanan değer yerine minimum karbonhidrat emilimi (min_5m_carbimpact) kullanılırsa, **AKRB** grafiğinde turuncu bir nokta görünür.
 
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Yanlış AKRB değerlerinin tespiti
 
-**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
+Algoritma mevcut **AKRB** hesaplamasını yanlış bulursa ve kullanıcı önceki bir öğünden kalan **AKRB** ile bolus yapmak üzereyse, **AAPS** kullanıcıyı uyarır. Bu durumda, bolus sihirbazı kullanıldıktan sonra onay ekranında kullanıcıya ek bir ipucu gösterir.
 
 ### AAPS, yanlış AKRB değerlerini nasıl tespit eder?
 
-Ordinarily __AAPS__ detects carb absorption through **BG** deviations. In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
+__AAPS__ normalde karbonhidrat emilimini **KŞ** sapmalarından algılar. Kullanıcı karbonhidrat girmiş ama **AAPS** bunların tahmini emilimini **KŞ** sapmalarından algılayamıyorsa, emilimi hesaplamak için bunun yerine [min_5m_carbimpact](#Preferences-min_5m_carbimpact) yöntemini kullanır (‘yedek yöntem’, İngilizcesi ‘fallback’). Bu yöntem **KŞ** sapmalarını dikkate almadan yalnızca minimum karbonhidrat emilimini hesapladığı için yanlış AKRB değerlerine yol açabilir.
 
 ![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
 
-In the screenshot above, 66% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
+Yukarıdaki ekran görüntüsünde, karbonhidrat emilimi zamanın %66'sında sapmalardan algılanan değer yerine min_5m_carbimpact ile hesaplanmıştır. Bu, kullanıcının algoritmanın hesapladığından daha az **AKRB**'ye sahip olmuş olabileceğini gösterir.
 
 ### Bu uyarı ile nasıl başa çıkılır?
 
-- Consider cancelling the treatment - press ‘Cancel’ instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
-- If you need a correction bolus, enter it manually.
-- Be careful not to overdose or stack insulin!
+- Tedaviyi iptal etmeyi düşünün - OK yerine ‘Vazgeç’e basın.
+- Yaklaşan öğününüzü bolus sihirbazı ile **AKRB** işaretlemeden yeniden hesaplayın.
+- Bir düzeltme bolusuna ihtiyacınız varsa, onu elle girin.
+- Aşırı doz vermemeye ve insülini üst üste biriktirmemeye (stacking) dikkat edin!
 
 
 ### Algoritma neden AKRB'yi doğru algılamıyor?
 
-This could be because:
-- Potentially the user overestimated carbs when entering them.
+Bunun nedeni şunlar olabilir:
+- Kullanıcı karbonhidratları girerken miktarı fazla tahmin etmiş olabilir.
 - Activity / exercise after your previous meal.
-- I:C needs adjustment.
+- IC'nin ayarlanması gerekiyor.
 - Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
 
 
 ## Girilen karbonhidratların manuel olarak düzeltilmesi
 
-If carbs are over or underestimated this can be corrected through the **Treatments history** screen as described [here](#screens-bolus-carbs).
+Karbonhidratlar fazla veya eksik tahmin edildiyse, bu [burada](#screens-bolus-carbs) anlatıldığı gibi **Tedavi geçmişi** ekranından düzeltilebilir.
 
 
-## Carb correction - how to delete a Carb entry from Treatments
+## Karbonhidrat düzeltme - Tedaviler'den bir karbonhidrat girdisi nasıl silinir
 
 
-The **Treatments history** screen can be used to correct a faulty carb entry by deleting it. This may be because the user over or underestimated the carb entry:
+Hatalı bir karbonhidrat girdisi, **Tedavi geçmişi** ekranında silinerek düzeltilebilir. Bunun nedeni, kullanıcının karbonhidrat girdisini fazla veya eksik tahmin etmiş olması olabilir:
 
-![Deleting a carb entry from Treatments history](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Tedavi geçmişinden bir karbonhidrat girdisini silme](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
-1. Check and remember actual **COB** and **IOB** on the **AAPS** main screen.
-2. Open **Treatments history** (drawer menu → *Treatments history*), tab **Carbs and bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
-3. **Long-press** the faulty carb entry — the list switches to **selection mode** with a checkbox on every line, and the entry is ticked (marked **1** above). Tick any further entries you want to remove as well.
-4. Tap the **🗑 Delete** icon in the top bar (marked **2**) and confirm — the confirmation dialog lists exactly what will be removed.
-5. Make sure carbs are removed successfully by checking **COB** on the **AAPS** main screen again.
-6. Do the same for **IOB** if there is just one line including carbs and insulin.
-7. If carbs are not removed as intended and additional carbs are added as explained in this section, the **COB** entry will be too high and this could lead to **AAPS** delivering too much insulin.
-8. Enter the correct carbs amount through the **Carbs** dialog (**Treatments** → **Carbs**) and set the correct event time.
-9. If there was just one line including carbs and insulin the user should also re-add the amount of insulin. Make sure to set the correct event time and check **IOB** on the main screen after confirming the new entry.
+1. **AAPS** ana ekranındaki güncel **AKRB** ve **AİNS** değerlerine bakın ve not edin.
+2. **Tedavi geçmişi**'ni açın (gezinme çekmecesi → *Tedavi geçmişi*), **Karbonhidrat ve bolus** sekmesi. Pompaya bağlı olarak karbonhidratlar insülinle birlikte tek satırda veya ayrı bir girdi olarak görünebilir (ör. Dana RS ile).
+3. Hatalı karbonhidrat girdisine **uzun basın**. Liste, her satırda bir onay kutusu olan **seçim moduna** geçer ve girdi işaretlenir (yukarıda **1** ile gösterilmiştir). Silmek istediğiniz başka girdiler varsa onları da işaretleyin.
+4. Üst çubuktaki **🗑 Sil** simgesine dokunun (**2** ile gösterilmiştir) ve onaylayın. Onay iletişim kutusu, tam olarak neyin silineceğini listeler.
+5. **AAPS** ana ekranında **AKRB** değerine tekrar bakarak karbonhidratların başarıyla silindiğinden emin olun.
+6. Karbonhidrat ve insülini birlikte içeren tek bir satır varsa, aynısını **AİNS** için de yapın.
+7. Karbonhidratlar istendiği gibi silinmez ve bu bölümde anlatıldığı gibi ek karbonhidrat eklenirse, **AKRB** değeri çok yüksek olur ve bu, **AAPS**'in çok fazla insülin vermesine yol açabilir.
+8. Doğru karbonhidrat miktarını **Karbonhidrat** iletişim kutusu (**Tedaviler** → **Karbonhidrat**) ile girin ve doğru olay zamanını ayarlayın.
+9. Karbonhidrat ve insülini birlikte içeren tek bir satır varsa, kullanıcı insülin miktarını da yeniden eklemelidir. Doğru olay zamanını ayarladığınızdan emin olun ve yeni girdiyi onayladıktan sonra ana ekranda **AİNS** değerini kontrol edin.
 
