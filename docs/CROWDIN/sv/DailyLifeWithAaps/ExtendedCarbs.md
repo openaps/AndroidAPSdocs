@@ -1,102 +1,102 @@
 (Extended-Carbs-extended-carbs-ecarbs)=
-# Extended carbs / "eCarbs"
+# Förlängda kolhydrater / "eCarbs"
 
-## What are eCarbs and when are they useful?
+## Vad är eCarbs och när är de användbara?
 
-With a regular pump therapy, extended boluses are a good way to deal with fatty or otherwise slowly-absorbed meals which increase blood glucose longer than the insulin is in effect. In a loop context, however, extended boluses don't make as much sense (and pose technical difficulties), since they're basically a fixed high temporary basal rate, which goes against how the loop works, which is adjusting the basal rate dynamically. For details see [extended bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) below.
+Vid vanlig pumpbehandling är förlängda bolusar ett bra sätt att hantera feta måltider eller andra måltider som tas upp långsamt och höjer blodsockret längre än insulinet verkar. I en loop är förlängda bolusar dock inte lika vettiga (och de ger tekniska problem). De är i princip en fast, hög tillfällig basal, och det går emot hur loopen fungerar: loopen justerar basaldosen dynamiskt. Mer information finns i [förlängd bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) nedan.
 
-The need to deal with such meals still exists though. Which is why AAPS supports so called extended carbs or eCarbs.
+Men behovet av att hantera sådana måltider finns fortfarande kvar. Därför har AAPS stöd för så kallade förlängda kolhydrater eller eCarbs.
 
-eCarbs are carbs that are split up over several hours. For standard meals with more carbohydrates than fat/protein, entering the carbs up front (and reducing the initial bolus if needed) is usually sufficient to prevent too-early insulin delivery.  But for slower-absorbing meals where full carb entry up front results in too much IOB from SMB, eCarbs can be used to more accurately simulate how the carbs (and any carb equivalents you enter for other macronutrients) are absorbed and influence the blood glucose. With this information, the loop can administer SMBs more gradually to deal with those carbs, which can be seen as a dynamic extended bolus (this should also work without SMBs, but is probably less effective).
+eCarbs är kolhydrater som delas upp över flera timmar. För vanliga måltider med mer kolhydrater än fett/protein räcker det oftast att ange kolhydraterna direkt (och minska den första bolusen om det behövs) för att undvika att insulinet ges för tidigt.  Men för måltider som tas upp långsammare, där alla kolhydrater angivna direkt ger för mycket IOB från SMB, kan du använda eCarbs. De visar mer exakt hur kolhydraterna (och de kolhydratekvivalenter du anger för andra makronäringsämnen) tas upp och påverkar blodsockret. Med denna information kan loopen ge SMB:er mer gradvis för att hantera kolhydraterna. Det kan ses som en dynamisk förlängd bolus (det bör också fungera utan SMB:er, men är troligen mindre effektivt).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Obs:** eCarbs är inte bara för måltider med mycket fett/protein: de kan också hjälpa i alla situationer där något höjer blodsockret, t.ex. andra läkemedel som kortikosteroider.
 
-## Mechanics of using eCarbs
+## Så använder du eCarbs
 
-To enter eCarbs, open the **Carbs** dialog (**Treatments** → **Carbs**), enter the total carbs, set a **Duration**, and optionally shift the start with **Carb time** (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
+För att ange eCarbs öppnar du dialogen **Kolhydrater** (**Behandlingar** → **Kolhydrater**), anger den totala mängden kolhydrater, ställer in **Varaktighet** och flyttar vid behov starten med **KH-tid** (*siffrorna nedan är bara exempel, du måste prova dina egna värden för att få en bra blodsockerkurva i dina situationer*):
 
-![Enter carbs](../images/eCarbs_Dialog.png)
+![Ange kolhydrater](../images/eCarbs_Dialog.png)
 
-The eCarbs on the main screen: the number in brackets in the **COB** field shows the carbs still to come, and the **COB** graph shows each future eCarbs entry as an orange marker. If you don't see a **COB** graph, add one with **Add graph** below the graphs (see [AAPS screens](../DailyLifeWithAaps/AapsScreens.md)).
+eCarbs på huvudskärmen: talet inom parentes i fältet **COB** visar de kolhydrater som ännu ska komma, och **COB**-grafen visar varje framtida eCarbs-post som en orange markering. Om du inte ser någon **COB**-graf, lägg till en med **Lägg till graf** under graferna (se [AAPS-skärmar](../DailyLifeWithAaps/AapsScreens.md)).
 
-![eCarbs in the COB field and on the COB graph](../images/eCarbs_Graph.png)
+![eCarbs i fältet COB och i COB-grafen](../images/eCarbs_Graph.png)
 
 (AapsScreens-carbs-type)=
-## Carbs type in the Bolus wizard: bread, cake or pizza
+## Typ av kolhydrater i kalkylatorn: bröd, tårta eller pizza
 
-In the [Bolus wizard](#aaps-screens-bolus-wizard), three buttons below the **Carbs** field let you choose how fast your meal is absorbed. Pick one before you confirm. Depending on the type, **AAPS** takes a part of the carbs you typed as normal carbs, and adds [extended carbs ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) later for slow, rich meals. Press the **(i)** icon next to the buttons to see the typical foods for the selected type and what it does to your carbs.
+I [kalkylatorn](#aaps-screens-bolus-wizard) finns tre knappar under fältet **Kolhydrater**. Med dem väljer du hur snabbt din måltid tas upp. Välj en innan du bekräftar. Beroende på typen tar **AAPS** en del av de kolhydrater du skrev in som vanliga kolhydrater, och lägger till [förlängda kolhydrater ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) senare för långsamma, mäktiga måltider. Tryck på ikonen **(i)** bredvid knapparna för att se typiska livsmedel för den valda typen och vad den gör med dina kolhydrater.
 
-| Type                | Typical foods (examples from the app)                                                                | Carbs now, used for the bolus | eCarbs added                                         |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------- |
-| **Bread** (default) | Bread, savory pastries, yogurt, fruit, potatoes, rice, oatmeal, vegetables                           | 100 %                         | None                                                 |
-| **Cake**            | Dumplings, pasta, Asian dishes rich in carbs and fats, sweet and yeast pastries, cereals, honey, jam | 90 %                          | 20 %, starting 60 minutes later, spread over 2 hours |
-| **Pizza**           | Lasagna, pizza, hamburgers, fries, baked potatoes, chips                                             | 80 %                          | 35 %, starting 60 minutes later, spread over 3 hours |
+| Typ                 | Typiska livsmedel (exempel från appen)                                                                               | Kolhydrater nu, används för bolusen | Tillagda eCarbs                                         |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------------------------- |
+| **Bröd** (standard) | Bröd, bakverk, yoghurt, frukt, potatis, ris, havregryn, grönsaker                                                    | 100 %                               | Ingen                                                   |
+| **Tårta**           | Dumplings, pasta, asiatiska rätter med mycket kolhydrater och fett, söta bakverk och jästbröd, flingor, honung, sylt | 90 %                                | 20 %, startar 60 minuter senare, fördelat över 2 timmar |
+| **Pizza**           | Lasagne, pizza, hamburgare, pommes frites, bakad potatis, chips                                                      | 80 %                                | 35 %, startar 60 minuter senare, fördelat över 3 timmar |
 
-**Example**: you type 100 g and choose **Pizza**. The bolus is calculated for 80 g, recorded now. 35 g of eCarbs start 1 hour later and are spread over 3 hours.
+**Exempel**: du skriver 100 g och väljer **Pizza**. Bolusen beräknas för 80 g, som registreras nu. 35 g eCarbs startar 1 timme senare och fördelas över 3 timmar.
 
-Good to know:
-* This is not a simple split: with **Cake** and **Pizza**, the carbs recorded add up to **more than you typed** (110 % and 115 %). The extra is only in the eCarbs.
-* The bolus only covers the carbs taken now. **AAPS** does not bolus up front for the eCarbs: the loop takes them into account once they start, like any other [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
-* If you set a **Carb time**, the eCarbs start 60 minutes after that time.
-* The confirmation dialog shows the eCarbs on their own line, _e.g._ "eCarbs 35g / 3h (+60min)".
-* Grams are rounded down to whole numbers.
-* The percentages, delays and durations are fixed; they can't be changed in the settings.
-* The choice is not remembered: the wizard opens on **Bread** every time.
-
-______________________________________________________________________
-
-A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
+Bra att veta:
+* Det är ingen enkel uppdelning: med **Tårta** och **Pizza** blir de registrerade kolhydraterna sammanlagt **mer än du skrev** (110 % och 115 %). Det extra finns bara i eCarbs.
+* Bolusen täcker bara de kolhydrater som äts nu. **AAPS** ger ingen bolus i förväg för eCarbs: loopen tar hänsyn till dem när de startar, precis som andra [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
+* Om du ställer in **KH-tid** startar eCarbs 60 minuter efter den tiden.
+* Bekräftelsedialogen visar eCarbs på en egen rad, _t.ex._ "eCarbs 35 g / 3 h (+60 min)".
+* Gram avrundas nedåt till heltal.
+* Procentsatser, fördröjningar och varaktigheter är fasta. De kan inte ändras i inställningarna.
+* Valet sparas inte: kalkylatorn öppnas med **Bröd** varje gång.
 
 ______________________________________________________________________
 
-## Recommended setup, example scenario, and important notes
+Ett sätt att hantera fett och protein med denna funktion beskrivs här (på engelska): [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
 
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
+______________________________________________________________________
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *Bolus wizard* and then use the *Carbs* dialog to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
+## Rekommenderad inställning, exempel och viktiga anmärkningar
 
-For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carbs type](#AapsScreens-carbs-type) **Cake** or **Pizza** below the **Carbs** field (see above). The amounts and timing are fixed, so use the *Carbs* dialog instead if you want other values.
+Den rekommenderade inställningen är att använda APS-pluginen OpenAPS SMB, med SMB:er aktiverade och inställningen *Aktivera SMB med COB* aktiverad.
 
-**Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above). When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
+Ett exempel för en pizza kan vara att ge en (del)bolus direkt via *Kalkylator* och sedan använda dialogen *Kolhydrater* för att ange resten av kolhydraterna med en varaktighet på 4–6 timmar, med start efter 1 eller 2 timmar.
+
+För en snabbare start kan *Kalkylator* lägga till eCarbs åt dig: välj [typ av kolhydrater](#AapsScreens-carbs-type) **Tårta** eller **Pizza** under fältet **Kolhydrater** (se ovan). Mängderna och tiderna är fasta, så använd dialogen *Kolhydrater* i stället om du vill ha andra värden.
+
+**Viktigt:** Du måste förstås prova dig fram till vilka konkreta värden som fungerar för dig. Du kan också försiktigt justera inställningen *Max antal minuter med basal som kan bli SMB* för att göra algoritmen mer eller mindre aggressiv. Vid måltider med lite kolhydrater och mycket fett/protein kan det räcka att bara använda eCarbs utan manuella bolusar (se blogginlägget ovan). När eCarbs skapas görs också en Careportal-anteckning med alla inmatningar. Då är det lättare att prova igen och förbättra inmatningarna.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Extended boluses and why they don't work in a closed-loop environment
+## Förlängda bolusar och varför de inte fungerar i en sluten loop
 
-As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+Som nämnts ovan fungerar förlängda bolusar och multiwave-bolusar inte riktigt i en sluten loop. [Se nedan](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) för mer information
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
-### Extended bolus and switch to open loop - Dana and Insight pump only
+### Förlängd bolus och byte till öppen loop - bara för Dana- och Insight-pumpar
 
-Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to.
+Några personer bad ändå om ett alternativ för att använda förlängd bolus i AAPS, eftersom de ville behandla vissa måltider på det sätt de är vana vid.
 
-That's why **AAPS** offers an extended bolus for users of Dana and Insight pumps: open **Manage** and select **Extended Bolus**.
+Därför har **AAPS** en förlängd bolus för användare av Dana- och Insight-pumpar: öppna **Hantera** och välj **Förlängd bolus**.
 
-**AAPS** first warns you that the closed loop will be stopped while the extended bolus runs. Tap **OK** to continue:
+**AAPS** varnar dig först om att den slutna loopen stoppas medan den förlängda bolusen pågår. Tryck på **OK** för att fortsätta:
 
-![Warning: extended bolus stops closed loop mode](../images/extended_bolus_stops_loop.png)
+![Varning: förlängd bolus stoppar läget sluten loop](../images/extended_bolus_stops_loop.png)
 
-Enter the **Insulin** amount and the **Duration**, then tap the confirm button at the bottom and **OK**:
+Ange **Insulin** (mängd) och **Varaktighet**, tryck sedan på bekräftelseknappen längst ner och på **OK**:
 
-![Extended bolus dialog with 2 U over 60 minutes](../images/extended_bolus_dialog.png)
+![Dialogen Förlängd bolus med 2 U över 60 minuter](../images/extended_bolus_dialog.png)
 
-On the Insight pump, the extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+På Insight-pumpen är förlängd bolus *inte tillgänglig* om [emulering av tillfällig basal](#Accu-Chek-Insight-Pump-settings-in-aaps) används.
 
-While the extended bolus is running, the loop runs in **Open Loop** mode (the loop icon on the main screen changes), and closed loop is switched on again automatically when the extended bolus ends:
+Medan den förlängda bolusen pågår körs loopen i läget **Öppen loop** (loopikonen på huvudskärmen ändras). Sluten loop slås på igen automatiskt när den förlängda bolusen är slut:
 
-![Open Loop icon on the main screen while an extended bolus is running](../images/extended_bolus_main_screen.png)
+![Ikonen för Öppen loop på huvudskärmen medan en förlängd bolus pågår](../images/extended_bolus_main_screen.png)
 
-The **Manage** menu shows a **Cancel** button with the rate and the elapsed / total time (for example **Cancel 2.00 U/h 1/60'**). Tap it to stop the extended bolus early:
+Menyn **Hantera** visar en knapp **Avbryt** med doshastigheten och förfluten / total tid (till exempel **Avbryt 2,00 U/h 1/60'**). Tryck på den för att stoppa den förlängda bolusen i förtid:
 
-![Cancel button of a running extended bolus in the Manage menu](../images/extended_bolus_running_manage.png)
+![Knappen Avbryt för en pågående förlängd bolus i menyn Hantera](../images/extended_bolus_running_manage.png)
 
 (why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
-### Why extended boluses won't work in a closed loop environment
+### Varför förlängda bolusar inte fungerar i en sluten loop
 
-1. The loop determines that now 1.55U/h is to be delivered. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
+1. Loopen bestämmer att 1,55 U/h ska ges nu. För algoritmen spelar det ingen roll om detta ges som förlängd bolus eller som tillfällig basal (TBR). Vissa pumpar använder faktiskt den förlängda bolusen. Vad ska hända då? De flesta pumpdrivrutiner stoppar då den förlängda bolusen -> Du hade inte ens behövt starta den.
 
-2. If you had the extended bolus as input, what should happen in the model?
+2. Om du hade den förlängda bolusen som indata, vad ska då hända i modellen?
 
-   1. Should it be considered neutral together with the BR and looped on it? Then the loop should also be able to reduce the bolus if, for example, you get too low and all the "neutral" insulin is taken away?
-   2. Should the extended bolus simply be added? So the loop should simply be allowed to continue? Even in the worst hypo? I don't think this is so good: A hypo is foreseen but it must not be prevented?
+   1. Ska den räknas som neutral tillsammans med basaldosen (BR) och loopas på den? Då borde loopen också kunna minska bolusen om du till exempel blir för låg och all ”neutral” insulin tas bort?
+   2. Ska den förlängda bolusen bara läggas till? Ska loopen alltså bara få fortsätta? Även vid den värsta hypon? Jag tycker inte att det är så bra: En hypo förutses men får inte förhindras?
 
-3. The IOB that the extended bolus builds up materializes after 5 minutes at the next run. Accordingly, the loop would give less basal. So not much changes... except that the possibility of hypo avoidance is taken.
+3. Den IOB som den förlängda bolusen bygger upp syns efter 5 minuter vid nästa körning. Därför skulle loopen ge mindre basal. Så inte mycket ändras... förutom att möjligheten att undvika en hypo försvinner.
