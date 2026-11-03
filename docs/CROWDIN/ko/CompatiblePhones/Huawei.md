@@ -1,57 +1,57 @@
-# How to configure a Huawei phone
+# Huawei 휴대폰 설정 방법
 
-**Which phones this page covers:** Huawei phones running **EMUI 12 to EMUI 15**. All of these are based on Android 12, the minimum for the current version of **AAPS**. On a phone with an older EMUI version, you can only use an [older AAPS version](#maintenance-android-version-aaps-version).
+**이 페이지가 다루는 휴대폰:** **EMUI 12 ~ EMUI 15**를 사용하는 Huawei 휴대폰. 이들은 모두 Android 12 기반이며, Android 12는 현재 버전의 **AAPS**에 필요한 최소 버전입니다. 더 오래된 EMUI 버전의 휴대폰에서는 [이전 AAPS 버전](#maintenance-android-version-aaps-version)만 사용할 수 있습니다.
 
-```{admonition} HarmonyOS NEXT / HarmonyOS 5 phones :class: warning
+```{admonition} HarmonyOS NEXT / HarmonyOS 5 휴대폰 :class: warning
 
-Recent Huawei phones sold in China run HarmonyOS NEXT (HarmonyOS 5 and above). This system is not Android anymore and cannot run **AAPS**. ```
+중국에서 판매되는 최근 Huawei 휴대폰은 HarmonyOS NEXT(HarmonyOS 5 이상)를 사용합니다. 이 시스템은 더 이상 Android가 아니므로 **AAPS**를 실행할 수 없습니다. ```
 
-Huawei phones close apps running in the background very aggressively. Apply all the settings below to **AAPS** and to your CGM app (for example xDrip+ or Juggluco), otherwise the loop and glucose readings may stop when the screen is off.
+Huawei 휴대폰은 백그라운드에서 실행 중인 앱을 매우 적극적으로 종료합니다. 아래 설정을 모두 **AAPS**와 CGM 앱(예: xDrip+ 또는 Juggluco)에 적용하십시오. 그렇지 않으면 화면이 꺼져 있을 때 루프와 혈당 측정값이 멈출 수 있습니다.
 
-Menu names can differ slightly between models. If you can't find a setting, type its name in the search bar at the top of **Settings**.
+메뉴 이름은 모델마다 조금 다를 수 있습니다. 설정을 찾을 수 없으면 **Settings**(설정) 맨 위의 검색창에 그 이름을 입력하십시오.
 
-The screenshots below come from an older EMUI version. The settings are the same on EMUI 12 to 15.
+아래 스크린샷은 이전 EMUI 버전에서 찍은 것입니다. 설정은 EMUI 12 ~ 15에서 같습니다.
 
-## Ignore battery optimization
+## 배터리 최적화 무시
 
-1. Open **Settings > Apps > Apps**.
-2. Tap the menu **⋮** in the top right corner and select **Special access > Battery optimization**.
-3. Tap the arrow at the top of the list and select **All apps**.
-4. Select **AAPS** and choose **Don't allow**. Huawei won't optimize apps in this list anymore.
-5. Repeat for your CGM app.
+1. **Settings > Apps > Apps**(설정 > 앱 > 앱)를 여십시오.
+2. 오른쪽 위의 메뉴 **⋮**를 누르고 **Special access > Battery optimization**(특별한 액세스 > 배터리 최적화)을 선택하십시오.
+3. 목록 위쪽의 화살표를 누르고 **All apps**(모든 앱)를 선택하십시오.
+4. **AAPS**를 선택하고 **Don't allow**(허용 안 함)를 선택하십시오. 그러면 Huawei는 이 목록에 있는 앱을 더 이상 최적화하지 않습니다.
+5. CGM 앱에도 똑같이 하십시오.
 
-![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+![Huawei - 배터리 최적화 무시](../images/Huawei_BatteryOptimization.png)
 
-## App launch: allow running in the background
+## 앱 실행: 백그라운드 실행 허용
 
-1. Open **Settings > Battery > App launch** (or **Settings > Apps > Apps >** select the app **> Battery > App launch**).
-2. Find **AAPS** and turn off **Manage automatically**.
-3. In the **Manage manually** window, turn on all three options: 
-    - **Auto-launch**
-    - **Secondary launch** (can be launched by other apps)
-    - **Run in background**
-4. Repeat for your CGM app.
+1. **Settings > Battery > App launch**(설정 > 배터리 > 앱 실행)를 여십시오(또는 **Settings > Apps > Apps >**(설정 > 앱 > 앱 >)에서 앱을 선택한 다음 **> Battery > App launch**(> 배터리 > 앱 실행)).
+2. **AAPS**를 찾아 **Manage automatically**(자동으로 관리)를 끄십시오.
+3. **Manage manually**(수동으로 관리) 창에서 세 가지 옵션을 모두 켜십시오: 
+    - **Auto-launch(자동 실행)**
+    - **Secondary launch**(보조 실행: 다른 앱이 실행할 수 있음)
+    - **Run in background(백그라운드에서 실행)**
+4. CGM 앱에도 똑같이 하십시오.
 
-![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+![Huawei - 배터리 옵션](../images/Huawei_BatteryOptions.png)
 
-## Lock AAPS in the recent apps
+## 최근 앱 목록에서 AAPS 잠그기
 
-Locked apps are not closed when you clear the recent apps list.
+잠긴 앱은 최근 앱 목록을 지워도 종료되지 않습니다.
 
-1. Open the recent apps list.
-2. Swipe down on the **AAPS** card. A lock symbol appears on the card.
-3. Do the same for your CGM app.
+1. 최근 앱 목록을 여십시오.
+2. **AAPS** 카드를 아래로 밀어 내리십시오. 카드에 자물쇠 기호가 나타납니다.
+3. CGM 앱에도 똑같이 하십시오.
 
-![Huawei - lock app](../images/Huawei_LockApp.png)
+![Huawei - 앱 잠금](../images/Huawei_LockApp.png)
 
-## Power saving mode
+## 절전 모드
 
-Keep **Power saving mode** and **Ultra power saving** turned off (**Settings > Battery**). They close background apps regardless of the settings above.
+**Power saving mode**(절전 모드)와 **Ultra power saving**(초절전 모드)를 꺼 두십시오(**Settings > Battery**(설정 > 배터리)). 이 모드들은 위의 설정과 상관없이 백그라운드 앱을 종료합니다.
 
-## If AAPS still stops in the background
+## AAPS가 여전히 백그라운드에서 멈추는 경우
 
-See [Don't kill my app](https://dontkillmyapp.com/huawei) for more Huawei-specific solutions.
+Huawei에 맞는 다른 해결 방법은 [Don't kill my app](https://dontkillmyapp.com/huawei)을 참조하십시오.
 
-## Honor phones
+## Honor 휴대폰
 
-Honor is a separate brand now and its phones run MagicOS instead of EMUI. The background settings are very similar: look for **App launch** in the app's battery settings, turn off **Manage automatically** and allow all three options, then remove the app from battery optimization.
+Honor는 이제 별도의 브랜드이며, Honor 휴대폰은 EMUI 대신 MagicOS를 사용합니다. 백그라운드 설정은 매우 비슷합니다. 앱의 배터리 설정에서 **App launch**(앱 실행)를 찾아 **Manage automatically**(자동으로 관리)를 끄고 세 가지 옵션을 모두 허용한 다음, 배터리 최적화에서 앱을 제외하십시오.
