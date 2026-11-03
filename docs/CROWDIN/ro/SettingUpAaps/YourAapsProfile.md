@@ -1,9 +1,9 @@
-# Your AAPS profile
+# Profilul dumneavoastră AAPS
 
-Your **AAPS Profile** is a set of four key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates:
-* [glucose targets](#profile-glucose-targets),
-* [basal rates](#your-aaps-profile-basal-rates) (BR),
-* [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
+Your **AAPS Profile** is a set of four key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. **Profilul** cuprinde:
+* [ținte de glicemie](#profile-glucose-targets),
+* [rate bazale](#your-aaps-profile-basal-rates) (BR),
+* [factori de sensibilitate la insulină](#your-aaps-profile-insulin-sensitivity-factor) (ISF) și
 * [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR).
 
 ```{admonition} Where did DIA go?
@@ -11,7 +11,7 @@ Your **AAPS Profile** is a set of four key parameters which define how **AAPS** 
 The **duration of insulin action (DIA)** is no longer part of your **Profile**. It is set per insulin instead — see [Manage → Insulin settings](#Config-Builder-insulin-dia).
 ```
 
-As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Scopul este de a obține o setare corectă înainte de a-o schimba pe alta. Lucrați mai degrabă în pași mici, decât să faceți schimbări mari dintr-o dată. Don't forget to activate the new profile after each change. Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your settings.
+As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Scopul este de a obține o setare corectă înainte de a-o schimba pe alta. Lucrați mai degrabă în pași mici, decât să faceți schimbări mari dintr-o dată. Nu uitați să activați noul profil după fiecare modificare. Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your settings.
 
 Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
 
@@ -31,7 +31,7 @@ The four last parameters (glucose targets, basal rates, insulin sensitivity fact
 
 Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
 
-![Example active profile](../images/Profile-Example-Active.png)
+![Exemplu de profil activ](../images/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## Ținte de glicemie
@@ -42,16 +42,16 @@ Your **BG target** is a core value and all of **AAPS** calculations are based on
 
 Țintele pot fi definite în limitele respective:
 
-|         | _Low_ target           | _High_ target            |
-| ------- | ---------------------- | ------------------------ |
-| Minimum | 4.4 mmol/L or 80 mg/dL | 5 mmol/L or 90 mg/dL     |
-| Maximum | 10 mmol/L or 180 mg/dL | 11.1 mmol/L or 200 mg/dL |
+|       | _Low_ target            | _High_ target             |
+| ----- | ----------------------- | ------------------------- |
+| Minim | 4,4 mmol/L sau 80 mg/dL | 5 mmol/L sau 90 mg/dL     |
+| Maxim | 10 mmol/L sau 180 mg/dL | 11,1 mmol/L sau 200 mg/dL |
 
 ### Impact
 
 If the target in your **Profile** is very wide (say, 3 or more mmol/L [50 mg/dL or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
 
-### How to set it
+### Cum se setează
 
 The **figure below** shows an example of how the target can be set in an **AAPS** profile.
 
@@ -69,7 +69,7 @@ When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing thro
 
 Rata dumneavoastră bazală de insulină (unități/oră) furnizează insulina de fond, menție nivelurile glicemiei stabile în absența alimentelor sau a exercițiului fizic.
 
-Pompa de insulină eliberează cantități mici de insulină cu acțiune rapidă la fiecare câteva minute, pentru a împiedica ficatul să elibereze prea mult glucoză și pentru a deplasa glucoza în celulele organismului. Insulina bazală constituie, de obicei, între 40-50% din doza dumneavoastră zilnică totală (DZT), în funcție de dietă, și de obicei urmează un ritm circadian, cu un vârf si o vale în ceea ce privește necesarul de insulină pe parcursul a 24 de ore. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+Pompa de insulină eliberează cantități mici de insulină cu acțiune rapidă la fiecare câteva minute, pentru a împiedica ficatul să elibereze prea mult glucoză și pentru a deplasa glucoza în celulele organismului. Insulina bazală constituie, de obicei, între 40-50% din doza dumneavoastră zilnică totală (DZT), în funcție de dietă, și de obicei urmează un ritm circadian, cu un vârf si o vale în ceea ce privește necesarul de insulină pe parcursul a 24 de ore. Pentru mai multe informații, capitolul 6 din [„Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) de Gary Scheiner este foarte util.
 
 Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimize your ISF and ICR.
 
@@ -77,7 +77,7 @@ Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you
 
 Ratele bazale exacte vă permit să vă treziți în interval, și să săriți peste mese - sau să mâncați - mai devreme sau mai târziu în cursul zilei, fără să aveți hiperglicemii sau hipoglicemii.
 
-O rată bazală prea mare poate duce la valori mici ale glicemiei. And vice versa.
+O rată bazală prea mare poate duce la valori mici ale glicemiei. Și invers.
 
 **AAPS** ‘baselines’ against the default basal rate. În cazul în care rata bazală este prea mare, un "bazală temporară zero" va fi considerată ca un IOB mai negativ decât ar trebui. This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
@@ -85,7 +85,7 @@ So, a basal rate too high will create low **BGs** both with the default rate, bu
 
 Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
 
-### How to set it
+### Cum se setează
 
 The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
 
@@ -95,22 +95,22 @@ Setting your basal rates right is done by trial and error, and should be done in
 
 There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast over 3 different days for a period of 8 hours.
 
-The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
+The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. Observați cum se schimbă **glicemia**: dacă scade, rata bazală este prea mare. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. Dacă **IOB** este negativ, rata bazală este prea mare. Și invers. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
 
 See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, analyzing patterns in closed loop.
 
-When taking action on the result of your basal testing, changes in the **Profile** should be done 1 to 2 hours (depends on your insulin type) before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
+Când acționați pe baza rezultatului testării bazalei, modificările în **profil** trebuie făcute cu 1-2 ore (în funcție de tipul de insulină) înainte de creștere/scădere. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
 
 (your-aaps-profile-basal-not-compatible)=
-#### Message: "Basal rate is not compatible with the current pump"
+#### Mesaj: „Rata bazală nu este compatibilă cu pompa curentă”
 
 Each pump has limits: a lowest and a highest basal rate it can deliver and, for some pumps (for example Dana, Accu-Chek Combo, Medtronic and Diaconn G8), basal rates that can only change on the full hour. **AAPS** checks your profile against the pump you use, **after** applying the percentage you choose.
 
-If a basal rate is outside these limits, the **Activate** screen shows this message and the **Activate** button stays grey:
+Dacă o rată bazală este în afara acestor limite, ecranul **Activați** afișează acest mesaj, iar butonul **Activați** rămâne gri:
 
-![Activate screen with the message "Basal rate is not compatible with the current pump"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
+![Ecranul Activați cu mesajul "Rata bazală nu este compatibilă cu pompa curentă"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
 
-For example, with a basal rate of 0.10 U/h in the night and a profile percentage of 35 %, **AAPS** would have to deliver 0.035 U/h. This is less than a Dana pump can deliver (0.04 U/h).
+For example, with a basal rate of 0.10 U/h in the night and a profile percentage of 35 %, **AAPS** would have to deliver 0.035 U/h. Aceasta este mai puțin decât poate administra o pompă Dana (0,04 U/h).
 
 To solve it, either:
 
@@ -131,19 +131,19 @@ Factorul de sensibilitate la insulină (uneori numit factor de corecție) este u
 
 **In mmol/L units:** If you have an **ISF** of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
 
-From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dL) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. Deci, dacă reduceți ISF de la 40 la 35 (mg/dL) sau de la 1,5 la 1,3 (mmol/L), aceasta se numește adesea întărirea **ISF**. Invers, creșterea valorii **ISF** de la 40 la 45 (mg/dL) sau de la 1,5 la 1,8 (mmol/L) înseamnă slăbirea **ISF**.
 
 ### Impact
 
-A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
+Un **ISF mai mic / mai puternic** (de ex. 40 în loc de 50) înseamnă că insulina vă scade **glicemia** mai puțin pe unitate. Aceasta duce la o corecție mai agresivă / mai puternică din partea buclei, cu **mai multă insulină**. Dacă **ISF** este prea puternic (valoare mică), aceasta poate duce la **glicemie** mică.
 
-A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
+Un **ISF mai mare / mai slab** (de ex. 45 în loc de 35) înseamnă că insulina vă scade **glicemia** mai mult pe unitate. Aceasta duce la o corecție mai puțin agresivă / mai slabă din partea buclei, cu **mai puțină insulină**. Dacă **ISF** este prea slab (valoare mare), aceasta poate duce la **glicemie** mare.
 
-**Example:**
+**Exemplu:**
 * **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
 * So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
-* If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
-* If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 units of insulin
+* Dacă `ISF = 30` -> `90 / 30 = 3` sau `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 unități de insulină
+* Dacă `ISF = 45` -> `90 / 45 = 2` sau `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 unități de insulină
 
 An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
 
@@ -151,21 +151,21 @@ An **ISF** that is too low (and therefore more aggressive, not uncommon) can res
 
 Conversely, an **ISF** set too high can result in under-corrections, meaning your **BG** remains above target – particularly noticeable overnight.
 
-### How to set it
+### Cum se setează
 
 See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
 
-![Profile ISF](../images/Profile_ISF.png)
+![ISF în profil](../images/Profile_ISF.png)
 
 Un punct de plecare de bază pentru determinarea FSI pe timpul zilei este să-l bazați pe doza dumneavoastră zilnică totală (DZT), prin utilizarea regulii 1700 (94). More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
 
-| 1700 (if measuring in mg/dL) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dL) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                 |
+| 1700 (dacă măsurați în mg/dL) sau 94 (mmol/L) / DZT = ISF aproximativ.<br/><br/>Exemplu: DZT = 40 U<br/>ISF aproximativ (mg/dL) = 1700/40 = 43<br/>ISF aproximativ (mmol/L) = 94/40 = 2,4 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                                   |
 
 Assuming your basal levels are correct, you can test this by suspending the loop, checking **IOB** is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
 
-Apoi luați o cantitate estimată de insulină (conform setării ISF actuale) pentru a ajunge la nivelul țintă al glicemiei.
+Apoi luați o cantitate estimată de insulină (conform valorii actuale 1/ISF) pentru a ajunge la ținta de glicemie.
 
 Aveți grijă deoarece acest lucru este adesea stabilit prea jos. Prea mic înseamnă că 1 U va scădea glicemia mai repede decât era de așteptat.
 
@@ -175,7 +175,7 @@ Aveți grijă deoarece acest lucru este adesea stabilit prea jos. Prea mic înse
 
 ### Descriere
 
-The **ICR** is a measure of how many grams of carbohydrate are covered by one unit of insulin.
+**ICR** arată câte grame de carbohidrați sunt acoperite de o unitate de insulină.
 
 Some people also use **I:C** as an abbreviation instead of **ICR**, or talk about carb ratio : **CR**.
 
@@ -191,9 +191,9 @@ It is common to have different **ICR** at different times of day due to hormone 
 > 
 > În acest model s-a stabilit cantitatea de carbohidrați și cantitatea de insulină a fost variabilă. ("Cât insulină este necesară pentru a acoperi o felie de pâine?")
 > 
-> When using **ICR** the amount of insulin is fixed and the amount of carbs is variable. ("Câte grame de carbohidrati pot fi acoperite de o singură unitate de insulină?")
+> Când folosiți **ICR**, cantitatea de insulină este fixă, iar cantitatea de carbohidrați este variabilă. („Câte grame de carbohidrați pot fi acoperite de o unitate de insulină?”)
 > 
-> Example:
+> Exemplu:
 > 
 > Factorul unitate de pâine (BU = 12g carbohidrați): 2,4 U/BU -> Aveți nevoie de 2,4 unități de insulină atunci când mâncați o unitate de pâine.
 > 
@@ -201,25 +201,25 @@ It is common to have different **ICR** at different times of day due to hormone 
 > 
 > BU factor 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
 > 
-> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Tabele de conversie sunt disponibile online, de exemplu [aici](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Impact
 
-A **lower / stronger ICR** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. De asemenea, poate fi numit "mai agresiv". If your IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
+A **lower / stronger ICR** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. De asemenea, poate fi numit "mai agresiv". Dacă IC este prea puternic, primiți prea multă insulină, ceea ce poate duce la **glicemii** mici.
 
-A **higher / weaker ICR** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. De asemenea, poate fi numit "mai puțin agresiv". If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
+A **higher / weaker ICR** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. De asemenea, poate fi numit "mai puțin agresiv". Dacă IC este prea slab, primiți mai puțină insulină decât aveți nevoie, ceea ce poate duce la **glicemii** mari.
 
-### How to set it
+### Cum se setează
 
-The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+**Figura de mai jos** arată un exemplu de **ICR** al unui utilizator și cum poate fi setat într-un **profil AAPS**. When entering these values, we enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
 
-![Profile ICR](../images/Profile_ICR.png)
+![ICR în profil](../images/Profile_ICR.png)
 
 If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are your **ICR** is too weak (_i.e._ the number is too high and should be gradually lowered). Conversely, if your **BG** is lower than before food, **ICR** is too strong (_i.e._ the number is too small and should be gradually increased).
 
 Assuming your basal rates are correct, you can test by checking if **IOB** is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food you normally eat at that time of day and count its carbs precisely.
 
-## Common questions related to the Profile
+## Întrebări frecvente despre profil
 
 ```{contents} Common questions related to the Profile
 :depth: 1
@@ -228,13 +228,13 @@ Assuming your basal rates are correct, you can test by checking if **IOB** is ze
 
 ### Despre importanța corectitudinii profilului dumneavoastră
 
-**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+**De ce ar trebui să încerc să am setări corecte în profil? Nu poate bucla să se ocupe singură de asta?**
 
 A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimize poor glycemic control that results from having incorrect **Profile** values. Poate face acest lucru, spre exemplu, prin întreruperea administrării insulinei dacă urmează să faceți hipoglicemie. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
 
 If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (**BR**), insulin sensitivity factors (**ISF**) and insulin-to-carb ratios (**ICR**).
 
-If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. [„Pumping insulin”](https://amzn.eu/d/iaCsFa2) de John Walsh și Ruth Roberts și [„Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) de Gary Scheiner sunt foarte utile.
 
 ### Ce cauzează vârfuri mari de după masă în bucla închisă?
 În primul rând, verificați rata bazală și faceți un test pentru rata bazală fără carbohidrați. If it is correct and your **BG** is falling to reach your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/> If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **ICR** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your **ICR** and an appropriate pre-bolus time with your endocrinologist.
@@ -243,52 +243,52 @@ If you are moving from injections (MDI) to **AAPS**, then it is a good idea to r
 The possible reasons for **AAPS** not giving enough insulin are:
 * **ISF** is not strong enough
 * Basal rate might not be strong enough
-* A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
+* A security setting might kick in, such as **maxIOB**. Sau **SMB** este dezactivat în acest moment, în funcție de setările dumneavoastră.
 * Automation has been set up and has overridden **AAPS**.
 
 See also [Tweaking the AAPS Profile](../GettingHelp/ProfileTuning.md).
 
-### I have negative IOB, is this an issue ?
+### Am IOB negativ, este o problemă?
 Negative **IOB** means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the **BG** starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
 
-Here are some reasons why you may have negative IOB, and what action to take:
-* a too strong basal: tweak your **Profile**
-* too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
+Iată câteva motive pentru care puteți avea IOB negativ și ce puteți face:
+* o bazală prea puternică: ajustați **profilul**
+* prea mult bolus la masa anterioară: ajustați **profilul** sau verificați dacă faceți bolusul la momentul potrivit.
 * DIA set too short on your insulin type, resulting in insulin stacking: tweak it in [Manage → Insulin settings](#Config-Builder-insulin-dia)
 * physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
 
-## Manage your Profiles
+## Gestionarea profilurilor
 
 ```{contents} Operations that you can perform on your **Profiles** in **AAPS**
 :depth: 1
 :local: true
 ```
 (your-aaps-profile-create-and-edit-profiles)=
-### Create and edit Profiles
+### Crearea și editarea profilurilor
 
 In **AAPS** v4 your profiles live on the **Manage** screen (bottom navigation) → **Profile**, shown as a swipeable card carousel with an action bar (**➕ Add**, **✏️ Edit**, **⧉ Clone**, **🗑️ Delete**, **▶ Activate**). For managing and activating a profile, see [Managing and activating profiles](#ProfileSwitch-manage-v4). Coming from **AAPS** v3, where profiles had their own tab? See [What changed in AAPS v4](#v4changes-manage).
 
-Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**, then fill in the four schedules using the tabs:
+Apăsarea pe **✏️ Editați** deschide editorul. Set the profile **name** and **units**, then fill in the four schedules using the tabs:
 
-- **IC** — insulin-to-carb ratio (g/U)
-- **ISF** — insulin sensitivity factor
+- **IC** — raport insulină-carbohidrați (g/U)
+- **ISF** — factor de sensibilitate la insulină
 - **BAS** — basal rates
 - **TARG** — target range
 
 ![The profile editor — IC / ISF / BAS / TARG tabs](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Each schedule is a list of **time blocks**: add a block, set its start time and value, then **Save**.
+Fiecare program este o listă de **blocuri de timp**: adăugați un bloc, setați ora de început și valoarea, apoi **Salvați**.
 
 If you make any changes to your **Profile**, make sure you are editing the correct **Profile**: the card of the profile in use is marked **ACTIVE**, but the card selected on screen may be another one.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
-### Build a Profile from scratch for a kid
+### Crearea unui profil de la zero pentru un copil
 
-The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) may help you to create a profile for a child (up to 18 years).
+[Ajutorul de profil](#aaps-screens-profile-helper) (meniul ☰ → **Ajutor de profil**) vă poate ajuta să creați un profil pentru un copil (până la 18 ani).
 
 **Notă importantă:**
 
-**Asistentul de profil este menit să vă ajute să găsiți profilul inițial pentru copilul dumneavoastră. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**Asistentul de profil este menit să vă ajute să găsiți profilul inițial pentru copilul dumneavoastră. Chiar dacă se bazează pe seturi de date de la două spitale diferite, discutați întotdeauna cu echipa medicală înainte de a folosi un profil nou!**
 
 Asistentul de profil oferă seturi de date de la două spitale diferite pentru copii pentru a găsi profilul inițial pentru copilul dumneavoastră de până la 18 ani.
 
@@ -297,10 +297,10 @@ Asistentul de profil oferă seturi de date de la două spitale diferite pentru c
 1. Make sure you are on the **Profile 1** tab.
 2. In **Profile type**, make sure you have "Default profile" selected.
 3. Ajustați profilul implicit (bazat pe setul de date al spitalului) prin introducerea vârstei copilului și a dozei totale zilnice de insulină **sau** a greutății.
-4. Change to the **Profile 2** tab.
-5. Press **Profile type** and select "DPV Default profile".
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
-7. Open the **Comparison** tab. Comparison of the two adjusted profiles will be displayed (see screenshot below).
+4. Treceți la fila **Profilul 2**.
+5. Apăsați **Tip profil** și selectați „Profil implicit DPV”.
+6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Rețineți că setul de date DPV oferă doar **rate bazale**, deci IC și ISF sunt afișate ca zero pentru acest profil.
+7. Deschideți fila **Comparație**. Comparison of the two adjusted profiles will be displayed (see screenshot below).
 8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
 
 ![Asistent Profil Copii 2](../images/ProfileHelperKids2.png)
@@ -310,24 +310,24 @@ Asistentul de profil oferă seturi de date de la două spitale diferite pentru c
 See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 (your-aaps-profile-clone-profile-switch)=
-### Clone a Profile switch to a new Profile
+### Clonarea unei schimbări de profil într-un profil nou
 
-![Schimbare profil](../images/TreatmentsView4.png)
+![Schimbare de profil](../images/TreatmentsView4.png)
 
-The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **2**.
+The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Folosiți butonul **Clonați** afișat pe linia **2**.
 
 You can now go to the [Profile screen](#your-aaps-profile-create-and-edit-profiles) (**Manage → Profile**) to edit the newly created Profile.
 
 (YourAapsProfile_Profile-backup)=
-### Profile backup
+### Copia de siguranță a profilului
 
 Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
 
 * Your **Profiles** are stored in the **AAPS** database.
 * When **NSClientV3** is set up (see [Synchronization](#SetupWizard-synchronization-with-the-reporting-server-and-more)), your **Profiles** are also uploaded to Nightscout automatically.
-* They are also part of [exported settings](../Maintenance/ExportImportSettings.md). Așa că asigurați-vă că aveți o copie de siguranță într-un loc sigur.
+* Ele fac parte și din [setările exportate](../Maintenance/ExportImportSettings.md). Așa că asigurați-vă că aveți o copie de siguranță într-un loc sigur.
 
-### Editing Profiles from Nightscout
+### Editarea profilurilor din Nightscout
 
 If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The setting is called "**Receive profile store from NS**" and is part of the **Nightscout data acceptance** options (accepting data from Nightscout is turned off by default, see the [Client control step of the Setup Wizard](../SettingUpAaps/SetupWizard.md)); you can find it quickly with the **search bar** on the main screen. While client control is on, the setting is hidden and **AAPS** takes no profile changes from Nightscout ([hardened mode](#client-master-control-hardened-mode)); edit the profile on a paired client instead, or load it once with **Full sync**.
 
@@ -335,21 +335,21 @@ This can be helpful when about to make major changes to a more extensive **Profi
 
 To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Clonarea înregistrărilor din baza de date](../images/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
-### Compare two Profiles
+### Compararea a două profiluri
 
 You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
 
-![Profile Helper 1](../images/ProfileHelper1.png)
+![Ajutor de profil 1](../images/ProfileHelper1.png)
 
 1. Make sure you are on the **Profile 1** tab.
 2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
 3. Choose the **Profile** you want to compare from.
-4. Change to the **Profile 2** tab.
+4. Treceți la fila **Profilul 2**.
 5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
-6. Choose the **Profile Switch** you want to compare to.
-7. Open the **Comparison** tab. Comparison of the two profiles will be displayed (see screenshot below).
+6. Alegeți **schimbarea de profil** cu care doriți să comparați.
+7. Deschideți fila **Comparație**. Comparison of the two profiles will be displayed (see screenshot below).
 
-![Profile Helper 2](../images/ProfileHelper2.png)
+![Ajutor de profil 2](../images/ProfileHelper2.png)
