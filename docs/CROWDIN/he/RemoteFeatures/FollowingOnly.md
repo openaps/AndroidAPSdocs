@@ -26,23 +26,23 @@ The most common strategies used in combination with **AAPS** are explained in mo
 
 * Many caregivers are familiar with Dexcom Follow, preferring its clear interface over something more complicated.
 
-* Dexcom Follow is very good for teachers/grandparents and people who know very little about diabetes and sugar levels. It has customizable alerts (BG level, what sound to play etc.). Alarms can be completely switched off if needed, which is very useful if you have a sensor which is still settling down and creating multiple fake lows.
+* Dexcom Follow is very good for teachers/grandparents and people who know very little about diabetes and sugar levels. ניתן להתאים אישית את ההתראות (רמת הסוכר, הצליל שיושמע וכו'). Alarms can be completely switched off if needed, which is very useful if you have a sensor which is still settling down and creating multiple fake lows.
 
 #### Setting up Dexcom Follow: how-to-guide
 
 If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app.
 
-You cannot send invite emails to Dexcom followers anymore from third-party apps. In xDrip the invite request will just result in the message “invite not sent”.
+You cannot send invite emails to Dexcom followers anymore from third-party apps. ב-xDrip בקשת ההזמנה תסתיים רק בהודעה “invite not sent”.
 
 You must install the official Dexcom app, send the invite, and then uninstall the official app.
 
 The steps to do this are as follows:
 
 1)  Install the official “Dexcom” app on _any_ smartphone (Android/iPhone), this can be the Follower phone, if it is more convenient. 2)  Log in with your Dexcom username and password, this is the same login details you would use for Dexcom Clarity, if you are already a current Dexcom/Clarity customer. If you don’t have a Dexcom login, there is the option to create a new login at this point.   
-3)  Swipe through the introduction menus. 4)  Add “no code” for the sensor code. 5)  Under Transmitter SN select “enter manually” and enter any valid transmitter code (use one of your expired transmitter codes, if you know one, so it doesn’t interfere with the running of your current transmitter, they follow a specific format of certain numbers and letters: “NLNNNL” and only use certain combinations, so it’s easiest to use one you already know is valid). 6)  Once the app is trying to find the transmitter and sensor, you will be able to invite followers: select the small three dots in the top left of the app, and add new follower. You can also use this if one of your followers has changed their handset and needs a fresh invite, here you can delete them from the follower list and resend a new invite email for them to use on their new handset. 7)  On the Follower phone, install Dexcom Follow by downloading it from the App Store (iPhone) or Play (Android). Set up the Dexcom Follow app, and you will be prompted to open your email to find the invite to be a Follower.    
+3)  Swipe through the introduction menus. 4)  Add “no code” for the sensor code. 5)  Under Transmitter SN select “enter manually” and enter any valid transmitter code (use one of your expired transmitter codes, if you know one, so it doesn’t interfere with the running of your current transmitter, they follow a specific format of certain numbers and letters: “NLNNNL” and only use certain combinations, so it’s easiest to use one you already know is valid). 6) כאשר האפליקציה מנסה למצוא את המשדר והחיישן, ניתן להזמין עוקבים: בחרו את שלוש הנקודות הקטנות בחלק העליון של האפליקציה והוסיפו עוקב חדש. ניתן להשתמש בכך גם אם אחד העוקבים החליף טלפון וצריך הזמנה חדשה. כאן ניתן למחוק את העוקב מרשימת העוקבים ולשלוח הזמנה חדשה בדוא"ל לשימוש בטלפון החדש. 7)  On the Follower phone, install Dexcom Follow by downloading it from the App Store (iPhone) or Play (Android). Set up the Dexcom Follow app, and you will be prompted to open your email to find the invite to be a Follower.    
 8)  You can now delete the official Dexcom G6 app.
 
-For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip, depending on which app you are using.
+עבור Dexcom Follow, נתוני החיישן מיוצאים אז מטלפון ה-**AAPS** ישירות מ-BYODA או מ-xDrip, בהתאם לאפליקציה שבה אתם משתמשים.
 
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
@@ -61,15 +61,15 @@ Pros (as reported by users):
 
 * Smart snooze so doesn't alert if levels are moving in right direction
 
-* There is a Care tab which appears to enable you to set a new temp target for a certain duration, delete the temp target or enter carbs.
+* קיימת לשונית Care שנראה כי מאפשרת להגדיר יעד זמני חדש למשך זמן מסוים, למחוק את היעד הזמני או להזין פחמימות.
 
 Cons (as reported by users)
 
 * Only available for iOS
 
-* The TT shows as 5 mmol regardless of which TT level is set
+* היעד הזמני (TT) מוצג כ-5 mmol ללא קשר לערך ה-TT שהוגדר
 
-* Never shows Temp Basal rate even though it shows TB
+* לעולם אינו מציג את הקצב הבזאלי הזמני, אף שהוא מציג TB
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
@@ -80,33 +80,33 @@ Cons (as reported by users)
 
 * The app can be downloaded from [Google play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) and displays BG data in real time.
 
-* The user can be alerted with customized noisy low and high alarms set.
+* ניתן לקבל התראות קוליות חזקות לסוכר נמוך ולסוכר גבוה, עם הגדרות מותאמות אישית.
 
 * BG data can be viewed in either mmol/L or mg/dL.
 
 * It requires Android 5.0 and up.
 
-* It has a dark UI, large readings and buttons, designed for usage at night.
+* הממשק כהה, עם ערכים ולחצנים גדולים, ומתאים לשימוש בלילה.
 
 ### xDrip (Android)
 
-You can use xDrip as a follower.
+ניתן להשתמש ב-xDrip כאפליקציית מעקב.
 
 #### With Nightscout
 
-Set xDrip as a Nightscout Follower. You will receive BG and treatments, not basal.
+הגדירו את xDrip כ-Nightscout Follower. You will receive BG and treatments, not basal.
 
 ![image](../images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
 
-#### Without Nightscout - xDrip BG data source
+#### ללא Nightscout - xDrip כמקור ערכי הסוכר
 
-If your **AAPS** data source is xDrip (or if xDrip can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip followers, displaying BG, treatments and basal rates.
+אם מקור הנתונים של **AAPS** הוא xDrip (או אם xDrip יכול לקבל ערכי סוכר גם מאפליקציה אחרת כמו BYODA, Juggluco, ...), ניתן להשתמש בו בטלפון הראשי כדי לשתף נתונים עם עוקבי xDrip, ולהציג ערכי סוכר, טיפולים וקצבים בזאליים.
 
 ![image](../images/remote_control_and_following/xDrip+_Master_Sync.png)
 
-#### Without Nightscout - xDrip BG companion app
+#### ללא Nightscout - xDrip כאפליקציה נלווית לערכי הסוכר
 
-If your **AAPS** data source is not xDrip but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip followers, displaying BG, treatments and basal rates.
+אם מקור הנתונים של **AAPS** אינו xDrip, אבל ניתן להציג ב-xDrip ערכי סוכר ממקור הנתונים Companion App, ניתן להשתמש בו בטלפון הראשי כדי לשתף נתונים עם עוקבי xDrip, ולהציג ערכי סוכר, טיפולים וקצבים בזאליים.
 
 ![image](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
@@ -114,7 +114,7 @@ If your **AAPS** data source is not xDrip but you can display BG data from the C
 
 ![image](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
+xDripSwift נוצר מהתאמת אפליקציית xDrip המקורית ל-iOS והתפתח ל-"xDrip for iOS", הנכתב **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/a
 * Apple iPad (Requires software version 13.0 or later)
 * Google Android (Save web app to your homescreen)
 
-It has been reported by users of Sugarmate that it can be used with Apple CarPlay in the USA to display glucose readings when driving. It is not yet established if this is possible in countries outside the USA. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
+It has been reported by users of Sugarmate that it can be used with Apple CarPlay in the USA to display glucose readings when driving. It is not yet established if this is possible in countries outside the USA. אם יש לכם מידע נוסף על כך, הוסיפו כאן פרטים לתיעוד באמצעות [בקשת משיכה (pull request)](../SupportingAaps/HowToEditTheDocs.md), פעולה מהירה וקלה לביצוע.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
@@ -181,16 +181,16 @@ The M5Stack is a small box which can be programmed for many applications, Martin
 
 ### SugarPixel
 
-SugarPixel is a device for secondary glucose display alert system for continuous glucose monitoring that connects with Dexcom app or Nightscout app on the user’s smartphone. The device displays real time blood sugar readings. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customizable display options and native multi-user following.
+SugarPixel is a device for secondary glucose display alert system for continuous glucose monitoring that connects with Dexcom app or Nightscout app on the user’s smartphone. The device displays real time blood sugar readings. לצג החומרה הזה ל-CGM יש התראות קוליות עם צלילים אקראיים (והן חזקות מאוד), התראות רטט לכבדי שמיעה, אפשרויות תצוגה הניתנות להתאמה אישית ומעקב מובנה של כמה משתמשים.
 
 ![image](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
 ![image](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-* SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with color-coded glucose values.
+* ל-SugarPixel יש כמה אפשרויות תצוגה ב-mg/dL וב-mmol/L, לפי צורכי המשתמש, עם ערכי סוכר בצבעים שונים לפי הטווח.
 * The standard face displays BG, Trend Arrow, and Delta. Delta is the change + or - from the last reading.
-* SugarPixel can be customized for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand.
-* SugarPixel’s color face uses the entire display to show a single color representing the BG value. This enables the user to see BG readings at a distance through the window while outside playing in the backyard, patio, or pool.
+* ניתן להתאים את SugarPixel לשימוש בבהירות נמוכה עם תצוגת BG and Time, כדי לראות את ערך הסוכר ואת השעה הנוכחית על השידה שליד המיטה.
+* תצוגת הצבע של SugarPixel משתמשת בכל הצג כדי להציג צבע אחד שמייצג את ערך הסוכר. This enables the user to see BG readings at a distance through the window while outside playing in the backyard, patio, or pool.
 * The Big BG face is useful for nightstand users who wear glasses or contact lenses.
 
 ### Nightscout Clock on Ulanzi TC001
@@ -200,11 +200,11 @@ SugarPixel is a device for secondary glucose display alert system for continuous
 ![Following Nightscout Clock](../images/FollowingNightscoutClock.png)
 
 * The clock supports both mmol/L and mg/dL units, and includes audible alarms.
-* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
+* יש כמה תצוגות זמינות. לסקירה שלהן, ראו [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it).
 * Setting up and configuring the device involves just a few simple steps. Once set up, it only requires power and Wi-Fi to function.
 * The Ulanzi TC001 device is significantly cheaper than the SugarPixel to buy.
 * The software along with installation instructions can be found on [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
 * It is developed and maintained by Artiom Kenibasov, offering support on the [Facebook AAPS Users group](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/).
 
 ### PC (TeamViewer)
-Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting.
+חלק מהמשתמשים מוצאים שכלי גישה מרחוק מלא כגון [TeamViewer](https://www.teamviewer.com/) מועיל לפתרון תקלות מתקדם מרחוק.
