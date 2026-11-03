@@ -1,7 +1,7 @@
 (v4-changes)=
-# What changed in AAPS v4
+# מה השתנה ב-AAPS v4
 
-This page collects the notable **changes in behavior** between **AAPS** v3 and v4 — things that work differently, have moved, or have been removed — so existing users know what to expect when they update. See also the [Release Notes](ReleaseNotes.md) and the [update manual](UpdateToNewVersion.md).
+דף זה מרכז את **השינויים בהתנהגות** החשובים בין **AAPS** v3 ל-v4 — דברים שעובדים אחרת, שעברו למקום אחר או שהוסרו — כדי שמשתמשים קיימים יידעו למה לצפות כשהם מעדכנים. ראו גם את [הערות הגרסה](ReleaseNotes.md) ואת [מדריך העדכון](UpdateToNewVersion.md).
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,160 +10,160 @@ This page collects the notable **changes in behavior** between **AAPS** v3 and v
 
 ---
 
-## NSClient v1 has been removed
+## NSClient v1 הוסר
 
-**AAPS** v3 shipped **two** Nightscout synchronization plugins:
+**AAPS** v3 הגיע עם **שני** תוספים לסנכרון עם Nightscout:
 
-- **NSClient** — the legacy client (the old Nightscout REST / socket.io API, also called *“v1”*), and
-- **NSClientV3** — the client for the newer Nightscout **API v3**.
+- **NSClient** — הלקוח הישן (ה-API הישן של Nightscout מסוג REST / socket.io, שנקרא גם *"v1"*), וגם
+- **NSClientV3** — הלקוח עבור **API v3** החדש יותר של Nightscout.
 
-In **AAPS** v4 the legacy **NSClient (v1)** plugin has been **removed**. Only **NSClientV3** remains for synchronizing with Nightscout.
+ב-**AAPS** v4 התוסף הישן **NSClient (v1)** **הוסר**. לסנכרון עם Nightscout נשאר רק **NSClientV3**.
 
 ```{admonition} What you need to do
 :class: important
-If you (or your **AAPSClient** follower) were still synchronizing with the old **NSClient (v1)** plugin, switch to **NSClientV3** before/after updating:
+אם אתם (או העוקב שלכם ב-**AAPSClient**) עדיין מסנכרנים עם התוסף הישן **NSClient (v1)**, יש לעבור ל-**NSClientV3** לפני העדכון או אחריו:
 
-- Open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → Communication → NSClientV3**.
-- Enter your **Nightscout URL** and an **access token** (NSClientV3 uses an access token, *not* the old API secret — see [creating a token](https://nightscout.github.io/nightscout/security/#create-a-token)).
-- Your Nightscout site must support the **API v3** (Nightscout 15 or newer).
-- If you use **websockets**, enable or disable them on **both** the master and the follower — never on only one.
+- יש לפתוח את **[הגדרות תצורה](../SettingUpAaps/ConfigBuilder.md) ← תקשורת ← NSClientV3**.
+- יש להזין את **כתובת ה-URL של Nightscout** ואת **אסימון הגישה** (NSClientV3 משתמש באסימון גישה, *לא* ב-API secret הישן — ראו [יצירת אסימון](https://nightscout.github.io/nightscout/security/#create-a-token)).
+- אתר ה-Nightscout שלכם חייב לתמוך ב-**API v3** (Nightscout 15 ומעלה).
+- אם משתמשים ב-**websockets**, יש להפעיל או להשבית אותם **בשני** המכשירים, הראשי והעוקב — אף פעם לא רק באחד מהם.
 ```
 
-This affects only how the app talks to Nightscout; your data on Nightscout is unchanged.
+השינוי משפיע רק על האופן שבו האפליקציה מתקשרת עם Nightscout; הנתונים שלכם ב-Nightscout לא משתנים.
 
 ---
 
-## The bottom navigation: Treatments, Scenes and Manage
+## הסרגל התחתון: טיפולים, תרחישים וניהול
 
-In **AAPS** v3 you moved around the app with a row of **tabs** (Overview, Actions, Treatments, …), and several features were **plugins** you enabled in the Config Builder (**Actions**, **Automation**, **Food**, …).
+ב-**AAPS** v3 עברו בין חלקי האפליקציה באמצעות שורה של **לשוניות** (סקירה, פעולות, טיפולים, …), וכמה תכונות היו **תוספים** שהופעלו בבונה התצורה (Config Builder) (**פעולות**, **אוטומציה**, **מזון**, …).
 
-In **AAPS** v4 the tabs are gone, and so is the eye checkbox in the Config Builder that showed a plugin as a tab. The main screen is the **Overview**, and a **bottom navigation** gives you three sheets. **Actions, Automation and Food are no longer plugins** — there is nothing to enable in [Configuration](../SettingUpAaps/ConfigBuilder.md) (the renamed Config Builder); their functions now live in these sheets.
+ב-**AAPS** v4 הלשוניות הוסרו, וגם תיבת הסימון עם סמל העין בבונה התצורה, שהציגה תוסף כלשונית. המסך הראשי הוא **מסך הסקירה**, ו**סרגל הניווט התחתון** פותח שלושה חלונות. **פעולות, אוטומציה ומזון כבר אינם תוספים** — אין מה להפעיל ב[הגדרות תצורה](../SettingUpAaps/ConfigBuilder.md) (השם החדש של בונה התצורה); הפונקציות שלהם נמצאות עכשיו בחלונות האלה.
 
 (v4changes-treatments)=
-### Treatments — enter and deliver
+### טיפולים — הזנה ומתן
 
-The **Treatments** sheet is where you record or deliver a treatment: **Bolus wizard**, **Insulin** (manual bolus), **Carbs**, **Treatment** (insulin + carbs together), **Calibration**, **CGM** (open your CGM app, when one is configured), and your **[QuickWizards](../DailyLifeWithAaps/QuickWizards.md)**.
+בחלון **טיפולים** רושמים או נותנים טיפול: **אשף בולוס**, **אינסולין** (בולוס ידני), **פחמימות**, **טיפול** (אינסולין ופחמימות יחד), **כיול**, **CGM** (פתיחת אפליקציית ה-CGM, אם הוגדרה) וה**[אשפים המהירים](../DailyLifeWithAaps/QuickWizards.md)** שלכם.
 
-![The Treatments bottom sheet](../images/v4/BehavioralChanges/treatments_sheet.png)
+![חלון הטיפולים בסרגל התחתון](../images/v4/BehavioralChanges/treatments_sheet.png)
 
-On a **Wear OS watch** the same treatments are entered from the watch's **AAPS menu** (Bolus wizard / Calculator, eCarbs, Treatment, …):
+ב**שעון Wear OS** מזינים את אותם טיפולים מתוך **תפריט AAPS** של השעון (אשף בולוס / מחשבון, פחמימות ממושכות, טיפול, …):
 
-![The treatment actions in the watch's AAPS menu](../images/v4/BehavioralChanges/treatments_watch.png)
+![פעולות הטיפול בתפריט AAPS של השעון](../images/v4/BehavioralChanges/treatments_watch.png)
 
-### Scenes
+### תרחישים
 
-Your situation presets — see [Scenes](../DailyLifeWithAaps/Scenes.md).
+ההגדרות המוכנות שלכם למצבים שונים — ראו [תרחישים](../DailyLifeWithAaps/Scenes.md).
 
 (v4changes-manage)=
-### Manage — manage and activate
+### ניהול — ניהול והפעלה
 
-The **Manage** sheet is where you manage and activate everything else: **[Profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulin settings** (your insulin configurations), **[Temp Target](../DailyLifeWithAaps/TempTargets.md)**, **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)** presets, **[Scenes](../DailyLifeWithAaps/Scenes.md)**, **Automation**, **Food**, **Site Rotation**, **Pump**, **[Authorized clients](../RemoteFeatures/ClientMasterControl.md)** — plus the pump actions that used to be on the *Actions* tab (**Extended Bolus**, **cancel temp basal**, **Prime/Fill**, **Sensor Insert**, **Pump Battery Change**).
+בחלון **ניהול** מנהלים ומפעילים את כל השאר: **[פרופיל](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **הגדרות אינסולין** (הגדרות האינסולין שלכם), **[יעד זמני](../DailyLifeWithAaps/TempTargets.md)**, הגדרות מוכנות של **[אשף מהיר](../DailyLifeWithAaps/QuickWizards.md)**, **[תרחישים](../DailyLifeWithAaps/Scenes.md)**, **אוטומציה**, **מזון**, **סבב אתרי עירוי**, **משאבה**, **[לקוחות מורשים](../RemoteFeatures/ClientMasterControl.md)** — וגם פעולות המשאבה שהיו בלשונית *Actions* (פעולות): **בולוס ממושך**, **ביטול בזאלי זמני**, **תיחול/מילוי**, **הכנסת חיישן**, **החלפת סוללת משאבה**.
 
-![The Manage bottom sheet](../images/v4/BehavioralChanges/manage_sheet.png)
+![חלון הניהול בסרגל התחתון](../images/v4/BehavioralChanges/manage_sheet.png)
 
-All of your existing automation rules and food entries are kept; only the way you reach these features has changed.
+כל כללי האוטומציה ורשומות המזון הקיימים שלכם נשמרים; השתנתה רק הדרך להגיע לתכונות האלה.
 
 (screens-action-tab)=
-#### Where did the Actions tab go?
+#### לאן נעלמה הלשונית Actions?
 
-**AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
+ב-**AAPS** 3.x הייתה לשונית "Actions" (פעולות). ב-**AAPS** 4 הפונקציות שלה נמצאות במקומות אחרים:
 
-* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
-* **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
-* **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
-* **History browser**, **Statistics** (TDD): in the **menu** (☰).
+* **החלפת פרופיל** ו**אחוז הפרופיל**: יש להקיש על [שם הפרופיל](#aaps-screens-profile--target) במסך הראשי, או **ניהול ← פרופיל**. ראו [שינוי אחוז הפרופיל](#ProfileSwitch-change-percentage).
+* **יעד זמני**: יש ללחוץ על [היעד](#aaps-screens-profile--target) במסך הראשי, או **ניהול ← יעד זמני**.
+* **תיחול/מילוי**, **הכנסת חיישן**, **בדיקת רמת סוכר בדם** ושאר רשומות פורטל הטיפולים: ב[לוח המצב](#aaps-screens-careportal) המורחב, בחלון **ניהול**, או כלחצני [הפעלה מהירה](../DailyLifeWithAaps/QuickLaunch.md).
+* **דפדפן היסטוריה**, **סטטיסטיקה** (TDD): ב**תפריט** (☰).
 
 ```{admonition} Profile switch and profile percentage
 :class: note
-In **AAPS** v3, a long press on the profile name opened the profile switch dialog (percentage, duration, Activity temp target). In **AAPS** v4, **tap** the profile name (or **Manage → Profile**), then tap the round **▶** button at the bottom right to open the same settings. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+ב-**AAPS** v3, לחיצה ארוכה על שם הפרופיל פתחה את חלון החלפת הפרופיל (אחוזים, משך, יעד זמני לפעילות). ב-**AAPS** v4 יש **להקיש** על שם הפרופיל (או **ניהול ← פרופיל**), ואז להקיש על הלחצן העגול **▶** בפינה התחתונה של המסך כדי לפתוח את אותן הגדרות. ראו [שינוי אחוז הפרופיל](#ProfileSwitch-change-percentage).
 ```
 
 ---
 
 (v4changes-read-only-management)=
-## Settings protection now also locks the management screens
+## ההגנה על הגדרות נועלת עכשיו גם את מסכי הניהול
 
-In **AAPS** v3, [Settings protection](#Preferences-settings-protection) asked for your password only when you opened the settings. You could still add or edit profiles in the **Local Profile** tab without it.
+ב-**AAPS** v3, [ההגנה על הגדרות](#Preferences-settings-protection) ביקשה סיסמה רק כשפתחו את ההגדרות. עדיין היה אפשר להוסיף או לערוך פרופילים בלשונית **Local Profile** (פרופיל מקומי) בלי סיסמה.
 
-In **AAPS** v4, Settings protection also covers editing on the management screens: **Profile**, **Insulin settings**, **Temp Target** and **QuickWizard**. If your settings are locked, these screens open **read-only**:
+ב-**AAPS** v4, ההגנה על הגדרות חלה גם על עריכה במסכי הניהול: **פרופיל**, **הגדרות אינסולין**, **יעד זמני** ו**אשף מהיר**. אם ההגדרות שלכם נעולות, המסכים האלה נפתחים **לקריאה בלבד**:
 
-- You can browse the entries and **▶ Activate** or use them.
-- The **Add / Edit / Clone / Delete** buttons are **hidden**. Only the **✏️ pencil** in the top bar shows that you can unlock editing.
+- אפשר לעיין ברשומות, ללחוץ על **▶ הפעלה** או להשתמש בהן.
+- הלחצנים **הוספה / עריכה / שכפול / מחיקה** **מוסתרים**. רק **✏️ העיפרון** בסרגל העליון מראה שאפשר לבטל את הנעילה ולערוך.
 
-![The read-only Profile screen — only Activate at the bottom, pencil in the top bar](../images/v4/Profiles/profile_manage_readonly.png)
+![מסך הפרופיל במצב קריאה בלבד — רק הפעלה בתחתית, והעיפרון בסרגל העליון](../images/v4/Profiles/profile_manage_readonly.png)
 
 ```{admonition} What you need to do
 :class: important
-To add, edit, clone or delete an entry, tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics). The buttons appear.
+כדי להוסיף, לערוך, לשכפל או למחוק רשומה, יש להקיש על **✏️ העיפרון** בסרגל העליון ולהזין את סיסמת ההגדרות (או להשתמש בזיהוי ביומטרי). הלחצנים מופיעים.
 
-If you don't need to protect your settings, you can turn Settings protection off in **Settings → Protection**.
+אם אין צורך להגן על ההגדרות, אפשר לכבות את ההגנה על הגדרות ב-**הגדרות ← הגנה בסיסמאות**.
 ```
 
 ---
 
 (v4changes-active-insulin)=
-## The insulin in use can't be edited
+## אי אפשר לערוך את האינסולין שבשימוש
 
-In **AAPS** v3, you could change the DIA of the insulin you were using at any time.
+ב-**AAPS** v3 היה אפשר לשנות בכל עת את ה-DIA של האינסולין שבשימוש.
 
-In **AAPS** v4, the insulin marked **ACTIVE** in **Manage → Insulin settings** is greyed out: you cannot edit or delete it.
+ב-**AAPS** v4, האינסולין שמסומן **פעיל** ב**ניהול ← הגדרות אינסולין** מוצג באפור: אי אפשר לערוך או למחוק אותו.
 
-When you upgrade, **AAPS** keeps the insulin and DIA that your v3 profile switches already stored. If it finds older records whose insulin is known but whose DIA is not, it uses a default DIA for them and shows a message once, for example *Older records had no insulin duration, so 9.0 hours was used for Lyumjev. Check your insulin settings — already migrated records are not updated afterwards.* Check your insulin settings when you see it.
+בשדרוג, **AAPS** שומר את האינסולין ואת ה-DIA שכבר נשמרו בהחלפות הפרופיל שלכם מ-v3. אם הוא מוצא רשומות ישנות יותר שבהן האינסולין ידוע אבל ה-DIA לא ידוע, הוא משתמש עבורן ב-DIA ברירת מחדל ומציג הודעה פעם אחת, למשל *בנתונים ישנים יותר לא נרשם משך פעולת אינסולין, לכן נרשמו 9.0 שעות עבור ליומג'ב. יש לבדוק את הגדרות האינסולין שלכם — נתונים שכבר הועברו לא מתעדכנים לאחר מכן.* כשההודעה מופיעה, יש לבדוק את הגדרות האינסולין.
 
 ```{admonition} What you need to do
 :class: important
-To change the DIA or peak, add a new insulin with **+**, adjust it, save it and **▶ Activate** it. See [Changing the insulin in use](#Config-Builder-insulin-change-active).
+כדי לשנות את ה-DIA או את השיא, יש להוסיף אינסולין חדש עם **+**, לשנות אותו, לשמור אותו וללחוץ על **▶ הפעלה**. ראו [שינוי האינסולין שבשימוש](#Config-Builder-insulin-change-active).
 ```
 
 ---
 
 (v4changes-remote-control)=
-## AAPSClient remote control needs pairing
+## שליטה מרחוק מ-AAPSClient דורשת צימוד
 
-In **AAPS** v3, **AAPSClient** controlled **AAPS** by writing care-portal treatments to Nightscout, and could not deliver a bolus.
+ב-**AAPS** v3, **AAPSClient** שלט ב-**AAPS** על ידי כתיבת טיפולים של פורטל הטיפולים ל-Nightscout, ולא יכול היה לתת בולוס.
 
-In **AAPS** v4, the client and the main phone are **paired** once, and every command is signed. The main phone checks and confirms each command, and a client can now also deliver a bolus.
+ב-**AAPS** v4, מכשיר הלקוח והטלפון הראשי **מצומדים** פעם אחת, וכל פקודה חתומה. הטלפון הראשי בודק ומאשר כל פקודה, ומכשיר לקוח יכול עכשיו גם לתת בולוס.
 
-- Each client has a **[role](#client-master-control-roles)** that limits what it may do.
-- While client control is on, the main phone is in **[hardened mode](#client-master-control-hardened-mode)**: treatments and changes typed directly into Nightscout (the website, other apps) are no longer applied.
-- Each client gets a **[Nightscout token of its own](#client-master-control-own-token)** with only the rights it needs.
+- לכל מכשיר לקוח יש **[תפקיד](#client-master-control-roles)** שמגביל מה מותר לו לעשות.
+- כל עוד השליטה מהלקוח מופעלת, הטלפון הראשי נמצא ב**[מצב מוקשח](#client-master-control-hardened-mode)**: טיפולים ושינויים שמוזנים ישירות ב-Nightscout (באתר, באפליקציות אחרות) כבר לא מוחלים.
+- כל מכשיר לקוח מקבל **[אסימון Nightscout משלו](#client-master-control-own-token)**, רק עם ההרשאות שהוא צריך.
 
 ```{admonition} What you need to do
 :class: important
-Pair each **AAPSClient** with the main phone: see [Master ↔ Client control](#client-master-control). With an admin token on the main phone, the main phone shows a QR code that sets up and pairs the client in one scan. If you used to enter treatments on the Nightscout website, enter them on a paired client instead.
+יש לצמד כל **AAPSClient** לטלפון הראשי: ראו [שליטה בין מכשיר ראשי ↔ מכשיר לקוח](#client-master-control). כאשר בטלפון הראשי יש אסימון מנהל (admin), הטלפון הראשי מציג קוד QR שמגדיר את מכשיר הלקוח ומצמד אותו בסריקה אחת. אם הזנתם בעבר טיפולים באתר של Nightscout, יש להזין אותם מעכשיו במכשיר לקוח מצומד.
 ```
 
 ---
 
-## Duplicate BG data now switches the loop to Low Glucose Suspend
+## ערכי סוכר כפולים מעבירים עכשיו את הלולאה למצב השהיה עקב ערך סוכר נמוך
 
-When **AAPS** receives the same BG reading twice (a red warning badge on the BG source shortcut in the bottom bar), it cannot calculate your trend reliably, so it stops giving correction insulin.
+כאשר **AAPS** מקבל את אותו ערך סוכר פעמיים (סימן אזהרה אדום על קיצור הדרך של מקור ערכי הסוכר בסרגל התחתון), הוא לא יכול לחשב את המגמה באופן אמין, ולכן הוא מפסיק לתת אינסולין לתיקון.
 
-In **AAPS** v3 this happened quietly in the background: your loop still showed as **Closed Loop**, even though it could no longer correct.
+ב-**AAPS** v3 זה קרה בשקט ברקע: הלולאה עדיין הוצגה כ**לולאה סגורה**, אף שכבר לא יכלה לתקן.
 
-In **AAPS** v4 the change is visible. A closed loop is switched to **Low Glucose Suspend** mode, and the loop dialog tells you why: *"LGS mode due to doubled values in BG source"*. **AAPS** can still reduce or suspend your basal to protect you against lows.
+ב-**AAPS** v4 השינוי גלוי. לולאה סגורה עוברת למצב **השהיה עקב ערך סוכר נמוך**, וחלון הלולאה מסביר את הסיבה: *"במצב LGS עקב ערכים כפולים במקור נתוני הסוכר"*. **AAPS** עדיין יכול להפחית או להשהות את הבזאלי כדי להגן עליכם מפני ערכים נמוכים.
 
 ```{admonition} What you need to do
 :class: important
-Find and remove the duplicate readings — see [BG warning sign](#aaps-screens-bg-warning-sign).
+יש למצוא ולהסיר את הערכים הכפולים — ראו [סימן אזהרה של ערכי הסוכר](#aaps-screens-bg-warning-sign).
 
-Once they are gone, **AAPS** stays in **Low Glucose Suspend**. It does not go back to **Closed Loop** on its own: press and hold the loop icon and select **Closed Loop** again.
+אחרי שהם הוסרו, **AAPS** נשאר במצב **השהיה עקב ערך סוכר נמוך**. הוא לא חוזר ל**לולאה סגורה** מעצמו: יש ללחוץ לחיצה ארוכה על סמל הלולאה ולבחור שוב **לולאה סגורה**.
 ```
 
 ---
 
 (v4changes-tidepool)=
-## Tidepool: data now shows under the device name AAPS
+## Tidepool: הנתונים מוצגים עכשיו תחת שם המכשיר AAPS
 
-In **AAPS** v3, the data uploaded to [Tidepool](../SettingUpAaps/Tidepool.md) was shown in Tidepool under another device name.
+ב-**AAPS** v3, הנתונים שהועלו ל-[Tidepool](../SettingUpAaps/Tidepool.md) הוצגו ב-Tidepool תחת שם מכשיר אחר.
 
-In **AAPS** v4, the data is shown under the device name **AAPS**. After the update, **AAPS** starts a new data set in Tidepool. Your older data stays in Tidepool under the old device name.
+ב-**AAPS** v4, הנתונים מוצגים תחת שם המכשיר **AAPS**. אחרי העדכון, **AAPS** מתחיל מערך נתונים חדש ב-Tidepool. הנתונים הישנים שלכם נשארים ב-Tidepool תחת שם המכשיר הישן.
 
 ```{admonition} What you need to do
 :class: important
-Usually nothing: new data simply appears under **AAPS**.
+בדרך כלל אין צורך לעשות דבר: הנתונים החדשים פשוט מופיעים תחת **AAPS**.
 
-Do **not** run "**Full synchronization**" while the old data is still in Tidepool: the same data would then be there twice. If you want all your data under the new name, use the "**Purge all data**" button on the [Tidepool screen](#tidepool-menu) first (it also deletes the old data uploaded by **AAPS**), then run "**Full synchronization**". Only the data still stored in **AAPS** on your phone can be uploaded again.
+**אין** להפעיל "**סנכרון מלא**" כל עוד הנתונים הישנים עדיין נמצאים ב-Tidepool: אחרת אותם נתונים יופיעו שם פעמיים. אם רוצים את כל הנתונים תחת השם החדש, יש ללחוץ קודם על הלחצן "**מחיקת כל הנתונים**" ב[מסך Tidepool](#tidepool-menu) (הוא מוחק גם את הנתונים הישנים ש-**AAPS** העלה), ואחר כך להפעיל "**סנכרון מלא**". אפשר להעלות שוב רק את הנתונים שעדיין שמורים ב-**AAPS** בטלפון שלכם.
 ```
 
 ---
