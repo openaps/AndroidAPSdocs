@@ -1,12 +1,12 @@
-# Gliukozės kraujyje duomenų išlyginimas
+# Gliukozės duomenų glodinimas
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Jei **KG** duomenys šokinėja arba yra triukšmingi, **AAPS** gali neteisingai dozuoti insuliną. Dėl to gliukozės kiekis gali tapti per didelis arba per mažas. Jei pastebite klaidų arba jūsų NGJ duomenys šokinėja, svarbu išjungti ciklą, kol problema bus išspręsta. Priklausomai nuo NGJ, tokias problemas gali sukelti NGJ konfigūracija **AAPS** programėlėje (kaip paaiškinta toliau) arba problema jutiklio įvedimo vietoje (tada gali tekti pakeisti jutiklį).
 
 ## Smoothing data within AAPS
 
-**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
+**AAPS** leidžia glodinti duomenis pačioje **AAPS**, o ne NGJ programėlėje. Atverkite **meniu** (☰), pasirinkite [**Konfigūracija**](../SettingUpAaps/ConfigBuilder.md), tada **Glodinimas**. Yra keturios parinktys, bet vienu metu gali būti aktyvi tik viena: **Be glodinimo**, **Eksponentinis glodinimas**, **Vidutinis glodinimas** ir **Unscented Kalman Filter**.
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![Konfigūracija > Glodinimas](../images/v4/Configuration/configuration_smoothing.png)
 
 ### Exponential smoothing
 
@@ -18,27 +18,27 @@ This option works similar to back smoothing that was previously implemented on c
 
 ### No Smoothing
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Šią parinktį naudokite tik tada, jei duomenų rinkimo programėlė tinkamai glodina jūsų NGJ duomenis prieš perduodama juos į **AAPS**.
 
 ### Unscented Kalman Filter (UKF)
 
-This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+Ši parinktis naudoja statistinį modelį. Jis nuolat vertina tikrąją jūsų gliukozės reikšmę ir jos kitimo greitį pagal gaunamus (galbūt triukšmingus) rodmenis ir automatiškai prisitaiko prie to, kiek triukšmingas dabar yra jūsų jutiklis. Ji taip pat aptinka ir atmeta staigius, neįprastus rodmenis. Tai pažangesnė alternatyva eksponentiniam ir vidutiniam glodinimui. Ji naudinga, jei norite, kad glodinimas pats prisitaikytų prie kintančio jutiklio triukšmo lygio, o ne naudotų vieną fiksuotą metodą.
 
 (smoothing-xdrip-dexcom-g6)=
 
 ## Suggestions to use smoothing
 
-You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
+Glodinimo metodą taip pat galite keisti automatiškai, pavyzdžiui, pagal jutiklio amžių, naudodami [automatizacijos veiksmą](#automations-automation-action) **Keisti glodinimą**.
 
 |               | Exponential |  Average  | No Smoothing |
 | ------------- |:-----------:|:---------:|:------------:|
 | G5/G6/ONE     |  If noisy   |           | Recommended  |
 | G7/ONE+/Stelo |  If noisy   | If stable |              |
 
-Libre sensors are noisy and can require smoothing. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Libre jutiklių duomenys būna triukšmingi, todėl gali reikėti glodinimo. Kai naudojate tiesioginį xDrip ryšį arba pataisytos programėlės duomenų šaltinį (duomenys gaunami iš kitos programėlės, taip pat ir iš Juggluco), [duomenys jau glodinami pačioje programėlėje](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
-| -------------------- |:--------:|:------------:|:------------:|:-----------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.     |   Average    |       N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None     |   Average    |       None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.     |     N.A.     |       None        |
+| Jutiklis / duomenų šaltinis | Juggluco  | xDrip tiesioginis ryšys | xDrip tiltas (bridge) | xDrip pataisyta programėlė |
+| --------------------------- |:---------:|:-----------------------:|:---------------------:|:--------------------------:|
+| Libre 1/14 days/Pro         | Netaikoma |        Netaikoma        |        Average        |         Netaikoma          |
+| Libre 2/2+ (EU)             |  Average  |          None           |        Average        |            None            |
+| Libre 2/2+/3/3+             |  Average  |        Netaikoma        |       Netaikoma       |            None            |
