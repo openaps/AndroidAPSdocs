@@ -1,43 +1,43 @@
-# Making changes to your AAPS configuration
+# AAPS konfigūracijos keitimas
 
-After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
+Kai baigsite **[Sąrankos vedlį](../SettingUpAaps/SetupWizard.md)**, nereikia vėl eiti per visą vedlį, jei norite pakeisti tik dalį **AAPS** konfigūracijos.
 
-There are three routes to change **AAPS**' configuration. As to which route you take, it is simply a matter of convenience or personal preference, as each route leads to the same settings.
+**AAPS** konfigūraciją galima keisti trimis būdais. Kurį būdą rinktis, priklauso tik nuo patogumo ar jūsų pasirinkimo, nes visi būdai veda į tuos pačius nustatymus.
 
-These are as follows:
+Tai šie būdai:
 
-1. The **Configuration** screen,
-2. The **Settings** screen or
-3. A plugin's **Settings**, opened from its category in **Configuration**.
+1. Ekranas **Konfigūracija**,
+2. Ekranas **Nustatymai** arba
+3. Įskiepio **Parametrai**, atidaryti iš jo kategorijos ekrane **Konfigūracija**.
 
-Here we explain which option is most convenient for each situation:
+Čia paaiškiname, kuris būdas patogiausias kiekvienu atveju:
 
 ## Configuration
 
-Open the **menu** (☰) in the top-left corner of the main screen and choose **Configuration**:
+Atverkite **meniu** (☰) viršutiniame kairiajame pagrindinio ekrano kampe ir pasirinkite **Konfigūracija**:
 
-![Open Configuration from the top-left menu](../images/v4/Configuration/configuration_menu.png)
+![Konfigūracijos atidarymas iš meniu viršuje kairėje](../images/v4/Configuration/configuration_menu.png)
 
-**Configuration** is used to **choose which plugins are active** — your CGM, pump, APS algorithm, sensitivity detection, synchronization and more, grouped by category. It is the same screen the Setup Wizard configured for you.
+Ekranas **Konfigūracija** skirtas **pasirinkti, kurie įskiepiai yra aktyvūs**: jūsų NGJ, pompa, APS algoritmas, jautrumo nustatymas, sinchronizacija ir kt., sugrupuoti pagal kategorijas. Tai tas pats ekranas, kurį jums sukonfigūravo Sąrankos vedlys.
 
-The documentation of the Configuration screen is available [here](../SettingUpAaps/ConfigBuilder.md).
+Ekrano Konfigūracija dokumentacija yra [čia](../SettingUpAaps/ConfigBuilder.md).
 
 ## Parametrai
 
-Tap the **Settings** (gear) icon in the top-right corner of the main screen. This opens the settings of **all enabled plugins in a single place**, grouped into expandable sections:
+Palieskite piktogramą **Nustatymai** (krumpliaratį) viršutiniame dešiniajame pagrindinio ekrano kampe. Taip atveriami **visų įjungtų įskiepių nustatymai vienoje vietoje**, sugrupuoti į išskleidžiamas skiltis:
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![Ekranas Nustatymai su išskleidžiamomis skiltimis](../images/v4/Configuration/settings_overview.png)
 
-This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+Šis būdas tinka, jei nežinote, kur ieškoti konfigūracijos parinkties. Tačiau jis gali būti varginantis, jei žinote, kad norite pakeisti tik vieno konkretaus įskiepio konfigūraciją.
 
-The documentation of the settings is available [here](../SettingUpAaps/Preferences.md).
+Nustatymų dokumentacija yra [čia](../SettingUpAaps/Preferences.md).
 
-## A plugin's Settings
+## Įskiepio parametrai
 
-Inside **Configuration**, open a category and tap "**Settings**" underneath the active plugin. You are taken directly to the settings of **that plugin only**:
+Ekrane **Konfigūracija** atverkite kategoriją ir palieskite „**Parametrai**“ po aktyviu įskiepiu. Atsidarys **tik to įskiepio** nustatymai:
 
-![Settings and Open plugin underneath the active plugin](../images/v4/Configuration/configuration_open_plugin.png)
+![Mygtukai Parametrai ir Atidaryti įskiepį po aktyviu įskiepiu](../images/v4/Configuration/configuration_open_plugin.png)
 
-For example, this is a good route if you know that you want to change the configuration for your pump: open **Configuration → Pump**, then tap "**Settings**" under the selected pump.
+Pavyzdžiui, šis būdas tinka, jei žinote, kad norite pakeisti pompos konfigūraciją: atverkite **Konfigūracija → Pompa**, tada palieskite „**Parametrai**“ po pasirinkta pompa.
 
-This is a "shortcut" to the same settings shown on the general **Settings** screen.
+Tai „spartusis kelias“ į tuos pačius nustatymus, kurie rodomi bendrame ekrane **Nustatymai**.
