@@ -4,7 +4,7 @@
 
 ## Požadavky
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
+**AAPS** používá funkci Android Auto, která umožňuje přesměrovat zprávy z aplikací v mobilu na displej autorádia.
 
 To znamená, že:
 
@@ -15,7 +15,7 @@ To znamená, že:
 
 (androidauto-check-that-aaps-can-show-notifications)=
 
-## Check that AAPS can show notifications
+## Zkontrolujte, že AAPS může zobrazovat oznámení
 
 **AAPS** vždy zobrazuje stavové oznámení s vaší aktuální glykémií, IOB a COB. Toto oznámení Android Auto zobrazuje v autě. V **AAPS** není potřeba nic zapínat, ale Android musí aplikaci **AAPS** povolit zobrazovat oznámení.
 
@@ -33,11 +33,11 @@ Než půjdete k autu, zkontrolujte prosím, že v telefonu vidíte stavové ozn�
 
 (androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
-## Allow the use of "unknown sources" with Android Auto.
+## Povolte v Android Auto použití „neznámých zdrojů“.
 
 Protože **AAPS** není oficiální aplikace pro Android Auto, musí být oznámení v Android Auto povolena pro „neznámé zdroje“. K tomu se používá režim vývojáře, který vám zde ukážeme.
 
-Go to your car and connect your mobile with the car's audio system.
+Jděte k autu a připojte mobil k audiosystému auta.
 
 Nyní byste měli vidět obrazovku podobnou této.
 
@@ -81,6 +81,6 @@ Vaše data z CGM se zobrazí takto:
 
 (android-auto-troubleshooting)=
 
-## Poradce při potížích:
+## Řešení problémů:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
+* Pokud oznámení nevidíte, zkontrolujte, zda jste v Androidu [povolili AAPS zobrazovat oznámení](#androidauto-check-that-aaps-can-show-notifications) a zda má [Android Auto přístupová práva k oznámením](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
