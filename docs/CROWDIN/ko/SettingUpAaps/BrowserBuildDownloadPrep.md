@@ -1,21 +1,21 @@
-Both keystore options (Option 1 and Option 2) use the same preparation file. Download it:
+두 키 저장소 옵션(옵션 1과 옵션 2)은 같은 준비 파일을 사용합니다. 다운로드하십시오:
 
 - [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
 ````{admonition} Note
 :class: note
 
-1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
+1. 앱 안에서(웹 뷰를 통해) 이 페이지를 열면 HTML 파일이 다운로드되지 않을 수 있습니다. 이 경우 URL을 복사하여 브라우저에서 여십시오:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-Or visit the latest release page:
+또는 최신 릴리스 페이지를 방문하십시오:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2. Backup copy hosted on this site:
- - If the external link is also unavailable, you can use this backup file to download.
+2. 이 사이트에 있는 백업 사본:
+ - 외부 링크도 사용할 수 없으면 이 백업 파일로 다운로드할 수 있습니다.
 <!--crowdin:disable-->
 
 ```{eval-rst}
