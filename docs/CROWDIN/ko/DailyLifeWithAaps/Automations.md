@@ -5,406 +5,406 @@
 :depth: 2
 ```
 
-## What is an Automation?
+## 자동화란 무엇입니까?
 
-"**Automation**" is a feature which can automate tasks in AAPS.
+"**자동화**"는 AAPS에서 작업을 자동화할 수 있는 기능입니다.
 
-Automation performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a Wi-Fi SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
+자동화는 하나 이상의 조건 또는 트리거에 따라 특정 동작을 실행합니다. 트리거에는 낮은 혈당이나 높은 혈당, 또는 정해진 양의 음수 활성 인슐린(IOB) 같은 불규칙한 이벤트가 포함될 수 있습니다. 자동화는 하루 중 정해진 시간의 식사나 운동처럼 반복되는 이벤트, 또는 사용자가 GPS 위치나 Wi-Fi SSID 영역에서 특정 거리 안에 있을 때도 처리할 수 있습니다. 자동화는 일정에 따라 또는 Pod를 교체할 때마다 AAPS 설정 백업을 실행할 수 있습니다.
 
-Automation rules are created and modified from the **Automation** screen (**Manage → Automation**). Each rule is defined by two properties:
+자동화 규칙은 **자동화** 화면(**관리 → 자동화**)에서 만들고 수정합니다. 각 규칙은 두 가지 속성으로 정의됩니다:
 
-- One or more conditions or 'triggers' that start an action.
+- 동작을 시작하는 하나 이상의 조건 또는 '트리거'.
 
-    Think of a certain time schedule, an event or properties value in AAPS
+    특정 시간 일정, 이벤트 또는 AAPS의 속성 값을 생각해 보십시오
 
-- One or more actions to perform.
+- 실행할 하나 이상의 동작.
 
-    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
-
-
-There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
-
-## How Automation can help
-
-1. **Automate recurring tasks:** Automatically executing programmed actions without user interaction.
-
-1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
-
-1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**.
-
-1. **Enabling AAPS to be highly customized** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
-
-The example below illustrates how an **Automation** can enable steps to be eliminated.
-
-User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
-
-![Manual actions without automation](../images/Automations/automation_concept_manual.png)
-
-The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
-
-![Actions done by an automation](../images/Automations/automation_concept_automated.png)
-
-## Key considerations before starting with Automations
-
-1. Before setting up certain Automations, you should have reasonable **BG** control with **AAPS**. Automations should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
-
-1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
-
-1. **Requirements for Automations are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
-
-1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
-
-1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens.
-
-1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/L for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/L for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
-
-## When can I start using Automation?
-
-**Automations** can be started in **objective 10**.
-
-## Where are Automations located in AAPS?
-
-Open **Manage** in the bottom navigation of the main screen and select **Automation**.
-
-## How can I set up an Automation?
-
-To set up an **Automation**, press the **+** button on the Automation screen to create a ‘rule’:
-
-![Automation create](../images/Automations/automation_create.png)
-
-* give your ‘rule’ a title (Task name);
-* press "**EDIT**" under **Condition**. On the **Condition** screen, choose how the triggers are combined (**And**, **Or**, **Exclusive or**) and press "**Add trigger**":
-
-![Automation condition](../images/Automations/automation_trigger_editor.png)
-
-* add at least one trigger:
-
-![Automation triggers](../images/Automations/automation_triggers.png)
-
-* press "**ADD**" under **Action** and select one action:
-
-![Automation actions](../images/Automations/automation_actions.png)
-
-* save the rule with the **Save** button, and make sure the checkbox left of the rule name is ‘ticked’ to activate the **Automation**:
-
-![Automation activated](../images/Automations/automation_rule_activated.png)
-
-To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** as either activated (‘ticked') or deactivated (‘unticked’):
-
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+    예: 알람, 프로파일 퍼센트 설정, Pod 교체 시 AAPS 설정 내보내기.
 
 
-When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
+자동화 옵션은 매우 다양하므로, AAPS 앱의 자동화 섹션에서 직접 살펴보시기 바랍니다. [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers)과 [**Discord**](https://discord.gg/4fQUWHZ4Mw)의 AAPS 사용자 그룹에서 다른 사용자의 자동화 예를 검색할 수도 있습니다.
 
-![Alert actions](../images/Automations/automation_alert_actions.png)
+## 자동화가 도울 수 있는 일
+
+1. **반복 작업 자동화:** 사용자의 조작 없이 미리 설정한 동작을 자동으로 실행합니다.
+
+1. **결정 피로 줄이기:** **자동화**의 가장 큰 장점은 사용자가 **AAPS**에서 직접 개입해야 하는 부담을 덜어주는 것입니다. [연구](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4)에 따르면 1형 당뇨병이 있는 사람은 하루 평균 180가지 결정을 추가로 내려야 합니다. **자동화**는 정신적 부담을 줄여, 사용자가 삶의 다른 부분에 정신적 에너지를 쓸 수 있게 해줍니다.
+
+1. **혈당 조절 개선 가능성:** 예를 들어 **자동화**는 바쁘거나 깜빡 잊는 때에도 필요할 때 항상 **임시 목표**가 설정되도록 도와줄 수 있습니다. 예를 들어 당뇨병이 있는 아이가 학교에서 화요일 오전 10시와 목요일 오후 2시에 체육 수업이 있고, 운동 30분 전에 높은 임시 목표('TT')가 필요하다면, **자동화**로 **임시 목표**를 켤 수 있습니다.
+
+1. **AAPS를 세밀하게 맞춤 설정:** 사용자의 선호에 따라 특정 상황에서 더 공격적으로 또는 덜 공격적으로 동작하게 할 수 있습니다. 예를 들어 한밤중에 음수 **IOB**가 생기면(현재 **프로파일**이 너무 강할 수 있다는 신호) 정해진 시간 동안 **프로파일** %를 일시적으로 낮추도록 실행할 수 있습니다.
+
+아래 예는 **자동화**로 어떻게 단계를 줄일 수 있는지 보여줍니다.
+
+사용자가 매일 아침 6시에 운동을 합니다: 운동 전 5시에 AAPS에서 "임시 목표-활동"을 직접 설정하는 것을 기억해야 합니다.
+
+![자동화 없는 수동 동작](../images/Automations/automation_concept_manual.png)
+
+사용자는 6시 운동을 준비하며 **혈당**과 **IOB**가 최적이 되도록 5시에 ‘임시 목표-활동’을 실행하는 **자동화**를 설정했습니다:
+
+![자동화가 수행한 동작](../images/Automations/automation_concept_automated.png)
+
+## 자동화를 시작하기 전에 고려할 중요한 점
+
+1. 일부 자동화를 설정하기 전에 **AAPS**로 **혈당**을 어느 정도 잘 조절할 수 있어야 합니다. 자동화를 최적이 아닌 기저, **ISF** 또는 **CR** 설정을 보상하는 데 사용하면 안 됩니다 (아래에서 더 설명합니다). (_예:_ 음식으로 인한) **혈당** 상승을 보상하려고 자동 **프로파일 전환**을 설정하지 마십시오. 이런 경우는 다른 방법(SMB 등)으로 다루는 것이 더 좋습니다.
+
+1. 모든 기술과 마찬가지로 **CGM**, **펌프**, 휴대폰도 고장 날 수 있습니다: 기술적 문제나 센서 오류가 **자동화** 동작을 방해할 수 있으며, 직접 개입해야 할 수도 있습니다.
+
+1. **일상이 바뀌면 자동화에 필요한 것도 바뀔 수 있습니다**. 직장/학교/휴가 기간이 바뀔 때는 현재 활성화된 **자동화**를 검토하도록 달력에 알림을 설정하십시오 (자동화는 쉽게 활성화하고 비활성화할 수 있습니다). 예를 들어 휴가를 가서 학교 체육이나 매일 운동을 위한 자동화가 더 이상 필요 없거나, 시간을 조정해야 하는 경우입니다.
+
+1. **자동화**는 서로 충돌할 수 있습니다. 새 **자동화** 설정은 안전한 환경에서 신중하게 검토하고, **자동화**가 왜 예상대로 실행되었는지 또는 실행되지 않았는지 이해하는 것이 좋습니다.
+
+1. Autosens를 사용한다면 **프로파일 전환** 대신 **임시 목표**를 사용하십시오. **임시 목표**는 Autosens를 0으로 초기화하지 않습니다. **프로파일 전환**은 Autosens를 초기화합니다.
+
+1. 대부분의 **자동화**는 **제한된 기간** 동안만 설정해야 합니다. 그 후 필요하고 조건이 아직 맞으면 **AAPS**가 다시 평가하여 **자동화**를 반복할 수 있습니다. 예: "7.0 mmol/L 임시 목표를 30분 동안 시작" 또는 "**프로파일** 110%를 10분 동안 시작" _그리고_ "5.0 mmol/L 임시 목표를 10분 동안 시작". **자동화**로 영구적인 변경(예: 더 강한 프로파일 %)을 만들면 저혈당 위험이 있습니다.
+
+## 자동화는 언제부터 사용할 수 있습니까?
+
+**자동화**는 **목표 10**에서 시작할 수 있습니다.
+
+## AAPS에서 자동화는 어디에 있습니까?
+
+메인 화면 아래쪽 탐색 막대에서 **관리**를 열고 **자동화**를 선택하십시오.
+
+## 자동화는 어떻게 설정합니까?
+
+**자동화**를 설정하려면 자동화 화면에서 **+** 버튼을 눌러 ‘규칙’을 만드십시오:
+
+![자동화 만들기](../images/Automations/automation_create.png)
+
+* ‘규칙’에 제목(작업명)을 지정하십시오;
+* **조건** 아래의 "**편집**"을 누르십시오. **조건** 화면에서 트리거를 결합하는 방법(**그리고**, **또는**, **배타적 또는**)을 선택하고 "**트리거 추가**"를 누르십시오:
+
+![자동화 조건](../images/Automations/automation_trigger_editor.png)
+
+* 트리거를 하나 이상 추가하십시오:
+
+![자동화 트리거](../images/Automations/automation_triggers.png)
+
+* **동작** 아래의 "**추가**"를 누르고 동작 하나를 선택하십시오:
+
+![자동화 동작](../images/Automations/automation_actions.png)
+
+* **저장** 버튼으로 규칙을 저장하고, **자동화**를 활성화하려면 규칙 이름 왼쪽의 체크박스가 ‘체크’되어 있는지 확인하십시오:
+
+![활성화된 자동화](../images/Automations/automation_rule_activated.png)
+
+**자동화** 규칙을 비활성화하려면 **자동화** 이름 왼쪽의 체크박스를 해제하십시오. 아래 예는 활성화된(‘체크됨’) **자동화**와 비활성화된(‘체크 해제됨’) 자동화를 보여줍니다:
+
+![켜고 끈 자동화 규칙](../images/Automations/automation_rule_activated_deactivated.png)
+
+
+**자동화**를 설정할 때는 먼저 "동작"에서 ‘알림’ 옵션을 활성화하여 테스트할 수 있습니다. 이렇게 하면 **AAPS**는 실제로 동작을 자동 실행하지 않고 먼저 알림만 표시합니다. 알림이 올바른 시간/조건에서 실행된다고 확신하면, **자동화** 규칙에서 ‘알림’을 실제 ‘동작’으로 바꾸면 됩니다.
+
+![경고 동작](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
 
-**Automations** are still active when the Loop is disabled!
+**자동화**는 루프가 비활성화되어 있어도 계속 작동합니다!
 ```
 
 
-## When rules are checked
+## 규칙을 확인하는 시점
 
-**AAPS** checks all **Automation** rules each time a new glucose reading has been processed, so rules are evaluated at the pace of your CGM, also while the phone screen is off. Rules are also checked when the phone starts charging, when the network or location changes, and when a Bluetooth device connects. Only one check runs at a time, so a rule whose actions take a while (for example a pump command) cannot be executed twice.
+**AAPS**는 새 혈당 측정값이 처리될 때마다 모든 **자동화** 규칙을 확인합니다. 따라서 규칙은 CGM 주기에 맞춰 평가되며, 휴대폰 화면이 꺼져 있을 때도 마찬가지입니다. 규칙은 휴대폰 충전이 시작될 때, 네트워크나 위치가 바뀔 때, 블루투스 장치가 연결될 때도 확인합니다. 확인은 한 번에 하나만 실행되므로, 동작에 시간이 걸리는 규칙(예: 펌프 명령)이 두 번 실행될 수는 없습니다.
 
-## Safety limits
+## 안전 제한
 
-There are safety limits set for **Automations**:
+**자동화**에는 다음과 같은 안전 제한이 있습니다:
 
-* A **Temp Target** set by an **Automation** has to be between 72 and 180 mg/dL (or 4 and 10 mmol/L).
-* The **Profile Percentage** has to be between 50% and 130%.
-* There is a 5 minute time limit between executions of **Automation** (and first execution).
+* **자동화**로 설정하는 **임시 목표**는 72에서 180 mg/dL (또는 4에서 10 mmol/L) 사이여야 합니다.
+* **프로파일 퍼센트**는 50%에서 130% 사이여야 합니다.
+* **자동화** 실행 사이(그리고 첫 실행)에는 5분의 시간 제한이 있습니다.
 
-## Correct use of negative values
+## 음수 값의 올바른 사용
 
 ```{admonition} Warning
 :class: warning
 
-Please be careful when selecting a negative value in **Automation**
+**자동화**에서 음수 값을 선택할 때는 주의하십시오
 ```
 
-Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
+**자동화**의 ‘조건’에서 "보다 작은"처럼 ‘음수 값’을 선택할 때는 주의해야 합니다. 예를 들어:
 
-![Comparison operators](../images/Automations/automation_comparison_operators.png)
+![비교 연산자](../images/Automations/automation_comparison_operators.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/L" (or "-2mg/dL") will:
+**예 1:** **"보다 작은"** "-0.1mmol/L" (또는 "-2mg/dL") 조건을 만들면:
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
+**-0.1 (-2)보다 확실히 작은** 모든 숫자에서 **자동화**를 실행합니다. 여기에는 -0.2, -0.3, -0.4 (-4, -6, -8) 같은 숫자가 포함됩니다. -0.1 (-2) 자체는 이 조건에 **포함되지 않는다는** 것을 기억하십시오. ("-0.1mmol/L (-2 mg/dL)과 같거나 작은" 조건이라면 -0.1 mmol/L 또는 -2 mg/dL도 _포함됩니다_).
 
-**Example 2:** Creating a Condition "is greater than" -0.1mmol/L (-2mg/dL) will:
+**예 2:** "보다 큰" -0.1mmol/L (-2mg/dL) 조건을 만들면:
 
-Trigger an **Automation** for any number which is **greater than** -0.1mmol/L (-2mg/dL). This includes numbers like 0, 0.2, 0.4mmol/L, (0, 4, 8mg/dL) and any other positive number.
+-0.1mmol/L (-2mg/dL)**보다 큰** 모든 숫자에서 **자동화**를 실행합니다. 여기에는 0, 0.2, 0.4mmol/L (0, 4, 8mg/dL) 같은 숫자와 다른 모든 양수가 포함됩니다.
 
-It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.
+이런 조건과 값을 고를 때는 **자동화**의 정확한 의도를 신중하게 생각하는 것이 중요합니다.
 
 (automations-automation-triggers)=
-## Automation Triggers
+## 자동화 트리거
 
-![Automation Triggers](../images/Automations/automation_triggers.png)
+![자동화 트리거](../images/Automations/automation_triggers.png)
 
-Scroll down to see the rest of the list:
+아래로 스크롤하면 목록의 나머지가 표시됩니다:
 
-![Automation Triggers, continued](../images/Automations/automation_trigger_picker_2.png)
+![자동화 트리거 (계속)](../images/Automations/automation_trigger_picker_2.png)
 
-There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. The list below is non-exhaustive:
+사용자가 선택할 수 있는 ‘트리거’는 여러 가지가 있습니다. 트리거는 자동화가 실행되기 위해 맞아야 하는 조건입니다. 아래 목록이 전부는 아닙니다:
 
-**Trigger:** connect conditions
+**트리거:** 조건 연결
 
-**Options:**
+**옵션:**
 
-Several conditions can be linked with
-* “And”
-* “Or”
-* “Exclusive or” (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+여러 조건을 다음으로 연결할 수 있습니다
+* “그리고”
+* “또는”
+* “배타적 또는” (조건 중 하나만, 오직 하나만 맞을 때 동작이 실행된다는 뜻입니다)
 
-**Trigger:** time vs. recurring time
+**트리거:** 시간과 반복 시간
 
-**Options:**
+**옵션:**
 
-* time = single time event
-* recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+* 시간 = 한 번만 일어나는 시간 이벤트
+* 반복 시간 = 정기적으로 일어나는 일 (예: 일주일에 한 번, 평일마다 등)
 
-**Trigger:** location
+**트리거:** 위치
 
-**Options:**
+**옵션:**
 
-* in [Settings > Automation](#preferences-maintenance-settings), the user can select their required location service.
+* [설정 > 자동화](#preferences-maintenance-settings)에서 사용할 위치 서비스를 선택할 수 있습니다.
 
-**Trigger:** location service
+**트리거:** 위치 서비스
 
-**Options:**
+**옵션:**
 
-* Use passive location: **AAPS** only takes locations when other apps are requesting it.
-* Use network location: Location of your Wi-Fi.
-* Use GPS location (Attention! This can cause excessive battery drain!)
+* 패시브 위치 사용: **AAPS**는 다른 앱이 위치를 요청할 때만 위치를 가져옵니다.
+* 네트워크 위치 사용: Wi-Fi의 위치.
+* GPS 위치 사용 (주의! 배터리가 매우 빨리 소모될 수 있습니다!)
 
-**Triggers** : pump and sensor data
+**트리거** : 펌프 및 센서 데이터
 
-* Cannula age trigger: Available for all pumps
-* Insulin age trigger: Available for supported pumps
-* Battery age trigger: Available for supported pumps
-* Sensor age trigger: always available
-* Pod Activation trigger: Available for patch pumps
+* 캐뉼라 사용 기간 트리거: 모든 펌프에서 사용 가능
+* 인슐린 사용 기간 트리거: 지원되는 펌프에서 사용 가능
+* 배터리 사용 기간 트리거: 지원되는 펌프에서 사용 가능
+* 센서 사용 기간 트리거: 항상 사용 가능
+* Pod 활성화 트리거: 패치 펌프에서 사용 가능
 
-Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+사용 기간 관련 트리거는 모두 "같은" 비교로는 거의 실행되지 않습니다. 이 경우 범위를 만들려면 트리거 두 개가 필요합니다
 
-* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
-* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* 레저버 잔량 트리거: 모든 펌프에서 사용 가능. **AAPS**에서는 이 값이 항상 채워져 있으므로 "NOT\_AVAILABLE" 비교는 이 트리거에서 작동하지 않습니다
+* 펌프 배터리 레벨 트리거: 지원되는 펌프에서 사용 가능. **AAPS**에서는 이 값이 항상 채워져 있으므로 "NOT\_AVAILABLE" 비교는 이 트리거에서 작동하지 않습니다
 
 (automations-automation-action)=
-## Action
+## 동작
 
-![Automation Actions](../images/Automations/automation_actions.png)
+![자동화 동작](../images/Automations/automation_actions.png)
 
-Scroll down to see the rest of the list:
+아래로 스크롤하면 목록의 나머지가 표시됩니다:
 
-![Automation Actions, continued](../images/Automations/automation_action_picker_2.png)
+![자동화 동작 (계속)](../images/Automations/automation_action_picker_2.png)
 
-**Actions:** start **Temp Target**
+**동작:** **임시 목표** 시작
 
-**Options:**
+**옵션:**
 
-* **BG** must be between 72 mg/dL and 180 mg/dL (4 mmol/L and 10 mmol/L)
-* **TT** works only if there is no previous Temp Target — **AAPS** adds this automatically as a "**Preconditions: Temp target not exists**" line to the rule
+* **혈당**은 72 mg/dL에서 180 mg/dL (4 mmol/L에서 10 mmol/L) 사이여야 합니다
+* **TT**는 이전 임시 목표가 없을 때만 작동합니다. **AAPS**는 이를 자동으로 규칙에 "**전제 조건: 임시 목표가 없습니다**" 줄로 추가합니다
 
-**Actions:** stop **Temp Target**
+**동작:** **임시 목표** 중지
 
-**Options:**
+**옵션:**
 
 none
 
-**Actions:** **Profile Percentage**
+**동작:** **프로파일 퍼센트**
 
-**Options:**
+**옵션:**
 
-* **Profile** must be between 50% and 130%
-* works only if the previous Percentage is 100%
+* **프로파일**은 50%에서 130% 사이여야 합니다
+* 이전 퍼센트가 100%일 때만 작동합니다
 
-**Actions:** **Change smoothing** (in the **Loop & insulin** group)
+**동작:** **평활화 변경** (**루프 & 인슐린** 그룹)
 
-**Options:**
+**옵션:**
 
-* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
-* runs only if that smoothing method is not already active — **AAPS** adds this automatically as a "**Preconditions: Smoothing … is not active**" line to the rule. Once the selected smoothing is active, the rule is skipped silently.
-* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
-  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
-  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
+* 바꿀 [평활화 방법](../CompatibleCgms/SmoothingBloodGlucoseData.md)을 선택하십시오. 목록은 **구성** > **평활화**의 목록과 같으며, 이 동작은 그곳에서 바꿀 때와 똑같이 작동합니다: 새 방법이 저장되고, 페어링된 클라이언트와 동기화되며, 혈당 데이터가 바로 다시 평활화됩니다.
+* 그 평활화 방법이 아직 활성 상태가 아닐 때만 실행됩니다. **AAPS**는 이를 자동으로 규칙에 "**전제 조건: 평활화 … 비활성 상태**" 줄로 추가합니다. 선택한 평활화가 이미 활성 상태이면 규칙은 아무 표시 없이 건너뜁니다.
+* 예: 새 센서는 첫날에 노이즈가 많은 경우가 흔합니다. **센서 사용 기간** 트리거를 사용하는 두 규칙으로, 센서가 안정되는 동안에는 더 강한 필터링을 하고 그 후에는 지연 없는 평활화를 사용합니다:
+  * **센서 사용 기간** 24시간 미만: **평활화 변경**을 **Unscented Kalman Filter**로
+  * **센서 사용 기간** 24시간 초과: **평활화 변경**을 **평균 평활화**로
 
-**Actions:** **Note** (in the **Alerts** group of the list)
+**동작:** **노트** (목록의 **경고** 그룹)
 
-**Options:**
+**옵션:**
 
-* select the event to record: **Note**, **Exercise**, **Question**, **Announcement** or **Pump Site Change**, and an optional note. The name of the action changes to the event you select.
-* **Duration**: used for **Note**, **Exercise** and **Pump Site Change**. **Question** and **Announcement** have no duration: they record your current BG instead.
-* **Pump Site Change** resets the cannula age, as if you had recorded a site change by hand. Example: some pumps (like the Combo) record a reservoir change by themselves, but not the site change. If you always change both together, a rule with **Insulin age** less than 1 hour and **Cannula age** more than 24 hours can record the site change for you.
+* 기록할 이벤트를 선택하십시오: **노트**, **운동**, **질문**, **공지** 또는 **펌프 위치 변경**. 노트는 선택 사항입니다. 동작의 이름이 선택한 이벤트로 바뀝니다.
+* **기간**: **노트**, **운동**, **펌프 위치 변경**에 사용됩니다. **질문**과 **공지**에는 기간이 없습니다: 대신 현재 혈당을 기록합니다.
+* **펌프 위치 변경**은 위치 변경을 직접 기록한 것처럼 캐뉼라 사용 기간을 초기화합니다. 예: 일부 펌프(Combo 등)는 레저버 교체는 스스로 기록하지만 위치 변경은 기록하지 않습니다. 항상 둘을 함께 바꾼다면, **인슐린 사용 기간**이 1시간 미만이고 **캐뉼라 사용 기간**이 24시간 초과인 규칙으로 위치 변경을 대신 기록할 수 있습니다.
 
-![The events of the Note action](../images/Automations/automation_action_careportal_events.png) ![The Note action set to Pump Site Change](../images/Automations/automation_action_careportal_site_change.png)
+![노트 동작의 이벤트](../images/Automations/automation_action_careportal_events.png) ![펌프 위치 변경으로 설정한 노트 동작](../images/Automations/automation_action_careportal_site_change.png)
 
-**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
+**동작:** **모든 번호에 SMS 전송** (**경고** 그룹)
 
-**Options:**
+**옵션:**
 
-* enter the text of the message. It is sent to all the phone numbers allowed in the [SMS Communicator](../RemoteFeatures/SMSCommands.md) settings. The SMS Communicator plugin must be enabled.
+* 메시지 내용을 입력하십시오. [SMS 통신기](../RemoteFeatures/SMSCommands.md) 설정에서 허용된 모든 전화번호로 보냅니다. SMS 통신기 플러그인이 활성화되어 있어야 합니다.
 
-**Actions:** **Change profile to** (in the **Profile** group)
+**동작:** **다음 프로파일로 전환** (**프로파일** 그룹)
 
-**Options:**
+**옵션:**
 
-* select the **Profile** to activate. It is activated at 100%, without timeshift. If this profile is already active, the action does nothing.
+* 활성화할 **프로파일**을 선택하십시오. 시간 이동 없이 100%로 활성화됩니다. 이 프로파일이 이미 활성 상태이면 동작은 아무것도 하지 않습니다.
 
-**Actions:** **Enable/disable SMB** (in the **Loop & insulin** group)
+**동작:** **SMB 활성화/비활성화** (**루프 & 인슐린** 그룹)
 
-**Options:**
+**옵션:**
 
-* choose **On** or **Off**. This changes the **Enable SMB** setting of OpenAPS SMB, exactly as if you had changed it in **Settings**, and stays until you or another rule change it back.
+* **켬** 또는 **끔**을 선택하십시오. 이 동작은 OpenAPS SMB의 **SMB 활성화** 설정을 **설정**에서 직접 바꾼 것과 똑같이 변경하며, 사용자나 다른 규칙이 다시 바꿀 때까지 유지됩니다.
 
-**Actions:** **Run Autotune** (in the **Loop & insulin** group)
+**동작:** **Autotune 실행하기** (**루프 & 인슐린** 그룹)
 
-**Options:**
+**옵션:**
 
-* select the profile to tune and the number of days: see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule).
+* 조정할 프로파일과 일수를 선택하십시오: [자동화 규칙으로 Autotune 실행하기](#autotune-run-autotune-with-an-automation-rule)를 참조하십시오.
 
-**Actions:** **Stop processing** (in the **Loop & insulin** group)
+**동작:** **처리 중단하기** (**루프 & 인슐린** 그룹)
 
-**Options:**
+**옵션:**
 
-* none. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Add it to a rule that must take priority over the rules below it (see [the order of the Automations](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* 없음. 이 동작이 있는 규칙의 조건이 참인 동안, **AAPS**는 목록에서 그 아래에 있는 규칙을 확인하지 않습니다. 조건이 다시 거짓이 되면, 아래 규칙들은 평소처럼 확인됩니다. 아래쪽 규칙보다 우선해야 하는 규칙에 추가하십시오 ([자동화의 순서](#Automations-the-order-of-the-automations-in-the-list-matters) 참조).
 
-**Actions:** **Run scene**, **Enable scene**, **Disable scene** (in the **Scenes** group)
+**동작:** **장면 실행**, **장면 활성화**, **장면 비활성화** (**장면** 그룹)
 
-**Options:**
+**옵션:**
 
-* select the [scene](Scenes.md) to run, enable or disable.
+* 실행, 활성화 또는 비활성화할 [장면](Scenes.md)을 선택하십시오.
 
-Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
+‘동작’을 추가한 후에는 기본값을 눌러 원하는 숫자로 바꿔야 합니다.
 
-![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
+![임시 목표 동작 값](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
-## The order of the **Automations** in the list matters
- **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+## 목록에서 **자동화**의 순서가 중요합니다
+ **AAPS**는 만든 규칙을 **자동화** 목록의 맨 위부터 우선순위 순서대로 실행합니다. 예를 들어 ‘저혈당’ **자동화**가 다른 모든 규칙보다 가장 중요한 **자동화**라면, 아래처럼 이 **자동화**가 사용자의 **자동화** 목록 맨 위에 있어야 합니다:
 
 
-![List of automation rules](../images/Automations/automation_rule_list.png)
+![자동화 규칙 목록](../images/Automations/automation_rule_list.png)
 
-To reprioritize the **Automation** rules, touch and hold the **=** handle on the right side of the rule. Reorder the **Automations** by moving the rules up or down.
+**자동화** 규칙의 우선순위를 바꾸려면, 규칙 오른쪽의 **=** 핸들을 길게 누른 채 움직이십시오. 규칙을 위아래로 옮겨 **자동화**의 순서를 바꾸십시오.
 
-![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
+![자동화 규칙 순서 바꾸기](../images/Automations/automation_rule_reorder.png)
 
-## How to delete Automation rules
+## 자동화 규칙을 삭제하는 방법
 
-To delete an **Automation** rule click on the trash icon.
+**자동화** 규칙을 삭제하려면 휴지통 아이콘을 누르십시오.
 
-![Delete automation rules](../images/Automations/automation_rule_delete.png)
+![자동화 규칙 삭제](../images/Automations/automation_rule_delete.png)
 
-## Examples of Automations
+## 자동화의 예
 
-Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
+아래는 **자동화**의 예입니다. **자동화**에 대한 더 많은 논의와 사용자들이 **자동화**를 어떻게 자신에게 맞추었는지는 Facebook 토론 그룹이나 Discord에서 볼 수 있습니다. **자동화**가 어떻게 작동하는지 잘 이해하지 못한 상태에서 아래 예를 그대로 따라 하면 안 됩니다.
 
 (automations-low-glucose-temp-target)=
-### Low Glucose Temp Target
+### 저혈당 임시 목표
 
-This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
+이 **자동화**는 **혈당**이 특정 기준값 아래로 떨어지면 자동으로 **임시 목표**를 실행합니다. 여기서는 혈당이 70 mg/dL보다 낮으면 110 mg/dL 목표를 30분 동안 시작합니다:
 
-![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
+![예: 저혈당 규칙](../images/Automations/automation_example_low_glucose_rule.png)
 
-### Lunch Time Temp Target (with ‘Location’)
+### 점심 시간 임시 목표 (‘위치’ 사용)
 
-![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
+![예: 점심 규칙](../images/Automations/automation_example_lunch_rule.png)
 
-This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will not activate.
+이 **자동화**는 평일마다 거의 같은 시간에 직장에서 점심을 먹는 사용자를 위해 만든 것이며, 사용자가 설정한 ‘위치’ 안에 있을 때만 실행됩니다.  따라서 어느 날 사용자가 직장에 없으면 이 **자동화**는 실행되지 않습니다.
 
-This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive BG to 90 mg/dL (or 5 mmol/L) in preparation for lunch.
+이 **자동화**는 점심 식사를 준비하기 위해 13:00에 낮은 **임시 목표**(식사직전)를 설정하여 혈당을 90 mg/dL (또는 5 mmol/L)로 이끕니다.
 
-The ‘Trigger’ location has a name, a position (tap **Pick from map**, or use your current location) and a radius in metres, and fires when you are inside (or outside) the area:
+‘트리거’ 위치에는 이름, 위치(**지도에서 선택**을 누르거나 현재 위치 사용), 미터 단위의 반경이 있으며, 사용자가 그 지역 안에(또는 밖에) 있을 때 실행됩니다:
 
-![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
+![예: 위치 조건이 있는 점심 규칙](../images/Automations/automation_example_lunch_location_condition.png)
 
-Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location.
+‘그리고’ 연결 때문에 이 **자동화**는 ‘선택한 시간’ 동안, 그리고 사용자가 선택한 위치에 있을 때만 실행됩니다.
 
-The **Automation** will not be triggered on any other time at this location or at this time outside the 50-metre radius around the chosen position.
+이 **자동화**는 이 위치에서 다른 시간에는 실행되지 않고, 이 시간에도 선택한 위치 주변 50미터 반경 밖에서는 실행되지 않습니다.
 
-### Wi-Fi SSID Location Automation
+### Wi-Fi SSID 위치 자동화
 
-Using a Wi-Fi SSID is a good option to trigger an **Automation** while within range of a specific Wi-Fi network (compared with GPS): it is fairly precise, uses less battery, and works in enclosed spaces where GPS and other location services might not be available.
+특정 Wi-Fi 네트워크 범위 안에 있을 때 **자동화**를 실행하려면 (GPS와 비교하여) Wi-Fi SSID를 사용하는 것이 좋은 방법입니다: 꽤 정확하고, 배터리를 덜 쓰며, GPS나 다른 위치 서비스를 쓸 수 없는 실내에서도 작동합니다.
 
-Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
-
-
-The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
-and while being connected to a home Wi-Fi network (3).
+다음은 평일 아침 식사 전에만 **임시 목표**를 설정하는 또 다른 예입니다 (1).
 
 
-It will then set a **Temp Target** of 75 mg/dL for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is traveling on vacation, for instance.
+이 **자동화**는 월요일-금요일에만 오전 5:30에 (2)  
+그리고 집 Wi-Fi 네트워크에 연결되어 있을 때 실행됩니다 (3).
 
-![Wi-Fi rule: task name (1), weekday time condition (2) and Wi-Fi SSID condition (3)](../images/Automations/automation_example_wifi_rule.png)
 
-Scroll down to see the action: a **Temp Target** of 75 mg/dL for 30 minutes (4).
+그런 다음 75 mg/dL **임시 목표**를 30분 동안 설정합니다(4). 위치를 포함하는 장점 중 하나는, 예를 들어 사용자가 휴가로 여행 중일 때는 실행되지 않는다는 것입니다.
 
-![Wi-Fi rule action: Start temp target of 75 mg/dL for 30 minutes (4)](../images/Automations/automation_example_wifi_action.png)
+![Wi-Fi 규칙: 작업명(1), 평일 시간 조건(2), Wi-Fi SSID 조건(3)](../images/Automations/automation_example_wifi_rule.png)
 
-Here is the screenshot detailing the **Automation** triggers:
+아래로 스크롤하면 동작을 볼 수 있습니다: 75 mg/dL **임시 목표**를 30분 동안(4).
 
-1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
+![Wi-Fi 규칙 동작: 75 mg/dL 임시 목표를 30분 동안 시작(4)](../images/Automations/automation_example_wifi_action.png)
+
+다음은 **자동화** 트리거를 자세히 보여주는 스크린샷입니다:
+
+1) 주 “그리고” 아래 (실행하려면 두 조건이 모두 맞아야 합니다) 1) 반복 시간 = 월,화,수,목,금 오전 5:30  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
-![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
+![예: Wi-Fi 조건](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
-## Automating Preference Settings Export
+## 설정 내보내기 자동화
 
-### Unattended Exports: scheduled (daily)
+### 자동 내보내기: 일정에 따라 (매일)
 
-Screenshots detailing the Automation triggers:
+자동화 트리거를 자세히 보여주는 스크린샷:
 
-1) Condition: Recurring time = M,T,W,T,F At 8:00am 1) Action: Settings Export (For "Text in treatments" enter "Daily")
+1) 조건: 반복 시간 = 월,화,수,목,금 오전 8:00 1) 동작: 설정 내보내기 ("처치에 기록할 텍스트"에 "Daily" 입력)
 
-![Scheduled exports](../images/Automations/automation_settings_export_daily.png)
+![일정에 따른 내보내기](../images/Automations/automation_settings_export_daily.png)
 
-Note: Export execution will be logged on Careportal
+참고: 내보내기 실행은 케어포털에 기록됩니다
 
-### Unattended Exports: Pod Activation (patch pump only)
+### 자동 내보내기: Pod 활성화 (패치 펌프만)
 
-Screenshots detailing the Automation triggers:
+자동화 트리거를 자세히 보여주는 스크린샷:
 
-1) Condition: Pod Activation 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+1) 조건: Pod 활성화 1) 동작: 설정 내보내기 ("처치에 기록할 텍스트"에 "Pod Activation: settings export" 입력)
 
-![Export on Pod activation](../images/Automations/automation_settings_export_pod_activation.png)
+![Pod 활성화 시 내보내기](../images/Automations/automation_settings_export_pod_activation.png)
 
-Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Settings → Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
+참고: 내보내기 실행은 케어포털에 기록됩니다. 참고: 이전에 설정을 직접 내보낸 적이 없으면 자동화는 **전혀** 실행되지 않습니다. 자동 설정 내보내기를 올바르게 활성화하는 방법은 [설정 → 정비](#preferences-maintenance-settings)를 참조하십시오.
 
 
-## Automation Logs
+## 자동화 로그
 
-**AAPS** shows a log of the most recent **Automation** events at the bottom of the **Automation** screen, below the rules. Use it to verify that your rules triggered when you expected them to.
+**AAPS**는 **자동화** 화면 아래쪽, 규칙 아래에 최근 **자동화** 이벤트 로그를 표시합니다. 이 로그로 규칙이 예상한 때에 실행되었는지 확인하십시오.
 
-In the example below, the **Low glucose temp target** rule (1) (see [Low Glucose Temp Target](#automations-low-glucose-temp-target) above) is enabled. The log (2) shows that at 03:09 PM, glucose fell below 70 mg/dL and the rule triggered:
-* the action was "Start temp target: 110mg/dL@30 min": a **Temp Target** of 110 mg/dL for 30 minutes;
-* **OK** at the end means that the action was carried out successfully.
+아래 예에서는 **저혈당 임시 목표** 규칙(1)(위의 [저혈당 임시 목표](#automations-low-glucose-temp-target) 참조)이 활성화되어 있습니다. 로그(2)를 보면 오후 03:09에 혈당이 70 mg/dL 아래로 떨어져 규칙이 실행되었습니다:
+* 동작은 "임시 목표 시작: 110mg/dL@30 min"이었습니다: 110 mg/dL **임시 목표**를 30분 동안;
+* 끝에 있는 **OK**는 동작이 성공적으로 실행되었다는 뜻입니다.
 
-![Automation screen: an enabled rule (1) and its log entry (2)](../images/Automations/automation_example_log.png)
+![자동화 화면: 활성화된 규칙(1)과 그 로그 항목(2)](../images/Automations/automation_example_log.png)
 
 (automations-troubleshooting)=
 
 ## Troubleshooting
 
-* Problem: __My automations are not being triggered by AAPS?__
+* 문제: __AAPS가 내 자동화를 실행하지 않습니까?__
 
-Check that the box left of the **Automation** name is ‘ticked’ to ensure the rule is activated:
+규칙이 활성화되도록 **자동화** 이름 왼쪽의 체크박스가 ‘체크’되어 있는지 확인하십시오:
 
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+![켜고 끈 자동화 규칙](../images/Automations/automation_rule_activated_deactivated.png)
 
-* Problem: __My automations are being triggered in the wrong order.__
+* 문제: __내 자동화가 잘못된 순서로 실행됩니다.__
 
-Check your rule prioritization order as discussed above here.
+위에서 설명한 규칙의 우선순위 순서를 확인하십시오.
 
-* Problem: __A condition shows "Unknown trigger … - never true".__
+* 문제: __조건에 "알 수 없는 트리거 … - 항상 거짓"이 표시됩니다.__
 
-The rule contains a trigger that this version of **AAPS** cannot read, for example after you went back to an older version or imported settings from a newer one. Such a trigger is never true, so the rule does not run. It is kept unchanged, so a newer version can still use it. Edit the rule and replace the trigger, or update **AAPS**.
+규칙에 이 버전의 **AAPS**가 읽을 수 없는 트리거가 있습니다. 예를 들어 이전 버전으로 되돌아갔거나 더 새로운 버전의 설정을 가져온 경우입니다. 이런 트리거는 절대 참이 되지 않으므로 규칙이 실행되지 않습니다. 이 트리거는 그대로 보존되므로 더 새로운 버전에서는 계속 사용할 수 있습니다. 규칙을 편집하여 트리거를 바꾸거나 **AAPS**를 업데이트하십시오.
 
-## Alternatives to Automations
+## 자동화의 대안
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. 
+고급 사용자는 IFTTT나 Automate라는 타사 Android 앱을 사용하여 작업을 자동화하는 다른 방법도 사용할 수 있습니다. 
