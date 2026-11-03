@@ -8,10 +8,10 @@ Ein Glukoseziel, insbesondere wenn es nur kurz (weniger als 4 Stunden) gültig i
 
 Temporäre Ziele können innerhalb dieser Grenzen definiert werden:
 
-|         | Temporäres Ziel        |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/L or 72 mg/dL   |
-| Maximum | 10 mmol/L or 180 mg/dL |
+|         | Temporäres Ziel          |
+| ------- | ------------------------ |
+| Minimum | 4 mmol/L or 72 mg/dL     |
+| Maximum | 10 mmol/l oder 180 mg/dl |
 
 **AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). They live on the **Temp Target** screen (**Manage** → **Temp Target**), which you can also open by simply tapping the **target chip** on the main screen.
 
