@@ -5,9 +5,9 @@
 
 -   Download and Install the apk from <https://play.google.com/store/apps/details?id=com.ottai.seas>. For the Chinese version of Ottai use <https://ottai.com.cn/70ICjxAI4i>
 
--   Start sensor
+-   Paleiskite jutiklį
 
-- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source) pasirinkite **Syai/Ottai**.
 
 Enable broadcast in the Ottai app:
 
