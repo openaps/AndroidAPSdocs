@@ -1,93 +1,93 @@
-# DanaRS, Dana-i and Dana-i2
+# DanaRS, Dana-i ir Dana-i2
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards, a Dana-i or a Dana-i2. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*
+*Naudokitės šiomis instrukcijomis, jei turite DanaRS (nuo 2017 m.), Dana-i arba Dana-i2 pompą. Jei vietoj jos turite originalią DanaR, žr. [DanaR insulino pompa](./DanaR-Insulin-Pump.md).*
 
-**Dana-i2 can be used from AAPS version 4.0 onwards.** It uses the same **Dana-i/RS** driver as the Dana-i.
+**Dana-i2 galima naudoti nuo AAPS 4.0 versijos.** Ji naudoja tą pačią **Dana-i/RS** tvarkyklę kaip ir Dana-i.
 
-* In DanaRS/i/i2 pump "BASAL A" is used by the app. Existing data gets overwritten.
+* DanaRS/i/i2 pompoje programėlė naudoja „BASAL A“. Esami duomenys perrašomi.
 
-    {contents} Table of contents
+    {contents} Turinys
     :depth: 1
     :local: true
 
 ## Pump capabilities with AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually (see [Timezone traveling](#timezone-traveling-danarv2-danars)).
+* Su **AAPS** ryšį palaiko per telefono įtaisytą Bluetooth, be papildomo ryšio įrenginio.
+* Vasaros ir žiemos laiko bei laiko juostų pakeitimus reikia tvarkyti rankiniu būdu (žr. [Keliavimas per laiko juostas](#timezone-traveling-danarv2-danars)).
 
 (DanaRS-Insulin-Pump-pairing-pump)=
 
 ## Pompos susiejimas
 
-* Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-* Tap **Pump** and select **Dana-i/RS**.
+* **AAPS** pagrindinio ekrano kairiajame viršutiniame kampe atidarykite **meniu** (☰) ir pasirinkite **Konfigūracija**.
+* Spauskite **Pompa** ir pasirinkite **Dana-i/RS**.
     
-    ![Configuration > Pump with the Dana-i/RS plugin](../images/v4/Configuration/configuration_pump_list_2.png)
+    ![Konfigūracija > Pompa su Dana-i/RS įskiepiu](../images/v4/Configuration/configuration_pump_list_2.png)
     
-    Once it is selected, the **Dana-i/RS** card shows two buttons, **Settings** and **Open plugin**:
+    Kai jis pasirinktas, **Dana-i/RS** kortelėje rodomi du mygtukai – **Parametrai** ir **Atidaryti įskiepį**:
     
-    ![The Dana-i/RS plugin selected in Configuration > Pump](../images/v4/Pumps/dana_i_rs_enabled.png)
+    ![Dana-i/RS įskiepis, pasirinktas skiltyje Konfigūracija > Pompa](../images/v4/Pumps/dana_i_rs_enabled.png)
     
-    **Settings** opens the settings of the Dana-i/RS driver:
+    **Parametrai** atveria Dana-i/RS tvarkyklės nustatymus:
     
-    ![Dana-i/RS driver settings](../images/v4/Pumps/dana_i_rs_settings.png)
+    ![Dana-i/RS tvarkyklės nustatymai](../images/v4/Pumps/dana_i_rs_settings.png)
     
-    **Open plugin** (or **Manage** > **Pump**) opens the Dana-i/RS pump screen. Before a pump is paired it looks like this:
+    **Atidaryti įskiepį** (arba **Valdymas** > **Pompa**) atveria Dana-i/RS pompos ekraną. Kol pompa nesusieta, jis atrodo taip:
     
-    ![Dana-i/RS pump screen before pairing](../images/v4/Pumps/dana_i_rs_pump_screen.png)
+    ![Dana-i/RS pompos ekranas prieš susiejimą](../images/v4/Pumps/dana_i_rs_pump_screen.png)
 
-* On the pump screen, tap **Pairing**. **AAPS** scans for nearby pumps.
+* Pompos ekrane spauskite **Susiejimas**. **AAPS** ieško netoliese esančių pompų.
 
-* Tap the entry for your pump in the list.
+* Sąraše spauskite savo pompą.
     
-    ![The Pairing screen listing a Dana pump found by the scan](../images/DanaRS_i_Pairing.png)
+    ![Susiejimo ekranas su paieškos metu rasta Dana pompa](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** This works the same way as other Bluetooth pairings you may know (for example, smartphone and car audio).
+* **Susiejimą turite patvirtinti pompoje!** Tai veikia taip pat, kaip kiti jums žinomi Bluetooth susiejimai (pavyzdžiui, išmaniojo telefono ir automobilio garso sistemos).
     
-    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+    ![Dana RS susiejimo patvirtinimas](../images/DanaRS_Pairing.png)
 
-* Follow the pairing process based on the type and firmware of your pump:
+* Susiekite pompą pagal jos tipą ir programinės įrangos versiją:
     
-    * For DanaRS v1, **AAPS** asks for the **Pump password (v1 only)**. Enter your pump password (see [Default password](#DanaRS-Insulin-Pump-default-password)).
-    * For DanaRS v3, **AAPS** asks you to press OK on the pump and type the 2 sequences of numbers and letters shown on the pump. Keep the pump display on by pressing the minus button until you have finished. Then tap **Done**.
-    * For Dana-i and Dana-i2, the standard Android pairing dialog appears. Enter the 6-digit number shown on the pump.
+    * DanaRS v1 atveju **AAPS** paprašo įvesti **Pompos slaptažodis (tik v1)**. Įveskite pompos slaptažodį (žr. [Numatytasis slaptažodis](#DanaRS-Insulin-Pump-default-password)).
+    * DanaRS v3 atveju **AAPS** paprašo paspausti pompoje OK ir įvesti 2 skaičių ir raidžių sekas, rodomas pompoje. Kol baigsite, laikykite pompos ekraną įjungtą spaudydami minuso mygtuką. Tada spauskite **Baigta**.
+    * Dana-i ir Dana-i2 atveju atsiranda standartinis Android susiejimo langas. Įveskite pompoje rodomą 6 skaitmenų skaičių.
 
-* When **Pairing successful!** is shown, tap **Done**.
+* Kai rodoma **Sėkmingai susieta!**, spauskite **Baigta**.
     
-    ![Pairing successful!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
+    ![Sėkmingai susieta!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
     
-    You are back on the pump screen, which now shows your pump's status.
+    Grįžtate į pompos ekraną, kuriame dabar rodoma jūsų pompos būsena.
     
-    ![Dana-i/RS pump screen after pairing](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
+    ![Dana-i/RS pompos ekranas po susiejimo](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
 
-* In **Settings**, select **Bolus speed** to change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
+* Skiltyje **Parametrai** pasirinkite **Boluso greitis**, kad pakeistumėte numatytąjį boluso greitį (12 s/U, 30 s/U arba 60 s/U).
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
-* Set bolus step on pump to 0.05 U using Doctors menu (see pump user guide). **AAPS** reads the basal and bolus steps from the pump and uses them for every bolus, so a bolus always matches the step set on the pump. The pump screen shows them in the **Basal/Bolus step** row.
+* Pompoje per gydytojo meniu (Doctors menu) nustatykite valandinės bazės žingsnį 0,01 V/val. (žr. pompos naudotojo vadovą).
+* Pompoje per gydytojo meniu (Doctors menu) nustatykite boluso žingsnį 0,05 V (žr. pompos naudotojo vadovą). **AAPS** nuskaito valandinės bazės ir boluso žingsnius iš pompos ir naudoja juos kiekvienam bolusui, todėl bolusas visada atitinka pompoje nustatytą žingsnį. Pompos ekrane jie rodomi eilutėje **Bazės / boluso žingsnis**.
 * Įgalinkite ištęstus bolusus pompoje
 
-### Options shown only for some models
+### Parinktys, rodomos tik kai kuriuose modeliuose
 
-* **Auto lock**: on a Dana-i2, the **User options** screen (on the pump screen, **Manage** > **Pump**) has an **Auto lock** switch for the pump's auto lock setting. Press **Save options to pump** after changing it.
-* **Easy mode**: on pump models that have an easy menu mode, the pump screen shows an **Easy mode** row with **On** or **Off**.
-* If a Dana-i2 refuses a bolus, **AAPS** shows the reason, for example *Pump is not primed*, *Not enough insulin in the reservoir* or *Easy sleep mode is on in the pump*.
+* **Automatinis užraktas**: Dana-i2 ekrane **Naudotojo parinktys** (pompos ekrane, **Valdymas** > **Pompa**) yra jungiklis **Automatinis užraktas** pompos automatinio užrakto nustatymui. Jį pakeitę, paspauskite **Išsaugoti nustatymus pompoje**.
+* **Supaprastintas režimas**: pompų modeliuose, kurie turi supaprastinto meniu režimą, pompos ekrane rodoma eilutė **Supaprastintas režimas** su reikšme **Įjungti** arba **Išjungti**.
+* Jei Dana-i2 atsisako suleisti bolusą, **AAPS** parodo priežastį, pavyzdžiui, *Pompa neužpildyta*, *Rezervuare nepakanka insulino* arba *Pompoje įjungtas supaprastintas miego režimas*.
 
 (DanaRS-Insulin-Pump-default-password)=
 
 ### Numatytasis slaptažodis
 
 * Pompos DanaRS su programine įranga v1 ir v2 numatytasis slaptažodis yra 1234.
-* For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24).
+* DanaRS su programine įranga v3 ir Dana-i numatytasis slaptažodis gaunamas iš pagaminimo datos ir yra MMDD, kur MM yra mėnuo, o DD – diena, kai pompa buvo pagaminta (pvz., „0124“ reiškia 01 mėnesį ir 24 dieną).
     
-    * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
-    * Number 3 is manufacturing date. 
-    * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AAPS.
+    * Pagrindiniame meniu (MAIN MENU) pasirinkite REVIEW, tada submeniu atidarykite SHIPPING INFORMATION
+    * 3 numeriu pažymėta pagaminimo data. 
+    * v3/i versijose šis slaptažodis naudojamas tik pompos meniu užrakinti. Jis nenaudojamas ryšiui ir jo nereikia įvesti AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
 
 ## Slaptažodžio keitimas pompoje
 
-* paspauskite OK mygtuką pompoje
+* Paspauskite pompos mygtuką OK
 * Pagrindiniame meniu pasirinkite „OPTION“ (judėkite dešinėn kelis kartus paspausdami rodyklės mygtuką)
     
     ![DanaRS pagrindinis meniu](../images/DanaRSPW_01_MainMenu.png)
@@ -102,7 +102,7 @@
 
 * Paspauskite OK senojo slaptažodžio įvedimui.
 
-* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
+* Įveskite **senąjį slaptažodį** (numatytąjį slaptažodį žr. [aukščiau](#DanaRS-Insulin-Pump-default-password)) ir paspauskite OK
     
     ![DanaRS Įveskite seną slaptažodį](../images/DanaRSPW_04_11PWenter.png)
 
@@ -114,11 +114,11 @@
 
 * Patvirtinkite paspausdami OK mygtuką.
 
-* Press OK to save setting.
+* Paspauskite OK, kad išsaugotumėte nustatymą.
     
     ![DanaRS išsaugoti naują slaptažodį](../images/DanaRSPW_06_PWnewSave.png)
 
-* Pereikite žemyn į „14. EXIT" and press OK to exit.
+* Pereikite žemyn į „14. EXIT“ ir paspauskite OK, kad išeitumėte.
     
     ![DanaRS Išėjimas](../images/DanaRSPW_07_Exit.png)
 
@@ -128,44 +128,44 @@
 
 ### Klaida suleidžiant insuliną
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+Jei boluso leidimo metu nutrūksta ryšys tarp AAPS ir Dana RS (pvz., nueinate nuo telefono, kol Dana RS leidžia insuliną), pamatysite toliau parodytą pranešimą ir išgirsite aliarmą.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Aliarmas leidžiant insuliną](../images/DanaRS_Error_bolus.png)
 
 * Dažniausiai tai tik ryšio klaida ir visas insulino kiekis sėkmingai suleidžiamas.
-* Check in the pump history that the correct bolus was given. You can do this on the pump itself, or in **AAPS** on the pump screen (**Manage** > **Pump**) > **Pump history** > **Boluses**.
-* Delete the error entry in [treatments](#screens-bolus-carbs) if you wish.
-* The real amount is read and recorded at the next connection. To force this, tap **Refresh** on the pump screen, or just wait for the next connection.
+* Pompos istorijoje patikrinkite, ar buvo suleistas teisingas bolusas. Tai galite padaryti pačioje pompoje arba **AAPS** pompos ekrane (**Valdymas** > **Pompa**) > **Pompos istorija** > **Bolusai**.
+* Jei norite, ištrinkite klaidos įrašą [terapijoje](#screens-bolus-carbs).
+* Tikrasis kiekis nuskaitomas ir įrašomas kito prisijungimo metu. Norėdami tai padaryti iš karto, pompos ekrane spauskite **Atnaujinti** arba tiesiog palaukite kito prisijungimo.
 
 ## Specialūs veiksmai keičiant telefoną
 
-When switching to a new phone the following steps are necessary:
+Keičiant telefoną reikia atlikti šiuos veiksmus:
 
 * [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
-* Transfer settings from old to new phone
+* Perkelkite nustatymus iš seno telefono į naują
 
 ### DanaRS v1
 
-* **Manually pair** Dana RS with the new phone
-* If you tick **Also replace pump settings** when importing, the pump connection settings are imported too and AAPS on your new phone will already "know" the pump and therefore not start a Bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AAPS on the new phone.
-* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
+* **Rankiniu būdu susiekite** Dana RS su nauju telefonu
+* Jei importuodami pažymėsite **Taip pat pakeisti pompos nustatymus**, bus importuoti ir pompos ryšio nustatymai, todėl AAPS naujame telefone jau „žinos“ pompą ir nepradės Bluetooth paieškos. Therefore new phone and pump must be paired manually.
+* Įdiekite AAPS naujame telefone.
+* [Importuokite nustatymus](../Maintenance/ExportImportSettings.md) naujajame telefone
 
 ### DanaRS v3, Dana-i, Dana-i2
 
-* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
-* Sometimes you may need to clear the pairing information in **AAPS** first. On the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**. Then tap **Pairing** again.
+* Pradėkite susiejimą, kaip aprašyta [aukščiau](#DanaRS-Insulin-Pump-pairing-pump).
+* Kartais pirmiausia gali reikėti išvalyti susiejimo informaciją **AAPS**. Pompos ekrane (**Valdymas** > **Pompa**) spauskite **Atsieti** ir patvirtinkite **Panaikinti susiejimo informaciją?**. Tada vėl spauskite **Susiejimas**.
 
-## Timezone traveling with DanaRS, Dana-i and Dana-i2 pumps
+## Keliavimas per laiko juostas su DanaRS, Dana-i ir Dana-i2 pompomis
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+Apie keliones per laiko juostas žr. skyrių [Keliavimas per laiko juostas su pompomis](#timezone-traveling-danarv2-danars).
 
 ## Where to get help
 
-Development of the DanaRS/Dana-i/Dana-i2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+DanaRS/Dana-i/Dana-i2 tvarkyklę kuria bendruomenė **savanoriškai**. Prieš prašydami pagalbos:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Perskaitykite** atitinkamą šios dokumentacijos skyrių ir įsitikinkite, kaip funkcija turi veikti.
+2. **Klauskite** *#AAPS* kanale [Discord](https://discord.gg/4fQUWHZ4Mw) arba kitame [bendruomenės kanale](../GettingHelp/WhereCanIGetHelp.md).
+3. **Praneškite apie klaidą**: pirmiausia paieškokite tarp [esamų problemų (issues)](https://github.com/nightscout/AndroidAPS/issues); jei jūsiškės nėra, sukurkite [naują problemą (issue)](https://github.com/nightscout/AndroidAPS/issues) ir pridėkite savo [žurnalų failus](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Prašydami pagalbos, nurodykite telefono gamintoją ir modelį, Android versiją, **AAPS** versiją ir paprastais žodžiais aprašykite problemą (kas pasikeitė, kada paskutinį kartą veikė).
