@@ -30,7 +30,7 @@
 
 Android дава на всяка версия на системата **ниво на API** (API level) – число, което се използва от приложенията. Например ниво на API 30 е Android 11. Таблицата по-долу използва нивата на API от данните за версиите на AAPS. Версията на AAPS във всеки ред е стойността, посочена за показаното ниво на API. Това не е пълен списък на версиите, които можете да инсталирате.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
+За да изберете версия на AAPS за телефона си, използвайте [указанията за версията на Android в бележките към версиите](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
