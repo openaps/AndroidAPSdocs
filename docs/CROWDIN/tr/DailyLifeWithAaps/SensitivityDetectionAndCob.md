@@ -2,9 +2,9 @@
 
 # Duyarlılık algılama
 
-## Sensitivity algorithm
+## Duyarlılık algoritması
 
-**AAPS** currently offers 3 sensitivity detection models:
+**AAPS** şu anda 3 duyarlılık algılama modeli sunar:
 
 * AAPS duyarlılık
 * Ağırlıklı ortalama duyarlılık
@@ -12,23 +12,23 @@
 
 ### AAPS duyarlılık
 
-Sensitivity is calculated the same way as in Oref1, but you can specify the time range to look back on. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences.
+Duyarlılık, Oref1'deki ile aynı şekilde hesaplanır, ancak geriye doğru bakılacak zaman aralığını belirleyebilirsiniz. Minimum karbonhidrat emilimi, tercihlerde ayarlanan maksimum karbonhidrat emilim süresinden hesaplanır.
 
 ### Ağırlıklı ortalama duyarlılık
 
-Sensitivity is calculated as a weighted average of the deviations. You can specify the time range to look back on. Newer deviations have a higher weight. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences. This algorithm is the fastest in following sensitivity changes.
+Duyarlılık, sapmaların ağırlıklı ortalaması olarak hesaplanır. Geriye doğru bakılacak zaman aralığını belirleyebilirsiniz. Daha yeni sapmaların ağırlığı daha yüksektir. Minimum karbonhidrat emilimi, tercihlerde ayarlanan maksimum karbonhidrat emilim süresinden hesaplanır. Bu algoritma, duyarlılık değişikliklerini en hızlı izleyen algoritmadır.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
 ### Oref1 duyarlılık
 
-Sensitivity is calculated from the last 8 hours of data, or from the last site change if it is less than 8 hours ago. Carbs (if not absorbed) are cut after the time specified in the preferences. Yalnızca Oref1 algoritması, bildirilmemiş öğünleri (UAM) destekler. This means that times with detected UAM are excluded from the sensitivity calculation. So if you are using SMB with UAM, you have to choose the Oref1 algorithm for it to work properly. For more information about UAM, see the [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb) section.
+Duyarlılık son 8 saatin verilerinden veya son kanül değişimi 8 saatten daha yakın bir zamanda yapıldıysa son kanül değişiminden bu yana olan verilerden hesaplanır. Karbonhidratlar (emilmediyse) tercihlerde belirtilen süreden sonra kesilir. Yalnızca Oref1 algoritması, bildirilmemiş öğünleri (UAM) destekler. Bu, UAM algılanan zamanların duyarlılık hesaplamasının dışında tutulduğu anlamına gelir. Bu nedenle SMB'yi UAM ile kullanıyorsanız, düzgün çalışması için Oref1 algoritmasını seçmeniz gerekir. UAM hakkında daha fazla bilgi için [Süper Mikro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb) bölümüne bakın.
 
-Oref1 is the recommended option: it is the only one that can detect UAM and work with [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Önerilen seçenek Oref1'dir: UAM'yi algılayabilen ve daha yeni algoritma olan [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb) ile çalışabilen tek seçenektir.
 
 ## Eşzamanlı karbonhidratlar
 
-There is a significant difference between the Sensitivity AAPS and WeightedAverage algorithms on one side, and Oref1 on the other, when several meals overlap.
+Birkaç öğün üst üste geldiğinde, bir yanda AAPS duyarlılık ve WeightedAverage algoritmaları, diğer yanda Oref1 arasında önemli bir fark vardır.
 
-* Oref1 expects only one meal decaying at a time: the second meal starts decaying after the first meal is completely decayed.
-* Sensitivity AAPS and WeightedAverage start decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to the meal size and the max absorption time. The minimum absorption will accordingly be higher in comparison to Oref1.
+* Oref1 aynı anda yalnızca bir öğünün emildiğini varsayar: ikinci öğün, ilk öğün tamamen emildikten sonra emilmeye başlar.
+* AAPS duyarlılık ve WeightedAverage, karbonhidratları girdiğiniz anda emilime başlar. Vücutta birden fazla öğün varsa, minimum karbonhidrat emilimi öğünün büyüklüğüne ve maksimum emilim süresine göre ayarlanır. Buna göre minimum emilim, Oref1'e kıyasla daha yüksek olur.
