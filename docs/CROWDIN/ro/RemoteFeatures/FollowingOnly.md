@@ -1,8 +1,8 @@
 # Urmărirea AAPS (fără interacțiune cu sistemul AAPS)
 
-În plus față de gama de posibilități disponibile pentru controlul de la distanță _și_ urmărire a **AAPS** care sunt descrise în [control la distanță](../RemoteFeatures/RemoteControl.md), există mai multe aplicații și dispozitive suplimentare pe care comunitatea le-a dezvoltat, să urmărească pur și simplu numerele (nivelul de glicemie și alte informații), fără a interacționa cu **AAPS**.
+În plus față de gama de posibilități disponibile pentru controlul de la distanță _și_ urmărire a **AAPS** care sunt descrise în [Controlul de la distanță al AAPS](../RemoteFeatures/RemoteControl.md), există mai multe aplicații și dispozitive suplimentare pe care comunitatea le-a dezvoltat, să urmărească pur și simplu numerele (nivelul de glicemie și alte informații), fără a interacționa cu **AAPS**.
 
-O bună imagine de ansamblu a opțiunilor vaste disponibile pentru a urmări **AAPS** este pe pagina web [Nightscout](https://nightscout.github.io/nightscout/downloaders/#).
+O bună imagine de ansamblu a numeroaselor opțiuni disponibile pentru a urmări **AAPS** se află pe pagina web [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#).
 
 ```{contents} Table of contents
 :depth: 1
@@ -38,8 +38,8 @@ Trebuie să instalați aplicația oficială Dexcom, să trimiteți invitația ș
 
 Pașii în acest sens sunt următorii:
 
-1) Instalați aplicația oficială "Dexcom" pe _orice telefon inteligent_ (Android/iPhone), acesta poate fi telefonul urmăritor dacă este mai convenabil. 2) Autentificați-vă cu numele de utilizator și parola Dexcom, acestea sunt aceleași detalii de autentificare pe care le-ați folosi pentru Dexcom Clarity, dacă sunteți deja un client Dexcom/Clarity. Dacă nu ai un cont Dexcom, există opțiunea de a crea o nouă autentificare în acest moment.   
-3) Glisați prin meniurile introductive. 4) Adăugați "niciun cod" pentru codul senzorului. 5) Sub Transmitter SN selectați "enter manually" și introduceți orice cod valid pentru transmițători (utilizați unul dintre codurile dumneavoastră pentru transmițătorii expirați. dacă știți unul, astfel încât nu interferează cu rularea transmițătorului curent, să aibă un format specific de anumite numere și litere: "NLNNL" și să utilizeze numai anumite combinații, deci este cel mai ușor să folosiți unul pe care deja îl știți valid). 6) Odată ce aplicația încearcă să găsească transmițătorul și senzorul, veți putea invita urmăritori: selectați cele trei puncte mici din stânga sus a aplicației și adăugați un nou urmăritor. De asemenea, poți folosi acest lucru dacă unul dintre urmăritorii tăi și-a schimbat dispozitivul manual și are nevoie de o invitație nouă, aici le puteți șterge din lista de urmăritori și retrimiteți un nou e-mail de invitație pe care îl puteți utiliza la noul lor dispozitiv mobil. 7) Pe telefonul urmăritorului, instalați Dexcom Follow prin descărcarea acesteia din App Store (iPhone) sau Play (Android). Configurați aplicația Dexcom Follow, și vi se va solicita să vă deschideți e-mailul pentru a găsi invitația pentru a fi urmăritor.    
+1) Instalați aplicația oficială "Dexcom" pe _orice telefon inteligent_ (Android/iPhone), acesta poate fi telefonul de urmărire dacă este mai convenabil. 2) Autentificați-vă cu numele de utilizator și parola Dexcom, acestea sunt aceleași detalii de autentificare pe care le-ați folosi pentru Dexcom Clarity, dacă sunteți deja un client Dexcom/Clarity. Dacă nu ai un cont Dexcom, există opțiunea de a crea o nouă autentificare în acest moment.   
+3) Glisați prin meniurile introductive. 4) Adăugați "niciun cod" pentru codul senzorului. 5) Sub Transmitter SN selectați "enter manually" și introduceți orice cod valid pentru transmițători (utilizați unul dintre codurile dumneavoastră pentru transmițătorii expirați. dacă știți unul, astfel încât nu interferează cu rularea transmițătorului curent, să aibă un format specific de anumite numere și litere: "NLNNL" și să utilizeze numai anumite combinații, deci este cel mai ușor să folosiți unul pe care deja îl știți valid). 6) Odată ce aplicația încearcă să găsească transmițătorul și senzorul, veți putea invita urmăritori: selectați cele trei puncte mici din stânga sus a aplicației și adăugați un nou urmăritor. De asemenea, poți folosi acest lucru dacă unul dintre urmăritorii tăi și-a schimbat dispozitivul manual și are nevoie de o invitație nouă, aici le puteți șterge din lista de urmăritori și retrimiteți un nou e-mail de invitație pe care îl puteți utiliza la noul lor dispozitiv mobil. 7) Pe telefonul de urmărire, instalați Dexcom Follow prin descărcarea acesteia din App Store (iPhone) sau Play (Android). Configurați aplicația Dexcom Follow, și vi se va solicita să vă deschideți e-mailul pentru a găsi invitația pentru a fi urmăritor.    
 8) Acum puteți șterge aplicația oficială Dexcom G6.
 
 For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip, depending on which app you are using.
@@ -82,7 +82,7 @@ Dezavantaje (așa cum au fost raportate de utilizatori)
 
 * The user can be alerted with customized noisy low and high alarms set.
 
-* Datele privind glicemia pot fi vizualizate fie în mmol/l, fie în mg/dl.
+* Datele de glicemie pot fi vizualizate fie în mmol/L, fie în mg/dL.
 
 * Necesită Android 5.0 și mai mare.
 
@@ -114,14 +114,14 @@ If your **AAPS** data source is not xDrip but you can display BG data from the C
 
 ![imagine](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
+xDripSwift a fost creat prin portarea aplicației originale xDrip pe iOS și a evoluat în „xDrip for iOS”, scris ca **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
-[grupul de Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) este principala comunitate de suport pentru xDrip4iOS și Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). 
+[Grupul de Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) este principala comunitate de sprijin pentru xDrip4iOS și Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). 
 
-"How can I get **xDrip4iOS** on my iPhone?"
-There are two options:
+„Cum pot obține **xDrip4iOS** pe iPhone-ul meu?”
+Există două opțiuni:
 
 1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by [following the instructions](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
 
@@ -150,14 +150,14 @@ Grupul de Facebook [xDrip4iOS](https://www.facebook.com/groups/853994615056838/a
 * Apple iPad (Necesită software versiunea 13.0 sau mai târziu)
 * Google Android (salvați aplicația web pe ecranul de pornire)
 
-S-a raportat de către utilizatorii Sugarmate că poate fi folosit cu Apple CarPlay în SUA pentru a afișa citirile de glucoză în timpul conducerii. Încă nu s-a stabilit dacă acest lucru este posibil în țările din afara SUA. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
+S-a raportat de către utilizatorii Sugarmate că poate fi folosit cu Apple CarPlay în SUA pentru a afișa citirile de glucoză în timpul conducerii. Încă nu s-a stabilit dacă acest lucru este posibil în țările din afara SUA. Dacă știți mai multe despre acest lucru, vă rugăm să adăugați detalii aici, în documentație, printr-o [propunere de modificare (pull request)](../SupportingAaps/HowToEditTheDocs.md), care se face rapid și ușor.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
 
 ![imagine](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
-Spike poate fi folosit ca receptor primar sau ca aplicație urmăritor, furnizând glicemii, alarme și IOB și multe altele.
+Spike poate fi folosit ca receptor primar sau ca aplicație de urmărire, furnizând glicemii, alarme și IOB și multe altele.
 
 Website-ul și aplicația nu mai sunt dezvoltate. Sprijin poate fi găsit pe [Facebook](https://www.facebook.com/groups/1973791946274873) și [Gitter](https://gitter.im/SpikeiOS/Lobby).
 
@@ -188,10 +188,10 @@ SugarPixel este un dispozitiv pentru un sistem secundar de alertă pentru afișa
 ![imagine](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
 * SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with color-coded glucose values.
-* Fața standard afișează glicemia, săgeata de tendință și delta. Delta este schimbarea cu + sau - de la ultima citire.
+* Ecranul standard afișează glicemia, săgeata de tendință și delta. Delta este schimbarea cu + sau - de la ultima citire.
 * SugarPixel can be customized for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand.
 * SugarPixel’s color face uses the entire display to show a single color representing the BG value. Acest lucru permite utilizatorului să vadă citirile glicemiei la distanță prin fereastră în timp ce se joacă în curtea din spate, terasă sau piscină.
-* Fața mare a glicemiei este utilă pentru utilizatorii nocturni care poartă ochelari sau lentile de contact.
+* Ecranul Big BG (glicemie mare) este util pentru cei care țin dispozitivul pe noptieră și poartă ochelari sau lentile de contact.
 
 ### Ceas Nightscout pe Ulanzi TC001
 
@@ -199,9 +199,9 @@ SugarPixel este un dispozitiv pentru un sistem secundar de alertă pentru afișa
 
 ![Urmărirea ceasului Nightscout](../images/FollowingNightscoutClock.png)
 
-* Ceasul acceptă atât unități mmol/l, cât și mg/dl și include alarme sonore.
+* Ceasul acceptă atât unități mmol/L, cât și mg/dL și include alarme sonore.
 * Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
-* Setarea și configurarea dispozitivului implică doar câțiva pași simpli. Odată configurat, are nevoie doar de pornire și Wi-Fi pentru a funcționa.
+* Setarea și configurarea dispozitivului implică doar câțiva pași simpli. Odată configurat, are nevoie doar de alimentare electrică și de Wi-Fi pentru a funcționa.
 * Dispozitivul Ulanzi TC001 este semnificativ mai ieftin decât SugarPixel.
 * Programul și instrucțiunile de instalare pot fi găsite pe [Github Nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
 * Acesta este dezvoltat și întreținut de Artiom Kenibasov, oferind suport pe grupul [Facebook AAPS Users group](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/).
