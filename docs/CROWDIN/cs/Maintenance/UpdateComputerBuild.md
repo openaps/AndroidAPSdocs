@@ -5,7 +5,7 @@
 **AAPS** nelze stáhnout kvůli předpisům pro zdravotnické prostředky. Sestavit si aplikaci pro vlastní použití je legální, ale nesmíte dávat kopii jiným! Podrobnosti najdete na stránce [Nejčastější otázky uživatelů APS](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Potom místo tohoto návodu postupujte podle [postupu pro první sestavení **AAPS**](../SettingUpAaps/BuildingAaps.md). Jediný rozdíl je v tom, že místo vytvoření nového úložiště klíčů můžete vybrat to, které jste zkopírovali do nového počítače.
+Pokud chcete **AAPS** sestavit na novém počítači: zkopírujte do nového počítače záložní soubor úložiště klíčů. Potom místo tohoto návodu postupujte podle [postupu pro první sestavení **AAPS**](../SettingUpAaps/BuildingAaps.md). Jediný rozdíl je v tom, že místo vytvoření nového úložiště klíčů můžete vybrat to, které jste zkopírovali do nového počítače.
 ```
 
 ## Přehled aktualizace na novou verzi AAPS pomocí Android Studia
@@ -53,7 +53,7 @@ Minimální požadovaná verze je popsána v [návodu k sestavení](#Building-AP
 * Počkejte, než stahování skončí. Průběh uvidíte jako informaci ve spodní liště. Po dokončení uvidíte zprávu o úspěchu.
 
   ```{note}
-  Aktualizované soubory se mohou lišit! This is not an indication of a problem.
+  Aktualizované soubory se mohou lišit! Neznamená to, že je něco v nepořádku.
   ```
 
    ![Android Studio – Pull úspěšný](../images/update/06_GitPullSuccess.png)
@@ -95,6 +95,6 @@ Pokud se něco pokazí, nepanikařte.
 
 Nadechněte se!
 
-Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Pak zkontrolujte, zda už váš problém není popsán na samostatné stránce [Řešení problémů s Android Studiem](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 Pokud potřebujete další pomoc, obraťte se na ostatní uživatele **AAPS** na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) nebo [Discordu](https://discord.gg/4fQUWHZ4Mw).
