@@ -12,25 +12,25 @@ Three methods are available to build the AAPS app:
 
 ### Build with a browser (recommended)
 
-You can build the app in a web browser using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Puoi fare la build dell'app in un browser web con GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. Da un computer o da un iPhone puoi anche fare la build con un fork e salvare l'app nel tuo Google Drive.
 
-**[Follow these instructions.](./BrowserBuild.md)**
+**[Segui queste istruzioni.](./BrowserBuild.md)**
 
 ----
 
-### Build with Android Studio
+### Build con Android Studio
 
 You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
 
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Segui queste istruzioni.](./ComputerBuild.md)**
 
 ----
 
-### Build using the command-line
+### Build da riga di comando
 
 This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Segui queste istruzioni.](./CLIBuild.md)**
 
 ----
 
@@ -43,7 +43,7 @@ Each build method has its own troubleshooting section:
 * **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
 * **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Hai perso il keystore o la sua password? Vedi [Reinstallare AAPS con un nuovo keystore](#reinstall-aaps).
 
 If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
 
