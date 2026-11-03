@@ -68,7 +68,7 @@ Deine bestehenden Automatisierungsregeln und Essenseinträge bleiben alle erhalt
 
 **AAPS** 3.x hatte einen Reiter „Aktionen“. In **AAPS** 4 findest Du seine Funktionen an anderen Stellen:
 
-* **Profilwechsel** und **Prozentsatz des Profils**: Tippe auf dem Hauptbildschirm auf den [Profilnamen](#aaps-screens-profile--target) oder wähle **Bearbeiten → Profil**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+* **Profilwechsel** und **Prozentsatz des Profils**: Tippe auf dem Hauptbildschirm auf den [Profilnamen](#aaps-screens-profile--target) oder wähle **Bearbeiten → Profil**. Siehe [Prozentsatz des Profils auf dem Startbildschirm ändern](#ProfileSwitch-change-percentage).
 * **Temporäres Ziel**: Tippe auf dem Hauptbildschirm auf das [Ziel](#aaps-screens-profile--target) oder wähle **Bearbeiten → Temporäres Ziel**.
 * **Nadelwechsel/Füllen**, **CGM-Sensor gesetzt**, **BZ-Test** und die anderen Careportal-Einträge: im aufgeklappten [Statusbereich](#aaps-screens-careportal), unter **Bearbeiten** oder als [Schnellstart](../DailyLifeWithAaps/QuickLaunch.md)-Knöpfe.
 * **Historie**, **Statistiken** (TDD): im **Menü** (☰).
