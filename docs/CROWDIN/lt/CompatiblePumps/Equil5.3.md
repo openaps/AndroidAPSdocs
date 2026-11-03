@@ -1,131 +1,131 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump.
+Šios instrukcijos skirtos Equil insulino pompos konfigūravimui.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Pompos galimybės su AAPS
 
-* Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights, and **Prime/Fill** and **Pump battery change** are not offered. Filling, priming and changing the battery are done in the pump wizards.
-* While the pump is suspended or stopped, **AAPS** records a 0 U/h temporary basal, so no basal insulin is counted in IOB.
-* DST and timezone changes must be handled manually.
+* Pompa be vamzdelio (patch), kuri ryšį su **AAPS** palaiko per telefono vidinį Bluetooth, be papildomo ryšio įrenginio.
+* **AAPS** Equil laiko pompa be vamzdelio (patch) su 200 V rezervuaru: pagrindiniame ekrane rodomos tokios pompos būsenos lemputės, o **Užpildymas** ir **Baterijos keitimas** nesiūlomi. Pildymas, užpildymas ir baterijos keitimas atliekami pompos vedliuose.
+* Kol pompa sustabdyta, **AAPS** įrašo 0 V/val. laikiną bazę, todėl į AIO neįskaičiuojamas joks bazinis insulinas.
+* Vasaros laiko ir laiko juostos pakeitimus reikia tvarkyti rankiniu būdu.
 
 ## Reikalavimai techninei ir programinei įrangai
-* **Compatible Equil hardware**
+* **Suderinama Equil įranga**
 
-  Currently Equil 5.3 and 5.4 are supported.
+  Šiuo metu palaikomos Equil 5.3 ir 5.4 versijos.
 
-* **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
+* **AAPS**, sukurta ir įdiegta pagal [APK kūrimo](../SettingUpAaps/BuildingAaps.md) instrukcijas
 
 ## Sąranka
 
-### Select Equil pump
+### Pasirinkite Equil pompą
 
-Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
+Atidarykite **meniu** (☰) viršutiniame kairiajame kampe, pasirinkite **[Konfigūracija](#Config-Builder-pump)** ir skiltyje **Pompa** pasirinkite **Equil**.
 
-Once it is selected, the **Equil** card shows two buttons, **Settings** and **Open plugin**:
+Kai jis pasirinktas, **Equil** kortelėje rodomi du mygtukai: **Parametrai** ir **Atidaryti įskiepį**:
 
-![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
+![Equil įskiepis, pasirinktas skiltyje Konfigūracija > Pompa](../images/v4/Pumps/equil_enabled.png)
 
-**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+**Atidaryti įskiepį** (arba **Valdymas** → **Pompa**) atidaro Equil pompos ekraną. Kol pompa nesusieta, jis atrodo taip:
 
-![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
+![Equil pompos ekranas prieš susiejimą](../images/v4/Pumps/equil_pump_screen.png)
 
 ### Parametrai
 
-Open the Equil settings with **Settings** on the **Equil** card, or with the gear icon in the top-right corner of the pump screen.
+Equil nustatymus atidarykite mygtuku **Parametrai** **Equil** kortelėje arba krumpliaračio piktograma viršutiniame dešiniajame pompos ekrano kampe.
 
-![Equil driver settings](../images/v4/Pumps/equil_settings.png)
+![Equil tvarkyklės nustatymai](../images/v4/Pumps/equil_settings.png)
 
-* **Low battery alarm**: warns you when the pump battery is low.
-* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
-* **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
-* **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
+* **Senkančios baterijos aliarmas**: įspėja, kai pompos baterija senka.
+* **Mažo insulino likučio aliarmas**: įspėja, kai rezervuare lieka mažai insulino.
+* **Perspėjimo tonas**: kaip pompa jus perspėja: **Nutildyti**, **Tik vibravimas**, **Tik garsas** arba **Vibracija ir garsas**.
+* **Boluso greitis**: kaip greitai suleidžiamas bolusas: **1,5 V/min (standartinis)**, **3 V/min**, **6 V/min** arba **12 V/min**. Greitesni bolusai gali sukelti daugiau užsikimšimo aliarmų.
 
-![The Bolus speed choices in the Equil settings](../images/v4/Pumps/equil_bolus_speed.png)
+![Boluso greičio pasirinkimai Equil nustatymuose](../images/v4/Pumps/equil_bolus_speed.png)
 
 ```{admonition} Max basal and max bolus on the patch
 :class: note
-The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [setting](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
+Pati pompa atmeta bet kokią valandinę bazę, didesnę už maksimumą, kurį į ją įrašo **AAPS**. **AAPS** paima didesnę iš dviejų reikšmių: jūsų **maks. valandinės bazės** [nustatymą](../SettingUpAaps/Preferences.md) arba didžiausią valandinę bazę jūsų **profilyje**, todėl pompa visada priima jūsų profilį ir laikinas bazes, kurių prašo ciklas. **AAPS** taip pat siunčia į pompą jūsų maksimalų leistiną bolusą.
 
-When you change your **max basal** or **max bolus**, **AAPS** sends the new values to the patch automatically. They are also sent with every profile switch. There is nothing to set on the patch itself.
+Kai pakeičiate **maks. valandinę bazę** arba **maks. bolusą**, **AAPS** naujas reikšmes į pompą nusiunčia automatiškai. Jos taip pat siunčiamos kiekvieno profilio keitimo metu. Pačioje pompoje nieko nustatyti nereikia.
 ```
 
-### Pair the pump
+### Pompos susiejimas
 
-On the pump screen, press **Pair**. A wizard guides you through each step. The row of dots at the top shows how far along you are.
+Pompos ekrane spauskite **Susieti**. Vedlys padės atlikti kiekvieną žingsnį. Taškų eilutė viršuje rodo, kiek žingsnių jau atlikote.
 
-If Android asks whether **AAPS** may find and connect to nearby devices, press **Allow**. **AAPS** needs this to find the pump.
+Jei Android klausia, ar **AAPS** gali rasti netoliese esančius įrenginius ir prie jų jungtis, spauskite **Leisti**. **AAPS** to reikia, kad rastų pompą.
 
-![Android asking for permission to find nearby devices](../images/Equil/activate1.png)
+![Android prašo leidimo rasti netoliese esančius įrenginius](../images/Equil/activate1.png)
 
-The wizard has these steps. Press **Next** to move on, or **Cancel** to leave the wizard.
+Vedlį sudaro šie žingsniai. Spauskite **Toliau**, kad tęstumėte, arba **Atšaukti**, kad išeitumėte iš vedlio.
 
-1. **Profile required**: only shown if you have never activated a **Profile** in **AAPS**. Select the profile to use and press **Activate profile**.
-1. **Assemble pump**: put together the pump, the filled reservoir and the charged battery.
+1. **Reikalingas profilis**: rodoma tik tada, jei **AAPS** dar niekada neaktyvavote **profilio**. Pasirinkite norimą profilį ir spauskite **Aktyvuoti profilį**.
+1. **Surinkti pompą**: sujunkite pompą, pripildytą rezervuarą ir įkrautą bateriją.
 
-   ![Assemble pump step](../images/Equil/activate2.png)
+   ![Žingsnis „Surinkti pompą“](../images/Equil/activate2.png)
 
-1. **Find Pump**: **AAPS** scans for nearby Equil pumps. Select your pump from the list.
+1. **Rasti pompą**: **AAPS** ieško netoliese esančių Equil pompų. Sąraše pasirinkite savo pompą.
 
-   ![Find Pump step with an Equil pump in the list](../images/Equil/find_pump.png)
-1. **Pair device**: you can enter a pairing password in **Set pair password**. It must be 4 characters long, chosen from `ABCDEF0123456789`. Press **Pair**.
+   ![Žingsnis „Rasti pompą“ su Equil pompa sąraše](../images/Equil/find_pump.png)
+1. **Susieti įrenginį**: lauke **Nustatyti susiejimo slaptažodį** galite įvesti susiejimo slaptažodį. Jis turi būti 4 simbolių ilgio, sudarytas iš `ABCDEF0123456789`. Spauskite **Susieti**.
 
-   ![Pair device step with the pairing password](../images/Equil/activate3.png)
+   ![Žingsnis „Susieti įrenginį“ su susiejimo slaptažodžiu](../images/Equil/activate3.png)
 
-1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
-1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+1. **Pasirinkite insuliną**: rodoma tik tada, jei turite nustatę daugiau nei vieną insuliną. Pasirinkite insuliną, kuris yra rezervuare.
+1. **Užpildymas**: pompa **neturi** būti ant savo pagrindo. Spauskite **Užpildymas** ir užpildykite rezervuarą, kol ant adatos galiuko atsiras insulino lašas. Paspauskite **Toliau**.
 
-   ![Prime / Fill step](../images/Equil/prime_fill.png)
-1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
-1. **Attach pump**: attach the pump to its base plate.
+   ![Žingsnis „Paruošti / pripildyti“](../images/Equil/prime_fill.png)
+1. **Vietų rotacija**: rodoma tik tada, jei vietų rotacijos nustatymuose įjungta **Valdyti infuzijos vietų rotaciją**. Palieskite vietą, kur pritvirtinsite pompą, arba spauskite **Praleisti**.
+1. **Pritvirtinti pompą**: pritvirtinkite pompą prie jos pagrindo.
 
-   ![Attach pump step](../images/Equil/attach_pump.png)
-1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+   ![Žingsnis „Pritvirtinti pompą“](../images/Equil/attach_pump.png)
+1. **Užpildyti kaniulę**: kai pompa jau ant pagrindo, spauskite **Išleisti orą**, kad iš kaniulės pašalintumėte orą. Paspauskite **Toliau**.
 
-   ![Prime cannula step with the Purge air button](../images/Equil/prime_cannula.png)
+   ![Žingsnis „Užpildyti kaniulę“ su mygtuku „Išleisti orą“](../images/Equil/prime_cannula.png)
 
-1. **Confirm**: put the pump on your body and press **Finish**.
+1. **Patvirtinti**: pritvirtinkite pompą ant kūno ir spauskite **Baigti**.
 
-   ![Confirm step with the Finish button](../images/Equil/confirm.png)
+   ![Žingsnis „Patvirtinti“ su mygtuku „Baigti“](../images/Equil/confirm.png)
 
 ```{warning}
-If you set your own pairing password (recommended for your safety), store it somewhere safe. The password is saved in the pump. The pump asks for it at every new pairing until you unpair it properly in **AAPS**. Until then, the pump also cannot be used with the original handheld controller (PDA).
+Jei nustatėte savo susiejimo slaptažodį (rekomenduojama dėl jūsų saugumo), laikykite jį saugioje vietoje. Slaptažodis išsaugomas pompoje. Pompa jo klaus kiekvieną kartą susiejant iš naujo, kol tinkamai jos neatsiesite **AAPS**. Iki tol pompos taip pat negalima naudoti su originaliu nešiojamu valdymo įrenginiu (PDA).
 ```
 
-### Pump screen after pairing
+### Pompos ekranas po susiejimo
 
-Once the pump is paired, the pump screen shows these buttons:
+Kai pompa susieta, pompos ekrane rodomi šie mygtukai:
 
-* **Refresh**: reads the state and the history of the pump now.
-* **Suspend** / **Resume delivery**: stop or restart insulin delivery.
-* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir (and, if needed, a new battery), priming and attaching it again. The first step asks *Will you also put on a new infusion set (base plate and cannula)?*
-  * **Yes, new infusion set**: you choose the site, the cannula is primed, and **AAPS** records an insulin change and a cannula change.
-  * **No, only reservoir or battery**: the cannula is not primed and **AAPS** records only an insulin change.
+* **Atnaujinti**: iš karto nuskaito pompos būseną ir istoriją.
+* **Sustabdyti** / **Atnaujinti suleidimą**: sustabdo arba vėl paleidžia insulino tiekimą.
+* **Rezervuaro keitimas**: padeda atjungti pompą, įdėti naują rezervuarą (ir, jei reikia, naują bateriją), užpildyti ir vėl ją pritvirtinti. Pirmame žingsnyje klausiama *Ar taip pat naudosite naują infuzijos rinkinį (pagrindą ir kaniulę)?*
+  * **Taip, naują infuzijos rinkinį**: pasirenkate vietą, kaniulė užpildoma, o **AAPS** įrašo insulino keitimą ir kaniulės keitimą.
+  * **Ne, tik rezervuarą arba bateriją**: kaniulė neužpildoma, o **AAPS** įrašo tik insulino keitimą.
 
-  After a reservoir change the battery level shows **-** until **AAPS** reads it again from the pump.
+  Po rezervuaro keitimo baterijos lygis rodomas kaip **-**, kol **AAPS** vėl jį nuskaito iš pompos.
 
-  ![The first step of Change reservoir asks about a new infusion set](../images/Equil/change_reservoir_question.png)
+  ![Pirmame rezervuaro keitimo žingsnyje klausiama apie naują infuzijos rinkinį](../images/Equil/change_reservoir_question.png)
 
-* **History**: shows the events recorded by the pump.
-* **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
+* **Istorija**: rodo pompos įrašytus įvykius.
+* **Atsieti įrenginį**: padeda atjungti pompą ir atsieti ją nuo **AAPS**. Tai sustabdo insulino tiekimą, grąžina pompos stūmoklį į apačią ir ištrina susiejimą.
 
 ### Alarms
 
-* The low insulin alarm sounds once at each level (10 U, 5 U and 2 U) and when the reservoir is empty. The low battery alarm sounds once at 10% and once at 5%. Each level alarms only once until the next reservoir change.
-* Pump alarms and stops are also recorded as announcements in the treatments, at the time the pump logged them, so you can see later when and why the pump stopped.
-* If the reservoir runs empty during a bolus, **AAPS** records only the insulin given until then and tells you both amounts.
+* Įspėjimas apie mažą insulino likutį suskamba po vieną kartą kiekviename lygyje (10 V, 5 V ir 2 V) ir kai rezervuaras tuščias. Įspėjimas apie senkančią bateriją suskamba vieną kartą ties 10 % ir vieną kartą ties 5 %. Kiekvienas lygis įspėja tik vieną kartą iki kito rezervuaro keitimo.
+* Pompos aliarmai ir sustojimai taip pat įrašomi į terapijos įrašus kaip pranešimai tuo laiku, kai pompa juos užregistravo, todėl vėliau galite matyti, kada ir kodėl pompa sustojo.
+* Jei boluso metu rezervuaras ištuštėja, **AAPS** įrašo tik iki tol suleistą insuliną ir praneša jums abu kiekius.
 
-## Where to get help
+## Kur gauti pagalbos
 
-Development of the Equil driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Equil tvarkyklę kuria bendruomenė **savanoriškai**. Prieš prašydami pagalbos:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Perskaitykite** atitinkamą šios dokumentacijos skyrių ir įsitikinkite, kaip funkcija turi veikti.
+2. **Klauskite** kanale *#AAPS* [Discord](https://discord.gg/4fQUWHZ4Mw) serveryje arba kitame [bendruomenės kanale](../GettingHelp/WhereCanIGetHelp.md).
+3. **Praneškite apie klaidą**: paieškokite tarp [esamų problemų (issues)](https://github.com/nightscout/AndroidAPS/issues); jei jūsų problemos ten nėra, sukurkite [naują problemą (issue)](https://github.com/nightscout/AndroidAPS/issues) ir pridėkite [žurnalų failus](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Prašydami pagalbos nurodykite telefono gamintoją ir modelį, Android versiją, **AAPS** versiją ir paprastai, angliškai aprašykite problemą (kas pasikeitė, kada paskutinį kartą veikė).
