@@ -1,11 +1,11 @@
 (aapsclient-app)=
-# The AAPSClient app
+# Aplicația AAPSClient
 
-**AAPSClient** is the accessory app of **AAPS**: a companion app for a second phone — typically a caregiver's — that **follows** the person using **AAPS**. From **AAPS** version 4, the caregiver can also **control** the loop remotely through signed commands. Both phones communicate through your **Nightscout** site; no direct connection between the phones is needed.
+**AAPSClient** is the accessory app of **AAPS**: a companion app for a second phone — typically a caregiver's — that **follows** the person using **AAPS**. From **AAPS** version 4, the caregiver can also **control** the loop remotely through signed commands. Ambele telefoane comunică prin site-ul dumneavoastră **Nightscout**; nu este nevoie de o conexiune directă între telefoane.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Client** = a phone running **AAPSClient**.
+- **Client** = un telefon pe care rulează **AAPSClient**.
 - **Master** = the main **AAPS** phone that owns the pump and runs the loop.
 ```
 
@@ -21,7 +21,7 @@ From **AAPS** version 4, **AAPSClient** runs on Android phones and tablets, on W
 
 ## What AAPSClient is (and is not)
 
-**AAPSClient** looks and feels like **AAPS**, but it has **no loop of its own**:
+**AAPSClient** arată și se folosește ca **AAPS**, dar **nu are o buclă proprie**:
 
 - It contains **no APS algorithm**, no **Objectives**, and **no pump drivers** — it never doses on its own.
 - The plugins used only by the main app (**SMS Communicator**, **Tidepool**, **Open Humans**) are not included either.
@@ -29,16 +29,16 @@ From **AAPS** version 4, **AAPSClient** runs on Android phones and tablets, on W
 
 Everything you trigger from **AAPSClient** is checked, capped, confirmed and **executed by the master** (the phone with the pump). The dedicated [Master ↔ Client control](ClientMasterControl.md) page explains how this works: how to pair the two phones, how the master writes the confirmation text you see, how a bolus started on the client is delivered, and what happens when the master is offline.
 
-## Versions: AAPSClient, AAPSClient2 and AAPSClient3
+## Versiuni: AAPSClient, AAPSClient2 și AAPSClient3
 
-Up to three client apps can be installed side by side on the same follower phone, each following a **different** person: **AAPSClient** (yellow owl icon), **AAPSClient2** (blue owl) and — new in **AAPS** version 4 — **AAPSClient3** (green owl). They are functionally identical. Only the name and the color differ (app icon, widget background and the status section on the home screen), so you can tell them apart. Each app is paired with its own master. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions) for details.
+Up to three client apps can be installed side by side on the same follower phone, each following a **different** person: **AAPSClient** (yellow owl icon), **AAPSClient2** (blue owl) and — new in **AAPS** version 4 — **AAPSClient3** (green owl). They are functionally identical. Diferă doar numele și culoarea (pictograma aplicației, fundalul widgetului și secțiunea de stare de pe ecranul principal), ca să le puteți deosebi. Fiecare aplicație este asociată cu propriul dispozitiv principal. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions) for details.
 
 (aapsclient-platforms)=
-## Getting the app
+## Obținerea aplicației
 
 All the ready-made files are in the *Assets* list of the latest release on [GitHub](https://github.com/nightscout/AndroidAPS/releases/) (click *Assets* at the bottom of the release to expand it). In the table, *x.y.z* stands for the version number. Choose the file that matches your device:
 
-| Device                  | File to download                    | Note                                                                                                                                                                                         |
+| Dispozitiv              | File to download                    | Note                                                                                                                                                                                         |
 | ----------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Android phone or tablet | `app-aapsclient-release_x.y.z.apk`  | Install it like the main app: see [Download and installation of AAPSClient](#RemoteControl_aapsclient) and [Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md). |
 | Wear OS watch           | `wear-aapsclient-release_x.y.z.apk` | Goes with the AAPSClient app on the phone. See [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md).                                                                                          |
@@ -69,67 +69,67 @@ There is no **AAPSClient** in the App Store and no ready-made file to download, 
 
 The iPhone version pairs with the master like the others. Unlike the computer versions, the iPhone can scan the master's QR code with its camera.
 
-## First start: a shorter Setup Wizard
+## Prima pornire: un Asistent de configurare mai scurt
 
 On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAPS**, but with far fewer steps — there is no profile, insulin, pump, APS or objectives configuration on a follower:
 
 1. **Welcome**, **license agreement**, **permissions** and **master password** — identical to the main app, see the [AAPS Setup Wizard](../SettingUpAaps/SetupWizard.md).
 2. The client does **not** ask for **units** or the **low/high marks**: it takes them from the main phone as soon as it is connected to Nightscout. You can see them later in **Settings**, where a small **phone icon** shows that they are [synchronized with the main phone](#client-master-config-prefs). They can only be edited while the master is reachable.
-3. **Set up from the master** — on the master, open **Manage → Authorized clients**, add this phone with a **QR code** and tap **Scan the QR code** here. One scan sets up Nightscout with a token of this phone's own and, with a code that pairs, also pairs the phone. The phone also takes the name it was added with on the master as its instance name (letters with accents become plain letters, "Miloš" becomes "Milos"). **After the scan, the setup is finished**: the wizard closes, because the next steps would only show what the code did. Without a QR code, skip this step. (Not on a computer: it has no camera, see [Getting the app](#aapsclient-platforms).)
+3. **Set up from the master** — on the master, open **Manage → Authorized clients**, add this phone with a **QR code** and tap **Scan the QR code** here. One scan sets up Nightscout with a token of this phone's own and, with a code that pairs, also pairs the phone. The phone also takes the name it was added with on the master as its instance name (letters with accents become plain letters, "Miloš" becomes "Milos"). **După scanare, configurarea este terminată**: asistentul se închide, deoarece pașii următori ar arăta doar ce a făcut codul. Without a QR code, skip this step. (Not on a computer: it has no camera, see [Getting the app](#aapsclient-platforms).)
 
-   ![The Set up from the master step with the Scan the QR code button](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+   ![Pasul Configurare de pe dispozitivul principal, cu butonul Scanați codul QR](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
 4. **Communication** — the plugin list only offers what a follower needs (NSClientV3, xDrip+, Wear, External Companion Apps, Garmin). If you did not scan a QR code, enable **NSClientV3** and enter the **same Nightscout URL** as on the main phone and an access token, with **websockets** enabled — exactly as described in [Synchronization](#RemoteControl_aapsclient).
 
-   ![Communication step on the client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
+   ![Pasul Comunicare pe client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
-5. **Pair with master** — this step exists **only** on the client. It connects this device to the master over the secure command channel, with the PIN, and takes the name the phone was added with on the master, like the QR code. **After the pairing, the setup is finished.** You can also skip it and pair at any time later from **Manage → Pair with master**.
+5. **Asociați cu dispozitivul principal** — acest pas există **doar** pe client. It connects this device to the master over the secure command channel, with the PIN, and takes the name the phone was added with on the master, like the QR code. **After the pairing, the setup is finished.** You can also skip it and pair at any time later from **Manage → Pair with master**.
 
-   ![Pair with master step in the client wizard](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
+   ![Pasul Asociați cu dispozitivul principal în asistentul clientului](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
 
-6. **Who is using this phone?** — only when you did not pair in the wizard: the name of the person using this phone. It tells this instance apart in reports and synchronization.
+6. **Cine folosește acest telefon?** — doar dacă nu ați făcut asocierea în asistent: numele persoanei care folosește acest telefon. It tells this instance apart in reports and synchronization.
 
 (aapsclient-pairing-with-the-master)=
 
-## Pairing with the master
+## Asocierea cu dispozitivul principal
 
-On the **master**, open **Manage → Authorized clients** and add a client. There are two ways to pair:
+Pe **dispozitivul principal**, deschideți **Gestionați → Clienți autorizați** și adăugați un client. Există două moduri de asociere:
 
 - **With a QR code** (the quickest, if the phone has a camera): scan the code in the wizard step "**Set up from the master**" or from **Manage → Pair with master → Scan QR code**, and confirm with "**Use**". It sets up Nightscout too.
 - **With the PIN**: on the **client**, open the wizard step above (or **Manage → Pair with master**), type the one-time PIN shown on the master and press "**Pair**". The client then shows who it is about to trust — confirm with "**Pair**":
 
-![Confirmation on the client before completing the pairing](../images/v4/AapsClient/aapsclient_pair_confirm.png)
+![Confirmarea pe client înainte de finalizarea asocierii](../images/v4/AapsClient/aapsclient_pair_confirm.png)
 
-From the wizard, a successful pairing finishes the setup and opens the home screen. On the master the client appears as **Active** in the [Authorized clients](#client_master_master_setup) list. Afterwards, **Manage → Pair with master** shows "*Already paired*", the phone's role and whether hardened mode is on:
+Din asistent, o asociere reușită încheie configurarea și deschide ecranul principal. Pe dispozitivul principal, clientul apare ca **Activ** în lista [Clienți autorizați](#client_master_master_setup). După aceea, **Gestionați → Asociați cu dispozitivul principal** afișează „*Deja asociat*”, rolul telefonului și dacă modul securizat este activ:
 
-![Manage → Pair with master on a paired client: Already paired, Role: Caregiver, Hardened mode on](../images/v4/ClientMaster/pair_with_master_client.png) The full pairing procedure, security details and troubleshooting are on [Master ↔ Client control](#client_master_client_setup).
+![Gestionați → Asociați cu dispozitivul principal pe un client asociat: Deja asociat, Rol: Îngrijitor, Mod securizat activ](../images/v4/ClientMaster/pair_with_master_client.png) The full pairing procedure, security details and troubleshooting are on [Master ↔ Client control](#client_master_client_setup).
 
 After pairing, the client gets a Nightscout token of its own from the master (if the master has an admin token), with only the rights a client needs, and stops using the token you may have entered. **AAPSClient** never writes treatments or BG to Nightscout itself: everything it does is sent to the master, which writes it. See [The client's own Nightscout token](#client-master-control-own-token).
 
-The master decides what this phone may do with its **[role](#client-master-control-roles)** (Read-only, Meals, Caregiver or Admin). **Manage → Pair with master** shows the phone's role.
+The master decides what this phone may do with its **[role](#client-master-control-roles)** (Read-only, Meals, Caregiver or Admin). **Gestionați → Asociați cu dispozitivul principal** afișează rolul telefonului.
 
-## The home screen
+## Ecranul principal
 
-The client's home screen mirrors the followed loop:
+Ecranul principal al clientului reflectă bucla urmărită:
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![Ecranul principal AAPSClient](../images/v4/AapsClient/aapsclient_home.png)
 
 - **BG, graphs, IOB/COB and profile** come from Nightscout, just as the master uploaded them.
-- The **loop status** shown is the **master's** (a client has no loop of its own). Until the client has received the master's running mode from Nightscout, the running mode chip shows a **question mark** (unknown).
+- **Starea buclei** afișată este cea a **dispozitivului principal** (un client nu are o buclă proprie). Until the client has received the master's running mode from Nightscout, the running mode chip shows a **question mark** (unknown).
 - The **status card** shows the **followed pump's** reservoir and battery and the uploader battery, taken from the Nightscout device status — a client has no pump, so there is no local pump status and no pump management anywhere in the app.
-- The bottom bar offers **Treatments**, **Scenes** and **Manage** once the client is paired (only **Manage** before pairing) — there are no pump or objectives tabs.
+- Bara de jos oferă **Tratamente**, **Scenarii** și **Gestionați** după ce clientul este asociat (înainte de asociere doar **Gestionați**) — nu există file pentru pompă sau obiective.
 
-## Treatments and actions
+## Tratamente și acțiuni
 
 Everything under **Manage** works like on the main app, with one important difference: on a client, actions that would change therapy (bolus, carbs, temp targets, scenes…) are **hidden until the device is paired**, and once paired they are **relayed to the master** for confirmation and execution — see [Using remote control](#client-master-control).
 
 The **Profile** entry is the exception: it is shown even on an **unpaired** client, but opens **view-only** — the client shows the profiles it receives through Nightscout (it needs them for its own calculations), without edit or activate buttons. Once the client is **paired**, the profile list is synchronized with the master and you can edit and activate profiles from the client like any other remote action.
 
-On an **unpaired** client, **Manage** only offers **Profile** and **Pair with master**:
+Pe un client **neasociat**, **Gestionați** oferă doar **Profil** și **Asociați cu dispozitivul principal**:
 
-![The Manage screen on an unpaired client: only Profile and Pair with master](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
+![Ecranul Gestionați pe un client neasociat: doar Profil și Asociați cu dispozitivul principal](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
 
-The red banner "*Master device unreachable. Editing is disabled until the connection is restored.*" also appears on an unpaired client. This is expected: there is no master to reach yet. The banner disappears once the client is paired and the master is online.
+Bannerul roșu „*Dispozitivul principal nu este accesibil. Editarea este dezactivată până când conexiunea este restabilită.*” apare și pe un client neasociat. This is expected: there is no master to reach yet. Bannerul dispare după ce clientul este asociat și dispozitivul principal este online.
 
 Once the client is paired, the therapy actions appear:
 
@@ -141,10 +141,10 @@ If the master is not reachable, the same banner appears on a paired client: the 
 
 ![The Manage screen on a paired client while the master is offline: actions greyed out under the banner](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
 
-## Settings synchronized with the master
+## Setări sincronizate cu dispozitivul principal
 
-The active plugin **configuration** and many **preferences** are kept in sync between the master and its paired clients; synced items are marked with a small **phone icon** and are disabled (with a "*Master device unreachable*" banner) while the master cannot be reached. This is described in [Changing configuration and preferences](#client-master-config-prefs).
+The active plugin **configuration** and many **preferences** are kept in sync between the master and its paired clients; synced items are marked with a small **phone icon** and are disabled (with a "*Master device unreachable*" banner) while the master cannot be reached. Acest lucru este descris în [Modificarea configurației și a preferințelor](#client-master-config-prefs).
 
-## AAPSClient on a smartwatch
+## AAPSClient pe un ceas inteligent
 
 A Wear OS watch can be paired with the **client** phone; its actions are relayed through the client to the master. See [Wear OS](../WearOS/WearOsSmartwatch.md) and the [smartwatch options in Remote control](#RemoteControl_smartwatches).
