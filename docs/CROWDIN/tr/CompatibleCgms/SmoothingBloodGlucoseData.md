@@ -1,44 +1,44 @@
 # Kan şekeri verilerini yumuşatma
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+**KŞ** verileri dalgalı/gürültülü ise **AAPS** insülini yanlış dozlayabilir. Bunun sonucunda yüksek veya düşük KŞ olabilir. CGM'nizde hatalar görürseniz veya dalgalı veriler alırsanız, sorun çözülene kadar döngüyü devre dışı bırakmanız önemlidir. CGM'nize bağlı olarak bu sorunların nedeni, **AAPS** içindeki CGM yapılandırması (aşağıda açıklandığı gibi) veya CGM sensörünün yerleştirildiği bölgeyle ilgili bir sorun olabilir (bu durumda CGM sensörünü değiştirmeniz gerekebilir).
 
-## Smoothing data within AAPS
+## AAPS içinde verileri yumuşatma
 
-**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
+**AAPS**, verileri CGM uygulaması yerine **AAPS** içinde yumuşatma seçeneği sunar. **Menüyü** (☰) açın, [**Konfigürasyon**](../SettingUpAaps/ConfigBuilder.md) ve ardından **Yumuşatma** öğesini seçin. Dört seçenek vardır ve aynı anda yalnızca biri etkin olabilir: **Yumuşatma yok**, **Üstel yumuşatma**, **Ortalama yumuşatma** ve **Kokusuz Kalman Filtresi**.
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![Konfigürasyon > Yumuşatma](../images/v4/Configuration/configuration_smoothing.png)
 
 ### Exponential smoothing
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+Genel olarak başlangıç için önerilen seçenek budur, çünkü gürültüyü gidermede en agresif seçenektir ve en son değeri yeniden yazar. Ancak diğer özel öneriler için aşağıdaki tabloya bakın.
 
 ### Average smoothing
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
+Bu seçenek, daha önce bazı CGM platformlarında kullanılan geriye dönük yumuşatmaya (back smoothing) benzer şekilde çalışır. KŞ değerindeki son değişikliklere daha hızlı tepki verir; bu nedenle gürültülü CGM verilerine yanlış tepki verme olasılığı daha yüksektir.
 
-### No Smoothing
+### Yumuşatma yok
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Bu seçeneği yalnızca CGM verileriniz, **AAPS**'e gönderilmeden önce toplayıcı uygulamanız tarafından düzgün şekilde yumuşatılıyorsa kullanın.
 
-### Unscented Kalman Filter (UKF)
+### Kokusuz Kalman Filtresi (UKF)
 
-This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+Bu seçenek, gelen (gürültülü olabilecek) ölçümlerden gerçek glikoz değerinizi ve değişim hızını sürekli olarak tahmin etmek için istatistiksel bir model kullanır. Sensörünüzün o anki gürültü düzeyine otomatik olarak uyum sağlar. Ayrıca ani aykırı ölçümleri algılar ve reddeder. Üstel ve Ortalama yumuşatmaya göre daha gelişmiş bir seçenektir. Sabit bir yöntem kullanmak yerine yumuşatmanın sensörünüzün değişen gürültü düzeyine kendini uyarlamasını istiyorsanız kullanışlıdır.
 
 (smoothing-xdrip-dexcom-g6)=
 
-## Suggestions to use smoothing
+## Yumuşatma kullanımı için öneriler
 
-You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
+Yumuşatma yöntemini, örneğin sensör yaşına bağlı olarak, **Yumuşatmayı değiştir** [Otomasyon eylemi](#automations-automation-action) ile otomatik olarak da değiştirebilirsiniz.
 
-|               | Exponential |  Average  | No Smoothing |
-| ------------- |:-----------:|:---------:|:------------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended  |
-| G7/ONE+/Stelo |  If noisy   | If stable |              |
+|               |    Üstel     |  Average   | Yumuşatma yok |
+| ------------- |:------------:|:----------:|:-------------:|
+| G5/G6/ONE     | Gürültülüyse |            |   Önerilir    |
+| G7/ONE+/Stelo | Gürültülüyse | Kararlıysa |               |
 
-Libre sensors are noisy and can require smoothing. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Libre sensörleri gürültülüdür ve yumuşatma gerektirebilir. xDrip doğrudan bağlantısı veya yamalı uygulama veri kaynağı (Juggluco dahil, başka bir uygulamadan veri alma) kullanıldığında [yumuşatma zaten uygulamanın içinde yapılır](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
-| -------------------- |:--------:|:------------:|:------------:|:-----------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.     |   Average    |       N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None     |   Average    |       None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.     |     N.A.     |       None        |
+| Sensör / Veri kaynağı |  Juggluco   | xDrip doğrudan | xDrip köprü | xDrip yamalı uygulama |
+| --------------------- |:-----------:|:--------------:|:-----------:|:---------------------:|
+| Libre 1/14 gün/Pro    | Uygulanamaz |  Uygulanamaz   |   Average   |      Uygulanamaz      |
+| Libre 2/2+ (AB)       |   Average   |      None      |   Average   |         None          |
+| Libre 2/2+/3/3+       |   Average   |  Uygulanamaz   | Uygulanamaz |         None          |
