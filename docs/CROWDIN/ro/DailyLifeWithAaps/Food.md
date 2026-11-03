@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# Mâncare (baza dumneavoastră de date cu alimente)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+Baza de date **Mâncare** este lista dumneavoastră personală de alimente salvate. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,17 +10,17 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## Deschiderea bazei de date cu alimente
 
 Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
 
 ---
 
-## The food list
+## Lista de alimente
 
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
+Your foods are shown as a scrollable list. Fiecare rând arată **numele** alimentului, **porția / unitatea / categoria** și **carbohidrații**:
 
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
+![Lista bazei de date cu alimente, cu căutare și butonul de adăugare](../images/v4/Food/food_list.png)
 
 - **🔍 Search** (top) — filter the list by **name** (case-insensitive).
 - **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
@@ -31,21 +31,21 @@ If the list (or the current filter) has no entries, the screen shows **No data**
 
 ---
 
-## Adding and editing a food
+## Adăugarea și editarea unui aliment
 
 Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![Editorul de alimente — nume, categorie, porție, carbohidrați și macronutrienți](../images/v4/Food/food_editor.png)
 
-The fields are:
+Câmpurile sunt:
 
-- **Name** — required (you can't save without it).
+- **Nume** — obligatoriu (nu puteți salva fără el).
 - **Category** and **Subcategory** — optional, used to group/filter foods.
 - **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
+- **Carbohidrați (g)** — cantitatea de carbohidrați a alimentului.
 - **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+Tap **Save** to store it, or **Cancel** to discard. Când editați un aliment existent, editorul are și un buton **Ștergeți**.
 
 ```{admonition} Deleting is undoable
 :class: note
@@ -56,7 +56,7 @@ Deleting a food shows a **“Food deleted”** message with an **Undo** action, 
 
 ## Using a food for a bolus
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+Fiecare rând de aliment are un buton **calculator**. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
 
 ```{admonition} The carbs value is used as-is
 :class: note
