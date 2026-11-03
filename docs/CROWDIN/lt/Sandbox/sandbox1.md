@@ -2,33 +2,33 @@
 orphan: true
 - - -
 
-# internal sandbox file 1 for testing our sprint
+# vidinis bandomasis failas 1 mūsų sprinto bandymams
 
 ```{admonition} no need to translate this
 :class: note
 
-No need to translate this.
+To versti nereikia.
 ```
 
 ```{danger}
-Here is danger on the road.
+Kelyje gresia pavojus.
 ```
 
-Test for Setup
+Sąrankos bandymas
 
-"The number 42 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
+„Knygoje „Autostopu per galaktiką“ (Douglas Adams) skaičius 42 yra „atsakymas į didįjį gyvenimo, visatos ir visko klausimą“, kurį per 7,5 milijono metų apskaičiavo milžiniškas superkompiuteris, vardu Gilioji Mintis.“ - [Vikipedija](https://en.wikipedia.org/wiki/42_(number)).
 
-This is an internal sandbox file for the documentation team to test
+Tai vidinis dokumentacijos komandos bandomasis failas, skirtas išbandyti
 
-1. markdown syntax and
+1. markdown sintaksę ir
 
-1. background process for
-    1. CROWDIN translation and
-    2. Read The Docs deployment.
+1. foninį procesą, skirtą
+    1. CROWDIN vertimui ir
+    2. Read The Docs diegimui.
 
-You can directly jump from here to the second label in this file - ["Jump"](#this-is-another-test) or [tag jump](#sandbox1-this-is-another-test).
+Iš čia galite tiesiai pereiti prie antrosios šio failo žymės – [„Pereiti“](#this-is-another-test) arba [pereiti pagal žymę](#sandbox1-this-is-another-test).
 
-And you can jump to the first label too - ["Jump"](#this-is-a-test) or [tag jump](#sandbox1-this-is-a-test).
+Taip pat galite pereiti prie pirmosios žymės – [„Pereiti“](#this-is-a-test) arba [pereiti pagal žymę](#sandbox1-this-is-a-test).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -39,27 +39,27 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (sandbox1-this-is-a-test)=
-## This is a test
+## Tai bandymas
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (sandbox1-this-is-another-test)=
-## This is another test
+## Tai dar vienas bandymas
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-Label in the middle of [nowhere](#sandbox1-in-the-middle-of-nowhere) This instead is the label to [](#sandbox1-this-is-another-test) and it should display its name
+Žymė [nežinomos vietos](#sandbox1-in-the-middle-of-nowhere) viduryje O tai žymė į [](#sandbox1-this-is-another-test), ir ji turėtų rodyti savo pavadinimą
 
-Links with anchor:
-- [how long will it take?](#preparing-how-long-will-it-take)
-- [NSClient settings in Preferences](#Preferences-nsclient).
-- [prediction lines in AAPS OVERVIEW](#aaps-screens-prediction-lines) to header level 4
-- [Screenshots](../DailyLifeWithAaps/AapsScreens.md)
-- [Screenshot main graph](#aaps-screens-main-graph) to header level 3
-- [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
-- [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
-- [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb)
+Nuorodos su inkaru:
+- [kiek laiko tai užtruks?](#preparing-how-long-will-it-take)
+- [NSClient nustatymai skiltyje Nustatymai](#Preferences-nsclient).
+- [prognozės linijos AAPS PAGRINDINIAME EKRANE](#aaps-screens-prediction-lines) iki 4 lygio antraštės
+- [Ekrano kopijos](../DailyLifeWithAaps/AapsScreens.md)
+- [Pagrindinio grafiko ekrano kopija](#aaps-screens-main-graph) iki 3 lygio antraštės
+- [OpenAPS funkcijos](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
+- [maks. AIO](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
+- [SMB skyrius šioje dokumentacijoje](#Open-APS-features-super-micro-bolus-smb)
