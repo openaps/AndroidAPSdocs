@@ -8,7 +8,7 @@ Išjunkite xDrip programėlės baterijos optimizavimą ir leiskite jai veikti fo
 
 ### Nightscout įkėlimo išjungimas
 
-You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Neleiskite jokiai kitai programėlei siųsti duomenų (gliukozės ir terapijos įrašų) į Nightscout.
 
 → Meniu ☰ (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → išjunkite (**OFF**) `Enabled` (5)
 
