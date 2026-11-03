@@ -9,7 +9,7 @@ Zostavili ste AAPS pomocou **AAPS Builder**? Túto stránku nepotrebujete: pozri
 **AAPS** nie je možné stiahnuť kvôli predpisom pre zdravotnícke pomôcky. Zostaviť si aplikáciu pre vlastné použitie je legálne, ale nesmiete jej kópiu dávať iným! Podrobnosti nájdete na stránke [Najčastejšie otázky používateľov APS](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Potom namiesto tohto návodu postupujte podľa postupu [Zostavenie **AAPS** v prehliadači](../SettingUpAaps/BrowserBuild.md). Namiesto vytvorenia nového úložiska kľúčov musíte vybrať to, ktoré ste skopírovali zo svojho počítača.
+Ak chcete **AAPS** aktualizovať v prehliadači prvýkrát: skopírujte záložný súbor úložiska kľúčov na svoj Disk Google. Potom namiesto tohto návodu postupujte podľa postupu [Zostavenie **AAPS** v prehliadači](../SettingUpAaps/BrowserBuild.md). Namiesto vytvorenia nového úložiska kľúčov musíte vybrať to, ktoré ste skopírovali zo svojho počítača.
 Tento krok je povinný iba prvýkrát, pri ďalších aktualizáciách potom môžete postupovať podľa tohto návodu.
 ```
 
@@ -24,7 +24,7 @@ Tento krok je povinný iba prvýkrát, pri ďalších aktualizáciách potom mô
 :local: true
 ```
 
-In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Ak sa vyskytnú problémy, pozrite samostatnú stránku [Zostavenie v prehliadači: riešenie problémov](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ### Exportujte svoje nastavenia
 
@@ -57,7 +57,7 @@ Poznámka: ak ste svoju kópiu AndroidAPS omylom zmenili, uvidíte túto obrazov
 
 ![Zahodenie nechcených zmien](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Výborne.
+Teraz ste synchronizovali (aktualizovali) svoju vlastnú kópiu s najnovším vydaním **AAPS**. Výborne.
 
 ![Repozitár je synchronizovaný](../images/update/CI/GitHubUpdate5.png)
 
@@ -73,17 +73,17 @@ You have now synchronized (updated) your own copy with the latest release of **A
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Vetvu nechajte nastavenú na master. V časti **Select AAPS Version** skontrolujte, či je vybraná verzia **4.0.0**, teda najnovšia verzia na začiatku zoznamu. Ak váš fork nie je aktuálny, predvolene je vybraná staršia verzia: ak spustíte workflow s formulárom tak, ako sa otvorí, znova zostavíte túto staršiu verziu a vaša aplikácia sa neaktualizuje. Zvoľte [variant](#browserbuild-variant) (fullRelease) a potom ťuknite na Run workflow.
 
    ```{note}
-   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   Zoznam verzií je súčasťou workflowu vo vašom forku. Ak verzia **4.0.0** v zozname chýba, váš fork ešte nie je synchronizovaný: vráťte sa na časť [Aktualizujte svoj repozitár na GitHube](#Update-to-new-version-update-your-repo).
    ```
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. Zobrazí sa správa Workflow run was successfully requested. Obnovte stránku v prehliadači a budete môcť sledovať priebeh zostavenia. Keď sa akcia dokončí, pri akcii AAPS CI sa zobrazí zelená fajka. You have successfully built the updated version of **AAPS**. To znamená, že APK pre hlavný telefón (Master) a pre hodinky (Wear) sa teraz ukladajú priamo na váš Disk Google (pozrite nižšie). APK AAPSClient si môžete stiahnuť z GitHub > nightscout > AndroidAPS [tu](https://github.com/nightscout/AndroidAPS/releases)
+6. Zobrazí sa správa Workflow run was successfully requested. Obnovte stránku v prehliadači a budete môcť sledovať priebeh zostavenia. Keď sa akcia dokončí, pri akcii AAPS CI sa zobrazí zelená fajka. Úspešne ste zostavili aktualizovanú verziu **AAPS**. To znamená, že APK pre hlavný telefón (Master) a pre hodinky (Wear) sa teraz ukladajú priamo na váš Disk Google (pozrite nižšie). APK AAPSClient si môžete stiahnuť z GitHub > nightscout > AndroidAPS [tu](https://github.com/nightscout/AndroidAPS/releases)
 
 
 ![Sledovanie workflowu](../images/update/CI/GitHubActions4.png)
