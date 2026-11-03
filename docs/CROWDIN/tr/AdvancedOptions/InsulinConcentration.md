@@ -1,217 +1,217 @@
 (Insulin-Concentration)=
-# Insulin Concentration
+# İnsülin Konsantrasyonu
 
 ```{warning}
-All commercial pumps are designed to be used with Insulin U100 **ONLY**. Using another insulin concentration in a pump can be dangerous. Although more and more users run AAPS with other concentrations, the conversion must always be managed and often leads to errors (even for very skilled users!).
+Tüm ticari pompalar **YALNIZCA** U100 insülin ile kullanılmak için tasarlanmıştır. Pompada başka bir insülin konsantrasyonu kullanmak tehlikeli olabilir. Gittikçe daha fazla kullanıcı AAPS'i başka konsantrasyonlarla kullansa da dönüştürme her zaman yönetilmelidir ve sık sık hatalara yol açar (çok deneyimli kullanıcılarda bile!).
 ```
 
-## Reminder of the basics of insulin
+## İnsülinle ilgili temel bilgilerin hatırlatılması
 
-This chapter covers the essential concepts of insulin measurement and delivery.
+Bu bölüm, insülinin ölçülmesi ve verilmesiyle ilgili temel kavramları anlatır.
 
-### The insulin unit: a measure of action
+### İnsülin birimi: bir etki ölçüsü
 
-Insulin is measured in **International Units (IU)**, which quantify its biological activity (power to lower blood sugar), not just its physical mass.
+İnsülin **Uluslararası Birim (IU)** ile ölçülür. Bu birim, yalnızca fiziksel kütleyi değil, insülinin biyolojik etkisini (kan şekerini düşürme gücünü) ölçer.
 
-- **Definition:** 1 IU corresponds to the activity of a specific amount of insulin, standardized to **approximately 0.04167 mg**.
-- **Key Point:** A "unit" means the same biological effect across all insulin types, ensuring consistent dosing.
+- **Tanım:** 1 IU, belirli bir miktar insülinin etkisine karşılık gelir ve **yaklaşık 0,04167 mg** olarak standartlaştırılmıştır.
+- **Önemli nokta:** Bir "birim", tüm insülin türlerinde aynı biyolojik etki demektir. Böylece dozlama tutarlı olur.
 
-### Insulin concentrations
+### İnsülin konsantrasyonları
 
-Insulin comes in different strengths, defined by the number of units per millilitre (ml).
+İnsülin farklı güçlerde gelir. Güç, mililitre (ml) başına birim sayısı ile tanımlanır.
 
-- **U100:** The global standard, containing **100 IU/ml**.
-- **U200-U500:** More concentrated insulins (e.g. U200 has 200 IU/ml) for smaller injection volumes.
-- **U40/U50:** Less common, historical concentrations (40 IU/ml and 50 IU/ml). **U40 requires U40-specific syringes.**
-- **Manual Dilution:** A clinical practice to create highly diluted insulin (e.g. U50, U10) for rare cases like neonatal use or extreme sensitivity. This requires meticulous pharmacy preparation.
+- **U100:** Dünya standardıdır, **100 IU/ml** içerir.
+- **U200-U500:** Daha küçük enjeksiyon hacimleri için daha konsantre insülinler (örneğin U200, 200 IU/ml içerir).
+- **U40/U50:** Daha az yaygın, eski konsantrasyonlar (40 IU/ml ve 50 IU/ml). **U40 için U40'a özel şırıngalar gerekir.**
+- **Elle seyreltme:** Yenidoğanlarda kullanım veya aşırı duyarlılık gibi nadir durumlar için çok seyreltik insülin (örneğin U50, U10) hazırlamaya yönelik klinik bir uygulamadır. Bu, eczanede çok dikkatli bir hazırlık gerektirir.
 
 ```{admonition} Critical Warning
 :class: danger
-Using a concentration with a non-matching device is extremely dangerous and can cause a severe overdose or underdose. **Always triple-check that the insulin concentration matches the syringe, pen, or pump specifications.**
+Bir konsantrasyonu ona uygun olmayan bir cihazla kullanmak son derece tehlikelidir ve ciddi aşırı doza veya yetersiz doza neden olabilir. **İnsülin konsantrasyonunun şırınga, kalem veya pompa özellikleriyle uyumlu olduğunu her zaman üç kez kontrol edin.**
 ```
 
-## When is a non-standard concentration used?
+## Standart dışı bir konsantrasyon ne zaman kullanılır?
 
-While insulin pumps are designed for U100 insulin, certain specific medical situations require non-standard concentrations. These scenarios require extreme caution and meticulous management.
+İnsülin pompaları U100 insülin için tasarlanmış olsa da bazı özel tıbbi durumlar standart dışı konsantrasyonlar gerektirir. Bu durumlar çok büyük dikkat ve titiz bir yönetim gerektirir.
 
-### Use Case 1: diluted insulin for very low doses
+### Kullanım durumu 1: çok düşük dozlar için seyreltilmiş insülin
 
-- **Scenario:** Managing type 1 diabetes in very young babies and toddlers.
-- **Problem:** Their insulin needs are so low that the pump's minimum deliverable dose (e.g. 0.05 U) may still be too large, leading to difficulty in achieving precise glycemic control and a high risk of hypoglycemia.
-- **Solution:** Use highly diluted insulin (e.g. U10, which is 10 IU/ml).
-- **Effect:** This increases the volume of fluid delivered per unit of insulin. By making the "packages" of insulin larger in volume but weaker in concentration, it allows much finer adjustments and greater dosing accuracy with the pump's existing settings.
+- **Senaryo:** Çok küçük bebeklerde ve yürümeye başlayan çocuklarda tip 1 diyabetin yönetimi.
+- **Sorun:** İnsülin ihtiyaçları o kadar düşüktür ki pompanın verebildiği en küçük doz (örneğin 0,05 Ü) bile çok büyük olabilir. Bu da kan şekerini hassas biçimde kontrol etmeyi zorlaştırır ve hipoglisemi riskini yükseltir.
+- **Çözüm:** Çok seyreltilmiş insülin kullanın (örneğin U10, yani 10 IU/ml).
+- **Etki:** Bu, insülin birimi başına verilen sıvı hacmini artırır. İnsülin "paketlerini" hacim olarak daha büyük ama konsantrasyon olarak daha zayıf yapar. Böylece pompanın mevcut ayarlarıyla çok daha ince ayarlar ve daha doğru dozlama mümkün olur.
 
 ```{admonition} Critical Safety Note on Dilution
 :class: danger
-Insulin dilution is a high-risk procedure that must never be attempted at home without specific training and medical supervision. It must be performed by a healthcare professional or a trained caregiver using sterile diluent specifically designed for that insulin type. **Never use tap water, saline, or any other fluid**, as this can deactivate the insulin, alter its action, and introduce dangerous contaminants.
+İnsülin seyreltme yüksek riskli bir işlemdir ve özel eğitim ve tıbbi gözetim olmadan asla evde denenmemelidir. Bu işlem, bir sağlık profesyoneli veya eğitimli bir bakıcı tarafından, o insülin türü için özel olarak üretilmiş steril seyreltici kullanılarak yapılmalıdır. **Asla musluk suyu, serum fizyolojik veya başka bir sıvı kullanmayın**, çünkü bunlar insülini etkisiz hale getirebilir, etkisini değiştirebilir ve tehlikeli kirleticiler ekleyebilir.
 ```
 
-### Use Case 2: concentrated insulin for high insulin needs or significant insulin resistance
+### Kullanım durumu 2: yüksek insülin ihtiyacı veya belirgin insülin direnci için konsantre insülin
 
-- **Scenario:** Managing adults or adolescents with significant insulin resistance, or individuals who experience localized pain from the additives in standard insulin.
-- **Problem:**
-  1. **High Needs:** Very high daily insulin requirements can exceed the pump's maximum bolus or daily delivery limits.
-  1. **Pain:** The preservatives in insulin can cause stinging or irritation upon infusion.
-- **Solution:** Use a more concentrated insulin, such as U200 (200 IU/ml).
-- **Effect:** This delivers the required insulin dose in half the volume. For the user, the pump's internal settings must be adjusted (e.g. basal rates and boluses halved) to account for the doubled concentration, ensuring the correct number of units are delivered. This also reduces the volume of potentially irritating fluid delivered subcutaneously.
+- **Senaryo:** Belirgin insülin direnci olan yetişkinlerin veya ergenlerin ya da standart insülindeki katkı maddeleri nedeniyle bölgesel ağrı yaşayan kişilerin yönetimi.
+- **Sorun:**
+  1. **Yüksek ihtiyaç:** Çok yüksek günlük insülin ihtiyacı, pompanın en yüksek bolus veya günlük verme sınırlarını aşabilir.
+  1. **Ağrı:** İnsülindeki koruyucu maddeler, infüzyon sırasında batma veya tahrişe neden olabilir.
+- **Çözüm:** U200 (200 IU/ml) gibi daha konsantre bir insülin kullanın.
+- **Etki:** Gereken insülin dozu yarı hacimde verilir. Kullanıcı için, iki kat konsantrasyonu hesaba katmak ve doğru sayıda birimin verilmesini sağlamak amacıyla pompanın iç ayarları değiştirilmelidir (örneğin bazal oranlar ve boluslar yarıya indirilir). Bu, deri altına verilen ve tahriş edebilecek sıvı hacmini de azaltır.
 
-## How to manage insulin concentration with AAPS (AAPS 3 and earlier)?
+## AAPS ile insülin konsantrasyonu nasıl yönetilir (AAPS 3 ve öncesi)?
 
-Using non-U100 insulin in an AAPS loop requires meticulous configuration to align the software's calculations with the actual insulin being delivered. One common method is "Using a Modified Profile".
+Bir AAPS döngüsünde U100 dışı insülin kullanmak, yazılımın hesaplarını gerçekte verilen insülinle uyumlu hale getirmek için titiz bir yapılandırma gerektirir. Yaygın yöntemlerden biri "Değiştirilmiş bir profil kullanmak"tır.
 
-### Using a modified profile
+### Değiştirilmiş bir profil kullanma
 
-This method involves tricking AAPS into thinking the patient's insulin needs are lower than they are, to compensate for the pump delivering more concentrated insulin than it is designed for. The use case below is for U200 concentration put into the pump, designed for U100.
+Bu yöntemde AAPS, hastanın insülin ihtiyacının gerçekte olduğundan daha düşük olduğuna inandırılır. Böylece pompanın, tasarlandığından daha konsantre insülin vermesi dengelenir. Aşağıdaki kullanım durumu, U100 için tasarlanmış pompaya U200 konsantrasyonu konulması içindir.
 
-- **The Core Problem:** A pump designed for U100 is calibrated to deliver **10 µL** for **1 unit**. If you fill it with U200 (1 unit of U200 corresponds to **5 µL** of insulin), when you select **1 unit** on the pump it delivers **10 µL** of insulin, but that volume now contains **2 units of U200 insulin**. This leads to a 100% overdose.
-- **The "Profile Switch 50%" Solution:** To correct this, the patient's entire therapy profile is scaled to be "twice as weak" inside AAPS.
-  1. The user creates a new profile based on their standard U100 profile, using the "Profile Switch **50%**" function.
-  1. This creates a new profile where:
-     - **Basal rates** are halved.
-     - **Insulin-to-Carb Ratio (IC)** is doubled (e.g. 1:10g becomes 1:20g).
-     - **Insulin Sensitivity Factor (ISF)** is doubled (e.g. 1 unit lowers BG by 50 mg/dL (2.8 mmol/L) becomes 1 unit lowers it by 100 mg/dL (5.6 mmol/L)).
-- **The Corrected Result:** AAPS now believes the patient only needs half the insulin. When it calculates and commands a **1-unit** bolus, the pump (designed for U100 but filled with U200) delivers the **10 µL**, which contains **2 real units of U200 insulin**. Because AAPS calculated this dose based on a "half-strength" profile, this **2 real-unit** delivery is the correct, intended dose. The loop's "half-strength" math aligns with the pump's "double-strength" delivery.
+- **Temel sorun:** U100 için tasarlanmış bir pompa, **1 birim** için **10 µL** verecek şekilde ayarlanmıştır. Pompayı U200 ile doldurursanız (1 birim U200, **5 µL** insüline karşılık gelir), pompada **1 birim** seçtiğinizde pompa **10 µL** insülin verir, ancak bu hacim artık **2 birim U200 insülin** içerir. Bu, %100 aşırı doza yol açar.
+- **"Profil değişimi %50" çözümü:** Bunu düzeltmek için hastanın tüm tedavi profili AAPS içinde "iki kat zayıf" olacak şekilde ölçeklenir.
+  1. Kullanıcı, standart U100 profiline dayanan yeni bir profil oluşturur ve bunun için "Profil değişimi **%50**" işlevini kullanır.
+  1. Bu, şu özelliklere sahip yeni bir profil oluşturur:
+     - **Bazal oranlar** yarıya iner.
+     - **Karbonhidrat İnsülin Oranı (IC)** iki katına çıkar (örneğin 1:10 g, 1:20 g olur).
+     - **İnsülin Duyarlılık Faktörü (İDF)** iki katına çıkar (örneğin "1 birim KŞ'yi 50 mg/dL (2,8 mmol/L) düşürür", "1 birim KŞ'yi 100 mg/dL (5,6 mmol/L) düşürür" olur).
+- **Düzeltilmiş sonuç:** AAPS artık hastanın yalnızca yarı kadar insüline ihtiyaç duyduğunu düşünür. AAPS **1 birimlik** bir bolus hesaplayıp komut verdiğinde, pompa (U100 için tasarlanmış ama U200 ile doldurulmuş) **10 µL** verir. Bu hacim **2 gerçek birim U200 insülin** içerir. AAPS bu dozu "yarı güçte" bir profile göre hesapladığı için bu **2 gerçek birimlik** verme doğru ve istenen dozdur. Döngünün "yarı güç" hesabı, pompanın "iki kat güç" ile vermesiyle uyumlu hale gelir.
 
 ```{admonition} Critical Risks and Common Errors
 :class: caution
 
-This method introduces significant risks by creating a persistent disconnect between the app's data and physical reality.
+Bu yöntem, uygulamanın verileri ile fiziksel gerçeklik arasında sürekli bir kopukluk yarattığı için önemli riskler getirir.
 
-**The Primary Error: The "External Bolus" Mismatch**
+**Asıl hata: "Harici bolus" uyumsuzluğu**
 
-The most common mistake occurs when delivering and logging insulin **outside** of the AAPS-pump system.
+En sık yapılan hata, insülin AAPS-pompa sisteminin **dışında** verilip kaydedildiğinde olur.
 
-- **The Scenario:** AAPS, using the modified profile, calculates a **5-unit** bolus for a meal. The user injects this with a U200 pen.
-- **The Dual Error:**
-  1. **Wrong Dose Selection:** The user thinks "AAPS calculates 5 units" and, because of the U200 pen, expects to deliver **5 real units of U200** without any conversion. However, because the profile is halved, the body actually needs **10 real units**. This is a **50% underdose**, which can lead to hyperglycemia.
-  1. **Wrong Insulin-on-Board (IOB) Calculation (Overestimated IOB):** When the user records this external bolus in AAPS, they log **5 units**. This is incorrect. Since the AAPS profile is for U200, **1 unit in AAPS equals 2 real units**. Therefore, the 5 real units delivered by the pen should be logged as **2.5 units** in the app. By logging 5 units, the user overestimates the IOB by 100%. AAPS now thinks there are 5 "concentrated units" on board (equivalent to 10 real units) when only 5 real units are active. This can cause the loop to suppress basal insulin or reduce future boluses, worsening the hyperglycemia risk from the initial underdose.
+- **Senaryo:** Değiştirilmiş profili kullanan AAPS, bir öğün için **5 birimlik** bir bolus hesaplar. Kullanıcı bunu U200 kalemle enjekte eder.
+- **İkili hata:**
+  1. **Yanlış doz seçimi:** Kullanıcı "AAPS 5 birim hesaplıyor" diye düşünür ve U200 kalem nedeniyle hiçbir dönüştürme yapmadan **5 gerçek birim U200** vermeyi bekler. Ancak profil yarıya indirildiği için vücudun gerçekte **10 gerçek birime** ihtiyacı vardır. Bu **%50 yetersiz dozdur** ve hiperglisemiye yol açabilir.
+  1. **Yanlış Aktif İnsülin (AİNS) hesabı (fazla tahmin edilen AİNS):** Kullanıcı bu harici bolusu AAPS'e kaydederken **5 birim** girer. Bu yanlıştır. AAPS profili U200 için olduğundan, **AAPS'te 1 birim 2 gerçek birime eşittir**. Bu nedenle kalemle verilen 5 gerçek birim, uygulamada **2,5 birim** olarak kaydedilmelidir. 5 birim kaydeden kullanıcı, AİNS'i %100 fazla tahmin eder. AAPS artık vücutta 5 "konsantre birim" (10 gerçek birime eşit) olduğunu düşünür, oysa yalnızca 5 gerçek birim etkindir. Bu, döngünün bazal insülini durdurmasına veya sonraki bolusları azaltmasına neden olabilir. Böylece ilk yetersiz dozdan gelen hiperglisemi riski daha da artar.
 
-**Other Risks:**
+**Diğer riskler:**
 
-- **Misleading Data and Reports:** All data within AAPS or Nightscout - including IOB, total daily dose (TDD), and historical reports - is in "concentrated units". This gives a distorted picture to the user and their medical team. A doctor reviewing a report might see a TDD of 30 units and not realize the patient actually received 60 real units, leading to incorrect therapy assessments.
-- **Altered Mental Model:** After prolonged use, the user begins to "think" in the app's halved values. They internalize that their ISF is 100 mg/dL (5.6 mmol/L) or their basal is 0.5 U/hr, forgetting these are "concentrated". This creates a dangerous dependency on the system and a loss of touch with their actual insulin requirements, which is critical for safety during pump failures or app issues.
+- **Yanıltıcı veriler ve raporlar:** AAPS veya Nightscout içindeki tüm veriler (AİNS, günlük toplam doz (GTD) ve geçmiş raporlar dahil) "konsantre birim" cinsindendir. Bu, kullanıcıya ve sağlık ekibine çarpık bir tablo sunar. Bir raporu inceleyen doktor 30 birimlik bir GTD görebilir ve hastanın gerçekte 60 gerçek birim aldığını fark etmeyebilir. Bu da tedavinin yanlış değerlendirilmesine yol açar.
+- **Değişen zihinsel model:** Uzun süre kullandıktan sonra kullanıcı, uygulamanın yarıya indirilmiş değerleriyle "düşünmeye" başlar. İDF'sinin 100 mg/dL (5,6 mmol/L) veya bazalının 0,5 Ü/sa olduğunu benimser ve bunların "konsantre" değerler olduğunu unutur. Bu, sisteme tehlikeli bir bağımlılık yaratır ve kişinin gerçek insülin ihtiyacıyla bağını koparır. Bu bağ, pompa arızası veya uygulama sorunlarında güvenlik için çok önemlidir.
 
-**Conclusion:** This method requires absolute vigilance, forcing the user to constantly convert between a "concentrated world" in the app and the physical world. Any external insulin delivery or data review breaks this mental model and poses a severe risk. It fundamentally changes the meaning of every number in the system.
+**Sonuç:** Bu yöntem mutlak bir dikkat gerektirir ve kullanıcıyı, uygulamadaki "konsantre dünya" ile fiziksel dünya arasında sürekli dönüştürme yapmaya zorlar. Herhangi bir harici insülin verme veya veri incelemesi bu zihinsel modeli bozar ve ciddi bir risk oluşturur. Sistemdeki her sayının anlamını temelden değiştirir.
 ```
 
-## Using the concentration parameter (new feature in AAPS 4.0)
+## Konsantrasyon parametresini kullanma (AAPS 4.0'daki yeni özellik)
 
-To mitigate the risks of using a modified profile, a new feature manages insulin concentration directly within AAPS. This feature handles the conversions automatically, allowing the main application to always work in **Real International Units (IU)**.
+Değiştirilmiş profil kullanmanın risklerini azaltmak için yeni bir özellik, insülin konsantrasyonunu doğrudan AAPS içinde yönetir. Bu özellik dönüştürmeleri otomatik olarak yapar. Böylece ana uygulama her zaman **Gerçek Uluslararası Birim (IU)** ile çalışır.
 
-### How it works: automatic conversion
+### Nasıl çalışır: otomatik dönüştürme
 
-The core principle is a clear separation between the app's logic and the pump's communication:
+Temel ilke, uygulamanın mantığı ile pompa iletişimi arasındaki net ayrımdır:
 
-- **AAPS Uses International Units:** The main AAPS database, algorithms, reports, and logs **always use Real IU**. This means your IOB, TDD, and therapy settings (basal, ISF, IC) reflect the actual biological insulin units.
-- **Pump Driver Uses Concentrated Units:** All values sent to or received from the pump driver are automatically converted to manage "Concentrated Units" within the pump driver, based on the selected concentration.
-  - **Example with U200:** When the user requests a **1 unit bolus**, the pump driver receives **0.5 CU (Concentrated Units)** before sending it to the pump. The pump (set for U100) then delivers **5 µL**, which contains **1 IU of U200 insulin**.
+- **AAPS Uluslararası Birim kullanır:** AAPS'in ana veritabanı, algoritmaları, raporları ve günlükleri **her zaman Gerçek IU kullanır**. Yani AİNS, GTD ve tedavi ayarlarınız (bazal, İDF, IC) gerçek biyolojik insülin birimlerini gösterir.
+- **Pompa sürücüsü Konsantre Birim kullanır:** Pompa sürücüsüne gönderilen veya ondan alınan tüm değerler, seçilen konsantrasyona göre pompa sürücüsü içinde "Konsantre Birim" olarak otomatik dönüştürülür.
+  - **U200 ile örnek:** Kullanıcı **1 birimlik bolus** istediğinde, pompa sürücüsü bunu pompaya göndermeden önce **0,5 CU (Konsantre Birim)** olarak alır. Pompa (U100'e ayarlı) bu durumda **5 µL** verir. Bu hacim **1 IU U200 insülin** içerir.
 
-### Benefits and remaining risks
+### Faydalar ve kalan riskler
 
-**Benefits:**
+**Faydaları:**
 
-- Eliminates the need for a modified profile and its associated mental conversion errors.
-- Users can always "think" in Real IU.
-- For an external bolus with a pen, just select the expected amount of insulin on the pen (whatever the pen and insulin concentration used). No conversion is needed, as pens U100 and U200 always use IU for unit selection.
-- All AAPS reports and data (TDD, IOB) are in Real IU, providing clarity for the user and their medical team.
-- Removes the risk of miscalculating external boluses, as they are logged in Real IU.
+- Değiştirilmiş profile ve onunla gelen zihinsel dönüştürme hatalarına gerek kalmaz.
+- Kullanıcılar her zaman Gerçek IU ile "düşünebilir".
+- Kalemle harici bolus için kalemde beklenen insülin miktarını seçmeniz yeterlidir (kullanılan kalem ve insülin konsantrasyonu ne olursa olsun). Dönüştürme gerekmez, çünkü U100 ve U200 kalemler birim seçiminde her zaman IU kullanır.
+- Tüm AAPS raporları ve verileri (GTD, AİNS) Gerçek IU cinsindendir. Bu, kullanıcı ve sağlık ekibi için netlik sağlar.
+- Harici bolusların yanlış hesaplanma riskini ortadan kaldırır, çünkü bunlar Gerçek IU olarak kaydedilir.
 
-**Remaining Risks:**
+**Kalan riskler:**
 
-- **Mental Model Transition:** Users switching from the "modified profile" method must switch their profile back to the correct real profile (i.e. twice as strong if they come from U200), and need time to adjust their **mental model**. After being accustomed to "Concentrated" values in the app, they must re-learn to trust the **real, unhidden IU values** displayed everywhere. This period of adjustment carries a risk of misinterpretation.
-- **Manual Pump Bolus:** Using the pump's own bolus function (bypassing AAPS) results in a 100% overdose, as the pump delivers U200 insulin using U100 volume calculations.
-- **General Warning:** Using non-standard concentrations remains an advanced procedure with risks and is not officially recommended.
+- **Zihinsel modele geçiş:** "Değiştirilmiş profil" yönteminden geçen kullanıcılar profillerini doğru gerçek profile geri çevirmelidir (yani U200'den geliyorlarsa iki kat güçlü). Ayrıca **zihinsel modellerini** uyarlamak için zamana ihtiyaçları vardır. Uygulamada "Konsantre" değerlere alıştıktan sonra, her yerde gösterilen **gerçek, gizlenmemiş IU değerlerine** güvenmeyi yeniden öğrenmeleri gerekir. Bu uyum dönemi yanlış yorumlama riski taşır.
+- **Pompadan elle bolus:** Pompanın kendi bolus işlevini kullanmak (AAPS'i atlayarak) %100 aşırı doza yol açar, çünkü pompa U200 insülini U100 hacim hesaplarıyla verir.
+- **Genel uyarı:** Standart dışı konsantrasyonların kullanımı riskli, ileri düzey bir işlem olmaya devam eder ve resmi olarak önerilmez.
 
 ```{admonition} Never use the pump's own interface (tube pump users) to deliver a bolus manually
 :class: danger
-Stick a permanent note on your pump **"U200 Insulin"** as a reminder, to never forget it!
+Asla unutmamak için pompanızın üzerine kalıcı bir **"U200 İnsülin"** notu yapıştırın!
 ```
 
-### User interface display
+### Kullanıcı arayüzündeki gösterim
 
-To provide clarity, the user interface shows both real and concentrated units where relevant. Note that the user interface remains unchanged if the current insulin is U100.
+Netlik sağlamak için kullanıcı arayüzü, gerektiğinde hem gerçek hem de konsantre birimleri gösterir. Mevcut insülin U100 ise kullanıcı arayüzünün değişmediğini unutmayın.
 
-**Display Examples:**
+**Gösterim örnekleri:**
 
-- **Bolus Progress Dialog:**
-  - The Bolus Progress dialog is within the core AAPS application, so only the information in IU is shown (consistent with the user selection): **`2.50 U / 10.00 U delivered`**
-- **Pump Driver Interface (Current Status):**
-  - Within the Pump overview, the delivered amount is shown in both units; for example, if `U200` is selected: **`Last Bolus: 10 U (5 CU) (10')`**
+- **Bolus ilerleme penceresi:**
+  - Bolus ilerleme penceresi AAPS ana uygulamasının içindedir. Bu nedenle yalnızca IU cinsinden bilgi gösterilir (kullanıcının seçimiyle uyumlu olarak): **`2,50 Ü / 10,00 Ü iletildi`**
+- **Pompa sürücüsü arayüzü (mevcut durum):**
+  - Pompa genel bakış ekranında verilen miktar iki birimde de gösterilir. Örneğin `U200` seçiliyse: **`Son Bolus: 10 Ü (5 CU) (10')`**
 
-**Please Note:** Both units (U and CU) are only visible in the main Pump overview. Depending on your specific pump, you can have other screens where only the Concentrated Units are shown. Historical data within pump drivers will typically remain in "Concentrated Units".
+**Lütfen dikkat:** Her iki birim (Ü ve CU) yalnızca ana Pompa genel bakış ekranında görünür. Pompanıza bağlı olarak, yalnızca Konsantre Birimlerin gösterildiği başka ekranlar da olabilir. Pompa sürücülerindeki geçmiş veriler genellikle "Konsantre Birim" olarak kalır.
 
-### Enabling the feature
+### Özelliği etkinleştirme
 
-Due to the inherent safety risks, this parameter is not enabled by default. To activate it, finish Objective 3 and enable **Insulin concentration support** within General Settings.
+Taşıdığı güvenlik riskleri nedeniyle bu parametre varsayılan olarak etkin değildir. Etkinleştirmek için 3. Görevi bitirin ve Genel ayarlarda **İnsülin konsantrasyonu desteği** seçeneğini açın.
 
-### Create a new insulin with another concentration
+### Başka bir konsantrasyonla yeni insülin oluşturma
 
-To create an insulin with another concentration, first open **Manage → Insulin settings**.
+Başka bir konsantrasyonla insülin oluşturmak için önce **Yönet → İnsülin ayarları** ekranını açın.
 
-- Click the "+" icon at the bottom of the screen.
-- Select the new expected concentration from the dropdown menu (U10, U20, U50, U100, U200 are available).
-  - Diluted concentrations like U10, U20 or U50 are for children with very low basal rates.
-  - U200 is more for adults with high insulin needs.
+- Ekranın altındaki "+" simgesine tıklayın.
+- Açılır menüden beklenen yeni konsantrasyonu seçin (U10, U20, U50, U100, U200 kullanılabilir).
+  - U10, U20 veya U50 gibi seyreltilmiş konsantrasyonlar, bazal oranları çok düşük olan çocuklar içindir.
+  - U200 daha çok, insülin ihtiyacı yüksek olan yetişkinler içindir.
 
-  ![The concentration dropdown in Insulin settings](../images/v4/Insulin/insulin_concentration_dropdown.png)
+  ![İnsülin ayarlarındaki konsantrasyon açılır menüsü](../images/v4/Insulin/insulin_concentration_dropdown.png)
 
-- Adjust peak time, Duration of Insulin Action (DIA), and customize the Insulin Nickname (optional).
-- Use the save button at the top right of the screen.
+- Tepe zamanını ve İnsülin Etki Süresini (İES) ayarlayın, isterseniz İnsülinin takma adını değiştirin.
+- Ekranın sağ üstündeki kaydet düğmesini kullanın.
 
-At this step the insulin has been created, but cannot be selected directly from **Insulin settings**.
+Bu adımda insülin oluşturulmuştur, ancak doğrudan **İnsülin ayarları** ekranından seçilemez.
 
-### Switch concentration from U100 to Uxxx (AAPS 4)
+### Konsantrasyonu U100'den Uxxx'e değiştirme (AAPS 4)
 
 ```{admonition} Switching concentration is only allowed during a reservoir or patch/pod change
 :class: warning
-For safety reasons, AAPS only records a concentration switch during a Reservoir Change or Patch/Pod Change.
+Güvenlik nedeniyle AAPS, konsantrasyon değişikliğini yalnızca Rezervuar Değişimi veya Patch/Pod Değişimi sırasında kaydeder.
 ```
 
-When you start from U100 insulin, all your profile, historical data and reports are consistent with the International Units standard, so the switch is very "easy":
+U100 insülinle başlıyorsanız profiliniz, geçmiş verileriniz ve raporlarınızın tümü Uluslararası Birim standardıyla uyumludur. Bu nedenle değişiklik çok "kolaydır":
 
-- For a Patch/Pod pump, you have a dedicated step when you change the pump, to select the insulin you put into it.
-- For a tube pump, click the Prime/Fill button (for Insulin Change) within the Overview (expanded status bar view), then click the "Change" button.
+- Patch/Pod pompada, pompayı değiştirirken içine koyduğunuz insülini seçmek için özel bir adım vardır.
+- Hortumlu pompada Genel Bakış ekranında (genişletilmiş durum çubuğu görünümü) Hazırla/doldur düğmesine (İnsülin Değişimi için) tıklayın, ardından "Değiştir" düğmesine tıklayın.
 
-1. Select the target concentration in the dropdown menu (e.g. `U200`).
-1. Then select the right insulin below. Until you confirm, the caption above its name says **Will be activated** (instead of **Currently active**).
+1. Açılır menüden hedef konsantrasyonu seçin (örneğin `U200`).
+1. Ardından aşağıdan doğru insülini seçin. Siz onaylayana kadar adının üstündeki başlıkta **Etkinleştirilecek** yazar (**Şu anda aktif** yerine).
 
-   ![An insulin picked but not confirmed yet: Will be activated](../images/v4/Insulin/insulin_will_be_activated.png)
+   ![Seçilmiş ama henüz onaylanmamış bir insülin: Etkinleştirilecek](../images/v4/Insulin/insulin_will_be_activated.png)
 
-1. **Important:** the concentration switch is only recorded within AAPS after the Profile Switch is applied to the pump.
-   - This step is mandatory for all Patch/Pod pumps.
-   - For tube pumps, wait for the Profile Switch to be applied to the pump, or within **Manage → Profile** or **Insulin settings**.
+1. **Önemli:** Konsantrasyon değişikliği, AAPS içinde ancak Profil değişimi pompaya uygulandıktan sonra kaydedilir.
+   - Bu adım tüm Patch/Pod pompalar için zorunludur.
+   - Hortumlu pompalarda Profil değişiminin pompaya uygulanmasını bekleyin veya bunu **Yönet → Profil** ya da **İnsülin ayarları** içinden yapın.
 
-That's all!
+Hepsi bu kadar!
 
-If a temporary **Profile Switch** (one with a duration) is running when you change the insulin, the new insulin is also given to the profile that comes back when the temporary switch ends. The old insulin does not come back.
+İnsülini değiştirdiğinizde geçici bir **Profil değişimi** (süresi olan) çalışıyorsa, yeni insülin, geçici değişim bittiğinde geri gelen profile de verilir. Eski insülin geri gelmez.
 
-### Switch concentration for users with U200 insulin associated with a 50% profile (AAPS 4)
+### %50 profille birlikte U200 insülin kullananlar için konsantrasyonu değiştirme (AAPS 4)
 
-When you start from U200 already used in your pump, but associated with a 50% profile, you have to do additional steps compared to the standard switch from U100 insulin.
+Pompanızda zaten U200 kullanıyor ancak bunu %50 profille birlikte kullanıyorsanız, U100 insülinden standart değişikliğe göre ek adımlar yapmanız gerekir.
 
-Keep in mind that the most difficult part will probably not be how to manage the switch correctly within AAPS, but rather to train your brain again to think "IU" instead of "CU". All standard values for boluses (breakfast, lunch, dinner...) will be twice as high, the same for your TDDs, basal rates, etc. You have to be very cautious not to make errors during the first several weeks, until you "think again" in International Units.
+Unutmayın: En zor kısım büyük olasılıkla değişikliği AAPS içinde doğru yönetmek değil, beyninizi yeniden "CU" yerine "IU" ile düşünmeye alıştırmak olacaktır. Bolusların tüm standart değerleri (kahvaltı, öğle yemeği, akşam yemeği...) iki kat yüksek olacaktır. Aynısı GTD'leriniz, bazal oranlarınız vb. için de geçerlidir. Uluslararası Birim ile "yeniden düşünmeye" başlayana kadar ilk birkaç hafta hata yapmamak için çok dikkatli olmalısınız.
 
-- First, prepare a new profile with all values consistent with International Units:
-  - Do a temporary Profile Switch 200% of your standard running profile.
-  - Open the menu (☰) → **Treatments**, go to the **Profile switch** tab and clone the new 200% profile (see [Clone a Profile switch](#your-aaps-profile-clone-profile-switch)).
-  - Switch back to your standard profile until the next Reservoir or Patch change.
-  - Go to **Manage → Profile** and rename this new profile with an explicit name (it will be your future profile associated with U200 insulin set in AAPS 4).
-- If you use the Dynamic ISF (DynISF) feature, you have to disable it for at least one week:
-  - All your history recorded within AAPS or Nightscout is in the wrong units (CU), half the real value in International Units. Wait at least one week with the U200 insulin running before re-enabling it.
-- You are now ready to switch insulin (with a new U200 defined within **Insulin settings**) on the following Insulin Change or Pod Change.
-- Once the new U200 insulin is correctly applied, don't forget to apply the new standard profile defined in the first step.
+- Önce tüm değerleri Uluslararası Birim ile uyumlu yeni bir profil hazırlayın:
+  - Standart çalışan profilinizin %200'ü ile geçici bir Profil değişimi yapın.
+  - Menüyü (☰) açın → **Tedaviler**, **Profil değişimi** sekmesine gidin ve yeni %200 profili klonlayın (bkz. [Profil değişimini klonlama](#your-aaps-profile-clone-profile-switch)).
+  - Bir sonraki Rezervuar veya Patch değişimine kadar standart profilinize geri dönün.
+  - **Yönet → Profil** ekranına gidin ve bu yeni profile açık bir ad verin (bu, AAPS 4'te ayarlanan U200 insülinle kullanacağınız gelecekteki profiliniz olacak).
+- Dinamik İDF özelliğini kullanıyorsanız, onu en az bir hafta kapatmanız gerekir:
+  - AAPS veya Nightscout içinde kaydedilen tüm geçmişiniz yanlış birimdedir (CU), yani Uluslararası Birim cinsinden gerçek değerin yarısıdır. Yeniden açmadan önce U200 insülin çalışırken en az bir hafta bekleyin.
+- Artık bir sonraki İnsülin Değişimi veya Pod Değişiminde insülini değiştirmeye hazırsınız (**İnsülin ayarları** içinde tanımlanmış yeni bir U200 ile).
+- Yeni U200 insülin doğru şekilde uygulandığında, ilk adımda tanımlanan yeni standart profili uygulamayı unutmayın.
 
-## How to manage external boluses with different pens?
+## Farklı kalemlerle harici boluslar nasıl yönetilir?
 
-### With U200 insulin associated with a 50% profile (AAPS 3)
+### %50 profille birlikte U200 insülin ile (AAPS 3)
 
-Keep in mind that all pen graduations are in International Units, so whatever the pen used (U100, U200), if you use a pen for an external bolus you have to manage conversion in both directions:
+Unutmayın: Tüm kalem ölçek çizgileri Uluslararası Birim cinsindendir. Bu nedenle hangi kalemi kullanırsanız kullanın (U100, U200), harici bolus için kalem kullanıyorsanız dönüştürmeyi iki yönde de yönetmeniz gerekir:
 
-- From AAPS to the pen: if the Calculator proposes a bolus, or if you have a specific quantity in mind, multiply by 2 when you select the amount on the pen, compared to the same bolus applied from AAPS.
-- From the pen to AAPS: if you selected an amount on the pen to give an external bolus, divide this amount by 2 to record the right quantity within AAPS (Insulin button, external bolus), to get the correct IOB calculation in CU (Concentrated Units).
+- AAPS'ten kaleme: Hesaplayıcı bir bolus önerirse veya aklınızda belirli bir miktar varsa, kalemde miktarı seçerken AAPS'ten verilen aynı bolusa göre 2 ile çarpın.
+- Kalemden AAPS'e: Harici bolus vermek için kalemde bir miktar seçtiyseniz, AİNS'nin CU (Konsantre Birim) cinsinden doğru hesaplanması için AAPS'te doğru miktarı kaydederken (İnsülin düğmesi, harici bolus) bu miktarı 2'ye bölün.
 
-### With U200 insulin using the concentration management included in AAPS 4
+### AAPS 4'teki konsantrasyon yönetimini kullanan U200 insülin ile
 
-Things are much simpler with the internal management of concentration within AAPS: just select the expected amount on the pen (whatever the pen and corresponding insulin used), and record it within AAPS.
+AAPS içindeki konsantrasyon yönetimiyle işler çok daha basittir: Kalemde beklenen miktarı seçin (kullanılan kalem ve insülin ne olursa olsun) ve bunu AAPS'e kaydedin.
 
-- Within the Insulin button, if you select an external bolus, you can select any type of insulin defined within **Insulin settings** (mainly U100, U200 for pens). That way you get a very precise calculated IOB, even if the peak/DIA of the insulin used with the pen is very different from the peak/DIA used in the pump.
+- İnsülin düğmesinde harici bolus seçerseniz, **İnsülin ayarları** içinde tanımlanmış herhangi bir insülin türünü seçebilirsiniz (kalemler için çoğunlukla U100, U200). Böylece kalemle kullanılan insülinin tepe zamanı/İES'si pompada kullanılandan çok farklı olsa bile çok doğru hesaplanmış bir AİNS elde edersiniz.
