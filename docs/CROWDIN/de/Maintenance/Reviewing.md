@@ -161,30 +161,30 @@ Hier kann die Historie der temporären Ziele eingesehen werden.
 
 ![Profile Switch](../images/TreatmentsView4.png)
 
-Die Historie der Profilwechsel ist hier zu sehen. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
+Die Historie der Profilwechsel ist hier zu sehen. Bei jedem Profilwechsel siehst Du möglicherweise mehrere Einträge: Zeile **1**, gespeichert sowohl in NS als auch im Pumpenverlauf, entspricht dem tatsächlichen Wechsel. Zeile **2**, gespeichert in Nightscout, aber nicht im Pumpenverlauf, entspricht der Anforderung eines Profilwechsels durch den Anwender.
 
 Das Löschen der Einträge wirkt sich nur auf die Nightscout-Berichte aus und niemals das aktuelle Profil verändern.
 
-You can use the **Clone** button shown on line **2** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
+Mit dem Knopf **Klonen** in Zeile **2** kannst Du eine Kopie eines **Profilwechsels** erstellen. Mehr dazu erfährst Du unter [Dein AAPS-Profil > Deine Profile verwalten](#your-aaps-profile-clone-profile-switch).
 
 ### Careportal
 
 ![Care portal](../images/TreatmentsView5.png)
 
-This tab shows all notes and careportal entries recorded in Nightscout.
+Dieser Reiter zeigt alle Notizen und Careportal-Einträge, die in Nightscout erfasst wurden.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Betriebsmodus
 
 ![Betriebsmodus](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
+Dieser Reiter zeigt den Verlauf der Änderungen des [Loop-Status](#AapsScreens-loop-status): Open, Closed, LGS, Unterbrechung, Getrennt.
 
 ### Benutzereingabe
 
 ![Benutzereingabe](../images/screens/treatments_user_entry.png)
 
-This tab lists the actions made in **AAPS** by the user or by an **Automation** (loop mode changes, profile switches, treatments, settings exports...). These entries are not sent to Nightscout.
+Dieser Reiter listet die Aktionen auf, die in **AAPS** vom Anwender oder von einer **Automatisierung** ausgeführt wurden (Änderungen des Loop-Modus, Profilwechsel, Behandlungen, Exporte der Einstellungen …). Diese Einträge werden nicht an Nightscout gesendet.
 
 ------
 
