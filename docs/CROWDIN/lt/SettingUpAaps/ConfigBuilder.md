@@ -406,7 +406,7 @@ Naudojamas duomenims, pvz., gliukozės reikšmėms ir terapijos įrašams, **si�
 
 (external-companion-apps)=
 
-### External Companion Apps
+### Išorinės susietos programėlės
 
 Transliuoja **AAPS** būsenos duomenis telefone, kad kitos jame įdiegtos programėlės galėtų juos rodyti, pavyzdžiui, laikrodžių ar valdiklių susietos programėlės. Transliuojami duomenys: gliukozė ir tendencija, AIO, AAO, valandinė bazė ir laikina bazė, profilio pavadinimas, ciklo būsena, telefono ir pompos baterija, rezervuaro lygis ir boluso eiga. Įjunkite tik tada, jei šių duomenų prašo jūsų naudojama susieta programėlė.
 
