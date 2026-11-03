@@ -1,4 +1,4 @@
-# AAPS screens
+# AAPS ekranai
 
 ```{contents}
 :backlinks: entry
@@ -7,304 +7,304 @@
 
 (the-homescreen)= (AapsScreens-the-homescreen)=
 
-## The main screen
+## Pagrindinis ekranas
 
-![Main screen](../images/Home_Homescreen.png)
+![Pagrindinis ekranas](../images/Home_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+Tai pirmasis ekranas, kurį matote atidarę **AAPS**. Jame yra didžioji dalis informacijos, kurios jums reikia kasdien.
 
-### Section A - Top bar
+### Skiltis A – viršutinė juosta
 
-* The **menu** (☰) on the left opens the navigation drawer with **Treatments history**, **History browser**, **Statistics**, **Profile helper**, **Maintenance**, **Setup Wizard**, **Configuration** and more.
-* The **search bar** finds settings, dialogs and documentation — just start typing (see [Global search](../DailyLifeWithAaps/GlobalSearch.md)).
-* The **Settings** (gear) icon on the right opens all [settings](../SettingUpAaps/Preferences.md).
+* Kairėje esantis **meniu** (☰) atidaro šoninį meniu su punktais **Terapijos istorija**, **Istorija**, **Statistika**, **Profilio pagalbininkas**, **Servisas**, **Sąrankos vedlys**, **Konfigūracija** ir kitais.
+* **Paieškos juosta** randa nustatymus, langus ir dokumentaciją – tiesiog pradėkite rašyti (žr. [Visuotinė paieška](../DailyLifeWithAaps/GlobalSearch.md)).
+* Dešinėje esanti **Nustatymų** (krumpliaračio) piktograma atidaro visus [nustatymus](../SettingUpAaps/Preferences.md).
 
 (aaps-screens-profile--target)=
 
-### Section B - Status block
+### Skiltis B – būsenos blokas
 
 #### Current blood glucose
 
-The latest blood glucose reading from your CGM is shown in the big circle on the left, together with the difference to the previous reading (delta) and the age of the reading.
+Paskutinis NGJ glikemijos rodmuo rodomas dideliame apskritime kairėje kartu su skirtumu nuo ankstesnio rodmens (pokytis) ir rodmens amžiumi.
 
-The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
+KG reikšmės spalva rodo, ar ji yra nustatytame [intervale](#Preferences-range-for-visualization).
 
-* green = in range
-* red = below range
-* yellow = above range
+* žalia = tikslinėse ribose
+* raudona = žemiau ribų
+* geltona = virš ribų
 
-![BG circle in range, green](../images/Home_Delta.png) ![BG circle above range, yellow](../images/Home_Delta_high.png) ![BG circle below range, red](../images/Home_Delta_low.png)
+![KG apskritimas tikslinėse ribose, žalias](../images/Home_Delta.png) ![KG apskritimas virš ribų, geltonas](../images/Home_Delta_high.png) ![KG apskritimas žemiau ribų, raudonas](../images/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
-#### Loop status
+#### Ciklo būsena
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Ciklo būsena](../images/Home2020_LoopStatus.png)
 
-Next to the BG circle, an icon shows the running mode of the loop (from top to bottom in the picture):
+Šalia KG apskritimo esanti piktograma rodo ciklo veikimo režimą (paveikslėlyje iš viršaus į apačią):
 
-1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
-3. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
-4. Red circle with cross = loop disabled (not working permanently)
-5. Red pause icon = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown next to the icon
-6. Grey circle with plug = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown next to the icon
+1. Žalias apskritimas = [uždaras ciklas](#KeyAapsFeatures-ClosedLoop), ciklas veikia
+2. Violetinis apskritimas su punktyrine linija = [stabdymas esant žemai glikemijai (LGS)](#KeyAapsFeatures-LGS)
+3. Mėlynas apskritimas su punktyrine linija = [atviras ciklas](#KeyAapsFeatures-OpenLoop)
+4. Raudonas apskritimas su kryžiumi = ciklas išjungtas (ilgam neveikia)
+5. Raudona pauzės piktograma = ciklas sustabdytas (laikinai pristabdytas, bet valandinė bazė tiekiama) – likęs laikas rodomas šalia piktogramos
+6. Pilkas apskritimas su kištuku = pompa atjungta (laikinai insulinas visai netiekiamas) – likęs laikas rodomas šalia piktogramos
 
-Press the icon to open the Loop dialog. The dialog's content depends on the current state:
+Paspauskite piktogramą, kad atidarytumėte ciklo langą. Lango turinys priklauso nuo dabartinės būsenos:
 
-* While the loop is **running** (closed, open or LGS), you can switch the running mode (Closed Loop, Low Glucose Suspend, Open Loop or Disable loop), **suspend** the loop or **disconnect** the pump for a chosen duration.
-* While the loop is **disabled**, you can re-enable it by selecting a running mode, or disconnect the pump.
-* While the loop is **suspended**, you can **resume** it, disconnect the pump, or pick a new duration under **Suspend loop** to extend the suspension.
-* While the pump is **disconnected**, you can **reconnect** the pump, or pick a new duration under **Disconnect pump** to extend the disconnection.
+* Kai ciklas **veikia** (uždaras, atviras ar LGS), galite pakeisti veikimo režimą (Uždaras ciklas, Stabdymas esant žemai glikemijai, Atviras ciklas arba Išjungti ciklą), **sustabdyti** ciklą arba **atjungti** pompą pasirinktam laikui.
+* Kai ciklas **išjungtas**, galite jį vėl įjungti pasirinkdami veikimo režimą arba atjungti pompą.
+* Kai ciklas **sustabdytas**, galite jį **atnaujinti**, atjungti pompą arba skiltyje **Sustabdyti ciklą** pasirinkti naują trukmę, kad pratęstumėte sustabdymą.
+* Kai pompa **atjungta**, galite **vėl prijungti** pompą arba skiltyje **Atjungti pompą** pasirinkti naują trukmę, kad pratęstumėte atjungimą.
 
-When you extend a suspension or a disconnection, the new duration **starts from now**: it replaces the remaining time, it is not added to it. You do not have to resume or reconnect first.
+Kai pratęsiate sustabdymą ar atjungimą, nauja trukmė **skaičiuojama nuo dabar**: ji pakeičia likusį laiką, o ne pridedama prie jo. Prieš tai atnaujinti ar vėl prijungti nereikia.
 
-The dialog while the loop is running in closed loop:
+Langas, kai ciklas veikia uždaro ciklo režimu:
 
-![Loop dialog in closed loop](../images/loop/loop_dialog_closed_loop.png)
+![Ciklo langas uždaro ciklo režimu](../images/loop/loop_dialog_closed_loop.png)
 
-The dialog while the loop is suspended, with **Resume** and the durations to extend the suspension:
+Langas, kai ciklas sustabdytas, su mygtuku **Atnaujinti** ir trukmėmis sustabdymui pratęsti:
 
-![Loop dialog while the loop is suspended](../images/loop/loop_dialog_suspended.png)
+![Ciklo langas, kai ciklas sustabdytas](../images/loop/loop_dialog_suspended.png)
 
-The dialog while the pump is disconnected, with **Reconnect Pump** and the durations to extend the disconnection:
+Langas, kai pompa atjungta, su mygtuku **Prijungti pompą** ir trukmėmis atjungimui pratęsti:
 
-![Loop dialog while the pump is disconnected](../images/loop/loop_dialog_disconnected.png)
+![Ciklo langas, kai pompa atjungta](../images/loop/loop_dialog_disconnected.png)
 
-The dialog in Low Glucose Suspend, in open loop and while the loop is disabled only differs in the running modes it offers:
+Stabdymo esant žemai glikemijai, atviro ciklo ir išjungto ciklo languose skiriasi tik siūlomi veikimo režimai:
 
-![Loop dialog in Low Glucose Suspend](../images/loop/loop_dialog_lgs.png)
+![Ciklo langas stabdymo esant žemai glikemijai režimu](../images/loop/loop_dialog_lgs.png)
 
-![Loop dialog in open loop](../images/loop/loop_dialog_open_loop.png)
+![Ciklo langas atviro ciklo režimu](../images/loop/loop_dialog_open_loop.png)
 
-![Loop dialog while the loop is disabled](../images/loop/loop_dialog_disabled.png)
+![Ciklo langas, kai ciklas išjungtas](../images/loop/loop_dialog_disabled.png)
 
-This is how the main screen looks in each mode. The color band at the top of the graph changes at the time of the switch.
+Taip pagrindinis ekranas atrodo kiekvienu režimu. Spalvota juosta grafiko viršuje pasikeičia tuo metu, kai perjungiamas režimas.
 
-Low Glucose Suspend:
+Stabdymas esant žemai glikemijai:
 
-![Main screen in Low Glucose Suspend](../images/main/main_screen_loop_lgs.png)
+![Pagrindinis ekranas stabdymo esant žemai glikemijai režimu](../images/main/main_screen_loop_lgs.png)
 
-Open loop:
+Atviras ciklas:
 
-![Main screen in open loop](../images/main/main_screen_loop_open.png)
+![Pagrindinis ekranas atviro ciklo režimu](../images/main/main_screen_loop_open.png)
 
-Loop disabled:
+Ciklas išjungtas:
 
-![Main screen with the loop disabled](../images/main/main_screen_loop_disabled.png)
+![Pagrindinis ekranas, kai ciklas išjungtas](../images/main/main_screen_loop_disabled.png)
 
-Loop suspended — the remaining time is shown next to the icon:
+Ciklas sustabdytas – likęs laikas rodomas šalia piktogramos:
 
-![Main screen with the loop suspended](../images/main/main_screen_loop_suspended.png)
+![Pagrindinis ekranas, kai ciklas sustabdytas](../images/main/main_screen_loop_suspended.png)
 
-Pump disconnected — the remaining time is shown next to the icon. The treatment buttons stay in the QuickLaunch toolbar, so you can still record insulin given with a pen or carbs:
+Pompa atjungta – likęs laikas rodomas šalia piktogramos. Terapijos mygtukai lieka QuickLaunch įrankių juostoje, todėl vis tiek galite įrašyti švirkštikliu suleistą insuliną arba angliavandenius:
 
-![Main screen with the pump disconnected](../images/main/main_screen_pump_disconnected.png)
+![Pagrindinis ekranas, kai pompa atjungta](../images/main/main_screen_pump_disconnected.png)
 
-A validation is required after each selection.
+Po kiekvieno pasirinkimo reikia patvirtinimo.
 
-```{admonition} Alarm: the pump did not accept the zero temp basal :class: warning While the pump is disconnected, **AAPS** keeps a zero temporary basal on the pump and sets it again if it is missing. If this still fails after 10 minutes, **AAPS** raises an urgent alarm: *"The pump did not accept the zero temp basal. It may still be giving basal insulin. Check the pump."* The alarm repeats every 15 minutes until the zero temporary basal is set or the disconnection ends. If you see it, check your pump: it may be delivering basal insulin although **AAPS** shows it as disconnected.
+```{admonition} Aliarmas: pompa nepriėmė nulinės laikinos bazės :class: warning Kol pompa atjungta, **AAPS** pompoje palaiko nulinę laikiną bazę ir vėl ją nustato, jei jos nėra. Jei po 10 minučių to vis dar nepavyksta, **AAPS** įjungia skubų aliarmą: *„Pompa nepriėmė nulinės laikinos bazės. Bazinis insulinas vis dar gali būti tiekiamas. Patikrinkite pompą.“* Aliarmas kartojamas kas 15 minučių, kol nulinė laikina bazė nustatoma arba atjungimas baigiasi. Jei jį matote, patikrinkite pompą: ji gali tiekti valandinės bazės insuliną, nors **AAPS** rodo, kad ji atjungta.
 
-    <br />Note: the modes offered depend on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) — Closed Loop and LGS only become available as you complete them.
+    <br />Pastaba: siūlomi režimai priklauso nuo jūsų pažangos [Mokymo etapuose](../SettingUpAaps/CompletingTheObjectives.md) – Uždaras ciklas ir LGS tampa prieinami tik juos įvykdžius.
     
     (aaps-screens-bg-warning-sign)=
-    #### BG warning sign
+    #### KG įspėjamasis ženklas
     
-    If **AAPS** detects a problem with the BG readings it receives, a shortcut to your BG source (named after it, for example **xDrip+ BG**) appears in the bottom bar of the main screen, with a red warning badge. Tap it to open the [BG source screen](#aaps-screens-bg-source).
+    Jei **AAPS** aptinka gaunamų KG rodmenų problemą, pagrindinio ekrano apatinėje juostoje atsiranda nuoroda į jūsų glikemijos šaltinį (pavadinta jo vardu, pvz., **xDrip+**) su raudonu įspėjimo ženkleliu. Bakstelėkite ją, kad atidarytumėte [glikemijos šaltinio ekraną](#aaps-screens-bg-source).
     
-    ##### Duplicate BG data
+    ##### Pasikartojantys KG duomenys
     
-    The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which prevents the loop from doing its work right. **AAPS** cannot calculate your BG trend reliably from duplicated readings, so it stops correcting.
+    Raudonas įspėjamasis ženklas reiškia, kad turite nedelsdami imtis veiksmų: gaunate **pasikartojančius KG duomenis**, dėl kurių ciklas negali tinkamai veikti. Iš pasikartojančių rodmenų **AAPS** negali patikimai apskaičiuoti jūsų KG tendencijos, todėl nustoja koreguoti.
     
-    If your loop was closed, **AAPS** switches it to [Low Glucose Suspend (LGS)](#KeyAapsFeatures-LGS) mode: the loop icon turns purple.
+    Jei jūsų ciklas buvo uždaras, **AAPS** perjungia jį į [stabdymo esant žemai glikemijai (LGS)](#KeyAapsFeatures-LGS) režimą: ciklo piktograma tampa violetinė.
     
-      ![Duplicate BG data: LGS loop icon and the BG source shortcut with a red warning badge](../images/bg_warn_red.png)
+      ![Pasikartojantys KG duomenys: LGS ciklo piktograma ir glikemijos šaltinio nuoroda su raudonu įspėjimo ženkleliu](../images/bg_warn_red.png)
     
-    Press the loop icon: the **Constraints** card at the top tells you why: "BgQualityCheck: LGS mode due to doubled values in BG source".
+    Paspauskite ciklo piktogramą: kortelė **Apribojimai** viršuje paaiškina priežastį: „BgQualityCheck: Įjungtas LGS režimas dėl dubliuojamų gliukozės duomenų“.
     
-      ![Running mode dialog: LGS due to doubled values](../images/main/bg_doubled_constraint.png)
+      ![Veikimo režimo langas: LGS dėl dubliuojamų reikšmių](../images/main/bg_doubled_constraint.png)
     
-    ```{admonition} Your loop is running in Low Glucose Suspend
+    ```{admonition} Jūsų ciklas veikia stabdymo esant žemai glikemijai režimu
     :class: note
-    Your loop keeps running, but only to protect you against lows: **AAPS** can still reduce or suspend your basal, and it will not give any correction insulin until you solve this issue !
+    Ciklas toliau veikia, bet tik saugo jus nuo hipoglikemijos: **AAPS** vis dar gali sumažinti arba sustabdyti valandinę bazę, bet neleis jokio korekcinio insulino, kol neišspręsite šios problemos!
     
 
-You need to find out why you get duplicate BGs:
+Turite išsiaiškinti, kodėl gaunate pasikartojančias KG reikšmes:
 
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
-* Last resort: In [NSClient settings](#Preferences-nsclient), select the Synchronization settings and disable the "Receive CGM data from NS" option.
+* Ar jūsų Nightscout svetainėje įjungtas Dexcom bridge? Išjunkite bridge: atidarykite savo Nightscout administravimo skydelį, redaguokite kintamąjį „enable“ ir pašalinkite iš jo dalį „bridge“. (Apie Heroku [išsamiau skaitykite čia](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Ar jūsų KG į Nightscout siunčia keli šaltiniai? Jei naudojate BYODA programėlę, įjunkite duomenų siuntimą **AAPS**, bet neįjunkite jo xDrip, jei jį naudojate.
+* Ar turite sekėjų, kurie gauna jūsų KG, bet patys vėl ją siunčia į jūsų Nightscout svetainę?
+* Kraštutinė priemonė: [NSClient nustatymuose](#Preferences-nsclient) pasirinkite sinchronizacijos nustatymus ir išjunkite parinktį „Gauti NGJ duomenis iš NS“.
 
-To remove the warning immediately and get your loop correcting again, delete the duplicate entries from the BG source screen: tap the shortcut in the bottom bar. The duplicate reading is highlighted in red. Long press a reading to start selecting, tick the duplicates and tap the trash icon at the top right.
+Kad įspėjimas iškart dingtų ir ciklas vėl koreguotų, ištrinkite pasikartojančius įrašus glikemijos šaltinio ekrane: bakstelėkite nuorodą apatinėje juostoje. Pasikartojantis rodmuo paryškintas raudonai. Ilgai paspauskite rodmenį, kad pradėtumėte žymėti, pažymėkite dublikatus ir bakstelėkite šiukšliadėžės piktogramą viršuje dešinėje.
 
-![BG source screen: duplicates selected for deletion](../images/main/bg_source_delete_duplicates.png)
+![Glikemijos šaltinio ekranas: dublikatai pažymėti ištrinti](../images/main/bg_source_delete_duplicates.png)
 
-However, when there are a lot of duplicates, it might be easier to
+Tačiau kai dublikatų daug, gali būti paprasčiau
 
-* [backup your settings](../Maintenance/ExportImportSettings.md),
-* reset your database in the maintenance menu and
-* [import your settings](../Maintenance/ExportImportSettings.md) again
+* [pasidarykite nustatymų atsarginę kopiją](../Maintenance/ExportImportSettings.md),
+* atkurkite pradinę duomenų bazę (reset) meniu Servisas ir
+* vėl [importuokite savo nustatymus](../Maintenance/ExportImportSettings.md)
 
-    {admonition} Switch back to Closed Loop yourself
+    {admonition} Patys vėl įjunkite uždarą ciklą
     :class: important
-    **AAPS** does not return to **Closed Loop** on its own once the duplicates are gone. Press the loop icon on the main screen and select **Closed Loop** again.
+    Kai dublikatų nebelieka, **AAPS** pats negrįžta į **Uždaro ciklo** režimą. Paspauskite ciklo piktogramą pagrindiniame ekrane ir vėl pasirinkite **Uždaras ciklas**.
 
-##### Flat BG data
+##### Nekintantys KG duomenys
 
-With some BG sources (Libre 1, AiDEX, Glutec, Medtronic and sources that do not report their sensor type), **AAPS** also checks for readings that do not change: if your BG has changed by less than 2 mg/dL (0.1 mmol/L) for 45 minutes, the data is considered wrong. The BG source shortcut then shows a red flat-trend badge, and the loop stops any high temporary basal and gives no correction insulin until the readings change again. Check your sensor and the app that sends the readings.
+Su kai kuriais glikemijos šaltiniais (Libre 1, AiDEX, Glutec, Medtronic ir šaltiniais, kurie nenurodo savo jutiklio tipo) **AAPS** taip pat tikrina, ar rodmenys nesikeičia: jei jūsų KG per 45 minutes pasikeitė mažiau nei 2 mg/dL (0,1 mmol/l), duomenys laikomi klaidingais. Tada glikemijos šaltinio nuorodoje rodomas raudonas plokščios tendencijos ženklelis, o ciklas nutraukia bet kokią padidintą laikiną bazę ir neleidžia korekcinio insulino, kol rodmenys vėl ims keistis. Patikrinkite jutiklį ir programėlę, kuri siunčia rodmenis.
 
-##### Irregular BG data
+##### Nereguliarūs KG duomenys
 
-When readings arrive at irregular intervals or some are missing, **AAPS** recalculates 5-minute values from the readings it has. This happens for example after a sensor change, or with Libre sensors, whose timing slips a minute or two every few hours. The loop keeps working and you do not have to take any action. **AAPS** 4 no longer shows a yellow warning sign for this.
+Kai rodmenys gaunami nereguliariais intervalais arba kai kurių trūksta, **AAPS** iš turimų rodmenų perskaičiuoja 5 minučių reikšmes. Taip būna, pavyzdžiui, pakeitus jutiklį arba su Libre jutikliais, kurių laikas kas kelias valandas pasislenka minute ar dviem. Ciklas toliau veikia, ir jums nieko daryti nereikia. **AAPS** 4 dėl to neberodo geltono įspėjamojo ženklo.
 
 #### Current Profile
 
-The current profile is displayed next to the star icon.
+Dabartinis profilis rodomas šalia žvaigždutės piktogramos.
 
-Tap the profile name to open the [Profile screen](#aaps-screens-profile), where you can view the profile details and [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Bakstelėkite profilio pavadinimą, kad atidarytumėte [Profilio ekraną](#aaps-screens-profile), kuriame galite peržiūrėti profilio duomenis ir [perjungti skirtingus profilius](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-To **change the profile percentage** (and its duration), tap the profile name, then tap the round **▶** (Activate) button at the bottom right of the Profile screen. In **AAPS** 3.x this screen opened with a long press on the profile name; in **AAPS** 4 a long press does nothing. Step by step: [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Norėdami **pakeisti profilio procentą** (ir jo trukmę), bakstelėkite profilio pavadinimą, tada bakstelėkite apvalų mygtuką **▶** (Aktyvuoti) Profilio ekrano apačioje dešinėje. **AAPS** 3.x šis ekranas atsidarydavo ilgai paspaudus profilio pavadinimą; **AAPS** 4 ilgas paspaudimas nieko nedaro. Žingsnis po žingsnio: [Profilio procento keitimas](#ProfileSwitch-change-percentage).
 
-![Profile with an active profile switch](../images/Home2020_ProfileSwitch.png)
+![Profilis su aktyviu profilio keitimu](../images/Home2020_ProfileSwitch.png)
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a specific percentage of 90% and a remaining duration of 9 minutes — the profile name turns yellow while a temporary profile switch is running.
-3. Profile switch with a time shift of 1 hour and a remaining duration of 9 minutes.
+1. Įprastas rodinys, kai aktyvuotas standartinis profilis.
+2. Profilio keitimas su 90 % procentu ir likusia 9 minučių trukme – kol veikia laikinas profilio keitimas, profilio pavadinimas tampa geltonas.
+3. Profilio keitimas su 1 valandos laiko perstūmimu ir likusia 9 minučių trukme.
 
 #### Target
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Likęs laikino tikslo laikas](../images/Home2020_TT.png)
 
-The current target blood glucose level is displayed below the profile name.
+Dabartinis tikslinis glikemijos lygis rodomas po profilio pavadinimu.
 
-Short press the target to open the **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)** screen.
+Trumpai paspauskite tikslą, kad atidarytumėte ekraną **[Laikinas tikslas](../DailyLifeWithAaps/TempTargets.md)**.
 
-1. Regular display: the target range defined in your profile.
-2. If a temp target is set, the target turns yellow/orange with the icon of the used preset, and the remaining time in minutes is shown in brackets.
+1. Įprastas rodinys: jūsų profilyje nustatytas tikslinis intervalas.
+2. Jei nustatytas laikinas tikslas, tikslas tampa geltonas / oranžinis, rodoma naudojamo šablono piktograma, o likęs laikas minutėmis rodomas skliaustuose.
 
 (AapsScreens-visualization-of-dynamic-target-adjustment)=
 
 #### Visualization of Dynamic target adjustment
 
-When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+Kai naudojate [SMB algoritmą](#Config-Builder-aps) ir funkciją [Autosens](#Open-APS-features-autosens), **AAPS** gali dinamiškai keisti jūsų tikslą pagal jautrumą.
 
-Enable either one or both of the following options in [OpenAPS SMB settings](#Preferences-openaps-smb-settings):
+[OpenAPS SMB nustatymuose](#Preferences-openaps-smb-settings) įjunkite vieną arba abi šias parinktis:
 
-* "Sensitivity raises target" and/or
-* "Resistance lowers target"
+* „Didesnis jautrumas padidina tikslą“ ir (arba)
+* „Rezistencija mažina tikslą“
 
-If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile, and the displayed target changes color to indicate the adjustment.
+Jei **AAPS** aptinka rezistenciją ar jautrumą, tikslas skirsis nuo nustatyto profilyje, o rodomo tikslo spalva pasikeis ir parodys šį koregavimą.
 
 (aaps-screens-iob-cob-basal-sens)=
 
-#### IOB, COB, basal and sensitivity
+#### AIO, AAO, valandinė bazė ir jautrumas
 
-![IOB, COB, basal and sensitivity](../images/Home2020_TBR.png)
+![AIO, AAO, valandinė bazė ir jautrumas](../images/Home2020_TBR.png)
 
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
-    * IOB may be negative if there have recently been periods of reduced basal.
-    * Press the chip to see the split of bolus and basal insulin (first dialog in the picture — here with a negative IOB after a period of reduced basal)
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before
-3. The teal button on the right reflects the **current basal delivery**: a flat line when the profile basal is running, a changed icon while a temporary basal rate is active
-4. The **percentage row** shows the current sensitivity ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)). When the loop changes your ISF, the row also shows the profile ISF, an arrow and the ISF the loop uses now, for example "80% 2.0 ↗ 2.5". Press it to see the Autosens value and the effective ISF (second dialog in the picture). If the loop works with a different value than the last Autosens result (for example because a temp target changes your sensitivity), the dialog also shows that value as **Autosens in algorithm**. When Autosens is off, the loop keeps your profile ISF and no effective ISF is shown.
+1. **Švirkštas**: aktyvus insulinas organizme (AIO) – aktyvaus insulino kiekis jūsų kūne  
+    AIO būtų lygus nuliui, jei veiktų tik jūsų standartinė valandinė bazė ir nebūtų likę insulino iš ankstesnių bolusų. 
+    * AIO gali būti neigiamas, jei pastaruoju metu valandinė bazė buvo sumažinta.
+    * Paspauskite šį ženklelį, kad pamatytumėte, kiek yra boluso ir valandinės bazės insulino (pirmasis langas paveikslėlyje – čia AIO neigiamas po sumažintos valandinės bazės laikotarpio)
+2. **Grūdas**: [aktyvūs angliavandeniai organizme (AAO)](../DailyLifeWithAaps/CobCalculation.md) – anksčiau suvalgyti, dar neįsisavinti angliavandeniai
+3. Žalsvai mėlynas mygtukas dešinėje rodo **dabartinį valandinės bazės tiekimą**: tiesi linija, kai veikia profilio valandinė bazė, ir pakitusi piktograma, kai veikia laikina bazė
+4. **Procentų eilutė** rodo dabartinį jautrumą ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)). Kai ciklas keičia jūsų JIF, eilutėje taip pat rodomas profilio JIF, rodyklė ir JIF, kurį ciklas naudoja dabar, pavyzdžiui, „80% 2,0 ↗ 2,5“. Paspauskite ją, kad pamatytumėte Autosens reikšmę ir faktinį JIF (antrasis langas paveikslėlyje). Jei ciklas naudoja kitą reikšmę nei paskutinis Autosens rezultatas (pavyzdžiui, nes laikinas tikslas keičia jūsų jautrumą), lange ši reikšmė taip pat rodoma kaip **Autosens algoritme**. Kai Autosens išjungtas, ciklas naudoja jūsų profilio JIF ir faktinis JIF nerodomas.
 
-The IOB dialog, opened by pressing the IOB chip:
+AIO langas, atidaromas paspaudus AIO ženklelį:
 
-![IOB dialog with bolus IOB and basal IOB](../images/main/main_chip_iob.png)
+![AIO langas su boluso AIO ir valandinės bazės AIO](../images/main/main_chip_iob.png)
 
-Press the teal button to see the temporary basal rate that is running, when it started and how long it has been running:
+Paspauskite žalsvai mėlyną mygtuką, kad pamatytumėte veikiančią laikiną bazę, kada ji prasidėjo ir kiek laiko jau veikia:
 
-![Temp basal dialog](../images/main/main_chip_temp_basal.png)
+![Laikinos bazės langas](../images/main/main_chip_temp_basal.png)
 
 (aaps-screens-carbs-required)=
 
-#### Carbs required
+#### Reikalingi angliavandeniai
 
-![Carbs required shown in the COB chip](../images/main/main_screen_carbs_required.png)
+![Reikalingi angliavandeniai, rodomi AAO ženklelyje](../images/main/main_screen_carbs_required.png)
 
 Carbs suggestions are given when the reference design detects that it requires carbs.
 
-This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
+Taip būna, kai oref algoritmas mano, kad negali jūsų apsaugoti nuline laikina baze ir jums reikia suvalgyti angliavandenių.
 
-The carb notifications are much more sophisticated than the bolus calculator ones. You might see a carbs suggestion while the bolus calculator does not show missing carbs.
+Pranešimai apie angliavandenius yra daug sudėtingesni nei boluso patarėjo pranešimai. Galite matyti angliavandenių pasiūlymą, nors boluso patarėjas nerodo trūkstamų angliavandenių.
 
-Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+Jei norite, pranešimus apie reikalingus angliavandenius galima siųsti į Nightscout. Tada bus parodytas ir išsiųstas skelbimas.
 
-### Section C - Status row
+### Skiltis C – būsenos eilutė
 
-![Status row](../images/Home2020_StatusLights.png)
+![Būsenos eilutė](../images/Home2020_StatusLights.png)
 
-The status row gives a visual warning for
+Būsenos eilutė vizualiai įspėja apie
 
-* Cannula age
-* Insulin age (days reservoir is used) and reservoir level (units)
-* Sensor age
-* Pump battery age and level (%)
+* Kaniulės amžius
+* Insulino amžių (kiek dienų naudojamas rezervuaras) ir rezervuaro lygį (vienetais)
+* Jutiklio amžius
+* Pompos baterijos amžių ir lygį (%)
 
-If threshold warning is exceeded, values will be shown in yellow.
+Jei viršijama įspėjimo riba, reikšmės rodomos geltonai.
 
-If threshold critical is exceeded, values will be shown in red.
+Jei viršijama kritinė riba, reikšmės rodomos raudonai.
 
 The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
 
-Thresholds can be changed via the small **Settings** icon shown when the status row is **expanded** (chevron on the right) — see [Status lights](#Preferences-status-lights).
+Ribas galima keisti per mažą **Nustatymų** piktogramą, kuri rodoma **išskleidus** būsenos eilutę (rodyklė dešinėje) – žr. [Būklės indikatoriai](#Preferences-status-lights).
 
-The expanded status panel also has a button at the end of some rows to record a change, which resets the corresponding age: **Add** on the **Sensor** row records a sensor insertion. If your pump supports it, **Prime/Fill** appears on the **Cannula** (or **Patch pump**) and **Insulin** rows, and **Add** on the **Pump battery** row.
+Išskleistame būsenos skydelyje kai kurių eilučių gale taip pat yra mygtukas pakeitimui įrašyti, kuris iš naujo pradeda skaičiuoti atitinkamą amžių: **Pridėti** eilutėje **Jutiklis** įrašo jutiklio įvedimą. Jei jūsų pompa tai palaiko, mygtukas **Užpildymas** rodomas eilutėse **Kaniulė** (arba **Patch pompa**) ir **Insulinas**, o **Pridėti** – eilutėje **Pompos baterija**.
 
-![Expanded status panel with Prime/Fill on the Cannula and Insulin rows and Add on the Sensor and Pump battery rows](../images/main/main_status_row_expanded.png)
+![Išskleistas būsenos skydelis su mygtuku Užpildymas eilutėse Kaniulė ir Insulinas bei mygtuku Pridėti eilutėse Jutiklis ir Pompos baterija](../images/main/main_status_row_expanded.png)
 
-Depending on the pump you use, you may not have all of these icons.
+Priklausomai nuo jūsų pompos, kai kurių iš šių piktogramų gali nebūti.
 
 (screens-sensor-level-battery)=
 
-#### Sensor level (battery)
+#### Jutiklio lygis (baterija)
 
-Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically sensor has to send battery level information to xDrip.)
+Veikia su NGJ, turinčiu papildomą siųstuvą, pvz., MiaoMiao 2. (Techniškai jutiklis turi siųsti baterijos lygio informaciją į xDrip.)
 
-Thresholds can be set in [Status lights](#Preferences-status-lights).
+Ribas galima nustatyti skiltyje [Būklės indikatoriai](#Preferences-status-lights).
 
 (aaps-screens-main-graph)=
 
-### Section D - Main graph
+### Skiltis D – pagrindinis grafikas
 
-![Main graph](../images/main/main_graph.png)
+![Pagrindinis grafikas](../images/main/main_graph.png)
 
-The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
+Grafike rodoma jūsų glikemija (KG), gauta iš gliukozės matuoklio (NGJ).
 
-Use scroll and pinch-zoom gestures on the graph to change the visible time frame.
+Naudokite slinkimo ir suspaudimo (priartinimo) gestus grafike, kad pakeistumėte matomą laikotarpį.
 
-The green area reflects your target range.
+Žalia sritis rodo jūsų tikslinį intervalą.
 
-This information is also shown on this graph :
+Šiame grafike taip pat rodoma:
 
-* Manual boluses: blue triangle just above the BG curve, pointing down at the reading of that moment, with the insulin amount
-* Carbs entries: orange triangle just below the BG curve, pointing up at the reading, with the carb amount. A meal entered with its bolus looks like one marker, split by the reading.
-* The triangles come in three sizes (small, medium, large), following the amount compared with the largest of the day. If there is no BG reading at that time (sensor gap), the triangle is drawn at the bottom of the graph.
-* BG checks and calibrations: drawn at their own measured value, so you can compare them with the sensor curve
-* Target as defined in the profile or modified by temporary target: green line
-* Profile switches: star icons at the top of the graph
-* Loop status: color band at the top of the graph when the [running mode](#AapsScreens-loop-status) is anything else than closed loop: blue = open loop, purple = LGS, red = loop disabled, yellow = loop suspended, grey = pump disconnected, orange = superbolus (in the screenshot: purple, then yellow). The history of these changes is listed in [Running mode](#AapsScreens-running-mode)
-* [SMBs](#Open-APS-features-super-micro-bolus-smb) are not drawn on the BG graph (there would be one every few minutes): they are shown on the [IOB graph](#aaps-screens-iob).
+* Rankiniai bolusai: mėlynas trikampis tiesiai virš KG kreivės, smaigaliu žemyn į to momento rodmenį, su insulino kiekiu
+* Angliavandenių įrašai: oranžinis trikampis tiesiai po KG kreive, smaigaliu aukštyn į rodmenį, su angliavandenių kiekiu. Valgis, įvestas kartu su bolusu, atrodo kaip vienas žymeklis, kurį perskiria rodmuo.
+* Trikampiai būna trijų dydžių (maži, vidutiniai, dideli), priklausomai nuo kiekio, palyginti su didžiausiu tos dienos kiekiu. Jei tuo metu nėra KG rodmens (jutiklio duomenų spraga), trikampis piešiamas grafiko apačioje.
+* KG matavimai ir kalibracijos: piešiami ties savo išmatuota reikšme, kad galėtumėte juos palyginti su jutiklio kreive
+* Tikslas, nustatytas profilyje arba pakeistas laikinu tikslu: žalia linija
+* Profilio keitimai: žvaigždutės piktogramos grafiko viršuje
+* Ciklo būsena: spalvota juosta grafiko viršuje, kai [veikimo režimas](#AapsScreens-loop-status) yra kitas nei uždaras ciklas: mėlyna = atviras ciklas, violetinė = LGS, raudona = ciklas išjungtas, geltona = ciklas sustabdytas, pilka = pompa atjungta, oranžinė = superbolusas (ekrano kopijoje: violetinė, tada geltona). Šių pakeitimų istorija pateikiama skiltyje [Veikimo režimas](#AapsScreens-running-mode)
+* [SMB](#Open-APS-features-super-micro-bolus-smb) KG grafike nepiešiami (jų būtų kas kelias minutes): jie rodomi [AIO grafike](#aaps-screens-iob).
 
-Tap a **BG check** in the graph to see its value, and its note if you wrote one.
+Bakstelėkite **KG matavimą** grafike, kad pamatytumėte jo reikšmę ir pastabą, jei ją parašėte.
 
 (aaps-screens-graph-press-and-hold)=
 
-#### See the values at a given time
+#### Reikšmės pasirinktu laiku
 
-**Press and hold** the BG graph for a moment to see the values at one reading. A dot marks the nearest reading, a dashed line is drawn at that time in all the graphs, and a pop-up at the top of the graph shows:
+**Paspauskite ir palaikykite** KG grafiką, kad pamatytumėte vieno rodmens reikšmes. Taškas pažymi artimiausią rodmenį, visuose grafikuose tuo laiku nubrėžiama brūkšninė linija, o grafiko viršuje iškylančiame lange rodoma:
 
-* the time and the BG value
-* IOB, COB (only when it is above 0 g) and the basal rate at that time — the basal icon shows whether a temporary basal rate was running, as on the main screen
-* any bolus, SMB or carbs at that time, with the same triangles as in the graphs
+* laikas ir KG reikšmė
+* AIO, AAO (tik kai daugiau nei 0 g) ir tuo metu buvusi valandinė bazė – bazės piktograma rodo, ar veikė laikina bazė, kaip pagrindiniame ekrane
+* bet koks tuo metu suleistas bolusas, SMB ar įvesti angliavandeniai, su tais pačiais trikampiais kaip grafikuose
 
-Keep your finger on the screen and move it left or right to go from one reading to the next. You feel a light tick at each reading, and the graph does not scroll while you do this. The pop-up stays for 2 seconds after you lift your finger.
+Laikykite pirštą ant ekrano ir braukite jį kairėn ar dešinėn, kad pereitumėte nuo vieno rodmens prie kito. Ties kiekvienu rodmeniu pajusite lengvą vibraciją, o grafikas tuo metu neslenka. Iškylantis langas lieka matomas 2 sekundes po to, kai atitraukiate pirštą.
 
-This works the same way on the [additional graphs](#aaps-screens-additional-graphs) below the BG graph (IOB, COB...): press and hold any of them.
+Taip pat veikia ir [papildomi grafikai](#aaps-screens-additional-graphs) po KG grafiku (AIO, AAO...): paspauskite ir palaikykite bet kurį iš jų.
 
-![Press and hold the BG graph: the pop-up shows time, BG, IOB and basal](../images/main/graph_press_and_hold.png)
+![Paspauskite ir palaikykite KG grafiką: iškylančiame lange rodomas laikas, KG, AIO ir valandinė bazė](../images/main/graph_press_and_hold.png)
 
 (aaps-screens-graph-clock-change)=
 
@@ -318,114 +318,114 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 #### Activate optional information
 
-Press the **pencil** icon in the top-right corner of the graph to open the graph settings:
+Paspauskite **pieštuko** piktogramą grafiko viršutiniame dešiniajame kampe, kad atidarytumėte grafiko nustatymus:
 
-![Main graph setting](../images/Home2020_MainGraphSetting.png)
+![Pagrindinio grafiko nustatymai](../images/Home2020_MainGraphSetting.png)
 
-* **Graph height** adjusts how tall the graph is drawn.
-* **ACT** overlays the insulin activity curve: a solid yellow-green line <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (not to be confused with the dotted yellow UAM prediction)
-* **PRED** overlays the [prediction lines](#aaps-screens-prediction-lines) (see below)
+* **Grafiko aukštis** keičia, kokio aukščio piešiamas grafikas.
+* **AKT** uždeda insulino aktyvumo kreivę: vientisa geltonai žalia linija <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (nepainiokite su taškuota geltona NDM prognoze)
+* **PROGN** uždeda [prognozių linijas](#aaps-screens-prediction-lines) (žr. žemiau)
 
 (aaps-screens-prediction-lines)=
 
-#### Prediction lines
+#### Prognozių linijos
 
-When **PRED** is on, AAPS draws its predictions as **dotted lines** to the right of the "now" line. Each prediction has its own color. The dark theme uses lighter shades of the same colors, and a line inside the green target range can look slightly greener.
+Kai **PROGN** įjungta, AAPS savo prognozes piešia **taškuotomis linijomis** į dešinę nuo linijos „dabar“. Kiekviena prognozė turi savo spalvą. Tamsioje temoje naudojami šviesesni tų pačių spalvų atspalviai, o linija žalioje tikslinėje srityje gali atrodyti šiek tiek žalesnė.
 
-| Line                   | Light theme                                                                                                                       | Dark theme                                                                                                                         | What it predicts            |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| **IOB** (blue)         | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | insulin only                |
-| **COB** (orange)       | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | carbs on board              |
-| **UAM** (yellow)       | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | unannounced meal            |
-| **ZT** (cyan)          | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | zero-temp (insulin stopped) |
-| **aCOB** (pale orange) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | older AMA algorithm only    |
+| Linija                       | Šviesi tema                                                                                                                       | Tamsi tema                                                                                                                         | Ką ji prognozuoja                           |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| **AIO** (mėlyna)             | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | tik insulinas                               |
+| **AAO** (oranžinė)           | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | aktyvūs angliavandeniai organizme           |
+| **NDM** (geltona)            | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | nedeklaruotas maistas                       |
+| **ZT** (žalsvai mėlyna)      | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | nulinė laikina bazė (insulinas sustabdytas) |
+| **aCOB** (blyškiai oranžinė) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | tik senesnis AMA algoritmas                 |
 
-When two predictions give the same values, their dots overlap and you only see one of the colors (for example, UAM on top of IOB when BG is flat).
+Kai dvi prognozės duoda tas pačias reikšmes, jų taškai sutampa ir matote tik vieną spalvą (pavyzdžiui, NDM virš AIO, kai KG nekinta).
 
-* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
+* **AAO** linija (oranžinė): [aktyvūs angliavandeniai organizme](CobCalculation.md) (oranžinė spalva visoje AAPS naudojama AAO ir angliavandeniams)
     
-    This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. This line only appears if there are known COB.
+    Ši prognozės linija rodo, kur judės jūsų KG (ne pats AAO!) pagal dabartinius **Profilio** nustatymus, darant prielaidą, kad nuokrypiai dėl angliavandenių įsisavinimo išliks pastovūs. Ši linija rodoma tik tada, kai yra žinomų AAO.
 
-* **IOB** line (blue): insulin on board (blue is used throughout AAPS for IOB and insulin)
+* **AIO** linija (mėlyna): aktyvus insulinas organizme (mėlyna spalva visoje AAPS naudojama AIO ir insulinui)
     
-    This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
+    Ši prognozės linija rodo, kas vyktų veikiant tik insulinui. Pavyzdžiui, jei susileidote insulino, o paskui nevalgėte jokių angliavandenių.
 
-* **ZT** line (cyan): zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **ZT** linija (žalsvai mėlyna): nulinė laikina bazė (prognozuojama KG, jei būtų nustatyta 0 % laikina bazė)
     
-    This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR). The line stops once it rises above your target.
+    Ši prognozės linija rodo, kaip pasikeistų KG kreivė, jei pompa visiškai sustabdytų insulino tiekimą (0 % TBR). Linija baigiasi, kai pakyla virš jūsų tikslo.
     
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+    *Ši linija rodoma tik tada, kai naudojamas [SMB](#Config-Builder-aps) algoritmas.*
 
-* **UAM** line (yellow): [unannounced meals](#SensitivityDetectionAndCob-sensitivity-oref1)
+* **NDM** linija (geltona): [nedeklaruotas maistas](#SensitivityDetectionAndCob-sensitivity-oref1)
     
-    Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+    Nedeklaruotas maistas reiškia, kad aptiktas reikšmingas glikemijos kilimas dėl maisto, adrenalino ar kitų veiksnių. Ši prognozės linija panaši į **oranžinę AAO liniją**, tačiau daroma prielaida, kad nuokrypiai mažės pastoviu greičiu (tęsiant dabartinį mažėjimo greitį).
     
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used, **Enable UAM** is on in the OpenAPS SMB settings, and BG is rising more than insulin alone explains.*
+    *Ši linija rodoma tik tada, kai naudojamas [SMB](#Config-Builder-aps) algoritmas, OpenAPS SMB nustatymuose įjungta parinktis **Naudoti NDM** ir KG kyla labiau, nei galima paaiškinti vien insulinu.*
 
-* **aCOB** line (pale, see-through orange): accelerated carbohydrate absorption
+* **aCOB** linija (blyški, permatoma oranžinė): pagreitintas angliavandenių įsisavinimas
     
-    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Deprecated and of limited usefulness.
+    Panaši į AAO, tačiau daroma prielaida, kad angliavandeniai įsisavinami pastoviu 10 mg/dL/5 min (0,555 mmol/l/5 min) greičiu. Pasenusi funkcija, jos nauda ribota.
     
-    *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
+    *Ši linija rodoma tik tada, kai naudojamas senesnis [AMA](#Config-Builder-aps) algoritmas.*
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Paprastai tikroji glikemijos kreivė atsiduria tarp šių linijų arba arčiausiai tos, kurios prielaidos geriausiai atitinka jūsų situaciją.
 
 (aaps-screens-how-predictions-become-a-dosing-decision)=
 
-#### How AAPS turns predictions into a dosing decision
+#### Kaip AAPS iš prognozių priima dozavimo sprendimą
 
-AAPS doesn't dose insulin based on your current BG alone — every loop cycle (roughly every 5 minutes) it looks at all of the prediction lines above together and works out the safest course of action.
+AAPS nedozuoja insulino vien pagal dabartinę KG – kiekviename ciklo etape (maždaug kas 5 minutes) jis kartu įvertina visas aukščiau aprašytas prognozių linijas ir nusprendžia, kuris veiksmas saugiausias.
 
-The core rule is **safety first**: if *any* prediction line, in any time frame, dips below your low safety threshold, AAPS issues a zero-temp (0% temporary basal rate) and withholds further insulin, even if your current BG is high. Only once every prediction line stays above that threshold will AAPS consider giving more insulin.
+Pagrindinė taisyklė – **pirmiausia saugumas**: jei *bet kuri* prognozės linija bet kuriuo laikotarpiu nukrenta žemiau jūsų apatinės saugumo ribos, AAPS nustato nulinę laikiną bazę (0 % laikina bazė) ir daugiau insulino neleidžia, net jei jūsų dabartinė KG aukšta. Tik kai visos prognozės linijos lieka virš šios ribos, AAPS svarsto leisti daugiau insulino.
 
-When it is safe to give more insulin, AAPS looks at where BG is ultimately predicted to end up (the **eventual BG**) across the blended predictions, and works out how much correction is needed to bring that eventual BG back to target — delivered either as an increased temporary basal rate, or (if the oref1/[SMB](#Open-APS-features-super-micro-bolus-smb) algorithm is enabled) as a small immediate bolus. If BG is high now but is already trending down enough on its own, AAPS will hold off, or may even reduce the basal rate, rather than add insulin that would only push a later low even lower.
+Kai saugu leisti daugiau insulino, AAPS žiūri, kur galiausiai turėtų atsidurti KG (**galutinė KG**) pagal sujungtas prognozes, ir apskaičiuoja, kiek korekcijos reikia, kad ši galutinė KG grįžtų į tikslą. Ši korekcija suleidžiama arba kaip padidinta laikina bazė, arba (jei įjungtas oref1/[SMB](#Open-APS-features-super-micro-bolus-smb) algoritmas) kaip mažas bolusas iš karto. Jei KG dabar aukšta, bet jau pakankamai krenta pati, AAPS palauks arba net sumažins valandinę bazę, o ne pridės insulino, kuris vėlesnę hipoglikemiją padarytų dar gilesnę.
 
-For worked examples of this decision logic with real screenshots, see the [dosing scenarios in the Clinician's guide](#clinicianguide-dosing-scenarios) — they were written for a clinician audience but apply to any AAPS user.
+Šios sprendimų logikos pavyzdžius su tikromis ekrano kopijomis rasite [dozavimo scenarijuose gydytojo vadove](#clinicianguide-dosing-scenarios) – jie parašyti gydytojams, bet tinka bet kuriam AAPS naudotojui.
 
-*For the full technical treatment of how these predictions and the resulting dosing decision are calculated, see [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html).*
+*Išsamų techninį aprašymą, kaip apskaičiuojamos šios prognozės ir iš jų kylantis dozavimo sprendimas, rasite [OpenAPS determine-basal dokumentacijoje](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html).*
 
 #### Basals
 
-A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
+**Vientisa mėlyna** linija rodo pompos tiekiamą valandinę bazę ir atspindi faktinį insulino tiekimą per laiką.
 
-The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
+**Taškuota mėlyna** linija rodo, kokia būtų valandinė bazė, jei nebūtų laikinų bazės pakeitimų (TBR).
 
-When the standard basal rate is given, the area under the curve is shown in dark blue. When the basal rate is temporarily adjusted (increased or decreased), the area under the curve is shown in light blue.
+Kai tiekiama standartinė valandinė bazė, plotas po kreive rodomas tamsiai mėlynai. Kai valandinė bazė laikinai pakeista (padidinta arba sumažinta), plotas po kreive rodomas šviesiai mėlynai.
 
-#### Activity
+#### Insulino aktyvumas
 
 The **thin yellow** line shows the activity of Insulin.
 
-It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+Ji pagrįsta tikėtinu glikemijos sumažėjimu dėl jūsų organizme esančio insulino, jei nebūtų kitų veiksnių (pvz., angliavandenių).
 
 (AapsScreens-section-g-additional-graphs)= (aaps-screens-additional-graphs)=
 
-### Section E - Additional graphs
+### Skiltis E – papildomi grafikai
 
-You can activate additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and cannot be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
+Po pagrindiniu grafiku galite įjungti papildomus grafikus. [Paprastajame režime](#preferences-simple-mode) papildomi grafikai yra iš anksto nustatyti ir jų keisti negalima. Jei norite patys nustatyti papildomus grafikus, išjunkite **Paprastąjį režimą**.
 
-The additional graphs follow the main graph: when you scroll or zoom the BG graph, they move with it. A sideways drag on an additional graph also scrolls all the graphs. They have no time labels of their own — read the time on the BG graph.
+Papildomi grafikai seka pagrindinį grafiką: kai slenkate ar priartinate KG grafiką, jie juda kartu. Patempus papildomą grafiką į šoną, taip pat paslenkami visi grafikai. Jie neturi savo laiko žymų – laiką žiūrėkite KG grafike.
 
-To configure an additional graph, press the **pencil** icon in its top-right corner:
+Norėdami nustatyti papildomą grafiką, paspauskite **pieštuko** piktogramą jo viršutiniame dešiniajame kampe:
 
 ![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
-Select the chips corresponding to the data you want to see on this graph; the **Remove** button deletes the graph.
+Pasirinkite ženklelius, atitinkančius duomenis, kuriuos norite matyti šiame grafike; mygtukas **Pašalinti** ištrina grafiką.
 
-To create one more graph, press **Add graph** below the last graph and select its chips in the same way:
+Norėdami sukurti dar vieną grafiką, paspauskite **Pridėti grafiką** po paskutiniu grafiku ir tokiu pat būdu pasirinkite jo ženklelius:
 
-![Add graph](../images/main/graph_add.png)
+![Pridėti grafiką](../images/main/graph_add.png)
 
-The new graph is added below the others — here a second additional graph with **SENS%** and **DEV**:
+Naujas grafikas pridedamas po kitais – čia antrasis papildomas grafikas su **SENS%** ir **NUOKR**:
 
-![Main screen with a second additional graph](../images/main/main_screen_additional_graph.png)
+![Pagrindinis ekranas su antruoju papildomu grafiku](../images/main/main_screen_additional_graph.png)
 
-Most users find the following configuration of additional graphs to be adequate :
+Daugumai naudotojų pakanka tokios papildomų grafikų konfigūracijos:
 
-* Graph 1 with IOB, COB, Sensitivity change
-* Graph 2 with Deviations and BGI.
+* 1 grafikas su AIO, AAO ir jautrumo pokyčiais
+* 2 grafikas su nuokrypiais ir glikemijos įtaka (KGĮ).
 
-#### Absolute insulin (ABS)
+#### Visas insulinas (ABS)
 
 Active insulin including boluses **and basal**.
 
@@ -433,191 +433,191 @@ Active insulin including boluses **and basal**.
 
 #### Insulin on board (IOB)
 
-Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
+Rodo aktyvų insuliną organizme (= insulinas, kuris dar veikia jūsų kūne). Į jį įeina bolusų ir laikinų bazių insulinas (**bet neįeina profilyje nustatyta valandinė bazė**).
 
-If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+Jei per IVT laikotarpį nebūtų buvę [SMB](#Open-APS-features-super-micro-bolus-smb), bolusų ir TBR, ši reikšmė būtų nulis.
 
-SMBs are shown on this graph as blue triangles, in three sizes following the amount compared with the largest SMB of the day.
+SMB šiame grafike rodomi kaip mėlyni trikampiai, trijų dydžių, priklausomai nuo kiekio, palyginti su didžiausiu tos dienos SMB.
 
 IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
 
-Decaying depends on your [DIA and insulin type settings](#Config-Builder-insulin-dia).
+Mažėjimas priklauso nuo jūsų [IVT ir insulino tipo nustatymų](#Config-Builder-insulin-dia).
 
-#### Carbs On Board (COB)
+#### Aktyvūs angliavandeniai organizme (AAO)
 
-Shows the carbs you have on board (= active, not yet decayed carbs in your body).
+Rodo aktyvius angliavandenius organizme (= suvalgyti, bet dar neįsisavinti angliavandeniai).
 
-Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/CobCalculation.md).
+Mažėjimas priklauso nuo [algoritmo aptinkamų nuokrypių](../DailyLifeWithAaps/CobCalculation.md).
 
-If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings).
+Jei aptinkamas greitesnis angliavandenių įsisavinimas, nei tikėtasi, bus suleista daugiau insulino ir AIO padidės (daugiau ar mažiau, priklausomai nuo jūsų saugumo nustatymų).
 
-#### Sensitivity change (SENS%)
+#### Jautrumo pokyčiai (SENS%)
 
-Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
+Rodo jautrumą, kurį aptiko [Autosens](#Open-APS-features-autosens).
 
-Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+Jautrumas – tai apskaičiuotas jautrumas insulinui, kurį keičia fizinis krūvis, hormonai ir pan.
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+Atminkite: kad jautrumo nustatymas / [Autosens](#Open-APS-features-autosens) galėtų automatiškai koreguoti suleidžiamo insulino kiekį, turite būti pasiekę [8 mokymo etapą](#objectives-objective8). Kol nepasiekėte šio mokymo etapo, linija jūsų grafike rodoma tik informacijai.
 
-### Variable sensitivity (VSENS)
+### Kintamas jautrumas (VSENS)
 
-Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
+Rodo jautrumą, apskaičiuotą funkcijos [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Duomenys rodomi tik tada, kai naudojate šią funkciją.
 
 (screen-heart-rate-steps)=
 
-#### Heart rate (HR) & Steps
+#### Pulsas (HR) & Žingsniai
 
-This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
+Šie duomenys gali būti prieinami, kai naudojate [Wear išmanųjį laikrodį](../WearOS/WearOsSmartwatch.md). Įjunkite juos **AAPS** Wear programėlėje ir suteikite leidimą naudoti sveikatos duomenis.
 
 Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
 
-#### Deviations (DEV)
+#### Nuokrypiai (NUOKR)
 
-* **Grey** bars show a deviation due to carbs.
-* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
-* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
-* **Yellow** bars show a deviation due to UAM.
-* **Black** bars show small deviations not taken into account for sensitivity
+* **Pilki** stulpeliai rodo nuokrypį dėl angliavandenių.
+* **Žali** stulpeliai rodo, kad KG yra aukštesnė, nei algoritmas tikėjosi. Žali stulpeliai naudojami [Autosens](#Open-APS-features-autosens) rezistencijai didinti.
+* **Raudoni** stulpeliai rodo, kad KG yra žemesnė, nei algoritmas tikėjosi. Raudoni stulpeliai naudojami [Autosens](#Open-APS-features-autosens) jautrumui didinti.
+* **Geltoni** stulpeliai rodo nuokrypį dėl NDM.
+* **Juodi** stulpeliai rodo mažus nuokrypius, į kuriuos neatsižvelgiama skaičiuojant jautrumą
 
-#### Blood Glucose Impact (-BGI)
+#### Glikemijos įtaka (-KGĮ)
 
-This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
+Ši linija rodo, kiek KG „turėtų“ kilti arba kristi vien dėl insulino aktyvumo.
 
-![Deviations and BGI](../images/main/graph_dev_bgi.png)
+![Nuokrypiai ir KGĮ](../images/main/graph_dev_bgi.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are well above the BGI line: BG rises more than insulin activity alone explains (for example after carbs). At the time marked **2**, the Deviation bars are below zero (red): BG is lower than the algorithm expected.
+Šią liniją verta rodyti kartu su nuokrypių stulpeliais. Jų skalė bendra, bet kitokia nei kitų papildomų duomenų, todėl verta juos rodyti atskirame grafike, kaip parodyta aukščiau. Palyginę KGĮ liniją ir nuokrypių stulpelius, galite kitu būdu suprasti, kaip svyruoja **KG**. Čia, laiku, pažymėtu **1**, nuokrypių stulpeliai yra gerokai virš KGĮ linijos: KG kyla labiau, nei galima paaiškinti vien insulino aktyvumu (pavyzdžiui, po angliavandenių). Laiku, pažymėtu **2**, nuokrypių stulpeliai yra žemiau nulio (raudoni): KG žemesnė, nei algoritmas tikėjosi.
 
-### Section F - QuickLaunch toolbar
+### Skiltis F – QuickLaunch įrankių juosta
 
-![QuickLaunch toolbar](../images/Home2020_Buttons.png)
+![QuickLaunch įrankių juosta](../images/Home2020_Buttons.png)
 
-The floating toolbar at the bottom of the screen holds your **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)** actions. The small **gear** opens the QuickLaunch configuration where you choose which buttons are shown (treatments, careportal entries, CGM actions, the screens of the **Manage** sheet, [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md) buttons, [Scenes](../DailyLifeWithAaps/Scenes.md) and more).
+Plaukiojanti įrankių juosta ekrano apačioje talpina jūsų **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)** veiksmus. Mažas **krumpliaratis** atidaro QuickLaunch konfigūraciją, kurioje pasirenkate, kokie mygtukai rodomi (terapija, terapijos įrašai, NGJ veiksmai, meniu **Valdymas** ekranai, [Greitojo vedlio](../DailyLifeWithAaps/QuickWizards.md) mygtukai, [Scenarijai](../DailyLifeWithAaps/Scenes.md) ir kt.).
 
-A typical configuration is shown above: **Insulin**, **Carbs** and the **Bolus wizard**.
+Aukščiau parodyta įprasta konfigūracija: **Insulinas**, **Angliavandeniai** ir **Boluso patarėjas**.
 
-While the pump is **disconnected**, the treatment buttons stay in the toolbar, for example to record insulin given with a pen (see [Insulin](#aaps-screens-buttons-insulin) below). The same actions are also available in the [Treatments sheet](#aaps-screens-treatments-sheet) of the bottom navigation.
+Kai pompa **atjungta**, terapijos mygtukai lieka įrankių juostoje, pavyzdžiui, kad galėtumėte įrašyti švirkštikliu suleistą insuliną (žr. [Insulinas](#aaps-screens-buttons-insulin) žemiau). Tie patys veiksmai pasiekiami ir apatinės navigacijos meniu [Terapija](#aaps-screens-treatments-sheet).
 
 (aaps-screens-buttons-insulin)=
 
 #### Insulinas
 
-![Insulin dialog](../images/Home2020_ButtonInsulin.png)
+![Insulino langas](../images/Home2020_ButtonInsulin.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
+Suleisti tam tikrą insulino kiekį nenaudojant [boluso patarėjo](#aaps-screens-bolus-wizard).
 
-By enabling **Start Eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
+Įjungę **Pradėti Netrukus valgysiu LT**, galite automatiškai pradėti [laikiną tikslą „Netrukus valgysiu“](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". An additional **Time** row, set to **Now**, lets you record an insulin injection made in the past: use **-** / **+** to change it, or tap the chevron to type the minutes or pick a date and time.
+Jei nenorite leisti boluso pompa, o tik įrašyti insulino kiekį (pvz., švirkštikliu suleistą insuliną), įjunkite „**Bolusas bus tik įrašytas (nebus suleistas)**“. Papildoma eilutė **Laikas**, nustatyta į **Dabar**, leidžia įrašyti anksčiau atliktą insulino injekciją: keiskite ją mygtukais **-** / **+** arba bakstelėkite rodyklę, kad įvestumėte minutes ar pasirinktumėte datą ir laiką.
 
-![The Time row, folded](../images/v4/Screens/insulin_dialog_record_only_time.png) ![The Time row, opened with the chevron](../images/v4/Screens/insulin_dialog_time_open.png)
+![Eilutė Laikas, suskleista](../images/v4/Screens/insulin_dialog_record_only_time.png) ![Eilutė Laikas, išskleista rodykle](../images/v4/Screens/insulin_dialog_time_open.png)
 
-You can use the **+0.5 / +1.0 / +2.0** buttons to quickly increase the insulin quantity. The increment values can be changed in the [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result).
+Mygtukais **+0,5 / +1,0 / +2,0** galite greitai padidinti insulino kiekį. Prieaugio reikšmes galima pakeisti [boluso patarėjo nustatymuose](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-The insulin dialog can be used when the pump is suspended or disconnected as well, e.g. to record insulin injected with a pen. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
+Insulino langą galima naudoti ir tada, kai pompa sustabdyta ar atjungta, pvz., norint įrašyti švirkštikliu suleistą insuliną. Tokiu atveju „**Bolusas bus tik įrašytas (nebus suleistas)**“ įjungiamas priverstinai (rodomas raudonai), o papildomuose laukuose galite pasirinkti insulino tipą ir **Laiko** poslinkį anksčiau atliktai injekcijai:
 
-![Insulin dialog with pump disconnected](../images/main/insulin_dialog_pump_disconnected.png)
+![Insulino langas, kai pompa atjungta](../images/main/insulin_dialog_pump_disconnected.png)
 
 #### Angliavandeniai
 
-![Carbs dialog](../images/Home2020_ButtonCarbs.png)
+![Angliavandenių langas](../images/Home2020_ButtonCarbs.png)
 
 To record carbs without bolusing.
 
-Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) (Hypo, Eating soon, Activity) can be started directly with the switches on top.
+Kai kuriuos [iš anksto nustatytus laikinus tikslus](#TempTargets-hypo-temp-target) (Hipo, Netrukus valgysiu, Sportas) galima pradėti tiesiai jungikliais viršuje.
 
-**Carb time**: When will you / have you been eating carbs.
+**Angliavandenių laikas**: kada valgysite / valgėte angliavandenius.
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). This row is folded, so that you do not type the grams into it by mistake: use **-** / **+** to change it, or tap the chevron to open it and type a value.
+**Trukmė**: naudojama [„ištęstiems angliavandeniams“](ExtendedCarbs.md). Ši eilutė suskleista, kad per klaidą neįvestumėte į ją gramų: keiskite ją mygtukais **-** / **+** arba bakstelėkite rodyklę, kad ją išskleistumėte ir įvestumėte reikšmę.
 
-You can use the **+5 / +10 / +20** buttons to quickly increase the carb amount.
+Mygtukais **+5 / +10 / +20** galite greitai padidinti angliavandenių kiekį.
 
-#### Quick Wizard
+#### Greitasis vedlys
 
-Easily enter amount of carbs and set calculation basics with a single pre-configured button.
+Vienu iš anksto sukonfigūruotu mygtuku lengvai įveskite angliavandenių kiekį ir nustatykite skaičiavimo pagrindus.
 
-Details are set up in [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md).
+Išsami sąranka aprašyta puslapyje [Greitasis vedlys](../DailyLifeWithAaps/QuickWizards.md).
 
 (aaps-screens-treatments-sheet)=
 
-### Section G - Bottom navigation
+### Skiltis G – apatinė navigacija
 
-The bottom navigation bar gives access to:
+Apatinė navigacijos juosta suteikia prieigą prie:
 
-* **Treatments** — a quick-actions sheet with your treatment actions:
+* **Terapija** – greitųjų veiksmų meniu su jūsų terapijos veiksmais:
     
-    ![Treatments sheet](../images/v4/Screens/treatments_sheet.png)
+    ![Meniu Terapija](../images/v4/Screens/treatments_sheet.png)
 
-* **Scenes** — shown only when you have at least one [scene](../DailyLifeWithAaps/Scenes.md) or an **Automation** rule marked as **User action**. It opens a sheet from which you can start them; a badge shows how many you can start right now. The **pencil** at the top of the sheet opens **Manage → Scenes**.
+* **Scenarijai** – rodoma tik tada, kai turite bent vieną [scenarijų](../DailyLifeWithAaps/Scenes.md) arba **Automatizacijos** taisyklę, pažymėtą kaip **Naudotojo veiksmas**. Atidaromas meniu, iš kurio galite juos paleisti; ženklelis rodo, kiek jų galite paleisti dabar. **Pieštukas** meniu viršuje atidaro **Valdymas → Scenarijai**.
 
-* **Manage** — the hub for everything you manage in **AAPS**: Profile, Insulin settings, Temp Target, QuickWizard, Scenes, Automation, Food, Site Rotation, Pump and Authorized clients. Below them are device and basal actions such as Sensor Insert and Temp Basal. Some items only appear when they apply to your setup — for example Prime/Fill and battery change depend on your pump, and Temp Basal, Extended Bolus and the Careportal entries are hidden in [Simple Mode](#preferences-simple-mode):
+* **Valdymas** – vieta viskam, ką valdote **AAPS**: Profilis, Insulino nustatymai, Laikinas tikslas, Greitasis vedlys, Scenarijai, Automatizacija, Maistas, Vietų rotacija, Pompa ir Autorizuoti klientai. Po jais yra įrenginių ir valandinės bazės veiksmai, pavyzdžiui, Jutiklio įvedimas ir Laikina bazė. Kai kurie punktai rodomi tik tada, kai jie tinka jūsų sistemai – pavyzdžiui, Užpildymas ir baterijos keitimas priklauso nuo jūsų pompos, o Laikina bazė, Ištęstas bolusas ir terapijos įrašai [Paprastajame režime](#preferences-simple-mode) paslėpti:
     
-    ![Manage sheet](../images/v4/Screens/manage_sheet.png)
+    ![Meniu Valdymas](../images/v4/Screens/manage_sheet.png)
 
-* **Objectives** — your progress through the [Objectives](../SettingUpAaps/CompletingTheObjectives.md); a badge shows how many are completed. This item disappears once all objectives are finished, and is not present on **AAPSClient**.
+* **Mokymo etapai** – jūsų pažanga [Mokymo etapuose](../SettingUpAaps/CompletingTheObjectives.md); ženklelis rodo, kiek jų įvykdyta. Šis punktas dingsta, kai visi mokymo etapai įvykdyti, ir jo nėra **AAPSClient**.
 
 (aaps-screens-notifications)=
 
 #### Notifications
 
-A **notification bubble** may appear above the bottom bar, on the right. It collects the active notifications of **AAPS**; the small number shows how many there are. Its color follows the most important one: red for an urgent message, green for a simple information.
+Virš apatinės juostos dešinėje gali atsirasti **pranešimų burbulas**. Jame surenkami aktyvūs **AAPS** pranešimai; mažas skaičius rodo, kiek jų yra. Jo spalva atitinka svarbiausią pranešimą: raudona – skubus pranešimas, žalia – paprasta informacija.
 
-![Main screen with the notification bubble](../images/main/main_screen_notification_bubble.png)
+![Pagrindinis ekranas su pranešimų burbulu](../images/main/main_screen_notification_bubble.png)
 
-Tap the bubble to open the **Notification** panel. Each message shows the time it was raised. Press **Dismiss** below a message to remove it; some messages have another button instead, to take you to the setting that needs your attention.
+Bakstelėkite burbulą, kad atidarytumėte skydelį **Pranešimas**. Prie kiekvieno pranešimo rodomas laikas, kada jis atsirado. Paspauskite **Atmesti** po pranešimu, kad jį pašalintumėte; kai kurie pranešimai vietoj to turi kitą mygtuką, kuris nuveda prie nustatymo, kuriam reikia jūsų dėmesio.
 
-![Notification panel with one message and its Dismiss button](../images/main/notification_panel.png)
+![Pranešimų skydelis su vienu pranešimu ir jo mygtuku Atmesti](../images/main/notification_panel.png)
 
-![Notification panel](../images/main/main_notification_panel.png)
+![Pranešimų skydelis](../images/main/main_notification_panel.png)
 
 (bolus-wizard)= (aaps-screens-bolus-wizard)=
 
-## Boluso skaičiuotuvas
+## Boluso patarėjas
 
 ![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus, this is where you will normally make it from.
+Valgio bolusą paprastai leisite iš čia.
 
 ### Skiltis I
 
-The **Calculation** header shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+Antraštėje **Skaičiavimas** rodomas apskaičiuotas bolusas. Jei aktyvaus insulino organizme jau yra daugiau nei apskaičiuotas bolusas, bus parodytas tik dar reikalingų angliavandenių kiekis.
 
-The bolus calculator can be used whatever your current **BG**, including when it is too high or too low. If **BG** is above target, a correction is added to the meal bolus. If **BG** is below target, the bolus is reduced and, if the insulin already on board is more than needed, the calculator tells you how many carbs are still required instead of proposing insulin.
+Boluso patarėją galima naudoti, kokia bebūtų jūsų dabartinė **KG**, net jei ji per aukšta ar per žema. Jei **KG** yra virš tikslo, prie valgio boluso pridedama korekcija. Jei **KG** yra žemiau tikslo, bolusas sumažinamas, o jei aktyvaus insulino organizme jau yra daugiau nei reikia, patarėjas vietoj insulino parodo, kiek angliavandenių dar reikia.
 
-The icon row below the header shows which inputs enter the calculation (BG, trend, IOB, temporary target, COB). Pressing an icon enables / disables this entry from the calculation; the **(i)** icon shows the detailed numbers behind the calculation.
+Piktogramų eilutė po antrašte rodo, kurie duomenys įtraukiami į skaičiavimą (KG, tendencija, AIO, laikinas tikslas, AAO). Paspaudus piktogramą, šie duomenys įtraukiami į skaičiavimą arba iš jo pašalinami; piktograma **(i)** rodo išsamius skaičiavimo skaičius.
 
 #### Combinations of COB and IOB and what they mean
 
-* For safety reasons, the IOB input cannot be disabled when COB is enabled as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
-* If you enable COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you enable IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
-* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
-* For safety reasons, a **temporary target** is only included in the calculation if you enable its input manually.
+* Saugumo sumetimais AIO negalima išjungti, kai įjungti AAO, nes rizikuotumėte gauti per daug insulino, jei **AAPS** neatsižvelgtų į jau suleistą insuliną.
+* Jei įjungiate AAO ir AIO, bus atsižvelgiama į neįsisavintus angliavandenius, kurie dar nepadengti insulinu, ir į visą insuliną, suleistą kaip TBR ar SMB.
+* Jei įjungiate AIO be AAO, **AAPS** atsižvelgia į jau suleistą insuliną, bet nesudengia jo su dar neįsisavintais angliavandeniais. Todėl matysite pranešimą „trūksta angliavandenių“.
+* Jei netrukus po valgio boluso leidžiate bolusą **papildomam maistui** (pvz., papildomam desertui), gali būti naudinga **išjungti visus įvesties duomenis**. Taip pridedami tik nauji angliavandeniai, nes pagrindinis valgis nebūtinai jau įsisavintas, todėl netrukus po valgio boluso AIO tiksliai neatitiks AAO.
+* Saugumo sumetimais **laikinas tikslas** į skaičiavimą įtraukiamas tik tada, kai jį įjungiate rankiniu būdu.
 
 (AapsScreens-section-j)=
 
-### Section J - Entry fields
+### Skiltis J – įvesties laukai
 
-In the **Carbs** field, you add your estimate of the amount of carbs, **in grams**, that you want to bolus for; the **+** buttons below it add carbs quickly. **AAPS** only works with grams: if you count in bread units or exchanges (*e.g.* DAFNE "CHO" exchanges), convert them to grams before entering them. See the [note about bread units](#your-aaps-profile-insulin-to-carbs-ratio) on the profile page.
+Lauke **Angliavandeniai** įvedate angliavandenių kiekį **gramais**, kuriam norite leisti bolusą; mygtukai **+** po juo greitai prideda angliavandenių. **AAPS** dirba tik su gramais: jei skaičiuojate duonos vienetais arba pakaitais (*pvz.,* DAFNE „CHO“ pakaitais), prieš įvesdami perskaičiuokite juos į gramus. Žr. [pastabą apie duonos vienetus](#your-aaps-profile-insulin-to-carbs-ratio) profilio puslapyje.
 
-#### Carbs type: bread, cake or pizza
+#### Angliavandenių tipas: duona, pyragas ar pica
 
-Below the **Carbs** field, the **Bread**, **Cake** and **Pizza** buttons tell **AAPS** how fast the meal is absorbed. With **Cake** and **Pizza**, the bolus covers only a part of the carbs now and the rest is added later as eCarbs. See [Carbs type: bread, cake or pizza](#AapsScreens-carbs-type) on the Extended carbs page for the percentages and timing.
+Po lauku **Angliavandeniai** esantys mygtukai **Duona**, **Pyragas** ir **Pica** nurodo **AAPS**, kaip greitai įsisavinamas valgis. Pasirinkus **Pyragas** ir **Pica**, bolusas dabar padengia tik dalį angliavandenių, o likusi dalis pridedama vėliau kaip i-AV. Procentus ir laiką rasite skiltyje [Angliavandenių tipas: duona, pyragas ar pica](#AapsScreens-carbs-type) puslapyje „Ištęsti angliavandeniai“.
 
-The **Correction** row is if you want to modify the end dosage for some reason.
+Eilutė **Korekcija** skirta, jei dėl kokios nors priežasties norite pakeisti galutinę dozę.
 
-Only the **Carbs** field is always open. The other rows (**Correction**, **Carb time**, **BG** and **Use percentage**) are folded: they show their value with **-** / **+** buttons, so you can change it in small steps. Tap the chevron to open a row and type a value, and tap it again to close the row. This avoids typing grams into the **Correction** field by mistake.
+Visada atvira tik eilutė **Angliavandeniai**. Kitos eilutės (**Korekcija**, **Angliavandenių laikas**, **KG** ir **Naudoti procentus**) yra suskleistos: jos rodo savo reikšmę su mygtukais **-** / **+**, kad galėtumėte ją keisti mažais žingsniais. Bakstelėkite rodyklę, kad išskleistumėte eilutę ir įvestumėte reikšmę, ir bakstelėkite ją dar kartą, kad eilutę suskleistumėte. Taip išvengiama, kad per klaidą įvestumėte gramus į lauką **Korekcija**.
 
-![Folded rows in the bolus wizard](../images/v4/Screens/bolus_wizard_bottom.png)
+![Suskleistos eilutės boluso patarėjo lange](../images/v4/Screens/bolus_wizard_bottom.png)
 
-Tap anywhere on the **Profile** row to open the list of your profiles, then tap a name to use that profile for this calculation.
+Bakstelėkite bet kur eilutėje **Profilis**, kad atidarytumėte savo profilių sąrašą, tada bakstelėkite pavadinimą, kad šiam skaičiavimui naudotumėte tą profilį.
 
-![The list of profiles in the bolus wizard](../images/v4/Screens/bolus_wizard_profile_list.png)
+![Profilių sąrašas boluso patarėjo lange](../images/v4/Screens/bolus_wizard_profile_list.png)
 
-The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+Laukas **Angliavandenių laikas** skirtas išankstiniam bolusui: juo sistemai nurodote, kad angliavandenių reikia laukti šiek tiek vėliau. Į šį lauką galite įvesti neigiamą skaičių, jei leidžiate bolusą anksčiau suvalgytiems angliavandeniams.
 
-**Set alarm** (eating reminder): when a carb time in the future is entered, a "**Set alarm**" switch appears so that you are reminded at the given time, when to eat the carbs you have input into **AAPS**:
+**Nustatyti įspėjimą** (priminimas pavalgyti): kai įvedamas būsimas angliavandenių laikas, atsiranda jungiklis „**Nustatyti įspėjimą**“, kad nurodytu laiku jums būtų priminta suvalgyti į **AAPS** įvestus angliavandenius:
 
-![Set alarm for future carbs](../images/Home2021_BolusWizard_EatingReminder.png)
+![Įspėjimo nustatymas būsimiems angliavandeniams](../images/Home2021_BolusWizard_EatingReminder.png)
 
 The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
@@ -625,15 +625,15 @@ The reminder starts when the bolus has been delivered. While it runs, a **Time t
 
 ![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
 
-The **BG** field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. When the reading is recent, the **BG** row stays folded. The field follows new readings while the wizard is open, until you change it yourself.
+Laukas **KG** paprastai jau užpildytas paskutiniu NGJ rodmeniu. Jei neturite veikiančio NGJ, šis laukas bus tuščias. Kai rodmuo naujas, eilutė **KG** lieka suskleista. The field follows new readings while the wizard is open, until you change it yourself.
 
-The result button at the bottom shows the proposed bolus; pressing it asks for confirmation before any insulin is delivered. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
+Rezultato mygtukas apačioje rodo siūlomą bolusą; jį paspaudus, prieš suleidžiant insuliną prašoma patvirtinimo. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
 
 Good to know:
 
-* If the calculated bolus is above your **[Maximum bolus](#Preferences-maximum-bolus)**, it is reduced to the max bolus, and the confirmation shows the warning "Bolus constraint applied". A [QuickWizard](../DailyLifeWithAaps/QuickWizards.md) is refused instead.
-* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
-* A bolus you give by hand has priority over an [SMB](#Open-APS-features-super-micro-bolus-smb) that is waiting to be delivered: the SMB is dropped and the loop calculates again. If an SMB is being delivered right now, your bolus is refused with the message "An SMB is being delivered right now. Try again when it has finished." No insulin is given, and carbs entered with that bolus are not saved: wait a moment and enter them again.
+* Jei apskaičiuotas bolusas viršija jūsų **[Didžiausią bolusą](#Preferences-maximum-bolus)**, jis sumažinamas iki didžiausio boluso, o patvirtinimo lange rodomas įspėjimas „Pritaikytas boluso apribojimas“. [Greitasis vedlys](../DailyLifeWithAaps/QuickWizards.md) tokiu atveju atmetamas.
+* Kai bolusas tik įrašomas (pavyzdžiui, kai pompa atjungta), įspėjimas „**Bolusas bus tik įrašytas (nebus suleistas)**“ lieka lango viršuje, net kai slenkate.
+* Rankiniu būdu leidžiamas bolusas turi pirmenybę prieš [SMB](#Open-APS-features-super-micro-bolus-smb), kuris laukia, kol bus suleistas: SMB atmetamas, o ciklas skaičiuoja iš naujo. Jei SMB tiekiamas būtent dabar, jūsų bolusas atmetamas su pranešimu „Šiuo metu leidžiamas SMB. Bandykite dar kartą, kai jis bus baigtas.“ Insulinas nesuleidžiamas, o kartu su tuo bolusu įvesti angliavandeniai neišsaugomi: palaukite šiek tiek ir įveskite juos dar kartą.
 
 (AapsScreens-wrong-cob-detection)=
 
@@ -641,78 +641,78 @@ Good to know:
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
-If you see the warning above after using bolus wizard, **AAPS** has detected that the calculated COB value may be wrong. So, if you want to bolus again after a previous meal with COB, you should be aware of overdosing!
+Jei pasinaudoję boluso patarėju matote aukščiau pateiktą įspėjimą, **AAPS** aptiko, kad apskaičiuota AAO reikšmė gali būti neteisinga. Todėl, jei po ankstesnio valgio, kai dar yra AAO, norite vėl leisti bolusą, saugokitės perdozavimo!
 
-For details, see the hints on [COB calculation page](#CobCalculation-detection-of-wrong-cob-values).
+Daugiau informacijos rasite patarimuose puslapyje [AAO apskaičiavimas](#CobCalculation-detection-of-wrong-cob-values).
 
-Looking for the **Actions** tab of **AAPS** 3.x? Its functions moved to the main screen, the **Manage** sheet and the QuickLaunch toolbar: see [Where did the Actions tab go?](#screens-action-tab).
+Ieškote **AAPS** 3.x skirtuko **Veiksmai**? Jo funkcijos perkeltos į pagrindinį ekraną, meniu **Valdymas** ir QuickLaunch įrankių juostą: žr. [Kur dingo skirtukas Veiksmai?](#screens-action-tab).
 
 (aaps-screens-careportal)=
 
-## Careportal entries
+## Terapijos įrašai
 
-The ages and levels shown in the [status row](#screens-sensor-level-battery) (sensor, insulin, cannula, pump battery) are based on careportal entries: **Prime/Fill** (records pump site and insulin cartridge changes), **Sensor Insert** and **Pump Battery Change**.
+[Būsenos eilutėje](#screens-sensor-level-battery) rodomi amžiai ir lygiai (jutiklis, insulinas, kaniulė, pompos baterija) pagrįsti terapijos įrašais: **Užpildymas** (įrašo infuzijos vietos ir insulino rezervuaro keitimus), **Jutiklio įvedimas** ir **Baterijos keitimas**.
 
-You can record them from the expanded status panel on the main screen, from the **Manage** sheet, or with [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
+Juos galite įrašyti išskleistame būsenos skydelyje pagrindiniame ekrane, meniu **Valdymas** arba [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) mygtukais.
 
-**Prime/Fill** records a pump site change and/or an insulin cartridge change, and can deliver a prime amount:
+**Užpildymas** įrašo infuzijos vietos keitimą ir (arba) insulino rezervuaro keitimą ir gali suleisti užpildymo kiekį:
 
-![Prime/Fill dialog](../images/dialogs/prime_fill.png)
+![Užpildymo langas](../images/dialogs/prime_fill.png)
 
-**Sensor Insert** and **Pump Battery Change** only ask for the time of the event:
+**Jutiklio įvedimas** ir **Baterijos keitimas** prašo nurodyti tik įvykio laiką:
 
-![Sensor Insert dialog](../images/dialogs/sensor_insert.png)
+![Jutiklio įvedimo langas](../images/dialogs/sensor_insert.png)
 
-![Pump Battery Change dialog](../images/dialogs/pump_battery_change.png) Exercise, announcement, question and note entries reflect the Nightscout careportal and are special forms of notes.
+![Baterijos keitimo langas](../images/dialogs/pump_battery_change.png) Sporto, pranešimo, klausimo ir pastabos įrašai atitinka Nightscout terapijos įrašus (careportal) ir yra specialios pastabų formos.
 
-In the **Manage** sheet, scroll down and press **Careportal** to show these entries: **BG Check**, **Note**, **Exercise**, **Question** and **Announcement**.
+Meniu **Valdymas** slinkite žemyn ir paspauskite **Terapija**, kad būtų parodyti šie įrašai: **Gliukomatis**, **Pastaba**, **Sportas**, **Klausimas** ir **Pranešimas**.
 
-![Careportal section of the Manage sheet](../images/v4/Screens/manage_sheet_careportal.png)
+![Meniu Valdymas terapijos įrašų skiltis](../images/v4/Screens/manage_sheet_careportal.png)
 
-**BG Check**, **Question** and **Announcement** let you enter a glucose value (from a meter, the sensor or another source), a note and the time of the event. In **Question** and **Announcement**, the glucose row is folded and shows the meter type next to the value: if you change the value, the type changes from **Sensor** to **Meter**.
+**Gliukomatis**, **Klausimas** ir **Pranešimas** leidžia įvesti gliukozės reikšmę (iš gliukomačio, jutiklio ar kito šaltinio), pastabą ir įvykio laiką. Languose **Klausimas** ir **Pranešimas** gliukozės eilutė yra suskleista, o šalia reikšmės rodomas matavimo tipas: jei pakeičiate reikšmę, tipas pasikeičia iš **Jutiklis** į **Matuoklis**.
 
-![Question with the folded glucose row](../images/dialogs/careportal_question.png)
+![Klausimas su suskleista gliukozės eilute](../images/dialogs/careportal_question.png)
 
-![BG Check dialog](../images/dialogs/careportal_bg_check.png)
+![Gliukomačio langas](../images/dialogs/careportal_bg_check.png)
 
-**Note** and **Exercise** let you enter a duration (a folded row: use **-** / **+**, or tap the chevron to type it), a note and the time of the event:
+**Pastaba** ir **Sportas** leidžia įvesti trukmę (suskleista eilutė: naudokite **-** / **+** arba bakstelėkite rodyklę, kad ją įvestumėte), pastabą ir įvykio laiką:
 
-![Exercise dialog](../images/dialogs/careportal_exercise.png)
+![Sporto langas](../images/dialogs/careportal_exercise.png)
 
-In all these dialogs (**Prime/Fill**, **Sensor Insert**, **Pump Battery Change** and the careportal entries), the time of the event uses the same **Time** row as the [insulin dialog](#aaps-screens-buttons-insulin) and the bolus wizard: use **-** / **+** to move the time in 5-minute steps (up to one week back and 12 hours ahead), or tap the chevron to pick any date and time.
+Visuose šiuose languose (**Užpildymas**, **Jutiklio įvedimas**, **Baterijos keitimas** ir terapijos įrašai) įvykio laikui naudojama ta pati eilutė **Laikas** kaip [insulino lange](#aaps-screens-buttons-insulin) ir boluso patarėjuje: mygtukais **-** / **+** laiką keiskite 5 minučių žingsniais (iki vienos savaitės atgal ir 12 valandų į priekį) arba bakstelėkite rodyklę, kad pasirinktumėte bet kurią datą ir laiką.
 
-## Site Rotation
+## Vietų rotacija
 
-**Manage → Site Rotation** records where each cannula and sensor was placed on a body map, so you can rotate your sites: see [Site Rotation](#Aapsscreens-site-rotation) on the Pumps and cannulas page.
+**Valdymas → Vietų rotacija** kūno žemėlapyje įrašo, kur buvo įvesta kiekviena kaniulė ir jutiklis, kad galėtumėte keisti vietas: žr. [Vietų rotacija](#Aapsscreens-site-rotation) puslapyje „Pompos ir kaniulės“.
 
-**TDD** (total daily dose) and the basal/bolus ratio rule of thumb are explained with the [Statistics Insulin tab](#reviewing-tdd).
+**BPD** (bendra paros dozė) ir valandinės bazės / boluso santykio orientacinė taisyklė paaiškinti [Statistikos skirtuke Insulinas](#reviewing-tdd).
 
 (AapsScreens-insulin-profile)=
 
 ## Insulinas
 
-![Insulin screen](../images/manage/insulin_profile.png)
+![Insulino ekranas](../images/manage/insulin_profile.png)
 
-**Manage → Insulin settings** shows and manages your insulin configurations. Each configuration is shown on a card with its **peak time** and **[DIA](#Config-Builder-insulin-dia)**; the one in use is marked **ACTIVE**. Below the card you see the activity curve. You can edit the nickname, peak and DIA of any configuration except the active one: to change the insulin you are using, [add a new configuration and activate it](#Config-Builder-insulin-change-active).
+**Valdymas → Insulino nustatymai** rodo ir valdo jūsų insulino konfigūracijas. Kiekviena konfigūracija rodoma kortelėje su **piko laiku** ir **[IVT](#Config-Builder-insulin-dia)**; naudojama konfigūracija pažymėta **AKTYVUS**. Po kortele matote aktyvumo kreivę. Galite redaguoti bet kurios konfigūracijos, išskyrus aktyvią, pavadinimą, piką ir IVT: norėdami pakeisti naudojamą insuliną, [pridėkite naują konfigūraciją ir ją aktyvuokite](#Config-Builder-insulin-change-active).
 
-See [Duration of insulin action](#Config-Builder-insulin-dia) to learn more about what it is and how to set it.
+Žr. [Insulino veikimo trukmė](#Config-Builder-insulin-dia), kad sužinotumėte daugiau, kas tai yra ir kaip ją nustatyti.
 
-## Pump Status
+## Pompos būklė
 
-![Virtual Pump status screen](../images/v4/Pumps/virtual_pump_screen.png)
+![Virtualios pompos būsenos ekranas](../images/v4/Pumps/virtual_pump_screen.png)
 
-**Manage → Pump** (or **Configuration → Pump → Open plugin**) shows the status of your pump: last connection, base basal rate, battery, reservoir...
+**Valdymas → Pompa** (arba **Konfigūracija → Pompa → Atidaryti įskiepį**) rodo jūsų pompos būseną: paskutinį prisijungimą, pagrindinį bazės dydį, bateriją, rezervuarą...
 
 * Displayed information depends on your pump model.
-* See [pumps page](../Getting-Started/CompatiblePumps.md) for details.
+* Daugiau informacijos rasite [pompų puslapyje](../Getting-Started/CompatiblePumps.md).
 
 ## Loop, AMA / SMB
 
-**Configuration → Loop → Open plugin** (and **Configuration → APS → Open plugin**) show details about the algorithm's calculations and why **AAPS** acts the way it does: last run, the resulting request, and the constraints. The **Loop** screen lists only the constraints that actually limited the delivered temp basal rate or SMB (and why closed loop is not allowed, if that is the case); the **APS** screen lists every constraint that went into the calculation.
+**Konfigūracija → Ciklas → Atidaryti įskiepį** (ir **Konfigūracija → DKS → Atidaryti įskiepį**) rodo algoritmo skaičiavimų duomenis ir paaiškina, kodėl **AAPS** elgiasi taip, kaip elgiasi: paskutinį vykdymą, gautą užklausą ir apribojimus. **Ciklo** ekrane pateikiami tik tie apribojimai, kurie iš tikrųjų apribojo suleistą laikiną bazę ar SMB (ir kodėl uždaras ciklas neleidžiamas, jei taip yra); **DKS** ekrane pateikiami visi į skaičiavimą įtraukti apribojimai.
 
-Calculations are run each time the system gets a fresh reading from the CGM.
+Skaičiavimai atliekami kiekvieną kartą, kai sistema gauna naują NGJ rodmenį.
 
-For more details see the [APS section of the Configuration page](#Config-Builder-aps).
+Daugiau informacijos rasite [Konfigūracijos puslapio APS skyriuje](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 
@@ -720,45 +720,45 @@ For more details see the [APS section of the Configuration page](#Config-Builder
 
 ![Profile](../images/Screenshots_Profile.png)
 
-**Manage → Profile** (or a tap on the profile name on the main screen) opens the Profile screen: your profiles as a swipeable card carousel, with buttons to add, edit, clone, delete and **activate** a profile.
+**Valdymas → Profilis** (arba bakstelėjimas ant profilio pavadinimo pagrindiniame ekrane) atidaro Profilio ekraną: jūsų profiliai rodomi kaip slenkamų kortelių karuselė su mygtukais profiliui pridėti, redaguoti, klonuoti, ištrinti ir **aktyvuoti**.
 
-Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
+Profilyje yra informacija apie jūsų individualius diabeto nustatymus. Daugiau informacijos rasite puslapyje **[Profilis](../SettingUpAaps/YourAapsProfile.md)**.
 
 ## Automatizavimas
 
 ![Automatizavimas](../images/v4/Screens/automation_overview.png)
 
-**Manage → Automation** lists your automation rules. See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
+**Valdymas → Automatizacija** pateikia jūsų automatizacijos taisykles. Žr. atskirą puslapį [čia](../DailyLifeWithAaps/Automations.md).
 
 ## NSClient
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-**Configuration → Communication → NSClientV3 → Open plugin** displays the status of the connection with your Nightscout site: URL, websocket status, queue and a log of the synchronization activity.
+**Konfigūracija → Ryšys → NSClientV3 → Atidaryti įskiepį** rodo ryšio su jūsų Nightscout svetaine būseną: URL, websocket būseną, eilę ir sinchronizacijos veiklos žurnalą.
 
-Settings can be changed in [NSClient settings](#Preferences-nsclient).
+Nustatymus galima pakeisti [NSClient nustatymuose](#Preferences-nsclient).
 
-For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
+Trikčių šalinimas aprašytas šiame [puslapyje](../GettingHelp/TroubleshootingNsClient.md).
 
 (aaps-screens-bg-source)=
 
-## BG Source - xDrip, BYODA...
+## Glikemijos šaltinis – xDrip, BYODA...
 
-![BG Source screen](../images/Screenshots_BGSource.png)
+![Glikemijos šaltinio ekranas](../images/Screenshots_BGSource.png)
 
-**Configuration → BG Source → Open plugin** shows the history of CGM readings and offers the option to remove readings in case of failure (i.e. compression low) or duplicate readings.
+**Konfigūracija → Glikemijos šaltinis → Atidaryti įskiepį** rodo NGJ rodmenų istoriją ir leidžia pašalinti rodmenis gedimo atveju (pvz., dėl suspaudimo klaidingai žemi rodmenys) arba pasikartojančius rodmenis.
 
-## Treatments history
+## Terapijos istorija
 
-Open the **menu** (☰) and select **Treatments history** to view, check and correct everything **AAPS** has recorded: carbs and boluses, temp basals, temporary targets, profile switches, careportal entries, loop mode changes and user entries. See [Treatments history](#aaps-screens-treatments) on the Reviewing your data page.
+Atidarykite **meniu** (☰) ir pasirinkite **Terapijos istorija**, kad peržiūrėtumėte, patikrintumėte ir pataisytumėte viską, ką **AAPS** įrašė: angliavandenius ir bolusus, laikinas bazes, laikinus tikslus, profilio keitimus, terapijos įrašus, ciklo režimo pakeitimus ir naudotojo įrašus. Žr. [Terapijos istorija](#aaps-screens-treatments) puslapyje „Duomenų peržiūra“.
 
-## History Browser
+## Istorija
 
-![History browser](../images/v4/Screens/history_browser.png)
+![Istorija](../images/v4/Screens/history_browser.png)
 
-Open the **menu** (☰) and select **History browser**.
+Atidarykite **meniu** (☰) ir pasirinkite **Istorija**.
 
-Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
+Leidžia grįžti atgal **AAPS** istorijoje. Žr. atskirą puslapį [Duomenų peržiūra > Istorija](../Maintenance/Reviewing.md).
 
 (aaps-screens-statistics)=
 
@@ -766,24 +766,24 @@ Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing y
 
 ![Statistics](../images/v4/Screens/statistics.png)
 
-Open the **menu** (☰) and select **Statistics**.
+Atidarykite **meniu** (☰) ir pasirinkite **Statistika**.
 
-Gives you statistics about your Total Daily Dose, Time In Range, your glucose profile over the day (AGP) and your insulin cycle pattern, on four tabs. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
+Pateikia jūsų bendros paros dozės, laiko tikslinėse ribose, gliukozės profilio per parą (AGP) ir insulino ciklo dėsningumų statistiką keturiuose skirtukuose. Žr. atskirą puslapį [Duomenų peržiūra > Statistika](#reviewing-statistics).
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Profilio pagalbininkas
 
-Open the **menu** (☰) and select **Profile helper**.
+Atidarykite **meniu** (☰) ir pasirinkite **Profilio pagalbininkas**.
 
-![Profile helper](../images/screens/profile_helper.png)
+![Profilio pagalbininkas](../images/screens/profile_helper.png)
 
-The Profile helper lets you compare profiles and generate starting profiles for children. See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) — sections [Build a Profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid) and [Compare two Profiles](#your-aaps-profile-compare-profiles).
+Profilio pagalbininkas leidžia palyginti profilius ir sukurti pradinius profilius vaikams. Žr. [Jūsų AAPS profilis](../SettingUpAaps/YourAapsProfile.md) – skyrius [Profilio kūrimas vaikui nuo nulio](#your-aaps-profile-profile-from-scratch-for-a-kid) ir [Dviejų profilių palyginimas](#your-aaps-profile-compare-profiles).
 
 (aaps-screens-widgets)=
 
-## Home screen widgets
+## Pagrindinio ekrano valdikliai
 
-**AAPS** provides five widgets that you can add to your phone's home screen, to see your data without opening the app. See the dedicated page [Home screen widgets](../DailyLifeWithAaps/Widgets.md).
+**AAPS** turi penkis valdiklius, kuriuos galite pridėti į telefono pagrindinį ekraną, kad matytumėte savo duomenis neatidarę programėlės. Žr. atskirą puslapį [Pagrindinio ekrano valdikliai](../DailyLifeWithAaps/Widgets.md).
 
-![AAPS widgets on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![AAPS valdikliai pagrindiniame ekrane](../images/widgets/home_widgets_full_circle_small.png)
