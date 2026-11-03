@@ -1,77 +1,77 @@
 (aaps-ci-google-drive-auth)=
 
-# Browser build – Step 3: Authorize Google Drive
+# בנייה בדפדפן – שלב 3: אישור Google Drive
 
 ```{note}
-This is **Step 3** of the [Browser build](BrowserBuild.md). First complete [Step 2 – Create your signing keystore](BrowserBuildKeystore.md).
+זהו **שלב 3** של [בנייה בדפדפן](BrowserBuild.md). קודם יש להשלים את [שלב 2 – יצירת keystore לחתימה](BrowserBuildKeystore.md).
 ```
 
 ```{warning}
-No matter which of the prior sets of instructions you followed (Option 1 or Option 2), you MUST add the Google Drive authorization to successfully use the Browser Build.
+לא משנה לפי איזו מההוראות הקודמות פעלתם (אפשרות 1 או אפשרות 2), חובה להוסיף את האישור של Google Drive כדי שהבנייה בדפדפן תצליח.
 ```
 
-Note: If you already followed this part in the video, you can now skip to [Step 4 – Build the APK](BrowserBuildAPK.md).
+הערה: אם כבר ביצעתם את החלק הזה בסרטון, אפשר לדלג עכשיו אל [שלב 4 – בניית ה-APK](BrowserBuildAPK.md).
 
 ```{warning}
-If the Google authorization does not start or the preparation page fails, close the preparation page, open `aaps-ci-preparation.html` again the same way as in Step 2, and start this step again. See [troubleshooting](#aaps-ci-preparation-web).
+אם האישור של Google לא מתחיל או שדף ההכנה נכשל, סגרו את דף ההכנה, פתחו שוב את `aaps-ci-preparation.html` באותה דרך כמו בשלב 2, והתחילו את השלב הזה מחדש. ראו [פתרון תקלות](#aaps-ci-preparation-web).
 ```
 
-Return to the preparation page tab.
+חזרו ללשונית של דף ההכנה.
 
-Scroll down to the Google Drive Auth section and tap Start Auth.
+גללו למטה אל האזור Google Drive Auth והקישו על Start Auth.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep44.png)
 
-Select your Google account.
+בחרו את חשבון Google שלכם.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH1.png)
 
-Scroll down and accept the access. The web page needs it to obtain the Google Drive authentication key.
+גללו למטה ואשרו את הגישה. דף האינטרנט צריך אותה כדי לקבל את מפתח האימות של Google Drive.
 
-Tap Continue.
+הקישו על Continue.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH2.png)
 
-The `GDRIVE_OAUTH2` field will populate, tap the top Copy button.
+השדה `GDRIVE_OAUTH2` יתמלא. הקישו על כפתור ה-Copy העליון.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH3.png)
 
 Switch back to the GitHub tab.
 
-Scroll down to Repository secrets and tap New repository secret.
+גללו למטה אל Repository secrets והקישו על New repository secret.
 
-If you followed Option 1 you should see this:
+אם פעלתם לפי אפשרות 1, אמור להופיע המסך הזה:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4.png)
 
-If you followed Option 2 there will be more keys:
+אם פעלתם לפי אפשרות 2, יופיעו יותר מפתחות:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4b.png)
 
-In the Name field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+בשדה Name, הדביקו את הטקסט שהעתקתם עכשיו. Use a long touch on the text box to show the paste menu.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH5.png)
 
-Switch to the preparation page tab.
+עברו ללשונית של דף ההכנה.
 
-Tap the second Copy button.
+הקישו על כפתור ה-Copy השני.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH6.png)
 
 Switch back to the GitHub tab.
 
-1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+1. בשדה Secret, הדביקו את הטקסט שהעתקתם עכשיו. Use a long touch on the text box to show the paste menu.
 
-2. Tap Add secret.
+2. הקישו על Add secret.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
 
-You should have either two (option 1) or five (option 2) secrets entries now.
+עכשיו אמורות להיות לכם שתי רשומות secrets (אפשרות 1) או חמש (אפשרות 2).
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH8.png)
 
-GitHub will now be able to store the AAPS apk file in your Google Drive, once built.
+אחרי הבנייה, GitHub יוכל לשמור את קובץ ה-APK של AAPS ב-Google Drive שלכם.
 
 ----
 
-**Next: [Step 4 – Build the APK](BrowserBuildAPK.md) →**
+**הבא: [שלב 4 – בניית ה-APK](BrowserBuildAPK.md) →**
