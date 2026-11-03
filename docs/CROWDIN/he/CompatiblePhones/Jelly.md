@@ -45,4 +45,4 @@ Remember to disable Google Play Protect.
 
 בחלק מהשעונים החכמים, כמו Samsung Galaxy, יש **להפעיל** את 'Remote connection' תחת Advanced features באפליקציית Galaxy Wearable, כדי להשתמש ב-Jelly, ב-**Wear.apk** & ב-**AAPS** מרחוק דרך Wi-Fi.
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+![Galaxy Wearable, ‏Advanced features, ‏Remote connection מופעל](../images/wearos/galaxy_wearable_remote_connection.png)
