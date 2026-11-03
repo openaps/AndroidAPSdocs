@@ -1,86 +1,86 @@
 # Android Auto
 
-**AAPS** is capable of sending you information about your current status as a message, directly into Android Auto in your car.
+**AAPS** kan skicka information om din aktuella status som ett meddelande direkt till Android Auto i din bil.
 
-## Requirements
+## Krav
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
+**AAPS** använder en funktion i Android Auto som skickar meddelanden från appar på telefonen till skärmen på bilens ljudsystem.
 
-That means that:
+Det betyder att:
 
-* Android must allow **AAPS** to show notifications and
-* As **AAPS** is an unofficial App, allow the use of "unknown sources" with Android Auto.
+* Android måste tillåta **AAPS** att visa aviseringar och
+* Eftersom **AAPS** inte är en officiell app måste du tillåta ”okända källor” i Android Auto.
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+![CGM-data från AAPS i Android Auto](../images/android_auto_01.png)
 
 (androidauto-check-that-aaps-can-show-notifications)=
 
-## Check that AAPS can show notifications
+## Kontrollera att AAPS kan visa aviseringar
 
-**AAPS** always shows a status notification with your current glucose, IOB and COB. This is the notification that Android Auto displays in the car. There is nothing to switch on in **AAPS**, but Android must allow **AAPS** to show notifications.
+**AAPS** visar alltid en statusavisering med ditt aktuella glukosvärde, IOB och COB. Det är den aviseringen som Android Auto visar i bilen. Du behöver inte slå på något i **AAPS**, men Android måste tillåta **AAPS** att visa aviseringar.
 
-On your phone, open **Settings** > **Apps** > **AAPS** > **Notifications** and make sure **All AAPS notifications** is on.
+Öppna **Inställningar** > **Appar** > **AAPS** > **Aviseringar** på telefonen och kontrollera att **Alla aviseringar från AAPS** är på.
 
-![All AAPS notifications switched on](../images/android_auto_notifications_all.png)
+![Alla aviseringar från AAPS påslagna](../images/android_auto_notifications_all.png)
 
-Scroll down and make sure **Ongoing status** is on: this is the channel of the status notification.
+Skrolla ner och kontrollera att **Pågående status** är på: det är kanalen för statusaviseringen.
 
-![Ongoing status notification channel switched on](../images/android_auto_ongoing_channel.png)
+![Aviseringskanalen Pågående status påslagen](../images/android_auto_ongoing_channel.png)
 
-Please check now that you see the **AAPS** status notification on the phone before you walk to your car!
+Kontrollera nu att du ser statusaviseringen från **AAPS** på telefonen innan du går till bilen!
 
-![AAPS notification on the phone](../images/android_auto_04.png)
+![AAPS-avisering på telefonen](../images/android_auto_04.png)
 
 (androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
-## Allow the use of "unknown sources" with Android Auto.
+## Tillåt ”okända källor” i Android Auto.
 
-As **AAPS** is not an official Android Auto app, notifications have to be activated for "unknown sources" in Android Auto. This is done through the use of the developer mode which we will show you here.
+Eftersom **AAPS** inte är en officiell app för Android Auto måste aviseringar aktiveras för ”okända källor” i Android Auto. Det görs med hjälp av utvecklarläget, som vi visar här.
 
-Go to your car and connect your mobile with the car's audio system.
+Gå till din bil och anslut telefonen till bilens ljudsystem.
 
-You should now see a screen similar to this screen.
+Du ser nu en skärm som liknar den här.
 
-![Enable developer mode](../images/android_auto_05.png)
+![Aktivera utvecklarläget](../images/android_auto_05.png)
 
-Press on the **setting** icon to start the configuration.
+Tryck på ikonen för **inställningar** för att starta konfigurationen.
 
-Scroll down to the end of the page and select **see more in the phone**.
+Skrolla ner till slutet av sidan och välj **se mer på telefonen**.
 
-![Enable developer mode](../images/android_auto_06.png)
+![Aktivera utvecklarläget](../images/android_auto_06.png)
 
-Now on the mobile we will activate the developer mode.
+Nu aktiverar vi utvecklarläget på telefonen.
 
-The first screen looks like this. Scroll down to the end of the page.
+Den första skärmen ser ut så här. Skrolla ner till slutet av sidan.
 
-![Enable developer mode](../images/android_auto_07.png)
+![Aktivera utvecklarläget](../images/android_auto_07.png)
 
-There you see the version of Android Auto listed. Tap 10 times (in word ten) on the version of Android Auto. With this hidden combination you have now enabled developer mode.
+Där ser du vilken version av Android Auto du har. Tryck 10 gånger (tio gånger) på versionen av Android Auto. Med den här dolda kombinationen har du nu aktiverat utvecklarläget.
 
-![Enable developer mode](../images/android_auto_08.png)
+![Aktivera utvecklarläget](../images/android_auto_08.png)
 
-Confirm that you want to enable the developer mode in the modal dialog "Allow development settings?".
+Bekräfta i dialogrutan ”Vill du tillåta utvecklarinställningar?” att du vill aktivera utvecklarläget.
 
-![Enable developer mode](../images/android_auto_09.png)
+![Aktivera utvecklarläget](../images/android_auto_09.png)
 
-In the **developer settings** enable the "Unknown sources".
+Aktivera ”Okända källor” i **utvecklarinställningarna**.
 
-![Enable developer mode](../images/android_auto_10.png)
+![Aktivera utvecklarläget](../images/android_auto_10.png)
 
-Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
+Nu kan du stänga utvecklarläget om du vill. Det gör du med menyn med tre punkter uppe till höger.
 
-## Show notifications in car
+## Visa aviseringar i bilen
 
-Tap the **number icon** on the lower right side in Android Auto in your car.
+Tryck på **sifferikonen** nere till höger i Android Auto i bilen.
 
-![number icon - Android Auto in car](../images/android_auto_11.png)
+![sifferikon – Android Auto i bilen](../images/android_auto_11.png)
 
-Your CGM data will be shown as follows:
+Dina CGM-data visas så här:
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+![CGM-data från AAPS i Android Auto](../images/android_auto_01.png)
 
 (android-auto-troubleshooting)=
 
-## Troubleshooting:
+## Felsökning:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
+* Om du inte ser aviseringen, kontrollera att du har [tillåtit AAPS att visa aviseringar](#androidauto-check-that-aaps-can-show-notifications) i Android och att [Android Auto har behörighet till aviseringar](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
