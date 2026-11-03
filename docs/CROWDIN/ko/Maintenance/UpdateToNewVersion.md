@@ -1,43 +1,43 @@
-# 새로운 버젼 또는 브랜치 업데이트
+# 새 버전 또는 브랜치로 업데이트
 
-## 다운로드 대신에 당신 스스로 빌드하세요
+## 다운로드 대신 직접 빌드
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS**는 의료기기 관련 규정 때문에 다운로드할 수 없습니다. 본인이 사용하기 위해 앱을 빌드하는 것은 합법이지만, 다른 사람에게 복사본을 주어서는 안 됩니다! 자세한 내용은 [FAQ 페이지](../UsefulLinks/FAQ.md)를 참조하십시오.
 
 ## 중요사항
 
-- Please update to the new version of **AAPS** as soon as possible after a new release is available.
-- When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-- The new version will also be announced on Facebook at the time of release.
-- Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-- Updating from **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
-- Do not forget to [export your settings](ExportImportSettings.md). When you import them again after the update, you choose whether the pump settings are replaced too.
+- 새 릴리스가 나오면 가능한 한 빨리 **AAPS** 새 버전으로 업데이트하십시오.
+- 새 릴리스가 나오면 **AAPS** 앱 안에 새 버전에 대한 정보 배너가 표시됩니다.
+- 새 버전은 릴리스 시점에 Facebook에도 공지됩니다.
+- 릴리스가 나온 후에는 업데이트를 진행하기 전에 [릴리스 노트](ReleaseNotes.md)를 자세히 읽고, 궁금한 점은 Facebook 또는 Discord 커뮤니티에서 확인하십시오.
+- **AAPS** 3.x에서 업데이트합니까? 먼저 [AAPS v4의 변경 사항](V4Changes.md)을 읽으십시오: 옮겨졌거나 이름이 바뀌었거나 삭제된 기능이 정리되어 있습니다.
+- [설정을 내보내는 것](ExportImportSettings.md)을 잊지 마십시오. 업데이트 후 설정을 다시 가져올 때, 펌프 설정도 교체할지 선택합니다.
 
-## Update AAPS with browser build
+## 브라우저 빌드로 AAPS 업데이트
 
-You already built your AAPS app with a browser? Follow the instructions for the method you used:
+이미 브라우저로 AAPS 앱을 빌드했습니까? 사용한 방법에 맞는 안내를 따르십시오.
 
-- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
-- **Fork and preparation file**: you run the **AAPS-CI** workflow in your own copy (fork) of AndroidAPS, a repository named `AndroidAPS` in your GitHub account, and the app lands in your Google Drive. Follow [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder**: 개인 저장소(보통 이름은 `my-aaps`)의 **Build AAPS** 페이지에서 빌드하고 GitHub에서 앱을 내려받습니다. [AAPS Builder로 AAPS 업데이트하기](#aaps-builder-updates)를 따르십시오. 동기화할 fork가 없습니다.
+- **Fork와 준비 파일**: GitHub 계정에 있는 `AndroidAPS`라는 저장소, 즉 자신의 AndroidAPS 복사본(fork)에서 **AAPS-CI** 워크플로를 실행하며, 앱은 Google Drive에 저장됩니다. [브라우저로 업데이트 (fork)](./UpdateBrowserBuild.md)를 따르십시오.
 
-## Update AAPS with Android Studio
+## Android Studio로 AAPS 업데이트
 
-Follow [these instructions](./UpdateComputerBuild.md).
+[이 안내](./UpdateComputerBuild.md)를 따르십시오.
 
-## Update AAPS with the command-line
+## 명령줄로 AAPS 업데이트
 
-Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
+이전에 AAPS를 빌드할 때와 [같은 안내](../SettingUpAaps/CLIBuild.md)를 따르되, 새 변경 사항은 git으로 pull하십시오.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-## After the update
+## 업데이트 후
 
-These steps are the same for every build method. Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+이 단계는 모든 빌드 방법에서 같습니다. 업데이트 후 따로 해야 할 일이 있는지 [릴리스 노트](../Maintenance/ReleaseNotes.md)에서 확인하십시오.
 
-After you installed the new apk:
+새 APK를 설치한 후:
 
-- you can check the **AAPS** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The current **AAPS** version can be viewed;
-- make sure you have imported your settings; and
-- please check your **AAPS** settings under **Settings** and ensure these remain accurate.
+- 왼쪽 위의 **메뉴**(☰)를 열고 **정보**를 누르면 휴대폰에서 **AAPS** 버전을 확인할 수 있습니다(아래 스크린샷 참조). 현재 **AAPS** 버전을 볼 수 있습니다.
+- 설정을 가져왔는지 확인하십시오.
+- **설정**에서 **AAPS** 설정을 확인하고 설정이 그대로 정확한지 확인하십시오.
 
-![About dialog with the AAPS version installed](../images/about_dialog_version.png)
+![설치된 AAPS 버전이 표시된 정보 대화 상자](../images/about_dialog_version.png)
