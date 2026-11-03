@@ -1,40 +1,40 @@
-# End of life
+# Slut på support (End of life)
 
-Even if your current AAPS system works exactly the way you like, upgrading is still worth it because newer releases bring safety fixes and bug corrections you may never notice until they matter, keep compatibility with new phone OS versions, CGM apps, pump firmware and Nightscout changes, add algorithm improvements and features that have been tested by the wider community, and ensure you stay on a version that is still supported and that others can actually help you troubleshoot. Some previous AAPS versions deliberately have no expiration date so they can keep working on older Android versions, so the lack of an expiration warning is not a sign that your version is still up to date or supported.
+Även om ditt AAPS-system fungerar precis som du vill är det värt att uppgradera. Nya versioner innehåller säkerhetsfixar och buggrättningar som du kanske inte märker förrän de behövs. De behåller kompatibiliteten med nya versioner av telefonens operativsystem, CGM-appar, pumpens firmware och ändringar i Nightscout. De lägger till förbättringar i algoritmen och funktioner som har testats av en större community. Och du stannar på en version som fortfarande stöds och där andra faktiskt kan hjälpa dig med felsökning. Vissa tidigare versioner av AAPS har avsiktligt inget slutdatum, så att de kan fortsätta fungera på äldre Android-versioner. Att du inte får någon varning om slutdatum betyder alltså inte att din version är aktuell eller att den fortfarande stöds.
 
-Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#version-enforcement). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
+Varje version av AAPS kan ha ett slutdatum. Efter detta datum kan AAPS [begränsa loopen](#version-enforcement). AAPS varnar dig innan en version slutar gälla. Planera att uppdatera före slutdatumet och följ [guiden för uppdatering](UpdateToNewVersion.md).
 
-## How to use this page
+## Så använder du den här sidan
 
-1. In AAPS, open the **menu** (☰) at the top left and choose **About**. You will see your AAPS version there.
-2. Find the same version in the first table below. Read the end date next to it. Dates are written as **year-month-day**. For example, `2026-10-30` means 30 October 2026.
-3. Check the [Release Notes](ReleaseNotes.md) and the [update guide](UpdateToNewVersion.md) before you update. The version you can use also depends on your phone's Android version.
+1. Öppna **menyn** (☰) uppe till vänster i AAPS och välj **Om**. Där ser du din version av AAPS.
+2. Leta upp samma version i den första tabellen nedan. Läs slutdatumet bredvid den. Datum skrivs som **år-månad-dag**. Till exempel betyder `2026-10-30` den 30 oktober 2026.
+3. Läs [versionsinformationen](ReleaseNotes.md) och [guiden för uppdatering](UpdateToNewVersion.md) innan du uppdaterar. Vilken version du kan använda beror också på telefonens Android-version.
 
-The table does not show an end date for every AAPS version. If your version is missing, its end date may not have been set yet. This does not mean it will be supported forever.
+Tabellen visar inte ett slutdatum för varje version av AAPS. Om din version saknas har slutdatumet kanske inte bestämts än. Det betyder inte att den kommer att stödjas för alltid.
 
-## AAPS version end dates
+## Slutdatum för versioner av AAPS
 
-<div id="aaps-eol-status" role="status" aria-live="polite">Loading AAPS version data…</div>
+<div id="aaps-eol-status" role="status" aria-live="polite">Läser in versionsdata för AAPS…</div>
 <noscript>
-  Turn on JavaScript to see the tables.
+  Slå på JavaScript för att se tabellerna.
 </noscript>
 
 <div id="aaps-eol-versions" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">AAPS version</th><th scope="col">End date</th></tr></thead>
+    <thead><tr><th scope="col">Version av AAPS</th><th scope="col">Slutdatum</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
 
-## Android API levels
+## API-nivåer i Android
 
-Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
+Android ger varje systemversion en **API-nivå**. Det är ett nummer som appar använder. Till exempel är API-nivå 30 samma som Android 11. Tabellen nedan använder API-nivåer från versionsdata för AAPS. Versionen av AAPS på varje rad är det värde som anges för den API-nivå som visas. Det här är inte en fullständig lista över versioner som du kan installera.
 
 To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">Android API level</th><th scope="col">AAPS version listed</th></tr></thead>
+    <thead><tr><th scope="col">API-nivå i Android</th><th scope="col">Angiven version av AAPS</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     ]));
     status.remove();
   } catch {
-    status.textContent = 'Could not load AAPS version data. Please try again later.';
+    status.textContent = 'Could not load AAPS version data. Försök igen senare.';
   }
 });
 </script>
