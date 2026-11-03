@@ -1,89 +1,89 @@
 <!-- Android Studio Build, FKA Computer Build. Preserve filenames to avoid breaking URLs. -->
 
-# Android Studio Build
+# Android Studio 빌드
 
-This is the traditional method to build your AAPS app.
+AAPS 앱을 빌드하는 전통적인 방법입니다.
 
-You can build the app without a computer using the [Browser Build](./BrowserBuild.md) method.
+[브라우저 빌드](./BrowserBuild.md) 방법을 사용하면 컴퓨터 없이 앱을 빌드할 수 있습니다.
 
-## 다운로드 대신에 당신 스스로 빌드하세요
+## 다운로드 대신 직접 빌드
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**의료기기 관련 규정 때문에 AAPS 앱(apk 파일)은 다운로드할 수 없습니다. 본인이 사용하기 위해 앱을 빌드하는 것은 합법이지만, 다른 사람에게 복사본을 주어서는 안 됩니다!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+자세한 내용은 [FAQ 페이지](../UsefulLinks/FAQ.md)를 참조하십시오.
 
 ---
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
-## Computer and software specifications for building AAPS
+## AAPS 빌드를 위한 컴퓨터와 소프트웨어 사양
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
+* APK를 빌드하려면 특정 **[Android Studio](https://developer.android.com/studio/)** 버전이 필요할 수 있습니다. 아래 표를 참조하십시오:
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                             | tested up to Quail 4                                   | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | tested up to Quail 4                                   | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | tested up to Quail 4                                   | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | tested up to Quail 4                                   | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                   | tested up to Quail 4                                   | 8.13   | 21  |
-| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                   | tested up to Quail 4                                   | 9      | 21  |
-| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                  | Latest                                                 | 9.8    | 21  |
+| AAPS Version            | 권장<br/>Android Studio<br/>버전 | 대체<br/>Android Studio<br/>버전 | Gradle | JVM |
+| ----------------------- | ---------------------------------------- | ---------------------------------------- | ------ |:--- |
+| 2.6.2                   | 3.6.1                                    |                                          | 5.6.4  | 11  |
+| 2.8.2.1                 | 4.1.1                                    |                                          | 6.1.1  | 13  |
+| [3.1.0.3](#version3100) | 2020.3.1                                 | Quail 4까지 테스트됨                           | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                      | Quail 4까지 테스트됨                           | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)          | Quail 4까지 테스트됨                           | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                       | Quail 4까지 테스트됨                           | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                       | Quail 4까지 테스트됨                           | 8.13   | 21  |
+| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                       | Quail 4까지 테스트됨                           | 9      | 21  |
+| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                      | 최신                                       | 9.8    | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+"권장 버전"에는 알맞은 JVM 버전이 함께 들어 있습니다. 권장 버전은 **AAPS**를 빌드할 때 사용할 수 있는 최소 버전이기도 합니다. "권장" 버전보다 오래된 버전으로는 빌드할 수 **없습니다**. 다른 버전을 사용하면 JVM 버전과 관련된 문제가 생길 수 있습니다. 이 문제를 해결하려면 [Android Studio 문제 해결](#troubleshooting_androidstudio-uncommitted-changes) 페이지를 참조하십시오. 현재 Android Studio 버전이 표에 없으면 먼저 Android Studio를 업데이트해야 합니다.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+Gradle 버전은 소스 코드에 연결되어 있으므로, 소스 코드를 다운로드하거나 업데이트할 때 항상 올바른 Gradle 버전을 받게 됩니다. 여기서는 참고용으로만 적었으며, 따로 조치할 필요는 없습니다.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* Android Studio는 [Windows 32비트 시스템](#troubleshooting_androidstudio-unable-to-start-daemon-process)을 지원하지 않습니다. **64비트 CPU와 64비트 OS가 모두 필수 조건입니다.** 이 점을 꼭 기억하십시오. 시스템이 이 조건을 충족하지 않으면 해당 하드웨어나 소프트웨어 또는 시스템 전체를 바꿔야 합니다.
 
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 10 or higher</td>
-    <td class="tg-baqh">macOS 12 or higher</td>
-    <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
+    <th class="tg-baqh">OS (64비트만)</th>
+    <td class="tg-baqh">Windows 10 이상</td>
+    <td class="tg-baqh">macOS 12 이상</td>
+    <td class="tg-baqh">Gnome, KDE 또는 Unity DE를 지원하는 모든 Linux 배포판;&nbsp;&nbsp;GNU C Library (glibc) 2.31 이상</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
-    <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <th class="tg-baqh"><p align="center">CPU (64비트만)</th>
+    <td class="tg-baqh">2017년 이후의 x86_64 CPU(Intel 8세대 Core i5, AMD Ryzen 또는 그 이후) 및 BIOS에서 <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">가상화 지원</a>(Intel VT-x 또는 AMD-V) 활성화</td>
+    <td class="tg-baqh">Apple Silicon(M1 이상) 또는 6세대 Intel Core 이상(Intel Mac 지원은 단계적으로 중단되고 있음)</td>
+    <td class="tg-baqh">2017년 이후의 x86_64 CPU(Intel 8세대 Core i5, AMD Ryzen 또는 그 이후) 및 BIOS에서 가상화 지원(Intel VT-x 또는 AMD-V) 활성화</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16GB 이상(Android Studio만 쓰는 경우 최소 8GB가 절대 하한이며, 32GB 권장)</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. SSD is recommended.</td>
+    <th class="tg-baqh"><p align="center">디스크</th>
+    <td class="tg-baqh" colspan="3"><p align="center">최소 32GB의 여유 공간. SSD를 권장합니다.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
+    <th class="tg-baqh"><p align="center">해상도</th>
+    <td class="tg-baqh" colspan="3"><p align="center">최소 1280 x 800(1920 x 1080 권장)<br></td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <th class="tg-baqh"><p align="center">인터넷</th>
+    <td class="tg-baqh" colspan="3"><p align="center">광대역</td>
   </tr>
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**AAPS APK 파일을 빌드할 때 시간이 덜 걸리므로 HDD(하드 디스크 드라이브) 대신 SSD(솔리드 스테이트 디스크)를 사용할 것을 강력히 권장합니다(필수는 아님).**  **AAPS** APK 파일을 빌드할 때 HDD를 사용해도 됩니다. 그렇게 하면 빌드 과정이 오래 걸릴 수 있지만, 일단 시작되면 그대로 두어도 됩니다.
 
-## Help and support during the building process
+## 빌드 과정 중 도움과 지원
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) section, please consult that first.
+**AAPS** 앱을 빌드하는 과정에서 어려움이 생기면 별도의 [**Android Studio 문제 해결**](../GettingHelp/TroubleshootingAndroidStudio.md) 섹션이 있으니 먼저 참조하십시오.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+빌드 안내에 틀리거나 빠졌거나 헷갈리는 내용이 있다고 생각되거나 여전히 해결이 어려우면 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 또는 [Discord](https://discord.gg/4fQUWHZ4Mw)의 다른 **AAPS** 사용자 그룹에 문의하십시오. 직접 무언가를 바꾸고 싶다면(스크린샷 업데이트 _등_) [Pull Request(PR)](../SupportingAaps/HowToEditTheDocs.md)를 제출하십시오.
 
-## Step-by-step guide to building the AAPS app
+## AAPS 앱 빌드 단계별 안내
 
 ```{admonition} WARNING
 :class: warning
-If you have built AAPS before, you don't need to take all the following steps again.
-Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
+이전에 AAPS를 빌드한 적이 있다면 아래 단계를 모두 다시 할 필요는 없습니다.
+바로 [업데이트 안내](../Maintenance/UpdateToNewVersion.md)로 가십시오!
 ```
 
 ```{contents} The overall steps for building the **AAPS** apk file
@@ -91,347 +91,347 @@ Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)
 :local: true
 ```
 
-In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow.
+이 안내에는 **AAPS** apk 파일을 빌드하는 _예시_ 스크린샷이 있습니다. **AAPS** apk를 빌드하는 데 사용하는 소프트웨어인 **Android Studio**는 정기적으로 업데이트되므로, 이 스크린샷이 사용자의 설치 화면과 똑같지 않을 수 있습니다. 하지만 그래도 따라 할 수 있을 것입니다.
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
+**Android Studio**는 Windows, Mac OS X, Linux에서 실행되므로 플랫폼마다 단계에 작은 차이가 있을 수 있습니다.
 
 (install-git-if-you-dont-have-it)=
-### Install Git
+### Git 설치
 
 ```{admonition} Why Git? 
 :class: dropdown
 
-Git is known as a “_Versioning Control System_” (VCS).\
-Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
+Git은 "_버전 관리 시스템_"(VCS, Versioning Control System)이라고 합니다.\
+Git은 코드의 변경 사항을 추적하고 다른 사람과 협업할 수 있게 해 주는 프로그램입니다. Git을 사용하여 GitHub 웹사이트에서 **AAPS** 소스 코드의 복사본을 로컬 컴퓨터로 가져옵니다. 그런 다음 컴퓨터에서 Android Studio를 사용하여 **AAPS** 애플리케이션(apk)을 빌드합니다. 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
-#### Steps for Installing Git
+#### Git 설치 단계
 
-1.  Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
+1.  **Git**이 이미 설치되어 있지 않은지 확인하십시오. Windows 검색창에 "git"을 입력하여 확인할 수 있습니다. **"Git bash"** 또는 다른 형태의 Git이 보이면 이미 설치되어 있으므로 바로 [Android Studio 설치](#Building-APK-install-android-studio)로 넘어가면 됩니다:
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
+2. Git이 설치되어 있지 않다면 [**여기**](https://git-scm.com/downloads)의 "Download" 섹션에서 사용하는 시스템에 맞는 최신 버전을 다운로드하여 설치하십시오. 최신 Git 버전이면 모두 사용할 수 있습니다. Mac, Windows, Linux 중 사용하는 시스템에 맞는 버전을 선택하십시오.
 
-**Note for Mac users:** the Git webpage will also guide you to install an additional program called "homebrew" to aid the installation. If you install Git via homebrew, there is no need to change any preferences.
+**Mac 사용자 참고:** Git 웹페이지에서 설치를 돕는 "homebrew"라는 추가 프로그램을 설치하도록 안내할 것입니다. homebrew로 Git을 설치하면 설정을 바꿀 필요가 없습니다.
 
 (Make_a_note_of_Git_path)=
 
-* During the installation, when you are asked to "select destination location" make a note of _where_ Git is being installed (the "**installation path**") you will need to check it in the next step. It will be something similar to "C:\Program Files\Git\cmd\git.exe"
+* 설치 중에 "select destination location"(설치 위치 선택)을 묻는 화면이 나오면 Git이 설치되는 _위치_("**설치 경로**")를 적어 두십시오. 다음 단계에서 확인해야 합니다. "C:\Program Files\Git\cmd\git.exe"와 비슷한 경로입니다
 
-*  As you proceed through several steps of the Git installation, just accept all the default options.
+*  Git 설치의 여러 단계를 진행할 때는 기본 옵션을 모두 그대로 수락하십시오.
 
-*  After the install, if you forgot to make a note of the where Git was installed, you can find it as follows: type "git" into the PC search bar, right click on "Git bash", select "open file location" hover over the "Git bash" icon with your mouse, which will then reveal where it is installed.
+*  설치 후 Git이 설치된 위치를 적어 두는 것을 잊었다면 다음과 같이 찾을 수 있습니다: PC 검색창에 "git"을 입력하고 "Git bash"를 마우스 오른쪽 버튼으로 클릭한 다음 "open file location"(파일 위치 열기)을 선택하고, 마우스를 "Git bash" 아이콘 위에 올리면 설치 위치가 표시됩니다.
 
-* Reboot your computer before the next step.
+* 다음 단계 전에 컴퓨터를 다시 시작하십시오.
 
 (Building-APK-install-android-studio)=
-### Install Android Studio
+### Android Studio 설치
 
-- **You have to be online all of the time during the following steps, as Android Studio downloads several updates**
+- **Android Studio가 여러 업데이트를 다운로드하므로 다음 단계를 진행하는 동안 계속 인터넷에 연결되어 있어야 합니다.**
 
 ```{admonition} What is Android Studio?
 :class: dropdown
-Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
+Android Studio는 컴퓨터에서 실행되는 프로그램입니다. Android Studio로 인터넷에서 소스 코드를 다운로드하고(Git 사용) 스마트폰(및 스마트워치) 앱을 빌드할 수 있습니다. PC에서 Android Studio로 새 앱이나 업데이트된 앱을 빌드해도, 스마트폰에서 지금 루프에 사용 중인 **AAPS** 버전이 "망가지지" 않습니다. 두 과정은 완전히 별개입니다. 
 ```
 
-One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
+Android Studio를 설치할 때 가장 중요한 것 중 하나는 **인내심을 갖는 것입니다!** 설치와 설정 중에 Android Studio는 많은 것을 다운로드하므로 시간이 걸립니다.
 
 ```{admonition} Different UI
 :class: warning
-Important note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+중요 참고: Android Studio는 최근 릴리스에서 UI를 바꾸었습니다. 이 안내는 *새 UI*로 단계를 보여 줍니다. 스크린샷은 "Ladybug"로 찍었으므로 새 버전에서는 조금 다르게 보일 수 있습니다. 아직 이전 UI를 사용하고 있다면, 먼저 [이 안내](#computerbuild-NewUI)에 따라 Android Studio를 새 UI로 바꾸는 것이 좋습니다.
 ```
 
-The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
+Android Studio 버전은 매우 중요합니다. 알맞은 Android Studio 버전을 고르려면 [위의 안내](#Building-APK-recommended-specification-of-computer-for-building-apk-file)를 참조하십시오.
 
-Download the [current version of Android Studio](https://developer.android.com/studio) or an older version from the [**Archives**](https://developer.android.com/studio/archive) and accept the download agreements.
+[Android Studio 현재 버전](https://developer.android.com/studio)을 다운로드하거나 [**Archives**](https://developer.android.com/studio/archive)(보관 페이지)에서 이전 버전을 다운로드하고, 다운로드 약관에 동의하십시오.
 
 ![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
-Once the download is finished, start the downloaded application to install it on your computer. You might need to accept/confirm some warnings about downloaded apps from Windows!
+다운로드가 끝나면 다운로드한 프로그램을 실행하여 컴퓨터에 설치하십시오. Windows에서 다운로드한 앱에 관한 경고를 수락/확인해야 할 수도 있습니다!
 
-Install Android Studio by clicking "Next", as shown in the following screenshots. You do **not** need to change any settings!
+다음 스크린샷처럼 "Next"(다음)를 클릭하여 Android Studio를 설치하십시오. 설정을 바꿀 필요는 **없습니다**!
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+하드 디스크 공간을 아끼려면 Android Virtual Device의 체크를 해제해도 됩니다. **AAPS** 빌드에는 사용되지 않습니다.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
 ![Configuration_Settings](../images/Building-the-App/013_InstallLadybug.png)
 
-Now click on "Install":
+이제 "Install"(설치)을 클릭하십시오:
 
 ![Choose_start_Menu_Folder](../images/Building-the-App/014_InstallLadybug.png)
 
-Once it's completed, press "Next"
+완료되면 "Next"(다음)를 누르십시오
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finish" to start Android Studio for the first time.
+마지막 단계에서 "Finish"를 클릭하여 Android Studio를 처음 시작하십시오.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
-You will be asked if you want to help improve Android Studio. Choose the option to your liking, it won't make any difference for the following steps.
+Android Studio 개선에 참여할지 묻는 화면이 나옵니다. 원하는 옵션을 선택하십시오. 이후 단계에는 아무 영향이 없습니다.
 
 ![Help_improve_Android_Studio](../images/Building-the-App/020_ImproveAS.png)
 
-The welcome screen greets you to the installation of Android Studio. Press "Next".
+Android Studio 설치 환영 화면이 나타납니다. "Next"(다음)를 누르십시오.
 
 ![Welcome](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
 
-Select "Standard" as installation type.
+설치 유형으로 "Standard"(표준)를 선택하십시오.
 
 ![Install_Type](../images/Building-the-App/023_DefaultInstallation.png)
 
-Verify the settings by clicking "Next" again.
+"Next"(다음)를 다시 클릭하여 설정을 확인하십시오.
 
 ![Verify_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
-Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
+이제 라이선스 계약에 동의해야 합니다. 왼쪽에 있는 두 섹션(1 + 3)을 차례로 선택하고, 각각 오른쪽에서 "Accept"(동의)(2 + 4)를 선택해야 합니다.
 
-Then the "Finish" (5) button can be clicked.
+그러면 "Finish"(완료)(5) 버튼을 클릭할 수 있습니다.
 
 ![License_Agreement](../images/Building-the-App/025_LicenseAgreement.png)
 
-Some Android packages will now be downloaded and installed. Be patient and wait.
+이제 몇 가지 Android 패키지를 다운로드하고 설치합니다. 기다려 주십시오.
 
-When it's finished, you will find the following screen where you can select "Finish" again.
+완료되면 다음 화면이 나타나며, 여기서 다시 "Finish"(완료)를 선택할 수 있습니다.
 
 ![Downloading_Components](../images/Building-the-App/026_DownloadFinished.png)
 
-You will now see the Welcome screen of Android Studio.
+이제 Android Studio의 Welcome(환영) 화면이 표시됩니다.
 
 ![Welcome_to_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
 
 (Building-APK-download-AAPS-code)=
-### Download the AAPS code
+### AAPS 코드 다운로드
 
 ```{admonition} Why can it take a long time to download the AAPS code?
 :class: dropdown
 
-The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
+**AAPS**를 처음 다운로드할 때 Android Studio는 인터넷으로 Github 웹사이트에 연결하여 **AAPS** 소스 코드를 다운로드합니다. 약 1분 정도 걸립니다. 
 
-Android Studio will then use **Gradle** (a development tool for Android apps) to identify other components needed to build these items on your computer. 
+그런 다음 Android Studio는 **Gradle**(Android 앱용 개발 도구)을 사용하여 컴퓨터에서 빌드하는 데 필요한 다른 구성 요소를 찾습니다. 
 ```
 
-On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left.
+Android Studio 시작 화면(Welcome)에서 왼쪽의 "**Projects**"(1)가 강조 표시되어 있는지 확인하십시오.
 
-Then click "**Clone Repository**" (2) on the right:
+그런 다음 오른쪽의 "**Clone Repository**"(저장소 복제)(2)를 클릭하십시오:
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
-We will now tell Android Studio where to get the code from:
+이제 Android Studio에 코드를 어디에서 가져올지 알려 줍니다:
 
 ![Get from Version Control](../images/Building-the-App/033_CloneGit.png)
 
-* "Repository URL" should be selected (by default) on the left (1).
-* "Git" should be selected (by default) as version control (2).
-* Now copy this URL:
+* 왼쪽에서 "Repository URL"(1)이 (기본으로) 선택되어 있어야 합니다.
+* 버전 관리로 "Git"(2)이 (기본으로) 선택되어 있어야 합니다.
+* 이제 이 URL을 복사하십시오:
     ```
     https://github.com/nightscout/AndroidAPS.git
     ```
-    and paste it into the URL textbox (3).
+    URL 입력란(3)에 붙여 넣으십시오.
 
-* Check the (default) directory for saving the cloned code does not already exist on your computer (4). You can change it to some directory, but please remember where you stored it!
-* Now click the button "Clone" (5).
+* 복제한 코드를 저장할 (기본) 디렉터리가 컴퓨터에 아직 없는지 확인하십시오(4). 다른 디렉터리로 바꿔도 되지만, 어디에 저장했는지 꼭 기억하십시오!
+* 이제 "Clone"(복제) 버튼(5)을 클릭하십시오.
 
 ```{admonition} INFORMATION
 :class: note
-Make a note of the directory. It is where your sourcecode is stored!
+디렉터리를 적어 두십시오. 이곳에 소스 코드가 저장됩니다!
 ```
 
-You will now see a screen telling you that the repository is being cloned:
+이제 저장소를 복제하고 있다는 화면이 표시됩니다:
 
 ![cloning_repository](../images/Building-the-App/034_CloningProgress.png)
 
-At some point, Android Studio will close and start again. You may be asked whether you want to trust the project. Click on "Trust project":
+도중에 Android Studio가 닫혔다가 다시 시작됩니다. 프로젝트를 신뢰할지 묻는 화면이 나올 수 있습니다. "Trust project"(프로젝트 신뢰)를 클릭하십시오:
 
   ![Trust project](../images/Building-the-App/035_TrustProject.png)
 
 
-Only for Windows users: If your firewall asks for permission, grant access:
+Windows 사용자만 해당: 방화벽이 권한을 요청하면 접근을 허용하십시오:
 
- ![Firewall permission java](../images/AndroidStudio361_18.png)
+ ![Java 방화벽 권한](../images/AndroidStudio361_18.png)
 
-After the repository is cloned successfully, Android Studio will open the cloned project.
+저장소 복제가 끝나면 Android Studio가 복제된 프로젝트를 엽니다.
 
 (computerbuild-NewUI)=
 ```{admonition} New UI
 :class: note
-Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
+Android Studio는 최근 UI를 바꾸었습니다. Android Studio를 새로 설치하면 기본으로 새 UI를 사용합니다!
 
-Only if your Android Studio looks different, you might need to switch to the new UI:
-Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
-In **Appearance & Behavior**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
+Android Studio 화면이 다르게 보이는 경우에만 새 UI로 전환해야 할 수 있습니다:
+왼쪽 위의 햄버거 메뉴를 클릭한 다음 **Settings**(Apple 컴퓨터에서는 **Preferences**)를 선택하십시오.
+**Appearance & Behavior**에서 **New UI**로 가서 **Enable new UI**(새 UI 사용)를 체크하십시오. 그런 다음 Android Studio를 다시 시작하여 사용하십시오.
 
-If you don't find the option **New UI** don't worry: you are already using it!
+**New UI** 옵션이 보이지 않아도 걱정하지 마십시오. 이미 새 UI를 사용하고 있는 것입니다!
 ```
 
 
-When Android Studio opened, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
+Android Studio가 열리면 참을성 있게 기다리십시오(몇 분 걸릴 수 있습니다). 특히 팝업에서 제안하는 프로젝트 업데이트는 **하지 마십시오**.
 
-Android Studio will start a "Gradle project sync" automatically, which will take a couple of minutes to finish. You can see it (still) running:
+Android Studio가 자동으로 "Gradle project sync"(Gradle 프로젝트 동기화)를 시작하며, 끝나는 데 몇 분이 걸립니다. (아직) 실행 중인 것을 볼 수 있습니다:
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
 ```{admonition} NEVER UPDATE GRADLE!
 :class: warning
 
-Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+Android Studio가 gradle 시스템 업데이트를 권할 수 있습니다. **gradle을 절대 업데이트하지 마십시오!** 문제가 생깁니다.
 ```
 
-Only on windows computers: You might get a notification about windows defender running: Click on **Automatically** and confirm, it will make the build run faster!
+Windows 컴퓨터만 해당: Windows Defender가 실행 중이라는 알림이 나올 수 있습니다. **Automatically**(자동)를 클릭하고 확인하십시오. 빌드가 더 빨라집니다!
 
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
 
-You can leave the gradle sync running and follow the next steps already.
+Gradle 동기화가 실행되는 동안 다음 단계를 미리 진행해도 됩니다.
 
 (Building-APK-set-git-path-in-preferences)=
-### Set Git path in Android Studio preferences
+### Android Studio 설정에서 Git 경로 설정하기
 
-Now we will tell Android studio where to find Git, which you installed [earlier](#install-git-if-you-dont-have-it).
+이제 Android Studio에 [앞에서](#install-git-if-you-dont-have-it) 설치한 Git의 위치를 알려 줍니다.
 
-* Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
+* Windows 사용자만 해당: [Git 설치](#install-git-if-you-dont-have-it) 후 컴퓨터를 다시 시작했는지 확인하십시오. 그렇지 않다면 지금 컴퓨터를 다시 시작한 뒤 Android Studio를 다시 여십시오
 
-In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git** (2)
+**Android Studio** 왼쪽 위에서 햄버거 메뉴를 열고 **File** > **Settings**(Windows) 또는 **Android Studio** > **Preferences**(Mac)로 이동하십시오. 다음 창이 열립니다. **Version Control**(버전 관리)(1) 드롭다운을 클릭하여 펼치고 **Git**(2)을 선택하십시오.
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
+"Test" 버튼(1)을 클릭하여 **Android Studio**가 올바른 **Path to Git executable**(Git 실행 파일 경로)을 자동으로 찾을 수 있는지 확인하십시오:
 
-![Git Executable](../images/Building-the-App/039_GitTest.png)
+![Git 실행 파일](../images/Building-the-App/039_GitTest.png)
 
 
-If the automatic setting is successful, your current version of **Git** will be displayed next to the path.
+자동 설정이 성공하면 경로 옆에 현재 **Git** 버전이 표시됩니다.
 
    ![Git_version_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
 
-If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
-* manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
-* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
-* Verify your settings with the **Test** button!
+**git.exe**를 자동으로 찾지 못하거나 "Test"를 클릭했을 때 오류가 나면 다음 중 하나를 할 수 있습니다:
+* [앞에서](#BuildingAaps-steps-for-installing-git) 적어 둔 경로를 직접 입력하거나,
+* 폴더 아이콘(1)을 클릭하고 [앞에서](#BuildingAaps-steps-for-installing-git) **git.exe**를 설치한 디렉터리로 직접 이동하거나
+* **Test** 버튼으로 설정을 확인하십시오!
 
-  ![Git not found](../images/Building-the-App/039_GitTestError.png)
+  ![Git을 찾을 수 없음](../images/Building-the-App/039_GitTestError.png)
 
 (Building-APK-generate-signed-apk)=
-### Build the AAPS "signed" APK
+### AAPS "서명된" APK 빌드
 
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
-Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
+Android는 모든 앱에 _서명_을 요구합니다. 이렇게 하면 나중에 원래 앱을 배포한 신뢰할 수 있는 같은 출처에서만 앱을 업데이트할 수 있습니다. 이 주제에 대한 자세한 내용은 [이 링크](https://developer.android.com/studio/publish/app-signing.html#generate-key)를 참조하십시오. 
 
-For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+여기서는 서명 파일, 즉 "키 저장소" 파일을 생성하고 **AAPS** 앱을 빌드할 때 그 파일을 사용한다는 뜻일 뿐입니다.
 ```
 
 
-**Important: Make sure the gradle sync is finished successfully before proceeding!**
+**중요: 다음으로 진행하기 전에 gradle 동기화가 성공적으로 끝났는지 확인하십시오!**
 
 
-Click the hamburger menu on the top left to open the menu bar. Select **Build** (1), then select **Generate Signed App Bundle / APK** (2)
+왼쪽 위의 햄버거 메뉴를 클릭하여 메뉴 막대를 여십시오. **Build**(1)를 선택한 다음 **Generate Signed App Bundle / APK**(서명된 App Bundle / APK 생성)(2)를 선택하십시오.
 
-![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
+![APK 빌드](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Select "APK" (1) instead of "Android App Bundle" and click "Next" (2):
+"Android App Bundle" 대신 "APK"(1)를 선택하고 "Next"(다음)(2)를 클릭하십시오:
 
-![APK instead of bundle](../images/Building-the-App/041_APK.png)
+![bundle 대신 APK](../images/Building-the-App/041_APK.png)
 
-In the next screen, make sure that "Module" is set to "AndroidAPS.app" (1). The part before ".app" is the name of the folder you cloned the code into.
+다음 화면에서 "Module"이 "AndroidAPS.app"(1)으로 설정되어 있는지 확인하십시오. ".app" 앞부분은 코드를 복제한 폴더의 이름입니다.
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
 :class: note
-If you want to create the apk for your watch, you now need to select AndroidAPS.wear!
+워치용 apk를 만들려면 이제 AndroidAPS.wear를 선택해야 합니다!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
-Click "Create new..." (2) to start creating your key store.
+"Create new..."(새로 만들기)를 클릭하십시오 (2)을 클릭하여 키 저장소 만들기를 시작합니다.
 
 ```{admonition} INFORMATION!
 :class: note
-You will only need to create the keystore once.
-If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+키 저장소는 한 번만 만들면 됩니다.
+이전에 AAPS를 빌드한 적이 있다면 새 키 저장소를 만들지 말고, 기존 키 저장소를 선택하고 비밀번호를 입력하십시오!
 ```
 
-**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
+**_참고:_** 키 저장소는 앱 서명 정보를 저장하는 파일입니다. 이 파일은 암호화되어 있으며, 정보는 비밀번호로 보호됩니다.
 
-![Create key store](../images/Building-the-App/043_Keystore.png)
+![키 저장소 만들기](../images/Building-the-App/043_Keystore.png)
 
-* Click the "folder" symbol (1) to select a path on your computer for your key store.
+* "폴더" 기호(1)를 클릭하여 컴퓨터에서 키 저장소를 저장할 경로를 선택하십시오.
 
-  Do **not** use the directory where you stored your sourcecode but some directory that you would also transfer to a new computer.
+  소스 코드를 저장한 디렉터리는 사용하지 **마십시오**. 새 컴퓨터로도 옮길 디렉터리를 사용하십시오.
 
 ```{admonition} WARNING!
 :class: warning
-Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AAPS update!
+키 저장소가 저장된 위치를 꼭 적어 두십시오. 다음 AAPS 업데이트를 빌드할 때 필요합니다!
 ```
 
-* Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
+* 이제 간단한 비밀번호를 정하고(적어 두십시오) 비밀번호 상자(2)에 입력한 뒤 다시 입력하여 확인하십시오(2).
 
-  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+  키 저장소와 키의 비밀번호는 복잡하지 않아도 됩니다. 나중에 비밀번호를 잃어버리면 [새 키 저장소로 AAPS 재설치하기](#reinstall-aaps)를 참조하십시오.
 
 ```{warning}
-**Avoid special characters in your passwords.** Use only letters and digits for the keystore and key passwords. In particular, do not use `$`, a backtick, `"` or `\`. If you later switch to the [Browser build](#aaps-ci-option2) and reuse this keystore, these characters can make the signing step fail, see [Browser build troubleshooting](#aaps-ci-password-special-characters).
+**비밀번호에 특수 문자를 쓰지 마십시오.** 키 저장소 비밀번호와 키 비밀번호에는 문자와 숫자만 사용하십시오. 특히 `$`, 백틱, `"` 또는 `\`를 사용하지 마십시오. 나중에 [브라우저 빌드](#aaps-ci-option2)로 바꾸고 이 키 저장소를 다시 사용하면, 이 문자들 때문에 서명 단계가 실패할 수 있습니다. [브라우저 빌드: 문제 해결](#aaps-ci-password-special-characters)을 참조하십시오.
 ```
 
-* The default alias (3) for your key is "key0", leave this unchanged.
+* 키의 기본 별칭(3)은 "key0"입니다. 바꾸지 말고 그대로 두십시오.
 
-* You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
+* 이제 키의 비밀번호가 필요합니다. 간단하게 하려면 위에서 키 저장소에 사용한 비밀번호를 그대로 사용해도 됩니다. 비밀번호(4)를 입력하고 다시 입력하여 확인하십시오.
 
 ```{admonition} WARNING!
 :class: warning
-Note down these passwords! You will need them when you build the next AAPS update!
+이 비밀번호들을 적어 두십시오! 다음 AAPS 업데이트를 빌드할 때 필요합니다!
 ```
 
-* The validity is 25 years by default, leave it as it is.
+* 유효 기간은 기본으로 25년입니다. 그대로 두십시오.
 
-* Enter your first and last name (5). No other information needs to be added but you are free to do (6-7).
+* 이름과 성(5)을 입력하십시오. 다른 정보는 입력하지 않아도 되지만, 입력해도 괜찮습니다(6-7).
 
-* Click "OK" (8) to continue:
-
-
-On the **Generate signed App Bundle or APK** page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
-
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+* "OK"(확인)(8)를 클릭하여 계속하십시오:
 
 
-On the next screen, select build variant "fullRelease" (1) and click "Create" (3). You should remember the destination folder displayed at (2), as later you will find your built apk file there!
+**Generate signed App Bundle or APK** 페이지에 이제 키 저장소 경로가 표시됩니다. 이제 Key Store 비밀번호(1)와 Key 비밀번호(2)를 다시 입력하고, 비밀번호 기억 상자(3)에 체크하십시오. 그러면 다음에 APK를 빌드할 때(즉, 새 AAPS 버전으로 업데이트할 때) 다시 입력하지 않아도 됩니다. "Next"(다음)(4)를 클릭하십시오:
 
-   ![Select build variant](../images/Building-the-App/045_BuildPath.png)
+![비밀번호 기억](../images/Building-the-App/044_RememberPwd.png)
 
-Android Studio will now build the **AAPS** apk. It will show "Gradle Build running" (2) at the bottom right. The process takes some time, depending on your computer and internet connection, so **be patient!** If you want to watch the progress of the build, click on the small hammer "build" (1) at the bottom of Android Studio:
 
-![Gradle Running](../images/Building-the-App/046_BuildRunning.png)
+다음 화면에서 빌드 변형 "fullRelease"(1)를 선택하고 "Create"(만들기)(3)를 클릭하십시오. (2)에 표시된 대상 폴더를 기억해 두십시오. 나중에 빌드된 apk 파일을 그곳에서 찾게 됩니다!
 
-Now you can watch the building progress:
+   ![빌드 변형 선택](../images/Building-the-App/045_BuildPath.png)
+
+이제 Android Studio가 **AAPS** apk를 빌드합니다. 오른쪽 아래에 "Gradle Build running"(2)이 표시됩니다. 이 과정은 컴퓨터와 인터넷 연결에 따라 시간이 걸리므로 **참을성 있게 기다리십시오!** 빌드 진행 상황을 보려면 Android Studio 아래쪽의 작은 망치 모양 "build"(1)를 클릭하십시오:
+
+![Gradle 실행 중](../images/Building-the-App/046_BuildRunning.png)
+
+이제 빌드 진행 상황을 볼 수 있습니다:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification icon (1) to bring up the Notifications, and then on **locate** (2):
+빌드가 끝나면 Android Studio에 "BUILD SUCCESSFUL"이라는 정보가 표시됩니다. 팝업 알림이 표시될 수 있으며, 이를 클릭하여 "locate"(위치 찾기)를 선택할 수 있습니다. 이 알림을 놓쳤다면 알림 아이콘(1)을 클릭하여 Notifications를 열고 **locate**(위치 찾기)(2)를 클릭하십시오:
 
-![Build finished](../images/Building-the-App/049_ReopenNotification.png)
+![빌드 완료](../images/Building-the-App/049_ReopenNotification.png)
 
-**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio.md)._**
+**_빌드가 성공하지 않았다면 [Android Studio 문제 해결 섹션](../GettingHelp/TroubleshootingAndroidStudio.md)을 참조하십시오._**
 
-In the Notifications box, click on the blue link "locate":
+Notifications(알림) 상자에서 파란색 링크 "locate"(위치 찾기)를 클릭하십시오:
 
-![Locate build](../images/Building-the-App/048_BuildFinished.png) Your file manager will open and show you the build apk file that you have just built.
+![빌드 위치 찾기](../images/Building-the-App/048_BuildFinished.png) 파일 관리자가 열리고 방금 빌드한 apk 파일이 표시됩니다.
 
-   ![File location apk](../images/Building-the-App/050_LocateAPK.png)
+   ![APK 파일 위치](../images/Building-the-App/050_LocateAPK.png)
 
-Congratulations! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs.
+축하합니다! 이제 **AAPS** apk 파일을 빌드했습니다. 문서의 다음 섹션에서 이 파일을 스마트폰으로 옮깁니다.
 
 ```{tip}
-If you think you might want to use an Android Wear smartwatch in the future, this is the best time to build the AAPS Wear apk to be sure it will be synchronized with your AAPS apk.
+나중에 Android Wear 스마트워치를 사용할 생각이 있다면, 지금이 AAPS Wear apk를 빌드하기에 가장 좋은 때입니다. 그래야 AAPS apk와 확실히 맞출 수 있습니다.
 ```
 
-Move to the next stage of [Transferring and Installing **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
+다음 단계인 [**AAPS** 전송 및 설치](../SettingUpAaps/TransferringAndInstallingAaps.md)로 넘어가십시오.
 
 
 
