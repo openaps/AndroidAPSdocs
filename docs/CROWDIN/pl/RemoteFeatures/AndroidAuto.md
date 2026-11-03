@@ -4,7 +4,7 @@
 
 ## Wymagania
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
+**AAPS** używa funkcji Android Auto, która przekazuje wiadomości z aplikacji w telefonie na ekran systemu audio w samochodzie.
 
 To oznacza, że:
 
@@ -37,7 +37,7 @@ Zanim pójdziesz do samochodu, sprawdź, czy widzisz w telefonie powiadomienie o
 
 **AAPS** nie jest oficjalną aplikacją Android Auto, więc w Android Auto trzeba włączyć powiadomienia z „nieznanych źródeł”. Robi się to przez tryb programisty, który tutaj pokażemy.
 
-Go to your car and connect your mobile with the car's audio system.
+Wejdź do samochodu i połącz telefon z systemem audio samochodu.
 
 Powinien pojawić się ekran podobny do tego.
 
@@ -83,4 +83,4 @@ Dane CGM będą wyświetlane tak:
 
 ## Rozwiązywanie problemów:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
+* Jeśli nie widzisz powiadomienia, sprawdź, czy w Androidzie [zezwoliłeś AAPS na pokazywanie powiadomień](#androidauto-check-that-aaps-can-show-notifications) i czy [Android Auto ma dostęp do powiadomień](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
