@@ -1,17 +1,17 @@
-# Pumps and cannulas
+# Pompe și canule
 
 ## Schimbarea seturilor de infuzie: rezervoare de insulină și canule
 
 Procedura descrisă mai jos este numai pentru pompe cu fir și nu se aplică pentru pompe plasture cum ar fi Omnipod, Medtrum Nano, Accu-Chek Solo șamd. This procedure is sometimes referred to as a "set change", with a "full" set change including the insulin reservoir and cannula, and a "partial" set change referring to a change of cannula only.
 
-Patch pumps fill and prime themselves in their own activation wizard, and their cannula is already in the body. **AAPS** does not offer a prime for them: **Prime/Fill** is not shown in the **Manage** sheet or in QuickLaunch. See the page of your pump in [Compatible pumps](../Getting-Started/CompatiblePumps.md).
+Patch pumps fill and prime themselves in their own activation wizard, and their cannula is already in the body. **AAPS** does not offer a prime for them: **Prime/Fill** is not shown in the **Manage** sheet or in QuickLaunch. Consultați pagina pompei dumneavoastră în [Pompele compatibile](../Getting-Started/CompatiblePumps.md).
 
 Modificările cartușului fizic/rezervorului nu pot fi efectuate prin intermediul **AAPS** și trebuie efectuate direct prin intermediul pompei. Acestea trebuie să fie înregistrate manual în **AAPS**, odată terminate.
 
 (pumps-cannulas-changing-reservoir-and-cannula)=
 ### Ghid pentru schimbarea atât a rezervorului pompei cât și a canulei
 
-1. In **AAPS**, disconnect the pump: press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** for 1 hour. The icon changes to a grey plug icon, indicating that the pump is disconnected.
+1. În **AAPS**, deconectați pompa: apăsați [pictograma buclei](#AapsScreens-loop-status) de pe ecranul principal și selectați **Deconectați pompa** pentru 1 oră. The icon changes to a grey plug icon, indicating that the pump is disconnected.
 
 2. Schimbați fizic rezervorul de insulină: deconectați fizic pompa de corp și schimbați rezervorul/cartușul și canula conform instrucțiunilor fabricantului.
 
@@ -26,7 +26,7 @@ Modificările cartușului fizic/rezervorului nu pot fi efectuate prin intermediu
 
 ### Informații utile privind modificările de insulină/canulă
 
-* Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** main screen.
+* Înregistrarea unei schimbări de loc al pompei resetează Autosens la 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** main screen.
 
 * You can set/adjust the default prime amounts in the **Prime/Fill** settings — type "prime" in the main screen search bar to open them (see [Preferences](../SettingUpAaps/Preferences.md)). Vedeți instrucțiunile din cutia canulei pentru câte unități (în funcție de lungimea acului și lungimea tubului) ar trebui să fie amorsate pentru canulă.
 
@@ -50,14 +50,14 @@ In less obvious cases of insulin delivery problems _e.g._ leakages, occlusions o
 (pumps-cannulas-disconnecting)=
 ## Deconectarea pompei pentru duș sau activitate
 
-If you take your pump off for showering, bathing, swimming, contact sports or other activities you must let **AAPS** know that no insulin is being delivered, to keep the IOB correct. The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, open the same dialog again and pick a new duration under **Disconnect pump**: the disconnection is extended and the new duration starts from now. You do not need to reconnect first.
+If you take your pump off for showering, bathing, swimming, contact sports or other activities you must let **AAPS** know that no insulin is being delivered, to keep the IOB correct. Pompa poate fi deconectată folosind [pictograma buclei](#AapsScreens-loop-status) de pe ecranul principal: apăsați-o și selectați **Deconectați pompa** cu durata de care aveți nevoie. If the activity takes longer than planned, open the same dialog again and pick a new duration under **Disconnect pump**: the disconnection is extended and the new duration starts from now. Nu trebuie să reconectați mai întâi.
 
 Deoarece nu primiți insulină în timp ce pompa este deconectată, trebuie să vă reconectați la fiecare două ore pentru a compensa bazala lipsă. You can do this by connecting, bolusing the missing basal amounts (_e.g._ of the last two hours) before disconnecting again. Acest lucru ajută la evitarea lipsei severe de insulină care poate duce la cetoacidoză diabetică (CAD). If it is inconvenient to reconnect the pump during activity (cannula site is covered by wearing a wetsuit _etc._), consider a pen injection instead. This manual injection can be logged in **AAPS**, and doesn't have to be logged at the time of injection (just make a note of the time of injection) since you can announce the insulin and backdate the time the insulin was actually given when you reconnect the pump.
 
 (pumps-cannulas-announce-insulin)=
 ## Pentru a anunța insulina administrată fără a bolusa propriu-zis
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
+Pentru a anunța insulina administrată din pompă cât timp **AAPS** a fost deconectat, sau din injecții cu stiloul: deschideți [dialogul Insulină](#aaps-screens-buttons-insulin) (**Tratamente** în bara de navigare de jos, sau un buton Lansare rapidă), introduceți cantitatea în unități și activați **Bolusul doar va fi înregistrat (nu va fi administrat de pompă)**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
 
 If you are using **AAPS** as a caregiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as "pump disconnect 120" and "pump connect 120". Intervalul de timp pentru deconectarea de la distanță este de 1 - 120 de minute (în acest exemplu este de 120 de minute). This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.
 
@@ -77,40 +77,40 @@ Ce strategie preferați este foarte personal, și se determină cel mai bine pri
 (Aapsscreens-site-rotation)=
 ## Rotație loc
 
-**Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
+**Gestionați → Rotație loc** deschide dialogul Rotație loc în modul de vizualizare:
 
 - With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
 - All Cannula change and Sensor change events from the past 45 days are available.
-- Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
+- Apăsați pe o zonă a corpului sau pe o singură intrare din lista de mai jos pentru a filtra lista cu intrările doar din zona selectată. Zona selectată va fi evidențiată cu o culoare verde deschis.
 - Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
 
-![View Mode](../images/SiteRotation/ViewMode.png)
+![Mod de vizualizare](../images/SiteRotation/ViewMode.png)
 
 - The **cog** icon (upper right) opens the settings: **User profile for site rotation** opens a dialog where you choose **Man**, **Woman** or **Child**, and the **Manage pump site rotation** and **Manage CGM site rotation** switches select which sites you manage.
 
 ![Setări](../images/SiteRotation/Settings.png)
 
-![User profile for site rotation dialog](../images/SiteRotation/Type.png)
+![Dialogul Profil utilizator pentru rotația locurilor de pe corp](../images/SiteRotation/Type.png)
 
-*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
+*Notă: această setare stabilește dacă dialogul Rotație loc (modul de editare) se deschide automat atunci când o nouă intrare este creată cu butonul „Amorsare/Umplere” sau cu butonul „Inserare senzor”.*
 
-- For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+- Pentru schimbarea locului efectuată direct din pompă, trebuie să deschideți Modul de vizualizare și să editați noua intrare pentru a selecta locul și săgeata
 
 Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
 
-- The entry being edited is shown below the body images, with its type icon (cannula or sensor)
+- Intrarea editată este afișată sub imaginile corpului, cu pictograma tipului ei (canulă sau senzor)
 - Front and back views are shown side by side: tap the area where you placed it
-- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
+- După ce un loc este selectat (evidențiat cu verde), lista de mai jos arată toate intrările făcute în acest loc în ultimele 45 de zile.
 
-![Edit Mode](../images/SiteRotation/EditMode.png)
+![Mod de editare](../images/SiteRotation/EditMode.png)
 
 - You can add an optional arrow by tapping the arrow icon at the right of the entry: the **Select Arrow** dialog lets you specify a sub-location or the pod orientation
 
-![Position](../images/SiteRotation/EditModeSub.png)
+![Poziție](../images/SiteRotation/EditModeSub.png)
 
-- You can also add a **Note** about the selected site
-- Tap the **save** icon (upper right) to record the site
+- Puteți adăuga și o **Notă** despre locul selectat
+- Apăsați pictograma **salvare** (dreapta sus) pentru a înregistra locul
 
 Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
 
-![Filtering](../images/SiteRotation/Filtering.png)
+![Filtrare](../images/SiteRotation/Filtering.png)
