@@ -2,7 +2,7 @@
 
 **An dieser Stelle wird nur die Bearbeitung der englischen Dokumentation erläutert. Alle neuen Informationen müssen zuerst in Englisch eingegeben werden. Falls du diese in eine andere Sprache übersetzen willst (Danke dafür!), nutze bitte [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
+Hinweise zum Formatieren von Texten (Überschriften, fett …) und zum Setzen von Links findest Du weiter unten auf dieser Seite im Bereich [„Code-Syntax“](#edit-the-docs-code-syntax).
 
 ## Allgemein
 
@@ -34,11 +34,11 @@ Oder klicke auf das Stift-Symbol, das in der oberen Leiste der zu bearbeitenden 
 
 3. Beide Optionen in Schritt 2 führen dazu, dass ein neuer Branch in DEINEM kopierten Repository erstellt wird, wo die Änderungen gespeichert werden sollen. Editiere die Datei.
 
-Wir verwenden Markdown für die Dokumentation. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+Wir verwenden Markdown für die Dokumentation. Die Dateien haben die Endung „.md“. Die Markdown-Spezifikation ist nicht festgelegt. Wir verwenden derzeit den myst_parser für unsere Markdown-Dateien. Achte auf die [unten](#edit-the-docs-code-syntax) beschriebene richtige Syntax.
 
 ![Edit branch](../images/PR3.png)
 
-4. Du arbeitest im "<>Edit file" Reiter. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Wenn du etwas entdeckst, das ausgebessert werden muss, wechsle wieder zum edit Reiter, um die Ausbesserungen vorzunehmen. 
+4. Du arbeitest im "<>Edit file" Reiter. Wähle den Reiter „Preview changes“, um alles noch einmal mit frischem Blick anzusehen und sicherzugehen, dass Deine Änderungen so aussehen, wie Du es wolltest (achte auf Tippfehler). Wenn du etwas entdeckst, das ausgebessert werden muss, wechsle wieder zum edit Reiter, um die Ausbesserungen vorzunehmen. 
 
 ![preview mode](../images/PR5.png)
 
@@ -54,7 +54,7 @@ Wir verwenden Markdown für die Dokumentation. The files have the suffix ".md". 
 
 ![PR tracking](../images/PR7.png)
 
-PS: dein Fork und Branch befinden sich nach wie vor auf deinem persönlichen GitHub Konto. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Künftige Änderungen werden immer mit einer aktuellen Version des AndroidAPS Repositories beginnen, wenn du diese Vorgehensweise verwendest. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Da häufig vergessen wird, die eigenen Repositories auf dem aktuellen Stand zu halten, empfehlen wir, den PR Prozess wie oben beschrieben zu verwenden, bis du dich mit der Ausführung von "compares" vertraut gemacht hast.
+PS: dein Fork und Branch befinden sich nach wie vor auf deinem persönlichen GitHub Konto. Nachdem Du die Benachrichtigung erhalten hast, dass Dein PR integriert wurde, kannst Du Deinen Branch löschen, wenn Du damit fertig bist (der Benachrichtigungsbereich in Schritt 7 stellt Dir einen Link zur Verfügung, um den Branch zu löschen, wenn er geschlossen oder integriert wurde). Künftige Änderungen werden immer mit einer aktuellen Version des AndroidAPS Repositories beginnen, wenn du diese Vorgehensweise verwendest. Wenn Du einen PR auf anderem Weg beginnst (z. B. indem Du vom Master-Branch Deines Forks aus bearbeitest), musst Du sicherstellen, dass Dein Repository aktuell ist. Führe dazu zuerst ein „compare“ durch und übernimm alle Änderungen, die seit Deiner letzten Aktualisierung des Forks hinzugekommen sind. Da häufig vergessen wird, die eigenen Repositories auf dem aktuellen Stand zu halten, empfehlen wir, den PR Prozess wie oben beschrieben zu verwenden, bis du dich mit der Ausführung von "compares" vertraut gemacht hast.
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ Der Autor markiert z.B. eine Überschrift als Überschrift 1 und in der Markdown
 Die Idee dahinter ist, dass
 
 - der Autor sich auf den Text konzentrieren kann und weniger auf die Formatierung,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
+- der Markdown-Text lässt sich zwischen verschiedenen Markdown-Werkzeugen austauschen, statt z. B. an proprietäre Programme wie Microsoft Word gebunden zu sein, und
 - mehrere Ausgabeformate aus einer Markdown-Datei erzeugt werden können.
 
 Markdown ist kein 100%iger fester Standard und wir versuchen, so nah wie möglich an diesem Standard zu bleiben, um
@@ -147,10 +147,10 @@ Um Bilder einzubinden, verwende diese Markdown-Syntax.
 
 Der Bildtyp sollte PNG oder JPEG sein.
 
-Image names should conform to one of the following naming rules. Im Beispiel benutze ich png als Dateiendung. Falls Du JPEG verwendest, nutze als Dateiendung jpeg.
+Bildnamen sollten einer der folgenden Namensregeln entsprechen. Im Beispiel benutze ich png als Dateiendung. Falls Du JPEG verwendest, nutze als Dateiendung jpeg.
 
 - `filename-image-xx.png` wobei xx is eine eindeutige zweistellige Zahl für die Bilder in der Datei ist.
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png`, wobei xx ein aussagekräftiger Name ist, den der Autor der md-Datei wählt.
 
 Bilder befinden sich im 'images'-Ordner der englischen Dokumentation und werden von Crowdin automatisch in die anderen Sprachen überführt. Du musst hier nichts tun!
 
@@ -161,7 +161,7 @@ Derzeit übersetzen wir keine Bilder und Grafiken: Bilder sollten **so wenig Tex
 - Screenshots von Webseiten sollten bis zu **1050 Pixel breit** sein.
 - Prozessdiagramme sollten bis zu **1050 Pixel breit** sein.
 - Screenshots aus der App sollten bis zu **500 Pixel breit** sein. Platziere sie nicht nebeneinander, wenn es nicht unbedingt notwendig ist.
-- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
+- Screenshots von der Smartwatch (**Wear OS**) sollten bis zu **360 Pixel breit** sein. Vergrößere niemals einen kleineren Screenshot.
 
 ### Links
 
@@ -199,7 +199,7 @@ Mit der folgenden Schreibweise kannst Du den Link in Deinem Text setzen.
 
 Du kannst Notizen und Warnboxen zur Dokumentation hinzufügen.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Um die Dokumentation leicht lesen zu können, nutze Notizen, Warnungen und Detailinformationen sehr dosiert.
+Außerdem kannst Du für ausführliche Informationen einklappbare Hinweise einfügen, damit Nutzer, die sich nicht für die Details interessieren, nicht vom Lesen des Textes abgeschreckt werden. Um die Dokumentation leicht lesen zu können, nutze Notizen, Warnungen und Detailinformationen sehr dosiert.
 
 #### Notiz
 
@@ -219,9 +219,9 @@ Furthermore you can add collapsing notes for detailed information, so that users
     This is a warning.
     
 
-    ```{admonition} Warning headline
+    ```{admonition} Überschrift der Warnung
     :class: warning
-    This is a warning.
+    Das ist eine Warnung.
     ```
     
     #### Aufklappbare Notizen
@@ -244,7 +244,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ## Tabellen
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Vermeide Tabellen mit langen Texten: Der Inhalt lässt sich in Markdown schwer setzen, passt meist nicht auf die Bildschirmbreite eines Smartphones und wird nach der Übersetzung wahrscheinlich nicht mehr gleich angezeigt.
 
 ## Styleguide
 
@@ -262,9 +262,9 @@ Avoid using tables with long texts as the content is difficult to set in Markdow
 
 Benutze einfaches Englisch wo immer es möglich ist. Dies hilft nicht-native Lesern und hilft auch bei der Übersetzung von AAPS-Dokumenten in andere Sprachen. Schreibe wie in einer Konversation mit jemand, der Dir gegenüber sitzt. Bedenke - die meisten AAPS-Benutzer haben keine Programmier-Kenntnisse. Die Diabetes-Fachsprache hat auch eine Menge Jargon und Abkürzungen. Denke daran, dass einige, erst kürzlich diagnostizierte Diabetiker, eventuell nicht so erfahren mit dem Diabetes sein werden wie du; vielleicht haben sie sogar eine ganz andere Diabetesschulung erhalten. Wenn Du ein Stichwort oder eine Abkürzung verwendest, schreibe es beim ersten Mal vollständig aus und die Abkürzung direkt danach in Klammern wie „SuperMikroBolus (SMB)“. Verweise außerdem auf das Glossar. Technische Begriffe, die dem Leser vielleicht nicht bekannt sind, können auch in Klammern eingefügt werden.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+Statt: *„Was verursacht hohe postprandiale BZ-Spitzen im Closed Loop?“*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+Verwende: *„Was verursacht eine hohe BZ-Spitze **nach dem Mittagessen** (postprandial) im Closed Loop?“*
 
 ##### Benutze einfache Worte, die jeder verstehen kann
 
@@ -296,7 +296,7 @@ Achte besonders darauf, dass Du bei Videoaufnahmen oder Screenshots keine persö
 
 Befehle sind der schnellste Weg, um Anweisungen zu geben. Manchmal sträuben sich Autoren Befehle zu geben und schreiben anstelle von „tue dies“, „Du solltest nun dies tun“. Vielleicht befürchten Menschen zu streng zu klingen. Durch ein "bitte" davor kannst Du das abmildern. Wenn etwas erledigt werden muss, verzichte auf ein "bitte", da der Lesende sonst damit die Möglichkeit bekommt es nicht zu tun.
 
-Instead of: *“You should just think of it as a complete statement.”*
+Statt: *„Du solltest es dir einfach als vollständige Aussage vorstellen.“*
 
 Verwende: *„Nimm es als vollständige Aussage.“*
 
@@ -310,9 +310,9 @@ Beispiel eines **aktiven Verbs**:
 
 Beispiel eines **passiven Verbs**:
 
-- *“The insulin (subject) is delivered (verb) by the pump (object).”*
+- *„Das Insulin (Subjekt) wird von der Pumpe (Objekt) abgegeben (Verb).“*
 
-*“delivered”* is a passive verb here. Das Subjekt und das Objekt sind im Vergleich zum Aktivsatz vertauscht. Wir mussten den Satz verlängern, indem wir "wird" und "von der" hinzufügten. Es kann auch mit dem aktiven Verb begonnen werden.
+*„delivered“* ist hier ein Verb im Passiv. Das Subjekt und das Objekt sind im Vergleich zum Aktivsatz vertauscht. Wir mussten den Satz verlängern, indem wir "wird" und "von der" hinzufügten. Es kann auch mit dem aktiven Verb begonnen werden.
 
 Anstatt: *„Du können Ihre Pumpe über das AAPS-Pumpenmenü mit dem Smartphone verbinden, und es stehen Dir eine Reihe von Pumpen zur Verfügung, mit denen Du sie verbinden kannst.“*
 
@@ -383,7 +383,7 @@ Um die Dokumentation übersichtlich und kurz zu halten, schreiben wir verschiede
 
 Ein "Erklärstil" wird für die Abschnitte der Einleitung, Hintergründe und Wissensaufbau verwendet.
 
-Ein Anleitungsstil (mit sehr wenigen Erklärungen) wird für den Aufbau, die AAPS Konfiguration und einige der Problembehandlungsabschnitte verwendet.
+Ein Anleitungsstil (mit sehr wenigen Erklärungen) wird für den Aufbau, die AAPS Konfiguration und einige Abschnitte zur Fehlerbehebung verwendet.
 
 Ein Tutorial hilft dem Schüler grundlegende Kompetenzen zu erwerben. Der Benutzer wird **durch praktisches Tun lernen**.
 
@@ -453,7 +453,7 @@ Eine Anleitung soll dem bereits kompetenten Anwender helfen, eine bestimmte Aufg
 
 - Anleitung
 
-- narrator directly talks to the reader: In this guide **you** will
+- der Erzähler spricht den Leser direkt an: In dieser Anleitung wirst **Du**
 
 - Zukunftsform -> um den Zielzustand zu beschreiben
 
@@ -527,7 +527,7 @@ Eine Erklärung klärt, vertieft und erweitert das Verständnis des Lesenden fü
     
     *W ist besser als z, weil…*
     
-    Offer judgements and even opinions where appropriate.
+    Gib Einschätzungen und, wo es passt, auch Meinungen ab.
     
     *Ein x in System y ist analog zu einem w in System z. Allerdings…*
     
@@ -553,7 +553,7 @@ Der **Lektor (z. B. ein AAPS-Nutzender oder die Person, die die Pull-Request erh
 
 #### Allgemeine AAPS-Punkte
 
-- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
+- Gib Glukosewerte an jeder Stelle sowohl in mg/dl als auch in mmol/l an (wenn möglich auch bei Screenshots).
 
 - Aus Konsistenzgründen verwende “AAPS” an Stelle von “Android APS”.
 
