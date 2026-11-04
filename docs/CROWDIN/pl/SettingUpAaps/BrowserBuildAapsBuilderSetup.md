@@ -50,6 +50,12 @@ Na stronie GitHub, która się otworzy, wszystko jest już wypełnione: szablon 
 Nie zostało utworzone z szablonu. Usuń je (**Settings** → dół strony → **Delete this repository**), a potem jeszcze raz dotknij **Create my private repository**.
 ```
 
+```{admonition} GitHub says "my-aaps already exists in this account"?
+:class: tip
+
+You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+```
+
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
@@ -60,7 +66,7 @@ Kroki budowania są aktualizowane za Ciebie: przy każdym budowaniu Twoje repozy
    Na komputerze kliknij **ikonę kopiowania** („Copy raw file”) w prawym górnym rogu pliku. Na telefonie otwórz zamiast tego <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">wersję tekstową</a>, przytrzymaj palec na tekście → **Zaznacz wszystko** → **Kopiuj**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   Otwiera do edycji `.github/workflows/build.yml` w <code class="aapsb-repoUrl"></code>.
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. Zastąp cały tekst skopiowanym workflow (na telefonie: przytrzymaj palec → **Zaznacz wszystko** → **Wklej**), potem dwa razy kliknij **Commit changes…**. W pierwszym wierszu pliku jest jego wersja.
 ```
 
@@ -151,7 +157,8 @@ Chcesz dostać e-mail, gdy budowanie się skończy? GitHub wysyła e-mail tylko 
 :class: warning
 
 1. Otwórz swoje repozytorium i sprawdź, czy jest w nim folder `.github` z plikiem `workflows/build.yml`. Jeśli repozytorium jest puste, nie zostało utworzone z szablonu: usuń je (**Settings** → dół strony → **Delete this repository**) i wykonaj jeszcze raz [krok 1](#aaps-builder-setup-step1) za pomocą przycisku.
-2. Otwórz kartę Actions. Jeśli jest tam napisane, że workflow są wyłączone, kliknij zielony przycisk, aby je włączyć. Potem kliknij „Build AAPS” na liście.
+2. The file is there, but GitHub shows "This workflow does not exist": see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+3. Otwórz kartę Actions. Jeśli jest tam napisane, że workflow są wyłączone, kliknij zielony przycisk, aby je włączyć. Potem kliknij „Build AAPS” na liście.
 ```
 
 (aaps-builder-setup-step5)=
@@ -196,7 +203,7 @@ Chcesz, aby plik APK pojawiał się na Twoim Dysku Google (przechowywany na zaws
    Google otworzy się w nowej karcie. Wybierz swoje konto Google i zezwól AAPS na widzenie i zmienianie jego własnych plików. Jeśli Google napisze, że aplikacja nie jest zweryfikowana, dotknij „Advanced” (Zaawansowane), a potem „Go to …” (Przejdź do …).
 2. Potem nowa karta pokaże błąd, np. **„This site can't be reached”** albo **„127.0.0.1 refused to connect”**. **Tak ma być.** Odpowiedź Google jest w adresie tej karty.
 
-   Dotknij paska adresu tej karty, zaznacz cały adres i skopiuj go. Zaczyna się od `http://127.0.0.1:47913/`. Wróć na tę stronę w ciągu kilku minut: odpowiedź jest ważna tylko przez krótki czas.
+   Tap the address bar of that tab, then the copy icon next to the address (on a computer: select the whole address and copy it). Zaczyna się od `http://127.0.0.1:47913/`. Wróć na tę stronę w ciągu kilku minut: odpowiedź jest ważna tylko przez krótki czas.
 3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
@@ -323,7 +330,7 @@ Wszystko na tej stronie działa w Twojej przeglądarce. Twój klucz i hasła nig
   const repo = () => repoInput.value.trim() || REPO_NAME;
 
   const LINKS = [
-    ['openWorkflowFile', '/edit/main/' + WORKFLOW_PATH],
+    ['openWorkflowFile', '/blob/HEAD/' + WORKFLOW_PATH],
     ['openSecrets', '/settings/secrets/actions/new'],
     ['openSecrets2', '/settings/secrets/actions/new'],
     ['openActions', '/actions/workflows/build.yml'],
