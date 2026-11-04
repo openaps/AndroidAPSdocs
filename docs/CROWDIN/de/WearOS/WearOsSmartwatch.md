@@ -35,7 +35,7 @@ If your watch runs a version where AAPS watchfaces are unreliable, you can inste
 
 Watches running **Wear OS 6 or newer** cannot run the classic AAPS watchfaces as watchfaces. For these watches the AAPS watch app brings two watchfaces built in Google's new **Watch Face Format**. Wear OS lets an app install only **one** watchface, so you choose which of the two is on the watch:
 
-- **Custom watchface** (default): shows the custom watchface you loaded from the phone with **Load Watchface** (see [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface)). The watch draws your design as a picture, so every existing custom watchface works. The complication slots a custom watchface may define are **not available** in this picture, because Wear OS only delivers complication data to a real watchface. Long-press the face to reach its one setting: whether the always-on display shows a plain clock or your own design, dimmed.
+- **Benutzerdefiniertes Watchface** (Standard): zeigt das benutzerdefinierte Watchface, das Du vom Smartphone aus mit **Watchface laden** geladen hast (siehe [Wechsel zu einem AAPS-Watchface](#WearOS_changing-to-AAPS-watchface)). The watch draws your design as a picture, so every existing custom watchface works. The complication slots a custom watchface may define are **not available** in this picture, because Wear OS only delivers complication data to a real watchface. Long-press the face to reach its one setting: whether the always-on display shows a plain clock or your own design, dimmed.
 - **Complications watchface** (the **AAPS V4** watchface): its **seven complication slots** come **preconfigured with AAPS data**: BG value, IOB, COB, the [BG Graph complication](#Watchfaces-complications), basal rate / temp target, and the **Running Mode** icon in the top-left slot (tap it to change the loop mode from the watch). Tap the time at the top to open the watch's alarm app. You can change what each slot shows in the watch face editor.
 
 You choose on the phone: open the **Wear** plugin and, under **Watchface installed on watch**, select one of the two. This card is only shown while a Wear OS 6 or newer watch is connected. **AAPS** asks you to confirm, because the watch replaces its face immediately. Switching away from the **Complications watchface** also resets the complications you changed in the watch face editor back to the defaults, and the confirmation says so. While the **Complications watchface** is selected, the custom watchface buttons are hidden and a preview of the face is shown instead. If you load a custom watchface while the **Complications watchface** is selected, **AAPS** reminds you to switch to **Custom watchface** to see it on the watch.
@@ -260,7 +260,7 @@ Der letzte Schritt ist es, **AAPS** auf dem Smartphone so einzurichten, so dass 
 
 To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
 
-To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Wische dann nach rechts, bis Du die **AAPS**-Zifferblätter erreicht hast.
+To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Wische dann nach rechts, bis Du die **AAPS**-Watchfaces erreicht hast.
 
 Wenn das Sideloading der **AAPS** Wear.apk auf die Smartwatch erfolgreich war, sieht es ungefähr so aus:
 
@@ -287,15 +287,15 @@ Weitere Tipps zur Fehlerbehebung findest Du [hier](https://freepoc.org/wear-inst
 
 (WearOS_changing-to-AAPS-watchface)=
 
-## Wechsel zu einem AAPS-Zifferblatt auf Deiner WearOS-Smartwatch
+## Wechsel zu einem AAPS-Watchface auf Deiner WearOS-Smartwatch
 
-In der Basisversion der AAPS Wear OS APK sind schon eine Vielzahl von Zifferblättern enthalten. Nach der Installation der AAPS Wear APK, kannst Du diese nutzen. Die einzelnen Schritte zur Auswahl eines Zifferblattes sind:
+In der Basisversion der AAPS Wear OS APK sind schon eine Vielzahl von Watchfaces enthalten. Nach der Installation der AAPS Wear APK, kannst Du diese nutzen. Die einzelnen Schritte zur Auswahl eines Watchface sind:
 
-1. Durch langes Drücken auf das aktuelle Zifferblatt öffnest Du die Zifferblatt-Auswahl auf Deiner Smartwatch (sofern es eine WearOS-Uhr ist).
+1. Durch langes Drücken auf das aktuelle Watchface öffnest Du die Watchface-Auswahl auf Deiner Smartwatch (sofern es eine WearOS-Uhr ist).
 
 ![Watchface selector with the Add watch face button](../images/wearos/watchface_add.png)
 
-2. Scroll through the list until you find "AAPS (Custom)" (depending on the watch, the watch faces of installed apps are listed under a "Downloaded" section or grouped by app) and click the middle of the image to add it to your shortlist of current watchfaces. Keine Angst, das Aussehen des „AAPS (Custom)“-Zifferblattes kannst Du im nächsten Schritt noch anpassen.
+2. Scroll through the list until you find "AAPS (Custom)" (depending on the watch, the watch faces of installed apps are listed under a "Downloaded" section or grouped by app) and click the middle of the image to add it to your shortlist of current watchfaces. Keine Angst, das Aussehen des „AAPS (Custom)“-Watchface kannst Du im nächsten Schritt noch anpassen.
 
 ![List of AAPS watchfaces, with AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
 
@@ -303,11 +303,11 @@ In der Basisversion der AAPS Wear OS APK sind schon eine Vielzahl von Zifferblä
 
 ![Wear plugin with the Custom Watchface card](../images/wearos/wear_plugin_custom_watchface.png)
 
-4. Klicke auf „Watchface laden“ und wähle das gewünschte Zifferblatt aus.
+4. Klicke auf „Watchface laden“ und wähle das gewünschte Watchface aus.
 
 ![Select Custom Watchface list](../images/wearos/select_custom_watchface.png)
 
-5. Das „AAPS (Custom)“-Zifferblatt sollte im ausgewählten Design auf Deiner Smartwatch angezeigt werden. Das Laden kann einige Sekunden dauern. The **Wear** screen on the phone now shows the name of the loaded watchface and a preview of it. **Infos Watchface** lists its details and the fields it contains, and **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) where you can download other custom watchfaces. Du kannst jetzt die „Complications“ anpassen, in dem Du lange auf das Zifferblatt drückst und dann auf „Anpassen“ tippst.
+5. Das „AAPS (Custom)“-Watchface sollte im ausgewählten Design auf Deiner Smartwatch angezeigt werden. Das Laden kann einige Sekunden dauern. The **Wear** screen on the phone now shows the name of the loaded watchface and a preview of it. **Infos Watchface** lists its details and the fields it contains, and **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) where you can download other custom watchfaces. Du kannst jetzt die „Complications“ anpassen, in dem Du lange auf das Watchface drückst und dann auf „Anpassen“ tippst.
 
 ```{admonition} Complications on a custom watchface
 :class: note
