@@ -3,10 +3,97 @@
 # 브라우저 빌드: 문제 해결
 
 ```{note}
-이 페이지는 [브라우저 빌드](../SettingUpAaps/BrowserBuild.md)의 문제 해결 팁을 모은 것입니다.
-
-**AAPS Builder**를 사용합니까? AAPS Builder 자체의 [문제 해결 섹션](#aaps-builder-troubleshooting)부터 시작하십시오. 아래의 Google Drive 섹션도 AAPS Builder에 적용됩니다.
+This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
 ```
+
+(aaps-builder-troubleshooting)=
+
+## AAPS Builder
+
+### Step 1: the repository
+
+(aaps-builder-ts-repo-exists)=
+
+#### "my-aaps already exists in this account"
+
+![Repository already exists](../images/Building-the-App/CI/AapsBuilder70_RepoExists.png)
+
+You already have this repository, for example from an earlier attempt. Close the GitHub tab, keep that name in step 1 of the setup page and go on. If you already did steps 2 and 3 for it, your key is still in it: continue with [step 4](#aaps-builder-step4). If it was made with an earlier version of the setup page, update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). You prefer a fresh start? Type another name, for example `my-aaps-2`, and use the same keystore in step 2.
+
+(aaps-builder-ts-user-not-found)=
+
+#### "No GitHub user with this name"
+
+![No GitHub user](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
+
+- 1단계에서 **"No GitHub user with this name"**(이 이름의 GitHub 사용자가 없음)이 표시되는 경우: 이메일이 아니라 GitHub 프로필에 표시된 GitHub 사용자 이름을 입력하십시오.
+- **"Build AAPS" 또는 "Run workflow" 버튼이 없거나 저장소가 비어 있는 경우**: 저장소가 템플릿으로 만들어지지 않았습니다. 그 저장소를 삭제하고(**Settings** → 페이지 맨 아래 → **Delete this repository**) **Create my private repository** 버튼으로 [1단계](#aaps-builder-step1)를 다시 하십시오.
+
+### Step 3: the secret
+
+(aaps-builder-ts-404)=
+
+#### "Page not found" (404)
+
+![GitHub 404](../images/Building-the-App/CI/AapsBuilder79_404.png)
+
+- **설정 페이지가 GitHub를 열 때 "Page not found"(404)가 표시되는 경우**: 같은 브라우저에서 github.com에 로그인하십시오(로그인하지 않으면 GitHub는 비공개 저장소에 대해 404를 표시합니다). 로그인되어 있다면 설정 페이지 1단계의 사용자 이름 또는 저장소 이름이 자신의 저장소와 맞지 않는 것입니다. 이름을 정확히 입력하십시오.
+
+### Step 4: the build
+
+(aaps-builder-ts-workflow-not-found)=
+
+#### "This workflow does not exist"
+
+![This workflow does not exist](../images/Building-the-App/CI/AapsBuilder71_WorkflowNotFound.png)
+
+Right after the repository is created, GitHub may not have read its workflow file yet: **Build AAPS** is missing from the **Actions** tab, and there is no **Run workflow** button. Any small change to the file makes GitHub read it:
+
+1. In your repository, open **Code**, then the folder `.github`, then `workflows`, then the file `build.yml`.
+2. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
+
+   ![File menu](../images/Building-the-App/CI/AapsBuilder72_FileMenu.png)
+
+3. Tap at the very end of the text and add an empty line (Enter). Tap **Commit changes…** at the top.
+
+   ![Editor](../images/Building-the-App/CI/AapsBuilder73_Editor.png)
+
+4. Tap **Commit changes** again.
+
+   ![Commit changes](../images/Building-the-App/CI/AapsBuilder74_CommitDialog.png)
+
+5. Open the **Actions** tab again: **Build AAPS** is now in the list of workflows (on a phone, the list opens with the icon at the left of **All workflows**). Tap it, then **Run workflow**.
+
+   ![List of workflows](../images/Building-the-App/CI/AapsBuilder75_WorkflowsSidebar.png)
+
+(aaps-builder-ts-build-failed)=
+
+#### The build failed (red cross)
+
+1. On the setup page, tap **Open my builds** and tap the build with the red cross.
+
+   ![Failed build](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
+
+2. The page of the build shows **Failure**, and which part failed: **AAPS / Check** (the repository, the secret, the version or the variant: nothing was built) or **AAPS / Build AAPS**.
+
+   ![Build page: Failure](../images/Building-the-App/CI/AapsBuilder77_RunFailed.png)
+
+3. Scroll down to **Annotations**, with your finger on the text, not on the diagram. The red lines explain the problem: tap **Show more** to read the whole message, then find it below.
+
+   ![Annotations](../images/Building-the-App/CI/AapsBuilder78_Annotations.png)
+
+- **"Secret KEYSTORE_SET is missing"**(KEYSTORE_SET secret이 없음): 설정 페이지의 3단계를 하십시오.
+- **빌드가 "This repository is PUBLIC"(이 저장소는 공개 상태입니다)로 멈추는 경우**: 저장소에서 **Settings**(설정) → **General**(일반) → **Danger Zone**(위험 구역) → **Change visibility**(공개 범위 변경) → **Private**(비공개)를 연 다음 다시 빌드하십시오.
+- **"Version … does not exist"**: only released versions of **AAPS** can be built, the ones on the [tags page](https://github.com/nightscout/AndroidAPS/tags) of nightscout/AndroidAPS, such as `3.3.2.0`. A branch name such as `dev` doesn't work. Use `latest`, or type a tag exactly as listed.
+- **"Variant … is not supported"**(변형 …은 지원되지 않음): 워크플로 파일이 이전 버전입니다. [AAPS 업데이트](#aaps-builder-updates)에 설명된 대로 파일을 바꾸십시오.
+- **"The secret is too short"**(secret이 너무 짧음), **"The secret is not a valid code"**(secret이 올바른 코드가 아님) 또는 **"The secret does not contain a keystore"**(secret에 키 저장소가 없음): secret에 잘못된 텍스트를 붙여 넣었습니다. 흔히 `KEYSTORE_SET`이라는 단어 자체나 코드의 일부만 붙여 넣은 경우입니다. 저장소에서 **Settings** → **Secrets and variables** → **Actions**를 열고, `KEYSTORE_SET`을 편집하여 **Copy secret**으로 복사한 긴 코드를 다시 붙여 넣으십시오(설정 페이지를 닫았다면 먼저 설정 페이지의 2단계를 다시 하십시오).
+- **"Keystore, password or alias is wrong"**(키 저장소, 비밀번호 또는 별칭이 틀림): 키 저장소의 비밀번호와 별칭을 확인한 다음 설정 페이지의 2단계와 3단계를 다시 하십시오.
+- **"Google Drive access has expired or was revoked"**(Google Drive 액세스가 만료되었거나 취소됨): [6단계](#aaps-builder-google-drive)를 다시 하고 `GDRIVE_OAUTH2` secret을 업데이트하십시오.
+- **Another error**: [read the build log](#aaps-ci-read-the-logs), then [run the build again](#aaps-ci-rerun). If it fails again the same way, ask for help with the name of the failed step and the error lines. secret의 내용은 절대 공유하지 마십시오.
+
+### Step 5: the app
+
+- **Download 링크가 없거나 GitHub 앱이 열린 경우**: GitHub 앱은 빌드를 다운로드할 수 없습니다. [5단계](#aaps-builder-step5)에 설명된 대로 Chrome에서 빌드를 여십시오. GitHub 링크가 앱에서 열리지 않게 하려면: Android **Settings**(설정) → **Apps**(애플리케이션) → **GitHub** → **Open by default**(기본으로 열기) → **Open supported links**(지원되는 링크 열기)를 끄십시오.
 
 ## AAPS-CI 문제 해결
 
