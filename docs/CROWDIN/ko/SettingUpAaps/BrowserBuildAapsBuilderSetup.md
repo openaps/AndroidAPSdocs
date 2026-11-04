@@ -50,6 +50,12 @@ Your repository (내 저장소): <code class="aapsb-repoUrl"></code>
 저장소가 템플릿으로 만들어지지 않았습니다. 저장소를 삭제하고(**Settings** → 페이지 맨 아래 → **Delete this repository**(이 저장소 삭제)), **Create my private repository**를 다시 누르십시오.
 ```
 
+```{admonition} GitHub says "my-aaps already exists in this account"?
+:class: tip
+
+You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+```
+
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
@@ -58,9 +64,9 @@ Your repository (내 저장소): <code class="aapsb-repoUrl"></code>
 1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow (최신 워크플로 열기)</a>
 
    컴퓨터에서는 파일 오른쪽 위의 **copy icon**(복사 아이콘, "Copy raw file")을 클릭하십시오. 휴대폰에서는 대신 <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">일반 텍스트 버전</a>을 열고, 텍스트를 길게 누른 다음 → **Select all**(모두 선택) → **Copy**(복사)를 누르십시오.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file (내 워크플로 파일 열기)</a>
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   <code class="aapsb-repoUrl"></code>의 `.github/workflows/build.yml`을 편집할 수 있게 엽니다.
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. 전체 텍스트를 복사한 워크플로로 바꾸고(휴대폰에서는: 길게 누르기 → **Select all** → **Paste**(붙여넣기)), **Commit changes…**(변경 사항 커밋)를 두 번 클릭하십시오. 파일의 첫 줄에 버전이 표시됩니다.
 ```
 
@@ -151,7 +157,8 @@ AAPS를 처음 빌드합니까? 새 키는 여기 브라우저 안에서 만들�
 :class: warning
 
 1. 저장소를 열고 `.github` 폴더와 `workflows/build.yml` 파일이 있는지 확인하십시오. 저장소가 비어 있으면 템플릿으로 만들어지지 않은 것입니다: 저장소를 삭제하고(**Settings** → 페이지 맨 아래 → **Delete this repository**) 버튼으로 [1단계](#aaps-builder-setup-step1)를 다시 하십시오.
-2. Actions 탭을 여십시오. 워크플로가 비활성화되어 있다고 표시되면, 초록색 버튼을 클릭하여 활성화하십시오. 그런 다음 목록에서 "Build AAPS"를 클릭하십시오.
+2. The file is there, but GitHub shows "This workflow does not exist": see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+3. Actions 탭을 여십시오. 워크플로가 비활성화되어 있다고 표시되면, 초록색 버튼을 클릭하여 활성화하십시오. 그런 다음 목록에서 "Build AAPS"를 클릭하십시오.
 ```
 
 (aaps-builder-setup-step5)=
@@ -196,7 +203,7 @@ APK를 Google Drive에도 저장하고 싶습니까(기간 제한 없이 보관)
    Google이 새 탭에서 열립니다. Google 계정을 선택하고, AAPS가 자신의 파일을 보고 바꿀 수 있도록 허용하십시오. Google에서 앱이 확인되지 않았다고 표시하면 "Advanced"(고급)를 누른 다음 "Go to …"(…(으)로 이동)를 누르십시오.
 2. 그러면 새 탭에 **"This site can't be reached"**(사이트에 연결할 수 없음) 또는 **"127.0.0.1 refused to connect"**(127.0.0.1에서 연결을 거부함) 같은 오류가 표시됩니다. **이것은 정상입니다.** Google의 응답은 그 탭의 주소에 들어 있습니다.
 
-   그 탭의 주소창을 누르고, 주소 전체를 선택하여 복사하십시오. 주소는 `http://127.0.0.1:47913/`로 시작합니다. 몇 분 안에 이 페이지로 돌아오십시오: 응답은 짧은 시간 동안만 유효합니다.
+   Tap the address bar of that tab, then the copy icon next to the address (on a computer: select the whole address and copy it). 주소는 `http://127.0.0.1:47913/`로 시작합니다. 몇 분 안에 이 페이지로 돌아오십시오: 응답은 짧은 시간 동안만 유효합니다.
 3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here (복사한 주소를 여기에 붙여 넣기)</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2 (GDRIVE_OAUTH2 받기)</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
@@ -323,7 +330,7 @@ APK를 Google Drive에도 저장하고 싶습니까(기간 제한 없이 보관)
   const repo = () => repoInput.value.trim() || REPO_NAME;
 
   const LINKS = [
-    ['openWorkflowFile', '/edit/main/' + WORKFLOW_PATH],
+    ['openWorkflowFile', '/blob/HEAD/' + WORKFLOW_PATH],
     ['openSecrets', '/settings/secrets/actions/new'],
     ['openSecrets2', '/settings/secrets/actions/new'],
     ['openActions', '/actions/workflows/build.yml'],
