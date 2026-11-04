@@ -50,6 +50,12 @@ Açılan GitHub sayfasında her şey zaten doldurulmuştur: `nightscout/aaps-bui
 Depo şablondan oluşturulmamış. Onu silin (**Settings** → sayfanın en altı → **Delete this repository**), ardından yeniden **Create my private repository** düğmesine dokunun.
 ```
 
+```{admonition} GitHub says "my-aaps already exists in this account"?
+:class: tip
+
+You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+```
+
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
@@ -58,9 +64,9 @@ Oluşturma adımları sizin için güncellenir: deponuz her oluşturmada AAPS ge
 1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow (En yeni iş akışını aç)</a>
 
    Bilgisayarda, dosyanın sağ üst köşesindeki **kopyalama simgesine** ("Copy raw file") tıklayın. Telefonda bunun yerine <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">düz metin sürümünü</a> açın, metne basılı tutun → **Tümünü seç** → **Kopyala**.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file (İş akışı dosyamı aç)</a>
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   `.github/workflows/build.yml` dosyasını <code class="aapsb-repoUrl"></code> içinde düzenlemek için açar.
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. Tüm metni kopyaladığınız iş akışıyla değiştirin (telefonda: basılı tutun → **Tümünü seç** → **Yapıştır**), ardından **Commit changes…** düğmesine iki kez tıklayın. Dosyanın ilk satırı sürümünü gösterir.
 ```
 
@@ -151,7 +157,8 @@ Oluşturma bitince e-posta almak ister misiniz? GitHub size yalnızca bir oluşt
 :class: warning
 
 1. Deponuzu açın ve `workflows/build.yml` dosyasını içeren bir `.github` klasörü olduğunu kontrol edin. Depo boşsa şablondan oluşturulmamıştır: onu silin (**Settings** → sayfanın en altı → **Delete this repository**) ve düğmeyle [1. adımı](#aaps-builder-setup-step1) yeniden yapın.
-2. Actions sekmesini açın. İş akışlarının devre dışı olduğunu söylüyorsa, onları etkinleştirmek için yeşil düğmeye tıklayın. Ardından listede "Build AAPS" öğesine tıklayın.
+2. The file is there, but GitHub shows "This workflow does not exist": see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+3. Actions sekmesini açın. İş akışlarının devre dışı olduğunu söylüyorsa, onları etkinleştirmek için yeşil düğmeye tıklayın. Ardından listede "Build AAPS" öğesine tıklayın.
 ```
 
 (aaps-builder-setup-step5)=
@@ -196,7 +203,7 @@ APK'nın Google Drive'ınızda da görünmesini (süresiz saklanır) ister misin
    Google yeni bir sekmede açılır. Google hesabınızı seçin ve AAPS'in kendi dosyalarını görmesine ve değiştirmesine izin verin. Google uygulamanın doğrulanmadığını söylerse "Advanced" (Gelişmiş), ardından "Go to …" (… sitesine git) seçeneğine dokunun.
 2. Ardından yeni sekme **"This site can't be reached"** (bu siteye ulaşılamıyor) veya **"127.0.0.1 refused to connect"** (127.0.0.1 bağlanmayı reddetti) gibi bir hata gösterir. **Bu beklenen bir durumdur.** Google'ın yanıtı o sekmenin adresindedir.
 
-   O sekmenin adres çubuğuna dokunun, adresin tamamını seçin ve kopyalayın. Adres `http://127.0.0.1:47913/` ile başlar. Birkaç dakika içinde bu sayfaya geri dönün: yanıt yalnızca kısa bir süre geçerlidir.
+   Tap the address bar of that tab, then the copy icon next to the address (on a computer: select the whole address and copy it). Adres `http://127.0.0.1:47913/` ile başlar. Birkaç dakika içinde bu sayfaya geri dönün: yanıt yalnızca kısa bir süre geçerlidir.
 3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here (Kopyalanan adresi buraya yapıştırın)</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2 (GDRIVE_OAUTH2'yi al)</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
@@ -323,7 +330,7 @@ Bu sayfadaki her şey tarayıcınızda çalışır. Anahtarınız ve parolaları
   const repo = () => repoInput.value.trim() || REPO_NAME;
 
   const LINKS = [
-    ['openWorkflowFile', '/edit/main/' + WORKFLOW_PATH],
+    ['openWorkflowFile', '/blob/HEAD/' + WORKFLOW_PATH],
     ['openSecrets', '/settings/secrets/actions/new'],
     ['openSecrets2', '/settings/secrets/actions/new'],
     ['openActions', '/actions/workflows/build.yml'],
