@@ -137,7 +137,7 @@ Nach einem Android-Upgrade oder dem Umzug auf ein neueres Smartphone verliert **
 Schalte **Bluetooth-Kopplung** nur unter Android 15 ein und nur dann, wenn Du Verbindungsprobleme hast. Schalte die Kopplung unter Android 16 NICHT ein.
 ```
 
-1. Öffne die [DASH-Einstellungen](#omnipod-dash-settings): Öffne den DASH-Pumpenbildschirm über **Bearbeiten** > **Pumpe** und tippe oben rechts auf das Symbol **Einstellungen** (Zahnrad).
+1. Öffne die [DASH-Einstellungen](#omnipod-dash-settings): Öffne den DASH-Pumpenbildschirm über **Verwalten** > **Pumpe** und tippe oben rechts auf das Symbol **Einstellungen** (Zahnrad).
 
    ![The DASH pump screen](../images/v4/Pumps/dash_pump_screen.png)
 
