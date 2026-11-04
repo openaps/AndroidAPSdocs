@@ -212,11 +212,11 @@ Finally, a comparison adjusting DIA and peak in parallel. The logic here is that
     * Instara - Instara App
     * Random BG - generates random BG data for testing. It can only be enabled in an engineering (developer) build with the **Virtual Pump**, so in a normal **AAPS** installation it cannot be used.
     
-    ## Smoothing
+    ## Glättung
     
     ![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
     
-    See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+    Siehe [Glättung der Glukosewerte](../CompatibleCgms/SmoothingBloodGlucoseData.md).
     
     ## Calibration
     
@@ -406,7 +406,7 @@ Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is expla
 
 (external-companion-apps)=
 
-### External Companion Apps
+### Externe Begleit-Apps
 
 Broadcasts **AAPS** status data on the phone so that other apps installed on it can display it — for example watch or widget companion apps. The broadcast includes glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Enable it only if a companion app you use asks for this data.
 
