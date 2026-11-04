@@ -1,7 +1,7 @@
 (aapsclient-app)=
 # Die AAPSClient-App
 
-**AAPSClient** ist die Begleit-App zu **AAPS**: eine App für ein zweites Smartphone – meist das eines Betreuers –, das der Person, die **AAPS** nutzt, **folgt**. From **AAPS** version 4, the caregiver can also **control** the loop remotely through signed commands. Beide Smartphones kommunizieren über Deine **Nightscout**-Seite. Eine direkte Verbindung zwischen den Smartphones ist nicht nötig.
+**AAPSClient** ist die Begleit-App zu **AAPS**: eine App für ein zweites Smartphone – meist das eines Betreuers –, das der Person, die **AAPS** nutzt, **folgt**. Ab **AAPS** Version 4 kann der Betreuer den Loop über signierte Befehle auch **fernsteuern**. Beide Smartphones kommunizieren über Deine **Nightscout**-Seite. Eine direkte Verbindung zwischen den Smartphones ist nicht nötig.
 
 ```{admonition} Wording used on this page
 :class: note
@@ -91,60 +91,60 @@ Beim ersten Start führt **AAPSClient** denselben **Einrichtungsassistenten** au
 
 (aapsclient-pairing-with-the-master)=
 
-## Pairing with the master
+## Mit dem Master koppeln
 
-On the **master**, open **Manage → Authorized clients** and add a client. There are two ways to pair:
+Öffne auf dem **Master** **Bearbeiten → Autorisierte Clients** und füge einen Client hinzu. Es gibt zwei Wege zu koppeln:
 
-- **Mit einem QR-Code** (am schnellsten, wenn das Smartphone eine Kamera hat): Scanne den Code im Schritt „**Vom Master aus einrichten**“ des Assistenten oder über **Bearbeiten → Mit Master koppeln → QR-Code scannen** und bestätige mit „**Verwenden**“. It sets up Nightscout too.
-- **With the PIN**: on the **client**, open the wizard step above (or **Manage → Pair with master**), type the one-time PIN shown on the master and press "**Pair**". The client then shows who it is about to trust — confirm with "**Pair**":
+- **Mit einem QR-Code** (am schnellsten, wenn das Smartphone eine Kamera hat): Scanne den Code im Schritt „**Vom Master aus einrichten**“ des Assistenten oder über **Bearbeiten → Mit Master koppeln → QR-Code scannen** und bestätige mit „**Verwenden**“. Damit wird auch Nightscout eingerichtet.
+- **Mit der PIN**: Öffne auf dem **Client** den oben beschriebenen Schritt des Assistenten (oder **Bearbeiten → Mit Master koppeln**), gib die Einmal-PIN ein, die der Master anzeigt, und tippe auf „**Koppeln**“. Der Client zeigt dann an, wem er vertrauen wird. Bestätige mit „**Koppeln**“:
 
 ![Confirmation on the client before completing the pairing](../images/v4/AapsClient/aapsclient_pair_confirm.png)
 
-From the wizard, a successful pairing finishes the setup and opens the home screen. On the master the client appears as **Active** in the [Authorized clients](#client_master_master_setup) list. Afterwards, **Manage → Pair with master** shows "*Already paired*", the phone's role and whether hardened mode is on:
+Im Assistenten schließt eine erfolgreiche Kopplung die Einrichtung ab und öffnet den Startbildschirm. Auf dem Master erscheint der Client in der Liste [Autorisierte Clients](#client_master_master_setup) als **Aktiv**. Danach zeigt **Bearbeiten → Mit Master koppeln** „*Bereits gekoppelt*“, die Rolle des Smartphones und ob der geschützte Modus eingeschaltet ist:
 
-![Manage → Pair with master on a paired client: Already paired, Role: Caregiver, Hardened mode on](../images/v4/ClientMaster/pair_with_master_client.png) The full pairing procedure, security details and troubleshooting are on [Master ↔ Client control](#client_master_client_setup).
+![Manage → Pair with master on a paired client: Already paired, Role: Caregiver, Hardened mode on](../images/v4/ClientMaster/pair_with_master_client.png) Den vollständigen Ablauf der Kopplung, Hinweise zur Sicherheit und die Fehlerbehebung findest Du unter [Master ↔ Client-Steuerung](#client_master_client_setup).
 
-After pairing, the client gets a Nightscout token of its own from the master (if the master has an admin token), with only the rights a client needs, and stops using the token you may have entered. **AAPSClient** never writes treatments or BG to Nightscout itself: everything it does is sent to the master, which writes it. Siehe [Das eigene Nightscout-Token des Clients](#client-master-control-own-token).
+Nach der Kopplung bekommt der Client vom Master ein eigenes Nightscout-Token (wenn der Master ein Admin-Token hat), das nur die Rechte hat, die ein Client braucht. Ein Token, das Du vielleicht eingetragen hast, verwendet er dann nicht mehr. **AAPSClient** schreibt selbst nie Behandlungen oder BZ-Werte in Nightscout: Alles, was die App tut, wird an den Master gesendet, und der schreibt es. Siehe [Das eigene Nightscout-Token des Clients](#client-master-control-own-token).
 
-The master decides what this phone may do with its **[role](#client-master-control-roles)** (Read-only, Meals, Caregiver or Admin). **Manage → Pair with master** shows the phone's role.
+Was dieses Smartphone tun darf, legt der Master über seine **[Rolle](#client-master-control-roles)** fest (Schreibgeschützt, Mahlzeiten, Betreuer oder Administrator). **Bearbeiten → Mit Master koppeln** zeigt die Rolle des Smartphones an.
 
-## The home screen
+## Der Startbildschirm
 
-The client's home screen mirrors the followed loop:
+Der Startbildschirm des Clients spiegelt den Loop, dem er folgt:
 
 ![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
 
-- **BG, graphs, IOB/COB and profile** come from Nightscout, just as the master uploaded them.
-- The **loop status** shown is the **master's** (a client has no loop of its own). Until the client has received the master's running mode from Nightscout, the running mode chip shows a **question mark** (unknown).
-- The **status card** shows the **followed pump's** reservoir and battery and the uploader battery, taken from the Nightscout device status — a client has no pump, so there is no local pump status and no pump management anywhere in the app.
-- The bottom bar offers **Treatments**, **Scenes** and **Manage** once the client is paired (only **Manage** before pairing) — there are no pump or objectives tabs.
+- **BZ, Diagramme, IOB/COB und Profil** kommen aus Nightscout, so wie der Master sie hochgeladen hat.
+- Der angezeigte **Loop-Status** ist der des **Masters** (ein Client hat keinen eigenen Loop). Bis der Client den AAPS-Modus des Masters aus Nightscout bekommen hat, zeigt die Anzeige des AAPS-Modus ein **Fragezeichen** (unbekannt).
+- Die **Statuskarte** zeigt Reservoir und Batterie der **Pumpe, der gefolgt wird**, sowie die Batterie des Uploaders aus dem Gerätestatus in Nightscout. Ein Client hat keine Pumpe, deshalb gibt es in der App keinen lokalen Pumpenstatus und nirgends eine Pumpenverwaltung.
+- Die untere Navigationsleiste bietet **Behandlungen**, **Szenen** und **Bearbeiten**, sobald der Client gekoppelt ist (vor der Kopplung nur **Bearbeiten**). Reiter für Pumpe oder Ziele gibt es nicht.
 
-## Treatments and actions
+## Behandlungen und Aktionen
 
-Everything under **Manage** works like on the main app, with one important difference: on a client, actions that would change therapy (bolus, carbs, temp targets, scenes…) are **hidden until the device is paired**, and once paired they are **relayed to the master** for confirmation and execution — see [Using remote control](#client-master-control).
+Alles unter **Bearbeiten** funktioniert wie in der Haupt-App, mit einem wichtigen Unterschied: Auf einem Client sind Aktionen, die die Therapie ändern würden (Bolus, Kohlenhydrate, temporäre Ziele, Szenen …), **ausgeblendet, bis das Gerät gekoppelt ist**. Danach werden sie zur Bestätigung und Ausführung **an den Master weitergeleitet**, siehe [Remote-Steuerung nutzen](#client-master-control).
 
-The **Profile** entry is the exception: it is shown even on an **unpaired** client, but opens **view-only** — the client shows the profiles it receives through Nightscout (it needs them for its own calculations), without edit or activate buttons. Once the client is **paired**, the profile list is synchronized with the master and you can edit and activate profiles from the client like any other remote action.
+Eine Ausnahme ist der Eintrag **Profil**: Er wird auch auf einem **nicht gekoppelten** Client angezeigt, öffnet sich aber **nur zum Ansehen**. Der Client zeigt die Profile, die er über Nightscout bekommt (er braucht sie für seine eigenen Berechnungen), ohne Knöpfe zum Bearbeiten oder Aktivieren. Sobald der Client **gekoppelt** ist, wird die Profilliste mit dem Master abgeglichen, und Du kannst Profile vom Client aus bearbeiten und aktivieren, wie jede andere Remote-Aktion.
 
-On an **unpaired** client, **Manage** only offers **Profile** and **Pair with master**:
+Auf einem **nicht gekoppelten** Client bietet **Bearbeiten** nur **Profil** und **Mit Master koppeln** an:
 
 ![The Manage screen on an unpaired client: only Profile and Pair with master](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
 
-The red banner "*Master device unreachable. Editing is disabled until the connection is restored.*" also appears on an unpaired client. This is expected: there is no master to reach yet. The banner disappears once the client is paired and the master is online.
+Der rote Hinweis „*Master-Gerät nicht erreichbar. Bearbeiten ist deaktiviert, bis die Verbindung wiederhergestellt ist.*“ erscheint auch auf einem nicht gekoppelten Client. Das ist so gewollt: Es gibt noch keinen Master, der erreichbar sein könnte. Der Hinweis verschwindet, sobald der Client gekoppelt und der Master online ist.
 
-Once the client is paired, the therapy actions appear:
+Sobald der Client gekoppelt ist, erscheinen die Aktionen für die Therapie:
 
 ![The Manage screen on a paired client, including the Pair with master entry](../images/v4/AapsClient/aapsclient_manage.png)
 
-There is **no Pump entry** — a client has no pump.
+Es gibt **keinen Eintrag Pumpe**, denn ein Client hat keine Pumpe.
 
-If the master is not reachable, the same banner appears on a paired client: the therapy actions are greyed out, and anything you try is blocked before it is sent. The client notices that the master is offline when you try an action, and re-enables the actions once the master is back online.
+Ist der Master nicht erreichbar, erscheint derselbe Hinweis auch auf einem gekoppelten Client: Die Aktionen für die Therapie sind ausgegraut, und alles, was Du versuchst, wird blockiert, bevor es gesendet wird. Der Client bemerkt, dass der Master offline ist, wenn Du eine Aktion versuchst, und gibt die Aktionen wieder frei, sobald der Master wieder online ist.
 
 ![The Manage screen on a paired client while the master is offline: actions greyed out under the banner](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
 
-## Settings synchronized with the master
+## Mit dem Master abgeglichene Einstellungen
 
-The active plugin **configuration** and many **preferences** are kept in sync between the master and its paired clients; synced items are marked with a small **phone icon** and are disabled (with a "*Master device unreachable*" banner) while the master cannot be reached. This is described in [Changing configuration and preferences](#client-master-config-prefs).
+Die aktive **Konfiguration** der Module und viele **Einstellungen** werden zwischen dem Master und seinen gekoppelten Clients abgeglichen. Abgeglichene Einträge sind mit einem kleinen **Smartphone-Symbol** markiert und gesperrt (mit dem Hinweis „*Master-Gerät nicht erreichbar*“), solange der Master nicht erreichbar ist. Das wird unter [Konfiguration und Einstellungen ändern](#client-master-config-prefs) beschrieben.
 
-## AAPSClient on a smartwatch
+## AAPSClient auf einer Smartwatch
 
-A Wear OS watch can be paired with the **client** phone; its actions are relayed through the client to the master. See [Wear OS](../WearOS/WearOsSmartwatch.md) and the [smartwatch options in Remote control](#RemoteControl_smartwatches).
+Eine Wear OS-Smartwatch kann mit dem **Client**-Smartphone gekoppelt werden. Ihre Aktionen werden über den Client an den Master weitergeleitet. Siehe [Wear OS](../WearOS/WearOsSmartwatch.md) und die [Smartwatch-Optionen unter AAPS remote steuern](#RemoteControl_smartwatches).
