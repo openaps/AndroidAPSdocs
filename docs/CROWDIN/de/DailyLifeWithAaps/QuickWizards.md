@@ -1,7 +1,7 @@
 (quickwizards)=
-# QuickWizards (one-tap boluses)
+# QuickWizards (Bolus mit einem Tippen)
 
-A **QuickWizard** is a saved one-tap button for a recurring meal or situation. It carries a fixed amount of **carbs** (and how to dose for them), so you can deliver a bolus — or just log carbs — with a single tap and a confirmation, instead of opening the full bolus calculator every time.
+Ein **QuickWizard** ist ein gespeicherter Knopf für eine wiederkehrende Mahlzeit oder Situation, der mit einem Tippen ausgelöst wird. Er enthält eine feste Menge **Kohlenhydrate** (und wie dafür dosiert wird), sodass Du mit einem einzigen Tippen und einer Bestätigung einen Bolus abgeben – oder nur Kohlenhydrate eintragen – kannst, statt jedes Mal den ganzen Bolus-Rechner zu öffnen.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,96 +10,96 @@ A **QuickWizard** is a saved one-tap button for a recurring meal or situation. I
 
 ---
 
-## Opening QuickWizards
+## QuickWizards öffnen
 
-Open the **Manage** screen (bottom navigation) and choose **QuickWizard** (*“Manage quick wizard presets”*).
+Öffne den Bildschirm **Bearbeiten** (untere Navigationsleiste) und wähle **QuickWizard** (*„QuickWizard-Voreinstellungen verwalten“*).
 
 ---
 
-## Managing QuickWizards
+## QuickWizards verwalten
 
-Your QuickWizards are shown as a **swipeable card carousel** (each card shows the button text, carbs and valid time range). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
+Deine QuickWizards werden als **Karten zum Durchwischen** angezeigt (jede Karte zeigt den Schaltflächentext, die Kohlenhydrate und den Gültigkeitszeitraum). Der Editor darunter stellt den **ausgewählten** ein; die Leiste unten hat **➕ hinzufügen**, **⧉ klonen**, **🗑️ löschen** und einen Knopf **▶**, um den ausgewählten QuickWizard auszuführen.
 
 ![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
 
-The editor's main fields are:
+Die wichtigsten Felder des Editors sind:
 
-- **Button text** — the label shown on the button.
-- **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#quickwizard_validity).
-- **Calculator Options** and **Device Selection** — see below.
-
----
-
-## The three modes
-
-The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
-
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
-- **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
-- **Carbs** — records the configured **carbs only**, with **no bolus**.
+- **Schaltflächentext** – die Beschriftung des Knopfs.
+- **Kohlenhydrate** und **Zeitpunkt der KH-Aufnahme** – die Kohlenhydratmenge und ihr zeitlicher Versatz.
+- **Gültigkeitszeitraum** – siehe [Gültigkeit](#quickwizard_validity).
+- **Rechner-Optionen** und **Geräteauswahl** – siehe unten.
 
 ---
 
-## Calculator Options (Wizard mode)
+## Die drei Modi
 
-For a **Wizard**-mode button you choose which inputs the calculation uses:
+Die Auswahl oben im Editor – **Bolus-Rechner / Insulin / Kohlenhydrate** – legt fest, **was der Knopf tut**, wenn Du darauf tippst:
 
-- **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
-- **Bolus percentage** — scale the calculated bolus.
-- **Add eCarbs** — also schedule extended carbs.
+- **Bolus-Rechner** – führt für die eingestellten Kohlenhydrate den vollständigen **Bolus-Rechner** aus und verwendet dabei Deine aktuellen Werte für **BZ, IOB, COB und Trend** (je nach den *Rechner-Optionen* unten). Er gibt den *berechneten* Bolus ab und trägt die Kohlenhydrate ein. Das ist der klassische QuickWizard.
+- **Insulin** – gibt eine **feste, vorab eingestellte Insulinmenge** ab, die Du festlegst – ohne Berechnung.
+- **Kohlenhydrate** – trägt **nur die eingestellten Kohlenhydrate** ein, **ohne Bolus**.
+
+---
+
+## Rechner-Optionen (Modus Bolus-Rechner)
+
+Für einen Knopf im Modus **Bolus-Rechner** wählst Du, welche Werte in die Berechnung eingehen:
+
+- **BZ verwenden**, **COB verwenden**, **IOB verwenden** (mit *Nur positives IOB*), **Trend verwenden** (*Alle / Nur positive / Nur negative*), **Temporäres Ziel verwenden**, **Alarm verwenden**.
+- **Bolus-Prozentsatz** – passt den berechneten Bolus an.
+- **eCarbs hinzufügen** – plant zusätzlich verzögerte Kohlenhydrate ein.
 
 ![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
 
 ---
 
-## Validity — when the button appears
+## Gültigkeit – wann der Knopf erscheint
 
-(quickwizard_validity)= The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet and from the [QuickLaunch toolbar](QuickLaunch.md). A toolbar button is not deleted: it comes back when the window opens again.
+(quickwizard_validity)= Der **Gültigkeitszeitraum** (*Von / Bis*) legt fest, **wann** ein QuickWizard angezeigt wird und verwendet werden kann. Ein Knopf, der zum Beispiel auf **06:00–10:00** eingestellt ist, erscheint nur morgens – so verstopft ein QuickWizard *Frühstück* beim Abendessen nicht Deinen Bildschirm (und wird nicht versehentlich angetippt). Außerhalb seines Zeitraums ist der Knopf im Fenster **Behandlungen** und in der [Schnellstart-Leiste](QuickLaunch.md) ausgeblendet. Ein Knopf in der Leiste wird nicht gelöscht: Er kommt zurück, wenn der Zeitraum wieder beginnt.
 
-When the valid time range is shorter than 4 hours, the button is also hidden for 30 minutes after you use it, so that the same meal is not entered twice by mistake.
+Ist der Gültigkeitszeitraum kürzer als 4 Stunden, wird der Knopf außerdem 30 Minuten nach der Verwendung ausgeblendet, damit dieselbe Mahlzeit nicht versehentlich zweimal eingetragen wird.
 
 ---
 
-## Invocation points — where you use it
+## Wo Du ihn verwendest
 
-The **Device Selection** toggles decide where each QuickWizard appears:
+Die Schalter unter **Geräteauswahl** legen fest, wo jeder QuickWizard erscheint:
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). A QuickWizard shown on the phone can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
+- **Auf Smartphone anzeigen** – er erscheint im **Fenster [Behandlungen](../Maintenance/V4Changes.md)** (mit der berechneten Dosis direkt auf dem Knopf). Ein QuickWizard, der auf dem Smartphone angezeigt wird, kann auch **als Schnellaktions-Knopf in der Übersicht angeheftet** werden: Öffne *Schnellstart konfigurieren* (das ⚙ in der [Schnellstart](QuickLaunch.md)-Leiste) und füge ihn aus der Kategorie **Quick Wizard** hinzu.
+- **Auf Smartwatch anzeigen** – er erscheint auf der **QuickWizard-Kachel von Wear OS** (wische im Kachel-Karussell der Smartwatch dorthin und tippe dann auf einen Knopf, um ihn auszuführen – genau wie bei der [Szenen-Kachel](#scenes-from-watch)).
 
 ```{admonition} Don't see Device Selection?
 :class: note
-The **Device Selection** section only appears in the editor when the **Wear** plugin is enabled and its **Wear control** preference is on. Without it, every QuickWizard simply shows on the phone.
+Der Bereich **Geräteauswahl** erscheint im Editor nur, wenn das Modul **Wear** eingeschaltet ist und seine Einstellung **Steuerung über Wear OS** aktiviert ist. Ohne sie wird jeder QuickWizard einfach auf dem Smartphone angezeigt.
 ```
 
-On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
+Auf dem Smartphone erscheinen die QuickWizards oben im Fenster **Behandlungen**:
 
 ![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…and as a quick-action button on the overview:
+…und als Schnellaktions-Knopf in der Übersicht:
 
 ![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
 
 ![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
+Ein gekoppelter **Client** (**AAPSClient**) kann einen QuickWizard ebenfalls auslösen – der **Master** berechnet und gibt ihn ab (siehe [Master ↔ Client-Steuerung](../RemoteFeatures/ClientMasterControl.md)).
 
-Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** (the master-authored confirmation, when triggered from a client or watch) before anything is delivered.
+Egal, wo er ausgelöst wird: Ein Tippen auf einen QuickWizard zeigt immer zuerst eine **Bestätigung** (die vom Master formulierte Bestätigung, wenn er von einem Client oder einer Smartwatch ausgelöst wird), bevor etwas abgegeben wird.
 
-A QuickWizard is refused when its dose is above your max bolus, or when its carbs or eCarbs are above your max carbs (for example after you lowered the limit). When the carbs are above the limit, the button in the **Treatments** sheet is disabled. Edit the QuickWizard or the limit.
+Ein QuickWizard wird abgelehnt, wenn seine Dosis über Deinem maximalen Bolus liegt oder seine Kohlenhydrate bzw. eCarbs über Deinen maximalen Kohlenhydraten liegen (zum Beispiel, nachdem Du die Grenze gesenkt hast). Liegen die Kohlenhydrate über der Grenze, ist der Knopf im Fenster **Behandlungen** gesperrt. Passe den QuickWizard oder die Grenze an.
 
 ---
 
-## Adding and removing
+## Hinzufügen und entfernen
 
-- **➕ Add** — create a new QuickWizard.
-- **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **➕ Hinzufügen** – einen neuen QuickWizard anlegen.
+- **⧉ Klonen** – einen als Ausgangspunkt kopieren.
+- **🗑️ Löschen** – einen entfernen.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (Die Bedienung ist dieselbe wie beim [Ändern der Reihenfolge der Profile](ProfileSwitch-ProfilePercentage.md).)
+Ab zwei QuickWizards kannst Du auch ihre Reihenfolge im Karussell ändern: Tippe oben auf das Symbol **Reihenfolge ändern** (⇅), verschiebe die mittlere Karte mit den **Knöpfen ◀ / ▶** und bestätige mit **✓**. (Die Bedienung ist dieselbe wie beim [Ändern der Reihenfolge der Profile](ProfileSwitch-ProfilePercentage.md).)
 
-QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
+QuickWizards gehören zur abgeglichenen Konfiguration und werden deshalb zwischen Deinem Master und gekoppelten Clients geteilt.
 
 ---
 
