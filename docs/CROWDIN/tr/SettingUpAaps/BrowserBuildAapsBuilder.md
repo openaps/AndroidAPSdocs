@@ -102,6 +102,8 @@ Kurulum sayfası bu dokümantasyonun bir parçasıdır ve sizin dilinizdedir. Bu
 
 Kurulum sayfası her GitHub sayfasını yeni bir Chrome sekmesinde açar. Kurulum sayfasına dönmek için Chrome'un adres çubuğunun yanındaki sekme düğmesine (içinde sayı olan kare) dokunun ve AAPS Builder kurulum sayfasını seçin.
 
+![Tab switcher](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
+
 Kurulum sayfası tamamen tarayıcınızda çalışır: anahtarınız ve parolalarınız hiçbir yere gönderilmez; yalnızca kendiniz yapıştırdığınız GitHub secret'ına girer. GitHub'a yalnızca GitHub kullanıcı adınız gönderilir; bu, kullanıcı adının var olup olmadığını kontrol etmek içindir. GitHub kullanıcı adınızı ve depo adınızı hatırlar. Böylece secrets sayfanızı veya oluşturmalarınızı yeniden açmak için istediğiniz zaman ona dönebilirsiniz.
 
 ![AAPS Builder kurulum sayfası](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
@@ -144,8 +146,14 @@ Bu adım, GitHub hesabınızda oluşturma iş akışı zaten içinde olan, AAPS 
 
    GitHub yeni deponuzu gösterir: içinde bir `.github` klasörü (oluşturma iş akışıyla) ve bir `README.md` dosyası vardır. 2. adım için **kurulum sayfası sekmesine geri dönün**: Chrome'un adres çubuğunun yanındaki sekme düğmesine dokunun ve kurulum sayfasını seçin.
 
+   ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
+
 ```{warning}
 **Yeni deponuz boş mu**, hiç dosya yok mu? Şablondan oluşturulmamıştır ve oluşturma yapamaz. Onu silin (**Settings** → sayfanın en altı → **Delete this repository** (bu depoyu sil)), ardından kurulum sayfasında yeniden **Create my private repository** düğmesine dokunun.
+```
+
+```{tip}
+GitHub says **my-aaps already exists in this account**? You already have your repository: close the GitHub tab and go on with the setup page. If your key is already in it, continue with [step 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
 (aaps-builder-step2)=
@@ -253,6 +261,7 @@ GitHub **Page not found** (sayfa bulunamadı, 404) mu gösteriyor? Önce bu tara
 **Build AAPS** veya **Run workflow** düğmesi yoksa:
 
 - Deponuzu açın ve içinde `workflows/build.yml` dosyasını içeren bir `.github` klasörü olup olmadığını kontrol edin. Depo boşsa şablondan oluşturulmamıştır: onu silin (**Settings** → sayfanın en altı → **Delete this repository**) ve [1. adımı](#aaps-builder-step1) düğmeyle yeniden yapın.
+- The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
 - **Actions** sekmesini açın. İş akışlarının devre dışı olduğunu söylüyorsa, etkinleştirmek için yeşil düğmeye dokunun, ardından listede **Build AAPS** öğesine dokunun.
 
 (aaps-builder-step5)=
@@ -311,10 +320,28 @@ Her oluşturmanın Google Drive'ınıza, `AAPS/<version>` klasörüne kaydedilme
 Bunun için bir secret daha gerekir: `GDRIVE_OAUTH2`. Kurulum sayfasının 6. adımı bunu sizin için Google'dan alır; telefonda da bilgisayarda da. **AAPS** bundan sonra Google Drive'ınızda yalnızca kendi oluşturduğu dosyaları görebilir ve değiştirebilir, başka hiçbir şeyi değil.
 
 1. Kurulum sayfasında **Connect Google Drive** (Google Drive'ı bağla) düğmesine dokunun. Google yeni bir sekmede açılır.
+
 2. Google hesabınızı seçin ve erişime izin verin. Google uygulamanın doğrulanmadığını söylerse **Advanced** (gelişmiş), ardından **Go to …** (… sitesine git) seçeneğine dokunun.
-3. Yeni sekme bu durumda **This site can't be reached** (bu siteye ulaşılamıyor) veya **127.0.0.1 refused to connect** (127.0.0.1 bağlanmayı reddetti) gibi bir hata gösterir. **Bu beklenen bir durumdur:** Google'ın yanıtı o sekmenin adresindedir. Adres çubuğuna dokunun, adresin tamamını seçin (`http://127.0.0.1:47913/` ile başlar) ve kopyalayın.
+
+   ![Choose an account](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
+
+   ![Continue](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
+
+3. Yeni sekme bu durumda **This site can't be reached** (bu siteye ulaşılamıyor) veya **127.0.0.1 refused to connect** (127.0.0.1 bağlanmayı reddetti) gibi bir hata gösterir. **Bu beklenen bir durumdur:** Google'ın yanıtı o sekmenin adresindedir. Tap the address bar, then the copy icon next to the address (on a computer: select the whole address and copy it). Adres `http://127.0.0.1:47913/` ile başlar.
+
+   ![This site can't be reached](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
+
+   ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
+
 4. Birkaç dakika içinde kurulum sayfası sekmesine geri dönün: Google'ın yanıtı yalnızca kısa bir süre ve yalnızca bir kez geçerlidir. Adresi **Paste the copied address here** (kopyalanan adresi buraya yapıştırın) alanına yapıştırın ve **Get GDRIVE_OAUTH2** (GDRIVE_OAUTH2 al) düğmesine dokunun. Sayfa **GDRIVE_OAUTH2 is ready** (GDRIVE_OAUTH2 hazır) gösterir.
+
+   ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
+
+   ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
+
 5. **Open the secrets page** (secrets sayfasını aç) düğmesine dokunun. **Copy name** düğmesine dokunun, ardından küçük **Name** alanına yapıştırın (ad `GDRIVE_OAUTH2`'dir). **Copy secret** düğmesine dokunun, büyük **Secret** kutusuna yapıştırın ve **Add secret** düğmesine dokunun.
+
+   ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
 Bir sonraki oluşturmadan itibaren APK'lar Google Drive'a da kaydedilir.
 
@@ -337,31 +364,15 @@ Deponuz kendi kendine hiçbir şey oluşturmaz: ne zaman, hangi sürümü ve han
 **İş akışı dosyanızın güncellemeleri** nadirdir: yalnızca **Run workflow** formu değiştiğinde (örneğin yeni bir oluşturma varyantı için) veya deponuz kurulum sayfasının daha eski bir sürümüyle (kısa bir iş akışı dosyası olan boş bir depo) ya da eski şablondan yapıldıysa bir kez. [Doküman güncellemeleri & değişiklikleri](../Maintenance/DocumentationUpdate.md) sayfası bunu bildirir. `KEYSTORE_SET` secret'ınız olduğu gibi kalır. Kurulum sayfasında, 1. adımın sonundaki **Updating your copy** (kopyanızı güncelleme) bölümünü açın:
 
 1. **Open the newest workflow** (en yeni iş akışını aç) düğmesine dokunun. Bilgisayarda dosyanın sağ üstündeki **kopyalama simgesine** ("Copy raw file") tıklayın. Telefonda bunun yerine **düz metin sürümünü** açın, metne basılı tutun, ardından **Select all** (tümünü seç) ve **Copy** (kopyala) seçin.
-2. **Open my workflow file** (iş akışı dosyamı aç) düğmesine dokunun.
+2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
 3. Metnin tamamını kopyaladığınız iş akışıyla değiştirin (telefonda uzun basın: **Select all**, ardından **Paste** (yapıştır)).
 4. **Commit changes…** düğmesine, ardından **Commit changes** (değişiklikleri kaydet) düğmesine dokunun.
 
 Dosyanın ilk satırı sürümünü gösterir.
 
-(aaps-builder-troubleshooting)=
-
 ## Troubleshooting
 
-Bir oluşturmanın neden başarısız olduğunu görmek için [oluşturma günlüğünü okuyun](#aaps-ci-read-the-logs): adım adları farklıdır, ancak hatayı aynı şekilde bulursunuz. Ayrıca aynı şekilde [bir secret'ı güncelleyebilir](#aaps-ci-update-secret) ve [oluşturmayı yeniden çalıştırabilirsiniz](#aaps-ci-rerun).
-
-- **"Build AAPS" veya "Run workflow" düğmesi yok ya da depo boş**: depo şablondan oluşturulmamıştır. Onu silin (**Settings** → sayfanın en altı → **Delete this repository**) ve **Create my private repository** düğmesiyle [1. adımı](#aaps-builder-step1) yeniden yapın.
-- **Oluşturma "This repository is PUBLIC" (bu depo herkese açık) mesajıyla duruyor**: deponuzda **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private** yolunu açın (görünürlüğü özel yapın), ardından yeniden oluşturun.
-- **"Secret KEYSTORE_SET is missing"** (KEYSTORE_SET secret'ı eksik): kurulum sayfasının 3. adımını yapın.
-- **"The secret is too short"** (secret çok kısa), **"The secret is not a valid code"** (secret geçerli bir kod değil) veya **"The secret does not contain a keystore"** (secret bir anahtar deposu içermiyor): secret'a yanlış metin yapıştırılmıştır; çoğu zaman `KEYSTORE_SET` kelimesinin kendisi veya kodun yalnızca bir kısmı. Deponuzda **Settings** → **Secrets and variables** → **Actions** yolunu açın, `KEYSTORE_SET` öğesini düzenleyin ve **Copy secret** ile aldığınız uzun kodu yeniden yapıştırın (kurulum sayfasını kapattıysanız önce 2. adımı yeniden yapın).
-- **"Keystore, password or alias is wrong"** (anahtar deposu, parola veya takma ad yanlış): anahtar deponuzun parolasını ve takma adını kontrol edin, ardından kurulum sayfasının 2. ve 3. adımlarını yeniden yapın.
-- **"Version … does not exist"** (sürüm … mevcut değil): yazdığınız sürüm bir AAPS sürümü değil. `latest` kullanın veya sürüm numarasını kontrol edin.
-- **"Variant … is not supported"** (varyant … desteklenmiyor): iş akışı dosyanız daha eski bir sürümdür. Onu [AAPS'i güncelleme](#aaps-builder-updates) bölümünde açıklandığı gibi değiştirin.
-- **Kurulum sayfası GitHub'ı açtığında "Page not found" (404)**: aynı tarayıcıda github.com'a giriş yapın (giriş yapmadığınızda GitHub özel depolar için 404 gösterir). Giriş yaptıysanız, kurulum sayfasının 1. adımındaki kullanıcı adı veya depo adı deponuzla eşleşmiyordur. Adları tam olarak yazın.
-- 1. adımda **"No GitHub user with this name"** (bu adla bir GitHub kullanıcısı yok): e-posta adresinizi değil, GitHub profilinizde gösterildiği şekliyle GitHub kullanıcı adınızı yazın.
-- **Download bağlantısı yok veya GitHub uygulaması açıldı**: GitHub uygulaması oluşturmaları indiremez. Oluşturmayı [5. adımda](#aaps-builder-step5) açıklandığı gibi Chrome'da açın. GitHub bağlantılarının uygulamada açılmasını durdurmak için: Android **Settings** (Ayarlar) → **Apps** (Uygulamalar) → **GitHub** → **Open by default** (Varsayılan olarak aç) → **Open supported links** (Desteklenen bağlantıları aç) seçeneğini kapatın.
-- **"Google Drive access has expired or was revoked"** (Google Drive erişiminin süresi doldu veya erişim geri alındı): [6. adımı](#aaps-builder-google-drive) yeniden yapın ve `GDRIVE_OAUTH2` secret'ını güncelleyin.
-
-Diğer GitHub ve Google Drive sorunları için [Tarayıcı ile oluşturma: sorun giderme](../GettingHelp/BrowserBuildTroubleshooting.md) sayfasına bakın.
+Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
 
 ```{toctree}
 :hidden:
