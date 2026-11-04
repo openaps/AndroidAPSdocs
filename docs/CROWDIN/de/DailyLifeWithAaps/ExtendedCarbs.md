@@ -69,7 +69,7 @@ Wie oben bereits erwähnt sind verzögerte oder sog. Multi-Wave-Boli beim Loopen
 
 Es kam immer wieder der Wunsch auf, verzögerte Boli auch in AAPS zu nutzen, um spezielle Mahlzeiten wie gewohnt behandeln zu können.
 
-Deshalb bietet **AAPS** Nutzern von Dana- und Insight-Pumpen einen verzögerten Bolus an: Öffne **Bearbeiten** und wähle **Verzögerter Bolus**.
+Deshalb bietet **AAPS** Nutzern von Dana- und Insight-Pumpen einen verzögerten Bolus an: Öffne **Verwalten** und wähle **Verzögerter Bolus**.
 
 **AAPS** warnt Dich zunächst, dass der Closed Loop angehalten wird, solange der verzögerte Bolus läuft. Tippe auf **OK**, um fortzufahren:
 
@@ -85,7 +85,7 @@ Während der verzögerte Bolus läuft, arbeitet der Loop im Modus **Open Loop** 
 
 ![Open Loop icon on the main screen while an extended bolus is running](../images/extended_bolus_main_screen.png)
 
-Das Menü **Bearbeiten** zeigt einen Knopf **Abbrechen** mit der Rate und der abgelaufenen / gesamten Zeit (zum Beispiel **Abbrechen 2.00 IE/h 1/60'**). Tippe darauf, um den verzögerten Bolus vorzeitig zu beenden:
+Das Menü **Verwalten** zeigt einen Knopf **Abbrechen** mit der Rate und der abgelaufenen / gesamten Zeit (zum Beispiel **Abbrechen 2.00 IE/h 1/60'**). Tippe darauf, um den verzögerten Bolus vorzeitig zu beenden:
 
 ![Cancel button of a running extended bolus in the Manage menu](../images/extended_bolus_running_manage.png)
 
