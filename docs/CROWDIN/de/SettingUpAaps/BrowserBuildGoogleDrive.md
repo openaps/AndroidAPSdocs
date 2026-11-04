@@ -7,7 +7,7 @@ Das ist **Schritt 3** des [Browser-Builds](BrowserBuild.md). Schließe zuerst [S
 ```
 
 ```{warning}
-Egal, welcher der vorherigen Anleitungen Du gefolgt bist (Option 1 oder Option 2), Du MUSST die Google-Drive-Autorisierung hinzufügen, um den Browser Build erfolgreich zu nutzen.
+Egal, welcher der vorherigen Anleitungen Du gefolgt bist (Option 1 oder Option 2), Du MUSST die Google-Drive-Autorisierung hinzufügen, um den Browser-Build erfolgreich zu nutzen.
 ```
 
 Hinweis: Hast Du diesen Teil schon im Video erledigt, kannst Du jetzt direkt zu [Schritt 4 – Die APK erstellen](BrowserBuildAPK.md) springen.
