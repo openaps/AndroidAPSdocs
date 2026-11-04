@@ -61,7 +61,7 @@ Nutze danach immer denselben Schlüssel. Wenn Du einen neuen Schlüssel erstells
 
 Überspringe diesen Abschnitt, wenn Du AAPS nie mit dem bisherigen Browser-Build erstellt hast (Deine eigene Kopie bzw. Dein Fork von AndroidAPS in GitHub, mit Vorbereitungsdatei und Google Drive).
 
-Dein Keystore ist als Secrets in Deinem Fork gespeichert. GitHub zeigt ein Secret nie wieder an, deshalb kannst Du es nicht in Dein neues Repository kopieren. Get a copy of your keystore first, then use it in [step 2](#aaps-builder-step2) with **I already have a keystore**.
+Dein Keystore ist als Secrets in Deinem Fork gespeichert. GitHub zeigt ein Secret nie wieder an, deshalb kannst Du es nicht in Dein neues Repository kopieren. Besorge Dir zuerst eine Kopie Deines Keystores und verwende ihn dann in [Schritt 2](#aaps-builder-step2) mit **I already have a keystore**.
 
 ```{warning}
 Wähle nicht **Create a new key**. Ein AAPS, das mit einem neuen Schlüssel erstellt wurde, kann das AAPS auf Deinem Smartphone nicht aktualisieren.
@@ -119,7 +119,7 @@ In diesem Schritt legst Du in Deinem GitHub-Konto Deine eigene private Kopie von
 3. Übernimm unter **Name Deines Repositorys** den Vorschlag `my-aaps`. Hast Du Dein Repository schon unter einem anderen Namen angelegt, gib genau diesen Namen ein.
 
    ```{note}
-   **Hast Du schon ein AAPS-Builder-Repository** (angelegt mit einer früheren Version der Einrichtungsseite)? Don't create a new one: type its exact name, skip **Create my private repository**, and update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). Deine Secrets bleiben, wie sie sind. Möchtest Du trotzdem ein neues Repository, wähle einen Namen, den Du noch nicht hast, zum Beispiel `my-aaps-2`, und verwende in Schritt 2 denselben Keystore.
+   **Hast Du schon ein AAPS-Builder-Repository** (angelegt mit einer früheren Version der Einrichtungsseite)? Lege kein neues an: Gib seinen genauen Namen ein, überspringe **Create my private repository** und aktualisiere seinen Workflow einmalig wie unter [AAPS aktualisieren](#aaps-builder-updates) beschrieben. Deine Secrets bleiben, wie sie sind. Möchtest Du trotzdem ein neues Repository, wähle einen Namen, den Du noch nicht hast, zum Beispiel `my-aaps-2`, und verwende in Schritt 2 denselben Keystore.
 
    Gib nicht den Namen Deines Forks von AndroidAPS ein: Ein Fork ist öffentlich, und er erstellt AAPS bereits mit seinem eigenen Workflow **AAPS CI**.
    ```
@@ -145,7 +145,7 @@ In diesem Schritt legst Du in Deinem GitHub-Konto Deine eigene private Kopie von
    GitHub zeigt Dein neues Repository: Es enthält einen Ordner `.github` (mit dem Build-Workflow) und eine Datei `README.md`. Wechsle für Schritt 2 **zurück in den Tab der Einrichtungsseite**: Tippe auf die Tab-Schaltfläche neben der Adressleiste von Chrome und wähle die Einrichtungsseite.
 
 ```{warning}
-**Ist Dein neues Repository leer**, ohne Dateien? Dann wurde es nicht aus der Vorlage angelegt und kann nichts erstellen. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** on the setup page again.
+**Ist Dein neues Repository leer**, ohne Dateien? Dann wurde es nicht aus der Vorlage angelegt und kann nichts erstellen. Lösche es (**Settings** → unten auf der Seite → **Delete this repository**) und tippe dann auf der Einrichtungsseite erneut auf **Create my private repository**.
 ```
 
 (aaps-builder-step2)=
@@ -242,7 +242,7 @@ GitHub zeigt **Page not found** (404)? Prüfe zuerst, ob Du in diesem Browser be
 
    ![Build in progress](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
 
-5. Warte 15 bis 30 Minuten. Ein grünes Häkchen bedeutet, dass der Build fertig ist. Ein rotes Kreuz bedeutet, dass er fehlgeschlagen ist: Öffne den Build, um die Meldung zu lesen, und schau dann unter [Problembehandlung](#aaps-builder-troubleshooting) nach.
+5. Warte 15 bis 30 Minuten. Ein grünes Häkchen bedeutet, dass der Build fertig ist. Ein rotes Kreuz bedeutet, dass er fehlgeschlagen ist: Öffne den Build, um die Meldung zu lesen, und schau dann unter [Fehlerbehebung](#aaps-builder-troubleshooting) nach.
 
    ![Finished build with a green check](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
 
@@ -310,11 +310,11 @@ Du kannst jeden Build auch in Deinem Google Drive speichern im Ordner `AAPS/<ver
 
 Dafür brauchst Du ein weiteres Secret, `GDRIVE_OAUTH2`. Schritt 6 der Einrichtungsseite holt ihn für Dich bei Google, auf einem Smartphone oder einem Computer. **AAPS** kann dann in Deinem Google Drive nur die Dateien sehen und ändern, die es selbst anlegt, sonst nichts.
 
-1. On the setup page, tap **Connect Google Drive**. Google öffnet sich in einem neuen Tab.
+1. Tippe auf der Einrichtungsseite auf **Connect Google Drive**. Google öffnet sich in einem neuen Tab.
 2. Wähle Dein Google-Konto und erlaube den Zugriff. Meldet Google, dass die App nicht überprüft ist, tippe auf **Erweitert** und dann auf **Weiter zu …**.
 3. Der neue Tab zeigt dann einen Fehler wie **Die Website ist nicht erreichbar** oder **127.0.0.1 hat die Verbindung abgelehnt**. **Das ist so gewollt:** Die Antwort von Google steht in der Adresse dieses Tabs. Tippe auf die Adressleiste, markiere die ganze Adresse (sie beginnt mit `http://127.0.0.1:47913/`) und kopiere sie.
-4. Gehe innerhalb weniger Minuten zum Tab der Einrichtungsseite zurück: Die Antwort von Google ist nur kurze Zeit und nur einmal gültig. Paste the address into **Paste the copied address here** and tap **Get GDRIVE_OAUTH2**. The page shows **GDRIVE_OAUTH2 is ready**.
-5. Tippe auf **Open the secrets page**. Tippe auf **Copy name**, und füge ihn in das kleine Feld **Name** ein (der Name ist `GDRIVE_OAUTH2`). Tap **Copy secret**, paste it into the big **Secret** box and tap **Add secret**.
+4. Gehe innerhalb weniger Minuten zum Tab der Einrichtungsseite zurück: Die Antwort von Google ist nur kurze Zeit und nur einmal gültig. Füge die Adresse in **Paste the copied address here** ein und tippe auf **Get GDRIVE_OAUTH2**. Die Seite zeigt **GDRIVE_OAUTH2 is ready**.
+5. Tippe auf **Open the secrets page**. Tippe auf **Copy name**, und füge ihn in das kleine Feld **Name** ein (der Name ist `GDRIVE_OAUTH2`). Tippe auf **Copy secret**, füge es in das große Feld **Secret** ein und tippe auf **Add secret**.
 
 Ab dem nächsten Build werden die APKs zusätzlich in Google Drive gespeichert.
 
@@ -334,10 +334,10 @@ Dein Repository erstellt nie etwas von selbst: Du entscheidest, wann welche Vers
 
 **Aktualisierungen der Build-Schritte** kommen von selbst bei Dir an: Bei jedem Build führt Dein Repository die Build-Schritte aus, die die AAPS-Entwickler in nightscout/aaps-builder veröffentlicht haben. In Deinem Repository ändert sich nichts, und es gibt keinen automatischen Build.
 
-**Aktualisierungen Deiner Workflow-Datei** sind selten: nur wenn sich das Formular **Run workflow** ändert, zum Beispiel für eine neue Build-Variante, oder einmalig, wenn Dein Repository mit einer früheren Version der Einrichtungsseite (ein leeres Repository mit einer kurzen Workflow-Datei) oder aus der alten Vorlage angelegt wurde. Die Seite [Aktualisierungen & Änderungen der Dokumentation](../Maintenance/DocumentationUpdate.md) weist darauf hin. Dein Secret `KEYSTORE_SET` bleibt, wie es ist. On the setup page, open **Updating your copy** at the end of step 1:
+**Aktualisierungen Deiner Workflow-Datei** sind selten: nur wenn sich das Formular **Run workflow** ändert, zum Beispiel für eine neue Build-Variante, oder einmalig, wenn Dein Repository mit einer früheren Version der Einrichtungsseite (ein leeres Repository mit einer kurzen Workflow-Datei) oder aus der alten Vorlage angelegt wurde. Die Seite [Aktualisierungen & Änderungen der Dokumentation](../Maintenance/DocumentationUpdate.md) weist darauf hin. Dein Secret `KEYSTORE_SET` bleibt, wie es ist. Öffne auf der Einrichtungsseite am Ende von Schritt 1 **Updating your copy**:
 
-1. Tap **Open the newest workflow**. Klicke auf einem Computer oben rechts in der Datei auf das **Kopier-Symbol** („Copy raw file“). Öffne auf einem Smartphone stattdessen die **Nur-Text-Version**, halte den Text gedrückt und wähle dann **Alles auswählen** und **Kopieren**.
-2. Tap **Open my workflow file**.
+1. Tippe auf **Open the newest workflow**. Klicke auf einem Computer oben rechts in der Datei auf das **Kopier-Symbol** („Copy raw file“). Öffne auf einem Smartphone stattdessen die **Nur-Text-Version**, halte den Text gedrückt und wähle dann **Alles auswählen** und **Kopieren**.
+2. Tippe auf **Open my workflow file**.
 3. Ersetze den gesamten Text durch den kopierten Workflow (auf einem Smartphone lange drücken: **Alles auswählen**, dann **Einfügen**).
 4. Tippe auf **Commit changes…** und dann auf **Commit changes**.
 
@@ -345,14 +345,14 @@ Die erste Zeile der Datei zeigt ihre Version.
 
 (aaps-builder-troubleshooting)=
 
-## Problembehandlung
+## Fehlerbehebung
 
 Um zu sehen, warum ein Build fehlgeschlagen ist, [lies das Build-Log](#aaps-ci-read-the-logs): Die Namen der Schritte sind anders, aber den Fehler findest Du auf die gleiche Weise. Auf die gleiche Weise kannst Du auch [ein Secret aktualisieren](#aaps-ci-update-secret) und [den Build erneut ausführen](#aaps-ci-rerun).
 
-- **Kein Knopf „Build AAPS“ oder „Run workflow“, oder das Repository ist leer**: Das Repository wurde nicht aus der Vorlage angelegt. Delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the **Create my private repository** button.
+- **Kein Knopf „Build AAPS“ oder „Run workflow“, oder das Repository ist leer**: Das Repository wurde nicht aus der Vorlage angelegt. Lösche es (**Settings** → unten auf der Seite → **Delete this repository**) und führe [Schritt 1](#aaps-builder-step1) mit dem Knopf **Create my private repository** erneut aus.
 - **Der Build bricht mit „This repository is PUBLIC“ ab**: Öffne in Deinem Repository **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private** und erstelle dann erneut.
 - **„Secret KEYSTORE_SET is missing“**: Führe Schritt 3 der Einrichtungsseite aus.
-- **"The secret is too short"**, **"The secret is not a valid code"** oder **"The secret does not contain a keystore"**: Im Secret steht der falsche Text, oft das Wort `KEYSTORE_SET` selbst oder nur ein Teil des Codes. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 2 of the setup page first if you closed it).
+- **"The secret is too short"**, **"The secret is not a valid code"** oder **"The secret does not contain a keystore"**: Im Secret steht der falsche Text, oft das Wort `KEYSTORE_SET` selbst oder nur ein Teil des Codes. Öffne in Deinem Repository **Settings** → **Secrets and variables** → **Actions**, bearbeite `KEYSTORE_SET` und füge den langen Code aus **Copy secret** erneut ein (wiederhole zuerst Schritt 2 der Einrichtungsseite, falls Du sie geschlossen hast).
 - **„Keystore, password or alias is wrong“**: Prüfe Passwort und Alias Deines Keystores und wiederhole dann die Schritte 2 und 3 der Einrichtungsseite.
 - **"Version … does not exist"**: Die eingegebene Version ist keine AAPS-Version. Verwende `latest` oder prüfe die Versionsnummer.
 - **„Variant … is not supported“**: Deine Workflow-Datei ist eine ältere Version. Ersetze sie wie unter [AAPS aktualisieren](#aaps-builder-updates) beschrieben.
@@ -361,7 +361,7 @@ Um zu sehen, warum ein Build fehlgeschlagen ist, [lies das Build-Log](#aaps-ci-r
 - **Kein Download-Link, oder die GitHub-App hat sich geöffnet**: Die GitHub-App kann keine Builds herunterladen. Öffne den Build in Chrome, wie in [Schritt 5](#aaps-builder-step5) erklärt. Damit GitHub-Links nicht mehr in der App geöffnet werden: Android **Einstellungen** → **Apps** → **GitHub** → **Standardmäßig öffnen** → deaktiviere **Unterstützte Links öffnen**.
 - **„Google Drive access has expired or was revoked“**: Wiederhole [Schritt 6](#aaps-builder-google-drive) und aktualisiere das Secret `GDRIVE_OAUTH2`.
 
-Bei anderen Problemen mit GitHub und Google Drive siehe [Fehlerbehebung beim Browser Build](../GettingHelp/BrowserBuildTroubleshooting.md).
+Bei anderen Problemen mit GitHub und Google Drive siehe [Fehlerbehebung beim Browser-Build](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ```{toctree}
 :hidden:

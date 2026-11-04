@@ -35,13 +35,13 @@ Die Bilder zeigen einen Wechsel von **AAPS** 3.4 (Schritte 1 bis 3) zu **AAPS** 
 
 Exportiere Deine Einstellungen mit dem **AAPS**, das gerade auf Deinem Smartphone installiert ist. Details findest Du unter [Einstellungen exportieren](#ExportImportSettings-Settings-Export).
 
-In **AAPS** 3.4: open **Maintenance** and tap **Export options**. Under **User Settings**, tick **Local Storage** and tap **OK**.
+In **AAPS** 3.4: Öffne **Wartung** und tippe auf **Export Options**. Hake unter **User Settings** **Local Storage** an und tippe auf **OK**.
 
 *Hinweis: Du kannst auch den [Cloud-Speicher](#preferences-maintenance-cloud) nutzen, um eine zusätzliche Sicherungskopie zu haben. Das ist eine gute Idee, behalte aber die lokale Speicherung bei, um Einstellungen schnell wiederherstellen zu können.*
 
 ![Export options with User Settings set to Local Storage](../images/ReinstallAaps/reinstall_export_options_local.png)
 
-The button now reads **Export settings (local)**. Tippe darauf.
+Der Knopf heißt jetzt **Export settings (Local)**. Tippe darauf.
 
 ![Maintenance with the Export settings (local) button](../images/ReinstallAaps/reinstall_export_settings_local.png)
 

@@ -26,6 +26,6 @@ Die Remote-Überwachung ist eine der wesentlichen Funktionen, wenn **AAPS** für
 
 Die Remote-Überwachung und-Behandlung können für Eltern eines Typ-1-Kindes sehr entlastend sein, insbesondere dann, wenn es in die KiTa oder die Grundschule geht. Aber stelle sicher, dass die Lehrer und Erzieher über den Behandlungsplan Deines Kindes Bescheid wissen.
 
-Überlege, wie sich die Fernsteuerung in den bestehenden Plan einfügt bzw. ihn ergänzt. Viele Eltern finden es hilfreich, einen eigenen Kommunikationsweg zu den Betreuungspersonen zu haben, zum Beispiel ein günstiges kleines „Follower“-Smartphone für die Lehrkraft.
+Überlege, wie sich die Remote-Steuerung in den bestehenden Plan einfügt bzw. ihn ergänzt. Viele Eltern finden es hilfreich, einen eigenen Kommunikationsweg zu den Betreuungspersonen zu haben, zum Beispiel ein günstiges kleines „Follower“-Smartphone für die Lehrkraft.
 
 Beispiele für Betreuungspläne für die Schule findest Du im [Dateibereich der AAPS-Nutzer](https://www.facebook.com/groups/AndroidAPSUsers/files/) auf Facebook. 

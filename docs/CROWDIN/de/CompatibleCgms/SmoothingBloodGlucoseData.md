@@ -1,4 +1,4 @@
-# Glukosewerte
+# Glättung der Glukosewerte
 
 Wenn die **Glukosewerte** Sprünge haben oder verrauscht sind, kann es dazu kommen, dass **AAPS** das Insulin falsch dosiert. Das kann zu Unter- und Überzuckerungen führen. Wenn Du Fehler oder sprunghafte/verrauschte Werte bei Deinem CGM feststellst, ist es wichtig, den Loop zu deaktivieren, bis das Problem behoben ist. Abhängig vom verwendeten Sensor können die Probleme in der CGM-Konfiguration in **AAPS** (wie unten beschrieben) liegen oder auf ein Problem mit der Sensorsetzstelle (so dass er eventuell ersetzt werden muss) hindeuten.
 

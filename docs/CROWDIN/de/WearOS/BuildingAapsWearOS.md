@@ -1,65 +1,65 @@
 # Erstellen der Wear-AAPS-App
 
-The **AAPS** app for a Wear OS smartwatch (the **Wear apk**, `aaps-wear-….apk`) is a separate installation file from the **AAPS** phone app. You need both: the phone app runs the loop, the watch app shows its data and can send commands to it. The watch app is installed from the phone, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+Die **AAPS**-App für eine Wear OS-Smartwatch (die **Wear-APK**, `aaps-wear-….apk`) ist eine eigene Installationsdatei, getrennt von der **AAPS**-App für das Smartphone. Du brauchst beide: Die Smartphone-App führt den Loop aus, die Smartwatch-App zeigt seine Daten an und kann Befehle an ihn senden. Die Smartwatch-App wird vom Smartphone aus installiert, siehe [AAPS auf Deiner Wear OS-Smartwatch einrichten](WearOsSmartwatch.md).
 
-The two apps only work together when they match:
+Die beiden Apps funktionieren nur zusammen, wenn sie zueinander passen:
 
-- **Same AAPS version** on the phone and on the watch.
-- **Same keystore** used to sign both apps.
+- **Dieselbe AAPS-Version** auf Smartphone und Smartwatch.
+- **Derselbe Keystore** zum Signieren beider Apps.
 
-The simplest way to guarantee this is to build both apps **at the same time**, in the same build. The browser build does this for you: every build produces the phone apk and the Wear apk together. With Android Studio or the command line, you build the Wear apk as a second step right after the phone apk.
+Am einfachsten stellst Du das sicher, indem Du beide Apps **gleichzeitig** im selben Build erstellst. Der Browser-Build erledigt das für Dich: Jeder Build erzeugt die Smartphone-APK und die Wear-APK zusammen. Mit Android Studio oder über die Kommandozeile erstellst Du die Wear-APK als zweiten Schritt direkt nach der Smartphone-APK.
 
 ```{note}
-Already using **AAPS** on your phone but no Wear apk from the same build? Build both apps again, with the same keystore, and reinstall the phone app too. A Wear apk built months later, or with a different Android Studio version, is unlikely to be compatible with the phone app.
+Du nutzt **AAPS** schon auf Deinem Smartphone, hast aber keine Wear-APK aus demselben Build? Erstelle beide Apps erneut mit demselben Keystore und installiere auch die Smartphone-App neu. Eine Wear-APK, die Monate später oder mit einer anderen Android Studio-Version erstellt wurde, passt wahrscheinlich nicht zur Smartphone-App.
 ```
 
 ## Unterstützte Wear-OS-Versionen
 
-**AAPS** runs on watches with **Wear OS 3.0, 3.2 or 3.5** (Android 11, API level 30) **or newer** (Wear OS 4, 5 and 6). Watches with Wear OS 2 are not supported.
+**AAPS** läuft auf Smartwatches mit **Wear OS 3.0, 3.2 oder 3.5** (Android 11, API-Level 30) **oder neuer** (Wear OS 4, 5 und 6). Smartwatches mit Wear OS 2 werden nicht unterstützt.
 
 ```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 30 to 33 (Wear OS 3.0, 3.2, 3.5 and 4).<br>
-Newer Wear OS versions progressively break the AAPS watchfaces — see [Wear OS watch face changes](#wearos-watchface-changes) and the [Wear OS 5 limitations](#BuildingAapsWearOs-WearOS5).
+AAPS-Watchfaces sind für Wear OS-Smartwatches mit API-Level 30 bis 33 (Wear OS 3.0, 3.2, 3.5 und 4) verfügbar.<br>
+Neuere Wear OS-Versionen machen die AAPS-Watchfaces nach und nach unbrauchbar, siehe [Änderungen an Watchfaces in Wear OS](#wearos-watchface-changes) und die [Einschränkungen von Wear OS 5](#BuildingAapsWearOs-WearOS5).
 ```
 
 (building-aaps-wear-os-method)=
 
-## Get the Wear apk with your build method
+## Die Wear-APK mit Deiner Erstellungsmethode bekommen
 
-Follow the section for the method you use to [build AAPS](../SettingUpAaps/BuildingAaps.md).
+Folge dem Abschnitt für die Methode, mit der Du [AAPS erstellst](../SettingUpAaps/BuildingAaps.md).
 
 (building-aaps-wear-os-browser)=
 
-### Browser build (recommended)
+### Browser-Build (empfohlen)
 
-**Nothing extra to do.** Every browser build produces two files from the same source and the same keystore:
+**Du musst nichts weiter tun.** Jeder Browser-Build erzeugt aus demselben Quellcode und mit demselben Keystore zwei Dateien:
 
-- `aaps-….apk`: the phone app.
-- `aaps-wear-….apk`: the watch app.
+- `aaps-….apk`: die Smartphone-App.
+- `aaps-wear-….apk`: die Smartwatch-App.
 
-The Wear apk follows the [variant](#browserbuild-variant) you selected for the build: `fullRelease` gives the **AAPS Wear** app, `aapsclientRelease` the **AAPSClient Wear** app, `pumpcontrolRelease` the **PumpControl Wear** app. Each Wear app only talks to its matching phone app.
+Die Wear-APK richtet sich nach der [Variante](#browserbuild-variant), die Du für den Build gewählt hast: `fullRelease` ergibt die App **AAPS Wear**, `aapsclientRelease` die App **AAPSClient Wear**, `pumpcontrolRelease` die App **PumpControl Wear**. Jede Wear-App kommuniziert nur mit der passenden Smartphone-App.
 
-Where to find the Wear apk:
+Wo Du die Wear-APK findest:
 
-- **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). Download it on the phone that runs **AAPS** if you install the watch app from the phone (Wear Installer 2 or Easy Fire Tools), or on your computer if you use ADB.
+- **AAPS Builder**: Scrolle auf der Build-Seite nach unten zu **Artifacts** und lade `aaps-wear-….apk` neben der Smartphone-App herunter, wie in [Schritt 5 – Die App auf Deinem Smartphone installieren](#aaps-builder-step5) gezeigt. Lade sie auf das Smartphone mit **AAPS** herunter, wenn Du die Smartwatch-App vom Smartphone aus installierst (Wear Installer 2 oder Easy Fire Tools), oder auf Deinen Computer, wenn Du ADB verwendest.
 
   ![Artifacts with the phone and watch apps](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
-- **Fork with Google Drive**: open your Google Drive, folder `AAPS`, then the folder of the version you built. It contains the phone apk and the Wear apk, see [Step 4 – Build the APK](#github-build-apk).
+- **Fork mit Google Drive**: Öffne Dein Google Drive, den Ordner `AAPS` und dann den Ordner der Version, die Du erstellt hast. Er enthält die Smartphone-APK und die Wear-APK, siehe [Schritt 4 – Die APK erstellen](#github-build-apk).
 
   ![Google Drive Location](../images/update/CI/GitHubActions5.png)
 
-Keep the Wear apk together with the phone apk in your backups. With **AAPS Builder**, the files stay on the build page for 14 days only.
+Bewahre die Wear-APK zusammen mit der Smartphone-APK in Deinen Backups auf. Beim **AAPS Builder** bleiben die Dateien nur 14 Tage auf der Build-Seite.
 
-Next: install the Wear apk on the watch, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+Als Nächstes: Installiere die Wear-APK auf der Smartwatch, siehe [AAPS auf Deiner Wear OS-Smartwatch einrichten](WearOsSmartwatch.md).
 
 (building-aaps-wear-os-android-studio)=
 
 ### Android Studio
 
-The Wear apk is built like the phone apk, as a second signed build. Do it right after the phone apk, with the same Android Studio version and the same keystore.
+Die Wear-APK wird wie die Smartphone-APK als zweiter signierter Build erstellt. Mache das direkt nach der Smartphone-APK, mit derselben Android Studio-Version und demselben Keystore.
 
-- Follow the instructions for [Android Studio Build](../SettingUpAaps/ComputerBuild.md).
+- Folge der Anleitung für den [Build mit Android Studio](../SettingUpAaps/ComputerBuild.md).
 - Wenn Du an die Stele zur [Modulauswahl](#Building-APK-wearapk) im Abschnitt „Signierte AAPS APK erstellen“ kommst, wähle **`AndroidAPS.wear`** aus.
 
 ![Wear module](../images/Building-the-App/wear_build1.png)
@@ -70,13 +70,13 @@ Wähle „**fullRelease**“ aus, um damit die **AAPS**-Wear-APK-Datei zu erzeug
 
 Wenn Du möchtest, kannst Du aus dem Drop-Down-Menü das **“pumpcontrolRelease”** auswählen und erstellen. Mit dieser Version kannst Du die Pumpe (ohne die Loop-Funktion) remote steuern.
 
-Next: install the Wear apk on the watch, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+Als Nächstes: Installiere die Wear-APK auf der Smartwatch, siehe [AAPS auf Deiner Wear OS-Smartwatch einrichten](WearOsSmartwatch.md).
 
 (building-aaps-wear-os-troubleshooting)=
 
-#### Troubleshooting the Android Studio build
+#### Fehlerbehebung beim Build mit Android Studio
 
-In the process of building the full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. Das kann zum Fehler [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) führen, wenn die nächste signierte App (wie zum Beispiel die **AAPS** wear App) erstellt werden soll. Am schnellsten kann das behoben werden, in dem Du den Ordner, in dem die Vollversion der AAPS App erzeugt wurde, aufrufst. Der Ordner sollte ungefähr so aussehen:
+Beim Erstellen der vollständigen **AAPS**-App (und eigentlich jeder signierten App) erzeugt Android Studio im selben Ordner eine .json-Datei. Das kann zum Fehler [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) führen, wenn die nächste signierte App (wie zum Beispiel die **AAPS** wear App) erstellt werden soll. Am schnellsten kann das behoben werden, in dem Du den Ordner, in dem die Vollversion der AAPS App erzeugt wurde, aufrufst. Der Ordner sollte ungefähr so aussehen:
 
 `C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
@@ -84,12 +84,12 @@ Lösche die .json Datei oder verschiebe sie in einen anderen Ordner. Versuche nu
 
 (building-aaps-wear-os-cli)=
 
-### Command line
+### Kommandozeile
 
-Follow [Build instructions for the command-line](../SettingUpAaps/CLIBuild.md) and repeat the compile and sign steps for the `wear` module, with the same keystore:
+Folge der [Anleitung zum Erstellen über die Kommandozeile](../SettingUpAaps/CLIBuild.md) und wiederhole die Schritte zum Kompilieren und Signieren für das Modul `wear`, mit demselben Keystore:
 
 ```sh
 ./gradlew :wear:assembleFullRelease
 ```
 
-The unsigned Wear apk is written under `wear/build/outputs/apk/full/release/`. Sign it with `apksigner` exactly like the phone apk, then install it on the watch, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+Die unsignierte Wear-APK wird unter `wear/build/outputs/apk/full/release/` abgelegt. Signiere sie mit `apksigner` genau wie die Smartphone-APK und installiere sie dann auf der Smartwatch, siehe [AAPS auf Deiner Wear OS-Smartwatch einrichten](WearOsSmartwatch.md).

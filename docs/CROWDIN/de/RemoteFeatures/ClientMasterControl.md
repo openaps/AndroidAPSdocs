@@ -1,5 +1,5 @@
 (client-master-control)=
-# Master ↔ Client-Steuerung (signierte Fernsteuerung)
+# Master ↔ Client-Steuerung (signierte Remote-Steuerung)
 
 Ab **AAPS** Version 4 kann ein Follower-Smartphone mit **AAPSClient** viel mehr, als Behandlungen nur über Nightscout *anzukündigen*: Sobald es mit dem Haupt-Smartphone **gekoppelt** ist, kann es **signierte Befehle** senden, die das Haupt-Smartphone (der **Master**) prüft, bestätigt und ausführt. Dazu gehört auch die Abgabe eines **Insulinbolus** über die Pumpe des Masters.
 
@@ -23,7 +23,7 @@ Diese Seite erklärt, wie das funktioniert und wie Du es einrichtest und nutzt.
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-In **AAPS** v3 konnte **AAPSClient** nur unsignierte Careportal-Behandlungen in Nightscout schreiben und keinen Bolus abgeben. Für die Fernsteuerung ist jetzt eine einmalige [Kopplung](#client_master_master_setup) nötig. Siehe auch [Änderungen mit AAPS Version 4](#v4changes-remote-control).
+In **AAPS** v3 konnte **AAPSClient** nur unsignierte Careportal-Behandlungen in Nightscout schreiben und keinen Bolus abgeben. Für die Remote-Steuerung ist jetzt eine einmalige [Kopplung](#client_master_master_setup) nötig. Siehe auch [Änderungen mit AAPS Version 4](#v4changes-remote-control).
 ```
 
 **AAPS** v4 verwendet dafür einen eigenen Kanal **Client-Control**. Er läuft weiterhin über Deine Nightscout-Seite (in der Collection `settings`), aber jede Nachricht ist mit einem Secret **kryptografisch signiert**, das nur die beiden Smartphones kennen. Das Secret wird einmal bei der **Kopplung** übergeben und gleich danach durch ein neues ersetzt. So wird es nie im Klartext übertragen.
@@ -134,7 +134,7 @@ Richte die Kamera auf den Code. Der Client zeigt an, was der Code bewirkt (die N
 
 ```{admonition} Scanning is available on Android
 :class: note
-A computer without camera: use the PIN there.
+Ein Computer ohne Kamera: Nutze dort die PIN.
 ```
 
 #### Die PIN eingeben
@@ -224,7 +224,7 @@ Der Master löscht oder ändert nie ein Nightscout-Token, das er nicht selbst er
 
 ---
 
-## Fernsteuerung nutzen
+## Remote-Steuerung nutzen
 
 ### Eine Aktion vom Client auslösen
 
@@ -332,7 +332,7 @@ Wird ein Client aus einer Sicherung wiederhergestellt, die seinen Befehlszähler
 
 (client-master-control-troubleshooting)=
 
-## Problembehandlung
+## Fehlerbehebung
 
 | Symptom                                                                                                                                              | Was Du prüfen solltest                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

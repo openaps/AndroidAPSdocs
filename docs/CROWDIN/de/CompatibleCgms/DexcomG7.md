@@ -6,7 +6,7 @@
 Es ist wichtig zu wissen, dass die Systeme G7, ONE+ und Stelo im Gegensatz zum G6 die Werte nicht glätten, weder in der App noch im Empfänger. Mehr Details dazu findest Du [hier](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ```{admonition} Smoothing method 
-Im Abschnitt [Glättung der Blut-Glukose-Daten](../CompatibleCgms/SmoothingBloodGlucoseData.md) findest Du Vorschläge für den Dexcom G7/ONE+/Stelo
+Im Abschnitt [Glättung der Glukosewerte](../CompatibleCgms/SmoothingBloodGlucoseData.md) findest Du Vorschläge für den Dexcom G7/ONE+/Stelo
 ```
 
 ## 1. xDrip (direkte Verbindung zum G7, ONE+ oder Stelo)

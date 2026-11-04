@@ -1,13 +1,13 @@
 # Dokumentation durchsuchen
 
-Die Dokumentation enthält eine Menge Informationen. If you are looking for a specific topic, term or setting, using the search feature is often faster than browsing through the menu.
+Die Dokumentation enthält eine Menge Informationen. Wenn Du ein bestimmtes Thema, einen Begriff oder eine Einstellung suchst, ist die Suchfunktion oft schneller als das Durchblättern des Menüs.
 
-## How to search
+## So suchst Du
 
-The search box is located at the top of the navigation panel on the left side of the screen.
+Das Suchfeld befindet sich oben im Navigationsbereich links auf dem Bildschirm.
 
 ```{note}
-On smaller screens (such as a phone) the navigation panel is hidden. Tap the menu (☰) icon in the top left corner to open it and reveal the search box.
+Auf kleineren Bildschirmen (z. B. auf einem Smartphone) ist der Navigationsbereich ausgeblendet. Tippe oben links auf das Menüsymbol (☰), um ihn zu öffnen und das Suchfeld anzuzeigen.
 ```
 
 1. Tippe ein oder mehrere Schlüsselwörter in die Suchleiste.
@@ -16,8 +16,8 @@ On smaller screens (such as a phone) the navigation panel is hidden. Tap the men
 
 ## Tipps für bessere Ergebnisse
 
-- Use specific terms (for example `temp target` or `autosens`) rather than full sentences.
-- Searching with several keywords returns the pages containing those words. Start broad and add keywords to narrow the results.
+- Verwende konkrete Begriffe (zum Beispiel `temp target` oder `autosens`) statt ganzer Sätze.
+- Eine Suche mit mehreren Stichwörtern liefert die Seiten, die diese Wörter enthalten. Beginne allgemein und füge Stichwörter hinzu, um die Ergebnisse einzugrenzen.
 - Die Suche bezieht sich nur auf die Sprache und die Version der Dokumentation, die Du gerade liest. Wenn Du etwas nicht finden kannst, wechsele auf die englische Version. Die englische ist die vollständigste Version (siehe [Sprache und Version ändern](./ChangeLanguageVersion.md)).
 
 ```{note}

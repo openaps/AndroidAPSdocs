@@ -26,13 +26,13 @@ Die häufigsten Strategien im Zusammenhang mit **AAPS** werden weiter unten erl�
 
 * Viele Betreuende kennen Dexcom Follow und finden die klare Benutzeroberfläche besser als etwas Kompliziertes.
 
-* Dexcom Follow eignet sich besonders gut für Menschen (z. B. Lehrer/Großeltern), die sehr wenig über Diabetes und Glukosewerte wissen. It has customizable alerts (BG level, what sound to play etc.). Alarme können bei Bedarf komplett abgeschaltet werden. Das kann z.B. in Situationen, in denen der Sensor noch nicht zuverlässig läuft und falsche tiefe Werte anzeigt, hilfreich sein.
+* Dexcom Follow eignet sich besonders gut für Menschen (z. B. Lehrer/Großeltern), die sehr wenig über Diabetes und Glukosewerte wissen. Es hat anpassbare Alarme (Glukosewert, abzuspielender Ton usw.). Alarme können bei Bedarf komplett abgeschaltet werden. Das kann z.B. in Situationen, in denen der Sensor noch nicht zuverlässig läuft und falsche tiefe Werte anzeigt, hilfreich sein.
 
 #### Dexcom Follow konfigurieren: Schritt-für-Schritt-Anleitung
 
 Wenn Du die inoffizielle Dexcom App BYODA für das Auslesen der Sensorwerte nutzt, kannst Du weitere Follower aus der BYODA App heraus einladen.
 
-Mittlerweile können aus Drittanbieter-Apps keine Einladungs-Emails mehr an Dexcom-Follower verschickt werden. In xDrip the invite request will just result in the message “invite not sent”.
+Mittlerweile können aus Drittanbieter-Apps keine Einladungs-Emails mehr an Dexcom-Follower verschickt werden. In xDrip führt die Einladungsanfrage nur zur Meldung „Einladung nicht gesendet“.
 
 Du musst die offizielle Dexcom-App installieren, die Einladung senden und dann die offizielle App wieder deinstallieren.
 
@@ -42,7 +42,7 @@ Die Schritte dazu sind folgende:
 3)  Wische durch die einleitenden Menüs. 4)  Wähle “Kein Code” als Sensorcode aus. 5)  Unter Transmitter-SN wähle "Manuell eingeben" und gib einen gültigen Transmitter-Code ein (z. B. den eines bereits abgelaufenen Transmitters, damit dieser sich nicht mit einen laufenden Transmitter in die Quere kommt). Das Format ist ein Abfolge von Zahlen und Buchstaben: “ZBZZZB” einer bestimmten Kombination. Daher ist es am einfachsten einen Code eines alten Transmitters zu verwenden. 6) Sobald die App versucht, den Transmitter und den Sensor zu finden, kannst Du Follower einladen: Wähle die kleinen drei Punkte oben links in der App aus und füge einen neuen Follower hinzu. Wenn einer Deiner Follower ein neues Samrtphone hat, kannst Du diesen Weg auch nutzen,  um ihm/ihr - sofern nötig - eine neue Einladung zu schicken. An der Stelle löscht Du die Person zunächst aus der Follower-Liste und verschickst dann eine neue Einladungs-E-Mail, die dann auf dem neunen Smartphone ankommt. 7)  Lade die Dexcom Follow App auf das Follower-Smartphone herunter (iPhone: App Store oder Android: Play) und installiere sie. Richte die Dexcom Follow App ein. Während der Einrichtung wirst Du dazu aufgefordert, die E-Mail mit der Follower-Einladung zu öffnen.    
 8)  Jetzt kannst Du die offizielle Dexcom G6 App deinstallieren.
 
-For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip, depending on which app you are using.
+Für Dexcom Follow werden die Sensordaten dann vom **AAPS**-Smartphone exportiert, je nach verwendeter App entweder direkt aus BYODA oder aus xDrip.
 
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
@@ -80,33 +80,33 @@ Nachteile (von Nutzenden gemeldet)
 
 * Die App kann aus [Google Play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) heruntergeladen werden und zeigt die Glukosewerte in Echtzeit an.
 
-* The user can be alerted with customized noisy low and high alarms set.
+* Die Nutzenden können über anpassbare, laute Alarme für niedrige und hohe Werte gewarnt werden.
 
 * Glukosewerte können sowohl in mmol/L als auch in mg/dl angezeigt werden.
 
 * Android 5.0 oder höher sind vorausgesetzt.
 
-* It has a dark UI, large readings and buttons, designed for usage at night.
+* Es hat eine dunkle Oberfläche sowie große Werte und Schaltflächen und ist für die Nutzung in der Nacht gemacht.
 
 ### xDrip (Android)
 
-You can use xDrip as a follower.
+Du kannst xDrip als Follower nutzen.
 
 #### Wenn Du Nightscout nutzt ...
 
-Set xDrip as a Nightscout Follower. Du kannst damit Glukosewerte und Behandlungsdaten empfangen, nicht jedoch das Basal.
+Richte xDrip als Nightscout-Follower ein. Du kannst damit Glukosewerte und Behandlungsdaten empfangen, nicht jedoch das Basal.
 
 ![grafik](../images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
 
-#### Without Nightscout - xDrip BG data source
+#### Ohne Nightscout – xDrip als BZ-Quelle
 
-If your **AAPS** data source is xDrip (or if xDrip can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip followers, displaying BG, treatments and basal rates.
+Ist xDrip Deine **AAPS**-Datenquelle (oder kann xDrip die Glukosewerte auch von einer anderen App wie BYODA, Juggluco … empfangen), kannst Du es auf dem Master-Smartphone nutzen, um Daten mit xDrip-Followern zu teilen und dort Glukosewerte, Behandlungen und Basalraten anzuzeigen.
 
 ![grafik](../images/remote_control_and_following/xDrip+_Master_Sync.png)
 
-#### Without Nightscout - xDrip BG companion app
+#### Ohne Nightscout – xDrip als Companion-App
 
-If your **AAPS** data source is not xDrip but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip followers, displaying BG, treatments and basal rates.
+Ist xDrip nicht Deine **AAPS**-Datenquelle, kann xDrip aber die Glukosewerte über die Datenquelle Companion App anzeigen, kannst Du es auf dem Master-Smartphone nutzen, um Daten mit xDrip-Followern zu teilen und dort Glukosewerte, Behandlungen und Basalraten anzuzeigen.
 
 ![grafik](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
@@ -114,7 +114,7 @@ If your **AAPS** data source is not xDrip but you can display BG data from the C
 
 ![grafik](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
+xDripSwift entstand durch die Portierung der ursprünglichen xDrip-App auf iOS und entwickelte sich zu „xDrip for iOS“ weiter, geschrieben als **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ Die [xDrip4iOS Facebook-Gruppe](https://www.facebook.com/groups/853994615056838/
 * Apple iPhone (benötigt Software ab Version 13.0 oder höher)
 * Google Android (speichere die Web-App auf Deinem Startbildschirm)
 
-Es wurde von Sugarmate-Nutzenden berichtet, dass es in den USA mit Apple CarPlay genutzt werden kann, um Glukosewerte während des Fahrens anzuzeigen. Ob das in Ländern außerhalb der USA auch möglich ist, ist noch nicht geklärt. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
+Es wurde von Sugarmate-Nutzenden berichtet, dass es in den USA mit Apple CarPlay genutzt werden kann, um Glukosewerte während des Fahrens anzuzeigen. Ob das in Ländern außerhalb der USA auch möglich ist, ist noch nicht geklärt. Wenn Du mehr darüber weißt, ergänze bitte die Details hier in der Dokumentation mit einem [Pull Request](../SupportingAaps/HowToEditTheDocs.md), das geht schnell und einfach.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
@@ -181,16 +181,16 @@ Der [M5Stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) ist eine kleine
 
 ### SugarPixel
 
-SugarPixel ist ein Gerät, dass als Zweitanzeige für Glukosewerte und Alarme genutzt wird. Es wird mit der Dexcom App oder der Nightscout App auf dem Smartphone verbunden und man kann dann damit die Glukosewerte permanent verfolgen. Das Gerät zeigt die Glukosewerte in Echtzeit an. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customizable display options and native multi-user following.
+SugarPixel ist ein Gerät, dass als Zweitanzeige für Glukosewerte und Alarme genutzt wird. Es wird mit der Dexcom App oder der Nightscout App auf dem Smartphone verbunden und man kann dann damit die Glukosewerte permanent verfolgen. Das Gerät zeigt die Glukosewerte in Echtzeit an. Dieser CGM-Hardware-Monitor bietet Alarme mit zufällig erzeugten, sehr lauten Tönen, Vibrationsalarme für Hörgeschädigte, anpassbare Anzeigeoptionen und ein eingebautes Folgen für mehrere Personen.
 
 ![grafik](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
 ![grafik](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-* SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with color-coded glucose values.
+* SugarPixel hat mehrere Anzeigeoptionen in mg/dl und mmol/l mit farbcodierten Glukosewerten, passend zu den Bedürfnissen der Nutzenden.
 * In der Standardanzeige wird der Glukosewert, ein Trendpfeil und die Veränderung (Delta) angezeigt. Delta ist die Veränderung + oder - seit dem letzten Messwert.
-* SugarPixel can be customized for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand.
-* SugarPixel’s color face uses the entire display to show a single color representing the BG value. Damit kann man die Glukosewerte auch auf große Entfernungen durch das Fenster erkennen, während im Hof, qauf der Terrasse oder im Planschbecken oder Pool gespielt wird.
+* SugarPixel lässt sich mit der Anzeige „BG and Time“ für geringe Helligkeit anpassen, sodass Glukosewert und Uhrzeit auf dem Nachttisch zu sehen sind.
+* Die Farbanzeige von SugarPixel nutzt das ganze Display, um mit einer einzigen Farbe den Glukosewert darzustellen. Damit kann man die Glukosewerte auch auf große Entfernungen durch das Fenster erkennen, während im Hof, qauf der Terrasse oder im Planschbecken oder Pool gespielt wird.
 * Die "Big BG"-Anzeige ist Brillen- und Kontaktlinsen-Tragenden zu empfehlen.
 
 ### Nightscout Clock auf einem Ulanzi TC001
@@ -200,7 +200,7 @@ SugarPixel ist ein Gerät, dass als Zweitanzeige für Glukosewerte und Alarme ge
 ![Following Nightscout Clock](../images/FollowingNightscoutClock.png)
 
 * Sie kann sowohl mmol/l als auch mg/dl-Einheiten anzeigen und hat hörbare Alarme.
-* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
+* Es gibt mehrere Anzeigen, eine Übersicht findest Du unter [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it).
 * Das Einrichten und Konfigurieren des Geräts erfordert nur ein paar einfache Schritte. Nach der Einrichtung benötigt es nur Strom und WLAN.
 * Das Ulanzi TC001 ist preislich deutlich günstiger als das SugarPixel.
 * Die Software zusammen mit den Installationsanweisungen findest Du auf [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).

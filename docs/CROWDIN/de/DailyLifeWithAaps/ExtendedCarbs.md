@@ -13,7 +13,7 @@ eCarbs sind Kohlenhydrate, die auf mehrere Stunden verteilt werden. Bei einer St
 
 ## Methoden der Verwendung von eCarbs
 
-Um eCarbs einzugeben, öffne den Dialog **Kohlenhydrate** (**Behandlungen** → **Kohlenhydrate**), gib die gesamten Kohlenhydrate ein, setze eine **Dauer** und verschiebe bei Bedarf den Beginn mit **KH-Zeit** (*die Zahlen unten sind nur Beispiele, Du musst Deine eigenen Werte ausprobieren, bis der Glukoseverlauf für Deine Anwendungsfälle passt*):
+Um eCarbs einzugeben, öffne den Dialog **Kohlenhydrate** (**Behandlungen** → **Kohlenhydrate**), gib die gesamten Kohlenhydrate ein, setze eine **Dauer** und verschiebe bei Bedarf den Beginn mit **Zeitpunkt der KH-Aufnahme** (*die Zahlen unten sind nur Beispiele, Du musst Deine eigenen Werte ausprobieren, bis der Glukoseverlauf für Deine Anwendungsfälle passt*):
 
 ![Kohlenhydrate eingeben](../images/eCarbs_Dialog.png)
 
@@ -37,7 +37,7 @@ Im [Bolus-Rechner](#aaps-screens-bolus-wizard) kannst Du mit drei Knöpfen unter
 Gut zu wissen:
 * Das ist keine einfache Aufteilung: Bei **Kuchen** und **Pizza** ergeben die erfassten Kohlenhydrate zusammen **mehr, als Du eingegeben hast** (110 % bzw. 115 %). Der Zuschlag steckt nur in den eCarbs.
 * Der Bolus deckt nur die jetzt gegessenen Kohlenhydrate ab. **AAPS** gibt für die eCarbs keinen Bolus im Voraus ab: Der Loop berücksichtigt sie, sobald sie beginnen, wie alle anderen [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
-* Wenn Du eine **KH-Zeit** einstellst, beginnen die eCarbs 60 Minuten nach diesem Zeitpunkt.
+* Wenn Du einen **Zeitpunkt der KH-Aufnahme** einstellst, beginnen die eCarbs 60 Minuten danach.
 * Der Bestätigungsdialog zeigt die eCarbs in einer eigenen Zeile, _z. B._ "eCarbs 35g / 3h (+60min)".
 * Die Gramm werden auf ganze Zahlen abgerundet.
 * Prozentsätze, Verzögerungen und Dauern sind fest vorgegeben und lassen sich in den Einstellungen nicht ändern.

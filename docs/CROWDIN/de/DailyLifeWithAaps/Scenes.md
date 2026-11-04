@@ -1,7 +1,7 @@
 (scenes)=
 # Szenen (Voreinstellungen für bestimmte Situationen)
 
-Eine **Szene** ist eine benannte Voreinstellung, die **mehrere Aktionen auf einmal** ausführt – zum Beispiel eine Voreinstellung *Schlaf*, *Sport* oder *Krankheitstag*, die mit einem einzigen Tippen Dein Profil wechselt, ein temporäres Ziel setzt, SMB ein- oder ausschaltet und eine Careportal-Notiz einträgt, auf Wunsch für eine festgelegte Dauer.
+Eine **Szene** ist eine benannte Voreinstellung, die **mehrere Aktionen auf einmal** ausführt – zum Beispiel eine Voreinstellung *Schlaf*, *Bewegung* oder *Krankheitstag*, die mit einem einzigen Tippen Dein Profil wechselt, ein temporäres Ziel setzt, SMB ein- oder ausschaltet und eine Careportal-Notiz einträgt, auf Wunsch für eine festgelegte Dauer.
 
 ```{contents} Table of contents
 :depth: 2
@@ -18,9 +18,9 @@ Statt jedes Mal mehrere Dinge von Hand zu ändern, wenn eine wiederkehrende Situ
 - **Temporäres Ziel** – ein temporäres Ziel setzen (z. B. *Aktivität*, *Bald essen* oder einen eigenen Wert).
 - **SMB ein/aus** – Super-Mikroboli aktivieren oder deaktivieren, solange die Szene aktiv ist.
 - **AAPS-Modus** – den AAPS-Modus ändern (z. B. auf einen vorsichtigeren Modus).
-- **Careportal-Notiz** – ein Ereignis eintragen (z. B. *Sport*, *Krankheit*), damit es im Diagramm und in Nightscout erscheint.
+- **Careportal-Notiz** – ein Ereignis eintragen (z. B. *Bewegung*, *Krankheit*), damit es im Diagramm und in Nightscout erscheint.
 
-Eine Szene hat außerdem eine **Dauer** – eine feste Zeit (Minuten/Stunden/Tage) oder *Unbegrenzt (manuelles Ende)* – und eine **Aktion am Ende**, die ausgeführt wird, wenn sie endet: entweder eine **Benachrichtigung**, oder sie kann in eine andere Szene **übergehen** (zum Beispiel *Krankheitstag → Sport*).
+Eine Szene hat außerdem eine **Dauer** – eine feste Zeit (Minuten/Stunden/Tage) oder *Unbegrenzt (manuelles Ende)* – und eine **Aktion am Ende**, die ausgeführt wird, wenn sie endet: entweder eine **Benachrichtigung**, oder sie kann in eine andere Szene **übergehen** (zum Beispiel *Krankheitstag → Bewegung*).
 
 ---
 
@@ -45,7 +45,7 @@ Tippe auf den Knopf **+**, um eine neue Szene zu erstellen.
 
 ### Mit einer Vorlage beginnen
 
-Um eine Szene zu **erstellen**, tippe im Bildschirm Szenen auf den Knopf **+**. Der erste Schritt ist **Mit einer Vorlage beginnen**: Wähle eine fertige Szene für eine typische Situation – *Sport*, *Krankheitstag*, *Krankheitstag — Erbrechen*, *Schlaf*, *Nacht nach dem Sport*, *Vor der Mahlzeit*, *Alkohol*, *Autofahren*, *Baden*, *Lutealphase*, *Heißes Wetter*, *Medizinischer Eingriff* – oder beginne mit einer *Leeren Vorlage*. Jede Vorlage **füllt die empfohlenen Aktionen vor**, und Du kannst in den folgenden Schritten alles anpassen.
+Um eine Szene zu **erstellen**, tippe im Bildschirm Szenen auf den Knopf **+**. Der erste Schritt ist **Mit einer Vorlage beginnen**: Wähle eine fertige Szene für eine typische Situation – *Bewegung*, *Krankheitstag*, *Krankheitstag — Erbrechen*, *Schlaf*, *Nach der Bewegung (Nacht)*, *Vor der Mahlzeit*, *Alkohol*, *Autofahren*, *Baden*, *Lutealphase*, *Heißes Wetter*, *Medizinischer Eingriff* – oder beginne mit einer *Leeren Vorlage*. Jede Vorlage **füllt die empfohlenen Aktionen vor**, und Du kannst in den folgenden Schritten alles anpassen.
 
 ![“Start from template” — pick a starting point](../images/v4/Scenes/templates_picker.png)
 
@@ -61,7 +61,7 @@ Der Rest des Editors ist ein kurzer Assistent, der Dich **Schritt für Schritt**
 
 Gehe die Schritte mit **Weiter**/**Zurück** durch: *Profilwechsel*, *Temporäres Ziel*, *SMB*, *AAPS-Modus*, *Careportal-Notiz*, dann die **Dauer**, die **Aktion am Ende** (benachrichtigen oder in eine andere Szene übergehen) und zum Schluss **Name und Symbol** der Szene. Speichere, wenn Du fertig bist. (Um eine vorhandene Szene zu **bearbeiten**, tippe auf ihren Knopf **✏️** – Du landest direkt in diesen Schritten.)
 
-Jeder Schritt beginnt mit einer kurzen Erklärung, was die Aktion bewirkt. So sehen die Schritte aus, hier mit der Vorlage *Sport*:
+Jeder Schritt beginnt mit einer kurzen Erklärung, was die Aktion bewirkt. So sehen die Schritte aus, hier mit der Vorlage *Bewegung*:
 
 **Temporäres Ziel** – wähle eine Deiner Vorlagen für temporäre Ziele:
 

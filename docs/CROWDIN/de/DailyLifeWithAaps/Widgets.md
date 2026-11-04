@@ -1,7 +1,7 @@
 (widgets)=
 # Widgets für den Startbildschirm
 
-**AAPS** provides widgets that you can add to your phone's home screen. A widget shows your current data without opening the app. Tap a widget to open **AAPS**.
+**AAPS** bietet Widgets, die Du auf dem Startbildschirm Deines Smartphones einfügen kannst. Ein Widget zeigt Deine aktuellen Daten, ohne dass Du die App öffnen musst. Tippe auf ein Widget, um **AAPS** zu öffnen.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,70 +10,70 @@
 
 ---
 
-## Available widgets
+## Verfügbare Widgets
 
-Five widgets are available. They are listed under **AAPS** in the Android widget picker:
+Es gibt fünf Widgets. In der Widget-Auswahl von Android stehen sie unter **AAPS**:
 
 ![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Default size | What it shows                                                                                                                                                                                                                                              |
-| --------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                   | 5 × 2        | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
-| **AAPS glucose circle**           | 2 × 2        | The BG circle of the main screen: a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading.                                                                                                                     |
-| **AAPS Small**                    | 2 × 2        | Profile name, BG with trend arrow, time since the last reading, delta, IOB and COB.                                                                                                                                                                        |
-| **AAPS BG + IOB + COB (compact)** | 4 × 1        | One line with BG and trend arrow, IOB and COB.                                                                                                                                                                                                             |
-| **AAPS BG graph**                 | 3 × 1        | The BG value with a small graph of the recent readings.                                                                                                                                                                                                    |
+| Widget                            | Standardgröße | Was es zeigt                                                                                                                                                                                                                                                                                                      |
+| --------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AAPS Widget**                   | 5 × 2         | Der Statusbereich des Startbildschirms: BZ mit Trend und Delta, der Loop-Modus als Symbol neben dem Profilnamen, Zielwert, Empfindlichkeit (wie auf dem Startbildschirm angezeigt), IOB und COB. Die Texte werden kleiner, damit sie in die Größe passen, die Du dem Widget gibst, statt abgeschnitten zu werden. |
+| **AAPS Glukoseanzeige (Kreis)**   | 2 × 2         | Der BZ-Kreis des Startbildschirms: ein Ring in der Farbe des BZ, der Trendbogen, das Delta, der BZ-Wert und die Zeit seit dem letzten Wert.                                                                                                                                                                       |
+| **AAPS Klein**                    | 2 × 2         | Profilname, BZ mit Trendpfeil, Zeit seit dem letzten Wert, Delta, IOB und COB.                                                                                                                                                                                                                                    |
+| **AAPS BZ + IOB + COB (Kompakt)** | 4 × 1         | Eine Zeile mit BZ und Trendpfeil, IOB und COB.                                                                                                                                                                                                                                                                    |
+| **AAPS BZ Diagramm**              | 3 × 1         | Der BZ-Wert mit einem kleinen Diagramm der letzten Werte.                                                                                                                                                                                                                                                         |
 
-The **AAPS widget**, the **glucose circle** and the **Small** widget on a home screen:
+Das **AAPS Widget**, die **Glukoseanzeige (Kreis)** und das Widget **Klein** auf einem Startbildschirm:
 
 ![AAPS widget, glucose circle and Small widget on the home screen](../images/widgets/home_widgets_full_circle_small.png)
 
-The **compact** widget and the **BG graph** widget:
+Das Widget **Kompakt** und das Widget **BZ Diagramm**:
 
 ![Compact widget and BG graph widget on the home screen](../images/widgets/home_widgets_compact_graph.png)
 
-BG values use the same colours as in **AAPS**: green in range, yellow above range, red below range.
+BZ-Werte haben dieselben Farben wie in **AAPS**: grün im Zielbereich, gelb über dem Zielbereich, rot unter dem Zielbereich.
 
 ---
 
-## Adding a widget
+## Ein Widget hinzufügen
 
-The exact steps depend on your phone and its launcher. On most phones:
+Die genauen Schritte hängen von Deinem Smartphone und seinem Launcher ab. Auf den meisten Smartphones:
 
-1. Long-press an empty area of the home screen and select **Widgets**.
+1. Drücke lange auf eine freie Stelle des Startbildschirms und wähle **Widgets**.
 
    ![The widget picker](../images/widgets/widget_picker_list.png)
 
-2. Open **AAPS** in the list and tap the widget you want.
-3. Press **Add** (or drag the widget to the place you want).
+2. Öffne **AAPS** in der Liste und tippe auf das gewünschte Widget.
+3. Tippe auf **Hinzufügen** (oder ziehe das Widget an die gewünschte Stelle).
 
    ![The Add button below the selected widget](../images/widgets/widget_picker_add_button.png)
 
-The widget is placed on the home screen. Right after adding it, it is shown with handles: drag a handle to **resize** the widget, or drag the widget to move it. The glucose circle can be resized to any size.
+Das Widget wird auf dem Startbildschirm platziert. Direkt nach dem Hinzufügen wird es mit Griffen angezeigt: Ziehe an einem Griff, um das Widget **größer oder kleiner zu machen**, oder ziehe das Widget, um es zu verschieben. Die Glukoseanzeige (Kreis) lässt sich auf jede Größe bringen.
 
 ![A widget just added, with its resize handles and the settings button](../images/widgets/widget_glucose_circle_added.png)
 
-If the home screen page is full, the phone puts the widget on a new page.
+Ist die Seite des Startbildschirms voll, legt das Smartphone das Widget auf eine neue Seite.
 
 ---
 
-## Widget configuration
+## Widget-Einstellungen
 
-Tap the **pencil** button shown on the widget just after you added it. Later, long-press the widget to get the handles and the pencil back.
+Tippe auf den Knopf mit dem **Stift**, der direkt nach dem Hinzufügen auf dem Widget angezeigt wird. Später drückst Du lange auf das Widget, um die Griffe und den Stift wieder zu bekommen.
 
-The **Widget configuration** dialog has two settings:
+Der Dialog **Widget-Einstellungen** hat zwei Einstellungen:
 
-- **Configure opacity** — how opaque the background of the widget is. A low value lets the wallpaper show through.
-- **Use black color** — use a black background instead of the default one.
+- **Deckkraft konfigurieren** – wie deckend der Hintergrund des Widgets ist. Bei einem niedrigen Wert scheint das Hintergrundbild durch.
+- **Verwende schwarze Farbe** – einen schwarzen Hintergrund statt des Standardhintergrunds verwenden.
 
-![Widget configuration](../images/widgets/widget_configuration.png)
+![Widget-Einstellungen](../images/widgets/widget_configuration.png)
 
-Each widget has its own configuration.
+Jedes Widget hat seine eigenen Einstellungen.
 
 ---
 
-## Good to know
+## Gut zu wissen
 
-- A widget only **displays** data. You cannot bolus or change anything from a widget.
-- The widget is refreshed by **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
-- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Raise the opacity in the widget configuration if the color is hard to see. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions).
+- Ein Widget dient nur zum **Anzeigen** von Daten. Über ein Widget kannst Du keinen Bolus abgeben und nichts ändern.
+- Das Widget wird von **AAPS** aktualisiert. Läuft **AAPS** nicht oder schränkt Android es im Hintergrund ein, zeigt das Widget möglicherweise alte Daten. Prüfe die Zeit seit dem letzten Wert und stelle sicher, dass **AAPS** von der [Akkuoptimierung](#SetupWizard-StoragePermission) ausgenommen ist.
+- Bei **AAPSClient**, **AAPSClient2** und **AAPSClient3** ist der Hintergrund des Widgets gelb, blau oder grün, damit Du die Apps auseinanderhalten kannst. Erhöhe die Deckkraft in den Widget-Einstellungen, wenn die Farbe schwer zu erkennen ist. Siehe [Über AAPSClient, AAPSClient2 und AAPSClient3](#remotecontrol-aapsclient-versions).

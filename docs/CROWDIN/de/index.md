@@ -31,7 +31,7 @@ Abschnitt **5) [AAPS im Alltag](./DailyLifeWithAaps/AapsScreens.md)** behandelt 
 
 Abschnitt **6) [Remote AAPS-Funktionen](./RemoteFeatures/RemoteControl.md)** stellt eine echte Stärke von **AAPS** dar. Es gibt eine Vielzahl von Möglichkeiten, Befehle remote an **AAPS** zu senden oder einfach dessen Daten zu folgen. Dies ist ebenso nützlich für Betreuende, die **AAPS** für Minderjährige verwenden möchten, als auch für Erwachsene mit Diabetes, die entweder ihre Glukosewerte (und andere Metriken) bequemer als nur auf ihrem Smartphone überwachen möchten (z. B. auf einer Smartwatch, im Auto _usw._), oder die möchten, dass auch nahestehende Personen die Daten überwachen. Dieser Abschnitt hat auch eine Anleitung zur Nutzung von Android Auto, sodass Du die Glukosewerte auch im Auto sehen kannst.
 
-Abschnitt **7) [Wear OS Smartwatches](./WearOS/BuildingAapsWearOS.md)** gibt Informationen und beschreibt Vorgehensweisen zum Umgang mit einer Android **Wear OS** Smartwatch und speziellen **AAPS**-Zifferblättern oder selbsterstellten Zifferblättern zur Remotesteuerung Deines Smartphones oder nur zur reinen Anzeige.
+Abschnitt **7) [Wear OS Smartwatches](./WearOS/BuildingAapsWearOS.md)** gibt Informationen und beschreibt Vorgehensweisen zum Umgang mit einer Android **Wear OS** Smartwatch und speziellen **AAPS**-Watchfaces oder selbsterstellten Watchfaces zur Remotesteuerung Deines Smartphones oder nur zur reinen Anzeige.
 
 
 Abschnitt **8) [AAPS-Wartung](./Maintenance/ExportImportSettings.md)** behandelt den Export und die Sicherung der Einstellungen (was besonders dann wichtig ist, wenn Du Dein Smartphone verlierst oder defekt wird), gibt die neuesten Versionshinweise, beschreibt, wie Du **AAPS** aktualisierst und erklärt, was passiert, wenn eine Version das Supportende erreicht. In der Regel gibt es 2-3 neue AAPS-Versionen im Jahr, die ein Update der App erforderlich machen. Diese Updates sind - wie für jede Software - wichtig, da damit kleinere Fehler ausgebügelt und Verbesserungen in **AAPS** verfügbar werden. Es gibt einen eigenen Abschnitt, der sich mit Fehlerbehebungen rund um den Aktualisierungsvorgang und den dazu häufig gestellten Fragen beschäftigt.
@@ -133,8 +133,8 @@ Szenen <./DailyLifeWithAaps/Scenes.md>
 Automatisierungen <./DailyLifeWithAaps/Automations.md>
 Schnellstart-Leiste <./DailyLifeWithAaps/QuickLaunch.md>
 Startbildschirm-Widgets <./DailyLifeWithAaps/Widgets.md>
-Lebensmitteldatenbank <./DailyLifeWithAaps/Food.md>
-Übergreifende Suche <./DailyLifeWithAaps/GlobalSearch.md>
+Lebensmittel-Datenbank <./DailyLifeWithAaps/Food.md>
+Globale Suche <./DailyLifeWithAaps/GlobalSearch.md>
 Überprüfen Deiner Daten <./Maintenance/Reviewing.md>
 AAPS für Kinder <./DailyLifeWithAaps/AapsForChildren.md>
 Pumpen und Kanülen <./DailyLifeWithAaps/PumpsAndCannulas.md>
@@ -160,8 +160,8 @@ SMS-Befehle <./RemoteFeatures/SMSCommands.md>
 AAPS für Wear OS <./WearOS/BuildingAapsWearOS.md>
 Smartwatch nutzen <./WearOS/WearOsSmartwatch.md>
 Remote steuern <./RemoteFeatures/RemoteControlWearOS.md>
-Eigene Zifferblätter - Referenzdokument <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-Austausch-Plattform für eigene Zifferblätter <./ExchangeSiteCustomWatchfaces/index.md>
+Eigene Watchfaces - Referenzdokument <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
+Austausch-Plattform für eigene Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
@@ -181,14 +181,14 @@ Supportende <./Maintenance/EndOfLife.md>
 ```{toctree}
 :caption: 9) Hilfe & Fehlerbehebung
 
-Wo bekomme ich Hilfe zu AAPS <./GettingHelp/WhereCanIGetHelp bekommen.md>
-Fehlerbehebung (beginne hier) <./GettingHelp/GeneralFehlerbehebung.md>
+Wo bekomme ich Hilfe zu AAPS <./GettingHelp/WhereCanIGetHelp.md>
+Fehlerbehebung (beginne hier) <./GettingHelp/GeneralTroubleshooting.md>
 - Bluetooth-Fehlerbehebung <./GettingHelp/BluetoothTroubleshooting.md>
 - NSClient-Fehlerbehebung <./GettingHelp/TroubleshootingNsClient.md>
 - Android Studio-Fehlerbehebung <./GettingHelp/TroubleshootingAndroidStudio.md>
-- Browser Build-Fehlerbehebung <./GettingHelp/BrowserBuildTroubleshooting.md>
+- Browser-Build-Fehlerbehebung <./GettingHelp/BrowserBuildTroubleshooting.md>
 - AAPS neu installieren (neuer Keystore) <./GettingHelp/ReinstallAaps.md>
-- Zugriff auf Logdateien <. GettingHelp/AccessingLogFiles.md>
+- Zugriff auf Logdateien <./GettingHelp/AccessingLogFiles.md>
 FAQ <./UsefulLinks/FAQ.md>
 ```
 

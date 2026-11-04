@@ -1,6 +1,6 @@
-# Austausch-Plattform für eigene Zifferblätter (custom watchfaces)
+# Austausch-Plattform für eigene Watchfaces (custom watchfaces)
 
-Hier kannst Du die Zip-Dateien für eigene Zifferblätter, die andere Nutzende erstellt haben und teilen wollen, herunterladen.
+Hier kannst Du die Zip-Dateien für eigene Watchfaces, die andere Nutzende erstellt haben und teilen wollen, herunterladen.
 
 Die Zip-Dateien können im Ordner "**[_static/ExchangeSiteCustomWatchfaces](https://github.com/openaps/AndroidAPSdocs/tree/master/docs/_static/ExchangeSiteCustomWatchfaces)**" über einen Pull Request in GitHub wie üblich hochgeladen werden.
 

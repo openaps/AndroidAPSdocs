@@ -1,6 +1,6 @@
 (browser-build)=
 
-# Im Browser erstellen (Browser Build)
+# Im Browser erstellen (Browser-Build)
 
 AAPS mit GitHub Actions erstellen.
 

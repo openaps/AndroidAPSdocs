@@ -12,13 +12,13 @@ Wir empfehlen Nightscout zu nutzen.
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout ist eine Web-Anwendung, die Deine CGM-Daten und **AAPS**-Daten protokolliert, anzeigen und daraus Berichte erstellt. Es ist eine leistungsstarke Plattform, die seit vielen Jahren in **AAPS** integriert ist. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
+Nightscout ist eine Web-Anwendung, die Deine CGM-Daten und **AAPS**-Daten protokolliert, anzeigen und daraus Berichte erstellt. Es ist eine leistungsstarke Plattform, die seit vielen Jahren in **AAPS** integriert ist. Es ermöglicht Nutzern und Betreuungspersonen, die Diabetes-Daten des Patienten nahezu in Echtzeit zu verfolgen (bei einer ausreichenden Internetverbindung zwischen allen beteiligten Komponenten können zwischen dem Empfang und der Bereitstellung der Daten nur wenige Sekunden vergehen). Er überträgt auch die Remote-Befehle, die Betreuende von **AAPSClient** aus an **AAPS** senden (siehe [Master ↔ Client-Steuerung](#client-master-control)).
 
 Nightscout steht als Open-Source-Software zur Verfügung. Jeder kann einen Nightscout-Server erstellen und betreiben, entweder kostenlos oder als kostenpflichtiger Dienst.
 
 Mehr Informationen hierzu findest Du auf der [Website des Nightscout-Projekts](http://nightscout.github.io/).
 
-### Option 1 - Set up your Nightscout server yourself
+### Option 1 - Richte Deinen Nightscout-Server selbst ein
 
 Das Einrichten Deines Nightscout-Berichtsservers kann eine oder mehrere webbasierte Anwendungen erfordern, die gepflegt werden wollen. Um einen vollständig kostenlosen Service zu haben, musst Du im Fall, dass ein Anbieter seinen Service nicht mehr kostenfrei anbietet, Deine Nightscout-Website und Deine Daten umziehen (migrieren).
 
@@ -33,7 +33,7 @@ Von Zeit zu Zeit schauen sich bestehende Nightscout-Nutzende an, wie und wo ihr 
 
 Einige der gehosteten Services für Nightscout („Bezahldienste“) sind [hier](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table) gelistet.
 
-### Further configuration of Nightscout
+### Weitere Konfiguration von Nightscout
 
 Sobald Du Deine Nightscout-Seite installiert und lauffähig hast, gehe zur [Nightscout-Konfigurationsseite](../SettingUpAaps/Nightscout.md), um weitere Einstellmöglichkeiten kennenzulernen.
 
@@ -44,7 +44,7 @@ Tidepool ist erst seit der Ende 2023 erschienenen Version 3.2 in **AAPS** verfü
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
+Da es bei der Verwendung von **AAPS** zwischen Dateneingang und Datenanzeige eine Verzögerung von drei Stunden gibt, ist Tidepool nicht geeignet, um Echtzeit-Informationen mit Betreuenden zu teilen.  
 Auf der anderen Seite kann Tidepool eine großartige Lösung sein, wenn Berichte mit dem Diabetes-Team geteilt werden sollen, und Nightscout dort keine akzeptierte Lösung ist.  
 ```
 
@@ -57,6 +57,6 @@ Weitere Informationen, um Tidepool mit AAPS einzurichten, findest Du [hier](../S
 Du brauchst die Tidepool Uploadedr App ** nicht nutzen: **AAPS** lädt die Glukosewerte, die Behandlungs- und die Basalinformationen für Dich hoch. Du brauchst nur ein eigenes Tidepool-Konto. Lade Deine Daten nicht mit Tidepools separaten Upload-Tool hoch, da dies zu doppelten Werten führen wird.  
 ```
 
-## Next step
+## Nächster Schritt
 
-Once you have set up your reporting server, you can configure **AAPS** on your phone with the [Setup Wizard](./SetupWizard.md), which will also link **AAPS** to your reporting server.
+Sobald Du Deinen Reporting-Server eingerichtet hast, kannst Du **AAPS** auf Deinem Smartphone mit dem [Einrichtungsassistenten](./SetupWizard.md) konfigurieren, der **AAPS** auch mit Deinem Reporting-Server verbindet.

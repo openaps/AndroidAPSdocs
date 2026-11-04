@@ -613,7 +613,7 @@ Tippe irgendwo auf die Zeile **Profil**, um die Liste Deiner Profile zu öffnen,
 
 ![The list of profiles in the bolus wizard](../images/v4/Screens/bolus_wizard_profile_list.png)
 
-Das Feld „**KH-Zeit**“ ist für einen Spritz-Ess-Abstand gedacht, so dass Du dem System mitteilen kannst, dass die Kohlenhydrate erst später gegessen werden. Gib einen negativen Wert ein, wenn Du nach dem Essen spritzt, die Kohelnhydrate also schon zu Dir genommen hast.
+Das Feld „**Zeitpunkt der KH-Aufnahme**“ ist für einen Spritz-Ess-Abstand gedacht, so dass Du dem System mitteilen kannst, dass die Kohlenhydrate erst später gegessen werden. Gib einen negativen Wert ein, wenn Du nach dem Essen spritzt, die Kohelnhydrate also schon zu Dir genommen hast.
 
 **Erinnerung einstellen** (Essenserinnerung): Wenn ein Zeitpunkt für Kohlenhydrate in der Zukunft eingegeben wird, erscheint ein Schalter „**Erinnerung einstellen**“, damit Du zur angegebenen Zeit daran erinnert wirst, die in **AAPS** eingegebenen Kohlenhydrate zu essen:
 

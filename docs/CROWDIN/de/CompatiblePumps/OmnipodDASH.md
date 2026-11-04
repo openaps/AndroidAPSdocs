@@ -348,7 +348,7 @@ Verwirf einen Pod nur, wenn die Kommunikation mit ihm dauerhaft fehlschlägt. Ka
 
 ## Insulinabgabe fortsetzen
 
-**HINWEIS**: Bei **Profilwechseln** muss **AAPS** (wie auch der PDM) die Abgabe am Pod unterbrechen, bevor das neue Basal-**Profil** gesetzt wird. Schlägt die Kommunikation zwischen dem Befehl zum Unterbrechen und dem zum Fortsetzen fehl, kann die Abgabe unterbrochen bleiben. Lies [**Insulinabgabe unterbrochen**](#omnipod-dash-delivery-suspended) im Abschnitt Problembehandlung für weitere Details.
+**HINWEIS**: Bei **Profilwechseln** muss **AAPS** (wie auch der PDM) die Abgabe am Pod unterbrechen, bevor das neue Basal-**Profil** gesetzt wird. Schlägt die Kommunikation zwischen dem Befehl zum Unterbrechen und dem zum Fortsetzen fehl, kann die Abgabe unterbrochen bleiben. Lies [**Insulinabgabe unterbrochen**](#omnipod-dash-delivery-suspended) im Abschnitt Fehlerbehebung für weitere Details.
 
 Ist die Insulinabgabe unterbrochen, musst Du den Pod anweisen, die Insulinabgabe fortzusetzen. Wurde der Befehl erfolgreich verarbeitet, gibt der Pod wieder Insulin ab, mit der Basalrate, die in Deinem aktiven Basal-**Profil** für die aktuelle Uhrzeit gilt. Der Pod nimmt wieder Befehle für Bolus, **TBR** und **SMB** an.
 
@@ -559,7 +559,7 @@ Sonstiges
 
 (omnipod-dash-troubleshooting)=
 
-## Problembehandlung
+## Fehlerbehebung
 
 Dieser Abschnitt behandelt bekannte Probleme und Lösungen für den Einsatz des Omnipod DASH mit AAPS. Es gibt in der Dokumentation auch einen Abschnitt [Allgemeine Fehlerbehebung](../GettingHelp/GeneralTroubleshooting.md), den Du lesen solltest, da dort auch relevante Pod-Themen abgedeckt werden.
 

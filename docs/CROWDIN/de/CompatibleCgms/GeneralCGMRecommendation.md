@@ -18,7 +18,7 @@ Beim Setzen des Sensors darf die Setzhilfe nicht zu stark auf die Haut gedrückt
 Nach dem Setzen des Sensors wird der Transmitter in den Halter auf dem Sensorpflaster eingeklickt. Achtung! Zuerst auf der rechteckigen Seite einführen und danach auf der runden Seite nach unten Drücken bis der Transmitter mit einem Klick einrastet.
 
 (general-cgm-troubleshooting)=
-## Problembehandlung
+## Fehlerbehebung
 
 ### Verbindungsprobleme
 
@@ -32,7 +32,7 @@ Oftmals kann ein Sensorfehler durch sofortiges Trinken und "Massage" an der Sens
 
 ### Springende Werte
 
-Du kannst versuchen, die Einstellungen zur Rauschunterdrückung in xDrip zu ändern (Einstellungen - Inter-App Einstellungen - Verrauschungsunterdrückung), z. B. auf "Block Very High noise and worse". Siehe auch [Glättung der Blut-Glukose-Daten](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Du kannst versuchen, die Einstellungen zur Rauschunterdrückung in xDrip zu ändern (Einstellungen - Inter-App Einstellungen - Verrauschungsunterdrückung), z. B. auf "Block Very High noise and worse". Siehe auch [Glättung der Glukosewerte](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Negatives Sensor-Alter
 

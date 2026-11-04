@@ -7,8 +7,8 @@ Wenn Du für **AAPS** kein eigenes Google Mail-Konto einrichten möchtest, kanns
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
-- Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. Wenn Dein Smartphone oder PC defekt ist, gestohlen wird oder verloren geht, hast Du weiterhin Zugriff.
+- Mit eigenem Google-Drive-Speicher läufst Du nicht Gefahr, durch **Einstellungen exportieren** das Speicherlimit Deines persönlichen Google Drive zu füllen.
+- Jede Version von **AAPS** (und von unterstützenden Apps wie xDrip, BYODA usw.) wird an einem einzigen Ort gespeichert, der unabhängig von Deiner Computer-Hardware ist. Wenn Dein Smartphone oder PC defekt ist, gestohlen wird oder verloren geht, hast Du weiterhin Zugriff.
 - Durch die Vereinheitlichung des Setups wird die Online-Unterstützung für Nutzende, die eine Verzeichnisstruktur verwenden, vereinfacht.
 - Je nach Setup (siehe unten) hast Du einen Alias für die Kommunikation innerhalb der Community und kannst damit Deine Privatsphäre schützen. 
 - Kinder mit Diabetes Typ 1 können ihr eigenes "Alltags"-E-Mail-Konto [Standard-E-Mail-Konto] als Jugendliche behalten, während sie **AAPS** und die damit verbundene Funktionen, die ein Erwachsenenkonto erfordern, nutzen.
@@ -23,7 +23,7 @@ Wenn Du für **AAPS** kein eigenes Google Mail-Konto einrichten möchtest, kanns
 
 Voraussetzungen:
 
-* You have a Windows’ PC (Windows 10 or newer) and an Android phone (Android 12 or newer) which will host the **AAPS** app. Beide Geräte haben die neuesten Sicherheitsupdates, Internetzugang und Administrator-Rechte, da einige Schritte das Herunterladen und die Installation von Programmen erfordern.
+* Du hast einen Windows-PC (Windows 10 oder neuer) und ein Android-Smartphone (Android 12 oder neuer), auf dem die **AAPS**-App laufen soll. Beide Geräte haben die neuesten Sicherheitsupdates, Internetzugang und Administrator-Rechte, da einige Schritte das Herunterladen und die Installation von Programmen erfordern.
 * Das Android-Smartphone ist bereits mit Deiner persönlichen „Alltags“-E-Mail-Adresse[Standard-E-Mail-Adresse], wie z. B. einem Gmail-Konto, eingerichtet.
 
 ```{admonition} Things to consider when setting up your new account
@@ -39,19 +39,19 @@ Voraussetzungen:
 
 ```{admonition} Video Walkthrough!
 :class: note
-Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
+Klicke [hier](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) für eine Video-Anleitung, wie Du ein eigenes Google-Konto einrichtest.
 ```
 
  Im Video werden drei Schritte beschrieben:
 
 In diesem Beispiel: 
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
+- Dein bestehendes „_Standard_“-Google-Konto ist <donald.muck42@gmail.com> ![](../images/Building-the-App/building_0002.png)
 - Dein neues „_AAPS_“-Gmail-Konto wird <donald.muck42.aaps@gmail.com> sein ![](../images/Building-the-App/building_0003.png)
 
 
-### Go to <https://myaccount.google.com> 
+### Gehe zu <https://myaccount.google.com> 
 
- Wenn Du bereits bei Google angemeldet bist, wirst Du direkt auf Deine „Standard“-**Mein Konto**-Seite weitergeleitet. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
+ Wenn Du bereits bei Google angemeldet bist, wirst Du direkt auf Deine „Standard“-**Mein Konto**-Seite weitergeleitet. (1) Klicke oben rechts auf der Seite auf Dein Profilbild (hier ein einfaches ![](../images/Building-the-App/building_0002.png)) (2) wähle „_Weiteres Konto hinzufügen_“.
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail wird den Kontonamen anzeigen. Du wirst gebeten, die Gmail-AGBs zu akzeptie
 
 ### Passe die Anzeige des neuen Profils an
 
-An diesem Punkt solltest Du auf Gmails Mein-Konto-Seite, auf der Dein neues (für **AAPS** gedachte) E-Mail-Konto angezeigt wird, sein. Das Profilbild wird standardmäßig auf den ersten Buchstaben Deines Namens gesetzt. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
+An diesem Punkt solltest Du auf Gmails Mein-Konto-Seite, auf der Dein neues (für **AAPS** gedachte) E-Mail-Konto angezeigt wird, sein. Das Profilbild wird standardmäßig auf den ersten Buchstaben Deines Namens gesetzt. Ändere es in etwas Eindeutiges, um Verwechslungen zu vermeiden … in diesem Beispiel hat Donald.Muck.AAPS ![](../images/Building-the-App/building_0002.png) durch ![](../images/Building-the-App/building_0003.png) ersetzt.
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Dieser Teil kann etwas verwirrend sein, da Du hier zwischen den beiden Konten hi
 2. Klicke mit der rechten Maustaste auf das Browser-Logo in Deiner Taskleiste
 3. Wähle „Neues Fenster“ aus dem Menü und passe es so an, dass es nur die untere Hälfte des Bildschirms belegt.
 
-Öffne in beiden Browser-Fenstern <https://gmail.com>. Stelle sicher, dass Dein persönliches Konto oben und das neue spezielle **AAPS**-Konto unten ist und durch das Profilbild in der rechten oberen Ecke leicht identifiziert werden kann. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Öffne in beiden Browser-Fenstern <https://gmail.com>. Stelle sicher, dass Dein persönliches Konto oben und das neue spezielle **AAPS**-Konto unten ist und durch das Profilbild in der rechten oberen Ecke leicht identifiziert werden kann. Bei Bedarf kannst Du jederzeit das Konto wechseln, indem Du auf das Profilbild klickst und das richtige auswählst.
 
 ![](../images/Building-the-App/building_0009.png)
 

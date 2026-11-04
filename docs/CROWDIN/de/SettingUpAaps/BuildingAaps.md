@@ -40,10 +40,10 @@ Diese Option ist für diejenigen gedacht, die AAPS ohne Android Studio zu instal
 Jede Build-Methode hat einen eigenen Abschnitt zur Fehlerbehebung:
 
 * **AAPS Builder**: [Fehlerbehebung bei AAPS Builder](#aaps-builder-troubleshooting)
-* **Browser-Build** von einem Computer oder einem iPhone: [Fehlerbehebung beim Browser Build](#aaps-ci-troubleshooting)
+* **Browser-Build** von einem Computer oder einem iPhone: [Fehlerbehebung beim Browser-Build](#aaps-ci-troubleshooting)
 * **Android Studio**: [Fehlerbehebung bei Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Keystore oder sein Passwort verloren? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Keystore oder sein Passwort verloren? Siehe [AAPS mit einem neuen Keystore neu installieren](#reinstall-aaps).
 
 Wird die App erstellt, aber nicht auf Deinem Smartphone installiert, siehe [AAPS auf Dein Smartphone übertragen und installieren](TransferringAndInstallingAaps.md).
 

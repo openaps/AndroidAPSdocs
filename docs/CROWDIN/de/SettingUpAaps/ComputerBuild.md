@@ -4,7 +4,7 @@
 
 Dies ist die herkömmliche Methode, um Deine AAPS-App zu erstellen.
 
-Du kannst die App auch ohne Computer mit der sog. [Browser Build](./BrowserBuild.md)-Methode erstellen.
+Du kannst die App auch ohne Computer mit der sog. [Browser-Build](./BrowserBuild.md)-Methode erstellen.
 
 ## Kein Download möglich - APK muss selbst erstellt werden
 
@@ -377,7 +377,7 @@ Schreib Dir auf, wo Dein Keystore gespeichert wird. Du brauchst ihn, wenn Du das
   Die Passwörter für Keystore und Key müssen nicht sehr anspruchsvoll sein. Falls Du Dein Passwort später verlierst, siehe [AAPS mit einem neuen Keystore neu installieren](#reinstall-aaps).
 
 ```{warning}
-**Vermeide Sonderzeichen in Deinen Passwörtern.** Verwende für die Passwörter von Keystore und Schlüssel nur Buchstaben und Ziffern. Verwende insbesondere kein `$`, keinen Backtick, kein `"` und kein `\`. Wenn Du später zum [Browser-Build](#aaps-ci-option2) wechselst und diesen Keystore weiterverwendest, können diese Zeichen den Signierschritt scheitern lassen, siehe [Fehlerbehebung beim Browser Build](#aaps-ci-password-special-characters).
+**Vermeide Sonderzeichen in Deinen Passwörtern.** Verwende für die Passwörter von Keystore und Schlüssel nur Buchstaben und Ziffern. Verwende insbesondere kein `$`, keinen Backtick, kein `"` und kein `\`. Wenn Du später zum [Browser-Build](#aaps-ci-option2) wechselst und diesen Keystore weiterverwendest, können diese Zeichen den Signierschritt scheitern lassen, siehe [Fehlerbehebung beim Browser-Build](#aaps-ci-password-special-characters).
 ```
 
 * Der Standard-Alias (3) für den Key lautet "key0". Lass ihn unverändert.

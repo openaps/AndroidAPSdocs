@@ -1,6 +1,6 @@
 (Troubleshooting-NSClient-troubleshooting-nsclient)=
 
-# NSClient-Problembehebung
+# NSClient-Fehlerbehebung
 
 Der NSClient benötigt eine stabile Verbindung mit Nightscout. Instabile Verbindungen führen zu Synchronisationsfehlern und hoher Datennutzung.
 
@@ -8,11 +8,11 @@ Wenn Dir niemand auf Nightscout folgt, kannst Du den NSClient pausieren, um die 
 
 * Wie erkenne ich eine instabile Verbindung?
 
-Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. Wenn Du viele Wiederverbindungen siehst, liegt ein Problem vor.
+Öffne den NSClient-Bildschirm (**Konfiguration** > **Kommunikation** > **NSClientV3** > **Plugin öffnen**) und beobachte den **Status** und das Log. Mit aktivierten Websockets sollte der Status auf „connected“ bleiben, mit kaum Meldungen zu Neuverbindungen im Log. Wenn Du viele Wiederverbindungen siehst, liegt ein Problem vor.
 
 * Neustart
 
-As a first step, restart Nightscout and then your phone to see if the issue is permanent.
+Starte als ersten Schritt Nightscout und dann Dein Smartphone neu, um zu sehen, ob das Problem dauerhaft ist.
 
 Wenn Dein Hightscout auf Heroku gehostet ist, kannst Du NS wie folgt neu starten: Melde Dich in Heroku an, klicke auf den Namen Deiner Nightscout App, klicke auf das 'More'- Menü und dann auf 'Restart all dynos'.
 
@@ -34,10 +34,10 @@ Ein Workaround für Verbindungsprobleme in Azure ist, in den 'Application settin
 
 * Keine Blutzuckerwerte von Nightscout
 
-If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
+Wenn sich **AAPS** korrekt mit Nightscout verbindet, die Glukosewerte aber als N/A angezeigt werden: Öffne in den [NSClientV3-Einstellungen](#Preferences-nsclient) den Bereich **Synchronisierung** und schalte **CGM Daten von NS empfangen** ein. Diese Option ist ausgeblendet, solange die Client-Steuerung eingeschaltet ist ([geschützter Modus](#client-master-control-hardened-mode)). Prüfe in diesem Fall, ob unter **Konfiguration** → **BZ-Quelle** **Nightscout-Client BZ** ausgewählt ist.
 
 * Wenn Du immernoch eine Fehlermeldung bekommst...
 
-Überprüfe die Datenbankgröße in MongoDB oder über das Plugin für die Datenbankgröße in Nightscout. Wenn Du die kostenfreie Version von MongoDB nutzt, ist die Datenbank bei 496 MB voll und muss bereinigt werden. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
+Überprüfe die Datenbankgröße in MongoDB oder über das Plugin für die Datenbankgröße in Nightscout. Wenn Du die kostenfreie Version von MongoDB nutzt, ist die Datenbank bei 496 MB voll und muss bereinigt werden. [Folge dieser Anleitung von Nightscout, um die Größe Deiner Datenbank zu prüfen und Daten zu löschen](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Bevor Du Deine Datenbank bereinigst und Daten löschst, solltest Du Dir überlegen, diese vorher dem Open Humans Projekt für wissenschaftlich Studien zur Verfügung zu stellen - wenn Du dies noch nicht getan hast. Die Anleitung findest Du auf der [OpenHumans Konfigurationsseite](../SupportingAaps/OpenHumans.md).

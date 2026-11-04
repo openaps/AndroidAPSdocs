@@ -78,7 +78,7 @@ Dadurch, dass Du Deine Zeit investierst, kann **AAPS** zu folgenden Dingen führ
 
 - Remote Monitoring und Steuerung der Insulinabgabe durch Betreuende von Typ 1 Diabetikern; und
 
-- Verringerung all Deiner tragbaren Diabetikergeräte (Empfänger für CGM und Fernsteuerung für die Pumpe) durch Verwendung eines Android-Telefons, von wo **AAPS** die Steuerung übernimmt.
+- Verringerung all Deiner tragbaren Diabetikergeräte (Empfänger für CGM und Steuergerät für die Pumpe) durch Verwendung eines Android-Telefons, von wo **AAPS** die Steuerung übernimmt.
 
 
 Zu guter Letzt kann **AAPS** den Menschen helfen, ihren Diabetes besser in den Griff zu bekommen, was zu stabilen Blutzuckerwerten und langfristig besseren Gesundheitsergebnissen führt.
@@ -111,10 +111,10 @@ Dies alles sind Beispiele, das volle Leistungsspektrum bietet große Flexibilit�
 #### 4) Fernüberwachung
 Es gibt mehrere mögliche Wege zur Überwachung (Sugarmate, Dexcom Follow, xDrip, Android Auto _usw._), die für Eltern bzw. Betreuende und für Erwachsene in bestimmten Situationen (Schlafen/Autofahren) nützlich sind, wenn einstellbare Alarme gebraucht werden. In manchen Apps (xDrip) kannst Du Alarme auch ganz ausschalten. Das ist praktisch, wenn ein frisch gesetzter Sensor noch „einweicht“ bzw. sich einpendelt und Du mit ihm noch nicht loopen möchtest.
 
-#### 5) Fernsteuerung
+#### 5) Remote-Steuerung
 Ein bedeutender Vorteil von **AAPS** gegenüber kommerziellen Systemen ist, dass Follower über authentifizierte SMS-Befehle oder eine gekoppelte **AAPSClient**-App viele verschiedene Befehle an das **AAPS**-System zurücksenden können. Diese Funktion nutzen vor allem Eltern von Kindern mit Typ-1-Diabetes, die **AAPS** verwenden, sehr intensiv.
 
-Die Fernsteuerung kann sehr nützlich sein: zum Beispiel auf dem Spielplatz, wenn Du von Deinem eigenen Smartphone aus einen Vorab-Bolus für einen Snack abgeben möchtest, während Dein Kind beim Spielen ist. Du kannst das System auch über eine Smartwatch überwachen (_z. B._ Garmin) oder einfache Befehle von ihr senden (_z. B._ von einer Wear OS-Smartwatch wie der Samsung Galaxy Watch).
+Die Remote-Steuerung kann sehr nützlich sein: zum Beispiel auf dem Spielplatz, wenn Du von Deinem eigenen Smartphone aus einen Vorab-Bolus für einen Snack abgeben möchtest, während Dein Kind beim Spielen ist. Du kannst das System auch über eine Smartwatch überwachen (_z. B._ Garmin) oder einfache Befehle von ihr senden (_z. B._ von einer Wear OS-Smartwatch wie der Samsung Galaxy Watch).
 
 #### 6) Keine kommerziellen Einschränkungen aufgrund der offenen Anwendungsschnittstellen
 Über die Verwendung eines Open-Source-Ansatzes hinaus kann der Quellcode von **AAPS** jederzeit eingesehen werden, was das allgemeine Prinzip der Bereitstellung offener Programmierschnittstellen ist. Dies gibt anderen Entwicklern die Möglichkeit, ebenfalls neue Ideen einzubringen. **AAPS** ist eng in Nightscout integriert. Dies beschleunigt die Entwicklung und ermöglicht es den Anwendern, Funktionen hinzuzufügen, um das Leben mit Diabetes noch einfacher zu machen. Gute Beispiele für solche Integrationen sind [Nightscout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), xDrip, [M5 Stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) usw. Es besteht ein ständiger Dialog zwischen Open-Source-Entwicklern und den Entwicklern kommerzieller Systeme. Viele Neuerungen aus OS-AID werden nach und nach von kommerziellen Systemen übernommen, wo die Entwicklung verständlicherweise langsamer ist, auch weil Schnittstellen zwischen Systemen verschiedener Firmen (Pumpen, Apps, Sensoren _usw._) sorgfältig ausgehandelt und lizenziert werden müssen. Dies kann auch Innovationen verlangsamen die für den einzelnen Patienten bequem sind (oder für eine kleine Untergruppe von Patienten mit sehr spezifischen Anforderungen), die aber keinen großen finanziellen Gewinn bringen.
@@ -326,7 +326,7 @@ Für die **AAPS**-Entwickler ist Sicherheit und eine gute **AAPS**-Benutzererfah
 ![21-06-23 AAPS connectivity no followers](../images/AAPS-connectivity-no-followers.png)
 
 
-**Abbildung 4 (unten)** zeigt die vollen Möglichkeiten des **AAPS**-Systems für einen Anwender, der Follower hat und bei dem das System aus der Ferne überwacht und angepasst werden muss (wie bei einem Kind mit Typ-1-Diabetes). Zusätzliche, nicht gezeigte Open-Source-Software und Plattformen können ebenfalls integriert werden.
+**Abbildung 4 (unten)** zeigt die vollen Möglichkeiten des **AAPS**-Systems für einen Anwender, der Follower hat und bei dem das System per Fernüberwachung verfolgt und per Remote-Steuerung angepasst werden muss (wie bei einem Kind mit Typ-1-Diabetes). Zusätzliche, nicht gezeigte Open-Source-Software und Plattformen können ebenfalls integriert werden.
 
 ![21-06-23 AAPS overview with followers](../images/AAPS-overview-with-followers.png)
 

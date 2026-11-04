@@ -9,7 +9,7 @@ Du hast AAPS mit dem **AAPS Builder** erstellt? Dann brauchst Du diese Seite nic
 Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als Download verfügbar. Es ist zulässig, die App für den eigenen Gebrauch zu erstellen, aber du darfst keine Kopie an andere weitergeben! Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
 
 ```{note}
-Falls Du **AAPS** zum ersten Mal mit einem Browser aktualisieren möchtest: Kopiere Deine gesicherte Keystore-Datei in Dein Google Drive. Folge dann dem [Prozess für den **AAPS**-Browser Build](../SettingUpAaps/BrowserBuild.md) und nicht dieser Anleitung. Anstatt einen neuen Keystore zu erstellen, wählst Du den Keystore aus, den Du von Deinem Computer kopiert hast.
+Falls Du **AAPS** zum ersten Mal mit einem Browser aktualisieren möchtest: Kopiere Deine gesicherte Keystore-Datei in Dein Google Drive. Folge dann dem [Prozess für den **AAPS**-Browser-Build](../SettingUpAaps/BrowserBuild.md) und nicht dieser Anleitung. Anstatt einen neuen Keystore zu erstellen, wählst Du den Keystore aus, den Du von Deinem Computer kopiert hast.
 Das musst Du nur beim ersten Mal machen. Für die danach folgenden Updates, kannst Du dann dieser Anleitung folgen.
 ```
 
@@ -104,7 +104,7 @@ Seit September 2026 kann Googles [Android-Entwicklerverifizierung](#android-deve
 
 (update-browser-build-troubleshooting)=
 
-## Problembehandlung
+## Fehlerbehebung
 
 Keine Panik, wenn irgendetwas schiefläuft.
 

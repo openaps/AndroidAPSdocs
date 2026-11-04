@@ -65,7 +65,7 @@ Erscheinungsdatum: 31.10.2026
 **Neue Funktionen**
 
 - Neue Benutzeroberfläche: Smartphone-App neu in Jetpack Compose erstellt @MilosKozak
-- [Übergreifende Suche](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
+- [Globale Suche](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
 - Kotlin Multiplattform-Migration, Client für Windows, Mac, Linux-Desktop und iOS @MilosKozak
 - [Szenen](../DailyLifeWithAaps/Scenes.md): Speichere eine Aktionen-Abfolge und führe diese gemeinsam aus @MilosKozak
 - [Master ↔ Client Steuerung](../RemoteFeatures/ClientMasterControl.md): Sende Befehle vom Client-Smartphone an den Master @MilosKozak
@@ -105,7 +105,7 @@ Erscheinungsdatum: 31.10.2026
 
 **Wear OS**
 
-- [Smartwatch-App](../WearOS/WearOsSmartwatch.md) in Compose neu erstellt, neue Kacheln und Komplikationen, automatische Zifferblatt-Installation („Watch Face Push“) auf Wear OS 6+ @olorinmaia @Philoul
+- [Smartwatch-App](../WearOS/WearOsSmartwatch.md) in Compose neu erstellt, neue Kacheln und Komplikationen, automatische Watchface-Installation („Watch Face Push“) auf Wear OS 6+ @olorinmaia @Philoul
 - „CustomWatchface“ verfügbar für WearOS 6.0 (GW7, GW8, GW9...) mit einem WFF-eigenem Watchface @Philoul @olorinmaia
 - „CustomWatchface“ kann jetzt 5 Komplikationsslots, die Du anpassen kannst, haben (neue Funktion nur für ältere Smartwatches verfügbar) @Philoul
 - Neues, [auf AAPS-Komplikationen bassierendes, WFF-Watchface](#wearos-complications-watchface-setup) @olorinmaia
@@ -367,7 +367,7 @@ Erscheinungsdatum: 27.03.2025
 
 * SMS RESTART Befehl @MilosKozak
 * Smartwatch Profilwechsel-Parameter @olorinmaia
-* Dark Mode AAPS V2 Zifferblatt @olorinmaia
+* Dark Mode AAPS V2 Watchface @olorinmaia
 * Verbesserung des G7-Datenaustauschs @olorinmaia
 * Widget-Konfiguration @MilosKozak
 * Radiobuttons UI verbessert @olorinmaia
@@ -450,7 +450,7 @@ Erscheinungsdatum: 06.01.2025
 * Farbe von Radio-Buttons & Check-Boxen korrigiert @MilosKozak
 * Fehler in der Migration des DynISF-Prozentsatzes behoben @MilosKozak
 * Position der DynISF-Benachrichtigung korrigiert @MilosKozak
-* Fehler in den Zifferblättern behoben @philoul
+* Fehler in den Watchfaces behoben @philoul
 
 ---
 
@@ -530,7 +530,7 @@ Erscheinungsdatum: 29.12.2024
 
 * Verbesserungen für Wear und Watchfaces @Philoul @MilosKozak @olorinmaia
 * Smartwatch-Kacheln für Automations-Aktionen @Philoul
-* Kombiniertes Zifferblatt aus AAPS, AAPSClient und AAPSClient2 zur Überwachung weiterer Patienten @Philoul @MilosKozak
+* Kombiniertes Watchface aus AAPS, AAPSClient und AAPSClient2 zur Überwachung weiterer Patienten @Philoul @MilosKozak
 * EXTRA: show\_user\_actions\_on\_watch\_only @MilosKozak
 
 **Technische Änderungen**
@@ -595,9 +595,9 @@ Erscheinungsdatum: 23.10.2023
 - Unterstützung für Tidepool @MilosKozak
 - Glättungs-Modul @MilosKozak, @justmara, Exponentielle Glättung @nichi (Tsunami), Durchschnittliche Glättung @jbr7rr
 - Funktion "Dynamischer ISF" hinzugefügt @Chris Wilson, @tim2000s
-- Garmin Zifferblatt & Herzfrequenz-Unterstützung @buessow
+- Garmin Watchface & Herzfrequenz-Unterstützung @buessow
 - Neues Logo @thiagomsoares
-- Neues Zifferblatt (Watchface) @Philoul
+- Neues Watchface (Watchface) @Philoul
 - Tonnenweise Version 3.1-Probleme gelöst
 - Notizen an mehr Stellen zugelassen @Sergey Zorchenko
 - Fehler in der Benutzeroberfläche behoben @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
@@ -633,7 +633,7 @@ EINSCHRÄNKUNGEN
 - NS 15 muss mit AAPS 3.2 verwendet werden
 - V3 erkennt keine Updates, die durch das V1 Protokoll vorgenommen wurden. Das wird vermutlich in einer der kommenden Nightscout-Versionen behoben sein
 - Umgekehrt sieht v1 wegen der alten, ineffizienten Methode zum Nachverfolgen von Änderungen die Änderungen, die v3 vornimmt
-- Bitte habe im Kopf, dass Nighscout intern immer noch V1 nutzt, und es deswegen nicht möglich ist, Daten über die Nightscout-Weboberfläche einzugeben, sofern Du V3 verwendest. Wenn Du Daten aus der Ferne eingeben willst, musst Du AAPSClient oder SMS verwenden
+- Bitte habe im Kopf, dass Nighscout intern immer noch V1 nutzt, und es deswegen nicht möglich ist, Daten über die Nightscout-Weboberfläche einzugeben, sofern Du V3 verwendest. Wenn Du Daten remote eingeben willst, musst Du AAPSClient oder SMS verwenden
 
 EMPFOHLENE EINSTELLUNGEN
 - Aus den oben beschriebenen Gründen solltest Du auf allen Deinen Geräten die gleiche Methode verwenden (Hinweis: zum Redaktionsschluss nutzen alle Uploader derzeit noch V1). Wenn Du Dich für V3 entscheidest, wähle in AAPS und allen AAPSClients V3
