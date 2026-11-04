@@ -212,7 +212,7 @@ Passe die Markierungen bei Bedarf mit den Knöpfen „−“ / „+“ an und ti
 
 Der Bildschirm „**Kommunikation**“ listet die Module auf, mit denen Deine Daten hochgeladen, synchronisiert und weitergegeben werden:
 
-- **SMS-Kommunikator** – Fernsteuerung von **AAPS** über SMS-Befehle
+- **SMS-Kommunikator** – Remote-Steuerung von **AAPS** über SMS-Befehle
 - **NSClientV3** – synchronisiert Deine Daten über die API v3 mit Nightscout
 - **Tidepool** – lädt Daten zu Tidepool hoch
 - **xDrip** – sendet Daten an xDrip
@@ -261,7 +261,7 @@ Gehe zurück zur Liste der Module und tippe auf „**WEITER**“, um zum nächst
 
 ## Client-Steuerung
 
-Ab **AAPS** Version 4 können Client-Geräte mit **AAPSClient** mit diesem Smartphone (dem **Master**) **gekoppelt** werden und es über signierte Befehle steuern, die über Nightscout gesendet werden. Das ist der neue empfohlene Weg, **AAPS** aus der Ferne zu steuern – die vollständige Erklärung und Einrichtung findest Du unter [Master ↔ Client-Steuerung](../RemoteFeatures/ClientMasterControl.md).
+Ab **AAPS** Version 4 können Client-Geräte mit **AAPSClient** mit diesem Smartphone (dem **Master**) **gekoppelt** werden und es über signierte Befehle steuern, die über Nightscout gesendet werden. Das ist der neue empfohlene Weg, **AAPS** fernzusteuern – die vollständige Erklärung und Einrichtung findest Du unter [Master ↔ Client-Steuerung](../RemoteFeatures/ClientMasterControl.md).
 
 Auf diesem Bildschirm musst Du jetzt nichts einstellen; Clients kannst Du jederzeit später unter **Bearbeiten → Autorisierte Clients** koppeln. Dort fügst Du einen Client mit einem **QR-Code** (damit wird auch Nightscout auf dem Client eingerichtet) oder mit einer **PIN** hinzu und gibst ihm eine **Rolle**.
 
