@@ -4,7 +4,7 @@
 
 Das unten beschriebene Verfahren gilt nur für Schlauchpumpen und ist nicht ohne weiteres auf Patchpumpen wie den Omnipod, die Medtrum Nano, die Accu-Chek Solo usw. anwendbar. Dieser Vorgang wird manchmal als „Infusionsset-Wechsel“ bezeichnet. Ein „kompletter“ Infusionsset-Wechsel umfasst Insulinreservoir und Kanüle, ein „teilweiser“ nur die Kanüle.
 
-Patch-Pumpen füllen und entlüften sich in ihrem eigenen Aktivierungsassistenten selbst, und ihre Kanüle ist bereits im Körper. **AAPS** bietet für sie kein Füllen an: **Nadelwechsel/Füllen** wird weder im Fenster **Bearbeiten** noch im Schnellstart angezeigt. Siehe die Seite Deiner Pumpe unter [Kompatible Pumpen](../Getting-Started/CompatiblePumps.md).
+Patch-Pumpen füllen und entlüften sich in ihrem eigenen Aktivierungsassistenten selbst, und ihre Kanüle ist bereits im Körper. **AAPS** bietet für sie kein Füllen an: **Nadelwechsel/Füllen** wird weder im Fenster **Verwalten** noch im Schnellstart angezeigt. Siehe die Seite Deiner Pumpe unter [Kompatible Pumpen](../Getting-Started/CompatiblePumps.md).
 
 Der physische Catridge-/Reservoirwechsel kann nicht über **AAPS** durchgeführt werden und muss direkt über die Pumpe erfolgen. Der erfolgte Wechsel muss in **AAPS** manuell eingetragen werden.
 
@@ -17,7 +17,7 @@ Der physische Catridge-/Reservoirwechsel kann nicht über **AAPS** durchgeführt
 
 3. Schlauch und Kanüle entlüften/füllen: Dies kann direkt an der Pumpe erfolgen. Achte darauf, dass keine Blasen mehr im Schlauch sind.
 
-4. Setze die neue Kanüle. Sobald die Kanüle gesetzt ist und die Setznadel entfernt wurde, hat die neue Kanüle noch etwas Luft in der Kanülennadel, die auch entlüftet werden muss. Um das in **AAPS** zu erfassen und die Kanüle zu füllen: Öffne **Nadelwechsel/Füllen** (im aufgeklappten Statusbereich auf dem Startbildschirm, im Fenster **Bearbeiten** oder als [Schnellstart](QuickLaunch.md)-Knopf) und setze je nach Bedarf den Haken bei **Katheter-Wechsel erfassen** und/oder **Reservoir-Wechsel erfassen**, um den Wechsel zu erfassen. Tippe nun auf die Standardmenge zum Füllen der Kanüle (meist etwa 0,3 IE, prüfe aber, ob dieser Wert für Deine Kanüle stimmt) und wähle **OK**. Lies die Zusammenfassung und bestätige das Füllen mit **OK**.
+4. Setze die neue Kanüle. Sobald die Kanüle gesetzt ist und die Setznadel entfernt wurde, hat die neue Kanüle noch etwas Luft in der Kanülennadel, die auch entlüftet werden muss. Um das in **AAPS** zu erfassen und die Kanüle zu füllen: Öffne **Nadelwechsel/Füllen** (im aufgeklappten Statusbereich auf dem Startbildschirm, im Fenster **Verwalten** oder als [Schnellstart](QuickLaunch.md)-Knopf) und setze je nach Bedarf den Haken bei **Katheter-Wechsel erfassen** und/oder **Reservoir-Wechsel erfassen**, um den Wechsel zu erfassen. Tippe nun auf die Standardmenge zum Füllen der Kanüle (meist etwa 0,3 IE, prüfe aber, ob dieser Wert für Deine Kanüle stimmt) und wähle **OK**. Lies die Zusammenfassung und bestätige das Füllen mit **OK**.
 
    ![Prime/Fill in the Manage sheet with a tube pump](../images/v4/Screens/manage_sheet_tube_pump.png)
 
@@ -77,7 +77,7 @@ Welche Strategie Du wählen solltest, ist höchst individuell und am besten durc
 (Aapsscreens-site-rotation)=
 ## Wechsel der Setzstellen (Site Rotation)
 
-**Bearbeiten → Wechsel der Setzstellen** öffnet den Dialog „Wechsel der Setzstellen“ im Ansichtsmodus:
+**Verwalten → Wechsel der Setzstellen** öffnet den Dialog „Wechsel der Setzstellen“ im Ansichtsmodus:
 
 - Mit den beiden Knöpfen oben (Kanülensymbol und Sensorsymbol) kannst Du nur Kanülen-Setzstellen, nur Sensor-Setzstellen oder beides anzeigen
 - Alle Kanülen- und Sensorwechsel der letzten 45 Tage sind verfügbar.
