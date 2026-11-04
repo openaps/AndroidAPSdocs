@@ -122,7 +122,7 @@ Auf diesem Reiter kannst Du die Bolus- und Kohlenhydrateingaben einsehen. Jeder 
 
 Die Kohlenhydrat-Einträge (Zeile **2**) werden mit ihrer Menge in Gramm angezeigt.
 
-If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text on the bolus line to show the details of how the bolus was calculated.
+Wenn Du den [Bolus-Rechner](#aaps-screens-bolus-wizard) zur Berechnung der Insulindosis verwendet hast, kannst Du auf den Text „Calc“ in der Bolus-Zeile tippen, um die Details der Bolusberechnung anzuzeigen.
 
 Abhängig von der gewählten Pumpe werden Insulin und Kohlenhydrate in einer oder mehreren Zeilen angezeigt: eine Zeile für die Berechnungsdetails, eine für die Kohlenhydrate und eine für den eigentlichen Bolus.
 
