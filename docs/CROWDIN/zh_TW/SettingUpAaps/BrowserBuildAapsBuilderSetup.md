@@ -50,6 +50,12 @@
 這個儲存庫不是從範本建立的。請刪除這個儲存庫（**設定** → 頁面底部 → **刪除這個儲存庫**），然後再點選一次 **建立我的私人儲存庫**。
 ```
 
+```{admonition} GitHub says "my-aaps already exists in this account"?
+:class: tip
+
+You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+```
+
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
@@ -58,9 +64,9 @@
 1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">開啟最新版工作流程</a>
 
    使用電腦時，請點選檔案右上方的**複製圖示**（「複製原始檔」）。使用手機時，請改為開啟<a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">純文字版本</a>，長按文字 → **全選** → **複製**。
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">開啟我的工作流程檔案</a>
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   這會開啟 <code class="aapsb-repoUrl"></code> 中的 `.github/workflows/build.yml`，供您編輯。
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. 將整份內容替換為已複製的工作流程（使用手機時：長按 → **全選** → **貼上**），然後連續點選兩次 **提交變更…**。檔案的第一行會顯示版本。
 ```
 
@@ -151,7 +157,8 @@
 :class: warning
 
 1. 開啟您的儲存庫，確認其中有資料夾 `.github`，且裡面有檔案 `workflows/build.yml`。如果儲存庫是空的，表示它不是從範本建立的：請刪除這個儲存庫（**設定** → 頁面底部 → **刪除這個儲存庫**），然後使用按鈕重新執行[步驟 1](#aaps-builder-setup-step1)。
-2. 開啟 Actions 分頁。若顯示工作流程已停用，請點選綠色按鈕以啟用。接著在清單中點選「Build AAPS」。
+2. The file is there, but GitHub shows "This workflow does not exist": see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+3. 開啟 Actions 分頁。若顯示工作流程已停用，請點選綠色按鈕以啟用。接著在清單中點選「Build AAPS」。
 ```
 
 (aaps-builder-setup-step5)=
@@ -196,7 +203,7 @@ APK 不會出現在你的儲存庫「Code」頁籤裡，只會在建置頁面上
    Google 會在新分頁中開啟。選擇您的 Google 帳號，並允許 AAPS 查看及變更它建立的檔案。如果 Google 顯示應用程式尚未通過驗證，請點選「進階」，再點選「前往……」。
 2. 接著，新分頁會顯示類似**「無法連上這個網站」**或**「127.0.0.1 拒絕連線」**的錯誤訊息。**這是正常情況。**Google 傳回的資料會出現在該分頁的網址中。
 
-   點選該分頁的網址列，全選網址並複製。網址會以 `http://127.0.0.1:47913/` 開頭。請在幾分鐘內返回此頁面：這項資料只有短時間有效。
+   Tap the address bar of that tab, then the copy icon next to the address (on a computer: select the whole address and copy it). 網址會以 `http://127.0.0.1:47913/` 開頭。請在幾分鐘內返回此頁面：這項資料只有短時間有效。
 3. <label class="aapsb-label" for="aapsb-googleUrl">在此貼上複製的網址</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">取得 GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
@@ -323,7 +330,7 @@ APK 不會出現在你的儲存庫「Code」頁籤裡，只會在建置頁面上
   const repo = () => repoInput.value.trim() || REPO_NAME;
 
   const LINKS = [
-    ['openWorkflowFile', '/edit/main/' + WORKFLOW_PATH],
+    ['openWorkflowFile', '/blob/HEAD/' + WORKFLOW_PATH],
     ['openSecrets', '/settings/secrets/actions/new'],
     ['openSecrets2', '/settings/secrets/actions/new'],
     ['openActions', '/actions/workflows/build.yml'],
