@@ -5,7 +5,7 @@
 ```{admonition} Accu-Chek Combo is being phased out
 :class: note
 
-Roche zieht sich aus dem Insulinpumpenmarkt zurück, um sein Diabetes-Portfolio auf das CGM Accu-Chek SmartGuide auszurichten. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. If you rely on this pump, plan ahead for a transition to a supported pump.
+Roche zieht sich aus dem Insulinpumpenmarkt zurück, um sein Diabetes-Portfolio auf das CGM Accu-Chek SmartGuide auszurichten. Roche hat das Verkaufsende sowohl der Accu-Chek Combo als auch der Accu-Chek Insight angekündigt; auch die verbliebene Mikropumpe Accu-Chek Solo wird auslaufen (letzte Lieferungen in Deutschland Ende 2025). Die Umstellung erfolgt nach Regionen, beginnend in Deutschland; weitere europäische Märkte sollen folgen. Wenn Du auf diese Pumpe angewiesen bist, plane rechtzeitig den Umstieg auf eine unterstützte Pumpe.
 ```
 
 ```{contents} Table of contents
@@ -15,8 +15,8 @@ Roche zieht sich aus dem Insulinpumpenmarkt zurück, um sein Diabetes-Portfolio 
 
 ## Funktionalitäten bei der Nutzung mit AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Automatic DST and timezone handling.
+* Kommuniziert mit **AAPS** über das Bluetooth Deines Smartphones, ohne zusätzliches Kommunikationsgerät.
+* Automatischer Zeitzonenwechsel und Sommer-/Winterzeitumstellung.
 
 ## Hardware- und Softwareanforderungen
 
@@ -330,10 +330,10 @@ Ein gleichzeitiger erweiterter Bolus und Multiwave Bolus wird nicht vom OpenAPS-
 
 ## Wo ich Hilfe bekomme
 
-Der Combo-Treiber wird von der Community **ehrenamtlich** entwickelt. Before requesting help, please:
+Der Combo-Treiber wird von der Community **ehrenamtlich** entwickelt. Bevor Du um Hilfe bittest, bitte:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Lies** den entsprechenden Abschnitt dieser Dokumentation, um zu prüfen, wie die Funktion gedacht ist.
+2. **Frag** im Kanal *#AAPS* auf [Discord](https://discord.gg/4fQUWHZ4Mw) oder in einem der anderen [Community-Kanäle](../GettingHelp/WhereCanIGetHelp.md) nach.
+3. **Melde einen Fehler**, indem Du die [bestehenden Issues](https://github.com/nightscout/AndroidAPS/issues) durchsuchst; ist Deiner nicht dabei, eröffne ein [neues Issue](https://github.com/nightscout/AndroidAPS/issues) und hänge Deine [Logdateien](../GettingHelp/AccessingLogFiles.md) an.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Gib bei der Bitte um Hilfe Hersteller und Modell Deines Smartphones, die Android-Version, die **AAPS**-Version und eine verständliche Beschreibung des Problems an (was sich geändert hat, wann es zuletzt funktioniert hat).
