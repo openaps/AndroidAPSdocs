@@ -33,7 +33,7 @@ Das betrifft nur die Verbindung zwischen App und Nightscout. Deine Daten in Nigh
 
 ---
 
-## Die untere Navigationsleiste: Behandlungen, Szenen und Bearbeiten
+## Die untere Navigationsleiste: Behandlungen, Szenen und Verwalten
 
 In **AAPS** v3 hast Du Dich über eine Reihe von **Reitern** (Übersicht, Aktionen, Behandlungen, …) durch die App bewegt. Mehrere Funktionen waren **Module**, die Du in der Konfiguration aktiviert hast (**Aktionen**, **Automatisierung**, **Essen**, …).
 
@@ -55,9 +55,9 @@ Auf einer **Wear OS-Smartwatch** gibst Du dieselben Behandlungen über das **AAP
 Deine Voreinstellungen für bestimmte Situationen – siehe [Szenen](../DailyLifeWithAaps/Scenes.md).
 
 (v4changes-manage)=
-### Bearbeiten – verwalten und aktivieren
+### Verwalten – verwalten und aktivieren
 
-Im Fenster **Bearbeiten** verwaltest und aktivierst Du alles andere: **[Profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulineinstellungen** (Deine Insulin-Konfigurationen), **[Temporäres Ziel](../DailyLifeWithAaps/TempTargets.md)**, Vorlagen für **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)**, **[Szenen](../DailyLifeWithAaps/Scenes.md)**, **Automatisierung**, **Essen**, **Wechsel der Setzstellen**, **Pumpe**, **[Autorisierte Clients](../RemoteFeatures/ClientMasterControl.md)** – dazu die Pumpenaktionen, die früher im Reiter *Aktionen* waren (**Verzögerter Bolus**, **Temporäre Basalrate abbrechen**, **Nadelwechsel/Füllen**, **CGM-Sensor gesetzt**, **Pumpenbatterie-Wechsel**).
+Im Fenster **Verwalten** verwaltest und aktivierst Du alles andere: **[Profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulineinstellungen** (Deine Insulin-Konfigurationen), **[Temporäres Ziel](../DailyLifeWithAaps/TempTargets.md)**, Vorlagen für **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)**, **[Szenen](../DailyLifeWithAaps/Scenes.md)**, **Automatisierung**, **Essen**, **Wechsel der Setzstellen**, **Pumpe**, **[Autorisierte Clients](../RemoteFeatures/ClientMasterControl.md)** – dazu die Pumpenaktionen, die früher im Reiter *Aktionen* waren (**Verzögerter Bolus**, **Temporäre Basalrate abbrechen**, **Nadelwechsel/Füllen**, **CGM-Sensor gesetzt**, **Pumpenbatterie-Wechsel**).
 
 ![The Manage bottom sheet](../images/v4/BehavioralChanges/manage_sheet.png)
 
@@ -68,14 +68,14 @@ Deine bestehenden Automatisierungsregeln und Essenseinträge bleiben alle erhalt
 
 **AAPS** 3.x hatte einen Reiter „Aktionen“. In **AAPS** 4 findest Du seine Funktionen an anderen Stellen:
 
-* **Profilwechsel** und **Prozentsatz des Profils**: Tippe auf dem Hauptbildschirm auf den [Profilnamen](#aaps-screens-profile--target) oder wähle **Bearbeiten → Profil**. Siehe [Prozentsatz des Profils auf dem Startbildschirm ändern](#ProfileSwitch-change-percentage).
-* **Temporäres Ziel**: Tippe auf dem Hauptbildschirm auf das [Ziel](#aaps-screens-profile--target) oder wähle **Bearbeiten → Temporäres Ziel**.
-* **Nadelwechsel/Füllen**, **CGM-Sensor gesetzt**, **BZ-Test** und die anderen Careportal-Einträge: im aufgeklappten [Statusbereich](#aaps-screens-careportal), unter **Bearbeiten** oder als [Schnellstart](../DailyLifeWithAaps/QuickLaunch.md)-Knöpfe.
+* **Profilwechsel** und **Prozentsatz des Profils**: Tippe auf dem Hauptbildschirm auf den [Profilnamen](#aaps-screens-profile--target) oder wähle **Verwalten → Profil**. Siehe [Prozentsatz des Profils auf dem Startbildschirm ändern](#ProfileSwitch-change-percentage).
+* **Temporäres Ziel**: Tippe auf dem Hauptbildschirm auf das [Ziel](#aaps-screens-profile--target) oder wähle **Verwalten → Temporäres Ziel**.
+* **Nadelwechsel/Füllen**, **CGM-Sensor gesetzt**, **BZ-Test** und die anderen Careportal-Einträge: im aufgeklappten [Statusbereich](#aaps-screens-careportal), unter **Verwalten** oder als [Schnellstart](../DailyLifeWithAaps/QuickLaunch.md)-Knöpfe.
 * **Historie**, **Statistiken** (TDD): im **Menü** (☰).
 
 ```{admonition} Profile switch and profile percentage
 :class: note
-In **AAPS** v3 hat ein langer Druck auf den Profilnamen den Dialog für den Profilwechsel geöffnet (Prozentsatz, Dauer, temporäres Ziel für Aktivität). In **AAPS** v4 **tippst** Du auf den Profilnamen (oder wählst **Bearbeiten → Profil**) und dann unten rechts auf den runden Knopf **▶**. Dort findest Du dieselben Einstellungen. Siehe [Prozentsatz des Profils ändern](#ProfileSwitch-change-percentage).
+In **AAPS** v3 hat ein langer Druck auf den Profilnamen den Dialog für den Profilwechsel geöffnet (Prozentsatz, Dauer, temporäres Ziel für Aktivität). In **AAPS** v4 **tippst** Du auf den Profilnamen (oder wählst **Verwalten → Profil**) und dann unten rechts auf den runden Knopf **▶**. Dort findest Du dieselben Einstellungen. Siehe [Prozentsatz des Profils ändern](#ProfileSwitch-change-percentage).
 ```
 
 ---
@@ -106,7 +106,7 @@ Wenn Du Deine Einstellungen nicht schützen musst, kannst Du den Schutz der Eins
 
 In **AAPS** v3 konntest Du die DIA des verwendeten Insulins jederzeit ändern.
 
-In **AAPS** v4 ist das Insulin, das unter **Bearbeiten → Insulineinstellungen** als **AKTIV** markiert ist, ausgegraut. Du kannst es weder bearbeiten noch löschen.
+In **AAPS** v4 ist das Insulin, das unter **Verwalten → Insulineinstellungen** als **AKTIV** markiert ist, ausgegraut. Du kannst es weder bearbeiten noch löschen.
 
 Beim Update übernimmt **AAPS** das Insulin und die DIA, die in Deinen Profilwechseln aus v3 schon gespeichert sind. Findet es ältere Einträge, bei denen zwar das Insulin bekannt ist, die DIA aber nicht, verwendet es dafür eine Standard-DIA und zeigt einmalig eine Meldung an, zum Beispiel *Für ältere Einträge war keine Insulinwirkdauer gespeichert, daher wurden 9,0 Stunden für Lyumjev verwendet. Prüfe Deine Insulineinstellungen – bereits migrierte Einträge werden danach nicht mehr geändert.* Wenn Du diese Meldung siehst, prüfe Deine Insulineinstellungen.
 
