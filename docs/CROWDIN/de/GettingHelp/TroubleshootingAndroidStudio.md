@@ -9,7 +9,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Verlorener Keystore
-If you lost your keystore or its password, an apk signed with a new keystore cannot update your current **AAPS**: you have to uninstall and reinstall it. See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Wenn Du Deinen Keystore oder sein Passwort verloren hast, kann eine APK, die mit einem neuen Keystore signiert ist, Dein bestehendes **AAPS** nicht aktualisieren: Du musst es deinstallieren und neu installieren. Siehe [AAPS mit einem neuen Keystore neu installieren](#reinstall-aaps).
 
 ## Gradle Sync schlägt fehl
 Der Gradle Sync kann aus verschiedenen Gründen fehlschlagen. Falls Du einen Hinweis bekommst, dass der Gradle Sync fehlgeschlagen ist („gradle sync failed“), öffne den „Build“-Reiter (1) im unteren Bereich des Android Studios und überprüfe welche Fehlermeldung (2) Du angezeigt bekommst.
@@ -38,7 +38,7 @@ Klone den Quellcode noch einmal so wie es in der Dokumentation beschrieben ist u
 ```
 
 #### Schritt 1 - Überprüfe Deine Git Installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal (2).
+  * Öffne den Terminal-Reiter (1) unten in Android Studio und kopiere den folgenden Text in das Terminal (2) oder tippe ihn ein.
     ```
     git --version
     ```
@@ -49,7 +49,7 @@ Klone den Quellcode noch einmal so wie es in der Dokumentation beschrieben ist u
 
   * Im Terminal sollte ein Hinweis erscheinen, der zeigt welche Git-Version installiert ist (siehe Screenshot oben). In diesem Fall, mache mit [Schritt 2](#troubleshooting-android-studio-check-for-uncommitted-changes) weiter.
 
-  * In case you get a message saying
+  * Falls Du eine Meldung bekommst, die lautet
     ```
     Git: command not found
     ```
@@ -57,15 +57,15 @@ Klone den Quellcode noch einmal so wie es in der Dokumentation beschrieben ist u
 
   * [Prüfe die Git-Installation](#BuildingAaps-steps-for-installing-git)
 
-  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
+  * Wenn Du Windows nutzt und Git gerade installiert hast, solltest Du den Computer neu starten, damit Git nach der Installation überall verfügbar ist
 
-  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
+  * Wenn Git installiert ist, Du neu gestartet hast (unter Windows) und Git trotzdem nicht gefunden wird:
 
   * Suche auf deinem Computer nach einer Datei "git.exe".
 
     Notiere Dir, in welchem Verzeichnis es gespeichert ist.
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Füge den zuvor notierten Pfad deiner Git-Installation hinzu.
+  * Öffne in Windows die Umgebungsvariablen, wähle die Variable „PATH“ und klicke auf „Bearbeiten“. Füge den zuvor notierten Pfad deiner Git-Installation hinzu.
 
   * Speichern und schließen.
 
@@ -75,11 +75,11 @@ Klone den Quellcode noch einmal so wie es in der Dokumentation beschrieben ist u
 #### Schritt 2: Prüfe, ob es uncommitted changes gibt.
 
   * In Android Studio: Öffne den „Commit“-Tab (1) auf der linken Seite. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either "Changes" (called "Default changeset" in older Android Studio versions) (2) or "Unversioned Files" (3):
+  * Du siehst entweder „Changes“ (in älteren Android Studio-Versionen „Default changeset“) (2) oder „Unversioned Files“ (3):
 
-    * For "Changes", you probably updated 'Gradle' or changed some of the file contents by mistake.
+    * Bei „Changes“ hast Du wahrscheinlich „Gradle“ aktualisiert oder versehentlich den Inhalt einiger Dateien geändert.
 
-    * Right click on "Changes" and select "Rollback…" (1)
+    * Klicke mit der rechten Maustaste auf „Changes“ und wähle „Rollback…“ (1)
 
       ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
@@ -139,7 +139,7 @@ Oder:
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
+Wenn Du die obige Fehlermeldung bekommst, musst Du eine passende JVM-Version herunterladen, bevor Du die APK erneut erstellen kannst:
 
 1.  Prüfe in der [Anforderungstabelle](#Building-APK-recommended-specification-of-computer-for-building-apk-file), welche JVM-Version Du für die **AAPS** Version, die Du erstellen möchtest, benötigst und notiere sie.
 
@@ -147,12 +147,12 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  Prüfe im **Gradle JDK**-Feld, ob die richtige Version ausgewählt ist (1). Wenn nicht, klicke auf das Feld und schaue, ob es schon in der Liste zu sehen ist. Im Beispiel unten ist JVM 21 als „jbr-21“ benannt. Wenn Du es findest, wähle es einfach aus und Du bist damit fertig. If not available, then select **Download JDK** (2).
+3.  Prüfe im **Gradle JDK**-Feld, ob die richtige Version ausgewählt ist (1). Wenn nicht, klicke auf das Feld und schaue, ob es schon in der Liste zu sehen ist. Im Beispiel unten ist JVM 21 als „jbr-21“ benannt. Wenn Du es findest, wähle es einfach aus und Du bist damit fertig. Ist er nicht verfügbar, wähle **Download JDK** (2).
 
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), wähle das JDK aus, das zur **AAPS**-Version passt (das ist die von Dir notierte Version aus der Anforderungstabelle). In Vendor (2) wähle einen beliebigen Anbieter aus. Location (3): Ändere nichts. Click **Download** (4).
+4. In Version (1), wähle das JDK aus, das zur **AAPS**-Version passt (das ist die von Dir notierte Version aus der Anforderungstabelle). In Vendor (2) wähle einen beliebigen Anbieter aus. Location (3): Ändere nichts. Klicke auf **Download** (4).
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -197,7 +197,7 @@ If you experience the above error message, you need to download a correct JVM ve
 (gradle-resync)=
 ### Gradle Resync
 
-  If you can still see the message that the gradle sync failed, now select the link **Try again** (1). ![Gradle Sync fehlgeschlagen Modus](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  Wenn Du immer noch die Meldung siehst, dass der Gradle Sync fehlgeschlagen ist, wähle jetzt den Link **Try again** (1). ![Gradle Sync fehlgeschlagen Modus](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
   Falls Du den Hinweis nicht mehr siehst, kannst Du das auch manuell auswählen:
@@ -212,7 +212,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Generate Signed APK generated successfully with 0 build variants
 
-When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
+Wenn Du die signierte APK erzeugst, bekommst Du vielleicht die Meldung, dass die Erzeugung erfolgreich war, aber „0 build variants“ erzeugt wurden:
 
 ![APK mit 0 Build-Varianten erstellt](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -232,7 +232,7 @@ Deine App wurde erfolgreich gebaut und kann auf das Smartphone übertragen werde
 
 * Falls Du die gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Nutze an deren Stelle die [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)-App instead.
 
-* If you are using xDrip: identify receiver as described on [xDrip settings page](#xdrip-identify-receiver).
+* Wenn Du xDrip nutzt: Lege den Empfänger fest, wie auf der Seite [xDrip-Einstellungen](#xdrip-identify-receiver) beschrieben.
 
 
 ## APK not installed / Installation fehlgeschlagen
@@ -240,19 +240,19 @@ Deine App wurde erfolgreich gebaut und kann auf das Smartphone übertragen werde
 ![phone app not installed](../images/Update_AppNotInstalled.png)
 
 * Stelle sicher, dass Du die “app-full-release.apk” auf Dein Smartphone übertragen hast.
-* This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+* Dieser Fehler bedeutet meist, dass die neue APK mit einem anderen Keystore signiert ist als Dein installiertes **AAPS**. Wenn Du Deinen bisherigen Keystore noch hast, wähle ihn aus und erstelle die APK erneut. Andernfalls siehe [AAPS mit einem neuen Keystore neu installieren](#reinstall-aaps).
 * Falls "App not installed" auf dem Smartphone angezeigt wird, gehe wie folgt vor:
 
 1. [Exportiere die Einstellungen](../Maintenance/ExportImportSettings.md), der AAPS-Version, die bereits auf Deinem Smartphone installiert ist.
 2. Deinstalliere **AAPS** von Deinem Telefon.
-3. Enable airplane mode & turn off Bluetooth.
+3. Schalte den Flugmodus ein & Bluetooth aus.
 4. Installiere die neue Version ("app-full-release.apk").
 5. [Importiere die Einstellungen](../Maintenance/ExportImportSettings.md)
-6. Turn Bluetooth back on and disable airplane mode
+6. Schalte Bluetooth wieder ein und den Flugmodus aus
 
 ## APK installiert, aber weiter die alte Version auf dem Smartphone
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
+Wenn Du die App erfolgreich erstellt, auf Dein Smartphone übertragen und installiert hast, die Versionsnummer aber gleich bleibt, hast Du vielleicht vergessen, [Deine lokale Kopie zu aktualisieren](#Update-to-new-version-update-your-local-copy)
 
 ## Keiner der oben genannten Löungsvorschläge funktioniert
 
