@@ -491,7 +491,7 @@ Es ergibt eine gute Kombination diese Linie zusammen mit den Balken für Abweich
 
 ![QuickLaunch toolbar](../images/Home2020_Buttons.png)
 
-Die schwebende Leiste unten auf dem Bildschirm enthält Deine **[Schnellstart](../DailyLifeWithAaps/QuickLaunch.md)**-Aktionen. Das kleine **Zahnrad** öffnet die Schnellstart-Konfiguration. Dort wählst Du, welche Knöpfe angezeigt werden (Behandlungen, Careportal-Einträge, CGM-Aktionen, die Bildschirme aus dem Fenster **Bearbeiten**, [QuickWizard](../DailyLifeWithAaps/QuickWizards.md)-Knöpfe, [Szenen](../DailyLifeWithAaps/Scenes.md) und mehr).
+Die schwebende Leiste unten auf dem Bildschirm enthält Deine **[Schnellstart](../DailyLifeWithAaps/QuickLaunch.md)**-Aktionen. Das kleine **Zahnrad** öffnet die Schnellstart-Konfiguration. Dort wählst Du, welche Knöpfe angezeigt werden (Behandlungen, Careportal-Einträge, CGM-Aktionen, die Bildschirme aus dem Fenster **Verwalten**, [QuickWizard](../DailyLifeWithAaps/QuickWizards.md)-Knöpfe, [Szenen](../DailyLifeWithAaps/Scenes.md) und mehr).
 
 Oben ist eine typische Konfiguration zu sehen: **Insulin**, **Kohlenhydrate** und der **Bolus-Rechner**.
 
@@ -547,9 +547,9 @@ Die untere Navigationsleiste führt zu:
     
     ![Treatments sheet](../images/v4/Screens/treatments_sheet.png)
 
-* **Szenen** – nur sichtbar, wenn Du mindestens eine [Szene](../DailyLifeWithAaps/Scenes.md) oder eine **Automatisierung**sregel hast, die als **Benutzeraktion** markiert ist. Es öffnet ein Fenster, aus dem Du sie starten kannst. Eine Markierung zeigt, wie viele Du gerade starten kannst. Der **Stift** oben im Fenster öffnet **Bearbeiten → Szenen**.
+* **Szenen** – nur sichtbar, wenn Du mindestens eine [Szene](../DailyLifeWithAaps/Scenes.md) oder eine **Automatisierung**sregel hast, die als **Benutzeraktion** markiert ist. Es öffnet ein Fenster, aus dem Du sie starten kannst. Eine Markierung zeigt, wie viele Du gerade starten kannst. Der **Stift** oben im Fenster öffnet **Verwalten → Szenen**.
 
-* **Bearbeiten** – die zentrale Stelle für alles, was Du in **AAPS** verwaltest: Profil, Insulineinstellungen, Temporäres Ziel, QuickWizard, Szenen, Automatisierung, Lebensmittel, Wechsel der Setzstellen, Pumpe und Autorisierte Clients. Darunter stehen Aktionen für Geräte und Basal wie Sensor gesetzt und Temporäre Basalrate. Manche Einträge erscheinen nur, wenn sie zu Deiner Ausstattung passen – zum Beispiel hängen Nadelwechsel/Füllen und Batteriewechsel von Deiner Pumpe ab, und Temporäre Basalrate, Verzögerter Bolus und die Careportal-Einträge sind im [Einfachen Modus](#preferences-simple-mode) ausgeblendet:
+* **Verwalten** – die zentrale Stelle für alles, was Du in **AAPS** verwaltest: Profil, Insulineinstellungen, Temporäres Ziel, QuickWizard, Szenen, Automatisierung, Lebensmittel, Wechsel der Setzstellen, Pumpe und Autorisierte Clients. Darunter stehen Aktionen für Geräte und Basal wie Sensor gesetzt und Temporäre Basalrate. Manche Einträge erscheinen nur, wenn sie zu Deiner Ausstattung passen – zum Beispiel hängen Nadelwechsel/Füllen und Batteriewechsel von Deiner Pumpe ab, und Temporäre Basalrate, Verzögerter Bolus und die Careportal-Einträge sind im [Einfachen Modus](#preferences-simple-mode) ausgeblendet:
     
     ![Manage sheet](../images/v4/Screens/manage_sheet.png)
 
@@ -645,7 +645,7 @@ Wenn Du nach Verwendung des Bolus-Rechners, die oben gezeigte Warnung siehst, ha
 
 Für mehr Details, schaue bitte in den Hinweisen auf der Seite [Berechnung der aktiven Kohlenhydrate (COB)](#CobCalculation-detection-of-wrong-cob-values) nach.
 
-Du suchst den Reiter **Aktionen** aus **AAPS** 3.x? Seine Funktionen sind auf den Startbildschirm, in das Fenster **Bearbeiten** und in die Schnellstart-Leiste umgezogen: siehe [Wo ist der Reiter Aktionen geblieben?](#screens-action-tab).
+Du suchst den Reiter **Aktionen** aus **AAPS** 3.x? Seine Funktionen sind auf den Startbildschirm, in das Fenster **Verwalten** und in die Schnellstart-Leiste umgezogen: siehe [Wo ist der Reiter Aktionen geblieben?](#screens-action-tab).
 
 (aaps-screens-careportal)=
 
@@ -653,7 +653,7 @@ Du suchst den Reiter **Aktionen** aus **AAPS** 3.x? Seine Funktionen sind auf de
 
 Die Alter und Füllstände in der [Statuszeile](#screens-sensor-level-battery) (Sensor, Insulin, Kanüle, Pumpenbatterie) beruhen auf Careportal-Einträgen: **Nadelwechsel/Füllen** (erfasst Wechsel von Setzstelle und Insulinpatrone), **Sensor gesetzt** und **Pumpenbatterie-Wechsel**.
 
-Du kannst sie im aufgeklappten Statusbereich auf dem Startbildschirm, im Fenster **Bearbeiten** oder mit [Schnellstart](../DailyLifeWithAaps/QuickLaunch.md)-Knöpfen eintragen.
+Du kannst sie im aufgeklappten Statusbereich auf dem Startbildschirm, im Fenster **Verwalten** oder mit [Schnellstart](../DailyLifeWithAaps/QuickLaunch.md)-Knöpfen eintragen.
 
 **Nadelwechsel/Füllen** erfasst einen Wechsel der Setzstelle und/oder der Insulinpatrone und kann eine Füllmenge abgeben:
 
@@ -665,7 +665,7 @@ Du kannst sie im aufgeklappten Statusbereich auf dem Startbildschirm, im Fenster
 
 ![Pump Battery Change dialog](../images/dialogs/pump_battery_change.png) Die Einträge Bewegung, Ankündigung, Frage und Notiz entsprechen dem Careportal von Nightscout und sind besondere Formen von Notizen.
 
-Scrolle im Fenster **Bearbeiten** nach unten und tippe auf **Careportal**, um diese Einträge anzuzeigen: **BZ-Test**, **Notiz**, **Bewegung**, **Frage** und **Ankündigung**.
+Scrolle im Fenster **Verwalten** nach unten und tippe auf **Careportal**, um diese Einträge anzuzeigen: **BZ-Test**, **Notiz**, **Bewegung**, **Frage** und **Ankündigung**.
 
 ![Careportal section of the Manage sheet](../images/v4/Screens/manage_sheet_careportal.png)
 
@@ -683,7 +683,7 @@ In allen diesen Dialogen (**Nadelwechsel/Füllen**, **Sensor gesetzt**, **Pumpen
 
 ## Wechsel der Setzstellen (Site Rotation)
 
-**Bearbeiten → Wechsel der Setzstellen** erfasst auf einer Körperkarte, wo jede Kanüle und jeder Sensor gesetzt wurde, damit Du die Setzstellen wechseln kannst: siehe [Wechsel der Setzstellen](#Aapsscreens-site-rotation) auf der Seite Pumpen und Kanülen.
+**Verwalten → Wechsel der Setzstellen** erfasst auf einer Körperkarte, wo jede Kanüle und jeder Sensor gesetzt wurde, damit Du die Setzstellen wechseln kannst: siehe [Wechsel der Setzstellen](#Aapsscreens-site-rotation) auf der Seite Pumpen und Kanülen.
 
 **TDD** (Tagesgesamtdosis) und die Faustregel für das Verhältnis von Basal zu Bolus werden beim [Reiter Insulin der Statistiken](#reviewing-tdd) erklärt.
 
@@ -693,7 +693,7 @@ In allen diesen Dialogen (**Nadelwechsel/Füllen**, **Sensor gesetzt**, **Pumpen
 
 ![Insulin screen](../images/manage/insulin_profile.png)
 
-**Bearbeiten → Insulineinstellungen** zeigt und verwaltet Deine Insulinkonfigurationen. Jede Konfiguration wird auf einer Karte mit ihrem **Wirkmaximum** und der **[DIA](#Config-Builder-insulin-dia)** angezeigt; die verwendete ist mit **AKTIV** markiert. Unter der Karte siehst Du die Aktivitätskurve. Kurzbezeichnung, Wirkmaximum und DIA kannst Du bei jeder Konfiguration außer der aktiven bearbeiten. Um das verwendete Insulin zu wechseln, [füge eine neue Konfiguration hinzu und aktiviere sie](#Config-Builder-insulin-change-active).
+**Verwalten → Insulineinstellungen** zeigt und verwaltet Deine Insulinkonfigurationen. Jede Konfiguration wird auf einer Karte mit ihrem **Wirkmaximum** und der **[DIA](#Config-Builder-insulin-dia)** angezeigt; die verwendete ist mit **AKTIV** markiert. Unter der Karte siehst Du die Aktivitätskurve. Kurzbezeichnung, Wirkmaximum und DIA kannst Du bei jeder Konfiguration außer der aktiven bearbeiten. Um das verwendete Insulin zu wechseln, [füge eine neue Konfiguration hinzu und aktiviere sie](#Config-Builder-insulin-change-active).
 
 Unter [Insulinwirkdauer](#Config-Builder-insulin-dia) erfährst Du mehr darüber, was sie ist und wie Du sie einstellst.
 
@@ -701,7 +701,7 @@ Unter [Insulinwirkdauer](#Config-Builder-insulin-dia) erfährst Du mehr darüber
 
 ![Virtual Pump status screen](../images/v4/Pumps/virtual_pump_screen.png)
 
-**Bearbeiten → Pumpe** (oder **Konfiguration → Pumpe → Modul öffnen**) zeigt den Status Deiner Pumpe: letzte Verbindung, Basis-Basalrate, Batterie, Reservoir …
+**Verwalten → Pumpe** (oder **Konfiguration → Pumpe → Modul öffnen**) zeigt den Status Deiner Pumpe: letzte Verbindung, Basis-Basalrate, Batterie, Reservoir …
 
 * Die angezeigten Informationen hängen von Deinem Pumpenmodell ab.
 * Zu den Details schaue bitte auf die [Pumpen-Seite](../Getting-Started/CompatiblePumps.md).
@@ -720,7 +720,7 @@ Weitere Details findest Du im [APS-Abschnitt der Seite Konfiguration](#Config-Bu
 
 ![Profil](../images/Screenshots_Profile.png)
 
-**Bearbeiten → Profil** (oder ein Tippen auf den Profilnamen auf dem Startbildschirm) öffnet den Profil-Bildschirm: Deine Profile als Karten zum Durchwischen, mit Knöpfen zum Hinzufügen, Bearbeiten, Klonen, Löschen und **Aktivieren** eines Profils.
+**Verwalten → Profil** (oder ein Tippen auf den Profilnamen auf dem Startbildschirm) öffnet den Profil-Bildschirm: Deine Profile als Karten zum Durchwischen, mit Knöpfen zum Hinzufügen, Bearbeiten, Klonen, Löschen und **Aktivieren** eines Profils.
 
 Das Profil enthält Informationen zu Deinen individuellen Diabetes-Einstellungen. Die eigene Seite zum Thema **[Profil](../SettingUpAaps/YourAapsProfile.md)** enthält tiefergehende Informationen dazu.
 
@@ -728,7 +728,7 @@ Das Profil enthält Informationen zu Deinen individuellen Diabetes-Einstellungen
 
 ![Automatisierung](../images/v4/Screens/automation_overview.png)
 
-**Bearbeiten → Automatisierung** listet Deine Automatisierungsregeln auf. Schaue Dir die [eigene Seite](../DailyLifeWithAaps/Automations.md) hierzu an.
+**Verwalten → Automatisierung** listet Deine Automatisierungsregeln auf. Schaue Dir die [eigene Seite](../DailyLifeWithAaps/Automations.md) hierzu an.
 
 ## Nightscout-Client
 
