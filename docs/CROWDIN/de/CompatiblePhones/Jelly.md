@@ -43,6 +43,6 @@ Denk daran, Google Play Protect zu deaktivieren.
 
 ### Remote-Verbindung für die Wear-APK
 
-Bei bestimmten Smartwatches wie der Samsung Galaxy Watch muss in der Galaxy Wearable-App unter „Erweiterte Funktionen“ die Option „Remote-Verbindung“ **eingeschaltet** sein, damit Du das Jelly, die **Wear.apk** & **AAPS** aus der Ferne über WLAN nutzen kannst.
+Bei bestimmten Smartwatches wie der Samsung Galaxy Watch muss in der Galaxy Wearable-App unter „Erweiterte Funktionen“ die Option „Remote-Verbindung“ **eingeschaltet** sein, damit Du das Jelly, die **Wear.apk** & **AAPS** remote über WLAN nutzen kannst.
 
 ![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
