@@ -55,13 +55,13 @@ Dexcom BYODA ist mittlerweile eine sehr alte App-Version und kann nicht mehr akt
 
 
 (DexcomG6-troubleshooting-g6)=
-## Problembehandlung G6 und ONE
+## Fehlerbehebung G6 und ONE
 
-### Dexcom G6/ONE-spezifische Problembehandlung
+### Dexcom G6/ONE-spezifische Fehlerbehebung
 
--   Scrolle herunter bis zur **Problembehandlung** [hier](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+-   Scrolle herunter bis zur **Fehlerbehebung** [hier](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
-### Allgemeine Problembehandlung
+### Allgemeine Fehlerbehebung
 
 Allgemeine Tipps zur Problembehebung für CGMs findest Du [hier](#general-cgm-troubleshooting).
 
