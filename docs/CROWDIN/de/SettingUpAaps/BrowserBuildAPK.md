@@ -91,4 +91,4 @@ Sobald der Build erfolgreich ist, wird die APK in Deinem Google Drive gespeicher
 Seit September 2026 kann Googles [Android-Entwicklerverifizierung](#android-developer-verification) je nach Land verhindern, dass sich die APK durch Antippen der Datei installieren lässt. Kostenlose Möglichkeiten das zu umgehen, werden auf dieser Seite erklärt.
 ```
 
-Schlägt der Build fehl, [finde zuerst im Build-Log heraus, was schiefgegangen ist](#aaps-ci-read-the-logs), und sieh Dir dann [Fehlerbehebung beim Browser Build](../GettingHelp/BrowserBuildTroubleshooting.md) an. Um einen bestimmten Commit in Deinen Build aufzunehmen, siehe [Commit per Cherry-Pick übernehmen](#github-cherry-pick).
+Schlägt der Build fehl, [finde zuerst im Build-Log heraus, was schiefgegangen ist](#aaps-ci-read-the-logs), und sieh Dir dann [Fehlerbehebung beim Browser-Build](../GettingHelp/BrowserBuildTroubleshooting.md) an. Um einen bestimmten Commit in Deinen Build aufzunehmen, siehe [Commit per Cherry-Pick übernehmen](#github-cherry-pick).
