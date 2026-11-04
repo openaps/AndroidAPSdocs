@@ -40,18 +40,18 @@ Android APS (**AAPS**) 是一个开放源码的安卓应用程序，适用于糖
 
 第**10**节）**“[AAPS 高级功能选项](./AdvancedOptions/FullClosedLoop.md)”**该章节介绍了**AAPS**从混合闭环（_进餐等场景需手动推注_）过渡到全自动闭环（无需手动推注）的方法、[参数配置文件调整](./GettingHelp/ProfileTuning.md)和如何使用Autotune、发模式和工程模式。对绝大多数用户来说，**AAPS**的主版本（"Master"版）即可满足需求，但总会有些大牛，即便已经用的很好了，还想着继续折腾更深入的功能，这一节的内容主要是给他们看的。
 
-第**11节）“[如何支持AAPS](SupportingAaps/HowCanIHelp.md)”**该章节介绍了如何为本项目提供支持。您可通过捐款、捐赠设备或贡献专业知识助力项目发展。 You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
+第**11节）“[如何支持AAPS](SupportingAaps/HowCanIHelp.md)”**该章节介绍了如何为本项目提供支持。您可通过捐款、捐赠设备或贡献专业知识助力项目发展。也可自行提出或修改文档内容、协助[文档翻译](SupportingAaps/Translations.md)，并通过Open Humans项目共享个人数据。
 
-Section **12) Resources**, contains archived or additional documentation, including a subsection for [clinicians](UsefulLinks/ClinicianGuideToAaps.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. 这一节还有更多关于糖尿病和闭环的参考资料。 It includes the [Glossary](./UsefulLinks/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. 举例来说，想知道ISF或TT代表什么意思就去这里找。
+**第12节) 资料**包含了很多文档，有的内容面向[临床医生](UsefulLinks/ClinicianGuideToAaps.md)等对**AAPS**之类的开源人工胰腺技术感兴趣的人，有的内容面向希望和医生交流相关信息的病人。这一节还有更多关于糖尿病和闭环的参考资料。本章节还包含了[术语表](./UsefulLinks/Glossary.md)，汇总 **AAPS **文档内所有缩写（简称）。举例来说，想知道ISF或TT代表什么意思就去这里找。
 
 
  ### 想要开始使用 **AAPS**? 请参阅[引言](Getting-Started/Introduction.md)部分进一步了解**AAPS**。
 
 ```{admonition} SAFETY NOTICE
-:class: danger
+:class: 安全提示
 **AAPS**的安全性依赖于你的硬件装备（手机、泵、动态）的安全性能。请务必使用经FDA/CE认证且功能完整的胰岛素泵及动态血糖仪（CGM）。禁止使用损坏、改装或自制的胰岛素泵或动态血糖仪。泵和动态一定要使用原装或者厂商认证的耗材（助针器、管路和储药器）。非官方测试或改装配件可能导致数据误差及胰岛素输注错误，从而对使用者构成重大风险。 
 
-请勿在使用SGLT-2抑制剂（格列净类药物）期间使用**AAPS**。 You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+请勿在使用SGLT-2抑制剂（格列净类药物）期间使用**AAPS**。此类药物会降低血糖水平。由于胰岛素输注量减少或血糖水平降低，可能增加糖尿病酮症酸中毒（DKA）或低血糖的风险。 
 ```
 
 ```{admonition} Disclaimer
@@ -60,7 +60,7 @@ Section **12) Resources**, contains archived or additional documentation, includ
 - 文中来自 github.com 的代码未经正式授权也没有任何官方支持。更多细节请查阅本代码仓库的许可协议（LICENSE）。
 - 所有产品、公司名称、商标、服务标识、注册商标和注册服务标志归其所有者所有。使用他们仅是作为信息传递目的，不暗示任何关联或官方认可。
 
-**AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/), [Medtronic](https://www.medtronic.com/), [Diaconn](https://www.diaconn.com/en/index.html), [EOFlow](http://www.eoflow.com/), [MicroTech Medical (Equil)](https://www.microtechmd.com/), [Medtrum](https://www.medtrum.com/), [Senseonics (Eversense)](https://www.senseonics.com/), [i-SENS (CareSens)](https://i-sens.com/), [POCTech](https://poctechcorp.com/en/), [Ottai](https://ottai.com/) or [Syai](https://www.syai.com/).
+AAPS 与以下公司无关联，也未得到其认可与授权：: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/), [Medtronic](https://www.medtronic.com/), [Diaconn](https://www.diaconn.com/en/index.html), [EOFlow](http://www.eoflow.com/), [MicroTech Medical (Equil)](https://www.microtechmd.com/), [Medtrum](https://www.medtrum.com/), [Senseonics (Eversense)](https://www.senseonics.com/), [i-SENS (CareSens)](https://i-sens.com/), [POCTech](https://poctechcorp.com/en/), [Ottai](https://ottai.com/) or [Syai](https://www.syai.com/)。
 
 ```
 
@@ -69,153 +69,154 @@ Section **12) Resources**, contains archived or additional documentation, includ
 ## AAPS文档索引
 
 ```{toctree}
-:caption: Using this documentation
+:caption: 文档使用手册
 :titlesonly:
 
-Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
-Search the documentation <./NavigateDoc/SearchDoc.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
+更改语言和版本 <./NavigateDoc/ChangeLanguageVersion.md>
+检索文档内容
+ <./NavigateDoc/SearchDoc.md>
+文档更新 <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
-:caption: 1) Getting started
+:caption: 1) 入门指南
 
-Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
-Component Overview <./Getting-Started/ComponentOverview.md>
-- Compatible pumps <./Getting-Started/CompatiblePumps.md>
-- Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
-- Compatible phones  <./Getting-Started/Phones.md>
-- Compatible watches  <./Getting-Started/Watches.md>
+AAPS简介 <./Getting-Started/Introduction.md>
+前期准备工作 <./Getting-Started/PreparingForAaps.md>
+组件概览 <./Getting-Started/ComponentOverview.md>
+- 兼容的胰岛素泵 <./Getting-Started/CompatiblePumps.md>
+- 兼容的CGMs <./Getting-Started/CompatiblesCgms.md>
+- 兼容的手机  <./Getting-Started/Phones.md>
+- 兼容的智能手表  <./Getting-Started/Watches.md>
 ```
 
 ```{toctree}
-:caption: 2) Build the app
+:caption: 2) 构建AAPS APP
 
-Dedicated Google account for AAPS (optional) <./UsefulLinks/DedicatedGoogleAccountForAaps.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
-- CLI Build <./SettingUpAaps/CLIBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+设置AAPS专用谷歌账户（可选）<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
+构建AAPS <./SettingUpAaps/BuildingAaps.md>
+- 浏览器构建 <./SettingUpAaps/BrowserBuild.md>
+- Android Studio构建 <./SettingUpAaps/ComputerBuild.md>
+- CLI 命令行构建 <./SettingUpAaps/CLIBuild.md>
+传输和安装AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
 ```
 ```{toctree}
-:caption: 3) Setting up the reporting server
+:caption: 3) 设置报告服务器
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+设置报告服务器 <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Configure AAPS
+:caption: 4) 配置AAPS
 
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Settings <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+设置向导 <./SettingUpAaps/SetupWizard.md>
+AAPS个人资料 <./SettingUpAaps/YourAapsProfile.md>
+更改 AAPS 配置 <./SettingUpAaps/ChangeAapsConfiguration.md>
+- 配置（配置构建器） <./SettingUpAaps/ConfigBuilder.md>
+- 设置 <./SettingUpAaps/Preferences.md>
+完成目标 <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
-:caption: 5) Daily Life with AAPS
+:caption: 5) AAPS 的日常使用
 
-AAPS Screens <./DailyLifeWithAaps/AapsScreens.md>
-Key AAPS Features <./DailyLifeWithAaps/KeyAapsFeatures.md>
-COB calculation <./DailyLifeWithAaps/CobCalculation.md>
-Sensitivity detection <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
-Profile Switch & Profile Percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
-Temp-Targets <./DailyLifeWithAaps/TempTargets.md>
-Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
-QuickWizards <./DailyLifeWithAaps/QuickWizards.md>
-Scenes <./DailyLifeWithAaps/Scenes.md>
-Automations <./DailyLifeWithAaps/Automations.md>
-QuickLaunch toolbar <./DailyLifeWithAaps/QuickLaunch.md>
-Home screen widgets <./DailyLifeWithAaps/Widgets.md>
-Food database <./DailyLifeWithAaps/Food.md>
-Global search <./DailyLifeWithAaps/GlobalSearch.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS for children <./DailyLifeWithAaps/AapsForChildren.md>
-Pumps and cannulas <./DailyLifeWithAaps/PumpsAndCannulas.md>
-Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
-
-```
-
-```{toctree}
-:caption: 6) Remote AAPS features
-
-Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
-Following Only <./RemoteFeatures/FollowingOnly.md>
-Android Auto <./RemoteFeatures/AndroidAuto.md>
-Remote control <./RemoteFeatures/RemoteControl.md>
-The AAPSClient app <./RemoteFeatures/AapsClient.md>
-Master ↔ Client control <./RemoteFeatures/ClientMasterControl.md>
-SMS Commands <./RemoteFeatures/SMSCommands.md>
-
-```
-```{toctree}
-:caption: 7) Wear OS Smartwatches
-
-AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
-Use the smartwatch <./WearOS/WearOsSmartwatch.md>
-Remote control <./RemoteFeatures/RemoteControlWearOS.md>
-Custom watchfaces reference <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
+AAPS 界面 <./DailyLifeWithAaps/AapsScreens.md>
+AAPS 主要功能 <./DailyLifeWithAaps/KeyAapsFeatures.md>
+活性碳水计算 <./DailyLifeWithAaps/CobCalculation.md>
+灵敏度检测 <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
+动态ISF <./DailyLifeWithAaps/DynamicISF.md>
+配置文件切换 & 配置文件百分比 <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+临时目标 <./DailyLifeWithAaps/TempTargets.md>
+扩展碳水 <./DailyLifeWithAaps/ExtendedCarbs.md>
+快速助手 <./DailyLifeWithAaps/QuickWizards.md>
+场景 <./DailyLifeWithAaps/Scenes.md>
+自动操作 <./DailyLifeWithAaps/Automations.md>
+快速启动工具栏 <./DailyLifeWithAaps/QuickLaunch.md>
+屏幕部件 <./DailyLifeWithAaps/Widgets.md>
+食物数据库 <./DailyLifeWithAaps/Food.md>
+全局搜索 <./DailyLifeWithAaps/GlobalSearch.md>
+信息回顾 <./Maintenance/Reviewing.md>
+AAPS在儿童中的应用 <./DailyLifeWithAaps/AapsForChildren.md>
+胰岛素泵与管路 <./DailyLifeWithAaps/PumpsAndCannulas.md>
+时区变更 & 夏令时 <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 
 ```
 
 ```{toctree}
-:caption: 8) Maintenance of AAPS
+:caption: 6) AAPS 远程功能
 
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-What changed in AAPS v4 <./Maintenance/V4Changes.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+远程监控 <./RemoteFeatures/RemoteMonitoring.md>
+关注模式 <./RemoteFeatures/FollowingOnly.md>
+车在模式 <./RemoteFeatures/AndroidAuto.md>
+远程控制 <./RemoteFeatures/RemoteControl.md>
+AAPSClient应用 <./RemoteFeatures/AapsClient.md>
+主↔客户端控制 <./RemoteFeatures/ClientMasterControl.md>
+短信指令 <./RemoteFeatures/SMSCommands.md>
+
+```
+```{toctree}
+:caption: 7) Wear OS 智能手表
+
+AAPS Wear OS 版本 <./WearOS/BuildingAapsWearOS.md>
+智能手表使用<./WearOS/WearOsSmartwatch.md>
+远程控制 <./RemoteFeatures/RemoteControlWearOS.md>
+自定义表盘参考 <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
+自定义表盘资源交换 <./ExchangeSiteCustomWatchfaces/index.md>
+
+```
+
+```{toctree}
+:caption: 8) AAPS 维护
+
+配置 导入 / 导出<./Maintenance/ExportImportSettings.md>
+AAPS 版本更新日志<./Maintenance/ReleaseNotes.md>
+AAPS v4 更新内容 <./Maintenance/V4Changes.md>
+AAPS 版本升级 <./Maintenance/UpdateToNewVersion.md>
+- 浏览器更新 (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio更新 <./Maintenance/UpdateComputerBuild.md>
 End of life <./Maintenance/EndOfLife.md>
 
 ```
 
 ```{toctree}
-:caption: 9) Help & Troubleshooting
+:caption: 9) 帮助& 故障排查
 
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-Troubleshooting (start here) <./GettingHelp/GeneralTroubleshooting.md>
-- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
-- Troubleshooting NSClient <./GettingHelp/TroubleshootingNsClient.md>
-- Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
-- Reinstalling AAPS (new keystore) <./GettingHelp/ReinstallAaps.md>
-- Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
+AAPS 求助渠道<./GettingHelp/WhereCanIGetHelp.md>
+故障排查（从这里开始）<./GettingHelp/GeneralTroubleshooting.md>
+- 蓝牙故障排查 <./GettingHelp/BluetoothTroubleshooting.md>
+- NSClient故障排查<./GettingHelp/TroubleshootingNsClient.md>
+- Android Studio故障排查 <./GettingHelp/TroubleshootingAndroidStudio.md>
+- 浏览器构建故障排查 <./GettingHelp/BrowserBuildTroubleshooting.md>
+- 重新安装AAPS（新密钥） <./GettingHelp/ReinstallAaps.md>
+- 访问日志文件 <./GettingHelp/AccessingLogFiles.md>
 FAQ <./UsefulLinks/FAQ.md>
 ```
 
 ```{toctree}
-:caption: 10) Advanced AAPS options
+:caption: 10) AAPS 高级选项
 
-Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
-Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
+全闭环 <./AdvancedOptions/FullClosedLoop.md>
+配置文件调校指南 <./GettingHelp/ProfileTuning.md>
 Autotune <./AdvancedOptions/Autotune.md>
-Insulin concentration <./AdvancedOptions/InsulinConcentration.md>
-Dev branch <./AdvancedOptions/DevBranch.md>
-Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
+胰岛素浓度 <./AdvancedOptions/InsulinConcentration.md>
+Dev分支 <./AdvancedOptions/DevBranch.md>
+网页构建： cherry-pick版本 <./AdvancedOptions/BrowserBuildCherryPick.md>
 
 ```
 ```{toctree}
-:caption: 11) How to support AAPS
+:caption: 11) 支持 AAPS 项目
 
-How to help <./SupportingAaps/HowCanIHelp.md>
-Editing the docs <./SupportingAaps/HowToEditTheDocs.md>
-Translating the app and docs <./SupportingAaps/Translations.md>
-State of translations <./SupportingAaps/StateOfTranslations.md>
-Open Humans Uploader <./SupportingAaps/OpenHumans.md>
+如何帮助<./SupportingAaps/HowCanIHelp.md>
+文档编辑 <./SupportingAaps/HowToEditTheDocs.md>
+应用与文档翻译 <./SupportingAaps/Translations.md>
+翻译状态 <./SupportingAaps/StateOfTranslations.md>
+Open Humans 数据上传 <./SupportingAaps/OpenHumans.md>
 
 ```
 ```{toctree}
-:caption: 12) Resources
+:caption: 12) 资料
 
-Glossary <./UsefulLinks/Glossary.md>
-General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
-For Clinicians <./UsefulLinks/ClinicianGuideToAaps.md>
+术语表 <./UsefulLinks/Glossary.md>
+糖尿病与闭环资料 <./UsefulLinks/BackgroundReading.md>
+临床医生参考 <./UsefulLinks/ClinicianGuideToAaps.md>
 ```
