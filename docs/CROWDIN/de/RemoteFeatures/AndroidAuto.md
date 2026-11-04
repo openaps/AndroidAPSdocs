@@ -4,7 +4,7 @@
 
 ## Voraussetzungen
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
+**AAPS** nutzt eine Funktion von Android Auto, mit der Nachrichten von Apps auf dem Smartphone auf das Display des Autoradios weitergeleitet werden.
 
 Das bedeutet:
 
@@ -37,7 +37,7 @@ Prüfe bitte jetzt, ob Du die Status-Benachrichtigung von **AAPS** auf dem Smart
 
 Da **AAPS** keine offizielle Android Auto App ist, müssen die Benachrichtigungen einmalig manuell aktiviert werden. Die Aktivierung erfolgt über den Entwicklermodus auf Deinem Smartphone. Was dazuzutun ist, wird nun erklärt.
 
-Go to your car and connect your mobile with the car's audio system.
+Geh zu Deinem Auto und verbinde Dein Smartphone mit dem Audiosystem des Autos.
 
 Der Bildschirm sollte nun ungefähr so aussehen:
 
@@ -81,6 +81,6 @@ Die CGM-Werte werden wie folgt angezeigt:
 
 (android-auto-troubleshooting)=
 
-## Problembehandlung:
+## Fehlerbehebung:
 
 * Falls keine Benachrichtigungen angezeigt werden: prüfe, ob Du in den Android-Einstellungen die [Benachrichtigungsanzeige für AAPS aktiviert](#androidauto-check-that-aaps-can-show-notifications) hast und ob [Android Auto Zugriffsrechte für die Benachrichtigungen hat](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
