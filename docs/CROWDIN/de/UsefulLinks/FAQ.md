@@ -383,7 +383,7 @@ First try the **Reset RileyLink** button on the pump screen (see your pump's pag
 
 #### AAPSClient Remote App konfigurieren und nutzen
 
-**AAPSClient** is a separate app that lets a caregiver follow and control **AAPS** remotely. Since **AAPS** v4, controlling **AAPS** from AAPSClient needs a one-time pairing between the two apps. See:
+**AAPSClient** ist eine eigene App, mit der eine Betreuungsperson **AAPS** per Fernüberwachung verfolgen und fernsteuern kann. Since **AAPS** v4, controlling **AAPS** from AAPSClient needs a one-time pairing between the two apps. See:
 
 * [The AAPSClient app](#aapsclient-app): installing, first start and pairing,
 * [Master ↔ Client control](#client-master-control): what can be controlled and how pairing works,
