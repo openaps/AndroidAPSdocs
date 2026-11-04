@@ -86,7 +86,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 **Voraussetzungen**
 
-- Pumpe muss irgendeine Art von Fernbedienung unterstützen. (BT, Radiofrequenz, etc.)
+- Pumpe muss irgendeine Art von Remote-Steuerung unterstützen. (BT, Radiofrequenz, etc.)
 - Protokoll ist gehackt/dokumentiert/etc.
 
 **Mindestanforderungen**
