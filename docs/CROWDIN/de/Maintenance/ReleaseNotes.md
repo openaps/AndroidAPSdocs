@@ -97,7 +97,7 @@ Erscheinungsdatum: 31.10.2026
 **Verbesserungen in der Pumpenunterstützung**
 
 - Pumpenübersicht für Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn und Equil neu erstellt @MilosKozak
-- **Omnipod DASH**: PDM style Ref codes and readable fault descriptions, drift compensation always on, better bolus type reporting @nl-ruud
+- **Omnipod DASH**: Referenzcodes wie beim PDM und lesbare Fehlerbeschreibungen, Driftkompensation immer an, bessere Angabe des Bolustyps @nl-ruud
 - **Omnipod**: Hartes Enddatum für Dash & Eros @mcnelson
 - **DanaR, RS**: Pumpenemulator zum Testen @MilosKozak
 - **Equil**: Pumpenemulator zum Testen @MilosKozak
@@ -188,7 +188,7 @@ Vollständiges Änderungsprotokoll: <https://github.com/nightscout/AndroidAPS/co
 
 **Version 3.4.2.0**
 
-Release date: 02-04-2026
+Erscheinungsdatum: 02.04.2026
 
 - Equil: Resistenzhandling für diverse Modelle korrigiert @hhfcvmars
 - Tidepool: Session-Handling korrigiert @MilosKozak
@@ -201,7 +201,7 @@ Release date: 02-04-2026
 
 **Version 3.4.1.0**
 
-Release date: 08-03-2026
+Erscheinungsdatum: 08.03.2026
 
 **Core**
 
@@ -212,8 +212,8 @@ Release date: 08-03-2026
 
 **Verbesserungen in der Pumpenunterstützung**
 
-- **Omnipod DASH**: refactor BLE driver code to omnipod/common module @jwoglom
-- **Omnipod DASH**: try to fix connection state @MilosKozak
+- **Omnipod DASH**: Code des BLE-Treibers in das Modul omnipod/common verschoben (Refactoring) @jwoglom
+- **Omnipod DASH**: Versuch, den Verbindungsstatus zu korrigieren @MilosKozak
 - **Omnipod**: Überprüfe das Profil vor der Pod-Aktivierung, um zu verhindern, dass Pods verschwendet werden (#4534) @brianV
 - **Medtronic**: Korrektur des gleichen Kodierungstyps, der im Einstellungsdialog angezeigt wird @mifi100
 - **Medtronic**: Tandem Vorbereitung - „pump common classes“ vorbereitet @andy-rozman
@@ -350,7 +350,7 @@ Erscheinungsdatum: 27.03.2025
 
 (version-enforcement)=
 
-**Starting this version, notification and version enforcement has been simplified and softened and works the following way:**
+**Ab dieser Version sind die Benachrichtigungen und der Update-Zwang vereinfacht und abgeschwächt. Das funktioniert so:**
 
 *  Frist läuft nicht ab, wenn das Gerät offline ist (wenn keine Verbindung zum Internet besteht). D. h. es gibt keine 60- und 90-Tage „Übergangsfristen“ mehr.
 *  Nach Ablauf wird der LGS-Modus erzwungen
@@ -502,7 +502,7 @@ Erscheinungsdatum: 29.12.2024
 
 * [Einfacher Modus](#preferences-simple-mode) standardmäßig bei Neuinstallation aktiviert @MilosKozak
 * Neue [Quick Wizard](#Preferences-quick-wizard)-Optionen @radicalb
-  * Der Quick Wizard verwendet nun die gleiche Logik zur Bolus-Berechnung und -Anzeige wie der Bolus-Rechner. You can now use the “carb time” field in QuickWizard to pre-bolus.
+  * Der Quick Wizard verwendet nun die gleiche Logik zur Bolus-Berechnung und -Anzeige wie der Bolus-Rechner. Für einen Vorab-Bolus kannst Du jetzt im QuickWizard das Feld „Zeitpunkt der KH-Aufnahme“ nutzen.
 * Neues [Diagramm-Skalen-Menü](#aaps-screens-main-graph); [zusätzliches Diagramm-Menü](#AapsScreens-activate-optional-information) UI-Verbesserungen @Philoul
 * [Layoutverbesserungen in der Konfiguration](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
   * Abschnitte sind nun standardmäßig eingeklappt. Pfeil zum Aufklappen verwenden.
@@ -618,7 +618,7 @@ Erscheinungsdatum: 23.10.2023
 
 v1 ist das alte, für den Datenaustausch zwischen NS-Website und NS-Server verwendete, Protokoll. Es hat viele Beschränkungen
 - v1 sendet nur Daten für 2 Tage
-- v1 sends all 2 days of data on every reconnection
+- v1 sendet bei jeder erneuten Verbindung alle Daten der letzten 2 Tage
 - Websockets sind Pflicht = dauerhafte Verbindung, höherer Akkuverbrauch
 - Bei wiederholten Reconnects mit Nightscout wird die Verbindung für 15 Minuten pausiert, um eine erhöhte Datennutzung zu verhindern
 
@@ -639,7 +639,7 @@ EMPFOHLENE EINSTELLUNGEN
 - Aus den oben beschriebenen Gründen solltest Du auf allen Deinen Geräten die gleiche Methode verwenden (Hinweis: zum Redaktionsschluss nutzen alle Uploader derzeit noch V1). Wenn Du Dich für V3 entscheidest, wähle in AAPS und allen AAPSClients V3
 - Aus Effizienzgründen wird V3 bevorzugt
 - Der Einsatz von Websockets mit V3 oder nicht ist Geschmackssache
-- it is HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. Alle anderen Geräte und Anwendungen sollten Daten von Nightscout lediglich auslesen. Dadurch vermeidest Du Synchronisierungsfehler und -konflikte. Dies gilt auch für die Übermittlung der Glukosewerte an Nightscout mit dem Dexcom Share Connector o. ä. Tools
+- Es wird DRINGEND empfohlen, AAPS alle Daten sammeln und dann als einzigen Uploader zu NS hochladen zu lassen. Alle anderen Geräte und Anwendungen sollten Daten von Nightscout lediglich auslesen. Dadurch vermeidest Du Synchronisierungsfehler und -konflikte. Dies gilt auch für die Übermittlung der Glukosewerte an Nightscout mit dem Dexcom Share Connector o. ä. Tools
 
 ---
 
