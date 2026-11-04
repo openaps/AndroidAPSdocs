@@ -1,7 +1,7 @@
 # Für Mediziner und Fachpersonal - Eine allgemeine Einführung in und eine Anleitung für AAPS
 
 ```{note}
-Diese Seite ist eine sehr grobe Einführung für medizinisches Fachpersonal. It was last reviewed in June 2026. AAPS develops continuously, so for the most accurate and up-to-date detail always refer to the [main AAPS documentation](../index.md).
+Diese Seite ist eine sehr grobe Einführung für medizinisches Fachpersonal. Sie wurde zuletzt im Juni 2026 überprüft. AAPS wird ständig weiterentwickelt. Die genauesten und aktuellsten Informationen finden Sie daher immer in der [AAPS-Hauptdokumentation](../index.md).
 ```
 
 Diese Seite richtet sich an medizinischer Fachpersonal, das Interesse an der Open-Source-Technologie der künstlichen Bauchspeicheldrüse wie AAPS hat, und an Patienten, die diese Informationen mit ihren Ärzten und dem Diabetes-Team teilen möchten.
@@ -22,11 +22,11 @@ Ohne ein Closed Loop System sammelt der Patient mit Diabetes Daten von seiner Pu
 
 Bei der automatisierten Insulinverabreichung macht das System das Gleiche: Es sammelt Daten von der Pumpe, dem CGM und andere Informationen, die protokolliert werden (z.B. über Nightscout). Diese Informationen verwendet es als Basis seiner Berechnungen und entscheidet, wie viel mehr oder weniger Insulin benötigt wird (über oder unter der zugrunde liegenden Basalrate). Mittels temporärer Basalraten werden die notwendigen Anpassungen vorgenommen, um den BZ stabil zu halten oder in den Zielbereich zu bringen.
 
-If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basal rates running.
+Fällt das Gerät mit AAPS aus oder ist es außer Reichweite der Pumpe, wird die Pumpe nach dem Ende der letzten temporären Basalrate wieder zu einer normalen Pumpe, die die vorprogrammierten Basalraten abgibt.
 
 ## Wie Daten gesammelt werden
 
-Mit AAPS läuft auf dem Android-Gerät eine spezielle App, die Berechnungen vornimmt. Das Smartphone/Smartwatch kommuniziert über Bluetooth mit der unterstützten Pumpe. AAPS can communicate with other devices and to the cloud via Wi-Fi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+Mit AAPS läuft auf dem Android-Gerät eine spezielle App, die Berechnungen vornimmt. Das Smartphone/Smartwatch kommuniziert über Bluetooth mit der unterstützten Pumpe. AAPS kann mit anderen Geräten und der Cloud über WLAN oder mobile Datenverbindungen kommunizieren, um so zusätzliche Informationen zu sammeln. Über diesen Weg können Patienten, Pflegepersonal und Angehörige auch nachverfolgen, was und warum AndroidAPS etwas tut.
 
 Das Android-Gerät muss:
 
@@ -39,7 +39,7 @@ Es sammelt zudem alle Informationen über Boli, Kohlenhydrataufnahme und tempor�
 
 ## Woher weiß es, was es zu tun hat?
 
-Die Open-Source-Software wurde entwickelt, um die bisher von Diabetikern händisch durchgeführten Tätigkeiten zu übernehmen und zu berechnen, wie die Insulinzufuhr angepasst werden sollte. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of what BG levels are expected to do during the next hours in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Anschließend sendet es notwendigen Anpassungen an die Pumpe. Danach werden die Daten aus der Pumpe ausgelesen und die Berechnungen starten neu.
+Die Open-Source-Software wurde entwickelt, um die bisher von Diabetikern händisch durchgeführten Tätigkeiten zu übernehmen und zu berechnen, wie die Insulinzufuhr angepasst werden sollte. Es sammelt zunächst Daten von allen beteiligten Geräten und aus der Cloud, bereitet die Daten auf und führt die Berechnungen durch. Dann sagt es für verschiedene Szenarien voraus, wie sich die Glukosewerte in den nächsten Stunden voraussichtlich entwickeln, und berechnet die nötigen Anpassungen, um den Glukosewert im Zielbereich zu halten oder dorthin zurückzubringen. Anschließend sendet es notwendigen Anpassungen an die Pumpe. Danach werden die Daten aus der Pumpe ausgelesen und die Berechnungen starten neu.
 
 Es ist wichtig, qualitativ hochwertige CGM-Daten zu haben, da die Werte aus dem CGM die wichtigsten Eingabeparameter sind.
 
@@ -71,7 +71,7 @@ In diesem Beispiel wird erwartet, dass der BZ in Kürze unter den Sicherheitssch
 
 ### Szenario 3 - erhöhter Insulinbedarf
 
-Die Vorhersage in diesem Beispiel erwartetet ein Abfallen unter den Zielwert in der nahen Zukunft. Allerdings wird nicht erwartet, dass dieser Wert unter den Sicherheitsgrenzwert sinkt. Der langfristig erwartete BZ-Wert liegt oberhalb des Zielwertes. Therefore, AAPS will refrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). AndroidAPS beobachtet die CGM-Werte weiterhin und wird Insulin abgeben, sobald dies sicher möglich ist (ohne Unterzuckerungsgefahr), um den erwarteten hohen Wert zurück in den Zielbereich zu bringen. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMBs (super micro boluses)).*
+Die Vorhersage in diesem Beispiel erwartetet ein Abfallen unter den Zielwert in der nahen Zukunft. Allerdings wird nicht erwartet, dass dieser Wert unter den Sicherheitsgrenzwert sinkt. Der langfristig erwartete BZ-Wert liegt oberhalb des Zielwertes. Deshalb gibt AAPS kein Insulin ab, das zu einer baldigen Unterzuckerung beitragen würde (also Insulin, durch das die Prognose unter den Schwellenwert fallen würde). AndroidAPS beobachtet die CGM-Werte weiterhin und wird Insulin abgeben, sobald dies sicher möglich ist (ohne Unterzuckerungsgefahr), um den erwarteten hohen Wert zurück in den Zielbereich zu bringen. *(Je nach Einstellungen sowie Menge und Zeitpunkt des benötigten Insulins kann dieses Insulin über temporäre Basalraten oder SMBs (Super Micro Boli) abgegeben werden.)*
 
 ![Szenario 3](../images/Dosing_scenario_3.jpg)
 
@@ -87,13 +87,13 @@ Als Arzt, der möglicherweise keine Erfahrung mit AAPS oder DIY Closed Loop Syst
 
 Das Wichtigste für den Patienten ist, nur jeweils eine Änderung vorzunehmen und deren Auswirkungen 2 - 3 Tage lang zu beobachten, bevor er sich entscheidet, eine andere Einstellung zu ändern oder zu modifizieren. Dies gilt natürlich nicht, wenn es sich offensichtlich um eine "schlechte Anpassung" handelt, die die Situation verschlimmert. In diesem Fall sollte er sofort zur vorherigen Einstellung zurückkehren. Wir Menschen tendieren dazu, alles auf einmal ändern zu wollen. Aber wenn man das tut kann es sein, dass daraus suboptimale Einstellungen entstehen, die nur schwer wieder in einen guten Status zurückgeführt werden können.
 
-Eines der leistungsfähigsten Werkzeuge zur Durchführung von Einstellungsänderungen ist ein automatisiertes Kalkulationstool für Basalraten, ISF und BE-Faktoren. This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. It is designed to allow the data to guide you or your patient in making incremental changes to settings. Es hat sich in der Community bewährt, Autotune-Berichte zuerst zu überprüfen bevor man versucht, manuelle Anpassungen an den Einstellungen vorzunehmen. Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. Da diese Parameter sowohl für die Standardpumpentherapie als auch für den Closed Loop die Basis darstellen, wäre die Diskussion der Autotune-Ergebnisse und die Anpassung dieser Parameter die natürliche Verbindung zum Arzt.
+Eines der leistungsfähigsten Werkzeuge zur Durchführung von Einstellungsänderungen ist ein automatisiertes Kalkulationstool für Basalraten, ISF und BE-Faktoren. Dies nennt man „[Autotune](#autotune-how-autotune-calculates-adjustments)“. Es ist so angelegt, dass die Daten Sie bzw. Ihre Patienten dabei leiten, die Einstellungen schrittweise anzupassen. Es hat sich in der Community bewährt, Autotune-Berichte zuerst zu überprüfen bevor man versucht, manuelle Anpassungen an den Einstellungen vorzunehmen. Autotune ist als Modul in AAPS integriert (**Konfiguration** → **Allgemein** → **Autotune**); siehe [Autotune](../AdvancedOptions/Autotune.md). Es kann bei Bedarf oder automatisch ausgeführt werden. Da diese Parameter sowohl für die Standardpumpentherapie als auch für den Closed Loop die Basis darstellen, wäre die Diskussion der Autotune-Ergebnisse und die Anpassung dieser Parameter die natürliche Verbindung zum Arzt.
 
-Darüber hinaus beeinflusst das menschliche Verhalten, das in der manuellen Diabetes-Therapie erlernt wurde, oft die Ergebnisse - auch bei einem DIY Closed Loop. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). In vielen Fällen kann es aber sein, dass der Patient sich auf Basis seiner bisherigen Erfahrungen entscheidet, deutlich mehr Kohlenhydrate zu sich zu nehmen. Dies führt zu einem schnelleren Anstieg sowohl aus der zusätzlichen Glukose als auch durch die von AndroidAPS im Vorfeld vorgenommene Reduktion der Insulingabe.
+Darüber hinaus beeinflusst das menschliche Verhalten, das in der manuellen Diabetes-Therapie erlernt wurde, oft die Ergebnisse - auch bei einem DIY Closed Loop. Wird zum Beispiel ein niedriger Glukosewert vorhergesagt und AAPS reduziert auf dem Weg nach unten das Insulin, reicht oft schon eine kleine Menge Kohlenhydrate (z. B. 3-4 g), um den Glukosewert von 70 mg/dl (3,9 mmol/l) wieder anzuheben. In vielen Fällen kann es aber sein, dass der Patient sich auf Basis seiner bisherigen Erfahrungen entscheidet, deutlich mehr Kohlenhydrate zu sich zu nehmen. Dies führt zu einem schnelleren Anstieg sowohl aus der zusätzlichen Glukose als auch durch die von AndroidAPS im Vorfeld vorgenommene Reduktion der Insulingabe.
 
 ## OpenAPS
 
-**This guide was adapted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AAPS greift auf viele der in OpenAPS implementierten Techniken zurück und teilt einen Großteil der Logik und Algorithmen, weshalb dieses Handbuch dem ursprünglichen OpenAPS-Handbuch sehr ähnlich ist. Ein Großteil der Informationen über OpenAPS kann leicht auf AAPS übertragen werden, wobei der Hauptunterschied in der genutzten Hardware, auf der die Software ausgeführt wird, liegt.
+**Dieser Leitfaden wurde aus [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html) übernommen und angepasst.** OpenAPS ist ein System, das für einen kleinen tragbaren Computer entwickelt wurde (meist „Rig“ genannt). AAPS greift auf viele der in OpenAPS implementierten Techniken zurück und teilt einen Großteil der Logik und Algorithmen, weshalb dieses Handbuch dem ursprünglichen OpenAPS-Handbuch sehr ähnlich ist. Ein Großteil der Informationen über OpenAPS kann leicht auf AAPS übertragen werden, wobei der Hauptunterschied in der genutzten Hardware, auf der die Software ausgeführt wird, liegt.
 
 ## Zusammenfassung
 
@@ -104,4 +104,4 @@ Zusätzliche Literaturhinweise:
 * Die [vollständige AAPS-Dokumentation](../index.md)
 * Das [OpenAPS Reference Design](https://OpenAPS.org/reference-design/) das erklärt, wie OpenAPS für die Sicherheit konzipiert ist: https://openaps.org/reference-design/
 * Die [vollständige OpenAPS-Dokumentation](https://openaps.readthedocs.io/en/latest/index.html) 
-  * See [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision) in this documentation, or [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) for the underlying algorithm in full technical detail
+  * Siehe [Wie AAPS aus Prognosen eine Dosierungsentscheidung macht](#aaps-screens-how-predictions-become-a-dosing-decision) in dieser Dokumentation oder die [determine-basal-Dokumentation von OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) für den zugrunde liegenden Algorithmus in allen technischen Einzelheiten
