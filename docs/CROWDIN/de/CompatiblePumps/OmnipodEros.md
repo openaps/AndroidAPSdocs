@@ -564,7 +564,7 @@ Die Schaltflächen unten auf dem Pumpenbildschirm ändern sich je nach Situation
 
 **Schaltflächen für den Pod-Status** (angezeigt, wenn ein Pod aktiv ist):
 
-- **Aktualisieren:** Sendet einen Aktualisierungsbefehl an den aktiven Pod, um seinen Status zu aktualisieren. Nutze sie, um den Pod-Status zu aktualisieren und Statusfelder mit dem Text „(unsicher)“ zu bereinigen. Weitere Informationen zur [Problembehandlung](#OmnipodEros-troubleshooting) findest Du im Abschnitt unten.
+- **Aktualisieren:** Sendet einen Aktualisierungsbefehl an den aktiven Pod, um seinen Status zu aktualisieren. Nutze sie, um den Pod-Status zu aktualisieren und Statusfelder mit dem Text „(unsicher)“ zu bereinigen. Weitere Informationen zur [Fehlerbehebung](#OmnipodEros-troubleshooting) findest Du im Abschnitt unten.
 
   ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)
 
@@ -854,7 +854,7 @@ Die Batteriestandsmeldung ist eine Einstellung, die aktiviert werden kann, um de
 
 (OmnipodEros-troubleshooting)=
 
-## Problembehandlung
+## Fehlerbehebung
 
 ### Pod Fehler
 
