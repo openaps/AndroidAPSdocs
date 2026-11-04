@@ -3,10 +3,97 @@
 # בנייה בדפדפן: פתרון תקלות
 
 ```{note}
-דף זה מרכז עצות לפתרון תקלות ב[בנייה בדפדפן](../SettingUpAaps/BrowserBuild.md).
-
-משתמשים ב-**AAPS Builder**? יש להתחיל מ[חלק פתרון התקלות](#aaps-builder-troubleshooting) שלו. החלקים על Google Drive בהמשך מתאימים גם לו.
+This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
 ```
+
+(aaps-builder-troubleshooting)=
+
+## AAPS Builder
+
+### Step 1: the repository
+
+(aaps-builder-ts-repo-exists)=
+
+#### "my-aaps already exists in this account"
+
+![Repository already exists](../images/Building-the-App/CI/AapsBuilder70_RepoExists.png)
+
+You already have this repository, for example from an earlier attempt. Close the GitHub tab, keep that name in step 1 of the setup page and go on. If you already did steps 2 and 3 for it, your key is still in it: continue with [step 4](#aaps-builder-step4). If it was made with an earlier version of the setup page, update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). You prefer a fresh start? Type another name, for example `my-aaps-2`, and use the same keystore in step 2.
+
+(aaps-builder-ts-user-not-found)=
+
+#### "No GitHub user with this name"
+
+![No GitHub user](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
+
+- **"No GitHub user with this name"** בשלב 1: יש להקליד את שם המשתמש שלכם ב-GitHub, כמו שהוא מופיע בפרופיל GitHub שלכם, לא את כתובת הדוא"ל.
+- **אין כפתור "Build AAPS" או "Run workflow", או שהמאגר ריק**: המאגר לא נוצר מהתבנית. יש למחוק אותו (**Settings** ← בתחתית הדף ← **Delete this repository**) ולבצע שוב את [שלב 1](#aaps-builder-step1) עם הכפתור **Create my private repository**.
+
+### Step 3: the secret
+
+(aaps-builder-ts-404)=
+
+#### "Page not found" (404)
+
+![GitHub 404](../images/Building-the-App/CI/AapsBuilder79_404.png)
+
+- **"Page not found" (404) כשדף ההגדרה פותח את GitHub**: יש להתחבר ל-github.com באותו דפדפן (GitHub מציג 404 למאגרים פרטיים כשלא מחוברים). אם אתם מחוברים, שם המשתמש או שם המאגר בשלב 1 של דף ההגדרה לא תואמים למאגר שלכם. יש להקליד את השמות המדויקים.
+
+### Step 4: the build
+
+(aaps-builder-ts-workflow-not-found)=
+
+#### "This workflow does not exist"
+
+![This workflow does not exist](../images/Building-the-App/CI/AapsBuilder71_WorkflowNotFound.png)
+
+Right after the repository is created, GitHub may not have read its workflow file yet: **Build AAPS** is missing from the **Actions** tab, and there is no **Run workflow** button. Any small change to the file makes GitHub read it:
+
+1. In your repository, open **Code**, then the folder `.github`, then `workflows`, then the file `build.yml`.
+2. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
+
+   ![File menu](../images/Building-the-App/CI/AapsBuilder72_FileMenu.png)
+
+3. Tap at the very end of the text and add an empty line (Enter). Tap **Commit changes…** at the top.
+
+   ![Editor](../images/Building-the-App/CI/AapsBuilder73_Editor.png)
+
+4. Tap **Commit changes** again.
+
+   ![Commit changes](../images/Building-the-App/CI/AapsBuilder74_CommitDialog.png)
+
+5. Open the **Actions** tab again: **Build AAPS** is now in the list of workflows (on a phone, the list opens with the icon at the left of **All workflows**). Tap it, then **Run workflow**.
+
+   ![List of workflows](../images/Building-the-App/CI/AapsBuilder75_WorkflowsSidebar.png)
+
+(aaps-builder-ts-build-failed)=
+
+#### The build failed (red cross)
+
+1. On the setup page, tap **Open my builds** and tap the build with the red cross.
+
+   ![Failed build](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
+
+2. The page of the build shows **Failure**, and which part failed: **AAPS / Check** (the repository, the secret, the version or the variant: nothing was built) or **AAPS / Build AAPS**.
+
+   ![Build page: Failure](../images/Building-the-App/CI/AapsBuilder77_RunFailed.png)
+
+3. Scroll down to **Annotations**, with your finger on the text, not on the diagram. The red lines explain the problem: tap **Show more** to read the whole message, then find it below.
+
+   ![Annotations (הערות)](../images/Building-the-App/CI/AapsBuilder78_Annotations.png)
+
+- **"Secret KEYSTORE_SET is missing"**: יש לבצע את שלב 3 של דף ההגדרה.
+- **הבנייה נעצרת עם "This repository is PUBLIC"**: במאגר שלכם יש לפתוח **Settings** ← **General** ← **Danger Zone** ← **Change visibility** ← **Private**, ואז לבנות שוב.
+- **"Version … does not exist"**: only released versions of **AAPS** can be built, the ones on the [tags page](https://github.com/nightscout/AndroidAPS/tags) of nightscout/AndroidAPS, such as `3.3.2.0`. A branch name such as `dev` doesn't work. Use `latest`, or type a tag exactly as listed.
+- **"Variant … is not supported"**: קובץ ה-workflow שלכם הוא גרסה ישנה. יש להחליף אותו כמו שמוסבר ב[עדכון AAPS](#aaps-builder-updates).
+- **"The secret is too short"**, **"The secret is not a valid code"** או **"The secret does not contain a keystore"**: הודבק ב-secret טקסט שגוי, לרוב המילה `KEYSTORE_SET` עצמה, או רק חלק מהקוד. במאגר שלכם, יש לפתוח **Settings** ← **Secrets and variables** ← **Actions**, לערוך את `KEYSTORE_SET` ולהדביק שוב את הקוד הארוך מ-**Copy secret** (אם סגרתם את דף ההגדרה, קודם יש לבצע שוב את שלב 2 שלו).
+- **"Keystore, password or alias is wrong"**: יש לבדוק את הסיסמה ואת ה-alias של ה-keystore, ואז לבצע שוב את שלבים 2 ו-3 של דף ההגדרה.
+- **"Google Drive access has expired or was revoked"**: יש לבצע שוב את [שלב 6](#aaps-builder-google-drive) ולעדכן את ה-secret `GDRIVE_OAUTH2`.
+- **Another error**: [read the build log](#aaps-ci-read-the-logs), then [run the build again](#aaps-ci-rerun). If it fails again the same way, ask for help with the name of the failed step and the error lines. אף פעם אין לשתף את התוכן של ה-secrets שלכם.
+
+### Step 5: the app
+
+- **אין קישור Download, או שנפתחה אפליקציית GitHub**: אפליקציית GitHub לא יכולה להוריד בניות. יש לפתוח את הבנייה ב-Chrome כמו שמוסבר ב[שלב 5](#aaps-builder-step5). כדי שקישורים של GitHub לא ייפתחו באפליקציה: ב-Android **Settings** (הגדרות) ← **Apps** (אפליקציות) ← **GitHub** ← **Open by default** (פתיחה כברירת מחדל) ← לכבות את **Open supported links** (פתיחת קישורים נתמכים).
 
 ## פתרון תקלות ב-AAPS-CI
 
