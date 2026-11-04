@@ -26,7 +26,7 @@ Eine Szene hat außerdem eine **Dauer** – eine feste Zeit (Minuten/Stunden/Tag
 
 ## Szenen verwalten
 
-Öffne **Bearbeiten → Szenen**, um Deine Szenen anzusehen, zu erstellen, zu bearbeiten, ein- oder auszuschalten und neu zu ordnen.
+Öffne **Verwalten → Szenen**, um Deine Szenen anzusehen, zu erstellen, zu bearbeiten, ein- oder auszuschalten und neu zu ordnen.
 
 ![The Scenes management screen](../images/v4/Scenes/scenes_list.png)
 
@@ -95,7 +95,7 @@ Jeder Schritt beginnt mit einer kurzen Erklärung, was die Aktion bewirkt. So se
 
 ## Eine Szene aktivieren
 
-Aktiviere eine Szene in der Liste **Szenen** (Knopf **▶**) oder über den Eintrag **Szenen** in der unteren Navigationsleiste. Im Fenster **Szenen** der unteren Navigationsleiste zeigt jede Szene dieselbe Zusammenfassung wie in der Liste der Szenen, und der **Stift** oben im Fenster öffnet **Bearbeiten → Szenen**, um Deine Szenen zu erstellen oder zu bearbeiten.
+Aktiviere eine Szene in der Liste **Szenen** (Knopf **▶**) oder über den Eintrag **Szenen** in der unteren Navigationsleiste. Im Fenster **Szenen** der unteren Navigationsleiste zeigt jede Szene dieselbe Zusammenfassung wie in der Liste der Szenen, und der **Stift** oben im Fenster öffnet **Verwalten → Szenen**, um Deine Szenen zu erstellen oder zu bearbeiten.
 
 ![The Scenes sheet of the bottom navigation](../images/v4/Scenes/scenes_sheet.png)
 
@@ -136,7 +136,7 @@ Läuft die Dauer von selbst ab, werden die Änderungen sofort rückgängig gemac
 
 ## Szenen über Automatisierungen auslösen
 
-Eine Szene muss nicht von Hand gestartet werden – die **Automatisierung** kann das für Dich erledigen. Fügst Du einer Automatisierungsregel eine Aktion hinzu (**Bearbeiten → Automatisierung**), hat die Auswahl der Aktionen eine Kategorie **Szenen**:
+Eine Szene muss nicht von Hand gestartet werden – die **Automatisierung** kann das für Dich erledigen. Fügst Du einer Automatisierungsregel eine Aktion hinzu (**Verwalten → Automatisierung**), hat die Auswahl der Aktionen eine Kategorie **Szenen**:
 
 - **Szene ausführen** – aktiviert eine Szene, wenn die Bedingungen der Regel erfüllt sind (zum Beispiel zu einer bestimmten Uhrzeit, wenn Du irgendwo ankommst oder wenn die Glukose eine Schwelle überschreitet).
 - **Szene aktivieren** / **Szene deaktivieren** – macht eine Szene verfügbar (oder nicht verfügbar), ohne sie zu starten.
