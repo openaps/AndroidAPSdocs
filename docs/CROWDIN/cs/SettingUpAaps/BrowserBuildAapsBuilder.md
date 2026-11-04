@@ -102,6 +102,8 @@ Stránka nastavení je součástí této dokumentace, ve vašem jazyce. Nechte s
 
 Stránka nastavení otevírá každou stránku GitHubu na nové kartě Chromu. Pro návrat na stránku nastavení klepněte na tlačítko karet vedle adresního řádku Chromu (čtverec s číslem) a zvolte stránku nastavení AAPS Builder.
 
+![Tab switcher](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
+
 Stránka nastavení běží celá ve vašem prohlížeči: váš klíč a hesla se nikam neposílají, kromě GitHub secretu, do kterého je sami vložíte. GitHubu se posílá jen vaše uživatelské jméno, aby se ověřilo, že existuje. Pamatuje si vaše uživatelské jméno na GitHubu a název repozitáře, takže se k ní můžete kdykoli vrátit a znovu otevřít stránku secretů nebo svá sestavení.
 
 ![Stránka nastavení AAPS Builder](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
@@ -144,8 +146,14 @@ Tento krok vytvoří ve vašem účtu GitHub vlastní soukromou kopii AAPS Build
 
    GitHub ukáže váš nový repozitář: obsahuje složku `.github` (se sestavovacím workflow) a soubor `README.md`. **Vraťte se na kartu se stránkou nastavení** kvůli kroku 2: klepněte na tlačítko karet vedle adresního řádku Chromu a zvolte stránku nastavení.
 
+   ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
+
 ```{warning}
 **Váš nový repozitář je prázdný**, bez souborů? Nebyl vytvořen ze šablony a nemůže sestavovat. Smažte ho (**Settings** → konec stránky → **Delete this repository**) a potom na stránce nastavení znovu klepněte na **Create my private repository**.
+```
+
+```{tip}
+GitHub says **my-aaps already exists in this account**? You already have your repository: close the GitHub tab and go on with the setup page. If your key is already in it, continue with [step 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
 (aaps-builder-step2)=
@@ -253,6 +261,7 @@ GitHub ukazuje **Page not found** (404)? Nejprve zkontrolujte, že jste v tomto 
 Pokud tam není tlačítko **Build AAPS** ani **Run workflow**:
 
 - Otevřete svůj repozitář a zkontrolujte, že obsahuje složku `.github` se souborem `workflows/build.yml`. Pokud je repozitář prázdný, nebyl vytvořen ze šablony: smažte ho (**Settings** → konec stránky → **Delete this repository**) a proveďte [krok 1](#aaps-builder-step1) znovu pomocí tlačítka.
+- The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
 - Otevřete kartu **Actions**. Pokud je tam napsáno, že workflow jsou vypnutá, klepněte na zelené tlačítko pro jejich povolení a potom v seznamu klepněte na **Build AAPS**.
 
 (aaps-builder-step5)=
@@ -311,10 +320,28 @@ Každé sestavení si můžete nechat ukládat také na svůj Disk Google, do sl
 Potřebujete k tomu ještě jeden secret, `GDRIVE_OAUTH2`. Krok 6 stránky nastavení ho pro vás získá od Googlu, v telefonu i na počítači. **AAPS** pak na vašem Disku Google vidí a mění jen soubory, které samo vytvoří, nic jiného.
 
 1. Na stránce nastavení klepněte na **Connect Google Drive**. Google se otevře na nové kartě.
+
 2. Zvolte svůj účet Google a povolte přístup. Pokud Google napíše, že aplikace není ověřená, klepněte na **Rozšířená nastavení** (Advanced) a potom na **Přejít na …** (Go to …).
-3. Nová karta pak ukáže chybu jako **Tento web není dostupný** (This site can't be reached) nebo **Připojení k webu 127.0.0.1 bylo odmítnuto** (127.0.0.1 refused to connect). **To je v pořádku:** odpověď Googlu je v adrese této karty. Klepněte na adresní řádek, vyberte celou adresu (začíná `http://127.0.0.1:47913/`) a zkopírujte ji.
+
+   ![Choose an account](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
+
+   ![Continue](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
+
+3. Nová karta pak ukáže chybu jako **Tento web není dostupný** (This site can't be reached) nebo **Připojení k webu 127.0.0.1 bylo odmítnuto** (127.0.0.1 refused to connect). **To je v pořádku:** odpověď Googlu je v adrese této karty. Tap the address bar, then the copy icon next to the address (on a computer: select the whole address and copy it). Začíná na `http://127.0.0.1:47913/`.
+
+   ![This site can't be reached](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
+
+   ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
+
 4. Do několika minut se vraťte na kartu se stránkou nastavení: odpověď Googlu platí jen krátce a jen jednou. Vložte adresu do pole **Paste the copied address here** a klepněte na **Get GDRIVE_OAUTH2**. Stránka ukáže **GDRIVE_OAUTH2 is ready**.
+
+   ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
+
+   ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
+
 5. Klepněte na **Open the secrets page**. Klepněte na **Copy name** a vložte ho do malého pole **Name** (název je `GDRIVE_OAUTH2`). Klepněte na **Copy secret**, vložte ho do velkého pole **Secret** a klepněte na **Add secret**.
+
+   ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
 Od příštího sestavení se soubory APK ukládají také na Disk Google.
 
@@ -337,31 +364,15 @@ Váš repozitář nikdy nic nesestaví sám: vy rozhodujete, kdy sestavit, jakou
 **Aktualizace vašeho souboru workflow** jsou vzácné: jen když se změní formulář **Run workflow**, například kvůli nové variantě sestavení, nebo jednou, pokud byl váš repozitář vytvořen starší verzí stránky nastavení (prázdný repozitář s krátkým souborem workflow) nebo ze staré šablony. Uvede to stránka [Aktualizace a změny dokumentace](../Maintenance/DocumentationUpdate.md). Váš secret `KEYSTORE_SET` zůstává beze změny. Na stránce nastavení otevřete na konci kroku 1 část **Updating your copy**:
 
 1. Klepněte na **Open the newest workflow**. Na počítači klikněte vpravo nahoře u souboru na **ikonu kopírování** („Copy raw file“). V telefonu místo toho otevřete **verzi v prostém textu**, dlouze stiskněte text a zvolte **Vybrat vše** a **Kopírovat**.
-2. Klepněte na **Open my workflow file**.
+2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
 3. Nahraďte celý text zkopírovaným workflow (v telefonu dlouhým stiskem: **Vybrat vše** a potom **Vložit**).
 4. Klepněte na **Commit changes…** a potom na **Commit changes**.
 
 První řádek souboru ukazuje jeho verzi.
 
-(aaps-builder-troubleshooting)=
-
 ## Řešení problémů
 
-Chcete-li zjistit, proč sestavení selhalo, [přečtěte si log sestavení](#aaps-ci-read-the-logs): kroky se jmenují jinak, ale chybu najdete stejným způsobem. Stejným způsobem můžete také [aktualizovat secret](#aaps-ci-update-secret) a [spustit sestavení znovu](#aaps-ci-rerun).
-
-- **Chybí tlačítko „Build AAPS“ nebo „Run workflow“, nebo je repozitář prázdný**: repozitář nebyl vytvořen ze šablony. Smažte ho (**Settings** → konec stránky → **Delete this repository**) a proveďte [krok 1](#aaps-builder-step1) znovu pomocí tlačítka **Create my private repository**.
-- **Sestavení se zastaví se zprávou „This repository is PUBLIC“**: ve svém repozitáři otevřete **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private** a potom sestavte znovu.
-- **„Secret KEYSTORE_SET is missing“**: proveďte krok 3 stránky nastavení.
-- **„The secret is too short“**, **„The secret is not a valid code“** nebo **„The secret does not contain a keystore“**: do secretu byl vložen špatný text, často samotné slovo `KEYSTORE_SET` nebo jen část kódu. Ve svém repozitáři otevřete **Settings** → **Secrets and variables** → **Actions**, upravte `KEYSTORE_SET` a znovu vložte dlouhý kód z **Copy secret** (pokud jste stránku nastavení zavřeli, nejprve zopakujte její krok 2).
-- **„Keystore, password or alias is wrong“**: zkontrolujte heslo a alias svého úložiště klíčů a potom zopakujte kroky 2 a 3 stránky nastavení.
-- **„Version … does not exist“**: zadaná verze není vydaná verze AAPS. Použijte `latest`, nebo zkontrolujte číslo verze.
-- **„Variant … is not supported“**: váš soubor workflow je ve starší verzi. Nahraďte ho podle části [Aktualizace AAPS](#aaps-builder-updates).
-- **„Page not found“ (404), když stránka nastavení otevře GitHub**: přihlaste se na github.com ve stejném prohlížeči (GitHub ukazuje 404 u soukromých repozitářů, když nejste přihlášeni). Pokud jste přihlášeni, uživatelské jméno nebo název repozitáře v kroku 1 stránky nastavení neodpovídá vašemu repozitáři. Zadejte přesné názvy.
-- **„No GitHub user with this name“** v kroku 1: zadejte své uživatelské jméno na GitHubu tak, jak je uvedeno ve vašem profilu GitHub, ne e-mail.
-- **Chybí odkaz Download, nebo se otevřela aplikace GitHub**: aplikace GitHub neumí stahovat sestavení. Otevřete sestavení v Chromu podle [kroku 5](#aaps-builder-step5). Aby se odkazy GitHubu neotevíraly v aplikaci: v Androidu **Nastavení** → **Aplikace** → **GitHub** → **Otevírat ve výchozím nastavení** → vypněte **Otevírat podporované odkazy**.
-- **„Google Drive access has expired or was revoked“**: zopakujte [krok 6](#aaps-builder-google-drive) a aktualizujte secret `GDRIVE_OAUTH2`.
-
-Další problémy s GitHubem a Diskem Google najdete na stránce [Sestavení v prohlížeči: řešení problémů](../GettingHelp/BrowserBuildTroubleshooting.md).
+Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
 
 ```{toctree}
 :hidden:
