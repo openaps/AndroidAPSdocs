@@ -8,7 +8,7 @@ Dein **AAPS-Profil** besteht aus vier wichtigen Parametern, die festlegen, wie *
 
 ```{admonition} Where did DIA go?
 :class: note
-Die **Insulinwirkdauer (DIA)** ist nicht mehr Teil Deines **Profils**. Sie wird stattdessen für jedes Insulin eingestellt – siehe [Bearbeiten → Insulineinstellungen](#Config-Builder-insulin-dia).
+Die **Insulinwirkdauer (DIA)** ist nicht mehr Teil Deines **Profils**. Sie wird stattdessen für jedes Insulin eingestellt – siehe [Verwalten → Insulineinstellungen](#Config-Builder-insulin-dia).
 ```
 
 Im Rahmen des Umgangs mit **AAPS** solltest Du die Genauigkeit Deiner **Profil**-Einstellungen laufend prüfen und hinterfragen. Es wird empfohlen, die Einstellungen in der Reihenfolge vorzunehmen, wie es hier dargestellt ist. Stelle sicher, dass die Einstellung wirklich richtig ist, bevor Du die jeweils nächste in Angriff nimmst. Taste dich in kleinen Schritten voran, statt zu viele Änderungen auf einmal vorzunehmen. Vergiss nicht nach jeder Änderung Dein Profil auch zu aktivieren. Sichere [Deine **Profil**](#YourAapsProfile_Profile-backup)-Einstellungen regelmäßig, indem Du die Einstellungen exportierst.
@@ -254,7 +254,7 @@ Negatives **IOB** bedeutet, dass die Gesamtmenge des in Deinem Körper aktiven I
 Hier jetzt einige Gründe für das Entstehen negativen IOBs und mögliche Reaktionen darauf:
 * Ein zu starkes Basal: Optimiere Dein **Profil**
 * Ein zu großer Mahlzeiten-Bolus: Optimiere Dein **Profil** oder überprüfe, ob Du zum richtigen Zeitpunkt bolst.
-* DIA für Deine Insulinart zu kurz eingestellt, wodurch sich Insulin aufaddiert (stapelt): Passe sie unter [Bearbeiten → Insulineinstellungen](#Config-Builder-insulin-dia) an
+* DIA für Deine Insulinart zu kurz eingestellt, wodurch sich Insulin aufaddiert (stapelt): Passe sie unter [Verwalten → Insulineinstellungen](#Config-Builder-insulin-dia) an
 * Bewegung: Beim nächsten Mal solltest Du während (eventuell bereits vor) der Aktivität ein reduziertes [prozentuales Profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) nutzen, um so der höheren Insulin-Empfindlichkeit gerecht zu werden.
 
 ## Deine Profile verwalten
@@ -266,7 +266,7 @@ Hier jetzt einige Gründe für das Entstehen negativen IOBs und mögliche Reakti
 (your-aaps-profile-create-and-edit-profiles)=
 ### Profile erstellen und bearbeiten
 
-In **AAPS** v4 befinden sich Deine Profile im Bildschirm **Bearbeiten** (untere Navigationsleiste) → **Profil**, als Kartenkarussell zum Wischen mit einer Aktionsleiste (**➕ Hinzufügen**, **✏️ Bearbeiten**, **⧉ Klonen**, **🗑️ Löschen**, **▶ Aktivieren**). Wie Du ein Profil verwaltest und aktivierst, steht unter [Profile verwalten und aktivieren](#ProfileSwitch-manage-v4). Du kommst von **AAPS** v3, wo die Profile einen eigenen Reiter hatten? Siehe [Änderungen mit AAPS Version 4](#v4changes-manage).
+In **AAPS** v4 befinden sich Deine Profile im Bildschirm **Verwalten** (untere Navigationsleiste) → **Profil**, als Kartenkarussell zum Wischen mit einer Aktionsleiste (**➕ Hinzufügen**, **✏️ Bearbeiten**, **⧉ Klonen**, **🗑️ Löschen**, **▶ Aktivieren**). Wie Du ein Profil verwaltest und aktivierst, steht unter [Profile verwalten und aktivieren](#ProfileSwitch-manage-v4). Du kommst von **AAPS** v3, wo die Profile einen eigenen Reiter hatten? Siehe [Änderungen mit AAPS Version 4](#v4changes-manage).
 
 Ein Tippen auf **✏️ Bearbeiten** öffnet den Editor. Lege **Name** und **Einheiten** des Profils fest und fülle dann über die Reiter die vier Zeitpläne aus:
 
@@ -316,7 +316,7 @@ Mehr Informationen findest Du im Abschnitt [Profilwechsel & Prozentuale Profilan
 
 Der [Behandlungsverlauf](#aaps-screens-treatments) zeigt alle bisherigen **Profilwechsel**. Wenn Du zum Reiter **Profilwechsel** gehst, kannst Du einen bereits erfolgten **Profilwechsel** als Basis für ein neues **Profil** nutzen. Zeitverschiebung und Prozentsatz des Profilwechsels werden in das lokale neue Profil übernommen. Tippe auf den Knopf **Klonen** in Zeile **2**.
 
-Jetzt kannst Du zum [Profil-Bildschirm](#your-aaps-profile-create-and-edit-profiles) (**Bearbeiten → Profil**) gehen und das neu erstellte Profil bearbeiten.
+Jetzt kannst Du zum [Profil-Bildschirm](#your-aaps-profile-create-and-edit-profiles) (**Verwalten → Profil**) gehen und das neu erstellte Profil bearbeiten.
 
 (YourAapsProfile_Profile-backup)=
 ### Sicherung Deines Profils
