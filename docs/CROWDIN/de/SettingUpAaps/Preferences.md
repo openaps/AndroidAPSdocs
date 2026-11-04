@@ -398,7 +398,7 @@ Solange die Client-Steuerung eingeschaltet ist (im Einfachen Modus immer), sind 
 
 ### Remote-Steuerung
 
-Der Schalter „**Client-Steuerung erlauben**“ befindet sich nicht mehr in diesen Einstellungen: Er steht oben unter **Bearbeiten → Autorisierte Clients**, wo die gekoppelten Clients verwaltet werden. Siehe die eigene Seite [Client-/Master-Steuerung](../RemoteFeatures/ClientMasterControl.md), auch zum [Geschützten Modus](#client-master-control-hardened-mode), den dieser Schalter einschaltet.
+Der Schalter „**Client-Steuerung erlauben**“ befindet sich nicht mehr in diesen Einstellungen: Er steht oben unter **Verwalten → Autorisierte Clients**, wo die gekoppelten Clients verwaltet werden. Siehe die eigene Seite [Client-/Master-Steuerung](../RemoteFeatures/ClientMasterControl.md), auch zum [Geschützten Modus](#client-master-control-hardened-mode), den dieser Schalter einschaltet.
 
 ### Verbindungseinstellungen
 
