@@ -16,14 +16,14 @@ Wenn Du den **dynamischen ISF** einsetzt, deaktiviere alle **Automatisierungsreg
 
 Um den **dynamischen ISF** nutzen zu können, müssen in der **AAPS**-Datenbank mindestens **AAPS**-Daten der letzten 7 Tage vorliegen.
 
-## What does Dynamic ISF do?
+## Was macht Dynamic ISF?
 
 **Dynamischer ISF** passt den Faktor für die Insulinempfindlichkeit **ISF** dynamisch an und berücksichtigt dabei:
 
 - Den Tages-Gesamtinsulinbedarf (**TDD**); und
 - den aktuellen und die prognostizierten Glukosewerte.
 
-When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation of the app).
+Mit **Dynamic ISF** werden die im **Profil** eingetragenen **ISF**-Werte gar nicht mehr verwendet, außer als Rückfallwert, wenn in der **AAPS**-Datenbank nicht genug TDD-Daten vorhanden sind (*z. B.* nach einer Neuinstallation der App).
 
 **SMB/AMA** - ein echtes Beispiel eines **Profils** mit statischem **ISF**, so wie es in der Praxis vorkommt und durch **SMB** und **AMA** genutzt wird.
 
@@ -37,7 +37,7 @@ Der rot eingekreiste Bereich zeigt: `Profil-ISF` -> `ISF wie er von DynISF` bere
 
 Der **DynISF**-Wert kann auch in einem Diagramm angezeigt werden: Tippe unter den Diagrammen auf dem Startbildschirm auf **Diagramm hinzufügen** und wähle **VSENS** (variable Empfindlichkeit). Er erscheint als weiße Linie (unten im Bild oben).
 
-## How is Dynamic ISF calculated?
+## Wie wird Dynamic ISF berechnet?
 
 **Dynamic ISF** verwendet das Modell von Chris Wilson, um **ISF** anstelle des statischen **ISF**-Wertes zu ermitteln, der im **Profil** festgelegt wurde. Weitergehende Erklärungen findest Du (in englischer Sprache) hier: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
 
@@ -70,8 +70,8 @@ Dies wird getan, um zu hohe Insulinabgaben zu verhindern, wenn der **Glukosewert
 
 **Future ISF** (dt. zukünftiger ISF) nutzt die gleiche Formel, so wie sie oben beschrieben ist, mit der Ausnahme, dass es den **minimum predicted BG** (dt. niedrigste vorhergesagte Glukosewert) anstelle des **current BG** (dt. aktuellen Glukosewerts) verwenden kann. Der **minimale vorhergesagte BZ**, [wie ihn oref1 berechnet](#aaps-screens-how-predictions-become-a-dosing-decision), ist der niedrigste Wert, den Dein BZ laut den Vorhersagen im gesamten Vorhersagezeitraum erreicht.
 
-* If the current **BG** is above target<br/> **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
-* If eventual **BG** is above target and glucose levels are increasing,<br/> **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
+* Wenn der aktuelle **Glukosewert** über dem Zielwert liegt<br/> **und** die **Glukosewerte** stabil sind (innerhalb von +/- 3 mg/dl):<br/>wird der Glukosewert so in die Formel eingesetzt: `average(minimum predicted BG, current BG)`.
+* Wenn der voraussichtliche **Glukosewert** (eventual BG) über dem Zielwert liegt und die Glukosewerte steigen,<br/> **oder** der voraussichtliche **Glukosewert** über dem aktuellen **Glukosewert** liegt:<br/>wird der Glukosewert so in die Formel eingesetzt: `current BG`.
 * In allen anderen Fällen wird in der Formel als <br/>Glukosewert der niedrigste vorhergesagte Glukosewert (`minimum predicted BG`) genutzt.
 
 Die Screenshots unten geben eine vereinfachte Erklärung der oben beschriebenen Szenarien. Orange Punkte werden für **predicted BG**, lila-farbene Punkte für **average(predicted BG, current BG)** und blaue Punkte für **current BG** verwendet.
@@ -101,7 +101,7 @@ Hake zum Aktivieren **Dynamische Empfindlichkeit verwenden** in den [Einstellung
 ![Dynamic ISF settings](../images/preferences/settings_dynamic_isf.png)
 
 (dyn-isf-adjustment-factor)=
-### DynamicISF adjustment factor
+### DynamicISF Anpassungsfaktor
 Der **dynamische ISF** geht von der Grundidee aus, dass Personen, die den gleichen **TDD** haben auch die gleiche Empfindlichkeit haben. Da die Empfindlichkeiten in der Realität aber tatsächlich verschieden sind, kann mit dem **Anpassungsfaktor** eine Anpassung an die eigene Situation vorgenommen werden. Der Faktor legt fest, ob Du empfindlicher oder weniger empfindlich auf Insulin reagierst, als es die „Standard"-Person tut.
 
 Der **Anpassungsfaktor** kann zwischen 1% und 300% liegen. Er wirkt als Multiplikator für den **TDD**-Wert.
@@ -111,15 +111,15 @@ Der **Anpassungsfaktor** kann zwischen 1% und 300% liegen. Er wirkt als Multipli
 
 Der **Anpassungsfaktor** wird auch bei der Aktivierung eines [**prozentualen Profilwechsels**](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) verändert. Ein niedrigerer **Profil-Prozentsatz** senkt den **Anpassungsfaktor** und ein höherer **Profil-Prozentsatz** hebt in.
 
-For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned, the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
+Wenn Dein **Anpassungsfaktor** zum Beispiel 80 % beträgt und ein **Profilwechsel** auf 80 % ausgeführt wird, beträgt der resultierende **Anpassungsfaktor** `0.8*0.8=0.64`.
 
 Das bedeutet, dass Du bei aktiviertem **dynamischen ISF**, einen **prozentualen Profilwechsel** nutzen kannst, um Deine Empfindlichkeit manuell zu „finetunen“. Dies kann für körperliche Aktivität (niedrigerer Prozentwert), Krankheit (höherer Prozentwert), etc. sehr helfen.
 
-### LGS threshold
+### LGS-Schwellenwert
 
 **BZ**-Wert, unter dem die Insulinabgabe ausgesetzt wird (Unterbrechung bei niedrigem BZ). Der Standardwert verwendet das Standard-Ziel-Modell. Dieser Wert kann zwischen 60 mg/dl (3,3 mmol/l) und 100 mg/dl (5,5 mmol/l) eingestellt werden. Werte unterhalb von 65 bzw. 3,6 führen dazu, dass das Standard-Modell genutzt wird.
 
-### DynamicISF adjust sensitivity
+### DynamicISF passt Empfindlichkeit an
 
 Diese Einstellung (*„Berechnung der Insulinempfindlichkeit bei Verwendung von DynamicISF anpassen“*) ersetzt Autosens und verwendet das Verhältnis der **TDD** der letzten 24 h zur **TDD** der letzten 7 Tage als Grundlage, um die Basalrate zu erhöhen oder zu senken, genau wie das normale Autosens. Dieser berechnete Wert wird auch verwendet, um das Ziel anzupassen, wenn die Optionen "Empfindlichkeit und Glukosewert anpassen" aktiviert ist. Im Gegensatz zu Autosens wird durch diese Option der **ISF**-Werte nicht angepasst.
 
