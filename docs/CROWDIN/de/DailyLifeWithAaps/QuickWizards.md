@@ -12,7 +12,7 @@ Ein **QuickWizard** ist ein gespeicherter Knopf für eine wiederkehrende Mahlzei
 
 ## QuickWizards öffnen
 
-Öffne den Bildschirm **Bearbeiten** (untere Navigationsleiste) und wähle **QuickWizard** (*„QuickWizard-Voreinstellungen verwalten“*).
+Öffne den Bildschirm **Verwalten** (untere Navigationsleiste) und wähle **QuickWizard** (*„QuickWizard-Voreinstellungen verwalten“*).
 
 ---
 
@@ -55,7 +55,7 @@ Für einen Knopf im Modus **Bolus-Rechner** wählst Du, welche Werte in die Bere
 
 ## Gültigkeit – wann der Knopf erscheint
 
-(quickwizard_validity)= Der **Gültigkeitszeitraum** (*Von / Bis*) legt fest, **wann** ein QuickWizard angezeigt wird und verwendet werden kann. Ein Knopf, der zum Beispiel auf **06:00–10:00** eingestellt ist, erscheint nur morgens – so verstopft ein QuickWizard *Frühstück* beim Abendessen nicht Deinen Bildschirm (und wird nicht versehentlich angetippt). Außerhalb seines Zeitraums ist der Knopf im Fenster **Behandlungen** und in der [Schnellstart-Leiste](QuickLaunch.md) ausgeblendet. Ein Knopf in der Leiste wird nicht gelöscht: Er kommt zurück, wenn der Zeitraum wieder beginnt.
+(quickwizard_validity)= Der **Gültigkeitszeitraum** (*Von / Bis*) legt fest, **wann** ein QuickWizard angezeigt wird und verwendet werden kann. Ein Knopf, der zum Beispiel auf **06:00–10:00** eingestellt ist, erscheint nur morgens – so steht ein QuickWizard *Frühstück* beim Abendessen nicht im Weg (und wird nicht versehentlich angetippt). Außerhalb seines Zeitraums ist der Knopf im Fenster **Behandlungen** und in der [Schnellstart-Leiste](QuickLaunch.md) ausgeblendet. Ein Knopf in der Leiste wird nicht gelöscht: Er kommt zurück, wenn der Zeitraum wieder beginnt.
 
 Ist der Gültigkeitszeitraum kürzer als 4 Stunden, wird der Knopf außerdem 30 Minuten nach der Verwendung ausgeblendet, damit dieselbe Mahlzeit nicht versehentlich zweimal eingetragen wird.
 
