@@ -83,17 +83,17 @@ Sobald sie ausgewählt ist, zeigt die Karte **Omnipod Eros** zwei Schaltflächen
 
 ![Omnipod driver settings](../images/v4/Pumps/omnipod_settings.png)
 
-**Plugin öffnen** öffnet den Omnipod-Pumpenbildschirm. Du kannst ihn auch jederzeit vom Startbildschirm aus über **Bearbeiten** > **Pumpe** öffnen. Auf dieser Seite heißt er **Omnipod-Pumpenbildschirm**. Bevor ein RileyLink gekoppelt und ein Pod aktiviert ist, sieht er so aus:
+**Plugin öffnen** öffnet den Omnipod-Pumpenbildschirm. Du kannst ihn auch jederzeit vom Startbildschirm aus über **Verwalten** > **Pumpe** öffnen. Auf dieser Seite heißt er **Omnipod-Pumpenbildschirm**. Bevor ein RileyLink gekoppelt und ein Pod aktiviert ist, sieht er so aus:
 
 ![Omnipod pump screen before pairing](../images/v4/Pumps/omnipod_pump_screen.png)
 
 ### Überprüfung der Omnipod-Treiberauswahl
 
-Um zu prüfen, ob Du den Omnipod-Treiber aktiviert hast, öffne vom Startbildschirm aus **Bearbeiten** > **Pumpe**. Du solltest den oben gezeigten Pumpenbildschirm **Omnipod Eros** sehen. Hast Du noch keinen RileyLink gekoppelt, zeigt **RileyLink Status** **Nicht gestartet** und **Pod Status** **Kein aktiver Pod**.
+Um zu prüfen, ob Du den Omnipod-Treiber aktiviert hast, öffne vom Startbildschirm aus **Verwalten** > **Pumpe**. Du solltest den oben gezeigten Pumpenbildschirm **Omnipod Eros** sehen. Hast Du noch keinen RileyLink gekoppelt, zeigt **RileyLink Status** **Nicht gestartet** und **Pod Status** **Kein aktiver Pod**.
 
 ## Omnipod-Konfiguration
 
-Alle Pod- und RileyLink-Funktionen sind Schaltflächen auf dem [Omnipod-Pumpenbildschirm](#OmnipodEros-omnipod-pod-tab) (**Bearbeiten** > **Pumpe**). Manche Schaltflächen erscheinen nur in bestimmten Situationen, zum Beispiel wenn ein Pod aktiv ist.
+Alle Pod- und RileyLink-Funktionen sind Schaltflächen auf dem [Omnipod-Pumpenbildschirm](#OmnipodEros-omnipod-pod-tab) (**Verwalten** > **Pumpe**). Manche Schaltflächen erscheinen nur in bestimmten Situationen, zum Beispiel wenn ein Pod aktiv ist.
 
 > ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) Aktualisiere Pod-Verbindung und Status
 > 
@@ -116,7 +116,7 @@ Hast Du Deinen RileyLink bereits gekoppelt, mach unten im Abschnitt [Pod aktivie
 
 2. Lege den RileyLink [nah an Dein Smartphone](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (höchstens ca. 30 cm entfernt).
 
-3. Öffne den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) und tippe auf **RileyLink verbinden**.
+3. Öffne den Omnipod-Pumpenbildschirm (**Verwalten** > **Pumpe**) und tippe auf **RileyLink verbinden**.
 
 4. Der Bildschirm **RileyLink verbinden** beginnt sofort mit der Suche nach Bluetooth-Geräten. Tippe in der Liste der gefundenen Geräte auf Deinen RileyLink.
 
@@ -151,7 +151,7 @@ Bevor Du einen Pod aktivieren kannst, stelle sicher, dass Dein RileyLink gekoppe
 
 *HINWEIS: Für die Verbindung mit dem Pod steht aus Sicherheitsgründen nur ein kleinerer Kommunikationsbereich zur Verfügung. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. Achte während dieser Vorgänge darauf, dass Dein Pod* [ganz in der Nähe](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) *(höchstens ca. 30 cm entfernt) ist, aber nicht auf oder direkt neben dem RileyLink liegt.*
 
-01. Öffne den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) und tippe auf **Pod aktivieren**.
+01. Öffne den Omnipod-Pumpenbildschirm (**Verwalten** > **Pumpe**) und tippe auf **Pod aktivieren**.
 
     Hast Du noch nie ein Profil aktiviert, erscheint zuerst der Schritt **Profil erforderlich**. Wähle das Profil aus, das bei der Aktivierung angewendet werden soll.
 
@@ -194,7 +194,7 @@ Bevor Du einen Pod aktivieren kannst, stelle sicher, dass Dein RileyLink gekoppe
     > 
     > Wenn der RileyLink sich außerhalb der Bluetoothreichweite befindert oder keine aktive Verbindung zum Smartphone hat, bekommst Du eine Fehlermeldung **Keine Antwort von RileyLink**. Passiert das, bring den RileyLink näher an das Smartphone und tippe auf **Erneut versuchen**.
     > 
-    > *HINWEIS: Bevor die Kanüle eingesetzt wird, ist es ratsam, die Haut in der Nähe des Kanülensetzpunktes etwas zusammenzukneifen. Dies sorgt für eine sanfte Einführung der Nadel und verringert die Gefahr einer Verstopfung.*
+    > *HINWEIS: Bevor die Kanüle eingesetzt wird, ist es ratsam, die Haut in der Nähe des Kanülensetzpunktes etwas zusammenzukneifen. Dies sorgt für eine sanfte Einführung der Nadel und verringert die Gefahr eines Verschlusses.*
     > 
     > ![Activate_Pod_9](../images/omnipod/Activate_Pod_9.png)
     > 
@@ -234,7 +234,7 @@ Unter normalen Umständen beträgt die Lebensdauer eines Pods drei Tage (72 Stun
 
 Gehe wie folgt vor, um einen Pod zu deaktivieren (entweder vor dem Ablaufen der Nutzungsdauer oder wegen eines Pod-Fehlers):
 
-1. Öffne den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) und tippe auf **Pod deaktivieren**.
+1. Öffne den Omnipod-Pumpenbildschirm (**Verwalten** > **Pumpe**) und tippe auf **Pod deaktivieren**.
 
    > ![Deactivate_Pod_1](../images/omnipod/Deactivate_Pod_1.png) ![Deactivate_Pod_2](../images/omnipod/Deactivate_Pod_2.png) 
    > 
@@ -287,7 +287,7 @@ Die folgenden Schritte zeigen Dir, wie Du die Insulinabgabe unterbrichst und for
 
 Verwende diesen Befehl, um den aktiven Pod in den Status 'unterbrochen' zu versetzen. In diesem suspendiertem Zustand wird der Pod kein Insulin mehr liefern. Dieser Befehl ahmt die Suspend-Funktion nach, die der originale Omnipod PDM an einen aktiven Pod sendet.
 
-1. Öffne den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) und tippe auf **Unterbrechen**. Der Befehl zum Unterbrechen wird über den RileyLink an den aktiven Pod gesendet.
+1. Öffne den Omnipod-Pumpenbildschirm (**Verwalten** > **Pumpe**) und tippe auf **Unterbrechen**. Der Befehl zum Unterbrechen wird über den RileyLink an den aktiven Pod gesendet.
 
 2. Hat der Pod die gesamte Insulinabgabe unterbrochen, zeigt **Pod Status** **Angehalten**, und die Schaltfläche **Unterbrechen** wird durch **Abgabe fortsetzen** ersetzt.
 
@@ -379,7 +379,7 @@ Diese Funktion ist hilfreich bei der Überprüfung von Boli, Temporären Basalra
 
 *HINWEIS:* **Unsichere** Befehle erscheinen in der Pod-Historie, aber für deren Genauigkeit gibt es aufgrund deren natürlichen Unsicherheit keine Garantie.
 
-1. Öffne den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) und tippe auf **Pod-Historie**.
+1. Öffne den Omnipod-Pumpenbildschirm (**Verwalten** > **Pumpe**) und tippe auf **Pod-Historie**.
 
    > ![Pod_History_1](../images/omnipod/Pod_History_1.png) ![Pod_History_2](../images/omnipod/Pod_History_2.png) 
    > 
@@ -436,7 +436,7 @@ Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4
 
 Dieser Bildschirm zeigt Informationen und Status sowohl des aktuell gekoppelten Pod-Kommunikationsgeräts als auch des aktuell aktiven Omnipod-Eros-Pods. Die Informationen werden automatisch aktualisiert.
 
-1. Öffne den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) und tippe auf **RileyLink Status**. Der Reiter **Einstellungen** zeigt Deinen aktuell gekoppelten **RileyLink** und den aktiven Pod (**Gerät**).
+1. Öffne den Omnipod-Pumpenbildschirm (**Verwalten** > **Pumpe**) und tippe auf **RileyLink Status**. Der Reiter **Einstellungen** zeigt Deinen aktuell gekoppelten **RileyLink** und den aktiven Pod (**Gerät**).
 
    > ![RileyLink_Statistics_Settings_1](../images/omnipod/RileyLink_Statistics_Settings_1.png) ![RileyLink_Statistics_Settings_2](../images/omnipod/RileyLink_Statistics_Settings_2.png) 
    > 
@@ -471,7 +471,7 @@ Dieser Bildschirm zeigt Informationen und Status sowohl des aktuell gekoppelten 
 
 Dieser Reiter listet, die neuesten zuerst, jeden Zustand und jede Aktion des RileyLinks oder des aktuell verbundenen Pods auf. Der Verlauf ist nur für den aktuell aktiven Pod verfügbar. Nach einem Pod-Wechsel wird dieser Verlauf gelöscht, und es werden nur Ereignisse des neu aktivierten Pods erfasst und angezeigt.
 
-1. Öffne den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**), tippe auf **RileyLink Status** und dann auf den Reiter **Verlauf**.
+1. Öffne den Omnipod-Pumpenbildschirm (**Verwalten** > **Pumpe**), tippe auf **RileyLink Status** und dann auf den Reiter **Verlauf**.
 
    > ![RileyLink_Statistics_History_1](../images/omnipod/RileyLink_Statistics_History_1.png) ![RileyLink_Statistics_History_2](../images/omnipod/RileyLink_Statistics_History_2.png) 
    > 
@@ -494,7 +494,7 @@ Jeder Eintrag zeigt:
 
 ## Omnipod-Pumpenbildschirm
 
-Im Folgenden werden die Statusfelder und Schaltflächen auf dem **Omnipod-Pumpenbildschirm** erklärt (**Bearbeiten** > **Pumpe** oder **Konfiguration** > **Pumpe** > **Plugin öffnen**).
+Im Folgenden werden die Statusfelder und Schaltflächen auf dem **Omnipod-Pumpenbildschirm** erklärt (**Verwalten** > **Pumpe** oder **Konfiguration** > **Pumpe** > **Plugin öffnen**).
 
 Das Zahnrad-Symbol oben rechts öffnet die [Omnipod-Einstellungen](#OmnipodEros-omnipod-settings).
 
@@ -716,7 +716,7 @@ Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 g
 
 Die Einstellungen des Omnipod-Treibers öffnest Du so:
 
-- Tippe oben rechts auf dem Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) auf das Zahnrad-Symbol oder
+- Tippe oben rechts auf dem Omnipod-Pumpenbildschirm (**Verwalten** > **Pumpe**) auf das Zahnrad-Symbol oder
 - öffne oben links das **Menü** (☰) > **Konfiguration** > **Pumpe** und tippe auf der Karte **Omnipod Eros** auf **Einstellungen**.
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
@@ -792,7 +792,7 @@ Bietet erweiterte Einstellungen zur Unterstützung bei der Fehlersuche.
 
 Da es viele Alternativen zum ursprünglichen RileyLink gibt (etwa OrangeLink oder EmaLink) oder Du mehrere bzw. Ersatzgeräte desselben Pod-Kommunikationsgeräts haben möchtest, musst Du eventuell auf ein anderes Gerät wechseln.
 
-Öffne dazu den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**), tippe auf **RileyLink verbinden** und wähle das neue Gerät aus, wie unter [RileyLink einrichten](#OmnipodEros-rileylink-setup) beschrieben. Das neue Gerät ersetzt das bisher gekoppelte.
+Öffne dazu den Omnipod-Pumpenbildschirm (**Verwalten** > **Pumpe**), tippe auf **RileyLink verbinden** und wähle das neue Gerät aus, wie unter [RileyLink einrichten](#OmnipodEros-rileylink-setup) beschrieben. Das neue Gerät ersetzt das bisher gekoppelte.
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
