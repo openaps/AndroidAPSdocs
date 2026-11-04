@@ -102,6 +102,8 @@ AAPS Builder의 빌드도 Google Drive에 저장하려면 [6단계](#aaps-builde
 
 설정 페이지는 각 GitHub 페이지를 Chrome의 새 탭에서 엽니다. 설정 페이지로 돌아오려면 Chrome 주소 표시줄 옆의 탭 버튼(숫자가 있는 사각형)을 누르고 AAPS Builder 설정 페이지를 선택하십시오.
 
+![Tab switcher](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
+
 설정 페이지는 모두 브라우저 안에서만 실행됩니다: 키와 비밀번호는 직접 붙여 넣는 GitHub secret 외에는 어디로도 보내지지 않습니다. GitHub에는 GitHub 사용자 이름만 보내지며, 이는 그 이름이 있는지 확인하기 위한 것입니다. GitHub 사용자 이름과 저장소 이름을 기억하므로, 언제든 다시 돌아와 secret 페이지나 빌드를 다시 열 수 있습니다.
 
 ![AAPS Builder 설정 페이지](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
@@ -144,8 +146,14 @@ AAPS Builder의 빌드도 Google Drive에 저장하려면 [6단계](#aaps-builde
 
    GitHub에 새 저장소가 표시됩니다: `.github` 폴더(빌드 워크플로가 들어 있음)와 `README.md` 파일이 있습니다. 2단계를 하려면 **설정 페이지 탭으로 돌아가십시오**: Chrome 주소 표시줄 옆의 탭 버튼을 누르고 설정 페이지를 선택하십시오.
 
+   ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
+
 ```{warning}
 **새 저장소가 비어 있고** 파일이 없습니까? 템플릿으로 만들어지지 않은 것이며, 빌드할 수 없습니다. 그 저장소를 삭제한 다음(**Settings** → 페이지 맨 아래 → **Delete this repository**(이 저장소 삭제)), 설정 페이지에서 **Create my private repository**를 다시 누르십시오.
+```
+
+```{tip}
+GitHub says **my-aaps already exists in this account**? You already have your repository: close the GitHub tab and go on with the setup page. If your key is already in it, continue with [step 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
 (aaps-builder-step2)=
@@ -253,6 +261,7 @@ GitHub에 **Page not found**(페이지를 찾을 수 없음, 404)가 표시됩�
 **Build AAPS** 또는 **Run workflow** 버튼이 없는 경우:
 
 - 저장소를 열고 `.github` 폴더에 `workflows/build.yml` 파일이 있는지 확인하십시오. 저장소가 비어 있으면 템플릿으로 만들어지지 않은 것입니다: 그 저장소를 삭제하고(**Settings** → 페이지 맨 아래 → **Delete this repository**) 버튼을 사용해 [1단계](#aaps-builder-step1)를 다시 하십시오.
+- The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
 - **Actions** 탭을 여십시오. 워크플로가 비활성화되어 있다고 표시되면 초록색 버튼을 눌러 활성화한 다음, 목록에서 **Build AAPS**를 누르십시오.
 
 (aaps-builder-step5)=
@@ -311,10 +320,28 @@ GitHub에 **Page not found**(페이지를 찾을 수 없음, 404)가 표시됩�
 이 기능에는 secret이 하나 더 필요합니다: `GDRIVE_OAUTH2`. 설정 페이지의 6단계가 휴대폰이나 컴퓨터에서 Google로부터 이 값을 대신 받아 줍니다. 그러면 **AAPS**는 Google Drive에서 자신이 만든 파일만 보고 바꿀 수 있으며, 다른 것은 볼 수 없습니다.
 
 1. 설정 페이지에서 **Connect Google Drive**(Google Drive 연결)를 누르십시오. Google이 새 탭에서 열립니다.
+
 2. Google 계정을 선택하고 액세스를 허용하십시오. Google에서 앱이 확인되지 않았다고 표시하면 **Advanced**(고급)를 누른 다음 **Go to …**(…(으)로 이동)를 누르십시오.
-3. 그러면 새 탭에 **This site can't be reached**(사이트에 연결할 수 없음) 또는 **127.0.0.1 refused to connect**(127.0.0.1에서 연결을 거부함) 같은 오류가 표시됩니다. **이것은 정상입니다:** Google의 응답은 그 탭의 주소에 들어 있습니다. 주소 표시줄을 누르고 전체 주소(`http://127.0.0.1:47913/`로 시작)를 선택하여 복사하십시오.
+
+   ![Choose an account](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
+
+   ![Continue](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
+
+3. 그러면 새 탭에 **This site can't be reached**(사이트에 연결할 수 없음) 또는 **127.0.0.1 refused to connect**(127.0.0.1에서 연결을 거부함) 같은 오류가 표시됩니다. **이것은 정상입니다:** Google의 응답은 그 탭의 주소에 들어 있습니다. Tap the address bar, then the copy icon next to the address (on a computer: select the whole address and copy it). 주소는 `http://127.0.0.1:47913/`로 시작합니다.
+
+   ![This site can't be reached](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
+
+   ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
+
 4. 몇 분 안에 설정 페이지 탭으로 돌아가십시오: Google의 응답은 짧은 시간 동안 한 번만 유효합니다. 주소를 **Paste the copied address here**(복사한 주소를 여기에 붙여 넣기)에 붙여 넣고 **Get GDRIVE_OAUTH2**(GDRIVE_OAUTH2 받기)를 누르십시오. 페이지에 **GDRIVE_OAUTH2 is ready**(GDRIVE_OAUTH2 준비됨)가 표시됩니다.
+
+   ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
+
+   ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
+
 5. **Open the secrets page**(secret 페이지 열기)를 누르십시오. **Copy name**을 누른 다음 작은 **Name** 칸에 붙여 넣으십시오(이름은 `GDRIVE_OAUTH2`입니다). **Copy secret**을 누르고, 큰 **Secret** 상자에 붙여 넣은 다음 **Add secret**을 누르십시오.
+
+   ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
 다음 빌드부터는 APK가 Google Drive에도 저장됩니다.
 
@@ -337,31 +364,15 @@ GitHub에 **Page not found**(페이지를 찾을 수 없음, 404)가 표시됩�
 **워크플로 파일의 업데이트**는 드뭅니다: **Run workflow** 양식이 바뀔 때(예: 새 빌드 변형), 또는 저장소를 이전 버전의 설정 페이지(짧은 워크플로 파일만 있는 빈 저장소)나 이전 템플릿으로 만든 경우 한 번만 필요합니다. [문서 업데이트 및 변경 사항](../Maintenance/DocumentationUpdate.md) 페이지에 그런 경우가 안내됩니다. `KEYSTORE_SET` secret은 그대로 둡니다. 설정 페이지에서 1단계 끝에 있는 **Updating your copy**(복사본 업데이트)를 여십시오:
 
 1. **Open the newest workflow**(최신 워크플로 열기)를 누르십시오. 컴퓨터에서는 파일 오른쪽 위의 **복사 아이콘**("Copy raw file")을 클릭하십시오. 휴대폰에서는 대신 **일반 텍스트 버전**을 열고, 텍스트를 길게 누른 다음 **Select all**(모두 선택)과 **Copy**(복사)를 누르십시오.
-2. **Open my workflow file**(내 워크플로 파일 열기)을 누르십시오.
+2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
 3. 전체 텍스트를 복사한 워크플로로 바꾸십시오(휴대폰에서는 길게 눌러 **Select all**, 그다음 **Paste**(붙여넣기)).
 4. **Commit changes…**를 누른 다음 **Commit changes**(변경 사항 커밋)를 누르십시오.
 
 파일의 첫 줄에 버전이 표시됩니다.
 
-(aaps-builder-troubleshooting)=
-
 ## Troubleshooting
 
-빌드가 실패한 이유를 보려면 [빌드 로그를 읽으십시오](#aaps-ci-read-the-logs): 단계 이름은 다르지만 같은 방법으로 오류를 찾을 수 있습니다. 같은 방법으로 [secret을 업데이트](#aaps-ci-update-secret)하고 [빌드를 다시 실행](#aaps-ci-rerun)할 수도 있습니다.
-
-- **"Build AAPS" 또는 "Run workflow" 버튼이 없거나 저장소가 비어 있는 경우**: 저장소가 템플릿으로 만들어지지 않았습니다. 그 저장소를 삭제하고(**Settings** → 페이지 맨 아래 → **Delete this repository**) **Create my private repository** 버튼으로 [1단계](#aaps-builder-step1)를 다시 하십시오.
-- **빌드가 "This repository is PUBLIC"(이 저장소는 공개 상태입니다)로 멈추는 경우**: 저장소에서 **Settings**(설정) → **General**(일반) → **Danger Zone**(위험 구역) → **Change visibility**(공개 범위 변경) → **Private**(비공개)를 연 다음 다시 빌드하십시오.
-- **"Secret KEYSTORE_SET is missing"**(KEYSTORE_SET secret이 없음): 설정 페이지의 3단계를 하십시오.
-- **"The secret is too short"**(secret이 너무 짧음), **"The secret is not a valid code"**(secret이 올바른 코드가 아님) 또는 **"The secret does not contain a keystore"**(secret에 키 저장소가 없음): secret에 잘못된 텍스트를 붙여 넣었습니다. 흔히 `KEYSTORE_SET`이라는 단어 자체나 코드의 일부만 붙여 넣은 경우입니다. 저장소에서 **Settings** → **Secrets and variables** → **Actions**를 열고, `KEYSTORE_SET`을 편집하여 **Copy secret**으로 복사한 긴 코드를 다시 붙여 넣으십시오(설정 페이지를 닫았다면 먼저 설정 페이지의 2단계를 다시 하십시오).
-- **"Keystore, password or alias is wrong"**(키 저장소, 비밀번호 또는 별칭이 틀림): 키 저장소의 비밀번호와 별칭을 확인한 다음 설정 페이지의 2단계와 3단계를 다시 하십시오.
-- **"Version … does not exist"**(버전 …이 없음): 입력한 버전이 AAPS 릴리스가 아닙니다. `latest`를 사용하거나 릴리스 번호를 확인하십시오.
-- **"Variant … is not supported"**(변형 …은 지원되지 않음): 워크플로 파일이 이전 버전입니다. [AAPS 업데이트](#aaps-builder-updates)에 설명된 대로 파일을 바꾸십시오.
-- **설정 페이지가 GitHub를 열 때 "Page not found"(404)가 표시되는 경우**: 같은 브라우저에서 github.com에 로그인하십시오(로그인하지 않으면 GitHub는 비공개 저장소에 대해 404를 표시합니다). 로그인되어 있다면 설정 페이지 1단계의 사용자 이름 또는 저장소 이름이 자신의 저장소와 맞지 않는 것입니다. 이름을 정확히 입력하십시오.
-- 1단계에서 **"No GitHub user with this name"**(이 이름의 GitHub 사용자가 없음)이 표시되는 경우: 이메일이 아니라 GitHub 프로필에 표시된 GitHub 사용자 이름을 입력하십시오.
-- **Download 링크가 없거나 GitHub 앱이 열린 경우**: GitHub 앱은 빌드를 다운로드할 수 없습니다. [5단계](#aaps-builder-step5)에 설명된 대로 Chrome에서 빌드를 여십시오. GitHub 링크가 앱에서 열리지 않게 하려면: Android **Settings**(설정) → **Apps**(애플리케이션) → **GitHub** → **Open by default**(기본으로 열기) → **Open supported links**(지원되는 링크 열기)를 끄십시오.
-- **"Google Drive access has expired or was revoked"**(Google Drive 액세스가 만료되었거나 취소됨): [6단계](#aaps-builder-google-drive)를 다시 하고 `GDRIVE_OAUTH2` secret을 업데이트하십시오.
-
-다른 GitHub 및 Google Drive 문제는 [브라우저 빌드: 문제 해결](../GettingHelp/BrowserBuildTroubleshooting.md)을 참조하십시오.
+Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
 
 ```{toctree}
 :hidden:
