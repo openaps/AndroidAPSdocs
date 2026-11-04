@@ -3,10 +3,97 @@
 # Bouwen in de browser: probleemoplossing
 
 ```{note}
-Op deze pagina staan tips voor het oplossen van problemen bij [Bouwen in de browser](../SettingUpAaps/BrowserBuild.md).
-
-Gebruik je **AAPS Builder**? Begin dan met het eigen [hoofdstuk probleemoplossing](#aaps-builder-troubleshooting) daarvan. De hoofdstukken over Google Drive hieronder gelden er ook voor.
+This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
 ```
+
+(aaps-builder-troubleshooting)=
+
+## AAPS Builder
+
+### Step 1: the repository
+
+(aaps-builder-ts-repo-exists)=
+
+#### "my-aaps already exists in this account"
+
+![Repository already exists](../images/Building-the-App/CI/AapsBuilder70_RepoExists.png)
+
+You already have this repository, for example from an earlier attempt. Close the GitHub tab, keep that name in step 1 of the setup page and go on. If you already did steps 2 and 3 for it, your key is still in it: continue with [step 4](#aaps-builder-step4). If it was made with an earlier version of the setup page, update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). You prefer a fresh start? Type another name, for example `my-aaps-2`, and use the same keystore in step 2.
+
+(aaps-builder-ts-user-not-found)=
+
+#### "No GitHub user with this name"
+
+![No GitHub user](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
+
+- **"No GitHub user with this name"** in stap 1: typ je GitHub-gebruikersnaam zoals die in je GitHub-profiel staat, niet je e-mailadres.
+- **No "Build AAPS" or "Run workflow" button, or the repository is empty**: the repository was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the **Create my private repository** button.
+
+### Step 3: the secret
+
+(aaps-builder-ts-404)=
+
+#### "Page not found" (404)
+
+![GitHub 404](../images/Building-the-App/CI/AapsBuilder79_404.png)
+
+- **"Page not found" (404) als de instellingspagina GitHub opent**: log in op github.com in dezelfde browser (GitHub toont 404 voor privé-repository's als je niet bent ingelogd). Als je wel bent ingelogd, dan komt de gebruikersnaam of de naam van de repository in stap 1 van de instellingspagina niet overeen met je repository. Typ de precieze namen.
+
+### Step 4: the build
+
+(aaps-builder-ts-workflow-not-found)=
+
+#### "This workflow does not exist"
+
+![This workflow does not exist](../images/Building-the-App/CI/AapsBuilder71_WorkflowNotFound.png)
+
+Right after the repository is created, GitHub may not have read its workflow file yet: **Build AAPS** is missing from the **Actions** tab, and there is no **Run workflow** button. Any small change to the file makes GitHub read it:
+
+1. In your repository, open **Code**, then the folder `.github`, then `workflows`, then the file `build.yml`.
+2. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
+
+   ![File menu](../images/Building-the-App/CI/AapsBuilder72_FileMenu.png)
+
+3. Tap at the very end of the text and add an empty line (Enter). Tap **Commit changes…** at the top.
+
+   ![Editor](../images/Building-the-App/CI/AapsBuilder73_Editor.png)
+
+4. Tap **Commit changes** again.
+
+   ![Commit changes](../images/Building-the-App/CI/AapsBuilder74_CommitDialog.png)
+
+5. Open the **Actions** tab again: **Build AAPS** is now in the list of workflows (on a phone, the list opens with the icon at the left of **All workflows**). Tap it, then **Run workflow**.
+
+   ![List of workflows](../images/Building-the-App/CI/AapsBuilder75_WorkflowsSidebar.png)
+
+(aaps-builder-ts-build-failed)=
+
+#### The build failed (red cross)
+
+1. On the setup page, tap **Open my builds** and tap the build with the red cross.
+
+   ![Failed build](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
+
+2. The page of the build shows **Failure**, and which part failed: **AAPS / Check** (the repository, the secret, the version or the variant: nothing was built) or **AAPS / Build AAPS**.
+
+   ![Build page: Failure](../images/Building-the-App/CI/AapsBuilder77_RunFailed.png)
+
+3. Scroll down to **Annotations**, with your finger on the text, not on the diagram. The red lines explain the problem: tap **Show more** to read the whole message, then find it below.
+
+   ![Annotations](../images/Building-the-App/CI/AapsBuilder78_Annotations.png)
+
+- **"Secret KEYSTORE_SET is missing"**: do step 3 of the setup page.
+- **De build stopt met "This repository is PUBLIC"**: open in je repository **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private** en bouw opnieuw.
+- **"Version … does not exist"**: only released versions of **AAPS** can be built, the ones on the [tags page](https://github.com/nightscout/AndroidAPS/tags) of nightscout/AndroidAPS, such as `3.3.2.0`. A branch name such as `dev` doesn't work. Use `latest`, or type a tag exactly as listed.
+- **"Variant … is not supported"**: your workflow file is an older version. Replace it as explained in [Updating AAPS](#aaps-builder-updates).
+- **"The secret is too short"**, **"The secret is not a valid code"** of **"The secret does not contain a keystore"**: er is verkeerde tekst in het secret geplakt, vaak het woord `KEYSTORE_SET` zelf, of maar een deel van de code. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 2 of the setup page first if you closed it).
+- **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 2 and 3 of the setup page.
+- **"Google Drive access has expired or was revoked"**: redo [step 6](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
+- **Another error**: [read the build log](#aaps-ci-read-the-logs), then [run the build again](#aaps-ci-rerun). If it fails again the same way, ask for help with the name of the failed step and the error lines. Deel nooit de inhoud van je secrets.
+
+### Step 5: the app
+
+- **Geen link Download, of de GitHub-app ging open**: de GitHub-app kan geen builds downloaden. Open the build in Chrome as explained in [step 5](#aaps-builder-step5). Zo zorg je dat GitHub-links niet meer in de app openen: Android **Instellingen** → **Apps** → **GitHub** → **Standaard openen** → zet **Ondersteunde links openen** uit.
 
 ## AAPS-CI probleemoplossing
 
