@@ -53,7 +53,7 @@ Die erforderliche minimale Version ist im Abschnitt [Computer- und Software-Spez
 * Warte ab, während der Download läuft. Du siehst dazu einen Hinweis in der Fußzeile. Eine Erfolgsmeldung wird angezeigt, so bald erfolgreich heruntergeladen wurde.
 
   ```{note}
-  Die Anzahl der aktualisierten Dateien kann unterschiedlich sein! This is not an indication of a problem.
+  Die Anzahl der aktualisierten Dateien kann unterschiedlich sein! Das ist kein Hinweis auf ein Problem.
   ```
 
    ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
