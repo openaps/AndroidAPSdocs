@@ -50,6 +50,12 @@ Atsidariusiame GitHub puslapyje viskas jau užpildyta: šablonas `nightscout/aap
 Ji sukurta ne iš šablono. Ištrinkite ją (**Settings** → puslapio apačia → **Delete this repository**), tada vėl spauskite **Create my private repository**.
 ```
 
+```{admonition} GitHub says "my-aaps already exists in this account"?
+:class: tip
+
+You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+```
+
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
@@ -60,7 +66,7 @@ Kūrimo žingsniai atnaujinami už jus: kiekvieno kūrimo metu jūsų saugykla p
    Kompiuteryje spauskite **kopijavimo piktogramą** („Copy raw file“) failo viršuje dešinėje. Telefone vietoj to atidarykite <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">paprasto teksto versiją</a>, palaikykite paspaudę tekstą → **Select all** → **Copy**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   Redagavimui atidaro `.github/workflows/build.yml` saugykloje <code class="aapsb-repoUrl"></code>.
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. Pakeiskite visą tekstą nukopijuota darbo eiga (telefone: palaikykite paspaudę → **Select all** → **Paste**), tada du kartus spauskite **Commit changes…**. Pirmoje failo eilutėje rodoma jo versija.
 ```
 
@@ -151,7 +157,8 @@ Norite gauti el. laišką, kai kūrimas baigsis? GitHub siunčia el. laišką ti
 :class: warning
 
 1. Atidarykite savo saugyklą ir patikrinkite, ar joje yra aplankas `.github` su failu `workflows/build.yml`. Jei saugykla tuščia, ji sukurta ne iš šablono: ištrinkite ją (**Settings** → puslapio apačia → **Delete this repository**) ir vėl atlikite [1 žingsnį](#aaps-builder-setup-step1) su mygtuku.
-2. Atidarykite skirtuką Actions. Jei rašoma, kad darbo eigos išjungtos, spauskite žalią mygtuką, kad jas įjungtumėte. Tada sąraše spauskite „Build AAPS“.
+2. The file is there, but GitHub shows "This workflow does not exist": see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+3. Atidarykite skirtuką Actions. Jei rašoma, kad darbo eigos išjungtos, spauskite žalią mygtuką, kad jas įjungtumėte. Tada sąraše spauskite „Build AAPS“.
 ```
 
 (aaps-builder-setup-step5)=
@@ -196,7 +203,7 @@ Norite, kad APK atsirastų jūsų Google Drive (saugomas visam laikui)? Pridėki
    Google atsidaro naujame skirtuke. Pasirinkite savo Google paskyrą ir leiskite AAPS matyti ir keisti jos pačios failus. Jei Google rašo, kad programėlė nepatvirtinta, spauskite „Advanced“, tada „Go to …“.
 2. Tada naujame skirtuke rodoma klaida, pvz., **„This site can't be reached“** arba **„127.0.0.1 refused to connect“**. **Taip ir turi būti.** Google atsakymas yra to skirtuko adrese.
 
-   Spauskite to skirtuko adreso juostą, pažymėkite visą adresą ir jį nukopijuokite. Jis prasideda `http://127.0.0.1:47913/`. Grįžkite į šį puslapį per kelias minutes: atsakymas galioja tik trumpai.
+   Tap the address bar of that tab, then the copy icon next to the address (on a computer: select the whole address and copy it). Jis prasideda `http://127.0.0.1:47913/`. Grįžkite į šį puslapį per kelias minutes: atsakymas galioja tik trumpai.
 3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
@@ -323,7 +330,7 @@ Viskas šiame puslapyje veikia jūsų naršyklėje. Jūsų raktas ir slaptažod�
   const repo = () => repoInput.value.trim() || REPO_NAME;
 
   const LINKS = [
-    ['openWorkflowFile', '/edit/main/' + WORKFLOW_PATH],
+    ['openWorkflowFile', '/blob/HEAD/' + WORKFLOW_PATH],
     ['openSecrets', '/settings/secrets/actions/new'],
     ['openSecrets2', '/settings/secrets/actions/new'],
     ['openActions', '/actions/workflows/build.yml'],
