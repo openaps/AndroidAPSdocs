@@ -12,7 +12,7 @@
 
 ## Funktionalitäten bei der Nutzung mit AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
+* Kommuniziert mit **AAPS** über das Bluetooth Deines Smartphones, ohne zusätzliches Kommunikationsgerät.
 * Sommerzeit- und Zeitzonenwechsel müssen manuell erledigt werden (siehe [Reisen über Zeitzonen](#timezone-traveling-danarv2-danars)).
 
 (DanaRS-Insulin-Pump-pairing-pump)=
@@ -162,10 +162,10 @@ Für allgemeine Informationen zum Reisen über Zeitzonen hinweg siehe [Mit der P
 
 ## Wo ich Hilfe bekomme
 
-Der Treiber für DanaRS/Dana-i/Dana-i2 wird von der Community **ehrenamtlich** entwickelt. Before requesting help, please:
+Der Treiber für DanaRS/Dana-i/Dana-i2 wird von der Community **ehrenamtlich** entwickelt. Bevor Du um Hilfe bittest, bitte:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Lies** den entsprechenden Abschnitt dieser Dokumentation, um zu prüfen, wie die Funktion gedacht ist.
+2. **Frag** im Kanal *#AAPS* auf [Discord](https://discord.gg/4fQUWHZ4Mw) oder in einem der anderen [Community-Kanäle](../GettingHelp/WhereCanIGetHelp.md) nach.
+3. **Melde einen Fehler**, indem Du die [bestehenden Issues](https://github.com/nightscout/AndroidAPS/issues) durchsuchst; ist Deiner nicht dabei, eröffne ein [neues Issue](https://github.com/nightscout/AndroidAPS/issues) und hänge Deine [Logdateien](../GettingHelp/AccessingLogFiles.md) an.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Gib bei der Bitte um Hilfe Hersteller und Modell Deines Smartphones, die Android-Version, die **AAPS**-Version und eine verständliche Beschreibung des Problems an (was sich geändert hat, wann es zuletzt funktioniert hat).
