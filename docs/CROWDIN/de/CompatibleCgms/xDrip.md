@@ -44,11 +44,11 @@ Aktiviere „Kompatible Broadcasts“ (6).
 
 ![xDrip Basic Settings 4](../images/xDrip_Basic4.png)
 
-If you have also activated `Accept treatments` in xDrip and `Enable broadcasts to xDrip` in AAPS xDrip plugin, then xDrip will receive insulin, carbs and basal rate information from AAPS.
+Wenn Du außerdem in xDrip `Behandlungen annehmen` und im xDrip+-Modul von AAPS `Aktiviere Broadcasts zu xDrip+` aktiviert hast, erhält xDrip von AAPS Informationen zu Insulin, Kohlenhydraten und Basalrate.
 
-If you enable `Accept Calibrations`, xDrip will use the calibrations from AAPS. Be careful when you use this feature with Dexcom sensors: read [this](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) first.
+Wenn Du `Akzeptiere Kalibrierungen` aktivierst, verwendet xDrip die Kalibrierungen aus AAPS. Beim Nutzen der Funktionalität mit Dexcom Sensoren ist Vorsicht geboten: Lies vorher bitte [dies](https://navid200.github.io/xDrip/docs/Calibrate-G6.html).
 
-Remember to disable Import Sounds to avoid xDrip making a ringtone every time AAPS sends a basal/profile change.
+Denk daran, „Audio importieren“ auszuschalten, damit xDrip nicht jedes Mal einen Ton abspielt, wenn AAPS eine Basal- oder Profiländerung sendet.
 
 ![xDrip Basic Settings 5](../images/xDrip_Basic5.png)
 
@@ -56,52 +56,52 @@ Remember to disable Import Sounds to avoid xDrip making a ringtone every time AA
 
 #### Identifiziere Empfänger
 
-- If you discover problems with local broadcast (AAPS not receiving BG values from xDrip) go to → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
-- Achtung: Die Auto-Korrektur neigt manchmal dazu, das i von info in einen Großbuchstaben zu ändern. Du **darfst nur Kleinbuchstaben** verwenden, wenn Du `info.nightscout.androidaps` (oder `info.nightscout.aapspumpcontrol` für PumpControl eingibst), da die Groß-/Kleinschreibung beachtet wird. Capital I would prevent the App from receiving BG values from xDrip.
+- Wenn es Probleme mit dem lokalen Broadcast gibt (AAPS empfängt keine Glukosewerte von xDrip), gehe zu → Hamburger Menü (1) Einstellungen (2) → Inter-App Einstellungen (3) → Identifiziere Empfänger (7) und gib für den AAPS-Build `info.nightscout.androidaps` ein (nutzt Du den PumpControl-Build, gib stattdessen `info.nightscout.aapspumpcontrol` ein!).
+- Achtung: Die Auto-Korrektur neigt manchmal dazu, das i von info in einen Großbuchstaben zu ändern. Du **darfst nur Kleinbuchstaben** verwenden, wenn Du `info.nightscout.androidaps` (oder `info.nightscout.aapspumpcontrol` für PumpControl eingibst), da die Groß-/Kleinschreibung beachtet wird. Mit einem großen „I“ kann die App keine Glukosewerte von xDrip empfangen.
     
     ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-## Use AAPS to calibrate in xDrip
+## AAPS zum Kalibrieren in xDrip nutzen
 
-- If you want to be able to use AAPS to calibrate then in xDrip go to Settings → Interapp Compatibility → Accept Calibrations and select ON. 
+- Wenn Du AAPS zum Kalibrieren nutzen möchtest, gehe in xDrip zu Einstellungen → Inter-App Einstellungen → Akzeptiere Kalibrierungen und wähle AN. 
 - You may also want to review the options in Settings → Less Common Settings → Advanced Calibration Settings. Du solltest auch die Optionen in Einstellungen → Erweiterte Einstellungen → Erweiterte Kalibrierung kontrollieren.
 
 ## Dexcom-Sensoren
 
-Everything related to the Dexcom sensor and transmitter themselves (starting, stopping, replacing, calibrating, troubleshooting) is documented and kept up to date in the [xDrip Dexcom documentation](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Follow those instructions for the sensor; the settings connecting xDrip to **AAPS** (described above on this page) are the only AAPS-specific part.
+Alles, was den Dexcom-Sensor und -Transmitter selbst betrifft (Starten, Stoppen, Ersetzen, Kalibrieren, Fehlerbehebung), ist in der [xDrip-Dexcom-Dokumentation](https://navid200.github.io/xDrip/docs/Dexcom_page.html) beschrieben und wird dort aktuell gehalten. Folge für den Sensor diesen Anweisungen; nur die Einstellungen, die xDrip mit **AAPS** verbinden (oben auf dieser Seite beschrieben), sind AAPS-spezifisch.
 
 ### Dexcom G6 und ONE
 
-- Set up xDrip following the [recommended settings](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html).
+- Richte xDrip nach den [empfohlenen Einstellungen](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html) ein.
 - Der Dexcom G6- und ONE-Transmitter können gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Smartphone verbunden werden.
-- Wenn Du xDrip als Empfänger verwendest, deinstalliere zuerst die Dexcom-App. **You cannot connect xDrip and the Dexcom app with the transmitter at the same time!**
-- If you need Clarity and want to profit from xDrip features, use the [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip, or use xDrip as a Companion app receiving notifications from the official Dexcom app (with possible delays in BG readings).
+- Wenn Du xDrip als Empfänger verwendest, deinstalliere zuerst die Dexcom-App. **Du kannst xDrip und die Dexcom-App nicht gleichzeitig mit dem Transmitter verbinden!**
+- Wenn Du Clarity brauchst und trotzdem von den xDrip-Funktionen profitieren möchtest, nutze die [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) mit lokalem Broadcast an xDrip, oder verwende xDrip als Companion-App, die die Benachrichtigungen der offiziellen Dexcom-App empfängt (dabei können die Glukosewerte verzögert ankommen).
 
-#### Sensor restarts
+#### Sensor-Neustarts
 
 - Mit aktuellen Transmittern verwendet xDrip immer den [nativen Algorithmus](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) des Transmitters; es gibt keinen Grund, ihn zu deaktivieren.
-- [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) only function on old transmitters (firmware 1.6.5.25 or earlier), where they are needed to prevent the sensor stopping after 10 days. Recent (Firefly) transmitters ignore them.
-- Restarting a sensor on a Firefly transmitter requires [removing the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) and readings can be significantly in error after the restart, which is dangerous when looping: read [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) in full and [calibrate carefully](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
+- [Vorbeugende Neustarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) funktionieren nur bei alten Transmittern (Firmware 1.6.5.25 oder älter), bei denen sie nötig sind, damit der Sensor nicht nach 10 Tagen stoppt. Neuere (Firefly-)Transmitter ignorieren sie.
+- Für einen Sensor-Neustart mit einem Firefly-Transmitter musst Du [den Transmitter entfernen](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), und nach dem Neustart können die Werte deutlich falsch sein, was beim Loopen gefährlich ist: Lies [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) vollständig und [kalibriere sorgfältig](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
 
 (xdrip-connect-g6-transmitter-for-the-first-time)=
 
-#### Start, stop and replace sensors
+#### Sensoren starten, stoppen und ersetzen
 
-Follow the instructions:
+Folge den Anweisungen:
 
-- [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html)
-- [Stop and start a G6 or ONE sensor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)
-- [Remove the transmitter from a sensor](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)
-- [Transmitter lifetime](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) can only be extended ([hard reset](https://navid200.github.io/xDrip/docs/Hard-Reset.html)) on rebatteried or modified transmitters, not on Firefly.
+- [Einen G6- oder ONE-Transmitter starten](https://navid200.github.io/xDrip/docs/Starting-G6.html)
+- [Einen G6- oder ONE-Sensor stoppen und starten](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)
+- [Den Transmitter von einem Sensor entfernen](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)
+- Die [Laufzeit des Transmitters](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) lässt sich nur bei Transmittern mit getauschter Batterie oder modifizierten Transmittern verlängern ([Hard Reset](https://navid200.github.io/xDrip/docs/Hard-Reset.html)), nicht bei Firefly.
 
 (xdrip-replace-transmitter)=
 
-#### Replace a transmitter
+#### Transmitter ersetzen
 
-- Turn the original Dexcom receiver off (if used) and do not turn it back on before xDrip shows readings.
-- Forget the device in xDrip (System Status → Forget Device) AND in the smartphone's Bluetooth settings (shown as DexcomXX where XX are the last two digits of the transmitter serial number).
-- Keep the old transmitter out of Bluetooth range to prevent reconnection.
-- Then follow [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+- Schalte den originalen Dexcom-Empfänger aus (falls Du ihn nutzt) und schalte ihn erst wieder ein, wenn xDrip Werte anzeigt.
+- Entferne das Gerät in xDrip (Systemstatus → Gerät löschen) UND in den Bluetooth-Einstellungen des Smartphones (dort als DexcomXX angezeigt, wobei XX die letzten beiden Ziffern der Transmitter-Seriennummer sind).
+- Halte den alten Transmitter außerhalb der Bluetooth-Reichweite, damit er sich nicht wieder verbindet.
+- Folge dann [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
 ### Dexcom G7, ONE+ und Stelo
 
@@ -168,7 +168,7 @@ Follow the instructions:
     
     ![xDrip Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
 
-- Start the sensor in xDrip.
+- Starte den Sensor in xDrip.
     
         {admonition} Sicherheitshinweis
         :class: warning
