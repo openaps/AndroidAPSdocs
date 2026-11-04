@@ -11,7 +11,7 @@
 
 Eine Automatisierung führt bestimmte Aktionen aus, wenn eine oder mehrere Bedingungen oder Auslöser erfüllt sind. Auslöser können weniger häufige Situationen wie niedrige oder hohe Glukosewerte (BZ) oder eine bestimmte Menge negativen aktiven Insulins (Insulin on Bord - IOB) beinhalten. Automatisierungen können auch wiederkehrende Ereignisse abdecken, etwa Mahlzeiten oder Sport zu bestimmten Tageszeiten, oder wenn Du Dich innerhalb einer bestimmten Entfernung zu einem GPS-Standort oder im Bereich einer WLAN-SSID befindest. Eine Automatisierung kann die Sicherung der AAPS-Einstellungen nach einem bestimmten Zeitplan oder mit jedem Pod-Wechsel ausführen.
 
-Automatisierungsregeln legst Du im Bildschirm **Automatisierung** (**Bearbeiten → Automatisierung**) an und änderst sie dort. Jede Regel wird durch zwei Eigenschaften definiert:
+Automatisierungsregeln legst Du im Bildschirm **Automatisierung** (**Verwalten → Automatisierung**) an und änderst sie dort. Jede Regel wird durch zwei Eigenschaften definiert:
 
 - Eine oder mehrere Bedingungen oder „Auslöser“, die eine Aktion starten.
 
@@ -64,7 +64,7 @@ Du hast eine **Automatisierung** erstellt, die um 5.00 Uhr am Morgen ein „temp
 
 ## Wo finden sich die Automatisierungen in AAPS?
 
-Öffne in der unteren Navigationsleiste des Startbildschirms **Bearbeiten** und wähle **Automatisierung**.
+Öffne in der unteren Navigationsleiste des Startbildschirms **Verwalten** und wähle **Automatisierung**.
 
 ## Wie kann ich eine Automatisierung einrichten?
 
@@ -389,7 +389,7 @@ Im Beispiel unten ist die Regel **Low glucose temp target** (1) (siehe [temporä
 
 (automations-troubleshooting)=
 
-## Problembehandlung
+## Fehlerbehebung
 
 * Problem: __Meine Automatisierungen werden durch AAPS nicht gestartet__
 
