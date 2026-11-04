@@ -32,7 +32,7 @@
     
     ![Dana-i/RS driver settings](../images/v4/Pumps/dana_i_rs_settings.png)
     
-    **Plugin öffnen** (oder **Bearbeiten** > **Pumpe**) öffnet den Dana-i/RS-Pumpenbildschirm. Bevor eine Pumpe gekoppelt ist, sieht er so aus:
+    **Plugin öffnen** (oder **Verwalten** > **Pumpe**) öffnet den Dana-i/RS-Pumpenbildschirm. Bevor eine Pumpe gekoppelt ist, sieht er so aus:
     
     ![Dana-i/RS pump screen before pairing](../images/v4/Pumps/dana_i_rs_pump_screen.png)
 
@@ -68,7 +68,7 @@
 
 ### Optionen, die nur bei manchen Modellen angezeigt werden
 
-* **Automatische Sperre**: Bei einer Dana-i2 gibt es im Bildschirm **Benutzerdefinierte Einstellungen** (auf dem Pumpenbildschirm, **Bearbeiten** > **Pumpe**) einen Schalter **Automatische Sperre** für die automatische Sperre der Pumpe. Tippe nach der Änderung auf **In Pumpe speichern**.
+* **Automatische Sperre**: Bei einer Dana-i2 gibt es im Bildschirm **Benutzerdefinierte Einstellungen** (auf dem Pumpenbildschirm, **Verwalten** > **Pumpe**) einen Schalter **Automatische Sperre** für die automatische Sperre der Pumpe. Tippe nach der Änderung auf **In Pumpe speichern**.
 * **Einfacher Modus**: Bei Pumpenmodellen mit einem einfachen Menümodus zeigt der Pumpenbildschirm eine Zeile **Einfacher Modus** mit **An** oder **Aus**.
 * Lehnt eine Dana-i2 einen Bolus ab, zeigt **AAPS** den Grund an, zum Beispiel *Pumpe ist nicht befüllt*, *Nicht genug Insulin im Reservoir* oder *Der einfache Ruhemodus ist auf der Pumpe aktiviert*.
 
@@ -133,7 +133,7 @@ Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe ab
 ![Alarm Abgabefehler](../images/DanaRS_Error_bolus.png)
 
 * In den meisten Fällen handelt es sich nur um ein Kommunikationsproblem und es wurde tatsächlich die korrekte Insulinmenge abgegeben.
-* Prüfe im Pumpenverlauf, ob der richtige Bolus abgegeben wurde. Das geht an der Pumpe selbst oder in **AAPS** auf dem Pumpenbildschirm (**Bearbeiten** > **Pumpe**) > **Pumpen-Historie** > **Boli**.
+* Prüfe im Pumpenverlauf, ob der richtige Bolus abgegeben wurde. Das geht an der Pumpe selbst oder in **AAPS** auf dem Pumpenbildschirm (**Verwalten** > **Pumpe**) > **Pumpen-Historie** > **Boli**.
 * Lösche den Fehlereintrag in den [Behandlungen](#screens-bolus-carbs), wenn Du möchtest.
 * Die tatsächlich abgegebene Menge wird bei der nächsten Verbindung ausgelesen und gespeichert. Um das zu erzwingen, tippe auf dem Pumpenbildschirm auf **Aktualisieren** oder warte einfach auf die nächste Verbindung.
 
@@ -154,7 +154,7 @@ Falls Du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 ### DanaRS v3, Dana-i, Dana-i2
 
 * Starte den Kopplungsprozess wie [oben](#DanaRS-Insulin-Pump-pairing-pump) beschrieben.
-* Manchmal musst Du zuerst die Kopplungsinformationen in **AAPS** löschen. Tippe auf dem Pumpenbildschirm (**Bearbeiten** > **Pumpe**) auf **Kopplung aufheben** und bestätige **Kopplungsinformationen zurücksetzen?**. Tippe dann erneut auf **Koppeln**.
+* Manchmal musst Du zuerst die Kopplungsinformationen in **AAPS** löschen. Tippe auf dem Pumpenbildschirm (**Verwalten** > **Pumpe**) auf **Kopplung aufheben** und bestätige **Kopplungsinformationen zurücksetzen?**. Tippe dann erneut auf **Koppeln**.
 
 ## Reisen über Zeitzonen mit DanaRS, Dana-i und Dana-i2
 
