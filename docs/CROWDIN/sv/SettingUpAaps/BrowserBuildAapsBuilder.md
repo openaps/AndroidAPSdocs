@@ -102,6 +102,8 @@ Inställningssidan är en del av denna dokumentation, på ditt språk. Ha också
 
 Inställningssidan öppnar varje GitHub-sida i en ny flik i Chrome. För att gå tillbaka till inställningssidan, tryck på flikknappen bredvid adressfältet i Chrome (fyrkanten med en siffra) och välj inställningssidan för AAPS Builder.
 
+![Tab switcher](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
+
 Inställningssidan körs helt i din webbläsare: din nyckel och dina lösenord skickas aldrig någonstans, förutom till den GitHub-hemlighet som du själv klistrar in dem i. Bara ditt användarnamn på GitHub skickas till GitHub, för att kontrollera att det finns. Den kommer ihåg ditt användarnamn på GitHub och namnet på ditt repo, så att du när som helst kan gå tillbaka och öppna sidan med dina hemligheter eller dina byggen igen.
 
 ![Inställningssidan för AAPS Builder](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
@@ -144,8 +146,14 @@ Det här steget skapar din egen privata kopia av AAPS Builder i ditt GitHub-kont
 
    GitHub visar ditt nya repo: det innehåller en mapp `.github` (med byggarbetsflödet) och en fil `README.md`. **Gå tillbaka till fliken med inställningssidan** för steg 2: tryck på flikknappen bredvid adressfältet i Chrome och välj inställningssidan.
 
+   ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
+
 ```{warning}
 **Är ditt nya repo tomt**, utan filer? Det skapades inte från mallen, och det kan inte bygga. Ta bort det (**Settings** → längst ned på sidan → **Delete this repository**) och tryck sedan på **Create my private repository** (skapa mitt privata repo) på inställningssidan igen.
+```
+
+```{tip}
+GitHub says **my-aaps already exists in this account**? You already have your repository: close the GitHub tab and go on with the setup page. If your key is already in it, continue with [step 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
 (aaps-builder-step2)=
@@ -253,6 +261,7 @@ Visar GitHub **Page not found** (404)? Kontrollera först att du är inloggad p�
 Om det inte finns någon knapp **Build AAPS** eller **Run workflow**:
 
 - Öppna ditt repo och kontrollera att det har en mapp `.github` med filen `workflows/build.yml`. Om repot är tomt skapades det inte från mallen: ta bort det (**Settings** → längst ned på sidan → **Delete this repository**) och gör [steg 1](#aaps-builder-step1) igen med knappen.
+- The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
 - Öppna fliken **Actions**. Om det står att arbetsflöden är inaktiverade, tryck på den gröna knappen för att aktivera dem och tryck sedan på **Build AAPS** i listan.
 
 (aaps-builder-step5)=
@@ -311,10 +320,28 @@ Du kan också låta varje bygge sparas i din Google Drive, i mappen `AAPS/<versi
 Det kräver ytterligare en hemlighet, `GDRIVE_OAUTH2`. Steg 6 på inställningssidan hämtar den från Google åt dig, på en telefon eller en dator. **AAPS** kan då bara se och ändra de filer som den själv skapar i din Google Drive, inget annat.
 
 1. Tryck på **Connect Google Drive** (anslut Google Drive) på inställningssidan. Google öppnas i en ny flik.
+
 2. Välj ditt Google-konto och tillåt åtkomst. Om Google säger att appen inte är verifierad, tryck på **Advanced** (avancerat) och sedan på **Go to …** (gå till …).
-3. Den nya fliken visar då ett fel, till exempel **This site can't be reached** eller **127.0.0.1 refused to connect**. **Detta är väntat:** Googles svar finns i adressen till den fliken. Tryck på adressfältet, markera hela adressen (den börjar med `http://127.0.0.1:47913/`) och kopiera den.
+
+   ![Choose an account](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
+
+   ![Continue](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
+
+3. Den nya fliken visar då ett fel, till exempel **This site can't be reached** eller **127.0.0.1 refused to connect**. **Detta är väntat:** Googles svar finns i adressen till den fliken. Tap the address bar, then the copy icon next to the address (on a computer: select the whole address and copy it). Den börjar med `http://127.0.0.1:47913/`.
+
+   ![This site can't be reached](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
+
+   ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
+
 4. Gå tillbaka till fliken med inställningssidan inom några minuter: Googles svar gäller bara en kort tid, och bara en gång. Klistra in adressen i **Paste the copied address here** (klistra in den kopierade adressen här) och tryck på **Get GDRIVE_OAUTH2** (hämta GDRIVE_OAUTH2). Sidan visar **GDRIVE_OAUTH2 är klar**.
+
+   ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
+
+   ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
+
 5. Tryck på **Open the secrets page** (öppna sidan för hemligheter). Tryck på **Copy name** (kopiera namn) och klistra sedan in det i det lilla fältet **Name** (namnet är `GDRIVE_OAUTH2`). Tryck på **Copy secret** (kopiera hemlighet), klistra in den i den stora rutan **Secret** och tryck på **Add secret**.
+
+   ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
 Från och med nästa bygge sparas APK-filerna också i Google Drive.
 
@@ -337,31 +364,15 @@ Ditt repo bygger aldrig något av sig självt: du bestämmer när du bygger, vil
 **Uppdateringar av din arbetsflödesfil** är sällsynta: bara när formuläret **Run workflow** ändras, till exempel för en ny byggvariant, eller en gång om ditt repo skapades med en tidigare version av inställningssidan (ett tomt repo med en kort arbetsflödesfil) eller från den gamla mallen. Sidan [Uppdateringar och ändringar i dokumentationen](../Maintenance/DocumentationUpdate.md) talar om när det behövs. Din hemlighet `KEYSTORE_SET` förblir som den är. Öppna **Updating your copy** (uppdatera din kopia) i slutet av steg 1 på inställningssidan:
 
 1. Tryck på **Open the newest workflow** (öppna det senaste arbetsflödet). På en dator klickar du på **kopieringsikonen** ("Copy raw file") uppe till höger i filen. På en telefon öppnar du i stället **versionen med ren text**, trycker länge på texten och väljer sedan **Markera alla** och **Kopiera**.
-2. Tryck på **Open my workflow file** (öppna min arbetsflödesfil).
+2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
 3. Ersätt hela texten med det kopierade arbetsflödet (tryck länge på en telefon: **Markera alla**, sedan **Klistra in**).
 4. Tryck på **Commit changes…** och sedan på **Commit changes**.
 
 Filens första rad visar dess version.
 
-(aaps-builder-troubleshooting)=
-
 ## Felsökning
 
-För att se varför ett bygge misslyckades, [läs byggloggen](#aaps-ci-read-the-logs): stegen har andra namn, men du hittar felet på samma sätt. Du kan också [uppdatera en hemlighet](#aaps-ci-update-secret) och [köra bygget igen](#aaps-ci-rerun) på samma sätt.
-
-- **Ingen knapp "Build AAPS" eller "Run workflow", eller repot är tomt**: repot skapades inte från mallen. Ta bort det (**Settings** → längst ned på sidan → **Delete this repository**) och gör [steg 1](#aaps-builder-step1) igen med knappen **Create my private repository** (skapa mitt privata repo).
-- **Bygget stoppar med "This repository is PUBLIC"**: öppna **Settings** (inställningar) → **General** → **Danger Zone** → **Change visibility** (ändra synlighet) → **Private** (privat) i ditt repo och bygg sedan igen.
-- **"Secret KEYSTORE_SET is missing"**: gör steg 3 på inställningssidan.
-- **"The secret is too short"**, **"The secret is not a valid code"** eller **"The secret does not contain a keystore"**: fel text klistrades in i hemligheten, ofta själva ordet `KEYSTORE_SET`, eller bara en del av koden. Öppna **Settings** → **Secrets and variables** → **Actions** i ditt repo, redigera `KEYSTORE_SET` och klistra in den långa koden från **Copy secret** (kopiera hemlighet) igen (gör först om steg 2 på inställningssidan om du har stängt den).
-- **"Keystore, password or alias is wrong"**: kontrollera lösenordet och aliaset för din keystore och gör sedan om steg 2 och 3 på inställningssidan.
-- **"Version … does not exist"**: versionen som du skrev är ingen AAPS-version. Använd `latest` eller kontrollera versionsnumret.
-- **"Variant … is not supported"**: din arbetsflödesfil är en äldre version. Ersätt den enligt [Uppdatera AAPS](#aaps-builder-updates).
-- **"Page not found" (404) när inställningssidan öppnar GitHub**: logga in på github.com i samma webbläsare (GitHub visar 404 för privata repon när du inte är inloggad). Om du är inloggad stämmer inte användarnamnet eller namnet på repot i steg 1 på inställningssidan med ditt repo. Skriv de exakta namnen.
-- **"Det finns ingen GitHub-användare med det här namnet"** i steg 1: skriv ditt användarnamn på GitHub, så som det visas i din GitHub-profil, inte din e-postadress.
-- **Ingen länk Download, eller GitHub-appen öppnades**: GitHub-appen kan inte ladda ned byggen. Öppna bygget i Chrome enligt [steg 5](#aaps-builder-step5). För att GitHub-länkar inte ska öppnas i appen: Android **Settings** (Inställningar) → **Apps** (Appar) → **GitHub** → **Open by default** (Öppna som standard) → stäng av **Open supported links** (Öppna länkar som stöds).
-- **"Google Drive access has expired or was revoked"**: gör om [steg 6](#aaps-builder-google-drive) och uppdatera hemligheten `GDRIVE_OAUTH2`.
-
-För andra problem med GitHub och Google Drive, se [Bygge i webbläsaren: felsökning](../GettingHelp/BrowserBuildTroubleshooting.md).
+Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
 
 ```{toctree}
 :hidden:
