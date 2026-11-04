@@ -64,7 +64,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 **FCL** ist mit anderen Insulinen als Lyumjev oder Fiasp wahrscheinlich nicht effektiv, es sei denn, der Nutzende ernährt sich sehr moderat bis hin zu kohlenhydratarm.
 
-Allerdings können Fiasp oder Lyumjev häufig zu Verstopfungen führen, auch wenn Dinge wie beispielsweise die Nadellänge angepasst wurden. Es ist wichtig, ein Auge auf die Kanülen- oder Pod-Dauer zu haben. Bei vielen Nutzenden lässt die Insulinwirkung nach 48 Stunden nach, bevor die Kanüle bzw. der Pod letztendlich ausfällt.
+Allerdings können Fiasp oder Lyumjev häufig zu Verschlüssen führen, auch wenn Dinge wie beispielsweise die Nadellänge angepasst wurden. Es ist wichtig, ein Auge auf die Kanülen- oder Pod-Dauer zu haben. Bei vielen Nutzenden lässt die Insulinwirkung nach 48 Stunden nach, bevor die Kanüle bzw. der Pod letztendlich ausfällt.
 
 ## Voraussetzungen
 
@@ -272,7 +272,7 @@ Um Hypos 3-5 Stunden nach einer Mahlzeit zu vermeiden, reduziere die Aggressivit
 - Der IOB-Schwellenwert könnte nach Mahlzeiten differenziert werden: Durch das Klonen der Automatisierungen könnte man nach Frühstück, Mittag- und Abendessen-Zeitfenstern unterscheiden (oder sogar nach Geo-Standorten wie Firmen-Cafeteria oder Schwiegermutter usw.)
 > In diesen Zeitfenstern kann sogar weiter unterschieden werden, indem Du verschiedene TTs für Low Carb vs. schnelle Kohlenhydrate usw. setzt, und so verschiedene Mahlzeitklassen „kodierst“, die zu dieser Tageszeit auftreten können und diese mit **Automatisierungen**, die speziell auf Dich zueschnitten sind, aktivierst. Sofern Deine Ernährungsgewohnheiten nicht stark variieren, ist das vermutlich gar nicht notwendig.
 
-Vor einer besonderen Mahlzeit kannst Du in weniger als 5 Sekunden direkt auf Deinem AAPS-Smartphone den **IOB**-Schwellenwert erhöhen oder eine andere Änderung an einer Deiner Automatisierungen vornehmen (**Bearbeiten → Automatisierung**).
+Vor einer besonderen Mahlzeit kannst Du in weniger als 5 Sekunden direkt auf Deinem AAPS-Smartphone den **IOB**-Schwellenwert erhöhen oder eine andere Änderung an einer Deiner Automatisierungen vornehmen (**Verwalten → Automatisierung**).
 
 Die Gefahr einer Hypo einge Stunden nach dem Essen ist im Wesentlichen eine Frage, ob Deine Mahlzeit-Zusammensetzung so war, dass die **Insulinrestwirkungen ("tails"), die gegen den Großteil der Kohlenhydrate ankämpfen**, von **"verlängerten Kohlenhydraten" verbraucht ** werden (übermäßige/verzögerte Kohlenhydrataufnahme/Protein/Fett/Ballaststoffe).
 
@@ -280,14 +280,14 @@ Im Laufe der Zeit wirst Du Muster erkennen, Deine Automatisierungen adjustieren 
 
 ### Reihenfolge der programmierten Automationen
 
-Es können Probleme mit sich überschneidenden Definitionen zwischen den **Automatisierungen** auftreten. Beispiel: Die Problemstellung ist, dass Delta >8 auch Delta >5 ist, d.h. es kann zwei konkurrierende **Automatisierungen** geben. Was macht der Loop in dieser Situation? Es entscheidet immer in der Reihenfolge, in der Deine **Automatisierungen** unter **Bearbeiten → Automatisierung** stehen.  Beispiel: Die Delta > +8-Regel muss als erstes ausgeführt werden (und startet, wenn alle Bedingungen zutreffen den stärksten Boost); danach folgt die Überprüfung auf Delta >5 (und eine sanftere Reaktion). Würden sie anders herum sortiert und ausgeführt werden, würde die Delta >8-Regel nie in Kraft treten, weil bereits Delta >5 angewendet wird, Fall abgeschlossen.
-> Tipp für Automatisierungen: Die Reihenfolge ist sehr leicht änderbar. Halte unter **Bearbeiten → Automatisierung** den Griff **=** rechts neben einer Regel gedrückt und ziehe sie an eine andere Stelle.
+Es können Probleme mit sich überschneidenden Definitionen zwischen den **Automatisierungen** auftreten. Beispiel: Die Problemstellung ist, dass Delta >8 auch Delta >5 ist, d.h. es kann zwei konkurrierende **Automatisierungen** geben. Was macht der Loop in dieser Situation? Es entscheidet immer in der Reihenfolge, in der Deine **Automatisierungen** unter **Verwalten → Automatisierung** stehen.  Beispiel: Die Delta > +8-Regel muss als erstes ausgeführt werden (und startet, wenn alle Bedingungen zutreffen den stärksten Boost); danach folgt die Überprüfung auf Delta >5 (und eine sanftere Reaktion). Würden sie anders herum sortiert und ausgeführt werden, würde die Delta >8-Regel nie in Kraft treten, weil bereits Delta >5 angewendet wird, Fall abgeschlossen.
+> Tipp für Automatisierungen: Die Reihenfolge ist sehr leicht änderbar. Halte unter **Verwalten → Automatisierung** den Griff **=** rechts neben einer Regel gedrückt und ziehe sie an eine andere Stelle.
 
 Genauso schnell und einfach kannst Du Auslöser oder Aktionen binnen weniger Sekunden auf Deinem AAPS-Smartphone anpassen; wenn Du beispielsweise an einem besonderen Essens-Event teilnimmst. (Aber vergiss nicht, sie für den nächsten Tag wieder auf "normal" zu setzen).
 
 (full-closed-loop-troubleshooting)=
 
-## Problembehandlung
+## Fehlerbehebung
 
 ### Wie man wieder in den Hybrid Closed Loop zurückkehrt
 
