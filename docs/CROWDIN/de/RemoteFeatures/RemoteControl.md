@@ -84,15 +84,15 @@ Stelle sicher, dass sowohl __AAPSClient__ als auch __AAPS__ auf dem Bildschirm *
 (remotecontrol-pairing)=
 ### AAPSClient mit AAPS koppeln (Remote-Steuerung)
 
-Ab **AAPS**-Version 4 steuert **AAPSClient** **AAPS** über eine sichere, **gekoppelte** Verbindung. Synchronisierung allein reicht nicht: Solange die Smartphones nicht gekoppelt sind, zeigt **AAPSClient** nur **Bearbeiten** mit einem schreibgeschützten **Profil** und **Mit Master koppeln**.
+Ab **AAPS**-Version 4 steuert **AAPSClient** **AAPS** über eine sichere, **gekoppelte** Verbindung. Synchronisierung allein reicht nicht: Solange die Smartphones nicht gekoppelt sind, zeigt **AAPSClient** nur **Verwalten** mit einem schreibgeschützten **Profil** und **Mit Master koppeln**.
 
-1. Öffne auf dem **AAPS**-Smartphone **Bearbeiten → Autorisierte Clients** und schalte **Client-Steuerung erlauben** ein (standardmäßig aus, im Einfachen Modus immer an).
+1. Öffne auf dem **AAPS**-Smartphone **Verwalten → Autorisierte Clients** und schalte **Client-Steuerung erlauben** ein (standardmäßig aus, im Einfachen Modus immer an).
 2. Tippe auf **+**, gib einen Namen für das Follower-Smartphone ein, wähle, wie es eingerichtet wird, und wähle seine **Rolle**:
    - **QR-Code: Nightscout und Kopplung** – **AAPS** zeigt einen QR-Code, der auf dem Follower-Smartphone Nightscout einrichtet und es mit einem Scan koppelt. Dafür braucht es ein Admin-Token in den NSClientV3-Einstellungen des **AAPS**-Smartphones.
    - **PIN** – für ein Follower-Smartphone ohne Kamera, das bereits mit Nightscout verbunden ist: Notiere die einmalige **PIN** (etwa zwei Minuten gültig).
-3. Scanne auf dem **AAPSClient**-Smartphone den Code (im Einrichtungsassistenten oder über **Bearbeiten → Mit Master koppeln → QR-Code scannen**) oder öffne **Bearbeiten → Mit Master koppeln** und gib die PIN ein. Bestätigen.
+3. Scanne auf dem **AAPSClient**-Smartphone den Code (im Einrichtungsassistenten oder über **Verwalten → Mit Master koppeln → QR-Code scannen**) oder öffne **Verwalten → Mit Master koppeln** und gib die PIN ein. Bestätigen.
 
-Das Follower-Smartphone erscheint dann in der Liste **Autorisierte Clients** als **Aktiv**, und **AAPSClient** zeigt **Behandlungen**, **Szenen** und **Bearbeiten**. Das Follower-Smartphone bekommt ein eigenes Nightscout-Token mit genau den Rechten, die es braucht. Die vollständige Anleitung mit Screenshots und Fehlerbehebung findest Du unter [Master ↔ Client-Steuerung](#client_master_master_setup).
+Das Follower-Smartphone erscheint dann in der Liste **Autorisierte Clients** als **Aktiv**, und **AAPSClient** zeigt **Behandlungen**, **Szenen** und **Verwalten**. Das Follower-Smartphone bekommt ein eigenes Nightscout-Token mit genau den Rechten, die es braucht. Die vollständige Anleitung mit Screenshots und Fehlerbehebung findest Du unter [Master ↔ Client-Steuerung](#client_master_master_setup).
 
 Prüfe, ob die Einrichtung funktioniert: Gib in **AAPSClient** Kohlenhydrate ein, bestätige die angezeigte Menge und prüfe, ob der Eintrag auf beiden Smartphones unter **Behandlungen** erscheint.
 
@@ -110,7 +110,7 @@ Ist **AAPSClient** gekoppelt, bietet es den Betreuenden fast dieselben Bildschir
 
 - **Behandlungen**: Insulinbolus, Kohlenhydrate und Bolus-Rechner.
 - **Szenen**: [Szenen](../DailyLifeWithAaps/Scenes.md) starten und beenden.
-- **Bearbeiten**: Profile, Insulineinstellungen, temporäre Ziele, QuickWizard, Automatisierung, Lebensmittel, Wechsel der Setzstellen, Kopplung und die laufende temporäre Basalrate.
+- **Verwalten**: Profile, Insulineinstellungen, temporäre Ziele, QuickWizard, Automatisierung, Lebensmittel, Wechsel der Setzstellen, Kopplung und die laufende temporäre Basalrate.
 - **Hauptmenü**: Behandlungen, Historie, Statistiken, Wartung, Konfiguration.
 
 Auf **AAPSClient** gibt es keine Pumpe und keine Ziele. Eine ausführliche Beschreibung findest Du unter [Die AAPSClient-App](AapsClient.md).
@@ -206,7 +206,7 @@ In **AAPS** 4 ist der unterstützte Weg, **AAPS** fernzusteuern, ein **gekoppelt
 
 ```{admonition} Only when client control is off
 :class: warning
-Ist **Client-Steuerung erlauben** unter **Bearbeiten → Autorisierte Clients** ausgeschaltet (und der Einfache Modus aus), übernimmt **AAPS** Careportal-Einträge aus Nightscout nur für die Datenarten, die Du unter **Empfangen** im [Bereich Synchronisierung der NSClientV3-Einstellungen](#Preferences-nsclient-synchronization) eingeschaltet hast: Kohlenhydrate, temporäre Ziele, Profilwechsel und die übrigen Careportal-Einträge. Insulin wird auf diesem Weg nie abgegeben: Ein in Nightscout eingegebener „Korrekturbolus“ wird nur *angekündigt*, und **AAPS** zählt ihn als aktives Insulin, ohne ihn abzugeben. Diese Einrichtung wird für die Remote-Steuerung nicht empfohlen; nutze stattdessen einen gekoppelten **AAPSClient**.
+Ist **Client-Steuerung erlauben** unter **Verwalten → Autorisierte Clients** ausgeschaltet (und der Einfache Modus aus), übernimmt **AAPS** Careportal-Einträge aus Nightscout nur für die Datenarten, die Du unter **Empfangen** im [Bereich Synchronisierung der NSClientV3-Einstellungen](#Preferences-nsclient-synchronization) eingeschaltet hast: Kohlenhydrate, temporäre Ziele, Profilwechsel und die übrigen Careportal-Einträge. Insulin wird auf diesem Weg nie abgegeben: Ein in Nightscout eingegebener „Korrekturbolus“ wird nur *angekündigt*, und **AAPS** zählt ihn als aktives Insulin, ohne ihn abzugeben. Diese Einrichtung wird für die Remote-Steuerung nicht empfohlen; nutze stattdessen einen gekoppelten **AAPSClient**.
 ```
 
 Mehr zu den **Nightscout**-Optionen kannst Du [hier](https://nightscout.github.io/) nachlesen
