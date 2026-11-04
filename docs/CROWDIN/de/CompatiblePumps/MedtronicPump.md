@@ -65,7 +65,7 @@ Damit AAPS Befehle remote verschicken kann, solltest Du die folgenden Pumpeneins
     
     ![Medtronic driver settings](../images/v4/Pumps/medtronic_settings.png)
     
-    **Plugin öffnen** (oder **Bearbeiten** > **Pumpe**) öffnet den Medtronic-Pumpenbildschirm. Bevor eine Pumpe gekoppelt ist, sieht er so aus:
+    **Plugin öffnen** (oder **Verwalten** > **Pumpe**) öffnet den Medtronic-Pumpenbildschirm. Bevor eine Pumpe gekoppelt ist, sieht er so aus:
     
     ![Medtronic pump screen before pairing](../images/v4/Pumps/medtronic_pump_screen.png)
 
@@ -100,13 +100,13 @@ Wenn Du AAPS für Deine Medtronic-Pumpe einrichtest, musst Du in den **Einstellu
 
 Dein RileyLink-kompatibles Gerät wird über den Medtronic-Pumpenbildschirm gekoppelt, nicht über das Bluetooth-Menü Deines Smartphones:
 
-- Öffne den Pumpenbildschirm (**Bearbeiten** > **Pumpe** oder **Plugin öffnen** auf der Karte Medtronic unter **Konfiguration** > **Pumpe**).
+- Öffne den Pumpenbildschirm (**Verwalten** > **Pumpe** oder **Plugin öffnen** auf der Karte Medtronic unter **Konfiguration** > **Pumpe**).
 - Tippe auf **RileyLink verbinden**. **AAPS** sucht nach RileyLink-kompatiblen Geräten in der Nähe.
 - Tippe in der Liste auf Dein Gerät. Wenn **RileyLink erfolgreich verbunden** angezeigt wird, tippe auf **OK**.
 
 ## Medtronic-Pumpenbildschirm
 
-Den Medtronic-Pumpenbildschirm öffnest Du über **Bearbeiten** > **Pumpe**. Der Pumpenbildschirm zeigt die aktuellen Statusinformationen der Pumpe sowie einige Medtronic-spezifische Aktionen (siehe Bild des Pumpenbildschirms oben).
+Den Medtronic-Pumpenbildschirm öffnest Du über **Verwalten** > **Pumpe**. Der Pumpenbildschirm zeigt die aktuellen Statusinformationen der Pumpe sowie einige Medtronic-spezifische Aktionen (siehe Bild des Pumpenbildschirms oben).
 
 - **RileyLink Status**: The current status of the connection between your phone and Rileylink compatible device. Der Status sollte immer 'Verbunden' sein. Jeder andere Status erfordert Deinen Eingriff. 
 - **RileyLink Akku**: Zeigt den aktuellen Akkustand Deines EmaLink oder OrangeLink Gerätes an. Wird nur angezeigt, wenn **Akkustand von OrangeLink/EmaLink/DiaLink anzeigen** in den Medtronic-Einstellungen aktiviert ist.
@@ -153,7 +153,7 @@ Der RL-Statusdialog hat zwei Tabs:
 
 ## Aktionen
 
-Mit dem Medtronic-Treiber stehen auf dem Pumpenbildschirm (**Bearbeiten** > **Pumpe**) zwei zusätzliche Aktionen zur Verfügung:
+Mit dem Medtronic-Treiber stehen auf dem Pumpenbildschirm (**Verwalten** > **Pumpe**) zwei zusätzliche Aktionen zur Verfügung:
 
 - **Wake und Tune-Up** - Falls AAPS die Pumpe über längere Zeit nicht erreichen kann (Kontakt sollte normalerweise alle fünf Minuten erfolgen), kannst Du die Verbindung mit diesem Button erzwingen. Es wird dann auf allen möglichen Funkfrequenzen versucht Deine Pumpe zu erreichen. Falls eine Verbindung so hergestellt werden kann, wird diese dann verwendete Frequenz als Standard gespeichert. Während die Anpassung läuft, zeigt der RileyLink-Status auf dem Pumpenbildschirm das an. Schlägt eine Anpassung fehl (zum Beispiel weil die Pumpe außer Reichweite war), versucht **AAPS** es etwa alle 10 Minuten von selbst erneut.
 - **RileyLink zurücksetzen** - Hast Du Dein RileyLink-kompatibles Gerät zurückgesetzt, musst Du diese Aktion eventuell nutzen, damit das Gerät neu konfiguriert werden kann (Frequenz, Frequenztyp, Codierung).
@@ -204,9 +204,9 @@ Der GNARL-Code unterstützt alle Funktionen des Medtronic-Treibers in AAPS und i
 
 Es gibt einige Möglichkeiten, um Verbindungsprobleme zu lösen.
 
-- Tippe auf dem Pumpenbildschirm (**Bearbeiten** > **Pumpe**) wie oben beschrieben auf **Aufwachen und anpassen**.
+- Tippe auf dem Pumpenbildschirm (**Verwalten** > **Pumpe**) wie oben beschrieben auf **Aufwachen und anpassen**.
 - Deaktiviere Bluetooth auf Deinem Smartphone, warte 10 Sekunden und schalte es wieder ein. Dies zwingt das RileyLink-Gerät sich erneut mit dem Smartphone zu verbinden.
-- Setze das RileyLink-Gerät zurück. Tippe dann auf dem Pumpenbildschirm (**Bearbeiten** > **Pumpe**) auf **RileyLink zurücksetzen**.
+- Setze das RileyLink-Gerät zurück. Tippe dann auf dem Pumpenbildschirm (**Verwalten** > **Pumpe**) auf **RileyLink zurücksetzen**.
 - Wenn alles bis hierhin nicht geholfen hat, haben die folgenden Schritte die Verbindungsprobleme bei einigen Community-Mitgliedern beheben können: 
     1. Starte dein Smartphone neu
     2. *Während* dein Smartphone startet, starte den Rileylink ebenfalls neu
