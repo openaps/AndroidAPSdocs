@@ -50,6 +50,12 @@ Auf der GitHub-Seite, die sich öffnet, ist bereits alles ausgefüllt: die Vorla
 Es wurde nicht aus der Vorlage angelegt. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** again.
 ```
 
+```{admonition} GitHub says "my-aaps already exists in this account"?
+:class: tip
+
+You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+```
+
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
@@ -60,7 +66,7 @@ Die Build-Schritte werden für Dich aktualisiert: Bei jedem Build führt Dein Re
    On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. Öffne auf einem Smartphone stattdessen die <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">Nur-Text-Version</a>, halte den Text gedrückt → **Alles auswählen** → **Kopieren**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code> for editing.
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. Ersetze den gesamten Text durch den kopierten Workflow (auf einem Smartphone: gedrückt halten → **Alles auswählen** → **Einfügen**) und klicke dann zweimal auf **Commit changes…**. Die erste Zeile der Datei zeigt ihre Version.
 ```
 
@@ -151,7 +157,8 @@ Du möchtest eine E-Mail, wenn der Build fertig ist? GitHub schickt Dir nur dann
 :class: warning
 
 1. Öffne Dein Repository und prüfe, ob es einen Ordner `.github` mit der Datei `workflows/build.yml` enthält. Ist das Repository leer, wurde es nicht aus der Vorlage angelegt: Lösche es (**Settings** → unten auf der Seite → **Delete this repository**) und führe [Schritt 1](#aaps-builder-setup-step1) erneut mit dem Knopf aus.
-2. Öffne den Tab „Actions“. Steht dort, dass Workflows deaktiviert sind, klicke auf die grüne Schaltfläche, um sie zu aktivieren. Klicke dann in der Liste auf „Build AAPS“.
+2. The file is there, but GitHub shows "This workflow does not exist": see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+3. Öffne den Tab „Actions“. Steht dort, dass Workflows deaktiviert sind, klicke auf die grüne Schaltfläche, um sie zu aktivieren. Klicke dann in der Liste auf „Build AAPS“.
 ```
 
 (aaps-builder-setup-step5)=
@@ -196,7 +203,7 @@ Du möchtest, dass die APK in Deinem Google Drive erscheint und dort dauerhaft b
    Google öffnet sich in einem neuen Tab. Wähle Dein Google-Konto und erlaube AAPS, seine eigenen Dateien zu sehen und zu ändern. Meldet Google, dass die App nicht überprüft ist, tippe auf „Erweitert“ und dann auf „Weiter zu …“.
 2. Dann zeigt der neue Tab einen Fehler wie **„Die Website ist nicht erreichbar“** oder **„127.0.0.1 hat die Verbindung abgelehnt“**. **Das ist so gewollt.** Die Antwort von Google steht in der Adresse dieses Tabs.
 
-   Tippe auf die Adressleiste dieses Tabs, markiere die ganze Adresse und kopiere sie. Sie beginnt mit `http://127.0.0.1:47913/`. Kehre innerhalb weniger Minuten zu dieser Seite zurück: Die Antwort ist nur kurze Zeit gültig.
+   Tap the address bar of that tab, then the copy icon next to the address (on a computer: select the whole address and copy it). Sie beginnt mit `http://127.0.0.1:47913/`. Kehre innerhalb weniger Minuten zu dieser Seite zurück: Die Antwort ist nur kurze Zeit gültig.
 3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
@@ -323,7 +330,7 @@ Alles auf dieser Seite läuft in Deinem Browser. Dein Schlüssel und Deine Passw
   const repo = () => repoInput.value.trim() || REPO_NAME;
 
   const LINKS = [
-    ['openWorkflowFile', '/edit/main/' + WORKFLOW_PATH],
+    ['openWorkflowFile', '/blob/HEAD/' + WORKFLOW_PATH],
     ['openSecrets', '/settings/secrets/actions/new'],
     ['openSecrets2', '/settings/secrets/actions/new'],
     ['openActions', '/actions/workflows/build.yml'],
