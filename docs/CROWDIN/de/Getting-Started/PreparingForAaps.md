@@ -1,6 +1,6 @@
 # Vorbereitungen, um mit AAPS zu starten
 
-Willkommen. This documentation aims to guide users who are preparing to set up and start using the Android Artificial Pancreas System (**AAPS**).
+Willkommen. Diese Dokumentation soll Nutzer begleiten, die sich darauf vorbereiten, das Android Artificial Pancreas System (**AAPS**) einzurichten und zu nutzen.
 
 ## Deinen Weg durch die Dokumentation finden
 
@@ -18,7 +18,7 @@ Viele Details in der **AAPS**-Dokumentation sind aus Erfahrungen entstanden und 
 ### Technische Sicherheit
 **AAPS** hat umfangreiche Sicherheitsfunktionen. Diese beschränken das System und werden schrittweise durch das stufenweise Abschließen einer Reihe von [Zielen](../SettingUpAaps/CompletingTheObjectives.md) entfernt. Diese beinhalten das Testen bestimmter Parameter und die Beantwortung mehrerer Multiple-Choice-Fragen. **AAPS**-Funktionen werden mit dem erfolgreichen Abschluss des jeweiligen Ziels freigeschaltet. Dieses Vorgehen ermöglicht durch das schrittweise Kennenlernen der verschiedenen **AAPS**-Funktionen einen sicheren Übergang aus dem 'Open Loop' in den 'Closed Loop'.
 
-Die [Ziele (Objectives)](../SettingUpAaps/CompletingTheObjectives.md) sollen den bestmöglichen Einstieg in **AAPS** ermöglichen, und dabei die typischen Fehler und Nutzungsmuster, die **AAPS**-Entwickler bei Neulingen beobachtet haben, adressieren. Weil Einsteiger unerfahren sind und zu schnell mit **AAPS** loslegen wollen oder wichtige Punkte übersehen haben, können Fehler passieren. The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimize these issues.
+Die [Ziele (Objectives)](../SettingUpAaps/CompletingTheObjectives.md) sollen den bestmöglichen Einstieg in **AAPS** ermöglichen, und dabei die typischen Fehler und Nutzungsmuster, die **AAPS**-Entwickler bei Neulingen beobachtet haben, adressieren. Weil Einsteiger unerfahren sind und zu schnell mit **AAPS** loslegen wollen oder wichtige Punkte übersehen haben, können Fehler passieren. Die [Ziele](../SettingUpAaps/CompletingTheObjectives.md) sollen diese Probleme möglichst gering halten.
 
 ### Medizinische Sicherheit
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -26,15 +26,15 @@ Die [Ziele (Objectives)](../SettingUpAaps/CompletingTheObjectives.md) sollen den
 Vorsicht ist bei einer (zu) schnellen Verbesserung der Blutzuckerkontrolle und des HbA1c notwendig 
 ```
 
-Ein wichtiger Sicherheitsaspekt ist, dass eine **schnelle Reduzierung des HbA1c und eine verbesserte Blutzuckerkontrolle bei Personen mit einem über einen längeren Zeitraum erhöhten Glukosespiegel dauerhaften Schaden** verursachen können. Many people with diabetes are unaware of this, and not all clinicians make their patients aware of this issue.
+Ein wichtiger Sicherheitsaspekt ist, dass eine **schnelle Reduzierung des HbA1c und eine verbesserte Blutzuckerkontrolle bei Personen mit einem über einen längeren Zeitraum erhöhten Glukosespiegel dauerhaften Schaden** verursachen können. Vielen Menschen mit Diabetes ist das nicht bewusst, und nicht alle Ärzte weisen ihre Patienten auf dieses Problem hin.
 
-Dieser Schaden kann **Sehverlust und dauerhafte Neuropathie (Schmerz)** beinhalten. Es ist möglich, diesen Schaden zu vermeiden, indem der durchschnittliche Glukosespiegel langsamer reduziert wird. Wenn Du derzeit einen erhöhten HbA1c hast und zu **AAPS** (oder einem anderen Closed-Loop-System) wechselst, besprich dieses potentielle Risiko _bitte_ mit Deinem Klinik-Team, bevor Du startest, und lege gemeinsam einen Zeitraum fest, in dem Du den Glukosespiegel sicher schrittweise senkst. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 11.1 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
+Dieser Schaden kann **Sehverlust und dauerhafte Neuropathie (Schmerz)** beinhalten. Es ist möglich, diesen Schaden zu vermeiden, indem der durchschnittliche Glukosespiegel langsamer reduziert wird. Wenn Du derzeit einen erhöhten HbA1c hast und zu **AAPS** (oder einem anderen Closed-Loop-System) wechselst, besprich dieses potentielle Risiko _bitte_ mit Deinem Klinik-Team, bevor Du startest, und lege gemeinsam einen Zeitraum fest, in dem Du den Glukosespiegel sicher schrittweise senkst. Du kannst in **AAPS** anfangs einfach höhere Glukose-Zielwerte einstellen (derzeit ist der höchste wählbare Zielwert 11,1 mmol/l bzw. 200 mg/dl, Du kannst aber bei Bedarf auch bewusst ein schwaches Profil beibehalten) und den Zielwert dann im Lauf der Monate senken.
 
 #### Wie schnell kann ich meinen HbA1c reduzieren, ohne dauerhaften Schaden zu riskieren?
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. Sie schlugen vor, dass die **"Verringerung des HbA1c-Wertes während eines Zeitraums von 6 Monaten auf weniger als 2% beschränkt werden sollte, um das Fortschreiten der Retinopathie zu verhindern. ..Ein zu schneller Rückgang beim Beginn der glykämischen Kontrolle kann zu einer schwerwiegenden oder vorübergehenden Verschärfung des Fortschreitens der Retinopathie führen.“**
+Eine retrospektive [Studie](https://pubmed.ncbi.nlm.nih.gov/1464975/) mit 76 Patienten ergab, dass sich das Risiko für das Fortschreiten einer Retinopathie um das 1,6-, 2,4- bzw. 3,8-Fache erhöhte, wenn der HbA1c innerhalb von 6 Monaten um 1 %, 2 % bzw. 3 % sank. Sie schlugen vor, dass die **"Verringerung des HbA1c-Wertes während eines Zeitraums von 6 Monaten auf weniger als 2% beschränkt werden sollte, um das Fortschreiten der Retinopathie zu verhindern. ..Ein zu schneller Rückgang beim Beginn der glykämischen Kontrolle kann zu einer schwerwiegenden oder vorübergehenden Verschärfung des Fortschreitens der Retinopathie führen.“**
 
-Nachbemerkung: If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for an HbA1c calculator tool.
+Nachbemerkung: Wenn Du andere HbA1c-Einheiten verwendest (mmol/mol statt %), findest Du [hier](https://www.diabetes.co.uk/hba1c-units-converter.html) einen HbA1c-Rechner.
 
 In einer weiteren retrospektiven [Bewertung](https://academic.oup.com/brain/article/138/1/43/337923) von 954 Patienten haben Forschende Folgendes festgestellt:
 
@@ -42,7 +42,7 @@ In einer weiteren retrospektiven [Bewertung](https://academic.oup.com/brain/arti
 
 Ein [Kommentar](https://academic.oup.com/brain/article/138/1/2/340563) zu dieser Arbeit bestätigte, dass das Ziel zur Vermeidung von Komplikationen **sein sollte, den A1c über 3 Monate hinweg um <2 % zu reduzieren.** Weitere Rezensionen zum Thema [findest Du hier](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) und [hier](https://www.mdpi.com/1999-4923/15/7/1791).
 
-It is generally recognized that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. Dennoch ist es überlegenswert, dies mit Deinem Diabetes-Team zu besprechen.
+Es ist allgemein anerkannt, dass Menschen mit _neu_ diagnostiziertem Typ-1-Diabetes (die bei der Diagnose, vor Beginn der Insulintherapie, oft einen sehr hohen HbA1c haben) ihren HbA1c direkt nach der Diagnose offenbar schnell senken können, ohne diesen Risiken im gleichen Maß ausgesetzt zu sein, weil ihre Glukosewerte noch nicht so lange erhöht waren. Dennoch ist es überlegenswert, dies mit Deinem Diabetes-Team zu besprechen.
 
 (PreparingForAaps-no-sglt-2-inhibitors)=
 ### Keine SGLT-2-Hemmern
@@ -51,12 +51,12 @@ It is generally recognized that _newly_ diagnosed type 1 diabetics (who often ha
 :class: danger
 SGLT-2 Hemmer, auch Gliflozins genannt, hemmen die Resorption (Aufnahme) von Glukose in der Niere. Gliflozine senken den Blutzuckerspiel unkalkulierbar, und DÜRFEN NICHT genommen werden, wenn ein Closed Loop System wie AAPS genutzt wird! Damit würde ein enormes Risiko für eine Ketoazidose und/oder eine Hypoglykämie bestehen! Besonders gefährlich ist die Kombination dieses Medikaments mit einem System, das die Basalrate senkt, um die Glukosewerte zu erhöhen. 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. The problem is that, unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs. This leaves your body with too much insulin compared to the absorbed carbs, resulting in hypoglycemia.
+Kurz gesagt:
+- **Beispiel 1: Risiko einer Unterzuckerung**
+>Zum Mittagessen gibst Du mit **AAPS** einen Bolus für 45 g Kohlenhydrate ab. Das Problem ist, dass die Hemmer den Körper dazu bringen, einen Teil der Kohlenhydrate auszuscheiden, ohne dass AAPS davon weiß. Dadurch hat Dein Körper im Verhältnis zu den aufgenommenen Kohlenhydraten zu viel Insulin, und es kommt zur Unterzuckerung.
 
-- **Example 2: risk of Ketoacidosis**
->The inhibitors eliminate some of the carbs in the background, causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake, including basal. Over time this can result in your BG remaining below target value, to the point where the body does not have enough background insulin to absorb any carbs, resulting in ketoacidosis. Ordinarily, ketoacidosis develops in T1D patients because their pump fails, which would trigger alerts on their phone and be noticeable due to a high BG value. However, the danger with gliflozins is that there would be no AAPS alerts, as the pump remains operational and the BG potentially remains within target.
+- **Beispiel 2: Risiko einer Ketoazidose**
+>Die Hemmer scheiden im Hintergrund einen Teil der Kohlenhydrate aus, wodurch Dein Glukosewert sinkt. **AAPS** weist die Pumpe dann automatisch an, die Insulinabgabe zu verringern, auch die Basalrate. Mit der Zeit kann das dazu führen, dass Dein Glukosewert unter dem Zielwert bleibt, bis der Körper nicht mehr genug Basalinsulin hat, um Kohlenhydrate aufzunehmen. Die Folge ist eine Ketoazidose. Normalerweise entsteht eine Ketoazidose bei Menschen mit Typ-1-Diabetes, weil ihre Pumpe ausfällt. Das würde Alarme auf dem Smartphone auslösen und wäre an einem hohen Glukosewert erkennbar. Die Gefahr bei Gliflozinen ist aber, dass AAPS keinen Alarm auslöst, weil die Pumpe weiterläuft und der Glukosewert möglicherweise im Zielbereich bleibt.
 
 Bekannte Handelsnamen von SGLT-2 Hemmern sind: Invokana, Forxiga, Jardiance, Steglatro und Zynquista und andere.
 ```
@@ -66,7 +66,7 @@ Bekannte Handelsnamen von SGLT-2 Hemmern sind: Invokana, Forxiga, Jardiance, Ste
 
 Die Grundprinzipien und Konzepte des Loopens müssen vom Nutzenden verstanden werden, bevor **AAPS** verwendet wird. Dies wird erreicht, indem Du Zeit in das Lesen der **AAPS**-Dokumentation investierst und die Ziele (Objectives), die Dir eine gute Ausgangslage für den sicheren und effektiven Umgang mit **AAPS** ermöglichen sollen, abschließt. Der Umfang der **AAPS**-Dokumentation mag am Anfang erschlagend wirken, aber bleib' geduldig und vertraue dem Prozess - mit dem richtigen Vorgehen wirst Du es erreichen!
 
-Wie schnell man vorankommt, hängt stark vom Einzelnen ab. Sei Dir aber bewusst, dass das Erreichen aller Ziele (Objectives) typischerweise ca. 6-9 Wochen benötigt. Many people start to build, install and set up **AAPS** well in advance of starting to use it. Um das zu unterstützen, hat das System eine "virtuelle Pumpe", die beim Abschluss der ersten Ziele genutzt werden kann, um sich mit **AAPS** vertraut zu machen, ohne es tatsächlich zur Insulinabgabe zu nutzen. A detailed breakdown of the timeline is given below, be aware that by objective 7 of **AAPS** you are closed looping, the later objectives add in additional features like **SMB** and **automations** which are useful to some users, but not essential to the core function of **AAPS**.
+Wie schnell man vorankommt, hängt stark vom Einzelnen ab. Sei Dir aber bewusst, dass das Erreichen aller Ziele (Objectives) typischerweise ca. 6-9 Wochen benötigt. Viele beginnen schon lange vor der eigentlichen Nutzung damit, **AAPS** zu erstellen, zu installieren und einzurichten. Um das zu unterstützen, hat das System eine "virtuelle Pumpe", die beim Abschluss der ersten Ziele genutzt werden kann, um sich mit **AAPS** vertraut zu machen, ohne es tatsächlich zur Insulinabgabe zu nutzen. Unten findest Du eine ausführliche Zeitleiste. Beachte, dass Du mit Ziel 7 von **AAPS** im Closed Loop bist. Die späteren Ziele fügen zusätzliche Funktionen wie **SMB** und **Automatisierungen** hinzu, die für manche Nutzer hilfreich, für die Grundfunktion von **AAPS** aber nicht nötig sind.
 
 Dein Erfolg mit **AAPS** hängt von Deiner Proaktivität, Deinem Willen Glukosewerte zu hinterfragen und Deiner Flexibilität die notwendigen **AAPS**-Anpassungen für bessere Ergebnisse zu machen, ab. Genauso wie es nahezu unmöglich ist, eine Sportart allein über das Regelwerk zu erlernen, ist es auch mit **AAPS**.
 
@@ -80,24 +80,24 @@ In der Anfangsphase das **AAPS**-System aufzubauen und auch beim späteren Nachj
 
 #### Zeit die App zu erstellen und zum vollständigen Loopen weiterzugehen
 
-The time to build the **AAPS** app depends on your level of expertise and technical ability. In der Regel benötigt ein unerfahrener Nutzer (mit Hilfe der Community) einen halben bis ganzen Tag, um **AAPS** zu erstellen. Durch Deine zunehmende Erfahrung wird der Prozess bei **AAPS**-Folgeversionen deutlich schneller gehen.
+Wie lange das Erstellen der **AAPS**-App dauert, hängt von Deiner Erfahrung und Deinen technischen Fähigkeiten ab. In der Regel benötigt ein unerfahrener Nutzer (mit Hilfe der Community) einen halben bis ganzen Tag, um **AAPS** zu erstellen. Durch Deine zunehmende Erfahrung wird der Prozess bei **AAPS**-Folgeversionen deutlich schneller gehen.
 
-Several parts of this documentation are dedicated to helping you through the build process:
+Mehrere Teile dieser Dokumentation helfen Dir durch den Erstellungsprozess:
 
-- [Building AAPS](../SettingUpAaps/BuildingAaps.md) takes you step-by-step through building the app and installing it on your phone;
+- [AAPS erstellen](../SettingUpAaps/BuildingAaps.md) führt Dich Schritt für Schritt durch das Erstellen der App und ihre Installation auf Deinem Smartphone;
 
-- the [FAQ](../UsefulLinks/FAQ.md) answers common questions and explains the errors most likely to occur; and
+- die [FAQ](../UsefulLinks/FAQ.md) beantworten häufige Fragen und erklären die Fehler, die am ehesten auftreten; und
 
-- the [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) hub collects solutions to the most frequent problems, organised by topic.
+- die Sammelseite [Fehlerbehebung](../GettingHelp/GeneralTroubleshooting.md) fasst Lösungen für die häufigsten Probleme nach Themen sortiert zusammen.
 
-How long it takes to get to closed looping depends on the individual; an approximate timeline for reaching full looping with **AAPS** is given [below](#preparing-how-long-will-it-take).
+Wie lange es bis zum Closed Loop dauert, ist individuell verschieden. Eine ungefähre Zeitleiste bis zum vollständigen Loopen mit **AAPS** findest Du [unten](#preparing-how-long-will-it-take).
 
 
 #### Exportdatei des Keystore & der Konfigurationseinstellungen
 
 Ein "keystore" ist eine mit einem Passwort verschlüsselte Datei, die ausschließlich zu Deiner Kopie von **AAPS** passt. Durch die Nutzung des "keystore" stellt Dein Android-Smartphone sicher, dass nur Du Deine Kopie der App aktualisieren kannst. Kurzum, als Teil der **AAPS**-Erstellung, solltest Du:
 
-1.  Save your keystore file (.jks file used to sign your app) in a safe place;
+1.  Bewahre Deine Keystore-Datei (die .jks-Datei, mit der Deine App signiert wird) an einem sicheren Ort auf;
 
 2.  Notiere das Passwort für Deine Keystore-Datei.
 
@@ -111,7 +111,7 @@ Damit kannst Du die Keystore-Datei für jedes Update auf eine neue **AAPS**-Vers
 
 Zusätzlich bietet **AAPS** die Möglichkeit, [alle Konfigurationseinstellungen zu exportieren](../Maintenance/ExportImportSettings.md). Damit kannst Du das System z.B. bei einem Smartphone-Wechsel oder bei einer Neuinstallation/Update der App sicher wieder herstellen und es mit einer nur kurzen Unterbrechung weiter nutzen. 
 
-#### Problembehandlung
+#### Fehlerbehebung
 
 Wenn Du Dir bei irgendetwas unsicher bist, gehe bitte auf die AAPS-Community zu - es gibt keine dummen Fragen! Alle Nutzenden, egal mit welcher Erfahrung, sollen sich bestärkt fühlen, Fragen zu stellen. Da es viele **AAPS**-Nutzende gibt, werden Fragen in der Regel schnell beantwortet.
 
@@ -123,7 +123,7 @@ Wenn Du Dir bei irgendetwas unsicher bist, gehe bitte auf die AAPS-Community zu 
 
 
 
-#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
+#### [Wo finde ich Hilfe](../GettingHelp/WhereCanIGetHelp.md)?
 
 Dieser Abschnitt zielt darauf ab, neuen Benutzern Links zu Ressourcen bereitzustellen, um Hilfe zu erhalten, einschließlich des Zugriffs auf den Community Support, welcher aus neuen und erfahrenen Benutzern besteht, die Fragen klären und die üblichen Fallstricke lösen können, die mit AAPS einhergehen.
 
@@ -142,11 +142,11 @@ Neben den drei grundlegenden Hardwarekomponenten (Smartphone, Insulinpumpe und G
 
 ### Eine Android Smartphone-App: **AAPS**
 
-**AAPS** is an app that runs on Android smartphones & devices. Du wirst die **AAPS**-App auf Dein Smartphone (per E-Mail, USB-Kabel _etc._) übertragen und installieren. Du wirst die **AAPS**-App auf Dein Smartphone (per E-Mail, USB-Kabel _etc._) übertragen und installieren.
+**AAPS** ist eine App, die auf Android-Smartphones & -Geräten läuft. Du wirst die **AAPS**-App auf Dein Smartphone (per E-Mail, USB-Kabel _etc._) übertragen und installieren. Du wirst die **AAPS**-App auf Dein Smartphone (per E-Mail, USB-Kabel _etc._) übertragen und installieren.
 
-### 2) A reporting server: Nightscout (Tidepool*)
+### 2) Ein Berichtsserver: Nightscout (Tidepool*)
 
-In order to fully take advantage of **AAPS**, you need to set up a Nightscout server. Du kannst das [selbst machen](https://nightscout.github.io/nightscout/new_user/#free-diy) oder alternativ einen kommerziellen Anbieter gegen eine kleine Gebühr mit dem Aufsetzen und Betreiben des Nightscout-Services ([managed service](https://nightscout.github.io/#nightscout-as-a-service)) für Dich beauftragen. Nightscout wird genutzt, um über die Zeit hinweg Daten von **AAPS** zu sammeln und kann daraus detaillierte Berichte erstellen, die Zusammenhänge von CGM- und Insulinmustern zeigt. Eltern und Betreuende können Nightscout auch dazu nutzen, um remote mit der **AAPS**-Anwendung zu kommunizieren und das Diabetes-Management des Kindes im Auge zu behalten. Die Funktionen zur Remote-Kommunikation beinhaltet Echtzeit-Informationen der Glukosewerte und dem Insulinspiegel, Remote-Bolus (über SMS) und Ankündigung von Mahlzeiten. Attempting to analyze your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene. Tidepool is also available as an alternative to Nightscout.
+Um **AAPS** voll auszuschöpfen, musst Du einen Nightscout-Server einrichten. Du kannst das [selbst machen](https://nightscout.github.io/nightscout/new_user/#free-diy) oder alternativ einen kommerziellen Anbieter gegen eine kleine Gebühr mit dem Aufsetzen und Betreiben des Nightscout-Services ([managed service](https://nightscout.github.io/#nightscout-as-a-service)) für Dich beauftragen. Nightscout wird genutzt, um über die Zeit hinweg Daten von **AAPS** zu sammeln und kann daraus detaillierte Berichte erstellen, die Zusammenhänge von CGM- und Insulinmustern zeigt. Eltern und Betreuende können Nightscout auch dazu nutzen, um remote mit der **AAPS**-Anwendung zu kommunizieren und das Diabetes-Management des Kindes im Auge zu behalten. Die Funktionen zur Remote-Kommunikation beinhaltet Echtzeit-Informationen der Glukosewerte und dem Insulinspiegel, Remote-Bolus (über SMS) und Ankündigung von Mahlzeiten. Deine Diabetestherapie zu beurteilen, indem Du CGM-Daten getrennt von den Pumpendaten betrachtest, ist wie Autofahren mit einem blinden Fahrer, dem der Beifahrer die Umgebung beschreibt. Als Alternative zu Nightscout steht auch Tidepool zur Verfügung.
 
 ### 3) Eine App zum Auslesen Deines Sensors (CGM)
 
@@ -163,22 +163,22 @@ Mit dem Erscheinen von verbesserten Versionen müssen **Nightscout** und **AAPS*
 
 Wie schon erwähnt, ist die **AAPS**-Nutzung eher eine „Reise“, die es notwendig macht, dass Du Deine Zeit in sie investierst. Es ist kein einmaliger Aufwand. Aktuelle Schätzungen für das Erstellen, die Installation und Konfiguration von **AAPS** und **CGM**-Software, sowie den Übergang von Open Loop zu Hybrid Closed Loop mit **AAPS**, gehen von ca. 4 bis 6 Monaten aus. Daher wird empfohlen sich als Erstes auf das Erstellen (Build) der **AAPS**-App zu konzentrieren und so schnell wie möglich die ersten Aufgaben bzw. Ziele (Objectives) anzugehen. Das gilt auch, wenn Du aktuell noch ein anderes "Insulinabgabesystem" haben solltest, da Du bis zum Ziel 5 eine "virtuelle Pumpe" nutzen kannst.
 
-Einige der Ziele verlangen, dass eine bestimmte Anzahl von Tagen in ihnen verbracht wird, um so die neue Funktionalität vollständig verstehen zu können. It is not possible to bypass this waiting time; these minimum waiting times have been set for your own safety.
+Einige der Ziele verlangen, dass eine bestimmte Anzahl von Tagen in ihnen verbracht wird, um so die neue Funktionalität vollständig verstehen zu können. Diese Wartezeit lässt sich nicht umgehen. Die Mindestwartezeiten wurden zu Deiner eigenen Sicherheit festgelegt.
 
 Ein ungefährer Zeitrahmen ist:
 
 | Aufgaben                                                                       |     Ungefähre Dauer      |
 | ------------------------------------------------------------------------------ |:------------------------:|
 | Erstmaliges Lesen der Dokumentation                                            |         1-2 Tage         |
-| Configuring GitHub to allow the browser build                                  |        1-4 hours         |
+| GitHub für den Browser-Build einrichten                                        |       1-4 Stunden        |
 | Einen Berichtsserver einrichten                                                |         1 Stunde         |
-| Installing a CGM app (xDrip, BYODA, …)                                         |         1 Stunde         |
-| Configuring CGM → xDrip → AAPS initially                                       |         1 Stunde         |
+| Eine CGM-App installieren (xDrip, BYODA, …)                                    |         1 Stunde         |
+| CGM → xDrip → AAPS erstmals einrichten                                         |         1 Stunde         |
 | AAPS → Pumpe initial konfigurieren                                             |         1 Stunde         |
 | AAPS → Nightscout/Tidepool (nur für Berichte) initial konfigurieren            |         1 Stunde         |
-| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers                      |         1 Stunde         |
+| Optional: Nightscout ↔ **AAPS** & NS-Follower einrichten                       |         1 Stunde         |
 | Ziel 1: Visualisierung und Überwachung einrichten                              |         1 Stunde         |
-| Ziel 2: Lerne, wie AAPS bedient wird                                           |         2 hours          |
+| Ziel 2: Lerne, wie AAPS bedient wird                                           |        2 Stunden         |
 | Ziel 3: Belege Dein Wissen                                                     |     bis zu 14 Tagen      |
 | Ziel 4: Starte den Open Loop                                                   |    Mindestens 7 Tage     |
 | Ziel 5: Deinen Open Loop verstehen                                             |  wurden 7 Tage erreicht  |
@@ -198,30 +198,30 @@ Zusätzlich zu den medizinischen Warnungen in den [Sicherheitshinweisen](#prepar
 
 #### Insulinwahl
 
-**AAPS**-Berechnungen gehen von einer Insulinkonzentration von 100U/ml aus. You configure your insulin in **Manage → Insulin settings**: set its **Peak** and **DIA**, or use **Load peak from** to fill in the standard peak time of one of the presets:
+**AAPS**-Berechnungen gehen von einer Insulinkonzentration von 100U/ml aus. Dein Insulin richtest Du unter **Bearbeiten → Insulineinstellungen** ein: Stelle **Wirkmaximum** und **DIA** ein oder nutze **Wirkmaximum laden aus**, um die übliche Zeit bis zum Wirkmaximum einer der Vorlagen zu übernehmen:
 
-- **Novorapid** (also for Humalog and NovoLog)
+- **Novorapid** (auch für Humalog und NovoLog)
 - **Fiasp**
 - **Lyumjev**
 
-Advanced users can enter any peak time (35 to 120 minutes) directly, for example for a mixture of insulins. See [Insulin settings](#Config-Builder-insulin).
+Erfahrene Nutzer können jede Zeit bis zum Wirkmaximum (35 bis 120 Minuten) direkt eingeben, zum Beispiel für eine Mischung von Insulinen. Siehe [Insulineinstellungen](#Config-Builder-insulin).
 
 
 ### Technisches
 
-Diese Dokumentation möchte die notwendige technische Expertise auf ein absolutes Minimum beschränken. To build the **AAPS** app, you have several options — see [Building AAPS](../SettingUpAaps/BuildingAaps.md) for an overview:
+Diese Dokumentation möchte die notwendige technische Expertise auf ein absolutes Minimum beschränken. Um die **AAPS**-App zu erstellen, hast Du mehrere Möglichkeiten, siehe [AAPS erstellen](../SettingUpAaps/BuildingAaps.md) für einen Überblick:
 
-- **Browser build** (recommended): build the app directly from your smartphone using GitHub Actions, with no computer or Android Studio required. With [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) you only need a GitHub account: you download the app directly from GitHub. The fork method also needs a Google account to store the app in your Google Drive.
-- **Android Studio build**: build the app on your computer using Android Studio. This is mostly used by developers who intend to make code changes.
-- **Command-line build**: for users who prefer to build locally without installing Android Studio.
+- **Browser-Build** (empfohlen): Erstelle die App direkt auf Deinem Smartphone mit GitHub Actions, ohne Computer oder Android Studio. Mit dem [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) brauchst Du nur ein GitHub-Konto: Du lädst die App direkt von GitHub herunter. Für die Fork-Methode brauchst Du zusätzlich ein Google-Konto, um die App in Deinem Google Drive zu speichern.
+- **Build mit Android Studio**: Erstelle die App auf Deinem Computer mit Android Studio. Das nutzen vor allem Entwickler, die den Code ändern wollen.
+- **CLI-Build**: für Nutzer, die lieber lokal erstellen, ohne Android Studio zu installieren.
 
-Beyond building the app, you also need to set up a reporting server, configure several Android phone apps and develop expertise in diabetes management. This can be achieved by moving step-by-step, being patient, and with help from the **AAPS** community. If you are already able to navigate the internet and manage your own Gmail emails, building **AAPS** is a feasible task. Nimm Dir einfach Zeit.
+Neben dem Erstellen der App musst Du auch einen Berichtsserver einrichten, mehrere Android-Apps konfigurieren und Erfahrung im Diabetesmanagement aufbauen. Das gelingt, wenn Du Schritt für Schritt vorgehst, geduldig bist und Dir von der **AAPS**-Community helfen lässt. Wenn Du Dich im Internet zurechtfindest und Deine Gmail-E-Mails selbst verwaltest, ist das Erstellen von **AAPS** für Dich machbar. Nimm Dir einfach Zeit.
 
 ### Smartphones
 
 #### AAPS und Android-Versionen
 
-The current version of **AAPS** (4.0) requires an Android smartphone with Google **Android 12.0 or above**. Wenn Du vorhast ein neues Smartphones zu kaufen (Stand: Januar 2026), wird Android 16 empfohlen.<br/> Aus Sicherheitsgründen wird dringend empfohlen, **AAPS**-Version immer auf dem neuesten Stand zu halten. Für Menschen, die kein Gerät mit Android 12.0 (oder neuer) nutzen können, stehen weiterhin ältere **AAPS**-Versionen für ältere Android-Versionen zur Verfügung, siehe dazu auch die [Release Notes](#maintenance-android-version-aaps-version).
+Die aktuelle **AAPS**-Version (4.0) setzt ein Android Smartphone mit Google **Android 12.0 oder höher** voraus. Wenn Du vorhast ein neues Smartphones zu kaufen (Stand: Januar 2026), wird Android 16 empfohlen.<br/> Aus Sicherheitsgründen wird dringend empfohlen, **AAPS**-Version immer auf dem neuesten Stand zu halten. Für Menschen, die kein Gerät mit Android 12.0 (oder neuer) nutzen können, stehen weiterhin ältere **AAPS**-Versionen für ältere Android-Versionen zur Verfügung, siehe dazu auch die [Release Notes](#maintenance-android-version-aaps-version).
 
 #### Smartphone-Modell wählen
 Welches genaue Modell Du kaufen solltest, hängt von den gewünschten Funktionen ab. Die [Smartphones](../Getting-Started/Phones.md)-Seite enthält von Nutzendenden getestete und empfohlene Setups.
@@ -230,20 +230,20 @@ Das Smartphone sollte regelmäßig Sicherheitsupdates erhalten und stets auf der
 
 ```{admonition} Delaying Samsung phone updates
 :class: warning
-Samsung has an unfortunate track record of forcing updates on their phones, which can cause Bluetooth connectivity issues. To disable these forced updates, you need to switch the phone to "developer mode":
+Samsung erzwingt leider immer wieder Updates auf seinen Smartphones, die Probleme mit der Bluetooth-Verbindung verursachen können. Um diese erzwungenen Updates abzuschalten, musst Du das Smartphone in den „Entwicklermodus“ versetzen:
 
-1. Go to **Settings** > **About phone** > **Software information**, then tap **Build number** until it confirms you have unlocked developer mode.
-2. Go back to the main **Settings** menu, where you should see a new **Developer options** menu item.
-3. Open **Developer options**, scroll to find **Auto system update**, and turn it off.
+1. Gehe zu **Einstellungen** > **Telefoninfo** > **Softwareinformationen** und tippe dann so oft auf **Buildnummer**, bis bestätigt wird, dass der Entwicklermodus freigeschaltet ist.
+2. Gehe zurück zum Hauptmenü **Einstellungen**. Dort sollte jetzt der neue Menüpunkt **Entwickleroptionen** erscheinen.
+3. Öffne **Entwickleroptionen**, scrolle zu **Automatische Systemupdates** und schalte es aus.
 ```
 
 ```{admonition} Google Play Protect potential issue
 :class: Warnung
-Es gab einige Meldungen, dass Google Play Protect **AAPS** jeden Morgen willkürlich stoppt. If this happens, you will have to go to the Google Play options and disable **Google Play Protect**. Not all phone models or all Android versions are affected.
+Es gab einige Meldungen, dass Google Play Protect **AAPS** jeden Morgen willkürlich stoppt. In diesem Fall musst Du in die Google Play-Optionen gehen und **Google Play Protect** deaktivieren. Nicht alle Smartphone-Modelle und Android-Versionen sind betroffen.
 ```
 
 ```{admonition} Android developer verification
 :class: note
-From September 2026, Google is gradually introducing [Android developer verification](#android-developer-verification), which changes how a self-built app is installed on the phone. Building **AAPS** is not affected, and free installation methods remain available — see the linked page for details.
+Ab September 2026 führt Google nach und nach die [Android-Entwicklerverifizierung](#android-developer-verification) ein. Sie ändert, wie eine selbst erstellte App auf dem Smartphone installiert wird. Das Erstellen von **AAPS** ist davon nicht betroffen, und es gibt weiterhin kostenlose Installationsmethoden, Details siehe die verlinkte Seite.
 ```
 
