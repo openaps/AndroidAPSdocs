@@ -50,6 +50,12 @@ Na stránce GitHubu, která se otevře, je už vše vyplněné: šablona `nights
 Nebyl vytvořen ze šablony. Smažte ho (**Settings** → dole na stránce → **Delete this repository**) a potom znovu klepněte na **Create my private repository**.
 ```
 
+```{admonition} GitHub says "my-aaps already exists in this account"?
+:class: tip
+
+You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+```
+
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
@@ -60,7 +66,7 @@ Kroky sestavení se aktualizují za vás: při každém sestavení váš repozit
    Na počítači klikněte na **ikonu kopírování** („Copy raw file“) vpravo nahoře u souboru. Na telefonu místo toho otevřete <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">verzi jako prostý text</a>, podržte prst na textu → **Vybrat vše** → **Kopírovat**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   Otevře soubor `.github/workflows/build.yml` v <code class="aapsb-repoUrl"></code> k úpravám.
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. Nahraďte celý text zkopírovaným workflow (na telefonu: podržte prst → **Vybrat vše** → **Vložit**) a potom dvakrát klikněte na **Commit changes…**. První řádek souboru ukazuje jeho verzi.
 ```
 
@@ -151,7 +157,8 @@ Chcete e-mail, když je sestavení hotové? GitHub vám pošle e-mail jen tehdy,
 :class: warning
 
 1. Otevřete svůj repozitář a zkontrolujte, že obsahuje složku `.github` se souborem `workflows/build.yml`. Pokud je repozitář prázdný, nebyl vytvořen ze šablony: smažte ho (**Settings** → dole na stránce → **Delete this repository**) a znovu proveďte [krok 1](#aaps-builder-setup-step1) pomocí tlačítka.
-2. Otevřete kartu Actions. Pokud je tam napsáno, že workflow jsou vypnutá, klepněte na zelené tlačítko pro jejich povolení. Potom v seznamu klepněte na „Build AAPS“.
+2. The file is there, but GitHub shows "This workflow does not exist": see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+3. Otevřete kartu Actions. Pokud je tam napsáno, že workflow jsou vypnutá, klepněte na zelené tlačítko pro jejich povolení. Potom v seznamu klepněte na „Build AAPS“.
 ```
 
 (aaps-builder-setup-step5)=
@@ -196,7 +203,7 @@ Chcete, aby se APK objevilo na vašem Disku Google (a zůstalo tam natrvalo)? P�
    Google se otevře na nové kartě. Zvolte svůj účet Google a povolte AAPS zobrazovat a měnit jeho vlastní soubory. Pokud Google hlásí, že aplikace není ověřená, klepněte na „Rozšířená nastavení“ („Advanced“) a potom na „Přejít na …“ („Go to …“).
 2. Pak nová karta zobrazí chybu, například **„Tento web není dostupný“** („This site can't be reached“) nebo **„127.0.0.1 refused to connect“**. **Tak to má být.** Odpověď Googlu je v adrese této karty.
 
-   Klepněte na adresní řádek této karty, označte celou adresu a zkopírujte ji. Začíná na `http://127.0.0.1:47913/`. Během několika minut se vraťte na tuto stránku: odpověď platí jen krátkou dobu.
+   Tap the address bar of that tab, then the copy icon next to the address (on a computer: select the whole address and copy it). Začíná na `http://127.0.0.1:47913/`. Během několika minut se vraťte na tuto stránku: odpověď platí jen krátkou dobu.
 3. <label class="aapsb-label" for="aapsb-googleUrl">Sem vložte zkopírovanou adresu</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
@@ -323,7 +330,7 @@ Vše na této stránce běží ve vašem prohlížeči. Váš klíč a hesla se 
   const repo = () => repoInput.value.trim() || REPO_NAME;
 
   const LINKS = [
-    ['openWorkflowFile', '/edit/main/' + WORKFLOW_PATH],
+    ['openWorkflowFile', '/blob/HEAD/' + WORKFLOW_PATH],
     ['openSecrets', '/settings/secrets/actions/new'],
     ['openSecrets2', '/settings/secrets/actions/new'],
     ['openActions', '/actions/workflows/build.yml'],
