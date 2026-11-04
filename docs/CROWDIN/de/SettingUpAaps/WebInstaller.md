@@ -31,7 +31,7 @@ Deine APK-Datei und die Daten Deines Smartphones verlassen diesen Computer nie: 
   - Öffne zurück in den **Einstellungen** die **Entwickleroptionen** und schalte **USB-Debugging** ein.
 - Verbinde das Smartphone mit einem **USB-Kabel, das Daten übertragen kann** (manche Ladekabel können keine Daten übertragen: Wird das Smartphone nie erkannt, probiere ein anderes Kabel).
 - **Schließe Android Studio** und alle anderen Programme, die ADB verwenden: Es kann immer nur ein Programm mit dem Smartphone kommunizieren.
-- Halte Deine **AAPS-APK-Datei** auf diesem Computer bereit (beim Browser Build lade sie vorher aus Deinem Google Drive herunter).
+- Halte Deine **AAPS-APK-Datei** auf diesem Computer bereit (beim Browser-Build lade sie vorher aus Deinem Google Drive herunter).
 
 Kein Computer? Diese Seite funktioniert auch in Chrome auf *einem anderen Android-Smartphone*, das über ein Kabel USB-C auf USB-C verbunden ist.
 
