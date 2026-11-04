@@ -11,7 +11,7 @@ Einige dieser Probleme betreffen wahrscheinlich auch andere Bluetooth Insulinpum
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
 ## Omnipod kann nicht mit Android 16 gestartet werden
-- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this version has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
+- Unter Android 16 braucht der Omnipod DASH mindestens die **AAPS**-Version 3.3.2.1, um richtig zu funktionieren. Diese Version enthält Korrekturen speziell für bekannte Probleme, die Android 16 beim Omnipod verursacht.
 
 ---
 
@@ -19,11 +19,11 @@ Einige dieser Probleme betreffen wahrscheinlich auch andere Bluetooth Insulinpum
 
 ## Bluetooth-Akku-Optimierung
 
-Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. Dies führt erwiesenerrmaßen zu einigen Problemen bei Pumpen und CGMs, die Bluetooth nutzen.
+Neuere Android-Versionen haben die Akku-Optimierung für die Bluetooth-System-App eingeschaltet. Dies führt erwiesenerrmaßen zu einigen Problemen bei Pumpen und CGMs, die Bluetooth nutzen.
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
+Wenn Du dem [Einrichtungsassistenten](../SettingUpAaps/SetupWizard.md) und den Einstellungen im Abschnitt [Akku-Optimierung für Bluetooth](#setup-wizard-bluetooth-battery-optimisation) gefolgt bist, sollte diese Einstellung stimmen. Wenn Du aber einer älteren Version dieser Anleitung gefolgt bist, hast Du sie möglicherweise nicht geändert.
 
-Verify this is correctly configured if you have pump and CGM disconnections.
+Prüfe, ob das richtig eingestellt ist, wenn Pumpe und CGM die Verbindung verlieren.
 
 ---
 
@@ -31,13 +31,13 @@ Verify this is correctly configured if you have pump and CGM disconnections.
 
 ## Apps, die die Android-Berechtigung „Geräte in der Nähe“ verwenden, können Verbindungsabbrüche und Pod-Aktivierungsprobleme verursachen
 
-Du kannst mit Android durch ein Berechtigungsmodell genau festlegen, was jede App tun darf und wie sie auf Dein Smartphone zugreifen darf. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to Bluetooth, scan for nearby devices etc.
+Du kannst mit Android durch ein Berechtigungsmodell genau festlegen, was jede App tun darf und wie sie auf Dein Smartphone zugreifen darf. Für jede installierte App kannst Du bestimmte Berechtigungen erlauben oder verweigern, z. B. den Zugriff auf Dateien auf dem Gerät, auf Bluetooth, die Suche nach Geräten in der Nähe usw.
 
-**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. Es gibt viele andere Anwendungen, die diese Berechtigung ebenfalls benötigen. Die Community hat herausgefunden, dass eine Reihe von Anwendungen, wenn ihnen diese Berechtigung gegeben wird, Probleme bei der Aktivierung neuer Pods auf einigen Geräten verursachen können.
+**AAPS** braucht eine Reihe bestimmter Berechtigungen, um zu funktionieren. Damit Pods funktionieren, ist unter anderem die Berechtigung „Geräte in der Nähe“ nötig. Es gibt viele andere Anwendungen, die diese Berechtigung ebenfalls benötigen. Die Community hat herausgefunden, dass eine Reihe von Anwendungen, wenn ihnen diese Berechtigung gegeben wird, Probleme bei der Aktivierung neuer Pods auf einigen Geräten verursachen können.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
-### Apps that use "Nearby device" permissions and are known to have caused problems:
+### Apps, die die Berechtigung „Geräte in der Nähe“ benötigen und von denen man weiß, dass sie problematisch sind:
 
 Die in dieser Liste aufgeführten Apps wurden an einer oder mehreren Stellen in der Community als Verursacher der Probleme mit Omnipod-DASH-Geräten und in einigen Fällen auch der Medtrum Nano diskutiert.
 
@@ -48,22 +48,22 @@ Ping @XiTatiON im Discord-Kanal #omnipod-dash an, um Apps, die zur Liste hinzuge
 
 - **myBMW** MyBMW hat die Verbindung zu Medtrum Nano und Omnipod DASH getrennt. Die MyBMW-App fragt nur einmal nach der Erlaubnis „Geräte in der Nähe finden“. Wenn Du die Erlaubnis nicht gibst, funktioniert sie immer noch absolut OK
 
-- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
+- **Amazon Alexa**  Das Entfernen von „Geräte in der Nähe“ für die Alexa-App hat bei manchen das Problem gelöst, verhindert aber das Koppeln von Matter-IoT-Geräten
 
-- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
+- **MINI-App**  Die App basiert offenbar auf der myBMW-App und verhält sich daher vermutlich genauso
 
-- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. Das Ausführen der App danach schien die Funktion des DASH (auf einem Pixel 8 Pro mit Android 16) zu beeinträchtigen.
+- **BM2** App zur Überwachung von Solarbatterien, die in manchen Wohnmobilen und Camping-Solaranlagen verwendet wird: Solange die App lief, verhinderte sie die Aktivierung eines neuen Pods. Als Abhilfe kannst Du die App während der Aktivierung eines neuen Pods beenden („Beenden erzwingen“). Das Ausführen der App danach schien die Funktion des DASH (auf einem Pixel 8 Pro mit Android 16) zu beeinträchtigen.
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
-### How to revoke "Nearby device" permissions for other apps:
-If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
+### Wie man die „Geräte in der Nähe“-Berechtigungen für andere Apps entzieht:
+Wenn Du Probleme beim Aktivieren eines neuen Pods hast und die für Deine Android-Version richtige unterstützte **AAPS**-Version nutzt, kann es nötig sein, anderen Apps die Berechtigung während der Aktivierung eines neuen Pods zu entziehen.
 
-Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
+So entziehst Du allen Apps außer **AAPS** die Berechtigung „Geräte in der Nähe“:
 
 ```{admonition} Menus and settings
 :class: note
-Die Screenshots und Anweisungen in dieser Anleitung stammen von einer Standard-Android 16 Installation auf einem Google Pixel 8 Pro. Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
+Die Screenshots und Anweisungen in dieser Anleitung stammen von einer Standard-Android 16 Installation auf einem Google Pixel 8 Pro. Andere Hersteller und Geräte werden diesen Menüs und Beschreibungen wahrscheinlich nicht genau entsprechen. Passe die Schritte an Dein Gerät an. Wenn Du nicht weiterkommst, findest Du im Abschnitt [Wo bekomme ich Hilfe zum DASH](#omnipod-dash-where-to-get-help-for-dash), wie Du Dich an die Community wenden kannst.
 ```
 
 1. Öffne die Android-Einstellungen auf Deinem Smartphone, scrolle nach unten und tippe auf **Sicherheit und Datenschutz (1)**.
@@ -101,9 +101,9 @@ Wenn Du nicht genau weißt, welche App das Problem verursacht (denke auch daran 
 
 (bluetoothtroubleshooting-re-enable-nearby-device-permission)=
 
-### How to re-enable "Nearby device" permissions for system apps and other apps:
+### Wie man die Berechtigung „Geräte in der Nähe“ für System- und andere Apps wieder aktiviert:
 
-1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
+1. Lies bei Bedarf im Abschnitt **„Wie man die ‚Geräte in der Nähe‘-Berechtigungen für andere Apps entzieht“** nach, wie Du zu den Datenschutzeinstellungen der App gelangst, und fahre dann in der Konfiguration **Geräte in der Nähe** mit Schritt 2 fort.
 
 2. Gehe durch die App-Liste und tippe auf die App, der Du die **Geräte in der Nähe**-Berechtigung erlauben möchtest.
 
@@ -113,7 +113,7 @@ Wenn Du nicht genau weißt, welche App das Problem verursacht (denke auch daran 
 
    ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)
 
-3. To show hidden system apps press the **three-dot menu (⋮) (1)** in the top right corner, then press **"Show system" (2)**. Du solltest nun auch die versteckte System-App **Android Auto (3)** in der Liste sehen können.
+3. Um ausgeblendete System-Apps anzuzeigen, tippe oben rechts auf das **Drei-Punkte-Menü (⋮) (1)** und dann auf **„System anzeigen“ (2)**. Du solltest nun auch die versteckte System-App **Android Auto (3)** in der Liste sehen können.
 
 ```{admonition} Find your app
 :class: tip
@@ -122,7 +122,7 @@ Wenn eine App „widerrufen“ ist, musst Du nach unten scrollen. „Widerrufene
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. Follow the guidance in **"How to revoke 'Nearby device' permissions for other apps"** in reverse to re-enable permissions for each app.
+5. Befolge die Anleitung unter **„Wie man die ‚Geräte in der Nähe‘-Berechtigungen für andere Apps entzieht“** in umgekehrter Reihenfolge, um die Berechtigungen für jede App wieder zu erteilen.
 
 ---
 
@@ -130,21 +130,21 @@ Wenn eine App „widerrufen“ ist, musst Du nach unten scrollen. „Widerrufene
 
 ## Android 15 - Häufige auftretende Bluetooth-Verbindungsprobleme
 
-Nach einem Android-Upgrade oder dem Umzug auf ein neueres Smartphone verliert **AAPS** häufig die Bluetooth-Verbindung zur Pumpe. Mit einem Neustart des Smartphones verschwindet das Problem vorübergehend. If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. To turn it on:
+Nach einem Android-Upgrade oder dem Umzug auf ein neueres Smartphone verliert **AAPS** häufig die Bluetooth-Verbindung zur Pumpe. Mit einem Neustart des Smartphones verschwindet das Problem vorübergehend. Wenn Du einen **Omnipod DASH** nutzt und Dein Smartphone mit Android 15 läuft, kann das Einschalten der Einstellung **Bluetooth-Kopplung** die Stabilität der Bluetooth-Verbindung verbessern. So schaltest Du sie ein:
 
 ```{admonition} Android 16
 :class: warning
-Only turn on **Bluetooth bonding** on Android 15, and only if you experience connectivity issues. DO NOT turn on bonding on Android 16.
+Schalte **Bluetooth-Kopplung** nur unter Android 15 ein und nur dann, wenn Du Verbindungsprobleme hast. Schalte die Kopplung unter Android 16 NICHT ein.
 ```
 
-1. Open the [Dash settings](#omnipod-dash-settings): open the DASH pump screen with **Manage** > **Pump** and press the **Settings** (gear) icon in the top-right corner.
+1. Öffne die [DASH-Einstellungen](#omnipod-dash-settings): Öffne den DASH-Pumpenbildschirm über **Bearbeiten** > **Pumpe** und tippe oben rechts auf das Symbol **Einstellungen** (Zahnrad).
 
    ![The DASH pump screen](../images/v4/Pumps/dash_pump_screen.png)
 
-2. Open the **Advanced Settings** section and turn on **Bluetooth bonding**.
+2. Öffne den Bereich **Erweiterte Einstellungen** und schalte **Bluetooth-Kopplung** ein.
 
    ![Bluetooth bonding in the Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
 
-3. If the phone shows a pairing request, accept it.
+3. Wenn das Smartphone eine Kopplungsanfrage anzeigt, nimm sie an.
 
 4. Starte dein Smartphone neu.
