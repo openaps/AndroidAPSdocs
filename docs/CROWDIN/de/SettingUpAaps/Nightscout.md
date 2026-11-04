@@ -4,11 +4,11 @@
 
 ## Sicherheitsüberlegungen
 
-Nightscout is the reporting and monitoring server of **AAPS**: **AAPS** uploads your data to it, and you or your caregivers look at it on the Nightscout website or in follower apps. It holds your medical data, profiles and treatments, so it is worth thinking about securing your Nightscout website.
+Nightscout ist der Reporting- und Überwachungsserver von **AAPS**: **AAPS** lädt Deine Daten dorthin hoch, und Du oder Deine Betreuenden sehen sie sich auf der Nightscout-Webseite oder in Follower-Apps an. Dort liegen Deine medizinischen Daten, Profile und Behandlungen, deshalb lohnt es sich, über die Absicherung Deiner Nightscout-Webseite nachzudenken.
 
-In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Remote commands come from a paired **AAPSClient** instead — see [Master ↔ Client control](#client-master-control).
+In **AAPS** 4 läuft die Remote-Steuerung nicht über die Nightscout-Webseite. Solange die Client-Steuerung eingeschaltet ist ([Geschützter Modus](#client-master-control-hardened-mode)), werden Behandlungen oder Zielwerte, die direkt in Nightscout eingegeben werden, von **AAPS** **nicht übernommen**. Remote-Befehle kommen stattdessen von einem gekoppelten **AAPSClient** – siehe [Master ↔ Client-Steuerung](#client-master-control).
 
-Exercise maximum caution if using Nightscout as your AAPS BG data source.
+Sei äußerst vorsichtig, wenn Du Nightscout als Glukosequelle für AAPS verwendest.
 
 ### Nightscout Einstellungen
 
@@ -20,23 +20,23 @@ Das Nightscout `API_SECRET` ist das Hauptpasswort für Deinen Nightscout-Server,
 
 ### AAPS-Einstellungen
 
-Accepting data from Nightscout (profile changes, treatments, ...) is optional and turned off by default. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
+Das Annehmen von Daten aus Nightscout (Profiländerungen, Behandlungen …) ist optional und standardmäßig ausgeschaltet. Die unten beschriebenen Schalter sind ausgeblendet, solange die Client-Steuerung eingeschaltet ist (Geschützter Modus), und im [Einfachen Modus](#preferences-simple-mode).
 
-* Access the **Synchronization** settings of the NSClientV3 plugin with either 1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or 2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
-* Enable "Upload data to NS".
-* "Upload BG data to NS" is in the settings of your BG source (**Configuration → BG Source → Settings**). Enable it, unless your AAPS BG data source is Nightscout: in that case **do not** enable it.
-* Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
+* Die Einstellungen **Synchronisierung** des Moduls NSClientV3 erreichst Du entweder über 1) **Einstellungen** (Zahnrad-Symbol auf dem Startbildschirm) -> **NSClientV3** -> **Synchronisierung** oder 2) **Konfiguration** (Menü ☰) -> **Kommunikation** -> „**Einstellungen**“ unter NSClientV3.
+* Aktiviere „Daten zu NS hochladen“.
+* „Glukosewerte zu Nightscout hochladen“ findest Du in den Einstellungen Deiner BZ-Quelle (**Konfiguration → BZ-Quelle → Einstellungen**). Aktiviere es, es sei denn, Deine Glukosequelle für AAPS ist Nightscout: In diesem Fall aktiviere es **nicht**.
+* Aktiviere „CGM Daten von NS empfangen“ nur, wenn Nightscout Deine Glukosequelle ist.
 
 #### Do not sync from Nightscout (Nicht von Nightscout synchronisieren)
 
-Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
+Sind alle Optionen „… von NS empfangen“ ausgeschaltet, stellt das sicher, dass AAPS keine Änderung aus Nightscout verwendet:
 
 ![Nightscout upload only](../images/preferences/settings_nsclient_sync.png)
 
 #### Accept changes from Nightscout (Änderungen von Nightscout übernehmen)
 
-Enabling these options allows you to change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS. They are only shown when client control and simple mode are off.  
-Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
+Mit diesen Optionen kannst Du AAPS-Einstellungen über Nightscout ändern, zum Beispiel Profile bearbeiten und wechseln, temporäre Ziele setzen und Kohlenhydrate eingeben, die AAPS dann berücksichtigt. Sie werden nur angezeigt, wenn Client-Steuerung und einfacher Modus ausgeschaltet sind.  
+Beachte, dass Insulin-Behandlungen nur für Berechnungen wie „Bolus wird nur aufgezeichnet (Die Pumpe gibt kein Insulin ab!)“ verwendet werden.
 
 ![Nightscout receive options enabled](../images/NSsafety3.png)
 
@@ -48,7 +48,7 @@ Halte Dein Smartphone, wie in den [Sicherheitshinweisen](#preparing-safety-first
 
 ## Manuelles Nightscout-Setup
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
+Es wird vorausgesetzt, dass Du schon eine Nightscout-Seite hast; falls nicht, findest Du auf der Seite [Nightscout](http://nightscout.github.io/nightscout/new_user/) eine vollständige Anleitung zur Einrichtung. Die folgenden Anweisungen sind dann Einstellungen, die Du zusätzlich in Deiner Nightscout-Seite vornehmen musst. Deine Nightscout-Seite muss mindestens Version 15 haben. Prüfe deshalb, ob Du die [neueste Version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) verwendest, sonst erhältst Du in der AAPS-App eine Fehlermeldung.
 
 * [Deine Variablen bearbeiten](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
