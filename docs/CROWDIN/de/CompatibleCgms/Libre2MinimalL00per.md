@@ -419,7 +419,7 @@ Auf dem **BT Device** Tab (nach links wischen) kannst Du weitere Verbindungsdeta
 
 (minimallooper-troubleshooting)=
 
-### Problembehandlung
+### Fehlerbehebung
 
 #### Sensor kann nicht per NFC gescannt werden
 
