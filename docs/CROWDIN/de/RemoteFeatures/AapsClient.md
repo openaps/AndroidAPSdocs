@@ -75,7 +75,7 @@ Beim ersten Start führt **AAPSClient** denselben **Einrichtungsassistenten** au
 
 1. **Willkommen**, **Lizenzvereinbarung**, **Berechtigungen** und **Master-Passwort** – genau wie in der Haupt-App, siehe [AAPS Einrichtungsassistent](../SettingUpAaps/SetupWizard.md).
 2. Der Client fragt **nicht** nach den **Einheiten** oder den **unteren/oberen Grenzen**: Er übernimmt sie vom Haupt-Smartphone, sobald er mit Nightscout verbunden ist. Du siehst sie später in den **Einstellungen**. Dort zeigt ein kleines **Smartphone-Symbol**, dass sie [mit dem Haupt-Smartphone abgeglichen](#client-master-config-prefs) werden. Ändern kannst Du sie nur, wenn der Master erreichbar ist.
-3. **Vom Master aus einrichten** – öffne auf dem Master **Bearbeiten → Autorisierte Clients**, füge dieses Smartphone mit einem **QR-Code** hinzu und tippe hier auf **QR-Code scannen**. Ein einziger Scan richtet Nightscout mit einem eigenen Token für dieses Smartphone ein und koppelt es auch gleich, wenn es ein Code zum Koppeln ist. Das Smartphone übernimmt außerdem den Namen, mit dem es auf dem Master hinzugefügt wurde, als Namen dieser Instanz (Buchstaben mit Akzent werden zu einfachen Buchstaben, aus „Miloš“ wird „Milos“). **Nach dem Scan ist die Einrichtung abgeschlossen**: Der Assistent schließt sich, weil die nächsten Schritte nur noch zeigen würden, was der Code schon erledigt hat. Ohne QR-Code überspringst Du diesen Schritt. (Nicht auf einem Computer: Er hat keine Kamera, siehe [Die App bekommen](#aapsclient-platforms).)
+3. **Vom Master aus einrichten** – öffne auf dem Master **Verwalten → Autorisierte Clients**, füge dieses Smartphone mit einem **QR-Code** hinzu und tippe hier auf **QR-Code scannen**. Ein einziger Scan richtet Nightscout mit einem eigenen Token für dieses Smartphone ein und koppelt es auch gleich, wenn es ein Code zum Koppeln ist. Das Smartphone übernimmt außerdem den Namen, mit dem es auf dem Master hinzugefügt wurde, als Namen dieser Instanz (Buchstaben mit Akzent werden zu einfachen Buchstaben, aus „Miloš“ wird „Milos“). **Nach dem Scan ist die Einrichtung abgeschlossen**: Der Assistent schließt sich, weil die nächsten Schritte nur noch zeigen würden, was der Code schon erledigt hat. Ohne QR-Code überspringst Du diesen Schritt. (Nicht auf einem Computer: Er hat keine Kamera, siehe [Die App bekommen](#aapsclient-platforms).)
 
    ![The Set up from the master step with the Scan the QR code button](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
@@ -83,7 +83,7 @@ Beim ersten Start führt **AAPSClient** denselben **Einrichtungsassistenten** au
 
    ![Communication step on the client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
-5. **Mit Master koppeln** – diesen Schritt gibt es **nur** auf dem Client. Er verbindet dieses Gerät mit der PIN über den sicheren Befehlskanal mit dem Master und übernimmt, wie der QR-Code, den Namen, mit dem das Smartphone auf dem Master hinzugefügt wurde. **Nach der Kopplung ist die Einrichtung abgeschlossen.** Du kannst den Schritt auch überspringen und jederzeit später über **Bearbeiten → Mit Master koppeln** koppeln.
+5. **Mit Master koppeln** – diesen Schritt gibt es **nur** auf dem Client. Er verbindet dieses Gerät mit der PIN über den sicheren Befehlskanal mit dem Master und übernimmt, wie der QR-Code, den Namen, mit dem das Smartphone auf dem Master hinzugefügt wurde. **Nach der Kopplung ist die Einrichtung abgeschlossen.** Du kannst den Schritt auch überspringen und jederzeit später über **Verwalten → Mit Master koppeln** koppeln.
 
    ![Pair with master step in the client wizard](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
 
@@ -93,20 +93,20 @@ Beim ersten Start führt **AAPSClient** denselben **Einrichtungsassistenten** au
 
 ## Mit dem Master koppeln
 
-Öffne auf dem **Master** **Bearbeiten → Autorisierte Clients** und füge einen Client hinzu. Es gibt zwei Wege zu koppeln:
+Öffne auf dem **Master** **Verwalten → Autorisierte Clients** und füge einen Client hinzu. Es gibt zwei Wege zu koppeln:
 
-- **Mit einem QR-Code** (am schnellsten, wenn das Smartphone eine Kamera hat): Scanne den Code im Schritt „**Vom Master aus einrichten**“ des Assistenten oder über **Bearbeiten → Mit Master koppeln → QR-Code scannen** und bestätige mit „**Verwenden**“. Damit wird auch Nightscout eingerichtet.
-- **Mit der PIN**: Öffne auf dem **Client** den oben beschriebenen Schritt des Assistenten (oder **Bearbeiten → Mit Master koppeln**), gib die Einmal-PIN ein, die der Master anzeigt, und tippe auf „**Koppeln**“. Der Client zeigt dann an, wem er vertrauen wird. Bestätige mit „**Koppeln**“:
+- **Mit einem QR-Code** (am schnellsten, wenn das Smartphone eine Kamera hat): Scanne den Code im Schritt „**Vom Master aus einrichten**“ des Assistenten oder über **Verwalten → Mit Master koppeln → QR-Code scannen** und bestätige mit „**Verwenden**“. Damit wird auch Nightscout eingerichtet.
+- **Mit der PIN**: Öffne auf dem **Client** den oben beschriebenen Schritt des Assistenten (oder **Verwalten → Mit Master koppeln**), gib die Einmal-PIN ein, die der Master anzeigt, und tippe auf „**Koppeln**“. Der Client zeigt dann an, wem er vertrauen wird. Bestätige mit „**Koppeln**“:
 
 ![Confirmation on the client before completing the pairing](../images/v4/AapsClient/aapsclient_pair_confirm.png)
 
-Im Assistenten schließt eine erfolgreiche Kopplung die Einrichtung ab und öffnet den Startbildschirm. Auf dem Master erscheint der Client in der Liste [Autorisierte Clients](#client_master_master_setup) als **Aktiv**. Danach zeigt **Bearbeiten → Mit Master koppeln** „*Bereits gekoppelt*“, die Rolle des Smartphones und ob der geschützte Modus eingeschaltet ist:
+Im Assistenten schließt eine erfolgreiche Kopplung die Einrichtung ab und öffnet den Startbildschirm. Auf dem Master erscheint der Client in der Liste [Autorisierte Clients](#client_master_master_setup) als **Aktiv**. Danach zeigt **Verwalten → Mit Master koppeln** „*Bereits gekoppelt*“, die Rolle des Smartphones und ob der geschützte Modus eingeschaltet ist:
 
 ![Manage → Pair with master on a paired client: Already paired, Role: Caregiver, Hardened mode on](../images/v4/ClientMaster/pair_with_master_client.png) Den vollständigen Ablauf der Kopplung, Hinweise zur Sicherheit und die Fehlerbehebung findest Du unter [Master ↔ Client-Steuerung](#client_master_client_setup).
 
 Nach der Kopplung bekommt der Client vom Master ein eigenes Nightscout-Token (wenn der Master ein Admin-Token hat), das nur die Rechte hat, die ein Client braucht. Ein Token, das Du vielleicht eingetragen hast, verwendet er dann nicht mehr. **AAPSClient** schreibt selbst nie Behandlungen oder BZ-Werte in Nightscout: Alles, was die App tut, wird an den Master gesendet, und der schreibt es. Siehe [Das eigene Nightscout-Token des Clients](#client-master-control-own-token).
 
-Was dieses Smartphone tun darf, legt der Master über seine **[Rolle](#client-master-control-roles)** fest (Schreibgeschützt, Mahlzeiten, Betreuer oder Administrator). **Bearbeiten → Mit Master koppeln** zeigt die Rolle des Smartphones an.
+Was dieses Smartphone tun darf, legt der Master über seine **[Rolle](#client-master-control-roles)** fest (Schreibgeschützt, Mahlzeiten, Betreuer oder Administrator). **Verwalten → Mit Master koppeln** zeigt die Rolle des Smartphones an.
 
 ## Der Startbildschirm
 
@@ -117,15 +117,15 @@ Der Startbildschirm des Clients spiegelt den Loop, dem er folgt:
 - **BZ, Diagramme, IOB/COB und Profil** kommen aus Nightscout, so wie der Master sie hochgeladen hat.
 - Der angezeigte **Loop-Status** ist der des **Masters** (ein Client hat keinen eigenen Loop). Bis der Client den AAPS-Modus des Masters aus Nightscout bekommen hat, zeigt die Anzeige des AAPS-Modus ein **Fragezeichen** (unbekannt).
 - Die **Statuskarte** zeigt Reservoir und Batterie der **Pumpe, der gefolgt wird**, sowie die Batterie des Uploaders aus dem Gerätestatus in Nightscout. Ein Client hat keine Pumpe, deshalb gibt es in der App keinen lokalen Pumpenstatus und nirgends eine Pumpenverwaltung.
-- Die untere Navigationsleiste bietet **Behandlungen**, **Szenen** und **Bearbeiten**, sobald der Client gekoppelt ist (vor der Kopplung nur **Bearbeiten**). Reiter für Pumpe oder Ziele gibt es nicht.
+- Die untere Navigationsleiste bietet **Behandlungen**, **Szenen** und **Verwalten**, sobald der Client gekoppelt ist (vor der Kopplung nur **Verwalten**). Reiter für Pumpe oder Ziele gibt es nicht.
 
 ## Behandlungen und Aktionen
 
-Alles unter **Bearbeiten** funktioniert wie in der Haupt-App, mit einem wichtigen Unterschied: Auf einem Client sind Aktionen, die die Therapie ändern würden (Bolus, Kohlenhydrate, temporäre Ziele, Szenen …), **ausgeblendet, bis das Gerät gekoppelt ist**. Danach werden sie zur Bestätigung und Ausführung **an den Master weitergeleitet**, siehe [Remote-Steuerung nutzen](#client-master-control).
+Alles unter **Verwalten** funktioniert wie in der Haupt-App, mit einem wichtigen Unterschied: Auf einem Client sind Aktionen, die die Therapie ändern würden (Bolus, Kohlenhydrate, temporäre Ziele, Szenen …), **ausgeblendet, bis das Gerät gekoppelt ist**. Danach werden sie zur Bestätigung und Ausführung **an den Master weitergeleitet**, siehe [Remote-Steuerung nutzen](#client-master-control).
 
 Eine Ausnahme ist der Eintrag **Profil**: Er wird auch auf einem **nicht gekoppelten** Client angezeigt, öffnet sich aber **nur zum Ansehen**. Der Client zeigt die Profile, die er über Nightscout bekommt (er braucht sie für seine eigenen Berechnungen), ohne Knöpfe zum Bearbeiten oder Aktivieren. Sobald der Client **gekoppelt** ist, wird die Profilliste mit dem Master abgeglichen, und Du kannst Profile vom Client aus bearbeiten und aktivieren, wie jede andere Remote-Aktion.
 
-Auf einem **nicht gekoppelten** Client bietet **Bearbeiten** nur **Profil** und **Mit Master koppeln** an:
+Auf einem **nicht gekoppelten** Client bietet **Verwalten** nur **Profil** und **Mit Master koppeln** an:
 
 ![The Manage screen on an unpaired client: only Profile and Pair with master](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
 
