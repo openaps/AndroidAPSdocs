@@ -2,47 +2,47 @@
 
 ## Jelly Star Mini
 
-**Features**
+**Özellikler**
 
 * Android 13
 * 8 GB RAM
 
-**Advantages**
+**Avantajlar**
 
 * Gerçekten küçük.
-* Even if you tell people, they might not consider it as a normal smartphone and will accept it more easily as an exception when phones are normally not allowed.
+* İnsanlara söyleseniz bile, onu normal bir akıllı telefon olarak görmeyebilirler ve telefonlara normalde izin verilmeyen yerlerde bunu bir istisna olarak daha kolay kabul ederler.
 
-**Disadvantages**
+**Dezavantajlar**
 
-* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
+* Yalnızca deneyimli döngü kullanıcıları için önerilir. Bazı ayarları tanımak kolay değildir: büyük bir Android telefonda AAPS deneyiminizden, neyin nerede ve nasıl olduğunu bilmeniz gerekir. Bazı AAPS düğmeleri küçüktür ve dokunması zordur: kalın parmakla değil, hassas bir dokunuşla basmanız gerekir.
 * Sadece döngü telefonu olarak kullanılabilir. Cebinizde normal kullanım için bir akıllı telefon olması daha iyidir. 
 
-### Battery life optimization
+### Pil ömrü optimizasyonu
 
-The Jelly comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip, OOP2, Juggluco, etc...).
+Jelly, AAPS (ve BYODA, xDrip, OOP2, Juggluco gibi diğer DIY uygulamaları) için **mutlaka** kapatılması gereken güçlü optimizasyon özellikleriyle gelir.
 
 ![](../images/Jelly_Settings1.png)
 
-You can leave Intelligent assistance enabled, but it **must be disabled for DIY apps**.
+Intelligent assistance (akıllı yardım) özelliğini açık bırakabilirsiniz, ancak bu özellik **DIY uygulamaları için kapatılmalıdır**.
 
 ![](../images/Jelly_Settings2.png)
 
-You can enable NFC for Libre sensors.
+Libre sensörleri için NFC'yi açabilirsiniz.
 
 ![](../images/Jelly_Settings3.png)
 
-### Battery life optimization
+### Pil ömrü optimizasyonu
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' for **AAPS** (and for other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
+**AAPS** ile sorun yaşamamak için Jelly Star'da **AAPS** (ve BYODA, xDrip, OOP2, Juggluco gibi diğer **DIY uygulamaları**) için 'unrestricted' (kısıtlamasız) seçilerek 'battery usage' (pil kullanımı) kısıtlaması kapatılmalıdır.
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
 ### Google Play Protect
 
-Remember to disable Google Play Protect.
+Google Play Protect'i kapatmayı unutmayın.
 
-### Remote Connection for Wear apk
+### Wear apk için Remote Connection (Uzak Bağlantı)
 
-For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
+Samsung Galaxy gibi bazı akıllı saatlerde Jelly'yi, **Wear.apk**'yı ve **AAPS**'i Wi-Fi üzerinden uzaktan kullanmak için Galaxy Wearable uygulamasında Advanced features (Gelişmiş özellikler) altındaki 'Remote connection' (Uzak bağlantı) ayarı **açık** olmalıdır.
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+![Galaxy Wearable, Advanced features (Gelişmiş özellikler), Remote connection (Uzaktan bağlantı) açık](../images/wearos/galaxy_wearable_remote_connection.png)

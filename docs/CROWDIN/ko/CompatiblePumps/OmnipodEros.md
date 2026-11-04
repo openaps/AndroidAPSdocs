@@ -1,14 +1,14 @@
 # Omnipod Eros
 
-These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**).
+이 안내는 Omnipod Eros 세대 펌프를 설정하는 방법입니다 (**Omnipod Dash가 아님**).
 
 ```{admonition} Omnipod Eros is being phased out
 :class: note
 
-The [Omnipod System](https://www.omnipod.com/current-podders/resources/omnipod-system) (the original Omnipod, comprising both the Personal Diabetes Manager (PDM) and the Pod) is being discontinued, and the end date varies by country. For example, it will no longer be available in Canada after 30 June 2026. If you rely on the Eros pump, plan ahead for a transition to a supported pump.
+[Omnipod System](https://www.omnipod.com/current-podders/resources/omnipod-system) (PDM(Personal Diabetes Manager)과 Pod로 구성된 원래의 Omnipod)은 판매가 중단되고 있으며, 종료 날짜는 나라마다 다릅니다. 예를 들어 캐나다에서는 2026년 6월 30일 이후 더 이상 구할 수 없습니다. Eros 펌프를 사용하고 있다면, 지원되는 펌프로 바꾸는 것을 미리 계획하십시오.
 ```
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
+**이 소프트웨어는 DIY 인공 췌장 솔루션의 일부이며 완성된 제품이 아닙니다. 사용 방법을 포함하여 시스템을 직접 읽고, 배우고, 이해하는 것은 사용자의 책임입니다. 이 소프트웨어로 무엇을 하든 그 책임은 전적으로 사용자 본인에게 있습니다.**
 
 ```{contents} Table of contents
 :depth: 1
@@ -17,114 +17,114 @@ The [Omnipod System](https://www.omnipod.com/current-podders/resources/omnipod-s
 
 ## 하드웨어와 소프트웨어의 필요 요건
 
-- **Pod Communication Device**
+- **Pod 통신 장치**
 
-> Component that bridges communication from your AAPS enabled phone to Eros generation pods.
+> AAPS가 설치된 휴대폰과 Eros 세대 Pod 사이의 통신을 연결해 주는 구성 요소입니다.
 > 
-> > - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
+> > - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink 웹사이트](https://getrileylink.org/product/orangelink)
 > > - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-> > - ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-> > - ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-> > - ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+> > - ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink 웹사이트](https://github.com/sks01/EmaLink) - [연락처](mailto:getemalink@gmail.com)
+> > - ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [연락처](mailto:Boshetyn@ukr.net)
+> > - ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink 웹사이트](https://www.getlooplink.org/) - [연락처](https://jameswedding.substack.com/) - 테스트되지 않음
 
-- ![Android_phone](../images/omnipod/Android_phone.png)  **Mobile Phone Device**
+- ![Android_phone](../images/omnipod/Android_phone.png)  **휴대폰 장치**
 
-> Component that will operate AAPS and send control commands to the Pod communication device.
+> AAPS를 실행하고 Pod 통신 장치에 제어 명령을 보내는 구성 요소입니다.
 > 
-> > - Supported [Android phone](#Phones-list-of-tested-phones) with **AAPS** and related components set up.
+> > - **AAPS**와 관련 구성 요소가 설정된 지원되는 [Android 휴대폰](#Phones-list-of-tested-phones).
 
-- ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **Insulin Delivery Device**
+- ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **인슐린 주입 장치**
 
-> Component that will interpret commands received from the Pod communication device originating from your AAPS enabled phone.
+> AAPS가 설치된 휴대폰에서 보내고 Pod 통신 장치를 거쳐 받은 명령을 해석하는 구성 요소입니다.
 > 
-> > - A new Omnipod pod (Eros generation - **NOT DASH**)
+> > - 새 Omnipod Pod (Eros 세대 - **DASH가 아님**)
 
-These instructions assume that you are starting a new pod session. If this is not the case, please be patient and start this process at your next pod change.
+이 안내는 새 Pod 세션을 시작한다고 가정합니다. 그렇지 않다면 조금 기다렸다가 다음 Pod 교체 때 이 과정을 시작하십시오.
 
-In this page, **RileyLink** means any of the pod communication devices listed above.
+이 페이지에서 **RileyLink**는 위에 나열된 모든 Pod 통신 장치를 뜻합니다.
 
-## Before you begin
+## 시작하기 전에
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
+**안전이 우선입니다** - 오류가 생겼을 때 복구할 수 없는 환경에서는 이 과정을 시도하지 마십시오 (여분의 Pod, 인슐린, 충전된 RileyLink, 휴대폰 장치가 꼭 필요합니다).
 
-**Your Omnipod PDM will no longer work after the AAPS Omnipod driver activates your pod**. Previously you used your Omnipod PDM to send commands to your Omnipod Eros pod. An Omnipod Eros pod only allows a single device to send communication to it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate an Omnipod Eros pod with your RileyLink through the AAPS Omnipod driver, **you will no longer be able to use your PDM with your pod**. The AAPS Omnipod driver with the RileyLink is now your acting PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies when AAPS is not working correctly.*
+**AAPS Omnipod 드라이버가 Pod를 활성화한 후에는 Omnipod PDM을 더 이상 사용할 수 없습니다**. 이전에는 Omnipod PDM으로 Omnipod Eros Pod에 명령을 보냈습니다. Omnipod Eros Pod는 하나의 장치만 Pod와 통신할 수 있게 합니다. Pod를 성공적으로 활성화한 장치만 그 이후로 그 Pod와 통신할 수 있습니다. 따라서 AAPS Omnipod 드라이버를 통해 RileyLink로 Omnipod Eros Pod를 활성화하면, **그 Pod에는 더 이상 PDM을 사용할 수 없습니다**. 이제 RileyLink와 함께 사용하는 AAPS Omnipod 드라이버가 PDM 역할을 합니다. *그렇다고 PDM을 버려야 한다는 뜻은 아닙니다. 예비용으로, 그리고 AAPS가 제대로 작동하지 않는 비상시를 대비하여 보관하는 것을 권장합니다.*
 
-**Only one RileyLink at a time can communicate with a pod.** **AAPS** remembers one paired RileyLink. If you pair a different one, it replaces the previous one.
+**한 번에 하나의 RileyLink만 Pod와 통신할 수 있습니다.** **AAPS**는 페어링된 RileyLink 하나를 기억합니다. 다른 RileyLink를 페어링하면 이전 RileyLink를 대체합니다.
 
-**Your pod will not shut off when the RileyLink is out of range.** When your RileyLink is out of range or the signal is blocked from communicating with the active pod, your pod will continue to deliver basal insulin. Upon activating a pod, the basal profile defined in AAPS will be programmed into the new pod. Should you lose contact with the pod, it will revert to this basal profile. You will not be able to issue new commands until the RileyLink comes back in range and re-establishes the connection.
+**RileyLink가 통신 범위를 벗어나도 Pod는 꺼지지 않습니다.** RileyLink가 범위를 벗어나거나 신호가 막혀 활성 Pod와 통신할 수 없을 때에도 Pod는 기저 인슐린을 계속 주입합니다. Pod를 활성화하면 AAPS에 정의된 기저 프로파일이 새 Pod에 프로그래밍됩니다. Pod와의 연결이 끊기면 Pod는 이 기저 프로파일로 돌아갑니다. RileyLink가 다시 범위 안으로 들어와 연결이 다시 이루어질 때까지는 새 명령을 보낼 수 없습니다.
 
-**30 min Basal Rate Profiles are NOT supported in AAPS.** If you are new to AAPS and are setting up your basal rate profile for the first time please be aware that basal rates starting on a half hour are not supported and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of say 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work.  You will need to update this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00.  Even though the 30 min basal rate profile increments are supported by the Omnipod hardware itself, AAPS is not able to take them into account with its algorithms currently.
+**AAPS에서는 30분 단위 기저 주입량 프로파일을 지원하지 않습니다.** AAPS를 처음 사용하고 기저 주입량 프로파일을 처음 설정한다면, 30분에 시작하는 기저 주입량은 지원되지 않으므로 기저 주입량 프로파일이 정시에 시작하도록 조정해야 합니다. 예를 들어 09:30에 시작하여 2시간 동안 이어지고 11:30에 끝나는 1.1 U의 기저 주입량이 있다면, 이것은 작동하지 않습니다.  이 1.1 U 기저 주입량을 9:00-11:00 또는 10:00-12:00의 시간 범위로 바꾸어야 합니다.  Omnipod 하드웨어 자체는 30분 단위 기저 주입량 프로파일을 지원하지만, 현재 AAPS의 알고리즘은 이를 고려할 수 없습니다.
 
-## Enabling the Omnipod Driver in AAPS
+## AAPS에서 Omnipod 드라이버 활성화하기
 
-You can enable the Omnipod driver in AAPS in **two ways**:
+AAPS에서 Omnipod 드라이버를 활성화하는 방법은 **두 가지**입니다:
 
-### Option 1: The Setup Wizard
+### 옵션 1: 설정 마법사
 
-After installing a new version of AAPS, the **Setup Wizard** starts automatically. If you have already exported your settings from a previous installation, you can import them in the wizard. For new installations, continue below.
+새 버전의 AAPS를 설치하면 **설정 마법사**가 자동으로 시작됩니다. 이전 설치에서 설정을 이미 내보냈다면, 마법사에서 설정을 가져올 수 있습니다. 새로 설치하는 경우 아래 내용을 계속 진행하십시오.
 
-Go through the [Setup Wizard](../SettingUpAaps/SetupWizard.md) until you reach the **Pump** step, then select **Omnipod Eros** (the description reads "Pump integration for Omnipod Eros").
+**펌프** 단계에 도달할 때까지 [설정 마법사](../SettingUpAaps/SetupWizard.md)를 진행한 다음, **Omnipod Eros**를 선택하십시오 (설명은 "Omnipod Eros용 펌프 통합"으로 되어 있습니다).
 
-![The Pump step of the setup wizard with Omnipod Eros](../images/setup-wizard/Wizard-Pump-Omnipod.png)
+![Omnipod Eros가 있는 설정 마법사의 펌프 단계](../images/setup-wizard/Wizard-Pump-Omnipod.png)
 
-The Setup Wizard does not pair your RileyLink. After finishing the wizard, open the Omnipod pump screen and pair it as described in the [RileyLink Setup section](#OmnipodEros-rileylink-setup).
+설정 마법사는 RileyLink를 페어링하지 않습니다. 마법사를 마친 후 Omnipod 펌프 화면을 열고 [RileyLink 설정 부분](#OmnipodEros-rileylink-setup)에 설명된 대로 RileyLink를 페어링하십시오.
 
-**OR**
+**또는**
 
-### Option 2: The Configuration screen
+### 옵션 2: 구성 화면
 
-Open the top-left **menu** (☰) > **Configuration** > **Pump** and select the **radio button** of **Omnipod Eros**.
+왼쪽 위의 **메뉴** (☰) > **구성** > **펌프**를 열고 **Omnipod Eros**의 **라디오 버튼**을 선택하십시오.
 
-Once it is selected, the **Omnipod Eros** card shows two buttons, **Settings** and **Open plugin**:
+선택하면 **Omnipod Eros** 카드에 **설정**과 **플러그인 열기** 두 버튼이 표시됩니다:
 
-![The Omnipod Eros plugin selected in Configuration > Pump](../images/v4/Pumps/omnipod_enabled.png)
+![구성 > 펌프에서 선택된 Omnipod Eros 플러그인](../images/v4/Pumps/omnipod_enabled.png)
 
-**Settings** opens the settings of the Omnipod driver (see [Omnipod Settings](#OmnipodEros-omnipod-settings)):
+**설정**은 Omnipod 드라이버의 설정을 엽니다 ([Omnipod 설정](#OmnipodEros-omnipod-settings) 참조):
 
-![Omnipod driver settings](../images/v4/Pumps/omnipod_settings.png)
+![Omnipod 드라이버 설정](../images/v4/Pumps/omnipod_settings.png)
 
-**Open plugin** opens the Omnipod pump screen. You can also open it at any time from the main screen with **Manage** > **Pump**. This page calls it the **Omnipod pump screen**. Before a RileyLink is paired and a pod is activated, it looks like this:
+**플러그인 열기**는 Omnipod 펌프 화면을 엽니다. 메인 화면에서 **관리** > **펌프**로 언제든지 열 수도 있습니다. 이 페이지에서는 이 화면을 **Omnipod 펌프 화면**이라고 부릅니다. RileyLink를 페어링하고 Pod를 활성화하기 전에는 다음과 같이 보입니다:
 
-![Omnipod pump screen before pairing](../images/v4/Pumps/omnipod_pump_screen.png)
+![페어링 전의 Omnipod 펌프 화면](../images/v4/Pumps/omnipod_pump_screen.png)
 
-### Verification of Omnipod Driver Selection
+### Omnipod 드라이버 선택 확인
 
-To verify that you have enabled the Omnipod driver, open **Manage** > **Pump** from the main screen. You should see the **Omnipod Eros** pump screen shown above. If you have not paired a RileyLink yet, **RileyLink Status** shows **Not Started** and **Pod Status** shows **No Active Pod**.
+Omnipod 드라이버가 활성화되었는지 확인하려면 메인 화면에서 **관리** > **펌프**를 여십시오. 위에 보이는 **Omnipod Eros** 펌프 화면이 보여야 합니다. 아직 RileyLink를 페어링하지 않았다면 **RileyLink 상태**에 **시작 안 됨**이, **Pod 상태**에 **활성화된 Pod 없음**이 표시됩니다.
 
-## Omnipod Configuration
+## Omnipod 구성
 
-All pod and RileyLink functions are buttons on the [Omnipod pump screen](#OmnipodEros-omnipod-pod-tab) (**Manage** > **Pump**). Some buttons only appear in certain situations, for example when a pod is active.
+모든 Pod 및 RileyLink 기능은 [Omnipod 펌프 화면](#OmnipodEros-omnipod-pod-tab)(**관리** > **펌프**)의 버튼입니다. 일부 버튼은 Pod가 활성화되어 있을 때처럼 특정 상황에서만 나타납니다.
 
-> ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) Refresh Pod connectivity and status
+> ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) Pod 연결 및 상태 새로고침
 > 
-> ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png) Pod Management (Activate, Deactivate, Play test beep, RileyLink Stats and Pod history)
+> ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png) Pod 관리 (활성화, 비활성화, 테스트 신호음 작동, RileyLink 통계, Pod 이력)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 there is no **POD MGMT** button or Pod Management menu: **Refresh** and all pod management actions are buttons on the Omnipod pump screen.
+위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에는 **POD MGMT** 버튼이나 Pod 관리 메뉴가 없습니다: **새로고침**과 모든 Pod 관리 작업은 Omnipod 펌프 화면의 버튼입니다.
 ```
 
 (OmnipodEros-rileylink-setup)=
 
-### RileyLink Setup
+### RileyLink 설정
 
-If you have already paired your RileyLink, continue to the [Activating a Pod section](#OmnipodEros-activating-a-pod) below.
+RileyLink를 이미 페어링했다면 아래 [Pod 활성화하기 부분](#OmnipodEros-activating-a-pod)으로 넘어가십시오.
 
-*Note: A good visual indicator that the RileyLink is not connected is that the treatment buttons (QuickLaunch toolbar) on the main screen will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.*
+*참고: RileyLink가 연결되지 않았다는 것을 눈으로 쉽게 알 수 있는 표시는 메인 화면의 처치 버튼(QuickLaunch 툴바)이 사라지는 것입니다. AAPS가 시작된 후 처음 약 30초 동안에도 RileyLink에 연결하는 중이므로 같은 현상이 나타납니다.*
 
-1. Make sure that your RileyLink is fully charged and powered on.
+1. RileyLink가 완전히 충전되어 있고 켜져 있는지 확인하십시오.
 
-2. Place the RileyLink [close to your phone](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less).
+2. RileyLink를 [휴대폰 가까이](#OmnipodEros-optimal-omnipod-and-rileylink-positioning)(약 30 cm 이내)에 두십시오.
 
-3. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Pair RileyLink**.
+3. Omnipod 펌프 화면(**관리** > **펌프**)을 열고 **RileyLink 페어링**을 누르십시오.
 
-4. The **Pair RileyLink** screen starts scanning for Bluetooth devices right away. Tap your RileyLink in the list of found devices.
+4. **RileyLink 페어링** 화면이 바로 블루투스 장치 검색을 시작합니다. 찾은 장치 목록에서 사용하는 RileyLink를 누르십시오.
 
-   ![The Pair RileyLink screen scanning for devices](../images/omnipod/eros_pair_rileylink_scanning.png)
+   ![장치를 검색 중인 RileyLink 페어링 화면](../images/omnipod/eros_pair_rileylink_scanning.png)
 
-5. When **RileyLink paired successfully** is shown with the name and address of your device, press **OK**.
+5. 장치의 이름과 주소와 함께 **RileyLink 페어링 성공**이 표시되면 **확인**을 누르십시오.
 
-6. Back on the Omnipod pump screen, check that **RileyLink Status** changes to **Connected**. **Pod Status** should show **No Active Pod**. If the RileyLink does not connect, press **Reset RileyLink**, or restart **AAPS**.
+6. Omnipod 펌프 화면으로 돌아와서 **RileyLink 상태**가 **연결됨**으로 바뀌는지 확인하십시오. **Pod 상태**에는 **활성화된 Pod 없음**이 표시되어야 합니다. RileyLink가 연결되지 않으면 **RileyLink 초기화**를 누르거나 **AAPS**를 다시 시작하십시오.
 
 ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
@@ -136,160 +136,160 @@ If you have already paired your RileyLink, continue to the [Activating a Pod sec
 
 ```{admonition} Older screenshot
 :class: note
-The six screenshots above (after step 6) are from an earlier **AAPS** version. In **AAPS** 4 you pair the RileyLink with the **Pair RileyLink** button on the Omnipod pump screen instead of **RileyLink Configuration** in the Omnipod settings, and scanning starts automatically.
+위의 스크린샷 6장(6단계 이후)은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 Omnipod 설정의 **RileyLink Configuration** 대신 Omnipod 펌프 화면의 **RileyLink 페어링** 버튼으로 RileyLink를 페어링하며, 검색이 자동으로 시작됩니다.
 ```
 
 ```{note}
-To switch to another RileyLink (for example a backup device), press **Pair RileyLink** again and select the new device. It replaces the one paired before. You do not need to remove the old device first.
+다른 RileyLink(예: 예비 장치)로 바꾸려면 **RileyLink 페어링**을 다시 누르고 새 장치를 선택하십시오. 새 장치가 이전에 페어링한 장치를 대체합니다. 이전 장치를 먼저 제거할 필요는 없습니다.
 ```
 
 (OmnipodEros-activating-a-pod)=
 
-### Activating a Pod
+### Pod 활성화하기
 
-Before you can activate a pod, make sure your RileyLink is paired and **RileyLink Status** shows **Connected**. The **Activate Pod** button stays disabled until the RileyLink is ready.
+Pod를 활성화하기 전에 RileyLink가 페어링되어 있고 **RileyLink 상태**에 **연결됨**이 표시되는지 확인하십시오. RileyLink가 준비될 때까지 **Pod 활성화** 버튼은 비활성화되어 있습니다.
 
-*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Before pairing the Pod's radio signal is weaker, however after it has been paired it will operate at full signal power. During these procedures, make sure that your pod is* [within close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) *(~30 cm away or less) but not on top of or right next to the RileyLink.*
+*알림: 보안 안전 조치 때문에 Pod 활성화 페어링을 할 때에는 Pod 통신 거리가 제한됩니다. 페어링 전에는 Pod의 무선 신호가 약하지만, 페어링 후에는 최대 신호 세기로 작동합니다. 이 과정에서는 Pod가* [가까운 거리](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) *(약 30 cm 이내)에 있되, RileyLink 바로 위나 바로 옆에는 두지 마십시오.*
 
-01. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Activate Pod**.
+01. Omnipod 펌프 화면(**관리** > **펌프**)을 열고 **Pod 활성화**를 누르십시오.
 
-    If you have never activated a profile, a **Profile required** step appears first. Select the profile to apply on activation.
+    프로파일을 한 번도 활성화한 적이 없다면 **프로파일 필요** 단계가 먼저 나타납니다. 활성화할 때 적용할 프로파일을 선택하십시오.
 
     > ![Activate_Pod_1](../images/omnipod/Activate_Pod_1.png) ![Activate_Pod_2](../images/omnipod/Activate_Pod_2.png) 
     > 
     > ```{admonition} Older screenshot
     >     :class: note
-    >     The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+    >     위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 **Pod 활성화**는 **POD MGMT** 메뉴 대신 Omnipod 펌프 화면의 버튼입니다.
     > ```
 
-02. The **Fill Pod** screen is displayed. Fill a new pod with enough insulin for 3 days and listen for two beeps. They mean that the minimum amount of 80 units has been filled. Empty the fill syringe completely, even after hearing the two beeps. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units. Do not remove the pod's needle cap yet.
+02. **Pod 채우기** 화면이 표시됩니다. 3일 동안 사용할 수 있는 충분한 인슐린으로 새 Pod를 채우고 두 번의 신호음을 들으십시오. 이 신호음은 최소량인 80 U가 채워졌다는 뜻입니다. 두 번의 신호음을 들은 후에도 채우기용 주사기를 완전히 비우십시오. 3일 동안 필요한 인슐린 총량을 계산할 때, Pod 프라임에 12~15 U가 사용된다는 점을 고려하십시오. 아직 Pod의 바늘 캡을 제거하지 마십시오.
 
     > ![Activate_Pod_3](../images/omnipod/Activate_Pod_3.png)
     > 
-    > Ensure the new pod and RileyLink are within close proximity of each other (~30cm or less) and press **Next**.
+    > 새 Pod와 RileyLink가 서로 가까이(약 30 cm 이내) 있는지 확인하고 **다음**을 누르십시오.
 
-03. **Select Insulin** (only shown if you have more than one insulin configured): select the insulin you are filling the pod with and press **Next**. A profile switch with this insulin is applied after activation.
+03. **인슐린 선택** (인슐린이 두 개 이상 설정된 경우에만 표시됨): Pod에 채우는 인슐린을 선택하고 **다음**을 누르십시오. 활성화 후 이 인슐린으로 프로파일 전환이 적용됩니다.
 
-04. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself). If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, [move the RileyLink closer](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and press **Retry**.
+04. **Pod 초기화** 화면에서 Pod가 프라임을 시작합니다 (Pod가 스스로 프라임하는 동안 딸깍 소리 후 째깍거리는 소리가 여러 번 들립니다). RileyLink가 활성화하는 Pod와 통신할 수 있는 거리 밖에 있으면 **Pod에서 반응 없음** 오류 메시지가 나타납니다. 이런 일이 생기면 [RileyLink를 Pod에 더 가까이](#OmnipodEros-optimal-omnipod-and-rileylink-positioning)(약 30 cm 이내) 옮기되 Pod 바로 위나 바로 옆에는 두지 말고, **재시도**를 누르십시오.
 
     > ![Activate_Pod_4](../images/omnipod/Activate_Pod_4.png) ![Activate_Pod_5](../images/omnipod/Activate_Pod_5.png)
 
-05. When priming is successful, a green checkmark is shown and the **Next** button becomes enabled. Press **Next**.
+05. 프라임이 성공하면 녹색 체크 표시가 나타나고 **다음** 버튼이 활성화됩니다. **다음**을 누르십시오.
 
     > ![Activate_Pod_6](../images/omnipod/Activate_Pod_6.png)
 
-06. **Site location** (only shown if **Manage pump site rotation** is enabled in [Site Rotation](#Aapsscreens-site-rotation)): select where you place the pod on your body and press **Next**.
+06. **부위 위치** ([위치 순환](#Aapsscreens-site-rotation)에서 **펌프 위치 순환 관리**가 켜져 있을 때만 표시됨): 몸에서 Pod를 붙일 위치를 선택하고 **다음**을 누르십시오.
 
-07. The **Attach Pod** screen is displayed. Prepare the infusion site of the new pod. Remove the pod's plastic needle cap and white paper backing from the adhesive and apply the pod to your chosen site on your body. If the cannula sticks out, press **Cancel** and discard the pod. When finished, press **Next**.
+07. **Pod 부착** 화면이 표시됩니다. 새 Pod의 주입 부위를 준비하십시오. Pod의 플라스틱 바늘 캡과 접착면의 흰색 보호 종이를 떼어 내고, 몸에서 선택한 위치에 Pod를 붙이십시오. 캐뉼라가 튀어나와 있으면 **취소**를 누르고 Pod를 폐기하십시오. 다 되면 **다음**을 누르십시오.
 
     > ![Activate_Pod_7](../images/omnipod/Activate_Pod_7.png)
 
-08. A confirmation dialog appears: "When you press OK, the cannula will be inserted". **ONLY press OK if you are ready to deploy the cannula**.
+08. 확인 대화 상자가 나타납니다: "확인을 누르면, 캐뉼라가 삽입될 것입니다". **캐뉼라를 삽입할 준비가 되었을 때만 확인을 누르십시오**.
 
     > ![Activate_Pod_8](../images/omnipod/Activate_Pod_8.png)
 
-09. On the **Insert Cannula** screen, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so be patient.
+09. **캐뉼라 삽입** 화면에서 Omnipod가 반응하여 캐뉼라를 삽입하기까지 시간이 걸릴 수 있으니 (최대 1~2분) 기다리십시오.
 
-    > If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and press **Retry**.
+    > RileyLink가 활성화하는 Pod와 통신할 수 있는 거리 밖에 있으면 **Pod에서 반응 없음** 오류 메시지가 나타납니다. 이런 일이 생기면 RileyLink를 Pod에 더 가까이(약 30 cm 이내) 옮기되 Pod 바로 위나 바로 옆에는 두지 말고, **재시도**를 누르십시오.
     > 
-    > If the RileyLink is out of Bluetooth range or does not have an active connection to the phone, you will receive an error message **No response from RileyLink**. If this occurs, move the RileyLink closer to the phone and press **Retry**.
+    > RileyLink가 블루투스 범위 밖에 있거나 휴대폰과 연결되어 있지 않으면 **RileyLink에서 반응 없음** 오류 메시지가 나타납니다. 이런 일이 생기면 RileyLink를 휴대폰에 더 가까이 옮기고 **재시도**를 누르십시오.
     > 
-    > *NOTE: Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. This ensures a smooth insertion of the needle and will decrease your chances of developing occlusions.*
+    > *참고: 캐뉼라를 삽입하기 전에 캐뉼라 삽입 위치 근처의 피부를 집어 주는 것이 좋습니다. 이렇게 하면 바늘이 부드럽게 들어가고 막힘이 생길 가능성이 줄어듭니다.*
     > 
     > ![Activate_Pod_9](../images/omnipod/Activate_Pod_9.png)
     > 
     > ![Activate_Pod_10](../images/omnipod/Activate_Pod_10.png) ![Activate_Pod_11](../images/omnipod/Activate_Pod_11.png)
 
-10. A green checkmark appears, and the **Next** button becomes enabled upon successful cannula insertion. Press **Next**.
+10. 캐뉼라가 성공적으로 삽입되면 녹색 체크 표시가 나타나고 **다음** 버튼이 활성화됩니다. **다음**을 누르십시오.
 
     > ![Activate_Pod_12](../images/omnipod/Activate_Pod_12.png)
 
-11. The **Pod Activated** screen is displayed. Check that the cannula has been inserted correctly, and change your pod if you think it has not. Press **Finish**. Congratulations! You have now started a new active pod session.
+11. **Pod 활성화됨** 화면이 표시됩니다. 캐뉼라가 올바르게 삽입되었는지 확인하고, 그렇지 않다고 생각되면 Pod를 교체하십시오. **완료**를 누르십시오. 축하합니다! 이제 새 Pod 세션을 시작했습니다.
 
     > ![Activate_Pod_13](../images/omnipod/Activate_Pod_13.png) 
     > 
     > ```{admonition} Older screenshot
     >     :class: note
-    >     The screenshots in steps 2 to 11 are from an earlier **AAPS** version and may look different in **AAPS** 4. The **Select Insulin** and **Site location** steps are not pictured.
+    >     2~11단계의 스크린샷은 이전 **AAPS** 버전의 것이며 **AAPS** 4에서는 다르게 보일 수 있습니다. **인슐린 선택**과 **부위 위치** 단계는 그림에 없습니다.
     > ```
 
-12. You are returned to the Omnipod pump screen. The **Activate Pod** button is replaced by **Deactivate Pod**, because you cannot activate another pod without deactivating the active one first.
+12. Omnipod 펌프 화면으로 돌아갑니다. 활성 Pod를 먼저 비활성화하지 않으면 다른 Pod를 활성화할 수 없으므로, **Pod 활성화** 버튼이 **Pod 비활성화**로 바뀝니다.
 
-    The pump screen now shows information about your active pod, including the current basal rate, reservoir level, insulin delivered, pod errors and alerts. For more details, see the [Omnipod pump screen](#OmnipodEros-omnipod-pod-tab) section.
+    이제 펌프 화면에 현재 기저 주입량, 인슐린 잔량, 주입된 인슐린, Pod 오류와 경고를 포함한 활성 Pod 정보가 표시됩니다. 자세한 내용은 [Omnipod 펌프 화면](#OmnipodEros-omnipod-pod-tab) 부분을 참조하십시오.
 
     ![Activate_Pod_14](../images/omnipod/Activate_Pod_14.png) ![Activate_Pod_15](../images/omnipod/Activate_Pod_15.png)
 
     ```{admonition} Older screenshot
     :class: note
-    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 there is no Pod Management menu: you return directly to the Omnipod pump screen, where **Deactivate Pod** replaces **Activate Pod**.
+    위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에는 Pod 관리 메뉴가 없습니다: 바로 Omnipod 펌프 화면으로 돌아가며, 그곳에서 **Pod 활성화** 대신 **Pod 비활성화**가 표시됩니다.
     ```
 
 ```{note}
-If activation was interrupted after priming (for example the app was closed), press **Activate Pod** again. The wizard continues from the cannula insertion steps.
+프라임 후에 활성화가 중단되었다면 (예: 앱이 종료된 경우) **Pod 활성화**를 다시 누르십시오. 마법사가 캐뉼라 삽입 단계부터 계속됩니다.
 ```
 
-### Deactivating a Pod
+### Pod 비활성화하기
 
-Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+보통 Pod는 3일(72시간) 동안 사용하고, Pod 만료 경고 후 8시간을 더 사용할 수 있어 총 80시간 동안 사용할 수 있습니다.
 
-To deactivate a pod (either from expiration or from a pod failure):
+Pod를 비활성화하려면 (만료되었거나 Pod 고장이 났을 때):
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Deactivate Pod**.
+1. Omnipod 펌프 화면(**관리** > **펌프**)을 열고 **Pod 비활성화**를 누르십시오.
 
    > ![Deactivate_Pod_1](../images/omnipod/Deactivate_Pod_1.png) ![Deactivate_Pod_2](../images/omnipod/Deactivate_Pod_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Deactivate Pod** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   >    위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 **Pod 비활성화**는 **POD MGMT** 메뉴 대신 Omnipod 펌프 화면의 버튼입니다.
    > ```
 
-2. On the **Deactivate Pod** screen, first make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod. Then press **Next**. A dialog asks *A deactivated Pod can not be used again. Deactivate this Pod now?* Press **OK** to start deactivating the pod, or **Cancel** to keep it. Deactivation suspends all insulin delivery and cannot be undone.
+2. **Pod 비활성화** 화면에서 먼저 RileyLink가 Pod 가까이 있되 Pod 바로 위나 바로 옆에는 있지 않은지 확인하십시오. 그런 다음 **다음**을 누르십시오. 대화 상자가 다음과 같이 묻습니다: *비활성화된 Pod는 다시 사용할 수 없습니다. 지금 이 Pod를 비활성화하시겠습니까?* Pod 비활성화를 시작하려면 **확인**을, Pod를 유지하려면 **취소**를 누르십시오. 비활성화하면 모든 인슐린 주입이 중지되며 되돌릴 수 없습니다.
 
    > ![Deactivate_Pod_3](../images/omnipod/Deactivate_Pod_3.png)
 
-3. The **Deactivating Pod** screen appears, and you will receive a confirmation beep from the pod that deactivation was successful.
+3. **Pod 비활성화 중** 화면이 나타나고, 비활성화가 성공하면 Pod에서 확인 신호음이 울립니다.
 
    > ![Deactivate_Pod_4](../images/omnipod/Deactivate_Pod_4.png)
    > 
-   > **IF deactivation fails** and you do not receive a confirmation beep, you may receive a **No response from RileyLink** or **No response from Pod** message. Press **Retry** to attempt deactivation again. If deactivation keeps failing, press **Discard Pod** and confirm. **AAPS** then forgets the pod. Insulin delivery has **not** been suspended, so remove the pod from your body. If your pod has a screaming alarm, you may need to silence it manually (using a pin or a paperclip), because **Discard Pod** does not silence it.
+   > **비활성화가 실패하여** 확인 신호음이 울리지 않으면 **RileyLink에서 반응 없음** 또는 **Pod에서 반응 없음** 메시지가 나타날 수 있습니다. **재시도**를 눌러 비활성화를 다시 시도하십시오. 비활성화가 계속 실패하면 **Pod 폐기**를 누르고 확인하십시오. 그러면 **AAPS**는 그 Pod를 잊어버립니다. 인슐린 주입은 중지되지 **않았으므로** Pod를 몸에서 제거하십시오. Pod가 계속 울리는 알람을 내면, **Pod 폐기**로는 소리가 멈추지 않으므로 핀이나 클립으로 직접 소리를 꺼야 할 수 있습니다.
    > 
    > > ![Deactivate_Pod_5](../images/omnipod/Deactivate_Pod_5.png)  ![Deactivate_Pod_6](../images/omnipod/Deactivate_Pod_6.png)
 
-4. A green checkmark appears when deactivation is successful. Press **Next** to display the **Pod Deactivated** screen. You may now remove your pod as the active session has been deactivated.
+4. 비활성화가 성공하면 녹색 체크 표시가 나타납니다. **다음**을 눌러 **Pod 비활성화됨** 화면을 표시하십시오. 활성 세션이 비활성화되었으므로 이제 Pod를 제거할 수 있습니다.
 
    > ![Deactivate_Pod_7](../images/omnipod/Deactivate_Pod_7.png)
 
-5. Press **Finish** to return to the Omnipod pump screen.
+5. **완료**를 눌러 Omnipod 펌프 화면으로 돌아가십시오.
 
    > ![Deactivate_Pod_8](../images/omnipod/Deactivate_Pod_8.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots in steps 2 to 5 are from an earlier **AAPS** version and may look different in **AAPS** 4.
+   >    2~5단계의 스크린샷은 이전 **AAPS** 버전의 것이며 **AAPS** 4에서는 다르게 보일 수 있습니다.
    > ```
 
-6. On the Omnipod pump screen, check that **RileyLink Status** shows **Connected** and **Pod Status** shows **No Active Pod**.
+6. Omnipod 펌프 화면에서 **RileyLink 상태**에 **연결됨**이, **Pod 상태**에 **활성화된 Pod 없음**이 표시되는지 확인하십시오.
 
    > ![Deactivate_Pod_9](../images/omnipod/Deactivate_Pod_9.png)  ![Deactivate_Pod_10](../images/omnipod/Deactivate_Pod_10.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Finish** returns you directly to the Omnipod pump screen; there is no Pod Management menu or **Omnipod (POD)** tab.
+   >    위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 **완료**를 누르면 바로 Omnipod 펌프 화면으로 돌아갑니다. Pod 관리 메뉴나 **Omnipod (POD)** 탭은 없습니다.
    > ```
 
-### Suspending and Resuming Insulin Delivery
+### 인슐린 주입 중지 및 재개
 
-The process below shows you how to suspend and resume insulin delivery.
+아래 과정은 인슐린 주입을 중지하고 재개하는 방법을 보여 줍니다.
 
-*NOTE - if you do not see a **Suspend** button*, it is hidden by default. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*참고 - **중지** 버튼이 보이지 않으면*, 기본적으로 숨겨져 있기 때문입니다. [Omnipod 설정](#OmnipodEros-omnipod-settings)의 **기타**에서 **펌프 화면에 주입 중지 버튼 표시**를 켜십시오.
 
-#### Suspending Insulin Delivery
+#### 인슐린 주입 중지
 
-Use this command to put the active pod into a suspended state. In this suspended state, the pod will no longer deliver any insulin. This command mimics the suspend function that the original Omnipod PDM issues to an active pod.
+이 명령으로 활성 Pod를 중지 상태로 만듭니다. 중지 상태에서는 Pod가 인슐린을 전혀 주입하지 않습니다. 이 명령은 원래 Omnipod PDM이 활성 Pod에 보내는 중지 기능과 같은 일을 합니다.
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Suspend**. The suspend command is sent through the RileyLink to the active pod.
+1. Omnipod 펌프 화면(**관리** > **펌프**)을 열고 **중지**를 누르십시오. 중지 명령이 RileyLink를 통해 활성 Pod로 보내집니다.
 
-2. When the pod has suspended all insulin delivery, **Pod Status** shows **Suspended** and the **Suspend** button is replaced by **Resume Delivery**.
+2. Pod가 모든 인슐린 주입을 중지하면 **Pod 상태**에 **중지됨**이 표시되고, **중지** 버튼이 **주입 재개**로 바뀝니다.
 
    > ![Suspend_Insulin_Delivery_1](../images/omnipod/Suspend_Insulin_Delivery_1.png) ![Suspend_Insulin_Delivery_2](../images/omnipod/Suspend_Insulin_Delivery_2.png)
    > 
@@ -299,18 +299,18 @@ Use this command to put the active pod into a suspended state. In this suspended
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 these steps take place on the Omnipod pump screen instead of the **Omnipod (POD)** tab, and the result is shown in **Pod Status**.
+   >    위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 이 단계가 **Omnipod (POD)** 탭 대신 Omnipod 펌프 화면에서 이루어지며, 결과는 **Pod 상태**에 표시됩니다.
    > ```
 
-If the command fails, a **Warning** dialog shows "Failed to suspend delivery" with the reason. Check the RileyLink connection and try again.
+명령이 실패하면 **경고** 대화 상자에 "주입 중지 실패함"과 그 이유가 표시됩니다. RileyLink 연결을 확인하고 다시 시도하십시오.
 
-#### Resuming Insulin Delivery
+#### 인슐린 주입 재개
 
-Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal profile. The pod will again accept commands for bolus, TBR, and SMB.
+이 명령으로 현재 중지된 활성 Pod에 인슐린 주입을 재개하도록 지시합니다. 명령이 성공적으로 처리되면, 활성 기저 프로파일에서 현재 시간에 해당하는 기저 주입량으로 인슐린 주입이 정상적으로 재개됩니다. Pod는 다시 볼러스, TBR, SMB 명령을 받습니다.
 
-1. Open the Omnipod pump screen and check that **Pod Status** shows **Suspended**. Press **Resume Delivery**.
+1. Omnipod 펌프 화면을 열고 **Pod 상태**에 **중지됨**이 표시되는지 확인하십시오. **주입 재개**를 누르십시오.
 
-2. When the command succeeds, **Pod Status** shows **Running** again and the **Resume Delivery** button disappears (the **Suspend** button is shown again if you have enabled it).
+2. 명령이 성공하면 **Pod 상태**에 다시 **실행 중**이 표시되고 **주입 재개** 버튼이 사라집니다 (설정에서 켰다면 **중지** 버튼이 다시 표시됩니다).
 
    > ![Resume_Insulin_Delivery_1](../images/omnipod/Resume_Insulin_Delivery_1.png) ![Resume_Insulin_Delivery_2](../images/omnipod/Resume_Insulin_Delivery_2.png)
    > 
@@ -320,104 +320,104 @@ Use this command to instruct the active, currently suspended pod to resume insul
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 these steps take place on the Omnipod pump screen instead of the **Omnipod (POD)** tab, and the result is shown in **Pod Status**.
+   >    위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 이 단계가 **Omnipod (POD)** 탭 대신 Omnipod 펌프 화면에서 이루어지며, 결과는 **Pod 상태**에 표시됩니다.
    > ```
 
-If the command fails, a **Warning** dialog shows "Failed to resume delivery" with the reason. Check the RileyLink connection and try again.
+명령이 실패하면 **경고** 대화 상자에 "주입 재개 실패함"과 그 이유가 표시됩니다. RileyLink 연결을 확인하고 다시 시도하십시오.
 
-### Silencing Pod Alerts
+### Pod 경고 음소거
 
-*NOTE - The **Silence Alerts** button is only shown on the Omnipod pump screen while the pod has an active alert (for example the pod expiration or low reservoir alert), and only if **Automatically silence Pod alerts** is disabled.*
+*참고 - **경고 음소거** 버튼은 Pod에 활성 경고(예: Pod 만료 경고 또는 레저버 부족 경고)가 있을 때, 그리고 **자동으로 Pod 경고 음소거**가 꺼져 있을 때만 Omnipod 펌프 화면에 표시됩니다.*
 
-The process below shows you how to silence pod beeps that start when the pod reaches the warning time before it expires. This warning time is set with **Alert at hours before shutdown (80 Hours)** in the Omnipod **Alerts** settings. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hour (3 days) limit.
+아래 과정은 Pod가 만료 전 경고 시간에 도달했을 때 시작되는 Pod 신호음을 음소거하는 방법을 보여 줍니다. 이 경고 시간은 Omnipod **경고** 설정의 **종료 전 경고 시간 (80시간)**으로 정합니다. Pod의 최대 사용 시간은 80시간(3일 8시간)이지만, Insulet은 72시간(3일) 한도를 넘기지 않도록 권장합니다.
 
-*NOTE - If you have enabled **Automatically silence Pod alerts** in the Omnipod **Alerts** settings, **AAPS** silences the alert automatically at the next communication with the pod, and you do NOT need to do it manually.*
+*참고 - Omnipod **경고** 설정에서 **자동으로 Pod 경고 음소거**를 켰다면, **AAPS**가 다음에 Pod와 통신할 때 경고를 자동으로 음소거하므로 직접 할 필요가 없습니다.*
 
-1. When the warning time is reached, the pod beeps to tell you that it will soon expire and needs to be changed. On the Omnipod pump screen, **Pod Expires** shows the exact time the pod expires (72 hours after activation); it turns **yellow** 4 hours before. **Pod Hard End** shows when the pod stops delivering insulin. **Active Pod Alerts** shows **Pod will expire soon**, and the **Silence Alerts** button appears. **AAPS** also shows a notification about the upcoming pod expiration.
+1. 경고 시간이 되면 Pod가 곧 만료되어 교체해야 한다는 것을 알리기 위해 신호음을 냅니다. Omnipod 펌프 화면에서 **Pod 만료**는 Pod가 만료되는 정확한 시간(활성화 후 72시간)을 표시하며, 4시간 전에 **노란색**으로 바뀝니다. **Pod 최종 종료**는 Pod가 인슐린 주입을 멈추는 시간을 표시합니다. **활성 Pod 경고**에 **Pod가 곧 만료됩니다.**가 표시되고 **경고 음소거** 버튼이 나타납니다. **AAPS**도 곧 다가오는 Pod 만료에 대한 알림을 표시합니다.
 
    > ![Acknowledge_Alerts_1](../images/omnipod/Acknowledge_Alerts_1.png) ![Acknowledge_Alerts_2](../images/omnipod/Acknowledge_Alerts_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 the **ACK ALERTS** button is called **Silence Alerts** and is on the Omnipod pump screen.
+   >    위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 **ACK ALERTS** 버튼은 **경고 음소거**라고 불리며 Omnipod 펌프 화면에 있습니다.
    > ```
 
-2. Press **Silence Alerts**. The RileyLink sends the command to the pod to stop the expiration warning beeps.
+2. **경고 음소거**를 누르십시오. RileyLink가 Pod에 만료 경고 신호음을 멈추라는 명령을 보냅니다.
 
    > ![Acknowledge_Alerts_3](../images/omnipod/Acknowledge_Alerts_3.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the button is called **Silence Alerts**.
+   >    위 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 이 버튼은 **경고 음소거**라고 불립니다.
    > ```
 
-3. When the alerts are silenced, the pod beeps twice. **Active Pod Alerts** no longer shows the warning, the **Silence Alerts** button disappears and the pod stops its expiration warning beeps.
+3. 경고가 음소거되면 Pod가 신호음을 두 번 냅니다. **활성 Pod 경고**에 더 이상 경고가 표시되지 않고, **경고 음소거** 버튼이 사라지며, Pod가 만료 경고 신호음을 멈춥니다.
 
    > ![Acknowledge_Alerts_4](../images/omnipod/Acknowledge_Alerts_4.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the result is shown on the Omnipod pump screen: the warning disappears from **Active Pod Alerts**.
+   >    위 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 결과가 Omnipod 펌프 화면에 표시됩니다: 경고가 **활성 Pod 경고**에서 사라집니다.
    > ```
 
-If the command fails (for example the RileyLink is out of range of the pod), a **Warning** dialog shows "Failed to silence alerts" with the reason. Move the RileyLink closer to the pod and try again.
+명령이 실패하면 (예: RileyLink가 Pod와 통신할 수 있는 거리 밖에 있는 경우) **경고** 대화 상자에 "경고 음소거 실패함"과 그 이유가 표시됩니다. RileyLink를 Pod에 더 가까이 옮기고 다시 시도하십시오.
 
 ![Acknowledge_Alerts_5](../images/omnipod/Acknowledge_Alerts_5.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the **Warning** dialog shows "Failed to silence alerts" with the reason.
+위 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 **경고** 대화 상자에 "경고 음소거 실패함"과 그 이유가 표시됩니다.
 ```
 
 (OmnipodEros-view-pod-history)=
 
-### View Pod History
+### Pod 이력 보기
 
-This section shows you how to review your active pod history and filter by different action categories. The pod history tool allows you to view the actions and results committed to your currently active pod during its three day (72 - 80 hours) life.
+이 부분에서는 활성 Pod 이력을 보고 여러 동작 범주로 필터링하는 방법을 설명합니다. Pod 이력 도구로 현재 활성 Pod의 3일(72~80시간) 사용 기간 동안 Pod에 실행된 동작과 그 결과를 볼 수 있습니다.
 
-This feature is useful for verifying boluses, TBRs, basal changes that were given but you may be unsure if they completed. The remaining categories are useful in general for troubleshooting issues and determining the order of events that occurred leading up to a failure.
+이 기능은 주입한 볼러스, TBR, 기저 변경이 완료되었는지 확실하지 않을 때 확인하는 데 유용합니다. 나머지 범주는 일반적으로 문제를 해결하고 고장이 생기기 전에 일어난 이벤트의 순서를 파악하는 데 유용합니다.
 
-*NOTE:* **Uncertain** commands will appear in the pod history, however due to their nature you cannot ensure their accuracy.
+*참고:* **불확실** 명령도 Pod 이력에 표시되지만, 그 특성상 정확성을 보장할 수 없습니다.
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Pod History**.
+1. Omnipod 펌프 화면(**관리** > **펌프**)을 열고 **Pod 이력**을 누르십시오.
 
    > ![Pod_History_1](../images/omnipod/Pod_History_1.png) ![Pod_History_2](../images/omnipod/Pod_History_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   >    위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 **Pod 이력**은 **POD MGMT** 메뉴 대신 Omnipod 펌프 화면의 버튼입니다.
    > ```
 
-2. The **Pod History** screen lists all pod actions and their results, newest first, grouped by day. By default **All** is selected. Tap one of the filter buttons at the top to show only one category. Use the back arrow at the top left to return to the Omnipod pump screen.
+2. **Pod 이력** 화면에는 모든 Pod 동작과 그 결과가 날짜별로 묶여 최신 항목부터 표시됩니다. 기본적으로 **전체**가 선택되어 있습니다. 위쪽의 필터 버튼 중 하나를 누르면 한 범주만 표시됩니다. 왼쪽 위의 뒤로 화살표를 눌러 Omnipod 펌프 화면으로 돌아가십시오.
 
-   > ![Pod History screen with the filter buttons](../images/omnipod/Pod_History_3.png)
+   > ![필터 버튼이 있는 Pod 이력 화면](../images/omnipod/Pod_History_3.png)
 
    > ![Pod_History_4](../images/omnipod/Pod_History_4.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The second screenshot is from an earlier **AAPS** version and may look different in **AAPS** 4.
+   >    두 번째 스크린샷은 이전 **AAPS** 버전의 것이며 **AAPS** 4에서는 다르게 보일 수 있습니다.
    > ```
 
-### View RileyLink Settings and History
+### RileyLink 설정과 이력 보기
 
-The **RileyLink Stats** screen shows the settings of your RileyLink and active pod, and the communication history of both. It has two tabs: **Settings** and **History**.
+**RileyLink 통계** 화면에는 RileyLink와 활성 Pod의 설정, 그리고 두 장치의 통신 이력이 표시됩니다. 이 화면에는 **설정**과 **이력** 두 개의 탭이 있습니다.
 
-The **RileyLink Stats** button is hidden by default. To show it on the Omnipod pump screen, enable **Show RileyLink Stats button in Pod Management menu** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+**RileyLink 통계** 버튼은 기본적으로 숨겨져 있습니다. Omnipod 펌프 화면에 이 버튼을 표시하려면 [Omnipod 설정](#OmnipodEros-omnipod-settings)의 **기타**에서 **Pod 관리 메뉴에 RileyLink 통계 버튼 표시**를 켜십시오.
 
-#### Manually Re-establish Pod Communication Device Bluetooth Communication
+#### Pod 통신 장치의 블루투스 연결 수동으로 다시 연결하기
 
-If your pod communication device was out of Bluetooth range of your phone for a while, **RileyLink Status** may report **RileyLink unreachable** on the Omnipod pump screen. **AAPS** normally reconnects by itself when the device is back in range. If it does not:
+Pod 통신 장치가 한동안 휴대폰의 블루투스 범위 밖에 있었다면, Omnipod 펌프 화면의 **RileyLink 상태**에 **RileyLink에 연결할 수 없음**이 표시될 수 있습니다. 장치가 다시 범위 안으로 들어오면 **AAPS**는 보통 스스로 다시 연결합니다. 다시 연결되지 않으면:
 
-1. Make sure the RileyLink is powered on, charged and close to your phone.
+1. RileyLink가 켜져 있고, 충전되어 있으며, 휴대폰 가까이 있는지 확인하십시오.
 
-2. On the Omnipod pump screen, press **Reset RileyLink**. A message confirms **RileyLink configuration reset**. See the [Reset RileyLink notes](#OmnipodEros-reset-rileylink-config-notes) below.
+2. Omnipod 펌프 화면에서 **RileyLink 초기화**를 누르십시오. **RileyLink 설정 초기화** 메시지가 나타납니다. 아래의 [RileyLink 초기화 참고 사항](#OmnipodEros-reset-rileylink-config-notes)을 참조하십시오.
 
-3. If the **Bluetooth connection** does not re-establish, try manually turning **off** and then back **on** the Bluetooth function on your phone.
+3. **블루투스 연결**이 다시 이루어지지 않으면, 휴대폰의 블루투스 기능을 직접 **껐다가** 다시 **켜** 보십시오.
 
-4. If it still does not reconnect, press **Pair RileyLink** and select your RileyLink again.
+4. 그래도 다시 연결되지 않으면 **RileyLink 페어링**을 누르고 RileyLink를 다시 선택하십시오.
 
-5. After a successful reconnection, **RileyLink Status** shows **Connected**. You can also check **Connection Status** on the **Settings** tab of the **RileyLink Stats** screen. Congratulations, you have now reconnected your configured pod communication device to AAPS!
+5. 다시 연결에 성공하면 **RileyLink 상태**에 **연결됨**이 표시됩니다. **RileyLink 통계** 화면의 **설정** 탭에서 **연결 상태**도 확인할 수 있습니다. 축하합니다. 설정한 Pod 통신 장치를 AAPS에 다시 연결했습니다!
 
 ![RileyLink_Bluetooth_Reset_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![RileyLink_Bluetooth_Reset_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
 
@@ -429,370 +429,370 @@ If your pod communication device was out of Bluetooth range of your phone for a 
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you reconnect with **Reset RileyLink** or **Pair RileyLink** on the Omnipod pump screen instead of the refresh button on the RileyLink Settings screen.
+위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 RileyLink 설정 화면의 새로고침 버튼 대신 Omnipod 펌프 화면의 **RileyLink 초기화** 또는 **RileyLink 페어링**으로 다시 연결합니다.
 ```
 
-#### Pod Communication Device and Active Pod Settings
+#### Pod 통신 장치와 활성 Pod 설정
 
-This screen shows information and status for both the currently paired pod communication device and the currently active Omnipod Eros pod. The information refreshes automatically.
+이 화면에는 현재 페어링된 Pod 통신 장치와 현재 활성 Omnipod Eros Pod의 정보와 상태가 표시됩니다. 정보는 자동으로 새로고침됩니다.
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **RileyLink Stats**. The **Settings** tab shows your currently paired **RileyLink** and the active pod (**Device**).
+1. Omnipod 펌프 화면(**관리** > **펌프**)을 열고 **RileyLink 통계**를 누르십시오. **설정** 탭에는 현재 페어링된 **RileyLink**와 활성 Pod(**장치**)가 표시됩니다.
 
    > ![RileyLink_Statistics_Settings_1](../images/omnipod/RileyLink_Statistics_Settings_1.png) ![RileyLink_Statistics_Settings_2](../images/omnipod/RileyLink_Statistics_Settings_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **RileyLink Stats** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   >    위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 **RileyLink 통계**는 **POD MGMT** 메뉴 대신 Omnipod 펌프 화면의 버튼입니다.
    > ```
 
    > ![RileyLink_Statistics_Settings_3](../images/omnipod/RileyLink_Statistics_Settings_3.png)
 
-##### RileyLink fields
+##### RileyLink 항목
 
-> - **Address:** MAC address of the paired pod communication device.
-> - **Name:** Bluetooth name of the paired pod communication device.
-> - **Battery Level:** The current battery level of the connected pod communication device. Only shown when **Show battery level reported by OrangeLink/EmaLink/DiaLink** is enabled.
-> - **Connection Status**: The current status of the Bluetooth connection between the pod communication device and the phone running AAPS.
-> - **Connection Error:** If there is an error with the pod communication device Bluetooth connection, details are displayed here.
-> - **Firmware Version:** Current firmware version installed on the actively connected pod communication device.
+> - **주소:** 페어링된 Pod 통신 장치의 MAC 주소입니다.
+> - **이름:** 페어링된 Pod 통신 장치의 블루투스 이름입니다.
+> - **배터리 잔량:** 연결된 Pod 통신 장치의 현재 배터리 잔량입니다. **OrangeLink/EmaLink/DiaLink에서 보고한 배터리 잔량 나타내기**가 켜져 있을 때만 표시됩니다.
+> - **연결 상태**: Pod 통신 장치와 AAPS가 실행되는 휴대폰 사이의 현재 블루투스 연결 상태입니다.
+> - **연결 오류:** Pod 통신 장치의 블루투스 연결에 오류가 있으면 여기에 자세한 내용이 표시됩니다.
+> - **펌웨어 버전:** 현재 연결된 Pod 통신 장치에 설치된 펌웨어 버전입니다.
 
-##### Device fields - With an Active Pod
+##### 장치 항목 - 활성 Pod가 있을 때
 
-> - **Device Type:** The type of device communicating with the pod communication device (Omnipod (Eros)).
-> - **Configured Device Model:** The model of the device configured to communicate with the pod communication device.
-> - **Connected Device Model:** The model of the device currently communicating with the pod communication device.
-> - **Pump Serial Number:** Serial number of the currently activated pod.
-> - **Pump Frequency:** Radio frequency used to communicate with the pod.
-> - **Last Used Frequency:** Last known radio frequency the pod used to communicate with the pod communication device.
-> - **Last Device Contact:** Date and time of the last contact the pod made with the pod communication device.
+> - **장치 타입:** Pod 통신 장치와 통신하는 장치의 종류입니다 (Omnipod (Eros)).
+> - **설정된 장치 모델:** Pod 통신 장치와 통신하도록 설정된 장치의 모델입니다.
+> - **연결된 장치 모델:** 현재 Pod 통신 장치와 통신하고 있는 장치의 모델입니다.
+> - **펌프 일련번호:** 현재 활성화된 Pod의 일련번호입니다.
+> - **펌프 주파수:** Pod와 통신하는 데 사용하는 무선 주파수입니다.
+> - **최근 사용된 주파수:** Pod가 Pod 통신 장치와 통신하는 데 마지막으로 사용한 것으로 알려진 무선 주파수입니다.
+> - **최근 장치 연결:** Pod가 Pod 통신 장치와 마지막으로 연결한 날짜와 시간입니다.
 
 (omnipod-eros-rileylink-and-active-pod-history)=
-#### RileyLink and Active Pod History
+#### RileyLink와 활성 Pod 이력
 
-This tab lists, newest first, each state or action of the RileyLink or the currently connected pod. The history is only available for the currently active pod. After a pod change, this history is erased and only events from the newly activated pod are recorded and shown.
+이 탭에는 RileyLink 또는 현재 연결된 Pod의 각 상태나 동작이 최신 항목부터 표시됩니다. 이력은 현재 활성 Pod에 대해서만 볼 수 있습니다. Pod를 교체하면 이 이력은 지워지고, 새로 활성화한 Pod의 이벤트만 기록되고 표시됩니다.
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**), press **RileyLink Stats** and then tap the **History** tab.
+1. Omnipod 펌프 화면(**관리** > **펌프**)을 열고 **RileyLink 통계**를 누른 다음 **이력** 탭을 누르십시오.
 
    > ![RileyLink_Statistics_History_1](../images/omnipod/RileyLink_Statistics_History_1.png) ![RileyLink_Statistics_History_2](../images/omnipod/RileyLink_Statistics_History_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **RileyLink Stats** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   >    위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 **RileyLink 통계**는 **POD MGMT** 메뉴 대신 Omnipod 펌프 화면의 버튼입니다.
    > ```
 
    > ![RileyLink_Statistics_History_3](../images/omnipod/RileyLink_Statistics_History_3.png)
 
-##### Fields
+##### 항목
 
-Each entry shows:
+각 항목에는 다음이 표시됩니다:
 
-> - **Device:** The device to which the action or state refers.
-> - **Time:** The time of the event.
-> - **State or Action:** The state of the device or the action it performed.
+> - **장치:** 동작이나 상태와 관련된 장치입니다.
+> - **시간:** 이벤트가 일어난 시간입니다.
+> - **상태 또는 동작:** 장치의 상태나 장치가 실행한 동작입니다.
 
 (OmnipodEros-omnipod-pod-tab)=
 
-## Omnipod pump screen
+## Omnipod 펌프 화면
 
-Below is an explanation of the status fields and buttons on the **Omnipod pump screen** (**Manage** > **Pump**, or **Configuration** > **Pump** > **Open plugin**).
+아래는 **Omnipod 펌프 화면**(**관리** > **펌프**, 또는 **구성** > **펌프** > **플러그인 열기**)의 상태 항목과 버튼에 대한 설명입니다.
 
-The gear icon at the top right opens the [Omnipod settings](#OmnipodEros-omnipod-settings).
+오른쪽 위의 톱니바퀴 아이콘을 누르면 [Omnipod 설정](#OmnipodEros-omnipod-settings)이 열립니다.
 
-*NOTE: If any status field shows (uncertain), press **Refresh** to refresh the pod status and clear it.*
+*참고: 상태 항목에 (불확실)이 표시되면 **새로고침**을 눌러 Pod 상태를 새로고침하고 그 표시를 지우십시오.*
 
-![Omnipod pump screen](../images/v4/Pumps/omnipod_pump_screen.png)
+![Omnipod 펌프 화면](../images/v4/Pumps/omnipod_pump_screen.png)
 
 ![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version, where this screen was the **Omnipod (POD)** tab. In **AAPS** 4 it is the Omnipod pump screen, and some field names and buttons differ.
+위의 스크린샷은 이 화면이 **Omnipod (POD)** 탭이었던 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 Omnipod 펌프 화면이며, 일부 항목 이름과 버튼이 다릅니다.
 ```
 
-### Fields
+### 항목
 
-- **RileyLink Status:** Displays the current connection status of the RileyLink. Errors are shown in red.
+- **RileyLink 상태:** RileyLink의 현재 연결 상태를 표시합니다. 오류는 빨간색으로 표시됩니다.
 
-- *Not Started* - no RileyLink is paired yet, or the connection has not started.
-- *RileyLink unreachable* - pod communication device is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
-- *RileyLink ready* - pod communication device is powered on and actively initializing the Bluetooth connection.
-- *Connected* - pod communication device is powered on, connected and actively able to communicate via Bluetooth.
+- *시작 안 됨* - 아직 페어링된 RileyLink가 없거나 연결이 시작되지 않았습니다.
+- *RileyLink에 연결할 수 없음* - Pod 통신 장치가 휴대폰의 블루투스 범위 밖에 있거나, 꺼져 있거나, 블루투스 통신을 막는 고장이 있습니다.
+- *RileyLink 준비* - Pod 통신 장치가 켜져 있고 블루투스 연결을 초기화하는 중입니다.
+- *연결됨* - Pod 통신 장치가 켜져 있고, 연결되어 있으며, 블루투스로 통신할 수 있는 상태입니다.
 
-- **Unique ID:** Displays the address of the active pod.
+- **고유 ID:** 활성 Pod의 주소를 표시합니다.
 
-- **LOT Number:** Displays the LOT number of the active pod.
+- **LOT 번호:** 활성 Pod의 LOT 번호를 표시합니다.
 
-- **Sequence Number:** Displays the serial number (TID) of the pod.
+- **일련번호:** Pod의 일련번호(TID)를 표시합니다.
 
-- **Firmware Version:** Displays the firmware version of the active pod.
+- **펌웨어 버전:** 활성 Pod의 펌웨어 버전을 표시합니다.
 
-- **Time on Pod:** Displays the current time on the active pod. It is highlighted when it differs from the phone time by more than 5 minutes.
+- **Pod 시간:** 활성 Pod의 현재 시간을 표시합니다. 휴대폰 시간과 5분 넘게 차이가 나면 강조 표시됩니다.
 
-- **Pod Expires:** Displays the date and time when the active pod will expire. The text turns yellow in the last 4 hours before this time. It never turns red, because the pod keeps delivering insulin after it.
+- **Pod 만료:** 활성 Pod가 만료되는 날짜와 시간을 표시합니다. 이 시간 전 마지막 4시간 동안 글자가 노란색으로 바뀝니다. 이 시간이 지나도 Pod는 인슐린을 계속 주입하므로 빨간색으로는 바뀌지 않습니다.
 
-- **Pod Hard End:** Displays the end of the pod's grace period (8 hours after **Pod Expires**, for a maximum pod life of 80 hours). The text turns yellow when the grace period starts (at **Pod Expires**) and red in the last 4 hours before the hard end. During the grace period it also shows the time left, for example *(17m remaining)*. The pod stops delivering insulin at the hard end and must be changed.
+- **Pod 최종 종료:** Pod 유예 기간이 끝나는 시간을 표시합니다 (**Pod 만료** 8시간 후, Pod 최대 사용 시간은 80시간). 유예 기간이 시작되면 (**Pod 만료** 시점) 글자가 노란색으로 바뀌고, 최종 종료 전 마지막 4시간 동안 빨간색으로 바뀝니다. 유예 기간 동안에는 남은 시간도 표시됩니다. 예: *(17분 남음)*. Pod는 최종 종료 시점에 인슐린 주입을 멈추므로 반드시 교체해야 합니다.
 
-- **Pod Status:** Displays the status of the active pod (for example **No Active Pod**, **Running** or **Suspended**).
+- **Pod 상태:** 활성 Pod의 상태를 표시합니다 (예: **활성화된 Pod 없음**, **실행 중** 또는 **중지됨**).
 
-- **Last Connection:** Displays the last time communication with the active pod was achieved. The text turns red when the [pump unreachable threshold](#OmnipodEros-troubleshooting) is exceeded.
+- **마지막 연결:** 활성 Pod와 마지막으로 통신한 시간을 표시합니다. [펌프 연결 불가 기준값](#OmnipodEros-troubleshooting)을 넘으면 글자가 빨간색으로 바뀝니다.
 
-- *Moments ago* - less than 20 seconds ago.
-- *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
-- *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
-- *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
+- *방금 전* - 20초 전보다 짧은 시간.
+- *1분 이내* - 20초보다 길고 60초보다 짧은 시간.
+- *1분 전* - 60초보다 길고 120초(2분)보다 짧은 시간
+- *XX분 전* - 2분보다 긴 시간, XX 값으로 표시됨
 
-- **Last Bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
+- **마지막 볼러스:** 활성 Pod에 마지막으로 보낸 볼러스의 용량과, 괄호 안에 그 볼러스를 보낸 지 얼마나 지났는지를 표시합니다.
 
-- **Base Basal Rate:** Displays the basal rate programmed for the current time from the basal rate profile.
+- **기본 기저 주입량:** 기저 주입량 프로파일에서 현재 시간에 프로그래밍된 기저 주입량을 표시합니다.
 
-- **Temp Basal Rate:** Only shown while a Temporary Basal Rate is running. Displays it in the following format:
+- **임시 기저 주입량:** 임시 기저 주입량이 실행 중일 때만 표시됩니다. 다음 형식으로 표시합니다:
 
-- Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
-- *Example:* 0.00U/h @18:25 ( 90/120 minutes)
+- TBR이 실행된 시간의 시간당 U @ 시각 (실행된 분 / TBR이 실행될 전체 분)
+- *예:* 0.00U/h @18:25 ( 90/120분)
 
-- **Reservoir:** Displays **Over 50 U left** when more than 50 units are left in the reservoir. Below this value the approximate number of units is displayed. The text turns red below the low reservoir threshold set in the [Alerts settings](#OmnipodEros-omnipod-settings).
+- **레저버:** 레저버에 50 U보다 많이 남아 있으면 **50 U 이상 남음**을 표시합니다. 이 값보다 적으면 대략적인 단위 수가 표시됩니다. [경고 설정](#OmnipodEros-omnipod-settings)에서 정한 레저버 부족 기준값보다 적어지면 글자가 빨간색으로 바뀝니다.
 
-- **Total Delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
+- **총 주입량:** 레저버에서 주입된 인슐린의 총 단위 수를 표시합니다. *Pod를 프라임하고 채우는 과정은 정확하지 않으므로 이 값은 근사값입니다.*
 
-- **Active Pod Alerts:** Reserved for currently running alerts on the active pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
+- **활성 Pod 경고:** 활성 Pod에서 현재 울리고 있는 경고를 표시합니다. 보통 Pod 사용 시간이 72시간을 넘고 Pod 자체의 경고 신호음이 울리고 있을 때 사용합니다.
 
-- **Errors:** Displays the last error encountered (shown in red). Review the [Pod history](#OmnipodEros-view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **오류:** 마지막으로 발생한 오류를 표시합니다 (빨간색으로 표시됨). 과거 오류와 더 자세한 정보는 [Pod 이력](#OmnipodEros-view-pod-history), [RileyLink 이력](#omnipod-eros-rileylink-and-active-pod-history), 로그 파일에서 확인하십시오.
 
 ### Buttons
 
-The buttons at the bottom of the pump screen change depending on the situation. Buttons that cannot be used right now are greyed out, for example while the RileyLink is not connected.
+펌프 화면 아래쪽의 버튼은 상황에 따라 바뀝니다. 지금 사용할 수 없는 버튼은 회색으로 표시됩니다 (예: RileyLink가 연결되어 있지 않을 때).
 
-**Pod status buttons** (shown when a pod is active):
+**Pod 상태 버튼** (Pod가 활성화되어 있을 때 표시됨):
 
-- **Refresh:** Sends a refresh command to the active pod to update its status. Use it to refresh the pod status and clear status fields that contain the text (uncertain). See the [Troubleshooting section](#OmnipodEros-troubleshooting) below for additional information.
+- **새로고침:** 활성 Pod에 새로고침 명령을 보내 상태를 업데이트합니다. Pod 상태를 새로고침하고 (불확실)이 표시된 상태 항목을 지울 때 사용하십시오. 자세한 내용은 아래 [문제 해결 부분](#OmnipodEros-troubleshooting)을 참조하십시오.
 
   ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Refresh** on the Omnipod pump screen.
+  위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 Omnipod 펌프 화면에 있는 **새로고침**이라는 텍스트 버튼입니다.
   ```
 
-- **Silence Alerts:** Silences the pod expiration and low reservoir beeps and notifications. Only shown when the pod has an active alert and **Automatically silence Pod alerts** is disabled. After the alerts are silenced, the button disappears.
+- **경고 음소거:** Pod 만료 및 레저버 부족 신호음과 알림을 음소거합니다. Pod에 활성 경고가 있고 **자동으로 Pod 경고 음소거**가 꺼져 있을 때만 표시됩니다. 경고를 음소거하면 버튼이 사라집니다.
 
   ![ack_alerts](../images/omnipod/ICONS/omnipod_overview_ack_alerts.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this button is called **Silence Alerts**.
+  위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 이 버튼은 **경고 음소거**라고 불립니다.
   ```
 
-- **Set time:** Updates the time on the pod with the current time on your phone. Only shown when the time on the pod differs from the phone time by more than 5 minutes.
+- **시간 설정:** Pod의 시간을 휴대폰의 현재 시간으로 업데이트합니다. Pod 시간이 휴대폰 시간과 5분 넘게 차이가 날 때만 표시됩니다.
 
   ![set_time](../images/omnipod/ICONS/omnipod_overview_set_time.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Set time** on the Omnipod pump screen.
+  위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 Omnipod 펌프 화면에 있는 **시간 설정**이라는 텍스트 버튼입니다.
   ```
 
-- **Suspend:** Suspends insulin delivery on the active pod. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
+- **중지:** 활성 Pod의 인슐린 주입을 중지합니다. 설정에서 켰을 때만 표시됩니다 (**펌프 화면에 주입 중지 버튼 표시**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Suspend** on the Omnipod pump screen.
+  위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 Omnipod 펌프 화면에 있는 **중지**라는 텍스트 버튼입니다.
   ```
 
-- **Resume Delivery:** Resumes insulin delivery on the currently suspended, active pod. Only shown while the pod is suspended.
+- **주입 재개:** 현재 중지된 활성 Pod의 인슐린 주입을 재개합니다. Pod가 중지되어 있을 때만 표시됩니다.
 
   ![resume](../images/omnipod/ICONS/omnipod_overview_resume.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Resume Delivery** on the Omnipod pump screen.
+  위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 Omnipod 펌프 화면에 있는 **주입 재개**라는 텍스트 버튼입니다.
   ```
 
-**Pod and RileyLink management buttons:**
+**Pod 및 RileyLink 관리 버튼:**
 
 ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 there is no Pod Management menu: these actions are buttons directly on the Omnipod pump screen.
+위 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에는 Pod 관리 메뉴가 없습니다: 이 작업들은 Omnipod 펌프 화면에 바로 있는 버튼입니다.
 ```
 
-- **Activate Pod:** Primes and activates a new pod. Shown when no pod is active. It is enabled only when the RileyLink is connected.
+- **Pod 활성화:** 새 Pod를 프라임하고 활성화합니다. 활성 Pod가 없을 때 표시됩니다. RileyLink가 연결되어 있을 때만 사용할 수 있습니다.
 
   ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 **Pod 활성화**는 Pod 관리 메뉴 대신 Omnipod 펌프 화면의 버튼입니다.
   ```
 
-- **Deactivate Pod:** Deactivates the currently active pod. Shown as soon as a pod is paired, also when an activation stopped part-way (for example because the pod failed during activation). It is enabled only when the RileyLink is connected. **AAPS** asks you to confirm before it deactivates the pod.
+- **Pod 비활성화:** 현재 활성 Pod를 비활성화합니다. Pod가 페어링되면 바로 표시되며, 활성화가 중간에 멈춘 경우(예: 활성화 중 Pod가 고장 난 경우)에도 표시됩니다. RileyLink가 연결되어 있을 때만 사용할 수 있습니다. **AAPS**는 Pod를 비활성화하기 전에 확인을 요청합니다.
 
-- Use this command to deactivate a screaming pod (error 49).
-- If deactivation fails, the deactivation wizard offers a **Discard Pod** option.
+- 계속 울리는 Pod(“스크리머”, 오류 49)를 비활성화할 때 이 명령을 사용하십시오.
+- 비활성화가 실패하면 비활성화 마법사에서 **Pod 폐기** 옵션을 제공합니다.
 
   ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Deactivate Pod** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 **Pod 비활성화**는 Pod 관리 메뉴 대신 Omnipod 펌프 화면의 버튼입니다.
   ```
 
-- **Play Test Beep:** Plays a single test beep on the pod when pressed. Shown when a pod is paired.
+- **테스트 신호음 작동:** 누르면 Pod에서 테스트 신호음을 한 번 냅니다. Pod가 페어링되어 있을 때 표시됩니다.
 
   ![play_test_beep](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Play Test Beep** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 **테스트 신호음 작동**은 Pod 관리 메뉴 대신 Omnipod 펌프 화면의 버튼입니다.
   ```
 
-- **Pod History:** Displays the active pod activity history. See [View Pod History](#OmnipodEros-view-pod-history).
+- **Pod 이력:** 활성 Pod의 활동 이력을 표시합니다. [Pod 이력 보기](#OmnipodEros-view-pod-history)를 참조하십시오.
 
   ![pod_history](../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 **Pod 이력**은 Pod 관리 메뉴 대신 Omnipod 펌프 화면의 버튼입니다.
   ```
 
-- **Pair RileyLink:** Scans for your pod communication device and pairs it. See [RileyLink Setup](#OmnipodEros-rileylink-setup).
+- **RileyLink 페어링:** Pod 통신 장치를 검색하고 페어링합니다. [RileyLink 설정](#OmnipodEros-rileylink-setup)을 참조하십시오.
 
-- **RileyLink Stats:** Opens the RileyLink Stats screen with two tabs. Only shown if enabled in the settings (**Show RileyLink Stats button in Pod Management menu**).
+- **RileyLink 통계:** 두 개의 탭이 있는 RileyLink 통계 화면을 엽니다. 설정에서 켰을 때만 표시됩니다 (**Pod 관리 메뉴에 RileyLink 통계 버튼 표시**).
 
-- **Settings** - displays RileyLink and active pod settings information
-- **History** - displays RileyLink and Pod communication history
+- **설정** - RileyLink와 활성 Pod의 설정 정보를 표시합니다
+- **이력** - RileyLink와 Pod의 통신 이력을 표시합니다
 
   ![rileylink_stats](../images/omnipod/ICONS/omnipod_overview_pod_management_rileylink_stats.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **RileyLink Stats** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 **RileyLink 통계**는 Pod 관리 메뉴 대신 Omnipod 펌프 화면의 버튼입니다.
   ```
 
-- **Reset RileyLink:** Resets the configuration of the currently connected pod communication device. When communication is started, specific data is sent to and set in the RileyLink:
+- **RileyLink 초기화:** 현재 연결된 Pod 통신 장치의 설정을 초기화합니다. 통신이 시작되면 특정 데이터가 RileyLink로 보내지고 설정됩니다:
 
-- Memory Registers are set
-- Communication Protocols are set
-- Tuned Radio Frequency is set
+- 메모리 레지스터가 설정됩니다
+- 통신 프로토콜이 설정됩니다
+- 튜닝된 무선 주파수가 설정됩니다
   > 
-  > See [additional notes](#OmnipodEros-reset-rileylink-config-notes) below.
+  > 아래의 [추가 참고 사항](#OmnipodEros-reset-rileylink-config-notes)을 참조하십시오.
 
   ![reset_rileylink_config](../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this button is called **Reset RileyLink** and is on the Omnipod pump screen.
+  위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 이 버튼은 **RileyLink 초기화**라고 불리며 Omnipod 펌프 화면에 있습니다.
   ```
 
-- **Discard Pod:** Discards the pod state of an unresponsive pod, after a confirmation. Only shown when a pod has been started but not fully paired, as proper deactivation is no longer possible:
+- **Pod 폐기:** 확인을 거친 후, 반응하지 않는 Pod의 Pod 상태를 폐기합니다. Pod가 시작되었지만 완전히 페어링되지 않아 정상적인 비활성화가 더 이상 불가능할 때만 표시됩니다:
 
-- A **pod is not fully paired** and thus ignores deactivate commands.
-- A **pod is stuck** during the pairing process between steps.
-- A **pod simply does not pair at all.**
+- **Pod가 완전히 페어링되지 않아** 비활성화 명령을 무시할 때.
+- 페어링 과정 중 단계 사이에서 **Pod가 멈췄을 때**.
+- **Pod가 아예 페어링되지 않을 때.**
   > 
-  > After you discard a pod, **AAPS** can no longer communicate with it. Remove the pod from your body.
+  > Pod를 폐기하면 **AAPS**는 더 이상 그 Pod와 통신할 수 없습니다. Pod를 몸에서 제거하십시오.
 
   ![discard_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Discard Pod** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서 **Pod 폐기**는 Pod 관리 메뉴 대신 Omnipod 펌프 화면의 버튼입니다.
   ```
 
 (OmnipodEros-reset-rileylink-config-notes)=
 
-#### *Reset RileyLink Notes*
+#### *RileyLink 초기화 참고 사항*
 
-- The primary usage of this feature is when the currently active pod communication device is not responding and communication is in a stuck state.
-- If the pod communication device is turned off and then back on, press **Reset RileyLink** so that these communication parameters are set again in the pod communication device.
-- If this is NOT done then AAPS will need to be restarted after the pod communication device is power cycled.
-- This button **DOES NOT** need to be pressed when switching between different pod communication devices.
+- 이 기능은 주로 현재 활성 Pod 통신 장치가 반응하지 않고 통신이 멈춘 상태일 때 사용합니다.
+- Pod 통신 장치를 껐다가 다시 켜면, 이 통신 매개변수가 Pod 통신 장치에 다시 설정되도록 **RileyLink 초기화**를 누르십시오.
+- 이렇게 하지 않으면 Pod 통신 장치를 껐다 켠 후 AAPS를 다시 시작해야 합니다.
+- 서로 다른 Pod 통신 장치 사이에서 바꿀 때에는 이 버튼을 누를 필요가 **없습니다**.
 
 (OmnipodEros-omnipod-settings)=
 
-## Omnipod Settings
+## Omnipod 설정
 
-To open the Omnipod driver settings, either:
+Omnipod 드라이버 설정을 열려면 다음 중 하나를 하십시오:
 
-- press the gear icon at the top right of the Omnipod pump screen (**Manage** > **Pump**), or
-- open the top-left **menu** (☰) > **Configuration** > **Pump** and press **Settings** on the **Omnipod Eros** card.
+- Omnipod 펌프 화면(**관리** > **펌프**) 오른쪽 위의 톱니바퀴 아이콘을 누르거나,
+- 왼쪽 위의 **메뉴** (☰) > **구성** > **펌프**를 열고 **Omnipod Eros** 카드의 **설정**을 누르십시오.
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 you open the settings with **Settings** on the **Omnipod Eros** card or the gear icon on the Omnipod pump screen, instead of the settings gear in **Configuration** or the 3-dot menu.
+위 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 **구성**의 설정 톱니바퀴나 점 3개 메뉴 대신 **Omnipod Eros** 카드의 **설정** 또는 Omnipod 펌프 화면의 톱니바퀴 아이콘으로 설정을 엽니다.
 ```
 
-The settings are grouped as listed below. Tap a group to expand it. Most entries are switches you can enable or disable:
+설정은 아래와 같이 그룹으로 나뉘어 있습니다. 그룹을 누르면 펼쳐집니다. 대부분의 항목은 켜거나 끌 수 있는 스위치입니다:
 
-![Omnipod driver settings](../images/v4/Pumps/omnipod_settings.png)
+![Omnipod 드라이버 설정](../images/v4/Pumps/omnipod_settings.png)
 
-*NOTE: An asterisk (\*) denotes the default for a setting is enabled.*
+*참고: 별표(\*)는 기본적으로 켜져 있는 설정을 나타냅니다.*
 
 ### RileyLink
 
-Settings for the pod communication device. You pair the device itself with the **Pair RileyLink** button on the pump screen (see [RileyLink Setup](#OmnipodEros-rileylink-setup)).
+Pod 통신 장치에 대한 설정입니다. 장치 자체는 펌프 화면의 **RileyLink 페어링** 버튼으로 페어링합니다 ([RileyLink 설정](#OmnipodEros-rileylink-setup) 참조).
 
-- **Use Scanning:** Scans before connecting to the OrangeLink. This can improve connections. It can also be used with other RileyLink clones if needed.
+- **스캔 사용하기:** OrangeLink에 연결하기 전에 스캔합니다. 이렇게 하면 연결이 좋아질 수 있습니다. 필요하면 다른 RileyLink 클론에서도 사용할 수 있습니다.
 
-- **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/DiaLink. It is **strongly recommended** that all OrangeLink/EmaLink/DiaLink users enable this setting.
+- **OrangeLink/EmaLink/DiaLink에서 보고한 배터리 잔량 나타내기:** OrangeLink/EmaLink/DiaLink의 실제 배터리 잔량을 보고합니다. 모든 OrangeLink/EmaLink/DiaLink 사용자는 이 설정을 켜는 것을 **강력히 권장**합니다.
 
-- DOES NOT work with the original RileyLink.
-- May not work with RileyLink alternatives.
-- Enabled - Reports the current battery level for supported pod communication devices.
-- Disabled - Reports a value of n/a.
+- 오리지널 RileyLink에서는 작동하지 않습니다.
+- 다른 RileyLink 대체 기기에서는 작동하지 않을 수 있습니다.
+- 켬 - 지원되는 Pod 통신 장치의 현재 배터리 잔량을 보고합니다.
+- 끔 - n/a 값을 보고합니다.
 
-- **Enable battery change logging in Actions:** Only available when the battery reporting setting above is enabled. Some pod communication devices can use regular batteries that you can change. With this setting enabled, you can record a **Pump Battery Change** [careportal entry](#aaps-screens-careportal) to note the change and reset the battery age.
+- **Actions 탭에서 배터리 교체 기록 활성화:** 위의 배터리 보고 설정이 켜져 있을 때만 사용할 수 있습니다. 일부 Pod 통신 장치는 교체할 수 있는 일반 배터리를 사용합니다. 이 설정을 켜면 **펌프 배터리 교체** [케어포털 항목](#aaps-screens-careportal)을 기록하여 교체를 메모하고 배터리 사용 기간을 초기화할 수 있습니다.
 
-### Confirmation Beeps
+### 확인 신호음
 
-Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
+볼러스, 기저, SMB, TBR의 주입과 변경에 대해 Pod에서 확인 신호음을 냅니다.
 
-- **\*Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
-- **Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
-- **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
-- **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
+- **\*볼러스 신호음 활성화됨:** 볼러스가 주입될 때 확인 신호음을 켜거나 끕니다.
+- **기저 신호음 활성화됨:** 새 기저 주입량이 설정되거나, 활성 기저 주입량이 취소되거나, 현재 기저 주입량이 변경될 때 확인 신호음을 켜거나 끕니다.
+- **\*SMB 신호음 활성화됨:** SMB가 주입될 때 확인 신호음을 켜거나 끕니다.
+- **TBR 신호음 활성화됨:** TBR이 설정되거나 취소될 때 확인 신호음을 켜거나 끕니다.
 
 ### Alerts
 
-Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
+정해진 기준 단위에 따라 Pod 만료, 종료, 레저버 부족에 대한 AAPS 경고와 Nightscout 공지를 제공합니다.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT silence the alert UNLESS **Automatically silence Pod alerts** is enabled. To silence the alert MANUALLY, open the Omnipod pump screen and press **Silence Alerts**.*
+*경고가 발생한 후 Pod와 처음 통신하면 그 경고에 대한 AAPS 알림이 반드시 표시됩니다. **자동으로 Pod 경고 음소거**가 켜져 있지 않으면, 알림을 닫아도 경고는 음소거되지 않습니다. 경고를 직접 음소거하려면 Omnipod 펌프 화면을 열고 **경고 음소거**를 누르십시오.*
 
-- **\*Expiration reminder enabled:** When enabled, the pod beeps when the time set below is reached.
-- **Alert at hours before shutdown (80 Hours):** The number of hours before the pod shuts down (80 hours after activation) at which the expiration reminder is triggered (1 to 8 hours, default 8).
-- **\*Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
-- **Number of units:** The number of units at which to trigger the pod low reservoir alert (5 to 50, default 20).
-- **Automatically silence Pod alerts:** When enabled, a notification is still issued, but the alert is silenced automatically at the next communication with the pod after the alert started.
+- **\*만료일 알림 활성화됨:** 켜면 아래에서 정한 시간이 되었을 때 Pod가 신호음을 냅니다.
+- **종료 전 경고 시간 (80시간):** Pod가 종료(활성화 후 80시간)되기 몇 시간 전에 만료 알림을 울릴지 정하는 시간입니다 (1~8시간, 기본값 8).
+- **\*레저버 부족 경고 활성화됨:** Pod의 남은 단위가 단위 수 항목에 정한 레저버 부족 한도에 도달하면 경고를 켜거나 끕니다.
+- **단위 수:** Pod 레저버 부족 경고를 울릴 단위 수입니다 (5~50, 기본값 20).
+- **자동으로 Pod 경고 음소거:** 켜면 알림은 계속 표시되지만, 경고가 시작된 후 Pod와 다음에 통신할 때 경고가 자동으로 음소거됩니다.
 
 ### Notifications
 
-Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful.
+TBR, SMB 또는 볼러스 이벤트가 성공했는지 불확실할 때 AAPS 알림과 휴대폰 경고음을 제공합니다.
 
-*NOTE: These are notifications only, no audible beep alerts are made.*
+*참고: 이것은 알림일 뿐이며, Pod 신호음은 울리지 않습니다.*
 
-- **\*Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a TBR was successfully set.
-- **\*Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
-- **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
+- **\*불확실한 TBR 알림 소리 활성화:** TBR이 성공적으로 설정되었는지 AAPS가 확실하지 않을 때 경고음과 화면 알림을 내도록 이 설정을 켜거나 끕니다.
+- **\*불확실한 SMB 알림 소리 켜짐:** SMB가 성공적으로 주입되었는지 AAPS가 확실하지 않을 때 경고음과 화면 알림을 내도록 이 설정을 켜거나 끕니다.
+- **\*불확실한 볼러스 알림 소리 활성화:** 볼러스가 성공적으로 주입되었는지 AAPS가 확실하지 않을 때 경고음과 화면 알림을 내도록 이 설정을 켜거나 끕니다.
 
 ### 기타
 
-Provides advanced settings to assist debugging.
+디버깅을 돕는 고급 설정을 제공합니다.
 
-- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
-- **Show Pulse Log button in Pod Management menu:** This setting is still listed, but the current version of the pump screen has no **Pulse Log** button.
+- **펌프 화면에 주입 중지 버튼 표시:** Omnipod 펌프 화면의 **주입 중지** 버튼을 숨기거나 표시합니다.
+- **Pod 관리 메뉴에 Pulse 로그 버튼 표시:** 이 설정은 아직 목록에 있지만, 현재 버전의 펌프 화면에는 **Pulse 로그** 버튼이 없습니다.
 
-- **Show RileyLink Stats button in Pod Management menu:** Hide or display the **RileyLink Stats** button on the Omnipod pump screen.
-- **\*DST/Time zone detection enabled:** Allows time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+- **Pod 관리 메뉴에 RileyLink 통계 버튼 표시:** Omnipod 펌프 화면의 **RileyLink 통계** 버튼을 숨기거나 표시합니다.
+- **\*섬머타임제/시간대 감지 활성화됨:** 섬머타임(DST)을 시행하는 지역에서 휴대폰을 사용할 때 시간대 변경을 자동으로 감지할 수 있게 합니다.
 
-### Switching or Removing an Active Pod Communication Device (RileyLink)
+### 활성 Pod 통신 장치(RileyLink) 바꾸기 또는 제거하기
 
-With many alternative models to the original RileyLink available (such as OrangeLink or EmaLink), or the need to have multiple or backup versions of the same pod communication device, you may need to switch to another device.
+오리지널 RileyLink를 대체하는 여러 모델(OrangeLink, EmaLink 등)이 있고, 같은 Pod 통신 장치를 여러 개 또는 예비로 가지고 있어야 할 수도 있으므로, 다른 장치로 바꿔야 할 때가 있습니다.
 
-To switch, open the Omnipod pump screen (**Manage** > **Pump**), press **Pair RileyLink** and select the new device, as described in [RileyLink Setup](#OmnipodEros-rileylink-setup). The new device replaces the previously paired one.
+바꾸려면 [RileyLink 설정](#OmnipodEros-rileylink-setup)에 설명된 대로 Omnipod 펌프 화면(**관리** > **펌프**)을 열고 **RileyLink 페어링**을 누른 다음 새 장치를 선택하십시오. 새 장치가 이전에 페어링한 장치를 대체합니다.
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
@@ -804,10 +804,10 @@ To switch, open the Omnipod pump screen (**Manage** > **Pump**), press **Pair Ri
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you add a device with **Pair RileyLink** on the Omnipod pump screen instead of **RileyLink Configuration** in the Omnipod settings, and scanning starts automatically.
+위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 Omnipod 설정의 **RileyLink Configuration** 대신 Omnipod 펌프 화면의 **RileyLink 페어링**으로 장치를 추가하며, 검색이 자동으로 시작됩니다.
 ```
 
-There is no separate button to remove a paired device. If you stop using a RileyLink, simply pair the new one when you need it.
+페어링된 장치를 제거하는 별도의 버튼은 없습니다. RileyLink를 더 이상 사용하지 않으면, 필요할 때 새 RileyLink를 페어링하면 됩니다.
 
 ![RileyLink_Setup_Remove_1](../images/omnipod/RileyLink_Setup_Remove_1.png)
 
@@ -819,126 +819,126 @@ There is no separate button to remove a paired device. If you stop using a Riley
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 there is no **Remove** button: pairing a new RileyLink replaces the previous one.
+위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에는 **삭제** 버튼이 없습니다: 새 RileyLink를 페어링하면 이전 RileyLink를 대체합니다.
 ```
 
-## Status row and careportal
+## 상태 표시줄과 케어포털
 
-There are a few items that are specific to how the Omnipod pod differs from tube based pumps, especially after applying a new pod.
+Omnipod Pod가 튜브 펌프와 다른 점 때문에, 특히 새 Pod를 붙인 후에 해당하는 몇 가지 항목이 있습니다.
 
-The **insulin** and **cannula** ages in the [status row](#screens-sensor-level-battery) of the main screen are **reset** to 0 days and 0 hours **after each pod change**. This is done because of how the Omnipod pump is built and operates. The **pump battery** and **insulin reservoir** are self contained inside of each pod. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours).
+메인 화면 [상태 표시줄](#screens-sensor-level-battery)의 **인슐린**과 **캐뉼라** 사용 기간은 **Pod를 교체할 때마다** 0일 0시간으로 **초기화**됩니다. 이는 Omnipod 펌프의 구조와 작동 방식 때문입니다. **펌프 배터리**와 **인슐린 레저버**는 각 Pod 안에 들어 있습니다. Pod는 Pod를 붙인 위치의 피부에 캐뉼라를 직접 삽입하므로, Omnipod 펌프에는 일반적인 튜브를 사용하지 않습니다. *따라서 Pod를 교체하면 이 값들의 사용 기간은 자동으로 0으로 초기화됩니다.* Pod 안의 배터리는 항상 Pod 사용 기간(최대 80시간)보다 오래가므로 **펌프 배터리 사용 기간**은 보고되지 않습니다.
 
-![Expanded status panel of a patch pump: cannula and insulin ages at 0h after a pod change, no pump battery row](../images/omnipod/Actions_Tab.png)
+![패치 펌프의 펼친 상태 패널: Pod 교체 후 캐뉼라와 인슐린 사용 기간이 0h로 표시되고, 펌프 배터리 행은 없습니다](../images/omnipod/Actions_Tab.png)
 
 ### Levels
 
-**Insulin Level**
+**인슐린 잔량**
 
-Reporting of the amount of insulin in the Omnipod Eros Pod is not exact. This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod at least 80 units have been filled. A Pod can hold a maximum of 200 units. Priming can also introduce variance as it is not an exact process. With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remaining in the reservoir.
+Omnipod Eros Pod의 인슐린 양 보고는 정확하지 않습니다. Pod에 인슐린이 정확히 얼마나 들어갔는지는 알 수 없고, Pod를 채우는 동안 신호음이 2번 울리면 최소 80 U가 채워졌다는 것만 알 수 있기 때문입니다. Pod에는 최대 200 U를 넣을 수 있습니다. 프라임도 정확한 과정이 아니므로 오차가 생길 수 있습니다. 이 두 가지 요인 때문에 Omnipod 드라이버는 레저버에 남은 인슐린의 가장 좋은 근사값을 보여 주도록 만들어졌습니다.
 
-> - **Above 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
-> - **Below 50 Units** - Reports an approximate calculated value of insulin remaining in the reservoir.
-> - **SMS** - Returns value or 50+U for SMS responses
-> - **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
+> - **50 U 초과** - 레저버에 현재 50 U보다 많이 있으면 50+U 값을 보고합니다.
+> - **50 U 미만** - 레저버에 남은 인슐린의 계산된 근사값을 보고합니다.
+> - **SMS** - SMS 응답으로 값 또는 50+U를 돌려줍니다
+> - **Nightscout** - 50 U를 넘으면 Nightscout에 50 값을 업로드합니다 (버전 14.07 이하).  새 버전에서는 50 U를 넘으면 50+ 값을 보고합니다.
 
 **Battery Level**
 
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communication device is disconnected a value of 0% will be reported.
+배터리 잔량 보고는 OrangeLink, EmaLink, DiaLink 같은 Pod 통신 장치의 현재 배터리 잔량을 돌려주도록 켤 수 있는 설정입니다.  RileyLink 하드웨어는 배터리 잔량을 보고할 수 없습니다.  배터리 잔량은 Pod와 통신할 때마다 보고되므로, 충전 중에 잔량이 일정하게 올라가지 않을 수 있습니다.  수동으로 새로고침하면 현재 배터리 잔량이 업데이트됩니다.  지원되는 Pod 통신 장치의 연결이 끊기면 0% 값이 보고됩니다.
 
-> - **RileyLink hardware is NOT capable of reporting battery level**
-> - **"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values**
-> - **Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices**
-> - **Battery Level reporting MAY work for other devices (excluding RileyLink)**
-> - **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
-> - **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
+> - **RileyLink 하드웨어는 배터리 잔량을 보고할 수 없습니다**
+> - **배터리 잔량 값을 보고하려면 Omnipod 설정에서 "OrangeLink/EmaLink/DiaLink에서 보고한 배터리 잔량 나타내기" 설정을 반드시 켜야 합니다**
+> - **배터리 잔량 보고는 OrangeLink, EmaLink, DiaLink 장치에서만 작동합니다**
+> - **배터리 잔량 보고는 다른 장치에서도 작동할 수 있습니다 (RileyLink 제외)**
+> - **SMS** - 실제 잔량이 있으면 현재 배터리 잔량을 응답으로 돌려줍니다. n/a 값은 돌려주지 않습니다
+> - **Nightscout** - 실제 잔량이 있으면 배터리 잔량이 보고됩니다. n/a 값은 보고되지 않습니다
 
 (OmnipodEros-troubleshooting)=
 
 ## Troubleshooting
 
-### Pod Failures
+### Pod 고장
 
-Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found [here](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+Pod는 Pod 자체의 하드웨어 문제를 포함한 여러 가지 이유로 가끔 고장 납니다. AAPS는 승인된 사용 방법이 아니므로, 이런 고장을 Insulet에 신고하지 않는 것이 좋습니다. 원인을 찾는 데 도움이 되는 결함 코드 목록은 [여기](https://github.com/openaps/openomni/wiki/Fault-event-codes)에서 볼 수 있습니다.
 
-### Preventing error 49 pod failures
+### 오류 49 Pod 고장 예방
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend that you set Nightscout synchronization to *upload only*: keep all the "Receive ... from NS" options disabled in the synchronization settings of the Nightscout client (see [Nightscout](../SettingUpAaps/Nightscout.md)) to prevent possible failures.
+이 고장은 명령에 맞지 않는 Pod 상태나 인슐린 주입 명령 중의 오류와 관련이 있습니다. Nightscout 동기화는 *업로드만* 하도록 설정할 것을 권장합니다: 생길 수 있는 오류를 막기 위해 Nightscout 클라이언트의 동기화 설정에서 "NS에서 ... 받기" 옵션을 모두 끄십시오 ([Nightscout](../SettingUpAaps/Nightscout.md) 참조).
 
-### Pump Unreachable Alerts
+### 펌프에 연결할 수 없음 경고
 
-We recommend setting pump unreachable alerts to **120 minutes**. Press the **Settings** (gear) icon at the top right of the main screen, select **Local alerts** > **Pump unreachable threshold** and set it to **120**.
+펌프 연결 불가 경고는 **120분**으로 설정할 것을 권장합니다. 메인 화면 오른쪽 위의 **설정**(톱니바퀴) 아이콘을 누르고 **로컬 알림** > **펌프 연결 불가 기준값**을 선택하여 **120**으로 설정하십시오.
 
 (OmnipodEros-import-settings-from-previous-aaps)=
-### Import Settings from previous AAPS
+### 이전 AAPS에서 설정 가져오기
 
 ```{admonition} Importing settings can end your active Pod
 :class: warning
-On the phone that is already running the Pod, leave **Also replace pump settings** unticked: the Pod session is kept and only the other settings are imported. Tick it only with a file exported during the Pod you are wearing now. See [Tubeless pumps](#ExportImportSettings-tubeless-pumps).
+이미 Pod를 사용 중인 휴대폰에서는 **펌프 설정도 교체**를 선택하지 마십시오: Pod 세션은 유지되고 다른 설정만 가져옵니다. 지금 사용 중인 Pod를 쓰는 동안 내보낸 파일일 때만 체크하십시오. [튜브 없는 펌프](#ExportImportSettings-tubeless-pumps)를 참조하십시오.
 ```
 
-The safest way to reinstall **AAPS** is between two Pods:
+**AAPS**를 다시 설치하는 가장 안전한 방법은 두 Pod 사이에 하는 것입니다:
 
-1. Deactivate your pod session. Verify that you do not have an active pod session.
-2. Export your settings and store a copy in a safe place.
-3. Uninstall the previous version of AAPS and restart your phone.
-4. Install the new version of AAPS and verify that you do not have an active pod session.
-5. Import your settings and activate your new pod.
+1. Pod 세션을 비활성화하십시오. 활성 Pod 세션이 없는지 확인하십시오.
+2. 설정을 내보내고 사본을 안전한 곳에 보관하십시오.
+3. 이전 버전의 AAPS를 삭제하고 휴대폰을 다시 시작하십시오.
+4. 새 버전의 AAPS를 설치하고 활성 Pod 세션이 없는지 확인하십시오.
+5. 설정을 가져오고 새 Pod를 활성화하십시오.
 
-### Omnipod driver alerts
+### Omnipod 드라이버 경고
 
-Please note that the Omnipod driver presents a variety of unique alerts on the **main screen**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
+Omnipod 드라이버는 **메인 화면**에 여러 가지 고유한 경고를 표시합니다. 대부분은 정보성이며 닫을 수 있지만, 일부는 경고의 원인을 해결하기 위해 사용자가 해야 할 조치를 알려 줍니다. 자주 볼 수 있는 주요 경고는 아래와 같습니다:
 
 #### No active Pod
 
-No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
+활성 Pod 세션이 감지되지 않았습니다. **스누즈**를 누르면 이 경고를 잠시 닫을 수 있지만, 새 Pod가 활성화될 때까지 계속 다시 울립니다. 새 Pod가 활성화되면 이 경고는 자동으로 음소거됩니다.
 
 #### Pod suspended
 
-Informational alert that Pod has been suspended.
+Pod가 중지되었음을 알려 주는 정보성 경고입니다.
 
-#### Setting basal profile failed. Delivery might be suspended! Please manually refresh the Pod status on the pump screen and resume delivery if needed.
+#### 기저 프로파일 설정 실패. 주입이 중지되었을 수 있습니다! 펌프 화면에서 Pod 상태를 수동으로 새로 고치고, 필요하면 주입을 재개하십시오.
 
-Informational alert that the Pod basal profile setting has failed. Open the Omnipod pump screen and press **Refresh**, then **Resume Delivery** if needed.
+Pod 기저 프로파일 설정이 실패했음을 알려 주는 정보성 경고입니다. Omnipod 펌프 화면을 열고 **새로고침**을 누른 다음, 필요하면 **주입 재개**를 누르십시오.
 
-#### Unable to verify whether SMB bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
+#### SMB 볼러스가 성공했는지 확인할 수 없습니다. 볼러스가 성공하지 않은 것이 확실하면 '처치'에서 SMB 기록을 수동으로 삭제해야 합니다.
 
-Alert that the SMB bolus success could not be verified. Check the **Last Bolus** field on the Omnipod pump screen to see if the SMB succeeded. If it did not, remove the entry from the treatments.
+SMB 볼러스의 성공 여부를 확인할 수 없음을 알려 주는 경고입니다. Omnipod 펌프 화면의 **마지막 볼러스** 항목을 확인하여 SMB가 성공했는지 보십시오. 성공하지 않았다면 처치에서 그 기록을 삭제하십시오.
 
-#### Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
+#### "볼러스/TBR/SMB 작업"이 완료되었는지 불확실합니다. 성공했는지 직접 확인하십시오.
 
-Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is *uncertain* if a command was successfully processed. The need to inform the user of this uncertainty was necessary.
+RileyLink와 Omnipod가 통신하는 방식 때문에, 명령이 성공적으로 처리되었는지 *불확실한* 상황이 생길 수 있습니다. 그래서 이런 불확실성을 사용자에게 알려야 했습니다.
 
-Below are a few examples of when an uncertain notification can occur.
+아래는 불확실 알림이 나타날 수 있는 몇 가지 예입니다.
 
-- **Boluses** - Uncertain boluses cannot be automatically verified. The notification will remain until the next bolus but a manual pod refresh will clear the message. *By default alerts beeps are enabled for this notification type as the user will manually need to verify them.*
-- **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message.
-- **Pod Time Deviation -** When the time on the pod and the time on your phone differ too much, it is difficult for the AAPS loop to function and make accurate predictions and dosage recommendations. If the time difference between the pod and the phone is more than 5 minutes, a **Set time** button appears on the Omnipod pump screen. Press **Set time** to synchronize the time on the pod with the time on the phone. If **Pod Status** shows **Suspended** afterwards, press **Resume Delivery** to continue normal pod operations.
+- **볼러스** - 불확실한 볼러스는 자동으로 확인할 수 없습니다. 알림은 다음 볼러스까지 남아 있지만, Pod를 수동으로 새로고침하면 메시지가 지워집니다. *사용자가 직접 확인해야 하므로 이 알림 유형에는 기본적으로 경고 신호음이 켜져 있습니다.*
+- **TBR, Pod 상태, 프로파일 전환, 시간 변경** - Pod를 수동으로 새로고침하면 메시지가 지워집니다.
+- **Pod 시간 편차 -** Pod의 시간과 휴대폰의 시간이 너무 많이 다르면 AAPS 루프가 제대로 작동하고 정확한 예측과 용량 권장을 하기 어렵습니다. Pod와 휴대폰의 시간 차이가 5분을 넘으면 Omnipod 펌프 화면에 **시간 설정** 버튼이 나타납니다. **시간 설정**을 눌러 Pod의 시간을 휴대폰의 시간과 맞추십시오. **Pod 상태**에 그 후 **중지됨**이 표시되면 **주입 재개**를 눌러 Pod의 정상 작동을 계속하십시오.
 
-## Best Practices
+## 권장 사용 방법
 
 (OmnipodEros-optimal-omnipod-and-rileylink-positioning)=
 
-### Optimal Omnipod and RileyLink Positioning
+### Omnipod와 RileyLink의 최적 위치
 
-The antenna used on the RileyLink to communicate with an Omnipod pod is a 433 MHz helical spiral antenna. Due to its construction properties it radiates an omni directional signal like a three dimensional doughnut with the z-axis representing the vertical standing antenna. This means that there are optimal positions for the RileyLink to be placed, especially during pod activation and deactivation routines.
+RileyLink가 Omnipod Pod와 통신하는 데 사용하는 안테나는 433 MHz 나선형 안테나입니다. 이 안테나는 구조상 3차원 도넛 모양의 전방향 신호를 내보내며, z축은 세로로 서 있는 안테나를 나타냅니다. 따라서 특히 Pod 활성화와 비활성화 과정에서는 RileyLink를 두기에 가장 좋은 위치가 있습니다.
 
 ![Toroid_w_CS](../images/omnipod/Toroid_w_CS.png)
 
-> *(Fig 1. Graphical plot of helical spiral antenna in an omnidirectional pattern*)
+> *(그림 1. 전방향 패턴의 나선형 안테나 그래프*)
 
-Because of both safety and security concerns, pod *activation* has to be done at a range *closer (~30 cm away or less)* than other operations such as giving a bolus, setting a TBR or simply refreshing the pod status. Due to the nature of the signal transmission from the RileyLink antenna it is NOT recommended to place the pod directly on top of or right next to the RileyLink.
+안전과 보안 문제 때문에 Pod *활성화*는 볼러스 주입, TBR 설정, Pod 상태 새로고침 같은 다른 작업보다 *더 가까운 거리(약 30 cm 이내)*에서 해야 합니다. RileyLink 안테나의 신호 전송 특성 때문에 Pod를 RileyLink 바로 위나 바로 옆에 두는 것은 권장하지 않습니다.
 
-The image below shows the optimal way to position the RileyLink during pod activation and deactivation procedures. The pod may activate in other positions but you will have the most success using the position in the image below.
+아래 그림은 Pod 활성화와 비활성화 과정에서 RileyLink를 두는 가장 좋은 방법을 보여 줍니다. 다른 위치에서도 Pod가 활성화될 수 있지만, 아래 그림의 위치를 사용하면 성공할 가능성이 가장 높습니다.
 
-*Note: If after optimally positioning the pod and RileyLink communication fails, this may be due to a low battery which decreases the transmission range of the RileyLink antenna. To avoid this issue make sure the RileyLink is properly charged or connected directly to a charging cable during this process.*
+*참고: Pod와 RileyLink를 가장 좋은 위치에 두었는데도 통신이 실패하면, 배터리가 부족하여 RileyLink 안테나의 전송 거리가 줄어든 것일 수 있습니다. 이 문제를 피하려면 이 과정 동안 RileyLink를 충분히 충전하거나 충전 케이블에 직접 연결하십시오.*
 
 ![Omnipod_pod_and_RileyLink_Position](../images/omnipod/Omnipod_pod_and_RileyLink_Position.png)
 
-## Where to get help
+## 도움을 받을 수 있는 곳
 
-All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
+Omnipod 드라이버의 모든 개발 작업은 커뮤니티가 자원봉사로 하고 있습니다. 이 점을 배려하여 도움을 요청할 때 다음 지침을 따르십시오:
 
-- **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
-- **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
-- **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
-- **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+- **레벨 0:** 이 문서의 관련 부분을 읽고, 문제가 있는 기능이 원래 어떻게 작동해야 하는지 이해했는지 확인하십시오.
+- **레벨 1:** 이 문서로 해결할 수 없는 문제가 계속 있다면, [이 초대 링크](https://discord.gg/4fQUWHZ4Mw)를 사용하여 **Discord**의 *#androidaps* 채널로 가십시오.
+- **레벨 2:** 기존 이슈를 검색하여 같은 문제가 이미 보고되었는지 확인하십시오. 보고되지 않았다면 새 [이슈](https://github.com/nightscout/AndroidAPS/issues)를 만들고 [로그 파일](../GettingHelp/AccessingLogFiles.md)을 첨부하십시오.
+- **인내심을 가지십시오. 커뮤니티 회원 대부분은 선의의 자원봉사자이며, 문제를 해결하려면 사용자와 개발자 모두에게 시간과 인내가 필요한 경우가 많습니다.**

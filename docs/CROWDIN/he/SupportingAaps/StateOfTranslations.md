@@ -1,16 +1,16 @@
-# State of translation for the app and the documentation
+# סטטוס התרגום של האפליקציה ושל התיעוד
 
 מצב התרגום מעודכן פעם בשעה ומשקף את מצב התרגום ב-Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
+שימו לב: אחוז ההגהה תמיד נמוך מאחוז התרגום או שווה לו, אבל Crowdin מציג אותו מעל אחוז התרגום.
 It's better to look only at the percentage level of translations to see if work is to be done.
 ```
 
 ```{admonition} needed time for final publication
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+לאחר התרגום ב־Crowdin, מתוזמן סנכרון יומי ל־GitHub כדי להעביר את התרגומים ל־GitHub כבקשת משיכה (PR).
 
-The acceptance of the PR is a manual task which will be done as fast as possible.
+אישור ה־PR הוא פעולה ידנית, והוא ייעשה מהר ככל האפשר.
 ```
 
 ## סטטוס תרגום האפליקציה

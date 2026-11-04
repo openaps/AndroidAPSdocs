@@ -1,4 +1,4 @@
-# Making changes to your AAPS configuration
+# Zmiana konfiguracji AAPS
 
 Po ukończeniu **[Kreatora konfiguracji](../SettingUpAaps/SetupWizard.md)** nie musisz uruchamiać całego kreatora od nowa, jeśli chcesz zmienić tylko część konfiguracji **AAPS**.
 

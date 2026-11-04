@@ -6,24 +6,24 @@
 
 ## General hints for looping with G6 and ONE
 
-- Recent transmitters are called Firefly. Sensors cannot be restarted without removing the transmitter, which itself cannot be reset, they also do not generate raw data.
+- Recent transmitters are called Firefly. לא ניתן להפעיל מחדש את החיישנים בלי להסיר את המשדר, ואת המשדר עצמו לא ניתן לאפס. הם גם אינם מפיקים נתונים גולמיים.
 
 - If you are restarting sensors, ensure you are ready to calibrate and keep an eye on variation.
 
-- Pre-soaking of the G6/ONE with factory calibration is likely to give variation in results. אם אתם עושים השרייה מוקדמת, כדי לקבל את התוצאות הטובות ביותר, סביר להניח שתצטרכו לכייל את החיישן.
+- השרייה מוקדמת (pre-soak) של G6/ONE עם כיול מפעל צפויה לגרום לשונות בתוצאות. אם אתם עושים השרייה מוקדמת, כדי לקבל את התוצאות הטובות ביותר, סביר להניח שתצטרכו לכייל את החיישן.
 
 Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
-## If using G6 or ONE with xDrip
+## אם משתמשים ב-G6 או ב-ONE עם xDrip
 
-- If not already set up, download [xDrip](https://github.com/NightscoutFoundation/xDrip) and adjust its settings following the [xDrip settings page](../CompatibleCgms/xDrip.md).
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- אם עדיין לא עשיתם זאת, הורידו את [xDrip](https://github.com/NightscoutFoundation/xDrip) והגדירו אותו לפי [דף ההגדרות של xDrip](../CompatibleCgms/xDrip.md).
+- בחרו xDrip ב-[**הגדרות תצורה ← מקור ערכי הסוכר**](#Config-Builder-bg-source).
 - The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-- When using xDrip as receiver uninstall the Dexcom app first. **You cannot connect xDrip and Dexcom app with the transmitter at the same time!**
-- If you need Clarity and want to profit from xDrip alarms use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip.
-- You can also use xDrip as a companion app of the official Dexcom app, but you might experience delays in BG readings.
-- xDrip always uses the transmitter's [native algorithm](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) with current transmitters; there is no reason to disable it. [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) only function on old transmitters (firmware 1.6.5.25 or earlier), where they are needed to prevent the sensor stopping after 10 days; recent (Firefly) transmitters ignore them. See [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) before attempting any restart.
-- Everything related to the sensor and transmitter themselves is documented on the [xDrip Dexcom page](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+- כאשר משתמשים ב-xDrip כמקלט, יש להסיר קודם את אפליקציית Dexcom. **לא ניתן לחבר את xDrip ואת אפליקציית Dexcom למשדר באותו זמן!**
+- אם צריך את Clarity ורוצים ליהנות מההתראות של xDrip, השתמשו ב-[BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (רק G6) עם שידור מקומי (local broadcast) אל xDrip.
+- אפשר גם להשתמש ב-xDrip כאפליקציה נלווית (companion app) לאפליקציית Dexcom הרשמית, אבל ייתכנו עיכובים בקבלת ערכי הסוכר.
+- עם המשדרים הנוכחיים xDrip תמיד משתמש ב[אלגוריתם המובנה](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) של המשדר; אין סיבה לכבות אותו. [הפעלות מחדש מונעות](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) (Preemptive restarts) פועלות רק במשדרים ישנים (קושחה 1.6.5.25 או מוקדמת יותר), שבהם הן נחוצות כדי למנוע את עצירת החיישן אחרי 10 ימים; משדרים חדשים (Firefly) מתעלמים מהן. לפני כל ניסיון להפעיל מחדש, קראו את [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) (הפעלה מחדש של חיישן).
+- כל המידע על החיישן ועל המשדר עצמם נמצא ב[דף Dexcom של xDrip](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## אם משתמשים ב-G6 עם Build Your Own Dexcom App (BYODA)
@@ -33,37 +33,37 @@ Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-lo
 Dexcom BYODA is now a very old version of the app and cannot be updated.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) תומכת בשידור מקומי אל AAPS ו/או אל xDrip
 
 -   אפליקציה זו מאפשרת להשתמש ב-Dexcom G6 עם כל סמארטפון אנדרואיד.
 -   Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously (**do not stop** the currently running sensor)
 -   Install the downloaded apk
--   הזינו את קוד החיישן ואת המספר סידורי של המשדר.
+-   הזינו את קוד החיישן ואת המספר הסידורי של המשדר באפליקציה המתוקנת.
 -   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
--   After a short time BYODA should pick up the transmitter signal.
+-   לאחר זמן קצר BYODA אמור לקלוט את אות המשדר.
 
 ### Settings for AAPS
 
--   Select **BYODA** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+-   בחרו **BYODA** ב-[**הגדרות תצורה → מקור ערכי הסוכר**](#Config-Builder-bg-source).
 
--   If you don't receive any values select any other data source, then re-select **BYODA** to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+-   אם לא מתקבלים ערכים, בחרו מקור נתונים אחר כלשהו, ואז בחרו שוב **BYODA** כדי להפעיל את הבקשה להרשאות, שיוצרות את החיבור בין AAPS לבין השידור של BYODA.
 
-### Settings for xDrip
+### הגדרות עבור xDrip
 
 -   בהגדרות xDrip בחרו '640G/Eversense' כמקור נתונים.
--   Command 'start sensor' must be performed in xDrip in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+-   כדי לקבל ערכים, יש לבצע ב-xDrip את הפקודה 'start sensor'. This will not affect your current sensor controlled by Build Your Own Dexcom App.
 
 
 (DexcomG6-troubleshooting-g6)=
-## Troubleshooting G6 and ONE
+## פתרון תקלות ב-G6 וב-ONE
 
-### Dexcom G6/ONE specific troubleshooting
+### פתרון תקלות ייעודי ל-Dexcom G6/ONE
 
 -   Scroll down to **Troubleshooting** [here](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 ### פיתרון בעיות כלליות
 
-General Troubleshooting for CGMs can be found [here](#general-cgm-troubleshooting).
+ניתן למצוא מידע כללי על פתרון תקלות ב-CGM [כאן](#general-cgm-troubleshooting).
 
 ### משדר חדש עם חיישן שכבר מופעל
 

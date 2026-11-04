@@ -1,75 +1,75 @@
 # Eversense
 
-There are four different methods to access the readings from Eversense:
+Eversense rodmenis galima gauti keturiais būdais:
 
-- ESEL companion mode
-- ESEL patched mode
-- xDrip companion app
-- Notification Reader (built into **AAPS**)
+- ESEL Companion režimas
+- ESEL režimas su pataisyta programėle
+- xDrip Companion App
+- Pranešimų skaitytuvas (integruotas į **AAPS**)
 
 ## ESEL
 
 Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- In ESEL, open the three dots menu (⋮) at the top right and select **Settings** (also available from the ☰ menu). In the settings:
-  - Enable "Send to AAPS and xDrip"
-  - **Disable** "Send to Nightscout"
-  - As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
+- ESEL programėlėje viršuje dešinėje atverkite trijų taškų meniu (⋮) ir pasirinkite **Settings** (taip pat galima per ☰ meniu). Nustatymuose:
+  - Įjunkite „Send to AAPS and xDrip“
+  - **Išjunkite** „Send to Nightscout“
+  - Eversense gliukozės duomenys gali būti triukšmingi, todėl ESEL programėlėje rekomenduojama įjungti „Smooth Data“.
 
 ![ESEL Broadcast](../images/ESEL.png)
 
-### Companion Mode
+### Companion režimas
 
 Reads the data from the Eversense app notifications (works with the standard Eversense App, available since ESEL version 3.0.1).
 
-1. Use the official Eversense App from the Google Play Store
-   - Optional, but required for backfilling: Login to your Eversense account
-   - In Sync, enable Auto synchronization
+1. Naudokite oficialią Eversense programėlę iš Google Play Store
+   - Nebūtina, bet reikia trūkstamiems duomenims užpildyti (backfill): prisijunkite prie savo Eversense paskyros
+   - Skiltyje „Sync“ įjunkite „Auto synchronization“
 2. Configuration of ESEL:
-   - Disable the setting "Get data from patched Eversense App"
-   - For backfilling: Enable "Fill missing data from eversensedms.com"
-   - Provide as Email address and password your Eversense login data
-3. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
+   - Išjunkite nustatymą „Get data from patched Eversense App“
+   - Trūkstamiems duomenims užpildyti (backfill): įjunkite „Fill missing data from eversensedms.com“
+   - Kaip el. pašto adresą ir slaptažodį įveskite savo Eversense paskyros prisijungimo duomenis
+3. Skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source) pasirinkite „MM640g“.
 
-### Patched Eversense App
+### Pataisyta Eversense programėlė
 
- Requires a patched version of the Eversense App (works completely offline, including backfilling).
+ Reikia pataisytos Eversense programėlės versijos (veikia visiškai be interneto, įskaitant trūkstamų duomenų užpildymą).
 
-1. Uninstall the Eversense App (Warning: your local historical data (older than 1 week) will be lost!)
+1. Pašalinkite Eversense programėlę (Įspėjimas: jūsų vietiniai istoriniai duomenys (senesni nei 1 savaitė) bus prarasti!)
 
-2. Install the [patched Eversense app](https://cr4ck3d3v3r53n53.club) and use it as described by the vendor
+2. Įdiekite [pataisytą Eversense programėlę](https://cr4ck3d3v3r53n53.club) ir naudokite ją taip, kaip aprašo jos kūrėjas
 
-   - Start the Eversense App, login, connect to your transmitter and use it just like the normal app.
+   - Paleiskite Eversense programėlę, prisijunkite prie paskyros, prijunkite savo siųstuvą ir naudokite ją kaip įprastą programėlę.
 
 3. Configuration of ESEL:
 
-   - Enable the setting "Get data from patched Eversense App"
+   - Įjunkite nustatymą „Get data from patched Eversense App“
 
 
 
 ![ESEL Broadcast](../images/ESELpatch.png)
 
-If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
+Jei ESEL naudojate pirmą kartą su naujai įdiegta Eversense programėle, gali praeiti iki 15 min., kol pirmosios reikšmės atsiras xDrip!
 
-4. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
+4. Skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source) pasirinkite „MM640g“.
 
 ## xDrip
 
-xDrip can read notifications from the vendor app, like ESEL does. No backfilling available.
+xDrip gali skaityti gamintojo programėlės pranešimus, kaip tai daro ESEL. Trūkstamų duomenų užpildymas negalimas.
 
-- Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip “Companion App” must be selected.
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
-- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
-- Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
+- Atsisiųskite ir įdiekite xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- xDrip programėlėje kaip duomenų šaltinį reikia pasirinkti „Companion App“.
+- Pasirinkite xDrip skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source).
+- Sureguliuokite xDrip nustatymus pagal paaiškinimus xDrip nustatymų puslapyje [xDrip nustatymai](../CompatibleCgms/xDrip.md).
+- AAPS įjunkite [eksponentinį glodinimą](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-## Notification Reader
+## Pranešimų skaitytuvas
 
-**AAPS** can read the glucose values directly from the notifications posted by the official Eversense app, without any other app in between. No backfilling available.
+**AAPS** gali nuskaityti gliukozės reikšmes tiesiai iš oficialios Eversense programėlės pranešimų, be jokios kitos programėlės tarp jų. Trūkstamų duomenų užpildymas negalimas.
 
-- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and grant **AAPS** access to notifications when asked.
-- Make sure the Eversense app shows the current glucose value in its notification.
+- Skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source) pasirinkite **Pranešimų skaitytuvas** ir, kai paprašys, suteikite **AAPS** prieigą prie pranešimų.
+- Įsitikinkite, kad Eversense programėlė savo pranešime rodo dabartinę gliukozės reikšmę.
 
 ```{warning}
-BG values reading frequency is not always 5 minutes and duplicates can occur.
+Gliukozės reikšmės ne visada gaunamos kas 5 minutes, gali atsirasti pasikartojančių reikšmių.
 ```

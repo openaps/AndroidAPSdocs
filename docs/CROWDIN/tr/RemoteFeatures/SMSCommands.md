@@ -4,32 +4,32 @@
 :depth: 2
 ```
 
-Most remote adjustments (temp targets, carbs, profile switches and, once the client is paired, boluses) can be made with the [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection, see [Master ↔ Client control](#client-master-control) (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). SMS commands remain an alternative that works without internet, and the only remote option if you use an iPhone as a follower and do not have **AAPSClient** yet.
+Çoğu uzaktan ayar (geçici hedefler, karbonhidratlar, profil değişimleri ve istemci eşleştirildikten sonra bolus), internet bağlantısı olan bir Android telefondaki [**AAPSClient** uygulaması](../RemoteFeatures/RemoteMonitoring.md) ile yapılabilir, bkz. [Ana birim ↔ İstemci kontrolü](#client-master-control) (**AAPSClient**'in iPhone sürümü geliştirilme aşamasındadır, bkz. [AAPSClient](AapsClient.md)). SMS komutları internet olmadan çalışan bir alternatif olarak kalır. Takipçi olarak iPhone kullanıyorsanız ve henüz **AAPSClient** yoksa tek uzaktan kontrol seçeneğidir.
 
-**SMS commands are really useful:**
-1. For routine remote control
+**SMS komutları çok kullanışlıdır:**
+1. Rutin uzaktan kontrol için
 
-2. If you want to remotely bolus insulin without a paired **AAPSClient**
+2. Eşleştirilmiş bir **AAPSClient** olmadan uzaktan insülin bolusu vermek istiyorsanız
 
-3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
+3. Kısa mesajların ulaştığı ama mobil veri/internet bağlantısının zayıf olduğu bölgelerde. Bu, uzak bölgelere giderken (örn. kamp, kayak) çok faydalıdır.
 
-4. If your other method of remote control (**AAPSClient**) is temporarily not working
+4. Diğer uzaktan kontrol yönteminiz (**AAPSClient**) geçici olarak çalışmıyorsa
 
 ## Önce Güvenlik
 
-If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to export **AAPS** settings).
+**AAPS**'te **SMS Komünikatör**'ü etkinleştirirseniz, uzaktan komut göndermek için kurulan telefonun çalınabileceğini ve/veya başka biri tarafından kullanılabileceğini unutmayın. Telefonunuzu her zaman en azından bir PIN ile kilitleyin. Güçlü bir parola ve/veya biyometrik kilit kesinlikle önerilir. Bunun APK ana parolanızdan (**AAPS** ayarlarını dışa aktarmak için gereken parola) farklı olduğundan emin olun.
 
-Additionally, it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. This way, you can use the second number to [disable](#SMSCommands-other) SMS communicator in case your main remote phone gets compromised.
+Ayrıca SMS komutları için [ikinci bir telefon numarasına](#SMSCommands-authorized-phone-numbers) izin vermeniz önerilir. Böylece asıl uzaktan kontrol telefonunuzun güvenliği tehlikeye girerse, ikinci numarayı kullanarak SMS Komünikatör'ü [devre dışı bırakabilirsiniz](#SMSCommands-other).
 
-The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
+Bolus komutları arasındaki varsayılan en kısa bekleme süresi 15 dakikadır; süre, pompanın bir bolusu kabul ettiği andan itibaren sayılır. Güvenlik nedeniyle, bu süreyi kısaltmak için en az iki yetkili telefon numarası eklemeniz gerekir. Önceki bolustan sonraki 15 dakika içinde tekrar uzaktan bolus vermeye çalışırsanız şu yanıtı alırsınız: “Uzaktan bolus gönderilemiyor. Daha sonra tekrar deneyin.”
 
 AAPS ayrıca bolus veya profil değişikliği gibi uzak komutlarınızın gerçekleşip gerçekleşmediğini kısa mesajla size bildirecektir. Alıcı telefonlardan birinin çalınması durumuna karşı en az iki farklı telefon numarasına onay metinleri gönderilecek şekilde ayarlamanız önerilir.
 
-**If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
+**SMS Komutları ile bolus verirseniz karbonhidratları ayrıca girmelisiniz (ikinci bir SMS, AAPSClient...)!** Bunu yapmazsanız AİNS doğru olur ama AKRB çok düşük kalır. **AAPS** çok fazla aktif insülin olduğunu varsaydığı için bu durum, gereken bir düzeltme bolusunun verilmemesine yol açabilir.
 
-For the sensitive commands, an authenticator app with a time-based one-time password must be used to increase safety.
+Hassas komutlar için, güvenliği artırmak amacıyla zamana dayalı tek kullanımlık parola üreten bir Authenticator (kimlik doğrulama) uygulaması kullanılmalıdır.
 
-If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “[Reset Authenticators](#sms-commands-authenticator-setup)” in **AAPS** or send the SMS command “[SMS stop](#SMSCommands-other)”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
+Bir bakım veren telefonunun SMS komutu gönderme yetkisini kaldırmak istiyorsanız, **AAPS**'teki “[Kimlik Doğrulayıcıları (OTP) Sıfırla](#sms-commands-authenticator-setup)” acil durum düğmesini kullanın veya “[SMS stop](#SMSCommands-other)” SMS komutunu gönderin. Kimlik doğrulayıcıları sıfırlayarak bakım verenlerin TÜM telefonlarını geçersiz kılarsınız. You will need to set them up again.
 
 ## SMS Komutları kurulumu
 
@@ -43,134 +43,134 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 
 Güvenliği artırmak için iki faktörlü kimlik doğrulama kullanılır.
 
-On the caregiver phone, download (from the App store or Google play) and install an Authenticator app. Popüler ücretsiz uygulamalar şunlardır:
+Bakım veren telefonuna (App Store'dan veya Google Play'den) bir Authenticator (kimlik doğrulama) uygulaması indirip yükleyin. Popüler ücretsiz uygulamalar şunlardır:
   - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
-These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
+Bu Authenticator uygulamaları, mobil bankacılık veya alışverişte olduğu gibi, süresi sınırlı, tek kullanımlık 6 haneli bir parola üretir. RFC 6238 TOTP belirteçlerini desteklediği sürece başka bir Authenticator uygulaması da kullanabilirsiniz. Microsoft Authenticator çalışmaz.
 
-### Check phone settings
+### Telefon ayarlarını kontrol edin
 
-On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phone** are allowed.
+Telefonunuzda **Uygulamalar > AAPS > İzinler** bölümüne gidin. **SMS** ve **Telefon** izinlerinin verildiğinden emin olun.
 
 ![image](../images/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
-Android can block the **SMS** permission for apps that were not installed from an app store, like **AAPS**. If you see this message when you grant the **SMS** permission, open the phone's **Settings > Apps > AAPS**, tap the **⋮** menu (top right) and select **Allow restricted settings**. Then grant the **SMS** permission again.
+Android, uygulama mağazasından yüklenmemiş uygulamalar (örneğin **AAPS**) için **SMS** iznini engelleyebilir. **SMS** iznini verirken bu mesajı görürseniz telefonun **Ayarlar > Uygulamalar > AAPS** bölümünü açın, **⋮** menüsüne (sağ üstte) dokunun ve **Kısıtlanmış ayarlara izin ver** seçeneğini seçin. Ardından **SMS** iznini tekrar verin.
 ```
 
-![App was denied access to SMS](../images/sms_permission_restricted.png)
+![Uygulamanın SMS erişimi reddedildi](../images/sms_permission_restricted.png)
 
-### Date and time syncing
+### Tarih ve saat senkronizasyonu
 
 Her iki telefondaki saat senkronize olmalıdır. En iyisi, ağdan otomatik olarak ayarlamaktır. Zaman farklılıkları kimlik doğrulama sorunlarına yol açabilir.
 
-On both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific device, you may need to try out different settings.
+Hem **AAPS** telefonunda hem de bakım veren telefonunda tarih ve saatin senkronize olduğunu kontrol edin. Bunu tam olarak nasıl yapacağınız cihazınıza bağlıdır; farklı ayarları denemeniz gerekebilir.
 
-Example (for Samsung S23): **Settings > General management > Date and time**: make sure that **Automatic date and time** is checked.
+Örnek (Samsung S23 için): **Ayarlar > Genel yönetim > Tarih ve saat**: **Otomatik tarih ve saat** seçeneğinin işaretli olduğundan emin olun.
 
-Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterward if it seems to be causing problems (ask for help if needed).
+Telefon bir çocuk hesabı olarak kurulduysa, bazı seçenekler gri görünebilir; çünkü bunlar için aile hesabı üzerinden yönetici yetkisi gerekir. Bu tarih ve saat ayarı, bakım verenin/ebeveynin iPhone'unda “Otomatik olarak ayarla” olarak adlandırılır. Telefonları senkronize edip etmediğinizden emin değilseniz endişelenmeyin; SMS komutlarını kurabilir, sorun çıkarsa sonra giderebilirsiniz (gerekirse yardım isteyin).
 
 ### AAPS settings
 
-Now that the phone settings have been checked, in the **AAPS** app itself, go to [**Configuration** → **Communication**](../SettingUpAaps/ConfigBuilder.md) and enable the **SMS Communicator** plugin.
+Telefon ayarlarını kontrol ettikten sonra, **AAPS** uygulamasında [**Konfigürasyon** → **İletişim**](../SettingUpAaps/ConfigBuilder.md) bölümüne gidin ve **SMS Komünikatör** eklentisini etkinleştirin.
 
-Open the **SMS Communicator** settings.
+**SMS Komünikatör** ayarlarını açın.
 
-Enable **Allow remote commands via SMS**. The **Additional mandatory PIN at token end** and **Authenticator setup** options only appear once this is enabled:
+**SMS ile uzaktan komutlara izin ver** seçeneğini etkinleştirin. **Kodun sonunda ek zorunlu PIN** ve **Authenticator (kimlik doğrulama) kurulumu** seçenekleri ancak bu etkinleştirildikten sonra görünür:
 
-![SMS Communicator settings](../images/sms_communicator_settings.png)
+![SMS Komünikatör ayarları](../images/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
-#### Allowed phone numbers
+#### İzin verilen telefon numaraları
 
-Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
-* UK phone number: +447976304596
-* US phone number: +11234567890
-* FR phone number:  +33612344567
-* _etc._
+Bakım verenin telefon numara(lar)ını girin. Bu örneklerde gösterildiği gibi ülke kodunu ekleyin ve telefon numarasının başındaki “0”ı yazmayın:
+* Birleşik Krallık telefon numarası: +447976304596
+* ABD telefon numarası: +11234567890
+* Fransa telefon numarası:  +33612344567
+* _vb._
 
-Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format on the **SMS Communicator** plugin screen (**Configuration** → **Communication** → **SMS Communicator** → **Open plugin**).
+Numaranın önündeki “+” işaretinin gerekip gerekmediği bulunduğunuz yere göre değişebilir. Bunu belirlemek için bir deneme mesajı gönderin; alınan biçim **SMS Komünikatör** eklenti ekranında (**Konfigürasyon** → **İletişim** → **SMS Komünikatör** → **Eklentiyi aç**) görünür.
 
-If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select **OK**:
+Eklenecek birden fazla telefon numarası varsa, bunları noktalı virgülle ayırın ve **numaralar arasında BOŞLUK BIRAKMAYIN** (bu çok önemlidir!). **Tamam** seçeneğini seçin:
 
-![Allowed phone numbers](../images/sms_allowed_numbers.png)
+![İzin verilen telefon numaraları](../images/sms_allowed_numbers.png)
 
-#### Remote bolus min distance
+#### Uzaktan bolus için en kısa ara
 
-- You can define the minimum delay (in minutes) between two boluses issued via SMS.
+- SMS ile verilen iki bolus arasındaki en kısa bekleme süresini (dakika olarak) belirleyebilirsiniz.
 - Güvenlik nedeniyle bu değeri düzenlemek için en az iki yetkili telefon numarası eklemelisiniz.
 
-#### Additional mandatory PIN at token end
+#### Kodun sonunda ek zorunlu PIN
 
-For safety reasons, the reply code must be followed by a PIN. Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
+Güvenlik nedeniyle yanıt kodunun ardından bir PIN gelmelidir. SMS komutu gönderilirken sizin (ve diğer bakım verenlerin) Authenticator kodunun sonuna ekleyeceğiniz bir PIN seçin.
 
-PIN requirements are:
+PIN gereksinimleri:
 
-* at least 6 digits
-* digits only
+* en az 6 hane
+* yalnızca rakam
 
-For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a sequence (_e.g._ 123456).
+Daha güvenli bir PIN için aynı rakamı birçok kez (_örn._ 111111) veya bir sıra (_örn._ 123456) kullanmayın.
 
-![Additional mandatory PIN at token end](../images/sms_pin.png)
+![Kodun sonunda ek zorunlu PIN](../images/sms_pin.png)
 
 #### Authenticator kurulumu
 
-* Tap **Authenticator setup** and follow the step-by-step instructions on the screen.
-* Open your installed authenticator app on the _caregiver’s phone_, set up a new connection and
-* Use the caregiver phone to scan the QR code shown under **Scan code to setup AAPS OTP codes**.
+* **Authenticator (kimlik doğrulama) kurulumu** seçeneğine dokunun ve ekrandaki adım adım talimatları izleyin.
+* _Bakım verenin telefonunda_ yüklü Authenticator uygulamasını açın, yeni bir bağlantı kurun ve
+* **AAPS OTP kod kurulumu için QR kodu tarayın** altında gösterilen QR kodunu bakım veren telefonuyla tarayın.
 
-![Authenticator setup with QR code](../images/sms_authenticator_setup.png)
+![QR kodu ile Authenticator kurulumu](../images/sms_authenticator_setup.png)
 
-* Under **Test One-Time-Password**, enter the one-time passcode from the authenticator app on the caregiver phone followed by your PIN in **Code to check**:
+* **Tek Kullanımlık Parolayı (OTP) Test Edin** altında, bakım veren telefonundaki Authenticator uygulamasından aldığınız tek kullanımlık kodu ve ardından PIN'inizi **Kontrol edilecek kod** alanına girin:
 
-Example:
-* The token from the authenticator app is 457051
+Örnek:
+* Authenticator uygulamasındaki kod: 457051
 * Your mandatory PIN is 2401
-* Code to check: 4570512401
+* Kontrol edilecek kod: 4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
+Giriş doğruysa, kırmızı “HATALI PIN” yazısı otomatik olarak yeşil “Tamam” yazısına dönüşür. **Basmanız gereken bir düğme yoktur!** İşlem artık tamamlanmıştır; kodu girdikten sonra basmanız gereken bir “Tamam” düğmesi yoktur:
 
-![Test One-Time-Password and Reset Authenticators](../images/sms_authenticator_test.png)
+![Tek Kullanımlık Parola testi ve Kimlik Doğrulayıcıları Sıfırlama](../images/sms_authenticator_test.png)
 
-You should now be set up with SMS commands.
+Artık SMS komutları kurulumunuz tamamlanmış olmalıdır.
 
-Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
+Tanımlanmış kimlik doğrulayıcıları kaldırmak istiyorsanız **Authenticator (kimlik doğrulama) kurulumu** ekranının altındaki **Kimlik Doğrulayıcıları (OTP) Sıfırla** düğmesini kullanın. (Kimlik doğrulayıcıyı sıfırlayarak, önceden tanımlanmış TÜM kimlik doğrulayıcıları geçersiz kılarsınız. Onları tekrar kurmanız gerekir.)
 
-## SMS commands usage
+## SMS komutlarının kullanımı
 
-### First steps using SMS commands
+### SMS komutlarıyla ilk adımlar
 
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
+1)  Her şeyi doğru kurduğunuzu kontrol etmek için, bakım veren telefonundan **AAPS** telefonuna SMS olarak “bg” yazıp göndererek bağlantıyı test edin. Burada gösterilene benzer bir yanıt almalısınız:
 
 ![image](../images/remote-control-06.png)
 
-If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
+Hiç yanıt almazsanız aşağıdaki [Sorun giderme](#SMSCommands-troubleshooting) bölümüne bakın.
 
-2)  Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of twelve digits in total, assuming your PIN has 6 digits).
+2)  Şimdi Authenticator gerektiren bir SMS komutu deneyin, _örn._ “target hypo”. Bakım verenin telefonuna bir yanıt mesajı gelir. Bu mesaj sizden Authenticator uygulamasındaki **altı haneli Authenticator parolasını** ve ardından yalnızca bakım verenlerin/takipçilerin bildiği ek gizli **PIN**'i girmenizi ister (PIN'iniz 6 haneliyse toplam on iki hane).
 
-When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
+Bir SMS komutunu ilk kez gönderirken, nasıl çalıştığını görmek için bunu **AAPS** telefonunun yanında deneyin:
 
 ![image](../images/remote-control-16.png)
 
-The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully.
+Bakım verenin telefonu, uzaktan gönderilen SMS komutunun başarıyla uygulanıp uygulanmadığını bildiren bir yanıt SMS'ini **AAPS**'ten alır.
 
-If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message. See [Troubleshooting](#SMSCommands-troubleshooting) below for common errors.
+Komutunuz başarılıysa bunu onaylayan bir yanıt alırsınız. Bir sorun varsa bir hata mesajı alırsınız. Sık görülen hatalar için aşağıdaki [Sorun giderme](#SMSCommands-troubleshooting) bölümüne bakın.
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**İpucu**: Çok fazla SMS gönderilecekse, telefon tarifenizde (kullanılan her telefon için) sınırsız SMS olması yararlı olabilir.
 
-### Delivering mealtime boluses through SMS commands
+### SMS komutlarıyla yemek bolusu verme
 
-Remote bolusing of insulin can be done via **SMS Commands** or through a paired **AAPSClient** (see [Master ↔ Client control](#client-master-control)); it cannot be done through the Nightscout website. Carbs can be announced through SMS or **AAPSClient** as well. With SMS, it is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
+Uzaktan insülin bolusu **SMS Komutları** ile veya eşleştirilmiş bir **AAPSClient** ile verilebilir (bkz. [Ana birim ↔ İstemci kontrolü](#client-master-control)); Nightscout web sitesi üzerinden verilemez. Karbonhidratlar da SMS veya **AAPSClient** ile bildirilebilir. SMS ile karbonhidrat ve insülin komutlarını tek bir SMS mesajında birlikte göndermek mümkün değildir. Bu komutlar şu şekilde ayrı ayrı gönderilmelidir:
 
-1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to **Treatments** → **Insulin** in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to **Treatments** → **Carbs** in **AAPS**.
+1)  İnsülin bolusunu gönderin (_örn._ “bolus 2”, 2 ünitelik bir bolus komutu verir). SMS komutlarıyla gönderilen bolus, **AAPS**'teki **Tedaviler** → **İnsülin** ile aynıdır. 2)  Karbonhidratları gönderin (_örn._ “carbs 20”, 20 g karbonhidrat bildirir). Bu, **AAPS**'teki **Tedaviler** → **Karbonhidrat** ile aynıdır.
 
-To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
+Hipoglisemiden kaçınmak için temkinli başlamak iyi bir fikirdir: karbonhidrat oranınıza göre gerekenden **daha az insülin** bolusu verin, çünkü mevcut glikoz değerini veya glikoz eğilimini hesaba katmıyorsunuz.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can combine **AAPSClient** with SMS commands: carbs entered on a paired **AAPSClient** need no authentication code and are therefore quicker than SMS commands. Carbs or other treatments entered on the Nightscout website are **not** applied while client control is on; **AAPS** is then in [hardened mode](#client-master-control-hardened-mode).
+**Bu komutları gönderme sıranız önemlidir**. Herhangi bir yolla büyük miktarda karbonhidrat bildirirseniz ve SMB'ler etkinse, **AAPS** hemen kısmi bir insülin bolusu vererek yanıt verebilir. Bu nedenle karbonhidratları bildirdikten _sonra_ insülin bolusu göndermeye çalışırsanız, can sıkıcı bir gecikme ve “bolus devam ediyor” mesajı ile karşılaşabilirsiniz. Ardından SMB olarak ne verildiğini kontrol etmeniz gerekir. Ya da bir SMB'nin verildiğini fark etmezseniz ve sizin sonraki bolusunuz da başarılı olursa, öğün için toplamda çok fazla insülin verilebilir. Bu yüzden yemek bolusunu uzaktan veriyorsanız insülin bolusunu her zaman karbonhidrat bildiriminden _önce_ gönderin. İsterseniz **AAPSClient**'i SMS komutlarıyla birlikte kullanabilirsiniz: eşleştirilmiş bir **AAPSClient**'te girilen karbonhidratlar için doğrulama kodu gerekmez, bu yüzden SMS komutlarından daha hızlıdır. İstemci kontrolü açıkken Nightscout web sitesinde girilen karbonhidratlar veya diğer tedaviler **uygulanmaz**; **AAPS** bu durumda [güçlendirilmiş moddadır](#client-master-control-hardened-mode).
 
 (SMSCommands-commands)=
 ## Komutlar
@@ -180,174 +180,174 @@ To avoid hypos, it is a good idea to start conservatively, by bolusing **less in
 :local: true
 ```
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app). The commands are not case-sensitive, you can use lower or upper case.
+Komutlar İngilizce gönderilmelidir. Yanıt metni zaten [çevrilmişse](#translations-translate-strings-for-AAPS-app) yanıt sizin dilinizde olur. Komutlar büyük/küçük harfe duyarlı değildir; küçük veya büyük harf kullanabilirsiniz.
 
-![SMS Commands Example](../images/SMSCommands.png)
+![SMS Komutları örneği](../images/SMSCommands.png)
 
-The **SMS Commands Tables** below show all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the **AAPS** app itself.
+Aşağıdaki **SMS Komutları Tabloları** tüm olası SMS komutlarını gösterir. Anlaşılmasına yardımcı olmak için _örnek değerler_ verilmiştir. Komutlar, **AAPS** uygulamasının kendisinde izin verilen değer aralıklarının (hedefler, profil yüzdesi vb.) aynısını kullanır.
 
 (authentication-or-not)=
-### Authentication or not?
+### Kimlik doğrulama gerekli mi?
 
-Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
+Bazı SMS komutları hemen yanıt verir, bazı SMS komutları ise Authenticator uygulaması ile güçlü **kimlik doğrulama** gerektirir. “**BG**” (güncel glikoz değerini isteyen) gibi basit bir sorgu hızlıca yazılır, kimlik doğrulama gerektirmez ve aşağıda gösterilen **AAPS** durum bilgisini döndürür:
 
 ![image](../images/remote-control-06.png)
 
-Commands which need more security require a code to be entered, for example:
+Daha fazla güvenlik gerektiren komutlar için bir kod girilmesi gerekir, örneğin:
 
-![SMS authenticated](../images/remote-control-07.png)
+![Kimliği doğrulanmış SMS](../images/remote-control-07.png)
 
-The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
+Aşağıdaki tablolardaki *Doğrulama* sütunu, her komut için böyle güçlü bir kimlik doğrulamanın gerekip gerekmediğini gösterir.
 
 ### CGM (Sürekli glikoz ölçüm) verileri
 
-| Command    | Auth | Function & *Response*                                                                                                                                                                                                             |
-| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | No   | Returns: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                                                                                   |
-| CAL 5.6/90 | Yes  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
+| Komut      | Doğrulama | İşlev & *Yanıt*                                                                                                                                                                                                                       |
+| ---------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | No        | Döndürür: son KŞ, delta, AİNS (bolus ve bazal), AKRB<br/>*Son KŞ: 5,6 4 dk önce, Delta: -0,2 mmol, AİNS: 0,20Ü (Bolus: 0,10Ü Bazal: 0,10Ü)*                                                                                     |
+| CAL 5.6/90 | Yes       | CGM'i 5.6/90 değeriyle kalibre eder<br/>(glikoz biriminize uygun değeri kullanın)<br/>Yalnızca **AAPS**'te doğru kurulduysa çalışır.<br/>*Kalibrasyon gönderildi. xDrip+'ta kalibrasyon alma etkinleştirilmelidir.* |
 
 ### Pump
 
-| Command              | Auth | Function & *Response*                                                                                |
-| -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| PUMP                 | No   | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Yes  | To disconnect pump for *30* minutes                                                                  |
-| PUMP CONNECT         | Yes  | Pump reconnected                                                                                     |
+| Komut                | Doğrulama | İşlev & *Yanıt*                                                                                      |
+| -------------------- | --------- | ---------------------------------------------------------------------------------------------------- |
+| PUMP                 | No        | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | Yes       | Pompanın bağlantısını *30* dakika kesmek için                                                        |
+| PUMP CONNECT         | Yes       | Pump reconnected                                                                                     |
 
 ### Bazal
 
-| Command           | Auth | Function & *Response*            |
-| ----------------- | ---- | -------------------------------- |
-| BASAL 0.3         | Yes  | To start basal 0.3U/h for 30 min |
-| BASAL 0.3 20      | Yes  | To start basal 0.3U/h for 20 min |
-| BASAL 30%         | Yes  | To start basal 30% for 30 min    |
-| BASAL 30% 50      | Yes  | To start basal 30% for 50 min    |
-| BASAL STOP/CANCEL | Yes  | To stop temp basal               |
+| Komut             | Doğrulama | İşlev & *Yanıt*                             |
+| ----------------- | --------- | ------------------------------------------- |
+| BASAL 0.3         | Yes       | 30 dk boyunca 0,3 Ü/sa bazal başlatmak için |
+| BASAL 0.3 20      | Yes       | 20 dk boyunca 0,3 Ü/sa bazal başlatmak için |
+| BASAL 30%         | Yes       | 30 dk boyunca %30 bazal başlatmak için      |
+| BASAL 30% 50      | Yes       | 50 dk boyunca %30 bazal başlatmak için      |
+| BASAL STOP/CANCEL | Yes       | Geçici bazalı durdurmak için                |
 
-Some pumps take a temp basal only in percent, others only in U/h. If you use the other form, **AAPS** answers *"This pump takes a temp basal only in percent, not in U/h."* (or the reverse) and sets nothing. The duration must be a multiple of your pump's temp basal duration step.
+Bazı pompalar geçici bazalı yalnızca yüzde olarak, bazıları ise yalnızca Ü/sa olarak kabul eder. Diğer biçimi kullanırsanız **AAPS** *"Bu pompa geçici bazalı Ü/sa olarak değil, yalnızca yüzde olarak kabul eder."* (veya tersi) yanıtını verir ve hiçbir şey ayarlamaz. Süre, pompanızın geçici bazal süre adımının katı olmalıdır.
 
 
 ### Döngü
 
-| Command           | Auth | Function & *Response*                                                                                                                                                                                                                                                              |
-| ----------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | No   | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
-| LOOP STOP/DISABLE | Yes  | The pump will revert to the pre-programmed basal rate.<br/>*Loop has been disabled*                                                                                                                                                                                          |
-| LOOP SUSPEND 20   | Yes  | *Loop suspended*                                                                                                                                                                                                                                                                   |
-| LOOP RESUME       | Yes  | *Loop resumed*                                                                                                                                                                                                                                                                     |
-| LOOP CLOSED       | Yes  | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
-| LOOP LGS          | Yes  | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
+| Komut             | Doğrulama | İşlev & *Yanıt*                                                                                                                                                                                                                                                                        |
+| ----------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | No        | Yanıt mevcut duruma bağlıdır:<br/> - Döngü devre dışıysa *Döngü devre dışı*<br/> - Döngü kapalı, açık veya LGS modundaysa *Döngü etkin*<br/> - Pompanın bağlantısı kesildiyse *Pompa bağlantısı kesildi*<br/> - Döngü askıya alındıysa *Askıya alındı (10 dk)* |
+| LOOP STOP/DISABLE | Yes       | Pompa önceden programlanmış bazal orana geri döner.<br/>*Döngü devre dışı bırakıldı*                                                                                                                                                                                             |
+| LOOP SUSPEND 20   | Yes       | *Döngü askıya alındı*                                                                                                                                                                                                                                                                  |
+| LOOP RESUME       | Yes       | *Loop resumed*                                                                                                                                                                                                                                                                         |
+| LOOP CLOSED       | Yes       | *Geçerli çalışma modu: Kapalı Döngü*                                                                                                                                                                                                                                                   |
+| LOOP LGS          | Yes       | *Geçerli çalışma modu: Düşük Glikoz Duraklatma (LGS)*                                                                                                                                                                                                                                  |
 
 ### Bolus
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
+Son bolus komutundan veya uzaktan komutlardan sonraki 15 dakika içinde uzaktan bolusa izin verilmez (bu değer yalnızca 2 telefon numarası eklendiğinde düzenlenebilir)! Bu durumda yanıt şu olur: *Uzaktan bolus gönderilemiyor. Daha sonra tekrar deneyin.* Bu yanıt, pompa o anda bir bolus veriyorsa da gönderilir.
 
-| Command              | Auth | Function & *Response*                                                                                                                                             |
-| -------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BOLUS 1.2            | Yes  |                                                                                                                                                                   |
-| BOLUS 0.60 MEAL      | Yes  | Delivers the specified 0.60U bolus<br/>**and** sets the [Eating Soon TempTarget](#TempTargets-eating-soon-temp-target)                                      |
-| CARBS 5              | Yes  | To enter 5g, without a bolus                                                                                                                                      |
-| CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35.<br/>The acceptable time format depends<br/> on the time setting (12h/24h) on the phone.                                         |
-| EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
-| EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                                                            |
+| Komut                | Doğrulama | İşlev & *Yanıt*                                                                                                                                                             |
+| -------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BOLUS 1.2            | Yes       |                                                                                                                                                                             |
+| BOLUS 0.60 MEAL      | Yes       | Belirtilen 0,60Ü bolusu verir<br/>**ve** [Yakında Yenecek Geçici Hedefi](#TempTargets-eating-soon-temp-target) ayarlar                                                |
+| CARBS 5              | Yes       | Bolus olmadan 5 g girmek için                                                                                                                                               |
+| CARBS 5 17:35/5:35PM | Yes       | Saat 17:35'te 5 g girmek için.<br/>Kabul edilen saat biçimi, telefondaki<br/> saat ayarına (12 sa/24 sa) bağlıdır.                                              |
+| EXTENDED 2 120       | Yes       | 120 dk boyunca 2Ü yayma bolus başlatmak için.<br/>Yalnızca [uyumlu pompalar](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) için. |
+| EXTENDED STOP/CANCEL | Yes       | Yayma bolusu durdurmak için                                                                                                                                                 |
 
 ### Profile
 
-| Command        | Auth | Function & *Response*                                                                                                                                        |
-| -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| PROFILE STATUS | No   | Current profile and percentage                                                                                                                               |
-| PROFILE LIST   | No   | The current list of profiles in **AAPS**, e.g.:<br/>1. Profile1<br/> 2. Profile2                                                                 |
-| PROFILE 1      | Yes  | To switch profile to profile 1 in the list.<br/>Use the numbers as returned by the **PROFILE LIST**,<br/>not the profile names as you saved them |
-| PROFILE 2 30   | Yes  | To switch profile to Profile2 30%                                                                                                                            |
+| Komut          | Doğrulama | İşlev & *Yanıt*                                                                                                                        |
+| -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| PROFILE STATUS | No        | Geçerli profil ve yüzdesi                                                                                                              |
+| PROFILE LIST   | No        | **AAPS**'teki güncel profil listesi, örn.:<br/>1. Profile1<br/> 2. Profile2                                                |
+| PROFILE 1      | Yes       | Listedeki 1. profile geçmek için.<br/>Profil adlarını değil, **PROFILE LIST** komutunun<br/>döndürdüğü numaraları kullanın |
+| PROFILE 2 30   | Yes       | Profile2 %30'a geçmek için                                                                                                             |
 
-The percentage must be between 30 and 250 %, as in the app. A value outside this range is refused before you are asked for the authentication code.
+Yüzde, uygulamada olduğu gibi %30 ile %250 arasında olmalıdır. Bu aralığın dışındaki bir değer, sizden doğrulama kodu istenmeden önce reddedilir.
 
 ### Temporary Targets
 
-| Command                   | Auth | Function & *Response*                     |
-| ------------------------- | ---- | ----------------------------------------- |
-| TARGET MEAL/ACTIVITY/HYPO | Yes  | To set the Temp Target MEAL/ACTIVITY/HYPO |
-| TARGET STOP/CANCEL        | Yes  | To cancel Temp Target                     |
+| Komut                     | Doğrulama | İşlev & *Yanıt*                                   |
+| ------------------------- | --------- | ------------------------------------------------- |
+| TARGET MEAL/ACTIVITY/HYPO | Yes       | MEAL/ACTIVITY/HYPO Geçici Hedefini ayarlamak için |
+| TARGET STOP/CANCEL        | Yes       | Geçici Hedefi iptal etmek için                    |
 
 
 (SMSCommands-other)=
 ### Diğer
 
-| Command          | Auth | Function & *Response*                                                                                                                                                                                                                                                  |
-| ---------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RESTART          | Yes  | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                                                                                                      |
-| SMS DISABLE/STOP | Yes  | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll be able to reactivate it directly<br/>from the **AAPS** master smartphone only.                                                                                       |
-| HELP             | No   | Returns all functions available for interrogation:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Send further ***HELP ***FUNCTION****** command to list<br/>all options available in this section. |
-| HELP BOLUS       |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                                   |
+| Komut            | Doğrulama | İşlev & *Yanıt*                                                                                                                                                                                                                                                |
+| ---------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RESTART          | Yes       | AAPS'i yeniden başlatır. Normalde yeniden başlatmayla çözülen sorunlar yaşıyorsanız faydalıdır.                                                                                                                                                                |
+| SMS DISABLE/STOP | Yes       | SMS Uzak Hizmet desteğini devre dışı bırakmak için kodla yanıt verin.<br/>Bu hizmeti yalnızca **AAPS** yüklü ana telefondan<br/>yeniden etkinleştirebileceğinizi unutmayın.                                                                        |
+| HELP             | No        | Sorgulanabilen tüm işlevleri döndürür:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Bir bölümdeki tüm seçenekleri listelemek için<br/>ayrıca ***HELP ***FUNCTION****** komutunu gönderin. |
+| HELP BOLUS       |           | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                           |
 
 (SMSCommands-troubleshooting)=
-## Troubleshooting and FAQ
+## Sorun giderme ve SSS
 
 ```{contents} List of questions and issues
 :depth: 1
 :local: true
 ```
 
-### What _can’t_ we do with SMS commands?
+### SMS komutlarıyla neler _yapamayız_?
 
-1)  **You cannot set a _temporary_ profile switch** (so for example, setting "profile exercise" for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profile switches can instead be set through **AAPSClient**.
+1)  **_Geçici_ profil değişimi ayarlayamazsınız** (örneğin 60 dakika için "profile exercise" ayarlamak), ancak kalıcı olarak “profile exercise” profiline geçebilirsiniz. Geçici profil değişimleri bunun yerine **AAPSClient** ile ayarlanabilir.
 
-2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the **AAPS** phone. If the high temporary target of 7.0 is started by the automation, and you cancel it (on the **AAPS** phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
+2)  **Otomasyonları iptal edemezsiniz** veya **kullanıcı tanımlı hedefler ayarlayamazsınız**, ancak yaklaşık çözümler vardır: Örneğin normal profil hedefinin 5,5 olduğunu düşünün. Okuldaki bir spor dersi nedeniyle AAPS'te 14:30 ile 15:30 arasında her zaman 7,0 yüksek hedef ayarlayan bir otomasyon kurdunuz ve otomasyonun bir koşulu “geçici hedef yok” olsun. Bu hafta kısa süre önce spor dersinin iptal edildiği ve yerine pizza yeme etkinliği yapılacağı size bildirildi, ama çocuğunuz **AAPS** telefonuyla zaten okulda. Yüksek geçici hedef 7,0 otomasyon tarafından başlatılırsa ve siz bunu iptal ederseniz (**AAPS** telefonunda veya uzaktan), otomasyonun koşulları hâlâ sağlanır ve **AAPS** bir dakika sonra yüksek hedefi tekrar ayarlar.
 
-**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min by pressing on the target on the main screen, or via **Manage** → **Temp Target**. This would prevent the automation from setting the high target of 7.0.
+**AAPS telefonuna erişiminiz olsaydı** otomasyonun işaretini kaldırabilir/otomasyonu değiştirebilirdiniz ya da bunu yapmak istemezseniz ana ekrandaki hedefe basarak veya **Yönet** → **Geçici Hedef** ile 60 dk için 5,6 değerinde yeni bir geçici hedef ayarlayabilirdiniz. Bu, otomasyonun 7,0 yüksek hedefini ayarlamasını engellerdi.
 
-**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** to do this.
+**AAPS telefonuna erişiminiz yoksa** SMS komutları yaklaşık bir çözüm için kullanılabilir: örneğin “target meal” komutuyla 45 dk için 5,0 hedef ayarlayabilirsiniz (diğer varsayılan hedefler aktivite veya hipo için 8,0'dır, bkz. Tablo). Ancak SMS komutlarıyla _belirli_ bir hedef değeri (örneğin 60 dakika için 5,6) belirtemezsiniz; bunun için **AAPSClient** kullanmanız gerekir.
 
-### What happens if I change my mind about a command I have just sent?
+### Az önce gönderdiğim bir komuttan vazgeçersem ne olur?
 
-**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. **AAPS** will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
+**AAPS** yalnızca en son komutu uygular. Yani “bolus 1.5” yazıp, ardından kimlik doğrulaması yapmadan yeni bir “bolus 1” komutu gönderirseniz, önceki 1.5 komutunu yok sayar. **AAPS**, sizden doğrulama kodu istenmeden önce SMS komutunun ne olduğunu onaylayan bir yanıtı ve işlemden sonra da bir yanıtı bakım verenin telefonuna her zaman gönderir.
 
-### Why didn't I get a response to an SMS command?
+### Bir SMS komutuna neden yanıt almadım?
 
-It could be for one of these reasons:
+Bunun nedeni şunlardan biri olabilir:
 
-1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The **AAPS** phone does not have a good Bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
+1)  Mesaj telefona ulaşmadı (ağ sorunları). 2)  **AAPS** isteği hâlâ işliyor (_örn._ bolus hızınıza göre verilmesi biraz zaman alabilen bir bolus). 3)  Komut alındığında **AAPS** telefonunun pompayla iyi bir Bluetooth bağlantısı yok ve komut başarısız oldu (bu genellikle **AAPS** telefonunda bir alarm oluşturur).
 
-### No response whatsoever for SMS commands
+### SMS komutlarına hiç yanıt gelmiyor
 
-On the caregiver phone and/or **AAPS** phone, try disabling the following options :
-* **Send as chat message** ![Disable SMS as chat message](../images/SMSdisableChat.png)
-* If using Android Messages App or Google Messages App, disable RCS messaging:
-  - Herhangi bir SMS mesajını açın
-  - Select the options ellipsis in the top right corner
+Bakım veren telefonunda ve/veya **AAPS** telefonunda şu seçenekleri devre dışı bırakmayı deneyin:
+* **Sohbet mesajı olarak gönder** ![SMS'i sohbet mesajı olarak göndermeyi devre dışı bırakın](../images/SMSdisableChat.png)
+* Android Mesajlar veya Google Mesajlar uygulamasını kullanıyorsanız RCS mesajlaşmayı devre dışı bırakın:
+  - Mesajlar uygulamasında ilgili SMS konuşmasını açın
+  - Sağ üst köşedeki üç nokta seçenekler menüsünü seçin
   - "Detaylar"ı seçin
-  - Activate "Only send SMS and MMS messages" ![Disable RCS as chat message](../images/SMSdisableRCS.png)
+  - "Yalnızca SMS ve MMS mesajları gönder" ("Only send SMS and MMS messages") seçeneğini etkinleştirin ![RCS'yi sohbet mesajı olarak göndermeyi devre dışı bırakın](../images/SMSdisableRCS.png)
 
-### Errors carrying out commands
+### Komutları uygularken oluşan hatalar
 
-There are several possible reasons the command may not be successful:
+Komutun başarılı olmamasının birkaç olası nedeni vardır:
 
-* SMS commands setup isn’t complete/correct
-* You sent a command which had an incorrect format (like “disconnect pump 45” instead of “pump disconnect 45”)
-* You used an incorrect, or expired authenticator code (it is usually good to wait a few seconds for a fresh code, if the current one is about to expire)
-* The code+PIN was OK, but there was a delay in the SMS leaving/arriving, which led **AAPS** to calculate that the authenticator code had expired
-* The **AAPS** phone is out of range/contact with the pump
-* The system is already busy delivering a bolus
+* SMS komutları kurulumu tamamlanmamış/doğru değil
+* Yanlış biçimde bir komut gönderdiniz (“pump disconnect 45” yerine “disconnect pump 45” gibi)
+* Yanlış veya süresi dolmuş bir Authenticator kodu kullandınız (geçerli kodun süresi dolmak üzereyse, yeni bir kod için birkaç saniye beklemek genellikle iyidir)
+* Kod+PIN doğruydu, ancak SMS'in gönderilmesinde/ulaşmasında bir gecikme oldu ve **AAPS** bu yüzden Authenticator kodunun süresinin dolduğunu hesapladı
+* **AAPS** telefonu pompanın menzili dışında/pompayla bağlantısı yok
+* Sistem şu anda zaten bir bolus veriyor
 
-Common errors are shown in the examples below:
+Sık görülen hatalar aşağıdaki örneklerde gösterilmiştir:
 
 ![image](../images/remote-control-17.png)
 
-### How can I stop a command once it has been authenticated?
+### Kimliği doğrulanmış bir komutu nasıl durdurabilirim?
 
-You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
+Durduramazsınız. Ancak SMS ile gönderilen bir bolusu, hızlı davranırsanız, **AAPS** telefonunun kendisinde bolus açılır penceresinden iptal edebilirsiniz. Birçok SMS komutu (bolus ve karbonhidrat bildirimi dışında) kolayca geri alınabilir ya da bir hata yapılırsa istenmeyen etkileri azaltmak için önlem alınabilir.
 
-For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
+Bolus ve karbonhidrat bildirimindeki hatalar için de önlem alabilirsiniz. Örneğin 20 g karbonhidrat bildirdiniz ama çocuğunuz yalnızca 10 g yedi ve siz (veya yanındaki bir bakım veren) tedaviyi doğrudan **AAPS** telefonunda silemiyorsanız, **AAPS**'in daha az agresif davranması için yüksek bir geçici hedef veya düşürülmüş bir profil ayarlayabilirsiniz.
 
 ### Çoklu SMS
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip, for example. If so, please ensure that xDrip (or any other app) does not upload treatments to NightScout.
+Aynı mesajı tekrar tekrar alıyorsanız (_örn._ bir profil değişimi), diğer uygulamalarla yanlışlıkla bir döngü koşulu oluşturmuş olabilirsiniz. Bu örneğin xDrip olabilir. Öyleyse lütfen xDrip'in (veya başka bir uygulamanın) tedavileri Nightscout'a yüklemediğinden emin olun.
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Diğer uygulama birden fazla telefona yüklenmişse, hepsinde yüklemeyi devre dışı bıraktığınızdan emin olun.
 
 (sms-commands-too-many-messages)=
-### I am getting far too many text messages from SMS Commands. Can I reduce the frequency, or make them stop?
+### SMS Komutlarından çok fazla kısa mesaj alıyorum. Sıklığını azaltabilir veya tamamen durdurabilir miyim?
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
+SMS komutlarını kullanmak, **AAPS** telefonundan bakım verenin telefonuna çok sayıda otomatik mesaj gönderilmesine neden olabilir. **AAPS**'te otomasyonlar kuruluysa, örneğin “Pompadaki bazal profili güncellendi” gibi mesajlar da alırsınız. Çok fazla SMS gönderilecekse, **AAPS** telefonunuzun tarifesinde (ve kullanılan her bakım veren telefonunda) sınırsız SMS olması ve tüm telefonlarda SMS bildirimlerini, alarmlarını veya titreşimlerini kapatmanız faydalı olabilir. SMS komutlarını kullanıp bu bildirimleri almamak mümkün değildir. Bu nedenle çocuğunuzla (yeterince büyükse) doğrudan iletişim kurmak için SMS yerine başka bir yol isteyebilirsiniz. **AAPS** bakım verenlerinin sık kullandığı alternatif iletişim uygulamaları arasında WhatsApp, LINE, Telegram ve Facebook Messenger vardır.
 
-It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+Profil değişikliği Nightscout'tan geldiyse, "Pompadaki bazal profili güncellendi" SMS'ini devre dışı bırakmak mümkündür. Bunu yapmak için AAPS dizininizin `extra` klasöründe adı **tam olarak** `do_not_send_sms_on_profile_change` olan bir dosya oluşturun.

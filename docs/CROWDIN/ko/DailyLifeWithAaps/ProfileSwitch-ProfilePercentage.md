@@ -1,182 +1,182 @@
-# Profile switch & Profile Percentage
+# 프로파일 전환과 프로파일 퍼센트
 
-This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn how to create a **Profile** in [Your AAPS Profile](#your-aaps-profile-create-and-edit-profiles).
+이 섹션에서는 **프로파일 전환**과 **프로파일 퍼센트**가 무엇인지 설명합니다. **프로파일**을 만드는 방법은 [AAPS 프로파일](#your-aaps-profile-create-and-edit-profiles)에서 배울 수 있습니다.
 
-When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
+**AAPS**를 처음 시작할 때는 **프로파일**을 만들고, **프로파일 전환**을 실행하는 방법을 이해하고, **AAPS**에서 **프로파일 퍼센트**가 미치는 영향을 알아야 합니다. **프로파일 전환** 또는 **프로파일 퍼센트** 기능은 특히 다음과 같은 경우에 유용합니다:
 
-- the Menstrual Cycle - a percentage adjustment within a **Profile** can be set up in **Automations** in order to allow **AAPS** to accommodate for different stages of the hormone cycle and with predicted insulin resistance.
+- 생리 주기 - **자동화**에서 **프로파일** 안의 퍼센트 조정을 설정하여, **AAPS**가 호르몬 주기의 여러 단계와 예상되는 인슐린 저항성에 맞출 수 있게 할 수 있습니다.
 
-- Exercise - a percentage adjustment within a **Profile** can be set up in **Automations** for exercise in order to reduce basal intake.
+- 운동 - 운동할 때 기저 주입을 줄이기 위해 **자동화**에서 **프로파일** 안의 퍼센트 조정을 설정할 수 있습니다.
 
-- Night or pattern shift workers - a time shift in **Profile** can be set up for pattern shift workers by altering the number of hours in the **Profile** to how much later/earlier the user will go to bed or wake up.
+- 야간 또는 교대 근무자 - 교대 근무자는 얼마나 늦게/일찍 잠자리에 들거나 일어날지에 맞춰 **프로파일**의 시간 수를 바꾸어 **프로파일**에 시간 이동을 설정할 수 있습니다.
 
-Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
+왜 임시 기저 조정 대신 **프로파일 퍼센트**를 사용합니까? 더 효과적으로 적용하기 위해 **프로파일 퍼센트**는 기저, ISF, I:C 모두에 같은 비율로 감소 또는 증가를 적용합니다. 이렇게 하면 **AAPS**가 사용자의 인슐린을 주입할 때 균형 잡힌 계산을 합니다. 알고리즘이 ISF와 I:C에 계속 같은 비율을 사용한다면, **AAPS**의 **프로파일**에서 기저만 줄여서는 얻는 이점이 거의 없습니다.
 
 (ProfileSwitch-change-percentage)=
 
-## Change the Profile Percentage from the main screen
+## 메인 화면에서 프로파일 퍼센트 바꾸기
 
-You need at least one saved **Profile**. A **Profile Percentage** is always applied through a **Profile Switch**: you activate a **Profile** again, this time with a percentage.
+저장된 **프로파일**이 하나 이상 필요합니다. **프로파일 퍼센트**는 항상 **프로파일 전환**을 통해 적용됩니다: **프로파일**을 다시 활성화하되, 이번에는 퍼센트를 함께 지정합니다.
 
-```{admonition} Coming from AAPS 3? :class: note A long press on the profile name no longer opens the profile switch dialog. **Tap** the profile name, then tap the round **▶** button at the bottom right: it opens the same settings (percentage, duration, Activity temp target).
+```{admonition} AAPS 3에서 오셨습니까? :class: note 프로파일 이름을 길게 눌러도 더 이상 프로파일 전환 대화 상자가 열리지 않습니다. 프로파일 이름을 **탭**한 다음, 오른쪽 아래의 둥근 **▶** 버튼을 탭하십시오: 같은 설정(퍼센트, 기간, 활동 임시 목표)이 열립니다.
 
-    <br />1. On the main screen, **tap the profile name** (next to the star icon). The [Profile screen](#ProfileSwitch-manage-v4) opens on the card of the running **Profile**, marked **ACTIVE**.
+    <br />1. 메인 화면에서 **프로파일 이름을 탭**하십시오(별 아이콘 옆). [프로파일 화면](#ProfileSwitch-manage-v4)이 실행 중인 **프로파일**의 카드에서 열립니다. 이 카드에는 **활성** 표시가 있습니다.
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/ProfileSwitch2.png)
+       ![메인 화면에서 프로파일 이름을 탭하여 프로파일 화면 열기](../images/ProfileSwitch2.png)
     
-    2. To keep the same **Profile**, leave the **ACTIVE** card selected. To change **Profile** at the same time, swipe to another card.
-    3. Tap the round **▶** button (**Activate**) at the bottom right. The **Activate** screen opens.
-    4. Set the **Percentage** with **−** / **+** (steps of 5 %), or type it in (30 to 250 %). The field always starts at **100 %**: it does not show the percentage that is running now. For example, enter **80** for 20 % less insulin, or **120** for 20 % more.
-    5. Set the **Duration** in minutes:
-       * **0** keeps the new percentage until you make another **Profile Switch**;
-       * any other value ends the switch after that time, and **AAPS** goes back to the **Profile** that was running before.
+    2. 같은 **프로파일**을 유지하려면 **활성** 카드를 선택된 상태로 두십시오. 동시에 **프로파일**을 바꾸려면 다른 카드로 밀어 넘기십시오.
+    3. 오른쪽 아래의 둥근 **▶** 버튼(**활성화**)을 탭하십시오. **활성화** 화면이 열립니다.
+    4. **−** / **+**(5 % 단위)로 **퍼센트**를 설정하거나 직접 입력하십시오(30~250 %). 이 항목은 항상 **100 %**에서 시작합니다: 지금 실행 중인 퍼센트를 보여주지 않습니다. 예를 들어 인슐린을 20 % 줄이려면 **80**을, 20 % 늘리려면 **120**을 입력하십시오.
+    5. **기간**을 분 단위로 설정하십시오:
+       * **0**은 다른 **프로파일 전환**을 할 때까지 새 퍼센트를 유지합니다;
+       * 다른 값은 그 시간이 지나면 전환을 끝내고, **AAPS**는 이전에 실행 중이던 **프로파일**로 돌아갑니다.
     
-       ![The Activate screen set to 80 % for 60 minutes](../images/v4/Profiles/profile_activate_percentage.png)
+       ![80 %, 60분으로 설정된 활성화 화면](../images/v4/Profiles/profile_activate_percentage.png)
     
-    6. Tap **▶ Activate** at the bottom of the screen. Check the summary in the **Profile switch** dialog and tap **OK**.
+    6. 화면 아래의 **▶ 활성화**를 탭하십시오. **프로파일 전환** 대화 상자에서 요약을 확인하고 **확인**을 탭하십시오.
     
-       ![The confirmation dialog — profile, percentage and duration](../images/v4/Profiles/profile_activate_confirm.png)
+       ![확인 대화 상자 — 프로파일, 퍼센트, 기간](../images/v4/Profiles/profile_activate_confirm.png)
     
-    Back on the main screen, the profile name shows the percentage and the remaining time, for example *Normal (80%) (59')*, and turns yellow while a switch with a duration is running. A star marks the switch on the glucose graph. See [the main screen](#aaps-screens-profile--target).
+    메인 화면으로 돌아오면 프로파일 이름에 퍼센트와 남은 시간이 표시되며(예: *Normal (80%) (59')*), 기간이 있는 전환이 실행 중인 동안 노란색으로 바뀝니다. 혈당 그래프에는 별이 전환을 표시합니다. [메인 화면](#aaps-screens-profile--target)을 참조하십시오.
     
-    ![The main screen while an 80 % profile switch is running](../images/v4/Profiles/profile_switch_running.png)
+    ![80 % 프로파일 전환이 실행 중인 메인 화면](../images/v4/Profiles/profile_switch_running.png)
     
-    To **go back to 100 %** before the end, repeat the steps and keep **Percentage** at 100 and **Duration** at 0.
+    끝나기 전에 **100 %로 돌아가려면** 같은 단계를 반복하고 **퍼센트**는 100, **기간**은 0으로 두십시오.
     
-    ```{admonition} One-tap percentages
+    ```{admonition} 한 번 탭으로 퍼센트 적용
     :class: tip
-    If you often use the same percentage (sport, illness), add a [Profile shortcut](#profile-shortcuts) to the Quick Launch bar, or create a [scene](Scenes.md). Both apply a profile with a preset percentage and duration in one tap.
+    같은 퍼센트(운동, 질병)를 자주 사용한다면 QuickLaunch 툴바에 [프로파일 바로가기](#profile-shortcuts)를 추가하거나 [장면](Scenes.md)을 만드십시오. 둘 다 한 번 탭으로 미리 정한 퍼센트와 기간의 프로파일을 적용합니다.
     
 
 (ProfileSwitch-manage-v4)=
 
-## Managing and activating profiles (Manage → Profile)
+## 프로파일 관리 및 활성화 (관리 → 프로파일)
 
-In **AAPS** v4 profiles are managed and activated from the **Manage** screen (bottom navigation) → **Profile** (*“Manage and activate profiles”*).
+**AAPS** v4에서는 프로파일을 **관리** 화면(하단 내비게이션) → **프로파일**(*“프로파일 관리 및 활성화”*)에서 관리하고 활성화합니다.
 
-The Profile screen shows your profiles as a **swipeable card carousel**. The card of the running profile is marked **ACTIVE** and shows its total daily basal (e.g. *∑ 30.15 U*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+프로파일 화면은 프로파일을 **밀어 넘길 수 있는 카드 캐러셀**로 보여줍니다. 실행 중인 프로파일의 카드에는 **활성** 표시와 하루 총 기저량(예: *∑ 30.15 U*)이 표시됩니다. 선택한 카드 아래에서 그 프로파일의 세부 정보를 볼 수 있습니다 — **인슐린** 종류, 그리고 그래프와 함께 **IC**, **ISF**, **기저**, **목표** 일정.
 
-When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
+임시 전환이 실행 중이면 **활성** 카드에 퍼센트와 시간 이동, 남은 시간이 진행 막대 위에 표시됩니다. 예: *110% +2 h · 2 h 40 min*. 두 값은 30초마다 새로 고쳐집니다. 그러면 아래 세부 정보는 두 열로 표시됩니다: 파란색은 프로파일의 값, 빨간색은 퍼센트를 적용하여 실제로 사용 중인 값입니다.
 
-![The Profile screen — profile carousel, details and action bar](../images/v4/Profiles/profile_manage.png)
+![프로파일 화면 — 프로파일 캐러셀, 세부 정보, 동작 바](../images/v4/Profiles/profile_manage.png)
 
-The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **‘️ Delete**, and the round **▶ Activate** button on the right. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
+아래쪽 버튼은 **선택한** 프로파일에 적용됩니다: **➕ 추가**, **✏️ 편집**, **⧉ 복사**, **‘️ 삭제**, 그리고 오른쪽의 둥근 **▶ 활성화** 버튼입니다. 편집기에서 네 가지 일정(IC / ISF / BAS / TARG)을 입력하는 방법은 [프로파일 만들기와 편집](#your-aaps-profile-create-and-edit-profiles)을 참조하십시오.
 
-**⧉ Clone** uses the two-squares icon often used for *copy*, but there is nothing to paste: it makes the duplicate in one step. Confirm *Clone profile "Normal"?* and a new profile named *Normal copy* is added at the end of the carousel and selected, ready for **✏️ Edit** (where you can also rename it). This is not the same as cloning a past **Profile Switch** from the Treatments history, which creates a new profile *with the percentage and time shift applied*. See [Keep a profile switch for later use](#ProfileSwitch-keep-for-later).
+**⧉ 복사**는 흔히 *복사하기*(클립보드)에 쓰이는 두 사각형 아이콘을 사용하지만, 붙여 넣을 것은 없습니다: 한 단계로 사본을 만듭니다. *프로파일 "Normal"을(를) 복사하시겠습니까?*를 확인하면 *Normal 복사본*이라는 새 프로파일이 캐러셀 끝에 추가되고 선택됩니다. 바로 **✏️ 편집**할 수 있습니다(여기서 이름도 바꿀 수 있습니다). 이것은 처치 이력에서 과거의 **프로파일 전환**을 복사하는 것과 다릅니다. 그 경우에는 *퍼센트와 시간 이동이 적용된* 새 프로파일이 만들어집니다. [나중에 사용하기 위해 프로파일 전환 보관하기](#ProfileSwitch-keep-for-later)를 참조하십시오.
 
-(ProfileSwitch-read-only-mode)= **Only the ▶ Activate button?** Your settings are protected, so the screen opens read-only. Tap the **✏️ pencil** in the top bar and enter your settings password. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+(ProfileSwitch-read-only-mode)= **▶ 활성화 버튼만 보입니까?** 설정이 보호되어 있어 화면이 읽기 전용으로 열립니다. 상단 바의 **✏️ 연필**을 탭하고 설정 비밀번호를 입력하십시오. [설정 보안이 이제 관리 화면도 잠급니다](#v4changes-read-only-management)를 참조하십시오.
 
-### Reordering profiles
+### 프로파일 순서 변경
 
-If you have more than one profile you can choose their order in the carousel: tap the **Reorder** icon (⇅, two arrows pointing up and down) in the top bar. The page indicator is replaced by **◀ / ▶ move buttons** with a *position / total* readout — step the centred card earlier or later, then confirm with **✓** (or discard with **✕**). The new order is saved once, when you confirm.
+프로파일이 둘 이상이면 캐러셀의 순서를 정할 수 있습니다: 상단 바의 **순서 변경** 아이콘(⇅, 위아래를 가리키는 두 화살표)을 탭하십시오. 페이지 표시가 *위치 / 전체* 표시와 함께 **◀ / ▶ 이동 버튼**으로 바뀝니다 — 가운데 카드를 앞이나 뒤로 옮긴 다음 **✓**로 확인하십시오(또는 **✕**로 취소). 새 순서는 확인할 때 한 번 저장됩니다.
 
-![Reorder mode — move buttons and position readout](../images/v4/Profiles/profile_reorder.png)
+![순서 변경 모드 — 이동 버튼과 위치 표시](../images/v4/Profiles/profile_reorder.png)
 
-### Activating a profile
+### 프로파일 활성화하기
 
-Select a profile and tap **▶ Activate**. The **Activate** screen lets you tailor how the **Profile Switch** is applied:
+프로파일을 선택하고 **▶ 활성화**를 탭하십시오. **활성화** 화면에서 **프로파일 전환**을 어떻게 적용할지 정할 수 있습니다:
 
-![The Activate screen — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
+![활성화 화면 — 퍼센트, 기간, 시간 이동, 시간](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
-- **Duration** (0–10080 minutes, that is up to 7 days) — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
-- **Temporary target / Activity** — appears only when you set a **Duration** and a **Percentage** below 100 %. Switch it on to also start an [Activity temp target](#TempTargets-activity-temp-target) for the same duration, as you would before exercise.
-- **Time shift** — shows *0h*; tap **Change** to move the schedule forward or back by up to 23 hours (useful for shift work or travel). See [Time shift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
-- **Reuse** — appears when the running switch has a percentage other than 100 % or a time shift, for example **Reuse 80% 0h**. Tap it to fill in the same percentage and time shift, for instance to prolong a switch that is about to end.
+- **퍼센트**(30–250 %, 매번 100 %에서 시작) — 프로파일 전체의 크기를 조정합니다. 100 %는 프로파일을 그대로 사용합니다. 예를 들어 70 %는 기저와 계산된 인슐린 용량(식사 볼러스와 교정 모두)을 30 % 줄입니다. 혈당 목표나 탄수화물 흡수는 바꾸지 않습니다. 전체 효과는 [프로파일 퍼센트](#ProfileSwitch-profile-percentage)를 참조하십시오.
+- **기간**(0–10080분, 즉 최대 7일) — 전환이 얼마나 지속되는지 정합니다. **0 = 무기한**(다시 전환할 때까지). 0이 아닌 값이면 끝날 때 이전 프로파일로 돌아갑니다.
+- **임시 목표 / 활동** — **기간**과 100 % 미만의 **퍼센트**를 설정했을 때만 나타납니다. 이것을 켜면 운동 전에 하듯이 같은 기간 동안 [활동 임시 목표](#TempTargets-activity-temp-target)도 시작합니다.
+- **시간 이동** — *0h*를 표시합니다. **변경**을 탭하면 일정을 최대 23시간까지 앞이나 뒤로 옮길 수 있습니다(교대 근무나 여행에 유용). [시간 이동](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)을 참조하십시오.
+- **재사용** — 실행 중인 전환의 퍼센트가 100 %가 아니거나 시간 이동이 있을 때 나타납니다. 예: **80% 0시간 재사용**. 탭하면 같은 퍼센트와 시간 이동이 입력됩니다. 예를 들어 곧 끝날 전환을 연장할 때 사용합니다.
     
-    ![The Reuse button while an 80 % switch is running](../images/v4/Profiles/profile_activate_reuse.png)
+    ![80 % 전환이 실행 중일 때의 재사용 버튼](../images/v4/Profiles/profile_activate_reuse.png)
 
-- **Time** — *Now* by default. You can pick another time, up to 24 hours before or after now. A switch set in the future starts at that time; an Activity temp target set with it then also starts at that time.
+- **시간** — 기본값은 *지금*입니다. 지금으로부터 최대 24시간 전이나 후의 다른 시간을 선택할 수 있습니다. 미래로 설정한 전환은 그 시간에 시작하며, 함께 설정한 활동 임시 목표도 그 시간에 시작합니다.
     
-    ![Choosing the time of a profile switch](../images/v4/Profiles/profile_activate_time_picker.png)
+    ![프로파일 전환 시간 선택하기](../images/v4/Profiles/profile_activate_time_picker.png)
 
-- **Notes** — only shown if [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs) is on.
+- **노트** — [대화 상자에 노트 표시](#Preferences-show-notes-field-in-treatments-dialogs)가 켜져 있을 때만 표시됩니다.
 
-If the basal rates at the chosen percentage are not compatible with your pump, a warning appears at the top and **▶ Activate** stays disabled: choose another percentage.
+선택한 퍼센트의 기저 주입량이 펌프와 맞지 않으면 위쪽에 경고가 나타나고 **▶ 활성화**가 비활성화된 채로 남습니다: 다른 퍼센트를 선택하십시오.
 
-Tap **▶ Activate**, then **OK** in the confirmation dialog. The running profile then carries the **ACTIVE** badge on its card.
+**▶ 활성화**를 탭한 다음, 확인 대화 상자에서 **확인**을 탭하십시오. 이제 실행 중인 프로파일의 카드에 **활성** 배지가 표시됩니다.
 
-```{admonition} Your pump may round the basal rates :class: note Each pump can only give basal rates in its own steps (for example 0.05 U/h), so it rounds the rates of your **Profile**. **AAPS** then uses the basal the pump really gives, so IOB and TDD stay correct. If the pump gives a little more or less insulin per day than your **Profile**, the notice *"Basal profile in pump updated"* tells you how much, for example *"it gives 10.00 U per day instead of 10.12 U"*.
+```{admonition} 펌프가 기저 주입량을 반올림할 수 있습니다 :class: note 각 펌프는 자체 단위(예: 0.05 U/h)로만 기저를 주입할 수 있으므로 **프로파일**의 기저 주입량을 반올림합니다. 그러면 **AAPS**는 펌프가 실제로 주입하는 기저를 사용하므로 IOB와 TDD가 정확하게 유지됩니다. 펌프가 **프로파일**보다 하루에 인슐린을 조금 더 또는 덜 주입하면, *"펌프의 기저 프로파일이 업데이트되었습니다"* 알림이 그 양을 알려 줍니다. 예: *"하루에 10.12 U 대신 10.00 U를 주입합니다"*.
 
-If the pump reports a basal that is far from your **Profile**, **AAPS** keeps the **Profile** basal and asks you to check the basal rates in the pump.
+펌프가 **프로파일**과 크게 다른 기저를 보고하면, **AAPS**는 **프로파일**의 기저를 유지하고 펌프의 기저 주입량을 확인하라고 요청합니다.
 
-    <br />```{admonition} Percentage and time shift make one profile go a long way
+    <br />```{admonition} 퍼센트와 시간 이동으로 프로파일 하나를 폭넓게 사용하기
     :class: note
-    Rather than building many similar profiles, keep one base profile and apply it at a different **percentage** or **time shift** for recurring situations (illness, exercise, travel). This is exactly what [scenes](Scenes.md) automate.
+    비슷한 프로파일을 여러 개 만드는 대신, 기본 프로파일 하나를 유지하고 반복되는 상황(질병, 운동, 여행)에는 다른 **퍼센트**나 **시간 이동**으로 적용하십시오. 바로 이것을 [장면](Scenes.md)이 자동화합니다.
     
 
-A profile switch is not limited to this screen. The same switch can also be triggered from a **Wear OS watch**, a paired **client** (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)), a **[scene](Scenes.md)**, or an **Automation** rule.
+프로파일 전환은 이 화면에서만 할 수 있는 것이 아닙니다. 같은 전환을 **Wear OS 워치**, 페어링된 **클라이언트**([마스터 ↔ 클라이언트 제어](../RemoteFeatures/ClientMasterControl.md) 참조), **[장면](Scenes.md)** 또는 **자동화** 규칙에서도 실행할 수 있습니다.
 
 (ProfileSwitch-profile-percentage)=
 
 ## Profile Percentage
 
-It is important that a user understands the essential features of a **Profile Percentage**. By applying a percentage increase or decrease to a **Profile Switch** this will apply in the same percentage to either raise or lower the user’s settings parameters as set within the **Profile**.
+사용자는 **프로파일 퍼센트**의 핵심 특징을 이해해야 합니다. **프로파일 전환**에 퍼센트 증가 또는 감소를 적용하면, **프로파일**에 설정된 사용자 설정 매개변수도 같은 퍼센트만큼 높아지거나 낮아집니다.
 
-For example: a **Profile Switch** to 130% (means the user is 30% more insulin resistant) will instruct **AAPS** to
+예: **프로파일 전환**을 130%로 하면(사용자의 인슐린 저항성이 30% 더 높다는 뜻) **AAPS**는 다음과 같이 합니다:
 
-- **increase** the basal rate by 30%; 
-- **lower** the **ISF**: by dividing by 1.3;
-- **lower** the **I:C** by dividing by 1.3.
+- 기저 주입량을 30% **높입니다**; 
+- **ISF**를 1.3으로 나누어 **낮춥니다**;
+- **I:C**를 1.3으로 나누어 **낮춥니다**.
 
-Remember lowering the **ISF** or **I:C** means a stronger ratio and more insulin being administered. This fact can be easily overlooked by new users to **AAPS**.
+**ISF**나 **I:C**를 낮춘다는 것은 비율이 더 강해지고 더 많은 인슐린이 주입된다는 뜻임을 기억하십시오. **AAPS**를 처음 쓰는 사용자는 이 점을 쉽게 놓칠 수 있습니다.
 
-Once selected, **AAPS** readjusts the default basal rate, and **AAPS** (open or closed) will continue to work on top of the selected percentage **Profile**.
+선택하면 **AAPS**는 기본 기저 주입량을 다시 조정하고, **AAPS**(개방 또는 폐쇄)는 선택한 퍼센트 **프로파일**을 바탕으로 계속 작동합니다.
 
-The effect of a **Profile** Percentage is summarized in the table below:
+**프로파일** 퍼센트의 효과는 아래 표에 요약되어 있습니다:
 
-| Profile Switch  
-Percentage |    Effect    |     I:C  
-g/U     | Example  
+| 프로파일 전환  
+퍼센트 |   효과   |     I:C  
+g/U     | 예  
 15 g |          ISF  
 mmol/L/U  
-mg/dL/U          | U to lower  
+mg/dL/U          | 낮추는 데 필요한 U  
 2mmol/L  
 40mg/dL |
-|:---------------------------:|:------------:|:-----------------:|:--------------:|:------------------------------------------:|:------------------------------:|
-|             90%             |    Weaker    | 5/0.9  
-=**5.55** |     2.7 U      | 2.2/0.9  
+|:-------------:|:------:|:-----------------:|:--------:|:------------------------------------------:|:-------------------------------:|
+|      90%      |  더 약함  | 5/0.9  
+=**5.55** |  2.7 U   | 2.2/0.9  
 =**2.4**  
   
 40/0.9  
-=**44.4** |             0.8 U              |
-|          **100%**           | **Standard** |       **5**       |    **3 U**     |                **2.2  
-40**                |           **0.9** U            |
-|            130%             |   Stronger   | 5/1.3  
-=**3.85** |     3.9 U      | 2.2/1.3  
+=**44.4** |              0.8 U              |
+|   **100%**    | **표준** |       **5**       | **3 U**  |                **2.2  
+40**                |            **0.9** U            |
+|     130%      |  더 강함  | 5/1.3  
+=**3.85** |  3.9 U   | 2.2/1.3  
 =**1.7**  
   
 40/1.3  
-=**30.8** |             1.2 U              |
+=**30.8** |              1.2 U              |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
-## Time shift of the Circadian Percentage Profile
+## 하루 주기 퍼센트 프로파일의 시간 이동
 
-A ‘time shift’ within a user’s **Profile** feature will move the user’s **Profile’s** settings around the day-to-day clock (‘circadian’) to the desired number of hours entered. This can be helpful for:
+사용자 **프로파일** 기능의 ‘시간 이동’은 사용자의 **프로파일** 설정을 하루 24시간 시계(‘하루 주기’) 위에서 입력한 시간 수만큼 옮깁니다. 다음과 같은 경우에 도움이 됩니다:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
-- **users changing time zones during travelling**; or
-- **users who are type 1 children**: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
+- **야간 또는 교대 근무자**: 얼마나 늦게/일찍 잠자리에 들거나 일어날지에 맞춰 **프로파일**의 시간 수를 바꾸어 야간 근무에 대응할 수 있습니다; 
+- **여행 중 시간대를 바꾸는 사용자**; 또는
+- **1형 당뇨가 있는 어린이 사용자**: 정해진 취침 루틴과 인슐린 저항성이 **프로파일**에 반영되어 있는 경우. 어떤 이유로든 아이가 평소보다 늦게 잘 것으로 예상되면, 보호자는 아이의 **프로파일**에 ‘시간 이동’을 적용하여 **AAPS**가 사용자가 정한 시간대에 인슐린 저항성에 대응하게 할 수 있습니다.
 
-It is always a question of which hour’s **Profile’s** settings should replace the settings of the current time. This time must be shifted by x hours. So please be mindful of the directions as described in the following example:
+중요한 것은 항상 어느 시간의 **프로파일** 설정이 현재 시간의 설정을 대신해야 하는가입니다. 이 시간을 x시간만큼 이동해야 합니다. 따라서 다음 예에 설명된 방향에 주의하십시오:
 
 - Current time: 12:00
-- **Positive** time shift 
+- **양수(+)** time shift 
     - 2:00 **+10 h** -> 12:00
-    - Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-- **Negative** time shift 
+    - 양의 시간 이동 때문에 보통 12:00에 사용하는 설정 대신 2:00의 설정이 사용됩니다.
+- **음수(-)** time shift 
     - 22:00 **-10 h** -> 12:00
-    - Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
+    - 음의 시간 이동 때문에 보통 12:00에 사용하는 설정 대신 22:00(오후 10시)의 설정이 사용됩니다.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![프로파일 전환 시간 이동 방향](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+**프로파일**의 스냅샷을 저장하는 이 방식 덕분에 과거를 훨씬 더 정확하게 계산할 수 있고 **프로파일** 변경을 추적할 수 있습니다.
 
 (ProfileSwitch-keep-for-later)=
 
-## Keep a profile switch for later use
+## 나중에 사용하기 위해 프로파일 전환 보관하기
 
-Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.
+퍼센트 및/또는 시간 이동으로 프로파일 전환을 실행한 후에는, 이 임시 프로파일을 새 프로파일로 복사할 수 있습니다.
 
-To do this, open the menu (☰) → **Treatments** and go to the **Profile switch** tab, see [Clone a Profile switch to a new Profile](#your-aaps-profile-clone-profile-switch).
+이렇게 하려면 메뉴(☰) → **처치**를 열고 **프로파일 전환** 탭으로 이동하십시오. [프로파일 전환을 새 프로파일로 복사하기](#your-aaps-profile-clone-profile-switch)를 참조하십시오.

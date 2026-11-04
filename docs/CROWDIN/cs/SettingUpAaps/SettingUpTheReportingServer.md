@@ -12,9 +12,9 @@ Doporučujeme používat Nightscout.
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout je webová aplikace, která ukládá a zobrazuje vaše data z CGM a z **AAPS** a vytváří z nich přehledy. Je to výkonná platforma, která je do **AAPS** zapojena už mnoho let. Umožňuje uživatelům a pečovatelům sledovat data o diabetu pacienta téměř v reálném čase (pokud je mezi všemi zapojenými součástmi dostatečné internetové připojení, uplyne mezi příjmem dat a jejich zpřístupněním jen několik sekund). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
+Nightscout je webová aplikace, která ukládá a zobrazuje vaše data z CGM a z **AAPS** a vytváří z nich přehledy. Je to výkonná platforma, která je do **AAPS** zapojena už mnoho let. Umožňuje uživatelům a pečovatelům sledovat data o diabetu pacienta téměř v reálném čase (pokud je mezi všemi zapojenými součástmi dostatečné internetové připojení, uplyne mezi příjmem dat a jejich zpřístupněním jen několik sekund). Přenáší také vzdálené příkazy, které pečovatelé posílají do **AAPS** z **AAPSClient** (viz [Ovládání master ↔ klient](#client-master-control)).
 
-Nightscout je poskytován jako open source software. Kdokoli může vytvořit a provozovat Nightscout server, a to buď zdarma, nebojako placenou službu.
+Nightscout je poskytován jako open source software. Kdokoli může vytvořit a provozovat Nightscout server, a to buď zdarma, nebo jako placenou službu.
 
 Více informací najdete na [webu projektu Nightscout](http://nightscout.github.io/).
 
@@ -24,9 +24,9 @@ Vytvoření reportovacího serveru Nightscout může vyžadovat jednu nebo více
 
 Popis, jak si Nightscout nastavit, včetně výhod a nevýhod různých možností provozu a odhadu nákladů, najdete [zde](https://nightscout.github.io/nightscout/new_user/#free-diy).
 
-### Možnost 2 - Zaplaťe si hostovanou službu Nightscout
+### Možnost 2 – Zaplaťte si hostovanou službu Nightscout
 
-Existují také možnosti od různých poskytovatelů služeb, kteří pro vás hostují Nightscout za měsíční poplatek. Náklady jsou zvládnutelné a výhodou hostovaného řešení je, že nemusíte IT znalosti ani ani mít provozní infrastrukturu.
+Existují také možnosti od různých poskytovatelů služeb, kteří pro vás hostují Nightscout za měsíční poplatek. Náklady jsou zvládnutelné a výhodou hostovaného řešení je, že nepotřebujete znalosti IT ani žádnou provozní infrastrukturu.
 
 
 Stávající uživatelé Nightscoutu mohou čas od času přehodnotit, kde a jak je jejich Nightscout server hostován, a přejít na jiné řešení, pokud se stane vhodnější.
@@ -44,7 +44,7 @@ Tidepool je v **AAPS** k dispozici od verze 3.2, která vyšla na konci roku 202
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
+Při používání **AAPS** uplynou mezi příjmem dat a jejich zobrazením v přehledech tři hodiny, proto Tidepool není vhodný pro sdílení informací v reálném čase s pečovateli.  
 Na druhou stranu může být Tidepool skvělým řešením pro sdílení přehledů s endokrinologem pacienta, pokud Nightscout není přijatelné řešení.  
 ```
 

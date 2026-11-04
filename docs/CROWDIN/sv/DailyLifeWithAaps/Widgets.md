@@ -1,7 +1,7 @@
 (widgets)=
-# Home screen widgets
+# Widgets på hemskärmen
 
-**AAPS** provides widgets that you can add to your phone's home screen. A widget shows your current data without opening the app. Tap a widget to open **AAPS**.
+**AAPS** har widgets som du kan lägga till på telefonens hemskärm. En widget visar dina aktuella data utan att du behöver öppna appen. Tryck på en widget för att öppna **AAPS**.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,70 +10,70 @@
 
 ---
 
-## Available widgets
+## Tillgängliga widgets
 
-Five widgets are available. They are listed under **AAPS** in the Android widget picker:
+Det finns fem widgets. De finns under **AAPS** i Androids widgetväljare:
 
-![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
+![AAPS-widgets i Androids widgetväljare](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Default size | What it shows                                                                                                                                                                                                                                              |
-| --------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                   | 5 × 2        | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
-| **AAPS glucose circle**           | 2 × 2        | The BG circle of the main screen: a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading.                                                                                                                     |
-| **AAPS Small**                    | 2 × 2        | Profile name, BG with trend arrow, time since the last reading, delta, IOB and COB.                                                                                                                                                                        |
-| **AAPS BG + IOB + COB (compact)** | 4 × 1        | One line with BG and trend arrow, IOB and COB.                                                                                                                                                                                                             |
-| **AAPS BG graph**                 | 3 × 1        | The BG value with a small graph of the recent readings.                                                                                                                                                                                                    |
+| Widget                            | Standardstorlek | Vad den visar                                                                                                                                                                                                                                                  |
+| --------------------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AAPS-widget**                   | 5 × 2           | Statusblocket på huvudskärmen: BG med trend och delta, loopläget som en ikon bredvid profilnamnet, målvärde, känslighet (visas som på huvudskärmen), IOB och COB. Texterna krymper så att de passar den storlek du ger widgeten, i stället för att klippas av. |
+| **AAPS glukoscirkel**             | 2 × 2           | BG-cirkeln på huvudskärmen: en ring i BG-färgen, trendbågen, delta, BG-värdet och tiden sedan senaste avläsningen.                                                                                                                                             |
+| **AAPS liten**                    | 2 × 2           | Profilnamn, BG med trendpil, tid sedan senaste avläsningen, delta, IOB och COB.                                                                                                                                                                                |
+| **AAPS BG + IOB + COB (kompakt)** | 4 × 1           | En rad med BG och trendpil, IOB och COB.                                                                                                                                                                                                                       |
+| **AAPS BG-graf**                  | 3 × 1           | BG-värdet med en liten graf över de senaste avläsningarna.                                                                                                                                                                                                     |
 
-The **AAPS widget**, the **glucose circle** and the **Small** widget on a home screen:
+**AAPS-widget**, **AAPS glukoscirkel** och **AAPS liten** på en hemskärm:
 
-![AAPS widget, glucose circle and Small widget on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![AAPS-widget, glukoscirkel och liten widget på hemskärmen](../images/widgets/home_widgets_full_circle_small.png)
 
-The **compact** widget and the **BG graph** widget:
+Widgeten **kompakt** och widgeten **BG-graf**:
 
-![Compact widget and BG graph widget on the home screen](../images/widgets/home_widgets_compact_graph.png)
+![Kompakt widget och BG-graf-widget på hemskärmen](../images/widgets/home_widgets_compact_graph.png)
 
-BG values use the same colours as in **AAPS**: green in range, yellow above range, red below range.
-
----
-
-## Adding a widget
-
-The exact steps depend on your phone and its launcher. On most phones:
-
-1. Long-press an empty area of the home screen and select **Widgets**.
-
-   ![The widget picker](../images/widgets/widget_picker_list.png)
-
-2. Open **AAPS** in the list and tap the widget you want.
-3. Press **Add** (or drag the widget to the place you want).
-
-   ![The Add button below the selected widget](../images/widgets/widget_picker_add_button.png)
-
-The widget is placed on the home screen. Right after adding it, it is shown with handles: drag a handle to **resize** the widget, or drag the widget to move it. The glucose circle can be resized to any size.
-
-![A widget just added, with its resize handles and the settings button](../images/widgets/widget_glucose_circle_added.png)
-
-If the home screen page is full, the phone puts the widget on a new page.
+BG-värden har samma färger som i **AAPS**: grönt inom målområdet, gult över målområdet, rött under målområdet.
 
 ---
 
-## Widget configuration
+## Lägga till en widget
 
-Tap the **pencil** button shown on the widget just after you added it. Later, long-press the widget to get the handles and the pencil back.
+De exakta stegen beror på din telefon och dess hemskärmsapp (launcher). På de flesta telefoner:
 
-The **Widget configuration** dialog has two settings:
+1. Tryck länge på ett tomt område på hemskärmen och välj **Widgets**.
 
-- **Configure opacity** — how opaque the background of the widget is. A low value lets the wallpaper show through.
-- **Use black color** — use a black background instead of the default one.
+   ![Widgetväljaren](../images/widgets/widget_picker_list.png)
 
-![Widget configuration](../images/widgets/widget_configuration.png)
+2. Öppna **AAPS** i listan och tryck på den widget du vill ha.
+3. Tryck på **Add** (eller dra widgeten dit du vill ha den).
 
-Each widget has its own configuration.
+   ![Knappen Add under den valda widgeten](../images/widgets/widget_picker_add_button.png)
+
+Widgeten placeras på hemskärmen. Direkt efter att du har lagt till den visas den med handtag: dra i ett handtag för att **ändra storlek** på widgeten, eller dra widgeten för att flytta den. Glukoscirkeln kan ändras till valfri storlek.
+
+![En nyss tillagd widget, med handtag för att ändra storlek och knappen för inställningar](../images/widgets/widget_glucose_circle_added.png)
+
+Om sidan på hemskärmen är full lägger telefonen widgeten på en ny sida.
 
 ---
 
-## Good to know
+## Widget-konfiguration
 
-- A widget only **displays** data. You cannot bolus or change anything from a widget.
-- The widget is refreshed by **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
-- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Raise the opacity in the widget configuration if the color is hard to see. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions).
+Tryck på knappen med en **penna** som visas på widgeten direkt efter att du har lagt till den. Senare kan du trycka länge på widgeten för att få tillbaka handtagen och pennan.
+
+Dialogrutan **Widget-konfiguration** har två inställningar:
+
+- **Konfigurera opacitet** — hur ogenomskinlig widgetens bakgrund är. Ett lågt värde gör att bakgrundsbilden syns igenom.
+- **Använd svart färg** — använd en svart bakgrund i stället för standardbakgrunden.
+
+![Widget-konfiguration](../images/widgets/widget_configuration.png)
+
+Varje widget har sin egen konfiguration.
+
+---
+
+## Bra att veta
+
+- En widget **visar** bara data. Du kan inte ge bolus eller ändra något från en widget.
+- Widgeten uppdateras av **AAPS**. Om **AAPS** inte körs, eller om Android begränsar appen i bakgrunden, kan widgeten visa gamla data. Kontrollera tiden sedan senaste avläsningen och se till att **AAPS** är undantagen från [batterioptimering](#SetupWizard-StoragePermission).
+- Med **AAPSClient**, **AAPSClient2** och **AAPSClient3** är widgetens bakgrund gul, blå eller grön, så att du kan skilja apparna åt. Höj opaciteten i widget-konfigurationen om färgen är svår att se. Se [Om AAPSClient, AAPSClient2 och AAPSClient3](#remotecontrol-aapsclient-versions).

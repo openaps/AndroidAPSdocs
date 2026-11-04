@@ -1,184 +1,184 @@
 # Key AAPS features
 
-## Loop mode
+## Ciklo režimas
 
-The loop status is shown on the main screen with one of the icons below.
+Ciklo būsena rodoma pagrindiniame ekrane viena iš toliau pateiktų piktogramų.
 
-**AAPS** offers several loop modes, such as Closed Loop (1), Low Glucose Suspend (LGS - 2) and Open Loop (3).
+**AAPS** turi kelis ciklo režimus, pvz., uždarą ciklą (1), stabdymą esant žemai glikemijai (LGS – 2) ir atvirą ciklą (3).
 
-See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode and on the other icons in the picture (4 to 6).
+Kaip pasirinkti ciklo režimą ir ką reiškia kitos paveikslėlio piktogramos (4–6), žr. [AAPS ekranai > Pagrindinis ekranas > Ciklo būsena](#AapsScreens-loop-status).
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Ciklo būsena](../images/Home2020_LoopStatus.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
-### Open Loop
+### Atviras ciklas
 
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
+**AAPS** nuolat vertina visus turimus duomenis (AIO, AAO, KG...) ir prireikus pateikia terapijos rekomendacijas (laikinas valandines bazes), kaip koreguoti gydymą.
 
-The suggestions will not be executed automatically (as in closed loop). The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
+Rekomendacijos nevykdomos automatiškai (kaip uždaro ciklo režimu). Rekomendacijas naudotojas turi įvesti į pompą rankiniu būdu (jei naudojama virtuali pompa) arba patvirtinti mygtuku, jei **AAPS** prijungta prie tikros pompos.
 
-When **AAPS** has a suggestion, a **Loop** entry with a badge appears in the bottom navigation of the main screen. Press it to read the suggestion ("Accept new temp basal") with its rate, duration and reason, then press **Perform** to carry it out:
+Kai **AAPS** turi rekomendaciją, pagrindinio ekrano apatinėje naršymo juostoje atsiranda įrašas **Ciklas** su ženkliuku. Paspauskite jį, perskaitykite rekomendaciją („Priimti naują laikiną bazę“) su jos dydžiu, trukme ir priežastimi, tada paspauskite **Vykdyti**, kad ją įvykdytumėte:
 
-![Open loop suggestion with the Perform button](../images/screens/loop_tab.png)
+![Atviro ciklo rekomendacija su mygtuku Vykdyti](../images/screens/loop_tab.png)
 
-A suggestion is only valid for a few minutes. If it is older than about 9 minutes, or if the loop has been suspended or the pump disconnected in the meantime, **AAPS** refuses it and nothing is sent to the pump (*"This suggestion is too old. Nothing was sent to the pump. Wait for the next one."*). Wait for the next suggestion.
+Rekomendacija galioja tik kelias minutes. Jei ji senesnė nei maždaug 9 minutės arba jei per tą laiką ciklas buvo sustabdytas ar pompa atjungta, **AAPS** ją atmeta ir į pompą nieko nesiunčia (*„Rekomendacija per sena, todėl į pompą nebus siunčiama. Palaukite sekančios.“*). Palaukite kitos rekomendacijos.
 
-This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
+Šis režimas skirtas susipažinti, kaip veikia **AAPS**, arba jei naudojate nepalaikomą pompą. Kad ir ką čia pasirinktumėte, iki **[5 mokymo etapo](#objectives-objective5)** pabaigos veiksite atviro ciklo režimu.
 
 (KeyAapsFeatures-LGS)=
 
-### Low Glucose Suspend (LGS)
+### Stabdymas esant žemai glikemijai (LGS)
 
-In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
+Šiuo režimu [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) nustatomas į nulį.
 
-This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current **Profile**. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+Tai reiškia, kad jei gliukozė krenta, **AAPS** gali sumažinti jūsų valandinę bazę. Tačiau jei gliukozė kyla, automatinė korekcija nebus atliekama. Jūsų valandinės bazės išliks tokios, kaip nustatyta dabartiniame **profilyje**. Tik jei AIO yra neigiamas (po ankstesnio stabdymo esant žemai glikemijai), bus suleista papildomo insulino **KG** sumažinti.
 
-This mode is available starting at **[Objective 6](#objectives-objective6)**.
+Šis režimas pasiekiamas nuo **[6 mokymo etapo](#objectives-objective6)**.
 
-Besides selecting it yourself, **AAPS** can also switch to this mode on its own: while you are working on **[Objective 6](#objectives-objective6)**, and whenever it detects duplicate BG readings (see [BG warning sign](#aaps-screens-bg-warning-sign)).
+Be to, kad šį režimą galite pasirinkti patys, **AAPS** gali į jį persijungti ir pati: kol vykdote **[6 mokymo etapą](#objectives-objective6)** ir kai aptinka pasikartojančius KG rodmenis (žr. [KG įspėjamasis ženklas](#aaps-screens-bg-warning-sign)).
 
 (KeyAapsFeatures-ClosedLoop)=
 
-### Closed Loop
+### Uždaras ciklas
 
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (*i.e.* without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
+**AAPS** nuolat vertina visus turimus duomenis (AIO, AAO, KG...) ir prireikus automatiškai koreguoja gydymą (*t. y.* be jūsų įsikišimo), kad pasiektų nustatytą [tikslinį intervalą arba reikšmę](#profile-glucose-targets) (boluso suleidimas, laikina valandinė bazė, insulino tiekimo sustabdymas, kad būtų išvengta hipoglikemijos, ir kt.).
 
-The Closed Loop works within numerous safety limits, which can be set individually.
+Uždaras ciklas veikia laikydamasis daugelio saugos ribų, kurias galima nustatyti individualiai.
 
-Closed Loop is only possible if you are in **[Objective 7](#objectives-objective7)** or higher and use a supported pump.
+Uždaras ciklas galimas tik jei esate **[7 mokymo etape](#objectives-objective7)** ar aukštesniame ir naudojate palaikomą pompą.
 
 (autosens)= (Open-APS-features-autosens)=
 
 ## Autosens
 
-- Autosens is an algorithm which looks at blood glucose deviations (positive/negative/neutral).
-- It will try and figure out how sensitive/resistant you are based on these deviations.
-- The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
-- If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
-- Changing a cannula or changing a profile will reset Autosens ratio back to 100% (a percentual profile switch with duration won't reset autosens).
-- Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
-- If continuously eating carbs over an extended period, Autosens will be less effective during that period as carbs are excluded from **BG** delta calculations.
-- The deviations are converted into a **sensitivity ratio** (a percentage): a ratio below 100% means AAPS thinks you're more sensitive to insulin than your **Profile** assumes (so it lowers effective basal and raises the ISF value), while a ratio above 100% means you're more resistant (so it raises basal and lowers the ISF value).
-- By default this ratio is kept between 0.7 (70%, more sensitive) and 1.2 (120%, more resistant), so a run of unusual data can't push your dosing too far from your **Profile**. These bounds can be adjusted in Sensitivity Detection's advanced settings.
-- Autosens and [Autotune](../AdvancedOptions/Autotune.md) address the same underlying problem on different timescales: Autosens nudges your *live* dosing minute-to-minute based on the last 8-24h, while Autotune slowly rewrites your *Profile* itself based on weeks of history. Running both is normal and expected — they complement rather than duplicate each other.
+- Autosens yra algoritmas, kuris vertina gliukozės nuokrypius (teigiamus / neigiamus / neutralius).
+- Pagal šiuos nuokrypius jis bando nustatyti, kiek esate jautrus ar rezistentiškas insulinui.
+- **OpenAPS** oref įgyvendinimas naudoja 24 ir 8 valandų duomenų derinį. Naudojamas tas laikotarpis, kuris rodo didesnį jautrumą.
+- Naudotojai, perėję nuo oref1, tikriausiai pastebės, kad sistema į pokyčius gali reaguoti mažiau dinamiškai, nes jautrumas skaičiuojamas pagal 24 arba 8 valandų duomenis.
+- Pakeitus kaniulę arba profilį, Autosens santykis grįžta į 100 % (procentinis profilio keitimas su nustatyta trukme Autosens neatstato).
+- Autosens koreguoja jūsų valandinę bazę ir JIF (t. y. veikia panašiai kaip profilio keitimas).
+- Jei angliavandenius valgote nuolat ilgą laiką, Autosens tuo metu veiks prasčiau, nes angliavandeniai neįtraukiami į **KG** pokyčio skaičiavimus.
+- Nuokrypiai paverčiami **jautrumo santykiu** (procentais): santykis, mažesnis nei 100 %, reiškia, kad AAPS mano, jog esate jautresnis insulinui, nei numato jūsų **profilis** (todėl sumažina faktinę valandinę bazę ir padidina JIF reikšmę), o santykis, didesnis nei 100 %, reiškia, kad esate rezistentiškesnis (todėl padidina valandinę bazę ir sumažina JIF reikšmę).
+- Pagal numatytuosius nustatymus šis santykis laikomas tarp 0,7 (70 %, didesnis jautrumas) ir 1,2 (120 %, didesnė rezistencija), kad neįprastų duomenų seka negalėtų per daug nutolinti dozavimo nuo jūsų **profilio**. Šias ribas galima keisti jautrumo nustatymo papildomuose nustatymuose.
+- Autosens ir [Autotune](../AdvancedOptions/Autotune.md) sprendžia tą pačią problemą skirtingais laiko mastais: Autosens kas minutę pagal paskutinių 8–24 val. duomenis šiek tiek koreguoja jūsų *esamą* dozavimą, o Autotune pagal kelių savaičių istoriją pamažu perrašo patį jūsų *profilį*. Naudoti abu yra įprasta ir tikėtina – jie vienas kitą papildo, o ne dubliuoja.
 
-*For the full technical treatment of the autosens algorithm, see [OpenAPS's Autosens documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).*
+*Išsamų techninį Autosens algoritmo aprašymą rasite [OpenAPS Autosens dokumentacijoje](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).*
 
 (Open-APS-features-super-micro-bolus-smb)=
 
-## Super Micro Bolus (SMB)
+## Supermikrobolusas (SMB)
 
-**SMB**, the shortform of **Super micro bolus**, is an OpenAPS feature introduced from 2018 onwards, within the Oref1 algorithm. In contrast to **AMA**, **SMB** does not use temporary basal rates to control glucose levels, but mainly **small super micro boluses**. In situations where **AMA** would add 1.0 IU insulin using a temporary basal rate, **SMB** delivers several super micro boluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system to adjust the blood glucose faster than with the temporary basal rate increase in **AMA**.
+**SMB** yra **Super micro bolus** (supermikroboluso) santrumpa. Tai OpenAPS funkcija, įdiegta nuo 2018 m. Oref1 algoritme. Skirtingai nei **AMA**, **SMB** gliukozei reguliuoti naudoja ne laikinas valandines bazes, o daugiausia **mažus supermikrobolusus**. Kai **AMA** laikina valandine baze suleistų 1,0 V insulino, **SMB** mažais žingsniais **kas 5 minutes** suleidžia kelis supermikrobolusus, pvz., 0,4 V, 0,3 V, 0,2 V ir 0,1 V. Tuo pat metu (dėl saugumo) tikroji valandinė bazė tam tikram laikui nustatoma į 0 V/val., kad nebūtų perdozuota (**„nulinė laikina bazė“**). Taip sistema gliukozę gali koreguoti greičiau nei **AMA**, kuri didina laikiną valandinę bazę.
 
-Thanks to SMB, it may be sufficient for meals containing only "slow" carbs to inform the system of the planned amount of carbohydrate and leave the rest to **AAPS**. However, this may lead to higher postprandial (post-meal) peaks because pre-bolusing isn’t possible. Or you can give, if necessary with pre-bolusing, a **start bolus**, which **only partly** covers the carbohydrates (e.g. 2/3 of the estimated amount) and let **SMB** deliver the rest of the insulin.
+Thanks to SMB, it may be sufficient for meals containing only "slow" carbs to inform the system of the planned amount of carbohydrate and leave the rest to **AAPS**. Tačiau tada gliukozė po valgio gali pakilti aukščiau, nes išankstinio boluso suleisti negalima. Or you can give, if necessary with pre-bolusing, a **start bolus**, which **only partly** covers the carbohydrates (e.g. 2/3 of the estimated amount) and let **SMB** deliver the rest of the insulin.
 
 ![SMBs on the IOB graph](../images/SMBs.png)
 
-SMBs are shown on the [IOB graph](#aaps-screens-iob) with blue triangles. [Press and hold](#aaps-screens-graph-press-and-hold) the graph at a triangle to see how much insulin was delivered, or use the [Treatments history](#aaps-screens-treatments).
+SMB [AIO grafike](#aaps-screens-iob) rodomi mėlynais trikampiais. [Paspauskite ir palaikykite](#aaps-screens-graph-press-and-hold) grafiką ties trikampiu, kad pamatytumėte, kiek insulino suleista, arba naudokite [Terapijos istoriją](#aaps-screens-treatments).
 
 **SMB's** features contain some safety mechanisms:
 
-1. **Largest single SMB dose**  
-  The largest single SMB dose can only be the smallest value of:
+1. **Didžiausia vienkartinė SMB dozė**  
+  Didžiausia vienkartinė SMB dozė gali būti tik mažiausia iš šių reikšmių:
   
-        * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
-        * half the amount of insulin currently required, or
-        * the remaining portion of your maxIOB value in the settings.
+        * reikšmė, atitinkanti dabartinę valandinę bazę (pakoreguotą Autosens) per laiką, nustatytą „Maksimalus bazės minučių skaičius SMB ribai“, pvz., bazės kiekis kitoms 30 minučių, arba
+        * pusė šiuo metu reikalingo insulino kiekio, arba
+        * likusi jūsų nustatymuose nurodytos maxIOB reikšmės dalis.
       
 
-2. **Low temp basal rates**  
-  Low temporary basal rates (called 'low temps') or temporary basal rates at 0 U/h (called 'zero-temps') are activated more in **SMB**. This is by design for safety reasons and has no negative effects if the **Profile** is set correctly. On the main graph, the IOB curve (yellow thin line) is more meaningful than the course of the temporary basal rates.
+2. **Mažos laikinos valandinės bazės**  
+  Naudojant **SMB**, mažos laikinos valandinės bazės (vadinamos „low temps“) arba 0 V/val. laikinos bazės (vadinamos „zero-temps“) įjungiamos dažniau. This is by design for safety reasons and has no negative effects if the **Profile** is set correctly. Pagrindiniame grafike AIO kreivė (plona geltona linija) yra informatyvesnė nei laikinų valandinių bazių eiga.
 
-3. **Un-Announced Meals**  
-  Additional calculations to predict the course of glucose, e.g. by **UAM** (un-announced meals). Even without manual carbohydrate input from the user, **UAM** can automatically detect a significant increase in glucose levels due to meals, adrenaline or other influences and try to adjust this with **SMB**. To be on the safe side this also works the other way round and can stop the SMB earlier if an unexpectedly rapid drop in glucose occurs. That's why UAM should always be active at SMB.
+3. **Nedeklaruotas maistas**  
+  Papildomi skaičiavimai gliukozės eigai prognozuoti, pvz., naudojant **NDM** (nedeklaruotą maistą). Net jei naudotojas rankiniu būdu neįveda angliavandenių, **NDM** gali automatiškai aptikti ženklų gliukozės padidėjimą dėl maisto, adrenalino ar kitų veiksnių ir bandyti jį koreguoti naudodamas **SMB**. Dėl saugumo tai veikia ir atvirkščiai: jei gliukozė netikėtai greitai krenta, SMB gali būti sustabdyti anksčiau. Todėl naudojant SMB funkcija NDM visada turėtų būti įjungta.
 
-SMB doesn't decide on its own that insulin is needed — it draws on the same blended BG predictions (eventual BG, zero-temp, COB, UAM) described in [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision). SMB and zero-temping are simply the two tools AAPS uses to act on that decision.
+SMB pats nesprendžia, kad reikia insulino – jis naudoja tas pačias sujungtas KG prognozes (galutinė KG, nulinė laikina bazė, AAO, NDM), aprašytas skyriuje [kaip AAPS prognozes paverčia dozavimo sprendimu](#aaps-screens-how-predictions-become-a-dosing-decision). SMB ir nulinė laikina bazė yra tiesiog dvi priemonės, kuriomis AAPS įgyvendina šį sprendimą.
 
-**You must have started [objective 9](#objectives-objective9) to use SMB.**
+**Norėdami naudoti SMB, turite būti pradėję [9 mokymo etapą](#objectives-objective9).**
 
-See also [OpenAPS's oref1/SMB documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb) for the full technical treatment, or [Tim's info on SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/) for a community write-up.
+Išsamų techninį aprašymą rasite [OpenAPS oref1/SMB dokumentacijoje](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb), o bendruomenės aprašymą – [Timo informacijoje apie SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
-The settings for OpenAPS SMB are described below.
+OpenAPS SMB nustatymai aprašyti toliau.
 
 (Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)=
 
-### Maximum basal rate
+### Didžiausia valandinė bazė
 
-This safety setting determines the maximum temporary basal rate the insulin pump may deliver. It is also known as **max-basal**.
+Šis saugos nustatymas nustato didžiausią laikiną valandinę bazę, kurią gali tiekti insulino pompa. It is also known as **max-basal**.
 
-The value is measured in units per hour (U/h). It is advised to set this to something sensible. A good recommendation for setting this parameter is:
+Reikšmė matuojama vienetais per valandą (V/val.). Rekomenduojama nustatyti protingą reikšmę. A good recommendation for setting this parameter is:
 
-**MAX-BASAL = HIGHEST BASAL RATE x 4**
+**MAX-BASAL = DIDŽIAUSIA VALANDINĖ BAZĖ x 4**
 
-For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
+Pavyzdžiui, jei didžiausia valandinė bazė jūsų profilyje yra 0,5 V/val., ją padauginę iš 4 gausite 2 V/val.
 
-**AAPS** limits this value as a 'hard limit' according to [Settings > Safety > Patient age](#preferences-patient-type). The hard limits are as follows:
+**AAPS** šiai reikšmei taiko griežtą ribą pagal [Nustatymai > Sauga > Naudotojo amžius](#preferences-patient-type). The hard limits are as follows:
 
-- Child: 2
-- Teenager: 5
-- Adult: 10
-- Insulin-resistant adult: 12
-- Pregnant: 25
+- Vaikas: 2
+- Paauglys: 5
+- Suaugęs: 10
+- Insulinui rezistentiškas suaugęs: 12
+- Nėščioji: 25
 
 *See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
-### Max IOB for SMB
+### Didžiausias AIO naudojant SMB
 
-This value determines the maximum **Insulin on Board** (basal and bolus IOB) that **AAPS** will remain under while running in closed loop mode. It is also known as **maxIOB**.
+Ši reikšmė nustato didžiausią **aktyvaus insulino organizme** kiekį (bazės ir boluso AIO), kurio **AAPS** neviršys veikdama uždaro ciklo režimu. It is also known as **maxIOB**.
 
-If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
+Jei dabartinis AIO (pvz., po boluso valgiui) viršija nustatytą reikšmę, ciklas nebeleidžia insulino, kol AIO nukrenta žemiau ribos.
 
-A good start for setting this parameter is:
+Geras pradinis šio parametro nustatymas:
 
-      maxIOB = average mealbolus + 3x max daily basal
+      maxIOB = vidutinis bolusas valgiui + 3x didžiausia paros valandinė bazė
     
 
-Be careful and patient when adjusting your **max-IOB**. It is different for everyone and can also depend on the average total daily dose (TDD).
+Be careful and patient when adjusting your **max-IOB**. Ši reikšmė kiekvienam žmogui skiriasi ir gali priklausyti nuo vidutinės bendros paros dozės (BPD).
 
-**AAPS** limits this value as a 'hard limit' according to [Settings > Safety > Patient age](#preferences-patient-type). The hard limits are as follows:
+**AAPS** šiai reikšmei taiko griežtą ribą pagal [Nustatymai > Sauga > Naudotojo amžius](#preferences-patient-type). The hard limits are as follows:
 
-- Child: 7
-- Teenager: 13
-- Adult: 22
-- Insulin resistant adult: 30
-- Pregnant: 70
+- Vaikas: 7
+- Paauglys: 13
+- Suaugęs: 22
+- Insulinui rezistentiškas suaugęs: 30
+- Nėščioji: 70
 
 *See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
-Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
+Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. Naudojant **AMA**, maxIOB yra bazės **AIO** saugos parametras, o SMB režimu jis apima ir boluso AIO.
 
-### Use dynamic sensitivity
+### Naudoti dinaminį jautrumą
 
 This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
 
-### Use Autosens
+### Naudoti Autosens
 
-This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens cannot be used, since they are two different algorithms altering the same variable (sensitivity).
+Tai funkcija [Autosens](#Open-APS-features-autosens). Naudojant DynamicISF, Autosens naudoti negalima, nes tai du skirtingi algoritmai, keičiantys tą patį kintamąjį (jautrumą).
 
-Autosens looks at blood glucose deviations (positive/negative/neutral). It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
+Autosens vertina gliukozės nuokrypius (teigiamus / neigiamus / neutralius). Pagal šiuos nuokrypius Autosens bando nustatyti, kiek esate jautrus ar rezistentiškas insulinui, ir atitinkamai koreguoja valandinę bazę bei JIF.
 
 When enabled, new settings become available.
 
-#### Sensitivity raises target
+#### Didesnis jautrumas padidina tikslą
 
-If this option is enabled, the sensitivity detection (autosens) can raise the target when sensitivity is detected (below 100%). In this case your target will be raised by the percentage of the detected sensitivity.
+Įjungus šią parinktį, jautrumo nustatymas (Autosens) gali padidinti tikslą, kai nustatomas didesnis jautrumas (mažiau nei 100 %). In this case your target will be raised by the percentage of the detected sensitivity.
 
-If the target is modified due to sensitivity detection, it will be displayed with a green background on your main screen.
+Jei tikslas pakeistas dėl jautrumo nustatymo, pagrindiniame ekrane jis rodomas žaliame fone.
 
-![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
+![Autosens pakeistas tikslas](../images/Home2020_DynamicTargetAdjustment.png)
 
-This setting is available when one of "Use dynamic sensitivity" or "Use Autosens" are enabled.
+Šis nustatymas pasiekiamas, kai įjungtas „Naudoti dinaminį jautrumą“ arba „Naudoti Autosens“.
 
 #### Resistance lowers target
 
-If this option is enabled, the sensitivity detection (autosens) can lower the target when resistance is detected (above 100%). In this case your target will be lowered by the percentage of the detected resistance.
+Įjungus šią parinktį, jautrumo nustatymas (Autosens) gali sumažinti tikslą, kai nustatoma rezistencija insulinui (daugiau nei 100 %). Tokiu atveju tikslas sumažinamas nustatytos rezistencijos procentine dalimi.
 
-This setting is available when one of "Use dynamic sensitivity" or "Use Autosens" are enabled.
+Šis nustatymas pasiekiamas, kai įjungtas „Naudoti dinaminį jautrumą“ arba „Naudoti Autosens“.
 
-### Enable SMB
+### Naudoti SMB
 
 Enable this to use SMB functionality. If disabled, no **SMBs** will be given.
 
@@ -186,100 +186,100 @@ When enabled, new settings become available.
 
 (Open-APS-features-enable-smb-with-high-temp-targets)=
 
-#### Enable SMB with high temp target
+#### Naudoti SMB esant aukštesniam laikinam gliukozės tikslui
 
-If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as 100 mg/dL or 5.6 mmol/L and above, regardless of **Profile** target). Use caution when enabling it: **SMBs** can become overly aggressive if your settings are not well tuned or if your **Profile** is subject to frequent variation (for example, with children).
+Jei šis nustatymas įjungtas, **SMB** bus suleidžiami net jei naudotojas pasirinko aukštą **laikiną tikslą** (100 mg/dL arba 5,6 mmol/l ir daugiau, nepriklausomai nuo **profilio** tikslo). Įjunkite atsargiai: **SMB** gali tapti pernelyg agresyvūs, jei jūsų nustatymai gerai nesuderinti arba jei jūsų **profilis** dažnai kinta (pvz., vaikų).
 
-When this setting is disabled, a high **Temp Target** turns **SMBs** off. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** of 100 mg/dL or 5.6 mmol/L and above. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB — apart from a low **Temp Target** such as **Eating Soon** (or any **Temp Target** of 98 mg/dL or 5.4 mmol/L and below), which may still deliver **SMBs** to drive **BG** towards the target.
+Kai šis nustatymas išjungtas, aukštas **laikinas tikslas** išjungia **SMB**. Pavyzdžiui, jei ši parinktis išjungta, **SMB** galima išjungti nustačius 100 mg/dL arba 5,6 mmol/l ar aukštesnį **laikiną tikslą**. Ši parinktis taip pat išjungia **SMB**, nepriklausomai nuo to, kokia kita sąlyga bando įjungti SMB, – išskyrus žemą **laikiną tikslą**, pvz., **Netrukus valgysiu** (arba bet kurį 98 mg/dL arba 5,4 mmol/l ar žemesnį **laikiną tikslą**), kai **SMB** vis tiek gali būti suleidžiami, kad **KG** priartėtų prie tikslo.
 
-This setting does not turn **SMB** on by itself. With a high temp target, **SMB** is only given if one of the other settings below (for example **Enable SMB always** or **Enable SMB with COB**) also allows it.
+Šis nustatymas pats savaime **SMB** neįjungia. Esant aukštam laikinam tikslui, **SMB** suleidžiamas tik tada, jei tai leidžia ir vienas iš kitų toliau aprašytų nustatymų (pvz., **Naudoti SMB visada** arba **Naudoti SMB su AAO**).
 
 (Open-APS-features-enable-smb-always)=
 
-#### Enable SMB always
+#### Naudoti SMB visada
 
-If this setting is enabled, SMB is always enabled (independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
+Jei šis nustatymas įjungtas, SMB naudojami visada (nepriklausomai nuo AAO, laikinų tikslų ar bolusų). Jei šis nustatymas įjungtas, kiti toliau aprašyti įjungimo nustatymai neturi jokio poveikio. Tačiau jei **Naudoti SMB esant aukštesniam laikinam gliukozės tikslui** išjungtas ir nustatytas aukštas laikinas tikslas, SMB bus išjungti.
 
-This setting is only available if **AAPS** detects that you are using a [reliable BG source](#GettingStarted-TrustedBGSource), with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+This setting is only available if **AAPS** detects that you are using a [reliable BG source](#GettingStarted-TrustedBGSource), with advanced filtering. FreeStyle Libre 1 nelaikomas patikimu šaltiniu, nes sugedus jutikliui seni KG duomenys gali būti kartojami be galo.
 
 Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-#### Enable SMB with COB
+#### Naudoti SMB su AAO
 
-If this setting is enabled, SMB is enabled when the COB is greater than 0.
+Jei šis nustatymas įjungtas, SMB naudojami, kai AAO yra didesnis nei 0.
 
-This setting is not visible if "Enable SMB always" is switched on.
+Šis nustatymas nerodomas, jei įjungtas „Naudoti SMB visada“.
 
-#### Enable SMB with low temp target
+#### Naudoti SMB esant žemesniam laikinam gliukozės tikslui
 
-If this setting is enabled, SMB is enabled when a temp target is set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp target** is disabled, SMB will be enabled when a low temp target is set (98 mg/dL or 5.4 mmol/L and below) but disabled when a high temp target is set.
+Jei šis nustatymas įjungtas, SMB naudojami, kai nustatytas laikinas tikslas („Netrukus valgysiu“, aktyvumas, hipoglikemija, pasirinktinis). Jei šis nustatymas įjungtas, bet **Naudoti SMB esant aukštesniam laikinam gliukozės tikslui** išjungtas, SMB bus naudojami, kai nustatytas žemas laikinas tikslas (98 mg/dL arba 5,4 mmol/l ir žemiau), bet bus išjungti, kai nustatytas aukštas laikinas tikslas.
 
-This setting is not visible if "Enable SMB always" is switched on.
+Šis nustatymas nerodomas, jei įjungtas „Naudoti SMB visada“.
 
-#### Enable SMB after carbs
+#### Naudoti SMB po angliavandenių
 
-If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB has reached 0.
+Jei įjungta, SMB naudojami 6 val. po angliavandenių įvedimo, net jei AAO jau sumažėjo iki 0.
 
-For safety reasons, this setting is only available if **AAPS** detects that you are using a reliable BG source. It is not visible if "Enable SMB always" is switched on.
+Dėl saugumo šis nustatymas pasiekiamas tik jei **AAPS** nustato, kad naudojate patikimą glikemijos duomenų šaltinį. Jis nerodomas, jei įjungtas „Naudoti SMB visada“.
 
-This setting is only available if **AAPS** detects that you are using a [reliable BG source,](#GettingStarted-TrustedBGSource) with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+This setting is only available if **AAPS** detects that you are using a [reliable BG source,](#GettingStarted-TrustedBGSource) with advanced filtering. FreeStyle Libre 1 nelaikomas patikimu šaltiniu, nes sugedus jutikliui seni KG duomenys gali būti kartojami be galo.
 
-Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
-This setting is not visible if "Enable SMB always" is switched on.
+Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. Daugiau informacijos apie triukšmą ir duomenų glodinimą rasite [čia](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
+Šis nustatymas nerodomas, jei įjungtas „Naudoti SMB visada“.
 
-#### SMB interval
+#### SMB intervalas
 
-This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minutes to give loop additional time to complete. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
+This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Atimkite 2 minutes, kad ciklui liktų papildomo laiko užsibaigti. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
 
-Default value: 3 min.
+Numatytoji reikšmė: 3 min.
 
 (Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
 
-#### Max minutes of basal to limit SMB
+#### Maksimalus bazės minučių skaičius SMB ribai
 
-This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
+Tai svarbus saugos nustatymas. Ši reikšmė nustato, kiek SMB galima suleisti pagal valandinės bazės insulino kiekį per tam tikrą laiką, kai jį dengia AAO.
 
 Making this value larger allows the SMB to be more aggressive. You should start with the default value of 30 minutes. After some experience, increase the value in 15 minutes increments and observe the effects over multiple meals.
 
-It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to accommodate a decreasing BG with 0 U/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which will warn you well before a hypo.
+Rekomenduojama nenustatyti didesnės nei 90 minučių reikšmės, nes tada algoritmas gali nebesugebėti kompensuoti krentančios gliukozės nustatydamas 0 V/val. bazę („zero-temp“). Taip pat nustatykite aliarmus, kurie gerokai iš anksto įspėtų apie artėjančią hipoglikemiją, ypač jei dar bandote naujus nustatymus.
 
 Default value: 30 min.
 
-#### UAM max minutes of basal to limit SMB
+#### Maksimalus bazės minučių skaičius NDM SMB ribai
 
-This setting allows you to adjust the strength of SMB during UAM, when there are no more carbs.
+Šis nustatymas leidžia keisti SMB stiprumą NDM metu, kai angliavandenių nebeliko.
 
-Default value : the same as **Max minutes of basal to limit SMB**.
+Numatytoji reikšmė: tokia pati kaip **Maksimalus bazės minučių skaičius SMB ribai**.
 
-This setting is only visible if "Enable SMB" and "Enable UAM" are switched on.
+Šis nustatymas matomas tik jei įjungti „Naudoti SMB“ ir „Naudoti NDM“.
 
 (enable-uam)=
 
-### Enable UAM
+### Naudoti NDM
 
-With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
+Įjungus šią parinktį, SMB algoritmas gali atpažinti nedeklaruotą maistą. Tai naudinga, jei pamirštate pranešti **AAPS** apie angliavandenius, neteisingai įvertinate jų kiekį arba daug riebalų ir baltymų turintis maistas įsisavinamas ilgiau, nei tikėtasi. Neįvedus angliavandenių, NDM gali atpažinti greitą gliukozės padidėjimą dėl angliavandenių, adrenalino ir pan. ir bandyti jį koreguoti SMB. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
 
-**Therefore, UAM should always be activated when using SMB.**
+**Todėl naudojant SMB funkcija NDM visada turėtų būti įjungta.**
 
 (key-aaps-features-minimal-carbs-required-for-suggestion)=
 
-### Carbs required threshold
+### Angliavandenių poreikio riba
 
-Minimum grams of carbs to display a carbs suggestion alert. Eating of additional carbs will be suggested when the reference design detects that it requires carbs. In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
+Minimum grams of carbs to display a carbs suggestion alert. Papildomai suvalgyti angliavandenių bus pasiūlyta, kai algoritmas nustatys, kad jų reikia. Tokiu atveju gausite pranešimą, kurį galima atidėti 5, 15 arba 30 minučių.
 
-Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+Jei norite, pranešimus apie reikalingus angliavandenius galima siųsti į Nightscout. Tada bus parodytas ir išsiųstas skelbimas.
 
-In any case, the required carbs will be displayed in the COB section on your main screen.
+Bet kuriuo atveju reikiami angliavandeniai bus rodomi pagrindinio ekrano AAO skiltyje.
 
-![Display carbs required on main screen](../images/main/main_screen_carbs_required.png)
+![Rodyti angliavandenių poreikį pagrindiniame ekrane](../images/main/main_screen_carbs_required.png)
 
-### Advanced Settings
+### Papildomi nustatymai
 
-For the full parameter reference (including settings not covered here), see [OpenAPS's preferences and safety settings documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
+Visą parametrų aprašymą (įskaitant čia neaprašytus nustatymus) rasite [OpenAPS nustatymų ir saugos parametrų dokumentacijoje](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to be steadier with noisy data sources like xDrip and Libre.
+**Visada naudoti trumpalaikį vidutinį gliukozės pokytį, o ne paprastą pokytį** Jei įjungsite šią funkciją, **AAPS** naudos trumpalaikį vidutinį gliukozės pokytį per paskutines 15 minučių. Paprastai tai yra paskutinių trijų reikšmių vidurkis. Tai padeda **AAPS** veikti stabiliau su triukšmingais duomenų šaltiniais, tokiais kaip xDrip ir Libre.
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump and/or profile. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump and/or profile. Pavyzdys: jei didžiausia valandinė bazė yra 1,0 V/val., o didžiausias paros saugos daugiklis yra 3, **AAPS** gali nustatyti ne didesnę kaip 3,0 V/val. laikiną bazę (= 3 x 1,0 V/val.).
 
 Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
 
@@ -291,107 +291,107 @@ Default value: 4 (shouldn’t be changed unless you really need to and know what
 
 (Open-APS-features-auto-isf)=
 
-## Auto ISF
+## Automatinis JIF
 
-**Auto ISF** is an **experimental** algorithm for advanced users. It is built on OpenAPS SMB and adds rules that make the insulin sensitivity factor (ISF) stronger or weaker depending on how your glucose behaves.
+**Automatinis JIF** (Auto ISF) yra **eksperimentinis** algoritmas patyrusiems naudotojams. Jis pagrįstas OpenAPS SMB ir prideda taisykles, kurios sustiprina arba susilpnina jautrumo insulinui faktorių (JIF), priklausomai nuo to, kaip kinta jūsų gliukozė.
 
-It is a development feature: it can only be switched on in a [dev build](../AdvancedOptions/DevBranch.md) with **Engineering Mode** enabled. In a regular release build it stays forced off and is therefore not shown in **Configuration → APS**. Completing the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) does not unlock it.
+Tai kūrimo funkcija: ją galima įjungti tik [dev versijoje](../AdvancedOptions/DevBranch.md) su įjungtu **inžineriniu režimu**. Įprastoje išleistoje versijoje ji visada išjungta, todėl nerodoma skiltyje **Konfigūracija → APS**. Įvykdžius [mokymo etapus](../SettingUpAaps/CompletingTheObjectives.md), ji neatrakinama.
 
-After selecting it, its **Settings** contain the OpenAPS SMB settings plus an **AutoISF settings** group:
+Ją pasirinkus, jos **Parametrai** apima OpenAPS SMB nustatymus ir grupę **Automatinio JIF nustatymai**:
 
-- **Enable AutoISF**: turns the ISF adjustments on. Without it, the algorithm behaves like OpenAPS SMB.
-- **AutoISF min** and **AutoISF max**: how weak and how strong the ISF is allowed to become, in the same way as the Autosens limits. With the default value 1.0 the effect is switched off.
-- **Weights**: each one drives one rule, and the default value 0.0 switches the rule off. 
-  - while glucose **accelerates**, ISF is strengthened (more insulin);
-  - while glucose **decelerates**, ISF is weakened (less insulin);
-  - while glucose is **below target**, ISF is weakened;
-  - while glucose is **above target**, ISF is strengthened;
-  - a **post-prandial** weight and a **duration** weight act after meals and when glucose stays high for a long time.
-- **SMB delivery ratio** (with a minimum, a maximum and a BG range): what share of the insulin required can be delivered as SMB.
-- **SMB max range extension**: by what factor the usual SMB size limit ([max minutes of basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), 30 minutes by default) may be exceeded. The default value 1 changes nothing; up to 5 is possible. Increase this experimental value slowly and with caution.
-- **IOB threshold percent**: the percentage of max IOB above which SMBs are disabled.
+- **Įjungti AutoISF**: įjungia JIF koregavimą. Be jo algoritmas veikia kaip OpenAPS SMB.
+- **Mažiausia AutoISF reikšmė** ir **Didžiausia AutoISF reikšmė**: kiek JIF gali susilpnėti ir sustiprėti, taip pat kaip Autosens ribos. Esant numatytajai reikšmei 1,0, poveikis išjungtas.
+- **Koeficientai (weights)**: kiekvienas valdo vieną taisyklę, o numatytoji reikšmė 0,0 tą taisyklę išjungia. 
+  - kai gliukozės kitimas **greitėja**, JIF sustiprinamas (daugiau insulino);
+  - kai gliukozės kitimas **lėtėja**, JIF susilpninamas (mažiau insulino);
+  - kai gliukozė yra **žemiau tikslo**, JIF susilpninamas;
+  - kai gliukozė yra **virš tikslo**, JIF sustiprinamas;
+  - **po valgio** koeficientas ir **trukmės** koeficientas veikia po valgio ir tada, kai gliukozė ilgai išlieka aukšta.
+- **SMB dozės dalis** (su minimumu, maksimumu ir KG intervalu): kokia reikiamo insulino dalis gali būti suleista kaip SMB.
+- **SMB dozės ribos išplėtimas**: kiek kartų galima viršyti įprastą SMB dydžio ribą ([maksimalus bazės minučių skaičius](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), numatytoji reikšmė 30 minučių). Numatytoji reikšmė 1 nieko nekeičia; galima iki 5. Šią eksperimentinę reikšmę didinkite pamažu ir atsargiai.
+- **AIO ribos procentas**: didžiausio AIO procentas, kurį viršijus SMB išjungiami.
 
-    {admonition} Only for experienced users
+    {admonition} Tik patyrusiems naudotojams
     :class: danger
-    With its default values Auto ISF changes nothing. Every value you raise makes **AAPS** more aggressive. Change one value at a time, in small steps, and watch the result for several days. Be extremely careful with an **AutoISF max** above 2.5.
+    Su numatytosiomis reikšmėmis Automatinis JIF nieko nekeičia. Kiekviena padidinta reikšmė daro **AAPS** agresyvesnę. Keiskite po vieną reikšmę, mažais žingsniais, ir kelias dienas stebėkite rezultatą. Būkite ypač atsargūs, jei **Didžiausia AutoISF reikšmė** viršija 2,5.
 
 (Open-APS-features-advanced-meal-assist-ama)=
 
-## Advanced Meal Assist (AMA)
+## Pažangi pagalba valgant (AMA)
 
-AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
+AMA yra „advanced meal assist“ (pažangi pagalba valgant) santrumpa. Tai OpenAPS funkcija nuo 2017 m. (oref0). OpenAPS Advanced Meal Assist (AMA) leidžia sistemai po boluso valgiui greičiau nustatyti aukštą laikiną bazę, jei patikimai įvedate angliavandenius.
 
-You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+Daugiau informacijos rasite [OpenAPS dokumentacijoje](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
-### Maximum basal rate (OpenAPS "max-basal")
+### Didžiausia valandinė bazė (OpenAPS „max-basal“)
 
-This safety setting helps **AAPS** from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+Šis saugos nustatymas neleidžia **AAPS** nustatyti pavojingai didelės valandinės bazės ir riboja laikiną bazę iki x V/val. Rekomenduojama nustatyti protingą reikšmę. Rekomenduojama paimti didžiausią valandinę bazę jūsų profilyje ir padauginti ją iš 4, bet ne mažiau kaip iš 3. Pavyzdžiui, jei didžiausia valandinė bazė jūsų profilyje yra 1,0 V/val., ją padauginę iš 4 gausite 4 V/val. ir šią reikšmę 4 galite nustatyti kaip saugos parametrą.
 
-You cannot choose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+Pasirinkti bet kokios reikšmės negalima: dėl saugumo yra „griežta riba“, kuri priklauso nuo paciento amžiaus. AMA režimu maxIOB „griežta riba“ yra mažesnė nei SMB režimu. Vaikams ši reikšmė mažiausia, o insulinui rezistentiškiems suaugusiems – didžiausia.
 
-The hardcoded parameters in **AAPS** are:
+**AAPS** kode nustatyti parametrai yra šie:
 
-- Child: 2
-- Teenager: 5
-- Adult: 10
-- Insulin resistant adult: 12
-- Pregnant: 25
-
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
-
-### Max IOB for AMA
-
-This parameter limits the maximum of basal IOB where **AAPS** still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
-
-The default value is 2, but you should raise this parameter slowly to see how much it affects you and which value fits best. It is different for everyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB.
-
-- Child: 3
-- Teenager: 5
-- Adult: 7
-- Insulin resistant adult: 12
-- Pregnant: 25
+- Vaikas: 2
+- Paauglys: 5
+- Suaugęs: 10
+- Insulinui rezistentiškas suaugęs: 12
+- Nėščioji: 25
 
 *See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
-### Use Autosens (AMA)
+### Didžiausias AIO naudojant AMA
 
-Here, you can choose, if you want to use the [sensitivity detection](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) autosens or not.
+Šis parametras riboja didžiausią bazės AIO, kuriam esant **AAPS** dar veikia. Jei AIO didesnis, papildomas bazinis insulinas nebeleidžiamas, kol bazės AIO nukrenta žemiau ribos.
 
-### Autosens adjust targets
+Numatytoji reikšmė yra 2, tačiau šį parametrą didinkite pamažu, kad matytumėte, kaip jis jus veikia ir kokia reikšmė tinka geriausiai. Ši reikšmė kiekvienam skiriasi ir priklauso nuo vidutinės bendros paros dozės (BPD). Dėl saugumo yra riba, kuri priklauso nuo paciento amžiaus. AMA režimu maxIOB „griežta riba“ yra mažesnė nei SMB režimu.
 
-If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets **AAPS** work more 'aggressive' or not. The actual target might be reached faster with this.
+- Vaikas: 3
+- Paauglys: 5
+- Suaugęs: 7
+- Insulinui rezistentiškas suaugęs: 12
+- Nėščioji: 25
 
-### Advanced Settings
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
-- Normally you do not have to change the settings in this dialog!
-- If you want to change them anyway, make sure you understand what you are doing — see the full parameter reference in [OpenAPS's preferences and safety settings documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
+### Naudoti Autosens (AMA)
 
-**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to work more steady with noisy data sources like xDrip and Libre.
+Čia galite pasirinkti, ar norite naudoti Autosens [jautrumo nustatymą](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+### Autosens nustatomi tikslai
+
+Jei ši parinktis įjungta, Autosens gali koreguoti ir tikslus (be valandinės bazės ir JIF). Taip **AAPS** gali veikti „agresyviau“ arba ne. Taip tikrasis tikslas gali būti pasiektas greičiau.
+
+### Papildomi nustatymai
+
+- Paprastai šio lango nustatymų keisti nereikia!
+- Jei vis tiek norite juos keisti, įsitikinkite, kad suprantate, ką darote – visą parametrų aprašymą rasite [OpenAPS nustatymų ir saugos parametrų dokumentacijoje](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
+
+**Visada naudoti trumpalaikį vidutinį gliukozės pokytį, o ne paprastą pokytį** Jei įjungsite šią funkciją, **AAPS** naudos trumpalaikį vidutinį gliukozės pokytį per paskutines 15 minučių. Paprastai tai yra paskutinių trijų reikšmių vidurkis. Tai padeda **AAPS** veikti stabiliau su triukšmingais duomenų šaltiniais, tokiais kaip xDrip ir Libre.
+
+**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. Tai reiškia, kad **AAPS** niekada negalės nustatyti laikinos bazės, didesnės nei 3x didžiausios valandinės bazės, užprogramuotos naudotojo pompoje. Pavyzdys: jei didžiausia valandinė bazė yra 1,0 V/val., o didžiausias paros saugos daugiklis yra 3, **AAPS** gali nustatyti ne didesnę kaip 3,0 V/val. laikiną bazę (= 3 x 1,0 V/val.).
 
 Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
+**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. Tai reiškia, kad **AAPS** niekada negalės nustatyti laikinos bazės, didesnės nei 4x dabartinės valandinės bazės, užprogramuotos naudotojo pompoje.
 
 Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
 
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. **AAPS** doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**IVT daliklis laikotarpiui po boluso** Funkcija „bolus snooze“ (laikotarpis po boluso) veikia po boluso valgiui. Po valgio **AAPS** nenustato mažų laikinų bazių laikotarpiu, kuris lygus IVT, padalytai iš „bolus snooze“ parametro. Numatytoji reikšmė yra 2. Tai reiškia, kad kai IVT yra 5 val., „bolus snooze“ truktų 5 val. : 2 = 2,5 val.
 
-Default value: 2
+Numatytoji reikšmė: 2
 
 * * *
 
 (Open-APS-features-overview-of-hard-coded-limits)=
 
-## Overview of hard-coded limits
+## Kode nustatytų griežtų ribų apžvalga
 
-|            | Child | Teenager | Adult | Insulin resistant adult | Pregnant |
+|            | Child | Paauglys | Adult | Insulin resistant adult | Nėščioji |
 | ---------- | ----- | -------- | ----- | ----------------------- | -------- |
 | MAXBOLUS   | 5     | 10       | 17    | 25                      | 60       |
 | MINDIA     | 5     | 5        | 5     | 5                       | 5        |
 | MAXDIA     | 9     | 9        | 9     | 9                       | 10       |
-| MINIC      | 2     | 2        | 2     | 2                       | 0.3      |
+| MINIC      | 2     | 2        | 2     | 2                       | 0,3      |
 | MAXIC      | 100   | 100      | 100   | 100                     | 100      |
 | MAXIOB_AMA | 3     | 5        | 7     | 12                      | 25       |
 | MAXIOB_SMB | 7     | 13       | 22    | 30                      | 70       |

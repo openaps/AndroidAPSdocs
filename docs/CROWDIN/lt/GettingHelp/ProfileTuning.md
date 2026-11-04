@@ -1,142 +1,142 @@
-# Tweaking the AAPS' Profile
+# AAPS profilio derinimas
 
 ```{admonition} This is NOT a medical advice
 :class: warning
-Please work with your care team for support and advice on your diabetes management.</br>
-Use this guide only once you have [set up your **Profile** correctly](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), following all **AAPS** objectives.
+Dėl pagalbos ir patarimų, kaip valdyti diabetą, kreipkitės į savo gydymo komandą.</br>
+Naudokite šį vadovą tik tada, kai jau [teisingai nustatėte savo **profilį**](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md) ir įvykdėte visus **AAPS** mokymo etapus.
 ```
 
-This guide explains the logic of the OpenAPS algorithm results with a given __Profile__, and provides information about which values in **AAPS** may be adjusted when certain situations or patterns are observed. The suggestions about basal testing below may diverge from what your care team advises.
+Šiame vadove paaiškinama, kokius rezultatus OpenAPS algoritmas pateikia su konkrečiu __profiliu__, ir kurias **AAPS** reikšmes galima keisti, kai pastebite tam tikras situacijas ar dėsningumus. Toliau pateikti patarimai dėl valandinės bazės tikrinimo gali skirtis nuo to, ką pataria jūsų gydymo komanda.
 
-Using **closed loop** may make basal testing easier and may significantly reduce the hypo risk if your __Profile__ basal is too strong.
+**Uždaras ciklas** gali palengvinti valandinės bazės tikrinimą ir gerokai sumažinti hipoglikemijos riziką, jei jūsų __profilio__ valandinė bazė per stipri.
 
-## Changing profile's settings, how to proceed
+## Kaip keisti profilio nustatymus
 
-1. Ensure you have read and understand __AAPS’__ recommended settings and advice below. Not following this advice may make the adjusting process problematic and less likely to get a well tuned __Profile__
-2. Carefully observe and compare, **over several days**, what is happening with your __BG__ and __IOB__.
-3. Keep an eye out for patterns with **AAPS** that happen around the same time (almost) everyday.
-4. It's important to do this over several days. Poor results tend to be yielded from using data observed on a single day to make __Profile’s__ adjustment decisions.
-5. After you have observed a repeatable pattern of behavior, e.g. at 1PM you see a spike in __BG__ or a negative __IOB__ value, only then start to make small changes to your __Profile__.
-6. It's important to limit the changes you make to one thing at a time. E.g. increase your basal by 10% around 1PM.
-7. After every change, it's important to monitor the impact on your __BG__ and __IOB__ for the next few days.
-8. Repeat this pattern, observe, decide, tweak again if needed
+1. Įsitikinkite, kad perskaitėte ir supratote toliau pateiktus __AAPS__ rekomenduojamus nustatymus ir patarimus. Jei šių patarimų nesilaikysite, derinti bus sunkiau ir mažiau tikėtina, kad gausite gerai suderintą __profilį__
+2. **Kelias dienas** atidžiai stebėkite ir lyginkite, kas vyksta su jūsų __KG__ ir __AIO__.
+3. Ieškokite dėsningumų **AAPS** duomenyse, kurie kartojasi (beveik) kasdien apie tą patį laiką.
+4. Svarbu tai daryti kelias dienas. Jei sprendimus dėl __profilio__ keitimo priimate pagal vienos dienos duomenis, rezultatai dažnai būna prasti.
+5. Tik pastebėję pasikartojantį dėsningumą, pvz., 13 val. jūsų __KG__ šokteli arba __AIO__ tampa neigiamas, pradėkite po truputį keisti savo __profilį__.
+6. Svarbu vienu metu keisti tik vieną dalyką. Pvz., padidinkite valandinę bazę 10 % apie 13 val.
+7. Po kiekvieno pakeitimo svarbu kelias kitas dienas stebėti, kaip jis veikia jūsų __KG__ ir __AIO__.
+8. Kartokite šiuos veiksmus: stebėkite, nuspręskite, jei reikia, vėl pakoreguokite
 
-Don't rush, go slow!
+Neskubėkite, darykite tai lėtai!
 
-## Recommended settings and advice while tweaking basal
+## Rekomenduojami nustatymai ir patarimai derinant valandinę bazę
 
-- Do all testing with [closed loop enabled](#AapsScreens-loop-status).
-- **Turn <u>OFF</u> all [automations](../DailyLifeWithAaps/Automations.md)**
-- **Turn <u>OFF</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)** so that they will not try to adapt your profile.
-- Do not make manual user actions (manual bolus, temp targets etc…) while testing: let the system use the **Profile** settings only.
-- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board, Carbs On Board (and Sensitivity change). On graph 2, use Deviations and Blood Glucose Impact. When asking for advice, always include those on your screenshots.
-- COB=0[*](#profiletuning-cob-zero)
+- Visus bandymus atlikite [įjungę uždarą ciklą](#AapsScreens-loop-status).
+- **Išjunkite (<u>OFF</u>) visas [automatizacijas](../DailyLifeWithAaps/Automations.md)**
+- **Išjunkite (<u>OFF</u>) [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)**, kad jie nebandytų pritaikyti jūsų profilio.
+- Bandymo metu nieko nedarykite rankiniu būdu (rankinis bolusas, laikini tikslai ir pan.): leiskite sistemai naudoti tik **profilio** nustatymus.
+- [Papildomuose grafikuose](#AapsScreens-section-g-additional-graphs): 1 grafike rodykite Aktyvus insulinas organizme, Aktyvūs angliavandeniai organizme (ir Jautrumo pokyčiai). 2 grafike rodykite Nuokrypiai ir Glikemijos įtaka. Kai prašote patarimo, šiuos grafikus visada parodykite savo ekrano kopijose.
+- AAO=0[*](#profiletuning-cob-zero)
 
-Other considerations that should ideally be avoided, as they influence the data and can lead to poor conclusions:
-- No physical activities.
-- No stress.
-- No illness.
-- No extreme weather like high or low temperatures.
-- No failed pump or CGM sessions.
-- No unannounced carbs.
+Kitos aplinkybės, kurių geriausia vengti, nes jos veikia duomenis ir gali lemti klaidingas išvadas:
+- Jokio fizinio aktyvumo.
+- Jokio streso.
+- Jokios ligos.
+- Jokių ekstremalių oro sąlygų, pvz., labai aukštos ar žemos temperatūros.
+- Jokių nepavykusių pompos ar NGJ sesijų.
+- Jokių nedeklaruotų angliavandenių.
 
-Also note:
-- If your [basal rate profile](#your-aaps-profile-basal-rates) is correct, when you are on target with COB=0[*](#profiletuning-cob-zero) and IOB=0, you will remain constantly on target whatever your **ISF** (**ISF** is only used when you are higher than your **BG** target).
-- You need to check the actual **IOB** but also the **IOB** chart, to observe how the **IOB** evolved during the past few hours.
+Taip pat atkreipkite dėmesį:
+- Jei jūsų [valandinės bazės profilis](#your-aaps-profile-basal-rates) teisingas, kai KG tiksle, AAO=0[*](#profiletuning-cob-zero) ir AIO=0, KG visą laiką liks tiksle, kad ir koks būtų jūsų **JIF** (**JIF** naudojamas tik tada, kai esate virš **KG** tikslo).
+- Reikia tikrinti ne tik dabartinį **AIO**, bet ir **AIO** grafiką, kad matytumėte, kaip **AIO** keitėsi per kelias pastarąsias valandas.
 
 (profiletuning-cob-zero)=
 
-***COB = 0**
+***AAO = 0**
 
-Meaning that the meal is digested, and there are no more carbs in your body.
+Tai reiškia, kad maistas suvirškintas ir jūsų organizme nebėra angliavandenių.
 
-**AAPS** might indicate [COB=0 while you still have carbs on board](../DailyLifeWithAaps/CobCalculation.md).
+**AAPS** gali rodyti [AAO=0, nors organizme dar yra angliavandenių](../DailyLifeWithAaps/CobCalculation.md).
 
-## [Profile](../SettingUpAaps/YourAapsProfile.md) definitions
+## [Profilio](../SettingUpAaps/YourAapsProfile.md) sąvokos
 
-A too **strong Profile** indicates some combination of the following:
+Per **stiprus profilis** rodo kurį nors iš šių dalykų arba jų derinį:
 
-- [ISF](#your-aaps-profile-insulin-sensitivity-factor) number is too small.
-- The [basal](#your-aaps-profile-basal-rates) number is too big.
-- [I:C](#your-aaps-profile-insulin-to-carbs-ratio) number is too small.
+- [JIF](#your-aaps-profile-insulin-sensitivity-factor) skaičius per mažas.
+- [Valandinės bazės](#your-aaps-profile-basal-rates) skaičius per didelis.
+- [IA](#your-aaps-profile-insulin-to-carbs-ratio) skaičius per mažas.
 
-## IOB Observations
+## AIO stebėjimas
 
-*Note: you can also use Loopalyzer IOB graph in Nightscout reports to view IOB on several days.*
+*Pastaba: norėdami matyti AIO per kelias dienas, Nightscout ataskaitose taip pat galite naudoti Loopalyzer AIO grafiką.*
 
-If you observe the following patterns after a few days, consider the following changes:
+Jei po kelių dienų pastebite šiuos dėsningumus, apsvarstykite šiuos pakeitimus:
 
-### IOB positive
+### Teigiamas AIO
 
-- **Profile** basal might not be strong enough (this could also be because of things like unannounced food, illness, bad site absorption, etc.)
+- **Profilio** valandinė bazė gali būti per silpna (tai taip pat gali būti dėl nedeklaruoto maisto, ligos, prasto insulino įsisavinimo infuzijos vietoje ir pan.)
 
-![Positive IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
+![Teigiamas AIO](../images/troubleshooting/profiletuning/PositiveInsulin.png)
 
-### IOB negative
+### Neigiamas AIO
 
-- Default basal too strong.
-- May be the effect from past exercise/physical activity.
+- Pagrindinė valandinė bazė per stipri.
+- Gali būti ankstesnio sporto ar fizinio aktyvumo poveikis.
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin.png)
+![Neigiamas AIO](../images/troubleshooting/profiletuning/NegativeInsulin.png)
 
-- Previous meal: too much bolus (which resulted in a very long zero temp basal)
+- Ankstesnis valgis: per didelis bolusas (dėl to labai ilgai buvo nulinė laikina bazė)
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
+![Neigiamas AIO](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
 
-## BG Target Observations
+## KG tikslo stebėjimas
 
-### Stuck High
+### Užstrigo aukštai
 
-- __ISF's__ number is high and not strong enough (calculated insulin is too weak)
+- __JIF__ skaičius didelis ir per silpnas (apskaičiuotas insulino kiekis per mažas)
 
-![Stuck High](../images/troubleshooting/profiletuning/StuckHigh.png)
+![Užstrigo aukštai](../images/troubleshooting/profiletuning/StuckHigh.png)
 
-- __Profile__ basal might not be strong enough (**SMBs** do not have enough "basal stock" to use)
-- A security ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) might have kicked in and is limiting insulin injection. Verify in the **APS** plugin screen (**Configuration → APS → Open plugin**); see [SMB](#Open-APS-features-super-micro-bolus-smb).
-- Technical issue: site absorption, infusion set, ...
+- __Profilio__ valandinė bazė gali būti per silpna (**SMB** neturi pakankamai „valandinės bazės atsargos“)
+- Galėjo suveikti apsauga ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?), kuri riboja insulino suleidimą. Patikrinkite **DKS** įskiepio ekrane (**Konfigūracija → DKS → Atidaryti įskiepį**); žr. [SMB](#Open-APS-features-super-micro-bolus-smb).
+- Techninė problema: insulino įsisavinimas infuzijos vietoje, infuzijos rinkinys, ...
 
-### Stuck Low
+### Užstrigo žemai
 
-- __ISF__ too strong and the number needs to be raised higher
-- __Profile__ basal too strong (if also negative IOB)
+- __JIF__ per stiprus, jo skaičių reikia padidinti
+- __Profilio__ valandinė bazė per stipri (jei AIO taip pat neigiamas)
 
-### Rollercoaster (ups and downs)
+### Kalneliai (kilimai ir kritimai)
 
-- **ISF** too strong? See your [AAPS Profile](#your-aaps-profile-insulin-sensitivity-factor)
+- **JIF** per stiprus? Žr. savo [AAPS profilį](#your-aaps-profile-insulin-sensitivity-factor)
 
-![Rollercoaster](../images/troubleshooting/profiletuning/StrongISF.png)
+![Kalneliai](../images/troubleshooting/profiletuning/StrongISF.png)
 
-## BG After Meals Observations
+## KG po valgio stebėjimas
 
-### Fast rise and BG going high
+### Greitas kilimas ir aukšta KG
 
-- Food contains fast carbs (like fruit juice).
-- Consider doing a pre-bolus or a slightly earlier pre-bolus.
-- Bolus (IC or injected %) not strong enough.
+- Maiste yra greitųjų angliavandenių (pvz., vaisių sulčių).
+- Apsvarstykite išankstinį bolusą arba šiek tiek ankstesnį išankstinį bolusą.
+- Bolusas (IA arba suleistas %) per silpnas.
 
-![Rise High](../images/troubleshooting/profiletuning/FastRise.png)
+![Aukštas kilimas](../images/troubleshooting/profiletuning/FastRise.png)
 
-### Fast rise and then BG going low
+### Greitas kilimas, po to žema KG
 
-- Consider doing a pre-bolus, your **Profile** might be too aggressive (over correction of the raise)
-- Bolus too strong.
+- Apsvarstykite išankstinį bolusą, jūsų **profilis** gali būti per agresyvus (per didelė kilimo korekcija)
+- Bolusas per stiprus.
 
 
 
-## [How to calculate your I:C](#your-aaps-profile-insulin-to-carbs-ratio)
+## [Kaip apskaičiuoti savo IA](#your-aaps-profile-insulin-to-carbs-ratio)
 
-1. First, you need the correct default basal settings in your **Profile**.
-2. Start on target, better without negative IOB.
-3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Very accurately measure a known portion of carbs, and record the start time and Start IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). Don't forget to eat the carbs ;)
-4. After some hours, when COB=0[*](#profiletuning-cob-zero) and you're back on target, record end time, and note down the End IOB, check the total insulin given as before and call it End insulin. *NOTE: The time frame is NOT important, as long as it is longer than your digestion*
-5. From the difference between Start and End insulin amount, subtract/add the difference end IOB - start IOB. Then subtract the basal insulin calculated from your **Profile's** settings.
-6. If __BG__ is in target, you'll have the total insulin used to “digest” your carbs. Calculate your **I:C**.
+1. Pirmiausia jūsų **profilyje** turi būti teisingi pagrindinės valandinės bazės nustatymai.
+2. Pradėkite, kai KG yra tiksle, geriausia be neigiamo AIO.
+3. Užrašykite, kiek iš viso insulino suleista, ekrane **Valdymas → Pompa** (arba pompos istorijoje) ir pavadinkite tai pradžios insulinu. Labai tiksliai pasverkite žinomą angliavandenių porciją ir užrašykite pradžios laiką bei pradžios AIO. Tada įveskite angliavandenių ir boluso informaciją į **AAPS** naudodami boluso patarėją (su dabar nustatytu IA). Nepamirškite suvalgyti angliavandenių ;)
+4. Po kelių valandų, kai AAO=0[*](#profiletuning-cob-zero) ir KG vėl tiksle, užrašykite pabaigos laiką ir pabaigos AIO, tada kaip ir anksčiau patikrinkite, kiek iš viso insulino suleista, ir pavadinkite tai pabaigos insulinu. *PASTABA: laikotarpio trukmė NESVARBI, jei tik jis ilgesnis už virškinimo laiką*
+5. Nuo skirtumo tarp pradžios ir pabaigos insulino kiekio atimkite arba pridėkite skirtumą pabaigos AIO - pradžios AIO. Tada atimkite valandinės bazės insuliną, apskaičiuotą pagal jūsų **profilio** nustatymus.
+6. Jei __KG__ yra tiksle, gausite visą insulino kiekį, kuris buvo panaudotas angliavandeniams „suvirškinti“. Apskaičiuokite savo **IA**.
 
-### Explanations for the I:C calculations
+### IA skaičiavimo paaiškinimai
 
-- With a **Profile** that has the correct default basal rate, during any time frame, you should stay on target and have an IOB near 0. You get your **Profile** basal only.
-- You add carbs and bolus to this mix. Wait till your body digests all the carbs and be back on **BG** target. Your insulin usage will be the sum of your basal + the insulin needed for the carbs. You calculate the insulin used for your basal (by using your **Profile**) and the surplus will be the insulin used to digest the carbs.
-- If the time frame is too short, there will be carbs undigested, thus your "insulin needed for the carbs" will be wrong.
-- If the time frame is too long, nothing bad will happen. You'll use all your carbs and you'll get more basal. At the end, you'll subtract the basal from the total insulin used, the extended time frame (with more basal use) will not affect the result.
+- Jei **profilio** pagrindinė valandinė bazė teisinga, bet kuriuo laikotarpiu KG turi likti tiksle, o AIO būti artimas 0. Gaunate tik savo **profilio** valandinę bazę.
+- Prie to pridedate angliavandenius ir bolusą. Palaukite, kol organizmas suvirškins visus angliavandenius ir **KG** vėl bus tiksle. Jūsų sunaudotas insulinas bus valandinės bazės ir angliavandeniams reikalingo insulino suma. Apskaičiuojate insuliną, kuris buvo naudotas valandinei bazei (pagal savo **profilį**), o likutis bus insulinas, panaudotas angliavandeniams suvirškinti.
+- Jei laikotarpis per trumpas, dalis angliavandenių liks nesuvirškinta, todėl jūsų „angliavandeniams reikalingas insulinas“ bus neteisingas.
+- Jei laikotarpis per ilgas, nieko blogo neatsitiks. Suvartosite visus angliavandenius ir gausite daugiau valandinės bazės. Pabaigoje atimsite valandinę bazę iš viso sunaudoto insulino, todėl ilgesnis laikotarpis (su daugiau valandinės bazės) rezultatui įtakos neturės.
 
-Originally written up by @Robby (Discord) on tips and tricks to help tune your **AAPS Profile**, reviewed and edited by the community (thank you!).
+Iš pradžių parašė @Robby (Discord), pasidalijęs patarimais, kaip suderinti savo **AAPS profilį**; peržiūrėjo ir pataisė bendruomenė (ačiū!).

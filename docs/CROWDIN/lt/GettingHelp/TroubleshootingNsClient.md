@@ -1,43 +1,43 @@
 (Troubleshooting-NSClient-troubleshooting-nsclient)=
 
-# Trikčių Diagnostika NSClient
+# NSClient trikčių šalinimas
 
-NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.
+NSClient veikimui reikia stabilaus ryšio su Nightscout. Dėl nestabilaus ryšio atsiranda sinchronizavimo klaidų ir naudojama daug duomenų.
 
-If nobody is following you on Nightscout you can choose to pause NSClient to save battery life or you can choose to setup NSClient so that it only connects when on Wi-Fi and/or during charging.
+Jei niekas jūsų neseka per Nightscout, galite pristabdyti NSClient ir taip taupyti bateriją. Arba galite nustatyti NSClient taip, kad jis jungtųsi tik per Wi-Fi ir (arba) tik kraunant telefoną.
 
-* How to detect an unstable connection?
+* Kaip atpažinti nestabilų ryšį?
 
-Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. If you see many reconnections, then there is a problem.
+Atidarykite NSClient ekraną (**Konfigūracija** > **Ryšys** > **NSClientV3** > **Atidaryti įskiepį**) ir stebėkite lauką **Būsena** ir žurnalą. Kai websockets įjungti, būsena turi likti „connected“ (prisijungta), o žurnale beveik neturi būti pakartotinio prisijungimo pranešimų. Jei matote daug pakartotinių prisijungimų, yra problema.
 
 * Paleisti iš naujo
 
-As a first step, restart Nightscout and then your phone to see if the issue is permanent.
+Pirmiausia paleiskite iš naujo Nightscout, o tada telefoną, kad pamatytumėte, ar problema išlieka.
 
-If your Nightscout is hosted on Heroku, you can restart Nightscout by: Logging into Heroku, click on your nightscout app name, click on the 'More' menu, then 'Restart all dynos'.
+Jei jūsų Nightscout veikia Heroku, Nightscout galite paleisti iš naujo taip: prisijunkite prie Heroku, spustelėkite savo Nightscout programos pavadinimą, spustelėkite meniu 'More', tada 'Restart all dynos'.
 
-For other hosts, please follow your hosts guidance documentation.
+Jei naudojate kitą paslaugos teikėją, vadovaukitės jo dokumentacija.
 
-* Telefono dalykai
+* Telefono problemos
 
-Android may put your phone into a sleep mode. Check if you have an exception for AAPS in your phones power options to allow it to run in the background all the time.
+Android gali perjungti jūsų telefoną į miego režimą. Patikrinkite, ar telefono energijos nustatymuose AAPS turi išimtį, kad galėtų visą laiką veikti fone.
 
-Check the NSClient again when in strong network signal location.
+Dar kartą patikrinkite NSClient ten, kur stiprus tinklo signalas.
 
 Try another phone.
 
 * Nightscout
 
-If your site is hosted on Azure, many people have found that connection issues have improved since moving to Heroku.
+Jei jūsų svetainė veikia Azure, daugelio žmonių ryšio problemos sumažėjo perkėlus ją į Heroku.
 
-A workaround to connection issues in Azure is to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Ryšio problemas Azure galima apeiti taip: Application settings nustatykite HTTP protocol į 2.0 ir Websockets į ON
 
-* No BG reading from Nightscout
+* Iš Nightscout negaunama KG rodmenų
 
-If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
+Jei **AAPS** prie Nightscout prisijungia teisingai, bet KG rodoma kaip N/A: [NSClientV3 nustatymuose](#Preferences-nsclient) atidarykite **Sinchronizacija** ir įjunkite **Gauti NGJ duomenis iš NS**. Ši parinktis paslėpta, kai įjungtas kliento valdymas ([sustiprintos apsaugos režimas](#client-master-control-hardened-mode)). Tokiu atveju patikrinkite, ar **Konfigūracija** → **Glikemijos šaltinis** pasirinkta **NSClient glikemija**.
 
-* If you still get an error...
+* Jei vis dar gaunate klaidą...
 
-Check the size of your database in MongoDB (or via the database size plugin in nightscout). If you are using the free tier in MongoDB, 496MB means it is full and needs to be cleaned up. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
+Patikrinkite savo duomenų bazės dydį MongoDB (arba per Nightscout įskiepį „database size“). Jei naudojate nemokamą MongoDB planą, 496MB reiškia, kad duomenų bazė pilna ir ją reikia išvalyti. [Vadovaukitės šiomis Nightscout instrukcijomis, kaip patikrinti duomenų bazės dydį ir išvalyti duomenis](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
-Before clearing data from your database and if you haven't already set it up, you should consider donating your AAPS data to the Open Humans project (for research). The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
+Prieš valydami duomenų bazę, jei dar to nepadarėte, apsvarstykite galimybę paaukoti savo AAPS duomenis projektui Open Humans (moksliniams tyrimams). Instrukcijos yra [Open Humans konfigūravimo puslapyje](../SupportingAaps/OpenHumans.md).

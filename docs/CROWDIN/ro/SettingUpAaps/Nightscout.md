@@ -2,13 +2,13 @@
 
 (Nightscout-security-considerations)=
 
-## Security considerations
+## Aspecte de securitate
 
 Nightscout is the reporting and monitoring server of **AAPS**: **AAPS** uploads your data to it, and you or your caregivers look at it on the Nightscout website or in follower apps. It holds your medical data, profiles and treatments, so it is worth thinking about securing your Nightscout website.
 
-In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Remote commands come from a paired **AAPSClient** instead — see [Master ↔ Client control](#client-master-control).
+In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Comenzile de la distanță vin în schimb de la un **AAPSClient** asociat — consultați [Controlul dispozitiv principal ↔ client](#client-master-control).
 
-Exercise maximum caution if using Nightscout as your AAPS BG data source.
+Fiți extrem de precauți dacă folosiți Nightscout ca sursă de date de glicemie pentru AAPS.
 
 ### Setări Nightscout
 
@@ -18,18 +18,18 @@ Nightscout `API_SECRET` is your site main password: don't share it publicly.
 
 (Nightscout-aaps-settings)=
 
-### AAPS settings
+### Setări AAPS
 
-Accepting data from Nightscout (profile changes, treatments, ...) is optional and turned off by default. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
+Acceptarea datelor din Nightscout (schimbări de profil, tratamente, ...) este opțională și dezactivată implicit. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
 
 * Access the **Synchronization** settings of the NSClientV3 plugin with either 1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or 2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
-* Enable "Upload data to NS".
+* Activați „Încărcați date în NS”.
 * "Upload BG data to NS" is in the settings of your BG source (**Configuration → BG Source → Settings**). Enable it, unless your AAPS BG data source is Nightscout: in that case **do not** enable it.
 * Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
 
-#### Do not sync from Nightscout
+#### Nu sincronizați din Nightscout
 
-Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
+Când toate opțiunile „Primiți … din NS” sunt dezactivate, AAPS nu va folosi nicio modificare din Nightscout:
 
 ![Doar încărcarea Nightscout](../images/preferences/settings_nsclient_sync.png)
 
@@ -40,19 +40,19 @@ Note that insulin treatments will only be used for calculations like "Do not bol
 
 ![Nightscout receive options enabled](../images/NSsafety3.png)
 
-### Further security settings
+### Alte setări de securitate
 
 Keep your phone up to date as described in [safety first](#preparing-safety-first).
 
 (Nightscout-manual-nightscout-setup)=
 
-## Manual Nightscout setup
+## Configurarea manuală a Nightscout
 
 It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
 
 * [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
-* Add or edit the variables as follows:
+* Adăugați sau modificați variabilele astfel:
   
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
@@ -62,7 +62,7 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-* Save the modifications. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
+* Salvați modificările. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
   
   * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   
@@ -70,4 +70,4 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 
 ## Nightscout as a paid SaaS (Software as a Service)
 
-Use the vendor web interface to set the variables. Contact the vendor support service if necessary.
+Folosiți interfața web a furnizorului pentru a seta variabilele. Contact the vendor support service if necessary.

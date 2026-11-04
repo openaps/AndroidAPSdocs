@@ -32,7 +32,7 @@ Te szkody to m.in. **utrata wzroku i trwała neuropatia (ból)**. Można unikną
 
 #### Jak szybko mogę obniżyć HbA1c bez ryzyka trwałych uszkodzeń?
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. Autorzy zalecili, że **„spadek wartości HbA1c w każdym okresie 6 miesięcy powinien być mniejszy niż 2%, aby zapobiec postępowi retinopatii.... Zbyt szybki spadek na początku kontroli glikemii może spowodować ciężkie lub przejściowe zaostrzenie postępu retinopatii.”**
+Jedno retrospektywne [badanie](https://pubmed.ncbi.nlm.nih.gov/1464975/) 76 pacjentów wykazało, że ryzyko postępu retinopatii rosło odpowiednio 1,6 razy, 2,4 razy i 3,8 razy, gdy HbA1c spadło o 1, 2 lub 3 punkty procentowe w ciągu 6 miesięcy. Autorzy zalecili, że **„spadek wartości HbA1c w każdym okresie 6 miesięcy powinien być mniejszy niż 2%, aby zapobiec postępowi retinopatii.... Zbyt szybki spadek na początku kontroli glikemii może spowodować ciężkie lub przejściowe zaostrzenie postępu retinopatii.”**
 
 Uwaga Jeśli używasz innych jednostek HbA1c (mmol/mol zamiast %), kliknij [tutaj](https://www.diabetes.co.uk/hba1c-units-converter.html), aby otworzyć kalkulator HbA1c.
 
@@ -51,9 +51,9 @@ Ogólnie uważa się, że osoby z _nowo_ zdiagnozowaną cukrzycą typu 1 (które
 :class: danger
 Inhibitory SGLT-2, zwane też flozynami, hamują wchłanianie zwrotne glukozy w nerkach. Flozyny obniżają poziom glukozy we krwi w sposób, którego nie da się obliczyć, dlatego NIE WOLNO Ci ich przyjmować, gdy używasz systemu zamkniętej pętli, takiego jak AAPS! Istnieje znaczne ryzyko kwasicy ketonowej i/lub hipoglikemii! Połączenie tego leku z systemem, który obniża dawki bazowe, aby podnieść glikemię, jest szczególnie niebezpieczne. 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. Problem polega na tym, że inhibitory powodują, że organizm usuwa część węglowodanów, a AAPS o tym nie wie. W efekcie w organizmie jest za dużo insuliny w stosunku do wchłoniętych węglowodanów, co powoduje hipoglikemię.
+W skrócie:
+- **Przykład 1: ryzyko hipoglikemii**
+>Podczas obiadu używasz **AAPS**, aby podać bolus na 45 g węglowodanów. Problem polega na tym, że inhibitory powodują, że organizm usuwa część węglowodanów, a AAPS o tym nie wie. W efekcie w organizmie jest za dużo insuliny w stosunku do wchłoniętych węglowodanów, co powoduje hipoglikemię.
 
 - **Przykład 2: ryzyko kwasicy ketonowej**
 >Inhibitory w tle usuwają część węglowodanów, przez co Twoja glikemia spada. **AAPS** automatycznie każe pompie zmniejszyć podawanie insuliny, także bazy. Z czasem Twoja glikemia może utrzymywać się poniżej celu, aż organizm nie będzie miał wystarczającej ilości insuliny bazowej, aby przyswoić węglowodany, co prowadzi do kwasicy ketonowej. Zwykle kwasica ketonowa rozwija się u osób z cukrzycą typu 1, gdy zawiedzie pompa. Wtedy telefon pokazuje alarmy, a problem widać po wysokiej glikemii. Niebezpieczeństwo przy flozynach polega jednak na tym, że AAPS nie pokaże żadnych alarmów, bo pompa działa normalnie, a glikemia może pozostawać w zakresie docelowym.
@@ -80,7 +80,7 @@ Na początku pracy z **AAPS** możesz mieć trudności z tym, aby wszystkie elem
 
 #### Czas budowania aplikacji i przejście do pełnej pętli
 
-The time to build the **AAPS** app depends on your level of expertise and technical ability. Niedoświadczonym użytkownikom zbudowanie **AAPS** zajmuje zwykle do pół dnia lub cały dzień (z pomocą społeczności). Przy kolejnych wersjach **AAPS** proces będzie dużo szybszy, bo zdobędziesz doświadczenie.
+Czas potrzebny na zbudowanie aplikacji **AAPS** zależy od Twojej wiedzy i umiejętności technicznych. Niedoświadczonym użytkownikom zbudowanie **AAPS** zajmuje zwykle do pół dnia lub cały dzień (z pomocą społeczności). Przy kolejnych wersjach **AAPS** proces będzie dużo szybszy, bo zdobędziesz doświadczenie.
 
 Kilka części tej dokumentacji pomaga Ci w procesie budowania:
 
@@ -123,7 +123,7 @@ Jeśli czujesz się niepewnie w jakimkolwiek temacie, nie krępuj się skontakto
 
 
 
-#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
+#### [Gdzie udać się po pomoc](../GettingHelp/WhereCanIGetHelp.md)?
 
 Ten rozdział daje nowym użytkownikom linki do źródeł pomocy, w tym do społeczności nowych i doświadczonych użytkowników, którzy mogą odpowiedzieć na pytania i pomóc w typowych problemach z AAPS.
 
@@ -173,12 +173,12 @@ Oto przybliżony harmonogram:
 | Konfiguracja GitHub do budowania w przeglądarce                              |               1–4 godz.                |
 | Konfiguracja serwera raportów                                                |               1 godzina                |
 | Instalacja aplikacji CGM (xDrip, BYODA, …)                                   |               1 godzina                |
-| Configuring CGM → xDrip → AAPS initially                                     |               1 godzina                |
+| Wstępna konfiguracja CGM → xDrip → AAPS                                      |               1 godzina                |
 | Wstępna konfiguracja AAPS → pompa                                            |               1 godzina                |
 | Konfiguracja AAPS → Nightscout/Tidepool (tylko raportowanie)                 |               1 godzina                |
-| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers                    |               1 godzina                |
+| Opcjonalnie: konfiguracja Nightscout ↔ **AAPS** i NSFollowers                |               1 godzina                |
 | Zadanie 1: Konfiguracja wizualizacji i monitorowania                         |               1 godzina                |
-| Zadanie 2: Dowiedz się, jak kontrolować AAPS                                 |                2 hours                 |
+| Zadanie 2: Dowiedz się, jak kontrolować AAPS                                 |               2 godziny                |
 | Zadanie 3: Sprawdź swoją wiedzę                                              |               Do 14 dni                |
 | Zadanie 4: Rozpoczęcie w trybie otwartej pętli                               |           Co najmniej 7 dni            |
 | Zadanie 5: Zrozumienie działania otwartej pętli                              |                 7 dni                  |

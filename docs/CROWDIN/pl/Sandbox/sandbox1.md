@@ -16,7 +16,7 @@ Na drodze jest niebezpieczeństwo.
 
 Test dla Konfiguracji
 
-"The number 42 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
+„Liczba 42 to w »Autostopem przez Galaktykę« Douglasa Adamsa »Odpowiedź na Wielkie Pytanie o Życie, Wszechświat i Wszystko«, obliczona przez ogromny superkomputer o nazwie Deep Thought w ciągu 7,5 miliona lat.” - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
 To jest wewnętrzny plik testowy (sandbox) zespołu dokumentacji do testowania
 
@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Etykieta w środku [niczego](#sandbox1-in-the-middle-of-nowhere) A to jest etykieta do [](#sandbox1-this-is-another-test) i powinna wyświetlić swoją nazwę
 
-Links with anchor:
+Linki z kotwicą:
 - [ile to potrwa?](#preparing-how-long-will-it-take)
 - [Ustawienia NSClient w Ustawieniach](#Preferences-nsclient).
 - [linie prognozy na ekranie głównym AAPS](#aaps-screens-prediction-lines) do nagłówka poziomu 4

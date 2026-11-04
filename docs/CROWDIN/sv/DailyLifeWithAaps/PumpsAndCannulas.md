@@ -1,116 +1,116 @@
-# Pumps and cannulas
+# Pumpar och kanyler
 
-## Changing infusion sets: insulin reservoirs and cannulas
+## Byta infusionsset: insulinreservoarer och kanyler
 
-The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. This procedure is sometimes referred to as a "set change", with a "full" set change including the insulin reservoir and cannula, and a "partial" set change referring to a change of cannula only.
+Stegen nedan gäller bara pumpar med slang och inte pod-pumpar som Omnipod, Medtrum Nano, Accu-Chek Solo osv. Detta kallas ibland för ett ”setbyte”. Ett ”fullständigt” setbyte omfattar både insulinreservoaren och kanylen, och ett ”partiellt” setbyte betyder att bara kanylen byts.
 
-Patch pumps fill and prime themselves in their own activation wizard, and their cannula is already in the body. **AAPS** does not offer a prime for them: **Prime/Fill** is not shown in the **Manage** sheet or in QuickLaunch. See the page of your pump in [Compatible pumps](../Getting-Started/CompatiblePumps.md).
+Pod-pumpar fyller och förfyller sig själva i sin egen aktiveringsguide, och deras kanyl sitter redan i kroppen. **AAPS** erbjuder ingen förfyllning för dem: **Förfyllning** visas inte i panelen **Hantera** eller i Snabbstart. Se sidan om din pump under [Kompatibla pumpar](../Getting-Started/CompatiblePumps.md).
 
-Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be carried out via the pump directly. These need to be logged in **AAPS** manually, once completed.
+Du kan inte byta reservoar/ampull i **AAPS**. Det måste du göra direkt på pumpen. När bytet är klart måste du logga det manuellt i **AAPS**.
 
 (pumps-cannulas-changing-reservoir-and-cannula)=
-### Guide for changing both the pump reservoir and cannula
+### Guide för att byta både pumpens reservoar och kanylen
 
-1. In **AAPS**, disconnect the pump: press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** for 1 hour. The icon changes to a grey plug icon, indicating that the pump is disconnected.
+1. Koppla från pumpen i **AAPS**: tryck på [loopikonen](#AapsScreens-loop-status) på huvudskärmen och välj **Koppla från pumpen** i 1 timme. Ikonen ändras till en grå kontaktikon, som visar att pumpen är frånkopplad.
 
-2. Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
+2. Byt insulinreservoaren fysiskt: koppla loss pumpen från kroppen och byt reservoaren/ampullen och kanylen enligt tillverkarens instruktioner.
 
-3. Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
+3. Förfyll slangen och kanylen: det kan du göra direkt på pumpen. Se till att få bort alla luftbubblor i slangen.
 
-4. Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
+4. Sätt fast den nya kanylen på kroppen. När kanylen är insatt och nålen borttagen finns det en liten luftficka i kanylen, som också måste förfyllas. Så registrerar du detta i **AAPS** och förfyller kanylen: öppna **Förfyllning** (i den utfällda statuspanelen på huvudskärmen, i panelen **Hantera** eller som en knapp i [Snabbstart](QuickLaunch.md)) och kryssa i **Logga byte av kanyl** och/eller **Logga byte av insulinreservoar** efter behov för att registrera bytet. Tryck nu på standardmängden för förfyllning av kanylen (den är oftast runt 0,3 U, men kontrollera att värdet stämmer för din kanyl) och välj **OK**. Läs sammanfattningen och bekräfta förfyllningen genom att trycka på **OK**.
 
-   ![Prime/Fill in the Manage sheet with a tube pump](../images/v4/Screens/manage_sheet_tube_pump.png)
+   ![Förfyllning i panelen Hantera med en slangpump](../images/v4/Screens/manage_sheet_tube_pump.png)
 
 
-5. Reconnect the pump in **AAPS**: press the grey plug icon and select **Reconnect pump** to continue looping.
+5. Anslut pumpen igen i **AAPS**: tryck på den grå kontaktikonen och välj **Återanslut pump** för att fortsätta loopa.
 
-### Useful information concerning insulin/cannula changes
+### Bra att veta om byte av insulin och kanyl
 
-* Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** main screen.
+* När du loggar ett kanylbyte återställs Autosens till 100 %. Det återställer också statuslamporna och åldrarna för kanyl/insulin på huvudskärmen i **AAPS**.
 
-* You can set/adjust the default prime amounts in the **Prime/Fill** settings — type "prime" in the main screen search bar to open them (see [Preferences](../SettingUpAaps/Preferences.md)). See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
+* Du kan ställa in/ändra standardmängderna för förfyllning i inställningarna för **Förfyllning**. Skriv ”prime” i sökfältet på huvudskärmen för att öppna dem (se [Inställningar](../SettingUpAaps/Preferences.md)). Läs i bruksanvisningen i kanylförpackningen hur många enheter som ska användas för att förfylla din kanyl (det beror på nålens och slangens längd).
 
-* Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the [Treatments history](#aaps-screens-treatments) as "Prime".
+* Insulin som levereras med förfyllningsfunktionen räknas inte med av **AAPS** när aktivt insulin (IOB) beräknas, och det markeras som ”Förfyllning” i [Behandlingshistorik](#aaps-screens-treatments).
 
-* Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) in the **Insulin** dialog (see [To announce delivered insulin without actually bolusing](#pumps-cannulas-announce-insulin) below).
+* Insulin som ges som bolus från pumpen medan pumpen är frånkopplad räknas inte heller med av **AAPS**. Om du råkar ge en bolus direkt från pumpen medan **AAPS** är frånkopplad kan du, när du har anslutit pumpen igen, registrera detta insulin (utan att ge det som bolus) i dialogrutan **Insulin** (se [Registrera levererat insulin utan att ge bolus](#pumps-cannulas-announce-insulin) nedan).
 
-### Cannula, infusion site, tubing and/or pump issues
+### Problem med kanyl, infusionsställe, slang och/eller pump
 
-If you are confident that you haven't received any insulin for a period of time, despite **AAPS** recording that you have, and you know exactly when the issue started (_e.g._ you remove the cannula and see that the cannula was kinked during the insertion process) you can correct this in **AAPS**, while being aware that the insulin may in fact have been delivered but may be slow to act for some reason.
+Om du är säker på att du inte har fått något insulin under en viss tid, trots att **AAPS** har registrerat att du har fått det, och du vet exakt när problemet började (_t.ex._ du tar bort kanylen och ser att den blev böjd när den sattes in), kan du rätta detta i **AAPS**. Var samtidigt medveten om att insulinet faktiskt kan ha levererats men av någon anledning verkar långsamt.
 
 ```{admonition} Caution - Risk of Hypoglycemia
 :class: danger
-Only delete insulin delivery from **AAPS** with EXTREME caution, in case insulin _has_ actually been delivered, and monitor BG closely for the next 24 h.
+Ta bara bort insulinleveranser från **AAPS** med YTTERSTA försiktighet, ifall insulinet _faktiskt_ har levererats, och håll noga koll på ditt BG under de kommande 24 timmarna.
 ```
 
-To remove boluses and SMBs which you know have not been delivered, open the **menu** (☰), select [Treatments history](#aaps-screens-treatments) and, on the **Carbs and bolus** tab, conservatively delete the logged boluses starting from the point the incident happened. This will correct the "insulin on board" (IOB) value which is key for **AAPS**' calculations; if you now return to the main screen you will see that the IOB has reduced. Be aware that you cannot delete basal insulin which **AAPS** calculates to have been delivered, so that will still be taken into account by **AAPS**.
+Om du vill ta bort bolusar och SMB:er som du vet inte har levererats öppnar du **menyn** (☰), väljer [Behandlingshistorik](#aaps-screens-treatments) och raderar försiktigt, på fliken **Kolhydrater och bolus**, de loggade bolusarna från den tidpunkt då problemet uppstod. Det rättar värdet för ”aktivt insulin” (IOB), som är centralt för beräkningarna i **AAPS**. Om du nu går tillbaka till huvudskärmen ser du att IOB har minskat. Tänk på att du inte kan radera basalinsulin som **AAPS** räknar med har levererats. Det insulinet tas alltså ändå med i beräkningen av **AAPS**.
 
-In less obvious cases of insulin delivery problems _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. You may detect these issues either by "smelling" the insulin, seeing a wet adhesive, encountering high glucose values or by getting an alarm. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs to be deducted from the current "insulin on board" (IOB) value. One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
+Var försiktig i mindre tydliga fall av problem med insulinleveransen, _t.ex._ läckage, ocklusion eller att insulinet läcker ut längs kanylen, där du antingen inte vet när problemet började eller tror att en del av insulinet har levererats. Du kan upptäcka sådana problem genom att du känner lukten av insulin, ser att plåstret är vått, får höga glukosvärden eller får ett larm. Eftersom du aldrig vet hur mycket insulin som har hamnat i huden (och som kanske börjar verka efter en stund) är det svårt att avgöra hur mycket insulin som ska dras av från det aktuella värdet för ”aktivt insulin” (IOB). Ett sätt är att pausa loopen i 5 timmar (eller under ditt insulins verkningstid) efter att du har löst problemet med insulinleveransen, och sedan starta loopen igen. Då blir IOB rätt när du startar loopen igen.
 
 (pumps-cannulas-disconnecting)=
-## Disconnecting the pump for showering or activity
+## Koppla från pumpen för dusch eller aktivitet
 
-If you take your pump off for showering, bathing, swimming, contact sports or other activities you must let **AAPS** know that no insulin is being delivered, to keep the IOB correct. The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, open the same dialog again and pick a new duration under **Disconnect pump**: the disconnection is extended and the new duration starts from now. You do not need to reconnect first.
+Om du tar av pumpen för att duscha, bada, simma, utöva kontaktsport eller annan aktivitet måste du tala om för **AAPS** att inget insulin levereras, så att IOB blir rätt. Du kan koppla från pumpen med [loopikonen](#AapsScreens-loop-status) på huvudskärmen: tryck på den och välj **Koppla från pumpen** med den tid du behöver. Om aktiviteten tar längre tid än planerat öppnar du samma dialogruta igen och väljer en ny tid under **Koppla från pumpen**: frånkopplingen förlängs och den nya tiden räknas från nu. Du behöver inte ansluta pumpen först.
 
-As you are not getting any insulin while the pump is disconnected, you should reconnect every two hours to catch up for the missing basal. You can do this by connecting, bolusing the missing basal amounts (_e.g._ of the last two hours) before disconnecting again. This should help to avoid a severe lack of insulin which could result in diabetic ketoacidosis (DKA). If it is inconvenient to reconnect the pump during activity (cannula site is covered by wearing a wetsuit _etc._), consider a pen injection instead. This manual injection can be logged in **AAPS**, and doesn't have to be logged at the time of injection (just make a note of the time of injection) since you can announce the insulin and backdate the time the insulin was actually given when you reconnect the pump.
+Eftersom du inte får något insulin medan pumpen är frånkopplad bör du koppla in den igen varannan timme för att ta igen den basal du har missat. Du kan göra det genom att ansluta pumpen och ge de missade basalmängderna som bolus (_t.ex._ för de senaste två timmarna) innan du kopplar från igen. Det hjälper dig att undvika en allvarlig insulinbrist, som kan leda till diabetesketoacidos (DKA). Om det är opraktiskt att ansluta pumpen igen under aktiviteten (kanylplatsen är täckt av en våtdräkt _osv._), kan du i stället överväga en injektion med penna. Den här manuella injektionen kan loggas i **AAPS**. Du behöver inte logga den när du tar injektionen (anteckna bara tiden), eftersom du kan registrera insulinet och ange den verkliga tiden i efterhand när du ansluter pumpen igen.
 
 (pumps-cannulas-announce-insulin)=
-## To announce delivered insulin without actually bolusing
+## För att registrera insulin som har getts utan att faktiskt ge en bolus
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
+Så registrerar du insulin som levererats från pumpen medan **AAPS** var frånkopplad, eller insulin från injektioner med penna: öppna [dialogrutan Insulin](#aaps-screens-buttons-insulin) (**Behandlingar** i den nedre navigeringen, eller en knapp i Snabbstart), ange mängden i enheter och aktivera **Bolus kommer bara att loggas (inte levereras av pumpen)**. Då visas raden **Tid** (inställd på **Nu**), där du kan ange den verkliga tiden för injektionen. Du kan strunta i den om injektionen gavs nyligen. Om bolusen gavs för en tid sedan kan du använda **-** för att flytta tiden bakåt (_t.ex._ -30 min), eller öppna raden med vinkelpilen och välja exakt datum och tid. **AAPS** tar då hänsyn till insulinets verkningstid och räknar ut hur mycket insulin som fortfarande finns kvar i kroppen.
 
-If you are using **AAPS** as a caregiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as "pump disconnect 120" and "pump connect 120". The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.
+Om du använder **AAPS** som vårdgivare kan du mycket enkelt koppla från (och ansluta) pumpen på distans med [SMS-kommandon](../RemoteFeatures/SMSCommands.md), till exempel ”pump disconnect 120” och ”pump connect 120”. Tiden för frånkoppling på distans kan vara 1–120 min (i det här exemplet 120 minuter). Det är mycket praktiskt om **AAPS**-telefonen är svår för dig att komma åt, till exempel nedstoppad i ett pumpbälte på ett barn som springer mot simhallen, eller noga bevakad (eller använd) av en tonåring.
 
-## Reconnecting the pump after activity
+## Återansluta pumpen efter aktivitet
 
-After a long disconnection (1 - 2 hours) it is fairly common for **AAPS** to calculate that you now have negative IOB. When you reconnect the pump, depending on preference/current glucose level/planned food or subsequent activity, you can either:
+Efter en lång frånkoppling (1–2 timmar) är det ganska vanligt att **AAPS** räknar ut att du nu har negativ IOB. När du återansluter pumpen kan du, beroende på vad du föredrar, ditt aktuella glukosvärde, planerad mat eller kommande aktivitet, antingen:
 
-a) Just reconnect the pump in **AAPS** (grey-to-green, for closed loop) and leave it up to **AAPS** to start to deliver insulin again
+a) Anslut bara pumpen igen i **AAPS** (grå till grön, för sluten loop) och låt **AAPS** själv börja leverera insulin igen
 
-_or_
+_eller_
 
-b) If you want to be more aggressive (for example, you are heading for hyperglycemia), you can open the [Bolus wizard](#aaps-screens-bolus-wizard) and bolus for zero carbs, to immediately deliver the calculated missing insulin as a bolus.
+b) Om du vill vara mer aggressiv (till exempel om du är på väg mot ett högt blodsocker) kan du öppna [Kalkylator](#aaps-screens-bolus-wizard) och ge en bolus för noll kolhydrater, så att det beräknade insulinet som saknas levereras direkt som bolus.
 
-Which strategy you prefer is highly personal, and is best determined by trial and error.
+Vilket sätt du föredrar är mycket personligt, och du hittar det bäst genom att prova dig fram.
 
 
 (Aapsscreens-site-rotation)=
-## Site Rotation
+## Platsrotation
 
-**Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
+**Hantera → Platsrotation** öppnar dialogrutan Platsrotation i visningsläge:
 
-- With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
-- All Cannula change and Sensor change events from the past 45 days are available.
-- Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-- Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
+- Med de två knapparna högst upp (kanylikonen och sensorikonen) kan du visa bara kanylplatser, bara sensorplatser eller båda
+- Alla händelser för kanylbyte och sensorbyte från de senaste 45 dagarna är tillgängliga.
+- Tryck på ett område eller på en post i listan nedanför för att bara visa poster i det valda området. Det valda området markeras med ljusgrön färg.
+- Tryck på ikonen **penna** bredvid en post för att öppna redigeringsvyn och ändra plats, pil eller anteckning
 
-![View Mode](../images/SiteRotation/ViewMode.png)
+![Visningsläge](../images/SiteRotation/ViewMode.png)
 
-- The **cog** icon (upper right) opens the settings: **User profile for site rotation** opens a dialog where you choose **Man**, **Woman** or **Child**, and the **Manage pump site rotation** and **Manage CGM site rotation** switches select which sites you manage.
+- Ikonen med **kugghjulet** (uppe till höger) öppnar inställningarna: **Användarprofil för platsrotation** öppnar en dialogruta där du väljer **Man**, **Kvinna** eller **Barn**, och med reglagen **Hantera pumpplatsrotation** och **Hantera CGM-sensorplatsrotation** väljer du vilka platser du hanterar.
 
 ![Settings](../images/SiteRotation/Settings.png)
 
-![User profile for site rotation dialog](../images/SiteRotation/Type.png)
+![Dialogrutan Användarprofil för platsrotation](../images/SiteRotation/Type.png)
 
-*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
+*Obs! Den här inställningen avgör om dialogrutan Platsrotation (redigeringsläge) öppnas automatiskt när en ny post skapas med knappen ”Förfyllning” eller knappen ”Sensorinsättning”.*
 
-- For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+- Om du har bytt kanyl direkt på pumpen måste du öppna visningsläget och redigera den nya posten för att välja plats och pil
 
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+I redigeringsläget kan du välja plats, pil och anteckning för den valda posten:
 
-- The entry being edited is shown below the body images, with its type icon (cannula or sensor)
-- Front and back views are shown side by side: tap the area where you placed it
-- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
+- Posten som redigeras visas under kroppsbilderna, med ikonen för sin typ (kanyl eller sensor)
+- Kroppen visas framifrån och bakifrån bredvid varandra: tryck på det område där du satte den
+- När en plats har valts (markerad i grönt) visar listan nedanför alla poster på den platsen från de senaste 45 dagarna.
 
-![Edit Mode](../images/SiteRotation/EditMode.png)
+![Redigeringsläge](../images/SiteRotation/EditMode.png)
 
-- You can add an optional arrow by tapping the arrow icon at the right of the entry: the **Select Arrow** dialog lets you specify a sub-location or the pod orientation
+- Du kan lägga till en pil om du vill genom att trycka på pilikonen till höger om posten: i dialogrutan **Välj pil** kan du ange en mer exakt plats eller hur podden är vänd
 
-![Position](../images/SiteRotation/EditModeSub.png)
+![Placering](../images/SiteRotation/EditModeSub.png)
 
-- You can also add a **Note** about the selected site
-- Tap the **save** icon (upper right) to record the site
+- Du kan också lägga till en **Anteckning** om den valda platsen
+- Tryck på ikonen **spara** (uppe till höger) för att registrera platsen
 
-Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+Du kan filtrera grafiskt på bilden eller genom att trycka på en behandlingshändelse i listan Tryck utanför alla platser på bilden för att ta bort filtret
 
-![Filtering](../images/SiteRotation/Filtering.png)
+![Filtrering](../images/SiteRotation/Filtering.png)

@@ -1,16 +1,16 @@
 # שאלות נפוצות של לופרים
 
-How to add questions to the FAQ: Follow these [instructions](../SupportingAaps/HowToEditTheDocs.md)
+איך להוסיף שאלות לשאלות הנפוצות: יש לפעול לפי [ההוראות](../SupportingAaps/HowToEditTheDocs.md) האלה
 
 ## General
 
 ### Can I just download the AAPS installation file?
 
-לא. למעשה לא קיים קובץ התקנה (apk) להורדה עבור AndroidAPS, You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. להלן הסיבה לכך:
+לא. אין קובץ apk להורדה עבור AAPS. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. להלן הסיבה לכך:
 
-היישום AndroidAPS שולט למעשה במשאבה וקובע את מתן האינסולין. בהתאם לרגולציה הקיימת באירופה, כל מערכת שמסווגת IIa או IIb היא מערכת רפואית שדורשת אישור של הרגולטור (סימון CE) ומחייבת שורה של מחקרים ואישורים. הפצה של מערכת שאינה מאושרת ע"י הרגולטור אינה חוקית. רגולציה דומה קיימת גם באיזורים אחרים בעולם.
+AAPS שולט במשאבה ונותן אינסולין. בהתאם לרגולציה הקיימת באירופה, כל מערכת שמסווגת IIa או IIb היא מערכת רפואית שדורשת אישור של הרגולטור (סימון CE) ומחייבת שורה של מחקרים ואישורים. הפצה של מערכת שאינה מאושרת ע"י הרגולטור אינה חוקית. רגולציה דומה קיימת גם באיזורים אחרים בעולם.
 
-הדרישות הרגולטוריות אינן מוגבלות למכירה (בתמורה תשלום) והיא חלה על כל סוג של הפצה (גם אם נעשית בחינם). בניה של מכשיר רפואי לשימוש עצמי היא ההחרגה היחידה שמאפשרת הימנעות מהדרישות הרגולטוריות.
+הדרישות הרגולטוריות אינן מוגבלות למכירה (בתמורה לתשלום) אלא חלות על כל סוג של הפצה (גם אם היא נעשית בחינם). בניה של מכשיר רפואי לשימוש עצמי היא ההחרגה היחידה שמאפשרת הימנעות מהדרישות הרגולטוריות.
 
 זו הסיבה שקובץ התקנה apk אינו זמין להורדה.
 
@@ -18,7 +18,7 @@ How to add questions to the FAQ: Follow these [instructions](../SupportingAaps/H
 
 ### How to begin?
 
-Start with [Preparing to start with AAPS](../Getting-Started/PreparingForAaps.md): it walks you through everything below in more detail.
+כדאי להתחיל בדף [מתכוננים להתחיל עם AAPS](../Getting-Started/PreparingForAaps.md): הוא מסביר בפירוט רב יותר את כל מה שמופיע למטה.
 
 ראשית כל, יש להצטייד ב**ציוד המתאים ללופ**:
 
@@ -28,77 +28,77 @@ Start with [Preparing to start with AAPS](../Getting-Started/PreparingForAaps.md
 
 Secondly, you have to **setup your software components**: [AAPS](../SettingUpAaps/BuildingAaps.md), [CGM/FGM source](../Getting-Started/CompatiblesCgms.md) and a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Thirdly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your [basal rate and carb ratio](../SettingUpAaps/YourAapsProfile.md) are accurate. כל ההמלצות הטיפוליות מניחות שהתוכנית הבזאלית נכונה ושינויים ברמת הסוכר הם תוצאה של גורמים אחרים, שמחייבים תיקון והתאמה (פעילות גופנית, לחץ וכיו"ב.). על התיקונים וההתאמות המבוצעים ע"י הלולאה הסגורה חלות מגבלות וכללים לשמירה על בטיחות הטיפול (למשל מקסימום אינסולין בזאלי זמני ב[הגדרות OpenAPS](https://openaps.org/reference-design/)), כך שלא יעשה שימוש בבולוס על מנת לתקן תכנון בזאלי שגוי או שאינו מתאים. אם לדוגמה, המערכת קובעת בזאלי זמני נמוך מהתוכנית לקראת ארוחה באופן תדיר, יתכן שיש צורך לשנותה ולהתאים את התוכנית הבזאלית. You can use [Autotune](#autotune-how-autotune-calculates-adjustments) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old-fashioned way](https://integrateddiabetes.com/basal-testing/).
+Thirdly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. העיקרון הבסיסי של לולאה סגורה הוא ש[הקצב הבזאלי ויחס הפחמימות](../SettingUpAaps/YourAapsProfile.md) שלכם מדויקים. כל ההמלצות הטיפוליות מניחות שהתוכנית הבזאלית נכונה ושינויים ברמת הסוכר הם תוצאה של גורמים אחרים, שמחייבים תיקון והתאמה (פעילות גופנית, לחץ וכיו"ב.). ההתאמות שהלולאה הסגורה יכולה לבצע מוגבלות מטעמי בטיחות (ראו את הקצב הבזאלי הזמני המרבי המותר ב-[OpenAPS Reference Design](https://openaps.org/reference-design/)). לכן לא כדאי לבזבז את המינון המותר על תיקון של קצב בזאלי בסיסי שגוי. אם לדוגמה, המערכת קובעת בזאלי זמני נמוך מהתוכנית לקראת ארוחה באופן תדיר, יתכן שיש צורך לשנותה ולהתאים את התוכנית הבזאלית. ניתן להשתמש ב-[Autotune](#autotune-how-autotune-calculates-adjustments) כדי לבחון כמות גדולה של נתונים ולקבל הצעה אם וכיצד יש לשנות את הבזאלי ו/או את ה-ISF, וגם אם יש לשנות את יחס הפחמימות. או שניתן לבדוק ולהגדיר את הקצב הבזאלי [בדרך המסורתית](https://integrateddiabetes.com/basal-testing/).
 
 ### What practicalities of looping do I have?
 
 #### Password protection
 
-If you don't want your settings to be easily changed, you can protect them with a password, a PIN or your phone's biometric authentication (fingerprint, face). Open **Settings** > **Protection** > **Settings protection** and choose the type of protection. You can also protect the whole app or only boluses in the same place. See [Settings protection](#Preferences-settings-protection) for details.
+אם אינכם רוצים שיהיה קל לשנות את ההגדרות שלכם, ניתן להגן עליהן באמצעות סיסמה, קוד PIN או זיהוי ביומטרי של הטלפון (טביעת אצבע, פנים). יש לפתוח את **הגדרות** > **הגנה בסיסמאות** > **הגנה על הגדרות** ולבחור את סוג ההגנה. באותו מקום ניתן גם להגן על כל האפליקציה, או רק על בולוסים. לפרטים, ראו [הגנה על הגדרות](#Preferences-settings-protection).
 
 #### Android Wear Smartwatches
 
-If you use the AAPS watch app to bolus or change settings, every request has to be confirmed on the watch: after you send it, the watch shows a summary with a **CONFIRM** button. See [Remote control from a Wear OS watch](../RemoteFeatures/RemoteControlWearOS.md).
+אם משתמשים באפליקציית השעון של AAPS כדי לתת בולוס או לשנות הגדרות, יש לאשר כל בקשה בשעון: אחרי השליחה, השעון מציג סיכום עם כפתור **אישור**. ראו [תפעול AAPS בעזרת שעון Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
 (FAQ-disconnect-pump)=
 
 #### Disconnect pump
 
-אם אתם מורידים את המשאבה לצורך מקלחת, רחצה, שחייה, ספורט או פעילויות אחרות, עליכם ליידע את AndroidAPS על כך ולעצור את מתן האינסולין כדי לשמור על אינסולין פעיל (IOB) תקין.
+אם מסירים את המשאבה לצורך מקלחת, רחצה, שחייה, ספורט או פעילויות אחרות, יש להודיע ל-AAPS שלא ניתן אינסולין, כדי שה-IOB יישאר נכון.
 
-The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the AAPS main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, press the icon again and pick a new duration: you don't need to reconnect first. See [Disconnecting the pump for showering or activity](#pumps-cannulas-disconnecting) for how to avoid a lack of insulin during long disconnections.
+ניתן לנתק את המשאבה בעזרת [סמל הלולאה](#AapsScreens-loop-status) במסך הראשי של AAPS: יש ללחוץ עליו ולבחור **ניתוק המשאבה** עם משך הזמן הדרוש. אם הפעילות נמשכת יותר מהמתוכנן, יש ללחוץ שוב על הסמל ולבחור משך זמן חדש: אין צורך לחבר מחדש קודם. ראו [ניתוק המשאבה למקלחת או לפעילות](#pumps-cannulas-disconnecting) כדי ללמוד איך להימנע מחוסר באינסולין בזמן ניתוקים ארוכים.
 
 #### Recommendations not only based on one single CGM reading
 
-לצורך שמירה על בטיחותכם, ההמלצות לטיפול אינן מבוססות על קריאת חיישן בודדת אלא על ממוצע שינויים של מספר מדידות. לפיכך, במקרה שיאבדו מספר קריאות סוכר ברצף, ייתכן ויעבור זמן מה לאחר חידוש הקשר עד ש-AndroidAPS יוכל להסתמך על הקריאות ולחזור להפעיל את הלולאה שוב.
+לצורך שמירה על בטיחותכם, ההמלצות לטיפול אינן מבוססות על קריאת חיישן בודדת אלא על ממוצע שינויים של מספר מדידות. לכן, אם חסרות כמה קריאות, ייתכן שיעבור זמן מה אחרי שהנתונים חוזרים עד ש-AAPS יחזור לפעול בלולאה.
 
 #### Further readings
 
-There are several blogs with good tips to help you understand the practicalities of looping. Some of them are no longer online: the links below marked "archived copy" open a saved copy on the Internet Archive.
+יש כמה בלוגים עם טיפים טובים שעוזרים להבין את ההיבטים המעשיים של שימוש בלולאה. חלק מהם כבר אינם זמינים ברשת: הקישורים למטה שמסומנים "עותק בארכיון" פותחים עותק שמור ב-Internet Archive.
 
-    * [Fine-tuning Settings](https://web.archive.org/web/20171029031305/http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM (archived copy)
-    * [Why DIA matters](https://web.archive.org/web/20231130035027/http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM (archived copy)
-    * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-    * [Hormones and autosens](https://web.archive.org/web/20170902081839/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM (archived copy)
+    * [כוונון עדין של ההגדרות](https://web.archive.org/web/20171029031305/http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM (עותק בארכיון)
+    * [למה DIA חשוב](https://web.archive.org/web/20231130035027/http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM (עותק בארכיון)
+    * [הגבלת קפיצות סוכר אחרי ארוחות](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
+    * [הורמונים ו-Autosens](https://web.archive.org/web/20170902081839/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM (עותק בארכיון)
     
 
 (what-emergency-equipment-is-recommended-to-take-with-me)= (FAQ-emergency-equipment)=
 
 ### What emergency equipment is recommended to take with me?
 
-ראשית, עליכם להצטייד בציוד החירום הרגיל, שכל סוכרתי שעושה שימוש במשאבת אינסולין ו-CGM נוהג לקחת איתו. בנוסף, כמשתמשי לופ העושים שימוש ב-AndroidAPS, מומלץ בחום להקפיד להצטייד או להחזיק בקרבת מקום את הפריטים הבאים:
+ראשית, עליכם להצטייד בציוד החירום הרגיל, שכל סוכרתי שעושה שימוש במשאבת אינסולין ו-CGM נוהג לקחת איתו. בשימוש בלולאה עם AAPS מומלץ מאוד שהציוד הנוסף הבא יהיה איתכם או בקרבתכם:
 
-* מטענים וסוללות חלופיות לטעינת הטלפון, השעון החכם, מכשיר הגישור ריילילינק וכו'
+* סוללה ניידת (power bank) וכבלים לטעינת הטלפון החכם, השעון ו(במידת הצורך) קורא BT או מכשיר Link
 * סוללות למשאבה
-* Access to your backups, both on the phone and in the cloud (e.g. Google Drive, Dropbox), so that you can set up AAPS again on another phone (see [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md)): 
-  * the current [apk](../SettingUpAaps/BuildingAaps.md) of AAPS and of any other apps you use (e.g. xDrip, Juggluco, BYODA).
-  * your keystore file (from building the apk) and its password,
-  * your latest settings export files from AAPS and your other apps,
-  * your **AAPS** master password: you cannot import the settings file without it.
+* גישה לגיבויים שלכם, גם בטלפון וגם בענן (למשל Google Drive, Dropbox), כדי שתוכלו להגדיר את AAPS מחדש בטלפון אחר (ראו [יצירה ושחזור של גיבויים](../Maintenance/ExportImportSettings.md)): 
+  * קובץ ה-[apk](../SettingUpAaps/BuildingAaps.md) הנוכחי של AAPS ושל כל אפליקציה אחרת שבה אתם משתמשים (למשל xDrip, Juggluco, BYODA).
+  * קובץ ה-keystore שלכם (מבניית ה-apk) והסיסמה שלו,
+  * קובצי ייצוא ההגדרות האחרונים שלכם מ-AAPS ומהאפליקציות האחרות שלכם,
+  * הסיסמה הראשית שלכם ל-**AAPS**: בלעדיה לא ניתן לייבא את קובץ ההגדרות.
 
 (FAQ-organize-backups)=
 
-#### How to organize my backups?
+#### איך לארגן את הגיבויים שלי?
 
-Export settings very regularly: after each pod or reservoir change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. שמרו כמה קבצי ייצוא ישנים.
+יש לייצא את ההגדרות לעתים קרובות מאוד: אחרי כל החלפת פוד או מכל, אחרי שינוי בפרופיל, אחרי השלמת משימה, אם מחליפים משאבה… גם אם שום דבר לא משתנה, יש לייצא פעם בחודש. שמרו כמה קבצי ייצוא ישנים.
 
-**AAPS** can do this for you: it can export your settings automatically (for example with an [Automation](#ExportImportSettings-Automating-Settings-Export) after each pod change) and save the export directly to a cloud folder (Google Drive). See [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md).
+**AAPS** יכול לעשות זאת בשבילכם: הוא יכול לייצא את ההגדרות באופן אוטומטי (למשל בעזרת [אוטומציה](#ExportImportSettings-Automating-Settings-Export) אחרי כל החלפת פוד) ולשמור את הקובץ ישירות בתיקייה בענן (Google Drive). ראו [יצירה ושחזור של גיבויים](../Maintenance/ExportImportSettings.md).
 
 ### How can I safely and securely attach the CGM/FGM?
 
-ניתן להדביק את החיישן עם תוספת של סרט הדבקה. ישנן מספר מדבקות עם חירורים המיועדות לחיישנים נפוצים הניתנות לרכישה באינטרנט (חפשו בגוגל, אמזון ו-Ebay). לופרים רבים משתמשים בטייפ של קיבוע אינפוזיות (Tegaderm, Opsite), קינזיו-טייפ (Kinesiotape) או rocktape- מוצרים שניתן למצוא בכל בית מרקחת במחירים זולים יחסית.
+ניתן להדביק את החיישן עם תוספת של סרט הדבקה. ישנן מספר מדבקות עם חירורים המיועדות לחיישנים נפוצים הניתנות לרכישה באינטרנט (חפשו בגוגל, אמזון ו-Ebay). חלק מהלופרים משתמשים בטייפ קינזיולוגי (kinesiology tape) רגיל וזול יותר, או ב-rocktape.
 
 ניתן לקבע את החיישן. ישנם גם צמידי זרוע שמחזיקים את החיישן על העור (חפשו בגוגל, אמזון ו-Ebay).
 
 ## APS algorithm
 
-### Why does OpenAPS AMA show "dia: 3" even though I have a different DIA in my profile?
+### למה OpenAPS AMA מציג "dia: 3" למרות שבפרופיל שלי מוגדר DIA אחר?
 
-With **OpenAPS AMA** selected in **Configuration** > **APS**, **Open plugin** shows the data sent to the algorithm. In its **Profile** section, `dia` is always 3.0 or less:
+כאשר **OpenAPS AMA** נבחר ב-**הגדרות תצורה** > **APS**, הכפתור **פתיחת תוסף** מציג את הנתונים שנשלחים לאלגוריתם. בחלק **פרופיל**, הערך `dia` הוא תמיד 3.0 או פחות:
 
-![OpenAPS AMA plugin screen with dia 3.0 in the profile data](../images/screens/openaps_ama_plugin.png)
+![מסך התוסף OpenAPS AMA עם dia 3.0 בנתוני הפרופיל](../images/screens/openaps_ama_plugin.png)
 
-ב-AMA, המושג DIA לא באמת מייצג "משך פעילות אינסולין". זהו פרמטר שהיה קשור למשך הפעילות אך כיום משמעותו היא "הזמן שבו התיקון הנוכחי צפוי להסתיים". אין לכך קשר לחישוב האינסולין הפעיל. ב-OpenAPS SMB אין צורך בפרמטר זה כלל.
+ב-AMA, המושג DIA לא באמת מייצג "משך פעילות אינסולין". זהו פרמטר שהיה קשור בעבר למשך הפעילות. אך כיום משמעותו היא "הזמן שבו התיקון הנוכחי צפוי להסתיים". אין לכך קשר לחישוב האינסולין הפעיל. ב-OpenAPS SMB אין צורך בפרמטר זה כלל.
 
 ## Other settings
 
@@ -106,42 +106,42 @@ With **OpenAPS AMA** selected in **Configuration** > **APS**, **Open plugin** sh
 
 (FAQ-nsclient-blocked)=
 
-#### AAPSClient (or AAPS) does not upload data: "Blocked by…". What can I do?
+#### AAPSClient (או AAPS) לא מעלה נתונים: "חסום ע"י…". What can I do?
 
-The NSClient status shows why no data is sent:
+מצב ה-NSClient מראה למה לא נשלחים נתונים:
 
-* **Blocked by connectivity options**: the connection settings do not allow the current connection. For example, you are on cellular data but only Wi-Fi is allowed, or you are not on one of the allowed Wi-Fi networks (SSIDs).
-* **Blocked by charging options**: the connection settings only allow syncing while the phone is charging (or only on battery), and this is not the case right now.
-* **No connectivity**: the phone has no internet connection.
+* **חסום ע"י הגדרות חיבור**: הגדרות החיבור לא מאפשרות את החיבור הנוכחי. לדוגמה, אתם משתמשים בנתונים סלולריים אבל רק Wi-Fi מותר, או שאתם לא מחוברים לאחת מרשתות ה-Wi-Fi המותרות (SSIDs).
+* **חסום ע"י הגדרות טעינה**: הגדרות החיבור מאפשרות סנכרון רק כשהטלפון בטעינה (או רק כשהוא על סוללה), וזה לא המצב כרגע.
+* **אין חיבור**: לטלפון אין חיבור לאינטרנט.
 
-Check the [NSClient connection settings](#Preferences-nsclient): **Use cellular data**, **Use roaming**, **Use WiFi**, **WiFi SSID**, **Sync on battery** and **Sync while charging**.
+יש לבדוק את [הגדרות החיבור של NSClient](#Preferences-nsclient): **שימוש בנתונים סלולריים**, **שימוש בנדידה**, **שימוש ב־Wi‑Fi**, **WiFi SSID**, **סנכרון בזמן שימוש בסוללה** ו-**סנכרון בזמן טעינה**.
 
 ### CGM settings
 
 (FAQ-advanced-filtering)=
 
-#### Why does AAPS say 'SMB always and after carbs disabled because active BG source doesn't support advanced filtering'?
+#### למה AAPS מציג '"SMB תמיד" ו-"SMB אחרי פחמימות" מושבתים כי מקור ערכי הסוכר הפעיל אינו תומך בסינון נתונים מתקדם'?
 
-**Enable SMB always** and **Enable SMB after carbs** can only be used with a [trusted BG data source](#GettingStarted-TrustedBGSource): a sensor and CGM app that can tell **AAPS** which sensor the readings come from. With any other BG source, **AAPS** switches these two options off and shows this message. Check the list of trusted sources and, if your sensor is listed, make sure you use one of the CGM apps shown for it. See also [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+את **הפעלת SMB תמיד** ואת **הפעלת SMB אחרי פחמימות** ניתן להפעיל רק עם [מקור מהימן לערכי סוכר](#GettingStarted-TrustedBGSource): חיישן ואפליקציית CGM שיכולים לומר ל-**AAPS** מאיזה חיישן מגיעות הקריאות. עם כל מקור אחר של ערכי סוכר, **AAPS** מכבה את שתי האפשרויות האלה ומציג את ההודעה הזו. יש לבדוק את רשימת המקורות המהימנים, ואם החיישן שלכם מופיע בה, לוודא שאתם משתמשים באחת מאפליקציות ה-CGM שמופיעות עבורו. ראו גם [החלקת נתוני הגלוקוז בדם](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Pump
 
 #### Batteries
 
-Looping can reduce the pump battery faster than normal use because the system interacts through Bluetooth far more than a manual user does. כדאי להחליף את הסוללה כאשר היא מגיע ל-25% קיבולת מכיוון שמנקודה זו התקשורת עלולה להיכשל. ניתן להגדיר התראת סוללה ע"י הגדרת המשתנה PUMP_WARN_BATT_P באתר ה-Nightscout שלכם. המלצות לחיסכון בסוללה:
+שימוש בלולאה יכול לרוקן את סוללת המשאבה מהר יותר משימוש רגיל, כי המערכת מתקשרת דרך Bluetooth הרבה יותר ממשתמש ידני. כדאי להחליף את הסוללה כשהיא מגיעה ל-25%, כי מנקודה זו התקשורת נעשית קשה. ניתן להגדיר התראת סוללה ע"י הגדרת המשתנה PUMP_WARN_BATT_P באתר ה-Nightscout שלכם. המלצות לחיסכון בסוללה:
 
 * הפחיתו את משך זמן התצוגה של מסך המשאבה (ההגדרה בגוף המשאבה)
 * הפחיתו את משך זמן תאורת המסך של המשאבה (ההגדרה בגוף המשאבה)
 * הגדירו שהתראות תהינה צפצופים במקום רטט (ההגדרה בגוף המשאבה)
 * לחצו על כפתורים במשאבה רק לצורך החלפת מכלי אינסולין וצפו בהיסטוריית המשאבה, רמת סוללה וכמות אינסולין נותרת רק מתוך AAPS.
-* מכשירים מסויימים עלולים לסגור את AndroidAPS בניסיון לחסוך סוללה וזיכרון. כש-AndroidAPS מופעל מחדש, הוא יוצר קשר עם המשאבה דרך בלוטות' וקורא את היסטוריית המשאבה ואת המינון הבזאלי הנוכחי. פעולה זו צורכת סוללה. To see if this is happening, enable **Log app start event** in the NSClient **Advanced settings**: Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, turn off battery optimization for AAPS so that the phone stops closing it down: see [battery savings](#FAQ-battery-savings) below.
+* בטלפונים מסוימים, אפליקציית AAPS עלולה להיסגר לעתים קרובות כדי לחסוך בסוללה או לפנות זיכרון RAM. כש-AAPS מופעל מחדש, בכל הפעלה הוא יוצר חיבור Bluetooth למשאבה וקורא שוב את הקצב הבזאלי הנוכחי ואת היסטוריית הבולוסים. פעולה זו צורכת סוללה. כדי לבדוק אם זה קורה, יש להפעיל את **רישום אירוע הפעלת האפליקציה** ב**הגדרות מתקדמות** של NSClient: Nightscout יקבל אירוע בכל הפעלה מחדש של AAPS, וכך קל לעקוב אחרי הבעיה. כדי לצמצם את זה, יש לכבות את אופטימיזציית הסוללה עבור AAPS כדי שהטלפון יפסיק לסגור אותו: ראו [חיסכון בסוללה](#FAQ-battery-savings) למטה.
 * נקו את מגעי הסוללה עם מטלית עם אלכוהול כדי לוודא שלא נשארו שאריות שומן וכו'.
-* for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy while in storage) but it doesn't always work to break it 100%. הוציאו והחזירו את הסוללה 2-3 פעמים עד להופעת 100% על המסך, או, לפני הכנסתה, געו בשני מסופי הסוללה בעזרת מפתח לזמן קצר מאוד, כדי לגרום לקצר רגעי.
+* במשאבות [Dana R/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md), תהליך ההפעלה מעביר זרם גבוה דרך הסוללה כדי לשבור בכוונה את שכבת הפסיבציה (שמונעת איבוד אנרגיה בזמן אחסון), אבל זה לא תמיד מצליח לשבור אותה ב-100%. הוציאו והחזירו את הסוללה 2-3 פעמים עד להופעת 100% על המסך, או, לפני הכנסתה, געו בשני מסופי הסוללה בעזרת מפתח לזמן קצר מאוד, כדי לגרום לקצר רגעי.
 * see also more tips for [particular types of battery](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
 
 #### Changing reservoirs and cannulas
 
-The reservoir must be changed directly on the pump, then the change is recorded in **AAPS**. Follow the step-by-step [guide for changing the pump reservoir and cannula](#pumps-cannulas-changing-reservoir-and-cannula).
+את המכל יש להחליף ישירות במשאבה, ואז לרשום את ההחלפה ב-**AAPS**. יש לפעול לפי [המדריך להחלפת המכל והצינורית של המשאבה](#pumps-cannulas-changing-reservoir-and-cannula), צעד אחר צעד.
 
 ### Wallpaper
 
@@ -149,7 +149,7 @@ You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phon
 
 ### Daily usage
 
-Many of the situations below can be prepared once as a [scene](#scenes): a preset that switches profile, temp target and other settings with one tap. **AAPS** offers ready-made templates, for example *Exercise*, *Sleep*, *Alcohol* or *Bathing*.
+את רוב המצבים שלמטה ניתן להכין פעם אחת בתור [תרחיש](#scenes): הגדרה מוכנה שמחליפה פרופיל, יעד זמני והגדרות נוספות בהקשה אחת. **AAPS** מציע תבניות מוכנות, למשל *פעילות גופנית*, *שינה*, *אלכוהול* או *רחצה*.
 
 #### Hygiene
 
@@ -157,11 +157,11 @@ Many of the situations below can be prepared once as a [scene](#scenes): a prese
 
 ##### What to do when taking a shower or bath?
 
-ניתן להסיר את המשאבה בזמן מקלחת וטבילה באמבט (לא רלוונטי למשתמשי אומניפוד). במשך פרק הזמן הקצר הזה אולי לא תזדקקו לכך, אך עליכם להודיע ל-AAPS שהתנתקתם כדי שחישובי IOB יהיו נכונים. See [description above](#FAQ-disconnect-pump). The *Bathing* [scene](#scenes) template does this for you.
+ניתן להסיר את המשאבה בזמן מקלחת או רחצה באמבטיה. במשך פרק הזמן הקצר הזה אולי לא תזדקקו לכך, אך עליכם להודיע ל-AAPS שהתנתקתם כדי שחישובי IOB יהיו נכונים. See [description above](#FAQ-disconnect-pump). תבנית ה[תרחיש](#scenes) *רחצה* עושה זאת בשבילכם.
 
 #### Work
 
-בהתאם לסוג עבודתכם, ייתכן שתשתמשו בהגדרות טיפול שונות בימי עבודה לעומת ימי חופש. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. לדוגמה, ניתן לעבור לפרופיל גבוה מ-100% אם יש עבודה פחות תובענית (למשל ישיבה ליד שולחן), או פחות מ-100% אם אתם פעילים ועומדים על הרגליים כל היום. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, or if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need, or save your workday settings as a [scene](#scenes).
+בהתאם לסוג עבודתכם, ייתכן שתשתמשו בהגדרות טיפול שונות בימי עבודה לעומת ימי חופש. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. לדוגמה, ניתן לעבור לפרופיל גבוה מ-100% אם יש עבודה פחות תובענית (למשל ישיבה ליד שולחן), או פחות מ-100% אם אתם פעילים ועומדים על הרגליים כל היום. ניתן גם לשקול יעד זמני גבוה או נמוך, או [היסט זמן של הפרופיל](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile), כשעובדים הרבה יותר מוקדם או מאוחר מהרגיל, או כשעובדים במשמרות שונות. ניתן גם ליצור פרופיל שני (למשל 'בית' ו'יום עבודה') ולבצע כל יום החלפת פרופיל לפרופיל שבאמת צריך, או לשמור את הגדרות יום העבודה בתור [תרחיש](#scenes).
 
 ### Leisure activities
 
@@ -169,21 +169,21 @@ Many of the situations below can be prepared once as a [scene](#scenes): a prese
 
 #### Sports
 
-עליכם לתכנן מחדש את הרגלי הספורט שלכם מהימים שלפני הלופ. אם התרגלתם לאכול פחמימות לפני האימון, הלולאה הסגורה תזהה זאת ותתקן בהתאם.
+עליכם לתכנן מחדש את הרגלי הספורט שלכם מהימים שלפני הלולאה. אם התרגלתם לאכול פחמימות לפני האימון, הלולאה הסגורה תזהה זאת ותתקן בהתאם.
 
-לכן, בגופכם יהיו יותר פחמימות אבל במקביל, הלופ יפעל כנגד הפחמימות עם הזרקת אינסולין.
+לכן, יהיו בגופכם יותר פחמימות, אבל באותו זמן הלולאה תפעל נגדן ותיתן אינסולין.
 
-בעת שימוש בלופ, נסו את הפעולות הבאות:
+בעת שימוש בלולאה, נסו את הצעדים הבאים:
 
-* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
-* Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target. With a percentage below 100 % and a duration, the same **Activate** screen offers a **Temporary target / Activity** switch that starts both at once.
-* If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
+* יש לבצע [החלפת פרופיל](#ProfileSwitch-change-percentage) מתחת ל-100%: הקישו על שם הפרופיל במסך הראשי, הקישו על הכפתור העגול **▶**, ואז הגדירו **אחוזים** ו**משך**.
+* הגדירו [יעד זמני לפעילות גופנית](#TempTargets-activity-temp-target) מעל היעד הרגיל שלכם. עם אחוז מתחת ל-100 % ומשך זמן, אותו מסך **הפעלה** מציע מתג **יעד זמני / פעילות** שמתחיל את שניהם יחד.
+* אם אתם משתמשים ב-SMB, ודאו שהאפשרויות ["הפעלת SMB עם יעד זמני גבוה"](#Open-APS-features-enable-smb-with-high-temp-targets) ו-["הפעלת SMB תמיד"](#Open-APS-features-enable-smb-always) מושבתות.
 
-ביצוע הפעולות לפני וביטולן אחרי הפעילות הגופנית חשובים מאוד. בצעו את השינויים זמן מה לפני הפעילות הגופנית וקחו בחשבון את השפעת ניפוח השרירים.
+ביצוע הפעולות לפני וביטולן אחרי הפעילות הגופנית חשובים מאוד. בצעו את השינויים מספיק זמן לפני הספורט, וקחו בחשבון את השפעת מילוי השרירים (בגליקוגן).
 
-The *Exercise* and *Post-exercise Night* [scene](#scenes) templates bundle these settings, so you can start them with one tap. If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../DailyLifeWithAaps/Automations.md) to start the profile switch and TT, or the scene. גם אוטומציות תלויות מיקום (לפי GPS) יכולות להיות שימושיות אך הסתמכות עליהן תקשה על ביצוע השינויים מספיק זמן לפני האימון.
+תבניות ה[תרחיש](#scenes) *פעילות גופנית* ו*לילה לאחר פעילות גופנית* כוללות את ההגדרות האלה, כך שניתן להתחיל אותן בהקשה אחת. אם אתם עושים ספורט באופן קבוע באותה שעה (למשל שיעור בחדר הכושר), אפשר לשקול להשתמש ב[אוטומציה](../DailyLifeWithAaps/Automations.md) כדי להתחיל את החלפת הפרופיל ואת היעד הזמני, או את התרחיש. גם אוטומציות תלויות מיקום (לפי GPS) יכולות להיות שימושיות אך הסתמכות עליהן תקשה על ביצוע השינויים מספיק זמן לפני האימון.
 
-אחוז הפרופיל הזמני והערך המטרה הזמני המתאימים לכם הם אישיים לכם. ליתר בטיחות, התחילו מלהשתמש באחוזים מעט יותר נמוכים מהרגיל ומערכי מטרה גבוהים, המשיכו לשפר את הערכים באימונים הבאים עד שתדעו מהם הערכים המתאימים לכם.
+האחוז של החלפת הפרופיל, ערך היעד הזמני לפעילות גופנית והזמן הטוב ביותר לשינויים הם אישיים. כשאתם מחפשים את הערך המתאים לכם, התחילו בצד הבטוח (התחילו באחוז נמוך יותר וביעד זמני גבוה יותר).
 
 #### Sex
 
@@ -191,39 +191,39 @@ The *Exercise* and *Post-exercise Night* [scene](#scenes) templates bundle these
 
 #### Drinking alcohol
 
-שתיית אלכוהול עשויה להיות מסוכנת בשימוש בלולאה סגורה כיוון שהאלגוריתם לא יכול לחזות נכונה את השפעת האלכוהול על הסוכר בדם. נסו את השיטות הבאות כדי להבין איזו מהן עדיפה לכם:
+שתיית אלכוהול עשויה להיות מסוכנת בשימוש בלולאה סגורה כיוון שהאלגוריתם לא יכול לחזות נכונה את השפעת האלכוהול על הסוכר בדם. עליכם למצוא שיטה משלכם לטיפול במצב זה, בעזרת הפונקציות הבאות ב-AAPS:
 
-* השביתו את הלופ הסגור וטפלו בסוכרת בלעדיו או
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
-* do a [profile switch](#ProfileSwitch-change-percentage) to noticeably less than 100% 
+* השבתת מצב הלולאה הסגורה וטיפול ידני בסוכרת, או
+* הגדרת יעדים זמניים גבוהים והשבתת UAM, כדי שהלולאה לא תעלה את ה-IOB בגלל ארוחה לא מוכרזת, או
+* לבצע [החלפת פרופיל](#ProfileSwitch-change-percentage) לאחוז נמוך באופן משמעותי מ-100% 
 
-The *Alcohol* [scene](#scenes) template is a starting point you can adapt to your own method.
+תבנית ה[תרחיש](#scenes) *אלכוהול* היא נקודת התחלה שניתן להתאים לשיטה שלכם.
 
-כשאתם שותים אלכוהול, עליכם לשים עין על נתוני הסוכר כדי להמנע מהיפוגליקמיה כתוצאה מאכילת פחמימות.
+כששותים אלכוהול, יש לעקוב תמיד אחרי ה-CGM כדי למנוע היפוגליקמיה באופן ידני, על ידי אכילת פחמימות.
 
 #### Sleeping
 
-##### How can I loop during the night without mobile and Wi-Fi radiation?
+##### איך להשתמש בלולאה בלילה בלי קרינה סלולרית ו-Wi-Fi?
 
-משתמשים רבים מפעילים את מצב המטוס של מכשירם בלילה. If you want the loop to support you when you are sleeping, proceed as follows (this will only work if your CGM app runs on the same phone as AAPS, such as xDrip, Juggluco or BYODA; it will NOT work if you get the BG-readings via Nightscout):
+משתמשים רבים מעבירים את הטלפון למצב טיסה בלילה. אם אתם רוצים שהלולאה תתמוך בכם בזמן השינה, פעלו כך (זה יעבוד רק אם אפליקציית ה-CGM שלכם פועלת באותו טלפון כמו AAPS, למשל xDrip, Juggluco או BYODA; זה לא יעבוד אם אתם מקבלים את ערכי הסוכר דרך Nightscout):
 
 1. הפעילו מצב טיסה במכשירכם.
 2. המתינו להפעלת מצב טיסה.
 3. הפעילו בלוטות'.
 
-כעת לא תקבלו שיחות והאתם מנותקים מהאינטרנט. אך הלופ פועל בכל זאת.
+כעת לא תקבלו שיחות, וגם לא תהיו מחוברים לאינטרנט. אבל הלולאה עדיין פועלת.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip) when phone is in airplane mode. In xDrip, go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+חלק מהמשתמשים גילו בעיות עם שידור מקומי (local broadcast), כלומר AAPS לא מקבל ערכי סוכר מ-xDrip, כשהטלפון במצב טיסה. ב-xDrip, יש לעבור אל Settings > Inter-app settings > Identify receiver ולהזין `info.nightscout.androidaps`.
 
-![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+![הגדרות Basic Inter-app Settings של xDrip – Identify receiver](../images/xDrip_InterApp_NS.png)
 
-If you want different settings at night (for example a higher target), the *Sleep* [scene](#scenes) template is a good starting point.
+אם אתם רוצים הגדרות שונות בלילה (למשל יעד גבוה יותר), תבנית ה[תרחיש](#scenes) *שינה* היא נקודת התחלה טובה.
 
-#### Traveling
+#### נסיעות
 
 ##### How to deal with time zone changes?
 
-אם אתם משתמשים במשאבות Dana R או Dana R מהשוק הקוריאני, אתם לא צריכים לעשות דבר. For other pumps see [time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+אם אתם משתמשים במשאבות Dana R או Dana R מהשוק הקוריאני, אתם לא צריכים לעשות דבר. למשאבות אחרות, ראו את הדף [נסיעות בין אזורי זמן](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) לפרטים נוספים.
 
 ### Medical topics
 
@@ -241,183 +241,183 @@ If you want to share some information about AAPS and DIY looping with your clini
 
 ### My problem is not listed here.
 
-See [where to get help](../GettingHelp/WhereCanIGetHelp.md). If you found the solution yourself, **remind us to add it to this list!**
+ראו [איפה אפשר לקבל עזרה](../GettingHelp/WhereCanIGetHelp.md). אם מצאתם את הפתרון בעצמכם, **הזכירו לנו להוסיף אותו לרשימה הזו!**
 
-### Building and installing
+### בנייה והתקנה
 
 (FAQ-build-errors)=
 
 #### I have problems, errors building the app.
 
-Please check the troubleshooting page for the way you build **AAPS** (see [Building AAPS](../SettingUpAaps/BuildingAaps.md)):
+יש לבדוק את דף פתרון התקלות של השיטה שבה אתם בונים את **AAPS** (ראו [בניית AAPS](../SettingUpAaps/BuildingAaps.md)):
 
-* building with a browser: [Browser build: troubleshooting](#aaps-ci-troubleshooting),
-* building with Android Studio: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+* בנייה בדפדפן: [בנייה בדפדפן: פתרון תקלות](#aaps-ci-troubleshooting),
+* בנייה ב-Android Studio: [פתרון תקלות ב-Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 (FAQ-build-error-file-name-too-long)=
 
 #### Build error: file name too long
 
-This error can happen when building with Android Studio: the build stops with an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "C:\src\AndroidAPS").
+שגיאה זו יכולה לקרות בבנייה ב-Android Studio: הבנייה נעצרת עם שגיאה שאומרת ששם הקובץ ארוך מדי. פתרונות אפשריים: להעביר את קובצי המקור לתיקייה קרובה יותר לתיקיית השורש של הכונן (למשל "C:\src\AndroidAPS").
 
-מאנדרואיד סטודיו: ודאו שהסנכרון והאינדקס של "Gradle" בוצע לאחר פתיחת הפרוייקט והעתקה מ-GitHub. בצעו Build->Clean Project לפני ביצוע פרויקט בנייה מחדש. הפעילו File->Invalidate Caches והפעילו מחדש את Android Studio.
+ב-Android Studio: ודאו ש-"Gradle" סיים את הסנכרון והאינדוקס אחרי פתיחת הפרויקט והמשיכה (pull) מ-GitHub. בצעו Build->Clean Project לפני שמבצעים Rebuild Project. הפעילו File->Invalidate Caches והפעילו מחדש את Android Studio.
 
 (FAQ-running-dev-version)=
 
-#### Alert: Running dev version. Closed loop is disabled
+#### התראה: זוהי גרסת פיתוח. Closed loop is disabled
 
-**AAPS** shows this message when you run a development (dev) version without engineering mode: in a dev version, closed loop only works in engineering mode.
+**AAPS** מציג את ההודעה הזו כשמריצים גרסת פיתוח (dev) בלי מצב הנדסה: בגרסת פיתוח, לולאה סגורה פועלת רק במצב הנדסה.
 
-The dev version is meant for testing, not for actual looping: read [Development branch](../AdvancedOptions/DevBranch.md) before going further.
+גרסת הפיתוח מיועדת לבדיקות, לא לשימוש אמיתי בלולאה: יש לקרוא את [ענף הפיתוח](../AdvancedOptions/DevBranch.md) לפני שממשיכים.
 
-To turn on engineering mode:
+כדי להפעיל מצב הנדסה:
 
-1. Place a file named `engineering_mode` in the `extra` subfolder of your AAPS directory (the folder you chose in the setup wizard, usually `AAPS/extra`). כל קובץ יצליח כל עוד הוא נקרא כראוי.
-2. Restart **AAPS** so that it finds the file.
+1. יש לשים קובץ בשם `engineering_mode` בתת-התיקייה `extra` של תיקיית AAPS שלכם (התיקייה שבחרתם באשף ההתקנה, בדרך כלל `AAPS/extra`). כל קובץ יצליח כל עוד הוא נקרא כראוי.
+2. יש להפעיל מחדש את **AAPS** כדי שימצא את הקובץ.
 
-רמז: צרו עותק של קובץ יומן קיים ושנו את שמו ל-"engineering_mode" (שים לב: אין סיומת לשם הקובץ! ושיש רק קו תחתון אחד בשם).
+רמז: צרו עותק של קובץ יומן קיים ושנו את שמו ל-"engineering_mode" (שימו לב: ללא סיומת קובץ!).
 
 ### Objectives
 
-#### I'm stuck on an objective and need help.
+#### נתקעתי במשימה ואני צריך/ה עזרה.
 
-First read [Completing the Objectives](../SettingUpAaps/CompletingTheObjectives.md). If you are still stuck, screen capture the question and answers and post them on the Discord AAPS channel. אל תשכחו לספר באילו אפשרויות אתם בוחרים (או לא) ומדוע. אתם תקבלו רמזים ועזרה אבל תצטרכו להגיע לתשובה בעצמכם.
+קודם יש לקרוא את [השלמת המשימות](../SettingUpAaps/CompletingTheObjectives.md). אם אתם עדיין תקועים, צלמו את המסך עם השאלה והתשובות ופרסמו אותו בערוץ AAPS ב-Discord. אל תשכחו לספר באילו אפשרויות אתם בוחרים (או לא) ומדוע. אתם תקבלו רמזים ועזרה אבל תצטרכו להגיע לתשובה בעצמכם.
 
-### Settings, passwords and backups
+### הגדרות, סיסמאות וגיבויים
 
 (FAQ-reset-master-password)=
 
-#### How to reset the master password?
+#### איך לאפס את הסיסמה הראשית?
 
-If you forgot your master password, you can reset it to your pump's serial number:
+אם שכחתם את הסיסמה הראשית, ניתן לאפס אותה למספר הסידורי של המשאבה:
 
-1. Create an empty file named `PasswordReset` (no file extension) in the `extra` subfolder of your AAPS directory (usually `AAPS/extra`).
-2. Restart **AAPS**. Your pump must be connected: **AAPS** shows "Waiting for pump…" and needs to read the pump serial number within 30 seconds.
-3. **AAPS** shows "Password set!": your master password is now your **pump serial number**. The `PasswordReset` file is deleted automatically.
-4. Open **Settings** > **Protection** > **Master password** and set a new password.
+1. יש ליצור קובץ ריק בשם `PasswordReset` (ללא סיומת קובץ) בתת-התיקייה `extra` של תיקיית AAPS שלכם (בדרך כלל `AAPS/extra`).
+2. יש להפעיל מחדש את **AAPS**. המשאבה חייבת להיות מחוברת: **AAPS** מציג "ממתין למשאבה…" וצריך לקרוא את המספר הסידורי של המשאבה תוך 30 שניות.
+3. **AAPS** מציג "הסיסמה הוגדרה!": הסיסמה הראשית שלכם היא עכשיו **המספר הסידורי של המשאבה**. הקובץ `PasswordReset` נמחק באופן אוטומטי.
+4. יש לפתוח את **הגדרות** > **הגנה בסיסמאות** > **סיסמה ראשית** ולהגדיר סיסמה חדשה.
 
-If the pump is not reached in time, nothing changes: check the pump connection and try again.
+אם אין חיבור למשאבה בזמן, שום דבר לא משתנה: יש לבדוק את החיבור למשאבה ולנסות שוב.
 
-This only resets the master password. A settings, application or bolus password or PIN is not reset, but you can always use the master password instead of them.
+פעולה זו מאפסת רק את הסיסמה הראשית. סיסמה או PIN להגדרות, לאפליקציה או לבולוס לא מתאפסים, אבל תמיד ניתן להשתמש בסיסמה הראשית במקומם.
 
-    {admonition} Old settings files
+    {admonition} קובצי הגדרות ישנים
     :class: warning
-    Settings files exported with the old master password can only be imported with that old password.
+    קובצי הגדרות שיוצאו עם הסיסמה הראשית הישנה ניתן לייבא רק עם הסיסמה הישנה הזו.
 
 (FAQ-where-are-settings-files)=
 
 #### Where can I find settings files?
 
-Settings files are stored in the `preferences` subfolder of the AAPS directory you chose in the [setup wizard](#SetupWizard-StoragePermission) (for example `/internal storage/AAPS/preferences`). If you set up a cloud folder (Google Drive), your exports can also be saved there. See [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md).
+קובצי ההגדרות נשמרים בתת-התיקייה `preferences` של תיקיית AAPS שבחרתם ב[אשף ההתקנה](#SetupWizard-StoragePermission) (למשל `/internal storage/AAPS/preferences`). אם הגדרתם תיקייה בענן (Google Drive), ניתן לשמור שם גם את קובצי הייצוא. ראו [יצירה ושחזור של גיבויים](../Maintenance/ExportImportSettings.md).
 
 אזהרה: הקפידו לא לאבד את הסיסמה שלכם כי בלעדיה לא תוכלו לייבא קובץ הגדרות כי הוא מוצפן!
 
 (FAQ-import-settings-earlier-versions)=
 
-#### How do I import settings from earlier versions of AAPS into AAPS v3 or v4 ?
+#### איך לייבא הגדרות מגרסאות קודמות של AAPS ל-AAPS v3 או v4?
 
-You can only import settings (in AAPS v3 or v4) that were exported using AAPS v2.8x or later. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install the current AAPS version and import v2.8 settings in it.
+ב-AAPS v3 או v4 ניתן לייבא רק הגדרות שיוצאו ב-AAPS v2.8x או בגרסה חדשה יותר. אם השתמשתם בגרסת AAPS ישנה מ-v2.8x, או שאתם צריכים להשתמש בקובצי ייצוא הגדרות ישנים מ-v2.8x, יש להתקין קודם את AAPS v2.8. ייבאו את ההגדרות הישנות של v2.x ב-v2.8. אחרי שבדקתם שהכול תקין, ניתן לייצא את ההגדרות מ-v2.8. התקינו את גרסת AAPS הנוכחית וייבאו אליה את ההגדרות של v2.8.
 
-If you use the same key to build the old and the new version, you won't even have to import settings. You can install the new version over the old one.
+אם משתמשים באותו מפתח לבניית הגרסה הישנה והחדשה, אפילו לא צריך לייבא הגדרות. ניתן להתקין את הגרסה החדשה מעל הגרסה הישנה.
 
 נוספו מספר משימות חדשות. תצטרכו להשלים אותן.
 
 (FAQ-delete-treatments)=
 
-#### Where can I delete treatments?
+#### איפה אפשר למחוק טיפולים?
 
-Open the **menu** (☰) and select **Treatments history**. Long press an entry to select it, tap more entries if needed, then tap the **trash can** icon and confirm. See [Treatments history](#aaps-screens-treatments).
+יש לפתוח את **התפריט** (☰) ולבחור **היסטוריית טיפולים**. יש ללחוץ לחיצה ארוכה על רשומה כדי לבחור אותה, להקיש על רשומות נוספות אם צריך, ואז להקיש על סמל **פח האשפה** ולאשר. ראו [היסטוריית טיפולים](#aaps-screens-treatments).
 
-### Phone and connection problems
+### בעיות בטלפון ובחיבור
 
 (FAQ-aaps-stops)=
 
 #### AAPS stops everyday around the same time.
 
-* Google Play Protect may shut down **AAPS** every morning on some phones. If this happens, go to the Google Play options and disable **Google Play Protect**.
+* בחלק מהטלפונים, Google Play Protect עלול לסגור את **AAPS** כל בוקר. אם זה קורה, יש לעבור לאפשרויות של Google Play ולהשבית את **Google Play Protect**.
 * בדקו אם יש אפליקציות "ניקיון" (לדוגמה CCleaner וכו') והסירו אותן.
-* Turn off all battery optimizations for **AAPS** (see [battery savings](#FAQ-battery-savings) below).
+* יש לכבות את כל אופטימיזציות הסוללה עבור **AAPS** (ראו [חיסכון בסוללה](#FAQ-battery-savings) למטה).
 
 (FAQ-battery-savings)=
 
 #### How to configure battery savings?
 
-Your phone may suspend **AAPS** and related apps (CGM app, Bluetooth) when you are not using it. **AAPS** then cannot do its work, and Bluetooth connections to the sensor and pump (or RileyLink) may be shut down, causing "pump unreachable" alerts and communication errors.
+הטלפון עלול להשהות את **AAPS** ואפליקציות קשורות (אפליקציית CGM, Bluetooth) כשאינכם משתמשים בו. אז **AAPS** לא יכול לבצע את עבודתו, וחיבורי ה-Bluetooth לחיישן ולמשאבה (או ל-RileyLink) עלולים להיסגר, מה שגורם להתראות "המשאבה אינה זמינה" ולשגיאות תקשורת.
 
-Turn off battery optimization for **AAPS**, your CGM app (e.g. xDrip) and the Bluetooth system app. The way to do this depends on the phone's brand, model and Android version:
+יש לכבות את אופטימיזציית הסוללה עבור **AAPS**, אפליקציית ה-CGM שלכם (למשל xDrip) ואפליקציית המערכת של Bluetooth. הדרך לעשות זאת תלויה ביצרן הטלפון, בדגם ובגרסת Android:
 
-* see [Battery optimization](#generaltroubleshooting-android-related-issues) for Pixel, Samsung and Huawei phones,
-* in **AAPS**, open the **menu** (☰) > **About** and tap **Don't kill my app?**, or visit [Don't kill my app](https://dontkillmyapp.com/) for other brands.
+* ראו [אופטימיזציית סוללה](#generaltroubleshooting-android-related-issues) לטלפונים של Pixel, Samsung ו-Huawei,
+* ב-**AAPS**, יש לפתוח את **התפריט** (☰) > **אודות** ולהקיש על **איך לא להשבית את האפליקציה שלי?**, או לבקר באתר [Don't kill my app](https://dontkillmyapp.com/) עבור יצרנים אחרים.
 
-If you are not sure that battery savings cause your problem, you can temporarily turn off all battery savings on the phone: your battery will drain faster, but you will quickly see if the problem goes away.
+אם אינכם בטוחים שחיסכון בסוללה גורם לבעיה, ניתן לכבות זמנית את כל הגדרות החיסכון בסוללה בטלפון: הסוללה תתרוקן מהר יותר, אבל תראו מהר אם הבעיה נעלמת.
 
 (FAQ-pump-unreachable-alerts)=
 
 #### Pump unreachable alerts several times a day or at night.
 
-Your phone may be suspending **AAPS** or even Bluetooth, causing it to lose the connection to the pump or RileyLink (see [battery savings](#FAQ-battery-savings) above).
+ייתכן שהטלפון משהה את **AAPS** או אפילו את Bluetooth, וכך החיבור למשאבה או ל-RileyLink אובד (ראו [חיסכון בסוללה](#FAQ-battery-savings) למעלה).
 
-You can also change when the alert is raised: press the **Settings** (gear) icon on the top right of the main screen, then select **Local alerts** > **Pump unreachable threshold** (30 to 300 minutes). Check your pump's page: some recommend a value, e.g. 120 minutes for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md).
+ניתן גם לשנות מתי ההתראה מופעלת: יש ללחוץ על סמל **הגדרות** (גלגל השיניים) בחלק העליון של המסך הראשי, ואז לבחור **התראות מקומיות** > **סף למשאבה לא זמינה** (30 עד 300 דקות). כדאי לבדוק את הדף של המשאבה שלכם: בחלק מהדפים יש ערך מומלץ, למשל 120 דקות עבור [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md).
 
 (FAQ-link-unresponsive)=
 
 #### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
+בטלפונים מסוימים יש ניתוקי Bluetooth ממכשירי ה-Link (RL/OL/EmaLink).
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
+לחלקם יש גם מכשירי Link שאינם מגיבים (AAPS אומר שהם מחוברים, אבל מכשירי ה-Link לא מצליחים להגיע למשאבה או לפקד עליה).
 
-First try the **Reset RileyLink** button on the pump screen (see your pump's page: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). If this does not help, the easiest way to get all these parts working together is:
+קודם כול, נסו את הכפתור **איפוס RileyLink** במסך המשאבה (ראו את הדף של המשאבה שלכם: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). אם זה לא עוזר, הדרך הקלה ביותר לגרום לכל החלקים האלה לעבוד יחד היא:
 
-1. Power off the Link.
-2. Quit **AAPS** (**menu** (☰) > **Exit**).
-3. Long press the **AAPS** icon, open the Android **App info**, tap **Force stop**, then **Storage** > **Clear cache** (do NOT clear storage/data!).
-4. Rarely some phones may need a reboot here. אפשר לנסות בלי לאתחל.
-5. Power on the Link.
-6. Start **AAPS**.
-7. On the pump screen, tap **Pair RileyLink** and select your Link again.
+1. לכבות את ה-Link.
+2. לצאת מ-**AAPS** (**התפריט** (☰) > **יציאה**).
+3. ללחוץ לחיצה ארוכה על הסמל של **AAPS**, לפתוח את **App info** (פרטי האפליקציה) של Android, להקיש על **Force stop** (עצירה בכפייה), ואז **Storage** (אחסון) > **Clear cache** (ניקוי מטמון) (לא לנקות אחסון/נתונים!).
+4. לעתים רחוקות, בחלק מהטלפונים יש צורך להפעיל מחדש את הטלפון בשלב הזה. אפשר לנסות בלי לאתחל.
+5. להדליק את ה-Link.
+6. להפעיל את **AAPS**.
+7. במסך המשאבה, להקיש על **צימוד RileyLink** ולבחור שוב את ה-Link שלכם.
 
 ### Remote control
 
 (FAQ-aapsclient)=
 
-#### Configuring and Using the AAPSClient remote app
+#### הגדרה ושימוש באפליקציית AAPSClient לשליטה מרחוק
 
-**AAPSClient** is a separate app that lets a caregiver follow and control **AAPS** remotely. Since **AAPS** v4, controlling **AAPS** from AAPSClient needs a one-time pairing between the two apps. See:
+**AAPSClient** היא אפליקציה נפרדת שמאפשרת למטפל לעקוב אחרי **AAPS** ולשלוט בו מרחוק. החל מ-**AAPS** v4, שליטה ב-**AAPS** מ-AAPSClient דורשת צימוד חד-פעמי בין שתי האפליקציות. ראו:
 
-* [The AAPSClient app](#aapsclient-app): installing, first start and pairing,
-* [Master ↔ Client control](#client-master-control): what can be controlled and how pairing works,
-* [AAPSClient on a smartwatch](#remotecontrol-smartwatches).
+* [האפליקציה AAPSClient](#aapsclient-app): התקנה, הפעלה ראשונה וצימוד,
+* [שליטה בין מכשיר ראשי ↔ מכשיר לקוח](#client-master-control): במה ניתן לשלוט ואיך הצימוד עובד,
+* [AAPSClient בשעון חכם](#remotecontrol-smartwatches).
 
 (FAQ-hardened-mode)=
 
-#### Treatments I enter on the Nightscout website are not applied
+#### טיפולים שאני מזין/ה באתר Nightscout לא מוחלים
 
-That is [hardened mode](#client-master-control-hardened-mode). While client control is on — always in Simple Mode — **AAPS** takes changes only from paired clients, not from the Nightscout website or other apps. Enter them on a paired **AAPSClient** instead.
+זהו [מצב מוקשח](#client-master-control-hardened-mode). כל עוד השליטה ממכשיר לקוח מופעלת — ובמצב פשוט היא תמיד מופעלת — **AAPS** מקבל שינויים רק ממכשירי לקוח מצומדים, ולא מאתר Nightscout או מאפליקציות אחרות. במקום זאת, יש להזין אותם ב-**AAPSClient** מצומד.
 
-### Alerts and warnings
+### התראות ואזהרות
 
-#### I have a red warning badge (red triangle) / AAPS won't enable closed loop / Loop stays in LGS / I had a yellow triangle
+#### יש לי תג אזהרה אדום (משולש אדום) / AAPS לא מפעיל לולאה סגורה / הלולאה נשארת ב-LGS / היה לי משולש צהוב
 
-The red warning badge on the BG source shortcut is a security feature in AAPS. See [BG warning sign](#aaps-screens-bg-warning-sign) for the full explanation.
+תג האזהרה האדום על קיצור הדרך של מקור ערכי הסוכר הוא תכונת בטיחות ב-AAPS. להסבר המלא, ראו [סימן האזהרה של ערכי הסוכר](#aaps-screens-bg-warning-sign).
 
-A red warning badge on the BG source shortcut in the bottom bar (the red triangle of older versions) means that you have duplicate BGs and AAPS can't calculate precisely the deltas. A closed loop is switched to **Low Glucose Suspend** mode: it still reduces or suspends your basal to protect you against lows, but it gives no correction insulin. You need to delete one BG of each duplicated value in order to clear the warning. Tap the shortcut to open your [BG source screen](#aaps-screens-bg-source): the duplicate is highlighted in red. Long press one line you want to delete, check one of each lines that are doubled and tap the trash icon. ייתכן שיהיה עליכם לאפס את מסדי הנתונים של AAPS אם יש יותר מדי ערכי סוכר כפולים. In this case, you'll also lose stats, IOB, COB, selected profile.
+תג אזהרה אדום על קיצור הדרך של מקור ערכי הסוכר בסרגל התחתון (המשולש האדום בגרסאות ישנות) אומר שיש לכם ערכי סוכר כפולים, ו-AAPS לא יכול לחשב את הדלתאות במדויק. לולאה סגורה עוברת למצב **השהיה עקב ערך סוכר נמוך**: היא עדיין מפחיתה או עוצרת את הבזאלי כדי להגן עליכם מפני ערכים נמוכים, אבל לא נותנת אינסולין לתיקון. כדי לנקות את האזהרה, יש למחוק ערך סוכר אחד מכל ערך כפול. הקישו על קיצור הדרך כדי לפתוח את [מסך מקור ערכי הסוכר](#aaps-screens-bg-source): הערך הכפול מסומן באדום. יש ללחוץ לחיצה ארוכה על שורה אחת שברצונכם למחוק, לסמן שורה אחת מכל זוג שורות כפולות ולהקיש על סמל פח האשפה. ייתכן שיהיה עליכם לאפס את מסדי הנתונים של AAPS אם יש יותר מדי ערכי סוכר כפולים. במקרה זה תאבדו גם את הסטטיסטיקה, ה-IOB, ה-COB והפרופיל הנבחר.
 
-Once the warning is gone, AAPS does not go back to **Closed Loop** by itself. Press the loop icon on the main screen and select **Closed Loop** again.
+אחרי שהאזהרה נעלמת, AAPS לא חוזר ל**לולאה סגורה** מעצמו. יש ללחוץ על סמל הלולאה במסך הראשי ולבחור שוב **לולאה סגורה**.
 
-מקור אפשרי לבעיה: הופעלה הורדת נתוני סוכר מ-NS בהגדרות AAPS או ב-xDrip.
+מקור אפשרי לבעיה: השלמת ערכי סוכר חסרים (backfill) ב-xDrip ו/או ב-NS.
 
-The yellow triangle of older versions meant unstable delay between each BG reading (BGs not received every 5 min regularly, or missing BGs), which often happens with Libre or after a G6 transmitter change. **AAPS** 4 no longer shows it: it recalculates the values in the background and the loop works correctly.
+המשולש הצהוב בגרסאות ישנות סימן מרווח לא יציב בין קריאות סוכר (ערכי סוכר לא מתקבלים באופן קבוע כל 5 דקות, או ערכים חסרים). זה קורה לעתים קרובות עם Libre או אחרי החלפת משדר G6. **AAPS** 4 כבר לא מציג אותו: הוא מחשב מחדש את הערכים ברקע, והלולאה עובדת כראוי.
 
 ### Omnipod DASH
 
 (FAQ-move-dash-pod)=
 
-#### Can I move an active DASH Pod to another phone?
+#### האם ניתן להעביר פוד DASH פעיל לטלפון אחר?
 
-The Pod state is included in the exported settings, so an active Pod can be moved to another phone by exporting the settings right before the move and importing them on the other phone. This is not officially supported and there is a risk of losing the Pod: if possible, try it when your Pod is about to expire.
+מצב הפוד כלול בהגדרות המיוצאות, ולכן ניתן להעביר פוד פעיל לטלפון אחר: יש לייצא את ההגדרות ממש לפני ההעברה ולייבא אותן בטלפון האחר. אין לכך תמיכה רשמית, ויש סיכון לאבד את הפוד: אם אפשר, נסו זאת כשהפוד שלכם עומד לפוג.
 
-Read these sections first:
+קודם יש לקרוא את החלקים האלה:
 
-* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
-* [Discarding a pod](#omnipod-dash-discard-pod), to remove the Pod from the old phone afterwards. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.
+* [ייצוא וייבוא הגדרות](#omnipod-dash-export-import) בדף Omnipod DASH, וגם [משאבות ללא צינורית](#ExportImportSettings-tubeless-pumps): בטלפון החדש, יש לסמן **להחליף גם את הגדרות המשאבה** ולהשתמש בקובץ שיוצא בזמן שענדתם את הפוד הנוכחי,
+* [השלכת פוד](#omnipod-dash-discard-pod), כדי להסיר את הפוד מהטלפון הישן אחר כך. יש להשאיר את הטלפון הישן במצב טיסה עד להשלכת הפוד, כדי ששני הטלפונים לא יתקשרו עם הפוד באותו זמן.

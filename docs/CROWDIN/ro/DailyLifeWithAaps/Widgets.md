@@ -10,19 +10,19 @@
 
 ---
 
-## Available widgets
+## Widgeturi disponibile
 
-Five widgets are available. They are listed under **AAPS** in the Android widget picker:
+Sunt disponibile cinci widgeturi. They are listed under **AAPS** in the Android widget picker:
 
 ![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Default size | What it shows                                                                                                                                                                                                                                              |
-| --------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                   | 5 × 2        | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
-| **AAPS glucose circle**           | 2 × 2        | The BG circle of the main screen: a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading.                                                                                                                     |
-| **AAPS Small**                    | 2 × 2        | Profile name, BG with trend arrow, time since the last reading, delta, IOB and COB.                                                                                                                                                                        |
-| **AAPS BG + IOB + COB (compact)** | 4 × 1        | One line with BG and trend arrow, IOB and COB.                                                                                                                                                                                                             |
-| **AAPS BG graph**                 | 3 × 1        | The BG value with a small graph of the recent readings.                                                                                                                                                                                                    |
+| Widget                                  | Dimensiune implicită | What it shows                                                                                                                                                                                                                                                                                          |
+| --------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Widget AAPS**                         | 5 × 2                | Blocul de stare de pe ecranul principal: glicemia cu tendința și delta, modul buclei ca pictogramă lângă numele profilului, ținta, sensibilitatea (afișată ca pe ecranul principal), IOB și COB. Textele se micșorează pentru a se potrivi cu mărimea pe care o dați widgetului, în loc să fie tăiate. |
+| **Cerc glicemie AAPS**                  | 2 × 2                | The BG circle of the main screen: a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading.                                                                                                                                                                 |
+| **AAPS mic**                            | 2 × 2                | Profile name, BG with trend arrow, time since the last reading, delta, IOB and COB.                                                                                                                                                                                                                    |
+| **AAPS Glicemie + IOB + COB (compact)** | 4 × 1                | One line with BG and trend arrow, IOB and COB.                                                                                                                                                                                                                                                         |
+| **Grafic glicemie AAPS**                | 3 × 1                | Valoarea glicemiei cu un grafic mic al citirilor recente.                                                                                                                                                                                                                                              |
 
 The **AAPS widget**, the **glucose circle** and the **Small** widget on a home screen:
 
@@ -36,9 +36,9 @@ BG values use the same colours as in **AAPS**: green in range, yellow above rang
 
 ---
 
-## Adding a widget
+## Adăugarea unui widget
 
-The exact steps depend on your phone and its launcher. On most phones:
+The exact steps depend on your phone and its launcher. Pe majoritatea telefoanelor:
 
 1. Long-press an empty area of the home screen and select **Widgets**.
 
@@ -51,29 +51,29 @@ The exact steps depend on your phone and its launcher. On most phones:
 
 The widget is placed on the home screen. Right after adding it, it is shown with handles: drag a handle to **resize** the widget, or drag the widget to move it. The glucose circle can be resized to any size.
 
-![A widget just added, with its resize handles and the settings button](../images/widgets/widget_glucose_circle_added.png)
+![Un widget abia adăugat, cu mânerele de redimensionare și butonul de setări](../images/widgets/widget_glucose_circle_added.png)
 
 If the home screen page is full, the phone puts the widget on a new page.
 
 ---
 
-## Widget configuration
+## Configurare widget
 
 Tap the **pencil** button shown on the widget just after you added it. Later, long-press the widget to get the handles and the pencil back.
 
-The **Widget configuration** dialog has two settings:
+Dialogul **Configurare widget** are două setări:
 
-- **Configure opacity** — how opaque the background of the widget is. A low value lets the wallpaper show through.
+- **Configurați opacitatea** — cât de opac este fundalul widgetului. A low value lets the wallpaper show through.
 - **Use black color** — use a black background instead of the default one.
 
-![Widget configuration](../images/widgets/widget_configuration.png)
+![Configurare widget](../images/widgets/widget_configuration.png)
 
 Each widget has its own configuration.
 
 ---
 
-## Good to know
+## Bine de știut
 
-- A widget only **displays** data. You cannot bolus or change anything from a widget.
-- The widget is refreshed by **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
-- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Raise the opacity in the widget configuration if the color is hard to see. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions).
+- Un widget doar **afișează** date. You cannot bolus or change anything from a widget.
+- Widgetul este actualizat de **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
+- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Măriți opacitatea în configurarea widgetului dacă culoarea se vede greu. Vedeți [Despre AAPSClient, AAPSClient2 și AAPSClient3](#remotecontrol-aapsclient-versions).

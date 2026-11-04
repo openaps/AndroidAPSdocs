@@ -1,147 +1,147 @@
-# A dedicated Google account for AAPS (optional)
+# AAPS için ayrı bir Google hesabı (isteğe bağlı)
 
-Some **AAPS** users prefer to use their main email account for **AAPS** as well. Alternatively, some **AAPS** users (or their caregivers) set-up a dedicated **AAPS** email account - this is optional, we give an example of how to do it below.
+Bazı **AAPS** kullanıcıları, **AAPS** için de ana e-posta hesaplarını kullanmayı tercih eder. Bazı **AAPS** kullanıcıları (veya bakım verenleri) ise **AAPS** için ayrı bir e-posta hesabı oluşturur - bu isteğe bağlıdır; aşağıda nasıl yapılacağına dair bir örnek veriyoruz.
 
-If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go straight to the next section, [building AAPS](../SettingUpAaps/BuildingAaps.md).
+**AAPS** için ayrı bir Gmail hesabı oluşturmak istemiyorsanız, doğrudan bir sonraki bölüme, [AAPS'i oluşturma](../SettingUpAaps/BuildingAaps.md) bölümüne geçebilirsiniz.
 
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
-- Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
-- By harmonizing the setup, it will make online support simpler across users with similar folder structure.
-- Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
-- Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
-- Gmail allows you to register up to 4 accounts under the same phone number.
+- Ayrı bir Google Drive alanı sayesinde **Ayarları dışa aktar** ile kişisel Google Drive kotanızı doldurma riskiniz olmaz.
+- **AAPS** uygulamasının her sürümü (ve xDrip, BYODA gibi destekleyici uygulamalar) bilgisayar donanımınızdan bağımsız tek bir yerde saklanır. Bilgisayarınız veya telefonunuz çalınsa, kaybolsa ya da bozulsa bile bunlara erişiminiz devam eder.
+- Kurulumun herkeste aynı olması, benzer klasör yapısına sahip kullanıcılar arasında çevrimiçi desteği kolaylaştırır.
+- Kuruluma bağlı olarak (aşağıya bakın), toplulukta iletişim kurmak için takma ad olarak ayrı bir kimliğiniz olur; bu da gizliliğinizi koruyabilir. 
+- Tip 1 diyabetli çocuklar, yetişkin hesabı gerektiren **AAPS** ve ilgili özellikleri kullanırken, reşit olmayan kişiler olarak kendi “gündelik” e-posta hesaplarını koruyabilir.
+- Gmail, aynı telefon numarasıyla en fazla 4 hesap kaydetmenize izin verir.
 ```
 
-## How to set up a dedicated Google account for AAPS
+## AAPS için ayrı bir Google hesabı nasıl oluşturulur
 
-(⌛About 10 minutes)
+(⌛Yaklaşık 10 dakika)
 
 ![](../images/Building-the-App/building_0001.png)
 
 Requirements:
 
-* You have a Windows’ PC (Windows 10 or newer) and an Android phone (Android 12 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
-* The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
+* Bir Windows bilgisayarınız (Windows 10 veya üstü) ve **AAPS** uygulamasını çalıştıracak bir Android telefonunuz (Android 12 veya üstü) var. Bazı adımlarda program indirip yüklemek gerektiğinden, ikisinde de en son güvenlik güncellemeleri, internet erişimi ve yönetici yetkileri bulunmalıdır.
+* Android telefonunuz, Gmail hesabı gibi kişisel ”gündelik” e-posta adresinizle zaten kurulmuş durumda.
 
 ```{admonition} Things to consider when setting up your new account
 :class: dropdown
-- You could use a name different to your own, which has relevance to the account (like t1dsuperstar) for privacy reasons. You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
-- The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. It will use the “everyday” email address for verification;
-- We will setup email forwarding such that any email sent to the new dedicated AAPS account will be forwarded to the primary one (so there is no need to check two different mailboxes);
-- Use separate passwords for your _everyday_ Gmail account and the AAPS-dedicated Gmail account
-- If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
-- If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
+- Gizlilik nedeniyle kendi adınızdan farklı, hesapla ilgili bir ad kullanabilirsiniz (örneğin t1dsuperstar). Böylece kendi kimliğinizi gizli tutarak bu adı **AAPS** genel forumlarında kullanabilirsiniz. Google bir kurtarma e-postası ve telefon numarası istediği için bu hesap yine de size kadar izlenebilir.
+- Yeni **AAPS** hesabı, doğrulama için “_gündelik_” hesabınızla aynı telefon numarasını kullanır. Doğrulama için “gündelik” e-posta adresinizi kullanır;
+- Yeni AAPS hesabına gönderilen her e-postanın ana hesabınıza iletilmesi için e-posta yönlendirmeyi ayarlayacağız (böylece iki ayrı posta kutusunu kontrol etmeniz gerekmez);
+- _Gündelik_ Gmail hesabınız ve AAPS için ayrı Gmail hesabınız için farklı parolalar kullanın
+- Bir Gmail hesabında Google “2-step verification” (2 adımlı doğrulama; çok faktörlü kimlik doğrulama olarak da bilinir) kullanıyorsanız, bunu her iki Gmail hesabı için de kullanmanız iyi olur.
+- Google “Passkeys” (geçiş anahtarları) kullanmayı planlıyorsanız, birden fazla cihaz kaydettiğinizden emin olun. Böylece hesabınıza erişiminizi kaybetmezsiniz. Bunu yalnızca başka kimsenin erişemediği cihazlarda yapın (_yani_ başka kişilerin de açabildiği ortak hesaplı bir bilgisayarda yapmayın).
 ```
 
 
 ```{admonition} Video Walkthrough!
 :class: note
-Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
+Ayrı bir Google hesabının nasıl kurulacağını gösteren video için [buraya](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) tıklayın.
 ```
 
- These are the steps outlined in the video:
+ Videoda anlatılan adımlar şunlardır:
 
-In this example: 
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
-- Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
+Bu örnekte: 
+- Mevcut “_Gündelik_” Google hesabınız: <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
+- Yeni “_AAPS_” Gmail hesabınız: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Go to <https://myaccount.google.com> 
+### <https://myaccount.google.com> adresine gidin 
 
- If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
+ Google'da zaten oturum açtıysanız, bu sizi “Gündelik” hesabınızın **My Account** (Hesabım) sayfasına yönlendirir. (1) Sayfanın sağ üst köşesindeki profil resminize tıklayın (bu örnekte basit bir ![](../images/Building-the-App/building_0002.png)) (2) “_add another account_” (başka bir hesap ekle) seçeneğini seçin.
 
 ![](../images/Building-the-App/building_0005.png)
 
 
-### Enter your NEW dedicated account details: 
+### YENİ ayrı hesabınızın bilgilerini girin: 
 
-- Enter the new account: 
-- Create Account
-- for my personal use. 
+- Yeni hesabı girin: 
+- Hesap oluşturun
+- for my personal use (kişisel kullanımım için). 
 
 
-### Enter your persona:
- - Enter firstname
- - lastname
- - birthdate (needs to be an Adult age)
+### Kişisel bilgilerinizi girin:
+ - Adınızı girin
+ - soyadınız
+ - doğum tarihiniz (yetişkin yaşında olmalısınız)
 
-### Choose your NEW email address & password
+### YENİ e-posta adresinizi ve parolanızı seçin
 
-This example appends “.AAPS” to Donald Muck’s existing one…\
-Set a password
+Bu örnekte Donald Muck’ın mevcut adresinin sonuna “.AAPS” eklenir…\
+Bir parola belirleyin
 
-### Enter a phone number which can receive the SMS verification
+### SMS doğrulamasını alabilen bir telefon numarası girin
 
-Gmail will now send you a unique code to enter for validation.
+Gmail şimdi doğrulama için girmeniz gereken benzersiz bir kod gönderecektir.
 
-### Enter the recovery email address
+### Kurtarma e-posta adresini girin
 
-In this case it will be your existing “_everyday_” email…
+Bu örnekte bu, mevcut “_gündelik_” e-posta adresiniz olacaktır…
 
-### Finish setting up the account
+### Hesap kurulumunu tamamlayın
 
-Gmail will display the account name. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
+Gmail hesap adını gösterecektir. Sizden Gmail’in hüküm ve koşullarını kabul etmenizi ve kişiselleştirme ayarlarınızı onaylamanızı ister.
 
-### Customize the new profile display
+### Yeni profil görünümünü özelleştirin
 
-At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
+Bu noktada Gmail’in MyAccount (Hesabım) sayfasında, yeni **AAPS** için ayrı e-posta hesabınızı görüyor olmalısınız. Profil resmi varsayılan olarak adınızın ilk harfi olacaktır. Karışıklığı önlemek için bunu benzersiz bir şeyle değiştirin… bu örnekte Donald.Muck.AAPS, ![](../images/Building-the-App/building_0002.png) yerine ![](../images/Building-the-App/building_0003.png) kullanmıştır.
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
-### Open the Gmail website on both windows to configure the new account
+### Yeni hesabı yapılandırmak için her iki pencerede de Gmail web sitesini açın
 
-So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account\
-This part can be a bit confusing, since you will have to switch back and forth between both accounts. To make it easier, open 2 separate browser windows on top of each other:
+Ayrı bir e-posta hesabını takip etmek zorunda kalmamak için, yeni **AAPS** hesabındaki tüm e-postaları gündelik hesabınıza yönlendirin\
+Bu bölüm biraz karışık olabilir, çünkü iki hesap arasında sürekli geçiş yapmanız gerekecek. İşi kolaylaştırmak için üst üste iki ayrı tarayıcı penceresi açın:
 
-1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen…
-2. Right click on your Browser logo in your taskbar
-3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
+1. Mevcut tarayıcı pencerenizi ekranın üst kısmına taşıyın ve ekranın yalnızca üst yarısını kaplayacak şekilde yeniden boyutlandırın…
+2. Görev çubuğunuzdaki tarayıcı simgesine sağ tıklayın
+3. Menüden “New Window” (yeni pencere) seçeneğini seçin... ve pencereyi ekranın yalnızca alt yarısını kaplayacak şekilde ayarlayın.
 
-Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Her iki tarayıcı penceresinde de <https://gmail.com> adresini açın. Kişisel hesabınızın üstte, yeni **AAPS** hesabının altta olduğundan ve sağ üst köşedeki profil resminden kolayca tanınabildiğinden emin olun. Gerekirse profil resmine tıklayıp doğru hesabı seçerek her zaman hesap değiştirebilirsiniz.
 
 ![](../images/Building-the-App/building_0009.png)
 
-Your Gmail homepages screen should look like this:\
+Gmail ana sayfalarınız şöyle görünmelidir:\
 ![](../images/Building-the-App/building_0010.png)
 
- ### In the new Gmail account (bottom window), open Gmail settings…
+ ### Yeni Gmail hesabında (alt pencere) Gmail ayarlarını açın…
 
-- Click on the gear on the left of the profile picture
-- then select “**See all Settings**”
+- Profil resminin solundaki dişli simgesine tıklayın
+- ardından “**See all Settings**” (tüm ayarları görün) seçeneğini seçin
 
 ![](../images/Building-the-App/building_0011.png)
 
-### Setup forwarding…
+### Yönlendirmeyi ayarlayın…
 
-- Click on the “Forwarding and POP/IMAP” Setting tab
-- Click on “add a forwarding address”
-- Add your “everyday” email address
-- Gmail will send a verification code to your “everyday” email address.
-- You will switch back to your everyday profile and click on the link to verify that you accept the forwarding (or get the code from Gmail’s verification email in your “everyday” Gmail window and cut and paste it in your “new AAPS dedicated” Gmail window).
+- “Forwarding and POP/IMAP” (Yönlendirme ve POP/IMAP) ayar sekmesine tıklayın
+- “add a forwarding address” (yönlendirme adresi ekle) seçeneğine tıklayın
+- “Günlük” e-posta adresinizi ekleyin
+- Gmail, “gündelik” e-posta adresinize bir doğrulama kodu gönderir.
+- Günlük profilinize geri dönüp yönlendirmeyi kabul ettiğinizi doğrulamak için bağlantıya tıklayacaksınız (veya kodu “günlük” Gmail pencerenizdeki Gmail doğrulama e-postasından alıp “AAPS için ayrılmış yeni” Gmail pencerenize kesip yapıştıracaksınız).
 
-There is quite a bit of back and forth between the windows but this will ensure that when you check your “everyday” account emails you will also see the emails forwarded from your AAPS dedicated account such as Gmail alerts.
+Pencereler arasında epey gidip gelmek gerekir, ancak böylece “günlük” hesabınızın e-postalarına baktığınızda, AAPS için ayrılmış hesabınızdan yönlendirilen Gmail uyarıları gibi e-postaları da görürsünüz.
 
 ![](../images/Building-the-App/building_0012.png)
 
-### Verify the forwarded email address
+### Yönlendirilen e-posta adresini doğrulayın
 
-- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email.
-- Open it and “click the link to confirm the request”
+- “Gündelik” Gmail hesabında (üst pencere) “Gmail forwarding Confirmation” (Gmail yönlendirme onayı) e-postasını alırsınız.
+- Açın ve “isteği onaylamak için bağlantıya tıklayın”
 
-### Archive forwarded emails in the new dedicated Gmail account (bottom window)
+### Yönlendirilen e-postaları AAPS için ayrılmış yeni Gmail hesabında arşivleyin (alttaki pencere)
 
 <!---->
 
-1. Refresh the bottom window
-2. Check “forward incoming email”
-3. And archive Gmail’s copy (to keep your new dedicated mailbox clean)
-4. Scroll all the way to the bottom to save your changes\
+1. Alttaki pencereyi yenileyin
+2. “Forward incoming email” (gelen e-postayı yönlendir) seçeneğini işaretleyin
+3. Ve Gmail'in kopyasını arşivleyin (yeni ayrılmış posta kutunuzu temiz tutmak için)
+4. Değişikliklerinizi kaydetmek için sayfanın en altına kadar kaydırın\
    ![](../images/Building-the-App/building_0013.png)
 
 ![](../images/Building-the-App/building_0014.png)
 
-Tebrikler! Now you have created an AAPS-dedicated Google account. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
+Tebrikler! Artık AAPS için ayrılmış bir Google hesabı oluşturdunuz. Bir sonraki adım [AAPS uygulamasını oluşturmaktır](../SettingUpAaps/BuildingAaps.md).

@@ -1,131 +1,131 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump.
+Bu talimatlar Equil insülin pompasının yapılandırılması içindir.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## AAPS ile pompa özellikleri
 
-* Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights, and **Prime/Fill** and **Pump battery change** are not offered. Filling, priming and changing the battery are done in the pump wizards.
-* While the pump is suspended or stopped, **AAPS** records a 0 U/h temporary basal, so no basal insulin is counted in IOB.
-* DST and timezone changes must be handled manually.
+* Telefonunuzun yerleşik Bluetooth'u üzerinden, ek bir iletişim cihazı olmadan **AAPS** ile iletişim kuran hortumsuz Patch pompa.
+* **AAPS**, Equil'i 200 Ü rezervuarlı bir Patch pompa olarak ele alır: ana ekran Patch pompa durum ışıklarını gösterir ve **Hazırla/doldur** ile **Pompa Pil Değişimi** sunulmaz. Doldurma, hazırlama (prime) ve pil değiştirme pompa sihirbazlarında yapılır.
+* Pompa askıya alınmışken veya durmuşken **AAPS** 0 Ü/sa'lik bir geçici bazal kaydeder; böylece AİNS'te hiç bazal insülin sayılmaz.
+* Yaz saati (DST) ve saat dilimi değişiklikleri elle yapılmalıdır.
 
 ## Donanım ve yazılım gereksinimleri
-* **Compatible Equil hardware**
+* **Uyumlu Equil donanımı**
 
-  Currently Equil 5.3 and 5.4 are supported.
+  Şu anda Equil 5.3 ve 5.4 desteklenmektedir.
 
-* **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
+* [APK oluşturma](../SettingUpAaps/BuildingAaps.md) talimatlarına göre oluşturulmuş ve kurulmuş **AAPS**
 
 ## Kurulum
 
-### Select Equil pump
+### Equil pompayı seçin
 
-Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
+Sol üst köşedeki **menüyü** (☰) açın, **[Konfigürasyon](#Config-Builder-pump)** seçeneğini seçin ve **Pompa** altında **Equil**'i seçin.
 
-Once it is selected, the **Equil** card shows two buttons, **Settings** and **Open plugin**:
+Seçildikten sonra **Equil** kartında iki düğme görünür: **Ayarlar** ve **Eklentiyi aç**:
 
-![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
+![Konfigürasyon > Pompa içinde seçilmiş Equil eklentisi](../images/v4/Pumps/equil_enabled.png)
 
-**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+**Eklentiyi aç** (veya **Yönet** → **Pompa**), Equil pompa ekranını açar. Pompa eşleştirilmeden önce ekran şöyle görünür:
 
-![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
+![Eşleştirmeden önce Equil pompa ekranı](../images/v4/Pumps/equil_pump_screen.png)
 
 ### Ayarlar
 
-Open the Equil settings with **Settings** on the **Equil** card, or with the gear icon in the top-right corner of the pump screen.
+Equil ayarlarını **Equil** kartındaki **Ayarlar** düğmesiyle veya pompa ekranının sağ üst köşesindeki dişli simgesiyle açın.
 
-![Equil driver settings](../images/v4/Pumps/equil_settings.png)
+![Equil sürücü ayarları](../images/v4/Pumps/equil_settings.png)
 
-* **Low battery alarm**: warns you when the pump battery is low.
-* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
-* **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
-* **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
+* **Düşük pil uyarısı**: pompa pili zayıf olduğunda sizi uyarır.
+* **Düşük rezervuar uyarısı**: rezervuardaki insülin azaldığında sizi uyarır.
+* **Uyarı tonu**: pompanın sizi nasıl uyaracağı: **Sessiz**, **Sadece titreşim**, **Sadece ses** veya **Titreşim ve ses**.
+* **Bolus hızı**: bolusun ne kadar hızlı verileceği: **1,5 Ü/dk (standart)**, **3 Ü/dk**, **6 Ü/dk** veya **12 Ü/dk**. Hızlı bolus iletimi, daha fazla tıkanıklık alarmına yol açabilir.
 
-![The Bolus speed choices in the Equil settings](../images/v4/Pumps/equil_bolus_speed.png)
+![Equil ayarlarındaki Bolus hızı seçenekleri](../images/v4/Pumps/equil_bolus_speed.png)
 
 ```{admonition} Max basal and max bolus on the patch
 :class: note
-The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [setting](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
+Patch, **AAPS**'in kendisine programladığı en yüksek değerin üzerindeki her bazal oranı reddeder. **AAPS**, **maks bazal** [ayarınızdan](../SettingUpAaps/Preferences.md) ve **Profil** içindeki en yüksek saatlik bazal orandan büyük olanı alır; böylece Patch profilinizi ve döngünün istediği geçici bazalları her zaman kabul eder. **AAPS** ayrıca izin verilen en yüksek bolus miktarınızı da Patch'e gönderir.
 
-When you change your **max basal** or **max bolus**, **AAPS** sends the new values to the patch automatically. They are also sent with every profile switch. There is nothing to set on the patch itself.
+**Maks bazal** veya **maks bolus** değerinizi değiştirdiğinizde **AAPS** yeni değerleri Patch'e otomatik olarak gönderir. Bu değerler her profil değişiminde de gönderilir. Patch üzerinde ayarlanacak bir şey yoktur.
 ```
 
-### Pair the pump
+### Pompayı eşleştirin
 
-On the pump screen, press **Pair**. A wizard guides you through each step. The row of dots at the top shows how far along you are.
+Pompa ekranında **Eşleştir** düğmesine basın. Bir sihirbaz size her adımda yol gösterir. Üstteki nokta sırası ne kadar ilerlediğinizi gösterir.
 
-If Android asks whether **AAPS** may find and connect to nearby devices, press **Allow**. **AAPS** needs this to find the pump.
+Android, **AAPS**'in yakındaki cihazları bulup onlara bağlanıp bağlanamayacağını sorarsa **İzin ver** düğmesine basın. **AAPS**'in pompayı bulması için bu gereklidir.
 
-![Android asking for permission to find nearby devices](../images/Equil/activate1.png)
+![Yakındaki cihazları bulma izni isteyen Android](../images/Equil/activate1.png)
 
-The wizard has these steps. Press **Next** to move on, or **Cancel** to leave the wizard.
+Sihirbazın adımları şunlardır. İlerlemek için **İleri** düğmesine, sihirbazdan çıkmak için **Vazgeç** düğmesine basın.
 
-1. **Profile required**: only shown if you have never activated a **Profile** in **AAPS**. Select the profile to use and press **Activate profile**.
-1. **Assemble pump**: put together the pump, the filled reservoir and the charged battery.
+1. **Profil gerekli**: yalnızca **AAPS**'te daha önce hiç **Profil** etkinleştirmediyseniz gösterilir. Kullanılacak profili seçin ve **Profil etkinleştir** düğmesine basın.
+1. **Pompayı birleştirin**: pompayı, dolu rezervuarı ve şarjlı pili birleştirin.
 
-   ![Assemble pump step](../images/Equil/activate2.png)
+   ![Pompayı birleştirin adımı](../images/Equil/activate2.png)
 
-1. **Find Pump**: **AAPS** scans for nearby Equil pumps. Select your pump from the list.
+1. **Pompa Bul**: **AAPS** yakındaki Equil pompaları arar. Listeden pompanızı seçin.
 
-   ![Find Pump step with an Equil pump in the list](../images/Equil/find_pump.png)
-1. **Pair device**: you can enter a pairing password in **Set pair password**. It must be 4 characters long, chosen from `ABCDEF0123456789`. Press **Pair**.
+   ![Listede bir Equil pompa olan Pompa Bul adımı](../images/Equil/find_pump.png)
+1. **Cihazı eşleştir**: **Eşleştirme parolasını belirleyin** alanına bir eşleştirme parolası girebilirsiniz. Parola 4 karakter uzunluğunda olmalı ve `ABCDEF0123456789` karakterlerinden seçilmelidir. **Eşleştir** düğmesine basın.
 
-   ![Pair device step with the pairing password](../images/Equil/activate3.png)
+   ![Eşleştirme parolası olan Cihazı eşleştir adımı](../images/Equil/activate3.png)
 
-1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
-1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+1. **İnsülin Seçin**: yalnızca birden fazla insülin ayarladıysanız gösterilir. Rezervuardaki insülini seçin.
+1. **Hazırla / Doldur**: pompa tabanının üzerinde **olmamalıdır**. **Hazırla/doldur** düğmesine basın ve iğne ucunda bir damla insülin görünene kadar rezervuarı doldurun (prime). **İleri**'ye basın.
 
-   ![Prime / Fill step](../images/Equil/prime_fill.png)
-1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
-1. **Attach pump**: attach the pump to its base plate.
+   ![Hazırla / Doldur adımı](../images/Equil/prime_fill.png)
+1. **Bölge Rotasyonu**: yalnızca bölge rotasyonu ayarlarında **Pompa bölge rotasyonunu yönetin** açıksa gösterilir. Pompayı takacağınız yere dokunun veya **Atla** düğmesine basın.
+1. **Pompayı takın**: pompayı tabanına takın.
 
-   ![Attach pump step](../images/Equil/attach_pump.png)
-1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+   ![Pompayı takın adımı](../images/Equil/attach_pump.png)
+1. **Kanül dolumu**: pompa tabana takıldıktan sonra kanüldeki havayı çıkarmak için **Havayı temizleyin** düğmesine basın. **İleri**'ye basın.
 
-   ![Prime cannula step with the Purge air button](../images/Equil/prime_cannula.png)
+   ![Havayı temizleyin düğmesi olan Kanül dolumu adımı](../images/Equil/prime_cannula.png)
 
-1. **Confirm**: put the pump on your body and press **Finish**.
+1. **Onayla**: pompayı vücudunuza yerleştirin ve **Bitir** düğmesine basın.
 
-   ![Confirm step with the Finish button](../images/Equil/confirm.png)
+   ![Bitir düğmesi olan Onayla adımı](../images/Equil/confirm.png)
 
 ```{warning}
-If you set your own pairing password (recommended for your safety), store it somewhere safe. The password is saved in the pump. The pump asks for it at every new pairing until you unpair it properly in **AAPS**. Until then, the pump also cannot be used with the original handheld controller (PDA).
+Kendi eşleştirme parolanızı belirlediyseniz (güvenliğiniz için önerilir), onu güvenli bir yerde saklayın. Parola pompada kaydedilir. Pompa, siz onu **AAPS**'te düzgün bir şekilde eşleşmeden çıkarana kadar her yeni eşleştirmede bu parolayı ister. O zamana kadar pompa, orijinal el kumandasıyla (PDA) da kullanılamaz.
 ```
 
-### Pump screen after pairing
+### Eşleştirmeden sonra pompa ekranı
 
-Once the pump is paired, the pump screen shows these buttons:
+Pompa eşleştirildikten sonra pompa ekranında şu düğmeler görünür:
 
-* **Refresh**: reads the state and the history of the pump now.
-* **Suspend** / **Resume delivery**: stop or restart insulin delivery.
-* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir (and, if needed, a new battery), priming and attaching it again. The first step asks *Will you also put on a new infusion set (base plate and cannula)?*
-  * **Yes, new infusion set**: you choose the site, the cannula is primed, and **AAPS** records an insulin change and a cannula change.
-  * **No, only reservoir or battery**: the cannula is not primed and **AAPS** records only an insulin change.
+* **Yenile**: pompanın durumunu ve geçmişini hemen okur.
+* **Askıya al** / **İletime devam et**: insülin iletimini durdurur veya yeniden başlatır.
+* **Rezervuarı Değiştir**: pompayı ayırma, yeni bir rezervuar (ve gerekirse yeni bir pil) takma, hazırlama (prime) ve pompayı yeniden takma adımlarında size yol gösterir. İlk adım şunu sorar: *Ayrıca yeni bir infüzyon seti (pompa tabanı ve kanül) de takacak mısınız?*
+  * **Evet, yeni infüzyon seti**: bölgeyi seçersiniz, kanül doldurulur ve **AAPS** bir insülin değişimi ile bir kanül değişimi kaydeder.
+  * **Hayır, yalnızca rezervuar veya pil**: kanül doldurulmaz ve **AAPS** yalnızca bir insülin değişimi kaydeder.
 
-  After a reservoir change the battery level shows **-** until **AAPS** reads it again from the pump.
+  Rezervuar değişiminden sonra pil seviyesi, **AAPS** onu pompadan tekrar okuyana kadar **-** olarak görünür.
 
-  ![The first step of Change reservoir asks about a new infusion set](../images/Equil/change_reservoir_question.png)
+  ![Rezervuarı Değiştir'in ilk adımı yeni bir infüzyon setini sorar](../images/Equil/change_reservoir_question.png)
 
-* **History**: shows the events recorded by the pump.
-* **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
+* **Geçmiş**: pompanın kaydettiği olayları gösterir.
+* **Cihaz Eşleşmesini Kaldır**: pompayı ayırma ve **AAPS** ile eşleşmesini kaldırma adımlarında size yol gösterir. Bu işlem insülin iletimini durdurur, pompa pistonunu en alta geri çeker ve eşleştirmeyi siler.
 
 ### Alarmlar
 
-* The low insulin alarm sounds once at each level (10 U, 5 U and 2 U) and when the reservoir is empty. The low battery alarm sounds once at 10% and once at 5%. Each level alarms only once until the next reservoir change.
-* Pump alarms and stops are also recorded as announcements in the treatments, at the time the pump logged them, so you can see later when and why the pump stopped.
-* If the reservoir runs empty during a bolus, **AAPS** records only the insulin given until then and tells you both amounts.
+* Düşük insülin alarmı her seviyede (10 Ü, 5 Ü ve 2 Ü) ve rezervuar boşaldığında birer kez çalar. Düşük pil alarmı %10'da bir kez ve %5'te bir kez çalar. Her seviye, bir sonraki rezervuar değişimine kadar yalnızca bir kez alarm verir.
+* Pompa alarmları ve durmaları, pompanın kaydettiği zamanda tedavilere duyuru olarak da kaydedilir; böylece pompanın ne zaman ve neden durduğunu daha sonra görebilirsiniz.
+* Bolus sırasında rezervuar boşalırsa **AAPS** yalnızca o ana kadar verilen insülini kaydeder ve size her iki miktarı da bildirir.
 
-## Where to get help
+## Nereden yardım alabilirsiniz?
 
-Development of the Equil driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Equil sürücüsü topluluk tarafından **gönüllü** olarak geliştirilmektedir. Yardım istemeden önce lütfen:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. Özelliğin nasıl çalışması gerektiğini doğrulamak için bu dokümantasyonun ilgili bölümünü **okuyun**.
+2. [Discord](https://discord.gg/4fQUWHZ4Mw)'daki *#AAPS* kanalında veya diğer [topluluk kanallarından](../GettingHelp/WhereCanIGetHelp.md) birinde **sorun**.
+3. [Mevcut sorunları](https://github.com/nightscout/AndroidAPS/issues) arayarak **hata bildirin**; sizinki listede yoksa [yeni bir sorun (issue)](https://github.com/nightscout/AndroidAPS/issues) açın ve [günlük dosyalarınızı](../GettingHelp/AccessingLogFiles.md) ekleyin.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Yardım isterken telefonunuzun markasını ve modelini, Android sürümünü, **AAPS** sürümünü ve sorunun sade bir açıklamasını (ne değişti, en son ne zaman çalıştı) ekleyin.

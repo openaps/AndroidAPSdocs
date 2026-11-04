@@ -1,11 +1,11 @@
 # Omnipod Eros
 
-These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**).
+Diese Anleitung ist für die Konfiguration der Omnipod Eros Pumpe (**NICHT Omnipod Dash**).
 
 ```{admonition} Omnipod Eros is being phased out
 :class: note
 
-The [Omnipod System](https://www.omnipod.com/current-podders/resources/omnipod-system) (the original Omnipod, comprising both the Personal Diabetes Manager (PDM) and the Pod) is being discontinued, and the end date varies by country. For example, it will no longer be available in Canada after 30 June 2026. If you rely on the Eros pump, plan ahead for a transition to a supported pump.
+Das [Omnipod System](https://www.omnipod.com/current-podders/resources/omnipod-system) (der ursprüngliche Omnipod mit Personal Diabetes Manager (PDM) und Pod) wird eingestellt; das Enddatum ist von Land zu Land verschieden. In Kanada ist es zum Beispiel ab dem 30. Juni 2026 nicht mehr erhältlich. Wenn Du auf die Eros-Pumpe angewiesen bist, plane rechtzeitig den Umstieg auf eine unterstützte Pumpe.
 ```
 
 **Diese Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
@@ -31,25 +31,25 @@ The [Omnipod System](https://www.omnipod.com/current-podders/resources/omnipod-s
 
 > Komponente, die AAPS betreibt und Steuerbefehle an das Pod-Kommunikationsgerät sendet.
 > 
-> > - Supported [Android phone](#Phones-list-of-tested-phones) with **AAPS** and related components set up.
+> > - Ein unterstütztes [Android-Smartphone](#Phones-list-of-tested-phones) mit eingerichtetem **AAPS** und den zugehörigen Komponenten.
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **Insulin-Pumpe**
 
-> Component that will interpret commands received from the Pod communication device originating from your AAPS enabled phone.
+> Komponente, die die vom Pod-Kommunikationsgerät empfangenen Befehle interpretiert, die von Deinem Smartphone mit AAPS stammen.
 > 
 > > - Ein neuer Omnipod-Pod (Eros-Generation - **NICHT DASH**)
 
-These instructions assume that you are starting a new pod session. If this is not the case, please be patient and start this process at your next pod change.
+Diese Anleitung geht davon aus, dass Du eine neue Pod-Sitzung beginnst. Ist das nicht der Fall, hab bitte Geduld und beginne mit diesem Vorgang beim nächsten Pod-Wechsel.
 
-In this page, **RileyLink** means any of the pod communication devices listed above.
+Auf dieser Seite steht **RileyLink** für jedes der oben genannten Geräte zur Pod-Kommunikation.
 
 ## Bevor du startest
 
 **Sicherheit geht vor** - Stelle sicher, dass Du auf eventuell auftretende Fehler reagieren kannst, bevor Du diesen Prozess beginnst: zusätzliche Pods, Insulin, geladener RileyLink und Smartphone mit vollem Akku sind unbedingt notwendig.
 
-**Dein Omnipod PDM funktioniert nicht mehr, wenn der AAPS Omnipod Treiber Deinen Pod aktiviert hat**. Bisher hast Du Deinen Omnipod PDM verwendet, um Befehle an Deinen Omnipod Eros Pod zu senden. Ein Omnipod Eros Pod kann sich nur mit einem einzigen Gerät verbinden. Das Gerät, das den Pod erfolgreich aktiviert, ist das einzige Gerät, das von diesem Zeitpunkt an mit ihm kommunizieren darf. Dies bedeutet, dass, sobald Du einen Omnipod Eros Pod mit Deinem RileyLink über den AAPS Omnipod Treiber aktiviert hast, **wirst Du Deinen PDM nicht mehr mit diesem Pod** verwenden können. Der AAPS Omnipod Treiber mit dem RileyLink ist dann Dein aktiver PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies when AAPS is not working correctly.*
+**Dein Omnipod PDM funktioniert nicht mehr, wenn der AAPS Omnipod Treiber Deinen Pod aktiviert hat**. Bisher hast Du Deinen Omnipod PDM verwendet, um Befehle an Deinen Omnipod Eros Pod zu senden. Ein Omnipod Eros Pod kann sich nur mit einem einzigen Gerät verbinden. Das Gerät, das den Pod erfolgreich aktiviert, ist das einzige Gerät, das von diesem Zeitpunkt an mit ihm kommunizieren darf. Dies bedeutet, dass, sobald Du einen Omnipod Eros Pod mit Deinem RileyLink über den AAPS Omnipod Treiber aktiviert hast, **wirst Du Deinen PDM nicht mehr mit diesem Pod** verwenden können. Der AAPS Omnipod Treiber mit dem RileyLink ist dann Dein aktiver PDM. *Das bedeutet NICHT, dass Du Deinen PDM wegwerfen sollst; es wird empfohlen, ihn als Ersatz und für Notfälle aufzubewahren, wenn AAPS nicht richtig funktioniert.*
 
-**Only one RileyLink at a time can communicate with a pod.** **AAPS** remembers one paired RileyLink. If you pair a different one, it replaces the previous one.
+**Es kann immer nur ein RileyLink mit einem Pod kommunizieren.** **AAPS** merkt sich einen gekoppelten RileyLink. Koppelst Du einen anderen, ersetzt er den bisherigen.
 
 **Dein Pod wird nicht abgeschaltet, wenn der RileyLink außerhalb der Reichweite liegt.** Dein Pod wird weiterhin Basal-Insulin liefern, wenn Dein RileyLink außerhalb der Reichweite ist oder die Kommunikation mit dem aktiven Pod geblockt wird. Beim Aktivieren eines Pods wird das in AAPS definierte Profil in den neuen Pod programmiert. Wenn du den Kontakt zum Pod verlierst, wird er auf dieses zurückgesetzt. Du kannst keine neuen Befehle senden, solange der RileyLink nicht wieder in Reichweite kommt und die Verbindung wiedergeherstellt ist.
 
@@ -61,39 +61,39 @@ Du kannst den Omnipod-Treiber in AAPS auf **zwei Wegen** aktivieren:
 
 ### Option 1: Der Einrichtungsassistent
 
-After installing a new version of AAPS, the **Setup Wizard** starts automatically. If you have already exported your settings from a previous installation, you can import them in the wizard. For new installations, continue below.
+Nach der Installation einer neuen Version von AAPS startet der **Einrichtungsassistent** automatisch. Hast Du Deine Einstellungen aus einer früheren Installation bereits exportiert, kannst Du sie im Assistenten importieren. Bei Neuinstallationen geht es unten weiter.
 
-Go through the [Setup Wizard](../SettingUpAaps/SetupWizard.md) until you reach the **Pump** step, then select **Omnipod Eros** (the description reads "Pump integration for Omnipod Eros").
+Gehe durch den [Einrichtungsassistenten](../SettingUpAaps/SetupWizard.md), bis Du den Schritt **Pumpe** erreichst, und wähle dann **Omnipod Eros** (die Beschreibung lautet „Pumpen-Integration für Omnipod Eros“).
 
 ![The Pump step of the setup wizard with Omnipod Eros](../images/setup-wizard/Wizard-Pump-Omnipod.png)
 
-The Setup Wizard does not pair your RileyLink. After finishing the wizard, open the Omnipod pump screen and pair it as described in the [RileyLink Setup section](#OmnipodEros-rileylink-setup).
+Der Einrichtungsassistent koppelt Deinen RileyLink nicht. Öffne nach Abschluss des Assistenten den Omnipod-Pumpenbildschirm und kopple ihn wie im Abschnitt [RileyLink einrichten](#OmnipodEros-rileylink-setup) beschrieben.
 
 **ODER**
 
-### Option 2: The Configuration screen
+### Option 2: Der Konfigurationsbildschirm
 
-Open the top-left **menu** (☰) > **Configuration** > **Pump** and select the **radio button** of **Omnipod Eros**.
+Öffne oben links das **Menü** (☰) > **Konfiguration** > **Pumpe** und wähle das **Optionsfeld** von **Omnipod Eros**.
 
-Once it is selected, the **Omnipod Eros** card shows two buttons, **Settings** and **Open plugin**:
+Sobald sie ausgewählt ist, zeigt die Karte **Omnipod Eros** zwei Schaltflächen: **Einstellungen** und **Plugin öffnen**:
 
 ![The Omnipod Eros plugin selected in Configuration > Pump](../images/v4/Pumps/omnipod_enabled.png)
 
-**Settings** opens the settings of the Omnipod driver (see [Omnipod Settings](#OmnipodEros-omnipod-settings)):
+**Einstellungen** öffnet die Einstellungen des Omnipod-Treibers (siehe [Omnipod-Einstellungen](#OmnipodEros-omnipod-settings)):
 
 ![Omnipod driver settings](../images/v4/Pumps/omnipod_settings.png)
 
-**Open plugin** opens the Omnipod pump screen. You can also open it at any time from the main screen with **Manage** > **Pump**. This page calls it the **Omnipod pump screen**. Before a RileyLink is paired and a pod is activated, it looks like this:
+**Plugin öffnen** öffnet den Omnipod-Pumpenbildschirm. Du kannst ihn auch jederzeit vom Startbildschirm aus über **Bearbeiten** > **Pumpe** öffnen. Auf dieser Seite heißt er **Omnipod-Pumpenbildschirm**. Bevor ein RileyLink gekoppelt und ein Pod aktiviert ist, sieht er so aus:
 
 ![Omnipod pump screen before pairing](../images/v4/Pumps/omnipod_pump_screen.png)
 
 ### Überprüfung der Omnipod-Treiberauswahl
 
-To verify that you have enabled the Omnipod driver, open **Manage** > **Pump** from the main screen. You should see the **Omnipod Eros** pump screen shown above. If you have not paired a RileyLink yet, **RileyLink Status** shows **Not Started** and **Pod Status** shows **No Active Pod**.
+Um zu prüfen, ob Du den Omnipod-Treiber aktiviert hast, öffne vom Startbildschirm aus **Bearbeiten** > **Pumpe**. Du solltest den oben gezeigten Pumpenbildschirm **Omnipod Eros** sehen. Hast Du noch keinen RileyLink gekoppelt, zeigt **RileyLink Status** **Nicht gestartet** und **Pod Status** **Kein aktiver Pod**.
 
 ## Omnipod-Konfiguration
 
-All pod and RileyLink functions are buttons on the [Omnipod pump screen](#OmnipodEros-omnipod-pod-tab) (**Manage** > **Pump**). Some buttons only appear in certain situations, for example when a pod is active.
+Alle Pod- und RileyLink-Funktionen sind Schaltflächen auf dem [Omnipod-Pumpenbildschirm](#OmnipodEros-omnipod-pod-tab) (**Bearbeiten** > **Pumpe**). Manche Schaltflächen erscheinen nur in bestimmten Situationen, zum Beispiel wenn ein Pod aktiv ist.
 
 > ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) Aktualisiere Pod-Verbindung und Status
 > 
@@ -101,30 +101,30 @@ All pod and RileyLink functions are buttons on the [Omnipod pump screen](#Omnipo
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 there is no **POD MGMT** button or Pod Management menu: **Refresh** and all pod management actions are buttons on the Omnipod pump screen.
+Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 gibt es keine Schaltfläche **POD MGMT** und kein Menü Pod-Verwaltung mehr: **Aktualisieren** und alle Aktionen zur Pod-Verwaltung sind Schaltflächen auf dem Omnipod-Pumpenbildschirm.
 ```
 
 (OmnipodEros-rileylink-setup)=
 
 ### RileyLink-Setup
 
-If you have already paired your RileyLink, continue to the [Activating a Pod section](#OmnipodEros-activating-a-pod) below.
+Hast Du Deinen RileyLink bereits gekoppelt, mach unten im Abschnitt [Pod aktivieren](#OmnipodEros-activating-a-pod) weiter.
 
-*Note: A good visual indicator that the RileyLink is not connected is that the treatment buttons (QuickLaunch toolbar) on the main screen will be missing. Dies passiert auch in den ersten 30 Sekunden nach dem Start von AAPS, da AAPS sich erst mit dem RileyLink verbinden muss.*
+*Hinweis: Ein gutes sichtbares Zeichen dafür, dass der RileyLink nicht verbunden ist, sind fehlende Behandlungsschaltflächen (Schnellstart-Leiste) auf dem Startbildschirm. Dies passiert auch in den ersten 30 Sekunden nach dem Start von AAPS, da AAPS sich erst mit dem RileyLink verbinden muss.*
 
-1. Make sure that your RileyLink is fully charged and powered on.
+1. Stelle sicher, dass Dein RileyLink voll geladen und eingeschaltet ist.
 
-2. Place the RileyLink [close to your phone](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less).
+2. Lege den RileyLink [nah an Dein Smartphone](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (höchstens ca. 30 cm entfernt).
 
-3. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Pair RileyLink**.
+3. Öffne den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) und tippe auf **RileyLink verbinden**.
 
-4. The **Pair RileyLink** screen starts scanning for Bluetooth devices right away. Tap your RileyLink in the list of found devices.
+4. Der Bildschirm **RileyLink verbinden** beginnt sofort mit der Suche nach Bluetooth-Geräten. Tippe in der Liste der gefundenen Geräte auf Deinen RileyLink.
 
    ![The Pair RileyLink screen scanning for devices](../images/omnipod/eros_pair_rileylink_scanning.png)
 
-5. When **RileyLink paired successfully** is shown with the name and address of your device, press **OK**.
+5. Wird **RileyLink erfolgreich verbunden** mit Name und Adresse Deines Geräts angezeigt, tippe auf **OK**.
 
-6. Back on the Omnipod pump screen, check that **RileyLink Status** changes to **Connected**. **Pod Status** should show **No Active Pod**. If the RileyLink does not connect, press **Reset RileyLink**, or restart **AAPS**.
+6. Prüfe auf dem Omnipod-Pumpenbildschirm, ob **RileyLink Status** auf **Verbunden** wechselt. **Pod Status** sollte **Kein aktiver Pod** zeigen. Verbindet sich der RileyLink nicht, tippe auf **RileyLink zurücksetzen** oder starte **AAPS** neu.
 
 ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
@@ -136,63 +136,63 @@ If you have already paired your RileyLink, continue to the [Activating a Pod sec
 
 ```{admonition} Older screenshot
 :class: note
-The six screenshots above (after step 6) are from an earlier **AAPS** version. In **AAPS** 4 you pair the RileyLink with the **Pair RileyLink** button on the Omnipod pump screen instead of **RileyLink Configuration** in the Omnipod settings, and scanning starts automatically.
+Die sechs Screenshots oben (nach Schritt 6) stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 koppelst Du den RileyLink über die Schaltfläche **RileyLink verbinden** auf dem Omnipod-Pumpenbildschirm statt über **RileyLink Configuration** in den Omnipod-Einstellungen, und die Suche startet automatisch.
 ```
 
 ```{note}
-To switch to another RileyLink (for example a backup device), press **Pair RileyLink** again and select the new device. It replaces the one paired before. You do not need to remove the old device first.
+Um zu einem anderen RileyLink zu wechseln (zum Beispiel einem Ersatzgerät), tippe erneut auf **RileyLink verbinden** und wähle das neue Gerät aus. Es ersetzt das bisher gekoppelte. Das alte Gerät musst Du vorher nicht entfernen.
 ```
 
 (OmnipodEros-activating-a-pod)=
 
 ### Einen Pod aktivieren
 
-Before you can activate a pod, make sure your RileyLink is paired and **RileyLink Status** shows **Connected**. The **Activate Pod** button stays disabled until the RileyLink is ready.
+Bevor Du einen Pod aktivieren kannst, stelle sicher, dass Dein RileyLink gekoppelt ist und **RileyLink Status** **Verbunden** zeigt. Die Schaltfläche **Pod aktivieren** bleibt deaktiviert, bis der RileyLink bereit ist.
 
-*HINWEIS: Für die Verbindung mit dem Pod steht aus Sicherheitsgründen nur ein kleinerer Kommunikationsbereich zur Verfügung. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. During these procedures, make sure that your pod is* [within close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) *(~30 cm away or less) but not on top of or right next to the RileyLink.*
+*HINWEIS: Für die Verbindung mit dem Pod steht aus Sicherheitsgründen nur ein kleinerer Kommunikationsbereich zur Verfügung. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. Achte während dieser Vorgänge darauf, dass Dein Pod* [ganz in der Nähe](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) *(höchstens ca. 30 cm entfernt) ist, aber nicht auf oder direkt neben dem RileyLink liegt.*
 
-01. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Activate Pod**.
+01. Öffne den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) und tippe auf **Pod aktivieren**.
 
-    If you have never activated a profile, a **Profile required** step appears first. Select the profile to apply on activation.
+    Hast Du noch nie ein Profil aktiviert, erscheint zuerst der Schritt **Profil erforderlich**. Wähle das Profil aus, das bei der Aktivierung angewendet werden soll.
 
     > ![Activate_Pod_1](../images/omnipod/Activate_Pod_1.png) ![Activate_Pod_2](../images/omnipod/Activate_Pod_2.png) 
     > 
     > ```{admonition} Older screenshot
     >     :class: note
-    >     The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+    >     Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 ist **Pod aktivieren** eine Schaltfläche auf dem Omnipod-Pumpenbildschirm statt im Menü **POD MGMT**.
     > ```
 
-02. Der **Pod füllen** Bildschirm wird angezeigt. Fill a new pod with enough insulin for 3 days and listen for two beeps. They mean that the minimum amount of 80 units has been filled. Empty the fill syringe completely, even after hearing the two beeps. Beachte bei der Berechnung der gesamt Insulinmenge, welche Du in 3 Tagen benötigst, dass zum Füllen des Pod 12 bis 15 IE benötigt werden. Do not remove the pod's needle cap yet.
+02. Der **Pod füllen** Bildschirm wird angezeigt. Fülle einen neuen Pod mit genug Insulin für 3 Tage und achte auf zwei Signaltöne. Sie bedeuten, dass die Mindestmenge von 80 Einheiten eingefüllt ist. Entleere die Füllspritze vollständig, auch wenn Du die zwei Signaltöne schon gehört hast. Beachte bei der Berechnung der gesamt Insulinmenge, welche Du in 3 Tagen benötigst, dass zum Füllen des Pod 12 bis 15 IE benötigt werden. Entferne die Nadelkappe des Pods noch nicht.
 
     > ![Activate_Pod_3](../images/omnipod/Activate_Pod_3.png)
     > 
-    > Ensure the new pod and RileyLink are within close proximity of each other (~30cm or less) and press **Next**.
+    > Stelle sicher, dass der neue Pod und der RileyLink nah beieinander liegen (höchstens ca. 30 cm), und tippe auf **Weiter**.
 
-03. **Select Insulin** (only shown if you have more than one insulin configured): select the insulin you are filling the pod with and press **Next**. A profile switch with this insulin is applied after activation.
+03. **Insulin auswählen** (nur angezeigt, wenn Du mehr als ein Insulin eingerichtet hast): Wähle das Insulin, mit dem Du den Pod füllst, und tippe auf **Weiter**. Nach der Aktivierung wird ein Profilwechsel mit diesem Insulin durchgeführt.
 
-04. Der Bildschirm **Initialisiere Pod** wird angezeigt und der Pod beginnt zu entlüften. (Du wirst ein Klicken hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst). Wenn RileyLink außerhalb des zulässigen Bereichs des aktiven Pods aktiviert wurde, erhälst Du eine Fehlermeldung **Keine Antwort von Pod**. If this occurs, [move the RileyLink closer](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and press **Retry**.
+04. Der Bildschirm **Initialisiere Pod** wird angezeigt und der Pod beginnt zu entlüften. (Du wirst ein Klicken hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst). Wenn RileyLink außerhalb des zulässigen Bereichs des aktiven Pods aktiviert wurde, erhälst Du eine Fehlermeldung **Keine Antwort von Pod**. Passiert das, [bring den RileyLink näher](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (höchstens ca. 30 cm) an den Pod, aber nicht auf ihn oder direkt daneben, und tippe auf **Erneut versuchen**.
 
     > ![Activate_Pod_4](../images/omnipod/Activate_Pod_4.png) ![Activate_Pod_5](../images/omnipod/Activate_Pod_5.png)
 
-05. When priming is successful, a green checkmark is shown and the **Next** button becomes enabled. Press **Next**.
+05. War die Entlüftung erfolgreich, wird ein grünes Häkchen angezeigt, und die Schaltfläche **Weiter** wird aktiv. Tippe auf **Weiter**.
 
     > ![Activate_Pod_6](../images/omnipod/Activate_Pod_6.png)
 
-06. **Site location** (only shown if **Manage pump site rotation** is enabled in [Site Rotation](#Aapsscreens-site-rotation)): select where you place the pod on your body and press **Next**.
+06. **Setzstelle** (nur angezeigt, wenn **Wechsel der Pumpen-Einstichstellen verwalten** unter [Wechsel der Setzstellen](#Aapsscreens-site-rotation) aktiviert ist): Wähle, wo Du den Pod an Deinem Körper anbringst, und tippe auf **Weiter**.
 
-07. The **Attach Pod** screen is displayed. Prepare the infusion site of the new pod. Remove the pod's plastic needle cap and white paper backing from the adhesive and apply the pod to your chosen site on your body. If the cannula sticks out, press **Cancel** and discard the pod. When finished, press **Next**.
+07. Der Bildschirm **Pod anlegen** wird angezeigt. Bereite die Infusionsstelle für den neuen Pod vor. Entferne die Nadelkappe aus Kunststoff und die weiße Papierschutzfolie vom Klebepolster und klebe den Pod auf die ausgewählte Stelle an Deinem Körper. Ragt die Kanüle heraus, tippe auf **Abbrechen** und entsorge den Pod. Tippe danach auf **Weiter**.
 
     > ![Activate_Pod_7](../images/omnipod/Activate_Pod_7.png)
 
-08. A confirmation dialog appears: "When you press OK, the cannula will be inserted". **ONLY press OK if you are ready to deploy the cannula**.
+08. Ein Bestätigungsdialog erscheint: „Nachdem Du OK gedrückt hast, wird die Kanüle eingeführt“. **Tippe NUR auf OK, wenn Du bereit bist, die Kanüle einzuführen**.
 
     > ![Activate_Pod_8](../images/omnipod/Activate_Pod_8.png)
 
-09. On the **Insert Cannula** screen, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so be patient.
+09. Auf dem Bildschirm **Kanüle setzen** kann es etwas dauern, bis der Omnipod antwortet und die Kanüle einführt (maximal 1–2 Minuten), hab also Geduld.
 
-    > Wenn RileyLink außerhalb des zulässigen Bereichs des aktiven Pods aktiviert wurde, erhälst Du eine Fehlermeldung **Keine Antwort von Pod**. If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and press **Retry**.
+    > Wenn RileyLink außerhalb des zulässigen Bereichs des aktiven Pods aktiviert wurde, erhälst Du eine Fehlermeldung **Keine Antwort von Pod**. Passiert das, bring den RileyLink näher (höchstens ca. 30 cm) an den Pod, aber nicht auf ihn oder direkt daneben, und tippe auf **Erneut versuchen**.
     > 
-    > Wenn der RileyLink sich außerhalb der Bluetoothreichweite befindert oder keine aktive Verbindung zum Smartphone hat, bekommst Du eine Fehlermeldung **Keine Antwort von RileyLink**. If this occurs, move the RileyLink closer to the phone and press **Retry**.
+    > Wenn der RileyLink sich außerhalb der Bluetoothreichweite befindert oder keine aktive Verbindung zum Smartphone hat, bekommst Du eine Fehlermeldung **Keine Antwort von RileyLink**. Passiert das, bring den RileyLink näher an das Smartphone und tippe auf **Erneut versuchen**.
     > 
     > *HINWEIS: Bevor die Kanüle eingesetzt wird, ist es ratsam, die Haut in der Nähe des Kanülensetzpunktes etwas zusammenzukneifen. Dies sorgt für eine sanfte Einführung der Nadel und verringert die Gefahr einer Verstopfung.*
     > 
@@ -200,32 +200,32 @@ Before you can activate a pod, make sure your RileyLink is paired and **RileyLin
     > 
     > ![Activate_Pod_10](../images/omnipod/Activate_Pod_10.png) ![Activate_Pod_11](../images/omnipod/Activate_Pod_11.png)
 
-10. Es wird ein grünes Häkchen angezeigt, und der Button **Weiter** wird bei erfolgreicher Kanüleneinführung aktiviert. Press **Next**.
+10. Es wird ein grünes Häkchen angezeigt, und der Button **Weiter** wird bei erfolgreicher Kanüleneinführung aktiviert. Tippe auf **Weiter**.
 
     > ![Activate_Pod_12](../images/omnipod/Activate_Pod_12.png)
 
-11. The **Pod Activated** screen is displayed. Check that the cannula has been inserted correctly, and change your pod if you think it has not. Press **Finish**. Glückwunsch! Du hast jetzt eine neuen Pod aktiviert.
+11. Der Bildschirm **Pod aktiviert** wird angezeigt. Prüfe, ob die Kanüle richtig eingeführt wurde, und wechsle den Pod, wenn Du daran zweifelst. Tippe auf **Abschließen**. Glückwunsch! Du hast jetzt eine neuen Pod aktiviert.
 
     > ![Activate_Pod_13](../images/omnipod/Activate_Pod_13.png) 
     > 
     > ```{admonition} Older screenshot
     >     :class: note
-    >     The screenshots in steps 2 to 11 are from an earlier **AAPS** version and may look different in **AAPS** 4. The **Select Insulin** and **Site location** steps are not pictured.
+    >     Die Screenshots in den Schritten 2 bis 11 stammen aus einer früheren **AAPS**-Version und können in **AAPS** 4 anders aussehen. Die Schritte **Insulin auswählen** und **Setzstelle** sind nicht abgebildet.
     > ```
 
-12. You are returned to the Omnipod pump screen. The **Activate Pod** button is replaced by **Deactivate Pod**, because you cannot activate another pod without deactivating the active one first.
+12. Du kehrst zum Omnipod-Pumpenbildschirm zurück. Die Schaltfläche **Pod aktivieren** wird durch **Pod deaktivieren** ersetzt, weil Du keinen weiteren Pod aktivieren kannst, ohne zuerst den aktiven zu deaktivieren.
 
-    The pump screen now shows information about your active pod, including the current basal rate, reservoir level, insulin delivered, pod errors and alerts. For more details, see the [Omnipod pump screen](#OmnipodEros-omnipod-pod-tab) section.
+    Der Pumpenbildschirm zeigt jetzt Informationen zu Deinem aktiven Pod, darunter aktuelle Basalrate, Reservoirstand, abgegebenes Insulin, Pod-Fehler und Warnungen. Mehr dazu im Abschnitt [Omnipod-Pumpenbildschirm](#OmnipodEros-omnipod-pod-tab).
 
     ![Activate_Pod_14](../images/omnipod/Activate_Pod_14.png) ![Activate_Pod_15](../images/omnipod/Activate_Pod_15.png)
 
     ```{admonition} Older screenshot
     :class: note
-    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 there is no Pod Management menu: you return directly to the Omnipod pump screen, where **Deactivate Pod** replaces **Activate Pod**.
+    Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 gibt es kein Menü Pod-Verwaltung: Du kehrst direkt zum Omnipod-Pumpenbildschirm zurück, wo **Pod deaktivieren** an die Stelle von **Pod aktivieren** tritt.
     ```
 
 ```{note}
-If activation was interrupted after priming (for example the app was closed), press **Activate Pod** again. The wizard continues from the cannula insertion steps.
+Wurde die Aktivierung nach dem Entlüften unterbrochen (zum Beispiel, weil die App geschlossen wurde), tippe erneut auf **Pod aktivieren**. Der Assistent macht mit den Schritten zum Einführen der Kanüle weiter.
 ```
 
 ### Deaktiviere einen Pod
@@ -234,62 +234,62 @@ Unter normalen Umständen beträgt die Lebensdauer eines Pods drei Tage (72 Stun
 
 Gehe wie folgt vor, um einen Pod zu deaktivieren (entweder vor dem Ablaufen der Nutzungsdauer oder wegen eines Pod-Fehlers):
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Deactivate Pod**.
+1. Öffne den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) und tippe auf **Pod deaktivieren**.
 
    > ![Deactivate_Pod_1](../images/omnipod/Deactivate_Pod_1.png) ![Deactivate_Pod_2](../images/omnipod/Deactivate_Pod_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Deactivate Pod** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   >    Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 ist **Pod deaktivieren** eine Schaltfläche auf dem Omnipod-Pumpenbildschirm statt im Menü **POD MGMT**.
    > ```
 
-2. On the **Deactivate Pod** screen, first make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod. Then press **Next**. A dialog asks *A deactivated Pod can not be used again. Deactivate this Pod now?* Press **OK** to start deactivating the pod, or **Cancel** to keep it. Deactivation suspends all insulin delivery and cannot be undone.
+2. Stelle auf dem Bildschirm **Pod deaktivieren** zuerst sicher, dass der RileyLink ganz in der Nähe des Pods liegt, aber nicht auf ihm oder direkt daneben. Tippe dann auf **Weiter**. Ein Dialog fragt: *Ein deaktivierter Pod kann nicht mehr verwendet werden. Diesen Pod jetzt deaktivieren?* Tippe auf **OK**, um die Deaktivierung zu starten, oder auf **Abbrechen**, um den Pod zu behalten. Die Deaktivierung stoppt jede Insulinabgabe und kann nicht rückgängig gemacht werden.
 
    > ![Deactivate_Pod_3](../images/omnipod/Deactivate_Pod_3.png)
 
-3. The **Deactivating Pod** screen appears, and you will receive a confirmation beep from the pod that deactivation was successful.
+3. Der Bildschirm **Deaktiviere den Pod...** erscheint, und der Pod bestätigt die erfolgreiche Deaktivierung mit einem Signalton.
 
    > ![Deactivate_Pod_4](../images/omnipod/Deactivate_Pod_4.png)
    > 
-   > **IF deactivation fails** and you do not receive a confirmation beep, you may receive a **No response from RileyLink** or **No response from Pod** message. Press **Retry** to attempt deactivation again. If deactivation keeps failing, press **Discard Pod** and confirm. **AAPS** then forgets the pod. Insulin delivery has **not** been suspended, so remove the pod from your body. If your pod has a screaming alarm, you may need to silence it manually (using a pin or a paperclip), because **Discard Pod** does not silence it.
+   > **FALLS die Deaktivierung fehlschlägt** und Du keinen Bestätigungston hörst, erhältst Du möglicherweise die Meldung **Keine Antwort vom RileyLink** oder **Keine Rückmeldung vom Pod**. Tippe auf **Erneut versuchen**, um die Deaktivierung noch einmal zu versuchen. Schlägt die Deaktivierung weiterhin fehl, tippe auf **Pod verwerfen** und bestätige. **AAPS** vergisst den Pod dann. Die Insulinabgabe wurde **nicht** unterbrochen, entferne den Pod also von Deinem Körper. Gibt Dein Pod einen schrillen Alarm aus, musst Du ihn eventuell manuell stummschalten (mit einer Nadel oder Büroklammer), denn **Pod verwerfen** schaltet ihn nicht stumm.
    > 
    > > ![Deactivate_Pod_5](../images/omnipod/Deactivate_Pod_5.png)  ![Deactivate_Pod_6](../images/omnipod/Deactivate_Pod_6.png)
 
-4. A green checkmark appears when deactivation is successful. Press **Next** to display the **Pod Deactivated** screen. Du kannst nun deinen Pod entfernen, da die aktive Sitzung beendet wurde.
+4. Ist die Deaktivierung erfolgreich, erscheint ein grünes Häkchen. Tippe auf **Weiter**, um den Bildschirm **Pod deaktiviert** anzuzeigen. Du kannst nun deinen Pod entfernen, da die aktive Sitzung beendet wurde.
 
    > ![Deactivate_Pod_7](../images/omnipod/Deactivate_Pod_7.png)
 
-5. Press **Finish** to return to the Omnipod pump screen.
+5. Tippe auf **Abschließen**, um zum Omnipod-Pumpenbildschirm zurückzukehren.
 
    > ![Deactivate_Pod_8](../images/omnipod/Deactivate_Pod_8.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots in steps 2 to 5 are from an earlier **AAPS** version and may look different in **AAPS** 4.
+   >    Die Screenshots in den Schritten 2 bis 5 stammen aus einer früheren **AAPS**-Version und können in **AAPS** 4 anders aussehen.
    > ```
 
-6. On the Omnipod pump screen, check that **RileyLink Status** shows **Connected** and **Pod Status** shows **No Active Pod**.
+6. Prüfe auf dem Omnipod-Pumpenbildschirm, ob **RileyLink Status** **Verbunden** und **Pod Status** **Kein aktiver Pod** zeigt.
 
    > ![Deactivate_Pod_9](../images/omnipod/Deactivate_Pod_9.png)  ![Deactivate_Pod_10](../images/omnipod/Deactivate_Pod_10.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Finish** returns you directly to the Omnipod pump screen; there is no Pod Management menu or **Omnipod (POD)** tab.
+   >    Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 bringt Dich **Abschließen** direkt zum Omnipod-Pumpenbildschirm zurück; ein Menü Pod-Verwaltung oder einen Reiter **Omnipod (POD)** gibt es nicht.
    > ```
 
 ### Insulinlieferung stoppen und fortsetzen
 
-The process below shows you how to suspend and resume insulin delivery.
+Die folgenden Schritte zeigen Dir, wie Du die Insulinabgabe unterbrichst und fortsetzt.
 
-*NOTE - if you do not see a **Suspend** button*, it is hidden by default. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*HINWEIS – siehst Du keine Schaltfläche **Unterbrechen***, ist sie standardmäßig ausgeblendet. Aktiviere in den [Omnipod-Einstellungen](#OmnipodEros-omnipod-settings) unter **Andere** die Option **Schaltfläche „Insulinabgabe unterbrechen“ in der Pumpenansicht anzeigen**.
 
 #### Insulinabgabe unterbrechen
 
 Verwende diesen Befehl, um den aktiven Pod in den Status 'unterbrochen' zu versetzen. In diesem suspendiertem Zustand wird der Pod kein Insulin mehr liefern. Dieser Befehl ahmt die Suspend-Funktion nach, die der originale Omnipod PDM an einen aktiven Pod sendet.
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Suspend**. The suspend command is sent through the RileyLink to the active pod.
+1. Öffne den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) und tippe auf **Unterbrechen**. Der Befehl zum Unterbrechen wird über den RileyLink an den aktiven Pod gesendet.
 
-2. When the pod has suspended all insulin delivery, **Pod Status** shows **Suspended** and the **Suspend** button is replaced by **Resume Delivery**.
+2. Hat der Pod die gesamte Insulinabgabe unterbrochen, zeigt **Pod Status** **Angehalten**, und die Schaltfläche **Unterbrechen** wird durch **Abgabe fortsetzen** ersetzt.
 
    > ![Suspend_Insulin_Delivery_1](../images/omnipod/Suspend_Insulin_Delivery_1.png) ![Suspend_Insulin_Delivery_2](../images/omnipod/Suspend_Insulin_Delivery_2.png)
    > 
@@ -299,18 +299,18 @@ Verwende diesen Befehl, um den aktiven Pod in den Status 'unterbrochen' zu verse
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 these steps take place on the Omnipod pump screen instead of the **Omnipod (POD)** tab, and the result is shown in **Pod Status**.
+   >    Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 finden diese Schritte auf dem Omnipod-Pumpenbildschirm statt statt im Reiter **Omnipod (POD)**, und das Ergebnis wird unter **Pod Status** angezeigt.
    > ```
 
-If the command fails, a **Warning** dialog shows "Failed to suspend delivery" with the reason. Check the RileyLink connection and try again.
+Schlägt der Befehl fehl, zeigt ein Dialog **Warnung** „Insulinabgabe konnte nicht unterbrochen werden.“ mit dem Grund. Prüfe die Verbindung zum RileyLink und versuche es erneut.
 
 #### Insulinabgabe fortsetzen
 
 Benutze diesen Befehl, um den aktiven, derzeit pausierten Pod anzuweisen, die Insulinabgabe fortzusetzen. Nachdem der Befehl erfolgreich verarbeitet wurde, wird die normale Insulinabgabe mit der aktuellen Basalrate fortgesetzt. Grundlage dafür ist das aktive Basalprofil zur aktuellen Uhrzeit. Der Pod akzeptiert wieder Befehle für Bolus, TBR und SMB.
 
-1. Open the Omnipod pump screen and check that **Pod Status** shows **Suspended**. Press **Resume Delivery**.
+1. Öffne den Omnipod-Pumpenbildschirm und prüfe, ob **Pod Status** **Angehalten** zeigt. Tippe auf **Abgabe fortsetzen**.
 
-2. When the command succeeds, **Pod Status** shows **Running** again and the **Resume Delivery** button disappears (the **Suspend** button is shown again if you have enabled it).
+2. Ist der Befehl erfolgreich, zeigt **Pod Status** wieder **In Betrieb**, und die Schaltfläche **Abgabe fortsetzen** verschwindet (die Schaltfläche **Unterbrechen** erscheint wieder, wenn Du sie aktiviert hast).
 
    > ![Resume_Insulin_Delivery_1](../images/omnipod/Resume_Insulin_Delivery_1.png) ![Resume_Insulin_Delivery_2](../images/omnipod/Resume_Insulin_Delivery_2.png)
    > 
@@ -320,53 +320,53 @@ Benutze diesen Befehl, um den aktiven, derzeit pausierten Pod anzuweisen, die In
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 these steps take place on the Omnipod pump screen instead of the **Omnipod (POD)** tab, and the result is shown in **Pod Status**.
+   >    Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 finden diese Schritte auf dem Omnipod-Pumpenbildschirm statt statt im Reiter **Omnipod (POD)**, und das Ergebnis wird unter **Pod Status** angezeigt.
    > ```
 
-If the command fails, a **Warning** dialog shows "Failed to resume delivery" with the reason. Check the RileyLink connection and try again.
+Schlägt der Befehl fehl, zeigt ein Dialog **Warnung** „Insulinabgabe konnte nicht gestartet werden.“ mit dem Grund. Prüfe die Verbindung zum RileyLink und versuche es erneut.
 
 ### Pod Alarme stummschalten
 
-*NOTE - The **Silence Alerts** button is only shown on the Omnipod pump screen while the pod has an active alert (for example the pod expiration or low reservoir alert), and only if **Automatically silence Pod alerts** is disabled.*
+*HINWEIS – Die Schaltfläche **Alarme stummschalten** wird auf dem Omnipod-Pumpenbildschirm nur angezeigt, solange der Pod eine aktive Warnung hat (zum Beispiel die Warnung zum Pod-Ablauf oder zum niedrigen Reservoir), und nur, wenn **Pod-Alarme automatisch stummschalten** deaktiviert ist.*
 
-The process below shows you how to silence pod beeps that start when the pod reaches the warning time before it expires. This warning time is set with **Alert at hours before shutdown (80 Hours)** in the Omnipod **Alerts** settings. Die maximale Nutzungsdauer eines Pods beträgt 80 Stunden (3 Tage und 8 Stunden), dennoch empfiehlt der Hersteller, 72 Stunden (3 Tage) nicht zu überschreiten.
+Die folgenden Schritte zeigen Dir, wie Du die Signaltöne des Pods stummschaltest, die beginnen, wenn der Pod die Warnzeit vor seinem Ablauf erreicht. Diese Warnzeit legst Du mit **Warnung vor dem Herunterfahren (80 Stunden)** in den Omnipod-Einstellungen unter **Alarme** fest. Die maximale Nutzungsdauer eines Pods beträgt 80 Stunden (3 Tage und 8 Stunden), dennoch empfiehlt der Hersteller, 72 Stunden (3 Tage) nicht zu überschreiten.
 
-*NOTE - If you have enabled **Automatically silence Pod alerts** in the Omnipod **Alerts** settings, **AAPS** silences the alert automatically at the next communication with the pod, and you do NOT need to do it manually.*
+*HINWEIS – Hast Du **Pod-Alarme automatisch stummschalten** in den Omnipod-Einstellungen unter **Alarme** aktiviert, schaltet **AAPS** die Warnung bei der nächsten Kommunikation mit dem Pod automatisch stumm, und Du musst das NICHT manuell tun.*
 
-1. When the warning time is reached, the pod beeps to tell you that it will soon expire and needs to be changed. On the Omnipod pump screen, **Pod Expires** shows the exact time the pod expires (72 hours after activation); it turns **yellow** 4 hours before. **Pod Hard End** shows when the pod stops delivering insulin. **Active Pod Alerts** shows **Pod will expire soon**, and the **Silence Alerts** button appears. **AAPS** also shows a notification about the upcoming pod expiration.
+1. Ist die Warnzeit erreicht, piept der Pod, um Dir zu sagen, dass er bald abläuft und gewechselt werden muss. Auf dem Omnipod-Pumpenbildschirm zeigt **Pod läuft ab** den genauen Ablaufzeitpunkt des Pods (72 Stunden nach der Aktivierung); 4 Stunden vorher wird der Wert **gelb**. **Enddatum des Pods** zeigt, wann der Pod die Insulinabgabe stoppt. **Aktive Pod-Warnungen** zeigt **Pod läuft in Kürze ab**, und die Schaltfläche **Alarme stummschalten** erscheint. **AAPS** zeigt außerdem eine Benachrichtigung zum bevorstehenden Pod-Ablauf an.
 
    > ![Acknowledge_Alerts_1](../images/omnipod/Acknowledge_Alerts_1.png) ![Acknowledge_Alerts_2](../images/omnipod/Acknowledge_Alerts_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 the **ACK ALERTS** button is called **Silence Alerts** and is on the Omnipod pump screen.
+   >    Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 heißt die Schaltfläche **ACK ALERTS** jetzt **Alarme stummschalten** und befindet sich auf dem Omnipod-Pumpenbildschirm.
    > ```
 
-2. Press **Silence Alerts**. The RileyLink sends the command to the pod to stop the expiration warning beeps.
+2. Tippe auf **Alarme stummschalten**. Der RileyLink sendet den Befehl an den Pod, die Signaltöne der Ablaufwarnung zu stoppen.
 
    > ![Acknowledge_Alerts_3](../images/omnipod/Acknowledge_Alerts_3.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the button is called **Silence Alerts**.
+   >    Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 heißt die Schaltfläche **Alarme stummschalten**.
    > ```
 
-3. When the alerts are silenced, the pod beeps twice. **Active Pod Alerts** no longer shows the warning, the **Silence Alerts** button disappears and the pod stops its expiration warning beeps.
+3. Sind die Warnungen stummgeschaltet, piept der Pod zweimal. **Aktive Pod-Warnungen** zeigt die Warnung nicht mehr an, die Schaltfläche **Alarme stummschalten** verschwindet, und der Pod hört mit den Signaltönen der Ablaufwarnung auf.
 
    > ![Acknowledge_Alerts_4](../images/omnipod/Acknowledge_Alerts_4.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the result is shown on the Omnipod pump screen: the warning disappears from **Active Pod Alerts**.
+   >    Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 wird das Ergebnis auf dem Omnipod-Pumpenbildschirm angezeigt: Die Warnung verschwindet aus **Aktive Pod-Warnungen**.
    > ```
 
-If the command fails (for example the RileyLink is out of range of the pod), a **Warning** dialog shows "Failed to silence alerts" with the reason. Move the RileyLink closer to the pod and try again.
+Schlägt der Befehl fehl (zum Beispiel, weil der RileyLink außer Reichweite des Pods ist), zeigt ein Dialog **Warnung** „Alarme können nicht stumm geschaltet werden“ mit dem Grund. Bring den RileyLink näher an den Pod und versuche es erneut.
 
 ![Acknowledge_Alerts_5](../images/omnipod/Acknowledge_Alerts_5.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the **Warning** dialog shows "Failed to silence alerts" with the reason.
+Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 zeigt der Dialog **Warnung** „Alarme können nicht stumm geschaltet werden“ mit dem Grund.
 ```
 
 (OmnipodEros-view-pod-history)=
@@ -379,16 +379,16 @@ Diese Funktion ist hilfreich bei der Überprüfung von Boli, Temporären Basalra
 
 *HINWEIS:* **Unsichere** Befehle erscheinen in der Pod-Historie, aber für deren Genauigkeit gibt es aufgrund deren natürlichen Unsicherheit keine Garantie.
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Pod History**.
+1. Öffne den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) und tippe auf **Pod-Historie**.
 
    > ![Pod_History_1](../images/omnipod/Pod_History_1.png) ![Pod_History_2](../images/omnipod/Pod_History_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   >    Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 ist **Pod-Historie** eine Schaltfläche auf dem Omnipod-Pumpenbildschirm statt im Menü **POD MGMT**.
    > ```
 
-2. The **Pod History** screen lists all pod actions and their results, newest first, grouped by day. By default **All** is selected. Tap one of the filter buttons at the top to show only one category. Use the back arrow at the top left to return to the Omnipod pump screen.
+2. Der Bildschirm **Pod-Historie** listet alle Pod-Aktionen und ihre Ergebnisse auf, die neuesten zuerst, nach Tagen gruppiert. Standardmäßig ist **Alle** ausgewählt. Tippe oben auf eine der Filterschaltflächen, um nur eine Kategorie anzuzeigen. Mit dem Zurück-Pfeil oben links kehrst Du zum Omnipod-Pumpenbildschirm zurück.
 
    > ![Pod History screen with the filter buttons](../images/omnipod/Pod_History_3.png)
 
@@ -396,28 +396,28 @@ Diese Funktion ist hilfreich bei der Überprüfung von Boli, Temporären Basalra
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The second screenshot is from an earlier **AAPS** version and may look different in **AAPS** 4.
+   >    Der zweite Screenshot stammt aus einer früheren **AAPS**-Version und kann in **AAPS** 4 anders aussehen.
    > ```
 
 ### Zeige RileyLink Einstellungen und Historie an
 
-The **RileyLink Stats** screen shows the settings of your RileyLink and active pod, and the communication history of both. It has two tabs: **Settings** and **History**.
+Der Bildschirm **RileyLink Status** zeigt die Einstellungen Deines RileyLinks und des aktiven Pods sowie den Kommunikationsverlauf beider. Er hat zwei Reiter: **Einstellungen** und **Verlauf**.
 
-The **RileyLink Stats** button is hidden by default. To show it on the Omnipod pump screen, enable **Show RileyLink Stats button in Pod Management menu** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+Die Schaltfläche **RileyLink Status** ist standardmäßig ausgeblendet. Um sie auf dem Omnipod-Pumpenbildschirm anzuzeigen, aktiviere in den [Omnipod-Einstellungen](#OmnipodEros-omnipod-settings) unter **Andere** die Option **Button 'RileyLink Status' im Menü Pod Mgmt. anzeigen**.
 
 #### Bluetooth-Kommunikation für Pod-Kommunikationsgerät manuell wiederherstellen
 
-If your pod communication device was out of Bluetooth range of your phone for a while, **RileyLink Status** may report **RileyLink unreachable** on the Omnipod pump screen. **AAPS** normally reconnects by itself when the device is back in range. If it does not:
+War Dein Gerät zur Pod-Kommunikation eine Weile außerhalb der Bluetooth-Reichweite Deines Smartphones, meldet **RileyLink Status** auf dem Omnipod-Pumpenbildschirm möglicherweise **RileyLink nicht erreichbar**. Normalerweise verbindet sich **AAPS** von selbst wieder, sobald das Gerät wieder in Reichweite ist. Falls nicht:
 
-1. Make sure the RileyLink is powered on, charged and close to your phone.
+1. Stelle sicher, dass der RileyLink eingeschaltet, geladen und nah an Deinem Smartphone ist.
 
-2. On the Omnipod pump screen, press **Reset RileyLink**. A message confirms **RileyLink configuration reset**. See the [Reset RileyLink notes](#OmnipodEros-reset-rileylink-config-notes) below.
+2. Tippe auf dem Omnipod-Pumpenbildschirm auf **RileyLink zurücksetzen**. Eine Meldung bestätigt **Zurücksetzen der RileyLink-Konfiguration**. Siehe unten [Hinweise zu RileyLink zurücksetzen](#OmnipodEros-reset-rileylink-config-notes).
 
 3. Wenn die **Bluetooth-Verbindung** nicht wieder hergestellt wird, dann versuche die Bluetooth-Funktion auf deinem Smartphone manuell **aus-** und dann wieder **anzuschalten**.
 
-4. If it still does not reconnect, press **Pair RileyLink** and select your RileyLink again.
+4. Verbindet er sich immer noch nicht, tippe auf **RileyLink verbinden** und wähle Deinen RileyLink erneut aus.
 
-5. After a successful reconnection, **RileyLink Status** shows **Connected**. You can also check **Connection Status** on the **Settings** tab of the **RileyLink Stats** screen. Herzlichen Glückwunsch, Du hast jetzt erneut Deinen konfigurierten RileyLink mit AAPS verbunden!
+5. Nach einer erfolgreichen Wiederverbindung zeigt **RileyLink Status** **Verbunden**. Du kannst auch den **Verbindungsstatus** im Reiter **Einstellungen** des Bildschirms **RileyLink Status** prüfen. Herzlichen Glückwunsch, Du hast jetzt erneut Deinen konfigurierten RileyLink mit AAPS verbunden!
 
 ![RileyLink_Bluetooth_Reset_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![RileyLink_Bluetooth_Reset_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
 
@@ -429,237 +429,237 @@ If your pod communication device was out of Bluetooth range of your phone for a 
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you reconnect with **Reset RileyLink** or **Pair RileyLink** on the Omnipod pump screen instead of the refresh button on the RileyLink Settings screen.
+Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 verbindest Du Dich mit **RileyLink zurücksetzen** oder **RileyLink verbinden** auf dem Omnipod-Pumpenbildschirm neu statt mit der Aktualisieren-Schaltfläche auf dem Bildschirm RileyLink Settings.
 ```
 
 #### Pod-Kommunikationsgerät und Aktive Pod-Einstellungen
 
-This screen shows information and status for both the currently paired pod communication device and the currently active Omnipod Eros pod. The information refreshes automatically.
+Dieser Bildschirm zeigt Informationen und Status sowohl des aktuell gekoppelten Pod-Kommunikationsgeräts als auch des aktuell aktiven Omnipod-Eros-Pods. Die Informationen werden automatisch aktualisiert.
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **RileyLink Stats**. The **Settings** tab shows your currently paired **RileyLink** and the active pod (**Device**).
+1. Öffne den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) und tippe auf **RileyLink Status**. Der Reiter **Einstellungen** zeigt Deinen aktuell gekoppelten **RileyLink** und den aktiven Pod (**Gerät**).
 
    > ![RileyLink_Statistics_Settings_1](../images/omnipod/RileyLink_Statistics_Settings_1.png) ![RileyLink_Statistics_Settings_2](../images/omnipod/RileyLink_Statistics_Settings_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **RileyLink Stats** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   >    Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 ist **RileyLink Status** eine Schaltfläche auf dem Omnipod-Pumpenbildschirm statt im Menü **POD MGMT**.
    > ```
 
    > ![RileyLink_Statistics_Settings_3](../images/omnipod/RileyLink_Statistics_Settings_3.png)
 
-##### RileyLink fields
+##### RileyLink-Felder
 
-> - **Address:** MAC address of the paired pod communication device.
-> - **Name:** Bluetooth name of the paired pod communication device.
-> - **Battery Level:** The current battery level of the connected pod communication device. Only shown when **Show battery level reported by OrangeLink/EmaLink/DiaLink** is enabled.
+> - **Adresse:** MAC-Adresse des gekoppelten Pod-Kommunikationsgeräts.
+> - **Name:** Bluetooth-Name des gekoppelten Pod-Kommunikationsgeräts.
+> - **Akkustand:** Der aktuelle Batteriestand des verbundenen Pod-Kommunikationsgeräts. Wird nur angezeigt, wenn **Akkustand von OrangeLink/EmaLink/DiaLink anzeigen** aktiviert ist.
 > - **Verbindungsstatus:**: Der aktuelle Status der Bluetooth-Verbindung zwischen dem Pod-Kommunikationsgerät und dem Smartphone, auf dem AAPS läuft.
-> - **Connection Error:** If there is an error with the pod communication device Bluetooth connection, details are displayed here.
+> - **Verbindungsfehler:** Gibt es einen Fehler bei der Bluetooth-Verbindung des Pod-Kommunikationsgeräts, werden hier Details angezeigt.
 > - **Firmware-Version:** Aktuelle Firmware-Version, die auf dem aktiv verbundenen Pod-Kommunikationsgerät installiert ist.
 
-##### Device fields - With an Active Pod
+##### Geräte-Felder – mit aktivem Pod
 
-> - **Device Type:** The type of device communicating with the pod communication device (Omnipod (Eros)).
-> - **Configured Device Model:** The model of the device configured to communicate with the pod communication device.
-> - **Connected Device Model:** The model of the device currently communicating with the pod communication device.
-> - **Pump Serial Number:** Serial number of the currently activated pod.
-> - **Pump Frequency:** Radio frequency used to communicate with the pod.
-> - **Last Used Frequency:** Last known radio frequency the pod used to communicate with the pod communication device.
+> - **Geräte-Typ:** Der Typ des Geräts, das mit dem Pod-Kommunikationsgerät kommuniziert (Omnipod (Eros)).
+> - **Eingerichtetes Gerätemodell:** Das Modell des Geräts, das für die Kommunikation mit dem Pod-Kommunikationsgerät eingerichtet ist.
+> - **Verbundenes Gerätemodell:** Das Modell des Geräts, das gerade mit dem Pod-Kommunikationsgerät kommuniziert.
+> - **Seriennummer der Pumpe:** Seriennummer des aktuell aktivierten Pods.
+> - **Pumpenfrequenz:** Funkfrequenz für die Kommunikation mit dem Pod.
+> - **Zuletzt verwendete Frequenz:** Letzte bekannte Funkfrequenz, die der Pod für die Kommunikation mit dem Pod-Kommunikationsgerät verwendet hat.
 > - **Letzter Gerätekontakt:** Datum und Uhrzeit des letzten Kontakts vom Pod mit dem Pod-Kommunikationsgerät.
 
 (omnipod-eros-rileylink-and-active-pod-history)=
 #### Historie des RileyLink und aktiven Pods
 
-This tab lists, newest first, each state or action of the RileyLink or the currently connected pod. The history is only available for the currently active pod. After a pod change, this history is erased and only events from the newly activated pod are recorded and shown.
+Dieser Reiter listet, die neuesten zuerst, jeden Zustand und jede Aktion des RileyLinks oder des aktuell verbundenen Pods auf. Der Verlauf ist nur für den aktuell aktiven Pod verfügbar. Nach einem Pod-Wechsel wird dieser Verlauf gelöscht, und es werden nur Ereignisse des neu aktivierten Pods erfasst und angezeigt.
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**), press **RileyLink Stats** and then tap the **History** tab.
+1. Öffne den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**), tippe auf **RileyLink Status** und dann auf den Reiter **Verlauf**.
 
    > ![RileyLink_Statistics_History_1](../images/omnipod/RileyLink_Statistics_History_1.png) ![RileyLink_Statistics_History_2](../images/omnipod/RileyLink_Statistics_History_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **RileyLink Stats** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   >    Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 ist **RileyLink Status** eine Schaltfläche auf dem Omnipod-Pumpenbildschirm statt im Menü **POD MGMT**.
    > ```
 
    > ![RileyLink_Statistics_History_3](../images/omnipod/RileyLink_Statistics_History_3.png)
 
 ##### Felder
 
-Each entry shows:
+Jeder Eintrag zeigt:
 
-> - **Device:** The device to which the action or state refers.
-> - **Time:** The time of the event.
-> - **State or Action:** The state of the device or the action it performed.
+> - **Gerät:** Das Gerät, auf das sich die Aktion oder der Zustand bezieht.
+> - **Zeit:** Der Zeitpunkt des Ereignisses.
+> - **Zustand oder Aktion:** Der Zustand des Geräts oder die ausgeführte Aktion.
 
 (OmnipodEros-omnipod-pod-tab)=
 
-## Omnipod pump screen
+## Omnipod-Pumpenbildschirm
 
-Below is an explanation of the status fields and buttons on the **Omnipod pump screen** (**Manage** > **Pump**, or **Configuration** > **Pump** > **Open plugin**).
+Im Folgenden werden die Statusfelder und Schaltflächen auf dem **Omnipod-Pumpenbildschirm** erklärt (**Bearbeiten** > **Pumpe** oder **Konfiguration** > **Pumpe** > **Plugin öffnen**).
 
-The gear icon at the top right opens the [Omnipod settings](#OmnipodEros-omnipod-settings).
+Das Zahnrad-Symbol oben rechts öffnet die [Omnipod-Einstellungen](#OmnipodEros-omnipod-settings).
 
-*NOTE: If any status field shows (uncertain), press **Refresh** to refresh the pod status and clear it.*
+*HINWEIS: Zeigt ein Statusfeld „(unsicher)“, tippe auf **Aktualisieren**, um den Pod-Status zu aktualisieren und das Feld zu bereinigen.*
 
-![Omnipod pump screen](../images/v4/Pumps/omnipod_pump_screen.png)
+![Omnipod-Pumpenbildschirm](../images/v4/Pumps/omnipod_pump_screen.png)
 
 ![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version, where this screen was the **Omnipod (POD)** tab. In **AAPS** 4 it is the Omnipod pump screen, and some field names and buttons differ.
+Der Screenshot oben stammt aus einer früheren **AAPS**-Version, in der dieser Bildschirm der Reiter **Omnipod (POD)** war. In **AAPS** 4 ist es der Omnipod-Pumpenbildschirm, und einige Feldnamen und Schaltflächen sind anders.
 ```
 
 ### Felder
 
-- **RileyLink Status:** Displays the current connection status of the RileyLink. Errors are shown in red.
+- **RileyLink Status:** Zeigt den aktuellen Verbindungsstatus des RileyLink an. Fehler werden rot angezeigt.
 
-- *Not Started* - no RileyLink is paired yet, or the connection has not started.
-- *RileyLink unreachable* - pod communication device is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
-- *RileyLink ready* - pod communication device is powered on and actively initializing the Bluetooth connection.
+- *Nicht gestartet* - Es ist noch kein RileyLink gekoppelt, oder die Verbindung wurde noch nicht gestartet.
+- *RileyLink nicht erreichbar* - Das Pod-Kommunikationsgerät ist entweder nicht in Bluetooth-Reichweite des Smartphones, ausgeschaltet oder hat einen Defekt, der die Bluetooth-Kommunikation verhindert.
+- *RileyLink bereit* - Das Pod-Kommunikationsgerät ist eingeschaltet und initialisiert gerade die Bluetooth-Verbindung.
 - *Verbunden* - Das Pod-Kommunikationsgerät ist eingeschaltet, verbunden und aktiv in der Lage, über Bluetooth zu kommunizieren.
 
-- **Unique ID:** Displays the address of the active pod.
+- **Eindeutige ID:** Zeigt die Adresse des aktiven Pods.
 
-- **LOT Number:** Displays the LOT number of the active pod.
+- **LOT-Nummer:** Zeigt die LOT-Nummer des aktiven Pods.
 
-- **Sequence Number:** Displays the serial number (TID) of the pod.
+- **Laufende Nummer:** Zeigt die Seriennummer (TID) des Pods.
 
 - **Firmware-Version:** Zeigt die Firmware-Version des aktiven Pods an.
 
-- **Zeit auf dem Pod:** Zeigt die aktuelle Uhrzeit auf dem aktiven Pod an. It is highlighted when it differs from the phone time by more than 5 minutes.
+- **Zeit auf dem Pod:** Zeigt die aktuelle Uhrzeit auf dem aktiven Pod an. Sie wird hervorgehoben, wenn sie mehr als 5 Minuten von der Uhrzeit des Smartphones abweicht.
 
-- **Pod Expires:** Displays the date and time when the active pod will expire. The text turns yellow in the last 4 hours before this time. It never turns red, because the pod keeps delivering insulin after it.
+- **Pod läuft ab:** Zeigt Datum und Uhrzeit, zu der der aktive Pod abläuft. In den letzten 4 Stunden vor diesem Zeitpunkt wird der Text gelb. Er wird nie rot, weil der Pod danach weiter Insulin abgibt.
 
-- **Pod Hard End:** Displays the end of the pod's grace period (8 hours after **Pod Expires**, for a maximum pod life of 80 hours). The text turns yellow when the grace period starts (at **Pod Expires**) and red in the last 4 hours before the hard end. During the grace period it also shows the time left, for example *(17m remaining)*. The pod stops delivering insulin at the hard end and must be changed.
+- **Enddatum des Pods:** Zeigt das Ende der Kulanzzeit des Pods (8 Stunden nach **Pod läuft ab**, also eine maximale Pod-Laufzeit von 80 Stunden). Der Text wird gelb, wenn die Kulanzzeit beginnt (bei **Pod läuft ab**), und rot in den letzten 4 Stunden vor dem endgültigen Ende. Während der Kulanzzeit wird außerdem die verbleibende Zeit angezeigt, zum Beispiel *(17m remaining)*. Zum endgültigen Ende stoppt der Pod die Insulinabgabe und muss gewechselt werden.
 
-- **Pod Status:** Displays the status of the active pod (for example **No Active Pod**, **Running** or **Suspended**).
+- **Pod Status:** Zeigt den Status des aktiven Pods (zum Beispiel **Kein aktiver Pod**, **In Betrieb** oder **Angehalten**).
 
-- **Last Connection:** Displays the last time communication with the active pod was achieved. The text turns red when the [pump unreachable threshold](#OmnipodEros-troubleshooting) is exceeded.
+- **Letzte Verbindung:** Zeigt, wann zuletzt eine Kommunikation mit dem aktiven Pod stattgefunden hat. Der Text wird rot, wenn der [Grenzwert für Pumpe ist nicht erreichbar](#OmnipodEros-troubleshooting) überschritten ist.
 
 - *gerade eben* vor weniger als 20 Sekunden.
 - *vor weniger als einer Minute* vor mehr als 20 Sekunden, aber weniger als 60 Sekunden.
 - *vor 1 Minute* vor mehr als 60 Sekunden, aber weniger als 120 Sekunden (2 min).
 - *vor XX Minuten* vor mehr als 2 Minuten, definiert durch den Wert von XX.
 
-- **Last Bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
+- **Letzter Bolus:** Zeigt die Menge des letzten an den aktiven Pod gesendeten Bolus und in Klammern, wie lange das her ist.
 
-- **Base Basal Rate:** Displays the basal rate programmed for the current time from the basal rate profile.
+- **Basis-Basalrate:** Zeigt die Basalrate, die im Basalratenprofil für die aktuelle Uhrzeit hinterlegt ist.
 
-- **Temp Basal Rate:** Only shown while a Temporary Basal Rate is running. Displays it in the following format:
+- **Temporäre Basalrate:** Wird nur angezeigt, solange eine temporäre Basalrate läuft. Sie wird in folgendem Format angezeigt:
 
 - Einheiten / Stunde zum Zeitpunkt der Erstellung der TBR (gelaufene Minuten / Gesamtminuten, in denen die TBR läuft)
 - *Beispiel:* 0,00 IE/h @18:25 ( 90/120 min.)
 
-- **Reservoir:** Displays **Over 50 U left** when more than 50 units are left in the reservoir. Below this value the approximate number of units is displayed. The text turns red below the low reservoir threshold set in the [Alerts settings](#OmnipodEros-omnipod-settings).
+- **Reservoir:** Zeigt **Noch mehr als 50 IE vorhanden**, wenn mehr als 50 Einheiten im Reservoir sind. Darunter wird die ungefähre Anzahl Einheiten angezeigt. Der Text wird rot, wenn der in den [Alarm-Einstellungen](#OmnipodEros-omnipod-settings) festgelegte Grenzwert für niedriges Reservoir unterschritten ist.
 
-- **Total Delivered:** Displays the total number of units of insulin delivered from the reservoir. *Beachte, dass es sich hierbei um einen Näherungswert handelt, da das Befüllen des Pods nicht absolut exakt geschieht.*
+- **Insgesamt abgegeben:** Zeigt die gesamte aus dem Reservoir abgegebene Insulinmenge in Einheiten. *Beachte, dass es sich hierbei um einen Näherungswert handelt, da das Befüllen des Pods nicht absolut exakt geschieht.*
 
-- **Active Pod Alerts:** Reserved for currently running alerts on the active pod. Wird normalerweise verwendet, wenn das Pod-Ablaufdatum nach 72 Stunden erreicht ist und native Pieptöne vom Pod ausgegeben werden.
+- **Aktive Pod-Warnungen:** Zeigt die gerade laufenden Warnungen des aktiven Pods. Wird normalerweise verwendet, wenn das Pod-Ablaufdatum nach 72 Stunden erreicht ist und native Pieptöne vom Pod ausgegeben werden.
 
-- **Errors:** Displays the last error encountered (shown in red). Überprüfe die [Pod Historie](#OmnipodEros-view-pod-history), [RileyLink Historie](#omnipod-eros-rileylink-and-active-pod-history) und die Protokolldateien auf aufgetretene Fehler und Detailinformationen.
+- **Fehler:** Zeigt den letzten aufgetretenen Fehler (rot). Überprüfe die [Pod Historie](#OmnipodEros-view-pod-history), [RileyLink Historie](#omnipod-eros-rileylink-and-active-pod-history) und die Protokolldateien auf aufgetretene Fehler und Detailinformationen.
 
 ### Schaltflächen
 
-The buttons at the bottom of the pump screen change depending on the situation. Buttons that cannot be used right now are greyed out, for example while the RileyLink is not connected.
+Die Schaltflächen unten auf dem Pumpenbildschirm ändern sich je nach Situation. Schaltflächen, die gerade nicht benutzt werden können, sind ausgegraut, zum Beispiel solange der RileyLink nicht verbunden ist.
 
-**Pod status buttons** (shown when a pod is active):
+**Schaltflächen für den Pod-Status** (angezeigt, wenn ein Pod aktiv ist):
 
-- **Refresh:** Sends a refresh command to the active pod to update its status. Use it to refresh the pod status and clear status fields that contain the text (uncertain). Weitere Informationen zur [Problembehandlung](#OmnipodEros-troubleshooting) findest Du im Abschnitt unten.
+- **Aktualisieren:** Sendet einen Aktualisierungsbefehl an den aktiven Pod, um seinen Status zu aktualisieren. Nutze sie, um den Pod-Status zu aktualisieren und Statusfelder mit dem Text „(unsicher)“ zu bereinigen. Weitere Informationen zur [Problembehandlung](#OmnipodEros-troubleshooting) findest Du im Abschnitt unten.
 
   ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Refresh** on the Omnipod pump screen.
+  Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 ist das eine Textschaltfläche **Aktualisieren** auf dem Omnipod-Pumpenbildschirm.
   ```
 
-- **Silence Alerts:** Silences the pod expiration and low reservoir beeps and notifications. Only shown when the pod has an active alert and **Automatically silence Pod alerts** is disabled. After the alerts are silenced, the button disappears.
+- **Alarme stummschalten:** Schaltet die Signaltöne und Benachrichtigungen zu Pod-Ablauf und niedrigem Reservoir stumm. Wird nur angezeigt, wenn der Pod eine aktive Warnung hat und **Pod-Alarme automatisch stummschalten** deaktiviert ist. Nach dem Stummschalten der Warnungen verschwindet die Schaltfläche.
 
   ![ack_alerts](../images/omnipod/ICONS/omnipod_overview_ack_alerts.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this button is called **Silence Alerts**.
+  Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 heißt diese Schaltfläche **Alarme stummschalten**.
   ```
 
-- **Set time:** Updates the time on the pod with the current time on your phone. Only shown when the time on the pod differs from the phone time by more than 5 minutes.
+- **Zeit einstellen:** Stellt die Uhrzeit auf dem Pod auf die aktuelle Uhrzeit Deines Smartphones. Wird nur angezeigt, wenn die Uhrzeit auf dem Pod mehr als 5 Minuten von der Smartphone-Zeit abweicht.
 
   ![set_time](../images/omnipod/ICONS/omnipod_overview_set_time.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Set time** on the Omnipod pump screen.
+  Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 ist das eine Textschaltfläche **Zeit einstellen** auf dem Omnipod-Pumpenbildschirm.
   ```
 
-- **Suspend:** Suspends insulin delivery on the active pod. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
+- **Unterbrechen:** Unterbricht die Insulinabgabe des aktiven Pods. Wird nur angezeigt, wenn es in den Einstellungen aktiviert ist (**Schaltfläche „Insulinabgabe unterbrechen“ in der Pumpenansicht anzeigen**).
 
   ![unterbrechen](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Suspend** on the Omnipod pump screen.
+  Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 ist das eine Textschaltfläche **Unterbrechen** auf dem Omnipod-Pumpenbildschirm.
   ```
 
-- **Resume Delivery:** Resumes insulin delivery on the currently suspended, active pod. Only shown while the pod is suspended.
+- **Abgabe fortsetzen:** Setzt die Insulinabgabe des aktuell unterbrochenen, aktiven Pods fort. Wird nur angezeigt, solange der Pod unterbrochen ist.
 
   ![fortsetzen](../images/omnipod/ICONS/omnipod_overview_resume.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Resume Delivery** on the Omnipod pump screen.
+  Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 ist das eine Textschaltfläche **Abgabe fortsetzen** auf dem Omnipod-Pumpenbildschirm.
   ```
 
-**Pod and RileyLink management buttons:**
+**Schaltflächen zur Verwaltung von Pod und RileyLink:**
 
 ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 there is no Pod Management menu: these actions are buttons directly on the Omnipod pump screen.
+Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 gibt es kein Menü Pod-Verwaltung: Diese Aktionen sind Schaltflächen direkt auf dem Omnipod-Pumpenbildschirm.
 ```
 
-- **Activate Pod:** Primes and activates a new pod. Shown when no pod is active. It is enabled only when the RileyLink is connected.
+- **Pod aktivieren:** Entlüftet und aktiviert einen neuen Pod. Wird angezeigt, wenn kein Pod aktiv ist. Sie ist nur aktiv, wenn der RileyLink verbunden ist.
 
   ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 ist **Pod aktivieren** eine Schaltfläche auf dem Omnipod-Pumpenbildschirm statt im Menü Pod-Verwaltung.
   ```
 
-- **Deactivate Pod:** Deactivates the currently active pod. Shown as soon as a pod is paired, also when an activation stopped part-way (for example because the pod failed during activation). It is enabled only when the RileyLink is connected. **AAPS** asks you to confirm before it deactivates the pod.
+- **Pod deaktivieren:** Deaktiviert den aktuell aktiven Pod. Wird angezeigt, sobald ein Pod gekoppelt ist, auch wenn eine Aktivierung mittendrin abgebrochen ist (zum Beispiel, weil der Pod während der Aktivierung ausgefallen ist). Sie ist nur aktiv, wenn der RileyLink verbunden ist. **AAPS** fragt nach einer Bestätigung, bevor der Pod deaktiviert wird.
 
 - * Verwende diesen Befehl, um einen heulenden Pod zu deaktivieren (Fehler 49).
-- If deactivation fails, the deactivation wizard offers a **Discard Pod** option.
+- Schlägt die Deaktivierung fehl, bietet der Deaktivierungsassistent die Option **Pod verwerfen** an.
 
   ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Deactivate Pod** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 ist **Pod deaktivieren** eine Schaltfläche auf dem Omnipod-Pumpenbildschirm statt im Menü Pod-Verwaltung.
   ```
 
-- **Play Test Beep:** Plays a single test beep on the pod when pressed. Shown when a pod is paired.
+- **Testton abspielen:** Spielt beim Antippen einen einzelnen Testton auf dem Pod ab. Wird angezeigt, wenn ein Pod gekoppelt ist.
 
   ![play_test_beep](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Play Test Beep** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 ist **Testton abspielen** eine Schaltfläche auf dem Omnipod-Pumpenbildschirm statt im Menü Pod-Verwaltung.
   ```
 
-- **Pod History:** Displays the active pod activity history. See [View Pod History](#OmnipodEros-view-pod-history).
+- **Pod-Historie:** Zeigt den Aktivitätsverlauf des aktiven Pods. Siehe [Anzeige Pod-Historie](#OmnipodEros-view-pod-history).
 
   ![pod_history](../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 ist **Pod-Historie** eine Schaltfläche auf dem Omnipod-Pumpenbildschirm statt im Menü Pod-Verwaltung.
   ```
 
-- **Pair RileyLink:** Scans for your pod communication device and pairs it. See [RileyLink Setup](#OmnipodEros-rileylink-setup).
+- **RileyLink verbinden:** Sucht Dein Pod-Kommunikationsgerät und koppelt es. Siehe [RileyLink einrichten](#OmnipodEros-rileylink-setup).
 
-- **RileyLink Stats:** Opens the RileyLink Stats screen with two tabs. Only shown if enabled in the settings (**Show RileyLink Stats button in Pod Management menu**).
+- **RileyLink Status:** Öffnet den Bildschirm RileyLink Status mit zwei Reitern. Wird nur angezeigt, wenn es in den Einstellungen aktiviert ist (**Button 'RileyLink Status' im Menü Pod Mgmt. anzeigen**).
 
 - **Einstellungen** - zeigt Informationen zum RileyLink und aktive Pod-Einstellungen an
 - **Historie** - zeigt den Verlauf der RileyLink- und Pod-Kommunikation an
@@ -668,65 +668,65 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 there is
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **RileyLink Stats** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 ist **RileyLink Status** eine Schaltfläche auf dem Omnipod-Pumpenbildschirm statt im Menü Pod-Verwaltung.
   ```
 
-- **Reset RileyLink:** Resets the configuration of the currently connected pod communication device. When communication is started, specific data is sent to and set in the RileyLink:
+- **RileyLink zurücksetzen:** Setzt die Konfiguration des aktuell verbundenen Pod-Kommunikationsgeräts zurück. Wenn die Kommunikation gestartet wird, werden bestimmte Daten an das Pod-Kommunikationsgerät gesendet und dort eingestellt:
 
-- Memory Registers are set
-- Communication Protocols are set
-- Tuned Radio Frequency is set
+- Speicherregister werden gesetzt
+- Kommunikationsprotokolle werden eingestellt
+- Eingestellte Funkfrequenz wird gesetzt
   > 
-  > See [additional notes](#OmnipodEros-reset-rileylink-config-notes) below.
+  > Siehe unten [weitere Hinweise](#OmnipodEros-reset-rileylink-config-notes).
 
   ![reset_rileylink_config](../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this button is called **Reset RileyLink** and is on the Omnipod pump screen.
+  Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 heißt diese Schaltfläche **RileyLink zurücksetzen** und befindet sich auf dem Omnipod-Pumpenbildschirm.
   ```
 
-- **Discard Pod:** Discards the pod state of an unresponsive pod, after a confirmation. Only shown when a pod has been started but not fully paired, as proper deactivation is no longer possible:
+- **Pod verwerfen:** Verwirft nach einer Bestätigung den Pod-Zustand eines nicht mehr reagierenden Pods. Wird nur angezeigt, wenn ein Pod gestartet, aber nicht vollständig gekoppelt wurde, da eine ordnungsgemäße Deaktivierung dann nicht mehr möglich ist:
 
 - Ein **Pod ist nicht vollständig verbunden** und ignoriert daher die Befehle zum Deaktivieren.
-- A **pod is stuck** during the pairing process between steps.
+- Ein **Pod hängt** während des Kopplungsvorgangs zwischen den Schritten fest.
 - Ein **Pod lässt sich überhaupt nicht verbinden.**
   > 
-  > After you discard a pod, **AAPS** can no longer communicate with it. Remove the pod from your body.
+  > Nach dem Verwerfen eines Pods kann **AAPS** nicht mehr mit ihm kommunizieren. Entferne den Pod von Deinem Körper.
 
   ![discard_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Discard Pod** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 ist **Pod verwerfen** eine Schaltfläche auf dem Omnipod-Pumpenbildschirm statt im Menü Pod-Verwaltung.
   ```
 
 (OmnipodEros-reset-rileylink-config-notes)=
 
-#### *Reset RileyLink Notes*
+#### *Hinweise zu RileyLink zurücksetzen*
 
 - Diese Funktion wird in erster Linie verwendet, wenn das derzeit aktive Pod-Kommunikationsgerät nicht antwortet und die Kommunikation in einem festgefahrenen Zustand ist.
-- If the pod communication device is turned off and then back on, press **Reset RileyLink** so that these communication parameters are set again in the pod communication device.
+- Wurde das Pod-Kommunikationsgerät aus- und wieder eingeschaltet, tippe auf **RileyLink zurücksetzen**, damit diese Kommunikationsparameter im Pod-Kommunikationsgerät neu gesetzt werden.
 - Wird dies NICHT getan, muss AAPS neu gestartet werden, nachdem das Pod-Kommunikationsgerät aus- und wieder eingeschaltet wurde.
-- This button **DOES NOT** need to be pressed when switching between different pod communication devices.
+- Diese Schaltfläche **muss NICHT** gedrückt werden, wenn zwischen verschiedenen Pod-Kommunikationsgeräten gewechselt wird.
 
 (OmnipodEros-omnipod-settings)=
 
 ## Omnipod-Einstellungen
 
-To open the Omnipod driver settings, either:
+Die Einstellungen des Omnipod-Treibers öffnest Du so:
 
-- press the gear icon at the top right of the Omnipod pump screen (**Manage** > **Pump**), or
-- open the top-left **menu** (☰) > **Configuration** > **Pump** and press **Settings** on the **Omnipod Eros** card.
+- Tippe oben rechts auf dem Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) auf das Zahnrad-Symbol oder
+- öffne oben links das **Menü** (☰) > **Konfiguration** > **Pumpe** und tippe auf der Karte **Omnipod Eros** auf **Einstellungen**.
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 you open the settings with **Settings** on the **Omnipod Eros** card or the gear icon on the Omnipod pump screen, instead of the settings gear in **Configuration** or the 3-dot menu.
+Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 öffnest Du die Einstellungen über **Einstellungen** auf der Karte **Omnipod Eros** oder das Zahnrad-Symbol auf dem Omnipod-Pumpenbildschirm statt über das Zahnrad in der **Konfiguration** oder das Drei-Punkte-Menü.
 ```
 
-The settings are grouped as listed below. Tap a group to expand it. Most entries are switches you can enable or disable:
+Die Einstellungen sind wie unten aufgeführt gruppiert. Tippe auf eine Gruppe, um sie aufzuklappen. Die meisten Einträge sind Schalter, die Du ein- oder ausschalten kannst:
 
 ![Omnipod driver settings](../images/v4/Pumps/omnipod_settings.png)
 
@@ -734,25 +734,25 @@ The settings are grouped as listed below. Tap a group to expand it. Most entries
 
 ### RileyLink
 
-Settings for the pod communication device. You pair the device itself with the **Pair RileyLink** button on the pump screen (see [RileyLink Setup](#OmnipodEros-rileylink-setup)).
+Einstellungen für das Pod-Kommunikationsgerät. Das Gerät selbst koppelst Du mit der Schaltfläche **RileyLink verbinden** auf dem Pumpenbildschirm (siehe [RileyLink einrichten](#OmnipodEros-rileylink-setup)).
 
-- **Use Scanning:** Scans before connecting to the OrangeLink. This can improve connections. It can also be used with other RileyLink clones if needed.
+- **Verwende Scannen:** Sucht vor dem Verbinden nach dem OrangeLink. Das kann die Verbindung verbessern. Bei Bedarf kann es auch mit anderen RileyLink-Nachbauten verwendet werden.
 
-- **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/DiaLink. Es wird **dringend empfohlen**, dass alle OrangeLink/EmaLink/DiaLink-Benutzer diese Einstellung aktivieren.
+- **Akkustand von OrangeLink/EmaLink/DiaLink anzeigen:** Meldet den tatsächlichen Batteriestand des OrangeLink/EmaLink/DiaLink. Es wird **dringend empfohlen**, dass alle OrangeLink/EmaLink/DiaLink-Benutzer diese Einstellung aktivieren.
 
 - Funktioniert NICHT mit dem originalen RileyLink.
 - Funktioniert möglicherweise nicht mit RileyLink-Alternativen.
 - Aktiviert - Meldet den aktuellen Batteriestand für unterstützte Pod-Kommunikationsgeräte.
 - Deaktiviert - Meldet einen Wert von n/a.
 
-- **Enable battery change logging in Actions:** Only available when the battery reporting setting above is enabled. Some pod communication devices can use regular batteries that you can change. With this setting enabled, you can record a **Pump Battery Change** [careportal entry](#aaps-screens-careportal) to note the change and reset the battery age.
+- **Aktiviere die Protokollierung des Akkuwechsels im Aktionen-Tab/Menü:** Nur verfügbar, wenn die Einstellung zur Batterieanzeige oben aktiviert ist. Manche Pod-Kommunikationsgeräte können normale, wechselbare Batterien verwenden. Ist diese Einstellung aktiviert, kannst Du einen [Careportal-Eintrag](#aaps-screens-careportal) **Pumpenbatterie-Wechsel** erfassen, um den Wechsel zu vermerken und das Batteriealter zurückzusetzen.
 
-### Confirmation Beeps
+### Bestätigungstöne
 
 Bestätigt mit Signaltönen des Pods die Abgabe und Änderung von Bolus, Basalrate, SMB und TBR.
 
 - **\*Bolus-Töne aktiviert:** Aktiviert oder deaktiviert Bestätigungstöne, wenn ein Bolus abgegeben wird.
-- **Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
+- **Basal-Piep aktiviert:** Aktiviert oder deaktiviert Bestätigungstöne bei Einstellung einer neuen, Abbruch der aktiven oder Änderung der aktuellen Basalrate.
 - **\*SMB-Töne aktiviert:** Aktiviert oder deaktiviert Bestätigungstöne, wenn ein SMB abgegeben wird.
 - **TBR-Piep aktiviert:** Aktiviert oder deaktiviert Bestätigungstöne, bei Setzen oder Abbruch einer TBR.
 
@@ -760,13 +760,13 @@ Bestätigt mit Signaltönen des Pods die Abgabe und Änderung von Bolus, Basalra
 
 Bietet AAPS-Warnungen und Nightscout-Ankündigungen für den Ablauf eines Pods, die Abschaltung oder einen niedrigen Füllstand basierend auf den definierten Schwellenwerten.
 
-*Beachte, dass eine AAPS-Benachrichtigung IMMER für jeden Alarm nach der ersten Kommunikation mit dem Pod ausgegeben wird, da der Alarm ausgelöst wurde. Dismissing the notification will NOT silence the alert UNLESS **Automatically silence Pod alerts** is enabled. To silence the alert MANUALLY, open the Omnipod pump screen and press **Silence Alerts**.*
+*Beachte, dass eine AAPS-Benachrichtigung IMMER für jeden Alarm nach der ersten Kommunikation mit dem Pod ausgegeben wird, da der Alarm ausgelöst wurde. Das Wegwischen der Benachrichtigung schaltet die Warnung NICHT stumm, AUSSER **Pod-Alarme automatisch stummschalten** ist aktiviert. Um die Warnung MANUELL stummzuschalten, öffne den Omnipod-Pumpenbildschirm und tippe auf **Alarme stummschalten**.*
 
-- **\*Expiration reminder enabled:** When enabled, the pod beeps when the time set below is reached.
-- **Alert at hours before shutdown (80 Hours):** The number of hours before the pod shuts down (80 hours after activation) at which the expiration reminder is triggered (1 to 8 hours, default 8).
+- **\*Ablauferinnerung aktiviert:** Ist das aktiviert, piept der Pod, wenn die unten eingestellte Zeit erreicht ist.
+- **Warnung vor dem Herunterfahren (80 Stunden):** Wie viele Stunden vor dem Abschalten des Pods (80 Stunden nach der Aktivierung) die Ablauferinnerung ausgelöst wird (1 bis 8 Stunden, Standard 8).
 - **\*Niedrige Reservoir-Alarm aktiviert:** Aktivieren oder deaktivieren Sie eine Warnung, wenn die verbleibenden Einheiten niedriger Reservoir-Limit erreicht ist, wie im Feld Anzahl der Einheiten definiert.
-- **Number of units:** The number of units at which to trigger the pod low reservoir alert (5 to 50, default 20).
-- **Automatically silence Pod alerts:** When enabled, a notification is still issued, but the alert is silenced automatically at the next communication with the pod after the alert started.
+- **Anzahl der Einheiten:** Die Anzahl der Einheiten, bei der die Warnung bei niedrigem Reservoir ausgelöst wird (5 bis 50, Standard 20).
+- **Pod-Alarme automatisch stummschalten:** Ist das aktiviert, wird zwar weiterhin eine Benachrichtigung angezeigt, die Warnung wird aber bei der nächsten Kommunikation mit dem Pod nach Beginn der Warnung automatisch stummgeschaltet.
 
 ### Benachrichtigungen
 
@@ -774,7 +774,7 @@ Meldet AAPS-Benachrichtigungen und akustische Telefonwarnungen, wenn unsicher is
 
 *HINWEIS: Dies sind nur Benachrichtigungen, es werden keine akustischen Signale ausgegeben.*
 
-- **\*Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a TBR was successfully set.
+- **\*Ton für unsichere TBR-Benachrichtigungen aktiviert:** Schaltet einen hörbaren Alarm und eine sichtbare Benachrichtigung ein oder aus, wenn AAPS unsicher ist, ob eine TBR erfolgreich gesetzt wurde.
 - **\*Ton für Benachrichtigung bei unsicheren SMB-Ereignis aktiviert:** Aktiviere oder deaktiviere diese Einstellung, um einen akustischen Alarm und eine visuelle Benachrichtigung auszulösen, wenn AAPS unsicher ist, ob eine SMB erfolgreich zugestellt wurde.
 - **\*Ton für Benachrichtigung bei unsicheren Bolus-Ereignis aktiviert:** Aktiviere oder deaktiviere diese Einstellung, um einen akustischen Alarm und eine visuelle Benachrichtigung auszulösen, wenn AAPS unsicher ist, ob ein Bolus erfolgreich abgegeben wurde.
 
@@ -782,17 +782,17 @@ Meldet AAPS-Benachrichtigungen und akustische Telefonwarnungen, wenn unsicher is
 
 Bietet erweiterte Einstellungen zur Unterstützung bei der Fehlersuche.
 
-- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
-- **Show Pulse Log button in Pod Management menu:** This setting is still listed, but the current version of the pump screen has no **Pulse Log** button.
+- **Schaltfläche „Insulinabgabe unterbrechen“ in der Pumpenansicht anzeigen:** Blendet die Schaltfläche **Unterbrechen** auf dem Omnipod-Pumpenbildschirm aus oder ein.
+- **Button 'Pulse Log' im Menü Pod Mgmt. anzeigen:** Diese Einstellung wird noch aufgeführt, der aktuelle Pumpenbildschirm hat aber keine Schaltfläche **Pulse Log**.
 
-- **Show RileyLink Stats button in Pod Management menu:** Hide or display the **RileyLink Stats** button on the Omnipod pump screen.
-- **\*DST/Time zone detection enabled:** Allows time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+- **Button 'RileyLink Status' im Menü Pod Mgmt. anzeigen:** Blendet die Schaltfläche **RileyLink Status** auf dem Omnipod-Pumpenbildschirm aus oder ein.
+- **\*Sommerzeit/Zeitzonen-Erkennung aktiviert:** Ermöglicht die automatische Erkennung von Zeitzonenwechseln, wenn das Smartphone in einer Region mit Sommerzeit verwendet wird.
 
 ### Wechseln oder Entfernen eines aktiven Pod-Kommunikationsgeräts (RileyLink)
 
-With many alternative models to the original RileyLink available (such as OrangeLink or EmaLink), or the need to have multiple or backup versions of the same pod communication device, you may need to switch to another device.
+Da es viele Alternativen zum ursprünglichen RileyLink gibt (etwa OrangeLink oder EmaLink) oder Du mehrere bzw. Ersatzgeräte desselben Pod-Kommunikationsgeräts haben möchtest, musst Du eventuell auf ein anderes Gerät wechseln.
 
-To switch, open the Omnipod pump screen (**Manage** > **Pump**), press **Pair RileyLink** and select the new device, as described in [RileyLink Setup](#OmnipodEros-rileylink-setup). The new device replaces the previously paired one.
+Öffne dazu den Omnipod-Pumpenbildschirm (**Bearbeiten** > **Pumpe**), tippe auf **RileyLink verbinden** und wähle das neue Gerät aus, wie unter [RileyLink einrichten](#OmnipodEros-rileylink-setup) beschrieben. Das neue Gerät ersetzt das bisher gekoppelte.
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
@@ -804,10 +804,10 @@ To switch, open the Omnipod pump screen (**Manage** > **Pump**), press **Pair Ri
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you add a device with **Pair RileyLink** on the Omnipod pump screen instead of **RileyLink Configuration** in the Omnipod settings, and scanning starts automatically.
+Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 fügst Du ein Gerät mit **RileyLink verbinden** auf dem Omnipod-Pumpenbildschirm hinzu statt über **RileyLink Configuration** in den Omnipod-Einstellungen, und die Suche startet automatisch.
 ```
 
-There is no separate button to remove a paired device. If you stop using a RileyLink, simply pair the new one when you need it.
+Eine eigene Schaltfläche zum Entfernen eines gekoppelten Geräts gibt es nicht. Nutzt Du einen RileyLink nicht mehr, koppelst Du einfach den neuen, wenn Du ihn brauchst.
 
 ![RileyLink_Setup_Remove_1](../images/omnipod/RileyLink_Setup_Remove_1.png)
 
@@ -819,14 +819,14 @@ There is no separate button to remove a paired device. If you stop using a Riley
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 there is no **Remove** button: pairing a new RileyLink replaces the previous one.
+Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 gibt es keine Schaltfläche **Remove**: Das Koppeln eines neuen RileyLinks ersetzt den bisherigen.
 ```
 
-## Status row and careportal
+## Statuszeile und Careportal
 
-There are a few items that are specific to how the Omnipod pod differs from tube based pumps, especially after applying a new pod.
+Einige Punkte ergeben sich daraus, dass sich der Omnipod-Pod von Pumpen mit Schlauch unterscheidet, besonders nach dem Anlegen eines neuen Pods.
 
-The **insulin** and **cannula** ages in the [status row](#screens-sensor-level-battery) of the main screen are **reset** to 0 days and 0 hours **after each pod change**. Das liegt daran, wie die Omnipod-Pumpe gebaut ist und funktioniert. Die **Pumpenbatterie** und das **Insulinreservoir ** sind immer im Pod enthalten. Da der Pod die Kanüle direkt in die Haut am Ort der Pod-Anwendung einführt, wird bei Omnipod-Pumpen kein herkömmlicher Schlauch verwendet. *Nach einem Podwechsel wird das Alter jedes dieser Werte daher automatisch auf Null zurückgesetzt.* **Das Alter der Pumpenbatterie** wird nicht angegeben, da die Batterie im Pod immer länger hält, als die Lebensdauer des Pods (maximal 80 Stunden).
+Das Alter von **Insulin** und **Kanüle** in der [Statuszeile](#screens-sensor-level-battery) des Startbildschirms wird **nach jedem Pod-Wechsel** auf 0 Tage und 0 Stunden **zurückgesetzt**. Das liegt daran, wie die Omnipod-Pumpe gebaut ist und funktioniert. Die **Pumpenbatterie** und das **Insulinreservoir ** sind immer im Pod enthalten. Da der Pod die Kanüle direkt in die Haut am Ort der Pod-Anwendung einführt, wird bei Omnipod-Pumpen kein herkömmlicher Schlauch verwendet. *Nach einem Podwechsel wird das Alter jedes dieser Werte daher automatisch auf Null zurückgesetzt.* **Das Alter der Pumpenbatterie** wird nicht angegeben, da die Batterie im Pod immer länger hält, als die Lebensdauer des Pods (maximal 80 Stunden).
 
 ![Expanded status panel of a patch pump: cannula and insulin ages at 0h after a pod change, no pump battery row](../images/omnipod/Actions_Tab.png)
 
@@ -834,7 +834,7 @@ The **insulin** and **cannula** ages in the [status row](#screens-sensor-level-b
 
 **Insulin Level**
 
-Die Angabe der Insulinmenge im Omnipod Eros Pod ist nicht genau. This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod at least 80 units have been filled. Ein Pod kann maximal 200 Einheiten aufnehmen. Priming can also introduce variance as it is not an exact process. Mit diesen beiden Faktoren wurde der Omnipod-Treiber so geschrieben, dass er die beste Annäherung an das im Reservoir verbleibende Insulin liefert.
+Die Angabe der Insulinmenge im Omnipod Eros Pod ist nicht genau. Das liegt daran, dass nicht genau bekannt ist, wie viel Insulin in den Pod gefüllt wurde, sondern nur, dass beim Ertönen der 2 Signaltöne während des Füllens mindestens 80 Einheiten eingefüllt sind. Ein Pod kann maximal 200 Einheiten aufnehmen. Auch die Entlüftung kann Abweichungen verursachen, da sie kein exakter Vorgang ist. Mit diesen beiden Faktoren wurde der Omnipod-Treiber so geschrieben, dass er die beste Annäherung an das im Reservoir verbleibende Insulin liefert.
 
 > - **Über 50 Einheiten** - Meldet einen Wert von 50+U, wenn sich mehr als 50 Einheiten im Reservoir befinden.
 > - **Unter 50 Einheiten** - Meldet einen ungefähren berechneten Wert des im Reservoir verbleibenden Insulins.
@@ -862,21 +862,21 @@ Pods fallen gelegentlich aus unterschiedlichen Gründen aus, u. a. wegen Hardwar
 
 ### Verhindere Pod Fehler 49
 
-Dieser Fehler hängt mit einem fehlerhaften Pod-Status für einen Befehl oder einem Fehler während der Insulinabgabe zusammen. We recommend that you set Nightscout synchronization to *upload only*: keep all the "Receive ... from NS" options disabled in the synchronization settings of the Nightscout client (see [Nightscout](../SettingUpAaps/Nightscout.md)) to prevent possible failures.
+Dieser Fehler hängt mit einem fehlerhaften Pod-Status für einen Befehl oder einem Fehler während der Insulinabgabe zusammen. Wir empfehlen, die Nightscout-Synchronisierung auf *nur hochladen* zu stellen: Lass in den Synchronisierungseinstellungen des Nightscout-Clients alle Optionen „… von NS empfangen“ deaktiviert (siehe [Nightscout](../SettingUpAaps/Nightscout.md)), um mögliche Fehler zu vermeiden.
 
 ### Pumpe nicht erreichbar Alarme
 
-We recommend setting pump unreachable alerts to **120 minutes**. Press the **Settings** (gear) icon at the top right of the main screen, select **Local alerts** > **Pump unreachable threshold** and set it to **120**.
+Wir empfehlen, Warnungen bei nicht erreichbarer Pumpe auf **120 Minuten** zu setzen. Tippe oben rechts auf dem Startbildschirm auf das Symbol **Einstellungen** (Zahnrad), wähle **Lokale Alarme** > **Grenzwert für Pumpe ist nicht erreichbar** und setze ihn auf **120**.
 
 (OmnipodEros-import-settings-from-previous-aaps)=
 ### Importieren von Einstellungen aus früherem AAPS
 
 ```{admonition} Importing settings can end your active Pod
 :class: warning
-On the phone that is already running the Pod, leave **Also replace pump settings** unticked: the Pod session is kept and only the other settings are imported. Tick it only with a file exported during the Pod you are wearing now. See [Tubeless pumps](#ExportImportSettings-tubeless-pumps).
+Lass auf dem Smartphone, auf dem der Pod bereits läuft, **Pumpeneinstellungen auch ersetzen** nicht angehakt: Die Pod-Sitzung bleibt erhalten, und nur die übrigen Einstellungen werden importiert. Hake es nur mit einer Datei an, die während des Pods exportiert wurde, den Du gerade trägst. Siehe [Schlauchlose Pumpen](#ExportImportSettings-tubeless-pumps).
 ```
 
-The safest way to reinstall **AAPS** is between two Pods:
+Am sichersten installierst Du **AAPS** zwischen zwei Pods neu:
 
 1. Deaktiviere deine Pod-Sitzung. Stelle sicher, dass keine aktive Pod-Sitzung läuft.
 2. Exportiere deine Einstellungen und bewahre eine Kopie an einem sicheren Ort auf.
@@ -886,7 +886,7 @@ The safest way to reinstall **AAPS** is between two Pods:
 
 ### Omnipod-Treiberwarnungen
 
-Please note that the Omnipod driver presents a variety of unique alerts on the **main screen**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. Im Folgenden findest du eine Zusammenfassung der wichtigsten Warnmeldungen, die dir begegnen können:
+Bitte beachte, dass der Omnipod-Treiber auf dem **Startbildschirm** eine Reihe eigener Warnungen anzeigt. Die meisten dienen nur zur Information und können geschlossen werden, bei einigen musst Du jedoch etwas tun, um die Ursache der Warnung zu beheben. Im Folgenden findest du eine Zusammenfassung der wichtigsten Warnmeldungen, die dir begegnen können:
 
 #### Kein aktiver Pod
 
@@ -896,13 +896,13 @@ Keine aktive Pod-Sitzung erkannt. Dieser Alarm kann vorübergehend durch Drücke
 
 Hinweis, dass der Pod ausgesetzt wurde.
 
-#### Setzen des Basal-Profils fehlgeschlagen. Die Abgabe könnte ausgesetzt sein! Please manually refresh the Pod status on the pump screen and resume delivery if needed.
+#### Setzen des Basal-Profils fehlgeschlagen. Die Abgabe könnte ausgesetzt sein! Bitte aktualisiere den Pod-Status manuell auf dem Pumpenbildschirm und setze die Abgabe bei Bedarf fort.
 
-Informational alert that the Pod basal profile setting has failed. Open the Omnipod pump screen and press **Refresh**, then **Resume Delivery** if needed.
+Information, dass das Setzen des Basalprofils auf dem Pod fehlgeschlagen ist. Öffne den Omnipod-Pumpenbildschirm und tippe auf **Aktualisieren**, dann bei Bedarf auf **Abgabe fortsetzen**.
 
 #### Es kann nicht überprüft werden, ob der SMB-Bolus erfolgreich war. Wenn du sicher bist, dass der Bolus nicht erfolgreich war, solltest du den SMB-Eintrag manuell auf der Registerkarte Behandlungen entfernen.
 
-Alert that the SMB bolus success could not be verified. Check the **Last Bolus** field on the Omnipod pump screen to see if the SMB succeeded. If it did not, remove the entry from the treatments.
+Warnung, dass der Erfolg des SMB nicht bestätigt werden konnte. Prüfe im Feld **Letzter Bolus** auf dem Omnipod-Pumpenbildschirm, ob der SMB erfolgreich war. Falls nicht, entferne den Eintrag aus den Behandlungen.
 
 #### Unsicher, ob die "Ereignis Bolus/TBR/SMB" abgeschlossen wurde. Bitte überprüfe manuell, ob sie erfolgreich war.
 
@@ -912,7 +912,7 @@ Im Folgenden findest du einige Beispiele dafür, wann eine unsichere Meldung auf
 
 - **Bolus** - Unsichere Boli können nicht automatisch überprüft werden. Die Benachrichtigung bleibt bis zum nächsten Bolus bestehen, aber eine manuelle Pod-Aktualisierung löscht die Meldung. *Standardmäßig sind bei dieser Benachrichtigungsart die Warntöne aktiviert, da der/die Nutzer/in sie manuell bestätigen muss.*
 - **TBRs, Pod-Status, Profilwechsel, Zeitänderungen** - eine manuelle Pod-Aktualisierung löscht die Meldung.
-- **Pod Time Deviation -** When the time on the pod and the time on your phone differ too much, it is difficult for the AAPS loop to function and make accurate predictions and dosage recommendations. If the time difference between the pod and the phone is more than 5 minutes, a **Set time** button appears on the Omnipod pump screen. Press **Set time** to synchronize the time on the pod with the time on the phone. If **Pod Status** shows **Suspended** afterwards, press **Resume Delivery** to continue normal pod operations.
+- **Zeitabweichung des Pods -** Weichen die Uhrzeit auf dem Pod und auf Deinem Smartphone zu stark voneinander ab, kann der AAPS-Loop nur schwer arbeiten und keine genauen Vorhersagen und Dosierungsempfehlungen machen. Beträgt die Zeitdifferenz zwischen Pod und Smartphone mehr als 5 Minuten, erscheint auf dem Omnipod-Pumpenbildschirm die Schaltfläche **Zeit einstellen**. Tippe auf **Zeit einstellen**, um die Uhrzeit des Pods mit der des Smartphones abzugleichen. Zeigt **Pod Status** danach **Angehalten**, tippe auf **Abgabe fortsetzen**, um den normalen Pod-Betrieb fortzusetzen.
 
 ## Best Practices
 

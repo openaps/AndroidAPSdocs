@@ -1,6 +1,6 @@
-# Creating and restoring back-ups
+# יצירה ושחזור של גיבויים
 
-When installing AAPS on your phone it becomes a "medical device" you rely on daily. It is highly recommended to have an emergency backup plan for when your phone gets defective, stolen or lost. Therefore, it is essential to prepare by asking yourself: "What if?"
+When installing AAPS on your phone it becomes a "medical device" you rely on daily. It is highly recommended to have an emergency backup plan for when your phone gets defective, stolen or lost. לכן חשוב להתכונן ולשאול את עצמכם: "מה אם?"
 
 To restore your AAPS setup to an existing or new phone, it's important to keep following items in a secure location (read: not on your phone). Best practice is to keep at least two separate backups: on a local hard drive, USB stick and (preferred) on Cloud storage like Google Drive or Microsoft 365 OneDrive. By storing your backups in the cloud you'll always have everything needed accessible from your phone to restore your setup anywhere and anytime.
 
@@ -8,7 +8,7 @@ Consider acquiring a secondary backup phone and practicing restoring AAPS to ens
 
 ```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
 :class: warning
-Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+מאז **AAPS** 4.0 ההגדרות נשמרות באחסון מוצפן בטלפון, והן לא נכללות בגיבוי של Google ובהעברה מטלפון לטלפון חדש. ייצוא הגדרות, כפי שמתואר בדף זה, הוא הדרך היחידה להעביר אותן.
 ```
 
 To be able to restore, having the following items at hand is important:
@@ -17,7 +17,7 @@ To be able to restore, having the following items at hand is important:
 - A recent copy of the **AAPS installer .APK**
 - A recent **settings export** file: For restoring important settings (which includes your objectives!).
 - Your **AAPS master password**
-- Backups of additional utilities: Such as BYODA and/or xDrip.
+- גיבויים של כלים נוספים: למשל BYODA ו/או xDrip.
 - Personal notes on your setup.
 
 Below are the items that are recommended for keeping back-ups.
@@ -25,9 +25,9 @@ Below are the items that are recommended for keeping back-ups.
 ## Creating back-ups
 
 ### Keystore file from the computer you used to build the APK
-When building your .APK installer file from Android Studio, it uses the **keystore file and password to sign the .APK installer file**. To update your current AAPS installation, it is required to sign the update .APK installer file with the same keystore used for the initial installation. When updating, all settings and the AAPS database will be kept. Note that without this, you are required to first uninstall the current application and then [reinstall](#reinstall-aaps) and reconfigure AAPS.
+When building your .APK installer file from Android Studio, it uses the **keystore file and password to sign the .APK installer file**. To update your current AAPS installation, it is required to sign the update .APK installer file with the same keystore used for the initial installation. When updating, all settings and the AAPS database will be kept. שימו לב: בלי זה, יש קודם להסיר את האפליקציה הנוכחית, ואז [להתקין מחדש](#reinstall-aaps) ולהגדיר מחדש את AAPS.
 
-Maintaining the keystore and associated password will greatly reduce the complexity of updating the APK in the future, especially if you need to build the app from a new computer. See the [Updating AAPS](../Maintenance/UpdateToNewVersion.md) section for details on using the keystore when building a new APK.
+שמירת ה-keystore והסיסמה שלו תפשט מאוד את עדכון ה-APK בעתיד, במיוחד אם תצטרכו לבנות את האפליקציה במחשב חדש. See the [Updating AAPS](../Maintenance/UpdateToNewVersion.md) section for details on using the keystore when building a new APK.
 
 **When to back-up:** The keystore should be backed up after you first build the **AAPS** .APK installer file.
 
@@ -44,13 +44,13 @@ In case your main **AAPS** phone is lost or damaged, having a copy of the APK av
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).
+את ההגדרות שלכם תמצאו ב**תיקיית AAPS** שבחרתם במהלך [הגדרת AAPS](#SetupWizard-StoragePermission).</br>
+ניתן גם לשנות את **תיקיית AAPS** במסך **תחזוקה** (**תפריט** (☰) > **תחזוקה**), ראו [הגדרת תיקיית AAPS המקומית](#preferences-maintenance-logdirectory).
 ```
 
 With a copy of the APK installer file (see above) and your **Settings** file, you can quickly get up and running on an existing or new phone.
 
-The **Settings** file is used to customize the AAPS application to fit your specific setup. They encompass details such as your **Configuration** settings, objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
+קובץ **ההגדרות** משמש להתאמת אפליקציית AAPS לתצורה המסוימת שלכם. הם כוללים פרטים כמו ההגדרות ב**הגדרות תצורה**, מצב המשימות, הגדרות תקשורת עם שירותים חיצוניים (למשל Nightscout, Tidepool), אוטומציות ופרופילים.
 
 Exporting the AAPS settings to file enables you to restore its configuration to a specific point in time. As mentioned, in addition to all configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AAPS. Without this you will be required to redo all objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings for undoing any configuration changes.
 
@@ -59,27 +59,27 @@ Exporting the AAPS settings to file enables you to restore its configuration to 
 
 * Any time you plan to make significant changes to your configuration (change SMB settings, change insulin types, change pump, make changes to automations) you should back up your **Settings** before and after making the changes. This way you have your most recent settings as well as a copy of what they were before the changes in case you need to revert back to them.
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
+* למשתמשי משאבות ללא צינורית (כגון Omnipod ו-Medtrum) בלבד: קובץ **ההגדרות** מכיל את פרטי החיבור לפוד הנוכחי, וניתן להשתמש בו כדי לשחזר את החיבור לפוד זה בטלפון חדש. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
 
 **How to back-up manually:**
 
-1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Settings** back-ups without this password._
+1. אם זו הפעם הראשונה שאתם מייבאים או מייצאים **הגדרות**, יש להגדיר סיסמה ראשית ב[הגדרות > הגנה בסיסמאות](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Settings** back-ups without this password._
 
-2. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance**. Choose where to save the file with the **Local** and **Cloud** chips next to **Export settings** (see **Exporting or Importing Settings** below), then tap **Export settings**. **AAPS** shows where the file will go: the file name for **Local**, **Google Drive** for **Cloud**. Tap **OK**.
+2. במסך הראשי של **AAPS**, יש לפתוח את **התפריט** (☰) > **תחזוקה**. יש לבחור היכן לשמור את הקובץ בעזרת השבבים **מקומי** ו-**ענן** ליד **ייצוא הגדרות** (ראו **ייצוא או ייבוא הגדרות** בהמשך), ואז ללחוץ על **ייצוא הגדרות**. **AAPS** מציג לאן הקובץ יישמר: את שם הקובץ עבור **מקומי**, ואת **Google Drive** עבור **ענן**. יש ללחוץ על **אישור**.
 
-   ![Export settings to a local file](../images/Maintenance/export_settings_confirm_local.png)
+   ![ייצוא הגדרות לקובץ מקומי](../images/Maintenance/export_settings_confirm_local.png)
 
-   ![Export settings to Google Drive](../images/Maintenance/export_settings_confirm_cloud.png)
+   ![ייצוא הגדרות ל-Google Drive](../images/Maintenance/export_settings_confirm_cloud.png)
 
-   Type the master password set above and tap **OK**.
+   יש להקליד את הסיסמה הראשית שהוגדרה למעלה וללחוץ על **אישור**.
 
-   ![Master password for the export](../images/Maintenance/export_settings_password.png)
+   ![סיסמה ראשית לייצוא](../images/Maintenance/export_settings_password.png)
 
-   **Settings exported** (local) or **Cloud export successful** (cloud) confirms the export.
+   ההודעה **הגדרות יוצאו** (מקומי) או **הייצוא לענן הצליח** (ענן) מאשרת את הייצוא.
 
-   ![Settings exported message](../images/Maintenance/export_settings_done_local.png)
+   ![ההודעה "הגדרות יוצאו"](../images/Maintenance/export_settings_done_local.png)
 
-   ![Cloud export successful message](../images/Maintenance/export_settings_done_cloud.png)
+   ![ההודעה "הייצוא לענן הצליח"](../images/Maintenance/export_settings_done_cloud.png)
 
 3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be `YYYY-MM-DD_Time_appname.json`. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
 
@@ -89,8 +89,8 @@ Exporting the AAPS settings to file enables you to restore its configuration to 
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).
+את ההגדרות שלכם תמצאו ב**תיקיית AAPS** שבחרתם במהלך [הגדרת AAPS](#SetupWizard-StoragePermission).</br>
+ניתן גם לשנות את **תיקיית AAPS** במסך **תחזוקה** (**תפריט** (☰) > **תחזוקה**), ראו [הגדרת תיקיית AAPS המקומית](#preferences-maintenance-logdirectory).
 ```
 
 It is recommended to do regular settings exports, especially before and after making configuration changes. You can choose to do exports **manually or (preferred) through automation**. Make sure to take a note of your AAPS master password and to backup your settings files by copying them off your phone to for instance a cloud storage location.
@@ -98,97 +98,97 @@ It is recommended to do regular settings exports, especially before and after ma
 **Note**: _The exported settings will be encrypted with your AAPS master password: without the master password used for exporting you will be unable to import the settings file!_
 
 ### Exporting or Importing Settings
-To export or import settings, open the **menu** (☰) and select **Maintenance**. Under **File management**, the **Local** and **Cloud** chips next to **Export settings** and **Import settings** choose where the settings file is saved to or read from: **Local** is the AAPS directory on your phone, **Cloud** is available once a [Cloud Directory](#preferences-maintenance-cloud) is set up. Tapping a chip turns it on or off; at least one always stays selected, and both rows share the same choice. Then tap **Export settings** or **Import settings** itself to start.
+כדי לייצא או לייבא הגדרות, יש לפתוח את **התפריט** (☰) ולבחור **תחזוקה**. בחלק **ניהול קבצים**, השבבים **מקומי** ו-**ענן** ליד **ייצוא הגדרות** ו-**ייבוא הגדרות** קובעים לאן קובץ ההגדרות נשמר או מאיפה הוא נקרא: **מקומי** פירושו תיקיית AAPS בטלפון, ו-**ענן** זמין אחרי שמגדירים [תיקיית ענן](#preferences-maintenance-cloud). לחיצה על שבב מפעילה או מכבה אותו; תמיד נשאר לפחות שבב אחד מסומן, ושתי השורות משתמשות באותה בחירה. אחר כך יש ללחוץ על **ייצוא הגדרות** או על **ייבוא הגדרות** עצמם כדי להתחיל.
 
-![Maintenance menu with the Export settings and Import settings rows](../images/Maintenance/maintenance_export_import.png)
+![תפריט התחזוקה עם השורות "ייצוא הגדרות" ו"ייבוא הגדרות"](../images/Maintenance/maintenance_export_import.png)
 
 (ExportImportSettings-Automating-Settings-Export)=
-### Automating Settings Export
+### ייצוא הגדרות אוטומטי
 
-To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
+כדי לייצא הגדרות באופן אוטומטי [(**ראו אוטומציה**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), יש לפתוח את [**הגדרות** > **תחזוקה**](#preferences-maintenance-settings), לפתוח את **ייצוא הגדרות ללא השגחה** ולהפעיל את **הפעלת ייצוא אוטומטי של הגדרות**.
 
 You can now configure [Automation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) to export settings, either on a regular basis (_i.e._ each week), or after a pod change.
 
-_**Note:** On importing settings, the user always needs to enter the AAPS master password!_
+_**הערה:** בייבוא הגדרות תמיד צריך להזין את הסיסמה הראשית של AAPS!_
 
-![Settings > Maintenance > Unattended Settings Export with the Enable automated settings export switch](../images/Maintenance/settings_unattended_export.png)
+![הגדרות ← תחזוקה ← ייצוא הגדרות ללא השגחה, עם המתג "הפעלת ייצוא אוטומטי של הגדרות"](../images/Maintenance/settings_unattended_export.png)
 
 (ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
 ## Restoring from your backups on a new phone or fresh installation of AAPS
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).</br>
-If **AAPS** loses access to that directory (this can happen after a reinstall or after clearing the app's storage), it shows an **Access to the AAPS directory was lost** notification and stops saving settings to the phone until you [select the directory again](#preferences-maintenance-logdirectory).
+את ההגדרות שלכם תמצאו ב**תיקיית AAPS** שבחרתם במהלך [הגדרת AAPS](#SetupWizard-StoragePermission).</br>
+ניתן גם לשנות את **תיקיית AAPS** במסך **תחזוקה** (**תפריט** (☰) > **תחזוקה**), ראו [הגדרת תיקיית AAPS המקומית](#preferences-maintenance-logdirectory).</br>
+אם **AAPS** מאבד את הגישה לתיקייה הזו (זה יכול לקרות אחרי התקנה מחדש או אחרי מחיקת האחסון של האפליקציה), הוא מציג את ההודעה **הגישה לתיקיית AAPS אבדה** ומפסיק לשמור הגדרות בטלפון עד ש[בוחרים שוב את התיקייה](#preferences-maintenance-logdirectory).
 ```
 
-Use these instructions if you have a back-up of your APK and **Settings** that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
+יש להשתמש בהוראות אלה אם יש לכם גיבוי של ה-APK ושל **ההגדרות** שאתם רוצים לטעון בטלפון חדש, או אם הייתם צריכים מסיבה כלשהי למחוק את ה-APK ולהתקין אותו מחדש בטלפון הקיים.
 
 _If you are updating **AAPS** using an APK built with the same keystore you should not need to follow this process. However, it is still advised to create a back-up before you apply the update._
 
-If you are updating **AAPS** after you lost or replaced your original keystore (i.e. using a new build computer without transferring the keystore), ensure that you back up all settings per the above and then uninstall the existing version of **AAPS** on your phone. See [Reinstalling AAPS with a new keystore](#reinstall-aaps) for the full procedure.
+If you are updating **AAPS** after you lost or replaced your original keystore (i.e. using a new build computer without transferring the keystore), ensure that you back up all settings per the above and then uninstall the existing version of **AAPS** on your phone. ראו [התקנה מחדש של AAPS עם keystore חדש](#reinstall-aaps) לתהליך המלא.
 
 If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) prior to the steps listed below
 
 (ExportImportSettings-tubeless-pumps)=
 ```{admonition} Tubeless pumps (Omnipod and Medtrum) users
 :class: warning
-The **Preferences** file contains the session of the pod or patch that was active when you exported it.
-- **Export right after every pod or patch activation** and copy the file off your phone.
-- **Same phone, pod still running:** leave **Also replace pump settings** unticked. Your current pod is kept and only the other settings are imported.
-- **New phone taking over the pod:** tick **Also replace pump settings**, and only use a file exported during the pod you are wearing now. A file from an earlier pod replaces your current pod session, and you will need to start a new pod.
-- **An old pod session was imported by mistake:** **AAPS** keeps trying to reach that pod and you cannot activate a new one. Deactivate it; if that fails, discard it (see for example [Discarding a pod](#omnipod-dash-discard-pod) for Omnipod DASH).
+קובץ **ההעדפות** מכיל את נתוני הפוד או הפאץ' שהיה פעיל בזמן הייצוא.
+- **יש לייצא מיד אחרי כל הפעלה של פוד או פאץ'** ולהעתיק את הקובץ אל מחוץ לטלפון.
+- **אותו טלפון, הפוד עדיין פועל:** יש להשאיר את **גם החלף את הגדרות המשאבה** לא מסומן. הפוד הנוכחי נשמר, ורק שאר ההגדרות מיובאות.
+- **טלפון חדש שמקבל את הפוד:** יש לסמן את **גם החלף את הגדרות המשאבה**, ולהשתמש רק בקובץ שיוצא בזמן הפוד שאתם עונדים עכשיו. קובץ מפוד קודם מחליף את נתוני הפוד הנוכחי, ואז תצטרכו להפעיל פוד חדש.
+- **נתוני פוד ישן יובאו בטעות:** **AAPS** ממשיך לנסות להתחבר לפוד ההוא, ולא ניתן להפעיל פוד חדש. יש להשבית אותו; אם זה נכשל, יש להשליך אותו (ראו למשל [השלכת פוד](#omnipod-dash-discard-pod) עבור Omnipod DASH).
 ```
 
 ```{admonition} Pump settings are kept unless you say otherwise
 :class: note
-By default, an import leaves your pump settings alone: the pump selected in **Configuration**, its pairing and all its other settings stay as they are on this phone. Tick **Also replace pump settings** on the import screen only when you restore onto a new phone that should take over the same pump. Settings that are not in the file are never deleted by an import.
+כברירת מחדל, ייבוא לא משנה את הגדרות המשאבה: המשאבה שנבחרה ב**הגדרות תצורה**, הצימוד שלה וכל שאר ההגדרות שלה נשארים כמו שהם בטלפון הזה. יש לסמן את **גם החלף את הגדרות המשאבה** במסך הייבוא רק כשמשחזרים לטלפון חדש שצריך לקבל את אותה משאבה. ייבוא אף פעם לא מוחק הגדרות שאינן נמצאות בקובץ.
 ```
 
 1. Using the back-up copy of your APK from above, follow the instructions for a [new installation](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 2. Launch **AAPS** and allow any requested permissions
 
-3. Exit the Setup Wizard. We will be importing all the necessary settings from the back-up copy of **Settings**
+3. צאו מאשף ההתקנה. נייבא את כל ההגדרות הנחוצות מעותק הגיבוי של **ההגדרות**
 
-4. From the **AAPS** main screen press **Grant** and allow all permissions listed in the **Permissions Required** panel on the top
+4. במסך הראשי של **AAPS**, יש ללחוץ על **מתן הרשאה** ולאשר את כל ההרשאות שמופיעות בחלונית **נדרשות הרשאות** בחלק העליון
 
-5. From the **AAPS** main screen, set the master password in [Settings > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
+5. במסך הראשי של **AAPS**, יש להגדיר את הסיסמה הראשית ב[הגדרות > הגנה בסיסמאות](#Preferences-master-password) לאותה סיסמה שבה השתמשתם בגיבויים.
 
-6. If you haven't done it yet, [set the **AAPS directory**](#preferences-maintenance-logdirectory): from the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **AAPS directory**.
+6. אם עדיין לא עשיתם זאת, [יש להגדיר את **תיקיית AAPS**](#preferences-maintenance-logdirectory): במסך הראשי של **AAPS**, יש לפתוח את **התפריט** (☰) > **תחזוקה** > **תיקיית AAPS**.
 
-7. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **Export settings** > type in the master password set above > **OK**. This will create the preferences folder if it does not already exist on your phone.
+7. במסך הראשי של **AAPS**, יש לפתוח את **התפריט** (☰) > **תחזוקה** > **ייצוא הגדרות** > להקליד את הסיסמה הראשית שהוגדרה למעלה > **אישור**. This will create the preferences folder if it does not already exist on your phone.
 
 8. Download the back-up of your **Preferences** file from your cloud platform.
 
-9. Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to `/internal storage/AAPS/preferences` if your **AAPS Directory** has been set `/internal storage/AAPS`
+9. השתמשו בסייר הקבצים (נקרא בדרך כלל “Files” או “My Files”) כדי להעביר את הקובץ מתיקיית ההורדות אל `/internal storage/AAPS/preferences`, אם **תיקיית AAPS** הוגדרה ל-`/internal storage/AAPS`
 
-10. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** and tap **Import settings**. Select the preferences file you want to restore from (the newest is at the top). Make sure you select the correct preferences file, all .json files from the preferences folder (or from the cloud directory, with **Cloud**) will be shown.
+10. במסך הראשי של **AAPS**, יש לפתוח את **התפריט** (☰) > **תחזוקה** וללחוץ על **ייבוא הגדרות**. יש לבחור את קובץ ההעדפות שממנו רוצים לשחזר (החדש ביותר מופיע למעלה). הקפידו לבחור את קובץ ההעדפות הנכון: יוצגו כל קובצי ה-.json מתיקיית ההעדפות (או מתיקיית הענן, עם **ענן**).
 
-    ![List of settings files to import](../images/Maintenance/import_settings_files.png)
+    ![רשימת קובצי הגדרות לייבוא](../images/Maintenance/import_settings_files.png)
 
-    **AAPS** shows the details of the file. Type the master password set above and tap **Decrypt & Review**.
+    **AAPS** מציג את פרטי הקובץ. יש להקליד את הסיסמה הראשית שהוגדרה למעלה וללחוץ על **פענוח & בדיקה**.
 
-11. Once the file is decrypted, decide what to do with the pump settings. On a new phone that takes over the same pump, tick **Also replace pump settings** so the pairing and the pump settings come from the file. Leave the box unticked to keep the pump this phone is already paired with. Then tap **Import**.
+11. אחרי שהקובץ פוענח, יש להחליט מה לעשות עם הגדרות המשאבה. בטלפון חדש שמקבל את אותה משאבה, יש לסמן את **גם החלף את הגדרות המשאבה**, כדי שהצימוד והגדרות המשאבה יגיעו מהקובץ. כדי להשאיר את המשאבה שהטלפון הזה כבר מצומד אליה, יש להשאיר את התיבה לא מסומנת. אחר כך יש ללחוץ על **ייבוא**.
 
-    ![Decrypted settings file with the Also replace pump settings box and the Import button](../images/Maintenance/import_settings_review.png)
+    ![קובץ הגדרות מפוענח עם התיבה "גם החלף את הגדרות המשאבה" והלחצן "ייבוא"](../images/Maintenance/import_settings_review.png)
 
-12. **AAPS** asks **Apply imported settings?** and tells you how many settings will change and, if you left the box unticked, how many pump settings are kept. Nothing has been written yet, so **Cancel** leaves your phone exactly as it was. Tap **OK** to apply.
+12. **AAPS** שואל **להחיל הגדרות מיובאות?** ומציג כמה הגדרות ישתנו, ואם השארתם את התיבה לא מסומנת, גם כמה הגדרות משאבה יישמרו. עדיין לא נכתב דבר, לכן **ביטול** משאיר את הטלפון בדיוק כמו שהיה. יש ללחוץ על **אישור** כדי להחיל.
 
-    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
+    ![החלון להחלת הגדרות מיובאות](../images/Maintenance/import_settings_apply.png)
 
-13. **AAPS** applies the imported settings straight away, without restarting. Only the plugins whose settings changed are restarted. While this runs, **AAPS** shows **Applying settings…**; if the pump is busy, it shows **Waiting for pump…** and applies the settings once the pump is idle. If the pump is still busy after one minute, **AAPS** offers to try again. A **Settings applied** message confirms that the imported settings are in use. Any treatment you had queued while the import ran is dropped and **AAPS** tells you that it was cancelled, so nothing is sent to the pump twice.
+13. **AAPS** מחיל את ההגדרות המיובאות מיד, בלי הפעלה מחדש. רק התוספים שההגדרות שלהם השתנו מופעלים מחדש. בזמן הזה **AAPS** מציג **מחיל הגדרות…**; אם המשאבה עסוקה, הוא מציג **ממתין למשאבה…** ומחיל את ההגדרות כשהמשאבה פנויה. אם המשאבה עדיין עסוקה אחרי דקה אחת, **AAPS** מציע לנסות שוב. ההודעה **ההגדרות הוחלו** מאשרת שההגדרות המיובאות בשימוש. כל טיפול שהיה בתור בזמן הייבוא מבוטל, ו-**AAPS** מודיע לכם שהוא בוטל, כך ששום דבר לא נשלח למשאבה פעמיים.
 
-    ![Settings applied message](../images/Maintenance/import_settings_applied.png)
+    ![ההודעה "ההגדרות הוחלו"](../images/Maintenance/import_settings_applied.png)
 
-If the file selected a pump that this version of **AAPS** does not have, **AAPS** falls back to the **Virtual Pump** and tells you so. Select your pump again in **Configuration** and check its settings.
+אם הקובץ בחר משאבה שאין בגרסה הזו של **AAPS**, **AAPS** עובר ל**משאבה וירטואלית** ומודיע לכם על כך. יש לבחור שוב את המשאבה ב**הגדרות תצורה** ולבדוק את ההגדרות שלה.
 
-14. Tubeless pumps (Omnipod and Medtrum) users only - if you ticked **Also replace pump settings** and your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
+14. למשתמשי משאבות ללא צינורית (Omnipod ו-Medtrum) בלבד: אם סימנתם את **גם החלף את הגדרות המשאבה** ו**ההעדפות** לא גובו מאותו פוד שבו אתם משתמשים עכשיו, תצטרכו להפעיל פוד חדש כדי להתחיל את מתן האינסולין.
 
-**Troubleshooting:** if you are unable to get an active profile set from the **AAPS** main screen, open the **menu** (☰) in the top left > **Configuration** > **Pump** > switch to **Virtual Pump** > then switch back to your pump type
+**פתרון תקלות:** אם לא מצליחים להגדיר פרופיל פעיל, במסך הראשי של **AAPS** יש לפתוח את **התפריט** (☰) בפינה העליונה > **הגדרות תצורה** > **משאבה** > לעבור ל**משאבה וירטואלית** > ואז לחזור לסוג המשאבה שלכם
 
 ### הערה למשתמשי Dana RS
 
-- If you ticked **Also replace pump settings**, the pump connection settings are imported too: **AAPS** on your new phone will already "know" the pump and therefore not start a Bluetooth scan.
+- אם סימנתם את **גם החלף את הגדרות המשאבה**, גם הגדרות החיבור למשאבה מיובאות: **AAPS** בטלפון החדש כבר "מכיר" את המשאבה, ולכן לא יתחיל סריקת Bluetooth.
 - יש לצמד טלפון חדש עם המשאבה באופן ידני.

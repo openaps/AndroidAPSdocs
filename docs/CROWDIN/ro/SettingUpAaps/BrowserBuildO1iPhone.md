@@ -1,17 +1,17 @@
 (aaps-ci-ios-ipad)=
 
-# Option 1 · iPhone / iPad – Generate a new keystore
+# Opțiunea 1 · iPhone / iPad – Generați un keystore nou
 
 ```{note}
 [Option 1](BrowserBuildO1.md) (generate a new keystore) on **iPhone / iPad** (iPad shown as an example).
 ```
 
-## 1. Download the preparation file
+## 1. Descărcați fișierul de pregătire
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Open the preparation file and generate the keystore
+## 2. Deschideți fișierul de pregătire și generați keystore-ul
 
 Compatible with iOS (using iPad as an example)
 <!--crowdin: exclude-->

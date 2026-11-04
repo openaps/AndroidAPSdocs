@@ -1,17 +1,17 @@
 (aapsclient-app)=
-# The AAPSClient app
+# Appen AAPSClient
 
-**AAPSClient** is the accessory app of **AAPS**: a companion app for a second phone — typically a caregiver's — that **follows** the person using **AAPS**. From **AAPS** version 4, the caregiver can also **control** the loop remotely through signed commands. Both phones communicate through your **Nightscout** site; no direct connection between the phones is needed.
+**AAPSClient** är tillbehörsappen till **AAPS**: en hjälpapp för en andra telefon – oftast en anhörigs – som **följer** personen som använder **AAPS**. Från och med **AAPS** version 4 kan den anhöriga också **styra** loopen på distans med signerade kommandon. Båda telefonerna kommunicerar via din **Nightscout**-webbplats. Det behövs ingen direkt anslutning mellan telefonerna.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Client** = a phone running **AAPSClient**.
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop.
+- **Klient** = en telefon som kör **AAPSClient**.
+- **Huvudenhet** = **AAPS**-huvudtelefonen som har pumpen och kör loopen.
 ```
 
-```{admonition} iPhone version in development
+```{admonition} Which devices can run AAPSClient?
 :class: note
-**AAPSClient** currently runs on Android phones. An iPhone version of **AAPSClient** is being developed and is in early testing. It is not released yet: there is no App Store listing and nothing to download. This page will be updated when it becomes available.
+From **AAPS** version 4, **AAPSClient** runs on Android phones and tablets, on Wear OS watches and on computers (Windows, Mac and Linux). On an iPhone there is no ready-made download: you build the app yourself. See the [table of downloads by device](#aapsclient-platforms).
 ```
 
 ```{contents} Table of contents
@@ -19,100 +19,132 @@
 :local: true
 ```
 
-## What AAPSClient is (and is not)
+## Vad AAPSClient är (och inte är)
 
-**AAPSClient** looks and feels like **AAPS**, but it has **no loop of its own**:
+**AAPSClient** ser ut och känns som **AAPS**, men har **ingen egen loop**:
 
-- It contains **no APS algorithm**, no **Objectives**, and **no pump drivers** — it never doses on its own.
-- The plugins used only by the main app (**SMS Communicator**, **Tidepool**, **Open Humans**) are not included either.
-- What it *does* contain: **NSClientV3** synchronization, the BG-source plugins, **xDrip+** broadcasting, and the **Wear OS** / **Garmin** connectors — everything needed to follow and to relay commands. A **Garmin** watch connected to a client can show the data, but carbs it sends are not entered and it cannot connect or disconnect the pump: the client shows a message, and you enter them in **AAPS** instead.
+- Den innehåller **ingen APS-algoritm**, inga **Mål** och **inga pumpdrivrutiner** – den doserar aldrig själv.
+- De plugins som bara används av huvudappen (**SMS-kommunikation**, **Tidepool**, **Open Humans**) finns inte heller med.
+- Det den *innehåller*: synkronisering med **NSClientV3**, plugins för BG-källor, sändning till **xDrip+** och kopplingarna till **Wear OS** / **Garmin** – allt som behövs för att följa och vidarebefordra kommandon. En **Garmin**-klocka som är ansluten till en klient kan visa data, men kolhydrater som den skickar registreras inte och den kan inte koppla från eller återansluta pumpen: klienten visar ett meddelande, och du anger dem i stället i **AAPS**.
 
-Everything you trigger from **AAPSClient** is checked, capped, confirmed and **executed by the master** (the phone with the pump). The dedicated [Master ↔ Client control](ClientMasterControl.md) page explains how this works: how to pair the two phones, how the master writes the confirmation text you see, how a bolus started on the client is delivered, and what happens when the master is offline.
+Allt som du startar från **AAPSClient** kontrolleras, begränsas, bekräftas och **utförs av huvudenheten** (telefonen med pumpen). Sidan [Styrning huvudenhet ↔ klient](ClientMasterControl.md) förklarar hur detta fungerar: hur du parkopplar de två telefonerna, hur huvudenheten skriver bekräftelsetexten som du ser, hur en bolus som startas på klienten ges och vad som händer när huvudenheten är offline.
 
-## Versions: AAPSClient, AAPSClient2 and AAPSClient3
+## Versioner: AAPSClient, AAPSClient2 och AAPSClient3
 
-Up to three client apps can be installed side by side on the same follower phone, each following a **different** person: **AAPSClient** (yellow owl icon), **AAPSClient2** (blue owl) and — new in **AAPS** version 4 — **AAPSClient3** (green owl). They are functionally identical. Only the name and the color differ (app icon, widget background and the status section on the home screen), so you can tell them apart. Each app is paired with its own master. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions) for details.
+Upp till tre klientappar kan installeras sida vid sida på samma följartelefon, och var och en följer en **annan** person: **AAPSClient** (gul uggleikon), **AAPSClient2** (blå uggla) och – nytt i **AAPS** version 4 – **AAPSClient3** (grön uggla). De fungerar på exakt samma sätt. Bara namnet och färgen skiljer sig (appikonen, widgetens bakgrund och statusavsnittet på huvudskärmen), så att du kan skilja dem åt. Varje app är parkopplad med sin egen huvudenhet. Se [Om AAPSClient, AAPSClient2 och AAPSClient3](#remotecontrol-aapsclient-versions) för mer information.
 
-## Getting the app
+(aapsclient-platforms)=
+## Skaffa appen
 
-**AAPSClient** is obtained the same way as **AAPS** — see [Download and installation of AAPSClient](#RemoteControl_aapsclient), and install it like the main app ([Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md)).
+All the ready-made files are in the *Assets* list of the latest release on [GitHub](https://github.com/nightscout/AndroidAPS/releases/) (click *Assets* at the bottom of the release to expand it). In the table, *x.y.z* stands for the version number. Choose the file that matches your device:
 
-## First start: a shorter Setup Wizard
+| Enhet                   | File to download                    | Anteckningar                                                                                                                                                                                 |
+| ----------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Android phone or tablet | `app-aapsclient-release_x.y.z.apk`  | Install it like the main app: see [Download and installation of AAPSClient](#RemoteControl_aapsclient) and [Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md). |
+| Wear OS watch           | `wear-aapsclient-release_x.y.z.apk` | Goes with the AAPSClient app on the phone. See [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md).                                                                                          |
+| Windows computer        | `AAPSClient-x.y.z.msi`              | Open the file to install.                                                                                                                                                                    |
+| Mac                     | `AAPSClient-x.y.z.dmg`              | See the note on macOS below the table.                                                                                                                                                       |
+| Linux (Debian, Ubuntu)  | `aapsclient_x.y.z_amd64.deb`        | Install it with your package manager.                                                                                                                                                        |
+| iPhone                  | inga                                | There is no App Store version and no download. You build the app yourself, see [AAPSClient on an iPhone](#aapsclient-iphone).                                                                |
 
-On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAPS**, but with far fewer steps — there is no profile, insulin, pump, APS or objectives configuration on a follower:
+**Following two people?** Each file above also exists as *aapsclient2* / *AAPSClient2*. It is a second client app that installs next to the first one, so one device can follow two people (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). **AAPSClient3** is not in the release assets: build it yourself ([build variants](#browserbuild-variant)).
 
-1. **Welcome**, **license agreement**, **permissions** and **master password** — identical to the main app, see the [AAPS Setup Wizard](../SettingUpAaps/SetupWizard.md).
-2. The client does **not** ask for **units** or the **low/high marks**: it takes them from the main phone as soon as it is connected to Nightscout. You can see them later in **Settings**, where a small **phone icon** shows that they are [synchronized with the main phone](#client-master-config-prefs). They can only be edited while the master is reachable.
-3. **Set up from the master** — on the master, open **Manage → Authorized clients**, add this phone with a **QR code** and tap **Scan the QR code** here. One scan sets up Nightscout with a token of this phone's own and, with a code that pairs, also pairs the phone. The phone also takes the name it was added with on the master as its instance name (letters with accents become plain letters, "Miloš" becomes "Milos"). **After the scan, the setup is finished**: the wizard closes, because the next steps would only show what the code did. Without a QR code, skip this step. (Android only: the scanner is not available on iOS yet.)
+**Files to ignore:** the *pumpcontrol* files (`app-pumpcontrol-release_…`, `wear-pumpcontrol-release_…`) are not a client. Leave them out.
 
-   ![The Set up from the master step with the Scan the QR code button](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+**Mac: the first start.** The app is not notarized by Apple, so macOS blocks it the first time you open it. Click *Done*, then open *System Settings → Privacy & Security*, scroll down and click *Open Anyway*.
 
-4. **Communication** — the plugin list only offers what a follower needs (NSClientV3, xDrip+, Wear, External Companion Apps, Garmin). If you did not scan a QR code, enable **NSClientV3** and enter the **same Nightscout URL** as on the main phone and an access token, with **websockets** enabled — exactly as described in [Synchronization](#RemoteControl_aapsclient).
+**Computer: how to connect.** A computer has no camera, so the QR code cannot be scanned. Set up **Nightscout** in the client, then on the master add the client with a **PIN** and type the 8-digit PIN in the client (**Pair with master**). See [Pairing with the master](#aapsclient-pairing-with-the-master).
 
-   ![Communication step on the client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
+**Same version everywhere.** The master and all its clients must run the same **AAPS** version. When you update the master, update the clients too.
 
-5. **Pair with master** — this step exists **only** on the client. It connects this device to the master over the secure command channel, with the PIN, and takes the name the phone was added with on the master, like the QR code. **After the pairing, the setup is finished.** You can also skip it and pair at any time later from **Manage → Pair with master**.
+(aapsclient-iphone)=
+### AAPSClient on an iPhone
 
-   ![Pair with master step in the client wizard](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
+There is no **AAPSClient** in the App Store and no ready-made file to download, so you build the app yourself:
 
-6. **Who is using this phone?** — only when you did not pair in the wizard: the name of the person using this phone. It tells this instance apart in reports and synchronization.
+- You need a Mac with **Xcode** and an Apple developer account.
+- The project is the `ios` folder of the [AndroidAPS repository on GitHub](https://github.com/nightscout/AndroidAPS/tree/master/ios).
+- A build for a real iPhone is signed with your own Apple developer team. A build for the iPhone simulator does not need one.
+- There is no step-by-step guide yet. This page will be updated when there is one.
+
+The iPhone version pairs with the master like the others. Unlike the computer versions, the iPhone can scan the master's QR code with its camera.
+
+## Första start: en kortare installationsguide
+
+Vid första starten kör **AAPSClient** samma **Installationsguide** som du känner igen från **AAPS**, men med mycket färre steg – på en följartelefon ställer du inte in profil, insulin, pump, APS eller mål:
+
+1. **Välkommen**, **licensavtal**, **behörigheter** och **huvudlösenord** – samma som i huvudappen, se [Installationsguiden i AAPS](../SettingUpAaps/SetupWizard.md).
+2. Klienten frågar **inte** efter **enheter** eller **LÅG-/HÖG-markeringar**: den hämtar dem från huvudtelefonen så snart den är ansluten till Nightscout. Du kan se dem senare i **Inställningar**, där en liten **telefonikon** visar att de är [synkroniserade med huvudtelefonen](#client-master-config-prefs). De kan bara redigeras när huvudenheten går att nå.
+3. **Ställ in från huvudenheten** – öppna **Hantera → Auktoriserade klienter** på huvudenheten, lägg till den här telefonen med en **QR-kod** och tryck på **Skanna QR-kod** här. En enda skanning ställer in Nightscout med en egen token för den här telefonen och, om koden även parkopplar, parkopplas också telefonen. Telefonen tar också det namn som den lades till med på huvudenheten som sitt instansnamn (bokstäver med accenter blir vanliga bokstäver, ”Miloš” blir ”Milos”). **När koden har skannats är installationen klar**: guiden stängs, eftersom nästa steg bara skulle visa vad koden har gjort. Hoppa över detta steg om du inte har någon QR-kod. (Not on a computer: it has no camera, see [Getting the app](#aapsclient-platforms).)
+
+   ![Steget Ställ in från huvudenheten med knappen Skanna QR-kod](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+
+4. **Kommunikation** – listan med plugins visar bara det som en följare behöver (NSClientV3, xDrip+, Klocka (Wear), Externa hjälpappar, Garmin). Om du inte skannade någon QR-kod, aktivera **NSClientV3** och ange **samma Nightscout-URL** som på huvudtelefonen och en åtkomsttoken, med **websockets** aktiverade – precis som beskrivs i [Synkronisering](#RemoteControl_aapsclient).
+
+   ![Steget Kommunikation på klienten](../images/v4/AapsClient/aapsclient_wizard_communication.png)
+
+5. **Parkoppla med huvudenheten** – detta steg finns **bara** på klienten. Det ansluter den här enheten till huvudenheten via den säkra kommandokanalen med PIN-koden, och tar det namn som telefonen lades till med på huvudenheten, på samma sätt som QR-koden. **När parkopplingen är klar är installationen klar.** Du kan också hoppa över steget och parkoppla när som helst senare via **Hantera → Parkoppla med huvudenheten**.
+
+   ![Steget Parkoppla med huvudenheten i klientens guide](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
+
+6. **Vem använder den här telefonen?** – bara om du inte parkopplade i guiden: namnet på personen som använder den här telefonen. Namnet skiljer den här instansen från andra i rapporter och vid synkronisering.
 
 (aapsclient-pairing-with-the-master)=
 
-## Pairing with the master
+## Parkoppla med huvudenheten
 
-On the **master**, open **Manage → Authorized clients** and add a client. There are two ways to pair:
+Öppna **Hantera → Auktoriserade klienter** på **huvudenheten** och lägg till en klient. Det finns två sätt att parkoppla:
 
-- **With a QR code** (the quickest, if the phone has a camera): scan the code in the wizard step "**Set up from the master**" or from **Manage → Pair with master → Scan QR code**, and confirm with "**Use**". It sets up Nightscout too.
-- **With the PIN**: on the **client**, open the wizard step above (or **Manage → Pair with master**), type the one-time PIN shown on the master and press "**Pair**". The client then shows who it is about to trust — confirm with "**Pair**":
+- **Med en QR-kod** (snabbast, om telefonen har en kamera): skanna koden i guidesteget ”**Ställ in från huvudenheten**” eller via **Hantera → Parkoppla med huvudenheten → Skanna QR-kod**, och bekräfta med ”**Använd**”. Det ställer också in Nightscout.
+- **Med PIN-koden**: öppna guidesteget ovan på **klienten** (eller **Hantera → Parkoppla med huvudenheten**), skriv in engångs-PIN-koden som visas på huvudenheten och tryck på ”**Parkoppla**”. Klienten visar sedan vem den kommer att lita på – bekräfta med ”**Parkoppla**”:
 
-![Confirmation on the client before completing the pairing](../images/v4/AapsClient/aapsclient_pair_confirm.png)
+![Bekräftelse på klienten innan parkopplingen slutförs](../images/v4/AapsClient/aapsclient_pair_confirm.png)
 
-From the wizard, a successful pairing finishes the setup and opens the home screen. On the master the client appears as **Active** in the [Authorized clients](#client_master_master_setup) list. Afterwards, **Manage → Pair with master** shows "*Already paired*", the phone's role and whether hardened mode is on:
+Om du parkopplar från guiden avslutas installationen när parkopplingen har lyckats, och huvudskärmen öppnas. På huvudenheten visas klienten som **Aktiv** i listan [Auktoriserade klienter](#client_master_master_setup). Efteråt visar **Hantera → Parkoppla med huvudenheten** ”*Redan parkopplad*”, telefonens roll och om härdat läge är på:
 
-![Manage → Pair with master on a paired client: Already paired, Role: Caregiver, Hardened mode on](../images/v4/ClientMaster/pair_with_master_client.png) The full pairing procedure, security details and troubleshooting are on [Master ↔ Client control](#client_master_client_setup).
+![Hantera → Parkoppla med huvudenheten på en parkopplad klient: Redan parkopplad, Roll: Vårdgivare, Härdat läge på](../images/v4/ClientMaster/pair_with_master_client.png) Hela parkopplingen, säkerhetsdetaljer och felsökning finns på [Styrning huvudenhet ↔ klient](#client_master_client_setup).
 
-After pairing, the client gets a Nightscout token of its own from the master (if the master has an admin token), with only the rights a client needs, and stops using the token you may have entered. **AAPSClient** never writes treatments or BG to Nightscout itself: everything it does is sent to the master, which writes it. See [The client's own Nightscout token](#client-master-control-own-token).
+Efter parkopplingen får klienten en egen Nightscout-token från huvudenheten (om huvudenheten har en administratörstoken), med bara de rättigheter som en klient behöver, och slutar använda den token som du kanske har angett. **AAPSClient** skriver aldrig själv behandlingar eller BG till Nightscout: allt den gör skickas till huvudenheten, som skriver det. Se [Klientens egen Nightscout-token](#client-master-control-own-token).
 
-The master decides what this phone may do with its **[role](#client-master-control-roles)** (Read-only, Meals, Caregiver or Admin). **Manage → Pair with master** shows the phone's role.
+Huvudenheten bestämmer vad den här telefonen får göra med hjälp av dess **[roll](#client-master-control-roles)** (Skrivskyddad, Måltider, Vårdgivare eller Administratör). **Hantera → Parkoppla med huvudenheten** visar telefonens roll.
 
-## The home screen
+## Huvudskärmen
 
-The client's home screen mirrors the followed loop:
+Klientens huvudskärm speglar loopen som den följer:
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![Huvudskärmen i AAPSClient](../images/v4/AapsClient/aapsclient_home.png)
 
-- **BG, graphs, IOB/COB and profile** come from Nightscout, just as the master uploaded them.
-- The **loop status** shown is the **master's** (a client has no loop of its own). Until the client has received the master's running mode from Nightscout, the running mode chip shows a **question mark** (unknown).
-- The **status card** shows the **followed pump's** reservoir and battery and the uploader battery, taken from the Nightscout device status — a client has no pump, so there is no local pump status and no pump management anywhere in the app.
-- The bottom bar offers **Treatments**, **Scenes** and **Manage** once the client is paired (only **Manage** before pairing) — there are no pump or objectives tabs.
+- **BG, grafer, IOB/COB och profil** kommer från Nightscout, precis som huvudenheten laddade upp dem.
+- **Loopstatusen** som visas är **huvudenhetens** (en klient har ingen egen loop). Tills klienten har fått huvudenhetens körläge från Nightscout visar chipet för körläge ett **frågetecken** (okänt).
+- **Statuskortet** visar reservoar och batteri för **pumpen som följs** och uppladdarens batteri, hämtade från enhetsstatusen i Nightscout – en klient har ingen pump, så det finns ingen lokal pumpstatus och ingen pumphantering någonstans i appen.
+- Det nedre fältet visar **Behandlingar**, **Scener** och **Hantera** när klienten är parkopplad (bara **Hantera** före parkopplingen) – det finns inga flikar för pump eller mål.
 
-## Treatments and actions
+## Behandlingar och åtgärder
 
-Everything under **Manage** works like on the main app, with one important difference: on a client, actions that would change therapy (bolus, carbs, temp targets, scenes…) are **hidden until the device is paired**, and once paired they are **relayed to the master** for confirmation and execution — see [Using remote control](#client-master-control).
+Allt under **Hantera** fungerar som i huvudappen, med en viktig skillnad: på en klient är åtgärder som skulle ändra behandlingen (bolus, kolhydrater, tillfälliga målvärden, scener …) **dolda tills enheten är parkopplad**, och när den är parkopplad **skickas de vidare till huvudenheten** för bekräftelse och utförande – se [Använda fjärrstyrning](#client-master-control).
 
-The **Profile** entry is the exception: it is shown even on an **unpaired** client, but opens **view-only** — the client shows the profiles it receives through Nightscout (it needs them for its own calculations), without edit or activate buttons. Once the client is **paired**, the profile list is synchronized with the master and you can edit and activate profiles from the client like any other remote action.
+Posten **Profil** är undantaget: den visas även på en klient som **inte är parkopplad**, men öppnas **skrivskyddad** – klienten visar de profiler som den får via Nightscout (den behöver dem för sina egna beräkningar), utan knappar för att redigera eller aktivera. När klienten är **parkopplad** synkroniseras profillistan med huvudenheten, och du kan redigera och aktivera profiler från klienten som vilken annan fjärråtgärd som helst.
 
-On an **unpaired** client, **Manage** only offers **Profile** and **Pair with master**:
+På en klient som **inte är parkopplad** visar **Hantera** bara **Profil** och **Parkoppla med huvudenheten**:
 
-![The Manage screen on an unpaired client: only Profile and Pair with master](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
+![Skärmen Hantera på en klient som inte är parkopplad: bara Profil och Parkoppla med huvudenheten](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
 
-The red banner "*Master device unreachable. Editing is disabled until the connection is restored.*" also appears on an unpaired client. This is expected: there is no master to reach yet. The banner disappears once the client is paired and the master is online.
+Den röda banderollen ”*Huvudenheten kan inte nås. Redigering är inaktiverad tills anslutningen är återställd.*” visas också på en klient som inte är parkopplad. Det är normalt: det finns ännu ingen huvudenhet att nå. Banderollen försvinner när klienten är parkopplad och huvudenheten är online.
 
-Once the client is paired, the therapy actions appear:
+När klienten är parkopplad visas behandlingsåtgärderna:
 
-![The Manage screen on a paired client, including the Pair with master entry](../images/v4/AapsClient/aapsclient_manage.png)
+![Skärmen Hantera på en parkopplad klient, med posten Parkoppla med huvudenheten](../images/v4/AapsClient/aapsclient_manage.png)
 
-There is **no Pump entry** — a client has no pump.
+Det finns **ingen post för Pump** – en klient har ingen pump.
 
-If the master is not reachable, the same banner appears on a paired client: the therapy actions are greyed out, and anything you try is blocked before it is sent. The client notices that the master is offline when you try an action, and re-enables the actions once the master is back online.
+Om huvudenheten inte går att nå visas samma banderoll på en parkopplad klient: behandlingsåtgärderna är nedtonade, och allt du försöker göra stoppas innan det skickas. Klienten märker att huvudenheten är offline när du försöker göra en åtgärd, och aktiverar åtgärderna igen när huvudenheten är online igen.
 
-![The Manage screen on a paired client while the master is offline: actions greyed out under the banner](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
+![Skärmen Hantera på en parkopplad klient medan huvudenheten är offline: åtgärderna är nedtonade under banderollen](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
 
-## Settings synchronized with the master
+## Inställningar som synkroniseras med huvudenheten
 
-The active plugin **configuration** and many **preferences** are kept in sync between the master and its paired clients; synced items are marked with a small **phone icon** and are disabled (with a "*Master device unreachable*" banner) while the master cannot be reached. This is described in [Changing configuration and preferences](#client-master-config-prefs).
+Den aktiva **konfigurationen** av plugins och många **inställningar** hålls synkroniserade mellan huvudenheten och dess parkopplade klienter. Synkroniserade poster är markerade med en liten **telefonikon** och är inaktiverade (med banderollen ”*Huvudenhet kan inte nås*”) medan huvudenheten inte går att nå. Detta beskrivs i [Ändra konfiguration och inställningar](#client-master-config-prefs).
 
-## AAPSClient on a smartwatch
+## AAPSClient på en smartklocka
 
-A Wear OS watch can be paired with the **client** phone; its actions are relayed through the client to the master. See [Wear OS](../WearOS/WearOsSmartwatch.md) and the [smartwatch options in Remote control](#RemoteControl_smartwatches).
+En klocka med Wear OS kan parkopplas med **klient**-telefonen. Klockans åtgärder skickas via klienten till huvudenheten. Se [Wear OS](../WearOS/WearOsSmartwatch.md) och [alternativen för smartklockor under fjärrstyrning](#RemoteControl_smartwatches).

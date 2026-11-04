@@ -1,75 +1,75 @@
-# Update with a browser (fork)
+# Atnaujinimas naršyklėje (fork)
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+AAPS kūrėte su **AAPS Builder**? Šio puslapio jums nereikia: žr. [AAPS atnaujinimas su AAPS Builder](#aaps-builder-updates).
 ```
 
 ## Kurti sau, o ne parsisiųsti
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** negalima atsisiųsti dėl medicinos prietaisams taikomų teisės aktų. Sukurti programėlę savo reikmėms yra teisėta, bet jos kopijos negalima duoti kitiems! Daugiau informacijos rasite [DUK puslapyje](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
-This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
+Jei norite pirmą kartą atnaujinti **AAPS** naršyklėje, nukopijuokite atsarginę raktų saugyklos failo kopiją į savo Google Drive. Tada vietoj šio vadovo vadovaukitės [**AAPS** kūrimo naršyklėje instrukcijomis](../SettingUpAaps/BrowserBuild.md). Užuot kūrę naują raktų saugyklą, turite pasirinkti tą, kurią nukopijavote iš savo kompiuterio.
+Tai privaloma tik pirmą kartą. Vėlesniems atnaujinimams galėsite naudoti šį vadovą.
 ```
 
 ```{tip}
-**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+**Norite pereiti prie AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) yra paprastesnis kūrimas naršyklėje: nereikia sinchronizuoti fork, o programėlę atsisiunčiate tiesiai iš GitHub. Pereiti nebūtina: šis vadovas ir toliau tinka. Jei pereinate, pirmiausia pasiimkite raktų saugyklos kopiją iš savo fork, kaip paaiškinta skyriuje [Perėjimas nuo ankstesnio kūrimo naršyklėje](#aaps-builder-from-fork). Kitaip naujai sukurta programėlė negalės atnaujinti AAPS jūsų telefone.
 ```
 
-## Overview for updating to a new version of AAPS with a browser
+## AAPS atnaujinimo į naują versiją naršyklėje apžvalga
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Jei kyla problemų, žr. atskirą puslapį [Kūrimas naršyklėje: trikčių šalinimas](../GettingHelp/BrowserBuildTroubleshooting.md).
 
-### Export your settings
+### Eksportuokite nustatymus
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Eksportuokite nustatymus iš dabartinės **AAPS** versijos savo telefone. Galbūt to neprireiks, bet geriau būti atsargiems.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Jei neprisimenate, kaip tai padaryti, žr. puslapį [Nustatymų eksportavimas ir importavimas](ExportImportSettings.md).
 
 (Update-to-new-version-update-your-repo)=
-### Update your GitHub repository
+### Atnaujinkite savo GitHub saugyklą
 
-[Log into GitHub](https://github.com/login).
+[Prisijunkite prie GitHub](https://github.com/login).
 
-1. Select Repositories.
-2. Scroll down and select your own AndroidAPS repository.
+1. Pasirinkite Repositories (saugyklos).
+2. Slinkite žemyn ir pasirinkite savo AndroidAPS saugyklą.
 
-![Select AndroidAPS repo](../images/update/CI/GitHubUpdate1.png)
+![AndroidAPS saugyklos pasirinkimas](../images/update/CI/GitHubUpdate1.png)
 
-3. Verify you are using your own copy of AndroidAPS (Forked from nightscout/AndroidAPS)
-4. Tap Sync Fork to update it (the number of commits behind might differ from the picture)
+3. Įsitikinkite, kad naudojate savo AndroidAPS kopiją (Forked from nightscout/AndroidAPS)
+4. Palieskite Sync Fork, kad ją atnaujintumėte (atsiliekančių commit skaičius gali skirtis nuo paveikslėlio)
 
 
 
-![Sync AndroidAPS repo](../images/update/CI/GitHubUpdate2.png)
+![AndroidAPS saugyklos sinchronizavimas](../images/update/CI/GitHubUpdate2.png)
 
-5. Tap Update Branch
+5. Palieskite Update Branch
 
-![Update AndroidAPS repo](../images/update/CI/GitHubUpdate3.png)
+![AndroidAPS saugyklos atnaujinimas](../images/update/CI/GitHubUpdate3.png)
 
-Note: if you have modified your copy of AndroidAPS by mistake, you will see this screen. Discard all changes (commits) to return to the released version.
+Pastaba: jei per klaidą pakeitėte savo AndroidAPS kopiją, pamatysite šį ekraną. Atmeskite visus pakeitimus (commit), kad grįžtumėte prie išleistos versijos.
 
-![Discard rogue modifications](../images/update/CI/GitHubUpdate4.png)
+![Netyčinių pakeitimų atmetimas](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Good job.
+Dabar savo kopiją sinchronizavote (atnaujinote) su naujausia **AAPS** versija. Puiku.
 
-![Repo sync'ed](../images/update/CI/GitHubUpdate5.png)
+![Saugykla sinchronizuota](../images/update/CI/GitHubUpdate5.png)
 
-### Run the Workflow to Build the Signed APK
+### Paleiskite darbo eigą (workflow), kad sukurtumėte pasirašytą APK
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+1. Savo AndroidAPS kopijoje GitHub pasirinkite Actions.
+2. Išskleiskite All Workflows.
+3. Pasirinkite AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Slinkite žemyn ir palieskite Run Workflow.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
@@ -83,33 +83,33 @@ You have now synchronized (updated) your own copy with the latest release of **A
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of **AAPS**. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
+6. Pamatysite pranešimą Workflow run was successfully requested. Atnaujinkite naršyklės puslapį ir galėsite stebėti kūrimo eigą. Kai veiksmas baigsis, prie AAPS CI veiksmo atsiras žalia varnelė. Sėkmingai sukūrėte atnaujintą **AAPS** versiją. Tai reiškia, kad master ir Wear apk dabar išsaugomi tiesiai jūsų Google Drive (kaip parodyta žemiau). AAPSClient apk galima atsisiųsti iš Github > nightscout > AndroidAPS [čia](https://github.com/nightscout/AndroidAPS/releases)
 
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![Darbo eigos stebėjimas](../images/update/CI/GitHubActions4.png)
 
 
-### Install the AAPS APK
+### Įdiekite AAPS APK
 
-1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+1. Atidarykite savo Google Drive
+2. Atidarykite aplanką AAPS, pasirinkite naujos versijos aplanką ir rasite ir telefono, ir Android Wear versijas.
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+![Vieta Google Drive](../images/update/CI/GitHubActions5.png)
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+Nuo 2026 m. rugsėjo Google [Android kūrėjų tapatybės patikrinimas](#android-developer-verification), priklausomai nuo jūsų šalies, gali neleisti įdiegti APK paspaudus failą. Nemokami apėjimo būdai aprašyti tame puslapyje.
 ```
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
+Tęskite [čia](#Update-to-new-version-check-aaps-version-on-phone)
 
 (update-browser-build-troubleshooting)=
 
 ## Troubleshooting
 
-If anything goes wrong, don't panic.
+Jei kas nors nepavyksta, nepanikuokite.
 
-Take a breath!
+Giliai įkvėpkite!
 
-Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
+Tada patikrinkite, ar jūsų problema jau aprašyta: žr. [AAPS Builder trikčių šalinimas](#aaps-builder-troubleshooting), jei kuriate su **AAPS Builder**, arba [Kūrimas naršyklėje: trikčių šalinimas](#aaps-ci-troubleshooting) kitu atveju.
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Jei reikia daugiau pagalbos, kreipkitės į kitus **AAPS** naudotojus [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) arba [Discord](https://discord.gg/4fQUWHZ4Mw).

@@ -1,25 +1,25 @@
 (aaps-ci-option1-computer)=
 
-# Option 1 · Computer – Generate a new keystore
+# Opzione 1 · Computer – Genera un nuovo keystore
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on a **computer** (Windows / Mac / Linux).
+[Opzione 1](BrowserBuildO1.md) (genera un nuovo keystore) su un **computer** (Windows / Mac / Linux).
 ```
 
-## 1. Download the preparation file
+## 1. Scarica il file di preparazione
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Start a local server and generate the keystore
+## 2. Avvia un server locale e genera il keystore
 
-Use a computer (supports Windows/Mac/Linux)
+Usa un computer (Windows, Mac o Linux)
 
-Open the webpage [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
+Apri la pagina web [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
 
-Install Simple Web Server<br/> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store.<br/> If your browser asks whether to open the store app, allow it.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
+Installa Simple Web Server<br/> Se usi Windows o Mac, puoi installarlo da Microsoft Store o da Mac App Store.<br/> Se il browser ti chiede se aprire l'app dello store, consenti.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
 
-Example on Mac:
+Esempio su Mac:
 
 - get → install → open<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)<br/><br/>
 
@@ -31,7 +31,7 @@ Example on Mac:
 
 - Seeing this screen means the server has been started.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
 
-- Do not close Simple Web Server. Please switch to your browser and open<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
+- Non chiudere Simple Web Server. Passa al browser e apri<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
 - For the subsequent steps, please refer to the video below, starting from 1 minute 37 seconds.
 
@@ -50,4 +50,4 @@ Example on Mac:
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**Avanti: [Passo 3 – Autorizza Google Drive](BrowserBuildGoogleDrive.md) →**

@@ -1,51 +1,51 @@
-# Configuration (Config Builder)
+# Konfigürasyon (Config Builder)
 
-```{admonition} Coming from AAPS v3? :class: note The **Config Builder** is now called **Configuration** and is in the **menu** (☰). See [What changed in AAPS v4](#v4-changes).
+```{admonition} AAPS v3'ten mi geliyorsunuz? :class: note **Config Builder** artık **Konfigürasyon** olarak adlandırılıyor ve **menü**de (☰) bulunuyor. Bkz. [AAPS v4'te neler değişti](#v4-changes).
 
-    <br />**Configuration** is where you choose which plugins are active (CGM, pump, APS algorithm, sensitivity, sync, …) and open each plugin and its settings. The [walkthrough](#configuration-v4) is below; the rest of this page describes each section in detail.
+    <br />**Konfigürasyon**, hangi eklentilerin etkin olacağını (CGM, pompa, APS algoritması, duyarlılık, senkronizasyon, …) seçtiğiniz ve her eklentiyi ve ayarlarını açtığınız yerdir. [Adım adım anlatım](#configuration-v4) aşağıdadır; bu sayfanın geri kalanı her bölümü ayrıntılı olarak açıklar.
     
     (configuration-v4)=
-    ## Configuration in AAPS v4
+    ## AAPS v4'te Konfigürasyon
     
-    In **AAPS** v4, tap the **menu** (☰) in the **top-left** corner of the main screen and choose **Configuration** (*“Set up your configuration (CGM, pump, …) and enable features”*).
+    **AAPS** v4'te ana ekranın **sol üst** köşesindeki **menü**ye (☰) dokunun ve **Konfigürasyon**'u seçin (*“Yapılandırmanızı (CGM, pompa, ...) ayarlayın ve özellikleri etkinleştirin”*).
     
-    ![The top-left menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+    ![Konfigürasyon girişini gösteren sol üst menü](../images/v4/Configuration/configuration_menu.png)
     
-    Plugins are grouped by **category** — for example *Smoothing*, *Calibration*, *Sensitivity detection*, *APS*, *Communication* and *General*. Each row shows the category name and the **currently active** plugin (e.g. *APS → OpenAPS SMB*). Tap a row to open a category.
+    Eklentiler **kategori**lere göre gruplanmıştır — örneğin *Yumuşatma*, *Kalibrasyon*, *Duyarlılık algılaması*, *APS*, *İletişim* ve *Genel*. Her satır kategori adını ve **şu anda etkin** olan eklentiyi gösterir (ör. *APS → OpenAPS SMB*). Bir kategoriyi açmak için satıra dokunun.
     
-    ![The Configuration screen, listing plugin categories](../images/v4/Configuration/configuration_plugins.png)
+    ![Eklenti kategorilerini listeleyen Konfigürasyon ekranı](../images/v4/Configuration/configuration_plugins.png)
     
-    Inside a category you see the plugins available for it. For single-choice categories you pick the active one; some categories are multi-select (*“Choose any that apply”*). Each plugin offers two actions:
+    Bir kategorinin içinde o kategori için kullanılabilen eklentileri görürsünüz. Tek seçimli kategorilerde etkin olanı seçersiniz; bazı kategoriler çoklu seçimlidir (*“Geçerli olanların tümünü seçin.”*). Her eklenti iki eylem sunar:
     
-    - **Open plugin** — opens the plugin's own screen.
-    - **Settings** — opens the plugin's preferences (settings may be grouped into expandable sections).
+    - **Eklentiyi aç** — eklentinin kendi ekranını açar.
+    - **Ayarlar** — eklentinin tercihlerini açar (ayarlar genişletilebilir bölümler halinde gruplanmış olabilir).
     
-    ![A category showing its plugins, each with “Open plugin” and “Settings”](../images/v4/Configuration/configuration_open_plugin.png)
+    ![Eklentilerini gösteren bir kategori, her birinde “Eklentiyi aç” ve “Ayarlar”](../images/v4/Configuration/configuration_open_plugin.png)
     
     (configuration_sync_icon)=
-    ### The mobile icon — “synced from the master”
+    ### Telefon simgesi — “ana birimden senkronize edilir”
     
-    A small **mobile (phone) icon** next to a category or setting means that item is **synchronized from the master** — its value/selection is delivered to this device over the NSClientV3 (Nightscout) channel.
+    Bir kategorinin veya ayarın yanındaki küçük **telefon simgesi**, o öğenin **ana birimden senkronize edildiği** anlamına gelir — değeri/seçimi bu cihaza NSClientV3 (Nightscout) kanalı üzerinden iletilir.
     
-    On a **client** (**AAPSClient**) these items are **kept in sync with the master**. The icon is only shown on a client, so it does not appear in the screenshot above, which was taken on the main **AAPS** app. On a client it typically appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS*. Exactly how the master and clients stay aligned — and which settings you can change from either side — is covered under [Master ↔ Client control](#client-master-config-prefs).
+    Bir **istemcide** (**AAPSClient**) bu öğeler **ana birimle senkronize tutulur**. Simge yalnızca istemcide gösterilir, bu yüzden ana **AAPS** uygulamasında alınan yukarıdaki ekran görüntüsünde görünmez. İstemcide genellikle *Yumuşatma*, *Kalibrasyon*, *Duyarlılık algılaması* ve *APS* üzerinde görünür. Ana birim ile istemcilerin nasıl uyumlu kaldığı ve hangi ayarları hangi taraftan değiştirebileceğiniz [Ana birim ↔ İstemci kontrolü](#client-master-config-prefs) bölümünde anlatılır.
     
-    The same icon also appears **inside the settings**, next to the individual preferences that are synced. In the example below *Absorption cutoff* carries the icon; settings without the icon are configured per device:
+    Aynı simge **ayarların içinde** de, senkronize edilen tek tek tercihlerin yanında görünür. Aşağıdaki örnekte *Emilim kesme* ayarında bu simge vardır; simgesi olmayan ayarlar her cihazda ayrı ayrı yapılandırılır:
     
-    ![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+    ![Bir eklentinin ayarları — telefon simgesi senkronize edilen tercihleri gösterir](../images/v4/ClientMaster/preferences_synced_icon.png)
     
-    Items **without** the icon are configured **per device**. The most important example is the **NSClientV3 (Communication)** connection itself — the **Nightscout URL**, **access token** and **websockets** are set on each phone individually, so they do **not** show the mobile icon.
+    Simgesi **olmayan** öğeler **her cihazda ayrı ayrı** yapılandırılır. En önemli örnek **NSClientV3 (İletişim)** bağlantısının kendisidir — **Nightscout URL**'si, **erişim belirteci** ve **websocket'ler** her telefonda ayrı ayrı ayarlanır, bu yüzden bunlarda telefon simgesi **görünmez**.
     
     ---
     
     (Config-Builder-tab-or-hamburger-menu)=
-    ## Opening a plugin screen
+    ## Bir eklenti ekranını açma
     
-    Each plugin screen is opened in one of these ways (the tabs and the eye checkbox of **AAPS** v3 are gone, see [What changed in AAPS v4](#v4-changes)):
+    Her eklenti ekranı şu yollardan biriyle açılır (**AAPS** v3'teki sekmeler ve göz onay kutusu artık yok, bkz. [AAPS v4'te neler değişti](#v4-changes)):
     
-    - **Configuration** → the plugin's category → **Open plugin**,
-    - the **Manage** sheet of the bottom navigation, for the screens you use most (Profile, Insulin settings, Pump, Automation, Food...),
-    - a [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) button that you add yourself,
-    - the **search bar** on the main screen.
+    - **Konfigürasyon** → eklentinin kategorisi → **Eklentiyi aç**,
+    - en çok kullandığınız ekranlar için alt gezinme çubuğundaki **Yönet** paneli (Profil, İnsülin ayarları, Pompa, Otomasyon, Yiyecek...),
+    - kendiniz eklediğiniz bir [Hızlı Başlatma](../DailyLifeWithAaps/QuickLaunch.md) düğmesi,
+    - ana ekrandaki **arama çubuğu**.
     
     ```{contents}
     :backlinks: entry
@@ -56,420 +56,420 @@
 
 ## Profile
 
-This module cannot be disabled as it is a core part of **AAPS**.
+Bu modül **AAPS**'in temel bir parçası olduğu için devre dışı bırakılamaz.
 
-See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
+**Profil**inizin içinde neler olduğunu temel olarak anlamak için [AAPS profiliniz](../SettingUpAaps/YourAapsProfile.md) sayfasına bakın.
 
 (insulin)= (Config-Builder-insulin)=
 
 ## İnsülin
 
-![Insulin settings](../images/manage/insulin_settings.png)
+![İnsülin ayarları](../images/manage/insulin_settings.png)
 
-In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Open **Manage → Insulin settings** to set up the insulin you are using.
+**AAPS** 4'te insülin artık **Konfigürasyon**'da seçilen bir eklenti değildir. Kullandığınız insülini ayarlamak için **Yönet → İnsülin ayarları**'nı açın.
 
-The insulin editor lets you:
+İnsülin düzenleyicisinde şunları yapabilirsiniz:
 
-* give the insulin an **Insulin nickname** so it is easy to recognise,
-* set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Action, in hours), either by typing the value or using the **–** / **+** buttons,
-* tap a **Load peak from** preset button — **Novorapid** (75 min), **Fiasp** (55 min) or **Lyumjev** (45 min) — to fill in the standard peak time for that insulin in one step.
+* kolayca tanınması için insüline bir **İnsülinin takma adı** verin,
+* değeri yazarak veya **–** / **+** düğmelerini kullanarak **Tepe** (en yüksek insülin etkisine kadar geçen süre, dakika olarak) ve **İES** (İnsülin Etki Süresi, saat olarak) değerlerini ayarlayın,
+* o insülinin standart tepe zamanını tek adımda doldurmak için bir **Tepe değerini şuradan yükle** ön ayar düğmesine dokunun — **Novorapid** (75 dk), **Fiasp** (55 dk) veya **Lyumjev** (45 dk).
 
-The allowed ranges are the same whatever insulin you use:
+İzin verilen aralıklar, hangi insülini kullanırsanız kullanın aynıdır:
 
-* **DIA**: 5 to 9 hours (5 to 10 hours if the patient type is set to **Pregnant**). See [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to choose a value.
-* **Peak**: 35 to 120 minutes.
+* **İES**: 5 ila 9 saat (hasta tipi **Hamile** olarak ayarlanmışsa 5 ila 10 saat). Bir değer seçmek için [İnsülin etki süresi (İES) ve tepe](#Config-Builder-insulin-dia) bölümüne bakın.
+* **Tepe**: 35 ila 120 dakika.
 
-The **IOB** (insulin on board) and **Activity** curves shown at the bottom of the editor update as you change the values, so you can see straight away how your settings shape the insulin action.
+Düzenleyicinin altında gösterilen **AİNS** (aktif insülin) ve **Aktivite** eğrileri, değerleri değiştirdikçe güncellenir. Böylece ayarlarınızın insülin etkisini nasıl şekillendirdiğini hemen görebilirsiniz.
 
-More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
+**AAPS**'te gösterilen insülin profilini anlamak için daha fazla bilgiyi [burada](#AapsScreens-insulin-profile) bulabilirsiniz.
 
 (Config-Builder-insulin-change-active)=
 
-### Changing the insulin in use (DIA or peak)
+### Kullanılan insülini değiştirme (İES veya tepe)
 
-The insulin marked **ACTIVE** is the one your running profile uses. Its fields are greyed out: you cannot edit or delete it. This way, the insulin name shown in your running profile always matches the settings actually in use.
+**AKTİF** olarak işaretlenen insülin, çalışan profilinizin kullandığı insülindir. Alanları gri renktedir: onu düzenleyemez veya silemezsiniz. Bu sayede çalışan profilinizde gösterilen insülin adı her zaman gerçekten kullanılan ayarlarla eşleşir.
 
-To change the DIA or peak you are using:
+Kullandığınız İES veya tepe değerini değiştirmek için:
 
-1. Open **Manage → Insulin settings**. If the screen opens read-only (a **✏️ pencil** in the top bar), tap the pencil and unlock your settings.
-2. Tap **+** (*Add new insulin*). **AAPS** creates a copy of the insulin shown on screen.
-3. Set the new **Peak** and/or **DIA**, then tap the save icon (top right).
-4. Tap **▶** (*Activate insulin*) and confirm. The new insulin becomes **ACTIVE**.
+1. **Yönet → İnsülin ayarları**'nı açın. Ekran salt okunur açılırsa (üst çubukta bir **✏️ kalem**), kaleme dokunun ve ayarlarınızın kilidini açın.
+2. **+** (*Yeni insülin ekle*) düğmesine dokunun. **AAPS** ekranda gösterilen insülinin bir kopyasını oluşturur.
+3. Yeni **Tepe** ve/veya **İES** değerini ayarlayın, ardından kaydet simgesine (sağ üst) dokunun.
+4. **▶** (*İnsülini etkinleştirin*) düğmesine dokunun ve onaylayın. Yeni insülin **AKTİF** olur.
 
-```{admonition} The name includes peak and DIA :class: note **AAPS** adds the peak, DIA and concentration to the insulin name automatically (for example *Fiasp 55m 8h U100*), so you can tell your configurations apart at a glance.
+```{admonition} Ad, tepe ve İES değerlerini içerir :class: note **AAPS**, yapılandırmalarınızı bir bakışta ayırt edebilmeniz için tepe, İES ve konsantrasyon değerlerini insülin adına otomatik olarak ekler (örneğin *Fiasp 55m 8h U100*).
 
-    <br />You can delete the old insulin once it is no longer active.
+    <br />Eski insülin artık aktif değilse onu silebilirsiniz.
     
-    ### The "Load peak from" presets
+    ### "Tepe değerini şuradan yükle" ön ayarları
     
-    In **AAPS** 4 there is no list of insulin types to choose from. Every insulin uses the same exponential activity curve; only its **Peak** and **DIA** differ. The **Load peak from** presets in the insulin editor fill in the recommended peak for the most common insulins in one tap (the small ⓘ next to **Load peak from** lists them with their peak values). You can still adjust the **Peak** and **DIA** afterwards.
+    **AAPS** 4'te seçilebilecek bir insülin türleri listesi yoktur. Her insülin aynı üstel aktivite eğrisini kullanır; yalnızca **Tepe** ve **İES** değerleri farklıdır. İnsülin düzenleyicisindeki **Tepe değerini şuradan yükle** ön ayarları, en yaygın insülinler için önerilen tepe değerini tek dokunuşla doldurur (**Tepe değerini şuradan yükle** yanındaki küçük ⓘ, bunları tepe değerleriyle birlikte listeler). Ardından **Tepe** ve **İES** değerlerini yine de ayarlayabilirsiniz.
     
-    Only change the peak away from its recommended value if you understand the effect of doing so. The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the curves.
+    Tepe değerini önerilen değerden yalnızca bunun etkisini anlıyorsanız değiştirin. [İnsülin eğrisi grafiği](#AapsScreens-insulin-profile) eğrileri anlamanıza yardımcı olur.
     
     #### Novorapid
     
-    ![Insulin curve with the Novorapid peak](../images/Profile/ConfBuild_Insulin_RAO.png)
+    ![Novorapid tepesiyle insülin eğrisi](../images/Profile/ConfBuild_Insulin_RAO.png)
     
-    * recommended for Humalog, Novolog and Novorapid (called *Rapid-Acting Oref* in **AAPS** v3)
-    * Peak = 75 minutes after injection
+    * Humalog, Novolog ve Novorapid için önerilir (**AAPS** v3'te *Rapid-Acting Oref* olarak adlandırılıyordu)
+    * Tepe = enjeksiyondan 75 dakika sonra
     
     #### Fiasp
     
-    ![Insulin curve with the Fiasp peak](../images/Profile/ConfBuild_Insulin_URO.png)
+    ![Fiasp tepesiyle insülin eğrisi](../images/Profile/ConfBuild_Insulin_URO.png)
     
-    * recommended for Fiasp (called *Ultra-Rapid Oref* in **AAPS** v3)
-    * Peak = 55 minutes after injection
+    * Fiasp için önerilir (**AAPS** v3'te *Ultra-Rapid Oref* olarak adlandırılıyordu)
+    * Tepe = enjeksiyondan 55 dakika sonra
     
     (Config-Builder-lyumjev)=
     #### Lyumjev
     
-    ![Insulin curve with the Lyumjev peak](../images/Profile/ConfBuild_Insulin_L.png)
+    ![Lyumjev tepesiyle insülin eğrisi](../images/Profile/ConfBuild_Insulin_L.png)
     
-    * recommended for Lyumjev
-    * Peak = 45 minutes after injection
+    * Lyumjev için önerilir
+    * Tepe = enjeksiyondan 45 dakika sonra
     
-    #### Custom peak
+    #### Özel tepe
     
-    * There is no separate "Free-Peak Oref" insulin type in **AAPS** 4: enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a preset.
-    * A custom peak is useful if you use an insulin that is not in the list, or a mixture of different insulins.
+    * **AAPS** 4'te ayrı bir "Free-Peak Oref" insülin türü yoktur: herhangi bir **Tepe** değerini (35 ila 120 dakika) bir ön ayar kullanmadan doğrudan [insülin düzenleyicisine](#Config-Builder-insulin) girin.
+    * Özel tepe, listede olmayan bir insülin veya farklı insülinlerin bir karışımını kullanıyorsanız işe yarar.
     
     (Config-Builder-insulin-dia)=
-    ### Duration of insulin action (DIA) and peak
+    ### İnsülin etki süresi (İES) ve tepe
     
     ```{warning}
-    In looping, decreasing DIA or peak will always increase administered insulin. DIA works differently in AAPS than in commercial AID systems, and careless changes to these settings can change insulin dosing in a way which is much larger or smaller than expected.
+    Döngü kullanırken İES veya tepe değerini azaltmak her zaman verilen insülini artırır. İES, AAPS'te ticari AID sistemlerinden farklı çalışır. Bu ayarlarda dikkatsizce yapılan değişiklikler, insülin dozunu beklenenden çok daha fazla veya çok daha az değiştirebilir.
     
 
-AAPS models the timeline of insulin action with a mathematical formula, configured using **DIA** and the closely related **peak** settings. DIA is the theoretical duration until IOB reaches zero and peak is the point in time when the effect of insulin is strongest. This yields an IOB curve and an activity curve, which is simply the **rate** of IOB decay.
+AAPS, insülin etkisinin zaman çizelgesini **İES** ve onunla yakından ilişkili **tepe** ayarlarıyla yapılandırılan matematiksel bir formülle modeller. İES, AİNS'in sıfıra ulaşmasına kadar geçen teorik süredir; tepe ise insülin etkisinin en güçlü olduğu zaman noktasıdır. Bundan bir AİNS eğrisi ve bir aktivite eğrisi elde edilir. Aktivite eğrisi basitçe AİNS azalmasının **hızıdır**.
 
-Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). This missing basal insulin is fully subtracted from the IOB, explaining why IOB will in practice reach zero many hours earlier than the configured DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
+AAPS döngü yaparken [sıfır geçici bazal](#Open-APS-features-super-micro-bolus-smb) dönemlerinin olmasının normal olduğunu göz önünde bulundurun. Bu eksik bazal insülin AİNS'ten tamamen çıkarılır. Bu yüzden AİNS pratikte yapılandırılan İES'ten saatlerce önce sıfıra ulaşır. [Bolus AİNS ve bazal AİNS](#aaps-screens-iob-cob-basal-sens) değerlerini ana ekrandan ayrı ayrı inceleyebilirsiniz.
 
-To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin settings**. AAPS displays the active insulin configuration like this:
+İES ve tepe değerini yapılandırmak için ana ekranda **Yönet**'e, ardından **İnsülin ayarları**'na dokunun. AAPS etkin insülin yapılandırmasını şöyle gösterir:
 
-![Sample insulin configuration](../images/manage/insulin_profile.png)
+![Örnek insülin yapılandırması](../images/manage/insulin_profile.png)
 
-In this example, the peak setting is 55 minutes, DIA is 8 hours and [insulin concentration](#Insulin-Concentration) is the standard 100 IU/mL.
+Bu örnekte tepe ayarı 55 dakika, İES 8 saat ve [insülin konsantrasyonu](#Insulin-Concentration) standart 100 IU/mL'dir.
 
-Due to the influence of zero-temping explained above and the formula used for IOB decay in AAPS, most users set a clearly higher DIA than in commercial systems. In general, many people find that a **DIA** of 9h works well for them. After you have more experience with AAPS and have a well-tuned profile, you can try to find personalized DIA and peak settings with the information below.
+Yukarıda açıklanan sıfır geçici bazal etkisi ve AAPS'te AİNS azalması için kullanılan formül nedeniyle, çoğu kullanıcı ticari sistemlere göre belirgin şekilde daha yüksek bir İES ayarlar. Genel olarak birçok kişi 9 saatlik bir **İES** değerinin kendileri için iyi çalıştığını görür. AAPS ile daha fazla deneyim kazandıktan ve profiliniz iyi ayarlandıktan sonra, aşağıdaki bilgilerle kişisel İES ve tepe ayarlarını bulmayı deneyebilirsiniz.
 
-````{admonition} Details on the impact of DIA and peak configuration :class: dropdown
+````{admonition} İES ve tepe yapılandırmasının etkisiyle ilgili ayrıntılar :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+AAPS'te bazal oranın AİNS azalması üzerinde dolaylı bir etkisi olduğundan, çok yüksek bazal oranlar çok yüksek bir İES'i gizleyebilir ve bunun tersi de geçerlidir. İES ve tepe değerini ayarlamadan önce bazal oranları dikkatle ayarlamak mantıklıdır. Ayrıca İES ve tepe ayarlarının birbirini etkilediğini göz önünde bulundurun: İES'in etkisi tepe değerine bağlıdır ve bunun tersi de geçerlidir.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Bu grafikler, izin verilen değer aralığında İES ve tepe değerinin AİNS eğrileri üzerindeki etkisini tam olarak gösterir.
 
-Adjusting DIA:
+İES'i ayarlama:
 
 ```{image} ../images/iob_remaining_static_peak.png :width: 400px
 
-    <br />Adjusting peak:
+    <br />Tepeyi ayarlama:
     
     ```{image} ../images/iob_remaining_static_dia.png
     :width: 400px
     
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Son olarak, İES ve tepe değerinin birlikte ayarlandığı bir karşılaştırma. Buradaki mantık, iki değerin de aynı oranda ayarlanmasıdır, yani `49/35 ~ 7/5`. Ya da benzer şekilde `120/93 ~ 9/7`. Göreli değişiklik ikisi için de aynı olduğu sürece, başlangıçtaki İES veya tepe değeri ne olursa olsun aralıklar tutarlı kalır.
 
 ```{image} ../images/iob_remaining_uniform.png :width: 400px
 
-    <br />Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+    <br />İES ve tepe bu şekilde ayarlandığında eğrideki her noktanın aynı göreli miktarda kaydığına dikkat edin.
     
     ````
     
-    #### Further reading on DIA and peak configuration
+    #### İES ve tepe yapılandırmasıyla ilgili ek okumalar
     
-    * [Technical details and historical background from the AAPS predecessor, OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
-    * [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
-    * [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
-    * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
+    * [AAPS'in öncülü OpenAPS'ten teknik ayrıntılar ve tarihsel arka plan](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
+    * Diabettech'te [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) (Kullandığımız insülin etki süresi (İES) değerlerinde neden sık sık yanılıyoruz ve bu neden önemli).
+    * See My CGM'de (arşiv) [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) (Üstel insülin eğrileri + Fiasp).
+    * Bionic Wookie'de [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) (Kapalı döngüde revize edilmiş Humalog modeli) ve Lyumjev, Fiasp, NovoRapid, Humalog için 9 saatlik bir İES öneren diğer makaleler.
     
     (Config-Builder-bg-source)=
-    ## BG Source
-    Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+    ## KŞ kaynağı
+    Kullandığınız kan şekeri kaynağını seçin. Daha fazla kurulum bilgisi için [KŞ kaynağı](../Getting-Started/CompatiblesCgms.md) sayfasına bakın.
     
-    ![Configuration > BG Source](../images/v4/Configuration/configuration_bg_source.png)
+    ![Konfigürasyon > KŞ kaynağı](../images/v4/Configuration/configuration_bg_source.png)
     
-    Scroll down to see the other sources:
+    Diğer kaynakları görmek için aşağı kaydırın:
     
-    ![Configuration > BG Source, continued](../images/v4/Configuration/configuration_bg_source_2.png)
+    ![Konfigürasyon > KŞ kaynağı, devamı](../images/v4/Configuration/configuration_bg_source_2.png)
     
-    ![Configuration > BG Source, end of the list](../images/v4/Configuration/configuration_bg_source_3.png)
+    ![Konfigürasyon > KŞ kaynağı, listenin sonu](../images/v4/Configuration/configuration_bg_source_3.png)
     
-    * [xDrip+ BG](../CompatibleCgms/xDrip.md) - also for compatible apps such as [Juggluco](../CompatibleCgms/Juggluco.md)
-    * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
+    * [xDrip+ KŞ](../CompatibleCgms/xDrip.md) - [Juggluco](../CompatibleCgms/Juggluco.md) gibi uyumlu uygulamalar için de
+    * [NSClient KŞ](../CompatibleCgms/CgmNightscoutUpload.md) - yalnızca ne yaptığınızı biliyorsanız, bkz. [KŞ kaynağı](../Getting-Started/CompatiblesCgms.md).
     * [MM640g](../CompatibleCgms/MM640g.md)
-    * Glimp - only version 4.15.57 and newer are supported
+    * Glimp - yalnızca 4.15.57 ve daha yeni sürümler desteklenir
     * [BYODA (Build Your Own Dexcom App)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
-    * MicroTech CGM App - for the Aidex / LinX CGM
+    * MicroTech CGM uygulaması - Aidex / LinX CGM için
     * [Poctech](../CompatibleCgms/PocTech.md)
-    * Tomato (MiaoMiao) - Tomato App for MiaoMiao device
-    * [Glunovo](https://infinovo.com/) - Glunovo App for Glunovo CGM system
-    * Intelligo - Intelligo App
-    * Syai/Ottai - for the Syai and Ottai apps (see [Syai Tag](../CompatibleCgms/SyaiTagX1.md) and [Ottai](../CompatibleCgms/OttaiM8.md))
-    * SI App - patched SI App or Sibionics App for Sibionics CGM
-    * Sino App - patched app for Sinocare CGM
-    * Notification Reader - reads glucose values from the notifications shown by official CGM apps (Dexcom, Medtronic, Eversense, etc.)
-    * Instara - Instara App
-    * Random BG - generates random BG data for testing. It can only be enabled in an engineering (developer) build with the **Virtual Pump**, so in a normal **AAPS** installation it cannot be used.
+    * Tomato (MiaoMiao) - MiaoMiao cihazı için Tomato uygulaması
+    * [Glunovo](https://infinovo.com/) - Glunovo CGM sistemi için Glunovo uygulaması
+    * Intelligo - Intelligo uygulaması
+    * Syai/Ottai - Syai ve Ottai uygulamaları için (bkz. [Syai Tag](../CompatibleCgms/SyaiTagX1.md) ve [Ottai](../CompatibleCgms/OttaiM8.md))
+    * SI Uygulaması - Sibionics CGM için yamalı SI App veya Sibionics App
+    * Sino uygulaması - Sinocare CGM için yamalı uygulama
+    * Bildirim okuyucu - resmi CGM uygulamalarının (Dexcom, Medtronic, Eversense vb.) gösterdiği bildirimlerden glikoz değerlerini okur
+    * Instara - Instara uygulaması
+    * Rastgele KŞ - test için rastgele KŞ verileri oluşturur. Yalnızca **Sanal pompa** ile birlikte bir mühendislik (geliştirici) sürümünde etkinleştirilebilir. Bu yüzden normal bir **AAPS** kurulumunda kullanılamaz.
     
-    ## Smoothing
+    ## Yumuşatma
     
-    ![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+    ![Konfigürasyon > Yumuşatma](../images/v4/Configuration/configuration_smoothing.png)
     
-    See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+    Bkz. [Kan şekeri verilerini yumuşatma](../CompatibleCgms/SmoothingBloodGlucoseData.md).
     
-    ## Calibration
+    ## Kalibrasyon
     
-    Choose how **AAPS** treats the values it receives from your sensor:
+    **AAPS**'in sensörünüzden aldığı değerleri nasıl işleyeceğini seçin:
     
-    - **No calibration**: the sensor values are used as they are. Use this when the sensor is already factory-calibrated and accurate. This is the default.
-    - **Linear calibration**: **AAPS** corrects the sensor values with a slope and an offset that it computes from your fingerstick entries.
+    - **Kalibrasyon yok**: sensör değerleri olduğu gibi kullanılır. Sensör zaten fabrikada kalibre edilmişse ve doğruysa bunu kullanın. Bu varsayılan ayardır.
+    - **Doğrusal kalibrasyon**: **AAPS**, sensör değerlerini parmak ucu ölçümlerinizden hesapladığı bir eğim ve ofset ile düzeltir.
     
-    How to use **Linear calibration**:
+    **Doğrusal kalibrasyon** nasıl kullanılır:
     
-    1. Select **Linear calibration** in the **Calibration** category.
-    2. When you insert a new sensor, log the sensor change: use **Log sensor change** on the calibration screen, or enter a CGM sensor insert in the Careportal. This tells **AAPS** when the sensor session started. If **AAPS** notices a gap of more than 30 minutes in the readings, it may ask you to mark a sensor change; this prompt appears on the master only, not on a client.
-    3. Open the plugin and tap **Add calibration**. Enter your fingerstick value. **AAPS** pairs it with the sensor value from the last 10 minutes.
+    1. **Kalibrasyon** kategorisinde **Doğrusal kalibrasyon**'u seçin.
+    2. Yeni bir sensör taktığınızda sensör değişimini kaydedin: kalibrasyon ekranında **Sensör değişimini kaydet**'i kullanın veya Careportal'da bir CGM sensör yerleştirme kaydı girin. Bu, **AAPS**'e sensör oturumunun ne zaman başladığını bildirir. **AAPS** değerlerde 30 dakikadan uzun bir boşluk fark ederse, sizden bir sensör değişimini işaretlemenizi isteyebilir; bu soru yalnızca ana birimde görünür, istemcide görünmez.
+    3. Eklentiyi açın ve **Kalibrasyon ekle**'ye dokunun. Parmak ucu ölçüm değerinizi girin. **AAPS** bu değeri son 10 dakikadaki sensör değeriyle eşleştirir.
     
-    A calibration is accepted only when:
+    Bir kalibrasyon yalnızca şu durumlarda kabul edilir:
     
-    - a sensor change is logged and at least **2 hours** have passed since then (warm-up),
-    - your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
-    - there is a CGM reading from the last 10 minutes,
-    - it is for the current moment. You cannot enter older fingerstick values.
+    - bir sensör değişimi kaydedilmişse ve o zamandan beri en az **2 saat** geçmişse (ısınma),
+    - glikozunuz sabitse. Çok hızlı değişiyorsa, iletişim kutusu bunu size söyler ve sınırı gösterir,
+    - son 10 dakikadan bir CGM değeri varsa,
+    - değer şimdiki an içinse. Daha eski parmak ucu değerlerini giremezsiniz.
     
-    How the correction works:
+    Düzeltme nasıl çalışır:
     
-    - **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
-    - Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. The line therefore follows your sensor as it drifts.
-    - At least **2 pairs** are needed.
-    - If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
-    - The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
-    - Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. This protects you from a wrong entry.
+    - **AAPS**, mevcut sensörün değer çiftlerinden geçen düz bir çizgi çizer: `corrected value = slope × sensor value + offset`.
+    - Yeni çiftler eski çiftlerden daha fazla sayılır: 2 günlük bir çift yaklaşık %37, 4 günlük bir çift yaklaşık %14 oranında sayılır. Bu nedenle çizgi, sensörünüz kaydıkça onu takip eder.
+    - En az **2 çift** gerekir.
+    - Çiftler birbirine yakınsa (aralarındaki fark 54 mg/dL / 3 mmol/L'den azsa), yalnızca değerler kaydırılır (offset, eğim yok).
+    - Eğim 0,55 ile 1,6 arasında tutulur. Bu aralığın dışındaki bir eğim en yakın değerle sınırlanır.
+    - Güvenlik sınırı: 100 mg/dL (5,5 mmol/L) değerindeki düzeltme ±30 mg/dL'den (1,7 mmol/L) fazla olacaksa düzeltme uygulanmaz. Bu sizi yanlış bir girişten korur.
     
-    What it changes:
+    Neyi değiştirir:
     
-    - The corrected value is used everywhere: the BG on the main screen, the graph and the loop. The sensor readings themselves are not changed. The correction is applied on top, also to the earlier readings of the current sensor.
-    - A new sensor change starts from zero. Pairs from earlier sensors no longer count.
-    - On the graph, a calibration is shown as a marker at the fingerstick value.
-    - Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
+    - Düzeltilmiş değer her yerde kullanılır: ana ekrandaki KŞ, grafik ve döngü. Sensör değerlerinin kendisi değiştirilmez. Düzeltme bunların üzerine uygulanır; mevcut sensörün daha önceki değerlerine de.
+    - Yeni bir sensör değişimi sıfırdan başlar. Önceki sensörlerin çiftleri artık sayılmaz.
+    - Grafikte bir kalibrasyon, parmak ucu değerinde bir işaret olarak gösterilir.
+    - Kalibrasyonlar Nightscout üzerinden senkronize edilir, böylece istemcileriniz aynı düzeltilmiş değerleri gösterir.
     
-    Check and remove entries:
+    Girişleri kontrol edin ve kaldırın:
     
-    - **Open plugin** shows the status (for example *Slope 0.85, mid-range correction -0.4*), a chart of your pairs with the line, and the list of entries.
-    - If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. The line is calculated again at once.
+    - **Eklentiyi aç** durumu (örneğin *Eğim 0.85, orta aralık düzeltmesi -0.4*), çiftlerinizin çizgiyle birlikte bir grafiğini ve giriş listesini gösterir.
+    - Bir giriş yanlışsa (örneğin parmağınızda şeker varsa), yanındaki çöp kutusu simgesine dokunun. Çizgi hemen yeniden hesaplanır.
     
-    ```{admonition} Using xDrip+ as BG source?
+    ```{admonition} KŞ kaynağı olarak xDrip+ mı kullanıyorsunuz?
     :class: note
-    xDrip+ has its own calibration. Calibrate in one place only, so that the sensor values are not corrected twice.
+    xDrip+'ın kendi kalibrasyonu vardır. Sensör değerlerinin iki kez düzeltilmemesi için yalnızca tek bir yerde kalibrasyon yapın.
     
 
-    {admonition} Calibrate with care
+    {admonition} Dikkatli kalibre edin
     :class: warning
-    A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Wash your hands before measuring, and do not calibrate while your glucose is changing fast.
+    Yanlış bir parmak ucu değeri, yanlış glikoz değerlerine ve dolayısıyla yanlış insülin dozlarına yol açar. Ölçümden önce ellerinizi yıkayın ve glikozunuz hızla değişirken kalibrasyon yapmayın.
 
-![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)
+![Konfigürasyon > Kalibrasyon](../images/v4/Configuration/configuration_calibration.png)
 
 (Config-Builder-pump)=
 
 ## Pump
 
-Select the pump you are using. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
+Select the pump you are using. Daha fazla kurulum bilgisi için [Uyumlu pompalar](../Getting-Started/CompatiblePumps.md) sayfasına bakın.
 
-![Configuration > Pump](../images/v4/Configuration/configuration_pump_list_1.png)
+![Konfigürasyon > Pompa](../images/v4/Configuration/configuration_pump_list_1.png)
 
-Scroll down to see all the pump drivers:
+Tüm pompa sürücülerini görmek için aşağı kaydırın:
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_2.png)
+![Konfigürasyon > Pompa, devamı](../images/v4/Configuration/configuration_pump_list_2.png)
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_3.png)
+![Konfigürasyon > Pompa, devamı](../images/v4/Configuration/configuration_pump_list_3.png)
 
-![Configuration > Pump, end of the list](../images/v4/Configuration/configuration_pump_list_4.png)
+![Konfigürasyon > Pompa, listenin sonu](../images/v4/Configuration/configuration_pump_list_4.png)
 
-When you select another pump, **AAPS** asks you to confirm the change:
+Başka bir pompa seçtiğinizde **AAPS** sizden değişikliği onaylamanızı ister:
 
-![Switch plugin confirmation](../images/v4/Pumps/switch_plugin_dialog.png)
+![Eklenti değiştirme onayı](../images/v4/Pumps/switch_plugin_dialog.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
+* Dana R Korean (Kore'de satılan DanaR pompası için)
+* Dana Rv2 (resmi olmayan üretici yazılımı yükseltmesi yapılmış DanaR pompası)
 * [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 * [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
-* Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
-* Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+* [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) için Omnipod
+* [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) için Dash
 * [Medtronic](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * [Carelevo](../CompatiblePumps/CareLevo.md)
-* Virtual pump: open loop - **AAPS** suggestions only 
-  * as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
-  * for pump which doesn't have any driver yet
+* Sanal pompa: açık döngü - yalnızca **AAPS** önerileri 
+  * **AAPS** ile ilk adımlarınızı atarken, ilk [görevler](../SettingUpAaps/CompletingTheObjectives.md) sırasında
+  * henüz sürücüsü olmayan pompalar için
 
 (config-builder-wrong-pump-data)=
 
-### Message: "Data is coming from different pump"
+### Mesaj: "Veriler farklı pompadan geliyor"
 
-**AAPS** remembers the pump it is connected to (pump type and serial number). If it receives data from another pump, for example after your pump was replaced by a new one of the same model, it shows this message and ignores the data from that pump:
+**AAPS** bağlı olduğu pompayı (pompa tipi ve seri numarası) hatırlar. Başka bir pompadan veri alırsa, örneğin pompanız aynı modelden yeni bir pompayla değiştirildikten sonra, bu mesajı gösterir ve o pompadan gelen verileri yok sayar:
 
-![Data is coming from different pump](../images/Screen_DifferentPump.png)
+![Veriler farklı pompadan geliyor](../images/Screen_DifferentPump.png)
 
-To use the new pump, change the pump driver: select **Virtual pump**, confirm, then select your pump again. **AAPS** then registers the pump it is connected to now.
+Yeni pompayı kullanmak için pompa sürücüsünü değiştirin: **Sanal pompa**'yı seçin, onaylayın, ardından pompanızı yeniden seçin. **AAPS** böylece şu anda bağlı olduğu pompayı kaydeder.
 
 (Config-Builder-sensitivity-detection)=
 
 ## Duyarlılık algılaması
 
-![Configuration > Sensitivity detection](../images/v4/Configuration/configuration_sensitivity_detection.png)
+![Konfigürasyon > Duyarlılık algılaması](../images/v4/Configuration/configuration_sensitivity_detection.png)
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about how the sensitivity ratio itself is calculated can be found in [Key AAPS Features > Autosens](#Open-APS-features-autosens).
+Select the type of sensitivity detection. Farklı yöntemlerle ilgili daha fazla ayrıntı için lütfen [buradan okumaya devam edin](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Bu, geçmiş verileri sürekli analiz eder ve insüline normalden daha duyarlı (veya tersine, daha dirençli) tepki verdiğinizi fark ederse ayarlamalar yapar. Duyarlılık oranının nasıl hesaplandığıyla ilgili daha fazla ayrıntıyı [AAPS'in temel özellikleri > Otoduyarlılık](#Open-APS-features-autosens) bölümünde bulabilirsiniz.
 
-You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SENS% and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+Duyarlılığınızı ana ekranda bir [ek grafikte](#AapsScreens-section-g-additional-graphs) DYRLLK% seçerek ve beyaz çizgiyi izleyerek görebilirsiniz. Duyarlılık algılaması/[Otoduyarlılık](#Open-APS-features-autosens) özelliğinin verilen insülin miktarını otomatik olarak ayarlayabilmesi için [8. Görev](#objectives-objective8) aşamasında olmanız gerektiğini unutmayın. Bu göreve ulaşmadan önce, Otoduyarlılık yüzdesi / grafiğinizdeki çizgi yalnızca bilgi amaçlı gösterilir.
 
 ### Emilim ayarları
 
-If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+Oref1'i **SMB** ile kullanıyorsanız **min_5m_carbimpact** değerini 8 olarak değiştirmelisiniz. Bu değer yalnızca **CGM** ölçümlerinde boşluk olduğunda veya fiziksel aktivite, aksi halde **AAPS**'in AKRB'yi azaltmasına neden olacak kan şekeri yükselişini tamamen "tükettiğinde" kullanılır. [Karbonhidrat emilimi](../DailyLifeWithAaps/CobCalculation.md) kanınızın tepkilerine göre dinamik olarak hesaplanamadığında, karbonhidratlarınıza varsayılan bir azalma hızı uygular. Temelde bir güvenlik önlemidir.
 
 (Config-Builder-aps)=
 
 ## APS (YPS)
 
-![Configuration > APS](../images/v4/Configuration/configuration_aps.png)
+![Konfigürasyon > APS](../images/v4/Configuration/configuration_aps.png)
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm with **Open plugin**.
+Select the desired APS algorithm for therapy adjustments. Seçilen algoritmanın etkin ayrıntılarını **Eklentiyi aç** ile görebilirsiniz.
 
 * OpenAPS AMA 
-  * Advanced Meal Assist: older algorithm not recommended anymore.
-  * In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
+  * Advanced Meal Assist (Gelişmiş Öğün Yardımı): artık önerilmeyen eski algoritma.
+  * Basitçe söylemek gerekirse avantajı şudur: kendinize bir öğün bolusu verdikten sonra, karbonhidratları güvenilir şekilde girerseniz sistem daha hızlı yüksek geçici bazal uygulayabilir.
 * [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb) 
-  * Super Micro Bolus: most recent algorithm recommended for all users.
-  * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
-  * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
-* [Auto ISF](#Open-APS-features-auto-isf) 
-  * Experimental algorithm for advanced users. It is only listed once the objectives are completed.
+  * Super Micro Bolus (Süper Mikro Bolus): tüm kullanıcılar için önerilen en yeni algoritma.
+  * AMA'dan farklı olarak SMB, glikoz seviyelerini kontrol etmek için geçici bazal oranlarını değil, çoğunlukla küçük **Süper Mikro Boluslar** kullanır.
+  * Not: SMB'ler aslında [9. Görev](#objectives-objective9) aşamasına kadar verilmeyecek olsa da bu algoritmayı en baştan kullanmanız önerilir.
+* [OtoİDF](#Open-APS-features-auto-isf) 
+  * İleri düzey kullanıcılar için deneysel algoritma. Yalnızca görevler tamamlandıktan sonra listede görünür.
 
-If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manually to **8** (default value for SMB) in [Settings → Absorption settings](#Preferences-min_5m_carbimpact).
+AMA'dan SMB algoritmasına geçiyorsanız, *min_5m_carbimpact* değeri [Ayarlar → Emilim ayarları](#Preferences-min_5m_carbimpact) bölümünde elle **8** olarak (SMB için varsayılan değer) değiştirilmelidir.
 
 ## Döngü
 
-This module cannot be disabled as it is a core part of **AAPS**.
+Bu modül **AAPS**'in temel bir parçası olduğu için devre dışı bırakılamaz.
 
-![Configuration > Loop](../images/v4/Configuration/configuration_loop.png)
+![Konfigürasyon > Döngü](../images/v4/Configuration/configuration_loop.png)
 
 ## Constraints
 
-![Configuration > Constraints](../images/v4/Configuration/configuration_constraints.png)
+![Konfigürasyon > Kısıtlamalar](../images/v4/Configuration/configuration_constraints.png)
 
 ### Objectives
 
-**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system.
+**AAPS**'in adım adım tamamlamanız gereken bir öğrenme programı (bir dizi görev) vardır. This should guide you safely through setting up a closed loop system.
 
-See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
+Daha fazla bilgi için [Görevler](../SettingUpAaps/CompletingTheObjectives.md) sayfasına bakın.
 
-## Communication
+## İletişim
 
-In this category (called **Synchronization** in **AAPS** v3), you choose if/where you want **AAPS** to send your data to.
+Bu kategoride (**AAPS** v3'te **Senkronizasyon** olarak adlandırılıyordu), **AAPS**'in verilerinizi gönderip göndermeyeceğini ve nereye göndereceğini seçersiniz.
 
-![Configuration > Communication](../images/v4/Configuration/configuration_communication.png)
+![Konfigürasyon > İletişim](../images/v4/Configuration/configuration_communication.png)
 
-Scroll down to see the rest of the list:
+Listenin geri kalanını görmek için aşağı kaydırın:
 
-![Configuration > Communication, continued](../images/v4/Configuration/configuration_communication_2.png)
+![Konfigürasyon > İletişim, devamı](../images/v4/Configuration/configuration_communication_2.png)
 
 ### NSClientV3
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md).
+[Raporlama sunucusu](../SettingUpAaps/SettingUpTheReportingServer.md) olarak ve/veya [uzaktan izleme](../RemoteFeatures/RemoteMonitoring.md), [uzaktan kontrol](../RemoteFeatures/RemoteControl.md) için kullanılabilir.
 
-See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to set up NSClientV3 synchronization.
+NSClientV3 senkronizasyonunu kurmak için [Raporlama sunucusuyla senkronizasyon](#SetupWizard-synchronization-with-the-reporting-server-and-more) bölümüne bakın.
 
 ### Tidepool
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+[Raporlama sunucusu](../SettingUpAaps/SettingUpTheReportingServer.md) olarak kullanılabilir.
 
-See [Tidepool](../SettingUpAaps/Tidepool.md).
+Bkz. [Tidepool](../SettingUpAaps/Tidepool.md).
 
 ### xDrip
 
-Used to **send** data such as glucose values and treatments to xDrip+ on the same phone. Its settings also hold **Send status to xDrip+**, a status line with IOB and COB that xDrip+ and some watch companion apps display.
+Glikoz değerleri ve tedaviler gibi verileri aynı telefondaki xDrip+'a **göndermek** için kullanılır. Ayarlarında ayrıca **Durumu xDrip+'a gönder** seçeneği de bulunur: xDrip+ ve bazı saat yardımcı uygulamalarının gösterdiği, AİNS ve AKRB içeren bir durum satırı.
 
 ### Open Humans
 
-See [Open Humans](../SupportingAaps/OpenHumans.md).
+Bkz. [Open Humans](../SupportingAaps/OpenHumans.md).
 
 (Config-Builder-wear)=
 
 ### Wear
 
-Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is explained on [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md). After enabling the plugin, choose its options in [Settings > Wear](#preferences-wear). Using the watch is explained on [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
+**AAPS**'i bir Wear OS saatinden izleyin ve kontrol edin. Saatin kurulumu [Wear OS akıllı saat](../WearOS/WearOsSmartwatch.md) sayfasında anlatılır. Eklentiyi etkinleştirdikten sonra seçeneklerini [Ayarlar > Wear](#preferences-wear) bölümünde seçin. Saatin kullanımı [Wear OS akıllı saatiniz üzerinden AAPS'in kullanımı](../RemoteFeatures/RemoteControlWearOS.md) sayfasında anlatılır.
 
 (external-companion-apps)=
 
-### External Companion Apps
+### Harici yardımcı uygulamalar
 
-Broadcasts **AAPS** status data on the phone so that other apps installed on it can display it — for example watch or widget companion apps. The broadcast includes glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Enable it only if a companion app you use asks for this data.
+**AAPS** durum verilerini telefonda yayınlar. Böylece telefonda yüklü diğer uygulamalar bu verileri gösterebilir — örneğin saat veya widget yardımcı uygulamaları. Yayın şunları içerir: glikoz ve eğilim, AİNS, AKRB, bazal ve geçici bazal, profil adı, döngü durumu, telefon ve pompa pili, rezervuar seviyesi ve bolus ilerlemesi. Bunu yalnızca kullandığınız bir yardımcı uygulama bu verileri istiyorsa etkinleştirin.
 
-Apps known to read this broadcast are [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi and Amazfit watches), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS complications and widgets, and Android Auto through GlucoDataAuto) and the G-Watch app. Their setup is described on [Smartwatches and AAPS](#watches-external-companion-apps). Some of them also use **Send status to xDrip+** from the **xDrip** plugin above for a status line with IOB and COB.
+Bu yayını okuduğu bilinen uygulamalar [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi ve Amazfit saatleri), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS komplikasyonları ve widget'ları, ayrıca GlucoDataAuto üzerinden Android Auto) ve G-Watch uygulamasıdır. Kurulumları [Akıllı saatler ve AAPS](#watches-external-companion-apps) sayfasında anlatılır. Bunlardan bazıları, AİNS ve AKRB içeren bir durum satırı için yukarıdaki **xDrip** eklentisindeki **Durumu xDrip+'a gönder** seçeneğini de kullanır.
 
-In earlier versions this plugin was called **Samsung Tizen**, after the [G-Watch app for Samsung Tizen watches](#Watchfaces-tizen) it was first made for.
+Önceki sürümlerde bu eklentinin adı, ilk olarak yapıldığı [Samsung Tizen saatleri için G-Watch uygulamasından](#Watchfaces-tizen) dolayı **Samsung Tizen** idi.
 
 ### Garmin
 
-Connection to Garmin device (Fenix, Edge...)
+Garmin cihazına bağlantı (Fenix, Edge...)
 
 ## Tedaviler
 
-Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through **Treatments → Carbs** in the bottom navigation (see [Carbs](#screens-bolus-carbs)).
+Kaydedilen tedavileri görmek için **menü**yü (☰) açın ve [Tedavi geçmişi](#aaps-screens-treatments)'ni seçin. Bir kaydı düzenlemek veya silmek isterseniz (ör. beklediğinizden daha az karbonhidrat yediyseniz) 'Kaldır'ı seçin ve yeni değeri (gerekirse zamanı da değiştirerek) alt gezinme çubuğundaki **Tedaviler → Karbonhidrat** üzerinden girin (bkz. [Karbonhidrat](#screens-bolus-carbs)).
 
 ## General
 
-In **AAPS** 4 the **General** category of **Configuration** only lists **Autotune**. The other features described below are always available and no longer need to be enabled here; each paragraph says where to find them.
+**AAPS** 4'te **Konfigürasyon**'un **Genel** kategorisinde yalnızca **OtoAyar** listelenir. Aşağıda anlatılan diğer özellikler her zaman kullanılabilir ve artık burada etkinleştirilmeleri gerekmez; her paragraf bunları nerede bulacağınızı söyler.
 
-![Configuration > General](../images/v4/Configuration/configuration_general.png)
+![Konfigürasyon > Genel](../images/v4/Configuration/configuration_general.png)
 
 ### Genel Bakış
 
-The [main screen](#AapsScreens-the-homescreen) of **AAPS** is not a plugin any more and has no settings of its own in **Configuration**. The options that used to be here are in **Settings** (gear icon): [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs), [Status lights](#Preferences-status-lights) and the [Bolus percentage](#Preferences-deliver-this-part-of-bolus-wizard-result) used by the bolus wizard. The super bolus option of **AAPS** 3.x is [not available as a setting](#Preferences-advanced-settings-overview) in **AAPS** 4.
+**AAPS**'in [ana ekranı](#AapsScreens-the-homescreen) artık bir eklenti değildir ve **Konfigürasyon**'da kendine ait ayarları yoktur. Daha önce burada olan seçenekler artık **Ayarlar**'dadır (dişli simgesi): [Diyaloglarda notları göster](#Preferences-show-notes-field-in-treatments-dialogs), [Durum ışıkları](#Preferences-status-lights) ve bolus sihirbazının kullandığı [Bolus yüzdesi](#Preferences-deliver-this-part-of-bolus-wizard-result). **AAPS** 3.x'teki süper bolus seçeneği **AAPS** 4'te [bir ayar olarak mevcut değildir](#Preferences-advanced-settings-overview).
 
 (Config-Builder-actions)=
 
 ### Eylemler
 
-The Actions tab of **AAPS** 3.x no longer exists. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
+**AAPS** 3.x'teki Eylemler sekmesi artık yoktur. Düğmeleri artık **Yönet** panelindedir — bkz. [Eylemler sekmesi nereye gitti?](#screens-action-tab).
 
 ### Otomasyon
 
-**Manage → Automation** lets you manage your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
+**Yönet → Otomasyon**, [10. Görev](#objectives-objective10)'den itibaren [Otomasyonlarınızı](../DailyLifeWithAaps/Automations.md) yönetmenizi sağlar.
 
 (Config-Builder-sms-communicator)=
 
-### SMS Kominikatör
+### SMS Komünikatör
 
-Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
+Uzaktaki bakım verenlerin bazı **AAPS** özelliklerini SMS ile kontrol etmesini sağlar. Daha fazla kurulum bilgisi için [SMS Komutları](../RemoteFeatures/SMSCommands.md) sayfasına bakın.
 
 ### Yiyecek
 
-**Manage → Food** displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+**Yönet → Yiyecek**, Nightscout yiyecek veritabanında tanımlanan yiyecek ön ayarlarını gösterir. Daha fazla kurulum bilgisi için [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) sayfasına bakın.
 
-Note: Entries cannot be used in the **AAPS** calculator. (View only)
+Not: Bu kayıtlar **AAPS** hesaplayıcısında kullanılamaz. (Yalnızca görüntüleme)
 
 (Config-Builder-autotune)=
 
-### Autotune
+### OtoAyar
 
-You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+OtoAyar'ı etkinleştirebilirsiniz, [buraya](../AdvancedOptions/Autotune.md) bakın.
 
 ### Bakım
 
-Open the **menu** (☰) and select **Maintenance** to export / import settings and manage log files.
+Ayarları dışa / içe aktarmak ve günlük dosyalarını yönetmek için **menü**yü (☰) açın ve **Bakım**'ı seçin.
 
-![Maintenance screen, log files](../images/screens/maintenance.png)
+![Bakım ekranı, günlük dosyaları](../images/screens/maintenance.png)
 
-![Maintenance screen, file management](../images/screens/maintenance_2.png)
+![Bakım ekranı, dosya yönetimi](../images/screens/maintenance_2.png)
 
-![Maintenance screen, database management](../images/screens/maintenance_3.png)
+![Bakım ekranı, veritabanı yönetimi](../images/screens/maintenance_3.png)
 
-### Konfigürasyon ayarları
+### Config Builder
 
-Now called **Configuration**: this current page.
+Artık **Konfigürasyon** olarak adlandırılıyor: bu sayfa.

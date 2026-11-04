@@ -1,47 +1,47 @@
-# How to translate strings for the AAPS app or the documentation
+# כיצד לתרגם מחרוזות לאפליקציית AAPS או לתיעוד
 
-* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
+* למחרוזות של האפליקציה, עברו ל־<https://crowdin.com/project/androidaps> והתחברו באמצעות חשבון GitHub שלכם
 * For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. ציינו את השפה, ספרו מעט על עצמכם ועל הניסיון שלכם עם AAPS, וכתבו אם תרצו להיות מתרגמים או מגיהים (הגהה רק לאנשים עם ניסיון בתרגום שהם גם משתמשים מתקדמים ב־AAPS).
 
 ```{admonition} Time for Approval :class: note
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+The approval is a manual step. כארגון ללא מטרות רווח איננו מתחייבים לזמן תגובה (SLA), אך בדרך כלל האישור ניתן תוך פחות מיום אחד (< 1 יום). If not please contact the Doc team via Facebook or Discord.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](../images/translation_flags.png)
+    <br />* לאחר שנאשר אתכם, לחצו על הדגל
+       ![לאחר שנאשר אתכם, לחצו על הדגל](../images/translation_flags.png)
     
-    ## Translation of the app
+    ## תרגום האפליקציה
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### תרגום מחרוזות לאפליקציית AAPS
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * אם אין לכם העדפה אילו מחרוזות לתרגם, פשוט בחרו בלחצן "Translate All" כדי להתחיל. It will show you the strings which need translation.
     
        ![Click translate all](../images/translations-click-translate-all.png)
     
     * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
     
-       ![Click strings.xml](../images/translations-click-strings.png)
+       ![לחצו על strings.xml](../images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * תרגמו את המשפטים בצד שמאל: הוסיפו טקסט מתורגם חדש, או השתמשו בהצעה וערכו אותה 
     
-       ![Translation app](../images/translations-translate.png)
-    
-    
-    ### Proofread strings for AAPS app
-    
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
-    
-       ![Proofreading mode app](../images/translations-proofreading-mode.png) 
+       ![תרגום האפליקציה](../images/translations-translate.png)
     
     
-      and approve translated texts 
+    ### הגהת מחרוזות לאפליקציית AAPS
     
-       ![approve text](../images/translations-proofreading.png)
+    * מגיהים מתחילים בבחירת "Proofread" במסך הבית של השפה.
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+       ![מצב הגהה באפליקציה](../images/translations-proofreading-mode.png) 
+    
+    
+      ומאשרים טקסטים מתורגמים 
+    
+       ![אישור טקסט](../images/translations-proofreading.png)
+    
+    כאשר מגיה מאשר תרגום, הוא יתווסף לגרסה הבאה של AAPS.
     
     (translations-translation-of-the-documentation)=
     ## Translation of the documentation
@@ -63,8 +63,8 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
     
         1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
     
-        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
-        1. Press the "save" button to save a proposal for the translation. It will then be passed to a proofreader for final check.
+        1. אלה ההצעות לתרגום. כאן אפשר לראות במיוחד עד כמה Crowdin מעריך שההצעה מתאימה, או אם הטקסט כבר תורגם בעבר וחזר רק משום שהוא הועבר למקום אחר ולא שונה.
+        1. Press the "save" button to save a proposal for the translation. לאחר מכן הוא יועבר למגיה לבדיקה סופית.
     
     ![Translation docs](../images/translation_WikiTranslate.png)
     
@@ -72,9 +72,9 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
     
         1. the translation is proofread
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
+        1. הסתיים הסנכרון בין Crowdin ל־GitHub (פעם בשעה), שיוצר PR ב־GitHub.
     
-        1. the PR in Github was approved.
+        1. ה־PR ב־GitHub אושר.
     
     In general this needs 1 - 3 days but might during holiday take a little bit longer.
     
@@ -83,13 +83,13 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
     ```{admonition} Links are not translated anymore
     :class: note
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Links are not translated anymore. בעבר היה כאן נושא שעסק בכך, אך הוא הוסר. בעקבות המעבר ל־Markdown ול־myst_parser, אנו יוצרים במפורש תוויות בטקסט האנגלי ומעבירים אותן אוטומטית לשפות האחרות מאחורי הקלעים.
     
     
 
-You are translating the text which represents the link. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
+You are translating the text which represents the link. יש להקפיד **לא** להסיר את הקישור. הוא מיוצג באמצעות זוג תגיות `<0></0>` (או מספרים אחרים, אם יש בפסקה יותר מקישור אחד).
 
-It's the proofreaders job to have a special look on this!
+תפקידם של המגיהים לבדוק זאת בתשומת לב מיוחדת!
 
 ### Proofreading
 
@@ -101,4 +101,4 @@ It's the proofreaders job to have a special look on this!
     
     ![approve text](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. To speed up the process you can inform docs team about new translations.
+* כאשר מגיה מאשר תרגום, הוא יתווסף לבניית התיעוד הבאה. היא נעשית לפי הצורך, ללא לוח זמנים קבוע, אך בערך פעם בשבוע, חוץ מבחגים. To speed up the process you can inform docs team about new translations.

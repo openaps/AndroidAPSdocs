@@ -1,10 +1,10 @@
-# Other CGM uploaded to Nightscout
+# Kitas NGJ, siunčiantis duomenis į Nightscout
 
-Use this option if you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
+Naudokite šią parinktį, jei turite kitą NGJ, kuris jūsų KG duomenis gali siųsti **tik** į [Nightscout](https://nightscout.github.io/).
 
 ```{important}
-This data source will not work when you are offline, when you experience network issues or when your Nightscout site is down. Use with caution.
+Šis duomenų šaltinis neveiks, kai būsite be interneto, kai bus tinklo problemų arba kai jūsų Nightscout svetainė neveiks. Naudokite atsargiai.
 ```
 
--   Set up **NSClientV3** (**Configuration → Communication**) with your Nightscout site information.
--   Select NSClient BG in [**Configuration → BG Source**](#Config-Builder-bg-source).
+-   Nustatykite **NSClientV3** (**Konfigūracija → Ryšys**) ir įveskite savo Nightscout svetainės duomenis.
+-   Skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source) pasirinkite „NSClient glikemija“.

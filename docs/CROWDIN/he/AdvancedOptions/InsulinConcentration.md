@@ -1,217 +1,217 @@
 (Insulin-Concentration)=
-# Insulin Concentration
+# ריכוז האינסולין
 
 ```{warning}
-All commercial pumps are designed to be used with Insulin U100 **ONLY**. Using another insulin concentration in a pump can be dangerous. Although more and more users run AAPS with other concentrations, the conversion must always be managed and often leads to errors (even for very skilled users!).
+כל המשאבות המסחריות מתוכננות לשימוש עם אינסולין U100 **בלבד**. שימוש בריכוז אינסולין אחר במשאבה עלול להיות מסוכן. אף שיותר ויותר משתמשים מפעילים את AAPS עם ריכוזים אחרים, תמיד צריך לנהל את ההמרה, והיא מובילה לעיתים קרובות לטעויות (גם אצל משתמשים מנוסים מאוד!).
 ```
 
-## Reminder of the basics of insulin
+## תזכורת: יסודות האינסולין
 
-This chapter covers the essential concepts of insulin measurement and delivery.
+פרק זה מסביר את המושגים הבסיסיים של מדידת אינסולין ומתן אינסולין.
 
-### The insulin unit: a measure of action
+### יחידת האינסולין: מדד של פעולה
 
-Insulin is measured in **International Units (IU)**, which quantify its biological activity (power to lower blood sugar), not just its physical mass.
+אינסולין נמדד ב**יחידות בינלאומיות (IU)**, שמודדות את הפעילות הביולוגית שלו (היכולת להוריד את רמת הסוכר בדם), ולא רק את המסה הפיזית שלו.
 
-- **Definition:** 1 IU corresponds to the activity of a specific amount of insulin, standardized to **approximately 0.04167 mg**.
-- **Key Point:** A "unit" means the same biological effect across all insulin types, ensuring consistent dosing.
+- **הגדרה:** 1 IU מתאימה לפעילות של כמות מסוימת של אינסולין, שתוקננה ל-**כ-0.04167 מ"ג**.
+- **נקודה חשובה:** ל"יחידה" יש אותה השפעה ביולוגית בכל סוגי האינסולין, וכך המינון אחיד.
 
-### Insulin concentrations
+### ריכוזי אינסולין
 
-Insulin comes in different strengths, defined by the number of units per millilitre (ml).
+אינסולין מגיע בריכוזים שונים, שמוגדרים לפי מספר היחידות למיליליטר (ml).
 
-- **U100:** The global standard, containing **100 IU/ml**.
-- **U200-U500:** More concentrated insulins (e.g. U200 has 200 IU/ml) for smaller injection volumes.
-- **U40/U50:** Less common, historical concentrations (40 IU/ml and 50 IU/ml). **U40 requires U40-specific syringes.**
-- **Manual Dilution:** A clinical practice to create highly diluted insulin (e.g. U50, U10) for rare cases like neonatal use or extreme sensitivity. This requires meticulous pharmacy preparation.
+- **U100:** התקן העולמי, מכיל **100 IU/ml**.
+- **U200-U500:** אינסולינים מרוכזים יותר (למשל U200 מכיל 200 IU/ml) לנפחי הזרקה קטנים יותר.
+- **U40/U50:** ריכוזים פחות נפוצים והיסטוריים (40 IU/ml ו-50 IU/ml). **אינסולין U40 מחייב מזרקים ייעודיים ל-U40.**
+- **מיהול ידני:** שיטה קלינית ליצירת אינסולין מהול מאוד (למשל U50, U10) למקרים נדירים, כמו שימוש ביילודים או רגישות קיצונית. הדבר דורש הכנה קפדנית בבית מרקחת.
 
 ```{admonition} Critical Warning
 :class: danger
-Using a concentration with a non-matching device is extremely dangerous and can cause a severe overdose or underdose. **Always triple-check that the insulin concentration matches the syringe, pen, or pump specifications.**
+שימוש בריכוז עם מכשיר שאינו מתאים לו מסוכן מאוד, ועלול לגרום למינון יתר או לתת-מינון חמורים. **יש תמיד לבדוק שלוש פעמים שריכוז האינסולין מתאים למפרט של המזרק, העט או המשאבה.**
 ```
 
-## When is a non-standard concentration used?
+## מתי משתמשים בריכוז לא סטנדרטי?
 
-While insulin pumps are designed for U100 insulin, certain specific medical situations require non-standard concentrations. These scenarios require extreme caution and meticulous management.
+משאבות אינסולין מתוכננות לאינסולין U100, אבל מצבים רפואיים מסוימים דורשים ריכוזים לא סטנדרטיים. מצבים אלה דורשים זהירות רבה מאוד וניהול קפדני.
 
-### Use Case 1: diluted insulin for very low doses
+### מקרה 1: אינסולין מהול למינונים נמוכים מאוד
 
-- **Scenario:** Managing type 1 diabetes in very young babies and toddlers.
-- **Problem:** Their insulin needs are so low that the pump's minimum deliverable dose (e.g. 0.05 U) may still be too large, leading to difficulty in achieving precise glycemic control and a high risk of hypoglycemia.
-- **Solution:** Use highly diluted insulin (e.g. U10, which is 10 IU/ml).
-- **Effect:** This increases the volume of fluid delivered per unit of insulin. By making the "packages" of insulin larger in volume but weaker in concentration, it allows much finer adjustments and greater dosing accuracy with the pump's existing settings.
+- **מצב:** טיפול בסוכרת סוג 1 אצל תינוקות ופעוטות צעירים מאוד.
+- **בעיה:** הצורך שלהם באינסולין נמוך כל כך, שהמנה המינימלית שהמשאבה יכולה לתת (למשל 0.05 U) עדיין עלולה להיות גדולה מדי. לכן קשה להשיג איזון גליקמי מדויק, והסיכון להיפוגליקמיה גבוה.
+- **פתרון:** שימוש באינסולין מהול מאוד (למשל U10, כלומר 10 IU/ml).
+- **השפעה:** כך גדל נפח הנוזל שניתן לכל יחידת אינסולין. כאשר "חבילות" האינסולין גדולות יותר בנפח אבל חלשות יותר בריכוז, אפשר לבצע כיוונונים עדינים הרבה יותר ולקבל מינון מדויק יותר עם ההגדרות הקיימות של המשאבה.
 
 ```{admonition} Critical Safety Note on Dilution
 :class: danger
-Insulin dilution is a high-risk procedure that must never be attempted at home without specific training and medical supervision. It must be performed by a healthcare professional or a trained caregiver using sterile diluent specifically designed for that insulin type. **Never use tap water, saline, or any other fluid**, as this can deactivate the insulin, alter its action, and introduce dangerous contaminants.
+מיהול אינסולין הוא הליך בסיכון גבוה. אסור לעולם לנסות לבצע אותו בבית בלי הכשרה מתאימה ובלי פיקוח רפואי. המיהול חייב להתבצע על ידי איש מקצוע רפואי או מטפל מיומן, עם נוזל מיהול סטרילי שמיועד במיוחד לסוג האינסולין הזה. **לעולם אין להשתמש במי ברז, במי מלח או בכל נוזל אחר**, כי הם עלולים לנטרל את האינסולין, לשנות את פעולתו ולהכניס זיהומים מסוכנים.
 ```
 
-### Use Case 2: concentrated insulin for high insulin needs or significant insulin resistance
+### מקרה 2: אינסולין מרוכז לצורך גבוה באינסולין או לתנגודת חמורה לאינסולין
 
-- **Scenario:** Managing adults or adolescents with significant insulin resistance, or individuals who experience localized pain from the additives in standard insulin.
-- **Problem:**
-  1. **High Needs:** Very high daily insulin requirements can exceed the pump's maximum bolus or daily delivery limits.
-  1. **Pain:** The preservatives in insulin can cause stinging or irritation upon infusion.
-- **Solution:** Use a more concentrated insulin, such as U200 (200 IU/ml).
-- **Effect:** This delivers the required insulin dose in half the volume. For the user, the pump's internal settings must be adjusted (e.g. basal rates and boluses halved) to account for the doubled concentration, ensuring the correct number of units are delivered. This also reduces the volume of potentially irritating fluid delivered subcutaneously.
+- **מצב:** טיפול במבוגרים או במתבגרים עם תנגודת חמורה לאינסולין, או באנשים שחווים כאב מקומי מהתוספים שבאינסולין הרגיל.
+- **בעיה:**
+  1. **צורך גבוה:** צורך יומי גבוה מאוד באינסולין עלול לעבור את הבולוס המרבי של המשאבה או את מגבלות המתן היומיות שלה.
+  1. **כאב:** חומרי השימור באינסולין עלולים לגרום לצריבה או לגירוי בזמן העירוי.
+- **פתרון:** שימוש באינסולין מרוכז יותר, כמו U200 (200 IU/ml).
+- **השפעה:** כך מנת האינסולין הדרושה ניתנת בחצי נפח. יש לכוונן את ההגדרות הפנימיות של המשאבה (למשל להוריד בחצי את קצבי הבזאלי ואת הבולוסים) כדי להתחשב בריכוז הכפול, וכך לוודא שניתן מספר היחידות הנכון. כך גם קטן נפח הנוזל שעלול לגרות, שניתן מתחת לעור.
 
-## How to manage insulin concentration with AAPS (AAPS 3 and earlier)?
+## איך מנהלים ריכוז אינסולין עם AAPS (AAPS 3 ומטה)?
 
-Using non-U100 insulin in an AAPS loop requires meticulous configuration to align the software's calculations with the actual insulin being delivered. One common method is "Using a Modified Profile".
+שימוש באינסולין שאינו U100 בלולאת AAPS דורש הגדרה קפדנית, כדי שהחישובים של התוכנה יתאימו לאינסולין שניתן בפועל. שיטה נפוצה אחת היא "שימוש בפרופיל מותאם".
 
-### Using a modified profile
+### שימוש בפרופיל מותאם
 
-This method involves tricking AAPS into thinking the patient's insulin needs are lower than they are, to compensate for the pump delivering more concentrated insulin than it is designed for. The use case below is for U200 concentration put into the pump, designed for U100.
+בשיטה זו "מטעים" את AAPS כך שיחשוב שהצורך של המטופל באינסולין נמוך ממה שהוא באמת, כדי לפצות על כך שהמשאבה נותנת אינסולין מרוכז יותר ממה שהיא תוכננה לו. הדוגמה שלהלן היא לאינסולין בריכוז U200 שהוכנס למשאבה שמתוכננת ל-U100.
 
-- **The Core Problem:** A pump designed for U100 is calibrated to deliver **10 µL** for **1 unit**. If you fill it with U200 (1 unit of U200 corresponds to **5 µL** of insulin), when you select **1 unit** on the pump it delivers **10 µL** of insulin, but that volume now contains **2 units of U200 insulin**. This leads to a 100% overdose.
-- **The "Profile Switch 50%" Solution:** To correct this, the patient's entire therapy profile is scaled to be "twice as weak" inside AAPS.
-  1. The user creates a new profile based on their standard U100 profile, using the "Profile Switch **50%**" function.
-  1. This creates a new profile where:
-     - **Basal rates** are halved.
-     - **Insulin-to-Carb Ratio (IC)** is doubled (e.g. 1:10g becomes 1:20g).
-     - **Insulin Sensitivity Factor (ISF)** is doubled (e.g. 1 unit lowers BG by 50 mg/dL (2.8 mmol/L) becomes 1 unit lowers it by 100 mg/dL (5.6 mmol/L)).
-- **The Corrected Result:** AAPS now believes the patient only needs half the insulin. When it calculates and commands a **1-unit** bolus, the pump (designed for U100 but filled with U200) delivers the **10 µL**, which contains **2 real units of U200 insulin**. Because AAPS calculated this dose based on a "half-strength" profile, this **2 real-unit** delivery is the correct, intended dose. The loop's "half-strength" math aligns with the pump's "double-strength" delivery.
+- **הבעיה העיקרית:** משאבה שמתוכננת ל-U100 מכוילת לתת **10 µL** עבור **יחידה אחת**. אם ממלאים אותה ב-U200 (יחידה אחת של U200 מתאימה ל-**5 µL** אינסולין), כאשר בוחרים **יחידה אחת** במשאבה, היא נותנת **10 µL** אינסולין, אבל הנפח הזה מכיל עכשיו **2 יחידות של אינסולין U200**. התוצאה היא מינון יתר של 100%.
+- **הפתרון "החלפת פרופיל 50%":** כדי לתקן זאת, כל פרופיל הטיפול של המטופל מוקטן בתוך AAPS כך שיהיה "חלש פי שניים".
+  1. יוצרים פרופיל חדש על בסיס פרופיל ה-U100 הרגיל, בעזרת הפונקציה "החלפת פרופיל **50%**".
+  1. כך נוצר פרופיל חדש שבו:
+     - **קצבי הבזאלי** מוקטנים בחצי.
+     - **יחס אינסולין לפחמימות (IC)** מוכפל (למשל 1:10g הופך ל-1:20g).
+     - **פקטור הרגישות לאינסולין (ISF)** מוכפל (למשל "יחידה אחת מורידה את רמת הסוכר ב-50 mg/dL (2.8 mmol/L)" הופך ל"יחידה אחת מורידה אותה ב-100 mg/dL (5.6 mmol/L)").
+- **התוצאה המתוקנת:** AAPS חושב עכשיו שהמטופל צריך רק חצי מהאינסולין. כאשר הוא מחשב ושולח פקודה לבולוס של **יחידה אחת**, המשאבה (שמתוכננת ל-U100 אבל מלאה ב-U200) נותנת **10 µL**, שמכילים **2 יחידות אמיתיות של אינסולין U200**. מכיוון ש-AAPS חישב את המנה לפי פרופיל "בחצי כוח", מתן של **2 יחידות אמיתיות** הוא המנה הנכונה והמכוונת. החישוב "בחצי כוח" של הלולאה מתאים למתן "בכוח כפול" של המשאבה.
 
 ```{admonition} Critical Risks and Common Errors
 :class: caution
 
-This method introduces significant risks by creating a persistent disconnect between the app's data and physical reality.
+שיטה זו יוצרת סיכונים משמעותיים, כי נוצר פער קבוע בין הנתונים באפליקציה לבין המציאות הפיזית.
 
-**The Primary Error: The "External Bolus" Mismatch**
+**הטעות העיקרית: אי-התאמה ב"בולוס חיצוני"**
 
-The most common mistake occurs when delivering and logging insulin **outside** of the AAPS-pump system.
+הטעות הנפוצה ביותר קורית כאשר נותנים ורושמים אינסולין **מחוץ** למערכת AAPS-משאבה.
 
-- **The Scenario:** AAPS, using the modified profile, calculates a **5-unit** bolus for a meal. The user injects this with a U200 pen.
-- **The Dual Error:**
-  1. **Wrong Dose Selection:** The user thinks "AAPS calculates 5 units" and, because of the U200 pen, expects to deliver **5 real units of U200** without any conversion. However, because the profile is halved, the body actually needs **10 real units**. This is a **50% underdose**, which can lead to hyperglycemia.
-  1. **Wrong Insulin-on-Board (IOB) Calculation (Overestimated IOB):** When the user records this external bolus in AAPS, they log **5 units**. This is incorrect. Since the AAPS profile is for U200, **1 unit in AAPS equals 2 real units**. Therefore, the 5 real units delivered by the pen should be logged as **2.5 units** in the app. By logging 5 units, the user overestimates the IOB by 100%. AAPS now thinks there are 5 "concentrated units" on board (equivalent to 10 real units) when only 5 real units are active. This can cause the loop to suppress basal insulin or reduce future boluses, worsening the hyperglycemia risk from the initial underdose.
+- **המצב:** AAPS, עם הפרופיל המותאם, מחשב בולוס של **5 יחידות** לארוחה. המשתמש מזריק אותו בעט U200.
+- **הטעות הכפולה:**
+  1. **בחירת מנה שגויה:** המשתמש חושב "AAPS חישב 5 יחידות" ובגלל עט ה-U200 מצפה לתת **5 יחידות אמיתיות של U200** בלי שום המרה. אבל מכיוון שהפרופיל מוקטן בחצי, הגוף צריך בפועל **10 יחידות אמיתיות**. זהו **תת-מינון של 50%**, שעלול לגרום להיפרגליקמיה.
+  1. **חישוב שגוי של אינסולין פעיל (IOB) (הערכת יתר של IOB):** כאשר המשתמש רושם את הבולוס החיצוני הזה ב-AAPS, הוא רושם **5 יחידות**. זה לא נכון. מכיוון שהפרופיל ב-AAPS הוא ל-U200, **יחידה אחת ב-AAPS שווה ל-2 יחידות אמיתיות**. לכן את 5 היחידות האמיתיות שניתנו בעט צריך לרשום באפליקציה כ-**2.5 יחידות**. כאשר רושמים 5 יחידות, ה-IOB מוערך ביותר ב-100%. AAPS חושב עכשיו שיש בגוף 5 "יחידות מרוכזות" (ששוות ל-10 יחידות אמיתיות), בזמן שפעילות בפועל רק 5 יחידות אמיתיות. כתוצאה מכך הלולאה עלולה להפחית את האינסולין הבזאלי או להקטין בולוסים עתידיים, וכך להגדיל את הסיכון להיפרגליקמיה שנגרמה מתת-המינון הראשון.
 
-**Other Risks:**
+**סיכונים נוספים:**
 
-- **Misleading Data and Reports:** All data within AAPS or Nightscout - including IOB, total daily dose (TDD), and historical reports - is in "concentrated units". This gives a distorted picture to the user and their medical team. A doctor reviewing a report might see a TDD of 30 units and not realize the patient actually received 60 real units, leading to incorrect therapy assessments.
-- **Altered Mental Model:** After prolonged use, the user begins to "think" in the app's halved values. They internalize that their ISF is 100 mg/dL (5.6 mmol/L) or their basal is 0.5 U/hr, forgetting these are "concentrated". This creates a dangerous dependency on the system and a loss of touch with their actual insulin requirements, which is critical for safety during pump failures or app issues.
+- **נתונים ודוחות מטעים:** כל הנתונים ב-AAPS או ב-Nightscout - כולל IOB, סך האינסולין היומי (TDD) ודוחות היסטוריים - הם ב"יחידות מרוכזות". כך המשתמש והצוות הרפואי מקבלים תמונה מעוותת. רופא שבודק דוח עלול לראות TDD של 30 יחידות ולא להבין שהמטופל קיבל בפועל 60 יחידות אמיתיות. כך עלולה להיות הערכה שגויה של הטיפול.
+- **שינוי בדרך החשיבה:** אחרי שימוש ממושך, המשתמש מתחיל "לחשוב" בערכים המוקטנים של האפליקציה. הוא מתרגל לכך שה-ISF שלו הוא 100 mg/dL (5.6 mmol/L) או שהבזאלי שלו הוא 0.5 U/hr, ושוכח שאלה ערכים "מרוכזים". כך נוצרת תלות מסוכנת במערכת ואובדן קשר עם הצורך האמיתי באינסולין. זה קריטי לבטיחות כאשר המשאבה מתקלקלת או כשיש בעיות באפליקציה.
 
-**Conclusion:** This method requires absolute vigilance, forcing the user to constantly convert between a "concentrated world" in the app and the physical world. Any external insulin delivery or data review breaks this mental model and poses a severe risk. It fundamentally changes the meaning of every number in the system.
+**מסקנה:** שיטה זו דורשת ערנות מוחלטת, ומחייבת את המשתמש להמיר כל הזמן בין "עולם מרוכז" באפליקציה לבין העולם הפיזי. כל מתן אינסולין חיצוני או בדיקת נתונים שובר את דרך החשיבה הזו ויוצר סיכון חמור. השיטה משנה מהיסוד את המשמעות של כל מספר במערכת.
 ```
 
-## Using the concentration parameter (new feature in AAPS 4.0)
+## שימוש בפרמטר הריכוז (תכונה חדשה ב-AAPS 4.0)
 
-To mitigate the risks of using a modified profile, a new feature manages insulin concentration directly within AAPS. This feature handles the conversions automatically, allowing the main application to always work in **Real International Units (IU)**.
+כדי להקטין את הסיכונים של שימוש בפרופיל מותאם, תכונה חדשה מנהלת את ריכוז האינסולין ישירות בתוך AAPS. התכונה מבצעת את ההמרות באופן אוטומטי, כך שהאפליקציה הראשית עובדת תמיד ב**יחידות בינלאומיות אמיתיות (IU)**.
 
-### How it works: automatic conversion
+### איך זה עובד: המרה אוטומטית
 
-The core principle is a clear separation between the app's logic and the pump's communication:
+העיקרון המרכזי הוא הפרדה ברורה בין הלוגיקה של האפליקציה לבין התקשורת עם המשאבה:
 
-- **AAPS Uses International Units:** The main AAPS database, algorithms, reports, and logs **always use Real IU**. This means your IOB, TDD, and therapy settings (basal, ISF, IC) reflect the actual biological insulin units.
-- **Pump Driver Uses Concentrated Units:** All values sent to or received from the pump driver are automatically converted to manage "Concentrated Units" within the pump driver, based on the selected concentration.
-  - **Example with U200:** When the user requests a **1 unit bolus**, the pump driver receives **0.5 CU (Concentrated Units)** before sending it to the pump. The pump (set for U100) then delivers **5 µL**, which contains **1 IU of U200 insulin**.
+- **AAPS משתמש ביחידות בינלאומיות:** מסד הנתונים הראשי של AAPS, האלגוריתמים, הדוחות והיומנים **משתמשים תמיד ב-IU אמיתיות**. המשמעות היא שה-IOB, ה-TDD והגדרות הטיפול (בזאלי, ISF, IC) משקפים את יחידות האינסולין הביולוגיות האמיתיות.
+- **מנהל ההתקן של המשאבה משתמש ביחידות מרוכזות:** כל הערכים שנשלחים למנהל ההתקן של המשאבה או מתקבלים ממנו מומרים באופן אוטומטי ל"יחידות מרוכזות" בתוך מנהל ההתקן, לפי הריכוז שנבחר.
+  - **דוגמה עם U200:** כאשר המשתמש מבקש **בולוס של יחידה אחת**, מנהל ההתקן של המשאבה מקבל **0.5 CU (יחידות מרוכזות)** לפני השליחה למשאבה. המשאבה (שמוגדרת ל-U100) נותנת אז **5 µL**, שמכילים **1 IU של אינסולין U200**.
 
-### Benefits and remaining risks
+### יתרונות וסיכונים שנותרו
 
-**Benefits:**
+**יתרונות:**
 
-- Eliminates the need for a modified profile and its associated mental conversion errors.
-- Users can always "think" in Real IU.
-- For an external bolus with a pen, just select the expected amount of insulin on the pen (whatever the pen and insulin concentration used). No conversion is needed, as pens U100 and U200 always use IU for unit selection.
-- All AAPS reports and data (TDD, IOB) are in Real IU, providing clarity for the user and their medical team.
-- Removes the risk of miscalculating external boluses, as they are logged in Real IU.
+- אין צורך בפרופיל מותאם, וגם לא בטעויות ההמרה בראש שבאות איתו.
+- המשתמשים יכולים תמיד "לחשוב" ב-IU אמיתיות.
+- לבולוס חיצוני בעט, פשוט בוחרים בעט את כמות האינסולין הרצויה (לא משנה באיזה עט ובאיזה ריכוז אינסולין משתמשים). אין צורך בהמרה, כי בעטים U100 ו-U200 בוחרים תמיד את הכמות ב-IU.
+- כל הדוחות והנתונים של AAPS (TDD, IOB) הם ב-IU אמיתיות, וכך התמונה ברורה למשתמש ולצוות הרפואי.
+- אין יותר סיכון לחישוב שגוי של בולוסים חיצוניים, כי הם נרשמים ב-IU אמיתיות.
 
-**Remaining Risks:**
+**סיכונים שנותרו:**
 
-- **Mental Model Transition:** Users switching from the "modified profile" method must switch their profile back to the correct real profile (i.e. twice as strong if they come from U200), and need time to adjust their **mental model**. After being accustomed to "Concentrated" values in the app, they must re-learn to trust the **real, unhidden IU values** displayed everywhere. This period of adjustment carries a risk of misinterpretation.
-- **Manual Pump Bolus:** Using the pump's own bolus function (bypassing AAPS) results in a 100% overdose, as the pump delivers U200 insulin using U100 volume calculations.
-- **General Warning:** Using non-standard concentrations remains an advanced procedure with risks and is not officially recommended.
+- **מעבר בדרך החשיבה:** משתמשים שעוברים משיטת "הפרופיל המותאם" חייבים להחזיר את הפרופיל לפרופיל האמיתי הנכון (כלומר חזק פי שניים אם הם באים מ-U200), וצריכים זמן כדי לשנות את **דרך החשיבה** שלהם. אחרי שהתרגלו לערכים "מרוכזים" באפליקציה, עליהם ללמוד מחדש לסמוך על **ערכי ה-IU האמיתיים והגלויים** שמוצגים בכל מקום. בתקופת ההסתגלות הזו יש סיכון לפרשנות שגויה.
+- **בולוס ידני מהמשאבה:** שימוש בפונקציית הבולוס של המשאבה עצמה (לא דרך AAPS) גורם למינון יתר של 100%, כי המשאבה נותנת אינסולין U200 לפי חישובי נפח של U100.
+- **אזהרה כללית:** שימוש בריכוזים לא סטנדרטיים נשאר הליך מתקדם עם סיכונים, ואין לו המלצה רשמית.
 
 ```{admonition} Never use the pump's own interface (tube pump users) to deliver a bolus manually
 :class: danger
-Stick a permanent note on your pump **"U200 Insulin"** as a reminder, to never forget it!
+הדביקו על המשאבה פתק קבוע **"U200 Insulin"** כתזכורת, כדי לא לשכוח זאת לעולם!
 ```
 
-### User interface display
+### התצוגה בממשק המשתמש
 
-To provide clarity, the user interface shows both real and concentrated units where relevant. Note that the user interface remains unchanged if the current insulin is U100.
+כדי שיהיה ברור, ממשק המשתמש מציג גם יחידות אמיתיות וגם יחידות מרוכזות, במקומות שבהם זה רלוונטי. אם האינסולין הנוכחי הוא U100, ממשק המשתמש לא משתנה.
 
-**Display Examples:**
+**דוגמאות לתצוגה:**
 
-- **Bolus Progress Dialog:**
-  - The Bolus Progress dialog is within the core AAPS application, so only the information in IU is shown (consistent with the user selection): **`2.50 U / 10.00 U delivered`**
-- **Pump Driver Interface (Current Status):**
-  - Within the Pump overview, the delivered amount is shown in both units; for example, if `U200` is selected: **`Last Bolus: 10 U (5 CU) (10')`**
+- **חלון התקדמות הבולוס:**
+  - חלון התקדמות הבולוס הוא חלק מהאפליקציה הראשית של AAPS, ולכן מוצג בו רק המידע ב-IU (בהתאם לבחירת המשתמש): **`2.50 U / 10.00 U delivered`**
+- **ממשק מנהל ההתקן של המשאבה (מצב נוכחי):**
+  - בסקירת המשאבה, הכמות שניתנה מוצגת בשתי היחידות; למשל, אם נבחר `U200`: **`Last Bolus: 10 U (5 CU) (10')`**
 
-**Please Note:** Both units (U and CU) are only visible in the main Pump overview. Depending on your specific pump, you can have other screens where only the Concentrated Units are shown. Historical data within pump drivers will typically remain in "Concentrated Units".
+**שימו לב:** שתי היחידות (U ו-CU) מוצגות רק בסקירה הראשית של המשאבה. בהתאם למשאבה שלכם, ייתכנו מסכים אחרים שבהם מוצגות רק היחידות המרוכזות. הנתונים ההיסטוריים במנהלי ההתקן של המשאבות יישארו בדרך כלל ב"יחידות מרוכזות".
 
-### Enabling the feature
+### הפעלת התכונה
 
-Due to the inherent safety risks, this parameter is not enabled by default. To activate it, finish Objective 3 and enable **Insulin concentration support** within General Settings.
+בגלל סיכוני הבטיחות, פרמטר זה אינו מופעל כברירת מחדל. כדי להפעיל אותו, יש להשלים את משימה 3 ולהפעיל את **תמיכה בריכוזי אינסולין** בהגדרות הכלליות.
 
-### Create a new insulin with another concentration
+### יצירת אינסולין חדש בריכוז אחר
 
-To create an insulin with another concentration, first open **Manage → Insulin settings**.
+כדי ליצור אינסולין בריכוז אחר, פתחו קודם את **ניהול → הגדרות אינסולין**.
 
-- Click the "+" icon at the bottom of the screen.
-- Select the new expected concentration from the dropdown menu (U10, U20, U50, U100, U200 are available).
-  - Diluted concentrations like U10, U20 or U50 are for children with very low basal rates.
-  - U200 is more for adults with high insulin needs.
+- לחצו על הסמל "+" בתחתית המסך.
+- בחרו את הריכוז החדש הרצוי מהתפריט הנפתח (זמינים U10, U20, U50, U100, U200).
+  - ריכוזים מהולים כמו U10, U20 או U50 מיועדים לילדים עם קצבי בזאלי נמוכים מאוד.
+  - U200 מתאים יותר למבוגרים עם צורך גבוה באינסולין.
 
-  ![The concentration dropdown in Insulin settings](../images/v4/Insulin/insulin_concentration_dropdown.png)
+  ![התפריט הנפתח של הריכוז בהגדרות האינסולין](../images/v4/Insulin/insulin_concentration_dropdown.png)
 
-- Adjust peak time, Duration of Insulin Action (DIA), and customize the Insulin Nickname (optional).
-- Use the save button at the top right of the screen.
+- כוונו את זמן השיא ואת משך פעולת האינסולין (DIA), ואם רוצים, שנו את הכינוי לאינסולין.
+- השתמשו בכפתור השמירה בחלק העליון של המסך (בממשק בעברית הוא עשוי להופיע בצד שמאל).
 
-At this step the insulin has been created, but cannot be selected directly from **Insulin settings**.
+בשלב זה האינסולין נוצר, אבל אי אפשר לבחור אותו ישירות מ**הגדרות אינסולין**.
 
-### Switch concentration from U100 to Uxxx (AAPS 4)
+### החלפת ריכוז מ-U100 ל-Uxxx (AAPS 4)
 
 ```{admonition} Switching concentration is only allowed during a reservoir or patch/pod change
 :class: warning
-For safety reasons, AAPS only records a concentration switch during a Reservoir Change or Patch/Pod Change.
+מטעמי בטיחות, AAPS רושם החלפת ריכוז רק בזמן החלפת מכל או החלפת פאץ'/פוד.
 ```
 
-When you start from U100 insulin, all your profile, historical data and reports are consistent with the International Units standard, so the switch is very "easy":
+כאשר מתחילים מאינסולין U100, כל הפרופיל, הנתונים ההיסטוריים והדוחות מתאימים לתקן היחידות הבינלאומיות, ולכן ההחלפה "קלה" מאוד:
 
-- For a Patch/Pod pump, you have a dedicated step when you change the pump, to select the insulin you put into it.
-- For a tube pump, click the Prime/Fill button (for Insulin Change) within the Overview (expanded status bar view), then click the "Change" button.
+- במשאבת פאץ'/פוד יש שלב ייעודי בזמן החלפת המשאבה, שבו בוחרים את האינסולין שהוכנס אליה.
+- במשאבה עם צינורית, לחצו על הכפתור תיחול/מילוי (להחלפת אינסולין) במסך הסקירה (בתצוגה המורחבת של שורת המצב), ואז לחצו על הכפתור "שינוי".
 
-1. Select the target concentration in the dropdown menu (e.g. `U200`).
-1. Then select the right insulin below. Until you confirm, the caption above its name says **Will be activated** (instead of **Currently active**).
+1. בחרו את ריכוז היעד בתפריט הנפתח (למשל `U200`).
+1. אחר כך בחרו את האינסולין הנכון למטה. עד שמאשרים, הכיתוב מעל שמו הוא **יופעל** (במקום **פעיל כעת**).
 
-   ![An insulin picked but not confirmed yet: Will be activated](../images/v4/Insulin/insulin_will_be_activated.png)
+   ![אינסולין שנבחר אבל עדיין לא אושר: יופעל](../images/v4/Insulin/insulin_will_be_activated.png)
 
-1. **Important:** the concentration switch is only recorded within AAPS after the Profile Switch is applied to the pump.
-   - This step is mandatory for all Patch/Pod pumps.
-   - For tube pumps, wait for the Profile Switch to be applied to the pump, or within **Manage → Profile** or **Insulin settings**.
+1. **חשוב:** החלפת הריכוז נרשמת ב-AAPS רק אחרי שהחלפת הפרופיל הוחלה במשאבה.
+   - שלב זה חובה בכל משאבות הפאץ'/פוד.
+   - במשאבות עם צינורית, יש לחכות שהחלפת הפרופיל תוחל במשאבה, או ב**ניהול → פרופיל** או ב**הגדרות אינסולין**.
 
-That's all!
+זה הכול!
 
-If a temporary **Profile Switch** (one with a duration) is running when you change the insulin, the new insulin is also given to the profile that comes back when the temporary switch ends. The old insulin does not come back.
+אם **החלפת פרופיל** זמנית (עם משך) פועלת בזמן שמחליפים את האינסולין, האינסולין החדש ניתן גם לפרופיל שחוזר כאשר ההחלפה הזמנית מסתיימת. האינסולין הישן לא חוזר.
 
-### Switch concentration for users with U200 insulin associated with a 50% profile (AAPS 4)
+### החלפת ריכוז למשתמשים עם אינסולין U200 ופרופיל 50% (AAPS 4)
 
-When you start from U200 already used in your pump, but associated with a 50% profile, you have to do additional steps compared to the standard switch from U100 insulin.
+כאשר מתחילים מ-U200 שכבר נמצא בשימוש במשאבה, אבל עם פרופיל 50%, יש לבצע שלבים נוספים לעומת ההחלפה הרגילה מאינסולין U100.
 
-Keep in mind that the most difficult part will probably not be how to manage the switch correctly within AAPS, but rather to train your brain again to think "IU" instead of "CU". All standard values for boluses (breakfast, lunch, dinner...) will be twice as high, the same for your TDDs, basal rates, etc. You have to be very cautious not to make errors during the first several weeks, until you "think again" in International Units.
+יש לזכור שהחלק הקשה ביותר כנראה לא יהיה ניהול נכון של ההחלפה ב-AAPS, אלא לאמן מחדש את המוח לחשוב ב-"IU" במקום ב-"CU". כל הערכים הרגילים של הבולוסים (ארוחת בוקר, צהריים, ערב...) יהיו גבוהים פי שניים, וכך גם ה-TDD, קצבי הבזאלי וכו'. יש להיזהר מאוד לא לטעות בשבועות הראשונים, עד שחוזרים "לחשוב" ביחידות בינלאומיות.
 
-- First, prepare a new profile with all values consistent with International Units:
-  - Do a temporary Profile Switch 200% of your standard running profile.
-  - Open the menu (☰) → **Treatments**, go to the **Profile switch** tab and clone the new 200% profile (see [Clone a Profile switch](#your-aaps-profile-clone-profile-switch)).
-  - Switch back to your standard profile until the next Reservoir or Patch change.
-  - Go to **Manage → Profile** and rename this new profile with an explicit name (it will be your future profile associated with U200 insulin set in AAPS 4).
-- If you use the Dynamic ISF (DynISF) feature, you have to disable it for at least one week:
-  - All your history recorded within AAPS or Nightscout is in the wrong units (CU), half the real value in International Units. Wait at least one week with the U200 insulin running before re-enabling it.
-- You are now ready to switch insulin (with a new U200 defined within **Insulin settings**) on the following Insulin Change or Pod Change.
-- Once the new U200 insulin is correctly applied, don't forget to apply the new standard profile defined in the first step.
+- קודם כול, הכינו פרופיל חדש שכל הערכים בו מתאימים ליחידות בינלאומיות:
+  - בצעו החלפת פרופיל זמנית של 200% לפרופיל הרגיל הפעיל שלכם.
+  - פתחו את התפריט (☰) → **טיפולים**, עברו ללשונית **החלפת פרופיל** ושכפלו את הפרופיל החדש של 200% (ראו [שכפול החלפת פרופיל](#your-aaps-profile-clone-profile-switch)).
+  - חזרו לפרופיל הרגיל שלכם עד ההחלפה הבאה של המכל או הפאץ'.
+  - עברו אל **ניהול → פרופיל** ותנו לפרופיל החדש הזה שם ברור (זה יהיה הפרופיל העתידי שלכם, שקשור לאינסולין U200 שמוגדר ב-AAPS 4).
+- אם אתם משתמשים בתכונה רגישות דינאמית (DynISF), יש לכבות אותה לפחות לשבוע:
+  - כל ההיסטוריה שנרשמה ב-AAPS או ב-Nightscout היא ביחידות השגויות (CU), חצי מהערך האמיתי ביחידות בינלאומיות. יש לחכות לפחות שבוע עם אינסולין U200 פעיל לפני שמפעילים אותה שוב.
+- עכשיו אפשר להחליף את האינסולין (עם אינסולין U200 חדש שמוגדר ב**הגדרות אינסולין**) בהחלפת האינסולין או בהחלפת הפוד הבאה.
+- אחרי שאינסולין ה-U200 החדש הוחל כראוי, אל תשכחו להחיל את הפרופיל הרגיל החדש שהוגדר בשלב הראשון.
 
-## How to manage external boluses with different pens?
+## איך מנהלים בולוסים חיצוניים עם עטים שונים?
 
-### With U200 insulin associated with a 50% profile (AAPS 3)
+### עם אינסולין U200 ופרופיל 50% (AAPS 3)
 
-Keep in mind that all pen graduations are in International Units, so whatever the pen used (U100, U200), if you use a pen for an external bolus you have to manage conversion in both directions:
+יש לזכור שכל השנתות בעטים הן ביחידות בינלאומיות. לכן, לא משנה באיזה עט משתמשים (U100, U200), כאשר נותנים בולוס חיצוני בעט צריך לבצע המרה בשני הכיוונים:
 
-- From AAPS to the pen: if the Calculator proposes a bolus, or if you have a specific quantity in mind, multiply by 2 when you select the amount on the pen, compared to the same bolus applied from AAPS.
-- From the pen to AAPS: if you selected an amount on the pen to give an external bolus, divide this amount by 2 to record the right quantity within AAPS (Insulin button, external bolus), to get the correct IOB calculation in CU (Concentrated Units).
+- מ-AAPS לעט: אם המחשבון מציע בולוס, או אם יש לכם כמות מסוימת בראש, הכפילו ב-2 כשבוחרים את הכמות בעט, לעומת אותו בולוס שניתן מ-AAPS.
+- מהעט ל-AAPS: אם בחרתם כמות בעט כדי לתת בולוס חיצוני, חלקו את הכמות ב-2 כדי לרשום את הכמות הנכונה ב-AAPS (כפתור אינסולין, בולוס חיצוני), וכך לקבל חישוב IOB נכון ב-CU (יחידות מרוכזות).
 
-### With U200 insulin using the concentration management included in AAPS 4
+### עם אינסולין U200 וניהול הריכוז המובנה ב-AAPS 4
 
-Things are much simpler with the internal management of concentration within AAPS: just select the expected amount on the pen (whatever the pen and corresponding insulin used), and record it within AAPS.
+הכול פשוט הרבה יותר עם הניהול הפנימי של הריכוז ב-AAPS: פשוט בוחרים בעט את הכמות הרצויה (לא משנה באיזה עט ובאיזה אינסולין משתמשים), ורושמים אותה ב-AAPS.
 
-- Within the Insulin button, if you select an external bolus, you can select any type of insulin defined within **Insulin settings** (mainly U100, U200 for pens). That way you get a very precise calculated IOB, even if the peak/DIA of the insulin used with the pen is very different from the peak/DIA used in the pump.
+- בכפתור אינסולין, אם בוחרים בולוס חיצוני, אפשר לבחור כל סוג אינסולין שמוגדר ב**הגדרות אינסולין** (בעיקר U100, U200 לעטים). כך מקבלים חישוב IOB מדויק מאוד, גם אם זמן השיא/DIA של האינסולין שבעט שונה מאוד מזמן השיא/DIA של האינסולין במשאבה.

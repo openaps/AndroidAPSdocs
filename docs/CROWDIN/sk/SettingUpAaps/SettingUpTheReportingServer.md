@@ -12,7 +12,7 @@ Odporúčame používať Nightscout.
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout je webová aplikácia, ktorá dokáže zaznamenávať a zobrazovať vaše údaje CGM a údaje **AAPS** a vytvárať prehľady. Je to výkonná platforma, ktorá je už mnoho rokov integrovaná do **AAPS**. Umožňuje používateľom a opatrovateľom sledovať údaje o diabete pacienta takmer v reálnom čase (ak je medzi všetkými zapojenými komponentmi dostatočné internetové pripojenie, medzi prijatím a sprístupnením dát môže uplynúť len niekoľko sekúnd). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
+Nightscout je webová aplikácia, ktorá dokáže zaznamenávať a zobrazovať vaše údaje CGM a údaje **AAPS** a vytvárať prehľady. Je to výkonná platforma, ktorá je už mnoho rokov integrovaná do **AAPS**. Umožňuje používateľom a opatrovateľom sledovať údaje o diabete pacienta takmer v reálnom čase (ak je medzi všetkými zapojenými komponentmi dostatočné internetové pripojenie, medzi prijatím a sprístupnením dát môže uplynúť len niekoľko sekúnd). Prenáša aj vzdialené príkazy, ktoré opatrovatelia posielajú do **AAPS** z **AAPSClient** (pozrite [Ovládanie Master ↔ Client](#client-master-control)).
 
 Nightscout je softvér s otvoreným zdrojovým kódom. Server Nightscout si môže vytvoriť a prevádzkovať ktokoľvek, pomocou bezplatných alebo platených služieb.
 
@@ -44,7 +44,7 @@ Tidepool je v **AAPS** dostupný od verzie 3.2, ktorá vyšla koncom roka 2023.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
+Pri používaní **AAPS** uplynú medzi príjmom dát a ich zobrazením v reportoch tri hodiny, preto Tidepool nie je vhodný na zdieľanie informácií s opatrovateľmi v reálnom čase.  
 Na druhej strane, Tidepool môže byť skvelé riešenie na zdieľanie reportov s diabetológom pacienta, ak Nightscout nie je prijateľné riešenie.  
 ```
 

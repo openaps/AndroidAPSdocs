@@ -1,250 +1,250 @@
-# Completing the Objectives
+# Slutföra målen
 
-**AAPS** has a series of **Objectives** required to be completed to help the user progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **Objectives** aims to ensure you have:
+**AAPS** har en serie **Mål** som du måste slutföra. De hjälper dig att gå vidare från enkel öppen loop till hybrid sluten loop och alla funktioner i **AAPS**. Syftet med att slutföra **Mål** är att se till att du har:
 
-* Configured everything correctly in your **AAPS** setup;
-* Learned about the essential features of **AAPS**; and
-* A basic understanding of what your system can do, in order to help instill confidence when using **AAPS**.
+* ställt in allt korrekt i din konfiguration av **AAPS**;
+* lärt dig de viktigaste funktionerna i **AAPS**; och
+* en grundläggande förståelse för vad ditt system kan göra, så att du känner dig trygg när du använder **AAPS**.
 
-When **AAPS** is installed for the first time, each objective must be completed before moving on to the next one. New features will gradually be unlocked as progress is made through each **Objective**.
+När **AAPS** installeras för första gången måste du slutföra varje mål innan du kan gå vidare till nästa. Nya funktioner låses upp steg för steg när du går vidare genom varje **Mål**.
 
-**Objectives 1 to 8** will guide you from configuring **AAPS** on your smartphone to “basic” hybrid closed looping. This will take about 6 weeks to complete. You can proceed up to **Objective 5** using a virtual pump (and using some other method of insulin delivery in the meantime). **Objectives 9 and 10** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. Further details on an estimated breakdown of time can be obtained here: [How long will it take?](#preparing-how-long-will-it-take)
+**Mål 1 till 8** leder dig från att ställa in **AAPS** på din smarttelefon till en ”grundläggande” hybrid sluten loop. Det tar ungefär 6 veckor att slutföra. Du kan gå vidare fram till **Mål 5** med en virtuell pump (och under tiden ta insulin på något annat sätt). **Mål 9 och 10** är till för att testa mer avancerade funktioner i **AAPS**, med målet att få bättre kontroll över din diabetes. Det tar upp till 3 månader att slutföra dem, kanske längre. Mer information om hur lång tid varje del ungefär tar finns här: [Hur lång tid tar det?](#preparing-how-long-will-it-take)
 
-As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
+Förutom att gå framåt genom **Mål** kan du vid behov också ta bort dina framsteg och [gå tillbaka till ett tidigare mål](#CompletingTheObjectives-go-back-in-objectives).
 
-## Backup your settings
+## Säkerhetskopiera dina inställningar
 
 ```{admonition} Note
 :class: note
 
-Exporting your **AAPS** settings is recommended after completing each **Objective**!
+Vi rekommenderar att du exporterar dina **AAPS**-inställningar efter varje slutfört **Mål**!
 ```
 
-It is strongly recommended that you [export your settings](../Maintenance/ExportImportSettings.md) after completing each objective to avoid losing any progress made in **AAPS**. This exporting process creates a **settings file** (.json) which should be backed-up in one or more safe places (e.g. Google Drive, hard disk, email attachment _etc._). This ensures that any progress made in **AAPS** is saved. If your phone is lost or if you accidentally delete your progress, the json file can be re-loaded to **AAPS** by importing a recent settings file. Having a backup **settings file** is also required if a new **AAPS** smartphone is required for any reason (upgrading/lost/broken phone _etc._)
+Vi rekommenderar starkt att du [exporterar dina inställningar](../Maintenance/ExportImportSettings.md) efter varje slutfört mål, så att du inte förlorar några framsteg i **AAPS**. Exporten skapar en **inställningsfil** (.json) som du bör spara på ett eller flera säkra ställen (t.ex. Google Drive, hårddisk, bifogad fil i e-post _osv._). På så sätt sparas alla framsteg du har gjort i **AAPS**. Om du tappar bort telefonen eller råkar radera dina framsteg kan du läsa in json-filen i **AAPS** igen genom att importera en nyligen sparad inställningsfil. Du behöver också en säkerhetskopia av **inställningsfilen** om du av någon anledning behöver en ny smarttelefon för **AAPS** (uppgradering, borttappad eller trasig telefon _osv._)
 
-The **settings** file will save not only your progress through the **Objectives**, but also all your **AAPS** settings such as **max bolus** _etc._
+**Inställningsfilen** sparar inte bara dina framsteg i **Mål**, utan också alla dina inställningar i **AAPS**, till exempel **maximal bolus** _osv._
 
-The **Objectives** will need to be restarted from the beginning should you fail to have a backup of your settings and anything happens to your **AAPS** smartphone. Progressing through the **Objectives** takes time, and having to re-complete them again because for example you lost your smartphone, is a situation to be best avoided.
+Om du inte har en säkerhetskopia av dina inställningar och något händer med din smarttelefon för **AAPS**, måste du börja om med **Mål** från början. Det tar tid att gå igenom **Mål**, och att behöva göra om dem för att du till exempel har tappat bort din smarttelefon är något du helst vill undvika.
 
 (objectives-objective1)=
-## Objective 1: Setting up visualization and monitoring, analyzing basals and ratios
+## Mål 1: Ställa in visualisering och övervakning, analysera basaler och kvoter
 
-**Objective 1** requires the user to set up their basic technical setup in **AAPS**. No progress can be made until this step has been completed.
+I **Mål 1** ställer du in den grundläggande tekniska konfigurationen i **AAPS**. Du kan inte gå vidare förrän det här steget är slutfört.
 
-- Select the correct CGM/FGM in [Configuration → BG Source](#Config-Builder-bg-source). See [BG Source](../Getting-Started/CompatiblesCgms.md) for more information.
-- Select the correct Pump in [Configuration → Pump](#Config-Builder-pump) to ensure your pump can communicate with **AAPS**. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **Objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/CompatiblePumps.md) for more information.
-- If using Nightscout:
-  - Follow instructions in [Nightscout](../SettingUpAaps/Nightscout.md) page to ensure **Nightscout** can receive and display **AAPS** data.
-  - Note that the URL in **NSClientV3** must be **_without_ "/api/v1/"** at the end - see [Settings → NSClientV3](#Preferences-nsclient).
-- If using Tidepool:
-  - Follow instructions in [Tidepool](../SettingUpAaps/Tidepool.md) page to ensure **Tidepool** can receive and display **AAPS** data.
+- Välj rätt CGM/FGM i [Konfiguration → BG-källa](#Config-Builder-bg-source). Se [BG-källa](../Getting-Started/CompatiblesCgms.md) för mer information.
+- Välj rätt pump i [Konfiguration → Pump](#Config-Builder-pump) så att din pump kan kommunicera med **AAPS**. Välj **virtuell pump** om du använder en pumpmodell som saknar drivrutin i **AAPS** för loopning, eller om du vill gå igenom de första **Mål** medan du använder ett annat system för insulintillförsel. Se [insulinpump](../Getting-Started/CompatiblePumps.md) för mer information.
+- Om du använder Nightscout:
+  - Följ instruktionerna på sidan [Nightscout](../SettingUpAaps/Nightscout.md) så att **Nightscout** kan ta emot och visa data från **AAPS**.
+  - Observera att URL:en i **NSClientV3** ska vara **_utan_ "/api/v1/"** i slutet – se [Inställningar → NSClientV3](#Preferences-nsclient).
+- Om du använder Tidepool:
+  - Följ instruktionerna på sidan [Tidepool](../SettingUpAaps/Tidepool.md) så att **Tidepool** kan ta emot och visa data från **AAPS**.
 
-Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
+Obs! *Du kan behöva vänta på nästa glukosvärde från sensorn innan **AAPS** känner igen den.*
 
 (objectives-objective2)=
-## Objective 2: Learn how to control AAPS
+## Mål 2: Lär dig hur du styr AAPS
 
-**Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below. Each task shows its status (**1**): the orange "**Not completed yet**" turns into "**Completed, well done!**" as soon as **AAPS** has registered the action. Tap **Hint** (**2**) underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
+**Mål 2** består av flera ”uppgifter” som du ska utföra, se skärmbilden nedan. Varje uppgift visar sin status (**1**): den orange texten "**Inte slutfört ännu**" ändras till "**Slutfört, bra jobbat!**" så fort **AAPS** har registrerat åtgärden. Tryck på **Ledtråd** (**2**) under en uppgift för att öppna dokumentationen om den, om du inte känner till en viss åtgärd ännu.
 
-![Screenshot objective 2](../images/Objective2_V2_5.png)
+![Skärmbild mål 2](../images/Objective2_V2_5.png)
 
-Tasks to complete **Objective 2** are:
-- Set your **Profile** to 90% for a duration of 10 min.
-  - _Hint_: Tap your Profile name on the main screen to open the **Profile** screen, then use the **Activate** (▶) button and set percentage and duration. More information in [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Note_: **AAPS** does not accept basal rates below 0.05U/hr. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Switch back to your normal **Profile** after completing this task.
-- Simulate "taking a shower" by [disconnecting your pump](#AapsScreens-loop-status) in **AAPS** for a duration of 1h.
-  - _Hint_: press the loop icon on the main screen to open the Loop dialog, then choose a duration under **Disconnect pump**.
-- End "taking a shower" by reconnecting your pump.
-  - _Hint_: press the "disconnected"-icon to open the loop dialog again and choose **Reconnect Pump**.
-- Set a custom [**Temporary Target**](../DailyLifeWithAaps/TempTargets.md) with a duration of 10 min.
-  - _Hint_: press the target range on the main screen to bring up the temporary target screen.
-- Display the **Loop** plugin's content.
-  - _Hint_: open **Configuration → Loop** and tap "**Open plugin**".
-- Use scroll or zoom on the BG chart to look at larger or smaller time frames.
+Uppgifterna för att slutföra **Mål 2** är:
+- Ställ in din **profil** på 90 % under 10 min.
+  - _Ledtråd_: Tryck på namnet på din profil på huvudskärmen för att öppna skärmen **Profil**. Använd sedan knappen **Aktivera** (▶) och ställ in procent och varaktighet. Mer information finns i [Profilbyte och procent av profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+  - _Obs!_ **AAPS** accepterar inte basaldoser under 0,05 U/h. Om din **profil** har doser på 0,05 U/h eller lägre måste du skapa en tillfällig **profil** med högre basaldoser innan du utför den här uppgiften. Byt tillbaka till din vanliga **profil** när du har utfört uppgiften.
+- Simulera att du ”duschar” genom att [koppla från pumpen](#AapsScreens-loop-status) i **AAPS** under 1 timme.
+  - _Ledtråd_: tryck på loopikonen på huvudskärmen för att öppna dialogrutan för loopen, och välj sedan en varaktighet under **Koppla från pumpen**.
+- Avsluta "duschen" genom att återansluta pumpen.
+  - _Ledtråd_: tryck på ikonen för ”frånkopplad” för att öppna dialogrutan för loopen igen och välj **Återanslut pump**.
+- Ställ in ett eget [**Tillfälligt målvärde**](../DailyLifeWithAaps/TempTargets.md) med en varaktighet på 10 min.
+  - _Ledtråd_: tryck på målområdet på huvudskärmen för att öppna skärmen för tillfälligt målvärde.
+- Visa innehållet i pluginet **Loop**.
+  - _Ledtråd_: öppna **Konfiguration → Loop** och tryck på "**Öppna plugin**".
+- Skrolla eller zooma i BG-grafen för att se längre eller kortare tidsperioder.
 
 
 (objectives-objective3)=
 ## Objective 3: Prove your knowledge
 
-**Objective 3** requires the user to pass a multiple-choice exam which is designed to test your **AAPS** knowledge.
+I **Mål 3** ska du klara ett flervalsprov som testar dina kunskaper om **AAPS**.
 
-Some users find **Objective 3** to be the most difficult objective to complete. Please read the **AAPS** documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group for "Objective 3" (because it is likely that your question has been asked before - and answered by the group). These groups can provide friendly hints, or redirect you to the relevant part of the **AAPS** documents.
+Vissa användare tycker att **Mål 3** är det svåraste målet att slutföra. Läs dokumentationen för **AAPS** samtidigt som du svarar på frågorna. Om du verkligen har kört fast efter att ha letat i dokumentationen för **AAPS**, sök efter "Objective 3" i gruppen på [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) eller [Discord](https://discord.gg/4fQUWHZ4Mw) (din fråga har troligen redan ställts – och besvarats av gruppen). I de här grupperna kan du få vänliga tips, eller hänvisas till rätt del av dokumentationen för **AAPS**.
 
-In the meantime :
-- To reduce the number of notifications / decisions you are asked to make (temporary basal rates) while in Open Loop, set a wide target range in your **Profile** _e.g._ 90 - 150 mg/dL or 5.0 - 8.5 mmol/L.
-- You might want to set a wider upper limit, or even disable Open Loop, at night.
+Under tiden:
+- För att minska antalet aviseringar och beslut (tillfälliga basaldoser) som du måste ta ställning till i öppen loop kan du ställa in ett brett målområde i din **profil**, _t.ex._ 90 - 150 mg/dl eller 5,0 - 8,5 mmol/l.
+- Du kan vilja ställa in en vidare övre gräns, eller till och med stänga av öppen loop, på natten.
 
-To proceed with **Objective 3**, tap a question row to open it. Please read each question carefully and select your answer(s).
+För att fortsätta med **Mål 3** trycker du på en rad med en fråga för att öppna den. Läs varje fråga noga och välj ditt svar eller dina svar.
 
-For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for 1 hour before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
+Varje fråga kan ha mer än ett rätt svar! Om du väljer ett felaktigt svar låses frågan i 1 timme innan du kan gå tillbaka och svara på den igen. Tänk på att svarens ordning kan ha ändrats nästa gång du försöker svara. Det är för att du ska läsa dem noga och verkligen förstå om varje svar är rätt eller fel.
 
 ```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: note
-From time to time, new features are added to **AAPS** which may require a new question to be added to the **Objectives**, particularly **Objective 3**. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other **Objectives** remain completed.
+Ibland läggs nya funktioner till i **AAPS**, och då kan en ny fråga behöva läggas till i **Mål**, särskilt i **Mål 3**. Därför markeras varje ny fråga som läggs till i **Mål 3** som ”inte slutförd”, eftersom **AAPS** kräver att du svarar på den. Oroa dig inte: varje **Mål** är oberoende, så du **förlorar inte de funktioner i AAPS som du redan har**, så länge de andra **Mål** fortfarande är slutförda.
 ```
 
-## Objective 4: Starting on an open loop
+## Mål 4: Starta med öppen loop
 
-The purpose of **Objective 4** is to recognize how often **AAPS** will evaluate the user's basal rate against glucose levels, and recommend temporary basal rate adjustments. As part of this **Objective**, you will activate open looping for the first time, and will accept 20 proposed temporary basal rate changes, and if required, apply these manually on your pump. You will also observe the impact of [**Temporary Targets**](../DailyLifeWithAaps/TempTargets.md). If you are not familiar with setting a temporary basal rate change in **AAPS** yet, see the pump actions in the **Manage** sheet ([Where did the Actions tab go?](#screens-action-tab)).
+Syftet med **Mål 4** är att du ska förstå hur ofta **AAPS** jämför din basaldos med glukosvärdena och föreslår ändringar av den tillfälliga basaldosen. I det här **Mål** aktiverar du öppen loop för första gången. Du ska acceptera 20 föreslagna ändringar av den tillfälliga basaldosen och vid behov ställa in dem för hand på din pump. Du ska också se hur [**Tillfälliga målvärden**](../DailyLifeWithAaps/TempTargets.md) påverkar. Om du ännu inte vet hur du ställer in en tillfällig basaldos i **AAPS**, se pumpåtgärderna i panelen **Hantera** ([Vart tog fliken Åtgärder vägen?](#screens-action-tab)).
 
-The minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective**, even if all basal rate changes were enacted already.
+Minsta tid för att slutföra det här målet: **7 dagar**. Det här är en obligatorisk väntetid. Du kan inte gå vidare till nästa **Mål**, även om alla ändringar av basaldosen redan har utförts.
 
-- Select Open Loop by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Open Loop** as running mode.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Ensure these basal rate adjustments show up in **AAPS** and **Nightscout**.
-- Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
-- If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
+- Välj öppen loop genom att trycka på [loopikonen](#AapsScreens-loop-status) på huvudskärmen och välja **Öppen loop** som körläge.
+- Utför minst 20 av förslagen på tillfällig basaldos manuellt under en period på 7 dagar: ställ in dem på din (fysiska) pump och bekräfta i AAPS att du har accepterat dem. Kontrollera att de här ändringarna av basaldosen visas i **AAPS** och **Nightscout**.
+- Använd [**Tillfälliga målvärden**](../DailyLifeWithAaps/TempTargets.md) vid behov. Efter att du har behandlat en hypoglykemi kan du använda det förinställda "Tillfälligt målvärde för hypo" så att systemet inte överkorrigerar när blodsockret studsar tillbaka.
+- Om du fortfarande använder [Enkelt läge](#preferences-simple-mode) nu, är det troligen ett bra tillfälle att stänga av det.
 
-To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. The higher the value, the fewer change notifications you will receive.
+För att minska antalet föreslagna ändringar av basaldosen i öppen loop kan du fortfarande använda tipsen i [**Mål 3**](#objectives-objective3). Du kan också ändra den minsta procentsatsen för föreslagna ändringar av basaldosen med inställningen "**Minsta ändring i öppen loop**" i **Inställningar → Loop**. Ju högre värde, desto färre aviseringar om ändringar får du.
 
-![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
+![Minsta ändring i öppen loop](../images/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
 
-You don't need to action each and every system recommendation!
+Du behöver inte utföra varenda rekommendation från systemet!
 ```
 (objectives-objective5)=
-## Objective 5: Understanding your open loop, including its temp basal recommendations
+## Mål 5: Förstå din öppna loop, inklusive förslagen på tillfällig basal
 
-As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](#aaps-screens-how-predictions-become-a-dosing-decision), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at the detailed calculations shown on the **OpenAPS SMB** plugin screen (**Configuration → APS → Open plugin**).
+I **Mål 5** börjar du förstå hur förslagen på tillfällig basal tas fram. Det omfattar [hur basalbeslutet tas fram](#aaps-screens-how-predictions-become-a-dosing-decision), att analysera effekten genom att titta på [prognoslinjerna på **Översikt i AAPS**](#aaps-screens-prediction-lines) (eller i Nightscout) och att titta på de detaljerade beräkningarna på skärmen för pluginet **OpenAPS SMB** (**Konfiguration → APS → Öppna plugin**).
 
-Estimated time to complete this objective: **7 days**.
+Uppskattad tid för att slutföra det här målet: **7 dagar**.
 
-This **Objective** requires you to determine and set your “Maximum basal rate” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). This value can be set in [Settings → OpenAPS SMB](#Preferences-openaps-smb-settings). In [simple mode](#preferences-simple-mode), **AAPS** sets this value automatically and you don't need to change it. If you are still using a virtual pump, make sure this safety setting is set in both **AAPS** and your insulin pump.
+I det här **Mål** ska du bestämma och ställa in värdet ”Maximal basalhastighet” (max-basal) enligt beskrivningen i [OpenAPS-funktioner](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Det här värdet kan ställas in i [Inställningar → OpenAPS SMB](#Preferences-openaps-smb-settings). I [Enkelt läge](#preferences-simple-mode) ställer **AAPS** in värdet automatiskt och du behöver inte ändra det. Om du fortfarande använder en virtuell pump, se till att den här säkerhetsinställningen är gjord både i **AAPS** och i din insulinpump.
 
-You might wish to set your [**Profile** BG target](#profile-glucose-targets) higher than usual until you are comfortable with **AAPS**' calculations and settings. You may wish to experiment with adjusting your **BG target** in your **Profile** being in a tighter range (say, 1 or less mmol/L [20 mg/dL or less] wide) and observe the resulting behavior.
+Du kanske vill ställa in [BG-målet i din **profil**](#profile-glucose-targets) högre än vanligt tills du känner dig trygg med beräkningarna och inställningarna i **AAPS**. Du kan prova att ställa in ditt **BG-mål** i din **profil** med ett smalare område (t.ex. 1 mmol/l eller mindre [20 mg/dl eller mindre] brett) och se hur systemet beter sig.
 
-![Stop sign](../images/sign_stop.png)
+![Stoppskylt](../images/sign_stop.png)
 
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-If you are open looping with a virtual pump **stop here**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
+Om du använder öppen loop med en virtuell pump, **stanna här**. Tryck på **Kontrollera** i slutet av det här **Mål** först när du har bytt till en ”riktig” pump som ger insulin.
 
 ```
 
 ![blank](../images/blank.png)
 
 (objectives-objective6)=
-## Objective 6: Starting to close the loop with Low Glucose Suspend
+## Mål 6: Börja stänga loopen med Paus vid lågt blodsocker
 
-![Warning sign](../images/sign_warning.png)
+![Varningsskylt](../images/sign_warning.png)
 ```{admonition} Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
 :class: note
-You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
+Du måste fortfarande själv korrigera höga BG-värden (manuellt med korrektioner med pump eller penna)!
 ```
 
-As part of **Objective 6** you will close the loop and activate its **Low Glucose Suspend** (LGS) mode while [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero. You have to remain in LGS mode for 5 days to complete this **objective**. You should use this time to check if your **Profile** settings are accurate and LGS events are not triggered too often.
+I **Mål 6** stänger du loopen och aktiverar läget **Paus vid lågt blodsocker** (LGS) medan [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) är satt till noll. Du måste stanna i LGS-läget i 5 dagar för att slutföra det här **målet**. Använd den här tiden till att kontrollera att inställningarna i din **profil** stämmer och att LGS inte utlöses för ofta.
 
-Minimal time to complete this objective: **5 days**. This is a mandatory wait time. You cannot proceed to the next **Objective** before this time is up.
+Minsta tid för att slutföra det här målet: **5 dagar**. Det här är en obligatorisk väntetid. Du kan inte gå vidare till nästa **Mål** innan den här tiden har gått.
 
-It is crucial that your current **Profile** (basal, ISF, IC) have been well tested before you close your loop in **LGS** mode. Incorrect **Profile** settings might force you into hypo situations which have to be treated manually. An accurate **Profile** will help reduce the need for low glucose treatments during the 5 days period.
+Det är mycket viktigt att din nuvarande **profil** (basal, ISF, IC) är väl testad innan du stänger loopen i läget **LGS**. Felaktiga inställningar i **profilen** kan leda till hypon som du måste behandla själv. En korrekt **profil** minskar behovet av att behandla låga glukosvärden under de 5 dagarna.
 
-**If you still observe frequent or severe low glucose episodes consider refining your [insulin type's DIA](#Config-Builder-insulin-dia), basal, ISF and carb ratios.** Please refer to the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group which has much discussion on this.
+**Om du fortfarande ser låga glukosvärden ofta eller allvarligt, bör du överväga att finjustera [DIA för din insulintyp](#Config-Builder-insulin-dia), basal, ISF och KH-kvoter.** Läs i gruppen på [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) eller [Discord](https://discord.gg/4fQUWHZ4Mw), där detta diskuteras mycket.
 
 
-During **Objective 6**, **AAPS** will override the maxIOB setting to zero. **This override will end when moving to Objective 7.**
+Under **Mål 6** sätter **AAPS** inställningen maxIOB till noll. **Detta upphör när du går vidare till Mål 7.**
 
-This means that when you are on **Objective 6**, if sensor glucose levels are dropping, **AAPS** will reduce your basal insulin delivery for you. But, if sensor glucose levels are rising, **AAPS** will increase the basal rate above your **Profile** value only if **basal IOB** is negative as a result of a previous **LGS**. Otherwise, **AAPS** will not increase basal above your current profile value, even if glucose levels are rising. This caution is to avoid hypos as you are learning to use **AAPS**.
+Det betyder att när du är på **Mål 6** och sensorns glukosvärden sjunker, så minskar **AAPS** din basala insulintillförsel åt dig. Men om sensorns glukosvärden stiger, ökar **AAPS** basaldosen över värdet i din **profil** bara om **basal IOB** är negativ på grund av en tidigare **LGS**. Annars ökar **AAPS** inte basalen över profilens värde, även om glukosvärdena stiger. Denna försiktighet ska förhindra hypon medan du lär dig använda **AAPS**.
 
-**As a consequence, you have to handle high glucose values with manual insulin bolus corrections.**
+**Därför måste du själv korrigera höga glukosvärden med manuella korrektionsbolusar.**
 
-- If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
+- Om din IOB är negativ (se skärmbilden nedan) kan en tillfällig basaldos (TBR) > 100 % utlösas i **Mål 6**.
 
-![Example negative IOB](../images/Objective6_negIOB.png)
+![Exempel på negativ IOB](../images/Objective6_negIOB.png)
 
-- Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
-- Enable 'Low Glucose Suspend' mode by pressing the Loop icon on the main screen and choosing **Low Glucose Suspend** as running mode.
-- Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
-- You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
+- Ställ in ditt målområde lite högre än du brukar sikta på, bara för säkerhets skull och för att få en säkerhetsmarginal.
+- Aktivera läget ”Paus vid lågt blodsocker” genom att trycka på loopikonen på huvudskärmen och välja **Paus vid lågt blodsocker** som körläge.
+- Följ aktiva tillfälliga basaler genom att titta på den turkosa basaltexten på skärmen Översikt eller den turkosa basalkurvan i grafen på Översikt.
+- Du kan tillfälligt få toppar efter behandlade hypoglykemier, eftersom basalen inte kan höjas när blodsockret studsar tillbaka.
 
 (objectives-objective7)=
-## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
+## Mål 7: Finjustera den slutna loopen, höja maxIOB över 0 och gradvis sänka BG-målen
 
-To complete **Objective 7** you have to close your loop and raise your [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS** will start to use your defined maxIOB value to correct high glucose values. In [simple mode](#preferences-simple-mode), **AAPS** sets maxIOB automatically and you don't need to change it.
+För att slutföra **Mål 7** måste du stänga loopen och höja din [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** sattes automatiskt till noll i **Mål 6** på grund av läget Paus vid lågt blodsocker. Så är det inte längre. **AAPS** börjar använda ditt inställda värde för maxIOB för att korrigera höga glukosvärden. I [Enkelt läge](#preferences-simple-mode) ställer **AAPS** in maxIOB automatiskt och du behöver inte ändra det.
 
-Minimal time to complete this objective: **1 day**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
+Minsta tid för att slutföra det här målet: **1 dag**. Det här är en obligatorisk väntetid. Du kan inte gå vidare till nästa **Mål** förrän den här tiden har gått.
 
-- Select **Closed Loop** by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Closed Loop** as running mode. Stay in **Closed Loop** over a period of 1 day.
+- Välj **Sluten loop** genom att trycka på [loopikonen](#AapsScreens-loop-status) på huvudskärmen och välja **Sluten loop** som körläge. Stanna i **Sluten loop** under 1 dag.
 
-- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
+- Höj långsamt ditt 'Max IOB för SMB' (i OpenAPS kallat 'max-iob') över 0, tills du hittar de inställningar som fungerar bäst för dig.
 
-The default recommendation for this setting is “**average meal bolus + 3x max daily basal**”, where “max daily basal” is the maximum hourly value in any time segment of the day.
+Standardrekommendationen för den här inställningen är ”**genomsnittlig måltidsbolus + 3 x maximal daglig basal**”, där ”maximal daglig basal” är det högsta timvärdet i något tidsavsnitt under dygnet.
 
-![max daily basal](../images/MaxDailyBasal2.png)
+![maximal daglig basal](../images/MaxDailyBasal2.png)
 
-This recommendation should be seen as a starting point. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
-* lower the "Max IOB for SMB" value;
-* review your **Profile** settings, only making one adjustment at a time.
+Se den här rekommendationen som en startpunkt. Om du använder den här regeln men märker att AAPS ger för mycket insulin när glukosvärdet stiger, kan du behöva:
+* sänka värdet "Max IOB för SMB";
+* gå igenom inställningarna i din **profil** och gör bara en ändring i taget.
 
-Alternatively, if you are very insulin resistant, raise the **maxIOB** value very cautiously.
+Om du är mycket insulinresistent kan du i stället höja värdet för **maxIOB** mycket försiktigt.
 
-Once confident on how much **maxIOB** suits your looping patterns, lower your **BG targets** to your desired level.
+När du vet hur mycket **maxIOB** som passar ditt sätt att loopa kan du sänka dina **BG-mål** till den nivå du önskar.
 
 (objectives-objective8)=
-## Objective 8: Adjust basals and ratios if needed, and then enable Autosens
+## Mål 8: Justera basaler och kvoter vid behov och aktivera sedan Autosens
 
-As part of this **objective**, you will revisit your **Profile**'s performance and will use [Autosens](#Open-APS-features-autosens) functionality as an indicator for wrong settings.
+I det här **målet** går du igenom hur väl din **profil** fungerar och använder funktionen [Autosens](#Open-APS-features-autosens) som en indikator på felaktiga inställningar.
 
-Minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
+Minsta tid för att slutföra det här målet: **7 dagar**. Det här är en obligatorisk väntetid. Du kan inte gå vidare till nästa **Mål** förrän den här tiden har gått.
 
-Enable [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days (in [simple mode](#preferences-simple-mode) it is enabled by default) and watch [**Overview**'s graph white line](#AapsScreens-section-g-additional-graphs) showing your insulin sensitivity rising or falling due to exercise or hormones etc. Keep an eye on the **OpenAPS SMB** plugin screen (**Configuration → APS → Open plugin**) which shows **AAPS** adjusting the sensitivity, basals and targets accordingly.
+Aktivera [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) under 7 dagar (i [Enkelt läge](#preferences-simple-mode) är det aktiverat som standard) och följ [den vita linjen i grafen på **Översikt**](#AapsScreens-section-g-additional-graphs), som visar hur din insulinkänslighet stiger eller sjunker på grund av träning, hormoner osv. Håll ett öga på skärmen för pluginet **OpenAPS SMB** (**Konfiguration → APS → Öppna plugin**), som visar hur **AAPS** justerar känslighet, basaler och mål.
 
-This is a good time to review your settings for [Sensitivity Detection](#Config-Builder-sensitivity-detection). You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs).
+Det här är ett bra tillfälle att gå igenom dina inställningar för [Känslighetsdetektering](#Config-Builder-sensitivity-detection). Du kan se din känslighet på huvudskärmen i en [extra graf](#AapsScreens-section-g-additional-graphs).
 
-Additionally, you can use [Autotune](#autotune-how-autotune-calculates-adjustments) as a one off to check your basals remain accurate or do a traditional basal test.
+Du kan också köra [Autotune](#autotune-how-autotune-calculates-adjustments) en gång för att kontrollera att dina basaler fortfarande stämmer, eller göra ett vanligt basaltest.
 
 (objectives-objective9)=
-## Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+## Mål 9: Aktivera fler oref1-funktioner för användning på dagtid, till exempel supermikrobolus (SMB)
 
-In **Objective 9**, you will tackle and use **"Super Micro Bolus (SMB)"** as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, and why basal is set to zero temporarily after SMBs are given (zero-temping).
+I **Mål 9** ska du lära dig och börja använda **"Supermikrobolus (SMB)"** som en central funktion. När du har gått igenom den obligatoriska läsningen vet du vad SMB är, hur det fungerar och varför basalen tillfälligt sätts till noll efter att SMB har getts (zero-temping).
 
-Minimal time to complete this objective: **28 days**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+Minsta tid för att slutföra det här målet: **28 dagar**. Det här är en obligatorisk väntetid. Du kan inte gå vidare till nästa Mål innan den här tiden har gått.
 
-- The [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand **SMB** and the concept of **zero-temping**.
-- Once done, you can [raise maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) to get **SMBs** working more effectively. maxIOB now includes all **IOB**, not just accumulated basal. This threshold pauses **SMBs** until IOB drops below this value (_e.g._ **maxIOB** is set to 7U and a bolus of 8U is given to cover a meal: SMBs will be paused and not given unless **IOB** drops below 7U). A good start is setting **maxIOB** = **average meal bolus + 3x max daily basal** where "max daily basal" is the maximum hourly value in any time segment of the day. See [objective 7](#objectives-objective7) as reference.
-- Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Settings → Absorption settings → min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
+- [Avsnittet om SMB i den här dokumentationen](#Open-APS-features-super-micro-bolus-smb) och [avsnittet om oref1 i dokumentationen för openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) måste du läsa för att förstå **SMB** och idén med **tillfällig basal på noll**.
+- När du är klar kan du [höja maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) så att **SMB:er** fungerar bättre. maxIOB omfattar nu all **IOB**, inte bara ackumulerad basal. Den här gränsen pausar **SMB:er** tills IOB sjunker under värdet (_t.ex._ om **maxIOB** är 7 U och du tar en bolus på 8 U till en måltid: då pausas SMB:er och ges inte förrän **IOB** har sjunkit under 7 U). En bra start är att ställa in **maxIOB** = **genomsnittlig måltidsbolus + 3 x maximal daglig basal**, där ”maximal daglig basal” är det högsta timvärdet i något tidsavsnitt under dygnet. Se [mål 7](#objectives-objective7) som referens.
+- Utvärdera hur snabbt kolhydraterna tas upp och överväg att ändra parametern ”min_5m_carbimpact” i [Inställningar → Absorptionsinställningar → min_5m_carbimpact](#Preferences-min_5m_carbimpact) om du tycker att det går för långsamt eller för snabbt.
 
 (objectives-objective10)=
-## Objective 10: Automation
+## Mål 10: Automation
 
-**Automations** become available when **Objective 10** is started.
+**Automation** blir tillgänglig när du startar **Mål 10**.
 
-Minimal time to complete this objective: **28 days**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+Minsta tid för att slutföra det här målet: **28 dagar**. Det här är en obligatorisk väntetid. Du kan inte gå vidare till nästa Mål innan den här tiden har gått.
 
-Read the documentation page [Automation](../DailyLifeWithAaps/Automations.md) first.
+Läs först dokumentationssidan [Automation](../DailyLifeWithAaps/Automations.md).
 
-Set up the most basic automation rule; for example trigger an Android notification in a few minutes:
-- Open **Manage → Automation** and tap the **+** button (**Add rule**).
-- Enter a **Task name**, for example "My first automation notification".
-- Under **Condition**, tap "**EDIT**".
-  - Tap "**Add trigger**" and select "**Time**". **AAPS** creates an entry for today at the current time.
-  - Change the time so that it triggers in a few minutes.
-  - Tap the **Save** icon (top right) to go back to the rule.
-- Under **Action**, tap "**ADD**" and select "**Notification**".
-  - Enter a message in the action card, for example "My first automation".
-- Tap the **Save** icon (top right) and make sure the rule is **Enabled**.
-- Wait until the time triggers the notification (note that depending on your phone, it can be a few minutes late)
+Skapa den enklaste möjliga automationsregeln, till exempel en Android-avisering om några minuter:
+- Öppna **Hantera → Automation** och tryck på knappen **+** (**Lägg till regel**).
+- Skriv ett **Uppgiftsnamn**, till exempel "Min första automationsavisering".
+- Under **Villkor** trycker du på "**ÄNDRA**".
+  - Tryck på "**Lägg till utlösare**" och välj "**Tid**". **AAPS** skapar en post för idag med aktuell tid.
+  - Ändra tiden så att regeln utlöses om några minuter.
+  - Tryck på ikonen **Spara** (uppe till höger) för att gå tillbaka till regeln.
+- Under **Åtgärd** trycker du på "**LÄGG TILL**" och väljer "**Avisering**".
+  - Skriv ett meddelande i åtgärdskortet, till exempel "Min första automation".
+- Tryck på ikonen **Spara** (uppe till höger) och kontrollera att regeln är **Aktiverad**.
+- Vänta tills tiden utlöser aviseringen (beroende på din telefon kan den komma några minuter sent)
 
-You can then experiment with setting up a more useful **Automation**. The documentation page gives a few examples, and you can search for "Automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. There is also a dedicated channel in the [Discord](https://discord.gg/4fQUWHZ4Mw) community.
+Sedan kan du prova att ställa in en mer användbar **Automation**. Dokumentationssidan ger några exempel, och du kan söka efter skärmbilder på "Automation" i gruppen på [Facebook](https://www.facebook.com/groups/AndroidAPSUsers). Det finns också en egen kanal i communityn på [Discord](https://discord.gg/4fQUWHZ4Mw).
 
-For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
+Om du till exempel äter samma frukost vid samma tid varje morgon före skolan eller jobbet, kan du skapa en **Automation** som "mål-före-frukost" som ställer in ett något lägre **Tillfälligt målvärde** 30 minuter före frukosten. I så fall innehåller ditt villkor troligen "Återkommande tid", där du väljer vissa veckodagar (måndag, tisdag, onsdag, torsdag, fredag) och en viss tid (06:30). Åtgärden är "Starta tillfälligt målvärde" med ett lägre målvärde än vanligt och en varaktighet på 30 minuter.
 
-## When all objectives are completed
+## När alla mål är slutförda
 
-Once you have accomplished all the **Objectives**, the list shows each of them with a tick and the date it was accomplished. The **Objectives** item disappears from the bottom navigation; you can still open the list with **Configuration → Constraints → Objectives → Open plugin**.
+När du har slutfört alla **Mål** visar listan vart och ett av dem med en bock och datumet då det slutfördes. Posten **Mål** försvinner från den nedre navigeringen. Du kan fortfarande öppna listan via **Konfiguration → Begränsningar → Mål → Öppna plugin**.
 
-![All objectives accomplished](../images/objectives/objectives_completed.png)
+![Alla mål slutförda](../images/objectives/objectives_completed.png)
 
-Press "**More**" under an objective to see its tasks again:
+Tryck på "**Mer**" under ett mål för att se dess uppgifter igen:
 
-![Details of an accomplished objective](../images/objectives/objective_1_details.png)
+![Detaljer om ett slutfört mål](../images/objectives/objective_1_details.png)
 
 (CompletingTheObjectives-go-back-in-objectives)=
 ## Go back in objectives
 
-If you wish to go back in the **Objectives** for whatever reason, open the finished **Objective** with "**More**" and tap "**Reset finished state**":
+Om du av någon anledning vill gå tillbaka i **Mål**, öppnar du det slutförda **Mål** med "**Mer**" och trycker på "**Nollställ slutfört läge**":
 
 ![Go back in objectives](../images/Objective_ClearFinished.png)
 
-In the same way, the **Objective** you are currently working on can be restarted with "**Reset started state**".
+På samma sätt kan du starta om det **Mål** som du arbetar med just nu med "**Nollställ startat läge**".

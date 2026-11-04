@@ -42,7 +42,7 @@ Aby tego uniknąć, masz dwie możliwości:
 
 * Wyłącz „Automatyczna data i godzina” w ustawieniach telefonu (ręczna zmiana strefy czasowej)
 
-When you get off the plane:
+Gdy wysiądziesz z samolotu:
 
 * wyłącz pompę
 * zmień strefę czasową w telefonie
@@ -62,7 +62,7 @@ Insight zapisuje też w historii wpisy o tym, w którym momencie zmieniono czas 
 
 Może to spowodować niedokładności w **TDD** (dziennych dawkach insuliny). Nie powinno to jednak być problemem.
 
-Dlatego użytkownik pompy Insight nie musi martwić się zmianami strefy czasowej ani zmianami czasu. Od tej zasady jest jeden wyjątek: pompa Insight ma małą wewnętrzną baterię, która zasila m.in. zegar podczas wymiany „prawdziwej” baterii. If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. W takim przypadku wszystkie wpisy sprzed wymiany baterii są pomijane w obliczeniach AAPS, ponieważ nie da się ustalić ich poprawnego czasu.
+Dlatego użytkownik pompy Insight nie musi martwić się zmianami strefy czasowej ani zmianami czasu. Od tej zasady jest jeden wyjątek: pompa Insight ma małą wewnętrzną baterię, która zasila m.in. zegar podczas wymiany „prawdziwej” baterii. Jeśli wymiana baterii trwa zbyt długo, ta wewnętrzna bateria się wyczerpie, zegar zostanie zresetowany i po włożeniu nowej baterii pompa poprosi Cię o wpisanie godziny i daty. W takim przypadku wszystkie wpisy sprzed wymiany baterii są pomijane w obliczeniach AAPS, ponieważ nie da się ustalić ich poprawnego czasu.
 
 ## Zmiana strefy czasowej dla Accu-Chek Combo
 
@@ -76,7 +76,7 @@ Sterownik automatycznie dostosowuje czas pompy do czasu telefonu.
 
 Zmiana strefy czasowej nie narusza historii, może mieć wpływ tylko na TDD. Ręczna zmiana czasu w telefonie może spowodować problemy z historią i **IOB**. Jeśli zmieniasz czas ręcznie, dokładnie sprawdź **IOB**.
 
-When the time zone or time changes running **TBRs** are stopped.
+Gdy zmienia się strefa czasowa lub czas, trwające **TBR** są zatrzymywane.
 
 (time-adjustment-daylight-savings-time-dst)=
 
@@ -108,8 +108,8 @@ Jeśli podajesz bolus z kalkulatora **AAPS**, nie używaj danych **COB** i **IOB
 
 ### Czas letni (DST) dla Omnipod Dash
 
-* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. UWAGA: TA OPCJA MOŻE SPOWODOWAĆ PRZEDWCZESNE WYGAŚNIĘCIE PODA. JEŚLI WYBIERZESZ PONIŻSZĄ FUNKCJĘ, MIEJ PRZY SOBIE ZAPASOWE MATERIAŁY.
+* Możesz pozwolić **AAPS** tymczasowo wrócić do bazy z profilu po zmianie czasu, jak opisano powyżej.
+* Jeśli nie chcesz, aby **AAPS** w nocy tymczasowo wracał do bazy z profilu, możesz zmienić strefę czasową dzień przed zmianą czasu, aby uniknąć zakłóceń w nocy. UWAGA: TA OPCJA MOŻE SPOWODOWAĆ PRZEDWCZESNE WYGAŚNIĘCIE PODA. JEŚLI WYBIERZESZ PONIŻSZĄ FUNKCJĘ, MIEJ PRZY SOBIE ZAPASOWE MATERIAŁY.
 
 #### Działania przed zmianą czasu
 
@@ -129,6 +129,6 @@ Jeśli podajesz bolus z kalkulatora **AAPS**, nie używaj danych **COB** i **IOB
 
 3. W **AAPS** odśwież pompę i przełącz na wybrany **Profil**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
+4. Sprawdź **IOB** i **COB** w **AAPS**. Jeśli są niedokładne, wyłącz **Pętlę** co najmniej na czas jednego DIA albo maksymalnego czasu wchłaniania węglowodanów (**Maks. czas wchłaniania**) – w zależności od tego, który jest dłuższy.
 
 5. Działania po zmianie czasu. Dobry moment na powrót do lokalnej strefy czasowej to chwila, gdy **IOB** jest niskie. Na przykład godzinę przed posiłkiem, takim jak śniadanie. Najlepiej, aby **COB** i **IOB** były bliskie zera.

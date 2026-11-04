@@ -79,7 +79,7 @@ Toto je **krok 4** návodu [Zostavenie v prehliadači](BrowserBuild.md). Najprv 
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicate that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+Varianty, ktoré končia na „Debug“, znamenajú, že APK sa zostaví v režime ladenia (debug), čo je užitočné pre vývojárov pri riešení problémov.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 

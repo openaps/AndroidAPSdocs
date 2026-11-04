@@ -1,7 +1,7 @@
 (global-search)=
-# Global search
+# Globale Suche
 
-**AAPS** v4 has a **global search** box at the top of the main screen. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
+**AAPS** v4 hat oben auf dem Startbildschirm ein Feld für die **globale Suche**. Gib ein Wort ein, und es durchsucht die ganze App auf einmal – Module, Dialoge, Einstellungsbildschirme, einzelne Einstellungen – und, wenn Du online bist, auch die **AndroidAPS-Dokumentation**. Das ist der schnellste Weg zu einer Einstellung oder einem Bildschirm, ohne dass Du Dir merken musst, wo sie liegen.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,85 +10,85 @@
 
 ---
 
-## Opening search
+## Die Suche öffnen
 
-Tap the **🔍 Search** field at the top of the **Overview** (next to the ☰ menu). Start typing and results appear as you type (after a short pause), grouped by category:
+Tippe oben in der **Übersicht** (neben dem Menü ☰) auf das Feld **🔍 Suchen**. Fang an zu tippen, und die Ergebnisse erscheinen schon während der Eingabe (nach einer kurzen Pause), nach Kategorien gruppiert:
 
 ![Global search results, grouped by category](../images/v4/Search/search_results.png)
 
-Clear the box with the **✕**, or close search with the device **Back** button.
+Leere das Feld mit dem **✕** oder schließe die Suche mit der **Zurück**-Taste des Geräts.
 
 ---
 
-## Search in English *or* your own language
+## Auf Englisch *oder* in Deiner eigenen Sprache suchen
 
-This is the part worth knowing: search matches against **both** the text in your **selected language** **and** the original **English** text.
+Das solltest Du wissen: Die Suche vergleicht **sowohl** mit dem Text in Deiner **gewählten Sprache** **als auch** mit dem ursprünglichen **englischen** Text.
 
-- If your app is in, say, German or Czech, you can type the **localized** word **or** the **English** word — either finds the setting.
-- A match on the **localized** title ranks highest, then the **English** title, then the localized and English **descriptions**.
-- Matching ignores **accents/diacritics** (so *ů* matches *u*, *é* matches *e*) and is **case-insensitive**.
+- Ist Deine App zum Beispiel auf Deutsch oder Tschechisch eingestellt, kannst Du das **übersetzte** Wort **oder** das **englische** Wort eingeben – beides findet die Einstellung.
+- Ein Treffer im **übersetzten** Titel steht ganz oben, dann folgen der **englische** Titel und danach die übersetzten und englischen **Beschreibungen**.
+- Akzente und diakritische Zeichen werden beim Vergleich **ignoriert** (*ů* findet also *u*, *é* findet *e*), und Groß- und Kleinschreibung **spielt keine Rolle**.
 
-This means a guide or forum post written in English still leads you to the right setting even when your phone shows everything translated.
+So führt Dich eine englische Anleitung oder ein englischer Forenbeitrag trotzdem zur richtigen Einstellung, auch wenn Dein Smartphone alles übersetzt anzeigt.
 
 ---
 
-## What search covers
+## Was die Suche abdeckt
 
-Results are grouped into these categories:
+Die Ergebnisse sind in diese Kategorien gruppiert:
 
-- **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](../SettingUpAaps/ConfigBuilder.md)). Each plugin row carries its **enable switch**, so you can enable or disable a plugin right from the results — tapping the row of a disabled (toggleable) plugin enables it.
-- **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Screens that don't apply to your build are left out (for example *Pair with master* on a master, *Authorized clients* on a client).
-- **Preference categories** — the settings **screens** and sub-screens, both built-in (General, Appearance, Protection, Alerts, Maintenance, …) and from plugins, plus the small settings groups reached from dialogs (Fill buttons, Insulin/Carbs button steps, status-light thresholds, wizard settings, …).
-- **Preferences** — every **individual setting** that has a title. These are filtered to your build/mode, so you only see settings that actually apply (APS / NSClient / pump-control).
-- **Documentation** — pages from the online **AndroidAPS docs** (see below).
+- **Module** – jedes Modul, das in Deinem Build sichtbar ist (dieselben, die unter [Konfiguration](../SettingUpAaps/ConfigBuilder.md) aufgeführt sind). Jede Modul-Zeile hat ihren **Schalter zum Einschalten**, sodass Du ein Modul direkt aus den Ergebnissen ein- oder ausschalten kannst – ein Tippen auf die Zeile eines ausgeschalteten (schaltbaren) Moduls schaltet es ein.
+- **Dialoge** – die Bildschirme für Behandlungen, Aktionen und Verwaltung (Bolus-Rechner, Insulin, Verzögerter Bolus, Kalibrierung, Temporäres Ziel, Profil …). Bildschirme, die für Deinen Build nicht gelten, werden weggelassen (zum Beispiel *Mit Master koppeln* auf einem Master oder *Autorisierte Clients* auf einem Client).
+- **Einstellungskategorien** – die Einstellungs**bildschirme** und Unterbildschirme, sowohl die eingebauten (Allgemeines, Darstellung, Zugriffsschutz, Alarme, Wartung …) als auch die der Module, dazu die kleinen Einstellungsgruppen, die Du aus Dialogen erreichst (Knöpfe zum Füllen, Schrittweiten der Knöpfe Insulin/Kohlenhydrate, Schwellenwerte der Statusanzeige, Einstellungen des Bolus-Rechners …).
+- **Einstellungen** – jede **einzelne Einstellung**, die einen Titel hat. Sie werden nach Deinem Build bzw. Modus gefiltert, sodass Du nur Einstellungen siehst, die wirklich gelten (APS / NSClient / Pumpensteuerung).
+- **Dokumentation** – Seiten aus der Online-**AndroidAPS-Dokumentation** (siehe unten).
 
 ```{admonition} Settings that belong to a disabled plugin
 :class: note
-A preference whose plugin is currently **disabled** still shows up — **greyed out** and not tappable — with a *“Plugin … disabled”* note, so you can tell the setting exists and which plugin to enable to reach it.
+Eine Einstellung, deren Modul gerade **ausgeschaltet** ist, wird trotzdem angezeigt – **ausgegraut** und nicht antippbar – mit dem Hinweis *„Plugin … deaktiviert“*, damit Du siehst, dass es die Einstellung gibt und welches Modul Du einschalten musst, um sie zu erreichen.
 
 ![A greyed-out setting from a disabled plugin](../images/v4/Search/search_disabled_plugin.png)
 ```
 
 ---
 
-## Documentation results (online)
+## Ergebnisse aus der Dokumentation (online)
 
-While the local search runs, **AAPS** also queries the official **AndroidAPS documentation** (hosted on ReadTheDocs) in parallel. Matching pages appear in a **Documentation** group at the bottom, each with a 📖 icon, the section title and a short snippet:
+Während die lokale Suche läuft, fragt **AAPS** parallel auch die offizielle **AndroidAPS-Dokumentation** (auf ReadTheDocs) ab. Passende Seiten erscheinen unten in der Gruppe **Dokumentation**, jeweils mit einem 📖-Symbol, dem Titel des Abschnitts und einem kurzen Auszug:
 
 ![Documentation (wiki) results with snippets](../images/v4/Search/search_documentation.png)
 
-- If the documentation is translated into your app language, **AAPS** searches the translated pages and the English pages at the same time. Pages in your language come first, then the English pages that were not already found.
-- Tapping a documentation result opens that page in your **browser**.
-- Documentation search needs **internet** — when you are offline you get a *“Documentation search requires internet connection”* note instead, and the local (in-app) results still work normally.
+- Ist die Dokumentation in die Sprache Deiner App übersetzt, durchsucht **AAPS** gleichzeitig die übersetzten und die englischen Seiten. Seiten in Deiner Sprache kommen zuerst, dann die englischen Seiten, die nicht schon gefunden wurden.
+- Ein Tippen auf ein Ergebnis aus der Dokumentation öffnet die Seite in Deinem **Browser**.
+- Die Suche in der Dokumentation braucht **Internet** – bist Du offline, erscheint stattdessen der Hinweis *„Für die Suche in der Dokumentation ist eine Internetverbindung erforderlich“*, und die lokalen Ergebnisse (in der App) funktionieren ganz normal.
 
 ---
 
-## Opening a result
+## Ein Ergebnis öffnen
 
-Tap a result to go straight to it:
+Tippe auf ein Ergebnis, um direkt dorthin zu gelangen:
 
-- **Plugin** → opens that plugin.
-- **Dialog** → opens that screen or dialog.
-- **Preference category** → opens that settings screen.
-- **Preference** → opens the setting **in place** (jumps to it within its screen).
-- **Documentation** → opens the page in your browser.
+- **Modul** → öffnet dieses Modul.
+- **Dialog** → öffnet diesen Bildschirm bzw. Dialog.
+- **Einstellungskategorie** → öffnet diesen Einstellungsbildschirm.
+- **Einstellung** → öffnet die Einstellung **an ihrer Stelle** (springt in ihrem Bildschirm direkt zu ihr).
+- **Dokumentation** → öffnet die Seite in Deinem Browser.
 
-Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
+Beim Öffnen von Einstellungen und geschützten Aktionen gilt weiterhin Dein **[Zugriffsschutz](#Preferences-protection)** (PIN/Passwort), genau so, als wärst Du von Hand dorthin gegangen. Nachdem Du ein Ergebnis verwendet hast, kommst Du mit **Zurück** wieder zu Deinen Suchergebnissen.
 
 ---
 
-## Power-user shortcuts
+## Abkürzungen für Fortgeschrittene
 
-Two special queries list a whole category at once:
+Zwei besondere Suchbegriffe listen eine ganze Kategorie auf einmal auf:
 
-- `%PLUGINS%` — list **all** plugins.
-- `%DIALOGS%` — list **all** dialogs/action screens.
+- `%PLUGINS%` – listet **alle** Module auf.
+- `%DIALOGS%` – listet **alle** Dialoge bzw. Aktionsbildschirme auf.
 
 ---
 
 ```{admonition} The index stays current
 :class: note
-The search index is built the first time you search and kept ready after that. It is rebuilt automatically when you **enable/disable a plugin** or **change the app language**, so results always reflect your current setup.
+Der Suchindex wird beim ersten Suchen aufgebaut und danach bereitgehalten. Er wird automatisch neu aufgebaut, wenn Du **ein Modul ein- oder ausschaltest** oder **die Sprache der App änderst**, sodass die Ergebnisse immer Deinem aktuellen Stand entsprechen.
 ```
 
 ---

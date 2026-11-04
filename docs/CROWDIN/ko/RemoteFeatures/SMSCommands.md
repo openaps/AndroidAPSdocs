@@ -1,37 +1,37 @@
-# SMS Commands
+# SMS 명령
 
 ```{contents} Table of contents
 :depth: 2
 ```
 
-Most remote adjustments (temp targets, carbs, profile switches and, once the client is paired, boluses) can be made with the [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection, see [Master ↔ Client control](#client-master-control) (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). SMS commands remain an alternative that works without internet, and the only remote option if you use an iPhone as a follower and do not have **AAPSClient** yet.
+대부분의 원격 조정(임시 목표, 탄수화물, 프로파일 전환, 그리고 클라이언트가 페어링된 후에는 볼러스)은 인터넷에 연결된 Android 휴대폰의 [**AAPSClient** 앱](../RemoteFeatures/RemoteMonitoring.md)으로 할 수 있습니다. [마스터 ↔ 클라이언트 제어](#client-master-control)를 참조하십시오(**AAPSClient**의 iPhone 버전은 개발 중입니다. [AAPSClient](AapsClient.md) 참조). SMS 명령은 인터넷 없이도 작동하는 대안으로 남아 있으며, iPhone을 팔로워로 사용하고 아직 **AAPSClient**가 없는 경우에는 유일한 원격 옵션입니다.
 
-**SMS commands are really useful:**
-1. For routine remote control
+**SMS 명령은 매우 유용합니다:**
+1. 일상적인 원격 제어에
 
-2. If you want to remotely bolus insulin without a paired **AAPSClient**
+2. 페어링된 **AAPSClient** 없이 원격으로 인슐린 볼러스를 하고 싶을 때
 
-3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
+3. 문자 메시지는 전달되지만 데이터/인터넷 수신이 제한되는, 인터넷 수신이 좋지 않은 지역에서 외딴 지역에 갈 때(예: 캠핑, 스키) 매우 유용합니다.
 
-4. If your other method of remote control (**AAPSClient**) is temporarily not working
+4. 다른 원격 제어 방법(**AAPSClient**)이 일시적으로 작동하지 않을 때
 
-## Safety First
+## 안전 우선
 
-If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to export **AAPS** settings).
+**AAPS**에서 **SMS 통신기**를 활성화하는 경우, 원격 명령을 보내도록 설정된 휴대폰을 도난당하거나 다른 사람이 사용할 수 있다는 점을 생각하십시오. 휴대폰은 항상 적어도 PIN으로 잠그십시오. 강력한 비밀번호와/또는 생체 인식 잠금을 강력히 권장합니다. 그리고 이것이 APK 마스터 비밀번호(**AAPS** 설정을 내보낼 때 필요한 비밀번호)와 다르도록 하십시오.
 
-Additionally, it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. This way, you can use the second number to [disable](#SMSCommands-other) SMS communicator in case your main remote phone gets compromised.
+또한 SMS 명령에 [두 번째 전화번호](#SMSCommands-authorized-phone-numbers)를 허용하는 것을 권장합니다. 이렇게 하면 주 원격 휴대폰이 안전하지 않게 되었을 때 두 번째 번호로 SMS 통신기를 [비활성화](#SMSCommands-other)할 수 있습니다.
 
-The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
+볼러스 명령 사이의 기본 최소 시간 간격은 15분이며, 펌프가 볼러스를 받아들인 순간부터 계산합니다. 안전을 위해 이 간격을 더 짧게 바꾸려면 허용된 전화번호를 적어도 두 개 추가해야 합니다. 이전 볼러스 후 15분 안에 다시 원격 볼러스를 하려고 하면 “원격 볼러스를 사용할 수 없습니다. 나중에 다시 시도하십시오”라는 응답을 받게 됩니다.
 
-AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. 수신 폰 중 하나가 도난 당할 경우를 대비하여, 적어도 2개 이상의 다른 폰에 확인 문자 메시지가 전송되도록 설정하는 것을 권장합니다.
+볼러스나 프로파일 변경 같은 원격 명령이 실행되면 AAPS가 문자 메시지로도 알려 줍니다. 수신 휴대폰 중 하나를 도난당할 경우에 대비하여, 확인 문자 메시지가 적어도 두 개의 다른 전화번호로 전송되도록 설정하는 것을 권장합니다.
 
-**If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
+**SMS 명령으로 볼러스를 하는 경우, 탄수화물은 따로 입력해야 합니다(두 번째 SMS, AAPSClient 등)!** 그렇게 하지 않으면 IOB는 맞지만 COB가 너무 낮게 됩니다. **AAPS**가 활성 인슐린이 너무 많다고 판단하여 교정 볼러스를 주입하지 않을 수 있습니다.
 
-For the sensitive commands, an authenticator app with a time-based one-time password must be used to increase safety.
+민감한 명령에는 안전을 높이기 위해 시간 기반 일회용 비밀번호를 사용하는 인증 앱을 반드시 사용해야 합니다.
 
-If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “[Reset Authenticators](#sms-commands-authenticator-setup)” in **AAPS** or send the SMS command “[SMS stop](#SMSCommands-other)”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
+보호자 휴대폰이 더 이상 SMS 명령을 보내지 못하게 하려면 **AAPS**에서 비상 버튼 “[인증 초기화](#sms-commands-authenticator-setup)”를 사용하거나 SMS 명령 “[SMS stop](#SMSCommands-other)”을 보내십시오. 인증을 초기화하면 모든 보호자 휴대폰이 무효가 됩니다. 다시 설정해야 합니다.
 
-## Setup SMS commands
+## SMS 명령 설정
 
 ```{contents} The overall process is as follows
 :depth: 1
@@ -41,313 +41,313 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 (sms-commands-authenticator-setup)=
 ### Authenticator setup
 
-Two-factor authentication is used to improve safety.
+안전을 높이기 위해 2단계 인증을 사용합니다.
 
-On the caregiver phone, download (from the App store or Google play) and install an Authenticator app. Popular free apps are:
+보호자 휴대폰에서 인증 앱을 다운로드(App Store 또는 Google Play에서)하여 설치하십시오. 많이 쓰는 무료 앱은 다음과 같습니다:
   - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
-These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
+이 인증 앱은 모바일 뱅킹이나 쇼핑에서처럼 시간 제한이 있는 6자리 일회용 비밀번호를 만듭니다. RFC 6238 TOTP 토큰을 지원하기만 하면 다른 인증 앱을 사용해도 됩니다. Microsoft Authenticator는 작동하지 않습니다.
 
-### Check phone settings
+### 휴대폰 설정 확인
 
-On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phone** are allowed.
+휴대폰에서 **Apps > AAPS > Permissions**(앱 › AAPS › 권한)로 이동하십시오. **SMS**와 **Phone**(전화)이 허용되어 있는지 확인하십시오.
 
-![image](../images/remote-control-08.png)
+![이미지](../images/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
-Android can block the **SMS** permission for apps that were not installed from an app store, like **AAPS**. If you see this message when you grant the **SMS** permission, open the phone's **Settings > Apps > AAPS**, tap the **⋮** menu (top right) and select **Allow restricted settings**. Then grant the **SMS** permission again.
+Android는 **AAPS**처럼 앱 스토어에서 설치하지 않은 앱의 **SMS** 권한을 차단할 수 있습니다. **SMS** 권한을 허용할 때 이 메시지가 보이면 휴대폰의 **Settings > Apps > AAPS**(설정 › 앱 › AAPS)를 열고, **⋮** 메뉴(오른쪽 위)를 누른 다음 **Allow restricted settings**(제한된 설정 허용)를 선택하십시오. 그런 다음 **SMS** 권한을 다시 허용하십시오.
 ```
 
-![App was denied access to SMS](../images/sms_permission_restricted.png)
+![앱의 SMS 접근이 거부됨](../images/sms_permission_restricted.png)
 
-### Date and time syncing
+### 날짜와 시간 동기화
 
-The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
+두 휴대폰의 시간이 동기화되어 있어야 합니다. 네트워크에서 시간을 자동으로 설정하는 것이 가장 좋습니다. 시간 차이가 있으면 인증 문제가 생길 수 있습니다.
 
-On both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific device, you may need to try out different settings.
+**AAPS** 휴대폰과 보호자 휴대폰 모두에서 날짜와 시간이 동기화되어 있는지 확인하십시오. 정확한 방법은 기기마다 다르므로, 여러 설정을 시도해 보아야 할 수도 있습니다.
 
-Example (for Samsung S23): **Settings > General management > Date and time**: make sure that **Automatic date and time** is checked.
+예시(Samsung S23): **Settings > General management > Date and time**(설정 › 일반 › 날짜 및 시간): **Automatic date and time**(자동 날짜 및 시간)이 체크되어 있는지 확인하십시오.
 
-Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterward if it seems to be causing problems (ask for help if needed).
+휴대폰이 자녀 계정으로 설정되어 있으면 가족 계정의 관리자 권한이 필요하기 때문에 일부 옵션이 회색으로 비활성화되어 있을 수 있습니다. 보호자/부모의 iPhone에서는 이 날짜와 시간 설정을 “자동으로 설정”이라고 합니다. 휴대폰이 동기화되었는지 확실하지 않아도 걱정하지 마십시오. SMS 명령을 설정한 후, 문제가 생기는 것 같으면 그때 문제를 해결하면 됩니다(필요하면 도움을 요청하십시오).
 
-### AAPS settings
+### AAPS 설정
 
-Now that the phone settings have been checked, in the **AAPS** app itself, go to [**Configuration** → **Communication**](../SettingUpAaps/ConfigBuilder.md) and enable the **SMS Communicator** plugin.
+휴대폰 설정을 확인했으면 이제 **AAPS** 앱에서 [**구성** → **통신**](../SettingUpAaps/ConfigBuilder.md)으로 이동하여 **SMS 통신기** 플러그인을 활성화하십시오.
 
-Open the **SMS Communicator** settings.
+**SMS 통신기** 설정을 여십시오.
 
-Enable **Allow remote commands via SMS**. The **Additional mandatory PIN at token end** and **Authenticator setup** options only appear once this is enabled:
+**SMS로 원격 명령 허용**을 활성화하십시오. **토큰 끝에 붙이는 추가 필수 PIN**과 **인증 설정** 옵션은 이 설정을 활성화한 후에만 나타납니다:
 
-![SMS Communicator settings](../images/sms_communicator_settings.png)
+![SMS 통신기 설정](../images/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
-#### Allowed phone numbers
+#### 허용된 전화번호
 
-Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
-* UK phone number: +447976304596
-* US phone number: +11234567890
-* FR phone number:  +33612344567
-* _etc._
+보호자의 전화번호를 입력하십시오. 다음 예시처럼 국가 번호를 넣고 전화번호의 첫 번째 “0”은 빼십시오:
+* 영국 전화번호: +447976304596
+* 미국 전화번호: +11234567890
+* 프랑스 전화번호:  +33612344567
+* _등._
 
-Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format on the **SMS Communicator** plugin screen (**Configuration** → **Communication** → **SMS Communicator** → **Open plugin**).
+지역에 따라 번호 앞의 “+”가 필요할 수도 있고 필요하지 않을 수도 있습니다. 이것을 확인하려면 샘플 문자를 보내십시오. 받은 형식이 **SMS 통신기** 플러그인 화면(**구성** → **통신** → **SMS 통신기** → **플러그인 열기**)에 표시됩니다.
 
-If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select **OK**:
+추가할 전화번호가 두 개 이상이면 세미콜론으로 구분하고, **번호 사이에 공백을 넣지 마십시오**(매우 중요합니다!). **확인**을 선택하십시오:
 
-![Allowed phone numbers](../images/sms_allowed_numbers.png)
+![허용된 전화번호](../images/sms_allowed_numbers.png)
 
-#### Remote bolus min distance
+#### 원격 볼러스 최소 간격
 
-- You can define the minimum delay (in minutes) between two boluses issued via SMS.
-- For safety reasons you have to add at least two authorized phone numbers to edit this value.
+- SMS로 보낸 두 볼러스 사이의 최소 간격(분)을 정할 수 있습니다.
+- 안전을 위해 이 값을 수정하려면 허용된 전화번호를 적어도 두 개 추가해야 합니다.
 
-#### Additional mandatory PIN at token end
+#### 토큰 끝에 붙이는 추가 필수 PIN
 
-For safety reasons, the reply code must be followed by a PIN. Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
+안전을 위해 응답 코드 뒤에 PIN을 붙여야 합니다. SMS 명령을 보낼 때 인증 코드 끝에 본인(과 다른 보호자)이 사용할 PIN을 정하십시오.
 
-PIN requirements are:
+PIN 조건은 다음과 같습니다:
 
-* at least 6 digits
-* digits only
+* 6자리 이상
+* 숫자만
 
-For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a sequence (_e.g._ 123456).
+더 안전한 PIN을 위해 같은 숫자를 여러 번(_예_: 111111) 또는 연속된 숫자(_예_: 123456)를 사용하지 마십시오.
 
-![Additional mandatory PIN at token end](../images/sms_pin.png)
+![토큰 끝에 붙이는 추가 필수 PIN](../images/sms_pin.png)
 
 #### Authenticator setup
 
-* Tap **Authenticator setup** and follow the step-by-step instructions on the screen.
-* Open your installed authenticator app on the _caregiver’s phone_, set up a new connection and
-* Use the caregiver phone to scan the QR code shown under **Scan code to setup AAPS OTP codes**.
+* **인증 설정**을 누르고 화면의 단계별 안내를 따르십시오.
+* _보호자 휴대폰_에서 설치한 인증 앱을 열고, 새 연결을 설정한 다음
+* 보호자 휴대폰으로 **코드를 스캔하여 AAPS OTP 코드 설정** 아래에 표시된 QR 코드를 스캔하십시오.
 
-![Authenticator setup with QR code](../images/sms_authenticator_setup.png)
+![QR 코드로 인증 설정](../images/sms_authenticator_setup.png)
 
-* Under **Test One-Time-Password**, enter the one-time passcode from the authenticator app on the caregiver phone followed by your PIN in **Code to check**:
+* **일회성 비밀번호 테스트** 아래의 **확인할 코드**에 보호자 휴대폰의 인증 앱에서 받은 일회용 비밀번호와 그 뒤에 PIN을 입력하십시오:
 
-Example:
-* The token from the authenticator app is 457051
-* Your mandatory PIN is 2401
-* Code to check: 4570512401
+예시:
+* 인증 앱의 토큰은 457051입니다
+* 필수 PIN은 2401입니다
+* 확인할 코드: 4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
+입력이 올바르면 빨간색 “잘못된 PIN” 텍스트가 자동으로 초록색 “확인”으로 바뀝니다. **누를 버튼은 없습니다!** 이제 과정이 끝났습니다. 코드를 입력한 후 눌러야 하는 “확인” 버튼은 없습니다:
 
-![Test One-Time-Password and Reset Authenticators](../images/sms_authenticator_test.png)
+![일회성 비밀번호 테스트와 인증 초기화](../images/sms_authenticator_test.png)
 
-You should now be set up with SMS commands.
+이제 SMS 명령 설정이 끝났습니다.
 
-Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
+저장된 인증 앱을 삭제하려면 **인증 설정** 화면 아래쪽의 **인증 초기화** 버튼을 사용하십시오. (인증을 초기화하면 이미 저장된 모든 인증 앱이 무효가 됩니다. 다시 설정해야 합니다.)
 
-## SMS commands usage
+## SMS 명령 사용
 
-### First steps using SMS commands
+### SMS 명령 사용 첫 단계
 
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
+1)  모든 것이 올바르게 설정되었는지 확인하려면, 보호자 휴대폰에서 **AAPS** 휴대폰으로 “bg”라는 SMS 메시지를 보내 연결을 테스트하십시오. 다음과 비슷한 응답을 받아야 합니다:
 
-![image](../images/remote-control-06.png)
+![이미지](../images/remote-control-06.png)
 
-If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
+응답을 받지 못하면 아래의 [문제 해결](#SMSCommands-troubleshooting) 섹션을 확인하십시오.
 
-2)  Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of twelve digits in total, assuming your PIN has 6 digits).
+2)  이제 인증이 필요한 SMS 명령을 보내 보십시오. _예_: “target hypo”. 보호자 휴대폰은 답장 문자를 받습니다. 이 문자는 인증 앱의 **6자리 인증 비밀번호**와 그 뒤에 보호자/팔로워만 아는 추가 비밀 **PIN**을 입력하라고 요청합니다(PIN이 6자리라면 모두 12자리 숫자입니다).
 
-When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
+SMS 명령을 처음 보낼 때는 **AAPS** 휴대폰이 있는 곳에서 시도하여 어떻게 작동하는지 확인하십시오:
 
-![image](../images/remote-control-16.png)
+![이미지](../images/remote-control-16.png)
 
-The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully.
+보호자 휴대폰은 원격 SMS 명령이 성공적으로 실행되었는지 확인하는 답장 SMS를 **AAPS**에서 받습니다.
 
-If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message. See [Troubleshooting](#SMSCommands-troubleshooting) below for common errors.
+명령이 성공하면 이를 확인하는 답장을 받습니다. 문제가 있으면 오류 메시지를 받습니다. 흔한 오류는 아래의 [문제 해결](#SMSCommands-troubleshooting)을 참조하십시오.
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**힌트**: SMS를 많이 보낼 경우, 휴대폰 요금제(사용하는 휴대폰마다)에 무제한 SMS가 있으면 유용할 수 있습니다.
 
-### Delivering mealtime boluses through SMS commands
+### SMS 명령으로 식사 볼러스 주입하기
 
-Remote bolusing of insulin can be done via **SMS Commands** or through a paired **AAPSClient** (see [Master ↔ Client control](#client-master-control)); it cannot be done through the Nightscout website. Carbs can be announced through SMS or **AAPSClient** as well. With SMS, it is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
+원격 인슐린 볼러스는 **SMS 명령** 또는 페어링된 **AAPSClient**로 할 수 있습니다([마스터 ↔ 클라이언트 제어](#client-master-control) 참조). Nightscout 웹사이트로는 할 수 없습니다. 탄수화물도 SMS 또는 **AAPSClient**로 입력할 수 있습니다. SMS로는 탄수화물 명령과 인슐린 명령을 하나의 SMS 메시지로 함께 보낼 수 없습니다. 이 명령들은 다음과 같이 따로 보내야 합니다:
 
-1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to **Treatments** → **Insulin** in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to **Treatments** → **Carbs** in **AAPS**.
+1)  SMS 명령으로 인슐린 볼러스를 보냅니다(_예_: “bolus 2”는 2 U 볼러스를 명령합니다). 이것은 **AAPS**의 **처치** → **인슐린**과 같습니다. 2)  탄수화물을 보냅니다(_예_: “carbs 20”은 탄수화물 20g을 입력합니다). 이것은 **AAPS**의 **처치** → **탄수화물**과 같습니다.
 
-To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
+현재 혈당이나 혈당 추세를 고려하지 않기 때문에, 저혈당을 피하려면 탄수화물 비율에 따라 필요한 양보다 **적은 인슐린**으로 볼러스하여 보수적으로 시작하는 것이 좋습니다.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can combine **AAPSClient** with SMS commands: carbs entered on a paired **AAPSClient** need no authentication code and are therefore quicker than SMS commands. Carbs or other treatments entered on the Nightscout website are **not** applied while client control is on; **AAPS** is then in [hardened mode](#client-master-control-hardened-mode).
+**이 명령들을 보내는 순서가 중요합니다**. 어떤 방법으로든 많은 탄수화물을 입력하고 SMB가 활성화되어 있으면, **AAPS**가 즉시 인슐린의 일부를 볼러스로 주입할 수 있습니다. 따라서 탄수화물을 입력한 _후_에 인슐린 볼러스를 보내려고 하면, 답답한 지연과 “bolus in progress”(볼러스 진행 중) 메시지를 받을 수 있으며, SMB로 무엇이 주입되었는지 확인해야 합니다. 또는 SMB가 주입되고 있다는 것을 모르고 이후에 보낸 볼러스도 성공하면, 식사 전체에 대해 너무 많은 인슐린이 주입될 수 있습니다. 따라서 원격으로 식사 볼러스를 할 때는 항상 탄수화물 입력 _전_에 인슐린 볼러스를 보내십시오. 원하면 **AAPSClient**와 SMS 명령을 함께 사용할 수 있습니다: 페어링된 **AAPSClient**에서 입력한 탄수화물은 인증 코드가 필요 없으므로 SMS 명령보다 빠릅니다. 클라이언트 제어가 켜져 있는 동안에는 Nightscout 웹사이트에서 입력한 탄수화물이나 다른 처치가 적용되지 **않습니다**. 이때 **AAPS**는 [강화 모드](#client-master-control-hardened-mode)에 있습니다.
 
 (SMSCommands-commands)=
-## Commands
+## 명령
 
 ```{contents} List of command groups
 :depth: 1
 :local: true
 ```
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app). The commands are not case-sensitive, you can use lower or upper case.
+명령은 영어로 보내야 합니다. 응답 문자열이 이미 [번역](#translations-translate-strings-for-AAPS-app)되어 있으면 응답은 사용하는 언어로 옵니다. 명령은 대소문자를 구분하지 않으므로 소문자나 대문자를 사용할 수 있습니다.
 
-![SMS Commands Example](../images/SMSCommands.png)
+![SMS 명령 예시](../images/SMSCommands.png)
 
-The **SMS Commands Tables** below show all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the **AAPS** app itself.
+아래의 **SMS 명령 표**에 사용할 수 있는 모든 SMS 명령이 있습니다. 이해를 돕기 위해 _예시 값_을 적었습니다. 명령에 사용할 수 있는 값의 범위(목표, 프로파일 퍼센트 등)는 **AAPS** 앱에서 허용되는 범위와 같습니다.
 
 (authentication-or-not)=
-### Authentication or not?
+### 인증이 필요합니까?
 
-Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
+어떤 SMS 명령은 바로 응답하고, 어떤 SMS 명령은 인증 앱을 통한 강력한 **인증**이 필요합니다. “**BG**”(현재 혈당을 요청함) 같은 간단한 조회는 입력하기 쉽고, 인증이 필요 없으며, 아래와 같은 **AAPS** 상태 정보를 반환합니다:
 
-![image](../images/remote-control-06.png)
+![이미지](../images/remote-control-06.png)
 
-Commands which need more security require a code to be entered, for example:
+보안이 더 필요한 명령은 코드를 입력해야 합니다. 예:
 
-![SMS authenticated](../images/remote-control-07.png)
+![SMS 인증됨](../images/remote-control-07.png)
 
-The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
+아래 표의 *인증* 열은 각 명령에 이런 강력한 인증이 필요한지 보여 줍니다.
 
 ### CGM data
 
-| Command    | Auth | Function & *Response*                                                                                                                                                                                                             |
-| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | No   | Returns: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                                                                                   |
-| CAL 5.6/90 | Yes  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
+| 명령         | 인증  | 기능 & *응답*                                                                                                                                           |
+| ---------- | --- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | 아니요 | 반환: 마지막 혈당, 증분, IOB(볼러스와 기저), COB<br/>*Last BG: 5.6 4분 전, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                           |
+| CAL 5.6/90 | Yes | CGM을 5.6/90 값으로 보정합니다<br/>(사용하는 혈당 단위에 맞는 값을 사용하십시오)<br/>**AAPS**에서 제대로 설정된 경우에만 작동합니다.<br/>*보정을 보냈습니다. xDrip+에서 수신이 켜져 있어야 합니다.* |
 
 ### Pump
 
-| Command              | Auth | Function & *Response*                                                                                |
-| -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| PUMP                 | No   | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Yes  | To disconnect pump for *30* minutes                                                                  |
-| PUMP CONNECT         | Yes  | Pump reconnected                                                                                     |
+| 명령                   | 인증  | 기능 & *응답*                                                                                            |
+| -------------------- | --- | ---------------------------------------------------------------------------------------------------- |
+| PUMP                 | 아니요 | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | Yes | *30*분 동안 펌프 연결 해제                                                                                    |
+| PUMP CONNECT         | Yes | Pump reconnected                                                                                     |
 
-### Basal
+### 기저
 
-| Command           | Auth | Function & *Response*            |
-| ----------------- | ---- | -------------------------------- |
-| BASAL 0.3         | Yes  | To start basal 0.3U/h for 30 min |
-| BASAL 0.3 20      | Yes  | To start basal 0.3U/h for 20 min |
-| BASAL 30%         | Yes  | To start basal 30% for 30 min    |
-| BASAL 30% 50      | Yes  | To start basal 30% for 50 min    |
-| BASAL STOP/CANCEL | Yes  | To stop temp basal               |
+| 명령                | 인증  | 기능 & *응답*           |
+| ----------------- | --- | ------------------- |
+| BASAL 0.3         | Yes | 30분 동안 기저 0.3U/h 시작 |
+| BASAL 0.3 20      | Yes | 20분 동안 기저 0.3U/h 시작 |
+| BASAL 30%         | Yes | 30분 동안 기저 30% 시작    |
+| BASAL 30% 50      | Yes | 50분 동안 기저 30% 시작    |
+| BASAL STOP/CANCEL | Yes | 임시 기저 중지            |
 
-Some pumps take a temp basal only in percent, others only in U/h. If you use the other form, **AAPS** answers *"This pump takes a temp basal only in percent, not in U/h."* (or the reverse) and sets nothing. The duration must be a multiple of your pump's temp basal duration step.
+어떤 펌프는 임시 기저를 퍼센트로만 받고, 다른 펌프는 U/h로만 받습니다. 다른 형식을 사용하면 **AAPS**가 *"이 펌프는 임시 기저를 퍼센트로만 받으며, U/h로는 받지 않습니다."*(또는 그 반대)라고 답하고 아무것도 설정하지 않습니다. 기간은 펌프의 임시 기저 기간 단위의 배수여야 합니다.
 
 
-### Loop
+### 루프
 
-| Command           | Auth | Function & *Response*                                                                                                                                                                                                                                                              |
-| ----------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | No   | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
-| LOOP STOP/DISABLE | Yes  | The pump will revert to the pre-programmed basal rate.<br/>*Loop has been disabled*                                                                                                                                                                                          |
-| LOOP SUSPEND 20   | Yes  | *Loop suspended*                                                                                                                                                                                                                                                                   |
-| LOOP RESUME       | Yes  | *Loop resumed*                                                                                                                                                                                                                                                                     |
-| LOOP CLOSED       | Yes  | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
-| LOOP LGS          | Yes  | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
+| 명령                | 인증  | 기능 & *응답*                                                                                                                                                                                             |
+| ----------------- | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | 아니요 | 응답은 실제 상태에 따라 다릅니다:<br/> - 루프가 비활성화되었으면 *루프가 비활성화되었습니다*<br/> - 루프가 폐쇄, 개방 또는 LGS이면 *루프가 활성화되어 있습니다*<br/> - 펌프 연결이 해제되었으면 *펌프 연결이 해제되었습니다*<br/> - 루프가 일시 중지되었으면 *일시 중지됨 (10분)* |
+| LOOP STOP/DISABLE | Yes | 펌프가 미리 설정된 기저 주입량으로 돌아갑니다.<br/>*루프가 비활성화되었습니다*                                                                                                                                                  |
+| LOOP SUSPEND 20   | Yes | *루프 일시 중지됨*                                                                                                                                                                                           |
+| LOOP RESUME       | Yes | *루프가 재개되었습니다*                                                                                                                                                                                         |
+| LOOP CLOSED       | Yes | *현재 실행 모드: 폐쇄 루프*                                                                                                                                                                                     |
+| LOOP LGS          | Yes | *현재 실행 모드: 저혈당 주입 정지*                                                                                                                                                                                 |
 
-### Bolus
+### 볼러스
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
+마지막 볼러스 명령 또는 원격 명령 후 15분 안에는 원격 볼러스가 허용되지 않습니다(이 값은 전화번호 2개를 추가한 경우에만 수정할 수 있습니다)! 이 경우 응답은 *원격 볼러스를 사용할 수 없습니다. 나중에 다시 시도하십시오.*입니다. 펌프가 지금 볼러스를 주입하는 중일 때도 이 응답을 보냅니다.
 
-| Command              | Auth | Function & *Response*                                                                                                                                             |
-| -------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BOLUS 1.2            | Yes  |                                                                                                                                                                   |
-| BOLUS 0.60 MEAL      | Yes  | Delivers the specified 0.60U bolus<br/>**and** sets the [Eating Soon TempTarget](#TempTargets-eating-soon-temp-target)                                      |
-| CARBS 5              | Yes  | To enter 5g, without a bolus                                                                                                                                      |
-| CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35.<br/>The acceptable time format depends<br/> on the time setting (12h/24h) on the phone.                                         |
-| EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
-| EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                                                            |
+| 명령                   | 인증  | 기능 & *응답*                                                                                                                            |
+| -------------------- | --- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| BOLUS 1.2            | Yes |                                                                                                                                      |
+| BOLUS 0.60 MEAL      | Yes | 지정한 0.60U 볼러스를 주입하고<br/>**동시에** [식사 직전 임시 목표](#TempTargets-eating-soon-temp-target)를 설정합니다                                     |
+| CARBS 5              | Yes | 볼러스 없이 탄수화물 5g 입력                                                                                                                    |
+| CARBS 5 17:35/5:35PM | Yes | 17:35에 탄수화물 5g 입력.<br/>사용할 수 있는 시간 형식은<br/> 휴대폰의 시간 설정(12시간/24시간)에 따라 다릅니다.                                              |
+| EXTENDED 2 120       | Yes | 120분 동안 확장 볼러스 2U 시작.<br/>[호환 펌프](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)에서만 가능합니다. |
+| EXTENDED STOP/CANCEL | Yes | 확장 볼러스 중지                                                                                                                            |
 
 ### Profile
 
-| Command        | Auth | Function & *Response*                                                                                                                                        |
-| -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| PROFILE STATUS | No   | Current profile and percentage                                                                                                                               |
-| PROFILE LIST   | No   | The current list of profiles in **AAPS**, e.g.:<br/>1. Profile1<br/> 2. Profile2                                                                 |
-| PROFILE 1      | Yes  | To switch profile to profile 1 in the list.<br/>Use the numbers as returned by the **PROFILE LIST**,<br/>not the profile names as you saved them |
-| PROFILE 2 30   | Yes  | To switch profile to Profile2 30%                                                                                                                            |
+| 명령             | 인증  | 기능 & *응답*                                                                                       |
+| -------------- | --- | ----------------------------------------------------------------------------------------------- |
+| PROFILE STATUS | 아니요 | 현재 프로파일과 퍼센트                                                                                    |
+| PROFILE LIST   | 아니요 | **AAPS**의 현재 프로파일 목록, 예:<br/>1. Profile1<br/> 2. Profile2                           |
+| PROFILE 1      | Yes | 목록의 프로파일 1로 전환합니다.<br/>**PROFILE LIST**가 반환한 번호를 사용하십시오.<br/>저장한 프로파일 이름은 사용하지 마십시오 |
+| PROFILE 2 30   | Yes | Profile2 30%로 프로파일 전환                                                                           |
 
-The percentage must be between 30 and 250 %, as in the app. A value outside this range is refused before you are asked for the authentication code.
+퍼센트는 앱에서처럼 30%에서 250% 사이여야 합니다. 이 범위를 벗어난 값은 인증 코드를 묻기 전에 거부됩니다.
 
 ### Temporary Targets
 
-| Command                   | Auth | Function & *Response*                     |
-| ------------------------- | ---- | ----------------------------------------- |
-| TARGET MEAL/ACTIVITY/HYPO | Yes  | To set the Temp Target MEAL/ACTIVITY/HYPO |
-| TARGET STOP/CANCEL        | Yes  | To cancel Temp Target                     |
+| 명령                        | 인증  | 기능 & *응답*                   |
+| ------------------------- | --- | --------------------------- |
+| TARGET MEAL/ACTIVITY/HYPO | Yes | 임시 목표 MEAL/ACTIVITY/HYPO 설정 |
+| TARGET STOP/CANCEL        | Yes | 임시 목표 취소                    |
 
 
 (SMSCommands-other)=
 ### 기타
 
-| Command          | Auth | Function & *Response*                                                                                                                                                                                                                                                  |
-| ---------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RESTART          | Yes  | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                                                                                                      |
-| SMS DISABLE/STOP | Yes  | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll be able to reactivate it directly<br/>from the **AAPS** master smartphone only.                                                                                       |
-| HELP             | No   | Returns all functions available for interrogation:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Send further ***HELP ***FUNCTION****** command to list<br/>all options available in this section. |
-| HELP BOLUS       |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                                   |
+| 명령               | 인증  | 기능 & *응답*                                                                                                                                                                                                        |
+| ---------------- | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RESTART          | Yes | AAPS를 다시 시작합니다. 보통 다시 시작하면 해결되는 문제가 있을 때 유용합니다.                                                                                                                                                                  |
+| SMS DISABLE/STOP | Yes | SMS 원격 서비스를 비활성화하려면 코드로 답장하십시오.<br/>다시 활성화하는 것은<br/>**AAPS** 마스터 휴대폰에서만 직접 할 수 있습니다.                                                                                                                 |
+| HELP             | 아니요 | 조회할 수 있는 모든 기능을 반환합니다:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>이 항목에서 사용할 수 있는 모든 옵션을 보려면<br/>***HELP ***FUNCTION****** 명령을 추가로 보내십시오. |
+| HELP BOLUS       |     | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                             |
 
 (SMSCommands-troubleshooting)=
-## Troubleshooting and FAQ
+## 문제 해결과 FAQ
 
 ```{contents} List of questions and issues
 :depth: 1
 :local: true
 ```
 
-### What _can’t_ we do with SMS commands?
+### SMS 명령으로 _할 수 없는_ 것은 무엇입니까?
 
-1)  **You cannot set a _temporary_ profile switch** (so for example, setting "profile exercise" for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profile switches can instead be set through **AAPSClient**.
+1)  **_임시_ 프로파일 전환은 설정할 수 없습니다**(예를 들어 "profile exercise"를 60분 동안 설정하는 것). 하지만 “profile exercise”로 영구 전환할 수는 있습니다. 대신 임시 프로파일 전환은 **AAPSClient**로 설정할 수 있습니다.
 
-2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the **AAPS** phone. If the high temporary target of 7.0 is started by the automation, and you cancel it (on the **AAPS** phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
+2)  **자동화를 취소**하거나 **사용자가 정한 목표를 설정**할 수는 없지만, 비슷한 해결 방법이 있습니다: 예를 들어, 일반 프로파일 목표가 5.5라고 생각해 보십시오. 학교 체육 수업 때문에 AAPS에 오후 2시 30분부터 3시 30분까지 항상 높은 목표 7.0을 설정하는 자동화를 만들었고, 이 자동화의 조건 중 하나는 “임시 목표가 없음”입니다. 이번 주에 체육 수업이 취소되고 피자를 먹는 시간으로 바뀌었다는 연락을 갑자기 받았지만, 아이는 이미 **AAPS** 휴대폰을 가지고 학교에 있습니다. 자동화가 높은 임시 목표 7.0을 시작한 후 이를 취소하면(**AAPS** 휴대폰에서든 원격으로든), 자동화 조건은 여전히 맞기 때문에 **AAPS**는 1분 후에 높은 목표를 다시 설정합니다.
 
-**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min by pressing on the target on the main screen, or via **Manage** → **Temp Target**. This would prevent the automation from setting the high target of 7.0.
+**AAPS 휴대폰을 사용할 수 있다면**, 자동화의 체크를 해제하거나 수정할 수 있습니다. 그렇게 하고 싶지 않다면 메인 화면의 목표를 누르거나 **관리** → **임시 목표**에서 60분 동안 새 임시 목표 5.6을 설정하면 됩니다. 이렇게 하면 자동화가 높은 목표 7.0을 설정하지 않습니다.
 
-**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** to do this.
+**AAPS 휴대폰을 사용할 수 없다면** SMS 명령으로 비슷하게 해결할 수 있습니다: 예를 들어 “target meal” 명령으로 45분 동안 목표 5.0을 설정합니다(다른 기본 목표는 activity 또는 hypo에서 8.0입니다. 표 참조). 하지만 SMS 명령으로는 _특정_ 목표 값(예: 60분 동안 5.6)을 지정할 수 없습니다. 이렇게 하려면 **AAPSClient**를 사용해야 합니다.
 
-### What happens if I change my mind about a command I have just sent?
+### 방금 보낸 명령을 취소하고 싶으면 어떻게 됩니까?
 
-**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. **AAPS** will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
+**AAPS**는 가장 최근의 명령만 실행합니다. 따라서 “bolus 1.5”를 입력한 후 인증하지 않고 새 명령 “bolus 1”을 보내면, 이전의 1.5 명령은 무시됩니다. **AAPS**는 인증 코드를 입력하라는 요청 전에 SMS 명령이 무엇인지 확인하는 응답을 보호자 휴대폰에 항상 보내고, 동작 후에도 응답을 보냅니다.
 
-### Why didn't I get a response to an SMS command?
+### SMS 명령에 응답을 받지 못한 이유는 무엇입니까?
 
-It could be for one of these reasons:
+다음 이유 중 하나일 수 있습니다:
 
-1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The **AAPS** phone does not have a good Bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
+1)  메시지가 휴대폰에 전달되지 않았습니다(네트워크 문제). 2)  **AAPS**가 아직 요청을 처리하는 중입니다(_예_: 볼러스는 볼러스 속도에 따라 주입하는 데 시간이 걸릴 수 있습니다). 3)  명령을 받았을 때 **AAPS** 휴대폰과 펌프의 블루투스 연결이 좋지 않아 명령이 실패했습니다(이 경우 보통 **AAPS** 휴대폰에 알람이 울립니다).
 
-### No response whatsoever for SMS commands
+### SMS 명령에 대한 응답이 전혀 없음
 
-On the caregiver phone and/or **AAPS** phone, try disabling the following options :
-* **Send as chat message** ![Disable SMS as chat message](../images/SMSdisableChat.png)
-* If using Android Messages App or Google Messages App, disable RCS messaging:
-  - open the specific SMS conversation in Messages
-  - Select the options ellipsis in the top right corner
-  - select "Details"
-  - Activate "Only send SMS and MMS messages" ![Disable RCS as chat message](../images/SMSdisableRCS.png)
+보호자 휴대폰 및/또는 **AAPS** 휴대폰에서 다음 옵션을 비활성화해 보십시오:
+* **Send as chat message**(채팅 메시지로 보내기) ![채팅 메시지로 보내는 SMS 비활성화](../images/SMSdisableChat.png)
+* Android 메시지 앱 또는 Google 메시지 앱을 사용하는 경우 RCS 메시지를 비활성화하십시오:
+  - 메시지 앱에서 해당 SMS 대화를 엽니다
+  - 오른쪽 위의 옵션 메뉴(점 세 개)를 선택합니다
+  - "Details"(세부정보)를 선택합니다
+  - "Only send SMS and MMS messages"(SMS 및 MMS 메시지만 보내기) 활성화 ![채팅 메시지로 보내는 RCS 비활성화](../images/SMSdisableRCS.png)
 
-### Errors carrying out commands
+### 명령 실행 오류
 
-There are several possible reasons the command may not be successful:
+명령이 성공하지 못하는 이유는 여러 가지가 있을 수 있습니다:
 
-* SMS commands setup isn’t complete/correct
-* You sent a command which had an incorrect format (like “disconnect pump 45” instead of “pump disconnect 45”)
-* You used an incorrect, or expired authenticator code (it is usually good to wait a few seconds for a fresh code, if the current one is about to expire)
-* The code+PIN was OK, but there was a delay in the SMS leaving/arriving, which led **AAPS** to calculate that the authenticator code had expired
-* The **AAPS** phone is out of range/contact with the pump
-* The system is already busy delivering a bolus
+* SMS 명령 설정이 완료되지 않았거나 올바르지 않음
+* 잘못된 형식의 명령을 보냄(예: “pump disconnect 45” 대신 “disconnect pump 45”)
+* 잘못되었거나 만료된 인증 코드를 사용함(현재 코드가 곧 만료될 것 같으면 몇 초 기다려 새 코드를 사용하는 것이 보통 좋습니다)
+* 코드+PIN은 맞았지만 SMS 발신/수신이 지연되어, **AAPS**가 인증 코드가 만료되었다고 계산함
+* **AAPS** 휴대폰이 펌프의 범위를 벗어났거나 펌프와 연결되지 않음
+* 시스템이 이미 볼러스를 주입하는 중임
 
-Common errors are shown in the examples below:
+흔한 오류는 아래 예시에 있습니다:
 
-![image](../images/remote-control-17.png)
+![이미지](../images/remote-control-17.png)
 
-### How can I stop a command once it has been authenticated?
+### 인증된 명령은 어떻게 중지할 수 있습니까?
 
-You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
+할 수 없습니다. 하지만 빠르게 하면 **AAPS** 휴대폰에서 볼러스 팝업의 취소로 SMS로 보낸 볼러스를 취소할 수 있습니다. 실수를 했을 때 많은 SMS 명령(볼러스와 탄수화물 입력 제외)은 쉽게 되돌리거나, 원하지 않은 결과를 줄이는 조치를 할 수 있습니다.
 
-For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
+볼러스와 탄수화물 입력의 실수에도 조치를 할 수 있습니다. 예를 들어, 탄수화물 20g을 입력했지만 아이가 10g만 먹었고, 본인(또는 곁에 있는 보호자)이 **AAPS** 휴대폰에서 직접 처치를 삭제할 수 없다면, 높은 임시 목표를 설정하거나 낮춘 프로파일을 설정하여 **AAPS**가 덜 공격적으로 작동하게 할 수 있습니다.
 
-### Multiple SMS
+### 여러 SMS
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip, for example. If so, please ensure that xDrip (or any other app) does not upload treatments to NightScout.
+같은 메시지를 계속 받는다면(_예_: 프로파일 전환), 실수로 다른 앱과 반복 순환이 생기도록 설정했을 수 있습니다. 예를 들어 xDrip일 수 있습니다. 그렇다면 xDrip(또는 다른 앱)이 처치를 Nightscout에 업로드하지 않도록 하십시오.
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+다른 앱이 여러 휴대폰에 설치되어 있으면 모든 휴대폰에서 업로드를 비활성화하십시오.
 
 (sms-commands-too-many-messages)=
-### I am getting far too many text messages from SMS Commands. Can I reduce the frequency, or make them stop?
+### SMS 명령에서 문자 메시지가 너무 많이 옵니다. 횟수를 줄이거나 오지 않게 할 수 있습니까?
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
+SMS 명령을 사용하면 **AAPS** 휴대폰에서 보호자 휴대폰으로 자동 메시지가 많이 갈 수 있습니다. **AAPS**에 자동화가 설정되어 있으면, 예를 들어 “펌프의 기저 프로파일이 업데이트되었습니다” 같은 메시지도 받게 됩니다. SMS를 많이 보낼 경우, **AAPS** 휴대폰 요금제(와 사용하는 각 보호자 휴대폰)에 무제한 SMS가 있으면 유용할 수 있습니다. 또한 모든 휴대폰에서 SMS 알림, 알람 또는 진동을 끄는 것이 좋습니다. SMS 명령을 사용하면서 이런 업데이트를 받지 않을 수는 없습니다. 그래서 아이와 직접 연락할 때는(아이가 충분히 컸다면) SMS 대신 다른 방법을 사용하는 것이 좋을 수 있습니다. **AAPS** 보호자들이 많이 쓰는 다른 연락 앱으로는 WhatsApp, LINE, Telegram, Facebook Messenger가 있습니다.
 
-It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+프로파일 변경이 Nightscout에서 시작된 경우 "펌프의 기저 프로파일이 업데이트되었습니다" SMS를 끌 수 있습니다. 이렇게 하려면 AAPS 디렉터리의 `extra` 폴더에 **정확히** `do_not_send_sms_on_profile_change`라는 이름의 파일을 만드십시오.

@@ -1,9 +1,9 @@
 (client-master-control)=
-# Master ↔ Client control (signed remote control)
+# שליטה בין מכשיר ראשי ↔ מכשיר לקוח (שליטה מרחוק חתומה)
 
-From **AAPS** version 4, a follower phone running **AAPSClient** can do much more than *announce* treatments through Nightscout: once it has been **paired** with the main phone, it can send **signed commands** that the main phone (the **master**) checks, confirms and executes — including delivering an **insulin bolus** on the master's pump.
+מגרסה 4 של **AAPS**, טלפון עוקב שמריץ את **AAPSClient** יכול לעשות הרבה יותר מאשר *להכריז* על טיפולים דרך Nightscout: אחרי שהוא **צומד** לטלפון הראשי, הוא יכול לשלוח **פקודות חתומות** שהטלפון הראשי (**המכשיר הראשי**) בודק, מאשר ומבצע — כולל מתן **בולוס אינסולין** במשאבה של המכשיר הראשי.
 
-This page explains how it works, and how to set it up and use it.
+דף זה מסביר איך זה עובד, ואיך להגדיר את זה ולהשתמש בזה.
 
 ```{contents} Table of contents
 :depth: 2
@@ -12,257 +12,257 @@ This page explains how it works, and how to set it up and use it.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop (the `full` app).
-- **Client** = an **AAPSClient** phone with no pump that follows and now also *controls* the master.
-- Both phones must be connected to the **same Nightscout** site. All communication still travels through Nightscout — no direct connection between the phones is needed.
+- **המכשיר הראשי** (Master) = הטלפון הראשי של **AAPS**, שמחובר למשאבה ומריץ את הלולאה (האפליקציה `full`).
+- **מכשיר לקוח** (Client) = טלפון עם **AAPSClient** בלי משאבה, שעוקב אחרי המכשיר הראשי ועכשיו גם *שולט* בו.
+- שני הטלפונים חייבים להיות מחוברים **לאותו אתר Nightscout**. כל התקשורת עדיין עוברת דרך Nightscout — אין צורך בחיבור ישיר בין הטלפונים.
 ```
 
 ---
 
-## How it works
+## איך זה עובד
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-In **AAPS** v3, **AAPSClient** could only write unsigned care-portal treatments to Nightscout, and could not deliver a bolus. Remote control now needs a one-time [pairing](#client_master_master_setup). See also [What changed in AAPS v4](#v4changes-remote-control).
+ב-**AAPS** v3, **AAPSClient** יכול היה רק לכתוב ל-Nightscout טיפולים לא חתומים של פורטל הטיפולים, ולא יכול היה לתת בולוס. שליטה מרחוק דורשת עכשיו [צימוד](#client_master_master_setup) חד-פעמי. ראו גם [מה השתנה ב-AAPS v4](#v4changes-remote-control).
 ```
 
-**AAPS** v4 uses a dedicated **Client-Control** channel. It still rides on your Nightscout site (in the `settings` collection), but every message is **cryptographically signed** with a secret that only the two phones know. The secret is handed over once, during **pairing**, and replaced by a new one right after it, so it never travels in clear text.
+**AAPS** v4 משתמש בערוץ ייעודי בשם **Client-Control**. הערוץ עדיין עובר דרך אתר ה-Nightscout שלכם (באוסף `settings`), אבל כל הודעה **חתומה בחתימה קריפטוגרפית** עם סוד ששני הטלפונים בלבד יודעים. הסוד נמסר פעם אחת, בזמן **הצימוד**, ומיד אחר כך מוחלף בסוד חדש, כך שהוא אף פעם לא עובר כטקסט גלוי.
 
-The guiding principle is **the master is in charge**:
+העיקרון המנחה הוא **המכשיר הראשי הוא שמחליט**:
 
-1. The client sends an *intent* (“bolus 2 U”, “start the Exercise scene”, “set this temp target”…).
-2. The **master** re-computes and **caps** the action against its **own** live data (profile, IOB, COB, current temp target, pump), and **authors the exact confirmation** the user will see.
-3. The client (or watch) shows the **master's** confirmation text — it never builds its own.
-4. On confirmation the master **executes once** and reports the result back to the client.
+1. מכשיר הלקוח שולח *כוונה* (“בולוס 2 U”, “הפעלת התרחיש פעילות גופנית”, “הגדרת היעד הזמני הזה”…).
+2. **המכשיר הראשי** מחשב מחדש את הפעולה ו**מגביל** אותה לפי הנתונים העדכניים **שלו** (פרופיל, IOB, COB, היעד הזמני הנוכחי, משאבה), ו**כותב את נוסח האישור המדויק** שהמשתמש יראה.
+3. מכשיר הלקוח (או השעון) מציג את נוסח האישור של **המכשיר הראשי** — הוא אף פעם לא יוצר נוסח משלו.
+4. לאחר האישור, המכשיר הראשי **מבצע את הפעולה פעם אחת** ומדווח את התוצאה בחזרה למכשיר הלקוח.
 
-What this means for you:
+מה זה אומר עבורכם:
 
-- **Signed commands**: only the clients you paired can send commands (per-client pairing secret and signature). Old or replayed commands are rejected.
-- **A role for each client**: you decide what each client may do, from *Read-only* to *Admin* — see [Client roles](#client-master-control-roles).
-- **Insulin bolus from a client**: the master delivers it on its pump, and the client shows the delivery progress.
-- **The master decides**: it caps every action against its own constraints and writes the confirmation shown on the client.
-- **Only paired clients change therapy**: while client control is on, the master no longer takes treatments or changes typed directly into Nightscout — see [Hardened mode](#client-master-control-hardened-mode).
-- **Each client gets its own Nightscout token** with only the rights a client needs — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Master offline**: actions are blocked with a clear message.
-- **Revoking a client** takes one tap (per client), or use the master's switch to stop all clients.
+- **פקודות חתומות**: רק מכשירי הלקוח שצימדתם יכולים לשלוח פקודות (סוד צימוד וחתימה נפרדים לכל מכשיר לקוח). פקודות ישנות או פקודות שנשלחות שוב נדחות.
+- **תפקיד לכל מכשיר לקוח**: אתם מחליטים מה כל מכשיר לקוח רשאי לעשות, מ*קריאה בלבד* ועד *ניהול* — ראו [תפקידי לקוח](#client-master-control-roles).
+- **בולוס אינסולין ממכשיר לקוח**: המכשיר הראשי נותן אותו במשאבה שלו, ומכשיר הלקוח מציג את התקדמות ההזרקה.
+- **המכשיר הראשי מחליט**: הוא מגביל כל פעולה לפי המגבלות שלו וכותב את נוסח האישור שמוצג במכשיר הלקוח.
+- **רק מכשירי לקוח מצומדים משנים את הטיפול**: כל עוד השליטה ממכשירי לקוח מופעלת, המכשיר הראשי כבר לא מקבל טיפולים או שינויים שהוקלדו ישירות ב-Nightscout — ראו [מצב מוקשח](#client-master-control-hardened-mode).
+- **כל מכשיר לקוח מקבל אסימון Nightscout משלו**, רק עם ההרשאות שמכשיר לקוח צריך — ראו [אסימון ה-Nightscout הנפרד של מכשיר הלקוח](#client-master-control-own-token).
+- **המכשיר הראשי לא מקוון**: הפעולות נחסמות עם הודעה ברורה.
+- **ביטול הרשאה של מכשיר לקוח** דורש לחיצה אחת (לכל מכשיר לקוח), או שאפשר להשתמש במתג במכשיר הראשי כדי לעצור את כל מכשירי הלקוח.
 
-Actions that can be triggered from a client: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](../DailyLifeWithAaps/Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
+פעולות שאפשר להפעיל ממכשיר לקוח: **בולוס**, **פחמימות / פחמימות ממושכות**, **יעד זמני** (הגדרה וביטול), **החלפת פרופיל**, שינוי **לולאה / מצב הפעלה**, **בזאלי זמני** (הגדרה וביטול), **בולוס ממושך** (הגדרה וביטול), **בחירת אינסולין**, ו**[תרחישים](../DailyLifeWithAaps/Scenes.md)**. חלק מה**העדפות** הן דו-כיווניות, והן נשמרות מסונכרנות בין המכשיר הראשי למכשירי הלקוח.
 
 ---
 
-## Roles and prerequisites
+## תפקידים ודרישות מוקדמות
 
 ```{admonition} Before you start
 :class: important
-- The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **master** uses **NSClientV3** with your Nightscout and is showing *connected*. Give it an **admin token** of your Nightscout: with it the master can make a token of its own for each client and show it to the client as a QR code.
-- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). It must use the **same** Nightscout. If you set it up with the master's QR code, the client gets its Nightscout address and token from the master; otherwise set up **NSClientV3** on it yourself first.
-- **Websockets** are needed on both phones: commands only reach the master over the websocket connection. While client control is on, **AAPS** keeps websockets on, on the master and on paired clients.
+- **המכשיר הראשי** מריץ את בניית ה-`full` הרגילה של **AAPS** ומחובר למשאבה שלכם.
+- **המכשיר הראשי** משתמש ב-**NSClientV3** עם ה-Nightscout שלכם ומציג *מחובר*. יש לתת לו **אסימון מנהל (admin)** של ה-Nightscout שלכם: בעזרתו המכשיר הראשי יכול ליצור אסימון נפרד לכל מכשיר לקוח ולהציג אותו למכשיר הלקוח כקוד QR.
+- **מכשיר הלקוח** מריץ את **[AAPSClient](AapsClient.md)** (או **AAPSClient2** / **AAPSClient3** למטופלים נוספים — ראו [על AAPSClient, AAPSClient2 ו-AAPSClient3](#remotecontrol-aapsclient-versions)). הוא חייב להשתמש **באותו** Nightscout. אם מגדירים אותו עם קוד ה-QR של המכשיר הראשי, מכשיר הלקוח מקבל את כתובת ה-Nightscout ואת האסימון מהמכשיר הראשי; אחרת יש להגדיר בו קודם את **NSClientV3** בעצמכם.
+- נדרשים **websockets** בשני הטלפונים: פקודות מגיעות למכשיר הראשי רק דרך חיבור ה-websocket. כל עוד השליטה ממכשירי לקוח מופעלת, **AAPS** משאיר את ה-websockets מופעלים, במכשיר הראשי ובמכשירי הלקוח המצומדים.
 ```
 
-Pairing and synchronization are two different things:
+צימוד וסנכרון הם שני דברים שונים:
 
-- **Synchronization** (data: BG, treatments, profile) is set up as before — see [Synchronization](#RemoteControl_aapsclient). The master's QR code can do it for you on the client.
-- **Pairing** (control: the signed command channel described here) is the new step below.
+- **סנכרון** (נתונים: ערכי סוכר, טיפולים, פרופיל) מוגדר כמו קודם — ראו [סנכרון](#RemoteControl_aapsclient). קוד ה-QR של המכשיר הראשי יכול לעשות זאת בשבילכם במכשיר הלקוח.
+- **צימוד** (שליטה: ערוץ הפקודות החתומות שמתואר כאן) הוא השלב החדש שמופיע בהמשך.
 
 ---
 
-## Setting it up
+## הגדרה
 
 (client_master_master_setup)=
-### 1. On the master — enable control and add a client
+### 1. במכשיר הראשי — הפעלת השליטה והוספת מכשיר לקוח
 
-On the master, open the **Manage** screen and choose **Authorized clients**.
+במכשיר הראשי, יש לפתוח את מסך **ניהול** ולבחור **לקוחות מורשים**.
 
-Turn on **Allow client control** (it is **off** by default). This is the master kill-switch: with it off, no client can send commands, but your paired clients are kept so you can turn it back on later. Turning it on also turns on [Hardened mode](#client-master-control-hardened-mode), shown as "*Hardened mode on*" with an **(i)** that explains it. In [Simple Mode](#preferences-simple-mode) client control is always on, so the switch is not shown.
+יש להפעיל את **מתן אפשרות לשליטה ממכשיר לקוח** (כברירת מחדל היא **כבויה**). זה המתג הראשי להשבתה: כשהוא כבוי, אף מכשיר לקוח לא יכול לשלוח פקודות, אבל מכשירי הלקוח המצומדים נשמרים, כך שאפשר להפעיל אותו שוב מאוחר יותר. ההפעלה שלו מפעילה גם את [מצב מוקשח](#client-master-control-hardened-mode), שמוצג כ-"*מצב מוקשח מופעל*" עם **(i)** שמסביר אותו. ב[מצב פשוט](#preferences-simple-mode) השליטה ממכשירי לקוח תמיד מופעלת, ולכן המתג לא מוצג.
 
-![Authorized clients screen on the master](../images/v4/ClientMaster/authorized_clients_master.png)
+![מסך הלקוחות המורשים במכשיר הראשי](../images/v4/ClientMaster/authorized_clients_master.png)
 
-Tap the **+** button (bottom right) to add a client. In the **New client** dialog:
+יש ללחוץ על לחצן **+** (בפינה התחתונה של המסך) כדי להוסיף מכשיר לקוח. בחלון **מכשיר לקוח חדש**:
 
-1. Enter a **device name**, so you can recognize it in the list.
-2. Choose **how the phone is set up** (see the table below).
-3. Choose its **[role](#client-master-control-roles)**. Nothing is selected for you: the right role depends on who uses the phone.
+1. יש להזין **שם מכשיר**, כדי שתוכלו לזהות אותו ברשימה.
+2. יש לבחור **איך הטלפון מוגדר** (ראו את הטבלה בהמשך).
+3. יש לבחור את ה**[תפקיד](#client-master-control-roles)** שלו. שום דבר לא נבחר מראש: התפקיד הנכון תלוי במי שמשתמש בטלפון.
 
-![New client dialog on the master: device name, how the phone is set up, and its role](../images/v4/ClientMaster/new_client_master.png)
+![חלון מכשיר לקוח חדש במכשיר הראשי: שם המכשיר, איך הטלפון מוגדר והתפקיד שלו](../images/v4/ClientMaster/new_client_master.png)
 
-| Way                                 | What the new phone gets                                                       | Use it when                                                                                            |
-| ----------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| **QR code: Nightscout and pairing** | the Nightscout address, its own Nightscout token and the pairing, in one scan | the new phone has a camera: the quickest way, nothing to type                                          |
-| **QR code: Nightscout only**        | the Nightscout address and its own Nightscout token, no pairing               | the phone should only **show** data and never send commands                                            |
-| **PIN**                             | the pairing only; it keeps the Nightscout settings it has                     | the phone has no camera (or the master cannot make tokens); it must be connected to Nightscout already |
+| דרך                           | מה הטלפון החדש מקבל                                                  | מתי להשתמש בה                                                                                     |
+| ----------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **קוד QR: Nightscout וצימוד** | את כתובת ה-Nightscout, אסימון Nightscout משלו ואת הצימוד, בסריקה אחת | לטלפון החדש יש מצלמה: הדרך המהירה ביותר, אין צורך להקליד דבר                                      |
+| **קוד QR: רק Nightscout**     | את כתובת ה-Nightscout ואסימון Nightscout משלו, בלי צימוד             | הטלפון צריך רק **להציג** נתונים ואף פעם לא לשלוח פקודות                                           |
+| **PIN**                       | רק את הצימוד; הוא שומר את הגדרות ה-Nightscout שכבר יש לו             | לטלפון אין מצלמה (או שהמכשיר הראשי לא יכול ליצור אסימונים); הוא חייב להיות כבר מחובר ל-Nightscout |
 
-The two QR code ways need an **admin token** in the master's **NSClientV3** settings, because the master makes the client's token in Nightscout. Without one, the QR code options are shown but cannot be chosen, and the dialog says why; the **PIN** always works.
+שתי הדרכים עם קוד QR דורשות **אסימון מנהל (admin)** בהגדרות **NSClientV3** של המכשיר הראשי, כי המכשיר הראשי יוצר ב-Nightscout את האסימון של מכשיר הלקוח. בלי אסימון כזה, האפשרויות של קוד QR מוצגות אבל אי אפשר לבחור בהן, והחלון מסביר למה; **PIN** עובד תמיד.
 
-#### With a QR code
+#### עם קוד QR
 
-Tap **OK**: the master makes the client's Nightscout token and shows a **QR code**. A code that also pairs works for about **two minutes**; the screen counts down and closes by itself when the client has paired. Scan it on the new phone as described in [On the client](#client_master_client_setup).
+יש ללחוץ על **אישור**: המכשיר הראשי יוצר את אסימון ה-Nightscout של מכשיר הלקוח ומציג **קוד QR**. קוד שגם מצמד עובד בערך **שתי דקות**; המסך מציג ספירה לאחור ונסגר מעצמו כשמכשיר הלקוח סיים את הצימוד. יש לסרוק אותו בטלפון החדש כפי שמתואר בסעיף [במכשיר הלקוח](#client_master_client_setup).
 
 ```{admonition} The QR code is a secret
 :class: warning
-Anyone who sees the QR code can read your Nightscout, and a code that pairs also carries the pairing. Show it only to the new phone. **AAPS** blocks screenshots while the code is on screen.
+כל מי שרואה את קוד ה-QR יכול לקרוא את ה-Nightscout שלכם, וקוד שמצמד מכיל גם את הצימוד. יש להציג אותו רק לטלפון החדש. **AAPS** חוסם צילומי מסך כל עוד הקוד מוצג על המסך.
 ```
 
-![The master's QR code screen with its countdown (code blurred)](../images/v4/ClientMaster/qr_code_master.png)
+![מסך קוד ה-QR של המכשיר הראשי עם הספירה לאחור (הקוד מטושטש)](../images/v4/ClientMaster/qr_code_master.png)
 
-#### With a PIN
+#### עם PIN
 
-Tap **OK**: the master displays an 8-digit **pairing PIN**, shown in two groups of four (for example `1234 5678`). This PIN is **one-time** and **expires after about two minutes**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
+יש ללחוץ על **אישור**: המכשיר הראשי מציג **PIN לצימוד** בן 8 ספרות, בשתי קבוצות של ארבע ספרות (למשל `1234 5678`). ה-PIN הזה הוא **חד-פעמי** ו**תוקפו פג אחרי כשתי דקות**. כמו עם קוד ה-QR, המכשיר הראשי דוחה שם של מכשיר לקוח שכבר נמצא ברשימה שלו: כל מכשיר לקוח מקבל אסימון (token) משלו ב-Nightscout תחת השם שלו.
 
-![Master pairing screen showing the one-time PIN (the PIN shown here is expired)](../images/v4/ClientMaster/pairing_pin_master.png)
+![מסך הצימוד במכשיר הראשי עם ה-PIN החד-פעמי (תוקף ה-PIN שמוצג כאן כבר פג)](../images/v4/ClientMaster/pairing_pin_master.png)
 
 ```{admonition} The pairing PIN is a secret
 :class: warning
-The PIN protects the pairing secret that is exchanged through Nightscout. Share it only with the device you are pairing, do not post it publicly, and let it expire if you do not use it. A fresh PIN can always be generated by tapping **+** again.
+ה-PIN מגן על סוד הצימוד שמועבר דרך Nightscout. יש לשתף אותו רק עם המכשיר שמצמדים, לא לפרסם אותו בפומבי, ולתת לתוקף שלו לפוג אם לא משתמשים בו. תמיד אפשר ליצור PIN חדש בלחיצה נוספת על **+**.
 ```
 
 (client_master_client_setup)=
-### 2. On the client — pair with the master
+### 2. במכשיר הלקוח — צימוד למכשיר הראשי
 
-#### Scanning the QR code
+#### סריקת קוד ה-QR
 
-You can scan the master's QR code in two places:
+אפשר לסרוק את קוד ה-QR של המכשיר הראשי בשני מקומות:
 
-- in the client's **Setup Wizard**, on the step "**Set up from the master**", which comes before the Nightscout step. One scan then sets up Nightscout and, with a code that pairs, also the pairing, so the setup is finished: the wizard closes and the home screen opens;
-- at any time later from **Manage → Pair with master → Scan QR code**.
+- ב**אשף ההתקנה** של מכשיר הלקוח, בשלב "**הגדרה מהמכשיר הראשי**", שמופיע לפני שלב ה-Nightscout. סריקה אחת מגדירה אז את Nightscout, ועם קוד שמצמד גם את הצימוד, כך שההתקנה מסתיימת: האשף נסגר ומסך הבית נפתח;
+- בכל זמן מאוחר יותר דרך **ניהול ← צימוד למכשיר ראשי ← סריקת קוד QR**.
 
-The first time, **AAPSClient** asks for the **camera** permission. If you refuse it, the screen says that the camera is needed, and you can allow it with **Try again** or pair with the PIN instead.
+בפעם הראשונה, **AAPSClient** מבקש הרשאה ל**מצלמה**. אם מסרבים, המסך אומר שהמצלמה נדרשת, ואפשר לאשר אותה עם **ניסיון חוזר** או לבצע צימוד עם PIN במקום זאת.
 
-Point the camera at the code. The client shows what the code does — the Nightscout address and, for a code that pairs, the master it pairs with — and asks "**Use this code?**". Tap **Use**: the client turns on **NSClientV3**, replaces its Nightscout address and token with the ones from the code and turns on websockets. A code that pairs also pairs the phone; it says hello to the master as soon as it has connected to Nightscout.
+יש לכוון את המצלמה אל הקוד. מכשיר הלקוח מציג מה הקוד עושה — את כתובת ה-Nightscout, ובקוד שמצמד גם את המכשיר הראשי שאליו הוא מצמד — ושואל "**להשתמש בקוד הזה?**". יש ללחוץ על **שימוש**: מכשיר הלקוח מפעיל את **NSClientV3**, מחליף את כתובת ה-Nightscout ואת האסימון שלו בנתונים מהקוד ומפעיל websockets. קוד שמצמד גם מצמד את הטלפון; הטלפון שולח הודעת Hello למכשיר הראשי מיד כשהוא מתחבר ל-Nightscout.
 
-![The client's Set up from the master wizard step](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+![שלב האשף "הגדרה מהמכשיר הראשי" במכשיר הלקוח](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
 ```{admonition} Scanning is available on Android
 :class: note
-The scanner is not available on iOS yet, and a desktop has no camera: use the PIN there.
+A computer without camera: use the PIN there.
 ```
 
-#### Entering the PIN
+#### הזנת ה-PIN
 
-On the client, open **Manage → Pair with master** (or the wizard step **Pair with master**, after the Nightscout step), **enter the 8-digit PIN** shown on the master and tap **Pair**. The client uses the PIN to securely retrieve the pairing offer through Nightscout, then asks "**Pair with this master?**" and shows the master's identifier. Tap **Pair** to confirm (see [Pairing with the master](#aapsclient-pairing-with-the-master) for a screenshot).
+במכשיר הלקוח, יש לפתוח **ניהול ← צימוד למכשיר ראשי** (או את שלב האשף **צימוד למכשיר ראשי**, אחרי שלב ה-Nightscout), **להזין את ה-PIN בן 8 הספרות** שמוצג במכשיר הראשי וללחוץ על **צימוד**. מכשיר הלקוח משתמש ב-PIN כדי לקבל בצורה מאובטחת את הצעת הצימוד דרך Nightscout, ואז שואל "**לצמד למכשיר ראשי זה?**" ומציג את המזהה של המכשיר הראשי. יש ללחוץ על **צימוד** כדי לאשר (צילום מסך נמצא ב[צימוד למכשיר הראשי](#aapsclient-pairing-with-the-master)).
 
-![Pair-with-master screen on the client before pairing — enter the PIN here](../images/v4/ClientMaster/pair_with_master_unpaired.png)
+![מסך הצימוד למכשיר ראשי במכשיר הלקוח לפני הצימוד — כאן מזינים את ה-PIN](../images/v4/ClientMaster/pair_with_master_unpaired.png)
 
-#### After pairing
+#### אחרי הצימוד
 
-Once a client is paired it sends a **Hello** to the master and appears in the master's **Authorized clients** list as **Active**, with a *“last seen”* time. The client knows its [role](#client-master-control-roles) from the pairing, so it shows the right buttons at once. A pairing made in the Setup Wizard finishes the wizard. In the same step the two phones replace the pairing secret with a new one that never travelled (see [Security notes](#client-master-control-security)), and a client that was set up with the PIN gets its own Nightscout token (see [The client's own Nightscout token](#client-master-control-own-token)). A client can be paired with **one** master at a time; to pair with a different master, **Unpair** first.
+אחרי שמכשיר לקוח צומד, הוא שולח הודעת **Hello** למכשיר הראשי ומופיע ברשימת **לקוחות מורשים** של המכשיר הראשי כ**פעיל**, עם זמן *“נראה לאחרונה”*. מכשיר הלקוח יודע את ה[תפקיד](#client-master-control-roles) שלו מהצימוד, ולכן הוא מציג מיד את הלחצנים הנכונים. צימוד שנעשה באשף ההתקנה מסיים את האשף. באותו שלב שני הטלפונים מחליפים את סוד הצימוד בסוד חדש שאף פעם לא עבר ברשת (ראו [הערות אבטחה](#client-master-control-security)), ומכשיר לקוח שהוגדר עם PIN מקבל אסימון Nightscout משלו (ראו [אסימון ה-Nightscout הנפרד של מכשיר הלקוח](#client-master-control-own-token)). אפשר לצמד מכשיר לקוח רק למכשיר ראשי **אחד** בכל פעם; כדי לצמד למכשיר ראשי אחר, יש לבצע קודם **ביטול צימוד**.
 
-![Pair-with-master screen on the client (already-paired state)](../images/v4/ClientMaster/pair_with_master_client.png)
+![מסך הצימוד למכשיר ראשי במכשיר הלקוח (מצב "כבר מצומד")](../images/v4/ClientMaster/pair_with_master_client.png)
 
-### 3. Managing clients
+### 3. ניהול מכשירי הלקוח
 
-From the master's **Authorized clients** screen you can, at any time:
+במסך **לקוחות מורשים** של המכשיר הראשי אפשר בכל זמן:
 
-- **Change the role** of a client with the row of four buttons under its name. The new role takes effect at once, without pairing again.
-- **See which Nightscout token** a client writes with: "*Own Nightscout token*" is what you want. A red line "*Uses the Nightscout token …, which has more rights than a client needs*" means the client still uses a token with more rights, usually your admin token — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Revoke** a single client — tap the **trash** icon next to it. The client can no longer send commands until it is paired again. Its own Nightscout token is deleted too, so it can no longer read your Nightscout either.
-- **Stop all control** without losing the pairings — turn off **Allow client control**.
+- **לשנות את התפקיד** של מכשיר לקוח בעזרת שורת ארבעת הלחצנים מתחת לשם שלו. התפקיד החדש חל מיד, בלי צימוד מחדש.
+- **לראות עם איזה אסימון Nightscout** מכשיר הלקוח כותב: "*אסימון Nightscout משלו*" הוא מה שאתם רוצים. שורה אדומה "*משתמש באסימון ה-Nightscout …, שיש לו יותר הרשאות ממה שמכשיר לקוח צריך*" אומרת שמכשיר הלקוח עדיין משתמש באסימון עם יותר הרשאות, בדרך כלל אסימון המנהל שלכם — ראו [אסימון ה-Nightscout הנפרד של מכשיר הלקוח](#client-master-control-own-token).
+- **לבטל הרשאה** של מכשיר לקוח אחד — ללחוץ על סמל **פח האשפה** שלידו. מכשיר הלקוח כבר לא יכול לשלוח פקודות עד שהוא מצומד שוב. גם אסימון ה-Nightscout הנפרד שלו נמחק, כך שהוא גם כבר לא יכול לקרוא את ה-Nightscout שלכם.
+- **לעצור את כל השליטה** בלי לאבד את הצימודים — לכבות את **מתן אפשרות לשליטה ממכשיר לקוח**.
 
-Phones set up with **QR code: Nightscout only** are listed below the clients, under "**Read Nightscout only**". For each of them you can show the QR code again (to set up the same phone again) or delete its token, which ends its access to your Nightscout.
+טלפונים שהוגדרו עם **קוד QR: רק Nightscout** מופיעים מתחת למכשירי הלקוח, תחת "**קריאת Nightscout בלבד**". לכל אחד מהם אפשר להציג שוב את קוד ה-QR (כדי להגדיר שוב את אותו טלפון) או למחוק את האסימון שלו, וכך לסיים את הגישה שלו ל-Nightscout שלכם.
 
-![Authorized clients with a paired client (role buttons, own Nightscout token) and a phone under Read Nightscout only](../images/v4/ClientMaster/authorized_clients_roles.png)
+![לקוחות מורשים עם מכשיר לקוח מצומד (לחצני תפקיד, אסימון Nightscout משלו) וטלפון תחת קריאת Nightscout בלבד](../images/v4/ClientMaster/authorized_clients_roles.png)
 
 ---
 
 (client-master-control-roles)=
-## Client roles
+## תפקידי לקוח
 
-Each paired client has a **role**. The master checks it for every command, and the client shows only what its role allows. A new role takes effect at once, without pairing again. The roles build on each other: each one can do everything the one before it can.
+לכל מכשיר לקוח מצומד יש **תפקיד**. המכשיר הראשי בודק אותו בכל פקודה, ומכשיר הלקוח מציג רק את מה שהתפקיד שלו מאפשר. תפקיד חדש חל מיד, בלי צימוד מחדש. התפקידים בנויים זה על זה: כל תפקיד יכול לעשות כל מה שהתפקיד שלפניו יכול.
 
-| Role          | The client may                                                                                                                                                                                                                |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Read-only** | only show data. It stays paired, so it is ready when you give it a higher role.                                                                                                                                               |
-| **Meals**     | give a bolus, use the bolus wizard and QuickWizard, enter carbs, and stop a running bolus. Carbs entered here can make the loop give more insulin.                                                                            |
-| **Caregiver** | do everything a user does in **AAPS**: temp targets, profile and insulin switches, loop mode, temp basal, extended bolus, scenes, careportal events, calibrations and removing records. It cannot change settings or presets. |
-| **Admin**     | do everything, settings and presets included (QuickWizard, temp target presets, scenes, profiles, automation, insulin).                                                                                                       |
+| תפקיד          | מכשיר הלקוח רשאי                                                                                                                                                                                                 |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **קריאה בלבד** | רק להציג נתונים. הוא נשאר מצומד, כך שהוא מוכן כשתתנו לו תפקיד גבוה יותר.                                                                                                                                         |
+| **ארוחות**     | לתת בולוס, להשתמש באשף הבולוס ובאשף המהיר, להזין פחמימות ולעצור בולוס שרץ. פחמימות שמוזנות כאן יכולות לגרום ללולאה לתת יותר אינסולין.                                                                            |
+| **טיפול**      | לעשות כל מה שמשתמש עושה ב-**AAPS**: יעדים זמניים, החלפות פרופיל ואינסולין, מצב הלולאה, בזאלי זמני, בולוס ממושך, תרחישים, אירועי פורטל הטיפולים, כיולים ומחיקת רשומות. הוא לא יכול לשנות הגדרות או הגדרות מוכנות. |
+| **ניהול**      | לעשות הכול, כולל הגדרות והגדרות מוכנות (אשף מהיר, יעדים זמניים מוגדרים מראש, תרחישים, פרופילים, אוטומציה, אינסולין).                                                                                             |
 
-The **(i)** at the top of the **Authorized clients** screen shows the same explanation. On the client, **Manage → Pair with master** shows the phone's own role.
+ה-**(i)** בחלק העליון של מסך **לקוחות מורשים** מציג את אותו הסבר. במכשיר הלקוח, **ניהול ← צימוד למכשיר ראשי** מציג את התפקיד של הטלפון עצמו.
 
 ---
 
 (client-master-control-hardened-mode)=
-## Hardened mode
+## מצב מוקשח
 
-When **Allow client control** is on, the master is in **hardened mode**: it takes changes only from paired clients. It does **not** take treatments, temp targets, profile changes, running mode changes or deletes that are made directly in Nightscout, for example on the Nightscout website or in other apps.
+כאשר **מתן אפשרות לשליטה ממכשיר לקוח** מופעל, המכשיר הראשי נמצא ב**מצב מוקשח**: הוא מקבל שינויים רק ממכשירי לקוח מצומדים. הוא **לא** מקבל טיפולים, יעדים זמניים, שינויי פרופיל, שינויים במצב ההפעלה או מחיקות שנעשים ישירות ב-Nightscout, למשל באתר Nightscout או באפליקציות אחרות.
 
-- The settings for accepting data from Nightscout (**NSClientV3 → Synchronization**) are hidden while hardened mode is on; **AAPS** uses them as if they were off.
-- The master still **uploads** all its data to Nightscout, BG included, and keeps **websockets** on.
-- If the master gets its **BG from Nightscout**, it still takes BG from there.
-- To load the history on a **new** master, use **Full sync** in **NSClientV3**: it takes everything that is in Nightscout, profiles included.
-- [SMS commands](SMSCommands.md) are not affected.
+- ההגדרות לקבלת נתונים מ-Nightscout (**NSClientV3 ← סנכרון**) מוסתרות כל עוד המצב המוקשח מופעל; **AAPS** מתייחס אליהן כאילו הן כבויות.
+- המכשיר הראשי עדיין **מעלה** את כל הנתונים שלו ל-Nightscout, כולל ערכי הסוכר, ומשאיר את ה-**websockets** מופעלים.
+- אם המכשיר הראשי מקבל את **ערכי הסוכר מ-Nightscout**, הוא ממשיך לקבל אותם משם.
+- כדי לטעון את ההיסטוריה במכשיר ראשי **חדש**, יש להשתמש ב**סנכרון מלא** ב-**NSClientV3**: הוא לוקח את כל מה שיש ב-Nightscout, כולל פרופילים.
+- [פקודות SMS](SMSCommands.md) לא מושפעות.
 
-A paired client follows the master's hardened mode: it keeps websockets on, and the same Nightscout settings are hidden on it. An unpaired client keeps its own settings.
+מכשיר לקוח מצומד פועל לפי המצב המוקשח של המכשיר הראשי: הוא משאיר את ה-websockets מופעלים, ואותן הגדרות Nightscout מוסתרות גם בו. מכשיר לקוח לא מצומד שומר על ההגדרות שלו.
 
-[Simple Mode](#preferences-simple-mode) always turns hardened mode on. To turn it off, leave Simple Mode and turn off **Allow client control** on the master.
+[מצב פשוט](#preferences-simple-mode) תמיד מפעיל את המצב המוקשח. כדי לכבות אותו, יש לצאת ממצב פשוט ולכבות את **מתן אפשרות לשליטה ממכשיר לקוח** במכשיר הראשי.
 
 ```{admonition} Why hardened mode
 :class: note
-Everything a paired client sends is signed, checked and confirmed by the master. A treatment typed into the Nightscout website is not: anybody with write access to your Nightscout could add it. In hardened mode only signed commands can change what the master does.
+כל מה שמכשיר לקוח מצומד שולח חתום, נבדק ומאושר על ידי המכשיר הראשי. טיפול שהוקלד באתר Nightscout אינו כזה: כל מי שיש לו הרשאת כתיבה ל-Nightscout שלכם יכול להוסיף אותו. במצב מוקשח רק פקודות חתומות יכולות לשנות את מה שהמכשיר הראשי עושה.
 ```
 
 ---
 
 (client-master-control-own-token)=
-## The client's own Nightscout token
+## אסימון ה-Nightscout הנפרד של מכשיר הלקוח
 
-A client does not need an admin token. It only reads your Nightscout and sends its commands to the master through it; it uploads nothing itself. So the master gives each client a Nightscout token of its own, with just these rights:
+מכשיר לקוח לא צריך אסימון מנהל. הוא רק קורא את ה-Nightscout שלכם ושולח דרכו את הפקודות שלו למכשיר הראשי; הוא עצמו לא מעלה שום דבר. לכן המכשיר הראשי נותן לכל מכשיר לקוח אסימון Nightscout משלו, רק עם ההרשאות האלה:
 
-- read everything,
-- write to the `settings` collection, the channel to the master,
-- snooze Nightscout alarms.
+- לקרוא הכול,
+- לכתוב לאוסף `settings`, הערוץ אל המכשיר הראשי,
+- להשתיק התראות של Nightscout.
 
-The token belongs to a Nightscout role named **`aaps-client`**, which the master creates the first time it needs it. You can see the role and the tokens (named `aaps-` and the client's name) in the **Admin tools** of your Nightscout site. If the role is changed there, the master sets it back the next time it makes a token or you open **Authorized clients**.
+האסימון שייך לתפקיד Nightscout בשם **`aaps-client`**, שהמכשיר הראשי יוצר בפעם הראשונה שהוא צריך אותו. אפשר לראות את התפקיד ואת האסימונים (בשם `aaps-` ושם מכשיר הלקוח) ב-**Admin tools** (כלי ניהול) של אתר ה-Nightscout שלכם. אם משנים את התפקיד שם, המכשיר הראשי מחזיר אותו למצבו הקודם בפעם הבאה שהוא יוצר אסימון או כשפותחים את **לקוחות מורשים**.
 
-How a client gets its token:
+איך מכשיר לקוח מקבל את האסימון שלו:
 
-- **Set up with a QR code**: the token is in the code.
-- **Paired with the PIN** (or paired before this existed): after pairing, the master sends the client its own token through the paired channel, encrypted. The client first checks that a login with it works, then uses it instead of the token it had. This needs an admin token on the master; without one, the client keeps its token, and its card on the master shows the red line.
+- **הוגדר עם קוד QR**: האסימון נמצא בקוד.
+- **צומד עם PIN** (או צומד לפני שהאפשרות הזאת הייתה קיימת): אחרי הצימוד, המכשיר הראשי שולח למכשיר הלקוח את האסימון שלו דרך הערוץ המצומד, מוצפן. מכשיר הלקוח בודק קודם שכניסה עם האסימון עובדת, ואז משתמש בו במקום האסימון שהיה לו. לשם כך נדרש אסימון מנהל במכשיר הראשי; בלעדיו, מכשיר הלקוח שומר את האסימון שלו, והכרטיס שלו במכשיר הראשי מציג את השורה האדומה.
 
-**A client keeps its own token.** Once the master has seen a client write with its own token, it takes that client's commands only with that token. A command written with another token (for example an admin token typed into the client later, or another client's token) is refused, even though the client is paired, and the client says "*The master refused it: this phone writes to Nightscout with another token than its own*". Its card on the master says so in red. The client still shows as online, so you can see what is wrong. To fix it, remove the client on the master and add it again.
+**מכשיר לקוח נשאר עם האסימון שלו.** אחרי שהמכשיר הראשי ראה מכשיר לקוח כותב עם האסימון הנפרד שלו, הוא מקבל את הפקודות של אותו מכשיר לקוח רק עם האסימון הזה. פקודה שנכתבה עם אסימון אחר (למשל אסימון מנהל שהוקלד מאוחר יותר במכשיר הלקוח, או אסימון של מכשיר לקוח אחר) נדחית, גם אם מכשיר הלקוח מצומד, ומכשיר הלקוח מציג "*המכשיר הראשי דחה את הפקודה: טלפון זה כותב ל-Nightscout עם אסימון אחר ולא עם האסימון שלו*". גם הכרטיס שלו במכשיר הראשי מציין זאת באדום. מכשיר הלקוח עדיין מוצג כמקוון, כדי שתוכלו לראות מה לא תקין. כדי לתקן, יש להסיר את מכשיר הלקוח במכשיר הראשי ולהוסיף אותו שוב.
 
-The master never deletes or changes a Nightscout token it did not make (one with other roles than `aaps-client`): those are yours. It deletes a client's own token when you remove the client.
+המכשיר הראשי אף פעם לא מוחק או משנה אסימון Nightscout שהוא לא יצר (אסימון עם תפקידים אחרים מלבד `aaps-client`): אלה האסימונים שלכם. הוא מוחק את האסימון הנפרד של מכשיר לקוח כשמסירים את מכשיר הלקוח.
 
 ---
 
-## Using remote control
+## שימוש בשליטה מרחוק
 
-### Triggering an action from the client
+### הפעלת פעולה ממכשיר הלקוח
 
-Use the client exactly as you would the phone itself: open **Carbs**, **Insulin**, **Temp Target**, **Profile**, **Scenes**, the **Manage** sheet, etc., and fill in the values.
+יש להשתמש במכשיר הלקוח בדיוק כמו בטלפון הראשי עצמו: לפתוח **פחמימות**, **אינסולין**, **יעד זמני**, **פרופיל**, **תרחישים**, את חלון **ניהול** וכו', ולמלא את הערכים.
 
-When you confirm, the client briefly shows **“Contacting master…”**, the **master** computes and caps the action, and the client then displays the **master's own confirmation** — the exact lines, values and colors the master would show on its own screen. Review them and tap **OK** to go ahead.
+כשמאשרים, מכשיר הלקוח מציג לרגע **“מתחבר למכשיר הראשי…”**, **המכשיר הראשי** מחשב ומגביל את הפעולה, ואז מכשיר הלקוח מציג את **נוסח האישור של המכשיר הראשי עצמו** — בדיוק אותן שורות, ערכים וצבעים שהמכשיר הראשי היה מציג על המסך שלו. יש לבדוק אותם וללחוץ על **אישור** כדי להמשיך.
 
-![A scene confirmation authored by the master and shown on the client](../images/v4/ClientMaster/confirmation_master_authored.png)
+![אישור תרחיש שנכתב על ידי המכשיר הראשי ומוצג במכשיר הלקוח](../images/v4/ClientMaster/confirmation_master_authored.png)
 
-The same applies to a simple carbs entry — the amount shown for confirmation is the one the master computed:
+אותו דבר חל גם על הזנה פשוטה של פחמימות — הכמות שמוצגת לאישור היא הכמות שהמכשיר הראשי חישב:
 
-![Carbs confirmation authored by the master](../images/v4/ClientMaster/carbs_confirmation_client.png)
+![אישור פחמימות שנכתב על ידי המכשיר הראשי](../images/v4/ClientMaster/carbs_confirmation_client.png)
 
-After you confirm, the master executes the action once and the result is reflected back on the client.
+אחרי שמאשרים, המכשיר הראשי מבצע את הפעולה פעם אחת והתוצאה מוצגת בחזרה במכשיר הלקוח.
 
-### Insulin bolus from a client
+### בולוס אינסולין ממכשיר לקוח
 
-This is the main new capability in v4. A bolus started on a client is **delivered by the master on its pump**; the master caps it against its own constraints, and the client shows **live delivery progress** while it runs (and an alarm if the pump reports a failure).
+זו היכולת החדשה העיקרית בגרסה 4. בולוס שהתחיל במכשיר לקוח **ניתן על ידי המכשיר הראשי במשאבה שלו**; המכשיר הראשי מגביל אותו לפי המגבלות שלו, ומכשיר הלקוח מציג **את התקדמות ההזרקה בזמן אמת** בזמן שהבולוס רץ (והתראה אם המשאבה מדווחת על כשל).
 
 ```{admonition} Boluses are always confirmed and capped on the master
 :class: note
-A client never decides the delivered amount on its own. The master recomputes and caps it, you confirm the master-authored amount, and only then is it delivered.
+מכשיר לקוח אף פעם לא מחליט בעצמו על הכמות שתינתן. המכשיר הראשי מחשב אותה מחדש ומגביל אותה, אתם מאשרים את הכמות שהמכשיר הראשי כתב, ורק אז היא ניתנת.
 ```
 
 (clientmastercontrol-when-the-master-is-offline)=
-### When the master is offline
+### כשהמכשיר הראשי לא מקוון
 
-If the master is not reachable (its phone is off/asleep, not connected to Nightscout, or websockets are down), control actions on the client are **blocked before anything is sent**, and you get a clear message. Nothing is half-applied.
+אם אין גישה למכשיר הראשי (הטלפון שלו כבוי או במצב שינה, לא מחובר ל-Nightscout, או שה-websockets לא פועלים), פעולות השליטה במכשיר הלקוח **נחסמות לפני שנשלח משהו**, ומקבלים הודעה ברורה. שום דבר לא מבוצע באופן חלקי.
 
-![Client message when the master is offline](../images/v4/ClientMaster/master_offline_error.png)
+![הודעה במכשיר הלקוח כשהמכשיר הראשי לא מקוון](../images/v4/ClientMaster/master_offline_error.png)
 
-The client re-checks reachability automatically and re-enables control once the master is back online.
+מכשיר הלקוח בודק שוב באופן אוטומטי אם יש גישה למכשיר הראשי, ומפעיל מחדש את השליטה כשהמכשיר הראשי חוזר להיות מקוון.
 
 (clientmastercontrol-wear-os-on-a-client)=
 
-### Wear OS (watch) on a client
+### Wear OS (שעון) במכשיר לקוח
 
-A watch paired to a **client** phone relays its actions through the client to the master (watch → client → master). The watch shows the **master's** confirmation lines and the real result, just like the phone. Setting up the watch is unchanged — see [Wear OS](../WearOS/WearOsSmartwatch.md).
+שעון שמצומד לטלפון **לקוח** מעביר את הפעולות שלו דרך מכשיר הלקוח למכשיר הראשי (שעון → מכשיר לקוח → מכשיר ראשי). השעון מציג את שורות האישור של **המכשיר הראשי** ואת התוצאה האמיתית, בדיוק כמו הטלפון. הגדרת השעון לא השתנתה — ראו [Wear OS](../WearOS/WearOsSmartwatch.md).
 
 
 <!-- 📷 SCREENSHOT NEEDED (optional): watch confirmation screen relayed from the master,
@@ -271,90 +271,90 @@ A watch paired to a **client** phone relays its actions through the client to th
 ---
 
 (client-master-config-prefs)=
-## Changing configuration and preferences
+## שינוי התצורה וההעדפות
 
-Pairing does more than relay one-off actions — it also keeps the **configuration** and many **preferences** aligned between the master and its clients.
+הצימוד עושה יותר מהעברה של פעולות בודדות — הוא גם שומר על **התצורה** ועל **העדפות** רבות זהות בין המכשיר הראשי למכשירי הלקוח שלו.
 
-### Configuration (which plugins are active)
+### תצורה (אילו תוספים פעילים)
 
-The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
+**התוספים** הפעילים (אלגוריתם APS, רגישות, החלקה, …) נבחרים ב**מכשיר הראשי** ו**משתקפים** בכל מכשיר לקוח מצומד. במכשיר לקוח, הבחירות האלה מסומנות ב**סמל טלפון נייד** קטן במסך [הגדרות תצורה](#configuration_sync_icon) — משנים אותן במכשיר הראשי ומכשירי הלקוח מתעדכנים אוטומטית, וגם להפך.
 
-On a client, the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*:
+במכשיר לקוח, סמל הטלפון הנייד מופיע ליד *החלקה*, *כיול*, *זיהוי רגישות* ו-*APS* (מסונכרנים מהמכשיר הראשי), אבל לא ליד *תקשורת*:
 
-![Configuration list on a client — the mobile icon marks the categories synced with the master](../images/v4/ClientMaster/configuration_client.png)
+![רשימת הגדרות התצורה במכשיר לקוח — סמל הטלפון הנייד מסמן את הקטגוריות שמסונכרנות עם המכשיר הראשי](../images/v4/ClientMaster/configuration_client.png)
 
-Connection details that are unique to each device — most importantly the **NSClient Nightscout URL / access token** — are *not* synced. Each phone has its own; on a client they come from the master's QR code, or you set them yourself.
+פרטי חיבור שייחודיים לכל מכשיר — ובעיקר **כתובת ה-Nightscout / אסימון הגישה של NSClient** — *לא* מסונכרנים. לכל טלפון יש פרטים משלו; במכשיר לקוח הם מגיעים מקוד ה-QR של המכשיר הראשי, או שאתם מגדירים אותם בעצמכם.
 
-### Profiles
+### פרופילים
 
-Your **profile list** is also kept in sync between the master and its paired clients. On a paired client, **Manage → Profile** shows the same profiles as the master; you can **edit** a profile or **activate** one, and — like every other command — the change is sent to the **master**, applied there, and synced back.
+גם **רשימת הפרופילים** שלכם נשמרת מסונכרנת בין המכשיר הראשי למכשירי הלקוח המצומדים שלו. במכשיר לקוח מצומד, **ניהול ← פרופיל** מציג את אותם פרופילים כמו במכשיר הראשי; אפשר **לערוך** פרופיל או **להפעיל** פרופיל, וכמו בכל פקודה אחרת — השינוי נשלח ל**מכשיר הראשי**, מבוצע שם, ומסונכרן בחזרה.
 
-The first time you activate a profile on a newly installed client, the client may show "*No insulin is in use yet*" and ask you to **select the insulin**. Choose the insulin that is active on the master (**Manage → Insulin settings** on the master shows it).
+בפעם הראשונה שמפעילים פרופיל במכשיר לקוח שהותקן מחדש, מכשיר הלקוח עשוי להציג "*עדיין אין אינסולין פעיל*" ולבקש **לבחור את האינסולין**. יש לבחור את האינסולין שפעיל במכשיר הראשי (**ניהול ← הגדרות אינסולין** במכשיר הראשי מציג אותו).
 
-On a client that is **not paired**, the Profile screen is still available but **view-only**: the client shows the profiles it receives through Nightscout (it needs them for its own calculations), but there is no edit or activate button — there is no master to send the change to.
+במכשיר לקוח **לא מצומד**, מסך הפרופיל עדיין זמין אבל **לצפייה בלבד**: מכשיר הלקוח מציג את הפרופילים שהוא מקבל דרך Nightscout (הוא צריך אותם לחישובים שלו), אבל אין לחצן עריכה או הפעלה — אין מכשיר ראשי שאליו אפשר לשלוח את השינוי.
 
 ### העדפות
 
-A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**. For a setting with a slider, the new value is sent when you lift your finger.
+חלק מה**העדפות** הן **דו-כיווניות**: אפשר לשנות אותן **במכשיר הראשי או במכשיר לקוח מצומד**, והשינוי מסונכרן לצד השני. כשמשנים העדפה כזו במכשיר לקוח, היא נשלחת למכשיר הראשי דרך הערוץ החתום, מוחלת שם, והערך הקובע נשלח בחזרה — כך שמה שרואים במכשיר הלקוח הוא תמיד מה שהמכשיר הראשי שמר. אם אותה העדפה משתנה בשני מכשירים כמעט באותו זמן, **השינוי האחרון קובע**. בהגדרה עם מחוון, הערך החדש נשלח כשמרימים את האצבע.
 
-Inside the settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Absorption cutoff* is synced (mobile icon), while settings without the icon are device-local:
+בתוך ההגדרות, אותו **סמל טלפון נייד** קטן מסמן את ההעדפות הבודדות שמסונכרנות. בדוגמה שלהלן *סף הפסקת חישוב ספיגה* מסונכרן (סמל טלפון נייד), ואילו הגדרות בלי הסמל הן מקומיות במכשיר:
 
-![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+![ההגדרות של תוסף — סמל הטלפון הנייד מסמן את ההעדפות המסונכרנות](../images/v4/ClientMaster/preferences_synced_icon.png)
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Because the master is the authority for the stored value, editing a master-controlled configuration item or a bidirectional preference from a client requires the master to be **reachable**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
+מכיוון שהמכשיר הראשי הוא שקובע את הערך השמור, עריכה של פריט תצורה שנשלט על ידי המכשיר הראשי או של העדפה דו-כיוונית ממכשיר לקוח דורשת שתהיה **גישה** למכשיר הראשי. כשהמכשיר הראשי לא מקוון, הפקדים האלה מושבתים במכשיר הלקוח (ראו [כשהמכשיר הראשי לא מקוון](#clientmastercontrol-when-the-master-is-offline)).
 ```
 
 ---
 
 (client-master-control-security)=
-## Security notes
+## הערות אבטחה
 
 ```{admonition} How the channel is protected
 :class: tip
-- **Pairing secret**: the master hands it to the client once — protected by the PIN in a Nightscout document, or inside the QR code — and both store it encrypted.
-- **A new secret right after pairing**: the client's first message after pairing starts a key exchange, and from then on both phones use a secret that never travelled. A secret that someone may have seen (a photographed QR code, a PIN offer read from Nightscout) is of no use afterwards. Phones paired before this existed do the same once after the update.
-- **Every command is signed** (HMAC). The master rejects anything whose signature does not match a paired client.
-- **Replay is prevented** by a per-client monotonic counter, and every command **expires** after a short time-to-live.
-- **Least rights in Nightscout**: each client has its [own Nightscout token](#client-master-control-own-token), which can only read and write to the client-control channel. Once it has used it, the master takes its commands only with that token. Removing the client deletes it.
-- **Only signed changes**: in [hardened mode](#client-master-control-hardened-mode) the master ignores therapy changes typed directly into Nightscout.
-- **The master signs what it shares**: the settings, the client list and the "master is alive" sign that the master puts in Nightscout for its clients carry the master's signature. A client takes them only when the signature is the master's, so another client's token cannot change them. The client learns the master's key when it pairs, or from the QR code for a phone that only reads Nightscout. A refused document shows in the NSClient log as "*✕ SETTINGS … refused*".
-- **You stay in control**: give each client the [role](#client-master-control-roles) it needs, revoke a client with one tap, or disable everything with **Allow client control**.
+- **סוד הצימוד**: המכשיר הראשי מוסר אותו למכשיר הלקוח פעם אחת — מוגן על ידי ה-PIN במסמך ב-Nightscout, או בתוך קוד ה-QR — ושניהם שומרים אותו מוצפן.
+- **סוד חדש מיד אחרי הצימוד**: ההודעה הראשונה של מכשיר הלקוח אחרי הצימוד מתחילה החלפת מפתחות, ומאז שני הטלפונים משתמשים בסוד שאף פעם לא עבר ברשת. סוד שמישהו אולי ראה (קוד QR שצולם, הצעת PIN שנקראה מ-Nightscout) כבר לא שימושי אחר כך. טלפונים שצומדו לפני שהאפשרות הזאת הייתה קיימת עושים את אותו הדבר פעם אחת אחרי העדכון.
+- **כל פקודה חתומה** (HMAC). המכשיר הראשי דוחה כל דבר שהחתימה שלו לא תואמת למכשיר לקוח מצומד.
+- **שליחה חוזרת של פקודות נמנעת** בעזרת מונה עולה נפרד לכל מכשיר לקוח, ו**פג תוקפה** של כל פקודה אחרי זמן חיים קצר.
+- **מינימום הרשאות ב-Nightscout**: לכל מכשיר לקוח יש [אסימון Nightscout משלו](#client-master-control-own-token), שיכול רק לקרוא ולכתוב לערוץ השליטה של מכשירי הלקוח. אחרי שמכשיר הלקוח השתמש בו, המכשיר הראשי מקבל את הפקודות שלו רק עם האסימון הזה. הסרת מכשיר הלקוח מוחקת אותו.
+- **רק שינויים חתומים**: ב[מצב מוקשח](#client-master-control-hardened-mode) המכשיר הראשי מתעלם משינויי טיפול שהוקלדו ישירות ב-Nightscout.
+- **המכשיר הראשי חותם על מה שהוא משתף**: ההגדרות, רשימת מכשירי הלקוח וסימן "המכשיר הראשי פעיל" שהמכשיר הראשי שם ב-Nightscout עבור מכשירי הלקוח שלו נושאים את החתימה של המכשיר הראשי. מכשיר לקוח מקבל אותם רק כשהחתימה היא של המכשיר הראשי, כך שאסימון של מכשיר לקוח אחר לא יכול לשנות אותם. מכשיר הלקוח לומד את המפתח של המכשיר הראשי בזמן הצימוד, או מקוד ה-QR בטלפון שרק קורא את Nightscout. מסמך שנדחה מופיע ביומן NSClient כ-"*✕ SETTINGS … refused*".
+- **השליטה נשארת בידיים שלכם**: אפשר לתת לכל מכשיר לקוח את ה[תפקיד](#client-master-control-roles) שהוא צריך, לבטל הרשאה של מכשיר לקוח בלחיצה אחת, או להשבית הכול עם **מתן אפשרות לשליטה ממכשיר לקוח**.
 ```
 
 ```{admonition} After restoring a backup
 :class: warning
-If a client is restored from a backup that rolls its command counter backwards, the master will reject its next commands as replays. Simply **unpair and pair again** to recover.
+אם משחזרים מכשיר לקוח מגיבוי שמחזיר את מונה הפקודות שלו לאחור, המכשיר הראשי ידחה את הפקודות הבאות שלו כשליחה חוזרת. כדי לתקן, פשוט יש **לבטל את הצימוד ולצמד מחדש**.
 ```
 
 ---
 
 (client-master-control-troubleshooting)=
 
-## Troubleshooting
+## פתרון תקלות
 
-| Symptom                                                                                                    | What to check                                                                                                                                                                                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client says the **master is offline**                                                                      | Master phone awake and running **AAPS**; both phones connected in **NSClientV3**; **websockets** enabled on both; same Nightscout site.                                                                                                                                                                                      |
-| Client says it is **not paired**                                                                           | Pair again from **Manage → Pair with master**. Confirm the client is **Active** in the master's **Authorized clients** list.                                                                                                                                                                                                 |
-| Command **rejected** by the master                                                                         | The master re-validates against its current state — e.g. the chosen profile no longer exists, or the pump type does not match. Re-check on the master.                                                                                                                                                                       |
-| Commands work but are **slow**                                                                             | Enable **websockets** on both phones (otherwise the apps fall back to slower polling).                                                                                                                                                                                                                                       |
-| Pairing is cancelled with *"The pairing secret could not be stored"*                                       | Nothing was changed. Start the pairing again; if it keeps failing, restart **AAPSClient** and try once more.                                                                                                                                                                                                                 |
-| Nothing happens after pairing                                                                              | Make sure **Allow client control** is ON on the master, and that the master is connected to Nightscout.                                                                                                                                                                                                                      |
-| The QR code options cannot be chosen in the **New client** dialog                                          | The dialog says why. *Not an admin token*: give the master an admin token of your Nightscout, or add the client with the **PIN**. *Not connected*: wait until the master shows *connected* in **NSClientV3**.                                                                                                                |
-| *"Nightscout has a token with this name and other rights"*                                                 | One of your own Nightscout tokens is called `aaps-` and this name. Choose another name for the client.                                                                                                                                                                                                                       |
-| *"A client with this name is in the list already"*                                                         | Choose another name, or remove that client first.                                                                                                                                                                                                                                                                            |
-| The client says *"This code is from another AAPS version"*                                                 | Master and client must run the **same** version of **AAPS**. Update the older one.                                                                                                                                                                                                                                           |
-| The client says *"This code has expired"*                                                                  | A code that pairs works for about two minutes. Add the client again on the master to get a new code.                                                                                                                                                                                                                         |
-| The client says *"This phone is paired already"*                                                           | Unpair it first (**Manage → Pair with master → Unpair**), then scan again. A **Nightscout only** code works on a paired phone too.                                                                                                                                                                                           |
-| The client says *"The master refused it: this phone writes to Nightscout with another token than its own"* | The client used its own Nightscout token before and now writes with another one, for example after a token was typed into its Nightscout settings. Remove the client on the master and add it again (see [The client's own Nightscout token](#client-master-control-own-token)).                                             |
-| The NSClient log on the client shows *"✕ SETTINGS … refused"* and its settings no longer follow the master | Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes a new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**). |
-| The client's card shows *"Uses the Nightscout token …"* in red                                             | The client still writes with a token that has more rights than it needs. The master sends it its own token after pairing, but only if the master has an admin token. Check the master's token, or set the client up again with a QR code.                                                                                    |
-| A client can no longer read Nightscout                                                                     | Its token was deleted, for example because the client was removed on the master. Add it again.                                                                                                                                                                                                                               |
-| Treatments entered on the Nightscout website are not applied                                               | Expected in [hardened mode](#client-master-control-hardened-mode): enter them on a paired client instead.                                                                                                                                                                                                                    |
+| תסמין                                                                                                        | מה לבדוק                                                                                                                                                                                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| מכשיר הלקוח אומר ש**המכשיר הראשי לא מקוון**                                                                  | הטלפון הראשי ער ומריץ את **AAPS**; שני הטלפונים מחוברים ב-**NSClientV3**; **websockets** מופעלים בשניהם; אותו אתר Nightscout.                                                                                                                                                                    |
+| מכשיר הלקוח אומר שהוא **לא מצומד**                                                                           | יש לצמד שוב דרך **ניהול ← צימוד למכשיר ראשי**. יש לוודא שמכשיר הלקוח מופיע כ**פעיל** ברשימת **לקוחות מורשים** של המכשיר הראשי.                                                                                                                                                                   |
+| הפקודה **נדחתה** על ידי המכשיר הראשי                                                                         | המכשיר הראשי בודק את הפקודה מחדש לפי המצב הנוכחי שלו — למשל, הפרופיל שנבחר כבר לא קיים, או שסוג המשאבה לא תואם. יש לבדוק שוב במכשיר הראשי.                                                                                                                                                       |
+| הפקודות עובדות אבל **איטיות**                                                                                | יש להפעיל **websockets** בשני הטלפונים (אחרת האפליקציות עוברות לבדיקה תקופתית איטית יותר).                                                                                                                                                                                                       |
+| הצימוד מבוטל עם ההודעה *"לא ניתן היה לשמור את הסוד לצימוד"*                                                  | שום דבר לא שונה. יש להתחיל את הצימוד שוב; אם זה ממשיך להיכשל, יש להפעיל מחדש את **AAPSClient** ולנסות פעם נוספת.                                                                                                                                                                                 |
+| שום דבר לא קורה אחרי הצימוד                                                                                  | יש לוודא ש**מתן אפשרות לשליטה ממכשיר לקוח** מופעל במכשיר הראשי, ושהמכשיר הראשי מחובר ל-Nightscout.                                                                                                                                                                                               |
+| אי אפשר לבחור את האפשרויות של קוד QR בחלון **מכשיר לקוח חדש**                                                | החלון מסביר למה. *האסימון אינו אסימון מנהל (admin)*: יש לתת למכשיר הראשי אסימון מנהל של ה-Nightscout שלכם, או להוסיף את מכשיר הלקוח עם **PIN**. *לא מחובר*: יש לחכות עד שהמכשיר הראשי מציג *מחובר* ב-**NSClientV3**.                                                                             |
+| *"ב-Nightscout יש אסימון בשם הזה עם הרשאות אחרות"*                                                           | לאחד מאסימוני ה-Nightscout שלכם קוראים `aaps-` ואחריו השם הזה. יש לבחור שם אחר למכשיר הלקוח.                                                                                                                                                                                                     |
+| *"מכשיר לקוח בשם הזה כבר נמצא ברשימה"*                                                                       | יש לבחור שם אחר, או להסיר קודם את מכשיר הלקוח ההוא.                                                                                                                                                                                                                                              |
+| מכשיר הלקוח אומר *"הקוד הזה הוא מגרסה אחרת של AAPS"*                                                         | במכשיר הראשי ובמכשיר הלקוח חייבת לפעול **אותה** גרסה של **AAPS**. יש לעדכן את המכשיר עם הגרסה הישנה יותר.                                                                                                                                                                                        |
+| מכשיר הלקוח אומר *"תוקף הקוד הזה פג"*                                                                        | קוד שמצמד עובד בערך שתי דקות. יש להוסיף שוב את מכשיר הלקוח במכשיר הראשי כדי לקבל קוד חדש.                                                                                                                                                                                                        |
+| מכשיר הלקוח אומר *"טלפון זה כבר מצומד"*                                                                      | יש לבטל קודם את הצימוד (**ניהול ← צימוד למכשיר ראשי ← ביטול צימוד**), ואז לסרוק שוב. קוד **רק Nightscout** עובד גם בטלפון מצומד.                                                                                                                                                                 |
+| מכשיר הלקוח אומר *"המכשיר הראשי דחה את הפקודה: טלפון זה כותב ל-Nightscout עם אסימון אחר ולא עם האסימון שלו"* | מכשיר הלקוח השתמש קודם באסימון ה-Nightscout הנפרד שלו ועכשיו כותב עם אסימון אחר, למשל אחרי שהוקלד אסימון בהגדרות ה-Nightscout שלו. יש להסיר את מכשיר הלקוח במכשיר הראשי ולהוסיף אותו שוב (ראו [אסימון ה-Nightscout הנפרד של מכשיר הלקוח](#client-master-control-own-token)).                     |
+| יומן NSClient במכשיר הלקוח מציג *"✕ SETTINGS … refused"* וההגדרות שלו כבר לא עוקבות אחרי המכשיר הראשי        | מישהו אחר כתב את מסמך ההגדרות של המכשיר הראשי, או שלמכשיר הראשי יש מפתח חדש (למשל אחרי שהנתונים שלו נמחקו). מכשיר לקוח מצומד מקבל מפתח חדש בעצמו בפעם הבאה שהוא מתחבר ל-Nightscout. טלפון שרק קורא את Nightscout צריך שוב את קוד ה-QR של המכשיר הראשי (**קריאת Nightscout בלבד ← הצגת קוד QR**). |
+| הכרטיס של מכשיר הלקוח מציג *"משתמש באסימון ה-Nightscout …"* באדום                                            | מכשיר הלקוח עדיין כותב עם אסימון שיש לו יותר הרשאות ממה שהוא צריך. המכשיר הראשי שולח לו אסימון משלו אחרי הצימוד, אבל רק אם למכשיר הראשי יש אסימון מנהל. יש לבדוק את האסימון של המכשיר הראשי, או להגדיר שוב את מכשיר הלקוח עם קוד QR.                                                             |
+| מכשיר לקוח כבר לא יכול לקרוא את Nightscout                                                                   | האסימון שלו נמחק, למשל כי מכשיר הלקוח הוסר במכשיר הראשי. יש להוסיף אותו שוב.                                                                                                                                                                                                                     |
+| טיפולים שהוזנו באתר Nightscout לא מוחלים                                                                     | זה צפוי ב[מצב מוקשח](#client-master-control-hardened-mode): יש להזין אותם במכשיר לקוח מצומד במקום זאת.                                                                                                                                                                                           |
 
-For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+לבעיות Nightscout / סנכרון יש לעיין קודם ב[פתרון תקלות ב-NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ---
 

@@ -1,25 +1,25 @@
-# Search the documentation
+# חיפוש בתיעוד
 
-The documentation contains a lot of information. If you are looking for a specific topic, term or setting, using the search feature is often faster than browsing through the menu.
+התיעוד מכיל מידע רב. אם מחפשים נושא, מונח או הגדרה מסוימים, השימוש בחיפוש מהיר בדרך כלל יותר מדפדוף בתפריט.
 
-## How to search
+## איך לחפש
 
-The search box is located at the top of the navigation panel on the left side of the screen.
+תיבת החיפוש נמצאת בחלק העליון של חלונית הניווט, בצד המסך.
 
 ```{note}
-On smaller screens (such as a phone) the navigation panel is hidden. Tap the menu (☰) icon in the top left corner to open it and reveal the search box.
+במסכים קטנים יותר (למשל בטלפון) חלונית הניווט מוסתרת. יש להקיש על סמל התפריט (☰) בפינה העליונה של המסך כדי לפתוח אותה ולהציג את תיבת החיפוש.
 ```
 
-1. Type one or more keywords into the search box.
-2. Press `Enter` or tap the search icon.
-3. A results page opens, listing every page where your keywords appear. Click a result to jump to the matching page.
+1. יש להקליד מילת מפתח אחת או יותר בתיבת החיפוש.
+2. יש ללחוץ על `Enter` או להקיש על סמל החיפוש.
+3. נפתח דף תוצאות עם רשימה של כל הדפים שבהם מופיעות מילות המפתח. לחיצה על תוצאה פותחת את הדף המתאים.
 
-## Tips for better results
+## טיפים לתוצאות טובות יותר
 
-- Use specific terms (for example `temp target` or `autosens`) rather than full sentences.
-- Searching with several keywords returns the pages containing those words. Start broad and add keywords to narrow the results.
-- The search only covers the language and version of the documentation you are currently reading. If you cannot find something, try switching to the English version, which is the most complete (see [Change language and version](./ChangeLanguageVersion.md)).
+- כדאי להשתמש במונחים מדויקים (למשל `temp target` או `autosens`) ולא במשפטים שלמים.
+- חיפוש עם כמה מילות מפתח מחזיר את הדפים שמכילים מילים אלה. כדאי להתחיל בחיפוש רחב ולהוסיף מילות מפתח כדי לצמצם את התוצאות.
+- החיפוש כולל רק את השפה ואת הגרסה של התיעוד שאתם קוראים כעת. אם לא מוצאים משהו, כדאי לעבור לגרסה האנגלית, שהיא השלמה ביותר (ראו [שינוי השפה והגרסה](./ChangeLanguageVersion.md)).
 
 ```{note}
-The search index is built automatically. Very recently added content may take some time to become searchable.
+אינדקס החיפוש נבנה באופן אוטומטי. ייתכן שתוכן שנוסף ממש לאחרונה יופיע בחיפוש רק אחרי זמן מה.
 ```

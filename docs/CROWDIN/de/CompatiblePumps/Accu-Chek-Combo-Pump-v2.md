@@ -5,7 +5,7 @@
 ```{admonition} Accu-Chek Combo is being phased out
 :class: note
 
-Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. If you rely on this pump, plan ahead for a transition to a supported pump.
+Roche zieht sich aus dem Insulinpumpenmarkt zurück, um sein Diabetes-Portfolio auf das CGM Accu-Chek SmartGuide auszurichten. Roche hat das Verkaufsende sowohl der Accu-Chek Combo als auch der Accu-Chek Insight angekündigt; auch die verbliebene Mikropumpe Accu-Chek Solo wird auslaufen (letzte Lieferungen in Deutschland Ende 2025). Die Umstellung erfolgt nach Regionen, beginnend in Deutschland; weitere europäische Märkte sollen folgen. Wenn Du auf diese Pumpe angewiesen bist, plane rechtzeitig den Umstieg auf eine unterstützte Pumpe.
 ```
 
 ```{contents} Table of contents
@@ -15,15 +15,15 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
 
 ## Funktionalitäten bei der Nutzung mit AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Automatic DST and timezone handling.
+* Kommuniziert mit **AAPS** über das Bluetooth Deines Smartphones, ohne zusätzliches Kommunikationsgerät.
+* Automatischer Zeitzonenwechsel und Sommer-/Winterzeitumstellung.
 
 ## Hardware- und Softwareanforderungen
 
 * Eine Roche Accu-Chek Combo (jede Firmware funktioniert).
 * Einen Smartpix oder Realtyme Adapter und die Accu-Chek 360°-Konfigurationssoftware um die Pumpe zu konfigurieren. (Kunden von Roche können die Software beim Kundendienst anfordern.)
-* A compatible phone running Android 12 or newer. Details findest Du in den [Release Notes](#maintenance-android-version-aaps-version).
-* The **AAPS** app installed on your phone.
+* Ein kompatibles Smartphone mit Android 12 oder neuer. Details findest Du in den [Release Notes](#maintenance-android-version-aaps-version).
+* Die **AAPS**-App ist auf Deinem Smartphone installiert.
 
 Einige Telefone funktionieren vielleicht besser als andere je nach Qualität der Bluetooth-Unterstützung und ob sie eine zusätzliche, sehr aggressive Energiesparlogik haben oder nicht. Eine Liste mit Smartphones findest Du im Abschnitt [Smartphones](#Phones-list-of-tested-phones). Die Liste ist nicht abschließend und spiegelt nur die persönliche Erfahrung der Benutzer wieder. Bitte trage Deine Erfahrung in die Liste ein und hilf damit anderen. Die ganzen DIY-Projekte funktionieren nur, wenn jeder etwas zurückgibt.
 
@@ -36,15 +36,15 @@ Beachte folgende Einschränkungen:
 
 * Verzögerter Bolus und Multiwave-Bolus werden nicht unterstützt. (Als Alternative schau Dir [Verzögerte Kohlenhydrate](../DailyLifeWithAaps/ExtendedCarbs.md) an.)
 * Nur ein basales Profil (das erste Profil) wird unterstützt.
-* The lowest basal rate in your **Profile** is 0.05 U/h. **AAPS** refuses a **Profile** with a lower rate. The Combo rounds basal rates to its own steps (0.01 U/h below 1 U/h, 0.05 U/h up to 10 U/h, 0.1 U/h above). **AAPS** uses the rates the pump really gives.
-* Temporary basal rates are limited to 500% of the current basal rate. **AAPS** takes this limit into account.
-* Der Loop ist deaktiviert, wenn das aktuell aktive Profil der Pumpe nicht Profil Nr. 1 ist. This continues until profile no. 1 is made the active one; when that is done, the next time AAPS connects (either on its own after a while or because you tap **Refresh** on the Accu-Chek Combo pump screen), it will notice that profile no. 1 is the current one, and enable the loop again.
+* Die niedrigste Basalrate in Deinem **Profil** beträgt 0,05 IE/h. **AAPS** lehnt ein **Profil** mit einer niedrigeren Rate ab. Die Combo rundet Basalraten auf ihre eigenen Schritte (0,01 IE/h unter 1 IE/h, 0,05 IE/h bis 10 IE/h, 0,1 IE/h darüber). **AAPS** verwendet die Raten, die die Pumpe tatsächlich abgibt.
+* Temporäre Basalraten sind auf 500 % der aktuellen Basalrate begrenzt. **AAPS** berücksichtigt diese Grenze.
+* Der Loop ist deaktiviert, wenn das aktuell aktive Profil der Pumpe nicht Profil Nr. 1 ist. Das bleibt so, bis Profil Nr. 1 wieder das aktive ist. Ist das erledigt, bemerkt AAPS bei der nächsten Verbindung (entweder nach einer Weile von selbst oder weil Du auf dem Accu-Chek-Combo-Pumpenbildschirm auf **Aktualisieren** tippst), dass Profil Nr. 1 das aktuelle ist, und aktiviert den Loop wieder.
 * Wenn der Loop eine laufende Basalrate abbrechen will, wird stattdessen die Basalrate für 15 min. auf 90% oder 110% gesetzt. Das liegt daran, dass das Abbrechen eines TBR eine Warnung auf die Pumpe verursacht, die viele Vibrationen verursacht, und diese Vibrationen können nicht deaktiviert werden.
-* Die Stabiltät der Bluetooth-Verbindung variiert je nach verwendetem Telefon stark, dies kann zu “pump unreachable”-Alarmen führen und verhindern, dass die Verbindung zur Pumpe hergestellt werden kann. If that error occurs, make sure Bluetooth is enabled, tap **Refresh** on the pump screen (**Manage** > **Pump**) to see if this was caused by an intermittent issue and if still no connection is established, reboot the phone which should usually fix this.
-* There is another issue where a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
+* Die Stabiltät der Bluetooth-Verbindung variiert je nach verwendetem Telefon stark, dies kann zu “pump unreachable”-Alarmen führen und verhindern, dass die Verbindung zur Pumpe hergestellt werden kann. Tritt dieser Fehler auf, stelle sicher, dass Bluetooth eingeschaltet ist, und tippe auf dem Pumpenbildschirm (**Bearbeiten** > **Pumpe**) auf **Aktualisieren**, um zu sehen, ob es nur ein vorübergehendes Problem war. Kommt weiterhin keine Verbindung zustande, starte das Smartphone neu, das behebt das Problem in der Regel.
+* Bei einem anderen Problem hilft ein Neustart nicht, sondern es muss eine Taste an der Pumpe gedrückt werden (was den Bluetooth-Stack der Pumpe zurücksetzt), bevor die Pumpe wieder Verbindungen vom Smartphone annimmt.
 * Das Setzen einer TBR direkt auf der Pumpe ist im Closed Loop Betrieb nicht nötig und sollte möglichst nicht vorgenommen werden. Das Erkennen einer manuell gesetzten Basalrate kann bis zu 20 Minuten dauern und wird bei der Berechnung auch erst ab dem Zeitpunkt berücksichtigt, zu dem die TBR von AAPS eingelesen wird. Das führt dazu, dass die im Körper befindliche Insulinmenge (IOB) falsch berechnet wird.
 
-The driver is currently written to support the following languages on the Combo. (Dies hat nichts mit der Sprache in AAPS zu tun - hier ist die auf dem Bildschirm der Combo verwendete Sprache gemeint.)
+Der Treiber unterstützt derzeit die folgenden Sprachen auf der Combo. (Dies hat nichts mit der Sprache in AAPS zu tun - hier ist die auf dem Bildschirm der Combo verwendete Sprache gemeint.)
 
 * English
 * Spanish
@@ -71,7 +71,7 @@ The driver is currently written to support the following languages on the Combo.
 
 **Wichtig**: Wenn Deine Combo eine Sprache verwendet, die nicht auf der Liste steht, kontaktiere das Entwickler-Team und setze die Pumpensprache auf eine Sprache aus der Liste. Andernfalls funktioniert der Treiber nicht richtig.
 
-## Telefon einrichten
+## Smartphone einrichten
 
 Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet wird. AAPS erkennt automatisch, wenn es diesen Optimierungen unterliegt und fragt in seiner Benutzeroberfläche an, dass diese abgeschaltet werden. Aber auf modernen Android-Telefonen ist Bluetooth _selbst_ eine App (eine System-App). Und im Allgemeinen läuft die "Bluetooth app" mit _eingeschalteter Batterie Optimierung im Standard_. Infolgedessen kann Bluetooth es ablehnen, zu reagieren, wenn das Telefon darauf abzielt, Strom zu sparen, da es die Bluetooth-App einfach beendet. Das bedeutet, dass in den Einstellungen der Bluetooth-System-App auch die Batterieoptimierungen ausgeschaltet werden müssen. Unglücklicherweise kann man feststellen, dass die Bluetooth-System-App sich zwischen den Telefonen unterscheidet. In unverändertem Android gehe zu Einstellungen -> Apps -> Alle N-Apps anzeigen (N = Anzahl der Apps auf Ihrem Handy). Öffnen Sie dann das Menü in der oberen rechten Ecke, klicken Sie auf "System anzeigen" oder "System-Apps anzeigen" oder "Alle Apps". Jetzt in der erweiterten Liste der Apps nach einer "Bluetooth"-App suchen. Wähle es aus und tippe auf "App-Informationen" und dann auf "Batterie". Dort deaktiviere die Batterieoptimierung (manchmal auch als "Batterieverbrauch" bezeichnet) .
 
@@ -106,23 +106,23 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
 
 ## Aktivierung des Treibers und Kopplung mit der Combo
 
-* Open the **menu** (☰) in the top-left corner, go to [**Configuration** > **Pump**](../SettingUpAaps/ConfigBuilder.md) and select **Accu-Chek Combo**.
+* Öffne oben links das **Menü** (☰), gehe zu [**Konfiguration** > **Pumpe**](../SettingUpAaps/ConfigBuilder.md) und wähle **Accu-Chek Combo**.
 
   ![Configuration > Pump with the Accu-Chek Combo plugin](../images/v4/Configuration/configuration_pump_list_1.png)
 
-  Once it is selected, the **Accu-Chek Combo** card shows two buttons, **Settings** and **Open plugin**:
+  Sobald sie ausgewählt ist, zeigt die Karte **Accu-Chek Combo** zwei Schaltflächen: **Einstellungen** und **Plugin öffnen**:
 
   ![The Accu-Chek Combo plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_combo_enabled.png)
 
-  **Settings** opens the settings of the Accu-Chek Combo driver (see [Settings](#combov2-preferences) below):
+  **Einstellungen** öffnet die Einstellungen des Accu-Chek-Combo-Treibers (siehe unten [Einstellungen](#combov2-preferences)):
 
   ![Accu-Chek Combo driver settings](../images/v4/Pumps/accu_chek_combo_settings.png)
 
-  **Open plugin** (or **Manage** > **Pump**) opens the Accu-Chek Combo pump screen. Before a pump is paired it shows **Not paired to a pump**:
+  **Plugin öffnen** (oder **Bearbeiten** > **Pumpe**) öffnet den Accu-Chek-Combo-Pumpenbildschirm. Bevor eine Pumpe gekoppelt ist, zeigt er **Nicht mit einer Pumpe gekoppelt**:
 
   ![Accu-Chek Combo pump screen before pairing](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
 
-* On the pump screen, tap **Pairing**. The **Pair with pump** screen opens. Follow the steps shown on screen, then tap **Start pairing**. When Android asks for permission to make the phone visible to other Bluetooth devices, tap **Allow**. Eventually, the Combo shows a 10-digit pairing PIN on its screen, and **AAPS** asks for it. Enter that PIN in the **10-digit PIN** field.
+* Tippe auf dem Pumpenbildschirm auf **Koppeln**. Der Bildschirm **Mit Pumpe verbinden** öffnet sich. Folge den angezeigten Schritten und tippe dann auf **Pairing starten**. Wenn Android um die Erlaubnis bittet, das Smartphone für andere Bluetooth-Geräte sichtbar zu machen, tippe auf **Zulassen**. Nach einer Weile zeigt die Combo eine 10-stellige Kopplungs-PIN auf ihrem Display an, und **AAPS** fragt danach. Gib diese PIN in das Feld **10-stellige PIN** ein.
 
   ![The Pair with pump screen with the Start pairing button](../images/combo/combov2-pairing-screen-1.png)
 
@@ -130,7 +130,7 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
 
   ![Combo pairing in progress, scanning for the pump](../images/combo/combov2-pairing-screen-2.png)
 
-  The next pictures are from an older **AAPS** version. The steps and texts are the same, but the screens look slightly different.
+  Die nächsten Bilder stammen aus einer älteren **AAPS**-Version. Schritte und Texte sind gleich, die Bildschirme sehen aber etwas anders aus.
 
   ![Screenshot Combo Pairing UI 3](../images/combo/combov2-pairing-screen-3.png)
 
@@ -138,11 +138,11 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
 
   ![Screenshot Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
 
-* If the PIN is entered incorrectly, **AAPS** shows **PIN did not work. Check if there was a typo. If this keeps happening, cancel and retry pairing.**
+* Wurde die PIN falsch eingegeben, zeigt **AAPS** **PIN hat nicht funktioniert. Überprüfe, ob es einen Tippfehler gab. Wenn dies weiterhin geschieht, brich ab und versuche es erneut.**
 
   ![Screenshot Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
-* When **Successfully paired with Combo** is shown, tap **OK**. You return to the pump screen, which now shows the pump status (see [Accu-Chek Combo pump screen contents](#combov2-tab-contents) below). The **Pairing** button is replaced by **Unpair**.
+* Wenn **Erfolgreich mit Combo gekoppelt** angezeigt wird, tippe auf **OK**. Du kehrst zum Pumpenbildschirm zurück, der jetzt den Pumpenstatus zeigt (siehe unten [Inhalt des Accu-Chek-Combo-Pumpenbildschirms](#combov2-tab-contents)). Die Schaltfläche **Koppeln** wird durch **Kopplung aufheben** ersetzt.
 
 * **Trenne die Pumpe** zum Testen der Konfiguration. Setze mit AAPS eine temporäre Basalrate von 500% für 15 Min. und gib einen Testbolus ab. Die Pumpe sollte nun die TBR anzeigen und einen Bolus-Eintrag in der Historie haben. AAPS sollte ebenfalls die TBR und den Bolus anzeigen.
 
@@ -152,54 +152,54 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
 
 Die Accu-Chek Combo wurde knapp ein Jahr nachdem die erste Android-Version veröffentlicht wurde und bevor Bluetooth 4.0 verfügbar war, entwickelt. Aus diesem Grund weicht der Koppelungsprozess vom heute üblichen Weg ab. Um dies zu umgehen, würde AAPS Berechtigungen auf Systemebene benötigen, die nur für Systemanwendungen vergeben werden. Diese Systemanwendungen werden von den Herstellern vorinstalliert. Diese können von Dir nicht (nachträglich) installiert werden.
 
-The consequence of this is that pairing will never be 100% without problems. Insbesondere während des eigentlichen Android-Pairings kann es passieren, dass die Bluetooth-PIN nur sehr kurz zu sehen ist und dann wieder verschwindet. In einigen Fällen, bleibt das Dialogfeld sichtbar und es wird nach einer 4-stelligen PIN gefragt werden. (Nicht zu verwechseln mit der 10-stelligen Combo-Pairing-PIN.) Bitte gib hier nichts ein und tippe auf 'abbrechen' (cancel). Sollte der Pairing-Vorgang nicht weiter vorangehen, folge den auf dem Bildschirm gezeigten Anweisungen, um es erneut zu versuchen.
+Deshalb wird die Kopplung nie zu 100 % problemlos funktionieren. Insbesondere während des eigentlichen Android-Pairings kann es passieren, dass die Bluetooth-PIN nur sehr kurz zu sehen ist und dann wieder verschwindet. In einigen Fällen, bleibt das Dialogfeld sichtbar und es wird nach einer 4-stelligen PIN gefragt werden. (Nicht zu verwechseln mit der 10-stelligen Combo-Pairing-PIN.) Bitte gib hier nichts ein und tippe auf 'abbrechen' (cancel). Sollte der Pairing-Vorgang nicht weiter vorangehen, folge den auf dem Bildschirm gezeigten Anweisungen, um es erneut zu versuchen.
 
 (combov2-tab-contents)=
-## Accu-Chek Combo pump screen contents
+## Inhalt des Accu-Chek-Combo-Pumpenbildschirms
 
-To open the pump screen, go to **Manage** > **Pump**. Once a pump is paired, it shows the following information (items are listed from top to bottom):
+Den Pumpenbildschirm öffnest Du über **Bearbeiten** > **Pumpe**. Ist eine Pumpe gekoppelt, zeigt er folgende Informationen (von oben nach unten):
 
 ![Screenshot of the Accu-Chek Combo pump screen with pairing (older AAPS version)](../images/combo/combov2-tab-with-pairing.png)
 
-1. **Driver state**: The driver can be in one of the following states:
-   - **Disconnected**: There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
-   - **Connecting**
-   - **Checking pump**: the pump is connected, but the driver is currently performing safety checks to ensure that everything is OK and up to date
-   - **Ready**: the driver is ready to accept commands from AAPS
-   - **Suspended**: the pump is suspended (shown as "stopped" in the Combo)
-   - A description of the command being executed, for example **Setting basal profile** or **Updating pump status**
-   - **Error**: an error occurred; the connection was terminated, any ongoing command was aborted
-2. **Last connection**: How many minutes ago the driver successfully connected to the Combo; if this goes beyond 30 minutes, this item is shown with a red color
-3. **Battery**: Battery level; the Combo only indicates **Full**, **Low** or **Empty**, and does not offer anything more accurate (like a percentage), so only these three levels are shown here
-4. **Reservoir**: How many IU are currently in the Combo's reservoir
-5. **Last bolus**: How many minutes ago the last bolus was delivered; if none was delivered yet after AAPS was started, this is not shown
-6. **Temp basal**: Details about the currently active temporary basal; if none is currently active, this is not shown
-7. **Base basal rate**: Currently active base basal rate ("base" means the basal rate without any active TBR influencing the basal rate factor)
-8. **Serial number**: Combo serial number as indicated by the pump (this corresponds to the serial number shown on the back of the Combo)
-9. **Bluetooth address**: The Combo's 6-byte Bluetooth address, shown in the `XX:XX:XX:XX:XX:XX` format
+1. **Treiberstatus**: Der Treiber kann in einem der folgenden Zustände sein:
+   - **Getrennt**: Es besteht keine Bluetooth-Verbindung. In diesem Zustand ist der Treiber die meiste Zeit und verbindet sich nur bei Bedarf mit der Pumpe, das spart Strom.
+   - **Verbinden**
+   - **Pumpe wird überprüft**: Die Pumpe ist verbunden, aber der Treiber führt gerade Sicherheitsprüfungen durch, um sicherzustellen, dass alles in Ordnung und aktuell ist.
+   - **Bereit**: Der Treiber ist bereit, Befehle von AAPS anzunehmen.
+   - **Angehalten**: Die Pumpe ist angehalten (auf der Combo als „STOP“ angezeigt).
+   - Eine Beschreibung des gerade ausgeführten Befehls, zum Beispiel **BR-Profil wird aktualisiert.** oder **Pumpenstatus wird aktualisiert**
+   - **Fehler**: Ein Fehler ist aufgetreten; die Verbindung wurde beendet und ein laufender Befehl abgebrochen.
+2. **Letzte Verbindung**: Vor wie vielen Minuten sich der Treiber zuletzt erfolgreich mit der Combo verbunden hat; sind es mehr als 30 Minuten, wird dieser Eintrag rot angezeigt.
+3. **Batterie**: Batteriestand; die Combo meldet nur **Voll**, **Niedrig** oder **Leer** und nichts Genaueres (etwa einen Prozentwert), daher werden hier nur diese drei Stufen angezeigt.
+4. **Reservoir**: Wie viele Insulin-Einheiten noch im Reservoir der Combo sind
+5. **Letzter Bolus**: Vor wie vielen Minuten der letzte Bolus abgegeben wurde; wurde seit dem Start von AAPS noch keiner abgegeben, wird das nicht angezeigt.
+6. **Temporäre Basalrate**: Details zur gerade aktiven temporären Basalrate; ist keine aktiv, wird das nicht angezeigt.
+7. **Basis-Basalrate**: Aktuell laufende Basis-Basalrate (d. h. die im Profil hinterlegte Basalrate in diesem Zeitfenster ohne temporäre Änderungen)
+8. **Seriennummer**: Seriennummer der Combo, wie sie auch auf der Rückseite der Pumpe angegeben ist
+9. **Bluetooth-Adresse**: Die 6-byte-Bluetooth-Adresse der Combo, die im Format `XX:XX:XX:XX:XX:XX` angezeigt wird
 
-While the driver is doing something (for example, setting a basal profile), a box below the list describes the current activity, with a thin progress bar showing the progress.
+Während der Treiber etwas tut (zum Beispiel ein Basalratenprofil setzt), beschreibt ein Feld unter der Liste die aktuelle Tätigkeit, mit einem schmalen Fortschrittsbalken.
 
-Die Combo kann über Bluetooth im _Remote-Terminal_-Modus oder im _Befehls_-Modus (command) genutzt werden. Der Remote-Terminal-Modus ähnelt dem "Fernbedienungsmodus" auf dem Combo-Messgerät, das das LCD-Display und die vier Knöpfe simuliert. Einige Befehle müssen vom Treiber in diesem Modus ausgeführt werden, da sie im Befehlsmodus kein passendes Gegenstück haben. Dieser letztgenannte Modus ist viel schneller, aber, wie beschrieben, begrenzt. When the remote-terminal mode is active, the current remote-terminal screen is shown in the field that is located just above the Combo drawing. Wenn der Treiber in den Befehlsmodus wechselt, wird dieses Feld leer gelassen.
+Die Combo kann über Bluetooth im _Remote-Terminal_-Modus oder im _Befehls_-Modus (command) genutzt werden. Der Remote-Terminal-Modus ähnelt dem "Fernbedienungsmodus" auf dem Combo-Messgerät, das das LCD-Display und die vier Knöpfe simuliert. Einige Befehle müssen vom Treiber in diesem Modus ausgeführt werden, da sie im Befehlsmodus kein passendes Gegenstück haben. Dieser letztgenannte Modus ist viel schneller, aber, wie beschrieben, begrenzt. Ist der Remote-Terminal-Modus aktiv, wird der aktuelle Remote-Terminal-Bildschirm in dem Feld direkt über der Combo-Abbildung angezeigt. Wenn der Treiber in den Befehlsmodus wechselt, wird dieses Feld leer gelassen.
 
-(You do not influence this; the driver fully decides on its own what mode to use. This is merely a note for you to know why sometimes you can see Combo frames in that field.)
+(Darauf hast Du keinen Einfluss; der Treiber entscheidet ganz selbst, welchen Modus er verwendet. Das ist nur ein Hinweis, damit Du weißt, warum Du in diesem Feld manchmal Combo-Bilder siehst.)
 
-At the bottom, there are these buttons:
+Unten befinden sich diese Schaltflächen:
 
-- **Refresh**: Triggers an immediate pump status update. It is also used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#combov2-alerts)). You can only tap it when the driver is disconnected, suspended or in the error state.
-- **Unpair**: Unpairs the paired Combo from **AAPS** and Android, after you confirm **Do you really want to unpair the pump?**. When no pump is paired, this button is replaced by **Pairing**.
+- **Aktualisieren**: Löst eine sofortige Aktualisierung des Pumpenstatus aus. Damit teilst Du AAPS auch mit, dass ein zuvor erkannter Fehler jetzt behoben ist und AAPS erneut prüfen kann, ob alles in Ordnung ist (mehr dazu unten im [Abschnitt zu Warnungen](#combov2-alerts)). Du kannst nur darauf tippen, wenn der Treiber getrennt, angehalten oder im Fehlerzustand ist.
+- **Kopplung aufheben**: Hebt die Kopplung der Combo mit **AAPS** und Android auf, nachdem Du **Möchtest du die Pumpe wirklich entkoppeln?** bestätigt hast. Ist keine Pumpe gekoppelt, wird diese Schaltfläche durch **Koppeln** ersetzt.
 
 (combov2-preferences)=
 ## Einstellungen
 
-These settings are available for the Combo driver (**Configuration** > **Pump** > **Accu-Chek Combo** > **Settings**, or the settings icon (cog wheel) on the pump screen). Items are listed from top to bottom:
+Diese Einstellungen gibt es für den Combo-Treiber (**Konfiguration** > **Pumpe** > **Accu-Chek Combo** > **Einstellungen** oder das Einstellungssymbol (Zahnrad) auf dem Pumpenbildschirm). Die Einträge sind von oben nach unten aufgeführt:
 
-1. **Discovery duration (in seconds)**: When pairing, the driver makes the phone discoverable by the pump. Dies beinflusst die Dauer der Sichtbarkeit. Das Maximum (300 Sekunden = 5 Minuten) ist voreingestellt. Android erlaubt keine permanente Sichtbarkeit, sodass eine Dauer ausgewählt werden muss.
-2. **Autodetect and automatically enter insulin reservoir change**: If enabled, the driver enters the "reservoir change" that you would normally enter yourself with **Manage** > **Prime/Fill**. Dies wird [weiter unten](#combov2-autodetections) genauer beschrieben.
-3. **Autodetect and automatically enter battery change**: If enabled, the driver enters the "battery change" that you would normally enter yourself with **Manage** > **Pump Battery Change**. Dies wird [weiter unten](#combov2-autodetections) genauer beschrieben.
-4. **Enable verbose Combo logging**: This greatly expands the amount of logging done by the driver. **ACHTUNG**: Aktiviere diese Option nur, wenn Du von einem Entwickler oder einer Entwicklerin dazu aufgefordert wirst. Otherwise, this can add a lot of noise to **AAPS** logs and lessen their usefulness.
+1. **Suchzeit (in Sekunden)**: Beim Koppeln macht der Treiber das Smartphone für die Pumpe sichtbar. Dies beinflusst die Dauer der Sichtbarkeit. Das Maximum (300 Sekunden = 5 Minuten) ist voreingestellt. Android erlaubt keine permanente Sichtbarkeit, sodass eine Dauer ausgewählt werden muss.
+2. **Insulinreservoirwechsel automatisch erkennen und eingeben**: Ist das aktiviert, trägt der Treiber den „Ampullenwechsel“ ein, den Du sonst selbst über **Bearbeiten** > **Nadelwechsel/Füllen** eingeben würdest. Dies wird [weiter unten](#combov2-autodetections) genauer beschrieben.
+3. **Batteriewechsel automatisch erkennen und eingeben**: Ist das aktiviert, trägt der Treiber den „Batteriewechsel“ ein, den Du sonst selbst über **Bearbeiten** > **Pumpenbatterie-Wechsel** eingeben würdest. Dies wird [weiter unten](#combov2-autodetections) genauer beschrieben.
+4. **Aktiviere erweitertes Combo-Logging**: Dies erhöht die Anzahl der Log-Einträge durch den Treiber. **ACHTUNG**: Aktiviere diese Option nur, wenn Du von einem Entwickler oder einer Entwicklerin dazu aufgefordert wirst. Andernfalls kann das die **AAPS**-Protokolle mit sehr vielen Einträgen füllen und sie weniger nützlich machen.
 
-Pairing and unpairing are done on the pump screen, not in the settings (see above).
+Koppeln und Kopplung aufheben erledigst Du auf dem Pumpenbildschirm, nicht in den Einstellungen (siehe oben).
 
 (combov2-autodetections)=
 ## Automatische Erkennung und automatische Eingabe von Akku- und Reservoir-Änderungen
@@ -208,26 +208,26 @@ Der Treiber kann, Batterie- und Ampullenwechsel erkennen, indem er den Batterie-
 
 Dies funktioniert nur, wenn Batterie- und Reservoirstände zuvor als 'niedrig' gemeldet wurden _und_ dann wieder vollgefüllt sind.
 
-These autodetections can be turned off in the driver [settings](#combov2-preferences).
+Diese automatische Erkennung kann in den [Einstellungen](#combov2-preferences) des Treibers ausgeschaltet werden.
 
 (combov2-alerts)=
 ## Alarme (Warnungen und Fehler) und wie sie behandelt werden
 
-The Combo shows alerts as remote-terminal screens. Warnings are shown with a "Wx" code (x is a digit), along with a short description. Ein Beispiel ist "W7", "TBR ABGELAUFEN". Fehler sind ähnlich, werden aber stattdessen mit einem "Ex"-Code angezeigt.
+The Combo shows alerts as remote-terminal screens. Warnungen werden mit einem Code „Wx“ (x ist eine Ziffer) und einer kurzen Beschreibung angezeigt. Ein Beispiel ist "W7", "TBR ABGELAUFEN". Fehler sind ähnlich, werden aber stattdessen mit einem "Ex"-Code angezeigt.
 
 Bestimmte Warnungen werden automatisch vom Treiber verworfen. Diese sind:
 
-- W1 "reservoir low" : the driver turns this into a "low reservoir" warning that is shown on the AAPS main screen
-- W2 "battery low" : the driver turns this into a "low battery" warning that is shown on the AAPS main screen
+- W1 „AMPULLE FAST LEER“: Der Treiber macht daraus eine Warnung „Reservoir fast leer“, die auf dem AAPS-Startbildschirm angezeigt wird.
+- W2 „BATTERIE FAST LEER“: Der Treiber macht daraus eine Warnung „Batterie fast leer“, die auf dem AAPS-Startbildschirm angezeigt wird.
 - W3, W6, W7, W8: Sind alle rein informativ, daher ist es OK, dass der Treiber diese Meldungen automatisch verwirft/bestätigt
 
-Andere Warnungen werden _nicht automatisch_ verworfen/bestätigt. Fehlermeldungen werden ebenfalls _niemals automatisch_ verworfen/bestätigt. Beide werden gleich behandelt: Sie führen dazu, dass der Treiber einen Warndialog auf der AAPS-Oberfläche anzeigt und der laufende Befehl abgebrochen wird. The driver then switches to the "error" state (see [the Accu-Chek Combo pump screen contents above](#combov2-tab-contents)). In diesem Zustand können keine weiteren Befehle ausgeführt werden. Du musst den Fehler auf der Pumpe lösen (z.B. kann ein Verstopfungs-Fehler einen Kanülenwechsel erfordern). Once the user took care of the error, normal operation can be resumed by tapping **Refresh** on the Accu-Chek Combo pump screen. Der Treiber verbindet sich dann mit der Combo und aktualisiert den Status und prüft, ob noch andere Fehler bestehen. Der Treiber aktualisiert den Pumpenstatus in regelmäßigen Abständen automatisch. Ein manuelles Aktualisieren ist also nicht unbedingt erforderlich.
+Andere Warnungen werden _nicht automatisch_ verworfen/bestätigt. Fehlermeldungen werden ebenfalls _niemals automatisch_ verworfen/bestätigt. Beide werden gleich behandelt: Sie führen dazu, dass der Treiber einen Warndialog auf der AAPS-Oberfläche anzeigt und der laufende Befehl abgebrochen wird. Der Treiber wechselt dann in den Zustand „Fehler“ (siehe oben [Inhalt des Accu-Chek-Combo-Pumpenbildschirms](#combov2-tab-contents)). In diesem Zustand können keine weiteren Befehle ausgeführt werden. Du musst den Fehler auf der Pumpe lösen (z.B. kann ein Verstopfungs-Fehler einen Kanülenwechsel erfordern). Hast Du Dich um den Fehler gekümmert, kannst Du den normalen Betrieb fortsetzen, indem Du auf dem Accu-Chek-Combo-Pumpenbildschirm auf **Aktualisieren** tippst. Der Treiber verbindet sich dann mit der Combo und aktualisiert den Status und prüft, ob noch andere Fehler bestehen. Der Treiber aktualisiert den Pumpenstatus in regelmäßigen Abständen automatisch. Ein manuelles Aktualisieren ist also nicht unbedingt erforderlich.
 
-Einen Bolus abzugeben ist ein Sonderfall. Dies wird über den Befehlsmodus, der während der Bolusabgabe keine Alarme bzw. Fehlermeldungen weitergibt, umgesetzt. Deshalb kann der Treiber Warnungen während der Bolusabgabe _nicht automatisch_ verwerfen bzw. bestätigen. Leider bedeutet das, dass die Combo in dieser Situation bis zum Ende des Bolus piepen wird. Der Alarm, der am häufigsten während einer Bolusabgabe auftritt, ist W1 'Ampulle fast leer'. **Don't** dismiss Combo warnings on the pump itself manually during a bolus. Du riskierst sonst, den Bolus zu unterbrechen. Der Treiber wird sich um die Warnungen kümmern, sobald der Bolus durchgelaufen ist.
+Einen Bolus abzugeben ist ein Sonderfall. Dies wird über den Befehlsmodus, der während der Bolusabgabe keine Alarme bzw. Fehlermeldungen weitergibt, umgesetzt. Deshalb kann der Treiber Warnungen während der Bolusabgabe _nicht automatisch_ verwerfen bzw. bestätigen. Leider bedeutet das, dass die Combo in dieser Situation bis zum Ende des Bolus piepen wird. Der Alarm, der am häufigsten während einer Bolusabgabe auftritt, ist W1 'Ampulle fast leer'. Quittiere Combo-Warnungen während eines Bolus **nicht** manuell an der Pumpe. Du riskierst sonst, den Bolus zu unterbrechen. Der Treiber wird sich um die Warnungen kümmern, sobald der Bolus durchgelaufen ist.
 
-Alarme, die auftreten, während der Treiber nicht mit der Combo verbunden ist, kennt der Treiber nicht. Die Combo hat keine Möglichkeit, diese Alarme automatisch an das Smartphone weiterzureichen; es ist immer das Smartphone, das die Verbindung aufbauen muss. Damit bleibt der Alarm so lange aktiv, bis der Treiber sich wieder mit der Pumpe verbunden hat. You can tap **Refresh** on the pump screen to trigger a connection and let the driver handle the alert right then and there (instead of waiting until AAPS itself decides to initiate a connection).
+Alarme, die auftreten, während der Treiber nicht mit der Combo verbunden ist, kennt der Treiber nicht. Die Combo hat keine Möglichkeit, diese Alarme automatisch an das Smartphone weiterzureichen; es ist immer das Smartphone, das die Verbindung aufbauen muss. Damit bleibt der Alarm so lange aktiv, bis der Treiber sich wieder mit der Pumpe verbunden hat. Du kannst auf dem Pumpenbildschirm auf **Aktualisieren** tippen, um eine Verbindung auszulösen und den Treiber die Warnung sofort bearbeiten zu lassen (statt zu warten, bis AAPS selbst eine Verbindung aufbaut).
 
-**WICHTIG**: Sollten Fehler oder Warnungen auftreten, die nicht automatisch verworfen/bestätigt werden können, wird der Treiber in einen Fehlerzustand (error state) gehen. In diesem Fehlerzustand wird der Loop **BLOCKIERT**, bis der Pumpenstatus aktualisiert bzw. aufgelöst ist! It is unblocked after the pump status is updated (either by tapping **Refresh** or by the driver's eventual auto-update) and no error is shown anymore.
+**WICHTIG**: Sollten Fehler oder Warnungen auftreten, die nicht automatisch verworfen/bestätigt werden können, wird der Treiber in einen Fehlerzustand (error state) gehen. In diesem Fehlerzustand wird der Loop **BLOCKIERT**, bis der Pumpenstatus aktualisiert bzw. aufgelöst ist! Die Sperre wird aufgehoben, sobald der Pumpenstatus aktualisiert wurde (durch Tippen auf **Aktualisieren** oder durch die automatische Aktualisierung des Treibers) und kein Fehler mehr angezeigt wird.
 
 ## Dinge, auf die Du bei der Verwendung der Combo achten solltest
 
@@ -247,93 +247,93 @@ Der Treiber tut sein Bestes, um sich mit der Combo zu verbinden und wendet einig
 4. Wenn der Verbindungsversuch immer noch fehlschlägt, kannst Du versuchen die Pumpe zu entkoppeln und dann wieder neu zu koppeln.
 
 (combov2-tips-for-basic-usage)=
-## Tips for basic usage
+## Tipps für die grundlegende Nutzung
 
-### How to ensure smooth operations
+### Wie man einen reibungslosen Betrieb gewährleistet
 
-* Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under your body while you sleep, a higher position (on a shelf or board) works best.
-* Always make sure that the pump battery is as full as possible. See the battery section for tips regarding the battery.
-* Whenever possible, only operate the pump via the AAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Only when changing the battery or the cartridge, it is necessary to use the pump's keys.
+* **Hab immer dein Smartphone dabei**, lege es in der Nacht neben dein Bett. Da Deine Pumpe im Schlaf hinter oder unter Deinem Körper liegen kann, ist eine erhöhte Position (auf einem Regal oder Brett) am besten.
+* Sorge dafür, dass die Batterie der Pumpe immer so voll wie möglich ist. Tipps zur Batterie findest Du im Abschnitt zur Batterie.
+* Bediene die Pumpe nach Möglichkeit nur über die AAPS-App. Aktiviere dazu die Tastensperre der Pumpe unter **PUMPENEINSTELLUNGEN / TASTENSPERRE / EIN**. Es ist lediglich dann notwendig, die Tasten der Pumpe zu benutzen, wenn das Reservoir oder die Batterie ausgewechselt werden müssen.
 
-![Keylock](../images/combo/combo-tips-keylock.png)
+![Tastensperre](../images/combo/combo-tips-keylock.png)
 
-### Pump not reachable. What to do?
+### Pumpe nicht erreichbar. Was ist zu tun?
 
-#### Activate pump unreachable alarm
-* In **AAPS**, tap the **Settings** (gear) icon at the top right of the main screen, go to **Local alerts**, activate **Alert if pump is unreachable** and set **Pump unreachable threshold** to **31** minutes.
-* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
+#### Alarm für „Pumpe nicht erreichbar“ aktivieren
+* Tippe in **AAPS** oben rechts auf dem Startbildschirm auf das Symbol **Einstellungen** (Zahnrad), gehe zu **Lokale Alarme**, aktiviere **Alarm bei nicht erreichbarer Pumpe** und setze **Grenzwert für Pumpe ist nicht erreichbar** auf **31** Minuten.
+* Das gibt dir genug Zeit, dass der Alarm nicht ausgelöst wird, wenn du das Smartphone auf dem Schreibtisch liegen lässt und das Zimmer verlässt, aber informiert dich, wenn die Pumpe für einen Zeitraum nicht erreichbar ist, der die Dauer einer temporären Basalrate übersteigt.
 
-#### Restore reachability of the pump
+#### Erreichbarkeit der Pumpe wiederherstellen
 
-* When AAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, tap **Refresh** on the Accu-Chek Combo pump screen (**Manage** > **Pump**). Mostly then the communication works again.
-* If that does not help, reboot your smartphone. After the restart, AAPS will be reactivated and a new connection will be established with the pump.
+* Wenn AAPS einen **Pumpe nicht erreichbar**-Alarm auslöst, hebe zuerst die Tastensperre auf und **drücke irgendeine Taste an der Pumpe** (z.B. den "Runter" Button). Sobald das Pumpendisplay ausgegangen ist, tippe auf dem Accu-Chek-Combo-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) auf **Aktualisieren**. Meistens funktioniert die Verbindung dann wieder.
+* Wenn das nicht hilft, starte dein Smartphone neu. Nach dem Neustart wird AAPS ebenfalls neu gestartet und es wird eine neue Verbindung zur Pumpe aufgebaut.
 
-* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. See [AAPS Phones](#Phones-list-of-tested-phones) for successfully tested smartphones.
+* Die Tests haben gezeigt, dass bestimmte Smartphones den Fehler „Pumpe nicht erreichbar“ öfter auslösen als andere. Schaue in der [Liste von getesteten Smartphones](#Phones-list-of-tested-phones) nach erfolgreich getesteten Smartphones.
 
-#### Root causes and consequences of frequent communication errors
-* On phones with **low memory** (or **aggressive power-saving** settings), AAPS is often shut down. You can tell by the fact that the treatment buttons (QuickLaunch toolbar) on the main screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last connection** field of the pump screen (**Manage** > **Pump**), you can check when AAPS last communicated with the pump.
+#### Ursachen und Folgen von häufigen Kommunikationsfehlern
+* Auf Smartphones mit **wenig Speicher** (oder **aggressiven Enegierspar-**-Einstellungen) wird AAPS oft abgeschaltet. Das erkennst Du daran, dass beim Öffnen von AAPS die Behandlungsschaltflächen (Schnellstart-Leiste) auf dem Startbildschirm nicht angezeigt werden, weil das System noch initialisiert wird. Das kann „Pumpe nicht erreichbar“-Alarme beim Start auslösen. Im Feld **Letzte Verbindung** des Pumpenbildschirms (**Bearbeiten** > **Pumpe**) siehst Du, wann AAPS zuletzt mit der Pumpe kommuniziert hat.
 
-![No connection to pump](../images/combo/combov2-tips-no-connection-to-pump.png)
+![Keine Verbindung zur Pumpe](../images/combo/combov2-tips-no-connection-to-pump.png)
 
-* This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
-* It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed.
+* Dieser Fehler kann dafür sorgen, dass die Batterie der Pumpe sich schneller entlädt, da das Basalprofil von der Pumpe eingelesen wird, wenn die App neu gestartet wird.
+* Er erhöht außerdem die Wahrscheinlichkeit, dass der Fehler auftritt, der dafür sorgt, dass die Pumpe alle eingehenden Verbindungsanfragen unterbindet, bis eine Taste an der Pumpe gedrückt wird.
 
-### Cancellation of temporary basal rate fails
-* Occasionally, AAPS cannot automatically cancel a **TBR CANCELED** alert. Then you have to either tap **Refresh** on the Accu-Chek Combo pump screen or the alarm on the pump will need to be confirmed.
+### Abbruch der temporären Basalrate schlägt fehl
+* Gelegentlich kann AAPS eine Warnung **TBR ABBRUCH** nicht automatisch quittieren. Dann musst Du entweder auf dem Accu-Chek-Combo-Pumpenbildschirm auf **Aktualisieren** tippen oder den Alarm an der Pumpe bestätigen.
 
-### Pump battery considerations
+### Überlegungen zur Pumpenbatterie
 
-#### Changing the battery
-* After a **low battery** alarm, the battery should be changed as soon as possible to always have enough energy for a reliable Bluetooth communication with the smartphone, even if the phone is within a wider distance of the pump.
-* Even after a **low battery** alarm, the battery might be used for a significant amount of time. However, it is recommended to always have a fresh battery with you after a "low battery" alarm rang.
-* Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop** for 1 hour.
-* Wait for the phone to communicate with the pump and for the Bluetooth logo on the pump to fade.
+#### Wechsel der Batterie
+* Nach einem **Batterie fast leer**-Alarm sollte die Batterie so bald wie möglich gewechselt werden, damit genug Leistung für eine zuverlässige Bluetooth-Verbindung mit dem Smartphone vorhanden ist, selbst wenn das Smartphone weiter von der Pumpe entfernt ist.
+* Selbst nach einem **Batterie fast leer**-Alarm kann die Batterie noch für einen längeren Zeitraum benutzt werden. Trotzdem ist es empfehlenswert immer eine neue Batterie griffbereit zu haben, nachdem der Alarm ausgelöst wurde.
+* Tippe vor dem Batteriewechsel auf dem Startbildschirm auf das Symbol **Loop** und wähle **Loop pausieren** für 1 Stunde.
+* Warte, bis das Smartphone mit der Pumpe kommuniziert hat und das Bluetooth-Symbol auf der Pumpe erlischt.
 
-![Bluetooth enabled](../images/combo/combo-tips-compo.png)
+![Bluetooth aktiviert](../images/combo/combo-tips-compo.png)
 
-* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
-* You don't need to re-set the pump's clock after the battery change: AAPS automatically updates the pump's date and time.
-* Then put the pump back in run mode and select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
-* AAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value.
+* Hebe die Tastensperre auf der Pumpe auf, versetze die Pumpe in den Stop-Modus, bestätige bei Bedarf den Abbruch einer temporären Basalrate und tausche die Batterie aus.
+* Die Uhr der Pumpe musst Du nach dem Batteriewechsel nicht neu stellen: AAPS aktualisiert Datum und Uhrzeit der Pumpe automatisch.
+* Schalte die Pumpe dann wieder in den Betriebszustand RUN und wähle **Fortsetzen**, wenn Du auf dem Startbildschirm auf das Symbol **Loop pausiert** tippst.
+* Mit dem Eintreffen des nächsten Glukosewertes, setzt AAPS dann erneut eine benötigte temporäre Basalrate.
 
 (Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
-#### Battery type and causes of short battery life
-* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries.
+#### Batterieart und Ursachen für eine kurze Lebensdauer der Batterie
+* Häufige Bluetooth-Verbindungen verbrauchten eine Menge Energie, verwende nur **qualitativ hochwertige Batterien** wie Energizer Ultimate Lithium, die "Power One"s auf dem "grossen" Accu-Chek Servicepack oder verwende Eneloop Batterien, wenn Du Dich für einen wiederaufladbaren Akku entscheidest.
 
 ![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Ranges for typical life time of the different battery types are as follows:
-* **Energizer Ultimate Lithium**: 4 to 7 weeks
-* **Power One Alkaline** (Varta) from the service pack: 2 to 4 weeks
-* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
+Die typische Lebensdauer für verschiedene Batterien ist wie folgt:
+* **Energizer Ultimate Lithium**: 4 bis 7 Wochen
+* **Power One Alkaline** (Varta) aus dem Service-Pack: 2 bis 4 Wochen
+* **Eneloop wiederaufladbare** Batterien (BK-3MCCE): 1-3 Wochen
 
-If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
-* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period.
-* The smart phone hardware and software (Android operating system and Bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
+Wenn die Lebensdauer der Batterie wesentlich kürzer ist, als die oben angegebenen Bereiche, überprüfe bitte folgende mögliche Ursachen:
+* Es gibt verschiedene Varianten der Batterie Abdeckung bei der Combo Pumpe, die teilweise einen Kurzschluss bei der Batterie verursachen und sie schnell entladen. Die Abdeckungen ohne dieses Problem kann man an den goldenen Metallkontakten erkennen.
+* Wenn die Uhr in der Pumpe einen kurzen Batteriewechsel nicht "überlebt", kann es sein, dass der Kondensator kaputt ist, der die Uhr nach einem kurzen Energieverlust weiter laufen lässt. In diesem Fall hilft nur ein Austausch der Pumpe durch Roche, was während der Garantiezeit kein Problem ist.
+* Auch Hardware und Software des Smartphones (Android-Betriebssystem und Bluetooth-Stack) beeinflussen die Batterielaufzeit der Pumpe, auch wenn die genauen Faktoren noch nicht vollständig bekannt sind. Wenn du die Möglichkeit hast, versuche es mit einem anderen Smartphone und vergleiche die Lebensdauer der Batterie.
 
-### Extended bolus, multiwave bolus
-The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
-* Use **e-Carbs** when entering carbs or using the Bolus wizard by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in your blood. The system will then calculate small carbs equally distributed over the whole duration which will cause the algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immediate bolus with e-carbs.
-* Before eating, set a temporary **Eating Soon** target of 80 mg/dL (4.4 mmol/L) for several hours (press the target on the main screen, or **Manage** > **Temp Target**). The duration should be based on the interval you would choose for an extended bolus. This will keep your target lower than usual and therefore increase the amount of insulin delivered.
-* Then use the **Bolus wizard** to enter the full carbs of the meal, but do not directly apply the values it suggests. If a multiwave-like bolus is to be delivered, correct the insulin dosage down. Depending on the meal, the algorithm now has to deliver additional SMBs or higher temporary basal rates to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max U/h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
+### Erweiterter Bolus, Multiwave Bolus
+Ein gleichzeitiger erweiterter Bolus und Multiwave Bolus wird nicht vom OpenAPS-Algorithmus unterstützt. Aber ein ähnlicher Effekt kann durch folgende Alternativen erreicht werden:
+* Nutze **e-Carbs**, wenn Du Kohlenhydrate eingibst oder den Bolus-Rechner verwendest: Gib die Kohlenhydrate der ganzen Mahlzeit ein und die Dauer, über die sie voraussichtlich als Glukose im Blut ankommen. Das System berechnet dann kleine, gleichmäßig über die gesamte Dauer verteilte Kohlenhydratmengen, sodass der Algorithmus entsprechend Insulin abgibt und dabei laufend den Gesamtanstieg bzw. -abfall des Glukosewerts überwacht. Um eine Art Multi-Wave-Bolus nachzuahmen, kannst Du auch einen kleinen Einzelbolus mit e-carbs (verzögerte Kohlenhydrate) kombinieren.
+* Setze vor dem Essen für mehrere Stunden ein temporäres Ziel **Bald essen** von 80 mg/dl (4,4 mmol/l) (tippe auf das Ziel auf dem Startbildschirm oder auf **Bearbeiten** > **Temporäre Ziele**). Die Dauer sollte dem Intervall entsprechen, das Du für einen verlängerten/verzögerten Bolus verwenden würdest. Dadurch wird Dein Zielwert niedriger als üblich gehalten und somit die (benötigte) Insulinmenge erhöht werden.
+* Gib dann im **Bolus-Rechner** die gesamten Kohlenhydrate der Mahlzeit ein, übernimm die vorgeschlagenen Werte aber nicht direkt. Korrigiere die Insulindosis nach unten, wenn ein Multi-Wave-Bolus abgegeben werden soll. Der Algorithmus muss nun, abhängig von der Mahlzeit, zusätzliche Mikroboli (SMB) abgeben oder eine sehr hohe temporäre Basalrate setzen, um der Steigerung des Glukosewertes entgegenzuwirken. Hier solltest Du mit der Sicherheitsbegrenzung der Basalrate (Max. IE/h, maximales Basal-IOB) sehr vorsichtig experimentieren und sie bei Bedarf vorübergehend ändern.
 
-* Don't use the extended or multiwave bolus directly on the pump. The driver does not support them (see [Before you begin](#combov2-before-you-begin)); if a multiwave bolus is given on the pump anyway, **AAPS** records it from the pump history as a normal bolus plus an extended bolus, so it is counted in IOB. An extended bolus does not work in a closed loop environment (see [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details).
+* Verwende den verzögerten Bolus oder den Multiwave-Bolus nicht direkt an der Pumpe. Der Treiber unterstützt sie nicht (siehe [Bevor Du beginnst](#combov2-before-you-begin)). Wird an der Pumpe trotzdem ein Multiwave-Bolus abgegeben, erfasst **AAPS** ihn aus der Pumpenhistorie als normalen Bolus plus verzögerten Bolus, sodass er im IOB berücksichtigt wird. Ein verzögerter Bolus funktioniert im Closed Loop nicht (Details auf [dieser Seite](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment)).
 
-### Alarms at bolus delivery
-* After each bolus, the driver reads the pump's bolus history. This is a safety mechanism to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump.
-* Before a bolus, if the pump history has a bolus that **AAPS** did not know about (for example, a bolus given directly on the pump), the requested bolus is **not given**, because it was calculated without that insulin. **AAPS** shows **The pump history has a bolus that AAPS did not know about. The requested bolus was not given...** Check the bolus history on the pump and your IOB. If a bolus is still needed, calculate it again. This also applies when the unknown bolus is found on a new connection.
-* If the bolus was given but the pump history also had other boluses that **AAPS** did not know about, they are recorded now and **AAPS** asks you to check IOB before the next bolus.
-* If the connection to the pump is lost **during** a bolus, **AAPS** does not record 0 U: it shows how much the pump had given by then and warns that the pump may still give the rest. **Do not bolus again.** **AAPS** reads the real amount from the pump history at the next connection.
-* If the connection is lost while **AAPS** sends the bolus, it is not known whether the pump got it. Check the bolus history on the pump before the next bolus.
-* If **AAPS** cannot confirm that a bolus was delivered, it shows **Bolus delivery failed. It appears no bolus was delivered. To be sure, please check the pump to avoid a double bolus and then bolus again.** Boluses are never retried automatically.
+### Alarme bei Bolusabgabe
+* Nach jedem Bolus liest der Treiber die Bolushistorie der Pumpe aus. Das ist ein Sicherheitsmechanismus, damit das aktive Insulin (IOB) richtig berechnet wird, auch wenn ein Bolus direkt an der Pumpe abgegeben wird.
+* Enthält die Pumpenhistorie vor einem Bolus einen Bolus, den **AAPS** nicht kannte (zum Beispiel einen direkt an der Pumpe abgegebenen Bolus), wird der angeforderte Bolus **nicht abgegeben**, weil er ohne dieses Insulin berechnet wurde. **AAPS** zeigt **Die Pumpenhistorie enthält einen Bolus, der nicht in AAPS gespeichert ist. Der gewünschte Bolus wurde nicht abgegeben...** Prüfe die Bolushistorie an der Pumpe und Dein IOB. Wird noch ein Bolus benötigt, berechne ihn neu. Das gilt auch, wenn der unbekannte Bolus bei einer neuen Verbindung gefunden wird.
+* Wurde der Bolus abgegeben, enthielt die Pumpenhistorie aber noch andere Boli, die **AAPS** nicht kannte, werden diese jetzt erfasst, und **AAPS** bittet Dich, vor dem nächsten Bolus das IOB zu prüfen.
+* Bricht die Verbindung zur Pumpe **während** eines Bolus ab, erfasst **AAPS** nicht 0 IE: Es zeigt an, wie viel die Pumpe bis dahin abgegeben hat, und warnt, dass die Pumpe den Rest möglicherweise noch abgibt. **Gib keinen weiteren Bolus ab.** **AAPS** liest die tatsächliche Menge bei der nächsten Verbindung aus der Pumpenhistorie aus.
+* Bricht die Verbindung ab, während **AAPS** den Bolus sendet, ist unklar, ob die Pumpe ihn empfangen hat. Prüfe vor dem nächsten Bolus die Bolushistorie an der Pumpe.
+* Kann **AAPS** nicht bestätigen, dass ein Bolus abgegeben wurde, zeigt es **Die Bolusabgabe ist fehlgeschlagen. Es wurde scheinbar kein Bolus abgegeben. Prüfe zur Sicherheit die Pumpe, um einen doppelten Bolus zu vermeiden, und gib dann erneut einen Bolus ab.** Boli werden nie automatisch wiederholt.
 
 ## Wo ich Hilfe bekomme
 
-Development of the Combo driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Der Combo-Treiber wird von der Community **ehrenamtlich** entwickelt. Bevor Du um Hilfe bittest, bitte:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Lies** den entsprechenden Abschnitt dieser Dokumentation, um zu prüfen, wie die Funktion gedacht ist.
+2. **Frag** im Kanal *#AAPS* auf [Discord](https://discord.gg/4fQUWHZ4Mw) oder in einem der anderen [Community-Kanäle](../GettingHelp/WhereCanIGetHelp.md) nach.
+3. **Melde einen Fehler**, indem Du die [bestehenden Issues](https://github.com/nightscout/AndroidAPS/issues) durchsuchst; ist Deiner nicht dabei, eröffne ein [neues Issue](https://github.com/nightscout/AndroidAPS/issues) und hänge Deine [Logdateien](../GettingHelp/AccessingLogFiles.md) an.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Gib bei der Bitte um Hilfe Hersteller und Modell Deines Smartphones, die Android-Version, die **AAPS**-Version und eine verständliche Beschreibung des Problems an (was sich geändert hat, wann es zuletzt funktioniert hat).

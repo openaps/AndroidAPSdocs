@@ -134,7 +134,7 @@ Richt de camera op de code. De client toont wat de code doet — het Nightscout-
 
 ```{admonition} Scanning is available on Android
 :class: note
-De scanner is nog niet beschikbaar op iOS, en een desktop heeft geen camera: gebruik daar de PIN.
+A computer without camera: use the PIN there.
 ```
 
 #### De PIN invoeren

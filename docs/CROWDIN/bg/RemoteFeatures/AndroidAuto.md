@@ -4,7 +4,7 @@
 
 ## Изисквания
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
+**AAPS** използва функция на Android Auto, която позволява съобщенията от приложенията на телефона да се показват на дисплея на аудиосистемата в колата.
 
 Това означава, че:
 
@@ -15,7 +15,7 @@
 
 (androidauto-check-that-aaps-can-show-notifications)=
 
-## Check that AAPS can show notifications
+## Проверете дали AAPS може да показва известия
 
 **AAPS** винаги показва известие за статуса с текущата ви КЗ, IOB и COB. Това е известието, което Android Auto показва в колата. В **AAPS** няма нищо за включване, но Android трябва да позволява на **AAPS** да показва известия.
 
@@ -33,11 +33,11 @@
 
 (androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
-## Allow the use of "unknown sources" with Android Auto.
+## Разрешете използването на „неизвестни източници“ (unknown sources) в Android Auto.
 
 Тъй като **AAPS** не е официално приложение за Android Auto, известията трябва да бъдат активирани за „неизвестни източници“ (unknown sources) в Android Auto. Това става чрез режима за разработчици, който ще ви покажем тук.
 
-Go to your car and connect your mobile with the car's audio system.
+Отидете до колата си и свържете телефона с аудиосистемата на колата.
 
 Сега трябва да видите екран, подобен на този.
 
@@ -83,4 +83,4 @@ Go to your car and connect your mobile with the car's audio system.
 
 ## Отстраняване на неизправности:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
+* Ако не виждате известието, проверете дали сте [разрешили на AAPS да показва известия](#androidauto-check-that-aaps-can-show-notifications) в Android и дали [Android Auto има права за достъп до известията](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).

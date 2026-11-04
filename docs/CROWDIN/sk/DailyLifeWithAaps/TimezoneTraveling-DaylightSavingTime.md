@@ -42,7 +42,7 @@ Sú dva spôsoby, ako sa tomu vyhnúť:
 
 * Vypnite „Automatický dátum a čas“ v nastaveniach telefónu (ručná zmena časového pásma)
 
-When you get off the plane:
+Keď vystúpite z lietadla:
 
 * vypnite pumpu
 * zmeňte časové pásmo na telefóne
@@ -62,7 +62,7 @@ Insight tiež zapisuje do histórie, kedy sa čas zmenil a z akého (starého) �
 
 Môže to spôsobiť nepresnosti v **TDD** (celkových denných dávkach). Ale to by nemal byť problém.
 
-Takže používatelia Insight sa vôbec nemusia obávať zmeny časových pásiem a zmeny času. Z tohto pravidla je jedna výnimka: pumpa Insight má malú vnútornú batériu na napájanie hodín atď. počas výmeny „skutočnej“ batérie. If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. V tom prípade AAPS pri výpočte vynechá všetky záznamy pred výmenou batérie, pretože ich správny čas nie je možné presne určiť.
+Takže používatelia Insight sa vôbec nemusia obávať zmeny časových pásiem a zmeny času. Z tohto pravidla je jedna výnimka: pumpa Insight má malú vnútornú batériu na napájanie hodín atď. počas výmeny „skutočnej“ batérie. Ak výmena batérie trvá príliš dlho, táto vnútorná batéria sa vybije, hodiny sa vynulujú a po vložení novej batérie budete vyzvaní zadať čas a dátum. V tom prípade AAPS pri výpočte vynechá všetky záznamy pred výmenou batérie, pretože ich správny čas nie je možné presne určiť.
 
 ## Zmena časového pásma pri Accu-Chek Combo
 
@@ -76,7 +76,7 @@ Ovládač automaticky nastavuje čas na pumpe podľa času na telefóne.
 
 Pri zmene časového pásma zostáva história neporušená, ovplyvnená môže byť iba TDD. Ručná zmena času v telefóne môže spôsobiť problémy s históriou a **IOB**. Ak čas zmeníte ručne, dôkladne skontrolujte **IOB**.
 
-When the time zone or time changes running **TBRs** are stopped.
+Keď sa zmení časové pásmo alebo čas, bežiace **dočasné bazály (TBR)** sa zastavia.
 
 (time-adjustment-daylight-savings-time-dst)=
 
@@ -108,8 +108,8 @@ Ak podávate bolus pomocou kalkulačky **AAPS**, nepoužívajte údaje **COB** a
 
 ### Letný čas pri Omnipod Dash
 
-* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. UPOZORNENIE: TÁTO MOŽNOSŤ MÔŽE SPÔSOBIŤ PREDČASNÉ UKONČENIE ŽIVOTNOSTI PODU. AK SI ZVOLÍTE NASLEDUJÚCU MOŽNOSŤ, MAJTE PRI SEBE NÁHRADNÝ MATERIÁL.
+* Buď nechajte **AAPS**, aby sa po prechode na letný čas dočasne vrátil k bazálnemu inzulínu z profilu, ako je opísané vyššie.
+* Alebo, ak nechcete, aby sa **AAPS** cez noc dočasne vrátil k bazálnemu inzulínu z profilu, môžete zmeniť časové pásmo už deň pred prechodom na letný čas, a tak sa vyhnúť problémom v noci. UPOZORNENIE: TÁTO MOŽNOSŤ MÔŽE SPÔSOBIŤ PREDČASNÉ UKONČENIE ŽIVOTNOSTI PODU. AK SI ZVOLÍTE NASLEDUJÚCU MOŽNOSŤ, MAJTE PRI SEBE NÁHRADNÝ MATERIÁL.
 
 #### Čo treba urobiť pred zmenou času
 
@@ -129,6 +129,6 @@ Ak podávate bolus pomocou kalkulačky **AAPS**, nepoužívajte údaje **COB** a
 
 3. V **AAPS** obnovte stav pumpy a prepnite sa na požadovaný **profil**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
+4. Skontrolujte **IOB** a **COB** v **AAPS**, a ak nie sú správne, vypnite **okruh** aspoň na dobu jednej DIA alebo na maximálnu dobu vstrebávania sacharidov (**Maximálna doba absorpcie (vstrebávania)**), podľa toho, čo je dlhšie.
 
 5. Čo treba spraviť po zmene času. Na návrat k miestnemu časovému pásmu je vhodný čas s nízkym **IOB**. Napr. hodinu pred jedlom, napríklad pred raňajkami. Ideálne by mali byť **COB** aj **IOB** blízko nuly.

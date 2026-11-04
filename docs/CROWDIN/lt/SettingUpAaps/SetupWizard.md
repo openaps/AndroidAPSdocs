@@ -1,539 +1,539 @@
-# AAPS Setup Wizard
+# AAPS sąrankos vedlys
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
+Kai pirmą kartą paleidžiate **AAPS**, jus veda „**Sąrankos vedlys**“. Jis padeda greitai, vienu kartu nustatyti visą pagrindinę programėlės konfigūraciją. **Sąrankos vedlys** jus veda, kad nepamirštumėte nieko svarbaus. Pavyzdžiui, **leidimų nustatymai** yra būtini, kad **AAPS** būtų nustatyta teisingai.
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimize/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+Tačiau nebūtina viską visiškai sukonfigūruoti pirmą kartą naudojant **Sąrankos vedlį**. Iš vedlio galite lengvai išeiti ir grįžti į jį vėliau. Po **Sąrankos vedlio** konfigūraciją galima toliau tobulinti ar keisti trimis būdais. Jie bus paaiškinti kitame skyriuje. Todėl nieko blogo, jei kai kuriuos Sąrankos vedlio punktus praleisite – vėliau juos lengvai sukonfigūruosite.
 
-During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
+Naudojant **Sąrankos vedlį** ir iškart po to, **AAPS** galite nepastebėti jokių didelių pokyčių. Kad įjungtumėte **AAPS** ciklą, turite atlikti **mokymo etapus** ir įjungti funkcijas vieną po kitos. **1 mokymo etapą** pradėsite Sąrankos vedlio pabaigoje. Jūs valdote **AAPS**, o ne atvirkščiai.
 
 ```{admonition} Preview Objectives
 :class: note
-If you are keen to know the structure of the objectives, please read [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) but then come back here to run the Setup Wizard first.
+Jei norite sužinoti mokymo etapų struktūrą, perskaitykite [Mokymo etapų atlikimas](../SettingUpAaps/CompletingTheObjectives.md), bet tada grįžkite čia ir pirmiausia atlikite Sąrankos vedlį.
 
 ```
 
-From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
+Iš patirties žinome, kad pradedantieji dažnai skuba kuo greičiau nustatyti **AAPS**. Tai gali sukelti nusivylimą, nes reikia daug ko išmokti.
 
-So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
+Todėl neskubėkite konfigūruoti savo ciklo. Gerai veikiančio **AAPS** ciklo nauda yra labai didelė.
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+Jei dokumentacijoje yra klaida arba žinote, kaip ką nors paaiškinti geriau, galite paprašyti bendruomenės pagalbos, kaip aprašyta skyriuje [Bendravimas su kitais naudotojais](../GettingHelp/WhereCanIGetHelp.md).
 ```
-## Welcome message
+## Pasveikinimo pranešimas
 
-When the Setup Wizard opens, it greets you with a short welcome message and immediately shows a "**Permissions Required**" panel at the bottom of the screen (see next section).
+Atsidaręs Sąrankos vedlys trumpai jus pasveikina ir iškart ekrano apačioje parodo skydelį „**Reikalingi leidimai**“ (žr. kitą skyrių).
 
-Once you have granted the permissions, the panel closes and the welcome screen shows a "**Next**" button. Press "**NEXT**" to continue:
+Kai suteiksite leidimus, skydelis užsidaro, o pasveikinimo ekrane atsiranda mygtukas „**Toliau**“. Spauskite „**TOLIAU**“, kad tęstumėte:
 
 ![Welcome](../images/setup-wizard/Wizard-Welcome.png)
 
-## Required permissions
+## Reikalingi leidimai
 
-**AAPS** needs a few permissions to operate correctly. The Wizard groups them on a single "**Permissions Required**" panel, each with its own "**Grant**" button. Grant them one by one — the icon next to each item turns into a tick once it is done.
+Kad **AAPS** veiktų teisingai, jai reikia kelių leidimų. Vedlys juos sugrupuoja viename skydelyje „**Reikalingi leidimai**“, kiekvienas leidimas turi savo mygtuką „**Suteikti**“. Suteikite juos po vieną – kai leidimas suteiktas, piktograma šalia jo pasikeičia į varnelę.
 
-![Permissions](../images/setup-wizard/Wizard-Permissions.png)
+![Leidimai](../images/setup-wizard/Wizard-Permissions.png)
 
-### Battery optimization
+### Baterijos optimizavimas
 
-Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+Svarbu galvoti apie išmaniojo telefono baterijos sąnaudas, nes baterijų galimybės vis dar gana ribotos. Todėl jūsų telefono Android operacinė sistema riboja programėlių veikimą ir procesoriaus laiko, o kartu ir baterijos energijos, naudojimą.
 
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be excluded from battery optimization.
+Tačiau **AAPS** turi veikti reguliariai, _pvz._, kas kelias minutes gauti gliukozės rodmenis ir tada pagal jūsų nustatymus taikyti algoritmą, kuris nusprendžia, ką daryti su jūsų gliukozės lygiu. Todėl jai reikia išjungti baterijos optimizavimą.
 
-Press "**Grant**" next to "**Battery Optimization**", then select "**Allow**" on the "Let app always run in background?" dialog:
+Spauskite „**Suteikti**“ šalia „**Baterijos optimizavimas**“, tada lange „Let app always run in background?“ (leisti programai visada veikti fone?) pasirinkite „**Allow**“ (leisti):
 
-![Allow Background](../images/setup-wizard/Wizard-Permissions-Battery.png)
+![Leisti veikti fone](../images/setup-wizard/Wizard-Permissions-Battery.png)
 
 (SetupWizard-StoragePermission)=
 
-### AAPS Directory
+### AAPS aplankas
 
-**AAPS** needs to store its settings and log information on the permanent storage of your smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+**AAPS** turi saugoti savo nustatymus ir žurnalų informaciją nuolatinėje telefono atmintyje. Nuolatinė atmintis reiškia, kad informacija išliks net iš naujo paleidus telefoną. Kita informacija tiesiog prarandama, nes ji neišsaugoma nuolatinėje atmintyje.
 
-Press "**Grant**" next to "**AAPS Directory**". This opens the file system on your phone and lets you choose where **AAPS** stores its information.
+Spauskite „**Suteikti**“ šalia „**AAPS aplankas**“. Atsidaro telefono failų sistema, kurioje galite pasirinkti, kur **AAPS** saugos savo informaciją.
 
 ```{tip}
-Choosing the default AAPS directory is recommended.</br>
-Do **not** select a subdirectory of AAPS.
+Rekomenduojama pasirinkti numatytąjį AAPS aplanką.</br>
+**Nesirinkite** AAPS poaplankio.
 ```
 
-The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it and choose "**USE THIS FOLDER**":
+Numatytasis aplankas yra **AAPS**, bet galite naudoti bet kurį kitą tam skirtą aplanką. Jei reikia, sukurkite aplanką, atidarykite jį ir pasirinkite „**USE THIS FOLDER**“ (naudoti šį aplanką):
 
-![Select folder](../images/setup-wizard/Wizard-Permissions-Directory.png)
+![Pasirinkti aplanką](../images/setup-wizard/Wizard-Permissions-Directory.png)
 
-Confirm with "**ALLOW**" that you wish to grant access to **AAPS** to the selected directory:
+Spausdami „**ALLOW**“ (leisti) patvirtinkite, kad suteikiate **AAPS** prieigą prie pasirinkto aplanko:
 
-![Allow access to the folder](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
+![Leisti prieigą prie aplanko](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
 
 ### Notifications
 
-Android requires special permission for apps if they want to send you notifications.
+Android reikalauja specialaus leidimo programėlėms, kurios nori siųsti jums pranešimus.
 
-While it is a good feature to disable notifications _e.g._ from social media apps, it is essential that you allow **AAPS** to send you notifications.
+Naudinga išjungti pranešimus, _pvz._, iš socialinių tinklų programėlių, bet būtina leisti **AAPS** siųsti jums pranešimus.
 
-Press "**Grant**" next to "**Notifications**" and select "**Allow**" at the system prompt:
+Spauskite „**Suteikti**“ šalia „**Pranešimai**“ ir sistemos lange pasirinkite „**Allow**“ (leisti):
 
-![Allow notifications](../images/setup-wizard/Wizard-Permissions-Notifications.png)
+![Leisti pranešimus](../images/setup-wizard/Wizard-Permissions-Notifications.png)
 
-### Alarms and reminders
+### Signalai ir priminimai
 
-On **Android 14 and newer**, **AAPS** needs the "**Alarms and reminders**" permission so that alarms can wake the screen while **AAPS** is in the background, and so that reminders (for example from an **Automation**) ring on time.
+**Android 14 ir naujesnėse versijose** **AAPS** reikia leidimo „**Signalai ir priminimai**“, kad aliarmai galėtų pažadinti ekraną, kai **AAPS** veikia fone, ir kad priminimai (pavyzdžiui, iš **Automatizacijos**) suskambėtų laiku.
 
-This item is only shown while it is needed. Once **AAPS** is excluded from battery optimization (see above), Android grants exact alarms automatically and the item disappears. If it is still listed, press "**Grant**" next to "**Alarms and reminders**". This opens a system settings screen for **AAPS**; enable the toggle and return to **AAPS**. On Android 13 and older this item does not appear and no action is needed.
+Šis punktas rodomas tik tada, kai jo reikia. Kai **AAPS** išjungiamas baterijos optimizavimas (žr. aukščiau), Android tikslius aliarmus leidžia automatiškai ir šis punktas dingsta. Jei jis vis dar rodomas, spauskite „**Suteikti**“ šalia „**Signalai ir priminimai**“. Atsidaro **AAPS** sistemos nustatymų ekranas. Įjunkite jungiklį ir grįžkite į **AAPS**. Android 13 ir senesnėse versijose šis punktas nerodomas ir nieko daryti nereikia.
 
-Once all the permissions show a tick (three, or four on Android 14 and newer), the "**Permissions Required**" panel closes by itself and you can press "**NEXT**" on the welcome screen to continue.
+Kai prie visų leidimų matoma varnelė (trijų, o Android 14 ir naujesnėse versijose – keturių), skydelis „**Reikalingi leidimai**“ užsidaro pats ir pasveikinimo ekrane galite spausti „**TOLIAU**“, kad tęstumėte.
 
 (setup-wizard-bluetooth-battery-optimisation)=
-### Bluetooth battery optimization
+### Bluetooth baterijos optimizavimas
 
 ```{admonition} Extra Android setting, not part of the Wizard
 :class: note
-The following is additional Android configuration done outside of the Setup Wizard. It is not one of the "Grant" buttons above, but it is important for a reliable pump connection.
+Toliau aprašyti papildomi Android nustatymai, kurie atliekami ne Sąrankos vedlyje. Tai nėra vienas iš aukščiau aprašytų mygtukų „Suteikti“, bet tai svarbu patikimam ryšiui su pompa.
 ```
 
-Newer versions of Android have added battery optimization to the system Bluetooth application too.
+Naujesnėse Android versijose baterijos optimizavimas taikomas ir sisteminei Bluetooth programai.
 
-As well as disabling battery optimization for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
+Be baterijos optimizavimo išjungimo **AAPS**, greičiausiai jį reikės išjungti ir sisteminei Bluetooth programai. Jei to nepadarysite, gali nutrūkti ryšys su pompa ir kilti kitų problemų.
 
-***NOTE: The xDrip documentation covers how to do this here: [xDrip documentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
+***PASTABA: xDrip dokumentacijoje aprašyta, kaip tai padaryti: [xDrip dokumentacija](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
 
-Follow these steps on Android 16; other versions will vary slightly from the provided screenshots:
+Atlikite šiuos veiksmus Android 16. Kitose versijose ekranai gali šiek tiek skirtis nuo pateiktų ekrano kopijų:
 
-1. Open Android settings and search for **Apps**, and open the Apps settings.
+1. Atidarykite Android nustatymus, ieškokite **Apps** (programos) ir atidarykite programų nustatymus.
 
    ![settings_apps](../images/setup-wizard/settings_apps.png)
 
-2. You will see the App settings, however we need to expand to see all apps, click on **See all apps** to expand.
+2. Matysite programų nustatymus, bet reikia išskleisti sąrašą, kad matytumėte visas programas. Spauskite **See all apps** (rodyti visas programas).
 
    ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
 
-3. As the Bluetooth app is a system app, it's hidden by default, so we need to show system apps. Click on the **three dots** (⋮) on the top right (1). Then click on **Show system** (2).
+3. Bluetooth programa yra sisteminė, todėl pagal numatymą ji paslėpta. Reikia parodyti sistemines programas. Spauskite **tris taškus** (⋮) viršutiniame dešiniajame kampe (1). Tada spauskite **Show system** (rodyti sistemines) (2).
 
    ![settings_apps](../images/setup-wizard/show_system.png)
 
-4. Search for the `Bluetooth` app and click on `Bluetooth` and/or `Legacy Bluetooth` if both are present ensure the procedure is followed for both.
+4. Ieškokite programos `Bluetooth` ir spauskite `Bluetooth` ir (arba) `Legacy Bluetooth`. Jei yra abi, atlikite veiksmus su abiem.
 
-   ***NOTE: It's safe to ignore the `Bluetooth MIDI Service` this is not used by AAPS***
+   ***PASTABA: `Bluetooth MIDI Service` galima saugiai praleisti, AAPS jo nenaudoja***
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. Android 12 spauskite `Battery`, Android 13+ spauskite `App battery usage`.
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
-5. On Android 12+ select the `Unrestricted` option, on Android 15+ you need to expand the `Allow background usage` setting, click on the section highlighted in red to do this then follow step 6 to complete.
+5. Android 12+ pasirinkite `Unrestricted` (neribojama). Android 15+ reikia išskleisti nustatymą `Allow background usage`: spauskite raudonai pažymėtą sritį, tada atlikite 6 žingsnį.
 
    ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
 
-6. On Android 16 Select `Unrestricted`
+6. Android 16 pasirinkite `Unrestricted`
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
-## License agreement
+## Licencijos sutartis
 
-In the end user license agreement there is important information about the legal aspects of using **AAPS**. Please read it carefully.
+Licencinėje sutartyje su naudotoju yra svarbios informacijos apie teisinius **AAPS** naudojimo aspektus. Atidžiai ją perskaitykite.
 
-If you don't understand, or can't agree to the end user license agreement please don't use **AAPS** at all!
+Jei nesuprantate licencinės sutarties su naudotoju arba negalite su ja sutikti, visiškai nenaudokite **AAPS**!
 
-If you understand and agree, please press the "**I UNDERSTAND AND AGREE**" button and follow the Setup Wizard:
+Jei suprantate ir sutinkate, spauskite mygtuką „**SUPRATAU IR SUTINKU**“ ir sekite Sąrankos vedlį:
 
-![EULA](../images/setup-wizard/Wizard-EULA.png)
+![Licencinė sutartis (EULA)](../images/setup-wizard/Wizard-EULA.png)
 
-A "**Next**" button appears once you have agreed. Press "**NEXT**".
+Kai sutinkate, atsiranda mygtukas „**Toliau**“. Spauskite „**TOLIAU**“.
 
-The next screen, "**Permissions**", lists the permissions again. They should all show a tick, as you granted them at the start. If one is missing, press "**Grant**" next to it. Press "**NEXT**" to continue:
+Kitame ekrane „**Leidimai**“ leidimai išvardyti dar kartą. Prie visų turėtų būti varnelė, nes juos suteikėte pradžioje. Jei kurio nors trūksta, spauskite „**Suteikti**“ šalia jo. Spauskite „**TOLIAU**“, kad tęstumėte:
 
-![Permissions granted](../images/setup-wizard/Wizard-Permissions-Granted.png)
+![Leidimai suteikti](../images/setup-wizard/Wizard-Permissions-Granted.png)
 
 ## Master password
 
-As the configuration of **AAPS** contains some sensitive data (_e.g._ the access token for your Nightscout server) it is encrypted by a password you set here.
+**AAPS** konfigūracijoje yra jautrių duomenų (_pvz._, jūsų Nightscout serverio prieigos raktas), todėl ji užšifruojama slaptažodžiu, kurį nustatote čia.
 
-The Wizard shows "**Password not set**". Press "**Set**":
+Vedlys rodo „**Slaptažodis nenustatytas**“. Spauskite „**Nustatyti**“:
 
-![Master password not set](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
+![Pagrindinis slaptažodis nenustatytas](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
 
-This opens the "**Protection**" screen. Press "**Master password**" (shown as "Password not set"):
+Atsidaro ekranas „**Apsauga**“. Spauskite „**Pagrindinis slaptažodis**“ (rodoma „Slaptažodis nenustatytas“):
 
 ![Protection](../images/setup-wizard/Wizard-Protection.png)
 
-Enter the same password in both fields and press "**OK**":
+Abiejuose laukuose įveskite tą patį slaptažodį ir spauskite „**OK**“:
 
 ![Slaptažodis](../images/setup-wizard/Wizard-Password.png)
 
-Go back with the arrow in the top left corner. The Wizard now shows "**Password set!**":
+Grįžkite atgal rodykle viršutiniame kairiajame kampe. Dabar vedlys rodo „**Slaptažodis nustatytas!**“:
 
-![Master password set](../images/setup-wizard/Wizard-MasterPassword-Set.png)
+![Pagrindinis slaptažodis nustatytas](../images/setup-wizard/Wizard-MasterPassword-Set.png)
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+**NEPAMESKITE SAVO PAGRINDINIO SLAPTAŽODŽIO**. Užsirašykite jį, _pvz._, Google Drive. Tai gera vieta, nes Google už jus daro atsargines kopijas. Jūsų telefonas ar kompiuteris gali sugesti, ir galite likti be jokios kopijos. Jei pamiršite pagrindinį slaptažodį, vėliau gali būti sunku atkurti profilio konfigūraciją ir **mokymo etapų** pažangą.
 ```
 
-When you are done, press "**NEXT**" to go to the next screen.
+Kai baigsite, spauskite „**TOLIAU**“, kad pereitumėte į kitą ekraną.
 
 (setup-wizard-import-settings)=
 ## Importuokite nustatymus
 
-This screen is only shown when **AAPS** finds settings exported earlier in the **AAPS** directory ("Stored settings found"), for example when you reinstall the app or move to a new phone.
+Šis ekranas rodomas tik tada, kai **AAPS** randa anksčiau eksportuotus nustatymus **AAPS** aplanke („Rasti išsaugoti nustatymai“), pavyzdžiui, kai iš naujo įdiegiate programėlę ar pereinate prie naujo telefono.
 
-- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md).
-- To start with a new configuration, press "**NEXT**" and continue with the Wizard.
+- Kad atkurtumėte ankstesnę konfigūraciją, spauskite „**Importuoti nustatymus**“ – žr. [Nustatymų eksportavimas ir importavimas](../Maintenance/ExportImportSettings.md).
+- Kad pradėtumėte nuo naujos konfigūracijos, spauskite „**TOLIAU**“ ir tęskite vedlį.
 
 ![Importuokite nustatymus](../images/setup-wizard/Wizard-ImportSettings.png)
 
-## Units (mg/dL <-> mmol/L)
+## Vienetai (mg/dL <-> mmol/l)
 
-Please select if your glucose values are in mg/dL or mmol/L, then press the "**NEXT**" button:
+Pasirinkite, ar jūsų gliukozės reikšmės yra mg/dL, ar mmol/l, tada spauskite mygtuką „**TOLIAU**“:
 
 ![Units](../images/setup-wizard/Wizard-Units.png)
 
-## Display Settings
+## Ekrano nustatymai
 
-Here you set the "**LOW mark**" and "**HIGH mark**" for the sensor glucose display. Glucose values between these two marks are shown as "in range". You can leave the default values (72 and 180 mg/dL) for now, and edit them later.
+Čia nustatote jutiklio gliukozės rodymo „**Žemąją ribą**“ ir „**Aukštąją ribą**“. Gliukozės reikšmės tarp šių dviejų ribų rodomos kaip „diapazone“. Kol kas galite palikti numatytąsias reikšmes (72 ir 180 mg/dL) ir pakeisti jas vėliau.
 
-The values you choose only affect the graphical presentation of the diagram, and nothing else.
+Pasirinktos reikšmės keičia tik grafiko vaizdą ir nieko daugiau.
 
-Your glucose target _e.g._ is configured separately in your profile.
+Jūsų gliukozės tikslas, _pvz._, nustatomas atskirai jūsų profilyje.
 
-Your range to analyze TIR (time in range) is configured separately in your reporting server.
+Intervalas, pagal kurį analizuojamas TIR (laikas intervale), nustatomas atskirai jūsų ataskaitų serveryje.
 
-Adjust the marks with the "−" / "+" buttons if needed, then press the "**NEXT**" button:
+Jei reikia, pakoreguokite ribas mygtukais „−“ / „+“, tada spauskite mygtuką „**TOLIAU**“:
 
-![Display Settings](../images/setup-wizard/Wizard-Display.png)
+![Ekrano nustatymai](../images/setup-wizard/Wizard-Display.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-## Communication
+## Ryšys
 
-The "**Communication**" screen lists the plugins used to upload, synchronize and broadcast your data:
+Ekrane „**Ryšys**“ išvardyti įskiepiai, kurie naudojami duomenims įkelti, sinchronizuoti ir transliuoti:
 
-- **SMS Communicator** – remote control of **AAPS** using SMS commands
-- **NSClientV3** – synchronizes your data with Nightscout using the v3 API
-- **Tidepool** – uploads data to Tidepool
-- **xDrip** – sends data to xDrip
-- **Open Humans** – upload and donate your diabetes data to scientific projects
-- **Wear** – monitor and control **AAPS** from a WearOS watch
-- **External Companion Apps** – data broadcasting to various external apps
-- **Garmin** – connection to a Garmin device
+- **SMS komandos** – nuotolinis **AAPS** valdymas SMS komandomis
+- **NSClientV3** – sinchronizuoja jūsų duomenis su Nightscout per v3 API
+- **Tidepool** – įkelia duomenis į Tidepool
+- **xDrip** – siunčia duomenis į xDrip
+- **Open Humans** – įkelkite ir paaukokite savo diabeto duomenis moksliniams projektams
+- **Išmanieji laikrodžiai** – **AAPS** stebėjimas ir valdymas iš WearOS laikrodžio
+- **Išorinės susietos programėlės** – duomenų transliavimas į įvairias išorines programėles
+- **Garmin** – ryšys su Garmin įrenginiu
 
-![Communication](../images/setup-wizard/Wizard-Communication.png)
+![Ryšys](../images/setup-wizard/Wizard-Communication.png)
 
-Scroll down to see the rest of the list:
+Slinkite žemyn, kad pamatytumėte likusį sąrašą:
 
-![Communication more](../images/setup-wizard/Wizard-Communication-More.png)
+![Daugiau ryšio įskiepių](../images/setup-wizard/Wizard-Communication-More.png)
 
-You could configure several of these now, but for the first run we will just focus on the reporting server. If you are not able to set it up at the moment, skip it for now — you can configure it later.
+Kai kuriuos iš jų galėtumėte sukonfigūruoti dabar, bet pirmą kartą sutelksime dėmesį tik į ataskaitų serverį. Jei šiuo metu negalite jo nustatyti, kol kas praleiskite – galėsite sukonfigūruoti vėliau.
 
-In this example we use Nightscout as reporting server. Tick the box on the right of "**NSClientV3**" to enable it. For Tidepool it is even simpler, as you only need your personal login information.
+Šiame pavyzdyje kaip ataskaitų serverį naudojame Nightscout. Pažymėkite laukelį dešinėje nuo „**NSClientV3**“, kad jį įjungtumėte. Su Tidepool dar paprasčiau, nes reikia tik jūsų asmeninių prisijungimo duomenų.
 
-Once enabled, press "**Settings**" below NSClientV3 to configure it:
+Įjungę spauskite „**Parametrai**“ po NSClientV3, kad jį sukonfigūruotumėte:
 
 ![NSClientV3](../images/setup-wizard/Wizard-Communication-NSClient.png)
 
-Here you configure the Nightscout reporting server. The NSClientV3 settings are shown as one scrollable page:
+Čia konfigūruojate Nightscout ataskaitų serverį. NSClientV3 nustatymai rodomi viename slenkamame puslapyje:
 
-![NSClientV3 settings](../images/setup-wizard/Wizard-NSClientV3.png)
+![NSClientV3 nustatymai](../images/setup-wizard/Wizard-NSClientV3.png)
 
-Press "**Nightscout URL**" and enter your personal Nightscout server address (the URL you set up yourself, or were given by your service provider). Confirm with "**OK**".
+Spauskite „**Nightscout URL**“ ir įveskite savo asmeninio Nightscout serverio adresą (URL, kurį nustatėte patys arba gavote iš paslaugos teikėjo). Patvirtinkite paspausdami „**OK**“.
 
-Press "**Nightscout access token**" and enter the access token for your Nightscout server. Without this token, access will not work. If you don't have it yet, please check the documentation for setting up the reporting server.
+Spauskite „**Nightscout prieigos raktas**“ ir įveskite savo Nightscout serverio prieigos raktą. Be šio prieigos rakto prieiga neveiks. Jei jo dar neturite, perskaitykite ataskaitų serverio nustatymo dokumentaciją.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout.
+Palikite įjungtą „**Naudoti WebSocket**“, kad ryšys su Nightscout vyktų realiuoju laiku.
 
-The remaining sections can be left at their defaults for now. They are described here so you know where to find them later:
+Kitas skiltis kol kas galite palikti su numatytosiomis reikšmėmis. Jos aprašytos čia, kad vėliau žinotumėte, kur jų ieškoti:
 
-**Alarm options** — Nightscout alarms, announcements and stale-data thresholds. Leave the switches off for now; we only open them so you are aware of the options.
+**Įspėjimų nustatymai** – Nightscout aliarmai, pranešimai ir pasenusių duomenų ribos. Kol kas palikite jungiklius išjungtus. Atidarome juos tik tam, kad žinotumėte apie šias parinktis.
 
-**Connection settings** — choose how data is transferred. Caregivers must enable "**Use cellular data**", otherwise the phone of the person they care for (_e.g._ a child) cannot upload outside Wi-Fi range, _e.g._ on the way to school. Other users can disable cellular transfer to save data or battery. If in doubt, leave everything enabled.
+**Ryšio nustatymai** – pasirinkite, kaip perduodami duomenys. Prižiūrintys asmenys turi įjungti „**Naudoti mobiliuosius duomenis**“, kitaip prižiūrimo asmens (_pvz._, vaiko) telefonas negalės įkelti duomenų už Wi-Fi ryšio ribų, _pvz._, pakeliui į mokyklą. Kiti naudotojai gali išjungti duomenų perdavimą mobiliuoju ryšiu, kad taupytų duomenis ar bateriją. Jei abejojate, palikite viską įjungtą.
 
 ![Connection settings](../images/setup-wizard/Wizard-NSClientV3-Connection.png)
 
-**Advanced Settings** — enable "**Log app start event**" if you want to see in Nightscout when the app restarts (useful for caregivers). Keep "**Create announcements from errors**" and "**Create announcements from carbs required**" enabled. Leave "**Use slow sync**" off; you would only use it if the Nightscout server is slow to process a large amount of data.
+**Papildomi nustatymai** – įjunkite „**Įrašyti programos paleidimą**“, jei norite Nightscout matyti, kada programėlė paleidžiama iš naujo (naudinga prižiūrintiems asmenims). Palikite įjungtus „**Kurti pranešimus iš klaidų**“ ir „**Kurti pranešimus, kai reikia angliavandenių**“. Palikite išjungtą „**Sinchronizuoti lėtai**“. Jo reikia tik tada, jei Nightscout serveris lėtai apdoroja didelį duomenų kiekį.
 
-![Advanced settings](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
+![Papildomi nustatymai](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
 
-Go back to the list of plugins and press "**NEXT**" to go to the next screen.
+Grįžkite į įskiepių sąrašą ir spauskite „**TOLIAU**“, kad pereitumėte į kitą ekraną.
 
-## Client control
+## Kliento valdymas
 
-From **AAPS** version 4, client devices running **AAPSClient** can be **paired** with this phone (the **master**) and control it with signed commands sent over Nightscout. This is the new recommended way to control **AAPS** remotely — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for the full explanation and setup.
+Nuo **AAPS** 4 versijos klientų įrenginiai su **AAPSClient** gali būti **susieti** su šiuo telefonu (**pagrindiniu įrenginiu**) ir jį valdyti pasirašytomis komandomis, siunčiamomis per Nightscout. Tai naujas rekomenduojamas nuotolinio **AAPS** valdymo būdas – išsamų paaiškinimą ir nustatymą rasite [Pagrindinio įrenginio ↔ kliento valdymas](../RemoteFeatures/ClientMasterControl.md).
 
-There is nothing you have to configure on this screen now; you can pair clients at any time later from **Manage → Authorized clients**. There you add a client with a **QR code** (it sets up Nightscout on the client too) or with a **PIN**, and give it a **role**.
+Šiame ekrane dabar nieko nustatyti nereikia. Klientus galėsite susieti bet kada vėliau per **Valdymas → Autorizuoti klientai**. Ten klientą pridedate su **QR kodu** (jis kliente nustato ir Nightscout) arba su **PIN** ir priskiriate jam **vaidmenį**.
 
-- "**Authorized clients**" — manage the paired client devices allowed to control this master.
-- "**Nightscout data acceptance**" — accepting treatments and data entered directly in Nightscout (the old, less secure way) is now turned off by default. Only open these settings if you still need it, _e.g._ to enter data through Nightscout or third-party apps.
+- „**Autorizuoti klientai**“ – susietų klientų įrenginių, kuriems leidžiama valdyti šį pagrindinį įrenginį, tvarkymas.
+- „**Nightscout duomenų priėmimas**“ – tiesiogiai Nightscout įvestų terapijos įrašų ir duomenų priėmimas (senas, mažiau saugus būdas) dabar pagal numatymą išjungtas. Atidarykite šiuos nustatymus tik jei to vis dar reikia, _pvz._, kad įvestumėte duomenis per Nightscout ar trečiųjų šalių programėles.
 
-When client control is already on — always in [Simple Mode](#preferences-simple-mode) — this phone is in [hardened mode](#client-master-control-hardened-mode): it takes changes only from paired clients, so the screen explains hardened mode instead of offering the "**Nightscout data acceptance**" settings.
+Kai kliento valdymas jau įjungtas ([Paprastajame režime](#preferences-simple-mode) visada), šis telefonas veikia [sustiprintos apsaugos režimu](#client-master-control-hardened-mode): jis priima pakeitimus tik iš susietų klientų, todėl ekrane vietoj „**Nightscout duomenų priėmimas**“ nustatymų paaiškinamas sustiprintos apsaugos režimas.
 
-![Client control](../images/setup-wizard/Wizard-ClientControl.png)
+![Kliento valdymas](../images/setup-wizard/Wizard-ClientControl.png)
 
-"**Nightscout data acceptance**" opens the "**Synchronization**" settings, where each kind of data received from Nightscout has its own switch:
+„**Nightscout duomenų priėmimas**“ atidaro nustatymus „**Sinchronizacija**“, kur kiekviena iš Nightscout gaunamų duomenų rūšis turi savo jungiklį:
 
-![Nightscout data acceptance settings](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
+![Nightscout duomenų priėmimo nustatymai](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
 
-Press "**NEXT**" to go to the next screen.
+Spauskite „**TOLIAU**“, kad pereitumėte į kitą ekraną.
 
 (setup-wizard-instance-name)=
-## Who is using this phone?
+## Kas naudoja šį telefoną?
 
-Here you enter the name of the person using this phone. It tells this **AAPS** instance apart from others in reports and when synchronizing, for example if two children in your family use **AAPS**. It is also used in the names of exported settings files and shown on the watch.
+Čia įveskite šį telefoną naudojančio asmens vardą. Jis padeda atskirti šią **AAPS** sistemą nuo kitų ataskaitose ir sinchronizuojant, pavyzdžiui, jei jūsų šeimoje **AAPS** naudoja du vaikai. Jis taip pat naudojamas eksportuotų nustatymų failų pavadinimuose ir rodomas laikrodyje.
 
-It can be anything. You can change it later in **Settings → General → Instance name**.
+Jis gali būti bet koks. Vėliau jį galite pakeisti per **Nustatymai → Bendrieji → Egzemplioriaus pavadinimas**.
 
-Press "**NEXT**" to go to the next screen.
+Spauskite „**TOLIAU**“, kad pereitumėte į kitą ekraną.
 
-![Name](../images/setup-wizard/Wizard-Name.png)
+![Pavadinimas](../images/setup-wizard/Wizard-Name.png)
 
 ## Patient type
 
-Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
+Čia pasirenkate „Naudotojo tipą“. Tai svarbu, nes **AAPS** programinė įranga taiko skirtingas ribas, priklausomai nuo naudotojo amžiaus. Tai svarbu dėl saugumo ir saugos.
 
-Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for a meal.
+Čia taip pat nustatote **maksimalų leistiną bolusą** valgiui. Tai yra didžiausias bolusas, kurio jums reikia įprastam valgiui padengti. Tai saugos funkcija, kuri padeda išvengti atsitiktinės perdozės, kai leidžiate bolusą valgiui.
 
-The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
+Antroji riba panaši, bet susijusi su didžiausiu angliavandenių kiekiu, kurį tikitės suvalgyti.
 
-After setting these values, press "**NEXT**" to go to the next screen:
+Nustatę šias reikšmes, spauskite „**TOLIAU**“, kad pereitumėte į kitą ekraną:
 
-![Patient](../images/setup-wizard/Wizard-PatientType.png)
+![Naudotojas](../images/setup-wizard/Wizard-PatientType.png)
 
 ## Insulinas
 
-Here you configure the insulin used in your pump. New insulin profiles require a **DIA of at least 5 h**.
+Čia nustatote insuliną, kurį naudojate pompoje. Naujiems insulino profiliams reikia **ne trumpesnės kaip 5 val. IVT**.
 
-Press the "**Insulin**" button to open the insulin editor:
+Spauskite mygtuką „**Insulinas**“, kad atidarytumėte insulino redaktorių:
 
 ![Insulinas](../images/setup-wizard/Wizard-Insulin.png)
 
-In the editor you can give the insulin a **nickname** and set its **Peak** (in minutes) and **DIA** (in hours). The quickest way is to load a preset with "**Load peak from**" — choose **Novorapid**, **Fiasp** or **Lyumjev** — and the peak is filled in for you. The graph at the bottom previews the resulting insulin activity curve.
+Redaktoriuje galite insulinui suteikti **pavadinimą** ir nustatyti jo **piką** (minutėmis) ir **IVT** (valandomis). Greičiausias būdas – įkelti ruošinį per „**Įkelti piko reikšmę iš**“: pasirinkite **Novorapid**, **Fiasp** arba **Lyumjev**, ir pikas bus užpildytas automatiškai. Grafikas apačioje rodo gautą insulino aktyvumo kreivę.
 
-![Insulin editor](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
+![Insulino redaktorius](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
 
-Pick the preset that matches your insulin, for example **Fiasp**:
+Pasirinkite ruošinį, kuris atitinka jūsų insuliną, pavyzdžiui, **Fiasp**:
 
-![Insulin Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
+![Insulinas Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
 
 ```{admonition} Use your insulin brand's preset peak
 :class: danger
-Please don't change the peak unless you are an expert — usually the preset values work well for each branded insulin.
+Nekeiskite piko, nebent esate ekspertas – paprastai kiekvieno insulino ruošinio reikšmės tinka gerai.
 ```
 
-If you are a new **AAPS** user, set **DIA** to 9 hours — see [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to understand why.
+Jei esate naujas **AAPS** naudotojas, nustatykite **IVT** 9 valandas – kodėl, žr. [Insulino veikimo trukmė (IVT) ir pikas](#Config-Builder-insulin-dia).
 
 ```{admonition} "Insulin configuration changed" dialog
 :class: note
-If a paired client (_e.g._ another phone) has changed the insulin configuration, a dialog appears. Press **OK** to load their changes, or **Cancel** to keep editing (your next save will overwrite theirs).
+Jei susietas klientas (_pvz._, kitas telefonas) pakeitė insulino konfigūraciją, atsiranda dialogo langas. Spauskite **OK**, kad įkeltumėte jo pakeitimus, arba **Atšaukti**, kad tęstumėte redagavimą (kitą kartą išsaugojus, jūsų pakeitimai perrašys jo pakeitimus).
 ```
 
-![Insulin changed](../images/setup-wizard/Wizard-Insulin-Changed.png)
+![Pakeista insulino konfigūracija](../images/setup-wizard/Wizard-Insulin-Changed.png)
 
-Press the save icon (top right), then press "**NEXT**" to go to the next screen.
+Spauskite išsaugojimo piktogramą (viršuje dešinėje), tada spauskite „**TOLIAU**“, kad pereitumėte į kitą ekraną.
 
-## Blood sugar source
+## Glikemijos šaltinis
 
-Here you select where **AAPS** gets its glucose data from. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
+Čia pasirenkate, iš kur **AAPS** gauna gliukozės duomenis. Perskaitykite savo [glikemijos šaltinio](../Getting-Started/CompatiblesCgms.md) dokumentaciją.
 
-Many sources are available — scroll through the list and select the one you use:
+Galimų šaltinių yra daug – slinkite sąrašą ir pasirinkite tą, kurį naudojate:
 
 ![Glikemijos šaltinis](../images/setup-wizard/Wizard-BGSource.png)
 
-Once you select a source, its card expands and shows two buttons: "**Settings**" to adjust how the data is received, and "**Open plugin**" to open the source's own screen. In the example below, **BYODA** is selected. Some sources have nothing to configure at this stage, so you can usually go straight to the next screen:
+Pasirinkus šaltinį, jo kortelė išsiskleidžia ir rodo du mygtukus: „**Parametrai**“ – nustatyti, kaip gaunami duomenys, ir „**Atidaryti įskiepį**“ – atidaryti paties šaltinio ekraną. Toliau pateiktame pavyzdyje pasirinktas **BYODA**. Kai kurių šaltinių šiame etape nustatyti nereikia, todėl paprastai galite iškart pereiti į kitą ekraną:
 
-![BG Source settings](../images/setup-wizard/Wizard-BGSource-Settings.png)
+![Glikemijos šaltinio nustatymai](../images/setup-wizard/Wizard-BGSource-Settings.png)
 
-After making your selection, press "**NEXT**" to go to the next screen.
+Pasirinkę spauskite „**TOLIAU**“, kad pereitumėte į kitą ekraną.
 
 (setup-wizard-profile)=
 ## Profile
 
-Now we are entering a very important part of the Setup Wizard.
+Dabar pereiname prie labai svarbios Sąrankos vedlio dalies.
 
-Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
+Prieš įvesdami profilio duomenis kitame ekrane, perskaitykite dokumentaciją apie [profilius](../SettingUpAaps/YourAapsProfile.md).
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-An accurate profile is necessary to control the safe action of **AAPS**.
+Kad **AAPS** veiktų saugiai, būtinas tikslus profilis.
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
+Būtina, kad savo profilį nustatytumėte ir aptartumėte su gydytoju ir kad jo tinkamumas būtų patikrintas sėkmingais valandinės bazės, JIF ir IA testais!
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+Jei robotas gauna neteisingus duomenis, jis klys – nuolat. **AAPS** gali dirbti tik su ta informacija, kurią gauna. Jei jūsų profilis per stiprus, rizikuojate hipoglikemija, o jei per silpnas – hiperglikemija. 
 ```
 
-Press the "**Profile**" button to open the profile editor:
+Spauskite mygtuką „**Profilis**“, kad atidarytumėte profilio redaktorių:
 
 ![Profile](../images/setup-wizard/Wizard-Profile.png)
 
-The editor opens empty ("No records available"). Press the "**+**" button at the bottom to create a new profile:
+Redaktorius atsidaro tuščias („Nėra įrašų“). Spauskite mygtuką „**+**“ apačioje, kad sukurtumėte naują profilį:
 
-![Profile empty](../images/setup-wizard/Wizard-Profile-Empty.png)
+![Tuščias profilis](../images/setup-wizard/Wizard-Profile-Empty.png)
 
-You can have several profiles in the long-term if needed. We only create one here.
+Ilgainiui, jei reikia, galite turėti kelis profilius. Čia sukuriame tik vieną.
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: note
-The example profile here is only to show you how to enter data.
+Čia pateiktas profilio pavyzdys tik parodo, kaip įvesti duomenis.
 
-It is not intended to be an accurate profile or something very well optimized, because each person's needs are so different.
+Tai nėra tikslus ar gerai optimizuotas profilis, nes kiekvieno žmogaus poreikiai labai skiriasi.
 
-Don't use it for actually looping!
+Nenaudokite jo tikram ciklui!
 ```
 
-The new profile (for example "**LocalProfile1**") has four tabs: **IC**, **ISF**, **BAS** and **TARG**. Press the pencil next to the profile name to rename it. Fill in every tab — a tab stays red and shows an error message until it contains valid values:
+Naujas profilis (pavyzdžiui, „**LocalProfile1**“) turi keturis skirtukus: **IA**, **JIF**, **BAZ** ir **TIKSLAS**. Spauskite pieštuką šalia profilio pavadinimo, kad jį pervadintumėte. Užpildykite kiekvieną skirtuką – skirtukas lieka raudonas ir rodo klaidos pranešimą, kol jame nėra tinkamų reikšmių:
 
-![New profile with errors](../images/setup-wizard/Wizard-Profile-New-Error.png)
+![Naujas profilis su klaidomis](../images/setup-wizard/Wizard-Profile-New-Error.png)
 
-Press "**IC**" and enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values. Use the "**+**" button to add more time blocks:
+Spauskite „**IA**“ ir įveskite savo [IA](#your-aaps-profile-insulin-to-carbs-ratio) reikšmes. Mygtuku „**+**“ pridėkite daugiau laiko intervalų:
 
 ![IC](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Press "**ISF**" and enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
+Spauskite „**JIF**“ ir įveskite savo [JIF reikšmes](#your-aaps-profile-insulin-sensitivity-factor):
 
 ![ISF](../images/setup-wizard/Wizard-Profile-ISF.png)
 
-Press "**BAS**" and enter your [basal values](#your-aaps-profile-basal-rates):
+Spauskite „**BAZ**“ ir įveskite savo [valandinės bazės reikšmes](#your-aaps-profile-basal-rates):
 
-![BAS](../images/setup-wizard/Wizard-Profile-BAS.png)
+![BAZ](../images/setup-wizard/Wizard-Profile-BAS.png)
 
-Press "**TARG**" and enter your blood sugar target values.
+Spauskite „**TIKSLAS**“ ir įveskite savo gliukozės tikslo reikšmes.
 
-For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
+Atviram ciklui šis tikslas gali būti platesnis intervalas. Kitaip **AAPS** nuolat ragins keisti laikiną valandinę bazę ar kitą nustatymą, o tai gali varginti.
 
-Later, for closed looping, you will generally have only one value for top and bottom. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
+Vėliau, naudodami uždarą ciklą, paprastai turėsite vieną reikšmę ir viršutinei, ir apatinei ribai. Taip **AAPS** lengviau pasiekti tikslą ir geriau kontroliuoti jūsų diabetą.
 
-![TARG](../images/setup-wizard/Wizard-Profile-TARG.png)
+![TIKSLAS](../images/setup-wizard/Wizard-Profile-TARG.png)
 
-When all four tabs are valid, the **save icon** (top right) becomes active. Press it to save the profile:
+Kai visi keturi skirtukai užpildyti teisingai, **išsaugojimo piktograma** (viršuje dešinėje) tampa aktyvi. Spauskite ją, kad išsaugotumėte profilį:
 
-![Save icon](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
+![Išsaugojimo piktograma](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
 
-Close the editor with the "**X**" in the top left corner. The profile summary then shows its name, its total daily basal (∑), the units and the IC and ISF values with their graphs:
+Uždarykite redaktorių paspausdami „**X**“ viršutiniame kairiajame kampe. Tada profilio santraukoje rodomas jo pavadinimas, bendra paros valandinė bazė (∑), vienetai ir IA bei JIF reikšmės su jų grafikais:
 
 ![Save](../images/setup-wizard/Wizard-Profile-Save.png)
 
 ```{admonition} Several defined but only one active profile
 :class: note
-You can have several profiles defined, but only one activated profile running at any given time.
+Galite turėti kelis profilius, bet vienu metu aktyvus gali būti tik vienas profilis.
 ```
 
-Press the "**▶**" (activate) button at the bottom right. The "**Activate**" screen opens. As no insulin is in use yet, it first asks you to select the insulin you are using, so that the profile switch can record it. The "**Activate**" button stays greyed out until you do:
+Spauskite mygtuką „**▶**“ (aktyvuoti) apačioje dešinėje. Atsidaro ekranas „**Aktyvuoti**“. Kadangi insulinas dar nepasirinktas, pirmiausia jūsų paprašoma pasirinkti naudojamą insuliną, kad profilio keitimas jį įrašytų. Kol to nepadarysite, mygtukas „**Aktyvuoti**“ lieka pilkas:
 
-![Select the insulin first](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
+![Pirmiausia pasirinkite insuliną](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
 
-Press "**Select Insulin**" and choose the insulin you configured earlier. Leave the percentage at 100 % and press "**Activate**":
+Spauskite „**Pasirinkite insuliną**“ ir pasirinkite anksčiau nustatytą insuliną. Palikite procentą 100 % ir spauskite „**Aktyvuoti**“:
 
-![Activate](../images/setup-wizard/Wizard-Profile-Activate.png)
+![Aktyvuoti](../images/setup-wizard/Wizard-Profile-Activate.png)
 
-A profile switch dialog appears. In this case let it stay as preset and confirm with "**OK**":
+Atsiranda profilio keitimo langas. Šiuo atveju palikite numatytąsias reikšmes ir patvirtinkite paspausdami „**OK**“:
 
 ```{admonition} Profile switch dialog
 :class: note
-You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile to suit the circumstances.
+Vėliau išmoksite naudoti šį bendrą langą tokiose situacijose kaip liga ar sportas, kai profilį reikia pritaikyti prie aplinkybių.
 ```
 
-![Switch](../images/setup-wizard/Wizard-Profile-Switch.png)
+![Keitimas](../images/setup-wizard/Wizard-Profile-Switch.png)
 
-Your profile is now active. Press "**NEXT**" to go to the next screen.
+Jūsų profilis dabar aktyvus. Spauskite „**TOLIAU**“, kad pereitumėte į kitą ekraną.
 
 ## Insulin pump
 
-Now you select your insulin pump. Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
+Dabar pasirenkate savo insulino pompą. Perskaitykite savo [insulino pompos](../Getting-Started/CompatiblePumps.md) dokumentaciją.
 
-Scroll the list and select your pump. In this example we use the "**Virtual Pump**", which is useful while you are still learning and have not connected a real pump yet:
+Slinkite sąrašą ir pasirinkite savo pompą. Šiame pavyzdyje naudojame „**Virtuali pompa**“. Ji naudinga, kol dar mokotės ir dar neprijungėte tikros pompos:
 
 ![Pump](../images/setup-wizard/Wizard-Pump.png)
 
-Many pumps are supported — scroll down to find yours:
+Palaikoma daug pompų – slinkite žemyn, kad rastumėte savąją:
 
-![Pump more](../images/setup-wizard/Wizard-Pump-More.png)
+![Daugiau pompų](../images/setup-wizard/Wizard-Pump-More.png)
 
-When you select a real pump, **AAPS** asks for a confirmation, because it will copy the basal rates of your profile to the pump and overwrite the basal rates stored there. Press "**OK**" only if the basal rates in your **AAPS** profile are correct; otherwise press "**Cancel**" and switch to the pump later:
+Kai pasirenkate tikrą pompą, **AAPS** prašo patvirtinimo, nes nukopijuos jūsų profilio valandines bazes į pompą ir perrašys ten saugomas valandines bazes. Spauskite „**OK**“ tik jei valandinės bazės jūsų **AAPS** profilyje yra teisingos. Kitu atveju spauskite „**Atšaukti**“ ir pompą pakeiskite vėliau:
 
-![Confirmation when selecting a hardware pump](../images/setup-wizard/Wizard-Pump-Confirmation.png)
+![Patvirtinimas renkantis tikrą pompą](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
+Jei pasirinkta pompa jungiasi per Bluetooth, baigus vedlį **AAPS** paprašys leidimo jungtis prie netoliese esančių įrenginių (žr. [Bluetooth leidimas](#setup-wizard-bluetooth-permission)).
 
-If you have already set up your profile and know how to connect your pump, feel free to connect it now. Otherwise leave it on **Virtual Pump** for the moment — you can change it anytime, or leave the Setup Wizard using the arrow in the top left corner and let **AAPS** first show you some blood glucose values.
+Jei jau nustatėte profilį ir žinote, kaip prijungti pompą, galite ją prijungti dabar. Kitu atveju kol kas palikite **Virtuali pompa** – ją galite pakeisti bet kada arba išeiti iš Sąrankos vedlio rodykle viršutiniame kairiajame kampe ir leisti **AAPS** pirmiausia parodyti jums kelias gliukozės reikšmes.
 
-Press "**NEXT**" to go to the next screen.
+Spauskite „**TOLIAU**“, kad pereitumėte į kitą ekraną.
 
-## APS algorithm
+## DKS algoritmas
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name, the SMB feature of the algorithm is disabled until you are familiar with AAPS and have worked through the first objectives. OpenAPS SMB is newer and generally better than OpenAPS AMA anyway.
+Kaip DKS algoritmą naudokite OpenAPS SMB algoritmą. Nepaisant pavadinimo, algoritmo SMB funkcija išjungta, kol susipažinsite su AAPS ir atliksite pirmuosius mokymo etapus. OpenAPS SMB vis tiek yra naujesnis ir paprastai geresnis už OpenAPS AMA.
 
-SMB is disabled at the start because the SMB feature reacts faster to a blood sugar increase, using a Super Micro Bolus instead of increasing the basal rate percentage. Because your profile is generally not as good in the beginning as it is after some experience, the feature is disabled at first.
+SMB pradžioje išjungtas, nes SMB funkcija greičiau reaguoja į gliukozės kilimą: vietoj valandinės bazės procento didinimo ji naudoja supermikrobolusą. Kadangi pradžioje jūsų profilis paprastai nėra toks geras kaip įgijus patirties, ši funkcija iš pradžių išjungta.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: note
-OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+OpenAPS AMA yra paprasčiausias algoritmas, kuris nepalaiko mikrobolusų aukštoms reikšmėms koreguoti. Gali būti situacijų, kai geriau naudoti šį algoritmą, bet tai nėra rekomendacija.
 ```
 
-Select "**OpenAPS SMB**", then press "**Settings**" to see the details:
+Pasirinkite „**OpenAPS SMB**“, tada spauskite „**Parametrai**“, kad pamatytumėte išsamią informaciją:
 
 ![APS](../images/setup-wizard/Wizard-APS.png)
 
-The only option here is "**Use dynamic sensitivity**". Leave it off and change nothing for now — just read the text.
+Vienintelė parinktis čia – „**Naudoti dinaminį jautrumą**“. Palikite ją išjungtą ir kol kas nieko nekeiskite – tiesiog perskaitykite tekstą.
 
-Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
+Dėl **mokymo etapų** apribojimų šiuo metu vis tiek negalite naudoti nei „uždaro ciklo“, nei „SMB funkcijų“.
 
-Go back and press "**NEXT**" to go to the next screen:
+Grįžkite atgal ir spauskite „**TOLIAU**“, kad pereitumėte į kitą ekraną:
 
-![APS settings](../images/setup-wizard/Wizard-APS-Settings.png)
+![DKS nustatymai](../images/setup-wizard/Wizard-APS-Settings.png)
 
 ## Jautrumo nustatymas
 
-Leave "**Sensitivity Oref1**" selected as the standard sensitivity plugin:
+Palikite pasirinktą „**Jautrumo nustatymo algoritmas Oref1**“ kaip standartinį jautrumo įskiepį:
 
 ![Sensitivity](../images/setup-wizard/Wizard-Sensitivity.png)
 
-If you press "**Settings**" you can review the absorption settings; the defaults (_e.g._ a 6 h absorption cutoff) are fine for now.
+Jei paspausite „**Parametrai**“, galite peržiūrėti angliavandenių įsisavinimo parametrus. Numatytosios reikšmės (_pvz._, 6 val. įsisavinimo ribinis laikas) kol kas tinka.
 
-![Sensitivity settings](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
+![Jautrumo nustatymai](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
 
-Press "**NEXT**" to go to the next screen.
+Spauskite „**TOLIAU**“, kad pereitumėte į kitą ekraną.
 
-## Start Objective 1
+## 1 mokymo etapo pradžia
 
-You are now entering the Objectives — the qualification for access to further **AAPS** features.
+Dabar pradedate mokymo etapus – jie suteikia prieigą prie kitų **AAPS** funkcijų.
 
-Press "**Open Objectives**":
+Spauskite „**Atidaryti mokymo etapus**“:
 
-![Objectives](../images/setup-wizard/Wizard-Objectives.png)
+![Mokymo etapai](../images/setup-wizard/Wizard-Objectives.png)
 
-Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective. But this is the start.
+Čia pradedame 1 mokymo etapą, net jei šiuo metu mūsų sąranka dar nėra visiškai paruošta šiam etapui sėkmingai atlikti. Bet tai tik pradžia.
 
-Press the "**Start**" button of **Objective 1**:
+Spauskite **1 mokymo etapo** mygtuką „**Pradėti**“:
 
-![Objectives list](../images/setup-wizard/Wizard-Objectives-List.png)
+![Mokymo etapų sąrašas](../images/setup-wizard/Wizard-Objectives-List.png)
 
-The objective expands to show its individual checks. You can see that you already made some progress, while other items are still to be done:
+Mokymo etapas išsiskleidžia ir parodo atskirus patikrinimus. Matote, kad jau šiek tiek pažengėte, o kiti punktai dar laukia:
 
-![Objective started](../images/setup-wizard/Wizard-Objectives-Started.png)
+![Mokymo etapas pradėtas](../images/setup-wizard/Wizard-Objectives-Started.png)
 
-Go back, then press "**FINISH**" to complete the Setup Wizard:
+Grįžkite atgal, tada spauskite „**UŽBAIGTI**“, kad baigtumėte Sąrankos vedlį:
 
-![Finish](../images/setup-wizard/Wizard-Objectives-Finish.png)
+![Baigti](../images/setup-wizard/Wizard-Objectives-Finish.png)
 
-After pressing "**FINISH**" you arrive at the main screen of **AAPS**. A "**Notification**" panel may open with information messages, for example about the profile switch you just made — press "**Dismiss**" below each message to clear it.
+Paspaudę „**UŽBAIGTI**“, pateksite į pagrindinį **AAPS** ekraną. Gali atsidaryti skydelis „**Pranešimas**“ su informaciniais pranešimais, pavyzdžiui, apie ką tik atliktą profilio keitimą. Spauskite „**Atmesti**“ po kiekvienu pranešimu, kad jį pašalintumėte.
 
-If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
+Jei netyčia išeisite iš Sąrankos vedlio, galite tiesiog vėl paleisti vedlį arba rankiniu būdu pakeisti [AAPS ciklo konfigūraciją](../SettingUpAaps/ChangeAapsConfiguration.md).
 
 (setup-wizard-bluetooth-permission)=
-## Bluetooth permission
+## Bluetooth leidimas
 
-If you select a pump that connects over Bluetooth (for example **Omnipod Dash**), a banner reminds you that **AAPS** needs Bluetooth permission. You can press "**Dismiss**" for now — the permission is granted after you finish the Wizard:
+Jei pasirenkate pompą, kuri jungiasi per Bluetooth (pavyzdžiui, **Omnipod Dash**), juosta primena, kad **AAPS** reikia Bluetooth leidimo. Kol kas galite spausti „**Atmesti**“ – leidimas suteikiamas baigus vedlį:
 
-![Bluetooth needed](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
+![Reikia Bluetooth](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
 
-Once the Setup Wizard is finished, the **AAPS** main screen shows a "**Permissions Required**" panel. The other permissions are already granted; press "**Grant**" next to "**Bluetooth**":
+Baigus Sąrankos vedlį, pagrindiniame **AAPS** ekrane rodomas skydelis „**Reikalingi leidimai**“. Kiti leidimai jau suteikti. Spauskite „**Suteikti**“ šalia „**Bluetooth**“:
 
-![Bluetooth Grant](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
+![Bluetooth – Suteikti](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
 
-Select "**Allow**" so **AAPS** can find and connect to your pump:
+Pasirinkite „**Allow**“ (leisti), kad **AAPS** galėtų rasti pompą ir prie jos prisijungti:
 
-![Bluetooth Allow](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
+![Bluetooth – Leisti](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
 
-If your **AAPS** loop is now fully setup, please move on to the next section ["Completing the objectives"](../SettingUpAaps/CompletingTheObjectives.md).
+Jei jūsų **AAPS** ciklas jau visiškai nustatytas, pereikite prie kito skyriaus [„Mokymo etapų atlikimas“](../SettingUpAaps/CompletingTheObjectives.md).

@@ -5,406 +5,406 @@
 :depth: 2
 ```
 
-## What is an Automation?
+## Kas yra automatizacija?
 
-"**Automation**" is a feature which can automate tasks in AAPS.
+„**Automatizacija**“ – tai funkcija, kuri gali automatizuoti užduotis AAPS.
 
-Automation performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a Wi-Fi SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
+Automatizacija atlieka tam tikrus veiksmus pagal vieną ar kelias sąlygas. Sąlygos gali būti ir nereguliarūs įvykiai, pvz., žema ar aukšta glikemija (KG) arba tam tikras neigiamas aktyvaus insulino kiekis (AIO). Automatizacijos gali tvarkyti ir pasikartojančius įvykius, pvz., valgį ar sportą tam tikru paros metu, arba kai naudotojas yra tam tikru atstumu nuo GPS vietos ar Wi-Fi SSID zonoje. Automatizacija gali kurti AAPS nustatymų atsargines kopijas pagal tvarkaraštį arba kiekvieną kartą pakeitus Pod.
 
-Automation rules are created and modified from the **Automation** screen (**Manage → Automation**). Each rule is defined by two properties:
+Automatizacijos taisyklės kuriamos ir keičiamos ekrane **Automatizacija** (**Valdymas → Automatizacija**). Kiekvieną taisyklę apibrėžia dvi savybės:
 
-- One or more conditions or 'triggers' that start an action.
+- Viena ar daugiau sąlygų (angl. triggers), kurios paleidžia veiksmą.
 
-    Think of a certain time schedule, an event or properties value in AAPS
+    Pavyzdžiui, tam tikras laikas, įvykis arba AAPS savybės reikšmė
 
-- One or more actions to perform.
+- Vienas ar daugiau veiksmų, kuriuos reikia atlikti.
 
-    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
-
-
-There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
-
-## How Automation can help
-
-1. **Automate recurring tasks:** Automatically executing programmed actions without user interaction.
-
-1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
-
-1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**.
-
-1. **Enabling AAPS to be highly customized** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
-
-The example below illustrates how an **Automation** can enable steps to be eliminated.
-
-User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
-
-![Manual actions without automation](../images/Automations/automation_concept_manual.png)
-
-The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
-
-![Actions done by an automation](../images/Automations/automation_concept_automated.png)
-
-## Key considerations before starting with Automations
-
-1. Before setting up certain Automations, you should have reasonable **BG** control with **AAPS**. Automations should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
-
-1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
-
-1. **Requirements for Automations are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
-
-1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
-
-1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens.
-
-1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/L for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/L for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
-
-## When can I start using Automation?
-
-**Automations** can be started in **objective 10**.
-
-## Where are Automations located in AAPS?
-
-Open **Manage** in the bottom navigation of the main screen and select **Automation**.
-
-## How can I set up an Automation?
-
-To set up an **Automation**, press the **+** button on the Automation screen to create a ‘rule’:
-
-![Automation create](../images/Automations/automation_create.png)
-
-* give your ‘rule’ a title (Task name);
-* press "**EDIT**" under **Condition**. On the **Condition** screen, choose how the triggers are combined (**And**, **Or**, **Exclusive or**) and press "**Add trigger**":
-
-![Automation condition](../images/Automations/automation_trigger_editor.png)
-
-* add at least one trigger:
-
-![Automation triggers](../images/Automations/automation_triggers.png)
-
-* press "**ADD**" under **Action** and select one action:
-
-![Automation actions](../images/Automations/automation_actions.png)
-
-* save the rule with the **Save** button, and make sure the checkbox left of the rule name is ‘ticked’ to activate the **Automation**:
-
-![Automation activated](../images/Automations/automation_rule_activated.png)
-
-To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** as either activated (‘ticked') or deactivated (‘unticked’):
-
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+    Pavyzdžiui, aliarmas, profilio procento nustatymas arba AAPS nustatymų eksportavimas pakeitus Pod.
 
 
-When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
+Automatizacijos parinkčių yra daug, todėl naudotojams patariama su jomis susipažinti AAPS programėlės skiltyje „Automatizacija“. Kitų naudotojų automatizacijų pavyzdžių taip pat galite ieškoti AAPS naudotojų grupėse [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) ir [**Discord**](https://discord.gg/4fQUWHZ4Mw).
 
-![Alert actions](../images/Automations/automation_alert_actions.png)
+## Kuo gali padėti automatizacija
+
+1. **Pasikartojančių užduočių automatizavimas:** užprogramuoti veiksmai atliekami automatiškai, naudotojui nieko nedarant.
+
+1. **Mažesnis nuovargis dėl sprendimų:** pagrindinė **automatizacijų** nauda – naudotojui nebereikia rankiniu būdu nuolat įsikišti į **AAPS** darbą. [Tyrimų](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) duomenimis, žmonės, sergantys 1 tipo diabetu, kasdien vidutiniškai turi priimti 180 papildomų sprendimų. **Automatizacijos** gali sumažinti protinį krūvį, todėl naudotojui lieka daugiau energijos kitiems gyvenimo dalykams.
+
+1. **Galimai geresnė glikemijos kontrolė:** pavyzdžiui, **automatizacijos** padeda užtikrinti, kad **laikini tikslai** visada būtų nustatyti, kai jų reikia, net ir esant įtemptam dienos režimui ar kai ką nors pamirštate. Pavyzdžiui, jei vaikas, sergantis diabetu, mokykloje sportuoja antradieniais 10 val. ir ketvirtadieniais 14 val., ir jam reikia aukšto laikino tikslo (LT) likus 30 minučių iki sporto, šį **laikiną tikslą** galima įjungti **automatizacija**.
+
+1. **AAPS galima labai individualiai pritaikyti**, kad tam tikrose situacijose jis veiktų agresyviau arba švelniau, kaip nori naudotojas. Pavyzdžiui, nustatytam laikui įjungti sumažintą **profilio** % , jei naktį atsiranda neigiamas **AIO**. Tai rodo, kad esamas **profilis** gali būti per stiprus.
+
+Toliau pateiktas pavyzdys rodo, kaip **automatizacija** gali padėti išvengti kai kurių veiksmų.
+
+Naudotojas kiekvieną rytą 6 val. sportuoja: jam reikia nepamiršti 5 val. rankiniu būdu AAPS nustatyti laikiną tikslą „Sportas“.
+
+![Rankiniai veiksmai be automatizacijos](../images/Automations/automation_concept_manual.png)
+
+Naudotojas nustatė **automatizaciją**, kuri 5 val. įjungia laikiną tikslą „Sportas“, kad jo **KG** ir **AIO** būtų tinkami 6 val. treniruotei:
+
+![Automatizacijos atlikti veiksmai](../images/Automations/automation_concept_automated.png)
+
+## Svarbu žinoti prieš pradedant naudoti automatizacijas
+
+1. Prieš nustatydami kai kurias automatizacijas, su **AAPS** turėtumėte būti pasiekę pakankamai gerą **KG** kontrolę. Automatizacijomis nereikėtų kompensuoti netinkamai nustatytų valandinės bazės, **JIF** ar **IA** reikšmių (plačiau aptariama toliau). Nenustatykite automatinio **profilio keitimo**, kad kompensuotumėte **KG** kilimą, _pvz._, dėl maisto. Tam geriau tinka kitos strategijos (SMB ir kt.).
+
+1. Kaip ir bet kuri technologija, **NGJ**, **pompos** ir telefonai gali sugesti: techninės problemos ar jutiklio klaidos gali sutrikdyti **automatizacijos** veiksmus, ir gali tekti įsikišti rankiniu būdu.
+
+1. **Pasikeitus dienos režimui, greičiausiai pasikeis ir automatizacijų poreikis**. Kai keičiasi darbo, mokslo ar atostogų laikotarpiai, nusistatykite priminimą kalendoriuje ir peržiūrėkite, kurios **automatizacijos** šiuo metu įjungtos (jas lengva įjungti ir išjungti). Pavyzdžiui, jei išvykstate atostogų ir jums nebereikia automatizacijos, nustatytos mokyklos sporto pamokoms ar kasdieniam sportui, arba reikia pakeisti laiką.
+
+1. **Automatizacijos** gali prieštarauti viena kitai. Kiekvieną naują **automatizaciją (-as)** verta atidžiai išbandyti saugioje aplinkoje ir suprasti, kodėl **automatizacija** suveikė arba nesuveikė taip, kaip tikėjotės.
+
+1. Jei naudojate Autosens, stenkitės naudoti **laikinus tikslus**, o ne **profilio keitimus**. **Laikini tikslai** nenustato Autosens iš naujo į 0. **Profilio keitimai** nustato Autosens iš naujo.
+
+1. Daugumą **automatizacijų** reikėtų nustatyti tik **ribotam laikui**. Po to **AAPS** gali iš naujo įvertinti situaciją ir prireikus pakartoti **automatizaciją**, jei sąlyga vis dar tenkinama. Pavyzdžiui, „pradėti 7,0 mmol/l laikiną tikslą 30 min.“ arba „pradėti **profilį** 110 % 10 min.“ _ir_ „pradėti 5,0 mmol/l laikiną tikslą 10 min.“. Jei **automatizacijomis** daromi nuolatiniai pakeitimai (pvz., įjungiamas stipresnis profilio %), kyla hipoglikemijos rizika.
+
+## Kada galiu pradėti naudoti automatizaciją?
+
+**Automatizacijas** galima pradėti naudoti **10 mokymo etape**.
+
+## Kur AAPS yra automatizacijos?
+
+Pagrindinio ekrano apatinėje naršymo juostoje atidarykite **Valdymas** ir pasirinkite **Automatizacija**.
+
+## Kaip nustatyti automatizaciją?
+
+Norėdami nustatyti **automatizaciją**, automatizacijos ekrane paspauskite mygtuką **+** ir sukurkite „taisyklę“:
+
+![Automatizacijos kūrimas](../images/Automations/automation_create.png)
+
+* suteikite „taisyklei“ pavadinimą (Užduoties pavadinimas);
+* paspauskite „**Keisti**“ po **Sąlyga**. Ekrane **Sąlyga** pasirinkite, kaip sujungti sąlygas (**Ir**, **Arba**, **Išskirtinis arba**), ir paspauskite „**Pridėti sąlygą**“:
+
+![Automatizacijos sąlyga](../images/Automations/automation_trigger_editor.png)
+
+* pridėkite bent vieną sąlygą:
+
+![Automatizacijos sąlygos](../images/Automations/automation_triggers.png)
+
+* paspauskite „**PRIDĖTI**“ po **Veiksmas** ir pasirinkite vieną veiksmą:
+
+![Automatizacijos veiksmai](../images/Automations/automation_actions.png)
+
+* išsaugokite taisyklę mygtuku **Išsaugoti** ir įsitikinkite, kad langelis kairėje nuo taisyklės pavadinimo yra „pažymėtas“ – tada **automatizacija** bus įjungta:
+
+![Automatizacija įjungta](../images/Automations/automation_rule_activated.png)
+
+Norėdami išjungti **automatizacijos** taisyklę, nuimkite žymę langelyje kairėje nuo **automatizacijos** pavadinimo. Toliau pateiktame pavyzdyje **automatizacija** rodoma įjungta („pažymėta“) arba išjungta („nepažymėta“):
+
+![Įjungtos ir išjungtos automatizacijos taisyklės](../images/Automations/automation_rule_activated_deactivated.png)
+
+
+Nustatydami **automatizaciją**, pirmiausia galite ją išbandyti, skiltyje „Veiksmai“ pasirinkę parinktį „pranešimas“. Tada **AAPS** pirmiausia tik parodo pranešimą, o ne iš tikrųjų atlieka veiksmą. Kai būsite tikri, kad pranešimas rodomas tinkamu laiku ir esant tinkamoms sąlygoms, **automatizacijos** taisyklėje „Pranešimas“ galima pakeisti tikru veiksmu.
+
+![Perspėjimų veiksmai](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
 
-**Automations** are still active when the Loop is disabled!
+**Automatizacijos** veikia net tada, kai ciklas išjungtas!
 ```
 
 
-## When rules are checked
+## Kada tikrinamos taisyklės
 
-**AAPS** checks all **Automation** rules each time a new glucose reading has been processed, so rules are evaluated at the pace of your CGM, also while the phone screen is off. Rules are also checked when the phone starts charging, when the network or location changes, and when a Bluetooth device connects. Only one check runs at a time, so a rule whose actions take a while (for example a pump command) cannot be executed twice.
+**AAPS** tikrina visas **automatizacijos** taisykles kiekvieną kartą, kai apdorojamas naujas gliukozės rodmuo. Taigi taisyklės tikrinamos tokiu pačiu dažniu kaip jūsų NGJ duomenys, net ir tada, kai telefono ekranas išjungtas. Taisyklės taip pat tikrinamos, kai telefonas pradeda krautis, kai pasikeičia tinklas ar vieta ir kai prisijungia Bluetooth įrenginys. Vienu metu vyksta tik vienas tikrinimas, todėl taisyklė, kurios veiksmai trunka ilgiau (pvz., komanda pompai), negali būti įvykdyta du kartus.
 
-## Safety limits
+## Saugumo ribos
 
-There are safety limits set for **Automations**:
+**Automatizacijoms** taikomos saugumo ribos:
 
-* A **Temp Target** set by an **Automation** has to be between 72 and 180 mg/dL (or 4 and 10 mmol/L).
-* The **Profile Percentage** has to be between 50% and 130%.
-* There is a 5 minute time limit between executions of **Automation** (and first execution).
+* **Automatizacijos** nustatytas **laikinas tikslas** turi būti nuo 72 iki 180 mg/dL (arba nuo 4 iki 10 mmol/l).
+* **Profilio procentas** turi būti nuo 50 % iki 130 %.
+* Tarp **automatizacijos** vykdymų (ir iki pirmojo vykdymo) turi praeiti bent 5 minutės.
 
-## Correct use of negative values
+## Teisingas neigiamų reikšmių naudojimas
 
 ```{admonition} Warning
 :class: warning
 
-Please be careful when selecting a negative value in **Automation**
+Būkite atsargūs, kai **automatizacijoje** pasirenkate neigiamą reikšmę
 ```
 
-Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
+Būkite atsargūs, kai **automatizacijos** sąlygoje pasirenkate neigiamą reikšmę su palyginimu, pvz., „mažiau nei“. Pavyzdžiui:
 
-![Comparison operators](../images/Automations/automation_comparison_operators.png)
+![Palyginimo operatoriai](../images/Automations/automation_comparison_operators.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/L" (or "-2mg/dL") will:
+**1 pavyzdys:** sukūrus sąlygą **„mažiau nei“** „-0,1 mmol/l“ (arba „-2 mg/dL“):
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
+**Automatizacija** suveikia esant bet kuriam skaičiui, kuris yra **griežtai mažesnis nei** -0,1 (-2). Tai apima skaičius, pvz., -0,2, -0,3, -0,4 (-4, -6, -8) ir t. t. Atminkite, kad pats skaičius -0,1 (-2) į šią sąlygą **neįeina**. (Sąlyga „lygu arba mažiau nei -0,1 mmol/l (-2 mg/dL)“ _apimtų_ ir -0,1 mmol/l arba -2 mg/dL).
 
-**Example 2:** Creating a Condition "is greater than" -0.1mmol/L (-2mg/dL) will:
+**2 pavyzdys:** sukūrus sąlygą „daugiau nei“ -0,1 mmol/l (-2 mg/dL):
 
-Trigger an **Automation** for any number which is **greater than** -0.1mmol/L (-2mg/dL). This includes numbers like 0, 0.2, 0.4mmol/L, (0, 4, 8mg/dL) and any other positive number.
+**Automatizacija** suveikia esant bet kuriam skaičiui, kuris yra **didesnis nei** -0,1 mmol/l (-2 mg/dL). Tai apima skaičius, pvz., 0; 0,2; 0,4 mmol/l (0, 4, 8 mg/dL) ir bet kurį kitą teigiamą skaičių.
 
-It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.
+Rinkdamiesi šias sąlygas ir reikšmes, gerai apgalvokite, ką tiksliai turi daryti jūsų **automatizacija**.
 
 (automations-automation-triggers)=
-## Automation Triggers
+## Automatizacijos sąlygos
 
-![Automation Triggers](../images/Automations/automation_triggers.png)
+![Automatizacijos sąlygos](../images/Automations/automation_triggers.png)
 
-Scroll down to see the rest of the list:
+Slinkite žemyn, kad pamatytumėte likusį sąrašą:
 
-![Automation Triggers, continued](../images/Automations/automation_trigger_picker_2.png)
+![Automatizacijos sąlygos (tęsinys)](../images/Automations/automation_trigger_picker_2.png)
 
-There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. The list below is non-exhaustive:
+Naudotojas gali pasirinkti įvairias „sąlygas“. Sąlygos – tai reikalavimai, kurie turi būti įvykdyti, kad automatizacija būtų įvykdyta. Šis sąrašas nėra baigtinis:
 
-**Trigger:** connect conditions
+**Sąlyga:** sąlygų sujungimas
 
-**Options:**
+**Parinktys:**
 
-Several conditions can be linked with
-* “And”
-* “Or”
-* “Exclusive or” (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+Kelias sąlygas galima sujungti taip:
+* „Ir“
+* „Arba“
+* „Išskirtinis arba“ (tai reiškia, kad veiksmas (-ai) bus atliktas (-i), jei tenkinama viena ir tik viena sąlyga)
 
-**Trigger:** time vs. recurring time
+**Sąlyga:** laikas ir pasikartojantis laikas
 
-**Options:**
+**Parinktys:**
 
-* time = single time event
-* recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+* laikas = vienkartinis įvykis
+* pasikartojantis laikas = tai, kas vyksta reguliariai (pvz., kartą per savaitę, kiekvieną darbo dieną ir pan.)
 
-**Trigger:** location
+**Sąlyga:** vieta
 
-**Options:**
+**Parinktys:**
 
-* in [Settings > Automation](#preferences-maintenance-settings), the user can select their required location service.
+* skiltyje [Nustatymai > Automatizacija](#preferences-maintenance-settings) naudotojas gali pasirinkti reikiamą vietovės paslaugą.
 
-**Trigger:** location service
+**Sąlyga:** vietovės paslaugos
 
-**Options:**
+**Parinktys:**
 
-* Use passive location: **AAPS** only takes locations when other apps are requesting it.
-* Use network location: Location of your Wi-Fi.
-* Use GPS location (Attention! This can cause excessive battery drain!)
+* Naudoti pasyvų vietos nustatymą: **AAPS** gauna vietą tik tada, kai jos prašo kitos programėlės.
+* Nustatyti vietą pagal tinklą: jūsų Wi-Fi vieta.
+* Nustatyti vietą naudojant GPS (Dėmesio! Tai gali labai greitai iškrauti bateriją!)
 
-**Triggers** : pump and sensor data
+**Sąlygos**: pompos ir jutiklio duomenys
 
-* Cannula age trigger: Available for all pumps
-* Insulin age trigger: Available for supported pumps
-* Battery age trigger: Available for supported pumps
-* Sensor age trigger: always available
-* Pod Activation trigger: Available for patch pumps
+* Sąlyga „Kaniulės laikas“: veikia su visomis pompomis
+* Sąlyga „Insulino laikas“: veikia su palaikomomis pompomis
+* Sąlyga „Pompos baterijos laikas“: veikia su palaikomomis pompomis
+* Sąlyga „Jutiklio amžius“: veikia visada
+* Sąlyga „Pod aktyvavimas“: veikia su pompomis be vamzdelio (patch)
 
-Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+Atkreipkite dėmesį, kad visoms su laiku susijusioms sąlygoms palyginimas „lygu“ greičiausiai nesuveiks, todėl tokiu atveju intervalui sudaryti reikia dviejų sąlygų
 
-* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
-* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* Sąlyga „Rezervuaro lygis“: veikia su visomis pompomis. Palyginimas „NOT\_AVAILABLE“ šiai sąlygai neveikia, nes **AAPS** reikšmė visada užpildyta
+* Sąlyga „Pompos baterijos lygis“: veikia su palaikomomis pompomis. Palyginimas „NOT\_AVAILABLE“ šiai sąlygai neveikia, nes **AAPS** reikšmė visada užpildyta
 
 (automations-automation-action)=
 ## Veiksmas
 
-![Automation Actions](../images/Automations/automation_actions.png)
+![Automatizacijos veiksmai](../images/Automations/automation_actions.png)
 
-Scroll down to see the rest of the list:
+Slinkite žemyn, kad pamatytumėte likusį sąrašą:
 
-![Automation Actions, continued](../images/Automations/automation_action_picker_2.png)
+![Automatizacijos veiksmai (tęsinys)](../images/Automations/automation_action_picker_2.png)
 
-**Actions:** start **Temp Target**
+**Veiksmai:** pradėti **laikiną tikslą**
 
-**Options:**
+**Parinktys:**
 
-* **BG** must be between 72 mg/dL and 180 mg/dL (4 mmol/L and 10 mmol/L)
-* **TT** works only if there is no previous Temp Target — **AAPS** adds this automatically as a "**Preconditions: Temp target not exists**" line to the rule
+* **KG** turi būti nuo 72 mg/dL iki 180 mg/dL (nuo 4 mmol/l iki 10 mmol/l)
+* **LT** veikia tik tada, jei nėra ankstesnio laikino tikslo. **AAPS** automatiškai prideda prie taisyklės eilutę „**Išankstinės sąlygos: Laikinas tikslas neegzistuoja**“
 
-**Actions:** stop **Temp Target**
+**Veiksmai:** sustabdyti **laikiną tikslą**
 
-**Options:**
+**Parinktys:**
 
 none
 
-**Actions:** **Profile Percentage**
+**Veiksmai:** **Profilio procentas**
 
-**Options:**
+**Parinktys:**
 
-* **Profile** must be between 50% and 130%
-* works only if the previous Percentage is 100%
+* **Profilis** turi būti nuo 50 % iki 130 %
+* veikia tik tada, jei ankstesnis procentas yra 100 %
 
 **Actions:** **Change smoothing** (in the **Loop & insulin** group)
 
-**Options:**
+**Parinktys:**
 
 * select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
-* runs only if that smoothing method is not already active — **AAPS** adds this automatically as a "**Preconditions: Smoothing … is not active**" line to the rule. Once the selected smoothing is active, the rule is skipped silently.
+* vykdomas tik tada, jei tas glodinimo metodas dar neaktyvus. **AAPS** automatiškai prideda prie taisyklės eilutę „**Išankstinės sąlygos: Glodinimas … neaktyvus**“. Kai pasirinktas glodinimas jau aktyvus, taisyklė tyliai praleidžiama.
 * Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
   * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
   * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
 
-**Actions:** **Note** (in the **Alerts** group of the list)
+**Veiksmai:** **Pastaba** (sąrašo grupėje **Perspėjimai**)
 
-**Options:**
+**Parinktys:**
 
-* select the event to record: **Note**, **Exercise**, **Question**, **Announcement** or **Pump Site Change**, and an optional note. The name of the action changes to the event you select.
-* **Duration**: used for **Note**, **Exercise** and **Pump Site Change**. **Question** and **Announcement** have no duration: they record your current BG instead.
-* **Pump Site Change** resets the cannula age, as if you had recorded a site change by hand. Example: some pumps (like the Combo) record a reservoir change by themselves, but not the site change. If you always change both together, a rule with **Insulin age** less than 1 hour and **Cannula age** more than 24 hours can record the site change for you.
+* pasirinkite, kokį įvykį įrašyti: **Pastaba**, **Sportas**, **Klausimas**, **Pranešimas** arba **Infuzijos vietos keitimas**, ir, jei norite, pastabą. Veiksmo pavadinimas pasikeičia į pasirinktą įvykį.
+* **Trukmė**: naudojama **Pastaba**, **Sportas** ir **Infuzijos vietos keitimas**. **Klausimas** ir **Pranešimas** neturi trukmės: vietoj jos jie įrašo jūsų dabartinę KG.
+* **Infuzijos vietos keitimas** iš naujo pradeda skaičiuoti kaniulės laiką, lyg būtumėte rankiniu būdu įrašę infuzijos vietos keitimą. Pavyzdys: kai kurios pompos (pvz., Combo) pačios įrašo rezervuaro keitimą, bet neįrašo infuzijos vietos keitimo. Jei visada keičiate abu kartu, taisyklė su sąlygomis **Insulino laikas** mažiau nei 1 valanda ir **Kaniulės laikas** daugiau nei 24 valandos gali įrašyti infuzijos vietos keitimą už jus.
 
-![The events of the Note action](../images/Automations/automation_action_careportal_events.png) ![The Note action set to Pump Site Change](../images/Automations/automation_action_careportal_site_change.png)
+![Veiksmo „Pastaba“ įvykiai](../images/Automations/automation_action_careportal_events.png) ![Veiksmas „Pastaba“, nustatytas į „Infuzijos vietos keitimas“](../images/Automations/automation_action_careportal_site_change.png)
 
-**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
+**Veiksmai:** **Siųsti SMS į visus numerius** (grupėje **Perspėjimai**)
 
-**Options:**
+**Parinktys:**
 
-* enter the text of the message. It is sent to all the phone numbers allowed in the [SMS Communicator](../RemoteFeatures/SMSCommands.md) settings. The SMS Communicator plugin must be enabled.
+* įveskite žinutės tekstą. Ji siunčiama visais telefono numeriais, kurie leidžiami [SMS komandos](../RemoteFeatures/SMSCommands.md) nustatymuose. Įskiepis „SMS komandos“ turi būti įjungtas.
 
-**Actions:** **Change profile to** (in the **Profile** group)
+**Veiksmai:** **Pakeisti profilį** (grupėje **Profilis**)
 
-**Options:**
+**Parinktys:**
 
-* select the **Profile** to activate. It is activated at 100%, without timeshift. If this profile is already active, the action does nothing.
+* pasirinkite **profilį**, kurį norite įjungti. Jis įjungiamas 100 %, be laiko perstūmimo. Jei šis profilis jau aktyvus, veiksmas nieko nedaro.
 
-**Actions:** **Enable/disable SMB** (in the **Loop & insulin** group)
+**Veiksmai:** **Įjungti/išjungti SMB** (grupėje **Ciklas & insulinas**)
 
-**Options:**
+**Parinktys:**
 
-* choose **On** or **Off**. This changes the **Enable SMB** setting of OpenAPS SMB, exactly as if you had changed it in **Settings**, and stays until you or another rule change it back.
+* pasirinkite **ĮJUNGTA** arba **IŠJUNGTA**. Tai pakeičia OpenAPS SMB nustatymą **Naudoti SMB** lygiai taip pat, lyg būtumėte jį pakeitę **nustatymuose**. Pakeitimas lieka, kol jūs arba kita taisyklė jo nepakeis atgal.
 
-**Actions:** **Run Autotune** (in the **Loop & insulin** group)
+**Veiksmai:** **Paleisti Autotune** (grupėje **Ciklas & insulinas**)
 
-**Options:**
+**Parinktys:**
 
-* select the profile to tune and the number of days: see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule).
+* pasirinkite profilį, kurį derinti, ir dienų skaičių: žr. [Autotune paleidimas automatizacijos taisykle](#autotune-run-autotune-with-an-automation-rule).
 
-**Actions:** **Stop processing** (in the **Loop & insulin** group)
+**Veiksmai:** **Stabdyti apdorojimą** (grupėje **Ciklas & insulinas**)
 
-**Options:**
+**Parinktys:**
 
-* none. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Add it to a rule that must take priority over the rules below it (see [the order of the Automations](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* nėra. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Pridėkite jį prie taisyklės, kuri turi turėti pirmenybę prieš žemiau esančias taisykles (žr. [automatizacijų tvarka](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
-**Actions:** **Run scene**, **Enable scene**, **Disable scene** (in the **Scenes** group)
+**Veiksmai:** **Paleisti scenarijų**, **Įjungti scenarijų**, **Išjungti scenarijų** (grupėje **Scenarijai**)
 
-**Options:**
+**Parinktys:**
 
-* select the [scene](Scenes.md) to run, enable or disable.
+* pasirinkite [scenarijų](Scenes.md), kurį norite paleisti, įjungti arba išjungti.
 
-Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
+Pridėjus veiksmą, numatytąsias reikšmes reikia pakeisti norimomis: spustelėkite jas ir pakoreguokite.
 
-![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
+![Laikino tikslo veiksmo reikšmės](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
-## The order of the **Automations** in the list matters
- **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+## **Automatizacijų** tvarka sąraše yra svarbi
+ **AAPS** vykdo sukurtas taisykles pagal prioritetą, pradėdama nuo **automatizacijų** sąrašo viršaus. Pavyzdžiui, jei **automatizacija** „Žema“ yra svarbiausia **automatizacija**, svarbesnė už visas kitas taisykles, ši **automatizacija** turi būti naudotojo **automatizacijų** sąrašo viršuje, kaip parodyta toliau:
 
 
-![List of automation rules](../images/Automations/automation_rule_list.png)
+![Automatizacijos taisyklių sąrašas](../images/Automations/automation_rule_list.png)
 
-To reprioritize the **Automation** rules, touch and hold the **=** handle on the right side of the rule. Reorder the **Automations** by moving the rules up or down.
+Norėdami pakeisti **automatizacijos** taisyklių prioritetą, palieskite ir palaikykite rankenėlę **=** dešinėje taisyklės pusėje. **Automatizacijų** tvarką pakeisite perkeldami taisykles aukštyn arba žemyn.
 
-![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
+![Automatizacijos taisyklių tvarkos keitimas](../images/Automations/automation_rule_reorder.png)
 
-## How to delete Automation rules
+## Kaip ištrinti automatizacijos taisykles
 
-To delete an **Automation** rule click on the trash icon.
+Norėdami ištrinti **automatizacijos** taisyklę, spustelėkite šiukšliadėžės piktogramą.
 
-![Delete automation rules](../images/Automations/automation_rule_delete.png)
+![Ištrinti automatizavimo taisykles](../images/Automations/automation_rule_delete.png)
 
-## Examples of Automations
+## Automatizacijų pavyzdžiai
 
-Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
+Toliau pateikiami **automatizacijų** pavyzdžiai. Daugiau diskusijų apie **automatizacijas** ir tai, kaip naudotojai pritaikė savo **automatizacijas**, rasite Facebook diskusijų grupėse arba Discord. Nekopijuokite toliau pateiktų pavyzdžių, jei gerai nesuprantate, kaip veiks **automatizacija**.
 
 (automations-low-glucose-temp-target)=
 ### Žemos glikemijos laikinas tikslas
 
-This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
+Ši **automatizacija** automatiškai įjungia **laikiną tikslą**, kai **KG** nukrenta žemiau tam tikros ribos. Šiame pavyzdyje, kai gliukozė mažesnė nei 70 mg/dL, 30 minučių įjungiamas 110 mg/dL tikslas:
 
-![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
+![Pavyzdys: žemos gliukozės taisyklė](../images/Automations/automation_example_low_glucose_rule.png)
 
-### Lunch Time Temp Target (with ‘Location’)
+### Pietų laiko laikinas tikslas (su sąlyga „Vieta“)
 
-![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
+![Pavyzdys: pietų taisyklė](../images/Automations/automation_example_lunch_rule.png)
 
-This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will not activate.
+Ši **automatizacija** sukurta naudotojui, kuris darbe pietauja maždaug tuo pačiu metu kiekvieną darbo dieną. Ji suveikia tik tada, kai naudotojas yra nustatytoje „vietoje“.  Taigi, jei naudotojas kurią dieną nėra darbe, ši **automatizacija** neįsijungs.
 
-This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive BG to 90 mg/dL (or 5 mmol/L) in preparation for lunch.
+Ši **automatizacija** 13:00 nustatys žemą **laikiną tikslą** (Netrukus valgysiu), kad prieš pietus KG nukristų iki 90 mg/dL (arba 5 mmol/l).
 
-The ‘Trigger’ location has a name, a position (tap **Pick from map**, or use your current location) and a radius in metres, and fires when you are inside (or outside) the area:
+Sąlyga „Vieta“ turi pavadinimą, padėtį (bakstelėkite **Pasirinkti žemėlapyje** arba naudokite dabartinę vietą) ir spindulį metrais. Ji suveikia, kai esate zonoje (arba už jos ribų):
 
-![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
+![Pavyzdys: pietų taisyklė su vietos sąlyga](../images/Automations/automation_example_lunch_location_condition.png)
 
-Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location.
+Dėl „Ir“ jungties **automatizacija** suveikia tik „pasirinktu laiku“ ir tik tada, kai naudotojas yra pasirinktoje vietoje.
 
-The **Automation** will not be triggered on any other time at this location or at this time outside the 50-metre radius around the chosen position.
+Kitu laiku šioje vietoje arba šiuo laiku už 50 metrų spindulio aplink pasirinktą vietą **automatizacija** nesuveiks.
 
-### Wi-Fi SSID Location Automation
+### Automatizacija pagal Wi-Fi SSID vietą
 
-Using a Wi-Fi SSID is a good option to trigger an **Automation** while within range of a specific Wi-Fi network (compared with GPS): it is fairly precise, uses less battery, and works in enclosed spaces where GPS and other location services might not be available.
+Wi-Fi SSID yra geras būdas paleisti **automatizaciją**, kai esate konkretaus Wi-Fi tinklo veikimo zonoje (palyginti su GPS): jis gana tikslus, naudoja mažiau baterijos ir veikia uždarose patalpose, kur GPS ir kitos vietos nustatymo paslaugos gali būti nepasiekiamos.
 
-Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
-
-
-The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
-and while being connected to a home Wi-Fi network (3).
+Štai dar vienas pavyzdys, kaip nustatyti **laikiną tikslą** tik darbo dienomis prieš pusryčius (1).
 
 
-It will then set a **Temp Target** of 75 mg/dL for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is traveling on vacation, for instance.
+**Automatizacija** suveiks 05:30 tik nuo pirmadienio iki penktadienio (2)  
+ir tik kai telefonas prisijungęs prie namų Wi-Fi tinklo (3).
 
-![Wi-Fi rule: task name (1), weekday time condition (2) and Wi-Fi SSID condition (3)](../images/Automations/automation_example_wifi_rule.png)
 
-Scroll down to see the action: a **Temp Target** of 75 mg/dL for 30 minutes (4).
+Tada ji nustatys 75 mg/dL **laikiną tikslą** 30 minučių (4). Vienas iš vietos įtraukimo privalumų – taisyklė nesuveiks, pavyzdžiui, jei naudotojas keliauja atostogų.
 
-![Wi-Fi rule action: Start temp target of 75 mg/dL for 30 minutes (4)](../images/Automations/automation_example_wifi_action.png)
+![Wi-Fi taisyklė: užduoties pavadinimas (1), darbo dienų laiko sąlyga (2) ir Wi-Fi SSID sąlyga (3)](../images/Automations/automation_example_wifi_rule.png)
 
-Here is the screenshot detailing the **Automation** triggers:
+Slinkite žemyn, kad pamatytumėte veiksmą: 75 mg/dL **laikinas tikslas** 30 minučių (4).
 
-1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
-1) Wi-Fi SSID = My_Home_WiFi_Name
+![Wi-Fi taisyklės veiksmas: pradėti 75 mg/dL laikiną tikslą 30 minučių (4)](../images/Automations/automation_example_wifi_action.png)
 
-![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
+Štai ekrano kopija su **automatizacijos** sąlygomis:
+
+1) Pagrindinė jungtis „IR“ (sąlyga suveikia, kai tenkinamos abi sąlygos) 1) Pasikartojantis laikas = Pr, An, Tr, Kt, Pn, 5:30  
+1) WiFi SSID = My_Home_WiFi_Name
+
+![Pavyzdys: WiFi sąlyga](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
-## Automating Preference Settings Export
+## Nustatymų eksportavimo automatizavimas
 
-### Unattended Exports: scheduled (daily)
+### Automatinis eksportavimas: pagal tvarkaraštį (kasdien)
 
-Screenshots detailing the Automation triggers:
+Ekrano kopijos su automatizacijos sąlygomis:
 
-1) Condition: Recurring time = M,T,W,T,F At 8:00am 1) Action: Settings Export (For "Text in treatments" enter "Daily")
+1) Sąlyga: Pasikartojantis laikas = Pr, An, Tr, Kt, Pn, 8:00 1) Veiksmas: Eksportuoti nustatymus (laukelyje „Tekstas terapijoje“ įveskite „Daily“)
 
-![Scheduled exports](../images/Automations/automation_settings_export_daily.png)
+![Eksportavimas pagal tvarkaraštį](../images/Automations/automation_settings_export_daily.png)
 
-Note: Export execution will be logged on Careportal
+Pastaba: eksportavimas bus įrašytas terapijos įrašuose (Careportal)
 
-### Unattended Exports: Pod Activation (patch pump only)
+### Automatinis eksportavimas: Pod aktyvavimas (tik pompoms be vamzdelio)
 
-Screenshots detailing the Automation triggers:
+Ekrano kopijos su automatizacijos sąlygomis:
 
-1) Condition: Pod Activation 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+1) Sąlyga: Pod aktyvavimas 1) Veiksmas: Eksportuoti nustatymus (laukelyje „Tekstas terapijoje“ įveskite „Pod Activation: settings export“)
 
-![Export on Pod activation](../images/Automations/automation_settings_export_pod_activation.png)
+![Eksportavimas aktyvavus Pod](../images/Automations/automation_settings_export_pod_activation.png)
 
-Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Settings → Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
+Pastaba: eksportavimas bus įrašytas terapijos įrašuose (Careportal). Pastaba: automatizacija **visai** nesuveiks, jei anksčiau nesate bent kartą rankiniu būdu eksportavę nustatymų. Kaip tinkamai įjungti automatinį nustatymų eksportavimą, žr. [Nustatymai → Servisas](#preferences-maintenance-settings).
 
 
-## Automation Logs
+## Automatizacijos žurnalas
 
-**AAPS** shows a log of the most recent **Automation** events at the bottom of the **Automation** screen, below the rules. Use it to verify that your rules triggered when you expected them to.
+**AAPS** ekrano **Automatizacija** apačioje, po taisyklėmis, rodo naujausių **automatizacijos** įvykių žurnalą. Juo patikrinkite, ar taisyklės suveikė tada, kai tikėjotės.
 
-In the example below, the **Low glucose temp target** rule (1) (see [Low Glucose Temp Target](#automations-low-glucose-temp-target) above) is enabled. The log (2) shows that at 03:09 PM, glucose fell below 70 mg/dL and the rule triggered:
-* the action was "Start temp target: 110mg/dL@30 min": a **Temp Target** of 110 mg/dL for 30 minutes;
-* **OK** at the end means that the action was carried out successfully.
+Toliau pateiktame pavyzdyje įjungta taisyklė **Low glucose temp target** (1) (žr. aukščiau [Žemos glikemijos laikinas tikslas](#automations-low-glucose-temp-target)). Žurnale (2) matyti, kad 15:09 gliukozė nukrito žemiau 70 mg/dL ir taisyklė suveikė:
+* veiksmas buvo „Start temp target: 110mg/dL@30 min“: 110 mg/dL **laikinas tikslas** 30 minučių;
+* **OK** pabaigoje reiškia, kad veiksmas atliktas sėkmingai.
 
-![Automation screen: an enabled rule (1) and its log entry (2)](../images/Automations/automation_example_log.png)
+![Automatizacijos ekranas: įjungta taisyklė (1) ir jos įrašas žurnale (2)](../images/Automations/automation_example_log.png)
 
 (automations-troubleshooting)=
 
 ## Troubleshooting
 
-* Problem: __My automations are not being triggered by AAPS?__
+* Problema: __AAPS nevykdo mano automatizacijų?__
 
-Check that the box left of the **Automation** name is ‘ticked’ to ensure the rule is activated:
+Patikrinkite, ar langelis kairėje nuo **automatizacijos** pavadinimo yra „pažymėtas“, kad taisyklė būtų įjungta:
 
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+![Įjungtos ir išjungtos automatizacijos taisyklės](../images/Automations/automation_rule_activated_deactivated.png)
 
-* Problem: __My automations are being triggered in the wrong order.__
+* Problema: __Mano automatizacijos vykdomos netinkama tvarka.__
 
-Check your rule prioritization order as discussed above here.
+Patikrinkite taisyklių prioriteto tvarką, kaip aprašyta aukščiau.
 
-* Problem: __A condition shows "Unknown trigger … - never true".__
+* Problema: __Sąlygoje rodoma „Nežinoma sąlyga … – niekada netenkinama“.__
 
-The rule contains a trigger that this version of **AAPS** cannot read, for example after you went back to an older version or imported settings from a newer one. Such a trigger is never true, so the rule does not run. It is kept unchanged, so a newer version can still use it. Edit the rule and replace the trigger, or update **AAPS**.
+Taisyklėje yra sąlyga, kurios ši **AAPS** versija negali nuskaityti, pavyzdžiui, grįžus prie senesnės versijos arba importavus nustatymus iš naujesnės versijos. Tokia sąlyga niekada nėra tenkinama, todėl taisyklė nevykdoma. Ji išsaugoma nepakeista, kad naujesnė versija vis dar galėtų ją naudoti. Redaguokite taisyklę ir pakeiskite sąlygą arba atnaujinkite **AAPS**.
 
-## Alternatives to Automations
+## Automatizacijų alternatyvos
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. 
+Patyrę naudotojai užduotis gali automatizuoti ir kitais būdais, pvz., naudodami IFTTT arba trečiosios šalies Android programėlę Automate. 

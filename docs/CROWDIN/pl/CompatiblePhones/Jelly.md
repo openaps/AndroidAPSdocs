@@ -10,11 +10,11 @@
 **Zalety**
 
 * Jest naprawdę mały.
-* Even if you tell people, they might not consider it as a normal smartphone and will accept it more easily as an exception when phones are normally not allowed.
+* Nawet jeśli powiesz o nim innym, mogą nie uznać go za zwykły smartfon i łatwiej zaakceptują go jako wyjątek tam, gdzie telefony zwykle są zakazane.
 
 **Wady**
 
-* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
+* Polecany tylko dla doświadczonych użytkowników pętli. Niektóre ustawienia trudno rozpoznać: musisz wiedzieć z doświadczenia z dużym telefonem z Androidem i AAPS, co i gdzie się znajduje. Niektóre przyciski AAPS są małe i trudno je nacisnąć: potrzebujesz precyzyjnego dotyku, a nie grubych palców.
 * Może służyć tylko jako telefon do pętli. Lepiej mieć w kieszeni także zwykły smartfon. 
 
 ### Optymalizacja baterii
@@ -33,7 +33,7 @@ Możesz włączyć NFC dla sensorów Libre.
 
 ### Optymalizacja baterii
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' for **AAPS** (and for other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
+Aby uniknąć zakłóceń w pracy **AAPS**, wyłącz w Jelly Star ograniczenia „użycia baterii” (battery usage), wybierając „bez ograniczeń” (unrestricted) dla **AAPS** (i dla innych **aplikacji DIY**, takich jak BYODA, xDrip, OOP2, Juggluco itp.).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
@@ -43,6 +43,6 @@ Pamiętaj, aby wyłączyć Google Play Protect.
 
 ### Połączenie zdalne dla Wear apk
 
-For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
+W przypadku niektórych smartwatchy, np. Samsung Galaxy, opcja „Połączenie zdalne” (Remote connection) w Funkcjach zaawansowanych w aplikacji Galaxy Wearable musi być **włączona**, aby używać Jelly, **Wear.apk** i **AAPS** zdalnie przez Wi-Fi.
 
 ![Galaxy Wearable, Funkcje zaawansowane, Połączenie zdalne włączone](../images/wearos/galaxy_wearable_remote_connection.png)

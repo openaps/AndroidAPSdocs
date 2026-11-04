@@ -126,7 +126,7 @@ There are some watch faces for Garmin that integrate with [AAPS](https://apps.ga
 
 1. Highest and lowest glucose values on the graph
 2. Glucose change per minute
-3. Insulin on board (IOB)
+3. Aktives Insulin (IOB)
 4. Time since the last glucose reading (minutes:seconds)
 5. Temporary basal rate, as a percentage of the profile basal rate
 6. Glucose graph of the last 2 hours

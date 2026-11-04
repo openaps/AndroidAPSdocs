@@ -1,62 +1,62 @@
-# Setting up the Reporting Server
+# Raporlama sunucusunu kurma
 
-There are currently two reporting servers available for use with **AAPS**:
+Şu anda **AAPS** ile kullanabileceğiniz iki raporlama sunucusu vardır:
 
 - [Nightscout](https://nightscout.github.io/)
 - [Tidepool](https://www.tidepool.org/)
 
-![Reporting Servers](../images/Building-the-App/ReportingServer.png)
+![Raporlama sunucuları](../images/Building-the-App/ReportingServer.png)
 
-We recommend using Nightscout.
+Nightscout kullanmanızı öneririz.
 
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
+Nightscout, CGM verilerinizi ve **AAPS** verilerinizi kaydedip gösterebilen ve raporlar oluşturan bir web uygulamasıdır. Uzun yıllardır **AAPS** ile entegre olan güçlü bir platformdur. Kullanıcıların ve bakım verenlerin hastanın diyabet verilerini neredeyse gerçek zamanlı izlemesini sağlar (ilgili tüm bileşenler arasında yeterli internet bağlantısı varsa, verilerin alınması ile sunulması arasında yalnızca birkaç saniye geçebilir). Ayrıca bakım verenlerin **AAPSClient** üzerinden **AAPS**'e gönderdiği uzaktan komutları da taşır (bkz. [Ana birim ↔ İstemci kontrolü](#client-master-control)).
 
-Nightscout is provided as open-source software. Anyone can create and operate a Nightscout server, using either free or paid-for services.
+Nightscout açık kaynak yazılım olarak sunulur. Herkes ücretsiz veya ücretli hizmetler kullanarak bir Nightscout sunucusu oluşturabilir ve çalıştırabilir.
 
-You can find more information on the [website of the Nightscout project](http://nightscout.github.io/).
+Daha fazla bilgiyi [Nightscout projesinin web sitesinde](http://nightscout.github.io/) bulabilirsiniz.
 
-### Option 1 - Set up your Nightscout server yourself
+### Seçenek 1 - Nightscout sunucunuzu kendiniz kurun
 
-Creating your Nightscout reporting server can require one or more web-based applications that will require maintenance. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
+Nightscout raporlama sunucunuzu oluşturmak, bakım gerektirecek bir veya daha fazla web tabanlı uygulama gerektirebilir. Tamamen ücretsiz bir hizmete sahip olmak için, sağlayıcılar ücretsiz seçeneği kaldırırsa Nightscout sitenizi ve verilerinizi taşımanız gerekebilir.
 
-A description of how you can set up Nightscout with the advantages and disadvantages of the various operating options, including an estimate of the costs, can be found [here](https://nightscout.github.io/nightscout/new_user/#free-diy).
+Nightscout'u nasıl kurabileceğinizin açıklamasını, farklı çalıştırma seçeneklerinin avantajları ve dezavantajları ile tahmini maliyetleri de içerecek şekilde [burada](https://nightscout.github.io/nightscout/new_user/#free-diy) bulabilirsiniz.
 
-### Option 2 - Pay for a hosted Nightscout service
+### Seçenek 2 - Barındırılan bir Nightscout hizmeti için ödeme yapın
 
-There are also options from different service providers who host Nightscout for you, with a monthly fee. The costs are manageable, and the advantage of a hosted option is that you do not need to be IT-literate, or have any operating infrastructure.
+Ayrıca Nightscout'u sizin için aylık bir ücret karşılığında barındıran farklı hizmet sağlayıcıların seçenekleri de vardır. Maliyetler makul düzeydedir; barındırılan bir seçeneğin avantajı, bilişim (IT) bilgisine veya herhangi bir altyapıya ihtiyaç duymamanızdır.
 
 
-Existing Nightscout users can reconsider where and how their Nightscout server is hosted from time to time, and change to a different option if it becomes more suitable.
+Mevcut Nightscout kullanıcıları, Nightscout sunucularının nerede ve nasıl barındırıldığını zaman zaman yeniden değerlendirebilir ve daha uygun hale gelirse farklı bir seçeneğe geçebilir.
 
-Some Nightscout hosted services are listed [here](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
+Nightscout barındırma hizmeti sunan bazı sağlayıcılar [burada](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table) listelenmiştir.
 
-### Further configuration of Nightscout
+### Nightscout'un diğer yapılandırması
 
-Once you have your Nightscout instance up and running, see [Nightscout configuration page](../SettingUpAaps/Nightscout.md) for additional considerations.
+Nightscout sunucunuz kurulup çalışmaya başladıktan sonra, dikkat etmeniz gereken diğer noktalar için [Nightscout yapılandırma sayfasına](../SettingUpAaps/Nightscout.md) bakın.
 
 (SettingUpTheReportingServer-tidepool)=
 ## Tidepool
 
-Tidepool has been available in **AAPS** since version 3.2 which was released in late 2023.
+Tidepool, 2023 sonunda yayınlanan 3.2 sürümünden beri **AAPS** içinde kullanılabilir.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
-On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
+**AAPS** kullanırken verilerin gelişi ile raporlanması arasında üç saatlik bir gecikme olduğundan, Tidepool bakım verenlerle gerçek zamanlı bilgi paylaşmak için uygun değildir.  
+Öte yandan Nightscout kabul edilen bir çözüm değilse, Tidepool raporları hastanın endokrinoloğu ile paylaşmak için çok iyi bir çözüm olabilir.  
 ```
 
-Tidepool is an [open source](https://github.com/tidepool-org) project. It offers to run an account free of charge on the Tidepool servers.
+Tidepool, [açık kaynaklı](https://github.com/tidepool-org) bir projedir. Tidepool sunucularında ücretsiz bir hesap kullanma imkânı sunar.
 
-More information about setting up Tidepool with AAPS [here](../SettingUpAaps/Tidepool.md).
+Tidepool'u AAPS ile kurma hakkında daha fazla bilgi [burada](../SettingUpAaps/Tidepool.md).
 
 ```{admonition} **AAPS** has the uploader for Tidepool integrated
 :class: note
-You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
+Tidepool'a veri yüklemek için yükleyici uygulamayı kullanmanız **gerekmez**: **AAPS** kan şekeri, tedavi ve bazal verilerini sizin için yükler. Yalnızca kişisel bir Tidepool hesabına ihtiyacınız vardır. Verilerinizi ayrı Tidepool yükleyici aracıyla yüklemeyin; bu, değerlerin iki kez kaydedilmesine yol açar.  
 ```
 
-## Next step
+## Sonraki adım
 
-Once you have set up your reporting server, you can configure **AAPS** on your phone with the [Setup Wizard](./SetupWizard.md), which will also link **AAPS** to your reporting server.
+Raporlama sunucunuzu kurduktan sonra, telefonunuzdaki **AAPS**'i [Kurulum Sihirbazı](./SetupWizard.md) ile yapılandırabilirsiniz; sihirbaz **AAPS**'i raporlama sunucunuza da bağlar.

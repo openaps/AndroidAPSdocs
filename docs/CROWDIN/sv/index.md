@@ -1,221 +1,222 @@
-# Welcome to the AAPS documentation
+# Välkommen till dokumentationen för AAPS
 
 ![image](./images/basic-outline-of-AAPS.png)
 
 ```{admonition} Latest Release
 :class: note
 
-31 October 2026: Version 4.0.0 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+31 oktober 2026: Version 4.0.0 har släppts. Läs [versionsinformationen](#latestrelease) för att se vad som är nytt, och följ instruktionerna i [uppdateringsanvisningen](./Maintenance/UpdateToNewVersion.md) för att uppdatera.
 
 ```
 
-Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones. **AAPS** uses an OpenAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. To use **AAPS** you need **three** compatible devices: **(1)** an Android phone, **(2)** a continuous glucose monitor (CGM), and **(3)** an FDA/CE approved insulin pump. You can also add **(4)** cloud services to remotely control **AAPS**, share your data, and store it on a reporting server, and **(5)** a smartwatch.
+Android APS (**AAPS**) är en app med öppen källkod för personer som lever med insulinberoende diabetes. Det är ett system för artificiell bukspottkörtel (APS) som körs på Android-telefoner. **AAPS** använder en algoritm från OpenAPS och försöker göra det som en riktig bukspottkörtel gör: hålla blodsockret inom friska gränser med hjälp av automatiserad insulindosering. För att använda **AAPS** behöver du **tre** kompatibla enheter: **(1)** en Android-telefon, **(2)** en kontinuerlig glukosmätare (CGM) och **(3)** en insulinpump som är godkänd av FDA/CE. Du kan också lägga till **(4)** molntjänster för att styra **AAPS** på distans, dela dina data och lagra dem på en rapportserver, och **(5)** en smartklocka.
 
-This documentation explains how to set up and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy **Search docs** function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
+Denna dokumentation förklarar hur du ställer in och använder **AAPS**. Du kan navigera i dokumentationen för **AAPS** antingen med menyn till vänster (och den praktiska funktionen **Sök i dokumentationen**) eller med [innehållsförteckningen](#index-aaps-documentation-index) längst ner på denna sida.
 
-## Overview of the AAPS documentation ("The docs")
+## Översikt över dokumentationen för AAPS ("dokumentationen")
 
-Section **1) Getting Started**, the [Introduction](Getting-Started/Introduction.md) explains the general concept of what an artificial pancreas system (APS) is designed to do. It outlines the background of looping in general, why **AAPS** was developed, compares **AAPS** to other systems, and addresses safety. It gives suggestions about how to talk to your clinical team about **AAPS**, explains why you need to build the **AAPS** app yourself rather than just downloading it, and gives an overview of the typical connectivity of an **AAPS** system. It also addresses accessibility, and who is likely to benefit from **AAPS**.
+I avsnitt **1) Komma igång** förklarar [Introduktion till APS och AAPS](Getting-Started/Introduction.md) den allmänna idén med vad ett system för artificiell bukspottkörtel (APS) är till för. Det beskriver bakgrunden till loopning i allmänhet, varför **AAPS** utvecklades, jämför **AAPS** med andra system och tar upp säkerhet. Det ger förslag på hur du kan prata med ditt vårdteam om **AAPS**, förklarar varför du måste bygga appen **AAPS** själv i stället för att bara ladda ner den, och ger en översikt över hur ett **AAPS**-system vanligtvis är anslutet. Det tar också upp tillgänglighet och vem som troligen har nytta av **AAPS**.
 
-[Preparing for AAPS](./Getting-Started/PreparingForAaps.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. It gives an overview of the process you will go through, and provides an approximate timeline for gaining full functionality of **AAPS**. This section gets you technically prepared to assemble your **AAPS** setup as quickly and efficiently as possible. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
+[Förberedelser inför start med AAPS](./Getting-Started/PreparingForAaps.md) ger mer information om säkerhet och om de telefoner, CGM-system (system för kontinuerlig glukosmätning) och insulinpumpar som är kompatibla med **AAPS**. Det ger en översikt över processen du kommer att gå igenom och en ungefärlig tidsplan tills du kan använda alla funktioner i **AAPS**. Detta avsnitt förbereder dig tekniskt så att du kan sätta ihop din **AAPS**-installation så snabbt och effektivt som möjligt. Underavsnittet [Kompatibla CGM-system](./Getting-Started/CompatiblesCgms.md) förklarar hur du optimerar din CGM-installation och vilka utjämningsalternativ som är bäst.
 
-Now that you have a solid understanding of the process, you can start assembling your **AAPS** loop.
+Nu när du har god förståelse för processen kan du börja sätta ihop din **AAPS**-loop.
 
-Section **2) Build the app** explains why you need to build the **AAPS** app yourself rather than just downloading it, and takes you step-by-step through [building it](./SettingUpAaps/BuildingAaps.md) (using a browser, Android Studio, or the command line) and then transferring and installing it on your phone. It starts with an optional step, setting up a [dedicated Google account](./UsefulLinks/DedicatedGoogleAccountForAaps.md) to hold your builds and backups. It also explains [Android developer verification](#android-developer-verification), a change Google is rolling out from September 2026 that affects how self-built apps are installed.
+Avsnitt **2) Bygga appen** förklarar varför du måste bygga appen **AAPS** själv i stället för att bara ladda ner den, och tar dig steg för steg genom att [bygga den](./SettingUpAaps/BuildingAaps.md) (i en webbläsare, med Android Studio eller från kommandoraden) och sedan överföra och installera den på din telefon. Det börjar med ett valfritt steg: att skapa ett [separat Google-konto](./UsefulLinks/DedicatedGoogleAccountForAaps.md) för dina byggen och säkerhetskopior. Det förklarar också [verifiering av Android-utvecklare](#android-developer-verification) (Android developer verification), en ändring som Google inför från september 2026 och som påverkar hur appar som du byggt själv installeras.
 
-Section **3) Setting up the reporting server** covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data.
+Avsnitt **3) Ställa in rapportservern** handlar om hur du väljer och [ställer in din rapportserver](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout eller Tidepool), så att du kan granska och dela dina data.
 
-Section **4) [Configure AAPS](./SettingUpAaps/SetupWizard.md)** covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. You are then introduced to everything **AAPS** can do, through a safe, carefully paced, step-by-step process. This makes sure that you (or your child) are thoroughly familiar and comfortable navigating all the different levels and menu configurations before moving on to the next phase, commonly called the next "Objective". You keep progressing this way until you have enough experience to begin using the more advanced options in the app. These Objectives are specially designed in such a way that will gradually unlock more possibilities of **AAPS** and switch from Open Loop to Closed Loop.
+Avsnitt **4) [Konfigurera AAPS](./SettingUpAaps/SetupWizard.md)** handlar om hur du ställer in appen **AAPS** med installationsguiden, kopplar den till din CGM-app och till en riktig eller virtuell insulinpump, och kopplar **AAPS** till din rapportserver. Sedan får du lära känna allt som **AAPS** kan göra, genom en säker och noggrant avvägd process steg för steg. Det gör att du (eller ditt barn) känner dig van och trygg med alla nivåer och menyinställningar innan du går vidare till nästa fas, som vanligen kallas nästa "mål". Du fortsätter så tills du har tillräckligt med erfarenhet för att börja använda de mer avancerade alternativen i appen. Målen är utformade så att de steg för steg låser upp fler möjligheter i **AAPS** och tar dig från öppen loop till sluten loop.
 
-Section **5) [Daily life with AAPS](./DailyLifeWithAaps/AapsScreens.md)** covers key **AAPS** features, to help you use (and customize) **AAPS**. This includes understanding the screens, carbs-on-board, sensitivity, DynamicISF, profile switching, temp targets, extended carbs (or eCarbs), automations, and [reviewing your data](./Maintenance/Reviewing.md) in the history browser and statistics. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, [traveling with AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md), and sports. Common questions and answers are located within the troubleshooting section.
+Avsnitt **5) [Vardagen med AAPS](./DailyLifeWithAaps/AapsScreens.md)** tar upp viktiga funktioner i **AAPS**, så att du kan använda (och anpassa) **AAPS**. Det gäller till exempel att förstå skärmarna, aktiva kolhydrater (COB), känslighet, Dynamisk ISF, profilbyten, tillfälliga målvärden, förlängda kolhydrater (eCarbs), automatiseringar och att [granska dina data](./Maintenance/Reviewing.md) i historikläsaren och statistiken. Det tar också upp vanliga ämnen, till exempel hur du hanterar olika typer av måltider, byte av kanyl och sensor, uppdateringar av telefonen, byte till och från sommartid, [resor med AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) och träning. Vanliga frågor och svar finns i avsnittet om felsökning.
 
-Section **6) [Remote AAPS features](./RemoteFeatures/RemoteControl.md)** highlights a real strength of **AAPS**. There are a wide range of possibilities for remotely sending commands to, or simply following the data from **AAPS**. This is equally useful for carers who want to use **AAPS** for minors, and for adults with diabetes who either want to monitor their sugars (and other metrics) more conveniently than just on their phone (on a watch, in the car _etc._), or wish to have significant others to also monitor the data. This section also provides guidance for using Android Auto so you can view glucose levels in the car.
+Avsnitt **6) [Fjärrfunktioner i AAPS](./RemoteFeatures/RemoteControl.md)** visar en verklig styrka hos **AAPS**. Det finns många möjligheter att skicka kommandon på distans till, eller att bara följa data från, **AAPS**. Detta är lika användbart för anhöriga som vill använda **AAPS** för barn och för vuxna med diabetes som vill följa sina blodsockervärden (och andra värden) enklare än bara på telefonen (på en klocka, i bilen _osv._), eller som vill att närstående också ska kunna följa deras data. Detta avsnitt ger också vägledning om Android Auto, så att du kan se dina blodsockervärden i bilen.
 
-Section **7) [Wear OS smartwatches](./WearOS/BuildingAapsWearOS.md)** gives information and procedures to use an Android **Wear OS** smartwatch with the dedicated **AAPS** watchfaces or custom watchfaces, either as a remote control of your phone or just a display indicator.
-
-
-Section **8) [Maintenance of AAPS](./Maintenance/ExportImportSettings.md)** covers how to export and back up your settings (which is very important in case you lose/break your phone), gives the latest version notes, details how to update **AAPS** and explains what happens when a version reaches its end of life. You can expect that there will be one new version and 2-3 required updates per year. You are required to do these updates as with all software, as any minor bugs are ironed out, and improvements to **AAPS** are made. There is a dedicated "updating" troubleshooting section with the common queries.
-
-Section **9) [Help & Troubleshooting](GettingHelp/WhereCanIGetHelp.md)** should help direct you to the best places to go to find general help with **AAPS**. It is the single place to go when something is not working: the [Troubleshooting](GettingHelp/GeneralTroubleshooting.md) hub collects, by topic, the solutions to the most common problems, and the [FAQ](UsefulLinks/FAQ.md) answers frequent questions. This is very important so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls. A lot of people are already using **AAPS** successfully, but everyone has a question at some point that they couldn't solve on their own. Due to the large number of users, the response times to questions are usually very quick, typically only a few hours. Don’t worry about asking for help, there is no such thing as a dumb question! We encourage users of any/all levels of experience to ask as many questions as they feel is necessary to help get them up and running safely. This section includes general troubleshooting for **AAPS** and **AAPSClient** (a companion following app) as well as explaining how to send your **AAPS** data (logfiles) to the developers for investigation, if you think a technical issue with **AAPS** needs looking at.
-
-Section **10)** covers **[Advanced AAPS options](./AdvancedOptions/FullClosedLoop.md)** such as how to progress from using **AAPS** for hybrid-closed looping (bolusing for meals _etc._) to full closed looping (no bolusing), how to [tune your profile](./GettingHelp/ProfileTuning.md) and use Autotune, and details development and engineering modes. Most users get on just fine with the main or "Master" **AAPS** version without looking into these options, this section is for users who already have good control and are looking to further improve their setup.
-
-In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. You can donate money, equipment or expertise. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
-
-Section **12) Resources**, contains archived or additional documentation, including a subsection for [clinicians](UsefulLinks/ClinicianGuideToAaps.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are also contained in this section. It includes the [Glossary](./UsefulLinks/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. This is where to go to find out what the terms ISF or TT, stand for, for example.
+Avsnitt **7) [Smartklockor med Wear OS](./WearOS/BuildingAapsWearOS.md)** ger information och instruktioner för att använda en Android-smartklocka med **Wear OS** med de särskilda urtavlorna för **AAPS** eller med anpassade urtavlor, antingen för att fjärrstyra din telefon eller bara för att visa data.
 
 
- ### Interested in getting started with **AAPS**? Read more about **AAPS** in the [Introduction](Getting-Started/Introduction.md).
+Avsnitt **8) [Underhåll av AAPS](./Maintenance/ExportImportSettings.md)** handlar om hur du exporterar och säkerhetskopierar dina inställningar (vilket är mycket viktigt om du tappar bort eller förstör din telefon), visar den senaste versionsinformationen, beskriver hur du uppdaterar **AAPS** och förklarar vad som händer när en version når slutet av sin livslängd (end of life). Du kan räkna med en ny version och 2–3 obligatoriska uppdateringar per år. Du måste göra dessa uppdateringar, precis som med all programvara, eftersom mindre fel rättas och **AAPS** förbättras. Det finns ett särskilt felsökningsavsnitt om uppdateringar med de vanligaste frågorna.
+
+Avsnitt **9) [Hjälp och felsökning](GettingHelp/WhereCanIGetHelp.md)** hjälper dig att hitta de bästa ställena för att få allmän hjälp med **AAPS**. Det är stället att gå till när något inte fungerar: navet för [felsökning](GettingHelp/GeneralTroubleshooting.md) samlar lösningar på de vanligaste problemen, ordnade efter ämne, och [Vanliga frågor för loopare](UsefulLinks/FAQ.md) besvarar frågor som ofta ställs. Detta är mycket viktigt, så att du snabbt kan komma i kontakt med andra, få svar på frågor och lösa de vanliga problemen. Många använder redan **AAPS** med framgång, men alla har någon gång en fråga som de inte kan lösa själva. Eftersom det finns så många användare får man oftast svar på sina frågor mycket snabbt, vanligtvis inom några timmar. Var inte rädd för att be om hjälp – det finns inga dumma frågor! Vi uppmuntrar användare på alla erfarenhetsnivåer att ställa så många frågor som de behöver för att komma igång på ett säkert sätt. Detta avsnitt innehåller allmän felsökning för **AAPS** och **AAPSClient** (en hjälpapp för att följa data) och förklarar hur du skickar dina **AAPS**-data (loggfiler) till utvecklarna, om du tror att ett tekniskt problem med **AAPS** behöver undersökas.
+
+Avsnitt **10)** tar upp **[Avancerade alternativ i AAPS](./AdvancedOptions/FullClosedLoop.md)**, till exempel hur du går från att använda **AAPS** som hybrid sluten loop (med bolus till måltider _osv._) till helt sluten loop (utan bolus), hur du [finjusterar din profil](./GettingHelp/ProfileTuning.md) och använder Autotune, samt beskriver utvecklings- och engineering-lägen. De flesta användare klarar sig utmärkt med huvudversionen ("Master") av **AAPS** utan att titta på dessa alternativ. Detta avsnitt är för användare som redan har god kontroll och vill förbättra sin installation ytterligare.
+
+I avsnitt **11) [Så kan du stödja AAPS](SupportingAaps/HowCanIHelp.md)** ger vi information om hur du kan stödja projektet. Du kan skänka pengar, utrustning eller kunskap. Du kan själv föreslå eller göra ändringar i dokumentationen, hjälpa till med [översättningen av dokumentationen](SupportingAaps/Translations.md) och dela dina data via projektet Open Humans.
+
+Avsnitt **12) Resurser** innehåller arkiverad eller kompletterande dokumentation, bland annat ett underavsnitt för [vårdpersonal](UsefulLinks/ClinicianGuideToAaps.md) som är intresserad av teknik med öppen källkod för artificiell bukspottkörtel, till exempel **AAPS**, eller för patienter som vill dela sådan information med sin vårdpersonal. Detta ämne tas också upp i introduktionen. Detta avsnitt innehåller också fler referenser och resurser om diabetes och loopning. Där finns sidan [Ordlista](./UsefulLinks/Glossary.md), en lista över de förkortningar (eller korta namn) som används i **AAPS**. Här kan du till exempel ta reda på vad förkortningarna ISF eller TT betyder.
+
+
+ ### Vill du komma igång med **AAPS**? Läs mer om **AAPS** i [Introduktion till APS och AAPS](Getting-Started/Introduction.md).
 
 ```{admonition} SAFETY NOTICE
 :class: danger
-The safety of **AAPS** relies on the safety features of your hardware (phone, pump, CGM). Only use a fully functioning FDA/CE approved insulin pump and CGM. Do not use broken, modified or self-built insulin pumps or CGM receivers. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user. 
+Säkerheten i **AAPS** beror på säkerhetsfunktionerna i din hårdvara (telefon, pump, CGM). Använd bara en insulinpump och en CGM som fungerar fullt ut och är godkända av FDA/CE. Använd inte trasiga, modifierade eller egenbyggda insulinpumpar eller CGM-mottagare. Använd bara originaltillbehör (insättare, kanyler och insulinreservoarer) som tillverkaren har godkänt för din pump och CGM. Otestade eller modifierade tillbehör kan ge felaktiga värden och fel i insulindoseringen, vilket innebär en stor risk för användaren. 
 
-Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+Använd inte **AAPS** om du tar SGLT-2-hämmare (glifloziner), eftersom de sänker blodsockret. Du ökar risken för diabetesketoacidos (DKA) på grund av minskad insulintillförsel och risken för hypoglykemi på grund av sänkt blodsocker. 
 ```
 
 ```{admonition} Disclaimer
 :class: note
 
-- All information and code described here is for informational and educational purposes only. Use [Nightscout](https://nightscout.github.io/) and **AAPS** at your own risk, and do not use the information or code to make medical decisions. Nightscout currently makes no attempt at HIPAA privacy compliance. 
-- Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
+- All information och kod som beskrivs här är endast avsedd för information och utbildning. Du använder [Nightscout](https://nightscout.github.io/) och **AAPS** på egen risk. Använd inte informationen eller koden för att fatta medicinska beslut. Nightscout försöker för närvarande inte uppfylla HIPAA-kraven på integritet. 
+- Kod från github.com används utan garanti eller formell support av något slag. Läs licensen (LICENSE) i detta repository för mer information.
+- Alla produkt- och företagsnamn, varumärken, servicemärken, registrerade varumärken och registrerade servicemärken tillhör respektive ägare. De används endast i informationssyfte och betyder inte att vi har någon koppling till dem eller att de stöder oss.
 
-**AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/), [Medtronic](https://www.medtronic.com/), [Diaconn](https://www.diaconn.com/en/index.html), [EOFlow](http://www.eoflow.com/), [MicroTech Medical (Equil)](https://www.microtechmd.com/), [Medtrum](https://www.medtrum.com/), [Senseonics (Eversense)](https://www.senseonics.com/), [i-SENS (CareSens)](https://i-sens.com/), [POCTech](https://poctechcorp.com/en/), [Ottai](https://ottai.com/) or [Syai](https://www.syai.com/).
+**AAPS** har ingen koppling till och stöds inte av: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/), [Medtronic](https://www.medtronic.com/), [Diaconn](https://www.diaconn.com/en/index.html), [EOFlow](http://www.eoflow.com/), [MicroTech Medical (Equil)](https://www.microtechmd.com/), [Medtrum](https://www.medtrum.com/), [Senseonics (Eversense)](https://www.senseonics.com/), [i-SENS (CareSens)](https://i-sens.com/), [POCTech](https://poctechcorp.com/en/), [Ottai](https://ottai.com/) eller [Syai](https://www.syai.com/).
 
 ```
 
 (index-aaps-documentation-index)=
 
-## AAPS Documentation Index
+## Innehållsförteckning för dokumentationen för AAPS
 
 ```{toctree}
 :caption: Using this documentation
+:titlesonly:
 
 Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
 Search the documentation <./NavigateDoc/SearchDoc.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
-:caption: 1) Getting started
+:caption: 1) Komma igång
 
-Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
-Component Overview <./Getting-Started/ComponentOverview.md>
-- Compatible pumps <./Getting-Started/CompatiblePumps.md>
-- Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
-- Compatible phones  <./Getting-Started/Phones.md>
-- Compatible watches  <./Getting-Started/Watches.md>
+Introduktion till APS och AAPS <./Getting-Started/Introduction.md>
+Förberedelser inför start med AAPS <./Getting-Started/PreparingForAaps.md>
+Översikt över komponenterna <./Getting-Started/ComponentOverview.md>
+- Kompatibla pumpar <./Getting-Started/CompatiblePumps.md>
+- Kompatibla CGM-system <./Getting-Started/CompatiblesCgms.md>
+- Telefoner  <./Getting-Started/Phones.md>
+- Smartklockor och AAPS  <./Getting-Started/Watches.md>
 ```
 
 ```{toctree}
-:caption: 2) Build the app
+:caption: 2) Bygga appen
 
-Dedicated Google account for AAPS (optional) <./UsefulLinks/DedicatedGoogleAccountForAaps.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
-- CLI Build <./SettingUpAaps/CLIBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Ett separat Google-konto för AAPS (valfritt) <./UsefulLinks/DedicatedGoogleAccountForAaps.md>
+Bygga AAPS <./SettingUpAaps/BuildingAaps.md>
+- Bygge i webbläsaren <./SettingUpAaps/BrowserBuild.md>
+- Bygge med Android Studio <./SettingUpAaps/ComputerBuild.md>
+- Bygginstruktioner för kommandoraden <./SettingUpAaps/CLIBuild.md>
+Överföra och installera AAPS på din telefon <./SettingUpAaps/TransferringAndInstallingAaps.md>
 ```
 ```{toctree}
-:caption: 3) Setting up the reporting server
+:caption: 3) Ställa in rapportservern
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+Ställa in rapportservern <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Configure AAPS
+:caption: 4) Konfigurera AAPS
 
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Settings <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+Installationsguiden i AAPS <./SettingUpAaps/SetupWizard.md>
+Din AAPS-profil <./SettingUpAaps/YourAapsProfile.md>
+Ändra konfigurationen i AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Konfiguration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Inställningar <./SettingUpAaps/Preferences.md>
+Slutföra målen <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
-:caption: 5) Daily Life with AAPS
+:caption: 5) Vardagen med AAPS
 
-AAPS Screens <./DailyLifeWithAaps/AapsScreens.md>
-Key AAPS Features <./DailyLifeWithAaps/KeyAapsFeatures.md>
-COB calculation <./DailyLifeWithAaps/CobCalculation.md>
-Sensitivity detection <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
-Profile Switch & Profile Percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
-Temp-Targets <./DailyLifeWithAaps/TempTargets.md>
-Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
-QuickWizards <./DailyLifeWithAaps/QuickWizards.md>
-Scenes <./DailyLifeWithAaps/Scenes.md>
-Automations <./DailyLifeWithAaps/Automations.md>
-QuickLaunch toolbar <./DailyLifeWithAaps/QuickLaunch.md>
-Home screen widgets <./DailyLifeWithAaps/Widgets.md>
-Food database <./DailyLifeWithAaps/Food.md>
-Global search <./DailyLifeWithAaps/GlobalSearch.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS for children <./DailyLifeWithAaps/AapsForChildren.md>
-Pumps and cannulas <./DailyLifeWithAaps/PumpsAndCannulas.md>
-Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
+AAPS-skärmar <./DailyLifeWithAaps/AapsScreens.md>
+Viktiga funktioner i AAPS <./DailyLifeWithAaps/KeyAapsFeatures.md>
+Beräkning av COB <./DailyLifeWithAaps/CobCalculation.md>
+Känslighetsdetektering <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
+Dynamisk ISF (DynISF) <./DailyLifeWithAaps/DynamicISF.md>
+Profilbyte och procent av profil <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+Tillfälliga målvärden <./DailyLifeWithAaps/TempTargets.md>
+Förlängda kolhydrater / "eCarbs" <./DailyLifeWithAaps/ExtendedCarbs.md>
+Snabbknappar (bolus med ett tryck) <./DailyLifeWithAaps/QuickWizards.md>
+Scener (förinställningar för olika situationer) <./DailyLifeWithAaps/Scenes.md>
+Automation <./DailyLifeWithAaps/Automations.md>
+Snabbstart (verktygsfält för snabbåtgärder på huvudskärmen) <./DailyLifeWithAaps/QuickLaunch.md>
+Widgets på hemskärmen <./DailyLifeWithAaps/Widgets.md>
+Mat (din matdatabas) <./DailyLifeWithAaps/Food.md>
+Global sökning <./DailyLifeWithAaps/GlobalSearch.md>
+Granska dina data <./Maintenance/Reviewing.md>
+AAPS för barn <./DailyLifeWithAaps/AapsForChildren.md>
+Pumpar och kanyler <./DailyLifeWithAaps/PumpsAndCannulas.md>
+Byte av tidszon och sommartid <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 
 ```
 
 ```{toctree}
-:caption: 6) Remote AAPS features
+:caption: 6) Fjärrfunktioner i AAPS
 
-Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
-Following Only <./RemoteFeatures/FollowingOnly.md>
+Fjärrövervakning <./RemoteFeatures/RemoteMonitoring.md>
+Följa AAPS (utan att påverka AAPS-systemet) <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
-Remote control <./RemoteFeatures/RemoteControl.md>
-The AAPSClient app <./RemoteFeatures/AapsClient.md>
-Master ↔ Client control <./RemoteFeatures/ClientMasterControl.md>
-SMS Commands <./RemoteFeatures/SMSCommands.md>
+Fjärrstyrning av AAPS <./RemoteFeatures/RemoteControl.md>
+Appen AAPSClient <./RemoteFeatures/AapsClient.md>
+Styrning huvudenhet ↔ klient (signerad fjärrstyrning) <./RemoteFeatures/ClientMasterControl.md>
+SMS-kommandon <./RemoteFeatures/SMSCommands.md>
 
 ```
 ```{toctree}
-:caption: 7) Wear OS Smartwatches
+:caption: 7) Smartklockor med Wear OS
 
-AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
-Use the smartwatch <./WearOS/WearOsSmartwatch.md>
-Remote control <./RemoteFeatures/RemoteControlWearOS.md>
-Custom watchfaces reference <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
-
-```
-
-```{toctree}
-:caption: 8) Maintenance of AAPS
-
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-What changed in AAPS v4 <./Maintenance/V4Changes.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
-End of life <./Maintenance/EndOfLife.md>
+Bygga Wear-appen för AAPS <./WearOS/BuildingAapsWearOS.md>
+Ställ in AAPS på din klocka med Wear OS <./WearOS/WearOsSmartwatch.md>
+Styra AAPS från din smartklocka med Wear OS <./RemoteFeatures/RemoteControlWearOS.md>
+Referensdokument för anpassade urtavlor <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
+Utbytessida för anpassade urtavlor <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
 ```{toctree}
-:caption: 9) Help & Troubleshooting
+:caption: 8) Underhåll av AAPS
 
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-Troubleshooting (start here) <./GettingHelp/GeneralTroubleshooting.md>
-- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
-- Troubleshooting NSClient <./GettingHelp/TroubleshootingNsClient.md>
-- Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
-- Reinstalling AAPS (new keystore) <./GettingHelp/ReinstallAaps.md>
-- Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
-FAQ <./UsefulLinks/FAQ.md>
+Skapa och återställa säkerhetskopior <./Maintenance/ExportImportSettings.md>
+Versionsinformation <./Maintenance/ReleaseNotes.md>
+Vad har ändrats i AAPS v4 <./Maintenance/V4Changes.md>
+Uppdatera till en ny version eller gren <./Maintenance/UpdateToNewVersion.md>
+- Uppdatera med bygge i webbläsaren (fork) <./Maintenance/UpdateBrowserBuild.md>
+- Uppdatera med Android Studio <./Maintenance/UpdateComputerBuild.md>
+Slut på support (End of life) <./Maintenance/EndOfLife.md>
+
 ```
 
 ```{toctree}
-:caption: 10) Advanced AAPS options
+:caption: 9) Hjälp och felsökning
 
-Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
-Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
-Autotune <./AdvancedOptions/Autotune.md>
-Insulin concentration <./AdvancedOptions/InsulinConcentration.md>
-Dev branch <./AdvancedOptions/DevBranch.md>
-Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
+Var kan jag få hjälp? <./GettingHelp/WhereCanIGetHelp.md>
+Allmän felsökning <./GettingHelp/GeneralTroubleshooting.md>
+- Felsökning av Bluetooth <./GettingHelp/BluetoothTroubleshooting.md>
+- Felsökning av NSClient <./GettingHelp/TroubleshootingNsClient.md>
+- Felsökning av Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+- Bygge i webbläsaren: felsökning <./GettingHelp/BrowserBuildTroubleshooting.md>
+- Installera om AAPS med en ny keystore <./GettingHelp/ReinstallAaps.md>
+- Komma åt loggfiler <./GettingHelp/AccessingLogFiles.md>
+Vanliga frågor för loopare <./UsefulLinks/FAQ.md>
+```
+
+```{toctree}
+:caption: 10) Avancerade alternativ i AAPS
+
+Helt sluten loop <./AdvancedOptions/FullClosedLoop.md>
+Finjustera AAPS-profilen <./GettingHelp/ProfileTuning.md>
+Så använder du Autotune-pluginet <./AdvancedOptions/Autotune.md>
+Insulinkoncentration <./AdvancedOptions/InsulinConcentration.md>
+Utvecklingsgren <./AdvancedOptions/DevBranch.md>
+Bygge i webbläsaren: cherry-picka en commit <./AdvancedOptions/BrowserBuildCherryPick.md>
 
 ```
 ```{toctree}
-:caption: 11) How to support AAPS
+:caption: 11) Så kan du stödja AAPS
 
-How to help <./SupportingAaps/HowCanIHelp.md>
-Editing the docs <./SupportingAaps/HowToEditTheDocs.md>
-Translating the app and docs <./SupportingAaps/Translations.md>
-State of translations <./SupportingAaps/StateOfTranslations.md>
-Open Humans Uploader <./SupportingAaps/OpenHumans.md>
+Så kan du hjälpa till med AAPS <./SupportingAaps/HowCanIHelp.md>
+Så redigerar du dokumentationen <./SupportingAaps/HowToEditTheDocs.md>
+Så översätter du texter i AAPS-appen eller dokumentationen <./SupportingAaps/Translations.md>
+Översättningsstatus för appen och dokumentationen <./SupportingAaps/StateOfTranslations.md>
+Uppladdning till Open Humans <./SupportingAaps/OpenHumans.md>
 
 ```
 ```{toctree}
-:caption: 12) Resources
+:caption: 12) Resurser
 
-Glossary <./UsefulLinks/Glossary.md>
-General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
-For Clinicians <./UsefulLinks/ClinicianGuideToAaps.md>
+Ordlista <./UsefulLinks/Glossary.md>
+Användbara resurser att läsa innan du börjar <./UsefulLinks/BackgroundReading.md>
+För vårdpersonal – en allmän introduktion och guide till AAPS <./UsefulLinks/ClinicianGuideToAaps.md>
 ```

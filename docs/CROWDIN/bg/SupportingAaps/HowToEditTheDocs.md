@@ -2,7 +2,7 @@
 
 **Това описание е само за редактиране на документацията на английски език. Цялата нова информация трябва първо да се добави на английски език. Ако искате да превеждате на други езици (благодарим ви), моля, използвайте [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
+За съвети как да форматирате текст (заглавие, удебелен шрифт...) и да добавяте връзки, вижте раздела [„Синтаксис на кода“](#edit-the-docs-code-syntax) на тази страница.
 
 ## Общи
 
@@ -34,11 +34,11 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 3. Всеки от двата варианта в стъпка 2 ще създаде нов клон във ВАШЕТО хранилище (repository), където ще се запазят промените ви. Направете промените си във файла.
 
-За страниците на документацията използваме Markdown. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+За страниците на документацията използваме Markdown. Файловете имат разширение „.md“. Спецификацията на Markdown не е фиксирана и в момента използваме myst_parser за нашите файлове в Markdown. Внимавайте да използвате правилния синтаксис, както е [описано по-долу](#edit-the-docs-code-syntax).
 
 ![Клон за редактиране](../images/PR3.png)
 
-4. Вие работите в раздела „<>Edit file“. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Ако видите, че нещо трябва да се подобри, върнете се в раздела за редактиране и направете още подобрения. 
+4. Вие работите в раздела „<>Edit file“. Изберете раздела „Preview changes“, за да погледнете промените отново и да се уверите, че всичко изглежда така, както сте искали (проверете и за правописни грешки). Ако видите, че нещо трябва да се подобри, върнете се в раздела за редактиране и направете още подобрения. 
 
 ![Режим на преглед](../images/PR5.png)
 
@@ -54,7 +54,7 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 ![Проследяване на PR](../images/PR7.png)
 
-П.П.: Вашият fork и клон ще останат във вашия личен профил в GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). При бъдещи промени, ако следвате тази процедура, промените винаги ще започват от актуална версия на хранилищата на AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Тъй като хората често забравят да обновяват хранилищата си, препоръчваме да използвате описания по-горе процес за PR, докато свикнете да правите „compare“.
+П.П.: Вашият fork и клон ще останат във вашия личен профил в GitHub. След като получите известие, че вашият PR е слят, можете да изтриете клона си, ако вече не ви трябва (зоната за известия от стъпка 7 ще ви даде връзка за изтриване на клона, след като PR бъде затворен или слят). При бъдещи промени, ако следвате тази процедура, промените винаги ще започват от актуална версия на хранилищата на AndroidAPSdocs. Ако изберете друг начин да започнете PR (например като редактирате, започвайки от клона master на вашето fork хранилище), първо трябва да се уверите, че хранилището ви е актуално, като направите „compare“ и слеете всички промени, направени след последното обновяване на вашия fork. Тъй като хората често забравят да обновяват хранилищата си, препоръчваме да използвате описания по-горе процес за PR, докато свикнете да правите „compare“.
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ Markdown е много прост език за форматиране на те
 Идеята е, че
 
 - авторът трябва първо да мисли за текста, а не за форматирането,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
+- текстът в Markdown може да се използва с различни инструменти за Markdown, вместо например със собственически инструменти като Microsoft Word, и
 - можете да създавате няколко изходни формата от един файл в Markdown.
 
 Markdown не е 100 % фиксиран стандарт и се опитваме да сме възможно най-близо до стандарта, за да
@@ -147,10 +147,10 @@ Markdown не е 100 % фиксиран стандарт и се опитвам�
 
 Изображението трябва да е във формат PNG или JPEG.
 
-Image names should conform to one of the following naming rules. В примера използвам png като разширение. Ако използвате JPEG, моля, използвайте jpeg като разширение.
+Имената на изображенията трябва да следват едно от следните правила за именуване. В примера използвам png като разширение. Ако използвате JPEG, моля, използвайте jpeg като разширение.
 
 - `filename-image-xx.png`, където xx е уникално двуцифрено число за изображенията в този файл.
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png`, където xx е смислено име, избрано от автора на md файла.
 
 Изображенията се намират в папката images за английския език и Crowdin ги пренася автоматично към другите езици. Не е нужно да правите нищо за това!
 
@@ -199,7 +199,7 @@ Image names should conform to one of the following naming rules. В пример
 
 Можете да добавяте в документацията полета с бележки и предупреждения.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Моля, използвайте ги внимателно, защото документацията трябва да се чете възможно най-лесно.
+Освен това можете да добавяте сгъваеми бележки за подробна информация, за да не се откажат от четенето на текста потребителите, които не се интересуват от подробностите. Моля, използвайте ги внимателно, защото документацията трябва да се чете възможно най-лесно.
 
 #### Бележки
 
@@ -219,9 +219,9 @@ Furthermore you can add collapsing notes for detailed information, so that users
     Това е предупреждение.
     
 
-    ```{admonition} Warning headline
+    ```{admonition} Заглавие на предупреждението
     :class: warning
-    This is a warning.
+    Това е предупреждение.
     ```
     
     #### Сгъваеми бележки
@@ -244,7 +244,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ## Таблици
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Избягвайте таблици с дълги текстове, защото съдържанието им е трудно за оформяне в Markdown, обикновено не се побират в ширината на екрана на мобилен телефон и вероятно няма да изглеждат по същия начин след превод.
 
 ## Ръководство за стил
 
@@ -262,9 +262,9 @@ Avoid using tables with long texts as the content is difficult to set in Markdow
 
 Използвайте прост английски език навсякъде, където е възможно. Това помага на читателите, за които английският не е роден език, и улеснява превода на документите на AAPS на други езици. Пишете като в разговор с потребителя – представете си, че седите на бюрото срещу човека, за когото пишете. Запомнете – повечето потребители на AAPS нямат опит в програмирането. Самият диабет също има много специфични термини и съкращения. Имайте предвид, че някои хора може да са диагностицирани наскоро, може да нямат вашия опит с диабета или да са получили различно обучение за диабета. Ако използвате съкращение, изпишете го изцяло първия път, когато го използвате, и поставете съкращението веднага след него в скоби, например „super micro bolus (SMB)“. Също така добавете връзка към речника. Технически термини, които може да не са познати на читателя, също могат да се добавят в скоби.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+Вместо: *“What causes high postprandial BG peaks in closed loop?”*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+Използвайте: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
 ##### Използвайте прости думи, които всеки може да разбере
 
@@ -296,7 +296,7 @@ Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loo
 
 Командите са най-бързият начин да дадете инструкции, но авторите понякога се страхуват да дават команди и пишат „you should do this“ вместо просто „do this“. Може би хората се притесняват, че командите звучат твърде грубо. Често можете да решите това, като поставите думата „please“ (моля) отпред. Ако обаче нещо задължително трябва да се направи, по-добре е да не казвате „please“, защото това дава на читателя възможност да откаже.
 
-Instead of: *“You should just think of it as a complete statement.”*
+Вместо: *“You should just think of it as a complete statement.”*
 
 Използвайте: *“Think of it as a complete statement.”*
 
@@ -312,7 +312,7 @@ Instead of: *“You should just think of it as a complete statement.”*
 
 - *“The insulin (subject) is delivered (verb) by the pump (object).”*
 
-*“delivered”* is a passive verb here. Подлогът и допълнението са разменени в сравнение с изречението с деятелен залог. Трябваше да направим изречението по-дълго, като добавихме „is“ и „by the“. Помислете също дали да не започнете с глагола в деятелен залог.
+*“delivered”* тук е глагол в страдателен залог. Подлогът и допълнението са разменени в сравнение с изречението с деятелен залог. Трябваше да направим изречението по-дълго, като добавихме „is“ и „by the“. Помислете също дали да не започнете с глагола в деятелен залог.
 
 Вместо: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
@@ -403,7 +403,7 @@ Instead of: *“You should just think of it as a complete statement.”*
 
 - Пропускайте опциите/алтернативите/…. Без двусмислие
 
-- Преходи между стъпките: завършвайте всяка стъпка с изречение, което води към следващата стъпка като логично продължение. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Преходи между стъпките: завършвайте всяка стъпка с изречение, което води към следващата стъпка като логично продължение. Пример: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
 - Заглавие на **урок** (заглавие от ниво 1)
 
@@ -453,7 +453,7 @@ Instead of: *“You should just think of it as a complete statement.”*
 
 - КАК да (HOW-to)
 
-- narrator directly talks to the reader: In this guide **you** will
+- разказвачът говори директно на читателя: In this guide **you** will
 
 - Бъдеще време -> за да покажете крайната цел
 
@@ -527,7 +527,7 @@ Instead of: *“You should just think of it as a complete statement.”*
     
     *W is better than z, because…*
     
-    Offer judgements and even opinions where appropriate.
+    Давайте преценки и дори мнения, където е подходящо.
     
     *An x in system y is analogous to a w in system z. However…*
     

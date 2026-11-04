@@ -1,150 +1,150 @@
 (bluetoothtroubleshooting-bluetooth-related-issues)=
 
-# Bluetooth related issues
+# Problem med Bluetooth
 
-Some users have been running into issues with Omnipod DASH activation failures, Medtrum Nano connectivity problems, and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues.
+Vissa användare har haft problem med misslyckad aktivering av Omnipod DASH, anslutningsproblem med Medtrum Nano och andra podfel som har med Bluetooth att göra. Många av dessa problem kan spåras till något av följande.
 
-Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medtrum Nano has known issues with nearby device permission as well as the Omnipod DASH.
+Vissa av dessa problem gäller troligen även andra insulinpumpar med Bluetooth. Medtrum Nano har kända problem med behörigheten Enheter i närheten, precis som Omnipod DASH.
 
 ---
 
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
-## Cannot start Omnipod with Android 16
-- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this version has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
+## Det går inte att starta Omnipod med Android 16
+- Android 16 kräver minst **AAPS** version 3.3.2.1 för att Omnipod DASH ska fungera rätt. Den versionen har rättningar för kända problem med Omnipod som kom med Android 16.
 
 ---
 
 (bluetoothtroubleshooting-bluetooth-battery-optimisation)=
 
-## Bluetooth Battery Optimisation
+## Batterioptimering för Bluetooth
 
-Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. This is known to cause some issues for Bluetooth pumps and CGMs.
+I nyare versioner av Android är batterioptimering påslagen för systemappen Bluetooth. Den är känd för att orsaka vissa problem för pumpar och CGM:er med Bluetooth.
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
+Om du följde [Installationsguiden](../SettingUpAaps/SetupWizard.md) och gjorde inställningarna i avsnittet [Batterioptimering för Bluetooth](#setup-wizard-bluetooth-battery-optimisation) bör denna inställning vara rätt. Men om du följde en äldre version av denna guide kan det hända att du inte har ändrat inställningen.
 
-Verify this is correctly configured if you have pump and CGM disconnections.
+Kontrollera att detta är rätt inställt om pumpen och CGM:en tappar anslutningen.
 
 ---
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission)=
 
-## Apps that use the "Nearby devices" Android permission can cause connection drops and Pod activation problems
+## Appar som använder Android-behörigheten "Enheter i närheten" kan orsaka avbrott i anslutningen och problem med podaktivering
 
-Android allows you to control what each app is able to do or access on your phone via a permission model. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to Bluetooth, scan for nearby devices etc.
+Med en behörighetsmodell låter Android dig styra vad varje app får göra eller komma åt på din telefon. För varje installerad app kan du tillåta eller neka vissa behörigheter, t.ex. åtkomst till filer på enheten, åtkomst till Bluetooth, sökning efter enheter i närheten osv.
 
-**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
+**AAPS** behöver ett antal särskilda behörigheter för att fungera. En av dem, som krävs för att poddar ska fungera, är behörigheten "Enheter i närheten". Det finns många andra appar som också kräver denna behörighet. Communityn har märkt att flera appar som får denna behörighet kan orsaka problem med att aktivera nya poddar på vissa enheter.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
-### Apps that use "Nearby device" permissions and are known to have caused problems:
+### Appar som använder behörigheten "Enheter i närheten" och som har orsakat problem:
 
-Apps in this list have been discussed in one or more places in the community as causing problems for Omnipod DASH devices and in some cases Medtrum Nano too.
+Apparna i denna lista har på ett eller flera ställen i communityn nämnts som orsak till problem för Omnipod DASH och i vissa fall även för Medtrum Nano.
 
 ```{admonition} Updating the list
 :class: note
-Ping @XiTatiON on #omnipod-dash Discord channel to discuss apps to be added to this list.
+Skriv till @XiTatiON i Discord-kanalen #omnipod-dash om du vill diskutera appar som ska läggas till i listan.
 ```
 
-- **myBMW** MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
+- **myBMW** MyBMW störde Medtrum Nano och Omnipod DASH. Appen MyBMW frågar bara en gång om behörigheten "hitta enheter i närheten". Om du inte ger den fungerar appen ändå helt utan problem.
 
-- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
+- **Amazon Alexa**  För vissa personer löstes problemet när behörigheten "Enheter i närheten" togs bort för appen Alexa, men då går det inte längre att parkoppla Matter IoT-enheter.
 
-- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
+- **MINI app**  Appen verkar bygga på appen myBMW och kan därför bete sig på samma sätt
 
-- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
+- **BM2** App för övervakning av solcellsbatterier som används i vissa husbilar och solcellssystem för camping: när appen kördes gick det inte att aktivera en ny pod. En lösning på problemet är att tvångsstoppa appen medan du aktiverar en ny pod. Att köra appen efter det verkade inte störa DASH (på en Pixel 8 Pro med Android 16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
-### How to revoke "Nearby device" permissions for other apps:
-If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
+### Så tar du bort behörigheten "Enheter i närheten" för andra appar:
+Om du har problem med att aktivera en ny pod och du kör rätt version av **AAPS** för din Android-version, kan du behöva ta bort behörigheten för andra appar medan du aktiverar en ny pod.
 
-Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
+Följ dessa steg för att ta bort behörigheten "Enheter i närheten" för alla appar utom **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
-The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
+Skärmbilderna och instruktionerna i denna guide kommer från en standardinstallation av Android 16 på en Google Pixel 8 Pro. Andra tillverkare och enheter har troligen inte exakt samma menyer och inställningar. Anpassa stegen till din enhet. Om du kör fast, se avsnittet [Var du kan få hjälp med DASH](#omnipod-dash-where-to-get-help-for-dash) om hur du får hjälp från communityn.
 ```
 
-1. Open Android settings on your phone, scroll down and press on **Security and privacy (1)**.
+1. Öppna Androids inställningar på telefonen, scrolla ned och tryck på **Säkerhet och integritet (1)**.
 
     ![android_settings_sec_priv](../images/android_16/android_settings_sec_priv.png)
 
-2. Scroll down and press on **Privacy controls (1)**.
+2. Scrolla ned och tryck på **Integritetsinställningar (1)**.
 
    ![android_sec_priv](../images/android_16/android_sec_priv.png)
 
-3. Press on **Permission manager (1)**.
+3. Tryck på **Behörighetshanteraren (1)**.
 
    ![android_priv_control](../images/android_16/android_priv_control.png)
 
-3. Scroll down and press on **Nearby devices (1)**.
+3. Scrolla ned och tryck på **Enheter i närheten (1)**.
 
    ![android_perm_man_nearby_dev](../images/android_16/android_perm_man_nearby_dev.png)
 
-4. Browse the list of apps and press on the app you wish to revoke **Nearby devices** permissions for.
+4. Bläddra i listan med appar och tryck på den app som du vill ta bort behörigheten **Enheter i närheten** för.
 
-   In this guide **Android Auto (1)** is the app we will revoke the permission on.
+   I denna guide är **Android Auto (1)** den app som vi tar bort behörigheten för.
 
-   To avoid bricking more pods we advise everyone initially to revoke the permission on all apps except **AAPS**.
+   För att undvika att fler poddar förstörs rekommenderar vi att alla först tar bort behörigheten för alla appar utom **AAPS**.
 
 ```{admonition} Which app to select?
 :class: tip
-If you are unsure which app is causing you an issue, disable them all (remember to check the list of known problem apps too and start with those) and if you can spare a few bricked pods on the way, enable the permission on one new app before every new Pod activation, until you can narrow down which app specifically causes your Pod issues. If you do identify new problematic apps please let us know on the #omnipod-dash Discord channel.
+Om du inte vet vilken app som orsakar problemet: stäng av behörigheten för alla (kontrollera också listan med kända problemappar och börja med dem). Om du har råd att förlora några poddar på vägen kan du sedan ge behörigheten till en ny app före varje ny podaktivering, tills du har hittat exakt vilken app som orsakar dina podproblem. Om du hittar nya appar som orsakar problem, berätta det för oss i Discord-kanalen #omnipod-dash.
 ```
 
    ![android_nearby_dev](../images/android_16/android_nearby_dev.png)
 
-5. To revoke the permission Press on **Don't allow (1)**, then Press on **Don't allow anyway (2)**. If done correctly you should see **Don't allow (3)** as the selected Toggle option. You can now go back to the **Nearby device** menu by pressing the **Back arrow (4)** and change this setting on other apps if required.
+5. För att ta bort behörigheten trycker du på **Tillåt inte (1)** och sedan på **Tillåt inte ändå (2)**. Om du har gjort rätt ska **Tillåt inte (3)** vara det valda alternativet. Nu kan du gå tillbaka till menyn **Enheter i närheten** genom att trycka på **bakåtpilen (4)** och ändra inställningen för andra appar om det behövs.
 
    ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dev.png) ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow_anyway.png)  ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow.png)
 
 (bluetoothtroubleshooting-re-enable-nearby-device-permission)=
 
-### How to re-enable "Nearby device" permissions for system apps and other apps:
+### Så ger du behörigheten "Enheter i närheten" igen till systemappar och andra appar:
 
-1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
+1. Om det behövs, se avsnittet **"Så tar du bort behörigheten 'Enheter i närheten' för andra appar"** om hur du kommer till appens integritetsinställningar. När du är i inställningen **Enheter i närheten**, fortsätt till steg 2.
 
-2. Browse the list of apps and press on the app you wish to allow **Nearby devices** permissions for.
+2. Bläddra i listan med appar och tryck på den app som du vill ge behörigheten **Enheter i närheten** till.
 
-   In this guide **Android Auto (1)** is the app we will allow the permission on.
+   I denna guide är **Android Auto (1)** den app som vi ger behörigheten till.
 
-   You will notice that **Android Auto (1)** is missing in the app list after the permission is revoked. This is because the **Android Auto** app is a **System app** and by default system apps are hidden.
+   Du kommer att märka att **Android Auto (1)** saknas i listan med appar efter att behörigheten har tagits bort. Det beror på att appen **Android Auto** är en **systemapp**, och systemappar är dolda som standard.
 
    ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)
 
-3. To show hidden system apps press the **three-dot menu (⋮) (1)** in the top right corner, then press **"Show system" (2)**. You should now be able to see the hidden system app in the list **Android Auto (3)**.
+3. För att visa dolda systemappar trycker du på **menyn med tre punkter (⋮) (1)** uppe till höger och sedan på **"Visa system" (2)**. Nu bör du se den dolda systemappen **Android Auto (3)** i listan.
 
 ```{admonition} Find your app
 :class: tip
-If an app is revoked you will need to scroll down until you see the list of revoked apps lower down in the list.
+Om behörigheten har tagits bort för en app måste du scrolla ned tills du ser listan med appar utan behörighet längre ned i listan.
 ```
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. Follow the guidance in **"How to revoke 'Nearby device' permissions for other apps"** in reverse to re-enable permissions for each app.
+5. Följ instruktionerna i **"Så tar du bort behörigheten 'Enheter i närheten' för andra appar"** i omvänd ordning för att ge behörigheten igen till varje app.
 
 ---
 
 (bluetoothtroubleshooting-android-15-bluetooth-connection-problems)=
 
-## Android 15 Frequent Bluetooth connection problems
+## Android 15: Täta problem med Bluetooth-anslutningen
 
-After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. To turn it on:
+Efter en uppgradering av Android eller ett byte till en nyare telefon tappar **AAPS** ofta Bluetooth-anslutningen till pumpen. Problemet försvinner tillfälligt när du startar om telefonen. Om du använder en **Omnipod DASH** och din telefon har Android 15 kan inställningen **Bluetooth-bindning (bonding)** göra Bluetooth-anslutningen stabilare. Så slår du på den:
 
 ```{admonition} Android 16
 :class: warning
-Only turn on **Bluetooth bonding** on Android 15, and only if you experience connectivity issues. DO NOT turn on bonding on Android 16.
+Slå bara på **Bluetooth-bindning (bonding)** på Android 15, och bara om du har problem med anslutningen. Slå INTE på bindning (bonding) på Android 16.
 ```
 
-1. Open the [Dash settings](#omnipod-dash-settings): open the DASH pump screen with **Manage** > **Pump** and press the **Settings** (gear) icon in the top-right corner.
+1. Öppna [DASH-inställningarna](#omnipod-dash-settings): öppna DASH-pumpskärmen med **Hantera** > **Pump** och tryck på ikonen **Inställningar** (kugghjulet) uppe till höger.
 
-   ![The DASH pump screen](../images/v4/Pumps/dash_pump_screen.png)
+   ![DASH-pumpskärmen](../images/v4/Pumps/dash_pump_screen.png)
 
-2. Open the **Advanced Settings** section and turn on **Bluetooth bonding**.
+2. Öppna avsnittet **Avancerade inställningar** och slå på **Bluetooth-bindning (bonding)**.
 
-   ![Bluetooth bonding in the Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
+   ![Bluetooth-bindning (bonding) i avsnittet Avancerade inställningar](../images/v4/Pumps/dash_settings_advanced.png)
 
-3. If the phone shows a pairing request, accept it.
+3. Om telefonen visar en begäran om parkoppling, acceptera den.
 
-4. Restart your phone.
+4. Starta om telefonen.

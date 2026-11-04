@@ -156,20 +156,20 @@ Mit dem Stand vom 25. Juni 2023 stehen vier große Open Source Closed Loop-Syste
 | Smartphone | Android                                                              | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
 | Smartphone | iPhone                                                               | ![nicht verfügbar](../images/unavailable.png) | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
 | Rig        | Einplatinencomp. (1)                                                 | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png) | ![available](../images/available.png)                | ![nicht verfügbar](../images/unavailable.png) |
-| PUMPE      | [Dana I](../CompatiblePumps/DanaRS-Insulin-Pump.md)                  | ![available](../images/available.png)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
-| PUMPE      | [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)                 | ![available](../images/available.png)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
-| PUMPE      | [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)                   | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
-| PUMPE      | [Omnipod (Dash)](../CompatiblePumps/OmnipodDASH.md)                  | ![available](../images/available.png)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
-| PUMPE      | [Omnipod (Eros)](../CompatiblePumps/OmnipodEros.md)                  | ![available](../images/available.png)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
-| PUMPE      | [Diaconn G8](../CompatiblePumps/DiaconnG8.md)                        | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
-| PUMPE      | [EOPatch 2](../CompatiblePumps/EOPatch2.md)                          | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
-| PUMPE      | [Medtrum TouchCare Nano 200U](../CompatiblePumps/MedtrumNano.md)     | ![available](../images/available.png)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
-| PUMPE      | [Medtrum TouchCare 300U](../CompatiblePumps/MedtrumNano.md)          | ![available](../images/available.png)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
-| PUMPE      | [Roche Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
-| PUMPE      | [Roche Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)        | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
-| PUMPE      | [Ältere Medtronik](../CompatiblePumps/MedtronicPump.md)              | ![available](../images/available.png)         | ![available](../images/available.png)         | ![available](../images/available.png)                | ![available](../images/available.png)         |
-| PUMPE      | [Equil 5.3](../CompatiblePumps/Equil5.3.md)                          | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
-| PUMPE      | [CareLevo](../CompatiblePumps/CareLevo.md)                           | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
+| PUMP       | [Dana I](../CompatiblePumps/DanaRS-Insulin-Pump.md)                  | ![available](../images/available.png)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
+| PUMP       | [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)                 | ![available](../images/available.png)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
+| PUMP       | [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)                   | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
+| PUMP       | [Omnipod (Dash)](../CompatiblePumps/OmnipodDASH.md)                  | ![available](../images/available.png)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
+| PUMP       | [Omnipod (Eros)](../CompatiblePumps/OmnipodEros.md)                  | ![available](../images/available.png)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
+| PUMP       | [Diaconn G8](../CompatiblePumps/DiaconnG8.md)                        | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
+| PUMP       | [EOPatch 2](../CompatiblePumps/EOPatch2.md)                          | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
+| PUMP       | [Medtrum TouchCare Nano 200U](../CompatiblePumps/MedtrumNano.md)     | ![available](../images/available.png)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
+| PUMP       | [Medtrum TouchCare 300U](../CompatiblePumps/MedtrumNano.md)          | ![available](../images/available.png)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
+| PUMP       | [Roche Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
+| PUMP       | [Roche Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)        | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
+| PUMP       | [Ältere Medtronik](../CompatiblePumps/MedtronicPump.md)              | ![available](../images/available.png)         | ![available](../images/available.png)         | ![available](../images/available.png)                | ![available](../images/available.png)         |
+| PUMP       | [Equil 5.3](../CompatiblePumps/Equil5.3.md)                          | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
+| PUMP       | [CareLevo](../CompatiblePumps/CareLevo.md)                           | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png) | ![nicht verfügbar](../images/unavailable.png)        | ![nicht verfügbar](../images/unavailable.png) |
 | CGM        | [Dexcom G7/One+/Stelo](../CompatibleCgms/DexcomG7.md)                | ![available](../images/available.png)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
 | CGM        | [Dexcom One](../CompatibleCgms/DexcomG6.md)                          | ![available](../images/available.png)         | ![available](../images/available.png)         | ![nicht verfügbar](../images/unavailable.png)        | ![available](../images/available.png)         |
 | CGM        | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                           | ![available](../images/available.png)         | ![available](../images/available.png)         | ![available](../images/available.png)                | ![available](../images/available.png)         |
@@ -250,23 +250,23 @@ Frag, ob Dein Team bereits Patienten betreut, die mit OS-AID loopen. Aufgrund de
 
 Wenn Du das Gefühl hast, dass Du von Deinem Team beim Loopen mit **AAPS** nicht genügend unterstützt wirst, können folgende Diskussionspunkte hilfreich sein:
 
-a) Das **AAPS** System wurde von Patienten und deren Betreuern entworfen. Es wurde letztendlich für die Sicherheit konzipiert, aber auch auf Grundlage einer fundierten Patientenerfahrung. Weltweit gibt es viele Tausend Anwender von **AAPS**. There is therefore likely to be other patients using OS-AID looping in your clinic's patient population (whether they know about it or not).
+a) Das **AAPS** System wurde von Patienten und deren Betreuern entworfen. Es wurde letztendlich für die Sicherheit konzipiert, aber auch auf Grundlage einer fundierten Patientenerfahrung. Weltweit gibt es viele Tausend Anwender von **AAPS**. Wahrscheinlich gibt es deshalb unter den Patienten Deiner Klinik weitere, die mit OS-AID loopen (ob das bekannt ist oder nicht).
 
-b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) which highlight the progress of the OS-AID looping community.
+b) Eine aktuelle, von Fachleuten überprüfte Leitlinie in der international führenden medizinischen Fachzeitschrift [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) bestätigt, dass OS-AID-Loops **sicher** und **wirksam zur Verbesserung der Diabeteseinstellung** sind, einschließlich der Zeit im Zielbereich. In führenden Fachzeitschriften wie [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) erscheinen regelmäßig Artikel über die Fortschritte der OS-AID-Community.
 
 Durch den Einstieg mit **AAPS** erreicht man eine _schrittweise_ Umstellung von der "Open"-Loop-Pumpenbehandlung, über die Einstellung niedriger BZ-Werte, bis hin zum hybriden "Closed" Loop, wodurch eine Reihe von Zielen erreicht werden. Daher gibt es ein strukturiertes Programm, bei dem der Benutzer in jeder Phase ein gewisses Maß an Kompetenz nachweisen und seine Grundeinstellungen (Basalrate, Insulinempfindlichkeit (ISF) und Kohlehydratfaktor (ICR, I:C, IC)) feinabstimmen muss, bevor er in den Closed Loop kann.
 
-d) Technical support is available to you from the OS-AID community through GitHub, Discord and Facebook closed groups.
+d) Technische Unterstützung bekommst Du von der OS-AID-Community über GitHub, Discord und geschlossene Facebook-Gruppen.
 
 e) Du kannst **sowohl CGM-Berichte als auch Insulin-Looping/Pumpen-Protokolle** als kombinierte Berichte bei Kliniksitzungen mitbringen (über Nightscout oder Tidepool), entweder ausgedruckt oder auf dem Bildschirm (wenn Du Laptop/Tablet dabeihast). Die Straffung sowohl der CGM- als auch der Insulindaten, erlaubt es Deinem Diabetes-Team, die Zeit für die Analyse Deiner Berichte effektiver zu nutzen und die Diskusion Deiner Fortschritte zu unterstützen.
 
 f) Wenn es immer noch starke Einwände Deines Diabetes-Teams gibt, gib dem Team Ausdrucke des hier im Text verlinkten Referenzartikels und auch den Link zum Abschnitt **AAPS** für Kliniken: [Für Mediziner und Fachpersonal - Eine allgemeine Einführung in und eine Anleitung für**AAPS**](../UsefulLinks/ClinicianGuideToAaps.md)
 
-#### Support for OS-AID looping by other clinicians
+#### Unterstützung für OS-AID-Loops durch andere Behandelnde
 
-The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (co-led by King’s and Guy’s and St Thomas’ NHS Foundation Trust, and co-led by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
+Die in [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) veröffentlichte Arbeit (gemeinsam geleitet von King’s und dem Guy’s and St Thomas’ NHS Foundation Trust sowie von Dr. Sufyan Hussain, beratender Diabetologe und Honorardozent am King’s in London) bietet:
 
-a) **Assurance** for professionals that OS-AID artificial pancreas systems/ open source as a “safe and effective treatment” option for type 1 diabetes and provides guidance on recommendations, discussions, supports, documentation;
+a) **Sicherheit** für Fachleute, dass OS-AID-Systeme bzw. Open Source eine „sichere und wirksame Behandlungsoption“ für Typ-1-Diabetes sind, sowie Orientierung zu Empfehlungen, Gesprächen, Unterstützung und Dokumentation;
 
 b) **Erkenntnis**, dass Open-Source-Systeme zur automatischen Insulinverabreichung ("AID" = Automated Insulin Delivery) die "Time in Range" (TIR) erhöhen und gleichzeitig die Variabilität der Blutzuckerkonzentration sowie die Anzahl der Hypo- und Hyperglykämie-Episoden in verschiedenen Altersgruppen, Geschlechtern und Gemeinschaften verringern können;
 
@@ -280,13 +280,13 @@ f) Betonung, dass diese quelloffenen Systeme nicht denselben regulatorischen Bew
 
 g) Eine Empfehlung, dass **Regulierung und Rechtsrahmen** aktualisiert werden sollten, um Klarheit über die ethische und effektive Behandlung solcher Open-Source-Systeme zu schaffen.
 
-In einem anderen Artikel in [Medical Law International, 2021](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)(_4_) wird auch darauf hingewiesen, dass das UK General Medical Council in seinen "Einwilligungsrichtlinien" großen Wert darauf legt, dass Arzt und Patient gemeinsam Entscheidungen treffen. The doctor should explain the potential benefits, risks, burdens and side-effects on OS-AID APS and may recommend a particular option without pressuring the patient.
+In einem anderen Artikel in [Medical Law International, 2021](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)(_4_) wird auch darauf hingewiesen, dass das UK General Medical Council in seinen "Einwilligungsrichtlinien" großen Wert darauf legt, dass Arzt und Patient gemeinsam Entscheidungen treffen. Die Ärztin oder der Arzt sollte die möglichen Vorteile, Risiken, Belastungen und Nebenwirkungen eines OS-AID-APS erklären und kann eine bestimmte Option empfehlen, ohne Druck auf den Patienten auszuüben.
 
 Letztlich muss der Patient diese Faktoren sowie alle für ihn relevanten nicht-klinischen Aspekte abwägen und entscheiden, welche Behandlungsoption er gegebenenfalls akzeptiert.
 
-If a doctor discovers in a clinic that their patient is looping with an OS-AID system, they are not exempted from their obligations to monitor the patient, simply because they did not prescribe the particular piece of technology the patient is using; clinicians must continue to monitor patients.
+Stellt eine Ärztin oder ein Arzt in der Klinik fest, dass ein Patient mit einem OS-AID-System loopt, entbindet sie das nicht von der Pflicht, den Patienten zu betreuen, nur weil sie die betreffende Technik nicht verordnet haben; Behandelnde müssen ihre Patienten weiterhin überwachen.
 
-Ärzten ist es (zumindest im Vereinigten Königreich) nicht verboten, nicht zugelassene Arzneimittel zu verschreiben, und sie können nach ihrem klinischen Ermessen handeln. They should therefore use their clinical judgement to decide if an OS-AID APS is suitable for a specific patient, and discuss what they consider to be the pros and cons with the patient.
+Ärzten ist es (zumindest im Vereinigten Königreich) nicht verboten, nicht zugelassene Arzneimittel zu verschreiben, und sie können nach ihrem klinischen Ermessen handeln. Sie sollten deshalb nach ihrem klinischen Urteil entscheiden, ob ein OS-AID-APS für einen bestimmten Patienten geeignet ist, und die aus ihrer Sicht bestehenden Vor- und Nachteile mit ihm besprechen.
 
 #### Die oben genannten Artikel sowie weitere nützliche Links und Stellungnahmen sind unten aufgeführt:
 
@@ -307,26 +307,26 @@ If a doctor discovers in a clinic that their patient is looping with an OS-AID s
 
 Die **AAPS**-App ist nicht in Google Play herunterladbar - Du musst die App aus rechtlichen Gründen selbst aus dem verfügbaren Quellcode erstellen. **AAPS** ist in keinem Land lizenziert, d.h. es gibt keine Genehmigung einer Aufsichtsbehörde. **AAPS** gilt als persönliches, medizinisches Experiment und wird auf eigenes Risiko durchgeführt.
 
-Die Einrichtung des Systems muss mit Ruhe, Entschlossenheit und schrittweiser Erweiterung des eigenen technischen Wissens erfolgen. Alle Informationen und Unterstützung findest Du in diesem Dokument, online oder bekommst sie von anderen, die durch diesen Prozess bereits durchgegangen sind. Many thousands of people have successfully built and are currently using **AAPS** worldwide.
+Die Einrichtung des Systems muss mit Ruhe, Entschlossenheit und schrittweiser Erweiterung des eigenen technischen Wissens erfolgen. Alle Informationen und Unterstützung findest Du in diesem Dokument, online oder bekommst sie von anderen, die durch diesen Prozess bereits durchgegangen sind. Weltweit haben viele Tausend Menschen **AAPS** erfolgreich erstellt und nutzen es derzeit.
 
 Für die **AAPS**-Entwickler ist Sicherheit und eine gute **AAPS**-Benutzererfahrung von vorrangiger Bedeutung. Das ist auch der Grund warum es unerlässlich für jeden Nutzenden (oder Betreuenden, wenn das System für ein Kind genutzt wird) ist, dass der Nutzende:
 
 - das AAPS-System selbst aufbaut und die **Ziele** durcharbeitet, so dass er zu dem Zeitpunkt, an dem er den "Closed Loop" macht, einigermaßen gute personalisierte Einstellungen hat und die Grundlagen der Funktionsweise von **AAPS** versteht;
 
-- backs up their system by exporting and saving important files (like keystore and settings .json file) somewhere safe, so you can set up again quickly if needed;
+- ihr System sichern, indem sie wichtige Dateien (wie den Keystore und die Einstellungsdatei .json) exportieren und an einem sicheren Ort speichern, damit sie bei Bedarf schnell wieder einrichten können;
 
 - auf eine neue Master-Version aktualisiert, sobald diese verfügbar wird, und
 
 - das System aktuell und im Auge behält, um sicher zu sein, dass es richtig funktioniert.
 
-## Was macht die Connectivity des AAPS-Systems aus?
+## Was macht die Konnektivität des AAPS-Systems aus?
 
-**Figure 3 (below)** shows one example of the **AAPS** system for a user who does not require any followers interacting with the system. Zusätzliche, nicht gezeigte Open-Source-Software und Plattformen können ebenfalls integriert werden.
+**Abbildung 3 (unten)** zeigt ein Beispiel des **AAPS**-Systems für einen Anwender, bei dem keine Follower mit dem System interagieren müssen. Zusätzliche, nicht gezeigte Open-Source-Software und Plattformen können ebenfalls integriert werden.
 
 ![21-06-23 AAPS connectivity no followers](../images/AAPS-connectivity-no-followers.png)
 
 
-**Figure 4 (below)** shows the full potential of the **AAPS** system for a user who has followers and needs to monitor and adjust the system remotely (like a child with type 1 diabetes). Zusätzliche, nicht gezeigte Open-Source-Software und Plattformen können ebenfalls integriert werden.
+**Abbildung 4 (unten)** zeigt die vollen Möglichkeiten des **AAPS**-Systems für einen Anwender, der Follower hat und bei dem das System aus der Ferne überwacht und angepasst werden muss (wie bei einem Kind mit Typ-1-Diabetes). Zusätzliche, nicht gezeigte Open-Source-Software und Plattformen können ebenfalls integriert werden.
 
 ![21-06-23 AAPS overview with followers](../images/AAPS-overview-with-followers.png)
 
@@ -349,15 +349,15 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 | ✔️ Typ-1-Diabetiker                                 |
 | ✔️ Betreuer oder Elternteil eines Typ-1-Diabetikers |
 | ✔️ Blinde Typ-1-Diabetiker                          |
-| ✔️ *clinicians and healthcare professionals         |
+| ✔️ *Ärzte und Fachkräfte im Gesundheitswesen        |
 
-The above table assumes that the user has access to both a continuous glucose monitor and an insulin pump.
+Die obige Tabelle setzt voraus, dass Zugang zu einem CGM und einer Insulinpumpe besteht.
 
 *Alle Daten von **AAPS** können medizinischen Fachkräften über Datenaustauschplattformen zur Verfügung gestellt werden, einschließlich Nightscout, das die Aufzeichnung und Echtzeitüberwachung von CGM-Daten, Insulinabgabe, Kohlenhydratangaben, Prognosen und Einstellungen ermöglicht. Aus Nightscout können Tages- und Wochenberichte erzeugt werden, die in Diskussionen eines Diabetes-Teams mit einem Typ 1-Patienten hilfreich sein können, da sie genauere Daten zur glykämischen Kontrolle und Verhaltensüberlegungen beisteuern.
 
 (accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
 
-### Accessibility for AAPS users who are partially or completely blind
+### Barrierefreiheit für sehbehinderte und blinde AAPS-Anwender
 
 #### Tägliche Verwendung von AAPS:
 AAPS kann von Blinden verwendet werden. Auf Android-Geräten stellt das Betriebssystem ein Programm namens TalkBack zur Verfügung. Dies ermöglicht die Bildschirmorientierung über die Sprachausgabe als Teil des Betriebssystems. Mit TalkBack kannst Du sowohl Dein Smartphone als auch AAPS bedienen, ohne dass Du es sehen musst.
@@ -373,13 +373,13 @@ Wie Du das machst, hängt von Deinem Betriebssystem ab. Zwei Methoden sind nachf
 
 Dann öffne "Computer ohne Bildschirm verwenden" mit Enter.
 
-Under **Hear text read aloud**, select **turn on narrator** and **turn on audio display**, then click **apply**.
+Wähle unter **Text laut vorlesen** die Optionen **Sprachausgabe aktivieren** und **Audiobeschreibung aktivieren** und klicke dann auf **Übernehmen**.
 
 oder:
 
 2) Drücke die Windowstaste und gib "Systemsteuerung" in das Suchfeld ein. Öffne diese mit Enter. Es öffnet sich "Einstellungen des Computers anpassen".
 
-Press the letter E to get to “Ease of Access Centre”, open with Enter.
+Drücke die Taste E, um zum „Center für erleichterte Bedienung“ zu gelangen, und öffne es mit der Eingabetaste.
 
 Dann öffne "Computer ohne Bildschirm verwenden" mit Enter.
 

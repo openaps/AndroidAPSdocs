@@ -1,31 +1,31 @@
 (aaps-ci-option1)=
 
-# Option 1 – Generate a new keystore
+# 1 variantas – Sugeneruokite naują raktų saugyklą
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+Tai puslapio [Kūrimas naršyklėje](BrowserBuild.md) [2 žingsnio – Sukurkite pasirašymo raktų saugyklą](BrowserBuildKeystore.md) dalis. Įsitikinkite, kad perskaitėte [kaip pasirinkti tarp 1 ir 2 varianto](#aaps-ci-preparation).
 ```
 
-Option 1 generates a brand-new signing keystore for you. It is suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+1 variantas sugeneruoja jums visiškai naują pasirašymo raktų saugyklą. Jis tinka tiems, kas AAPS kuria pirmą kartą, neturi JKS arba pamiršo slaptažodį ar pseudonimą (alias).
 
-## Choose your device
+## Pasirinkite savo įrenginį
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Kuriate iš **Android telefono**? Tokiu atveju naudokite [AAPS Builder](BrowserBuildAapsBuilder.md): jam paruošimo failo nereikia.
 ```
 
-Follow the page that matches the device you are building from:
+Atlikite veiksmus puslapyje, kuris skirtas įrenginiui, iš kurio kuriate:
 
-- **[Computer](BrowserBuildO1Computer.md)** – Windows, Mac or Linux.
+- **[Kompiuteris](BrowserBuildO1Computer.md)** – Windows, Mac arba Linux.
 - **[iPhone / iPad](BrowserBuildO1iPhone.md)**.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Įrenginį galite pakeisti bet kada – tiesiog atidarykite atitinkamą puslapį.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO1Computer.md>
+Kompiuteris <BrowserBuildO1Computer.md>
 iPhone / iPad <BrowserBuildO1iPhone.md>
 ```

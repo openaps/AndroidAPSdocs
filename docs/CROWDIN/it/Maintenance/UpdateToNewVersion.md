@@ -4,7 +4,7 @@
 
 **AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
-## Important notes
+## Note importanti
 
 - Please update to the new version of **AAPS** as soon as possible after a new release is available.
 - When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
@@ -17,12 +17,12 @@
 
 You already built your AAPS app with a browser? Follow the instructions for the method you used:
 
-- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
+- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). Non c'è nessun fork da sincronizzare.
 - **Fork and preparation file**: you run the **AAPS-CI** workflow in your own copy (fork) of AndroidAPS, a repository named `AndroidAPS` in your GitHub account, and the app lands in your Google Drive. Follow [Update with a browser (fork)](./UpdateBrowserBuild.md).
 
-## Update AAPS with Android Studio
+## Aggiornare AAPS con Android Studio
 
-Follow [these instructions](./UpdateComputerBuild.md).
+Segui [queste istruzioni](./UpdateComputerBuild.md).
 
 ## Update AAPS with the command-line
 
@@ -32,12 +32,12 @@ Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS 
 
 ## After the update
 
-These steps are the same for every build method. Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+These steps are the same for every build method. Controlla nelle [Note di rilascio](../Maintenance/ReleaseNotes.md) se ci sono istruzioni specifiche dopo l'aggiornamento.
 
-After you installed the new apk:
+Dopo aver installato il nuovo apk:
 
-- you can check the **AAPS** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The current **AAPS** version can be viewed;
-- make sure you have imported your settings; and
-- please check your **AAPS** settings under **Settings** and ensure these remain accurate.
+- puoi controllare la versione di **AAPS** sul telefono aprendo il **menu** (☰) in alto a sinistra e poi **Informazioni** (come nello screenshot qui sotto). puoi vedere la versione attuale di **AAPS**;
+- assicurati di aver importato le tue impostazioni; e
+- controlla le impostazioni di **AAPS** in **Impostazioni** e assicurati che siano ancora corrette.
 
 ![About dialog with the AAPS version installed](../images/about_dialog_version.png)

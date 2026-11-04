@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# Maistas (jūsų maisto duomenų bazė)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+Duomenų bazė **Maistas** yra jūsų asmeninis išsaugotų maisto produktų sąrašas. Kiekviename įraše saugomas maisto produkto **angliavandenių** kiekis (ir, jei norite, riebalai, baltymai, energija ir kategorija), todėl dažnai valgomus produktus galite laikyti vienoje vietoje ir pradėti bolusą iš išsaugoto produkto, kurio angliavandeniai jau įrašyti.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## Maisto duomenų bazės atvėrimas
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+Atverkite ekraną **Valdymas** (apatinė navigacijos juosta) ir pasirinkite **Maistas** (*„Tvarkyti maisto duomenų bazės įrašus“*). **AAPS** v4 versijoje Maistas **nebėra įskiepis** – nieko nereikia įjungti; tai atskiras ekranas, kurį atveriate iš [lango Valdymas](#v4changes-manage).
 
 ---
 
-## Adding and editing a food
+## Maisto sąrašas
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+Jūsų maisto produktai rodomi slenkamame sąraše. Kiekvienoje eilutėje rodomas produkto **pavadinimas**, jo **porcija / vienetas / kategorija** ir **angliavandeniai**:
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![Maisto duomenų bazės sąrašas su paieška ir pridėjimo mygtuku](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 Ieškoti** (viršuje) – filtruoja sąrašą pagal **pavadinimą** (didžiosios ir mažosios raidės nesvarbu).
+- **Kategorijos filtras** – žymomis (chips) galite susiaurinti sąrašą iki vienos **kategorijos**; pasirinkus kategoriją, atsiranda jos **subkategorijų** žymos. (Norėdami panaikinti pasirinkimą, dar kartą paspauskite pasirinktą žymą.)
+- **➕** (apačioje dešinėje) – pridėti naują maisto produktą (žr. toliau).
+- Paspauskite eilutę, jei norite **redaguoti** tą produktą.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+Jei sąraše (arba pagal dabartinį filtrą) įrašų nėra, ekrane rodoma **Nėra duomenų**.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## Maisto produkto pridėjimas ir redagavimas
+
+Paspauskite **➕**, jei norite pridėti, arba paspauskite esamą eilutę, jei norite ją redaguoti. Redagavimo langas atsidaro ekrano apačioje (**Pridėti maistą** / **Redaguoti maistą**):
+
+![Maisto redagavimo langas – pavadinimas, kategorija, porcija, angliavandeniai ir kitos maistinės medžiagos](../images/v4/Food/food_editor.png)
+
+Laukai:
+
+- **Pavadinimas** – privalomas (be jo išsaugoti negalima).
+- **Kategorija** ir **Subkategorija** – neprivalomi, naudojami produktams grupuoti / filtruoti.
+- **Porcija** ir **Vienetas** – įprastas porcijos dydis; numatytasis **Vienetas** yra **g**.
+- **Angliavandeniai (g)** – produkto angliavandenių kiekis.
+- **Riebalai (g)**, **Baltymai (g)**, **Energija (kJ)** – neprivalomos maistinės vertės.
+
+Spauskite **Išsaugoti**, jei norite įrašyti, arba **Atšaukti**, jei norite atmesti pakeitimus. Redaguojant esamą produktą, lange taip pat yra mygtukas **Ištrinti**.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+Ištrynus produktą, rodomas pranešimas **„Maistas pašalintas“** su veiksmu **Anuliuoti**, todėl atsitiktinį ištrynimą lengva atšaukti.
 ```
 
 ---
 
-## Using a food for a bolus
+## Maisto produkto naudojimas bolusui
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+Kiekvienoje maisto eilutėje yra **skaičiuotuvo** mygtukas. Jį paspaudus, atsidaro **Boluso patarėjas**, kuriame jau įrašyti to produkto **angliavandeniai**, o produkto **pavadinimas** pridėtas kaip terapijos pastaba – taigi tereikia patvirtinti ir suleisti, angliavandenių iš naujo įvesti nereikia.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+Išsaugotas produkto **angliavandenių** skaičius perduodamas tiesiai į patarėją – **AAPS** jo nedaugina iš porcijos ar iš to, kiek suvalgėte. Jei suvalgėte kitą kiekį, prieš patvirtindami pakoreguokite angliavandenius patarėjuje. (*Pačiame* Boluso patarėjuje ar angliavandenių lange maisto pasirinkimo nėra; pradėti reikia nuo maisto eilutės čia.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## Iš kur atsiranda maisto produktai (Nightscout sinchronizavimas)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+Maisto duomenų bazė bendrinama per **Nightscout**, tačiau **tik viena kryptimi**:
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **Atsisiuntimas:** **AAPS** **nuskaito** maisto produktus iš jūsų Nightscout svetainės **maisto duomenų bazės** ir vietinį sąrašą sinchronizuoja su ja. Tai vyksta kaip NSClient sinchronizavimo dalis, todėl susietas **klientas / sekėjas** taip pat gauna tuos pačius maisto produktus.
+- **Įkėlimas:** **AAPS** **nesiunčia** maisto produktų **į** Nightscout – NSClient nepalaiko maisto įrašų įkėlimo. Todėl maisto produktai, kuriuos sukuriate ar redaguojate **AAPS programėlėje**, lieka **tame įrenginyje** ir nepersiunčiami į Nightscout ar į kitus jūsų įrenginius.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+Kadangi maistas yra **tik atsisiunčiamas**, norėdami turėti vieną maisto sąrašą telefone, sekėjo / [kliento](../RemoteFeatures/ClientMasterControl.md) įrenginyje ir kitose jūsų sistemos dalyse, tvarkykite jį **Nightscout** (jo įtaisytame maisto redaktoriuje). **AAPS** tuos įrašus atsisiųs. Maisto produktas, pridėtas tik **AAPS**, yra vietinis tame įrenginyje ir toks lieka: atsisiunčiant Nightscout įrašai atpažįstami pagal jų Nightscout ID, todėl jie pridedami ir atnaujinami, bet vietoje sukurtas produktas niekada neperrašomas ir nepašalinamas (produktas pašalinamas tik tada, kai jo kopija ištrinama Nightscout).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+Atkreipkite dėmesį, kad maisto duomenų bazė **nėra** ir pasirašyto pagrindinio įrenginio ↔ kliento valdymo kanalo dalis – ji perduodama tik kaip Nightscout duomenys.
 ```
 
 ---
 
-## Not on the watch
+## Laikrodyje nėra
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+Maisto duomenų bazė yra **telefono** funkcija – **Wear OS laikrodyje** nėra nei maisto naršyklės, nei plytelės, nei meniu.
 
 ---
 

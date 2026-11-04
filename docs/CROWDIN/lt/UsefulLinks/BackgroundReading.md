@@ -1,36 +1,36 @@
 # Naudingi ištekliai - perskaitykite prieš pradedant
 
-Prieš jums sukuriant savo platformą, turėsite daug perskaityti, siekiant suprasti, kaip viskas veikia ir gauti daugiausia naudos. Pateikiame sąrašą vietų, kur jūs galite pereiti, idant pradėtumėte ir, tikėtina, rasite atsakymus į daug klausimų.
+Prieš kurdami savo rig, turėsite daug skaityti, kad suprastumėte, kaip viskas veikia, ir išnaudotumėte visas galimybes. Čia rasite sąrašą šaltinių, kurie padės jums pradėti ir, tikėtina, atsakys į daugelį jūsų klausimų.
 
 ## Papildoma informacija
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[OpenAPS dokumentacija - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
-[Ciklo dokumentai - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
+[Loop dokumentacija - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
-[Fine-Tuning your settings - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
+[Nustatymų derinimas - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 [Tim Omer – Hypodiabetic tinklaraštis - https://www.hypodiabetic.co.uk/](https://www.hypodiabetic.co.uk/)
 
 [DIYPS - https://diyps.org/](https://diyps.org/)
 
-[Diabetes and Technology - Where Diabetes meets Tech - https://www.diabettech.com/](https://www.diabettech.com/)
+[Diabetas ir technologijos – kur diabetas susitinka su technologijomis - https://www.diabettech.com/](https://www.diabettech.com/)
 
 [OpenAPS Reference Design - https://openaps.org/reference-design/](https://openaps.org/reference-design/)
 
-[Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+[Kodėl dažnai klystame nustatydami insulino veikimo trukmę (IVT) ir kodėl tai svarbu](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-[What conclusions can we draw when investigating Insulin Sensitivity using the Autosens function within #OpenAPS?](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
+[Kokias išvadas galime padaryti, tirdami jautrumą insulinui su #OpenAPS funkcija Autosens?](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/), autorius Adam Brown
 
-[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
+[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe), autorius Gary Scheiner
 
-["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts
+["Pumping insulin"](https://amzn.eu/d/iaCsFa2), autoriai John Walsh ir Ruth Roberts
 
 ## Kiti skaitiniai ir straipsniai apie Pasidaryk pats uždarąjį ciklą
 
@@ -40,8 +40,8 @@ Prieš jums sukuriant savo platformą, turėsite daug perskaityti, siekiant supr
 
 <https://btvnovinite.bg/video/bulgaria/dnes-e-svetovnijat-den-za-borba-s-diabeta.html>
 
-## Medžiaga Youtube
+## Medžiaga YouTube
 
-[Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
+[Tim Omer: Įgalinti piliečiai – „sveikatos hakeriai“. Mes nelaukiame! - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
 
-[Live interview with Dana Lewis, creator of Do-It-Yourself Pancreas System - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
+[Tiesioginis interviu su Dana Lewis, „pasidaryk pats“ kasos sistemos (Do-It-Yourself Pancreas System) kūrėja - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)

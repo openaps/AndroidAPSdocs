@@ -1,9 +1,9 @@
 (client-master-control)=
-# Master ↔ Client control (signed remote control)
+# Ana birim ↔ İstemci kontrolü (imzalı uzaktan kumanda)
 
-From **AAPS** version 4, a follower phone running **AAPSClient** can do much more than *announce* treatments through Nightscout: once it has been **paired** with the main phone, it can send **signed commands** that the main phone (the **master**) checks, confirms and executes — including delivering an **insulin bolus** on the master's pump.
+**AAPS** sürüm 4'ten itibaren, **AAPSClient** çalıştıran bir takipçi telefon, Nightscout üzerinden tedavileri yalnızca *bildirmekten* çok daha fazlasını yapabilir: ana telefonla **eşleştirildikten** sonra, ana telefonun (**ana birim**) kontrol ettiği, onayladığı ve uyguladığı **imzalı komutlar** gönderebilir. Buna ana birimin pompasıyla bir **insülin bolusu** vermek de dahildir.
 
-This page explains how it works, and how to set it up and use it.
+Bu sayfa bunun nasıl çalıştığını, nasıl kurulduğunu ve nasıl kullanıldığını açıklar.
 
 ```{contents} Table of contents
 :depth: 2
@@ -12,257 +12,257 @@ This page explains how it works, and how to set it up and use it.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop (the `full` app).
-- **Client** = an **AAPSClient** phone with no pump that follows and now also *controls* the master.
-- Both phones must be connected to the **same Nightscout** site. All communication still travels through Nightscout — no direct connection between the phones is needed.
+- **Ana birim** = pompaya sahip olan ve döngüyü çalıştıran ana **AAPS** telefonu (`full` uygulaması).
+- **İstemci** = pompası olmayan, ana birimi takip eden ve artık onu *kontrol* de eden bir **AAPSClient** telefonu.
+- Her iki telefon da **aynı Nightscout** sitesine bağlı olmalıdır. Tüm iletişim hâlâ Nightscout üzerinden gider. Telefonlar arasında doğrudan bir bağlantı gerekmez.
 ```
 
 ---
 
-## How it works
+## Nasıl çalışır
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-In **AAPS** v3, **AAPSClient** could only write unsigned care-portal treatments to Nightscout, and could not deliver a bolus. Remote control now needs a one-time [pairing](#client_master_master_setup). See also [What changed in AAPS v4](#v4changes-remote-control).
+**AAPS** v3'te **AAPSClient** Nightscout'a yalnızca imzasız careportal tedavileri yazabiliyordu ve bolus veremiyordu. Uzaktan kumanda artık bir kerelik bir [eşleştirme](#client_master_master_setup) gerektirir. Ayrıca bkz. [AAPS v4'te neler değişti](#v4changes-remote-control).
 ```
 
-**AAPS** v4 uses a dedicated **Client-Control** channel. It still rides on your Nightscout site (in the `settings` collection), but every message is **cryptographically signed** with a secret that only the two phones know. The secret is handed over once, during **pairing**, and replaced by a new one right after it, so it never travels in clear text.
+**AAPS** v4, ayrı bir **İstemci Kontrolü** (Client-Control) kanalı kullanır. Bu kanal hâlâ Nightscout sitenizi kullanır (`settings` koleksiyonunda), ancak her mesaj yalnızca iki telefonun bildiği bir sır ile **kriptografik olarak imzalanır**. Sır yalnızca bir kez, **eşleştirme** sırasında verilir ve hemen ardından yenisiyle değiştirilir. Böylece hiçbir zaman açık metin olarak iletilmez.
 
-The guiding principle is **the master is in charge**:
+Temel ilke şudur: **karar ana birimindir**:
 
-1. The client sends an *intent* (“bolus 2 U”, “start the Exercise scene”, “set this temp target”…).
-2. The **master** re-computes and **caps** the action against its **own** live data (profile, IOB, COB, current temp target, pump), and **authors the exact confirmation** the user will see.
-3. The client (or watch) shows the **master's** confirmation text — it never builds its own.
-4. On confirmation the master **executes once** and reports the result back to the client.
+1. İstemci bir *istek* gönderir (“2 Ü bolus”, “Egzersiz senaryosunu başlat”, “bu geçici hedefi ayarla”…).
+2. **Ana birim** eylemi **kendi** güncel verilerine (profil, AİNS, AKRB, mevcut geçici hedef, pompa) göre yeniden hesaplar ve **sınırlar**, ayrıca kullanıcının göreceği **onay metnini tam olarak kendisi yazar**.
+3. İstemci (veya saat) **ana birimin** onay metnini gösterir. Hiçbir zaman kendi metnini oluşturmaz.
+4. Onay verildiğinde ana birim eylemi **bir kez uygular** ve sonucu istemciye bildirir.
 
-What this means for you:
+Bunun sizin için anlamı:
 
-- **Signed commands**: only the clients you paired can send commands (per-client pairing secret and signature). Old or replayed commands are rejected.
-- **A role for each client**: you decide what each client may do, from *Read-only* to *Admin* — see [Client roles](#client-master-control-roles).
-- **Insulin bolus from a client**: the master delivers it on its pump, and the client shows the delivery progress.
-- **The master decides**: it caps every action against its own constraints and writes the confirmation shown on the client.
-- **Only paired clients change therapy**: while client control is on, the master no longer takes treatments or changes typed directly into Nightscout — see [Hardened mode](#client-master-control-hardened-mode).
-- **Each client gets its own Nightscout token** with only the rights a client needs — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Master offline**: actions are blocked with a clear message.
-- **Revoking a client** takes one tap (per client), or use the master's switch to stop all clients.
+- **İmzalı komutlar**: yalnızca eşleştirdiğiniz istemciler komut gönderebilir (her istemci için ayrı eşleştirme sırrı ve imza). Eski veya tekrar gönderilen komutlar reddedilir.
+- **Her istemci için bir rol**: her istemcinin ne yapabileceğine siz karar verirsiniz, *Salt okunur* rolünden *Yönetici* rolüne kadar. Bkz. [İstemci rolleri](#client-master-control-roles).
+- **İstemciden insülin bolusu**: ana birim bolusu kendi pompasıyla verir ve istemci iletimin ilerlemesini gösterir.
+- **Karar ana birimindir**: ana birim her eylemi kendi kısıtlamalarına göre sınırlar ve istemcide gösterilen onay metnini yazar.
+- **Tedaviyi yalnızca eşleştirilmiş istemciler değiştirir**: istemci kontrolü açıkken ana birim, doğrudan Nightscout'a yazılan tedavileri veya değişiklikleri artık kabul etmez. Bkz. [Güçlendirilmiş mod](#client-master-control-hardened-mode).
+- **Her istemci kendi Nightscout belirtecini alır**. Bu belirteçte yalnızca bir istemcinin ihtiyaç duyduğu yetkiler vardır. Bkz. [İstemcinin kendi Nightscout belirteci](#client-master-control-own-token).
+- **Ana birim çevrimdışı**: eylemler açık bir mesajla engellenir.
+- **Bir istemcinin erişimini kaldırmak** tek dokunuş gerektirir (her istemci için). Tüm istemcileri durdurmak için ana birimdeki anahtarı da kullanabilirsiniz.
 
-Actions that can be triggered from a client: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](../DailyLifeWithAaps/Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
+Bir istemciden başlatılabilecek eylemler: **bolus**, **karbonhidrat / yKarb**, **geçici hedef** (ayarlama ve iptal), **profil değişimi**, **döngü / çalışma modu** değişikliği, **geçici bazal** (ayarlama ve iptal), **yayma bolus** (ayarlama ve iptal), **insülin seçimi** ve **[senaryolar](../DailyLifeWithAaps/Scenes.md)**. İki yönlü **tercihlerin** bir kısmı da ana birim ile istemciler arasında senkronize tutulur.
 
 ---
 
-## Roles and prerequisites
+## Roller ve ön koşullar
 
 ```{admonition} Before you start
 :class: important
-- The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **master** uses **NSClientV3** with your Nightscout and is showing *connected*. Give it an **admin token** of your Nightscout: with it the master can make a token of its own for each client and show it to the client as a QR code.
-- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). It must use the **same** Nightscout. If you set it up with the master's QR code, the client gets its Nightscout address and token from the master; otherwise set up **NSClientV3** on it yourself first.
-- **Websockets** are needed on both phones: commands only reach the master over the websocket connection. While client control is on, **AAPS** keeps websockets on, on the master and on paired clients.
+- **Ana birim**, normal `full` **AAPS** sürümünü çalıştırır ve pompanıza bağlıdır.
+- **Ana birim**, Nightscout'unuzla **NSClientV3** kullanır ve *bağlı* durumunu gösterir. Ana birime Nightscout'unuzun bir **yönetici (admin) belirtecini** verin: bununla ana birim her istemci için ayrı bir belirteç oluşturabilir ve bunu istemciye QR kodu olarak gösterebilir.
+- **İstemci**, **[AAPSClient](AapsClient.md)** çalıştırır (veya başka hastalar için **AAPSClient2** / **AAPSClient3**. Bkz. [AAPSClient, AAPSClient2 ve AAPSClient3 hakkında](#remotecontrol-aapsclient-versions)). **Aynı** Nightscout'u kullanmalıdır. İstemciyi ana birimin QR kodu ile kurarsanız, istemci Nightscout adresini ve belirtecini ana birimden alır. Aksi halde önce istemcide **NSClientV3**'ü kendiniz kurun.
+- Her iki telefonda da **websocket** gereklidir: komutlar ana birime yalnızca websocket bağlantısı üzerinden ulaşır. İstemci kontrolü açıkken **AAPS**, ana birimde ve eşleştirilmiş istemcilerde websocket'leri açık tutar.
 ```
 
-Pairing and synchronization are two different things:
+Eşleştirme ve senkronizasyon iki farklı şeydir:
 
-- **Synchronization** (data: BG, treatments, profile) is set up as before — see [Synchronization](#RemoteControl_aapsclient). The master's QR code can do it for you on the client.
-- **Pairing** (control: the signed command channel described here) is the new step below.
+- **Senkronizasyon** (veriler: KŞ, tedaviler, profil) eskisi gibi kurulur. Bkz. [Senkronizasyon](#RemoteControl_aapsclient). Ana birimin QR kodu bunu istemcide sizin yerinize yapabilir.
+- **Eşleştirme** (kontrol: burada açıklanan imzalı komut kanalı) aşağıdaki yeni adımdır.
 
 ---
 
-## Setting it up
+## Kurulum
 
 (client_master_master_setup)=
-### 1. On the master — enable control and add a client
+### 1. Ana birimde: kontrolü etkinleştirin ve bir istemci ekleyin
 
-On the master, open the **Manage** screen and choose **Authorized clients**.
+Ana birimde **Yönet** ekranını açın ve **Yetkili istemciler** öğesini seçin.
 
-Turn on **Allow client control** (it is **off** by default). This is the master kill-switch: with it off, no client can send commands, but your paired clients are kept so you can turn it back on later. Turning it on also turns on [Hardened mode](#client-master-control-hardened-mode), shown as "*Hardened mode on*" with an **(i)** that explains it. In [Simple Mode](#preferences-simple-mode) client control is always on, so the switch is not shown.
+**İstemci kontrolüne izin ver** seçeneğini açın (varsayılan olarak **kapalıdır**). Bu, ana kapatma anahtarıdır: kapalıyken hiçbir istemci komut gönderemez, ancak eşleştirilmiş istemcileriniz silinmez. Böylece anahtarı daha sonra tekrar açabilirsiniz. Anahtarı açmak [Güçlendirilmiş mod](#client-master-control-hardened-mode) özelliğini de açar. Bu, "*Güçlendirilmiş mod açık*" olarak ve açıklama veren bir **(i)** ile gösterilir. [Basit mod](#preferences-simple-mode) içinde istemci kontrolü her zaman açıktır, bu yüzden anahtar gösterilmez.
 
-![Authorized clients screen on the master](../images/v4/ClientMaster/authorized_clients_master.png)
+![Ana birimdeki Yetkili istemciler ekranı](../images/v4/ClientMaster/authorized_clients_master.png)
 
-Tap the **+** button (bottom right) to add a client. In the **New client** dialog:
+Bir istemci eklemek için **+** düğmesine (sağ altta) dokunun. **Yeni istemci** penceresinde:
 
-1. Enter a **device name**, so you can recognize it in the list.
-2. Choose **how the phone is set up** (see the table below).
-3. Choose its **[role](#client-master-control-roles)**. Nothing is selected for you: the right role depends on who uses the phone.
+1. Listede tanıyabilmeniz için bir **cihaz adı** girin.
+2. **Telefonun nasıl kurulacağını** seçin (aşağıdaki tabloya bakın).
+3. Telefonun **[rolünü](#client-master-control-roles)** seçin. Sizin için hiçbir şey önceden seçilmez: doğru rol, telefonu kimin kullandığına bağlıdır.
 
-![New client dialog on the master: device name, how the phone is set up, and its role](../images/v4/ClientMaster/new_client_master.png)
+![Ana birimdeki Yeni istemci penceresi: cihaz adı, telefonun nasıl kurulacağı ve rolü](../images/v4/ClientMaster/new_client_master.png)
 
-| Way                                 | What the new phone gets                                                       | Use it when                                                                                            |
-| ----------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| **QR code: Nightscout and pairing** | the Nightscout address, its own Nightscout token and the pairing, in one scan | the new phone has a camera: the quickest way, nothing to type                                          |
-| **QR code: Nightscout only**        | the Nightscout address and its own Nightscout token, no pairing               | the phone should only **show** data and never send commands                                            |
-| **PIN**                             | the pairing only; it keeps the Nightscout settings it has                     | the phone has no camera (or the master cannot make tokens); it must be connected to Nightscout already |
+| Yol                                   | Yeni telefon ne alır                                                          | Ne zaman kullanılır                                                                                        |
+| ------------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **QR kodu: Nightscout ve eşleştirme** | Nightscout adresi, kendi Nightscout belirteci ve eşleştirme, tek bir taramada | yeni telefonun kamerası var: en hızlı yol, yazacak bir şey yok                                             |
+| **QR kodu: yalnızca Nightscout**      | Nightscout adresi ve kendi Nightscout belirteci, eşleştirme yok               | telefon yalnızca verileri **göstermeli** ve hiçbir zaman komut göndermemeli                                |
+| **PIN**                               | yalnızca eşleştirme; telefon mevcut Nightscout ayarlarını korur               | telefonun kamerası yok (veya ana birim belirteç oluşturamıyor); telefon zaten Nightscout'a bağlı olmalıdır |
 
-The two QR code ways need an **admin token** in the master's **NSClientV3** settings, because the master makes the client's token in Nightscout. Without one, the QR code options are shown but cannot be chosen, and the dialog says why; the **PIN** always works.
+İki QR kodu yolu için ana birimin **NSClientV3** ayarlarında bir **yönetici (admin) belirteci** gerekir, çünkü istemcinin belirtecini Nightscout'ta ana birim oluşturur. Böyle bir belirteç yoksa, QR kodu seçenekleri gösterilir ancak seçilemez ve pencere nedenini söyler. **PIN** her zaman çalışır.
 
-#### With a QR code
+#### QR kodu ile
 
-Tap **OK**: the master makes the client's Nightscout token and shows a **QR code**. A code that also pairs works for about **two minutes**; the screen counts down and closes by itself when the client has paired. Scan it on the new phone as described in [On the client](#client_master_client_setup).
+**Tamam** düğmesine dokunun: ana birim istemcinin Nightscout belirtecini oluşturur ve bir **QR kodu** gösterir. Eşleştirme de yapan bir kod yaklaşık **iki dakika** geçerlidir. Ekran geri sayım yapar ve istemci eşleştiğinde kendiliğinden kapanır. Kodu yeni telefonda [İstemcide](#client_master_client_setup) bölümünde açıklandığı gibi taratın.
 
 ```{admonition} The QR code is a secret
 :class: warning
-Anyone who sees the QR code can read your Nightscout, and a code that pairs also carries the pairing. Show it only to the new phone. **AAPS** blocks screenshots while the code is on screen.
+QR kodunu gören herkes Nightscout'unuzu okuyabilir. Eşleştirme yapan bir kod ayrıca eşleştirmeyi de taşır. Kodu yalnızca yeni telefona gösterin. Kod ekrandayken **AAPS** ekran görüntüsü alınmasını engeller.
 ```
 
-![The master's QR code screen with its countdown (code blurred)](../images/v4/ClientMaster/qr_code_master.png)
+![Ana birimin geri sayımlı QR kodu ekranı (kod bulanıklaştırılmış)](../images/v4/ClientMaster/qr_code_master.png)
 
-#### With a PIN
+#### PIN ile
 
-Tap **OK**: the master displays an 8-digit **pairing PIN**, shown in two groups of four (for example `1234 5678`). This PIN is **one-time** and **expires after about two minutes**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
+**Tamam** düğmesine dokunun: ana birim 8 haneli bir **eşleştirme PIN'i** gösterir. PIN dörder haneli iki grup halinde gösterilir (örneğin `1234 5678`). Bu PIN **tek kullanımlıktır** ve **yaklaşık iki dakika sonra geçersiz olur**. QR kodda olduğu gibi, ana birim listesinde zaten bulunan bir istemci adını kabul etmez: her istemci kendi adı altında kendi Nightscout token'ını alır.
 
-![Master pairing screen showing the one-time PIN (the PIN shown here is expired)](../images/v4/ClientMaster/pairing_pin_master.png)
+![Ana birimin tek kullanımlık PIN'i gösteren eşleştirme ekranı (burada gösterilen PIN'in süresi dolmuştur)](../images/v4/ClientMaster/pairing_pin_master.png)
 
 ```{admonition} The pairing PIN is a secret
 :class: warning
-The PIN protects the pairing secret that is exchanged through Nightscout. Share it only with the device you are pairing, do not post it publicly, and let it expire if you do not use it. A fresh PIN can always be generated by tapping **+** again.
+PIN, Nightscout üzerinden değiş tokuş edilen eşleştirme sırrını korur. PIN'i yalnızca eşleştirdiğiniz cihazla paylaşın, herkese açık bir yerde paylaşmayın ve kullanmazsanız süresinin dolmasını bekleyin. **+** düğmesine tekrar dokunarak her zaman yeni bir PIN oluşturabilirsiniz.
 ```
 
 (client_master_client_setup)=
-### 2. On the client — pair with the master
+### 2. İstemcide: ana birimle eşleştirme
 
-#### Scanning the QR code
+#### QR kodunu taratma
 
-You can scan the master's QR code in two places:
+Ana birimin QR kodunu iki yerde taratabilirsiniz:
 
-- in the client's **Setup Wizard**, on the step "**Set up from the master**", which comes before the Nightscout step. One scan then sets up Nightscout and, with a code that pairs, also the pairing, so the setup is finished: the wizard closes and the home screen opens;
-- at any time later from **Manage → Pair with master → Scan QR code**.
+- istemcinin **Kurulum Sihirbazı** içinde, Nightscout adımından önce gelen "**Ana birimden kurulumu yapın**" adımında. Tek bir tarama Nightscout'u kurar ve eşleştirme yapan bir kodla eşleştirmeyi de yapar. Böylece kurulum biter: sihirbaz kapanır ve ana ekran açılır;
+- daha sonra istediğiniz zaman **Yönet → Ana birimle eşleştir → QR kodunu tarat** yolundan.
 
-The first time, **AAPSClient** asks for the **camera** permission. If you refuse it, the screen says that the camera is needed, and you can allow it with **Try again** or pair with the PIN instead.
+İlk seferde **AAPSClient**, **kamera** izni ister. İzni reddederseniz, ekran kameranın gerekli olduğunu söyler. İzni **Tekrar dene** ile verebilir veya bunun yerine PIN ile eşleştirebilirsiniz.
 
-Point the camera at the code. The client shows what the code does — the Nightscout address and, for a code that pairs, the master it pairs with — and asks "**Use this code?**". Tap **Use**: the client turns on **NSClientV3**, replaces its Nightscout address and token with the ones from the code and turns on websockets. A code that pairs also pairs the phone; it says hello to the master as soon as it has connected to Nightscout.
+Kamerayı koda doğrultun. İstemci, kodun ne yaptığını gösterir (Nightscout adresi ve eşleştirme yapan bir kod için eşleşeceği ana birim) ve "**Bu kod kullanılsın mı?**" diye sorar. **Kullan** düğmesine dokunun: istemci **NSClientV3**'ü açar, Nightscout adresini ve belirtecini koddakilerle değiştirir ve websocket'leri açar. Eşleştirme yapan bir kod telefonu da eşleştirir. Telefon Nightscout'a bağlanır bağlanmaz ana birime "merhaba" (Hello) mesajı gönderir.
 
-![The client's Set up from the master wizard step](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+![İstemcinin Ana birimden kurulumu yapın sihirbaz adımı](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
 ```{admonition} Scanning is available on Android
 :class: note
-The scanner is not available on iOS yet, and a desktop has no camera: use the PIN there.
+A computer without camera: use the PIN there.
 ```
 
-#### Entering the PIN
+#### PIN'i girme
 
-On the client, open **Manage → Pair with master** (or the wizard step **Pair with master**, after the Nightscout step), **enter the 8-digit PIN** shown on the master and tap **Pair**. The client uses the PIN to securely retrieve the pairing offer through Nightscout, then asks "**Pair with this master?**" and shows the master's identifier. Tap **Pair** to confirm (see [Pairing with the master](#aapsclient-pairing-with-the-master) for a screenshot).
+İstemcide **Yönet → Ana birimle eşleştir** yolunu (veya Nightscout adımından sonra gelen **Ana birimle eşleştir** sihirbaz adımını) açın, ana birimde gösterilen **8 haneli PIN'i girin** ve **Eşleştir** düğmesine dokunun. İstemci, PIN'i kullanarak eşleştirme teklifini Nightscout üzerinden güvenli şekilde alır. Ardından "**Bu ana birimle eşleştirilsin mi?**" diye sorar ve ana birimin kimliğini gösterir. Onaylamak için **Eşleştir** düğmesine dokunun (ekran görüntüsü için bkz. [Ana birimle eşleştirme](#aapsclient-pairing-with-the-master)).
 
-![Pair-with-master screen on the client before pairing — enter the PIN here](../images/v4/ClientMaster/pair_with_master_unpaired.png)
+![Eşleştirmeden önce istemcideki Ana birimle eşleştir ekranı: PIN'i buraya girin](../images/v4/ClientMaster/pair_with_master_unpaired.png)
 
-#### After pairing
+#### Eşleştirmeden sonra
 
-Once a client is paired it sends a **Hello** to the master and appears in the master's **Authorized clients** list as **Active**, with a *“last seen”* time. The client knows its [role](#client-master-control-roles) from the pairing, so it shows the right buttons at once. A pairing made in the Setup Wizard finishes the wizard. In the same step the two phones replace the pairing secret with a new one that never travelled (see [Security notes](#client-master-control-security)), and a client that was set up with the PIN gets its own Nightscout token (see [The client's own Nightscout token](#client-master-control-own-token)). A client can be paired with **one** master at a time; to pair with a different master, **Unpair** first.
+Bir istemci eşleştirildiğinde ana birime bir **Hello** (merhaba) mesajı gönderir ve ana birimin **Yetkili istemciler** listesinde **Etkin** olarak, *“son görülme”* zamanıyla birlikte görünür. İstemci [rolünü](#client-master-control-roles) eşleştirmeden öğrenir, bu yüzden doğru düğmeleri hemen gösterir. Kurulum Sihirbazı'nda yapılan bir eşleştirme sihirbazı bitirir. Aynı adımda iki telefon, eşleştirme sırrını hiç iletilmemiş yeni bir sır ile değiştirir (bkz. [Güvenlik notları](#client-master-control-security)). PIN ile kurulan bir istemci de kendi Nightscout belirtecini alır (bkz. [İstemcinin kendi Nightscout belirteci](#client-master-control-own-token)). Bir istemci aynı anda yalnızca **bir** ana birimle eşleştirilebilir. Başka bir ana birimle eşleştirmek için önce **Eşleşmeyi Kaldır** düğmesini kullanın.
 
-![Pair-with-master screen on the client (already-paired state)](../images/v4/ClientMaster/pair_with_master_client.png)
+![İstemcideki Ana birimle eşleştir ekranı (zaten eşleştirilmiş durum)](../images/v4/ClientMaster/pair_with_master_client.png)
 
-### 3. Managing clients
+### 3. İstemcileri yönetme
 
-From the master's **Authorized clients** screen you can, at any time:
+Ana birimin **Yetkili istemciler** ekranından istediğiniz zaman şunları yapabilirsiniz:
 
-- **Change the role** of a client with the row of four buttons under its name. The new role takes effect at once, without pairing again.
-- **See which Nightscout token** a client writes with: "*Own Nightscout token*" is what you want. A red line "*Uses the Nightscout token …, which has more rights than a client needs*" means the client still uses a token with more rights, usually your admin token — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Revoke** a single client — tap the **trash** icon next to it. The client can no longer send commands until it is paired again. Its own Nightscout token is deleted too, so it can no longer read your Nightscout either.
-- **Stop all control** without losing the pairings — turn off **Allow client control**.
+- Bir istemcinin adının altındaki dört düğmelik satır ile **rolünü değiştirin**. Yeni rol, yeniden eşleştirme gerekmeden hemen geçerli olur.
+- Bir istemcinin **hangi Nightscout belirteciyle yazdığını görün**: istediğiniz durum "*Kendi Nightscout belirteci*" ifadesidir. Kırmızı bir "*… Nightscout belirtecini kullanıyor; bu belirteç bir istemcinin ihtiyacından fazla yetkiye sahip*" satırı, istemcinin hâlâ daha fazla yetkisi olan bir belirteç kullandığı anlamına gelir. Bu genellikle sizin yönetici belirtecinizdir. Bkz. [İstemcinin kendi Nightscout belirteci](#client-master-control-own-token).
+- Tek bir istemcinin **erişimini kaldırın**: yanındaki **çöp kutusu** simgesine dokunun. İstemci yeniden eşleştirilene kadar komut gönderemez. İstemcinin kendi Nightscout belirteci de silinir, bu yüzden artık Nightscout'unuzu da okuyamaz.
+- Eşleştirmeleri kaybetmeden **tüm kontrolü durdurun**: **İstemci kontrolüne izin ver** seçeneğini kapatın.
 
-Phones set up with **QR code: Nightscout only** are listed below the clients, under "**Read Nightscout only**". For each of them you can show the QR code again (to set up the same phone again) or delete its token, which ends its access to your Nightscout.
+**QR kodu: yalnızca Nightscout** ile kurulan telefonlar, istemcilerin altında "**Yalnızca Nightscout okuma**" başlığı altında listelenir. Bunların her biri için QR kodunu tekrar gösterebilir (aynı telefonu yeniden kurmak için) veya belirtecini silebilirsiniz. Belirteci silmek, telefonun Nightscout'unuza erişimini sonlandırır.
 
-![Authorized clients with a paired client (role buttons, own Nightscout token) and a phone under Read Nightscout only](../images/v4/ClientMaster/authorized_clients_roles.png)
+![Eşleştirilmiş bir istemci (rol düğmeleri, kendi Nightscout belirteci) ve Yalnızca Nightscout okuma altında bir telefon bulunan Yetkili istemciler ekranı](../images/v4/ClientMaster/authorized_clients_roles.png)
 
 ---
 
 (client-master-control-roles)=
-## Client roles
+## İstemci rolleri
 
-Each paired client has a **role**. The master checks it for every command, and the client shows only what its role allows. A new role takes effect at once, without pairing again. The roles build on each other: each one can do everything the one before it can.
+Eşleştirilmiş her istemcinin bir **rolü** vardır. Ana birim her komut için rolü kontrol eder ve istemci yalnızca rolünün izin verdiği şeyleri gösterir. Yeni bir rol, yeniden eşleştirme gerekmeden hemen geçerli olur. Roller birbirinin üzerine kurulur: her rol, kendinden önceki rolün yapabildiği her şeyi yapabilir.
 
-| Role          | The client may                                                                                                                                                                                                                |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Read-only** | only show data. It stays paired, so it is ready when you give it a higher role.                                                                                                                                               |
-| **Meals**     | give a bolus, use the bolus wizard and QuickWizard, enter carbs, and stop a running bolus. Carbs entered here can make the loop give more insulin.                                                                            |
-| **Caregiver** | do everything a user does in **AAPS**: temp targets, profile and insulin switches, loop mode, temp basal, extended bolus, scenes, careportal events, calibrations and removing records. It cannot change settings or presets. |
-| **Admin**     | do everything, settings and presets included (QuickWizard, temp target presets, scenes, profiles, automation, insulin).                                                                                                       |
+| Rol             | İstemci şunları yapabilir                                                                                                                                                                                                                                 |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Salt okunur** | yalnızca verileri göstermek. Eşleştirilmiş kalır, bu yüzden ona daha yüksek bir rol verdiğinizde hazırdır.                                                                                                                                                |
+| **Yemekler**    | bolus vermek, bolus sihirbazını ve Hızlı Asistan'ı kullanmak, karbonhidrat girmek ve çalışan bir bolusu durdurmak. Burada girilen karbonhidratlar, döngünün daha fazla insülin vermesine neden olabilir.                                                  |
+| **Bakıcı**      | bir kullanıcının **AAPS** içinde yaptığı her şeyi yapmak: geçici hedefler, profil ve insülin değişimleri, döngü modu, geçici bazal, yayma bolus, senaryolar, careportal kayıtları, kalibrasyonlar ve kayıt silme. Ayarları veya ön ayarları değiştiremez. |
+| **Yönetici**    | ayarlar ve ön ayarlar dahil her şeyi yapmak (Hızlı Asistan, geçici hedef ön ayarları, senaryolar, profiller, otomasyon, insülin).                                                                                                                         |
 
-The **(i)** at the top of the **Authorized clients** screen shows the same explanation. On the client, **Manage → Pair with master** shows the phone's own role.
+**Yetkili istemciler** ekranının üstündeki **(i)** aynı açıklamayı gösterir. İstemcide **Yönet → Ana birimle eşleştir** ekranı telefonun kendi rolünü gösterir.
 
 ---
 
 (client-master-control-hardened-mode)=
-## Hardened mode
+## Güçlendirilmiş mod
 
-When **Allow client control** is on, the master is in **hardened mode**: it takes changes only from paired clients. It does **not** take treatments, temp targets, profile changes, running mode changes or deletes that are made directly in Nightscout, for example on the Nightscout website or in other apps.
+**İstemci kontrolüne izin ver** açıkken ana birim **güçlendirilmiş moddadır**: değişiklikleri yalnızca eşleştirilmiş istemcilerden kabul eder. Doğrudan Nightscout'ta (örneğin Nightscout web sitesinde veya diğer uygulamalarda) yapılan tedavileri, geçici hedefleri, profil değişikliklerini, çalışma modu değişikliklerini veya silme işlemlerini kabul **etmez**.
 
-- The settings for accepting data from Nightscout (**NSClientV3 → Synchronization**) are hidden while hardened mode is on; **AAPS** uses them as if they were off.
-- The master still **uploads** all its data to Nightscout, BG included, and keeps **websockets** on.
-- If the master gets its **BG from Nightscout**, it still takes BG from there.
-- To load the history on a **new** master, use **Full sync** in **NSClientV3**: it takes everything that is in Nightscout, profiles included.
-- [SMS commands](SMSCommands.md) are not affected.
+- Nightscout'tan veri kabul etme ayarları (**NSClientV3 → Senkronizasyon**) güçlendirilmiş mod açıkken gizlenir. **AAPS** bu ayarları kapalıymış gibi kullanır.
+- Ana birim, KŞ dahil tüm verilerini Nightscout'a hâlâ **yükler** ve **websocket**'leri açık tutar.
+- Ana birim **KŞ değerlerini Nightscout'tan** alıyorsa, KŞ'yi hâlâ oradan alır.
+- **Yeni** bir ana birime geçmiş verileri yüklemek için **NSClientV3** içinde **Tam senkronizasyon** kullanın: profiller dahil Nightscout'taki her şeyi alır.
+- [SMS komutları](SMSCommands.md) bundan etkilenmez.
 
-A paired client follows the master's hardened mode: it keeps websockets on, and the same Nightscout settings are hidden on it. An unpaired client keeps its own settings.
+Eşleştirilmiş bir istemci, ana birimin güçlendirilmiş modunu izler: websocket'leri açık tutar ve aynı Nightscout ayarları istemcide de gizlenir. Eşleştirilmemiş bir istemci kendi ayarlarını korur.
 
-[Simple Mode](#preferences-simple-mode) always turns hardened mode on. To turn it off, leave Simple Mode and turn off **Allow client control** on the master.
+[Basit mod](#preferences-simple-mode) güçlendirilmiş modu her zaman açar. Kapatmak için Basit moddan çıkın ve ana birimde **İstemci kontrolüne izin ver** seçeneğini kapatın.
 
 ```{admonition} Why hardened mode
 :class: note
-Everything a paired client sends is signed, checked and confirmed by the master. A treatment typed into the Nightscout website is not: anybody with write access to your Nightscout could add it. In hardened mode only signed commands can change what the master does.
+Eşleştirilmiş bir istemcinin gönderdiği her şey ana birim tarafından imzalanır, kontrol edilir ve onaylanır. Nightscout web sitesine yazılan bir tedavi ise öyle değildir: Nightscout'unuza yazma erişimi olan herkes onu ekleyebilir. Güçlendirilmiş modda ana birimin yaptıklarını yalnızca imzalı komutlar değiştirebilir.
 ```
 
 ---
 
 (client-master-control-own-token)=
-## The client's own Nightscout token
+## İstemcinin kendi Nightscout belirteci
 
-A client does not need an admin token. It only reads your Nightscout and sends its commands to the master through it; it uploads nothing itself. So the master gives each client a Nightscout token of its own, with just these rights:
+Bir istemcinin yönetici (admin) belirtecine ihtiyacı yoktur. İstemci yalnızca Nightscout'unuzu okur ve komutlarını onun üzerinden ana birime gönderir. Kendisi hiçbir şey yüklemez. Bu yüzden ana birim her istemciye yalnızca şu yetkilere sahip ayrı bir Nightscout belirteci verir:
 
-- read everything,
-- write to the `settings` collection, the channel to the master,
-- snooze Nightscout alarms.
+- her şeyi okuma,
+- `settings` koleksiyonuna, yani ana birime giden kanala yazma,
+- Nightscout alarmlarını erteleme.
 
-The token belongs to a Nightscout role named **`aaps-client`**, which the master creates the first time it needs it. You can see the role and the tokens (named `aaps-` and the client's name) in the **Admin tools** of your Nightscout site. If the role is changed there, the master sets it back the next time it makes a token or you open **Authorized clients**.
+Belirteç, **`aaps-client`** adlı bir Nightscout rolüne aittir. Ana birim bu rolü ilk ihtiyaç duyduğunda oluşturur. Rolü ve belirteçleri (`aaps-` ve istemcinin adı ile adlandırılır) Nightscout sitenizin **Admin tools** (yönetici araçları) bölümünde görebilirsiniz. Rol orada değiştirilirse, ana birim bir sonraki belirteç oluşturduğunda veya siz **Yetkili istemciler** ekranını açtığınızda rolü eski haline getirir.
 
-How a client gets its token:
+Bir istemci belirtecini şöyle alır:
 
-- **Set up with a QR code**: the token is in the code.
-- **Paired with the PIN** (or paired before this existed): after pairing, the master sends the client its own token through the paired channel, encrypted. The client first checks that a login with it works, then uses it instead of the token it had. This needs an admin token on the master; without one, the client keeps its token, and its card on the master shows the red line.
+- **QR kodu ile kurulum**: belirteç kodun içindedir.
+- **PIN ile eşleştirme** (veya bu özellik yokken eşleştirilmiş): eşleştirmeden sonra ana birim, istemcinin kendi belirtecini eşleştirilmiş kanal üzerinden şifreli olarak gönderir. İstemci önce bu belirteçle giriş yapılabildiğini kontrol eder, sonra eski belirteci yerine bunu kullanır. Bunun için ana birimde bir yönetici belirteci gerekir. Yoksa istemci kendi eski belirtecini korur ve ana birimdeki kartında kırmızı satır görünür.
 
-**A client keeps its own token.** Once the master has seen a client write with its own token, it takes that client's commands only with that token. A command written with another token (for example an admin token typed into the client later, or another client's token) is refused, even though the client is paired, and the client says "*The master refused it: this phone writes to Nightscout with another token than its own*". Its card on the master says so in red. The client still shows as online, so you can see what is wrong. To fix it, remove the client on the master and add it again.
+**Bir istemci kendi belirtecini korur.** Ana birim, bir istemcinin kendi belirteciyle yazdığını bir kez gördükten sonra, o istemcinin komutlarını yalnızca bu belirteçle kabul eder. Başka bir belirteçle yazılan bir komut (örneğin daha sonra istemciye yazılan bir yönetici belirteci veya başka bir istemcinin belirteci), istemci eşleştirilmiş olsa bile reddedilir ve istemci "*Ana birim bunu reddetti: bu telefon, Nightscout'a kendisine ait olandan farklı bir belirteçle (token) veri gönderiyor*" der. Ana birimdeki kartı da bunu kırmızı olarak gösterir. İstemci hâlâ çevrimiçi görünür, böylece neyin yanlış olduğunu görebilirsiniz. Düzeltmek için istemciyi ana birimde kaldırın ve tekrar ekleyin.
 
-The master never deletes or changes a Nightscout token it did not make (one with other roles than `aaps-client`): those are yours. It deletes a client's own token when you remove the client.
+Ana birim, kendi oluşturmadığı bir Nightscout belirtecini (`aaps-client` dışında rolleri olan bir belirteci) asla silmez veya değiştirmez: bunlar sizindir. İstemciyi kaldırdığınızda, istemcinin kendi belirtecini siler.
 
 ---
 
-## Using remote control
+## Uzaktan kumandayı kullanma
 
-### Triggering an action from the client
+### İstemciden bir eylem başlatma
 
-Use the client exactly as you would the phone itself: open **Carbs**, **Insulin**, **Temp Target**, **Profile**, **Scenes**, the **Manage** sheet, etc., and fill in the values.
+İstemciyi tam olarak telefonun kendisi gibi kullanın: **Karbonhidrat**, **İnsülin**, **Geçici Hedef**, **Profil**, **Senaryolar**, **Yönet** paneli vb. öğeleri açın ve değerleri girin.
 
-When you confirm, the client briefly shows **“Contacting master…”**, the **master** computes and caps the action, and the client then displays the **master's own confirmation** — the exact lines, values and colors the master would show on its own screen. Review them and tap **OK** to go ahead.
+Onayladığınızda istemci kısa bir süre **“Ana birimle iletişime geçiliyor…”** gösterir, **ana birim** eylemi hesaplar ve sınırlar, ardından istemci **ana birimin kendi onay metnini** gösterir: ana birimin kendi ekranında göstereceği satırların, değerlerin ve renklerin aynısı. Bunları gözden geçirin ve devam etmek için **Tamam** düğmesine dokunun.
 
-![A scene confirmation authored by the master and shown on the client](../images/v4/ClientMaster/confirmation_master_authored.png)
+![Ana birimin yazdığı ve istemcide gösterilen bir senaryo onayı](../images/v4/ClientMaster/confirmation_master_authored.png)
 
-The same applies to a simple carbs entry — the amount shown for confirmation is the one the master computed:
+Aynısı basit bir karbonhidrat girişi için de geçerlidir: onay için gösterilen miktar, ana birimin hesapladığı miktardır:
 
-![Carbs confirmation authored by the master](../images/v4/ClientMaster/carbs_confirmation_client.png)
+![Ana birimin yazdığı karbonhidrat onayı](../images/v4/ClientMaster/carbs_confirmation_client.png)
 
-After you confirm, the master executes the action once and the result is reflected back on the client.
+Siz onayladıktan sonra ana birim eylemi bir kez uygular ve sonuç istemciye yansıtılır.
 
-### Insulin bolus from a client
+### İstemciden insülin bolusu
 
-This is the main new capability in v4. A bolus started on a client is **delivered by the master on its pump**; the master caps it against its own constraints, and the client shows **live delivery progress** while it runs (and an alarm if the pump reports a failure).
+Bu, v4'teki ana yeni özelliktir. Bir istemcide başlatılan bolus **ana birim tarafından kendi pompasıyla verilir**. Ana birim bolusu kendi kısıtlamalarına göre sınırlar ve bolus sürerken istemci **canlı iletim ilerlemesini** gösterir (pompa bir hata bildirirse bir alarm da gösterir).
 
 ```{admonition} Boluses are always confirmed and capped on the master
 :class: note
-A client never decides the delivered amount on its own. The master recomputes and caps it, you confirm the master-authored amount, and only then is it delivered.
+Bir istemci verilen miktara hiçbir zaman kendi başına karar vermez. Ana birim miktarı yeniden hesaplar ve sınırlar, siz ana birimin yazdığı miktarı onaylarsınız ve ancak o zaman bolus verilir.
 ```
 
 (clientmastercontrol-when-the-master-is-offline)=
-### When the master is offline
+### Ana birim çevrimdışı olduğunda
 
-If the master is not reachable (its phone is off/asleep, not connected to Nightscout, or websockets are down), control actions on the client are **blocked before anything is sent**, and you get a clear message. Nothing is half-applied.
+Ana birime ulaşılamıyorsa (telefonu kapalı/uykuda, Nightscout'a bağlı değil veya websocket'ler çalışmıyor), istemcideki kontrol eylemleri **hiçbir şey gönderilmeden engellenir** ve açık bir mesaj alırsınız. Hiçbir şey yarım uygulanmaz.
 
-![Client message when the master is offline](../images/v4/ClientMaster/master_offline_error.png)
+![Ana birim çevrimdışıyken istemcinin mesajı](../images/v4/ClientMaster/master_offline_error.png)
 
-The client re-checks reachability automatically and re-enables control once the master is back online.
+İstemci, ulaşılabilirliği otomatik olarak yeniden kontrol eder ve ana birim tekrar çevrimiçi olduğunda kontrolü yeniden etkinleştirir.
 
 (clientmastercontrol-wear-os-on-a-client)=
 
-### Wear OS (watch) on a client
+### İstemcide Wear OS (saat)
 
-A watch paired to a **client** phone relays its actions through the client to the master (watch → client → master). The watch shows the **master's** confirmation lines and the real result, just like the phone. Setting up the watch is unchanged — see [Wear OS](../WearOS/WearOsSmartwatch.md).
+Bir **istemci** telefona eşleştirilmiş bir saat, eylemlerini istemci üzerinden ana birime iletir (saat → istemci → ana birim). Saat, tıpkı telefon gibi, **ana birimin** onay satırlarını ve gerçek sonucu gösterir. Saatin kurulumu değişmedi. Bkz. [Wear OS](../WearOS/WearOsSmartwatch.md).
 
 
 <!-- 📷 SCREENSHOT NEEDED (optional): watch confirmation screen relayed from the master,
@@ -271,61 +271,61 @@ A watch paired to a **client** phone relays its actions through the client to th
 ---
 
 (client-master-config-prefs)=
-## Changing configuration and preferences
+## Konfigürasyonu ve tercihleri değiştirme
 
-Pairing does more than relay one-off actions — it also keeps the **configuration** and many **preferences** aligned between the master and its clients.
+Eşleştirme, tek seferlik eylemleri iletmekten fazlasını yapar: ana birim ile istemcileri arasında **konfigürasyonu** ve birçok **tercihi** de uyumlu tutar.
 
-### Configuration (which plugins are active)
+### Konfigürasyon (hangi eklentiler etkin)
 
-The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
+Etkin **eklentiler** (APS algoritması, duyarlılık, yumuşatma, …) **ana birimde** seçilir ve eşleştirilmiş her istemciye **yansıtılır**. Bir istemcide bu seçimler [Konfigürasyon](#configuration_sync_icon) ekranında küçük bir **telefon simgesi** ile işaretlenir. Bunları ana birimde değiştirin, istemciler otomatik olarak izler; bunun tersi de geçerlidir.
 
-On a client, the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*:
+Bir istemcide telefon simgesi *Yumuşatma*, *Kalibrasyon*, *Duyarlılık algılaması* ve *APS (YPS)* üzerinde görünür (ana birimden senkronize edilir), ancak *İletişim* üzerinde görünmez:
 
-![Configuration list on a client — the mobile icon marks the categories synced with the master](../images/v4/ClientMaster/configuration_client.png)
+![Bir istemcideki konfigürasyon listesi: telefon simgesi ana birimle senkronize edilen kategorileri işaretler](../images/v4/ClientMaster/configuration_client.png)
 
-Connection details that are unique to each device — most importantly the **NSClient Nightscout URL / access token** — are *not* synced. Each phone has its own; on a client they come from the master's QR code, or you set them yourself.
+Her cihaza özel bağlantı bilgileri, en önemlisi **NSClient Nightscout URL'si / erişim belirteci**, senkronize *edilmez*. Her telefonun kendi bilgileri vardır. Bir istemcide bunlar ana birimin QR kodundan gelir veya siz kendiniz ayarlarsınız.
 
-### Profiles
+### Profiller
 
-Your **profile list** is also kept in sync between the master and its paired clients. On a paired client, **Manage → Profile** shows the same profiles as the master; you can **edit** a profile or **activate** one, and — like every other command — the change is sent to the **master**, applied there, and synced back.
+**Profil listeniz** de ana birim ile eşleştirilmiş istemcileri arasında senkronize tutulur. Eşleştirilmiş bir istemcide **Yönet → Profil** ana birimdeki profillerin aynısını gösterir. Bir profili **düzenleyebilir** veya **etkinleştirebilirsiniz**. Diğer tüm komutlarda olduğu gibi değişiklik **ana birime** gönderilir, orada uygulanır ve geri senkronize edilir.
 
-The first time you activate a profile on a newly installed client, the client may show "*No insulin is in use yet*" and ask you to **select the insulin**. Choose the insulin that is active on the master (**Manage → Insulin settings** on the master shows it).
+Yeni kurulmuş bir istemcide bir profili ilk kez etkinleştirdiğinizde, istemci "*Henüz hiçbir insülin kullanılmıyor*" gösterebilir ve sizden **insülini seçmenizi** isteyebilir. Ana birimde etkin olan insülini seçin (ana birimdeki **Yönet → İnsülin ayarları** bunu gösterir).
 
-On a client that is **not paired**, the Profile screen is still available but **view-only**: the client shows the profiles it receives through Nightscout (it needs them for its own calculations), but there is no edit or activate button — there is no master to send the change to.
+**Eşleştirilmemiş** bir istemcide Profil ekranı hâlâ kullanılabilir, ancak **yalnızca görüntüleme** içindir: istemci Nightscout üzerinden aldığı profilleri gösterir (bunlara kendi hesaplamaları için ihtiyaç duyar), ancak düzenleme veya etkinleştirme düğmesi yoktur. Değişikliğin gönderileceği bir ana birim yoktur.
 
 ### Tercihler
 
-A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**. For a setting with a slider, the new value is sent when you lift your finger.
+**Tercihlerin** bir kısmı **iki yönlüdür**: bunları **ana birimde veya eşleştirilmiş bir istemcide** değiştirebilirsiniz ve değişiklik diğer tarafa senkronize edilir. Böyle bir tercihi bir istemcide değiştirdiğinizde, değişiklik imzalı kanal üzerinden ana birime gönderilir, orada uygulanır ve geçerli değer geri gönderilir. Böylece istemcide gördüğünüz değer her zaman ana birimin kaydettiği değerdir. Aynı tercih iki cihazda neredeyse aynı anda değiştirilirse, **en son yapılan değişiklik geçerli olur**. Kaydırıcılı bir ayarda yeni değer, parmağınızı kaldırdığınızda gönderilir.
 
-Inside the settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Absorption cutoff* is synced (mobile icon), while settings without the icon are device-local:
+Ayarların içinde aynı küçük **telefon simgesi**, senkronize edilen tek tek tercihleri işaretler. Aşağıdaki örnekte *Emilim kesme* senkronize edilir (telefon simgesi), simgesi olmayan ayarlar ise yalnızca o cihazda geçerlidir:
 
-![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+![Bir eklentinin ayarları: telefon simgesi senkronize edilen tercihleri işaretler](../images/v4/ClientMaster/preferences_synced_icon.png)
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Because the master is the authority for the stored value, editing a master-controlled configuration item or a bidirectional preference from a client requires the master to be **reachable**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
+Kaydedilen değerde yetki ana birimde olduğu için, ana birimin kontrol ettiği bir konfigürasyon öğesini veya iki yönlü bir tercihi bir istemciden değiştirmek için ana birimin **ulaşılabilir** olması gerekir. Ana birim çevrimdışıyken bu kontroller istemcide devre dışıdır (bkz. [Ana birim çevrimdışı olduğunda](#clientmastercontrol-when-the-master-is-offline)).
 ```
 
 ---
 
 (client-master-control-security)=
-## Security notes
+## Güvenlik notları
 
 ```{admonition} How the channel is protected
 :class: tip
-- **Pairing secret**: the master hands it to the client once — protected by the PIN in a Nightscout document, or inside the QR code — and both store it encrypted.
-- **A new secret right after pairing**: the client's first message after pairing starts a key exchange, and from then on both phones use a secret that never travelled. A secret that someone may have seen (a photographed QR code, a PIN offer read from Nightscout) is of no use afterwards. Phones paired before this existed do the same once after the update.
-- **Every command is signed** (HMAC). The master rejects anything whose signature does not match a paired client.
-- **Replay is prevented** by a per-client monotonic counter, and every command **expires** after a short time-to-live.
-- **Least rights in Nightscout**: each client has its [own Nightscout token](#client-master-control-own-token), which can only read and write to the client-control channel. Once it has used it, the master takes its commands only with that token. Removing the client deletes it.
-- **Only signed changes**: in [hardened mode](#client-master-control-hardened-mode) the master ignores therapy changes typed directly into Nightscout.
-- **The master signs what it shares**: the settings, the client list and the "master is alive" sign that the master puts in Nightscout for its clients carry the master's signature. A client takes them only when the signature is the master's, so another client's token cannot change them. The client learns the master's key when it pairs, or from the QR code for a phone that only reads Nightscout. A refused document shows in the NSClient log as "*✕ SETTINGS … refused*".
-- **You stay in control**: give each client the [role](#client-master-control-roles) it needs, revoke a client with one tap, or disable everything with **Allow client control**.
+- **Eşleştirme sırrı**: ana birim bunu istemciye bir kez verir (bir Nightscout belgesinde PIN ile korunarak veya QR kodunun içinde) ve her iki taraf da sırrı şifreli olarak saklar.
+- **Eşleştirmeden hemen sonra yeni bir sır**: istemcinin eşleştirmeden sonraki ilk mesajı bir anahtar değişimi başlatır. O andan itibaren her iki telefon da hiç iletilmemiş bir sır kullanır. Birinin görmüş olabileceği bir sır (fotoğrafı çekilmiş bir QR kodu, Nightscout'tan okunmuş bir PIN teklifi) bundan sonra işe yaramaz. Bu özellik yokken eşleştirilmiş telefonlar, güncellemeden sonra aynı işlemi bir kez yapar.
+- **Her komut imzalanır** (HMAC). Ana birim, imzası eşleştirilmiş bir istemciyle eşleşmeyen her şeyi reddeder.
+- **Tekrar gönderme engellenir**: her istemci için ayrı, yalnızca artan bir sayaç kullanılır ve her komutun kısa bir geçerlilik süresi vardır, sonra **süresi dolar**.
+- **Nightscout'ta en az yetki**: her istemcinin [kendi Nightscout belirteci](#client-master-control-own-token) vardır. Bu belirteç yalnızca okuyabilir ve istemci kontrolü kanalına yazabilir. İstemci belirteci bir kez kullandıktan sonra, ana birim onun komutlarını yalnızca bu belirteçle kabul eder. İstemciyi kaldırmak belirteci siler.
+- **Yalnızca imzalı değişiklikler**: [güçlendirilmiş modda](#client-master-control-hardened-mode) ana birim, doğrudan Nightscout'a yazılan tedavi değişikliklerini yok sayar.
+- **Ana birim paylaştığını imzalar**: ana birimin istemcileri için Nightscout'a koyduğu ayarlar, istemci listesi ve "ana birim çalışıyor" işareti, ana birimin imzasını taşır. Bir istemci bunları yalnızca imza ana birime aitse kabul eder. Bu yüzden başka bir istemcinin belirteci bunları değiştiremez. İstemci, ana birimin anahtarını eşleştirme sırasında öğrenir. Yalnızca Nightscout okuyan bir telefon ise bunu QR kodundan öğrenir. Reddedilen bir belge NSClient günlüğünde "*✕ SETTINGS … refused*" olarak görünür.
+- **Kontrol sizde kalır**: her istemciye ihtiyaç duyduğu [rolü](#client-master-control-roles) verin, bir istemcinin erişimini tek dokunuşla kaldırın veya **İstemci kontrolüne izin ver** ile her şeyi devre dışı bırakın.
 ```
 
 ```{admonition} After restoring a backup
 :class: warning
-If a client is restored from a backup that rolls its command counter backwards, the master will reject its next commands as replays. Simply **unpair and pair again** to recover.
+Bir istemci, komut sayacını geriye alan bir yedekten geri yüklenirse, ana birim onun sonraki komutlarını tekrar gönderilmiş komutlar olarak reddeder. Düzeltmek için **eşleşmeyi kaldırın ve yeniden eşleştirin**.
 ```
 
 ---
@@ -334,27 +334,27 @@ If a client is restored from a backup that rolls its command counter backwards, 
 
 ## Troubleshooting
 
-| Symptom                                                                                                    | What to check                                                                                                                                                                                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client says the **master is offline**                                                                      | Master phone awake and running **AAPS**; both phones connected in **NSClientV3**; **websockets** enabled on both; same Nightscout site.                                                                                                                                                                                      |
-| Client says it is **not paired**                                                                           | Pair again from **Manage → Pair with master**. Confirm the client is **Active** in the master's **Authorized clients** list.                                                                                                                                                                                                 |
-| Command **rejected** by the master                                                                         | The master re-validates against its current state — e.g. the chosen profile no longer exists, or the pump type does not match. Re-check on the master.                                                                                                                                                                       |
-| Commands work but are **slow**                                                                             | Enable **websockets** on both phones (otherwise the apps fall back to slower polling).                                                                                                                                                                                                                                       |
-| Pairing is cancelled with *"The pairing secret could not be stored"*                                       | Nothing was changed. Start the pairing again; if it keeps failing, restart **AAPSClient** and try once more.                                                                                                                                                                                                                 |
-| Nothing happens after pairing                                                                              | Make sure **Allow client control** is ON on the master, and that the master is connected to Nightscout.                                                                                                                                                                                                                      |
-| The QR code options cannot be chosen in the **New client** dialog                                          | The dialog says why. *Not an admin token*: give the master an admin token of your Nightscout, or add the client with the **PIN**. *Not connected*: wait until the master shows *connected* in **NSClientV3**.                                                                                                                |
-| *"Nightscout has a token with this name and other rights"*                                                 | One of your own Nightscout tokens is called `aaps-` and this name. Choose another name for the client.                                                                                                                                                                                                                       |
-| *"A client with this name is in the list already"*                                                         | Choose another name, or remove that client first.                                                                                                                                                                                                                                                                            |
-| The client says *"This code is from another AAPS version"*                                                 | Master and client must run the **same** version of **AAPS**. Update the older one.                                                                                                                                                                                                                                           |
-| The client says *"This code has expired"*                                                                  | A code that pairs works for about two minutes. Add the client again on the master to get a new code.                                                                                                                                                                                                                         |
-| The client says *"This phone is paired already"*                                                           | Unpair it first (**Manage → Pair with master → Unpair**), then scan again. A **Nightscout only** code works on a paired phone too.                                                                                                                                                                                           |
-| The client says *"The master refused it: this phone writes to Nightscout with another token than its own"* | The client used its own Nightscout token before and now writes with another one, for example after a token was typed into its Nightscout settings. Remove the client on the master and add it again (see [The client's own Nightscout token](#client-master-control-own-token)).                                             |
-| The NSClient log on the client shows *"✕ SETTINGS … refused"* and its settings no longer follow the master | Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes a new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**). |
-| The client's card shows *"Uses the Nightscout token …"* in red                                             | The client still writes with a token that has more rights than it needs. The master sends it its own token after pairing, but only if the master has an admin token. Check the master's token, or set the client up again with a QR code.                                                                                    |
-| A client can no longer read Nightscout                                                                     | Its token was deleted, for example because the client was removed on the master. Add it again.                                                                                                                                                                                                                               |
-| Treatments entered on the Nightscout website are not applied                                               | Expected in [hardened mode](#client-master-control-hardened-mode): enter them on a paired client instead.                                                                                                                                                                                                                    |
+| Belirti                                                                                                                                 | Neyi kontrol etmeli                                                                                                                                                                                                                                                                                                                                                      |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| İstemci **ana birimin çevrimdışı** olduğunu söylüyor                                                                                    | Ana birim uyanık ve **AAPS** çalışıyor; her iki telefon da **NSClientV3** içinde bağlı; her ikisinde de **websocket**'ler etkin; aynı Nightscout sitesi.                                                                                                                                                                                                                 |
+| İstemci **eşleştirilmemiş** olduğunu söylüyor                                                                                           | **Yönet → Ana birimle eşleştir** yolundan yeniden eşleştirin. İstemcinin, ana birimin **Yetkili istemciler** listesinde **Etkin** olduğunu kontrol edin.                                                                                                                                                                                                                 |
+| Komut ana birim tarafından **reddedildi**                                                                                               | Ana birim komutu kendi güncel durumuna göre yeniden doğrular: örneğin seçilen profil artık yoktur veya pompa türü eşleşmez. Ana birimde tekrar kontrol edin.                                                                                                                                                                                                             |
+| Komutlar çalışıyor ama **yavaş**                                                                                                        | Her iki telefonda da **websocket**'leri etkinleştirin (aksi halde uygulamalar daha yavaş olan yoklama yöntemine geçer).                                                                                                                                                                                                                                                  |
+| Eşleştirme *"Eşleştirme sırrı kaydedilemedi"* mesajıyla iptal ediliyor                                                                  | Hiçbir şey değiştirilmedi. Eşleştirmeyi yeniden başlatın. Hata devam ederse **AAPSClient**'ı yeniden başlatın ve bir kez daha deneyin.                                                                                                                                                                                                                                   |
+| Eşleştirmeden sonra hiçbir şey olmuyor                                                                                                  | Ana birimde **İstemci kontrolüne izin ver** seçeneğinin AÇIK olduğundan ve ana birimin Nightscout'a bağlı olduğundan emin olun.                                                                                                                                                                                                                                          |
+| **Yeni istemci** penceresinde QR kodu seçenekleri seçilemiyor                                                                           | Pencere nedenini söyler. *Yönetici belirteci değil*: ana birime Nightscout'unuzun bir yönetici (admin) belirtecini verin veya istemciyi **PIN** ile ekleyin. *Bağlantı yok*: ana birim **NSClientV3** içinde *bağlı* durumunu gösterene kadar bekleyin.                                                                                                                  |
+| *"Nightscout'ta bu adda ve farklı yetkilere sahip bir belirteç var"*                                                                    | Kendi Nightscout belirteçlerinizden birinin adı `aaps-` ve bu addan oluşuyor. İstemci için başka bir ad seçin.                                                                                                                                                                                                                                                           |
+| *"Bu adda bir istemci zaten listede var"*                                                                                               | Başka bir ad seçin veya önce o istemciyi kaldırın.                                                                                                                                                                                                                                                                                                                       |
+| İstemci *"Bu kod başka bir AAPS sürümüne ait"* diyor                                                                                    | Ana birim ve istemci **AAPS**'in **aynı** sürümünü çalıştırmalıdır. Eski olanı güncelleyin.                                                                                                                                                                                                                                                                              |
+| İstemci *"Bu kodun süresi doldu"* diyor                                                                                                 | Eşleştirme yapan bir kod yaklaşık iki dakika geçerlidir. Yeni bir kod almak için istemciyi ana birimde tekrar ekleyin.                                                                                                                                                                                                                                                   |
+| İstemci *"Bu telefon zaten eşleştirilmiş"* diyor                                                                                        | Önce eşleşmeyi kaldırın (**Yönet → Ana birimle eşleştir → Eşleşmeyi Kaldır**), sonra tekrar taratın. **Yalnızca Nightscout** kodu eşleştirilmiş bir telefonda da çalışır.                                                                                                                                                                                                |
+| İstemci *"Ana birim bunu reddetti: bu telefon, Nightscout'a kendisine ait olandan farklı bir belirteçle (token) veri gönderiyor"* diyor | İstemci daha önce kendi Nightscout belirtecini kullanıyordu ve şimdi başka bir belirteçle yazıyor. Örneğin Nightscout ayarlarına bir belirteç yazıldıktan sonra bu olabilir. İstemciyi ana birimde kaldırın ve tekrar ekleyin (bkz. [İstemcinin kendi Nightscout belirteci](#client-master-control-own-token)).                                                          |
+| İstemcideki NSClient günlüğü *"✕ SETTINGS … refused"* gösteriyor ve istemcinin ayarları artık ana birimi izlemiyor                      | Ana birimin ayarlar belgesini başka biri yazdı veya ana birimin yeni bir anahtarı var (örneğin verileri silindikten sonra). Eşleştirilmiş bir istemci, Nightscout'a bir sonraki bağlanışında yeni anahtarı kendiliğinden alır. Yalnızca Nightscout okuyan bir telefonun ana birimin QR koduna tekrar ihtiyacı vardır (**Yalnızca Nightscout okuma → QR kodunu göster**). |
+| İstemcinin kartı kırmızı renkte *"… Nightscout belirtecini kullanıyor"* gösteriyor                                                      | İstemci hâlâ ihtiyacından fazla yetkisi olan bir belirteçle yazıyor. Ana birim eşleştirmeden sonra istemciye kendi belirtecini gönderir, ancak yalnızca ana birimde bir yönetici belirteci varsa. Ana birimin belirtecini kontrol edin veya istemciyi bir QR kodu ile yeniden kurun.                                                                                     |
+| Bir istemci artık Nightscout'u okuyamıyor                                                                                               | İstemcinin belirteci silindi, örneğin istemci ana birimde kaldırıldığı için. İstemciyi tekrar ekleyin.                                                                                                                                                                                                                                                                   |
+| Nightscout web sitesinde girilen tedaviler uygulanmıyor                                                                                 | [Güçlendirilmiş modda](#client-master-control-hardened-mode) bu beklenen durumdur: tedavileri bunun yerine eşleştirilmiş bir istemcide girin.                                                                                                                                                                                                                            |
 
-For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Nightscout / senkronizasyon sorunları için önce [NSClient'te Sorun Giderme](../GettingHelp/TroubleshootingNsClient.md) sayfasına bakın.
 
 ---
 

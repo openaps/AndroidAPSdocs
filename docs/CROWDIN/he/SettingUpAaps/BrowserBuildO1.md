@@ -1,31 +1,31 @@
 (aaps-ci-option1)=
 
-# Option 1 – Generate a new keystore
+# אפשרות 1 – יצירת keystore חדש
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+זה חלק מ-[שלב 2 – יצירת keystore לחתימה](BrowserBuildKeystore.md) של [בנייה בדפדפן](BrowserBuild.md). יש לוודא שקראתם את [ההחלטה בין אפשרות 1 לאפשרות 2](#aaps-ci-preparation).
 ```
 
-Option 1 generates a brand-new signing keystore for you. It is suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+אפשרות 1 יוצרת בשבילכם keystore חתימה חדש לגמרי. היא מתאימה למשתמשים שבונים בפעם הראשונה, למי שאין לו JKS, או למי ששכח את הסיסמה או את ה-alias.
 
-## Choose your device
+## בחירת המכשיר
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+בונים מ**טלפון Android**? השתמשו במקום זה ב-[AAPS Builder](BrowserBuildAapsBuilder.md): הוא לא צריך קובץ הכנה.
 ```
 
-Follow the page that matches the device you are building from:
+פעלו לפי הדף שמתאים למכשיר שממנו אתם בונים:
 
-- **[Computer](BrowserBuildO1Computer.md)** – Windows, Mac or Linux.
+- **[מחשב](BrowserBuildO1Computer.md)** – Windows, Mac או Linux.
 - **[iPhone / iPad](BrowserBuildO1iPhone.md)**.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+אפשר להחליף מכשיר בכל זמן – פשוט פותחים את הדף המתאים.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO1Computer.md>
+מחשב <BrowserBuildO1Computer.md>
 iPhone / iPad <BrowserBuildO1iPhone.md>
 ```

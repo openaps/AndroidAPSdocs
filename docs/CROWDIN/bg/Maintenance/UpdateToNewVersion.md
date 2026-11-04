@@ -10,19 +10,19 @@
 - Когато излезе нова версия, в самото приложение **AAPS** ще получите информационно съобщение (банер) за новата версия.
 - Новата версия ще бъде обявена и във Facebook, когато излезе.
 - След излизането на новата версия, моля, прочетете внимателно [бележките към версиите](ReleaseNotes.md) и изяснете всички въпроси с общността във Facebook или Discord, преди да започнете актуализирането.
-- Updating from **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
-- Do not forget to [export your settings](ExportImportSettings.md). When you import them again after the update, you choose whether the pump settings are replaced too.
+- Актуализирате от **AAPS** 3.x? Първо прочетете [Какво се промени в AAPS v4](V4Changes.md): там са изброени функциите, които са преместени, преименувани или премахнати.
+- Не забравяйте да [експортирате настройките си](ExportImportSettings.md). Когато ги импортирате отново след актуализирането, вие избирате дали да се заменят и настройките на помпата.
 
 ## Актуализиране на AAPS с компилиране в браузъра
 
 Вече сте компилирали приложението AAPS в браузъра? Следвайте инструкциите за метода, който сте използвали:
 
-- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). Няма fork, който да синхронизирате.
-- **Fork and preparation file**: you run the **AAPS-CI** workflow in your own copy (fork) of AndroidAPS, a repository named `AndroidAPS` in your GitHub account, and the app lands in your Google Drive. Follow [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder**: компилирате от страницата **Build AAPS** на вашето частно хранилище (обикновено с име `my-aaps`) и изтегляте приложението от GitHub. Следвайте [Актуализиране на AAPS с AAPS Builder](#aaps-builder-updates). Няма fork, който да синхронизирате.
+- **Fork и подготвителен файл**: стартирате работния процес **AAPS-CI** във вашето собствено копие (fork) на AndroidAPS – хранилище с име `AndroidAPS` във вашия профил в GitHub, и приложението се записва във вашия Google Drive. Следвайте [Актуализиране в браузъра (fork)](./UpdateBrowserBuild.md).
 
 ## Актуализиране на AAPS с Android Studio
 
-Follow [these instructions](./UpdateComputerBuild.md).
+Следвайте [тези инструкции](./UpdateComputerBuild.md).
 
 ## Актуализиране на AAPS от командния ред
 
@@ -30,14 +30,14 @@ Follow [these instructions](./UpdateComputerBuild.md).
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-## After the update
+## След актуализирането
 
-These steps are the same for every build method. Проверете в [бележките към версиите](../Maintenance/ReleaseNotes.md) дали има специални инструкции след актуализирането.
+Тези стъпки са еднакви за всеки метод на компилиране. Проверете в [бележките към версиите](../Maintenance/ReleaseNotes.md) дали има специални инструкции след актуализирането.
 
 След като инсталирате новия apk файл:
 
-- you can check the **AAPS** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The current **AAPS** version can be viewed;
-- make sure you have imported your settings; and
-- please check your **AAPS** settings under **Settings** and ensure these remain accurate.
+- можете да проверите версията на **AAPS** на телефона си, като отворите **меню** (☰) горе вляво и след това **За приложението** (както е на екранната снимка по-долу). Можете да видите текущата версия на **AAPS**;
+- уверете се, че сте импортирали настройките си; и
+- моля, проверете настройките на **AAPS** в **Настройки** и се уверете, че те са все още правилни.
 
 ![Прозорец „За приложението“ с инсталираната версия на AAPS](../images/about_dialog_version.png)

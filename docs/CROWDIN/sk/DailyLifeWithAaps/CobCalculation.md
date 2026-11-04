@@ -2,7 +2,7 @@
 
 ## Ako AAPS vypočítava hodnotu COB?
 
-Keď používateľ zadá sacharidy k jedlu alebo ako korekciu sacharidmi, **AAPS** ich pripočíta k aktuálnym aktívnym sacharidom (**COB**). **AAPS** potom počíta vstrebávanie sacharidov používateľa na základe pozorovaných odchýlok **glykémie** používateľa. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). Nie je to nastavenie v **Profile** používateľa, ale **AAPS** ho počíta podľa nastavenia **ISF/I:C**. Udáva, o koľko mg/dl zvýši 1 g sacharidov **glykémiu** používateľa.
+Keď používateľ zadá sacharidy k jedlu alebo ako korekciu sacharidmi, **AAPS** ich pripočíta k aktuálnym aktívnym sacharidom (**COB**). **AAPS** potom počíta vstrebávanie sacharidov používateľa na základe pozorovaných odchýlok **glykémie** používateľa. Rýchlosť vstrebávania závisí od faktora citlivosti na sacharidy (**CSF**). Nie je to nastavenie v **Profile** používateľa, ale **AAPS** ho počíta podľa nastavenia **ISF/I:C**. Udáva, o koľko mg/dl zvýši 1 g sacharidov **glykémiu** používateľa.
 
 ## Faktor citlivosti na sacharidy
 
@@ -12,13 +12,13 @@ Vzorec, ktorý **AAPS** používa, je:
 
 Zmeny v **Profile** používateľa majú tento účinok:
 
-- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _zvýšenie_ **IC** – zvýši množstvo sacharidov vstrebaných každých 5 minút, a tým skráti celkový čas vstrebávania;
 
 - _zvýšenie_ **ISF** – zníži množstvo sacharidov vstrebaných každých 5 minút, a tým predĺži celkový čas vstrebávania; a
 
-- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
+- _zmena_ **percenta profilu** – zvýši alebo zníži obe hodnoty, a preto nemá vplyv na čas vstrebávania sacharidov.
 
-For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. Za každých 20 mg/dl, o ktoré stúpne **glykémia** používateľa, **AAPS** započíta 1 g sacharidov ako vstrebaný. Výpočet **COB** ovplyvňuje aj kladný **IOB**. Ak teda **AAPS** predpovedá, že **glykémia** používateľa kvôli **IOB** klesne o 20 mg/dl, ale namiesto toho zostane stabilná, **AAPS** tiež započíta 1 g sacharidov ako vstrebaný.
+Ak má napríklad váš **profil** **ISF** 100 a **I:C** 5, váš faktor citlivosti na sacharidy bude 20. Za každých 20 mg/dl, o ktoré stúpne **glykémia** používateľa, **AAPS** započíta 1 g sacharidov ako vstrebaný. Výpočet **COB** ovplyvňuje aj kladný **IOB**. Ak teda **AAPS** predpovedá, že **glykémia** používateľa kvôli **IOB** klesne o 20 mg/dl, ale namiesto toho zostane stabilná, **AAPS** tiež započíta 1 g sacharidov ako vstrebaný.
 
 Sacharidy sa vstrebávajú aj spôsobmi opísanými nižšie, podľa toho, ktorý algoritmus citlivosti si používateľ v **AAPS** vybral.
 
@@ -47,7 +47,7 @@ Ak sa namiesto hodnoty vypočítanej z odchýlok **glykémie** použije minimál
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Zisťovanie nesprávnych hodnôt COB
 
-**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. V takom prípade sa používateľovi po použití bolusovej kalkulačky zobrazí na potvrdzovacej obrazovke ďalšia nápoveda.
+**AAPS** vás upozorní, ak sa chystáte podať bolus s **COB** z predchádzajúceho jedla a algoritmus vyhodnotí aktuálny výpočet **COB** ako nesprávny. V takom prípade sa používateľovi po použití bolusovej kalkulačky zobrazí na potvrdzovacej obrazovke ďalšia nápoveda.
 
 ### Ako AAPS zisťuje nesprávne hodnoty COB?
 
@@ -62,7 +62,7 @@ Na obrázku vyššie bola v 66 % času absorpcia sacharidov vypočítaná pomoco
 - Zvážte zrušenie ošetrenia – namiesto OK stlačte „Zrušiť“.
 - Vypočítajte si nadchádzajúce jedlo znova pomocou bolusovej kalkulačky a nechajte políčko **COB** nezaškrtnuté.
 - Ak potrebujete korekčný bolus, zadajte ho ručne.
-- Be careful not to overdose or stack insulin!
+- Dávajte pozor, aby ste sa nepredávkovali a nekumulovali inzulín!
 
 
 ### Prečo algoritmus správne nedetekuje COB?
@@ -87,7 +87,7 @@ Obrazovku **História ošetrení** môžete použiť na opravu chybného záznam
 ![Vymazanie záznamu sacharidov z histórie ošetrení](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
 1. Skontrolujte a zapamätajte si aktuálne **COB** a **IOB** na hlavnej obrazovke **AAPS**.
-2. Otvorte **História ošetrení** (bočné menu → *História ošetrení*), kartu **Sacharidy a bolusy**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
+2. Otvorte **História ošetrení** (bočné menu → *História ošetrení*), kartu **Sacharidy a bolusy**. Podľa typu pumpy sa sacharidy môžu zobraziť spolu s inzulínom v jednom riadku alebo ako samostatný záznam (napr. pri Dana RS).
 3. **Dlho podržte** chybný záznam sacharidov – zoznam sa prepne do **režimu výberu** so zaškrtávacím políčkom na každom riadku a záznam sa zaškrtne (vyššie označené ako **1**). Zaškrtnite aj ďalšie záznamy, ktoré chcete odstrániť.
 4. Ťuknite na ikonu **🗑 Vymazať** v hornej lište (označená **2**) a potvrďte – potvrdzovací dialóg presne vypíše, čo sa odstráni.
 5. Uistite sa, že sacharidy boli úspešne odstránené – znova skontrolujte **COB** na hlavnej obrazovke **AAPS**.

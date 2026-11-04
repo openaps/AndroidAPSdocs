@@ -49,7 +49,7 @@ Stiahnite a nainštalujte [aplikáciu ESEL](https://github.com/BernhardRo/Esel/t
 
 ![ESEL Broadcast](../images/ESELpatch.png)
 
-If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
+Ak spustíte ESEL s novou inštaláciou Eversense prvýkrát, môže trvať až 15 minút, kým sa v xDrip zobrazia prvé hodnoty!
 
 4. V [**Konfigurácia → Zdroj glykémie**](#Config-Builder-bg-source) nastavte ako zdroj glykémie „MM640g“.
 

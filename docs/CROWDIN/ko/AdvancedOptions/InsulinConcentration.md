@@ -1,217 +1,217 @@
 (Insulin-Concentration)=
-# Insulin Concentration
+# 인슐린 농도
 
 ```{warning}
-All commercial pumps are designed to be used with Insulin U100 **ONLY**. Using another insulin concentration in a pump can be dangerous. Although more and more users run AAPS with other concentrations, the conversion must always be managed and often leads to errors (even for very skilled users!).
+모든 상용 펌프는 U100 인슐린**만** 사용하도록 설계되어 있습니다. 펌프에서 다른 인슐린 농도를 사용하는 것은 위험할 수 있습니다. 다른 농도로 AAPS를 사용하는 사용자가 점점 늘고 있지만, 환산은 항상 직접 관리해야 하며 자주 오류로 이어집니다(아주 숙련된 사용자에게도!).
 ```
 
-## Reminder of the basics of insulin
+## 인슐린 기본 사항 다시 보기
 
-This chapter covers the essential concepts of insulin measurement and delivery.
+이 장에서는 인슐린 측정과 주입의 핵심 개념을 설명합니다.
 
-### The insulin unit: a measure of action
+### 인슐린 단위: 작용의 측정 단위
 
-Insulin is measured in **International Units (IU)**, which quantify its biological activity (power to lower blood sugar), not just its physical mass.
+인슐린은 **국제 단위(IU)**로 측정합니다. 이 단위는 단순한 물리적 질량이 아니라 생물학적 활성(혈당을 낮추는 힘)을 나타냅니다.
 
-- **Definition:** 1 IU corresponds to the activity of a specific amount of insulin, standardized to **approximately 0.04167 mg**.
-- **Key Point:** A "unit" means the same biological effect across all insulin types, ensuring consistent dosing.
+- **정의:** 1 IU는 일정한 양의 인슐린이 가진 활성에 해당하며, **약 0.04167 mg**으로 표준화되어 있습니다.
+- **핵심:** "단위"는 모든 인슐린 종류에서 같은 생물학적 효과를 뜻하므로 일정한 용량을 보장합니다.
 
-### Insulin concentrations
+### 인슐린 농도
 
-Insulin comes in different strengths, defined by the number of units per millilitre (ml).
+인슐린은 여러 가지 농도로 나오며, 농도는 밀리리터(ml)당 단위 수로 정합니다.
 
-- **U100:** The global standard, containing **100 IU/ml**.
-- **U200-U500:** More concentrated insulins (e.g. U200 has 200 IU/ml) for smaller injection volumes.
-- **U40/U50:** Less common, historical concentrations (40 IU/ml and 50 IU/ml). **U40 requires U40-specific syringes.**
-- **Manual Dilution:** A clinical practice to create highly diluted insulin (e.g. U50, U10) for rare cases like neonatal use or extreme sensitivity. This requires meticulous pharmacy preparation.
+- **U100:** 세계 표준이며 **100 IU/ml**를 포함합니다.
+- **U200-U500:** 주사량을 줄이기 위한 더 농축된 인슐린입니다(예: U200은 200 IU/ml).
+- **U40/U50:** 덜 흔한, 예전부터 써 온 농도입니다(40 IU/ml 및 50 IU/ml). **U40은 U40 전용 주사기가 필요합니다.**
+- **수동 희석:** 신생아나 극도로 높은 민감도와 같은 드문 경우를 위해 아주 묽게 희석한 인슐린(예: U50, U10)을 만드는 임상적 방법입니다. 이를 위해서는 약국에서 매우 꼼꼼하게 준비해야 합니다.
 
 ```{admonition} Critical Warning
 :class: danger
-Using a concentration with a non-matching device is extremely dangerous and can cause a severe overdose or underdose. **Always triple-check that the insulin concentration matches the syringe, pen, or pump specifications.**
+농도가 맞지 않는 기기에 인슐린을 사용하는 것은 매우 위험하며, 심각한 과다 주입이나 과소 주입을 일으킬 수 있습니다. **인슐린 농도가 주사기, 펜 또는 펌프 사양과 맞는지 항상 세 번 확인하십시오.**
 ```
 
-## When is a non-standard concentration used?
+## 비표준 농도는 언제 사용합니까?
 
-While insulin pumps are designed for U100 insulin, certain specific medical situations require non-standard concentrations. These scenarios require extreme caution and meticulous management.
+인슐린 펌프는 U100 인슐린용으로 설계되었지만, 특정한 의료 상황에서는 비표준 농도가 필요합니다. 이런 경우에는 매우 신중하고 꼼꼼하게 관리해야 합니다.
 
-### Use Case 1: diluted insulin for very low doses
+### 사용 사례 1: 아주 적은 용량을 위한 희석 인슐린
 
-- **Scenario:** Managing type 1 diabetes in very young babies and toddlers.
-- **Problem:** Their insulin needs are so low that the pump's minimum deliverable dose (e.g. 0.05 U) may still be too large, leading to difficulty in achieving precise glycemic control and a high risk of hypoglycemia.
-- **Solution:** Use highly diluted insulin (e.g. U10, which is 10 IU/ml).
-- **Effect:** This increases the volume of fluid delivered per unit of insulin. By making the "packages" of insulin larger in volume but weaker in concentration, it allows much finer adjustments and greater dosing accuracy with the pump's existing settings.
+- **상황:** 아주 어린 아기와 유아의 1형 당뇨병 관리.
+- **문제:** 필요한 인슐린 양이 너무 적어서 펌프의 최소 주입량(예: 0.05 U)도 여전히 너무 클 수 있습니다. 그래서 혈당을 정밀하게 조절하기 어렵고 저혈당 위험이 높습니다.
+- **해결 방법:** 아주 묽게 희석한 인슐린을 사용합니다(예: U10, 즉 10 IU/ml).
+- **효과:** 인슐린 1단위당 주입되는 액체의 양이 늘어납니다. 인슐린 "한 묶음"의 부피는 크게 하고 농도는 약하게 하면, 펌프의 기존 설정으로 훨씬 더 세밀하게 조정하고 더 정확하게 주입할 수 있습니다.
 
 ```{admonition} Critical Safety Note on Dilution
 :class: danger
-Insulin dilution is a high-risk procedure that must never be attempted at home without specific training and medical supervision. It must be performed by a healthcare professional or a trained caregiver using sterile diluent specifically designed for that insulin type. **Never use tap water, saline, or any other fluid**, as this can deactivate the insulin, alter its action, and introduce dangerous contaminants.
+인슐린 희석은 위험이 높은 절차입니다. 전문 교육과 의료진의 감독 없이 집에서 절대 시도하지 마십시오. 희석은 의료 전문가나 교육받은 보호자가 해당 인슐린 종류 전용으로 만든 멸균 희석액을 사용하여 해야 합니다. **수돗물, 식염수 또는 다른 액체는 절대 사용하지 마십시오.** 인슐린이 비활성화되거나 작용이 바뀌고, 위험한 오염 물질이 들어갈 수 있습니다.
 ```
 
-### Use Case 2: concentrated insulin for high insulin needs or significant insulin resistance
+### 사용 사례 2: 인슐린 필요량이 많거나 인슐린 저항성이 큰 경우를 위한 농축 인슐린
 
-- **Scenario:** Managing adults or adolescents with significant insulin resistance, or individuals who experience localized pain from the additives in standard insulin.
-- **Problem:**
-  1. **High Needs:** Very high daily insulin requirements can exceed the pump's maximum bolus or daily delivery limits.
-  1. **Pain:** The preservatives in insulin can cause stinging or irritation upon infusion.
-- **Solution:** Use a more concentrated insulin, such as U200 (200 IU/ml).
-- **Effect:** This delivers the required insulin dose in half the volume. For the user, the pump's internal settings must be adjusted (e.g. basal rates and boluses halved) to account for the doubled concentration, ensuring the correct number of units are delivered. This also reduces the volume of potentially irritating fluid delivered subcutaneously.
+- **상황:** 인슐린 저항성이 큰 성인이나 청소년, 또는 표준 인슐린의 첨가물 때문에 주입 부위에 통증이 있는 사람의 관리.
+- **문제:**
+  1. **많은 필요량:** 하루 인슐린 필요량이 아주 많으면 펌프의 최대 볼러스나 하루 주입 한도를 넘을 수 있습니다.
+  1. **통증:** 인슐린의 보존제 때문에 주입할 때 따끔거림이나 자극이 생길 수 있습니다.
+- **해결 방법:** U200(200 IU/ml)과 같은 더 농축된 인슐린을 사용합니다.
+- **효과:** 필요한 인슐린 용량을 절반의 부피로 주입합니다. 사용자는 두 배가 된 농도에 맞추어 펌프 내부 설정을 조정해야 합니다(예: 기저 주입량과 볼러스를 절반으로). 그래야 올바른 단위 수가 주입됩니다. 또한 피하로 주입되는, 자극을 줄 수 있는 액체의 양도 줄어듭니다.
 
-## How to manage insulin concentration with AAPS (AAPS 3 and earlier)?
+## AAPS에서 인슐린 농도를 관리하는 방법 (AAPS 3 이하)
 
-Using non-U100 insulin in an AAPS loop requires meticulous configuration to align the software's calculations with the actual insulin being delivered. One common method is "Using a Modified Profile".
+AAPS 루프에서 U100이 아닌 인슐린을 사용하려면, 소프트웨어의 계산을 실제로 주입되는 인슐린과 맞추기 위해 매우 꼼꼼하게 설정해야 합니다. 흔히 쓰는 방법 하나는 "수정된 프로파일 사용"입니다.
 
-### Using a modified profile
+### 수정된 프로파일 사용
 
-This method involves tricking AAPS into thinking the patient's insulin needs are lower than they are, to compensate for the pump delivering more concentrated insulin than it is designed for. The use case below is for U200 concentration put into the pump, designed for U100.
+이 방법은 펌프가 설계된 것보다 더 농축된 인슐린을 주입하는 것을 보정하기 위해, 환자의 인슐린 필요량이 실제보다 적다고 AAPS가 믿게 만드는 방법입니다. 아래 사용 사례는 U100용으로 설계된 펌프에 U200 농도의 인슐린을 넣은 경우입니다.
 
-- **The Core Problem:** A pump designed for U100 is calibrated to deliver **10 µL** for **1 unit**. If you fill it with U200 (1 unit of U200 corresponds to **5 µL** of insulin), when you select **1 unit** on the pump it delivers **10 µL** of insulin, but that volume now contains **2 units of U200 insulin**. This leads to a 100% overdose.
-- **The "Profile Switch 50%" Solution:** To correct this, the patient's entire therapy profile is scaled to be "twice as weak" inside AAPS.
-  1. The user creates a new profile based on their standard U100 profile, using the "Profile Switch **50%**" function.
-  1. This creates a new profile where:
-     - **Basal rates** are halved.
-     - **Insulin-to-Carb Ratio (IC)** is doubled (e.g. 1:10g becomes 1:20g).
-     - **Insulin Sensitivity Factor (ISF)** is doubled (e.g. 1 unit lowers BG by 50 mg/dL (2.8 mmol/L) becomes 1 unit lowers it by 100 mg/dL (5.6 mmol/L)).
-- **The Corrected Result:** AAPS now believes the patient only needs half the insulin. When it calculates and commands a **1-unit** bolus, the pump (designed for U100 but filled with U200) delivers the **10 µL**, which contains **2 real units of U200 insulin**. Because AAPS calculated this dose based on a "half-strength" profile, this **2 real-unit** delivery is the correct, intended dose. The loop's "half-strength" math aligns with the pump's "double-strength" delivery.
+- **핵심 문제:** U100용으로 설계된 펌프는 **1단위**에 **10 µL**를 주입하도록 맞추어져 있습니다. 펌프를 U200으로 채우면(U200 1단위는 인슐린 **5 µL**에 해당), 펌프에서 **1단위**를 선택할 때 인슐린 **10 µL**가 주입되지만, 이 부피에는 이제 **U200 인슐린 2단위**가 들어 있습니다. 이로 인해 100% 과다 주입이 됩니다.
+- **"프로파일 전환 50%" 해결 방법:** 이를 바로잡기 위해, AAPS 안에서 환자의 전체 치료 프로파일을 "두 배 약하게" 조정합니다.
+  1. 사용자는 "프로파일 전환 **50%**" 기능을 사용하여 표준 U100 프로파일을 바탕으로 새 프로파일을 만듭니다.
+  1. 그러면 다음과 같은 새 프로파일이 만들어집니다:
+     - **기저 주입량**이 절반이 됩니다.
+     - **인슐린 대 탄수화물 비율(IC)**이 두 배가 됩니다(예: 1:10g이 1:20g이 됨).
+     - **인슐린 민감도 계수(ISF)**가 두 배가 됩니다(예: 1단위가 혈당을 50 mg/dL(2.8 mmol/L) 낮추던 것이 100 mg/dL(5.6 mmol/L) 낮추는 것으로 바뀜).
+- **바로잡힌 결과:** 이제 AAPS는 환자에게 인슐린이 절반만 필요하다고 믿습니다. AAPS가 **1단위** 볼러스를 계산하고 명령하면, 펌프(U100용으로 설계되었지만 U200으로 채움)는 **10 µL**를 주입하며, 여기에는 **실제 U200 인슐린 2단위**가 들어 있습니다. AAPS가 이 용량을 "절반 강도" 프로파일을 바탕으로 계산했기 때문에, 이 **실제 2단위** 주입이 올바른 의도된 용량입니다. 루프의 "절반 강도" 계산이 펌프의 "두 배 강도" 주입과 맞아떨어집니다.
 
 ```{admonition} Critical Risks and Common Errors
 :class: caution
 
-This method introduces significant risks by creating a persistent disconnect between the app's data and physical reality.
+이 방법은 앱의 데이터와 실제 상황 사이에 계속 차이를 만들기 때문에 큰 위험이 있습니다.
 
-**The Primary Error: The "External Bolus" Mismatch**
+**주요 오류: "외부 볼러스" 불일치**
 
-The most common mistake occurs when delivering and logging insulin **outside** of the AAPS-pump system.
+가장 흔한 실수는 AAPS-펌프 시스템 **밖에서** 인슐린을 주입하고 기록할 때 생깁니다.
 
-- **The Scenario:** AAPS, using the modified profile, calculates a **5-unit** bolus for a meal. The user injects this with a U200 pen.
-- **The Dual Error:**
-  1. **Wrong Dose Selection:** The user thinks "AAPS calculates 5 units" and, because of the U200 pen, expects to deliver **5 real units of U200** without any conversion. However, because the profile is halved, the body actually needs **10 real units**. This is a **50% underdose**, which can lead to hyperglycemia.
-  1. **Wrong Insulin-on-Board (IOB) Calculation (Overestimated IOB):** When the user records this external bolus in AAPS, they log **5 units**. This is incorrect. Since the AAPS profile is for U200, **1 unit in AAPS equals 2 real units**. Therefore, the 5 real units delivered by the pen should be logged as **2.5 units** in the app. By logging 5 units, the user overestimates the IOB by 100%. AAPS now thinks there are 5 "concentrated units" on board (equivalent to 10 real units) when only 5 real units are active. This can cause the loop to suppress basal insulin or reduce future boluses, worsening the hyperglycemia risk from the initial underdose.
+- **상황:** 수정된 프로파일을 사용하는 AAPS가 식사에 대해 **5단위** 볼러스를 계산합니다. 사용자는 이 볼러스를 U200 펜으로 주사합니다.
+- **이중 오류:**
+  1. **잘못된 용량 선택:** 사용자는 "AAPS가 5단위를 계산했다"고 생각하고, U200 펜이므로 아무 환산 없이 **실제 U200 5단위**를 주입하려고 합니다. 그러나 프로파일이 절반으로 줄어 있으므로, 몸에 실제로 필요한 양은 **실제 10단위**입니다. 이것은 **50% 과소 주입**이며, 고혈당으로 이어질 수 있습니다.
+  1. **잘못된 활성 인슐린(IOB) 계산(IOB 과대 평가):** 사용자가 이 외부 볼러스를 AAPS에 기록할 때 **5단위**로 기록합니다. 이것은 잘못되었습니다. AAPS 프로파일이 U200용이므로, **AAPS의 1단위는 실제 2단위와 같습니다**. 따라서 펜으로 주입한 실제 5단위는 앱에 **2.5단위**로 기록해야 합니다. 5단위로 기록하면 사용자는 IOB를 100% 과대 평가하게 됩니다. 실제로는 5단위만 활성인데, AAPS는 이제 "농축 단위" 5단위(실제 10단위에 해당)가 몸에 남아 있다고 생각합니다. 이 때문에 루프가 기저 인슐린을 멈추거나 이후 볼러스를 줄일 수 있으며, 처음의 과소 주입으로 생긴 고혈당 위험이 더 커집니다.
 
-**Other Risks:**
+**기타 위험:**
 
-- **Misleading Data and Reports:** All data within AAPS or Nightscout - including IOB, total daily dose (TDD), and historical reports - is in "concentrated units". This gives a distorted picture to the user and their medical team. A doctor reviewing a report might see a TDD of 30 units and not realize the patient actually received 60 real units, leading to incorrect therapy assessments.
-- **Altered Mental Model:** After prolonged use, the user begins to "think" in the app's halved values. They internalize that their ISF is 100 mg/dL (5.6 mmol/L) or their basal is 0.5 U/hr, forgetting these are "concentrated". This creates a dangerous dependency on the system and a loss of touch with their actual insulin requirements, which is critical for safety during pump failures or app issues.
+- **잘못된 데이터와 보고서:** AAPS나 Nightscout의 모든 데이터(IOB, 총 일일 용량(TDD), 이력 보고서 포함)가 "농축 단위"로 되어 있습니다. 이 때문에 사용자와 의료진이 상황을 잘못 보게 됩니다. 보고서를 보는 의사는 TDD 30단위를 보고 환자가 실제로는 60단위를 받았다는 것을 알아채지 못할 수 있으며, 그래서 치료를 잘못 평가할 수 있습니다.
+- **바뀐 사고방식:** 오래 사용하면 사용자는 앱의 절반 값으로 "생각"하기 시작합니다. 자신의 ISF가 100 mg/dL(5.6 mmol/L)이고 기저가 0.5 U/h라고 기억하게 되고, 이 값이 "농축" 값이라는 것을 잊어버립니다. 그러면 시스템에 위험하게 의존하게 되고 실제 인슐린 필요량에 대한 감각을 잃게 됩니다. 이것은 펌프 고장이나 앱 문제가 있을 때 안전에 매우 중요합니다.
 
-**Conclusion:** This method requires absolute vigilance, forcing the user to constantly convert between a "concentrated world" in the app and the physical world. Any external insulin delivery or data review breaks this mental model and poses a severe risk. It fundamentally changes the meaning of every number in the system.
+**결론:** 이 방법은 늘 주의를 기울여야 하며, 사용자는 앱의 "농축된 세계"와 실제 세계 사이를 계속 환산해야 합니다. 외부 인슐린 주입이나 데이터 검토가 있으면 이 사고방식이 깨지고, 심각한 위험이 생깁니다. 이 방법은 시스템에 있는 모든 숫자의 의미를 근본적으로 바꿉니다.
 ```
 
-## Using the concentration parameter (new feature in AAPS 4.0)
+## 농도 매개변수 사용 (AAPS 4.0의 새 기능)
 
-To mitigate the risks of using a modified profile, a new feature manages insulin concentration directly within AAPS. This feature handles the conversions automatically, allowing the main application to always work in **Real International Units (IU)**.
+수정된 프로파일 사용의 위험을 줄이기 위해, 새 기능이 AAPS 안에서 인슐린 농도를 직접 관리합니다. 이 기능은 환산을 자동으로 처리하므로, 메인 앱은 항상 **실제 국제 단위(IU)**로 작동합니다.
 
-### How it works: automatic conversion
+### 작동 방식: 자동 환산
 
-The core principle is a clear separation between the app's logic and the pump's communication:
+핵심 원칙은 앱의 로직과 펌프 통신을 확실하게 나누는 것입니다:
 
-- **AAPS Uses International Units:** The main AAPS database, algorithms, reports, and logs **always use Real IU**. This means your IOB, TDD, and therapy settings (basal, ISF, IC) reflect the actual biological insulin units.
-- **Pump Driver Uses Concentrated Units:** All values sent to or received from the pump driver are automatically converted to manage "Concentrated Units" within the pump driver, based on the selected concentration.
-  - **Example with U200:** When the user requests a **1 unit bolus**, the pump driver receives **0.5 CU (Concentrated Units)** before sending it to the pump. The pump (set for U100) then delivers **5 µL**, which contains **1 IU of U200 insulin**.
+- **AAPS는 국제 단위를 사용합니다:** AAPS의 메인 데이터베이스, 알고리즘, 보고서, 로그는 **항상 실제 IU를 사용합니다**. 즉, IOB, TDD, 치료 설정(기저, ISF, IC)은 실제 생물학적 인슐린 단위를 나타냅니다.
+- **펌프 드라이버는 농축 단위를 사용합니다:** 펌프 드라이버로 보내거나 펌프 드라이버에서 받는 모든 값은 선택한 농도에 따라 자동으로 환산되어, 펌프 드라이버 안에서는 "농축 단위"로 관리됩니다.
+  - **U200 예시:** 사용자가 **1단위 볼러스**를 요청하면, 펌프 드라이버는 이를 펌프로 보내기 전에 **0.5 CU(농축 단위)**로 받습니다. 그러면 펌프(U100으로 설정됨)는 **5 µL**를 주입하며, 여기에는 **U200 인슐린 1 IU**가 들어 있습니다.
 
-### Benefits and remaining risks
+### 장점과 남은 위험
 
-**Benefits:**
+**장점:**
 
-- Eliminates the need for a modified profile and its associated mental conversion errors.
-- Users can always "think" in Real IU.
-- For an external bolus with a pen, just select the expected amount of insulin on the pen (whatever the pen and insulin concentration used). No conversion is needed, as pens U100 and U200 always use IU for unit selection.
-- All AAPS reports and data (TDD, IOB) are in Real IU, providing clarity for the user and their medical team.
-- Removes the risk of miscalculating external boluses, as they are logged in Real IU.
+- 수정된 프로파일과 그에 따른 머릿속 환산 오류가 필요 없어집니다.
+- 사용자는 항상 실제 IU로 "생각"할 수 있습니다.
+- 펜으로 외부 볼러스를 줄 때는 펜에서 원하는 인슐린 양을 그대로 선택하면 됩니다(어떤 펜과 인슐린 농도를 사용하든 상관없습니다). U100 펜과 U200 펜은 단위 선택에 항상 IU를 사용하므로 환산이 필요 없습니다.
+- AAPS의 모든 보고서와 데이터(TDD, IOB)는 실제 IU로 되어 있어 사용자와 의료진이 명확하게 볼 수 있습니다.
+- 외부 볼러스가 실제 IU로 기록되므로, 외부 볼러스를 잘못 계산할 위험이 없어집니다.
 
-**Remaining Risks:**
+**남은 위험:**
 
-- **Mental Model Transition:** Users switching from the "modified profile" method must switch their profile back to the correct real profile (i.e. twice as strong if they come from U200), and need time to adjust their **mental model**. After being accustomed to "Concentrated" values in the app, they must re-learn to trust the **real, unhidden IU values** displayed everywhere. This period of adjustment carries a risk of misinterpretation.
-- **Manual Pump Bolus:** Using the pump's own bolus function (bypassing AAPS) results in a 100% overdose, as the pump delivers U200 insulin using U100 volume calculations.
-- **General Warning:** Using non-standard concentrations remains an advanced procedure with risks and is not officially recommended.
+- **사고방식의 전환:** "수정된 프로파일" 방법에서 바꾸는 사용자는 프로파일을 올바른 실제 프로파일로 되돌려야 하며(즉, U200에서 왔다면 두 배 강하게), **사고방식**을 바꾸는 데 시간이 필요합니다. 앱에서 "농축" 값에 익숙해진 후에는, 모든 곳에 표시되는 **숨김 없는 실제 IU 값**을 믿는 법을 다시 배워야 합니다. 이 적응 기간에는 값을 잘못 해석할 위험이 있습니다.
+- **펌프에서 수동 볼러스:** 펌프 자체의 볼러스 기능을 사용하면(AAPS를 거치지 않음) 100% 과다 주입이 됩니다. 펌프가 U100 부피 계산으로 U200 인슐린을 주입하기 때문입니다.
+- **일반 경고:** 비표준 농도 사용은 여전히 위험이 있는 고급 절차이며, 공식적으로 권장하지 않습니다.
 
 ```{admonition} Never use the pump's own interface (tube pump users) to deliver a bolus manually
 :class: danger
-Stick a permanent note on your pump **"U200 Insulin"** as a reminder, to never forget it!
+절대 잊지 않도록 펌프에 **"U200 인슐린"** 이라고 쓴 메모를 영구적으로 붙여 두십시오!
 ```
 
-### User interface display
+### 사용자 인터페이스 표시
 
-To provide clarity, the user interface shows both real and concentrated units where relevant. Note that the user interface remains unchanged if the current insulin is U100.
+명확하게 보여 주기 위해, 사용자 인터페이스는 필요한 곳에 실제 단위와 농축 단위를 모두 표시합니다. 현재 인슐린이 U100이면 사용자 인터페이스는 바뀌지 않습니다.
 
-**Display Examples:**
+**표시 예시:**
 
-- **Bolus Progress Dialog:**
-  - The Bolus Progress dialog is within the core AAPS application, so only the information in IU is shown (consistent with the user selection): **`2.50 U / 10.00 U delivered`**
-- **Pump Driver Interface (Current Status):**
-  - Within the Pump overview, the delivered amount is shown in both units; for example, if `U200` is selected: **`Last Bolus: 10 U (5 CU) (10')`**
+- **볼러스 진행 대화 상자:**
+  - 볼러스 진행 대화 상자는 AAPS 핵심 앱 안에 있으므로 IU 정보만 표시됩니다(사용자가 선택한 값과 같음): **`2.50 U / 10.00 U 주입됨`**
+- **펌프 드라이버 화면(현재 상태):**
+  - 펌프 개요 화면에서는 주입량이 두 단위로 모두 표시됩니다. 예를 들어 `U200`을 선택한 경우: **`마지막 볼러스: 10 U (5 CU) (10')`**
 
-**Please Note:** Both units (U and CU) are only visible in the main Pump overview. Depending on your specific pump, you can have other screens where only the Concentrated Units are shown. Historical data within pump drivers will typically remain in "Concentrated Units".
+**참고:** 두 단위(U와 CU)는 메인 펌프 개요 화면에서만 보입니다. 펌프에 따라 농축 단위만 표시되는 다른 화면이 있을 수 있습니다. 펌프 드라이버 안의 이력 데이터는 보통 "농축 단위"로 남습니다.
 
-### Enabling the feature
+### 기능 활성화
 
-Due to the inherent safety risks, this parameter is not enabled by default. To activate it, finish Objective 3 and enable **Insulin concentration support** within General Settings.
+안전 위험이 있으므로 이 매개변수는 기본으로 활성화되어 있지 않습니다. 이 기능을 켜려면 목표 3을 완료하고 일반 설정에서 **인슐린 농도 지원**을 활성화하십시오.
 
-### Create a new insulin with another concentration
+### 다른 농도의 새 인슐린 만들기
 
-To create an insulin with another concentration, first open **Manage → Insulin settings**.
+다른 농도의 인슐린을 만들려면 먼저 **관리 → 인슐린 설정**을 여십시오.
 
-- Click the "+" icon at the bottom of the screen.
-- Select the new expected concentration from the dropdown menu (U10, U20, U50, U100, U200 are available).
-  - Diluted concentrations like U10, U20 or U50 are for children with very low basal rates.
-  - U200 is more for adults with high insulin needs.
+- 화면 아래쪽의 "+" 아이콘을 누르십시오.
+- 드롭다운 메뉴에서 원하는 새 농도를 선택하십시오(U10, U20, U50, U100, U200을 사용할 수 있습니다).
+  - U10, U20 또는 U50 같은 희석 농도는 기저 주입량이 아주 낮은 어린이를 위한 것입니다.
+  - U200은 주로 인슐린 필요량이 많은 성인용입니다.
 
-  ![The concentration dropdown in Insulin settings](../images/v4/Insulin/insulin_concentration_dropdown.png)
+  ![인슐린 설정의 농도 드롭다운](../images/v4/Insulin/insulin_concentration_dropdown.png)
 
-- Adjust peak time, Duration of Insulin Action (DIA), and customize the Insulin Nickname (optional).
-- Use the save button at the top right of the screen.
+- 피크 시간과 인슐린 작용 시간(DIA)을 조정하고, 필요하면 인슐린 별명을 정하십시오.
+- 화면 오른쪽 위의 저장 버튼을 누르십시오.
 
-At this step the insulin has been created, but cannot be selected directly from **Insulin settings**.
+이 단계에서 인슐린은 만들어졌지만, **인슐린 설정**에서 바로 선택할 수는 없습니다.
 
-### Switch concentration from U100 to Uxxx (AAPS 4)
+### U100에서 Uxxx로 농도 전환 (AAPS 4)
 
 ```{admonition} Switching concentration is only allowed during a reservoir or patch/pod change
 :class: warning
-For safety reasons, AAPS only records a concentration switch during a Reservoir Change or Patch/Pod Change.
+안전을 위해 AAPS는 레저버 교체나 패치/Pod 교체 때에만 농도 전환을 기록합니다.
 ```
 
-When you start from U100 insulin, all your profile, historical data and reports are consistent with the International Units standard, so the switch is very "easy":
+U100 인슐린에서 시작하는 경우, 모든 프로파일, 이력 데이터, 보고서가 국제 단위 표준과 맞으므로 전환이 아주 "쉽습니다":
 
-- For a Patch/Pod pump, you have a dedicated step when you change the pump, to select the insulin you put into it.
-- For a tube pump, click the Prime/Fill button (for Insulin Change) within the Overview (expanded status bar view), then click the "Change" button.
+- 패치/Pod 펌프는 펌프를 교체할 때 넣은 인슐린을 선택하는 전용 단계가 있습니다.
+- 튜브 펌프는 개요 화면(상태 표시줄을 펼친 보기)에서 프라임/채우기 버튼(인슐린 교체용)을 누른 다음 "변경" 버튼을 누르십시오.
 
-1. Select the target concentration in the dropdown menu (e.g. `U200`).
-1. Then select the right insulin below. Until you confirm, the caption above its name says **Will be activated** (instead of **Currently active**).
+1. 드롭다운 메뉴에서 목표 농도를 선택하십시오(예: `U200`).
+1. 그런 다음 아래에서 알맞은 인슐린을 선택하십시오. 확인하기 전까지는 인슐린 이름 위에 (**현재 사용 중** 대신) **활성화 예정**이라고 표시됩니다.
 
-   ![An insulin picked but not confirmed yet: Will be activated](../images/v4/Insulin/insulin_will_be_activated.png)
+   ![선택했지만 아직 확인하지 않은 인슐린: 활성화 예정](../images/v4/Insulin/insulin_will_be_activated.png)
 
-1. **Important:** the concentration switch is only recorded within AAPS after the Profile Switch is applied to the pump.
-   - This step is mandatory for all Patch/Pod pumps.
-   - For tube pumps, wait for the Profile Switch to be applied to the pump, or within **Manage → Profile** or **Insulin settings**.
+1. **중요:** 농도 전환은 프로파일 전환이 펌프에 적용된 후에만 AAPS에 기록됩니다.
+   - 이 단계는 모든 패치/Pod 펌프에서 필수입니다.
+   - 튜브 펌프는 프로파일 전환이 펌프에 적용될 때까지 기다리거나, **관리 → 프로파일** 또는 **인슐린 설정**에서 적용하십시오.
 
-That's all!
+이것으로 끝입니다!
 
-If a temporary **Profile Switch** (one with a duration) is running when you change the insulin, the new insulin is also given to the profile that comes back when the temporary switch ends. The old insulin does not come back.
+인슐린을 바꿀 때 임시 **프로파일 전환**(기간이 있는 전환)이 실행 중이면, 임시 전환이 끝난 후 돌아오는 프로파일에도 새 인슐린이 적용됩니다. 이전 인슐린은 돌아오지 않습니다.
 
-### Switch concentration for users with U200 insulin associated with a 50% profile (AAPS 4)
+### 50% 프로파일과 함께 U200 인슐린을 사용하던 사용자의 농도 전환 (AAPS 4)
 
-When you start from U200 already used in your pump, but associated with a 50% profile, you have to do additional steps compared to the standard switch from U100 insulin.
+이미 펌프에서 U200을 50% 프로파일과 함께 사용하고 있었다면, U100 인슐린에서 하는 표준 전환보다 단계를 더 해야 합니다.
 
-Keep in mind that the most difficult part will probably not be how to manage the switch correctly within AAPS, but rather to train your brain again to think "IU" instead of "CU". All standard values for boluses (breakfast, lunch, dinner...) will be twice as high, the same for your TDDs, basal rates, etc. You have to be very cautious not to make errors during the first several weeks, until you "think again" in International Units.
+가장 어려운 부분은 아마 AAPS에서 전환을 올바르게 하는 것이 아니라, "CU" 대신 "IU"로 생각하도록 머리를 다시 훈련하는 것임을 기억하십시오. 모든 표준 볼러스 값(아침, 점심, 저녁 식사...)이 두 배가 되며, TDD, 기저 주입량 등도 마찬가지입니다. 다시 국제 단위로 "생각"하게 될 때까지, 처음 몇 주 동안은 오류를 내지 않도록 매우 조심해야 합니다.
 
-- First, prepare a new profile with all values consistent with International Units:
-  - Do a temporary Profile Switch 200% of your standard running profile.
-  - Open the menu (☰) → **Treatments**, go to the **Profile switch** tab and clone the new 200% profile (see [Clone a Profile switch](#your-aaps-profile-clone-profile-switch)).
-  - Switch back to your standard profile until the next Reservoir or Patch change.
-  - Go to **Manage → Profile** and rename this new profile with an explicit name (it will be your future profile associated with U200 insulin set in AAPS 4).
-- If you use the Dynamic ISF (DynISF) feature, you have to disable it for at least one week:
-  - All your history recorded within AAPS or Nightscout is in the wrong units (CU), half the real value in International Units. Wait at least one week with the U200 insulin running before re-enabling it.
-- You are now ready to switch insulin (with a new U200 defined within **Insulin settings**) on the following Insulin Change or Pod Change.
-- Once the new U200 insulin is correctly applied, don't forget to apply the new standard profile defined in the first step.
+- 먼저, 모든 값이 국제 단위와 맞는 새 프로파일을 준비하십시오:
+  - 현재 사용 중인 표준 프로파일의 200%로 임시 프로파일 전환을 하십시오.
+  - 메뉴(☰) → **처치**를 열고 **프로파일 전환** 탭으로 가서 새 200% 프로파일을 복사하십시오([프로파일 전환 복사](#your-aaps-profile-clone-profile-switch) 참조).
+  - 다음 레저버 또는 패치 교체 때까지 표준 프로파일로 다시 전환하십시오.
+  - **관리 → 프로파일**로 가서 이 새 프로파일의 이름을 알아보기 쉬운 이름으로 바꾸십시오(AAPS 4에서 설정한 U200 인슐린과 함께 사용할 앞으로의 프로파일입니다).
+- 동적 ISF(DynISF) 기능을 사용한다면 최소 1주일 동안 꺼야 합니다:
+  - AAPS나 Nightscout에 기록된 모든 이력은 잘못된 단위(CU)로 되어 있으며, 국제 단위로 된 실제 값의 절반입니다. U200 인슐린을 사용하면서 최소 1주일을 기다린 후에 다시 켜십시오.
+- 이제 다음 인슐린 교체나 Pod 교체 때 (**인슐린 설정**에서 새로 정한 U200으로) 인슐린을 전환할 준비가 되었습니다.
+- 새 U200 인슐린이 올바르게 적용되면, 첫 단계에서 만든 새 표준 프로파일을 적용하는 것을 잊지 마십시오.
 
-## How to manage external boluses with different pens?
+## 여러 펜으로 주는 외부 볼러스를 관리하는 방법
 
-### With U200 insulin associated with a 50% profile (AAPS 3)
+### 50% 프로파일과 함께 U200 인슐린 사용 (AAPS 3)
 
-Keep in mind that all pen graduations are in International Units, so whatever the pen used (U100, U200), if you use a pen for an external bolus you have to manage conversion in both directions:
+모든 펜의 눈금은 국제 단위라는 것을 기억하십시오. 그래서 어떤 펜(U100, U200)을 사용하든, 펜으로 외부 볼러스를 주면 양쪽 방향으로 환산해야 합니다:
 
-- From AAPS to the pen: if the Calculator proposes a bolus, or if you have a specific quantity in mind, multiply by 2 when you select the amount on the pen, compared to the same bolus applied from AAPS.
-- From the pen to AAPS: if you selected an amount on the pen to give an external bolus, divide this amount by 2 to record the right quantity within AAPS (Insulin button, external bolus), to get the correct IOB calculation in CU (Concentrated Units).
+- AAPS에서 펜으로: 계산기가 볼러스를 제안하거나 생각해 둔 양이 있으면, 펜에서 양을 선택할 때 AAPS에서 같은 볼러스를 줄 때보다 2를 곱하십시오.
+- 펜에서 AAPS로: 펜에서 양을 선택해 외부 볼러스를 주었다면, CU(농축 단위)로 IOB가 올바르게 계산되도록 이 양을 2로 나누어 AAPS에 기록하십시오(인슐린 버튼, 외부 볼러스).
 
-### With U200 insulin using the concentration management included in AAPS 4
+### AAPS 4에 포함된 농도 관리를 사용하는 U200 인슐린
 
-Things are much simpler with the internal management of concentration within AAPS: just select the expected amount on the pen (whatever the pen and corresponding insulin used), and record it within AAPS.
+AAPS 안에서 농도를 관리하면 훨씬 간단합니다. 펜에서 원하는 양을 그대로 선택하고(어떤 펜과 인슐린을 사용하든) AAPS에 기록하면 됩니다.
 
-- Within the Insulin button, if you select an external bolus, you can select any type of insulin defined within **Insulin settings** (mainly U100, U200 for pens). That way you get a very precise calculated IOB, even if the peak/DIA of the insulin used with the pen is very different from the peak/DIA used in the pump.
+- 인슐린 버튼에서 외부 볼러스를 선택하면, **인슐린 설정**에 정의된 어떤 인슐린이든 선택할 수 있습니다(펜은 주로 U100, U200). 그러면 펜으로 사용한 인슐린의 피크/DIA가 펌프에서 사용하는 피크/DIA와 많이 달라도 매우 정확하게 IOB가 계산됩니다.

@@ -10,7 +10,7 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## Aprire il database degli alimenti
 
 Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
 
@@ -23,7 +23,7 @@ Your foods are shown as a scrollable list. Each row shows the food's **name**, i
 ![The food database list, with search and the add button](../images/v4/Food/food_list.png)
 
 - **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
+- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tocca di nuovo un chip selezionato per toglierlo.)
 - **➕** (bottom-right) — add a new food (see below).
 - Tap a row to **edit** that food.
 
@@ -37,7 +37,7 @@ Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom 
 
 ![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
 
-The fields are:
+I campi sono:
 
 - **Name** — required (you can't save without it).
 - **Category** and **Subcategory** — optional, used to group/filter foods.
@@ -67,14 +67,14 @@ The food's stored **carbs** number is passed straight to the wizard — **AAPS**
 
 ## Where foods come from (Nightscout sync)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+Il database degli alimenti è condiviso tramite **Nightscout**, ma **in una sola direzione**:
 
 - **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
 - **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** scaricherà quelle voci. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
 
 Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
 ```

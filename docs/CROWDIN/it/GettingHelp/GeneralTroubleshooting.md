@@ -4,7 +4,7 @@
 
 **Start here when something is not working.** Troubleshooting information lives on many pages across the documentation. This page brings it together: it is a single collection of links, sorted by topic, to help you solve the most common problems.
 
-If you do not find your answer below, also check:
+Se qui sotto non trovi la risposta, controlla anche:
 
 * the [FAQ](../UsefulLinks/FAQ.md) for answers to frequent questions, and
 * the [Profile tuning guide](ProfileTuning.md) if your loop runs but your glucose control needs improving.
@@ -18,7 +18,7 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 
 (generaltroubleshooting-aaps-app)=
 
-## AAPS app
+## App AAPS
 
 ### Building & updating
 
@@ -26,12 +26,12 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
   * [AAPS Builder](#aaps-builder-troubleshooting)
   * [Browser build](#aaps-ci-troubleshooting)
   * [Android Studio](TroubleshootingAndroidStudio.md)
-* Lost keystore, or new keystore: [Reinstalling AAPS](#reinstall-aaps)
+* Keystore perso o nuovo keystore: [Reinstallare AAPS](#reinstall-aaps)
 * Updating **AAPS**: [with AAPS Builder](#aaps-builder-updates), [with a browser build (fork)](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
 
-### Installing
+### Installazione
 
-* [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
+* [Avviso di Google Play Protect](#transferring-installing-play-protect-warning): l'app viene segnalata come non sicura.
 * Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
 
 ### Settings
@@ -41,10 +41,10 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 * [Nightscout Client](TroubleshootingNsClient.md)
 * **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
 
-### Usage
+### Uso
 
 * [Wrong carb values (slow carbs absorption)](#CobCalculation-detection-of-wrong-cob-values)
-* [Automations](#automations-troubleshooting)
+* [Automazioni](#automations-troubleshooting)
 * [Full closed loop](#full-closed-loop-troubleshooting)
 
 ---
@@ -52,7 +52,7 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## Bluetooth related issues
+## Problemi legati al Bluetooth
 
 For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
 
@@ -60,11 +60,11 @@ For known issues with Bluetooth connections, dropouts of pump/pods, or activatio
 
 (generaltroubleshooting-android-related-issues)=
 
-## Android Related Issues
+## Problemi legati ad Android
 
-### Battery optimization
+### Ottimizzazione della batteria
 
-**AAPS** can help you find the right settings for your phone: open the **menu** (☰) > **About** and tap **Don't kill my app?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). The [setup wizard](#setup-wizard-bluetooth-battery-optimisation) also asks you to turn off battery optimization for **AAPS** and Bluetooth.
+**AAPS** può aiutarti a trovare le impostazioni giuste per il tuo telefono: apri il **menu** (☰) > **Informazioni** e tocca **Non terminare l'app?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). Anche la [configurazione guidata](#setup-wizard-bluetooth-battery-optimisation) ti chiede di disattivare l'ottimizzazione della batteria per **AAPS** e per il Bluetooth.
 
 Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
 
@@ -80,7 +80,7 @@ Depending on your phone model and make there may be more than one location and s
 
 * Go to the Android settings, select "Apps".
 
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
+  ![Impostazioni Android¦App](../images/troubleshooting/pixel/01_androidsettings.png)
 
 * Select "See all apps"
 
@@ -88,40 +88,40 @@ Depending on your phone model and make there may be more than one location and s
 
 * On the menu on the right, select "Show system" apps.
 
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
+  ![Mostra app di sistema](../images/troubleshooting/pixel/03_allapps.png)
 
-* Now search and select the app "Bluetooth".
+* Ora cerca e seleziona l'app "Bluetooth".
 
-  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
+  ![App Bluetooth](../images/troubleshooting/pixel/03_bluetooth.png)
 
 * Click the "App battery usage" and select "Unrestricted" (called "Not optimized" on some older Android versions).
 
   ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### Samsung phones
+#### Telefoni Samsung
 
 * Go to the android settings, select "Apps"
 
 * On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
 
-  ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
+  ![Filtro app](../images/troubleshooting/samsung/Samsung01_Apps.png)
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![Mostra app di sistema](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* Now search the Bluetooth app and select it to see its settings.
+* Ora cerca l'app Bluetooth e selezionala per vedere le sue impostazioni.
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![App Bluetooth](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
 * Select "battery".
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![Batteria](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
 * Set it to "Unrestricted" (called "Not optimized" on some older Android versions).
 
   ![Unrestricted](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### Huawei phones
+#### Telefoni Huawei
 
 See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
 
@@ -133,11 +133,11 @@ See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones
 
 Useful links to known issues and steps to resolve for CGMs.
 
-* [General](#general-cgm-troubleshooting)
+* [Generale](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
-* [Libre 2 with Minimal Looper](#minimallooper-troubleshooting)
+* [Libre 2 con Minimal Looper](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [xDrip - no CGM data](#xdrip-identify-receiver)
+* [xDrip - nessun dato CGM](#xdrip-identify-receiver)
 * [xDrip - Dexcom troubleshooting](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ---
@@ -163,30 +163,30 @@ Useful links to known issues and steps to resolve for Pumps
 
 (generaltroubleshooting-phones)=
 
-## Phones
+## Telefoni
 
 Useful links to known issues and steps to resolve for Phones
 
 * [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [Bluetooth e ottimizzazione della batteria su Huawei](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-remote-control)=
 
-## Remote control
+## Controllo remoto
 
 * [AAPSClient and remote control (pairing, commands not received)](#client-master-control-troubleshooting)
 * ['Nightscout access token' issues](#remotecontrol-nightscout-access-token)
-* [SMS commands](#SMSCommands-troubleshooting)
+* [Comandi SMS](#SMSCommands-troubleshooting)
 * [Android Auto](#android-auto-troubleshooting)
 
 ---
 
 (generaltroubleshooting-smartwatches)=
 
-## Smartwatches
+## Smartwatch
 
 Useful links to known issues and steps to resolve for Smartwatches
 

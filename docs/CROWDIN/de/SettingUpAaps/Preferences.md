@@ -162,7 +162,7 @@ The settings of your selected [BG source](#Config-Builder-bg-source) appear as t
 - **Upload BG data to NS**: let **AAPS** upload the received BG values to Nightscout. Only enable this if the CGM app itself is not already uploading them.
 - **Log sensor change**: create a sensor change therapy event automatically when the sensor is inserted.
 
-## The main screen
+## Der Startbildschirm
 
 In **AAPS** 3.x these settings were grouped in an "Overview" section. In **AAPS** 4 they are configured directly from the main screen elements they belong to.
 
@@ -369,7 +369,7 @@ When using NSClientV3, all uploaders must use the Nightscout API v3. If another 
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
 - **Stelle sicher, dass die URL NICHT mit /api/v1/ endet.**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **Nightscout access token** (not your API Secret!). On **AAPSClient** you can scan the main phone's QR code instead, which sets up a token of the client's own. A client paired with the PIN gets its own token from the main phone after pairing. See [The client's own Nightscout token](#client-master-control-own-token).
+- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **Nightscout access token** (not your API Secret!). On **AAPSClient** you can scan the main phone's QR code instead, which sets up a token of the client's own. A client paired with the PIN gets its own token from the main phone after pairing. Siehe [Das eigene Nightscout-Token des Clients](#client-master-control-own-token).
 - Dadurch kann **AAPS** Daten von Nightscout lesen und auch schreiben.
 - Überprüfe die Eingaben auf Tippfehler, wenn du bei Ziel 1 hängen bleibst.
 - Leave "Use websockets" enabled (recommended).

@@ -1,41 +1,41 @@
-# Juggluco settings
+# Juggluco ayarları
 
-If not already set up, then download [Juggluco](https://www.juggluco.nl/Juggluco/download.html).
+Henüz kurmadıysanız [Juggluco](https://www.juggluco.nl/Juggluco/download.html)'yu indirin.
 
-Follow the [instructions](https://www.juggluco.nl/Jugglucohelp/introhelp.html) to connect your sensor.
+Sensörünüzü bağlamak için [talimatları](https://www.juggluco.nl/Jugglucohelp/introhelp.html) izleyin.
 
-## Basic settings for all CGM systems
+## Tüm CGM sistemleri için temel ayarlar
 
-### Disable Nightscout uploader
+### Nightscout yükleyiciyi kapatın
 
-You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Başka hiçbir uygulamanın Nightscout'a veri (kan şekeri ve tedaviler) yüklemesine izin vermemelisiniz.
 
-Disable any active uploader to Nightscout in Juggluco.
+Juggluco'da Nightscout'a etkin olan tüm yükleyicileri kapatın.
 
-![Disable Nightscout Upload](../images/juggluco/DisableNightscoutUpload.png)
+![Nightscout yüklemesini kapatma](../images/juggluco/DisableNightscoutUpload.png)
 
 (juggluco-to-aaps)=
 
-## Juggluco to AAPS
+## Juggluco'dan AAPS'e
 
-Juggluco can send blood glucose directly to AAPS, enabling SMBs always if you are using a [trusted sensor](#GettingStarted-TrustedBGSource).
+Juggluco kan şekerini doğrudan AAPS'e gönderebilir; [güvenilir bir sensör](#GettingStarted-TrustedBGSource) kullanıyorsanız bu, SMB'lere her zaman izin verir.
 
-When using a Libre 2/2+/3/3+ sensor, minute-by-minute readings will be sent to AAPS but will not trigger minute-by-minute calculations in AAPS.
+Libre 2/2+/3/3+ sensörü kullanırken dakikalık ölçümler AAPS'e gönderilir, ancak AAPS'te dakikalık hesaplamaları tetiklemez.
 
-Enable xDrip broadcast in Juggluco (do not enable Patched Libre), confirm and save the AAPS package information. Select the xDrip BG data source in AAPS.
+Juggluco'da xDrip broadcast seçeneğini açın (Patched Libre seçeneğini açmayın), AAPS paket bilgisini onaylayın ve kaydedin. AAPS'te xDrip KŞ veri kaynağını seçin.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS.
+AAPS'te yeterli [yumuşatma](./SmoothingBloodGlucoseData.md) uygulayın.
 
-![Juggluco to AAPS](../images/juggluco/Juggluco-AAPS.png)
+![Juggluco'dan AAPS'e](../images/juggluco/Juggluco-AAPS.png)
 
 (juggluco-to-xdrip)=
 
-## Juggluco to xDrip
+## Juggluco'dan xDrip'e
 
-Juggluco can send blood glucose to xDrip which will then send them to AAPS.
+Juggluco kan şekerini xDrip'e gönderebilir, xDrip de bunu AAPS'e gönderir.
 
-Enable Patched Libre in Juggluco (do not enable xDrip broadcast), confirm and save the dexdrip package information. Select the xDrip BG data source in AAPS.
+Juggluco'da Patched Libre seçeneğini açın (xDrip broadcast seçeneğini açmayın), dexdrip paket bilgisini onaylayın ve kaydedin. AAPS'te xDrip KŞ veri kaynağını seçin.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary. When using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute readings to 5-minute readings and [also smooth](#libre2-value-smoothing-raw-values) them.
+Gerekirse AAPS'te yeterli [yumuşatma](./SmoothingBloodGlucoseData.md) uygulayın. Libre 2/2+/3/3+ sensörü kullanırken xDrip dakikalık ölçümlerin ortalamasını alarak 5 dakikalık ölçümler yapar ve bunları [ayrıca yumuşatır](#libre2-value-smoothing-raw-values).
 
-![Juggluco to xDrip](../images/juggluco/Juggluco-xDrip+.png)
+![Juggluco'dan xDrip'e](../images/juggluco/Juggluco-xDrip+.png)

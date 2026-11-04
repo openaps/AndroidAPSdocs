@@ -1,43 +1,43 @@
 (aaps-ci-option2)=
 
-# Option 2 – Upload your existing keystore
+# Seçenek 2 – Mevcut anahtar deponuzu yükleyin
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+Bu, [Tarayıcı ile oluşturma](BrowserBuild.md) sürecindeki [Adım 2 – İmzalama anahtar deponuzu oluşturun](BrowserBuildKeystore.md) adımının bir parçasıdır. [Seçenek 1 ile Seçenek 2 arasındaki kararı](#aaps-ci-preparation) okuduğunuzdan emin olun.
 ```
 
-Option 2 reuses the JKS you already created on a previous build of AAPS from a computer in Android Studio. It is suitable for users who already have a JKS and know the JKS password and alias.
+Seçenek 2, daha önce bir bilgisayarda Android Studio ile AAPS oluştururken yaptığınız JKS dosyasını yeniden kullanır. Zaten bir JKS dosyası olan ve JKS parolasını ve takma adını (alias) bilen kullanıcılar için uygundur.
 
-For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub – those from Android Studio, see below where you used them.
+`KEYSTORE_PASSWORD`, `KEY_ALIAS` ve `KEY_PASSWORD` için GitHub'a gerçek parolanızı ve takma adınızı girin: Android Studio'da kullandıklarınızı. Bunları nerede kullandığınızı aşağıda görebilirsiniz.
 
 ```{warning}
-**Passwords with special characters.** Enter your passwords exactly as they are. Do not add a backslash or any other escape character: the build workflow keeps every character intact, and an added backslash becomes part of the password.
+**Özel karakter içeren parolalar.** Parolalarınızı tam olarak oldukları gibi girin. Ters eğik çizgi (backslash) veya başka bir kaçış karakteri eklemeyin: oluşturma iş akışı her karakteri olduğu gibi korur ve eklenen ters eğik çizgi parolanın bir parçası olur.
 
-If the build still fails at the signing step and your password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is outdated. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev and re-run the build. See [Browser build troubleshooting](#aaps-ci-password-special-characters).
+Oluşturma yine de imzalama adımında başarısız olursa ve parolanızda `$`, ters tırnak (backtick), `"` veya `\` varsa, fork'unuzdaki iş akışı dosyası eskidir. [Fork'unuzu en son dev dalı ile eşitleyin](#Update-to-new-version-update-your-repo) ve oluşturmayı yeniden çalıştırın. Bkz. [Tarayıcı ile oluşturma: sorun giderme](#aaps-ci-password-special-characters).
 ```
 
 ```{admonition} KEY + PASSWORDS
 :class: dropdown
 
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+![Parolaları hatırlama](../images/Building-the-App/044_RememberPwd.png)
 ```
 
-## Choose your device
+## Cihazınızı seçin
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+**Android telefondan** mı oluşturuyorsunuz? Bunun yerine [AAPS Builder](BrowserBuildAapsBuilder.md) kullanın: hazırlık dosyası gerektirmez.
 ```
 
-Follow the page that matches the device you are building from:
+Oluşturmayı yaptığınız cihaza uyan sayfayı izleyin:
 
-- **[Computer](BrowserBuildO2Computer.md)** – Windows, Mac or Linux.
+- **[Bilgisayar](BrowserBuildO2Computer.md)** – Windows, Mac veya Linux.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Cihazı istediğiniz zaman değiştirebilirsiniz: yalnızca uygun sayfayı açın.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO2Computer.md>
+Bilgisayar <BrowserBuildO2Computer.md>
 ```

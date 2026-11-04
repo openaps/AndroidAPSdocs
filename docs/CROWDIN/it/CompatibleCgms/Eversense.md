@@ -5,15 +5,15 @@ There are four different methods to access the readings from Eversense:
 - ESEL companion mode
 - ESEL patched mode
 - xDrip companion app
-- Notification Reader (built into **AAPS**)
+- Lettore Notifiche (integrato in **AAPS**)
 
 ## ESEL
 
-Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
+Scarica e installa l'[app ESEL](https://github.com/BernhardRo/Esel/tree/master/apk), seguendo queste [istruzioni](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- In ESEL, open the three dots menu (⋮) at the top right and select **Settings** (also available from the ☰ menu). In the settings:
-  - Enable "Send to AAPS and xDrip"
-  - **Disable** "Send to Nightscout"
+- In ESEL apri il menu con i tre puntini (⋮) in alto a destra e seleziona **Settings** (disponibile anche dal menu ☰). Nelle impostazioni:
+  - Attiva "Send to AAPS and xDrip"
+  - **Disattiva** "Send to Nightscout"
   - As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
 
 ![ESEL Broadcast](../images/ESEL.png)
@@ -25,8 +25,8 @@ Reads the data from the Eversense app notifications (works with the standard Eve
 1. Use the official Eversense App from the Google Play Store
    - Optional, but required for backfilling: Login to your Eversense account
    - In Sync, enable Auto synchronization
-2. Configuration of ESEL:
-   - Disable the setting "Get data from patched Eversense App"
+2. Configurazione di ESEL:
+   - Disattiva l'impostazione "Get data from patched Eversense App"
    - For backfilling: Enable "Fill missing data from eversensedms.com"
    - Provide as Email address and password your Eversense login data
 3. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
@@ -41,9 +41,9 @@ Reads the data from the Eversense app notifications (works with the standard Eve
 
    - Start the Eversense App, login, connect to your transmitter and use it just like the normal app.
 
-3. Configuration of ESEL:
+3. Configurazione di ESEL:
 
-   - Enable the setting "Get data from patched Eversense App"
+   - Attiva l'impostazione "Get data from patched Eversense App"
 
 
 
@@ -57,13 +57,13 @@ If you run ESEL with a fresh installation of Eversense for the first time, it ca
 
 xDrip can read notifications from the vendor app, like ESEL does. No backfilling available.
 
-- Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- Scarica e installa xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
 - As data source in xDrip “Companion App” must be selected.
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Seleziona xDrip in [**Configurazione → Sorgente Glicemia**](#Config-Builder-bg-source).
 - Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
 - Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
 
-## Notification Reader
+## Lettore Notifiche
 
 **AAPS** can read the glucose values directly from the notifications posted by the official Eversense app, without any other app in between. No backfilling available.
 

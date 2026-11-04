@@ -1,84 +1,84 @@
 (bluetoothtroubleshooting-bluetooth-related-issues)=
 
-# Bluetooth related issues
+# Su Bluetooth susijusios problemos
 
-Some users have been running into issues with Omnipod DASH activation failures, Medtrum Nano connectivity problems, and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues.
+Kai kuriems naudotojams nepavyksta aktyvuoti Omnipod DASH, kyla Medtrum Nano ryšio problemų ar kitų su Bluetooth susijusių Pod klaidų. Many of these issues can be traced to one of the following issues.
 
-Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medtrum Nano has known issues with nearby device permission as well as the Omnipod DASH.
+Kai kurios šių problemų tikriausiai aktualios ir kitoms Bluetooth insulino pompoms. Žinoma, kad Medtrum Nano, kaip ir Omnipod DASH, turi problemų dėl leidimo „Nearby devices“ (netoliese esantys įrenginiai).
 
 ---
 
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
-## Cannot start Omnipod with Android 16
-- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this version has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
+## Nepavyksta paleisti Omnipod su Android 16
+- Kad Omnipod DASH tinkamai veiktų su Android 16, reikia bent **AAPS** 3.3.2.1 versijos, nes joje yra pataisymų, skirtų būtent žinomoms Omnipod problemoms, kurias sukėlė Android 16.
 
 ---
 
 (bluetoothtroubleshooting-bluetooth-battery-optimisation)=
 
-## Bluetooth Battery Optimisation
+## Bluetooth baterijos optimizavimas
 
-Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. This is known to cause some issues for Bluetooth pumps and CGMs.
+Naujesnėse Android versijose sisteminei Bluetooth programėlei įjungtas baterijos optimizavimas. Žinoma, kad dėl to kai kurioms Bluetooth pompoms ir NGJ kyla problemų.
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
+Jei naudojote [Sąrankos vedlį](../SettingUpAaps/SetupWizard.md) ir atlikote nustatymus skyriuje [Bluetooth baterijos optimizavimas](#setup-wizard-bluetooth-battery-optimisation), šis nustatymas turėtų būti teisingas. Tačiau jei naudojotės senesne šio vadovo versija, gali būti, kad šio nustatymo nepakeitėte.
 
-Verify this is correctly configured if you have pump and CGM disconnections.
+Jei pompos ir NGJ ryšys nutrūksta, patikrinkite, ar tai nustatyta teisingai.
 
 ---
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission)=
 
-## Apps that use the "Nearby devices" Android permission can cause connection drops and Pod activation problems
+## Programėlės, naudojančios Android leidimą „Nearby devices“, gali nutraukti ryšį ir trukdyti aktyvuoti Pod
 
-Android allows you to control what each app is able to do or access on your phone via a permission model. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to Bluetooth, scan for nearby devices etc.
+Android leidžia valdyti, ką kiekviena programėlė gali daryti ar pasiekti jūsų telefone. Tam naudojama leidimų sistema. Kiekvienai įdiegtai programėlei galite leisti arba uždrausti tam tikrus leidimus, pvz., prieigą prie failų įrenginyje, prieigą prie Bluetooth, netoliese esančių įrenginių paiešką ir kt.
 
-**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
+Kad veiktų, **AAPS** reikia kelių konkrečių leidimų. Vienas iš jų, būtinas Pod veikimui, yra leidimas „Nearby devices“. Šio leidimo reikia ir daugeliui kitų programėlių. Bendruomenė pastebėjo, kad kai kuriuose įrenginiuose kai kurios programėlės, gavusios šį leidimą, gali trukdyti aktyvuoti naujus Pod.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
-### Apps that use "Nearby device" permissions and are known to have caused problems:
+### Programėlės, kurios naudoja leidimą „Nearby device“ ir, kaip žinoma, sukėlė problemų:
 
-Apps in this list have been discussed in one or more places in the community as causing problems for Omnipod DASH devices and in some cases Medtrum Nano too.
+Bendruomenėje šios programėlės buvo minėtos kaip sukeliančios problemų Omnipod DASH, o kai kuriais atvejais ir Medtrum Nano.
 
 ```{admonition} Updating the list
 :class: note
-Ping @XiTatiON on #omnipod-dash Discord channel to discuss apps to be added to this list.
+Norėdami aptarti, kurias programėles įtraukti į šį sąrašą, Discord kanale #omnipod-dash parašykite @XiTatiON.
 ```
 
-- **myBMW** MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
+- **myBMW** Programėlė MyBMW trukdė veikti Medtrum Nano ir Omnipod DASH. Programėlė MyBMW leidimo „find nearby devices“ prašo tik vieną kartą. Jei jo nesuteiksite, programėlė vis tiek veikia visiškai gerai
 
-- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
+- **Amazon Alexa**  Kai kuriems žmonėms problemą išsprendė leidimo „Nearby devices“ atšaukimas programėlei Alexa, tačiau tada nebegalima susieti Matter IoT įrenginių
 
-- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
+- **MINI app**  Atrodo, kad ši programėlė sukurta pagal myBMW programėlę, todėl gali elgtis taip pat
 
-- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
+- **BM2** yra saulės baterijų akumuliatoriaus stebėjimo programėlė, naudojama kai kuriuose kemperiuose ir stovyklavimo saulės elektrinėse: kai ši programėlė veikė, nepavyko aktyvuoti naujo Pod. Problemą galima apeiti, jei aktyvuodami naują Pod priverstinai sustabdote šią programėlę. Vėliau paleista programėlė, regis, netrukdė DASH veikti (Pixel 8 Pro su Android 16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
-### How to revoke "Nearby device" permissions for other apps:
-If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
+### Kaip atšaukti „Nearby device“ leidimą kitoms programėlėms:
+Jei jums nepavyksta aktyvuoti naujo Pod, nors naudojate tinkamą **AAPS** versiją savo Android versijai, gali reikėti atšaukti šį leidimą kitoms programėlėms, kol aktyvuojate naują Pod.
 
-Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
+Atlikite šiuos veiksmus, kad atšauktumėte leidimą „Nearby device“ visoms programėlėms, išskyrus **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
-The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
+Šio vadovo ekrano nuotraukos ir instrukcijos parengtos naudojant standartinę Android 16 versiją telefone Google Pixel 8 Pro. Kitų gamintojų įrenginių meniu ir nustatymai greičiausiai tiksliai nesutaps su čia aprašytais. Pritaikykite veiksmus savo įrenginiui. Jei nepavyksta, skyriuje [Kur gauti pagalbos dėl DASH](#omnipod-dash-where-to-get-help-for-dash) rasite, kaip kreiptis pagalbos į bendruomenę.
 ```
 
-1. Open Android settings on your phone, scroll down and press on **Security and privacy (1)**.
+1. Atidarykite telefono Android nustatymus, slinkite žemyn ir paspauskite **Security and privacy (1)** (sauga ir privatumas).
 
     ![android_settings_sec_priv](../images/android_16/android_settings_sec_priv.png)
 
-2. Scroll down and press on **Privacy controls (1)**.
+2. Slinkite žemyn ir paspauskite **Privacy controls (1)** (privatumo valdikliai).
 
    ![android_sec_priv](../images/android_16/android_sec_priv.png)
 
-3. Press on **Permission manager (1)**.
+3. Paspauskite **Permission manager (1)** (leidimų tvarkytuvė).
 
    ![android_priv_control](../images/android_16/android_priv_control.png)
 
-3. Scroll down and press on **Nearby devices (1)**.
+3. Slinkite žemyn ir paspauskite **Nearby devices (1)** (netoliese esantys įrenginiai).
 
    ![android_perm_man_nearby_dev](../images/android_16/android_perm_man_nearby_dev.png)
 
@@ -86,24 +86,24 @@ The screenshots and instructions in this guide are from a Vanilla Android 16 ins
 
    In this guide **Android Auto (1)** is the app we will revoke the permission on.
 
-   To avoid bricking more pods we advise everyone initially to revoke the permission on all apps except **AAPS**.
+   Kad daugiau Pod netaptų nebetinkami naudoti, iš pradžių visiems patariame atšaukti šį leidimą visoms programėlėms, išskyrus **AAPS**.
 
 ```{admonition} Which app to select?
 :class: tip
-If you are unsure which app is causing you an issue, disable them all (remember to check the list of known problem apps too and start with those) and if you can spare a few bricked pods on the way, enable the permission on one new app before every new Pod activation, until you can narrow down which app specifically causes your Pod issues. If you do identify new problematic apps please let us know on the #omnipod-dash Discord channel.
+Jei nežinote, kuri programėlė sukelia problemą, atšaukite leidimą visoms (nepamirškite peržiūrėti žinomų probleminių programėlių sąrašo ir pradėti nuo jų). Jei galite sau leisti prarasti kelis Pod, prieš kiekvieną naujo Pod aktyvavimą vėl suteikite leidimą vienai programėlei, kol nustatysite, kuri būtent programėlė sukelia Pod problemas. Jei aptiksite naujų probleminių programėlių, praneškite mums Discord kanale #omnipod-dash.
 ```
 
    ![android_nearby_dev](../images/android_16/android_nearby_dev.png)
 
-5. To revoke the permission Press on **Don't allow (1)**, then Press on **Don't allow anyway (2)**. If done correctly you should see **Don't allow (3)** as the selected Toggle option. You can now go back to the **Nearby device** menu by pressing the **Back arrow (4)** and change this setting on other apps if required.
+5. Norėdami atšaukti leidimą, paspauskite **Don't allow (1)**, tada paspauskite **Don't allow anyway (2)**. Jei viską atlikote teisingai, perjungiklyje turėtų būti pasirinkta **Don't allow (3)**. Dabar galite grįžti į meniu **Nearby device** paspaudę **Back arrow (4)** (rodyklė atgal) ir prireikus pakeisti šį nustatymą kitoms programėlėms.
 
    ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dev.png) ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow_anyway.png)  ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow.png)
 
 (bluetoothtroubleshooting-re-enable-nearby-device-permission)=
 
-### How to re-enable "Nearby device" permissions for system apps and other apps:
+### Kaip vėl įjungti „Nearby device“ leidimą sistemos ir kitoms programėlėms:
 
-1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
+1. Jei reikia, skyriuje **Kaip atšaukti „Nearby device“ leidimą kitoms programėlėms** rasite, kaip atidaryti programėlių privatumo nustatymus. Atidarę **Nearby device** nustatymus, pereikite prie 2 žingsnio.
 
 2. Browse the list of apps and press on the app you wish to allow **Nearby devices** permissions for.
 
@@ -122,22 +122,22 @@ If an app is revoked you will need to scroll down until you see the list of revo
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. Follow the guidance in **"How to revoke 'Nearby device' permissions for other apps"** in reverse to re-enable permissions for each app.
+5. Atlikite skyriuje **Kaip atšaukti „Nearby device“ leidimą kitoms programėlėms** pateiktus veiksmus atvirkštine tvarka, kad vėl įjungtumėte kiekvienos programėlės leidimą.
 
 ---
 
 (bluetoothtroubleshooting-android-15-bluetooth-connection-problems)=
 
-## Android 15 Frequent Bluetooth connection problems
+## Android 15: dažnos Bluetooth ryšio problemos
 
-After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. To turn it on:
+Atnaujinus Android arba pradėjus naudoti naujesnį telefoną, **AAPS** dažnai praranda Bluetooth ryšį su pompa. The problem disappears temporarily when restarting the phone. Jei naudojate **Omnipod DASH**, o telefone veikia Android 15, įjungus nustatymą **Bluetooth susiejimas** gali pagerėti Bluetooth ryšio stabilumas. To turn it on:
 
 ```{admonition} Android 16
 :class: warning
-Only turn on **Bluetooth bonding** on Android 15, and only if you experience connectivity issues. DO NOT turn on bonding on Android 16.
+Parinktį **Bluetooth susiejimas** įjunkite tik Android 15 sistemoje ir tik jei kyla ryšio problemų. NEĮJUNKITE susiejimo Android 16 sistemoje.
 ```
 
-1. Open the [Dash settings](#omnipod-dash-settings): open the DASH pump screen with **Manage** > **Pump** and press the **Settings** (gear) icon in the top-right corner.
+1. Atidarykite [DASH nustatymus](#omnipod-dash-settings): atverkite DASH pompos ekraną per **Valdymas** > **Pompa** ir viršutiniame dešiniajame kampe paspauskite **Nustatymai** (krumpliaračio) piktogramą.
 
    ![The DASH pump screen](../images/v4/Pumps/dash_pump_screen.png)
 

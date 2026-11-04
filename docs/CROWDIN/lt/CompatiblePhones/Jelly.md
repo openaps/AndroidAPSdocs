@@ -7,42 +7,42 @@
 * Android 13
 * 8 GB RAM
 
-**Advantages**
+**Privalumai**
 
 * Jis tikrai mažas.
-* Even if you tell people, they might not consider it as a normal smartphone and will accept it more easily as an exception when phones are normally not allowed.
+* Net jei apie tai pasakysite žmonėms, jie gali nelaikyti jo įprastu išmaniuoju telefonu ir lengviau leis jį kaip išimtį ten, kur telefonai paprastai draudžiami.
 
-**Disadvantages**
+**Trūkumai**
 
-* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
+* Rekomenduojama tik patyrusiems ciklo naudotojams. Kai kuriuos nustatymus sunku atpažinti: turite iš patirties su įprastu dideliu Android AAPS telefonu žinoti, kaip ir kur kas yra. Kai kurie AAPS mygtukai maži ir juos sunku paspausti: reikia tikslaus prisilietimo, storais pirštais tai nepavyksta.
 * Gali būti naudojamas tik kaip uždaro ciklo telefonas. Geriau turėti normalų telefoną kišenėje. 
 
-### Battery life optimization
+### Baterijos optimizavimas
 
-The Jelly comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip, OOP2, Juggluco, etc...).
+Jelly turi stiprias optimizavimo funkcijas, kurias AAPS (ir kitoms DIY programėlėms, pvz., BYODA, xDrip, OOP2, Juggluco ir t. t.) **būtina** išjungti.
 
 ![](../images/Jelly_Settings1.png)
 
-You can leave Intelligent assistance enabled, but it **must be disabled for DIY apps**.
+Funkciją Intelligent assistance (išmanusis asistentas) galite palikti įjungtą, bet **DIY programėlėms ji turi būti išjungta**.
 
 ![](../images/Jelly_Settings2.png)
 
-You can enable NFC for Libre sensors.
+Libre jutikliams galite įjungti NFC.
 
 ![](../images/Jelly_Settings3.png)
 
-### Battery life optimization
+### Baterijos optimizavimas
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' for **AAPS** (and for other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
+Kad niekas netrukdytų **AAPS**, Jelly Star nustatyme 'battery usage' (baterijos naudojimas) **AAPS** (ir kitoms **DIY programėlėms**, pvz., BYODA, xDrip, OOP2, Juggluco ir t. t.) pasirinkite 'unrestricted' (neribojama).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
 ### Google Play Protect
 
-Remember to disable Google Play Protect.
+Nepamirškite išjungti Google Play Protect.
 
-### Remote Connection for Wear apk
+### Remote Connection laikrodžio programėlei (Wear apk)
 
-For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
+Kai kuriems išmaniesiems laikrodžiams, pvz., Samsung Galaxy, programėlės Galaxy Wearable skiltyje Advanced features reikia **įjungti** funkciją 'Remote connection', kad galėtumėte nuotoliniu būdu per Wi-Fi naudoti Jelly, **Wear.apk** & **AAPS**.
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+![Galaxy Wearable, papildomos funkcijos, įjungtas nuotolinis ryšys](../images/wearos/galaxy_wearable_remote_connection.png)

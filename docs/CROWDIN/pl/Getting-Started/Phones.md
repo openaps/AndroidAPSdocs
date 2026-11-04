@@ -30,7 +30,7 @@ Dokument jest tylko do odczytu. Za pomocą CTRL-F możesz wyszukiwać tekst w ar
 
 Aby zapisać test Twojej konfiguracji sprzętowej, wypełnij ten [formularz](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Po wypełnieniu formularza arkusz jest odświeżany automatycznie co 5 minut.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
+W razie problemów z arkuszem skontaktuj się z jego opiekunem, *@theodoor5137*, na Discordzie albo zobacz stronę o tym, [jak uzyskać pomoc](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Nie ma mojego telefonu na liście
 

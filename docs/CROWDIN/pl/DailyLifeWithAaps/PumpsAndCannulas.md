@@ -17,7 +17,7 @@ Fizycznej wymiany wkładu/zbiornika nie da się wykonać przez **AAPS**. Trzeba 
 
 3. Napełnij dren i kaniulę: możesz to zrobić bezpośrednio na pompie. Pamiętaj, aby usunąć wszystkie pęcherzyki powietrza z drenu.
 
-4. Załóż nową kaniulę na ciało. Po wkłuciu kaniuli i wyjęciu igły w kaniuli zostaje mała przestrzeń z powietrzem, którą też trzeba napełnić. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Teraz naciśnij domyślną ilość do napełnienia kaniuli (zwykle około 0,3 U, ale sprawdź, czy ta wartość jest właściwa dla Twojej kaniuli) i wybierz **OK**. Przeczytaj podsumowanie i potwierdź napełnianie, dotykając **OK**.
+4. Załóż nową kaniulę na ciało. Po wkłuciu kaniuli i wyjęciu igły w kaniuli zostaje mała przestrzeń z powietrzem, którą też trzeba napełnić. Aby zapisać to w **AAPS** i napełnić wkłucie: otwórz **Napełnij/Wypełnij** (w rozwiniętym panelu stanu na ekranie głównym, w panelu **Zarządzaj** albo jako przycisk [QuickLaunch](QuickLaunch.md)) i zaznacz **Zapisz zmianę wkłucia** i/lub **Zapisz zmianę zasobnika insuliny**, zależnie od tego, co wymieniasz. Teraz naciśnij domyślną ilość do napełnienia kaniuli (zwykle około 0,3 U, ale sprawdź, czy ta wartość jest właściwa dla Twojej kaniuli) i wybierz **OK**. Przeczytaj podsumowanie i potwierdź napełnianie, dotykając **OK**.
 
    ![Napełnij/Wypełnij w panelu Zarządzaj przy pompie z drenem](../images/v4/Screens/manage_sheet_tube_pump.png)
 
@@ -57,7 +57,7 @@ Gdy pompa jest odłączona, nie dostajesz insuliny, więc co dwie godziny podł�
 (pumps-cannulas-announce-insulin)=
 ## Zapisanie podanej insuliny bez podawania bolusa
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Wtedy pojawi się wiersz **Czas** (ustawiony na **Teraz**), w którym możesz zapisać prawdziwy czas wstrzyknięcia; jeśli wstrzyknięcie było niedawno, możesz go pominąć. Jeśli bolus podano jakiś czas temu, cofnij czas przyciskiem **-** (_np._ -30 min) albo rozwiń wiersz strzałką i wybierz dokładną datę i godzinę. **AAPS** uwzględni wtedy czas działania insuliny i odpowiednio obliczy insulinę, która nadal działa w organizmie.
+Aby zapisać insulinę podaną z pompy, gdy **AAPS** był odłączony, albo insulinę z pena: otwórz [okno Insulina](#aaps-screens-buttons-insulin) (**Leczenie** na dolnym pasku nawigacji albo przycisk QuickLaunch), wpisz ilość w jednostkach i włącz **Bolus zostanie jedynie odnotowany (nie będzie podany przez pompę)**. Wtedy pojawi się wiersz **Czas** (ustawiony na **Teraz**), w którym możesz zapisać prawdziwy czas wstrzyknięcia; jeśli wstrzyknięcie było niedawno, możesz go pominąć. Jeśli bolus podano jakiś czas temu, cofnij czas przyciskiem **-** (_np._ -30 min) albo rozwiń wiersz strzałką i wybierz dokładną datę i godzinę. **AAPS** uwzględni wtedy czas działania insuliny i odpowiednio obliczy insulinę, która nadal działa w organizmie.
 
 Jeśli używasz **AAPS** jako opiekun, możesz bardzo łatwo zdalnie odłączyć (i podłączyć) pompę [poleceniem SMS](../RemoteFeatures/SMSCommands.md), np. "pump disconnect 120" i "pump connect 120". Czas zdalnego odłączenia można ustawić od 1 do 120 min (w tym przykładzie 120 minut). Jest to bardzo przydatne, gdy trudno Ci sięgnąć po telefon z **AAPS**, bo jest schowany w pasie na pompę u dziecka, które biegnie na basen, albo pilnie strzeże go (lub używa) nastolatek.
 
@@ -80,7 +80,7 @@ Wybór strategii jest bardzo indywidualny. Najlepiej ustalić go metodą prób i
 **Zarządzaj → Zmiana miejsca** otwiera okno zmiany miejsca w trybie podglądu:
 
 - Dwoma przyciskami na górze (ikona kaniuli i ikona sensora) możesz pokazać tylko miejsca kaniuli, tylko miejsca sensora albo oba
-- All Cannula change and Sensor change events from the past 45 days are available.
+- Dostępne są wszystkie zdarzenia zmiany kaniuli i zmiany sensora z ostatnich 45 dni.
 - Kliknij obszar ciała albo jeden wpis na liście poniżej, aby lista pokazała tylko wpisy z wybranego obszaru. Wybrany obszar zostanie podświetlony na jasnozielono.
 - Dotknij ikony **ołówka** obok wpisu, aby otworzyć widok edycji i zmienić jego miejsce wkłucia, strzałkę lub notatkę
 
@@ -92,7 +92,7 @@ Wybór strategii jest bardzo indywidualny. Najlepiej ustalić go metodą prób i
 
 ![Okno Profil ciała do rotacji miejsc wkłucia](../images/SiteRotation/Type.png)
 
-*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
+*Uwaga: to ustawienie decyduje, czy okno zmiany miejsca (tryb edycji) otworzy się automatycznie, gdy nowy wpis powstanie przyciskiem „Napełnij/Wypełnij” lub „Założenie sensora”.*
 
 - Jeśli wymieniasz wkłucie bezpośrednio na pompie, musisz otworzyć tryb podglądu i edytować nowy wpis, aby wybrać lokalizację i strzałkę
 
@@ -100,7 +100,7 @@ Tryb edycji pozwala wybrać lokalizację, strzałkę i notatkę dla wybranego wp
 
 - Edytowany wpis jest pokazany pod obrazkami ciała, z ikoną swojego typu (kaniula lub sensor)
 - Widok z przodu i z tyłu są pokazane obok siebie: dotknij obszaru, w którym umieszczono wkłucie
-- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
+- Po wybraniu miejsca (podświetlonego na zielono) lista poniżej pokazuje wszystkie wpisy z tego miejsca z ostatnich 45 dni.
 
 ![Tryb edycji](../images/SiteRotation/EditMode.png)
 

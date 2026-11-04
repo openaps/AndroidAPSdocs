@@ -1,17 +1,17 @@
 (aaps-ci-option2-computer)=
 
-# Option 2 · Computer – Upload your existing keystore
+# Option 2 · Computer – Deinen vorhandenen Keystore hochladen
 
 ```{note}
-[Option 2](BrowserBuildO2.md) (upload an existing keystore) on a **computer** (Windows / Mac / Linux).
+[Option 2](BrowserBuildO2.md) (einen vorhandenen Keystore hochladen) auf einem **Computer** (Windows / Mac / Linux).
 ```
 
-## 1. Download the preparation file
+## 1. Die Vorbereitungsdatei herunterladen
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Start a local server and upload the keystore
+## 2. Einen lokalen Server starten und den Keystore hochladen
 
 Nutze einen PC/Computer (Windows/Mac/Linux)
 
@@ -28,7 +28,7 @@ Nutze einen PC/Computer (Windows/Mac/Linux)
   </div>
 </div>
 
-Install Simple Web Server<br/><br/> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store. If your browser asks whether to open the store app, allow it.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/><br/>
+Simple Web Server installieren<br/><br/> Als Windows- oder Mac-Anwender kannst Du ihn aus dem Microsoft Store oder dem Mac App Store installieren. Fragt Dein Browser, ob die Store-App geöffnet werden soll, erlaube es.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/><br/>
 
 Beispiel anhand eines Mac:
 
@@ -36,15 +36,15 @@ Beispiel anhand eines Mac:
 
 - Klicke auf „Starten“<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)<br/><br/>
 
-- Click New Server<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
+- Klicke auf „New Server“<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
 
 - Trage in Ordnerpfad den Ordner ein, indem sich „aaps-ci-preparation.html“ befindet, und klicke dann auf „Server erstellen“.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)<br/><br/>
 
 - Wenn dieser Bildschirm zu sehen ist, heißt das, dass der Server gestartet wurde.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
 
-- Do not close Simple Web Server. Please switch to your browser and open<br/><br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
+- Schließe Simple Web Server nicht. Bitte wechsel zu Deinem Browser und öffne<br/><br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
-- For the subsequent steps, please refer to the video below, starting from 2 minutes 18 seconds.<br/><br/>
+- Schau Dir für die folgenden Schritte das Video unten ab Minute 2:18 an.<br/><br/>
   <!--crowdin: exclude-->
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
     <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
@@ -60,4 +60,4 @@ Beispiel anhand eines Mac:
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**Weiter: [Schritt 3 – Google Drive autorisieren](BrowserBuildGoogleDrive.md) →**

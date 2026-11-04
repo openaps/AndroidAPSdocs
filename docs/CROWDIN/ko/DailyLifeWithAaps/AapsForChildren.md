@@ -1,31 +1,31 @@
-# AAPS for children
+# 어린이를 위한 AAPS
 
-**AAPS** can be used successfully with type 1 kids as well. However, there are some things to consider.
+**AAPS**는 1형 당뇨병 어린이에게도 성공적으로 사용할 수 있습니다. 하지만 고려해야 할 점이 몇 가지 있습니다.
 
 ## Things to consider
 
-### Initial Profile
+### 초기 프로파일
 
-Setting the correct [**Profile**](../SettingUpAaps/YourAapsProfile.md) (basal rate, ISF, I:C...) and [insulin type](#Config-Builder-insulin-dia) (DIA) may prove difficult for children with type 1, especially when growth hormones are involved. Take your time to test and ensure that you are happy with your child’s basal, I:C, ISF and DIA. Test them in real life with your kid next to you before starting remote monitoring and remote treatment. Weekends or school holidays might be a good time for that.
+1형 당뇨병 어린이는, 특히 성장 호르몬이 영향을 줄 때, 올바른 [**프로파일**](../SettingUpAaps/YourAapsProfile.md)(기저 주입량, ISF, I:C 등)과 [인슐린 종류](#Config-Builder-insulin-dia)(DIA)를 설정하기가 어려울 수 있습니다. 시간을 들여 시험하고, 아이의 기저, I:C, ISF, DIA가 만족스러운지 확인하십시오. 원격 모니터링과 원격 치료를 시작하기 전에, 아이가 곁에 있을 때 실제 생활에서 시험해 보십시오. 주말이나 방학이 이를 위한 좋은 시기일 수 있습니다.
 
-### Monitor and adjust your child’s Profile where necessary
+### 필요할 때 아이의 프로파일을 관찰하고 조정하십시오
 
-As the child grows, **Profile** adjustments will be necessary in order to account for your child’s body’s demands and needs. However this issue exists for all type 1 children including those who are on other pumps or injections.
+아이가 자라면서 아이 몸의 요구와 필요에 맞추기 위해 **프로파일**을 조정해야 합니다. 하지만 이 문제는 다른 펌프나 주사를 사용하는 아이를 포함하여 모든 1형 당뇨병 어린이에게 있습니다.
 
-### Keeping the phone in range
+### 휴대폰을 범위 안에 두기
 
-Think about how you will keep the child’s phone in range of their pump and **CGM**. This can be challenging with children who are too young to be responsible for a phone. An **AAPS** phone with a good Bluetooth connection range should be selected as well as finding a comfortable way for the child to carry the pump and phone. Many solutions exist, like insulin pump belts that also have space for a phone, or a harness to carry like a backpack.
+아이의 휴대폰을 펌프와 **CGM**의 범위 안에 어떻게 둘지 생각해 보십시오. 아직 어려서 휴대폰을 스스로 관리할 수 없는 아이에게는 이것이 어려울 수 있습니다. 블루투스 연결 범위가 좋은 **AAPS** 휴대폰을 선택하고, 아이가 펌프와 휴대폰을 편하게 지닐 수 있는 방법도 찾아야 합니다. 휴대폰을 넣을 공간이 있는 인슐린 펌프 벨트나, 배낭처럼 메는 하네스 등 여러 방법이 있습니다.
 
-### How to protect your child’s AAPS from being misused?
+### 아이의 AAPS가 잘못 사용되지 않도록 어떻게 보호합니까?
 
-There are several protection settings available in **AAPS** to prevent the child or a stranger from misusing **AAPS**. See [Settings → Protection](#Preferences-protection) to add password or biometric protection to boluses, settings changes, or even **AAPS** itself.
+아이나 낯선 사람이 **AAPS**를 잘못 사용하지 않도록 **AAPS**에는 여러 보안 설정이 있습니다. 볼러스, 설정 변경, 또는 **AAPS** 자체에 비밀번호나 생체 인식 보안을 추가하려면 [설정 → 보안](#Preferences-protection)을 참조하십시오.
 
-## Remote monitoring and remote control
+## 원격 모니터링과 원격 제어
 
-Remote monitoring is an essential functionality when using **AAPS** for children. See the dedicated section [Remote Monitoring](../RemoteFeatures/RemoteMonitoring.md) to explore possible options.
+어린이에게 **AAPS**를 사용할 때 원격 모니터링은 꼭 필요한 기능입니다. 사용할 수 있는 방법은 별도 섹션인 [원격 모니터링](../RemoteFeatures/RemoteMonitoring.md)을 참조하십시오.
 
-Remote monitoring and treatment can be hugely beneficial for parents of a type 1 child and this is particularly so when the child attends kindergarten and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan.
+원격 모니터링과 원격 치료는 1형 당뇨병 아이를 둔 부모에게 매우 큰 도움이 될 수 있으며, 특히 아이가 유치원이나 초등학교에 다닐 때 그렇습니다. 하지만 선생님과 보육 교사가 아이의 치료 계획을 알고 있는지 꼭 확인하십시오.
 
-Work out how adding in remote control is going to work with/enhance the existing plan. Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher "follow" phone.
+원격 제어를 추가하면 기존 계획과 어떻게 함께 작동하고 계획을 어떻게 더 좋게 할지 미리 정하십시오. 많은 부모는 보육 담당자와 따로 연락할 수단을 두는 것이 도움이 된다고 생각합니다. 예를 들어 선생님이 "모니터링"용으로 쓰는 저렴한 작은 휴대폰이 있습니다.
 
-Examples for school care plans can be found in the [files section of AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook. 
+학교 관리 계획의 예는 Facebook의 [AAPS 사용자 그룹 파일 섹션](https://www.facebook.com/groups/AndroidAPSUsers/files/)에서 찾을 수 있습니다. 

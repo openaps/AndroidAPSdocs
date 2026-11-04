@@ -1,116 +1,116 @@
-# Pumps and cannulas
+# 펌프와 캐뉼라
 
-## Changing infusion sets: insulin reservoirs and cannulas
+## 주입 세트 교체: 인슐린 레저버와 캐뉼라
 
-The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. This procedure is sometimes referred to as a "set change", with a "full" set change including the insulin reservoir and cannula, and a "partial" set change referring to a change of cannula only.
+아래 절차는 튜브형 펌프에만 해당하며 Omnipod, Medtrum Nano, Accu-Chek Solo 같은 패치 펌프에는 해당하지 않습니다. 이 절차는 "세트 교체"라고도 합니다. "전체" 세트 교체는 인슐린 레저버와 캐뉼라를 모두 교체하는 것이고, "부분" 세트 교체는 캐뉼라만 교체하는 것입니다.
 
-Patch pumps fill and prime themselves in their own activation wizard, and their cannula is already in the body. **AAPS** does not offer a prime for them: **Prime/Fill** is not shown in the **Manage** sheet or in QuickLaunch. See the page of your pump in [Compatible pumps](../Getting-Started/CompatiblePumps.md).
+패치 펌프는 자체 활성화 마법사에서 스스로 채우고 프라임하며, 캐뉼라는 이미 몸 안에 있습니다. **AAPS**는 패치 펌프에 프라임 기능을 제공하지 않습니다: **관리** 시트나 QuickLaunch에 **프라임/채우기**가 표시되지 않습니다. [호환 펌프](../Getting-Started/CompatiblePumps.md)에서 사용하는 펌프의 페이지를 참조하십시오.
 
-Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be carried out via the pump directly. These need to be logged in **AAPS** manually, once completed.
+카트리지/레저버의 실제 교체는 **AAPS**로 할 수 없으며 펌프에서 직접 해야 합니다. 교체를 마친 후에는 **AAPS**에 직접 기록해야 합니다.
 
 (pumps-cannulas-changing-reservoir-and-cannula)=
-### Guide for changing both the pump reservoir and cannula
+### 펌프 레저버와 캐뉼라를 모두 교체하는 방법
 
-1. In **AAPS**, disconnect the pump: press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** for 1 hour. The icon changes to a grey plug icon, indicating that the pump is disconnected.
+1. **AAPS**에서 펌프 연결을 해제하십시오: 메인 화면의 [루프 아이콘](#AapsScreens-loop-status)을 누르고 **펌프 연결 해제**에서 1시간을 선택하십시오. 아이콘이 회색 플러그 아이콘으로 바뀌어 펌프 연결이 해제되었음을 나타냅니다.
 
-2. Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
+2. 인슐린 레저버를 실제로 교체합니다: 펌프를 몸에서 분리하고, 제조사 설명서에 따라 레저버/카트리지와 캐뉼라를 교체하십시오.
 
-3. Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
+3. 튜브와 캐뉼라를 프라임/채웁니다: 이 작업은 펌프에서 직접 할 수 있습니다. 튜브 안의 기포를 반드시 모두 없애십시오.
 
-4. Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
+4. 새 캐뉼라를 몸에 부착하십시오. 캐뉼라를 삽입하고 바늘을 빼면, 부착된 캐뉼라 안에 작은 공기 틈이 생기며 이것도 프라임해야 합니다. 이를 **AAPS**에 기록하고 위치를 프라임하려면: **프라임/채우기**(메인 화면의 펼친 상태 패널, **관리** 시트, 또는 [QuickLaunch](QuickLaunch.md) 버튼)를 열고, 교체를 기록하기 위해 해당하는 **펌프 위치 변경 기록** 및/또는 **인슐린 카트리지 변경 기록**을 선택하십시오. 이제 기본 인슐린 캐뉼라 프라임 양을 누르고(보통 약 0.3 U이지만, 이 값이 사용하는 캐뉼라에 맞는지 확인하십시오) **확인**을 선택하십시오. 요약 메시지를 읽고 **확인**을 탭하여 프라임 실행을 확인하십시오.
 
-   ![Prime/Fill in the Manage sheet with a tube pump](../images/v4/Screens/manage_sheet_tube_pump.png)
+   ![튜브 펌프 사용 시 관리 시트의 프라임/채우기](../images/v4/Screens/manage_sheet_tube_pump.png)
 
 
-5. Reconnect the pump in **AAPS**: press the grey plug icon and select **Reconnect pump** to continue looping.
+5. **AAPS**에서 펌프를 다시 연결하십시오: 회색 플러그 아이콘을 누르고 **펌프 재연결**을 선택하면 루프가 계속됩니다.
 
-### Useful information concerning insulin/cannula changes
+### 인슐린/캐뉼라 교체에 관한 유용한 정보
 
-* Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** main screen.
+* 펌프 위치 변경을 기록하면 Autosens가 100%로 초기화됩니다. 또한 **AAPS** 메인 화면의 해당 캐뉼라/인슐린 상태 등과 사용 기간도 초기화됩니다.
 
-* You can set/adjust the default prime amounts in the **Prime/Fill** settings — type "prime" in the main screen search bar to open them (see [Preferences](../SettingUpAaps/Preferences.md)). See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
+* 기본 프라임 양은 **프라임/채우기** 설정에서 설정/조정할 수 있습니다 — 메인 화면 검색 창에 "prime"을 입력하면 이 설정이 열립니다([설정](../SettingUpAaps/Preferences.md) 참조). 캐뉼라에 몇 단위를 프라임해야 하는지(바늘 길이와 튜브 길이에 따라 다름)는 캐뉼라 상자 안의 설명서를 확인하십시오.
 
-* Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the [Treatments history](#aaps-screens-treatments) as "Prime".
+* 프라임 기능으로 주입한 인슐린은 **AAPS**가 활성 인슐린(IOB)을 계산할 때 고려하지 않으며, [처치 이력](#aaps-screens-treatments)에 "프라임"으로 표시됩니다.
 
-* Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) in the **Insulin** dialog (see [To announce delivered insulin without actually bolusing](#pumps-cannulas-announce-insulin) below).
+* 펌프 연결이 해제된 동안 펌프에서 주입한 볼러스 인슐린도 **AAPS**는 고려하지 않습니다. **AAPS** 연결이 해제된 동안 펌프에서 직접 볼러스를 주입했다면, 펌프를 다시 연결한 후 **인슐린** 대화 상자에서 이 인슐린을 (볼러스를 주입하지 않고) 기록할 수 있습니다(아래의 [실제로 볼러스를 주입하지 않고 주입된 인슐린을 기록하려면](#pumps-cannulas-announce-insulin) 참조).
 
-### Cannula, infusion site, tubing and/or pump issues
+### 캐뉼라, 주입 부위, 튜브 및/또는 펌프 문제
 
-If you are confident that you haven't received any insulin for a period of time, despite **AAPS** recording that you have, and you know exactly when the issue started (_e.g._ you remove the cannula and see that the cannula was kinked during the insertion process) you can correct this in **AAPS**, while being aware that the insulin may in fact have been delivered but may be slow to act for some reason.
+**AAPS**에는 인슐린이 주입되었다고 기록되어 있지만 일정 시간 동안 인슐린을 전혀 받지 못했다고 확신하고, 문제가 언제 시작되었는지 정확히 안다면(_예:_ 캐뉼라를 빼 보니 삽입할 때 캐뉼라가 꺾여 있었던 경우), **AAPS**에서 이를 바로잡을 수 있습니다. 다만 인슐린이 실제로는 주입되었지만 어떤 이유로 천천히 작용하고 있을 수도 있다는 점을 알고 있어야 합니다.
 
 ```{admonition} Caution - Risk of Hypoglycemia
 :class: danger
-Only delete insulin delivery from **AAPS** with EXTREME caution, in case insulin _has_ actually been delivered, and monitor BG closely for the next 24 h.
+인슐린이 실제로 주입되었을 수 있으므로 **AAPS**에서 인슐린 주입 기록을 삭제할 때는 매우 주의하십시오. 그리고 다음 24시간 동안 혈당을 자주 확인하십시오.
 ```
 
-To remove boluses and SMBs which you know have not been delivered, open the **menu** (☰), select [Treatments history](#aaps-screens-treatments) and, on the **Carbs and bolus** tab, conservatively delete the logged boluses starting from the point the incident happened. This will correct the "insulin on board" (IOB) value which is key for **AAPS**' calculations; if you now return to the main screen you will see that the IOB has reduced. Be aware that you cannot delete basal insulin which **AAPS** calculates to have been delivered, so that will still be taken into account by **AAPS**.
+주입되지 않은 것이 확실한 볼러스와 SMB를 삭제하려면 **메뉴**(☰)를 열고 [처치 이력](#aaps-screens-treatments)을 선택한 다음, **탄수화물과 볼러스** 탭에서 문제가 생긴 시점부터 기록된 볼러스를 신중하게 삭제하십시오. 이렇게 하면 **AAPS** 계산의 핵심인 "활성 인슐린"(IOB) 값이 바로잡힙니다. 이제 메인 화면으로 돌아가면 IOB가 줄어든 것을 볼 수 있습니다. **AAPS**가 주입되었다고 계산한 기저 인슐린은 삭제할 수 없으므로, 이 인슐린은 **AAPS**가 계속 계산에 넣는다는 점에 유의하십시오.
 
-In less obvious cases of insulin delivery problems _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. You may detect these issues either by "smelling" the insulin, seeing a wet adhesive, encountering high glucose values or by getting an alarm. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs to be deducted from the current "insulin on board" (IOB) value. One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
+인슐린 주입 문제가 덜 분명한 경우(_예:_ 누출, 막힘, 터널링(tunneling)), 즉 문제가 언제 시작되었는지 확실하지 않거나 인슐린 일부는 주입되었다고 생각되는 경우에는 조심해야 합니다. 이런 문제는 인슐린 "냄새"를 맡거나, 접착 부분이 젖어 있거나, 혈당 값이 높거나, 알람이 울려서 알게 될 수 있습니다. 피부 속으로 들어간 인슐린의 양(시간이 지나면 작용하기 시작할 수 있음)은 결코 알 수 없으므로, 현재 "활성 인슐린"(IOB) 값에서 빼야 할 정확한 인슐린 양을 정하기는 어렵습니다. 한 가지 방법은 인슐린 주입 문제를 해결한 뒤 5시간(또는 본인의 인슐린 작용 시간) 동안 루프를 일시 중지했다가, 그 후에 루프를 다시 시작하는 것입니다. 이렇게 하면 루프를 다시 시작할 때 IOB가 정확합니다.
 
 (pumps-cannulas-disconnecting)=
-## Disconnecting the pump for showering or activity
+## 샤워나 활동을 위해 펌프 분리하기
 
-If you take your pump off for showering, bathing, swimming, contact sports or other activities you must let **AAPS** know that no insulin is being delivered, to keep the IOB correct. The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, open the same dialog again and pick a new duration under **Disconnect pump**: the disconnection is extended and the new duration starts from now. You do not need to reconnect first.
+샤워, 목욕, 수영, 접촉 스포츠 또는 다른 활동을 위해 펌프를 빼는 경우, IOB를 정확하게 유지하려면 인슐린이 주입되지 않는다는 것을 **AAPS**에 알려야 합니다. 펌프 연결은 메인 화면의 [루프 아이콘](#AapsScreens-loop-status)으로 해제할 수 있습니다: 아이콘을 누르고 필요한 기간으로 **펌프 연결 해제**를 선택하십시오. 활동이 계획보다 오래 걸리면 같은 대화 상자를 다시 열고 **펌프 연결 해제**에서 새 기간을 선택하십시오: 연결 해제가 연장되며 새 기간은 지금부터 시작됩니다. 먼저 다시 연결할 필요는 없습니다.
 
-As you are not getting any insulin while the pump is disconnected, you should reconnect every two hours to catch up for the missing basal. You can do this by connecting, bolusing the missing basal amounts (_e.g._ of the last two hours) before disconnecting again. This should help to avoid a severe lack of insulin which could result in diabetic ketoacidosis (DKA). If it is inconvenient to reconnect the pump during activity (cannula site is covered by wearing a wetsuit _etc._), consider a pen injection instead. This manual injection can be logged in **AAPS**, and doesn't have to be logged at the time of injection (just make a note of the time of injection) since you can announce the insulin and backdate the time the insulin was actually given when you reconnect the pump.
+펌프를 분리한 동안에는 인슐린이 전혀 들어가지 않으므로, 2시간마다 다시 연결하여 빠진 기저 인슐린을 보충해야 합니다. 이를 위해 펌프를 다시 연결하고, 빠진 기저량(_예:_ 최근 2시간 분)을 볼러스로 주입한 다음 다시 연결을 해제할 수 있습니다. 이렇게 하면 당뇨병성 케톤산증(DKA)으로 이어질 수 있는 심한 인슐린 부족을 막는 데 도움이 됩니다. 활동 중에 펌프를 다시 연결하기 불편하다면(잠수복을 입어 캐뉼라 위치가 덮여 있는 경우 _등_), 대신 펜 주사를 고려하십시오. 이 수동 주사는 **AAPS**에 기록할 수 있으며, 주사할 때 바로 기록하지 않아도 됩니다(주사 시간만 메모해 두십시오). 펌프를 다시 연결할 때 인슐린을 기록하면서 실제로 주사한 시간으로 되돌려 입력할 수 있기 때문입니다.
 
 (pumps-cannulas-announce-insulin)=
-## To announce delivered insulin without actually bolusing
+## 실제로 볼러스를 주입하지 않고 주입된 인슐린을 기록하려면
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
+**AAPS** 연결이 해제된 동안 펌프에서 주입한 인슐린이나 펜 주사를 기록하려면: [인슐린 대화 상자](#aaps-screens-buttons-insulin)(하단 내비게이션의 **처치** 또는 QuickLaunch 버튼)를 열고, 양을 단위로 입력한 다음 **볼러스는 기록만 됩니다(펌프로 주입하지 않음)**를 활성화하십시오. 그러면 **시간** 행(**지금**으로 설정됨)에서 실제 주사 시간을 기록할 수 있습니다: 최근에 주사했다면 무시해도 됩니다. 볼러스를 얼마 전에 주입했다면 **-**를 사용하여 시간을 뒤로 옮기거나(_예:_ -30분), 꺾쇠로 행을 펼쳐 정확한 날짜와 시간을 선택하십시오. 그러면 **AAPS**는 인슐린 작용 시간을 고려하여 몸에 아직 남아 있는 인슐린을 그에 맞게 계산합니다.
 
-If you are using **AAPS** as a caregiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as "pump disconnect 120" and "pump connect 120". The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.
+보호자로서 **AAPS**를 사용하는 경우, "pump disconnect 120"과 "pump connect 120" 같은 [SMS 명령](../RemoteFeatures/SMSCommands.md)으로 원격에서 아주 쉽게 펌프 연결을 해제(및 재연결)할 수 있습니다. 원격 연결 해제 시간의 범위는 1 - 120분입니다(이 예에서는 120분). 이 방법은 **AAPS** 휴대폰을 다루기 불편할 때 매우 유용합니다. 예를 들어 수영장으로 뛰어가는 아이의 펌프 벨트 안에 들어 있거나, 청소년이 꼭 쥐고 있거나 (사용 중인) 경우입니다.
 
-## Reconnecting the pump after activity
+## 활동 후 펌프 다시 연결하기
 
-After a long disconnection (1 - 2 hours) it is fairly common for **AAPS** to calculate that you now have negative IOB. When you reconnect the pump, depending on preference/current glucose level/planned food or subsequent activity, you can either:
+오래 연결을 해제한 후(1~2시간)에는 **AAPS**가 현재 IOB가 음수라고 계산하는 경우가 꽤 흔합니다. 펌프를 다시 연결할 때는 선호, 현재 혈당, 계획된 식사 또는 이후 활동에 따라 다음 중 하나를 할 수 있습니다:
 
-a) Just reconnect the pump in **AAPS** (grey-to-green, for closed loop) and leave it up to **AAPS** to start to deliver insulin again
+a) **AAPS**에서 펌프를 다시 연결하고(폐쇄 루프에서는 회색에서 녹색으로) 인슐린 주입을 다시 시작하는 것은 **AAPS**에 맡기십시오
 
 _or_
 
-b) If you want to be more aggressive (for example, you are heading for hyperglycemia), you can open the [Bolus wizard](#aaps-screens-bolus-wizard) and bolus for zero carbs, to immediately deliver the calculated missing insulin as a bolus.
+b) 더 적극적으로 대응하고 싶다면(예: 고혈당으로 가고 있는 경우), [볼러스 마법사](#aaps-screens-bolus-wizard)를 열고 탄수화물 0으로 볼러스를 주입하여 계산된 부족한 인슐린을 즉시 볼러스로 주입할 수 있습니다.
 
-Which strategy you prefer is highly personal, and is best determined by trial and error.
+어떤 방법이 좋은지는 사람마다 매우 다르며, 직접 시도해 보면서 찾는 것이 가장 좋습니다.
 
 
 (Aapsscreens-site-rotation)=
-## Site Rotation
+## 위치 순환
 
-**Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
+**관리 → 위치 순환**을 누르면 위치 순환 대화 상자가 보기 모드로 열립니다:
 
-- With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
-- All Cannula change and Sensor change events from the past 45 days are available.
-- Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-- Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
+- 위쪽의 두 버튼(캐뉼라 아이콘과 센서 아이콘)으로 캐뉼라 위치만, 센서 위치만, 또는 둘 다 표시할 수 있습니다
+- 최근 45일 동안의 모든 캐뉼라 교체 및 센서 교체 이벤트를 볼 수 있습니다.
+- 위치 영역이나 아래 목록의 항목 하나를 누르면 선택한 영역의 항목만 보이도록 목록이 필터링됩니다. 선택한 영역은 연한 녹색으로 강조 표시됩니다.
+- 항목 옆의 **연필** 아이콘을 탭하면 편집 화면이 열리고, 부위 위치, 화살표 또는 노트를 수정할 수 있습니다
 
-![View Mode](../images/SiteRotation/ViewMode.png)
+![보기 모드](../images/SiteRotation/ViewMode.png)
 
-- The **cog** icon (upper right) opens the settings: **User profile for site rotation** opens a dialog where you choose **Man**, **Woman** or **Child**, and the **Manage pump site rotation** and **Manage CGM site rotation** switches select which sites you manage.
+- **톱니바퀴** 아이콘(오른쪽 위)을 누르면 설정이 열립니다: **위치 순환용 체형**은 **남성**, **여성** 또는 **어린이**를 고르는 대화 상자를 열고, **펌프 위치 순환 관리**와 **CGM 위치 순환 관리** 스위치로 관리할 위치를 선택합니다.
 
-![Settings](../images/SiteRotation/Settings.png)
+![설정](../images/SiteRotation/Settings.png)
 
-![User profile for site rotation dialog](../images/SiteRotation/Type.png)
+![위치 순환용 체형 대화 상자](../images/SiteRotation/Type.png)
 
-*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
+*참고: 이 설정은 "프라임/채우기" 버튼 또는 "센서 삽입" 버튼으로 새 항목을 만들 때 위치 순환 대화 상자(편집 모드)를 자동으로 열지 여부를 정합니다.*
 
-- For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+- 펌프에서 직접 위치 변경을 한 경우에는 보기 모드를 열고 새 항목을 편집하여 위치와 화살표를 선택해야 합니다
 
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+편집 모드에서는 선택한 항목의 위치, 화살표, 노트를 선택할 수 있습니다:
 
-- The entry being edited is shown below the body images, with its type icon (cannula or sensor)
-- Front and back views are shown side by side: tap the area where you placed it
-- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
+- 편집 중인 항목은 신체 그림 아래에 종류 아이콘(캐뉼라 또는 센서)과 함께 표시됩니다
+- 앞면과 뒷면 그림이 나란히 표시됩니다: 부착한 영역을 탭하십시오
+- 위치를 선택하면(녹색으로 강조 표시) 아래 목록에 최근 45일 동안 이 위치에 기록된 모든 항목이 표시됩니다.
 
-![Edit Mode](../images/SiteRotation/EditMode.png)
+![편집 모드](../images/SiteRotation/EditMode.png)
 
-- You can add an optional arrow by tapping the arrow icon at the right of the entry: the **Select Arrow** dialog lets you specify a sub-location or the pod orientation
+- 항목 오른쪽의 화살표 아이콘을 탭하여 화살표를 추가할 수 있습니다(선택 사항): **화살표 선택** 대화 상자에서 세부 위치나 Pod 방향을 지정할 수 있습니다
 
-![Position](../images/SiteRotation/EditModeSub.png)
+![위치](../images/SiteRotation/EditModeSub.png)
 
-- You can also add a **Note** about the selected site
-- Tap the **save** icon (upper right) to record the site
+- 선택한 위치에 대한 **노트**도 추가할 수 있습니다
+- **저장** 아이콘(오른쪽 위)을 탭하여 위치를 기록하십시오
 
-Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+필터링은 그림에서 직접 하거나, 목록의 치료 이벤트를 눌러서 할 수 있습니다 필터링을 해제하려면 그림에서 위치 바깥 부분을 누르기만 하면 됩니다
 
-![Filtering](../images/SiteRotation/Filtering.png)
+![필터링](../images/SiteRotation/Filtering.png)

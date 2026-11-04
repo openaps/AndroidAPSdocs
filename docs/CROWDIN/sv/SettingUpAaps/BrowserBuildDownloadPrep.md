@@ -1,21 +1,21 @@
-Both keystore options (Option 1 and Option 2) use the same preparation file. Download it:
+Båda alternativen för keystore (Alternativ 1 och Alternativ 2) använder samma förberedelsefil. Ladda ned den:
 
 - [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
 ````{admonition} Note
 :class: note
 
-1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
+1. Om du öppnar den här sidan inifrån en app (i en webbvy) kanske HTML-filen inte laddas ned. Kopiera i så fall URL:en och öppna den i din webbläsare i stället:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-Or visit the latest release page:
+Eller gå till sidan för den senaste versionen:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2. Backup copy hosted on this site:
- - If the external link is also unavailable, you can use this backup file to download.
+2. Reservkopia på den här webbplatsen:
+ - Om även den externa länken inte fungerar kan du ladda ned den här reservfilen.
 <!--crowdin:disable-->
 
 ```{eval-rst}

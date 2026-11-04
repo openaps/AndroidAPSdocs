@@ -1,6 +1,6 @@
-# Where can I get help?
+# Gdzie mogę uzyskać pomoc?
 
-## I'm stuck; what should I do? Kogo mogę zapytać?
+## Utknąłem. Co mam zrobić? Kogo mogę zapytać?
 
 Ten projekt opiera się na pracy wolontariuszy. Dlatego prośby o pomoc podlegają kilku zasadom, aby nie marnować czasu osób, które bezinteresownie pomagają innym:
 
@@ -58,7 +58,7 @@ Uwaga: Facebook niedawno usunął linki zewnętrzne udostępnione w grupie **AAP
 
 ### Polska
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): polska społeczność AAPS i grupa wsparcia dla osób z cukrzycą
 
 ### Szwecja
 

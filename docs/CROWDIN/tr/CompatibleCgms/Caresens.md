@@ -1,29 +1,29 @@
 # CareSens
 
-There are different ways to use CareSens data with **AAPS**:
+CareSens verilerini **AAPS** ile kullanmanın farklı yolları vardır:
 
 - xDrip
 - Juggluco
 
-**Note:** You do not need the Sens365 follower app to connect to AAPS.
+**Not:** AAPS'e bağlanmak için Sens365 takipçi uygulamasına gerek yoktur.
 
 ## 1. xDrip
 
-1. Install and set up the official CareSens app.
-2. In CareSens app, go to settings -> Manage Data and Connections -> turn on xDrip switch. If preferred, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others".
+1. Resmi CareSens uygulamasını yükleyin ve ayarlayın.
+2. CareSens uygulamasında settings -> Manage Data and Connections bölümüne gidin -> xDrip anahtarını açın. İsterseniz "others" bölümünde CareLevo, DIA:CONN, CloudLoop vb. veri bağlantılarını kapatın.
 
-![CareSens App Data Connections](../images/eversenseapp-dataconnections.png)
+![CareSens uygulamasının veri bağlantıları](../images/eversenseapp-dataconnections.png)
 
 
-2. Install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
-3. In xDrip, go to settings -> hardware data source, select `Companion App` as data source.
-4. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+2. xDrip'i yükleyin: [xDrip](https://github.com/NightscoutFoundation/xDrip).
+3. xDrip'te settings -> hardware data source bölümüne gidin, veri kaynağı olarak `Companion App` seçin.
+4. **AAPS**'te [**Konfigürasyon → KŞ kaynağı**](#Config-Builder-bg-source) içinde xDrip'i seçin.
 
 
 ## 2. Juggluco
 
-1. Install the Juggluco app.
-2. In Juggluco, open the left menu and select `Photo`
-3. Scan the QR code on the package of the sensor.
-4. In left menu -> settings -> exchange data make sure xDrip broadcast is turned on.
-5. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+1. Juggluco uygulamasını yükleyin.
+2. Juggluco'da sol menüyü açın ve `Photo` seçeneğini seçin
+3. Sensör paketinin üzerindeki QR kodu tarayın.
+4. Sol menü -> settings -> exchange data bölümünde xDrip broadcast seçeneğinin açık olduğundan emin olun.
+5. **AAPS**'te [**Konfigürasyon → KŞ kaynağı**](#Config-Builder-bg-source) içinde xDrip'i seçin.

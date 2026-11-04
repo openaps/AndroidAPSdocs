@@ -1,109 +1,109 @@
-# How to use Autotune plugin
+# Autotune 플러그인 사용 방법
 
-Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
+Autotune 플러그인은 OpenAPS autotune 알고리즘을 AAPS 안에 구현한 것입니다. 최근 AAPS 이력을 분석해서 기저 주입량, ISF, 탄수화물 비율(IC)의 조정을 제안합니다.
 
-Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+Autotune 플러그인은 AAPS [3.4](#version3400) 버전부터 있지만 기본적으로 숨겨져 있습니다.
 
 (autotune-how-autotune-calculates-adjustments)=
-## How Autotune calculates adjustments
+## Autotune이 조정을 계산하는 방법
 
-Autotune looks back over your recent AAPS history — CGM readings, boluses, carbs and temporary basal rates — and works out where your **Profile** (basal rates, ISF, carb ratio) doesn't quite match what actually happened to your BG.
+Autotune은 최근 AAPS 이력(CGM 측정값, 볼러스, 탄수화물, 임시 기저)을 되돌아보고, **프로파일**(기저 주입량, ISF, 탄수화물 비율)이 실제 혈당 변화와 잘 맞지 않는 곳을 찾습니다.
 
-For each 5-minute data point, it compares your **actual BG change** to the change your Profile predicted, and sorts the resulting deviation into one of three buckets:
+5분마다의 각 데이터 지점에서 **실제 혈당 변화**를 프로파일이 예측한 변화와 비교하고, 그 차이(편차)를 세 그룹 중 하나로 나눕니다:
 
-* deviations that happened with no carbs on board and no insulin activity (used to tune **basal rates**, hour by hour),
-* deviations that happened after a bolus/correction with no carbs (used to tune **ISF**), or
-* deviations that happened while carbs were absorbing (used to tune **carb ratio**).
+* 활성 탄수화물이 없고 인슐린 활동도 없을 때 생긴 편차(시간별 **기저 주입량** 조정에 사용),
+* 탄수화물 없이 볼러스/교정 후에 생긴 편차(**ISF** 조정에 사용), 또는
+* 탄수화물이 흡수되는 동안 생긴 편차(**탄수화물 비율** 조정에 사용).
 
-It then looks at the pattern of deviations in each bucket (using percentiles rather than a simple average, so a few noisy data points don't skew the result) and proposes a new value for that hour/parameter.
+그런 다음 각 그룹에서 편차의 패턴을 살펴보고(단순 평균이 아니라 백분위를 사용하므로 잡음이 있는 몇몇 데이터 지점이 결과를 왜곡하지 않습니다) 해당 시간/매개변수에 대한 새 값을 제안합니다.
 
-To keep any single run from overcorrecting, each Autotune run only ever moves a value a fraction of the way towards what the data suggests: up to 10% for ISF and carb ratio, and up to 20% for each basal segment. Overall drift is further capped by the **Max autosens ratio** / **Min autosens ratio** settings (see [Other settings](#autotune-other-settings) below) — the same bounds that limit Autosens. This is why Autotune is meant to be run repeatedly (day after day, or nightly) rather than trusted after a single run: results should converge gradually, and a big jump on one run is a sign to double check your data (missed carbs, a bad sensor day, _etc._) rather than to trust it blindly.
+한 번의 실행이 과도하게 교정하지 않도록, Autotune은 실행할 때마다 데이터가 제안하는 값 쪽으로 일부만 이동합니다: ISF와 탄수화물 비율은 최대 10%, 각 기저 구간은 최대 20%입니다. 전체 변화는 **Autosens 최대** / **Autosens 최소** 설정으로 다시 한 번 제한됩니다(아래 [기타 설정](#autotune-other-settings) 참조). 이것은 Autosens를 제한하는 것과 같은 한계입니다. 그래서 Autotune은 한 번 실행한 결과를 믿기보다 반복해서(매일 또는 매일 밤) 실행하도록 만들어졌습니다: 결과는 점차 수렴해야 하며, 한 번의 실행에서 크게 바뀌면 그대로 믿지 말고 데이터(입력하지 않은 탄수화물, 센서가 나빴던 날 _등_)를 다시 확인하라는 신호입니다.
 
-Autotune can be run three ways: manually as a one-off from within the plugin (as described below), automatically every night via an [automation rule](#autotune-run-autotune-with-an-automation-rule), or — outside of AAPS entirely — as a standalone command-line tool against exported data, which is how some community guides describe using it without a phone actively running AAPS.
+Autotune은 세 가지 방법으로 실행할 수 있습니다: 플러그인 안에서 한 번 수동으로(아래 설명), [자동화 규칙](#autotune-run-autotune-with-an-automation-rule)으로 매일 밤 자동으로, 또는 AAPS와 완전히 별개로 내보낸 데이터에 대해 독립 명령줄 도구로 실행할 수 있습니다. 일부 커뮤니티 가이드는 마지막 방법으로 AAPS를 실행하는 휴대폰 없이 사용하는 방법을 설명합니다.
 
-*For the underlying oref0 algorithm in full mathematical detail, see [OpenAPS's Autotune documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
+*oref0 알고리즘의 자세한 수학적 내용은 [OpenAPS의 Autotune 문서](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)를 참조하십시오.*
 
-## Show the Autotune plugin
+## Autotune 플러그인 표시
 
-Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+휴대폰 [AAPS 디렉터리](#preferences-maintenance-settings)의 `extra` 하위 폴더에 `enable_autotune`이라는 빈 파일을 만드십시오.
 
-***NOTE: Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one. Several users have put the file into the wrong folder.***
+***참고: AAPS 설정에서 AAPS 디렉터리가 어디인지 확인하고, 파일을 올바른 디렉터리에 넣었는지 확인하십시오. 여러 사용자가 파일을 잘못된 폴더에 넣었습니다.***
 
-![Enable Autotune](../images/Autotune/Autotune_0.png)
+![Autotune 활성화](../images/Autotune/Autotune_0.png)
 
-Restart **AAPS**. Then open the **menu** (☰), select **Configuration**, then the **General** category, and tick **Autotune**. The card then shows **Settings** and **Open plugin**:
+**AAPS**를 다시 시작하십시오. 그런 다음 **메뉴**(☰)를 열고 **구성**을 선택한 뒤, **일반** 범주에서 **Autotune**을 체크하십시오. 그러면 카드에 **설정**과 **플러그인 열기**가 표시됩니다:
 
-![Autotune ticked in Configuration > General](../images/v4/Configuration/configuration_general_autotune.png)
+![구성 > 일반에서 체크된 Autotune](../images/v4/Configuration/configuration_general_autotune.png)
 
-## Autotune user interface
+## Autotune 사용자 인터페이스
 
-Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
+**Autotune** 카드에서 **플러그인 열기**를 눌러 Autotune 화면을 엽니다:
 
-![Autotune screen with the profile, the number of days of data and a warning about the selected profile](../images/Autotune/Autotune_1b.png)
+![프로파일, 데이터 일수, 선택한 프로파일에 대한 경고가 표시된 Autotune 화면](../images/Autotune/Autotune_1b.png)
 
-- You can select in the Profile dropdown menu the input profile you want to tune (by default your current active profile is selected)
-  - Note: each time you select a new profile, previous results will be removed and the **Number of days of data** will be set to its default value
-- Then **Number of days of data** (called **Tune days** in older versions) is to select the number of days used in calculation to tune your profile. The minimum value is 1 day and the maximum value 30 days. This number should not be too small to get correct iterative and smooth results (above 7 days for each calculation)
-  - Note: each time you change the **Number of days of data**, previous results will be removed
-- Last Run is a link that recover your latest valid calculation. If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successful run.
-- Warning show you for example some information about selected profile (if you have several IC values or several ISF values)
-  - Note: Autotune calculation works with only a single IC and a single ISF value. There is currently no existing Autotune algorithm to tune a circadian IC or circadian ISF. If your input profile  has several values, you can see in warning section the average value taken into account to tune your profile.
-- Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, IC, ISF, basal and target)
-  - Note: Autotune will only tune your IC (single value), ISF (single value) and basal (with circadian variation). Units and target will remain unchanged in output profile.
+- 프로파일 드롭다운 메뉴에서 조정할 입력 프로파일을 선택할 수 있습니다(기본으로 현재 활성 프로파일이 선택되어 있습니다)
+  - 참고: 새 프로파일을 선택할 때마다 이전 결과가 지워지고 **데이터 일수**가 기본값으로 설정됩니다
+- 다음으로 **데이터 일수**(이전 버전에서는 **조정 일수**)에서 프로파일 조정 계산에 사용할 일수를 선택합니다. 최솟값은 1일, 최댓값은 30일입니다. 반복 계산으로 올바르고 매끄러운 결과를 얻으려면 이 숫자가 너무 작으면 안 됩니다(계산마다 7일 이상)
+  - 참고: **데이터 일수**를 바꿀 때마다 이전 결과가 지워집니다
+- 마지막 실행은 마지막으로 성공한 계산을 불러오는 링크입니다. 당일에 Autotune을 실행하지 않았거나, 위에서 계산 매개변수를 바꿔서 이전 결과가 지워졌다면, 마지막으로 성공한 실행의 매개변수와 결과를 불러올 수 있습니다.
+- 경고에는 예를 들어 선택한 프로파일에 대한 정보가 표시됩니다(IC 값이나 ISF 값이 여러 개인 경우)
+  - 참고: Autotune 계산은 IC 값 하나와 ISF 값 하나로만 작동합니다. 현재 하루 주기 IC나 하루 주기 ISF를 조정하는 Autotune 알고리즘은 없습니다. 입력 프로파일에 값이 여러 개 있으면, 경고 부분에서 프로파일 조정에 사용되는 평균값을 볼 수 있습니다.
+- "입력 프로파일 확인하기" 버튼은 프로파일 보기를 열어 프로파일(단위, IC, ISF, 기저, 목표)을 빠르게 확인할 수 있게 합니다
+  - 참고: Autotune은 IC(값 하나), ISF(값 하나), 기저(하루 주기 변화 포함)만 조정합니다. 단위와 목표는 출력 프로파일에서 바뀌지 않습니다.
 
-- "Run Autotune" will launch Autotune calculation with selected profile and the selected number of days of data
-  - Note: Autotune calculation can take a long time. Once launched, you can switch to another view (home, ...) and come back later in Autotune plugin to see results
+- "Autotune 실행하기" 버튼은 선택한 프로파일과 선택한 데이터 일수로 Autotune 계산을 시작합니다
+  - 참고: Autotune 계산은 시간이 오래 걸릴 수 있습니다. 계산이 시작되면 다른 화면(홈 등)으로 이동했다가 나중에 Autotune 플러그인으로 돌아와서 결과를 볼 수 있습니다
 
-  ![Autotune Run start](../images/Autotune/Autotune_2b.png)
+  ![Autotune 실행 시작](../images/Autotune/Autotune_2b.png)
 
-- Then during the run you will see intermediate results below
+- 실행하는 동안 아래에 중간 결과가 표시됩니다
 
-  - Note: During run, settings are locked, so you cannot change anymore selected input profile or the number of day. You will have to wait the end of current calculation if you want to launch another run with other parameters.
+  - 참고: 실행하는 동안에는 설정이 잠기므로, 선택한 입력 프로파일이나 일수를 더 이상 바꿀 수 없습니다. 다른 매개변수로 다시 실행하려면 현재 계산이 끝날 때까지 기다려야 합니다.
 
-  ![Autotune during run](../images/Autotune/Autotune_3b.png)
+  ![실행 중인 Autotune](../images/Autotune/Autotune_3b.png)
 
-- When Autotune calculation is finished, you will see the result (Tuned profile) and four buttons below.
+- Autotune 계산이 끝나면 결과(조정된 프로파일)와 그 아래에 버튼 네 개가 표시됩니다.
 
-  ![Autotune Result](../images/Autotune/Autotune_4b.png)
+  ![Autotune 결과](../images/Autotune/Autotune_4b.png)
 
-- It's important to always compare input profile (column "Profile"), output profile (column "Tuned") and the percentage of variation for each value (Column "%").
+- 입력 프로파일("프로파일" 열), 출력 프로파일("조정된" 열), 각 값의 변화 백분율("%" 열)을 항상 비교하는 것이 중요합니다.
 
-- For basal rates, you also have the number of "missing days". You have missing days when Autotune don't have enough data categorized as "Basal" to tune basal rate for this period (for example after each meal when you have carbs absorption). This number should be as low as possible especially when basal is important (for example during the night or at the end of the afternoon)
+- 기저 주입량에는 "누락된 일수"도 표시됩니다. 어떤 시간대의 기저 주입량을 조정하기에 "기저"로 분류된 데이터가 충분하지 않으면 누락된 일수가 생깁니다(예: 탄수화물이 흡수되는 식사 후마다). 특히 기저가 중요한 시간대(예: 밤이나 늦은 오후)에는 이 숫자가 가능한 한 낮아야 합니다
 
-- The "Compare profiles" button open the profile comparator view. Input profile is in blue, and output profile (named "Tuned") is in red.
+- "프로파일 비교하기" 버튼은 프로파일 비교 화면을 엽니다. 입력 프로파일은 파란색, 출력 프로파일("조정된")은 빨간색입니다.
 
-  - Note: in the example below input profile has circadian variation for IC and ISF, but output calculated profile has a single value. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+  - 참고: 아래 예에서 입력 프로파일은 IC와 ISF에 하루 주기 변화가 있지만, 계산된 출력 프로파일은 값이 하나입니다. 하루 주기 출력 프로파일이 중요하다면 아래의 [하루 주기 IC 또는 ISF 프로파일](#autotune-circadian-ic-or-isf-profile)을 참조하십시오.
 
-  ![Autotune Compare profiles](../images/Autotune/Autotune_5.png)
+  ![Autotune 프로파일 비교](../images/Autotune/Autotune_5.png)
 
-- If you trust results (low percentage of variation between input profile and output profile), you can click on "Activate profile" button and then click on OK to validated.
+- 결과를 신뢰한다면(입력 프로파일과 출력 프로파일 사이의 변화 백분율이 낮은 경우) "프로파일 활성화" 버튼을 누른 다음 확인을 눌러 승인할 수 있습니다.
 
-  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
-  - If you already have a profile named "Tuned" in **Manage → Profile**, then this profile will be updated with calculated Autotune profile before the activation
+  - "프로파일 활성화"를 누르면 프로파일 목록(**관리 → 프로파일**)에 "조정된"이라는 새 프로파일이 자동으로 만들어집니다.
+  - **관리 → 프로파일**에 이미 "조정된"이라는 프로파일이 있으면, 활성화 전에 이 프로파일이 계산된 Autotune 프로파일로 업데이트됩니다
 
-  ![Autotune Activate profile](../images/Autotune/Autotune_6.png)
+  ![Autotune 프로파일 활성화](../images/Autotune/Autotune_6.png)
 
-- If you think Tuned profile must be adjusted (for example if you think some variation are too important), then you can click on "Copy to local profile" button
+- 조정된 프로파일을 수정해야 한다고 생각되면(예: 일부 변화가 너무 크다고 생각될 때) "로컬 프로파일로 복사하기" 버튼을 누를 수 있습니다
 
-  - A new profile with the prefix "Tuned" and the date and time of the run will be created in **Manage → Profile**
+  - **관리 → 프로파일**에 "조정된" 접두어와 실행 날짜 및 시간이 붙은 새 프로파일이 만들어집니다
 
-  ![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
+  ![Autotune 로컬 프로파일로 복사](../images/Autotune/Autotune_7.png)
 
-- You can then edit the Tuned profile: open **Manage** > **Profile**, swipe to the card named "Tuned" with the date and time of the run, and tap the **Edit** (pencil) button
+- 그런 다음 조정된 프로파일을 편집할 수 있습니다: **관리** > **프로파일**을 열고, 실행 날짜와 시간이 붙은 "조정된" 카드로 밀어서 이동한 뒤, **편집**(연필) 버튼을 누르십시오
 
-  - the values in the profile will be rounded in the user interface to your pump capabilities
+  - 프로파일의 값은 사용자 인터페이스에서 펌프 성능에 맞게 반올림됩니다
 
-  ![Autotune local profile update](../images/Autotune/Autotune_8.png)
+  ![Autotune 로컬 프로파일 업데이트](../images/Autotune/Autotune_8.png)
 
-- If you want to replace your input profile with Autotune result, click on "Update input profile" button and validate the Popup with OK
+- 입력 프로파일을 Autotune 결과로 바꾸려면 "입력 프로파일 업데이트" 버튼을 누르고 팝업에서 확인을 눌러 승인하십시오
 
-  - Note: if you click on "Activate profile" after "Update input profile", then you will activate your updated profile and not the default "Tuned" profile.
+  - 참고: "입력 프로파일 업데이트" 다음에 "프로파일 활성화"을 누르면, 기본 "조정된" 프로파일이 아니라 업데이트된 프로파일이 활성화됩니다.
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_9.png)
+  ![Autotune 입력 프로파일 업데이트](../images/Autotune/Autotune_9.png)
 
-- If you have updated your input profile, then the "Update input profile" button is replaced by "Revert input profile" button (see screenshot below). You can that way immediately see if your current input profile in **Manage → Profile** already includes the result of last run or not. You also have the possibility to recover your input profile without autotune result with this button
+- 입력 프로파일을 업데이트했다면 "입력 프로파일 업데이트" 버튼이 "입력 프로파일 되돌리기" 버튼으로 바뀝니다(아래 스크린샷 참조). 이렇게 하면 **관리 → 프로파일**의 현재 입력 프로파일에 마지막 실행 결과가 이미 들어 있는지 바로 볼 수 있습니다. 이 버튼으로 Autotune 결과가 없는 입력 프로파일을 되돌릴 수도 있습니다
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_10.png)
+  ![Autotune 입력 프로파일 업데이트](../images/Autotune/Autotune_10.png)
 
 
 
@@ -111,126 +111,126 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
 (autotune-plugin-settings)=
 
-### Autotune plugin settings
+### Autotune 플러그인 설정
 
-  ![Autotune settings in AAPS 4](../images/preferences/settings_autotune.png)
+  ![AAPS 4의 Autotune 설정](../images/preferences/settings_autotune.png)
 
 ```{admonition} Only DEV
 :class: note
-The **Auto switch profile** feature is only available in Dev/Engineering mode.
+**프로파일 자동 전환** 기능은 Dev/엔지니어링 모드에서만 사용할 수 있습니다.
 ```
 
-- **Auto switch profile** (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. If you change this setting to On, the input profile will automatically be updated by the Tuned profile, and it will be activated.
-  - **Be Careful, you must trust and verify during several following days, that after an update and activation of Tuned profile without modification, it improves your loop**
+- **프로파일 자동 전환**(기본값 끔): 아래 [자동화 규칙으로 Autotune 실행하기](#autotune-run-autotune-with-an-automation-rule)를 참조하십시오. 이 설정을 켜면 입력 프로파일이 조정된 프로파일로 자동 업데이트되고 활성화됩니다.
+  - **주의하십시오. 조정된 프로파일을 수정 없이 업데이트하고 활성화한 뒤에는, 그것이 루프를 개선하는지 이후 며칠 동안 확인하고 신뢰할 수 있어야 합니다**
 
-- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). It will prevent (when Off) to categorize UAM as basal.
-  - Note: if you have at least one hour of Carbs absorption detected during one day, then all data categorized as "UAM" will be categorized as basal, whatever this setting (On or Off)
-- **Default tune days** (default 5): You can define the default value with this setting. Each time you select a new profile in the Autotune plugin, the **Number of days of data** will be replaced by this default value
-- **Use circadian IC/ISF** (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+- **UAM을 기저로 분류**(기본값 끔): 이 설정은 탄수화물을 전혀 입력하지 않고 AAPS를 사용하는 사용자(Full UAM)를 위한 것입니다. 이 설정이 꺼져 있으면 UAM을 기저로 분류하지 않습니다.
+  - 참고: 하루 중 탄수화물 흡수가 감지된 시간이 1시간 이상 있으면, 이 설정(켬 또는 끔)과 관계없이 "UAM"으로 분류된 모든 데이터가 기저로 분류됩니다
+- **기본 조정 일수**(기본값 5): 이 설정으로 기본값을 정할 수 있습니다. Autotune 플러그인에서 새 프로파일을 선택할 때마다 **데이터 일수**가 이 기본값으로 바뀝니다
+- **하루 주기 IC/ISF 사용**(기본값 끔): 아래 [하루 주기 IC 또는 ISF 프로파일](#autotune-circadian-ic-or-isf-profile)을 참조하십시오.
 
 (autotune-other-settings)=
 ### Other settings
 
-- Autotune also uses Max autosens ratio and Min autosens ratio to limit variation. You can see and adjust these values in [**Settings** > **Absorption settings** > **Advanced Settings**](../SettingUpAaps/Preferences.md) (**Autosens max** and **Autosens min**).
+- Autotune은 변화를 제한하기 위해 Autosens 최대와 Autosens 최소도 사용합니다. 이 값은 [**설정** > **흡수 설정** > **고급 설정**](../SettingUpAaps/Preferences.md)(**Autosens 최대** 및 **Autosens 최소**)에서 보고 조정할 수 있습니다.
 
-  ![Autosens max and Autosens min in the advanced absorption settings](../images/preferences/settings_absorption_advanced.png)
+  ![고급 흡수 설정의 Autosens 최대와 Autosens 최소](../images/preferences/settings_absorption_advanced.png)
 
 
 
-## Advanced feature
+## 고급 기능
 
 (autotune-circadian-ic-or-isf-profile)=
 
-### Circadian IC or ISF profile
+### 하루 주기 IC 또는 ISF 프로파일
 
-- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can enable **Use circadian IC/ISF** (called "Apply average result in circadian IC/ISF" in older versions)
+- 프로파일의 IC 및/또는 ISF 변화가 크고, 하루 주기 시간과 변화를 완전히 신뢰한다면 **하루 주기 IC/ISF 사용**(이전 버전에서는 "Apply average result in circadian IC/ISF")을 활성화할 수 있습니다
 
-  - Note that Autotune calculation will always be done with a single value, and circadian variation will not be tuned by Autotune. This setting only apply average variation calculated for IC and/or ISF on your circadian values
+  - Autotune 계산은 항상 값 하나로 이루어지며, 하루 주기 변화는 Autotune이 조정하지 않는다는 점에 유의하십시오. 이 설정은 IC 및/또는 ISF에 대해 계산된 평균 변화를 하루 주기 값에 적용하기만 합니다
 
-- See on screenshot below Tuned profile with Apply average variation Off (on the left) and On (on the right)
+- 아래 스크린샷에서 평균 변화 적용을 끈 경우(왼쪽)와 켠 경우(오른쪽)의 조정된 프로파일을 보십시오
 
-  ![Autotune default screen](../images/Autotune/Autotune_13.png)
+  ![Autotune 기본 화면](../images/Autotune/Autotune_13.png)
 
 
 
-### Tune specific days of the week
+### 특정 요일 조정
 
-- If you tap the **eye** icon on the right of the **Number of days of data** field, you will see the day selection. You can specify which day of the week should be included in Autotune calculation (in screenshot below you can see an example for "working days" with Saturday and Sunday removed from autotune calculation)
-  - If the number of days included in Autotune calculation is lower than the **Number of days of data**, then you will see how many days will be included on the right of the days selector (10 days in the example below)
-  - This setting gives good results only if the number of remaining days is not too small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
+- **데이터 일수** 필드 오른쪽의 **눈** 아이콘을 누르면 요일 선택이 표시됩니다. Autotune 계산에 포함할 요일을 지정할 수 있습니다(아래 스크린샷에서 토요일과 일요일을 Autotune 계산에서 뺀 "평일"의 예를 볼 수 있습니다)
+  - Autotune 계산에 포함되는 일수가 **데이터 일수**보다 적으면, 요일 선택기 오른쪽에 포함될 일수가 표시됩니다(아래 예에서는 10일)
+  - 이 설정은 남은 일수가 너무 적지 않을 때만 좋은 결과를 줍니다(예: 토요일과 일요일만 선택해서 주말용 프로파일을 조정한다면, Autotune 계산에 6일이나 8일이 포함되도록 **데이터 일수**를 최소 21일 또는 28일로 설정해야 합니다)
 
-  ![Autotune default screen](../images/Autotune/Autotune_14b.png)
+  ![Autotune 기본 화면](../images/Autotune/Autotune_14b.png)
 
-- During Autotune calculation, you can see the progress of the calculations ("Partial result day 1 / 4 tuned" in the example below, with Saturday and Sunday excluded)
+- Autotune 계산 중에는 계산 진행 상황을 볼 수 있습니다(아래 예에서는 토요일과 일요일을 빼고 "부분 결과 날짜 1 / 4 조정됨")
 
-  ![Autotune default screen](../images/Autotune/Autotune_15b.png)
+  ![Autotune 기본 화면](../images/Autotune/Autotune_15b.png)
 
 
 
 (autotune-run-autotune-with-an-automation-rule)=
 
-## Run Autotune with an automation rule
+## 자동화 규칙으로 Autotune 실행하기
 
 ```{admonition} Only DEV
 :class: note
-The **Auto switch profile** feature is only available in Dev/Engineering mode.
+**프로파일 자동 전환** 기능은 Dev/엔지니어링 모드에서만 사용할 수 있습니다.
 ```
 
-First step is to define correct trigger for an automation rule with Autotune:
+첫 단계는 Autotune 자동화 규칙에 맞는 트리거를 정하는 것입니다:
 
-Note: for more information on how to set an automation rule, see [here](../DailyLifeWithAaps/Automations.md).
+참고: 자동화 규칙을 설정하는 방법에 대한 자세한 정보는 [여기](../DailyLifeWithAaps/Automations.md)를 참조하십시오.
 
-- You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be run daily (each new run you shift one day later and quickly profile modification should be tiny)
+- 반복 시간 트리거를 선택해야 합니다: Autotune은 하루에 한 번만 실행하십시오. Autotune은 매일 실행하도록 설계되었습니다(새로 실행할 때마다 하루씩 뒤로 이동하므로 프로파일 변경은 금방 아주 작아져야 합니다)
 
-  ![Autotune default screen](../images/Autotune/Autotune_16.png)
+  ![Autotune 기본 화면](../images/Autotune/Autotune_16.png)
 
-- It's better at the beginning to run Autotune during the day to be able to check results. If you want to run Autotune during the night, you have to select in the trigger 4AM or later to include current day in next Autotune Calculation.
+- 처음에는 결과를 확인할 수 있도록 낮에 Autotune을 실행하는 것이 좋습니다. 밤에 Autotune을 실행하려면, 다음 Autotune 계산에 당일을 포함하도록 트리거에서 오전 4시 이후를 선택해야 합니다.
 
-  ![Autotune default screen](../images/Autotune/Autotune_17.png)
+  ![Autotune 기본 화면](../images/Autotune/Autotune_17.png)
 
-- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
+- 그런 다음 **Autotune 실행하기** 동작(**루프 & 인슐린** 그룹)을 선택할 수 있습니다
 
-  ![Autotune default screen](../images/Autotune/Autotune_18.png)
+  ![Autotune 기본 화면](../images/Autotune/Autotune_18.png)
 
-- You can then adjust the parameters of the action for your run. In a new action, **Select profile to tune** shows the first profile of your local profile list, the **Tune days** field is empty and all days are selected. Choose the profile to tune and enter the number of **Tune days** (1 to 30).
+- 그런 다음 실행에 맞게 동작의 매개변수를 조정할 수 있습니다. 새 동작에서 **조정할 프로파일 선택하기**에는 로컬 프로파일 목록의 첫 번째 프로파일이 표시되고, **조정 일수** 필드는 비어 있으며 모든 요일이 선택되어 있습니다. 조정할 프로파일을 고르고 **조정 일수**(1~30)를 입력하십시오.
 
-  ![Autotune default screen](../images/Autotune/Autotune_19b.png)
+  ![Autotune 기본 화면](../images/Autotune/Autotune_19b.png)
 
-- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "**Auto switch profile**" to enabled to automatically update and activate profile tuned after calculation.
+- 며칠 뒤 Autotune 결과를 완전히 신뢰하고 변경 백분율이 낮다면, [Autotune 설정](#autotune-plugin-settings)의 "**프로파일 자동 전환**"을 활성화해서 계산 후 조정된 프로파일을 자동으로 업데이트하고 활성화할 수 있습니다.
 
-Note: if you want to automatically tune profiles for specific days of the week (for example a profile for "Weekend days" and another one for "Working days"), then create one rule for each profile, select the same days in Trigger and in Autotune Action, Tune days must be high enough to be sure tuning will be done with at least 6 or 8 days, and don't forget to select time after 4AM in trigger...
+참고: 특정 요일에 대한 프로파일을 자동으로 조정하려면(예: "주말" 프로파일과 "평일" 프로파일), 프로파일마다 규칙을 하나씩 만들고, 트리거와 Autotune 동작에서 같은 요일을 선택하십시오. 조정 일수는 최소 6~8일로 조정되도록 충분히 커야 하며, 트리거에서 오전 4시 이후 시간을 선택하는 것을 잊지 마십시오...
 
-- See below an example of rule that runs every working day (Monday to Friday) at 04:00 and tunes the profile "Normal" with 14 **Tune days**, working days only (so only 10 days are included in the Autotune calculation).
+- 아래는 매주 평일(월요일~금요일) 04:00에 실행되어 "Normal" 프로파일을 **조정 일수** 14일, 평일만으로 조정하는 규칙의 예입니다(그래서 Autotune 계산에는 10일만 포함됩니다).
 
-  ![Autotune default screen](../images/Autotune/Autotune_20b.png)
+  ![Autotune 기본 화면](../images/Autotune/Autotune_20b.png)
 
 
 
-## Tips and trick's
+## 팁과 요령
 
-Autotune works with information existing in your database, so if you just installed AAPS on a new phone, you will have to wait several days before being able to launch Autotune with enough days to get relevant results.
+Autotune은 데이터베이스에 있는 정보로 작동합니다. 그래서 새 휴대폰에 AAPS를 막 설치했다면, 의미 있는 결과를 얻을 만큼의 일수로 Autotune을 실행할 수 있을 때까지 며칠을 기다려야 합니다.
 
-Autotune is just an help, it's important to regularly check if you agree with calculated profile. If you have any doubt, change Autotune settings (for example the number of days) or copy results in local profile and adjust profile before using it.
+Autotune은 도움을 주는 도구일 뿐입니다. 계산된 프로파일에 동의하는지 정기적으로 확인하는 것이 중요합니다. 의심이 들면 Autotune 설정(예: 일수)을 바꾸거나, 결과를 로컬 프로파일에 복사하고 프로파일을 조정한 뒤에 사용하십시오.
 
-Always use Autotune several days manually to check results before applying them. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
+결과를 적용하기 전에 항상 며칠 동안 Autotune을 수동으로 사용해서 결과를 확인하십시오. Autotune 결과를 완전히 신뢰하고, 이전 프로파일과 계산된 프로파일 사이의 변화가 아주 작아졌을 때에만 자동화를 사용하기 시작하십시오(그 전에는 절대 안 됩니다)
 
-- Autotune can work very well for some users and not for others, so **If you don't trust Autotune result, don't use it**
+- Autotune은 어떤 사용자에게는 아주 잘 맞고 다른 사용자에게는 맞지 않을 수 있습니다. 그러므로 **Autotune 결과를 신뢰할 수 없으면 사용하지 마십시오**
 
-It's also important to analyze Autotune results to understand (or try to understand) why Autotune proposes these modifications
+Autotune이 왜 이런 변경을 제안하는지 이해하기 위해(또는 이해하려고 노력하기 위해) Autotune 결과를 분석하는 것도 중요합니다
 
-- you can have a whole increase or decrease of the strength of your profile (for example increase of total basal associated to decrease of ISF and IC values). it could be associated to several following days with autosens correction above 100% (more aggressivity required) or below 100% (you are more sensitive)
-- Sometimes Autotune proposes a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
+- 프로파일의 강도가 전체적으로 올라가거나 내려갈 수 있습니다(예: 총 기저 증가와 함께 ISF 및 IC 값 감소). 이것은 이후 며칠 동안 autosens 보정이 100% 이상(더 공격적인 조절 필요)이거나 100% 이하(더 민감함)인 것과 관련이 있을 수 있습니다
+- 때때로 Autotune은 기저 주입량과 IC/ISF 사이의 다른 균형을 제안합니다(예: 더 낮은 기저와 더 공격적인 IC/ISF)
 
-We advise to not use Autotune in the following cases:
+다음 경우에는 Autotune을 사용하지 않는 것이 좋습니다:
 
-- You don't enter all your carbs
-  - If you don't enter carbs correction for hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs, especially correction for hypo.
-- You have a lot of periods with UAM detected during the day.
-  - Do you have entered all your carbs and correctly estimated your Carbs?
-  - All UAM periods (except if you enter no carbs during a day and categorized UAM as basal is disabled), all your UAM periods will be categorized as basal, this can increase a lot your basal (much more than necessary)
+- 탄수화물을 모두 입력하지 않는 경우
+  - 저혈당 교정용 탄수화물을 입력하지 않으면, Autotune은 예상하지 못한 혈당 상승을 보고 4시간 전의 기저 주입량을 높입니다. 이것은 저혈당을 피하는 데 필요한 것과 반대일 수 있으며, 특히 한밤중에 그렇습니다. 그래서 모든 탄수화물, 특히 저혈당 교정용 탄수화물을 입력하는 것이 중요합니다.
+- 하루 중 UAM이 감지된 구간이 많은 경우.
+  - 탄수화물을 모두 입력했고, 탄수화물 양을 올바르게 추정했습니까?
+  - 모든 UAM 구간(하루 동안 탄수화물을 전혀 입력하지 않았고 UAM을 기저로 분류하는 설정이 꺼져 있는 경우는 제외)이 기저로 분류되어, 기저가 크게 늘어날 수 있습니다(필요한 것보다 훨씬 많이)
 
-- Your carbs absorption is very slow: if most of your carbs absorption are calculated with min_5m_carbimpact parameter (you can see these periods with a little orange dot in the top of COB curve), the calculation of COB could be wrong and leads to wrong results.
-  - When you practice sport, you are generally more sensitive and your BG doesn't rise a lot, so during or after an exercise, it's usual to see some periods with slow carbs. But if you have too often unexpected slow carb absorption, then you may need a profile adjustment (higher value of IC) or a min_5m_carbimpact a bit too high.
-- You have "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you have long periods of wrong BG values. If during the past weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
-- If the percentage of modification is too important
-  - You can try to increase the number of days to get smoother results
+- 탄수화물 흡수가 매우 느린 경우: 탄수화물 흡수의 대부분이 min_5m_carbimpact 매개변수로 계산되면(COB 곡선 위쪽의 작은 주황색 점으로 이 구간을 볼 수 있습니다) COB 계산이 틀릴 수 있고 잘못된 결과로 이어집니다.
+  - 운동을 하면 보통 더 민감해지고 혈당이 많이 오르지 않습니다. 그래서 운동 중이나 운동 후에는 느린 탄수화물 구간이 보이는 것이 흔합니다. 하지만 예상하지 못한 느린 탄수화물 흡수가 너무 자주 있다면, 프로파일 조정(더 높은 IC 값)이 필요하거나 min_5m_carbimpact가 조금 너무 높을 수 있습니다.
+- "아주 나쁜 날"이 있는 경우: 예를 들어 범위 안으로 내려오려고 아주 많은 인슐린을 썼는데도 몇 시간 동안 고혈당에 머물렀거나, 센서 교체 후 잘못된 혈당 값이 오랫동안 나온 경우. 지난 몇 주 동안 "나쁜 날"이 하루나 이틀뿐이라면, 그날들을 Autotune 계산에서 수동으로 비활성화해서 계산에서 뺄 수 있습니다. 그리고 다시 한 번 **결과를 신뢰할 수 있는지 주의 깊게 확인하십시오**
+- 변경 백분율이 너무 큰 경우
+  - 일수를 늘려서 더 매끄러운 결과를 얻어 볼 수 있습니다

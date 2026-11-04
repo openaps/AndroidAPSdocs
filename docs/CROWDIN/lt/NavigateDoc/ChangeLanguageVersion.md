@@ -1,23 +1,23 @@
-# Change language and version
+# Kalbos ir versijos keitimas
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+Dokumentacija, kurią dabar skaitote, yra kelių kalbų ir skirta konkrečiai **AAPS** versijai. Ir kalbą, ir versiją galite pakeisti meniu, kuris yra ekrano apačioje dešinėje.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+Spustelėkite juostą ekrano apačioje dešinėje, kad atidarytumėte kalbos ir versijos pasirinkimo meniu.
 ```
 
-![Open language menu](../images/documentation_language_menu.png)
+![Kalbos meniu atidarymas](../images/documentation_language_menu.png)
 
-## Change language
+## Kalbos keitimas
 
-In the menu, select the language you want to read the documentation in.
+Meniu pasirinkite kalbą, kuria norite skaityti dokumentaciją.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+Kviečiame prisijungti prie [Crowdin](https://crowdin.com/project/androidapsdocs) vertėjų ir tikrintojų ir padėti išversti dokumentaciją į jūsų kalbą.
 
-## Change version
+## Versijos keitimas
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version and select the version you need.
+Dabartinė versija rodoma ekrano apačioje dešinėje. Norėdami pereiti prie kitos versijos, spustelėkite dabartinę versiją ir pasirinkite reikiamą versiją.
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+Kai keičiate kalbą ir (arba) versiją, galite pamatyti klaidą 404 – Puslapis nerastas, jei tos kalbos ar versijos puslapio nėra. Taip dažnai nutinka keičiant versiją, bet neturėtų nutikti keičiant kalbą: jei puslapis dar neišverstas, jis bus rodomas anglų kalba.
 ```

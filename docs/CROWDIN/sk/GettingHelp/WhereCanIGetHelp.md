@@ -1,6 +1,6 @@
-# Where can I get help?
+# Kde získať pomoc?
 
-## I'm stuck; what should I do? Koho sa môžem opýtať?
+## Neviem si rady. Čo mám robiť? Koho sa môžem opýtať?
 
 Tento projekt stojí na práci dobrovoľníkov. Pre všetky žiadosti o pomoc platí niekoľko pravidiel, aby ľudia, ktorí ochotne pomáhajú ďalej, zbytočne nestrácali čas:
 
@@ -58,7 +58,7 @@ Upozorňujeme, že Facebook nedávno odstránil externé odkazy zdieľané v sku
 
 ### Poľsko
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): poľská komunita AAPS a skupina podpory pri diabete
 
 ### Švédsko
 

@@ -70,7 +70,8 @@ Solltest Du SGLT-2-Hemmer (Gliflozine) nehmen, kannst Du **AAPS** aufgrund der G
 ## AAPS-Dokumentationsindex
 
 ```{toctree}
-:caption: Verwendung dieser Dokumentation
+:caption: Using this documentation
+:titlesonly:
 
 Sprache und Version ändern <./NavigateDoc/ChangeLanguageVersion.md>
 Durchsuchen der Dokumentation <./NavigateDoc/SearchDoc.md>
@@ -180,12 +181,12 @@ Supportende <./Maintenance/EndOfLife.md>
 ```{toctree}
 :caption: 9) Hilfe & Fehlerbehebung
 
-Wo bekomme ich Hilfe zu AAPS <./GettingHelp/WhereCanIGetHelp bekommen. d>
-Fehlerbehebung (beginne hier) <./GettingHelp/GeneralFehlerbehebung. d>
+Wo bekomme ich Hilfe zu AAPS <./GettingHelp/WhereCanIGetHelp bekommen.md>
+Fehlerbehebung (beginne hier) <./GettingHelp/GeneralFehlerbehebung.md>
 - Bluetooth-Fehlerbehebung <./GettingHelp/BluetoothTroubleshooting.md>
-- NSClient-Fehlerbehebung <./GettingHelp/TroubleshootingNsClient. d>
+- NSClient-Fehlerbehebung <./GettingHelp/TroubleshootingNsClient.md>
 - Android Studio-Fehlerbehebung <./GettingHelp/TroubleshootingAndroidStudio.md>
-- Browser Build-Fehlerbehebung <./GettingHelp/BrowserBuildTroubleshooting. d>
+- Browser Build-Fehlerbehebung <./GettingHelp/BrowserBuildTroubleshooting.md>
 - AAPS neu installieren (neuer Keystore) <./GettingHelp/ReinstallAaps.md>
 - Zugriff auf Logdateien <. GettingHelp/AccessingLogFiles.md>
 FAQ <./UsefulLinks/FAQ.md>

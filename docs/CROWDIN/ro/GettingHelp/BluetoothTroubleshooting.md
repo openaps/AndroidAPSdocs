@@ -17,7 +17,7 @@ Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medt
 
 (bluetoothtroubleshooting-bluetooth-battery-optimisation)=
 
-## Bluetooth Battery Optimisation
+## Optimizarea bateriei pentru Bluetooth
 
 Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. This is known to cause some issues for Bluetooth pumps and CGMs.
 
@@ -31,7 +31,7 @@ Verify this is correctly configured if you have pump and CGM disconnections.
 
 ## Apps that use the "Nearby devices" Android permission can cause connection drops and Pod activation problems
 
-Android allows you to control what each app is able to do or access on your phone via a permission model. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to Bluetooth, scan for nearby devices etc.
+Android allows you to control what each app is able to do or access on your phone via a permission model. Pentru fiecare aplicație instalată puteți alege să permiteți sau să refuzați anumite permisiuni, de exemplu accesul la fișierele de pe dispozitiv, accesul la Bluetooth, căutarea dispozitivelor din apropiere etc.
 
 **AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
 
@@ -48,22 +48,22 @@ Ping @XiTatiON on #omnipod-dash Discord channel to discuss apps to be added to t
 
 - **myBMW** MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
 
-- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
+- **Amazon Alexa**  Eliminarea permisiunii „Dispozitive din apropiere” pentru aplicația Alexa a rezolvat problema pentru unele persoane, dar după aceea nu mai puteți asocia dispozitive IoT Matter
 
 - **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
 
-- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
+- **BM2** Aplicație de monitorizare a bateriei solare, folosită în unele rulote și sisteme solare de camping: când aplicația rula, a împiedicat activarea unei pompe noi. O soluție temporară este oprirea forțată a aplicației în timp ce activați o pompă nouă. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
-### How to revoke "Nearby device" permissions for other apps:
+### Cum retrageți permisiunea „Dispozitive din apropiere” pentru alte aplicații:
 If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
 
 Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
-The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
+The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Pe alte dispozitive și la alți producători, meniurile și setările probabil nu vor fi exact la fel. Adaptați pașii la dispozitivul dumneavoastră. Dacă nu reușiți, citiți secțiunea [Unde primiți ajutor pentru Dash](#omnipod-dash-where-to-get-help-for-dash) pentru a afla cum cereți ajutor comunității.
 ```
 
 1. Open Android settings on your phone, scroll down and press on **Security and privacy (1)**.
@@ -103,7 +103,7 @@ If you are unsure which app is causing you an issue, disable them all (remember 
 
 ### How to re-enable "Nearby device" permissions for system apps and other apps:
 
-1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
+1. Dacă este nevoie, citiți secțiunea **„Cum retrageți permisiunea «Dispozitive din apropiere» pentru alte aplicații”** pentru a afla cum ajungeți la setările de confidențialitate ale aplicațiilor. Apoi, în configurarea **Dispozitive din apropiere**, continuați cu pasul 2.
 
 2. Browse the list of apps and press on the app you wish to allow **Nearby devices** permissions for.
 
@@ -122,15 +122,15 @@ If an app is revoked you will need to scroll down until you see the list of revo
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. Follow the guidance in **"How to revoke 'Nearby device' permissions for other apps"** in reverse to re-enable permissions for each app.
+5. Urmați în ordine inversă instrucțiunile din **„Cum retrageți permisiunea «Dispozitive din apropiere» pentru alte aplicații”** pentru a activa din nou permisiunea pentru fiecare aplicație.
 
 ---
 
 (bluetoothtroubleshooting-android-15-bluetooth-connection-problems)=
 
-## Android 15 Frequent Bluetooth connection problems
+## Android 15: probleme frecvente de conexiune Bluetooth
 
-After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. To turn it on:
+After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. Pentru a o activa:
 
 ```{admonition} Android 16
 :class: warning
@@ -139,11 +139,11 @@ Only turn on **Bluetooth bonding** on Android 15, and only if you experience con
 
 1. Open the [Dash settings](#omnipod-dash-settings): open the DASH pump screen with **Manage** > **Pump** and press the **Settings** (gear) icon in the top-right corner.
 
-   ![The DASH pump screen](../images/v4/Pumps/dash_pump_screen.png)
+   ![Ecranul pompei DASH](../images/v4/Pumps/dash_pump_screen.png)
 
-2. Open the **Advanced Settings** section and turn on **Bluetooth bonding**.
+2. Deschideți secțiunea **Setări avansate** și activați **Asociere Bluetooth**.
 
-   ![Bluetooth bonding in the Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
+   ![Asociere Bluetooth în secțiunea Setări avansate](../images/v4/Pumps/dash_settings_advanced.png)
 
 3. If the phone shows a pairing request, accept it.
 

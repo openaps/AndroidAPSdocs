@@ -12,7 +12,7 @@ Otvorte obrazovku NSClient (**Konfigurácia** > **Komunikácia** > **NSClientV3*
 
 * Reštart
 
-As a first step, restart Nightscout and then your phone to see if the issue is permanent.
+Najprv reštartujte Nightscout a potom telefón, aby ste zistili, či problém pretrváva.
 
 Ak je váš Nightscout hostovaný na Heroku, môžete ho reštartovať takto: prihláste sa do Heroku, kliknite na názov svojej aplikácie nightscout, kliknite na ponuku 'More' a potom na 'Restart all dynos'.
 
@@ -38,6 +38,6 @@ Ak sa **AAPS** pripojí k Nightscoutu správne, ale glykémia sa zobrazuje ako N
 
 * Ak máte stále problém...
 
-Skontrolujte veľkosť svojej databázy v MongoDB (alebo cez plugin database size v Nightscoute). Ak používate bezplatnú verziu (free tier) MongoDB, 496 MB znamená, že je plná a treba ju vyčistiť. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
+Skontrolujte veľkosť svojej databázy v MongoDB (alebo cez plugin database size v Nightscoute). Ak používate bezplatnú verziu (free tier) MongoDB, 496 MB znamená, že je plná a treba ju vyčistiť. [Podľa tohto návodu Nightscoutu skontrolujte veľkosť svojej databázy a vymažte dáta](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Skôr než vymažete dáta z databázy, a ak ste to ešte nenastavili, zvážte darovanie svojich dát AAPS projektu Open Humans (na výskum). Pokyny nájdete na [stránke nastavenia OpenHumans](../SupportingAaps/OpenHumans.md).

@@ -30,20 +30,20 @@ The last button is always **Configure QuickLaunch** (the **⚙️** gear). It ca
 
 ---
 
-## Configuring QuickLaunch
+## Configurarea Lansării rapide
 
-Tap the **⚙️** gear on the toolbar (or open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → … → Configure QuickLaunch**) to open the **Configure QuickLaunch** screen (*“Customize quick-action buttons on overview”*).
+Tap the **⚙️** gear on the toolbar (or open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → … → Configurați Lansarea Rapidă**) pentru a deschide ecranul **Configurați Lansarea Rapidă** (*„Personalizați butoanele cu acțiune rapidă în vederea de ansamblu”*).
 
 ![Configure QuickLaunch — Selected actions, then the catalog of actions to add](../images/v4/QuickLaunch/quicklaunch_config.png)
 
-The screen has two parts:
+Ecranul are două părți:
 
 - **Selected actions** (at the top) — the buttons currently on your toolbar, in toolbar order.
-- A **catalog** below it — every action you can add, grouped by category. Each catalog entry has a **➕** button to add it.
+- A **catalog** below it — every action you can add, grouped by category. Fiecare intrare din catalog are un buton **➕** pentru a o adăuga.
 
 ### Selected actions — reorder, edit, remove
 
-Each selected action has:
+Fiecare acțiune selectată are:
 
 - a **⠿ drag handle** — press and drag to **reorder** the buttons (the order here is the order on the toolbar),
 - a **−** button — **remove** it from the toolbar,
@@ -53,11 +53,11 @@ Changes take effect **immediately** — there is no separate *Save*. Adding an a
 
 ---
 
-## The action categories
+## Categoriile de acțiuni
 
 The catalog groups everything you can add into the following categories, in this order. Categories that have nothing to offer (e.g. you have no scenes) are simply not shown.
 
-### Treatment
+### Tratament
 
 The everyday treatment and CGM dialogs:
 
@@ -72,8 +72,8 @@ The everyday treatment and CGM dialogs:
 
 The care-portal events and device-maintenance records:
 
-- **BG Check**, **Note**, **Exercise**, **Question**, **Announcement**,
-- **Sensor Insert**, **Pump Battery Change**, **Pump Site Change**, **Prime/Fill**, **Site Rotation**.
+- **Verificare glicemie**, **Notă**, **Activitate fizică**, **Întrebare**, **Anunț**,
+- **Inserare senzor**, **Schimbare baterie pompă**, **Schimbare canulă/loc infuzie**, **Amorsare/Umplere**, **Rotație loc**.
 
 **Prime/Fill** and **Pump Battery Change** are only offered when your pump uses them. Patch pumps, for example, fill and change the battery in their own activation steps, so these entries are not shown for them (as in the **Manage** sheet).
 
@@ -81,7 +81,7 @@ The care-portal events and device-maintenance records:
 
 These are the same entries you would otherwise reach through the **[Treatments](#v4changes-treatments)** and **[Manage](#v4changes-manage)** sheets — QuickLaunch just puts the ones you use on the overview.
 
-### Manage
+### Gestionați
 
 The screens of the **[Manage](#v4changes-manage)** sheet, in the same order, so you can open the one you use most from the toolbar:
 
@@ -89,9 +89,9 @@ The screens of the **[Manage](#v4changes-manage)** sheet, in the same order, so 
 - **Running mode** — close or open the loop, suspend it, or disconnect the pump,
 - **Authorized clients** — only on a master or a paired client.
 
-These buttons open the screen; they do not start anything by themselves. To start a scene or a QuickWizard in one tap, add it from the **Scenes** or **Quick Wizard** category below.
+These buttons open the screen; they do not start anything by themselves. Pentru a porni un scenariu sau un Asistent Rapid cu o singură apăsare, adăugați-l din categoria **Scenarii** sau **Asistent Rapid** de mai jos.
 
-![The Manage category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![The Manage category, continued](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
+![Categoria Gestionați din catalog](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![Categoria Gestionați, continuare](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
 
 ### Asistent Rapid
 
@@ -99,9 +99,9 @@ Each of your **[QuickWizard](QuickWizards.md)** presets can be added as a button
 
 QuickWizards set to show on the watch only are not offered. A QuickWizard button on the toolbar follows the same rules as in the **Treatments** sheet: it is hidden outside its [valid time range](#quickwizard_validity) and for a short time after use. It stays in your toolbar configuration and comes back when the QuickWizard can be used again.
 
-### Scenes
+### Scenarii
 
-Each enabled **[scene](Scenes.md)** can be added as a button. Tapping it asks for confirmation, then activates the scene (the same bundle of actions you would get from the Scenes screen). This category appears only if you have at least one scene.
+Fiecare **[scenariu](Scenes.md)** activat poate fi adăugat ca buton. Apăsarea lui cere confirmare, apoi activează scenariul (același set de acțiuni pe care l-ați obține din ecranul Scenarii). Această categorie apare doar dacă aveți cel puțin un scenariu.
 
 The tooltip and the catalog show the same summary as **Manage → Scenes**, for example *"3 actions, 2 h → Cooldown"*, where the name after the arrow is the follow-up scene.
 
@@ -114,7 +114,7 @@ Your **user-action** automation rules (the ones you trigger by hand) can be adde
 Automation executes on the **master**, so automation shortcuts are offered and run only on the master. They are not available on a paired **[client](../RemoteFeatures/ClientMasterControl.md)**.
 ```
 
-### Temp Target Presets
+### Ținte Temporare Presetate
 
 Each of your **[Temp Target](TempTargets.md)** presets can be added as a button (its name, its target and its duration are shown, for example *"Eating soon — 5.0 mmol/L, 45 min"*). Tapping it asks for confirmation, then starts that temp target.
 
@@ -130,23 +130,23 @@ Every **[profile](ProfileSwitch-ProfilePercentage.md)** can be added as a **shor
 
 ![Profile shortcuts and plugin categories in the catalog](../images/v4/QuickLaunch/quicklaunch_categories.png)
 
-This lets you keep several buttons for the **same** profile at different strengths — for example *“Profile 100 %”* and *“Profile 70 % for 2 h”* — and apply either with a single tap. (You can add the same profile more than once with different settings.)
+This lets you keep several buttons for the **same** profile at different strengths — for example *“Profile 100 %”* and *“Profile 70 % for 2 h”* — and apply either with a single tap. (Puteți adăuga același profil de mai multe ori, cu setări diferite.)
 
-### Plugins
+### Module
 
-![Plugin shortcuts in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
+![Scurtături de module în catalog](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
 
 Finally, any **enabled plugin** that has its own screen can be added as a shortcut to open it directly. These are grouped by plugin type — **Pump**, **BG Source**, **APS**, **Loop**, **Sensitivity detection**, **Smoothing**, **Calibration**, **Constraints**, **Communication** and **General** — so you can, for instance, jump straight to your pump or loop screen from the overview.
 
 ---
 
-## QuickLaunch and Master/Client
+## Lansare rapidă și dispozitivul principal/client
 
 Unlike most of your settings, the **QuickLaunch toolbar is configured per device** — it is stored **locally and is not synced** between your master and paired clients, so each device keeps its own set of buttons. (It *is* included in a settings **backup/export**, so a restore brings it back on the same device.)
 
-What each device can put on its toolbar still depends on what it has: QuickWizards, scenes, temp-target presets and profiles all sync, so a client's catalog offers the same items — you simply choose them per device. A few details to know:
+What each device can put on its toolbar still depends on what it has: QuickWizards, scenes, temp-target presets and profiles all sync, so a client's catalog offers the same items — you simply choose them per device. Câteva detalii de știut:
 
-- Buttons whose target no longer exists (a deleted QuickWizard, scene or preset, a disabled rule) are **skipped automatically**.
+- Butoanele a căror țintă nu mai există (un Asistent Rapid, un scenariu sau o presetare ștearsă, o regulă dezactivată) sunt **omise automat**.
 - **Automation** shortcuts are offered and run only on the **master** (automation executes on the master). Scene, QuickWizard, temp-target and profile buttons are available on a client.
 - When you tap a button on a client that must run on the master (a bolus, temp target, profile switch or scene), the **master** carries it out and authors the confirmation. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md).
 

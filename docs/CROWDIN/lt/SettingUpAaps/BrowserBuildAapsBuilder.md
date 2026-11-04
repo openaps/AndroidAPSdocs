@@ -1,9 +1,9 @@
 (aaps-builder)=
 
-# Browser build with AAPS Builder
+# Kūrimas naršyklėje su AAPS Builder
 
 ```{note}
-This is the recommended way to build AAPS from an **Android phone**. It also works from any computer browser. For the other ways to build from a computer or an iPhone, see the [Browser build](BrowserBuild.md) overview.
+Tai rekomenduojamas būdas sukurti AAPS iš **Android telefono**. Jis veikia ir bet kurio kompiuterio naršyklėje. Kitus būdus kurti iš kompiuterio arba iPhone rasite apžvalgoje [Kūrimas naršyklėje](BrowserBuild.md).
 ```
 
 ```{contents} In this page
@@ -11,360 +11,360 @@ This is the recommended way to build AAPS from an **Android phone**. It also wor
 :depth: 2
 ```
 
-**AAPS Builder** builds the AAPS app for you in GitHub, the free code-hosting website. There is nothing to install on your phone, and no preparation file to open.
+**AAPS Builder** sukuria AAPS programėlę už jus GitHub – nemokamoje kodo talpinimo svetainėje. Telefone nieko nereikia diegti ir nereikia atidaryti jokio paruošimo failo.
 
-A setup page walks you through it. It takes about 10 minutes the first time:
+Sąrankos puslapis jums padės žingsnis po žingsnio. Pirmą kartą tai užtrunka apie 10 minučių:
 
-1. Create your own **private copy** of AAPS Builder in your GitHub account: the setup page opens GitHub with everything filled in, you only confirm. The build workflow, the file that tells GitHub how to build AAPS, is already in it.
-2. Create or upload your **signing key** (the keystore).
-3. Give the key to your repository as a GitHub **secret**.
-4. **Build** the app. One build takes 15 to 30 minutes.
-5. **Download and install** the app on your phone.
+1. Savo GitHub paskyroje sukurkite savo **privačią AAPS Builder kopiją**: sąrankos puslapis atidaro GitHub su jau užpildytais laukais, jums tereikia patvirtinti. Kūrimo darbo eiga – failas, kuris nurodo GitHub, kaip kurti AAPS – joje jau yra.
+2. Sukurkite arba įkelkite **pasirašymo raktą** (raktų saugyklą).
+3. Perduokite raktą savo saugyklai kaip GitHub **slaptąją reikšmę (secret)**.
+4. **Sukurkite** programėlę. Vienas kūrimas užtrunka 15–30 minučių.
+5. **Atsisiųskite ir įdiekite** programėlę telefone.
 
-You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from the official AndroidAPS repository at every build. You also do **not** need Google Drive: you download the app directly from GitHub.
+AndroidAPS fork kurti **nereikia**: AAPS šaltinio kodas kiekvieno kūrimo metu atsisiunčiamas iš oficialios AndroidAPS saugyklos. Google Drive taip pat **nereikia**: programėlę atsisiunčiate tiesiai iš GitHub.
 
 ```{admonition} Where the code comes from
 :class: note
 
-The build workflow is maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository, and your repository is a copy of it. The [workflow](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) in your copy is short: it runs the [build steps](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml) kept in that repository, so improvements reach you without any change to your repository. You can read both files. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
+Kūrimo darbo eigą prižiūri AAPS kūrėjai saugykloje [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), o jūsų saugykla yra jos kopija. Jūsų kopijoje esanti [darbo eiga](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) yra trumpa: ji paleidžia toje saugykloje laikomus [kūrimo žingsnius](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml), todėl patobulinimai jus pasiekia nekeičiant jūsų saugyklos. Abu failus galite perskaityti. Kūrimo metu darbo eiga (workflow) atsisiunčia tik oficialų AAPS šaltinio kodą ir pačios GitHub kūrimo įrankius. Jūsų raktų saugykla niekada nepalieka jūsų naršyklės ir jūsų privačios saugyklos.
 ```
 
 (aaps-builder-before-you-start)=
 
-## Before you start
+## Prieš pradedant
 
-You will need:
+Jums reikės:
 
-- A **GitHub account** (free). If you don't have one, create it on [github.com](https://github.com/signup) first.
-- A **web browser**: Chrome on your phone, or any browser on a computer. Log in to github.com in that browser before you start.
-- **GitHub app on your phone?** You can keep it. Some buttons of the setup page then open the app instead of Chrome. Building works in the app, but the app **cannot download** the finished AAPS: [step 5](#aaps-builder-step5) shows how to switch to Chrome for the download.
-- Your **existing keystore** (`.jks` file), its password and its alias, if you built AAPS before and want to update it without reinstalling.
+- **GitHub paskyros** (nemokamos). Jei jos neturite, pirmiausia ją sukurkite svetainėje [github.com](https://github.com/signup).
+- **Interneto naršyklės**: Chrome telefone arba bet kurios naršyklės kompiuteryje. Prieš pradėdami toje naršyklėje prisijunkite prie github.com.
+- **Telefone yra GitHub programėlė?** Galite ją palikti. Tada kai kurie sąrankos puslapio mygtukai atidaro programėlę, o ne Chrome. Kurti galima programėlėje, bet programėlė **negali atsisiųsti** sukurtos AAPS: [5 žingsnyje](#aaps-builder-step5) parodyta, kaip atsisiuntimui pereiti į Chrome.
+- Jūsų **esamos raktų saugyklos** (`.jks` failo), jos slaptažodžio ir pseudonimo (alias), jei jau anksčiau kūrėte AAPS ir norite jį atnaujinti neįdiegdami iš naujo.
 
 ```{warning}
-**Your build repository must stay private.** Everything a build produces is visible to anyone who can see the repository. The setup page creates a private repository for you. Never change it to public, and don't **fork** AAPS Builder instead: a fork is always public.
+**Jūsų kūrimo saugykla turi likti privati.** Viską, ką sukuria kūrimas, gali matyti kiekvienas, kas mato saugyklą. Sąrankos puslapis sukuria jums privačią saugyklą. Niekada nekeiskite jos į viešą ir nekurkite AAPS Builder **fork**: fork visada yra viešas.
 
-A private repository gets 2000 free GitHub Actions minutes per month, which is enough for several builds.
+Privati saugykla kas mėnesį gauna 2000 nemokamų GitHub Actions minučių. To pakanka keliems kūrimams.
 ```
 
 ```{warning}
-**New key or existing key: this decides whether you can update AAPS.**
+**Naujas raktas ar esamas raktas: nuo to priklauso, ar galėsite atnaujinti AAPS.**
 
-- **You already have AAPS on your phone, built with a keystore you still have**: choose **I already have a keystore** on the setup page and upload it. Your next build will update AAPS in place. Built AAPS with the previous browser build (your own fork)? Your keystore is in your fork: [get a copy of it first](#aaps-builder-from-fork).
-- **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+- **Jūsų telefone jau yra AAPS, sukurta su raktų saugykla, kurią vis dar turite**: sąrankos puslapyje pasirinkite **I already have a keystore** (jau turiu raktų saugyklą) ir ją įkelkite. Kitas kūrimas atnaujins jau įdiegtą AAPS. AAPS kūrėte ankstesniu kūrimo naršyklėje būdu (savo fork)? Jūsų raktų saugykla yra jūsų fork: [pirmiausia gaukite jos kopiją](#aaps-builder-from-fork).
+- **AAPS kuriate pirmą kartą arba praradote raktų saugyklą ar jos slaptažodį**: pasirinkite **Create a new key** (sukurti naują raktą). Programėlė, pasirašyta nauju raktu, **negali atnaujinti** AAPS, pasirašytos kitu raktu. Turite eksportuoti nustatymus, nukopijuoti failą ne į telefoną, pašalinti senąją AAPS, įdiegti naująją, tada importuoti nustatymus: žr. [AAPS įdiegimas iš naujo su nauja raktų saugykla](#reinstall-aaps).
 
-Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password and its alias (`key0`) somewhere safe, off your phone.
+Vėliau visada naudokite tą patį raktą. Kai kuriate naują raktą, atsisiųskite puslapio siūlomą atsarginę kopiją ir laikykite ją kartu su slaptažodžiu ir pseudonimu (`key0`) saugioje vietoje ne telefone.
 ```
 
 (aaps-builder-from-fork)=
 
-## Coming from the previous browser build (fork)
+## Perėjimas nuo ankstesnio kūrimo naršyklėje (fork)
 
-Skip this section if you never built AAPS with the previous browser build method (your own copy, or fork, of AndroidAPS in GitHub, with the preparation file and Google Drive).
+Praleiskite šį skyrių, jei niekada nekūrėte AAPS ankstesniu kūrimo naršyklėje būdu (savo AndroidAPS kopija, arba fork, GitHub, su paruošimo failu ir Google Drive).
 
-Your keystore is stored as secrets in your fork. GitHub never shows a secret again, so you can't copy it to your new repository. Get a copy of your keystore first, then use it in [step 2](#aaps-builder-step2) with **I already have a keystore**.
+Jūsų raktų saugykla saugoma jūsų fork kaip slaptosios reikšmės (secrets). GitHub niekada nebeparodo slaptosios reikšmės, todėl negalite jos nukopijuoti į naują saugyklą. Pirmiausia gaukite savo raktų saugyklos kopiją, tada naudokite ją [2 žingsnyje](#aaps-builder-step2) su **I already have a keystore**.
 
 ```{warning}
-Don't choose **Create a new key**. AAPS built with a new key cannot update the AAPS on your phone.
+Nepasirinkite **Create a new key**. AAPS, sukurta su nauju raktu, negali atnaujinti jūsų telefone esančios AAPS.
 ```
 
-Which case is yours?
+Kuris atvejis yra jūsų?
 
-- **You used Option 2** (you uploaded your own keystore from Android Studio), and you still have the `.jks` file, its passwords and its alias: nothing to do here. Use that file in step 2.
-- **You used Option 1** (the preparation file created your key), or you no longer have your keystore file: export it from your fork as below.
+- **Naudojote 2 variantą** (įkėlėte savo raktų saugyklą iš Android Studio) ir vis dar turite `.jks` failą, jo slaptažodžius ir pseudonimą: čia nieko daryti nereikia. Tą failą naudokite 2 žingsnyje.
+- **Naudojote 1 variantą** (raktą sukūrė paruošimo failas) arba nebeturite raktų saugyklos failo: eksportuokite jį iš savo fork, kaip aprašyta toliau.
 
-To export your keystore from your fork:
+Kaip eksportuoti raktų saugyklą iš savo fork:
 
-1. In your fork, open **Settings** → **Secrets and variables** → **Actions** and add a secret named `ZIP_PASSWORD`. Choose a password with only English letters and numbers. It protects the file you are about to create.
-2. Open the **Actions** tab of your fork, tap **CI Keystore Export**, then **Run workflow**. More details: [Export your keystore](#ci-keystore-export).
-3. When the run has a green check, open your Google Drive: the file `keystore.zip` is in the folder **AAPS** → **KeyStore**. If the run fails at the Google Drive step, your fork's Google Drive access has expired: see [Google refresh token expired](#aaps-ci-google-token-expired).
-4. Download `keystore.zip` and open it with your `ZIP_PASSWORD`: on a computer, or on your phone with a file manager app that can open password-protected ZIP files. It contains:
-   - `keystore.jks`: your keystore,
-   - `keyStoreInfo.txt`: your `KEYSTORE_PASSWORD`, `KEY_PASSWORD` and `ALIAS` (usually `key0`).
-5. Copy `keystore.jks` to your phone (or to Google Drive, so you can pick it from there).
+1. Savo fork atidarykite **Settings** → **Secrets and variables** → **Actions** ir pridėkite slaptąją reikšmę `ZIP_PASSWORD`. Sugalvokite slaptažodį tik iš angliškų raidžių ir skaitmenų. Jis apsaugo failą, kurį netrukus sukursite.
+2. Atidarykite savo fork skirtuką **Actions**, spauskite **CI Keystore Export**, tada **Run workflow**. Daugiau informacijos: [Raktų saugyklos eksportavimas](#ci-keystore-export).
+3. Kai paleidimas pažymėtas žalia varnele, atidarykite savo Google Drive: failas `keystore.zip` yra aplanke **AAPS** → **KeyStore**. Jei paleidimas nepavyksta Google Drive žingsnyje, jūsų fork prieiga prie Google Drive nebegalioja: žr. [Baigėsi Google atnaujinimo rakto (refresh token) galiojimas](#aaps-ci-google-token-expired).
+4. Atsisiųskite `keystore.zip` ir atidarykite jį su savo `ZIP_PASSWORD`: kompiuteryje arba telefone su failų tvarkykle, kuri gali atidaryti slaptažodžiu apsaugotus ZIP failus. Jame yra:
+   - `keystore.jks`: jūsų raktų saugykla,
+   - `keyStoreInfo.txt`: jūsų `KEYSTORE_PASSWORD`, `KEY_PASSWORD` ir `ALIAS` (paprastai `key0`).
+5. Nukopijuokite `keystore.jks` į telefoną (arba į Google Drive, kad galėtumėte jį pasirinkti iš ten).
 
-In [step 2](#aaps-builder-step2) of the setup page:
+Sąrankos puslapio [2 žingsnyje](#aaps-builder-step2):
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose `keystore.jks`.
-3. In **Keystore password**, type the `KEYSTORE_PASSWORD` from `keyStoreInfo.txt`.
-4. In **Key alias**, pick or type the `ALIAS` from `keyStoreInfo.txt`.
-5. If `KEY_PASSWORD` is different from `KEYSTORE_PASSWORD`, untick **Key password is the same as the keystore password** and type the `KEY_PASSWORD`.
+1. Spauskite **I already have a keystore**.
+2. Lauke **Keystore file** pasirinkite `keystore.jks`.
+3. Lauke **Keystore password** įveskite `KEYSTORE_PASSWORD` iš `keyStoreInfo.txt`.
+4. Lauke **Key alias** pasirinkite arba įveskite `ALIAS` iš `keyStoreInfo.txt`.
+5. Jei `KEY_PASSWORD` skiriasi nuo `KEYSTORE_PASSWORD`, nuimkite žymę **Key password is the same as the keystore password** ir įveskite `KEY_PASSWORD`.
 
-Keep `keystore.zip` and its `ZIP_PASSWORD` somewhere safe, off your phone: it is the backup of your key.
+`keystore.zip` ir jo `ZIP_PASSWORD` laikykite saugioje vietoje ne telefone: tai jūsų rakto atsarginė kopija.
 
-To also save the builds of AAPS Builder in Google Drive, do [step 6](#aaps-builder-google-drive): the setup page gets a new `GDRIVE_OAUTH2` for you. You can keep your fork until AAPS built with AAPS Builder is installed on your phone.
+Jei norite AAPS Builder kūrimus išsaugoti ir Google Drive, atlikite [6 žingsnį](#aaps-builder-google-drive): sąrankos puslapis gaus jums naują `GDRIVE_OAUTH2`. Savo fork galite laikyti, kol telefone bus įdiegta su AAPS Builder sukurta AAPS.
 
-## Open the setup page
+## Atidarykite sąrankos puslapį
 
-**→ [Open the AAPS Builder setup page](#aaps-builder-setup)**
+**→ [Atidarykite AAPS Builder sąrankos puslapį](#aaps-builder-setup)**
 
-The setup page is part of this documentation, in your language. Keep this page open in another tab as well: the sections below explain each step of the setup page in more detail, with screenshots.
+Sąrankos puslapis yra šios dokumentacijos dalis, jūsų kalba. Šį puslapį taip pat laikykite atidarytą kitame skirtuke: toliau esančiuose skyriuose kiekvienas sąrankos puslapio žingsnis paaiškintas išsamiau, su ekrano nuotraukomis.
 
-The setup page opens each GitHub page in a new Chrome tab. To come back to the setup page, tap the tab button next to Chrome's address bar (the square with a number) and choose the AAPS Builder setup page.
+Sąrankos puslapis kiekvieną GitHub puslapį atidaro naujame Chrome skirtuke. Norėdami grįžti į sąrankos puslapį, spauskite skirtukų mygtuką šalia Chrome adreso juostos (kvadratas su skaičiumi) ir pasirinkite AAPS Builder sąrankos puslapį.
 
-The setup page runs entirely in your browser: your key and passwords are never sent anywhere, except into the GitHub secret you paste them into yourself. Only your GitHub username is sent to GitHub, to check that it exists. It remembers your GitHub username and repository name, so you can come back to it at any time to reopen your secrets page or your builds.
+Sąrankos puslapis veikia tik jūsų naršyklėje: jūsų raktas ir slaptažodžiai niekur nesiunčiami, išskyrus į GitHub slaptąją reikšmę (secret), į kurią juos įklijuojate patys. GitHub siunčiamas tik jūsų GitHub naudotojo vardas, kad būtų patikrinta, ar jis yra. Jis įsimena jūsų GitHub naudotojo vardą ir saugyklos pavadinimą, todėl bet kada galite prie jo grįžti ir vėl atidaryti slaptųjų reikšmių puslapį arba savo kūrimus.
 
-![The AAPS Builder setup page](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
+![AAPS Builder sąrankos puslapis](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
 
 (aaps-builder-step1)=
 
-## Step 1 – Create your private build repository
+## 1 žingsnis – Sukurkite savo privačią kūrimo saugyklą
 
-This step creates your own private copy of AAPS Builder in your GitHub account, with the build workflow already in it. Only you can see it and the apps it builds.
+Šiame žingsnyje savo GitHub paskyroje sukuriate privačią AAPS Builder kopiją, kurioje jau yra kūrimo darbo eiga. Ją ir jos sukurtas programėles matote tik jūs.
 
-1. Make sure you are logged in to github.com in this browser.
+1. Įsitikinkite, kad šioje naršyklėje esate prisijungę prie github.com.
 
-2. In **Your GitHub username**, type your GitHub username, not your e-mail. The page checks it with GitHub: **✓ GitHub user found** means it is right.
+2. Lauke **Your GitHub username** įveskite savo GitHub naudotojo vardą, ne el. pašto adresą. Puslapis jį patikrina GitHub: **✓ GitHub user found** reiškia, kad jis teisingas.
 
-3. In **Name of your repository**, keep the suggestion `my-aaps`. If you already created your repository with another name, type that exact name.
+3. Lauke **Name of your repository** palikite siūlomą `my-aaps`. Jei saugyklą jau sukūrėte kitu pavadinimu, įveskite tiksliai tą pavadinimą.
 
    ```{note}
-   **Already have an AAPS Builder repository** (made with an earlier version of the setup page)? Don't create a new one: type its exact name, skip **Create my private repository**, and update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). Your secrets stay as they are. If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+   **Jau turite AAPS Builder saugyklą** (sukurtą su ankstesne sąrankos puslapio versija)? Naujos nekurkite: įveskite tikslų jos pavadinimą, praleiskite **Create my private repository** ir vieną kartą atnaujinkite jos darbo eigą, kaip aprašyta skyriuje [AAPS atnaujinimas](#aaps-builder-updates). Jūsų slaptosios reikšmės lieka tokios pat. Jei vis tiek norite naujos saugyklos, pasirinkite pavadinimą, kurio dar neturite, pavyzdžiui, `my-aaps-2`, ir 2 žingsnyje naudokite tą pačią raktų saugyklą.
 
-   Don't type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+   Neįveskite savo AndroidAPS fork pavadinimo: fork yra viešas ir jau kuria su savo darbo eiga **AAPS CI**.
    ```
 
-   ![Setup page step 1 filled in](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
+   ![Užpildytas sąrankos puslapio 1 žingsnis](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
 
-4. Check the line **Your repository:** it shows `github.com/<your username>/my-aaps`. The setup page remembers the name from your last visit: check it every time before you use its buttons.
+4. Patikrinkite eilutę **Your repository:** joje rodoma `github.com/<your username>/my-aaps`. Sąrankos puslapis įsimena pavadinimą nuo paskutinio apsilankymo: kaskart jį patikrinkite prieš naudodami puslapio mygtukus.
 
-5. Tap **Create my private repository**.
+5. Spauskite **Create my private repository**.
 
-   ![The repository line and the Create my private repository button](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
+   ![Saugyklos eilutė ir mygtukas Create my private repository](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
 
-6. GitHub opens **Create a new repository** in a new tab. Everything is already filled in: under **Start with a template**, the template `nightscout/aaps-builder` with **Include all branches** off, and under **General**, your account as **Owner** and the name you chose.
+6. GitHub naujame skirtuke atidaro **Create a new repository**. Viskas jau užpildyta: skiltyje **Start with a template** – šablonas `nightscout/aaps-builder` su išjungtu **Include all branches**, o skiltyje **General** – jūsų paskyra kaip **Owner** ir jūsų pasirinktas pavadinimas.
 
-   ![GitHub Create a new repository page](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
+   ![GitHub puslapis Create a new repository](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
 
-   Don't change anything.
+   Nieko nekeiskite.
 
-7. Scroll down: under **Configuration**, **Choose visibility** is already **Private**. Tap the green **Create repository** button.
+7. Slinkite žemyn: skiltyje **Configuration** laukas **Choose visibility** jau nustatytas į **Private**. Spauskite žalią mygtuką **Create repository**.
 
-   ![Visibility Private and the Create repository button](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
+   ![Matomumas Private ir mygtukas Create repository](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
 
-   GitHub shows your new repository: it contains a folder `.github` (with the build workflow) and a file `README.md`. **Go back to the setup page tab** for step 2: tap the tab button next to Chrome's address bar and choose the setup page.
+   GitHub parodo jūsų naują saugyklą: joje yra aplankas `.github` (su kūrimo darbo eiga) ir failas `README.md`. 2 žingsniui **grįžkite į sąrankos puslapio skirtuką**: spauskite skirtukų mygtuką šalia Chrome adreso juostos ir pasirinkite sąrankos puslapį.
 
 ```{warning}
-**Your new repository is empty**, with no files? It was not created from the template, and it cannot build. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** on the setup page again.
+**Jūsų nauja saugykla tuščia**, be failų? Ji nebuvo sukurta iš šablono ir negali kurti. Ištrinkite ją (**Settings** → puslapio apačia → **Delete this repository**), tada sąrankos puslapyje dar kartą spauskite **Create my private repository**.
 ```
 
 (aaps-builder-step2)=
 
-## Step 2 – Your signing key
+## 2 žingsnis – Jūsų pasirašymo raktas
 
-The app must be signed with your own key. Choose one of the two tabs. Read the [new key or existing key warning](#aaps-builder-before-you-start) first.
+Programėlė turi būti pasirašyta jūsų nuosavu raktu. Pasirinkite vieną iš dviejų skirtukų. Pirmiausia perskaitykite [įspėjimą apie naują ar esamą raktą](#aaps-builder-before-you-start).
 
-![Setup page step 2: the two key options](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
+![Sąrankos puslapio 2 žingsnis: dvi rakto parinktys](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
 
 ### I already have a keystore
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose your `.jks` file (or `.keystore`, `.p12`, `.pfx`). On a phone, copy the file to your phone or to Google Drive first.
-3. In **Keystore password**, type the keystore password.
-4. In **Key alias**, pick your alias from the list, or type it if there is no list. For keystores made with Android Studio it is usually `key0`.
-5. If your key password is different from the keystore password, untick **Key password is the same as the keystore password** and type the key password.
-6. Tap **Check and continue**.
+1. Spauskite **I already have a keystore**.
+2. Lauke **Keystore file** pasirinkite savo `.jks` failą (arba `.keystore`, `.p12`, `.pfx`). Telefone pirmiausia nukopijuokite failą į telefoną arba į Google Drive.
+3. Lauke **Keystore password** įveskite raktų saugyklos slaptažodį.
+4. Lauke **Key alias** pasirinkite savo pseudonimą iš sąrašo arba jį įveskite, jei sąrašo nėra. Raktų saugyklose, sukurtose su Android Studio, pseudonimas (alias) paprastai yra `key0`.
+5. Jei jūsų rakto slaptažodis skiriasi nuo raktų saugyklos slaptažodžio, nuimkite žymę **Key password is the same as the keystore password** ir įveskite rakto slaptažodį.
+6. Spauskite **Check and continue**.
 
-The page checks the password and the alias on your device. **Keystore OK! Continue with step 3.** means everything is right. If it says the password will be checked when you build, continue anyway: the build tells you if something is wrong.
+Puslapis patikrina slaptažodį ir pseudonimą jūsų įrenginyje. **Keystore OK! Continue with step 3.** reiškia, kad viskas teisinga. Jei rodoma, kad slaptažodis bus patikrintas kūrimo metu, vis tiek tęskite: kūrimas praneš, jei kas nors negerai.
 
 ### Create a new key
 
-1. Tap **Create a new key**.
+1. Spauskite **Create a new key**.
 
-2. Choose a password and type it twice. Rules: at least 8 characters, only the letters a–z and A–Z, the digits 0–9 and symbols such as `! ? #`. No spaces, no accented letters, and not the `|` character.
+2. Sugalvokite slaptažodį ir įveskite jį du kartus. Taisyklės: bent 8 simboliai, tik raidės a–z ir A–Z, skaitmenys 0–9 ir tokie simboliai kaip `! ? #`. Jokių tarpų, jokių raidžių su diakritiniais ženklais (pvz., ą, č, ė) ir jokio simbolio `|`.
 
-3. Tap **Create key**. It takes a few seconds before **Key created** appears.
+3. Spauskite **Create key**. Po kelių sekundžių pasirodo **Key created**.
 
-   ![New key form with the password typed twice](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
+   ![Naujo rakto forma su du kartus įvestu slaptažodžiu](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
-4. Tap **Download backup (aaps-keystore.jks)**. If Chrome asks **Download file again?**, an older backup with the same name is already on your phone: tap **Download again**. Chrome then saves the new key as `aaps-keystore (1).jks`: that is the file that goes with this key, keep it and don't mix it up with the older one.
+4. Spauskite **Download backup (aaps-keystore.jks)**. Jei Chrome klausia **Download file again?**, jūsų telefone jau yra senesnė atsarginė kopija tuo pačiu pavadinimu: spauskite **Download again**. Tada Chrome naują raktą išsaugo kaip `aaps-keystore (1).jks`: būtent šis failas priklauso šiam raktui. Jį pasilikite ir nesupainiokite su senesniu.
 
-   Keep these three together, somewhere safe off your phone (for example your own cloud storage):
+   Šiuos tris dalykus laikykite kartu, saugioje vietoje ne telefone (pavyzdžiui, savo debesies saugykloje):
 
-   - the file `aaps-keystore.jks`,
-   - your password,
-   - the alias of the key: **`key0`**.
+   - failą `aaps-keystore.jks`,
+   - savo slaptažodį,
+   - rakto pseudonimą: **`key0`**.
 
-   You need all three if you ever build AAPS another way, for example with Android Studio. Keys created with an earlier version of the setup page have the alias `aaps`.
+   Visų trijų jums reikės, jei kada nors kursite AAPS kitu būdu, pavyzdžiui, su Android Studio. Raktai, sukurti su ankstesne sąrankos puslapio versija, turi pseudonimą `aaps`.
 
-   ![Key created and the backup box](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
+   ![Raktas sukurtas, rodomas atsarginės kopijos laukas](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
 
 (aaps-builder-step3)=
 
-## Step 3 – Give the key to your repository
+## 3 žingsnis – Perduokite raktą savo saugyklai
 
-Step 3 unlocks when step 2 is done. Your key, its passwords and its alias are packed into one value, the `KEYSTORE_SET` secret.
+3 žingsnis atrakinamas, kai baigiamas 2 žingsnis. Jūsų raktas, jo slaptažodžiai ir pseudonimas sudedami į vieną reikšmę – slaptąją reikšmę `KEYSTORE_SET`.
 
-1. Tap **Open the secrets page**.
+1. Spauskite **Open the secrets page**.
 
-![Setup page step 3](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
+![Sąrankos puslapio 3 žingsnis](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
 
-2. GitHub opens the **New secret** page of your repository. On a phone, it is below the settings menu: scroll down.
+2. GitHub atidaro jūsų saugyklos puslapį **New secret**. Telefone jis yra po nustatymų meniu: slinkite žemyn.
 
-![GitHub New secret form](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
+![GitHub forma New secret](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
 
-3. Switch to the setup page tab and tap **Copy name**. Switch back to the GitHub tab and paste it into the small **Name** field. The name is `KEYSTORE_SET`.
+3. Pereikite į sąrankos puslapio skirtuką ir spauskite **Copy name**. Grįžkite į GitHub skirtuką ir įklijuokite jį į mažą lauką **Name**. Pavadinimas yra `KEYSTORE_SET`.
 
-4. Switch to the setup page tab and tap **Copy secret**. Switch back to the GitHub tab and paste it into the big **Secret** box (long press on a phone). The secret is a very long code, thousands of characters: the setup page shows its first characters next to the button. Don't paste the word `KEYSTORE_SET` there.
+4. Pereikite į sąrankos puslapio skirtuką ir spauskite **Copy secret**. Grįžkite į GitHub skirtuką ir įklijuokite ją į didelį lauką **Secret** (telefone ilgai paspauskite). Slaptoji reikšmė yra labai ilgas kodas – tūkstančiai simbolių: sąrankos puslapis šalia mygtuko rodo pirmuosius jos simbolius. Neįklijuokite ten žodžio `KEYSTORE_SET`.
 
-5. Tap **Add secret**. `KEYSTORE_SET` now shows under **Repository secrets**.
+5. Spauskite **Add secret**. `KEYSTORE_SET` dabar rodoma skiltyje **Repository secrets**.
 
-![Repository secrets list with KEYSTORE_SET](../images/Building-the-App/CI/AapsBuilder13_SecretList.png)
+![Sąrašas Repository secrets su KEYSTORE_SET](../images/Building-the-App/CI/AapsBuilder13_SecretList.png)
 
-You only need to do this once.
+Tai reikia padaryti tik vieną kartą.
 
 ```{tip}
-GitHub shows **Page not found** (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise the username or repository name in step 1 doesn't match your repository. Check the name on github.com, correct it in step 1, and tap the button again.
+GitHub rodo **Page not found** (404)? Pirmiausia patikrinkite, ar šioje naršyklėje esate prisijungę prie github.com: kai nesate prisijungę, GitHub privačioms saugykloms rodo 404. Kitaip 1 žingsnyje nurodytas naudotojo vardas arba saugyklos pavadinimas nesutampa su jūsų saugykla. Patikrinkite pavadinimą svetainėje github.com, pataisykite jį 1 žingsnyje ir vėl spauskite mygtuką.
 ```
 
 (aaps-builder-step4)=
 
-## Step 4 – Build the app
+## 4 žingsnis – Sukurkite programėlę
 
-1. On the setup page, tap **Open the build page**. GitHub opens the **Build AAPS** page of your repository.
+1. Sąrankos puslapyje spauskite **Open the build page**. GitHub atidaro jūsų saugyklos puslapį **Build AAPS**.
 
-   ![GitHub Build AAPS page with the Run workflow button](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
+   ![GitHub puslapis Build AAPS su mygtuku Run workflow](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
 
-   If the **GitHub app** opens instead: tap **RUN WORKFLOW**, check the version and the variant, and tap **RUN WORKFLOW** again. The app may still show **Nothing to see here**: pull the list down to refresh it and see your build. Then continue with step 4 below.
+   Jei vietoj to atsidaro **GitHub programėlė**: spauskite **RUN WORKFLOW**, patikrinkite versiją ir variantą ir dar kartą spauskite **RUN WORKFLOW**. Programėlė vis dar gali rodyti **Nothing to see here**: patraukite sąrašą žemyn, kad jį atnaujintumėte ir pamatytumėte savo kūrimą. Tada tęskite nuo toliau aprašyto 4 žingsnio.
 
 2. If GitHub asks, tap the green button to enable workflows.
 
    The list of workflows shows two entries: use **Build AAPS**. Ignore **AAPS Builder**: it holds the build steps and has no **Run workflow** button.
 
-3. Tap **Run workflow**. A small form opens:
-   - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
-   - **Variant**: keep `fullRelease` for normal use with a pump. The other variants are explained in [build variants](#browserbuild-variant). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
-   - Tap the green **Run workflow** button.
+3. Spauskite **Run workflow**. Atsidaro nedidelė forma:
+   - **Version**: palikite `latest`, kad būtų sukurta naujausia AAPS versija, arba įveskite versijos numerį, pavyzdžiui, `4.0.0`.
+   - **Variant**: įprastam naudojimui su pompa palikite `fullRelease`. Kiti variantai paaiškinti skyriuje [kūrimo variantai](#browserbuild-variant). `aapsclient3Release` sukuria **AAPSClient3**; galima nuo **AAPS** 4.0 versijos (žr. [Apie AAPSClient, AAPSClient2 ir AAPSClient3](#remotecontrol-aapsclient-versions)).
+   - Spauskite žalią mygtuką **Run workflow**.
 
-   ![Run workflow form with latest and fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
+   ![Forma Run workflow su latest ir fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
 
-4. The build starts and shows **In progress**, with two parts: **AAPS / Check**, then **AAPS / Build AAPS**.
+4. Kūrimas prasideda ir rodo **In progress**. Jį sudaro dvi dalys: **AAPS / Check**, tada **AAPS / Build AAPS**.
 
-   ![Build in progress](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
+   ![Vykstantis kūrimas](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
 
-5. Wait 15 to 30 minutes. A green check means the build is done. A red cross means it failed: open the build to read the message, then see [troubleshooting](#aaps-builder-troubleshooting).
+5. Palaukite 15–30 minučių. Žalia varnelė reiškia, kad kūrimas baigtas. Raudonas kryželis reiškia, kad kūrimas nepavyko: atidarykite kūrimą, perskaitykite pranešimą, tada žr. [trikčių šalinimas](#aaps-builder-troubleshooting).
 
-   ![Finished build with a green check](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
+   ![Baigtas kūrimas su žalia varnele](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
 
    ```{tip}
-   **E-mail when a build is done:** GitHub only e-mails you when a build fails. To also get an e-mail when it succeeds: on github.com, open your profile picture → **Settings** → **Notifications** → **System** → **Actions**, and untick **Only notify for failed workflows**.
+   **El. laiškas, kai kūrimas baigtas:** GitHub siunčia el. laišką tik tada, kai kūrimas nepavyksta. Norėdami gauti el. laišką ir tada, kai kūrimas pavyksta: svetainėje github.com atidarykite savo profilio nuotrauką → **Settings** → **Notifications** → **System** → **Actions** ir nuimkite žymę **Only notify for failed workflows**.
    ```
 
-If there is no **Build AAPS** or **Run workflow** button:
+Jei nėra mygtuko **Build AAPS** arba **Run workflow**:
 
-- Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the button.
-- Open the **Actions** tab. If it says workflows are disabled, tap the green button to enable them, then tap **Build AAPS** in the list.
+- Atidarykite savo saugyklą ir patikrinkite, ar joje yra aplankas `.github` su failu `workflows/build.yml`. Jei saugykla tuščia, ji nebuvo sukurta iš šablono: ištrinkite ją (**Settings** → puslapio apačia → **Delete this repository**) ir dar kartą atlikite [1 žingsnį](#aaps-builder-step1) su mygtuku.
+- Atidarykite skirtuką **Actions**. Jei rodoma, kad darbo eigos išjungtos, spauskite žalią mygtuką, kad jas įjungtumėte, tada sąraše spauskite **Build AAPS**.
 
 (aaps-builder-step5)=
 
-## Step 5 – Install the app on your phone
+## 5 žingsnis – Įdiekite programėlę telefone
 
 ```{warning}
-**Before every update**, [export your settings](#ExportImportSettings-Automating-Settings-Export) in AAPS and copy the file **off the phone** (Google Drive, Dropbox…). Keep several older exports and the APK files there too, so you can always go back.
+**Prieš kiekvieną atnaujinimą** AAPS [eksportuokite savo nustatymus](#ExportImportSettings-Automating-Settings-Export) ir nukopijuokite failą **ne į telefoną** (Google Drive, Dropbox…). Ten laikykite ir kelis senesnius eksportus bei APK failus, kad visada galėtumėte grįžti atgal.
 ```
 
-1. On your phone, open the setup page in **Chrome**. Log in to github.com if asked.
-2. Tap **Open my builds**, then the newest build with a green check.
+1. Telefone atidarykite sąrankos puslapį naršyklėje **Chrome**. Jei paprašoma, prisijunkite prie github.com.
+2. Spauskite **Open my builds**, tada naujausią kūrimą su žalia varnele.
 
    ```{admonition} The GitHub app opened instead of Chrome?
    :class: note
 
-   The GitHub app cannot download builds. In the app, open the newest build, then tap **Artifacts ↗**, or tap the share icon at the top and choose **Chrome** (or **Copy link**, then paste the link in Chrome's address bar). The build opens in Chrome: continue with the next step there.
+   GitHub programėlė negali atsisiųsti kūrimų. Programėlėje atidarykite naujausią kūrimą, tada spauskite **Artifacts ↗** arba viršuje spauskite bendrinimo piktogramą ir pasirinkite **Chrome** (arba **Copy link**, tada įklijuokite nuorodą į Chrome adreso juostą). Kūrimas atsidaro Chrome: ten tęskite kitą žingsnį.
 
-   To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
+   Kad GitHub nuorodos nebūtų atidaromos programėlėje: Android **Settings** → **Apps** → **GitHub** → **Open by default** → išjunkite **Open supported links**.
    ```
 
-   ![Finished build: status Success and 2 artifacts](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
+   ![Baigtas kūrimas: būsena Success ir 2 artefaktai (artifacts)](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
 
-3. Scroll down to the build summary and tap the **Download AAPS** link.
+3. Slinkite žemyn iki kūrimo santraukos ir spauskite nuorodą **Download AAPS**.
 
-   ![Build summary with the Download AAPS link](../images/Building-the-App/CI/AapsBuilder51_DownloadLink.png)
+   ![Kūrimo santrauka su nuoroda Download AAPS](../images/Building-the-App/CI/AapsBuilder51_DownloadLink.png)
 
    ```{tip}
-   Scroll with your finger on the text, not on the diagram of the build steps: the diagram moves instead of the page.
+   Slinkite pirštu ant teksto, ne ant kūrimo žingsnių diagramos: kitaip juda diagrama, o ne puslapis.
    ```
 
-   You can also scroll further down to **Artifacts** and tap the download icon next to `aaps-….apk`.
+   Taip pat galite slinkti dar žemiau iki **Artifacts** ir spausti atsisiuntimo piktogramą šalia `aaps-….apk`.
 
-   ![Artifacts with the phone and watch apps](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
+   ![Artefaktai (Artifacts) su telefono ir laikrodžio programėlėmis](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
-4. When the download is done, open Chrome's menu **⋮** → **Downloads**, tap `aaps-….apk` and choose **Install**. If asked, allow installing apps from this source.
+4. Kai atsisiuntimas baigtas, atidarykite Chrome meniu **⋮** → **Downloads**, spauskite `aaps-….apk` ir pasirinkite **Install**. Jei paprašoma, leiskite diegti programėles iš šio šaltinio.
 
-   ![Chrome Downloads with the AAPS APK](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
+   ![Chrome atsisiuntimai (Downloads) su AAPS APK](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
 
-`aaps-wear-….apk` is the smartwatch app. Skip it if you don't use one.
+`aaps-wear-….apk` yra išmaniojo laikrodžio programėlė. Jei laikrodžio nenaudojate, jos nereikia.
 
-The app is kept on the build page for **14 days**. It is not shown under **Code** in your repository. Copy it somewhere safe, off your phone, together with your settings exports.
+Programėlė kūrimo puslapyje laikoma **14 dienų**. Ji nerodoma jūsų saugyklos skiltyje **Code**. Nukopijuokite ją į saugią vietą ne telefone, kartu su nustatymų eksportais.
 
-For more ways to install the app, see [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+Daugiau programėlės diegimo būdų rasite puslapyje [AAPS perkėlimas ir įdiegimas](TransferringAndInstallingAaps.md).
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+Nuo 2026 m. rugsėjo Google [Android kūrėjų tapatybės patikrinimas](#android-developer-verification), priklausomai nuo jūsų šalies, gali neleisti įdiegti APK paspaudus failą. Nemokami apėjimo būdai aprašyti tame puslapyje.
 ```
 
 (aaps-builder-google-drive)=
 
-## Step 6 (optional) – Also save the app in Google Drive
+## 6 žingsnis (nebūtinas) – Programėlę išsaugokite ir Google Drive
 
-You can also have each build saved to your Google Drive, in the folder `AAPS/<version>`. This is optional: the app is always available on the build page.
+Taip pat galite kiekvieną kūrimą išsaugoti savo Google Drive, aplanke `AAPS/<version>`. Tai nebūtina: programėlė visada pasiekiama kūrimo puslapyje.
 
-It needs one more secret, `GDRIVE_OAUTH2`. Step 6 of the setup page gets it from Google for you, on a phone or a computer. **AAPS** can then only see and change the files it creates in your Google Drive, nothing else.
+Tam reikia dar vienos slaptosios reikšmės – `GDRIVE_OAUTH2`. Sąrankos puslapio 6 žingsnis gauna ją iš Google už jus, telefone arba kompiuteryje. Tada **AAPS** jūsų Google Drive gali matyti ir keisti tik savo sukurtus failus, nieko kito.
 
-1. On the setup page, tap **Connect Google Drive**. Google opens in a new tab.
-2. Choose your Google account and allow access. If Google says the app is not verified, tap **Advanced**, then **Go to …**.
-3. The new tab then shows an error such as **This site can't be reached** or **127.0.0.1 refused to connect**. **This is expected:** Google's answer is in the address of that tab. Tap the address bar, select the whole address (it starts with `http://127.0.0.1:47913/`) and copy it.
-4. Go back to the setup page tab within a few minutes: Google's answer is only valid for a short time, and only once. Paste the address into **Paste the copied address here** and tap **Get GDRIVE_OAUTH2**. The page shows **GDRIVE_OAUTH2 is ready**.
-5. Tap **Open the secrets page**. Tap **Copy name**, then paste it into the small **Name** field (the name is `GDRIVE_OAUTH2`). Tap **Copy secret**, paste it into the big **Secret** box and tap **Add secret**.
+1. Sąrankos puslapyje spauskite **Connect Google Drive**. Google atsidaro naujame skirtuke.
+2. Pasirinkite savo Google paskyrą ir suteikite prieigą. Jei Google rodo, kad programėlė nepatvirtinta, spauskite **Advanced**, tada **Go to …**.
+3. Tada naujame skirtuke rodoma klaida, pavyzdžiui, **This site can't be reached** arba **127.0.0.1 refused to connect**. **Taip ir turi būti:** Google atsakymas yra to skirtuko adrese. Spauskite adreso juostą, pažymėkite visą adresą (jis prasideda `http://127.0.0.1:47913/`) ir jį nukopijuokite.
+4. Per kelias minutes grįžkite į sąrankos puslapio skirtuką: Google atsakymas galioja tik trumpai ir tik vieną kartą. Įklijuokite adresą į lauką **Paste the copied address here** ir spauskite **Get GDRIVE_OAUTH2**. Puslapis rodo **GDRIVE_OAUTH2 is ready**.
+5. Spauskite **Open the secrets page**. Spauskite **Copy name**, tada įklijuokite jį į mažą lauką **Name** (pavadinimas yra `GDRIVE_OAUTH2`). Spauskite **Copy secret**, įklijuokite ją į didelį lauką **Secret** ir spauskite **Add secret**.
 
-From the next build, the APKs are also saved in Google Drive.
+Nuo kito kūrimo APK failai taip pat išsaugomi Google Drive.
 
-Already have a `GDRIVE_OAUTH2` value from the preparation file of the other browser build methods? It works too: add it as the `GDRIVE_OAUTH2` secret.
+Jau turite `GDRIVE_OAUTH2` reikšmę iš kitų kūrimo naršyklėje būdų paruošimo failo? Ji irgi tinka: pridėkite ją kaip slaptąją reikšmę `GDRIVE_OAUTH2`.
 
-Google stops the access if you don't build for 6 months, or if you change your Google password. The build then tells you so: redo these steps. See [Google refresh token expired](#aaps-ci-google-token-expired).
+Google nutraukia prieigą, jei nekuriate 6 mėnesius arba jei pakeičiate Google slaptažodį. Tada kūrimas apie tai praneša: atlikite šiuos veiksmus iš naujo. Žr. [Baigėsi Google atnaujinimo rakto (refresh token) galiojimas](#aaps-ci-google-token-expired).
 
 (aaps-builder-updates)=
 
-## Updating AAPS
+## AAPS atnaujinimas
 
-Your repository never builds anything by itself: you decide when to build, which version and which variant. When a new AAPS version is released:
+Jūsų saugykla niekada nieko nekuria pati: jūs sprendžiate, kada kurti, kurią versiją ir kurį variantą. Kai išleidžiama nauja AAPS versija:
 
-1. [Back up your settings](#aaps-builder-step5) as explained in step 5.
-2. Build the new version as in [step 4](#aaps-builder-step4). Keep `latest`, or type the release number.
-3. Download and install it as in [step 5](#aaps-builder-step5).
+1. [Padarykite nustatymų atsarginę kopiją](#aaps-builder-step5), kaip aprašyta 5 žingsnyje.
+2. Sukurkite naują versiją, kaip aprašyta [4 žingsnyje](#aaps-builder-step4). Palikite `latest` arba įveskite versijos numerį.
+3. Atsisiųskite ir įdiekite ją, kaip aprašyta [5 žingsnyje](#aaps-builder-step5).
 
-**Updates of the build steps** reach you by themselves: at every build, your repository runs the build steps released by the AAPS developers in nightscout/aaps-builder. Nothing changes in your repository, and there is no automatic build.
+**Kūrimo žingsnių atnaujinimai** jus pasiekia patys: kiekvieno kūrimo metu jūsų saugykla paleidžia AAPS kūrėjų išleistus kūrimo žingsnius iš nightscout/aaps-builder. Jūsų saugykloje niekas nesikeičia ir automatinio kūrimo nėra.
 
-**Updates of your workflow file** are rare: only when the **Run workflow** form changes, for example for a new build variant, or once if your repository was made with an earlier version of the setup page (an empty repository with a short workflow file) or from the old template. The [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. Your `KEYSTORE_SET` secret stays as it is. On the setup page, open **Updating your copy** at the end of step 1:
+**Jūsų darbo eigos failo atnaujinimai** reikalingi retai: tik kai pasikeičia forma **Run workflow**, pavyzdžiui, dėl naujo kūrimo varianto, arba vieną kartą, jei jūsų saugykla sukurta su ankstesne sąrankos puslapio versija (tuščia saugykla su trumpu darbo eigos failu) arba iš senojo šablono. Tai nurodoma puslapyje [Dokumentacijos atnaujinimai ir pakeitimai](../Maintenance/DocumentationUpdate.md). Jūsų slaptoji reikšmė `KEYSTORE_SET` lieka tokia pati. Sąrankos puslapyje, 1 žingsnio pabaigoje, atidarykite **Updating your copy**:
 
-1. Tap **Open the newest workflow**. On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the **plain-text version** instead, press and hold the text, then **Select all** and **Copy**.
-2. Tap **Open my workflow file**.
-3. Replace the whole text with the copied workflow (long press on a phone: **Select all**, then **Paste**).
-4. Tap **Commit changes…**, then **Commit changes**.
+1. Spauskite **Open the newest workflow**. Kompiuteryje spauskite **kopijavimo piktogramą** („Copy raw file“) failo viršuje dešinėje. Telefone vietoj to atidarykite **paprasto teksto versiją**, palaikykite paspaudę tekstą, tada **Select all** ir **Copy**.
+2. Spauskite **Open my workflow file**.
+3. Pakeiskite visą tekstą nukopijuota darbo eiga (telefone ilgai paspauskite: **Select all**, tada **Paste**).
+4. Spauskite **Commit changes…**, tada **Commit changes**.
 
-The first line of the file shows its version.
+Pirmoje failo eilutėje rodoma jo versija.
 
 (aaps-builder-troubleshooting)=
 
 ## Troubleshooting
 
-To see why a build failed, [read the build log](#aaps-ci-read-the-logs): the step names are different, but you find the error the same way. You can also [update a secret](#aaps-ci-update-secret) and [run the build again](#aaps-ci-rerun) the same way.
+Norėdami sužinoti, kodėl kūrimas nepavyko, [perskaitykite kūrimo žurnalą](#aaps-ci-read-the-logs): žingsnių pavadinimai kiti, bet klaidą randate taip pat. Taip pat tokiu pat būdu galite [atnaujinti slaptąją reikšmę](#aaps-ci-update-secret) ir [vėl paleisti kūrimą](#aaps-ci-rerun).
 
-- **No "Build AAPS" or "Run workflow" button, or the repository is empty**: the repository was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the **Create my private repository** button.
-- **The build stops with "This repository is PUBLIC"**: in your repository, open **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, then build again.
-- **"Secret KEYSTORE_SET is missing"**: do step 3 of the setup page.
-- **"The secret is too short"**, **"The secret is not a valid code"** or **"The secret does not contain a keystore"**: the wrong text was pasted into the secret, often the word `KEYSTORE_SET` itself, or only part of the code. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 2 of the setup page first if you closed it).
-- **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 2 and 3 of the setup page.
-- **"Version … does not exist"**: the version you typed is not an AAPS release. Use `latest`, or check the release number.
-- **"Variant … is not supported"**: your workflow file is an older version. Replace it as explained in [Updating AAPS](#aaps-builder-updates).
-- **"Page not found" (404) when the setup page opens GitHub**: log in to github.com in the same browser (GitHub shows 404 for private repositories when you are not logged in). If you are logged in, the username or repository name in step 1 of the setup page does not match your repository. Type the exact names.
-- **"No GitHub user with this name"** in step 1: type your GitHub username, as shown in your GitHub profile, not your e-mail.
-- **No Download link, or the GitHub app opened**: the GitHub app cannot download builds. Open the build in Chrome as explained in [step 5](#aaps-builder-step5). To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
-- **"Google Drive access has expired or was revoked"**: redo [step 6](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
+- **Nėra mygtuko „Build AAPS“ arba „Run workflow“, arba saugykla tuščia**: saugykla nebuvo sukurta iš šablono. Ištrinkite ją (**Settings** → puslapio apačia → **Delete this repository**) ir dar kartą atlikite [1 žingsnį](#aaps-builder-step1) su mygtuku **Create my private repository**.
+- **Kūrimas sustoja su pranešimu „This repository is PUBLIC“**: savo saugykloje atidarykite **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, tada kurkite dar kartą.
+- **„Secret KEYSTORE_SET is missing“**: atlikite sąrankos puslapio 3 žingsnį.
+- **„The secret is too short“**, **„The secret is not a valid code“** arba **„The secret does not contain a keystore“**: į slaptąją reikšmę įklijuotas netinkamas tekstas, dažnai pats žodis `KEYSTORE_SET` arba tik dalis kodo. Savo saugykloje atidarykite **Settings** → **Secrets and variables** → **Actions**, redaguokite `KEYSTORE_SET` ir dar kartą įklijuokite ilgą kodą iš **Copy secret** (jei sąrankos puslapį uždarėte, pirmiausia iš naujo atlikite jo 2 žingsnį).
+- **„Keystore, password or alias is wrong“**: patikrinkite savo raktų saugyklos slaptažodį ir pseudonimą, tada iš naujo atlikite sąrankos puslapio 2 ir 3 žingsnius.
+- **„Version … does not exist“**: įvesta versija nėra AAPS leidimas. Naudokite `latest` arba patikrinkite versijos numerį.
+- **„Variant … is not supported“**: jūsų darbo eigos failas yra senesnės versijos. Pakeiskite jį, kaip aprašyta skyriuje [AAPS atnaujinimas](#aaps-builder-updates).
+- **„Page not found“ (404), kai sąrankos puslapis atidaro GitHub**: toje pačioje naršyklėje prisijunkite prie github.com (kai nesate prisijungę, GitHub privačioms saugykloms rodo 404). Jei esate prisijungę, sąrankos puslapio 1 žingsnyje nurodytas naudotojo vardas arba saugyklos pavadinimas nesutampa su jūsų saugykla. Įveskite tikslius pavadinimus.
+- **„No GitHub user with this name“** 1 žingsnyje: įveskite savo GitHub naudotojo vardą, kaip jis rodomas jūsų GitHub profilyje, ne el. pašto adresą.
+- **Nėra nuorodos Download arba atsidarė GitHub programėlė**: GitHub programėlė negali atsisiųsti kūrimų. Atidarykite kūrimą Chrome, kaip aprašyta [5 žingsnyje](#aaps-builder-step5). Kad GitHub nuorodos nebūtų atidaromos programėlėje: Android **Settings** → **Apps** → **GitHub** → **Open by default** → išjunkite **Open supported links**.
+- **„Google Drive access has expired or was revoked“**: iš naujo atlikite [6 žingsnį](#aaps-builder-google-drive) ir atnaujinkite slaptąją reikšmę `GDRIVE_OAUTH2`.
 
-For other GitHub and Google Drive issues, see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Kitas GitHub ir Google Drive problemas rasite puslapyje [Kūrimas naršyklėje: trikčių šalinimas](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ```{toctree}
 :hidden:
 
-AAPS Builder setup page <BrowserBuildAapsBuilderSetup.md>
+AAPS Builder sąrankos puslapis <BrowserBuildAapsBuilderSetup.md>
 ```

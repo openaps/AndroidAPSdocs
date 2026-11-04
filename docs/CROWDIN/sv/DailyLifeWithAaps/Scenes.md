@@ -1,7 +1,7 @@
 (scenes)=
-# Scenes (situation presets)
+# Scener (förinställningar för olika situationer)
 
-A **scene** is a named preset that applies a **bundle of actions at once** — for example a *Sleep*, *Exercise* or *Sick Day* preset that switches your profile, sets a temporary target, toggles SMB and adds a care-portal note with a single tap, optionally for a set duration.
+En **scen** är en förinställning med ett namn som utför **flera åtgärder på en gång**. Det kan till exempel vara en förinställning för *Sömn*, *Träning* eller *Sjukdag* som byter profil, ställer in ett tillfälligt målvärde, slår på eller av SMB och lägger till en Careportal-anteckning med ett enda tryck, om du vill under en bestämd tid.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,172 +10,172 @@ A **scene** is a named preset that applies a **bundle of actions at once** — f
 
 ---
 
-## What is a scene
+## Vad är en scen
 
-Instead of changing several things by hand every time a recurring situation comes up, you set them up once as a scene and activate it with one tap. A scene can bundle any of these actions:
+I stället för att ändra flera saker för hand varje gång en situation återkommer, ställer du in dem en gång som en scen och aktiverar den med ett tryck. En scen kan innehålla alla dessa åtgärder:
 
-- **Profile switch** — switch profile and/or scale it by percentage (e.g. 70 %).
-- **Temporary target** — set a temp target (e.g. *Activity*, *Eating soon*, or a custom value).
-- **SMB on/off** — enable or disable super-micro-boluses while the scene is active.
-- **Loop mode** — change the running mode (e.g. to a more conservative mode).
-- **Care-portal note** — log an event (e.g. *Exercise*, *Sickness*) so it shows on the graph and in Nightscout.
+- **Profilbyte** – byt profil och/eller ändra den med en procentsats (t.ex. 70 %).
+- **Tillfälligt målvärde** – ställ in ett tillfälligt målvärde (t.ex. *Träning*, *Äta snart* eller ett eget värde).
+- **SMB på/av** – aktivera eller inaktivera SMB (super-micro-bolus) medan scenen är aktiv.
+- **Körläge** – ändra körläget (t.ex. till ett mer försiktigt läge).
+- **Careportal-anteckning** – registrera en händelse (t.ex. *Träning*, *Sjukdom*) så att den visas i grafen och i Nightscout.
 
-A scene also has a **duration** — a fixed time (minutes/hours/days) or *Indefinite (manual end)* — and an **end action** that runs when it finishes: either a **notification**, or it can **chain** into another scene (for example *Sick Day → Exercise*).
-
----
-
-## Managing scenes
-
-Open **Manage → Scenes** to see, create, edit, enable/disable and reorder your scenes.
-
-![The Scenes management screen](../images/v4/Scenes/scenes_list.png)
-
-Each scene card shows:
-
-- a **checkbox** to enable/disable the scene,
-- an **icon** and **name**,
-- a summary — *“N actions, duration”*, and the **→ chained scene** if it chains into another one,
-- and three buttons: **▶ activate**, **✏️ edit**, **🗑️ delete**.
-
-Tap the **+** button to create a new scene.
+En scen har också en **varaktighet** – en fast tid (minuter/timmar/dagar) eller *Obegränsad (avsluta manuellt)* – och en **slutåtgärd** som körs när scenen slutar: antingen en **avisering**, eller så kan den **länkas** till en annan scen (till exempel *Sjukdag → Träning*).
 
 ---
 
-## Creating or editing a scene
+## Hantera scener
 
-### Start from a template
+Öppna **Hantera → Scener** för att se, skapa, redigera, aktivera/inaktivera och ändra ordning på dina scener.
 
-To **create** a scene, tap the **+** button on the Scenes screen. The first step is **Start from template**: pick a ready-made scene for a common situation — *Exercise*, *Sick Day*, *Sick Day — Vomiting*, *Sleep*, *Post-exercise Night*, *Pre-meal*, *Alcohol*, *Driving*, *Bathing*, *Luteal Phase*, *Hot Weather*, *Medical Procedure* — or start from a *Blank* scene. Each template **pre-fills the recommended actions** and you can adjust everything in the following steps.
+![Skärmen Scener](../images/v4/Scenes/scenes_list.png)
 
-![“Start from template” — pick a starting point](../images/v4/Scenes/templates_picker.png)
+Varje scenkort visar:
 
-After you pick a template, its purpose is explained — *when* and *why* to use it — before you continue:
+- en **kryssruta** för att aktivera/inaktivera scenen,
+- en **ikon** och ett **namn**,
+- en sammanfattning – *”N åtgärder, varaktighet”* – och den **→ länkade scenen** om scenen leder vidare till en annan scen,
+- och tre knappar: **▶ aktivera**, **✏️ redigera**, **🗑️ radera**.
 
-![A template's explanation](../images/v4/Scenes/template_explanation.png)
-
-### Step through the actions
-
-The rest of the editor is a short **step-by-step** wizard. Each step is one action type with an *“Include … in scene”* switch — turn it on only for the actions you want this scene to perform, and leave the rest off.
-
-![The scene editor — the Profile switch step](../images/v4/Scenes/scene_editor.png)
-
-Work through the steps with **Next**/**Back**: *Profile switch*, *Temporary target*, *SMB*, *Loop mode*, *Care-portal note*, then the **duration**, the **end action** (notify or chain into another scene), and finally the scene's **name and icon**. Save when you are done. (To **edit** an existing scene, tap its **✏️** button — you go straight into these steps.)
-
-Each step starts with a short explanation of what the action does. The steps look like this, here with the *Exercise* template:
-
-**Temporary target** — pick one of your temp target presets:
-
-![The Temporary target step](../images/v4/Scenes/scene_editor_step3.png)
-
-**SMB** — enable or disable SMB while the scene is active:
-
-![The SMB step](../images/v4/Scenes/scene_editor_step4.png)
-
-**Running mode** — optionally change the loop mode:
-
-![The Running mode step](../images/v4/Scenes/scene_editor_step5.png)
-
-**Careportal** — the event type and note to log:
-
-![The Careportal step](../images/v4/Scenes/scene_editor_step6.png)
-
-**Duration** — how long the scene stays active; 0 means until you end it yourself:
-
-![The Duration step](../images/v4/Scenes/scene_editor_step7.png)
-
-**Follow-up scene** — optionally the scene that starts when this one ends:
-
-![The Follow-up scene step](../images/v4/Scenes/scene_editor_followup.png)
-
-**Scene** — the name and the icon. Press **Finish** to save:
-
-![The name and icon step](../images/v4/Scenes/scene_editor_step9.png)
+Tryck på knappen **+** för att skapa en ny scen.
 
 ---
 
-## Activating a scene
+## Skapa eller redigera en scen
 
-Activate a scene from the **Scenes** list (the **▶** button) or from the **Scenes** entry in the bottom navigation. In the **Scenes** sheet of the bottom navigation, each scene shows the same summary as in the Scenes list, and the **pencil** at the top of the sheet opens **Manage → Scenes** to create or edit your scenes.
+### Börja från en mall
 
-![The Scenes sheet of the bottom navigation](../images/v4/Scenes/scenes_sheet.png)
+För att **skapa** en scen trycker du på knappen **+** på skärmen Scener. Första steget är **Börja från en mall**: välj en färdig scen för en vanlig situation – *Träning*, *Sjukdag*, *Sjukdag — Kräkningar*, *Sömn*, *Natt efter träning*, *Innan måltid*, *Alkohol*, *Bilkörning*, *Bad*, *Lutealfas*, *Varmt väder*, *Medicinskt ingrepp* – eller börja från en *Tom* scen. Varje mall **fyller i de rekommenderade åtgärderna i förväg**, och du kan justera allt i nästa steg.
 
-If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+![”Börja från en mall” – välj en startpunkt](../images/v4/Scenes/templates_picker.png)
 
-Before anything is applied you get a **confirmation** that lists exactly what the scene will do, so you can review it:
+När du har valt en mall förklaras dess syfte – *när* och *varför* du ska använda den – innan du går vidare:
 
-![Scene activation confirmation, listing the bundled actions](../images/v4/Scenes/scene_confirmation.png)
+![Förklaringen till en mall](../images/v4/Scenes/template_explanation.png)
 
-If the scene chains into another one, the confirmation ends with **→** and the name of that follow-up scene, the same way it is shown in the Scenes list.
+### Gå igenom åtgärderna steg för steg
 
-When you start the scene from the **Scenes** entry of the bottom navigation, the confirmation is a simpler dialog with the same list of actions. Press **OK** to activate:
+Resten av redigeraren är en kort guide **steg för steg**. Varje steg är en typ av åtgärd med ett reglage *”Inkludera … i scenen”*. Slå bara på det för de åtgärder som scenen ska utföra, och låt resten vara avslagna.
 
-![Scene confirmation when started from the bottom navigation](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+![Redigeraren för scener – steget Profilbyte](../images/v4/Scenes/scene_editor.png)
 
-After you confirm, the actions are applied and the **active scene** is shown at the top of the overview with an **End Scene** button. If the scene chains into another one, the banner also names that follow-up scene:
+Gå igenom stegen med **Nästa**/**Tillbaka**: *Profilbyte*, *Tillfälligt målvärde*, *SMB*, *Körläge*, *Careportal-anteckning*, sedan **varaktigheten**, **slutåtgärden** (avisering eller länk till en annan scen) och till sist scenens **namn och ikon**. Spara när du är klar. (För att **redigera** en befintlig scen trycker du på dess knapp **✏️** – då kommer du direkt till dessa steg.)
 
-![The active-scene banner on the overview, with the End Scene button](../images/v4/Scenes/scene_active_banner.png)
+Varje steg börjar med en kort förklaring av vad åtgärden gör. Så här ser stegen ut, här med mallen *Träning*:
 
-The scene's actions stay in effect until:
+**Tillfälligt målvärde** – välj en av dina förinställningar för tillfälligt målvärde:
 
-- its **duration** ends (the **end action** runs — a notification, or it chains into the next scene), or
-- you tap **End Scene** to end it manually. If the scene chains into another one, you get two choices: **Skip to** the follow-up scene (the active scene ends and the follow-up starts now), or **End Scene** (the active scene ends and the follow-up does not start).
+![Steget Tillfälligt målvärde](../images/v4/Scenes/scene_editor_step3.png)
 
-A scene without follow-up only asks you to confirm:
+**SMB** – aktivera eller inaktivera SMB medan scenen är aktiv:
 
-![End Scene dialog](../images/v4/Scenes/scene_end_dialog.png)
+![Steget SMB](../images/v4/Scenes/scene_editor_step4.png)
 
-Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started).
+**Körläge** – ändra körläget om du vill:
 
-While a scene is active, the profile and the target on the main screen carry a small scene icon when the scene set them. The **Scenes** sheet of the bottom navigation stays available to start another scene:
+![Steget Körläge](../images/v4/Scenes/scene_editor_step5.png)
 
-![The Scenes sheet while a scene is active](../images/v4/Scenes/scenes_sheet_active.png)
+**Careportal** – händelsetypen och anteckningen som ska registreras:
 
-When the duration runs out on its own, the changes are reverted straight away and the banner changes to **Scene ended** with a **Dismiss** button. Dismissing only clears the banner from the screen — the scene itself is already over, so automation rules and a chained scene carry on without waiting for it.
+![Steget Careportal](../images/v4/Scenes/scene_editor_step6.png)
 
----
+**Varaktighet** – hur länge scenen är aktiv; 0 betyder tills du själv avslutar den:
 
-## Triggering scenes from Automation
+![Steget Varaktighet](../images/v4/Scenes/scene_editor_step7.png)
 
-A scene does not have to be started by hand — **Automation** can run it for you. When you add an action to an automation rule (**Manage → Automation**), the action picker has a **Scenes** category:
+**Uppföljningsscen** – om du vill, den scen som startar när denna scen slutar:
 
-- **Run scene** — activate a scene when the rule's triggers fire (for example at a set time, when you arrive somewhere, or when glucose crosses a threshold).
-- **Enable scene** / **Disable scene** — make a scene available (or unavailable) without activating it.
+![Steget Uppföljningsscen](../images/v4/Scenes/scene_editor_followup.png)
 
-![The “Scenes” actions in the Automation action picker](../images/v4/Scenes/automation_scene_action.png)
+**Scen** – namnet och ikonen. Tryck på **Slutför** för att spara:
 
-Automation can also **react to** a scene: the trigger list includes a **Scene** trigger, so a rule can run only while a particular scene is active. Combined with a scene's **end action** (revert, notify, or chain into another scene), this lets scenes start, follow on and finish automatically.
+![Steget med namn och ikon](../images/v4/Scenes/scene_editor_step9.png)
 
 ---
 
-## Scenes with Master/Client and a watch
+## Aktivera en scen
 
-The **currently active scene is synchronized** across all of your paired devices — activate it on one phone and the others show it too.
+Aktivera en scen från listan **Scener** (knappen **▶**) eller från **Scener** i den nedre navigeringen. I panelen **Scener** i den nedre navigeringen visar varje scen samma sammanfattning som i listan Scener. **Pennan** högst upp i panelen öppnar **Hantera → Scener**, där du skapar eller redigerar dina scener.
 
-A paired **client** (**AAPSClient**) can also activate or end a scene: the request is sent to the **master**, which authors the confirmation and applies the scene on its own state. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for how that works.
+![Panelen Scener i den nedre navigeringen](../images/v4/Scenes/scenes_sheet.png)
+
+Om [bolusskydd](#Preferences-protection) är på frågar **AAPS** efter det innan en scen startar eller avslutas. För att ändra en scen krävs i stället [skydd för inställningar](#Preferences-settings-protection).
+
+Innan något utförs får du en **bekräftelse** som visar exakt vad scenen kommer att göra, så att du kan kontrollera det:
+
+![Bekräftelse av en scen, med en lista över åtgärderna som ingår](../images/v4/Scenes/scene_confirmation.png)
+
+Om scenen leder vidare till en annan scen slutar bekräftelsen med **→** och namnet på uppföljningsscenen, på samma sätt som i listan Scener.
+
+När du startar scenen från **Scener** i den nedre navigeringen är bekräftelsen en enklare dialogruta med samma lista över åtgärder. Tryck på **OK** för att aktivera:
+
+![Bekräftelse av en scen som startas från den nedre navigeringen](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+
+När du har bekräftat utförs åtgärderna, och den **aktiva scenen** visas högst upp på huvudskärmen med knappen **Avsluta scen**. Om scenen leder vidare till en annan scen visar banderollen också namnet på uppföljningsscenen:
+
+![Banderollen för aktiv scen på huvudskärmen, med knappen Avsluta scen](../images/v4/Scenes/scene_active_banner.png)
+
+Scenens åtgärder gäller tills:
+
+- dess **varaktighet** tar slut (**slutåtgärden** körs – en avisering, eller nästa scen startar), eller
+- du trycker på **Avsluta scen** för att avsluta den manuellt. Om scenen leder vidare till en annan scen får du två val: **Hoppa till** uppföljningsscenen (den aktiva scenen avslutas och uppföljningsscenen startar nu), eller **Avsluta scen** (den aktiva scenen avslutas och uppföljningsscenen startar inte).
+
+En scen utan uppföljningsscen ber dig bara att bekräfta:
+
+![Dialogrutan Avsluta scen](../images/v4/Scenes/scene_end_dialog.png)
+
+När en scen avslutas **återställs** ändringarna som den gjorde (till exempel profilbytet och det tillfälliga målvärdet som den startade).
+
+Medan en scen är aktiv visar profilen och målvärdet på huvudskärmen en liten scenikon om scenen har ställt in dem. Panelen **Scener** i den nedre navigeringen finns kvar, så att du kan starta en annan scen:
+
+![Panelen Scener medan en scen är aktiv](../images/v4/Scenes/scenes_sheet_active.png)
+
+När varaktigheten tar slut av sig själv återställs ändringarna direkt, och banderollen ändras till **Scen avslutad** med knappen **Avfärda**. Avfärda tar bara bort banderollen från skärmen – själva scenen är redan slut, så automationsregler och en länkad scen fortsätter utan att vänta på den.
+
+---
+
+## Starta scener från Automation
+
+Du behöver inte starta en scen för hand – **Automation** kan köra den åt dig. När du lägger till en åtgärd i en automationsregel (**Hantera → Automation**) finns kategorin **Scener** i listan med åtgärder:
+
+- **Kör scen** – aktiverar en scen när regelns utlösare gäller (till exempel vid en viss tid, när du kommer fram till en plats eller när blodsockret passerar ett gränsvärde).
+- **Aktivera scen** / **Inaktivera scen** – gör en scen tillgänglig (eller inte tillgänglig) utan att aktivera den.
+
+![Åtgärderna i kategorin ”Scener” i listan med åtgärder i Automation](../images/v4/Scenes/automation_scene_action.png)
+
+Automation kan också **reagera på** en scen: listan med utlösare har utlösaren **Scen**, så att en regel bara körs medan en viss scen är aktiv. Tillsammans med en scens **slutåtgärd** (återställa, avisera eller länka till en annan scen) kan scener på så sätt starta, följa på varandra och avslutas automatiskt.
+
+---
+
+## Scener med huvudenhet/klient och en klocka
+
+Den **scen som är aktiv just nu synkroniseras** mellan alla dina parkopplade enheter – aktivera den på en telefon så visas den på de andra också.
+
+En parkopplad **klient** (**AAPSClient**) kan också aktivera eller avsluta en scen: begäran skickas till **huvudenheten**, som skapar bekräftelsen och utför scenen på sig själv. Se [Styrning huvudenhet ↔ klient](../RemoteFeatures/ClientMasterControl.md) för hur det fungerar.
 
 (scenes-from-watch)=
-### From a Wear OS watch
+### Från en Wear OS-klocka
 
-Scenes are available on a **Wear OS watch** as a **Scene tile**. Swipe to the **Scene** tile in the watch's tile carousel (add it from the carousel's tile list first if it isn't there yet) and tap the scene you want to start:
+Scener finns på en **Wear OS-klocka** som brickan **Scen** (tile). Svep till brickan **Scen** bland klockans brickor (lägg först till den från listan över brickor om den inte finns där ännu) och tryck på den scen som du vill starta:
 
-![The Scene tile on a Wear OS watch](../images/v4/Scenes/scene_watch_tile.png)
+![Brickan Scen på en Wear OS-klocka](../images/v4/Scenes/scene_watch_tile.png)
 
-The tile has four slots. By default each slot fills itself **automatically** with the next of your enabled scenes, in the order they have on the phone. To choose yourself, **long-press the tile** and open its settings: for each of the four slots you can keep **Automatic**, pin a **specific scene**, or select **None** to leave the slot empty. A slot pinned to a scene that has since been deleted or disabled shows **Unavailable** — pick another scene for it.
+Brickan har fyra platser. Som standard fylls varje plats **automatiskt** med nästa av dina aktiverade scener, i samma ordning som på telefonen. Om du vill välja själv **trycker du länge på brickan** och öppnar dess inställningar: för var och en av de fyra platserna kan du behålla **Automatisk**, fästa en **viss scen** eller välja **Inget** för att lämna platsen tom. En plats som är fäst vid en scen som sedan har raderats eller inaktiverats visar **Ej tillgänglig** – välj en annan scen för den.
 
-The watch then shows a confirmation — tap **✓** to activate, or swipe back to cancel:
+Klockan visar sedan en bekräftelse – tryck på **✓** för att aktivera, eller svep tillbaka för att avbryta:
 
-![Confirming a scene on the watch](../images/v4/Scenes/scene_watch_confirm.png)
+![Bekräfta en scen på klockan](../images/v4/Scenes/scene_watch_confirm.png)
 
-Just like on a client, the **master authors the confirmation and runs the scene**; the watch only relays the request (via the client phone, if the watch is paired to a client).
+Precis som på en klient är det **huvudenheten som skapar bekräftelsen och kör scenen**. Klockan skickar bara vidare begäran (via klienttelefonen, om klockan är parkopplad med en klient).
 
-While a scene is running — or its **Scene ended** banner is still showing on the phone — the tile shows an **End** button with the name of the scene under it. Tap it to end the active scene, or to clear the leftover banner, from your wrist.
+Medan en scen körs – eller medan dess banderoll **Scen avslutad** fortfarande visas på telefonen – visar brickan knappen **Avsluta** med scenens namn under. Tryck på den för att avsluta den aktiva scenen, eller för att ta bort banderollen som finns kvar, direkt från handleden.
 
-If the running scene chains into another one, the tile also shows a **Skip** button with the name of the follow-up scene under it. These are the same two choices as on the phone:
+Om den pågående scenen leder vidare till en annan scen visar brickan också knappen **Hoppa över** med namnet på uppföljningsscenen under. Det är samma två val som på telefonen:
 
-- **End** — the active scene ends. The confirmation tells you that the follow-up will not start.
-- **Skip** — the active scene ends and the follow-up scene starts now. The confirmation names both scenes.
+- **Avsluta** – den aktiva scenen avslutas. Bekräftelsen talar om att uppföljningsscenen inte startar.
+- **Hoppa över** – den aktiva scenen avslutas och uppföljningsscenen startar nu. Bekräftelsen visar namnen på båda scenerna.
 
-The watch's [Loop Status screen](#WearOsSmartwatch-loop-status) also shows the active scene, the time it has left and its follow-up.
+Klockans [skärm Loopstatus](#WearOsSmartwatch-loop-status) visar också den aktiva scenen, hur lång tid som är kvar och dess uppföljningsscen.
 
 ---
 

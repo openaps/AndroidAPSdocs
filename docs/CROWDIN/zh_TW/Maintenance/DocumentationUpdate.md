@@ -1,3 +1,7 @@
+- - -
+tocdepth: 1
+- - -
+
 # 文件更新與變更
 
 ## 2026年10月
@@ -92,174 +96,176 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ***
 
-## 2022年2月
+```{dropdown} Older updates (2019 to 2022)
+**February 2022**
 
-- [血糖質量警告標誌](#aaps-screens-bg-warning-sign) @tanja
-- [美敦力藥量更新](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
-- [更新到 AAPS 3.0 後的必要檢查](Update3_0.md) @tanja
+- [BG quality warning sign](#aaps-screens-bg-warning-sign) @tanja
+- [Medtronic pump update](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
+- [Necessary checks after update to AAPS 3.0](Update3_0.md) @tanja
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
-- 更新 AAPS 3.0 的文件（部分）@xJoe
-- [AAPS 3.0 的 Wear OS](../WearOS/WearOsSmartwatch.md) @peterleimbach
+- Update docs for AAPS 3.0 (partly) @xJoe
+- [Wear OS for AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
-## 2022年1月
+**January 2022**
 
-- [問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - 更新 @tanja
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
 
-## 2021年12月
+**December 2021**
 
-- [建立 APK](../SettingUpAaps/BuildingAaps.md) - 更新 Android Studio Arctic Fox | 2020.3.1 @tanja
-- [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) 資訊已新增 @MilosKozak
+- [Building the APK](../SettingUpAaps/BuildingAaps.md) - update Android Studio Arctic Fox | 2020.3.1 @tanja
+- [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) information added @MilosKozak
 
-## 2021年11月
+**November 2021**
 
-- Libre 2 傳感器校正最佳實踐
-- [ISF](../UsefulLinks/FAQ.md) 影響的重新表述
-- 更新[Android Studio問題排除](../GettingHelp/TroubleshootingAndroidStudio.md)
-- 移除已修補的[Dexcom](../CompatibleCgms/DexcomG6.md)應用程式，因為它已過時
+- Best practices for calibrating a Libre 2 sensor
+- [ISF](../UsefulLinks/FAQ.md) reformulation of impact
+- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+- Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
 
-## 2021年10月
+**October 2021**
 
-- [發行說明](ReleaseNotes.md) AAPS 3.0 beta
+- [Release notes](ReleaseNotes.md) AAPS 3.0 beta
 
-## 2021年9月
+**September 2021**
 
-- 建議的電腦規格以[建立 AAPS 應用程式](#Building-APK-recommended-specification-of-computer-for-building-apk-file)
+- Recommended computer specification to [build AAPS app](#Building-APK-recommended-specification-of-computer-for-building-apk-file)
 
-## 2021年6月
+**June 2021**
 
-- [Watchface 側載](../WearOS/WearOsSmartwatch.md)
+- [Watchface sideload](../WearOS/WearOsSmartwatch.md)
 
-## 2021年4月
+**April 2021**
 
-- Omnipod 和美敦力藥量的[通訊設備](#CompatiblePumps-additional-communication-device)列表
-- AAPS 在[Nightscout](#Nightscout-manual-nightscout-setup)中的預測
+- List of [communication devices](#CompatiblePumps-additional-communication-device) for Omnipod and Medtronic pumps
+- AAPS predictions in [Nightscout](#Nightscout-manual-nightscout-setup)
 
-## 2021年3月
+**March 2021**
 
-- 開發者交流從 gitter 移至[discord](https://discord.gg/4fQUWHZ4Mw)
+- Dev communication moved from gitter to [discord](https://discord.gg/4fQUWHZ4Mw)
 
-## 2021年2月
+**February 2021**
 
-- 新的導覽列和[語系切換](../NavigateDoc/ChangeLanguageVersion.md)
+- New navigation bar and [language switch](../NavigateDoc/ChangeLanguageVersion.md)
 
-## 2021年1月
+**January 2021**
 
-- [行動選單](#screens-action-tab) - 'AAPS螢幕'頁面上的更多細節
-- Dexcom G6 與[自建Dexcom應用](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
-- Libre智慧讀取器[電池電量](#screens-sensor-level-battery)
-- [目標](#objectives-objective3) - 新問題
-- 其他[AAPS 2.8.0的新功能](#Releasenotes-version-2-8-0)
+- [Action tab](#screens-action-tab) - more details on page 'AAPS screens'
+- Dexcom G6 with [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
+- Libre smart reader [battery level](#screens-sensor-level-battery)
+- [Objectives](#objectives-objective3) - new questions
+- Other [new AAPS 2.8.0 functions](#Releasenotes-version-2-8-0)
 
-## 2020年12月
+**December 2020**
 
-- [Libre 2](../CompatibleCgms/Libre2.md) - 已修補的應用不適用於美國傳感器
-- [OpenAPS 硬編碼限制](#Open-APS-features-overview-of-hard-coded-limits)
-- Sony Smartwatch 3 Google Play服務的手動安裝
+- [Libre 2](../CompatibleCgms/Libre2.md) - patched app does not work with US sensors
+- [OpenAPS hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits)
+- Sony Smartwatch 3 Manual Installation of Google Play Service
 
-## 2020年10月
+**October 2020**
 
-- Accu-Chek Combo - 更新[日光節約時間的時間調整](#time-adjustment-daylight-savings-time-dst)
-- Accu-Chek Insight - 選項以[上傳絕對值](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- 日誌 - 有關[資料夾位置](../GettingHelp/AccessingLogFiles.md)的更多詳細資訊
-- Omnipod Eros - 狀態更新
-- [SMS 指令 - 時間同步](../RemoteFeatures/SMSCommands.md)
+- Accu-Chek Combo - update [time adjustment daylight savings time](#time-adjustment-daylight-savings-time-dst)
+- Accu-Chek Insight - Option to [upload absolute values](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- Logs - more details about [folder location](../GettingHelp/AccessingLogFiles.md)
+- Omnipod Eros - status update
+- [SMS commands - time sync](../RemoteFeatures/SMSCommands.md)
 
-## 2020年9月
+**September 2020**
 
-- AAPS 2.7 版的大更新
-- 詳細資訊請參閱[版本資訊](#Releasenotes-version-2-7-0)
+- Major update for new AAPS version 2.7
+- For details see the [release notes](#Releasenotes-version-2-7-0)
 
-## 2020年6月
+**June 2020**
 
-- Libre 2：更多關於修改版 LibreLink App 和使用藍牙發射器的資訊
-- 搭配 Libre 2 進行[時區旅行](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md)
+- Libre 2 - more details patched Libre Link app & use of Bluetooth transmitters
+- [Time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) with Libre 2
 
-## 2020年5月
+**May 2020**
 
-- [延長注射僅適用於 Dana 和 Insight 幫浦](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Insight 停用震動](#Accu-Chek-Insight-Pump-vibration)（韌體 3.x 僅限）
-- [最小請求率](#Preferences-minimal-request-change) 以減少開放迴路模式中的通知數量
-- 已修補的 Libre Link 應用 - 檢查是否已正確修補
-- [預測線](#aaps-screens-prediction-lines) - 更多細節
+- [Extended bolus only for Dana + Insight pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Insight deactivate vibration](#Accu-Chek-Insight-Pump-vibration) (firmware 3.x only)
+- [Minimal request rate](#Preferences-minimal-request-change) to reduce number of notifications in open loop mode
+- Patched Libre Link app - check if correctly patched
+- [Prediction lines](#aaps-screens-prediction-lines) - more details
 
-## 2020年4月
+**April 2020**
 
-- 回溯胰島素（即由注射器給予）
-- 下個主版本將不再支援 Android 6
+- Backdate insulin (i.e. given by syringe)
+- Android 6 support will be discontinued in next master version
 
-## 2020年3月
+**March 2020**
 
-- [使用 Android Studio 3.6.1 建置 APK](../SettingUpAaps/BuildingAaps.md)
-- [DanaRS 與韌體 v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **目前無法用於 AAPS！**
-- [延長注射並切換到開環](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [使用 Android Studio 3.6.1 更新 APK](../Maintenance/UpdateToNewVersion.md)
+- [Build apk with Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
+- [DanaRS with firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
+- [Extended bolus and switch to open loop](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Update apk with Android Studio 3.6.1](../Maintenance/UpdateToNewVersion.md)
 
-## 2020年2月
+**February 2020**
 
-- 自動化警告
-- [自動感應](#Open-APS-features-autosens) - 簡短說明
-- 護理入口替代方案
-- [延長注射](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) 功能 - 將停用關閉循環
-- 新增[本機設定外掛](../SettingUpAaps/ConfigBuilder.md)
-- 範本設定 - 更新 Dexcom G6
-- [版本 2.6.0](#Releasenotes-version-2-6-0) - 主要新功能
-- [Wear OS 複雜功能](../WearOS/WearOsSmartwatch.md)
+- Automation caveats
+- [Autosens](#Open-APS-features-autosens) - short explanation
+- Careportal alternatives
+- [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
+- New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md)
+- Sample Setup - update Dexcom G6
+- [Version 2.6.0](#Releasenotes-version-2-6-0) - major new features
+- [Wear complications](../WearOS/WearOsSmartwatch.md)
 
-## 2020年1月
+**January 2020**
 
-- [手動碳水化合物修正](#screens-bolus-carbs) 用於錯誤的碳水化合物項目
-- [編輯文件](../SupportingAaps/HowToEditTheDocs.md) 時的圖片大小
+- [Manual carb correction](#screens-bolus-carbs) for faulty carb entries
+- [Image size](../SupportingAaps/HowToEditTheDocs.md) when editing docs
 
-## 2019年12月
+**December 2019**
 
-- [Android Auto](../RemoteFeatures/AndroidAuto.md) - 附螢幕截圖的設定說明
-- [Accu-Chek Insight 與自動調整](#Accu-Chek-Insight-Pump-settings-in-aaps) - 使用的替代方案
-- [Glimp](#Config-Builder-bg-source) - 支援版本 4.15.57 及更新版本
-- [錶盤](../WearOS/WearOsSmartwatch.md) - 重大的更新，更多詳細資訊
-- [錶盤小工具](#Watchfaces-complications) - 使用你最喜愛的錶盤與 AAPS 資料
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
+- [Accu-Chek Insight & Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) - workaround for usage
+- [Glimp](#Config-Builder-bg-source) - version 4.15.57 and newer supported
+- [Watchfaces](../WearOS/WearOsSmartwatch.md) - major update, way more details
+- [Watchface complications](#Watchfaces-complications) - use your favorite watchface with AAPS data
 
-## 2019年11月
+**November 2019**
 
-- [自動化 - 在停用閉環時停用](../DailyLifeWithAaps/Automations.md)
-- [Dexcom G6 傳感器更換更新](#xdrip-replace-transmitter)
-- [延長注射 - 為何他們在閉環上下文中無法運作](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [常見問題解答 - 運動](#FAQ-sports)
-- [主螢幕 - 圖表上的線條](#aaps-screens-main-graph)
-- [Insight - 在 NS 客戶端中停用絕對值](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- [Medtronic 幫浦 - 可能的重複項目](../CompatiblePumps/MedtronicPump.md)
-- [新的 Freestyle Libre 2 教程](../CompatibleCgms/Libre2.md)
-- [帶百分比的設定檔切換 - 示例](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-- [SMS 指令更新](../RemoteFeatures/SMSCommands.md)
-- [問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
-- [問題排除 - 連結集合](../GettingHelp/GeneralTroubleshooting.md)
-- 更新 - 供有經驗用戶的快速指導
-- 文件 - 更新[編輯](#edit-the-docs-code-syntax)和[翻譯](#translations-translation-of-the-documentation).
+- [Automation - deactivate when disabling loop](../DailyLifeWithAaps/Automations.md)
+- [Dexcom G6 replace transmitter update](#xdrip-replace-transmitter)
+- [Extended bolus - why they do not work in a loop context](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [FAQ - sports](#FAQ-sports)
+- [Homescreen - lines on graph](#aaps-screens-main-graph)
+- [Insight - Disable absolute values in NS Client](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Medtronic pump - possible double entries](../CompatiblePumps/MedtronicPump.md)
+- [New Freestyle Libre 2 tutorial](../CompatibleCgms/Libre2.md)
+- [Profile switch with percentage - example](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
+- [SMS commands update](../RemoteFeatures/SMSCommands.md)
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+- [Troubleshooting - link collection](../GettingHelp/GeneralTroubleshooting.md)
+- Update - quick walk-through for experienced users
+- Docs - update [edit](#edit-the-docs-code-syntax) and [translation](#translations-translation-of-the-documentation).
 
-## 2019年10月
+**October 2019**
 
-- [AAPS 版本 2.5](#Releasenotes-version-2-5-0) 更新（特別是[更新頁面](../Maintenance/UpdateToNewVersion.md)）
-- [Accu-Chek Insight - 記錄選項](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- [COB 計算在單獨頁面上](../DailyLifeWithAaps/CobCalculation.md)
-- [COB - 錯誤 COB 值偵測](#CobCalculation-detection-of-wrong-cob-values)
-- [Dexcom G6 特定問題排除](#DexcomG6-troubleshooting-g6)
-- [2.5 版的目標更新](../SettingUpAaps/CompletingTheObjectives.md)
-- [偏好設定更新](../SettingUpAaps/Preferences.md)
-- [SGLT-2 抑制劑 - 閉環時請勿使用](#PreparingForAaps-no-sglt-2-inhibitors)
-- [SMS 指令問題排除](#SMSCommands-troubleshooting)
-- [xDrip - 更新 G6 傳感器更換](#xdrip-replace-transmitter)
+- [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
+- [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [COB calculation on separate page](../DailyLifeWithAaps/CobCalculation.md)
+- [COB - wrong COB value detection](#CobCalculation-detection-of-wrong-cob-values)
+- [Dexcom G6 specific troubleshooting](#DexcomG6-troubleshooting-g6)
+- [Objectives update version 2.5](../SettingUpAaps/CompletingTheObjectives.md)
+- [Preferences update](../SettingUpAaps/Preferences.md)
+- [SGLT-2 inhibitors - do not use when looping](#PreparingForAaps-no-sglt-2-inhibitors)
+- [SMS Commands Troubleshooting](#SMSCommands-troubleshooting)
+- [xDrip - update G6 transmitter replacement](#xdrip-replace-transmitter)
 
-## 2019年9月
+**September 2019**
 
 - [Automate](../DailyLifeWithAaps/Automations.md)
-- [注射計算器](#AapsScreens-wrong-cob-detection) - 緩慢的碳水吸收
-- [Nightscout 安全性](#Nightscout-security-considerations)
-- [設定檔時差](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)（更多詳細資訊）
-- [遠端監控](../RemoteFeatures/RemoteMonitoring.md)
-- [什麼是閉環系統？](#Introduction-what-does-hybrid-closed-loop-mean)
+- [Bolus calculator](#AapsScreens-wrong-cob-detection) - slow carb absorption
+- [Nightscout security](#Nightscout-security-considerations)
+- [Profile timeshift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) (more details)
+- [Remote monitoring](../RemoteFeatures/RemoteMonitoring.md)
+- [What is a closed loop system?](#Introduction-what-does-hybrid-closed-loop-mean)
 
-## 2019年8月
+**August 2019**
 
-- Dexcom G6 修補應用的區域設置
-- [Dexcom G6 新發射器](#xdrip-connect-g6-transmitter-for-the-first-time)（"火蟲" / 8G...）
-- 我需要什麼？ - 新結構與附加資訊
-- 新結構
+- Dexcom G6 patched app region
+- [Dexcom G6 new transmitter](#xdrip-connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
+- What do I need? - new structure & additional information
+- New structure
+```

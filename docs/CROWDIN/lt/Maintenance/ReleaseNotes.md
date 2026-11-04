@@ -1,5 +1,5 @@
 
-# Release notes
+# Versijų pastabos
 
 ```{toctree}
 :hidden:
@@ -9,47 +9,47 @@ Update3_0.md
 UpdateAaps3204.md
 ```
 
-Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
+Norėdami atnaujinti į naują versiją, vadovaukitės [atnaujinimo vadovo](UpdateToNewVersion.md) instrukcijomis. Trikčių šalinimo skyriuje atnaujinimo vadovo puslapyje taip pat aptariami dažniausi sunkumai, kylantys atnaujinant **AAPS**.
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
-See [What changed in AAPS v4](V4Changes.md) for the notable behavioral changes — features that have moved, been renamed, or been removed.
+Svarbiausi elgsenos pakeitimai – perkeltos, pervadintos ar pašalintos funkcijos – aprašyti puslapyje [Kas pasikeitė AAPS v4](V4Changes.md).
 ```
 
-You will receive a notification like this when a new update is available:
+Kai bus pasiekiamas naujas atnaujinimas, gausite tokį pranešimą:
 
-![Update info](../images/AAPS_LoopDisable90days.png)
+![Informacija apie atnaujinimą](../images/AAPS_LoopDisable90days.png)
 
-If you do not update until expiration date **AAPS** will switch to Open Loop.
+Jei neatnaujinsite iki galiojimo pabaigos datos, **AAPS** persijungs į atviro ciklo režimą.
 
-See [End of life](EndOfLife.md) for AAPS version end dates.
+AAPS versijų galiojimo pabaigos datos pateiktos puslapyje [Versijų galiojimo pabaiga](EndOfLife.md).
 
-**Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
+**Neignoruokite šio pranešimo.** Naujose **AAPS** versijose yra svarbių saugos pataisymų. Todėl kiekvienas **AAPS** naudotojas turi kuo greičiau atnaujinti programą į naujausią versiją. Tai pastanga padidinti kiekvieno **AAPS** naudotojo ir DIY bendruomenės saugumą. Dėkojame už supratingumą.
 
 (maintenance-android-version-aaps-version)=
 
-## Android version and AAPS version
+## Android versija ir AAPS versija
 
-If your smartphone uses an Android Version older than Android 12 you will not be able to use AAPS v3.4 and up as it requires at least Android 12.
+Jei jūsų išmaniajame telefone yra senesnė nei Android 12 versija, negalėsite naudoti AAPS v3.4 ir naujesnių, nes joms reikia bent Android 12.
 
-In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
+Kad naudotojai su senesne Android versija galėtų naudoti senesnę AAPS versiją, buvo išleistos naujos versijos, kuriose pakeistas tik versijos tikrinimas. Kitų patobulinimų jose nėra.
 
-Find your Android version in the table below and use the matching **AAPS** version. The code is downloaded from <https://github.com/nightscout/AndroidAPS> using the branch shown.
+Toliau pateiktoje lentelėje raskite savo Android versiją ir naudokite ją atitinkančią **AAPS** versiją. Kodas atsisiunčiamas iš <https://github.com/nightscout/AndroidAPS>, naudojant nurodytą atšaką.
 
-| Your Android version | AAPS version to use | Branch to download                                               |
-| -------------------- | ------------------- | ---------------------------------------------------------------- |
-| Android 12 and up    | Latest version      | [master](https://github.com/nightscout/AndroidAPS) (default)     |
-| Android 11           | **3.3.2.1**         | [3.3.2.1](https://github.com/nightscout/AndroidAPS/tree/3.3.2.1) |
-| Android 9, 10        | **3.2.0.4**         | [3.2.0.4](https://github.com/nightscout/AndroidAPS/tree/3.2.0.4) |
-| Android 8            | **2.8.2.1**         | [2.8.2.1](https://github.com/nightscout/AndroidAPS/tree/2.8.2.1) |
-| Android 7            | **2.6.2**           | [2.6.2](https://github.com/nightscout/AndroidAPS/tree/2.6.2)     |
+| Jūsų Android versija   | Naudotina AAPS versija | Atsisiunčiama atšaka                                             |
+| ---------------------- | ---------------------- | ---------------------------------------------------------------- |
+| Android 12 ir naujesnė | Naujausia versija      | [master](https://github.com/nightscout/AndroidAPS) (numatytoji)  |
+| Android 11             | **3.3.2.1**            | [3.3.2.1](https://github.com/nightscout/AndroidAPS/tree/3.3.2.1) |
+| Android 9, 10          | **3.2.0.4**            | [3.2.0.4](https://github.com/nightscout/AndroidAPS/tree/3.2.0.4) |
+| Android 8              | **2.8.2.1**            | [2.8.2.1](https://github.com/nightscout/AndroidAPS/tree/2.8.2.1) |
+| Android 7              | **2.6.2**              | [2.6.2](https://github.com/nightscout/AndroidAPS/tree/2.6.2)     |
 
-## WearOS version
+## WearOS versija
 
-- AAPS requires WearOS 3.0, 3.2 or 3.5 (Android 11, API level 30) or newer. WearOS 2 watches are not supported.
+- AAPS reikia WearOS 3.0, 3.2 arba 3.5 (Android 11, API lygis 30) arba naujesnės versijos. WearOS 2 laikrodžiai nepalaikomi.
 
 ```{tip}
-WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
+WearOS 5, API lygis 34 (Android 14), turi [apribojimų](#BuildingAapsWearOs-WearOS5).
 ```
 
 Versions with a heading are the latest release for each Android version (see the table above). The other releases follow in between, with their notes or a link to them on GitHub.
@@ -64,59 +64,59 @@ Release date: 31-10-2026
 
 **New features**
 
-- New user interface: phone app rebuilt in Jetpack Compose @MilosKozak
-- [Global search](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
-- Kotlin Multiplatform migration, client for Windows, Mac, Linux desktop and iOS @MilosKozak
-- [Scenes](../DailyLifeWithAaps/Scenes.md): save a set of actions and run them together @MilosKozak
-- [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md): send commands from a client phone to the master @MilosKozak
-  - [Client roles](#client-master-control-roles): Read-only, Meals, Caregiver or Admin for each client @MilosKozak
-  - [Hardened mode](#client-master-control-hardened-mode): with client control on, the master takes changes only from paired clients @MilosKozak
-  - Pairing with a QR code that also sets up Nightscout on the client, or with a PIN; the pairing secret is replaced right after pairing @MilosKozak
-  - [Own Nightscout token](#client-master-control-own-token) for each client, with only the rights a client needs @MilosKozak
-- [Insulin concentration](../AdvancedOptions/InsulinConcentration.md) support (U200, U500) across pumps, wizard and profiles @Philoul @MilosKozak
-- Insulin management: insulin catalogue, nicknames, selection in profile and wizard @Philoul
-- Calibration plugin @MilosKozak
-- [Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md): Unscented Kalman Filter (UKF) @piecycle
+- Nauja naudotojo sąsaja: telefono programėlė perkurta su Jetpack Compose @MilosKozak
+- [Visuotinė paieška](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
+- Perėjimas prie Kotlin Multiplatform, klientas Windows, Mac, Linux kompiuteriams ir iOS @MilosKozak
+- [Scenarijai](../DailyLifeWithAaps/Scenes.md): išsaugokite veiksmų rinkinį ir paleiskite juos kartu @MilosKozak
+- [Pagrindinio įrenginio ↔ kliento valdymas](../RemoteFeatures/ClientMasterControl.md): komandų siuntimas iš kliento telefono į pagrindinį įrenginį @MilosKozak
+  - [Klientų vaidmenys](#client-master-control-roles): Tik peržiūra, Maistas, Prižiūrintis asmuo arba Administratorius kiekvienam klientui @MilosKozak
+  - [Sustiprintos apsaugos režimas](#client-master-control-hardened-mode): kai kliento valdymas įjungtas, pagrindinis įrenginys priima pakeitimus tik iš susietų klientų @MilosKozak
+  - Susiejimas QR kodu, kuris kliente kartu nustato ir Nightscout, arba PIN kodu; susiejimo slaptasis raktas pakeičiamas iškart po susiejimo @MilosKozak
+  - [Nuosavas Nightscout prieigos raktas](#client-master-control-own-token) kiekvienam klientui, tik su klientui reikalingomis teisėmis @MilosKozak
+- [Insulino koncentracijos](../AdvancedOptions/InsulinConcentration.md) (U200, U500) palaikymas pompose, vedlyje ir profiliuose @Philoul @MilosKozak
+- Insulino valdymas: insulinų katalogas, pavadinimai, pasirinkimas profilyje ir vedlyje @Philoul
+- Kalibravimo įskiepis @MilosKozak
+- [Glodinimas](../CompatibleCgms/SmoothingBloodGlucoseData.md): Unscented Kalman Filter (UKF) @piecycle
 - New [automation actions](#automations-automation-action): **Change smoothing** @olorinmaia, and **Run**, **Enable** or **Disable scene** @MilosKozak
-- [Site rotation](#Aapsscreens-site-rotation): track and rotate infusion sites @Philoul @MilosKozak
-- [Autotune](../AdvancedOptions/Autotune.md) rework @Philoul
-- New [widgets](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
-- Accessibility: the phone app works with a screen reader - named controls, spoken status, graph descriptions and headings to skim @MilosKozak
-- [Settings import](../Maintenance/ExportImportSettings.md): can keep the pump settings @MilosKozak
-- Persistent notification uses Android live updates, with Samsung Now bar support and the delta @premnirmal
-- BG graph: [press and hold](#aaps-screens-graph-press-and-hold) to see the values at a reading, on every graph of the overview @t1dude @olorinmaia
-- Performance improvements @MilosKozak
-- Automatic e-carbs in Bolus wizard @MilosKozak
+- [Vietų rotacija](#Aapsscreens-site-rotation): infuzijos vietų sekimas ir keitimas @Philoul @MilosKozak
+- [Autotune](../AdvancedOptions/Autotune.md) perdirbimas @Philoul
+- Nauji [valdikliai](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
+- Prieinamumas: telefono programėlė veikia su ekrano skaitytuvu – pavadinti valdymo elementai, įgarsinama būsena, grafikų aprašymai ir antraštės greitam peržvelgimui @MilosKozak
+- [Nustatymų importavimas](../Maintenance/ExportImportSettings.md): galima išlaikyti pompos nustatymus @MilosKozak
+- Nuolatinis pranešimas naudoja Android tiesioginius atnaujinimus (live updates), palaiko Samsung Now bar ir rodo pokytį @premnirmal
+- KG grafikas: [paspauskite ir palaikykite](#aaps-screens-graph-press-and-hold), kad pamatytumėte rodmens reikšmes, kiekviename pagrindinio ekrano grafike @t1dude @olorinmaia
+- Našumo patobulinimai @MilosKozak
+- Automatiniai i-AV boluso patarėjuje @MilosKozak
 
 **New devices**
 
-- **CareLevo**: new [pump driver](../CompatiblePumps/CareLevo.md) @Kisu-Choi @MilosKozak
-- **Dana-i2**: support @MilosKozak
-- **Instara**: new CGM source @leohunt
+- **CareLevo**: nauja [pompos tvarkyklė](../CompatiblePumps/CareLevo.md) @Kisu-Choi @MilosKozak
+- **Dana-i2**: palaikymas @MilosKozak
+- **Instara**: naujas NGJ šaltinis @leohunt
 
 **Pump Driver Improvements**
 
-- Pump overview screens rebuilt for Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn and Equil @MilosKozak
-- **Omnipod DASH**: PDM style Ref codes and readable fault descriptions, drift compensation always on, better bolus type reporting @nl-ruud
-- **Omnipod**: hard-end date for Dash & Eros @mcnelson
-- **DanaR, RS**: pump emulator for testing @MilosKozak
-- **Equil**: pump emulator for testing @MilosKozak
-- Many pump and loop fixes @MilosKozak and others
+- Perkurti pompų apžvalgos ekranai: Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn ir Equil @MilosKozak
+- **Omnipod DASH**: PDM stiliaus Ref kodai ir suprantami gedimų aprašymai, laiko dreifo kompensavimas visada įjungtas, geresnis boluso tipo rodymas @nl-ruud
+- **Omnipod**: Pod veikimo pabaigos data Dash ir Eros @mcnelson
+- **DanaR, RS**: pompos emuliatorius testavimui @MilosKozak
+- **Equil**: pompos emuliatorius testavimui @MilosKozak
+- Daug pompų ir ciklo pataisymų @MilosKozak ir kiti
 
 **Wear OS**
 
-- [Watch app](../WearOS/WearOsSmartwatch.md) rebuilt in Compose, new tiles and complications, automatic watch face install (Watch Face Push) on Wear OS 6+ @olorinmaia @Philoul
-- CustomWatchface available for WearOS 6.0 (GW7, GW8, GW9...) with a WFF dedicated watchface @Philoul @olorinmaia
-- CustomWatchface can now include 5 Complication slots you can customize (new feature only available for older watches) @Philoul
-- New [WFF watchface based on AAPS complications](#wearos-complications-watchface-setup) @olorinmaia
-- Corrections in Bolus wizard and Quick wizard result @olorinmaia
-- New BG graph and Running mode activity in main menu @olorinmaia
-- Bolus wizard: [meal type](#WearOsSmartwatch-wizard-meal-type) page that splits the carbs like the phone wizard, and [carb time](#WearOsSmartwatch-wizard-carb-time) with the *time to eat* reminder on the watch @olorinmaia
-- [Phone alarms on the watch](#WearOsSmartwatch-phone-alarms): the watch shows the alarm and offers Silence and Mute 5 min @olorinmaia
+- [Laikrodžio programėlė](../WearOS/WearOsSmartwatch.md) perkurta su Compose, naujos plytelės ir ekrano elementai, automatinis ciferblato įdiegimas (Watch Face Push) Wear OS 6+ @olorinmaia @Philoul
+- CustomWatchface pasiekiamas WearOS 6.0 (GW7, GW8, GW9...) su specialiu WFF ciferblatu @Philoul @olorinmaia
+- CustomWatchface dabar gali turėti 5 ekrano elementų vietas, kurias galite pritaikyti (nauja funkcija, pasiekiama tik senesniems laikrodžiams) @Philoul
+- Naujas [WFF ciferblatas, pagrįstas AAPS ekrano elementais](#wearos-complications-watchface-setup) @olorinmaia
+- Pataisymai boluso patarėjo ir greitojo vedlio rezultate @olorinmaia
+- Pagrindiniame meniu nauji KG grafiko ir veikimo režimo langai @olorinmaia
+- Boluso patarėjas: [maisto tipo](#WearOsSmartwatch-wizard-meal-type) puslapis, kuris paskirsto angliavandenius kaip telefono vedlys, ir [angliavandenių laikas](#WearOsSmartwatch-wizard-carb-time) su priminimu *laikas valgyti* laikrodyje @olorinmaia
+- [Telefono aliarmai laikrodyje](#WearOsSmartwatch-phone-alarms): laikrodis rodo aliarmą ir siūlo mygtukus Nutildyti ir Nutildyti 5 min. @olorinmaia
 
 **Build**
 
-- CI workflows for tag/branch builds, JDK version mapping @Angus-repo
+- CI darbo eigos (workflows) kūrimui pagal žymą / atšaką, JDK versijų susiejimas @Angus-repo
 
 **Contributors**
 
@@ -130,7 +130,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 ## Version 3.4.2.6
 
-- Equil: improve stability @MilosKozak
+- Equil: padidintas stabilumas @MilosKozak
 
 ---
 
@@ -188,7 +188,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 **Version 3.4.2.0**
 
-Release date: 02-04-2026
+Išleidimo data: 02-04-2026
 
 - Equil: Fix resistance for different models @hhfcvmars
 - Tidepool: Fix session @MilosKozak
@@ -201,7 +201,7 @@ Release date: 02-04-2026
 
 **Version 3.4.1.0**
 
-Release date: 08-03-2026
+Išleidimo data: 08-03-2026
 
 **Core**
 
@@ -212,8 +212,8 @@ Release date: 08-03-2026
 
 **Pump Driver Improvements**
 
-- **Omnipod DASH**: refactor BLE driver code to omnipod/common module @jwoglom
-- **Omnipod DASH**: try to fix connection state @MilosKozak
+- **Omnipod DASH**: BLE tvarkyklės kodas pertvarkytas ir perkeltas į omnipod/common modulį @jwoglom
+- **Omnipod DASH**: bandymas ištaisyti ryšio būseną @MilosKozak
 - **Omnipod**: validate profile before pod activation to prevent wasting pods (#4534) @brianV
 - **Medtronic**: fix same encoding type displayed in settings dialog @mifi100
 - **Medtronic**: prepare pump common classes (Tandem preparation) @andy-rozman
@@ -323,45 +323,45 @@ Release date: 31-12-2025
 
 (version3321)=
 
-## Version 3.3.2.1
+## Versija 3.3.2.1
 
-Release date: 13-08-2025
+Išleidimo data: 13-08-2025
 
-- Fixed Omnipod Bluetooth connection on Android 16
-- CI process (Browser build)
-- Fix mmol-mgdl conversion
-- Fix wrong time selection in dialogs in some timezones
-- Fix reading keys in simple mode
-- Fix missed predictions on wear
-- Improved ConfigBuilder
-- Improved NSCv3 full sync
+- Ištaisytas Omnipod Bluetooth ryšys Android 16
+- CI procesas (kūrimas naršyklėje)
+- Ištaisytas mmol-mgdl konvertavimas
+- Ištaisytas neteisingas laiko pasirinkimas languose kai kuriose laiko juostose
+- Ištaisytas raktų nuskaitymas paprastajame režime
+- Ištaisytos trūkstamos prognozės Wear
+- Patobulinta konfigūracija (ConfigBuilder)
+- Patobulintas NSCv3 visas sinchronizavimas
 
 ---
 
 (version3300)=
 
-**Version 3.3.2.0**
+**Versija 3.3.2.0**
 
-Release date: 27-03-2025
+Išleidimo data: 27-03-2025
 
-**How to upgrade**
+**Kaip atnaujinti**
 
-* [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
+* Šiai versijai sukurti reikia [Android Studio versijos „Meerkat“](#Building-APK-recommended-specification-of-computer-for-building-apk-file) arba naujesnės. Jei jau esate sukūrę 3.3.x versiją, turite dar kartą atnaujinti Android Studio.
 
 (version-enforcement)=
 
-**Starting this version, notification and version enforcement has been simplified and softened and works the following way:**
+**Nuo šios versijos pranešimai ir versijų privalomas atnaujinimas supaprastinti ir sušvelninti, jie veikia taip:**
 
-*  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
-*  After expiration LGS mode is enforced
-*  You'll receive warning/notifications less often:
-   - 28+ days remaining: every 7 days
-   - 27-14 days remaining: every 3 days
-   - then once a day
-   - Notification will be generated after noon to not bother you during nights
-* There are only 2 kinds of notification
-   - New version available (has no effect on AAPS)
-   - Application is expiring on some date in the future (still no effect on AAPS) / has expired (AAPS will turn into LGS mode)
+*  Galiojimas nesibaigia, kai įrenginys neprisijungęs (nėra interneto ryšio). Tai reiškia, kad 60 ir 90 dienų papildomo laiko nebėra.
+*  Pasibaigus galiojimui, privalomai įjungiamas LGS režimas
+*  Įspėjimus / pranešimus gausite rečiau:
+   - liko 28 ir daugiau dienų: kas 7 dienas
+   - liko 27–14 dienų: kas 3 dienas
+   - vėliau kartą per dieną
+   - Pranešimas sukuriamas po vidurdienio, kad netrukdytų naktį
+* Yra tik 2 pranešimų rūšys
+   - Yra nauja versija (AAPS veikimui įtakos neturi)
+   - Programos galiojimas baigsis tam tikrą dieną ateityje (AAPS veikimui vis dar įtakos neturi) / galiojimas baigėsi (AAPS persijungs į LGS režimą)
 
 **News**
 
@@ -409,7 +409,7 @@ Release date: 21-01-2025
 
 Release date: 15-01-2025
 
-**How to upgrade**
+**Kaip atnaujinti**
 
 * [Android Studio version called "Ladybug Feature Drop"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
 
@@ -469,7 +469,7 @@ Release date: 29-12-2024
 * New **Automation** triggers
 * Unattended settings exports
 
-**How to upgrade**
+**Kaip atnaujinti**
 
 * Before upgrading:
   * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
@@ -502,7 +502,7 @@ Release date: 29-12-2024
 
 * [Simple mode](#preferences-simple-mode) activated by default on fresh install @MilosKozak
 * New [QuickWizard](#Preferences-quick-wizard) options @radicalb
-  * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. You can now use the “carb time” field in QuickWizard to pre-bolus.
+  * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. Dabar Greitajame vedlyje galite naudoti lauką „Angliavandenių laikas“ išankstiniam bolusui.
 * New [graph scale menu](#aaps-screens-main-graph); [additional graphs menu](#AapsScreens-activate-optional-information) UI improvements @Philoul
 * [ConfigBuilder layout improvement](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
   * Sections are now collapsed by default. Use arrow to expand.
@@ -551,18 +551,18 @@ Release date: 29-12-2024
 
 (version3204)=
 
-## [Version 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
+## [Versija 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
 
-Release date: 27-02-2024
+Išleidimo data: 27-02-2024
 
-This version is the last one supporting Android 10. If you cannot upgrade to Android 11, [update AAPS to 3.2.0.4](#update-aaps-3204).
+Tai paskutinė versija, palaikanti Android 10. Jei negalite atnaujinti į Android 11, [atnaujinkite AAPS į 3.2.0.4](#update-aaps-3204).
 
-**Changes**
+**Pakeitimai**
 
-- xDrip G7 support
-- Medtrum fixes
-- Automation icon fix
-- Passing objective 1 fix
+- xDrip G7 palaikymas
+- Medtrum pataisymai
+- Automatizacijos piktogramos pataisymas
+- 1 mokymo etapo įvykdymo pataisymas
 
 ---
 
@@ -583,7 +583,7 @@ Release date: 23-10-2023
 - If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
 - In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
 
-**Changes**
+**Pakeitimai**
 
 - EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
 - ComboV2 pump driver (no need of Ruffy) @dv1
@@ -618,7 +618,7 @@ Release date: 23-10-2023
 
 v1 is the old protocol used for exchanging data between NS web site and NS server. It has many limitations
 - v1 sends only 2 days of data
-- v1 sends all 2 days of data on every reconnection
+- v1 kiekvieno prisijungimo iš naujo metu siunčia visus 2 dienų duomenis
 - using websockets is mandatory = permanent connection, more battery consumption
 - during frequent disconnects to NS connection is paused for 15 minutes to prevent high data usage
 
@@ -639,7 +639,7 @@ RECOMMENDED SETTING
 - because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
 - v3 is preferred because of efficiency
 - using websockets or not using with v3 depends on your preference
-- it is HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
+- LABAI rekomenduojama, kad visus duomenis rinktų AAPS ir siųstų juos į NS kaip vienintelis siuntėjas. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
 
 ---
 
@@ -649,7 +649,7 @@ RECOMMENDED SETTING
 
 Release date: 19-07-2022
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/3.1.0)
+[Versijų pastabos](https://github.com/nightscout/AndroidAPS/releases/tag/3.1.0)
 
 ---
 
@@ -657,7 +657,7 @@ Release date: 19-07-2022
 
 Release date: 31-01-2022
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/3.0.0)
+[Versijų pastabos](https://github.com/nightscout/AndroidAPS/releases/tag/3.0.0)
 
 ---
 
@@ -671,11 +671,11 @@ This version is the last one supporting Android 8. [Release notes](https://githu
 
 ---
 
-**Version 2.8.2**
+**Versija 2.8.2**
 
-Release date: 23-01-2021
+Išleidimo data: 23-01-2021
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2)
+[Versijų pastabos](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2)
 
 ---
 
@@ -685,7 +685,7 @@ Release date: 23-01-2021
 
 Release date: 12-01-2021
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.1.1)
+[Versijų pastabos](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.1.1)
 
 ---
 
@@ -695,7 +695,7 @@ Release date: 12-01-2021
 
 Release date: 01-01-2021
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
+[Versijų pastabos](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
 
 ---
 
@@ -705,7 +705,7 @@ Release date: 01-01-2021
 
 Release date: 24-09-2020
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
+[Versijų pastabos](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
 
 ---
 
@@ -715,7 +715,7 @@ Release date: 24-09-2020
 
 Release date: 04-05-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2614)
+[Versijų pastabos](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2614)
 
 ---
 
@@ -723,7 +723,7 @@ Release date: 04-05-2020
 
 Release date: 03-05-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2613)
+[Versijų pastabos](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2613)
 
 ---
 
@@ -731,7 +731,7 @@ Release date: 03-05-2020
 
 Release date: 19-04-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2612)
+[Versijų pastabos](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2612)
 
 ---
 
@@ -739,7 +739,7 @@ Release date: 19-04-2020
 
 Release date: 06-04-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2611)
+[Versijų pastabos](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2611)
 
 ---
 
@@ -747,7 +747,7 @@ Release date: 06-04-2020
 
 Release date: 21-03-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-261)
+[Versijų pastabos](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-261)
 
 ---
 
@@ -757,7 +757,7 @@ Release date: 21-03-2020
 
 Release date: 29-02-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260)
+[Versijų pastabos](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260)
 
 ---
 
@@ -765,7 +765,7 @@ Release date: 29-02-2020
 
 Release date: 31-10-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-251)
+[Versijų pastabos](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-251)
 
 ---
 
@@ -775,7 +775,7 @@ Release date: 31-10-2019
 
 Release date: 26-10-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250)
+[Versijų pastabos](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250)
 
 ---
 
@@ -783,7 +783,7 @@ Release date: 26-10-2019
 
 Release date: 25-04-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-23)
+[Versijų pastabos](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-23)
 
 ---
 
@@ -791,7 +791,7 @@ Release date: 25-04-2019
 
 Release date: 07-04-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-222)
+[Versijų pastabos](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-222)
 
 ---
 
@@ -799,7 +799,7 @@ Release date: 07-04-2019
 
 Release date: 29-03-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-22)
+[Versijų pastabos](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-22)
 
 ---
 
@@ -807,7 +807,7 @@ Release date: 29-03-2019
 
 Release date: 03-03-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-21)
+[Versijų pastabos](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-21)
 
 ---
 
@@ -815,18 +815,18 @@ Release date: 03-03-2019
 
 Release date: 03-11-2018
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-20)
+[Versijų pastabos](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-20)
 
 ---
 
-**Version 1.0**
+**Versija 1.0**
 
 ```{admonition} First version of **AAPS**
 :class: note
 
-The first test version started in 2015 and the first release was in 2016.
+Pirmoji bandomoji versija pradėta 2015 m., o pirmoji versija išleista 2016 m.
 
-The exact chronology of these releases is not available at the moment but as this question has been asked several times we document it here.
+Tikslios šių versijų chronologijos šiuo metu nėra, tačiau kadangi šis klausimas buvo užduotas ne kartą, pateikiame ją čia.
 
 ```
 ![AAPS 1.0](../images/update/AAPS1.0.png)

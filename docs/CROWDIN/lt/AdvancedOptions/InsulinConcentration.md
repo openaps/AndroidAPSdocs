@@ -1,217 +1,217 @@
 (Insulin-Concentration)=
-# Insulin Concentration
+# Insulino koncentracija
 
 ```{warning}
-All commercial pumps are designed to be used with Insulin U100 **ONLY**. Using another insulin concentration in a pump can be dangerous. Although more and more users run AAPS with other concentrations, the conversion must always be managed and often leads to errors (even for very skilled users!).
+Visos komercinės pompos sukurtos naudoti **TIK** su U100 insulinu. Kitos koncentracijos insulinas pompoje gali būti pavojingas. Nors vis daugiau naudotojų AAPS naudoja su kitomis koncentracijomis, perskaičiavimą visada reikia valdyti, ir jis dažnai sukelia klaidų (net labai patyrusiems naudotojams!).
 ```
 
-## Reminder of the basics of insulin
+## Insulino pagrindų priminimas
 
-This chapter covers the essential concepts of insulin measurement and delivery.
+Šiame skyriuje aprašytos pagrindinės insulino matavimo ir leidimo sąvokos.
 
-### The insulin unit: a measure of action
+### Insulino vienetas: veikimo matas
 
-Insulin is measured in **International Units (IU)**, which quantify its biological activity (power to lower blood sugar), not just its physical mass.
+Insulinas matuojamas **tarptautiniais vienetais (V)**. Jie rodo biologinį aktyvumą (gebėjimą mažinti gliukozę kraujyje), o ne tik fizinę masę.
 
-- **Definition:** 1 IU corresponds to the activity of a specific amount of insulin, standardized to **approximately 0.04167 mg**.
-- **Key Point:** A "unit" means the same biological effect across all insulin types, ensuring consistent dosing.
+- **Apibrėžimas:** 1 V atitinka tam tikro insulino kiekio aktyvumą, standartizuotą iki **maždaug 0,04167 mg**.
+- **Svarbu:** „vienetas“ reiškia tą patį biologinį poveikį visų tipų insulinui, todėl dozavimas yra vienodas.
 
-### Insulin concentrations
+### Insulino koncentracijos
 
-Insulin comes in different strengths, defined by the number of units per millilitre (ml).
+Insulinas būna skirtingo stiprumo. Stiprumą nusako vienetų skaičius viename mililitre (ml).
 
-- **U100:** The global standard, containing **100 IU/ml**.
-- **U200-U500:** More concentrated insulins (e.g. U200 has 200 IU/ml) for smaller injection volumes.
-- **U40/U50:** Less common, historical concentrations (40 IU/ml and 50 IU/ml). **U40 requires U40-specific syringes.**
-- **Manual Dilution:** A clinical practice to create highly diluted insulin (e.g. U50, U10) for rare cases like neonatal use or extreme sensitivity. This requires meticulous pharmacy preparation.
+- **U100:** pasaulinis standartas, turintis **100 V/ml**.
+- **U200–U500:** labiau koncentruoti insulinai (pvz., U200 turi 200 V/ml), kad būtų galima leisti mažesnį tūrį.
+- **U40/U50:** retesnės, istorinės koncentracijos (40 V/ml ir 50 V/ml). **U40 insulinui reikia specialių U40 švirkštų.**
+- **Skiedimas rankiniu būdu:** klinikinė praktika, kai gaminamas labai praskiestas insulinas (pvz., U50, U10) retiems atvejams, pavyzdžiui, naujagimiams arba esant labai dideliam jautrumui. Tam reikia labai kruopštaus paruošimo vaistinėje.
 
 ```{admonition} Critical Warning
 :class: danger
-Using a concentration with a non-matching device is extremely dangerous and can cause a severe overdose or underdose. **Always triple-check that the insulin concentration matches the syringe, pen, or pump specifications.**
+Koncentracijos naudojimas su jai netinkančiu prietaisu yra labai pavojingas ir gali sukelti didelį perdozavimą arba per mažą dozę. **Visada tris kartus patikrinkite, ar insulino koncentracija atitinka švirkšto, švirkštiklio arba pompos specifikaciją.**
 ```
 
-## When is a non-standard concentration used?
+## Kada naudojama nestandartinė koncentracija?
 
-While insulin pumps are designed for U100 insulin, certain specific medical situations require non-standard concentrations. These scenarios require extreme caution and meticulous management.
+Insulino pompos sukurtos U100 insulinui, tačiau kai kuriose medicininėse situacijose reikia nestandartinių koncentracijų. Šiais atvejais reikia ypatingo atsargumo ir labai kruopštaus valdymo.
 
-### Use Case 1: diluted insulin for very low doses
+### 1 atvejis: praskiestas insulinas labai mažoms dozėms
 
-- **Scenario:** Managing type 1 diabetes in very young babies and toddlers.
-- **Problem:** Their insulin needs are so low that the pump's minimum deliverable dose (e.g. 0.05 U) may still be too large, leading to difficulty in achieving precise glycemic control and a high risk of hypoglycemia.
-- **Solution:** Use highly diluted insulin (e.g. U10, which is 10 IU/ml).
-- **Effect:** This increases the volume of fluid delivered per unit of insulin. By making the "packages" of insulin larger in volume but weaker in concentration, it allows much finer adjustments and greater dosing accuracy with the pump's existing settings.
+- **Situacija:** 1 tipo diabeto gydymas labai mažiems kūdikiams ir vaikams.
+- **Problema:** jiems reikia tiek mažai insulino, kad mažiausia pompos leidžiama dozė (pvz., 0,05 V) vis tiek gali būti per didelė. Dėl to sunku tiksliai valdyti glikemiją ir yra didelė hipoglikemijos rizika.
+- **Sprendimas:** naudoti labai praskiestą insuliną (pvz., U10, t. y. 10 V/ml).
+- **Poveikis:** padidėja skysčio tūris, suleidžiamas vienam insulino vienetui. Kai insulino „porcijos“ yra didesnio tūrio, bet silpnesnės koncentracijos, su esamais pompos nustatymais galima daug smulkiau keisti dozes ir dozuoti tiksliau.
 
 ```{admonition} Critical Safety Note on Dilution
 :class: danger
-Insulin dilution is a high-risk procedure that must never be attempted at home without specific training and medical supervision. It must be performed by a healthcare professional or a trained caregiver using sterile diluent specifically designed for that insulin type. **Never use tap water, saline, or any other fluid**, as this can deactivate the insulin, alter its action, and introduce dangerous contaminants.
+Insulino skiedimas yra didelės rizikos procedūra. Niekada nebandykite to daryti namuose be specialaus mokymo ir gydytojo priežiūros. Tai turi atlikti sveikatos priežiūros specialistas arba apmokytas globėjas, naudodamas sterilų skiediklį, skirtą būtent tam insulino tipui. **Niekada nenaudokite vandentiekio vandens, fiziologinio tirpalo ar jokio kito skysčio**, nes jie gali sunaikinti insulino aktyvumą, pakeisti jo veikimą ir į jį patekti pavojingų teršalų.
 ```
 
-### Use Case 2: concentrated insulin for high insulin needs or significant insulin resistance
+### 2 atvejis: koncentruotas insulinas, kai reikia daug insulino arba yra didelis atsparumas insulinui
 
-- **Scenario:** Managing adults or adolescents with significant insulin resistance, or individuals who experience localized pain from the additives in standard insulin.
-- **Problem:**
-  1. **High Needs:** Very high daily insulin requirements can exceed the pump's maximum bolus or daily delivery limits.
-  1. **Pain:** The preservatives in insulin can cause stinging or irritation upon infusion.
-- **Solution:** Use a more concentrated insulin, such as U200 (200 IU/ml).
-- **Effect:** This delivers the required insulin dose in half the volume. For the user, the pump's internal settings must be adjusted (e.g. basal rates and boluses halved) to account for the doubled concentration, ensuring the correct number of units are delivered. This also reduces the volume of potentially irritating fluid delivered subcutaneously.
+- **Situacija:** suaugusieji ar paaugliai, turintys didelį atsparumą insulinui, arba žmonės, kuriems įprasto insulino priedai sukelia vietinį skausmą.
+- **Problema:**
+  1. **Didelis poreikis:** labai didelis paros insulino poreikis gali viršyti didžiausią pompos bolusą arba paros leidimo ribas.
+  1. **Skausmas:** insuline esantys konservantai leidžiant gali sukelti deginimą arba dirginimą.
+- **Sprendimas:** naudoti labiau koncentruotą insuliną, pvz., U200 (200 V/ml).
+- **Poveikis:** reikiama insulino dozė suleidžiama perpus mažesniu tūriu. Naudotojui reikia pakeisti vidinius pompos nustatymus (pvz., perpus sumažinti valandinę bazę ir bolusus), kad būtų atsižvelgta į dvigubą koncentraciją ir būtų suleistas teisingas vienetų skaičius. Taip pat sumažėja po oda suleidžiamo galimai dirginančio skysčio tūris.
 
-## How to manage insulin concentration with AAPS (AAPS 3 and earlier)?
+## Kaip valdyti insulino koncentraciją su AAPS (AAPS 3 ir senesnės versijos)?
 
-Using non-U100 insulin in an AAPS loop requires meticulous configuration to align the software's calculations with the actual insulin being delivered. One common method is "Using a Modified Profile".
+Jei AAPS cikle naudojate ne U100 insuliną, reikia labai kruopščiai viską nustatyti, kad programos skaičiavimai atitiktų tikrai suleidžiamą insuliną. Vienas dažnas būdas yra „modifikuoto profilio naudojimas“.
 
-### Using a modified profile
+### Modifikuoto profilio naudojimas
 
-This method involves tricking AAPS into thinking the patient's insulin needs are lower than they are, to compensate for the pump delivering more concentrated insulin than it is designed for. The use case below is for U200 concentration put into the pump, designed for U100.
+Šiuo būdu AAPS „apgaunama“, kad paciento insulino poreikis yra mažesnis, nei yra iš tikrųjų. Taip kompensuojama, kad pompa leidžia labiau koncentruotą insuliną, nei ji sukurta. Toliau aprašytas atvejis, kai U200 insulinas įpilamas į pompą, sukurtą U100 insulinui.
 
-- **The Core Problem:** A pump designed for U100 is calibrated to deliver **10 µL** for **1 unit**. If you fill it with U200 (1 unit of U200 corresponds to **5 µL** of insulin), when you select **1 unit** on the pump it delivers **10 µL** of insulin, but that volume now contains **2 units of U200 insulin**. This leads to a 100% overdose.
-- **The "Profile Switch 50%" Solution:** To correct this, the patient's entire therapy profile is scaled to be "twice as weak" inside AAPS.
-  1. The user creates a new profile based on their standard U100 profile, using the "Profile Switch **50%**" function.
-  1. This creates a new profile where:
-     - **Basal rates** are halved.
-     - **Insulin-to-Carb Ratio (IC)** is doubled (e.g. 1:10g becomes 1:20g).
-     - **Insulin Sensitivity Factor (ISF)** is doubled (e.g. 1 unit lowers BG by 50 mg/dL (2.8 mmol/L) becomes 1 unit lowers it by 100 mg/dL (5.6 mmol/L)).
-- **The Corrected Result:** AAPS now believes the patient only needs half the insulin. When it calculates and commands a **1-unit** bolus, the pump (designed for U100 but filled with U200) delivers the **10 µL**, which contains **2 real units of U200 insulin**. Because AAPS calculated this dose based on a "half-strength" profile, this **2 real-unit** delivery is the correct, intended dose. The loop's "half-strength" math aligns with the pump's "double-strength" delivery.
+- **Pagrindinė problema:** U100 pompa sukalibruota taip, kad **1 vienetui** suleistų **10 µl**. Jei į ją įpilsite U200 (1 U200 vienetas atitinka **5 µl** insulino), tai pompoje pasirinkus **1 vienetą**, ji suleis **10 µl** insulino, bet tame tūryje dabar yra **2 U200 insulino vienetai**. Tai reiškia 100 % perdozavimą.
+- **Sprendimas „Profilio keitimas 50 %“:** Kad tai būtų ištaisyta, visas paciento terapijos profilis AAPS viduje padaromas „dvigubai silpnesnis“.
+  1. Naudotojas sukuria naują profilį pagal savo įprastą U100 profilį, naudodamas funkciją „Profilio keitimas **50 %**“.
+  1. Sukuriamas naujas profilis, kuriame:
+     - **Valandinė bazė** sumažinama perpus.
+     - **Insulino ir angliavandenių santykis (IA)** padvigubinamas (pvz., 1:10 g tampa 1:20 g).
+     - **Jautrumo insulinui faktorius (JIF)** padvigubinamas (pvz., 1 vienetas, mažinantis KG 50 mg/dL (2,8 mmol/l), tampa 1 vienetu, mažinančiu KG 100 mg/dL (5,6 mmol/l)).
+- **Ištaisytas rezultatas:** Dabar AAPS mano, kad pacientui reikia tik pusės insulino. Kai AAPS apskaičiuoja ir nurodo suleisti **1 vieneto** bolusą, pompa (sukurta U100, bet užpildyta U200) suleidžia **10 µl**, kuriuose yra **2 tikri U200 insulino vienetai**. Kadangi AAPS šią dozę apskaičiavo pagal „perpus silpnesnį“ profilį, šie suleisti **2 tikri vienetai** yra teisinga, numatyta dozė. „Perpus silpnesni“ ciklo skaičiavimai atitinka „dvigubai stiprų“ pompos leidimą.
 
 ```{admonition} Critical Risks and Common Errors
 :class: caution
 
-This method introduces significant risks by creating a persistent disconnect between the app's data and physical reality.
+Šis būdas sukelia didelę riziką, nes programėlės duomenys nuolat neatitinka fizinės tikrovės.
 
-**The Primary Error: The "External Bolus" Mismatch**
+**Pagrindinė klaida: „išorinio boluso“ neatitikimas**
 
-The most common mistake occurs when delivering and logging insulin **outside** of the AAPS-pump system.
+Dažniausia klaida įvyksta, kai insulinas leidžiamas ir įrašomas **ne** per AAPS ir pompos sistemą.
 
-- **The Scenario:** AAPS, using the modified profile, calculates a **5-unit** bolus for a meal. The user injects this with a U200 pen.
-- **The Dual Error:**
-  1. **Wrong Dose Selection:** The user thinks "AAPS calculates 5 units" and, because of the U200 pen, expects to deliver **5 real units of U200** without any conversion. However, because the profile is halved, the body actually needs **10 real units**. This is a **50% underdose**, which can lead to hyperglycemia.
-  1. **Wrong Insulin-on-Board (IOB) Calculation (Overestimated IOB):** When the user records this external bolus in AAPS, they log **5 units**. This is incorrect. Since the AAPS profile is for U200, **1 unit in AAPS equals 2 real units**. Therefore, the 5 real units delivered by the pen should be logged as **2.5 units** in the app. By logging 5 units, the user overestimates the IOB by 100%. AAPS now thinks there are 5 "concentrated units" on board (equivalent to 10 real units) when only 5 real units are active. This can cause the loop to suppress basal insulin or reduce future boluses, worsening the hyperglycemia risk from the initial underdose.
+- **Situacija:** AAPS, naudodama modifikuotą profilį, valgiui apskaičiuoja **5 vienetų** bolusą. Naudotojas jį susileidžia U200 švirkštikliu.
+- **Dviguba klaida:**
+  1. **Neteisingai pasirinkta dozė:** naudotojas galvoja: „AAPS apskaičiavo 5 vienetus“, ir kadangi naudoja U200 švirkštiklį, tikisi suleisti **5 tikrus U200 vienetus** be jokio perskaičiavimo. Tačiau kadangi profilis sumažintas perpus, organizmui iš tikrųjų reikia **10 tikrų vienetų**. Tai yra **50 % per maža dozė**, kuri gali sukelti hiperglikemiją.
+  1. **Neteisingai apskaičiuotas aktyvus insulinas organizme (AIO) (pervertintas AIO):** įrašydamas šį išorinį bolusą į AAPS, naudotojas įrašo **5 vienetus**. Tai neteisinga. Kadangi AAPS profilis skirtas U200, **1 vienetas AAPS lygus 2 tikriems vienetams**. Todėl 5 tikri vienetai, suleisti švirkštikliu, programėlėje turėtų būti įrašyti kaip **2,5 vieneto**. Įrašęs 5 vienetus, naudotojas pervertina AIO 100 %. Dabar AAPS mano, kad organizme yra 5 „koncentruoti vienetai“ (tai atitinka 10 tikrų vienetų), nors veikia tik 5 tikri vienetai. Dėl to ciklas gali sustabdyti valandinę bazę arba sumažinti būsimus bolusus, ir hiperglikemijos rizika dėl pradinės per mažos dozės dar padidėja.
 
-**Other Risks:**
+**Kitos rizikos:**
 
-- **Misleading Data and Reports:** All data within AAPS or Nightscout - including IOB, total daily dose (TDD), and historical reports - is in "concentrated units". This gives a distorted picture to the user and their medical team. A doctor reviewing a report might see a TDD of 30 units and not realize the patient actually received 60 real units, leading to incorrect therapy assessments.
-- **Altered Mental Model:** After prolonged use, the user begins to "think" in the app's halved values. They internalize that their ISF is 100 mg/dL (5.6 mmol/L) or their basal is 0.5 U/hr, forgetting these are "concentrated". This creates a dangerous dependency on the system and a loss of touch with their actual insulin requirements, which is critical for safety during pump failures or app issues.
+- **Klaidinantys duomenys ir ataskaitos:** visi duomenys AAPS arba Nightscout, įskaitant AIO, bendrą paros dozę (BPD) ir istorines ataskaitas, yra „koncentruotais vienetais“. Tai naudotojui ir jo gydytojų komandai rodo iškreiptą vaizdą. Gydytojas, žiūrėdamas ataskaitą, gali matyti 30 vienetų BPD ir nesuprasti, kad pacientas iš tikrųjų gavo 60 tikrų vienetų. Dėl to terapija gali būti įvertinta neteisingai.
+- **Pasikeitęs mąstymas:** ilgiau naudodamas, naudotojas pradeda „mąstyti“ perpus sumažintomis programėlės reikšmėmis. Jis įpranta, kad jo JIF yra 100 mg/dL (5,6 mmol/l) arba valandinė bazė yra 0,5 V/val., ir pamiršta, kad tai „koncentruotos“ reikšmės. Tai sukuria pavojingą priklausomybę nuo sistemos ir prarandamas ryšys su tikruoju insulino poreikiu. Tai labai svarbu saugumui, kai sugenda pompa arba kyla problemų su programėle.
 
-**Conclusion:** This method requires absolute vigilance, forcing the user to constantly convert between a "concentrated world" in the app and the physical world. Any external insulin delivery or data review breaks this mental model and poses a severe risk. It fundamentally changes the meaning of every number in the system.
+**Išvada:** šis būdas reikalauja nuolatinio budrumo. Naudotojas turi nuolat perskaičiuoti reikšmes tarp „koncentruoto pasaulio“ programėlėje ir fizinio pasaulio. Bet koks išorinis insulino leidimas ar duomenų peržiūra sugriauna šį mąstymo modelį ir kelia didelę riziką. Iš esmės pasikeičia kiekvieno skaičiaus sistemoje reikšmė.
 ```
 
-## Using the concentration parameter (new feature in AAPS 4.0)
+## Koncentracijos parametro naudojimas (nauja funkcija AAPS 4.0 versijoje)
 
-To mitigate the risks of using a modified profile, a new feature manages insulin concentration directly within AAPS. This feature handles the conversions automatically, allowing the main application to always work in **Real International Units (IU)**.
+Kad modifikuoto profilio rizika būtų mažesnė, nauja funkcija insulino koncentraciją valdo tiesiogiai AAPS viduje. Ši funkcija perskaičiavimus atlieka automatiškai, todėl pagrindinė programėlė visada dirba **tikraisiais tarptautiniais vienetais (V)**.
 
-### How it works: automatic conversion
+### Kaip tai veikia: automatinis perskaičiavimas
 
-The core principle is a clear separation between the app's logic and the pump's communication:
+Pagrindinis principas – aiškiai atskirti programėlės logiką ir ryšį su pompa:
 
-- **AAPS Uses International Units:** The main AAPS database, algorithms, reports, and logs **always use Real IU**. This means your IOB, TDD, and therapy settings (basal, ISF, IC) reflect the actual biological insulin units.
-- **Pump Driver Uses Concentrated Units:** All values sent to or received from the pump driver are automatically converted to manage "Concentrated Units" within the pump driver, based on the selected concentration.
-  - **Example with U200:** When the user requests a **1 unit bolus**, the pump driver receives **0.5 CU (Concentrated Units)** before sending it to the pump. The pump (set for U100) then delivers **5 µL**, which contains **1 IU of U200 insulin**.
+- **AAPS naudoja tarptautinius vienetus:** pagrindinė AAPS duomenų bazė, algoritmai, ataskaitos ir žurnalai **visada naudoja tikruosius V**. Tai reiškia, kad jūsų AIO, BPD ir terapijos nustatymai (valandinė bazė, JIF, IA) atitinka tikruosius biologinius insulino vienetus.
+- **Pompos tvarkyklė naudoja koncentruotus vienetus:** visos reikšmės, siunčiamos į pompos tvarkyklę arba gaunamos iš jos, pagal pasirinktą koncentraciją automatiškai perskaičiuojamos į „koncentruotus vienetus“ pompos tvarkyklės viduje.
+  - **Pavyzdys su U200:** kai naudotojas prašo suleisti **1 vieneto bolusą**, pompos tvarkyklė, prieš siųsdama komandą į pompą, gauna **0,5 CU (koncentruoto vieneto)**. Tada pompa (nustatyta U100) suleidžia **5 µl**, kuriuose yra **1 V U200 insulino**.
 
-### Benefits and remaining risks
+### Privalumai ir likusios rizikos
 
-**Benefits:**
+**Privalumai:**
 
-- Eliminates the need for a modified profile and its associated mental conversion errors.
-- Users can always "think" in Real IU.
-- For an external bolus with a pen, just select the expected amount of insulin on the pen (whatever the pen and insulin concentration used). No conversion is needed, as pens U100 and U200 always use IU for unit selection.
-- All AAPS reports and data (TDD, IOB) are in Real IU, providing clarity for the user and their medical team.
-- Removes the risk of miscalculating external boluses, as they are logged in Real IU.
+- Nebereikia modifikuoto profilio ir su juo susijusių perskaičiavimo mintyse klaidų.
+- Naudotojai visada gali „mąstyti“ tikraisiais V.
+- Leisdami išorinį bolusą švirkštikliu, tiesiog pasirinkite švirkštiklyje norimą insulino kiekį (nesvarbu, koks švirkštiklis ir kokios koncentracijos insulinas naudojamas). Nieko perskaičiuoti nereikia, nes U100 ir U200 švirkštikliuose vienetai visada pasirenkami V.
+- Visos AAPS ataskaitos ir duomenys (BPD, AIO) pateikiami tikraisiais V, todėl jie aiškūs naudotojui ir jo gydytojų komandai.
+- Nebėra rizikos neteisingai apskaičiuoti išorinius bolusus, nes jie įrašomi tikraisiais V.
 
-**Remaining Risks:**
+**Likusios rizikos:**
 
-- **Mental Model Transition:** Users switching from the "modified profile" method must switch their profile back to the correct real profile (i.e. twice as strong if they come from U200), and need time to adjust their **mental model**. After being accustomed to "Concentrated" values in the app, they must re-learn to trust the **real, unhidden IU values** displayed everywhere. This period of adjustment carries a risk of misinterpretation.
-- **Manual Pump Bolus:** Using the pump's own bolus function (bypassing AAPS) results in a 100% overdose, as the pump delivers U200 insulin using U100 volume calculations.
-- **General Warning:** Using non-standard concentrations remains an advanced procedure with risks and is not officially recommended.
+- **Mąstymo pakeitimas:** naudotojai, pereinantys nuo „modifikuoto profilio“ būdo, turi grąžinti teisingą tikrąjį profilį (t. y. dvigubai stipresnį, jei anksčiau naudojo U200), ir jiems reikia laiko pakeisti savo **mąstymo modelį**. Pripratę prie „koncentruotų“ reikšmių programėlėje, jie turi iš naujo išmokti pasitikėti **tikrosiomis, nepaslėptomis V reikšmėmis**, rodomomis visur. Šiuo prisitaikymo laikotarpiu yra rizika reikšmes suprasti neteisingai.
+- **Bolusas rankiniu būdu pompoje:** naudojant pačios pompos boluso funkciją (apeinant AAPS), įvyksta 100 % perdozavimas, nes pompa U200 insuliną leidžia pagal U100 tūrio skaičiavimus.
+- **Bendras įspėjimas:** nestandartinių koncentracijų naudojimas tebėra pažengusiems skirta procedūra su rizika ir oficialiai nerekomenduojamas.
 
 ```{admonition} Never use the pump's own interface (tube pump users) to deliver a bolus manually
 :class: danger
-Stick a permanent note on your pump **"U200 Insulin"** as a reminder, to never forget it!
+Priklijuokite ant pompos nuolatinį užrašą **„U200 insulinas“**, kad niekada to nepamirštumėte!
 ```
 
-### User interface display
+### Rodymas naudotojo sąsajoje
 
-To provide clarity, the user interface shows both real and concentrated units where relevant. Note that the user interface remains unchanged if the current insulin is U100.
+Kad būtų aiškiau, naudotojo sąsaja, kur reikia, rodo ir tikruosius, ir koncentruotus vienetus. Jei dabartinis insulinas yra U100, naudotojo sąsaja nesikeičia.
 
-**Display Examples:**
+**Rodymo pavyzdžiai:**
 
-- **Bolus Progress Dialog:**
-  - The Bolus Progress dialog is within the core AAPS application, so only the information in IU is shown (consistent with the user selection): **`2.50 U / 10.00 U delivered`**
-- **Pump Driver Interface (Current Status):**
-  - Within the Pump overview, the delivered amount is shown in both units; for example, if `U200` is selected: **`Last Bolus: 10 U (5 CU) (10')`**
+- **Langas „Leidžiamas bolusas“:**
+  - Langas „Leidžiamas bolusas“ yra pagrindinės AAPS programėlės dalis, todėl jame rodoma tik informacija V (pagal naudotojo pasirinkimą): **`Suleista 2,50 V iš 10,00 V`**
+- **Pompos tvarkyklės sąsaja (dabartinė būsena):**
+  - Pompos apžvalgoje suleistas kiekis rodomas abiem vienetais; pavyzdžiui, jei pasirinktas `U200`: **`Paskutinis bolusas: 10 V (5 CU) (10')`**
 
-**Please Note:** Both units (U and CU) are only visible in the main Pump overview. Depending on your specific pump, you can have other screens where only the Concentrated Units are shown. Historical data within pump drivers will typically remain in "Concentrated Units".
+**Atkreipkite dėmesį:** abu vienetai (V ir CU) matomi tik pagrindinėje pompos apžvalgoje. Priklausomai nuo jūsų pompos, gali būti ir kitų ekranų, kuriuose rodomi tik koncentruoti vienetai. Istoriniai duomenys pompų tvarkyklėse paprastai lieka „koncentruotais vienetais“.
 
-### Enabling the feature
+### Funkcijos įjungimas
 
-Due to the inherent safety risks, this parameter is not enabled by default. To activate it, finish Objective 3 and enable **Insulin concentration support** within General Settings.
+Dėl su ja susijusios rizikos šis parametras pagal numatytuosius nustatymus neįjungtas. Norėdami jį įjungti, užbaikite 3 mokymo etapą ir bendruosiuose nustatymuose įjunkite **Skirtingų insulino koncentracijų palaikymas**.
 
-### Create a new insulin with another concentration
+### Naujo kitos koncentracijos insulino sukūrimas
 
-To create an insulin with another concentration, first open **Manage → Insulin settings**.
+Norėdami sukurti kitos koncentracijos insuliną, pirmiausia atverkite **Valdymas → Insulino nustatymai**.
 
-- Click the "+" icon at the bottom of the screen.
-- Select the new expected concentration from the dropdown menu (U10, U20, U50, U100, U200 are available).
-  - Diluted concentrations like U10, U20 or U50 are for children with very low basal rates.
-  - U200 is more for adults with high insulin needs.
+- Spustelėkite piktogramą „+“ ekrano apačioje.
+- Išskleidžiamajame meniu pasirinkite naują norimą koncentraciją (galimos U10, U20, U50, U100, U200).
+  - Praskiestos koncentracijos, tokios kaip U10, U20 arba U50, skirtos vaikams, kuriems reikia labai mažos valandinės bazės.
+  - U200 labiau skirtas suaugusiesiems, kuriems reikia daug insulino.
 
-  ![The concentration dropdown in Insulin settings](../images/v4/Insulin/insulin_concentration_dropdown.png)
+  ![Koncentracijos išskleidžiamasis meniu insulino nustatymuose](../images/v4/Insulin/insulin_concentration_dropdown.png)
 
-- Adjust peak time, Duration of Insulin Action (DIA), and customize the Insulin Nickname (optional).
-- Use the save button at the top right of the screen.
+- Nustatykite piko laiką, insulino veikimo trukmę (IVT) ir, jei norite, pakeiskite insulino pavadinimą.
+- Spustelėkite išsaugojimo mygtuką viršutiniame dešiniajame ekrano kampe.
 
-At this step the insulin has been created, but cannot be selected directly from **Insulin settings**.
+Šiame žingsnyje insulinas jau sukurtas, bet jo negalima pasirinkti tiesiai skiltyje **Insulino nustatymai**.
 
-### Switch concentration from U100 to Uxxx (AAPS 4)
+### Koncentracijos keitimas iš U100 į Uxxx (AAPS 4)
 
 ```{admonition} Switching concentration is only allowed during a reservoir or patch/pod change
 :class: warning
-For safety reasons, AAPS only records a concentration switch during a Reservoir Change or Patch/Pod Change.
+Saugumo sumetimais AAPS koncentracijos pakeitimą įrašo tik keičiant rezervuarą arba keičiant pompą (Patch/Pod).
 ```
 
-When you start from U100 insulin, all your profile, historical data and reports are consistent with the International Units standard, so the switch is very "easy":
+Jei pradedate nuo U100 insulino, visas jūsų profilis, istoriniai duomenys ir ataskaitos atitinka tarptautinių vienetų standartą, todėl pakeitimas yra labai „lengvas“:
 
-- For a Patch/Pod pump, you have a dedicated step when you change the pump, to select the insulin you put into it.
-- For a tube pump, click the Prime/Fill button (for Insulin Change) within the Overview (expanded status bar view), then click the "Change" button.
+- Naudojant pompą be vamzdelio (Patch/Pod), keičiant pompą yra atskiras žingsnis, kuriame pasirenkate į ją įpiltą insuliną.
+- Naudojant pompą su vamzdeliu, pagrindiniame ekrane (išskleistame būsenos juostos vaizde) spustelėkite mygtuką „Užpildymas“ (insulino keitimui), tada spustelėkite mygtuką „Keisti“.
 
-1. Select the target concentration in the dropdown menu (e.g. `U200`).
-1. Then select the right insulin below. Until you confirm, the caption above its name says **Will be activated** (instead of **Currently active**).
+1. Išskleidžiamajame meniu pasirinkite norimą koncentraciją (pvz., `U200`).
+1. Tada žemiau pasirinkite tinkamą insuliną. Kol nepatvirtinsite, virš jo pavadinimo rodomas užrašas **Bus aktyvuotas** (vietoj **Šiuo metu aktyvus**).
 
-   ![An insulin picked but not confirmed yet: Will be activated](../images/v4/Insulin/insulin_will_be_activated.png)
+   ![Pasirinktas, bet dar nepatvirtintas insulinas: Bus aktyvuotas](../images/v4/Insulin/insulin_will_be_activated.png)
 
-1. **Important:** the concentration switch is only recorded within AAPS after the Profile Switch is applied to the pump.
-   - This step is mandatory for all Patch/Pod pumps.
-   - For tube pumps, wait for the Profile Switch to be applied to the pump, or within **Manage → Profile** or **Insulin settings**.
+1. **Svarbu:** koncentracijos pakeitimas AAPS įrašomas tik tada, kai profilio keitimas pritaikomas pompoje.
+   - Šis žingsnis privalomas visoms pompoms be vamzdelio (Patch/Pod).
+   - Naudodami pompą su vamzdeliu, palaukite, kol profilio keitimas bus pritaikytas pompoje, arba tai padarykite skiltyje **Valdymas → Profilis** arba **Insulino nustatymai**.
 
-That's all!
+Tai viskas!
 
-If a temporary **Profile Switch** (one with a duration) is running when you change the insulin, the new insulin is also given to the profile that comes back when the temporary switch ends. The old insulin does not come back.
+Jei keičiant insuliną veikia laikinas **profilio keitimas** (su trukme), naujas insulinas priskiriamas ir profiliui, kuris grįš pasibaigus laikinam keitimui. Senas insulinas nebegrįžta.
 
-### Switch concentration for users with U200 insulin associated with a 50% profile (AAPS 4)
+### Koncentracijos keitimas naudotojams, kurie U200 insuliną naudoja su 50 % profiliu (AAPS 4)
 
-When you start from U200 already used in your pump, but associated with a 50% profile, you have to do additional steps compared to the standard switch from U100 insulin.
+Jei pompoje jau naudojate U200 insuliną su 50 % profiliu, palyginti su įprastu pakeitimu nuo U100 insulino, turite atlikti papildomus žingsnius.
 
-Keep in mind that the most difficult part will probably not be how to manage the switch correctly within AAPS, but rather to train your brain again to think "IU" instead of "CU". All standard values for boluses (breakfast, lunch, dinner...) will be twice as high, the same for your TDDs, basal rates, etc. You have to be very cautious not to make errors during the first several weeks, until you "think again" in International Units.
+Atminkite, kad sunkiausia greičiausiai bus ne teisingai atlikti pakeitimą AAPS, o iš naujo išmokyti savo smegenis mąstyti „V“, o ne „CU“. Visos įprastos bolusų reikšmės (pusryčiams, pietums, vakarienei...) bus dvigubai didesnės, taip pat ir jūsų BPD, valandinė bazė ir kt. Pirmąsias kelias savaites turite būti labai atsargūs, kad nepadarytumėte klaidų, kol vėl pradėsite „mąstyti“ tarptautiniais vienetais.
 
-- First, prepare a new profile with all values consistent with International Units:
-  - Do a temporary Profile Switch 200% of your standard running profile.
-  - Open the menu (☰) → **Treatments**, go to the **Profile switch** tab and clone the new 200% profile (see [Clone a Profile switch](#your-aaps-profile-clone-profile-switch)).
-  - Switch back to your standard profile until the next Reservoir or Patch change.
-  - Go to **Manage → Profile** and rename this new profile with an explicit name (it will be your future profile associated with U200 insulin set in AAPS 4).
-- If you use the Dynamic ISF (DynISF) feature, you have to disable it for at least one week:
-  - All your history recorded within AAPS or Nightscout is in the wrong units (CU), half the real value in International Units. Wait at least one week with the U200 insulin running before re-enabling it.
-- You are now ready to switch insulin (with a new U200 defined within **Insulin settings**) on the following Insulin Change or Pod Change.
-- Once the new U200 insulin is correctly applied, don't forget to apply the new standard profile defined in the first step.
+- Pirmiausia paruoškite naują profilį, kurio visos reikšmės atitinka tarptautinius vienetus:
+  - Atlikite laikiną profilio keitimą 200 % nuo savo įprasto veikiančio profilio.
+  - Atverkite meniu (☰) → **Terapija**, eikite į kortelę **Profilio keitimas** ir klonuokite naują 200 % profilį (žr. [Profilio keitimo klonavimas](#your-aaps-profile-clone-profile-switch)).
+  - Iki kito rezervuaro arba pompos (Patch) keitimo grįžkite prie savo įprasto profilio.
+  - Eikite į **Valdymas → Profilis** ir pervadinkite šį naują profilį aiškiu pavadinimu (tai bus jūsų būsimas profilis, susietas su U200 insulinu, nustatytu AAPS 4).
+- Jei naudojate funkciją Dinaminis JIF (DynISF), turite ją išjungti bent vienai savaitei:
+  - Visa jūsų AAPS arba Nightscout įrašyta istorija yra neteisingais vienetais (CU), t. y. perpus mažesnė už tikrąją reikšmę tarptautiniais vienetais. Prieš ją vėl įjungdami, bent vieną savaitę naudokite U200 insuliną.
+- Dabar esate pasiruošę kito insulino arba Pod keitimo metu pakeisti insuliną (su nauju U200, nustatytu skiltyje **Insulino nustatymai**).
+- Kai naujas U200 insulinas bus teisingai pritaikytas, nepamirškite pritaikyti naujo įprasto profilio, paruošto pirmame žingsnyje.
 
-## How to manage external boluses with different pens?
+## Kaip valdyti išorinius bolusus su skirtingais švirkštikliais?
 
-### With U200 insulin associated with a 50% profile (AAPS 3)
+### Su U200 insulinu ir 50 % profiliu (AAPS 3)
 
-Keep in mind that all pen graduations are in International Units, so whatever the pen used (U100, U200), if you use a pen for an external bolus you have to manage conversion in both directions:
+Atminkite, kad visų švirkštiklių padalos yra tarptautiniais vienetais, todėl nesvarbu, kokį švirkštiklį naudojate (U100, U200), leisdami išorinį bolusą švirkštikliu turite perskaičiuoti abiem kryptimis:
 
-- From AAPS to the pen: if the Calculator proposes a bolus, or if you have a specific quantity in mind, multiply by 2 when you select the amount on the pen, compared to the same bolus applied from AAPS.
-- From the pen to AAPS: if you selected an amount on the pen to give an external bolus, divide this amount by 2 to record the right quantity within AAPS (Insulin button, external bolus), to get the correct IOB calculation in CU (Concentrated Units).
+- Iš AAPS į švirkštiklį: jei skaičiuotuvas siūlo bolusą arba jūs galvojate apie tam tikrą kiekį, rinkdamiesi kiekį švirkštiklyje padauginkite jį iš 2, palyginti su tokiu pačiu bolusu, leidžiamu per AAPS.
+- Iš švirkštiklio į AAPS: jei švirkštiklyje pasirinkote kiekį išoriniam bolusui, padalykite jį iš 2 ir įrašykite teisingą kiekį AAPS (mygtukas „Insulinas“, išorinis bolusas), kad AIO būtų teisingai apskaičiuotas CU (koncentruotais vienetais).
 
-### With U200 insulin using the concentration management included in AAPS 4
+### Su U200 insulinu, naudojant AAPS 4 koncentracijos valdymą
 
-Things are much simpler with the internal management of concentration within AAPS: just select the expected amount on the pen (whatever the pen and corresponding insulin used), and record it within AAPS.
+Kai koncentraciją valdo pati AAPS, viskas daug paprasčiau: tiesiog pasirinkite švirkštiklyje norimą kiekį (nesvarbu, koks švirkštiklis ir koks insulinas naudojamas) ir įrašykite jį AAPS.
 
-- Within the Insulin button, if you select an external bolus, you can select any type of insulin defined within **Insulin settings** (mainly U100, U200 for pens). That way you get a very precise calculated IOB, even if the peak/DIA of the insulin used with the pen is very different from the peak/DIA used in the pump.
+- Jei mygtuke „Insulinas“ pasirenkate išorinį bolusą, galite pasirinkti bet kurį skiltyje **Insulino nustatymai** nustatytą insulino tipą (dažniausiai U100, U200 švirkštikliams). Taip gaunate labai tiksliai apskaičiuotą AIO, net jei švirkštiklyje naudojamo insulino pikas / IVT labai skiriasi nuo pompoje naudojamo insulino piko / IVT.

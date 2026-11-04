@@ -1,54 +1,54 @@
 (github-fork)=
 
-# Browser build – Step 1: Create your GitHub fork
+# Kūrimas naršyklėje – 1 žingsnis: Sukurkite savo GitHub fork
 
 ```{note}
-This is **Step 1** of the [Browser build](BrowserBuild.md).
+Tai puslapio [Kūrimas naršyklėje](BrowserBuild.md) **1 žingsnis**.
 ```
 
-You will need to store your personal Android Java Key and Google Drive information as secrets in GitHub (later in the process, we will explain how).
+Savo asmeninį Android Java raktą ir Google Drive duomenis turėsite išsaugoti GitHub kaip paslaptis (secrets) (kaip tai padaryti, paaiškinsime vėliau).
 
-Since this cannot be done inside the public repository of AndroidAPS, you need to make your personal copy of the source code (called a fork).
+Kadangi to negalima padaryti viešoje AndroidAPS saugykloje, turite susikurti asmeninę šaltinio kodo kopiją (ji vadinama fork).
 
-## GitHub account
+## GitHub paskyra
 
-You need to [create a GitHub account](https://github.com/signup) if you don't have one yet.  
-You can sign up with your email, or you can sign up with Google. Follow the registration and verification process.
+Jei dar neturite GitHub paskyros, turite [ją susikurti](https://github.com/signup).  
+Galite užsiregistruoti su savo el. pašto adresu arba su Google paskyra. Atlikite registracijos ir patvirtinimo veiksmus.
 
-When you have an account, [sign in to GitHub](https://github.com/login).
+Kai turėsite paskyrą, [prisijunkite prie GitHub](https://github.com/login).
 
-## Fork AndroidAPS
+## Sukurkite AndroidAPS fork
 
-Open the official AndroidAPS repository following [this link](https://github.com/nightscout/AndroidAPS).
+Atidarykite oficialią AndroidAPS saugyklą per [šią nuorodą](https://github.com/nightscout/AndroidAPS).
 
-Tap on the fork icon. This will create a copy inside your own account.
+Spauskite fork piktogramą. Taip jūsų paskyroje bus sukurta kopija.
 
 ![fork_aaps](../images/Building-the-App/CI/ForkAAPS.png)
 
-Scroll down the next screen and tap **Create Fork**.
+Kitame ekrane slinkite žemyn ir spauskite **Create Fork**.
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Note: you can **unselect** "Copy the master branch only" if you will want to build developer versions or customizations.*
+*Pastaba: jei norėsite kurti kūrėjų versijas ar savo pakeitimus, galite **nuimti žymę** „Copy the master branch only“.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-You cannot fork and you see this?<br/><br/>
+Negalite sukurti fork ir matote šį pranešimą?<br/><br/>
 **`No available destinations to fork this repository.`**<br/><br/>
 ![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)<br/><br/>
-This means you already have an existing fork of AndroidAPS.<br/>
-Make sure it's up to date and continue to Preparation Steps.
+Tai reiškia, kad jau turite AndroidAPS fork.<br/>
+Įsitikinkite, kad jis atnaujintas, ir tęskite paruošimo veiksmais.
 ```
 
 ```{warning}
-**Never delete your fork without having done a backup of your secrets!**
+**Niekada netrinkite savo fork, prieš tai nepasidarę savo slaptųjų reikšmių (secrets) atsarginės kopijos!**
 ```
 
-GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab open.
+Dabar GitHub rodo jūsų asmeninę AndroidAPS kopiją. Palikite šį naršyklės skirtuką atidarytą.
 
 ![forked_aaps](../images/Building-the-App/CI/ForkAAPS4.png)
 
 ----
 
-**Next: [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) →**
+**Toliau: [2 žingsnis – Sukurkite pasirašymo raktų saugyklą](BrowserBuildKeystore.md) →**

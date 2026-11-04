@@ -1,355 +1,355 @@
-# Your AAPS profile
+# Jūsų AAPS profilis
 
-Your **AAPS Profile** is a set of four key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates:
-* [glucose targets](#profile-glucose-targets),
-* [basal rates](#your-aaps-profile-basal-rates) (BR),
-* [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
-* [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR).
+Jūsų **AAPS profilis** – tai keturių pagrindinių parametrų rinkinys, kuris nustato, kaip **AAPS** turi tiekti insuliną pagal jutiklio gliukozės reikšmes. Tai pagrindiniai parametrai, kuriais remiasi **AAPS**. Atlikdami **mokymo etapus**, atrakinsite papildomus keičiamus parametrus (pvz., SMB nustatymus), bet šių funkcijų veikimas priklauso nuo to, ar teisingas jūsų pagrindinis **profilis**. **Profilį** sudaro:
+* [gliukozės tikslai](#profile-glucose-targets),
+* [valandinė bazė](#your-aaps-profile-basal-rates) (BR),
+* [jautrumo insulinui faktorius](#your-aaps-profile-insulin-sensitivity-factor) (JIF) ir
+* [insulino ir angliavandenių santykis](#your-aaps-profile-insulin-to-carbs-ratio) (IA).
 
 ```{admonition} Where did DIA go?
 :class: note
-The **duration of insulin action (DIA)** is no longer part of your **Profile**. It is set per insulin instead — see [Manage → Insulin settings](#Config-Builder-insulin-dia).
+**Insulino veikimo trukmė (IVT)** nebėra jūsų **profilio** dalis. Ji nustatoma kiekvienam insulinui atskirai – žr. [Valdymas → Insulino nustatymai](#Config-Builder-insulin-dia).
 ```
 
-As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change. Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your settings.
+Naudodami **AAPS** turėtumėte nuolat vertinti ir tikrinti, ar jūsų **profilio** nustatymai tikslūs. Rekomenduojama nustatymus derinti tokia tvarka, kokia jie čia pateikti. Prieš keisdami kitą nustatymą, pasistenkite tinkamai nustatyti pirmąjį. Keiskite mažais žingsniais, o ne viską iš karto. Po kiekvieno pakeitimo nepamirškite aktyvuoti naujo profilio. Reguliariai [darykite savo **profilio**](#YourAapsProfile_Profile-backup) nustatymų atsarginę kopiją, eksportuodami nustatymus.
 
-Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
+Jūsų **profilio** nustatymai veikia vienas kitą – gali būti „neteisingų“ nustatymų, kurie kartu gerai veikia vienomis aplinkybėmis, bet neveikia kitomis. Pavyzdžiui, kai per didelė valandinė bazė sutampa su per dideliu **IA**. Todėl kiekvieną nustatymą reikia vertinti atskirai ir patikrinti, ar jie gerai veikia kartu įvairiomis aplinkybėmis.
 
-You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances.
+Galite naudoti [Autotune](https://autotuneweb.azurewebsites.net/) kaip pagalbą, tačiau nesekite jo aklai: jis gali netikti jums arba ne visose situacijose.
 
 ```{admonition} Your diabetes may vary
 :class: note
-**Profiles** vary significantly from person-to-person.
+**Profiliai** labai skiriasi kiekvienam žmogui.
 
-For basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+Valandinės bazės (BR), jautrumo insulinui faktoriaus (JIF) ir insulino bei angliavandenių santykio (IA) absoliučios reikšmės ir insulino poreikio tendencijos labai skiriasi kiekvienam žmogui. Jos priklauso nuo jūsų organizmo, lyties, amžiaus, fizinio pasirengimo ir kt., taip pat nuo trumpalaikių veiksnių, pvz., ligos ar neseniai buvusio fizinio krūvio. Daugiau patarimų apie tai rasite Adam Brown knygoje [„Bright Spots and Landmines“](https://diatribe.org/bright-spots-and-landmines/) – ją verta perskaityti.
 
 ```
 
-The four last parameters (glucose targets, basal rates, insulin sensitivity factors and insulin-to-carb ratios) can be set to different values, changing hourly if required, over a 24-hour period.
+Paskutinius keturis parametrus (gliukozės tikslus, valandinę bazę, jautrumo insulinui faktorių ir insulino bei angliavandenių santykį) per 24 valandas galima nustatyti skirtingomis reikšmėmis, jei reikia – keičiant kas valandą.
 
-![Hourly change of basal](../images/MaxDailyBasal2.png)
+![Valandinės bazės keitimas kas valandą](../images/MaxDailyBasal2.png)
 
-Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
+Žemiau pateiktos **AAPS** ekrano kopijos su profilio _pavyzdžiu_. Atkreipkite dėmesį: žemiau pateiktame profilio pavyzdyje yra daug laiko taškų. Kai pradedate naudoti **AAPS**, jūsų profilis greičiausiai bus daug paprastesnis.
 
-![Example active profile](../images/Profile-Example-Active.png)
+![Aktyvaus profilio pavyzdys](../images/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
-## Glucose targets
+## Gliukozės tikslai
 
 ### Description
 
-Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
+Jūsų **KG tikslas** yra pagrindinė reikšmė, ir visi **AAPS** skaičiavimai remiasi ja. Jis skiriasi nuo tikslinio intervalo, kuriame paprastai stengiatės išlaikyti gliukozės reikšmes. Tikslas naudojamas **AAPS** skaičiavimuose: jei **AAPS** prognozuoja, kad jūsų **KG** bus už tikslinio intervalo ribų, ji imsis veiksmų, kad grąžintų jus į šį intervalą.
 
-The targets can be defined within those boundaries :
+Tikslus galima nustatyti šiose ribose:
 
-|         | _Low_ target           | _High_ target            |
-| ------- | ---------------------- | ------------------------ |
-| Minimum | 4.4 mmol/L or 80 mg/dL | 5 mmol/L or 90 mg/dL     |
-| Maximum | 10 mmol/L or 180 mg/dL | 11.1 mmol/L or 200 mg/dL |
+|                    | _Žemas_ tikslas          | _Aukštas_ tikslas          |
+| ------------------ | ------------------------ | -------------------------- |
+| Mažiausia reikšmė  | 4,4 mmol/l arba 80 mg/dL | 5 mmol/l arba 90 mg/dL     |
+| Didžiausia reikšmė | 10 mmol/l arba 180 mg/dL | 11,1 mmol/l arba 200 mg/dL |
 
 ### Impact
 
-If the target in your **Profile** is very wide (say, 3 or more mmol/L [50 mg/dL or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
+Jei tikslas jūsų **profilyje** labai platus (pvz., 3 mmol/l ar daugiau [50 mg/dL ar daugiau]), **AAPS** dažnai mažai ką darys. Taip yra todėl, kad prognozuojama **KG** dažnai būna kažkur šiame plačiame intervale, todėl **AAPS** retai nustato laikiną valandinę bazę.
 
-### How to set it
+### Kaip nustatyti
 
-The **figure below** shows an example of how the target can be set in an **AAPS** profile.
+**Žemiau esančiame paveiksle** parodyta, kaip galima nustatyti tikslą **AAPS** profilyje.
 
 ![Target](../images/Profile_Target.png)
 
-**BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+**KG** tikslai nustatomi pagal jūsų asmeninius pageidavimus ir poreikius. Pavyzdžiui, jei nerimaujate dėl hipoglikemijos naktį, nuo 21:00 iki 7:00 tikslą galite nustatyti šiek tiek aukštesnį – 117 mg/dL (6,5 mmol/l). Jei norite, kad prieš pusryčių bolusą ryte turėtumėte pakankamai aktyvaus insulino organizme (AIO), nuo 7:00 iki 8:00 galite nustatyti žemesnį tikslą – 81 mg/dL (4,5 mmol/l).
 
-When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+Naudojant [Atvirą ciklą](#KeyAapsFeatures-OpenLoop), ypač atliekant [pirmuosius mokymo etapus](../SettingUpAaps/CompletingTheObjectives.md), platus tikslinis intervalas gali būti geras pasirinkimas, kol mokotės, kaip veikia **AAPS**, ir derinate savo **profilį**.<br/> Naudojant [Uždarą ciklą](#KeyAapsFeatures-ClosedLoop) (nuo **[6 mokymo etapo](#objectives-objective6)**), rekomenduojama intervalą siaurinti, kol kiekvienam paros metui turėsite vieną tikslą (_Žemas_ tikslas = _Aukštas_ tikslas), kad **AAPS** greitai reaguotų į **KG** svyravimus.
 
 (your-aaps-profile-basal-rates)=
 
-## Basal rates
+## Valandinė bazė
 
 ### Description
 
-Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
+Jūsų bazinio insulino valandinė bazė (vienetai per valandą) suteikia foninį insuliną, kuris palaiko stabilią gliukozę, kai nevalgote ir nesportuojate.
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+Insulino pompa kas kelias minutes suleidžia nedidelius greito veikimo insulino kiekius, kad kepenys neišskirtų per daug gliukozės ir kad gliukozė patektų į kūno ląsteles. Bazinis insulinas paprastai sudaro 40–50 % jūsų bendros paros dozės (BPD), priklausomai nuo mitybos, ir paprastai kinta pagal cirkadinį ritmą: per 24 valandas insulino poreikis turi vieną piką ir vieną duobę. Daugiau informacijos rasite Gary Scheiner knygos [„Think like a Pancreas“](https://amzn.eu/d/iVU0RGe) 6 skyriuje – jis labai naudingas.
 
-Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimize your ISF and ICR.
+Dauguma 1 tipo diabeto mokytojų (ir žmonių, sergančių 1 tipo diabetu!) sutinka, kad pirmiausia reikia teisingai nustatyti valandinę bazę, o tik tada optimizuoti JIF ir IA.
 
 ### Impact
 
-Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
+Tiksli valandinė bazė leidžia pabusti su gliukoze intervale ir praleisti valgį arba valgyti anksčiau ar vėliau, gliukozei nepakylant per aukštai ir nenukrentant per žemai.
 
-Too high basal rate can lead to low BGs. And vice versa.
+Per didelė valandinė bazė gali sukelti žemą KG. Ir atvirkščiai.
 
-**AAPS** ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
+**AAPS** lygina viską su numatytąja valandine baze (ji yra atskaitos taškas). Jei valandinė bazė per didelė, „nulinė laikina bazė“ bus skaičiuojama kaip didesnis neigiamas AIO, nei turėtų būti. Dėl to **AAPS** vėliau suleis daugiau korekcijų, nei reikia, kad galiausiai AIO grįžtų į nulį.
 
-So, a basal rate too high will create low **BGs** both with the default rate, but also some hours hence as **AAPS** corrects to target.
+Taigi per didelė valandinė bazė sukels žemą **KG** ne tik su numatytąja baze, bet ir po kelių valandų, kai **AAPS** koreguos link tikslo.
 
-Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+Ir atvirkščiai: per maža valandinė bazė gali sukelti aukštą KG, ir nepavyks jos sumažinti iki tikslo.
 
-### How to set it
+### Kaip nustatyti
 
-The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
+**Žemiau esančiame paveiksle** parodyta, kaip galima nustatyti valandinę bazę **AAPS** profilyje.
 
-![Basal rates](../images/Profile_BasalRates.png)
+![Valandinė bazė](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
+Teisinga valandinė bazė nustatoma bandymų ir klaidų būdu, ir tai reikia daryti pasitarus su savo gydymo komanda.
 
-There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast over 3 different days for a period of 8 hours.
+Yra valandinės bazės tikrinimo būdų: paprastai stebima valandinė bazė ir insulino poreikis <u>protarpinio</u> badavimo metu per 24 valandas. Nors valandinę bazę reikia patikrinti visai parai, nerekomenduojama badauti 24 valandas iš eilės. Taip yra todėl, kad organizmas įjungia kompensavimo mechanizmus, pvz., hormonus. Rekomenduojamas būdas – 3 skirtingas dienas badauti po 8 valandas.
 
-The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
+Rekomenduojamas būdas – sustabdyti ciklą (saugumo sumetimais galite nustatyti AAPS į [**LGS**](#KeyAapsFeatures-LGS) režimą, kad išvengtumėte hipoglikemijos, kaip daroma atliekant [6 mokymo etapą](#objectives-objective6)). Tada bus naudojama jūsų įprasta profilio valandinė bazė. Stebėkite, kaip keičiasi jūsų **KG**: jei ji krenta, valandinė bazė per didelė. Ir atvirkščiai.<br/> Kitas būdas (gali būti sudėtingesnis) – palikti ciklą veikti ir stebėti, kaip keičiasi **AIO**. Jei **AIO** neigiamas, jūsų valandinė bazė per didelė. Ir atvirkščiai. Atminkite, kad šis būdas remiasi **JIF**, kad koreguotų **KG**, todėl jis pavyks tik tada, kai ir kiti parametrai nustatyti pakankamai gerai.<br/> Dar vienas būdas koreguoti valandinę bazę – stebėti ciklo veiksmus naktį, kai visi AAO jau pasisavinti. Šis būdas ypač naudingas vaikams, kai badauti sunku arba insulino poreikis dažnai keičiasi. [Dr. Saleh Adi iš Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) pateikia naudingų patarimų, kaip analizuoti naktines KG kreives, kad optimizuotumėte valandinę bazę.
 
-See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, analyzing patterns in closed loop.
+[Čia](../GettingHelp/ProfileTuning.md) rasite, kaip pakoreguoti valandinę bazę, analizuojant dėsningumus uždaro ciklo metu.
 
-When taking action on the result of your basal testing, changes in the **Profile** should be done 1 to 2 hours (depends on your insulin type) before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
+Keisdami **profilį** pagal valandinės bazės testo rezultatus, pakeitimus darykite 1–2 valandomis (priklauso nuo jūsų insulino tipo) anksčiau, nei KG pradeda kilti / kristi. Kartokite testą tiek kartų, kiek reikia, kol būsite tikri dėl savo **valandinės bazės** nustatymų.
 
 (your-aaps-profile-basal-not-compatible)=
-#### Message: "Basal rate is not compatible with the current pump"
+#### Pranešimas: „Valandinė bazė nesuderinama su šiuo metu naudojama pompa“
 
-Each pump has limits: a lowest and a highest basal rate it can deliver and, for some pumps (for example Dana, Accu-Chek Combo, Medtronic and Diaconn G8), basal rates that can only change on the full hour. **AAPS** checks your profile against the pump you use, **after** applying the percentage you choose.
+Kiekviena pompa turi ribas: mažiausią ir didžiausią valandinę bazę, kurią ji gali tiekti, o kai kurių pompų (pvz., Dana, Accu-Chek Combo, Medtronic ir Diaconn G8) valandinė bazė gali keistis tik pilnomis valandomis. **AAPS** tikrina jūsų profilį pagal naudojamą pompą **po to**, kai pritaiko jūsų pasirinktą procentą.
 
-If a basal rate is outside these limits, the **Activate** screen shows this message and the **Activate** button stays grey:
+Jei valandinė bazė viršija šias ribas, ekrane **Aktyvuoti** rodomas šis pranešimas, o mygtukas **Aktyvuoti** lieka pilkas:
 
-![Activate screen with the message "Basal rate is not compatible with the current pump"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
+![Ekranas Aktyvuoti su pranešimu "Valandinė bazė nesuderinama su šiuo metu naudojama pompa"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
 
-For example, with a basal rate of 0.10 U/h in the night and a profile percentage of 35 %, **AAPS** would have to deliver 0.035 U/h. This is less than a Dana pump can deliver (0.04 U/h).
+Pavyzdžiui, jei naktį valandinė bazė yra 0,10 V/val., o profilio procentas 35 %, **AAPS** turėtų tiekti 0,035 V/val. Tai mažiau, nei gali tiekti Dana pompa (0,04 V/val.).
 
-To solve it, either:
+Problemą išspręsite vienu iš būdų:
 
-* choose another percentage: a **higher** one if a basal rate becomes too low, a **lower** one if a basal rate becomes too high, or
-* [edit the profile](#your-aaps-profile-create-and-edit-profiles) and change the basal rate.
+* pasirinkite kitą procentą: **didesnį**, jei valandinė bazė tampa per maža, arba **mažesnį**, jei valandinė bazė tampa per didelė, arba
+* [redaguokite profilį](#your-aaps-profile-create-and-edit-profiles) ir pakeiskite valandinę bazę.
 
-The profile editor only lets you start basal rates on a full hour. A basal rate starting at e.g. 06:30 can only come from an older profile, for example after you change to a pump that does not support it.
+Profilio redaktoriuje valandinę bazę galima pradėti tik nuo pilnos valandos. Valandinė bazė, prasidedanti, pvz., 06:30, gali likti tik iš senesnio profilio, pavyzdžiui, kai pereinate prie pompos, kuri to nepalaiko.
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## Jautrumo insulinui faktorius (JIF)
 
 ### Description
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
+Jautrumo insulinui faktorius (kartais vadinamas korekcijos faktoriumi) parodo, kiek 1 insulino vienetas sumažins jūsų gliukozės kiekį kraujyje.
 
-**In mg/dL units:** If you have an **ISF** of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
+**mg/dL vienetais:** Jei jūsų **JIF** yra 40, kiekvienas insulino vienetas sumažins jūsų gliukozę maždaug 40 mg/dL (pavyzdžiui, gliukozė nukris nuo 140 mg/dL iki 100 mg/dL).
 
-**In mmol/L units:** If you have an **ISF** of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
+**mmol/l vienetais:** Jei jūsų **JIF** yra 1,5, kiekvienas insulino vienetas sumažins jūsų gliukozę maždaug 1,5 mmol/l (pavyzdžiui, nuo 8 mmol/l iki 6,5 mmol/l).
 
-From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dL) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+Iš šių pavyzdžių matyti, kad kuo _mažesnė_ **JIF** reikšmė, tuo mažiau esate jautrūs insulinui. Taigi, jei sumažinate JIF nuo 40 iki 35 (mg/dL) arba nuo 1,5 iki 1,3 (mmol/l), tai dažnai vadinama **JIF** stiprinimu. Ir atvirkščiai: padidinus **JIF** reikšmę nuo 40 iki 45 (mg/dL) arba nuo 1,5 iki 1,8 (mmol/l), **JIF** susilpninamas.
 
 ### Impact
 
-A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
+**Mažesnis / stipresnis JIF** (pvz., 40 vietoj 50) reiškia, kad vienas insulino vienetas sumažina jūsų **KG** mažiau. Dėl to ciklas koreguoja agresyviau / stipriau, suleisdamas **daugiau insulino**. Jei jūsų **JIF** per stiprus (maža reikšmė), gali būti žema **KG**.
 
-A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
+**Didesnis / silpnesnis JIF** (pvz., 45 vietoj 35) reiškia, kad vienas insulino vienetas sumažina jūsų **KG** daugiau. Dėl to ciklas koreguoja mažiau agresyviai / silpniau, suleisdamas **mažiau insulino**. Jei jūsų **JIF** per silpnas (didelė reikšmė), gali būti aukšta **KG**.
 
-**Example:**
-* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
-* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
-* If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
-* If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 units of insulin
+**Pavyzdys:**
+* **KG** yra 190 mg/dL (10,5 mmol/l), o tikslas 100 mg/dL (5,6 mmol/l).
+* Taigi reikia korekcijos `190 - 100 = 90 mg/dL` arba `10.5 - 5.6 = 4.9 mmol/L`
+* Jei `ISF = 30` -> `90 / 30 = 3` arba `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 V insulino
+* Jei `ISF = 45` -> `90 / 45 = 2` arba `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 V insulino
 
-An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
+Per mažas **JIF** (taigi agresyvesnis, tai nėra retas atvejis) gali sukelti „perkorekcijas“, nes **AAPS** apskaičiuoja, kad aukštai **KG** koreguoti reikia daugiau insulino, nei iš tikrųjų reikia. Dėl to KG gali svyruoti kaip „kalneliai“ (ypač badaujant), kaip parodyta paveiksle žemiau. Tokiu atveju **JIF** reikšmę reikia padidinti, kad **AAPS** būtų mažiau agresyvi. Tada **AAPS** leis mažesnes korekcines dozes ir nepersistengs koreguodama aukštą **KG**, dėl ko **KG** nukristų per žemai.
 
 ![ISF too low](../images/isf.jpg)
 
-Conversely, an **ISF** set too high can result in under-corrections, meaning your **BG** remains above target – particularly noticeable overnight.
+Ir atvirkščiai: per didelis **JIF** gali lemti per mažas korekcijas, t. y. jūsų **KG** lieka virš tikslo – tai ypač pastebima naktį.
 
-### How to set it
+### Kaip nustatyti
 
-See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
+**Žemiau esančiame paveiksle** parodyta, kaip galima nustatyti JIF reikšmes **AAPS** profilyje.
 
-![Profile ISF](../images/Profile_ISF.png)
+![Profilio JIF](../images/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+Paprastas pradinis būdas nustatyti dienos JIF – apskaičiuoti jį pagal bendrą paros dozę (BPD) taikant 1700 (94) taisyklę. Daugiau informacijos rasite Gary Scheiner knygos [„Think like a Pancreas“](https://amzn.eu/d/iVU0RGe) 7 skyriuje.
 
-| 1700 (if measuring in mg/dL) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dL) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                 |
+| 1700 (jei matuojate mg/dL) arba 94 (mmol/l) / BPD = apytikslis JIF.<br/><br/>Pavyzdys: BPD = 40 V<br/>Apytikslis JIF (mg/dL) = 1700/40 = 43<br/>Apytikslis JIF (mmol/l) = 94/40 = 2,4 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                               |
 
-Assuming your basal levels are correct, you can test this by suspending the loop, checking **IOB** is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+Jei jūsų valandinė bazė teisinga, tai galite patikrinti taip: sustabdykite ciklą, patikrinkite, ar **AIO** lygus nuliui, ir suvalgykite kelias gliukozės tabletes, kad pasiektumėte stabilų „aukštą“ lygį.
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+Tada susileiskite apskaičiuotą insulino kiekį (pagal dabartinį 1/JIF), kad pasiektumėte tikslinę KG.
 
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+Be careful as this is quite often set too low. Per maža reiškia, kad 1 V sumažins KG greičiau, nei tikėtasi.
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## Insulino ir angliavandenių santykis (IA)
 
 ### Description
 
-The **ICR** is a measure of how many grams of carbohydrate are covered by one unit of insulin.
+**IA** parodo, kiek gramų angliavandenių padengia vienas insulino vienetas.
 
-Some people also use **I:C** as an abbreviation instead of **ICR**, or talk about carb ratio : **CR**.
+Kartais vietoj **IA** sakoma **I:C** arba kalbama apie angliavandenių santykį (carb ratio) – **CR**.
 
-For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
+Pavyzdžiui, insulino ir angliavandenių santykis 1:10 reiškia, kad kiekvieniems 10 gramų suvalgytų angliavandenių reikia 1 V insulino. 25 g angliavandenių valgiui reikėtų 2,5 V insulino.
 
-If your **ICR** is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+Jei jūsų **IA** silpnesnis (didesnė reikšmė), pvz., 1:20, 10 g angliavandenių padengti užtektų tik 0,5 V insulino. 25 g angliavandenių valgiui reikėtų 25/20 = 1,25 V insulino.
 
-It is common to have different **ICR** at different times of day due to hormone levels and physical activity. Many people find they have their lowest/strongest **ICR** around breakfast time because they tend to be more insulin resistant. So, for example, one adult user's **ICR** could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller **ICR** then.
+Dažnai skirtingu paros metu **IA** būna skirtingas dėl hormonų lygio ir fizinio aktyvumo. Daugelio žmonių mažiausias / stipriausias **IA** būna pusryčių metu, nes tuo metu jie dažniausiai būna atsparesni insulinui. Taigi, pavyzdžiui, vieno suaugusio naudotojo **IA** galėtų būti 1:8 pusryčiams, 1:10 pietums ir 1:10 vakarienei. Tačiau šie dėsningumai nėra visuotiniai: kai kurie žmonės atsparesni insulinui vakarienės metu, ir tada jiems reikia stipresnio / mažesnio **IA**.
 
 > **PASTABA:**
 > 
-> Kai kuriose Europos šalyse duonos vienetai buvo naudojami nustatant, kiek insulino reikia maistui. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
+> Kai kuriose Europos šalyse duonos vienetai buvo naudojami nustatant, kiek insulino reikia maistui. Iš pradžių 1 duonos vienetas buvo lygus 12 g angliavandenių, vėliau kai kur pakeista į 10 g angliavandenių.
 > 
-> Pagal šį modelį angliavandenių kiekis buvo nustatomas fiksuotas, insulino kiekis buvo kintamas. ("Kiek insulino reikia padengti vienam duonos vienetui?")
+> Pagal šį modelį angliavandenių kiekis buvo nustatomas fiksuotas, insulino kiekis buvo kintamas. ("Kiek insulino reikia vienam duonos vienetui padengti?")
 > 
-> When using **ICR** the amount of insulin is fixed and the amount of carbs is variable. ("Kiek gramų angliavandenių padengia vienas vienetas insulino?")
+> Naudojant **IA**, insulino kiekis yra fiksuotas, o angliavandenių kiekis kinta. ("Kiek gramų angliavandenių padengia vienas vienetas insulino?")
 > 
-> Example:
+> Pavyzdys:
 > 
-> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> Duonos vieneto koeficientas (DV = 12 g angliavandenių): 2,4 V/DV -> Suvalgę vieną duonos vienetą, turite susileisti 2,4 V insulino.
 > 
-> Corresponding **ICR**: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
+> Atitinkamas **IA**: 12g / 2,4 V = 5,0 g/V -> vienu insulino vienetu galima padengti 5,0 g angliavandenių.
 > 
-> BU factor 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
+> DV koeficientas 2,4 V / 12g   ===>   IA = 12g / 2,4 V = 5,0 g/V
 > 
-> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Perskaičiavimo lentelės yra prieinamos internete, pvz., [čia](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Impact
 
-A **lower / stronger ICR** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’. If your IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
+**Mažesnis / stipresnis IA** reiškia mažiau maisto vienam vienetui, t. y. tam pačiam angliavandenių kiekiui gaunate daugiau insulino. Dar vadinamas „agresyvesniu“. Jei jūsų IA per stiprus, gaunate per daug insulino, ir tai gali sukelti žemą **KG**.
 
-A **higher / weaker ICR** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’. If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
+**Didesnis / silpnesnis IA** = daugiau maisto vienam vienetui, t. y. tam pačiam angliavandenių kiekiui gaunate mažiau insulino. Dar vadinamas „mažiau agresyviu“. Jei jūsų IA per silpnas, gaunate mažiau insulino, nei reikia, ir tai gali sukelti aukštą **KG**.
 
-### How to set it
+### Kaip nustatyti
 
-The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+**Žemiau esančiame paveiksle** parodytas naudotojo **IA** pavyzdys ir kaip jį galima nustatyti **AAPS profilyje**. Įvedant šias reikšmes įvedama paskutinė santykio dalis, todėl insulino ir angliavandenių santykis 1:3,5 įvedamas tiesiog kaip „3,5“.
 
-![Profile ICR](../images/Profile_ICR.png)
+![Profilio IA](../images/Profile_ICR.png)
 
-If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are your **ICR** is too weak (_i.e._ the number is too high and should be gradually lowered). Conversely, if your **BG** is lower than before food, **ICR** is too strong (_i.e._ the number is too small and should be gradually increased).
+Jei suvirškinus maistą ir **AIO** grįžus į nulį jūsų **KG** lieka aukštesnė nei prieš valgį, greičiausiai jūsų **IA** per silpnas (_t. y._ skaičius per didelis, ir jį reikia palaipsniui mažinti). Ir atvirkščiai: jei jūsų **KG** žemesnė nei prieš valgį, **IA** per stiprus (_t. y._ skaičius per mažas, ir jį reikia palaipsniui didinti).
 
-Assuming your basal rates are correct, you can test by checking if **IOB** is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food you normally eat at that time of day and count its carbs precisely.
+Jei jūsų valandinė bazė teisinga, galite patikrinti taip: įsitikinkite, kad **AIO** lygus nuliui ir esate tiksliniame intervale, suvalgykite tiksliai žinomą angliavandenių kiekį ir susileiskite apskaičiuotą insulino kiekį pagal dabartinį insulino ir angliavandenių santykį. Geriausia valgyti maistą, kurį paprastai valgote tuo paros metu, ir tiksliai suskaičiuoti jo angliavandenius.
 
-## Common questions related to the Profile
+## Dažni klausimai apie profilį
 
 ```{contents} Common questions related to the Profile
 :depth: 1
 :local: true
 ```
 
-### About the importance of getting your profile right
+### Kodėl svarbu teisingai nustatyti profilį
 
-**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+**Kodėl turėčiau stengtis teisingai nustatyti profilį? Ar ciklas negali to sutvarkyti pats?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimize poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+Hibridinis uždaras ciklas _gali_ bandyti koreguoti insulino tiekimą, kad sumažintų prastą glikemijos kontrolę, atsirandančią dėl neteisingų **profilio** reikšmių. Pavyzdžiui, ji gali tai padaryti sustabdydama insulino tiekimą, jei jums gresia hipoglikemija. Tačiau glikemiją galite valdyti daug geriau, jei jūsų **profilio** nustatymai jau yra kuo artimesni tam, ko reikia jūsų organizmui. Tai viena iš priežasčių, kodėl **AAPS** naudoja mokymo etapus, kad pereitumėte nuo gydymo pompa be ciklo prie hibridinio uždaro ciklo. Be to, kartais teks atjungti ciklą (jutiklio įšilimas, jutiklio gedimas _ir pan._), kartais net vidury nakties, ir tokiais atvejais norėsite, kad jūsų nustatymai būtų teisingi.
 
-If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (**BR**), insulin sensitivity factors (**ISF**) and insulin-to-carb ratios (**ICR**).
+Jei pradedate naudoti **AAPS** po kitos atviro ar uždaro ciklo pompos sistemos, jau maždaug žinosite, kokias reikšmes naudoti valandinei bazei (**BR**), jautrumo insulinui faktoriui (**JIF**) ir insulino bei angliavandenių santykiui (**IA**).
 
-If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+Jei pereinate nuo injekcijų (MDI) prie **AAPS**, pirmiausia verta perskaityti, kaip pereiti nuo MDI prie pompos, ir šį perėjimą atsargiai suplanuoti bei atlikti pasitarus su savo gydymo komanda. Labai naudingos knygos: John Walsh ir Ruth Roberts [„Pumping insulin“](https://amzn.eu/d/iaCsFa2) bei Gary Scheiner [„Think like a Pancreas“](https://amzn.eu/d/iVU0RGe).
 
 ### What causes high postprandial peaks in closed loop?
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your **BG** is falling to reach your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/> If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **ICR** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your **ICR** and an appropriate pre-bolus time with your endocrinologist.
+Pirmiausia patikrinkite savo valandinę bazę ir atlikite valandinės bazės testą be angliavandenių. Jei jis teisingas, o jūsų **KG** krenta iki tikslo tik visiškai pasisavinus angliavandenius, pabandykite **AAPS** kurį laiką prieš valgį nustatyti laikiną tikslą „Netrukus valgysiu“ arba su savo endokrinologu aptarkite tinkamą išankstinio boluso laiką. <br/> Jei jūsų **KG** po valgio per aukšta ir vis dar per aukšta visiškai pasisavinus angliavandenius, su savo endokrinologu apsvarstykite **IA** sumažinimą. Jei jūsų **KG** per aukšta, kol yra **AAO**, ir per žema visiškai pasisavinus angliavandenius, su savo endokrinologu apsvarstykite **IA** padidinimą ir tinkamą išankstinio boluso laiką.
 
-### I'm stuck high and the loop does not bring me down
-The possible reasons for **AAPS** not giving enough insulin are:
-* **ISF** is not strong enough
-* Basal rate might not be strong enough
-* A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
-* Automation has been set up and has overridden **AAPS**.
+### Mano KG užstrigo aukštai, ir ciklas jos nesumažina
+Galimos priežastys, kodėl **AAPS** suleidžia per mažai insulino:
+* **JIF** nepakankamai stiprus
+* Valandinė bazė gali būti nepakankamai stipri
+* Gali įsijungti saugos nustatymas, pvz., **maxIOB**. Arba, priklausomai nuo jūsų nustatymų, šiuo metu išjungtas **SMB**.
+* Nustatyta automatizacija, kuri pakeitė **AAPS** sprendimus.
 
-See also [Tweaking the AAPS Profile](../GettingHelp/ProfileTuning.md).
+Taip pat žr. [AAPS profilio derinimas](../GettingHelp/ProfileTuning.md).
 
-### I have negative IOB, is this an issue ?
-Negative **IOB** means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the **BG** starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
+### Mano AIO neigiamas – ar tai problema?
+Neigiamas **AIO** reiškia, kad absoliutus insulino kiekis (valandinė bazė + bolusai) jūsų organizme yra mažesnis už valandinę bazę. Dėl to **AAPS** suleis daugiau insulino, kai tik **KG** pradės kilti, nes laikys, kad insulino trūksta, ir vėliau tai gali sukelti žemą **KG**.
 
-Here are some reasons why you may have negative IOB, and what action to take:
-* a too strong basal: tweak your **Profile**
-* too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
-* DIA set too short on your insulin type, resulting in insulin stacking: tweak it in [Manage → Insulin settings](#Config-Builder-insulin-dia)
-* physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
+Štai kelios priežastys, kodėl AIO gali būti neigiamas, ir ką daryti:
+* per stipri valandinė bazė: pakoreguokite savo **profilį**
+* per didelis bolusas per ankstesnį valgį: pakoreguokite savo **profilį** arba patikrinkite, ar bolusą leidžiate tinkamu laiku.
+* Jūsų insulino tipui nustatyta per trumpa IVT, todėl insulinas kaupiasi: pakoreguokite ją [Valdymas → Insulino nustatymai](#Config-Builder-insulin-dia)
+* fizinis aktyvumas: kitą kartą sportuodami apsvarstykite mažesnį [profilio procentą](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md), kad atsižvelgtumėte į padidėjusį jautrumą.
 
-## Manage your Profiles
+## Profilių valdymas
 
 ```{contents} Operations that you can perform on your **Profiles** in **AAPS**
 :depth: 1
 :local: true
 ```
 (your-aaps-profile-create-and-edit-profiles)=
-### Create and edit Profiles
+### Profilių kūrimas ir redagavimas
 
-In **AAPS** v4 your profiles live on the **Manage** screen (bottom navigation) → **Profile**, shown as a swipeable card carousel with an action bar (**➕ Add**, **✏️ Edit**, **⧉ Clone**, **🗑️ Delete**, **▶ Activate**). For managing and activating a profile, see [Managing and activating profiles](#ProfileSwitch-manage-v4). Coming from **AAPS** v3, where profiles had their own tab? See [What changed in AAPS v4](#v4changes-manage).
+**AAPS** v4 versijoje jūsų profiliai yra ekrane **Valdymas** (apatinė navigacija) → **Profilis**. Jie rodomi kaip braukiamų kortelių karuselė su veiksmų juosta (**➕ Pridėti**, **✏️ Redaguoti**, **⧉ Klonuoti**, **🗑️ Ištrinti**, **▶ Aktyvuoti**). Kaip valdyti ir aktyvuoti profilį, žr. [Profilių valdymas ir aktyvavimas](#ProfileSwitch-manage-v4). Pereinate nuo **AAPS** v3, kur profiliai turėjo savo skirtuką? Žr. [Kas pasikeitė AAPS v4](#v4changes-manage).
 
-Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**, then fill in the four schedules using the tabs:
+Paspaudus **✏️ Redaguoti** atsidaro redaktorius. Nustatykite profilio **pavadinimą** ir **vienetus**, tada skirtukuose užpildykite keturis grafikus:
 
-- **IC** — insulin-to-carb ratio (g/U)
-- **ISF** — insulin sensitivity factor
-- **BAS** — basal rates
-- **TARG** — target range
+- **IA** — insulino ir angliavandenių santykis (g/V)
+- **JIF** — jautrumo insulinui faktorius
+- **BAZ** — valandinė bazė
+- **TIKSLAS** — tikslinis intervalas
 
-![The profile editor — IC / ISF / BAS / TARG tabs](../images/setup-wizard/Wizard-Profile-IC.png)
+![Profilio redaktorius – skirtukai IA / JIF / BAZ / TIKSLAS](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Each schedule is a list of **time blocks**: add a block, set its start time and value, then **Save**.
+Kiekvienas grafikas yra **laiko intervalų** sąrašas: pridėkite intervalą, nustatykite jo pradžios laiką ir reikšmę, tada paspauskite **Išsaugoti**.
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**: the card of the profile in use is marked **ACTIVE**, but the card selected on screen may be another one.
+Jei keičiate savo **profilį**, įsitikinkite, kad redaguojate tinkamą **profilį**: naudojamo profilio kortelė pažymėta **AKTYVUS**, bet ekrane pasirinkta kortelė gali būti kita.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
-### Build a Profile from scratch for a kid
+### Profilio vaikui kūrimas nuo nulio
 
-The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) may help you to create a profile for a child (up to 18 years).
+[Profilio pagalbininkas](#aaps-screens-profile-helper) (meniu ☰ → **Profilio pagalbininkas**) gali padėti sukurti profilį vaikui (iki 18 metų).
 
 **Important note:**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**Profilio pagalbininkas skirtas padėti jums rasti pradinį profilį vaikui. Nors jis pagrįstas dviejų skirtingų ligoninių duomenų rinkiniais, prieš naudodami naują profilį visada pasitarkite su savo gydymo komanda!**
 
 Profilio pagalbininkas siūlo dviejų skirtingų vaikų ligoninių duomenų rinkinius. Tai yra pagalba jums kuriant pradinį profilį jūsų vaikui (iki 18 metų).
 
-![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
+![Profilio pagalbininkas vaikams 1](../images/ProfileHelperKids1.png)
 
-1. Make sure you are on the **Profile 1** tab.
-2. In **Profile type**, make sure you have "Default profile" selected.
-3. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
-4. Change to the **Profile 2** tab.
-5. Press **Profile type** and select "DPV Default profile".
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
-7. Open the **Comparison** tab. Comparison of the two adjusted profiles will be displayed (see screenshot below).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
+1. Įsitikinkite, kad esate skirtuke **1 profilis**.
+2. Lauke **Profilio tipas** įsitikinkite, kad pasirinkta „Numatytasis profilis“.
+3. Pakoreguokite numatytąjį profilį (pagrįstą ligoninės duomenų rinkiniu): įveskite vaiko amžių ir BPD viso **arba** svorį.
+4. Pereikite į skirtuką **2 profilis**.
+5. Paspauskite **Profilio tipas** ir pasirinkite „DPV numatytasis profilis“.
+6. Pakoreguokite DPV numatytąjį profilį (pagrįstą kitos ligoninės duomenų rinkiniu): įveskite vaiko amžių, BPD viso ir valandinės bazės procentą. Atkreipkite dėmesį: DPV duomenų rinkinys pateikia tik **valandinę bazę**, todėl šio profilio IA ir JIF rodomi kaip nulis.
+7. Atidarykite skirtuką **Palyginimas**. Bus parodytas dviejų pakoreguotų profilių palyginimas (žr. ekrano kopiją žemiau).
+8. Jei norite pradėti derinti savo profilį pagal vieną iš šių pasiūlymų, palyginimo apačioje paspauskite mygtuką **Klonuoti**.
 
-![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
+![Profilio pagalbininkas vaikams 2](../images/ProfileHelperKids2.png)
 
-### Switch Profile
+### Profilio keitimas
 
-See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Žr. [Profilio keitimas ir profilio procentas](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 (your-aaps-profile-clone-profile-switch)=
-### Clone a Profile switch to a new Profile
+### Profilio keitimo klonavimas į naują profilį
 
 ![Profile Switch](../images/TreatmentsView4.png)
 
-The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **2**.
+[Terapijos istorijoje](#aaps-screens-treatments) rodomi visi ankstesni **profilio keitimai**. Skirtuke **Profilio keitimas** galite naudoti ankstesnį **profilio keitimą** kaip pagrindą naujam **profiliui** sukurti. Tokiu atveju laiko perstūmimas ir procentas bus pritaikyti naujam vietiniam profiliui. Paspauskite mygtuką **Klonuoti**, rodomą **2** eilutėje.
 
-You can now go to the [Profile screen](#your-aaps-profile-create-and-edit-profiles) (**Manage → Profile**) to edit the newly created Profile.
+Dabar galite eiti į [Profilio ekraną](#your-aaps-profile-create-and-edit-profiles) (**Valdymas → Profilis**) ir redaguoti naujai sukurtą profilį.
 
 (YourAapsProfile_Profile-backup)=
-### Profile backup
+### Profilio atsarginė kopija
 
-Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
+Kadangi **profiliai** yra pagrindinis jūsų ciklo sistemos nustatymas, jie labai svarbūs, ir tikrai nenorėsite jų prarasti.
 
-* Your **Profiles** are stored in the **AAPS** database.
-* When **NSClientV3** is set up (see [Synchronization](#SetupWizard-synchronization-with-the-reporting-server-and-more)), your **Profiles** are also uploaded to Nightscout automatically.
-* They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
+* Jūsų **profiliai** saugomi **AAPS** duomenų bazėje.
+* Kai nustatytas **NSClientV3** (žr. [Sinchronizacija](#SetupWizard-synchronization-with-the-reporting-server-and-more)), jūsų **profiliai** taip pat automatiškai įkeliami į Nightscout.
+* Jie taip pat įtraukiami į [eksportuotus nustatymus](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
 
-### Editing Profiles from Nightscout
+### Profilių redagavimas Nightscout
 
-If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The setting is called "**Receive profile store from NS**" and is part of the **Nightscout data acceptance** options (accepting data from Nightscout is turned off by default, see the [Client control step of the Setup Wizard](../SettingUpAaps/SetupWizard.md)); you can find it quickly with the **search bar** on the main screen. While client control is on, the setting is hidden and **AAPS** takes no profile changes from Nightscout ([hardened mode](#client-master-control-hardened-mode)); edit the profile on a paired client instead, or load it once with **Full sync**.
+Jei įjungta, **profilio** pakeitimus, padarytus tiesiogiai Nightscout, **AAPS** gali gauti. Nustatymas vadinasi „**Gauti profilius iš NS**“ ir yra **Nightscout duomenų priėmimas** parinkčių dalis (duomenų priėmimas iš Nightscout pagal numatymą išjungtas, žr. [Sąrankos vedlio žingsnį Kliento valdymas](../SettingUpAaps/SetupWizard.md)); jį greitai rasite pagrindinio ekrano **paieškos juostoje**. Kai įjungtas kliento valdymas, šis nustatymas paslėptas, ir **AAPS** nepriima jokių profilio pakeitimų iš Nightscout ([sustiprintos apsaugos režimas](#client-master-control-hardened-mode)). Vietoj to redaguokite profilį susietame kliente arba įkelkite jį vieną kartą su **Pilna sinchronizacija**.
 
-This can be helpful when about to make major changes to a more extensive **Profile**. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
+Tai gali būti naudinga, kai ketinate daryti didelius pakeitimus sudėtingesniame **profilyje**. Juos lengviau įvesti per žiniatinklio sąsają, _pvz._ rankiniu būdu nukopijuojant duomenis iš skaičiuoklės.
 
-To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Tačiau tam svarbu Nightscout redaktoriuje klonuoti visą **duomenų bazės įrašą**, kurį sudaro keli profiliai (mėlyna rodyklė ekrano kopijoje žemiau). Tada naujiems duomenų bazės įrašams priskiriama dabartinė data. Išsaugojus pakeistą / naują **profilį** galima aktyvuoti **AAPS** įprastu [profilio keitimu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Duomenų bazės įrašų klonavimas](../images/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
-### Compare two Profiles
+### Dviejų profilių palyginimas
 
-You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+Taip pat galite naudoti [Profilio pagalbininką](#aaps-screens-profile-helper) (meniu ☰ → **Profilio pagalbininkas**), kad palygintumėte du skirtingus profilius arba profilio keitimus (vieno iš jūsų profilių procentą, anksčiau naudotą [profilio keitime](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)).
 
-![Profile Helper 1](../images/ProfileHelper1.png)
+![Profilio pagalbininkas 1](../images/ProfileHelper1.png)
 
-1. Make sure you are on the **Profile 1** tab.
-2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
-3. Choose the **Profile** you want to compare from.
-4. Change to the **Profile 2** tab.
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
-6. Choose the **Profile Switch** you want to compare to.
-7. Open the **Comparison** tab. Comparison of the two profiles will be displayed (see screenshot below).
+1. Įsitikinkite, kad esate skirtuke **1 profilis**.
+2. Lauke **Profilio tipas** pasirinkite „Galimas profilis“, kad galėtumėte rinktis iš visų išsaugotų **profilių**.
+3. Pasirinkite **profilį**, kurį norite palyginti.
+4. Pereikite į skirtuką **2 profilis**.
+5. Lauke **Profilio tipas** pasirinkite „Profilio keitimas“, kad galėtumėte rinktis iš visų savo **profilio keitimų** istorijos.
+6. Pasirinkite **profilio keitimą**, su kuriuo norite palyginti.
+7. Atidarykite skirtuką **Palyginimas**. Bus parodytas dviejų profilių palyginimas (žr. ekrano kopiją žemiau).
 
-![Profile Helper 2](../images/ProfileHelper2.png)
+![Profilio pagalbininkas 2](../images/ProfileHelper2.png)

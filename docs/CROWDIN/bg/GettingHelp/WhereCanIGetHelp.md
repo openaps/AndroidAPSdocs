@@ -1,6 +1,6 @@
-# Where can I get help?
+# Къде мога да получа помощ?
 
-## I'm stuck; what should I do? Кого мога да попитам?
+## Заседнал съм. Какво да правя? Кого мога да попитам?
 
 Този проект се основава на доброволен труд. За всяка молба за помощ важат няколко правила, за да не се губи излишно времето на хората, които любезно помагат на другите:
 
@@ -58,7 +58,7 @@
 
 ### Полша
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): полска общност на AAPS и група за подкрепа при диабет
 
 ### Швеция
 

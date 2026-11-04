@@ -4,8 +4,8 @@
 
 ## Funktionalitäten bei der Nutzung mit AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Timezone and DST changes need no special action, as the pump does not use its own history.
+* Kommuniziert mit **AAPS** über das Bluetooth Deines Smartphones, ohne zusätzliches Kommunikationsgerät.
+* Zeitzonen- und Sommerzeitwechsel erfordern nichts Besonderes, da die Pumpe ihre eigene Historie nicht verwendet.
 
 ## Einrichtung
 
@@ -15,23 +15,23 @@
 ![DanaR](../images/danar1.png)
 
 * Gehe in der Pumpe zum Hauptmenü -> Einstellen -> Suchen
-* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Falls die Dana nicht angezeigt wird, starte das Handy neu und wechsle die Batterie der Dana. Wiederhole anschließend diesen Schritt.
+* Gehe in den Smartphone-Einstellungen zu Bluetooth, suche nach Geräten in der Nähe, wähle die Seriennummer Deiner DanaR und gib das Passwort ein (das Kopplungspasswort ist 0000). Falls die Dana nicht angezeigt wird, starte das Handy neu und wechsle die Batterie der Dana. Wiederhole anschließend diesen Schritt.
 
-* In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **Pump** and select the type of DanaR you have (**DanaR**, **DanaR Korean** or **DanaRv2**).
+* Öffne in **AAPS** oben links das **Menü** (☰), gehe zu **Konfiguration** > **Pumpe** und wähle Deinen DanaR-Typ aus (**DanaR**, **DanaR Korean** oder **DanaRv2**).
   
   ![Configuration > Pump with the DanaR plugins](../images/v4/Configuration/configuration_pump_list_1.png)
 
-* Open the pump screen: tap **Open plugin** on the DanaR card (or go to **Manage** > **Pump**).
+* Öffne den Pumpenbildschirm: Tippe auf der DanaR-Karte auf **Plugin öffnen** (oder gehe zu **Bearbeiten** > **Pumpe**).
 
-* Tap **Pairing**. On the pairing screen: 
-  * Enter your pump password under **Pump password** (default password is 1234).
-  * Under **Select paired device**, tap your DanaR serial number. If the list is empty, tap **Open Bluetooth settings** and pair the pump with your phone first (see the step above). When you come back to **AAPS**, the pump appears in the list. If it does not, tap the refresh icon.
-  * Tap **Pairing**. **AAPS** connects to the pump and checks the password.
-* To change the driver settings, tap **Settings** on the DanaR card in **Configuration** > **Pump**: 
-  * **Bolus speed** (DanaR and DanaRv2): change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
-  * **Use extended boluses for >200%** (DanaR and DanaR Korean): enable this if you want **AAPS** to allow a basal rate above 200%. Note this means you cannot loop with high TBRs while using extended boluses for food.
+* Tippe auf **Koppeln**. Auf dem Kopplungsbildschirm: 
+  * Gib unter **Pumpen-Passwort** das Passwort Deiner Pumpe ein (Standardpasswort ist 1234).
+  * Tippe unter **Gekoppeltes Gerät auswählen** auf die Seriennummer Deiner DanaR. Ist die Liste leer, tippe auf **Bluetooth-Einstellungen öffnen** und kopple zuerst die Pumpe mit Deinem Smartphone (siehe Schritt oben). Wenn Du zu **AAPS** zurückkehrst, erscheint die Pumpe in der Liste. Ist das nicht der Fall, tippe auf das Aktualisieren-Symbol.
+  * Tippe auf **Koppeln**. **AAPS** verbindet sich mit der Pumpe und prüft das Passwort.
+* Um die Treibereinstellungen zu ändern, tippe unter **Konfiguration** > **Pumpe** auf der DanaR-Karte auf **Einstellungen**: 
+  * **Bolusgeschwindigkeit** (DanaR und DanaRv2): Ändert die Standard-Bolusgeschwindigkeit (12 s/IE, 30 s/IE oder 60 s/IE).
+  * **Nutze den verzögerten Bolus für hohe TBR (>200%)** (DanaR und DanaR Korean): Aktiviere das, wenn **AAPS** eine Basalrate über 200 % erlauben soll. Das bedeutet aber, dass Du nicht mit hohen temporären Basalraten loopen kannst, während Du verzögerte Boli für Mahlzeiten nutzt.
 * Stelle auf der Pumpe die Basalschritte auf 0,01 IE/h.
-* Set bolus step on pump to 0.1 U. **AAPS** reads the bolus step from the pump and uses it for every bolus.
+* Stelle auf der Pumpe die Bolusschritte auf 0,1 IE. **AAPS** liest die Bolusschritte aus der Pumpe aus und verwendet sie für jeden Bolus.
 * Erlaube die Vewendung von verlängerten Boli auf der Pumpe
 
 ## Mit der Dana R Pumpe über Zeitzonen hinweg reisen
@@ -40,10 +40,10 @@ Für allgemeine Informationen zum Reisen über Zeitzonen hinweg siehe [Mit der P
 
 ## Wo ich Hilfe bekomme
 
-Development of the DanaR driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Der DanaR-Treiber wird von der Community **ehrenamtlich** entwickelt. Bevor Du um Hilfe bittest, bitte:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Lies** den entsprechenden Abschnitt dieser Dokumentation, um zu prüfen, wie die Funktion gedacht ist.
+2. **Frag** im Kanal *#AAPS* auf [Discord](https://discord.gg/4fQUWHZ4Mw) oder in einem der anderen [Community-Kanäle](../GettingHelp/WhereCanIGetHelp.md) nach.
+3. **Melde einen Fehler**, indem Du die [bestehenden Issues](https://github.com/nightscout/AndroidAPS/issues) durchsuchst; ist Deiner nicht dabei, eröffne ein [neues Issue](https://github.com/nightscout/AndroidAPS/issues) und hänge Deine [Logdateien](../GettingHelp/AccessingLogFiles.md) an.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Gib bei der Bitte um Hilfe Hersteller und Modell Deines Smartphones, die Android-Version, die **AAPS**-Version und eine verständliche Beschreibung des Problems an (was sich geändert hat, wann es zuletzt funktioniert hat).

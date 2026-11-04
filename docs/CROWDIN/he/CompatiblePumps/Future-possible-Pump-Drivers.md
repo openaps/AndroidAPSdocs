@@ -1,24 +1,24 @@
-# Future (possible) Pump Drivers
+# מנהלי התקן עתידיים (אפשריים) למשאבות
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+זוהי רשימה של כמה משאבות שקיימות בשוק, מצב התמיכה בהן במערכות לולאה אחרות, ומצב התמיכה בהן ב-AAPS. בסוף מופיע מידע על מה שמשאבה צריכה כדי להתאים לשימוש בלולאה ("Loop capable").
 
-    {contents} Table of contents
+    {contents} תוכן העניינים
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## משאבות בשלב השילוב ב-AAPS
 
-**Coming soon:** drivers for these pumps are in development and already running in test builds.
+**בקרוב:** מנהלי ההתקן למשאבות אלה נמצאים בפיתוח וכבר פועלים בגרסאות ניסיון.
 
-Omnipod 5 ([Homepage](https://www.omnipod.com/))
+Omnipod 5 ([דף הבית](https://www.omnipod.com/))
 
-![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+![מנהל ההתקן ל-Omnipod 5 בפיתוח](../images/future-pumps/omnipod5-driver.png)
 
-Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+Tandem: t:Mobi ([דף הבית](https://www.tandemdiabetes.com/))
 
-![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
+![מנהל ההתקן ל-Tandem t:Mobi בפיתוח](../images/future-pumps/tandem-mobi-driver.png)
 
-## Pumps that are Loopable
+## משאבות שמתאימות ללולאה
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
@@ -26,35 +26,35 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
-### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:slim X3 ([דף הבית](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+**מצב התמיכה בלולאה:** אולי מועמדת לשימוש בלולאה בעתיד. התקווה היא ש-t:slim X3 תאפשר שליטה מלאה מהטלפון, מה שיאפשר תמיכה ב-AAPS, אך לוח הזמנים והתכונות עדיין לא ידועים.
 
-**Hardware requirement for AAPS:** None. It is expected to be Bluetooth enabled.
+**Hardware requirement for AAPS:** None. צפוי שתתמוך ב-Bluetooth.
 
-**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+**הערות:** עדיין לא יצאה לשוק. נראה ש-Tandem דוחה שוב ושוב את t:slim X3 בתוכניות שלה, לטובת t:Mobi (כולל גרסה ללא צינורית) ו-Sigi (משאבת הפאץ' שלה).
 
-### Twiist ([Homepage](https://www.twiist.com/))
+### Twiist ([דף הבית](https://www.twiist.com/))
 
-**Loop status:** Loop candidate.
+**מצב התמיכה בלולאה:** מועמדת לשימוש בלולאה.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Hardware requirement for AAPS:** None. היא תומכת ב-Bluetooth.
 
 ### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+**מצב התמיכה בלולאה:** כרגע אינה מועמדת לשימוש בלולאה, אך צוות החברה פנה אלינו והוא מעוניין להתאים את המשאבה לשימוש בלולאה (נראה שחסרות רק פקודות קריאה והגדרה של פרופיל).
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
 **Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
-### Ypsopump ([Homepage](https://www.ypsomed.com/))
+### Ypsopump ([דף הבית](https://www.ypsomed.com/))
 
-**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+**מצב התמיכה בלולאה:** מועמדת לשימוש בלולאה. הקהילה פענחה את פרוטוקול ה-Bluetooth של המשאבה (reverse engineering), כך שתקשורת איתה אפשרית עקרונית.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Hardware requirement for AAPS:** None. היא תומכת ב-Bluetooth.
 
-**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
+**הערות:** ה-Ypsopump מגנה על תקשורת ה-Bluetooth שלה בהצפנה כבדה של צד שלישי. העבודה איתה דורשת ידע טכני רב, ולכן קשה לבנות מנהל התקן אמין ולתחזק אותו. עדיין אין מנהל התקן AAPS שמוכן לשימוש יומיומי.
 
 ## Pumps no longer sold (companies no longer operating)
 
@@ -68,7 +68,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 **Comments:** End of support March 2025.
 
-## Pumps that aren't Loopable
+## משאבות שלא מתאימות ללולאה
 
 ### Medtronic Bluetooth
 
@@ -76,7 +76,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**הערות:** פרוטוקול ה-Bluetooth של Tandem פוענח, אבל ב-t:slim X2 אפשר לתת רק בולוסים — אי אפשר לשלוט במתן הבזאלי — ולכן אי אפשר להשתמש בה בבטחה בלולאה. זה כנראה לא ישתנה, אלא אם Tandem תאפשר שליטה מלאה ב-X2 מהטלפון, ויותר סביר שזה יגיע דווקא עם t:slim X3.
 
 ### Accu-Chek Solo
 
@@ -89,7 +89,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 - Pump has to support some kind of remote control. (BT, Radio frequency, etc)
 - Protocol is hacked/documented/etc.
 
-**Minimal requirement**
+**דרישות מינימום**
 
 - Set Temporary Basal Rate
 - Get Status
@@ -108,7 +108,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 **Other (not required but good to have)**
 
-- Set Extended Bolus
+- הגדרת בולוס ממושך
 - Cancel Extended Bolus
 - Read History
 - Read TDD

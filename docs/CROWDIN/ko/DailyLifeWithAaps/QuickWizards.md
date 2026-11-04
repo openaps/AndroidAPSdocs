@@ -1,7 +1,7 @@
 (quickwizards)=
-# QuickWizards (one-tap boluses)
+# 빠른 마법사 (한 번 탭으로 볼러스)
 
-A **QuickWizard** is a saved one-tap button for a recurring meal or situation. It carries a fixed amount of **carbs** (and how to dose for them), so you can deliver a bolus — or just log carbs — with a single tap and a confirmation, instead of opening the full bolus calculator every time.
+**빠른 마법사**는 자주 먹는 식사나 자주 있는 상황을 위해 저장해 둔 한 번 탭 버튼입니다. 이 버튼에는 정해진 양의 **탄수화물**(그리고 그에 맞는 주입 방법)이 들어 있습니다. 그래서 매번 전체 볼러스 계산기를 열지 않고, 한 번 탭하고 확인만 하면 볼러스를 주입하거나 탄수화물만 기록할 수 있습니다.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,96 +10,96 @@ A **QuickWizard** is a saved one-tap button for a recurring meal or situation. I
 
 ---
 
-## Opening QuickWizards
+## 빠른 마법사 열기
 
-Open the **Manage** screen (bottom navigation) and choose **QuickWizard** (*“Manage quick wizard presets”*).
-
----
-
-## Managing QuickWizards
-
-Your QuickWizards are shown as a **swipeable card carousel** (each card shows the button text, carbs and valid time range). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
-
-![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
-
-The editor's main fields are:
-
-- **Button text** — the label shown on the button.
-- **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#quickwizard_validity).
-- **Calculator Options** and **Device Selection** — see below.
+**관리** 화면(하단 내비게이션)을 열고 **빠른 마법사**(*“빠른 마법사 프리셋 관리”*)를 선택하십시오.
 
 ---
 
-## The three modes
+## 빠른 마법사 관리
 
-The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
+빠른 마법사는 **밀어서 넘기는 카드 캐러셀**로 표시됩니다(각 카드에는 버튼 텍스트, 탄수화물, 유효 시간 범위가 표시됩니다). 아래의 편집기는 **선택한** 빠른 마법사를 설정합니다. 하단 동작 표시줄에는 **➕ 추가**, **⧉ 복사**, **🗑️ 삭제** 버튼과 선택한 빠른 마법사를 실행하는 **▶** 버튼이 있습니다.
 
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
-- **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
-- **Carbs** — records the configured **carbs only**, with **no bolus**.
+![빠른 마법사 편집기 — 모드, 탄수화물, 탄수화물 시간, 유효 시간 범위](../images/v4/QuickWizard/quickwizard_editor.png)
 
----
+편집기의 주요 항목은 다음과 같습니다:
 
-## Calculator Options (Wizard mode)
-
-For a **Wizard**-mode button you choose which inputs the calculation uses:
-
-- **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
-- **Bolus percentage** — scale the calculated bolus.
-- **Add eCarbs** — also schedule extended carbs.
-
-![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
+- **버튼 텍스트** — 버튼에 표시되는 이름입니다.
+- **탄수화물**과 **탄수화물 시간** — 탄수화물 양과 그 시간 차이입니다.
+- **유효 시간 범위** — [유효 시간](#quickwizard_validity)을 참조하십시오.
+- **계산기 옵션**과 **장치 선택** — 아래를 참조하십시오.
 
 ---
 
-## Validity — when the button appears
+## 세 가지 모드
 
-(quickwizard_validity)= The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet and from the [QuickLaunch toolbar](QuickLaunch.md). A toolbar button is not deleted: it comes back when the window opens again.
+편집기 맨 위의 선택기 — **마법사 / 인슐린 / 탄수화물** — 는 버튼을 탭했을 때 **버튼이 하는 일**을 정합니다:
 
-When the valid time range is shorter than 4 hours, the button is also hidden for 30 minutes after you use it, so that the same meal is not entered twice by mistake.
+- **마법사** — 설정된 탄수화물에 대해 전체 **볼러스 계산기**를 실행합니다. 이때 현재 **혈당, IOB, COB, 추세**를 사용합니다(아래 *계산기 옵션*에 따라). *계산된* 볼러스를 주입하고 탄수화물을 기록합니다. 이것이 기존의 빠른 마법사입니다.
+- **인슐린** — 직접 설정한 **정해진 인슐린 양**을 주입합니다. 계산은 하지 않습니다.
+- **탄수화물** — 설정된 **탄수화물만** 기록하고 **볼러스는 주입하지 않습니다**.
 
 ---
 
-## Invocation points — where you use it
+## 계산기 옵션 (마법사 모드)
 
-The **Device Selection** toggles decide where each QuickWizard appears:
+**마법사** 모드 버튼에서는 계산에 어떤 입력값을 사용할지 선택합니다:
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). A QuickWizard shown on the phone can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
+- **혈당 사용**, **COB 사용**, **IOB 사용**(*양수 IOB만* 포함), **추세 사용**(*전체 / 양수만 / 음수만*), **임시 목표 사용**, **알람 사용**.
+- **볼러스 비율** — 계산된 볼러스의 크기를 조정합니다.
+- **eCarbs 추가** — 확장 탄수화물도 함께 예약합니다.
+
+![계산기 옵션, 볼러스 비율, 장치 선택](../images/v4/QuickWizard/quickwizard_options.png)
+
+---
+
+## 유효 시간 — 버튼이 표시되는 시간
+
+(quickwizard_validity)= **유효 시간 범위**(*시작 / 종료*)는 빠른 마법사가 **언제** 표시되고 사용될 수 있는지 정합니다. 예를 들어 **06:00–10:00**으로 설정한 버튼은 아침에만 표시됩니다. 그래서 *아침 식사* 빠른 마법사가 저녁 식사 때 화면을 복잡하게 하거나 실수로 눌리지 않습니다. 이 시간 범위 밖에서는 버튼이 **처치** 시트와 [QuickLaunch 툴바](QuickLaunch.md)에서 숨겨집니다. 툴바 버튼은 삭제되지 않습니다. 시간 범위가 다시 시작되면 다시 나타납니다.
+
+유효 시간 범위가 4시간보다 짧으면, 버튼을 사용한 후 30분 동안도 버튼이 숨겨집니다. 같은 식사를 실수로 두 번 입력하지 않도록 하기 위해서입니다.
+
+---
+
+## 사용하는 곳
+
+**장치 선택** 스위치로 각 빠른 마법사가 어디에 표시될지 정합니다:
+
+- **휴대폰에 표시** — **[처치](../Maintenance/V4Changes.md) 시트**에 표시됩니다(계산된 양이 버튼에 바로 표시됩니다). 휴대폰에 표시되는 빠른 마법사는 **개요 화면에 빠른 동작 버튼으로 고정**할 수도 있습니다. *QuickLaunch 설정*([QuickLaunch](QuickLaunch.md) 툴바의 ⚙)을 열고 **빠른 마법사** 범주에서 추가하십시오.
+- **워치에 표시** — **Wear OS 빠른 마법사 타일**에 표시됩니다(워치의 타일 캐러셀에서 이 타일로 밀어 이동한 다음 버튼을 탭하여 실행합니다. [장면 타일](#scenes-from-watch)과 같은 방식입니다).
 
 ```{admonition} Don't see Device Selection?
 :class: note
-The **Device Selection** section only appears in the editor when the **Wear** plugin is enabled and its **Wear control** preference is on. Without it, every QuickWizard simply shows on the phone.
+**장치 선택** 항목은 **워치** 플러그인이 활성화되어 있고 **워치 제어** 설정이 켜져 있을 때만 편집기에 표시됩니다. 그렇지 않으면 모든 빠른 마법사가 휴대폰에만 표시됩니다.
 ```
 
-On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
+휴대폰에서는 빠른 마법사가 **처치** 하단 시트의 맨 위에 표시됩니다:
 
-![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
+![열린 처치 하단 시트의 빠른 마법사(맨 위)](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…and as a quick-action button on the overview:
+…그리고 개요 화면의 빠른 동작 버튼으로도 표시됩니다:
 
-![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
+![개요 화면의 빠른 마법사 빠른 동작 버튼](../images/v4/QuickWizard/quickwizard_overview.png)
 
-![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
+![Wear OS 워치의 빠른 마법사 타일](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
+페어링된 **클라이언트**(**AAPSClient**)도 빠른 마법사를 실행할 수 있습니다. 이때 **마스터**가 계산하고 주입합니다([마스터 ↔ 클라이언트 제어](../RemoteFeatures/ClientMasterControl.md) 참조).
 
-Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** (the master-authored confirmation, when triggered from a client or watch) before anything is delivered.
+어디에서 실행하든 빠른 마법사를 탭하면 주입하기 전에 항상 **확인** 화면이 표시됩니다(클라이언트나 워치에서 실행한 경우에는 마스터가 만든 확인 화면).
 
-A QuickWizard is refused when its dose is above your max bolus, or when its carbs or eCarbs are above your max carbs (for example after you lowered the limit). When the carbs are above the limit, the button in the **Treatments** sheet is disabled. Edit the QuickWizard or the limit.
+주입량이 최대 볼러스보다 많거나, 탄수화물 또는 eCarbs가 최대 탄수화물보다 많으면(예를 들어 한도를 낮춘 후) 빠른 마법사는 거부됩니다. 탄수화물이 한도보다 많으면 **처치** 시트의 버튼이 비활성화됩니다. 빠른 마법사나 한도를 수정하십시오.
 
 ---
 
-## Adding and removing
+## 추가와 삭제
 
-- **➕ Add** — create a new QuickWizard.
-- **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **➕ 추가** — 새 빠른 마법사를 만듭니다.
+- **⧉ 복사** — 기존 빠른 마법사를 복제하여 시작점으로 사용합니다.
+- **🗑️ 삭제** — 빠른 마법사를 삭제합니다.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+빠른 마법사가 두 개 이상이면 캐러셀에서 순서를 바꿀 수도 있습니다. 상단 표시줄의 **순서 변경** 아이콘(⇅)을 탭하고, **◀ / ▶ 이동 버튼**으로 가운데 카드를 옮긴 다음 **✓**로 확인하십시오. (조작 방법은 [프로파일 순서 변경](ProfileSwitch-ProfilePercentage.md)과 같습니다.)
 
-QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
+빠른 마법사는 동기화되는 구성의 일부이므로 마스터와 페어링된 클라이언트에서 함께 사용됩니다.
 
 ---
 

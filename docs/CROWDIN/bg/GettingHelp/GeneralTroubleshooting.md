@@ -39,7 +39,7 @@
 * [Профил: „Базалът не се поддържа от помпата“](#your-aaps-profile-basal-not-compatible)
 * [Помпа: „Данните идват от различна помпа“](#config-builder-wrong-pump-data)
 * [Nightscout Client](TroubleshootingNsClient.md)
-* **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
+* **„Настройките на AAPS не могат да бъдат прочетени“** при стартиране: настройките са шифровани с ключ, който Android пази за **AAPS**, и този ключ вече не може да ги отвори, например след нулиране на хранилището за ключове на телефона. Докато се показва този екран, **AAPS** не работи и не управлява помпата. Докоснете **Отново**: това затваря **AAPS** и го стартира пак. Ако това не помогне, рестартирайте телефона. Използвайте **Започни отначало** само ако нищо друго не помага: това оставя настрана нечетимия файл с настройки (той се преименува и се запазва) и стартира **AAPS** с празни настройки. След това импортирайте последния си [експорт на настройките](../Maintenance/ExportImportSettings.md).
 
 ### Употреба
 

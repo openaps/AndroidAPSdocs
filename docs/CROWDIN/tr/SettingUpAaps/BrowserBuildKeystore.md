@@ -1,82 +1,82 @@
 (aaps-ci-preparation)=
 
-# Browser build – Step 2: Create your signing keystore
+# Tarayıcı ile oluşturma – Adım 2: İmzalama anahtar deponuzu oluşturun
 
 ```{note}
-This is **Step 2** of the [Browser build](BrowserBuild.md). First complete [Step 1 – Create your GitHub fork](BrowserBuildFork.md).
+Bu, [Tarayıcı ile oluşturma](BrowserBuild.md) sürecinin **2. adımıdır**. Önce [Adım 1 – GitHub fork'unuzu oluşturun](BrowserBuildFork.md) sayfasını tamamlayın.
 ```
 
-AAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. This is the most important decision of the whole process, because it determines whether you will be able to **upgrade** AAPS later without reinstalling.
+AAPS, bir **Java KeyStore (JKS)** içinde saklanan özel anahtarlarla imzalanmalıdır. Bu, tüm sürecin en önemli kararıdır, çünkü AAPS'i daha sonra yeniden yüklemeden **güncelleyip** güncelleyemeyeceğinizi belirler.
 
 ```{note}
-In the next steps you will store private information (your keystore, and later your Google Drive access) inside GitHub as **secrets**. A secret is simply an encrypted value that only your own build can read – nobody else, not even people looking at your fork, can see it. This is what keeps your build yours.
+Sonraki adımlarda özel bilgilerinizi (anahtar deponuzu ve daha sonra Google Drive erişiminizi) GitHub içinde **secret** (gizli değer) olarak saklayacaksınız. Secret, yalnızca sizin oluşturmanızın okuyabildiği şifrelenmiş bir değerdir. Başka hiç kimse, fork'unuza bakan kişiler bile, onu göremez. Oluşturmanızın size ait kalmasını sağlayan budur.
 ```
 
-## Choose your keystore strategy
+## Anahtar deposu yönteminizi seçin
 
-Read both options and pick the one that matches your situation.
+İki seçeneği de okuyun ve durumunuza uyanı seçin.
 
-### Option 1 – Generate a new keystore (new users)
+### Seçenek 1 – Yeni bir anahtar deposu oluşturun (yeni kullanıcılar)
 
-Choose this if **any** of these is true:
+Aşağıdakilerden **herhangi biri** doğruysa bunu seçin:
 
-- This is your **first time** building AAPS.
-- You don't have a keystore from a previous Android Studio (computer) build.
-- You have forgotten your keystore password or alias.
+- AAPS'i **ilk kez** oluşturuyorsunuz.
+- Daha önce Android Studio ile (bilgisayarda) yapılmış bir oluşturmadan kalan bir anahtar deponuz yok.
+- Anahtar deposu parolanızı veya takma adınızı (alias) unuttunuz.
 
 ```{warning}
-Building AAPS with **Option 1** creates a brand-new keystore, so it **will not allow you to upgrade your existing AAPS** in place. To move to this new build you must export your settings, uninstall the old AAPS, install the new one and import your settings again. Follow the steps in [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+AAPS'i **Seçenek 1** ile oluşturmak yepyeni bir anahtar deposu oluşturur. Bu yüzden **mevcut AAPS'inizi yerinde güncellemenize izin vermez**. Bu yeni oluşturmaya geçmek için ayarlarınızı dışa aktarmanız, eski AAPS'i kaldırmanız, yenisini yüklemeniz ve ayarlarınızı yeniden içe aktarmanız gerekir. [Yeni bir anahtar deposuyla AAPS'i yeniden yükleme](#reinstall-aaps) bölümündeki adımları izleyin.
 ```
 
-**→ [Continue with Option 1 – Generate a new keystore](BrowserBuildO1.md)**
+**→ [Seçenek 1 ile devam edin – Yeni bir anahtar deposu oluşturun](BrowserBuildO1.md)**
 
-### Option 2 – Upload your existing keystore (existing / past users)
+### Seçenek 2 – Mevcut anahtar deponuzu yükleyin (mevcut / önceki kullanıcılar)
 
-Choose this if you **already have** the `.jks` keystore you used on a previous build of AAPS from a computer in Android Studio, **and** you know its password and alias (usually `key0`).
+Daha önce bilgisayarda Android Studio ile yaptığınız bir AAPS oluşturmasında kullandığınız `.jks` anahtar deposu **zaten elinizdeyse** **ve** parolasını ve takma adını (genellikle `key0`) biliyorsanız bunu seçin.
 
-This keeps your current AAPS install upgradeable: future updates will use the same keystore.
+Böylece mevcut AAPS kurulumunuz güncellenebilir kalır: gelecekteki güncellemeler aynı anahtar deposunu kullanır.
 
-**→ [Continue with Option 2 – Upload your existing keystore](BrowserBuildO2.md)**
+**→ [Seçenek 2 ile devam edin – Mevcut anahtar deponuzu yükleyin](BrowserBuildO2.md)**
 
 ----
 
 ```{note}
-On the next page you will pick your device (computer or iPhone). Each device page then walks you through downloading and opening the preparation file the right way for that device, and creating your keystore. The built AAPS app will be saved in your Google Drive.
+Sonraki sayfada cihazınızı (bilgisayar veya iPhone) seçeceksiniz. Her cihaz sayfası, hazırlık dosyasını o cihaza uygun şekilde indirmeniz ve açmanız ve anahtar deponuzu oluşturmanız için size adım adım yol gösterir. Oluşturulan AAPS uygulaması Google Drive'ınıza kaydedilir.
 ```
 
-**Next: choose [Option 1](BrowserBuildO1.md) or [Option 2](BrowserBuildO2.md) above, then follow the page for your device.**
+**Sonraki adım: yukarıdan [Seçenek 1](BrowserBuildO1.md) veya [Seçenek 2](BrowserBuildO2.md)'yi seçin, ardından cihazınıza ait sayfayı izleyin.**
 
 ----
 
 (ci-keystore-export)=
 
-## Export your keystore (optional)
+## Anahtar deponuzu dışa aktarın (isteğe bağlı)
 
-If you want to export your stored keystore, use this method.
+Kayıtlı anahtar deponuzu dışa aktarmak istiyorsanız bu yöntemi kullanın.
 
-This script will export your previously configured keystore information (from Option 1 or Option 2) as a password-protected ZIP file to the `/AAPS/KeyStore` directory in your Google Drive.
+Bu betik, önceden ayarladığınız anahtar deposu bilgilerini (Seçenek 1 veya Seçenek 2'den) parola korumalı bir ZIP dosyası olarak Google Drive'ınızdaki `/AAPS/KeyStore` klasörüne aktarır.
 
 ```{warning}
-Before using this export method, make sure your keystore and Google Drive settings have been completed.
+Bu dışa aktarma yöntemini kullanmadan önce anahtar deposu ve Google Drive ayarlarınızın tamamlandığından emin olun.
 ```
 
 ### Steps:
 
-1. **Add ZIP Password Secret:**
-   - Go to your repository's **Settings** → **Secrets and variables** → **Actions**
-   - Click **New repository secret**
-   - In the **Name** field, enter: `ZIP_PASSWORD`
-   - In the **Secret** field, enter your custom ZIP encryption password
-   - Use only English letters and numbers for the password (no special symbols)
-   - Click **Add secret**
+1. **ZIP parolası secret'ını ekleyin:**
+   - Deponuzda **Settings** → **Secrets and variables** → **Actions** yolunu açın
+   - **New repository secret** (yeni depo secret'ı) düğmesine tıklayın
+   - **Name** (ad) alanına şunu girin: `ZIP_PASSWORD`
+   - **Secret** alanına kendi belirlediğiniz ZIP şifreleme parolasını girin
+   - Parolada yalnızca İngilizce harfler ve rakamlar kullanın (özel sembol kullanmayın)
+   - **Add secret** (secret ekle) düğmesine tıklayın
 
    ![aaps_ci_zip_password.png](../images/Building-the-App/CI/aaps_ci_zip_password.png)
 
-2. **Run Export Workflow:**
-   - Go to the **Actions** tab in your repository
-   - Select **CI Keystore Export**
-   - Click **Run workflow**
-   - The exported keystore ZIP file will be saved to your Google Drive
+2. **Dışa aktarma iş akışını (workflow) çalıştırın:**
+   - Deponuzda **Actions** sekmesine gidin
+   - **CI Keystore Export** öğesini seçin
+   - **Run workflow** (iş akışını çalıştır) düğmesine tıklayın
+   - Dışa aktarılan anahtar deposu ZIP dosyası Google Drive'ınıza kaydedilir
 
    ![aaps_ci_keystore_export.png](../images/Building-the-App/CI/aaps_ci_keystore_export.png)
 
@@ -85,6 +85,6 @@ Before using this export method, make sure your keystore and Google Drive settin
 ```{toctree}
 :hidden:
 
-Option 1 – Generate a new keystore <BrowserBuildO1.md>
-Option 2 – Upload your existing keystore <BrowserBuildO2.md>
+Seçenek 1 – Yeni bir anahtar deposu oluşturun <BrowserBuildO1.md>
+Seçenek 2 – Mevcut anahtar deponuzu yükleyin <BrowserBuildO2.md>
 ```

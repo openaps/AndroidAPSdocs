@@ -5,37 +5,37 @@
 Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
 
 -   Ellerin ve kitin temiz olduğundan emin olun.
--   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
+-   Düz oklu bir dizi nokta gördüğünüzde kalibre etmeye çalışın (genellikle 15-30 dakika yeterlidir)
 -   Glikoz seviyeleri yukarı veya aşağı hareket ederken kalibrasyon yapmaktan kaçının.
--   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
--   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
--   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
+-   “Yeterli” sayıda kalibrasyon yapın: Resmi uygulamalar sizden günde bir veya iki kez kontrol yapmanızı ister. DIY sistemlerde bu uyarıyı almayabilirsiniz; kalibrasyon yapmadan devam ederken dikkatli olmalısınız.
+-   Kalibrasyon gerektirmeyen veya kalibrasyona izin vermeyen sensörlerde en az günde bir kez gerçek kan şekerinizi kontrol edin. AAPS, sensör ölçümleriniz ne kadar güvenilirse o kadar güvenlidir.
+-   Mümkünse, bazı kalibrasyonları daha düşük bir aralıkta (4-5mmol/L veya 72-90mg/dL) ve bazılarını biraz daha yüksek bir seviyede (7-9mmol/L veya 126-160mg/dL) yapın; bu, nokta/eğim kalibrasyonu için daha iyi bir aralık sağlar.
 
-## Sensör Ayarlama (G6)
+## Sensörü yerleştirme (G6)
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor contacts should not come into contact with blood.
+When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. Sensör kontakları kanla temas etmemelidir.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Dikkat! First click in the square side and then press down the round side.
+After setting the sensor, the transmitter can be clicked into the sensor holder. Dikkat! Önce kare tarafı yerine oturtun, sonra yuvarlak tarafa bastırın.
 
 (general-cgm-troubleshooting)=
 ## Troubleshooting
 
 ### Bağlantı problemleri
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
+Bluetooth bağlantısı, kan şekeri ölçüm cihazları, kulaklıklar, tabletler gibi yakındaki diğer Bluetooth cihazları veya mikrodalga fırın, seramik ocak gibi mutfak cihazları tarafından bozulabilir. Bu durumda xDrip hiçbir KŞ değeri göstermez. Bluetooth bağlantısı yeniden kurulduğunda eksik veriler doldurulur (backfill).
 
 ### Sensör Hataları
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor contacts should not come into contact with blood.
+If recurring sensor errors occur try selecting a different body site to set your sensor. Sensör kontakları kanla temas etmemelidir.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Bir "Sensör Hatası" çoğu zaman hemen su içerek ve sensörün çevresine masaj yaparak düzeltilebilir!
 
 ### Atlamalı değerler
 
-You might try to change settings for noise blocking in xDrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+xDrip'te gürültü engelleme ayarlarını değiştirmeyi deneyebilirsiniz (Settings - Inter-App Settings - Noise Blocking), örneğin "Block Very High noise and worse". Ayrıca bakın: [Kan şekeri verilerini yumuşatma](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Negatif Sensör Yaşı
 
-![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
+![Genişletilmiş durum panelinin Sensör satırında sensör yaşı](../images/main/main_status_row_expanded.png)
 
-The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.
+Sensör yaşı, ana ekrandaki durum panelinin **Sensör** satırında gösterilir (genişletmek için ok simgesine dokunun). Negatif yaş, ya çift bir "Sensör yerleştirme" [careportal kaydı](#aaps-screens-careportal) ya da tarihi yanlış bir sensör yerleştirme kaydı varsa oluşur. **Tedavi geçmişi** (☰ menüsü) ekranını açın, **Careportal** sekmesini seçin ve yanlış kaydı silin.

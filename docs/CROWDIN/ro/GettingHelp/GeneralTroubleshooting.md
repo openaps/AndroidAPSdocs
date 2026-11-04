@@ -4,9 +4,9 @@
 
 **Start here when something is not working.** Troubleshooting information lives on many pages across the documentation. This page brings it together: it is a single collection of links, sorted by topic, to help you solve the most common problems.
 
-If you do not find your answer below, also check:
+Dacă nu găsiți răspunsul mai jos, verificați și:
 
-* the [FAQ](../UsefulLinks/FAQ.md) for answers to frequent questions, and
+* [FAQ](../UsefulLinks/FAQ.md) pentru răspunsuri la întrebările frecvente și
 * the [Profile tuning guide](ProfileTuning.md) if your loop runs but your glucose control needs improving.
 
 ```{admonition} Still stuck?
@@ -18,33 +18,33 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 
 (generaltroubleshooting-aaps-app)=
 
-## AAPS app
+## Aplicația AAPS
 
-### Building & updating
+### Construire și actualizare
 
 * If the build fails, see [If the build fails](#building-aaps-troubleshooting): it lists the troubleshooting section for each build method:
   * [AAPS Builder](#aaps-builder-troubleshooting)
-  * [Browser build](#aaps-ci-troubleshooting)
+  * [Construirea în browser](#aaps-ci-troubleshooting)
   * [Android Studio](TroubleshootingAndroidStudio.md)
-* Lost keystore, or new keystore: [Reinstalling AAPS](#reinstall-aaps)
+* Keystore pierdut sau keystore nou: [Reinstalarea AAPS](#reinstall-aaps)
 * Updating **AAPS**: [with AAPS Builder](#aaps-builder-updates), [with a browser build (fork)](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
 
-### Installing
+### Instalare
 
-* [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
+* [Avertismentul Google Play Protect](#transferring-installing-play-protect-warning): aplicația este raportată ca nesigură.
 * Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
 
 ### Setări
 
-* [Profile: "Basal rate is not compatible with the current pump"](#your-aaps-profile-basal-not-compatible)
-* [Pump: "Data is coming from different pump"](#config-builder-wrong-pump-data)
+* [Profil: „Rata bazală nu este compatibilă cu pompa curentă”](#your-aaps-profile-basal-not-compatible)
+* [Pompă: „Datele vin de la o pompă diferită”](#config-builder-wrong-pump-data)
 * [Nightscout Client](TroubleshootingNsClient.md)
-* **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
+* **„Setările AAPS nu pot fi citite”** la pornire: setările sunt criptate cu o cheie pe care Android o păstrează pentru **AAPS**, iar această cheie nu le mai poate deschide, de exemplu după ce depozitul de chei al telefonului a fost resetat. Cât timp este afișat acest ecran, **AAPS** nu rulează și nu controlează pompa. Apăsați **Reîncercați**: aceasta închide și repornește **AAPS**. Dacă nu ajută, reporniți telefonul. Folosiți **Începeți de la zero** numai când nimic altceva nu ajută: fișierul de setări care nu poate fi citit este pus deoparte (este redenumit și păstrat), iar **AAPS** pornește cu setări goale. Apoi importați ultimul [export al setărilor](../Maintenance/ExportImportSettings.md).
 
-### Usage
+### Utilizare
 
-* [Wrong carb values (slow carbs absorption)](#CobCalculation-detection-of-wrong-cob-values)
-* [Automations](#automations-troubleshooting)
+* [Valori greșite ale carbohidraților (absorbție lentă a carbohidraților)](#CobCalculation-detection-of-wrong-cob-values)
+* [Automatizări](#automations-troubleshooting)
 * [Full closed loop](#full-closed-loop-troubleshooting)
 
 ---
@@ -60,11 +60,11 @@ Pentru probleme cunoscute cu conexiunile Bluetooth, întreruperile pompei, activ
 
 (generaltroubleshooting-android-related-issues)=
 
-## Android Related Issues
+## Probleme legate de Android
 
-### Battery optimization
+### Optimizarea bateriei
 
-**AAPS** can help you find the right settings for your phone: open the **menu** (☰) > **About** and tap **Don't kill my app?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). The [setup wizard](#setup-wizard-bluetooth-battery-optimisation) also asks you to turn off battery optimization for **AAPS** and Bluetooth.
+**AAPS** vă poate ajuta să găsiți setările potrivite pentru telefonul dumneavoastră: deschideți **meniul** (☰) > **Despre** și apăsați **Nu-mi opriți aplicația?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). The [setup wizard](#setup-wizard-bluetooth-battery-optimisation) also asks you to turn off battery optimization for **AAPS** and Bluetooth.
 
 Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
 
@@ -74,13 +74,13 @@ It's important to ensure that you have disabled Battery Optimization to ensure *
 
 Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+***NOTĂ:** Urmați pașii de mai jos pentru a dezactiva optimizarea bateriei pentru serviciul Bluetooth, dacă telefonul dumneavoastră are această opțiune. Aceiași pași pot fi folosiți pentru **AAPS** și pentru alte aplicații, dar capturile de ecran arată doar cum se face acest lucru pentru serviciul Bluetooth.*
 
-#### Pixel phones (stock Android)
+#### Telefoane Pixel (Android standard)
 
 * Go to the Android settings, select "Apps".
 
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
+  ![Setări Android¦Aplicații](../images/troubleshooting/pixel/01_androidsettings.png)
 
 * Select "See all apps"
 
@@ -88,18 +88,18 @@ Depending on your phone model and make there may be more than one location and s
 
 * On the menu on the right, select "Show system" apps.
 
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
+  ![Afișați aplicațiile de sistem](../images/troubleshooting/pixel/03_allapps.png)
 
-* Now search and select the app "Bluetooth".
+* Acum căutați și selectați aplicația „Bluetooth”.
 
-  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
+  ![Aplicația Bluetooth](../images/troubleshooting/pixel/03_bluetooth.png)
 
 * Click the "App battery usage" and select "Unrestricted" (called "Not optimized" on some older Android versions).
 
-  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
+  ![Optimizarea bateriei pentru Bluetooth](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### Samsung phones
+#### Telefoane Samsung
 
 * Go to the android settings, select "Apps"
 
@@ -107,11 +107,11 @@ Depending on your phone model and make there may be more than one location and s
 
   ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![Afișați aplicațiile de sistem](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
 * Now search the Bluetooth app and select it to see its settings.
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![Aplicația Bluetooth](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
 * Select "battery".
 
@@ -121,7 +121,7 @@ Depending on your phone model and make there may be more than one location and s
 
   ![Unrestricted](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### Huawei phones
+#### Telefoane Huawei
 
 See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
 
@@ -135,10 +135,10 @@ Useful links to known issues and steps to resolve for CGMs.
 
 * [General](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
-* [Libre 2 with Minimal Looper](#minimallooper-troubleshooting)
+* [Libre 2 cu Minimal Looper](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
 * [xDrip - no CGM data](#xdrip-identify-receiver)
-* [xDrip - Dexcom troubleshooting](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip - depanare Dexcom](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ---
 
@@ -175,10 +175,10 @@ Useful links to known issues and steps to resolve for Phones
 
 (generaltroubleshooting-remote-control)=
 
-## Remote control
+## Control de la distanță
 
-* [AAPSClient and remote control (pairing, commands not received)](#client-master-control-troubleshooting)
-* ['Nightscout access token' issues](#remotecontrol-nightscout-access-token)
+* [AAPSClient și controlul de la distanță (asociere, comenzi care nu sunt primite)](#client-master-control-troubleshooting)
+* [Probleme cu „Cod de acces Nightscout”](#remotecontrol-nightscout-access-token)
 * [SMS commands](#SMSCommands-troubleshooting)
 * [Android Auto](#android-auto-troubleshooting)
 
@@ -186,11 +186,11 @@ Useful links to known issues and steps to resolve for Phones
 
 (generaltroubleshooting-smartwatches)=
 
-## Smartwatch
+## Ceasuri inteligente
 
 Useful links to known issues and steps to resolve for Smartwatches
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
-* [Watch and phone do not communicate](#wear-os-watch-phone-communication)
+* [Depanarea aplicației Wear](#Watchfaces-troubleshooting-the-wear-app)
+* [Ceasul și telefonul nu comunică](#wear-os-watch-phone-communication)
 * [Wear OS 5](#wear-os-5-troubleshooting)
-* [Building the Wear app](#building-aaps-wear-os-troubleshooting)
+* [Construirea aplicației Wear](#building-aaps-wear-os-troubleshooting)

@@ -1,12 +1,12 @@
-# DanaRS, Dana-i and Dana-i2
+# DanaRS, Dana-i și Dana-i2
 
 *These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards, a Dana-i or a Dana-i2. Vizitați <0>Pompa de insulină DanaR</0> dacă aveți în schimb DanaR original.*
 
-**Dana-i2 can be used from AAPS version 4.0 onwards.** It uses the same **Dana-i/RS** driver as the Dana-i.
+**Dana-i2 poate fi folosită începând cu versiunea AAPS 4.0.** Folosește același driver **Dana-i/RS** ca Dana-i.
 
 * In DanaRS/i/i2 pump "BASAL A" is used by the app. Existing data gets overwritten.
 
-    {contents} Table of contents
+    {contents} Cuprins
     :depth: 1
     :local: true
 
@@ -19,24 +19,24 @@
 
 ## Asociere pompă
 
-* Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-* Tap **Pump** and select **Dana-i/RS**.
+* Deschideți **meniul** (☰) din colțul din stânga sus al ecranului principal **AAPS** și selectați **Configurație**.
+* Apăsați **Pompă** și selectați **Dana-i/RS**.
     
-    ![Configuration > Pump with the Dana-i/RS plugin](../images/v4/Configuration/configuration_pump_list_2.png)
+    ![Configurație > Pompă cu modulul Dana-i/RS](../images/v4/Configuration/configuration_pump_list_2.png)
     
     Once it is selected, the **Dana-i/RS** card shows two buttons, **Settings** and **Open plugin**:
     
-    ![The Dana-i/RS plugin selected in Configuration > Pump](../images/v4/Pumps/dana_i_rs_enabled.png)
+    ![Modulul Dana-i/RS selectat în Configurație > Pompă](../images/v4/Pumps/dana_i_rs_enabled.png)
     
-    **Settings** opens the settings of the Dana-i/RS driver:
+    **Setări** deschide setările driverului Dana-i/RS:
     
-    ![Dana-i/RS driver settings](../images/v4/Pumps/dana_i_rs_settings.png)
+    ![Setările driverului Dana-i/RS](../images/v4/Pumps/dana_i_rs_settings.png)
     
-    **Open plugin** (or **Manage** > **Pump**) opens the Dana-i/RS pump screen. Before a pump is paired it looks like this:
+    **Deschideți modulul** (sau **Gestionați** > **Pompă**) deschide ecranul pompei Dana-i/RS. Before a pump is paired it looks like this:
     
-    ![Dana-i/RS pump screen before pairing](../images/v4/Pumps/dana_i_rs_pump_screen.png)
+    ![Ecranul pompei Dana-i/RS înainte de asociere](../images/v4/Pumps/dana_i_rs_pump_screen.png)
 
-* On the pump screen, tap **Pairing**. **AAPS** scans for nearby pumps.
+* Pe ecranul pompei, apăsați **Asociere**. **AAPS** scans for nearby pumps.
 
 * Tap the entry for your pump in the list.
     
@@ -48,25 +48,25 @@
 
 * Urmăriți procesul de asociere în funcție de tipul și firmware-ul pompei dumneavoastră:
     
-    * For DanaRS v1, **AAPS** asks for the **Pump password (v1 only)**. Enter your pump password (see [Default password](#DanaRS-Insulin-Pump-default-password)).
-    * For DanaRS v3, **AAPS** asks you to press OK on the pump and type the 2 sequences of numbers and letters shown on the pump. Keep the pump display on by pressing the minus button until you have finished. Then tap **Done**.
-    * For Dana-i and Dana-i2, the standard Android pairing dialog appears. Enter the 6-digit number shown on the pump.
+    * Pentru DanaRS v1, **AAPS** cere **Parolă pompă (numai versiunea 1)**. Introduceți parola pompei (vedeți [Parola implicită](#DanaRS-Insulin-Pump-default-password)).
+    * For DanaRS v3, **AAPS** asks you to press OK on the pump and type the 2 sequences of numbers and letters shown on the pump. Keep the pump display on by pressing the minus button until you have finished. Apoi apăsați **Finalizat**.
+    * For Dana-i and Dana-i2, the standard Android pairing dialog appears. Introduceți numărul de 6 cifre afișat pe pompă.
 
 * When **Pairing successful!** is shown, tap **Done**.
     
-    ![Pairing successful!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
+    ![Asociere reușită!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
     
     You are back on the pump screen, which now shows your pump's status.
     
-    ![Dana-i/RS pump screen after pairing](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
+    ![Ecranul pompei Dana-i/RS după asociere](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
 
-* In **Settings**, select **Bolus speed** to change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
+* În **Setări**, selectați **Viteză bolus** pentru a schimba viteza implicită a bolusului (12 s/U, 30 s/U sau 60 s/U).
 
 * Stabiliți pasul bazalei în pompă la 0,01 U/h prin intermediul meniului de doctor (vedeți manualul de utilizare al pompei).
 * Set bolus step on pump to 0.05 U using Doctors menu (see pump user guide). **AAPS** reads the basal and bolus steps from the pump and uses them for every bolus, so a bolus always matches the step set on the pump. The pump screen shows them in the **Basal/Bolus step** row.
 * Activați bolusurile extinse în pompă
 
-### Options shown only for some models
+### Opțiuni afișate doar pentru unele modele
 
 * **Auto lock**: on a Dana-i2, the **User options** screen (on the pump screen, **Manage** > **Pump**) has an **Auto lock** switch for the pump's auto lock setting. Press **Save options to pump** after changing it.
 * **Easy mode**: on pump models that have an easy menu mode, the pump screen shows an **Easy mode** row with **On** or **Off**.
@@ -77,11 +77,11 @@
 ### Parola implicită
 
 * Pentru DanaRS cu firmware v1 și v2 parola implicită este 1234.
-* Pentru DanaRS cu firmware v3 sau Dana-i parola implicită este derivată din data de fabricație și se calculează ca LLZZ unde LL este luna și ZZ este ziua, pompa a fost produsă (ex "0124" reprezentând luna 01 și ziua 24).
+* Pentru DanaRS cu firmware v3 sau Dana-i, parola implicită este derivată din data fabricației și se calculează ca LLZZ, unde LL este luna și ZZ este ziua în care a fost produsă pompa (de exemplu, "0124" înseamnă luna 01 și ziua 24).
     
-    * Din MENU PRINCIPAL selectați REVIZUIRE și deschideți INFORMAȚII DE LIVRARE din sub-meniu
-    * Number 3 is manufacturing date. 
-    * Pentru v3/i, această parolă este folosită numai pentru blocarea meniului în pompă. Nu este folosit pentru comunicare și nu este necesar să intrați în AAPS.
+    * Din MAIN MENU selectați REVIEW, apoi deschideți SHIPPING INFORMATION din submeniu
+    * Numărul 3 este data fabricației. 
+    * Pentru v3/i, această parolă este folosită numai pentru blocarea meniului în pompă. Nu este folosită pentru comunicare și nu este necesar să o introduceți în AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
 
@@ -92,11 +92,11 @@
     
     ![Meniu principal DanaRS](../images/DanaRSPW_01_MainMenu.png)
 
-* În meniul de opțiuni selectați "OPȚIUNE UTILIZATOR"
+* În meniul de opțiuni selectați "USER OPTION"
     
     ![Meniu opțiuni DanaRS](../images/DanaRSPW_02_OptionMenu.png)
 
-* Folosiți butonul săgeată pentru a derula în jos la "11. parolă"
+* Folosiți butonul săgeată pentru a derula în jos la "11. password"
     
     ![DanaRS 11. Parolă](../images/DanaRSPW_03_11PW.png)
 
@@ -106,7 +106,7 @@
     
     ![DanaRS Introduceți parola veche](../images/DanaRSPW_04_11PWenter.png)
 
-* Dacă este introdusă o parolă greșită aici nu va exista nici un mesaj care să indice greșeala!
+* Dacă aici introduceți o parolă greșită, nu va apărea niciun mesaj de eroare!
 
 * Setează **noua parolă** (Schimbă numerele cu + & - butoane / Mută la dreapta cu butonul săgeată).
     
@@ -118,7 +118,7 @@
     
     ![Salvați noua parolă DanaRS](../images/DanaRSPW_06_PWnewSave.png)
 
-* Deplasați în jos la "14. IEȘIRE" și apăsați butonul OK.
+* Deplasați în jos la "14. EXIT" și apăsați OK pentru a ieși.
     
     ![Ieșire DanaRS](../images/DanaRSPW_07_Exit.png)
 
@@ -133,7 +133,7 @@
 ![Alarmă pentru administrarea insulinei](../images/DanaRS_Error_bolus.png)
 
 * În cele mai multe cazuri, aceasta este doar o problemă de comunicare, iar cantitatea corectă de insulină este administrată.
-* Check in the pump history that the correct bolus was given. You can do this on the pump itself, or in **AAPS** on the pump screen (**Manage** > **Pump**) > **Pump history** > **Boluses**.
+* Verificați în istoricul pompei că a fost administrat bolusul corect. Puteți face acest lucru pe pompă sau în **AAPS**, pe ecranul pompei (**Gestionați** > **Pompă**) > **Istoric pompă** > **Bolusuri**.
 * Delete the error entry in [treatments](#screens-bolus-carbs) if you wish.
 * The real amount is read and recorded at the next connection. To force this, tap **Refresh** on the pump screen, or just wait for the next connection.
 
@@ -141,7 +141,7 @@
 
 Când treceți la un telefon nou, sunt necesari următorii pași:
 
-* [Exportați setările](../Maintenance/ExportImportSettings.md) pe telefonul tău vechi
+* [Exportați setările](../Maintenance/ExportImportSettings.md) pe telefonul dumneavoastră vechi
 * Transferați setările de pe un telefon vechi pe unul nou
 
 ### DanaRS v1
@@ -154,7 +154,7 @@ Când treceți la un telefon nou, sunt necesari următorii pași:
 ### DanaRS v3, Dana-i, Dana-i2
 
 * Începeți procedura de asociere așa cum este descrisă [mai sus](#DanaRS-Insulin-Pump-pairing-pump).
-* Sometimes you may need to clear the pairing information in **AAPS** first. On the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**. Then tap **Pairing** again.
+* Sometimes you may need to clear the pairing information in **AAPS** first. Pe ecranul pompei (**Gestionați** > **Pompă**), apăsați **Dezasociați** și confirmați **Resetați informațiile de asociere?**. Apoi apăsați din nou **Asociere**.
 
 ## Timezone traveling with DanaRS, Dana-i and Dana-i2 pumps
 
@@ -162,10 +162,10 @@ Pentru informații despre călătoriile de-a lungul fusurilor orare, consultați
 
 ## Unde să obțineți ajutor
 
-Development of the DanaRS/Dana-i/Dana-i2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Development of the DanaRS/Dana-i/Dana-i2 driver is done by the community on a **volunteer** basis. Înainte de a cere ajutor, vă rugăm:
 
 1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
+2. **Întrebați** pe canalul *#AAPS* de pe [Discord](https://discord.gg/4fQUWHZ4Mw) sau pe unul dintre celelalte [canale ale comunității](../GettingHelp/WhereCanIGetHelp.md).
 3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
 
 When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).

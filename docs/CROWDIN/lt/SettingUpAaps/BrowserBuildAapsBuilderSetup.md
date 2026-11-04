@@ -1,79 +1,79 @@
 (aaps-builder-setup)=
 
-# AAPS Builder setup page
+# AAPS Builder sąrankos puslapis
 
-Build your own **AAPS** app in GitHub. No programs to install, no terminal. Takes about 10 minutes the first time, then you start each build yourself.
+Sukurkite savo **AAPS** programėlę GitHub. Nereikia diegti jokių programų, nereikia terminalo. Pirmą kartą tai užtrunka apie 10 minučių, vėliau kiekvieną kūrimą paleidžiate patys.
 
-Each step is explained in more detail, with screenshots, in [Browser build with AAPS Builder](#aaps-builder). Keep that page open in another tab.
+Kiekvienas žingsnis išsamiau, su ekrano nuotraukomis, paaiškintas puslapyje [Kūrimas naršyklėje su AAPS Builder](#aaps-builder). Tą puslapį laikykite atidarytą kitame skirtuke.
 
-The buttons below open GitHub in a new Chrome tab. To come back to this page, tap the tab button next to Chrome's address bar (the square with a number) and choose this page.
+Žemiau esantys mygtukai atidaro GitHub naujame Chrome skirtuke. Norėdami grįžti į šį puslapį, spauskite skirtukų mygtuką šalia Chrome adreso juostos (kvadratas su skaičiumi) ir pasirinkite šį puslapį.
 
 (aaps-builder-setup-step1)=
 
-## Step 1 – Create your private build repository
+## 1 žingsnis – Sukurkite savo privačią kūrimo saugyklą
 
-This creates your own private copy of AAPS Builder in your GitHub account: a repository with the build workflow already in it. Only you can see it and the apps it builds. You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from the official AndroidAPS repository at every build.
+Taip jūsų GitHub paskyroje sukuriama jūsų privati AAPS Builder kopija: saugykla, kurioje jau yra kūrimo darbo eiga. Ją ir jos sukurtas programėles matote tik jūs. AndroidAPS fork kurti **nereikia**: AAPS šaltinio kodas kiekvieno kūrimo metu atsisiunčiamas iš oficialios AndroidAPS saugyklos.
 
 <label class="aapsb-label" for="aapsb-user">Your GitHub username</label>
 <input class="aapsb-input" type="text" id="aapsb-user" autocomplete="username" spellcheck="false" placeholder="my-github-name" />
 <span class="aapsb-msg" id="aapsb-userMsg"></span>
 
-First log in to github.com in this browser (no account? create one for free). Then come back here. Use your username (shown in your GitHub profile), not your e-mail: the page asks GitHub whether this username exists.
+Pirmiausia šioje naršyklėje prisijunkite prie github.com (neturite paskyros? susikurkite ją nemokamai). Tada grįžkite čia. Naudokite savo naudotojo vardą (jis rodomas jūsų GitHub profilyje), o ne el. pašto adresą: puslapis klausia GitHub, ar toks naudotojo vardas yra.
 
 <label class="aapsb-label" for="aapsb-repo">Name of your repository</label>
 <input class="aapsb-input" type="text" id="aapsb-repo" spellcheck="false" placeholder="my-aaps" />
 
-Keep the suggestion. Already created your repository with another name? Type that exact name here.
+Palikite pasiūlytą pavadinimą. Saugyklą jau sukūrėte kitu pavadinimu? Čia įveskite tiksliai tą pavadinimą.
 
 ```{note}
-**Already have an AAPS Builder repository** (made with an earlier version of this page)? Do not create a new one: type its exact name here, skip the button below, and update its workflow once: see **Updating your copy** at the end of this step. Your secrets stay as they are.
+**Jau turite AAPS Builder saugyklą** (sukurtą su ankstesne šio puslapio versija)? Naujos nekurkite: čia įveskite tikslų jos pavadinimą, praleiskite žemiau esantį mygtuką ir vieną kartą atnaujinkite jos darbo eigą: žr. **Updating your copy** šio žingsnio pabaigoje. Jūsų slaptosios reikšmės lieka tokios pat.
 
-If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+Jei vis tiek norite naujos saugyklos, pasirinkite pavadinimą, kurio dar neturite, pavyzdžiui, `my-aaps-2`, ir 2 žingsnyje naudokite tą pačią raktų saugyklą.
 
-Do not type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+Neįveskite savo AndroidAPS fork pavadinimo: fork yra viešas, ir jis jau kuriamas su savo darbo eiga **AAPS CI**.
 ```
 
 Your repository: <code class="aapsb-repoUrl"></code>
 
-Check this name before you use the buttons below: the page remembers the name from your last visit.
+Patikrinkite šį pavadinimą prieš naudodami žemiau esančius mygtukus: puslapis įsimena pavadinimą iš jūsų paskutinio apsilankymo.
 
 <a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Create my private repository</a>
 
-On the GitHub page that opens, everything is already filled in: the template `nightscout/aaps-builder`, your account as owner, the name of your repository, and **Private**. Do not change anything, and leave **Include all branches** unticked.
+Atsidariusiame GitHub puslapyje viskas jau užpildyta: šablonas `nightscout/aaps-builder`, jūsų paskyra kaip savininkas (owner), jūsų saugyklos pavadinimas ir **Private**. Nieko nekeiskite ir palikite **Include all branches** nepažymėtą.
 
-1. Click the green **Create repository** button.
-2. GitHub shows your new repository with a folder `.github` and a file `README.md`: the build workflow is in it. Come back to this page for step 2.
+1. Spauskite žalią mygtuką **Create repository**.
+2. GitHub parodo jūsų naują saugyklą su aplanku `.github` ir failu `README.md`: juose yra kūrimo darbo eiga. Grįžkite į šį puslapį 2 žingsniui.
 
 ```{admonition} Your new repository is empty (no files)?
 :class: warning
 
-It was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** again.
+Ji sukurta ne iš šablono. Ištrinkite ją (**Settings** → puslapio apačia → **Delete this repository**), tada vėl spauskite **Create my private repository**.
 ```
 
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
-The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Your `KEYSTORE_SET` secret stays as it is.
+Kūrimo žingsniai atnaujinami už jus: kiekvieno kūrimo metu jūsų saugykla paleidžia versiją, kurią AAPS kūrėjai išleido saugykloje nightscout/aaps-builder, o jūsų saugykloje niekas nesikeičia. Savo darbo eigos failą keičiate tik tada, kai tai paskelbiama puslapyje [Dokumentacijos atnaujinimai ir pakeitimai](../Maintenance/DocumentationUpdate.md) (pavyzdžiui, dėl naujo kūrimo varianto), arba vieną kartą, jei jūsų saugykla buvo sukurta su ankstesne šio puslapio versija arba iš seno šablono. Jūsų slaptoji reikšmė `KEYSTORE_SET` lieka tokia pati.
 
 1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
 
-   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
+   Kompiuteryje spauskite **kopijavimo piktogramą** („Copy raw file“) failo viršuje dešinėje. Telefone vietoj to atidarykite <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">paprasto teksto versiją</a>, palaikykite paspaudę tekstą → **Select all** → **Copy**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code> for editing.
-3. Replace the whole text with the copied workflow (on a phone: press and hold → **Select all** → **Paste**), then click **Commit changes…** twice. The first line of the file shows its version.
+   Redagavimui atidaro `.github/workflows/build.yml` saugykloje <code class="aapsb-repoUrl"></code>.
+3. Pakeiskite visą tekstą nukopijuota darbo eiga (telefone: palaikykite paspaudę → **Select all** → **Paste**), tada du kartus spauskite **Commit changes…**. Pirmoje failo eilutėje rodoma jo versija.
 ```
 
 (aaps-builder-setup-step2)=
 
-## Step 2 – Your signing key
+## 2 žingsnis – Jūsų pasirašymo raktas
 
-The app must be signed with your own key. Always use the same key, otherwise you have to uninstall AAPS (and lose its settings) to update. Choose one of the two tabs.
+Programėlė turi būti pasirašyta jūsų nuosavu raktu. Visada naudokite tą patį raktą, kitaip norėdami atnaujinti turėsite pašalinti AAPS (ir prarasite jos nustatymus). Pasirinkite vieną iš dviejų skirtukų.
 
 `````{tab-set}
 
 ````{tab-item} I already have a keystore
-For example from Android Studio (.jks).
+Pavyzdžiui, iš Android Studio (.jks).
 
 <label class="aapsb-label" for="aapsb-ksFile">Keystore file</label>
 <input type="file" id="aapsb-ksFile" accept=".jks,.keystore,.p12,.pfx,application/octet-stream">
@@ -98,27 +98,27 @@ For example from Android Studio (.jks).
 ````
 
 ````{tab-item} Create a new key
-First time building AAPS? A new key is created here in your browser. Nothing is sent anywhere.
+Pirmą kartą kuriate AAPS? Naujas raktas sukuriamas čia, jūsų naršyklėje. Niekas niekur nesiunčiama.
 
-<label class="aapsb-label" for="aapsb-newPass">Choose a password (at least 8 characters, no accented letters)</label>
+<label class="aapsb-label" for="aapsb-newPass">Sugalvokite slaptažodį (bent 8 simboliai, be raidžių su diakritiniais ženklais)</label>
 <input class="aapsb-input" type="password" id="aapsb-newPass" autocomplete="new-password">
 
-<label class="aapsb-label" for="aapsb-newPass2">Repeat the password</label>
+<label class="aapsb-label" for="aapsb-newPass2">Pakartokite slaptažodį</label>
 <input class="aapsb-input" type="password" id="aapsb-newPass2" autocomplete="new-password">
 
 <button class="aapsb-btn" type="button" id="aapsb-newGo">Create key</button> <span class="aapsb-msg" id="aapsb-newMsg"></span>
 
 <div class="aapsb-box" id="aapsb-backupBox" hidden>
 
-**Save a backup of your key!**
+**Išsaugokite rakto atsarginę kopiją!**
 
-Download the file. Keep these three together, somewhere safe off your phone (e.g. your own cloud storage):
+Atsisiųskite failą. Šiuos tris dalykus laikykite kartu, saugioje vietoje ne telefone (pvz., savo debesies saugykloje):
 
-- the file `aaps-keystore.jks`
-- your password
-- the alias of the key: **`key0`**
+- failą `aaps-keystore.jks`
+- savo slaptažodį
+- rakto pseudonimą (alias): **`key0`**
 
-You will need all three if you ever build AAPS another way, e.g. with Android Studio.
+Visų trijų jums prireiks, jei kada nors kursite AAPS kitu būdu, pvz., su Android Studio.
 
 <button class="aapsb-btn" type="button" id="aapsb-downloadKs">Download backup (aaps-keystore.jks)</button>
 
@@ -127,136 +127,136 @@ You will need all three if you ever build AAPS another way, e.g. with Android St
 
 `````
 (aaps-builder-setup-step3)=
-## Step 3 – Give the key to your repository
-<span id="aapsb-s3wait">Finish step 2 first.</span>
+## 3 žingsnis – Perduokite raktą savo saugyklai
+<span id="aapsb-s3wait">Pirmiausia užbaikite 2 žingsnį.</span>
 
 <div id="aapsb-s3ready" hidden>
-  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Open the secrets page</a> Opens: <code class="aapsb-repoUrl"></code> Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1. 2. Tap "Copy name", then paste it into the small "Name" field: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copy name</button> 3. Tap "Copy secret", then paste the long code into the big "Secret" box: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copy secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> The secret is a very long code (thousands of characters), NOT the word KEYSTORE_SET. Copy and paste the name first, then the long code. 4. Tap "Add secret". Done, you never need to do this again.
+  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Open the secrets page</a> Atidaro: <code class="aapsb-repoUrl"></code> Rodoma „Page not found“ (404)? Pirmiausia patikrinkite, ar šioje naršyklėje esate prisijungę prie github.com: kai nesate prisijungę, GitHub privačioms saugykloms rodo 404. Kitu atveju jūsų naudotojo vardas arba saugyklos pavadinimas 1 žingsnyje nesutampa su jūsų saugykla: patikrinkite juos github.com ir įveskite 1 žingsnyje. 2. Spauskite „Copy name“, tada įklijuokite jį į mažą lauką „Name“: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copy name</button> 3. Spauskite „Copy secret“, tada įklijuokite ilgą kodą į didelį lauką „Secret“: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copy secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> Slaptoji reikšmė (secret) yra labai ilgas kodas (tūkstančiai simbolių), O NE žodis KEYSTORE_SET. Pirmiausia nukopijuokite ir įklijuokite pavadinimą, tada ilgą kodą. 4. Spauskite „Add secret“. Baigta, to daryti daugiau niekada nereikės.
 </div>
 (aaps-builder-setup-step4)=
-## Step 4 – Build the app
+## 4 žingsnis – Sukurkite programėlę
 
 1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">Open the build page</a>
 
-   Opens: <code class="aapsb-repoUrl"></code>
+   Atidaro: <code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1. The GitHub app opened instead? Tap "RUN WORKFLOW", check the version and variant, and tap "RUN WORKFLOW" again. If the app still shows "Nothing to see here", pull the list down to see your build.
+   Rodoma „Page not found“ (404)? Pirmiausia patikrinkite, ar šioje naršyklėje esate prisijungę prie github.com: kai nesate prisijungę, GitHub privačioms saugykloms rodo 404. Kitu atveju jūsų naudotojo vardas arba saugyklos pavadinimas 1 žingsnyje nesutampa su jūsų saugykla: patikrinkite juos github.com ir įveskite 1 žingsnyje. Vietoj to atsidarė GitHub programėlė? Spauskite „RUN WORKFLOW“, patikrinkite versiją ir variantą, tada vėl spauskite „RUN WORKFLOW“. Jei programėlėje vis dar rodoma „Nothing to see here“, patraukite sąrašą žemyn, kad pamatytumėte savo kūrimą.
 2. If asked, click the green button to enable workflows.
 The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
-3. Click "Run workflow", then the green "Run workflow" button. "latest" builds the newest AAPS version. ***tip:*** *you can build another version by typing its [tag](https://github.com/nightscout/AndroidAPS/tags) name instead of "latest"*
-4. Wait about 15–30 minutes. A green check means it is done.
-Want an e-mail when the build is done? GitHub only e-mails you when a build fails. To also get one when it succeeds: on github.com, open your profile picture → Settings → Notifications → System → Actions, and untick "Only notify for failed workflows".
+3. Spauskite „Run workflow“, tada žalią mygtuką „Run workflow“. „latest“ sukuria naujausią AAPS versiją. ***patarimas:*** *galite sukurti kitą versiją, vietoj „latest“ įvesdami jos [žymos (tag)](https://github.com/nightscout/AndroidAPS/tags) pavadinimą*
+4. Palaukite apie 15–30 minučių. Žalia varnelė reiškia, kad kūrimas baigtas.
+Norite gauti el. laišką, kai kūrimas baigsis? GitHub siunčia el. laišką tik tada, kai kūrimas nepavyksta. Kad laišką gautumėte ir tada, kai kūrimas pavyksta: github.com atidarykite savo profilio nuotrauką → Settings → Notifications → System → Actions ir nuimkite žymę „Only notify for failed workflows“.
 
 ```{admonition} No "Build AAPS" / "Run workflow" button?
 :class: warning
 
-1. Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-setup-step1) again with the button.
-2. Open the Actions tab. If it says workflows are disabled, click the green button to enable them. Then click "Build AAPS" in the list.
+1. Atidarykite savo saugyklą ir patikrinkite, ar joje yra aplankas `.github` su failu `workflows/build.yml`. Jei saugykla tuščia, ji sukurta ne iš šablono: ištrinkite ją (**Settings** → puslapio apačia → **Delete this repository**) ir vėl atlikite [1 žingsnį](#aaps-builder-setup-step1) su mygtuku.
+2. Atidarykite skirtuką Actions. Jei rašoma, kad darbo eigos išjungtos, spauskite žalią mygtuką, kad jas įjungtumėte. Tada sąraše spauskite „Build AAPS“.
 ```
 
 (aaps-builder-setup-step5)=
 
-## Step 5 – Install on your phone
+## 5 žingsnis – Įdiekite telefone
 
 ```{admonition} Before every update: back up your settings!
 :class: warning
 
-1. In AAPS: Maintenance → Export settings. (Do this regularly anyway, e.g. after a profile change or once a month.)
-2. Copy the exported file OFF the phone, e.g. to Google Drive or Dropbox. A backup that only lives on the phone is lost together with the phone.
-3. Keep the APK files and several older exports there too. Then you can always go back.
+1. AAPS programėlėje: Servisas → Eksportuoti nustatymus. (Tai bet kuriuo atveju darykite reguliariai, pvz., po profilio pakeitimo arba kartą per mėnesį.)
+2. Eksportuotą failą nukopijuokite IŠ telefono, pvz., į Google Drive arba Dropbox. Atsarginė kopija, kuri yra tik telefone, prarandama kartu su telefonu.
+3. Ten laikykite ir APK failus bei kelis senesnius eksportus. Tada visada galėsite grįžti atgal.
 
-[How to export settings](#ExportImportSettings-Settings-Export) · [AAPS FAQ: how to organize backups](#FAQ-organize-backups)
+[Kaip eksportuoti nustatymus](#ExportImportSettings-Settings-Export) · [AAPS DUK: kaip tvarkyti atsargines kopijas](#FAQ-organize-backups)
 ```
 
-1. Open this page on your phone, in the web browser (Chrome). Log in to github.com if asked.
+1. Atidarykite šį puslapį savo telefone, interneto naršyklėje (Chrome). Jei paprašoma, prisijunkite prie github.com.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openRuns" target="_blank" rel="noopener">Open my builds</a>
 
-   The GitHub app opened instead? It cannot download builds. In the app, open the newest build and tap "Artifacts ↗", or tap the share icon and choose Chrome (or "Copy link", then paste the link in Chrome's address bar). Continue in Chrome.
+   Vietoj to atsidarė GitHub programėlė? Ji negali atsisiųsti kūrimų. Programėlėje atidarykite naujausią kūrimą ir spauskite „Artifacts ↗“ arba spauskite bendrinimo piktogramą ir pasirinkite Chrome (arba „Copy link“, tada įklijuokite nuorodą į Chrome adreso juostą). Tęskite Chrome naršyklėje.
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1.
+   Rodoma „Page not found“ (404)? Pirmiausia patikrinkite, ar šioje naršyklėje esate prisijungę prie github.com: kai nesate prisijungę, GitHub privačioms saugykloms rodo 404. Kitu atveju jūsų naudotojo vardas arba saugyklos pavadinimas 1 žingsnyje nesutampa su jūsų saugykla: patikrinkite juos github.com ir įveskite 1 žingsnyje.
 
-   To stop GitHub links opening in the app: Android Settings → Apps → GitHub → Open by default → turn off "Open supported links".
-3. Tap the newest build with a green check ✅.
-4. Scroll down to the build summary and tap the big link "📱 Download AAPS …" (or scroll further down to "Artifacts" and tap aaps-….apk). Scroll with your finger on the text, not on the diagram of the build steps.
-5. When the download is done, tap the file and choose Install. If asked, allow installing apps from this source.
-6. aaps-wear-….apk is for a smartwatch. Skip it if you do not use one.
+   Kad GitHub nuorodos nebebūtų atidaromos programėlėje: Android Settings → Apps → GitHub → Open by default → išjunkite „Open supported links“.
+3. Spauskite naujausią kūrimą su žalia varnele ✅.
+4. Slinkite žemyn iki kūrimo santraukos ir spauskite didelę nuorodą „📱 Download AAPS …“ (arba slinkite dar žemiau iki „Artifacts“ ir spauskite aaps-….apk). Slinkite pirštu ant teksto, ne ant kūrimo žingsnių diagramos.
+5. Kai atsisiuntimas baigsis, spauskite failą ir pasirinkite Install. Jei paprašoma, leiskite diegti programėles iš šio šaltinio.
+6. aaps-wear-….apk skirtas išmaniajam laikrodžiui. Jei laikrodžio nenaudojate, jo nesiųskite.
 
-The APK is not shown under "Code" in your repository, only on the build page. It is kept for 14 days.
+APK nerodomas jūsų saugyklos skiltyje „Code“, tik kūrimo puslapyje. Jis saugomas 14 dienų.
 
-New AAPS version? Back up your settings, then build it with [step 4](#aaps-builder-setup-step4). Your repository never builds anything by itself.
+Nauja AAPS versija? Pasidarykite atsarginę nustatymų kopiją, tada sukurkite naują versiją pagal [4 žingsnį](#aaps-builder-setup-step4). Jūsų saugykla niekada nieko nesukuria pati.
 
 (aaps-builder-setup-step6)=
 
-## Step 6 – Optional: get the app in Google Drive
+## 6 žingsnis – Nebūtina: gaukite programėlę Google Drive
 
-Want the APK to show up in your Google Drive (kept forever)? Add one more secret, GDRIVE_OAUTH2. This page gets it from Google for you. AAPS can then only see and change the files it creates in your Google Drive, nothing else.
+Norite, kad APK atsirastų jūsų Google Drive (saugomas visam laikui)? Pridėkite dar vieną slaptąją reikšmę – GDRIVE_OAUTH2. Šis puslapis gauna ją iš Google už jus. Tada AAPS galės matyti ir keisti tik tuos failus, kuriuos pati sukuria jūsų Google Drive, ir nieko daugiau.
 
 1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Connect Google Drive</a>
 
-   Google opens in a new tab. Choose your Google account and allow AAPS to see and change its own files. If Google says the app is not verified, tap "Advanced", then "Go to …".
-2. Then the new tab shows an error like **"This site can't be reached"** or **"127.0.0.1 refused to connect"**. **This is expected.** Google's answer is in the address of that tab.
+   Google atsidaro naujame skirtuke. Pasirinkite savo Google paskyrą ir leiskite AAPS matyti ir keisti jos pačios failus. Jei Google rašo, kad programėlė nepatvirtinta, spauskite „Advanced“, tada „Go to …“.
+2. Tada naujame skirtuke rodoma klaida, pvz., **„This site can't be reached“** arba **„127.0.0.1 refused to connect“**. **Taip ir turi būti.** Google atsakymas yra to skirtuko adrese.
 
-   Tap the address bar of that tab, select all of the address and copy it. It starts with `http://127.0.0.1:47913/`. Come back to this page within a few minutes: the answer is only valid for a short time.
+   Spauskite to skirtuko adreso juostą, pažymėkite visą adresą ir jį nukopijuokite. Jis prasideda `http://127.0.0.1:47913/`. Grįžkite į šį puslapį per kelias minutes: atsakymas galioja tik trumpai.
 3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
 
 4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Open the secrets page</a>
 
-   Opens: <code class="aapsb-repoUrl"></code>
+   Atidaro: <code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1.
-5. Tap "Copy name", then paste it into the small "Name" field: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name</button>
-6. Tap "Copy secret", then paste the code into the big "Secret" box: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Copy secret</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
-7. Tap "Add secret".
+   Rodoma „Page not found“ (404)? Pirmiausia patikrinkite, ar šioje naršyklėje esate prisijungę prie github.com: kai nesate prisijungę, GitHub privačioms saugykloms rodo 404. Kitu atveju jūsų naudotojo vardas arba saugyklos pavadinimas 1 žingsnyje nesutampa su jūsų saugykla: patikrinkite juos github.com ir įveskite 1 žingsnyje.
+5. Spauskite „Copy name“, tada įklijuokite jį į mažą lauką „Name“: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name</button>
+6. Spauskite „Copy secret“, tada įklijuokite kodą į didelį lauką „Secret“: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Copy secret</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
+7. Spauskite „Add secret“.
 
 </div>
 
 ```{admonition} Already have a GDRIVE_OAUTH2 value?
 :class: dropdown
 
-A value from the AAPS preparation page of the other browser build works too: open the secrets page, add the name `GDRIVE_OAUTH2` and paste your value. See [Save the builds in Google Drive](#aaps-builder-google-drive).
+Tinka ir reikšmė iš kito kūrimo naršyklėje būdo AAPS paruošimo puslapio: atidarykite slaptųjų reikšmių puslapį, pridėkite pavadinimą `GDRIVE_OAUTH2` ir įklijuokite savo reikšmę. Žr. [Kūrimų išsaugojimas Google Drive](#aaps-builder-google-drive).
 ```
 
-Next build, the APKs are also saved in Google Drive in the folder AAPS/&lt;version&gt;.
+Kito kūrimo metu APK failai taip pat išsaugomi Google Drive aplanke AAPS/&lt;version&gt;.
 
-If you do not build for 6 months, or change your Google password, Google stops the access. The build then says so: redo this step.
+Jei 6 mėnesius nieko nekuriate arba pakeičiate Google slaptažodį, Google nutraukia prieigą. Tada kūrimas apie tai praneša: pakartokite šį žingsnį.
 
 ----
 
-Everything on this page runs in your browser. Your key and passwords are never sent anywhere except where you paste them yourself. Only your GitHub username is sent to GitHub, to check that it exists. In step 6, the Google answer is sent only to Google, to get GDRIVE_OAUTH2. The build workflow is maintained by the AAPS developers in [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), based on AAPS Builder (AGPL-3.0).
+Viskas šiame puslapyje veikia jūsų naršyklėje. Jūsų raktas ir slaptažodžiai niekur nesiunčiami, išskyrus ten, kur juos įklijuojate patys. GitHub siunčiamas tik jūsų GitHub naudotojo vardas, kad būtų patikrinta, ar jis yra. 6 žingsnyje Google atsakymas siunčiamas tik į Google, kad būtų gauta GDRIVE_OAUTH2. Kūrimo darbo eigą prižiūri AAPS kūrėjai saugykloje [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder); ji paremta AAPS Builder (AGPL-3.0).
 
 <div id="aapsb-msgs" hidden>
 
-- <span data-aapsb-msg="copied">Long code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
-- <span data-aapsb-msg="copiedName">Name copied: paste it in the small "Name" field.</span>
+- <span data-aapsb-msg="copied">Ilgas kodas nukopijuotas: įklijuokite jį į didelį lauką „Secret“, tada spauskite „Add secret“.</span>
+- <span data-aapsb-msg="copiedName">Pavadinimas nukopijuotas: įklijuokite jį į mažą lauką „Name“.</span>
 - <span data-aapsb-msg="userOk">✓ GitHub user found.</span>
-- <span data-aapsb-msg="userBad">✗ No GitHub user with this name. Use your username (shown in your GitHub profile), not your e-mail.</span>
-- <span data-aapsb-msg="copiedShort">Copied ✓</span>
-- <span data-aapsb-msg="needUser">Enter your GitHub username in step 1 first.</span>
-- <span data-aapsb-msg="errPipe">Passwords and alias cannot contain the character |</span>
-- <span data-aapsb-msg="errNoFile">Choose your keystore file.</span>
-- <span data-aapsb-msg="errEmpty">Fill in password and alias.</span>
-- <span data-aapsb-msg="errPass">Wrong keystore password.</span>
-- <span data-aapsb-msg="errKeyPass">Wrong key password.</span>
-- <span data-aapsb-msg="errAlias">Alias not found in the keystore. Available: {aliases}</span>
-- <span data-aapsb-msg="errFormat">This does not look like a keystore file.</span>
-- <span data-aapsb-msg="okHave">Keystore OK! Continue with step 3.</span>
-- <span data-aapsb-msg="okHaveUnchecked">Keystore read. The password will be checked when you build. Continue with step 3.</span>
-- <span data-aapsb-msg="errShort">The password must be at least 8 characters.</span>
-- <span data-aapsb-msg="errAscii">Use only a–z, A–Z, 0–9 and symbols such as ! ? # – no spaces, no accented letters and not |</span>
-- <span data-aapsb-msg="errMatch">The passwords do not match.</span>
-- <span data-aapsb-msg="working">Creating key…</span>
-- <span data-aapsb-msg="okNew">Key created. Download the backup below, then continue with step 3.</span>
-- <span data-aapsb-msg="gNoUrl">Paste the whole address of the Google tab first.</span>
-- <span data-aapsb-msg="gNoCode">This address has no answer from Google. Copy the whole address of the tab that shows the error, starting with http://127.0.0.1:47913/</span>
-- <span data-aapsb-msg="gDenied">Google access was not allowed. Tap "Connect Google Drive" again and allow access.</span>
-- <span data-aapsb-msg="gOldUrl">This address belongs to an older attempt. Tap "Connect Google Drive" again and use the new address.</span>
-- <span data-aapsb-msg="gWorking">Asking Google…</span>
-- <span data-aapsb-msg="gFailed">Google did not accept it ({error}). The answer is valid only for a few minutes and only once: tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gNoRefresh">Google sent no long-term access. Tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 is ready. Add it as a secret below.</span>
-- <span data-aapsb-msg="gCopied">Code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
+- <span data-aapsb-msg="userBad">✗ No GitHub user with this name. Naudokite savo naudotojo vardą (jis rodomas jūsų GitHub profilyje), o ne el. pašto adresą.</span>
+- <span data-aapsb-msg="copiedShort">Nukopijuota ✓</span>
+- <span data-aapsb-msg="needUser">Pirmiausia 1 žingsnyje įveskite savo GitHub naudotojo vardą.</span>
+- <span data-aapsb-msg="errPipe">Slaptažodžiuose ir pseudonime negali būti simbolio |</span>
+- <span data-aapsb-msg="errNoFile">Pasirinkite savo raktų saugyklos failą.</span>
+- <span data-aapsb-msg="errEmpty">Įveskite slaptažodį ir pseudonimą.</span>
+- <span data-aapsb-msg="errPass">Neteisingas raktų saugyklos slaptažodis.</span>
+- <span data-aapsb-msg="errKeyPass">Neteisingas rakto slaptažodis.</span>
+- <span data-aapsb-msg="errAlias">Raktų saugykloje toks pseudonimas nerastas. Galimi: {aliases}</span>
+- <span data-aapsb-msg="errFormat">Tai nepanašu į raktų saugyklos failą.</span>
+- <span data-aapsb-msg="okHave">Keystore OK! Tęskite 3 žingsniu.</span>
+- <span data-aapsb-msg="okHaveUnchecked">Raktų saugykla nuskaityta. Slaptažodis bus patikrintas kūrimo metu. Tęskite 3 žingsniu.</span>
+- <span data-aapsb-msg="errShort">Slaptažodis turi būti bent 8 simbolių.</span>
+- <span data-aapsb-msg="errAscii">Naudokite tik a–z, A–Z, 0–9 ir simbolius, pvz., ! ? # – be tarpų, be raidžių su diakritiniais ženklais ir be |</span>
+- <span data-aapsb-msg="errMatch">Slaptažodžiai nesutampa.</span>
+- <span data-aapsb-msg="working">Kuriamas raktas…</span>
+- <span data-aapsb-msg="okNew">Key created. Žemiau atsisiųskite atsarginę kopiją, tada tęskite 3 žingsniu.</span>
+- <span data-aapsb-msg="gNoUrl">Pirmiausia įklijuokite visą Google skirtuko adresą.</span>
+- <span data-aapsb-msg="gNoCode">Šiame adrese nėra Google atsakymo. Nukopijuokite visą skirtuko, kuriame rodoma klaida, adresą; jis prasideda http://127.0.0.1:47913/</span>
+- <span data-aapsb-msg="gDenied">Prieiga prie Google nebuvo leista. Vėl spauskite „Connect Google Drive“ ir leiskite prieigą.</span>
+- <span data-aapsb-msg="gOldUrl">Šis adresas priklauso ankstesniam bandymui. Vėl spauskite „Connect Google Drive“ ir naudokite naują adresą.</span>
+- <span data-aapsb-msg="gWorking">Kreipiamasi į Google…</span>
+- <span data-aapsb-msg="gFailed">Google to nepriėmė ({error}). Atsakymas galioja tik kelias minutes ir tik vieną kartą: vėl spauskite „Connect Google Drive“.</span>
+- <span data-aapsb-msg="gNoRefresh">Google neatsiuntė ilgalaikės prieigos. Vėl spauskite „Connect Google Drive“.</span>
+- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 is ready. Žemiau pridėkite jį kaip slaptąją reikšmę (secret).</span>
+- <span data-aapsb-msg="gCopied">Kodas nukopijuotas: įklijuokite jį į didelį lauką „Secret“, tada spauskite „Add secret“.</span>
 
 </div>
 

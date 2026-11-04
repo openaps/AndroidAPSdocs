@@ -2,13 +2,13 @@
 
 **Bu açıklama yalnızca İngilizce belgeleri düzenlemek içindir. Tüm yeni bilgiler önce İngilizce olarak eklenmelidir. Diğer dillere çeviri yapmak istiyorsanız (teşekkür ederim), lütfen [crowdin](https://crowdin.com/project/androidapsdocs) kullanın.**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
+Metnin nasıl biçimlendirileceğine (başlık, kalın...) ve bağlantıların ayarlanmasına ilişkin ipuçları için lütfen bu sayfanın ["code syntax"](#edit-the-docs-code-syntax) bölümüne bakın.
 
 ## General
 
 For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+Bir noktada sizden bir çekme isteği (pull request, PR) oluşturmanız istenecektir. Dokümantasyondaki değişiklikleriniz, GitHub'da saklanan AAPS web sayfalarına bu yolla aktarılır. PR oluşturmak aslında çok zor değildir ve katkıda bulunmanın harika bir yoludur. Şu anda bu dokümantasyonu okuyabilmenizin nedeni, sizin gibi insanların PR oluşturmuş olmasıdır. Don't worry about making a mistake or somehow editing the wrong documents. Değişiklikleriniz, "resmi" AAPS dokümantasyon deposuna birleştirilmeden önce gözden geçirilir. Bu süreçte yanlışlıkla orijinalleri bozamazsınız. Genel süreç şöyledir:
 
 - Mevcut içeriği düzenleyerek kod veya dokümanlarda düzenlemeler ve iyileştirmeler yapın.
 - Düzenlemelerinizin iyi görünüp görünmediğini bir kez daha kontrol edin.
@@ -20,79 +20,79 @@ At some point it will be suggested that you make a pull request (PR), which is h
 
 Örneğimizde AndroidAPSdocs'ta bir düzenleme yapacağız. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. <https://github.com/openaps/AndroidAPSdocs> adresine gidin ve deponun kendi kopyanızı oluşturmak için sağ üstteki Fork düğmesine basın.
 
-![çatal deposu](../images/PR0.png)
+![Depoyu fork'lama](../images/PR0.png)
 
-2. Herhangi bir sayfaya giderek ve düzenlemek istediğiniz dokümana ulaşın. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. Herhangi bir sayfaya gidin ve düzenlemek istediğiniz sayfayı açın. Sağ üst köşedeki "Edit in GitHub" (GitHub'da düzenle) bağlantısına tıklayabilirsiniz. Bu yalnızca İngilizce sayfalar için mümkündür. 
 
 ![dokümanı düzenle](../images/PR1.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+Veya düzenlenecek sayfa içeriğinin üst çubuğunda görünen kalem simgesine tıklayın. Bunun için GitHub hesabınıza giriş yapmış olmanız gerekir (hesabınız yoksa, kolayca oluşturabilirsiniz).
 
 ![RTD io](../images/PR2.png)
 
 3. Adım 2'deki seçeneklerden biri veya diğeri, düzenlemelerinizin kaydedileceği deponuzda yeni bir dal oluşturacaktır. Bu dosyada düzenlemelerinizi yapabilirsiniz.
 
-We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+Doküman sayfaları için Markdown kullanıyoruz. Dosyaların uzantısı ".md"dir. Markdown belirtimi sabit değildir ve şu anda Markdown dosyalarımız için myst_parser kullanıyoruz. [Aşağıda anlatılan](#edit-the-docs-code-syntax) doğru sözdizimini kullanmaya dikkat edin.
 
-![Edit branch](../images/PR3.png)
+![Dalı düzenle](../images/PR3.png)
 
-4. "<>Dosyayı düzenle" sekmesinde çalışıyorsunuz. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Gerekli bir iyileştirme görürseniz, daha fazla iyileştirme yapmak için düzenleme sekmesine geri dönün. 
+4. "<>Edit file" (dosyayı düzenle) sekmesinde çalıştınız. Değiştirdiğiniz her şeyin istediğiniz gibi göründüğünden emin olmak için (yazım hatalarını kontrol edin) "Preview changes" (değişiklikleri önizle) sekmesini seçin ve sayfaya yeniden bakın. Gerekli bir iyileştirme görürseniz, daha fazla iyileştirme yapmak için düzenleme sekmesine geri dönün. 
 
 ![preview mode](../images/PR5.png)
 
-5. Düzenlemelerinizi bitirdiğinizde, sayfanın en altına gidin. Alttaki kutuda, "İsteğe bağlı bir genişletilmiş açıklama ekleyin..." yazan metin alanına yorumlarınızı girin. Varsayılan başlık dosya adıdır. Değişikliğin **nedenini** açıklayan bir cümle eklemeye çalışın. Nedeni ilişkilendirmek, gözden geçirenlerin PR ile ne yapmaya çalıştığınızı anlamasına yardımcı olur.
+5. Düzenlemelerinizi bitirdiğinizde, sayfanın en altına gidin. Alttaki kutuda, yorumlarınızı "Add an optional extended description..." (isteğe bağlı ayrıntılı açıklama ekleyin) yazan metin alanına yazın. Varsayılan başlık dosya adıdır. Değişikliğin **nedenini** açıklayan bir cümle eklemeye çalışın. Nedeni belirtmek, gözden geçirenlerin PR ile ne yapmak istediğinizi anlamasına yardımcı olur.
 
-![commit comments](../images/PR4.png)
+![Commit yorumları](../images/PR4.png)
 
-6. Yeşil "Dosya değişiklikleri öner" veya "Değişiklikleri kabul et" düğmesini tıklayın. Açılan sayfada "Create Pull Request" "Çekme Talebi Oluştur" u tıklayın ve sonraki sayfada tekrar "Çekme Talebi Oluştur" u tıklayın.
+6. Yeşil "Propose file changes" (dosya değişikliklerini öner) veya "Commit changes" (değişiklikleri kaydet) düğmesine tıklayın. Açılan sayfada "Create Pull Request" (çekme isteği oluştur) düğmesine, sonraki sayfada da tekrar "Create Pull Request" düğmesine tıklayın.
 
 ![create pull request](../images/PR6.png)
 
-7. Bu, bir çekme isteğinin (PR) açılmasını tamamlar. GitHub, PR'ye başlıktan sonra bulunan bir sayı ve bir kare işaret atar. Geri bildirimi kontrol etmek için bu sayfaya dönün (veya size e-postayla GitHub bildirimleri gönderildiyse, PR ile ilgili herhangi bir etkinlik hakkında bilgilendiren e-postalar alacaksınız). Düzenleme şimdi, ekibin AAPS için ana belgelere geçmeden önce gözden geçireceği ve potansiyel olarak geri bildirimde bulunacağı bir PR listesinde olacak! PR'nin ilerlemesini kontrol etmek isterseniz, GitHub hesabınızın sağ üst köşesindeki zil logosuna tıklayıp tüm PR'lerinizi görebilirsiniz.
+7. Bu, bir çekme isteğinin (PR) açılmasını tamamlar. GitHub, PR'a bir numara verir. Bu numara başlıktan sonra, bir kare işaretinin (#) arkasında görünür. Geri bildirimi kontrol etmek için bu sayfaya dönün (veya size e-postayla GitHub bildirimleri gönderildiyse, PR ile ilgili herhangi bir etkinlik hakkında bilgilendiren e-postalar alacaksınız). Düzenleme şimdi, ekibin AAPS için ana belgelere geçmeden önce gözden geçireceği ve potansiyel olarak geri bildirimde bulunacağı bir PR listesinde olacak! PR'nin ilerlemesini kontrol etmek isterseniz, GitHub hesabınızın sağ üst köşesindeki zil logosuna tıklayıp tüm PR'lerinizi görebilirsiniz.
 
 ![PR tracking](../images/PR7.png)
 
-Not: Çatalınız (fork) ve şubeniz (branch) hala kendi kişisel GitHub hesabınızda kalıyor olacak. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Gelecekteki düzenlemeler için, bu prosedürü izlerseniz, düzenlemeler her zaman AndroidAPSdocs depolarının güncellenmiş bir sürümüyle başlayacaktır. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. İnsanlar depolarını güncellemeyi unutmaya meyilli olduğundan, "karşılaştırma" yapmaya alışana kadar yukarıda özetlenen PR sürecini kullanmanızı öneririz.
+Not: Fork'unuz ve dalınız (branch) kendi kişisel GitHub hesabınızda kalmaya devam eder. PR'nizin birleştiğine dair bir bildirim aldıktan sonra, işiniz bittiyse şubenizi silebilirsiniz (Adım 7'in bildirim alanı, kapatıldığında veya birleştiğinde şubeyi silmek için bir bağlantı sağlayacaktır). Gelecekteki düzenlemeler için, bu prosedürü izlerseniz, düzenlemeler her zaman AndroidAPSdocs depolarının güncellenmiş bir sürümüyle başlayacaktır. PR başlatmak için başka bir yöntem kullanmayı seçerseniz (örneğin, başlangıç noktası olarak fork'unuzun master dalından başlayarak düzenleme), önce bir "compare" (karşılaştırma) yaparak ve fork'unuzu son güncellemenizden bu yana gelen tüm güncellemeleri birleştirerek deponuzun güncel olduğundan emin olmanız gerekir. İnsanlar depolarını güncellemeyi unutmaya meyilli olduğundan, "karşılaştırma" yapmaya alışana kadar yukarıda özetlenen PR sürecini kullanmanızı öneririz.
 
 (edit-the-docs-code-syntax)=
 
-## Sözdizimi kodları
+## Code syntax
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+Dokümantasyon sayfaları için Markdown kullanıyoruz. The files have got the suffix ".md".
 
-Markdown is a very simple text formatting language which separates text content from text formatting.
+Markdown, metin içeriğini metin biçimlendirmesinden ayıran çok basit bir metin biçimlendirme dilidir.
 
-The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
+Yazar yalnızca, örneğin bir başlığı 1. düzey başlık olarak işaretler; Markdown işlemcisi de işleme sırasında bu başlığı HTML'de göstermek için gereken HTML kodunu oluşturur.
 
-The idea behind this is that
+Bunun arkasındaki fikir şudur:
 
-- the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
-- you can generate several output formats from one markdown file.
+- yazar önce biçimlendirmeyi değil, metni düşünmelidir,
+- Markdown metni, örneğin Microsoft Word gibi tescilli araçlar yerine farklı Markdown araçları arasında paylaşılabilir ve
+- tek bir Markdown dosyasından birkaç farklı çıktı biçimi oluşturabilirsiniz.
 
-Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
+Markdown %100 sabit bir standart değildir. Standarda olabildiğince yakın kalmaya çalışıyoruz, böylece
 
-- stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+- Markdown araçlarının ve Markdown SaaS hizmetlerinin gelecekteki gelişimi gerektirdiğinde veya zorladığında Markdown araçlarını değiştirmek için esnek kalabilelim ve
+- İngilizce metni Fransızca veya Almanca gibi bir hedef dile çevirmek için çeviri hizmetlerini kullanabilelim. Bu hizmetler Markdown ile çalışabilir, ancak karmaşık biçimlendirme kodlarıyla çalışamaz; çünkü içeriği düzenden ayıramazlar ve bu ciddi sorunlara yol açabilir.
 
-### Headlines
+### Başlıklar
 
 - Headline 1: `# headline`
 - Headline 2: `## headline`
 - Headline 3: `### headline`
-- Headline 4: `#### headline`
+- Başlık 4: `#### başlık`
 
-We try to avoid further levels of headlines.
+Daha fazla başlık düzeyi kullanmaktan kaçınmaya çalışıyoruz.
 
-### Text format
+### Metin biçimi
 
-- **bold**: `**text**`
-- *italic*: `*text*`
-- ***bold italic***: `***text***`
+- **kalın**: `**text**`
+- *italik*: `*text*`
+- ***kalın italik***: `***text***`
 
-### Ordered list
+### Numaralı liste
 
     1. first
     1. second
@@ -103,7 +103,7 @@ We try to avoid further levels of headlines.
 2. ikinci
 3. üçüncü
 
-### Unordered list
+### Numarasız liste
 
     - one element
     - another element
@@ -114,16 +114,16 @@ We try to avoid further levels of headlines.
 - başka bir öğe
 - ve başka bir öğe
 
-### Multi level list
+### Çok düzeyli liste
 
 Bir sonraki düzeyi bir öncekinden 4 boşluk daha sağda girintileyerek listelere ilave liste ekleyebilirsiniz.
 
     1. first
     1. second
-    1. third
-      1. one element
+    1. üçüncü
+      1. bir öğe
       1. another element
-      1. and another element
+      1. ve başka bir öğe
     1. four
     1. five
     1. altı
@@ -145,421 +145,421 @@ Görüntüleri dahil etmek için bu işaretleme sözdizimini kullanırsınız.
 
 - images: `![alt text](../images/file.png)`
 
-The type of image should be PNG or JPEG.
+Görselin türü PNG veya JPEG olmalıdır.
 
-Image names should conform to one of the following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Görsel adları aşağıdaki adlandırma kurallarından birine uymalıdır. Örnekte uzantı olarak png kullanıyorum. JPEG kullanırsanız lütfen uzantı olarak jpeg kullanın.
 
-- `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png`; burada xx, bu dosyadaki görseller için benzersiz iki basamaklı bir sayıdır.
+- `filename-image-xx.png`; burada xx, md dosyasının yazarının seçtiği anlamlı bir addır.
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+Görseller İngilizce dilin images klasöründe bulunur ve Crowdin tarafından diğer dillere otomatik olarak aktarılır. Bunun için bir şey yapmanız gerekmez!
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+Şu anda görselleri çevirmiyoruz: İngilizce bilmeyen okurların da anlayabilmesi için görsellerde **mümkün olan en az metin** bulunmalıdır.
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+(make-a-PR-image-size)= Görseller için makul bir boyut kullanın. Görseller bilgisayarda, tablette ve telefonda okunabilir olmalıdır.
 
-- Screenshots from web pages images should be up to **1050 pixels wide**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
-- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
+- Web sayfalarından alınan ekran görüntüleri en fazla **1050 piksel genişliğinde** olmalıdır.
+- Süreç akış diyagramları en fazla **1050 piksel genişliğinde** olmalıdır.
+- Uygulamadan alınan ekran görüntüleri en fazla **500 piksel genişliğinde** olmalıdır. Gerekli değilse görselleri yan yana koymayın.
+- Saatten (**Wear OS**) alınan ekran görüntüleri en fazla **360 piksel genişliğinde** olmalıdır. Daha küçük bir ekran görüntüsünü asla büyütmeyin.
 
 ### Links
 
-#### External links
+#### Harici bağlantılar
 
-External links are links to external web sites.
+Harici bağlantılar, dış web sitelerine giden bağlantılardır.
 
 - external link: `[alt text](www.url.tld)`
 
-#### Internal links to the start of a md file
+#### Bir md dosyasının başına giden dahili bağlantılar
 
-Internal links to pages are links to the start of a md file which is hosted on our own server.
+Sayfalara giden dahili bağlantılar, kendi sunucumuzda bulunan bir md dosyasının başına giden bağlantılardır.
 
 - internal link to .md page: `[alt text](../folder/file.md)`
 
-#### Internal links to named inline references
+#### Adlandırılmış satır içi referanslara giden dahili bağlantılar
 
-Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+Adlandırılmış satır içi referanslara giden dahili bağlantılar, kendi sunucumuzda bulunan bir md dosyasında, bağlantı için referans konmuş herhangi bir noktaya giden bağlantılardır.
 
-Add a named reference at the location in the target md file you want to jump to.
+Hedef md dosyasında, atlamak istediğiniz yere adlandırılmış bir referans ekleyin.
 
 `(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+Adlandırılmış referans, yalnızca bulunduğu md dosyasında değil, tüm AndroidAPSDocs md dosyalarında benzersiz olmalıdır!
 
-Therefore it is a good practice to start with the filename and then the reference name you select.
+Bu nedenle referansa önce dosya adıyla, ardından seçtiğiniz referans adıyla başlamak iyi bir alışkanlıktır.
 
-Use only lowercase letters and hyphenate words.
+Yalnızca küçük harf kullanın ve kelimeleri kısa çizgiyle ayırın.
 
-Then link this reference in the text you are writing with the following kind of link.
+Ardından yazdığınız metinde bu referansa aşağıdaki türde bir bağlantıyla bağlantı verin.
 
-- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Adlandırılmış satır içi referanslara dahili bağlantılar: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### Notlar, uyarılar, katlanabilir notlar
 
-You can add notes and warning boxes to documentation.
+Dokümantasyona not ve uyarı kutuları ekleyebilirsiniz.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Please use these carefully as the documentation should be as easy to read as possible.
+Ayrıca ayrıntılı bilgiler için katlanabilir notlar ekleyebilirsiniz; böylece ayrıntılarla ilgilenmeyen kullanıcılar metni okumaktan vazgeçmez. Dokümantasyon olabildiğince kolay okunmalıdır, bu yüzden bunları dikkatli kullanın.
 
 #### Notes
 
-    ```{admonition} Note headline
+    ```{admonition} Not başlığı
     :class: note
-    This is a note.
+    Bu bir nottur.
     ```
     
 
-```{admonition} Note headline :class: note This is a note.
+```{admonition} Not başlığı :class: note Bu bir nottur.
 
-    <br />#### Warnings
+    <br />#### Uyarılar
     
     ````
-    ```{admonition} Warning
+    ```{admonition} Uyarı
     :class: warning
-    This is a warning.
+    Bu bir uyarıdır.
     
 
-    ```{admonition} Warning headline
+    ```{admonition} Uyarı başlığı
     :class: warning
-    This is a warning.
+    Bu bir uyarıdır.
     ```
     
-    #### Collapsing Notes
+    #### Katlanabilir notlar
     
     
 
-    {admonition} further detailed readings for interested readers
+    {admonition} ilgilenen okurlar için daha ayrıntılı bilgiler
     :class: dropdown
     
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
+    Bu not kutusu katlanmıştır,
+    yani buraya daha uzun içerik ekleyebilirsiniz,
+    ve bu içerik sayfada çok fazla yer kaplamaz.
     
 
 ````
 
-```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
+```{admonition} ilgilenen okurlar için daha ayrıntılı bilgiler :class: dropdown Bu not kutusu katlanmıştır, yani buraya daha uzun içerik ekleyebilirsiniz, ve bu içerik sayfada çok fazla yer kaplamaz.
 
 ```
 
-## Tables
+## Tablolar
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Uzun metinli tablolar kullanmaktan kaçının: içeriği Markdown'da düzenlemek zordur, genellikle telefon ekranının genişliğine sığmazlar ve çeviriden sonra büyük olasılıkla aynı görünmezler.
 
-## Style Guide
+## Yazım kılavuzu
 
-### Contents
+### İçerik
 
-1. English language writing tips
+1. İngilizce yazım ipuçları
 
-2. AAPS-specific writing notes
+2. AAPS'e özel yazım notları
 
-3. Useful references
+3. Faydalı kaynaklar
 
-### ![Image](../images/styleguide01.png) 1\. English language writing tips
+### ![Image](../images/styleguide01.png) 1\. İngilizce yazım ipuçları
 
-#### Use language that is appropriate for the reader
+#### Okuyucuya uygun bir dil kullanın
 
-Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
+Mümkün olan her yerde sade İngilizce kullanın. Bu, anadili İngilizce olmayan okuyuculara yardımcı olur ve AAPS dokümanlarının diğer dillere çevrilmesini de kolaylaştırır. Kullanıcıyla sohbet eder gibi yazın; yazdığınız kişiyle aynı masada karşılıklı oturduğunuzu düşünün. Unutmayın: AAPS kullanıcılarının çoğunun programlama geçmişi yoktur. Diyabetin kendisinde de çok fazla jargon ve kısaltma vardır. Bazı kişilerin yeni tanı almış olabileceğini, diyabet konusunda sizin kadar deneyimli olmayabileceğini veya farklı bir diyabet eğitimi almış olabileceğini aklınızda tutun. Bir kısaltma kullanırsanız, ilk kullanımda terimi tam olarak yazın ve kısaltmayı hemen arkasından parantez içinde verin, örneğin “super micro bolus (SMB)”. Ayrıca sözlüğe bağlantı verin. Okuyucunun bilmeyebileceği teknik terimler de parantez içinde eklenebilir.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+Şunun yerine: *“What causes high postprandial BG peaks in closed loop?”*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+Şunu kullanın: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
-##### Use plain words that everyone can understand
+##### Herkesin anlayabileceği sade kelimeler kullanın
 
-Find an A-Z of alternative words to make your writing easier to understand here:
+Yazınızı daha kolay anlaşılır yapmak için A'dan Z'ye alternatif kelimeler listesini burada bulabilirsiniz:
 
 <https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
 
-#### Privacy/licensing concerns:
+#### Gizlilik ve lisans konuları:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Özellikle video veya ekran görüntüsü kaydediyorsanız, özel bilgilerinizi (API anahtarı, parolalar) göstermediğinizden emin olun. YouTube içeriğinin herkese açık listelenmediğinden ve yalnızca dokümantasyondaki bir bağlantıyla izlenebildiğinden emin olun. Telif hakkı ihlal edilen materyallere (BYODA vb.) dikkat çekmekten kaçının.
 
-#### Keep sentences short, get to the point
+#### Cümleleri kısa tutun, sadede gelin
 
-- Clear writing should have an average sentence length of 15 to 20 words.
+- Açık bir yazıda ortalama cümle uzunluğu 15 ila 20 kelime olmalıdır.
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- Bu, her cümlenin aynı uzunlukta olması gerektiği anlamına gelmez. Etkili yazın. Kısa cümleleri (bir önceki gibi) daha uzun cümlelerle (bunun gibi) karıştırarak yazınızı çeşitlendirin.
 
-- Stick to one main idea in a sentence, plus perhaps one other related point.
+- Bir cümlede tek bir ana fikre ve belki onunla ilgili bir noktaya daha bağlı kalın.
 
-- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way.
+- Özellikle karmaşık bir konuyu açıklarken yine de ara sıra uzun bir cümle yazabilirsiniz. Ancak çoğu uzun cümle bir şekilde bölünebilir.
 
-- Remove weak words: “you can”, “there is/are/were”, “in order to”.
+- Zayıf kelimeleri çıkarın: “you can”, “there is/are/were”, “in order to”.
 
-- Place keywords near the beginning of titles, sentences and paragraphs.
+- Anahtar kelimeleri başlıkların, cümlelerin ve paragrafların başına yakın yerleştirin.
 
-- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+- Görsel kullanın! Mümkün olan her yerde kısa bir diyagram, ekran görüntüsü veya video ekleyin.
 
-#### Don't be afraid to give instructions
+#### Talimat vermekten çekinmeyin
 
-Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
+Emir cümleleri talimat vermenin en hızlı yoludur, ancak yazarlar bazen emir vermekten çekinir ve sadece “do this” (bunu yapın) yerine “you should do this” (bunu yapmalısınız) yazar. Belki de insanlar emirlerin çok sert göründüğünden endişelenir. Bunu çoğu zaman başa 'please' (lütfen) kelimesini ekleyerek çözebilirsiniz. Ancak bir şeyin mutlaka yapılması gerekiyorsa, ‘please’ demeyin; çünkü bu, okuyucuya reddetme seçeneği verir.
 
-Instead of: *“You should just think of it as a complete statement.”*
+Şunun yerine: *“You should just think of it as a complete statement.”*
 
-Use: *“Think of it as a complete statement.”*
+Şunu kullanın: *“Think of it as a complete statement.”*
 
-#### Mostly use active verbs, rather than passive verbs
+#### Çoğunlukla edilgen değil, etken fiiller kullanın
 
-Example of an **active verb**:
+**Etken fiil** örneği:
 
-- *“The pump (subject) delivers (verb) the insulin (object).”*
+- *“The pump (subject) delivers (verb) the insulin (object).” (özne, fiil, nesne)*
 
-“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+Burada “delivers” etken bir fiildir. Cümle, neyin verildiğini söylemeden önce verme işini kimin yaptığını söyler.
 
-Example of a **passive verb**:
+**Edilgen fiil** örneği:
 
-- *“The insulin (subject) is delivered (verb) by the pump (object).”*
+- *“The insulin (subject) is delivered (verb) by the pump (object).” (özne, fiil, nesne)*
 
-*“delivered”* is a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+Burada *“delivered”* edilgen bir fiildir. Etken fiilli cümleye göre özne ve nesne yer değiştirmiştir. “is” ve “by the” kelimelerini eklediğimiz için cümle uzamıştır. Cümleye etken fiille başlamayı da düşünün.
 
-Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+Şunun yerine: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
-Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
+Şunu kullanın: *“Connect your desired pump to the phone through the AAPS pump menu.”*
 
-Passive verbs can cause problems:
+Edilgen fiiller sorunlara yol açabilir:
 
-- They can be confusing.
+- Kafa karıştırıcı olabilirler.
 
-- They often make writing more long-winded.
+- Çoğu zaman yazıyı gereksiz yere uzatırlar.
 
-- They make writing less lively.
+- Yazıyı daha az canlı yaparlar.
 
-##### Good uses of passives
+##### Edilgen yapının iyi kullanımları
 
-There are times when it might be appropriate to use a passive.
+Bazen edilgen yapı kullanmak uygun olabilir.
 
-- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+- Bir şeyi daha az sert yapmak için: 'this bill has not been paid' (edilgen), 'you have not paid this bill' (etken) cümlesinden daha yumuşaktır.
 
-- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+- Suçu üstlenmemek için: 'You made a mistake' (etken) yerine 'a mistake was made' (edilgen).
 
-- When you don't know who or what the doer is - 'the England team has been picked'.
+- İşi kimin veya neyin yaptığını bilmediğinizde: 'the England team has been picked'.
 
-- If it simply sounds better.
+- Sadece kulağa daha iyi geliyorsa.
 
-#### Avoid nominalisations
+#### İsimleştirmelerden kaçının
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
+İsimleştirme (nominalisation), fiziksel bir nesne olmayan bir şeyin adıdır; örneğin bir süreç, teknik veya duygu. İsimleştirmeler fiillerden oluşturulur.
 
-For example:
+Örneğin:
 
-| Verb      | Nominalization |
-| --------- | -------------- |
-| complete  | completion     |
-| introduce | introduction   |
-| provide   | provision      |
-| fail      | failure        |
+| Fiil                   | İsimleştirme           |
+| ---------------------- | ---------------------- |
+| complete (tamamlamak)  | completion (tamamlama) |
+| introduce (tanıtmak)   | introduction (tanıtım) |
+| provide (sağlamak)     | provision (sağlama)    |
+| fail (başarısız olmak) | failure (başarısızlık) |
 
-They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+Çoğu zaman türedikleri fiillerin **yerine** kullanılırlar, ancak sanki aslında hiçbir şey olmuyormuş gibi bir izlenim verebilirler. Çok fazla isimleştirme, yazıyı çok sıkıcı ve ağır yapabilir.
 
-Instead of: *“The implementation of the method has been done by a team.”*
+Şunun yerine: *“The implementation of the method has been done by a team.”*
 
-Use: *“A team has implemented the method.”*
+Şunu kullanın: *“A team has implemented the method.”*
 
-#### Use lists where appropriate
+#### Uygun yerlerde liste kullanın
 
-Lists are excellent for splitting information up. There are two main types of list:
+Listeler bilgiyi bölmek için çok iyidir. İki ana liste türü vardır:
 
-- A continuous sentence with several listed points picked out at the beginning, middle or end.
+- Başında, ortasında veya sonunda birkaç maddenin sıralandığı tek bir sürekli cümle.
 
-- Separate bullet points with an introductory statement.
+- Bir giriş cümlesiyle başlayan ayrı madde işaretleri.
 
-In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+Yukarıdaki madde işaretli listede her madde tam bir cümledir; bu yüzden her biri büyük harfle başlar ve nokta ile biter. Numara veya harf yerine madde işareti kullanın; madde işaretleri okura ek bilgi yüklemeden her maddeye dikkat çeker.
 
-#### Mythbusting
+#### Yanlış inanışlar
 
-- You can start a sentence with **and, but, because, so or however**.
+- İngilizcede bir cümleye **and, but, because, so veya however** ile başlayabilirsiniz.
 
-- You can split infinitives. So you can say **“to boldly go”**.
+- İngilizcede mastarı bölebilirsiniz (split infinitive). Yani **“to boldly go”** diyebilirsiniz.
 
-- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
+- İngilizcede bir cümleyi edatla bitirebilirsiniz. Hatta bu, **we should stand up for** (savunmamız gereken) bir şeydir.
 
-- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+- Ve **siz** daha iyi bir **kelime** bulamıyorsanız, **siz** de aynı **kelimeyi** bir cümlede iki kez kullanabilirsiniz.
 
-#### Optimizing writing style by purpose
+#### Yazım stilini amaca göre iyileştirme
 
-To keep the documentation clear and short, we write different sections of the documentation in different styles.
+Dokümantasyonu açık ve kısa tutmak için, dokümantasyonun farklı bölümlerini farklı stillerde yazıyoruz.
 
-An “explanation” style is used for the introduction, background and knowledge development sections.
+Giriş, arka plan ve bilgi geliştirme bölümlerinde “açıklama” (explanation) stili kullanılır.
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+AAPS'i derleme ve yapılandırma bölümlerinde ve bazı sorun giderme bölümlerinde (çok az açıklamalı) “nasıl yapılır kılavuzu” (how-to guide) stili kullanılır.
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+Bir eğitim (tutorial), öğrencinin temel beceri kazanmasına yardımcı olur. Kullanıcı **yaparak öğrenir**.
 
 ![Image](../images/styleguide02.png)
 
-##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Image](../images/styleguide03.png) Eğitimler (örneğin bir çocuğa yumurta akı çırpmayı öğretmek)
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- anlatıcı doğrudan okura konuşur: In this tutorial **you** will (bu eğitimde siz ...) (we) (biz) bazı nadir durumlarda “we are in this together” (bunu birlikte yapıyoruz) düşüncesini vermek için kullanılabilir
 
-- Future Tense -> to show the final target
+- Gelecek zaman -> son hedefi göstermek için
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Emir kipi -> görevleri yapmak için -> Somut adımlar - soyut kavramlardan kaçının
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Geçmiş zaman -> tamamlanan görevleri göstermek için -> Hızlı ve hemen görülen sonuçlar
 
-- Minimum Explanations -> strict necessary to complete the task - **what and why**
+- En az açıklama -> görevi tamamlamak için kesinlikle gerekli olan - **ne ve neden**
 
-- Ignore options/alternatives/…. No ambiguity
+- Seçenekleri/alternatifleri/… dikkate almayın. Belirsizlik olmasın
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Adım geçişleri: Bir adımı, mantıklı bir akış içinde sonraki adıma geçiren bir cümleyle bitirin. Örnek: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
-- **Tutorial** Title (Level 1 heading)
+- **Eğitim** başlığı (1. düzey başlık)
 
-- Introduction (no heading)
+- Giriş (başlık yok)
 
-- Prerequisites (Level 2 heading)
-
-- Steps:
-
-- Step 1 — Doing the First Thing (Level 2 heading)
-
-- Step 2 — Doing the Next Thing (Level 2 heading)
-
-- Step n — Doing the Last Thing (Level 2 heading)
-
-- Conclusion (Level 2 heading)
-    
-    - **The Language of Tutorials**
-        
-        *In this tutorial, you will…*
-        
-        Describe what the learner will accomplish (note - not: “you will learn…”).
-        
-        *First, do x. Now, do y. Now that you have done y, do z.*
-        
-        No room for ambiguity or doubt.
-        
-        *We must always do x before we do y because… (see Explanation for more details).*
-        
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
-        
-        *The output should look something like this…*
-        
-        Give your learner clear expectations.
-        
-        *Notice that… Remember that…*
-        
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
-        
-        *You have built a secure, three-layer hylomorphic stasis engine…*
-        
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
-
-##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
-
-A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
-
-- HOW-to
-
-- narrator directly talks to the reader: In this guide **you** will
-
-- Future Tense -> to show the final target
-
-- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
-
-- Minimum Explanations -> strict necessary to complete the task -> **what and why**
-
-- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
-
-- **How-to**: Title (Level 1 heading)
-
-- Introduction paragraph
-
-- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+- Ön koşullar (2. düzey başlık)
 
 - Steps:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Adım 1 — İlk işi yapma (2. düzey başlık)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Adım 2 — Sonraki işi yapma (2. düzey başlık)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Adım n — Son işi yapma (2. düzey başlık)
 
-- Conclusion paragraph
+- Sonuç (2. düzey başlık)
     
-    - **The Language of How-To Guides**
+    - **Eğitimlerin dili**
         
-        *This guide shows you how to…*
+        *In this tutorial, you will… (Bu eğitimde şunları yapacaksınız…)*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        Öğrencinin neyi başaracağını anlatın (not: “you will learn…” (öğreneceksiniz…) değil).
         
-        *If you want x, do y. To achieve w, do z.*
+        *First, do x. (Önce x'i yapın.) Now, do y. (Şimdi y'yi yapın.) Now that you have done y, do z. (y'yi yaptığınıza göre şimdi z'yi yapın.)*
         
-        Use conditional imperatives.
+        Belirsizliğe veya şüpheye yer bırakmayın.
         
-        *Refer to the x reference guide for a full list of options.*
+        *We must always do x before we do y because… (see Explanation for more details). (y'den önce her zaman x'i yapmalıyız, çünkü… (ayrıntılar için Açıklama bölümüne bakın).)*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        Eylemleri olabildiğince basit bir dille, en az açıklamayla anlatın. Daha ayrıntılı açıklamaya bağlantı verin.
+        
+        *The output should look something like this… (Çıktı aşağı yukarı şöyle görünmelidir…)*
+        
+        Öğrencinize ne bekleyeceğini açıkça söyleyin.
+        
+        *Notice that… Remember that… (Şuna dikkat edin… Şunu unutmayın…)*
+        
+        Öğrencinize doğru yolda olduğunu anlaması ve yönünü bulması için bol ipucu verin.
+        
+        *You have built a secure, three-layer hylomorphic stasis engine… (Güvenli, üç katmanlı bir hilomorfik durağanlık motoru kurdunuz…)*
+        
+        Öğrencinizin neyi başardığını anlatın (ve ölçülü bir şekilde takdir edin) (not: “you have learned…” (öğrendiniz…) değil)
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Image](../images/styleguide05.png) Nasıl yapılır kılavuzları (örneğin bir yemek tarifi)
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+Nasıl yapılır kılavuzunun amacı, zaten yetkin olan kullanıcının belirli bir görevi doğru şekilde yapmasına yardımcı olmaktır.
 
-- WHY
+- NASIL yapılır
 
-- Start with **About**
+- anlatıcı doğrudan okura konuşur: In this guide **you** will (bu kılavuzda siz ...)
 
-- Provide context, link ALL relevant references
+- Gelecek zaman -> son hedefi göstermek için
 
-- Discuss options/alternatives
+- Koşullu emir kipi -> X'i elde etmek için y'yi yapın -> Somut adımlar - soyut kavramlardan kaçının
 
-- Don’t instruct or provide reference (link to them)
+- En az açıklama -> görevi tamamlamak için kesinlikle gerekli olan -> **ne ve neden**
 
-- State the unknown/moving targets etc…
+- Seçenekleri/alternatifleri/… dikkate almayın. Belirsizlik olmasın, ancak başvuru veya açıklama bölümüne bağlantı verebilirsiniz
 
-- **About** Title (Level 1 heading)
+- **Nasıl yapılır**: Başlık (1. düzey başlık)
 
-- Introduction (no heading)
+- Giriş paragrafı
 
-- Optional Prerequisites (Level 2 heading)
+- İsteğe bağlı ön koşullar (paragraf veya 1'den fazlaysa 2. düzey başlık)
 
-- Subtopic 1 (level 2 heading)
+- Steps:
 
-- Conclusion (Level 2 heading)
+- Adım 1 — İlk işi yapma (2. düzey başlık)
+
+- Adım 2 — Sonraki işi yapma (2. düzey başlık)
+
+- Adım n — Son işi yapma (2. düzey başlık)
+
+- Sonuç paragrafı
     
-    - **The Language of Explanation**
-    
-    *The reason for x is because historically, y…*
-    
-    Explain.
-    
-    *W is better than z, because…*
-    
-    Offer judgements and even opinions where appropriate.
-    
-    *An x in system y is analogous to a w in system z. However…*
-    
-    Provide context that helps the reader.
-    
-    *Some users prefer w (because z). This can be a good approach, but…*
-    
-    Weigh up alternatives.
-    
-    *An x interacts with a y as follows:…*
-    
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    - **Nasıl yapılır kılavuzlarının dili**
+        
+        *This guide shows you how to… (Bu kılavuz size şunu nasıl yapacağınızı gösterir…)*
+        
+        Kılavuzun kullanıcıya çözmeyi gösterdiği sorunu veya görevi açıkça anlatın.
+        
+        *If you want x, do y. (x'i istiyorsanız y'yi yapın.) To achieve w, do z. (w'yi elde etmek için z'yi yapın.)*
+        
+        Koşullu emir cümleleri kullanın.
+        
+        *Refer to the x reference guide for a full list of options. (Seçeneklerin tam listesi için x başvuru kılavuzuna bakın.)*
+        
+        Pratik nasıl yapılır kılavuzunuzu, kullanıcının x ile ilgili yapabileceği her olası şeyle doldurmayın.
 
-### 2\. AAPS-specific writing/updating notes
+##### ![Image](../images/styleguide07.png) Açıklama (örneğin yumurta akının çırpıldığında neden katılaştığının arkasındaki bilim)
 
-#### Author & Editor
+Bir açıklama, okurun bir konuyu anlamasını netleştirir, derinleştirir ve genişletir.
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+- NEDEN
 
-An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+- **Hakkında** ile başlayın
 
-The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help.
+- Bağlam verin, ilgili TÜM kaynaklara bağlantı verin
 
-#### General AAPS points
+- Seçenekleri/alternatifleri tartışın
 
-- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
+- Talimat vermeyin veya başvuru bilgisi vermeyin (onlara bağlantı verin)
 
-- For consistency, use “AAPS” rather than “Android APS”.
+- Bilinmeyenleri, değişen hedefleri vb. belirtin…
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- **Hakkında** başlığı (1. düzey başlık)
 
-### 3\. Useful References
+- Giriş (başlık yok)
+
+- İsteğe bağlı ön koşullar (2. düzey başlık)
+
+- Alt konu 1 (2. düzey başlık)
+
+- Sonuç (2. düzey başlık)
+    
+    - **Açıklamanın dili**
+    
+    *The reason for x is because historically, y… (x'in nedeni, geçmişte y…)*
+    
+    Açıklayın.
+    
+    *W is better than z, because… (W, z'den daha iyidir, çünkü…)*
+    
+    Uygun olduğunda değerlendirme yapın, hatta görüş bildirin.
+    
+    *An x in system y is analogous to a w in system z. (y sistemindeki bir x, z sistemindeki bir w'ye benzer.) However… (Ancak…)*
+    
+    Okura yardımcı olacak bağlam verin.
+    
+    *Some users prefer w (because z). (Bazı kullanıcılar w'yi tercih eder (çünkü z).) This can be a good approach, but… (Bu iyi bir yaklaşım olabilir, ancak…)*
+    
+    Alternatifleri tartın.
+    
+    *An x interacts with a y as follows:… (Bir x, bir y ile şu şekilde etkileşir:…)*
+    
+    Bir şeyin neden öyle davrandığını anlamaya yardımcı olmak için sistemin iç işleyişini açıklayın.
+
+### 2\. AAPS'e özel yazma/güncelleme notları
+
+#### Yazar ve editör
+
+AAPS dokümantasyonunu yazarken veya güncellerken, süreci iki aşamadan oluşuyor gibi düşünün. Bu aşamalar aynı kişi tarafından farklı zamanlarda veya birden fazla kişi tarafından yapılabilir.
+
+Bir **yazar (örneğin siz!)** dokümantasyonun bir bölümünü kısa ve sohbet havasında bir dille yazar/düzenler, ardından editöre verir.
+
+**Editör (örneğin başka bir AAPS kullanıcısı veya çekme isteğini alan kişi)** yazım kılavuzuna uyulup uyulmadığını kontrol eder, bölümü açıklık ve erişilebilirlik için düzenler ve mümkün olduğunca çok kelimeyi çıkarır (özellikle eğitim ve nasıl yapılır bölümlerinde). Metni yüksek sesle okumak yardımcı olabilir.
+
+#### Genel AAPS noktaları
+
+- Glikoz değerleri için her yerde hem mg/dL hem de mmol/L değerini verin (mümkünse bunu ekran görüntüleri için de düşünün).
+
+- Tutarlılık için “Android APS” yerine “AAPS” kullanın.
+
+- Hangi Android Studio/AAPS sürümü için yazdığınızı veya ekran görüntülerinin hangi sürümden alındığını açıkça belirtin.
+
+### 3\. Faydalı kaynaklar
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 

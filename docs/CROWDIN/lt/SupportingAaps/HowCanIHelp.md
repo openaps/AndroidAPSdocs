@@ -1,21 +1,21 @@
 # How to help with AAPS
 
-## AAPS operates entirely on volunteer efforts and has no paid staff.
+## AAPS veikia tik savanorių dėka; jame nėra apmokamų darbuotojų.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Kūrėjai – tai tėvai, prižiūrintys asmenys, artimieji ir diabetu sergantys žmonės, kurie kartu kuria ir tobulina sprendimą labai dažnam poreikiui. Kūrėjai savo laisvą laiką skiria nemokamai. Bet būtų nesąžininga tikėtis, kad jie dar ir patys apmokės papildomas išlaidas, kad toks puikus projektas būtų atvirojo kodo ir nemokamas visiems.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Norėdami visiškai išbandyti naują įrangą, kūrėjai turi turėti atsarginį telefoną ir atsarginę pompą, nes kol sistema neveikia stabiliai, jos negalima naudoti žmogui. Newer models need testing as they become available. Dalis paaukotų pinigų taip pat reikalinga šių priemonių siuntimo kūrėjams į kitas šalis išlaidoms padengti. Kartais taip pat malonu prisidėti prie kūrėjų išlaidų, kad jie galėtų išeiti iš savo tamsių kambarių ir susitikti konferencijose bei renginiuose, kur jų kūrybingi ir analitiški protai galėtų keistis idėjomis.*
 
-## I can write code! How do I participate?
+## Aš moku rašyti kodą! How do I participate?
 
-Yay! Look at the issues, ask in the discord channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Yay! Peržiūrėkite problemas (issues), paklauskite Discord kanale – darbų visada daug! Pradžiai pasirinkite nedidelę užduotį ir sukurkite savo pirmąjį pull request (PR)! :)
 
-## I know the system and can write documentation!
+## Aš žinau sistemą ir galiu rašyti dokumentaciją!
 
 Great, this is a highly appreciated thing and a good way to pay it forward!
 
-* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
+* Discord kanalą apie wiki rasite čia: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* Instrukciją, kaip daryti pakeitimus (commits) angliškoje wiki, rasite čia: [Kaip sukurti PR](../SupportingAaps/HowToEditTheDocs.md). Kitos kalbos tik verčiamos iš anglų kalbos, ir dėl nuoseklumo jų negalima redaguoti tiesiogiai.
 
 ## I do speak multiple languages and want to translate the app or the documentation
 
@@ -23,13 +23,13 @@ If you are translating something for the first time, please start with translati
 
 You are welcome to start as a translator for the documentation in parallel or later.
 
-You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
+Programėlės ir dokumentacijos vertimų būklę pagal kalbas galite peržiūrėti [čia](StateOfTranslations.md).
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* Jei norite versti **programėlę** į kitas kalbas (ačiū), naudokite [crowdin](https://crowdin.com/project/androidaps).
+* Jei norite versti **dokumentaciją** į kitas kalbas (ačiū), naudokite [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Tiesiog užsiregistruokite CROWDIN, pasirinkite savo kalbą, palaukite administratoriaus patvirtinimo ir pradėkite!
 
 ## Are there other ways to help?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+Reikia įvairių įgūdžių: grafinio dizaino, UX dizaino, vertėjų, wiki redaktorių. Arba galite tiesiog padėti kitiems, atsakydami į paprastus klausimus Discord ir Facebook grupėse, kad kūrėjai turėtų laiko ir galėtų sutelkti dėmesį į sudėtingesnius dalykus.

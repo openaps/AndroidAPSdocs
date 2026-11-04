@@ -5,7 +5,7 @@
 :depth: 2
 ```
 
-When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
+When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. De exemplu, **setările de permisiuni** sunt fundamentale pentru configurarea corectă a **AAPS**.
 
 However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimize/change the configuration. Acestea vor fi explicate în următoarea secțiune. Așa că este în regulă dacă săriți peste câteva puncte în asistentul de configurare, le puteți configura mai târziu.
 
@@ -29,17 +29,17 @@ Dacă există o eroare în documentație sau aveți o idee mai bună despre cum 
 
 When the Setup Wizard opens, it greets you with a short welcome message and immediately shows a "**Permissions Required**" panel at the bottom of the screen (see next section).
 
-Once you have granted the permissions, the panel closes and the welcome screen shows a "**Next**" button. Press "**NEXT**" to continue:
+Once you have granted the permissions, the panel closes and the welcome screen shows a "**Next**" button. Apăsați „**URMĂTOR**” pentru a continua:
 
 ![Bine ați venit](../images/setup-wizard/Wizard-Welcome.png)
 
 ## Permisiunile necesare
 
-**AAPS** needs a few permissions to operate correctly. The Wizard groups them on a single "**Permissions Required**" panel, each with its own "**Grant**" button. Grant them one by one — the icon next to each item turns into a tick once it is done.
+**AAPS** are nevoie de câteva permisiuni pentru a funcționa corect. Asistentul le grupează într-un singur panou „**Permisiuni necesare**”, fiecare cu propriul buton „**Acordați**”. Grant them one by one — the icon next to each item turns into a tick once it is done.
 
 ![Permissions](../images/setup-wizard/Wizard-Permissions.png)
 
-### Battery optimization
+### Optimizarea bateriei
 
 Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
 
@@ -47,7 +47,7 @@ However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings
 
 Press "**Grant**" next to "**Battery Optimization**", then select "**Allow**" on the "Let app always run in background?" dialog:
 
-![Allow Background](../images/setup-wizard/Wizard-Permissions-Battery.png)
+![Permiteți rularea în fundal](../images/setup-wizard/Wizard-Permissions-Battery.png)
 
 (SetupWizard-StoragePermission)=
 
@@ -55,7 +55,7 @@ Press "**Grant**" next to "**Battery Optimization**", then select "**Allow**" on
 
 **AAPS** needs to store its settings and log information on the permanent storage of your smartphone. Stocarea permanentă înseamnă că va fi disponibilă chiar și după repornirea telefonului dumneavoastră inteligent. Alte informații se pierd, deoarece nu sunt salvate în spațiul de stocare permanent.
 
-Press "**Grant**" next to "**AAPS Directory**". This opens the file system on your phone and lets you choose where **AAPS** stores its information.
+Apăsați „**Acordați**” lângă „**Dosar AAPS**”. This opens the file system on your phone and lets you choose where **AAPS** stores its information.
 
 ```{tip}
 Choosing the default AAPS directory is recommended.</br>
@@ -64,11 +64,11 @@ Do **not** select a subdirectory of AAPS.
 
 The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it and choose "**USE THIS FOLDER**":
 
-![Select folder](../images/setup-wizard/Wizard-Permissions-Directory.png)
+![Selectați dosarul](../images/setup-wizard/Wizard-Permissions-Directory.png)
 
 Confirm with "**ALLOW**" that you wish to grant access to **AAPS** to the selected directory:
 
-![Allow access to the folder](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
+![Permiteți accesul la dosar](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
 
 ### Notificări
 
@@ -78,27 +78,27 @@ While it is a good feature to disable notifications _e.g._ from social media app
 
 Press "**Grant**" next to "**Notifications**" and select "**Allow**" at the system prompt:
 
-![Allow notifications](../images/setup-wizard/Wizard-Permissions-Notifications.png)
+![Permiteți notificările](../images/setup-wizard/Wizard-Permissions-Notifications.png)
 
-### Alarms and reminders
+### Alarme și mementouri
 
 On **Android 14 and newer**, **AAPS** needs the "**Alarms and reminders**" permission so that alarms can wake the screen while **AAPS** is in the background, and so that reminders (for example from an **Automation**) ring on time.
 
-This item is only shown while it is needed. Once **AAPS** is excluded from battery optimization (see above), Android grants exact alarms automatically and the item disappears. If it is still listed, press "**Grant**" next to "**Alarms and reminders**". This opens a system settings screen for **AAPS**; enable the toggle and return to **AAPS**. On Android 13 and older this item does not appear and no action is needed.
+Acest element este afișat doar cât timp este necesar. Once **AAPS** is excluded from battery optimization (see above), Android grants exact alarms automatically and the item disappears. If it is still listed, press "**Grant**" next to "**Alarms and reminders**". This opens a system settings screen for **AAPS**; enable the toggle and return to **AAPS**. On Android 13 and older this item does not appear and no action is needed.
 
 Once all the permissions show a tick (three, or four on Android 14 and newer), the "**Permissions Required**" panel closes by itself and you can press "**NEXT**" on the welcome screen to continue.
 
 (setup-wizard-bluetooth-battery-optimisation)=
-### Bluetooth battery optimization
+### Optimizarea bateriei pentru Bluetooth
 
 ```{admonition} Extra Android setting, not part of the Wizard
 :class: note
 The following is additional Android configuration done outside of the Setup Wizard. It is not one of the "Grant" buttons above, but it is important for a reliable pump connection.
 ```
 
-Newer versions of Android have added battery optimization to the system Bluetooth application too.
+Versiunile mai noi de Android au adăugat optimizarea bateriei și pentru aplicația de sistem Bluetooth.
 
-As well as disabling battery optimization for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
+Pe lângă dezactivarea optimizării bateriei pentru **AAPS**, probabil va trebui să o dezactivați și pentru aplicația de sistem Bluetooth. Failure to do this may lead to pump connection dropouts and issues.
 
 ***NOTE: The xDrip documentation covers how to do this here: [xDrip documentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
 
@@ -122,7 +122,7 @@ Follow these steps on Android 16; other versions will vary slightly from the pro
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. Pe Android 12 apăsați pe `Battery` (Baterie), pe Android 13+ apăsați pe `App battery usage` (Utilizarea bateriei de către aplicație).
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
@@ -144,29 +144,29 @@ If you understand and agree, please press the "**I UNDERSTAND AND AGREE**" butto
 
 ![EULA](../images/setup-wizard/Wizard-EULA.png)
 
-A "**Next**" button appears once you have agreed. Press "**NEXT**".
+A "**Next**" button appears once you have agreed. Apăsați „**URMĂTOR**”.
 
-The next screen, "**Permissions**", lists the permissions again. They should all show a tick, as you granted them at the start. If one is missing, press "**Grant**" next to it. Press "**NEXT**" to continue:
+The next screen, "**Permissions**", lists the permissions again. They should all show a tick, as you granted them at the start. Dacă lipsește una, apăsați „**Acordați**” lângă ea. Apăsați „**URMĂTOR**” pentru a continua:
 
-![Permissions granted](../images/setup-wizard/Wizard-Permissions-Granted.png)
+![Permisiuni acordate](../images/setup-wizard/Wizard-Permissions-Granted.png)
 
 ## Parola principală
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ the access token for your Nightscout server) it is encrypted by a password you set here.
 
-The Wizard shows "**Password not set**". Press "**Set**":
+Asistentul afișează „**Parola nu a fost setată**”. Apăsați „**Setați**”:
 
-![Master password not set](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
+![Parola principală nu este setată](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
 
-This opens the "**Protection**" screen. Press "**Master password**" (shown as "Password not set"):
+Se deschide ecranul „**Protecție**”. Apăsați „**Parola principală**” (afișată ca „Parola nu a fost setată”):
 
 ![Protecție](../images/setup-wizard/Wizard-Protection.png)
 
-Enter the same password in both fields and press "**OK**":
+Introduceți aceeași parolă în ambele câmpuri și apăsați „**OK**”:
 
 ![Parolă](../images/setup-wizard/Wizard-Password.png)
 
-Go back with the arrow in the top left corner. The Wizard now shows "**Password set!**":
+Reveniți cu săgeata din colțul din stânga sus. Asistentul afișează acum „**Parola a fost setată!**”:
 
 ![Master password set](../images/setup-wizard/Wizard-MasterPassword-Set.png)
 
@@ -175,25 +175,25 @@ Go back with the arrow in the top left corner. The Wizard now shows "**Password 
 Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. Calculatorul sau telefonul dumneavoastră inteligent se pot defecta și este posibil să nu aveți nicio copie. Dacă uitați parola principală, vă poate fi dificil să vă recuperați configurația profilului și să progresați prin **Obiective** la o dată ulterioară.
 ```
 
-When you are done, press "**NEXT**" to go to the next screen.
+Când ați terminat, apăsați „**URMĂTOR**” pentru a trece la ecranul următor.
 
 (setup-wizard-import-settings)=
-## Importă setările
+## Importați setările
 
 This screen is only shown when **AAPS** finds settings exported earlier in the **AAPS** directory ("Stored settings found"), for example when you reinstall the app or move to a new phone.
 
 - To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md).
 - To start with a new configuration, press "**NEXT**" and continue with the Wizard.
 
-![Importă setările](../images/setup-wizard/Wizard-ImportSettings.png)
+![Importați setările](../images/setup-wizard/Wizard-ImportSettings.png)
 
-## Units (mg/dL <-> mmol/L)
+## Unități (mg/dL <-> mmol/L)
 
-Please select if your glucose values are in mg/dL or mmol/L, then press the "**NEXT**" button:
+Selectați dacă valorile glicemiei sunt în mg/dL sau mmol/L, apoi apăsați butonul „**URMĂTOR**”:
 
 ![Unități](../images/setup-wizard/Wizard-Units.png)
 
-## Display Settings
+## Setări afișare
 
 Here you set the "**LOW mark**" and "**HIGH mark**" for the sensor glucose display. Glucose values between these two marks are shown as "in range". You can leave the default values (72 and 180 mg/dL) for now, and edit them later.
 
@@ -205,47 +205,47 @@ Intervalul dumneavoastră de analizare a TIR (timpul în interval) este configur
 
 Adjust the marks with the "−" / "+" buttons if needed, then press the "**NEXT**" button:
 
-![Display Settings](../images/setup-wizard/Wizard-Display.png)
+![Setări afișare](../images/setup-wizard/Wizard-Display.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-## Communication
+## Comunicare
 
 The "**Communication**" screen lists the plugins used to upload, synchronize and broadcast your data:
 
-- **SMS Communicator** – remote control of **AAPS** using SMS commands
+- **Comunicator SMS** – controlul de la distanță al **AAPS** prin comenzi SMS
 - **NSClientV3** – synchronizes your data with Nightscout using the v3 API
-- **Tidepool** – uploads data to Tidepool
+- **Tidepool** – încarcă datele în Tidepool
 - **xDrip** – sends data to xDrip
 - **Open Humans** – upload and donate your diabetes data to scientific projects
-- **Wear** – monitor and control **AAPS** from a WearOS watch
+- **Ceas** – monitorizați și controlați **AAPS** de pe un ceas WearOS
 - **External Companion Apps** – data broadcasting to various external apps
 - **Garmin** – connection to a Garmin device
 
-![Communication](../images/setup-wizard/Wizard-Communication.png)
+![Comunicare](../images/setup-wizard/Wizard-Communication.png)
 
-Scroll down to see the rest of the list:
+Derulați în jos pentru a vedea restul listei:
 
 ![Communication more](../images/setup-wizard/Wizard-Communication-More.png)
 
 You could configure several of these now, but for the first run we will just focus on the reporting server. If you are not able to set it up at the moment, skip it for now — you can configure it later.
 
-In this example we use Nightscout as reporting server. Tick the box on the right of "**NSClientV3**" to enable it. Pentru Tidepool este chiar mai simplu, deoarece aveți nevoie doar de informațiile dumneavoastră personale de autentificare.
+În acest exemplu folosim Nightscout ca server de raportare. Bifați căsuța din dreapta lui „**NSClientV3**” pentru a-l activa. Pentru Tidepool este chiar mai simplu, deoarece aveți nevoie doar de informațiile dumneavoastră personale de autentificare.
 
-Once enabled, press "**Settings**" below NSClientV3 to configure it:
+După activare, apăsați „**Setări**” sub NSClientV3 pentru a-l configura:
 
 ![NSClientV3](../images/setup-wizard/Wizard-Communication-NSClient.png)
 
-Here you configure the Nightscout reporting server. The NSClientV3 settings are shown as one scrollable page:
+Aici configurați serverul de raportare Nightscout. The NSClientV3 settings are shown as one scrollable page:
 
-![NSClientV3 settings](../images/setup-wizard/Wizard-NSClientV3.png)
+![Setări NSClientV3](../images/setup-wizard/Wizard-NSClientV3.png)
 
-Press "**Nightscout URL**" and enter your personal Nightscout server address (the URL you set up yourself, or were given by your service provider). Confirm with "**OK**".
+Press "**Nightscout URL**" and enter your personal Nightscout server address (the URL you set up yourself, or were given by your service provider). Confirmați cu „**OK**”.
 
-Press "**Nightscout access token**" and enter the access token for your Nightscout server. Fără acest jeton, accesul nu va funcționa. If you don't have it yet, please check the documentation for setting up the reporting server.
+Press "**Nightscout access token**" and enter the access token for your Nightscout server. Fără acest jeton, accesul nu va funcționa. Dacă nu îl aveți încă, consultați documentația pentru configurarea serverului de raportare.
 
 Leave "**Use websockets**" enabled for real-time communication with Nightscout.
 
-The remaining sections can be left at their defaults for now. They are described here so you know where to find them later:
+Celelalte secțiuni pot rămâne deocamdată la valorile implicite. They are described here so you know where to find them later:
 
 **Alarm options** — Nightscout alarms, announcements and stale-data thresholds. Leave the switches off for now; we only open them so you are aware of the options.
 
@@ -255,37 +255,37 @@ The remaining sections can be left at their defaults for now. They are described
 
 **Advanced Settings** — enable "**Log app start event**" if you want to see in Nightscout when the app restarts (useful for caregivers). Keep "**Create announcements from errors**" and "**Create announcements from carbs required**" enabled. Leave "**Use slow sync**" off; you would only use it if the Nightscout server is slow to process a large amount of data.
 
-![Advanced settings](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
+![Setări avansate](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
 
-Go back to the list of plugins and press "**NEXT**" to go to the next screen.
+Reveniți la lista de module și apăsați „**URMĂTOR**” pentru a trece la ecranul următor.
 
-## Client control
+## Control client
 
 From **AAPS** version 4, client devices running **AAPSClient** can be **paired** with this phone (the **master**) and control it with signed commands sent over Nightscout. This is the new recommended way to control **AAPS** remotely — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for the full explanation and setup.
 
 There is nothing you have to configure on this screen now; you can pair clients at any time later from **Manage → Authorized clients**. There you add a client with a **QR code** (it sets up Nightscout on the client too) or with a **PIN**, and give it a **role**.
 
 - "**Authorized clients**" — manage the paired client devices allowed to control this master.
-- "**Nightscout data acceptance**" — accepting treatments and data entered directly in Nightscout (the old, less secure way) is now turned off by default. Only open these settings if you still need it, _e.g._ to enter data through Nightscout or third-party apps.
+- „**Acceptarea datelor Nightscout**” — acceptarea tratamentelor și a datelor introduse direct în Nightscout (metoda veche, mai puțin sigură) este acum dezactivată implicit. Only open these settings if you still need it, _e.g._ to enter data through Nightscout or third-party apps.
 
 When client control is already on — always in [Simple Mode](#preferences-simple-mode) — this phone is in [hardened mode](#client-master-control-hardened-mode): it takes changes only from paired clients, so the screen explains hardened mode instead of offering the "**Nightscout data acceptance**" settings.
 
-![Client control](../images/setup-wizard/Wizard-ClientControl.png)
+![Control client](../images/setup-wizard/Wizard-ClientControl.png)
 
 "**Nightscout data acceptance**" opens the "**Synchronization**" settings, where each kind of data received from Nightscout has its own switch:
 
-![Nightscout data acceptance settings](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
+![Setările pentru acceptarea datelor Nightscout](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
 
-Press "**NEXT**" to go to the next screen.
+Apăsați „**URMĂTOR**” pentru a trece la ecranul următor.
 
 (setup-wizard-instance-name)=
-## Who is using this phone?
+## Cine folosește acest telefon?
 
-Here you enter the name of the person using this phone. It tells this **AAPS** instance apart from others in reports and when synchronizing, for example if two children in your family use **AAPS**. It is also used in the names of exported settings files and shown on the watch.
+Aici introduceți numele persoanei care folosește acest telefon. It tells this **AAPS** instance apart from others in reports and when synchronizing, for example if two children in your family use **AAPS**. It is also used in the names of exported settings files and shown on the watch.
 
 Poate fi orice. You can change it later in **Settings → General → Instance name**.
 
-Press "**NEXT**" to go to the next screen.
+Apăsați „**URMĂTOR**” pentru a trece la ecranul următor.
 
 ![Nume](../images/setup-wizard/Wizard-Name.png)
 
@@ -305,17 +305,17 @@ After setting these values, press "**NEXT**" to go to the next screen:
 
 Here you configure the insulin used in your pump. New insulin profiles require a **DIA of at least 5 h**.
 
-Press the "**Insulin**" button to open the insulin editor:
+Apăsați butonul „**Insulină**” pentru a deschide editorul de insulină:
 
 ![Insulină](../images/setup-wizard/Wizard-Insulin.png)
 
 In the editor you can give the insulin a **nickname** and set its **Peak** (in minutes) and **DIA** (in hours). The quickest way is to load a preset with "**Load peak from**" — choose **Novorapid**, **Fiasp** or **Lyumjev** — and the peak is filled in for you. The graph at the bottom previews the resulting insulin activity curve.
 
-![Insulin editor](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
+![Editorul de insulină](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
 
 Pick the preset that matches your insulin, for example **Fiasp**:
 
-![Insulin Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
+![Insulina Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
 
 ```{admonition} Use your insulin brand's preset peak
 :class: danger
@@ -331,7 +331,7 @@ If a paired client (_e.g._ another phone) has changed the insulin configuration,
 
 ![Insulin changed](../images/setup-wizard/Wizard-Insulin-Changed.png)
 
-Press the save icon (top right), then press "**NEXT**" to go to the next screen.
+Apăsați pictograma de salvare (dreapta sus), apoi apăsați „**URMĂTOR**” pentru a trece la ecranul următor.
 
 ## Sursa glicemiei
 
@@ -341,11 +341,11 @@ Many sources are available — scroll through the list and select the one you us
 
 ![Sursă valoare glicemie](../images/setup-wizard/Wizard-BGSource.png)
 
-Once you select a source, its card expands and shows two buttons: "**Settings**" to adjust how the data is received, and "**Open plugin**" to open the source's own screen. In the example below, **BYODA** is selected. Some sources have nothing to configure at this stage, so you can usually go straight to the next screen:
+Once you select a source, its card expands and shows two buttons: "**Settings**" to adjust how the data is received, and "**Open plugin**" to open the source's own screen. În exemplul de mai jos este selectat **BYODA**. Some sources have nothing to configure at this stage, so you can usually go straight to the next screen:
 
 ![BG Source settings](../images/setup-wizard/Wizard-BGSource-Settings.png)
 
-After making your selection, press "**NEXT**" to go to the next screen.
+După ce ați făcut selecția, apăsați „**URMĂTOR**” pentru a trece la ecranul următor.
 
 (setup-wizard-profile)=
 ## Profil
@@ -360,16 +360,16 @@ An accurate profile is necessary to control the safe action of **AAPS**.
 
 It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+If a robot has an incorrect input it will fail - consistently. **AAPS** poate lucra doar cu informațiile pe care le primește. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
 ```
 
-Press the "**Profile**" button to open the profile editor:
+Apăsați butonul „**Profil**” pentru a deschide editorul de profil:
 
 ![Profil](../images/setup-wizard/Wizard-Profile.png)
 
-The editor opens empty ("No records available"). Press the "**+**" button at the bottom to create a new profile:
+Editorul se deschide gol („Nicio înregistrare disponibilă”). Apăsați butonul „**+**” din partea de jos pentru a crea un profil nou:
 
-![Profile empty](../images/setup-wizard/Wizard-Profile-Empty.png)
+![Profil gol](../images/setup-wizard/Wizard-Profile-Empty.png)
 
 Puteți avea mai multe profiluri pe termen lung, dacă este necesar. Noi creăm doar unul aici.
 
@@ -382,15 +382,15 @@ It is not intended to be an accurate profile or something very well optimized, b
 Don't use it for actually looping!
 ```
 
-The new profile (for example "**LocalProfile1**") has four tabs: **IC**, **ISF**, **BAS** and **TARG**. Press the pencil next to the profile name to rename it. Fill in every tab — a tab stays red and shows an error message until it contains valid values:
+The new profile (for example "**LocalProfile1**") has four tabs: **IC**, **ISF**, **BAS** and **TARG**. Apăsați creionul de lângă numele profilului pentru a-l redenumi. Completați fiecare filă — o filă rămâne roșie și afișează un mesaj de eroare până când conține valori valide:
 
-![New profile with errors](../images/setup-wizard/Wizard-Profile-New-Error.png)
+![Profil nou cu erori](../images/setup-wizard/Wizard-Profile-New-Error.png)
 
 Press "**IC**" and enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values. Use the "**+**" button to add more time blocks:
 
 ![IC](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Press "**ISF**" and enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
+Apăsați „**ISF**” și introduceți [valorile ISF](#your-aaps-profile-insulin-sensitivity-factor):
 
 ![ISF](../images/setup-wizard/Wizard-Profile-ISF.png)
 
@@ -398,19 +398,19 @@ Press "**BAS**" and enter your [basal values](#your-aaps-profile-basal-rates):
 
 ![BAS](../images/setup-wizard/Wizard-Profile-BAS.png)
 
-Press "**TARG**" and enter your blood sugar target values.
+Apăsați „**ȚINTĂ**” și introduceți valorile țintă ale glicemiei.
 
 For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
 
 Mai târziu, pentru bucla închisă, veți avea, în general, o singură valoare pentru partea de sus și de jos. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
 
-![TARG](../images/setup-wizard/Wizard-Profile-TARG.png)
+![ȚINTĂ](../images/setup-wizard/Wizard-Profile-TARG.png)
 
-When all four tabs are valid, the **save icon** (top right) becomes active. Press it to save the profile:
+Când toate cele patru file sunt valide, **pictograma de salvare** (dreapta sus) devine activă. Apăsați-o pentru a salva profilul:
 
-![Save icon](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
+![Pictograma de salvare](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
 
-Close the editor with the "**X**" in the top left corner. The profile summary then shows its name, its total daily basal (∑), the units and the IC and ISF values with their graphs:
+Închideți editorul cu „**X**” din colțul din stânga sus. The profile summary then shows its name, its total daily basal (∑), the units and the IC and ISF values with their graphs:
 
 ![Salvați](../images/setup-wizard/Wizard-Profile-Save.png)
 
@@ -419,15 +419,15 @@ Close the editor with the "**X**" in the top left corner. The profile summary th
 You can have several profiles defined, but only one activated profile running at any given time.
 ```
 
-Press the "**▶**" (activate) button at the bottom right. The "**Activate**" screen opens. As no insulin is in use yet, it first asks you to select the insulin you are using, so that the profile switch can record it. The "**Activate**" button stays greyed out until you do:
+Apăsați butonul „**▶**” (activare) din dreapta jos. Se deschide ecranul „**Activați**”. As no insulin is in use yet, it first asks you to select the insulin you are using, so that the profile switch can record it. Butonul „**Activați**” rămâne gri până când faceți acest lucru:
 
-![Select the insulin first](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
+![Selectați mai întâi insulina](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
 
-Press "**Select Insulin**" and choose the insulin you configured earlier. Leave the percentage at 100 % and press "**Activate**":
+Apăsați „**Selectați insulina**” și alegeți insulina pe care ați configurat-o mai devreme. Leave the percentage at 100 % and press "**Activate**":
 
-![Activate](../images/setup-wizard/Wizard-Profile-Activate.png)
+![Activați](../images/setup-wizard/Wizard-Profile-Activate.png)
 
-A profile switch dialog appears. In this case let it stay as preset and confirm with "**OK**":
+Apare un dialog de schimbare de profil. In this case let it stay as preset and confirm with "**OK**":
 
 ```{admonition} Profile switch dialog
 :class: note
@@ -436,17 +436,17 @@ You will learn later how to use this general dialog to handle situations like il
 
 ![Switch](../images/setup-wizard/Wizard-Profile-Switch.png)
 
-Your profile is now active. Press "**NEXT**" to go to the next screen.
+Your profile is now active. Apăsați „**URMĂTOR**” pentru a trece la ecranul următor.
 
 ## Pompa de insulină
 
-Now you select your insulin pump. Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
+Acum selectați pompa de insulină. Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
 
 Scroll the list and select your pump. In this example we use the "**Virtual Pump**", which is useful while you are still learning and have not connected a real pump yet:
 
 ![Pompă](../images/setup-wizard/Wizard-Pump.png)
 
-Many pumps are supported — scroll down to find yours:
+Sunt acceptate multe pompe — derulați în jos pentru a o găsi pe a dumneavoastră:
 
 ![Pump more](../images/setup-wizard/Wizard-Pump-More.png)
 
@@ -454,11 +454,11 @@ When you select a real pump, **AAPS** asks for a confirmation, because it will c
 
 ![Confirmation when selecting a hardware pump](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
+Dacă pompa selectată comunică prin Bluetooth, **AAPS** cere permisiunea de a se conecta la dispozitivele din apropiere după ce terminați asistentul (vedeți [Permisiunea Bluetooth](#setup-wizard-bluetooth-permission)).
 
 If you have already set up your profile and know how to connect your pump, feel free to connect it now. Otherwise leave it on **Virtual Pump** for the moment — you can change it anytime, or leave the Setup Wizard using the arrow in the top left corner and let **AAPS** first show you some blood glucose values.
 
-Press "**NEXT**" to go to the next screen.
+Apăsați „**URMĂTOR**” pentru a trece la ecranul următor.
 
 ## Algoritm APS
 
@@ -471,15 +471,15 @@ SMB is disabled at the start because the SMB feature reacts faster to a blood su
 OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
 ```
 
-Select "**OpenAPS SMB**", then press "**Settings**" to see the details:
+Selectați „**OpenAPS SMB**”, apoi apăsați „**Setări**” pentru a vedea detaliile:
 
 ![APS](../images/setup-wizard/Wizard-APS.png)
 
-The only option here is "**Use dynamic sensitivity**". Leave it off and change nothing for now — just read the text.
+Singura opțiune de aici este „**Utilizați sensibilitatea dinamică**”. Lăsați-o dezactivată și nu schimbați nimic deocamdată — doar citiți textul.
 
 Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
 
-Go back and press "**NEXT**" to go to the next screen:
+Reveniți și apăsați „**URMĂTOR**” pentru a trece la ecranul următor:
 
 ![APS settings](../images/setup-wizard/Wizard-APS-Settings.png)
 
@@ -493,29 +493,29 @@ If you press "**Settings**" you can review the absorption settings; the defaults
 
 ![Sensitivity settings](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
 
-Press "**NEXT**" to go to the next screen.
+Apăsați „**URMĂTOR**” pentru a trece la ecranul următor.
 
 ## Începeți Obiectivul 1
 
-You are now entering the Objectives — the qualification for access to further **AAPS** features.
+Acum intrați în Obiective — calificarea pentru accesul la alte funcții **AAPS**.
 
-Press "**Open Objectives**":
+Apăsați „**Deschideți obiectivele**”:
 
 ![Obiective](../images/setup-wizard/Wizard-Objectives.png)
 
 Aici începem Obiectivul 1, chiar dacă deocamdată configurația noastră nu este complet pregătită să finalizeze cu succes acest obiectiv. Dar acesta este începutul.
 
-Press the "**Start**" button of **Objective 1**:
+Apăsați butonul „**Start**” al **Obiectivului 1**:
 
 ![Objectives list](../images/setup-wizard/Wizard-Objectives-List.png)
 
-The objective expands to show its individual checks. You can see that you already made some progress, while other items are still to be done:
+The objective expands to show its individual checks. Puteți vedea că ați făcut deja unele progrese, în timp ce alte elemente mai trebuie făcute:
 
 ![Objective started](../images/setup-wizard/Wizard-Objectives-Started.png)
 
 Go back, then press "**FINISH**" to complete the Setup Wizard:
 
-![Finish](../images/setup-wizard/Wizard-Objectives-Finish.png)
+![Finalizați](../images/setup-wizard/Wizard-Objectives-Finish.png)
 
 After pressing "**FINISH**" you arrive at the main screen of **AAPS**. A "**Notification**" panel may open with information messages, for example about the profile switch you just made — press "**Dismiss**" below each message to clear it.
 
@@ -528,7 +528,7 @@ If you select a pump that connects over Bluetooth (for example **Omnipod Dash**)
 
 ![Bluetooth needed](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
 
-Once the Setup Wizard is finished, the **AAPS** main screen shows a "**Permissions Required**" panel. The other permissions are already granted; press "**Grant**" next to "**Bluetooth**":
+Once the Setup Wizard is finished, the **AAPS** main screen shows a "**Permissions Required**" panel. Celelalte permisiuni sunt deja acordate; apăsați „**Acordați**” lângă „**Bluetooth**”:
 
 ![Bluetooth Grant](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
 

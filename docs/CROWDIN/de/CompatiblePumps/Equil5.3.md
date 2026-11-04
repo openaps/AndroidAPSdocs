@@ -9,123 +9,123 @@ Diese Anleitung führt Dich durch die Konfiguration der Equil-Insulinpumpe.
 
 ## Funktionalitäten bei der Nutzung mit AAPS
 
-* Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights, and **Prime/Fill** and **Pump battery change** are not offered. Filling, priming and changing the battery are done in the pump wizards.
-* While the pump is suspended or stopped, **AAPS** records a 0 U/h temporary basal, so no basal insulin is counted in IOB.
-* DST and timezone changes must be handled manually.
+* Schlauchlose Patch-Pumpe, die mit **AAPS** über das Bluetooth Deines Smartphones kommuniziert, ohne zusätzliches Kommunikationsgerät.
+* **AAPS** behandelt die Equil als Patch-Pumpe mit einem 200-IE-Reservoir: Der Startbildschirm zeigt die Statusanzeigen für Patch-Pumpen, und **Nadelwechsel/Füllen** sowie **Pumpenbatterie-Wechsel** werden nicht angeboten. Füllen, Entlüften und Batteriewechsel erledigst Du in den Assistenten der Pumpe.
+* Solange die Pumpe angehalten oder gestoppt ist, erfasst **AAPS** eine temporäre Basalrate von 0 IE/h, sodass kein Basalinsulin im IOB berücksichtigt wird.
+* Sommerzeit- und Zeitzonenwechsel müssen manuell erledigt werden.
 
 ## Hardware- und Softwareanforderungen
 * **Kompatible Equil-Hardware**
 
-  Currently Equil 5.3 and 5.4 are supported.
+  Derzeit werden Equil 5.3 und 5.4 unterstützt.
 
-* **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
+* **AAPS** erstellt und installiert nach der Anleitung [APK erstellen](../SettingUpAaps/BuildingAaps.md)
 
 ## Einrichtung
 
 ### Equil-Insulinpumpe auswählen
 
-Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
+Öffne oben links das **Menü** (☰), wähle **[Konfiguration](#Config-Builder-pump)** und unter **Pumpe** die Option **Equil**.
 
-Once it is selected, the **Equil** card shows two buttons, **Settings** and **Open plugin**:
+Sobald sie ausgewählt ist, zeigt die Karte **Equil** zwei Schaltflächen: **Einstellungen** und **Plugin öffnen**:
 
 ![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
 
-**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+**Plugin öffnen** (oder **Bearbeiten** → **Pumpe**) öffnet den Equil-Pumpenbildschirm. Bevor eine Pumpe gekoppelt ist, sieht er so aus:
 
 ![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
 
 ### Einstellungen
 
-Open the Equil settings with **Settings** on the **Equil** card, or with the gear icon in the top-right corner of the pump screen.
+Die Equil-Einstellungen öffnest Du über **Einstellungen** auf der Karte **Equil** oder über das Zahnrad-Symbol oben rechts auf dem Pumpenbildschirm.
 
 ![Equil driver settings](../images/v4/Pumps/equil_settings.png)
 
-* **Low battery alarm**: warns you when the pump battery is low.
-* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
-* **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
-* **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
+* **Alarm bei niedrigem Batteriestand**: Warnt Dich, wenn die Pumpenbatterie schwach ist.
+* **Insulin-Reservoir fast leer**: Warnt Dich, wenn das Insulin im Reservoir knapp wird.
+* **Warnton**: Wie die Pumpe Dich warnt: **Stummschalten**, **Nur vibrieren**, **Nur Töne** oder **Vibration und Ton**.
+* **Bolus-Geschwindigkeit**: Wie schnell ein Bolus abgegeben wird: **1.5 U/min (Standard)**, **3 IE/min**, **6 IE/min** oder **12 IE/min**. Ein schnellerer Bolus kann zu mehr Verschlussalarmen führen.
 
 ![The Bolus speed choices in the Equil settings](../images/v4/Pumps/equil_bolus_speed.png)
 
 ```{admonition} Max basal and max bolus on the patch
 :class: note
-The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [setting](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
+Der Patch selbst lehnt jede Basalrate über einem Höchstwert ab, den **AAPS** in ihm einprogrammiert. **AAPS** nimmt den höheren Wert aus Deiner [Einstellung](../SettingUpAaps/Preferences.md) **max. Basalrate** und der höchsten stündlichen Basalrate in Deinem **Profil**, sodass der Patch Dein Profil und die vom Loop angeforderten temporären Basalraten immer annimmt. **AAPS** sendet außerdem Deinen maximal erlaubten Bolus an den Patch.
 
-When you change your **max basal** or **max bolus**, **AAPS** sends the new values to the patch automatically. They are also sent with every profile switch. There is nothing to set on the patch itself.
+Änderst Du Deine **max. Basalrate** oder Deinen **max. Bolus**, sendet **AAPS** die neuen Werte automatisch an den Patch. Sie werden auch bei jedem Profilwechsel gesendet. Am Patch selbst musst Du nichts einstellen.
 ```
 
-### Pair the pump
+### Pumpe koppeln
 
-On the pump screen, press **Pair**. A wizard guides you through each step. The row of dots at the top shows how far along you are.
+Tippe auf dem Pumpenbildschirm auf **Koppeln**. Ein Assistent führt Dich durch jeden Schritt. Die Punktreihe oben zeigt, wie weit Du bist.
 
-If Android asks whether **AAPS** may find and connect to nearby devices, press **Allow**. **AAPS** needs this to find the pump.
+Fragt Android, ob **AAPS** Geräte in der Nähe finden und sich mit ihnen verbinden darf, tippe auf **Zulassen**. **AAPS** braucht das, um die Pumpe zu finden.
 
 ![Android asking for permission to find nearby devices](../images/Equil/activate1.png)
 
-The wizard has these steps. Press **Next** to move on, or **Cancel** to leave the wizard.
+Der Assistent hat diese Schritte. Tippe auf **Weiter**, um fortzufahren, oder auf **Abbrechen**, um den Assistenten zu verlassen.
 
-1. **Profile required**: only shown if you have never activated a **Profile** in **AAPS**. Select the profile to use and press **Activate profile**.
-1. **Assemble pump**: put together the pump, the filled reservoir and the charged battery.
+1. **Profil erforderlich**: Wird nur angezeigt, wenn Du in **AAPS** noch nie ein **Profil** aktiviert hast. Wähle das zu verwendende Profil aus und tippe auf **Aktiviere Profil**.
+1. **Pumpe zusammenbauen**: Baue Pumpe, gefülltes Reservoir und geladene Batterie zusammen.
 
    ![Assemble pump step](../images/Equil/activate2.png)
 
-1. **Find Pump**: **AAPS** scans for nearby Equil pumps. Select your pump from the list.
+1. **Pumpe suchen**: **AAPS** sucht nach Equil-Pumpen in der Nähe. Wähle Deine Pumpe aus der Liste aus.
 
    ![Find Pump step with an Equil pump in the list](../images/Equil/find_pump.png)
-1. **Pair device**: you can enter a pairing password in **Set pair password**. It must be 4 characters long, chosen from `ABCDEF0123456789`. Press **Pair**.
+1. **Gerät verbinden**: Du kannst unter **Kopplungspasswort festlegen** ein Kopplungspasswort eingeben. Es muss 4 Zeichen lang sein, gewählt aus `ABCDEF0123456789`. Tippe auf **Koppeln**.
 
    ![Pair device step with the pairing password](../images/Equil/activate3.png)
 
-1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
-1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+1. **Insulin auswählen**: Wird nur angezeigt, wenn Du mehr als ein Insulin eingerichtet hast. Wähle das Insulin im Reservoir aus.
+1. **Befüllen/Füllen**: Die Pumpe darf **nicht** auf ihrer Basisplatte sitzen. Tippe auf **Füllen/Befüllen** und entlüfte das Reservoir, bis ein Tropfen Insulin an der Nadelspitze zu sehen ist. Tippe auf **Weiter**.
 
    ![Prime / Fill step](../images/Equil/prime_fill.png)
-1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
-1. **Attach pump**: attach the pump to its base plate.
+1. **Wechsel der Setzstellen**: Wird nur angezeigt, wenn in den Einstellungen zum Wechsel der Setzstellen **Wechsel der Pumpen-Einstichstellen verwalten** eingeschaltet ist. Tippe auf die Stelle, an der Du die Pumpe anbringen wirst, oder tippe auf **Überspringen**.
+1. **Pumpe anbringen**: Setze die Pumpe auf ihre Basisplatte.
 
    ![Attach pump step](../images/Equil/attach_pump.png)
-1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+1. **Kanüle befüllen**: Sitzt die Pumpe auf der Basisplatte, tippe auf **Luft entfernen**, um die Luft aus der Kanüle zu entfernen. Tippe auf **Weiter**.
 
    ![Prime cannula step with the Purge air button](../images/Equil/prime_cannula.png)
 
-1. **Confirm**: put the pump on your body and press **Finish**.
+1. **Bestätigen**: Setze die Pumpe auf Deinen Körper und tippe auf **Abschließen**.
 
    ![Confirm step with the Finish button](../images/Equil/confirm.png)
 
 ```{warning}
-If you set your own pairing password (recommended for your safety), store it somewhere safe. The password is saved in the pump. The pump asks for it at every new pairing until you unpair it properly in **AAPS**. Until then, the pump also cannot be used with the original handheld controller (PDA).
+Hast Du ein eigenes Kopplungspasswort festgelegt (zu Deiner Sicherheit empfohlen), bewahre es an einem sicheren Ort auf. Das Passwort wird in der Pumpe gespeichert. Die Pumpe fragt bei jeder neuen Kopplung danach, bis Du sie in **AAPS** ordnungsgemäß entkoppelst. Bis dahin kann die Pumpe auch nicht mit dem originalen Handgerät (PDA) verwendet werden.
 ```
 
-### Pump screen after pairing
+### Pumpenbildschirm nach der Kopplung
 
-Once the pump is paired, the pump screen shows these buttons:
+Ist die Pumpe gekoppelt, zeigt der Pumpenbildschirm diese Schaltflächen:
 
-* **Refresh**: reads the state and the history of the pump now.
-* **Suspend** / **Resume delivery**: stop or restart insulin delivery.
-* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir (and, if needed, a new battery), priming and attaching it again. The first step asks *Will you also put on a new infusion set (base plate and cannula)?*
-  * **Yes, new infusion set**: you choose the site, the cannula is primed, and **AAPS** records an insulin change and a cannula change.
-  * **No, only reservoir or battery**: the cannula is not primed and **AAPS** records only an insulin change.
+* **Aktualisieren**: Liest sofort Zustand und Historie der Pumpe aus.
+* **Anhalten** / **Abgabe fortsetzen**: Stoppt die Insulinabgabe oder startet sie wieder.
+* **Reservoir wechseln**: Führt Dich durch das Abnehmen der Pumpe, das Einsetzen eines neuen Reservoirs (und bei Bedarf einer neuen Batterie), das Entlüften und das erneute Anbringen. Der erste Schritt fragt *Legst Du auch ein neues Infusionsset (Basisplatte und Kanüle) an?*
+  * **Ja, neues Infusionsset**: Du wählst die Setzstelle, die Kanüle wird befüllt, und **AAPS** erfasst einen Insulin- und einen Kanülenwechsel.
+  * **Nein, nur Reservoir oder Batterie**: Die Kanüle wird nicht befüllt, und **AAPS** erfasst nur einen Insulinwechsel.
 
-  After a reservoir change the battery level shows **-** until **AAPS** reads it again from the pump.
+  Nach einem Reservoirwechsel zeigt der Batteriestand **-**, bis **AAPS** ihn wieder aus der Pumpe ausliest.
 
   ![The first step of Change reservoir asks about a new infusion set](../images/Equil/change_reservoir_question.png)
 
-* **History**: shows the events recorded by the pump.
-* **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
+* **Verlauf**: Zeigt die von der Pumpe erfassten Ereignisse.
+* **Gerät entkoppeln**: Führt Dich durch das Abnehmen der Pumpe und das Entkoppeln von **AAPS**. Dabei wird die Insulinabgabe gestoppt, der Kolben der Pumpe ganz zurückgefahren und die Kopplung gelöscht.
 
 ### Alarme
 
-* The low insulin alarm sounds once at each level (10 U, 5 U and 2 U) and when the reservoir is empty. The low battery alarm sounds once at 10% and once at 5%. Each level alarms only once until the next reservoir change.
-* Pump alarms and stops are also recorded as announcements in the treatments, at the time the pump logged them, so you can see later when and why the pump stopped.
-* If the reservoir runs empty during a bolus, **AAPS** records only the insulin given until then and tells you both amounts.
+* Der Alarm bei niedrigem Insulinstand ertönt einmal pro Stufe (10 IE, 5 IE und 2 IE) und wenn das Reservoir leer ist. Der Alarm bei niedrigem Batteriestand ertönt einmal bei 10 % und einmal bei 5 %. Jede Stufe alarmiert bis zum nächsten Reservoirwechsel nur einmal.
+* Alarme und Stopps der Pumpe werden außerdem als Ankündigungen in den Behandlungen erfasst, mit dem Zeitpunkt, zu dem die Pumpe sie protokolliert hat, sodass Du später sehen kannst, wann und warum die Pumpe gestoppt hat.
+* Läuft das Reservoir während eines Bolus leer, erfasst **AAPS** nur das bis dahin abgegebene Insulin und nennt Dir beide Mengen.
 
 ## Wo ich Hilfe bekomme
 
-Development of the Equil driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Der Equil-Treiber wird von der Community **ehrenamtlich** entwickelt. Bevor Du um Hilfe bittest, bitte:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Lies** den entsprechenden Abschnitt dieser Dokumentation, um zu prüfen, wie die Funktion gedacht ist.
+2. **Frag** im Kanal *#AAPS* auf [Discord](https://discord.gg/4fQUWHZ4Mw) oder in einem der anderen [Community-Kanäle](../GettingHelp/WhereCanIGetHelp.md) nach.
+3. **Melde einen Fehler**, indem Du die [bestehenden Issues](https://github.com/nightscout/AndroidAPS/issues) durchsuchst; ist Deiner nicht dabei, eröffne ein [neues Issue](https://github.com/nightscout/AndroidAPS/issues) und hänge Deine [Logdateien](../GettingHelp/AccessingLogFiles.md) an.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Gib bei der Bitte um Hilfe Hersteller und Modell Deines Smartphones, die Android-Version, die **AAPS**-Version und eine verständliche Beschreibung des Problems an (was sich geändert hat, wann es zuletzt funktioniert hat).

@@ -1,10 +1,10 @@
-# Other CGM uploaded to Nightscout
+# Nightscout'a yüklenen diğer CGM
 
-Use this option if you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
+KŞ verilerinizi **yalnızca** [Nightscout](https://nightscout.github.io/)'a gönderebilen başka bir CGM kullanıyorsanız bu seçeneği kullanın.
 
 ```{important}
-This data source will not work when you are offline, when you experience network issues or when your Nightscout site is down. Use with caution.
+Bu veri kaynağı, çevrimdışıyken, ağ sorunları yaşadığınızda veya Nightscout sitenize erişilemediğinde çalışmaz. Dikkatli kullanın.
 ```
 
--   Set up **NSClientV3** (**Configuration → Communication**) with your Nightscout site information.
--   Select NSClient BG in [**Configuration → BG Source**](#Config-Builder-bg-source).
+-   **NSClientV3** eklentisini (**Konfigürasyon → İletişim**) Nightscout sitenizin bilgileriyle ayarlayın.
+-   [**Konfigürasyon → KŞ kaynağı**](#Config-Builder-bg-source) içinde NSClient KŞ'yi seçin.

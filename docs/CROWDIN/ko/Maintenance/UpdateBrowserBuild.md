@@ -1,115 +1,115 @@
-# Update with a browser (fork)
+# 브라우저로 업데이트 (fork)
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+**AAPS Builder**로 AAPS를 빌드했습니까? 이 페이지는 필요하지 않습니다. [AAPS Builder로 AAPS 업데이트하기](#aaps-builder-updates)를 참조하십시오.
 ```
 
-## 다운로드 대신에 당신 스스로 빌드하세요
+## 다운로드 대신 직접 빌드
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS**는 의료기기 관련 규정 때문에 다운로드할 수 없습니다. 본인이 사용하기 위해 앱을 빌드하는 것은 합법이지만, 다른 사람에게 복사본을 주어서는 안 됩니다! 자세한 내용은 [FAQ 페이지](../UsefulLinks/FAQ.md)를 참조하십시오.
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
-This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
+브라우저로 **AAPS**를 처음 업그레이드하려면 백업해 둔 키 저장소 파일을 Google Drive에 복사하십시오. 그런 다음 이 안내 대신 [**AAPS** 브라우저 빌드 절차](../SettingUpAaps/BrowserBuild.md)를 따르십시오. 새 키 저장소를 만드는 대신 컴퓨터에서 복사해 온 키 저장소를 선택해야 합니다.
+이 작업은 처음 한 번만 필요하며, 그다음 업그레이드부터는 이 안내를 따르면 됩니다.
 ```
 
 ```{tip}
-**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+**AAPS Builder로 바꾸시겠습니까?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md)는 더 간단한 브라우저 빌드입니다. 동기화할 fork가 없고, 앱을 GitHub에서 바로 다운로드합니다. 바꿀 필요는 없습니다. 이 안내는 계속 사용할 수 있습니다. 바꾸려면 먼저 [이전 브라우저 빌드에서 전환하는 경우](#aaps-builder-from-fork)에 설명된 대로 fork에서 키 저장소 복사본을 받으십시오. 그렇지 않으면 새 빌드로 휴대폰의 AAPS를 업데이트할 수 없습니다.
 ```
 
-## Overview for updating to a new version of AAPS with a browser
+## 브라우저로 AAPS 새 버전으로 업데이트하는 과정 개요
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+문제가 생기면 별도의 [브라우저 빌드: 문제 해결](../GettingHelp/BrowserBuildTroubleshooting.md) 페이지를 참조하십시오.
 
-### Export your settings
+### 설정 내보내기
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+휴대폰에 있는 기존 **AAPS** 버전에서 설정을 내보내십시오. 필요하지 않을 수도 있지만, 만일을 위해 해 두는 것이 좋습니다.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+방법이 기억나지 않으면 [백업 만들기와 복원하기](ExportImportSettings.md) 페이지를 참조하십시오.
 
 (Update-to-new-version-update-your-repo)=
-### Update your GitHub repository
+### GitHub 저장소 업데이트
 
-[Log into GitHub](https://github.com/login).
+[GitHub에 로그인](https://github.com/login)하십시오.
 
-1. Select Repositories.
-2. Scroll down and select your own AndroidAPS repository.
+1. Repositories를 선택하십시오.
+2. 아래로 스크롤하여 자신의 AndroidAPS 저장소를 선택하십시오.
 
-![Select AndroidAPS repo](../images/update/CI/GitHubUpdate1.png)
+![AndroidAPS 저장소 선택](../images/update/CI/GitHubUpdate1.png)
 
-3. Verify you are using your own copy of AndroidAPS (Forked from nightscout/AndroidAPS)
-4. Tap Sync Fork to update it (the number of commits behind might differ from the picture)
+3. 자신의 AndroidAPS 복사본(Forked from nightscout/AndroidAPS)을 사용하고 있는지 확인하십시오.
+4. Sync Fork를 눌러 업데이트하십시오(뒤처진 커밋 수는 그림과 다를 수 있습니다).
 
 
 
-![Sync AndroidAPS repo](../images/update/CI/GitHubUpdate2.png)
+![AndroidAPS 저장소 동기화](../images/update/CI/GitHubUpdate2.png)
 
-5. Tap Update Branch
+5. Update Branch를 누르십시오.
 
-![Update AndroidAPS repo](../images/update/CI/GitHubUpdate3.png)
+![AndroidAPS 저장소 업데이트](../images/update/CI/GitHubUpdate3.png)
 
-Note: if you have modified your copy of AndroidAPS by mistake, you will see this screen. Discard all changes (commits) to return to the released version.
+참고: 실수로 AndroidAPS 복사본을 수정했다면 이 화면이 표시됩니다. 모든 변경 사항(커밋)을 버리고(Discard) 릴리스 버전으로 되돌리십시오.
 
-![Discard rogue modifications](../images/update/CI/GitHubUpdate4.png)
+![잘못된 수정 사항 버리기](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Good job.
+이제 자신의 복사본을 **AAPS**의 최신 릴리스와 동기화(업데이트)했습니다. 잘하셨습니다.
 
-![Repo sync'ed](../images/update/CI/GitHubUpdate5.png)
+![저장소 동기화됨](../images/update/CI/GitHubUpdate5.png)
 
-### Run the Workflow to Build the Signed APK
+### 서명된 APK를 빌드하는 워크플로 실행
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+1. GitHub에 있는 AndroidAPS 복사본에서 Actions를 선택하십시오.
+2. All Workflows를 펼치십시오.
+3. AAPS-CI를 선택하십시오.
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. 아래로 스크롤하여 Run Workflow를 누르십시오.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. 브랜치는 master로 두십시오. **Select AAPS Version**에서 목록 맨 위에 있는 최신 버전 **4.0.0**이 선택되어 있는지 확인하십시오. 포크가 최신 상태가 아니면 미리 선택된 버전이 이전 버전입니다: 열린 양식 그대로 워크플로를 실행하면 그 이전 버전을 다시 빌드하게 되고 앱은 업데이트되지 않습니다. [변형](#browserbuild-variant)(fullRelease)을 선택한 다음 Run workflow를 누르십시오.
 
    ```{note}
-   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   버전 목록은 포크에 있는 워크플로의 일부입니다. **4.0.0**이 없으면 포크가 아직 동기화되지 않은 것입니다: [GitHub 저장소 업데이트](#Update-to-new-version-update-your-repo)로 돌아가십시오.
    ```
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of **AAPS**. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
+6. Workflow run was successfully requested 메시지가 표시됩니다. 브라우저 페이지를 새로 고치면 빌드 진행 상황을 볼 수 있습니다. 작업이 끝나면 AAPS CI 작업에 녹색 체크 표시가 나타납니다. 업데이트된 **AAPS** 버전을 성공적으로 빌드했습니다. 이제 Master APK와 Wear APK가 Google Drive에 바로 저장된다는 뜻입니다(아래 참조). AAPSClient APK는 Github > nightscout > AndroidAPS [여기](https://github.com/nightscout/AndroidAPS/releases)에서 다운로드할 수 있습니다.
 
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![워크플로 모니터링](../images/update/CI/GitHubActions4.png)
 
 
-### Install the AAPS APK
+### AAPS APK 설치
 
-1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+1. Google Drive를 여십시오.
+2. AAPS 폴더로 들어가 새 버전 폴더를 선택하면 휴대폰용 버전과 Android Wear용 버전이 모두 있습니다.
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+![Google Drive 위치](../images/update/CI/GitHubActions5.png)
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+2026년 9월부터 Google의 [Android 개발자 인증](#android-developer-verification) 때문에, 국가에 따라 파일을 눌러 APK를 설치하는 것이 막힐 수 있습니다. 무료 해결 방법은 그 페이지에 설명되어 있습니다.
 ```
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
+[여기](#Update-to-new-version-check-aaps-version-on-phone)에서 계속하십시오.
 
 (update-browser-build-troubleshooting)=
 
 ## Troubleshooting
 
-If anything goes wrong, don't panic.
+문제가 생겨도 당황하지 마십시오.
 
-Take a breath!
+숨을 한 번 고르십시오!
 
-Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
+그런 다음 문제가 이미 문서에 있는지 확인하십시오. **AAPS Builder**로 빌드한다면 [AAPS Builder 문제 해결](#aaps-builder-troubleshooting)을, 그렇지 않으면 [브라우저 빌드 문제 해결](#aaps-ci-troubleshooting)을 참조하십시오.
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+더 도움이 필요하면 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 또는 [Discord](https://discord.gg/4fQUWHZ4Mw)에서 다른 **AAPS** 사용자에게 문의하십시오.

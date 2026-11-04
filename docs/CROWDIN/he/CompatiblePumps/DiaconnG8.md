@@ -7,40 +7,40 @@
 
 ## Pump capabilities with AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually.
+* מתקשרת עם **AAPS** דרך ה-Bluetooth המובנה של הטלפון, ללא מכשיר תקשורת נוסף.
+* את המעבר לשעון קיץ/חורף ואת שינויי אזור הזמן יש לבצע ידנית.
 
 ## Insulin Pump Bluetooth Pairing
 
-- Tap the **menu** (☰) in the top-left corner.
+- יש להקיש על **התפריט** (☰) בפינה העליונה של המסך.
 
-![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+![התפריט עם הפריט הגדרות תצורה](../images/v4/Configuration/configuration_menu.png)
 
-- Tap **Configuration** > **Pump** and select **Diaconn G8**.
+- יש להקיש על **הגדרות תצורה** > **משאבה** ולבחור **Diaconn G8**.
 
-![Configuration > Pump with the Diaconn G8 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![הגדרות תצורה > משאבה עם התוסף Diaconn G8](../images/v4/Configuration/configuration_pump_list_3.png)
 
-Once it is selected, the **Diaconn G8** card shows two buttons, **Settings** and **Open plugin**:
+לאחר הבחירה, בכרטיס **Diaconn G8** מופיעים שני לחצנים, **הגדרות** ו**פתיחת תוסף**:
 
-![The Diaconn G8 plugin selected in Configuration > Pump](../images/v4/Pumps/diaconn_g8_enabled.png)
+![התוסף Diaconn G8 נבחר בהגדרות תצורה > משאבה](../images/v4/Pumps/diaconn_g8_enabled.png)
 
-**Settings** opens the settings of the Diaconn G8 driver (see [Diaconn G8 insulin pump option setting](#diaconn-g8-insulin-pump-option-setting) below).
+**הגדרות** פותח את ההגדרות של מנהל ההתקן Diaconn G8 (ראו [הגדרת אפשרויות משאבת האינסולין Diaconn G8](#diaconn-g8-insulin-pump-option-setting) בהמשך).
 
-**Open plugin** (or **Manage** > **Pump**) opens the Diaconn G8 pump screen. Before a pump is paired it looks like this:
+**פתיחת תוסף** (או **ניהול** > **משאבה**) פותח את מסך המשאבה Diaconn G8. לפני צימוד משאבה, המסך נראה כך:
 
-![Diaconn G8 pump screen before pairing](../images/v4/Pumps/diaconn_g8_pump_screen.png)
+![מסך המשאבה Diaconn G8 לפני הצימוד](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
 ![image](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 pairing starts from the **Pair** button on the pump screen; there is no **Selected pump** setting.
+צילום המסך למעלה הוא מגרסה קודמת של **AAPS**. ב-**AAPS** 4 הצימוד מתחיל מהלחצן **צימוד** במסך המשאבה; אין הגדרה **משאבה נבחרת**.
 ```
 
-- On the pump screen, tap **Pair**. The **Diaconn Pump Pairing** screen opens and **AAPS** scans for nearby pumps.
-- Tap your insulin pump's model number once it appears in the list (for example **DIACONN-65010**).
+- במסך המשאבה, יש להקיש על **צימוד**. המסך **צימוד משאבת Diaconn** נפתח, ו-**AAPS** מחפש משאבות בקרבת מקום.
+- יש להקיש על מספר הדגם של משאבת האינסולין כשהוא מופיע ברשימה (לדוגמה **DIACONN-65010**).
 
-![Diaconn Pump Pairing screen scanning for pumps](../images/DiaconnG8/DiaconnG8_05.png)
+![המסך צימוד משאבת Diaconn מחפש משאבות](../images/DiaconnG8/DiaconnG8_05.png)
 
 - There are two options to check your model number:
 
@@ -49,41 +49,41 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 pairing 
 
 ![image](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-- Once you select your pump, a window appears asking for a PIN code. Enter the PIN number displayed on your pump to complete the connection.
+- לאחר בחירת המשאבה, נפתח חלון שמבקש קוד PIN. יש להזין את מספר ה-PIN שמוצג על המשאבה כדי להשלים את החיבור.
 
  ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-- When **Pairing successful!** is shown, tap **OK** to go back to the pump screen.
+- כשמופיע **הצימוד בוצע בהצלחה!**, יש להקיש על **אישור** כדי לחזור למסך המשאבה.
 
 ## Pump status check and log synchronization
 
-- Once your pump is connected, open the pump screen (**Manage** > **Pump**). It shows the pump status (battery, reservoir, last connection, last bolus, basal rate and more).
-- Tap **Refresh** to connect to the pump, update the status and synchronize the logs.
-- Tap **Pump history** to see the history read from the pump.
+- לאחר שהמשאבה מחוברת, יש לפתוח את מסך המשאבה (**ניהול** > **משאבה**). המסך מציג את מצב המשאבה (סוללה, מכל, התחברות אחרונה, בולוס אחרון, קצב בזאלי ועוד).
+- יש להקיש על **רענן** כדי להתחבר למשאבה, לעדכן את המצב ולסנכרן את היומנים.
+- יש להקיש על **היסטוריית המשאבה** כדי לראות את ההיסטוריה שנקראה מהמשאבה.
 
 ![image](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump status is shown on the pump screen (**Manage** > **Pump**) and synchronized with the **Refresh** button.
+צילום המסך למעלה הוא מגרסה קודמת של **AAPS**. ב-**AAPS** 4 מצב המשאבה מוצג במסך המשאבה (**ניהול** > **משאבה**) ומסונכרן בעזרת הלחצן **רענן**.
 ```
 
 (diaconn-g8-bluetooth-troubleshooting)=
 
-## Bluetooth Troubleshooting
+## פתרון תקלות Bluetooth
 
 **What to do in the case of an unstable Bluetooth connection with the pump.**
 
-### Method 1) Restart AAPS, then check the pump again
+### שיטה 1) להפעיל מחדש את AAPS ואז לבדוק שוב את המשאבה
 
-- Tap the **menu** (☰) in the top-left corner.
-- Tap **Exit** at the bottom of the menu.
+- יש להקיש על **התפריט** (☰) בפינה העליונה של המסך.
+- יש להקיש על **יציאה** בתחתית התפריט.
 
-![The menu with the Exit entry at the bottom](../images/v4/Configuration/configuration_menu.png)
+![התפריט עם הפריט יציאה בתחתית](../images/v4/Configuration/configuration_menu.png)
 
-- Start **AAPS** again and check the connection to the pump.
+- יש להפעיל שוב את **AAPS** ולבדוק את החיבור למשאבה.
 
-### Method 2) If the first method doesn't work, disconnect Bluetooth and then reconnect.
+### שיטה 2) אם השיטה הראשונה לא עוזרת, לנתק את ה-Bluetooth ולחבר אותו מחדש.
 
 - Press and hold the Bluetooth button at the top for about 3 seconds.
 
@@ -97,7 +97,7 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump
 
 ![image](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- In **AAPS**, open the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**.
+- ב-**AAPS**, יש לפתוח את מסך המשאבה (**ניהול** > **משאבה**), להקיש על **ביטול צימוד** ולאשר **לאפס את נתוני הצימוד?**.
 - Repeat the Bluetooth pairing process for the pump (see above).
 
 ## Further Information
@@ -106,36 +106,36 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump
 
 ### Diaconn G8 Insulin pump option setting
 
-- **Configuration** > **Pump** > **Diaconn G8** > **Settings**
-- Or, on the pump screen (**Manage** > **Pump**), tap the settings icon (cog wheel) in the top-right corner.
+- **הגדרות תצורה** > **משאבה** > **Diaconn G8** > **הגדרות**
+- או, במסך המשאבה (**ניהול** > **משאבה**), להקיש על סמל ההגדרות (גלגל שיניים) בפינה העליונה של המסך.
 
-![Diaconn G8 driver settings](../images/v4/Pumps/diaconn_g8_settings.png)
+![הגדרות מנהל ההתקן Diaconn G8](../images/v4/Pumps/diaconn_g8_settings.png)
 
-- **Bolus speed** sets how fast the pump delivers a bolus.
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an "Insulin Change" event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a "Site Change" event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically added as a note when a "Tube Change" event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a "Battery Change" event occurs. You can also record a battery change yourself with **Manage** > **Pump Battery Change**. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
-- **Diaconn Cloud Sync** sends the pump logs to the Diaconn Cloud.
+- **מהירות הזרקת הבולוס** קובעת באיזו מהירות המשאבה נותנת בולוס.
+- אם האפשרות **רישום החלפת מכל** מופעלת, הפרטים הרלוונטיים מועלים אוטומטית לפורטל הטיפולים כשמתרחש אירוע "החלפת אינסולין".
+- אם האפשרות **רישום החלפת מחט** מופעלת, הפרטים הרלוונטיים מועלים אוטומטית לפורטל הטיפולים כשמתרחש אירוע "החלפת אתר עירוי" (Site Change).
+- אם האפשרות **רישום החלפת צינורית** מופעלת, הפרטים הרלוונטיים נוספים אוטומטית כהערה כשמתרחש אירוע "החלפת צינורית".
+- אם האפשרות **רישום החלפת סוללה** מופעלת, הפרטים הרלוונטיים מועלים אוטומטית לפורטל הטיפולים כשמתרחש אירוע "החלפת סוללה". אפשר גם לרשום החלפת סוללה ידנית דרך **ניהול** > **החלפת סוללת משאבה**. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+- **סנכרון Diaconn Cloud** שולח את יומני המשאבה אל Diaconn Cloud.
 
 ![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 a battery change is recorded with **Manage** > **Pump Battery Change**; there is no **Actions** tab.
+צילום המסך למעלה הוא מגרסה קודמת של **AAPS**. ב-**AAPS** 4 החלפת סוללה נרשמת דרך **ניהול** > **החלפת סוללת משאבה**; אין לשונית **פעולות**.
 ```
 
-### Extended Bolus function
+### תכונת בולוס ממושך
 
-- If you use extended bolus it will disable closed loop.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- שימוש בבולוס ממושך משבית את הלולאה הסגורה.
+- ראו [דף זה](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) לפרטים על הסיבה שבולוס ממושך אינו פועל בלולאה סגורה.
 
 ## Where to get help
 
-Development of the Diaconn G8 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+הפיתוח של מנהל ההתקן Diaconn G8 נעשה על ידי הקהילה על בסיס **התנדבותי**. לפני שמבקשים עזרה, יש:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **לקרוא** את החלק הרלוונטי בתיעוד הזה כדי לוודא איך התכונה אמורה לעבוד.
+2. **לשאול** בערוץ *#AAPS* ב-[Discord](https://discord.gg/4fQUWHZ4Mw), או באחד [מערוצי הקהילה](../GettingHelp/WhereCanIGetHelp.md) האחרים.
+3. **לדווח על באג**: לחפש ב[דיווחים הקיימים](https://github.com/nightscout/AndroidAPS/issues); אם הבעיה לא מופיעה, לפתוח [דיווח חדש](https://github.com/nightscout/AndroidAPS/issues) ולצרף את [קובצי היומן](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+בבקשת עזרה, יש לציין את יצרן ודגם הטלפון, גרסת Android, גרסת **AAPS** ותיאור פשוט של הבעיה (מה השתנה, מתי זה עבד בפעם האחרונה).

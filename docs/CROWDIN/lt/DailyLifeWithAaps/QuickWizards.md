@@ -1,7 +1,7 @@
 (quickwizards)=
-# QuickWizards (one-tap boluses)
+# Greitasis vedlys (bolusas vienu paspaudimu)
 
-A **QuickWizard** is a saved one-tap button for a recurring meal or situation. It carries a fixed amount of **carbs** (and how to dose for them), so you can deliver a bolus — or just log carbs — with a single tap and a confirmation, instead of opening the full bolus calculator every time.
+**Greitasis vedlys** – tai išsaugotas mygtukas, kurį galite paspausti vieną kartą dažnai pasikartojančiam valgiui ar situacijai. Jame nustatytas fiksuotas **angliavandenių** kiekis (ir kaip jiems skaičiuoti dozę), todėl bolusą sušvirkšti – arba tik įrašyti angliavandenius – galite vienu paspaudimu ir patvirtinimu, o ne kaskart atidarydami visą boluso skaičiuotuvą.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,96 +10,96 @@ A **QuickWizard** is a saved one-tap button for a recurring meal or situation. I
 
 ---
 
-## Opening QuickWizards
+## Greitojo vedlio atidarymas
 
-Open the **Manage** screen (bottom navigation) and choose **QuickWizard** (*“Manage quick wizard presets”*).
-
----
-
-## Managing QuickWizards
-
-Your QuickWizards are shown as a **swipeable card carousel** (each card shows the button text, carbs and valid time range). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
-
-![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
-
-The editor's main fields are:
-
-- **Button text** — the label shown on the button.
-- **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#quickwizard_validity).
-- **Calculator Options** and **Device Selection** — see below.
+Atidarykite ekraną **Valdymas** (apatinė navigacija) ir pasirinkite **Greitasis vedlys** (*„Tvarkyti greitojo vedlio ruošinius“*).
 
 ---
 
-## The three modes
+## Greitųjų vedlių tvarkymas
 
-The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
+Jūsų greitieji vedliai rodomi kaip **kortelių karuselė, kurią galima slinkti** (kiekvienoje kortelėje rodomas mygtuko tekstas, angliavandeniai ir galiojimo laikas). Žemiau esančiame redaktoriuje nustatomas **pasirinktas** vedlys; apatinėje veiksmų juostoje yra mygtukai **➕ pridėti**, **⧉ klonuoti**, **🗑️ ištrinti** ir mygtukas **▶**, kuris paleidžia pasirinktą greitąjį vedlį.
 
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
-- **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
-- **Carbs** — records the configured **carbs only**, with **no bolus**.
+![Greitojo vedlio redaktorius – režimas, angliavandeniai, angliavandenių laikas ir galiojimo laikas](../images/v4/QuickWizard/quickwizard_editor.png)
 
----
+Pagrindiniai redaktoriaus laukai:
 
-## Calculator Options (Wizard mode)
-
-For a **Wizard**-mode button you choose which inputs the calculation uses:
-
-- **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
-- **Bolus percentage** — scale the calculated bolus.
-- **Add eCarbs** — also schedule extended carbs.
-
-![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
+- **Mygtuko tekstas** – užrašas, rodomas ant mygtuko.
+- **Angliavandeniai** ir **Angliavandenių laikas** – angliavandenių kiekis ir jų laiko poslinkis.
+- **Galioja nuo–iki** – žr. [Galiojimas](#quickwizard_validity).
+- **Skaičiuotuvo parinktys** ir **Įrenginio pasirinkimas** – žr. toliau.
 
 ---
 
-## Validity — when the button appears
+## Trys režimai
 
-(quickwizard_validity)= The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet and from the [QuickLaunch toolbar](QuickLaunch.md). A toolbar button is not deleted: it comes back when the window opens again.
+Redaktoriaus viršuje esantis pasirinkimas – **Vedlys / Insulinas / Angliavandeniai** – nustato, **ką mygtukas daro** jį paspaudus:
 
-When the valid time range is shorter than 4 hours, the button is also hidden for 30 minutes after you use it, so that the same meal is not entered twice by mistake.
+- **Vedlys** – sukonfigūruotiems angliavandeniams paleidžia visą **boluso skaičiuotuvą** ir naudoja jūsų dabartinius **KG, AIO, AAO ir tendenciją** (pagal toliau aprašytas *Skaičiuotuvo parinktis*). Jis sušvirkščia *apskaičiuotą* bolusą ir įrašo angliavandenius. Tai klasikinis greitasis vedlys.
+- **Insulinas** – sušvirkščia **fiksuotą, iš anksto nustatytą insulino kiekį**, kurį nustatote jūs – be skaičiavimo.
+- **Angliavandeniai** – įrašo **tik sukonfigūruotus angliavandenius**, **be boluso**.
 
 ---
 
-## Invocation points — where you use it
+## Skaičiuotuvo parinktys (režimas Vedlys)
 
-The **Device Selection** toggles decide where each QuickWizard appears:
+Mygtukui režimu **Vedlys** pasirenkate, kuriuos duomenis naudoja skaičiavimas:
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). A QuickWizard shown on the phone can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
+- **Įtraukti KG**, **Įtraukti AAO**, **Įtraukti AIO** (su *Tik teigiamas AIO*), **Įtraukti tendenciją** (*Visas / Tik teigiamą / Tik neigiamą*), **Įtraukti laikiną tikslą**, **Naudoti įspėjimą**.
+- **Boluso procentas** – padidina arba sumažina apskaičiuotą bolusą.
+- **Pridėti i-AV** – papildomai suplanuoja ištęstus angliavandenius.
+
+![Skaičiuotuvo parinktys, boluso procentas ir įrenginio pasirinkimas](../images/v4/QuickWizard/quickwizard_options.png)
+
+---
+
+## Galiojimas – kada rodomas mygtukas
+
+(quickwizard_validity)= **Galioja nuo–iki** (*Nuo / Iki*) nustato, **kada** greitasis vedlys rodomas ir gali būti naudojamas. Mygtukas, nustatytas, pavyzdžiui, **06:00–10:00**, rodomas tik ryte – taip greitasis vedlys *Pusryčiai* vakarienės metu neužgriozdina ekrano (ir nėra paspaudžiamas per klaidą). Už savo laiko intervalo ribų mygtukas paslepiamas meniu **Terapija** ir [QuickLaunch įrankių juostoje](QuickLaunch.md). Įrankių juostos mygtukas neištrinamas: jis vėl atsiranda, kai prasideda jo laiko intervalas.
+
+Kai galiojimo laikas trumpesnis nei 4 valandos, mygtukas taip pat paslepiamas 30 minučių po to, kai jį panaudojate, kad tas pats valgis nebūtų per klaidą įvestas du kartus.
+
+---
+
+## Naudojimo vietos – kur jį naudoti
+
+Jungikliai **Įrenginio pasirinkimas** nustato, kur rodomas kiekvienas greitasis vedlys:
+
+- **Rodyti telefone** – jis rodomas **meniu [Terapija](../Maintenance/V4Changes.md)** (apskaičiuota dozė rodoma tiesiai ant mygtuko). Telefone rodomą greitąjį vedlį taip pat galima **prisegti kaip greitojo veiksmo mygtuką pagrindiniame ekrane**: atidarykite *Konfigūruoti QuickLaunch* (⚙ [QuickLaunch](QuickLaunch.md) įrankių juostoje) ir pridėkite jį iš kategorijos **Greitasis vedlys**.
+- **Rodyti laikrodyje** – jis rodomas **Wear OS plytelėje „Greitasis vedlys“** (perslinkite iki jo laikrodžio plytelių karuselėje ir paspauskite mygtuką, kad jį paleistumėte – taip pat kaip [scenarijų plytelėje](#scenes-from-watch)).
 
 ```{admonition} Don't see Device Selection?
 :class: note
-The **Device Selection** section only appears in the editor when the **Wear** plugin is enabled and its **Wear control** preference is on. Without it, every QuickWizard simply shows on the phone.
+Skiltis **Įrenginio pasirinkimas** redaktoriuje rodoma tik tada, kai įjungtas įskiepis **Išmanieji laikrodžiai** ir įjungtas jo nustatymas **Valdymas per Wear**. Kitu atveju kiekvienas greitasis vedlys tiesiog rodomas telefone.
 ```
 
-On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
+Telefone greitieji vedliai rodomi meniu **Terapija** (lange ekrano apačioje) viršuje:
 
-![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
+![Greitieji vedliai (viršuje) atidarytame meniu Terapija](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…and as a quick-action button on the overview:
+…ir kaip greitojo veiksmo mygtukas pagrindiniame ekrane:
 
-![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
+![Greitojo vedlio greitojo veiksmo mygtukas pagrindiniame ekrane](../images/v4/QuickWizard/quickwizard_overview.png)
 
-![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
+![Greitojo vedlio plytelė Wear OS laikrodyje](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
+Susietas **klientas** (**AAPSClient**) taip pat gali paleisti greitąjį vedlį – jį apskaičiuoja ir sušvirkščia **pagrindinis įrenginys** (žr. [Pagrindinio įrenginio ↔ kliento valdymas](../RemoteFeatures/ClientMasterControl.md)).
 
-Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** (the master-authored confirmation, when triggered from a client or watch) before anything is delivered.
+Kad ir kur jis būtų paleistas, paspaudus greitąjį vedlį visada parodomas **patvirtinimas** (kai paleidžiama iš kliento ar laikrodžio – pagrindinio įrenginio sudarytas patvirtinimas), ir tik tada kas nors sušvirkščiama.
 
-A QuickWizard is refused when its dose is above your max bolus, or when its carbs or eCarbs are above your max carbs (for example after you lowered the limit). When the carbs are above the limit, the button in the **Treatments** sheet is disabled. Edit the QuickWizard or the limit.
+Greitasis vedlys atmetamas, kai jo dozė didesnė už jūsų maks. bolusą arba kai jo angliavandeniai ar i-AV didesni už jūsų maks. angliavandenių kiekį (pavyzdžiui, kai sumažinote ribą). Kai angliavandeniai viršija ribą, mygtukas meniu **Terapija** išjungiamas. Pakeiskite greitąjį vedlį arba ribą.
 
 ---
 
-## Adding and removing
+## Pridėjimas ir pašalinimas
 
-- **➕ Add** — create a new QuickWizard.
-- **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **➕ Pridėti** – sukurti naują greitąjį vedlį.
+- **⧉ Klonuoti** – nukopijuoti esamą kaip pradžios tašką.
+- **🗑️ Ištrinti** – pašalinti greitąjį vedlį.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Kai turite du ar daugiau greitųjų vedlių, galite keisti jų tvarką karuselėje: viršutinėje juostoje paspauskite piktogramą **Keisti tvarką** (⇅), **◀ / ▶ perkėlimo mygtukais** perkelkite centre esančią kortelę, tada patvirtinkite **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
 
-QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
+Greitieji vedliai yra sinchronizuojamos konfigūracijos dalis, todėl jie bendri jūsų pagrindiniam įrenginiui ir susietiems klientams.
 
 ---
 

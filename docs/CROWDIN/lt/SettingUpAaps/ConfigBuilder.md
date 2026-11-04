@@ -1,51 +1,51 @@
-# Configuration (Config Builder)
+# Konfigūracija (Config Builder)
 
-```{admonition} Coming from AAPS v3? :class: note The **Config Builder** is now called **Configuration** and is in the **menu** (☰). See [What changed in AAPS v4](#v4-changes).
+```{admonition} Pereinate nuo AAPS v3? :class: note **Config Builder** dabar vadinamas **Konfigūracija** ir yra **meniu** (☰). Žr. [Kas pasikeitė AAPS v4](#v4-changes).
 
-    <br />**Configuration** is where you choose which plugins are active (CGM, pump, APS algorithm, sensitivity, sync, …) and open each plugin and its settings. The [walkthrough](#configuration-v4) is below; the rest of this page describes each section in detail.
+    <br />**Konfigūracija** – tai vieta, kur pasirenkate, kurie įskiepiai yra aktyvūs (NGJ, pompa, DKS algoritmas, jautrumas, sinchronizacija, …), ir atidarote kiekvieną įskiepį bei jo nustatymus. [Apžvalga žingsnis po žingsnio](#configuration-v4) pateikta žemiau; likusioje puslapio dalyje išsamiai aprašyta kiekviena skiltis.
     
     (configuration-v4)=
-    ## Configuration in AAPS v4
+    ## Konfigūracija AAPS v4
     
-    In **AAPS** v4, tap the **menu** (☰) in the **top-left** corner of the main screen and choose **Configuration** (*“Set up your configuration (CGM, pump, …) and enable features”*).
+    **AAPS** v4 pagrindinio ekrano **viršutiniame kairiajame** kampe palieskite **meniu** (☰) ir pasirinkite **Konfigūracija** (*„Nustatykite konfigūraciją (CGM, pompą, ...) ir įjunkite funkcijas“*).
     
-    ![The top-left menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+    ![Viršutinis kairysis meniu su punktu Konfigūracija](../images/v4/Configuration/configuration_menu.png)
     
-    Plugins are grouped by **category** — for example *Smoothing*, *Calibration*, *Sensitivity detection*, *APS*, *Communication* and *General*. Each row shows the category name and the **currently active** plugin (e.g. *APS → OpenAPS SMB*). Tap a row to open a category.
+    Įskiepiai sugrupuoti pagal **kategorijas**, pavyzdžiui, *Glodinimas*, *Kalibravimas*, *Jautrumo nustatymas*, *DKS*, *Ryšys* ir *Bendrieji*. Kiekvienoje eilutėje rodomas kategorijos pavadinimas ir **šiuo metu aktyvus** įskiepis (pvz., *DKS → OpenAPS SMB*). Palieskite eilutę, kad atidarytumėte kategoriją.
     
-    ![The Configuration screen, listing plugin categories](../images/v4/Configuration/configuration_plugins.png)
+    ![Konfigūracijos ekranas su įskiepių kategorijų sąrašu](../images/v4/Configuration/configuration_plugins.png)
     
-    Inside a category you see the plugins available for it. For single-choice categories you pick the active one; some categories are multi-select (*“Choose any that apply”*). Each plugin offers two actions:
+    Kategorijoje matote jai skirtus įskiepius. Kategorijose, kuriose galima pasirinkti tik vieną įskiepį, pasirenkate aktyvųjį; kai kuriose kategorijose galima pasirinkti kelis (*„Pasirinkite visus tinkamus.“*). Kiekvienas įskiepis turi du veiksmus:
     
-    - **Open plugin** — opens the plugin's own screen.
-    - **Settings** — opens the plugin's preferences (settings may be grouped into expandable sections).
+    - **Atidaryti įskiepį** – atidaro paties įskiepio ekraną.
+    - **Parametrai** – atidaro įskiepio nustatymus (nustatymai gali būti sugrupuoti į išskleidžiamas skiltis).
     
-    ![A category showing its plugins, each with “Open plugin” and “Settings”](../images/v4/Configuration/configuration_open_plugin.png)
+    ![Kategorija su įskiepiais, kiekvienas su „Atidaryti įskiepį“ ir „Parametrai“](../images/v4/Configuration/configuration_open_plugin.png)
     
     (configuration_sync_icon)=
-    ### The mobile icon — “synced from the master”
+    ### Telefono piktograma – „sinchronizuojama iš pagrindinio įrenginio“
     
-    A small **mobile (phone) icon** next to a category or setting means that item is **synchronized from the master** — its value/selection is delivered to this device over the NSClientV3 (Nightscout) channel.
+    Maža **telefono piktograma** šalia kategorijos ar nustatymo reiškia, kad šis elementas **sinchronizuojamas iš pagrindinio įrenginio** – jo reikšmė ar pasirinkimas į šį įrenginį perduodami NSClientV3 (Nightscout) kanalu.
     
-    On a **client** (**AAPSClient**) these items are **kept in sync with the master**. The icon is only shown on a client, so it does not appear in the screenshot above, which was taken on the main **AAPS** app. On a client it typically appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS*. Exactly how the master and clients stay aligned — and which settings you can change from either side — is covered under [Master ↔ Client control](#client-master-config-prefs).
+    **Kliente** (**AAPSClient**) šie elementai **sinchronizuojami su pagrindiniu įrenginiu**. Piktograma rodoma tik kliente, todėl jos nematyti aukščiau esančioje ekrano kopijoje, kuri padaryta pagrindinėje **AAPS** programėlėje. Kliente ji paprastai rodoma prie *Glodinimas*, *Kalibravimas*, *Jautrumo nustatymas* ir *DKS*. Kaip tiksliai pagrindinis įrenginys ir klientai lieka suderinti ir kuriuos nustatymus galite keisti iš kurios pusės, aprašyta skyriuje [Pagrindinio įrenginio ↔ kliento valdymas](#client-master-config-prefs).
     
-    The same icon also appears **inside the settings**, next to the individual preferences that are synced. In the example below *Absorption cutoff* carries the icon; settings without the icon are configured per device:
+    Ta pati piktograma rodoma ir **nustatymuose**, šalia atskirų sinchronizuojamų nustatymų. Žemiau esančiame pavyzdyje piktograma yra prie *Įsisavinimo ribinis laikas*; nustatymai be piktogramos nustatomi kiekviename įrenginyje atskirai:
     
-    ![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+    ![Įskiepio nustatymai – telefono piktograma žymi sinchronizuojamus nustatymus](../images/v4/ClientMaster/preferences_synced_icon.png)
     
-    Items **without** the icon are configured **per device**. The most important example is the **NSClientV3 (Communication)** connection itself — the **Nightscout URL**, **access token** and **websockets** are set on each phone individually, so they do **not** show the mobile icon.
+    Elementai **be** piktogramos nustatomi **kiekviename įrenginyje atskirai**. Svarbiausias pavyzdys – pats **NSClientV3 (Ryšys)** ryšys: **Nightscout URL**, **prieigos raktas** ir **websockets** nustatomi kiekviename telefone atskirai, todėl prie jų telefono piktograma **nerodoma**.
     
     ---
     
     (Config-Builder-tab-or-hamburger-menu)=
-    ## Opening a plugin screen
+    ## Įskiepio ekrano atidarymas
     
-    Each plugin screen is opened in one of these ways (the tabs and the eye checkbox of **AAPS** v3 are gone, see [What changed in AAPS v4](#v4-changes)):
+    Kiekvieną įskiepio ekraną galima atidaryti vienu iš šių būdų (**AAPS** v3 skirtukų ir akies žymimojo laukelio nebėra, žr. [Kas pasikeitė AAPS v4](#v4-changes)):
     
-    - **Configuration** → the plugin's category → **Open plugin**,
-    - the **Manage** sheet of the bottom navigation, for the screens you use most (Profile, Insulin settings, Pump, Automation, Food...),
-    - a [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) button that you add yourself,
-    - the **search bar** on the main screen.
+    - **Konfigūracija** → įskiepio kategorija → **Atidaryti įskiepį**,
+    - apatinės navigacijos meniu **Valdymas** – dažniausiai naudojamiems ekranams (Profilis, Insulino nustatymai, Pompa, Automatizacija, Maistas...),
+    - [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) mygtukas, kurį pridedate patys,
+    - **paieškos juosta** pagrindiniame ekrane.
     
     ```{contents}
     :backlinks: entry
@@ -56,420 +56,420 @@
 
 ## Profile
 
-This module cannot be disabled as it is a core part of **AAPS**.
+Šio modulio išjungti negalima, nes jis yra pagrindinė **AAPS** dalis.
 
-See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
+Kad suprastumėte, kas sudaro jūsų **profilį**, žr. [Jūsų AAPS profilis](../SettingUpAaps/YourAapsProfile.md).
 
 (insulin)= (Config-Builder-insulin)=
 
 ## Insulinas
 
-![Insulin settings](../images/manage/insulin_settings.png)
+![Insulino nustatymai](../images/manage/insulin_settings.png)
 
-In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Open **Manage → Insulin settings** to set up the insulin you are using.
+**AAPS** 4 versijoje insulinas nebėra įskiepis, pasirenkamas **Konfigūracijoje**. Atidarykite **Valdymas → Insulino nustatymai** ir nustatykite naudojamą insuliną.
 
-The insulin editor lets you:
+Insulino redaktoriuje galite:
 
-* give the insulin an **Insulin nickname** so it is easy to recognise,
-* set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Action, in hours), either by typing the value or using the **–** / **+** buttons,
-* tap a **Load peak from** preset button — **Novorapid** (75 min), **Fiasp** (55 min) or **Lyumjev** (45 min) — to fill in the standard peak time for that insulin in one step.
+* suteikti insulinui **Insulino pavadinimas**, kad jį būtų lengva atpažinti,
+* nustatyti **Pikas** (laikas iki didžiausio insulino aktyvumo, minutėmis) ir **IVT** (insulino veikimo trukmė, valandomis) – įvesdami reikšmę arba mygtukais **–** / **+**,
+* paliesti **Įkelti piko reikšmę iš** ruošinio mygtuką – **Novorapid** (75 min.), **Fiasp** (55 min.) arba **Lyumjev** (45 min.) – ir vienu veiksmu įrašyti standartinį to insulino piko laiką.
 
-The allowed ranges are the same whatever insulin you use:
+Leidžiamos ribos yra tos pačios, kad ir kokį insuliną naudotumėte:
 
-* **DIA**: 5 to 9 hours (5 to 10 hours if the patient type is set to **Pregnant**). See [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to choose a value.
-* **Peak**: 35 to 120 minutes.
+* **IVT**: nuo 5 iki 9 valandų (nuo 5 iki 10 valandų, jei naudotojo tipas nustatytas kaip **Nėščioji**). Kaip pasirinkti reikšmę, žr. [Insulino veikimo trukmė (IVT) ir pikas](#Config-Builder-insulin-dia).
+* **Pikas**: nuo 35 iki 120 minučių.
 
-The **IOB** (insulin on board) and **Activity** curves shown at the bottom of the editor update as you change the values, so you can see straight away how your settings shape the insulin action.
+Redaktoriaus apačioje rodomos **AIO** (aktyvus insulinas organizme) ir **Insulino aktyvumas** kreivės keičiasi kartu su reikšmėmis, todėl iš karto matote, kaip jūsų nustatymai keičia insulino veikimą.
 
-More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
+Daugiau informacijos apie tai, kaip **AAPS** rodomas insulino profilis, rasite [čia](#AapsScreens-insulin-profile).
 
 (Config-Builder-insulin-change-active)=
 
-### Changing the insulin in use (DIA or peak)
+### Naudojamo insulino keitimas (IVT arba pikas)
 
-The insulin marked **ACTIVE** is the one your running profile uses. Its fields are greyed out: you cannot edit or delete it. This way, the insulin name shown in your running profile always matches the settings actually in use.
+Insulinas, pažymėtas **AKTYVUS**, yra tas, kurį naudoja jūsų veikiantis profilis. Jo laukai yra pilki: jo redaguoti ar ištrinti negalima. Taip veikiančiame profilyje rodomas insulino pavadinimas visada atitinka tikrai naudojamus nustatymus.
 
-To change the DIA or peak you are using:
+Kaip pakeisti naudojamą IVT arba piką:
 
-1. Open **Manage → Insulin settings**. If the screen opens read-only (a **✏️ pencil** in the top bar), tap the pencil and unlock your settings.
-2. Tap **+** (*Add new insulin*). **AAPS** creates a copy of the insulin shown on screen.
-3. Set the new **Peak** and/or **DIA**, then tap the save icon (top right).
-4. Tap **▶** (*Activate insulin*) and confirm. The new insulin becomes **ACTIVE**.
+1. Atidarykite **Valdymas → Insulino nustatymai**. Jei ekranas atsidaro tik peržiūrai (viršutinėje juostoje matyti **✏️ pieštukas**), palieskite pieštuką ir atrakinkite nustatymus.
+2. Palieskite **+** (*Pridėti naują insuliną*). **AAPS** sukuria ekrane rodomo insulino kopiją.
+3. Nustatykite naują **Pikas** ir (arba) **IVT** reikšmę, tada palieskite išsaugojimo piktogramą (viršuje dešinėje).
+4. Palieskite **▶** (*Aktyvuoti insuliną*) ir patvirtinkite. Naujas insulinas tampa **AKTYVUS**.
 
-```{admonition} The name includes peak and DIA :class: note **AAPS** adds the peak, DIA and concentration to the insulin name automatically (for example *Fiasp 55m 8h U100*), so you can tell your configurations apart at a glance.
+```{admonition} Pavadinime nurodomas pikas ir IVT :class: note **AAPS** prie insulino pavadinimo automatiškai prideda piką, IVT ir koncentraciją (pavyzdžiui, *Fiasp 55m 8h U100*), todėl savo konfigūracijas atskirsite iš pirmo žvilgsnio.
 
-    <br />You can delete the old insulin once it is no longer active.
+    <br />Seną insuliną galite ištrinti, kai jis nebėra aktyvus.
     
-    ### The "Load peak from" presets
+    ### „Įkelti piko reikšmę iš“ ruošiniai
     
-    In **AAPS** 4 there is no list of insulin types to choose from. Every insulin uses the same exponential activity curve; only its **Peak** and **DIA** differ. The **Load peak from** presets in the insulin editor fill in the recommended peak for the most common insulins in one tap (the small ⓘ next to **Load peak from** lists them with their peak values). You can still adjust the **Peak** and **DIA** afterwards.
+    **AAPS** 4 nebėra insulino tipų sąrašo, iš kurio būtų galima rinktis. Visiems insulinams naudojama ta pati eksponentinė aktyvumo kreivė; skiriasi tik jų **Pikas** ir **IVT**. Insulino redaktoriuje **Įkelti piko reikšmę iš** ruošiniai vienu palietimu įrašo rekomenduojamą dažniausiai naudojamų insulinų piką (maža ⓘ piktograma šalia **Įkelti piko reikšmę iš** parodo jų sąrašą su piko reikšmėmis). Vėliau **Pikas** ir **IVT** vis tiek galite pakoreguoti.
     
-    Only change the peak away from its recommended value if you understand the effect of doing so. The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the curves.
+    Piką keiskite nuo rekomenduojamos reikšmės tik tada, jei suprantate, kokį poveikį tai turės. Kreives suprasti padeda [insulino kreivės grafikas](#AapsScreens-insulin-profile).
     
     #### Novorapid
     
-    ![Insulin curve with the Novorapid peak](../images/Profile/ConfBuild_Insulin_RAO.png)
+    ![Insulino kreivė su Novorapid piku](../images/Profile/ConfBuild_Insulin_RAO.png)
     
-    * recommended for Humalog, Novolog and Novorapid (called *Rapid-Acting Oref* in **AAPS** v3)
-    * Peak = 75 minutes after injection
+    * rekomenduojama Humalog, Novolog ir Novorapid (**AAPS** v3 vadinosi *Rapid-Acting Oref*)
+    * Pikas = 75 minutės po injekcijos
     
     #### Fiasp
     
-    ![Insulin curve with the Fiasp peak](../images/Profile/ConfBuild_Insulin_URO.png)
+    ![Insulino kreivė su Fiasp piku](../images/Profile/ConfBuild_Insulin_URO.png)
     
-    * recommended for Fiasp (called *Ultra-Rapid Oref* in **AAPS** v3)
-    * Peak = 55 minutes after injection
+    * rekomenduojama Fiasp (**AAPS** v3 vadinosi *Ultra-Rapid Oref*)
+    * Pikas = 55 minutės po injekcijos
     
     (Config-Builder-lyumjev)=
     #### Lyumjev
     
-    ![Insulin curve with the Lyumjev peak](../images/Profile/ConfBuild_Insulin_L.png)
+    ![Insulino kreivė su Lyumjev piku](../images/Profile/ConfBuild_Insulin_L.png)
     
-    * recommended for Lyumjev
-    * Peak = 45 minutes after injection
+    * rekomenduojama Lyumjev
+    * Pikas = 45 minutės po injekcijos
     
-    #### Custom peak
+    #### Pasirinktinis pikas
     
-    * There is no separate "Free-Peak Oref" insulin type in **AAPS** 4: enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a preset.
-    * A custom peak is useful if you use an insulin that is not in the list, or a mixture of different insulins.
+    * **AAPS** 4 nebėra atskiro insulino tipo „Free-Peak Oref“: bet kokį **Pikas** (nuo 35 iki 120 minučių) įveskite tiesiai [insulino redaktoriuje](#Config-Builder-insulin), nenaudodami ruošinio.
+    * Pasirinktinis pikas naudingas, jei naudojate insuliną, kurio nėra sąraše, arba skirtingų insulinų mišinį.
     
     (Config-Builder-insulin-dia)=
-    ### Duration of insulin action (DIA) and peak
+    ### Insulino veikimo trukmė (IVT) ir pikas
     
     ```{warning}
-    In looping, decreasing DIA or peak will always increase administered insulin. DIA works differently in AAPS than in commercial AID systems, and careless changes to these settings can change insulin dosing in a way which is much larger or smaller than expected.
+    Veikiant ciklui, sumažinus IVT arba piką, suleidžiamo insulino kiekis visada padidėja. AAPS IVT veikia kitaip nei komercinėse AID sistemose, todėl neapgalvoti šių nustatymų pakeitimai gali pakeisti insulino dozavimą daug labiau arba daug mažiau, nei tikitės.
     
 
-AAPS models the timeline of insulin action with a mathematical formula, configured using **DIA** and the closely related **peak** settings. DIA is the theoretical duration until IOB reaches zero and peak is the point in time when the effect of insulin is strongest. This yields an IOB curve and an activity curve, which is simply the **rate** of IOB decay.
+AAPS insulino veikimo eigą modeliuoja matematine formule, kuri nustatoma **IVT** ir su juo glaudžiai susijusiu **piko** nustatymu. IVT yra teorinė trukmė, per kurią AIO sumažėja iki nulio, o pikas yra laiko momentas, kai insulino poveikis stipriausias. Taip gaunama AIO kreivė ir aktyvumo kreivė, kuri yra tiesiog AIO mažėjimo **greitis**.
 
-Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). This missing basal insulin is fully subtracted from the IOB, explaining why IOB will in practice reach zero many hours earlier than the configured DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
+Atminkite, kad kai AAPS veikia ciklu, įprasta turėti [nulinės laikinos bazės](#Open-APS-features-super-micro-bolus-smb) laikotarpių. Šis trūkstamas bazinis insulinas visas atimamas iš AIO, todėl praktikoje AIO nukrenta iki nulio daug valandų anksčiau nei nustatyta IVT. [Boluso AIO ir bazės AIO](#aaps-screens-iob-cob-basal-sens) atskirai galite peržiūrėti pagrindiniame ekrane.
 
-To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin settings**. AAPS displays the active insulin configuration like this:
+Norėdami nustatyti IVT ir piką, pagrindiniame ekrane palieskite **Valdymas**, tada palieskite **Insulino nustatymai**. AAPS aktyvią insulino konfigūraciją rodo taip:
 
-![Sample insulin configuration](../images/manage/insulin_profile.png)
+![Insulino konfigūracijos pavyzdys](../images/manage/insulin_profile.png)
 
-In this example, the peak setting is 55 minutes, DIA is 8 hours and [insulin concentration](#Insulin-Concentration) is the standard 100 IU/mL.
+Šiame pavyzdyje piko nustatymas yra 55 minutės, IVT yra 8 valandos, o [insulino koncentracija](#Insulin-Concentration) yra standartinė 100 V/ml.
 
-Due to the influence of zero-temping explained above and the formula used for IOB decay in AAPS, most users set a clearly higher DIA than in commercial systems. In general, many people find that a **DIA** of 9h works well for them. After you have more experience with AAPS and have a well-tuned profile, you can try to find personalized DIA and peak settings with the information below.
+Dėl aukščiau paaiškinto nulinės laikinos bazės poveikio ir AAPS naudojamos AIO mažėjimo formulės dauguma naudotojų nustato aiškiai ilgesnę IVT nei komercinėse sistemose. Apskritai daugeliui žmonių gerai tinka 9 val. **IVT**. Kai įgysite daugiau patirties su AAPS ir turėsite gerai suderintą profilį, galite pabandyti rasti individualius IVT ir piko nustatymus, remdamiesi toliau pateikta informacija.
 
-````{admonition} Details on the impact of DIA and peak configuration :class: dropdown
+````{admonition} Išsamiau apie IVT ir piko nustatymų poveikį :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+Kadangi AAPS valandinė bazė netiesiogiai veikia AIO mažėjimą, per didelė valandinė bazė gali paslėpti per ilgą IVT, ir atvirkščiai. Prasminga pirmiausia kruopščiai suderinti valandinę bazę, o tik tada koreguoti IVT ir piką. Be to, atminkite, kad IVT ir piko nustatymai veikia vienas kitą: IVT poveikis priklauso nuo piko, ir atvirkščiai.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Šie grafikai tiksliai rodo IVT ir piko poveikį AIO kreivėms visame leidžiamų reikšmių intervale.
 
-Adjusting DIA:
+IVT keitimas:
 
 ```{image} ../images/iob_remaining_static_peak.png :width: 400px
 
-    <br />Adjusting peak:
+    <br />Piko keitimas:
     
     ```{image} ../images/iob_remaining_static_dia.png
     :width: 400px
     
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Galiausiai palyginimas, kai IVT ir pikas keičiami kartu. Logika tokia: abi reikšmės keičiamos tuo pačiu santykiniu dydžiu, todėl `49/35 ~ 7/5`. Arba panašiai, `120/93 ~ 9/7`. Intervalai bus tokie patys, nepriklausomai nuo pradinės IVT ar piko reikšmės, jei tik santykinis pokytis abiem yra vienodas.
 
 ```{image} ../images/iob_remaining_uniform.png :width: 400px
 
-    <br />Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+    <br />Atminkite, kad taip keičiant IVT ir piką, kiekvienas kreivės taškas pasislenka tuo pačiu santykiniu dydžiu.
     
     ````
     
-    #### Further reading on DIA and peak configuration
+    #### Daugiau skaitymo apie IVT ir piko nustatymą
     
-    * [Technical details and historical background from the AAPS predecessor, OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
-    * [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
-    * [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
-    * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
+    * [Techninės detalės ir istorinis kontekstas iš AAPS pirmtako OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) (anglų k.).
+    * [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) (kodėl dažnai klystame nustatydami IVT ir kodėl tai svarbu) svetainėje Diabettech.
+    * [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) (eksponentinės insulino kreivės ir Fiasp) svetainėje See My CGM (archyvas).
+    * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) (patikslintas Humalog modelis uždarame cikle) ir kiti straipsniai svetainėje Bionic Wookie, kuriuose Lyumjev, Fiasp, NovoRapid, Humalog rekomenduojama 9 val. IVT.
     
     (Config-Builder-bg-source)=
-    ## BG Source
-    Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+    ## Glikemijos šaltinis
+    Pasirinkite naudojamą gliukozės duomenų šaltinį. Daugiau informacijos apie sąranką rasite puslapyje [Glikemijos šaltinis](../Getting-Started/CompatiblesCgms.md).
     
-    ![Configuration > BG Source](../images/v4/Configuration/configuration_bg_source.png)
+    ![Konfigūracija > Glikemijos šaltinis](../images/v4/Configuration/configuration_bg_source.png)
     
-    Scroll down to see the other sources:
+    Slinkite žemyn, kad pamatytumėte kitus šaltinius:
     
-    ![Configuration > BG Source, continued](../images/v4/Configuration/configuration_bg_source_2.png)
+    ![Konfigūracija > Glikemijos šaltinis, tęsinys](../images/v4/Configuration/configuration_bg_source_2.png)
     
-    ![Configuration > BG Source, end of the list](../images/v4/Configuration/configuration_bg_source_3.png)
+    ![Konfigūracija > Glikemijos šaltinis, sąrašo pabaiga](../images/v4/Configuration/configuration_bg_source_3.png)
     
-    * [xDrip+ BG](../CompatibleCgms/xDrip.md) - also for compatible apps such as [Juggluco](../CompatibleCgms/Juggluco.md)
-    * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
+    * [xDrip+](../CompatibleCgms/xDrip.md) – taip pat suderinamoms programėlėms, pvz., [Juggluco](../CompatibleCgms/Juggluco.md)
+    * [NSClient glikemija](../CompatibleCgms/CgmNightscoutUpload.md) – tik jei žinote, ką darote, žr. [Glikemijos šaltinis](../Getting-Started/CompatiblesCgms.md).
     * [MM640g](../CompatibleCgms/MM640g.md)
-    * Glimp - only version 4.15.57 and newer are supported
+    * Glimp – palaikoma tik 4.15.57 ir naujesnė versija
     * [BYODA (Build Your Own Dexcom App)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
-    * MicroTech CGM App - for the Aidex / LinX CGM
+    * MicroTech CGM App – Aidex / LinX NGJ
     * [Poctech](../CompatibleCgms/PocTech.md)
-    * Tomato (MiaoMiao) - Tomato App for MiaoMiao device
-    * [Glunovo](https://infinovo.com/) - Glunovo App for Glunovo CGM system
-    * Intelligo - Intelligo App
-    * Syai/Ottai - for the Syai and Ottai apps (see [Syai Tag](../CompatibleCgms/SyaiTagX1.md) and [Ottai](../CompatibleCgms/OttaiM8.md))
-    * SI App - patched SI App or Sibionics App for Sibionics CGM
-    * Sino App - patched app for Sinocare CGM
-    * Notification Reader - reads glucose values from the notifications shown by official CGM apps (Dexcom, Medtronic, Eversense, etc.)
-    * Instara - Instara App
-    * Random BG - generates random BG data for testing. It can only be enabled in an engineering (developer) build with the **Virtual Pump**, so in a normal **AAPS** installation it cannot be used.
+    * Tomato (MiaoMiao) – Tomato programėlė MiaoMiao įrenginiui
+    * [Glunovo](https://infinovo.com/) – Glunovo programėlė Glunovo NGJ sistemai
+    * Intelligo – Intelligo programėlė
+    * Syai/Ottai – Syai ir Ottai programėlėms (žr. [Syai Tag](../CompatibleCgms/SyaiTagX1.md) ir [Ottai](../CompatibleCgms/OttaiM8.md))
+    * SI App – pataisyta SI App arba Sibionics App programėlė Sibionics NGJ
+    * Sino App – pataisyta programėlė Sinocare NGJ
+    * Pranešimų skaitytuvas – nuskaito gliukozės reikšmes iš oficialių NGJ programėlių pranešimų (Dexcom, Medtronic, Eversense ir kt.)
+    * Instara – Instara programėlė
+    * Atsitiktinė glikemija – testavimui generuoja atsitiktinius KG duomenis. Ją galima įjungti tik inžinerinio režimo (kūrėjo) versijoje su **Virtuali pompa**, todėl įprastoje **AAPS** versijoje jos naudoti negalima.
     
-    ## Smoothing
+    ## Glodinimas
     
-    ![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+    ![Konfigūracija > Glodinimas](../images/v4/Configuration/configuration_smoothing.png)
     
-    See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+    Žr. [Gliukozės duomenų glodinimas](../CompatibleCgms/SmoothingBloodGlucoseData.md).
     
-    ## Calibration
+    ## Kalibravimas
     
-    Choose how **AAPS** treats the values it receives from your sensor:
+    Pasirinkite, kaip **AAPS** apdoroja iš jutiklio gaunamas reikšmes:
     
-    - **No calibration**: the sensor values are used as they are. Use this when the sensor is already factory-calibrated and accurate. This is the default.
-    - **Linear calibration**: **AAPS** corrects the sensor values with a slope and an offset that it computes from your fingerstick entries.
+    - **Be kalibravimo**: jutiklio reikšmės naudojamos tokios, kokios yra. Rinkitės šį nustatymą, jei jutiklis yra gamykliškai sukalibruotas ir rodo tiksliai. Tai numatytasis nustatymas.
+    - **Tiesinis kalibravimas**: **AAPS** pataiso jutiklio reikšmes pagal nuolydį ir poslinkį, kuriuos apskaičiuoja iš jūsų matavimų iš piršto.
     
-    How to use **Linear calibration**:
+    Kaip naudoti **Tiesinis kalibravimas**:
     
-    1. Select **Linear calibration** in the **Calibration** category.
-    2. When you insert a new sensor, log the sensor change: use **Log sensor change** on the calibration screen, or enter a CGM sensor insert in the Careportal. This tells **AAPS** when the sensor session started. If **AAPS** notices a gap of more than 30 minutes in the readings, it may ask you to mark a sensor change; this prompt appears on the master only, not on a client.
-    3. Open the plugin and tap **Add calibration**. Enter your fingerstick value. **AAPS** pairs it with the sensor value from the last 10 minutes.
+    1. Kategorijoje **Kalibravimas** pasirinkite **Tiesinis kalibravimas**.
+    2. Įvedę naują jutiklį, įrašykite jutiklio pakeitimą: kalibravimo ekrane naudokite **Įrašyti jutiklio pakeitimą** arba skiltyje „Terapija“ įveskite NGJ jutiklio įvedimą. Taip **AAPS** sužino, kada prasidėjo jutiklio sesija. Jei **AAPS** pastebi ilgesnę nei 30 minučių pertrauką tarp reikšmių, jis gali paprašyti pažymėti jutiklio pakeitimą; šis prašymas rodomas tik pagrindiniame įrenginyje, ne kliente.
+    3. Atidarykite įskiepį ir bakstelėkite **Kalibruoti**. Įveskite matavimo iš piršto reikšmę. **AAPS** susieja ją su jutiklio reikšme iš paskutinių 10 minučių.
     
-    A calibration is accepted only when:
+    Kalibravimas priimamas tik tada, kai:
     
-    - a sensor change is logged and at least **2 hours** have passed since then (warm-up),
-    - your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
-    - there is a CGM reading from the last 10 minutes,
-    - it is for the current moment. You cannot enter older fingerstick values.
+    - įrašytas jutiklio pakeitimas ir nuo jo praėjo bent **2 valandos** (įšilimas),
+    - jūsų gliukozė stabili. Jei ji keičiasi per greitai, langas apie tai praneša ir parodo ribą,
+    - yra NGJ reikšmė iš paskutinių 10 minučių,
+    - kalibravimas yra dabartiniam momentui. Senesnių matavimų iš piršto įvesti negalima.
     
-    How the correction works:
+    Kaip veikia korekcija:
     
-    - **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
-    - Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. The line therefore follows your sensor as it drifts.
-    - At least **2 pairs** are needed.
-    - If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
-    - The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
-    - Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. This protects you from a wrong entry.
+    - **AAPS** nubrėžia tiesę per dabartinio jutiklio poras: `corrected value = slope × sensor value + offset`.
+    - Naujesnės poros turi didesnį svorį nei senesnės: 2 dienų senumo poros svoris yra apie 37 %, 4 dienų senumo – apie 14 %. Todėl tiesė seka jūsų jutiklį, kai jo reikšmės pamažu nukrypsta.
+    - Reikia bent **2 porų**.
+    - Jei poros yra arti viena kitos (skirtumas mažesnis nei 54 mg/dL / 3 mmol/l), reikšmės tik paslenkamos (poslinkis, be nuolydžio).
+    - Nuolydis laikomas tarp 0,55 ir 1,6. Už šio intervalo esantis nuolydis apribojamas iki artimiausios reikšmės.
+    - Saugumo riba: jei korekcija ties 100 mg/dL (5,5 mmol/l) būtų didesnė nei ±30 mg/dL (1,7 mmol/l), korekcija netaikoma. Tai apsaugo jus nuo klaidingo įrašo.
     
-    What it changes:
+    Ką tai keičia:
     
-    - The corrected value is used everywhere: the BG on the main screen, the graph and the loop. The sensor readings themselves are not changed. The correction is applied on top, also to the earlier readings of the current sensor.
-    - A new sensor change starts from zero. Pairs from earlier sensors no longer count.
-    - On the graph, a calibration is shown as a marker at the fingerstick value.
-    - Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
+    - Pakoreguota reikšmė naudojama visur: KG pagrindiniame ekrane, grafike ir cikle. Pačios jutiklio reikšmės nekeičiamos. Korekcija pritaikoma papildomai, taip pat ir ankstesnėms dabartinio jutiklio reikšmėms.
+    - Naujas jutiklio pakeitimas pradeda nuo nulio. Ankstesnių jutiklių poros nebeskaičiuojamos.
+    - Grafike kalibravimas rodomas kaip žymeklis ties matavimo iš piršto reikšme.
+    - Kalibravimai sinchronizuojami per Nightscout, todėl jūsų klientai rodo tas pačias pakoreguotas reikšmes.
     
-    Check and remove entries:
+    Įrašų tikrinimas ir šalinimas:
     
-    - **Open plugin** shows the status (for example *Slope 0.85, mid-range correction -0.4*), a chart of your pairs with the line, and the list of entries.
-    - If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. The line is calculated again at once.
+    - **Atidaryti įskiepį** rodo būseną (pavyzdžiui, *Nuolydis 0,85, vidurinio diapazono korekcija -0,4*), jūsų porų grafiką su tiese ir įrašų sąrašą.
+    - Jei įrašas klaidingas (pavyzdžiui, ant piršto buvo cukraus), bakstelėkite šiukšliadėžės piktogramą šalia jo. Tiesė iš karto apskaičiuojama iš naujo.
     
-    ```{admonition} Using xDrip+ as BG source?
+    ```{admonition} Naudojate xDrip+ kaip KG šaltinį?
     :class: note
-    xDrip+ has its own calibration. Calibrate in one place only, so that the sensor values are not corrected twice.
+    xDrip+ turi savo kalibravimą. Kalibruokite tik vienoje vietoje, kad jutiklio reikšmės nebūtų koreguojamos du kartus.
     
 
-    {admonition} Calibrate with care
+    {admonition} Kalibruokite atsargiai
     :class: warning
-    A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Wash your hands before measuring, and do not calibrate while your glucose is changing fast.
+    Klaidinga matavimo iš piršto reikšmė lemia klaidingas gliukozės reikšmes, o kartu ir klaidingą insulino dozavimą. Prieš matuodami nusiplaukite rankas ir nekalibruokite, kai gliukozė greitai kinta.
 
-![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)
+![Konfigūracija > Kalibravimas](../images/v4/Configuration/configuration_calibration.png)
 
 (Config-Builder-pump)=
 
 ## Pump
 
-Select the pump you are using. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
+Select the pump you are using. Daugiau informacijos apie sąranką rasite puslapyje [Suderinamos pompos](../Getting-Started/CompatiblePumps.md).
 
-![Configuration > Pump](../images/v4/Configuration/configuration_pump_list_1.png)
+![Konfigūracija > Pompa](../images/v4/Configuration/configuration_pump_list_1.png)
 
-Scroll down to see all the pump drivers:
+Slinkite žemyn, kad pamatytumėte visas pompų tvarkykles:
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_2.png)
+![Konfigūracija > Pompa, tęsinys](../images/v4/Configuration/configuration_pump_list_2.png)
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_3.png)
+![Konfigūracija > Pompa, tęsinys](../images/v4/Configuration/configuration_pump_list_3.png)
 
-![Configuration > Pump, end of the list](../images/v4/Configuration/configuration_pump_list_4.png)
+![Konfigūracija > Pompa, sąrašo pabaiga](../images/v4/Configuration/configuration_pump_list_4.png)
 
-When you select another pump, **AAPS** asks you to confirm the change:
+Kai pasirenkate kitą pompą, **AAPS** paprašo patvirtinti pakeitimą:
 
-![Switch plugin confirmation](../images/v4/Pumps/switch_plugin_dialog.png)
+![Įskiepio keitimo patvirtinimas](../images/v4/Pumps/switch_plugin_dialog.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * Dana R Korean (for domestic DanaR pump)
 * Dana Rv2 (DanaR pump with unofficial firmware upgrade)
 * [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
-* [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
-* Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
-* Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+* [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
+* Omnipod – [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) pompai
+* Dash – [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) pompai
 * [Medtronic](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * [Carelevo](../CompatiblePumps/CareLevo.md)
-* Virtual pump: open loop - **AAPS** suggestions only 
-  * as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
-  * for pump which doesn't have any driver yet
+* Virtuali pompa: atviras ciklas – tik **AAPS** rekomendacijos 
+  * kai žengiate pirmuosius žingsnius su **AAPS**, per pirmuosius [mokymo etapus](../SettingUpAaps/CompletingTheObjectives.md)
+  * pompai, kuri dar neturi tvarkyklės
 
 (config-builder-wrong-pump-data)=
 
-### Message: "Data is coming from different pump"
+### Pranešimas: „Duomenys gaunami iš kitos pompos“
 
-**AAPS** remembers the pump it is connected to (pump type and serial number). If it receives data from another pump, for example after your pump was replaced by a new one of the same model, it shows this message and ignores the data from that pump:
+**AAPS** įsimena pompą, prie kurios yra prisijungusi (pompos tipą ir serijos numerį). Jei gauna duomenis iš kitos pompos, pavyzdžiui, kai jūsų pompa buvo pakeista nauja to paties modelio pompa, rodo šį pranešimą ir tos pompos duomenų nepaiso:
 
-![Data is coming from different pump](../images/Screen_DifferentPump.png)
+![Duomenys gaunami iš kitos pompos](../images/Screen_DifferentPump.png)
 
-To use the new pump, change the pump driver: select **Virtual pump**, confirm, then select your pump again. **AAPS** then registers the pump it is connected to now.
+Norėdami naudoti naują pompą, pakeiskite pompos tvarkyklę: pasirinkite **Virtuali pompa**, patvirtinkite, tada vėl pasirinkite savo pompą. Tada **AAPS** užregistruoja pompą, prie kurios dabar prisijungusi.
 
 (Config-Builder-sensitivity-detection)=
 
 ## Jautrumo nustatymas
 
-![Configuration > Sensitivity detection](../images/v4/Configuration/configuration_sensitivity_detection.png)
+![Konfigūracija > Jautrumo nustatymas](../images/v4/Configuration/configuration_sensitivity_detection.png)
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about how the sensitivity ratio itself is calculated can be found in [Key AAPS Features > Autosens](#Open-APS-features-autosens).
+Select the type of sensitivity detection. Daugiau apie skirtingus algoritmus [skaitykite čia](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Jis nuolat analizuoja duomenų istoriją ir atlieka korekcijas, jei atpažįsta, kad į insuliną reaguojate jautriau (arba, atvirkščiai, rezistentiškiau) nei įprastai. Daugiau informacijos apie tai, kaip apskaičiuojamas pats jautrumo santykis, rasite skyriuje [Pagrindinės AAPS funkcijos > Autosens](#Open-APS-features-autosens).
 
-You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SENS% and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+Savo jautrumą galite matyti pagrindiniame ekrane [papildomame grafike](#AapsScreens-section-g-additional-graphs): pasirinkite SENS% ir stebėkite baltą liniją. Atminkite: kad jautrumo nustatymas / [Autosens](#Open-APS-features-autosens) galėtų automatiškai koreguoti suleidžiamo insulino kiekį, turite būti pasiekę [8 mokymo etapą](#objectives-objective8). Kol nepasiekėte šio mokymo etapo, Autosens procentas / linija grafike rodomi tik informacijai.
 
 ### Angliavandenių įsisavinimo parametrai
 
-If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+Jei naudojate Oref1 su **SMB**, turite pakeisti **min_5m_carbimpact** į 8. Ši reikšmė naudojama tik tada, kai trūksta **NGJ** rodmenų, arba kai fizinis aktyvumas „sunaudoja“ visą gliukozės kilimą, pagal kurį **AAPS** kitu atveju mažintų AAO. Kai [angliavandenių įsisavinimo](../DailyLifeWithAaps/CobCalculation.md) negalima dinamiškai apskaičiuoti pagal jūsų gliukozės pokyčius, angliavandeniams taikomas numatytasis įsisavinimo greitis. Basically, it is a failsafe.
 
 (Config-Builder-aps)=
 
 ## APS
 
-![Configuration > APS](../images/v4/Configuration/configuration_aps.png)
+![Konfigūracija > DKS](../images/v4/Configuration/configuration_aps.png)
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm with **Open plugin**.
+Select the desired APS algorithm for therapy adjustments. Pasirinkto algoritmo veikimo detales galite peržiūrėti mygtuku **Atidaryti įskiepį**.
 
 * OpenAPS AMA 
-  * Advanced Meal Assist: older algorithm not recommended anymore.
-  * In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
+  * Advanced Meal Assist (pažangi pagalba valgant): senesnis algoritmas, kurio neberekomenduojama naudoti.
+  * Paprastai tariant, jo nauda tokia: susileidus boluso valgiui, sistema gali greičiau nustatyti didesnę laikiną bazę, JEI patikimai įvedate angliavandenius.
 * [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb) 
-  * Super Micro Bolus: most recent algorithm recommended for all users.
-  * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
-  * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
-* [Auto ISF](#Open-APS-features-auto-isf) 
-  * Experimental algorithm for advanced users. It is only listed once the objectives are completed.
+  * Super Micro Bolus (supermikrobolusas): naujausias algoritmas, rekomenduojamas visiems naudotojams.
+  * Skirtingai nei AMA, SMB gliukozės kiekį valdo ne laikinomis valandinėmis bazėmis, o daugiausia mažais **supermikrobolusais**.
+  * Pastaba: šį algoritmą rekomenduojama naudoti nuo pat pradžių, nors SMB iš tikrųjų nebus leidžiami iki [9 mokymo etapo](#objectives-objective9).
+* [Automatinis JIF](#Open-APS-features-auto-isf) 
+  * Eksperimentinis algoritmas patyrusiems naudotojams. Jis rodomas sąraše tik baigus mokymo etapus.
 
-If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manually to **8** (default value for SMB) in [Settings → Absorption settings](#Preferences-min_5m_carbimpact).
+Jei pereinate nuo AMA prie SMB algoritmo, *min_5m_carbimpact* reikia rankiniu būdu pakeisti į **8** (numatytoji SMB reikšmė) skiltyje [Nustatymai → Angliavandenių įsisavinimo parametrai](#Preferences-min_5m_carbimpact).
 
 ## Ciklas
 
-This module cannot be disabled as it is a core part of **AAPS**.
+Šio modulio išjungti negalima, nes jis yra pagrindinė **AAPS** dalis.
 
-![Configuration > Loop](../images/v4/Configuration/configuration_loop.png)
+![Konfigūracija > Ciklas](../images/v4/Configuration/configuration_loop.png)
 
 ## Constraints
 
-![Configuration > Constraints](../images/v4/Configuration/configuration_constraints.png)
+![Konfigūracija > Apribojimai](../images/v4/Configuration/configuration_constraints.png)
 
-### Objectives
+### Mokymo etapai
 
-**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system.
+**AAPS** turi mokymo programą (mokymo etapų seriją), kurią turite atlikti žingsnis po žingsnio. Ji turėtų saugiai padėti jums nustatyti uždaro ciklo sistemą.
 
-See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
+Daugiau informacijos rasite puslapyje [Mokymo etapų atlikimas](../SettingUpAaps/CompletingTheObjectives.md).
 
-## Communication
+## Ryšys
 
-In this category (called **Synchronization** in **AAPS** v3), you choose if/where you want **AAPS** to send your data to.
+Šioje kategorijoje (**AAPS** v3 ji vadinosi **Synchronization**) pasirenkate, ar ir kur **AAPS** turi siųsti jūsų duomenis.
 
-![Configuration > Communication](../images/v4/Configuration/configuration_communication.png)
+![Konfigūracija > Ryšys](../images/v4/Configuration/configuration_communication.png)
 
-Scroll down to see the rest of the list:
+Slinkite žemyn, kad pamatytumėte likusį sąrašą:
 
-![Configuration > Communication, continued](../images/v4/Configuration/configuration_communication_2.png)
+![Konfigūracija > Ryšys, tęsinys](../images/v4/Configuration/configuration_communication_2.png)
 
 ### NSClientV3
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md).
+Gali būti naudojamas kaip [ataskaitų serveris](../SettingUpAaps/SettingUpTheReportingServer.md) ir (arba) [nuotoliniam stebėjimui](../RemoteFeatures/RemoteMonitoring.md), [nuotoliniam valdymui](../RemoteFeatures/RemoteControl.md).
 
-See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to set up NSClientV3 synchronization.
+Kaip nustatyti NSClientV3 sinchronizaciją, žr. [Sinchronizacija su ataskaitų serveriu](#SetupWizard-synchronization-with-the-reporting-server-and-more).
 
 ### Tidepool
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+Gali būti naudojamas kaip [ataskaitų serveris](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-See [Tidepool](../SettingUpAaps/Tidepool.md).
+Žr. [Tidepool](../SettingUpAaps/Tidepool.md).
 
 ### xDrip
 
-Used to **send** data such as glucose values and treatments to xDrip+ on the same phone. Its settings also hold **Send status to xDrip+**, a status line with IOB and COB that xDrip+ and some watch companion apps display.
+Naudojamas duomenims, pvz., gliukozės reikšmėms ir terapijos įrašams, **siųsti** į xDrip+ tame pačiame telefone. Jo nustatymuose taip pat yra **Siųsti būseną į xDrip+** – būsenos eilutė su AIO ir AAO, kurią rodo xDrip+ ir kai kurios laikrodžių susietos programėlės.
 
 ### Open Humans
 
-See [Open Humans](../SupportingAaps/OpenHumans.md).
+Žr. [Open Humans](../SupportingAaps/OpenHumans.md).
 
 (Config-Builder-wear)=
 
 ### Wear
 
-Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is explained on [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md). After enabling the plugin, choose its options in [Settings > Wear](#preferences-wear). Using the watch is explained on [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
+**AAPS** stebėjimas ir valdymas Wear OS laikrodžiu. Kaip nustatyti laikrodį, paaiškinta puslapyje [AAPS nustatymas Wear OS laikrodyje](../WearOS/WearOsSmartwatch.md). Įjungę įskiepį, jo parinktis pasirinkite skiltyje [Nustatymai > Išmanieji laikrodžiai](#preferences-wear). Kaip naudotis laikrodžiu, paaiškinta puslapyje [AAPS valdymas Wear OS išmaniuoju laikrodžiu](../RemoteFeatures/RemoteControlWearOS.md).
 
 (external-companion-apps)=
 
-### External Companion Apps
+### Išorinės susietos programėlės
 
-Broadcasts **AAPS** status data on the phone so that other apps installed on it can display it — for example watch or widget companion apps. The broadcast includes glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Enable it only if a companion app you use asks for this data.
+Transliuoja **AAPS** būsenos duomenis telefone, kad kitos jame įdiegtos programėlės galėtų juos rodyti, pavyzdžiui, laikrodžių ar valdiklių susietos programėlės. Transliuojami duomenys: gliukozė ir tendencija, AIO, AAO, valandinė bazė ir laikina bazė, profilio pavadinimas, ciklo būsena, telefono ir pompos baterija, rezervuaro lygis ir boluso eiga. Įjunkite tik tada, jei šių duomenų prašo jūsų naudojama susieta programėlė.
 
-Apps known to read this broadcast are [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi and Amazfit watches), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS complications and widgets, and Android Auto through GlucoDataAuto) and the G-Watch app. Their setup is described on [Smartwatches and AAPS](#watches-external-companion-apps). Some of them also use **Send status to xDrip+** from the **xDrip** plugin above for a status line with IOB and COB.
+Žinomos programėlės, kurios skaito šią transliaciją, yra [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi ir Amazfit laikrodžiai), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS ekrano elementai ir valdikliai, taip pat Android Auto per GlucoDataAuto) ir G-Watch programėlė. Jų sąranka aprašyta puslapyje [Išmanieji laikrodžiai ir AAPS](#watches-external-companion-apps). Kai kurios iš jų būsenos eilutei su AIO ir AAO taip pat naudoja aukščiau aprašyto **xDrip** įskiepio parinktį **Siųsti būseną į xDrip+**.
 
-In earlier versions this plugin was called **Samsung Tizen**, after the [G-Watch app for Samsung Tizen watches](#Watchfaces-tizen) it was first made for.
+Ankstesnėse versijose šis įskiepis vadinosi **Samsung Tizen** pagal [G-Watch programėlę Samsung Tizen laikrodžiams](#Watchfaces-tizen), kuriai jis iš pradžių buvo sukurtas.
 
 ### Garmin
 
-Connection to Garmin device (Fenix, Edge...)
+Susiejimas su Garmin (Fenix, Edge...)
 
 ## Terapija
 
-Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through **Treatments → Carbs** in the bottom navigation (see [Carbs](#screens-bolus-carbs)).
+Atidarykite **meniu** (☰) ir pasirinkite [Terapijos istorija](#aaps-screens-treatments), kad pamatytumėte įrašytus terapijos įrašus. Jei norite redaguoti ar ištrinti įrašą (pvz., suvalgėte mažiau angliavandenių, nei tikėjotės), pasirinkite „Pašalinti“ ir įveskite naują reikšmę (jei reikia, pakeiskite laiką) apatinėje navigacijoje per **Terapija → Angliavandeniai** (žr. [Angliavandeniai](#screens-bolus-carbs)).
 
-## General
+## Bendra informacija
 
-In **AAPS** 4 the **General** category of **Configuration** only lists **Autotune**. The other features described below are always available and no longer need to be enabled here; each paragraph says where to find them.
+**AAPS** 4 **Konfigūracijos** kategorijoje **Bendrieji** yra tik **Autotune**. Kitos toliau aprašytos funkcijos pasiekiamos visada ir jų čia įjungti nebereikia; kiekvienoje pastraipoje nurodyta, kur jas rasti.
 
-![Configuration > General](../images/v4/Configuration/configuration_general.png)
+![Konfigūracija > Bendrieji](../images/v4/Configuration/configuration_general.png)
 
-### Apžvalga
+### Pagrindinis ekranas
 
-The [main screen](#AapsScreens-the-homescreen) of **AAPS** is not a plugin any more and has no settings of its own in **Configuration**. The options that used to be here are in **Settings** (gear icon): [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs), [Status lights](#Preferences-status-lights) and the [Bolus percentage](#Preferences-deliver-this-part-of-bolus-wizard-result) used by the bolus wizard. The super bolus option of **AAPS** 3.x is [not available as a setting](#Preferences-advanced-settings-overview) in **AAPS** 4.
+**AAPS** [pagrindinis ekranas](#AapsScreens-the-homescreen) nebėra įskiepis ir **Konfigūracijoje** neturi savo nustatymų. Čia buvusios parinktys dabar yra **Nustatymai** (krumpliaračio piktograma): [Dialoguose rodyti pastabas](#Preferences-show-notes-field-in-treatments-dialogs), [Būklės indikatoriai](#Preferences-status-lights) ir boluso patarėjo naudojamas [Boluso procentas](#Preferences-deliver-this-part-of-bolus-wizard-result). **AAPS** 3.x superboluso parinktis **AAPS** 4 versijoje [nebėra nustatymuose](#Preferences-advanced-settings-overview).
 
 (Config-Builder-actions)=
 
 ### Veiksmai
 
-The Actions tab of **AAPS** 3.x no longer exists. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
+**AAPS** 3.x skirtuko Veiksmai nebėra. Jo mygtukai dabar yra meniu **Valdymas** – žr. [Kur dingo skirtukas Veiksmai?](#screens-action-tab).
 
 ### Automatizavimas
 
-**Manage → Automation** lets you manage your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
+**Valdymas → Automatizacija** leidžia tvarkyti jūsų [automatizacijas](../DailyLifeWithAaps/Automations.md), pradedant nuo [10 mokymo etapo](#objectives-objective10).
 
 (Config-Builder-sms-communicator)=
 
-### SMS komunikatorius
+### SMS komandos
 
-Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
+Leidžia nuotoliniu būdu prižiūrintiems asmenims valdyti kai kurias **AAPS** funkcijas SMS žinutėmis. Daugiau informacijos apie sąranką rasite puslapyje [SMS komandos](../RemoteFeatures/SMSCommands.md).
 
 ### Food
 
-**Manage → Food** displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+**Valdymas → Maistas** rodo Nightscout maisto duomenų bazėje apibrėžtus maisto ruošinius. Daugiau informacijos apie sąranką rasite [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
-Note: Entries cannot be used in the **AAPS** calculator. (View only)
+Pastaba: šių įrašų negalima naudoti **AAPS** skaičiuotuve. (View only)
 
 (Config-Builder-autotune)=
 
 ### Autotune
 
-You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+Galite įjungti Autotune, žr. [čia](../AdvancedOptions/Autotune.md).
 
 ### Maintenance
 
-Open the **menu** (☰) and select **Maintenance** to export / import settings and manage log files.
+Atidarykite **meniu** (☰) ir pasirinkite **Servisas**, kad eksportuotumėte / importuotumėte nustatymus ir tvarkytumėte žurnalų failus.
 
-![Maintenance screen, log files](../images/screens/maintenance.png)
+![Serviso ekranas, žurnalų failai](../images/screens/maintenance.png)
 
-![Maintenance screen, file management](../images/screens/maintenance_2.png)
+![Serviso ekranas, failų tvarkymas](../images/screens/maintenance_2.png)
 
-![Maintenance screen, database management](../images/screens/maintenance_3.png)
+![Serviso ekranas, duomenų bazės tvarkymas](../images/screens/maintenance_3.png)
 
 ### Konfigūracija
 
-Now called **Configuration**: this current page.
+Dabar vadinama **Konfigūracija**: tai šis puslapis.

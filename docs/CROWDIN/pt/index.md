@@ -70,11 +70,12 @@ O **AAPS** não tem qualquer ligação com, nem é apoiado por: [SOOIL](http://w
 ## Índice da documentação do AAPS
 
 ```{toctree}
-:caption: Usar esta documentação
+:caption: Using this documentation
+:titlesonly:
 
-Alterar o idioma e a versão <./NavigateDoc/ChangeLanguageVersion.md>
-Pesquisar na documentação <./NavigateDoc/SearchDoc.md>
-Atualizações e alterações da documentação <./Maintenance/DocumentationUpdate.md>
+Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
+Search the documentation <./NavigateDoc/SearchDoc.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Primeiros passos

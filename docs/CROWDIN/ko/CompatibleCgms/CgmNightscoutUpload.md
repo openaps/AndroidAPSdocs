@@ -1,10 +1,10 @@
-# Other CGM uploaded to Nightscout
+# Nightscout에 업로드되는 기타 CGM
 
-Use this option if you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
+혈당 데이터를 [Nightscout](https://nightscout.github.io/)에**만** 보낼 수 있는 다른 CGM을 설정해 둔 경우 이 옵션을 사용하십시오.
 
 ```{important}
-This data source will not work when you are offline, when you experience network issues or when your Nightscout site is down. Use with caution.
+오프라인일 때, 네트워크 문제가 있을 때 또는 Nightscout 사이트가 다운되었을 때는 이 데이터 소스가 작동하지 않습니다. 주의해서 사용하십시오.
 ```
 
--   Set up **NSClientV3** (**Configuration → Communication**) with your Nightscout site information.
--   Select NSClient BG in [**Configuration → BG Source**](#Config-Builder-bg-source).
+-   **NSClientV3**(**구성 → 통신**)에 Nightscout 사이트 정보를 설정하십시오.
+-   [**구성 → 혈당 출처**](#Config-Builder-bg-source)에서 NSClient 혈당을 선택하십시오.

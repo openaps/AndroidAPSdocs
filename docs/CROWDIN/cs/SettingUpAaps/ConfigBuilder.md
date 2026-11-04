@@ -70,8 +70,8 @@ V **AAPS** 4 už inzulín není plugin, který se vybírá v **Konfiguraci**. In
 
 Editor inzulínu umožňuje:
 
-* give the insulin an **Insulin nickname** so it is easy to recognise,
-* set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Action, in hours), either by typing the value or using the **–** / **+** buttons,
+* vyplnit pole **Přezdívka inzulínu**, abyste inzulín snadno poznali,
+* nastavit **Vrchol** (čas do maximální aktivity inzulínu, v minutách) a **DIA** (doba působnosti inzulínu, v hodinách), buď zadáním hodnoty, nebo tlačítky **–** / **+**,
 * klepnout na tlačítko předvolby **Načíst vrchol z** – **Novorapid** (75 min), **Fiasp** (55 min) nebo **Lyumjev** (45 min) – a jedním krokem vyplnit standardní čas vrcholu pro daný inzulín.
 
 Povolené rozsahy jsou stejné pro jakýkoli inzulín:
@@ -225,48 +225,48 @@ Nakonec srovnání, kdy se DIA a vrchol upravují současně. Logika je taková,
     - **Žádná kalibrace**: hodnoty senzoru se použijí tak, jak jsou. Tuto volbu použijte, pokud je senzor už kalibrovaný z výroby a přesný. Toto je výchozí nastavení.
     - **Lineární kalibrace**: **AAPS** opraví hodnoty senzoru pomocí sklonu a posunu, které vypočítá z vašich zadaných hodnot z glukometru.
     
-    How to use **Linear calibration**:
+    Jak používat možnost **Lineární kalibrace**:
     
-    1. Select **Linear calibration** in the **Calibration** category.
-    2. When you insert a new sensor, log the sensor change: use **Log sensor change** on the calibration screen, or enter a CGM sensor insert in the Careportal. This tells **AAPS** when the sensor session started. If **AAPS** notices a gap of more than 30 minutes in the readings, it may ask you to mark a sensor change; this prompt appears on the master only, not on a client.
-    3. Open the plugin and tap **Add calibration**. Enter your fingerstick value. **AAPS** pairs it with the sensor value from the last 10 minutes.
+    1. V kategorii **Kalibrace** vyberte **Lineární kalibrace**.
+    2. Když zavedete nový senzor, zaznamenejte výměnu senzoru: použijte **Zaznamenat výměnu senzoru** na obrazovce kalibrace, nebo zadejte zavedení senzoru CGM v Péči. Tím **AAPS** ví, kdy relace senzoru začala. Pokud **AAPS** zjistí, že v hodnotách chybí víc než 30 minut, může vás požádat, abyste označili výměnu senzoru; tato výzva se zobrazí jen na hlavním zařízení, ne na klientovi.
+    3. Otevřete plugin a klepněte na **Přidat kalibraci**. Zadejte hodnotu z glukometru. **AAPS** k ní přiřadí hodnotu senzoru z posledních 10 minut a vytvoří z nich dvojici.
     
-    A calibration is accepted only when:
+    Kalibrace se přijme jen tehdy, když:
     
-    - a sensor change is logged and at least **2 hours** have passed since then (warm-up),
-    - your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
-    - there is a CGM reading from the last 10 minutes,
-    - it is for the current moment. You cannot enter older fingerstick values.
+    - je zaznamenaná výměna senzoru a od ní uplynuly alespoň **2 hodiny** (zahřívání),
+    - je vaše glykémie stabilní. Pokud se mění příliš rychle, dialog vás na to upozorní a ukáže limit,
+    - existuje hodnota z CGM z posledních 10 minut,
+    - jde o aktuální okamžik. Starší hodnoty z glukometru zadat nelze.
     
-    How the correction works:
+    Jak funguje korekce:
     
-    - **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
-    - Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. The line therefore follows your sensor as it drifts.
-    - At least **2 pairs** are needed.
-    - If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
-    - The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
-    - Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. This protects you from a wrong entry.
+    - **AAPS** proloží dvojicemi aktuálního senzoru přímku: `corrected value = slope × sensor value + offset`.
+    - Novější dvojice mají větší váhu než starší: dvojice stará 2 dny má váhu asi 37 %, dvojice stará 4 dny asi 14 %. Přímka proto sleduje posun (drift) vašeho senzoru.
+    - Jsou potřeba alespoň **2 dvojice**.
+    - Pokud jsou dvojice blízko u sebe (rozdíl menší než 54 mg/dl / 3 mmol/l), hodnoty se jen posunou (posun, bez sklonu).
+    - Sklon se drží mezi 0,55 a 1,6. Sklon mimo tento rozsah se omezí na nejbližší hodnotu.
+    - Bezpečnostní limit: pokud by korekce při 100 mg/dl (5,5 mmol/l) byla větší než ±30 mg/dl (1,7 mmol/l), korekce se nepoužije. Tím jste chráněni před chybně zadanou hodnotou.
     
-    What it changes:
+    Co se změní:
     
-    - The corrected value is used everywhere: the BG on the main screen, the graph and the loop. The sensor readings themselves are not changed. The correction is applied on top, also to the earlier readings of the current sensor.
-    - A new sensor change starts from zero. Pairs from earlier sensors no longer count.
-    - On the graph, a calibration is shown as a marker at the fingerstick value.
-    - Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
+    - Opravená hodnota se používá všude: glykémie na hlavní obrazovce, graf i smyčka. Samotné hodnoty ze senzoru se nemění. Korekce se použije navíc, a to i na dřívější hodnoty aktuálního senzoru.
+    - Nová výměna senzoru začíná od nuly. Dvojice z dřívějších senzorů se už nepočítají.
+    - V grafu se kalibrace zobrazuje jako značka na hodnotě z glukometru.
+    - Kalibrace se synchronizují přes Nightscout, takže vaši klienti zobrazují stejné opravené hodnoty.
     
-    Check and remove entries:
+    Kontrola a odstranění záznamů:
     
-    - **Open plugin** shows the status (for example *Slope 0.85, mid-range correction -0.4*), a chart of your pairs with the line, and the list of entries.
-    - If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. The line is calculated again at once.
+    - **Otevřít plugin** ukáže stav (například *Sklon 0,85, korekce střední hodnoty -0,4*), graf vašich dvojic s přímkou a seznam záznamů.
+    - Pokud je záznam chybný (například jste měli na prstu cukr), klepněte na ikonu koše vedle něj. Přímka se hned přepočítá.
     
-    ```{admonition} Using xDrip+ as BG source?
+    ```{admonition} Používáte xDrip+ jako zdroj glykémie?
     :class: note
-    xDrip+ has its own calibration. Calibrate in one place only, so that the sensor values are not corrected twice.
+    xDrip+ má vlastní kalibraci. Kalibrujte jen na jednom místě, aby se hodnoty senzoru neopravovaly dvakrát.
     
 
-    {admonition} Calibrate with care
+    {admonition} Kalibrujte opatrně
     :class: warning
-    A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Před měřením si umyjte ruce a nekalibrujte, když se glykémie rychle mění.
+    Chybná hodnota z glukometru vede k chybným hodnotám glykémie, a tedy k chybnému dávkování inzulínu. Před měřením si umyjte ruce a nekalibrujte, když se glykémie rychle mění.
 
 ![Konfigurace > Kalibrace](../images/v4/Configuration/configuration_calibration.png)
 
@@ -305,7 +305,7 @@ Když vyberete jinou pumpu, **AAPS** vás požádá o potvrzení změny:
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * [Carelevo](../CompatiblePumps/CareLevo.md)
 * Virtuální pumpa: otevřená smyčka – pouze návrhy **AAPS** 
-  * as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
+  * když s **AAPS** děláte první kroky, během prvních [cílů](../SettingUpAaps/CompletingTheObjectives.md)
   * pro pumpu, která zatím nemá žádný ovladač
 
 (config-builder-wrong-pump-data)=
@@ -326,7 +326,7 @@ Chcete-li použít novou pumpu, změňte ovladač pumpy: vyberte **Virtuální p
 
 Vyberte typ detekce citlivosti. Podrobnosti o různých variantách si [přečtěte zde](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Průběžně analyzuje historická data a provede úpravy, pokud zjistí, že na inzulín reagujete citlivěji (nebo naopak odolněji) než obvykle. Více podrobností o tom, jak se počítá samotný poměr citlivosti, najdete v [Klíčové funkce AAPS > Autosens](#Open-APS-features-autosens).
 
-You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SENS% and watching the white line. Pozor: aby detekce citlivosti/[Autosens](#Open-APS-features-autosens) mohla automaticky upravovat množství podaného inzulínu, musíte být v [Cíli 8](#objectives-objective8). Před dosažením tohoto cíle se procento Autosens / čára ve vašem grafu zobrazuje pouze pro informaci.
+Svou citlivost můžete sledovat na hlavní obrazovce v [doplňkovém grafu](#AapsScreens-section-g-additional-graphs): vyberte SENZ% a sledujte bílou čáru. Pozor: aby detekce citlivosti/[Autosens](#Open-APS-features-autosens) mohla automaticky upravovat množství podaného inzulínu, musíte být v [Cíli 8](#objectives-objective8). Před dosažením tohoto cíle se procento Autosens / čára ve vašem grafu zobrazuje pouze pro informaci.
 
 ### Nastavení absorpce sacharidů
 

@@ -16,14 +16,14 @@ Při použití **Dynamické ISF** vypněte každou dočasnou změnu **profilu** 
 
 Aby bylo možné **Dynamickou ISF** používat, musí databáze **AAPS** obsahovat alespoň 7 dní dat uživatele z **AAPS**.
 
-## What does Dynamic ISF do?
+## Co dělá Dynamická ISF?
 
 **Dynamická ISF** dynamicky upravuje citlivost na inzulín (**ISF**) na základě uživatelovy:
 
 - celkové denní dávky inzulínu (**TDD**) a
 - aktuálních a predikovaných hodnot glykémie.
 
-When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation of the app).
+Při použití **Dynamické ISF** se hodnoty **ISF** zadané v **profilu** už vůbec nepoužívají, kromě záložního výpočtu, když v databázi **AAPS** není dost dat TDD (*tj.* po nové instalaci aplikace).
 
 **SMB/AMA** – příklad uživatelova **profilu** se statickou **ISF**, kterou nastavil uživatel a kterou používají **SMB** a **AMA**.
 
@@ -33,11 +33,11 @@ When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are no
 
 ![Dyn ISF](../images/DynamicISF/DynISF2.png)
 
-Část zakroužkovaná červeně ukazuje: `profile ISF` -> `ISF as calculated by DynISF` (ISF z profilu a ISF vypočtená pomocí DynISF). <br/> Tapping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+Část zakroužkovaná červeně ukazuje: `profile ISF` -> `ISF as calculated by DynISF` (ISF z profilu a ISF vypočtená pomocí DynISF). <br/> Klepnutím na tuto část se zobrazí dialog s dalšími informacemi, například s **ISF** použitou pro kalkulačku a pro vstřebávání sacharidů (viz [Další použití ISF](#dynisf-other-usages-of-isf) níže).
 
 Hodnotu **DynISF** lze zobrazit také v grafu: klepněte na **Přidat graf** pod grafy na hlavní obrazovce a vyberte **VSEN** (proměnlivá citlivost). Zobrazuje se jako bílá čára (dole na obrázku výše).
 
-## How is Dynamic ISF calculated?
+## Jak se Dynamická ISF počítá?
 
 **Dynamická ISF** k určení **ISF** používá model Chrise Wilsona místo statické hodnoty **ISF**, kterou si uživatel nastavil v **profilu**. Podrobné vysvětlení najdete zde: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c) (anglicky).
 
@@ -70,8 +70,8 @@ Je to proto, aby se nepodalo příliš mnoho inzulínu, když je **glykémie** n
 
 **Budoucí ISF** používá stejný vzorec, jak je popsán výše, jen místo **aktuální glykémie** může použít **minimální predikovanou glykémii**. **Minimální predikovaná glykémie**, [jak ji počítá oref1](#aaps-screens-how-predictions-become-a-dosing-decision), je nejnižší hodnota, na kterou by podle predikcí měla glykémie během celého průběhu predikcí klesnout.
 
-* If the current **BG** is above target<br/> **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
-* If eventual **BG** is above target and glucose levels are increasing,<br/> **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
+* Pokud je aktuální **glykémie** nad cílem<br/> **a** pokud je **glykémie** stabilní, v rozmezí +/- 3 mg/dl:<br/>ve vzorci se jako glykémie použije: `average(minimum predicted BG, current BG)`.
+* Pokud je konečná **glykémie** nad cílem a glykémie stoupá,<br/> **nebo** je konečná **glykémie** vyšší než aktuální **glykémie**:<br/>ve vzorci se jako glykémie použije: `current BG`.
 * Jinak:<br/>ve vzorci se jako glykémie použije: `minimum predicted BG`.
 
 Pro zjednodušené vysvětlení se podívejte na snímek obrazovky níže, který tuto situaci ukazuje. Oranžové tečky používají **predikovanou glykémii**, fialové tečky **průměr (predikovaná glykémie, aktuální glykémie)** a modré tečky **aktuální glykémii**.
@@ -111,7 +111,7 @@ Pro aktivaci zaškrtněte **Použít dynamickou citlivost** v [Nastavení > Open
 
 **Faktor úpravy** se mění také při aktivaci [**přepnutí profilu** s procentem](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). Nižší **procento profilu** sníží **faktor úpravy** a vyšší **procento profilu** ho naopak zvýší.
 
-For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned, the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
+Pokud je například váš **faktor úpravy** 80 % a provede se **přepnutí profilu** na 80 %, výsledný **faktor úpravy** bude `0.8*0.8=0.64`.
 
 To znamená, že při použití **DynISF** můžete pomocí **procenta profilu** dočasně ručně doladit svou citlivost. To se hodí například při fyzické aktivitě (nižší procento), nemoci (vyšší procento) apod.
 
@@ -133,4 +133,4 @@ Toto nastavení (*„Upravit výpočty citlivosti při použití DynamicISF“*)
   * Proměnlivý životní styl (nepravidelné jídlo nebo fyzická aktivita)
   * TDD nebo citlivost se den ode dne výrazně liší.
 * Neexistuje přesný návod, jak nastavit počáteční hodnotu **faktoru úpravy**. Jako výchozí bod ale platí: pokud jsou hodnoty ve vašem **profilu** správné, když jste v cílovém rozmezí a **glykémie** je stabilní, hodnota **DynISF** by měla být přibližně stejná jako hodnota, kterou jste předtím měli v **profilu**.<br/>Pokud vidíte, že je **Dynamická ISF** příliš agresivní, snižte **faktor úpravy**, a naopak.
-* I když **DynISF** vůbec nepoužívá **ISF z profilu**, pokud si všimnete, že se vaše citlivost velmi liší od hodnoty uložené v **profilu**, měli byste ji tam průběžně aktualizovat. This may be useful in case you lose your **AAPS** data (_e.g._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
+* I když **DynISF** vůbec nepoužívá **ISF z profilu**, pokud si všimnete, že se vaše citlivost velmi liší od hodnoty uložené v **profilu**, měli byste ji tam průběžně aktualizovat. To se může hodit, pokud přijdete o data **AAPS** (_např._ nový telefon, nová verze **AAPS**…), protože se pak dalších 7 dní jako záložní hodnota použije vaše **ISF z profilu**.

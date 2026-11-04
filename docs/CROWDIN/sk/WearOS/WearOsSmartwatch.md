@@ -2,7 +2,7 @@
 
 Pokyny nižšie platia pre apk **AAPS Wear**, ktorý si musíte zostaviť. Ak ste ho ešte nezostavili, pozrite návod [tu](../WearOS/BuildingAapsWearOS.md). Pri zostavovaní použite rovnaký súbor úložiska kľúčov, aký ste použili pre apk **AAPS** v telefóne.
 
-Niektoré informácie môžete použiť aj pre apk **Wear** aplikácií **AAPSClient** a **PumpControl**. Each **Wear** app will communicate with its matching phone app. Napríklad: aplikáciu **AAPSClient Wear** môžete použiť na zobrazenie dát z **AAPSClient**, nie dát z **AAPS**. Ak je vedľa seba nainštalovaných viac variantov klienta (**AAPSClient**, **AAPSClient2**, **AAPSClient3**), dlaždice každého z nich majú malú hlavičku vo farbe daného variantu, aby ste ich pri prechádzaní rozlíšili.
+Niektoré informácie môžete použiť aj pre apk **Wear** aplikácií **AAPSClient** a **PumpControl**. Každá aplikácia **Wear** komunikuje s príslušnou aplikáciou v telefóne. Napríklad: aplikáciu **AAPSClient Wear** môžete použiť na zobrazenie dát z **AAPSClient**, nie dát z **AAPS**. Ak je vedľa seba nainštalovaných viac variantov klienta (**AAPSClient**, **AAPSClient2**, **AAPSClient3**), dlaždice každého z nich majú malú hlavičku vo farbe daného variantu, aby ste ich pri prechádzaní rozlíšili.
 
 ## Verzie Wear OS a kompatibilita
 
@@ -91,7 +91,7 @@ Nainštalujte apk **AAPS Wear** pomocou [Wear Installer 2](https://youtu.be/abgN
 
 ```{admonition} Wear OS 5
 :class: warning
-Na Wear OS 5 sa ciferník AAPS musí vybrať pomocou Wear Installer 2 hneď po inštalácii aplikácie Wear: inštalátor na konci inštalácie ponúkne ciferník **AAPS (vlastný)**. Ak omylom prepnete na iný ciferník, zopakujte inštaláciu. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
+Na Wear OS 5 sa ciferník AAPS musí vybrať pomocou Wear Installer 2 hneď po inštalácii aplikácie Wear: inštalátor na konci inštalácie ponúkne ciferník **AAPS (vlastný)**. Ak omylom prepnete na iný ciferník, zopakujte inštaláciu. Zmena nastavení ciferníka (Tmavý, Zodpovedajúci oddeľovač atď.) nemusí byť možná.
 
 Ak vám klasický ciferník momentálne funguje, **vypnite automatické aktualizácie hodiniek**: najbližšia aktualizácia firmvéru ho pravdepodobne pokazí. Ak napriek tomu aktualizujete na Wear OS 6, prečítajte si časť vyššie: **AAPS** potom nainštaluje vlastný ciferník v novom formáte.
 ```
@@ -104,7 +104,7 @@ Príklad: Galaxy Watch 4 a novšie s One UI 8 Watch, Pixel Watch po aktualizáci
 
 Nainštalujte apk **AAPS Wear** pomocou [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). Klasické ciferníky nie sú dostupné; **AAPS** automaticky nainštaluje ciferník vybraný v telefóne, pozrite [ciferník, ktorý AAPS nainštaluje](#wearos-aaps-v4-watchface). Funkcie **AAPS Wear** nie sú nijako obmedzené.
 
-## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
+## Ako nastaviť inteligentné hodinky Samsung Galaxy Watch 4 s **AAPS**
 
 Táto časť predpokladá, že s inteligentnými hodinkami začínate úplne od začiatku. Dáva vám základný prehľad o obľúbených hodinkách **Galaxy Watch 4** a potom podrobný návod, ako nastaviť **AAPS** na hodinkách.
 
@@ -114,17 +114,17 @@ Tu sú návody na základné nastavenie hodiniek [Galaxy Watch 5](https://www.yo
 
 ## Základné zoznámenie s inteligentnými hodinkami
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+Po základnom nastavení hodiniek podľa videa vyššie otvorte v telefóne Obchod Play a stiahnite si tieto aplikácie: „Galaxy Wearable“, „Samsung“ a buď „Easy Fire tools“, alebo „Wear Installer 2“.
 
 Na YouTube je veľa videí od tretích strán, ktoré vám pomôžu zoznámiť sa s novými inteligentnými hodinkami, napríklad:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-Aplikácia „Galaxy Wearable“ obsahuje aj časť s návodom na použitie. V telefóne otvorte Galaxy Wearable, vyhľadajte hodinky a skúste ich spárovať s telefónom. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Nainštalujte ju do telefónu a potom v aplikácii Wearable skúste hodinky a telefón spárovať znova. Prejdite sériou ponúk a zaškrtnite rôzne nastavenia.
+Aplikácia „Galaxy Wearable“ obsahuje aj časť s návodom na použitie. V telefóne otvorte Galaxy Wearable, vyhľadajte hodinky a skúste ich spárovať s telefónom. Podľa vašej verzie vás to môže vyzvať na inštaláciu ďalšej aplikácie „galaxy watch 4 plugin“ z Obchodu Play (sťahovanie chvíľu trvá). Nainštalujte ju do telefónu a potom v aplikácii Wearable skúste hodinky a telefón spárovať znova. Prejdite sériou ponúk a zaškrtnite rôzne nastavenia.
 
 ## Nastavenie účtu Samsung
 
-E-mailový účet, ktorý použijete na nastavenie účtu Samsung, musí mať dátum narodenia, podľa ktorého má používateľ aspoň 13 rokov. Inak sa povolenia Samsung schvaľujú veľmi ťažko. Ak ste dieťaťu mladšiemu ako 13 rokov vytvorili účet Gmail a používate túto e-mailovú adresu, nemôžete ho jednoducho zmeniť na účet dospelého. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. Na druhý deň sa účet zmení na účet dospelého a môžete pokračovať v nastavení účtu Samsung.
+E-mailový účet, ktorý použijete na nastavenie účtu Samsung, musí mať dátum narodenia, podľa ktorého má používateľ aspoň 13 rokov. Inak sa povolenia Samsung schvaľujú veľmi ťažko. Ak ste dieťaťu mladšiemu ako 13 rokov vytvorili účet Gmail a používate túto e-mailovú adresu, nemôžete ho jednoducho zmeniť na účet dospelého. Jedno riešenie je zmeniť aktuálny dátum narodenia tak, aby mal používateľ práve 12 rokov a 364 dní. Na druhý deň sa účet zmení na účet dospelého a môžete pokračovať v nastavení účtu Samsung.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
@@ -218,7 +218,7 @@ Zobrazí sa párovací kód Wi-Fi, IP adresa a port:
 - Uvidíte odpoveď:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
 - V termináli napíšte: <br>`adb devices`.<br> Mali by ste vidieť niečo takéto:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
+- Teraz prejdite do priečinka v počítači, kde je apk aplikácie Wear, a napíšte<br> `adb install wear-full.apk` <br>pričom wear-full.apk nahraďte názvom svojho súboru apk.
 - Uvidíte:<br> `Performing Streamed Install`<br> `Success`
 
 
@@ -235,7 +235,7 @@ Zobrazí sa párovací kód Wi-Fi, IP adresa a port:
 **Párovanie:**
 
 - Hodinky: Bezdrôtové ladenie: poznačte si IP adresu.
-- Wear Installer: Enter the IP in the Wear Installer app.
+- Wear Installer: zadajte IP adresu v aplikácii Wear Installer.
 - Vyberte Pair new (spárovať nové zariadenie), poznačte si zobrazený párovací kód a číslo portu.
 - Wear Installer: zadajte párovací kód + medzeru + číslo portu.
 - Wear Installer by mal oznámiť, že párovanie bolo úspešné. Ak nie, ukončite Wear Installer a skúste to znova.
@@ -260,7 +260,7 @@ Posledný krok je nastaviť **AAPS** v telefóne tak, aby komunikoval so súboro
 
 Ak chcete z hodiniek podávať bolus alebo vykonávať iné akcie, zapnite aj **Ovládanie cez Wear** v [Nastavenia > Wear](#preferences-wear).
 
-To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Potom potiahnite doprava, kým sa nedostanete ku všetkým ciferníkom **AAPS**.
+Ak chcete prejsť na iný ciferník **AAPS**, dlho podržte ciferník na domovskej obrazovke hodiniek a ťuknite na **Prispôsobiť** (Customize). Potom potiahnite doprava, kým sa nedostanete ku všetkým ciferníkom **AAPS**.
 
 Ak sa súbor **AAPS** Wear.apk podarilo do inteligentných hodiniek úspešne nainštalovať, bude to vyzerať takto:
 
@@ -334,7 +334,7 @@ F – batéria telefónu
 
 G – bazálna dávka (v U/h pri štandardnej dávke a v % počas dočasného bazálu)
 
-H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H – BGI (vplyv na glykémiu, blood glucose impact) -> miera, o ktorú by glykémia „mala“ stúpať alebo klesať iba na základe aktivity inzulínu.
 
 I – sacharidy (aktívne sacharidy | eSacharidy v budúcnosti)
 

@@ -1,18 +1,18 @@
-# Making changes to your AAPS configuration
+# Modificare la configurazione di AAPS
 
 After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
 
-There are three routes to change **AAPS**' configuration. As to which route you take, it is simply a matter of convenience or personal preference, as each route leads to the same settings.
+Ci sono tre strade per cambiare la configurazione di **AAPS**. As to which route you take, it is simply a matter of convenience or personal preference, as each route leads to the same settings.
 
-These are as follows:
+Sono queste:
 
-1. The **Configuration** screen,
-2. The **Settings** screen or
+1. La schermata **Configurazione**,
+2. La schermata **Impostazioni** oppure
 3. A plugin's **Settings**, opened from its category in **Configuration**.
 
-Here we explain which option is most convenient for each situation:
+Qui spieghiamo quale opzione è più comoda in ogni situazione:
 
-## Configuration
+## Configurazione
 
 Open the **menu** (☰) in the top-left corner of the main screen and choose **Configuration**:
 
@@ -26,17 +26,17 @@ The documentation of the Configuration screen is available [here](../SettingUpAa
 
 Tap the **Settings** (gear) icon in the top-right corner of the main screen. This opens the settings of **all enabled plugins in a single place**, grouped into expandable sections:
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![La schermata Impostazioni con le sue sezioni espandibili](../images/v4/Configuration/settings_overview.png)
 
 This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
 
 The documentation of the settings is available [here](../SettingUpAaps/Preferences.md).
 
-## A plugin's Settings
+## Le Impostazioni di un plugin
 
 Inside **Configuration**, open a category and tap "**Settings**" underneath the active plugin. You are taken directly to the settings of **that plugin only**:
 
-![Settings and Open plugin underneath the active plugin](../images/v4/Configuration/configuration_open_plugin.png)
+![Impostazioni e Apri plugin sotto il plugin attivo](../images/v4/Configuration/configuration_open_plugin.png)
 
 For example, this is a good route if you know that you want to change the configuration for your pump: open **Configuration → Pump**, then tap "**Settings**" under the selected pump.
 

@@ -1,31 +1,31 @@
 (aaps-ci-option1)=
 
-# Option 1 – Generate a new keystore
+# Alternativ 1 – Skapa en ny keystore
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+Detta är en del av [Steg 2 – Skapa din keystore för signering](BrowserBuildKeystore.md) i [Bygge i webbläsaren](BrowserBuild.md). Se till att du har läst [valet mellan alternativ 1 och alternativ 2](#aaps-ci-preparation).
 ```
 
-Option 1 generates a brand-new signing keystore for you. It is suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+Med alternativ 1 skapas en helt ny keystore för signering åt dig. Det passar för nya användare, för dig som inte har någon JKS, eller för dig som har glömt lösenordet eller aliaset.
 
-## Choose your device
+## Välj din enhet
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Bygger du från en **Android-telefon**? Använd [AAPS Builder](BrowserBuildAapsBuilder.md) i stället: där behövs ingen förberedelsefil.
 ```
 
-Follow the page that matches the device you are building from:
+Följ sidan för den enhet som du bygger från:
 
-- **[Computer](BrowserBuildO1Computer.md)** – Windows, Mac or Linux.
+- **[Dator](BrowserBuildO1Computer.md)** – Windows, Mac eller Linux.
 - **[iPhone / iPad](BrowserBuildO1iPhone.md)**.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Du kan byta enhet när som helst – öppna bara sidan för den enheten.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO1Computer.md>
+Dator <BrowserBuildO1Computer.md>
 iPhone / iPad <BrowserBuildO1iPhone.md>
 ```

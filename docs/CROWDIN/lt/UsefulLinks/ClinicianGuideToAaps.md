@@ -1,32 +1,32 @@
-# For Clinicians – A General Introduction and Guide to AAPS
+# Gydytojams – bendras AAPS įvadas ir vadovas
 
 ```{note}
-This page is a high-level introduction for clinicians. It was last reviewed in June 2026. AAPS develops continuously, so for the most accurate and up-to-date detail always refer to the [main AAPS documentation](../index.md).
+Šis puslapis yra bendras įvadas gydytojams. Paskutinį kartą jis peržiūrėtas 2026 m. birželio mėn. AAPS nuolat tobulinama, todėl tiksliausios ir naujausios informacijos visada ieškokite [pagrindinėje AAPS dokumentacijoje](../index.md).
 ```
 
-This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AAPS, or for patients who want to share such information with their clinicians.
+Šis puslapis skirtas gydytojams, kurie domisi atvirojo kodo dirbtinės kasos technologijomis, tokiomis kaip AAPS, arba pacientams, kurie nori pasidalyti šia informacija su savo gydytojais.
 
-This guide has some high-level information about DIY closed looping and specifically how AAPS works. For more details on all of these topics, please view the [comprehensive AAPS documentation online](../index.md). Jei turite klausimų, susisiekite su savo pacientu dėl išsamesnės informacijos arba nedvejodami susisiekite su bendruomene. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@aaps.app). [ Šioje nuorodoje galite rasti keletą naujausių tyrimų & ir duomenų, susijusių su rezultatais](https://openaps.org/outcomes/).
+Šiame vadove pateikiama bendra informacija apie „pasidaryk pats“ uždarą ciklą ir konkrečiai apie tai, kaip veikia AAPS. Daugiau informacijos visomis šiomis temomis rasite [išsamioje AAPS dokumentacijoje internete](../index.md). Jei turite klausimų, susisiekite su savo pacientu dėl išsamesnės informacijos arba nedvejodami susisiekite su bendruomene. (Jei nesinaudojate socialiniais tinklais (pvz., [Twitter](https://twitter.com/kozakmilos) ar Facebook), galite rašyti el. paštu developers@aaps.app). [Čia taip pat rasite naujausių tyrimų ir rezultatų duomenų](https://openaps.org/outcomes/).
 
 ## The steps for building a DIY Closed Loop:
 
-To start using AAPS, the following steps should be taken:
+Norint pradėti naudoti AAPS, reikia atlikti šiuos veiksmus:
 
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
-* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
+* Rasti [suderinamą pompą](../Getting-Started/CompatiblePumps.md), [suderinamą Android įrenginį](../Getting-Started/Phones.md) ir [suderinamą NGJ šaltinį](../Getting-Started/CompatiblesCgms.md).
+* [Atsisiųsti AAPS šaltinio kodą ir sukurti programinę įrangą](../SettingUpAaps/BuildingAaps.md).
+* [Sukonfigūruoti programinę įrangą, kad ji palaikytų ryšį su paciento diabeto prietaisais, ir nustatyti parametrus bei saugos nuostatas](../SettingUpAaps/SetupWizard.md).
 
 ## How A DIY Closed Loop Works
 
 Be uždaro ciklo sistemos, pacientas, sergantis cukriniu diabetu, gauna duomenis iš savo pompos ir NGJ, nusprendžia, ką daryti, ir imasi atitinkamų veiksmų.
 
-Sistema daro tą patį: renka duomenis iš pompos, NGJ ir kitos registruojamos informacijos (pvz., per Nightscout). Ji naudojasi šia informacija apskačiuodama, kiek daugiau ar mažiau reikia insulino (nei užprogramuota bazės profilyje). Sistema nustato laikiną bazę, kuri padeda išlaikyti glikemiją stabilią arba grąžina ją į tikslinę zoną.
+Su automatiniu insulino tiekimu sistema daro tą patį: renka duomenis iš pompos, NGJ ir kitų vietų, kur registruojama informacija (pvz., Nightscout). Šią informaciją ji naudoja skaičiavimams ir nusprendžia, kiek daugiau ar mažiau insulino reikia (daugiau ar mažiau nei profilio valandinė bazė). Reikiamus pakeitimus ji atlieka laikinomis valandinėmis bazėmis, kad KG išliktų tiksliniame intervale arba ilgainiui į jį sugrįžtų.
 
-If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basal rates running.
+Jei įrenginys, kuriame veikia AAPS, sugenda arba atsiduria per toli nuo pompos, pasibaigus paskutinei laikinai valandinei bazei pompa vėl veikia kaip įprasta pompa su iš anksto užprogramuota valandine baze.
 
-## How data is gathered:
+## Kaip renkami duomenys:
 
-With AAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AAPS can communicate with other devices and to the cloud via Wi-Fi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+Naudojant AAPS, Android įrenginyje veikia speciali programėlė, kuri atlieka skaičiavimus, o įrenginys per Bluetooth palaiko ryšį su palaikoma pompa. AAPS per Wi-Fi arba mobiliuosius duomenis gali palaikyti ryšį su kitais įrenginiais ir debesimi, kad surinktų papildomos informacijos ir praneštų pacientui, prižiūrintiems asmenims ir artimiesiems, ką ji daro ir kodėl.
 
 Android įrenginys turi:
 
@@ -39,17 +39,17 @@ Kai tik įrenginys surenka duomenis, algoritmas juos analizuoja ir priima sprend
 
 ## How does it know what to do?
 
-Atvirojo kodo programinė įranga buvo sukurta siekiant perimti užduotis, kurias anksčiau sergantys cukriniu diabetu atlikdavo rankiniu būdu, ir apskaičiuoti, kiek tiksliai reikia suleisti insulino. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of what BG levels are expected to do during the next hours in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Tada ji išsiunčia pompai reikiamus nustatymus. Tada ji vėl nuskaito duomenis iš pompos ir skaičiavimai vėl pradedami iš naujo.
+Atvirojo kodo programinė įranga buvo sukurta siekiant perimti užduotis, kurias anksčiau sergantys cukriniu diabetu atlikdavo rankiniu būdu, ir apskaičiuoti, kiek tiksliai reikia suleisti insulino. Pirmiausia sistema renka duomenis iš visų prijungtų įrenginių ir iš debesies, juos parengia ir atlieka skaičiavimus. Ji prognozuoja, kaip KG keisis per artimiausias valandas pagal įvairius scenarijus, ir apskaičiuoja reikiamus pakeitimus, kad KG išliktų tiksliniame intervale arba į jį sugrįžtų. Tada ji išsiunčia pompai reikiamus nustatymus. Tada ji vėl nuskaito duomenis iš pompos ir skaičiavimai vėl pradedami iš naujo.
 
 Svarbu turėti aukštos kokybės NGJ duomenis, nes glikemijos duomenys yra svarbiausi įvesties parametrai.
 
-AAPS is designed to transparently track all input data it gathers, the resulting recommendation, and any action taken. Taigi į klausimą: "Kodėl tai daro X?" bet kuriuo metu galite lengvai atsakyti peržiūrėdami žurnalo įrašus.
+AAPS sukurta taip, kad skaidriai registruotų visus surinktus įvesties duomenis, gautą rekomendaciją ir kiekvieną atliktą veiksmą. Taigi į klausimą: "Kodėl tai daro X?" bet kuriuo metu galite lengvai atsakyti peržiūrėdami žurnalo įrašus.
 
-## Examples of AAPS algorithm decision making:
+## AAPS algoritmo sprendimų pavyzdžiai:
 
-AAPS uses the same core algorithm and feature set as OpenAPS. Remdamasis nustatymais ir esama situacija, algoritmas pateikia keletą prognozių, pagal kurias apskaičiuojami skirtingi scenarijai, kas gali nutikti ateityje. Nightscout jie rodomi kaip violetinės linijos. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). Žurnalo failai gali būti naudojami norint atsekti, kuris iš šių įvairių numatymų buvo naudojamas konkrečiu laikotarpiu, kad būtų apskaičiuotos būtinos priemonės.
+AAPS naudoja tą patį pagrindinį algoritmą ir tas pačias funkcijas kaip OpenAPS. Remdamasis nustatymais ir esama situacija, algoritmas pateikia keletą prognozių, pagal kurias apskaičiuojami skirtingi scenarijai, kas gali nutikti ateityje. Nightscout jie rodomi kaip violetinės linijos. AAPS šias [prognozės linijas](#aaps-screens-prediction-lines) rodo skirtingomis spalvomis. Žurnalo failai gali būti naudojami norint atsekti, kuris iš šių įvairių numatymų buvo naudojamas konkrečiu laikotarpiu, kad būtų apskaičiuotos būtinos priemonės.
 
-### Here are examples of the purple prediction lines, and how they might differ:
+### Čia pateikiami violetinių prognozės linijų pavyzdžiai ir kaip jos gali skirtis:
 
 ![Violetinių prognozės kreivių pavyzdžiai](../images/Prediction_lines.jpg)
 
@@ -57,51 +57,51 @@ AAPS uses the same core algorithm and feature set as OpenAPS. Remdamasis nustaty
 
 ### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
 
-### Scenario 1 - Zero Temp for safety
+### 1 scenarijus - Nulinė laikina bazė saugumo sumetimais
 
-Nors glikemija per trumpą laiką didėja, prognozuojama, kad vidutiniu laikotarpiu ji smarkiai sumažės. Tiesą sakant, prognozuojama, kad ji ne tik nukris žemiau tikslinės zonos, *bet ir* žemiau saugios ribos. For safety to prevent the low, AAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
+Šiame pavyzdyje KG artimiausiu metu kyla, tačiau prognozuojama, kad ilgesniu laikotarpiu ji bus žema. Tiesą sakant, prognozuojama, kad ji ne tik nukris žemiau tikslinės zonos, *bet ir* žemiau saugios ribos. Saugumo sumetimais, kad išvengtų hipoglikemijos, AAPS nustatys nulinę laikiną bazę (laikiną valandinę bazę 0 %), kol eventualBG (galutinė KG) bet kuriuo laikotarpiu bus virš saugos ribos.
 
 ![1 scenarijus](../images/Dosing_scenario_1.jpg)
 
-### Scenario 2 - Zero temp for safety
+### 2 scenarijus - Nulinė laikina bazė saugumo sumetimais
 
-Tikimasi, kad šiame pavyzdyje glikemija greitai nukris žemiau saugios ribos, tačiau vidutiniu laikotarpiu reikšmingai padidės virš tikslinės zonos. However, because the near-term low is actually below the safety threshold, AAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
+Šiame pavyzdyje prognozuojama, kad KG artimiausiu metu nukris, tačiau galiausiai bus virš tikslo. Tačiau kadangi artimiausiu metu prognozuojama žema KG yra žemiau saugos ribos, AAPS nustatys nulinę laikiną bazę, kol neliks nė vieno prognozės linijos taško žemiau ribos.
 
 ![Dozavimo 2 scenarijus](../images/Dosing_scenario_2.jpg)
 
 ### Scenario 3 - More insulin needed
 
-Šiame pavyzdyje prognozuojama, kad artimiausiu metu glikemija nukris žemiau tikslinės zonos. Tačiau nesitikima, kad ši vertė nukris žemiau saugios ribos. Ilgalaikė tikėtina glikemija yra didesnė už tikslinę. Therefore, AAPS will refrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). AndroidAPS ir toliau stebi glikemijos lygį ir kuo greičiau suleis insulino (nerizikuodama hipoglikemija), kad numatytą aukštą glikemiją grąžintų į tikslinę zoną. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMBs (super micro boluses)).*
+Šiame pavyzdyje prognozuojama, kad artimiausiu metu glikemija nukris žemiau tikslinės zonos. Tačiau nesitikima, kad ši vertė nukris žemiau saugios ribos. Ilgalaikė tikėtina glikemija yra didesnė už tikslinę. Todėl AAPS nepridės insulino, kuris prisidėtų prie žemos KG artimiausiu metu (t. y. insulino, dėl kurio prognozė nukristų žemiau ribos). Kai tai bus saugu, ji įvertins, ar pridėti insulino, kad žemiausia galutinės prognozuojamos KG reikšmė nukristų iki tikslo. *(Priklausomai nuo nustatymų, reikiamo insulino kiekio ir laiko, šis insulinas gali būti suleistas laikinomis valandinėmis bazėmis arba SMB (supermikrobolusais)).*
 
 ![Dozavimo 3 scenarijus](../images/Dosing_scenario_3.jpg)
 
-### Scenario 4 - Low temping for safety
+### 4 scenarijus - Maža laikina bazė saugumo sumetimais
 
-In this example, AAPS sees that BG is spiking well above target. Tikimasi, kad dėl organizme jau esančio insulino ir jo veikimo trukmės, tikslinę ribą vėl bus galima pasiekti neleidžiant papildomo insulino. Iš tikrųjų tikimasi, kad ji nukris žemiau tikslo. Therefore, AAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Nors glikemijos reikšmė yra aukšta ir auga, tokiu atveju labiau tikėtina, kad AndroidAPS sumažins valandinę bazę.
+Šiame pavyzdyje AAPS mato, kad KG staigiai kyla gerokai virš tikslo. Tikimasi, kad dėl organizme jau esančio insulino ir jo veikimo trukmės, tikslinę ribą vėl bus galima pasiekti neleidžiant papildomo insulino. Iš tikrųjų tikimasi, kad ji nukris žemiau tikslo. Todėl AAPS nesuleis papildomo insulino, kad neprisidėtų prie žemos KG ilgesniu laikotarpiu. Nors KG aukšta arba kyla, šiuo atveju tikėtina maža laikina valandinė bazė.
 
 ![Dozavimo 4 scenarijus](../images/Dosing_scenario_4.jpg)
 
-## Optimizing settings and making changes
+## Nustatymų optimizavimas ir pakeitimai
 
-As a clinician who may not have experience with AAPS or DIY closed loops, you may find it challenging to help your patient optimize their settings or make changes to improve their outcomes. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
+Gydytojui, neturinčiam patirties su AAPS ar „pasidaryk pats“ uždaru ciklu, gali būti sunku padėti pacientui optimizuoti nustatymus ar atlikti pakeitimus, kad pagerėtų gydymo rezultatai. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
 
 Svarbiausia užduotis pacientui yra padaryti tik vieną pakeitimą vienu metu ir stebėti jo poveikį 2–3 dienas prieš nusprendžiant pakeisti kitą parametrą. Žinoma, tai netaikoma, jei akivaizdžiai „blogas pritaikymas“ pablogina situaciją. Tokiu atveju jis turėtų nedelsdamas grįžti prie ankstesnio nustatymo. Mes, žmonės, linkę viską pakeisti iškart. Bet jei tai padarysite, tai gali sukelti neoptimalų pakeitimą, kurį sunku sugrąžinti į gerą būklę.
 
-Vienas galingiausių nustatymų yra automatinis valandinės bazės, insulino jautrumo faktoriaus bei insulino ir angliavandenių santykio skaičiavimo įrankis. This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. It is designed to allow the data to guide you or your patient in making incremental changes to settings. Geriausia praktika, prieš pradedant rankiniu būdu koreguoti nustatymus, pirmiausia peržiūrėti Autotune ataskaitas. Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
+Vienas galingiausių nustatymų yra automatinis valandinės bazės, insulino jautrumo faktoriaus bei insulino ir angliavandenių santykio skaičiavimo įrankis. Tai vadinama „[Autotune](#autotune-how-autotune-calculates-adjustments)“. Jis skirtas tam, kad duomenys padėtų jums ar jūsų pacientui laipsniškai keisti parametrus. Geriausia praktika, prieš pradedant rankiniu būdu koreguoti nustatymus, pirmiausia peržiūrėti Autotune ataskaitas. Autotune yra AAPS dalis, įskiepis (**Konfigūracija** → **Bendrieji** → **Autotune**); žr. [Autotune](../AdvancedOptions/Autotune.md). Jį galima paleisti pagal poreikį arba automatiškai. Kadangi šie parametrai būtini tiek įprastam insulino tiekimui pompa, tiek insulino tiekimui uždaru ciklu, Autotune rezultatų aptarimas ir šių parametrų koregavimas yra natūrali vieta, kur reikalingas gydytojas.
 
-Be to, žmogaus elgesys, išmoktas valdant diabetą rankiniu būdų, dažnai daro įtaką rezultatams - net ir naudojant „pasidaryk pats“ uždarą ciklą. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). Tačiau daugeliu atvejų pacientas, remdamasis savo ankstesne patirtimi, nusprendžia suvartoti žymiai daugiau angliavandenių. Tai lemia spartesnį padidėjimą tiek dėl papildomos gliukozės, tiek dėl iš anksto sumažintos AndroidAPS insulino dozės.
+Be to, žmogaus elgesys, išmoktas valdant diabetą rankiniu būdu, dažnai daro įtaką rezultatams – net ir naudojant „pasidaryk pats“ uždarą ciklą. Pavyzdžiui, jei prognozuojama, kad KG nukris, ir AAPS jau sumažino insulino tiekimą KG krentant, gali pakakti nedidelio angliavandenių kiekio (pvz., 3–4 g), kad KG pakiltų nuo 70 mg/dL (3,9 mmol/l). Tačiau dažnai žmogus suvalgo daug daugiau angliavandenių (pvz., laikydamasis „15 taisyklės“). Tada KG pakyla greičiau, nes atsiranda papildomos gliukozės, o insulino tiekimas jau buvo sumažintas prieš hipoglikemiją.
 
 ## OpenAPS
 
-**This guide was adapted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each piece of software is run.
+**Šis vadovas pritaikytas iš [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html) (gydytojo vadovas apie OpenAPS).** OpenAPS – tai sistema, sukurta veikti mažame nešiojamame kompiuteryje (paprastai vadinamame „rig“). AAPS naudoja daug OpenAPS metodų ir turi daug bendros logikos bei algoritmų, todėl šis vadovas labai panašus į originalų vadovą. Didelę dalį informacijos apie OpenAPS galima lengvai pritaikyti AAPS. Pagrindinis skirtumas – aparatinė įranga, kurioje veikia kiekviena programinės įrangos dalis.
 
 ## Summary
 
-This is meant to be a high-level overview of how AAPS works. For more details, ask your patient, reach out to the community, or read the full AAPS documentation available online.
+Tai bendra apžvalga, kaip veikia AAPS. Daugiau informacijos paklauskite savo paciento, kreipkitės į bendruomenę arba perskaitykite visą AAPS dokumentaciją internete.
 
 Papildomai rekomenduojama literatūra:
 
-* The [full AAPS documentation](../index.md)
-* [OpenAPS informacija](https://OpenAPS.org/reference-design/) paaiškina, kaip OpenAPS sukurtas saugumui: https://openaps.org/reference-design/
+* [Visa AAPS dokumentacija](../index.md)
+* [OpenAPS Reference Design](https://OpenAPS.org/reference-design/) (OpenAPS etaloninis projektas) paaiškina, kaip OpenAPS sukurta užtikrinti saugumą: https://openaps.org/reference-design/
 * The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
-  * See [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision) in this documentation, or [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) for the underlying algorithm in full technical detail
+  * Žr. [kaip AAPS paverčia prognozes dozavimo sprendimu](#aaps-screens-how-predictions-become-a-dosing-decision) šioje dokumentacijoje arba [OpenAPS determine-basal dokumentaciją](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic), kur pagrindinis algoritmas aprašytas su visomis techninėmis detalėmis

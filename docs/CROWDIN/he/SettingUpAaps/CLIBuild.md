@@ -1,9 +1,9 @@
-# Build instructions for the command-line
+# הוראות בנייה משורת הפקודה
 
 ```{admonition} For users familiar with the command-line and git
 :class: note
 
-The simplest option to build AAPS is the [Browser build](./BrowserBuild.md) alternative.
+הדרך הפשוטה ביותר לבנות את AAPS היא [בנייה בדפדפן](./BrowserBuild.md).
 ```
 
 Tested with Fedora and Debian Linux, other systems should work with minimal adjustments.
@@ -33,7 +33,7 @@ You will need the keystore file and passphrase every time you update AAPS.
 
 ### 2. Compile the AAPS APK file
 
-Clone the [git repo](https://github.com/nightscout/AndroidAPS) if not already cloned. AAPS uses the master branch for the latest stable version; ensure you are on the branch/tag you want to build.
+Clone the [git repo](https://github.com/nightscout/AndroidAPS) if not already cloned. AAPS משתמש בענף master לגרסה היציבה האחרונה; יש לוודא שאתם על הענף או ה-tag שאתם רוצים לבנות.
 
 Run `./gradlew :app:assembleFullRelease` in the repo. It automatically downloads Gradle, dependencies, and then compiles the code. When the build succeeds, you should have an unsigned APK at `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. It should have also installed an `apksigner` binary to `$ANDROID_HOME`. Update your `PATH` again.
 

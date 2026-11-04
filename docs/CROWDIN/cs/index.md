@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-31 October 2026: Version 4.0.0 is out. V [poznámkách k vydání](#latestrelease) zjistíte, co je nového. Pro aktualizaci postupujte podle [návodu k aktualizaci](./Maintenance/UpdateToNewVersion.md).
+31. října 2026: Vyšla verze 4.0.0. V [poznámkách k vydání](#latestrelease) zjistíte, co je nového. Pro aktualizaci postupujte podle [návodu k aktualizaci](./Maintenance/UpdateToNewVersion.md).
 
 ```
 
@@ -17,7 +17,7 @@ Tato dokumentace vysvětluje, jak **AAPS** nastavit a používat. V dokumentaci 
 
 Část **1) Začínáme**: stránka [Úvod do APS a AAPS](Getting-Started/Introduction.md) vysvětluje obecný princip a k čemu slouží systém umělé slinivky (APS). Popisuje obecné základy smyčky, proč vznikl **AAPS**, porovnává **AAPS** s jinými systémy a zabývá se bezpečností. Radí, jak o **AAPS** mluvit s lékařským týmem, vysvětluje, proč si aplikaci **AAPS** musíte sestavit sami a nemůžete ji jen stáhnout, a dává přehled o typickém propojení systému **AAPS**. Zabývá se také dostupností a tím, komu **AAPS** pravděpodobně pomůže.
 
-[Příprava na začátek s AAPS](./Getting-Started/PreparingForAaps.md) podrobněji popisuje bezpečnostní hlediska a telefony, CGM (systémy kontinuální monitorace glukózy) a inzulínové pumpy, které jsou s **AAPS** kompatibilní. Dává přehled o postupu, kterým projdete, a uvádí přibližný časový plán, za jak dlouho získáte plnou funkčnost **AAPS**. Tato část vás technicky připraví, abyste svůj systém **AAPS** sestavili co nejrychleji a nejefektivněji. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
+[Příprava na začátek s AAPS](./Getting-Started/PreparingForAaps.md) podrobněji popisuje bezpečnostní hlediska a telefony, CGM (systémy kontinuální monitorace glukózy) a inzulínové pumpy, které jsou s **AAPS** kompatibilní. Dává přehled o postupu, kterým projdete, a uvádí přibližný časový plán, za jak dlouho získáte plnou funkčnost **AAPS**. Tato část vás technicky připraví, abyste svůj systém **AAPS** sestavili co nejrychleji a nejefektivněji. Podsekce [Kompatibilní CGM](./Getting-Started/CompatiblesCgms.md) vysvětluje, jak optimalizovat nastavení CGM a které možnosti vyhlazování jsou nejlepší.
 
 Teď, když dobře rozumíte celému postupu, můžete začít sestavovat svou smyčku **AAPS**.
 
@@ -40,7 +40,7 @@ Teď, když dobře rozumíte celému postupu, můžete začít sestavovat svou s
 
 Část **10)** popisuje **[Pokročilé možnosti AAPS](./AdvancedOptions/FullClosedLoop.md)**, například jak přejít od používání **AAPS** jako hybridní uzavřené smyčky (bolusy na jídlo _atd._) k plně uzavřené smyčce (bez bolusů), jak [ladit profil](./GettingHelp/ProfileTuning.md) a používat Autotune. Podrobně popisuje také vývojový a inženýrský režim. Většina uživatelů si plně vystačí s hlavní („Master“) verzí **AAPS** a tyto možnosti nepotřebuje. Tato část je pro uživatele, kteří už mají dobrou kompenzaci a chtějí své nastavení dále zlepšit.
 
-In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. Můžete darovat peníze, vybavení nebo odborné znalosti. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
+V části **11) [Jak podpořit AAPS](SupportingAaps/HowCanIHelp.md)** najdete informace o tom, jak můžete tento projekt podpořit. Můžete darovat peníze, vybavení nebo odborné znalosti. Můžete sami navrhovat a dělat změny v dokumentaci, pomoci s [překladem dokumentace](SupportingAaps/Translations.md) a poskytnout svá data přes projekt Open Humans.
 
 Část **12) Zdroje** obsahuje archivní nebo doplňkovou dokumentaci, včetně podčásti pro [lékaře](UsefulLinks/ClinicianGuideToAaps.md), kteří se zajímají o open source technologii umělé slinivky, jako je **AAPS**, nebo pro pacienty, kteří chtějí tyto informace sdílet se svými lékaři. Tomuto tématu se věnuje i úvod. V této části najdete také další odkazy a zdroje o diabetu a smyčce. Obsahuje [Slovníček](./UsefulLinks/Glossary.md), seznam zkratek (neboli krátkých názvů) používaných v **AAPS**. Zde zjistíte například, co znamenají zkratky ISF nebo TT.
 
@@ -51,7 +51,7 @@ In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provi
 :class: danger
 Bezpečnost **AAPS** závisí na bezpečnostních funkcích vašeho hardwaru (telefon, pumpa, CGM). Používejte pouze plně funkční inzulínovou pumpu a CGM schválené FDA/CE. Nepoužívejte poškozené, upravené nebo vlastnoručně vyrobené inzulínové pumpy nebo přijímače CGM. Používejte pouze originální spotřební materiál (zavaděče, kanyly a zásobníky inzulínu) schválený výrobcem pro použití s vaší pumpou a CGM. Použití netestovaného nebo upraveného spotřebního materiálu může způsobit nepřesnosti a chyby v dávkování inzulínu, což pro uživatele znamená vážné riziko. 
 
-Nepoužívejte **AAPS**, pokud užíváte SGLT-2 inhibitory (glifloziny), protože snižují glykémii. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+Nepoužívejte **AAPS**, pokud užíváte SGLT-2 inhibitory (glifloziny), protože snižují glykémii. Zvyšujete riziko diabetické ketoacidózy (DKA) kvůli menšímu podávání inzulínu a riziko hypoglykémie kvůli snížené glykémii. 
 ```
 
 ```{admonition} Disclaimer
@@ -70,11 +70,12 @@ Nepoužívejte **AAPS**, pokud užíváte SGLT-2 inhibitory (glifloziny), proto�
 ## Obsah dokumentace AAPS
 
 ```{toctree}
-:caption: Používání této dokumentace
+:caption: Using this documentation
+:titlesonly:
 
-Změna jazyka a verze <./NavigateDoc/ChangeLanguageVersion.md>
-Vyhledávání v dokumentaci <./NavigateDoc/SearchDoc.md>
-Aktualizace a změny dokumentace <./Maintenance/DocumentationUpdate.md>
+Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
+Search the documentation <./NavigateDoc/SearchDoc.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Začínáme
@@ -106,14 +107,14 @@ Nastavení reportovacího serveru <./SettingUpAaps/SettingUpTheReportingServer.m
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Configure AAPS
+:caption: 4) Konfigurace AAPS
 
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Settings <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+Průvodce nastavením AAPS <./SettingUpAaps/SetupWizard.md>
+Váš profil AAPS <./SettingUpAaps/YourAapsProfile.md>
+Změna konfigurace AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Konfigurace (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Nastavení <./SettingUpAaps/Preferences.md>
+Plnění cílů <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -165,15 +166,15 @@ Stránka pro vlastní ciferníky <./ExchangeSiteCustomWatchfaces/index.md>
 ```
 
 ```{toctree}
-:caption: 8) Maintenance of AAPS
+:caption: 8) Údržba AAPS
 
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-What changed in AAPS v4 <./Maintenance/V4Changes.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
-End of life <./Maintenance/EndOfLife.md>
+Export/import nastavení <./Maintenance/ExportImportSettings.md>
+Poznámky k vydání AAPS <./Maintenance/ReleaseNotes.md>
+Co se změnilo v AAPS v4 <./Maintenance/V4Changes.md>
+Aktualizace na novou verzi AAPS <./Maintenance/UpdateToNewVersion.md>
+- Aktualizace v prohlížeči (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Aktualizace v Android Studiu <./Maintenance/UpdateComputerBuild.md>
+Konec podpory <./Maintenance/EndOfLife.md>
 
 ```
 

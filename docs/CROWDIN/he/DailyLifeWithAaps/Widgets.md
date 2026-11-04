@@ -1,7 +1,7 @@
 (widgets)=
-# Home screen widgets
+# ווידג'טים למסך הבית
 
-**AAPS** provides widgets that you can add to your phone's home screen. A widget shows your current data without opening the app. Tap a widget to open **AAPS**.
+**AAPS** מספק ווידג'טים שאפשר להוסיף למסך הבית של הטלפון. ווידג'ט מציג את הנתונים העדכניים בלי לפתוח את האפליקציה. הקשה על ווידג'ט פותחת את **AAPS**.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,70 +10,70 @@
 
 ---
 
-## Available widgets
+## ווידג'טים זמינים
 
-Five widgets are available. They are listed under **AAPS** in the Android widget picker:
+יש חמישה ווידג'טים. הם מופיעים תחת **AAPS** בבוחר הווידג'טים של Android:
 
-![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
+![ווידג'טים של AAPS בבוחר הווידג'טים של Android](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Default size | What it shows                                                                                                                                                                                                                                              |
-| --------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                   | 5 × 2        | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
-| **AAPS glucose circle**           | 2 × 2        | The BG circle of the main screen: a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading.                                                                                                                     |
-| **AAPS Small**                    | 2 × 2        | Profile name, BG with trend arrow, time since the last reading, delta, IOB and COB.                                                                                                                                                                        |
-| **AAPS BG + IOB + COB (compact)** | 4 × 1        | One line with BG and trend arrow, IOB and COB.                                                                                                                                                                                                             |
-| **AAPS BG graph**                 | 3 × 1        | The BG value with a small graph of the recent readings.                                                                                                                                                                                                    |
+| ווידג'ט                               | גודל ברירת מחדל | מה מוצג                                                                                                                                                                                                |
+| ------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **ווידג'ט AAPS**                      | 5 × 2           | אזור המצב של המסך הראשי: ערך הסוכר (BG) עם מגמה ודלתא, מצב הלולאה כסמל ליד שם הפרופיל, יעד, רגישות (מוצגת כמו במסך הראשי), IOB ו-COB. הטקסטים מוקטנים כדי להתאים לגודל שנותנים לווידג'ט, במקום להיחתך. |
+| **מעגל סוכר AAPS**                    | 2 × 2           | מעגל הסוכר של המסך הראשי: טבעת בצבע של ערך הסוכר, קשת המגמה, הדלתא, ערך הסוכר והזמן מאז הקריאה האחרונה.                                                                                                |
+| **AAPS קטן**                          | 2 × 2           | שם הפרופיל, ערך הסוכר עם חץ מגמה, הזמן מאז הקריאה האחרונה, דלתא, IOB ו-COB.                                                                                                                            |
+| **AAPS גלוקוז + IOB + COB (קומפקטי)** | 4 × 1           | שורה אחת עם ערך הסוכר וחץ המגמה, IOB ו-COB.                                                                                                                                                            |
+| **גרף סוכר AAPS**                     | 3 × 1           | ערך הסוכר עם גרף קטן של הקריאות האחרונות.                                                                                                                                                              |
 
-The **AAPS widget**, the **glucose circle** and the **Small** widget on a home screen:
+**ווידג'ט AAPS**, **מעגל סוכר** והווידג'ט **קטן** במסך הבית:
 
-![AAPS widget, glucose circle and Small widget on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![ווידג'ט AAPS, מעגל סוכר והווידג'ט הקטן במסך הבית](../images/widgets/home_widgets_full_circle_small.png)
 
-The **compact** widget and the **BG graph** widget:
+הווידג'ט **קומפקטי** והווידג'ט **גרף סוכר**:
 
-![Compact widget and BG graph widget on the home screen](../images/widgets/home_widgets_compact_graph.png)
+![הווידג'ט הקומפקטי והווידג'ט גרף סוכר במסך הבית](../images/widgets/home_widgets_compact_graph.png)
 
-BG values use the same colours as in **AAPS**: green in range, yellow above range, red below range.
-
----
-
-## Adding a widget
-
-The exact steps depend on your phone and its launcher. On most phones:
-
-1. Long-press an empty area of the home screen and select **Widgets**.
-
-   ![The widget picker](../images/widgets/widget_picker_list.png)
-
-2. Open **AAPS** in the list and tap the widget you want.
-3. Press **Add** (or drag the widget to the place you want).
-
-   ![The Add button below the selected widget](../images/widgets/widget_picker_add_button.png)
-
-The widget is placed on the home screen. Right after adding it, it is shown with handles: drag a handle to **resize** the widget, or drag the widget to move it. The glucose circle can be resized to any size.
-
-![A widget just added, with its resize handles and the settings button](../images/widgets/widget_glucose_circle_added.png)
-
-If the home screen page is full, the phone puts the widget on a new page.
+ערכי הסוכר מוצגים באותם צבעים כמו ב-**AAPS**: ירוק בטווח, צהוב מעל הטווח, אדום מתחת לטווח.
 
 ---
 
-## Widget configuration
+## הוספת ווידג'ט
 
-Tap the **pencil** button shown on the widget just after you added it. Later, long-press the widget to get the handles and the pencil back.
+השלבים המדויקים תלויים בטלפון ובמסך הבית (launcher) שלו. ברוב הטלפונים:
 
-The **Widget configuration** dialog has two settings:
+1. יש ללחוץ לחיצה ארוכה על אזור ריק במסך הבית ולבחור **Widgets** (ווידג'טים).
 
-- **Configure opacity** — how opaque the background of the widget is. A low value lets the wallpaper show through.
-- **Use black color** — use a black background instead of the default one.
+   ![בוחר הווידג'טים](../images/widgets/widget_picker_list.png)
 
-![Widget configuration](../images/widgets/widget_configuration.png)
+2. יש לפתוח את **AAPS** ברשימה ולהקיש על הווידג'ט הרצוי.
+3. יש ללחוץ על **Add** (הוספה), או לגרור את הווידג'ט למקום הרצוי.
 
-Each widget has its own configuration.
+   ![הלחצן Add מתחת לווידג'ט שנבחר](../images/widgets/widget_picker_add_button.png)
+
+הווידג'ט ממוקם במסך הבית. מיד לאחר ההוספה הווידג'ט מוצג עם ידיות: יש לגרור ידית כדי **לשנות את הגודל** של הווידג'ט, או לגרור את הווידג'ט כדי להזיז אותו. את מעגל הסוכר אפשר להגדיל או להקטין לכל גודל.
+
+![ווידג'ט שזה עתה נוסף, עם ידיות שינוי הגודל ולחצן ההגדרות](../images/widgets/widget_glucose_circle_added.png)
+
+אם עמוד מסך הבית מלא, הטלפון מציב את הווידג'ט בעמוד חדש.
 
 ---
 
-## Good to know
+## תצורת ווידג'ט
 
-- A widget only **displays** data. You cannot bolus or change anything from a widget.
-- The widget is refreshed by **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
-- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Raise the opacity in the widget configuration if the color is hard to see. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions).
+יש להקיש על לחצן **העיפרון** שמוצג על הווידג'ט מיד לאחר הוספתו. בהמשך, לחיצה ארוכה על הווידג'ט מחזירה את הידיות ואת העיפרון.
+
+בחלון **תצורת ווידג'ט** יש שתי הגדרות:
+
+- **הגדרת אטימות** — מידת האטימות של רקע הווידג'ט. ערך נמוך מאפשר לראות את הטפט דרך הרקע.
+- **שימוש בצבע שחור** — שימוש ברקע שחור במקום ברקע ברירת המחדל.
+
+![תצורת ווידג'ט](../images/widgets/widget_configuration.png)
+
+לכל ווידג'ט יש תצורה משלו.
+
+---
+
+## טוב לדעת
+
+- ווידג'ט רק **מציג** נתונים. לא ניתן לתת בולוס או לשנות דבר מתוך ווידג'ט.
+- **AAPS** מרענן את הווידג'ט. אם **AAPS** אינו פועל, או אם Android מגביל אותו ברקע, הווידג'ט עלול להציג נתונים ישנים. יש לבדוק את הזמן מאז הקריאה האחרונה ולוודא ש-**AAPS** מוחרג מ[אופטימיזציית סוללה](#SetupWizard-StoragePermission).
+- עם **AAPSClient**, **AAPSClient2** ו-**AAPSClient3**, רקע הווידג'ט צהוב, כחול או ירוק, כדי שאפשר יהיה להבדיל בין האפליקציות. אם קשה לראות את הצבע, אפשר להגביר את האטימות בתצורת הווידג'ט. ראו [על AAPSClient, AAPSClient2 ו-AAPSClient3](#remotecontrol-aapsclient-versions).

@@ -10,7 +10,7 @@
 
 Не позволявайте на друго приложение да качва данни (кръвна захар и лечения) в Nightscout.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
+→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Изключете (**OFF**) `Enabled` (5)
 
 ![Основни настройки на xDrip 1](../images/xDrip_Basic1.png)
 
@@ -34,7 +34,7 @@
 
 ### **Inter-app Settings** (Broadcast)
 
-If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
+Ако използвате AAPS, трябва да включите излъчването (broadcasting) в Inter-App settings на xDrip, за да се препращат данните към AAPS.
 
 → Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
 
@@ -99,7 +99,7 @@ If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so
 #### Смяна на трансмитер
 
 - Изключете оригиналния приемник на Dexcom (ако го използвате) и не го включвайте отново, преди xDrip да покаже стойности.
-- Forget the device in xDrip (System Status → Forget Device) AND in the smartphone's Bluetooth settings (shown as DexcomXX where XX are the last two digits of the transmitter serial number).
+- Забравете устройството в xDrip (System Status → Forget Device) И в настройките за Bluetooth на смартфона (показва се като DexcomXX, където XX са последните две цифри от серийния номер на трансмитера).
 - Дръжте стария трансмитер извън обхвата на Bluetooth, за да не се свърже отново.
 - След това следвайте [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 

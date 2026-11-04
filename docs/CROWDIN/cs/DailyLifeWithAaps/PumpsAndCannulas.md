@@ -17,7 +17,7 @@ Fyzickou výměnu zásobníku nelze provést přes **AAPS**, musí se udělat p�
 
 3. Naplňte hadičky a kanylu: to lze provést přímo na pumpě. Ujistěte se, že odstraníte všechny bublinky v hadičkách.
 
-4. Připojte k tělu novou kanylu. Jakmile je kanyla nastřelena a jehla odstraněna, připojená kanyla má obsahuje malou vzduchovou mezeru, kterou je třeba také naplnit. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Nyní stiskněte výchozí množství pro naplnění kanyly (obvykle kolem 0,3 U, ale ověřte, že tato hodnota odpovídá vaší kanyle) a vyberte **OK**. Přečtěte si souhrnnou zprávu a plnění potvrďte klepnutím na **OK**.
+4. Připojte k tělu novou kanylu. Jakmile je kanyla nastřelena a jehla odstraněna, připojená kanyla má obsahuje malou vzduchovou mezeru, kterou je třeba také naplnit. Pro oznámení v **AAPS** a naplnění místa: otevřete **Plnění/doplňování** (v rozbaleném stavovém panelu na hlavní obrazovce, v panelu **Spravovat** nebo jako tlačítko na panelu [Rychlé spuštění](QuickLaunch.md)) a podle potřeby zaškrtněte **Zaznamenat výměnu setu** a/nebo **Zaznamenat výměnu inzulínu**, aby se výměna zaznamenala. Nyní stiskněte výchozí množství pro naplnění kanyly (obvykle kolem 0,3 U, ale ověřte, že tato hodnota odpovídá vaší kanyle) a vyberte **OK**. Přečtěte si souhrnnou zprávu a plnění potvrďte klepnutím na **OK**.
 
    ![Plnění/doplňování v panelu Spravovat u pumpy s hadičkou](../images/v4/Screens/manage_sheet_tube_pump.png)
 
@@ -39,8 +39,8 @@ Fyzickou výměnu zásobníku nelze provést přes **AAPS**, musí se udělat p�
 Pokud jste si jistí, že jste po určitou dobu nedostali žádný inzulín, i když **AAPS** zaznamenal, že ano, a přesně víte, kdy problém začal (_např._ vyndáte kanylu a vidíte, že se při zavádění zalomila), můžete to v **AAPS** opravit. Myslete ale na to, že inzulín mohl být ve skutečnosti vydán a jen z nějakého důvodu působí pomalu.
 
 ```{admonition} Caution - Risk of Hypoglycemia
-:class: nebezpečí
-Záznam o podání inzulínu smažte z **AAPS** pouze s **EXTRÉMNÍ** opatrností a pro případ, že by inzulín byl skutečně podán, pečlivě sledujte hladinu cukru v krvi v příštích 24 hodinách.
+:class: danger
+Záznam o podání inzulínu smažte z **AAPS** jen s EXTRÉMNÍ opatrností pro případ, že inzulín _byl_ skutečně podán, a v příštích 24 hodinách pečlivě sledujte glykémii.
 ```
 
 Chcete-li odstranit bolusy a SMB, o kterých víte, že nebyly vydány, otevřete **nabídku** (☰), vyberte [Historii ošetření](#aaps-screens-treatments) a na kartě **Sacharidy a bolusy** opatrně smažte zaznamenané bolusy od okamžiku, kdy problém nastal. Tím se opraví hodnota „aktivního inzulínu“ (IOB), která je pro výpočty **AAPS** klíčová. Když se teď vrátíte na hlavní obrazovku, uvidíte, že IOB kleslo. Upozornění: bazální inzulín, o kterém **AAPS** počítá, že byl vydán, nelze smazat. **AAPS** ho tedy bude dál brát v úvahu.
@@ -57,7 +57,7 @@ Protože během odpojení pumpy nedostáváte žádný inzulín, měli byste se 
 (pumps-cannulas-announce-insulin)=
 ## Zadání dodaného inzulínu bez skutečného podání dávky
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Pak se objeví řádek **Čas** (nastavený na **Nyní**), kde můžete zadat skutečný čas injekce. Pokud byla injekce podána nedávno, můžete ho ignorovat. Pokud byl bolus podán před nějakou dobou, posuňte čas zpět pomocí **-** (_např._ -30 min), nebo řádek rozbalte šipkou a vyberte přesné datum a čas. **AAPS** pak vezme v úvahu dobu působení inzulínu a podle toho vypočítá zbývající aktivní inzulín.
+Pro oznámení inzulínu vydaného z pumpy, zatímco byl **AAPS** odpojený, nebo inzulínu z injekce perem: otevřete [dialog Inzulín](#aaps-screens-buttons-insulin) (**Ošetření** ve spodní navigaci nebo tlačítko Rychlého spuštění), zadejte množství v jednotkách a zapněte **Bolus nebude pumpou vydán, pouze zaznamenán**. Pak se objeví řádek **Čas** (nastavený na **Nyní**), kde můžete zadat skutečný čas injekce. Pokud byla injekce podána nedávno, můžete ho ignorovat. Pokud byl bolus podán před nějakou dobou, posuňte čas zpět pomocí **-** (_např._ -30 min), nebo řádek rozbalte šipkou a vyberte přesné datum a čas. **AAPS** pak vezme v úvahu dobu působení inzulínu a podle toho vypočítá zbývající aktivní inzulín.
 
 Pokud používáte **AAPS** jako pečovatel, můžete pumpu na dálku velmi snadno odpojit (a znovu připojit) pomocí [SMS příkazu](../RemoteFeatures/SMSCommands.md), například příkazy „pump disconnect 120“ a „pump connect 120“. Doba trvání vzdáleného odpojení je od 1 do 120 minut (v tomto příkladu je 120 minut). To je velmi užitečné, pokud je pro vás telefon s **AAPS** špatně dostupný, například je schovaný v pásu na pumpu u dítěte, které utíká k bazénu, nebo ho pečlivě hlídá (či používá) teenager.
 
@@ -80,7 +80,7 @@ Kterou strategii upřednostníte je na vašem osobním rozhodnutí a nejlépe se
 **Spravovat → Rotace míst aplikace** otevře dialog Rotace míst aplikace v režimu zobrazení:
 
 - Dvěma tlačítky nahoře (ikona kanyly a ikona senzoru) můžete zobrazit jen místa kanyly, jen místa senzoru, nebo obojí
-- All Cannula change and Sensor change events from the past 45 days are available.
+- K dispozici jsou všechny události výměny kanyly a výměny senzoru za posledních 45 dní.
 - Klepněte na oblast místa nebo na jeden záznam v seznamu níže a seznam se vyfiltruje jen na záznamy ve vybrané oblasti. Vybraná oblast bude zvýrazněna světle zelenou barvou.
 - Klepnutím na ikonu **tužky** vedle záznamu otevřete zobrazení úprav a změníte jeho umístění, šipku nebo poznámku
 
@@ -92,7 +92,7 @@ Kterou strategii upřednostníte je na vašem osobním rozhodnutí a nejlépe se
 
 ![Dialog Uživatelský profil pro střídání míst](../images/SiteRotation/Type.png)
 
-*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
+*Poznámka: toto nastavení určuje, zda se dialog Rotace míst aplikace (režim úprav) otevře automaticky, když se vytvoří nový záznam tlačítkem „Plnění/doplňování“ nebo „Výměna senzoru“.*
 
 - U výměny setu provedené přímo na pumpě musíte otevřít režim zobrazení a upravit nový záznam, abyste vybrali umístění a šipku
 
@@ -100,7 +100,7 @@ Režim úprav vám umožní vybrat umístění, šipku a poznámku k vybranému 
 
 - Upravovaný záznam se zobrazuje pod obrázky těla, s ikonou svého typu (kanyla nebo senzor)
 - Přední a zadní pohled jsou zobrazeny vedle sebe: klepněte na oblast, kam jste ho umístili
-- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
+- Když je místo vybrané (zvýrazněné zeleně), seznam níže ukazuje všechny záznamy v tomto místě za posledních 45 dní.
 
 ![Režim úprav](../images/SiteRotation/EditMode.png)
 

@@ -1,8 +1,8 @@
-# Profile switch & Profile Percentage
+# החלפת פרופיל ואחוז הפרופיל
 
-This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn how to create a **Profile** in [Your AAPS Profile](#your-aaps-profile-create-and-edit-profiles).
+סעיף זה מסביר מהי **החלפת פרופיל** ומהו **אחוז הפרופיל**. איך יוצרים **פרופיל** אפשר ללמוד ב[פרופיל AAPS שלכם](#your-aaps-profile-create-and-edit-profiles).
 
-When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
+When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. התכונות **החלפת פרופיל** ו**אחוז הפרופיל** יכולות להועיל במיוחד עבור:
 
 - the Menstrual Cycle - a percentage adjustment within a **Profile** can be set up in **Automations** in order to allow **AAPS** to accommodate for different stages of the hormone cycle and with predicted insulin resistance.
 
@@ -10,144 +10,144 @@ When first embarking on your **AAPS** journey, you will need to create a **Profi
 
 - Night or pattern shift workers - a time shift in **Profile** can be set up for pattern shift workers by altering the number of hours in the **Profile** to how much later/earlier the user will go to bed or wake up.
 
-Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
+למה להשתמש ב**אחוז הפרופיל** ולא בהתאמה זמנית של הבזאלי? כדי לפעול ביעילות רבה יותר, **אחוז הפרופיל** מחיל הפחתה או הגדלה יחסית על הבזאלי, על ה-ISF ועל ה-I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
 
 (ProfileSwitch-change-percentage)=
 
-## Change the Profile Percentage from the main screen
+## שינוי אחוז הפרופיל מהמסך הראשי
 
-You need at least one saved **Profile**. A **Profile Percentage** is always applied through a **Profile Switch**: you activate a **Profile** again, this time with a percentage.
+צריך לפחות **פרופיל** שמור אחד. **אחוז הפרופיל** מוחל תמיד באמצעות **החלפת פרופיל**: מפעילים שוב **פרופיל**, והפעם עם אחוז.
 
-```{admonition} Coming from AAPS 3? :class: note A long press on the profile name no longer opens the profile switch dialog. **Tap** the profile name, then tap the round **▶** button at the bottom right: it opens the same settings (percentage, duration, Activity temp target).
+```{admonition} עוברים מ-AAPS 3? :class: note לחיצה ארוכה על שם הפרופיל כבר לא פותחת את חלון החלפת הפרופיל. יש **ללחוץ** על שם הפרופיל, ואז על הלחצן העגול **▶** בפינה התחתונה: הוא פותח את אותן הגדרות (אחוז, משך, יעד זמני לפעילות).
 
-    <br />1. On the main screen, **tap the profile name** (next to the star icon). The [Profile screen](#ProfileSwitch-manage-v4) opens on the card of the running **Profile**, marked **ACTIVE**.
+    <br />1. במסך הראשי, **יש ללחוץ על שם הפרופיל** (ליד סמל הכוכב). [מסך הפרופיל](#ProfileSwitch-manage-v4) נפתח על הכרטיס של ה**פרופיל** הפעיל, שמסומן **פעיל**.
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/ProfileSwitch2.png)
+       ![לחיצה על שם הפרופיל במסך הראשי פותחת את מסך הפרופיל](../images/ProfileSwitch2.png)
     
-    2. To keep the same **Profile**, leave the **ACTIVE** card selected. To change **Profile** at the same time, swipe to another card.
-    3. Tap the round **▶** button (**Activate**) at the bottom right. The **Activate** screen opens.
-    4. Set the **Percentage** with **−** / **+** (steps of 5 %), or type it in (30 to 250 %). The field always starts at **100 %**: it does not show the percentage that is running now. For example, enter **80** for 20 % less insulin, or **120** for 20 % more.
-    5. Set the **Duration** in minutes:
-       * **0** keeps the new percentage until you make another **Profile Switch**;
-       * any other value ends the switch after that time, and **AAPS** goes back to the **Profile** that was running before.
+    2. כדי להשאיר את אותו **פרופיל**, יש להשאיר את הכרטיס **פעיל** בחור. כדי להחליף **פרופיל** באותו זמן, יש להחליק לכרטיס אחר.
+    3. יש ללחוץ על הלחצן העגול **▶** (**הפעלה**) בפינה התחתונה. נפתח המסך **הפעלה**.
+    4. יש להגדיר את הערך בשדה **אחוזים** בעזרת **−** / **+** (בצעדים של 5 %), או להקליד אותו (30 עד 250 %). השדה תמיד מתחיל ב-**100 %**: הוא לא מציג את האחוז שפועל עכשיו. למשל, יש להזין **80** כדי לקבל 20 % פחות אינסולין, או **120** כדי לקבל 20 % יותר.
+    5. יש להגדיר בשדה **משך** את הזמן בדקות:
+       * **0** משאיר את האחוז החדש עד ל**החלפת פרופיל** הבאה;
+       * כל ערך אחר מסיים את ההחלפה אחרי הזמן הזה, ו-**AAPS** חוזר ל**פרופיל** שפעל קודם.
     
-       ![The Activate screen set to 80 % for 60 minutes](../images/v4/Profiles/profile_activate_percentage.png)
+       ![המסך הפעלה מוגדר ל-80 % למשך 60 דקות](../images/v4/Profiles/profile_activate_percentage.png)
     
-    6. Tap **▶ Activate** at the bottom of the screen. Check the summary in the **Profile switch** dialog and tap **OK**.
+    6. יש ללחוץ על **▶ הפעלה** בתחתית המסך. יש לבדוק את הסיכום בחלון **החלפת פרופיל** וללחוץ על **אישור**.
     
-       ![The confirmation dialog — profile, percentage and duration](../images/v4/Profiles/profile_activate_confirm.png)
+       ![חלון האישור — פרופיל, אחוז ומשך](../images/v4/Profiles/profile_activate_confirm.png)
     
-    Back on the main screen, the profile name shows the percentage and the remaining time, for example *Normal (80%) (59')*, and turns yellow while a switch with a duration is running. A star marks the switch on the glucose graph. See [the main screen](#aaps-screens-profile--target).
+    בחזרה במסך הראשי, שם הפרופיל מציג את האחוז ואת הזמן שנותר, למשל *Normal (80%) (59')*, והוא נצבע בצהוב כל עוד פועלת החלפה עם משך זמן. כוכב מסמן את ההחלפה בגרף הסוכר. ראו [המסך הראשי](#aaps-screens-profile--target).
     
-    ![The main screen while an 80 % profile switch is running](../images/v4/Profiles/profile_switch_running.png)
+    ![המסך הראשי בזמן שפועלת החלפת פרופיל של 80 %](../images/v4/Profiles/profile_switch_running.png)
     
-    To **go back to 100 %** before the end, repeat the steps and keep **Percentage** at 100 and **Duration** at 0.
+    כדי **לחזור ל-100 %** לפני הסוף, יש לחזור על השלבים ולהשאיר בשדה **אחוזים** את הערך 100 ובשדה **משך** את הערך 0.
     
-    ```{admonition} One-tap percentages
+    ```{admonition} אחוזים בלחיצה אחת
     :class: tip
-    If you often use the same percentage (sport, illness), add a [Profile shortcut](#profile-shortcuts) to the Quick Launch bar, or create a [scene](Scenes.md). Both apply a profile with a preset percentage and duration in one tap.
+    אם אתם משתמשים לעתים קרובות באותו אחוז (ספורט, מחלה), אפשר להוסיף [קיצור דרך לפרופיל](#profile-shortcuts) לסרגל ההפעלה המהירה, או ליצור [תרחיש](Scenes.md). שתי האפשרויות מפעילות פרופיל עם אחוז ומשך שהוגדרו מראש, בלחיצה אחת.
     
 
 (ProfileSwitch-manage-v4)=
 
-## Managing and activating profiles (Manage → Profile)
+## ניהול והפעלה של פרופילים (ניהול ← פרופיל)
 
-In **AAPS** v4 profiles are managed and activated from the **Manage** screen (bottom navigation) → **Profile** (*“Manage and activate profiles”*).
+ב-**AAPS** v4 מנהלים ומפעילים פרופילים מהמסך **ניהול** (בסרגל הניווט התחתון) ← **פרופיל** (*"ניהול והפעלת פרופילים"*).
 
-The Profile screen shows your profiles as a **swipeable card carousel**. The card of the running profile is marked **ACTIVE** and shows its total daily basal (e.g. *∑ 30.15 U*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+מסך הפרופיל מציג את הפרופילים שלכם כ**קרוסלת כרטיסים שאפשר להחליק**. הכרטיס של הפרופיל שפועל מסומן **פעיל** ומציג את סך הבזאלי היומי שלו (למשל *∑ 30.15 U*). מתחת לכרטיס שנבחר מוצגים פרטי הפרופיל — סוג ה**אינסולין**, ולוחות הזמנים של **IC**, **ISF**, **בזאלי** ו**יעד**, עם גרפים.
 
-When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
+כאשר החלפה זמנית פועלת, הכרטיס **פעיל** מציג את האחוז ואת הזזת הזמן שלה, עם הזמן שנותר, למשל *110% +2 h · 2 h 40 min*, מעל פס התקדמות. שניהם מתעדכנים כל 30 שניות. הפרטים שמתחת מוצגים אז בשתי עמודות: ערכי הפרופיל בכחול, והערכים שבשימוש עם האחוז באדום.
 
-![The Profile screen — profile carousel, details and action bar](../images/v4/Profiles/profile_manage.png)
+![מסך הפרופיל — קרוסלת הפרופילים, הפרטים וסרגל הפעולות](../images/v4/Profiles/profile_manage.png)
 
-The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **‘️ Delete**, and the round **▶ Activate** button on the right. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
+הלחצנים בתחתית פועלים על הפרופיל **שנבחר**: **➕ הוספה**, **✏️ עריכה**, **⧉ שכפול** ו-**‘️ מחיקה**, והלחצן העגול **▶ הפעלה** בצד. איך ממלאים את ארבעת לוחות הזמנים בעורך (IC / ISF / בזאלי / יעד) - ראו [יצירה ועריכה של פרופילים](#your-aaps-profile-create-and-edit-profiles).
 
-**⧉ Clone** uses the two-squares icon often used for *copy*, but there is nothing to paste: it makes the duplicate in one step. Confirm *Clone profile "Normal"?* and a new profile named *Normal copy* is added at the end of the carousel and selected, ready for **✏️ Edit** (where you can also rename it). This is not the same as cloning a past **Profile Switch** from the Treatments history, which creates a new profile *with the percentage and time shift applied*. See [Keep a profile switch for later use](#ProfileSwitch-keep-for-later).
+**⧉ שכפול** משתמש בסמל של שני ריבועים, שמשמש בדרך כלל ל*העתקה*, אבל אין מה להדביק: הוא יוצר את העותק בשלב אחד. יש לאשר את *לשכפל את הפרופיל "Normal"?*, ופרופיל חדש בשם *Normal (עותק)* נוסף בסוף הקרוסלה ונבחר, מוכן ל**✏️ עריכה** (שבה אפשר גם לשנות את השם שלו). זה לא אותו דבר כמו שכפול של **החלפת פרופיל** קודמת מהיסטוריית הטיפולים, שיוצר פרופיל חדש *עם האחוז והיסט הזמן שהוחלו*. ראו [שמירת החלפת פרופיל לשימוש מאוחר יותר](#ProfileSwitch-keep-for-later).
 
-(ProfileSwitch-read-only-mode)= **Only the ▶ Activate button?** Your settings are protected, so the screen opens read-only. Tap the **✏️ pencil** in the top bar and enter your settings password. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+(ProfileSwitch-read-only-mode)= **רק הלחצן ▶ הפעלה?** ההגדרות שלכם מוגנות, ולכן המסך נפתח לקריאה בלבד. יש ללחוץ על **✏️ העיפרון** בסרגל העליון ולהזין את סיסמת ההגדרות. ראו [ההגנה על הגדרות נועלת עכשיו גם את מסכי הניהול](#v4changes-read-only-management).
 
-### Reordering profiles
+### שינוי סדר הפרופילים
 
-If you have more than one profile you can choose their order in the carousel: tap the **Reorder** icon (⇅, two arrows pointing up and down) in the top bar. The page indicator is replaced by **◀ / ▶ move buttons** with a *position / total* readout — step the centred card earlier or later, then confirm with **✓** (or discard with **✕**). The new order is saved once, when you confirm.
+אם יש לכם יותר מפרופיל אחד, אפשר לבחור את הסדר שלהם בקרוסלה: יש ללחוץ על הסמל **שינוי סדר** (⇅, שני חצים למעלה ולמטה) בסרגל העליון. במקום מחוון הדפים מופיעים **לחצני הזזה ◀ / ▶** עם תצוגה של *מיקום / סך הכול* — יש להזיז את הכרטיס שבמרכז קדימה או אחורה, ואז לאשר עם **✓** (או לבטל עם **✕**). הסדר החדש נשמר פעם אחת, כשמאשרים.
 
-![Reorder mode — move buttons and position readout](../images/v4/Profiles/profile_reorder.png)
+![מצב שינוי סדר — לחצני הזזה ותצוגת המיקום](../images/v4/Profiles/profile_reorder.png)
 
-### Activating a profile
+### הפעלת פרופיל
 
-Select a profile and tap **▶ Activate**. The **Activate** screen lets you tailor how the **Profile Switch** is applied:
+יש לבחור פרופיל וללחוץ על **▶ הפעלה**. המסך **הפעלה** מאפשר להתאים את האופן שבו **החלפת הפרופיל** מוחלת:
 
-![The Activate screen — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
+![המסך הפעלה — אחוז, משך, היסט זמן, זמן](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
-- **Duration** (0–10080 minutes, that is up to 7 days) — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
-- **Temporary target / Activity** — appears only when you set a **Duration** and a **Percentage** below 100 %. Switch it on to also start an [Activity temp target](#TempTargets-activity-temp-target) for the same duration, as you would before exercise.
-- **Time shift** — shows *0h*; tap **Change** to move the schedule forward or back by up to 23 hours (useful for shift work or travel). See [Time shift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
-- **Reuse** — appears when the running switch has a percentage other than 100 % or a time shift, for example **Reuse 80% 0h**. Tap it to fill in the same percentage and time shift, for instance to prolong a switch that is about to end.
+- **אחוזים** (30–250 %, מתחיל ב-100 % בכל פעם) — שינוי קנה המידה של כל הפרופיל. 100 % משתמש בפרופיל כמו שהוא; למשל, 70 % מפחית ב-30 % את הבזאלי ואת מנת האינסולין המחושבת (גם בולוסים לארוחות וגם תיקונים). הוא לא משנה את יעדי הסוכר או את ספיגת הפחמימות. להשפעה המלאה ראו [אחוז הפרופיל](#ProfileSwitch-profile-percentage).
+- **משך** (0–10080 דקות, כלומר עד 7 ימים) — כמה זמן ההחלפה נמשכת. **0 = ללא הגבלת זמן** (עד ההחלפה הבאה); ערך שאינו אפס מחזיר לפרופיל הקודם כשהזמן נגמר.
+- **יעד זמני / פעילות** — מופיע רק כשמגדירים **משך** ו**אחוזים** מתחת ל-100 %. כשמפעילים אותו, מתחיל גם [יעד זמני לפעילות](#TempTargets-activity-temp-target) לאותו משך זמן, כמו שעושים לפני פעילות גופנית.
+- **היסט זמן** — מציג *0h*; יש ללחוץ על **שינוי** כדי להזיז את לוח הזמנים קדימה או אחורה בעד 23 שעות (שימושי לעבודה במשמרות או לנסיעות). ראו [היסט זמן](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
+- **שימוש מחדש** — מופיע כשלהחלפה שפועלת יש אחוז שונה מ-100 % או היסט זמן, למשל **שימוש מחדש 80% 0 שעות**. לחיצה עליו ממלאת את אותו אחוז ואת אותו היסט זמן, למשל כדי להאריך החלפה שעומדת להסתיים.
     
-    ![The Reuse button while an 80 % switch is running](../images/v4/Profiles/profile_activate_reuse.png)
+    ![הלחצן שימוש מחדש בזמן שפועלת החלפה של 80 %](../images/v4/Profiles/profile_activate_reuse.png)
 
-- **Time** — *Now* by default. You can pick another time, up to 24 hours before or after now. A switch set in the future starts at that time; an Activity temp target set with it then also starts at that time.
+- **זמן** — *עכשיו* כברירת מחדל. אפשר לבחור זמן אחר, עד 24 שעות לפני עכשיו או אחרי עכשיו. החלפה שמוגדרת לעתיד מתחילה בזמן הזה; גם יעד זמני לפעילות שהוגדר יחד איתה מתחיל אז בזמן הזה.
     
-    ![Choosing the time of a profile switch](../images/v4/Profiles/profile_activate_time_picker.png)
+    ![בחירת הזמן של החלפת פרופיל](../images/v4/Profiles/profile_activate_time_picker.png)
 
-- **Notes** — only shown if [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs) is on.
+- **הערות** — מוצג רק אם [הצגת הערות בתיבות דו־שיח](#Preferences-show-notes-field-in-treatments-dialogs) מופעל.
 
-If the basal rates at the chosen percentage are not compatible with your pump, a warning appears at the top and **▶ Activate** stays disabled: choose another percentage.
+אם הקצבים הבזאליים באחוז שנבחר לא מתאימים למשאבה שלכם, מופיעה אזהרה בחלק העליון, והלחצן **▶ הפעלה** נשאר מושבת: יש לבחור אחוז אחר.
 
-Tap **▶ Activate**, then **OK** in the confirmation dialog. The running profile then carries the **ACTIVE** badge on its card.
+יש ללחוץ על **▶ הפעלה**, ואז על **אישור** בחלון האישור. אז הפרופיל שפועל נושא את התג **פעיל** על הכרטיס שלו.
 
-```{admonition} Your pump may round the basal rates :class: note Each pump can only give basal rates in its own steps (for example 0.05 U/h), so it rounds the rates of your **Profile**. **AAPS** then uses the basal the pump really gives, so IOB and TDD stay correct. If the pump gives a little more or less insulin per day than your **Profile**, the notice *"Basal profile in pump updated"* tells you how much, for example *"it gives 10.00 U per day instead of 10.12 U"*.
+```{admonition} ייתכן שהמשאבה תעגל את הקצבים הבזאליים :class: note כל משאבה יכולה לתת קצבים בזאליים רק בצעדים משלה (למשל 0.05 U/h), ולכן היא מעגלת את המינונים של ה**פרופיל** שלכם. **AAPS** משתמש אז בבזאלי שהמשאבה באמת נותנת, כך שה-IOB וה-TDD נשארים נכונים. אם המשאבה נותנת קצת יותר או קצת פחות אינסולין ביום מה**פרופיל** שלכם, ההודעה *"הפרופיל הבזאלי במשאבה עודכן"* מראה בכמה, למשל *"היא נותנת 10.00 U ליום במקום 10.12 U"*.
 
-If the pump reports a basal that is far from your **Profile**, **AAPS** keeps the **Profile** basal and asks you to check the basal rates in the pump.
+אם המשאבה מדווחת על בזאלי שרחוק מאוד מה**פרופיל** שלכם, **AAPS** שומר את הבזאלי של ה**פרופיל** ומבקש לבדוק את הקצבים הבזאליים במשאבה.
 
-    <br />```{admonition} Percentage and time shift make one profile go a long way
+    <br />```{admonition} עם אחוזים והיסט זמן, פרופיל אחד מספיק להרבה מצבים
     :class: note
-    Rather than building many similar profiles, keep one base profile and apply it at a different **percentage** or **time shift** for recurring situations (illness, exercise, travel). This is exactly what [scenes](Scenes.md) automate.
+    במקום לבנות הרבה פרופילים דומים, אפשר לשמור פרופיל בסיס אחד ולהפעיל אותו ב**אחוז** אחר או עם **היסט זמן** אחר למצבים חוזרים (מחלה, פעילות גופנית, נסיעות). בדיוק את זה [תרחישים](Scenes.md) עושים באופן אוטומטי.
     
 
-A profile switch is not limited to this screen. The same switch can also be triggered from a **Wear OS watch**, a paired **client** (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)), a **[scene](Scenes.md)**, or an **Automation** rule.
+החלפת פרופיל לא מוגבלת למסך הזה. אפשר להפעיל את אותה החלפה גם מ**שעון Wear OS**, ממכשיר **לקוח** מצומד (ראו [שליטה בין מכשיר ראשי ↔ מכשיר לקוח](../RemoteFeatures/ClientMasterControl.md)), מ**[תרחיש](Scenes.md)**, או מכלל **אוטומציה**.
 
 (ProfileSwitch-profile-percentage)=
 
-## Profile Percentage
+## אחוז הפרופיל
 
-It is important that a user understands the essential features of a **Profile Percentage**. By applying a percentage increase or decrease to a **Profile Switch** this will apply in the same percentage to either raise or lower the user’s settings parameters as set within the **Profile**.
+חשוב שהמשתמש יבין את התכונות הבסיסיות של **אחוז הפרופיל**. By applying a percentage increase or decrease to a **Profile Switch** this will apply in the same percentage to either raise or lower the user’s settings parameters as set within the **Profile**.
 
 For example: a **Profile Switch** to 130% (means the user is 30% more insulin resistant) will instruct **AAPS** to
 
-- **increase** the basal rate by 30%; 
+- **להגדיל** את הקצב הבזאלי ב-30%; 
 - **lower** the **ISF**: by dividing by 1.3;
 - **lower** the **I:C** by dividing by 1.3.
 
 Remember lowering the **ISF** or **I:C** means a stronger ratio and more insulin being administered. This fact can be easily overlooked by new users to **AAPS**.
 
-Once selected, **AAPS** readjusts the default basal rate, and **AAPS** (open or closed) will continue to work on top of the selected percentage **Profile**.
+לאחר הבחירה, **AAPS** מתאים מחדש את הקצב הבזאלי המוגדר כברירת מחדל, ו-**AAPS** (במצב פתוח או סגור) ימשיך לפעול על בסיס ה**פרופיל** באחוז שנבחר.
 
 The effect of a **Profile** Percentage is summarized in the table below:
 
 | Profile Switch  
 Percentage |    Effect    |     I:C  
-g/U     | Example  
+g/U     | דוגמה  
 15 g |          ISF  
 mmol/L/U  
-mg/dL/U          | U to lower  
+mg/dL/U          | U להורדה של  
 2mmol/L  
 40mg/dL |
-|:---------------------------:|:------------:|:-----------------:|:--------------:|:------------------------------------------:|:------------------------------:|
+|:---------------------------:|:------------:|:-----------------:|:------------:|:------------------------------------------:|:-------------------------------:|
 |             90%             |    Weaker    | 5/0.9  
-=**5.55** |     2.7 U      | 2.2/0.9  
+=**5.55** |    2.7 U     | 2.2/0.9  
 =**2.4**  
   
 40/0.9  
-=**44.4** |             0.8 U              |
-|          **100%**           | **Standard** |       **5**       |    **3 U**     |                **2.2  
-40**                |           **0.9** U            |
+=**44.4** |              0.8 U              |
+|          **100%**           | **Standard** |       **5**       |   **3 U**    |                **2.2  
+40**                |            **0.9** U            |
 |            130%             |   Stronger   | 5/1.3  
-=**3.85** |     3.9 U      | 2.2/1.3  
+=**3.85** |    3.9 U     | 2.2/1.3  
 =**1.7**  
   
 40/1.3  
-=**30.8** |             1.2 U              |
+=**30.8** |              1.2 U              |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
@@ -155,7 +155,7 @@ mg/dL/U          | U to lower
 
 A ‘time shift’ within a user’s **Profile** feature will move the user’s **Profile’s** settings around the day-to-day clock (‘circadian’) to the desired number of hours entered. This can be helpful for:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
+- **עובדי לילה או משמרות**: עבודה במשמרות לילה באמצעות שינוי מספר השעות ב**פרופיל** בהתאם לכמה מאוחר או מוקדם יותר המשתמש ילך לישון או יתעורר; 
 - **users changing time zones during travelling**; or
 - **users who are type 1 children**: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
 
@@ -171,7 +171,7 @@ It is always a question of which hour’s **Profile’s** settings should replac
 
 ![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+מנגנון זה של שמירת תמונות מצב של ה**פרופיל** מאפשר חישוב מדויק בהרבה של העבר ואפשרות לעקוב אחר שינויים ב**פרופיל**.
 
 (ProfileSwitch-keep-for-later)=
 
@@ -179,4 +179,4 @@ This mechanism of taking snapshots of the **Profile** allows a much more precise
 
 Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.
 
-To do this, open the menu (☰) → **Treatments** and go to the **Profile switch** tab, see [Clone a Profile switch to a new Profile](#your-aaps-profile-clone-profile-switch).
+לשם כך, יש לפתוח את התפריט (☰) ← **טיפולים** ולעבור ללשונית **החלפת פרופיל**, ראו [שכפול החלפת פרופיל לפרופיל חדש](#your-aaps-profile-clone-profile-switch).

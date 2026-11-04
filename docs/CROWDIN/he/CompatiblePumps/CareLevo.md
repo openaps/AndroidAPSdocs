@@ -1,13 +1,13 @@
 # CareLevo
 
-The CareLevo is a tubeless patch pump made by CareMedi. Each patch holds up to 300 U of insulin and is worn for up to 7 days (168 hours). It communicates with **AAPS** over your phone's Bluetooth, with no additional device.
+CareLevo היא משאבת פאץ' ללא צינורית מתוצרת CareMedi. כל פאץ' מכיל עד 300 U אינסולין, וניתן לענוד אותו עד 7 ימים (168 שעות). הוא מתקשר עם **AAPS** דרך ה-Bluetooth של הטלפון, בלי התקן נוסף.
 
 ```{admonition} New driver
 :class: warning
-The CareLevo driver is new in **AAPS**. Read this whole page before you activate your first patch, and keep the pump's own instructions for use at hand.
+מנהל ההתקן של CareLevo חדש ב-**AAPS**. יש לקרוא את כל הדף הזה לפני הפעלת הפאץ' הראשון, ולשמור בהישג יד את הוראות השימוש של המשאבה.
 ```
 
-The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the **Profile** to a minimum of 0.05 U/h in steps of 0.05 U/h, otherwise the insulin the **Profile** expects and the insulin the patch delivers differ slightly. **AAPS** uses the basal rates the patch accepted.
+המנה הקטנה ביותר שהפאץ' יכול לתת היא 0.05 U. יש להגדיר את הקצבים הבזאליים ב**פרופיל** למינימום של 0.05 U/h, בצעדים של 0.05 U/h. אחרת יהיה הבדל קטן בין האינסולין שה**פרופיל** מצפה לו לבין האינסולין שהפאץ' נותן. **AAPS** משתמש בקצבים הבזאליים שהפאץ' קיבל.
 
 ```{contents} Table of contents
 :depth: 1
@@ -16,147 +16,147 @@ The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the *
 
 ## Pump capabilities with AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Bolus in steps of 0.05 U.
-* Basal rates from 0.05 U/h to 15 U/h in steps of 0.05 U/h, with 30-minute basal segments.
-* Temporary basal rates set as an absolute rate, up to 12 hours.
-* Extended bolus up to 8 hours.
-* DST and timezone changes must be handled manually. The patch notifies you when the time zone changes.
+* מתקשרת עם **AAPS** דרך ה-Bluetooth המובנה של הטלפון, ללא מכשיר תקשורת נוסף.
+* בולוס בצעדים של 0.05 U.
+* קצבים בזאליים מ-0.05 U/h עד 15 U/h בצעדים של 0.05 U/h, עם מקטעים בזאליים של 30 דקות.
+* קצבים בזאליים זמניים שמוגדרים כקצב מוחלט, עד 12 שעות.
+* בולוס ממושך עד 8 שעות.
+* את המעבר לשעון קיץ/חורף ואת שינויי אזור הזמן יש לבצע ידנית. הפאץ' מודיע כאשר אזור הזמן משתנה.
 
-## Pump Setup
+## הגדרת המשאבה
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. Select **Carelevo** in the Pump section.
-1. Press the Back key to return to the main screen.
+1. יש לפתוח את **התפריט** (☰) בפינה העליונה של המסך הראשי של **AAPS** ולבחור **הגדרות תצורה**.
+1. יש לבחור **Carelevo** בסעיף משאבה.
+1. ללחוץ על מקש החזרה כדי לחזור למסך הראשי.
 
-![The Carelevo plugin selected in Configuration > Pump](../images/v4/Pumps/carelevo_enabled.png)
+![התוסף Carelevo נבחר בהגדרות תצורה > משאבה](../images/v4/Pumps/carelevo_enabled.png)
 
 ## הגדרות
 
-Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
+יש לפתוח את מסך המשאבה דרך **ניהול ← משאבה** (או **הגדרות תצורה ← משאבה ← פתיחת תוסף**).
 
-Open the CareLevo settings by pressing the **Settings** (gear) icon in the upper right corner. Three settings are available:
+יש לפתוח את הגדרות CareLevo בלחיצה על סמל **הגדרות** (גלגל שיניים) בחלק העליון של המסך. יש שלוש הגדרות:
 
-![Carelevo driver settings](../images/v4/Pumps/carelevo_settings.png)
+![הגדרות מנהל ההתקן של Carelevo](../images/v4/Pumps/carelevo_settings.png)
 
-### Low Insulin Notification Setting
+### הגדרת התראת אינסולין נמוך
 
-The patch notifies you when the insulin remaining in the reservoir reaches the chosen amount. It can be set from 20 U to 50 U in 5 U steps. The default is 30 U. Independently of this setting, the patch raises a critical alarm and stops delivering insulin when less than 10 U remain.
+הפאץ' מודיע כאשר כמות האינסולין שנותרה במכל מגיעה לכמות שנבחרה. ניתן להגדיר מ-20 U עד 50 U, בצעדים של 5 U. ברירת המחדל היא 30 U. בלי קשר להגדרה זו, הפאץ' מפעיל התראה קריטית ומפסיק לתת אינסולין כאשר נותרו פחות מ-10 U.
 
-### Patch Usage Notification Setting
+### הגדרת התראת זמן שימוש בפאץ'
 
-The patch notifies you when it has been worn for the chosen number of hours, so you can plan the change. It can be set from 24 to 167 hours. The default is 116 hours.
+הפאץ' מודיע כאשר הוא נענד מספר השעות שנבחר, כדי שאפשר יהיה לתכנן את ההחלפה. ניתן להגדיר מ-24 עד 167 שעות. ברירת המחדל היא 116 שעות.
 
-### Patch Info Alarm
+### התראת מידע של הפאץ'
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. The default is off.
+כשהאפשרות מופעלת, הפאץ' מצפצף כשבולוס, בולוס ממושך או בזאלי זמני מתחילים וכשהם מסתיימים. ברירת המחדל: כבוי.
 
-## The pump screen
+## מסך המשאבה
 
-![Carelevo pump screen without an active patch](../images/v4/Pumps/carelevo_pump_screen.png)
+![מסך המשאבה של Carelevo בלי פאץ' פעיל](../images/v4/Pumps/carelevo_pump_screen.png)
 
-The pump screen shows the **Bluetooth status** (No Active Patch, Disconnected or Connected), the **Serial No.** of the patch, its **Activation Time** and **Expiration**, the current **Basal Rate** and **Temp basal rate**, the **Insulin Remaining** (remaining / filled), the **Patch Time Remaining** and the **Total insulin delivered**.
+מסך המשאבה מציג: **מצב Bluetooth** (אין פאץ׳ פעיל, מנותק או מחובר), **מספר סידורי** של הפאץ', **זמן הפעלה** ו**תפוגה**, **קצב בזאלי** נוכחי ו**קצב בזאלי זמני**, **אינסולין שנותר** (שנותר / שמולא), **זמן שנותר לפאץ׳** ו**סה״כ אינסולין שניתן**.
 
-The buttons depend on the state of the patch:
+הלחצנים תלויים במצב הפאץ':
 
-* **Activate Patch**: starts the activation of a new patch, see below.
-* **Insulin Guide**: shows the twelve steps for filling a patch with insulin.
-* **Suspend Infusion** / **Resume Infusion**: pauses and restarts insulin delivery, see below.
-* **Discard Patch**: stops the current patch so a new one can be activated.
+* **הפעלת פאץ׳**: מתחיל את ההפעלה של פאץ' חדש, ראו בהמשך.
+* **מדריך מילוי אינסולין**: מציג את שנים-עשר השלבים למילוי פאץ' באינסולין.
+* **השהיית מתן אינסולין** / **חידוש מתן אינסולין**: עוצר ומפעיל מחדש את מתן האינסולין, ראו בהמשך.
+* **השלכת הפאץ׳**: עוצר את הפאץ' הנוכחי כדי שאפשר יהיה להפעיל פאץ' חדש.
 
-## Activating a patch
+## הפעלת פאץ'
 
-Before you start, make sure a **Profile** is active in **AAPS** and that Bluetooth is on. The patch must be activated within a limited time once it is switched on; if the time runs out, the patch raises a **Patch Application Timeout** alarm and cannot be used.
+לפני שמתחילים, יש לוודא ש**פרופיל** פעיל ב-**AAPS** ושה-Bluetooth מופעל. יש להפעיל את הפאץ' בתוך זמן מוגבל מרגע שהוא נדלק. אם הזמן נגמר, הפאץ' מפעיל את ההתראה **תם הזמן להדבקת הפאץ'** ולא ניתן להשתמש בו.
 
-Press **Activate Patch** on the pump screen and follow the steps. You can cancel at any time before the needle is inserted; what you have entered is discarded.
+יש ללחוץ על **הפעלת פאץ׳** במסך המשאבה ולבצע את השלבים. ניתן לבטל בכל שלב לפני החדרת המחט; מה שהוזן נמחק.
 
-### Select the insulin
+### בחירת האינסולין
 
-Confirm the insulin you use. The patch requires rapid-acting U-100 insulin.
+יש לאשר את סוג האינסולין שבו משתמשים. הפאץ' דורש אינסולין מהיר פעולה U-100.
 
-### Fill the patch with insulin
+### מילוי הפאץ' באינסולין
 
-Fill the patch with 50 to 300 U, considering how long you will wear it. Press **Insulin Guide** if you need the filling instructions. Then tap the fill amount and select the amount you filled; **AAPS** uses it to show the insulin remaining.
+יש למלא את הפאץ' ב-50 עד 300 U, בהתאם למשך הזמן שבו הוא ייענד. אם צריך את הוראות המילוי, יש ללחוץ על **מדריך מילוי אינסולין**. לאחר מכן יש ללחוץ על כמות המילוי ולבחור את הכמות שמולאה. **AAPS** משתמש בה כדי להציג את האינסולין שנותר.
 
-### Connect the patch
+### חיבור הפאץ'
 
-1. Take the patch out of its blister and remove the needle cap.
-1. Press the power button of the patch for more than one second. After the beep, tap **Search Patch**.
-1. When the patch found is the right one, tap **Confirm**. Tap **Rescan** if it is not.
+1. יש להוציא את הפאץ' מהאריזה (blister) ולהסיר את מכסה המחט.
+1. יש ללחוץ על לחצן ההפעלה של הפאץ' יותר משנייה אחת. אחרי הצפצוף, יש ללחוץ על **חיפוש פאץ׳**.
+1. אם הפאץ' שנמצא הוא הנכון, יש ללחוץ על **אישור**. אם לא, יש ללחוץ על **סריקה מחדש**.
 
-### Safety check
+### בדיקת בטיחות
 
-Once the patch is connected, press **Safety Check**. The patch tests itself and primes. Check that a droplet of insulin has formed at the needle tip. If no droplet is visible, press **Retry**. When the check is complete, press **Next**.
+לאחר שהפאץ' מחובר, יש ללחוץ על **בדיקת בטיחות**. הפאץ' בודק את עצמו ומבצע תיחול. יש לוודא שנוצרה טיפת אינסולין בקצה המחט. אם לא רואים טיפה, יש ללחוץ על **ניסיון חוזר**. כשהבדיקה מסתיימת, יש ללחוץ על **הבא**.
 
-### Site and patch attachment
+### מקום הפאץ' והדבקתו
 
-1. Select the site where you will wear the patch.
-1. Clean the site thoroughly with an alcohol swab.
-1. Remove the backing tape and attach the patch to your skin with the marked dot facing upward.
-1. Press **Next** once the patch is attached.
+1. יש לבחור את המקום שבו יודבק הפאץ'.
+1. יש לנקות היטב את המקום בפד אלכוהול.
+1. יש להסיר את נייר ההדבקה ולהדביק את הפאץ' לעור, כשהנקודה המסומנת פונה כלפי מעלה.
+1. לאחר שהפאץ' מודבק, יש ללחוץ על **הבא**.
 
-### Insert the needle
+### החדרת המחט
 
-1. Turn the safety cap in the direction of the arrow and remove it.
-1. Press the applicator push button all the way down and hold it for 10 seconds. A beep sounds when the needle is inserted.
-1. Remove the applicator and press **Confirm Insertion**.
+1. יש לסובב את מכסה הבטיחות בכיוון החץ ולהסיר אותו.
+1. יש ללחוץ על לחצן הדחיפה של המחדיר עד הסוף ולהחזיק אותו 10 שניות. כשהמחט מוחדרת נשמע צפצוף.
+1. יש להסיר את המחדיר וללחוץ על **אישור החדרת המחט**.
 
-If the insertion fails, **AAPS** tells you how many attempts are left. When no attempt is left, the patch raises a **Needle Insertion Error** alarm and must be replaced.
+אם ההחדרה נכשלת, **AAPS** מציג כמה ניסיונות נותרו. כשלא נותרו ניסיונות, הפאץ' מפעיל את ההתראה **שגיאה בהחדרת המחט** ויש להחליף אותו.
 
-Insulin delivery starts as soon as the insertion is confirmed.
+מתן האינסולין מתחיל מיד לאחר אישור ההחדרה.
 
-## Bolus messages
+## הודעות בולוס
 
-If the patch refuses a bolus, **AAPS** tells you why. For example *Bolus can't be delivered. Bolus available: 2.8 U* means the patch can deliver only that amount now.
+אם הפאץ' מסרב לתת בולוס, **AAPS** מציג את הסיבה. למשל, *לא ניתן לתת את הבולוס. בולוס זמין: 2.8 U* פירושו שהפאץ' יכול לתת כרגע רק את הכמות הזו.
 
-If you stop a bolus and the patch does not confirm the stop, **AAPS** waits for the bolus to end and records the amount the patch reports. If a bolus was not recorded (for example because it was stopped while it was running), **AAPS** adds it from the patch total and asks you to check IOB before you try again.
+אם עוצרים בולוס והפאץ' לא מאשר את העצירה, **AAPS** מחכה לסיום הבולוס ורושם את הכמות שהפאץ' מדווח. אם בולוס לא נרשם (למשל כי הוא נעצר בזמן שניתן), **AAPS** מוסיף אותו לפי הסך הכולל של הפאץ' ומבקש לבדוק את IOB לפני ניסיון נוסף.
 
-## Suspending and resuming insulin delivery
+## השהיה וחידוש של מתן אינסולין
 
-Press **Suspend Infusion** on the pump screen and select how long delivery should pause: from 30 minutes to 4 hours in 30-minute steps. Delivery does not resume by itself: when the pause is over, the patch raises a **Start Insulin** alert. Press **Resume Infusion** on the pump screen, or **Start Insulin** on the alert, and confirm.
+יש ללחוץ על **השהיית מתן אינסולין** במסך המשאבה ולבחור לכמה זמן להשהות את המתן: מ-30 דקות עד 4 שעות, בצעדים של 30 דקות. מתן האינסולין לא מתחדש מעצמו: בסוף ההשהיה, הפאץ' מפעיל את ההתראה **התחלת מתן אינסולין**. יש ללחוץ על **חידוש מתן אינסולין** במסך המשאבה, או על **התחלת מתן אינסולין** בהתראה, ולאשר.
 
-## Discarding a patch
+## השלכת פאץ'
 
-Press **Discard Patch** on the pump screen and confirm. Insulin delivery stops and the patch can no longer be used. Remove the patch from your body and activate a new one.
+יש ללחוץ על **השלכת הפאץ׳** במסך המשאבה ולאשר. מתן האינסולין נעצר ולא ניתן עוד להשתמש בפאץ'. יש להסיר את הפאץ' מהגוף ולהפעיל פאץ' חדש.
 
-When a critical alarm has stopped the patch, the alarm offers **Deactivate Patch** instead. Pressing it discards the patch the same way.
+כאשר התראה קריטית עצרה את הפאץ', ההתראה מציעה במקום זאת את **השבתת פאץ'**. לחיצה עליו משליכה את הפאץ' באותו אופן.
 
 (carelevo-alarms-and-notifications)=
 
-## Alarms and notifications
+## התראות והודעות
 
-The patch reports three levels of events. All of them are shown as **AAPS** notifications.
+הפאץ' מדווח על אירועים בשלוש רמות. כולם מוצגים כהתראות של **AAPS**.
 
-### Critical alarms
+### התראות קריטיות
 
-Insulin delivery has stopped. Act now:
+מתן האינסולין הופסק. יש לפעול מיד:
 
-* **Low Insulin**: less than 10 U remain. Deactivate the patch and change it.
-* **Patch Expired**: the patch reached the end of its life. Deactivate the patch and change it.
-* **Low Battery**: discard the patch and change it.
-* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
-* **Auto-Off**: the patch stopped because the Auto-Off alert was ignored. Press **Start Insulin** to restart basal delivery.
-* **Patch Application Timeout**, **Self-Diagnosis Failed**, **Patch Error**, **Occlusion** and **Needle Insertion Error**: deactivate the patch and change it.
+* **מעט אינסולין**: נותרו פחות מ-10 U. יש להשבית את הפאץ' ולהחליף אותו.
+* **תוקף הפאץ' הסתיים**: הפאץ' הגיע לסוף חייו. יש להשבית את הפאץ' ולהחליף אותו.
+* **סוללה חלשה**: יש להשליך את הפאץ' ולהחליף אותו.
+* **טמפרטורה גבוהה/נמוכה**: יש לעבור למקום עם טמפרטורה מתאימה, בין 40 ℉ ל-99 ℉ (בין 4.4 ℃ ל-37.2 ℃).
+* **כיבוי אוטומטי**: הפאץ' נעצר כי לא הגיבו להתראת הכיבוי האוטומטי. יש ללחוץ על **התחלת מתן אינסולין** כדי להפעיל מחדש את המתן הבזאלי.
+* **תם הזמן להדבקת הפאץ'**, **האבחון העצמי נכשל**, **שגיאת פאץ'**, **חסימה** ו**שגיאה בהחדרת המחט**: יש להשבית את הפאץ' ולהחליף אותו.
 
 ### Alerts
 
-Insulin delivery continues, but something needs your attention:
+מתן האינסולין ממשיך, אבל יש משהו שצריך לטפל בו:
 
-* **Low Insulin**: the reservoir reached the amount set in **Low Insulin Notification Setting**. Prepare to change the patch.
-* **Patch Will Expire Soon** and **Patch Operating Life Expired**: change the patch.
-* **Low Battery**: prepare to change the patch.
-* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
-* **Auto-Off**: tap **OK**. If ignored, the alert escalates to a critical alarm and delivery stops.
-* **Patch Activation Incomplete**: tap **OK** to complete the activation.
-* **Start Insulin**: the pause you set has ended. Tap **Start Insulin** to resume delivery.
-* **Turn Bluetooth On** and **BLE Not Connected**: the phone cannot reach the patch. Turn Bluetooth on or check the patch connection.
+* **אינסולין נמוך**: הכמות במכל הגיעה לכמות שהוגדרה ב**הגדרת התראת אינסולין נמוך**. יש להתכונן להחלפת הפאץ'.
+* **תוקף הפאץ' יסתיים בקרוב** ו**תוקף הפאץ' הסתיים**: יש להחליף את הפאץ'.
+* **סוללה חלשה**: יש להתכונן להחלפת הפאץ'.
+* **טמפרטורה גבוהה/נמוכה**: מתן האינסולין מושהה עד שהפאץ' חוזר לטמפרטורה שבין 40 ℉ ל-99 ℉ (בין 4.4 ℃ ל-37.2 ℃).
+* **כיבוי אוטומטי**: יש ללחוץ על **אישור**. אם לא מגיבים לה, ההתראה הופכת להתראה קריטית ומתן האינסולין נעצר.
+* **הפעלת הפאץ' לא הושלמה**: יש ללחוץ על **אישור** כדי להשלים את ההפעלה.
+* **התחלת מתן אינסולין**: ההשהיה שהוגדרה הסתיימה. יש ללחוץ על **התחלת מתן אינסולין** כדי לחדש את המתן.
+* **הפעלת בלוטות'** ו**BLE אינו מחובר**: הטלפון לא מצליח להתחבר לפאץ'. יש להפעיל את ה-Bluetooth או לבדוק את החיבור לפאץ'.
 
-### Notices
+### הודעות מידע
 
-For information only: **Low Insulin**, **Patch Usage Time Notification** (the time set in **Patch Usage Notification Setting** has passed), **Patch Check Notification**, **Time Zone Change** and **Check Blood Glucose** (a set time after a bolus).
+לידיעה בלבד: **אינסולין נמוך**, **התראת זמן שימוש בפאץ'** (הזמן שהוגדר ב**הגדרת התראת זמן שימוש בפאץ'** עבר), **התראה לבדיקת הפאץ'**, **שינוי אזור זמן** ו**בדיקת סוכר בדם** (זמן מוגדר לאחר בולוס).
 
-The patch also reports when its own low glucose suspend (**LGS**) function starts or ends. **AAPS** does not use this function; the loop handles low glucose itself.
+הפאץ' מדווח גם כאשר פונקציית ההשהיה שלו בסוכר נמוך (**LGS**) מתחילה או מסתיימת. **AAPS** אינו משתמש בפונקציה זו; הלולאה מטפלת בעצמה בסוכר נמוך.
 
 ## Where to get help
 
-Report problems with the CareLevo driver on the [AAPS GitHub issues page](https://github.com/nightscout/AndroidAPS/issues) or in the AAPS community channels, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+יש לדווח על בעיות במנהל ההתקן של CareLevo ב[דף ה-issues של AAPS ב-GitHub](https://github.com/nightscout/AndroidAPS/issues) או בערוצי הקהילה של AAPS, ראו [איפה אפשר לקבל עזרה?](../GettingHelp/WhereCanIGetHelp.md).

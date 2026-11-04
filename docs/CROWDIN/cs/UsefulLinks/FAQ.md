@@ -161,7 +161,7 @@ Při sprchování a koupání si můžete pumpu sundat. Na tak krátkou dobu ji 
 
 #### Práce
 
-V závislosti na druhu vaší práce se můžete rozhodnout, že v pracovních dnech budete mít jiné nastavení. Jako uživatel smyčky byste měli zvážit [přepnutí profilu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) pro svůj typický pracovní den. Například, můžete přepnout na profil větší než 100% v případě, že vaše práce spočívá v sezení za kancelářským stolem, nebo naopak nižší než 100%, jste-li aktivní a celý den na nohou. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, or if you work different shifts. Můžete si také vytvořit druhý profil (např. „domov“ a „pracovní den“) a každý den přepnout na profil, který zrovna potřebujete, nebo si nastavení pro pracovní den uložit jako [scénu](#scenes).
+V závislosti na druhu vaší práce se můžete rozhodnout, že v pracovních dnech budete mít jiné nastavení. Jako uživatel smyčky byste měli zvážit [přepnutí profilu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) pro svůj typický pracovní den. Například, můžete přepnout na profil větší než 100% v případě, že vaše práce spočívá v sezení za kancelářským stolem, nebo naopak nižší než 100%, jste-li aktivní a celý den na nohou. Pokud pracujete mnohem dříve nebo později než obvykle nebo pokud pracujete na různé směny, můžete také zvážit vysoký nebo nízký dočasný cíl nebo [posun času vašeho profilu](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile). Můžete si také vytvořit druhý profil (např. „domov“ a „pracovní den“) a každý den přepnout na profil, který zrovna potřebujete, nebo si nastavení pro pracovní den uložit jako [scénu](#scenes).
 
 ### Volnočasové aktivity
 
@@ -175,7 +175,7 @@ Takže byste sice měli více aktivních sacharidů, ale smyčka by zároveň p�
 
 Při používání smyčky byste měli vyzkoušet tyto kroky:
 
-* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
+* Proveďte [přepnutí profilu](#ProfileSwitch-change-percentage) pod 100 %: klepněte na název profilu na hlavní obrazovce, klepněte na kulaté tlačítko **▶** a pak nastavte **Procenta** a **Trvání**.
 * Nastavte [dočasný cíl Aktivita](#TempTargets-activity-temp-target) nad svým běžným cílem. Při procentu pod 100 % a zadané době trvání nabízí stejná obrazovka **Aktivovat** přepínač **Dočasný cíl / Aktivita**, který spustí obojí najednou.
 * Pokud používáte SMB, ujistěte se, že [„Povolit SMB při vysokém dočasném cíli“](#Open-APS-features-enable-smb-with-high-temp-targets) a [„Povolit SMB vždy“](#Open-APS-features-enable-smb-always) jsou vypnuté.
 
@@ -194,7 +194,7 @@ Pumpu si můžete sundat, abyste byli „volní“, ale měli byste to AAPS ozn�
 Požívání alkoholu je v režimu uzavřené smyčky poměrně riskantní, protože algoritmus uzavřené smyčky nedokáže správně předpovědět, jak bude glykémie alkoholem ovlivněna. Svůj vlastní postup musíte vyzkoušet pomocí těchto funkcí AAPS:
 
 * Vypnout režim uzavřené smyčky a provést nezbytné zásahy ručně nebo
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
+* nastavení vysokých dočasných cílů a vypnutí UAM, aby smyčka nezvyšovala IOB kvůli neoznámenému jídlu, nebo
 * provést [přepnutí profilu](#ProfileSwitch-change-percentage) na znatelně méně než 100 % 
 
 Šablona [scény](#scenes) *Alkohol* je výchozí bod, který si můžete přizpůsobit svému postupu.
@@ -363,9 +363,9 @@ Můžete také změnit, kdy se výstraha spustí: stiskněte ikonu **Nastavení*
 
 #### Můj link/pumpa/pod nereaguje (RL/OL/EmaLink…)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
+U některých telefonů dochází k odpojování Bluetooth od zařízení Link (RL/OL/EmaLink).
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
+U některých zařízení Link se také stává, že nereagují (AAPS hlásí, že jsou připojená, ale Link se k pumpě nedostane nebo jí nemůže posílat příkazy).
 
 Nejdřív zkuste tlačítko **Resetovat RileyLink** na obrazovce pumpy (viz stránku vaší pumpy: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Pokud to nepomůže, nejjednodušší způsob, jak všechny tyto části znovu zprovoznit, je:
 
@@ -401,7 +401,7 @@ To je [zabezpečený režim](#client-master-control-hardened-mode). Když je zap
 
 Červený varovný odznak u zkratky zdroje glykémie je bezpečnostní funkce AAPS. Úplné vysvětlení viz [Varovná značka glykémie](#aaps-screens-bg-warning-sign).
 
-Červený varovný odznak u zkratky zdroje glykémie ve spodní liště (ve starších verzích červený trojúhelník) znamená, že máte zdvojené glykémie a AAPS nemůže přesně spočítat rozdíly (delty). Uzavřená smyčka se přepne do režimu **Ochrana před nízkou glykémií**: stále snižuje nebo pozastavuje bazál, aby vás chránila před nízkou glykémií, ale nepodává žádný korekční inzulín. Abyste varování odstranili, musíte u každé zdvojené hodnoty jednu glykémii smazat. Klepnutím na zkratku otevřete [obrazovku zdroje glykémie](#aaps-screens-bg-source): duplicita je zvýrazněná červeně. Dlouze stiskněte jeden řádek, který chcete smazat, označte po jednom řádku z každé zdvojené dvojice a klepněte na ikonu koše. Pokud je zdvojených glykémií příliš mnoho, možná budete muset resetovat databáze AAPS. In this case, you'll also lose stats, IOB, COB, selected profile.
+Červený varovný odznak u zkratky zdroje glykémie ve spodní liště (ve starších verzích červený trojúhelník) znamená, že máte zdvojené glykémie a AAPS nemůže přesně spočítat rozdíly (delty). Uzavřená smyčka se přepne do režimu **Ochrana před nízkou glykémií**: stále snižuje nebo pozastavuje bazál, aby vás chránila před nízkou glykémií, ale nepodává žádný korekční inzulín. Abyste varování odstranili, musíte u každé zdvojené hodnoty jednu glykémii smazat. Klepnutím na zkratku otevřete [obrazovku zdroje glykémie](#aaps-screens-bg-source): duplicita je zvýrazněná červeně. Dlouze stiskněte jeden řádek, který chcete smazat, označte po jednom řádku z každé zdvojené dvojice a klepněte na ikonu koše. Pokud je zdvojených glykémií příliš mnoho, možná budete muset resetovat databáze AAPS. V tom případě také ztratíte statistiky, IOB, COB a vybraný profil.
 
 Když varování zmizí, AAPS se sám nevrátí do režimu **Uzavřená smyčka**. Stiskněte ikonu smyčky na hlavní obrazovce a znovu zvolte **Uzavřená smyčka**.
 
@@ -419,5 +419,5 @@ Stav podu je součástí exportovaného nastavení, takže aktivní pod lze pře
 
 Nejdřív si přečtěte tyto části:
 
-* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
-* [Vyřazení podu](#omnipod-dash-discard-pod), abyste pak pod odstranili ze starého telefonu. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.
+* [Export a import nastavení](#omnipod-dash-export-import) na stránce Omnipod DASH a [Pumpy bez hadičky](#ExportImportSettings-tubeless-pumps): na novém telefonu zaškrtněte **Nahradit také nastavení pumpy** a použijte soubor exportovaný během nošení vašeho současného podu,
+* [Vyřazení podu](#omnipod-dash-discard-pod), abyste pak pod odstranili ze starého telefonu. Starý telefon nechte v režimu Letadlo, dokud pod nevyřadíte, aby oba telefony nikdy nekomunikovaly s podem současně.

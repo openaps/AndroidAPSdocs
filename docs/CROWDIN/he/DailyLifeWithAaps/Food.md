@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# מזון (מסד נתוני המזון שלכם)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+מסד הנתונים **מזון** הוא הרשימה האישית שלכם של מזונות שמורים. כל רשומה שומרת את ה**פחמימות** של המזון (ואם רוצים, גם שומן, חלבון, אנרגיה וקטגוריה). כך אפשר לשמור במקום אחד את מה שאוכלים לעיתים קרובות, ולהתחיל בולוס ממזון שמור שהפחמימות שלו כבר מולאו.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## פתיחת מסד נתוני המזון
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+יש לפתוח את מסך **ניהול** (בסרגל הניווט התחתון) ולבחור **מזון** (*"ניהול רשומות מסד נתוני המזון"*). ב-**AAPS** v4, מזון **כבר אינו תוסף**: אין צורך להפעיל שום דבר. זה מסך עצמאי שנפתח מ[חלונית הניהול](#v4changes-manage).
 
 ---
 
-## Adding and editing a food
+## רשימת המזון
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+המזונות מוצגים ברשימה שאפשר לגלול. כל שורה מציגה את **השם** של המזון, את **המנה / היחידה / הקטגוריה** שלו ואת **הפחמימות** שלו:
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![רשימת מסד נתוני המזון, עם חיפוש ולחצן ההוספה](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 חיפוש** (למעלה): סינון הרשימה לפי **שם** (ללא הבדל בין אותיות גדולות לקטנות).
+- **סינון לפי קטגוריה**: שבבים (chips) מאפשרים לצמצם את הרשימה ל**קטגוריה** אחת. אחרי שבוחרים קטגוריה, מופיעים שבבים של **תת קטגוריה** עבורה. (לחיצה נוספת על שבב שנבחר מבטלת את הבחירה.)
+- **➕** (בפינה התחתונה): הוספת מזון חדש (ראו בהמשך).
+- לחיצה על שורה פותחת את המזון ל**עריכה**.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+אם ברשימה (או בסינון הנוכחי) אין רשומות, המסך מציג **אין נתונים**.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## הוספה ועריכה של מזון
+
+יש ללחוץ על **➕** כדי להוסיף, או על שורה קיימת כדי לערוך. עורך נפתח כחלונית תחתונה (**הוספת מזון** / **עריכת מזון**):
+
+![עורך המזון: שם, קטגוריה, מנה, פחמימות ורכיבי תזונה](../images/v4/Food/food_editor.png)
+
+השדות הם:
+
+- **שם**: חובה (אי אפשר לשמור בלעדיו).
+- **קטגוריה** ו**תת קטגוריה**: לא חובה, משמשות לקיבוץ ולסינון של מזונות.
+- **מנה** ו**יחידה**: גודל המנה הרגיל. ברירת המחדל של **יחידה** היא **g**.
+- **פחמימות (גר')**: כמות הפחמימות במזון.
+- **שומן (גר')**, **חלבון (גר')**, **אנרגיה (kJ)**: ערכים תזונתיים, לא חובה.
+
+יש ללחוץ על **שמירה** כדי לשמור, או על **ביטול** כדי לבטל את השינויים. בעריכה של מזון קיים יש בעורך גם לחצן **מחיקה**.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+מחיקת מזון מציגה הודעה **"המזון נמחק"** עם פעולת **ביטול פעולה**, כך שקל לבטל מחיקה בטעות.
 ```
 
 ---
 
-## Using a food for a bolus
+## שימוש במזון לבולוס
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+בכל שורת מזון יש לחצן **מחשבון**. לחיצה עליו פותחת את **אשף בולוס** כשה**פחמימות** של המזון כבר מולאו, ו**השם** של המזון נוסף כהערה לטיפול. כך אפשר לאשר ולתת את הבולוס בלי להקליד שוב את הפחמימות.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+מספר ה**פחמימות** השמור של המזון מועבר ישירות לאשף. **AAPS** לא מכפיל אותו במנה או בכמות שאכלתם. אם אכלתם כמות אחרת, יש לתקן את הפחמימות באשף לפני האישור. (אין בחירת מזון *בתוך* אשף הבולוס או חלון הפחמימות; מתחילים משורת המזון כאן.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## מאיפה מגיעים המזונות (סנכרון עם Nightscout)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+מסד נתוני המזון משותף דרך **Nightscout**, אבל **רק בכיוון אחד**:
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **הורדה:** **AAPS** **קורא** מזונות מ**מסד נתוני המזון** באתר ה-Nightscout שלכם, ושומר את הרשימה המקומית מסונכרנת איתו. זה קורה כחלק מהסנכרון של NSClient, ולכן גם **לקוח/עוקב** מצומד מקבל את אותם מזונות.
+- **העלאה:** **AAPS** **לא** שולח מזונות **אל** Nightscout. NSClient לא תומך בהעלאת רשומות מזון. לכן מזונות שיוצרים או עורכים **בתוך AAPS** נשארים **במכשיר הזה**, ולא עוברים ל-Nightscout או למכשירים האחרים שלכם.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+מכיוון שהמזון הוא **להורדה בלבד**, הדרך לשתף רשימת מזון אחת בין הטלפון שלכם, העוקב/[הלקוח](../RemoteFeatures/ClientMasterControl.md) ושאר המערכת היא לנהל אותה ב-**Nightscout** (בעורך המזון המובנה שלו). **AAPS** יוריד את הרשומות האלה. מזון שנוסף רק ב-**AAPS** נשאר מקומי במכשיר הזה, והוא גם לא נמחק: ההורדה מתאימה רשומות Nightscout לפי מזהה ה-Nightscout שלהן, ולכן היא מוסיפה ומעדכנת אותן, אבל אף פעם לא דורסת או מוחקת מזון שיצרתם במכשיר (מזון נמחק רק כאשר העותק שלו נמחק ב-Nightscout).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+שימו לב שמסד נתוני המזון גם **אינו** חלק מערוץ השליטה החתום בין המכשיר הראשי למכשיר הלקוח (master ↔ client). הוא עובר רק כנתוני Nightscout.
 ```
 
 ---
 
-## Not on the watch
+## לא בשעון
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+מסד נתוני המזון הוא תכונה של ה**טלפון**: אין דפדפן מזון, אריח (tile) או תפריט ב**שעון Wear OS**.
 
 ---
 

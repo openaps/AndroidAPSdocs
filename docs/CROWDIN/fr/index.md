@@ -70,11 +70,12 @@ N'utilisez pas **AAPS** si vous prenez des inhibiteurs de SGLT-2 (gliflozines), 
 ## Index de la documentation AAPS
 
 ```{toctree}
-:caption: Utiliser cette documentation
+:caption: Using this documentation
+:titlesonly:
 
-Changer la langue et la version <./NavigateDoc/ChangeLanguageVersion.md>
-Rechercher dans la documentation <./NavigateDoc/SearchDoc.md>
-Mises à jour et modifications de la documentation <./Maintenance/DocumentationUpdate.md>
+Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
+Search the documentation <./NavigateDoc/SearchDoc.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Démarrage

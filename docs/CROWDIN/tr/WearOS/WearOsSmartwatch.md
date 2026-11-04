@@ -1,193 +1,193 @@
-# Set up AAPS on your Wear OS watch
+# Wear OS saatinizde AAPS kurulumu
 
-The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
+Aşağıdaki talimatlar, sizin oluşturmanız gereken **AAPS Wear** apk'sı için geçerlidir. Henüz oluşturmadıysanız, [buradaki](../WearOS/BuildingAapsWearOS.md) kılavuza bakın. Oluştururken, telefondaki **AAPS** apk'sı için kullandığınız anahtar deposu (keystore) dosyasının aynısını kullandığınızdan emin olun.
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with its matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
+Bu bilgilerin bir kısmını **AAPSClient** ve **PumpControl** **Wear** apk'sı için de kullanabilirsiniz. Her **Wear** uygulaması kendi eşleşen telefon uygulamasıyla iletişim kurar. Örneğin: **AAPSClient Wear** uygulaması **AAPS** verilerini değil, **AAPSClient** verilerini göstermek için kullanılabilir. Birkaç istemci türü (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) yan yana yüklüyse, her birinin panellerinde o türün vurgu renginde küçük bir başlık bulunur. Böylece kaydırırken onları ayırt edebilirsiniz.
 
-## Wear OS Versions and compatibility
+## Wear OS sürümleri ve uyumluluk
 
 (wearos-watchface-changes)=
 
-### Wear OS watch face changes (impact on AAPS watchfaces)
+### Wear OS saat arayüzü değişiklikleri (AAPS saat arayüzlerine etkisi)
 
 ```{admonition} Why newer Wear OS watches break AAPS watchfaces
 :class: warning
 
-In June 2025 Google [announced changes](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html) that phase out the legacy watch face engine (the AndroidX / Wearable Support Library, or "WSL", engine) in favour of the newer declarative **Watch Face Format**. The **AAPS** custom watchfaces are built on the legacy engine, so the newer the Wear OS version, the more likely an AAPS watchface is to misbehave or stop working.
+Haziran 2025'te Google, eski saat arayüzü motorunu (AndroidX / Wearable Support Library veya "WSL" motoru) aşamalı olarak kaldırıp yerine daha yeni, bildirimsel **Watch Face Format**'ı getiren [değişiklikleri duyurdu](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html). **AAPS** özel saat arayüzleri eski motor üzerine kuruludur. Bu yüzden Wear OS sürümü ne kadar yeniyse, bir AAPS saat arayüzünün hatalı çalışma veya hiç çalışmama olasılığı o kadar yüksektir.
 
-This affects the **watchfaces** specifically — AAPS **complications**, tiles and remote-control functions are not impacted. It is also why **a firmware/system update on a Wear OS watch can break AAPS watchfaces**, and a watch cannot be rolled back to an older Wear OS version afterwards. If your AAPS watchface currently works, **disable automatic watch updates**.
+Bu durum yalnızca **saat arayüzlerini** etkiler — AAPS **komplikasyonları**, paneller ve uzaktan kontrol işlevleri etkilenmez. Bu aynı zamanda **Wear OS saatteki bir üretici yazılımı/sistem güncellemesinin AAPS saat arayüzlerini bozabilmesinin** nedenidir; ayrıca saat bundan sonra eski bir Wear OS sürümüne geri döndürülemez. AAPS saat arayüzünüz şu anda çalışıyorsa **otomatik saat güncellemelerini kapatın**.
 ```
 
-The table below summarises how Google's change affects the AAPS (legacy-engine) watchfaces by Wear OS version:
+Aşağıdaki tablo, Google'ın değişikliğinin AAPS (eski motorlu) saat arayüzlerini Wear OS sürümüne göre nasıl etkilediğini özetler:
 
-| Wear OS version         | Base Android | API level | Impact on AAPS (legacy) watchfaces                                                                                                                                                          |
-| ----------------------- | ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wear OS 6               | Android 16   | 36        | **Legacy watchfaces no longer available** — AAPS installs a [Watch Face Format watchface](#wearos-aaps-v4-watchface) instead: your custom watchface, or the AAPS V4 complications watchface |
-| Wear OS 5               | Android 14   | 34        | **Severe** — active (interactive) mode often fails, complications freeze, animations stop                                                                                                   |
-| Wear OS 4               | Android 13   | 33        | **Moderate** — throttling, missed updates, partial failures                                                                                                                                 |
-| Wear OS 3.0 / 3.2 / 3.5 | Android 11   | 30        | **Low** — legacy engine still supported                                                                                                                                                     |
+| Wear OS sürümü          | Temel Android sürümü | API düzeyi | AAPS (eski) saat arayüzlerine etkisi                                                                                                                                                                  |
+| ----------------------- | -------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Wear OS 6               | Android 16           | 36         | **Eski saat arayüzleri artık kullanılamaz** — AAPS bunun yerine bir [Watch Face Format saat arayüzü](#wearos-aaps-v4-watchface) yükler: özel saat arayüzünüz veya AAPS V4 komplikasyonlu saat arayüzü |
+| Wear OS 5               | Android 14           | 34         | **Ciddi** — etkin (etkileşimli) mod çoğu zaman çalışmaz, komplikasyonlar donar, animasyonlar durur                                                                                                    |
+| Wear OS 4               | Android 13           | 33         | **Orta** — yavaşlatma (throttling), kaçırılan güncellemeler, kısmi hatalar                                                                                                                            |
+| Wear OS 3.0 / 3.2 / 3.5 | Android 11           | 30         | **Düşük** — eski motor hâlâ destekleniyor                                                                                                                                                             |
 
-If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication, fed by the [External Companion Apps](#external-companion-apps) plugin of **AAPS**. On **Wear OS 6 and newer**, AAPS installs a replacement watchface built in the new format — see below.
+Saatiniz AAPS saat arayüzlerinin güvenilir çalışmadığı bir sürümdeyse, AAPS verilerini uyumlu bir saat arayüzünde **komplikasyonlar** ile gösterebilirsiniz. Ya da **AAPS**'in [Harici yardımcı uygulamalar](#external-companion-apps) eklentisinden beslenen [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) uygulamasını bir komplikasyonla kullanabilirsiniz. **Wear OS 6 ve daha yeni** sürümlerde AAPS, yeni formatta yapılmış bir yedek saat arayüzü yükler — aşağıya bakın.
 
 (wearos-aaps-v4-watchface)=
 
-### Wear OS 6 and newer — the watchface AAPS installs
+### Wear OS 6 ve daha yenisi — AAPS'in yüklediği saat arayüzü
 
-Watches running **Wear OS 6 or newer** cannot run the classic AAPS watchfaces as watchfaces. For these watches the AAPS watch app brings two watchfaces built in Google's new **Watch Face Format**. Wear OS lets an app install only **one** watchface, so you choose which of the two is on the watch:
+**Wear OS 6 veya daha yeni** sürümü çalıştıran saatler, klasik AAPS saat arayüzlerini saat arayüzü olarak çalıştıramaz. Bu saatler için AAPS saat uygulaması, Google'ın yeni **Watch Face Format**'ında yapılmış iki saat arayüzü getirir. Wear OS bir uygulamanın yalnızca **bir** saat arayüzü yüklemesine izin verir. Bu yüzden ikisinden hangisinin saatte olacağını siz seçersiniz:
 
-- **Custom watchface** (default): shows the custom watchface you loaded from the phone with **Load Watchface** (see [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface)). The watch draws your design as a picture, so every existing custom watchface works. The complication slots a custom watchface may define are **not available** in this picture, because Wear OS only delivers complication data to a real watchface. Long-press the face to reach its one setting: whether the always-on display shows a plain clock or your own design, dimmed.
-- **Complications watchface** (the **AAPS V4** watchface): its **seven complication slots** come **preconfigured with AAPS data**: BG value, IOB, COB, the [BG Graph complication](#Watchfaces-complications), basal rate / temp target, and the **Running Mode** icon in the top-left slot (tap it to change the loop mode from the watch). Tap the time at the top to open the watch's alarm app. You can change what each slot shows in the watch face editor.
+- **Özel saat arayüzü** (varsayılan): telefondan **Saat arayüzü yükle** ile yüklediğiniz özel saat arayüzünü gösterir (bkz. [Bir AAPS saat arayüzüne geçme](#WearOS_changing-to-AAPS-watchface)). Saat, tasarımınızı bir resim olarak çizer. Bu yüzden mevcut her özel saat arayüzü çalışır. Bir özel saat arayüzünün tanımlayabileceği komplikasyon yerleri bu resimde **kullanılamaz**, çünkü Wear OS komplikasyon verilerini yalnızca gerçek bir saat arayüzüne iletir. Tek ayarına ulaşmak için arayüze uzun basın: her zaman açık ekranda sade bir saat mi, yoksa kendi tasarımınızın soluk hali mi gösterilsin.
+- **Komplikasyonlu saat arayüzü** (**AAPS V4** saat arayüzü): **yedi komplikasyon yeri** **AAPS verileriyle önceden ayarlanmış** olarak gelir: KŞ değeri, AİNS, AKRB, [KŞ Grafiği komplikasyonu](#Watchfaces-complications), bazal oranı / geçici hedef ve sol üst yerde **Çalışma modu** simgesi (döngü modunu saatten değiştirmek için ona dokunun). Saatin alarm uygulamasını açmak için üstteki saate dokunun. Her yerin ne gösterdiğini saat arayüzü düzenleyicisinde değiştirebilirsiniz.
 
-You choose on the phone: open the **Wear** plugin and, under **Watchface installed on watch**, select one of the two. This card is only shown while a Wear OS 6 or newer watch is connected. **AAPS** asks you to confirm, because the watch replaces its face immediately. Switching away from the **Complications watchface** also resets the complications you changed in the watch face editor back to the defaults, and the confirmation says so. While the **Complications watchface** is selected, the custom watchface buttons are hidden and a preview of the face is shown instead. If you load a custom watchface while the **Complications watchface** is selected, **AAPS** reminds you to switch to **Custom watchface** to see it on the watch.
+Seçimi telefonda yaparsınız: **Wear** eklentisini açın ve **Saatte yüklü saat arayüzü** altında ikisinden birini seçin. Bu kart yalnızca Wear OS 6 veya daha yeni bir saat bağlıyken gösterilir. Saat arayüzünü hemen değiştirdiği için **AAPS** sizden onay ister. **Komplikasyonlu saat arayüzü**nden başka bir arayüze geçmek, saat arayüzü düzenleyicisinde değiştirdiğiniz komplikasyonları da varsayılanlara sıfırlar. Onay mesajı da bunu söyler. **Komplikasyonlu saat arayüzü** seçiliyken özel saat arayüzü düğmeleri gizlenir ve onların yerine arayüzün bir önizlemesi gösterilir. **Komplikasyonlu saat arayüzü** seçiliyken bir özel saat arayüzü yüklerseniz, **AAPS** onu saatte görmek için **Özel saat arayüzü** seçeneğine geçmenizi hatırlatır.
 
-- The selected watchface is **installed and activated automatically** the first time the AAPS watch app runs on such a watch, and it is **updated automatically** together with the watch app.
-- If you removed the watchface, an **Install watchface** entry appears at the bottom of the watch's AAPS **main menu** — tap it to reinstall.
+- Seçilen saat arayüzü, AAPS saat uygulaması böyle bir saatte ilk kez çalıştığında **otomatik olarak yüklenir ve etkinleştirilir**. Saat uygulamasıyla birlikte **otomatik olarak güncellenir**.
+- Saat arayüzünü kaldırdıysanız, saatteki AAPS **ana menüsünün** en altında bir **Saat arayüzünü yükle** öğesi görünür — yeniden yüklemek için ona dokunun.
 
-While a watch running Wear OS 5 or older is connected, the **Watchface installed on watch** card is not shown at all (the mechanism it relies on requires Wear OS 6); the classic watchfaces run there as before.
+Wear OS 5 veya daha eski bir saat bağlıyken **Saatte yüklü saat arayüzü** kartı hiç gösterilmez (dayandığı mekanizma Wear OS 6 gerektirir); klasik saat arayüzleri orada eskisi gibi çalışır.
 
 (wearos-complications-watchface-setup)=
 
-### Complications watchface — recommended setup
+### Komplikasyonlu saat arayüzü — önerilen kurulum
 
-The **Complications watchface** has seven complication slots. Long-press the watchface, tap **Customize**, and pick a data source for each slot. The slots are numbered as in the watch face editor: **1** left, **2** centre, **3** right, **4** the graph, **5** bottom, **6** top-left and **7** top-right.
+**Komplikasyonlu saat arayüzü**nde yedi komplikasyon yeri vardır. Saat arayüzüne uzun basın, **Customize** (Özelleştir) seçeneğine dokunun ve her yer için bir veri kaynağı seçin. Yerler, saat arayüzü düzenleyicisindeki gibi numaralandırılmıştır: **1** sol, **2** orta, **3** sağ, **4** grafik, **5** alt, **6** sol üst ve **7** sağ üst.
 
-| Default setup                                                                                   | Alternative setup                                                                                       |
-| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| ![Complications watchface, default setup](../images/wearos/complications_watchface_default.png) | ![Complications watchface, alternative setup](../images/wearos/complications_watchface_alternative.png) |
+| Varsayılan kurulum                                                                                       | Alternatif kurulum                                                                                           |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| ![Komplikasyonlu saat arayüzü, varsayılan kurulum](../images/wearos/complications_watchface_default.png) | ![Komplikasyonlu saat arayüzü, alternatif kurulum](../images/wearos/complications_watchface_alternative.png) |
 
-| Slot | Position  | Default                                                             | Alternative                           |
-| ---- | --------- | ------------------------------------------------------------------- | ------------------------------------- |
-| 1    | Left      | IoB Icon                                                            | CoB & IoB                             |
-| 2    | Centre    | Blood Glucose                                                       | Blood Glucose                         |
-| 3    | Right     | CoB Icon                                                            | BR & Target                           |
-| 4    | Graph     | BG Graph                                                            | BG Graph                              |
-| 5    | Bottom    | BR & Target                                                         | Uploader/Phone Battery                |
-| 6    | Top-left  | Running mode                                                        | Running mode                          |
-| 7    | Top-right | Uploader/Phone Battery, or an app shortcut to **AAPS Snooze Alert** | App shortcut to **AAPS Snooze Alert** |
+| Yer | Konum   | Varsayılan                                                                                         | Alternatif                                                         |
+| --- | ------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| 1   | Sol     | AİNS simgesi                                                                                       | AKRB & AİNS                                                        |
+| 2   | Orta    | Kan Şekeri                                                                                         | Kan Şekeri                                                         |
+| 3   | Sağ     | AKRB simgesi                                                                                       | Bazal & Hedef                                                      |
+| 4   | Grafik  | KŞ Grafiği                                                                                         | KŞ Grafiği                                                         |
+| 5   | Alt     | Bazal & Hedef                                                                                      | Yükleyici/Telefon Pili                                             |
+| 6   | Sol üst | Running mode                                                                                       | Running mode                                                       |
+| 7   | Sağ üst | Yükleyici/Telefon Pili veya **AAPS Snooze Alert** (AAPS Uyarı Erteleme) için bir uygulama kısayolu | **AAPS Snooze Alert** (AAPS Uyarı Erteleme) için uygulama kısayolu |
 
-The **AAPS Snooze Alert** shortcut is picked from the watch's own **App shortcut** complications. Tapping it snoozes the alarm that is sounding on the phone.
+**AAPS Snooze Alert** kısayolu, saatin kendi **App shortcut** (uygulama kısayolu) komplikasyonlarından seçilir. Ona dokunmak, telefonda çalan alarmı erteler.
 
 ```{tip}
-Turn on **Always-on display** on the watch (**Settings** > **Display**). The watchface then keeps showing your glucose when the wrist is down, instead of a blank or a plain clock.
+Saatte **Always-on display** (Her zaman açık ekran) özelliğini açın (**Settings** (Ayarlar) > **Display** (Ekran)). Saat arayüzü bundan sonra bilek aşağıdayken de boş bir ekran veya sade bir saat yerine glikoz değerinizi göstermeye devam eder.
 ```
 
 ```{admonition} No complication data while the watch is locked
 :class: note
-If a **Lock type** is set under **Settings** > **Security and privacy**, the watch hides complication data while it is locked, and the watchface shows empty slots until you unlock it. To keep the data visible, turn off **Hide information** in the same menu.
+**Settings** (Ayarlar) > **Security and privacy** (Güvenlik ve gizlilik) altında bir **Lock type** (Kilit türü) ayarlıysa, saat kilitliyken komplikasyon verilerini gizler ve siz kilidi açana kadar saat arayüzü boş yerler gösterir. Verileri görünür tutmak için aynı menüde **Hide information** (Bilgileri gizle) seçeneğini kapatın.
 ```
 
 ### Wear OS 3
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (described below) or ADB.  
-No limitation in **AAPS Wear** operations.
+**AAPS Wear** apk'sını [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (aşağıda anlatılıyor) veya ADB ile yükleyin.  
+**AAPS Wear** işlevlerinde kısıtlama yoktur.
 
 (BuildingAapsWearOs-WearOS5)=
 
-### Wear OS 4 and Wear OS 5
+### Wear OS 4 ve Wear OS 5
 
-Example: Galaxy Watch 4, 5, 6, 7 and Ultra or Pixel Watch that have **not** been updated to Wear OS 6 yet. Check the version under **Settings** > **About watch** > **Software**.
+Örnek: Wear OS 6'ya henüz **güncellenmemiş** Galaxy Watch 4, 5, 6, 7 ve Ultra veya Pixel Watch. Sürümü **Settings** (Ayarlar) > **About watch** (Saat hakkında) > **Software** (Yazılım) altında kontrol edin.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (for Wear OS 5 follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk)). All **AAPS Wear** functions work, but the classic **AAPS** watchfaces are limited as described in the table above: throttled on Wear OS 4, often failing on Wear OS 5.
+**AAPS Wear** apk'sını [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) ile yükleyin (Wear OS 5 için [bu videoyu](https://www.youtube.com/watch?v=yef_qGvcCnk) izleyin). Tüm **AAPS Wear** işlevleri çalışır, ancak klasik **AAPS** saat arayüzleri yukarıdaki tabloda anlatıldığı gibi kısıtlıdır: Wear OS 4'te yavaşlatılır, Wear OS 5'te çoğu zaman çalışmaz.
 
 ```{admonition} Wear OS 5
 :class: warning
-On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
+Wear OS 5'te AAPS saat arayüzü, Wear uygulaması yüklendikten hemen sonra Wear Installer 2 ile seçilmelidir: yükleyici, kurulumun sonunda **AAPS(Özel)** saat arayüzünü sunar. Yanlışlıkla başka bir saat arayüzüne geçerseniz kurulumu tekrarlayın. Saat arayüzü ayarlarını (Koyu, Eşleşen bölücü vb.) değiştirmek mümkün olmayabilir.
 
-If the classic watchface currently works for you, **disable automatic watch updates**: the next firmware update is likely to break it. If you update to Wear OS 6 anyway, read the section above: **AAPS** then installs its own watchface in the new format.
+Klasik saat arayüzü şu anda sizin için çalışıyorsa **otomatik saat güncellemelerini kapatın**: bir sonraki üretici yazılımı güncellemesi onu büyük olasılıkla bozacaktır. Yine de Wear OS 6'ya güncellerseniz yukarıdaki bölümü okuyun: **AAPS** o zaman yeni formatta kendi saat arayüzünü yükler.
 ```
 
-If the watchface is too unreliable, consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication instead. It needs the [External Companion Apps](#external-companion-apps) plugin enabled in **AAPS**.
+Saat arayüzü çok güvenilmezse, bunun yerine bir komplikasyonla [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) kullanmayı düşünün. Bunun için **AAPS**'te [Harici yardımcı uygulamalar](#external-companion-apps) eklentisinin etkin olması gerekir.
 
-### Wear OS 6 and newer
+### Wear OS 6 ve daha yenisi
 
-Example: Galaxy Watch 4 and newer with One UI 8 Watch, Pixel Watch after the 2025 update. Most Galaxy and Pixel watches have received this update.
+Örnek: One UI 8 Watch yüklü Galaxy Watch 4 ve daha yenisi, 2025 güncellemesinden sonraki Pixel Watch. Çoğu Galaxy ve Pixel saat bu güncellemeyi almıştır.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). The classic watchfaces are not available; **AAPS** installs the watchface selected on the phone automatically, see [the watchface AAPS installs](#wearos-aaps-v4-watchface). No limitation in **AAPS Wear** operations.
+**AAPS Wear** apk'sını [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) ile yükleyin. Klasik saat arayüzleri kullanılamaz; **AAPS**, telefonda seçilen saat arayüzünü otomatik olarak yükler, bkz. [AAPS'in yüklediği saat arayüzü](#wearos-aaps-v4-watchface). **AAPS Wear** işlevlerinde kısıtlama yoktur.
 
-## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
+## Samsung Galaxy Watch 4 akıllı saati **AAPS** ile nasıl kurulur
 
-This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
+Bu bölüm akıllı saatleri hiç bilmediğinizi varsayar. Popüler bir saat olan **Galaxy Watch 4** için temel bir tanıtım verir, ardından saatte **AAPS** kurulumunu adım adım anlatır.
 
-_This guide was written for a Galaxy Watch running Wear OS 3._ On Wear OS 4 and later the watch asks for a **pairing code** when a phone or computer connects over ADB. Wear Installer 2 and the terminal procedure [below](#BuildingAapsWearOs-WearOS5-TShoot) both support it.
+_Bu kılavuz, Wear OS 3 çalıştıran bir Galaxy Watch için yazılmıştır._ Wear OS 4 ve sonrasında, bir telefon veya bilgisayar ADB üzerinden bağlandığında saat bir **eşleştirme kodu** ister. Wear Installer 2 ve [aşağıdaki](#BuildingAapsWearOs-WearOS5-TShoot) terminal yöntemi bunu destekler.
 
-Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+[Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) ve [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0) için temel kurulum kılavuzları
 
-## Basic smartwatch familiarity
+## Akıllı saatle temel tanışma
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+Saatinizin temel kurulumunu yukarıdaki videoya göre yaptıktan sonra telefonda Play Store'a gidin ve şu uygulamaları indirin: "Galaxy Wearable", “Samsung” ve “Easy Fire tools” ya da "Wear Installer 2".
 
-There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
+Yeni akıllı saatinizi tanımanıza yardımcı olacak birçok üçüncü taraf YouTube videosu vardır, örneğin:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
+“Galaxy Wearable” uygulamasında bir kullanım kılavuzu bölümü de vardır. Telefonda Galaxy Wearable uygulamasını açın, saati arayın ve saati telefonla eşleştirmeyi deneyin. Sürümünüze bağlı olarak, Play Store'dan bir uygulama daha, “galaxy watch 4 plugin” uygulamasını yüklemeniz istenebilir (indirmesi biraz sürer). Bunu telefona yükleyin, sonra saati ve telefonu Wearable uygulamasında yeniden eşleştirmeyi deneyin. Bir dizi menüden geçin ve çeşitli tercihleri işaretleyin.
 
-## Setting up a Samsung account
+## Samsung hesabı oluşturma
 
-You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
+Samsung hesabını oluşturmak için kullandığınız e-posta hesabında doğum tarihi, kullanıcı 13 yaşında veya daha büyük olacak şekilde ayarlı olmalıdır. Aksi halde Samsung izinlerini onaylamak çok zordur. Çocuğunuza 13 yaşından önce bir Gmail hesabı verdiyseniz ve bu e-posta adresini kullanıyorsanız, hesabı kolayca yetişkin hesabına çeviremezsiniz. Bunun bir çözümü, mevcut doğum tarihini şu anki yaş 12 yıl 364 gün olacak şekilde değiştirmektir. Ertesi gün hesap yetişkin hesabına dönüşür ve Samsung hesabının kurulumuna devam edebilirsiniz.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
-## Transferring the **AAPS** Wear app onto your **AAPS** phone
+## **AAPS** Wear uygulamasını **AAPS** telefonunuza aktarma
 
-Loading the Wear.apk from Android Studio to your phone can be done either by:
+Wear.apk dosyasını Android Studio'dan telefonunuza şu yollardan biriyle yükleyebilirsiniz:
 
-a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
+a)  **AAPS** wear apk dosyasını USB kablosuyla telefona koyun, sonra saate “side-load” edin (yandan yükleyin). Wear.apk dosyasını USB ile telefondaki indirilenler (downloads) klasörüne aktarın veya
 
-b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
+b)  Wear.apk dosyasını Android Studio'dan kesip Gdrive'ınıza yapıştırın.
 
 
-To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained. If Wear Installer 2 does not work for you, try Easy Fire Tools or ADB, both described below.
+AAPS'i saate yandan yüklemek (side-load) için şunlardan birini kullanabilirsiniz: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Burada Wear Installer 2'yi öneriyoruz, çünkü videodaki talimatlar ve işlem çok açık ve iyi anlatılmıştır. Wear Installer 2 sizin için çalışmazsa, Easy Fire Tools veya ADB'yi deneyin. İkisi de aşağıda anlatılıyor.
 
-### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+### Wear Installer 2 ile **AAPS** Wear'i telefondan saate yandan yükleme
 
- ![Wear Installer 2 app icon](../images/wearos/wear_installer2_icon.png)
+ ![Wear Installer 2 uygulama simgesi](../images/wearos/wear_installer2_icon.png)
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+[Malcolm Bryant](https://www.youtube.com/@Freepoc) tarafından geliştirilen Wear Installer 2, Google Play'den telefonunuza indirilebilir. AAPS wear uygulamasını saate yandan yüklemek (side-load) için kullanılabilir. Uygulamada kullanışlı bir ‘how to sideload’ (yandan yükleme nasıl yapılır) [videosu](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) vardır.
 
 ```{tip}
-For Wear OS 5 watches follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk).
-See troubleshooting tips [below](#BuildingAapsWearOs-WearOS5-TShoot).
+Wear OS 5 saatler için [bu videoyu](https://www.youtube.com/watch?v=yef_qGvcCnk) izleyin.
+Sorun giderme ipuçları için [aşağıya](#BuildingAapsWearOs-WearOS5-TShoot) bakın.
 ```
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it while setting up the phone).
+Bu video gerekli tüm ayrıntıları verir (telefonu kurarken izleyebilmek için videoyu ayrı bir cihazda açmanız en iyisidir).
 
-As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+Videoda da belirtildiği gibi, işlem bitince akıllı saatin pilini tüketmemek için saatte ADB debugging (ADB hata ayıklama) seçeneğini kapatın.
 
-Alternatively, but not for Wear OS 5, you can:
+Alternatif olarak (Wear OS 5 için değil) şunları yapabilirsiniz:
 
-### Use Easy Fire tools to side-load the **AAPS** wear on the watch
+### **AAPS** wear'i saate yandan yüklemek için Easy Fire tools kullanma
 
-1)   Download _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ from the Play Store onto phone
+1)   _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ uygulamasını Play Store'dan telefona indirin
 
 ![image](../images/wearos/easyfire01.png)
 
-2)  Make yourself a developer in the watch (once set up and connected to phone):
+2)  Saatte geliştirici olun (saat kurulup telefona bağlandıktan sonra):
 
-Go to **Settings** > **System** > **About** > **Versions** (the menu names vary between watch brands — on some watches it is **About watch** > **Software info** > **Software version**).
+**Settings** (Ayarlar) > **System** (Sistem) > **About** (Hakkında) > **Versions** (Sürümler) bölümüne gidin (menü adları saat markasına göre değişir — bazı saatlerde **About watch** (Saat hakkında) > **Software info** (Yazılım bilgisi) > **Software version** (Yazılım sürümü) şeklindedir).
 
 ![image](../images/wearos/easyfire02.png)
 
-Rapidly tap on **Build number** (or **Software version**) several times until a message tells you that you are now a developer.
+Artık geliştirici olduğunuzu söyleyen bir mesaj çıkana kadar **Build number** (Yapım numarası) (veya **Software version**) üzerine art arda hızlıca dokunun.
 
 ![image](../images/wearos/easyfire03.png)
 
-Go back to **Settings** > **System**: a new **Developer options** menu is now shown.
+**Settings** (Ayarlar) > **System** (Sistem) bölümüne geri dönün: artık yeni bir **Developer options** (Geliştirici seçenekleri) menüsü görünür.
 
-In **Developer options**, turn on **ADB debugging** and **Wireless debugging**, and confirm the prompts. Wireless debugging then shows the watch's **IP address & Port**, something like: **192.168.1.214** : 5555. You only need the IP address (here **192.168.1.214**), not the port number after the colon. Note that the IP address can change, for example every time you change to a new phone handset for AAPS.
+**Developer options** içinde **ADB debugging** (ADB hata ayıklama) ve **Wireless debugging** (Kablosuz hata ayıklama) seçeneklerini açın ve çıkan soruları onaylayın. Kablosuz hata ayıklama ardından saatin **IP address & Port** (IP adresi ve port) bilgisini gösterir, örneğin: **192.168.1.214** : 5555. Yalnızca IP adresine (burada **192.168.1.214**) ihtiyacınız vardır, iki noktadan sonraki port numarasına değil. IP adresinin değişebileceğini unutmayın, örneğin AAPS için her yeni telefona geçtiğinizde.
 
 ![image](../images/wearos/easyfire04.png)
 
-STEP 3)     Enter IP address _e.g._ **192.168.1.214** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address).
+ADIM 3)     Telefondaki Easy Fire tools uygulamasına IP adresini girin, _örn._ **192.168.1.214** (soldaki hamburger menüyü açın, ayarlara gidin ve IP adresini girin).
 
 ![image](../images/wearos/easyfire05.png)
 
-Then click the plug socket icon on the top right. It will turn green when connected.
+Sonra sağ üstteki priz simgesine tıklayın. Bağlanınca yeşile döner.
 
 ![image](../images/wearos/easyfire06.png)
 
 
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  aaps-wear.apk onto the smartwatch using Easy Fire tools
+ADIM 4) Easy Fire tools ile aaps-wear.apk dosyasını akıllı saate yandan yüklemek (yani aktarmak) için [buradaki](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) talimatları izleyin
 
 
 ![image](../images/wearos/easyfire07.png)
@@ -195,130 +195,130 @@ STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/0
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-### Using the terminal
-Connect your smartwatch and computer to the same Wi-Fi network.
+### Terminali kullanma
+Akıllı saatinizi ve bilgisayarınızı aynı Wi-Fi ağına bağlayın.
 
-- To install ADB download it from: https://developer.android.com/tools/releases/platform-tools
-- Open a terminal.
-- For Windows, create a new folder named `adb` under your disk `C:`. Open the `platform-tools-latest-windows.zip` file you downloaded above. Copy all files inside `platform-tools` to `C:\adb` and open this folder with a command prompt (right click and Open in Terminal). Type the command below to set the path to the folder where ADB is located: `setx PATH "%PATH%;C:\adb"`
-- For Mac instead of installing manually you can use homebrew: `brew install android-platform-tools`
+- ADB'yi yüklemek için şuradan indirin: https://developer.android.com/tools/releases/platform-tools
+- Bir terminal açın.
+- Windows'ta `C:` diskinizin altında `adb` adlı yeni bir klasör oluşturun. Yukarıda indirdiğiniz `platform-tools-latest-windows.zip` dosyasını açın. `platform-tools` içindeki tüm dosyaları `C:\adb` klasörüne kopyalayın ve bu klasörü bir komut isteminde açın (sağ tıklayın ve Open in Terminal (Terminalde aç) seçin). ADB'nin bulunduğu klasörün yolunu ayarlamak için aşağıdaki komutu yazın: `setx PATH "%PATH%;C:\adb"`
+- Mac'te elle yüklemek yerine homebrew kullanabilirsiniz: `brew install android-platform-tools`
 
-On the watch:
-- Go to Settings → About watch → **Software Information**
-- Tap Software version 7 times until you see Developer mode enabled.
-- Go to Settings → Developer options. Enable **ADB debugging**
-- Go to Settings → Developer options → Wireless debugging → **Pair new device**
+Saatte:
+- Settings (Ayarlar) → About watch (Saat hakkında) → **Software Information** (Yazılım bilgileri) bölümüne gidin
+- Developer mode enabled (Geliştirici modu etkin) mesajını görene kadar Software version (Yazılım sürümü) seçeneğine 7 kez dokunun.
+- Settings (Ayarlar) → Developer options (Geliştirici seçenekleri) bölümüne gidin. **ADB debugging** (ADB hata ayıklama) seçeneğini açın
+- Settings (Ayarlar) → Developer options (Geliştirici seçenekleri) → Wireless debugging (Kablosuz hata ayıklama) → **Pair new device** (Yeni cihaz eşleştir) bölümüne gidin
 
-You will see a Wi-Fi pairing code and IP address and port appearing:
+Bir Wi-Fi eşleştirme kodu ile IP adresi ve port görünür:
 
-![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/ADB03.png)
+![Wi-Fi eşleştirme kodunu, IP adresini ve portu gösteren saat ekranı](../images/wearos/ADB03.png)
 
-- In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299`
-- You will be asked for the pairing code. Enter it.
-- You will see a response:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
-- In the terminal type: <br>`adb devices`.<br> You should see something like:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
+- Terminalde: `adb pair ipaddress:port` Örnek: `adb pair 10.10.1.125:36299`
+- Sizden eşleştirme kodu istenir. Kodu girin.
+- Şu yanıtı görürsünüz:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
+- Terminale şunu yazın: <br>`adb devices`.<br> Şuna benzer bir şey görmelisiniz:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
-- You will see:<br> `Performing Streamed Install`<br> `Success`
+- Şimdi bilgisayarınızda Wear apk dosyasının bulunduğu klasöre gidin ve şunu yazın<br> `adb install wear-full.apk` <br>wear-full.apk yerine kendi apk dosyanızın adını yazın.
+- Şunu görürsünüz:<br> `Performing Streamed Install`<br> `Success`
 
 
 (wear-os-5-troubleshooting)=
 
-### General troubleshooting recommendations for Wear OS 5
+### Wear OS 5 için genel sorun giderme önerileri
 
-- Do not use Wi-Fi Tethering. That won't work.
-- You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
-- Make sure you are connecting to your local network where phone and watch can see each other (do not use your Wi-Fi guest network to connect).
-- Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
-- Make sure to be near your main router, then restart both phone and watch.
+- Wi-Fi paylaşımı (tethering) kullanmayın. Bu işe yaramaz.
+- Telefonda adb hata ayıklamayı açmanız gerekmez (yalnızca saatte). Telefonda adb hata ayıklamayı kapatın.
+- Telefonun ve saatin birbirini görebildiği yerel ağınıza bağlandığınızdan emin olun (bağlanmak için Wi-Fi misafir ağınızı kullanmayın).
+- Saatin ve telefonun aynı ağda ve aynı Wi-Fi cihazına bağlı olduğundan emin olun. Özellikle Wi-Fi tekrarlayıcıları (repeater) veya erişim noktaları sorun çıkarabilir.
+- Ana yönlendiricinize (router) yakın olun, sonra hem telefonu hem saati yeniden başlatın.
 
-**Pairing :**
+**Eşleştirme:**
 
-- Watch: Wireless Debugging: note the IP address.
-- Wear Installer: Enter the IP in the Wear Installer app.
-- Select Pair new, note the pairing code and port number displayed.
-- Wear Installer: enter the pairing code + space + port number.
-- Wear installer should report pairing was successful. If it does not, exit the Wear Installer, then try again.
+- Saat: Wireless Debugging (Kablosuz hata ayıklama): IP adresini not edin.
+- Wear Installer: Wear Installer uygulamasına IP adresini girin.
+- Pair new (Yeni eşleştir) seçeneğini seçin, gösterilen eşleştirme kodunu ve port numarasını not edin.
+- Wear Installer: eşleştirme kodu + boşluk + port numarasını girin.
+- Wear Installer eşleştirmenin başarılı olduğunu bildirmelidir. Bildirmezse Wear Installer'dan çıkın ve yeniden deneyin.
 
-Once paired you should be able to install the AAPS wear apk:
+Eşleştirme bittikten sonra AAPS wear apk'sını yükleyebilmelisiniz:
 
-- Exit/close, then restart Wear Installer.
-- On wireless debug, note the IP and Port number and make sure you check/enter the IP and port number in Wear Installer.
-- Note: the port number is different from the one used for pairing!
+- Çıkın/kapatın, sonra Wear Installer'ı yeniden başlatın.
+- Kablosuz hata ayıklamada IP ve port numarasını not edin; Wear Installer'da IP ve port numarasını kontrol edin veya girin.
+- Not: port numarası, eşleştirme için kullanılandan farklıdır!
 
-## Setting up the connection between the watch and the phone from **AAPS**
+## Saat ile telefon arasındaki bağlantıyı **AAPS**'ten kurma
 
-The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. To do this, enable the Wear plugin:
+Son adım, telefondaki **AAPS**'i saatteki **Wear.apk** ile birlikte çalışacak şekilde yapılandırmaktır. Bunun için Wear eklentisini etkinleştirin:
 
-* Go to the **AAPS** app on the phone
+* Telefonda **AAPS** uygulamasına gidin
 
-* Open the **menu** (☰) in the top-left corner and go to **Configuration** > **Communication**
+* Sol üst köşedeki **menüyü** (☰) açın ve **Konfigürasyon** > **İletişim** bölümüne gidin
 
-* Tick the **Wear** box
+* **Wear** kutusunu işaretleyin
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![Konfigürasyon > Wear ile iletişim etkin](../images/v4/Configuration/configuration_communication_wear.png)
 
-To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
+Saatten bolus vermek veya başka işlemler yapmak için [Ayarlar > Wear](#preferences-wear) içinde **Wear kontrolü** seçeneğini de açın.
 
-To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Then swipe right until you get to all the **AAPS**  faces.
+Başka bir **AAPS** saat arayüzüne geçmek için saatin ana ekranındaki saat arayüzüne uzun basın ve **Customize** (Özelleştir) seçeneğine dokunun. Sonra tüm **AAPS** saat arayüzlerine gelene kadar sağa kaydırın.
 
-If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
-
-
-![Wear plugin showing the connected Galaxy Watch, and the AAPS app on the watch](../images/wearos/wear_apk_installed.png)
+**AAPS** Wear.apk akıllı saate başarıyla yüklendiyse şöyle görünür:
 
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via Wi-Fi.
+![Bağlı Galaxy Watch'u gösteren Wear eklentisi ve saatteki AAPS uygulaması](../images/wearos/wear_apk_installed.png)
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+
+Samsung Galaxy gibi bazı akıllı saatlerde, **Wear.apk** & **AAPS**'i Wi-Fi üzerinden uzaktan kullanmak için Samsung Galaxy'nin Advanced Features (Gelişmiş özellikler) altındaki 'Remote Connection' (Uzaktan bağlantı) seçeneği **açık** olmalıdır.
+
+![Galaxy Wearable, Advanced features (Gelişmiş özellikler), Remote connection (Uzaktan bağlantı) açık](../images/wearos/galaxy_wearable_remote_connection.png)
 
 (wear-os-watch-phone-communication)=
 
-### Troubleshooting the **AAPS** watch- **AAPS** phone communication
+### **AAPS** saat ile **AAPS** telefon arasındaki iletişimde sorun giderme
 
-1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
-2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
-3.  Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
-4.  It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
-5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** Wear apk onto the watch: the watch app of a browser build is the `aaps-wear-….apk` file, see [Building the Wear app](../WearOS/BuildingAapsWearOS.md). If the file you installed is any of the following: a) an **AAPSClient** Wear apk (while the phone runs **AAPS**); b) a `.aab` file; or c) a file with the word ‘debug’ in its name, you have not selected the correct Wear OS apk during the build.
-6.  Check that your router is not isolating the devices from one another.
+1.  EasyFire tools bağlanmıyorsa veya ‘authorisation failed’ (yetkilendirme başarısız) mesajı alıyorsanız > IP adresinin doğru girildiğini kontrol edin.
+2.  Akıllı saatin internete bağlı olduğunu kontrol edin (yalnızca Bluetooth ile telefona bağlı olması yetmez).
+3.  **AAPS** telefonu ile akıllı saatin Samsung uygulamasında eşleştirilmiş veya bağlanmış olduğunu kontrol edin.
+4.  Telefonu ve akıllı saati tamamen yeniden başlatmak da yardımcı olabilir (yani telefonu kapatıp açmak)
+5.  Wear.apk dosyasını telefonunuza indirmeyi başardınız ama hiç KŞ verisi almıyorsanız, saate doğru **AAPS** Wear apk'sını yandan yüklediğinizi _kontrol edin_: tarayıcıyla oluşturmada saat uygulaması `aaps-wear-….apk` dosyasıdır, bkz. [Wear AAPS uygulamasını oluşturma](../WearOS/BuildingAapsWearOS.md). Yüklediğiniz dosya şunlardan biriyse: a) bir **AAPSClient** Wear apk'sı (telefonda **AAPS** çalışırken); b) bir `.aab` dosyası veya c) adında ‘debug’ kelimesi geçen bir dosya, oluşturma sırasında doğru Wear OS apk'sını seçmemişsiniz demektir.
+6.  Yönlendiricinizin (router) cihazları birbirinden yalıtmadığını kontrol edin.
 
-More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
+Daha fazla sorun giderme ipucunu [burada](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.) bulabilirsiniz
 
 (WearOS_changing-to-AAPS-watchface)=
 
-## Changing to an AAPS Watchface on your WearOS watch
+## WearOS saatinizde bir AAPS saat arayüzüne geçme
 
-There are a number of watchfaces available in the standard build of the AAPS Wear OS APK build. Once you have installed the AAPS Wear APK on your watch, they will be available. Here are the steps for selecting one:
+AAPS Wear OS APK'sının standart sürümünde birçok saat arayüzü vardır. AAPS Wear APK'sını saatinize yükledikten sonra bunları kullanabilirsiniz. Birini seçmek için adımlar:
 
-1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
+1. Saatinizde (WearOS varsayılarak) saat arayüzü seçici ekranını açmak için mevcut saat arayüzüne uzun basın. "Add Watch Face" (Saat arayüzü ekle) düğmesini görene kadar en sağa kaydırın ve bu düğmeyi seçin
 
-![Watchface selector with the Add watch face button](../images/wearos/watchface_add.png)
+![Add watch face (Saat arayüzü ekle) düğmesiyle saat arayüzü seçici](../images/wearos/watchface_add.png)
 
-2. Scroll through the list until you find "AAPS (Custom)" (depending on the watch, the watch faces of installed apps are listed under a "Downloaded" section or grouped by app) and click the middle of the image to add it to your shortlist of current watchfaces. Don't worry about the current appearance of the "AAPS (Custom)" watchface, we will select your preferred skin in the next step.
+2. "AAPS(Özel)" öğesini bulana kadar listede kaydırın (saate göre, yüklü uygulamaların saat arayüzleri "Downloaded" (İndirilenler) bölümünde veya uygulamaya göre gruplanmış olarak listelenir). Mevcut saat arayüzleri kısa listenize eklemek için resmin ortasına tıklayın. "AAPS(Özel)" saat arayüzünün şu anki görünümü sizi endişelendirmesin; tercih ettiğiniz görünümü bir sonraki adımda seçeceğiz.
 
-![List of AAPS watchfaces, with AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
+![AAPS(Özel) dahil AAPS saat arayüzleri listesi](../images/wearos/watchface_list_aaps.png)
 
-3. Now open AAPS on your phone and open the Wear plugin: **Configuration** > **Communication** > **Wear** > **Open plugin** (tick **Wear** first if it is not enabled).
+3. Şimdi telefonunuzda AAPS'i açın ve Wear eklentisini açın: **Konfigürasyon** > **İletişim** > **Wear** > **Eklentiyi aç** (etkin değilse önce **Wear** kutusunu işaretleyin).
 
-![Wear plugin with the Custom Watchface card](../images/wearos/wear_plugin_custom_watchface.png)
+![Özel saat arayüzü kartıyla Wear eklentisi](../images/wearos/wear_plugin_custom_watchface.png)
 
-4. Click on the "Load Watchface" button and select the watchface that you like
+4. "Saat arayüzü yükle" düğmesine tıklayın ve beğendiğiniz saat arayüzünü seçin
 
-![Select Custom Watchface list](../images/wearos/select_custom_watchface.png)
+![Özel saat arayüzü seçin listesi](../images/wearos/select_custom_watchface.png)
 
-5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. The **Wear** screen on the phone now shows the name of the loaded watchface and a preview of it. **Infos Watchface** lists its details and the fields it contains, and **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) where you can download other custom watchfaces. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
+5. Saatinize bakın: "AAPS(Özel)" saat arayüzü artık seçtiğiniz görünümü göstermelidir. Yenilenmesi için birkaç saniye bekleyin. Telefondaki **Wear** ekranı artık yüklenen saat arayüzünün adını ve önizlemesini gösterir. **Saat arayüzü bilgisi** arayüzün ayrıntılarını ve içerdiği alanları listeler. **Diğer saat arayüzleri** ise başka özel saat arayüzleri indirebileceğiniz [paylaşım sayfasını](../ExchangeSiteCustomWatchfaces/index.md) açar. Artık saat arayüzüne uzun basıp saat arayüzü resmindeki "Customize" (Özelleştir) düğmesine basarak komplikasyonları vb. özelleştirebilirsiniz.
 
 ```{admonition} Complications on a custom watchface
 :class: note
-Custom watchfaces made with version 3.0 or newer of the custom watchface format can contain up to five complication slots, with their position and size defined by the watchface (**Complication layout**). On the watch, long-press the watchface, tap **Customize** and tap **Complication 1** to **Complication 5** to choose the data source shown in each slot. The same rows are listed in the watch's AAPS app under **Settings** > **AAPS(Custom)**; tapping one there opens the same picker. **Complication type priority** decides whether a slot prefers a value or gauge, text, or an icon when the data source offers several. A changed priority only applies the next time you pick a data source for that slot.
+Özel saat arayüzü formatının 3.0 veya daha yeni sürümüyle yapılan özel saat arayüzleri en fazla beş komplikasyon yeri içerebilir. Bu yerlerin konumunu ve boyutunu saat arayüzü belirler (**Komplikasyon düzeni**). Saatte saat arayüzüne uzun basın, **Customize** (Özelleştir) seçeneğine dokunun ve her yerde gösterilecek veri kaynağını seçmek için **Komplikasyon 1** ile **Komplikasyon 5** arasındaki satırlara dokunun. Aynı satırlar saatteki AAPS uygulamasında **Ayarlar** > **AAPS(Özel)** altında da listelenir; oradan birine dokunmak aynı seçiciyi açar. **Komplikasyon türü önceliği**, veri kaynağı birkaç tür sunduğunda bir yerin değer veya göstergeyi, metni ya da simgeyi tercih edip etmeyeceğini belirler. Değiştirilen öncelik, yalnızca o yer için bir sonraki veri kaynağı seçiminizde uygulanır.
 
-These slots only work on watches running **Wear OS 5 or older**, where the custom watchface runs as a real watchface. On **Wear OS 6 and newer**, the custom watchface is shown as a picture without its complication slots, and steps 1 and 2 above are not needed: make sure **Custom watchface** is selected under **Watchface installed on watch** in the phone's **Wear** plugin (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)).
+Bu yerler yalnızca özel saat arayüzünün gerçek bir saat arayüzü olarak çalıştığı, **Wear OS 5 veya daha eski** sürümlü saatlerde çalışır. **Wear OS 6 ve daha yeni** sürümlerde özel saat arayüzü komplikasyon yerleri olmadan bir resim olarak gösterilir ve yukarıdaki 1. ve 2. adımlar gerekmez: telefondaki **Wear** eklentisinde **Saatte yüklü saat arayüzü** altında **Özel saat arayüzü** seçeneğinin seçili olduğundan emin olun (bkz. [AAPS'in yüklediği saat arayüzü](#wearos-aaps-v4-watchface)).
 ```
 
-## AAPSv2 watchface - Legend
+## AAPSv2 saat arayüzü - Açıklama
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+![AAPSv2 saat arayüzü açıklaması](../images/Watchface_Legend.png)
 
 A - time since last loop run
 
@@ -326,16 +326,16 @@ B - CGM reading
 
 C - minutes since last CGM reading
 
-D - change compared to last CGM reading (in mmol or mg/dL)
+D - son CGM değerine göre değişim (mmol veya mg/dL olarak)
 
-E - average change CGM reading last 15 minutes
+E - son 15 dakikada CGM değerinin ortalama değişimi
 
 F - phone battery
 
 G - basal rate (shown in U/h during standard rate and in % during TBR)
 
-H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - BGI (blood glucose impact, kan şekerine etki) -> KŞ'nin yalnızca insülin etkisine göre ne kadar yükselmesi veya düşmesi “gerektiği”.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - karbonhidrat (aktif karbonhidrat | gelecekteki yKarb)
 
 J - insulin on board (from bolus | from basal)

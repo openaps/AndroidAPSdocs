@@ -12,8 +12,8 @@ Libre2 OOP (nájdete ho [tu](#Libre2_OOP2)) vytvára rovnaké hodnoty glykémie 
 
 Existuje niekoľko dobrých dôvodov na použitie Bluetooth vysielača:
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
-  Make sure to leave OOP1 disabled (2).
+-   Môžete si vybrať rôzne stratégie kalibrácie OOP2 (1): hodnoty ako na čítačke pomocou „no calibration“, kalibráciu senzora ako pri Libre 1 pomocou „calibrate based on raw“ alebo kalibráciu hodnôt ako na čítačke pomocou „calibrate based on glucose“.  
+  OOP1 nechajte vypnuté (2).
 
     → Ponuka (☰) → Settings → Less common settings → Other misc. options
 
@@ -30,9 +30,9 @@ Poznámka: Vysielač sa dá používať súčasne s aplikáciou LibreLink a neru
 
 ![xDrip – spustenie vysielača Libre a senzora 3](../images/xDrip_Libre_Transmitter03.png)
 
-Týmto sa fyzicky nespustí žiadny senzor Libre2 ani sa s ním nijako nekomunikuje. Slúži to iba na to, aby xDrip vedel, že nový senzor posiela hodnoty glykémie. If available, enter two blood-measured values for the initial calibration. Teraz by sa hodnoty glykémie mali v xDrip zobrazovať každých 5 minút. Vynechané hodnoty, napr. preto, že ste boli príliš ďaleko od telefónu, sa nebudú spätne dopĺňať.
+Týmto sa fyzicky nespustí žiadny senzor Libre2 ani sa s ním nijako nekomunikuje. Slúži to iba na to, aby xDrip vedel, že nový senzor posiela hodnoty glykémie. Ak je to možné, zadajte pri úvodnej kalibrácii dve hodnoty namerané z krvi. Teraz by sa hodnoty glykémie mali v xDrip zobrazovať každých 5 minút. Vynechané hodnoty, napr. preto, že ste boli príliš ďaleko od telefónu, sa nebudú spätne dopĺňať.
 
-Po výmene senzora xDrip automaticky rozpozná nový senzor a vymaže všetky kalibračné dáta. You may check your blood glucose after activation and make a new initial calibration.
+Po výmene senzora xDrip automaticky rozpozná nový senzor a vymaže všetky kalibračné dáta. Po aktivácii si môžete skontrolovať glykémiu a urobiť novú úvodnú kalibráciu.
 
 ### Nastavenie AAPS (iba pre používanie okruhu)
 
@@ -40,7 +40,7 @@ Po výmene senzora xDrip automaticky rozpozná nový senzor a vymaže všetky ka
 
 ![Konfigurácia > Zdroj glykémie s vybranou možnosťou xDrip+ glykémia](../images/v4/Configuration/configuration_bg_source.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
+-   Ak AAPS nedostáva hodnoty glykémie, keď je telefón v režime v lietadle, použite 'Identify receiver', ako je popísané na [stránke nastavení xDrip](#xdrip-identify-receiver).
 
 ## 2. Použitie priameho pripojenia xDrip
 
@@ -67,7 +67,7 @@ Technicky sa aktuálna hodnota glykémie posiela do xDrip každú minútu. Filte
 
 Pre používanie okruhu je to povinné. Krivky vyzerajú hladko a výsledky okruhu sú veľmi dobré. Surové hodnoty, na ktorých sú založené alarmy, viac kolíšu, ale zodpovedajú hodnotám, ktoré zobrazuje aj čítačka. Okrem toho sa v grafe xDrip môžu zobrazovať surové hodnoty, aby ste mohli včas reagovať na rýchle zmeny. Zapnite Less Common Settings \> Advanced Settings for Libre2 \> „show Raw values“ a „show Sensors Infos“. Potom sa surové hodnoty navyše zobrazujú ako malé biele bodky a v systémovej ponuke sú k dispozícii ďalšie informácie o senzore.
 
-Surové hodnoty sú veľmi užitočné, keď sa glykémia rýchlo mení. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
+Surové hodnoty sú veľmi užitočné, keď sa glykémia rýchlo mení. Aj keď bodky viac skáču, trend z nich rozpoznáte oveľa lepšie ako z vyhladenej čiary a môžete tak robiť správne liečebné rozhodnutia.
 
 → Ponuka (☰) → Settings → Less common settings → Advanced settings for Libre 2
 
@@ -77,7 +77,7 @@ Surové hodnoty sú veľmi užitočné, keď sa glykémia rýchlo mení. Even if
 
 #### Kalibrácia
 
-You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). Sklon sa nedá zmeniť. Po zavedení nového senzora ho prosím skontrolujte meraním z prsta. Myslite na to, že prvých 12 hodín po zavedení nemusí byť presný. Keďže rozdiely oproti meraniam z krvi môžu byť veľké, overujte ho každých 24 hodín a v prípade potreby kalibrujte. Ak senzor po niekoľkých dňoch meria úplne mimo, treba ho vymeniť.
+Libre2 môžete kalibrovať **s posunom od -40 mg/dl do +20 mg/dl \[od -2,2 mmol/l do +1,1 mmol/l\]** (intercept). Sklon sa nedá zmeniť. Po zavedení nového senzora ho prosím skontrolujte meraním z prsta. Myslite na to, že prvých 12 hodín po zavedení nemusí byť presný. Keďže rozdiely oproti meraniam z krvi môžu byť veľké, overujte ho každých 24 hodín a v prípade potreby kalibrujte. Ak senzor po niekoľkých dňoch meria úplne mimo, treba ho vymeniť.
 
 ## 3. Použitie Diabox
 

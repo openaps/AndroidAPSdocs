@@ -2,235 +2,235 @@
 
 ## 임시 목표는 무엇이며, 어떻게 설정할 수 있을까요?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+**임시 목표**(줄여서 **TT**)는 계획된 활동에 맞춰 사용자가 [**혈당** 목표 범위](#profile-glucose-targets)를 바꿀 수 있게 하는 **AAPS** 기능입니다. 이를 위해 **AAPS**는 사용자의 인슐린 사용량을 조정합니다.
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+혈당 목표는, 특히 짧은 기간(4시간 미만)만 사용할 때는, 혈당이 실제로 도달하기를 기대하거나 원하는 *실제 값*일 필요가 없습니다. 그보다는 혈당을 범위 안에 유지하면서 **AAPS**가 더 적극적으로 또는 덜 적극적으로 작동하도록 알려 주는 좋은 방법입니다.
 
-Temporary targets can be defined within those boundaries :
+임시 목표는 다음 범위 안에서 정할 수 있습니다:
 
-|         | Temporary target       |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/L or 72 mg/dL   |
-| Maximum | 10 mmol/L or 180 mg/dL |
+|    | Temporary target       |
+| -- | ---------------------- |
+| 최소 | 4 mmol/L 또는 72 mg/dL   |
+| 최대 | 10 mmol/L 또는 180 mg/dL |
 
-**AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). They live on the **Temp Target** screen (**Manage** → **Temp Target**), which you can also open by simply tapping the **target chip** on the main screen.
+**AAPS**에는 운동(**활동**), 식사(**식사 직전**), 예측된 저혈당(**저혈당**)에 맞는 세 가지 기본 제공 **임시 목표** 프리셋이 있습니다. 이 프리셋은 **임시 목표** 화면(**관리** → **임시 목표**)에 있으며, 메인 화면의 **목표 칩**을 탭해도 이 화면을 열 수 있습니다.
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+**AAPS**에서 **임시 목표**를 선택할 때 얻을 수 있는 결과에 대해 현실적인 기대를 가져야 합니다. 원하는 **혈당** 목표에 도달할 수 있는지는 여러 요인에 따라 다릅니다. 예를 들어 사용자의 **AAPS** 설정이 얼마나 신뢰할 만한지, 전체적인 **혈당** 조절, **IOB**, 인슐린 민감도, 인슐린 저항성, 운동 중의 운동 강도 등입니다.
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+**임시 목표**로 원하는 **혈당** 목표에 도달하려면 약 30분 또는 그 이상 걸릴 수 있습니다. **AAPS**가 **혈당** 목표에 즉시 도달하는 것은 불가능합니다. **임시 목표**를 선택할 때 이 점을 기억하십시오.
 
-The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. The values shown are the shipped defaults — you can [adjust each preset](#TempTargets-change-preset-defaults) to your own needs.
+아래 섹션에서는 **임시 목표 - 활동**, **임시 목표 - 식사 직전**, **임시 목표 - 저혈당**의 기능을 요약합니다. 표시된 값은 기본값입니다. [각 프리셋을 조정](#TempTargets-change-preset-defaults)하여 자신에게 맞출 수 있습니다.
 
-### TT - Activity
+### TT - 활동
 
-![TT Activity](../images/TempTarget2.png)
+![TT 활동](../images/TempTarget2.png)
 
-**BG Target (default preset, adjustable)**
+**혈당 목표 (기본 프리셋, 조정 가능)**
 
-AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
+AAPS는 1시간 30분 동안 140 mg/dL 또는 7.8 mmol/L에 도달하려고 합니다
 
-**Other considerations users may wish to factor in when selecting**:
+**선택할 때 사용자가 함께 고려할 수 있는 다른 사항**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+**혈당** 수준에 따라 **AAPS**는 **혈당** 목표에 도달하기 위해 인슐린 사용을 "줄입니다". **혈당** 목표가 범위 안에 있지 않으면(즉, 사용자의 **프로파일**에서 선택한 **혈당** 목표보다 높으면) **AAPS**는 기저를 유지할 수 있습니다.
 
-In closed loop mode, **SMB**:
+폐쇄 루프 모드에서 **SMB**는:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- 비활성화될 *수 있으며*(아래에서 더 설명합니다), 그리고/또는
+- **AAPS**의 **IOB**가 음수이면 기저가 활성화될 수 있습니다. 또는 <0.
 
-Users may also wish to consider:
+다음도 고려할 수 있습니다:
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- 계획된 운동 1-2시간 전에 이 **TT**를 *선택하여* IOB를 줄이기(이 TT의 알맞은 시점은 사람마다 다릅니다); 그리고
+- 계획된 활동 기간 동안 **IOB**를 줄이기 위해 임시 프로파일(감소)을 *선택하기*;
+- **IOB**가 이미 줄어 있고 일부 사용자는 운동 후 **혈당**이 빠르게 오르므로, 운동 직전에 **TT**가 *해제*되도록 시간을 *맞추기*.
 
-### TT - Eating soon
+### TT - 식사 직전
 
-![TT Eating soon](../images/TempTarget1.png)
+![TT 식사 직전](../images/TempTarget1.png)
 
-**BG Target (default preset, adjustable)**
+**혈당 목표 (기본 프리셋, 조정 가능)**
 
-AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
+AAPS는 45분 동안 90 mg/dL 또는 5.0 mmol/L에 도달하려고 합니다
 
-**Other considerations users may wish to factor in when selecting**:
+**선택할 때 사용자가 함께 고려할 수 있는 다른 사항**:
 
-In closed loop mode, **SMB**:
+폐쇄 루프 모드에서 **SMB**는:
 
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
+- 활성화된 상태로 유지됩니다; 그리고/또는
+- 사용자의 **프로파일** 설정에 따라 기저도 활성화될 수 있습니다.
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+**혈당** 수준에 따라 **AAPS**는 원하는 **혈당** 목표에 도달하기 위해 사용자의 **AAPS** 설정 범위 안에서 인슐린 사용을 "늘립니다".
 
-### TT - Hypo
+### TT - 저혈당
 
-![TT Hypo](../images/TempTarget3.png)
+![TT 저혈당](../images/TempTarget3.png)
 
-**BG Target (default preset, adjustable)**
+**혈당 목표 (기본 프리셋, 조정 가능)**
 
-AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
+AAPS는 1시간 동안 160 mg/dL 또는 8.9 mmol/L에 도달하려고 합니다
 
-**Other considerations users may wish to factor in when selecting**:
+**선택할 때 사용자가 함께 고려할 수 있는 다른 사항**:
 
-In closed loop mode, **SMB**:
+폐쇄 루프 모드에서 **SMB**는:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- 비활성화될 *수 있으며*(아래에서 더 설명합니다), 그리고/또는
+- **AAPS**의 **IOB**가 음수이면 기저가 활성화될 수 있습니다. 또는 <0.
 
 (TempTargets-manage-v4)=
 
-## Setting and managing temporary targets (Manage → Temp Target)
+## 임시 목표 설정 및 관리 (관리 → 임시 목표)
 
-In **AAPS** v4 you manage your TT **presets** and start a temporary target from the **Manage** screen (bottom navigation) → **Temp Target** (*“Manage and set temporary targets”*).
+**AAPS** v4에서는 **관리** 화면(하단 내비게이션) → **임시 목표**(*“임시 목표 관리 및 설정”*)에서 임시 목표 **프리셋**을 관리하고 임시 목표를 시작합니다.
 
-![The Temp Target screen — preset carousel, editor and action bar](../images/v4/TempTarget/tt_management.png)
+![임시 목표 화면 — 프리셋 캐러셀, 편집기, 동작 표시줄](../images/v4/TempTarget/tt_management.png)
 
-The screen has three parts:
+이 화면은 세 부분으로 되어 있습니다:
 
-1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
-2. **Editor** (middle) — the **Temporary target** and **Duration** that will actually be applied, plus an **Activation** date/time.
-3. **Action bar** (bottom) — **➕ add**, **‘️ delete** and the **▶ activate** button.
+1. **프리셋 캐러셀**(위) — 임시 목표 프리셋을 밀어서 넘깁니다. 각 카드에는 프리셋의 **이름**, **목표**, **기간**이 표시됩니다. 현재 실행 중인 임시 목표는 강조 표시됩니다.
+2. **편집기**(가운데) — 실제로 적용될 **임시 목표**와 **기간**, 그리고 **활성화** 날짜/시간입니다.
+3. **동작 표시줄**(아래) — **➕ 추가**, **‘️ 삭제**, **▶ 활성화** 버튼이 있습니다.
 
-Selecting a preset card loads its **target** and **duration** into the editor.
+프리셋 카드를 선택하면 그 **목표**와 **기간**이 편집기에 불러와집니다.
 
-```{admonition} Built-in vs custom presets :class: note The built-in presets — **Eating Soon**, **Activity** and **Hypo** — always exist and **cannot be deleted** (you can change their values and save, though). Any presets you create yourself are **custom** and can be edited or deleted freely.
+```{admonition} 기본 제공 프리셋과 사용자 지정 프리셋 :class: note 기본 제공 프리셋 — **식사 직전**, **활동**, **저혈당** — 은 항상 있으며 **삭제할 수 없습니다**(하지만 값을 바꾸고 저장할 수는 있습니다). 직접 만든 프리셋은 **사용자 지정** 프리셋이며 자유롭게 편집하거나 삭제할 수 있습니다.
 
-    <br />### Activating a temporary target
+    <br />### 임시 목표 활성화
     
-    Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. A confirmation shows the exact target, duration and reason before anything starts:
+    원하는 프리셋으로 밀어 이동하고(그 값이 편집기에 불러와집니다), 필요하면 편집기에서 **목표**/**기간**을 조정한 다음 **▶ 활성화**를 탭하십시오. 무엇이든 시작되기 전에 확인 화면에 정확한 목표, 기간, 이유가 표시됩니다:
     
-    ![Activation confirmation](../images/TempTarget8.png)
+    ![활성화 확인](../images/TempTarget8.png)
     
-    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+    확인하면 임시 목표가 바로(또는 선택한 **활성화** 시간에) 시작되고 설정한 **기간** 동안 실행됩니다.
     
-    ```{admonition} Editing the numbers is a one-off — it does not change the preset
+    ```{admonition} 숫자를 바꾸는 것은 이번 한 번만 적용됩니다 — 프리셋은 바뀌지 않습니다
     :class: important
-    The **target** and **duration** in the editor are the values **Activate** will use *right now*. If you change them, that change is **temporary**: it applies only to this activation and **does not modify the saved preset**. This lets you "tweak and activate" a one-off TT (for example activate *Activity* at a slightly different target today) without permanently altering the preset.
+    편집기의 **목표**와 **기간**은 **활성화**가 *지금* 사용할 값입니다. 이 값을 바꾸면 그 변경은 **일시적**입니다. 이번 활성화에만 적용되고 **저장된 프리셋은 바뀌지 않습니다**. 그래서 프리셋을 영구적으로 바꾸지 않고도 한 번만 쓸 임시 목표를 "조정하여 활성화"할 수 있습니다(예: 오늘은 *활동*을 조금 다른 목표로 활성화).
     
 
-### Saving changes to a preset
+### 프리셋에 변경 사항 저장
 
-If you *do* want to keep an edited value, **Save** it: when the editor differs from the selected preset, a **Save** icon appears in the top toolbar. Tapping it stores the current **target** and **duration** (and name, for custom presets) back into the selected preset. For the built-in presets, a **Revert to defaults** button (↺) also appears in the action bar: it brings back the preset's default values.
+바꾼 값을 *유지하고* 싶다면 **저장**하십시오. 편집기의 값이 선택한 프리셋과 다르면 상단 툴바에 **저장** 아이콘이 나타납니다. 이 아이콘을 탭하면 현재 **목표**와 **기간**(사용자 지정 프리셋은 이름도)이 선택한 프리셋에 저장됩니다. 기본 제공 프리셋의 경우 동작 표시줄에 **기본값으로 되돌리기** 버튼(↺)도 나타납니다. 이 버튼은 프리셋의 기본값을 다시 불러옵니다.
 
-![Temp Target screen with the Save icon and the Revert to defaults button](../images/v4/TempTarget/tt_preset_save_revert.png)
+![저장 아이콘과 기본값으로 되돌리기 버튼이 있는 임시 목표 화면](../images/v4/TempTarget/tt_preset_save_revert.png)
 
-So the rule of thumb is:
+간단히 정리하면 다음과 같습니다:
 
-- **Activate** → use the numbers **once** (preset unchanged).
-- **Save** → make the numbers the preset's **new defaults**.
+- **활성화** → 숫자를 **한 번만** 사용합니다(프리셋은 바뀌지 않음).
+- **저장** → 숫자를 프리셋의 **새 기본값**으로 만듭니다.
 
-To put a built-in preset back the way it shipped, select it and tap the **↺ Revert** button — it appears in the action bar only for a **built-in** preset whose values currently differ from its factory defaults, and it restores that preset's original **target** and **duration**.
+기본 제공 프리셋을 처음 상태로 되돌리려면 그 프리셋을 선택하고 **↺ 되돌리기** 버튼을 탭하십시오. 이 버튼은 값이 공장 기본값과 다른 **기본 제공** 프리셋에서만 동작 표시줄에 나타나며, 그 프리셋의 원래 **목표**와 **기간**을 복원합니다.
 
-### Adding and removing presets
+### 프리셋 추가와 삭제
 
-- **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
-- **‘️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
+- **➕ 추가** — 현재 편집기 값으로 **새 사용자 지정 프리셋**을 만듭니다. 새 카드가 캐러셀에 나타납니다.
+- **‘️ 삭제** — 선택한 **사용자 지정** 프리셋을 삭제합니다. 기본 제공 프리셋(*식사 직전*, *활동*, *저혈당*)은 삭제할 수 없습니다.
 
-Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+**사용자 지정** 프리셋이 두 개 이상이면 캐러셀에서 순서를 바꿀 수도 있습니다. 상단 표시줄의 **순서 변경** 아이콘(⇅)을 탭하고, **◀ / ▶ 이동 버튼**으로 가운데 카드를 옮긴 다음 **✓**로 확인하십시오. 기본 제공 프리셋은 자리가 고정되어 있습니다. 사용자 지정 프리셋만 옮길 수 있습니다. (조작 방법은 [프로파일 순서 변경](ProfileSwitch-ProfilePercentage.md)과 같습니다.)
 
-Your presets are part of the synced configuration, so they are shared across your master and paired clients.
+프리셋은 동기화되는 구성의 일부이므로 마스터와 페어링된 클라이언트에서 함께 사용됩니다.
 
-### Other ways to set a temporary target
+### 임시 목표를 설정하는 다른 방법
 
-A temporary target can also be set without opening this screen:
+이 화면을 열지 않고도 임시 목표를 설정할 수 있습니다:
 
-- with the **TT toggles in the Carbs dialog** — see [below](#TempTargets-carbs-dialog),
-- with a **preset button on the [QuickLaunch toolbar](QuickLaunch.md)** — the *Temp Target Presets* category in *Configure QuickLaunch* offers a one-tap button for each of your presets,
-- from a **Wear OS watch** (the **Temp Target** menu item / tile),
-- from a paired **client** — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md),
-- as part of a **[scene](Scenes.md)** (the *Temporary target* action), or
-- from an **Automation** rule (*Start temp target* / *Stop temp target*).
+- **탄수화물 대화 상자의 임시 목표 스위치**로 — [아래](#TempTargets-carbs-dialog) 참조,
+- **[QuickLaunch 툴바](QuickLaunch.md)의 프리셋 버튼**으로 — *QuickLaunch 설정*의 *임시 목표 프리셋* 범주에서 각 프리셋의 한 번 탭 버튼을 추가할 수 있습니다,
+- **Wear OS 워치**에서(**임시 목표** 메뉴 항목 / 타일),
+- 페어링된 **클라이언트**에서 — [마스터 ↔ 클라이언트 제어](../RemoteFeatures/ClientMasterControl.md) 참조,
+- **[장면](Scenes.md)**의 일부로(*임시 목표* 동작), 또는
+- **자동화** 규칙으로(*임시 목표 시작* / *임시 목표 중지*).
 
 * * *
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
-## Where can I select a Temp-Target?
+## 임시 목표는 어디에서 선택할 수 있습니까?
 
-The quickest way is to tap the **target chip** on the main screen (it shows your current target range):
+가장 빠른 방법은 메인 화면의 **목표 칩**(현재 목표 범위를 표시)을 탭하는 것입니다:
 
-![Target chip on the main screen](../images/TempTarget6.png)
+![메인 화면의 목표 칩](../images/TempTarget6.png)
 
-This opens the **Temp Target** screen described above — swipe to a preset and tap **▶ Activate**. The same screen is also reachable via **Manage** → **Temp Target**.
+그러면 위에서 설명한 **임시 목표** 화면이 열립니다. 프리셋으로 밀어 이동하고 **▶ 활성화**를 탭하십시오. 같은 화면은 **관리** → **임시 목표**로도 열 수 있습니다.
 
-(TempTargets-carbs-dialog)= When entering carbs, you don't need to open the **Temp Target** screen at all: the **Carbs dialog** (**Treatments** → **Carbs**) has **Start Hypo TT**, **Start Eating soon TT** and **Start Activity TT** toggles at the top. Switch one on and the corresponding preset is activated together with the carb entry:
+(TempTargets-carbs-dialog)= 탄수화물을 입력할 때는 **임시 목표** 화면을 열 필요가 전혀 없습니다. **탄수화물 대화 상자**(**처치** → **탄수화물**)의 맨 위에 **저혈당 임시 목표 시작**, **식사 직전 임시 목표 시작**, **활동 임시 목표 시작** 스위치가 있습니다. 하나를 켜면 해당 프리셋이 탄수화물 입력과 함께 활성화됩니다:
 
-![TT toggles in the Carbs dialog](../images/TempTarget5.png)
+![탄수화물 대화 상자의 임시 목표 스위치](../images/TempTarget5.png)
 
-    {admonition} Automatic Hypo TT
+    {admonition} 자동 저혈당 임시 목표
     :class: note
-    If you open the **Carbs dialog** while your glucose is below 72 mg/dL (4 mmol/L), **AAPS** pre-selects the **Start Hypo TT** toggle for you (unless a higher temporary target with a longer remaining duration is already running).
+    혈당이 72 mg/dL (4 mmol/L)보다 낮을 때 **탄수화물 대화 상자**를 열면, **AAPS**가 **저혈당 임시 목표 시작** 스위치를 미리 켜 둡니다(남은 기간이 더 긴 더 높은 임시 목표가 이미 실행 중이 아닌 경우).
 
 (TempTargets-change-preset-defaults)=
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## 기본 임시 목표를 어디에서 바꾸고 내 설정으로 덮어쓸 수 있습니까?
 
-Each preset's **target** and **duration** are edited directly on the **Temp Target** screen — there is no separate preferences entry for this anymore:
+각 프리셋의 **목표**와 **기간**은 **임시 목표** 화면에서 바로 편집합니다. 이를 위한 별도의 설정 항목은 더 이상 없습니다:
 
-1. Open the **Temp Target** screen (tap the target chip, or **Manage** → **Temp Target**).
-2. Swipe to the preset you want to change.
-3. Adjust **Temporary target** and/or **Duration** in the editor.
-4. Tap the **Save** icon that appears in the top toolbar.
+1. **임시 목표** 화면을 여십시오(목표 칩을 탭하거나 **관리** → **임시 목표**).
+2. 바꾸고 싶은 프리셋으로 밀어 이동하십시오.
+3. 편집기에서 **임시 목표** 및/또는 **기간**을 조정하십시오.
+4. 상단 툴바에 나타나는 **저장** 아이콘을 탭하십시오.
 
-![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/TempTarget7.png)
+![프리셋 편집 — 툴바의 저장 아이콘, 동작 표시줄의 되돌리기](../images/TempTarget7.png)
 
-While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
+편집기의 값이 기본 제공 프리셋의 공장 기본값과 다른 동안에는 동작 표시줄에 **↺ 되돌리기** 버튼도 나타납니다. 이 버튼을 탭하면 프리셋의 원래 목표와 기간이 복원됩니다.
 
-## How do I cancel a Temp-Target?
+## 임시 목표는 어떻게 취소합니까?
 
-While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Tap it and confirm:
+임시 목표가 실행 중이면 메인 화면의 목표 칩에 목표와 남은 시간이 표시됩니다. 목표 칩을 탭하십시오. **임시 목표** 화면에서 실행 중인 프리셋이 **활성**으로 강조 표시되고, 아래쪽 툴바 끝의 **▶ 활성화** 버튼 바로 왼쪽에 빨간색 **✗ 취소** 버튼이 나타납니다. 이 버튼을 탭하고 확인하십시오:
 
-![Cancelling a running temp target](../images/TempTarget9.png)
+![실행 중인 임시 목표 취소](../images/TempTarget9.png)
 
-A running temporary target can also be stopped from a **Wear OS watch**, from a paired **client**, or by an **Automation** rule (*Stop temp target*).
+실행 중인 임시 목표는 **Wear OS 워치**, 페어링된 **클라이언트** 또는 **자동화** 규칙(*임시 목표 중지*)으로도 중지할 수 있습니다.
 
 (TempTargets-hypo-temp-target)=
 
 ## 저혈당 임시 목표
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+**저혈당 임시 목표**는 인슐린 주입을 줄여서 **AAPS**가 사용자의 저혈당을 막을 수 있게 합니다. 사용자가 **혈당**이 낮아질 것으로 예상하는 경우: 보통은 **AAPS**가 처리해야 하지만, 이는 사용자의 **AAPS** 설정이 얼마나 안정적인지에 크게 달려 있습니다. **저혈당 임시 목표**를 사용하면 예측된 저혈당보다 먼저 대응하여 **AAPS**가 인슐린을 줄이도록 할 수 있습니다.
 
-Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
+저혈당을 치료하려고 탄수화물을 먹으면 사용자의 **혈당**이 빠르게 오를 수 있고, **AAPS**는 **SMB**를 활성화하여 빠르게 오르는 **혈당**을 교정합니다.
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating *'Enable SMB with high temp target'* in **Settings** → **OpenAPS SMB** (see further below):
+일부 사용자는 **저혈당 임시 목표** 동안 **SMB**가 주입되지 않기를 원합니다. 이를 위해 **설정** → **OpenAPS SMB**에서 *'높은 임시 목표에서 SMB 활성화'*를 끄십시오(아래 참조):
 
-- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- 고급, 목표 9: OpenAPS SMB에서 100 mg/dL (5.6 mmol/L) 이상인 **임시 목표**에 대해 *“높은 임시 목표로 민감도 높이기”*를 켤 수 있습니다. 그러면 **AAPS**가 더 민감하게 반응합니다.
 
-- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- 고급, 목표 9: *“높은 임시 목표에서 SMB 활성화”*를 끌 수 있습니다. 그러면 **AAPS**에 COB > 0이 있고, “낮은 임시 목표에서 SMB 활성화” 또는 “항상 SMB 활성화”가 켜져 있고, OpenAPS SMB가 활성이더라도 높은 임시 목표가 활성인 동안 **AAPS**는 SMB를 주입하지 않습니다.
 
-Note: if you open the **Carbs dialog** while your blood glucose is less than 72 mg/dL or 4 mmol/L, **AAPS** pre-selects the **Start Hypo TT** toggle automatically.
+참고: 혈당이 72 mg/dL 또는 4 mmol/L보다 낮을 때 **탄수화물 대화 상자**를 열면, **AAPS**가 **저혈당 임시 목표 시작** 스위치를 자동으로 미리 켭니다.
 
 (TempTargets-activity-temp-target)=
 
 ## 활동 임시 목표
 
-Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
+운동 전과 운동 중에는 활동 중 저혈당을 막기 위해 더 높은 목표가 필요할 수 있습니다.
 
-To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia.
+**활동 임시 목표**를 간단하게 사용하려면 기본 **임시 목표 - 활동**을 설정할 수 있습니다. 이 설정은 인슐린 사용을 줄여 **혈당**을 올리고, **혈당** 하락을 늦추고 저혈당을 피하게 합니다.
 
-New users to **AAPS** may need to experiment and personalize their **Temp-Target Activity** default settings in order to optimize this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports).
+**AAPS**를 처음 사용하는 사용자는 이 기능이 자신에게 가장 잘 맞도록 **활동 임시 목표** 기본 설정을 시험해 보고 조정해야 할 수 있습니다. 운동 중 안정적인 혈당 조절을 이루는 방법은 사람마다 다릅니다. [FAQ의 운동 섹션](#FAQ-sports)도 참조하십시오.
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+일부 사용자는 **활동 임시 목표**가 켜지기 전과 켜져 있는 동안 **프로파일 전환**(**AAPS**의 인슐린 주입을 줄이기 위해 100% 미만으로 프로파일 감소)도 활성화하는 것을 선호합니다. 두 가지를 한 번에 시작할 수 있습니다. 메인 화면에서 프로파일 이름을 탭하고, 둥근 **▶** 버튼을 탭한 다음, **퍼센트**를 100 % 미만으로, **기간**을 설정하고 **임시 목표 / 활동**을 켜십시오. [프로파일 퍼센트 변경](#ProfileSwitch-change-percentage)을 참조하십시오.
 
-Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. Then **AAPS** is more sensitive.
+고급, 목표 9: OpenAPS **SMB**에서 100 mg/dL (5.6 mmol/L) 이상인 **임시 목표**에 대해 *'높은 임시 목표로 민감도 높이기'*를 켤 수 있습니다. 99 mg/dL (5.5 mmol/L)인 목표는 높지도 낮지도 않은 보통 목표입니다. 그러면 **AAPS**는 더 민감하게 반응합니다.
 
-Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS **SMB** active.
+또한 *'높은 임시 목표에서 SMB 활성화'*를 끄면, COB > 0이고 *'낮은 임시 목표에서 SMB 활성화'* 또는 *'항상 SMB 활성화'*가 켜져 있고 OpenAPS **SMB**가 활성이더라도 **AAPS**는 **SMB**를 주입하지 않습니다.
 
 (TempTargets-eating-soon-temp-target)=
 
 ## 식사 직전 임시 목표
 
-**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**임시 목표 - 식사 직전**은 **혈당**을 부드럽게 낮추고 식사 전에 **IOB**가 충분히 있도록 하는 데 도움이 됩니다.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
+이 기능은 사전 볼러스를 하지 않는 사용자에게 중요한 도구가 될 수 있습니다. 하지만 **임시 목표 - 식사 직전**의 효과는 여러 요인에 따라 다릅니다. 예를 들어 사용자의 설정, 저탄수화물 식사를 하는지, 사전 볼러스가 필요 없도록 초속효성 인슐린(Fiasp 또는 Lyumjev 등)을 사용하는지 등입니다. 보통 **AAPS**에 익숙해질 때까지는 **임시 목표 - 식사 직전**을 사용할 때도 사전 볼러스(pre-bolus)를 해야 합니다. 탄수화물이 많은 식사를 하는 경우에는 특히 그렇습니다.
 
-You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+“식사 직전 모드(eating soon mode)”에 대해서는 ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) 글이나 [여기](https://diyps.org/tag/eating-soon-mode/)에서 더 읽을 수 있습니다.
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be 98 mg/dL (5.4 mmol/L) or lower.
+고급, [목표 9](#objectives-objective9): OpenAPS SMB를 사용하고 *'낮은 임시 목표로 민감도 낮추기'*를 켜면 **AAPS**가 조금 더 적극적으로 작동합니다. 이 옵션을 사용하려면 **임시 목표**가 98 mg/dL (5.4 mmol/L) 이하여야 합니다.
 
-## How do I turn off SMB during Temp-Targets?
+## 임시 목표 동안 SMB를 끄려면 어떻게 합니까?
 
-To action this open **Settings** → **OpenAPS SMB** and deactivate *'Enable SMB with high temp target'*.
+이렇게 하려면 **설정** → **OpenAPS SMB**를 열고 *'높은 임시 목표에서 SMB 활성화'*를 끄십시오.
 
-![Enable SMB with high temp target preference](../images/TempTargetSMB.png)
+![높은 임시 목표에서 SMB 활성화 설정](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS SMB active.
+이렇게 하면 COB > 0이고 *'낮은 임시 목표에서 SMB 활성화'* 또는 *'항상 SMB 활성화'*가 켜져 있고 OpenAPS SMB가 활성이더라도 **AAPS**는 **SMB**를 주입하지 않습니다.

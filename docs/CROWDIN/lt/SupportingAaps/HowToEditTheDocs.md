@@ -1,565 +1,565 @@
-# How to edit the docs
+# Kaip redaguoti dokumentaciją
 
-**This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+**Šis aprašymas skirtas tik angliškos dokumentacijos redagavimui. Visa nauja informacija pirmiausia turi būti įrašyta angliškai. Jei norite versti į kitas kalbas (ačiū), naudokite [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
+Patarimų, kaip formatuoti tekstą (antraštes, paryškinimą...) ir kurti nuorodas, rasite šio puslapio skyriuje [„Kodo sintaksė“](#edit-the-docs-code-syntax).
 
-## General
+## Bendra informacija
 
-For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
+Jei turite klausimų, atsiliepimų ar naujų idėjų, susisiekite su dokumentacijos komanda per [discord](https://discord.gg/4fQUWHZ4Mw).
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+Kada nors jums gali būti pasiūlyta sukurti pull request (PR). Būtent taip jūsų dokumentacijos pakeitimai patenka į AAPS tinklalapius, kurie saugomi GitHub. Sukurti PR iš tikrųjų nėra labai sunku, ir tai puikus būdas prisidėti. Šią dokumentaciją dabar skaitote todėl, kad tokie žmonės kaip jūs kūrė PR. Nebijokite suklysti ar netyčia redaguoti ne tų dokumentų. Jūsų pakeitimai peržiūrimi prieš juos sujungiant su „oficialia“ AAPS dokumentacijos saugykla. Šio proceso metu netyčia sugadinti originalų negalite. Bendra eiga tokia:
 
-- Make edits and improvements to code or documentation by editing the existing content.
-- Double-check that your edits look good to you.
-- Make a few notes of what's changed so people may understand the edits.
-- Create a pull request, which asks the administrators to use your changes.
-- They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+- Taisykite ir tobulinkite kodą ar dokumentaciją, redaguodami esamą turinį.
+- Dar kartą patikrinkite, ar jūsų pakeitimai atrodo gerai.
+- Trumpai užsirašykite, kas pakeista, kad kiti suprastų jūsų pakeitimus.
+- Sukurkite pull request – juo paprašysite administratorių priimti jūsų pakeitimus.
+- Jie peržiūrės pakeitimus ir (1) juos sujungs (merge), (2) parašys jums komentarą apie pakeitimus arba (3) pradės naują dokumentą su jūsų pakeitimais.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Pastaba: jei jums lengviau mokytis žiūrint, [čia](https://youtu.be/4b6tsL0_kzg) yra YouTube vaizdo įrašas, kuriame parodyta, kaip kuriamas PR.)
 
-For our example we are going to make an edit to AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+Pavyzdyje redaguosime AndroidAPSdocs. Tai galima padaryti bet kuriame Windows kompiuteryje, Mac ir pan. (bet kuriame kompiuteryje su interneto ryšiu).
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. Eikite į <https://github.com/openaps/AndroidAPSdocs> ir viršuje dešinėje spauskite Fork, kad susikurtumėte savo saugyklos kopiją.
 
-![Fork repo](../images/PR0.png)
+![Fork saugykla](../images/PR0.png)
 
-2. Go to any page and navigate to the page you want to edit. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. Atidarykite bet kurį puslapį ir pereikite į puslapį, kurį norite redaguoti. Galite spausti nuorodą "Edit in GitHub" (redaguoti GitHub) viršutiniame dešiniajame kampe. Tai galima tik angliškuose puslapiuose. 
 
-![edit doc](../images/PR1.png)
+![dokumento redagavimas](../images/PR1.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+Arba spauskite pieštuko piktogramą, kuri rodoma redaguojamo puslapio turinio viršutinėje juostoje. Tam turite būti prisijungę prie savo Github paskyros (jei jos neturite, susikurti ją paprasta).
 
 ![RTD io](../images/PR2.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. Bet kuri iš 2 žingsnio parinkčių sukurs naują atšaką JŪSŲ saugykloje. Joje bus išsaugoti jūsų pakeitimai. Pakeiskite failą.
 
-We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+Dokumentacijos puslapiams naudojame markdown. Failų plėtinys yra ".md". Markdown specifikacija nėra fiksuota, todėl šiuo metu savo markdown failams naudojame myst_parser. Atidžiai naudokite teisingą sintaksę, kaip [aprašyta toliau](#edit-the-docs-code-syntax).
 
-![Edit branch](../images/PR3.png)
+![Atšakos redagavimas](../images/PR3.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. Dirbote kortelėje "<>Edit file" (redaguoti failą). Pasirinkite kortelę "Preview changes" (peržiūrėti pakeitimus) ir šviežiu žvilgsniu patikrinkite, ar viskas, ką pakeitėte, atrodo taip, kaip norėjote (patikrinkite rašybos klaidas). Jei matote, ką dar reikia pataisyti, grįžkite į redagavimo kortelę ir tęskite taisymą. 
 
-![preview mode](../images/PR5.png)
+![peržiūros režimas](../images/PR5.png)
 
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
+5. Baigę redaguoti, slinkite į puslapio apačią. Apačioje esančiame laukelyje parašykite komentarą teksto lauke "Add an optional extended description..." (papildomas aprašymas). Numatytajame pavadinime yra failo pavadinimas. Pabandykite parašyti sakinį, kuris paaiškina pakeitimo **priežastį**. Nurodyta priežastis padeda peržiūrintiems suprasti, ką norite padaryti šiuo PR.
 
-![commit comments](../images/PR4.png)
+![commit komentarai](../images/PR4.png)
 
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
+6. Spauskite žalią mygtuką "Propose file changes" arba "Commit changes" (pasiūlyti / įrašyti pakeitimus). Atsidariusiame puslapyje spauskite "Create Pull Request", o kitame puslapyje dar kartą spauskite "Create Pull Request".
 
-![create pull request](../images/PR6.png)
+![pull request kūrimas](../images/PR6.png)
 
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
+7. Taip pull request (PR) sukurtas. GitHub suteikia PR numerį. Jis rodomas po pavadinimo, po grotelių ženklo. Grįžkite į šį puslapį ir patikrinkite, ar yra atsiliepimų (arba, jei GitHub pranešimai siunčiami jums el. paštu, gausite laiškus apie kiekvieną PR veiksmą). Pakeitimas dabar bus PR sąraše. Komanda jį peržiūrės ir, galbūt, parašys atsiliepimą, prieš įtraukdama į pagrindinę AAPS dokumentaciją! Jei norite patikrinti, kaip sekasi jūsų PR, savo GitHub paskyroje viršutiniame dešiniajame kampe spauskite varpelio piktogramą ir pamatysite visus savo PR.
 
-![PR tracking](../images/PR7.png)
+![PR stebėjimas](../images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+PS: jūsų fork ir atšaka liks jūsų asmeninėje GitHub paskyroje. Gavę pranešimą, kad jūsų PR sujungtas (merged), galite ištrinti savo atšaką, jei jos nebereikia (kai PR uždaromas arba sujungiamas, 7 žingsnio pranešimų srityje bus nuoroda atšakai ištrinti). Jei ir toliau redaguosite šiuo būdu, visada pradėsite nuo naujausios AndroidAPSdocs saugyklų versijos. Jei PR pradėsite kitu būdu (pvz., redaguodami nuo savo fork saugyklos master atšakos), pirmiausia turėsite atnaujinti savo saugyklą: atlikite "compare" (palyginimą) ir sujunkite visus pakeitimus, atsiradusius nuo paskutinio jūsų fork atnaujinimo. Žmonės dažnai pamiršta atnaujinti savo saugyklas, todėl rekomenduojame naudoti aukščiau aprašytą PR būdą, kol išmoksite atlikti "compare".
 
 (edit-the-docs-code-syntax)=
 
-## Code syntax
+## Kodo sintaksė
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+Dokumentacijos puslapiams naudojame markdown. Failų plėtinys yra ".md".
 
-Markdown is a very simple text formatting language which separates text content from text formatting.
+Markdown – tai labai paprasta teksto formatavimo kalba, kuri atskiria teksto turinį nuo jo formatavimo.
 
-The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
+Rašantysis tik, pvz., pažymi antraštę kaip 1 lygio antraštę, o markdown procesorius apdorodamas sukuria reikiamą HTML kodą, kad antraštė būtų rodoma HTML.
 
-The idea behind this is that
+Tikslas yra toks:
 
-- the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
-- you can generate several output formats from one markdown file.
+- rašantysis pirmiausia galvotų apie tekstą, o ne apie formatavimą,
+- markdown tekstu būtų galima keistis tarp skirtingų markdown įrankių, o ne naudoti, pvz., uždarus (proprietary) įrankius, tokius kaip Microsoft Word, ir
+- iš vieno markdown failo galima sukurti kelis išvesties formatus.
 
-Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
+Markdown nėra visiškai fiksuotas standartas, todėl stengiamės kuo labiau laikytis standarto, kad
 
-- stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+- lengvai pakeisti markdown įrankius, kai reikia arba kai to pareikalauja tolesnė markdown įrankių ir markdown SaaS paslaugų raida, ir
+- galėtume naudoti vertimo paslaugas ir versti anglų kalbą į kitą kalbą, pvz., prancūzų ar vokiečių. Jos gali dirbti su markdown, bet ne su sudėtingais formatavimo kodais, nes negali atskirti turinio nuo išdėstymo, o tai gali būti lemtinga.
 
-### Headlines
+### Antraštės
 
-- Headline 1: `# headline`
-- Headline 2: `## headline`
-- Headline 3: `### headline`
-- Headline 4: `#### headline`
+- 1 lygio antraštė: `# headline`
+- 2 lygio antraštė: `## headline`
+- 3 lygio antraštė: `### headline`
+- 4 lygio antraštė: `#### headline`
 
-We try to avoid further levels of headlines.
+Stenkitės nenaudoti gilesnių antraščių lygių.
 
-### Text format
+### Teksto formatavimas
 
-- **bold**: `**text**`
-- *italic*: `*text*`
-- ***bold italic***: `***text***`
+- **paryškintas**: `**text**`
+- *kursyvas*: `*text*`
+- ***paryškintas kursyvas***: `***text***`
 
-### Ordered list
+### Numeruotas sąrašas
 
-    1. first
-    1. second
-    1. third
+    1. pirmas
+    1. antras
+    1. trečias
     
 
-1. first
-2. second
-3. third
+1. pirmas
+2. antras
+3. trečias
 
-### Unordered list
+### Nenumeruotas sąrašas
 
-    - one element
-    - another element
-    - and another element
+    - vienas elementas
+    - kitas elementas
+    - ir dar vienas elementas
     
 
-- one element
-- another element
-- and another element
+- vienas elementas
+- kitas elementas
+- ir dar vienas elementas
 
-### Multi level list
+### Kelių lygių sąrašas
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+Sąrašą sąraše sukursite, kai kitą lygį atitrauksite 4 tarpais daugiau į dešinę nei ankstesnį.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
-    1. six
+    1. pirmas
+    1. antras
+    1. trečias
+      1. vienas elementas
+      1. kitas elementas
+      1. ir dar vienas elementas
+    1. keturi
+    1. penki
+    1. šeši
     
 
-1. first
-2. second
-3. third 
-    1. one element
-    2. another element
-    3. and another element
-4. four
-5. five
-6. six
+1. pirmas
+2. antras
+3. trečias 
+    1. vienas elementas
+    2. kitas elementas
+    3. ir dar vienas elementas
+4. keturi
+5. penki
+6. šeši
 
-### Images
+### Paveikslėliai
 
-To include images you use this markdown syntax.
+Paveikslėliui įterpti naudokite šią markdown sintaksę.
 
-- images: `![alt text](../images/file.png)`
+- paveikslėliai: `![alt text](../images/file.png)`
 
-The type of image should be PNG or JPEG.
+Paveikslėlis turi būti PNG arba JPEG formato.
 
-Image names should conform to one of the following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Paveikslėlių pavadinimai turi atitikti vieną iš šių pavadinimų taisyklių. Pavyzdyje naudoju plėtinį png. Jei naudojate JPEG, naudokite plėtinį jpeg.
 
-- `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png`, kur xx – unikalus dviženklis paveikslėlio numeris šiame faile.
+- `filename-image-xx.png`, kur xx – prasmingas pavadinimas, kurį pasirenka md failo autorius.
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+Paveikslėliai yra anglų kalbos aplanke images, o į kitas kalbas Crowdin juos perkelia automatiškai. Jums nieko daryti nereikia!
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+Šiuo metu paveikslėlių neverčiame: paveikslėliuose turi būti **kuo mažiau teksto**, kad jie būtų suprantami ir anglų kalbos nemokantiems skaitytojams.
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+(make-a-PR-image-size)= Naudokite tinkamo dydžio paveikslėlius, kad juos būtų galima perskaityti kompiuteryje, planšetėje ir telefone.
 
-- Screenshots from web pages images should be up to **1050 pixels wide**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
-- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
+- Tinklalapių ekrano nuotraukos turi būti ne platesnės kaip **1050 pikselių**.
+- Procesų diagramos turi būti ne platesnės kaip **1050 pikselių**.
+- Programėlės ekrano nuotraukos turi būti ne platesnės kaip **500 pikselių**. Jei nebūtina, nedėkite jų vienos šalia kitos.
+- Laikrodžio (**Wear OS**) ekrano nuotraukos turi būti ne platesnės kaip **360 pikselių**. Niekada nedidinkite mažesnės ekrano nuotraukos.
 
-### Links
+### Nuorodos
 
-#### External links
+#### Išorinės nuorodos
 
-External links are links to external web sites.
+Išorinės nuorodos – tai nuorodos į kitas svetaines.
 
-- external link: `[alt text](www.url.tld)`
+- išorinė nuoroda: `[alt text](www.url.tld)`
 
-#### Internal links to the start of a md file
+#### Vidinės nuorodos į md failo pradžią
 
-Internal links to pages are links to the start of a md file which is hosted on our own server.
+Vidinės nuorodos į puslapius – tai nuorodos į md failo, esančio mūsų serveryje, pradžią.
 
-- internal link to .md page: `[alt text](../folder/file.md)`
+- vidinė nuoroda į .md puslapį: `[alt text](../folder/file.md)`
 
-#### Internal links to named inline references
+#### Vidinės nuorodos į pavadintas žymes tekste
 
-Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+Vidinės nuorodos į pavadintas žymes tekste – tai nuorodos į bet kurią md failo, esančio mūsų serveryje, vietą, kurioje nustatyta žymė nuorodai.
 
-Add a named reference at the location in the target md file you want to jump to.
+Tikslinio md failo vietoje, į kurią norite pereiti, pridėkite pavadintą žymę (named reference).
 
 `(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+Pavadinta žymė turi būti unikali visuose AndroidAPSDocs md failuose, ne tik tame md faile, kuriame ji yra!
 
-Therefore it is a good practice to start with the filename and then the reference name you select.
+Todėl gera praktika – pradėti failo pavadinimu, o po jo rašyti savo pasirinktą žymės pavadinimą.
 
-Use only lowercase letters and hyphenate words.
+Naudokite tik mažąsias raides, o žodžius junkite brūkšneliais.
 
-Then link this reference in the text you are writing with the following kind of link.
+Tada savo rašomame tekste nurodykite šią žymę tokia nuoroda.
 
-- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Vidinės nuorodos į pavadintas žymes tekste: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### Pastabos, įspėjimai, suskleidžiamos pastabos
 
-You can add notes and warning boxes to documentation.
+Į dokumentaciją galite įterpti pastabų ir įspėjimų langelius.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Please use these carefully as the documentation should be as easy to read as possible.
+Be to, išsamiai informacijai galite pridėti suskleidžiamas pastabas, kad detalėmis nesidomintys naudotojai neatsisakytų skaityti teksto. Naudokite juos saikingai, nes dokumentacija turi būti kuo lengviau skaitoma.
 
 #### Notes
 
-    ```{admonition} Note headline
+    ```{admonition} Pastabos antraštė
     :class: note
-    This is a note.
+    Tai pastaba.
     ```
     
 
-```{admonition} Note headline :class: note This is a note.
+```{admonition} Pastabos antraštė :class: note Tai pastaba.
 
-    <br />#### Warnings
+    <br />#### Įspėjimai
     
     ````
-    ```{admonition} Warning
+    ```{admonition} Įspėjimas
     :class: warning
-    This is a warning.
+    Tai įspėjimas.
     
 
-    ```{admonition} Warning headline
+    ```{admonition} Įspėjimo antraštė 
     :class: warning
-    This is a warning.
+    Tai įspėjimas.
     ```
     
-    #### Collapsing Notes
+    #### Suskleidžiamos pastabos
     
     
 
-    {admonition} further detailed readings for interested readers
+    {admonition} išsamesnė informacija besidomintiems skaitytojams
     :class: dropdown
     
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
+    Ši pastaba suskleista,
+    todėl čia galite įrašyti ilgesnį tekstą,
+    ir jis neužims daug vietos puslapyje.
     
 
 ````
 
-```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
+```{admonition} išsamesnė informacija besidomintiems skaitytojams :class: dropdown Ši pastaba suskleista, todėl čia galite įrašyti ilgesnį tekstą, ir jis neužims daug vietos puslapyje.
 
 ```
 
-## Tables
+## Lentelės
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Venkite lentelių su ilgais tekstais: Markdown kalboje jų turinį sunku sutvarkyti, jos dažniausiai netelpa telefono ekrano plotyje ir po vertimo greičiausiai bus rodomos kitaip.
 
-## Style Guide
+## Stiliaus vadovas
 
-### Contents
+### Turinys
 
-1. English language writing tips
+1. Patarimai, kaip rašyti angliškai
 
-2. AAPS-specific writing notes
+2. Pastabos apie AAPS tekstų rašymą
 
-3. Useful references
+3. Naudingos nuorodos
 
-### ![Image](../images/styleguide01.png) 1\. English language writing tips
+### ![Paveikslėlis](../images/styleguide01.png) 1\. Patarimai, kaip rašyti angliškai
 
-#### Use language that is appropriate for the reader
+#### Rašykite skaitytojui tinkama kalba
 
-Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
+Kur tik įmanoma, rašykite paprasta anglų kalba. Tai padeda skaitytojams, kuriems anglų kalba nėra gimtoji, ir palengvina AAPS dokumentų vertimą į kitas kalbas. Rašykite taip, lyg kalbėtumėte su naudotoju: įsivaizduokite, kad sėdite prie stalo priešais žmogų, kuriam rašote. Atminkite: dauguma AAPS naudotojų nėra programuotojai. Ir pačiame diabete yra daug žargono ir santrumpų. Turėkite omenyje, kad kai kuriems diagnozė nustatyta neseniai, jie gali turėti mažiau patirties su diabetu nei jūs arba būti mokyti kitaip. Jei naudojate trumpinį ar santrumpą, pirmą kartą parašykite visą pavadinimą, o santrumpą iš karto po jo skliaustuose, pvz., „super micro bolus (SMB)“. Taip pat pridėkite nuorodą į terminų žodyną. Techninius terminus, kurių skaitytojas gali nežinoti, taip pat galima pridėti skliaustuose.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+Vietoj: *“What causes high postprandial BG peaks in closed loop?”*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+Rašykite: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
-##### Use plain words that everyone can understand
+##### Rašykite paprastais, visiems suprantamais žodžiais
 
-Find an A-Z of alternative words to make your writing easier to understand here:
+Alternatyvių žodžių sąrašą nuo A iki Z, kad tekstas būtų lengviau suprantamas, rasite čia:
 
 <https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
 
-#### Privacy/licensing concerns:
+#### Privatumo ir licencijų klausimai:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Ypač įrašydami vaizdo įrašus ar darydami ekrano nuotraukas, neatskleiskite savo asmeninių duomenų (API rakto, slaptažodžių). Įsitikinkite, kad YouTube turinys nėra viešai matomas sąraše (not listed) ir jį galima peržiūrėti tik per nuorodą iš dokumentacijos. Neatkreipkite dėmesio į medžiagą, kuri pažeidžia autorių teises (BYODA ir pan.).
 
-#### Keep sentences short, get to the point
+#### Rašykite trumpus sakinius, kalbėkite iš esmės
 
-- Clear writing should have an average sentence length of 15 to 20 words.
+- Aiškiame tekste vidutinis sakinio ilgis yra 15–20 žodžių.
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- Tai nereiškia, kad visi sakiniai turi būti vienodo ilgio. Rašykite glaustai. Įvairinkite tekstą: maišykite trumpus sakinius (kaip ankstesnis) su ilgesniais (kaip šis).
 
-- Stick to one main idea in a sentence, plus perhaps one other related point.
+- Viename sakinyje laikykitės vienos pagrindinės minties ir galbūt dar vienos susijusios.
 
-- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way.
+- Kartais vis tiek parašysite ilgą sakinį, ypač kai bandysite paaiškinti sudėtingą dalyką. Bet daugumą ilgų sakinių galima kaip nors suskaidyti.
 
-- Remove weak words: “you can”, “there is/are/were”, “in order to”.
+- Atsisakykite silpnų žodžių: „you can“, „there is/are/were“, „in order to“.
 
-- Place keywords near the beginning of titles, sentences and paragraphs.
+- Raktinius žodžius rašykite pavadinimų, sakinių ir pastraipų pradžioje.
 
-- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+- Būkite vaizdūs! Kur tik įmanoma, pridėkite trumpą diagramą, ekrano nuotrauką ar vaizdo įrašą.
 
-#### Don't be afraid to give instructions
+#### Nebijokite duoti nurodymų
 
-Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
+Liepiamoji nuosaka – greičiausias būdas duoti nurodymus, bet rašantieji kartais bijo liepti ir rašo „you should do this“ (jūs turėtumėte tai padaryti), o ne tiesiog „do this“ (padarykite tai). Galbūt žmonės nerimauja, kad liepimai skamba per griežtai. Dažnai tai galima išspręsti priekyje pridėjus žodį 'please'. Tačiau jei kažką būtina padaryti, geriau nerašyti ‘please’, nes taip skaitytojas gauna galimybę atsisakyti.
 
-Instead of: *“You should just think of it as a complete statement.”*
+Vietoj: *“You should just think of it as a complete statement.”*
 
-Use: *“Think of it as a complete statement.”*
+Rašykite: *“Think of it as a complete statement.”*
 
-#### Mostly use active verbs, rather than passive verbs
+#### Dažniausiai naudokite veikiamąją, o ne neveikiamąją rūšį
 
-Example of an **active verb**:
+**Veikiamosios rūšies** veiksmažodžio pavyzdys:
 
 - *“The pump (subject) delivers (verb) the insulin (object).”*
 
-“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+Čia “delivers” yra veikiamosios rūšies veiksmažodis. Sakinyje pirmiausia pasakoma, kas tiekia, o tik paskui – kas tiekiama.
 
-Example of a **passive verb**:
+**Neveikiamosios rūšies** veiksmažodžio pavyzdys:
 
 - *“The insulin (subject) is delivered (verb) by the pump (object).”*
 
-*“delivered”* is a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+Čia *“delivered”* yra neveikiamosios rūšies veiksmažodis. Palyginti su veikiamosios rūšies sakiniu, veiksnys ir papildinys sukeisti vietomis. Sakinys tapo ilgesnis, nes reikėjo pridėti „is“ ir „by the“. Taip pat apsvarstykite galimybę sakinį pradėti veikiamosios rūšies veiksmažodžiu.
 
-Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+Vietoj: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
-Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
+Rašykite: *“Connect your desired pump to the phone through the AAPS pump menu.”*
 
-Passive verbs can cause problems:
+Neveikiamoji rūšis gali sukelti problemų:
 
-- They can be confusing.
+- Ji gali painioti.
 
-- They often make writing more long-winded.
+- Dėl jos tekstas dažnai tampa ištęstas.
 
-- They make writing less lively.
+- Dėl jos tekstas tampa mažiau gyvas.
 
-##### Good uses of passives
+##### Kada neveikiamoji rūšis tinka
 
-There are times when it might be appropriate to use a passive.
+Kartais neveikiamąją rūšį naudoti tinka.
 
-- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+- Kad tekstas skambėtų švelniau – 'this bill has not been paid' (neveikiamoji) skamba švelniau nei 'you have not paid this bill' (veikiamoji).
 
-- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+- Kad išvengtumėte kaltinimo – 'a mistake was made' (neveikiamoji), o ne 'You made a mistake' (veikiamoji).
 
-- When you don't know who or what the doer is - 'the England team has been picked'.
+- Kai nežinote, kas atlieka veiksmą – 'the England team has been picked'.
 
-- If it simply sounds better.
+- Jei taip tiesiog skamba geriau.
 
-#### Avoid nominalisations
+#### Venkite sudaiktavimų
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
+Sudaiktavimas – tai pavadinimas to, kas nėra fizinis daiktas, pavyzdžiui, proceso, metodo ar jausmo. Sudaiktavimai sudaromi iš veiksmažodžių.
 
-For example:
+Pavyzdžiui:
 
-| Verb      | Nominalization |
-| --------- | -------------- |
-| complete  | completion     |
-| introduce | introduction   |
-| provide   | provision      |
-| fail      | failure        |
+| Veiksmažodis | Sudaiktavimas |
+| ------------ | ------------- |
+| complete     | completion    |
+| introduce    | introduction  |
+| provide      | provision     |
+| fail         | failure       |
 
-They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+Jie dažnai vartojami **vietoj** veiksmažodžių, iš kurių kilę, bet tada atrodo, lyg nieko iš tikrųjų nevyktų. Jei jų per daug, tekstas tampa labai nuobodus ir sunkiai skaitomas.
 
-Instead of: *“The implementation of the method has been done by a team.”*
+Vietoj: *“The implementation of the method has been done by a team.”*
 
-Use: *“A team has implemented the method.”*
+Rašykite: *“A team has implemented the method.”*
 
-#### Use lists where appropriate
+#### Kur tinka, naudokite sąrašus
 
-Lists are excellent for splitting information up. There are two main types of list:
+Sąrašai puikiai tinka informacijai suskaidyti. Yra du pagrindiniai sąrašų tipai:
 
-- A continuous sentence with several listed points picked out at the beginning, middle or end.
+- Vientisas sakinys, kurio pradžioje, viduryje ar pabaigoje išvardyti keli punktai.
 
-- Separate bullet points with an introductory statement.
+- Atskiri punktai su įžanginiu sakiniu.
 
-In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+Aukščiau esančiame sąraše kiekvienas punktas yra pilnas sakinys, todėl kiekvienas prasideda didžiąja raide ir baigiasi tašku. Naudokite ženklelius, o ne skaičius ar raides: jie atkreipia dėmesį į kiekvieną punktą ir neprideda papildomos informacijos.
 
-#### Mythbusting
+#### Mitų griovimas
 
-- You can start a sentence with **and, but, because, so or however**.
+- Sakinį galite pradėti žodžiais **and, but, because, so arba however**.
 
-- You can split infinitives. So you can say **“to boldly go”**.
+- Galite atskirti bendraties dalis (split infinitive). Taigi galite rašyti **“to boldly go”**.
 
-- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
+- Sakinį galite baigti prielinksniu. Tiesą sakant, tai yra tai, **we should stand up for** (ką turėtume ginti).
 
-- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+- Ir **jūs** galite tą patį **žodį** sakinyje pavartoti du kartus, jei **jūs** nerandate geresnio **žodžio**.
 
-#### Optimizing writing style by purpose
+#### Rašymo stiliaus pritaikymas pagal tikslą
 
-To keep the documentation clear and short, we write different sections of the documentation in different styles.
+Kad dokumentacija būtų aiški ir trumpa, skirtingas jos dalis rašome skirtingais stiliais.
 
-An “explanation” style is used for the introduction, background and knowledge development sections.
+Įžangos, pagrindų ir žinių plėtojimo skyriams naudojamas „paaiškinimo“ stilius.
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+AAPS kūrimo, konfigūravimo ir kai kuriems trikčių šalinimo skyriams naudojamas „instrukcijos“ (How-to-guide) stilius (su minimaliais paaiškinimais).
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+Mokomoji medžiaga padeda mokiniui įgyti pagrindinių įgūdžių. Naudotojas **mokysis darydamas**.
 
-![Image](../images/styleguide02.png)
+![Paveikslėlis](../images/styleguide02.png)
 
-##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Paveikslėlis](../images/styleguide03.png) Mokomoji medžiaga (pvz., kaip išmokyti vaiką plakti kiaušinių baltymus)
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- pasakotojas kreipiasi tiesiai į skaitytoją: In this tutorial **you** will (we) retais atvejais galima naudoti, kad būtų perteiktas požiūris „mes tai darome kartu“
 
-- Future Tense -> to show the final target
+- Būsimasis laikas -> parodyti galutinį tikslą
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Liepiamoji nuosaka -> atlikti užduotis -> konkretūs žingsniai, venkite abstrakčių sąvokų
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Būtasis laikas -> parodyti atliktas užduotis -> greiti ir iš karto matomi rezultatai
 
-- Minimum Explanations -> strict necessary to complete the task - **what and why**
+- Minimalūs paaiškinimai -> tik tai, kas būtina užduočiai atlikti – **kas ir kodėl**
 
-- Ignore options/alternatives/…. No ambiguity
+- Nekalbėkite apie parinktis / alternatyvas / …. Jokio dviprasmiškumo
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Perėjimai tarp žingsnių: žingsnį baikite sakiniu, kuris logiškai veda į kitą žingsnį. Pavyzdys: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
-- **Tutorial** Title (Level 1 heading)
+- **Mokomosios medžiagos** pavadinimas (1 lygio antraštė)
 
-- Introduction (no heading)
+- Įžanga (be antraštės)
 
-- Prerequisites (Level 2 heading)
+- Būtinos sąlygos (2 lygio antraštė)
 
-- Steps:
+- Žingsniai:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- 1 žingsnis – pirmas veiksmas (2 lygio antraštė)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- 2 žingsnis – kitas veiksmas (2 lygio antraštė)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- n žingsnis – paskutinis veiksmas (2 lygio antraštė)
 
-- Conclusion (Level 2 heading)
+- Išvados (2 lygio antraštė)
     
-    - **The Language of Tutorials**
+    - **Mokomosios medžiagos kalba**
         
-        *In this tutorial, you will…*
+        *In this tutorial, you will… (šioje mokomojoje medžiagoje jūs…)*
         
-        Describe what the learner will accomplish (note - not: “you will learn…”).
+        Aprašykite, ką besimokantysis atliks (pastaba: ne „you will learn…“ (jūs išmoksite…)).
         
         *First, do x. Now, do y. Now that you have done y, do z.*
         
-        No room for ambiguity or doubt.
+        Jokios vietos dviprasmiškumui ar abejonėms.
         
         *We must always do x before we do y because… (see Explanation for more details).*
         
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
+        Veiksmus paaiškinkite kuo trumpiau ir kuo paprastesne kalba. Pateikite nuorodą į išsamesnį paaiškinimą.
         
         *The output should look something like this…*
         
-        Give your learner clear expectations.
+        Aiškiai pasakykite besimokančiajam, ko tikėtis.
         
         *Notice that… Remember that…*
         
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
+        Duokite besimokančiajam daug užuominų, kad jis galėtų įsitikinti, jog eina teisingu keliu, ir susiorientuotų.
         
         *You have built a secure, three-layer hylomorphic stasis engine…*
         
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
+        Aprašykite (ir saikingai pagirkite), ką besimokantysis pasiekė (pastaba: ne „you have learned…“ (jūs išmokote…))
 
-##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
+##### ![Paveikslėlis](../images/styleguide05.png) Instrukcijos (pvz., receptas)
 
-A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
+Instrukcijos tikslas – padėti jau įgudusiam naudotojui teisingai atlikti konkrečią užduotį.
 
-- HOW-to
+- KAIP
 
-- narrator directly talks to the reader: In this guide **you** will
+- pasakotojas kreipiasi tiesiai į skaitytoją: In this guide **you** will
 
-- Future Tense -> to show the final target
+- Būsimasis laikas -> parodyti galutinį tikslą
 
-- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
+- Sąlyginė liepiamoji nuosaka -> kad gautumėte X, darykite Y -> konkretūs žingsniai, venkite abstrakčių sąvokų
 
-- Minimum Explanations -> strict necessary to complete the task -> **what and why**
+- Minimalūs paaiškinimai -> tik tai, kas būtina užduočiai atlikti -> **kas ir kodėl**
 
-- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
+- Nekalbėkite apie parinktis / alternatyvas / …. Jokio dviprasmiškumo, bet galite pateikti nuorodą į žinyno ar paaiškinimo įrašą
 
-- **How-to**: Title (Level 1 heading)
+- **Instrukcija**: pavadinimas (1 lygio antraštė)
 
-- Introduction paragraph
+- Įžanginė pastraipa
 
-- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+- Nebūtinos būtinos sąlygos (pastraipa arba 2 lygio antraštė, jei jų daugiau nei 1)
 
-- Steps:
+- Žingsniai:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- 1 žingsnis – pirmas veiksmas (2 lygio antraštė)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- 2 žingsnis – kitas veiksmas (2 lygio antraštė)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- n žingsnis – paskutinis veiksmas (2 lygio antraštė)
 
-- Conclusion paragraph
+- Baigiamoji pastraipa
     
-    - **The Language of How-To Guides**
+    - **Instrukcijų kalba**
         
-        *This guide shows you how to…*
+        *This guide shows you how to… (ši instrukcija parodys, kaip…)*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        Aiškiai aprašykite problemą ar užduotį, kurią naudotojas išspręs pagal šią instrukciją.
         
         *If you want x, do y. To achieve w, do z.*
         
-        Use conditional imperatives.
+        Naudokite sąlyginę liepiamąją nuosaką.
         
         *Refer to the x reference guide for a full list of options.*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        Neperkraukite praktinės instrukcijos viskuo, ką naudotojas galėtų daryti su x.
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Paveikslėlis](../images/styleguide07.png) Paaiškinimas (pvz., mokslinis paaiškinimas, kodėl plakami kiaušinių baltymai sutirštėja)
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+Paaiškinimas paaiškina, pagilina ir praplečia skaitytojo supratimą apie temą.
 
-- WHY
+- KODĖL
 
-- Start with **About**
+- Pradėkite žodžiu **Apie**
 
-- Provide context, link ALL relevant references
+- Pateikite kontekstą, pridėkite nuorodas į VISUS susijusius šaltinius
 
-- Discuss options/alternatives
+- Aptarkite parinktis / alternatyvas
 
-- Don’t instruct or provide reference (link to them)
+- Nemokykite ir nepateikite žinyno informacijos (pridėkite nuorodas į ją)
 
-- State the unknown/moving targets etc…
+- Nurodykite tai, kas nežinoma, kas keičiasi ir pan.…
 
-- **About** Title (Level 1 heading)
+- **Apie**: pavadinimas (1 lygio antraštė)
 
-- Introduction (no heading)
+- Įžanga (be antraštės)
 
-- Optional Prerequisites (Level 2 heading)
+- Nebūtinos būtinos sąlygos (2 lygio antraštė)
 
-- Subtopic 1 (level 2 heading)
+- 1 potemė (2 lygio antraštė)
 
-- Conclusion (Level 2 heading)
+- Išvados (2 lygio antraštė)
     
-    - **The Language of Explanation**
+    - **Paaiškinimo kalba**
     
     *The reason for x is because historically, y…*
     
-    Explain.
+    Paaiškinkite.
     
     *W is better than z, because…*
     
-    Offer judgements and even opinions where appropriate.
+    Kur tinka, pateikite vertinimų ir net nuomonių.
     
     *An x in system y is analogous to a w in system z. However…*
     
-    Provide context that helps the reader.
+    Pateikite kontekstą, kuris padeda skaitytojui.
     
     *Some users prefer w (because z). This can be a good approach, but…*
     
-    Weigh up alternatives.
+    Palyginkite alternatyvas.
     
     *An x interacts with a y as follows:…*
     
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    Atskleiskite vidinį mechanizmo veikimą, kad būtų aišku, kodėl kažkas veikia būtent taip.
 
-### 2\. AAPS-specific writing/updating notes
+### 2\. Pastabos apie AAPS tekstų rašymą ir atnaujinimą
 
-#### Author & Editor
+#### Autorius ir redaktorius
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+Rašant ar atnaujinant AAPS dokumentaciją, laikykite, kad procesas susideda iš dviejų etapų. Juos gali atlikti tas pats žmogus skirtingu metu arba keli žmonės.
 
-An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+**Autorius (pvz., jūs!)** glaustai ir lyg kalbėdamas parašo ar pataiso dokumentacijos skyrių, tada perduoda jį redaktoriui.
 
-The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help.
+**Redaktorius (pvz., kitas AAPS naudotojas arba tas, kuris gauna pull request)** patikrina, ar laikomasi stiliaus vadovo, pataiso skyrių, kad jis būtų aiškus ir suprantamas, ir išbraukia kuo daugiau žodžių (ypač mokomosios medžiagos ir instrukcijų skyriuose). Gali padėti tekstą perskaityti garsiai.
 
-#### General AAPS points
+#### Bendrieji AAPS dalykai
 
-- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
+- Gliukozės reikšmes kiekvieną kartą nurodykite ir mg/dL, ir mmol/L (jei įmanoma, taip darykite ir ekrano nuotraukose).
 
-- For consistency, use “AAPS” rather than “Android APS”.
+- Dėl nuoseklumo rašykite „AAPS“, o ne „Android APS“.
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- Aiškiai nurodykite, kuriai Android Studio / AAPS versijai rašote arba iš kurios versijos padarytos ekrano nuotraukos.
 
-### 3\. Useful References
+### 3\. Naudingos nuorodos
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 

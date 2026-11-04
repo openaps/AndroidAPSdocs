@@ -1,193 +1,193 @@
-# xDrip settings
+# xDrip 설정
 
-If not already set up, download and install the latest xDrip release from the [xDrip releases page](https://github.com/NightscoutFoundation/xDrip/releases).
+아직 설치하지 않았다면 [xDrip 릴리스 페이지](https://github.com/NightscoutFoundation/xDrip/releases)에서 최신 xDrip 릴리스를 다운로드하여 설치하십시오.
 
-Disable battery optimization and allow background activity for the xDrip app.
+xDrip 앱의 배터리 최적화를 끄고 백그라운드 활동을 허용하십시오.
 
 ## 모든 CGM & FGM 시스템의 기본 설정
 
-### Disable Nightscout upload
+### Nightscout 업로드 끄기
 
-You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+다른 앱이 Nightscout로 데이터(혈당과 처치)를 업로드하게 해서는 안 됩니다.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
+→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → `Enabled`를 **OFF**로 전환 (5)
 
-![xDrip Basic Settings 1](../images/xDrip_Basic1.png)
+![xDrip 기본 설정 1](../images/xDrip_Basic1.png)
 
-#### Disable automatic calibration and treatments
+#### 자동 보정과 처치 끄기
 
-Make sure `Automatic Calibration` (7) is deactivated. If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
+`Automatic Calibration` (7)이 꺼져 있는지 확인하십시오. `Automatic Calibration` 체크박스가 선택되어 있으면 `Download treatments` (6)를 한 번 켜고, `Automatic Calibration` 체크박스를 해제한 다음 `Download treatments`를 다시 끄십시오.
 
-![xDrip Basic Settings 2](../images/xDrip_Basic2.png)
+![xDrip 기본 설정 2](../images/xDrip_Basic2.png)
 
-Tap `Extra Options`(8)
+`Extra Options`(8)를 누르십시오
 
-    {admonition} Safety warning
+    {admonition} 안전 경고
     :class: warning
-    You must deactivate "Upload treatments" from xDrip, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
+    xDrip에서 "Upload treatments"를 반드시 꺼야 합니다. 그렇지 않으면 AAPS에서 처치가 두 번 기록되어 COB와 IOB가 잘못 계산될 수 있습니다.
 
-Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
+`Upload treatments`(9)를 끄고 `Back-fill data` (11)를 **사용하지 않도록** 하십시오.
 
-Option `Alert on failures` should also be deactivated (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
+`Alert on failures` 옵션도 꺼야 합니다 (10). 그렇지 않으면 Wi-Fi/모바일 네트워크 문제가 있거나 서버를 사용할 수 없을 때 5분마다 알람이 울립니다.
 
-![xDrip Basic Settings 3](../images/xDrip_Basic3.png)
+![xDrip 기본 설정 3](../images/xDrip_Basic3.png)
 
 ### **Inter-app Settings** (Broadcast)
 
-If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
+AAPS를 사용한다면, 데이터가 AAPS로 전달되도록 xDrip의 Inter-App settings에서 broadcast를 켜야 합니다.
 
 → Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
 
-In order for the values to be identical in AAPS with respect to xDrip, you should activate `Send the displayed glucose value` (5).
+AAPS의 값이 xDrip의 값과 같도록 하려면 `Send the displayed glucose value` (5)를 켜야 합니다.
 
-Enable Compatible Broadcast (6).
+Compatible Broadcast를 켜십시오 (6).
 
-![xDrip Basic Settings 4](../images/xDrip_Basic4.png)
+![xDrip 기본 설정 4](../images/xDrip_Basic4.png)
 
-If you have also activated `Accept treatments` in xDrip and `Enable broadcasts to xDrip` in AAPS xDrip plugin, then xDrip will receive insulin, carbs and basal rate information from AAPS.
+xDrip에서 `Accept treatments`를 켜고 AAPS xDrip 플러그인에서 `xDrip+로 브로드캐스트 활성화`도 켰다면, xDrip은 AAPS로부터 인슐린, 탄수화물, 기저 주입량 정보를 받습니다.
 
-If you enable `Accept Calibrations`, xDrip will use the calibrations from AAPS. Be careful when you use this feature with Dexcom sensors: read [this](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) first.
+`Accept Calibrations`를 켜면 xDrip은 AAPS의 보정 값을 사용합니다. Dexcom 센서에서 이 기능을 사용할 때는 주의하십시오. 먼저 [이 문서](https://navid200.github.io/xDrip/docs/Calibrate-G6.html)를 읽으십시오.
 
-Remember to disable Import Sounds to avoid xDrip making a ringtone every time AAPS sends a basal/profile change.
+AAPS가 기저/프로파일 변경을 보낼 때마다 xDrip이 벨소리를 울리지 않도록 Import Sounds를 꺼 두십시오.
 
-![xDrip Basic Settings 5](../images/xDrip_Basic5.png)
+![xDrip 기본 설정 5](../images/xDrip_Basic5.png)
 
 (xdrip-identify-receiver)=
 
 #### Identify receiver
 
-- If you discover problems with local broadcast (AAPS not receiving BG values from xDrip) go to → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
-- Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip.
+- 로컬 브로드캐스트에 문제가 있다면(AAPS가 xDrip에서 혈당 값을 받지 못함) → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7)로 가서 AAPS 빌드의 경우 `info.nightscout.androidaps`를 입력하십시오(PumpControl 빌드를 사용한다면 대신 `info.nightscout.aapspumpcontrol`을 입력하십시오!!).
+- 주의: 자동 수정 기능이 i를 대문자로 바꾸는 경우가 있습니다. `info.nightscout.androidaps`(PumpControl의 경우 `info.nightscout.aapspumpcontrol`)를 입력할 때는 **소문자만 사용해야 합니다**. 대문자 I를 쓰면 앱이 xDrip에서 혈당 값을 받지 못합니다.
     
-    ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+    ![xDrip Basic Inter-app Settings Identify receiver 화면](../images/xDrip_InterApp_NS.png)
 
-## Use AAPS to calibrate in xDrip
+## AAPS를 사용하여 xDrip에서 보정하기
 
-- If you want to be able to use AAPS to calibrate then in xDrip go to Settings → Interapp Compatibility → Accept Calibrations and select ON. 
-- You may also want to review the options in Settings → Less Common Settings → Advanced Calibration Settings.
+- AAPS로 보정하려면 xDrip에서 Settings → Interapp Compatibility → Accept Calibrations로 가서 ON을 선택하십시오. 
+- Settings → Less Common Settings → Advanced Calibration Settings의 옵션도 확인해 보는 것이 좋습니다.
 
-## Dexcom sensors
+## Dexcom 센서
 
-Everything related to the Dexcom sensor and transmitter themselves (starting, stopping, replacing, calibrating, troubleshooting) is documented and kept up to date in the [xDrip Dexcom documentation](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Follow those instructions for the sensor; the settings connecting xDrip to **AAPS** (described above on this page) are the only AAPS-specific part.
+Dexcom 센서와 트랜스미터 자체에 관한 모든 내용(시작, 중지, 교체, 보정, 문제 해결)은 [xDrip Dexcom 문서](https://navid200.github.io/xDrip/docs/Dexcom_page.html)에 설명되어 있으며 최신 상태로 유지됩니다. 센서는 그 설명을 따르십시오. 이 페이지 위에서 설명한, xDrip을 **AAPS**에 연결하는 설정만 AAPS에 해당하는 부분입니다.
 
-### Dexcom G6 and ONE
+### Dexcom G6 및 ONE
 
-- Set up xDrip following the [recommended settings](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html).
-- The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-- When using xDrip as receiver uninstall the Dexcom app first. **You cannot connect xDrip and the Dexcom app with the transmitter at the same time!**
-- If you need Clarity and want to profit from xDrip features, use the [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip, or use xDrip as a Companion app receiving notifications from the official Dexcom app (with possible delays in BG readings).
+- [권장 설정](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html)에 따라 xDrip을 설정하십시오.
+- Dexcom G6 및 ONE 트랜스미터는 Dexcom 수신기(또는 t:slim 펌프)와 휴대폰의 앱 하나에 동시에 연결할 수 있습니다.
+- xDrip을 수신기로 사용할 때는 먼저 Dexcom 앱을 삭제하십시오. **xDrip과 Dexcom 앱을 동시에 트랜스미터에 연결할 수 없습니다!**
+- Clarity가 필요하면서 xDrip 기능도 활용하고 싶다면, xDrip으로 로컬 브로드캐스트하는 [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)을 사용하거나, 공식 Dexcom 앱의 알림을 받는 동반 앱(Companion app)으로 xDrip을 사용하십시오(혈당 측정값이 지연될 수 있음).
 
-#### Sensor restarts
+#### 센서 재시작
 
-- xDrip always uses the transmitter's [native algorithm](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) with current transmitters; there is no reason to disable it.
-- [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) only function on old transmitters (firmware 1.6.5.25 or earlier), where they are needed to prevent the sensor stopping after 10 days. Recent (Firefly) transmitters ignore them.
-- Restarting a sensor on a Firefly transmitter requires [removing the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) and readings can be significantly in error after the restart, which is dangerous when looping: read [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) in full and [calibrate carefully](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
+- 현재 트랜스미터에서 xDrip은 항상 트랜스미터의 [자체 알고리즘(native algorithm)](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)을 사용합니다. 이것을 끌 이유는 없습니다.
+- [선제적 재시작(Preemptive restart)](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html)은 오래된 트랜스미터(펌웨어 1.6.5.25 이하)에서만 작동합니다. 이런 트랜스미터에서는 10일 후 센서가 멈추는 것을 막기 위해 필요합니다. 최신(Firefly) 트랜스미터는 이를 무시합니다.
+- Firefly 트랜스미터에서 센서를 다시 시작하려면 [트랜스미터를 분리](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)해야 하며, 재시작 후에는 측정값에 큰 오차가 생길 수 있습니다. 이는 루프 사용 중에 위험합니다. [센서 재시작](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html)을 끝까지 읽고 [신중하게 보정하십시오](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
 
 (xdrip-connect-g6-transmitter-for-the-first-time)=
 
-#### Start, stop and replace sensors
+#### 센서 시작, 중지 및 교체
 
-Follow the instructions:
+다음 설명을 따르십시오:
 
-- [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html)
-- [Stop and start a G6 or ONE sensor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)
-- [Remove the transmitter from a sensor](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)
-- [Transmitter lifetime](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) can only be extended ([hard reset](https://navid200.github.io/xDrip/docs/Hard-Reset.html)) on rebatteried or modified transmitters, not on Firefly.
+- [G6 또는 ONE 트랜스미터 시작](https://navid200.github.io/xDrip/docs/Starting-G6.html)
+- [G6 또는 ONE 센서 중지 및 시작](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)
+- [센서에서 트랜스미터 분리](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)
+- [트랜스미터 수명](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html)은 배터리를 교체했거나 개조한 트랜스미터에서만 연장할 수 있으며([하드 리셋](https://navid200.github.io/xDrip/docs/Hard-Reset.html)), Firefly에서는 연장할 수 없습니다.
 
 (xdrip-replace-transmitter)=
 
-#### Replace a transmitter
+#### 트랜스미터 교체
 
-- Turn the original Dexcom receiver off (if used) and do not turn it back on before xDrip shows readings.
-- Forget the device in xDrip (System Status → Forget Device) AND in the smartphone's Bluetooth settings (shown as DexcomXX where XX are the last two digits of the transmitter serial number).
-- Keep the old transmitter out of Bluetooth range to prevent reconnection.
-- Then follow [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+- 원래 Dexcom 수신기를 사용한다면 끄고, xDrip에 측정값이 표시되기 전에는 다시 켜지 마십시오.
+- xDrip에서(System Status → Forget Device) 그리고 스마트폰의 블루투스 설정에서 모두 기기 등록을 해제하십시오(DexcomXX로 표시되며, XX는 트랜스미터 일련번호의 마지막 두 자리입니다).
+- 다시 연결되지 않도록 이전 트랜스미터를 블루투스 범위 밖에 두십시오.
+- 그런 다음 [G6 또는 ONE 트랜스미터 시작](https://navid200.github.io/xDrip/docs/Starting-G6.html)을 따르십시오.
 
-### Dexcom G7, ONE+ and Stelo
+### Dexcom G7, ONE+ 및 Stelo
 
-- Follow the [G7, ONE+ and Stelo instructions](https://navid200.github.io/xDrip/docs/Dexcom/G7.html) (a recent xDrip release is required — see the linked page).
-- See also the [Dexcom G7, ONE+ and Stelo page](../CompatibleCgms/DexcomG7.md) for the available setups with **AAPS**.
+- [G7, ONE+ 및 Stelo 설명](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)을 따르십시오(최신 xDrip 릴리스가 필요합니다. 링크된 페이지를 참조하십시오).
+- **AAPS**와 함께 사용할 수 있는 구성은 [Dexcom G7, ONE+ 및 Stelo 페이지](../CompatibleCgms/DexcomG7.md)도 참조하십시오.
 
 (xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
-### Troubleshooting Dexcom and xDrip
+### Dexcom 및 xDrip 문제 해결
 
-- [G6/ONE connectivity troubleshooting](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)
-- [G7/ONE+/Stelo troubleshooting](https://navid200.github.io/xDrip/docs/Dexcom/G7_Troubleshooting.html)
-- [Problem when starting a new sensor](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html)
-- Full list: see **Troubleshooting** on the [xDrip Dexcom page](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+- [G6/ONE 연결 문제 해결](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)
+- [G7/ONE+/Stelo 문제 해결](https://navid200.github.io/xDrip/docs/Dexcom/G7_Troubleshooting.html)
+- [새 센서를 시작할 때의 문제](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html)
+- 전체 목록: [xDrip Dexcom 페이지](https://navid200.github.io/xDrip/docs/Dexcom_page.html)의 **Troubleshooting**을 참조하십시오.
 
 ## Libre 1
 
-- Setup your NFC to Bluetooth bridge in xDrip
+- xDrip에서 NFC-블루투스 브리지 설정하기
     
     → Hamburger Menu (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
 
-- In Bluetooth Settings set the checkboxes exactly as in the screenshots below (5)
+- Bluetooth Settings에서 아래 스크린샷과 정확히 같게 체크박스를 설정하십시오 (5)
     
-    - Disable watchdogs as they will reset the phone Bluetooth and interrupt your pump connection.
+    - Watchdog 옵션은 끄십시오. 휴대폰의 블루투스를 초기화하여 펌프 연결을 끊기 때문입니다.
     
-    ![xDrip Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+    ![xDrip Libre 블루투스 설정 1](../images/xDrip_Libre_BTSettings1.png)
 
-- You can try to enable the following settings (7)
+- 다음 설정을 켜 볼 수 있습니다 (7)
     
     - Use scanning
     - Trust Auto-Connect
     - Use Background Scans
 
-- If you easily lose connection to the bridge or have difficulties recovering connection, **DISABLE THEM** (8).
+- 브리지 연결이 쉽게 끊기거나 연결 복구가 어렵다면 **이 설정을 끄십시오** (8).
     
-    ![xDrip Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+    ![xDrip Libre 블루투스 설정 2](../images/xDrip_Libre_BTSettings2.png)
 
-- Leave all other options disabled unless you know why you want to enable them.
+- 켜야 하는 이유를 알지 못한다면 다른 옵션은 모두 꺼 두십시오.
     
-    ![xDrip Libre Bluetooth Settings 3](../images/xDrip_Libre_BTSettings3.png)
+    ![xDrip Libre 블루투스 설정 3](../images/xDrip_Libre_BTSettings3.png)
 
-### Libre smart reader battery level
+### Libre smart reader 배터리 잔량
 
-- Battery level of bridges such as MiaoMiao and Bubble can be displayed in AAPS (not Blucon).
-- Details can be found on [screenshots page](#screens-sensor-level-battery).
+- MiaoMiao와 Bubble 같은 브리지의 배터리 잔량을 AAPS에 표시할 수 있습니다(Blucon은 안 됨).
+- 자세한 내용은 [스크린샷 페이지](#screens-sensor-level-battery)에서 볼 수 있습니다.
 
-### Connect Libre Transmitter & start sensor
+### Libre 트랜스미터 연결 & 센서 시작
 
-- If your sensor requires it (Libre 2 EU and Libre 1 US) install the latest out of process algorithm.
+- 센서에 필요하다면(Libre 2 EU 및 Libre 1 US) 최신 out of process algorithm을 설치하십시오.
 
-- Your sensor must be already started using the vendor app or the reader (xDrip cannot start or stop Libre sensors).
+- 센서는 제조사 앱이나 리더기로 이미 시작되어 있어야 합니다(xDrip은 Libre 센서를 시작하거나 중지할 수 없습니다).
 
-- Set the data source to Libre Bluetooth.
+- 데이터 소스를 Libre Bluetooth로 설정하십시오.
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre Bluetooth in Hardware Data source (3)
+    → Hamburger Menu (1) → Settings (2) → Hardware Data source에서 Libre Bluetooth 선택 (3)
     
-    ![xDrip Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+    ![xDrip Libre 트랜스미터 & 센서 시작 1](../images/xDrip_Libre_Transmitter01.png)
 
-- Scan Bluetooth and connect the bridge.
+- 블루투스를 검색하여 브리지를 연결하십시오.
     
     → Hamburger Menu (1) → Scan Bluetooth (2) → Scan (3)
     
-    - If xDrip can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
+    - xDrip이 브리지를 찾지 못하면 브리지가 제조사 앱에 연결되어 있지 않은지 확인하십시오. 브리지를 충전기에 연결하고 초기화하십시오.
     
-    ![xDrip Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+    ![xDrip Libre 트랜스미터 & 센서 시작 2](../images/xDrip_Libre_Transmitter02.png)
 
-- Start the sensor in xDrip.
+- xDrip에서 센서를 시작하십시오.
     
-        {admonition} Safety warning
+        {admonition} 안전 경고
         :class: warning
-        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
+        1시간 준비 시간이 끝나기 전에는 센서 데이터를 사용하지 마십시오. 값이 매우 높게 나올 수 있으며 AAPS가 잘못된 결정을 내리게 할 수 있습니다.
     
-    → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
+    → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → 리더기나 제조사 앱으로 센서를 시작한 정확한 시간을 설정하십시오. 오늘 시작하지 않았다면 "Not Today"를 선택하십시오 (4).
 
-![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip Libre 트랜스미터 및 센서 시작 3](../images/xDrip_Libre_Transmitter03.png)
 
 (xdrip-libre2-patched-app)=
 
-## Libre 2 patched app
+## Libre 2 패치된 앱
 
-- Set the data source to Libre patched app.
+- 데이터 소스를 Libre patched app으로 설정하십시오.
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre (patched App) in Hardware Data source (3)
+    → Hamburger Menu (1) → Settings (2) → Hardware Data source에서 Libre (patched App) 선택 (3)
     
-    ![xDrip Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
+    ![xDrip Libre 패치된 앱 1](../images/xDrip_Libre_Patched01.png)
 
-- You can add `BgReading:d,xdrip libre_receiver:v` under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
+- Less Common Settings->Extra Logging Settings->Extra tags for logging에 `BgReading:d,xdrip libre_receiver:v`를 추가할 수 있습니다. 그러면 문제 해결을 위한 추가 오류 메시지가 로그에 기록됩니다.
 
-![xDrip LibreLink logging](../images/Libre2_Tags.png)
+![xDrip LibreLink 로그 기록](../images/Libre2_Tags.png)

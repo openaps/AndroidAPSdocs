@@ -2,13 +2,13 @@
 
 If not already set up, then download [Juggluco](https://www.juggluco.nl/Juggluco/download.html).
 
-Follow the [instructions](https://www.juggluco.nl/Jugglucohelp/introhelp.html) to connect your sensor.
+Prijunkite jutiklį pagal [instrukcijas](https://www.juggluco.nl/Jugglucohelp/introhelp.html).
 
-## Basic settings for all CGM systems
+## Pagrindiniai nustatymai visoms NGJ sistemoms
 
 ### Disable Nightscout uploader
 
-You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Neleiskite jokiai kitai programėlei siųsti duomenų (gliukozės ir terapijos įrašų) į Nightscout.
 
 Disable any active uploader to Nightscout in Juggluco.
 
@@ -18,11 +18,11 @@ Disable any active uploader to Nightscout in Juggluco.
 
 ## Juggluco to AAPS
 
-Juggluco can send blood glucose directly to AAPS, enabling SMBs always if you are using a [trusted sensor](#GettingStarted-TrustedBGSource).
+Juggluco gali siųsti gliukozės kiekio kraujyje duomenis tiesiogiai į AAPS ir, jei naudojate [patikimą jutiklį](#GettingStarted-TrustedBGSource), leidžia visada naudoti SMB.
 
-When using a Libre 2/2+/3/3+ sensor, minute-by-minute readings will be sent to AAPS but will not trigger minute-by-minute calculations in AAPS.
+Naudojant Libre 2/2+/3/3+ jutiklį, kas minutę gaunami rodmenys bus siunčiami į AAPS, tačiau dėl to AAPS neatliks skaičiavimų kas minutę.
 
-Enable xDrip broadcast in Juggluco (do not enable Patched Libre), confirm and save the AAPS package information. Select the xDrip BG data source in AAPS.
+Enable xDrip broadcast in Juggluco (do not enable Patched Libre), confirm and save the AAPS package information. AAPS kaip glikemijos šaltinį pasirinkite xDrip.
 
 Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS.
 
@@ -30,12 +30,12 @@ Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS.
 
 (juggluco-to-xdrip)=
 
-## Juggluco to xDrip
+## Iš Juggluco į xDrip
 
-Juggluco can send blood glucose to xDrip which will then send them to AAPS.
+Juggluco gali siųsti gliukozės duomenis į xDrip, o xDrip juos perduos į AAPS.
 
-Enable Patched Libre in Juggluco (do not enable xDrip broadcast), confirm and save the dexdrip package information. Select the xDrip BG data source in AAPS.
+Enable Patched Libre in Juggluco (do not enable xDrip broadcast), confirm and save the dexdrip package information. AAPS kaip glikemijos šaltinį pasirinkite xDrip.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary. When using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute readings to 5-minute readings and [also smooth](#libre2-value-smoothing-raw-values) them.
+Jei reikia, AAPS taikykite pakankamą [glodinimą](./SmoothingBloodGlucoseData.md). Naudojant Libre 2/2+/3/3+ jutiklį, xDrip kas minutę gaunamus rodmenis suvidurkina į 5 minučių rodmenis ir [taip pat juos glodina](#libre2-value-smoothing-raw-values).
 
-![Juggluco to xDrip](../images/juggluco/Juggluco-xDrip+.png)
+![Iš Juggluco į xDrip](../images/juggluco/Juggluco-xDrip+.png)

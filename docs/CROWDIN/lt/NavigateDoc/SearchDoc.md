@@ -1,25 +1,25 @@
-# Search the documentation
+# Paieška dokumentacijoje
 
-The documentation contains a lot of information. If you are looking for a specific topic, term or setting, using the search feature is often faster than browsing through the menu.
+Dokumentacijoje yra labai daug informacijos. Jei ieškote konkrečios temos, termino ar nustatymo, paieška dažnai yra greitesnė nei naršymas meniu.
 
-## How to search
+## Kaip ieškoti
 
-The search box is located at the top of the navigation panel on the left side of the screen.
+Paieškos laukelis yra naršymo skydelio viršuje, kairėje ekrano pusėje.
 
 ```{note}
-On smaller screens (such as a phone) the navigation panel is hidden. Tap the menu (☰) icon in the top left corner to open it and reveal the search box.
+Mažesniuose ekranuose (pvz., telefone) naršymo skydelis paslėptas. Bakstelėkite meniu (☰) piktogramą viršutiniame kairiajame kampe, kad jį atidarytumėte ir pamatytumėte paieškos laukelį.
 ```
 
-1. Type one or more keywords into the search box.
-2. Press `Enter` or tap the search icon.
-3. A results page opens, listing every page where your keywords appear. Click a result to jump to the matching page.
+1. Į paieškos laukelį įveskite vieną ar daugiau raktinių žodžių.
+2. Paspauskite `Enter` arba bakstelėkite paieškos piktogramą.
+3. Atsidaro rezultatų puslapis su visais puslapiais, kuriuose yra jūsų raktiniai žodžiai. Spustelėkite rezultatą, kad pereitumėte į atitinkamą puslapį.
 
-## Tips for better results
+## Patarimai, kaip rasti geriau
 
-- Use specific terms (for example `temp target` or `autosens`) rather than full sentences.
-- Searching with several keywords returns the pages containing those words. Start broad and add keywords to narrow the results.
-- The search only covers the language and version of the documentation you are currently reading. If you cannot find something, try switching to the English version, which is the most complete (see [Change language and version](./ChangeLanguageVersion.md)).
+- Naudokite konkrečius terminus (pvz., `temp target` arba `autosens`), o ne visus sakinius.
+- Ieškant pagal kelis raktinius žodžius, rodomi puslapiai, kuriuose yra šie žodžiai. Pradėkite nuo bendrų žodžių ir pridėkite daugiau raktinių žodžių, kad susiaurintumėte rezultatus.
+- Paieška apima tik tą dokumentacijos kalbą ir versiją, kurią dabar skaitote. Jei ko nors nerandate, pabandykite pereiti prie anglų kalbos versijos, nes ji yra pilniausia (žr. [Kalbos ir versijos keitimas](./ChangeLanguageVersion.md)).
 
 ```{note}
-The search index is built automatically. Very recently added content may take some time to become searchable.
+Paieškos indeksas sukuriamas automatiškai. Labai neseniai pridėtas turinys gali būti randamas paieškoje tik po kurio laiko.
 ```

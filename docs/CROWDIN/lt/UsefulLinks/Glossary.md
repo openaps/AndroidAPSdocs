@@ -1,151 +1,151 @@
 # Terminų žodynas
 
-**AAPS** = AndroidAPS is the name of the Android app.
+**AAPS** = AndroidAPS – tai Android programėlės pavadinimas.
 
-**AAPSClient** = the follower app for caregivers. On a follower phone it follows a user’s **AAPS** through the user’s **Nightscout** site and, once paired with the **AAPS** phone, controls it remotely. Not to be confused with **NSClient**. Further info → [Wiki - 'The AAPSClient app'](../RemoteFeatures/AapsClient.md) and [Master ↔ Client control](#client-master-control).
+**AAPSClient** = sekėjo programėlė prižiūrintiems asmenims. Sekėjo telefone ji seka naudotojo **AAPS** per naudotojo **Nightscout** svetainę, o susieta su **AAPS** telefonu – nuotoliniu būdu jį valdo. Nepainiokite su **NSClient**. Daugiau informacijos → [Wiki – „Programėlė AAPSClient“](../RemoteFeatures/AapsClient.md) ir [Pagrindinio įrenginio ↔ kliento valdymas](#client-master-control).
 
-**Activity** = Insulin activity, representing the speed of decay of IOB. See [Wiki - 'DIA'](#Config-Builder-insulin-dia) and the related **BGI**.
+**Aktyvumas** (Activity) = insulino aktyvumas, kuris rodo, kaip greitai mažėja AIO. Žr. [Wiki – „IVT“](#Config-Builder-insulin-dia) ir susijusią **BGI**.
 
-**AID** = Automated Insulin Delivery. The term generally used in clinical practice and research for a system which automatically adjusts insulin delivery using **CGM** data. **APS** and **closed loop** mean the same thing → see also **OS-AID**.
+**AID** = Automated Insulin Delivery, automatinis insulino tiekimas. Terminas, kuris klinikinėje praktikoje ir moksliniuose tyrimuose dažniausiai vartojamas sistemai, automatiškai keičiančiai insulino tiekimą pagal **NGJ** duomenis. **APS** ir **uždaras ciklas** reiškia tą patį → taip pat žr. **OS-AID**.
 
-**APS** = Artificial Pancreas System → see also **AID**.
+**APS** = Artificial Pancreas System, dirbtinės kasos sistema → taip pat žr. **AID**.
 
-**AMA** = Advanced Meal Assist. An algorithm which allows **AAPS** to increase the user’s basal more aggressively after a meal bolus. Further info → [Wiki - 'Advanced Meal Assist (AMA)'](#Open-APS-features-advanced-meal-assist-ama).
+**AMA** = Advanced Meal Assist (pažangi pagalba valgant). Algoritmas, kuris leidžia **AAPS** po valgio boluso agresyviau padidinti naudotojo valandinę bazę. Daugiau informacijos → [Wiki – „Pažangi pagalba valgant (AMA)“](#Open-APS-features-advanced-meal-assist-ama).
 
-**Adjustment Factor** = used within **DynamicISF** and is a value set within a user's **Settings** between 1% and 300%. This acts as a multiplier on the **TDD** value. See [Wiki - DynamicISF adjustment factor](#dyn-isf-adjustment-factor)
+**Derinimo faktorius** (Adjustment Factor) = naudojamas **DynamicISF**; tai reikšmė nuo 1 % iki 300 %, nustatoma naudotojo **Nustatymuose**. Jis veikia kaip **BPD** reikšmės daugiklis. Žr. [Wiki – Dinaminio JIF derinimo faktorius](#dyn-isf-adjustment-factor)
 
-**Android Auto** = a system used to host certain functions of an Android smartphone’s features, including **AAPS**, within a car's display. Further info → [Wiki - 'android auto'](../RemoteFeatures/AndroidAuto.md).
+**Android Auto** = sistema, kuri automobilio ekrane rodo kai kurias Android išmaniojo telefono funkcijas, įskaitant **AAPS**. Daugiau informacijos → [Wiki – „Android Auto“](../RemoteFeatures/AndroidAuto.md).
 
-**APK** = Android application Package. A software installation file. Further info → [Wiki - 'Building APK'](../SettingUpAaps/BuildingAaps.md).
+**APK** = Android application Package (Android programėlės paketas). Programinės įrangos diegimo failas. Daugiau informacijos → [Wiki – „AAPS kūrimas“](../SettingUpAaps/BuildingAaps.md).
 
-**Autosens** = calculation of sensitivity to insulin over a 24-hour and an 8-hour window etc. Further info → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Autosens** = jautrumo insulinui apskaičiavimas per 24 valandų ir 8 valandų laikotarpį ir pan. Daugiau informacijos → [DIABETTECH – **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
-**Azure** = cloud computing platform to host **Nightscout** web app → see also **Nightscout**.
+**Azure** = debesų kompiuterijos platforma **Nightscout** žiniatinklio programai talpinti → taip pat žr. **Nightscout**.
 
-**BAT** = status light for low pump battery, shown in the status row of **AAPS'** main screen → see also **CAN** / **RES** / **SEN**.
+**BAT** = būklės indikatorius, rodantis senkančią pompos bateriją **AAPS** pagrindinio ekrano būsenos eilutėje → taip pat žr. **CAN** / **RES** / **SEN**.
 
-**BG** = blood glucose.
+**BG** = kraujo gliukozė (KG).
 
-**BGI** = blood glucose impact. The degree to which **BG** 'should' rise or fall based on insulin activity alone.
+**BGI** = blood glucose impact, glikemijos įtaka (KGĮ). Kiek **KG** „turėtų“ pakilti arba nukristi vien dėl insulino veikimo.
 
-**BG source** = An AAPS setting for configuring the source for blood glucose data. See [Wiki - BG Source](#Config-Builder-bg-source)
+**BG source** = glikemijos šaltinis: AAPS nustatymas, kuriuo pasirenkamas kraujo gliukozės duomenų šaltinis. Žr. [Wiki – Glikemijos šaltinis](#Config-Builder-bg-source)
 
-**Bridge** = an additional device transforming **FGM** to **CGM**.
+**Tiltas** (Bridge) = papildomas įrenginys, kuris **FGM** paverčia **CGM**.
 
-**BR** = Basal Rate. The amount of insulin in a given time block to maintain **BG** at a stable level. → see also **IC** / **ISF**.
+**BR** = Basal Rate, valandinė bazė. Insulino kiekis per tam tikrą laiko intervalą, kad **KG** išliktų stabili. → taip pat žr. **IC** / **ISF**.
 
-**BYODA** = Build Your Own Dexcom App. A way to generate the user’s own Dexcom App for reading out the sensor data Dexcom G6.
+**BYODA** = Build Your Own Dexcom App (susikurkite savo Dexcom programėlę). Būdas susikurti savo Dexcom programėlę, kuri nuskaito Dexcom G6 jutiklio duomenis.
 
-**CAGE** = Cannula AGE. Displayed on **AAPS'** main screen and in Nightscout, based on the user's **Prime/Fill** careportal entries → see also **Nightscout**.
+**CAGE** = Cannula AGE, kaniulės amžius. Rodomas **AAPS** pagrindiniame ekrane ir Nightscout, remiantis naudotojo terapijos įrašais **Užpildymas** → taip pat žr. **Nightscout**.
 
-**CAN** = status light for overdue cannula change, shown in the status row of **AAPS'** main screen → see also **BAT** / **RES** / **SEN**.
+**CAN** = būklės indikatorius, rodantis pavėluotą kaniulės keitimą **AAPS** pagrindinio ekrano būsenos eilutėje → taip pat žr. **BAT** / **RES** / **SEN**.
 
-**CGM** = Continuous Glucose Monitor → see also **FGM**.
+**CGM** = Continuous Glucose Monitor, nuolatinis gliukozės jutiklis (NGJ) → taip pat žr. **FGM**.
 
-**Closed Loop** = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an **AAPS’s** algorithm and the user’s **Profile** settings without requiring the user’s approval. Further info → [Wiki - 'closed loop'](#KeyAapsFeatures-ClosedLoop) and see also **HCL** / **FCL**.
+**Uždaras ciklas** (Closed Loop) = sistema, kuri automatiškai keičia naudotojo valandinę bazę pagal **AAPS** algoritmą ir naudotojo **profilio** nustatymus, nereikalaudama naudotojo patvirtinimo. Daugiau informacijos → [Wiki – „Uždaras ciklas“](#KeyAapsFeatures-ClosedLoop) ir taip pat žr. **HCL** / **FCL**.
 
-**COB** = Carbs On Board. This is the amount of carbohydrates currently available for the user's digestion → see also IOB.
+**COB** = Carbs On Board, aktyvūs angliavandeniai organizme (AAO). Tai angliavandenių kiekis, kurį naudotojo organizmas dar turi suvirškinti → taip pat žr. IOB.
 
-**CSF** =Carbs Sensitivity Factor. i.e. how much does the user’s **BG** increase for 1g of carbs absorbed.
+**CSF** = Carbs Sensitivity Factor, jautrumo angliavandeniams faktorius. T. y. kiek pakyla naudotojo **KG**, kai įsisavinamas 1 g angliavandenių.
 
-**DIA** = Duration of Insulin Action. Further info → [Wiki - 'DIA'](#Config-Builder-insulin-dia) and see also → [DIABETTECH - 'DIA'](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/).
+**DIA** = Duration of Insulin Action, insulino veikimo trukmė (IVT). Daugiau informacijos → [Wiki – „IVT“](#Config-Builder-insulin-dia) ir taip pat žr. → [DIABETTECH – „DIA“](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/).
 
-**DST** = Daylight Saving Time. See [Wiki - Timezone Change and Daylight Saving](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
+**DST** = Daylight Saving Time, vasaros laikas. Žr. [Wiki – Laiko juostos keitimas ir vasaros laikas](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
 
-**Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s **TDD** and **BG**.
+**Dynamic ISF (arba DynISF)** = dinaminis JIF: **AAPS** funkcija, kuri dinamiškai keičia jautrumo insulinui faktorių (**JIF**) pagal naudotojo **BPD** ir **KG**.
 
-**eCarbs** = extended Carbs. Carbs split up over several hours (e.g. to cover fat/protein), which lets **AAPS** spread the insulin like an extended bolus. Further info → [Wiki - 'Extended Carbs'](../DailyLifeWithAaps/ExtendedCarbs.md)
+**eCarbs** = extended Carbs, ištęsti angliavandeniai (i-AV). Angliavandeniai, paskirstyti per kelias valandas (pvz., riebalams ar baltymams padengti), kad **AAPS** galėtų paskirstyti insuliną kaip ištęstą bolusą. Daugiau informacijos → [Wiki – „Ištęsti angliavandeniai“](../DailyLifeWithAaps/ExtendedCarbs.md)
 
-**FCL** = Full Closed Loop. A loop which needs no mealtime input from the user: no carb counting and no meal bolus. Further info → [Wiki - 'full closed loop'](../AdvancedOptions/FullClosedLoop.md) and see also **HCL**.
+**FCL** = Full Closed Loop, visiškai uždaras ciklas. Ciklas, kuriam naudotojui nereikia nieko įvesti valgant: nereikia skaičiuoti angliavandenių ir leisti boluso valgiui. Daugiau informacijos → [Wiki – „Visiškai uždaras ciklas“](../AdvancedOptions/FullClosedLoop.md) ir taip pat žr. **HCL**.
 
-**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. Further info → [Wiki - 'BG source'](#Config-Builder-bg-source) and see also 'CGM'.
+**FGM** = Flash Glucose Monitor, periodiškai skenuojamas gliukozės jutiklis, pvz., Abbott Freestyle Libre. Daugiau informacijos → [Wiki – „Glikemijos šaltinis“](#Config-Builder-bg-source) ir taip pat žr. „CGM“.
 
-**git** = a tool used to store and download the **AAPS’** source code.
+**git** = įrankis **AAPS** šaltinio kodui saugoti ir atsisiųsti.
 
-**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. Further info → [Wiki - 'update APK'](../Maintenance/UpdateToNewVersion.md).
+**GitHub** = žiniatinklio paslauga, kurioje laikomas **AAPS** šaltinio kodas ir jo versijų valdymas (failų pakeitimų sekimas ir darbo su jais koordinavimas, ypač komandose). Joje galima ir sukurti programėlę. Ji taip pat reikalinga **APK** atnaujinimams. Daugiau informacijos → [Wiki – „APK atnaujinimas“](../Maintenance/UpdateToNewVersion.md).
 
-**Glimp** = an app to collect values from Freestyle Libre.
+**Glimp** = programėlė Freestyle Libre reikšmėms rinkti.
 
-**HCL (or Hybrid Closed Loop)** = a loop which automates insulin delivery between meals, but still requires the user to bolus for meals. Nearly every system in everyday use, including **AAPS**, is a hybrid closed loop → see also **FCL** / **Closed Loop**.
+**HCL (arba Hybrid Closed Loop)** = hibridinis uždaras ciklas: ciklas, kuris automatizuoja insulino tiekimą tarp valgių, bet naudotojas valgiui vis tiek turi susileisti bolusą. Beveik visos kasdien naudojamos sistemos, įskaitant **AAPS**, yra hibridiniai uždari ciklai → taip pat žr. **FCL** / **Uždaras ciklas** (Closed Loop).
 
-**IC (I:C, ICR, CR, carb ratio)** = Insulin to Carb ratio. Note that this is conventionally g/U despite the acronym suggesting inverse.
+**IC (I:C, ICR, CR, carb ratio)** = Insulin to Carb ratio, insulino ir angliavandenių santykis (IA). Atkreipkite dėmesį: įprastai jis nurodomas g/V, nors santrumpa rodo atvirkščiai.
 
-**IOB** = Insulin On Board. Insulin active in the user’s body. See [Wiki - Insulin on Board](#aaps-screens-iob)
+**IOB** = Insulin On Board, aktyvus insulinas organizme (AIO). Naudotojo organizme veikiantis insulinas. Žr. [Wiki – Aktyvus insulinas organizme](#aaps-screens-iob)
 
-**ISF** = Insulin Sensitivity Factor. The expected decrease in BG as a result of one unit of insulin. Unit is either mg/dL/U or mmol/L/U. These are not equivalent without a conversion!
+**ISF** = Insulin Sensitivity Factor, jautrumo insulinui faktorius (JIF). Kiek turėtų sumažėti KG dėl vieno insulino vieneto. Vienetas yra mg/dL/V arba mmol/l/V. Be perskaičiavimo jie nėra lygiaverčiai!
 
-**Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuild).
+**Raktų saugykla (keystore, JKS)** = Java Key Store: užšifruotas failas, kuriame saugomi jūsų asmeniniai kūrėjo sertifikatai ir raktai, reikalingi **AAPS** kūrimui (ir pakartotiniam kūrimui).
 
-**LGS** = Low Glucose Suspend. See [Wiki - Low Glucose Suspend](#KeyAapsFeatures-LGS)
+**LGS** = Low Glucose Suspend, stabdymas esant žemai glikemijai. Žr. [Wiki – Stabdymas esant žemai glikemijai](#KeyAapsFeatures-LGS)
 
-**LineageOS** = free and open-source operating system for smartphones etc. When using Accu-Chek Combo see [Wiki - Combo pump](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md).
+**LineageOS** = nemokama atvirojo kodo operacinė sistema išmaniesiems telefonams ir kt. Jei naudojate Accu-Chek Combo, žr. [Wiki – Combo pompa](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md).
 
-**Log files** = **AAPS’** records of the user's actions (useful for troubleshooting and debugging). Further info → [Wiki - 'log files'](../GettingHelp/AccessingLogFiles.md).
+**Žurnalų failai** (log files) = **AAPS** įrašai apie naudotojo veiksmus (naudingi ieškant ir šalinant triktis). Daugiau informacijos → [Wiki – „Žurnalų failų gavimas“](../GettingHelp/AccessingLogFiles.md).
 
-**maxIOB** = maximum total IOB. This is a safety feature and prevents **AAPS** delivering insulin over the user’s settings. Further info → [Wiki - 'Maximum total IOB OpenAPS can’t go over'](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
+**maxIOB** = didžiausias bendras AIO. Tai saugos funkcija: ji neleidžia **AAPS** suleisti daugiau insulino, nei leidžia naudotojo nustatymai. Daugiau informacijos → [Wiki – „Didžiausias bendras AIO, kurio OpenAPS negali viršyti“](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
 
-**min_5m_carbimpact** = safety feature that is a calculation of default carb decay when carb absorption cannot be determined based on the user’s blood’s reactions. Further info → [Wiki - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
+**min_5m_carbimpact** = saugos funkcija: numatytasis angliavandenių įsisavinimo greitis, naudojamas tada, kai įsisavinimo negalima nustatyti pagal naudotojo kraujo gliukozės pokyčius. Daugiau informacijos → [Wiki – „min_5m_carbimpact“](#Preferences-min_5m_carbimpact).
 
-**Nightscout** = open source project to access and report **CGM** data. The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
+**Nightscout** = atvirojo kodo projektas **NGJ** duomenims pasiekti ir ataskaitoms kurti. Centrinė naudotojo **AAPS** duomenų saugykla. Joje galima kurti ataskaitas apie naudotojo ankstesnius **Nightscout** duomenis, pvz., numatomą HbA1c, laiką tikslo intervale, arba ieškoti dėsningumų duomenyse pagal procentilių diagramą ir kt.
 
-**Nightscout** → see also **Nightscout Reporter**. This is particularly useful for parents following their child's diabetes management.
+**Nightscout** → taip pat žr. **Nightscout Reporter**. Tai ypač naudinga tėvams, kurie seka savo vaiko diabeto valdymą.
 
-**Nightscout Reporter Tool** = a tool which generates PDFs reports from Nightscout web app data. See 'Nightscout Reporter', 'NS Reporter' @ Facebook.
+**Nightscout Reporter Tool** = įrankis, kuris iš Nightscout žiniatinklio programos duomenų sukuria PDF ataskaitas. Žr. „Nightscout Reporter“, „NS Reporter“ Facebook tinkle.
 
-**NSClient** (**NSClientV3**) = the **AAPS** plugin that synchronizes data with **Nightscout** (**Configuration** → **Communication**). It is not the same as **AAPSClient**, the follower app. Further info → [Wiki - 'NSClient'](#Preferences-nsclient).
+**NSClient** (**NSClientV3**) = **AAPS** įskiepis, kuris sinchronizuoja duomenis su **Nightscout** (**Konfigūracija** → **Ryšys**). Tai ne tas pats kaip **AAPSClient** – sekėjo programėlė. Daugiau informacijos → [Wiki – „NSClient“](#Preferences-nsclient).
 
-**OpenAPS** = Open Artificial Pancreas System, the predecessor project and basis of AAPS.
+**OpenAPS** = Open Artificial Pancreas System (atviroji dirbtinės kasos sistema) – ankstesnis projektas, kuriuo grindžiama AAPS.
 
-**Open Loop system** = an **AAPS** feature that will recommend adjustments and which must be performed manually by the user on **AAPS**. Further info → [Wiki - 'Open Loop'](#KeyAapsFeatures-OpenLoop).
+**Atviro ciklo sistema** (Open Loop system) = **AAPS** funkcija, kuri rekomenduoja pakeitimus, o naudotojas juos turi atlikti **AAPS** rankiniu būdu. Daugiau informacijos → [Wiki – „Atviras ciklas“](#KeyAapsFeatures-OpenLoop).
 
-**Oref0 / Oref1** = sensitivity detection and "reference design implementation version 0/1". It is the key algorithm behind OpenAPS. Further info → [Wiki - 'sensitivity detection'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
+**Oref0 / Oref1** = jautrumo nustatymas ir „reference design implementation version 0/1“ (etaloninio sprendimo 0/1 versija). Tai pagrindinis algoritmas, kuriuo grindžiama OpenAPS. Daugiau informacijos → [Wiki – „Jautrumo nustatymas“](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
 
-**OS-AID** = Open-Source Automated Insulin Delivery. An **AID** system built from open-source software, such as **AAPS**, **OpenAPS**, Loop or Trio. These systems are not formally approved by health bodies (FDA, NHS etc.) → see also **AID**.
+**OS-AID** = Open-Source Automated Insulin Delivery, atvirojo kodo automatinis insulino tiekimas. **AID** sistema, sukurta iš atvirojo kodo programinės įrangos, pvz., **AAPS**, **OpenAPS**, Loop arba Trio. Šių sistemų oficialiai nėra patvirtinusios sveikatos institucijos (FDA, NHS ir kt.) → taip pat žr. **AID**.
 
-**Peak time** = time of maximum effect of insulin given. Further info → [Wiki - 'Duration of insulin action (DIA) and peak'](#Config-Builder-insulin-dia).
+**Piko laikas** (Peak time) = laikas, kai suleistas insulinas veikia stipriausiai. Daugiau informacijos → [Wiki – „Insulino veikimo trukmė (IVT) ir pikas“](#Config-Builder-insulin-dia).
 
-**PH** = Pump History. This can be accessed in **AAPS’** treatments history: open the **menu** (☰) at the top left of the main screen and select **Treatments**.
+**PH** = Pump History, pompos istorija. Ją galima peržiūrėti **AAPS** terapijos istorijoje: atidarykite **meniu** (☰) pagrindinio ekrano viršuje kairėje ir pasirinkite **Terapija**.
 
-**Predictions** = predictions for **BG** in the future based on different calculations. Further info → [Wiki - 'prediction lines'](#aaps-screens-prediction-lines).
+**Prognozės** (Predictions) = būsimos **KG** prognozės, apskaičiuotos skirtingais būdais. Daugiau informacijos → [Wiki – „Prognozių linijos“](#aaps-screens-prediction-lines).
 
-**Profile** = the user’s basic treatment settings (basal rate, **DIA**, **IC**, **ISF**, **BG** target). **AAPS** only uses profiles created within **AAPS** (**Manage** → **Profile**), but **Nightscout** **Profiles** can be copied (synchronised) to **AAPS**. Further info → [Wiki - 'Your AAPS profile'](../SettingUpAaps/YourAapsProfile.md).
+**Profilis** (Profile) = pagrindiniai naudotojo gydymo nustatymai (valandinė bazė, **IVT**, **IA**, **JIF**, **KG** tikslas). **AAPS** naudoja tik profilius, sukurtus **AAPS** (**Valdymas** → **Profilis**), bet **Nightscout** **profilius** galima nukopijuoti (sinchronizuoti) į **AAPS**. Daugiau informacijos → [Wiki – „Jūsų AAPS profilis“](../SettingUpAaps/YourAapsProfile.md).
 
-**Profile switch** = (temporary) switch of the user’s **Profile** to a different **Profile** saved within **AAPS**.
+**Profilio keitimas** (Profile switch) = (laikinas) naudotojo **profilio** pakeitimas kitu **AAPS** išsaugotu **profiliu**.
 
-**Profile Percentage** = a (temporary) percentage increase or decrease applied to a user’s **Profile** for a selected time period.
+**Profilio procentas** (Profile Percentage) = (laikinas) naudotojo **profilio** padidinimas arba sumažinimas procentais pasirinktam laikotarpiui.
 
-**RES** = status light for overdue reservoir change, shown in the status row of **AAPS'** main screen → see also **BAT** / **CAN** / **SEN**.
+**RES** = būklės indikatorius, rodantis pavėluotą rezervuaro keitimą **AAPS** pagrindinio ekrano būsenos eilutėje → taip pat žr. **BAT** / **CAN** / **SEN**.
 
-**RileyLink** = open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication.
+**RileyLink** = atvirojo kodo aparatinis įrenginys, kuris sujungia Bluetooth Low Energy (BLE) su 916 MHz (naudojamas senoms Medtronic pompoms) arba 433 MHz (naudojamas Omnipod Eros pompoms) belaidžiu ryšiu.
 
-**SAGE** = sensor age. This is displayed on the main screen of **AAPS** and in **Nightscout**, based on the user's **Sensor Insert** careportal entries → see also **Nightscout**.
+**SAGE** = Sensor AGE, jutiklio amžius. Rodomas **AAPS** pagrindiniame ekrane ir **Nightscout**, remiantis naudotojo terapijos įrašais **Jutiklio įvedimas** → taip pat žr. **Nightscout**.
 
-**SEN** = status light for overdue sensor change, shown in the status row of **AAPS'** main screen → see also **BAT** / **CAN** / **RES**.
+**SEN** = būklės indikatorius, rodantis pavėluotą jutiklio keitimą **AAPS** pagrindinio ekrano būsenos eilutėje → taip pat žr. **BAT** / **CAN** / **RES**.
 
-**Sensitivity detection** = calculation of sensitivity to insulin as a result of exercise, hormones etc. see also → [DIABETTECH - 'Autosens'](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Jautrumo nustatymas** (Sensitivity detection) = jautrumo insulinui apskaičiavimas, kai jis pasikeičia dėl sporto, hormonų ir pan. taip pat žr. → [DIABETTECH – „Autosens“](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
-**Sensor noise** = a term used to describe the unstable **CGM’s** readings leading to "jumping" **BG** values. Further info → [Wiki - 'Smoothing blood glucose data'](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+**Jutiklio triukšmas** (Sensor noise) = terminas, kuriuo apibūdinami nestabilūs **NGJ** rodmenys, dėl kurių **KG** reikšmės „šokinėja“. Daugiau informacijos → [Wiki – „Gliukozės duomenų glodinimas“](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-**SMB** = Super Micro Bolus. An **AAPS** feature for faster insulin delivery in order to adjust **BG**. Further info → [Wiki - '**SMB**'](#Open-APS-features-super-micro-bolus-smb) and see also **UAM**.
+**SMB** = Super Micro Bolus, supermikrobolusas. **AAPS** funkcija, kuri greičiau suleidžia insuliną, kad pakoreguotų **KG**. Daugiau informacijos → [Wiki – „**SMB**“](#Open-APS-features-super-micro-bolus-smb) ir taip pat žr. **UAM**.
 
-**Super bolus** = shift of basal to bolus insulin for faster **BG** adjustment.
+**Superbolusas** (Super bolus) = valandinės bazės insulino perkėlimas į bolusą, kad **KG** būtų pakoreguota greičiau.
 
-**TBB** = total base basal (sum of basal rate within 24 hours) → see also **TBR** / **TDD**.
+**TBB** = total base basal, bendra bazinė dozė (valandinės bazės suma per 24 valandas) → taip pat žr. **TBR** / **TDD**.
 
-**TBR** = temporary basal rate → see also **TBB** / **TDD**.
+**TBR** = temporary basal rate, laikina valandinė bazė → taip pat žr. **TBB** / **TDD**.
 
-**TDD** = total daily dose (bolus + basal per day) → see also **TBB** / **TBR**.
+**TDD** = total daily dose, bendra paros dozė (BPD) (bolusai + valandinė bazė per parą) → taip pat žr. **TBB** / **TBR**.
 
-**TT** = temporary target: temporary increase/decrease of the user’s **BG** target (range) e.g. for eating or sport activities. Further info → [Wiki - 'temp targets'](../DailyLifeWithAaps/TempTargets.md).
+**TT** = temporary target, laikinas tikslas (LT): laikinai padidintas arba sumažintas naudotojo **KG** tikslas (intervalas), pvz., valgiui ar sportui. Daugiau informacijos → [Wiki – „Laikini tikslai“](../DailyLifeWithAaps/TempTargets.md).
 
-**UAM** = unannounced meals. Detection of significant increase in **BG** levels due to meals, adrenaline or other influences and attempt to adjust this. Further info → [Wiki - 'UAM'](#enable-uam) and see also **SMB**.
+**UAM** = unannounced meals, nedeklaruotas maistas (NDM). Reikšmingo **KG** padidėjimo dėl maisto, adrenalino ar kitų veiksnių aptikimas ir bandymas jį pakoreguoti. Daugiau informacijos → [Wiki – „NDM“](#enable-uam) ir taip pat žr. **SMB**.
 
-**Virtual pump** = an **AAPS** feature which allows the user to try **AAPS’** functions, or lets PWD whose pump model has no **AAPS** driver use **AAPS** as an open loop → see also **Open Loop**.
+**Virtuali pompa** (Virtual pump) = **AAPS** funkcija, kuri leidžia naudotojui išbandyti **AAPS** funkcijas arba leidžia žmonėms su diabetu, kurių pompos modeliui nėra **AAPS** tvarkyklės, naudoti **AAPS** kaip atvirą ciklą → taip pat žr. **Atviras ciklas** (Open Loop).
 
-**Wallpaper** = **AAPS** background image see phones page.
+**Ekrano užsklanda** (Wallpaper) = **AAPS** fono paveikslėlis, žr. puslapį „Telefonai“.
 
-**xDrip** = open source software to read **CGM** systems.
+**xDrip** = atvirojo kodo programinė įranga **NGJ** sistemų duomenims nuskaityti.
 
-**Zero-temp** = temporary basal rate with 0% (no basal insulin delivery).
+**Nulinė laikina bazė** (Zero-temp) = 0 % laikina valandinė bazė (bazinis insulinas visai netiekiamas).
 
-→ see also [the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)
+→ taip pat žr. [OpenAPS dokumentaciją](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)

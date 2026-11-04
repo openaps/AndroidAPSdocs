@@ -26,9 +26,9 @@ Melde Dich zuerst in diesem Browser bei github.com an (noch kein Konto? Leg kost
 Übernimm den Vorschlag. Hast Du Dein Repository schon unter einem anderen Namen angelegt? Dann gib hier genau diesen Namen ein.
 
 ```{note}
-**Already have an AAPS Builder repository** (made with an earlier version of this page)? Do not create a new one: type its exact name here, skip the button below, and update its workflow once: see **Updating your copy** at the end of this step. Your secrets stay as they are.
+**Already have an AAPS Builder repository** (made with an earlier version of this page)? Do not create a new one: type its exact name here, skip the button below, and update its workflow once: see **Updating your copy** at the end of this step. Deine Secrets bleiben, wie sie sind.
 
-If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+Möchtest Du trotzdem ein neues Repository, wähle einen Namen, den Du noch nicht hast, zum Beispiel `my-aaps-2`, und verwende in Schritt 2 denselben Keystore.
 
 Do not type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
 ```
@@ -61,12 +61,12 @@ The build steps are updated for you: at every build, your repository runs the ve
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
    Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code> for editing.
-3. Replace the whole text with the copied workflow (on a phone: press and hold → **Select all** → **Paste**), then click **Commit changes…** twice. The first line of the file shows its version.
+3. Replace the whole text with the copied workflow (on a phone: press and hold → **Select all** → **Paste**), then click **Commit changes…** twice. Die erste Zeile der Datei zeigt ihre Version.
 ```
 
 (aaps-builder-setup-step2)=
 
-## Step 2 – Your signing key
+## Schritt 2 – Dein Signaturschlüssel
 
 Die App muss mit Deinem eigenen Schlüssel signiert werden. Nutze immer denselben Schlüssel, sonst musst Du AAPS für ein Update deinstallieren (und verlierst seine Einstellungen). Wähle einen der beiden Tabs.
 
@@ -127,14 +127,14 @@ You will need all three if you ever build AAPS another way, e.g. with Android St
 
 `````
 (aaps-builder-setup-step3)=
-## Step 3 – Give the key to your repository
+## Schritt 3 – Den Schlüssel an Dein Repository übergeben
 <span id="aapsb-s3wait">Finish step 2 first.</span>
 
 <div id="aapsb-s3ready" hidden>
   1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Open the secrets page</a> Opens: <code class="aapsb-repoUrl"></code> Getting "Page not found" (404)? Prüfe zuerst, ob Du in diesem Browser bei github.com angemeldet bist: Bei privaten Repositorys zeigt GitHub 404 an, wenn Du nicht angemeldet bist. Andernfalls passen Benutzername oder Repository-Name aus Schritt 1 nicht zu Deinem Repository. Prüfe sie auf github.com und gib sie in Schritt 1 richtig ein. 2. Tippe auf "Copy name", dann füge ihn in das kleine "Name"-Feld ein: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copy Namer</button> 3. Tippe auf "Copy secret" und füge dann den langen Code in das große "Secret"-Feld ein: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copy secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> Das Secret ist ein sehr langer Code (tausende Buchstaben), und NICHT das Wort KEYSTORE_SET. Kopiere und füge zuerst den Namen ein, dann den langen Code. 4. Tippe auf „Add secret“. Fertig, das musst Du nie wieder machen.
 </div>
 (aaps-builder-setup-step4)=
-## Step 4 – Build the app
+## Schritt 4 – App erstellen
 
 1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">Build-Seite öffnen</a>
 
@@ -193,7 +193,7 @@ Du möchtest, dass die APK in Deinem Google Drive erscheint und dort dauerhaft b
 
 1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Connect Google Drive</a>
 
-   Google opens in a new tab. Choose your Google account and allow AAPS to see and change its own files. If Google says the app is not verified, tap "Advanced", then "Go to …".
+   Google öffnet sich in einem neuen Tab. Choose your Google account and allow AAPS to see and change its own files. If Google says the app is not verified, tap "Advanced", then "Go to …".
 2. Then the new tab shows an error like **"This site can't be reached"** or **"127.0.0.1 refused to connect"**. **This is expected.** Google's answer is in the address of that tab.
 
    Tap the address bar of that tab, select all of the address and copy it. It starts with `http://127.0.0.1:47913/`. Come back to this page within a few minutes: the answer is only valid for a short time.

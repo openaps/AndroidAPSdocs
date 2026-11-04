@@ -1,10 +1,10 @@
-# AAPS for children
+# AAPS per i bambini
 
-**AAPS** can be used successfully with type 1 kids as well. However, there are some things to consider.
+**AAPS** can be used successfully with type 1 kids as well. Ci sono però alcune cose da considerare.
 
-## Things to consider
+## Cose da considerare
 
-### Initial Profile
+### Profilo iniziale
 
 Setting the correct [**Profile**](../SettingUpAaps/YourAapsProfile.md) (basal rate, ISF, I:C...) and [insulin type](#Config-Builder-insulin-dia) (DIA) may prove difficult for children with type 1, especially when growth hormones are involved. Take your time to test and ensure that you are happy with your child’s basal, I:C, ISF and DIA. Test them in real life with your kid next to you before starting remote monitoring and remote treatment. Weekends or school holidays might be a good time for that.
 

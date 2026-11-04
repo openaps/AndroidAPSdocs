@@ -1,153 +1,153 @@
 (reinstall-aaps)=
-# Reinstalling AAPS with a new keystore
+# התקנה מחדש של AAPS עם keystore חדש
 
-Every **AAPS** apk is signed with a **keystore**. An update only installs over your current **AAPS** if it is signed with the **same keystore**: all your settings and data are then kept. That's why it is recommended to store the keystore and its password in a safe place.
+כל קובץ apk של **AAPS** חתום באמצעות **keystore**. עדכון מותקן מעל ה-**AAPS** הנוכחי רק אם הוא חתום באמצעות **אותו keystore**: אז כל ההגדרות והנתונים נשמרים. לכן מומלץ לשמור את ה-keystore ואת הסיסמה שלו במקום בטוח.
 
-If you try to install an apk signed with a different keystore than before, you will get an error message explaining that the installation failed!
+אם תנסו להתקין apk שחתום באמצעות keystore אחר מזה שהיה קודם, תקבלו הודעת שגיאה שאומרת שההתקנה נכשלה!
 
 (reinstall-aaps-when)=
-## When do you need to reinstall?
+## מתי צריך להתקין מחדש?
 
-You need to uninstall and reinstall **AAPS** when your new apk is signed with a different keystore, for example:
+צריך להסיר את **AAPS** ולהתקין אותו מחדש כאשר ה-apk החדש חתום באמצעות keystore אחר, למשל:
 
-- You cannot find your old keystore or its password.
-- You created a new keystore, for example with [Option 1 of the browser build](../SettingUpAaps/BrowserBuildKeystore.md) or **Create a new key** in [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
-- You build on a new computer and did not copy your keystore to it.
+- אינכם מוצאים את ה-keystore הישן או את הסיסמה שלו.
+- יצרתם keystore חדש, למשל באמצעות [אפשרות 1 של הבנייה בדפדפן](../SettingUpAaps/BrowserBuildKeystore.md) או באמצעות **Create a new key** ב-[AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
+- אתם בונים במחשב חדש ולא העתקתם אליו את ה-keystore.
 
-If you still have your keystore, you don't need this page: reuse it and [update **AAPS**](../Maintenance/UpdateToNewVersion.md) in place.
+אם ה-keystore עדיין אצלכם, אין צורך בדף הזה: השתמשו בו שוב ו[עדכנו את **AAPS**](../Maintenance/UpdateToNewVersion.md) במקום.
 
 (reinstall-aaps-before)=
-## Before you start
+## לפני שמתחילים
 
-- Uninstalling **AAPS** deletes all its settings, your [objectives](../SettingUpAaps/CompletingTheObjectives.md) and the current pump connection. You get them back by importing your **settings file**, so make sure you have a recent one.
-- The settings file does not contain your treatment and glucose history. If you upload to [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), you can load it back after the reinstall (step 8).
-- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it.
-- **Omnipod and Medtrum users:** read [Tubeless pumps](#ExportImportSettings-tubeless-pumps) first. Your settings file must have been exported during the pod or patch you are wearing now.
-- If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) before you start.
+- הסרת **AAPS** מוחקת את כל ההגדרות שלו, את [המשימות](../SettingUpAaps/CompletingTheObjectives.md) שלכם ואת החיבור הנוכחי למשאבה. מקבלים אותם בחזרה על ידי ייבוא **קובץ ההגדרות**, לכן ודאו שיש לכם קובץ עדכני.
+- קובץ ההגדרות אינו כולל את היסטוריית הטיפולים ואת היסטוריית ערכי הסוכר. אם אתם מעלים נתונים ל-[Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), אפשר לטעון אותם בחזרה אחרי ההתקנה מחדש (שלב 8).
+- צריך את [**הסיסמה הראשית**](#Preferences-master-password): קובץ ההגדרות מוצפן באמצעותה.
+- **משתמשי Omnipod ו-Medtrum:** קראו קודם את [משאבות ללא צינורית](#ExportImportSettings-tubeless-pumps). קובץ ההגדרות חייב להיות מיוצא בזמן הפוד או הפאץ' שמחובר אליכם עכשיו.
+- אם צריך, [הגדירו את המקלט של ה-CGM / מקור ערכי הסוכר](../Getting-Started/CompatiblesCgms.md) לפני שמתחילים.
 
 (reinstall-aaps-steps)=
-## Steps
+## שלבים
 
-The pictures show a move from **AAPS** 3.4 (steps 1 to 3) to **AAPS** 4 (steps 6 to 8). Other versions look slightly different.
+התמונות מראות מעבר מ-**AAPS** 3.4 (שלבים 1 עד 3) ל-**AAPS** 4 (שלבים 6 עד 8). בגרסאות אחרות המסכים נראים מעט שונה.
 
 (reinstall-aaps-export)=
 ### 1. Export your settings
 
-Export your settings with the **AAPS** currently installed on your phone. See [Settings Export](#ExportImportSettings-Settings-Export) for details.
+ייצאו את ההגדרות באמצעות ה-**AAPS** שמותקן כרגע בטלפון. לפרטים, ראו [ייצוא הגדרות](#ExportImportSettings-Settings-Export).
 
-In **AAPS** 3.4: open **Maintenance** and tap **Export options**. Under **User Settings**, tick **Local Storage** and tap **OK**.
+ב-**AAPS** 3.4: פתחו את **תחזוקה** והקישו על **Export options** (אפשרויות ייצוא). תחת **User Settings** (הגדרות משתמש), סמנו **Local Storage** (אחסון מקומי) והקישו על **אישור**.
 
-*Note: you can also use [Cloud Storage](#preferences-maintenance-cloud) to have a safety backup copy: that's a good idea, but keep Local Storage for recovering settings quickly.*
+*הערה: אפשר להשתמש גם ב[אחסון בענן](#preferences-maintenance-cloud) כדי לשמור עותק גיבוי נוסף: זה רעיון טוב, אבל השאירו את האחסון המקומי כדי לשחזר הגדרות במהירות.*
 
-![Export options with User Settings set to Local Storage](../images/ReinstallAaps/reinstall_export_options_local.png)
+![Export options כאשר User Settings מוגדר ל-Local Storage](../images/ReinstallAaps/reinstall_export_options_local.png)
 
-The button now reads **Export settings (local)**. Tap it.
+עכשיו כתוב על הלחצן **Export settings (local)** (ייצוא הגדרות, מקומי). יש ללחוץ עליו.
 
-![Maintenance with the Export settings (local) button](../images/ReinstallAaps/reinstall_export_settings_local.png)
+![תחזוקה עם הלחצן Export settings (local)](../images/ReinstallAaps/reinstall_export_settings_local.png)
 
-**AAPS** shows the name of the file it will create. Tap **OK**, type your master password and tap **OK**.
+**AAPS** מציג את שם הקובץ שהוא ייצור. הקישו על **אישור**, הקלידו את הסיסמה הראשית והקישו על **אישור**.
 
-![Export settings confirmation with the file name](../images/ReinstallAaps/reinstall_export_confirm.png)
+![אישור ייצוא ההגדרות עם שם הקובץ](../images/ReinstallAaps/reinstall_export_confirm.png)
 
-In **AAPS** 4: open **Maintenance**, select the **Local** chip next to **Export settings** and tap **Export settings**.
+ב-**AAPS** 4: פתחו את **תחזוקה**, בחרו את השבב **מקומי** ליד **ייצוא הגדרות** והקישו על **ייצוא הגדרות**.
 
 (reinstall-aaps-copy)=
-### 2. Copy the settings file off your phone
+### 2. העתקת קובץ ההגדרות מהטלפון
 
-The file is in the **preferences** folder of your [**AAPS** directory](#SetupWizard-StoragePermission), named like `2026-10-13_222735_full.json`. Copy or upload it to an external location (i.e. your computer, cloud storage service...). The file normally stays on your phone after the uninstall, but keep a copy elsewhere in case.
+הקובץ נמצא בתיקייה **preferences** בתוך [תיקיית **AAPS**](#SetupWizard-StoragePermission) שלכם, ושמו דומה ל-`2026-10-13_222735_full.json`. העתיקו או העלו אותו למקום חיצוני (למשל המחשב שלכם, שירות אחסון בענן...). בדרך כלל הקובץ נשאר בטלפון גם אחרי הסרת ההתקנה, אבל ליתר ביטחון שמרו עותק במקום אחר.
 
 (reinstall-aaps-nightscout-before)=
-### 3. Synchronize with Nightscout
+### 3. סנכרון עם Nightscout
 
-This step is not mandatory but recommended if you use [DynISF](#Open-APS-features-DynamicISF): it will allow you to resume directly with the current settings instead of waiting 5 days to build necessary data for the plugin. NSClient V3 needs to be [enabled and configured](../SettingUpAaps/SettingUpTheReportingServer.md).
+השלב הזה אינו חובה, אבל הוא מומלץ אם אתם משתמשים ב-[DynISF](#Open-APS-features-DynamicISF): כך תוכלו להמשיך מיד עם ההגדרות הנוכחיות, במקום לחכות 5 ימים עד שיצטברו הנתונים שהתוסף צריך. NSClient V3 צריך להיות [מופעל ומוגדר](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Make sure Nightscout has all your data before you uninstall.
+ודאו של-Nightscout יש את כל הנתונים שלכם לפני הסרת ההתקנה.
 
-Open **NSClient**, tap the **Full synchronization** button at the bottom of the screen, then **OK**.
+פתחו את **NSClient**, הקישו על הלחצן **סנכרון מלא** בתחתית המסך, ואחר כך על **אישור**.
 
-![NSClient screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
+![מסך NSClient עם הלחצן סנכרון מלא](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
 
-*Note: the time necessary depends on your Nightscout hosting service.*
+*הערה: משך הזמן תלוי בשירות האחסון של Nightscout שלכם.*
 
-![Full synchronization confirmation](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
+![אישור סנכרון מלא](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
 
-**AAPS** then offers to clean up its database. **OK** removes data older than 3 months from the phone, which makes the synchronization much faster. **Cancel** synchronizes without cleaning up. The phone database is deleted when you uninstall anyway, so both are fine.
+אחר כך **AAPS** מציע לנקות את מסד הנתונים שלו. **אישור** מוחק מהטלפון נתונים שישנים מ-3 חודשים, וכך הסנכרון מהיר הרבה יותר. **ביטול** מסנכרן בלי ניקוי. מסד הנתונים בטלפון נמחק בכל מקרה בזמן הסרת ההתקנה, לכן שתי האפשרויות בסדר.
 
-![Database cleanup question](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
+![שאלה על ניקוי מסד הנתונים](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
 
-Leave **AAPS** running until the synchronization is finished.
+השאירו את **AAPS** פועל עד שהסנכרון מסתיים.
 
 (reinstall-aaps-build)=
-### 4. Build the new apk
+### 4. בניית ה-apk החדש
 
-[Build](../SettingUpAaps/BuildingAaps.md) a new signed apk with your new keystore and transfer it to your phone.
+[בנו](../SettingUpAaps/BuildingAaps.md) apk חתום חדש עם ה-keystore החדש והעבירו אותו לטלפון.
 
 (reinstall-aaps-uninstall)=
-### 5. Uninstall AAPS
+### 5. הסרת ההתקנה של AAPS
 
-In your phone's **Settings** > **Apps** > **AAPS**, tap **Uninstall** and confirm with **OK**.
+בטלפון, ב-**Settings** (הגדרות) > **Apps** (אפליקציות) > **AAPS**, הקישו על **Uninstall** (הסרת התקנה) ואשרו עם **OK**.
 
-![App info of AAPS with the Uninstall button](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
+![פרטי האפליקציה AAPS עם הלחצן Uninstall](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
 
 (reinstall-aaps-install)=
-### 6. Install and start the new AAPS
+### 6. התקנה והפעלה של AAPS החדש
 
-[Install](../SettingUpAaps/TransferringAndInstallingAaps.md) the new apk and start **AAPS**. The [setup wizard](../SettingUpAaps/SetupWizard.md) asks for the permissions **AAPS** needs: tap **Grant** for each of them. This also turns [battery optimization](#setup-wizard-bluetooth-battery-optimisation) off again.
+[התקינו](../SettingUpAaps/TransferringAndInstallingAaps.md) את ה-apk החדש והפעילו את **AAPS**. [אשף ההתקנה](../SettingUpAaps/SetupWizard.md) מבקש את ההרשאות ש-**AAPS** צריך: הקישו על **מתן הרשאה** עבור כל אחת מהן. כך גם [אופטימיזציית הסוללה](#setup-wizard-bluetooth-battery-optimisation) נכבתה שוב.
 
-![Permissions Required list of the setup wizard](../images/ReinstallAaps/reinstall_permissions.png)
+![הרשימה "נדרשות הרשאות" של אשף ההתקנה](../images/ReinstallAaps/reinstall_permissions.png)
 
-For **AAPS Directory**, select the same **AAPS** folder as before (the one with the **preferences** folder in it), tap **Use this folder** and **Allow**.
+עבור **תיקיית AAPS**, בחרו את אותה תיקיית **AAPS** כמו קודם (זו שיש בתוכה את התיקייה **preferences**), הקישו על **Use this folder** (שימוש בתיקייה זו) ועל **Allow** (אישור).
 
-![Selecting the existing AAPS folder](../images/ReinstallAaps/reinstall_aaps_directory.png)
+![בחירת תיקיית AAPS הקיימת](../images/ReinstallAaps/reinstall_aaps_directory.png)
 
-When **AAPS** finds your exported settings, the setup wizard shows a [Stored settings found](#setup-wizard-import-settings) screen where you can import them. You can also close the wizard and import from **Maintenance** as described below.
+כאשר **AAPS** מוצא את ההגדרות שייצאתם, אשף ההתקנה מציג את המסך [נמצאו הגדרות שמורות](#setup-wizard-import-settings), שבו אפשר לייבא אותן. אפשר גם לסגור את האשף ולייבא מתוך **תחזוקה**, כמו שמתואר בהמשך.
 
 (reinstall-aaps-import)=
-### 7. Import your settings
+### 7. ייבוא ההגדרות
 
-If the settings file is no longer on your phone, copy it back to the **preferences** folder of your **AAPS** directory.
+אם קובץ ההגדרות כבר לא נמצא בטלפון, העתיקו אותו בחזרה לתיקייה **preferences** בתוך תיקיית **AAPS** שלכם.
 
-Open the menu (☰) > **Maintenance**, select the **Local** chip next to **Import settings** and tap **Import settings**.
+פתחו את התפריט (☰) > **תחזוקה**, בחרו את השבב **מקומי** ליד **ייבוא הגדרות** והקישו על **ייבוא הגדרות**.
 
-![Maintenance with Import settings](../images/ReinstallAaps/reinstall_maintenance_import.png)
+![תחזוקה עם ייבוא הגדרות](../images/ReinstallAaps/reinstall_maintenance_import.png)
 
-The list shows each file with its **AAPS** version and how old it is. Choose the file you exported in step 1.
+הרשימה מציגה כל קובץ עם גרסת ה-**AAPS** שלו ועם הגיל שלו. בחרו את הקובץ שייצאתם בשלב 1.
 
-![List of settings files to import](../images/ReinstallAaps/reinstall_import_file_list.png)
+![רשימת קובצי הגדרות לייבוא](../images/ReinstallAaps/reinstall_import_file_list.png)
 
-You don't need to set a master password in the new **AAPS** first. Type the master password you used for the export in **Decryption password** and tap **Decrypt**. **File was encrypted with a different password** is expected: the new **AAPS** doesn't know your password yet. The import restores it with your other settings.
+אין צורך להגדיר קודם סיסמה ראשית ב-**AAPS** החדש. הקלידו את הסיסמה הראשית שבה השתמשתם בייצוא בשדה **סיסמת פענוח** והקישו על **פענח**. ההודעה **הקובץ הוצפן באמצעות סיסמה אחרת** צפויה: ה-**AAPS** החדש עדיין לא מכיר את הסיסמה שלכם. הייבוא משחזר אותה יחד עם שאר ההגדרות.
 
-![Decryption password for the settings file](../images/ReinstallAaps/reinstall_import_password.png)
+![סיסמת הפענוח של קובץ ההגדרות](../images/ReinstallAaps/reinstall_import_password.png)
 
-Tick **Also replace pump settings**: without it, your pump and its settings are not restored. Omnipod and Medtrum users: only tick it if the file was exported during your current pod or patch (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
+סמנו **גם החלף את הגדרות המשאבה**: בלי הסימון הזה, המשאבה וההגדרות שלה לא משוחזרות. משתמשי Omnipod ו-Medtrum: סמנו את האפשרות רק אם הקובץ יוצא בזמן הפוד או הפאץ' הנוכחי (ראו [משאבות ללא צינורית](#ExportImportSettings-tubeless-pumps)).
 
-![Also replace pump settings ticked](../images/ReinstallAaps/reinstall_import_replace_pump.png)
+![האפשרות גם החלף את הגדרות המשאבה מסומנת](../images/ReinstallAaps/reinstall_import_replace_pump.png)
 
-Tap **Import**, then **OK** to apply the settings and **OK** again on **Settings applied**.
+הקישו על **ייבוא**, אחר כך על **אישור** כדי להחיל את ההגדרות, ושוב על **אישור** במסך **ההגדרות הוחלו**.
 
-![Apply imported settings confirmation](../images/ReinstallAaps/reinstall_import_apply.png)
+![אישור החלת ההגדרות המיובאות](../images/ReinstallAaps/reinstall_import_apply.png)
 
 (reinstall-aaps-nightscout-after)=
-### 8. Get your history back from Nightscout
+### 8. החזרת ההיסטוריה מ-Nightscout
 
-Open the menu (☰) > [**Configuration**](../SettingUpAaps/ChangeAapsConfiguration.md) > **Communication** and tap **Open plugin** under **NSClientV3**. Check that the status shows **Connected**. If it doesn't, see [Troubleshooting NSClient](TroubleshootingNsClient.md).
+פתחו את התפריט (☰) > [**הגדרות תצורה**](../SettingUpAaps/ChangeAapsConfiguration.md) > **תקשורת** והקישו על **פתיחת תוסף** תחת **NSClientV3**. בדקו שהסטטוס מציג **מחובר**. אם לא, ראו [פתרון תקלות ב-NSClient](TroubleshootingNsClient.md).
 
-![Communication with the NSClientV3 Open plugin button](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
+![תקשורת עם הלחצן פתיחת תוסף של NSClientV3](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
 
-Tap the **Full synchronization** button at the bottom of the screen and **OK**. The database is new, so you can answer the cleanup question either way.
+הקישו על הלחצן **סנכרון מלא** בתחתית המסך ועל **אישור**. מסד הנתונים חדש, לכן אפשר לענות על שאלת הניקוי בכל אחת מהדרכים.
 
-![NSClientV3 screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
+![מסך NSClientV3 עם הלחצן סנכרון מלא](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
 
-**AAPS** loads your data from Nightscout. The log shows **Full sync finished** when it is done.
+**AAPS** טוען את הנתונים שלכם מ-Nightscout. ביומן מופיע **Full sync finished** כשהטעינה מסתיימת.
 
-![NSClientV3 log with Full sync finished](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
+![היומן של NSClientV3 עם Full sync finished](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
 
 (reinstall-aaps-check)=
-### 9. Check and keep looping
+### 9. בדיקה והמשך עבודה עם הלולאה
 
-Check that your pump is connected and your CGM values arrive, then keep on looping.
+בדקו שהמשאבה מחוברת ושערכי ה-CGM מגיעים, ואז המשיכו בלולאה.
 
 (reinstall-aaps-afterwards)=
-## Afterwards
+## אחר כך
 
-Always keep using your new keystore from now on, and store it with its password somewhere safe, off your phone. See [Creating back-ups](../Maintenance/ExportImportSettings.md).
+מעכשיו תמיד השתמשו ב-keystore החדש, ושמרו אותו עם הסיסמה שלו במקום בטוח, מחוץ לטלפון. ראו [יצירת גיבויים](../Maintenance/ExportImportSettings.md).

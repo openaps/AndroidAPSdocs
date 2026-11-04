@@ -1,10 +1,10 @@
 (Sensitivity-detection-and-COB-sensitivity-detection)=
 
-# Sensitivity detection
+# Känslighetsdetektering
 
-## Sensitivity algorithm
+## Algoritm för känslighet
 
-**AAPS** currently offers 3 sensitivity detection models:
+**AAPS** har just nu 3 modeller för känslighetsdetektering:
 
 * Sensitivity AAPS
 * Sensitivity WeightedAverage
@@ -12,23 +12,23 @@
 
 ### Sensitivity AAPS
 
-Sensitivity is calculated the same way as in Oref1, but you can specify the time range to look back on. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences.
+Känsligheten beräknas på samma sätt som i Oref1, men du kan ange hur långt bakåt i tiden som ska användas. Den minsta kolhydratupptagningen beräknas från den maximala tiden för kolhydratupptagning som är inställd i inställningarna.
 
 ### Sensitivity WeightedAverage
 
-Sensitivity is calculated as a weighted average of the deviations. You can specify the time range to look back on. Newer deviations have a higher weight. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences. This algorithm is the fastest in following sensitivity changes.
+Känsligheten beräknas som ett viktat medelvärde av avvikelserna. Du kan ange hur långt bakåt i tiden som ska användas. Nyare avvikelser väger tyngre. Den minsta kolhydratupptagningen beräknas från den maximala tiden för kolhydratupptagning som är inställd i inställningarna. Denna algoritm är snabbast på att följa ändringar i känsligheten.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
 ### Sensitivity Oref1
 
-Sensitivity is calculated from the last 8 hours of data, or from the last site change if it is less than 8 hours ago. Carbs (if not absorbed) are cut after the time specified in the preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from the sensitivity calculation. So if you are using SMB with UAM, you have to choose the Oref1 algorithm for it to work properly. For more information about UAM, see the [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb) section.
+Känsligheten beräknas från data för de senaste 8 timmarna, eller från det senaste kanylbytet om det var mindre än 8 timmar sedan. Kolhydrater (som inte har tagits upp) tas bort efter den tid som är inställd i inställningarna. Bara algoritmen Oref1 stöder oannonserade måltider (UAM). Det betyder att tider med upptäckt UAM inte räknas med i beräkningen av känsligheten. Om du använder SMB med UAM måste du därför välja algoritmen Oref1 för att det ska fungera rätt. Mer information om UAM finns i avsnittet [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-Oref1 is the recommended option: it is the only one that can detect UAM and work with [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Oref1 är det rekommenderade valet: det är den enda algoritmen som kan upptäcka UAM och fungera med [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), den nyare algoritmen.
 
-## Simultaneous carbs
+## Kolhydrater från flera måltider samtidigt
 
-There is a significant difference between the Sensitivity AAPS and WeightedAverage algorithms on one side, and Oref1 on the other, when several meals overlap.
+Det finns en stor skillnad mellan algoritmerna Sensitivity AAPS och WeightedAverage å ena sidan och Oref1 å andra sidan när flera måltider överlappar.
 
-* Oref1 expects only one meal decaying at a time: the second meal starts decaying after the first meal is completely decayed.
-* Sensitivity AAPS and WeightedAverage start decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to the meal size and the max absorption time. The minimum absorption will accordingly be higher in comparison to Oref1.
+* Oref1 räknar med att bara en måltid tas upp åt gången: den andra måltiden börjar tas upp först när den första måltiden är helt upptagen.
+* Sensitivity AAPS och WeightedAverage börjar räkna med upptagning direkt när du anger kolhydraterna. Om det finns mer än en måltid ombord anpassas den minsta kolhydratupptagningen efter måltidens storlek och den maximala tiden för upptagning. Den minsta upptagningen blir därför högre jämfört med Oref1.

@@ -1,10 +1,10 @@
-# Preparing to start with AAPS
+# Pregătirea pentru începerea cu AAPS
 
 Bine ați venit. This documentation aims to guide users who are preparing to set up and start using the Android Artificial Pancreas System (**AAPS**).
 
 ## Finding your way around the documentation
 
-An **index** and explanation of the documentation structure can be found [here](../index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. There you will find an overview of the purpose of the different documentation sections. You can also use the headings to the left of this page to navigate through the documentation. Finally, there is a handy search function, directly below the **AAPS** symbol.
+An **index** and explanation of the documentation structure can be found [here](../index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. There you will find an overview of the purpose of the different documentation sections. Puteți folosi și titlurile din stânga acestei pagini pentru a naviga prin documentație. Finally, there is a handy search function, directly below the **AAPS** symbol.
 
 We aim to make it easy to determine both the capabilities and limitations of **AAPS**. It can be disappointing to discover after investing time in reading the documentation that you might not have a compatible insulin pump or CGM, or that **AAPS** offers different functionality than hoped for.
 
@@ -15,12 +15,12 @@ Many experience-related details in the **AAPS** documentation make more sense wh
 ## Siguranța pe primul loc
 “With great power comes great responsibility…”
 
-### Technical safety
+### Siguranța tehnică
 **AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
 
 The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimize these issues.
 
-### Medical safety
+### Siguranța medicală
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
 :class: danger
 Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
@@ -28,32 +28,32 @@ Caution is advised concerning rapid improvements in blood glucose control and lo
 
 An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicians make their patients aware of this issue.
 
-This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 11.1 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
+Aceste leziuni pot include **pierderea vederii și neuropatie permanentă (durere)**. It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 11.1 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
 
-#### How quickly can I reduce my HbA1c without risking permanent damage?
+#### Cât de repede îmi pot reduce HbA1c fără riscul unor leziuni permanente?
 
 One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
 
 N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for an HbA1c calculator tool.
 
-In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
+Într-o altă [evaluare](https://academic.oup.com/brain/article/138/1/43/337923) retrospectivă a 954 de pacienți, cercetătorii au observat că:
 
 **"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."**
 
 A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read other reviews on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) and [here](https://www.mdpi.com/1999-4923/15/7/1791).
 
-It is generally recognized that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
+It is generally recognized that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. Totuși, este un aspect pe care ar trebui să îl discutați cu medicul dumneavoastră.
 
 (PreparingForAaps-no-sglt-2-inhibitors)=
-### No SGLT-2 inhibitors
+### Fără inhibitori SGLT-2
 
 ```{admonition} NO SGLT-2 inhibitors
 :class: danger
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
+Inhibitorii SGLT-2, numiți și gliflozine, inhibă reabsorbția glucozei în rinichi. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! Ar exista un risc semnificativ de cetoacidoză și/sau hipoglicemie! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. The problem is that, unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs. This leaves your body with too much insulin compared to the absorbed carbs, resulting in hypoglycemia.
+Pe scurt:
+- **Exemplul 1: risc de hipoglicemie**
+>La prânz, folosiți **AAPS** pentru a face un bolus pentru 45 g de carbohidrați consumați. The problem is that, unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs. This leaves your body with too much insulin compared to the absorbed carbs, resulting in hypoglycemia.
 
 - **Example 2: risk of Ketoacidosis**
 >The inhibitors eliminate some of the carbs in the background, causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake, including basal. Over time this can result in your BG remaining below target value, to the point where the body does not have enough background insulin to absorb any carbs, resulting in ketoacidosis. Ordinarily, ketoacidosis develops in T1D patients because their pump fails, which would trigger alerts on their phone and be noticeable due to a high BG value. However, the danger with gliflozins is that there would be no AAPS alerts, as the pump remains operational and the BG potentially remains within target.
@@ -64,7 +64,7 @@ Common brand names of SGLT-2 inhibitors include: Invokana, Farxiga, Jardiance, G
 
 ### Key principles of looping with AAPS
 
-The key principles and concepts of looping must be understood before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there!
+Principiile și conceptele de bază ale buclei trebuie înțelese înainte de a folosi **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there!
 
 The speed of progression will depend upon the individual, but be aware that completion of all the objectives typically takes 6 - 9 weeks. Many people start to build, install and set up **AAPS** well in advance of starting to use it. To aid with this, the system has a "virtual pump" which can be used during completion of the early objectives, so that you can become familiar with **AAPS** without actually using it to deliver insulin. A detailed breakdown of the timeline is given below, be aware that by objective 7 of **AAPS** you are closed looping, the later objectives add in additional features like **SMB** and **automations** which are useful to some users, but not essential to the core function of **AAPS**.
 
@@ -74,17 +74,17 @@ Success with **AAPS** requires a proactive approach, a willingness to reflect on
 
 In the preliminary stages of getting started with **AAPS**, you may experience difficulties getting all the components of the loop communicating effectively with each other (and potential followers), and when fine-tuning your settings. Some glitches cannot be resolved until **AAPS** is used in everyday life, but plenty of help is available on the Facebook group and Discord. Please plan accordingly and choose "good" times, like a quiet morning of a weekend (i.e. not late at night or when you are tired, or before a big meeting or travel) to troubleshoot and resolve issues.
 
-#### Technology compatibility
+#### Compatibilitatea tehnologiei
 
 **AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](../Getting-Started/CompatiblesCgms.md), [pump](../Getting-Started/CompatiblePumps.md) and [phone](../Getting-Started/Phones.md) sections.
 
 #### App build time and progressing to full looping
 
-The time to build the **AAPS** app depends on your level of expertise and technical ability. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build **AAPS**. The process will significantly speed up for newer **AAPS** versions, as you become more experienced.
+Timpul necesar pentru a construi aplicația **AAPS** depinde de nivelul dumneavoastră de experiență și de abilitățile tehnice. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build **AAPS**. The process will significantly speed up for newer **AAPS** versions, as you become more experienced.
 
 Several parts of this documentation are dedicated to helping you through the build process:
 
-- [Building AAPS](../SettingUpAaps/BuildingAaps.md) takes you step-by-step through building the app and installing it on your phone;
+- [Construire AAPS](../SettingUpAaps/BuildingAaps.md) vă ghidează pas cu pas prin construirea aplicației și instalarea ei pe telefon;
 
 - the [FAQ](../UsefulLinks/FAQ.md) answers common questions and explains the errors most likely to occur; and
 
@@ -93,7 +93,7 @@ Several parts of this documentation are dedicated to helping you through the bui
 How long it takes to get to closed looping depends on the individual; an approximate timeline for reaching full looping with **AAPS** is given [below](#preparing-how-long-will-it-take).
 
 
-#### Keystore & configuration settings export file
+#### Keystore și fișierul de export al setărilor de configurare
 
 A “keystore” (.jks file) is a password encrypted file unique to your own copy of **AAPS**. Your Android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. In short, as part of the **AAPS** build, you should:
 
@@ -101,15 +101,15 @@ A “keystore” (.jks file) is a password encrypted file unique to your own cop
 
 2.  Păstrați o copie cu privire la parola dumneavoastră pentru fișierul cheie.
 
-How you save the keystore depends on your build method:
+Modul în care salvați keystore-ul depinde de metoda de construire:
 
 - **Android Studio (computer) build**: the keystore is created during the build — see [Generate signed APK](#Building-APK-generate-signed-apk) for instructions on where to save it.
-- **AAPS Builder**: keep the backup file `aaps-keystore.jks` the setup page offered when you created your key, with its password and alias. If you uploaded your own keystore, keep that file.
+- **AAPS Builder**: păstrați fișierul de rezervă `aaps-keystore.jks` oferit de pagina de configurare când ați creat cheia, împreună cu parola și aliasul acesteia. Dacă ați încărcat propriul keystore, păstrați acel fișier.
 - **Browser build with a fork**: use the dedicated [Export keystore](#ci-keystore-export) workflow to download a copy to your Google Drive.
 
-Acest lucru va asigura că puteți utiliza exact același fișier cheie de fiecare dată când este creată o versiune actualizată de **AAPS**. În medie, vor fi 2 actualizări **AAPS** necesare în fiecare an.
+Acest lucru vă asigură că puteți folosi exact același fișier keystore de fiecare dată când este creată o versiune actualizată de **AAPS**. În medie, vor fi 2 actualizări **AAPS** necesare în fiecare an.
 
-În plus, <0>AAPS</0> oferă posibilitatea de a <1>exporta toate setările de configurare</1>. Acest lucru vă asigură că puteți recupera în siguranță sistemul în timp ce schimbați telefoanele, actualizați/reinstalați aplicația cu întrerupere minimă. 
+În plus, **AAPS** oferă posibilitatea de a [exporta toate setările de configurare](../Maintenance/ExportImportSettings.md). Acest lucru vă asigură că puteți recupera în siguranță sistemul în timp ce schimbați telefoanele, actualizați/reinstalați aplicația cu întrerupere minimă. 
 
 #### Depanare
 
@@ -123,43 +123,43 @@ Vă rugăm să nu ezitați să contactați comunitatea AAPS dacă există ceva d
 
 
 
-#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
+#### [Unde puteți primi ajutor](../GettingHelp/WhereCanIGetHelp.md)?
 
 Scopul acestei secțiuni este de a oferi noilor utilizatori legături în ceea ce privește resursele pentru a obține ajutor, inclusiv accesul la asistență comunitară, alcătuită atât din utilizatori noi, cât și din utilizatori experimentați, care pot clarifica întrebările, și să rezolvați capcanele obișnuite care vin cu AAPS.
 
 #### [Secțiune pentru medici](../UsefulLinks/ClinicianGuideToAaps.md)
 
-Aceasta este o secțiune [specifică pentru medici](../UsefulLinks/ClinicianGuideToAaps.md) care vor să afle mai multe despre AAPS și tehnologia de pancreas artificial cu sursă deschisă. Există, de asemenea, instrucțiuni despre [cum să vorbiți cu echipa dumneavoastră clinică](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) în Introducere.
+Aceasta este o secțiune [specifică pentru medici](../UsefulLinks/ClinicianGuideToAaps.md) care vor să afle mai multe despre AAPS și tehnologia de pancreas artificial cu sursă deschisă. Există, de asemenea, instrucțiuni despre [cum să vorbiți cu echipa medicală](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) în Introducere.
 
 ## Ce urmează să construim și să instalăm?
 
-Această diagramă oferă o imagine de ansamblu a componentelor cheie (atât hardware cât și software) ale sistemului <0>AAPS</0>:
+Această diagramă oferă o imagine de ansamblu a componentelor cheie (atât hardware, cât și software) ale sistemului **AAPS**:
 
-![prezentare_generală](../images/preparing_images/AAPS_preparing_overview_01.png)
+![preparing_overview](../images/preparing_images/AAPS_preparing_overview_01.png)
 
 
 Pe lângă cele trei componente hardware de bază (telefon, pompă, senzor de glicemie), mai avem nevoie de: 1) Aplicația **AAPS** 2) Un server de raportare și 3) Aplicația senzorului de monitorizare continuă a glicemiei (CGM)
 
 ### 1) O aplicație pentru telefonul Android: **AAPS**
 
-**AAPS** is an app that runs on Android smartphones & devices. Veți construi chiar dumneavoastră aplicația **AAPS** (un fișier apk), prin folosirea unui ghid pas cu pas, descărcarea codului sursă **AAPS** din GitHub, instalarea programelor necesare (Android Studio, GitHub desktop) pe calculator și construirea propriei dumneavoastră copii de **AAPS**. Apoi veți transfera aplicația **AAPS** direct pe telefonul inteligent (prin e-mail, cablu USB _șamd_) și veți instala-o.
+**AAPS** este o aplicație care rulează pe telefoane inteligente și dispozitive Android. Veți construi chiar dumneavoastră aplicația **AAPS** (un fișier apk), prin folosirea unui ghid pas cu pas, descărcarea codului sursă **AAPS** din GitHub, instalarea programelor necesare (Android Studio, GitHub desktop) pe calculator și construirea propriei dumneavoastră copii de **AAPS**. Apoi veți transfera aplicația **AAPS** pe telefonul inteligent (prin e-mail, cablu USB _etc._) și o veți instala.
 
-### 2) A reporting server: Nightscout (Tidepool*)
+### 2) Un server de raportare: Nightscout (Tidepool*)
 
-In order to fully take advantage of **AAPS**, you need to set up a Nightscout server. You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout is used to collect data from **AAPS** over time and can generate detailed reports correlating CGM and insulin patterns. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. Attempting to analyze your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene. Tidepool is also available as an alternative to Nightscout.
+Pentru a profita pe deplin de **AAPS**, trebuie să configurați un server Nightscout. You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout is used to collect data from **AAPS** over time and can generate detailed reports correlating CGM and insulin patterns. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. Attempting to analyze your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene. Tidepool este disponibil și ca alternativă la Nightscout.
 
 ### 3) CGM sensor app
 
-Depending on your glucose sensor/CGM, you will need a compatible app for receiving glucose readings and sending them to **AAPS**. The different options are shown below and more information is given in the [compatible CGMs section](../Getting-Started/CompatiblesCgms.md):
+Depending on your glucose sensor/CGM, you will need a compatible app for receiving glucose readings and sending them to **AAPS**. Diferitele opțiuni sunt prezentate mai jos, iar mai multe informații găsiți în [secțiunea CGM-uri compatibile](../Getting-Started/CompatiblesCgms.md):
 
 ![dexcom_options](../images/preparing_images/AAPS_connectivity_Dex_02.png) ![libre_options](../images/preparing_images/AAPSconnectivity_libre.png) ![eversense_options](../images/preparing_images/AAPS_connectivity_eversense.png)
 
-### Maintenance of the **AAPS** system
+### Întreținerea sistemului **AAPS**
 
-Both **Nightscout** and **AAPS** must be updated approximately once a year, as improved versions are released. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Notification of these updates will be given on the Facebook groups and Discord servers. The release notes will make it clear what the scenario is. There are likely to be many people asking similar questions to you at update time, and you will have support for performing the updates.
+Atât **Nightscout**, cât și **AAPS** trebuie actualizate aproximativ o dată pe an, pe măsură ce apar versiuni îmbunătățite. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Notification of these updates will be given on the Facebook groups and Discord servers. Notele de lansare vor arăta clar care este situația. There are likely to be many people asking similar questions to you at update time, and you will have support for performing the updates.
 
 (preparing-how-long-will-it-take)=
-## How long will it take to set everything up?
+## Cât timp va dura configurarea completă?
 
 As mentioned earlier, using **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
 
@@ -167,26 +167,26 @@ Some of the objectives require a given amount of days to pass to make sure you u
 
 Here is an approximate timeframe:
 
-| Tasks                                                         |           Approx time            |
-| ------------------------------------------------------------- |:--------------------------------:|
-| Initial reading of the documentation                          |             1-2 days             |
-| Configuring GitHub to allow the browser build                 |            1-4 hours             |
-| Setting up a reporting server                                 |              1 oră               |
-| Installing a CGM app (xDrip, BYODA, …)                        |              1 oră               |
-| Configuring CGM → xDrip → AAPS initially                      |              1 oră               |
-| Configuring AAPS → pump initially                             |              1 oră               |
-| Configuring AAPS → Nightscout/Tidepool (reporting only)       |              1 oră               |
-| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers     |              1 oră               |
-| Objective 1: Setting up visualization and monitoring          |              1 oră               |
-| Objective 2: Learn how to control AAPS                        |             2 hours              |
-| Obiectivul 3: Dovediți-vă cunoștințele                        |          Up to 14 days           |
-| Obiectivul 4: Pornirea cu o buclă deschisă                    |        Minimum of 7 days         |
-| Objective 5: Understanding your open loop                     |              7 zile              |
-| Objective 6: Starting to close the loop (Low Glucose Suspend) |   Minimum of 5, up to 14 days    |
-| Objective 7: Tuning the closed loop                           |  Minimum of 1 day, up to 7 days  |
-| Objective 8: Adjust basals and ratios, enable Autosens        | Minimum of 7 days, up to 14 days |
-| Objective 9: Enabling Super Micro Bolus (SMB)                 |        Minimum of 28 days        |
-| Obiectivul 10: Automatizare                                   |        Minimum of 28 days        |
+| Sarcini                                                                    |        Timp aproximativ         |
+| -------------------------------------------------------------------------- |:-------------------------------:|
+| Citirea inițială a documentației                                           |            1-2 zile             |
+| Configuring GitHub to allow the browser build                              |             1-4 ore             |
+| Configurarea unui server de raportare                                      |              1 oră              |
+| Instalarea unei aplicații CGM (xDrip, BYODA, …)                            |              1 oră              |
+| Configurarea inițială CGM → xDrip → AAPS                                   |              1 oră              |
+| Configurarea inițială AAPS → pompă                                         |              1 oră              |
+| Configuring AAPS → Nightscout/Tidepool (reporting only)                    |              1 oră              |
+| Opțional: Configurarea Nightscout ↔ **AAPS** și NSFollowers                |              1 oră              |
+| Objective 1: Setting up visualization and monitoring                       |              1 oră              |
+| Obiectivul 2: Învățați cum să controlați AAPS                              |              2 ore              |
+| Obiectivul 3: Dovediți-vă cunoștințele                                     |         Până la 14 zile         |
+| Obiectivul 4: Pornirea cu o buclă deschisă                                 |         Minimum 7 zile          |
+| Obiectivul 5: Înțelegerea buclei deschise                                  |             7 zile              |
+| Obiectivul 6: Începerea închiderii buclei (Suspendare la glicemie scăzută) |   Minimum of 5, up to 14 days   |
+| Objective 7: Tuning the closed loop                                        |  Minimum 1 zi, până la 7 zile   |
+| Objective 8: Adjust basals and ratios, enable Autosens                     | Minimum 7 zile, până la 14 zile |
+| Obiectivul 9: Activarea Super Micro Bolus (SMB)                            |       Minimum 28 de zile        |
+| Obiectivul 10: Automatizare                                                |       Minimum 28 de zile        |
 
 Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
 
@@ -196,18 +196,18 @@ Once you are fully operational on **AAPS**, you will still need to regularly fin
 
 In addition to the medical warnings in the [safety section](#preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
 
-#### Insulin choice
+#### Alegerea insulinei
 
 **AAPS** calculations are based on insulin concentrations of 100U/ml (same as pump’s standard). You configure your insulin in **Manage → Insulin settings**: set its **Peak** and **DIA**, or use **Load peak from** to fill in the standard peak time of one of the presets:
 
-- **Novorapid** (also for Humalog and NovoLog)
+- **Novorapid** (și pentru Humalog și NovoLog)
 - **Fiasp**
 - **Lyumjev**
 
 Advanced users can enter any peak time (35 to 120 minutes) directly, for example for a mixture of insulins. See [Insulin settings](#Config-Builder-insulin).
 
 
-### Technical
+### Aspecte tehnice
 
 This documentation aims to reduce the technical expertise required to an absolute minimum. To build the **AAPS** app, you have several options — see [Building AAPS](../SettingUpAaps/BuildingAaps.md) for an overview:
 
@@ -215,22 +215,22 @@ This documentation aims to reduce the technical expertise required to an absolut
 - **Android Studio build**: build the app on your computer using Android Studio. This is mostly used by developers who intend to make code changes.
 - **Command-line build**: for users who prefer to build locally without installing Android Studio.
 
-Beyond building the app, you also need to set up a reporting server, configure several Android phone apps and develop expertise in diabetes management. This can be achieved by moving step-by-step, being patient, and with help from the **AAPS** community. If you are already able to navigate the internet and manage your own Gmail emails, building **AAPS** is a feasible task. Just take your time.
+Beyond building the app, you also need to set up a reporting server, configure several Android phone apps and develop expertise in diabetes management. Acest lucru se poate realiza mergând pas cu pas, cu răbdare și cu ajutorul comunității **AAPS**. If you are already able to navigate the internet and manage your own Gmail emails, building **AAPS** is a feasible task. Just take your time.
 
-### Smartphones
+### Telefoane inteligente
 
 #### AAPS and Android Versions
 
-The current version of **AAPS** (4.0) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), Android 16 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. Totuși, pentru utilizatorii care nu pot folosi un dispozitiv cu Android 12.0 sau o versiune mai nouă, versiunile anterioare de **AAPS** compatibile cu versiunile mai vechi de Android rămân disponibile; consultați: [Note de lansare](#maintenance-android-version-aaps-version).
+Versiunea actuală a **AAPS** (4.0) necesită un telefon inteligent Android cu Google **Android 12.0 sau o versiune ulterioară**. If you are considering buying a new phone, (as of January 2026), Android 16 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. Totuși, pentru utilizatorii care nu pot folosi un dispozitiv cu Android 12.0 sau o versiune mai nouă, versiunile anterioare de **AAPS** compatibile cu versiunile mai vechi de Android rămân disponibile; consultați: [Note de lansare](#maintenance-android-version-aaps-version).
 
 #### Smartphone model choice
-The exact model you buy depends on the desired function(s). You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
+Modelul exact pe care îl cumpărați depinde de funcțiile dorite. You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
 
 Users are encouraged to keep their phone Android version up-to-date, including with security parameters. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
 
 ```{admonition} Delaying Samsung phone updates
 :class: warning
-Samsung has an unfortunate track record of forcing updates on their phones, which can cause Bluetooth connectivity issues. To disable these forced updates, you need to switch the phone to "developer mode":
+Samsung has an unfortunate track record of forcing updates on their phones, which can cause Bluetooth connectivity issues. Pentru a dezactiva aceste actualizări forțate, trebuie să treceți telefonul în „modul dezvoltator”:
 
 1. Go to **Settings** > **About phone** > **Software information**, then tap **Build number** until it confirms you have unlocked developer mode.
 2. Go back to the main **Settings** menu, where you should see a new **Developer options** menu item.

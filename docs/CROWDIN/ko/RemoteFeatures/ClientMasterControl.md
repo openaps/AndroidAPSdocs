@@ -1,9 +1,9 @@
 (client-master-control)=
-# Master ↔ Client control (signed remote control)
+# 마스터 ↔ 클라이언트 제어 (서명된 원격 제어)
 
-From **AAPS** version 4, a follower phone running **AAPSClient** can do much more than *announce* treatments through Nightscout: once it has been **paired** with the main phone, it can send **signed commands** that the main phone (the **master**) checks, confirms and executes — including delivering an **insulin bolus** on the master's pump.
+**AAPS** 버전 4부터 **AAPSClient**를 실행하는 팔로워 휴대폰은 Nightscout를 통해 처치를 *알리는* 것보다 훨씬 많은 일을 할 수 있습니다. 메인 휴대폰과 **페어링**하면 **서명된 명령**을 보낼 수 있습니다. 메인 휴대폰(**마스터**)은 이 명령을 검사하고, 확인하고, 실행합니다. 마스터의 펌프로 **인슐린 볼러스**를 주입하는 것도 포함됩니다.
 
-This page explains how it works, and how to set it up and use it.
+이 페이지는 작동 방식과 설정 및 사용 방법을 설명합니다.
 
 ```{contents} Table of contents
 :depth: 2
@@ -12,257 +12,257 @@ This page explains how it works, and how to set it up and use it.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop (the `full` app).
-- **Client** = an **AAPSClient** phone with no pump that follows and now also *controls* the master.
-- Both phones must be connected to the **same Nightscout** site. All communication still travels through Nightscout — no direct connection between the phones is needed.
+- **마스터** = 펌프를 가지고 루프를 실행하는 메인 **AAPS** 휴대폰(`full` 앱)입니다.
+- **클라이언트** = 펌프가 없는 **AAPSClient** 휴대폰입니다. 마스터를 팔로우하며, 이제 마스터를 *제어*할 수도 있습니다.
+- 두 휴대폰은 **같은 Nightscout** 사이트에 연결되어 있어야 합니다. 모든 통신은 여전히 Nightscout를 통해 이루어집니다. 휴대폰끼리 직접 연결할 필요는 없습니다.
 ```
 
 ---
 
-## How it works
+## 작동 방식
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-In **AAPS** v3, **AAPSClient** could only write unsigned care-portal treatments to Nightscout, and could not deliver a bolus. Remote control now needs a one-time [pairing](#client_master_master_setup). See also [What changed in AAPS v4](#v4changes-remote-control).
+**AAPS** v3에서 **AAPSClient**는 서명되지 않은 케어포털 처치만 Nightscout에 기록할 수 있었고, 볼러스를 주입할 수 없었습니다. 이제 원격 제어를 하려면 한 번 [페어링](#client_master_master_setup)해야 합니다. [AAPS v4의 변경 사항](#v4changes-remote-control)도 참조하십시오.
 ```
 
-**AAPS** v4 uses a dedicated **Client-Control** channel. It still rides on your Nightscout site (in the `settings` collection), but every message is **cryptographically signed** with a secret that only the two phones know. The secret is handed over once, during **pairing**, and replaced by a new one right after it, so it never travels in clear text.
+**AAPS** v4는 전용 **Client-Control** 채널을 사용합니다. 이 채널은 여전히 Nightscout 사이트(`settings` 컬렉션)를 통해 전달됩니다. 하지만 모든 메시지는 두 휴대폰만 아는 비밀 키로 **암호화 서명**됩니다. 비밀 키는 **페어링** 중에 한 번 전달되고, 그 직후 새 비밀 키로 바뀝니다. 따라서 비밀 키는 절대 평문으로 전송되지 않습니다.
 
-The guiding principle is **the master is in charge**:
+기본 원칙은 **마스터가 결정한다**는 것입니다:
 
-1. The client sends an *intent* (“bolus 2 U”, “start the Exercise scene”, “set this temp target”…).
-2. The **master** re-computes and **caps** the action against its **own** live data (profile, IOB, COB, current temp target, pump), and **authors the exact confirmation** the user will see.
-3. The client (or watch) shows the **master's** confirmation text — it never builds its own.
-4. On confirmation the master **executes once** and reports the result back to the client.
+1. 클라이언트는 *요청*을 보냅니다(“볼러스 2 U”, “운동 장면 시작”, “이 임시 목표 설정”…).
+2. **마스터**는 **자신의** 실시간 데이터(프로파일, IOB, COB, 현재 임시 목표, 펌프)로 동작을 다시 계산하고 **제한**합니다. 그리고 사용자가 보게 될 **정확한 확인 내용을 작성**합니다.
+3. 클라이언트(또는 워치)는 **마스터의** 확인 텍스트를 표시합니다. 자체 확인 텍스트를 만들지 않습니다.
+4. 확인하면 마스터가 **한 번 실행**하고 결과를 클라이언트에 다시 알립니다.
 
-What this means for you:
+사용자에게 의미하는 것:
 
-- **Signed commands**: only the clients you paired can send commands (per-client pairing secret and signature). Old or replayed commands are rejected.
-- **A role for each client**: you decide what each client may do, from *Read-only* to *Admin* — see [Client roles](#client-master-control-roles).
-- **Insulin bolus from a client**: the master delivers it on its pump, and the client shows the delivery progress.
-- **The master decides**: it caps every action against its own constraints and writes the confirmation shown on the client.
-- **Only paired clients change therapy**: while client control is on, the master no longer takes treatments or changes typed directly into Nightscout — see [Hardened mode](#client-master-control-hardened-mode).
-- **Each client gets its own Nightscout token** with only the rights a client needs — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Master offline**: actions are blocked with a clear message.
-- **Revoking a client** takes one tap (per client), or use the master's switch to stop all clients.
+- **서명된 명령**: 페어링한 클라이언트만 명령을 보낼 수 있습니다(클라이언트별 페어링 비밀 키와 서명). 오래된 명령이나 재전송된 명령은 거부됩니다.
+- **클라이언트마다 역할**: 각 클라이언트가 무엇을 할 수 있는지 *읽기 전용*부터 *관리자*까지 직접 정합니다. [클라이언트 역할](#client-master-control-roles)을 참조하십시오.
+- **클라이언트에서 인슐린 볼러스**: 마스터가 자기 펌프로 주입하고, 클라이언트는 주입 진행 상황을 표시합니다.
+- **마스터가 결정합니다**: 마스터는 모든 동작을 자신의 제한에 맞춰 제한하고, 클라이언트에 표시되는 확인 내용을 작성합니다.
+- **페어링된 클라이언트만 치료를 변경합니다**: 클라이언트 제어가 켜져 있는 동안 마스터는 Nightscout에 직접 입력된 처치나 변경을 더 이상 받지 않습니다. [강화 모드](#client-master-control-hardened-mode)를 참조하십시오.
+- **각 클라이언트는 자기 Nightscout 토큰을 받습니다**. 이 토큰에는 클라이언트에 필요한 권한만 있습니다. [클라이언트의 자기 Nightscout 토큰](#client-master-control-own-token)을 참조하십시오.
+- **마스터 오프라인**: 동작이 차단되고 명확한 메시지가 표시됩니다.
+- **클라이언트 접근 취소**는 (클라이언트마다) 한 번 탭으로 됩니다. 또는 마스터의 스위치로 모든 클라이언트를 멈출 수 있습니다.
 
-Actions that can be triggered from a client: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](../DailyLifeWithAaps/Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
+클라이언트에서 실행할 수 있는 동작: **볼러스**, **탄수화물 / eCarbs**, **임시 목표**(설정 및 취소), **프로파일 전환**, **루프 / 실행 모드** 변경, **임시 기저**(설정 및 취소), **확장 볼러스**(설정 및 취소), **인슐린 선택**, **[장면](../DailyLifeWithAaps/Scenes.md)**. 양방향 **설정**의 일부도 마스터와 클라이언트 사이에서 동기화됩니다.
 
 ---
 
-## Roles and prerequisites
+## 역할과 전제 조건
 
 ```{admonition} Before you start
 :class: important
-- The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **master** uses **NSClientV3** with your Nightscout and is showing *connected*. Give it an **admin token** of your Nightscout: with it the master can make a token of its own for each client and show it to the client as a QR code.
-- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). It must use the **same** Nightscout. If you set it up with the master's QR code, the client gets its Nightscout address and token from the master; otherwise set up **NSClientV3** on it yourself first.
-- **Websockets** are needed on both phones: commands only reach the master over the websocket connection. While client control is on, **AAPS** keeps websockets on, on the master and on paired clients.
+- **마스터**는 일반 `full` **AAPS** 빌드를 실행하며 펌프에 연결되어 있습니다.
+- **마스터**는 Nightscout와 함께 **NSClientV3**를 사용하며 *연결됨*으로 표시됩니다. 마스터에 Nightscout의 **관리자 토큰**을 주십시오. 그러면 마스터가 각 클라이언트용 토큰을 직접 만들어 QR 코드로 클라이언트에 보여 줄 수 있습니다.
+- **클라이언트**는 **[AAPSClient](AapsClient.md)**를 실행합니다(다른 환자용으로 **AAPSClient2** / **AAPSClient3**도 가능합니다. [AAPSClient, AAPSClient2, AAPSClient3 정보](#remotecontrol-aapsclient-versions)를 참조하십시오). 클라이언트는 **같은** Nightscout를 사용해야 합니다. 마스터의 QR 코드로 설정하면 클라이언트는 Nightscout 주소와 토큰을 마스터에서 받습니다. 그렇지 않으면 먼저 클라이언트에서 **NSClientV3**를 직접 설정하십시오.
+- 두 휴대폰 모두 **웹소켓**이 필요합니다. 명령은 웹소켓 연결을 통해서만 마스터에 도착합니다. 클라이언트 제어가 켜져 있는 동안 **AAPS**는 마스터와 페어링된 클라이언트에서 웹소켓을 켜 둡니다.
 ```
 
-Pairing and synchronization are two different things:
+페어링과 동기화는 서로 다른 것입니다:
 
-- **Synchronization** (data: BG, treatments, profile) is set up as before — see [Synchronization](#RemoteControl_aapsclient). The master's QR code can do it for you on the client.
-- **Pairing** (control: the signed command channel described here) is the new step below.
+- **동기화**(데이터: 혈당, 처치, 프로파일)는 전과 같이 설정합니다. [동기화](#RemoteControl_aapsclient)를 참조하십시오. 마스터의 QR 코드로 클라이언트에서 이 설정을 대신 할 수 있습니다.
+- **페어링**(제어: 여기에서 설명하는 서명된 명령 채널)은 아래의 새 단계입니다.
 
 ---
 
-## Setting it up
+## 설정하기
 
 (client_master_master_setup)=
-### 1. On the master — enable control and add a client
+### 1. 마스터에서 — 제어를 활성화하고 클라이언트 추가
 
-On the master, open the **Manage** screen and choose **Authorized clients**.
+마스터에서 **관리** 화면을 열고 **허가된 클라이언트**를 선택하십시오.
 
-Turn on **Allow client control** (it is **off** by default). This is the master kill-switch: with it off, no client can send commands, but your paired clients are kept so you can turn it back on later. Turning it on also turns on [Hardened mode](#client-master-control-hardened-mode), shown as "*Hardened mode on*" with an **(i)** that explains it. In [Simple Mode](#preferences-simple-mode) client control is always on, so the switch is not shown.
+**클라이언트 제어 허용**을 켜십시오(기본값은 **꺼짐**입니다). 이것이 마스터의 비상 스위치입니다. 이 스위치가 꺼져 있으면 어떤 클라이언트도 명령을 보낼 수 없습니다. 하지만 페어링된 클라이언트는 유지되므로 나중에 다시 켤 수 있습니다. 이 스위치를 켜면 [강화 모드](#client-master-control-hardened-mode)도 켜집니다. "*강화 모드 켜짐*"으로 표시되며, **(i)**를 누르면 설명이 나옵니다. [간단 모드](#preferences-simple-mode)에서는 클라이언트 제어가 항상 켜져 있으므로 스위치가 표시되지 않습니다.
 
-![Authorized clients screen on the master](../images/v4/ClientMaster/authorized_clients_master.png)
+![마스터의 허가된 클라이언트 화면](../images/v4/ClientMaster/authorized_clients_master.png)
 
-Tap the **+** button (bottom right) to add a client. In the **New client** dialog:
+**+** 버튼(오른쪽 아래)을 눌러 클라이언트를 추가하십시오. **새 클라이언트** 대화 상자에서:
 
-1. Enter a **device name**, so you can recognize it in the list.
-2. Choose **how the phone is set up** (see the table below).
-3. Choose its **[role](#client-master-control-roles)**. Nothing is selected for you: the right role depends on who uses the phone.
+1. 목록에서 알아볼 수 있도록 **기기 이름**을 입력하십시오.
+2. **휴대폰을 설정하는 방법**을 선택하십시오(아래 표 참조).
+3. **[역할](#client-master-control-roles)**을 선택하십시오. 미리 선택된 것은 없습니다. 알맞은 역할은 누가 그 휴대폰을 사용하는지에 따라 다릅니다.
 
-![New client dialog on the master: device name, how the phone is set up, and its role](../images/v4/ClientMaster/new_client_master.png)
+![마스터의 새 클라이언트 대화 상자: 기기 이름, 휴대폰 설정 방법, 역할](../images/v4/ClientMaster/new_client_master.png)
 
-| Way                                 | What the new phone gets                                                       | Use it when                                                                                            |
-| ----------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| **QR code: Nightscout and pairing** | the Nightscout address, its own Nightscout token and the pairing, in one scan | the new phone has a camera: the quickest way, nothing to type                                          |
-| **QR code: Nightscout only**        | the Nightscout address and its own Nightscout token, no pairing               | the phone should only **show** data and never send commands                                            |
-| **PIN**                             | the pairing only; it keeps the Nightscout settings it has                     | the phone has no camera (or the master cannot make tokens); it must be connected to Nightscout already |
+| 방법                          | 새 휴대폰이 받는 것                                     | 사용하는 경우                                                                   |
+| --------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------- |
+| **QR 코드: Nightscout 및 페어링** | Nightscout 주소, 자기 Nightscout 토큰, 페어링을 한 번의 스캔으로 | 새 휴대폰에 카메라가 있는 경우: 가장 빠른 방법이며 입력할 것이 없습니다                                 |
+| **QR 코드: Nightscout만**      | Nightscout 주소와 자기 Nightscout 토큰, 페어링 없음         | 휴대폰이 데이터를 **표시**만 하고 명령을 절대 보내지 않아야 하는 경우                                 |
+| **PIN**                     | 페어링만; 기존 Nightscout 설정은 그대로 유지됩니다               | 휴대폰에 카메라가 없는 경우(또는 마스터가 토큰을 만들 수 없는 경우); 휴대폰이 이미 Nightscout에 연결되어 있어야 합니다 |
 
-The two QR code ways need an **admin token** in the master's **NSClientV3** settings, because the master makes the client's token in Nightscout. Without one, the QR code options are shown but cannot be chosen, and the dialog says why; the **PIN** always works.
+두 가지 QR 코드 방법은 마스터의 **NSClientV3** 설정에 **관리자 토큰**이 있어야 합니다. 마스터가 Nightscout에서 클라이언트의 토큰을 만들기 때문입니다. 관리자 토큰이 없으면 QR 코드 옵션이 표시되지만 선택할 수 없고, 대화 상자에 그 이유가 나옵니다. **PIN**은 항상 작동합니다.
 
-#### With a QR code
+#### QR 코드로
 
-Tap **OK**: the master makes the client's Nightscout token and shows a **QR code**. A code that also pairs works for about **two minutes**; the screen counts down and closes by itself when the client has paired. Scan it on the new phone as described in [On the client](#client_master_client_setup).
+**확인**을 누르십시오. 마스터가 클라이언트의 Nightscout 토큰을 만들고 **QR 코드**를 표시합니다. 페어링도 하는 코드는 약 **2분** 동안 유효합니다. 화면에 남은 시간이 표시되고, 클라이언트가 페어링되면 화면이 저절로 닫힙니다. [클라이언트에서](#client_master_client_setup)에 설명된 대로 새 휴대폰에서 스캔하십시오.
 
 ```{admonition} The QR code is a secret
 :class: warning
-Anyone who sees the QR code can read your Nightscout, and a code that pairs also carries the pairing. Show it only to the new phone. **AAPS** blocks screenshots while the code is on screen.
+QR 코드를 보는 사람은 누구나 Nightscout를 읽을 수 있습니다. 페어링하는 코드에는 페어링 정보도 들어 있습니다. 새 휴대폰에만 보여 주십시오. 코드가 화면에 있는 동안 **AAPS**는 스크린샷을 차단합니다.
 ```
 
-![The master's QR code screen with its countdown (code blurred)](../images/v4/ClientMaster/qr_code_master.png)
+![남은 시간이 표시되는 마스터의 QR 코드 화면(코드는 흐리게 처리됨)](../images/v4/ClientMaster/qr_code_master.png)
 
-#### With a PIN
+#### PIN으로
 
-Tap **OK**: the master displays an 8-digit **pairing PIN**, shown in two groups of four (for example `1234 5678`). This PIN is **one-time** and **expires after about two minutes**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
+**확인**을 누르십시오. 마스터가 8자리 **페어링 PIN**을 4자리씩 두 묶음으로 표시합니다(예: `1234 5678`). 이 PIN은 **한 번만** 사용할 수 있으며 **약 2분 후에 만료됩니다**. QR 코드와 마찬가지로, 마스터는 이미 목록에 있는 클라이언트 이름을 거부합니다: 각 클라이언트는 자기 이름으로 된 Nightscout 토큰을 따로 받습니다.
 
-![Master pairing screen showing the one-time PIN (the PIN shown here is expired)](../images/v4/ClientMaster/pairing_pin_master.png)
+![일회용 PIN을 표시하는 마스터 페어링 화면(여기 표시된 PIN은 만료됨)](../images/v4/ClientMaster/pairing_pin_master.png)
 
 ```{admonition} The pairing PIN is a secret
 :class: warning
-The PIN protects the pairing secret that is exchanged through Nightscout. Share it only with the device you are pairing, do not post it publicly, and let it expire if you do not use it. A fresh PIN can always be generated by tapping **+** again.
+PIN은 Nightscout를 통해 교환되는 페어링 비밀 키를 보호합니다. PIN은 페어링하는 기기와만 공유하십시오. 공개적으로 게시하지 말고, 사용하지 않으면 만료되게 두십시오. **+**를 다시 누르면 언제든지 새 PIN을 만들 수 있습니다.
 ```
 
 (client_master_client_setup)=
-### 2. On the client — pair with the master
+### 2. 클라이언트에서 — 마스터와 페어링
 
-#### Scanning the QR code
+#### QR 코드 스캔하기
 
-You can scan the master's QR code in two places:
+마스터의 QR 코드는 두 곳에서 스캔할 수 있습니다:
 
-- in the client's **Setup Wizard**, on the step "**Set up from the master**", which comes before the Nightscout step. One scan then sets up Nightscout and, with a code that pairs, also the pairing, so the setup is finished: the wizard closes and the home screen opens;
-- at any time later from **Manage → Pair with master → Scan QR code**.
+- 클라이언트의 **설정 마법사**에서 "**마스터에서 설정**" 단계. 이 단계는 Nightscout 단계 앞에 있습니다. 한 번 스캔하면 Nightscout가 설정되고, 페어링하는 코드라면 페어링도 됩니다. 그러면 설정이 끝납니다: 마법사가 닫히고 홈 화면이 열립니다;
+- 나중에 언제든지 **관리 → 마스터와 페어링 → QR 코드 스캔**에서.
 
-The first time, **AAPSClient** asks for the **camera** permission. If you refuse it, the screen says that the camera is needed, and you can allow it with **Try again** or pair with the PIN instead.
+처음에는 **AAPSClient**가 **카메라** 권한을 요청합니다. 거부하면 카메라가 필요하다는 안내가 화면에 나옵니다. **다시 시도**로 허용하거나, 대신 PIN으로 페어링할 수 있습니다.
 
-Point the camera at the code. The client shows what the code does — the Nightscout address and, for a code that pairs, the master it pairs with — and asks "**Use this code?**". Tap **Use**: the client turns on **NSClientV3**, replaces its Nightscout address and token with the ones from the code and turns on websockets. A code that pairs also pairs the phone; it says hello to the master as soon as it has connected to Nightscout.
+카메라를 코드에 맞추십시오. 클라이언트는 코드가 무엇을 하는지 보여 줍니다. Nightscout 주소와, 페어링하는 코드라면 페어링할 마스터를 표시하고 "**이 코드를 사용하시겠습니까?**"라고 묻습니다. **사용**을 누르십시오. 클라이언트는 **NSClientV3**를 켜고, Nightscout 주소와 토큰을 코드의 값으로 바꾸고, 웹소켓을 켭니다. 페어링하는 코드는 휴대폰도 페어링합니다. 휴대폰은 Nightscout에 연결되면 곧바로 마스터에 인사(Hello)를 보냅니다.
 
-![The client's Set up from the master wizard step](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+![클라이언트의 "마스터에서 설정" 마법사 단계](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
 ```{admonition} Scanning is available on Android
 :class: note
-The scanner is not available on iOS yet, and a desktop has no camera: use the PIN there.
+A computer without camera: use the PIN there.
 ```
 
-#### Entering the PIN
+#### PIN 입력하기
 
-On the client, open **Manage → Pair with master** (or the wizard step **Pair with master**, after the Nightscout step), **enter the 8-digit PIN** shown on the master and tap **Pair**. The client uses the PIN to securely retrieve the pairing offer through Nightscout, then asks "**Pair with this master?**" and shows the master's identifier. Tap **Pair** to confirm (see [Pairing with the master](#aapsclient-pairing-with-the-master) for a screenshot).
+클라이언트에서 **관리 → 마스터와 페어링**을 열고(또는 Nightscout 단계 다음에 있는 마법사 단계 **마스터와 페어링**), 마스터에 표시된 **8자리 PIN을 입력**한 다음 **페어링**을 누르십시오. 클라이언트는 PIN을 사용하여 Nightscout를 통해 페어링 제안을 안전하게 가져옵니다. 그런 다음 "**이 마스터와 페어링하시겠습니까?**"라고 묻고 마스터의 식별자를 표시합니다. **페어링**을 눌러 확인하십시오(스크린샷은 [마스터와 페어링](#aapsclient-pairing-with-the-master)을 참조하십시오).
 
-![Pair-with-master screen on the client before pairing — enter the PIN here](../images/v4/ClientMaster/pair_with_master_unpaired.png)
+![페어링 전 클라이언트의 마스터와 페어링 화면 — 여기에 PIN을 입력합니다](../images/v4/ClientMaster/pair_with_master_unpaired.png)
 
-#### After pairing
+#### 페어링 후
 
-Once a client is paired it sends a **Hello** to the master and appears in the master's **Authorized clients** list as **Active**, with a *“last seen”* time. The client knows its [role](#client-master-control-roles) from the pairing, so it shows the right buttons at once. A pairing made in the Setup Wizard finishes the wizard. In the same step the two phones replace the pairing secret with a new one that never travelled (see [Security notes](#client-master-control-security)), and a client that was set up with the PIN gets its own Nightscout token (see [The client's own Nightscout token](#client-master-control-own-token)). A client can be paired with **one** master at a time; to pair with a different master, **Unpair** first.
+클라이언트가 페어링되면 마스터에 **Hello**를 보내고, 마스터의 **허가된 클라이언트** 목록에 **활성**으로 표시됩니다. *“마지막 연결”* 시간도 함께 표시됩니다. 클라이언트는 페어링에서 자기 [역할](#client-master-control-roles)을 알게 되므로 바로 알맞은 버튼을 표시합니다. 설정 마법사에서 한 페어링은 마법사를 끝냅니다. 같은 단계에서 두 휴대폰은 페어링 비밀 키를 한 번도 전송되지 않은 새 비밀 키로 바꿉니다([보안 참고 사항](#client-master-control-security) 참조). 그리고 PIN으로 설정한 클라이언트는 자기 Nightscout 토큰을 받습니다([클라이언트의 자기 Nightscout 토큰](#client-master-control-own-token) 참조). 클라이언트는 한 번에 **하나의** 마스터와만 페어링할 수 있습니다. 다른 마스터와 페어링하려면 먼저 **페어링 해제**하십시오.
 
-![Pair-with-master screen on the client (already-paired state)](../images/v4/ClientMaster/pair_with_master_client.png)
+![클라이언트의 마스터와 페어링 화면(이미 페어링된 상태)](../images/v4/ClientMaster/pair_with_master_client.png)
 
-### 3. Managing clients
+### 3. 클라이언트 관리
 
-From the master's **Authorized clients** screen you can, at any time:
+마스터의 **허가된 클라이언트** 화면에서 언제든지 다음을 할 수 있습니다:
 
-- **Change the role** of a client with the row of four buttons under its name. The new role takes effect at once, without pairing again.
-- **See which Nightscout token** a client writes with: "*Own Nightscout token*" is what you want. A red line "*Uses the Nightscout token …, which has more rights than a client needs*" means the client still uses a token with more rights, usually your admin token — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Revoke** a single client — tap the **trash** icon next to it. The client can no longer send commands until it is paired again. Its own Nightscout token is deleted too, so it can no longer read your Nightscout either.
-- **Stop all control** without losing the pairings — turn off **Allow client control**.
+- 클라이언트 이름 아래의 버튼 네 개로 클라이언트의 **역할을 변경**합니다. 새 역할은 다시 페어링하지 않아도 바로 적용됩니다.
+- 클라이언트가 **어떤 Nightscout 토큰으로 기록하는지 확인**합니다: "*자기 Nightscout 토큰*"이 올바른 상태입니다. 빨간 줄 "*Nightscout 토큰 …을(를) 사용합니다. 이 토큰은 클라이언트에 필요한 것보다 많은 권한을 가집니다*"는 클라이언트가 아직 더 많은 권한을 가진 토큰(보통 관리자 토큰)을 사용한다는 뜻입니다. [클라이언트의 자기 Nightscout 토큰](#client-master-control-own-token)을 참조하십시오.
+- 클라이언트 하나의 **접근 권한을 취소**합니다. 옆에 있는 **휴지통** 아이콘을 누르십시오. 그 클라이언트는 다시 페어링할 때까지 명령을 보낼 수 없습니다. 클라이언트의 자기 Nightscout 토큰도 삭제되므로 Nightscout를 읽을 수도 없습니다.
+- 페어링을 잃지 않고 **모든 제어를 중지**합니다. **클라이언트 제어 허용**을 끄십시오.
 
-Phones set up with **QR code: Nightscout only** are listed below the clients, under "**Read Nightscout only**". For each of them you can show the QR code again (to set up the same phone again) or delete its token, which ends its access to your Nightscout.
+**QR 코드: Nightscout만**으로 설정한 휴대폰은 클라이언트 아래 "**Nightscout 읽기만**" 항목에 표시됩니다. 각 휴대폰에 대해 QR 코드를 다시 표시하거나(같은 휴대폰을 다시 설정하기 위해), 토큰을 삭제하여 Nightscout 접근을 끝낼 수 있습니다.
 
-![Authorized clients with a paired client (role buttons, own Nightscout token) and a phone under Read Nightscout only](../images/v4/ClientMaster/authorized_clients_roles.png)
+![페어링된 클라이언트(역할 버튼, 자기 Nightscout 토큰)와 Nightscout 읽기만 아래의 휴대폰이 있는 허가된 클라이언트 화면](../images/v4/ClientMaster/authorized_clients_roles.png)
 
 ---
 
 (client-master-control-roles)=
-## Client roles
+## 클라이언트 역할
 
-Each paired client has a **role**. The master checks it for every command, and the client shows only what its role allows. A new role takes effect at once, without pairing again. The roles build on each other: each one can do everything the one before it can.
+페어링된 각 클라이언트에는 **역할**이 있습니다. 마스터는 모든 명령에서 역할을 검사하고, 클라이언트는 역할이 허용하는 것만 표시합니다. 새 역할은 다시 페어링하지 않아도 바로 적용됩니다. 역할은 단계적으로 쌓입니다. 각 역할은 앞의 역할이 할 수 있는 모든 것을 할 수 있습니다.
 
-| Role          | The client may                                                                                                                                                                                                                |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Read-only** | only show data. It stays paired, so it is ready when you give it a higher role.                                                                                                                                               |
-| **Meals**     | give a bolus, use the bolus wizard and QuickWizard, enter carbs, and stop a running bolus. Carbs entered here can make the loop give more insulin.                                                                            |
-| **Caregiver** | do everything a user does in **AAPS**: temp targets, profile and insulin switches, loop mode, temp basal, extended bolus, scenes, careportal events, calibrations and removing records. It cannot change settings or presets. |
-| **Admin**     | do everything, settings and presets included (QuickWizard, temp target presets, scenes, profiles, automation, insulin).                                                                                                       |
+| 역할        | 클라이언트가 할 수 있는 것                                                                                                     |
+| --------- | ------------------------------------------------------------------------------------------------------------------- |
+| **읽기 전용** | 데이터 표시만. 페어링 상태는 유지되므로 더 높은 역할을 주면 바로 사용할 수 있습니다.                                                                   |
+| **식사**    | 볼러스 주입, 볼러스 마법사와 빠른 마법사 사용, 탄수화물 입력, 진행 중인 볼러스 중지. 여기에서 입력한 탄수화물 때문에 루프가 인슐린을 더 줄 수 있습니다.                           |
+| **보호자**   | 사용자가 **AAPS**에서 하는 모든 것: 임시 목표, 프로파일 및 인슐린 전환, 루프 모드, 임시 기저, 확장 볼러스, 장면, 케어포털 이벤트, 보정, 기록 삭제. 설정이나 프리셋은 변경할 수 없습니다. |
+| **관리자**   | 설정과 프리셋을 포함한 모든 것(빠른 마법사, 임시 목표 프리셋, 장면, 프로파일, 자동화, 인슐린).                                                           |
 
-The **(i)** at the top of the **Authorized clients** screen shows the same explanation. On the client, **Manage → Pair with master** shows the phone's own role.
+**허가된 클라이언트** 화면 위쪽의 **(i)**에도 같은 설명이 나옵니다. 클라이언트에서 **관리 → 마스터와 페어링**에 휴대폰 자신의 역할이 표시됩니다.
 
 ---
 
 (client-master-control-hardened-mode)=
-## Hardened mode
+## 강화 모드
 
-When **Allow client control** is on, the master is in **hardened mode**: it takes changes only from paired clients. It does **not** take treatments, temp targets, profile changes, running mode changes or deletes that are made directly in Nightscout, for example on the Nightscout website or in other apps.
+**클라이언트 제어 허용**이 켜져 있으면 마스터는 **강화 모드**입니다. 마스터는 페어링된 클라이언트의 변경만 받습니다. Nightscout에서 직접 만든 처치, 임시 목표, 프로파일 변경, 실행 모드 변경, 삭제는 받지 **않습니다**. 예를 들어 Nightscout 웹사이트나 다른 앱에서 만든 것입니다.
 
-- The settings for accepting data from Nightscout (**NSClientV3 → Synchronization**) are hidden while hardened mode is on; **AAPS** uses them as if they were off.
-- The master still **uploads** all its data to Nightscout, BG included, and keeps **websockets** on.
-- If the master gets its **BG from Nightscout**, it still takes BG from there.
-- To load the history on a **new** master, use **Full sync** in **NSClientV3**: it takes everything that is in Nightscout, profiles included.
-- [SMS commands](SMSCommands.md) are not affected.
+- 강화 모드가 켜져 있는 동안 Nightscout에서 데이터를 받는 설정(**NSClientV3 → 동기화**)은 숨겨집니다. **AAPS**는 이 설정이 꺼져 있는 것처럼 동작합니다.
+- 마스터는 혈당을 포함한 모든 데이터를 계속 Nightscout에 **업로드**하고, **웹소켓**을 켜 둡니다.
+- 마스터가 **혈당을 Nightscout에서** 받는 경우, 혈당은 계속 그곳에서 받습니다.
+- **새** 마스터에 이력을 불러오려면 **NSClientV3**의 **전체 동기화**를 사용하십시오. 프로파일을 포함하여 Nightscout에 있는 모든 것을 가져옵니다.
+- [SMS 명령](SMSCommands.md)에는 영향이 없습니다.
 
-A paired client follows the master's hardened mode: it keeps websockets on, and the same Nightscout settings are hidden on it. An unpaired client keeps its own settings.
+페어링된 클라이언트는 마스터의 강화 모드를 따릅니다. 웹소켓을 켜 두고, 같은 Nightscout 설정이 클라이언트에서도 숨겨집니다. 페어링되지 않은 클라이언트는 자기 설정을 유지합니다.
 
-[Simple Mode](#preferences-simple-mode) always turns hardened mode on. To turn it off, leave Simple Mode and turn off **Allow client control** on the master.
+[간단 모드](#preferences-simple-mode)에서는 강화 모드가 항상 켜집니다. 강화 모드를 끄려면 간단 모드를 끝내고 마스터에서 **클라이언트 제어 허용**을 끄십시오.
 
 ```{admonition} Why hardened mode
 :class: note
-Everything a paired client sends is signed, checked and confirmed by the master. A treatment typed into the Nightscout website is not: anybody with write access to your Nightscout could add it. In hardened mode only signed commands can change what the master does.
+페어링된 클라이언트가 보내는 모든 것은 마스터가 서명을 검사하고 확인합니다. Nightscout 웹사이트에 입력한 처치는 그렇지 않습니다. Nightscout에 쓰기 권한이 있는 사람은 누구나 처치를 추가할 수 있습니다. 강화 모드에서는 서명된 명령만 마스터의 동작을 바꿀 수 있습니다.
 ```
 
 ---
 
 (client-master-control-own-token)=
-## The client's own Nightscout token
+## 클라이언트의 자기 Nightscout 토큰
 
-A client does not need an admin token. It only reads your Nightscout and sends its commands to the master through it; it uploads nothing itself. So the master gives each client a Nightscout token of its own, with just these rights:
+클라이언트에는 관리자 토큰이 필요하지 않습니다. 클라이언트는 Nightscout를 읽고, Nightscout를 통해 마스터에 명령을 보내기만 합니다. 자기가 직접 업로드하는 것은 없습니다. 그래서 마스터는 각 클라이언트에 다음 권한만 있는 자기 Nightscout 토큰을 줍니다:
 
-- read everything,
-- write to the `settings` collection, the channel to the master,
-- snooze Nightscout alarms.
+- 모든 것 읽기,
+- 마스터로 가는 채널인 `settings` 컬렉션에 쓰기,
+- Nightscout 알람 스누즈.
 
-The token belongs to a Nightscout role named **`aaps-client`**, which the master creates the first time it needs it. You can see the role and the tokens (named `aaps-` and the client's name) in the **Admin tools** of your Nightscout site. If the role is changed there, the master sets it back the next time it makes a token or you open **Authorized clients**.
+토큰은 **`aaps-client`**라는 Nightscout 역할에 속합니다. 마스터는 이 역할이 처음 필요할 때 만듭니다. Nightscout 사이트의 **Admin tools**(관리 도구)에서 이 역할과 토큰(`aaps-`와 클라이언트 이름으로 된 이름)을 볼 수 있습니다. 그곳에서 역할이 바뀌면, 마스터가 다음에 토큰을 만들거나 **허가된 클라이언트**를 열 때 원래대로 되돌립니다.
 
-How a client gets its token:
+클라이언트가 토큰을 받는 방법:
 
-- **Set up with a QR code**: the token is in the code.
-- **Paired with the PIN** (or paired before this existed): after pairing, the master sends the client its own token through the paired channel, encrypted. The client first checks that a login with it works, then uses it instead of the token it had. This needs an admin token on the master; without one, the client keeps its token, and its card on the master shows the red line.
+- **QR 코드로 설정**: 토큰이 코드 안에 들어 있습니다.
+- **PIN으로 페어링**(또는 이 기능이 생기기 전에 페어링): 페어링 후 마스터가 페어링된 채널을 통해 클라이언트에 자기 토큰을 암호화하여 보냅니다. 클라이언트는 먼저 그 토큰으로 로그인이 되는지 확인한 다음, 기존 토큰 대신 그 토큰을 사용합니다. 이렇게 하려면 마스터에 관리자 토큰이 있어야 합니다. 관리자 토큰이 없으면 클라이언트는 기존 토큰을 유지하고, 마스터의 클라이언트 카드에 빨간 줄이 표시됩니다.
 
-**A client keeps its own token.** Once the master has seen a client write with its own token, it takes that client's commands only with that token. A command written with another token (for example an admin token typed into the client later, or another client's token) is refused, even though the client is paired, and the client says "*The master refused it: this phone writes to Nightscout with another token than its own*". Its card on the master says so in red. The client still shows as online, so you can see what is wrong. To fix it, remove the client on the master and add it again.
+**클라이언트는 자기 토큰을 유지합니다.** 마스터가 클라이언트가 자기 토큰으로 기록하는 것을 한 번 보면, 그 뒤로는 그 토큰으로 온 명령만 받습니다. 다른 토큰으로 기록된 명령(예: 나중에 클라이언트에 입력한 관리자 토큰이나 다른 클라이언트의 토큰)은 클라이언트가 페어링되어 있어도 거부됩니다. 그러면 클라이언트에 "*마스터가 거부했습니다: 이 휴대폰은 자기 토큰이 아닌 다른 토큰으로 Nightscout에 기록합니다*"라고 표시됩니다. 마스터의 클라이언트 카드에도 빨간색으로 표시됩니다. 클라이언트는 계속 온라인으로 표시되므로 무엇이 잘못되었는지 볼 수 있습니다. 해결하려면 마스터에서 클라이언트를 삭제하고 다시 추가하십시오.
 
-The master never deletes or changes a Nightscout token it did not make (one with other roles than `aaps-client`): those are yours. It deletes a client's own token when you remove the client.
+마스터는 자기가 만들지 않은 Nightscout 토큰(`aaps-client` 이외의 역할을 가진 토큰)은 절대 삭제하거나 변경하지 않습니다. 그 토큰은 사용자의 것입니다. 클라이언트를 삭제하면 그 클라이언트의 자기 토큰을 삭제합니다.
 
 ---
 
-## Using remote control
+## 원격 제어 사용하기
 
-### Triggering an action from the client
+### 클라이언트에서 동작 실행하기
 
-Use the client exactly as you would the phone itself: open **Carbs**, **Insulin**, **Temp Target**, **Profile**, **Scenes**, the **Manage** sheet, etc., and fill in the values.
+클라이언트를 메인 휴대폰과 똑같이 사용하십시오. **탄수화물**, **인슐린**, **임시 목표**, **프로파일**, **장면**, **관리** 시트 등을 열고 값을 입력합니다.
 
-When you confirm, the client briefly shows **“Contacting master…”**, the **master** computes and caps the action, and the client then displays the **master's own confirmation** — the exact lines, values and colors the master would show on its own screen. Review them and tap **OK** to go ahead.
+확인하면 클라이언트에 잠시 **“마스터에 연결 중…”**이 표시됩니다. **마스터**가 동작을 계산하고 제한한 다음, 클라이언트는 **마스터 자신의 확인 내용**을 표시합니다. 마스터가 자기 화면에 표시할 것과 똑같은 줄, 값, 색상입니다. 내용을 검토하고 **확인**을 눌러 진행하십시오.
 
-![A scene confirmation authored by the master and shown on the client](../images/v4/ClientMaster/confirmation_master_authored.png)
+![마스터가 작성하고 클라이언트에 표시된 장면 확인](../images/v4/ClientMaster/confirmation_master_authored.png)
 
-The same applies to a simple carbs entry — the amount shown for confirmation is the one the master computed:
+간단한 탄수화물 입력도 마찬가지입니다. 확인을 위해 표시되는 양은 마스터가 계산한 양입니다:
 
-![Carbs confirmation authored by the master](../images/v4/ClientMaster/carbs_confirmation_client.png)
+![마스터가 작성한 탄수화물 확인](../images/v4/ClientMaster/carbs_confirmation_client.png)
 
-After you confirm, the master executes the action once and the result is reflected back on the client.
+확인하면 마스터가 동작을 한 번 실행하고, 결과가 클라이언트에 다시 반영됩니다.
 
-### Insulin bolus from a client
+### 클라이언트에서 인슐린 볼러스
 
-This is the main new capability in v4. A bolus started on a client is **delivered by the master on its pump**; the master caps it against its own constraints, and the client shows **live delivery progress** while it runs (and an alarm if the pump reports a failure).
+이것이 v4의 주요 새 기능입니다. 클라이언트에서 시작한 볼러스는 **마스터가 자기 펌프로 주입합니다**. 마스터는 자신의 제한에 맞춰 볼러스를 제한하고, 클라이언트는 주입하는 동안 **실시간 주입 진행 상황**을 표시합니다(펌프가 실패를 보고하면 알람도 표시합니다).
 
 ```{admonition} Boluses are always confirmed and capped on the master
 :class: note
-A client never decides the delivered amount on its own. The master recomputes and caps it, you confirm the master-authored amount, and only then is it delivered.
+클라이언트는 주입량을 절대 혼자 결정하지 않습니다. 마스터가 다시 계산하고 제한합니다. 사용자가 마스터가 작성한 양을 확인한 다음에만 주입됩니다.
 ```
 
 (clientmastercontrol-when-the-master-is-offline)=
-### When the master is offline
+### 마스터가 오프라인일 때
 
-If the master is not reachable (its phone is off/asleep, not connected to Nightscout, or websockets are down), control actions on the client are **blocked before anything is sent**, and you get a clear message. Nothing is half-applied.
+마스터에 연결할 수 없으면(휴대폰이 꺼져 있거나 절전 상태, Nightscout에 연결되지 않음, 또는 웹소켓이 끊김) 클라이언트의 제어 동작은 **아무것도 보내기 전에 차단**되고, 명확한 메시지가 표시됩니다. 절반만 적용되는 것은 없습니다.
 
-![Client message when the master is offline](../images/v4/ClientMaster/master_offline_error.png)
+![마스터가 오프라인일 때의 클라이언트 메시지](../images/v4/ClientMaster/master_offline_error.png)
 
-The client re-checks reachability automatically and re-enables control once the master is back online.
+클라이언트는 연결 가능 여부를 자동으로 다시 확인하고, 마스터가 다시 온라인이 되면 제어를 다시 활성화합니다.
 
 (clientmastercontrol-wear-os-on-a-client)=
 
-### Wear OS (watch) on a client
+### 클라이언트의 Wear OS(워치)
 
-A watch paired to a **client** phone relays its actions through the client to the master (watch → client → master). The watch shows the **master's** confirmation lines and the real result, just like the phone. Setting up the watch is unchanged — see [Wear OS](../WearOS/WearOsSmartwatch.md).
+**클라이언트** 휴대폰과 페어링된 워치는 동작을 클라이언트를 통해 마스터로 전달합니다(워치 → 클라이언트 → 마스터). 워치는 휴대폰과 똑같이 **마스터의** 확인 줄과 실제 결과를 표시합니다. 워치 설정 방법은 바뀌지 않았습니다. [Wear OS](../WearOS/WearOsSmartwatch.md)를 참조하십시오.
 
 
 <!-- 📷 SCREENSHOT NEEDED (optional): watch confirmation screen relayed from the master,
@@ -271,61 +271,61 @@ A watch paired to a **client** phone relays its actions through the client to th
 ---
 
 (client-master-config-prefs)=
-## Changing configuration and preferences
+## 구성과 설정 변경하기
 
-Pairing does more than relay one-off actions — it also keeps the **configuration** and many **preferences** aligned between the master and its clients.
+페어링은 일회성 동작을 전달하는 것 이상을 합니다. 마스터와 클라이언트 사이에서 **구성**과 많은 **설정**을 같게 유지합니다.
 
-### Configuration (which plugins are active)
+### 구성(어떤 플러그인이 활성화되어 있는지)
 
-The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
+활성 **플러그인**(APS 알고리즘, 민감도, 평활화, …)은 **마스터**에서 선택하고, 페어링된 모든 클라이언트에 **똑같이 적용**됩니다. 클라이언트에서는 이 선택 항목이 [구성](#configuration_sync_icon) 화면에서 작은 **휴대폰 아이콘**으로 표시됩니다. 마스터에서 변경하면 클라이언트가 자동으로 따라가며, 그 반대도 마찬가지입니다.
 
-On a client, the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*:
+클라이언트에서 휴대폰 아이콘은 *평활화*, *보정*, *민감도 감지*, *APS*(마스터에서 동기화됨)에 표시되지만 *통신*에는 표시되지 않습니다:
 
-![Configuration list on a client — the mobile icon marks the categories synced with the master](../images/v4/ClientMaster/configuration_client.png)
+![클라이언트의 구성 목록 — 휴대폰 아이콘은 마스터와 동기화되는 범주를 표시합니다](../images/v4/ClientMaster/configuration_client.png)
 
-Connection details that are unique to each device — most importantly the **NSClient Nightscout URL / access token** — are *not* synced. Each phone has its own; on a client they come from the master's QR code, or you set them yourself.
+기기마다 고유한 연결 정보, 특히 **NSClient Nightscout URL / 접근 토큰**은 동기화되지 *않습니다*. 휴대폰마다 자기 값을 가집니다. 클라이언트에서는 마스터의 QR 코드에서 받거나 직접 설정합니다.
 
-### Profiles
+### 프로파일
 
-Your **profile list** is also kept in sync between the master and its paired clients. On a paired client, **Manage → Profile** shows the same profiles as the master; you can **edit** a profile or **activate** one, and — like every other command — the change is sent to the **master**, applied there, and synced back.
+**프로파일 목록**도 마스터와 페어링된 클라이언트 사이에서 동기화됩니다. 페어링된 클라이언트에서 **관리 → 프로파일**은 마스터와 같은 프로파일을 표시합니다. 프로파일을 **편집**하거나 **활성화**할 수 있으며, 다른 모든 명령처럼 변경은 **마스터**로 보내져 그곳에서 적용된 다음 다시 동기화됩니다.
 
-The first time you activate a profile on a newly installed client, the client may show "*No insulin is in use yet*" and ask you to **select the insulin**. Choose the insulin that is active on the master (**Manage → Insulin settings** on the master shows it).
+새로 설치한 클라이언트에서 처음으로 프로파일을 활성화하면 클라이언트에 "*아직 사용 중인 인슐린이 없습니다*"가 표시되고 **인슐린을 선택**하라고 할 수 있습니다. 마스터에서 활성화된 인슐린을 선택하십시오(마스터의 **관리 → 인슐린 설정**에 표시됩니다).
 
-On a client that is **not paired**, the Profile screen is still available but **view-only**: the client shows the profiles it receives through Nightscout (it needs them for its own calculations), but there is no edit or activate button — there is no master to send the change to.
+**페어링되지 않은** 클라이언트에서도 프로파일 화면을 사용할 수 있지만 **보기 전용**입니다. 클라이언트는 Nightscout를 통해 받은 프로파일을 표시합니다(자체 계산에 필요합니다). 하지만 편집 버튼이나 활성화 버튼은 없습니다. 변경을 보낼 마스터가 없기 때문입니다.
 
 ### 설정
 
-A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**. For a setting with a slider, the new value is sent when you lift your finger.
+**설정**의 일부는 **양방향**입니다. **마스터나 페어링된 클라이언트**에서 변경할 수 있고, 변경은 다른 쪽으로 동기화됩니다. 클라이언트에서 이런 설정을 변경하면 서명된 채널을 통해 마스터로 보내져 그곳에서 적용되고, 기준이 되는 값이 다시 돌아옵니다. 따라서 클라이언트에서 보는 값은 항상 마스터가 저장한 값입니다. 같은 설정을 두 기기에서 거의 동시에 변경하면 **가장 최근의 변경이 적용됩니다**. 슬라이더가 있는 설정은 손가락을 떼면 새 값이 보내집니다.
 
-Inside the settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Absorption cutoff* is synced (mobile icon), while settings without the icon are device-local:
+설정 화면 안에서도 같은 작은 **휴대폰 아이콘**이 동기화되는 개별 설정을 표시합니다. 아래 예에서 *흡수 종료 시간*은 동기화되고(휴대폰 아이콘), 아이콘이 없는 설정은 그 기기에만 적용됩니다:
 
-![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+![플러그인의 설정 — 휴대폰 아이콘은 동기화되는 설정을 표시합니다](../images/v4/ClientMaster/preferences_synced_icon.png)
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Because the master is the authority for the stored value, editing a master-controlled configuration item or a bidirectional preference from a client requires the master to be **reachable**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
+마스터가 저장된 값의 기준이므로, 클라이언트에서 마스터가 관리하는 구성 항목이나 양방향 설정을 편집하려면 마스터에 **연결할 수 있어야** 합니다. 마스터가 오프라인이면 클라이언트에서 이 제어 기능이 비활성화됩니다([마스터가 오프라인일 때](#clientmastercontrol-when-the-master-is-offline) 참조).
 ```
 
 ---
 
 (client-master-control-security)=
-## Security notes
+## 보안 참고 사항
 
 ```{admonition} How the channel is protected
 :class: tip
-- **Pairing secret**: the master hands it to the client once — protected by the PIN in a Nightscout document, or inside the QR code — and both store it encrypted.
-- **A new secret right after pairing**: the client's first message after pairing starts a key exchange, and from then on both phones use a secret that never travelled. A secret that someone may have seen (a photographed QR code, a PIN offer read from Nightscout) is of no use afterwards. Phones paired before this existed do the same once after the update.
-- **Every command is signed** (HMAC). The master rejects anything whose signature does not match a paired client.
-- **Replay is prevented** by a per-client monotonic counter, and every command **expires** after a short time-to-live.
-- **Least rights in Nightscout**: each client has its [own Nightscout token](#client-master-control-own-token), which can only read and write to the client-control channel. Once it has used it, the master takes its commands only with that token. Removing the client deletes it.
-- **Only signed changes**: in [hardened mode](#client-master-control-hardened-mode) the master ignores therapy changes typed directly into Nightscout.
-- **The master signs what it shares**: the settings, the client list and the "master is alive" sign that the master puts in Nightscout for its clients carry the master's signature. A client takes them only when the signature is the master's, so another client's token cannot change them. The client learns the master's key when it pairs, or from the QR code for a phone that only reads Nightscout. A refused document shows in the NSClient log as "*✕ SETTINGS … refused*".
-- **You stay in control**: give each client the [role](#client-master-control-roles) it needs, revoke a client with one tap, or disable everything with **Allow client control**.
+- **페어링 비밀 키**: 마스터는 이 키를 클라이언트에 한 번 전달합니다. PIN으로 보호된 Nightscout 문서나 QR 코드 안에 담아 전달하며, 두 휴대폰 모두 이 키를 암호화하여 저장합니다.
+- **페어링 직후 새 비밀 키**: 페어링 후 클라이언트의 첫 메시지가 키 교환을 시작합니다. 그 뒤로 두 휴대폰은 한 번도 전송되지 않은 비밀 키를 사용합니다. 누군가 보았을 수도 있는 비밀 키(사진으로 찍힌 QR 코드, Nightscout에서 읽은 PIN 제안)는 그 뒤로 쓸모가 없습니다. 이 기능이 생기기 전에 페어링된 휴대폰도 업데이트 후 한 번 같은 과정을 거칩니다.
+- **모든 명령은 서명됩니다**(HMAC). 마스터는 서명이 페어링된 클라이언트와 맞지 않는 것은 모두 거부합니다.
+- **재전송 방지**: 클라이언트별로 계속 증가하는 카운터로 재전송을 막고, 모든 명령은 짧은 유효 시간이 지나면 **만료됩니다**.
+- **Nightscout에서 최소 권한**: 각 클라이언트는 [자기 Nightscout 토큰](#client-master-control-own-token)을 가지며, 이 토큰은 읽기와 클라이언트 제어 채널에 쓰기만 할 수 있습니다. 클라이언트가 이 토큰을 한 번 사용하면, 마스터는 그 토큰으로 온 명령만 받습니다. 클라이언트를 삭제하면 토큰도 삭제됩니다.
+- **서명된 변경만**: [강화 모드](#client-master-control-hardened-mode)에서 마스터는 Nightscout에 직접 입력된 치료 변경을 무시합니다.
+- **마스터는 공유하는 것에 서명합니다**: 마스터가 클라이언트를 위해 Nightscout에 올리는 설정, 클라이언트 목록, "마스터 작동 중" 신호에는 마스터의 서명이 있습니다. 클라이언트는 서명이 마스터의 것일 때만 이것을 받아들입니다. 따라서 다른 클라이언트의 토큰으로는 이것을 바꿀 수 없습니다. 클라이언트는 페어링할 때, 또는 Nightscout를 읽기만 하는 휴대폰은 QR 코드에서 마스터의 키를 알게 됩니다. 거부된 문서는 NSClient 로그에 "*✕ SETTINGS … refused*"로 표시됩니다.
+- **사용자가 계속 통제합니다**: 각 클라이언트에 필요한 [역할](#client-master-control-roles)을 주고, 한 번 탭으로 클라이언트의 접근 권한을 취소하거나, **클라이언트 제어 허용**으로 모든 것을 비활성화할 수 있습니다.
 ```
 
 ```{admonition} After restoring a backup
 :class: warning
-If a client is restored from a backup that rolls its command counter backwards, the master will reject its next commands as replays. Simply **unpair and pair again** to recover.
+명령 카운터를 뒤로 되돌리는 백업에서 클라이언트를 복원하면, 마스터는 그 클라이언트의 다음 명령을 재전송으로 보고 거부합니다. 복구하려면 그냥 **페어링 해제 후 다시 페어링**하십시오.
 ```
 
 ---
@@ -334,27 +334,27 @@ If a client is restored from a backup that rolls its command counter backwards, 
 
 ## Troubleshooting
 
-| Symptom                                                                                                    | What to check                                                                                                                                                                                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client says the **master is offline**                                                                      | Master phone awake and running **AAPS**; both phones connected in **NSClientV3**; **websockets** enabled on both; same Nightscout site.                                                                                                                                                                                      |
-| Client says it is **not paired**                                                                           | Pair again from **Manage → Pair with master**. Confirm the client is **Active** in the master's **Authorized clients** list.                                                                                                                                                                                                 |
-| Command **rejected** by the master                                                                         | The master re-validates against its current state — e.g. the chosen profile no longer exists, or the pump type does not match. Re-check on the master.                                                                                                                                                                       |
-| Commands work but are **slow**                                                                             | Enable **websockets** on both phones (otherwise the apps fall back to slower polling).                                                                                                                                                                                                                                       |
-| Pairing is cancelled with *"The pairing secret could not be stored"*                                       | Nothing was changed. Start the pairing again; if it keeps failing, restart **AAPSClient** and try once more.                                                                                                                                                                                                                 |
-| Nothing happens after pairing                                                                              | Make sure **Allow client control** is ON on the master, and that the master is connected to Nightscout.                                                                                                                                                                                                                      |
-| The QR code options cannot be chosen in the **New client** dialog                                          | The dialog says why. *Not an admin token*: give the master an admin token of your Nightscout, or add the client with the **PIN**. *Not connected*: wait until the master shows *connected* in **NSClientV3**.                                                                                                                |
-| *"Nightscout has a token with this name and other rights"*                                                 | One of your own Nightscout tokens is called `aaps-` and this name. Choose another name for the client.                                                                                                                                                                                                                       |
-| *"A client with this name is in the list already"*                                                         | Choose another name, or remove that client first.                                                                                                                                                                                                                                                                            |
-| The client says *"This code is from another AAPS version"*                                                 | Master and client must run the **same** version of **AAPS**. Update the older one.                                                                                                                                                                                                                                           |
-| The client says *"This code has expired"*                                                                  | A code that pairs works for about two minutes. Add the client again on the master to get a new code.                                                                                                                                                                                                                         |
-| The client says *"This phone is paired already"*                                                           | Unpair it first (**Manage → Pair with master → Unpair**), then scan again. A **Nightscout only** code works on a paired phone too.                                                                                                                                                                                           |
-| The client says *"The master refused it: this phone writes to Nightscout with another token than its own"* | The client used its own Nightscout token before and now writes with another one, for example after a token was typed into its Nightscout settings. Remove the client on the master and add it again (see [The client's own Nightscout token](#client-master-control-own-token)).                                             |
-| The NSClient log on the client shows *"✕ SETTINGS … refused"* and its settings no longer follow the master | Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes a new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**). |
-| The client's card shows *"Uses the Nightscout token …"* in red                                             | The client still writes with a token that has more rights than it needs. The master sends it its own token after pairing, but only if the master has an admin token. Check the master's token, or set the client up again with a QR code.                                                                                    |
-| A client can no longer read Nightscout                                                                     | Its token was deleted, for example because the client was removed on the master. Add it again.                                                                                                                                                                                                                               |
-| Treatments entered on the Nightscout website are not applied                                               | Expected in [hardened mode](#client-master-control-hardened-mode): enter them on a paired client instead.                                                                                                                                                                                                                    |
+| 증상                                                                       | 확인할 것                                                                                                                                                                                       |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 클라이언트에 **마스터가 오프라인**이라고 표시됨                                              | 마스터 휴대폰이 깨어 있고 **AAPS**가 실행 중인지; 두 휴대폰 모두 **NSClientV3**에서 연결되어 있는지; 두 휴대폰 모두 **웹소켓**이 활성화되어 있는지; 같은 Nightscout 사이트인지 확인하십시오.                                                               |
+| 클라이언트에 **페어링되지 않음**이라고 표시됨                                               | **관리 → 마스터와 페어링**에서 다시 페어링하십시오. 마스터의 **허가된 클라이언트** 목록에서 클라이언트가 **활성**인지 확인하십시오.                                                                                                             |
+| 마스터가 명령을 **거부**함                                                         | 마스터는 현재 상태로 다시 검증합니다. 예: 선택한 프로파일이 더 이상 없거나, 펌프 종류가 맞지 않습니다. 마스터에서 다시 확인하십시오.                                                                                                               |
+| 명령은 작동하지만 **느림**                                                         | 두 휴대폰 모두 **웹소켓**을 활성화하십시오(그렇지 않으면 앱이 더 느린 폴링 방식을 사용합니다).                                                                                                                                    |
+| *"페어링 비밀 키를 저장할 수 없어서 페어링이 취소되었습니다"*로 페어링이 취소됨                           | 아무것도 바뀌지 않았습니다. 페어링을 다시 시작하십시오. 계속 실패하면 **AAPSClient**를 다시 시작하고 한 번 더 시도하십시오.                                                                                                               |
+| 페어링 후 아무 일도 일어나지 않음                                                      | 마스터에서 **클라이언트 제어 허용**이 켜져 있는지, 마스터가 Nightscout에 연결되어 있는지 확인하십시오.                                                                                                                            |
+| **새 클라이언트** 대화 상자에서 QR 코드 옵션을 선택할 수 없음                                   | 대화 상자에 그 이유가 표시됩니다. *관리자 토큰이 아님*: 마스터에 Nightscout의 관리자 토큰을 주거나, **PIN**으로 클라이언트를 추가하십시오. *연결되지 않음*: 마스터의 **NSClientV3**에 *연결됨*이 표시될 때까지 기다리십시오.                                             |
+| *"Nightscout에 이 이름의 토큰이 이미 있으며 권한이 다릅니다"*                                | 사용자의 Nightscout 토큰 중 하나가 `aaps-`와 이 이름으로 되어 있습니다. 클라이언트에 다른 이름을 선택하십시오.                                                                                                                     |
+| *"이 이름의 클라이언트가 이미 목록에 있습니다"*                                             | 다른 이름을 선택하거나 먼저 그 클라이언트를 삭제하십시오.                                                                                                                                                            |
+| 클라이언트에 *"이 코드는 다른 AAPS 버전에서 만들어졌습니다"*라고 표시됨                              | 마스터와 클라이언트는 **같은** 버전의 **AAPS**를 실행해야 합니다. 오래된 쪽을 업데이트하십시오.                                                                                                                                 |
+| 클라이언트에 *"이 코드는 만료되었습니다"*라고 표시됨                                           | 페어링하는 코드는 약 2분 동안 유효합니다. 새 코드를 받으려면 마스터에서 클라이언트를 다시 추가하십시오.                                                                                                                                 |
+| 클라이언트에 *"이 휴대폰은 이미 페어링되어 있습니다"*라고 표시됨                                    | 먼저 페어링을 해제한 다음(**관리 → 마스터와 페어링 → 페어링 해제**) 다시 스캔하십시오. **Nightscout만** 코드는 페어링된 휴대폰에서도 작동합니다.                                                                                                |
+| 클라이언트에 *"마스터가 거부했습니다: 이 휴대폰은 자기 토큰이 아닌 다른 토큰으로 Nightscout에 기록합니다"*라고 표시됨 | 클라이언트가 전에는 자기 Nightscout 토큰을 사용했지만 지금은 다른 토큰으로 기록합니다. 예를 들어 Nightscout 설정에 토큰을 입력한 뒤에 이렇게 됩니다. 마스터에서 클라이언트를 삭제하고 다시 추가하십시오([클라이언트의 자기 Nightscout 토큰](#client-master-control-own-token) 참조). |
+| 클라이언트의 NSClient 로그에 *"✕ SETTINGS … refused"*가 표시되고, 설정이 더 이상 마스터를 따르지 않음 | 다른 누군가가 마스터의 설정 문서를 기록했거나, 마스터에 새 키가 생겼습니다(예: 데이터를 지운 뒤). 페어링된 클라이언트는 다음에 Nightscout에 연결할 때 새 키를 스스로 받습니다. Nightscout를 읽기만 하는 휴대폰은 마스터의 QR 코드가 다시 필요합니다(**Nightscout 읽기만 → QR 코드 표시**).     |
+| 클라이언트 카드에 *"Nightscout 토큰 …을(를) 사용합니다"*가 빨간색으로 표시됨                       | 클라이언트가 아직 필요보다 많은 권한을 가진 토큰으로 기록합니다. 마스터는 페어링 후 클라이언트에 자기 토큰을 보내지만, 마스터에 관리자 토큰이 있을 때만 그렇습니다. 마스터의 토큰을 확인하거나, QR 코드로 클라이언트를 다시 설정하십시오.                                                      |
+| 클라이언트가 더 이상 Nightscout를 읽을 수 없음                                          | 토큰이 삭제되었습니다. 예를 들어 마스터에서 클라이언트를 삭제했기 때문입니다. 클라이언트를 다시 추가하십시오.                                                                                                                               |
+| Nightscout 웹사이트에서 입력한 처치가 적용되지 않음                                        | [강화 모드](#client-master-control-hardened-mode)에서는 정상입니다. 대신 페어링된 클라이언트에서 입력하십시오.                                                                                                             |
 
-For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Nightscout / 동기화 문제는 먼저 [NSClient 문제 해결](../GettingHelp/TroubleshootingNsClient.md)을 참조하십시오.
 
 ---
 

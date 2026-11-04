@@ -1,7 +1,7 @@
 (global-search)=
-# Global search
+# Genel arama
 
-**AAPS** v4 has a **global search** box at the top of the main screen. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
+**AAPS** v4'te ana ekranın üstünde bir **genel arama** kutusu vardır. Bir kelime yazın; arama tüm uygulamaya aynı anda bakar — eklentiler, iletişim kutuları, ayar ekranları, tek tek tercihler — ve internete bağlıysanız **AndroidAPS dokümantasyonuna** da bakar. Bir ayarın veya ekranın nerede olduğunu hatırlamadan oraya gitmenin en hızlı yoludur.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,85 +10,85 @@
 
 ---
 
-## Opening search
+## Aramayı açma
 
-Tap the **🔍 Search** field at the top of the **Overview** (next to the ☰ menu). Start typing and results appear as you type (after a short pause), grouped by category:
+**Genel Bakış** ekranının üstündeki (☰ menüsünün yanındaki) **🔍 Ara** alanına dokunun. Yazmaya başlayın; sonuçlar siz yazarken (kısa bir duraklamadan sonra) kategorilere göre gruplanmış olarak görünür:
 
-![Global search results, grouped by category](../images/v4/Search/search_results.png)
+![Kategorilere göre gruplanmış genel arama sonuçları](../images/v4/Search/search_results.png)
 
-Clear the box with the **✕**, or close search with the device **Back** button.
-
----
-
-## Search in English *or* your own language
-
-This is the part worth knowing: search matches against **both** the text in your **selected language** **and** the original **English** text.
-
-- If your app is in, say, German or Czech, you can type the **localized** word **or** the **English** word — either finds the setting.
-- A match on the **localized** title ranks highest, then the **English** title, then the localized and English **descriptions**.
-- Matching ignores **accents/diacritics** (so *ů* matches *u*, *é* matches *e*) and is **case-insensitive**.
-
-This means a guide or forum post written in English still leads you to the right setting even when your phone shows everything translated.
+Kutuyu **✕** ile temizleyin veya aramayı cihazın **Geri** düğmesi ile kapatın.
 
 ---
 
-## What search covers
+## İngilizce *veya* kendi dilinizde arama
 
-Results are grouped into these categories:
+Bilmeniz gereken önemli nokta şudur: arama, **hem** **seçili dilinizdeki** metinde **hem de** orijinal **İngilizce** metinde eşleşme arar.
 
-- **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](../SettingUpAaps/ConfigBuilder.md)). Each plugin row carries its **enable switch**, so you can enable or disable a plugin right from the results — tapping the row of a disabled (toggleable) plugin enables it.
-- **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Screens that don't apply to your build are left out (for example *Pair with master* on a master, *Authorized clients* on a client).
-- **Preference categories** — the settings **screens** and sub-screens, both built-in (General, Appearance, Protection, Alerts, Maintenance, …) and from plugins, plus the small settings groups reached from dialogs (Fill buttons, Insulin/Carbs button steps, status-light thresholds, wizard settings, …).
-- **Preferences** — every **individual setting** that has a title. These are filtered to your build/mode, so you only see settings that actually apply (APS / NSClient / pump-control).
-- **Documentation** — pages from the online **AndroidAPS docs** (see below).
+- Uygulamanız örneğin Almanca veya Çekçe ise, **yerelleştirilmiş** kelimeyi **veya** **İngilizce** kelimeyi yazabilirsiniz — ikisi de ayarı bulur.
+- **Yerelleştirilmiş** başlıkta bir eşleşme en üst sırada yer alır, sonra **İngilizce** başlık, sonra yerelleştirilmiş ve İngilizce **açıklamalar** gelir.
+- Eşleştirme **aksanları/işaretli harfleri** dikkate almaz (yani *ů*, *u* ile; *é*, *e* ile eşleşir) ve **büyük/küçük harf fark etmez**.
+
+Bu sayede telefonunuz her şeyi çevrilmiş olarak gösterse bile, İngilizce yazılmış bir kılavuz veya forum gönderisi sizi yine doğru ayara götürür.
+
+---
+
+## Arama neleri kapsar
+
+Sonuçlar şu kategorilere göre gruplanır:
+
+- **Eklentiler** — sürümünüzde görünen her eklenti ([Konfigürasyon](../SettingUpAaps/ConfigBuilder.md) altında listelenenlerin aynısı). Her eklenti satırında **etkinleştirme anahtarı** bulunur, böylece bir eklentiyi doğrudan sonuçlardan etkinleştirebilir veya devre dışı bırakabilirsiniz — devre dışı (açılıp kapatılabilen) bir eklentinin satırına dokunmak onu etkinleştirir.
+- **Diyaloglar** — tedavi/eylem ve yönetim ekranları (Bolus sihirbazı, İnsülin, Yayma Bolus, Kalibrasyon, Geçici Hedef, Profil, …). Sürümünüze uymayan ekranlar gösterilmez (örneğin ana birimde *Ana birimle eşleştir*, istemcide *Yetkili istemciler*).
+- **Tercih kategorileri** — hem yerleşik (Genel, Görünüm, Koruma, Alarmlar, Bakım, …) hem de eklentilerden gelen ayar **ekranları** ve alt ekranları, ayrıca iletişim kutularından açılan küçük ayar grupları (Doldur düğmeleri, İnsülin/Karbonhidrat düğmesi adımları, durum ışığı eşikleri, sihirbaz ayarları, …).
+- **Tercihler** — başlığı olan her **tek tek ayar**. Bunlar sürümünüze/modunuza göre filtrelenir, böylece yalnızca gerçekten geçerli olan ayarları görürsünüz (APS / NSClient / pompa kontrolü).
+- **Dokümantasyon** — çevrim içi **AndroidAPS dokümantasyonundan** sayfalar (aşağıya bakın).
 
 ```{admonition} Settings that belong to a disabled plugin
 :class: note
-A preference whose plugin is currently **disabled** still shows up — **greyed out** and not tappable — with a *“Plugin … disabled”* note, so you can tell the setting exists and which plugin to enable to reach it.
+Eklentisi şu anda **devre dışı** olan bir tercih yine de gösterilir — **gri** ve dokunulamaz olarak — ve yanında *“… eklentisi devre dışı”* notu bulunur. Böylece ayarın var olduğunu ve ona ulaşmak için hangi eklentiyi etkinleştirmeniz gerektiğini görürsünüz.
 
-![A greyed-out setting from a disabled plugin](../images/v4/Search/search_disabled_plugin.png)
+![Devre dışı bir eklentiden gelen gri bir ayar](../images/v4/Search/search_disabled_plugin.png)
 ```
 
 ---
 
-## Documentation results (online)
+## Dokümantasyon sonuçları (çevrim içi)
 
-While the local search runs, **AAPS** also queries the official **AndroidAPS documentation** (hosted on ReadTheDocs) in parallel. Matching pages appear in a **Documentation** group at the bottom, each with a 📖 icon, the section title and a short snippet:
+Yerel arama çalışırken **AAPS**, aynı anda resmi **AndroidAPS dokümantasyonunda** (ReadTheDocs üzerinde barındırılır) da arama yapar. Eşleşen sayfalar en altta bir **Dokümantasyon** grubunda, her biri 📖 simgesi, bölüm başlığı ve kısa bir alıntı ile görünür:
 
-![Documentation (wiki) results with snippets](../images/v4/Search/search_documentation.png)
+![Alıntılarla birlikte dokümantasyon (wiki) sonuçları](../images/v4/Search/search_documentation.png)
 
-- If the documentation is translated into your app language, **AAPS** searches the translated pages and the English pages at the same time. Pages in your language come first, then the English pages that were not already found.
-- Tapping a documentation result opens that page in your **browser**.
-- Documentation search needs **internet** — when you are offline you get a *“Documentation search requires internet connection”* note instead, and the local (in-app) results still work normally.
-
----
-
-## Opening a result
-
-Tap a result to go straight to it:
-
-- **Plugin** → opens that plugin.
-- **Dialog** → opens that screen or dialog.
-- **Preference category** → opens that settings screen.
-- **Preference** → opens the setting **in place** (jumps to it within its screen).
-- **Documentation** → opens the page in your browser.
-
-Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
+- Dokümantasyon uygulamanızın diline çevrilmişse, **AAPS** çevrilmiş sayfalarda ve İngilizce sayfalarda aynı anda arama yapar. Önce sizin dilinizdeki sayfalar gelir, sonra daha önce bulunmamış İngilizce sayfalar.
+- Bir dokümantasyon sonucuna dokunmak o sayfayı **tarayıcınızda** açar.
+- Dokümantasyon araması **internet** gerektirir — çevrim dışıyken bunun yerine *“Belgelerde arama yapmak için internet bağlantısı gerekir”* notunu görürsünüz; yerel (uygulama içi) sonuçlar normal şekilde çalışmaya devam eder.
 
 ---
 
-## Power-user shortcuts
+## Bir sonucu açma
 
-Two special queries list a whole category at once:
+Doğrudan oraya gitmek için bir sonuca dokunun:
 
-- `%PLUGINS%` — list **all** plugins.
-- `%DIALOGS%` — list **all** dialogs/action screens.
+- **Eklenti** → o eklentiyi açar.
+- **Diyalog** → o ekranı veya iletişim kutusunu açar.
+- **Tercih kategorisi** → o ayar ekranını açar.
+- **Tercih** → ayarı **yerinde** açar (kendi ekranı içinde o ayara atlar).
+- **Dokümantasyon** → sayfayı tarayıcınızda açar.
+
+Ayarları ve korumalı eylemleri açmak, oraya elle gitmiş olsaydınız nasıl olacaksa aynı şekilde **[koruma](#Preferences-protection)** (PIN/parola) ayarınıza uyar. Bir sonuç üzerinde işlem yaptıktan sonra arama sonuçlarınıza dönmek için **Geri**'ye basabilirsiniz.
+
+---
+
+## İleri düzey kullanıcılar için kısayollar
+
+İki özel sorgu, bütün bir kategoriyi tek seferde listeler:
+
+- `%PLUGINS%` — **tüm** eklentileri listeler.
+- `%DIALOGS%` — **tüm** iletişim kutularını/eylem ekranlarını listeler.
 
 ---
 
 ```{admonition} The index stays current
 :class: note
-The search index is built the first time you search and kept ready after that. It is rebuilt automatically when you **enable/disable a plugin** or **change the app language**, so results always reflect your current setup.
+Arama dizini ilk aramanızda oluşturulur ve sonrasında hazır tutulur. Dizin, **bir eklentiyi etkinleştirdiğinizde/devre dışı bıraktığınızda** veya **uygulama dilini değiştirdiğinizde** otomatik olarak yeniden oluşturulur, böylece sonuçlar her zaman mevcut kurulumunuzu yansıtır.
 ```
 
 ---

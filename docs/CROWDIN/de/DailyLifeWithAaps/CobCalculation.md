@@ -2,7 +2,7 @@
 
 ## Wie berechnet AAPS die aktiven Kohlenhydrate?
 
-Wenn Kohlenhydrate im Rahmen einer Mahlzeit oder als Kohlenhydrat-Korrektur eingegeben werden, wird **AAPS** diese Kohlenhydrate zu den aktiven Kohlenhydraten (**COB**) hinzurechnen und bei den Berechnungen berücksichtigen. **AAPS** berechnet dann die Kohlenhydrat-Aufnahme (Absorption) des Nutzenden anhand der zu den **Glukosewerten** beobachteten Abweichungen. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). This is not a feature within the user’s **Profile** but is calculated by **AAPS** according to **ISF/I:C** setup, and is determined by how many mg/dL 1 g of carbs will raise the user’s **BG**.
+Wenn Kohlenhydrate im Rahmen einer Mahlzeit oder als Kohlenhydrat-Korrektur eingegeben werden, wird **AAPS** diese Kohlenhydrate zu den aktiven Kohlenhydraten (**COB**) hinzurechnen und bei den Berechnungen berücksichtigen. **AAPS** berechnet dann die Kohlenhydrat-Aufnahme (Absorption) des Nutzenden anhand der zu den **Glukosewerten** beobachteten Abweichungen. Die Absorptionsrate hängt vom Faktor der Kohlenhydrat-Empfindlichkeit (**CSF**) ab. Das ist keine Einstellung im **Profil** des Nutzers, sondern wird von **AAPS** aus den Einstellungen für **ISF/I:C** berechnet. Er gibt an, um wie viel mg/dl 1 g Kohlenhydrate den **Glukosewert** des Nutzers erhöht.
 
 ## Faktor der Kohlenhydrat-Empfindlichkeit (Carb Sensitivity Factor)
 
@@ -12,13 +12,13 @@ Die in **AAPS** genutzte Formel ist:
 
 Der Effekt auf das **Profil** ist:
 
-- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _Erhöhe_ **IC**: Dadurch steigen die alle 5 Minuten aufgenommenen Kohlenhydrate, und die gesamte Absorptionszeit wird kürzer;
 
 - _Erhöhung_ **ISF** - Durch das Reduzieren des Wertes der in 5 Minuten aufgenommenen Kohlenhydrate verlängert sich die Gesamtzeit der KH-Absorption; und
 
-- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
+- _Ändere_ den **Prozentsatz des Profils**: Beide Werte steigen oder sinken, das hat also keinen Einfluss auf die Absorptionszeit der Kohlenhydrate.
 
-For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Eine positiver **IOB**-Wert beinflusst damit auch die **COB**-Berechnung. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
+Ist zum Beispiel im **Profil** der **ISF** 100 und das **I:C** 5,0 dann beträgt der Faktor der Kohlenhydrat-Empfindlichkeit des Nutzers 20. Für alle 20 mg/dl, die der **Glukosewert** des Nutzers steigt, rechnet **AAPS** 1 g Kohlenhydrate als aufgenommen. Eine positiver **IOB**-Wert beinflusst damit auch die **COB**-Berechnung. Wenn **AAPS** also wegen des **IOB** einen Rückgang des **Glukosewerts** um 20 mg/dl vorhersagt und dieser stattdessen gleich bleibt, rechnet **AAPS** ebenfalls 1 g Kohlenhydrate als aufgenommen.
 
 In Abhängigkeit vom von Dir in **AAPS** gewählten Empfindlichkeits-Algorithmus, werden auch Kohlenhydrate nach dem unten beschriebenen Verfahren aufgenommen (absorbiert).
 
@@ -32,7 +32,7 @@ Nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit verworfen, we
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the graphs look slightly different, but the **COB** graph carries the same information.
+Der Screenshot oben stammt aus einer älteren **AAPS**-Version. In **AAPS** 4 sehen die Diagramme etwas anders aus, das **COB**-Diagramm enthält aber dieselben Informationen.
 ```
 
 
@@ -47,7 +47,7 @@ In der **COB**-Kurve wird ein orangener Punkt angezeigt, wenn die minimale Kohle
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Erkennung Fehlerhafter COB-Werte
 
-**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In dieser Situation gibt es beim Nutzen des Bolus-Rechners einen zusätzlichen Hinweis im Bestätigungsfenster.
+**AAPS** warnt den Nutzer, wenn er mit **COB** aus einer vorherigen Mahlzeit einen Bolus abgeben will und der Algorithmus die aktuelle **COB**-Berechnung für falsch hält. In dieser Situation gibt es beim Nutzen des Bolus-Rechners einen zusätzlichen Hinweis im Bestätigungsfenster.
 
 ### Wie erkennt AAPS falsche COB-Werte?
 
@@ -55,14 +55,14 @@ Normalerweise erkennt __AAPS__ eine Kohlenhydrat-Aufnahme anhand von **Glukosewe
 
 ![Hinweis fehlerhafte COB Werte](../images/Calculator_SlowCarbAbsorption.png)
 
-In the screenshot above, 66% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. Das deutet darauf hin, dass weniger Kohlenhydrate aktiv sind (**COB**), als es vom Algorithmus berechnet wurde.
+In der Abbildung oben wurde 66% der Kohlenhydrat-Resorption durch min_5m_carbimpact statt des Wertes, der bei Abweichungen festgestellt wurde, mathematisch berechnet. Das deutet darauf hin, dass weniger Kohlenhydrate aktiv sind (**COB**), als es vom Algorithmus berechnet wurde.
 
 ### Wie kann man mit dieser Warnung umgehen?
 
 - Denke darüber nach die Insulinabgabe abzubrechen - drücke 'Abbrechen' statt OK.
 - Berechne die Mahlzeit mit dem Bolus-Rechner erneut, nimm aber den Haken bei **COB** heraus.
 - Solltest Du einen Korrekturbolus brauchen, gib ihn manuell ein.
-- Be careful not to overdose or stack insulin!
+- Achte darauf, nicht zu viel Insulin zu geben oder Insulin zu stapeln!
 
 
 ### Warum erkennt der Algorithmus COB nicht richtig?
@@ -76,23 +76,23 @@ Das kann folgende Gründe haben:
 
 ## Manuelle Korrektur der eingegebenen Kohlenhydrate
 
-If carbs are over or underestimated this can be corrected through the **Treatments history** screen as described [here](#screens-bolus-carbs).
+Wurden Kohlenhydrate über- oder unterschätzt, kannst Du das wie [hier](#screens-bolus-carbs) beschrieben im Bildschirm **Behandlungsverlauf** korrigieren.
 
 
 ## Kohlenhydrate korrigieren - wie KH-Einträge aus den Behandlungen gelöscht werden
 
 
-The **Treatments history** screen can be used to correct a faulty carb entry by deleting it. Dies kann dann notwendig sein, wenn die Kohlenhydratmenge über- oder unterschätzt wurde:
+Im Bildschirm **Behandlungsverlauf** kannst Du einen falschen Kohlenhydrat-Eintrag korrigieren, indem Du ihn löschst. Dies kann dann notwendig sein, wenn die Kohlenhydratmenge über- oder unterschätzt wurde:
 
 ![Deleting a carb entry from Treatments history](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
-1. Check and remember actual **COB** and **IOB** on the **AAPS** main screen.
-2. Open **Treatments history** (drawer menu → *Treatments history*), tab **Carbs and bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
-3. **Long-press** the faulty carb entry — the list switches to **selection mode** with a checkbox on every line, and the entry is ticked (marked **1** above). Tick any further entries you want to remove as well.
-4. Tap the **🗑 Delete** icon in the top bar (marked **2**) and confirm — the confirmation dialog lists exactly what will be removed.
-5. Make sure carbs are removed successfully by checking **COB** on the **AAPS** main screen again.
-6. Do the same for **IOB** if there is just one line including carbs and insulin.
+1. Prüfe und merke Dir die aktuellen Werte für **COB** und **IOB** auf dem **AAPS**-Startbildschirm.
+2. Öffne den **Behandlungsverlauf** (Menü → *Behandlungsverlauf*), Reiter **Kohlenhydrate & Bolus**. Je nach Pumpe werden die Kohlenhydrate zusammen mit dem Insulin in einer Zeile oder als eigener Eintrag angezeigt (z. B. bei der Dana RS).
+3. **Tippe lange** auf den falschen Kohlenhydrat-Eintrag. Die Liste wechselt in den **Auswahlmodus** mit einem Kontrollkästchen in jeder Zeile, und der Eintrag ist angehakt (oben mit **1** markiert). Hake alle weiteren Einträge an, die Du ebenfalls entfernen möchtest.
+4. Tippe oben in der Leiste auf das Symbol **🗑 Löschen** (mit **2** markiert) und bestätige. Der Bestätigungsdialog listet genau auf, was entfernt wird.
+5. Prüfe erneut den **COB**-Wert auf dem **AAPS**-Startbildschirm, um sicherzugehen, dass die Kohlenhydrate entfernt wurden.
+6. Mache dasselbe für das **IOB**, wenn es nur eine Zeile mit Kohlenhydraten und Insulin gibt.
 7. Wenn die KH nicht wie vorgesehen entfernt wurden und zusätzliche KH hinzugefügt werden, ist der **COB**-Eintrag zu hoch. Das kann dazu führen, dass **AAPS** zu viel Insulin abgibt.
-8. Enter the correct carbs amount through the **Carbs** dialog (**Treatments** → **Carbs**) and set the correct event time.
-9. If there was just one line including carbs and insulin the user should also re-add the amount of insulin. Make sure to set the correct event time and check **IOB** on the main screen after confirming the new entry.
+8. Gib die richtige Kohlenhydratmenge über den Dialog **Kohlenhydrate** (**Behandlungen** → **Kohlenhydrate**) ein und stelle den richtigen Zeitpunkt ein.
+9. Gab es nur eine Zeile mit Kohlenhydraten und Insulin, sollte der Nutzer auch die Insulinmenge erneut eingeben. Stelle den richtigen Zeitpunkt ein und prüfe nach dem Bestätigen des neuen Eintrags das **IOB** auf dem Startbildschirm.
 

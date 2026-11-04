@@ -7,9 +7,9 @@
 
 -   Start sensor
 
-- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- בחרו **Syai/Ottai** ב[**הגדרות תצורה ← מקור ערכי הסוכר**](#Config-Builder-bg-source).
 
-Enable broadcast in the Ottai app:
+הפעילו שידור באפליקציית Ottai:
 
 1. Select Profile
 2. Ottai hub

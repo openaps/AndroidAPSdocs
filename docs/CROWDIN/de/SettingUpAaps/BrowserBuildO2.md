@@ -1,39 +1,39 @@
 (aaps-ci-option2)=
 
-# Option 2 – Upload your existing keystore
+# Option 2 – Deinen vorhandenen Keystore hochladen
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+Das ist Teil von [Schritt 2 – Deinen Signatur-Keystore erstellen](BrowserBuildKeystore.md) des [Browser-Builds](BrowserBuild.md). Achte darauf, dass Du die [Entscheidung zwischen Option 1 und Option 2](#aaps-ci-preparation) gelesen hast.
 ```
 
-Option 2 reuses the JKS you already created on a previous build of AAPS from a computer in Android Studio. It is suitable for users who already have a JKS and know the JKS password and alias.
+Option 2 verwendet die JKS-Datei weiter, die Du bei einem früheren Build von AAPS auf einem Computer in Android Studio erstellt hast. Sie eignet sich für Anwender, die bereits eine JKS-Datei haben und deren Passwort und Alias kennen.
 
-For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub – those from Android Studio, see below where you used them.
+Gib für `KEYSTORE_PASSWORD`, `KEY_ALIAS` und `KEY_PASSWORD` in GitHub Dein tatsächliches Passwort und Deinen Alias ein – die aus Android Studio, siehe unten, wo Du sie verwendet hast.
 
 ```{warning}
-**Passwords with special characters.** Enter your passwords exactly as they are. Do not add a backslash or any other escape character: the build workflow keeps every character intact, and an added backslash becomes part of the password.
+**Passwörter mit Sonderzeichen.** Gib Deine Passwörter genau so ein, wie sie sind. Füge keinen Backslash und kein anderes Escape-Zeichen hinzu: Der Build-Workflow lässt jedes Zeichen unverändert, und ein hinzugefügter Backslash wird Teil des Passworts.
 
-If the build still fails at the signing step and your password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is outdated. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev and re-run the build. See [Browser build troubleshooting](#aaps-ci-password-special-characters).
+Scheitert der Build trotzdem beim Signieren und enthält Dein Passwort `$`, einen Backtick, `"` oder `\`, ist die Workflow-Datei in Deinem Fork veraltet. [Synchronisiere Deinen Fork](#Update-to-new-version-update-your-repo) mit dem neuesten dev und starte den Build erneut. Siehe [Fehlerbehebung beim Browser-Build](#aaps-ci-password-special-characters).
 ```
 
 ```{admonition} KEY + PASSWORDS
 :class: dropdown
 
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+![Passwort vergessen](../images/Building-the-App/044_RememberPwd.png)
 ```
 
-## Choose your device
+## Wähle Dein Gerät
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Du erstellst auf einem **Android-Smartphone**? Verwende stattdessen [AAPS Builder](BrowserBuildAapsBuilder.md): Dafür brauchst Du keine Vorbereitungsdatei.
 ```
 
-Follow the page that matches the device you are building from:
+Folge der Seite, die zu dem Gerät passt, auf dem Du erstellst:
 
-- **[Computer](BrowserBuildO2Computer.md)** – Windows, Mac or Linux.
+- **[Computer](BrowserBuildO2Computer.md)** – Windows, Mac oder Linux.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Du kannst das Gerät jederzeit wechseln – öffne einfach die passende Seite.
 ```
 
 ```{toctree}

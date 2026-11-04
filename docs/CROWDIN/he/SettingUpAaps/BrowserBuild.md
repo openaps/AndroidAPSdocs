@@ -8,30 +8,30 @@ Building AAPS with GitHub Actions.
 
 ## בנייה עצמית במקום הורדה
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. בנייה עצמית של היישום לשימוש אישי הינה חוקית אך אסור לתת את היישום לאחרים!**
+**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. בנייה עצמית של האפליקציה לשימוש אישי הינה חוקית אך אסור לתת את האפליקציה לאחרים!**
 
 See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 (Building-APK-without-a-computer)=
 
-## Choose how to build
+## בחירת שיטת הבנייה
 
-Pick the method that matches the device you build from:
+יש לבחור את השיטה שמתאימה למכשיר שממנו בונים:
 
-### On an Android phone: AAPS Builder (recommended)
+### בטלפון Android: AAPS Builder (מומלץ)
 
-A setup page walks you through creating your own private build repository in GitHub. Nothing to install, no preparation file, and you start each build yourself. You download the app directly from GitHub. Google Drive is optional.
+דף הגדרה מדריך אתכם שלב אחר שלב ביצירת מאגר בנייה פרטי משלכם ב-GitHub. אין מה להתקין, אין קובץ הכנה, ואתם מתחילים כל בנייה בעצמכם. את האפליקציה מורידים ישירות מ-GitHub. Google Drive אינו חובה.
 
-This also works from a computer browser.
+זה עובד גם מדפדפן במחשב.
 
-**→ [Build with AAPS Builder](BrowserBuildAapsBuilder.md)**
+**→ [בנייה עם AAPS Builder](BrowserBuildAapsBuilder.md)**
 
-### On a computer or an iPhone / iPad: fork and preparation file
+### במחשב או ב-iPhone / iPad: Fork וקובץ הכנה
 
-You make a copy (fork) of the AAPS source code in GitHub, create your keystore with a preparation file, and the built app is saved to your Google Drive. Follow the four steps below.
+יוצרים עותק (fork) של קוד המקור של AAPS ב-GitHub, יוצרים את ה-keystore באמצעות קובץ הכנה, והאפליקציה שנבנתה נשמרת ב-Google Drive שלכם. יש לבצע את ארבעת השלבים שלמטה.
 
 ```{note}
-**Already building with a fork?** Keep updating it as described in [Update with a browser](../Maintenance/UpdateBrowserBuild.md), or switch to AAPS Builder. To switch, first get a copy of your keystore from your fork: see [Coming from the previous browser build](#aaps-builder-from-fork).
+**כבר בונים עם fork?** אפשר להמשיך לעדכן אותו כמו שמתואר ב-[עדכון בדפדפן (fork)](../Maintenance/UpdateBrowserBuild.md), או לעבור ל-AAPS Builder. כדי לעבור, קודם יש לקבל עותק של ה-keystore מה-fork שלכם: ראו [מעבר מהבנייה הקודמת בדפדפן](#aaps-builder-from-fork).
 ```
 
 You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
@@ -42,36 +42,36 @@ You will need to use multiple tabs in your browser, and switch from one to the o
 You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
 ```
 
-#### What you'll need
+#### מה צריך
 
-- A **Google account**, so the built app can be saved to your Google Drive.
-- A **GitHub account** (free) – you create this in Step 1.
-- A **web browser** that can keep several tabs open at once (Chrome is assumed below).
-- A small **helper to run the preparation file**. Which one you need depends on the device you build from – there is nothing to install now, Step 2 walks you through it for your device:
-  - **Computer (Windows / Mac / Linux):** Simple Web Server.
-  - **iPhone / iPad:** no extra app – you use the built-in Files app and browser.
+- **חשבון Google**, כדי שאפשר יהיה לשמור את האפליקציה שנבנתה ב-Google Drive שלכם.
+- **חשבון GitHub** (בחינם) – יוצרים אותו בשלב 1.
+- **דפדפן אינטרנט** שיכול להשאיר כמה לשוניות פתוחות בו-זמנית (בהמשך ההנחה היא Chrome).
+- **כלי עזר קטן להרצת קובץ ההכנה**. הכלי הדרוש תלוי במכשיר שממנו בונים – אין צורך להתקין שום דבר עכשיו, שלב 2 מדריך אתכם בהתאם למכשיר שלכם:
+  - **מחשב (Windows / Mac / Linux):** Simple Web Server.
+  - **iPhone / iPad:** אין צורך באפליקציה נוספת – משתמשים באפליקציית Files ובדפדפן המובנים.
 
-#### The steps
+#### השלבים
 
-The browser build is a series of choices. Follow these steps in order:
+הבנייה בדפדפן היא סדרה של בחירות. יש לבצע את השלבים האלה לפי הסדר:
 
-1. **[Create your GitHub fork](BrowserBuildFork.md)** – make your personal copy of the AAPS source code.
-2. **[Create your signing keystore](BrowserBuildKeystore.md)** – the key decision: generate a new keystore (Option 1) or upload your existing one (Option 2), then follow the page for your device.
-3. **[Authorize Google Drive](BrowserBuildGoogleDrive.md)** – let GitHub save the built app to your Google Drive.
-4. **[Build the APK](BrowserBuildAPK.md)** – run the GitHub Actions workflow and pick your version and variant.
+1. **[יצירת fork ב-GitHub](BrowserBuildFork.md)** – יצירת עותק אישי של קוד המקור של AAPS.
+2. **[יצירת keystore לחתימה](BrowserBuildKeystore.md)** – ההחלטה החשובה: ליצור keystore חדש (אפשרות 1) או להעלות את ה-keystore הקיים שלכם (אפשרות 2), ואז לפעול לפי הדף של המכשיר שלכם.
+3. **[אישור Google Drive](BrowserBuildGoogleDrive.md)** – מתן אפשרות ל-GitHub לשמור את האפליקציה שנבנתה ב-Google Drive שלכם.
+4. **[בניית ה-APK](BrowserBuildAPK.md)** – הרצת ה-workflow של GitHub Actions ובחירת הגרסה והווריאנט.
 
-If you run into trouble, see **[Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations with a fork, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+אם נתקלים בבעיה, ראו **[בנייה בדפדפן: פתרון תקלות](../GettingHelp/BrowserBuildTroubleshooting.md)**. לפעולות אופציונליות עם fork, ראו [ייצוא ה-keystore](#ci-keystore-export) או [cherry-pick של קומיט](#github-cherry-pick).
 
 ----
 
-**Start with [Step 1 – Create your GitHub fork](BrowserBuildFork.md) →**
+**התחילו עם [שלב 1 – יצירת fork ב-GitHub](BrowserBuildFork.md) →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Step 1: Create your fork <BrowserBuildFork.md>
-Step 2: Create your keystore <BrowserBuildKeystore.md>
-Step 3: Authorize Google Drive <BrowserBuildGoogleDrive.md>
-Step 4: Build the APK <BrowserBuildAPK.md>
+שלב 1: יצירת ה-fork <BrowserBuildFork.md>
+שלב 2: יצירת ה-keystore <BrowserBuildKeystore.md>
+שלב 3: אישור Google Drive <BrowserBuildGoogleDrive.md>
+שלב 4: בניית ה-APK <BrowserBuildAPK.md>
 ```

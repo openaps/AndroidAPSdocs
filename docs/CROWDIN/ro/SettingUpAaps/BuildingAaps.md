@@ -1,8 +1,8 @@
 # Construire AAPS
 
-## Construiți-vă în loc să descărcați
+## Construiți aplicația, nu o descărcați
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Aplicația AAPS (un fișier apk) nu este disponibilă pentru descărcare, din cauza reglementărilor privind dispozitivele medicale. It is legal to build the app for your own use, but you must not give a copy to others!**
 
 See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
@@ -12,7 +12,7 @@ Three methods are available to build the AAPS app:
 
 ### Build with a browser (recommended)
 
-You can build the app in a web browser using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Puteți construi aplicația într-un browser web, folosind GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
 
 **[Urmați aceste instrucțiuni.](./BrowserBuild.md)**
 
@@ -35,15 +35,15 @@ This option is intended for those who prefer to build AAPS in local command-line
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## Dacă construirea eșuează
 
-Each build method has its own troubleshooting section:
+Fiecare metodă de construire are propria secțiune de depanare:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
+* **AAPS Builder**: [Depanare AAPS Builder](#aaps-builder-troubleshooting)
 * **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **Android Studio**: [Depanare Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Ați pierdut keystore-ul sau parola acestuia? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
 If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
 

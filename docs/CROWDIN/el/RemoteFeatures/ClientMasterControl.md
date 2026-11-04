@@ -134,7 +134,7 @@
 
 ```{admonition} Scanning is available on Android
 :class: note
-Ο σαρωτής δεν είναι ακόμα διαθέσιμος στο iOS, και ένας υπολογιστής (desktop) δεν έχει κάμερα: εκεί χρησιμοποιήστε το PIN.
+A computer without camera: use the PIN there.
 ```
 
 #### Εισαγωγή του PIN

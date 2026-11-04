@@ -19,7 +19,7 @@ Pravidla automatizace se vytvářejí a upravují na obrazovce **Automatizace** 
 
 - Jednu nebo více akcí, které se mají provést.
 
-    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
+    Například alarm, nastavení procenta profilu nebo export nastavení AAPS při výměně podu.
 
 
 Možností automatizace je velmi mnoho. Doporučujeme je prostudovat přímo v aplikaci AAPS, v části Automatizace. Příklady automatizací od jiných uživatelů můžete hledat také ve skupinách uživatelů AAPS na [**Facebooku**](https://www.facebook.com/groups/AndroidAPSUsers) a [**Discordu**](https://discord.gg/4fQUWHZ4Mw).
@@ -38,11 +38,11 @@ Následující příklad ukazuje, jak může **automatizace** ušetřit někter�
 
 Uživatel cvičí každé ráno v 6:00: musí si pamatovat, že v 5:00, před cvičením, v AAPS ručně nastaví „Dočasný cíl – Aktivita“.
 
-![Manual actions without automation](../images/Automations/automation_concept_manual.png)
+![Ruční akce bez automatizace](../images/Automations/automation_concept_manual.png)
 
 Uživatel si nastavil **automatizaci**, která v 5:00 spustí „Dočasný cíl – Aktivita“, aby jeho **glykémie** a **IOB** byly optimální pro cvičení v 6:00:
 
-![Actions done by an automation](../images/Automations/automation_concept_automated.png)
+![Akce provedené automatizací](../images/Automations/automation_concept_automated.png)
 
 ## Co zvážit, než začnete s automatizacemi
 
@@ -50,7 +50,7 @@ Uživatel si nastavil **automatizaci**, která v 5:00 spustí „Dočasný cíl 
 
 1. Jako každá technologie mohou i **CGM**, **pumpy** a telefony selhat: technické problémy nebo chyby senzoru mohou narušit akce **automatizace** a může být potřeba ruční zásah.
 
-1. **Requirements for Automations are likely to change as routines change**. Když přecházíte mezi obdobím práce, školy a prázdnin, nastavte si v kalendáři připomínku, abyste zkontrolovali, které **automatizace** jsou právě aktivní (dají se snadno zapnout i vypnout). Například když jedete na dovolenou a už nepotřebujete automatizaci pro školní sport nebo denní cvičení, nebo potřebujete upravit časy.
+1. **Požadavky na automatizace se pravděpodobně budou měnit, jak se mění denní režim**. Když přecházíte mezi obdobím práce, školy a prázdnin, nastavte si v kalendáři připomínku, abyste zkontrolovali, které **automatizace** jsou právě aktivní (dají se snadno zapnout i vypnout). Například když jedete na dovolenou a už nepotřebujete automatizaci pro školní sport nebo denní cvičení, nebo potřebujete upravit časy.
 
 1. **Automatizace** mohou být ve vzájemném konfliktu. Je dobré každé nové nastavení **automatizace** pečlivě zkontrolovat v bezpečném prostředí a pochopit, proč se **automatizace** spustila nebo nespustila tak, jak čekáte.
 
@@ -91,12 +91,12 @@ Ve spodní navigaci hlavní obrazovky otevřete **Spravovat** a vyberte **Automa
 
 Pravidlo **automatizace** deaktivujete tak, že zrušíte zaškrtnutí políčka vlevo od názvu **automatizace**. Příklad níže ukazuje **automatizaci** aktivovanou („zaškrtnutou“) a deaktivovanou („nezaškrtnutou“):
 
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+![Zapínání a vypínání pravidel automatizace](../images/Automations/automation_rule_activated_deactivated.png)
 
 
 Při nastavování **automatizace** ji můžete nejprve vyzkoušet tak, že v části „Akce“ zvolíte možnost „Oznámení“. **AAPS** tak nejprve zobrazí oznámení, místo aby akci opravdu provedl. Když si budete jistí, že se oznámení zobrazilo ve správný čas a za správných podmínek, můžete v pravidle **automatizace** nahradit „Oznámení“ skutečnou „Akcí“.
 
-![Alert actions](../images/Automations/automation_alert_actions.png)
+![Akce výstrah](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -115,7 +115,7 @@ Pro **automatizace** platí tyto bezpečnostní limity:
 
 * **Dočasný cíl** nastavený **automatizací** musí být mezi 72 a 180 mg/dl (nebo 4 a 10 mmol/l).
 * **Procento profilu** musí být mezi 50 % a 130 %.
-* There is a 5 minute time limit between executions of **Automation** (and first execution).
+* Mezi spuštěními **automatizace** (i před prvním spuštěním) je časový limit 5 minut.
 
 ## Správné použití záporných hodnot
 
@@ -127,7 +127,7 @@ Při výběru záporné hodnoty v **automatizaci** buďte opatrní
 
 Při výběru „záporné hodnoty“ v „Podmínce“, např. „je menší než“, buďte v **automatizacích** opatrní. Například:
 
-![Comparison operators](../images/Automations/automation_comparison_operators.png)
+![Operátory porovnání](../images/Automations/automation_comparison_operators.png)
 
 **Příklad 1:** Vytvoření podmínky **„je menší než“** „-0,1 mmol/l“ (nebo „-2 mg/dl“):
 
@@ -222,15 +222,15 @@ nic
 * **Profil** musí být mezi 50 % a 130 %
 * funguje jen tehdy, když předchozí procento je 100 %
 
-**Actions:** **Change smoothing** (in the **Loop & insulin** group)
+**Akce:** **Změnit vyhlazování** (ve skupině **Smyčka a inzulín**)
 
 **Možnosti:**
 
-* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
+* vyberte [metodu vyhlazování](../CompatibleCgms/SmoothingBloodGlucoseData.md), na kterou se má přepnout. Seznam je stejný jako v **Konfigurace** > **Vyhlazování** a akce dělá přesně to samé jako změna tam: nová metoda se uloží, synchronizuje se se spárovanými klienty a data glykémie se hned znovu vyhladí.
 * provede se jen tehdy, když tato metoda vyhlazování ještě není aktivní – **AAPS** to do pravidla přidá automaticky jako řádek „**Nutné podmínky: Vyhlazování … není aktivní**“. Když je zvolené vyhlazování už aktivní, pravidlo se tiše přeskočí.
-* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
-  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
-  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
+* Příklad: nový senzor je během prvního dne často zašuměný. Dvě pravidla se spouštěčem **Stáří senzoru** zajistí silnější filtrování, dokud se senzor neustálí, a potom vyhlazování bez zpoždění:
+  * **Stáří senzoru** méně než 24 h: **Změnit vyhlazování** na **Unscented Kalmanův filtr**
+  * **Stáří senzoru** více než 24 h: **Změnit vyhlazování** na **Průměrovací vyhlazování**
 
 **Akce:** **Poznámka** (ve skupině **Výstrahy** v seznamu)
 
@@ -242,7 +242,7 @@ nic
 
 ![Události akce Poznámka](../images/Automations/automation_action_careportal_events.png) ![Akce Poznámka nastavená na Výměnu setu](../images/Automations/automation_action_careportal_site_change.png)
 
-**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
+**Akce:** **Poslat SMS na všechna čísla** (ve skupině **Výstrahy**)
 
 **Možnosti:**
 
@@ -260,7 +260,7 @@ nic
 
 * zvolte **ZAP** nebo **VYP**. Tím se změní nastavení **Povolit SMB** pluginu OpenAPS SMB, přesně jako byste ho změnili v **Nastavení**, a tak zůstane, dokud ho vy nebo jiné pravidlo nezměníte zpět.
 
-**Actions:** **Run Autotune** (in the **Loop & insulin** group)
+**Akce:** **Spustit Autotune** (ve skupině **Smyčka a inzulín**)
 
 **Možnosti:**
 
@@ -270,7 +270,7 @@ nic
 
 **Možnosti:**
 
-* žádné. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Přidejte ji do pravidla, které musí mít přednost před pravidly pod ním (viz [pořadí automatizací](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* žádné. Dokud jsou podmínky pravidla s touto akcí splněné, **AAPS** nekontroluje pravidla pod ním v seznamu. Jakmile jeho podmínky přestanou platit, pravidla pod ním se kontrolují jako obvykle. Přidejte ji do pravidla, které musí mít přednost před pravidly pod ním (viz [pořadí automatizací](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Akce:** **Spustit scénu**, **Povolit scénu**, **Zakázat scénu** (ve skupině **Scény**)
 
@@ -280,39 +280,39 @@ nic
 
 Po přidání „Akce“ musíte výchozí hodnoty změnit na požadované číslo: klepněte na ně a upravte je.
 
-![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
+![Hodnoty akce dočasného cíle](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## Na pořadí **automatizací** v seznamu záleží
- **AAPS** provádí vytvořená pravidla v pořadí podle priority, od začátku seznamu **automatizací**. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+ **AAPS** provádí vytvořená pravidla v pořadí podle priority, od začátku seznamu **automatizací**. Pokud je například **automatizace** „Low“ ta nejdůležitější **automatizace**, nad všemi ostatními pravidly, měla by být tato **automatizace** na začátku seznamu **automatizací** uživatele, jak je ukázáno níže:
 
 
-![List of automation rules](../images/Automations/automation_rule_list.png)
+![Seznam pravidel automatizace](../images/Automations/automation_rule_list.png)
 
-Pořadí pravidel **automatizace** změníte tak, že podržíte úchyt **=** na pravé straně pravidla. Reorder the **Automations** by moving the rules up or down.
+Pořadí pravidel **automatizace** změníte tak, že podržíte úchyt **=** na pravé straně pravidla. Pořadí **automatizací** změníte posunutím pravidel nahoru nebo dolů.
 
-![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
+![Změna pořadí pravidel automatizace](../images/Automations/automation_rule_reorder.png)
 
 ## Jak smazat pravidla automatizace
 
 Pravidlo **automatizace** smažete klepnutím na ikonu koše.
 
-![Delete automation rules](../images/Automations/automation_rule_delete.png)
+![Smazání pravidel automatizace](../images/Automations/automation_rule_delete.png)
 
 ## Příklady automatizací
 
-Níže jsou příklady **automatizací**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. Příklady níže nekopírujte, pokud dobře nerozumíte tomu, jak bude **automatizace** fungovat.
+Níže jsou příklady **automatizací**. Další diskuze o **automatizacích** a o tom, jak si uživatelé přizpůsobili svou **automatizaci**, najdete ve skupinách na Facebooku nebo na Discordu. Příklady níže nekopírujte, pokud dobře nerozumíte tomu, jak bude **automatizace** fungovat.
 
 (automations-low-glucose-temp-target)=
 ### Dočasný cíl při nízké glykémii
 
 Tato **automatizace** automaticky spustí **dočasný cíl**, když **glykémie** klesne pod určitou mez – zde při glykémii nižší než 70 mg/dl se na 30 minut spustí cíl 110 mg/dl:
 
-![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
+![Příklad: pravidlo pro nízkou glykémii](../images/Automations/automation_example_low_glucose_rule.png)
 
 ### Dočasný cíl na oběd (s „Polohou“)
 
-![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
+![Příklad: pravidlo pro oběd](../images/Automations/automation_example_lunch_rule.png)
 
 Tato **automatizace** byla vytvořena pro uživatele, který každý pracovní den obědvá v práci přibližně ve stejnou dobu. Spustí se ale jen tehdy, když je uživatel na zvoleném místě („Poloha“).  Pokud tedy uživatel jednoho dne není v práci, tato **automatizace** se nespustí.
 
@@ -320,7 +320,7 @@ Tato **automatizace** nastaví ve 13:00 nízký **dočasný cíl** (Před jídle
 
 „Spouštěč“ poloha má název, místo (klepněte na **Vybrat z mapy** nebo použijte svou současnou polohu) a poloměr v metrech. Spustí se, když jste uvnitř (nebo mimo) této oblasti:
 
-![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
+![Příklad: pravidlo pro oběd s podmínkou polohy](../images/Automations/automation_example_lunch_location_condition.png)
 
 Díky spojení „A“ proběhne **automatizace** jen ve „zvoleném čase“ a jen tehdy, když je uživatel na zvoleném místě.
 
@@ -330,11 +330,11 @@ Díky spojení „A“ proběhne **automatizace** jen ve „zvoleném čase“ a
 
 Wi-Fi SSID je dobrá možnost, jak spustit **automatizaci**, když jste v dosahu určité Wi-Fi sítě (ve srovnání s GPS): je docela přesná, méně vybíjí baterii a funguje i v uzavřených prostorách, kde GPS a jiné služby určování polohy nemusí být dostupné.
 
-Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
+Zde je další příklad nastavení **dočasného cíle** jen pro pracovní dny před snídaní (1).
 
 
-The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
-and while being connected to a home Wi-Fi network (3).
+**Automatizace** se spustí v 5:30 jen od pondělí do pátku (2)  
+a jen tehdy, když je telefon připojený k domácí Wi-Fi síti (3).
 
 
 Potom nastaví **dočasný cíl** 75 mg/dl na 30 minut (4). Jednou z výhod zahrnutí polohy je, že se automatizace nespustí například tehdy, když je uživatel na dovolené.
@@ -350,7 +350,7 @@ Zde je snímek obrazovky se spouštěči **automatizace**:
 1) Pod hlavní podmínkou „A“ (aby se pravidlo spustilo, musí platit obě podmínky) 1) Opakující se čas = Po,Út,St,Čt,Pá v 5:30  
 1) WiFi SSID = My_Home_WiFi_Name
 
-![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
+![Příklad: podmínka Wi-Fi](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
@@ -395,7 +395,7 @@ V příkladu níže je povolené pravidlo **Low glucose temp target** (1) (viz [
 
 Zkontrolujte, že políčko vlevo od názvu **automatizace** je „zaškrtnuté“, aby bylo pravidlo aktivní:
 
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+![Zapínání a vypínání pravidel automatizace](../images/Automations/automation_rule_activated_deactivated.png)
 
 * Problém: __Moje automatizace se spouštějí ve špatném pořadí.__
 

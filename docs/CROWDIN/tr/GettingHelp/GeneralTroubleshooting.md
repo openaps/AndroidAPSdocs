@@ -2,83 +2,83 @@
 
 # Troubleshooting
 
-**Start here when something is not working.** Troubleshooting information lives on many pages across the documentation. This page brings it together: it is a single collection of links, sorted by topic, to help you solve the most common problems.
+**Bir şey çalışmadığında buradan başlayın.** Sorun giderme bilgileri dokümantasyonun birçok sayfasında yer alır. Bu sayfa onları bir araya getirir: en yaygın sorunları çözmenize yardımcı olmak için konuya göre sıralanmış tek bir bağlantı listesidir.
 
-If you do not find your answer below, also check:
+Cevabınızı aşağıda bulamazsanız şunlara da bakın:
 
-* the [FAQ](../UsefulLinks/FAQ.md) for answers to frequent questions, and
-* the [Profile tuning guide](ProfileTuning.md) if your loop runs but your glucose control needs improving.
+* sık sorulan soruların cevapları için [SSS](../UsefulLinks/FAQ.md) ve
+* döngünüz çalışıyor ancak glikoz kontrolünüzün iyileşmesi gerekiyorsa [profil ince ayar kılavuzu](ProfileTuning.md).
 
 ```{admonition} Still stuck?
 :class: tip
-If none of the links solve your problem, see [Where can I get help](WhereCanIGetHelp.md) to ask the community (Facebook, Discord), or send your [log files](AccessingLogFiles.md) to the developers.
+Bu bağlantıların hiçbiri sorununuzu çözmezse, topluluğa sormak için (Facebook, Discord) [Nereden yardım alabilirim?](WhereCanIGetHelp.md) sayfasına bakın veya [günlük dosyalarınızı](AccessingLogFiles.md) geliştiricilere gönderin.
 ```
 
 ---
 
 (generaltroubleshooting-aaps-app)=
 
-## AAPS app
+## AAPS uygulaması
 
 ### Yapım & güncelleme
 
-* If the build fails, see [If the build fails](#building-aaps-troubleshooting): it lists the troubleshooting section for each build method:
+* Oluşturma başarısız olursa [Oluşturma başarısız olursa](#building-aaps-troubleshooting) bölümüne bakın: burada her oluşturma yöntemi için sorun giderme bölümü listelenir:
   * [AAPS Builder](#aaps-builder-troubleshooting)
-  * [Browser build](#aaps-ci-troubleshooting)
+  * [Tarayıcı ile oluşturma](#aaps-ci-troubleshooting)
   * [Android Studio](TroubleshootingAndroidStudio.md)
-* Lost keystore, or new keystore: [Reinstalling AAPS](#reinstall-aaps)
-* Updating **AAPS**: [with AAPS Builder](#aaps-builder-updates), [with a browser build (fork)](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
+* Kayıp anahtar deposu veya yeni anahtar deposu: [AAPS'i yeniden yükleme](#reinstall-aaps)
+* **AAPS**'i güncelleme: [AAPS Builder ile](#aaps-builder-updates), [tarayıcı ile oluşturma (fork) ile](#update-browser-build-troubleshooting), [Android Studio ile](#update-computer-build-troubleshooting)
 
-### Installing
+### Yükleme
 
-* [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
-* Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
+* [Google Play Protect uyarısı](#transferring-installing-play-protect-warning): uygulama güvenli değil olarak bildiriliyor.
+* Kurulum, doğrulanmamış bir geliştirici hakkında bir mesajla **engelleniyor**: ücretsiz kurulum yöntemleri için [Android geliştirici doğrulaması](#android-developer-verification) bölümüne bakın.
 
 ### Ayarlar
 
-* [Profile: "Basal rate is not compatible with the current pump"](#your-aaps-profile-basal-not-compatible)
-* [Pump: "Data is coming from different pump"](#config-builder-wrong-pump-data)
+* [Profil: "Bazal oran mevcut pompa ile uyumlu değildir"](#your-aaps-profile-basal-not-compatible)
+* [Pompa: "Veriler farklı pompadan geliyor"](#config-builder-wrong-pump-data)
 * [Nightscout Client](TroubleshootingNsClient.md)
-* **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
+* Başlangıçta **"AAPS ayarları okunamıyor"**: ayarlar, Android'in **AAPS** için sakladığı bir anahtarla şifrelenmiştir ve bu anahtar artık ayarları açamıyordur; örneğin telefonun anahtar deposu sıfırlandıktan sonra. Bu ekran gösterilirken **AAPS** çalışmaz ve pompayı kontrol etmez. **Tekrar dene**'ye dokunun: **AAPS**'i kapatıp yeniden başlatır. Bu işe yaramazsa telefonu yeniden başlatın. **Sıfırdan başla**'yı yalnızca başka hiçbir şey işe yaramadığında kullanın: okunamayan ayar dosyasını bir kenara koyar (adı değiştirilir ve saklanır) ve **AAPS**'i boş ayarlarla başlatır. Ardından son [ayar dışa aktarımınızı](../Maintenance/ExportImportSettings.md) içe aktarın.
 
-### Usage
+### Kullanım
 
-* [Wrong carb values (slow carbs absorption)](#CobCalculation-detection-of-wrong-cob-values)
-* [Automations](#automations-troubleshooting)
-* [Full closed loop](#full-closed-loop-troubleshooting)
+* [Yanlış karbonhidrat değerleri (yavaş karbonhidrat emilimi)](#CobCalculation-detection-of-wrong-cob-values)
+* [Otomasyonlar](#automations-troubleshooting)
+* [Tam kapalı döngü](#full-closed-loop-troubleshooting)
 
 ---
 
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## Bluetooth related issues
+## Bluetooth ile ilgili sorunlar
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Bluetooth bağlantılarıyla, pompa/Pod bağlantısının kopmasıyla veya etkinleştirme ve bağlantı sorunlarıyla ilgili bilinen sorunlar için: [Bluetooth sorunlarını giderme](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (generaltroubleshooting-android-related-issues)=
 
-## Android Related Issues
+## Android ile ilgili sorunlar
 
-### Battery optimization
+### Pil optimizasyonu
 
-**AAPS** can help you find the right settings for your phone: open the **menu** (☰) > **About** and tap **Don't kill my app?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). The [setup wizard](#setup-wizard-bluetooth-battery-optimisation) also asks you to turn off battery optimization for **AAPS** and Bluetooth.
+**AAPS**, telefonunuz için doğru ayarları bulmanıza yardımcı olabilir: **menü** (☰) > **Hakkında** bölümünü açın ve **Uygulamamı kapatma?** öğesine dokunun. Bu, [Don't kill my app](https://dontkillmyapp.com/) sitesinde telefon markanıza ait talimatları açar. [Kurulum sihirbazı](#setup-wizard-bluetooth-battery-optimisation) da sizden **AAPS** ve Bluetooth için pil optimizasyonunu kapatmanızı ister.
 
-Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
+Android, varsayılan olarak etkin olan pil tasarrufu ayarları içerir. Bu ayarlar, sistemin çalışması için gerekli olmayan uygulamaları otomatik olarak askıya alır/duraklatır. Böylece her zaman çalışması gerekmeyen uygulamaların harcadığı pil enerjisi azalır.
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip**.
+Bu ayar etkin olduğunda, **AAPS** ve **xDrip** gibi diğer destekleyici uygulamalarda büyük olasılıkla sorunlara neden olur.
 
-It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
+**AAPS** ve diğer destekleyici uygulamaların her zaman etkin kalması için Pil Optimizasyonunu devre dışı bırakmanız önemlidir.
 
-Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
+Telefonunuzun modeline ve markasına göre, bu ayarın devre dışı bırakılması gereken birden fazla yer olabilir.
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+***NOT:** Telefonunuzda bu seçenek varsa, Bluetooth hizmeti için Pil Optimizasyonunu devre dışı bırakmak üzere aşağıdaki adımları izleyin. Aynı adımları **AAPS** ve diğer uygulamalar için de kullanabilirsiniz, ancak ekran görüntüleri yalnızca Bluetooth hizmeti için nasıl yapılacağını gösterir.*
 
-#### Pixel phones (stock Android)
+#### Pixel telefonlar (saf Android)
 
-* Go to the Android settings, select "Apps".
+* Android ayarlarına gidin, "Uygulamalar"ı seçin.
 
   ![Android Ayarları¦Uygulamalar](../images/troubleshooting/pixel/01_androidsettings.png)
 
@@ -94,7 +94,7 @@ Depending on your phone model and make there may be more than one location and s
 
   ![Bluetooth uyg.](../images/troubleshooting/pixel/03_bluetooth.png)
 
-* Click the "App battery usage" and select "Unrestricted" (called "Not optimized" on some older Android versions).
+* "Uygulama pil kullanımı"na tıklayın ve "Kısıtlanmamış"ı seçin (bazı eski Android sürümlerinde adı "Optimize edilmemiş").
 
   ![BT Pil optimizasyonu](../images/troubleshooting/pixel/04_btunrestricted.png)
 
@@ -109,7 +109,7 @@ Depending on your phone model and make there may be more than one location and s
 
   ![Sistem uygulamalarını göster](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* Now search the Bluetooth app and select it to see its settings.
+* Şimdi Bluetooth uygulamasını arayın ve ayarlarını görmek için seçin.
 
   ![Bluetooth Uyg.](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
@@ -117,13 +117,13 @@ Depending on your phone model and make there may be more than one location and s
 
   ![Pil](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* Set it to "Unrestricted" (called "Not optimized" on some older Android versions).
+* "Kısıtlanmamış" olarak ayarlayın (bazı eski Android sürümlerinde adı "Optimize edilmemiş").
 
-  ![Unrestricted](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![Kısıtlanmamış](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### Huawei phones
+#### Huawei telefonlar
 
-See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+Şu kılavuza bakın: [Huawei Bluetooth ve pil optimizasyonu](../CompatiblePhones/Huawei.md)
 
 ---
 
@@ -131,11 +131,11 @@ See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones
 
 ## Sürekli Glikoz İzleme (CGM)
 
-Useful links to known issues and steps to resolve for CGMs.
+CGM'lerdeki bilinen sorunlar ve çözüm adımları için faydalı bağlantılar.
 
 * [General](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
-* [Libre 2 with Minimal Looper](#minimallooper-troubleshooting)
+* [Minimal Looper ile Libre 2](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
 * [xDrip - CGM verisi yok](#xdrip-identify-receiver)
 * [xDrip - Dexcom sorun giderme](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
@@ -146,7 +146,7 @@ Useful links to known issues and steps to resolve for CGMs.
 
 ## Pompalar
 
-Useful links to known issues and steps to resolve for Pumps
+Pompalardaki bilinen sorunlar ve çözüm adımları için faydalı bağlantılar
 
 * [Accu-Chek Combo](#combov2-tips-for-basic-usage)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
@@ -165,20 +165,20 @@ Useful links to known issues and steps to resolve for Pumps
 
 ## Telefonlar
 
-Useful links to known issues and steps to resolve for Phones
+Telefonlardaki bilinen sorunlar ve çözüm adımları için faydalı bağlantılar
 
-* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
+* [Test edilmiş telefon ve cihaz kurulumlarının listesi](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [Huawei Bluetooth ve pil optimizasyonu](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-remote-control)=
 
-## Remote control
+## Uzaktan kontrol
 
-* [AAPSClient and remote control (pairing, commands not received)](#client-master-control-troubleshooting)
-* ['Nightscout access token' issues](#remotecontrol-nightscout-access-token)
+* [AAPSClient ve uzaktan kumanda (eşleştirme, komutlar alınmıyor)](#client-master-control-troubleshooting)
+* ['Nightscout erişim belirteci' sorunları](#remotecontrol-nightscout-access-token)
 * [SMS Komutları](#SMSCommands-troubleshooting)
 * [Android Auto](#android-auto-troubleshooting)
 
@@ -188,9 +188,9 @@ Useful links to known issues and steps to resolve for Phones
 
 ## Akıllı saatler
 
-Useful links to known issues and steps to resolve for Smartwatches
+Akıllı saatlerdeki bilinen sorunlar ve çözüm adımları için faydalı bağlantılar
 
 * [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
-* [Watch and phone do not communicate](#wear-os-watch-phone-communication)
+* [Saat ve telefon iletişim kurmuyor](#wear-os-watch-phone-communication)
 * [Wear OS 5](#wear-os-5-troubleshooting)
-* [Building the Wear app](#building-aaps-wear-os-troubleshooting)
+* [Wear uygulamasını oluşturma](#building-aaps-wear-os-troubleshooting)

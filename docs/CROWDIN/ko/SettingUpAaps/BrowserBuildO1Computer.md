@@ -1,39 +1,39 @@
 (aaps-ci-option1-computer)=
 
-# Option 1 · Computer – Generate a new keystore
+# 옵션 1 · 컴퓨터 – 새 키 저장소 생성하기
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on a **computer** (Windows / Mac / Linux).
+**컴퓨터**(Windows / Mac / Linux)에서 [옵션 1](BrowserBuildO1.md)(새 키 저장소 생성하기)을 진행합니다.
 ```
 
-## 1. Download the preparation file
+## 1. 준비 파일 다운로드하기
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Start a local server and generate the keystore
+## 2. 로컬 서버를 시작하고 키 저장소 생성하기
 
-Use a computer (supports Windows/Mac/Linux)
+컴퓨터 사용(Windows/Mac/Linux 지원)
 
-Open the webpage [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
+다음 웹 페이지를 여십시오 [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
 
-Install Simple Web Server<br/> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store.<br/> If your browser asks whether to open the store app, allow it.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
+Simple Web Server를 설치하십시오<br/> Windows 또는 Mac 사용자는 Microsoft Store 또는 Mac App Store에서 설치할 수 있습니다.<br/> 브라우저가 스토어 앱을 열지 물으면 허용하십시오.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
 
-Example on Mac:
+Mac의 예:
 
-- get → install → open<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)<br/><br/>
+- get(받기) → install(설치) → open(열기)<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)<br/><br/>
 
-- Click Get Started<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)<br/><br/>
+- Get Started(시작하기)를 클릭하십시오<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)<br/><br/>
 
-- Click New Server<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
+- New Server(새 서버)를 클릭하십시오<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
 
-- In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)<br/><br/>
+- Folder Path(폴더 경로)에서 aaps-ci-preparation.html이 있는 폴더를 선택한 다음 Create Server(서버 만들기)를 클릭하십시오.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)<br/><br/>
 
-- Seeing this screen means the server has been started.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
+- 이 화면이 보이면 서버가 시작된 것입니다.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
 
-- Do not close Simple Web Server. Please switch to your browser and open<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
+- Simple Web Server를 닫지 마십시오. Please switch to your browser and open<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
-- For the subsequent steps, please refer to the video below, starting from 1 minute 37 seconds.
+- 이후 단계는 아래 동영상의 1분 37초부터 참조하십시오.
 
   <!--crowdin: exclude-->
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -50,4 +50,4 @@ Example on Mac:
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**다음: [3단계 – Google Drive 인증하기](BrowserBuildGoogleDrive.md) →**

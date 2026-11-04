@@ -1,104 +1,104 @@
-# Open Humans Uploader
+# Open Humans duomenų įkėlimas
 
-## Donate your data for science
+## Paaukokite savo duomenis mokslui
 
-You can help the community by donating your data to research projects! This helps scientists to pay it forward, develop new scientific ideas and make open source closed loop systems better known. AAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
+Galite padėti bendruomenei, paaukodami savo duomenis moksliniams tyrimams! Tai padeda mokslininkams perduoti žinias kitiems, kurti naujas mokslines idėjas ir plačiau išgarsinti atvirojo kodo uždarojo ciklo sistemas. AAPS gali sinchronizuoti jūsų duomenis su [Open Humans](https://www.openhumans.org) – platforma, kurioje galite įkelti, susieti ir saugoti savo asmeninius duomenis, pavyzdžiui, genetinius, aktyvumo ir sveikatos duomenis.
 
-You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
+Jūs visiškai kontroliuojate, kas vyksta su jūsų duomenimis ir kuriuos projektus norite remti, suteikdami jiems prieigą prie savo duomenų. Priklausomai nuo projekto, prie kurio prisijungėte, duomenys vertinami ir naudojami skirtingais būdais ir skirtingu mastu.
 
-The following data will be uploaded to your Open Humans account:
+Į jūsų Open Humans paskyrą bus įkelti šie duomenys:
 
 - Glucose values
-- Careportal events (except notes)
+- Terapijos įrašai (išskyrus pastabas)
 - Extended boluses
-- Profile switches
-- Total daily doses
-- Temporary basals
-- Temp targets
+- Profilio keitimai
+- Bendros paros dozės
+- Laikinos bazės
+- Laikini tikslai
 - Nustatymai
-- Application version
-- Device model
-- Screen dimensions
+- Programos versija
+- Įrenginio modelis
+- Ekrano dydis
 
-Secret or private information such as your Nightscout URL or API secret will not be uploaded.
+Slapta ar asmeninė informacija, pavyzdžiui, jūsų Nightscout URL ar API slaptažodis (API secret), nebus įkelta.
 
 ## Sąranka
 
-1. Create your account on [Open Humans](https://www.openhumans.org) if not already done. You can reuse your existing Google or Facebook accounts if you wish to.
-2. Enable the **Open Humans** plugin in [**Configuration** > **Communication**](../SettingUpAaps/ConfigBuilder.md).
+1. Jei dar neturite, susikurkite paskyrą [Open Humans](https://www.openhumans.org) svetainėje. Jei norite, galite naudoti esamą Google arba Facebook paskyrą.
+2. Įjunkite **Open Humans** įskiepį skiltyje [**Konfigūracija** > **Ryšys**](../SettingUpAaps/ConfigBuilder.md).
 
-![Open Humans enabled in Configuration > Communication](../images/OHUploader1.png)
+![Open Humans įjungtas skiltyje Konfigūracija > Ryšys](../images/OHUploader1.png)
 
-3. Tap **Settings** on the **Open Humans** card. You can restrict uploads to times when the phone uses Wi-Fi (**WiFi only**) and/or is charging (**Charging only**).
+3. **Open Humans** kortelėje spauskite **Parametrai**. Galite leisti įkelti duomenis tik tada, kai telefonas naudoja Wi-Fi (**Tik per Wi‑Fi**) ir (arba) kai jis kraunamas (**Tik įkraunant**).
 
-![Open Humans settings with WiFi only and Charging only](../images/OHUploader_settings.png)
+![Open Humans parametrai su nustatymais „Tik per Wi‑Fi“ ir „Tik įkraunant“](../images/OHUploader_settings.png)
 
-4. Tap **Open plugin** on the **Open Humans** card, then tap **Setup**.
+4. **Open Humans** kortelėje spauskite **Atidaryti įskiepį**, tada spauskite **Sąranka**.
 
-![Open Humans plugin screen with the Setup button](../images/OHUploader_setup.png)
+![Open Humans įskiepio ekranas su mygtuku „Sąranka“](../images/OHUploader_setup.png)
 
-5. On the **Welcome to Open Humans** screen, tap **Next**. Read the **Consent** screen carefully: it shows the terms of use and which data is uploaded and not uploaded.
-6. Switch on **I understand and agree.** (1) and tap **Login to Open Humans** (2).
+5. Ekrane **Sveiki atvykę į Open Humans** spauskite **Toliau**. Atidžiai perskaitykite ekraną **Sutikimas**: jame rodomos naudojimosi sąlygos ir kurie duomenys įkeliami, o kurie ne.
+6. Įjunkite **Aš suprantu ir sutinku.** (1) ir spauskite **Prisijungti prie Open Humans** (2).
 
-![Open Humans Welcome and Consent screens in AAPS](../images/OHUploader2.png)
+![Open Humans pasveikinimo ir sutikimo ekranai AAPS programėlėje](../images/OHUploader2.png)
 
-7. Open Humans website will be opened. Login with your credentials.
-8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile (1).
-9. Click **Authorize project** (2).
+7. Bus atidaryta Open Humans svetainė. Prisijunkite savo prisijungimo duomenimis.
+8. Nuspręskite, ar norite paslėpti savo narystę AAPS Uploader projekte viešame Open Humans profilyje (1).
+9. Spustelėkite **Authorize project** (leisti projektui) (2).
 
-![Login and project authorization on the Open Humans website](../images/OHUploader_web.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshots above show an earlier version of the Open Humans website and still use the old project name **AndroidAPS Uploader**. The steps are the same.
-```
-
-10. Back in **AAPS**, the **Final touches** screen asks whether you want to proceed. Tap **Proceed**.
-11. Wait until **We're done!** appears, then tap **Close**. From now on, your phone uploads data in the background from time to time.
-12. The **Open Humans** plugin screen now shows your **Project Member ID**. Tap **Upload now** if you want to start an upload right away.
-13. Tap **Logout** if you want to stop uploading data to Open Humans.
-14. Android notification will inform you about running upload.
-
-![Open Humans finish setup](../images/OHUploader3.png)
+![Prisijungimas ir projekto leidimas Open Humans svetainėje](../images/OHUploader_web.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the confirmation screens are **Final touches** and **We're done!**, there is no queue size, and the buttons are **Upload now** and **Logout**.
+Aukščiau esančiose ekrano nuotraukose rodoma ankstesnė Open Humans svetainės versija ir dar senas projekto pavadinimas **AndroidAPS Uploader**. Veiksmai tie patys.
 ```
 
-15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
+10. Grįžus į **AAPS**, ekrane **Paskutiniai štrichai** klausiama, ar norite tęsti. Spauskite **Tęsti**.
+11. Palaukite, kol pasirodys **Užbaigta!**, tada spauskite **Uždaryti**. Nuo šiol jūsų telefonas retkarčiais įkels duomenis fone.
+12. **Open Humans** įskiepio ekrane dabar rodomas jūsų **Projekto nario ID**. Jei norite pradėti įkėlimą iš karto, spauskite **Įkelti dabar**.
+13. Jei norite nebeįkelti duomenų į Open Humans, spauskite **Atsijungti**.
+14. Android pranešimas informuos jus apie vykstantį įkėlimą.
 
-![Open Humans manage data](../images/OHWeb.png)
+![Open Humans sąrankos užbaigimas](../images/OHUploader3.png)
 
-## Sharing Opportunities
+```{admonition} Older screenshot
+:class: note
+Aukščiau esanti ekrano kopija yra iš ankstesnės **AAPS** versijos. **AAPS** 4 versijoje patvirtinimo ekranai yra **Paskutiniai štrichai** ir **Užbaigta!**, eilės dydžio nėra, o mygtukai yra **Įkelti dabar** ir **Atsijungti**.
+```
 
-### [The 'OPEN' project](https://www.open-diabetes.eu/)
+15. Savo duomenis galite tvarkyti prisijungę prie [Open Humans svetainės](https://www.openhumans.org).
 
-The 'OPEN' project brings together an international and intersectoral consortium of patient innovators, clinicians, social scientists, computer scientists and patient advocacy organizations in order to investigate various aspects of Do-it-Yourself Artificial Pancreas Systems (DIY APS) that are used by an increasing number of people with diabetes. For more details see their [website](https://www.open-diabetes.eu/).
+![Open Humans duomenų tvarkymas](../images/OHWeb.png)
 
-In September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. A [tutorial](https://open-diabetes.eu/en/open-survey/survey-tutorials/) how to donate your data to the 'OPEN' project is available on their site and within the survey itself.
+## Dalijimosi galimybės
+
+### [Projektas 'OPEN'](https://www.open-diabetes.eu/)
+
+Projektas 'OPEN' sujungia tarptautinį ir tarpsektorinį konsorciumą: pacientus novatorius, gydytojus, socialinių mokslų ir kompiuterijos mokslininkus bei pacientų teises ginančias organizacijas. Jie tiria įvairius savadarbių dirbtinės kasos sistemų (DIY APS) aspektus. Šias sistemas naudoja vis daugiau žmonių, sergančių diabetu. Daugiau informacijos rasite jų [svetainėje](https://www.open-diabetes.eu/).
+
+2020 m. rugsėjį projektas 'OPEN' pradėjo [apklausą](https://survey.open-diabetes.eu/), kurioje galima ir paaukoti į Open Humans įkeltus duomenis. [Instrukcija](https://open-diabetes.eu/en/open-survey/survey-tutorials/), kaip paaukoti savo duomenis projektui 'OPEN', yra jų svetainėje ir pačioje apklausoje.
 
 ### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
 
-The OpenAPS Data Commons was created to enable a simple way to share data sets from the DIYAPS community for research. The data is shared both with traditional researchers who will create traditional research studies, and with groups or individuals from the community who want to review data as part of their own research projects. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AAPS, Loop, and OpenAPS.
+OpenAPS Data Commons sukurta tam, kad DIYAPS bendruomenės duomenų rinkiniais būtų galima paprastai dalytis moksliniams tyrimams. Duomenimis dalijamasi ir su įprastais tyrėjais, kurie atlieka įprastus mokslinius tyrimus, ir su bendruomenės grupėmis ar asmenimis, kurie nori peržiūrėti duomenis savo tyrimų projektuose. OpenAPS Data Commons naudoja platformą 'Open Humans', kad žmonės galėtų lengvai įkelti savo DIYAPS (įskaitant AAPS, Loop ir OpenAPS) duomenis ir jais dalytis.
 
-You can get your data into Open Humans via one of three ways:
+Savo duomenis į Open Humans galite perkelti vienu iš trijų būdų:
 
-1. use the AAPS uploader option to get your data into Open Humans
-2. use the Nightscout Data Transfer to get your data into Open Humans
-3. manually upload data files into Open Humans.
+1. naudokite AAPS įkėlimo funkciją, kad perkeltumėte duomenis į Open Humans
+2. naudokite Nightscout Data Transfer, kad perkeltumėte duomenis į Open Humans
+3. rankiniu būdu įkelkite duomenų failus į Open Humans.
 
-Once you've created an account and gotten your data flowing into Open Humans, make sure to also join the OpenAPS Data Commons in order to donate your data for research if you choose.
+Kai susikursite paskyrą ir jūsų duomenys pradės keliauti į Open Humans, jei norite, prisijunkite ir prie OpenAPS Data Commons, kad paaukotumėte savo duomenis moksliniams tyrimams.
 
 ## Terms of Use
 
-This is an open source tool that will copy your data to [Open Humans](https://www.openhumans.org). We retain no rights to share your data with third parties without your explicit authorization. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process. You can stop uploading and delete your upload data at any time via [www.openhumans.org](https://www.openhumans.org). Beware that some projects that receive data may not support this.
+Tai atvirojo kodo įrankis, kuris kopijuos jūsų duomenis į [Open Humans](https://www.openhumans.org). Mes neturime teisės dalytis jūsų duomenimis su trečiosiomis šalimis be jūsų aiškaus leidimo. Projekto ir programėlės gaunami duomenys identifikuojami atsitiktiniu naudotojo ID ir saugiai perduodami tik į Open Humans paskyrą, jei jūs tam leidžiate. Įkėlimą galite sustabdyti ir įkeltus duomenis ištrinti bet kada per [www.openhumans.org](https://www.openhumans.org). Atkreipkite dėmesį, kad kai kurie duomenis gaunantys projektai to gali nepalaikyti.
 
-Also see [Open Humans Terms of Use](https://www.openhumans.org/terms/).
+Taip pat žr. [Open Humans naudojimosi sąlygas](https://www.openhumans.org/terms/).
 
-## Data Privacy
+## Duomenų privatumas
 
-Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but not identify you. The Application ID uploaded by AAPS is similar and only helps administrate the data. More information can be found here:
+Open Humans saugo jūsų privatumą: kiekvienam projektui jums suteikiamas atskiras skaitinis ID. Taip projektai gali jus atpažinti, bet ne nustatyti jūsų tapatybę. AAPS įkeliamas programos ID (Application ID) yra panašus ir padeda tik administruoti duomenis. Daugiau informacijos rasite čia:
 
-- [Open Humans Data Use Policy](https://www.openhumans.org/data-use/)
-- [Open Humans GDPR](https://www.openhumans.org/gdpr/)
+- [Open Humans duomenų naudojimo politika](https://www.openhumans.org/data-use/)
+- [Open Humans BDAR (GDPR)](https://www.openhumans.org/gdpr/)

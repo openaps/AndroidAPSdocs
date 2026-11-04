@@ -122,7 +122,7 @@ V Androide 16 postupujte podľa týchto krokov; v iných verziách sa obrazovky 
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. V Androide 12 kliknite na `Batéria` (Battery), v Androide 13 a novšom kliknite na `Využitie batérie aplikáciou` (App battery usage).
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
@@ -454,7 +454,7 @@ Keď vyberiete skutočnú pumpu, **AAPS** si vyžiada potvrdenie, pretože skop�
 
 ![Potvrdenie pri výbere skutočnej pumpy](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
+Ak vybraná pumpa komunikuje cez Bluetooth, **AAPS** po dokončení Sprievodcu požiada o povolenie pripájať sa k zariadeniam v okolí (pozrite [Povolenie pre Bluetooth](#setup-wizard-bluetooth-permission)).
 
 Ak už máte nastavený profil a viete, ako pripojiť pumpu, môžete ju pripojiť hneď. Inak zatiaľ nechajte **Virtuálna pumpa** – zmeniť to môžete kedykoľvek, alebo môžete Sprievodcu nastavením opustiť šípkou v ľavom hornom rohu a nechať **AAPS** najprv zobraziť nejaké hodnoty glykémie.
 
@@ -505,7 +505,7 @@ Stlačte „**Otvoriť Ciele**“:
 
 Tu spúšťame Cieľ 1, aj keď naše nastavenie v tejto chvíli ešte nie je úplne pripravené na úspešné splnenie tohto Cieľa. Ale je to začiatok.
 
-Press the "**Start**" button of **Objective 1**:
+Stlačte tlačidlo „**Štart**“ pri **Cieli 1**:
 
 ![Zoznam cieľov](../images/setup-wizard/Wizard-Objectives-List.png)
 

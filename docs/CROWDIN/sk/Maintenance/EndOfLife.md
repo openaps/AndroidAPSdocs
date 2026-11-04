@@ -30,7 +30,7 @@ Tabuľka neuvádza dátum ukončenia pre každú verziu AAPS. Ak vaša verzia ch
 
 Android priraďuje každej verzii systému **úroveň API**, čo je číslo, ktoré používajú aplikácie. Napríklad úroveň API 30 je Android 11. Tabuľka nižšie používa úrovne API z údajov o verziách AAPS. Verzia AAPS v každom riadku je hodnota uvedená pre zobrazenú úroveň API. Toto nie je úplný zoznam verzií, ktoré môžete nainštalovať.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
+Ak chcete vybrať verziu AAPS pre svoj telefón, použite [odporúčania pre verzie Androidu v poznámkach k vydaniu](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>

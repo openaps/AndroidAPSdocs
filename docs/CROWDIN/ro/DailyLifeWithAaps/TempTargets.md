@@ -1,4 +1,4 @@
-# Temp-Targets
+# Ținte temporare
 
 ## What are Temp-Targets and where can I set and configure them?
 
@@ -6,12 +6,12 @@ A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user 
 
 A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
 
-Temporary targets can be defined within those boundaries :
+Țintele temporare pot fi definite în aceste limite:
 
-|         | Țintă temporară        |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/L or 72 mg/dL   |
-| Maximum | 10 mmol/L or 180 mg/dL |
+|       | Țintă temporară         |
+| ----- | ----------------------- |
+| Minim | 4 mmol/L sau 72 mg/dL   |
+| Maxim | 10 mmol/L sau 180 mg/dL |
 
 **AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). They live on the **Temp Target** screen (**Manage** → **Temp Target**), which you can also open by simply tapping the **target chip** on the main screen.
 
@@ -21,22 +21,22 @@ A **Temp-Target** can take approximately 30 minutes or longer in order to attain
 
 The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. The values shown are the shipped defaults — you can [adjust each preset](#TempTargets-change-preset-defaults) to your own needs.
 
-### TT - Activity
+### TT - Exercițiu fizic
 
-![TT Activity](../images/TempTarget2.png)
+![TT Exercițiu fizic](../images/TempTarget2.png)
 
 **BG Target (default preset, adjustable)**
 
-AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
+AAPS va încerca să atingă 140 mg/dL sau 7,8 mmol/L timp de 1 h 30 min
 
 **Other considerations users may wish to factor in when selecting**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+În funcție de nivelul **glicemiei**, **AAPS** va „reduce” insulina administrată pentru a atinge ținta de **glicemie**. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
 
-In closed loop mode, **SMB**:
+În modul buclă închisă, **SMB**:
 
 - *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- bazala poate fi activată dacă **AAPS** are **IOB** negativ sau <0.
 
 Users may also wish to consider:
 
@@ -44,37 +44,37 @@ Users may also wish to consider:
 - *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
 - *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
 
-### TT - Eating soon
+### TT - Mănânc în curând
 
-![TT Eating soon](../images/TempTarget1.png)
+![TT Mănânc în curând](../images/TempTarget1.png)
 
 **BG Target (default preset, adjustable)**
 
-AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
+AAPS va încerca să atingă 90 mg/dL sau 5,0 mmol/L timp de 45 de minute
 
 **Other considerations users may wish to factor in when selecting**:
 
-In closed loop mode, **SMB**:
+În modul buclă închisă, **SMB**:
 
 - will remain activated; and/or
 - basal may be also activated depending on the user's **Profile's** settings.
 
 Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
 
-### TT - Hypo
+### TT - Hipoglicemie
 
-![TT Hypo](../images/TempTarget3.png)
+![TT Hipoglicemie](../images/TempTarget3.png)
 
 **BG Target (default preset, adjustable)**
 
-AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
+AAPS va încerca să atingă 160 mg/dL sau 8,9 mmol/L timp de 1 oră
 
 **Other considerations users may wish to factor in when selecting**:
 
-In closed loop mode, **SMB**:
+În modul buclă închisă, **SMB**:
 
 - *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- bazala poate fi activată dacă **AAPS** are **IOB** negativ sau <0.
 
 (TempTargets-manage-v4)=
 
@@ -82,12 +82,12 @@ In closed loop mode, **SMB**:
 
 In **AAPS** v4 you manage your TT **presets** and start a temporary target from the **Manage** screen (bottom navigation) → **Temp Target** (*“Manage and set temporary targets”*).
 
-![The Temp Target screen — preset carousel, editor and action bar](../images/v4/TempTarget/tt_management.png)
+![Ecranul Țintă temporară — caruselul de presetări, editorul și bara de acțiuni](../images/v4/TempTarget/tt_management.png)
 
-The screen has three parts:
+Ecranul are trei părți:
 
 1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
-2. **Editor** (middle) — the **Temporary target** and **Duration** that will actually be applied, plus an **Activation** date/time.
+2. **Editorul** (la mijloc) — **Ținta temporară** și **Durata** care vor fi aplicate efectiv, plus data/ora de **Activare**.
 3. **Action bar** (bottom) — **➕ add**, **‘️ delete** and the **▶ activate** button.
 
 Selecting a preset card loads its **target** and **duration** into the editor.
@@ -111,21 +111,21 @@ Selecting a preset card loads its **target** and **duration** into the editor.
 
 If you *do* want to keep an edited value, **Save** it: when the editor differs from the selected preset, a **Save** icon appears in the top toolbar. Tapping it stores the current **target** and **duration** (and name, for custom presets) back into the selected preset. For the built-in presets, a **Revert to defaults** button (↺) also appears in the action bar: it brings back the preset's default values.
 
-![Temp Target screen with the Save icon and the Revert to defaults button](../images/v4/TempTarget/tt_preset_save_revert.png)
+![Ecranul Țintă temporară cu pictograma Salvați și butonul Reveniți la valorile implicite](../images/v4/TempTarget/tt_preset_save_revert.png)
 
 So the rule of thumb is:
 
 - **Activate** → use the numbers **once** (preset unchanged).
-- **Save** → make the numbers the preset's **new defaults**.
+- **Salvați** → valorile devin **noile valori implicite** ale presetării.
 
 To put a built-in preset back the way it shipped, select it and tap the **↺ Revert** button — it appears in the action bar only for a **built-in** preset whose values currently differ from its factory defaults, and it restores that preset's original **target** and **duration**.
 
 ### Adding and removing presets
 
 - **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
-- **‘️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
+- **‘️ Delete** — remove the selected **custom** preset. Presetările integrate (*Mănânc în curând*, *Exercițiu fizic*, *Hipoglicemie*) nu pot fi șterse.
 
-Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (Comenzile arată la fel ca la [reordonarea profilurilor](ProfileSwitch-ProfilePercentage.md).)
 
 Your presets are part of the synced configuration, so they are shared across your master and paired clients.
 
@@ -136,9 +136,9 @@ A temporary target can also be set without opening this screen:
 - with the **TT toggles in the Carbs dialog** — see [below](#TempTargets-carbs-dialog),
 - with a **preset button on the [QuickLaunch toolbar](QuickLaunch.md)** — the *Temp Target Presets* category in *Configure QuickLaunch* offers a one-tap button for each of your presets,
 - from a **Wear OS watch** (the **Temp Target** menu item / tile),
-- from a paired **client** — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md),
+- de pe un **client** asociat — vedeți [Controlul dispozitiv principal ↔ client](../RemoteFeatures/ClientMasterControl.md),
 - as part of a **[scene](Scenes.md)** (the *Temporary target* action), or
-- from an **Automation** rule (*Start temp target* / *Stop temp target*).
+- dintr-o regulă de **Automatizare** (*Porniți o țintă temporară* / *Opriți ținta temporară*).
 
 * * *
 
@@ -169,15 +169,15 @@ Each preset's **target** and **duration** are edited directly on the **Temp Targ
 1. Open the **Temp Target** screen (tap the target chip, or **Manage** → **Temp Target**).
 2. Swipe to the preset you want to change.
 3. Adjust **Temporary target** and/or **Duration** in the editor.
-4. Tap the **Save** icon that appears in the top toolbar.
+4. Apăsați pictograma **Salvați** care apare în bara de instrumente de sus.
 
-![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/TempTarget7.png)
+![Editarea unei presetări — pictograma Salvați în bara de instrumente, Reveniți în bara de acțiuni](../images/TempTarget7.png)
 
 While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
 
-## How do I cancel a Temp-Target?
+## Cum anulez o țintă temporară?
 
-While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Tap it and confirm:
+While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Apăsați-l și confirmați:
 
 ![Cancelling a running temp target](../images/TempTarget9.png)
 
@@ -185,7 +185,7 @@ A running temporary target can also be stopped from a **Wear OS watch**, from a 
 
 (TempTargets-hypo-temp-target)=
 
-## Țintă-Temporară Hipoglicemie
+## Țintă temporară - Hipoglicemie
 
 **Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
 
@@ -195,13 +195,13 @@ Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This 
 
 - Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
 
-- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- Avansat, obiectivul 9: utilizatorul poate dezactiva *„Activați SMB cu ținte temporare ridicate”*, astfel încât, chiar dacă **AAPS** are COB > 0, „Activați SMB cu ținte temporare joase” sau „Activați SMB întotdeauna” sunt activate și OpenAPS SMB este activ, **AAPS** nu va administra SMB cât timp sunt active ținte temporare ridicate.
 
 Note: if you open the **Carbs dialog** while your blood glucose is less than 72 mg/dL or 4 mmol/L, **AAPS** pre-selects the **Start Hypo TT** toggle automatically.
 
 (TempTargets-activity-temp-target)=
 
-## Activity Temp-Target
+## Țintă temporară - Exercițiu fizic
 
 Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
 
@@ -209,19 +209,19 @@ To simplify **Temp-Target Activity**, the user can configure a default **Temp-Ta
 
 New users to **AAPS** may need to experiment and personalize their **Temp-Target Activity** default settings in order to optimize this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. Vedeți [Schimbarea procentajului profilului](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. Then **AAPS** is more sensitive.
+Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. O țintă de 99 mg/dL (5,5 mmol/L) este o țintă normală, nici ridicată, nici scăzută. Atunci **AAPS** este mai sensibil.
 
 Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS **SMB** active.
 
 (TempTargets-eating-soon-temp-target)=
 
-## Eating soon Temp-Target
+## Țintă temporară - Mănânc în curând
 
 **Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
+Acesta poate fi un instrument important pentru utilizatorii care nu fac prebolus; totuși, eficiența **Țintei temporare - Mănânc în curând** depinde de mai mulți factori, printre care: setările utilizatorului, dacă urmează o dietă săracă în carbohidrați și dacă folosesc o insulină cu acțiune rapidă (de exemplu Fiasp sau Lyumjev) pentru a nu mai avea nevoie de prebolus. De regulă, până când capătă experiență cu **AAPS**, utilizatorii ar trebui să se aștepte să facă un prebolus când folosesc **Ținta temporară - Mănânc în curând**, mai ales dacă mănâncă o dietă bogată în carbohidrați.
 
 You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
 
@@ -231,6 +231,6 @@ Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have
 
 To action this open **Settings** → **OpenAPS SMB** and deactivate *'Enable SMB with high temp target'*.
 
-![Enable SMB with high temp target preference](../images/TempTargetSMB.png)
+![Preferința Activați SMB cu ținte temporare ridicate](../images/TempTargetSMB.png)
 
 This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS SMB active.

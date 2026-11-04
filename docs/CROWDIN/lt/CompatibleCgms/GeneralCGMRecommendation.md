@@ -2,40 +2,40 @@
 
 ## NGJ higiena
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+Kad ir kokią NGJ sistemą naudojate, jei kalibruojate pagal kraujo mėginį, laikykitės kelių labai aiškių taisyklių, nesvarbu, ar naudojate „pasidaryk pats“ (DIY) NGJ programinę įrangą, ar oficialias programėles.
 
 -   Make sure hands and kit are clean.
--   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
--   Avoid calibrating when glucose levels are moving up or down.
--   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
--   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
--   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
+-   Kalibruokite, kai ekrane matote kelis taškus iš eilės su horizontalia rodykle (paprastai užtenka 15–30 minučių)
+-   Nekalibruokite, kai gliukozės kiekis kyla arba krenta.
+-   Kalibruokite „pakankamai“ – oficialios programėlės paprašys patikrinti vieną ar du kartus per dieną. „Pasidaryk pats“ sistemos to gali neprašyti, todėl būkite atsargūs, jei toliau naudojate jas be kalibravimo.
+-   Jei jutikliui kalibravimas nereikalingas arba jo kalibruoti negalima, bent kartą per dieną išmatuokite gliukozės kiekį kraujyje. AAPS bus saugi tik tiek, kiek patikimi jūsų jutiklio rodmenys.
+-   Jei tik įmanoma, kalibruokite kartais esant žemesnėms reikšmėms (4–5 mmol/l arba 72–90 mg/dL), o kartais esant šiek tiek aukštesnėms (7–9 mmol/l arba 126–160 mg/dL), nes taip gaunamas geresnis intervalas taško/nuolydžio (point/slope) kalibravimui.
 
-## Sensoriaus nustatymas (G6)
+## Jutiklio nustatymas (G6)
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor contacts should not come into contact with blood.
+Įvedant jutiklį, nerekomenduojama per daug spausti įšoviklio, kad būtų išvengta kraujavimo. Jutiklio kontaktai neturi liestis su krauju.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Įspėjimas! First click in the square side and then press down the round side.
+Įvedę jutiklį, siųstuvą galite įspausti į jutiklio laikiklį. Įspėjimas! Pirmiausia įspauskite kvadratinę pusę, tada paspauskite apvalią pusę.
 
 (general-cgm-troubleshooting)=
 ## Troubleshooting
 
 ### Ryšio problemos
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
+Bluetooth ryšį gali trikdyti kiti netoliese esantys Bluetooth įrenginiai, pavyzdžiui, gliukozės matuokliai, ausinės, planšetiniai kompiuteriai arba virtuvės prietaisai, tokie kaip mikrobangų krosnelės ar keraminės kaitlentės. Tokiu atveju xDrip nerodo jokių KG reikšmių. When Bluetooth connection is re-established the data is backfilled.
 
-### Sensoriaus klaidos
+### Jutiklio klaidos
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor contacts should not come into contact with blood.
+Jei pasikartoja jutiklio klaidos, pabandykite pasirinkti kitą kūno vietą jutiklio įvedimui. Jutiklio kontaktai neturi liestis su krauju.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Dažnai „Jutiklio klaidą“ galima ištaisyti iš karto atsigėrus ir pamasažavus aplink jutiklį!
 
 ### Šokinėjantys duomenys
 
-You might try to change settings for noise blocking in xDrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Galite pabandyti pakeisti triukšmo blokavimo nustatymus xDrip programėlėje (Settings - Inter-App Settings - Noise Blocking), pvz., „Block Very High noise and worse“. Taip pat žr. [Gliukozės duomenų glodinimas](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-### Neigiamas sensoriaus amžius
+### Neigiamas jutiklio amžius
 
-![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
+![Jutiklio amžius išskleisto būsenos skydelio eilutėje „Jutiklis“](../images/main/main_status_row_expanded.png)
 
-The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.
+Jutiklio amžius rodomas pagrindinio ekrano būsenos skydelio eilutėje **Jutiklis** (spauskite rodyklę, kad skydelį išskleistumėte). Neigiamas amžius atsiranda, jei yra du „Jutiklio įvedimas“ [Terapijos įrašai](#aaps-screens-careportal) arba jutiklio įvedimas su neteisinga data. Atverkite **Terapijos istorija** (meniu ☰), pasirinkite skirtuką **Terapija** ir ištrinkite neteisingą įrašą.

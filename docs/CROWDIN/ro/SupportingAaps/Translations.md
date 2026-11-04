@@ -1,9 +1,9 @@
-# Cum să traducem fraze pentru aplicația AAPS sau documentație
+# Cum să traduceți textele pentru aplicația AAPS sau pentru documentație
 
 * For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* Pentru documentație vă rugăm să vizitați <https://crowdin.com/project/androidapsdocs> și să vă autentificați folosind contul GitHub
+* Pentru documentație, vizitați <https://crowdin.com/project/androidapsdocs> și autentificați-vă cu contul dumneavoastră GitHub
 
-* Trimiteți o cerere de aderare echipei ce se ocupă de documente. Pentru a face acest lucru, apăsați pe steagul limbii dorite și apoi pe butonul "Alăturare" din colțul din dreapta sus al paginii următoare. Vă rugăm să menționați limba, oferiți câteva informații despre dumneavoastră și experiența AAPS și dacă dorești să fii traducător sau corector (numai persoane competente în traducere + utilizatori avansați AAPS).
+* Trimiteți o cerere de alăturare către echipa documentației. Pentru aceasta, apăsați pe steagul limbii dorite și apoi pe butonul „Join” (alăturați-vă) din colțul din dreapta sus al paginii următoare. Vă rugăm să menționați limba, oferiți câteva informații despre dumneavoastră și experiența AAPS și dacă dorești să fii traducător sau corector (numai persoane competente în traducere + utilizatori avansați AAPS).
 
 ```{admonition} Time for Approval :class: note
 
@@ -53,15 +53,15 @@ Aprobarea este un pas manual. Ca organizație non-profit, nu oferim SLA dar, în
     
     * Translate sentences by sentence
     
-        1. The yellow text is the text you are working at the moment.
+        1. Textul galben este textul la care lucrați în acest moment.
     
-        1. The green text is already translated. You don't need to do this again.
+        1. Textul verde este deja tradus. You don't need to do this again.
     
         1. The red text is the remaining text which have to be translated.
     
-        1. This is the source text you are working on at the moment
+        1. Acesta este textul sursă la care lucrați în acest moment
     
-        1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
+        1. Aceasta este traducerea pe care o pregătiți. Puteți copia textul de mai sus sau puteți selecta una dintre sugestiile de mai jos.
     
         1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
         1. Press the "save" button to save a proposal for the translation. It will then be passed to a proofreader for final check.
@@ -70,7 +70,7 @@ Aprobarea este un pas manual. Ca organizație non-profit, nu oferim SLA dar, în
     
     * A translated page will not be published in docs before 
     
-        1. the translation is proofread
+        1. traducerea este corectată
     
         1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
@@ -83,11 +83,11 @@ Aprobarea este un pas manual. Ca organizație non-profit, nu oferim SLA dar, în
     ```{admonition} Links are not translated anymore
     :class: note
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Links are not translated anymore. În trecut exista aici o secțiune despre acest subiect, dar ea nu mai este necesară: prin trecerea la Markdown și la myst_parser, creăm explicit etichete în textul englezesc, iar acestea sunt transmise automat în celelalte limbi.
     
     
 
-You are translating the text which represents the link. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
+Traduceți textul care reprezintă linkul. Aveți grijă să **nu** ștergeți linkul, care este reprezentat de o pereche de etichete `<0></0>` (sau de alte numere, dacă într-un paragraf sunt mai multe linkuri).
 
 It's the proofreaders job to have a special look on this!
 
@@ -99,6 +99,6 @@ It's the proofreaders job to have a special look on this!
     
     și aprobă texte traduse
     
-    ![aprobă textul](../images/translations-proofreading.png)
+    ![aprobați textul](../images/translations-proofreading.png)
 
 * When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. To speed up the process you can inform docs team about new translations.

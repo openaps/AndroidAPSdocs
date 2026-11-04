@@ -107,7 +107,7 @@ Každý, kto uvidí QR kód, môže čítať váš Nightscout, a kód, ktorý p�
 
 #### Pomocou PIN kódu
 
-Ťuknite na **OK**: hlavné zariadenie zobrazí 8-miestny **PIN kód na párovanie**, rozdelený do dvoch skupín po štyri číslice (napríklad `1234 5678`). Tento PIN kód je **jednorazový** a **jeho platnosť vyprší asi po dvoch minútach**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
+Ťuknite na **OK**: hlavné zariadenie zobrazí 8-miestny **PIN kód na párovanie**, rozdelený do dvoch skupín po štyri číslice (napríklad `1234 5678`). Tento PIN kód je **jednorazový** a **jeho platnosť vyprší asi po dvoch minútach**. Rovnako ako pri QR kóde hlavné zariadenie odmietne názov klienta, ktorý už je v jeho zozname: každý klient dostane vlastný Nightscout token pod svojím názvom.
 
 ![Obrazovka párovania na hlavnom zariadení s jednorazovým PIN kódom (zobrazený PIN kód už neplatí)](../images/v4/ClientMaster/pairing_pin_master.png)
 
@@ -134,7 +134,7 @@ Nasmerujte kameru na kód. Klient ukáže, čo kód robí — adresu Nightscoutu
 
 ```{admonition} Scanning is available on Android
 :class: note
-Skener zatiaľ nie je dostupný v iOS a počítač nemá kameru: tam použite PIN kód.
+A computer without camera: use the PIN there.
 ```
 
 #### Zadanie PIN kódu
@@ -250,7 +250,7 @@ Klient nikdy sám nerozhoduje o podanom množstve. Hlavné zariadenie ho znova p
 ```
 
 (clientmastercontrol-when-the-master-is-offline)=
-### When the master is offline
+### Keď je hlavné zariadenie offline
 
 Ak hlavné zariadenie nie je dostupné (telefón je vypnutý alebo v režime spánku, nie je pripojený k Nightscoutu alebo websockety nefungujú), akcie ovládania na klientovi sú **zablokované skôr, než sa čokoľvek odošle**, a dostanete jasnú správu. Nič sa nevykoná iba napoly.
 
@@ -303,7 +303,7 @@ V nastaveniach rovnaká malá **ikona mobilu** označuje jednotlivé nastavenia,
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Keďže uloženú hodnotu určuje hlavné zariadenie, úprava položky konfigurácie riadenej hlavným zariadením alebo obojsmerného nastavenia z klienta vyžaduje, aby bolo hlavné zariadenie **dostupné**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
+Keďže uloženú hodnotu určuje hlavné zariadenie, úprava položky konfigurácie riadenej hlavným zariadením alebo obojsmerného nastavenia z klienta vyžaduje, aby bolo hlavné zariadenie **dostupné**. Keď je hlavné zariadenie offline, tieto ovládacie prvky sú na klientovi vypnuté (pozrite [Keď je hlavné zariadenie offline](#clientmastercontrol-when-the-master-is-offline)).
 ```
 
 ---

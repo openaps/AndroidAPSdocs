@@ -16,14 +16,14 @@ Pri používaní **Dynamickej ISF** vypnite všetky pravidlá **Automatizácie**
 
 Na používanie **Dynamickej ISF** potrebuje databáza **AAPS** aspoň 7 dní údajov používateľa z **AAPS**.
 
-## What does Dynamic ISF do?
+## Čo robí Dynamická ISF?
 
 **Dynamická ISF** dynamicky prispôsobuje citlivosť na inzulín (**ISF**) na základe používateľovej:
 
 - celkovej dennej dávky inzulínu (**TDD**); a
 - aktuálnych a predpovedaných hodnôt glykémie.
 
-When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation of the app).
+Pri používaní **Dynamickej ISF** sa hodnoty **ISF** zadané v **Profile** už vôbec nepoužívajú, okrem náhradnej hodnoty, keď v databáze **AAPS** nie je dosť údajov o TDD (*t. j.* po novej inštalácii aplikácie).
 
 **SMB/AMA** – príklad **profilu** používateľa so statickým **ISF** nastaveným používateľom a využívaným **SMB** a **AMA**.
 
@@ -33,11 +33,11 @@ When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are no
 
 ![Dynamická ISF](../images/DynamicISF/DynISF2.png)
 
-Červeno zakrúžkovaná časť zobrazuje: `profile ISF` -> `ISF as calculated by DynISF` (ISF z profilu, potom ISF vypočítaná pomocou DynISF). <br/> Tapping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+Červeno zakrúžkovaná časť zobrazuje: `profile ISF` -> `ISF as calculated by DynISF` (ISF z profilu, potom ISF vypočítaná pomocou DynISF). <br/> Ťuknutím na túto časť sa zobrazí dialóg s ďalšími informáciami, napríklad **ISF** pre kalkulačku a vstrebávanie sacharidov (pozrite [Iné využitie ISF](#dynisf-other-usages-of-isf) nižšie).
 
 Hodnotu **DynISF** možno zobraziť aj v grafe: ťuknite na **Pridať graf** pod grafmi na hlavnej obrazovke a vyberte **VSENS** (premenlivá citlivosť). Zobrazuje sa ako biela čiara (dolná časť obrázka vyššie).
 
-## How is Dynamic ISF calculated?
+## Ako sa Dynamická ISF počíta?
 
 **Dynamická ISF** používa na určenie **ISF** model Chrisa Wilsona namiesto statickej hodnoty **ISF**, ktorú používateľ nastavil v **Profile**. Podrobné vysvetlenie nájdete tu: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
 
@@ -70,8 +70,8 @@ Robí sa to preto, aby sa nepodalo príliš veľa inzulínu, keď je **glykémia
 
 **Budúca ISF** používa rovnaký vzorec, ako je opísané vyššie, ale namiesto **aktuálnej glykémie** môže použiť **minimálnu predpovedanú glykémiu**. **Minimálna predpovedaná glykémia**, [ako ju počíta oref1](#aaps-screens-how-predictions-become-a-dosing-decision), je najnižšia hodnota, na ktorú by mala vaša glykémia podľa predpovedí klesnúť počas celého obdobia predpovedí.
 
-* If the current **BG** is above target<br/> **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
-* If eventual **BG** is above target and glucose levels are increasing,<br/> **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
+* Ak je aktuálna **glykémia** nad cieľom<br/> **a** ak je **glykémia** stabilná, v rozsahu +/- 3 mg/dl:<br/>glykémia sa vo vzorci použije takto: `average(minimum predicted BG, current BG)` (priemer minimálnej predpovedanej glykémie a aktuálnej glykémie).
+* Ak je výsledná **glykémia** nad cieľom a glykémia stúpa,<br/> **alebo** ak je výsledná **glykémia** vyššia ako aktuálna **glykémia**:<br/>glykémia sa vo vzorci použije takto: `current BG` (aktuálna glykémia).
 * Inak:<br/>glykémia sa vo vzorci použije takto: `minimum predicted BG` (minimálna predpovedaná glykémia).
 
 Zjednodušené vysvetlenie nájdete na snímke obrazovky nižšie, ktorá túto situáciu znázorňuje. Oranžové bodky používajú **predpovedanú glykémiu**, fialové bodky **priemer (predpovedaná glykémia, aktuálna glykémia)** a modré bodky **aktuálnu glykémiu**.
@@ -111,7 +111,7 @@ Na aktiváciu zapnite **Použiť dynamickú citlivosť** v [Nastavenia > OpenAPS
 
 **Korekčný faktor** sa mení aj pri aktivácii [**Prepnutia profilu** s percentom](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). Nižšie **Percento profilu** zníži **korekčný faktor** a vyššie **Percento profilu** ho naopak zvýši.
 
-For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned, the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
+Ak je napríklad váš **korekčný faktor** 80 % a urobí sa **prepnutie profilu** na 80 %, výsledný **korekčný faktor** bude `0.8*0.8=0.64`.
 
 To znamená, že pri používaní **DynISF** môžete pomocou **Percenta profilu** dočasne ručne doladiť svoju citlivosť. Toto môže byť užitočné pri fyzickej aktivite (nižšie percento), chorobe (vyššie percento) atď.
 
@@ -133,4 +133,4 @@ Toto nastavenie (*„Upraviť výpočty citlivosti pri použití DynamicISF“*)
   * Premenlivý životný štýl (nepravidelné jedlo alebo fyzická aktivita)
   * Nestála TDD alebo citlivosť zo dňa na deň.
 * Neexistuje presný návod, ako nastaviť počiatočnú hodnotu **korekčného faktora**. Ako východisko však platí: ak sú hodnoty vo vašom **Profile** správne, keď ste v rozsahu a **glykémia** je stabilná, hodnota **DynISF** by mala byť približne rovnaká ako hodnota, ktorú ste predtým mali v **Profile**.<br/>Ak vidíte, že **Dynamická ISF** je príliš agresívna, znížte **korekčný faktor**, a naopak.
-* Aj keď **DynISF** vôbec nepoužíva **ISF z Profilu**, ak si všimnete, že sa vaša citlivosť veľmi líši od hodnoty uloženej v **Profile**, mali by ste ju v ňom udržiavať aktuálnu. This may be useful in case you lose your **AAPS** data (_e.g._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
+* Aj keď **DynISF** vôbec nepoužíva **ISF z Profilu**, ak si všimnete, že sa vaša citlivosť veľmi líši od hodnoty uloženej v **Profile**, mali by ste ju v ňom udržiavať aktuálnu. Môže to byť užitočné, ak prídete o dáta **AAPS** (_napr._ nový telefón, nová verzia **AAPS**…), pretože ďalších 7 dní sa ako náhradná hodnota použije vaša **ISF z Profilu**.

@@ -1,116 +1,116 @@
-# Pumps and cannulas
+# Pompalar ve kanüller
 
-## Changing infusion sets: insulin reservoirs and cannulas
+## İnfüzyon setlerini değiştirme: insülin rezervuarları ve kanüller
 
-The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. This procedure is sometimes referred to as a "set change", with a "full" set change including the insulin reservoir and cannula, and a "partial" set change referring to a change of cannula only.
+Aşağıda anlatılan işlem yalnızca hortumlu pompalar içindir; Omnipod, Medtrum Nano, Accu-Chek Solo gibi patch pompalar için geçerli değildir. Bu işlem bazen "set değişimi" olarak adlandırılır: "tam" set değişimi insülin rezervuarını ve kanülü kapsar, "kısmi" set değişimi ise yalnızca kanülün değiştirilmesidir.
 
-Patch pumps fill and prime themselves in their own activation wizard, and their cannula is already in the body. **AAPS** does not offer a prime for them: **Prime/Fill** is not shown in the **Manage** sheet or in QuickLaunch. See the page of your pump in [Compatible pumps](../Getting-Started/CompatiblePumps.md).
+Patch pompalar kendi etkinleştirme sihirbazlarında kendilerini doldurur ve hazırlar; kanülleri zaten vücuttadır. **AAPS** bu pompalar için doldurma sunmaz: **Hazırla/doldur**, **Yönet** panelinde veya Hızlı Başlatma'da gösterilmez. [Uyumlu pompalar](../Getting-Started/CompatiblePumps.md) içinde pompanızın sayfasına bakın.
 
-Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be carried out via the pump directly. These need to be logged in **AAPS** manually, once completed.
+Kartuş/rezervuarın fiziksel olarak değiştirilmesi **AAPS** üzerinden yapılamaz, doğrudan pompada yapılmalıdır. Bu değişiklikler tamamlandıktan sonra **AAPS**'e elle kaydedilmelidir.
 
 (pumps-cannulas-changing-reservoir-and-cannula)=
-### Guide for changing both the pump reservoir and cannula
+### Pompa rezervuarını ve kanülü birlikte değiştirme kılavuzu
 
-1. In **AAPS**, disconnect the pump: press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** for 1 hour. The icon changes to a grey plug icon, indicating that the pump is disconnected.
+1. **AAPS**'te pompanın bağlantısını kesin: ana ekranda [döngü simgesine](#AapsScreens-loop-status) basın ve 1 saat için **Pompa bağlantısını kes**'i seçin. Simge gri bir fiş simgesine dönüşür. Bu, pompa bağlantısının kesildiğini gösterir.
 
-2. Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
+2. İnsülin rezervuarını fiziksel olarak değiştirin: pompanızın vücudunuzla bağlantısını fiziksel olarak ayırın ve rezervuarı/kartuşu ve kanülü üreticinin talimatlarına göre değiştirin.
 
-3. Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
+3. Hortumu ve kanülü hazırlayın/doldurun: bu işlem doğrudan pompada yapılabilir. Hortumdaki tüm hava kabarcıklarını çıkardığınızdan emin olun.
 
-4. Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
+4. Yeni kanülü vücudunuza takın. Kanül yerleştirilip iğne çıkarıldıktan sonra, takılan kanülde küçük bir hava boşluğu kalır; bunun da doldurulması gerekir. Bunu **AAPS**'e bildirmek ve bölgeyi doldurmak için: **Hazırla/doldur**'u açın (ana ekrandaki genişletilmiş durum panelinde, **Yönet** panelinde veya bir [Hızlı Başlatma](QuickLaunch.md) düğmesi olarak) ve değişikliği kaydetmek için duruma göre **İnfüzyon seti değişimini kaydet** ve/veya **Rezervuar değişimini kaydet** seçeneğini işaretleyin. Şimdi varsayılan insülin kanülü doldurma miktarına basın (genellikle yaklaşık 0,3 Ü'dir, ancak bu değerin kanülünüz için doğru olduğunu kontrol edin) ve **Tamam**'ı seçin. Özet mesajını okuyun ve **Tamam**'a dokunarak doldurmanın yapılmasını onaylayın.
 
-   ![Prime/Fill in the Manage sheet with a tube pump](../images/v4/Screens/manage_sheet_tube_pump.png)
+   ![Hortumlu bir pompada Yönet panelindeki Hazırla/doldur](../images/v4/Screens/manage_sheet_tube_pump.png)
 
 
-5. Reconnect the pump in **AAPS**: press the grey plug icon and select **Reconnect pump** to continue looping.
+5. **AAPS**'te pompayı tekrar bağlayın: döngüye devam etmek için gri fiş simgesine basın ve **Pompayı tekrar bağla**'yı seçin.
 
-### Useful information concerning insulin/cannula changes
+### İnsülin/kanül değişimiyle ilgili yararlı bilgiler
 
-* Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** main screen.
+* Bir pompa kanül değişimini kaydetmek Otoduyarlılık'ı %100'e sıfırlar. Ayrıca **AAPS** ana ekranındaki ilgili kanül/insülin durum ışıklarını ve yaşlarını da sıfırlar.
 
-* You can set/adjust the default prime amounts in the **Prime/Fill** settings — type "prime" in the main screen search bar to open them (see [Preferences](../SettingUpAaps/Preferences.md)). See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
+* Varsayılan doldurma miktarlarını **Hazırla/doldur** ayarlarında belirleyebilir/değiştirebilirsiniz — bu ayarları açmak için ana ekrandaki arama çubuğuna "prime" yazın (bkz. [Tercihler](../SettingUpAaps/Preferences.md)). Kanülünüz için kaç ünite doldurulması gerektiğini (iğne uzunluğuna ve hortum uzunluğuna bağlı olarak) kanül kutusundaki kullanım kılavuzunda bulabilirsiniz.
 
-* Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the [Treatments history](#aaps-screens-treatments) as "Prime".
+* Doldurma işleviyle verilen insülin, **AAPS** aktif insülini (AİNS) hesaplarken dikkate alınmaz ve [Tedavi geçmişi](#aaps-screens-treatments)nde "Doldur" olarak işaretlenir.
 
-* Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) in the **Insulin** dialog (see [To announce delivered insulin without actually bolusing](#pumps-cannulas-announce-insulin) below).
+* Pompa bağlantısı kesikken pompadan verilen bolus insülini de **AAPS** tarafından dikkate alınmaz. **AAPS** bağlantısı kesikken doğrudan pompadan bolus yaparsanız, pompayı tekrar bağladıktan sonra bu insülini **İnsülin** iletişim kutusunda (bolus yapmadan) bildirebilirsiniz (aşağıdaki [Gerçekten bolus yapmadan verilen insülini bildirmek](#pumps-cannulas-announce-insulin) bölümüne bakın).
 
-### Cannula, infusion site, tubing and/or pump issues
+### Kanül, infüzyon bölgesi, hortum ve/veya pompa sorunları
 
-If you are confident that you haven't received any insulin for a period of time, despite **AAPS** recording that you have, and you know exactly when the issue started (_e.g._ you remove the cannula and see that the cannula was kinked during the insertion process) you can correct this in **AAPS**, while being aware that the insulin may in fact have been delivered but may be slow to act for some reason.
+**AAPS** insülin aldığınızı kaydetmiş olsa da bir süre hiç insülin almadığınızdan eminseniz ve sorunun tam olarak ne zaman başladığını biliyorsanız (_ör._ kanülü çıkarıyorsunuz ve kanülün yerleştirme sırasında büküldüğünü görüyorsunuz), bunu **AAPS**'te düzeltebilirsiniz. Ancak insülinin aslında verilmiş olabileceğini, sadece bir nedenle yavaş etki ediyor olabileceğini de unutmayın.
 
 ```{admonition} Caution - Risk of Hypoglycemia
 :class: danger
-Only delete insulin delivery from **AAPS** with EXTREME caution, in case insulin _has_ actually been delivered, and monitor BG closely for the next 24 h.
+İnsülin iletimini **AAPS**'ten yalnızca ÇOK büyük bir dikkatle silin, çünkü insülin _gerçekten_ verilmiş olabilir; sonraki 24 saat boyunca KŞ'nizi yakından izleyin.
 ```
 
-To remove boluses and SMBs which you know have not been delivered, open the **menu** (☰), select [Treatments history](#aaps-screens-treatments) and, on the **Carbs and bolus** tab, conservatively delete the logged boluses starting from the point the incident happened. This will correct the "insulin on board" (IOB) value which is key for **AAPS**' calculations; if you now return to the main screen you will see that the IOB has reduced. Be aware that you cannot delete basal insulin which **AAPS** calculates to have been delivered, so that will still be taken into account by **AAPS**.
+Verilmediğini bildiğiniz bolusları ve SMB'leri silmek için **menüyü** (☰) açın, [Tedavi geçmişi](#aaps-screens-treatments)'ni seçin ve **Karbonhidrat ve bolus** sekmesinde, olayın olduğu andan başlayarak kaydedilmiş bolusları dikkatli bir şekilde silin. Bu, **AAPS**'in hesaplamaları için çok önemli olan "aktif insülin" (AİNS) değerini düzeltir; şimdi ana ekrana dönerseniz AİNS değerinin azaldığını görürsünüz. **AAPS**'in verildiğini hesapladığı bazal insülini silemeyeceğinizi unutmayın. Bu nedenle bu insülin **AAPS** tarafından hesaba katılmaya devam eder.
 
-In less obvious cases of insulin delivery problems _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. You may detect these issues either by "smelling" the insulin, seeing a wet adhesive, encountering high glucose values or by getting an alarm. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs to be deducted from the current "insulin on board" (IOB) value. One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
+Sızıntı, tıkanıklık veya tünelleşme gibi insülin iletim sorunlarının daha az belirgin olduğu durumlarda _ör._ sorunun ne zaman başladığından emin değilseniz veya insülinin bir kısmının verildiğini düşünüyorsanız dikkatli olmanız gerekir. Bu sorunları insülin "kokusu" alarak, ıslak bir yapışkan görerek, yüksek glikoz değerleriyle karşılaşarak veya bir alarm alarak fark edebilirsiniz. Cildinize ne kadar insülin girdiğini (bir süre sonra etki etmeye başlayabilir) hiçbir zaman bilemeyeceğiniz için, mevcut "aktif insülin" (AİNS) değerinden düşülmesi gereken doğru insülin miktarını belirlemek zor olacaktır. Bir yöntem, insülin iletim sorununu çözdükten sonra döngüyü 5 saat (veya kendi insülin etki sürenizce) duraklatmak ve ardından döngüye devam etmektir. Bu, döngüyü yeniden başlattığınızda AİNS'in doğru olmasını sağlar.
 
 (pumps-cannulas-disconnecting)=
-## Disconnecting the pump for showering or activity
+## Duş veya aktivite için pompanın bağlantısını kesme
 
-If you take your pump off for showering, bathing, swimming, contact sports or other activities you must let **AAPS** know that no insulin is being delivered, to keep the IOB correct. The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, open the same dialog again and pick a new duration under **Disconnect pump**: the disconnection is extended and the new duration starts from now. You do not need to reconnect first.
+Duş, banyo, yüzme, temaslı sporlar veya başka etkinlikler için pompanızı çıkarırsanız, AİNS değerinin doğru kalması için **AAPS**'e insülin verilmediğini bildirmeniz gerekir. Pompanın bağlantısı ana ekrandaki [döngü simgesi](#AapsScreens-loop-status) ile kesilebilir: simgeye basın ve ihtiyacınız olan süreyle **Pompa bağlantısını kes**'i seçin. Etkinlik planlanandan uzun sürerse, aynı iletişim kutusunu yeniden açın ve **Pompa bağlantısını kes** altında yeni bir süre seçin: bağlantı kesintisi uzatılır ve yeni süre şimdiden başlar. Önce tekrar bağlamanız gerekmez.
 
-As you are not getting any insulin while the pump is disconnected, you should reconnect every two hours to catch up for the missing basal. You can do this by connecting, bolusing the missing basal amounts (_e.g._ of the last two hours) before disconnecting again. This should help to avoid a severe lack of insulin which could result in diabetic ketoacidosis (DKA). If it is inconvenient to reconnect the pump during activity (cannula site is covered by wearing a wetsuit _etc._), consider a pen injection instead. This manual injection can be logged in **AAPS**, and doesn't have to be logged at the time of injection (just make a note of the time of injection) since you can announce the insulin and backdate the time the insulin was actually given when you reconnect the pump.
+Pompanın bağlantısı kesikken hiç insülin almadığınız için, eksik kalan bazalı tamamlamak üzere her iki saatte bir pompayı yeniden bağlamalısınız. Bunu, pompayı tekrar bağlayıp eksik bazal miktarlarını (_ör._ son iki saatin) bolus olarak verdikten sonra bağlantıyı yeniden keserek yapabilirsiniz. Bu, diyabetik ketoasidoza (DKA) yol açabilecek ciddi bir insülin eksikliğini önlemeye yardımcı olur. Etkinlik sırasında pompayı tekrar bağlamak zorsa (kanül bölgesi bir dalış giysisinin altında kalıyorsa _vb._), bunun yerine kalemle enjeksiyon yapmayı düşünün. Bu elle yapılan enjeksiyon **AAPS**'e kaydedilebilir ve enjeksiyon anında kaydedilmesi gerekmez (enjeksiyonun saatini not etmeniz yeterlidir). Çünkü pompayı tekrar bağladığınızda insülini bildirip insülinin gerçekte verildiği zamanı geriye tarihleyebilirsiniz.
 
 (pumps-cannulas-announce-insulin)=
-## To announce delivered insulin without actually bolusing
+## Bolus vermeden, verilmiş insülini kaydetmek için
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
+**AAPS** bağlantısı kesikken pompadan verilen insülini veya kalem enjeksiyonlarını bildirmek için: [İnsülin iletişim kutusunu](#aaps-screens-buttons-insulin) açın (alt gezinme çubuğunda **Tedaviler** veya bir Hızlı Başlatma düğmesi), miktarı ünite olarak girin ve **Bolus yalnızca kaydedilecektir (pompa ile iletilmez)** seçeneğini etkinleştirin. Ardından bir **Zaman** satırı (**Şimdi** olarak ayarlı) enjeksiyonun gerçek zamanını kaydetmenizi sağlar: enjeksiyon yakın zamanda yapıldıysa bunu göz ardı edebilirsiniz. Bolus bir süre önce yapıldıysa, zamanı geri almak için **-** kullanın (_ör._ -30 dk) veya tam tarihi ve saati seçmek için satırı ok ile açın. **AAPS** daha sonra insülin etki süresini hesaba katar ve vücutta kalan insülini buna göre hesaplar.
 
-If you are using **AAPS** as a caregiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as "pump disconnect 120" and "pump connect 120". The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.
+**AAPS**'i bakım veren olarak kullanıyorsanız, "pump disconnect 120" ve "pump connect 120" gibi komutlarla [SMS komutu](../RemoteFeatures/SMSCommands.md) göndererek pompanın bağlantısını uzaktan çok kolay kesebilir (ve tekrar bağlayabilirsiniz). Uzaktan bağlantı kesme süresi 1 - 120 dk arasındadır (bu örnekte 120 dakikadır). Bu, **AAPS** telefonuna erişmeniz zor olduğunda çok faydalıdır: örneğin telefon, yüzme havuzuna doğru koşan bir çocuğun pompa kemerinde duruyorsa ya da bir genç tarafından sıkıca korunuyorsa (veya kullanılıyorsa).
 
-## Reconnecting the pump after activity
+## Aktiviteden sonra pompayı yeniden bağlama
 
-After a long disconnection (1 - 2 hours) it is fairly common for **AAPS** to calculate that you now have negative IOB. When you reconnect the pump, depending on preference/current glucose level/planned food or subsequent activity, you can either:
+Uzun bir bağlantı kesintisinden (1 - 2 saat) sonra **AAPS**'in artık negatif AİNS hesaplaması oldukça yaygındır. Pompayı yeniden bağladığınızda, tercihinize, güncel glikoz düzeyinize, planladığınız yemeğe veya sonraki aktiviteye bağlı olarak şunlardan birini yapabilirsiniz:
 
-a) Just reconnect the pump in **AAPS** (grey-to-green, for closed loop) and leave it up to **AAPS** to start to deliver insulin again
+a) Pompayı **AAPS**'te tekrar bağlayın (kapalı döngü için griden yeşile) ve insülin vermeye yeniden başlamayı **AAPS**'e bırakın
 
 _or_
 
-b) If you want to be more aggressive (for example, you are heading for hyperglycemia), you can open the [Bolus wizard](#aaps-screens-bolus-wizard) and bolus for zero carbs, to immediately deliver the calculated missing insulin as a bolus.
+b) Daha agresif olmak istiyorsanız (örneğin hiperglisemiye doğru gidiyorsanız), hesaplanan eksik insülini hemen bolus olarak vermek için [Bolus sihirbazı](#aaps-screens-bolus-wizard)nı açıp sıfır karbonhidrat için bolus yapabilirsiniz.
 
-Which strategy you prefer is highly personal, and is best determined by trial and error.
+Hangi yöntemi tercih edeceğiniz tamamen kişiseldir ve en iyi deneme yanılma ile belirlenir.
 
 
 (Aapsscreens-site-rotation)=
-## Site Rotation
+## Bölge Rotasyonu
 
-**Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
+**Yönet → Bölge Rotasyonu**, Bölge Rotasyonu iletişim kutusunu Görüntüleme modunda açar:
 
-- With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
-- All Cannula change and Sensor change events from the past 45 days are available.
-- Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-- Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
+- Üstteki iki düğme (kanül simgesi ve sensör simgesi) ile yalnızca kanül bölgelerini, yalnızca sensör bölgelerini veya ikisini birden gösterebilirsiniz
+- Son 45 güne ait tüm Kanül değişimi ve Sensör değişimi olayları kullanılabilir.
+- Listeyi yalnızca seçilen alandaki girdilerle filtrelemek için bir bölge alanına veya aşağıdaki listede bir girdiye tıklayın. Seçilen alan açık yeşil renkle vurgulanır.
+- Düzenleme görünümünü açmak ve girdinin Bölge konumunu, Okunu veya Notunu güncellemek için bir girdinin yanındaki **kalem** simgesine dokunun
 
-![View Mode](../images/SiteRotation/ViewMode.png)
+![Görüntüleme modu](../images/SiteRotation/ViewMode.png)
 
-- The **cog** icon (upper right) opens the settings: **User profile for site rotation** opens a dialog where you choose **Man**, **Woman** or **Child**, and the **Manage pump site rotation** and **Manage CGM site rotation** switches select which sites you manage.
+- **Dişli** simgesi (sağ üst) ayarları açar: **Bölge rotasyonu için kullanıcı profili**, **Erkek**, **Kadın** veya **Çocuk** seçtiğiniz bir iletişim kutusu açar. **Pompa bölge rotasyonunu yönetin** ve **CGM bölge rotasyonunu yönetin** anahtarları ise hangi bölgeleri yöneteceğinizi seçer.
 
 ![Ayarlar](../images/SiteRotation/Settings.png)
 
-![User profile for site rotation dialog](../images/SiteRotation/Type.png)
+![Bölge rotasyonu için kullanıcı profili iletişim kutusu](../images/SiteRotation/Type.png)
 
-*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
+*Not: bu ayar, "Hazırla/doldur" düğmesi veya "Sensör yerleştirme" düğmesi ile yeni bir girdi yapıldığında Bölge Rotasyonu iletişim kutusunun (Düzenleme modu) otomatik olarak açılıp açılmayacağını belirler.*
 
-- For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+- Doğrudan pompadan yapılan bölge değişimleri için Görüntüleme modunu açmanız ve Konum ile Ok seçmek üzere yeni girdiyi düzenlemeniz gerekir
 
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+Düzenleme modu, seçilen girdiyle ilişkili Konum, Ok ve Not seçmenizi sağlar:
 
-- The entry being edited is shown below the body images, with its type icon (cannula or sensor)
-- Front and back views are shown side by side: tap the area where you placed it
-- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
+- Düzenlenen girdi, vücut resimlerinin altında tür simgesiyle (kanül veya sensör) gösterilir
+- Ön ve arka görünümler yan yana gösterilir: yerleştirdiğiniz alana dokunun
+- Bir bölge seçildiğinde (yeşil ile vurgulanır), aşağıdaki liste son 45 gün içinde bu bölgede yapılan tüm girdileri gösterir.
 
-![Edit Mode](../images/SiteRotation/EditMode.png)
+![Düzenleme modu](../images/SiteRotation/EditMode.png)
 
-- You can add an optional arrow by tapping the arrow icon at the right of the entry: the **Select Arrow** dialog lets you specify a sub-location or the pod orientation
+- Girdinin sağındaki ok simgesine dokunarak isteğe bağlı bir ok ekleyebilirsiniz: **Ok Seçimi** iletişim kutusu bir alt konum veya Pod yönü belirlemenizi sağlar
 
-![Position](../images/SiteRotation/EditModeSub.png)
+![Konum](../images/SiteRotation/EditModeSub.png)
 
-- You can also add a **Note** about the selected site
-- Tap the **save** icon (upper right) to record the site
+- Seçilen bölge hakkında bir **Not** da ekleyebilirsiniz
+- Bölgeyi kaydetmek için **kaydet** simgesine (sağ üst) dokunun
 
-Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+Filtreleme, resim üzerinde grafik olarak veya listedeki bir tedavi olayına tıklanarak yapılabilir Filtrelemeyi kaldırmak için resimde herhangi bir bölgenin dışına tıklamanız yeterlidir
 
-![Filtering](../images/SiteRotation/Filtering.png)
+![Filtreleme](../images/SiteRotation/Filtering.png)

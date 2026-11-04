@@ -1,62 +1,62 @@
-# Future (possible) Pump Drivers
+# Ateities (galimos) pompų tvarkyklės
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+Tai sąrašas kai kurių rinkoje esančių pompų, jų palaikymo būsenos kitose ciklo sistemose ir jų būsenos AAPS. Pabaigoje rasite informaciją, ko reikia, kad pompą būtų galima naudoti cikle („Loop capable“).
 
-    {contents} Table of contents
+    {contents} Turinys
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## Pompos, kurių integracija į AAPS vykdoma
 
-**Coming soon:** drivers for these pumps are in development and already running in test builds.
+**Netrukus:** šių pompų tvarkyklės kuriamos ir jau veikia testinėse versijose.
 
-Omnipod 5 ([Homepage](https://www.omnipod.com/))
+Omnipod 5 ([svetainė](https://www.omnipod.com/))
 
-![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+![Kuriama Omnipod 5 tvarkyklė](../images/future-pumps/omnipod5-driver.png)
 
-Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+Tandem: t:Mobi ([svetainė](https://www.tandemdiabetes.com/))
 
-![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
+![Kuriama Tandem t:Mobi tvarkyklė](../images/future-pumps/tandem-mobi-driver.png)
 
-## Pumps that are Loopable
+## Pompos, kurias galima naudoti cikle
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+### Kaleido ([svetainė](https://www.hellokaleido.com/))
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Tinkamumas ciklui:** pompa galėtų būti naudojama cikle, bet šiuo metu protokolas nežinomas. Gamintojas nesidomi atviruoju kodu.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Aparatinės įrangos reikalavimai AAPS:** nėra. Atrodo, kad turi BT.
 
-### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:slim X3 ([svetainė](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+**Tinkamumas ciklui:** ateityje galbūt tiks ciklui. Tikimasi, kad t:slim X3 leis pompą visiškai valdyti telefonu, o tai leistų ją palaikyti AAPS, tačiau terminai ir funkcijos dar nežinomi.
 
-**Hardware requirement for AAPS:** None. It is expected to be Bluetooth enabled.
+**Aparatinės įrangos reikalavimai AAPS:** nėra. Tikimasi, kad ji turės Bluetooth.
 
-**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+**Pastabos:** dar neišleista. Panašu, kad Tandem planuose t:slim X3 ne kartą buvo nustumta į antrą planą dėl t:Mobi (įskaitant versiją be vamzdelio) ir Sigi (jų pompos be vamzdelio).
 
-### Twiist ([Homepage](https://www.twiist.com/))
+### Twiist ([svetainė](https://www.twiist.com/))
 
-**Loop status:** Loop candidate.
+**Tinkamumas ciklui:** tinka ciklui.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Aparatinės įrangos reikalavimai AAPS:** nėra. Ji turi Bluetooth.
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+### Willcare insulino pompa ([svetainė](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+**Tinkamumas ciklui:** šiuo metu ji netinka ciklui, tačiau su mumis susisiekė gamintojo darbuotojai, kurie nori pompą pritaikyti ciklui (atrodo, kad trūksta tik profilio gavimo ir nustatymo komandų).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Aparatinės įrangos reikalavimai AAPS:** nėra. Atrodo, kad turi BT.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+**Pastabos:** kadangi įmonė domisi integracija su AAPS, ji gali tai įgyvendinti pati.
 
-### Ypsopump ([Homepage](https://www.ypsomed.com/))
+### Ypsopump ([svetainė](https://www.ypsomed.com/))
 
-**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+**Tinkamumas ciklui:** tinka ciklui. Bendruomenė iššifravo pompos Bluetooth protokolą, todėl ryšys su ja iš principo yra įmanomas.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Aparatinės įrangos reikalavimai AAPS:** nėra. Ji turi Bluetooth.
 
-**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
+**Pastabos:** Ypsopump Bluetooth ryšį saugo stipriu trečiosios šalies šifravimu. Dirbti su juo techniškai sudėtinga, todėl sunku sukurti ir prižiūrėti patikimą tvarkyklę. Kol kas nėra kasdieniam naudojimui paruoštos AAPS tvarkyklės.
 
-## Pumps no longer sold (companies no longer operating)
+## Nebeparduodamos pompos (įmonės nebeveikia)
 
 ### Animas Vibe
 
@@ -66,53 +66,53 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Pastabos:** palaikymas baigiasi 2025 m. kovo mėn.
 
-## Pumps that aren't Loopable
+## Pompos, kurių negalima naudoti cikle
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Pastabos:** Medtronic [pasitraukė](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem: t:slim X2 ([svetainė](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**Pastabos:** Tandem Bluetooth protokolas iššifruotas, tačiau su t:slim X2 galima leisti tik bolusus, o valandinės bazės valdyti negalima, todėl jos negalima saugiai naudoti cikle. Mažai tikėtina, kad tai pasikeis, nebent Tandem leis visiškai valdyti X2 telefonu, o tai greičiau atsiras su t:slim X3.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Pastabos:** bendruomenei nepavyko užmegzti ryšio su Solo pompa.
 
-## Requirements for pumps being loopable
+## Reikalavimai, kad pompą būtų galima naudoti cikle
 
-**Prerequisite**
+**Būtinos sąlygos**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- Pompa turi palaikyti tam tikrą nuotolinį valdymą. (BT, radijo dažniai ir pan.)
+- Protokolas yra iššifruotas, aprašytas ar pan.
 
 **Minimal requirement**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- Nustatyti laikiną valandinę bazę
+- Gauti būseną
+- Atšaukti laikiną valandinę bazę
 
-**For oref1(SMB) or Bolusing:**
+**oref1 (SMB) arba bolusams:**
 
 - Set Bolus
 
-**Good to have**
+**Pageidautina**
 
 - Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Gauti valandinės bazės profilį (beveik būtina)
+- Nustatyti valandinės bazės profilį (pageidautina)
+- Nuskaityti istoriją 
 
-**Other (not required but good to have)**
+**Kita (nebūtina, bet pageidautina)**
 
-- Set Extended Bolus
+- Nustatyti ištęstą bolusą
 - Cancel Extended Bolus
-- Read History
-- Read TDD
+- Nuskaityti istoriją
+- Nuskaityti BPD
 
-### Other pumps support
+### Kitų pompų palaikymas
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Jei norite sužinoti kitų pompų būseną, susisiekite su mumis Discord serveryje.

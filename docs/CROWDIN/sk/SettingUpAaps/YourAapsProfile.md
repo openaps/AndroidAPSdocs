@@ -21,7 +21,7 @@ Môžete použiť [Autotune](https://autotuneweb.azurewebsites.net/), aby vás n
 :class: note
 **Profily** sa od človeka k človeku veľmi líšia.
 
-Pri bazálnych dávkach (BR), faktoroch citlivosti na inzulín (ISF) a inzulínovo-sacharidových pomeroch (IC alebo ICR) sa absolútne hodnoty a trendy potreby inzulínu veľmi líšia od človeka k človeku. Závisia od vašej biológie, pohlavia, veku, kondície atď., ako aj od krátkodobých faktorov, napríklad choroby alebo nedávneho cvičenia. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+Pri bazálnych dávkach (BR), faktoroch citlivosti na inzulín (ISF) a inzulínovo-sacharidových pomeroch (IC alebo ICR) sa absolútne hodnoty a trendy potreby inzulínu veľmi líšia od človeka k človeku. Závisia od vašej biológie, pohlavia, veku, kondície atď., ako aj od krátkodobých faktorov, napríklad choroby alebo nedávneho cvičenia. Ďalšie rady k tomu nájdete vo výbornej knihe [„Bright Spots and Landmines“](https://diatribe.org/bright-spots-and-landmines/) od Adama Browna.
 
 ```
 
@@ -91,7 +91,7 @@ Naopak, príliš nízka bazálna dávka môže viesť k vysokým glykémiám a k
 
 ![Bazálne dávky](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
+Správne bazálne dávky sa nastavujú metódou pokusu a omylu a malo by sa to robiť po dohode s vaším diabetologickým tímom.
 
 Existujú metódy testovania bazálu, pri ktorých zvyčajne sledujete bazálne dávky a potrebu inzulínu počas <u>prerušovaného</u> hladovania v priebehu 24 hodín. Hoci potrebujete otestovať bazálne dávky pre celý deň, neodporúča sa hladovať 24 hodín v kuse. Telo totiž spúšťa kompenzačné mechanizmy, napríklad hormóny. Odporúčaný spôsob je hladovať v 3 rôznych dňoch, vždy počas 8 hodín.
 
@@ -131,17 +131,17 @@ Faktor citlivosti na inzulín (niekedy nazývaný korekčný faktor) udáva, o k
 
 **V jednotkách mmol/l:** Ak máte **ISF** 1,5, každá jednotka inzulínu zníži glykémiu približne o 1,5 mmol/l (napríklad z 8 mmol/l na 6,5 mmol/l).
 
-Z týchto príkladov vidíte, že čím _menšia_ je hodnota **ISF**, tým menej ste citliví na inzulín. Ak teda znížite ISF zo 40 na 35 (mg/dl) alebo z 1,5 na 1,3 (mmol/l), často sa tomu hovorí posilnenie **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+Z týchto príkladov vidíte, že čím _menšia_ je hodnota **ISF**, tým menej ste citliví na inzulín. Ak teda znížite ISF zo 40 na 35 (mg/dl) alebo z 1,5 na 1,3 (mmol/l), často sa tomu hovorí posilnenie **ISF**. Naopak, zvýšenie hodnoty **ISF** zo 40 na 45 (mg/dl) alebo z 1,5 na 1,8 (mmol/l) váš **ISF** oslabuje.
 
 ### Vplyv
 
-A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. To vedie k agresívnejšej / silnejšej korekcii okruhu s **väčším množstvom inzulínu**. Ak je váš **ISF** príliš silný (malá hodnota), môže to viesť k nízkej **glykémii**.
+**Nižší / silnejší ISF** (napr. 40 namiesto 50) znamená, že inzulín zníži vašu **glykémiu** na jednotku menej. To vedie k agresívnejšej / silnejšej korekcii okruhu s **väčším množstvom inzulínu**. Ak je váš **ISF** príliš silný (malá hodnota), môže to viesť k nízkej **glykémii**.
 
-A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. To vedie k menej agresívnej / slabšej korekcii okruhu s **menším množstvom inzulínu**. Ak je váš **ISF** príliš slabý (veľká hodnota), môže to viesť k vysokej **glykémii**.
+**Vyšší / slabší ISF** (napr. 45 namiesto 35) znamená, že inzulín zníži vašu **glykémiu** na jednotku viac. To vedie k menej agresívnej / slabšej korekcii okruhu s **menším množstvom inzulínu**. Ak je váš **ISF** príliš slabý (veľká hodnota), môže to viesť k vysokej **glykémii**.
 
-**Example:**
-* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
-* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
+**Príklad:**
+* **Glykémia** je 190 mg/dl (10,5 mmol/l) a cieľ je 100 mg/dl (5,6 mmol/l).
+* Potrebujete teda korekciu o `190 - 100 = 90 mg/dl` alebo `10,5 - 5,6 = 4,9 mmol/l`
 * Ak `ISF = 30` -> `90 / 30 = 3` alebo `ISF = 1,63` -> `4,9 / 1,63 = 3`: 3 jednotky inzulínu
 * Ak `ISF = 45` -> `90 / 45 = 2` alebo `ISF = 2,45` -> `4,9 / 2,45 = 2`: 2 jednotky inzulínu
 
@@ -193,7 +193,7 @@ Je bežné mať v rôznych častiach dňa rôzny **ICR**, a to v dôsledku hlad�
 > 
 > Pri **ICR** je množstvo inzulínu pevné a množstvo sacharidov sa mení. („Koľko g sacharidov dokáže pokryť jedna jednotka inzulínu?“)
 > 
-> Example:
+> Príklad:
 > 
 > Faktor chlebovej jednotky (BU = 12 g sacharidov): 2,4 U/BU -> Keď zjete jednu chlebovú jednotku, potrebujete 2,4 jednotky inzulínu.
 > 
@@ -201,7 +201,7 @@ Je bežné mať v rôznych častiach dňa rôzny **ICR**, a to v dôsledku hlad�
 > 
 > Faktor BU 2,4 U / 12 g   ===>   IC = 12 g / 2,4 U = 5,0 g/U
 > 
-> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Prevodné tabuľky nájdete online, napr. [tu](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Vplyv
 
@@ -300,7 +300,7 @@ Pomocník s profilom ponúka súbory údajov pre deti z dvoch rôznych nemocníc
 4. Prepnite na kartu **Profil 2**.
 5. Ťuknite na **Typ profilu** a vyberte „Predvolený DPV profil“.
 6. Upravte predvolený DPV profil (založený na súbore údajov inej nemocnice) zadaním veku dieťaťa, CDD celkom a percenta bazálu. Súbor údajov DPV obsahuje iba **bazálne dávky**, preto sú IC a ISF pri tomto profile zobrazené ako nula.
-7. Open the **Comparison** tab. Zobrazí sa porovnanie oboch upravených profilov (pozrite snímku obrazovky nižšie).
+7. Otvorte kartu **Porovnanie**. Zobrazí sa porovnanie oboch upravených profilov (pozrite snímku obrazovky nižšie).
 8. Ak chcete začať ladiť svoj profil podľa jedného z týchto návrhov, použite tlačidlo **Klonovať** pod porovnaním.
 
 ![Pomocník s profilom pre deti 2](../images/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ Na porovnanie dvoch rôznych profilov alebo prepnutí profilu (percento jedného
 4. Prepnite na kartu **Profil 2**.
 5. V poli **Typ profilu** vyberte „Prepnutie profilu“, aby ste mohli vyberať z histórie všetkých svojich **prepnutí profilu**.
 6. Vyberte **prepnutie profilu**, s ktorým ho chcete porovnať.
-7. Open the **Comparison** tab. Zobrazí sa porovnanie oboch profilov (pozrite snímku obrazovky nižšie).
+7. Otvorte kartu **Porovnanie**. Zobrazí sa porovnanie oboch profilov (pozrite snímku obrazovky nižšie).
 
 ![Pomocník s profilom 2](../images/ProfileHelper2.png)

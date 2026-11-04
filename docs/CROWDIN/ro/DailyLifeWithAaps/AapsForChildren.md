@@ -1,6 +1,6 @@
 # AAPS pentru copii
 
-**AAPS** poate fi folosit cu succes și de către copiii cu diabet zaharat de tip 1. However, there are some things to consider.
+**AAPS** poate fi folosit cu succes și de către copiii cu diabet zaharat de tip 1. Totuși, există câteva lucruri de luat în considerare.
 
 ## Lucrurile de luat în considerare
 
@@ -10,7 +10,7 @@ Setting the correct [**Profile**](../SettingUpAaps/YourAapsProfile.md) (basal ra
 
 ### Monitorizați și ajustați Profilul copilului dumneavoastră acolo unde este necesar
 
-Pe măsură ce copilul crește, ajustările **Profilului** vor fi necesare astfel încât să țină cont de cerințele și nevoile corpulului copilului dumneavoastră. Totuși acest aspect există pentru toți copiii cu diabet zaharat de tip 1, inclusiv pentru cei care folosesc alte tipuri de pompe sau care fac injecții.
+Pe măsură ce copilul crește, ajustările **Profilului** vor fi necesare astfel încât să țină cont de cerințele și nevoile corpului copilului dumneavoastră. Totuși acest aspect există pentru toți copiii cu diabet zaharat de tip 1, inclusiv pentru cei care folosesc alte tipuri de pompe sau care fac injecții.
 
 ### Păstrarea telefonului în apropiere
 
@@ -20,11 +20,11 @@ Gândiți-vă la modalitățile în care veți ține telefonul copilului în pre
 
 There are several protection settings available in **AAPS** to prevent the child or a stranger from misusing **AAPS**. See [Settings → Protection](#Preferences-protection) to add password or biometric protection to boluses, settings changes, or even **AAPS** itself.
 
-## Monitorizarea la distanță și controlul la distanță
+## Monitorizarea la distanță și controlul de la distanță
 
 Monitorizarea la distanță este o funcționalitate esențială atunci când utilizați **AAPS** pentru copii. Vedeți secțiunea [Monitorizarea la distanță](../RemoteFeatures/RemoteMonitoring.md) pentru a explora posibile opțiuni.
 
-Monitorizarea și tratamentul de la distanță pot fi extrem de benefice pentru părinții unui copil cu diabet zaharat de tip 1, iar acest lucru se întâmplă mai ales atunci când copilul merge la grădiniță și la școala elementară. But make sure the teachers and educators are aware of your kid's treatment plan.
+Monitorizarea și tratamentul de la distanță pot fi extrem de benefice pentru părinții unui copil cu diabet zaharat de tip 1, iar acest lucru se întâmplă mai ales atunci când copilul merge la grădiniță și la școala elementară. Dar asigurați-vă că profesorii și educatorii cunosc planul de tratament al copilului dumneavoastră.
 
 Work out how adding in remote control is going to work with/enhance the existing plan. Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher "follow" phone.
 

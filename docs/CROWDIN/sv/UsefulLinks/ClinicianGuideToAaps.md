@@ -1,107 +1,107 @@
-# For Clinicians – A General Introduction and Guide to AAPS
+# För vårdpersonal – en allmän introduktion och guide till AAPS
 
 ```{note}
-This page is a high-level introduction for clinicians. It was last reviewed in June 2026. AAPS develops continuously, so for the most accurate and up-to-date detail always refer to the [main AAPS documentation](../index.md).
+Den här sidan är en översiktlig introduktion för vårdpersonal. Den granskades senast i juni 2026. AAPS utvecklas hela tiden. Den mest exakta och aktuella informationen finns alltid i [den fullständiga AAPS-dokumentationen](../index.md).
 ```
 
-This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AAPS, or for patients who want to share such information with their clinicians.
+Den här sidan är skriven för vårdpersonal som är intresserad av teknik för artificiell bukspottkörtel med öppen källkod, som AAPS, eller för patienter som vill dela sådan information med sin vårdpersonal.
 
-This guide has some high-level information about DIY closed looping and specifically how AAPS works. For more details on all of these topics, please view the [comprehensive AAPS documentation online](../index.md). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@aaps.app). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
+Guiden ger en översikt över DIY-system med sluten loop och särskilt över hur AAPS fungerar. Mer information om alla dessa ämnen finns i den [fullständiga AAPS-dokumentationen online](../index.md). Om du har frågor kan du be din patient om mer information. Du är också alltid välkommen att kontakta communityn med dina frågor. (Om du inte finns på sociala medier (t.ex. [Twitter](https://twitter.com/kozakmilos) eller Facebook) kan du skicka e-post till developers@aaps.app). [Här hittar du också några av de senaste studierna och data om behandlingsresultat](https://openaps.org/outcomes/).
 
-## The steps for building a DIY Closed Loop:
+## Stegen för att bygga en DIY-sluten loop:
 
-To start using AAPS, the following steps should be taken:
+För att börja använda AAPS behöver man ta följande steg:
 
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
-* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
+* Skaffa en [kompatibel pump](../Getting-Started/CompatiblePumps.md), en [kompatibel Android-enhet](../Getting-Started/Phones.md) och en [kompatibel CGM-källa](../Getting-Started/CompatiblesCgms.md).
+* [Ladda ner källkoden för AAPS och bygg programvaran](../SettingUpAaps/BuildingAaps.md).
+* [Ställ in programvaran så att den kommunicerar med patientens diabetesenheter, och ange inställningar och säkerhetsinställningar](../SettingUpAaps/SetupWizard.md).
 
-## How A DIY Closed Loop Works
+## Så fungerar en DIY-sluten loop
 
-Without a closed loop system, a person with diabetes gathers data from their pump and CGM, decides what to do, and takes action.
+Utan ett system med sluten loop samlar en person med diabetes själv in data från sin pump och CGM, bestämmer vad som ska göras och utför det.
 
-With automated insulin delivery, the system does the same thing: it gathers data from the pump, CGM, and anywhere else information is logged (such as Nightscout), uses this information to do the maths and decide how much more or less insulin is needed (above or below the underlying basal rate), and uses temporary basal rates to make the necessary adjustments to keep or eventually bring BGs into target range.
+Med automatiserad insulintillförsel gör systemet samma sak: det samlar in data från pumpen, CGM och från andra ställen där information loggas (till exempel Nightscout). Det använder informationen för att räkna ut och bestämma hur mycket mer eller mindre insulin som behövs (över eller under den grundläggande basaldosen). Sedan använder det tillfälliga basaldoser för att göra de ändringar som behövs, så att blodsockret (BG) stannar i målområdet eller till slut kommer tillbaka dit.
 
-If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basal rates running.
+Om enheten som kör AAPS går sönder eller kommer utom räckhåll för pumpen, återgår pumpen till att vara en vanlig pump med de förprogrammerade basaldoserna när den senaste tillfälliga basaldosen har tagit slut.
 
-## How data is gathered:
+## Så samlas data in:
 
-With AAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AAPS can communicate with other devices and to the cloud via Wi-Fi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+Med AAPS kör en Android-enhet en särskild app som gör beräkningarna. Enheten kommunicerar via Bluetooth med en pump som stöds. AAPS kan kommunicera med andra enheter och med molnet via wifi eller mobildata. Så kan den samla in mer information och rapportera till patienten, anhöriga och närstående vad den gör och varför.
 
-The Android device needs to:
+Android-enheten behöver:
 
-* communicate with the pump and read history - how much insulin has been delivered
-* communicate with the CGM (either directly, or via the cloud) - to see what BGs are/have been doing
+* kommunicera med pumpen och läsa historiken - hur mycket insulin som har getts
+* kommunicera med CGM (antingen direkt eller via molnet) - för att se hur BG ändrar sig och har ändrat sig
 
-When the device has collected this data, the algorithm runs and does the decision-making based on the settings (ISF, carb ratio, DIA, target, etc.). If required, it then issues commands to the pump to modify insulin delivery rate.
+När enheten har samlat in dessa data körs algoritmen. Den fattar beslut utifrån inställningarna (ISF, KH-kvot, DIA, målvärde osv.). Om det behövs skickar den sedan kommandon till pumpen för att ändra insulintillförseln.
 
-It will also gather any information about boluses, carbohydrate consumption, and temporary target adjustments from the pump or from Nightscout to use it for the calculation of insulin delivery rates.
+Den samlar också in all information om bolusar, intag av kolhydrater och tillfälliga målvärden från pumpen eller från Nightscout och använder den för att beräkna insulintillförseln.
 
-## How does it know what to do?
+## Hur vet den vad den ska göra?
 
-The open source software is designed to make it easy for the device to do the work people used to do (in manual mode) to calculate how insulin delivery should be adjusted. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of what BG levels are expected to do during the next hours in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Next it sends any necessary adjustments to the pump. Then it reads the data back, and does it over and over again.
+Programvaran med öppen källkod är gjord för att enheten enkelt ska kunna göra det arbete som människor tidigare gjorde (manuellt) för att räkna ut hur insulintillförseln ska justeras. Först samlar den in data från alla anslutna enheter och från molnet, förbereder data och gör beräkningarna. Den gör prognoser för hur BG förväntas utvecklas under de närmaste timmarna i olika scenarier, och räknar ut vilka justeringar som behövs för att BG ska stanna i målområdet eller komma tillbaka dit. Sedan skickar den de justeringar som behövs till pumpen. Därefter läser den tillbaka data och gör om samma sak, gång på gång.
 
-As the most important input parameter is the blood glucose level coming from the CGM, it is important to have high-quality CGM data.
+Eftersom den viktigaste indataparametern är blodsockervärdet från CGM är det viktigt att ha CGM-data av hög kvalitet.
 
-AAPS is designed to transparently track all input data it gathers, the resulting recommendation, and any action taken. It is therefore easy to answer the question at any time, “why is it doing X?” by reviewing the logs.
+AAPS är gjort för att öppet registrera all indata som den samlar in, den rekommendation som blir resultatet och varje åtgärd som utförs. Därför är det lätt att när som helst svara på frågan ”varför gör den X?” genom att granska loggarna.
 
-## Examples of AAPS algorithm decision making:
+## Exempel på hur algoritmen i AAPS fattar beslut:
 
-AAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+AAPS använder samma grundläggande algoritm och samma funktioner som OpenAPS. Algoritmen gör flera prognoser (utifrån inställningarna och situationen) som visar olika scenarier för vad som kan hända framöver. I Nightscout visas de som ”lila linjer”. AAPS använder olika färger för att skilja dessa [prognoslinjer](#aaps-screens-prediction-lines) åt. I loggarna beskrivs vilken av dessa prognoser och vilken tidsram som styr de åtgärder som behövs.
 
-### Here are examples of the purple prediction lines, and how they might differ:
+### Här är exempel på de lila prognoslinjerna och hur de kan skilja sig åt:
 
-![Purple prediction line examples](../images/Prediction_lines.jpg)
+![Exempel på lila prognoslinjer](../images/Prediction_lines.jpg)
 
 (clinicianguide-dosing-scenarios)=
 
-### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
+### Här är exempel på olika tidsramar som påverkar de justeringar av insulintillförseln som behövs:
 
-### Scenario 1 - Zero Temp for safety
+### Scenario 1 - Tillfällig basal på noll för säkerhets skull
 
-In this example, BG is rising in the near-term time frame; however, it is predicted to be low over a longer time frame. In fact, it is predicted to go below target *and* the safety threshold. For safety to prevent the low, AAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
+I det här exemplet stiger BG på kort sikt, men på längre sikt förväntas det bli lågt. BG förväntas faktiskt gå under målvärdet *och* under säkerhetsgränsen. För att förhindra det låga värdet ger AAPS av säkerhetsskäl en tillfällig basal på noll (tillfällig basaldos på 0 %) tills eventualBG (slutligt BG, i någon tidsram) ligger över gränsen.
 
-![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
+![Doseringsscenario 1](../images/Dosing_scenario_1.jpg)
 
-### Scenario 2 - Zero temp for safety
+### Scenario 2 - Tillfällig basal på noll för säkerhets skull
 
-In this example, BG is predicted to go low in the near-term, but is predicted to eventually be above target. However, because the near-term low is actually below the safety threshold, AAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
+I det här exemplet förväntas BG bli lågt på kort sikt, men till slut förväntas det ligga över målvärdet. Men eftersom det kortsiktiga låga värdet faktiskt ligger under säkerhetsgränsen ger AAPS en tillfällig basal på noll, tills ingen punkt på prognoslinjen längre ligger under gränsen.
 
-![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
+![Doseringsscenario 2](../images/Dosing_scenario_2.jpg)
 
-### Scenario 3 - More insulin needed
+### Scenario 3 - Mer insulin behövs
 
-In this example, a near-term prediction shows a dip below target. However, it is not predicted to be below the safety threshold. The eventual BG is above target. Therefore, AAPS will refrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). It will then assess adding insulin to bring the lowest level of the eventual predicted BG down to target, once it is safe to do so. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMBs (super micro boluses)).*
+I det här exemplet visar en kortsiktig prognos en dipp under målvärdet. Men BG förväntas inte gå under säkerhetsgränsen. Slutligt BG ligger över målvärdet. Därför avstår AAPS från att ge insulin som skulle bidra till ett lågt värde på kort sikt (alltså insulin som skulle få prognosen att gå under gränsen). Den överväger då att ge mer insulin för att få ner den lägsta nivån av slutligt förväntat BG till målvärdet, när det är säkert att göra det. *(Beroende på inställningarna och på hur mycket insulin som behövs och när, kan insulinet ges som tillfälliga basaldoser eller som SMB (supermikrobolusar)).*
 
-![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
+![Doseringsscenario 3](../images/Dosing_scenario_3.jpg)
 
-### Scenario 4 - Low temping for safety
+### Scenario 4 - Låg tillfällig basal för säkerhets skull
 
-In this example, AAPS sees that BG is spiking well above target. However, due to the timing of insulin, there is already enough insulin in the body to bring BG into range eventually. In fact, BG is predicted to eventually be below target. Therefore, AAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Although BG is high/rising, a low temporary basal rate is likely here.
+I det här exemplet ser AAPS att BG stiger kraftigt, långt över målvärdet. Men på grund av när insulinet gavs finns det redan tillräckligt med insulin i kroppen för att till slut få BG inom målområdet. BG förväntas faktiskt till slut hamna under målvärdet. Därför ger AAPS inget extra insulin, så att det inte bidrar till ett lågt värde på längre sikt. Även om BG är högt eller stiger är en låg tillfällig basaldos sannolik här.
 
-![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
+![Doseringsscenario 4](../images/Dosing_scenario_4.jpg)
 
-## Optimizing settings and making changes
+## Optimera inställningar och göra ändringar
 
-As a clinician who may not have experience with AAPS or DIY closed loops, you may find it challenging to help your patient optimize their settings or make changes to improve their outcomes. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
+Som vårdpersonal har du kanske ingen erfarenhet av AAPS eller DIY-system med sluten loop. Då kan det vara svårt att hjälpa din patient att optimera inställningarna eller göra ändringar som förbättrar resultaten. I communityn finns flera verktyg och [guider](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) som hjälper patienter att göra små, testade justeringar för att förbättra sina inställningar.
 
-The most important thing for patients to do is make one change at a time, and observe the impact for 2-3 days before choosing to change or modify another setting (unless it’s obviously a bad change that makes things worse, in which case they should revert immediately to the previous setting). The human tendency is to turn all the knobs and change everything at once; but if someone does so, then they may end up with further sub-optimal settings for the future, and find it hard to get back to a known good state.
+Det viktigaste för patienter är att göra en ändring i taget och sedan följa effekten i 2–3 dagar innan de ändrar eller justerar nästa inställning (om det inte uppenbart är en dålig ändring som gör det sämre – då ska de genast gå tillbaka till den tidigare inställningen). Människor tenderar att vrida på alla rattar och ändra allt på en gång. Men om någon gör så kan det leda till ännu sämre inställningar framöver, och det kan bli svårt att komma tillbaka till ett känt bra läge.
 
-One of the most powerful tools for making settings changes is an automated calculation tool for basal rates, ISF, and carb ratio. This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. It is designed to allow the data to guide you or your patient in making incremental changes to settings. It is best practice in the community to run (or review) Autotune reports first, prior to attempting to make manual adjustments to settings. Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
+Ett av de mest kraftfulla verktygen för att ändra inställningar är ett automatiskt beräkningsverktyg för basaldoser, ISF och KH-kvot. Det kallas ”[Autotune](#autotune-how-autotune-calculates-adjustments)”. Det är gjort för att låta data vägleda dig eller din patient när ni gör stegvisa ändringar av inställningarna. Det är god praxis i communityn att först köra (eller granska) Autotune-rapporter innan man försöker justera inställningarna manuellt. Autotune finns inbyggt i AAPS som ett plugin (**Konfiguration** → **Generellt** → **Autotune**); se [Autotune](../AdvancedOptions/Autotune.md). Det kan köras vid behov eller automatiskt. Eftersom dessa parametrar är en förutsättning både för vanlig insulintillförsel med pump och för insulintillförsel med sluten loop, är en genomgång av Autotune-resultaten och justering av parametrarna den naturliga kontaktpunkten med vårdpersonalen.
 
-Additionally, human behavior (learned from manual diabetes mode) often influences outcomes, even with a DIY closed loop. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). However, in many cases, someone may choose to treat with many more carbs (e.g. sticking to the 15 rule), which will cause a resulting faster spike both from the extra glucose and because insulin had been reduced in the timeframe leading up to the low.
+Dessutom påverkar mänskligt beteende (inlärt från manuell diabetesbehandling) ofta resultatet, även med ett DIY-system med sluten loop. Om BG till exempel förväntas bli lågt och AAPS minskar insulinet på vägen ner, kan det räcka med en liten mängd kolhydrater (t.ex. 3–4 g kolhydrater) för att höja BG från 70 mg/dl (3,9 mmol/l). Men i många fall kan någon välja att behandla med betydligt mer kolhydrater (t.ex. genom att hålla fast vid 15-regeln). Det ger en snabbare blodsockertopp efteråt, både på grund av den extra glukosen och för att insulintillförseln har minskats under tiden fram till det låga värdet.
 
 ## OpenAPS
 
-**This guide was adapted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each piece of software is run.
+**Den här guiden bygger på [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS är ett system som är utvecklat för att köras på en liten bärbar dator (som brukar kallas ”riggen”). AAPS använder många av de tekniker som finns i OpenAPS och delar mycket av logiken och algoritmerna. Därför är den här guiden mycket lik den ursprungliga guiden. Mycket av informationen om OpenAPS kan lätt tillämpas på AAPS. Den största skillnaden är vilken hårdvara de olika programdelarna körs på.
 
-## Summary
+## Sammanfattning
 
-This is meant to be a high-level overview of how AAPS works. For more details, ask your patient, reach out to the community, or read the full AAPS documentation available online.
+Det här är en översikt över hur AAPS fungerar. För mer information kan du fråga din patient, kontakta communityn eller läsa den fullständiga AAPS-dokumentationen online.
 
-Additional recommended reading:
+Rekommenderad läsning:
 
-* The [full AAPS documentation](../index.md)
-* The [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), which explains how OpenAPS is designed for safety: https://openaps.org/reference-design/
-* The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
-  * See [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision) in this documentation, or [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) for the underlying algorithm in full technical detail
+* Den [fullständiga AAPS-dokumentationen](../index.md)
+* [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), som förklarar hur OpenAPS är utformat för säkerhet: https://openaps.org/reference-design/
+* Den [fullständiga OpenAPS-dokumentationen](https://openaps.readthedocs.io/en/latest/index.html) 
+  * Se [hur AAPS gör om prognoser till ett doseringsbeslut](#aaps-screens-how-predictions-become-a-dosing-decision) i den här dokumentationen, eller [OpenAPS dokumentation om determine-basal](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) för alla tekniska detaljer om den underliggande algoritmen

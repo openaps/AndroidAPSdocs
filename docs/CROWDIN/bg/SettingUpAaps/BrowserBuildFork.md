@@ -6,7 +6,7 @@
 Това е **Стъпка 1** от [Компилиране в браузъра](BrowserBuild.md).
 ```
 
-You will need to store your personal Android Java Key and Google Drive information as secrets in GitHub (later in the process, we will explain how).
+Ще трябва да запишете в GitHub своя личен ключ Android Java Key и данните за Google Drive като секрети (secrets) (по-нататък ще обясним как).
 
 Тъй като това не може да стане в публичното хранилище (repository) на AndroidAPS, трябва да направите свое лично копие на изходния код (нарича се fork).
 
@@ -29,16 +29,16 @@ You will need to store your personal Android Java Key and Google Drive informati
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Note: you can **unselect** "Copy the master branch only" if you will want to build developer versions or customizations.*
+*Бележка: можете да **махнете отметката** от „Copy the master branch only“ (копиране само на клона master), ако искате да компилирате версии за разработчици или свои промени.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-You cannot fork and you see this?<br/><br/>
+Не можете да направите fork и виждате това?<br/><br/>
 **`No available destinations to fork this repository.`**<br/><br/>
-![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)<br/><br/>
-This means you already have an existing fork of AndroidAPS.<br/>
-Make sure it's up to date and continue to Preparation Steps.
+![Вече има fork](../images/Building-the-App/CI/ForkAAPS3b.png)<br/><br/>
+Това означава, че вече имате fork на AndroidAPS.<br/>
+Уверете се, че е актуален, и продължете към подготвителните стъпки.
 ```
 
 ```{warning}

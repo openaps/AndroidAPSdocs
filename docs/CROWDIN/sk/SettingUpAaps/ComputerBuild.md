@@ -29,7 +29,7 @@ Podrobnosti nájdete na stránke [Najčastejšie otázky používateľov APS](..
 | [3.3.2](#version3300)   | Meerkat (2024.3.1)                                      | otestované až po Quail 4                               | 8.11.1 | 21  |
 | [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                      | otestované až po Quail 4                               | 8.13   | 21  |
 | [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                      | otestované až po Quail 4                               | 9      | 21  |
-| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                     | Latest                                                 | 9.8    | 21  |
+| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                     | Najnovšia                                              | 9.8    | 21  |
 
 „Požadovaná verzia“ je dodávaná s príslušnou verziou JVM. Táto verzia je zároveň minimálnou verziou, ktorú možno použiť na zostavenie **AAPS**. **Nebudete** môcť zostavovať na verzii staršej, než je tá „požadovaná“. Ak používate inú verziu, môžete naraziť na problémy súvisiace s verziou JVM. V prípade problému si pozrite stránku [Riešenie problémov v Android Studiu](#troubleshooting_androidstudio-uncommitted-changes), ktorá vám pomôže tieto problémy vyriešiť. Ak vaša aktuálna verzia Android Studia nie je uvedená v tabuľke, musíte ju najprv aktualizovať.
 
@@ -41,27 +41,27 @@ Verzia Gradle je naviazaná na zdrojový kód a pri sťahovaní alebo aktualizá
 <tbody>
   <tr>
     <th class="tg-baqh">OS (iba 64-bitový)</th>
-    <td class="tg-baqh">Windows 10 or higher</td>
-    <td class="tg-baqh">macOS 12 or higher</td>
-    <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
+    <td class="tg-baqh">Windows 10 alebo novší</td>
+    <td class="tg-baqh">macOS 12 alebo novší</td>
+    <td class="tg-baqh">Akákoľvek distribúcia Linuxu s podporou prostredí Gnome, KDE alebo Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 alebo novšia</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">CPU (iba 64-bitový)</th>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
-    <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <td class="tg-baqh">CPU x86_64 z roku 2017 alebo novší (Intel Core i5 8. generácie, AMD Ryzen alebo novší) so zapnutou <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">podporou virtualizácie</a> (Intel VT-x alebo AMD-V) v BIOSe</td>
+    <td class="tg-baqh">Apple Silicon (M1 alebo novší) alebo Intel Core 6. generácie či novší (podpora Macov s procesorom Intel sa postupne ukončuje)</td>
+    <td class="tg-baqh">CPU x86_64 z roku 2017 alebo novší (Intel Core i5 8. generácie, AMD Ryzen alebo novší) so zapnutou podporou virtualizácie (Intel VT-x alebo AMD-V) v BIOSe</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16 GB alebo viac (8 GB je úplné minimum iba pre samotné Android Studio, odporúča sa 32 GB)</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. Odporúča sa použiť SSD.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Najmenej 32 GB voľného miesta. Odporúča sa použiť SSD.</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Rozlíšenie</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">Minimálne 1280 x 800 (odporúča sa 1920 x 1080)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
@@ -93,7 +93,7 @@ Prejdite priamo na [návod na aktualizáciu](../Maintenance/UpdateToNewVersion.m
 
 V tomto návode nájdete _ukážkové_ snímky obrazovky zo zostavenia súboru apk **AAPS**. Keďže **Android Studio** – softvér, ktorým zostavujeme apk **AAPS** – sa pravidelne aktualizuje, tieto snímky obrazovky sa nemusia presne zhodovať s vašou inštaláciou, ale stále by ste podľa nich mali vedieť postupovať.
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
+Keďže **Android Studio** beží na Windows, Mac OS X aj Linuxe, kroky sa na jednotlivých platformách môžu aj trochu líšiť.
 
 (install-git-if-you-dont-have-it)=
 ### Inštalácia Gitu
@@ -102,18 +102,18 @@ Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there mi
 :class: dropdown
 
 Git je známy ako „_Versioning Control System_“ (VCS).\
-Git je program, ktorý vám umožňuje sledovať zmeny v kóde a spolupracovať s ostatnými. Git použijete na vytvorenie kópie zdrojového kódu **AAPS** z webovej stránky GitHub do vášho lokálneho počítača. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
+Git je program, ktorý vám umožňuje sledovať zmeny v kóde a spolupracovať s ostatnými. Git použijete na vytvorenie kópie zdrojového kódu **AAPS** z webovej stránky GitHub do vášho lokálneho počítača. Potom v Android Studiu na svojom počítači zostavíte aplikáciu **AAPS** (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
 #### Postup inštalácie Gitu
 
-1.  Skontrolujte, či už nemáte nainštalovaný **Git**. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
+1.  Skontrolujte, či už nemáte nainštalovaný **Git**. Overíte to tak, že do vyhľadávania vo Windows napíšete „git“ – ak vidíte **„Git bash“** alebo inú formu Gitu, je už nainštalovaný a môžete prejsť priamo na [inštaláciu Android Studia](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Mala by fungovať akákoľvek novšia verzia Gitu. Vyberte správnu verziu podľa svojho systému: Mac, Windows alebo Linux.
+2. Ak Git nainštalovaný nemáte, stiahnite si a nainštalujte najnovšiu verziu pre svoj systém z časti „Download“ [**tu**](https://git-scm.com/downloads). Mala by fungovať akákoľvek novšia verzia Gitu. Vyberte správnu verziu podľa svojho systému: Mac, Windows alebo Linux.
 
 **Poznámka pre používateľov počítačov Mac:** webová stránka Gitu vás navedie aj na inštaláciu ďalšieho programu s názvom „homebrew“, ktorý inštaláciu uľahčí. Ak Git inštalujete cez homebrew, nemusíte meniť žiadne nastavenia.
 
@@ -141,7 +141,7 @@ Jednou z najdôležitejších vecí pri inštalácii Android Studia je **byť tr
 
 ```{admonition} Different UI
 :class: warning
-Important note: Android Studio changed its UI during the last releases. Tento návod ukazuje kroky v *novom používateľskom rozhraní*. Snímky obrazovky sú z verzie „Ladybug“, takže novšie verzie môžu vyzerať trochu inak. Ak stále používate staršie používateľské rozhranie, možno budete chcieť najprv prepnúť Android Studio na nové rozhranie podľa [tohto návodu](#computerbuild-NewUI).
+Dôležitá poznámka: Android Studio v posledných verziách zmenilo svoje používateľské rozhranie. Tento návod ukazuje kroky v *novom používateľskom rozhraní*. Snímky obrazovky sú z verzie „Ladybug“, takže novšie verzie môžu vyzerať trochu inak. Ak stále používate staršie používateľské rozhranie, možno budete chcieť najprv prepnúť Android Studio na nové rozhranie podľa [tohto návodu](#computerbuild-NewUI).
 ```
 
 Verzia Android Studia je veľmi dôležitá. Ak chcete vybrať správnu verziu Android Studia, pozrite si [pokyny vyššie](#Building-APK-recommended-specification-of-computer-for-building-apk-file).
@@ -156,7 +156,7 @@ Nainštalujte Android Studio klikaním na „Next“, ako je znázornené na nas
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+Ak chcete ušetriť miesto na disku, môžete zrušiť zaškrtnutie Android Virtual Device: na zostavenie **AAPS** sa nepoužíva.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -170,7 +170,7 @@ Po dokončení stlačte „Next“
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finish" to start Android Studio for the first time.
+V poslednom kroku kliknite na „Finish“ a Android Studio sa prvýkrát spustí.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -302,7 +302,7 @@ V ľavom hornom rohu **Android Studia** otvorte hamburgerovú ponuku a prejdite 
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
+Skontrolujte, či **Android Studio** dokáže automaticky nájsť správnu cestu **Path to Git executable**, a to kliknutím na tlačidlo „Test“ (1):
 
 ![Spustiteľný súbor Git](../images/Building-the-App/039_GitTest.png)
 
@@ -314,7 +314,7 @@ Ak je automatické nastavenie úspešné, vedľa cesty sa zobrazí vaša aktuál
 
 Ak sa **git.exe** nenájde automaticky alebo ak kliknutie na „Test“ skončí chybou, môžete buď
 * ručne zadajte cestu, ktorú ste uložili [skôr](#BuildingAaps-steps-for-installing-git), alebo
-* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
+* kliknite na ikonu priečinka (1) a ručne prejdite do priečinka, kam ste [predtým](#BuildingAaps-steps-for-installing-git) nainštalovali **git.exe**
 * Overte svoje nastavenia pomocou tlačidla **Test**!
 
   ![Git sa nenašiel](../images/Building-the-App/039_GitTestError.png)
@@ -356,7 +356,7 @@ Kliknite na „Create new...“ (2) a začnite vytvárať úložisko kľúčov.
 ```{admonition} INFORMATION!
 :class: note
 Úložisko kľúčov stačí vytvoriť iba raz.
-If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+Ak ste už AAPS niekedy zostavili, NEvytvárajte nové úložisko kľúčov, ale vyberte svoje existujúce a zadajte jeho heslá!
 ```
 
 **_Poznámka:_** Úložisko kľúčov je súbor, v ktorom sú uložené informácie na podpísanie aplikácie. Je zašifrované a informácie sú chránené heslami.
@@ -369,7 +369,7 @@ If you have built AAPS before, do NOT create a new keystore but select your exis
 
 ```{admonition} WARNING!
 :class: warning
-Nezabudnite si poznačiť, kde máte uložené úložisko kľúčov. You will need it when you build the next AAPS update!
+Nezabudnite si poznačiť, kde máte uložené úložisko kľúčov. Budete ho potrebovať pri zostavovaní ďalšej aktualizácie AAPS!
 ```
 
 * Teraz zvoľte jednoduché heslo (a poznačte si ho), zadajte ho do poľa pre heslo (2) a potvrďte ho (2).

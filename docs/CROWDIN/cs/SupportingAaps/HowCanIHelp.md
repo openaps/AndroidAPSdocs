@@ -2,7 +2,7 @@
 
 ## AAPS funguje jen díky práci dobrovolníků a nemá žádné placené zaměstnance.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. Vývojáři investují zdarma svůj volný čas a je tak nespravedlivé očekávat, že budou sami čelit dodatečným nákladům, když tvoří tak úžasné řešení, které je open source a zdarma pro všechny.
+Vývojáři jsou rodiče, pečovatelé, blízcí a lidé s diabetem, kteří spolu vyvíjejí a zlepšují řešení pro velmi častou potřebu. Vývojáři investují zdarma svůj volný čas a je tak nespravedlivé očekávat, že budou sami čelit dodatečným nákladům, když tvoří tak úžasné řešení, které je open source a zdarma pro všechny.
 
 *Pro otestování nových zařízení vývojáři potřebují testovací telefon a testovací pumpu - zařízení nelze testovat na člověku, dokud není stabilní. Novější modely se musí testovat, jakmile budou k dispozici. Část darovaných peněz je také potřeba na logistické náklady na odeslání tohoto vybavení vývojářům do různých zemí. Někdy je také pěkné přispět vývojářům na náklady, aby mohli opustit své tmavé pokoje, setkat se na konferencích a akcích a vzájemně si vyměnit tvůrčí a analytické nápady.*
 
@@ -23,7 +23,7 @@ Pokud něco překládáte poprvé, začněte prosím překladem textů pro aplik
 
 Souběžně nebo později můžete začít překládat i dokumentaci.
 
-You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
+Stav překladu aplikace a dokumentace pro jednotlivé jazyky můžete zkontrolovat [zde](StateOfTranslations.md).
 
 * Pokud chcete přeložit **aplikaci** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidaps).
 * Pokud chcete přeložit **wiki** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidapsdocs). 

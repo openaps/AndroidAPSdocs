@@ -1,11 +1,11 @@
 # Accu-Chek Combo
 
-**This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**이 소프트웨어는 DIY 솔루션의 일부이며 제품이 아닙니다. 사용 방법을 포함하여 시스템을 직접 읽고, 배우고, 이해해야 합니다. 이 소프트웨어가 당뇨 관리를 모두 대신해 주지는 않습니다. 하지만 필요한 시간을 들일 의지가 있다면 당뇨 관리와 삶의 질을 개선할 수 있습니다. 서두르지 말고 배울 시간을 충분히 가지십시오. 이 소프트웨어로 무엇을 하든 그 책임은 전적으로 사용자 본인에게 있습니다.**
 
 ```{admonition} Accu-Chek Combo is being phased out
 :class: note
 
-Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. If you rely on this pump, plan ahead for a transition to a supported pump.
+Roche는 당뇨 사업을 Accu-Chek SmartGuide CGM에 다시 집중하기 위해 인슐린 펌프 시장에서 철수하고 있습니다. Roche는 Accu-Chek Combo와 Accu-Chek Insight 펌프의 판매 종료를 알렸습니다. 남아 있는 Accu-Chek Solo 마이크로펌프도 단계적으로 중단되고 있습니다(독일에서는 2025년 말에 마지막 공급). 이 변경은 독일을 시작으로 지역별로 진행되며, 다른 유럽 시장도 뒤따를 것으로 예상됩니다. 이 펌프를 사용하고 있다면 지원되는 펌프로 바꿀 계획을 미리 세우십시오.
 ```
 
 ```{contents} Table of contents
@@ -13,327 +13,327 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## AAPS에서 사용할 수 있는 펌프 기능
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Automatic DST and timezone handling.
+* 추가 통신 장치 없이 휴대폰의 자체 블루투스로 **AAPS**와 통신합니다.
+* DST와 시간대를 자동으로 처리합니다.
 
 ## 하드웨어와 소프트웨어의 필요 요건
 
-* A Roche Accu-Chek Combo (any firmware, they all work).
-* A Smartpix or Realtyme device together with the 360 Configuration Software to configure the pump. (Roche sends out Smartpix devices and the configuration software free of charge to their customers upon request.)
-* A compatible phone running Android 12 or newer. See [release notes](#maintenance-android-version-aaps-version) for details.
-* The **AAPS** app installed on your phone.
+* Roche Accu-Chek Combo(펌웨어 버전은 상관없으며, 모두 작동합니다).
+* 펌프를 구성하기 위한 Smartpix 또는 Realtyme 장치와 360 Configuration Software. (Roche는 고객이 요청하면 Smartpix 장치와 구성 소프트웨어를 무료로 보내 줍니다.)
+* Android 12 이상을 실행하는 호환 휴대폰. 자세한 내용은 [릴리스 노트](#maintenance-android-version-aaps-version)를 참조하십시오.
+* 휴대폰에 설치된 **AAPS** 앱.
 
-Some phones may work better than others, depending on their quality of Bluetooth support and whether or not they have additional, very aggressive power saving logic. A list of phones can be found in the [AAPS Phones](#Phones-list-of-tested-phones) document. Please be aware that this is not complete list and reflects personal user experience. You are encouraged to also enter your experience and thereby help others (these projects are all about paying it forward).
+휴대폰의 블루투스 지원 품질과 매우 공격적인 추가 절전 기능이 있는지에 따라 어떤 휴대폰은 다른 휴대폰보다 더 잘 작동할 수 있습니다. 휴대폰 목록은 [스마트폰](#Phones-list-of-tested-phones) 문서에 있습니다. 이 목록은 완전한 목록이 아니며 사용자의 개인 경험을 반영한 것입니다. 여러분의 경험도 입력하여 다른 사람을 도와 주십시오(이 프로젝트들은 받은 도움을 다른 사람에게 돌려주는 것으로 이루어집니다).
 
 (combov2-before-you-begin)=
-## Before you begin
+## 시작하기 전에
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error. Keep your Smartpix / Realtyme device handy, along with the 360 Configuration Software. Plan on spending about an hour for setting everything up and checking that everything is working properly.
+**안전이 최우선** - 오류가 생겼을 때 복구할 수 없는 환경에서는 이 과정을 시도하지 마십시오. Smartpix / Realtyme 장치와 360 Configuration Software를 가까이에 준비해 두십시오. 모든 것을 설정하고 모든 것이 제대로 작동하는지 확인하는 데 약 1시간이 걸린다고 생각하십시오.
 
-Be aware of the following limitations:
+다음 제한 사항을 알아 두십시오.
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
-* Only one basal profile (the first one) is supported.
-* The lowest basal rate in your **Profile** is 0.05 U/h. **AAPS** refuses a **Profile** with a lower rate. The Combo rounds basal rates to its own steps (0.01 U/h below 1 U/h, 0.05 U/h up to 10 U/h, 0.1 U/h above). **AAPS** uses the rates the pump really gives.
-* Temporary basal rates are limited to 500% of the current basal rate. **AAPS** takes this limit into account.
-* The loop is disabled if the currently active profile on the pump isn't profile no. 1. This continues until profile no. 1 is made the active one; when that is done, the next time AAPS connects (either on its own after a while or because you tap **Refresh** on the Accu-Chek Combo pump screen), it will notice that profile no. 1 is the current one, and enable the loop again.
-* If the loop requests a running TBR to be cancelled, the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because actually cancelling a TBR causes an alert on the pump which causes a lot of vibrations, and these vibrations cannot be disabled.
-* Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, where no connection to the pump is established anymore. If that error occurs, make sure Bluetooth is enabled, tap **Refresh** on the pump screen (**Manage** > **Pump**) to see if this was caused by an intermittent issue and if still no connection is established, reboot the phone which should usually fix this.
-* There is another issue where a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
-* Setting a TBR on the pump is to be avoided since the loop assumes control of TBRs. Detecting a new TBR on the pump might take up to 20 minutes and the TBR's effect will only be accounted from the moment it is detected, so in the worst case there might be 20 minutes of a TBR that is not reflected in IOB.
+* 확장 볼러스와 멀티웨이브 볼러스는 현재 지원되지 않습니다(대신 [확장 탄수화물 / "eCarbs"](../DailyLifeWithAaps/ExtendedCarbs.md)를 사용할 수 있습니다).
+* 기저 프로파일은 하나(첫 번째 프로파일)만 지원됩니다.
+* **프로파일**의 가장 낮은 기저 주입량은 0.05 U/h입니다. **AAPS**는 이보다 낮은 주입량이 있는 **프로파일**을 거부합니다. Combo는 기저 주입량을 자체 단위로 반올림합니다(1 U/h 미만은 0.01 U/h, 10 U/h까지는 0.05 U/h, 그 이상은 0.1 U/h). **AAPS**는 펌프가 실제로 주입하는 주입량을 사용합니다.
+* 임시 기저 주입량은 현재 기저 주입량의 500%로 제한됩니다. **AAPS**는 이 제한을 고려합니다.
+* 펌프에서 현재 활성화된 프로파일이 1번 프로파일이 아니면 루프가 비활성화됩니다. 이 상태는 1번 프로파일이 활성 프로파일이 될 때까지 계속됩니다. 그렇게 하면 다음에 AAPS가 연결할 때(잠시 후 자동으로, 또는 Accu-Chek Combo 펌프 화면에서 **새로고침**을 누를 때) 1번 프로파일이 현재 프로파일임을 알아차리고 루프를 다시 활성화합니다.
+* 루프가 실행 중인 TBR을 취소하도록 요청하면, Combo는 대신 15분 동안 90% 또는 110%의 TBR을 설정합니다. 실제로 TBR을 취소하면 펌프에서 경고가 발생하고 진동이 많이 울리는데, 이 진동은 끌 수 없기 때문입니다.
+* 블루투스 연결 안정성은 휴대폰마다 다르며, 펌프와 더 이상 연결되지 않는 "펌프에 연결할 수 없습니다" 경고가 발생할 수 있습니다. 이 오류가 발생하면 블루투스가 켜져 있는지 확인하고, 펌프 화면(**관리** > **펌프**)에서 **새로고침**을 눌러 일시적인 문제였는지 확인하십시오. 그래도 연결되지 않으면 휴대폰을 다시 시작하십시오. 보통 이렇게 하면 해결됩니다.
+* 다시 시작해도 해결되지 않는 다른 문제도 있습니다. 이 경우 펌프가 휴대폰의 연결을 다시 받아들이려면 펌프의 버튼을 눌러야 합니다(이렇게 하면 펌프의 블루투스 스택이 초기화됩니다).
+* 루프가 TBR을 제어하므로 펌프에서 직접 TBR을 설정하지 마십시오. 펌프에서 새 TBR을 감지하는 데 최대 20분이 걸릴 수 있으며, TBR의 효과는 감지된 시점부터만 계산됩니다. 따라서 최악의 경우 20분 동안의 TBR이 IOB에 반영되지 않을 수 있습니다.
 
-The driver is currently written to support the following languages on the Combo. (This is unrelated to the language in AAPS - it is the language shown on the Combo's LCD itself.)
+드라이버는 현재 Combo에서 다음 언어를 지원하도록 작성되어 있습니다. (이것은 AAPS의 언어와는 관계가 없으며, Combo의 LCD 자체에 표시되는 언어입니다.)
 
 * English
-* Spanish
-* French
-* Italian
-* Russian
-* Turkish
-* Polish
-* Czech
-* Hungarian
-* Slovak
-* Romanian
-* Croatian
-* Dutch
-* Greek
-* Finnish
-* Norwegian
-* Portuguese
-* Swedish
-* Danish
-* German
-* Slovenian
-* Lithuanian
+* 스페인어
+* 프랑스어
+* 이탈리아어
+* 러시아어
+* 터키어
+* 폴란드어
+* 체코어
+* 헝가리어
+* 슬로바키아어
+* 루마니아어
+* 크로아티아어
+* 네덜란드어
+* 그리스어
+* 핀란드어
+* 노르웨이어
+* 포르투갈어
+* 스웨덴어
+* 덴마크어
+* 독일어
+* 슬로베니아어
+* 리투아니아어
 
-**Important**: If your pump is set to a language that is not part of this list, please contact the developers, and set the pump's language to one in this list. Otherwise, the driver won't work properly.
+**중요**: 펌프가 이 목록에 없는 언어로 설정되어 있다면 개발자에게 연락하고, 펌프 언어를 이 목록에 있는 언어로 설정하십시오. 그렇지 않으면 드라이버가 제대로 작동하지 않습니다.
 
-## Phone setup
+## 휴대폰 설정
 
-It is very important to make sure that battery optimizations are turned off. AAPS already auto-detects when it is subject to these optimizations, and requests in its UI that these be turned off. But, on modern Android phones, Bluetooth _itself_ is an app (a system app). And, usually, that "Bluetooth app" is run _with battery optimizations on by default_. As a result, Bluetooth can refuse to respond when the phone aims to save power because it kills off the Bluetooth app. This means that in that Bluetooth system app's settings, battery optimizations must be turned off as well. Unfortunately, how one can find that Bluetooth system app differs between phones. In stock Android, go to Settings -> Apps -> See all N apps (N = the number of apps on your phone). Then, open the menu to the top right corner, tap on "Show system" or "Show system apps" or "All apps". Now, in the newly expanded list of apps, look for a "Bluetooth" app. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
+배터리 최적화가 꺼져 있는지 반드시 확인해야 합니다. AAPS는 이러한 최적화가 적용되어 있는지 스스로 감지하고, 화면에서 최적화를 끄도록 요청합니다. 하지만 최신 Android 휴대폰에서는 블루투스 _자체_도 하나의 앱(시스템 앱)입니다. 그리고 보통 이 "블루투스 앱"은 _기본적으로 배터리 최적화가 켜진 상태로_ 실행됩니다. 그 결과 휴대폰이 전력을 아끼려고 블루투스 앱을 종료하면 블루투스가 응답하지 않을 수 있습니다. 따라서 블루투스 시스템 앱의 설정에서도 배터리 최적화를 꺼야 합니다. 안타깝게도 블루투스 시스템 앱을 찾는 방법은 휴대폰마다 다릅니다. 기본 Android에서는 Settings(설정) -> Apps(앱) -> See all N apps(N개 앱 모두 보기)로 이동합니다(N = 휴대폰에 설치된 앱 수). 그다음 오른쪽 위 모서리의 메뉴를 열고 "Show system"(시스템 앱 표시), "Show system apps" 또는 "All apps"(모든 앱)를 누릅니다. 이제 새로 펼쳐진 앱 목록에서 "Bluetooth"(블루투스) 앱을 찾습니다. 그 앱을 선택하고 "App info"(앱 정보) 화면에서 "Battery"(배터리)를 누릅니다. 여기에서 배터리 최적화를 끕니다(때로는 "battery usage"(배터리 사용량)라고 합니다).
 
-## Combo setup
+## Combo 설정
 
-* Configure the pump using the Accu-Chek 360 Configuration Software. If you do not have the software, please contact your Accu-Chek hotline. They usually send registered users a CD with the "360° Pump Configuration Software" and a SmartPix USB-infrared connection device (the Realtyme device also works if you have that).
+* Accu-Chek 360 Configuration Software로 펌프를 구성합니다. 소프트웨어가 없다면 Accu-Chek 고객센터(핫라인)에 문의하십시오. 보통 등록된 사용자에게 "360° Pump Configuration Software"가 담긴 CD와 SmartPix USB-적외선 연결 장치를 보내 줍니다(Realtyme 장치가 있다면 그것도 사용할 수 있습니다).
 
-  - **Required settings** (marked green in screenshots):
+  - **필수 설정**(스크린샷에서 초록색으로 표시):
 
-     * Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
-     * Verify the _Quick Info Text_ is set to "QUICK INFO" (without the quotes, found under _Insulin Pump Options_).
-     * Set TBR _Maximum Adjustment_ to 500%
-     * Disable _Signal End of Temporary Basal Rate_
-     * Set TBR _Duration increment_ to 15 min
-     * Enable Bluetooth
+     * 메뉴 구성을 "Standard"로 설정하거나 그대로 두십시오. 이렇게 하면 펌프에서 지원되는 메뉴/동작만 표시되고, 지원되지 않는 메뉴/동작(확장/멀티웨이브 볼러스, 여러 기저 주입량)은 숨겨집니다. 지원되지 않는 기능을 사용하면 루프를 안전하게 실행할 수 없으므로 루프 기능이 제한됩니다.
+     * _Quick Info Text_가 "QUICK INFO"(따옴표 없이)로 설정되어 있는지 확인하십시오(_Insulin Pump Options_에 있습니다).
+     * TBR _Maximum Adjustment_를 500%로 설정하십시오.
+     * _Signal End of Temporary Basal Rate_를 끄십시오.
+     * TBR _Duration increment_를 15 min으로 설정하십시오.
+     * 블루투스를 켜십시오.
 
-  - **Recommended settings** (marked blue in screenshots)
+  - **권장 설정**(스크린샷에서 파란색으로 표시)
 
-     * Set low cartridge alarm to your liking
-     * Configure a max bolus suited for your therapy to protect against bugs in the software
-     * Similarly, configure maximum TBR duration as a safeguard. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
-     * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
-     * Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
+     * 카트리지 부족 알람을 원하는 대로 설정하십시오.
+     * 소프트웨어의 버그로부터 보호하기 위해 치료에 맞는 최대 볼러스를 구성하십시오.
+     * 마찬가지로 안전 장치로 최대 TBR 지속 시간을 구성하십시오. 펌프를 3시간 동안 분리하는 옵션은 3시간 동안 0%를 설정하므로, 최소 3시간을 허용하십시오.
+     * 펌프에서 볼러스를 주입하지 못하도록 펌프의 키 잠금을 켜십시오. 특히 예전에 펌프를 사용하면서 빠른 볼러스를 습관적으로 사용했다면 더욱 그렇습니다.
+     * 디스플레이 시간 초과와 메뉴 시간 초과를 각각 최솟값인 5.5와 5로 설정하십시오. 이렇게 하면 AAPS가 오류 상황에서 더 빨리 복구할 수 있고, 이러한 오류 중에 발생할 수 있는 진동 횟수가 줄어듭니다.
 
-  ![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+  ![사용자 메뉴 설정의 스크린샷](../images/combo/combo-menu-settings.png)
 
-  ![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+  ![TBR 설정의 스크린샷](../images/combo/combo-tbr-settings.png)
 
-  ![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+  ![볼러스 설정의 스크린샷](../images/combo/combo-bolus-settings.png)
 
-  ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+  ![인슐린 카트리지 설정의 스크린샷](../images/combo/combo-insulin-settings.png)
 
-## Activating the driver and pairing it with the Combo
+## 드라이버 활성화와 Combo 페어링
 
-* Open the **menu** (☰) in the top-left corner, go to [**Configuration** > **Pump**](../SettingUpAaps/ConfigBuilder.md) and select **Accu-Chek Combo**.
+* 왼쪽 위 모서리의 **메뉴**(☰)를 열고 [**구성** > **펌프**](../SettingUpAaps/ConfigBuilder.md)로 이동하여 **Accu-Chek Combo**를 선택합니다.
 
-  ![Configuration > Pump with the Accu-Chek Combo plugin](../images/v4/Configuration/configuration_pump_list_1.png)
+  ![Accu-Chek Combo 플러그인이 있는 구성 > 펌프](../images/v4/Configuration/configuration_pump_list_1.png)
 
-  Once it is selected, the **Accu-Chek Combo** card shows two buttons, **Settings** and **Open plugin**:
+  선택하면 **Accu-Chek Combo** 카드에 **설정**과 **플러그인 열기**의 두 버튼이 표시됩니다.
 
-  ![The Accu-Chek Combo plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_combo_enabled.png)
+  ![구성 > 펌프에서 선택된 Accu-Chek Combo 플러그인](../images/v4/Pumps/accu_chek_combo_enabled.png)
 
-  **Settings** opens the settings of the Accu-Chek Combo driver (see [Settings](#combov2-preferences) below):
+  **설정**은 Accu-Chek Combo 드라이버의 설정을 엽니다(아래의 [설정](#combov2-preferences) 참조).
 
-  ![Accu-Chek Combo driver settings](../images/v4/Pumps/accu_chek_combo_settings.png)
+  ![Accu-Chek Combo 드라이버 설정](../images/v4/Pumps/accu_chek_combo_settings.png)
 
-  **Open plugin** (or **Manage** > **Pump**) opens the Accu-Chek Combo pump screen. Before a pump is paired it shows **Not paired to a pump**:
+  **플러그인 열기**(또는 **관리** > **펌프**)는 Accu-Chek Combo 펌프 화면을 엽니다. 펌프를 페어링하기 전에는 **펌프에 페어링되지 않음**이 표시됩니다.
 
-  ![Accu-Chek Combo pump screen before pairing](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
+  ![페어링하기 전의 Accu-Chek Combo 펌프 화면](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
 
-* On the pump screen, tap **Pairing**. The **Pair with pump** screen opens. Follow the steps shown on screen, then tap **Start pairing**. When Android asks for permission to make the phone visible to other Bluetooth devices, tap **Allow**. Eventually, the Combo shows a 10-digit pairing PIN on its screen, and **AAPS** asks for it. Enter that PIN in the **10-digit PIN** field.
+* 펌프 화면에서 **페어링**을 누릅니다. **펌프와 페어링** 화면이 열립니다. 화면에 표시된 단계를 따른 다음 **페어링 시작**을 누릅니다. Android가 휴대폰을 다른 블루투스 기기에 표시할 수 있도록 권한을 요청하면 **Allow**(허용)를 누릅니다. 잠시 후 Combo 화면에 10자리 페어링 PIN이 표시되고, **AAPS**가 이 PIN을 요청합니다. 이 PIN을 **10자리 PIN** 필드에 입력합니다.
 
-  ![The Pair with pump screen with the Start pairing button](../images/combo/combov2-pairing-screen-1.png)
+  ![페어링 시작 버튼이 있는 펌프와 페어링 화면](../images/combo/combov2-pairing-screen-1.png)
 
-  ![Android asking to make the phone visible to other Bluetooth devices](../images/combo/combov2-pairing-bt-visible-prompt.png)
+  ![휴대폰을 다른 블루투스 기기에 표시하도록 요청하는 Android](../images/combo/combov2-pairing-bt-visible-prompt.png)
 
-  ![Combo pairing in progress, scanning for the pump](../images/combo/combov2-pairing-screen-2.png)
+  ![Combo 페어링 진행 중, 펌프 스캔 중](../images/combo/combov2-pairing-screen-2.png)
 
-  The next pictures are from an older **AAPS** version. The steps and texts are the same, but the screens look slightly different.
+  다음 그림은 이전 **AAPS** 버전의 것입니다. 단계와 문구는 같지만 화면 모양이 조금 다릅니다.
 
-  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-3.png)
+  ![Combo 페어링 화면의 스크린샷 3](../images/combo/combov2-pairing-screen-3.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
+  ![Combo 페어링 화면의 스크린샷 4](../images/combo/combov2-pairing-screen-4.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
+  ![Combo 페어링 화면의 스크린샷 4](../images/combo/combov2-pairing-screen-5.png)
 
-* If the PIN is entered incorrectly, **AAPS** shows **PIN did not work. Check if there was a typo. If this keeps happening, cancel and retry pairing.**
+* PIN을 잘못 입력하면 **AAPS**가 **PIN이 맞지 않습니다. 오타가 있는지 확인하십시오. 계속 이런 일이 생기면 페어링을 취소하고 다시 시도하십시오.**를 표시합니다.
 
-  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
+  ![Combo 페어링 화면의 스크린샷 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
-* When **Successfully paired with Combo** is shown, tap **OK**. You return to the pump screen, which now shows the pump status (see [Accu-Chek Combo pump screen contents](#combov2-tab-contents) below). The **Pairing** button is replaced by **Unpair**.
+* **Combo와 성공적으로 페어링됨**이 표시되면 **확인**을 누릅니다. 펌프 화면으로 돌아가며, 이제 펌프 상태가 표시됩니다(아래의 [Accu-Chek Combo 펌프 화면 내용](#combov2-tab-contents) 참조). **페어링** 버튼이 **페어링 해제** 버튼으로 바뀝니다.
 
-* To verify your setup (with the pump **disconnected** from any cannula to be safe!) use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+* 설정을 확인하려면(안전을 위해 펌프를 모든 캐뉼라에서 **분리한** 상태로!) AAPS로 15분 동안 500%의 TBR을 설정하고 볼러스를 주입하십시오. 이제 펌프에서 TBR이 실행 중이고 이력에 볼러스가 있어야 합니다. AAPS에도 활성 TBR과 주입된 볼러스가 표시되어야 합니다.
 
-* On the Combo, it is recommended to enable the key lock to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit.
+* Combo에서는 펌프에서 볼러스를 주입하지 못하도록 키 잠금을 켜는 것을 권장합니다. 특히 예전에 펌프를 사용하면서 "quick bolus"(빠른 볼러스) 기능을 습관적으로 사용했다면 더욱 그렇습니다.
 
-## Notes about pairing
+## 페어링에 대한 참고 사항
 
-The Accu-Chek Combo was developed before Bluetooth 4.0 was released, and just one year after the very first Android version was released. This is why its way of pairing with other devices is not 100% compatible with how it is done in Android today. To fully overcome this, AAPS would need system level permissions, which are only available for system apps. These are installed by the phone makers into the phone - users cannot install system apps.
+Accu-Chek Combo는 블루투스 4.0이 발표되기 전, 그리고 최초의 Android 버전이 발표된 지 겨우 1년 뒤에 개발되었습니다. 그래서 다른 기기와 페어링하는 방식이 오늘날 Android에서 페어링하는 방식과 100% 호환되지는 않습니다. 이 문제를 완전히 해결하려면 AAPS에 시스템 수준 권한이 필요한데, 이 권한은 시스템 앱만 가질 수 있습니다. 시스템 앱은 휴대폰 제조사가 휴대폰에 설치하며, 사용자는 시스템 앱을 설치할 수 없습니다.
 
-The consequence of this is that pairing will never be 100% without problems. In particular, during pairing, Android's Bluetooth PIN dialog can briefly show up and automatically go away. But sometimes, it stays on screen, and asks for a 4-digit PIN. (This is not to be confused with the 10-digit Combo pairing PIN.) Do not enter anything, just press cancel. If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
+그 결과 페어링이 100% 문제없이 진행되지는 않습니다. 특히 페어링 중에 Android의 블루투스 PIN 대화 상자가 잠깐 나타났다가 자동으로 사라질 수 있습니다. 하지만 때로는 화면에 계속 남아서 4자리 PIN을 요청합니다. (이것을 10자리 Combo 페어링 PIN과 혼동하지 마십시오.) 아무것도 입력하지 말고 취소만 누르십시오. 페어링이 계속되지 않으면 화면의 안내에 따라 페어링을 다시 시도하십시오.
 
 (combov2-tab-contents)=
-## Accu-Chek Combo pump screen contents
+## Accu-Chek Combo 펌프 화면 내용
 
-To open the pump screen, go to **Manage** > **Pump**. Once a pump is paired, it shows the following information (items are listed from top to bottom):
+펌프 화면을 열려면 **관리** > **펌프**로 이동합니다. 펌프가 페어링되면 다음 정보가 표시됩니다(항목은 위에서 아래 순서로 나열되어 있습니다).
 
-![Screenshot of the Accu-Chek Combo pump screen with pairing (older AAPS version)](../images/combo/combov2-tab-with-pairing.png)
+![페어링된 Accu-Chek Combo 펌프 화면의 스크린샷(이전 AAPS 버전)](../images/combo/combov2-tab-with-pairing.png)
 
-1. **Driver state**: The driver can be in one of the following states:
-   - **Disconnected**: There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
-   - **Connecting**
-   - **Checking pump**: the pump is connected, but the driver is currently performing safety checks to ensure that everything is OK and up to date
-   - **Ready**: the driver is ready to accept commands from AAPS
-   - **Suspended**: the pump is suspended (shown as "stopped" in the Combo)
-   - A description of the command being executed, for example **Setting basal profile** or **Updating pump status**
-   - **Error**: an error occurred; the connection was terminated, any ongoing command was aborted
-2. **Last connection**: How many minutes ago the driver successfully connected to the Combo; if this goes beyond 30 minutes, this item is shown with a red color
-3. **Battery**: Battery level; the Combo only indicates **Full**, **Low** or **Empty**, and does not offer anything more accurate (like a percentage), so only these three levels are shown here
-4. **Reservoir**: How many IU are currently in the Combo's reservoir
-5. **Last bolus**: How many minutes ago the last bolus was delivered; if none was delivered yet after AAPS was started, this is not shown
-6. **Temp basal**: Details about the currently active temporary basal; if none is currently active, this is not shown
-7. **Base basal rate**: Currently active base basal rate ("base" means the basal rate without any active TBR influencing the basal rate factor)
-8. **Serial number**: Combo serial number as indicated by the pump (this corresponds to the serial number shown on the back of the Combo)
-9. **Bluetooth address**: The Combo's 6-byte Bluetooth address, shown in the `XX:XX:XX:XX:XX:XX` format
+1. **드라이버 상태**: 드라이버는 다음 상태 중 하나일 수 있습니다.
+   - **연결 끊김**: 블루투스 연결이 없습니다. 드라이버는 대부분의 시간 동안 이 상태이며, 필요할 때만 펌프에 연결합니다. 이렇게 하면 전력이 절약됩니다.
+   - **연결 중**
+   - **펌프 점검**: 펌프가 연결되었지만, 드라이버가 모든 것이 정상이고 최신 상태인지 확인하기 위해 안전 점검을 하고 있습니다.
+   - **준비**: 드라이버가 AAPS의 명령을 받을 준비가 되었습니다.
+   - **중지됨**: 펌프가 중지되었습니다(Combo에서는 "stopped"로 표시됨).
+   - 실행 중인 명령에 대한 설명. 예: **기저 프로파일 설정** 또는 **펌프 상태 업데이트**
+   - **오류**: 오류가 발생했습니다. 연결이 종료되었고, 진행 중이던 명령이 모두 중단되었습니다.
+2. **마지막 연결**: 드라이버가 몇 분 전에 Combo에 성공적으로 연결했는지 표시합니다. 30분을 넘으면 이 항목이 빨간색으로 표시됩니다.
+3. **배터리**: 배터리 잔량입니다. Combo는 **가득 참**, **낮음**, **비어 있음**만 알려 주고 그보다 정확한 값(예: 퍼센트)은 제공하지 않으므로, 여기에는 이 세 단계만 표시됩니다.
+4. **레저버**: 현재 Combo의 레저버에 들어 있는 IU의 양
+5. **마지막 볼러스**: 마지막 볼러스가 몇 분 전에 주입되었는지 표시합니다. AAPS를 시작한 뒤 아직 주입된 볼러스가 없으면 표시되지 않습니다.
+6. **임시 기저**: 현재 활성화된 임시 기저의 세부 정보입니다. 활성화된 임시 기저가 없으면 표시되지 않습니다.
+7. **기본 기저 주입량**: 현재 활성화된 기본 기저 주입량("기본"은 기저 주입량 비율에 영향을 주는 활성 TBR이 없는 상태의 기저 주입량을 뜻합니다)
+8. **일련번호**: 펌프가 알려 주는 Combo 일련번호(Combo 뒷면에 표시된 일련번호와 같습니다)
+9. **블루투스 주소**: `XX:XX:XX:XX:XX:XX` 형식으로 표시되는 Combo의 6바이트 블루투스 주소
 
-While the driver is doing something (for example, setting a basal profile), a box below the list describes the current activity, with a thin progress bar showing the progress.
+드라이버가 작업을 하는 동안(예: 기저 프로파일 설정) 목록 아래의 상자에 현재 작업이 설명되고, 얇은 진행 표시줄로 진행 상황이 표시됩니다.
 
-The Combo can be operated through Bluetooth in the _remote-terminal_ mode or in the _command_ mode. The remote-terminal mode corresponds to the "remote control mode" on the Combo's meter, which mimics the pump's LCD and four buttons. Some commands have to be performed in this mode by the driver, since they have no counterpart in the command mode. That latter mode is much faster, but, as said, limited in scope. When the remote-terminal mode is active, the current remote-terminal screen is shown in the field that is located just above the Combo drawing. When the driver switches to the command mode however, that field is left blank.
+Combo는 블루투스를 통해 _원격 터미널_ 모드 또는 _명령_ 모드로 작동할 수 있습니다. 원격 터미널 모드는 Combo 혈당 측정기의 "원격 조작 모드"에 해당하며, 펌프의 LCD와 네 개의 버튼을 흉내 냅니다. 일부 명령은 명령 모드에 해당하는 기능이 없으므로 드라이버가 이 모드에서 실행해야 합니다. 명령 모드는 훨씬 빠르지만, 앞서 말했듯이 할 수 있는 일이 제한됩니다. 원격 터미널 모드가 활성화되어 있으면 Combo 그림 바로 위에 있는 필드에 현재 원격 터미널 화면이 표시됩니다. 하지만 드라이버가 명령 모드로 전환하면 이 필드는 비어 있습니다.
 
-(You do not influence this; the driver fully decides on its own what mode to use. This is merely a note for you to know why sometimes you can see Combo frames in that field.)
+(사용자가 이것에 영향을 주지는 않습니다. 어떤 모드를 사용할지는 드라이버가 전적으로 스스로 결정합니다. 이것은 그 필드에 가끔 Combo 화면이 보이는 이유를 알려 드리기 위한 참고 사항일 뿐입니다.)
 
-At the bottom, there are these buttons:
+아래쪽에는 다음 버튼이 있습니다.
 
-- **Refresh**: Triggers an immediate pump status update. It is also used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#combov2-alerts)). You can only tap it when the driver is disconnected, suspended or in the error state.
-- **Unpair**: Unpairs the paired Combo from **AAPS** and Android, after you confirm **Do you really want to unpair the pump?**. When no pump is paired, this button is replaced by **Pairing**.
+- **새로고침**: 펌프 상태를 즉시 업데이트합니다. 또한 이전에 발견된 오류가 이제 해결되었으니 AAPS가 모든 것이 정상인지 다시 확인해도 된다는 것을 AAPS에 알릴 때도 사용합니다(자세한 내용은 아래의 [경고에 대한 섹션](#combov2-alerts) 참조). 드라이버가 연결 끊김, 중지됨 또는 오류 상태일 때만 누를 수 있습니다.
+- **페어링 해제**: **펌프 페어링을 해제하시겠습니까?**를 확인하면 페어링된 Combo를 **AAPS**와 Android에서 페어링 해제합니다. 페어링된 펌프가 없으면 이 버튼이 **페어링** 버튼으로 바뀝니다.
 
 (combov2-preferences)=
-## Settings
+## 설정
 
-These settings are available for the Combo driver (**Configuration** > **Pump** > **Accu-Chek Combo** > **Settings**, or the settings icon (cog wheel) on the pump screen). Items are listed from top to bottom:
+Combo 드라이버에는 다음 설정이 있습니다(**구성** > **펌프** > **Accu-Chek Combo** > **설정**, 또는 펌프 화면의 설정 아이콘(톱니바퀴)). 항목은 위에서 아래 순서로 나열되어 있습니다.
 
-1. **Discovery duration (in seconds)**: When pairing, the driver makes the phone discoverable by the pump. This controls how long that discoverability lasts. By default, the maximum (300 seconds = 5 minutes) is selected. Android does not allow for discoverability to last indefinitely, so a duration has to be chosen.
-2. **Autodetect and automatically enter insulin reservoir change**: If enabled, the driver enters the "reservoir change" that you would normally enter yourself with **Manage** > **Prime/Fill**. This is explained [in further detail below](#combov2-autodetections).
-3. **Autodetect and automatically enter battery change**: If enabled, the driver enters the "battery change" that you would normally enter yourself with **Manage** > **Pump Battery Change**. This is explained [in further detail below](#combov2-autodetections).
-4. **Enable verbose Combo logging**: This greatly expands the amount of logging done by the driver. **CAUTION**: Do not enable this unless asked to by a developer. Otherwise, this can add a lot of noise to **AAPS** logs and lessen their usefulness.
+1. **검색 기간(초)**: 페어링할 때 드라이버가 휴대폰을 펌프가 검색할 수 있는 상태로 만듭니다. 이 설정은 검색 가능한 상태가 얼마나 오래 유지되는지 정합니다. 기본값으로 최댓값(300초 = 5분)이 선택되어 있습니다. Android에서는 검색 가능 상태를 무기한 유지할 수 없으므로 지속 시간을 정해야 합니다.
+2. **인슐린 레저버 교체를 자동으로 감지하고, 자동으로 입력함**: 켜면, 보통 **관리** > **프라임/채우기**에서 직접 입력하는 "레저버 교체"를 드라이버가 입력합니다. 이에 대해서는 [아래에서 더 자세히](#combov2-autodetections) 설명합니다.
+3. **배터리 교체를 자동으로 감지하고, 자동으로 입력함**: 켜면, 보통 **관리** > **펌프 배터리 교체**에서 직접 입력하는 "배터리 교체"를 드라이버가 입력합니다. 이에 대해서는 [아래에서 더 자세히](#combov2-autodetections) 설명합니다.
+4. **Combo 상세 로그 활성화**: 드라이버가 남기는 로그의 양이 크게 늘어납니다. **주의**: 개발자가 요청하지 않는 한 이 설정을 켜지 마십시오. 그렇지 않으면 **AAPS** 로그에 불필요한 내용이 많아져 로그의 유용성이 떨어질 수 있습니다.
 
-Pairing and unpairing are done on the pump screen, not in the settings (see above).
+페어링과 페어링 해제는 설정이 아니라 펌프 화면에서 합니다(위 참조).
 
 (combov2-autodetections)=
-## Autodetecting and automatically entering battery and reservoir changes
+## 배터리 및 레저버 교체의 자동 감지와 자동 입력
 
-The driver is capable of detecting battery and reservoir changes by keeping track of the battery and reservoir levels. If the battery level was reported by the Combo as low the last time the pump status was updated, and now, during the new pump status update, the battery level shows up as normal, then the driver concludes that the user must have replaced the battery. The same logic is used for the reservoir level: If it now is higher than before, this is interpreted as a reservoir change.
+드라이버는 배터리 잔량과 레저버 잔량을 계속 추적하여 배터리 및 레저버 교체를 감지할 수 있습니다. 마지막으로 펌프 상태를 업데이트했을 때 Combo가 배터리 잔량을 낮음으로 보고했고, 이번 펌프 상태 업데이트에서 배터리 잔량이 정상으로 나타나면, 드라이버는 사용자가 배터리를 교체했다고 판단합니다. 레저버 잔량에도 같은 방식을 사용합니다. 레저버 잔량이 이전보다 많아졌으면 레저버 교체로 해석합니다.
 
-This only works if the battery and reservoir are replaced when these levels are reported as low _and_ the battery and reservoir are sufficiently filled.
+이 기능은 잔량이 낮음으로 보고되었을 때 배터리와 레저버를 교체하고, _그리고_ 배터리와 레저버가 충분히 채워졌을 때만 작동합니다.
 
-These autodetections can be turned off in the driver [settings](#combov2-preferences).
+이 자동 감지 기능은 드라이버 [설정](#combov2-preferences)에서 끌 수 있습니다.
 
 (combov2-alerts)=
-## Alerts (warnings and errors) and how they are handled
+## 경고(warning)와 오류(error), 그리고 처리 방법
 
-The Combo shows alerts as remote-terminal screens. Warnings are shown with a "Wx" code (x is a digit), along with a short description. One example is "W7", "TBR OVER". Errors are similar, but show up with an "Ex" code instead.
+Combo는 경고를 원격 터미널 화면으로 표시합니다. 경고는 "Wx" 코드(x는 숫자)와 짧은 설명으로 표시됩니다. 예를 들면 "W7", "TBR OVER"가 있습니다. 오류도 비슷하지만 대신 "Ex" 코드로 표시됩니다.
 
-Certain warnings are automatically dismissed by the driver. These are:
+일부 경고는 드라이버가 자동으로 해제합니다. 그 경고는 다음과 같습니다.
 
-- W1 "reservoir low" : the driver turns this into a "low reservoir" warning that is shown on the AAPS main screen
-- W2 "battery low" : the driver turns this into a "low battery" warning that is shown on the AAPS main screen
-- W3, W6, W7, W8 : these are all purely informational for the user, so it is safe for the driver to auto-dismiss them
+- W1 "reservoir low" : 드라이버가 이 경고를 AAPS 메인 화면에 표시되는 "레저버 부족" 경고로 바꿉니다.
+- W2 "battery low" : 드라이버가 이 경고를 AAPS 메인 화면에 표시되는 "배터리 부족" 경고로 바꿉니다.
+- W3, W6, W7, W8 : 모두 사용자에게 정보를 알리는 경고일 뿐이므로 드라이버가 자동으로 해제해도 안전합니다.
 
-Other warnings are _not_ automatically dismissed. Also, errors are _never_ automatically dismissed. Both of these are handled the same way: They cause the driver to produce an alert dialog on top of the AAPS UI, and also cause it to abort any ongoing command execution. The driver then switches to the "error" state (see [the Accu-Chek Combo pump screen contents above](#combov2-tab-contents)). This state does not allow for any command execution. The user has to handle the error on the pump; for example, an occlusion error may require replacing the cannula. Once the user took care of the error, normal operation can be resumed by tapping **Refresh** on the Accu-Chek Combo pump screen. The driver then connects to the Combo and updates its status, checking for whether an error is still shown on screen etc. Also, the driver auto-refreshes the pump status after a while, so manually pressing that button is not mandatory.
+다른 경고는 자동으로 해제되지 _않습니다_. 또한 오류는 _절대_ 자동으로 해제되지 않습니다. 이 두 경우는 같은 방식으로 처리됩니다. 드라이버가 AAPS 화면 위에 경고 대화 상자를 띄우고, 진행 중인 명령 실행을 모두 중단합니다. 그러면 드라이버가 "오류" 상태로 바뀝니다([위의 Accu-Chek Combo 펌프 화면 내용](#combov2-tab-contents) 참조). 이 상태에서는 어떤 명령도 실행할 수 없습니다. 사용자가 펌프에서 오류를 처리해야 합니다. 예를 들어 막힘 오류가 생기면 캐뉼라를 교체해야 할 수 있습니다. 사용자가 오류를 처리한 뒤 Accu-Chek Combo 펌프 화면에서 **새로고침**을 누르면 정상 작동을 재개할 수 있습니다. 그러면 드라이버가 Combo에 연결하여 상태를 업데이트하고, 화면에 아직 오류가 표시되는지 등을 확인합니다. 또한 드라이버는 잠시 후 펌프 상태를 자동으로 새로 고치므로, 그 버튼을 직접 누를 필요는 없습니다.
 
-Bolusing is a special case. It is done in the Combo's command mode, which does not report mid-bolus that an alert appeared. As a consequence, the driver cannot automatically dismiss warnings _during_ a bolus. This means that unfortunately, the pump will be beeping until the bolus is finished. The most common mid-bolus alert typically is W1 "reservoir low". **Don't** dismiss Combo warnings on the pump itself manually during a bolus. You risk interrupting the bolus. The driver will take care of the warning once the bolus is over.
+볼러스는 특별한 경우입니다. 볼러스는 Combo의 명령 모드에서 실행되는데, 이 모드는 볼러스 중에 경고가 나타나도 알려 주지 않습니다. 그 결과 드라이버는 볼러스 _도중에_ 경고를 자동으로 해제할 수 없습니다. 안타깝게도 볼러스가 끝날 때까지 펌프에서 경고음이 울린다는 뜻입니다. 볼러스 중 가장 흔한 경고는 보통 W1 "reservoir low"(레저버 부족)입니다. 볼러스 중에는 Combo 경고를 펌프에서 직접 해제하지 **마십시오**. 볼러스가 중단될 위험이 있습니다. 볼러스가 끝나면 드라이버가 경고를 처리합니다.
 
-Alerts that happen while the driver is not connected to the Combo will not be noticed by the driver. The Combo has no way of automatically pushing that alert to the phone; it is always the phone that has to initiate the connection. As a consequence, the alert will persist until the driver connects to the pump. You can tap **Refresh** on the pump screen to trigger a connection and let the driver handle the alert right then and there (instead of waiting until AAPS itself decides to initiate a connection).
+드라이버가 Combo에 연결되어 있지 않은 동안 발생한 경고는 드라이버가 알아차리지 못합니다. Combo는 경고를 휴대폰으로 자동 전송할 방법이 없습니다. 연결은 항상 휴대폰이 시작해야 합니다. 그 결과 드라이버가 펌프에 연결할 때까지 경고가 계속 남아 있습니다. 펌프 화면에서 **새로고침**을 누르면 연결을 시작하여 드라이버가 그 자리에서 바로 경고를 처리하게 할 수 있습니다(AAPS가 스스로 연결을 시작할 때까지 기다리지 않아도 됩니다).
 
-**IMPORTANT**: If an error occurs, or a warning shows up that isn't one of those that are automatically dismissed, the driver enters the error state. In that state, the loop **WILL BE BLOCKED** until the pump status is refreshed! It is unblocked after the pump status is updated (either by tapping **Refresh** or by the driver's eventual auto-update) and no error is shown anymore.
+**중요**: 오류가 발생하거나 자동으로 해제되지 않는 경고가 나타나면 드라이버는 오류 상태가 됩니다. 이 상태에서는 펌프 상태를 새로 고칠 때까지 루프가 **차단됩니다**! 펌프 상태가 업데이트되고(**새로고침**을 누르거나 드라이버가 자동으로 업데이트하여) 더 이상 오류가 표시되지 않으면 차단이 해제됩니다.
 
-## Things to be careful about when using the Combo
+## Combo를 사용할 때 주의할 점
 
-* Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
-* Due to the way the Combo's remote control functionality works, several operations (especially setting a basal profile) are slow compared to other pumps. This is an unfortunate limitation of the Combo that cannot be overcome.
-* Don't set or cancel a TBR on the pump. The loop assumes control of TBRs and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
-* Don't press any buttons on the pump while AAPS communicates with the pump (the Bluetooth logo is shown on the pump while it is connected to AAPS). Doing that will interrupt the Bluetooth connection. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](#combov2-before-you-begin)).
-* Don't press any buttons while the pump is bolusing. In particular, don't try to dismiss alerts by pressing buttons. See [the section about alerts](#combov2-alerts) for a more detailed explanation why.
+* 이것은 제품이 아니라는 점을 기억하십시오. 특히 처음에는 사용자가 시스템과 그 한계, 그리고 시스템이 어떻게 실패할 수 있는지를 지켜보고 이해해야 합니다. 사용하는 사람이 시스템을 완전히 이해할 수 없다면 이 시스템을 사용하지 말 것을 강력히 권고합니다.
+* Combo의 원격 조작 기능이 작동하는 방식 때문에, 일부 작업(특히 기저 프로파일 설정)은 다른 펌프보다 느립니다. 이것은 극복할 수 없는 Combo의 안타까운 한계입니다.
+* 펌프에서 TBR을 설정하거나 취소하지 마십시오. 루프가 TBR을 제어하며, 사용자가 펌프에서 설정한 TBR의 시작 시간을 알 수 없으므로 그렇지 않으면 루프가 안정적으로 작동할 수 없습니다.
+* AAPS가 펌프와 통신하는 동안에는 펌프의 버튼을 누르지 마십시오(펌프가 AAPS에 연결되어 있는 동안 펌프에 블루투스 로고가 표시됩니다). 버튼을 누르면 블루투스 연결이 끊어집니다. 연결에 문제가 있을 때만 그렇게 하십시오([위의 "시작하기 전에" 섹션](#combov2-before-you-begin) 참조).
+* 펌프가 볼러스를 주입하는 동안에는 버튼을 누르지 마십시오. 특히 버튼을 눌러 경고를 해제하려고 하지 마십시오. 그 이유에 대한 자세한 설명은 [경고에 대한 섹션](#combov2-alerts)을 참조하십시오.
 
-## Checklist for when no connection can be established with the Combo
+## Combo와 연결할 수 없을 때의 점검 목록
 
-The driver does its best to connect to the Combo, and uses a couple of tricks to maximize reliability. Still, sometimes, connections aren't established. Here are some steps to take for trying to remedy this situation.
+드라이버는 Combo에 연결하기 위해 최선을 다하며, 안정성을 높이기 위해 몇 가지 방법을 사용합니다. 그래도 때때로 연결되지 않을 수 있습니다. 이 상황을 해결하기 위해 시도할 수 있는 단계는 다음과 같습니다.
 
-1. Press a button on the Combo. Sometimes, the Combo's Bluetooth stack becomes non-responsive, and does not accept connections anymore. By pressing a button on the Combo and making the LCD show something, the Bluetooth stack is reset. Most of the time, this is the only step that's needed to fix the connection issues.
-2. Restart the phone. This may be needed if there is an issue with the phone's Bluetooth stack itself.
-3. If the Combo's battery cap is old, consider replacing it. Old battery caps can cause issues with the Combo's power supply, which affect Bluetooth.
-4. If connection attempts still keep failing, consider unpairing and then re-pairing the pump.
+1. Combo의 버튼을 누르십시오. 때때로 Combo의 블루투스 스택이 응답하지 않고 더 이상 연결을 받아들이지 않습니다. Combo의 버튼을 눌러 LCD에 무언가가 표시되게 하면 블루투스 스택이 초기화됩니다. 대부분은 이 단계만으로 연결 문제가 해결됩니다.
+2. 휴대폰을 다시 시작하십시오. 휴대폰의 블루투스 스택 자체에 문제가 있으면 이 단계가 필요할 수 있습니다.
+3. Combo의 배터리 캡이 오래되었다면 교체를 고려하십시오. 오래된 배터리 캡은 Combo의 전원 공급에 문제를 일으킬 수 있으며, 이것이 블루투스에 영향을 줍니다.
+4. 그래도 계속 연결에 실패하면 펌프의 페어링을 해제한 다음 다시 페어링하는 것을 고려하십시오.
 
 (combov2-tips-for-basic-usage)=
-## Tips for basic usage
+## 기본 사용 팁
 
-### How to ensure smooth operations
+### 원활한 작동을 위한 방법
 
-* Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under your body while you sleep, a higher position (on a shelf or board) works best.
-* Always make sure that the pump battery is as full as possible. See the battery section for tips regarding the battery.
-* Whenever possible, only operate the pump via the AAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Only when changing the battery or the cartridge, it is necessary to use the pump's keys.
+* 항상 **스마트폰을 몸에 지니고** 다니고, 밤에는 침대 옆에 두십시오. 잠자는 동안 펌프가 몸 뒤나 아래에 있을 수 있으므로, 휴대폰은 높은 곳(선반이나 받침대 위)에 두는 것이 가장 좋습니다.
+* 펌프 배터리가 항상 최대한 가득 차 있도록 하십시오. 배터리에 대한 팁은 배터리 섹션을 참조하십시오.
+* 가능하면 펌프는 AAPS 앱으로만 조작하십시오. 이를 위해 펌프에서 **PUMP SETTINGS / KEY LOCK / ON**으로 키 잠금을 켜십시오. 배터리나 카트리지를 교체할 때만 펌프의 버튼을 사용해야 합니다.
 
-![Keylock](../images/combo/combo-tips-keylock.png)
+![키 잠금](../images/combo/combo-tips-keylock.png)
 
-### Pump not reachable. What to do?
+### 펌프에 연결할 수 없습니다. 어떻게 해야 합니까?
 
-#### Activate pump unreachable alarm
-* In **AAPS**, tap the **Settings** (gear) icon at the top right of the main screen, go to **Local alerts**, activate **Alert if pump is unreachable** and set **Pump unreachable threshold** to **31** minutes.
-* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
+#### 펌프 연결 불가 알람 켜기
+* **AAPS**에서 메인 화면 오른쪽 위의 **설정**(톱니바퀴) 아이콘을 누르고 **로컬 알림**으로 이동하여 **펌프에 연결할 수 없으면 경고**를 켜고 **펌프 연결 불가 기준값**을 **31**분으로 설정합니다.
+* 이렇게 하면 휴대폰을 책상에 두고 방을 나갈 때는 알람이 울리지 않을 만큼 시간 여유가 있으면서도, 펌프에 임시 기저 주입량의 지속 시간보다 오래 연결할 수 없으면 알려 줍니다.
 
-#### Restore reachability of the pump
+#### 펌프 연결 복구
 
-* When AAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, tap **Refresh** on the Accu-Chek Combo pump screen (**Manage** > **Pump**). Mostly then the communication works again.
-* If that does not help, reboot your smartphone. After the restart, AAPS will be reactivated and a new connection will be established with the pump.
+* AAPS가 **펌프에 연결할 수 없습니다** 알람을 알리면, 먼저 키 잠금을 풀고 **펌프의 아무 버튼이나 누르십시오**(예: "down" 버튼). 펌프 화면이 꺼지면 바로 Accu-Chek Combo 펌프 화면(**관리** > **펌프**)에서 **새로고침**을 누릅니다. 대부분 그러면 통신이 다시 작동합니다.
+* 그래도 해결되지 않으면 스마트폰을 다시 시작하십시오. 다시 시작하면 AAPS가 다시 활성화되고 펌프와 새로 연결됩니다.
 
-* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. See [AAPS Phones](#Phones-list-of-tested-phones) for successfully tested smartphones.
+* 여러 스마트폰으로 시험한 결과, 일부 스마트폰에서 "펌프에 연결할 수 없습니다" 오류가 다른 스마트폰보다 더 자주 발생했습니다. 시험에 성공한 스마트폰은 [스마트폰](#Phones-list-of-tested-phones)을 참조하십시오.
 
-#### Root causes and consequences of frequent communication errors
-* On phones with **low memory** (or **aggressive power-saving** settings), AAPS is often shut down. You can tell by the fact that the treatment buttons (QuickLaunch toolbar) on the main screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last connection** field of the pump screen (**Manage** > **Pump**), you can check when AAPS last communicated with the pump.
+#### 잦은 통신 오류의 근본 원인과 결과
+* **메모리가 적은** 휴대폰(또는 **공격적인 절전** 설정이 있는 휴대폰)에서는 AAPS가 자주 종료됩니다. 이 경우 AAPS를 열 때 시스템이 초기화 중이어서 메인 화면에 처치 버튼(QuickLaunch 툴바)이 표시되지 않는 것으로 알 수 있습니다. 이로 인해 시작할 때 "펌프에 연결할 수 없습니다" 알람이 울릴 수 있습니다. 펌프 화면(**관리** > **펌프**)의 **마지막 연결** 필드에서 AAPS가 마지막으로 펌프와 통신한 시간을 확인할 수 있습니다.
 
-![No connection to pump](../images/combo/combov2-tips-no-connection-to-pump.png)
+![펌프에 연결되지 않음](../images/combo/combov2-tips-no-connection-to-pump.png)
 
-* This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
-* It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed.
+* 앱이 다시 시작될 때 펌프에서 기저 프로파일을 읽으므로, 이 오류는 펌프 배터리를 더 빨리 소모시킬 수 있습니다.
+* 또한 펌프의 버튼을 누를 때까지 펌프가 들어오는 연결을 모두 거부하게 되는 오류가 발생할 가능성도 높아집니다.
 
-### Cancellation of temporary basal rate fails
-* Occasionally, AAPS cannot automatically cancel a **TBR CANCELED** alert. Then you have to either tap **Refresh** on the Accu-Chek Combo pump screen or the alarm on the pump will need to be confirmed.
+### 임시 기저 주입량 취소 실패
+* 가끔 AAPS가 **TBR CANCELED** 경고를 자동으로 해제하지 못할 수 있습니다. 그러면 Accu-Chek Combo 펌프 화면에서 **새로고침**을 누르거나 펌프에서 알람을 확인해야 합니다.
 
-### Pump battery considerations
+### 펌프 배터리 관련 사항
 
-#### Changing the battery
-* After a **low battery** alarm, the battery should be changed as soon as possible to always have enough energy for a reliable Bluetooth communication with the smartphone, even if the phone is within a wider distance of the pump.
-* Even after a **low battery** alarm, the battery might be used for a significant amount of time. However, it is recommended to always have a fresh battery with you after a "low battery" alarm rang.
-* Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop** for 1 hour.
-* Wait for the phone to communicate with the pump and for the Bluetooth logo on the pump to fade.
+#### 배터리 교체
+* **low battery** 알람이 울린 뒤에는, 휴대폰이 펌프에서 더 멀리 떨어져 있어도 스마트폰과 안정적으로 블루투스 통신을 할 수 있는 충분한 전력을 항상 확보하기 위해 가능한 한 빨리 배터리를 교체해야 합니다.
+* **low battery** 알람이 울린 뒤에도 배터리를 상당히 오래 사용할 수 있습니다. 하지만 "low battery" 알람이 울린 뒤에는 항상 새 배터리를 가지고 다니는 것을 권장합니다.
+* 배터리를 교체하기 전에 메인 화면의 **루프** 기호를 누르고 **루프 일시 중지**를 1시간 동안 선택하십시오.
+* 휴대폰이 펌프와 통신하고 펌프의 블루투스 로고가 사라질 때까지 기다리십시오.
 
-![Bluetooth enabled](../images/combo/combo-tips-compo.png)
+![블루투스 켜짐](../images/combo/combo-tips-compo.png)
 
-* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
-* You don't need to re-set the pump's clock after the battery change: AAPS automatically updates the pump's date and time.
-* Then put the pump back in run mode and select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
-* AAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value.
+* 펌프의 키 잠금을 풀고, 펌프를 정지 모드로 바꾸고, 취소되었을 수 있는 임시 기저 주입량을 확인한 다음, 배터리를 빨리 교체하십시오.
+* 배터리를 교체한 뒤 펌프 시계를 다시 설정할 필요는 없습니다. AAPS가 펌프의 날짜와 시간을 자동으로 업데이트합니다.
+* 그다음 펌프를 다시 실행 모드로 바꾸고, 메인 화면에서 **루프 일시 중지됨** 아이콘을 눌러 **재개**를 선택하십시오.
+* 다음 혈당 값이 들어오면 AAPS가 필요한 임시 기저 주입량을 다시 설정합니다.
 
 (Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
-#### Battery type and causes of short battery life
-* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries.
+#### 배터리 종류와 배터리 수명이 짧은 원인
+* 블루투스 통신을 많이 하면 전력을 많이 쓰므로, Energizer Ultimate Lithium, "대형" Accu-Chek 서비스 팩에 들어 있는 "power one" 같은 **고품질 배터리**만 사용하십시오. 충전식 배터리를 쓰려면 Eneloop 배터리를 사용하십시오.
 
 ![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Ranges for typical life time of the different battery types are as follows:
-* **Energizer Ultimate Lithium**: 4 to 7 weeks
-* **Power One Alkaline** (Varta) from the service pack: 2 to 4 weeks
-* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
+배터리 종류별 일반적인 사용 기간은 다음과 같습니다.
+* **Energizer Ultimate Lithium**: 4~7주
+* 서비스 팩의 **Power One Alkaline**(Varta): 2~4주
+* **Eneloop 충전식** 배터리(BK-3MCCE): 1~3주
 
-If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
-* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period.
-* The smart phone hardware and software (Android operating system and Bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
+배터리 수명이 위의 범위보다 훨씬 짧다면 다음과 같은 원인을 확인하십시오.
+* Combo 펌프의 나사식 배터리 캡 중 일부는 배터리를 부분적으로 단락시켜 배터리를 빨리 소모시킵니다. 이 문제가 없는 캡은 금색 금속 접점으로 알아볼 수 있습니다.
+* 배터리를 잠깐 교체하는 동안 펌프 시계가 "유지되지" 않으면, 짧은 정전 동안 시계를 계속 작동시키는 축전기가 고장 났을 가능성이 높습니다. 이 경우 Roche에서 펌프를 교환받으면 도움이 될 수 있으며, 보증 기간 중에는 문제없이 교환할 수 있습니다.
+* 스마트폰 하드웨어와 소프트웨어(Android 운영 체제와 블루투스 스택)도 펌프의 배터리 수명에 영향을 주지만, 정확한 요인은 아직 완전히 밝혀지지 않았습니다. 기회가 있다면 다른 스마트폰을 사용해 보고 배터리 수명을 비교해 보십시오.
 
-### Extended bolus, multiwave bolus
-The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
-* Use **e-Carbs** when entering carbs or using the Bolus wizard by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in your blood. The system will then calculate small carbs equally distributed over the whole duration which will cause the algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immediate bolus with e-carbs.
-* Before eating, set a temporary **Eating Soon** target of 80 mg/dL (4.4 mmol/L) for several hours (press the target on the main screen, or **Manage** > **Temp Target**). The duration should be based on the interval you would choose for an extended bolus. This will keep your target lower than usual and therefore increase the amount of insulin delivered.
-* Then use the **Bolus wizard** to enter the full carbs of the meal, but do not directly apply the values it suggests. If a multiwave-like bolus is to be delivered, correct the insulin dosage down. Depending on the meal, the algorithm now has to deliver additional SMBs or higher temporary basal rates to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max U/h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
+### 확장 볼러스, 멀티웨이브 볼러스
+OpenAPS 알고리즘은 병행하는 확장 볼러스나 멀티웨이브 볼러스를 지원하지 않습니다. 하지만 다음 대안으로 비슷한 처치를 할 수 있습니다.
+* 탄수화물을 입력하거나 볼러스 마법사를 사용할 때, 식사 전체의 탄수화물과 그 탄수화물이 혈당으로 나타날 것으로 예상되는 시간을 입력하여 **확장 탄수화물 (e-carbs)**를 사용하십시오. 그러면 시스템이 작은 탄수화물을 전체 시간에 고르게 나누어 계산하므로, 알고리즘이 전체적인 혈당 상승/하강을 계속 확인하면서 그에 맞는 인슐린을 주입합니다. 멀티웨이브 볼러스처럼 하려면 작은 즉시 볼러스와 확장 탄수화물을 함께 사용할 수도 있습니다.
+* 식사 전에 80 mg/dL(4.4 mmol/L)의 **식사 직전** 임시 목표를 몇 시간 동안 설정하십시오(메인 화면에서 목표를 누르거나 **관리** > **임시 목표**). 지속 시간은 확장 볼러스에 선택했을 시간 간격을 기준으로 정해야 합니다. 이렇게 하면 목표가 평소보다 낮게 유지되어 주입되는 인슐린 양이 늘어납니다.
+* 그다음 **볼러스 마법사**로 식사 전체의 탄수화물을 입력하되, 제안된 값을 바로 적용하지는 마십시오. 멀티웨이브 볼러스와 비슷하게 주입하려면 인슐린 용량을 낮게 수정하십시오. 식사에 따라 알고리즘은 이제 혈당 상승을 막기 위해 추가 SMB나 더 높은 임시 기저 주입량을 주입해야 합니다. 이때 기저 주입량의 안전 제한(최대 U/h, 최대 기저 IOB)은 매우 신중하게 시험해 보고, 필요하면 일시적으로 변경해야 합니다.
 
-* Don't use the extended or multiwave bolus directly on the pump. The driver does not support them (see [Before you begin](#combov2-before-you-begin)); if a multiwave bolus is given on the pump anyway, **AAPS** records it from the pump history as a normal bolus plus an extended bolus, so it is counted in IOB. An extended bolus does not work in a closed loop environment (see [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details).
+* 펌프에서 직접 확장 볼러스나 멀티웨이브 볼러스를 사용하지 마십시오. 드라이버는 이 기능을 지원하지 않습니다([시작하기 전에](#combov2-before-you-begin) 참조). 그래도 펌프에서 멀티웨이브 볼러스를 주입하면, **AAPS**는 펌프 이력에서 이것을 일반 볼러스와 확장 볼러스로 기록하므로 IOB에 포함됩니다. 확장 볼러스는 폐쇄 루프 환경에서 작동하지 않습니다(자세한 내용은 [이 페이지](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) 참조).
 
-### Alarms at bolus delivery
-* After each bolus, the driver reads the pump's bolus history. This is a safety mechanism to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump.
-* Before a bolus, if the pump history has a bolus that **AAPS** did not know about (for example, a bolus given directly on the pump), the requested bolus is **not given**, because it was calculated without that insulin. **AAPS** shows **The pump history has a bolus that AAPS did not know about. The requested bolus was not given...** Check the bolus history on the pump and your IOB. If a bolus is still needed, calculate it again. This also applies when the unknown bolus is found on a new connection.
-* If the bolus was given but the pump history also had other boluses that **AAPS** did not know about, they are recorded now and **AAPS** asks you to check IOB before the next bolus.
-* If the connection to the pump is lost **during** a bolus, **AAPS** does not record 0 U: it shows how much the pump had given by then and warns that the pump may still give the rest. **Do not bolus again.** **AAPS** reads the real amount from the pump history at the next connection.
-* If the connection is lost while **AAPS** sends the bolus, it is not known whether the pump got it. Check the bolus history on the pump before the next bolus.
-* If **AAPS** cannot confirm that a bolus was delivered, it shows **Bolus delivery failed. It appears no bolus was delivered. To be sure, please check the pump to avoid a double bolus and then bolus again.** Boluses are never retried automatically.
+### 볼러스 주입 시 알람
+* 볼러스를 주입할 때마다 드라이버는 펌프의 볼러스 이력을 읽습니다. 이것은 펌프에서 직접 볼러스를 주입한 경우에도 활성 인슐린(IOB)을 올바르게 계산하기 위한 안전 장치입니다.
+* 볼러스 전에 펌프 이력에 **AAPS**가 몰랐던 볼러스(예: 펌프에서 직접 주입한 볼러스)가 있으면, 요청한 볼러스는 그 인슐린을 빼고 계산되었으므로 **주입되지 않습니다**. **AAPS**는 **펌프 이력에 AAPS가 몰랐던 볼러스가 있습니다. 요청한 볼러스는 주입하지 않았습니다...**를 표시합니다. 펌프의 볼러스 이력과 IOB를 확인하십시오. 볼러스가 아직 필요하면 다시 계산하십시오. 새로 연결했을 때 알 수 없는 볼러스가 발견된 경우에도 마찬가지입니다.
+* 볼러스는 주입되었지만 펌프 이력에 **AAPS**가 몰랐던 다른 볼러스도 있었다면, 그 볼러스는 이제 기록되고 **AAPS**가 다음 볼러스 전에 IOB를 확인하도록 요청합니다.
+* 볼러스 **도중에** 펌프와의 연결이 끊기면, **AAPS**는 0 U로 기록하지 않습니다. 그때까지 펌프가 주입한 양을 표시하고, 펌프가 나머지를 계속 주입할 수 있다고 경고합니다. **다시 볼러스하지 마십시오.** **AAPS**는 다음 연결 때 펌프 이력에서 실제 주입량을 읽습니다.
+* **AAPS**가 볼러스를 보내는 동안 연결이 끊기면, 펌프가 볼러스를 받았는지 알 수 없습니다. 다음 볼러스 전에 펌프의 볼러스 이력을 확인하십시오.
+* **AAPS**가 볼러스 주입을 확인할 수 없으면 **볼러스 주입에 실패했습니다. 볼러스가 주입되지 않은 것으로 보입니다. 이중 볼러스를 피하기 위해 펌프를 확인한 다음 다시 볼러스하십시오.**를 표시합니다. 볼러스는 절대 자동으로 재시도되지 않습니다.
 
-## Where to get help
+## 도움을 받을 수 있는 곳
 
-Development of the Combo driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Combo 드라이버는 커뮤니티가 **자원봉사**로 개발하고 있습니다. 도움을 요청하기 전에:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. 기능이 어떻게 작동해야 하는지 확인하려면 이 문서의 관련 부분을 **읽으십시오**.
+2. [Discord](https://discord.gg/4fQUWHZ4Mw)의 *#AAPS* 채널이나 다른 [커뮤니티 채널](../GettingHelp/WhereCanIGetHelp.md)에서 **질문하십시오**.
+3. [기존 이슈](https://github.com/nightscout/AndroidAPS/issues)를 검색하여 **버그를 보고하십시오**. 목록에 없으면 [새 이슈](https://github.com/nightscout/AndroidAPS/issues)를 열고 [로그 파일](../GettingHelp/AccessingLogFiles.md)을 첨부하십시오.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+도움을 요청할 때는 휴대폰 제조사와 모델, Android 버전, **AAPS** 버전, 그리고 문제를 쉬운 말로 설명한 내용(무엇이 바뀌었는지, 마지막으로 정상 작동한 때가 언제인지)을 포함하십시오.

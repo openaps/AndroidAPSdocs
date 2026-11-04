@@ -1,8 +1,12 @@
+- - -
+tocdepth: 1
+- - -
+
 # Aktualizace a změny dokumentace
 
 ## Říjen 2026
 
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 8, now maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository. Setting up is one step shorter: [step 1](#aaps-builder-step1) of the [setup page](#aaps-builder-setup) creates your private repository as a copy of that repository, with the build workflow already in it, so there is no workflow to add any more. From now on the build steps are updated for you: your repository runs the version released by the AAPS developers at every build, without any change on your side (and still no automatic build). The build itself does not change, and your existing repository keeps working. To get these automatic updates, replace your `.github/workflows/build.yml` once as explained in [Updating AAPS](#aaps-builder-updates). Your `KEYSTORE_SET` secret stays as it is. The optional [Google Drive step](#aaps-builder-google-drive) now works on the setup page itself, on a phone or a computer: no preparation file needed @psonnera
+- [Sestavení v prohlížeči s AAPS Builder](#aaps-builder): sestavovací workflow verze 8, které nyní spravují vývojáři AAPS v repozitáři [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder). Nastavení je o jeden krok kratší: [krok 1](#aaps-builder-step1) na [stránce nastavení](#aaps-builder-setup) vytvoří váš soukromý repozitář jako kopii tohoto repozitáře, se sestavovacím workflow už uvnitř, takže už není třeba přidávat žádné workflow. Kroky sestavení se od teď aktualizují za vás: váš repozitář při každém sestavení použije verzi vydanou vývojáři AAPS, bez jakékoli změny z vaší strany (a stále bez automatického sestavení). Samotné sestavení se nemění a váš stávající repozitář dál funguje. Pro tyto automatické aktualizace jednou nahraďte svůj soubor `.github/workflows/build.yml` podle návodu v části [Aktualizace AAPS](#aaps-builder-updates). Váš secret `KEYSTORE_SET` zůstává beze změny. Volitelný [krok s Diskem Google](#aaps-builder-google-drive) nyní funguje přímo na stránce nastavení, v telefonu i v počítači: přípravný soubor není potřeba @psonnera
 - [Chytré hodinky a AAPS](#watches-external-companion-apps): z části **Samsung Tizen** se stává část **Externí aplikace**. Uvádí aplikace, které čtou vysílání z **AAPS** (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 a novější se připojuje přímo k **AAPS** bez xDrip+: přidány kroky nastavení, shrnuté také v částech [Konfigurace](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) a [Vzdálený dohled](../RemoteFeatures/RemoteMonitoring.md). Hodinky Bluejay: GTS se už nevyrábí, aktualizován současný model @psonnera
 - [Sestavení v prohlížeči s AAPS Builder](#aaps-builder): sestavovací workflow verze 6. Kroky sestavení nyní používají přesné, zkontrolované verze nástrojů GitHubu a sestavovacího počítače. Sestavení také jasně vysvětlí, když byl do secretu `KEYSTORE_SET` vložen nesprávný text. [Stránka nastavení](#aaps-builder-setup) je nyní součástí dokumentace a je přeložená. Kontroluje vaše uživatelské jméno na GitHubu a má jasnější nápovědu k secretu, k chybě „Page not found“ (404) a k aplikaci GitHub. Pokud váš soubor `.github/workflows/build.yml` uvádí verzi 5 nebo starší, nahraďte ho podle návodu v části [Aktualizace AAPS](#aaps-builder-updates) @psonnera
 - [Webový instalátor AAPS](#web-installer): nyní je to stránka dokumentace, překládá se jako ostatní. Stará adresa stále funguje @psonnera
@@ -34,7 +38,7 @@
 
 ## Leden 2025
 
-- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
+- Vydání [3.4](#version3400) a souhrnná aktualizace dokumentace (Průvodce, verze pro sestavení na počítači, Konfigurace)
 - Aktualizace seznamu CGM. Odstraněny Dexcom G5, Tomato a Glimp.
 - [Rozhraní pro střídání míst vpichu](#Aapsscreens-site-rotation)
 - [Režim smyčky](#AapsScreens-running-mode)
@@ -48,7 +52,7 @@
 
 - DiaKEM: nové instalace po upgradu serverů nefungují @psonnera
 - Odstraněna upravená aplikace pro Libre 2 (zastaralá): nefunguje s novými senzory @psonnera
-- Reworked Omnipod DASH page @XiTatiON
+- Přepracovaná stránka Omnipod DASH @XiTatiON
 
 ## Srpen 2025
 
@@ -72,15 +76,15 @@
 ## Listopad 2024
 
 - Aktualizace stránky [Váš profil AAPS](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
+- Nové uspořádání obsahu o [chytrých hodinkách s Wear OS](../WearOS/BuildingAapsWearOS.md) @psonnera
 
 ## Říjen 2024
 
 - Aktualizace několika stránek:
-  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [Jak dlouho to bude trvat](#preparing-how-long-will-it-take), [Přehled komponent](../Getting-Started/ComponentOverview.md), [Plnění cílů](../SettingUpAaps/CompletingTheObjectives.md), [Váš profil AAPS](../SettingUpAaps/YourAapsProfile.md), [Konfigurace](../SettingUpAaps/ConfigBuilder.md) a [Předvolby](../SettingUpAaps/Preferences.md), [Obrazovky AAPS](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [Kalkulace COB](../DailyLifeWithAaps/CobCalculation.md), [Dynamická ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Návod na sestavení pro Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
+- Technická práce (proces nasazení dokumentace, uspořádání souborů...) @psonnera & @emilise
 
 ***
 
@@ -92,174 +96,176 @@ Dokumentace AAPS 3.1 je k dispozici [zde](https://androidaps.readthedocs.io/en/3
 
 ***
 
-## Únor 2022
+```{dropdown} Older updates (2019 to 2022)
+**February 2022**
 
-- [Varovná značka kvality glykémie](#aaps-screens-bg-warning-sign) @tanja
-- [Aktualizace pumpy Medtronic](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
-- [Nutné kontroly po aktualizaci na AAPS 3.0](Update3_0.md) @tanja
+- [BG quality warning sign](#aaps-screens-bg-warning-sign) @tanja
+- [Medtronic pump update](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
+- [Necessary checks after update to AAPS 3.0](Update3_0.md) @tanja
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
-- Aktualizace dokumentace pro AAPS 3.0 (částečně) @xJoe
-- [Wear OS pro AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
+- Update docs for AAPS 3.0 (partly) @xJoe
+- [Wear OS for AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
-## Leden 2022
+**January 2022**
 
 - [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
 
-## Prosinec 2021
+**December 2021**
 
-- [Sestavení APK](../SettingUpAaps/BuildingAaps.md) – aktualizace na Android Studio Arctic Fox | 2020.3.1 @tanja
-- Přidány informace o [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) @MilosKozak
+- [Building the APK](../SettingUpAaps/BuildingAaps.md) - update Android Studio Arctic Fox | 2020.3.1 @tanja
+- [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) information added @MilosKozak
 
-## Listopad 2021
+**November 2021**
 
 - Best practices for calibrating a Libre 2 sensor
-- [ISF](../UsefulLinks/FAQ.md) – nové vysvětlení vlivu
+- [ISF](../UsefulLinks/FAQ.md) reformulation of impact
 - Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
-- Odstraněna upravená aplikace [Dexcom](../CompatibleCgms/DexcomG6.md), protože je zastaralá
+- Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
 
-## Říjen 2021
+**October 2021**
 
-- [Poznámky k vydání](ReleaseNotes.md) AAPS 3.0 beta
+- [Release notes](ReleaseNotes.md) AAPS 3.0 beta
 
-## Září 2021
+**September 2021**
 
-- Doporučená specifikace počítače pro [sestavení aplikace AAPS](#Building-APK-recommended-specification-of-computer-for-building-apk-file)
+- Recommended computer specification to [build AAPS app](#Building-APK-recommended-specification-of-computer-for-building-apk-file)
 
-## Červen 2021
+**June 2021**
 
-- [Ruční instalace ciferníku (sideload)](../WearOS/WearOsSmartwatch.md)
+- [Watchface sideload](../WearOS/WearOsSmartwatch.md)
 
-## Duben 2021
+**April 2021**
 
-- Seznam [komunikačních zařízení](#CompatiblePumps-additional-communication-device) pro pumpy Omnipod a Medtronic
-- Predikce AAPS v [Nightscoutu](#Nightscout-manual-nightscout-setup)
+- List of [communication devices](#CompatiblePumps-additional-communication-device) for Omnipod and Medtronic pumps
+- AAPS predictions in [Nightscout](#Nightscout-manual-nightscout-setup)
 
-## Březen 2021
+**March 2021**
 
-- Komunikace vývojářů se přesunula z gitteru na [discord](https://discord.gg/4fQUWHZ4Mw)
+- Dev communication moved from gitter to [discord](https://discord.gg/4fQUWHZ4Mw)
 
-## Únor 2021
+**February 2021**
 
-- Nový navigační panel a [přepínač jazyka](../NavigateDoc/ChangeLanguageVersion.md)
+- New navigation bar and [language switch](../NavigateDoc/ChangeLanguageVersion.md)
 
-## Leden 2021
+**January 2021**
 
-- [Karta Akce](#screens-action-tab) – více podrobností na stránce „Obrazovky AAPS“
-- Dexcom G6 s aplikací [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
-- [Stav baterie](#screens-sensor-level-battery) čtečky Libre smart reader
-- [Cíle](#objectives-objective3) – nové otázky
+- [Action tab](#screens-action-tab) - more details on page 'AAPS screens'
+- Dexcom G6 with [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
+- Libre smart reader [battery level](#screens-sensor-level-battery)
+- [Objectives](#objectives-objective3) - new questions
 - Other [new AAPS 2.8.0 functions](#Releasenotes-version-2-8-0)
 
-## Prosinec 2020
+**December 2020**
 
-- [Libre 2](../CompatibleCgms/Libre2.md) – upravená aplikace nefunguje se senzory z USA
-- [Pevně naprogramované limity OpenAPS](#Open-APS-features-overview-of-hard-coded-limits)
-- Sony Smartwatch 3 – ruční instalace služeb Google Play
+- [Libre 2](../CompatibleCgms/Libre2.md) - patched app does not work with US sensors
+- [OpenAPS hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits)
+- Sony Smartwatch 3 Manual Installation of Google Play Service
 
-## Říjen 2020
+**October 2020**
 
-- Accu-Chek Combo – aktualizace [úpravy času při změně na letní čas](#time-adjustment-daylight-savings-time-dst)
-- Accu-Chek Insight – možnost [nahrávat absolutní hodnoty](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- Záznamy (logy) – více podrobností o [umístění složky](../GettingHelp/AccessingLogFiles.md)
-- Omnipod Eros – aktuální stav
-- [SMS příkazy – synchronizace času](../RemoteFeatures/SMSCommands.md)
+- Accu-Chek Combo - update [time adjustment daylight savings time](#time-adjustment-daylight-savings-time-dst)
+- Accu-Chek Insight - Option to [upload absolute values](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- Logs - more details about [folder location](../GettingHelp/AccessingLogFiles.md)
+- Omnipod Eros - status update
+- [SMS commands - time sync](../RemoteFeatures/SMSCommands.md)
 
-## Září 2020
+**September 2020**
 
-- Velká aktualizace pro novou verzi AAPS 2.7
+- Major update for new AAPS version 2.7
 - For details see the [release notes](#Releasenotes-version-2-7-0)
 
-## Červen 2020
+**June 2020**
 
-- Libre 2 – více podrobností o upravené aplikaci Libre Link a použití Bluetooth vysílačů
-- [Cestování mezi časovými pásmy](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) s Libre 2
+- Libre 2 - more details patched Libre Link app & use of Bluetooth transmitters
+- [Time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) with Libre 2
 
-## Květen 2020
+**May 2020**
 
-- [Prodloužený bolus jen pro pumpy Dana a Insight](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Vypnutí vibrací u Insight](#Accu-Chek-Insight-Pump-vibration) (jen firmware 3.x)
-- [Minimální změna požadavku](#Preferences-minimal-request-change) pro menší počet oznámení v režimu otevřené smyčky
-- Upravená aplikace Libre Link – kontrola, zda je správně upravená
-- [Predikční křivky](#aaps-screens-prediction-lines) – více podrobností
+- [Extended bolus only for Dana + Insight pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Insight deactivate vibration](#Accu-Chek-Insight-Pump-vibration) (firmware 3.x only)
+- [Minimal request rate](#Preferences-minimal-request-change) to reduce number of notifications in open loop mode
+- Patched Libre Link app - check if correctly patched
+- [Prediction lines](#aaps-screens-prediction-lines) - more details
 
-## Duben 2020
+**April 2020**
 
-- Zpětné zadání inzulínu (tj. podaného stříkačkou)
-- Podpora Androidu 6 skončí v příští verzi master
+- Backdate insulin (i.e. given by syringe)
+- Android 6 support will be discontinued in next master version
 
-## Březen 2020
+**March 2020**
 
-- [Sestavení APK v Android Studiu 3.6.1](../SettingUpAaps/BuildingAaps.md)
-- [DanaRS s firmwarem v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **zatím nelze s AAPS používat!**
-- [Prodloužený bolus a přepnutí na otevřenou smyčku](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Aktualizace APK v Android Studiu 3.6.1](../Maintenance/UpdateToNewVersion.md)
+- [Build apk with Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
+- [DanaRS with firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
+- [Extended bolus and switch to open loop](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Update apk with Android Studio 3.6.1](../Maintenance/UpdateToNewVersion.md)
 
-## Únor 2020
+**February 2020**
 
-- Upozornění k automatizaci
-- [Autosens](#Open-APS-features-autosens) – krátké vysvětlení
-- Alternativy k Péči
-- Funkce [Prodloužený bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) – uzavřená smyčka bude vypnuta
-- Nový [plugin Lokální profil](../SettingUpAaps/ConfigBuilder.md)
-- Ukázkové nastavení – aktualizace Dexcom G6
+- Automation caveats
+- [Autosens](#Open-APS-features-autosens) - short explanation
+- Careportal alternatives
+- [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
+- New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md)
+- Sample Setup - update Dexcom G6
 - [Version 2.6.0](#Releasenotes-version-2-6-0) - major new features
-- [Komplikace pro Wear](../WearOS/WearOsSmartwatch.md)
+- [Wear complications](../WearOS/WearOsSmartwatch.md)
 
-## Leden 2020
+**January 2020**
 
-- [Ruční oprava sacharidů](#screens-bolus-carbs) pro chybně zadané sacharidy
-- [Velikost obrázků](../SupportingAaps/HowToEditTheDocs.md) při úpravách dokumentace
+- [Manual carb correction](#screens-bolus-carbs) for faulty carb entries
+- [Image size](../SupportingAaps/HowToEditTheDocs.md) when editing docs
 
-## Prosinec 2019
+**December 2019**
 
 - [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
-- [Accu-Chek Insight a Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) – jak je přesto používat
-- [Glimp](#Config-Builder-bg-source) – podporována verze 4.15.57 a novější
-- [Ciferníky](../WearOS/WearOsSmartwatch.md) – velká aktualizace, mnohem více podrobností
-- [Komplikace ciferníku](#Watchfaces-complications) – používejte svůj oblíbený ciferník s daty z AAPS
+- [Accu-Chek Insight & Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) - workaround for usage
+- [Glimp](#Config-Builder-bg-source) - version 4.15.57 and newer supported
+- [Watchfaces](../WearOS/WearOsSmartwatch.md) - major update, way more details
+- [Watchface complications](#Watchfaces-complications) - use your favorite watchface with AAPS data
 
-## Listopad 2019
+**November 2019**
 
-- [Automatizace – vypnutí při zakázání smyčky](../DailyLifeWithAaps/Automations.md)
-- [Dexcom G6 – aktualizace výměny vysílače](#xdrip-replace-transmitter)
-- [Prodloužený bolus – proč nefunguje se smyčkou](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Časté dotazy – sport](#FAQ-sports)
-- [Hlavní obrazovka – křivky v grafu](#aaps-screens-main-graph)
-- [Insight – vypnutí absolutních hodnot v NS Client](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- [Pumpa Medtronic – možné zdvojené záznamy](../CompatiblePumps/MedtronicPump.md)
-- [Nový návod pro Freestyle Libre 2](../CompatibleCgms/Libre2.md)
-- [Přepnutí profilu s procentem – příklad](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-- [Aktualizace SMS příkazů](../RemoteFeatures/SMSCommands.md)
-- [Řešení problémů s Android Studiem](../GettingHelp/TroubleshootingAndroidStudio.md)
-- [Řešení problémů – sbírka odkazů](../GettingHelp/GeneralTroubleshooting.md)
-- Aktualizace – rychlý přehled pro zkušené uživatele
-- Dokumentace – aktualizace stránek [úpravy](#edit-the-docs-code-syntax) a [překladu](#translations-translation-of-the-documentation).
+- [Automation - deactivate when disabling loop](../DailyLifeWithAaps/Automations.md)
+- [Dexcom G6 replace transmitter update](#xdrip-replace-transmitter)
+- [Extended bolus - why they do not work in a loop context](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [FAQ - sports](#FAQ-sports)
+- [Homescreen - lines on graph](#aaps-screens-main-graph)
+- [Insight - Disable absolute values in NS Client](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Medtronic pump - possible double entries](../CompatiblePumps/MedtronicPump.md)
+- [New Freestyle Libre 2 tutorial](../CompatibleCgms/Libre2.md)
+- [Profile switch with percentage - example](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
+- [SMS commands update](../RemoteFeatures/SMSCommands.md)
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+- [Troubleshooting - link collection](../GettingHelp/GeneralTroubleshooting.md)
+- Update - quick walk-through for experienced users
+- Docs - update [edit](#edit-the-docs-code-syntax) and [translation](#translations-translation-of-the-documentation).
 
-## Říjen 2019
+**October 2019**
 
 - [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
 - [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- [Kalkulace COB na samostatné stránce](../DailyLifeWithAaps/CobCalculation.md)
-- [COB – detekce chybné hodnoty COB](#CobCalculation-detection-of-wrong-cob-values)
-- [Řešení problémů specifických pro Dexcom G6](#DexcomG6-troubleshooting-g6)
-- [Aktualizace cílů pro verzi 2.5](../SettingUpAaps/CompletingTheObjectives.md)
-- [Aktualizace předvoleb](../SettingUpAaps/Preferences.md)
-- [Inhibitory SGLT-2 - nepoužívat při smyčce](#PreparingForAaps-no-sglt-2-inhibitors)
-- [Řešení problémů se SMS příkazy](#SMSCommands-troubleshooting)
-- [xDrip – aktualizace výměny vysílače G6](#xdrip-replace-transmitter)
+- [COB calculation on separate page](../DailyLifeWithAaps/CobCalculation.md)
+- [COB - wrong COB value detection](#CobCalculation-detection-of-wrong-cob-values)
+- [Dexcom G6 specific troubleshooting](#DexcomG6-troubleshooting-g6)
+- [Objectives update version 2.5](../SettingUpAaps/CompletingTheObjectives.md)
+- [Preferences update](../SettingUpAaps/Preferences.md)
+- [SGLT-2 inhibitors - do not use when looping](#PreparingForAaps-no-sglt-2-inhibitors)
+- [SMS Commands Troubleshooting](#SMSCommands-troubleshooting)
+- [xDrip - update G6 transmitter replacement](#xdrip-replace-transmitter)
 
-## Září 2019
+**September 2019**
 
 - [Automate](../DailyLifeWithAaps/Automations.md)
-- [Bolusová kalkulačka](#AapsScreens-wrong-cob-detection) – pomalé vstřebávání sacharidů
-- [Zabezpečení Nightscoutu](#Nightscout-security-considerations)
-- [Posun času profilu](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) (více podrobností)
-- [Vzdálený dohled](../RemoteFeatures/RemoteMonitoring.md)
-- [Co je systém uzavřené smyčky?](#Introduction-what-does-hybrid-closed-loop-mean)
+- [Bolus calculator](#AapsScreens-wrong-cob-detection) - slow carb absorption
+- [Nightscout security](#Nightscout-security-considerations)
+- [Profile timeshift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) (more details)
+- [Remote monitoring](../RemoteFeatures/RemoteMonitoring.md)
+- [What is a closed loop system?](#Introduction-what-does-hybrid-closed-loop-mean)
 
-## Srpen 2019
+**August 2019**
 
-- Region upravené aplikace Dexcom G6
-- [Nový vysílač Dexcom G6](#xdrip-connect-g6-transmitter-for-the-first-time) („firefly“ / 8G...)
-- Co potřebuji? – nová struktura a další informace
-- Nová struktura
+- Dexcom G6 patched app region
+- [Dexcom G6 new transmitter](#xdrip-connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
+- What do I need? - new structure & additional information
+- New structure
+```

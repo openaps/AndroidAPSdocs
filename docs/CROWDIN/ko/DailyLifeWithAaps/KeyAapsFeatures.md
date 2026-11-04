@@ -1,398 +1,398 @@
-# Key AAPS features
+# AAPS 주요 기능
 
-## Loop mode
+## 루프 모드
 
-The loop status is shown on the main screen with one of the icons below.
+루프 상태는 메인 화면에 아래 아이콘 중 하나로 표시됩니다.
 
-**AAPS** offers several loop modes, such as Closed Loop (1), Low Glucose Suspend (LGS - 2) and Open Loop (3).
+**AAPS**는 폐쇄 루프(1), 저혈당 주입 정지(LGS - 2), 개방 루프(3) 등 여러 루프 모드를 제공합니다.
 
-See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode and on the other icons in the picture (4 to 6).
+루프 모드를 선택하는 방법과 그림의 다른 아이콘(4~6)에 대한 정보는 [AAPS 화면 > 메인 화면 > 루프 상태](#AapsScreens-loop-status)를 참조하십시오.
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![루프 상태](../images/Home2020_LoopStatus.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
-### Open Loop
+### 개방 루프
 
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
+**AAPS**는 사용 가능한 모든 데이터(IOB, COB, 혈당...)를 계속 평가하고, 필요하면 치료를 어떻게 조정할지 처치 제안(임시 기저 주입량)을 합니다.
 
-The suggestions will not be executed automatically (as in closed loop). The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
+제안은 (폐쇄 루프에서처럼) 자동으로 실행되지 않습니다. 제안은 사용자가 직접 펌프에 입력하거나(가상 펌프를 사용하는 경우), **AAPS**가 실제 펌프에 연결되어 있으면 버튼을 눌러 실행해야 합니다.
 
-When **AAPS** has a suggestion, a **Loop** entry with a badge appears in the bottom navigation of the main screen. Press it to read the suggestion ("Accept new temp basal") with its rate, duration and reason, then press **Perform** to carry it out:
+**AAPS**에 제안이 있으면, 메인 화면의 하단 내비게이션에 배지가 붙은 **루프** 항목이 나타납니다. 이를 눌러 속도, 기간, 이유와 함께 제안("새 임시 기저 승인")을 읽은 다음, **실행**을 눌러 실행하십시오:
 
-![Open loop suggestion with the Perform button](../images/screens/loop_tab.png)
+![실행 버튼이 있는 개방 루프 제안](../images/screens/loop_tab.png)
 
-A suggestion is only valid for a few minutes. If it is older than about 9 minutes, or if the loop has been suspended or the pump disconnected in the meantime, **AAPS** refuses it and nothing is sent to the pump (*"This suggestion is too old. Nothing was sent to the pump. Wait for the next one."*). Wait for the next suggestion.
+제안은 몇 분 동안만 유효합니다. 제안이 약 9분보다 오래되었거나 그 사이에 루프가 일시 중지되었거나 펌프 연결이 해제되었다면, **AAPS**는 제안을 거부하고 펌프로 아무것도 보내지 않습니다 (*"이 제안은 너무 오래되었습니다. 펌프로 아무것도 보내지 않았습니다. 다음 제안을 기다리십시오."*). 다음 제안을 기다리십시오.
 
-This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
+이 옵션은 **AAPS**가 어떻게 작동하는지 익히려는 경우나 지원되지 않는 펌프를 사용하는 경우를 위한 것입니다. 여기서 무엇을 선택하든 **[목표 5](#objectives-objective5)**가 끝날 때까지는 개방 루프로 작동합니다.
 
 (KeyAapsFeatures-LGS)=
 
-### Low Glucose Suspend (LGS)
+### 저혈당 주입 정지 (LGS)
 
-In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
+이 모드에서는 [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)가 0으로 설정됩니다.
 
-This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current **Profile**. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+즉 혈당이 떨어지고 있으면 **AAPS**가 기저를 줄일 수 있습니다. 하지만 혈당이 오르고 있으면 자동 교정은 하지 않습니다. 기저 주입량은 현재 **프로파일**에 정의된 대로 유지됩니다. (이전의 저혈당 주입 정지로 인해) IOB가 음수일 때만 **혈당**을 낮추기 위해 추가 인슐린을 주입합니다.
 
-This mode is available starting at **[Objective 6](#objectives-objective6)**.
+이 모드는 **[목표 6](#objectives-objective6)**부터 사용할 수 있습니다.
 
-Besides selecting it yourself, **AAPS** can also switch to this mode on its own: while you are working on **[Objective 6](#objectives-objective6)**, and whenever it detects duplicate BG readings (see [BG warning sign](#aaps-screens-bg-warning-sign)).
+직접 선택하는 것 외에도 **AAPS**는 스스로 이 모드로 전환할 수 있습니다: **[목표 6](#objectives-objective6)**을 진행하는 동안, 그리고 중복된 혈당 측정값을 감지할 때마다 전환합니다([혈당 경고 표시](#aaps-screens-bg-warning-sign) 참조).
 
 (KeyAapsFeatures-ClosedLoop)=
 
-### Closed Loop
+### 폐쇄 루프
 
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (*i.e.* without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
+**AAPS**는 사용 가능한 모든 데이터(IOB, COB, 혈당...)를 계속 평가하고, 설정한 [목표 범위 또는 값](#profile-glucose-targets)에 도달하도록 필요하면 치료를 자동으로(*즉* 사용자의 추가 개입 없이) 조정합니다(볼러스 주입, 임시 기저 주입량, 저혈당을 피하기 위한 인슐린 차단 등).
 
-The Closed Loop works within numerous safety limits, which can be set individually.
+폐쇄 루프는 개별적으로 설정할 수 있는 여러 안전 제한 안에서 작동합니다.
 
-Closed Loop is only possible if you are in **[Objective 7](#objectives-objective7)** or higher and use a supported pump.
+폐쇄 루프는 **[목표 7](#objectives-objective7)** 이상에 있고 지원되는 펌프를 사용할 때만 가능합니다.
 
 (autosens)= (Open-APS-features-autosens)=
 
 ## Autosens
 
-- Autosens is an algorithm which looks at blood glucose deviations (positive/negative/neutral).
+- Autosens는 혈당 편차(양수/음수/중립)를 살펴보는 알고리즘입니다.
 - 이 기능은 혈당 편차에 근거하여 사용자가 얼마나 인슐린에 민감한지, 저항성을 띄는지를 파악할 것입니다.
 - **OpenAPS**에서 Oref 구현은 24시간, 8시간 동안의 데이터를 조합하여 실행됩니다. 두 가지 데이터 중 민감도가 더 높은 것을 사용합니다.
 - 사용자가 oref1을 사용했을 경우, 8시간 또는 24시간의 민감도 변경으로 인하여 시스템이 변화에 덜 역동적임을 인지할 수 있을 것입니다.
-- Changing a cannula or changing a profile will reset Autosens ratio back to 100% (a percentual profile switch with duration won't reset autosens).
-- Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
-- If continuously eating carbs over an extended period, Autosens will be less effective during that period as carbs are excluded from **BG** delta calculations.
-- The deviations are converted into a **sensitivity ratio** (a percentage): a ratio below 100% means AAPS thinks you're more sensitive to insulin than your **Profile** assumes (so it lowers effective basal and raises the ISF value), while a ratio above 100% means you're more resistant (so it raises basal and lowers the ISF value).
-- By default this ratio is kept between 0.7 (70%, more sensitive) and 1.2 (120%, more resistant), so a run of unusual data can't push your dosing too far from your **Profile**. These bounds can be adjusted in Sensitivity Detection's advanced settings.
-- Autosens and [Autotune](../AdvancedOptions/Autotune.md) address the same underlying problem on different timescales: Autosens nudges your *live* dosing minute-to-minute based on the last 8-24h, while Autotune slowly rewrites your *Profile* itself based on weeks of history. Running both is normal and expected — they complement rather than duplicate each other.
+- 캐뉼라를 교체하거나 프로파일을 바꾸면 Autosens 비율이 100%로 초기화됩니다 (기간이 있는 퍼센트 프로파일 전환은 Autosens를 초기화하지 않습니다).
+- Autosens는 기저와 ISF를 조정합니다 (즉, 프로파일 전환이 하는 일을 흉내 냅니다).
+- 오랜 시간 동안 계속 탄수화물을 먹으면, 탄수화물은 **혈당** 증분 계산에서 제외되므로 그동안 Autosens의 효과가 떨어집니다.
+- 편차는 **민감도 비율**(퍼센트)로 변환됩니다: 비율이 100% 미만이면 AAPS는 사용자가 **프로파일**이 가정하는 것보다 인슐린에 더 민감하다고 판단합니다(그래서 유효 기저를 낮추고 ISF 값을 높입니다). 비율이 100%를 넘으면 더 저항성이 있다고 판단합니다(그래서 기저를 높이고 ISF 값을 낮춥니다).
+- 기본적으로 이 비율은 0.7(70%, 더 민감함)과 1.2(120%, 더 저항성 있음) 사이로 유지되므로, 특이한 데이터가 계속되어도 용량이 **프로파일**에서 너무 멀어지지 않습니다. 이 범위는 민감도 감지의 고급 설정에서 조정할 수 있습니다.
+- Autosens와 [Autotune](../AdvancedOptions/Autotune.md)은 같은 근본 문제를 서로 다른 시간 규모에서 다룹니다: Autosens는 최근 8~24시간을 바탕으로 *실시간* 용량을 분 단위로 조금씩 조정하고, Autotune은 몇 주간의 이력을 바탕으로 *프로파일* 자체를 천천히 다시 씁니다. 둘 다 실행하는 것은 정상이며 예상된 일입니다 — 둘은 서로 중복되지 않고 서로 보완합니다.
 
-*For the full technical treatment of the autosens algorithm, see [OpenAPS's Autosens documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).*
+*autosens 알고리즘에 대한 전체 기술 설명은 [OpenAPS의 Autosens 문서](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)를 참조하십시오.*
 
 (Open-APS-features-super-micro-bolus-smb)=
 
-## Super Micro Bolus (SMB)
+## 슈퍼 마이크로 볼러스 (SMB)
 
-**SMB**, the shortform of **Super micro bolus**, is an OpenAPS feature introduced from 2018 onwards, within the Oref1 algorithm. In contrast to **AMA**, **SMB** does not use temporary basal rates to control glucose levels, but mainly **small super micro boluses**. In situations where **AMA** would add 1.0 IU insulin using a temporary basal rate, **SMB** delivers several super micro boluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system to adjust the blood glucose faster than with the temporary basal rate increase in **AMA**.
+**SMB**는 **Super micro bolus**(슈퍼 마이크로 볼러스)의 줄임말로, 2018년부터 Oref1 알고리즘에 도입된 OpenAPS 기능입니다. **AMA**와 달리 **SMB**는 혈당을 조절하기 위해 임시 기저 주입량을 사용하지 않고, 주로 **작은 슈퍼 마이크로 볼러스**를 사용합니다. **AMA**가 임시 기저 주입량으로 인슐린 1.0 IU를 추가할 상황에서, **SMB**는 **5분 간격**으로 작은 단계에 걸쳐 여러 번의 슈퍼 마이크로 볼러스를 주입합니다. 예: 0.4 IU, 0.3 IU, 0.2 IU, 0.1 IU. 동시에 (안전상의 이유로) 과다 주입을 막기 위해 실제 기저 주입량을 일정 시간 동안 0 IU/h로 설정합니다 (**'0 임시 기저'**). 이렇게 하면 **AMA**에서 임시 기저 주입량을 높이는 것보다 더 빠르게 혈당을 조정할 수 있습니다.
 
-Thanks to SMB, it may be sufficient for meals containing only "slow" carbs to inform the system of the planned amount of carbohydrate and leave the rest to **AAPS**. However, this may lead to higher postprandial (post-meal) peaks because pre-bolusing isn’t possible. Or you can give, if necessary with pre-bolusing, a **start bolus**, which **only partly** covers the carbohydrates (e.g. 2/3 of the estimated amount) and let **SMB** deliver the rest of the insulin.
+SMB 덕분에 "느린" 탄수화물만 있는 식사는 계획한 탄수화물 양을 시스템에 알리고 나머지를 **AAPS**에 맡기는 것으로 충분할 수 있습니다. 하지만 사전 볼러스를 할 수 없으므로 식후(식사 후) 혈당 최고치가 더 높아질 수 있습니다. 또는 필요하면 사전 볼러스로 탄수화물의 **일부만**(예: 예상량의 2/3) 덮는 **시작 볼러스**를 주고, 나머지 인슐린은 **SMB**가 주입하게 할 수 있습니다.
 
-![SMBs on the IOB graph](../images/SMBs.png)
+![IOB 그래프의 SMB](../images/SMBs.png)
 
-SMBs are shown on the [IOB graph](#aaps-screens-iob) with blue triangles. [Press and hold](#aaps-screens-graph-press-and-hold) the graph at a triangle to see how much insulin was delivered, or use the [Treatments history](#aaps-screens-treatments).
+SMB는 [IOB 그래프](#aaps-screens-iob)에 파란색 삼각형으로 표시됩니다. 그래프에서 삼각형을 [길게 누르면](#aaps-screens-graph-press-and-hold) 주입된 인슐린 양을 볼 수 있습니다. [처치 이력](#aaps-screens-treatments)을 사용할 수도 있습니다.
 
-**SMB's** features contain some safety mechanisms:
+**SMB** 기능에는 몇 가지 안전 장치가 있습니다:
 
-1. **Largest single SMB dose**  
-  The largest single SMB dose can only be the smallest value of:
+1. **가장 큰 1회 SMB 용량**  
+  가장 큰 1회 SMB 용량은 다음 값 중 가장 작은 값까지만 가능합니다:
   
-        * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
-        * half the amount of insulin currently required, or
-        * the remaining portion of your maxIOB value in the settings.
+        * "SMB 제한을 위한 최대 기저 시간(분)"에 설정된 기간 동안의 현재 기저 주입량(autosens로 조정된 값)에 해당하는 값, 예: 다음 30분 동안의 기저량, 또는
+        * 현재 필요한 인슐린 양의 절반, 또는
+        * 설정의 maxIOB 값에서 남은 부분.
       
 
-2. **Low temp basal rates**  
-  Low temporary basal rates (called 'low temps') or temporary basal rates at 0 U/h (called 'zero-temps') are activated more in **SMB**. This is by design for safety reasons and has no negative effects if the **Profile** is set correctly. On the main graph, the IOB curve (yellow thin line) is more meaningful than the course of the temporary basal rates.
+2. **낮은 임시 기저 주입량**  
+  **SMB**에서는 낮은 임시 기저 주입량('낮은 임시 기저')이나 0 U/h 임시 기저 주입량('0 임시 기저')이 더 자주 활성화됩니다. 이는 안전을 위해 의도된 동작이며, **프로파일**이 올바르게 설정되어 있으면 나쁜 영향은 없습니다. 메인 그래프에서는 임시 기저 주입량의 흐름보다 IOB 곡선(노란색 얇은 선)이 더 의미가 있습니다.
 
-3. **Un-Announced Meals**  
-  Additional calculations to predict the course of glucose, e.g. by **UAM** (un-announced meals). Even without manual carbohydrate input from the user, **UAM** can automatically detect a significant increase in glucose levels due to meals, adrenaline or other influences and try to adjust this with **SMB**. 안전 측면에서 이는 반대로 작동하며, 예상치 못한 혈당의 급격한 감소가 발생하는 경우 SMB를 일찍 중단할 수 있습니다. 이것이 SMB 사용 시 UAM이 항상 활성화되어야 하는 이유입니다.
+3. **미입력 식사**  
+  혈당 흐름을 예측하기 위한 추가 계산, 예: **UAM**(미입력 식사). 사용자가 탄수화물을 직접 입력하지 않아도, **UAM**은 식사, 아드레날린 또는 다른 영향으로 인한 큰 혈당 상승을 자동으로 감지하고 **SMB**로 이를 조정하려고 합니다. 안전 측면에서 이는 반대로 작동하며, 예상치 못한 혈당의 급격한 감소가 발생하는 경우 SMB를 일찍 중단할 수 있습니다. 이것이 SMB 사용 시 UAM이 항상 활성화되어야 하는 이유입니다.
 
-SMB doesn't decide on its own that insulin is needed — it draws on the same blended BG predictions (eventual BG, zero-temp, COB, UAM) described in [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision). SMB and zero-temping are simply the two tools AAPS uses to act on that decision.
+SMB는 인슐린이 필요하다고 스스로 결정하지 않습니다 — [AAPS가 예측을 용량 결정으로 바꾸는 방법](#aaps-screens-how-predictions-become-a-dosing-decision)에 설명된 것과 같은 혼합 혈당 예측(최종 혈당, 0 임시 기저, COB, UAM)을 사용합니다. SMB와 0 임시 기저는 AAPS가 그 결정을 실행하는 데 쓰는 두 가지 도구일 뿐입니다.
 
-**You must have started [objective 9](#objectives-objective9) to use SMB.**
+**SMB를 사용하려면 [목표 9](#objectives-objective9)를 시작해야 합니다.**
 
-See also [OpenAPS's oref1/SMB documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb) for the full technical treatment, or [Tim's info on SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/) for a community write-up.
+전체 기술 설명은 [OpenAPS의 oref1/SMB 문서](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb)를, 커뮤니티 설명은 [Tim의 SMB 정보](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/)를 참조하십시오.
 
-The settings for OpenAPS SMB are described below.
+OpenAPS SMB 설정은 아래에 설명되어 있습니다.
 
 (Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)=
 
-### Maximum basal rate
+### 최대 기저 주입량
 
-This safety setting determines the maximum temporary basal rate the insulin pump may deliver. It is also known as **max-basal**.
+이 안전 설정은 인슐린 펌프가 주입할 수 있는 최대 임시 기저 주입량을 정합니다. **max-basal**이라고도 합니다.
 
-The value is measured in units per hour (U/h). It is advised to set this to something sensible. A good recommendation for setting this parameter is:
+이 값의 단위는 시간당 U(U/h)입니다. It is advised to set this to something sensible. 이 매개변수에 대한 좋은 권장 설정은 다음과 같습니다:
 
-**MAX-BASAL = HIGHEST BASAL RATE x 4**
+**MAX-BASAL = 가장 높은 기저 주입량 x 4**
 
-For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
+예를 들어 프로파일에서 가장 높은 기저 주입량이 0.5 U/h라면, 여기에 4를 곱하여 2 U/h 값을 얻을 수 있습니다.
 
-**AAPS** limits this value as a 'hard limit' according to [Settings > Safety > Patient age](#preferences-patient-type). The hard limits are as follows:
+**AAPS**는 이 값을 [설정 > 안전성 > 환자 나이](#preferences-patient-type)에 따라 '고정 한계값'으로 제한합니다. 고정 한계값은 다음과 같습니다:
 
 - 어린이: 2
-- Teenager: 5
+- 청소년: 5
 - 성인: 10
 - 인슐린 저항성이 있는 성인: 12
-- Pregnant: 25
+- 임신 중: 25
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*[고정 한계값 개요](#Open-APS-features-overview-of-hard-coded-limits)도 참조하십시오.*
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
-### Max IOB for SMB
+### SMB 최대 IOB
 
-This value determines the maximum **Insulin on Board** (basal and bolus IOB) that **AAPS** will remain under while running in closed loop mode. It is also known as **maxIOB**.
+이 값은 폐쇄 루프 모드로 실행하는 동안 **AAPS**가 넘지 않는 최대 **활성 인슐린**(기저 및 볼러스 IOB)을 정합니다. **maxIOB**라고도 합니다.
 
-If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
+현재 IOB가 (예: 식사 볼러스 후) 정한 값보다 높으면, IOB가 이 값 아래로 내려갈 때까지 루프는 인슐린 주입을 멈춥니다.
 
-A good start for setting this parameter is:
+이 매개변수의 좋은 시작값은 다음과 같습니다:
 
-      maxIOB = average mealbolus + 3x max daily basal
+      maxIOB = 평균 식사 볼러스 + 하루 최대 기저의 3배
     
 
-Be careful and patient when adjusting your **max-IOB**. It is different for everyone and can also depend on the average total daily dose (TDD).
+**max-IOB**를 조정할 때는 조심하고 인내심을 가지십시오. 이 값은 사람마다 다르며, 평균 총 일일 용량(TDD)에 따라서도 달라질 수 있습니다.
 
-**AAPS** limits this value as a 'hard limit' according to [Settings > Safety > Patient age](#preferences-patient-type). The hard limits are as follows:
+**AAPS**는 이 값을 [설정 > 안전성 > 환자 나이](#preferences-patient-type)에 따라 '고정 한계값'으로 제한합니다. 고정 한계값은 다음과 같습니다:
 
-- Child: 7
-- Teenager: 13
-- Adult: 22
-- Insulin resistant adult: 30
-- Pregnant: 70
+- 어린이: 7
+- 청소년: 13
+- 성인: 22
+- 인슐린 저항성이 있는 성인: 30
+- 임신 중: 70
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*[고정 한계값 개요](#Open-APS-features-overview-of-hard-coded-limits)도 참조하십시오.*
 
-Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
+참고: **SMB**를 사용할 때는 **max-IOB**가 AMA와 다르게 계산됩니다. **AMA**에서 maxIOB는 기저 **IOB**에 대한 안전 매개변수이지만, SMB 모드에서는 볼러스 IOB도 포함합니다.
 
-### Use dynamic sensitivity
+### 동적 민감도 사용
 
-This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
+이것은 [동적 ISF](../DailyLifeWithAaps/DynamicISF.md) 기능입니다. 활성화하면 새 설정을 사용할 수 있습니다. 설정은 [동적 ISF](#dyn-isf-preferences) 페이지에 설명되어 있습니다.
 
-### Use Autosens
+### Autosens 사용
 
-This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens cannot be used, since they are two different algorithms altering the same variable (sensitivity).
+이것은 [Autosens](#Open-APS-features-autosens) 기능입니다. DynamicISF를 사용할 때는 Autosens를 사용할 수 없습니다. 두 알고리즘이 같은 변수(민감도)를 바꾸기 때문입니다.
 
-Autosens looks at blood glucose deviations (positive/negative/neutral). It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
+Autosens는 혈당 편차(양수/음수/중립)를 살펴봅니다. 이 편차를 바탕으로 사용자가 인슐린에 얼마나 민감한지/저항성이 있는지 파악하고, 그에 따라 기저 주입량과 ISF를 조정합니다.
 
-When enabled, new settings become available.
+활성화하면 새 설정을 사용할 수 있습니다.
 
-#### Sensitivity raises target
+#### 민감도가 높으면 목표 높이기
 
-If this option is enabled, the sensitivity detection (autosens) can raise the target when sensitivity is detected (below 100%). In this case your target will be raised by the percentage of the detected sensitivity.
+이 옵션을 활성화하면 민감도 감지(autosens)가 민감도(100% 미만)를 감지했을 때 목표를 높일 수 있습니다. 이 경우 목표는 감지된 민감도의 퍼센트만큼 높아집니다.
 
-If the target is modified due to sensitivity detection, it will be displayed with a green background on your main screen.
+민감도 감지로 목표가 수정되면 메인 화면에 녹색 배경으로 표시됩니다.
 
-![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
+![autosens로 수정된 목표](../images/Home2020_DynamicTargetAdjustment.png)
 
-This setting is available when one of "Use dynamic sensitivity" or "Use Autosens" are enabled.
+이 설정은 "동적 민감도 사용" 또는 "Autosens 사용" 중 하나가 활성화되어 있을 때 사용할 수 있습니다.
 
-#### Resistance lowers target
+#### 저항성이면 목표 낮추기
 
-If this option is enabled, the sensitivity detection (autosens) can lower the target when resistance is detected (above 100%). In this case your target will be lowered by the percentage of the detected resistance.
+이 옵션을 활성화하면 민감도 감지(autosens)가 저항성(100% 초과)을 감지했을 때 목표를 낮출 수 있습니다. 이 경우 목표는 감지된 저항성의 퍼센트만큼 낮아집니다.
 
-This setting is available when one of "Use dynamic sensitivity" or "Use Autosens" are enabled.
+이 설정은 "동적 민감도 사용" 또는 "Autosens 사용" 중 하나가 활성화되어 있을 때 사용할 수 있습니다.
 
-### Enable SMB
+### SMB 활성화
 
-Enable this to use SMB functionality. If disabled, no **SMBs** will be given.
+SMB 기능을 사용하려면 이 옵션을 활성화하십시오. 비활성화하면 **SMB**가 주입되지 않습니다.
 
-When enabled, new settings become available.
+활성화하면 새 설정을 사용할 수 있습니다.
 
 (Open-APS-features-enable-smb-with-high-temp-targets)=
 
-#### Enable SMB with high temp target
+#### 높은 임시 목표에서 SMB 활성화
 
-If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as 100 mg/dL or 5.6 mmol/L and above, regardless of **Profile** target). Use caution when enabling it: **SMBs** can become overly aggressive if your settings are not well tuned or if your **Profile** is subject to frequent variation (for example, with children).
+이 설정을 활성화하면 사용자가 높은 **임시 목표**(**프로파일** 목표와 관계없이 100 mg/dL 또는 5.6 mmol/L 이상으로 정의)를 선택해도 **SMB**가 계속 주입됩니다. 활성화할 때 주의하십시오: 설정이 잘 조정되지 않았거나 **프로파일**이 자주 바뀌는 경우(예: 어린이) **SMB**가 지나치게 공격적일 수 있습니다.
 
-When this setting is disabled, a high **Temp Target** turns **SMBs** off. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** of 100 mg/dL or 5.6 mmol/L and above. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB — apart from a low **Temp Target** such as **Eating Soon** (or any **Temp Target** of 98 mg/dL or 5.4 mmol/L and below), which may still deliver **SMBs** to drive **BG** towards the target.
+이 설정이 비활성화되어 있으면 높은 **임시 목표**가 **SMB**를 끕니다. 예를 들어 이 옵션이 비활성화되어 있으면 100 mg/dL 또는 5.6 mmol/L 이상의 **임시 목표**를 설정하여 **SMB**를 비활성화할 수 있습니다. 이 옵션은 다른 어떤 조건이 SMB를 활성화하려 해도 **SMB**를 비활성화합니다 — 단, **식사직전** 같은 낮은 **임시 목표**(또는 98 mg/dL 또는 5.4 mmol/L 이하의 모든 **임시 목표**)는 예외입니다. 이때는 **혈당**을 목표 쪽으로 내리기 위해 **SMB**가 계속 주입될 수 있습니다.
 
-This setting does not turn **SMB** on by itself. With a high temp target, **SMB** is only given if one of the other settings below (for example **Enable SMB always** or **Enable SMB with COB**) also allows it.
+이 설정만으로는 **SMB**가 켜지지 않습니다. 높은 임시 목표에서는 아래의 다른 설정 중 하나(예: **항상 SMB 활성화** 또는 **COB가 있을 때 SMB 활성화**)도 허용할 때만 **SMB**가 주입됩니다.
 
 (Open-APS-features-enable-smb-always)=
 
-#### Enable SMB always
+#### 항상 SMB 활성화
 
-If this setting is enabled, SMB is always enabled (independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
+이 설정을 활성화하면 SMB가 (COB, 임시 목표, 볼러스와 관계없이) 항상 활성화됩니다. 이 설정을 활성화하면 아래의 나머지 활성화 설정은 효과가 없습니다. 하지만 **높은 임시 목표에서 SMB 활성화**가 비활성화되어 있고 높은 임시 목표가 설정되면 SMB는 비활성화됩니다.
 
-This setting is only available if **AAPS** detects that you are using a [reliable BG source](#GettingStarted-TrustedBGSource), with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+이 설정은 **AAPS**가 고급 필터링을 갖춘 [신뢰할 수 있는 혈당 데이터 소스](#GettingStarted-TrustedBGSource)를 사용 중임을 감지할 때만 사용할 수 있습니다. FreeStyle Libre 1은 센서가 고장 나면 오래된 혈당 데이터를 끝없이 반복할 위험이 있으므로 신뢰할 수 있는 소스로 간주되지 않습니다.
 
-Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+잡음이 많은 데이터는 **AAPS**가 혈당이 매우 빠르게 오른다고 판단하게 하여 불필요한 SMB를 주입하게 할 수 있습니다. 잡음과 데이터 평활화에 대한 자세한 내용은 [여기](../CompatibleCgms/SmoothingBloodGlucoseData.md)를 참조하십시오.
 
-#### Enable SMB with COB
+#### COB가 있을 때 SMB 활성화
 
-If this setting is enabled, SMB is enabled when the COB is greater than 0.
+이 설정을 활성화하면 COB가 0보다 클 때 SMB가 활성화됩니다.
 
-This setting is not visible if "Enable SMB always" is switched on.
+"항상 SMB 활성화"가 켜져 있으면 이 설정은 보이지 않습니다.
 
-#### Enable SMB with low temp target
+#### 낮은 임시 목표에서 SMB 활성화
 
-If this setting is enabled, SMB is enabled when a temp target is set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp target** is disabled, SMB will be enabled when a low temp target is set (98 mg/dL or 5.4 mmol/L and below) but disabled when a high temp target is set.
+이 설정을 활성화하면 임시 목표(식사직전, 활동, 저혈당, 사용자 지정)가 설정되었을 때 SMB가 활성화됩니다. 이 설정이 활성화되어 있지만 **높은 임시 목표에서 SMB 활성화**가 비활성화되어 있으면, 낮은 임시 목표(98 mg/dL 또는 5.4 mmol/L 이하)가 설정되었을 때는 SMB가 활성화되고 높은 임시 목표가 설정되었을 때는 비활성화됩니다.
 
-This setting is not visible if "Enable SMB always" is switched on.
+"항상 SMB 활성화"가 켜져 있으면 이 설정은 보이지 않습니다.
 
-#### Enable SMB after carbs
+#### 탄수화물 후 SMB 활성화
 
-If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB has reached 0.
+활성화하면 탄수화물을 입력한 후 COB가 0이 되더라도 6시간 동안 SMB가 활성화됩니다.
 
-For safety reasons, this setting is only available if **AAPS** detects that you are using a reliable BG source. It is not visible if "Enable SMB always" is switched on.
+안전상의 이유로, 이 설정은 **AAPS**가 신뢰할 수 있는 혈당 데이터 소스를 사용 중임을 감지할 때만 사용할 수 있습니다. "항상 SMB 활성화"가 켜져 있으면 보이지 않습니다.
 
-This setting is only available if **AAPS** detects that you are using a [reliable BG source,](#GettingStarted-TrustedBGSource) with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+이 설정은 **AAPS**가 고급 필터링을 갖춘 [신뢰할 수 있는 혈당 데이터 소스](#GettingStarted-TrustedBGSource)를 사용 중임을 감지할 때만 사용할 수 있습니다. FreeStyle Libre 1은 센서가 고장 나면 오래된 혈당 데이터를 끝없이 반복할 위험이 있으므로 신뢰할 수 있는 소스로 간주되지 않습니다.
 
-Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
-This setting is not visible if "Enable SMB always" is switched on.
+잡음이 많은 데이터는 **AAPS**가 혈당이 매우 빠르게 오른다고 판단하게 하여 불필요한 SMB를 주입하게 할 수 있습니다. 잡음과 데이터 평활화에 대한 자세한 내용은 [여기](../CompatibleCgms/SmoothingBloodGlucoseData.md)를 참조하십시오.  
+"항상 SMB 활성화"가 켜져 있으면 이 설정은 보이지 않습니다.
 
-#### SMB interval
+#### SMB 간격
 
-This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minutes to give loop additional time to complete. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
+이 기능은 SMB 빈도를 제한합니다. 이 값은 SMB 사이의 최소 시간을 정합니다. 루프는 혈당 값이 들어올 때마다(보통 5분마다) 실행된다는 점에 유의하십시오. 루프가 완료될 시간을 더 주기 위해 2분을 빼십시오. 예를 들어 루프가 실행될 때마다 SMB가 주입되게 하려면 3분으로 설정하십시오.
 
 Default value: 3 min.
 
 (Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
 
-#### Max minutes of basal to limit SMB
+#### SMB 제한을 위한 최대 기저 시간(분)
 
 This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
-Making this value larger allows the SMB to be more aggressive. You should start with the default value of 30 minutes. After some experience, increase the value in 15 minutes increments and observe the effects over multiple meals.
+이 값을 크게 하면 SMB가 더 공격적으로 작동합니다. 기본값인 30분으로 시작하십시오. 경험이 쌓이면 15분 단위로 값을 늘리고, 여러 번의 식사에서 효과를 관찰하십시오.
 
-It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to accommodate a decreasing BG with 0 U/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which will warn you well before a hypo.
+값을 90분보다 높게 설정하지 않는 것이 좋습니다. 그러면 알고리즘이 0 U/h 기저('0 임시 기저')로도 떨어지는 혈당을 감당하지 못할 수 있습니다. 특히 새 설정을 아직 시험 중이라면, 저혈당이 오기 훨씬 전에 경고해 주는 알람도 설정하십시오.
 
 Default value: 30 min.
 
-#### UAM max minutes of basal to limit SMB
+#### UAM SMB 제한을 위한 최대 기저 시간(분)
 
-This setting allows you to adjust the strength of SMB during UAM, when there are no more carbs.
+이 설정으로 더 이상 탄수화물이 없을 때 UAM 동안의 SMB 강도를 조정할 수 있습니다.
 
-Default value : the same as **Max minutes of basal to limit SMB**.
+기본값: **SMB 제한을 위한 최대 기저 시간(분)**과 같습니다.
 
-This setting is only visible if "Enable SMB" and "Enable UAM" are switched on.
+이 설정은 "SMB 활성화"와 "UAM 활성화"가 켜져 있을 때만 보입니다.
 
 (enable-uam)=
 
-### Enable UAM
+### UAM 활성화
 
-With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
+With this option enabled, the SMB algorithm can recognize unannounced meals. 탄수화물을 **AAPS**에 알리는 것을 잊었거나, 탄수화물을 잘못 추정해 입력한 양이 틀렸거나, 지방과 단백질이 많은 식사가 예상보다 오래 지속될 때 도움이 됩니다. 탄수화물을 입력하지 않아도 UAM은 탄수화물, 아드레날린 등으로 인한 빠른 혈당 상승을 인식하고 SMB로 이를 조정하려고 합니다. 반대로도 작동합니다: 혈당이 빠르게 떨어지면 SMB를 더 일찍 멈출 수 있습니다.
 
-**Therefore, UAM should always be activated when using SMB.**
+**따라서 SMB를 사용할 때는 UAM을 항상 활성화해야 합니다.**
 
 (key-aaps-features-minimal-carbs-required-for-suggestion)=
 
-### Carbs required threshold
+### 탄수화물 필요 임계값
 
-Minimum grams of carbs to display a carbs suggestion alert. Eating of additional carbs will be suggested when the reference design detects that it requires carbs. In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
+탄수화물 제안 알림을 보여주는 최소 탄수화물 g수입니다. 참조 설계(reference design)가 탄수화물이 필요하다고 감지하면 탄수화물을 더 먹도록 제안합니다. 이 경우 5분, 15분 또는 30분 동안 스누즈할 수 있는 알림을 받습니다.
 
-Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+원하면 탄수화물 필요 알림을 Nightscout로 보낼 수 있습니다. 이 경우 공지가 표시되고 전송됩니다.
 
-In any case, the required carbs will be displayed in the COB section on your main screen.
+어떤 경우든 필요한 탄수화물은 메인 화면의 COB 부분에 표시됩니다.
 
-![Display carbs required on main screen](../images/main/main_screen_carbs_required.png)
+![메인 화면에 필요한 탄수화물 표시](../images/main/main_screen_carbs_required.png)
 
 ### Advanced Settings
 
-For the full parameter reference (including settings not covered here), see [OpenAPS's preferences and safety settings documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
+(여기서 다루지 않는 설정을 포함한) 전체 매개변수 설명은 [OpenAPS의 설정 및 안전 설정 문서](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html)를 참조하십시오.
 
-**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to be steadier with noisy data sources like xDrip and Libre.
+**단순 증분 대신 항상 짧은 평균 증분 사용** 이 기능을 활성화하면 **AAPS**는 최근 15분 동안의 짧은 평균 증분/혈당을 사용합니다. 이는 보통 마지막 세 값의 평균입니다. 이렇게 하면 xDrip과 Libre처럼 잡음이 많은 데이터 소스에서 **AAPS**가 더 안정적으로 작동합니다.
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump and/or profile. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**최대 일일 안전 승수** 이것은 중요한 안전 제한입니다. 기본 설정은 3입니다(바꿀 필요는 거의 없습니다). 즉 **AAPS**는 사용자의 펌프 및/또는 프로파일에 설정된 가장 높은 시간당 기저 주입량의 3배를 넘는 임시 기저 주입량을 절대 설정할 수 없습니다. 예: 가장 높은 기저 주입량이 1.0 U/h이고 최대 일일 안전 승수가 3이면, **AAPS**는 최대 3.0 U/h(= 3 x 1.0 U/h)의 임시 기저 주입량을 설정할 수 있습니다.
 
-Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
+기본값: 3 (꼭 필요하고 무엇을 하는지 잘 알 때만 바꾸십시오)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump and/or profile.
+**현재 기저 안전 배수** 이것은 또 하나의 중요한 안전 제한입니다. 기본 설정은 4입니다(이것도 바꿀 필요는 거의 없습니다). 즉 **AAPS**는 사용자의 펌프 및/또는 프로파일에 설정된 현재 시간당 기저 주입량의 4배를 넘는 임시 기저 주입량을 절대 설정할 수 없습니다.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
+기본값: 4 (꼭 필요하고 무엇을 하는지 잘 알 때만 바꾸십시오)
 
 * * *
 
 (Open-APS-features-auto-isf)=
 
-## Auto ISF
+## 자동 ISF
 
-**Auto ISF** is an **experimental** algorithm for advanced users. It is built on OpenAPS SMB and adds rules that make the insulin sensitivity factor (ISF) stronger or weaker depending on how your glucose behaves.
+**Auto ISF**는 고급 사용자를 위한 **실험적** 알고리즘입니다. OpenAPS SMB를 기반으로 하며, 혈당 변화에 따라 인슐린 민감도 계수(ISF)를 강하게 또는 약하게 만드는 규칙을 추가합니다.
 
-It is a development feature: it can only be switched on in a [dev build](../AdvancedOptions/DevBranch.md) with **Engineering Mode** enabled. In a regular release build it stays forced off and is therefore not shown in **Configuration → APS**. Completing the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) does not unlock it.
+개발 기능입니다: **엔지니어링 모드**가 활성화된 [dev 빌드](../AdvancedOptions/DevBranch.md)에서만 켤 수 있습니다. 일반 릴리스 빌드에서는 강제로 꺼져 있으므로 **구성 → APS**에 표시되지 않습니다. [목표](../SettingUpAaps/CompletingTheObjectives.md)를 완료해도 잠금이 해제되지 않습니다.
 
-After selecting it, its **Settings** contain the OpenAPS SMB settings plus an **AutoISF settings** group:
+선택한 후에는 **설정**에 OpenAPS SMB 설정과 **AutoISF 설정** 그룹이 있습니다:
 
-- **Enable AutoISF**: turns the ISF adjustments on. Without it, the algorithm behaves like OpenAPS SMB.
-- **AutoISF min** and **AutoISF max**: how weak and how strong the ISF is allowed to become, in the same way as the Autosens limits. With the default value 1.0 the effect is switched off.
-- **Weights**: each one drives one rule, and the default value 0.0 switches the rule off. 
-  - while glucose **accelerates**, ISF is strengthened (more insulin);
-  - while glucose **decelerates**, ISF is weakened (less insulin);
-  - while glucose is **below target**, ISF is weakened;
-  - while glucose is **above target**, ISF is strengthened;
-  - a **post-prandial** weight and a **duration** weight act after meals and when glucose stays high for a long time.
-- **SMB delivery ratio** (with a minimum, a maximum and a BG range): what share of the insulin required can be delivered as SMB.
-- **SMB max range extension**: by what factor the usual SMB size limit ([max minutes of basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), 30 minutes by default) may be exceeded. The default value 1 changes nothing; up to 5 is possible. Increase this experimental value slowly and with caution.
-- **IOB threshold percent**: the percentage of max IOB above which SMBs are disabled.
+- **AutoISF 활성화**: ISF 조정을 켭니다. 이 옵션이 꺼져 있으면 알고리즘은 OpenAPS SMB처럼 작동합니다.
+- **AutoISF 최소**와 **AutoISF 최대**: Autosens 제한과 같은 방식으로, ISF가 얼마나 약해지고 얼마나 강해질 수 있는지를 정합니다. 기본값 1.0에서는 효과가 꺼져 있습니다.
+- **가중치**: 각 가중치는 하나의 규칙을 조절하며, 기본값 0.0은 그 규칙을 끕니다. 
+  - 혈당이 **가속**하는 동안 ISF가 강해집니다(인슐린 증가);
+  - 혈당이 **감속**하는 동안 ISF가 약해집니다(인슐린 감소);
+  - 혈당이 **목표보다 낮은** 동안 ISF가 약해집니다;
+  - 혈당이 **목표보다 높은** 동안 ISF가 강해집니다;
+  - **식후** 가중치와 **지속 시간** 가중치는 식사 후와 혈당이 오랫동안 높게 유지될 때 작용합니다.
+- **SMB 주입 비율**(최소값, 최대값, 혈당 범위 포함): 필요한 인슐린 중 어느 정도를 SMB로 주입할 수 있는지 정합니다.
+- **SMB 최대 범위 확장**: 일반적인 SMB 크기 제한([최대 기저 시간(분)](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), 기본값 30분)을 몇 배까지 넘을 수 있는지 정합니다. 기본값 1은 아무것도 바꾸지 않으며, 최대 5까지 가능합니다. 이 실험적인 값은 천천히, 주의하며 늘리십시오.
+- **IOB 임계 백분율**: max IOB의 몇 퍼센트를 넘으면 SMB가 비활성화되는지 정합니다.
 
-    {admonition} Only for experienced users
+    {admonition} 숙련된 사용자 전용
     :class: danger
-    With its default values Auto ISF changes nothing. Every value you raise makes **AAPS** more aggressive. Change one value at a time, in small steps, and watch the result for several days. Be extremely careful with an **AutoISF max** above 2.5.
+    기본값에서는 Auto ISF가 아무것도 바꾸지 않습니다. 값을 올릴 때마다 **AAPS**가 더 공격적으로 작동합니다. 한 번에 하나의 값만 조금씩 바꾸고, 며칠 동안 결과를 지켜보십시오. **AutoISF 최대**를 2.5보다 높게 설정할 때는 매우 조심하십시오.
 
 (Open-APS-features-advanced-meal-assist-ama)=
 
-## Advanced Meal Assist (AMA)
+## 고급 식사 지원 (AMA)
 
-AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
+AMA는 "advanced meal assist"(고급 식사 지원)의 줄임말로, 2017년의 OpenAPS 기능(oref0)입니다. OpenAPS 고급 식사 지원(AMA)은 탄수화물을 정확히 입력하면 식사 볼러스 후 시스템이 더 빠르게 높은 임시 기저를 설정할 수 있게 합니다.
 
-You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+자세한 내용은 [OpenAPS 문서](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama)에서 볼 수 있습니다.
 
-### Maximum basal rate (OpenAPS "max-basal")
+### 최대 기저 주입량 (OpenAPS "max-basal")
 
-This safety setting helps **AAPS** from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+이 안전 설정은 **AAPS**가 위험할 정도로 높은 기저 주입량을 주지 못하게 하고, 임시 기저 주입량을 x U/h로 제한합니다. It is advised to set this to something sensible. 프로파일에서 가장 높은 기저 주입량에 4를(적어도 3을) 곱한 값을 권장합니다. 예를 들어 프로파일에서 가장 높은 기저 주입량이 1.0 U/h라면, 여기에 4를 곱하여 4 U/h 값을 얻고 4를 안전 매개변수로 설정할 수 있습니다.
 
-You cannot choose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+아무 값이나 선택할 수는 없습니다: 안전상의 이유로 환자 나이에 따른 '고정 한계값'이 있습니다. maxIOB의 '고정 한계값'은 SMB보다 AMA에서 더 낮습니다. 어린이는 값이 가장 낮고, 인슐린 저항성이 있는 성인은 값이 가장 높습니다.
 
-The hardcoded parameters in **AAPS** are:
+**AAPS**에 고정된 매개변수는 다음과 같습니다:
 
 - 어린이: 2
-- Teenager: 5
+- 청소년: 5
 - 성인: 10
-- Insulin resistant adult: 12
-- Pregnant: 25
+- 인슐린 저항성이 있는 성인: 12
+- 임신 중: 25
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*[고정 한계값 개요](#Open-APS-features-overview-of-hard-coded-limits)도 참조하십시오.*
 
-### Max IOB for AMA
+### AMA용 Max IOB
 
-This parameter limits the maximum of basal IOB where **AAPS** still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+이 매개변수는 **AAPS**가 계속 작동하는 기저 IOB의 최대값을 제한합니다. IOB가 이보다 높으면 기저 IOB가 제한값 아래로 내려갈 때까지 추가 기저 인슐린 주입을 멈춥니다.
 
-The default value is 2, but you should raise this parameter slowly to see how much it affects you and which value fits best. It is different for everyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB.
+기본값은 2이지만, 이 매개변수를 천천히 올리면서 자신에게 얼마나 영향을 주는지, 어떤 값이 가장 잘 맞는지 확인해야 합니다. 이 값은 사람마다 다르며, 평균 총 일일 용량(TDD)에 따라서도 달라집니다. 안전상의 이유로, 환자 나이에 따른 제한이 있습니다. maxIOB의 '고정 한계값'은 SMB보다 AMA에서 더 낮습니다.
 
 - Child: 3
-- Teenager: 5
+- 청소년: 5
 - Adult: 7
-- Insulin resistant adult: 12
-- Pregnant: 25
+- 인슐린 저항성이 있는 성인: 12
+- 임신 중: 25
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*[고정 한계값 개요](#Open-APS-features-overview-of-hard-coded-limits)도 참조하십시오.*
 
-### Use Autosens (AMA)
+### Autosens 사용 (AMA)
 
-Here, you can choose, if you want to use the [sensitivity detection](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) autosens or not.
+여기에서 [민감도 감지](../DailyLifeWithAaps/SensitivityDetectionAndCob.md)(autosens)를 사용할지 선택할 수 있습니다.
 
-### Autosens adjust targets
+### Autosens 목표 조정
 
-If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets **AAPS** work more 'aggressive' or not. The actual target might be reached faster with this.
+이 옵션을 활성화하면 autosens가 (기저와 ISF 외에) 목표도 조정할 수 있습니다. 이를 통해 **AAPS**가 더 '공격적으로' 작동하게 할 수도, 그렇지 않게 할 수도 있습니다. 이렇게 하면 실제 목표에 더 빨리 도달할 수 있습니다.
 
 ### Advanced Settings
 
-- Normally you do not have to change the settings in this dialog!
-- If you want to change them anyway, make sure you understand what you are doing — see the full parameter reference in [OpenAPS's preferences and safety settings documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
+- 보통은 이 대화 상자의 설정을 바꿀 필요가 없습니다!
+- 그래도 바꾸려면 무엇을 하는지 정확히 이해하십시오 — [OpenAPS의 설정 및 안전 설정 문서](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html)에서 전체 매개변수 설명을 참조하십시오.
 
-**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to work more steady with noisy data sources like xDrip and Libre.
+**단순 증분 대신 항상 짧은 평균 증분 사용** 이 기능을 활성화하면 **AAPS**는 최근 15분 동안의 짧은 평균 증분/혈당을 사용합니다. 이는 보통 마지막 세 값의 평균입니다. 이렇게 하면 xDrip과 Libre처럼 잡음이 많은 데이터 소스에서 **AAPS**가 더 안정적으로 작동합니다.
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**최대 일일 안전 승수** 이것은 중요한 안전 제한입니다. 기본 설정은 3입니다(바꿀 필요는 거의 없습니다). 즉 **AAPS**는 사용자의 펌프에 설정된 가장 높은 시간당 기저 주입량의 3배를 넘는 임시 기저 주입량을 절대 설정할 수 없습니다. 예: 가장 높은 기저 주입량이 1.0 U/h이고 최대 일일 안전 승수가 3이면, **AAPS**는 최대 3.0 U/h(= 3 x 1.0 U/h)의 임시 기저 주입량을 설정할 수 있습니다.
 
-Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
+기본값: 3 (꼭 필요하고 무엇을 하는지 잘 알 때만 바꾸십시오)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
+**현재 기저 안전 배수** 이것은 또 하나의 중요한 안전 제한입니다. 기본 설정은 4입니다(이것도 바꿀 필요는 거의 없습니다). 즉 **AAPS**는 사용자의 펌프에 설정된 현재 시간당 기저 주입량의 4배를 넘는 임시 기저 주입량을 절대 설정할 수 없습니다.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
+기본값: 4 (꼭 필요하고 무엇을 하는지 잘 알 때만 바꾸십시오)
 
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. **AAPS** doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**볼러스 스누즈 DIA 제수** “볼러스 스누즈” 기능은 식사 볼러스 후에 작동합니다. **AAPS**는 식사 후 DIA를 “볼러스 스누즈” 매개변수로 나눈 기간 동안 낮은 임시 기저 주입량을 설정하지 않습니다. 기본값은 2입니다. 즉 DIA가 5시간이면 “볼러스 스누즈”는 5시간 : 2 = 2.5시간 동안 지속됩니다.
 
-Default value: 2
+기본값: 2
 
 * * *
 
 (Open-APS-features-overview-of-hard-coded-limits)=
 
-## Overview of hard-coded limits
+## 고정 한계값 개요
 
-|            | Child | Teenager | Adult | Insulin resistant adult | Pregnant |
-| ---------- | ----- | -------- | ----- | ----------------------- | -------- |
-| MAXBOLUS   | 5     | 10       | 17    | 25                      | 60       |
-| MINDIA     | 5     | 5        | 5     | 5                       | 5        |
-| MAXDIA     | 9     | 9        | 9     | 9                       | 10       |
-| MINIC      | 2     | 2        | 2     | 2                       | 0.3      |
-| MAXIC      | 100   | 100      | 100   | 100                     | 100      |
-| MAXIOB_AMA | 3     | 5        | 7     | 12                      | 25       |
-| MAXIOB_SMB | 7     | 13       | 22    | 30                      | 70       |
-| MAXBASAL   | 2     | 5        | 10    | 12                      | 25       |
+|            | Child | 청소년 | Adult | 인슐린 저항성이 있는 성인 | 임신 중 |
+| ---------- | ----- | --- | ----- | -------------- | ---- |
+| MAXBOLUS   | 5     | 10  | 17    | 25             | 60   |
+| MINDIA     | 5     | 5   | 5     | 5              | 5    |
+| MAXDIA     | 9     | 9   | 9     | 9              | 10   |
+| MINIC      | 2     | 2   | 2     | 2              | 0.3  |
+| MAXIC      | 100   | 100 | 100   | 100            | 100  |
+| MAXIOB_AMA | 3     | 5   | 7     | 12             | 25   |
+| MAXIOB_SMB | 7     | 13  | 22    | 30             | 70   |
+| MAXBASAL   | 2     | 5   | 10    | 12             | 25   |

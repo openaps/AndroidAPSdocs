@@ -1,6 +1,6 @@
 # Бъдещи (възможни) драйвери за помпи
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+Това е списък с някои помпи на пазара, състоянието на поддръжката им в други системи със затворен кръг и състоянието им в AAPS. В края има информация какво е нужно, за да може една помпа да работи в затворен кръг („Loop capable“).
 
     {contents} Съдържание
     :depth: 1
@@ -42,7 +42,7 @@ Tandem: t:Mobi ([Уебсайт](https://www.tandemdiabetes.com/))
 
 ### Инсулинова помпа Willcare ([Уебсайт](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+**Статус за затворен кръг:** В момента не е кандидат за затворен кръг, но служители на компанията се свързаха с нас и проявяват интерес да направят помпата подходяща за затворен кръг (изглежда липсват само командите за получаване/задаване на профил).
 
 **Хардуерно изискване за AAPS:** Няма. Изглежда, че има Bluetooth.
 

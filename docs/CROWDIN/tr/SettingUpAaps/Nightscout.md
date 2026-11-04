@@ -4,53 +4,53 @@
 
 ## Güvenlik Hususları
 
-Nightscout is the reporting and monitoring server of **AAPS**: **AAPS** uploads your data to it, and you or your caregivers look at it on the Nightscout website or in follower apps. It holds your medical data, profiles and treatments, so it is worth thinking about securing your Nightscout website.
+Nightscout, **AAPS**'in raporlama ve izleme sunucusudur: **AAPS** verilerinizi buraya yükler, siz veya bakım verenleriniz de bu verilere Nightscout web sitesinden veya takipçi uygulamalarından bakarsınız. Nightscout tıbbi verilerinizi, profillerinizi ve tedavilerinizi içerir. Bu yüzden Nightscout web sitenizi güvenli hale getirmeyi düşünmeniz önemlidir.
 
-In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Remote commands come from a paired **AAPSClient** instead — see [Master ↔ Client control](#client-master-control).
+**AAPS** 4'te uzaktan kontrol Nightscout web sitesi üzerinden yapılmaz. İstemci kontrolü açıkken ([güçlendirilmiş mod](#client-master-control-hardened-mode)), doğrudan Nightscout'a girilen tedaviler veya hedefler **AAPS** tarafından **uygulanmaz**. Uzaktan komutlar bunun yerine eşleştirilmiş bir **AAPSClient**'tan gelir — bkz. [Ana birim ↔ İstemci kontrolü](#client-master-control).
 
-Exercise maximum caution if using Nightscout as your AAPS BG data source.
+Nightscout'u AAPS KŞ veri kaynağınız olarak kullanıyorsanız son derece dikkatli olun.
 
 ### Nightscout ayarları
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security): make sure you only share your URL with a `readable` token, never with an `admin` token.
+[Kimlik doğrulama rollerini](https://nightscout.github.io/nightscout/security) kullanarak Nightscout sitenize genel erişimi engelleyebilirsiniz: URL'nizi yalnızca `readable` belirteciyle paylaşın, asla `admin` belirteciyle paylaşmayın.
 
-Nightscout `API_SECRET` is your site main password: don't share it publicly.
+Nightscout `API_SECRET`, sitenizin ana parolasıdır: bunu herkesle paylaşmayın.
 
 (Nightscout-aaps-settings)=
 
 ### AAPS settings
 
-Accepting data from Nightscout (profile changes, treatments, ...) is optional and turned off by default. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
+Nightscout'tan veri kabul etmek (profil değişiklikleri, tedaviler, ...) isteğe bağlıdır ve varsayılan olarak kapalıdır. Aşağıda anlatılan anahtarlar, istemci kontrolü açıkken (güçlendirilmiş mod) ve [basit modda](#preferences-simple-mode) gizlenir.
 
-* Access the **Synchronization** settings of the NSClientV3 plugin with either 1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or 2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
-* Enable "Upload data to NS".
-* "Upload BG data to NS" is in the settings of your BG source (**Configuration → BG Source → Settings**). Enable it, unless your AAPS BG data source is Nightscout: in that case **do not** enable it.
-* Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
+* NSClientV3 eklentisinin **Senkronizasyon** ayarlarına şu yollardan biriyle ulaşın: 1) **Ayarlar** (ana ekrandaki dişli simgesi) -> **NSClientV3** -> **Senkronizasyon** veya 2) **Konfigürasyon** (☰ menüsü) -> **İletişim** -> NSClientV3 altındaki "**Ayarlar**".
+* "Verileri NS'ye yükle" seçeneğini etkinleştirin.
+* "KŞ verilerini Nightscout'a yükle" seçeneği KŞ kaynağınızın ayarlarındadır (**Konfigürasyon → KŞ kaynağı → Ayarlar**). AAPS KŞ veri kaynağınız Nightscout değilse bu seçeneği etkinleştirin. KŞ veri kaynağınız Nightscout ise bu seçeneği **etkinleştirmeyin**.
+* Nightscout KŞ veri kaynağınız değilse "NS'den CGM verilerini al" seçeneğini etkinleştirmeyin.
 
-#### Do not sync from Nightscout
+#### Nightscout'tan senkronizasyon yapmayın
 
-Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
+Tüm "NS'den … al" seçeneklerini kapalı tutmak, hiçbir Nightscout değişikliğinin AAPS tarafından kullanılmamasını sağlar:
 
 ![Nightscout upload only](../images/preferences/settings_nsclient_sync.png)
 
-#### Accept changes from Nightscout
+#### Nightscout'tan gelen değişiklikleri kabul edin
 
-Enabling these options allows you to change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS. They are only shown when client control and simple mode are off.  
-Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
+Bu seçenekleri etkinleştirmek, AAPS ayarlarını Nightscout üzerinden değiştirmenize olanak tanır. Örneğin profil düzenlemeleri ve profil değişimi, geçici hedefler ve karbonhidrat ekleme AAPS tarafından dikkate alınır. Bu seçenekler yalnızca istemci kontrolü ve basit mod kapalıyken gösterilir.  
+İnsülin tedavilerinin yalnızca "Bolus yalnızca kaydedilecektir (pompa ile iletilmez)" gibi hesaplamalar için kullanılacağını unutmayın.
 
-![Nightscout receive options enabled](../images/NSsafety3.png)
+![Nightscout alma seçenekleri etkin](../images/NSsafety3.png)
 
 ### Diğer güvenlik ayarları
 
-Keep your phone up to date as described in [safety first](#preparing-safety-first).
+Telefonunuzu [önce güvenlik](#preparing-safety-first) bölümünde anlatıldığı gibi güncel tutun.
 
 (Nightscout-manual-nightscout-setup)=
 
 ## Manuel Nightscout kurulumu
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
+Zaten bir Nightscout siteniz olduğu varsayılır. Yoksa, kurulumla ilgili tüm talimatlar için [Nightscout](http://nightscout.github.io/nightscout/new_user/) sayfasını ziyaret edin. Aşağıdaki talimatlar, Nightscout sitenize ayrıca eklemeniz gereken ayarlardır. Nightscout sitenizin en az 15. sürüm olması gerekir. Bu yüzden [en son sürümü](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) kullandığınızı kontrol edin, aksi halde AAPS uygulamanızda bir hata mesajı alırsınız.
 
-* [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
+* [Değişkenlerinizi düzenleyin](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
 * Değişkenleri aşağıdaki gibi ekleyin veya düzenleyin:
   
@@ -62,12 +62,12 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-* Save the modifications. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
+* Değişiklikleri kaydedin. Nightscout siteniz artık bilgi kutucuklarını (pills) gösterebilmelidir. Bunları `SHOW_PLUGINS` içine ekleyerek varsayılan olarak gösterilmelerini sağlayabilirsiniz.
   
   * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   
-  ![Nightscout Pills](../images/nightscout1.png)
+  ![Nightscout bilgi kutucukları (pills)](../images/nightscout1.png)
 
-## Nightscout as a paid SaaS (Software as a Service)
+## Ücretli SaaS (Hizmet Olarak Yazılım) olarak Nightscout
 
-Use the vendor web interface to set the variables. Contact the vendor support service if necessary.
+Değişkenleri ayarlamak için hizmet sağlayıcının web arayüzünü kullanın. Gerekirse hizmet sağlayıcının destek servisiyle iletişime geçin.

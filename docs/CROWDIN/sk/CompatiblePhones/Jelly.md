@@ -10,11 +10,11 @@
 **Výhody**
 
 * Je naozaj malý.
-* Even if you tell people, they might not consider it as a normal smartphone and will accept it more easily as an exception when phones are normally not allowed.
+* Aj keď to ľuďom poviete, nemusia ho považovať za bežný smartfón a ľahšie ho prijmú ako výnimku tam, kde telefóny zvyčajne nie sú povolené.
 
 **Nevýhody**
 
-* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
+* Odporúča sa iba skúseným používateľom okruhu. Niektoré nastavenia sa nedajú ľahko rozpoznať: zo skúsenosti s veľkým telefónom s Androidom a AAPS musíte vedieť, ako a kde sa čo nachádza. Niektoré tlačidlá AAPS sú malé a ťažko sa na ne ťuká: potrebujete presný dotyk, nie hrubé prsty.
 * Dá sa používať iba ako telefón pre okruh (LooperPhone). Je lepšie mať vo vrecku aj bežný smartfón. 
 
 ### Optimalizácia výdrže batérie
@@ -33,7 +33,7 @@ Pre senzory Libre môžete zapnúť NFC.
 
 ### Optimalizácia výdrže batérie
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' for **AAPS** (and for other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
+Aby sa zabránilo rušeniu **AAPS**, treba na Jelly Star vypnúť obmedzenie „Využitie batérie“ (battery usage) tak, že pre **AAPS** vyberiete „Bez obmedzení“ (unrestricted) (aj pre ostatné **aplikácie DIY**, ako BYODA, xDrip, OOP2, Juggluco atď.).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
@@ -43,6 +43,6 @@ Nezabudnite vypnúť Google Play Protect.
 
 ### Vzdialené pripojenie pre Wear apk
 
-For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
+Pri niektorých inteligentných hodinkách, napríklad Samsung Galaxy, musí byť v aplikácii Galaxy Wearable v časti Advanced features (Rozšírené funkcie) **zapnuté** „Remote connection“ (Vzdialené pripojenie), aby ste mohli používať Jelly, **Wear.apk** a **AAPS** na diaľku cez Wi-Fi.
 
 ![Galaxy Wearable, Rozšírené funkcie, Vzdialené pripojenie zapnuté](../images/wearos/galaxy_wearable_remote_connection.png)

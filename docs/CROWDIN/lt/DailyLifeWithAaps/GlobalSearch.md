@@ -1,7 +1,7 @@
 (global-search)=
-# Global search
+# Visuotinė paieška
 
-**AAPS** v4 has a **global search** box at the top of the main screen. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
+**AAPS** v4 versijoje pagrindinio ekrano viršuje yra **visuotinės paieškos** laukas. Įveskite žodį, ir paieška iš karto ieškos visoje programėlėje – įskiepiuose, languose, nustatymų ekranuose, atskiruose nustatymuose – o jei esate prisijungę prie interneto, ir **AndroidAPS dokumentacijoje**. Tai greičiausias būdas pereiti prie nustatymo ar ekrano, kai neprisimenate, kur jis yra.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,85 +10,85 @@
 
 ---
 
-## Opening search
+## Paieškos atvėrimas
 
-Tap the **🔍 Search** field at the top of the **Overview** (next to the ☰ menu). Start typing and results appear as you type (after a short pause), grouped by category:
+Paspauskite lauką **🔍 Ieškoti** **pagrindinio ekrano** viršuje (šalia meniu ☰). Pradėkite rašyti – rezultatai atsiranda rašant (po trumpos pauzės) ir yra sugrupuoti pagal kategoriją:
 
-![Global search results, grouped by category](../images/v4/Search/search_results.png)
+![Visuotinės paieškos rezultatai, sugrupuoti pagal kategoriją](../images/v4/Search/search_results.png)
 
-Clear the box with the **✕**, or close search with the device **Back** button.
-
----
-
-## Search in English *or* your own language
-
-This is the part worth knowing: search matches against **both** the text in your **selected language** **and** the original **English** text.
-
-- If your app is in, say, German or Czech, you can type the **localized** word **or** the **English** word — either finds the setting.
-- A match on the **localized** title ranks highest, then the **English** title, then the localized and English **descriptions**.
-- Matching ignores **accents/diacritics** (so *ů* matches *u*, *é* matches *e*) and is **case-insensitive**.
-
-This means a guide or forum post written in English still leads you to the right setting even when your phone shows everything translated.
+Lauką išvalykite mygtuku **✕** arba paiešką uždarykite įrenginio mygtuku **Atgal**.
 
 ---
 
-## What search covers
+## Ieškokite angliškai *arba* savo kalba
 
-Results are grouped into these categories:
+Tai verta žinoti: paieška lygina **ir** tekstą jūsų **pasirinkta kalba**, **ir** originalų **anglišką** tekstą.
 
-- **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](../SettingUpAaps/ConfigBuilder.md)). Each plugin row carries its **enable switch**, so you can enable or disable a plugin right from the results — tapping the row of a disabled (toggleable) plugin enables it.
-- **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Screens that don't apply to your build are left out (for example *Pair with master* on a master, *Authorized clients* on a client).
-- **Preference categories** — the settings **screens** and sub-screens, both built-in (General, Appearance, Protection, Alerts, Maintenance, …) and from plugins, plus the small settings groups reached from dialogs (Fill buttons, Insulin/Carbs button steps, status-light thresholds, wizard settings, …).
-- **Preferences** — every **individual setting** that has a title. These are filtered to your build/mode, so you only see settings that actually apply (APS / NSClient / pump-control).
-- **Documentation** — pages from the online **AndroidAPS docs** (see below).
+- Jei jūsų programėlė, pavyzdžiui, vokiečių ar čekų kalba, galite įvesti **išverstą** žodį **arba** **anglišką** žodį – abiem atvejais nustatymas bus rastas.
+- Aukščiausiai rikiuojamas atitikmuo **išverstame** pavadinime, po jo – **angliškame** pavadinime, tada – išverstuose ir angliškuose **aprašymuose**.
+- Lyginant nepaisoma **kirčių / diakritinių ženklų** (taigi *ů* atitinka *u*, *é* atitinka *e*), o **didžiosios ir mažosios raidės nesvarbu**.
+
+Tai reiškia, kad angliškai parašytas vadovas ar forumo įrašas vis tiek nuves jus prie reikiamo nustatymo, net jei jūsų telefone viskas rodoma išversta.
+
+---
+
+## Kur ieškoma
+
+Rezultatai sugrupuoti į šias kategorijas:
+
+- **Įskiepiai** – visi jūsų versijoje matomi įskiepiai (tie patys, kurie išvardyti skiltyje [Konfigūracija](../SettingUpAaps/ConfigBuilder.md)). Kiekvienoje įskiepio eilutėje yra **įjungimo jungiklis**, todėl įskiepį galite įjungti ar išjungti tiesiai iš rezultatų – paspaudus išjungto (perjungiamo) įskiepio eilutę, jis įjungiamas.
+- **Dialogai** – terapijos / veiksmų ir valdymo ekranai (Boluso patarėjas, Insulinas, Ištęstas bolusas, Kalibravimas, Laikinas tikslas, Profilis, …). Jūsų versijai netinkami ekranai nerodomi (pavyzdžiui, *Susieti su pagrindiniu įrenginiu* pagrindiniame įrenginyje, *Autorizuoti klientai* kliento įrenginyje).
+- **Nustatymų kategorijos** – nustatymų **ekranai** ir jų poekraniai, tiek įtaisytieji (Bendrieji, Išvaizda, Apsauga, Perspėjimai, Servisas, …), tiek įskiepių, taip pat nedidelės nustatymų grupės, pasiekiamos iš langų (užpildymo mygtukai, insulino / angliavandenių mygtukų žingsniai, būsenos indikatorių ribos, patarėjo nustatymai, …).
+- **Nustatymai** – kiekvienas **atskiras nustatymas**, turintis pavadinimą. Jie filtruojami pagal jūsų versiją / režimą, todėl matote tik tuos nustatymus, kurie iš tikrųjų taikomi (APS / NSClient / pompos valdymas).
+- **Dokumentacija** – internetinės **AndroidAPS dokumentacijos** puslapiai (žr. toliau).
 
 ```{admonition} Settings that belong to a disabled plugin
 :class: note
-A preference whose plugin is currently **disabled** still shows up — **greyed out** and not tappable — with a *“Plugin … disabled”* note, so you can tell the setting exists and which plugin to enable to reach it.
+Nustatymas, kurio įskiepis šiuo metu **išjungtas**, vis tiek rodomas – **pilkas** ir nepaspaudžiamas – su pastaba *„Įskiepis … išjungtas“*, kad matytumėte, jog toks nustatymas yra, ir kurį įskiepį reikia įjungti, norint jį pasiekti.
 
-![A greyed-out setting from a disabled plugin](../images/v4/Search/search_disabled_plugin.png)
+![Pilkas išjungto įskiepio nustatymas](../images/v4/Search/search_disabled_plugin.png)
 ```
 
 ---
 
-## Documentation results (online)
+## Dokumentacijos rezultatai (internete)
 
-While the local search runs, **AAPS** also queries the official **AndroidAPS documentation** (hosted on ReadTheDocs) in parallel. Matching pages appear in a **Documentation** group at the bottom, each with a 📖 icon, the section title and a short snippet:
+Kol vyksta vietinė paieška, **AAPS** tuo pačiu metu ieško ir oficialioje **AndroidAPS dokumentacijoje** (patalpintoje ReadTheDocs). Atitinkantys puslapiai rodomi grupėje **Dokumentacija** apačioje, kiekvienas su 📖 piktograma, skyriaus pavadinimu ir trumpa ištrauka:
 
-![Documentation (wiki) results with snippets](../images/v4/Search/search_documentation.png)
+![Dokumentacijos (wiki) rezultatai su ištraukomis](../images/v4/Search/search_documentation.png)
 
-- If the documentation is translated into your app language, **AAPS** searches the translated pages and the English pages at the same time. Pages in your language come first, then the English pages that were not already found.
-- Tapping a documentation result opens that page in your **browser**.
-- Documentation search needs **internet** — when you are offline you get a *“Documentation search requires internet connection”* note instead, and the local (in-app) results still work normally.
-
----
-
-## Opening a result
-
-Tap a result to go straight to it:
-
-- **Plugin** → opens that plugin.
-- **Dialog** → opens that screen or dialog.
-- **Preference category** → opens that settings screen.
-- **Preference** → opens the setting **in place** (jumps to it within its screen).
-- **Documentation** → opens the page in your browser.
-
-Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
+- Jei dokumentacija išversta į jūsų programėlės kalbą, **AAPS** tuo pačiu metu ieško išverstuose ir angliškuose puslapiuose. Pirmiausia rodomi puslapiai jūsų kalba, tada angliški puslapiai, kurie dar nebuvo rasti.
+- Paspaudus dokumentacijos rezultatą, tas puslapis atveriamas jūsų **naršyklėje**.
+- Dokumentacijos paieškai reikia **interneto** – kai nesate prisijungę, vietoje rezultatų matote pastabą *„Norint ieškoti dokumentacijoje reikia interneto ryšio“*, o vietiniai (programėlės) rezultatai veikia įprastai.
 
 ---
 
-## Power-user shortcuts
+## Rezultato atvėrimas
 
-Two special queries list a whole category at once:
+Paspauskite rezultatą, kad iškart prie jo pereitumėte:
 
-- `%PLUGINS%` — list **all** plugins.
-- `%DIALOGS%` — list **all** dialogs/action screens.
+- **Įskiepis** → atveria tą įskiepį.
+- **Dialogas** → atveria tą ekraną ar langą.
+- **Nustatymų kategorija** → atveria tą nustatymų ekraną.
+- **Nustatymas** → atveria nustatymą **jo vietoje** (pereina prie jo jo ekrane).
+- **Dokumentacija** → atveria puslapį jūsų naršyklėje.
+
+Atveriant nustatymus ir apsaugotus veiksmus, vis tiek taikoma jūsų **[apsauga](#Preferences-protection)** (PIN / slaptažodis), lygiai taip pat, kaip jei būtumėte ten nuėję patys. Atlikę veiksmą su rezultatu, galite paspausti **Atgal** ir grįžti prie paieškos rezultatų.
+
+---
+
+## Spartieji būdai patyrusiems naudotojams
+
+Dvi specialios užklausos iš karto parodo visą kategoriją:
+
+- `%PLUGINS%` – parodo **visus** įskiepius.
+- `%DIALOGS%` – parodo **visus** dialogus / veiksmų ekranus.
 
 ---
 
 ```{admonition} The index stays current
 :class: note
-The search index is built the first time you search and kept ready after that. It is rebuilt automatically when you **enable/disable a plugin** or **change the app language**, so results always reflect your current setup.
+Paieškos indeksas sukuriamas, kai ieškote pirmą kartą, ir vėliau laikomas paruoštas. Jis automatiškai sukuriamas iš naujo, kai **įjungiate / išjungiate įskiepį** arba **pakeičiate programėlės kalbą**, todėl rezultatai visada atitinka jūsų dabartinę sąranką.
 ```
 
 ---

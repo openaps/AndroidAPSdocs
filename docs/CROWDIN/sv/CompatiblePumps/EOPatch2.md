@@ -1,278 +1,278 @@
 # EOPatch2
 
-The patch needs rapid-acting U-100 insulin, such as NovoRapid or Humalog. Use the rapid-acting insulin your doctor has prescribed for you.
+Podden behöver snabbverkande U-100-insulin, till exempel NovoRapid eller Humalog. Använd det snabbverkande insulin som din läkare har skrivit ut till dig.
 
-The smallest dose the patch can deliver is 0.05 U. Set every basal rate in your **Profile** to at least 0.05 U/hr, in steps of 0.05 U/hr. Otherwise **AAPS** rounds each rate to the nearest 0.05 U/hr (never down to 0) and uses the rates the patch really gives, so the total insulin per day differs slightly from your **Profile**. In the same way, boluses must be at least 0.05 U.
+Den minsta dos som podden kan ge är 0,05 U. Ställ in varje basaldos i din **Profil** på minst 0,05 U/h, i steg om 0,05 U/h. Annars avrundar **AAPS** varje dos till närmaste 0,05 U/h (aldrig ned till 0) och använder de doser som podden verkligen ger. Därför skiljer sig den totala insulinmängden per dag något från din **Profil**. På samma sätt måste en bolus vara minst 0,05 U.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Pumpens funktioner med AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually.
+* Kommunicerar med **AAPS** via telefonens inbyggda Bluetooth, utan någon extra kommunikationsenhet.
+* Byte till/från sommartid och byte av tidszon måste du göra manuellt.
 
-## Pump setup
+## Ställa in pumpen
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. In the **Pump** section, select **EOPatch2**.
-1. Press the Back key to return to the main screen.
+1. Öppna **menyn** (☰) uppe till vänster på huvudskärmen i **AAPS** och välj **Konfiguration**.
+1. Välj **EOPatch2** i avsnittet **Pump**.
+1. Tryck på bakåtknappen för att gå tillbaka till huvudskärmen.
 
-![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png) ![Configuration > Pump with the EOPatch2 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![Menyn med posten Konfiguration](../images/v4/Configuration/configuration_menu.png) ![Konfiguration > Pump med pluginet EOPatch2](../images/v4/Configuration/configuration_pump_list_3.png)
 
-Once it is selected, the **EOPatch2** card shows two buttons, **Settings** and **Open plugin**:
+När den är vald visar kortet **EOPatch2** två knappar, **Inställningar** och **Öppna plugin**:
 
-![The EOPatch2 plugin selected in Configuration > Pump](../images/v4/Pumps/eopatch2_enabled.png)
+![Pluginet EOPatch2 valt i Konfiguration > Pump](../images/v4/Pumps/eopatch2_enabled.png)
 
 ## Settings
 
-Open the EOPatch2 settings in one of two ways:
+Du kan öppna inställningarna för EOPatch2 på två sätt:
 
-* press **Settings** on the **EOPatch2** card in **Configuration**, or
-* open the pump screen (**Manage** → **Pump**) and press the gear icon in the top-right corner.
+* tryck på **Inställningar** på kortet **EOPatch2** i **Konfiguration**, eller
+* öppna pumpskärmen (**Hantera** → **Pump**) och tryck på kugghjulsikonen uppe till höger.
 
-There are three settings:
+Det finns tre inställningar:
 
-![EOPatch2 settings](../images/v4/Pumps/eopatch_settings.png)
+![Inställningar för EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-### Low reservoir Alerts
+### Varningar för låg reservoar
 
-A warning appears when the insulin left in the patch drops to this amount or less. You can set it from 10 to 50 U, in steps of 5 U. The default is 10 U.
+En varning visas när insulinet som är kvar i podden sjunker till den här mängden eller lägre. Du kan ställa in 10 till 50 U, i steg om 5 U. Standardvärdet är 10 U.
 
-### Patch expiration Reminder
+### Påminnelse om att byta pod
 
-Reminds you how much time is left before the current patch expires. You can set it from 1 to 24 hours, in steps of 1 hour. The default is 4 hours.
+Påminner dig om hur lång tid det är kvar innan den aktuella podden går ut. Du kan ställa in 1 till 24 timmar, i steg om 1 timme. Standardvärdet är 4 timmar.
 
-### Patch buzzer Reminders
+### Påminnelsesignaler från podden
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. It has no effect on your normal basal. The default is off.
+När inställningen är på piper podden när en bolus, förlängd bolus eller tillfällig basal startar och när den slutar. Den påverkar inte din vanliga basal. Standardvärdet är av.
 
-## Activating a new patch
+## Aktivera en ny pod
 
-### Open the activation wizard
+### Öppna aktiveringsguiden
 
-Open the pump screen with **Manage** → **Pump** (or press **Open plugin** on the **EOPatch2** card in **Configuration**). When no patch is active, the screen shows **Not activated** and an **Activate Patch** button at the bottom.
+Öppna pumpskärmen med **Hantera** → **Pump** (eller tryck på **Öppna plugin** på kortet **EOPatch2** i **Konfiguration**). När ingen pod är aktiv visar skärmen **Inte aktiverad** och knappen **Aktivera pod** längst ned.
 
-Press **Activate Patch** to start the wizard.
+Tryck på **Aktivera pod** för att starta guiden.
 
-![The EOPatch2 pump screen with the Activate Patch button](../images/v4/Pumps/eopatch_pump_screen.png)
+![Pumpskärmen för EOPatch2 med knappen Aktivera pod](../images/v4/Pumps/eopatch_pump_screen.png)
 
-The wizard guides you through each step. The row of dots at the top shows how far along you are.
+Guiden leder dig genom varje steg. Raden med punkter längst upp visar hur långt du har kommit.
 
 ```{note}
-If you have never activated a **Profile** in **AAPS**, the wizard first shows a **Profile required** page. Select the profile to use and press **Activate profile**.
+Om du aldrig har aktiverat en **Profil** i **AAPS** visar guiden först sidan **Profil krävs**. Välj den profil som ska användas och tryck på **Aktivera profil**.
 ```
 
-### Filling Insulin
+### Insulinpåfyllning
 
-Insert the syringe needle into the insulin fill port on the patch. Slowly push the plunger to fill the patch. Once there is more than 80 U in the patch, it beeps once and starts up (boots).
+Stick in sprutans nål i poddens påfyllningsport för insulin. Tryck långsamt in kolven för att fylla podden. När det finns mer än 80 U i podden piper den en gång och startar.
 
-When you hear the beep, press **Start pairing**.
+När du hör pipet trycker du på **Påbörja parkoppling**.
 
-![The Filling Insulin step with the Start pairing button](../images/v4/Pumps/eopatch_activate_filling.png)
+![Steget Insulinpåfyllning med knappen Påbörja parkoppling](../images/v4/Pumps/eopatch_activate_filling.png)
 
 ```{warning}
-- Do not turn the needle action lever until the wizard tells you to. Turning it too early can cause serious problems during filling or the safety check.
-- The patch holds 80 to 200 U. If you put in less than 80 U, the patch does not work.
-- Take the insulin out of the refrigerator 15 to 30 minutes before filling, so it reaches room temperature. The insulin must be at least 10°C.
+- Vrid inte nålspaken förrän guiden säger till. Om du vrider den för tidigt kan det orsaka allvarliga problem vid påfyllningen eller säkerhetskontrollen.
+- Podden rymmer 80 till 200 U. Om du fyller på mindre än 80 U fungerar podden inte.
+- Ta ut insulinet ur kylskåpet 15 till 30 minuter före påfyllningen, så att det får rumstemperatur. Insulinet måste vara minst 10 °C.
 ```
 
-### Patch pairing
+### Parkoppling
 
-**AAPS** now tries to pair with the patch automatically. During pairing, two Android Bluetooth pairing requests appear. Press **OK** on the first one. Press **OK** again on the second one, which shows a passkey.
+**AAPS** försöker nu parkoppla med podden automatiskt. Under parkopplingen visas två förfrågningar om Bluetooth-parkoppling från Android. Tryck på **OK** på den första. Tryck på **OK** igen på den andra, som visar en kod (passkey).
 
 ```{warning}
-- Keep the patch and your phone within 30 cm of each other while pairing.
-- After the patch has booted, it beeps every 3 minutes until pairing is complete.
-- You must finish activating the patch within 60 minutes of it booting. If you cannot, discard the patch.
+- Håll podden och telefonen högst 30 cm från varandra under parkopplingen.
+- När podden har startat piper den var 3:e minut tills parkopplingen är klar.
+- Du måste aktivera podden färdigt inom 60 minuter efter att den har startat. Om du inte hinner det, kassera podden.
 ```
 
-![Patch pairing step](../images/EOPatch/Bild6.png) ![First Bluetooth pairing request](../images/EOPatch/Bild7.png) ![Second Bluetooth pairing request with the passkey](../images/EOPatch/Bild8.png)
+![Steget Parkoppling](../images/EOPatch/Bild6.png) ![Första förfrågan om Bluetooth-parkoppling](../images/EOPatch/Bild7.png) ![Andra förfrågan om Bluetooth-parkoppling med koden](../images/EOPatch/Bild8.png)
 
 ```{admonition} Older screenshot
 :class: note
-The two Bluetooth pairing screenshots are from an earlier **AAPS** version: the **AAPS** screen behind the Android pairing request looks different in **AAPS** 4.
+De två skärmbilderna av Bluetooth-parkopplingen är från en äldre version av **AAPS**: skärmen i **AAPS** bakom Androids förfrågan om parkoppling ser annorlunda ut i **AAPS** 4.
 ```
 
-### Select insulin
+### Välj insulin
 
-Select the insulin you filled the patch with and press **Next**. **AAPS** applies a profile switch with this insulin after activation.
+Välj det insulin som du fyllde podden med och tryck på **Nästa**. **AAPS** gör ett profilbyte med detta insulin efter aktiveringen.
 
-### Prepare for attaching the Patch
+### Förbered för att sätta fast podden
 
-Remove the adhesive tape from the patch, then press **Next**.
+Ta bort skyddstejpen från podden och tryck sedan på **Nästa**.
 
-If a needle sticks out, or if the patch is wet, dirty or its adhesive tape is folded, press **Discard** instead and use a new patch.
+Om en nål sticker ut, eller om podden är blöt, smutsig eller tejpen är vikt, tryck i stället på **Kassera** och använd en ny pod.
 
-![Prepare for attaching the Patch step](../images/EOPatch/Bild9.png)
+![Steget Förbered för att sätta fast podden](../images/EOPatch/Bild9.png)
 
-### Site location
+### Plats
 
-This step only appears if **Manage pump site rotation** is turned on in the site rotation settings. Tap the place on the body diagram where you will attach the patch and press **Next**, or press **Skip**.
+Det här steget visas bara om **Hantera pumpplatsrotation** är påslaget i inställningarna för platsrotation. Tryck på den plats på kroppsbilden där du ska sätta fast podden och tryck på **Nästa**, eller tryck på **Hoppa över**.
 
-### Attaching the Patch
+### Sätta fast podden
 
-Insulin should go into a spot with fatty tissue under the skin, but few nerves or blood vessels. The abdomen, arm or thigh are good choices. Clean and dry the site, then attach the patch to your skin.
+Insulinet ska gå in på ett ställe med fettvävnad under huden, men med få nerver och blodkärl. Magen, armen eller låret är bra val. Rengör och torka stället och sätt sedan fast podden på huden.
 
-Check the infusion site, then press **Start safety check**.
+Kontrollera infusionsstället och tryck sedan på **Starta säkerhetskontroll**.
 
 ```{warning}
-- Press down the edges of the patch tape evenly, so the whole patch sticks firmly to your skin.
-- If the patch does not stick completely, air can get between the patch and your skin. This weakens the adhesive and the water resistance of the patch.
+- Tryck jämnt på kanterna av poddens tejp så att hela podden fäster ordentligt mot huden.
+- Om podden inte fäster helt kan luft komma in mellan podden och huden. Det försämrar fästet och poddens vattentålighet.
 ```
 
-![Attaching the Patch step](../images/EOPatch/Bild10.png)
+![Steget Sätta fast podden](../images/EOPatch/Bild10.png)
 
-### Safety check
+### Säkerhetskontroll
 
-The safety check takes about 30 seconds. When it is finished, the patch beeps once. If it fails, press **Retry**.
+Säkerhetskontrollen tar cirka 30 sekunder. När den är klar piper podden en gång. Om den misslyckas, tryck på **Försök igen**.
 
 ```{warning}
-For safe use, do not turn the needle action lever until the safety check is complete.
+För säker användning: vrid inte nålspaken förrän säkerhetskontrollen är klar.
 ```
 
-![Attaching the Patch step with the Start safety check button](../images/EOPatch/Bild11.png) ![Safety check in progress](../images/EOPatch/Bild12.png)
+![Steget Sätta fast podden med knappen Starta säkerhetskontroll](../images/EOPatch/Bild11.png) ![Säkerhetskontroll pågår](../images/EOPatch/Bild12.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots from **Prepare for attaching the Patch** to **Safety check** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+Skärmbilderna från **Förbered för att sätta fast podden** till **Säkerhetskontroll** är från en äldre version av **AAPS** och kan se annorlunda ut i **AAPS** 4.
 ```
 
-### Inserting the needle
+### Sätta in nålen
 
-Hold the patch firmly. Turn the needle action lever upward by more than 100° to insert the needle. The patch beeps once when the needle is inserted correctly. Then keep turning the lever all the way to remove it. Press **Next**.
+Håll podden stadigt. Vrid nålspaken uppåt mer än 100° för att sätta in nålen. Podden piper en gång när nålen är rätt insatt. Fortsätt sedan att vrida spaken hela vägen för att ta bort den. Tryck på **Nästa**.
 
 ```{caution}
-If you go to the next step without hearing the beep, a **Needle insertion Error** appears. Check for the beep and press **Retry**. If the error remains, press **Discard** to deactivate the patch.
+Om du går till nästa steg utan att höra pipet visas **Fel vid insättning av nål**. Lyssna efter pipet och tryck på **Försök igen**. Om felet kvarstår, tryck på **Kassera** för att inaktivera podden.
 ```
 
-### Patch activation completed
+### Podaktivering slutförd
 
-The last page confirms that the patch is active and that it will remind you when it nears its expiration time. Press **Finish** to go back to the pump screen.
+Den sista sidan bekräftar att podden är aktiv och att den påminner dig när den närmar sig sin utgångstid. Tryck på **Slutför** för att gå tillbaka till pumpskärmen.
 
-## Discarding the patch
+## Kassera podden
 
-Replace the patch when it is low on insulin, when it expires, or if it is faulty. We recommend using each patch for no more than 84 hours after it boots.
+Byt podden när den har lite insulin kvar, när den går ut eller om den är trasig. Vi rekommenderar att du inte använder en pod längre än 84 timmar efter att den har startat.
 
-1. Open the pump screen (**Manage** → **Pump**). While a patch is active, press **Discard Patch**.
-1. The **Discard Patch** page shows the time left and the insulin left in the patch. Press **Discard Patch**.
-1. A dialog asks you to confirm. Press **Discard Patch** again.
-1. When the patch has been deactivated, the wizard shows **Discarding the patch is completed.** Remove the patch from your body and press **Confirm**.
+1. Öppna pumpskärmen (**Hantera** → **Pump**). Tryck på **Kassera pod** medan en pod är aktiv.
+1. Sidan **Kassera pod** visar hur lång tid och hur mycket insulin som är kvar i podden. Tryck på **Kassera pod**.
+1. En dialogruta ber dig bekräfta. Tryck på **Kassera pod** igen.
+1. När podden har inaktiverats visar guiden **Kassering av podden är slutförd.** Ta bort podden från kroppen och tryck på **Bekräfta**.
 
-After that, the wizard continues straight on to activating a new patch (see above). Press the back arrow if you want to stop here.
+Därefter går guiden direkt vidare till att aktivera en ny pod (se ovan). Tryck på bakåtpilen om du vill avbryta här.
 
-While no patch is active, **AAPS** shows the pump as suspended and records a 0 U/hr temporary basal, so no basal insulin is counted in IOB until the next patch is activated.
+När ingen pod är aktiv visar **AAPS** pumpen som pausad och registrerar en tillfällig basal på 0 U/h. Därför räknas inget basalinsulin in i IOB förrän nästa pod har aktiverats.
 
-![The EOPatch2 pump screen with the DISCARD/CHANGE PATCH button](../images/EOPatch/Bild13.png) ![Discard Patch page](../images/EOPatch/Bild14.png) ![Discard Patch confirmation dialog](../images/EOPatch/Bild15.png) ![Discarding the patch is completed](../images/EOPatch/Bild16.png)
+![Pumpskärmen för EOPatch2 med knappen DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Sidan Kassera pod](../images/EOPatch/Bild14.png) ![Dialogrutan för att bekräfta Kassera pod](../images/EOPatch/Bild15.png) ![Kassering av podden är slutförd](../images/EOPatch/Bild16.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Discard Patch**.
+Skärmbilderna ovan är från en tidigare version av **AAPS**. I **AAPS** 4 öppnar du pumpskärmen via **Hantera** → **Pump**, och knappen där heter **Kassera pod**.
 ```
 
 ```{admonition} If the patch does not respond
 :class: warning
-If **AAPS** cannot reach the patch, it may show a page about turning off the patch's alarm by hand: remove the patch from your body, peel off the adhesive tape, and use a clip to press firmly into the hole next to the insulin fill port.
+Om **AAPS** inte kan nå podden kan en sida visas om hur du stänger av poddens larm för hand: ta bort podden från kroppen, dra av tejpen och tryck med ett gem hårt in i hålet bredvid påfyllningsporten för insulin.
 
-The **Discard Patch** page also has a **Force Reset** button. It only clears the patch from **AAPS**, without sending any command to the patch. The patch keeps delivering insulin until its battery runs out or you turn it off by hand. Use it only if a normal discard fails, and remove the patch from your body.
+Sidan **Kassera pod** har också knappen **Tvingad återställning**. Den tar bara bort podden från **AAPS**, utan att skicka något kommando till podden. Podden fortsätter att ge insulin tills batteriet tar slut eller tills du stänger av den för hand. Använd den bara om en vanlig kassering misslyckas, och ta bort podden från kroppen.
 ```
 
-## Suspending and resuming insulin delivery
+## Pausa och återuppta insulinleveransen
 
-Suspending insulin delivery also cancels any extended bolus and temporary basal. When you resume, these are **not** restarted. While insulin delivery is suspended, the patch beeps every 15 minutes.
+När du pausar insulinleveransen avbryts också en pågående förlängd bolus och tillfällig basal. När du återupptar startas de **inte** igen. Medan insulinleveransen är pausad piper podden var 15:e minut.
 
-### Suspending insulin delivery
+### Pausa insulinleveransen
 
-1. Open the pump screen (**Manage** → **Pump**) and press **Suspend pump**.
-1. A dialog explains what will be suspended. Press **Confirm**.
-1. In the **Basal Suspending Time** dialog, choose how long to suspend: 30 min, 1 hr, 1 hr 30 min or 2 hr. Press **Confirm**.
+1. Öppna pumpskärmen (**Hantera** → **Pump**) och tryck på **Pausa pump**.
+1. En dialogruta förklarar vad som kommer att pausas. Tryck på **Bekräfta**.
+1. Välj i dialogrutan **Tid för basalpaus** hur länge du vill pausa: 30 min, 1 tim, 1 tim 30 min eller 2 tim. Tryck på **Bekräfta**.
 
-Insulin delivery is suspended for the time you chose.
+Insulinleveransen pausas under den tid du valde.
 
-![The EOPatch2 pump screen with the SUSPEND button](../images/EOPatch/Bild17.png) ![Suspend confirmation dialog](../images/EOPatch/Bild18.png) ![Basal Suspending Time dialog](../images/EOPatch/Bild19.png)
+![Pumpskärmen för EOPatch2 med knappen SUSPEND](../images/EOPatch/Bild17.png) ![Dialogrutan för att bekräfta paus](../images/EOPatch/Bild18.png) ![Dialogrutan Tid för basalpaus](../images/EOPatch/Bild19.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Suspend pump**.
+Skärmbilderna ovan är från en tidigare version av **AAPS**. I **AAPS** 4 öppnar du pumpskärmen via **Hantera** → **Pump**, och knappen där heter **Pausa pump**.
 ```
 
-### Resuming insulin delivery
+### Återuppta insulinleveransen
 
-1. Open the pump screen (**Manage** → **Pump**) and press **Resume pump**.
-1. In the **Resume insulin delivery** dialog, press **Confirm**.
+1. Öppna pumpskärmen (**Hantera** → **Pump**) och tryck på **Återuppta pump**.
+1. Tryck på **Bekräfta** i dialogrutan **Återuppta insulinleverans**.
 
-![The EOPatch2 pump screen with the RESUME button](../images/EOPatch/Bild20.png) ![Resume insulin delivery dialog](../images/EOPatch/Bild21.png)
+![Pumpskärmen för EOPatch2 med knappen RESUME](../images/EOPatch/Bild20.png) ![Dialogrutan Återuppta insulinleverans](../images/EOPatch/Bild21.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Resume pump**.
+Skärmbilderna ovan är från en tidigare version av **AAPS**. I **AAPS** 4 öppnar du pumpskärmen via **Hantera** → **Pump**, och knappen där heter **Återuppta pump**.
 ```
 
 ```{warning}
-When the suspend time ends, **AAPS** shows an **End of insulin suspend** warning. Insulin delivery does **not** restart until you confirm it. If you do not, you could develop hyperglycemia.
+När paustiden är slut visar **AAPS** varningen **Insulinpausen är slut**. Insulinleveransen startar **inte** igen förrän du bekräftar det. Om du inte gör det kan du få hyperglykemi (högt blodsocker).
 ```
 
 (eopatch2-alarms-and-warnings)=
 
-## Alarms and warnings
+## Larm och varningar
 
-### Alarms
+### Larm
 
-Alarms are for urgent, top-priority situations and need your action straight away. **AAPS** sounds an alarm that keeps going until you acknowledge it, and shows the message as a notification on the **Overview** screen. An alarm means there is a problem with the patch in use. In many cases the patch has to be discarded and replaced with a new one.
+Larm gäller brådskande situationer med högsta prioritet och kräver att du agerar direkt. **AAPS** ger ett larm som fortsätter tills du kvitterar det, och visar meddelandet som en avisering på **huvudskärmen**. Ett larm betyder att det är problem med podden som används. I många fall måste podden kasseras och bytas mot en ny.
 
-When you press **Confirm** on the notification, **AAPS** handles the alarm. For most alarms, this deactivates the patch. For an **Inappropriate temperature** alarm, the button is **Retry**.
+När du trycker på **Bekräfta** i aviseringen hanterar **AAPS** larmet. För de flesta larm inaktiveras podden då. För larmet **Olämplig temperatur** heter knappen **Försök igen**.
 
-![EOPatch2 alarm](../images/EOPatch/Bild22.png) ![EOPatch2 alarm after the patch was deactivated](../images/EOPatch/Bild23.png)
-
-```{admonition} Older screenshot
-:class: note
-The alarm screenshots are from an earlier **AAPS** version and may look different in **AAPS** 4.
-```
-
-The different alarms are explained below.
-
-| Alarm                      | Explanation                                                                                                                                                    |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | The patch has run out of insulin.                                                                                                                              |
-| Patch expired              | The patch's usage time is over, and it cannot deliver any more insulin.                                                                                        |
-| Occlusion                  | The patch's insulin path seems to be blocked.                                                                                                                  |
-| Power on self-test failure | The patch found an unexpected error during its self-test after booting.                                                                                        |
-| Inappropriate temperature  | The patch is outside its normal operating temperature while you activate or use it. Move the patch to a place with a suitable temperature (4.4 to 37°C).       |
-| Needle insertion Error     | The needle was not inserted correctly during activation. Check that the needle insertion edge of the patch and the needle action lever are in a straight line. |
-| Patch battery Error        | The patch's internal battery is about to run out and the patch will power off.                                                                                 |
-| Patch activation Error     | The patch was not fully activated within 60 minutes of booting.                                                                                                |
-| Patch Error                | The patch found an unexpected error while being activated or used.                                                                                             |
-
-### Warnings
-
-Warnings are for medium- or low-priority situations. A warning appears as a notification on the **Overview** screen.
-
-![EOPatch2 warning shown on the Overview screen](../images/EOPatch/Bild24.png)
+![Larm från EOPatch2](../images/EOPatch/Bild22.png) ![Larm från EOPatch2 efter att podden har inaktiverats](../images/EOPatch/Bild23.png)
 
 ```{admonition} Older screenshot
 :class: note
-This screenshot is from an earlier **AAPS** version: in **AAPS** 4 the warning appears on the main screen, which looks different.
+Skärmbilderna av larmen är från en äldre version av **AAPS** och kan se annorlunda ut i **AAPS** 4.
 ```
 
-The different warnings are explained below.
+De olika larmen förklaras nedan.
 
-| Warning                      | Explanation                                                                                                                   |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | The suspend time you chose is over. Press **Resume pump** on the notification to restart insulin delivery.                    |
-| Low reservoir                | The insulin left in the patch is below the amount set in **Low reservoir Alerts**.                                            |
-| Patch operating life expired | The patch's usage period is over.                                                                                             |
-| Patch will expire soon       | The patch must be discarded in 1 hour.                                                                                        |
-| Incomplete Patch activation  | Patch activation was interrupted for more than 3 minutes after pairing. Open the pump screen and finish activating the patch. |
-| Patch battery low            | The patch's battery is low.                                                                                                   |
+| Larm                      | Förklaring                                                                                                                                                 |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tom reservoar             | Podden har slut på insulin.                                                                                                                                |
+| Podden har gått ut        | Poddens användningstid är slut och den kan inte ge mer insulin.                                                                                            |
+| Ocklusion                 | Poddens insulinväg verkar vara blockerad.                                                                                                                  |
+| Fel i uppstartstest       | Podden hittade ett oväntat fel i sitt självtest efter starten.                                                                                             |
+| Olämplig temperatur       | Podden är utanför sin normala arbetstemperatur när du aktiverar eller använder den. Flytta podden till ett ställe med lämplig temperatur (4,4 till 37 °C). |
+| Fel vid insättning av nål | Nålen sattes inte in rätt under aktiveringen. Kontrollera att poddens kant för nålinsättning och nålspaken ligger i en rak linje.                          |
+| Batterifel                | Poddens inbyggda batteri håller på att ta slut och podden kommer att stängas av.                                                                           |
+| Aktiveringsfel            | Podden aktiverades inte helt inom 60 minuter efter starten.                                                                                                |
+| Pod-fel                   | Podden hittade ett oväntat fel när den aktiverades eller användes.                                                                                         |
 
-## Where to get help
+### Varningar
 
-Development of the EOPatch2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Varningar gäller situationer med medelhög eller låg prioritet. En varning visas som en avisering på **huvudskärmen**.
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+![Varning från EOPatch2 som visas på huvudskärmen](../images/EOPatch/Bild24.png)
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+```{admonition} Older screenshot
+:class: note
+Den här skärmbilden är från en äldre version av **AAPS**: i **AAPS** 4 visas varningen på huvudskärmen, som ser annorlunda ut.
+```
+
+De olika varningarna förklaras nedan.
+
+| Varning                       | Förklaring                                                                                                            |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Insulinpausen är slut         | Paustiden som du valde är slut. Tryck på **Återuppta pump** i aviseringen för att starta insulinleveransen igen.      |
+| Låg reservoar                 | Insulinet som är kvar i podden är under den mängd som är inställd i **Varningar för låg reservoar**.                  |
+| Poddens livslängd har löpt ut | Poddens användningsperiod är slut.                                                                                    |
+| Podden löper ut snart         | Podden måste kasseras inom 1 timme.                                                                                   |
+| Ofullständig pod-aktivering   | Aktiveringen av podden avbröts i mer än 3 minuter efter parkopplingen. Öppna pumpskärmen och aktivera podden färdigt. |
+| Pod-batteri lågt              | Poddens batteri är svagt.                                                                                             |
+
+## Var du kan få hjälp
+
+Drivrutinen för EOPatch2 utvecklas av communityn på **frivillig** basis. Innan du ber om hjälp:
+
+1. **Läs** det avsnitt i dokumentationen som gäller, så att du vet hur funktionen ska fungera.
+2. **Fråga** i kanalen *#AAPS* på [Discord](https://discord.gg/4fQUWHZ4Mw) eller i någon av de andra [communitykanalerna](../GettingHelp/WhereCanIGetHelp.md).
+3. **Rapportera en bugg**: sök först bland [befintliga ärenden](https://github.com/nightscout/AndroidAPS/issues). Om ditt problem inte finns där, skapa ett [nytt ärende](https://github.com/nightscout/AndroidAPS/issues) och bifoga dina [loggfiler](../GettingHelp/AccessingLogFiles.md).
+
+När du ber om hjälp, ange telefonens märke och modell, Android-version, **AAPS**-version och en enkel beskrivning av problemet (vad som ändrades, när det fungerade senast).

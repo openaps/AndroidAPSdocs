@@ -1,6 +1,6 @@
 # Как да превеждате текстовете за приложението AAPS или документацията
 
-* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
+* За текстовете, използвани в приложението, отидете на <https://crowdin.com/project/androidaps> и влезте с профила си в GitHub
 * За документацията посетете <https://crowdin.com/project/androidapsdocs> и влезте с профила си в GitHub
 
 * Изпратете заявка за присъединяване към екипа на документацията. За целта натиснете флага на желания език и след това бутона „Join“ в горния десен ъгъл на следващата страница. Моля, посочете езика, дайте малко информация за себе си и за опита си с AAPS и дали искате да сте преводач или коректор (коректори могат да са само хора с опит в превода, които са и напреднали потребители на AAPS).
@@ -63,8 +63,8 @@
     
         1. Това е преводът, който подготвяте. Можете да копирате текста отгоре или да изберете едно от предложенията отдолу.
     
-        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
-        1. Натиснете бутона „save“, за да запазите предложението си за превод. It will then be passed to a proofreader for final check.
+        1. Това са предложенията за превод. Тук можете да видите доколко Crowdin оценява предложението като подходящо, или дали текстът вече е бил преведен в миналото и се появява отново само защото е бил преместен, а не променен.
+        1. Натиснете бутона „save“, за да запазите предложението си за превод. След това то ще бъде изпратено на коректор за окончателна проверка.
     
     ![Превод на документацията](../images/translation_WikiTranslate.png)
     
@@ -72,7 +72,7 @@
     
         1. преводът да бъде проверен от коректор
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
+        1. синхронизацията между Crowdin и GitHub (веднъж на час) да приключи и да създаде PR за GitHub.
     
         1. PR в GitHub да бъде одобрен.
     
@@ -83,11 +83,11 @@
     ```{admonition} Връзките вече не се превеждат
     :class: note
     
-    Връзките вече не се превеждат. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Връзките вече не се превеждат. В миналото тук имаше раздел за това, но той вече не е нужен: след преминаването към Markdown и myst_parser създаваме изрично етикети в английския текст и те се пренасят автоматично към другите езици.
     
     
 
-Вие превеждате текста, който представлява връзката. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
+Вие превеждате текста, който представлява връзката. Моля, внимавайте **да не** премахнете връзката, която е обозначена с двойка тагове `<0></0>` (или с други числа, ако в един абзац има повече връзки).
 
 Задача на коректорите е да обърнат специално внимание на това!
 
@@ -101,4 +101,4 @@
     
     ![Одобряване на текст](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. За да ускорите процеса, можете да уведомите екипа на документацията за новите преводи.
+* Когато коректор одобри превод, той ще бъде включен в следващата компилация на документацията. Тя няма фиксиран график и се прави при нужда, но приблизително веднъж седмично, освен по време на празници. За да ускорите процеса, можете да уведомите екипа на документацията за новите преводи.

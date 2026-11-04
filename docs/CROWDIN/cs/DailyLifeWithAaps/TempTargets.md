@@ -19,7 +19,7 @@ Uživatelé by měli mít realistická očekávání, čeho lze dosáhnout, kdy�
 
 Dosažení požadované cílové **glykémie** pomocí **dočasného cíle** může trvat přibližně 30 minut nebo déle. **AAPS** nemůže dosáhnout cílové **glykémie** okamžitě a uživatelé by na to měli myslet, když volí **dočasný cíl**.
 
-The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. Uvedené hodnoty jsou výchozí hodnoty z instalace – každou předvolbu si můžete [upravit](#TempTargets-change-preset-defaults) podle svých potřeb.
+Následující části shrnují vlastnosti **dočasného cíle Aktivita**, **dočasného cíle Před jídlem** a **dočasného cíle Hypoglykémie**. Uvedené hodnoty jsou výchozí hodnoty z instalace – každou předvolbu si můžete [upravit](#TempTargets-change-preset-defaults) podle svých potřeb.
 
 ### DC - Aktivita
 
@@ -42,7 +42,7 @@ Uživatelé mohou také zvážit:
 
 - *zvolení* tohoto **DC** 1–2 hodiny před plánovaným cvičením, aby bylo IOB nižší (správné načasování tohoto DC se u každého liší); a
 - *zvolení* dočasného profilu (snížení) po dobu plánované aktivity, aby bylo **IOB** nižší;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- *zajištění*, aby se **DC** *vypnul* krátce před cvičením, protože **IOB** je už snížené a u některých uživatelů **glykémie** po cvičení rychle stoupá.
 
 ### DC - Před jídlem
 
@@ -193,9 +193,9 @@ Když uživatel sní sacharidy na léčbu hypoglykémie, jeho **glykémie** mů�
 
 Někteří uživatelé chtějí zabránit podávání **SMB** během **dočasného cíle Hypoglykémie**. Toho dosáhnete vypnutím *„Povolit SMB při vysokém dočasném cíli“* v **Nastavení** → **OpenAPS SMB** (viz dále):
 
-- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- Pokročilé, cíl 9: uživatel může pro **dočasné cíle** 100 mg/dl (5,6 mmol/l) nebo vyšší zapnout v OpenAPS SMB *„Vysoký dočasný cíl zvyšuje citlivost“*, **AAPS** pak bude citlivější.
 
-- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- Pokročilé, cíl 9: uživatel může vypnout *„Povolit SMB při vysokém dočasném cíli“*. Pak **AAPS** nebude podávat SMB, dokud běží vysoký dočasný cíl, a to ani když má **AAPS** COB > 0, zapnuté „Povolit SMB při nízkém dočasném cíli“ nebo „Povolit SMB vždy“ a aktivní OpenAPS SMB.
 
 Poznámka: pokud otevřete **dialog Sacharidy**, když je vaše glykémie nižší než 72 mg/dl nebo 4 mmol/l, **AAPS** automaticky předem zapne přepínač **Spustit dočasný cíl Hypoglykémie**.
 
@@ -209,7 +209,7 @@ Pro zjednodušení **dočasného cíle Aktivita** si uživatel může nastavit v
 
 Noví uživatelé **AAPS** možná budou muset zkoušet a přizpůsobit si výchozí nastavení **dočasného cíle Aktivita**, aby jim tato funkce fungovala co nejlépe. Každý člověk je jiný, pokud jde o udržení stabilní glykémie během cvičení. Viz také [sekci o sportu v Nejčastějších otázkách uživatelů APS](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. Obojí můžete spustit najednou: klepněte na název profilu na hlavní obrazovce, klepněte na kulaté tlačítko **▶**, nastavte **Procento** pod 100 % a **Trvání** a pak zapněte **Dočasný cíl / Aktivita**. Viz [Změna procenta profilu](#ProfileSwitch-change-percentage).
+Někteří uživatelé také raději aktivují **přepnutí profilu** (snížení profilu pod 100 %, aby **AAPS** podával méně inzulínu) před zapnutím **dočasného cíle Aktivita** a během něj. Obojí můžete spustit najednou: klepněte na název profilu na hlavní obrazovce, klepněte na kulaté tlačítko **▶**, nastavte **Procento** pod 100 % a **Trvání** a pak zapněte **Dočasný cíl / Aktivita**. Viz [Změna procenta profilu](#ProfileSwitch-change-percentage).
 
 Pokročilé, cíl 9: uživatelé mohou pro **dočasné cíle** 100 mg/dl (5,6 mmol/l) nebo vyšší zapnout v OpenAPS **SMB** *„Vysoký dočasný cíl zvyšuje citlivost“*. Cíl 99 mg/dl (5,5 mmol/l) je normální cíl, ani vysoký, ani nízký. **AAPS** je pak citlivější.
 
@@ -219,9 +219,9 @@ Pokud je navíc vypnuto *„Povolit SMB při vysokém dočasném cíli“*, **AA
 
 ## Dočasný cíl Před jídlem
 
-**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**Dočasný cíl Před jídlem** může pomoci jemně snížit **glykémii** a zajistit dostatek **IOB** před jídlem.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
+Pro uživatele, kteří nepodávají předstihový bolus, to může být důležitý nástroj. Účinnost **dočasného cíle Před jídlem** ale závisí na řadě faktorů, například: na nastavení uživatele, na tom, zda jí stravu s nízkým obsahem sacharidů, a zda používá rychle působící inzulín (jako Fiasp nebo Lyumjev), aby předstihový bolus nepotřeboval. Dokud uživatelé nemají s **AAPS** zkušenosti, měli by obvykle počítat s předstihovým bolusem i při použití **dočasného cíle Před jídlem**. To platí zvláště při stravě s vysokým obsahem sacharidů.
 
 Více o „režimu Před jídlem“ („Eating soon mode“) si můžete přečíst v článku ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (v angličtině) nebo [zde](https://diyps.org/tag/eating-soon-mode/).
 

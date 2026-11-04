@@ -3,45 +3,45 @@
 
 ## מהן פחמימות ממושכות ומתי משתמשים בהן?
 
-בטיפול רגיל במשאבה, בולוסים מושהים הם דרך טובה להתמודד עם ארוחות שומניות או ארוחות אחרות שנספגות לאט ומעלות את רמת הגלוקוז בדם זמן רב יותר מהשפעת האינסולין. עם זאת, בהקשר של לולאה, בולוסים מושהים אינם הגיוניים כל כך (ומציבים קשיים טכניים), מכיוון שהם בעצם מינון בזאלי זמני קבוע גבוה, הנוגד את אופן פעולת הלולאה, שהוא התאמה דינמית של המינון בזאלי. For details see [extended bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) below.
+בטיפול רגיל במשאבה, בולוסים ממושכים הם דרך טובה להתמודד עם ארוחות שומניות או ארוחות אחרות שנספגות לאט ומעלות את רמת הסוכר בדם זמן רב יותר מהשפעת האינסולין. עם זאת, בלולאה, בולוסים ממושכים אינם הגיוניים כל כך (ויוצרים קשיים טכניים), כי הם בעצם קצב בזאלי זמני גבוה וקבוע. זה נוגד את אופן הפעולה של הלולאה, שמתאימה את הקצב הבזאלי באופן דינמי. לפרטים, ראו [בולוס ממושך](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) בהמשך.
 
-אף על פי כן, נותר הצורך להתמודד עם ארוחות כאלה. Which is why AAPS supports so called extended carbs or eCarbs.
+אף על פי כן, נותר הצורך להתמודד עם ארוחות כאלה. לכן AAPS תומך במה שנקרא פחמימות ממושכות (eCarbs).
 
-eCarbs are carbs that are split up over several hours. בארוחות סטנדרטיות עם יותר פחמימות מאשר שומן\חלבון, רישום פחמימות מקדים (והפחתת הבולוס הראשוני במידת הצורך) מספיקה בדרך כלל כדי למנוע מתן אינסולין מוקדם מדי.  אבל עבור ארוחות איטיות יותר, בולוס על כל הפחמימות מראש גורם ליותר מדי אינסולין פעיל מ-SMB, ניתן להשתמש בפחמימות ממושכות כדי לדמות בצורה נכונה יותר את ספיגת הפחמימות (או המקבילה לפחמימות שתזינו עבור חלבון או שומן) והשפעתה על רמת הגלוקוז בדם. עם המידע הזה, הלולאה יכולה להזריק בולוסי SMB בהדרגה כדי להתמודד עם אותן פחמימות, אפשר לחשוב על כך כבולוס מושהה דינמי (זה אמור לעבוד גם ללא SMBs, אבל עם פחות יעילות).
+פחמימות ממושכות הן פחמימות שמחולקות על פני כמה שעות. בארוחות רגילות עם יותר פחמימות מאשר שומן/חלבון, רישום הפחמימות מראש (והפחתת הבולוס הראשוני במידת הצורך) מספיק בדרך כלל כדי למנוע מתן אינסולין מוקדם מדי.  אבל בארוחות שנספגות לאט, כאשר רישום כל הפחמימות מראש גורם ליותר מדי אינסולין פעיל מ-SMB, ניתן להשתמש בפחמימות ממושכות כדי לדמות בצורה מדויקת יותר את ספיגת הפחמימות (וכל ערך מקביל לפחמימות שתזינו עבור רכיבי תזונה אחרים) ואת השפעתן על רמת הסוכר בדם. עם המידע הזה, הלולאה יכולה לתת בולוסי SMB בהדרגה כדי להתמודד עם הפחמימות האלה. אפשר לראות בזה בולוס ממושך דינמי (זה אמור לעבוד גם ללא SMB, אבל כנראה פחות ביעילות).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**הערה:** פחמימות ממושכות אינן רק לארוחות שומניות או עשירות בחלבון: אפשר להשתמש בהן גם בכל מצב שבו יש גורמים שמעלים את רמת הסוכר בדם, לדוגמה תרופות אחרות כמו קורטיקוסטרואידים.
 
 ## אופן השימוש בפחמימות ממושכות
 
-To enter eCarbs, open the **Carbs** dialog (**Treatments** → **Carbs**), enter the total carbs, set a **Duration**, and optionally shift the start with **Carb time** (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
+כדי להזין פחמימות ממושכות, יש לפתוח את חלון **פחמימות** (**טיפולים** ← **פחמימות**), להזין את סך הפחמימות, להגדיר **משך**, ואם רוצים, להזיז את ההתחלה בעזרת **זמן הפחמימות** (*המספרים למטה הם רק דוגמה. יש לנסות ערכים משלכם כדי להגיע לתגובת סוכר טובה במצבים שלכם*):
 
 ![Enter carbs](../images/eCarbs_Dialog.png)
 
-The eCarbs on the main screen: the number in brackets in the **COB** field shows the carbs still to come, and the **COB** graph shows each future eCarbs entry as an orange marker. If you don't see a **COB** graph, add one with **Add graph** below the graphs (see [AAPS screens](../DailyLifeWithAaps/AapsScreens.md)).
+הפחמימות הממושכות במסך הראשי: המספר בסוגריים בשדה **פחמ' פעילות** מראה את הפחמימות שעוד יגיעו, והגרף **פחמ' פעילות** מציג כל רישום עתידי של פחמימות ממושכות כסימן כתום. אם אין גרף **פחמ' פעילות**, ניתן להוסיף אותו בעזרת **הוספת גרף** מתחת לגרפים (ראו [מסכי AAPS](../DailyLifeWithAaps/AapsScreens.md)).
 
-![eCarbs in the COB field and on the COB graph](../images/eCarbs_Graph.png)
+![פחמימות ממושכות בשדה ובגרף של הפחמימות הפעילות (COB)](../images/eCarbs_Graph.png)
 
 (AapsScreens-carbs-type)=
-## Carbs type in the Bolus wizard: bread, cake or pizza
+## סוג הפחמימות באשף הבולוס: לחם, עוגה או פיצה
 
-In the [Bolus wizard](#aaps-screens-bolus-wizard), three buttons below the **Carbs** field let you choose how fast your meal is absorbed. Pick one before you confirm. Depending on the type, **AAPS** takes a part of the carbs you typed as normal carbs, and adds [extended carbs ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) later for slow, rich meals. Press the **(i)** icon next to the buttons to see the typical foods for the selected type and what it does to your carbs.
+ב[אשף הבולוס](#aaps-screens-bolus-wizard), שלושה לחצנים מתחת לשדה **פחמימות** מאפשרים לבחור כמה מהר הארוחה נספגת. יש לבחור אחד מהם לפני האישור. לפי הסוג, **AAPS** לוקח חלק מהפחמימות שהקלדתם כפחמימות רגילות, ומוסיף מאוחר יותר [פחמימות ממושכות ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) לארוחות עשירות שנספגות לאט. לחיצה על הסמל **(i)** ליד הלחצנים מציגה מזונות אופייניים לסוג שנבחר ומה הסוג עושה לפחמימות.
 
-| Type                | Typical foods (examples from the app)                                                                | Carbs now, used for the bolus | eCarbs added                                         |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------- |
-| **Bread** (default) | Bread, savory pastries, yogurt, fruit, potatoes, rice, oatmeal, vegetables                           | 100 %                         | None                                                 |
-| **Cake**            | Dumplings, pasta, Asian dishes rich in carbs and fats, sweet and yeast pastries, cereals, honey, jam | 90 %                          | 20 %, starting 60 minutes later, spread over 2 hours |
-| **Pizza**           | Lasagna, pizza, hamburgers, fries, baked potatoes, chips                                             | 80 %                          | 35 %, starting 60 minutes later, spread over 3 hours |
+| סוג                  | מזונות אופייניים (דוגמאות מהאפליקציה)                                                              | פחמימות עכשיו, משמשות לבולוס | פחמימות ממושכות שנוספות                                 |
+| -------------------- | -------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------- |
+| **לחם** (ברירת מחדל) | לחם, מאפים מלוחים, יוגורט, פירות, תפוחי אדמה, אורז, שיבולת שועל, ירקות                             | 100 %                        | None                                                    |
+| **עוגה**             | כיסונים, פסטה, מנות אסייתיות עשירות בפחמימות ושומן, מאפים מתוקים ומאפי שמרים, דגני בוקר, דבש, ריבה | 90 %                         | 20 %, מתחילות 60 דקות מאוחר יותר, מחולקות על פני 2 שעות |
+| **פיצה**             | לזניה, פיצה, המבורגרים, צ׳יפס, תפוחי אדמה אפויים, חטיפים דמויי צ׳יפס                               | 80 %                         | 35 %, מתחילות 60 דקות מאוחר יותר, מחולקות על פני 3 שעות |
 
-**Example**: you type 100 g and choose **Pizza**. The bolus is calculated for 80 g, recorded now. 35 g of eCarbs start 1 hour later and are spread over 3 hours.
+**דוגמה**: מקלידים 100 גר' ובוחרים **פיצה**. הבולוס מחושב עבור 80 גר', שנרשמים עכשיו. 35 גר' של פחמימות ממושכות מתחילות שעה אחת מאוחר יותר ומחולקות על פני 3 שעות.
 
-Good to know:
-* This is not a simple split: with **Cake** and **Pizza**, the carbs recorded add up to **more than you typed** (110 % and 115 %). The extra is only in the eCarbs.
-* The bolus only covers the carbs taken now. **AAPS** does not bolus up front for the eCarbs: the loop takes them into account once they start, like any other [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
-* If you set a **Carb time**, the eCarbs start 60 minutes after that time.
-* The confirmation dialog shows the eCarbs on their own line, _e.g._ "eCarbs 35g / 3h (+60min)".
-* Grams are rounded down to whole numbers.
-* The percentages, delays and durations are fixed; they can't be changed in the settings.
-* The choice is not remembered: the wizard opens on **Bread** every time.
+טוב לדעת:
+* זו לא חלוקה פשוטה: עם **עוגה** ו**פיצה**, סך הפחמימות שנרשמות **גדול ממה שהקלדתם** (110 % ו-115 %). התוספת נמצאת רק בפחמימות הממושכות.
+* הבולוס מכסה רק את הפחמימות שנלקחות עכשיו. **AAPS** לא נותן בולוס מראש עבור הפחמימות הממושכות: הלולאה מתחשבת בהן כשהן מתחילות, כמו בכל [פחמימות ממושכות](#Extended-Carbs-extended-carbs-ecarbs) אחרות.
+* אם מגדירים **זמן הפחמימות**, הפחמימות הממושכות מתחילות 60 דקות אחרי הזמן הזה.
+* חלון האישור מציג את הפחמימות הממושכות בשורה נפרדת, _לדוגמה_ "פחמ' ממושכות 35 גר' / 3 שעות (+60 דקות)".
+* הגרמים מעוגלים כלפי מטה למספרים שלמים.
+* האחוזים, ההשהיות ומשכי הזמן קבועים; אי אפשר לשנות אותם בהגדרות.
+* הבחירה לא נשמרת: האשף נפתח עם **לחם** בכל פעם.
 
 ______________________________________________________________________
 
@@ -51,52 +51,52 @@ ______________________________________________________________________
 
 ## תצורה מומלצת, תרחיש לדוגמה והערות חשובות
 
-התצורה המומלצת היא להשתמש בתוסף OpenAPS SMB, כאשר בולוסי SMB מופעלים וכאשר האפשרות *הפעלת SMB עם פחמ' פעילות* מופעלת.
+התצורה המומלצת היא להשתמש בתוסף OpenAPS SMB, כאשר SMB מופעל וגם ההגדרה *הפעלת SMB עם פחמימות פעילות* מופעלת.
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *Bolus wizard* and then use the *Carbs* dialog to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
+תרחיש לדוגמה לפיצה: לתת בולוס (חלקי) מראש בעזרת *אשף בולוס*, ואז להשתמש בחלון *פחמימות* כדי להזין את שאר הפחמימות למשך 4-6 שעות, שמתחילות אחרי שעה או שעתיים.
 
-For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carbs type](#AapsScreens-carbs-type) **Cake** or **Pizza** below the **Carbs** field (see above). The amounts and timing are fixed, so use the *Carbs* dialog instead if you want other values.
+להתחלה מהירה יותר, *אשף בולוס* יכול להוסיף פחמימות ממושכות בשבילכם: יש לבחור את [סוג הפחמימות](#AapsScreens-carbs-type) **עוגה** או **פיצה** מתחת לשדה **פחמימות** (ראו למעלה). הכמויות והתזמון קבועים, לכן אם רוצים ערכים אחרים, יש להשתמש בחלון *פחמימות*.
 
-**הערות חשובות:** חובה לבדוק בעצמכם ולגלות מהם הערכים המתאימים לכם. תוכלו גם להתאים בזהירות את ההגדרה *מקסימום הדקות של בזאלי אליו SMB מוגבל* כדי לגרום לאלגוריתם להיות אגרסיבי יותר או פחות. בארוחות דלות פחמימות שעתירות שומן\חלבון זה עשוי להספיק להשתמש רק בפחמימות ממושכות ללא בולוסים מקדימים ידניים (ראו את הפוסט בבלוג למעלה). כאשר נוצר רישום פחמימות ממושכות, נוצרת גם תיעוד בנייטסקאוט לתיעוד כל התשומות, כדי להקל על איטרציה ושיפור התשומות.
+**הערות חשובות:** חובה לבדוק בעצמכם ולגלות מהם הערכים המתאימים לכם. ניתן גם להתאים בזהירות את ההגדרה *מספר דקות בזאלי מרבי להגבלת SMB* כדי שהאלגוריתם יהיה אגרסיבי יותר או פחות. בארוחות דלות פחמימות ועתירות שומן/חלבון ייתכן שיספיק להשתמש רק בפחמימות ממושכות, ללא בולוסים ידניים (ראו את הפוסט בבלוג למעלה). כאשר נוצרות פחמימות ממושכות, נוצרת גם הערה ב-Careportal שמתעדת את כל הנתונים שהוזנו. כך קל יותר לנסות שוב ולשפר את הנתונים.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Extended boluses and why they don't work in a closed-loop environment
+## בולוסים ממושכים: למה הם לא עובדים בלולאה סגורה
 
-כפי שהוזכר לעיל בולוסים ממושכים או מרובי גלים לא באמת עובדים בסביבת לולאה סגורה. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+כפי שהוזכר למעלה, בולוסים ממושכים או רב שלביים לא באמת עובדים בלולאה סגורה. [ראו בהמשך](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) לפרטים
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
-### בולוס מושהה ומעבר ללולאה פתוחה - משאבת Dana ו-Insight בלבד
+### בולוס ממושך ומעבר ללולאה פתוחה - משאבות Dana ו-Insight בלבד
 
-חלק מהאנשים ביקשו אפשרות להשתמש בבולוס מושהה ב-AAPS בכל זאת מכיוון שהם רצו להתייחס למזונות מיוחדים כפי שהיו רגילים בעבר.
+חלק מהמשתמשים ביקשו אפשרות להשתמש בבולוס ממושך ב-AAPS בכל זאת, כי רצו לטפל במזונות מיוחדים כפי שהיו רגילים.
 
-That's why **AAPS** offers an extended bolus for users of Dana and Insight pumps: open **Manage** and select **Extended Bolus**.
+לכן **AAPS** מציע בולוס ממושך למשתמשים במשאבות Dana ו-Insight: יש לפתוח את **ניהול** ולבחור **בולוס ממושך**.
 
-**AAPS** first warns you that the closed loop will be stopped while the extended bolus runs. Tap **OK** to continue:
+**AAPS** מזהיר קודם שהלולאה הסגורה תיעצר כל עוד הבולוס הממושך פועל. יש ללחוץ על **אישור** כדי להמשיך:
 
-![Warning: extended bolus stops closed loop mode](../images/extended_bolus_stops_loop.png)
+![אזהרה: בולוס ממושך עוצר את מצב הלולאה הסגורה](../images/extended_bolus_stops_loop.png)
 
-Enter the **Insulin** amount and the **Duration**, then tap the confirm button at the bottom and **OK**:
+יש להזין את כמות ה**אינסולין** ואת ה**משך**, ואז ללחוץ על לחצן האישור בתחתית המסך ועל **אישור**:
 
-![Extended bolus dialog with 2 U over 60 minutes](../images/extended_bolus_dialog.png)
+![חלון בולוס ממושך עם 2 U במשך 60 דקות](../images/extended_bolus_dialog.png)
 
-On the Insight pump, the extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+במשאבת Insight, הבולוס הממושך *אינו זמין* אם משתמשים ב[הדמיית בזאלי זמני](#Accu-Chek-Insight-Pump-settings-in-aaps) (TBR emulation).
 
-While the extended bolus is running, the loop runs in **Open Loop** mode (the loop icon on the main screen changes), and closed loop is switched on again automatically when the extended bolus ends:
+כל עוד הבולוס הממושך פועל, הלולאה פועלת במצב **לולאה פתוחה** (סמל הלולאה במסך הראשי משתנה), והלולאה הסגורה חוזרת לפעול אוטומטית כשהבולוס הממושך מסתיים:
 
-![Open Loop icon on the main screen while an extended bolus is running](../images/extended_bolus_main_screen.png)
+![סמל לולאה פתוחה במסך הראשי בזמן שבולוס ממושך פועל](../images/extended_bolus_main_screen.png)
 
-The **Manage** menu shows a **Cancel** button with the rate and the elapsed / total time (for example **Cancel 2.00 U/h 1/60'**). Tap it to stop the extended bolus early:
+בתפריט **ניהול** מופיע לחצן **ביטול** עם המינון והזמן שעבר / הזמן הכולל (לדוגמה **ביטול 2.00 U/h 1/60'**). לחיצה עליו עוצרת את הבולוס הממושך לפני הזמן:
 
-![Cancel button of a running extended bolus in the Manage menu](../images/extended_bolus_running_manage.png)
+![לחצן הביטול של בולוס ממושך פעיל בתפריט ניהול](../images/extended_bolus_running_manage.png)
 
 (why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
-### הסיבה לכך שבולוסים מושהים לא יעבדו בלולאה סגורה
+### למה בולוסים ממושכים לא יעבדו בלולאה סגורה
 
-1. הלופ קובע שיש לספק עכשיו 1.55 יח'\שעה. לאלגוריתם לא משנה אם המינון הזה יוזרק כבולוס מושהה או כמינון בזאלי זמני. למעשה, חלק מהמשאבות משתמשות בבולוס המושהה. מה צריך לקרות? רוב המשאבות מפסיקות את הבולוס המושהה -> לא היינו צריכים להפעיל אותו.
+1. הלולאה קובעת שעכשיו יש לתת 1.55U/h. לאלגוריתם לא משנה אם המינון הזה יינתן כבולוס ממושך או כבזאלי זמני (TBR). למעשה, חלק מהמשאבות משתמשות בבולוס ממושך. מה צריך לקרות? רוב מנהלי ההתקן של המשאבות מפסיקים אז את הבולוס הממושך -> לא היה צורך אפילו להתחיל אותו.
 
-2. אם הזנו בולוס מושהה מראש, מה צריך לקרות באלגוריתם?
+2. אם הבולוס הממושך הוזן כקלט, מה צריך לקרות במודל?
 
-   1. האם זה אמור להיות מחושב כנייטרלי יחד עם המינון הבזאלי בחישוב של הלולאה? ואז הלולאה אמורה להיות מסוגלת גם להפחית את הבולוס אם למשל יורדים מדי וכל האינסולין ה"נייטרלי" נלקח?
-   2. האם פשוט להוסיף את הבולוס המושהה? אז פשוט צריך לתת ללופ להמשיך? אפילו בהיפו הכי חריף? זהו אינו פיתרון טוב, יש היפו צפוי אבל אסור למנוע אותו?
+   1. האם יש להתייחס אליו כנייטרלי יחד עם הקצב הבזאלי (BR) ולהריץ עליו את הלולאה? ואז הלולאה אמורה להיות מסוגלת גם להפחית את הבולוס אם למשל יורדים מדי וכל האינסולין ה"נייטרלי" נלקח?
+   2. האם פשוט להוסיף את הבולוס הממושך? אז פשוט לתת ללולאה להמשיך? אפילו בהיפו הכי חריף? זהו אינו פיתרון טוב, יש היפו צפוי אבל אסור למנוע אותו?
 
-3. השפעת האינסולין הפעיל שהמצטבר בגלל הבולוס המושהה מתממשת לאחר 5 דקות במדידה הבאה. בהתאם, הלולאה תיתן פחות בזאלי. כך אין הרבה שינויים, חוץ משנבחרה האפשרות בה יש הימנעות מהיפוגליקמיה.
+3. האינסולין הפעיל שהבולוס הממושך צובר מופיע אחרי 5 דקות, בהרצה הבאה. בהתאם לכך, הלולאה תיתן פחות בזאלי. כך שלא הרבה משתנה... חוץ מזה שהאפשרות למנוע היפו נלקחת.

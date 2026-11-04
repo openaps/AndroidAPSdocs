@@ -1,15 +1,15 @@
 # המלצות כלליות של חיישנים רציפים (CGM)
 
-## היגיינה
+## היגיינת CGM
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+ללא קשר למערכת ה-CGM שבה אתם משתמשים, אם אתם מתכוונים לכייל באמצעות בדיקות דם, יש כמה כללים ברורים מאוד שעליכם ליישם, בין שאתם משתמשים בתוכנת CGM בשיטת עשו זאת בעצמכם ובין שבאפליקציות הרשמיות.
 
 -   יש לוודא שהידיים והערכה נקיות.
 -   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
 -   הימנעו מכיול כאשר רמות הסוכר נעות מעלה או מטה.
--   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
+-   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. במערכות בשיטת עשו זאת בעצמכם ייתכן שלא תתבקשו לעשות זאת, ועליכם להיזהר מהמשך שימוש ללא כיולים.
 -   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
--   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
+-   אם רק אפשר, כיילו עם חלק מהקריאות בטווח נמוך (4-5mmol/L או 72-90mg/dL) וחלק ברמה מעט גבוהה יותר (7-9mmol/L או 126-160mg/dL), כי כך מתקבל טווח טוב יותר לכיול הנקודה/השיפוע.
 
 ## הדבקת חיישן Dexcom G6
 
@@ -18,11 +18,11 @@ When setting sensor, it is recommended not to press the inserter too firmly in o
 After setting the sensor, the transmitter can be clicked into the sensor holder. זהירות! First click in the square side and then press down the round side.
 
 (general-cgm-troubleshooting)=
-## Troubleshooting
+## פתרון תקלות
 
 ### בעיה בחיבור
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
+Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. במקרה זה xDrip אינו מציג ערכי סוכר. When Bluetooth connection is re-established the data is backfilled.
 
 ### שגיאות חיישן
 
@@ -32,10 +32,10 @@ Often a "Sensor Error" can be corrected by immediate drinking and massage around
 
 ### ערכים קופצניים
 
-You might try to change settings for noise blocking in xDrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+אפשר לנסות לשנות ב-xDrip את ההגדרות של חסימת רעש (Settings - Inter-App Settings - Noise Blocking), למשל "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### גיל חיישן שלילי
 
-![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
+![גיל החיישן בשורה "חיישן" בלוח המצב המורחב](../images/main/main_status_row_expanded.png)
 
-The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.
+גיל החיישן מוצג בשורה **חיישן** של לוח המצב במסך הראשי (הקישו על החץ כדי להרחיב אותו). גיל שלילי מופיע אם יש רשומת "הכנסת חיישן" כפולה ב[פורטל הטיפולים](#aaps-screens-careportal) או רשומת הכנסת חיישן עם תאריך שגוי. פתחו את **היסטוריית טיפולים** (תפריט ☰), בחרו בלשונית **פורטל טיפולים** ומחקו את הרשומה השגויה.

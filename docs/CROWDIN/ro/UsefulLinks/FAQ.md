@@ -8,7 +8,7 @@ How to add questions to the FAQ: Follow these [instructions](../SupportingAaps/H
 
 Nu. Nu există niciun fișier apk descărcabil pentru AAPS. Trebuie să-l [construiți](../SettingUpAaps/BuildingAaps.md) chiar voi. Iată de ce:
 
-AAPS este utilizat pentru a vă controla pompa și a administra insulină. În conformitate cu reglementările actuale, în Europa, toate sistemele din clasa IIa sau IIb sunt dispozitive medicale care necesită aprobare din partea regulatorilor (un marcaj CE), și care trebuie să aibă diferite studii și semnalizări ale calității. Distribuirea unui dispozitiv nereglementat este ilegală. Reglementări similare există și în alte părți ale lumii.
+AAPS este utilizat pentru a vă controla pompa și a administra insulină. În conformitate cu reglementările actuale din Europa, toate sistemele din clasa IIa sau IIb sunt dispozitive medicale care necesită aprobare din partea autorităților de reglementare (un marcaj CE), pentru care sunt necesare diferite studii și aprobări. Distribuirea unui dispozitiv nereglementat este ilegală. Reglementări similare există și în alte părți ale lumii.
 
 Acest regulament nu se limitează doar la vânzări (în sensul obținerii de bani pentru ceva), ci se aplică oricărui mod de distribuire (chiar și acordarea gratuită). Construirea unui dispozitiv medical pentru propriul uz este singura modalitate de a nu fi afectat de aceste reglementări.
 
@@ -28,17 +28,17 @@ Start with [Preparing to start with AAPS](../Getting-Started/PreparingForAaps.md
 
 În al doilea rând, trebuie **să vă pregătiți componentele software**: [AAPS](../SettingUpAaps/BuildingAaps.md), [sursa CGM/FGM](../Getting-Started/CompatiblesCgms.md) și [un server de raportare](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-În al treilea rând, trebuie să învățați și **să înțelegeți designul de referință OpenAPS pentru a vă verifica factorii de tratament**. Principiul fundamental al buclei închise este că [rata bazală și raportul insulină carbohidrați](../SettingUpAaps/YourAapsProfile.md), ale dumneavoastră, sunt exacte. Toate recomandările presupun că nevoile dumneavoastră bazale sunt îndeplinite și orice creșteri sau scăderi bruște pe care le vedeți sunt un rezultat al altor factori care necesită, prin urmare, unele ajustări punctuale (exercițiu, stres șamd). Ajustările pe care le poate face bucla sunt limitate pentru siguranță (a se vedea bazala temporară maximă permisă în [designul de referință al OpenAPS](https://openaps.org/reference-design/)), ceea ce înseamnă că nu veți dori să pierdeți doza permisă pe corecții necesare pentru a repara greșelile bazalei. Dacă, de exemplu, ajungeți în mod frecvent la rate bazale temporare joase atunci când se apropie o masă, atunci este foarte probabil că sunt necesare ajustări ale bazalei. You can use [Autotune](#autotune-how-autotune-calculates-adjustments) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Sau puteți testa și stabili ratele bazale [folosind metoda tradițională](https://integrateddiabetes.com/basal-testing/).
+În al treilea rând, trebuie să învățați și **să înțelegeți designul de referință OpenAPS pentru a vă verifica factorii de tratament**. Principiul fundamental al buclei închise este că [rata bazală și raportul insulină carbohidrați](../SettingUpAaps/YourAapsProfile.md), ale dumneavoastră, sunt exacte. Toate recomandările presupun că nevoile dumneavoastră bazale sunt îndeplinite și orice creșteri sau scăderi bruște pe care le vedeți sunt un rezultat al altor factori care necesită, prin urmare, unele ajustări punctuale (exercițiu, stres șamd). Ajustările pe care le poate face bucla sunt limitate pentru siguranță (a se vedea bazala temporară maximă permisă în [designul de referință al OpenAPS](https://openaps.org/reference-design/)), ceea ce înseamnă că nu veți dori să pierdeți doza permisă pe corecții necesare pentru a repara greșelile bazalei. Dacă, de exemplu, ajungeți în mod frecvent la rate bazale temporare joase atunci când se apropie o masă, atunci este foarte probabil că sunt necesare ajustări ale bazalei. Puteți folosi [Autotune](#autotune-how-autotune-calculates-adjustments) pentru a analiza o cantitate mare de date și a sugera dacă și cum trebuie ajustate bazalele și/sau ISF, precum și dacă trebuie modificat raportul de carbohidrați. Sau puteți testa și stabili ratele bazale [folosind metoda tradițională](https://integrateddiabetes.com/basal-testing/).
 
 ### Care sunt aspectele practice ale utilizării unui sistem de tip buclă?
 
-#### Protecția parolei
+#### Protecția prin parolă
 
-If you don't want your settings to be easily changed, you can protect them with a password, a PIN or your phone's biometric authentication (fingerprint, face). Open **Settings** > **Protection** > **Settings protection** and choose the type of protection. You can also protect the whole app or only boluses in the same place. See [Settings protection](#Preferences-settings-protection) for details.
+If you don't want your settings to be easily changed, you can protect them with a password, a PIN or your phone's biometric authentication (fingerprint, face). Deschideți **Setări** > **Protecție** > **Protecție setări** și alegeți tipul de protecție. You can also protect the whole app or only boluses in the same place. See [Settings protection](#Preferences-settings-protection) for details.
 
 #### Ceasuri inteligente cu Android Wear
 
-If you use the AAPS watch app to bolus or change settings, every request has to be confirmed on the watch: after you send it, the watch shows a summary with a **CONFIRM** button. See [Remote control from a Wear OS watch](../RemoteFeatures/RemoteControlWearOS.md).
+If you use the AAPS watch app to bolus or change settings, every request has to be confirmed on the watch: after you send it, the watch shows a summary with a **CONFIRM** button. Vedeți [Operarea AAPS prin intermediul ceasului inteligent Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
 (FAQ-disconnect-pump)=
 
@@ -54,12 +54,12 @@ Pentru siguranță, recomandările se bazează nu doar pe o singură citire a CG
 
 #### Referințe suplimentare
 
-There are several blogs with good tips to help you understand the practicalities of looping. Some of them are no longer online: the links below marked "archived copy" open a saved copy on the Internet Archive.
+Există mai multe bloguri cu sfaturi bune care vă ajută să înțelegeți aspectele practice ale utilizării buclei. Unele dintre ele nu mai sunt online: linkurile de mai jos marcate „copie arhivată” deschid o copie salvată pe Internet Archive.
 
-    * [Fine-tuning Settings](https://web.archive.org/web/20171029031305/http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM (archived copy)
-    * [Why DIA matters](https://web.archive.org/web/20231130035027/http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM (archived copy)
+    * [Fine-tuning Settings](https://web.archive.org/web/20171029031305/http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM (copie arhivată)
+    * [Why DIA matters](https://web.archive.org/web/20231130035027/http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM (copie arhivată)
     * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-    * [Hormones and autosens](https://web.archive.org/web/20170902081839/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM (archived copy)
+    * [Hormones and autosens](https://web.archive.org/web/20170902081839/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM (copie arhivată)
     
 
 (what-emergency-equipment-is-recommended-to-take-with-me)= (FAQ-emergency-equipment)=
@@ -73,8 +73,8 @@ Trebuie să aveți cu dumneavoastră același echipament de urgență ca oricare
 * Access to your backups, both on the phone and in the cloud (e.g. Google Drive, Dropbox), so that you can set up AAPS again on another phone (see [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md)): 
   * the current [apk](../SettingUpAaps/BuildingAaps.md) of AAPS and of any other apps you use (e.g. xDrip, Juggluco, BYODA).
   * your keystore file (from building the apk) and its password,
-  * your latest settings export files from AAPS and your other apps,
-  * your **AAPS** master password: you cannot import the settings file without it.
+  * cele mai recente fișiere de export al setărilor din AAPS și din celelalte aplicații,
+  * parola principală **AAPS**: fără ea nu puteți importa fișierul de setări.
 
 (FAQ-organize-backups)=
 
@@ -82,7 +82,7 @@ Trebuie să aveți cu dumneavoastră același echipament de urgență ca oricare
 
 Export settings very regularly: after each pod or reservoir change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Păstrați câteva fișiere vechi de export.
 
-**AAPS** can do this for you: it can export your settings automatically (for example with an [Automation](#ExportImportSettings-Automating-Settings-Export) after each pod change) and save the export directly to a cloud folder (Google Drive). See [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md).
+**AAPS** can do this for you: it can export your settings automatically (for example with an [Automation](#ExportImportSettings-Automating-Settings-Export) after each pod change) and save the export directly to a cloud folder (Google Drive). Vedeți [Crearea și restaurarea copiilor de rezervă](../Maintenance/ExportImportSettings.md).
 
 ### Cum pot atașa în siguranță și în mod securizat dispozitivul CGM/FGM?
 
@@ -106,13 +106,13 @@ With **OpenAPS AMA** selected in **Configuration** > **APS**, **Open plugin** sh
 
 (FAQ-nsclient-blocked)=
 
-#### AAPSClient (or AAPS) does not upload data: "Blocked by…". Ce pot face?
+#### AAPSClient (sau AAPS) nu încarcă date: „Blocat de…”. Ce pot face?
 
-The NSClient status shows why no data is sent:
+Starea NSClient arată de ce nu se trimit date:
 
 * **Blocked by connectivity options**: the connection settings do not allow the current connection. For example, you are on cellular data but only Wi-Fi is allowed, or you are not on one of the allowed Wi-Fi networks (SSIDs).
 * **Blocked by charging options**: the connection settings only allow syncing while the phone is charging (or only on battery), and this is not the case right now.
-* **No connectivity**: the phone has no internet connection.
+* **Fără conexiune**: telefonul nu are conexiune la internet.
 
 Check the [NSClient connection settings](#Preferences-nsclient): **Use cellular data**, **Use roaming**, **Use WiFi**, **WiFi SSID**, **Sync on battery** and **Sync while charging**.
 
@@ -122,7 +122,7 @@ Check the [NSClient connection settings](#Preferences-nsclient): **Use cellular 
 
 #### Why does AAPS say 'SMB always and after carbs disabled because active BG source doesn't support advanced filtering'?
 
-**Enable SMB always** and **Enable SMB after carbs** can only be used with a [trusted BG data source](#GettingStarted-TrustedBGSource): a sensor and CGM app that can tell **AAPS** which sensor the readings come from. With any other BG source, **AAPS** switches these two options off and shows this message. Check the list of trusted sources and, if your sensor is listed, make sure you use one of the CGM apps shown for it. See also [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+**Enable SMB always** and **Enable SMB after carbs** can only be used with a [trusted BG data source](#GettingStarted-TrustedBGSource): a sensor and CGM app that can tell **AAPS** which sensor the readings come from. Cu orice altă sursă de glicemie, **AAPS** dezactivează aceste două opțiuni și afișează acest mesaj. Verificați lista surselor de încredere și, dacă senzorul dumneavoastră este în listă, asigurați-vă că folosiți una dintre aplicațiile CGM indicate pentru el. Vedeți și [Netezirea datelor de glicemie](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Pompă
 
@@ -141,7 +141,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 
 #### Schimbarea rezervoarelor și a canulelor
 
-The reservoir must be changed directly on the pump, then the change is recorded in **AAPS**. Follow the step-by-step [guide for changing the pump reservoir and cannula](#pumps-cannulas-changing-reservoir-and-cannula).
+The reservoir must be changed directly on the pump, then the change is recorded in **AAPS**. Urmați [ghidul pas cu pas pentru schimbarea rezervorului și a canulei pompei](#pumps-cannulas-changing-reservoir-and-cannula).
 
 ### Fundal
 
@@ -149,7 +149,7 @@ Puteți găsi imaginea de fundal AAPS pentru telefonul dumneavoastră pe [pagina
 
 ### Utilizare zilnică
 
-Many of the situations below can be prepared once as a [scene](#scenes): a preset that switches profile, temp target and other settings with one tap. **AAPS** offers ready-made templates, for example *Exercise*, *Sleep*, *Alcohol* or *Bathing*.
+Many of the situations below can be prepared once as a [scene](#scenes): a preset that switches profile, temp target and other settings with one tap. **AAPS** oferă șabloane gata făcute, de exemplu *Activitate fizică*, *Somn*, *Alcool* sau *Baie sau duș*.
 
 #### Igienă
 
@@ -157,7 +157,7 @@ Many of the situations below can be prepared once as a [scene](#scenes): a prese
 
 ##### Ce trebuie făcut când se face duș sau baie?
 
-Puteți îndepărta pompa în timp ce faceți duș sau baie. Pentru această perioadă scurtă de timp s-ar putea să nu aveți nevoie de ea, dar ar trebui să anunțați AAPS că v-ați deconectat astfel încât calculele IOB să fie corecte. Vedeți [descrierea de mai sus](#FAQ-disconnect-pump). The *Bathing* [scene](#scenes) template does this for you.
+Puteți îndepărta pompa în timp ce faceți duș sau baie. Pentru această perioadă scurtă de timp s-ar putea să nu aveți nevoie de ea, dar ar trebui să anunțați AAPS că v-ați deconectat astfel încât calculele IOB să fie corecte. Vedeți [descrierea de mai sus](#FAQ-disconnect-pump). Șablonul de [scenariu](#scenes) *Baie sau duș* face acest lucru pentru dumneavoastră.
 
 #### Serviciu
 
@@ -177,7 +177,7 @@ Când folosiți bucla ar trebui să încercați acești pași:
 
 * Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
 * Setați o [țintă temporară de activitate](#TempTargets-activity-temp-target) peste ținta standard. With a percentage below 100 % and a duration, the same **Activate** screen offers a **Temporary target / Activity** switch that starts both at once.
-* Dacă utilizați SMB, asigurați-vă că ["Activați SMB cu ținte temporare mari"](#Open-APS-features-enable-smb-with-high-temp-targets) și ["Activați SMB întotdeauna"](#Open-APS-features-enable-smb-always) sunt dezactivate.
+* Dacă utilizați SMB, asigurați-vă că ["Activați SMB cu ținte temporare ridicate"](#Open-APS-features-enable-smb-with-high-temp-targets) și ["Activați SMB întotdeauna"](#Open-APS-features-enable-smb-always) sunt dezactivate.
 
 Pre- și post-procesarea acestor setări sunt importante. Faceți schimbările la timp, înainte de sport si luați în considerare efectul de umplere cu glucoză a mușchilor.
 
@@ -194,7 +194,7 @@ Puteți îndepărta pompa pentru a fi „liber”, dar trebuie să anunțați AA
 Consumul de alcool este riscant în modul de buclă închisă deoarece algoritmul nu poate prezice corect dacă alcoolul a influențat glicemia. Trebuie să vă verificați propria metodă de tratare în acest caz, prin folosirea următoarelor funcții în AAPS:
 
 * Dezactivarea modului de buclă închisă și tratarea manuală a diabetului sau
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
+* stabilirea unor ținte temporare ridicate și dezactivarea UAM pentru a evita ca bucla să crească IOB din cauza unei mese neanunțate sau
 * do a [profile switch](#ProfileSwitch-change-percentage) to noticeably less than 100% 
 
 The *Alcohol* [scene](#scenes) template is a starting point you can adapt to your own method.
@@ -213,17 +213,17 @@ Mulți utilizatori activează modul avion pe timp de noapte. If you want the loo
 
 Acum nu mai primiți apeluri și nici nu sunteți conectat la internet. Dar bucla încă rulează.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip) when phone is in airplane mode. In xDrip, go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip) when phone is in airplane mode. În xDrip, mergeți la Settings > Inter-app settings > Identify receiver și introduceți `info.nightscout.androidaps`.
 
-![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+![Setări xDrip: Basic Inter-app Settings, Identify receiver (identificarea receptorului)](../images/xDrip_InterApp_NS.png)
 
 If you want different settings at night (for example a higher target), the *Sleep* [scene](#scenes) template is a good starting point.
 
-#### Traveling
+#### Călătorii
 
 ##### Cum să facem față schimbărilor de fus orar?
 
-Cu Dana R și Dana R Korean nu trebuie să faci nimic. For other pumps see [time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+Cu Dana R și Dana R Korean nu trebuie să faceți nimic. For other pumps see [time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
 
 ### Subiecte medicale
 
@@ -243,7 +243,7 @@ Puteți afișa rapoartele Nightscout (https://YOUR-NS-SITE.com/report) sau să v
 
 See [where to get help](../GettingHelp/WhereCanIGetHelp.md). If you found the solution yourself, **remind us to add it to this list!**
 
-### Building and installing
+### Construire și instalare
 
 (FAQ-build-errors)=
 
@@ -258,13 +258,13 @@ Please check the troubleshooting page for the way you build **AAPS** (see [Build
 
 #### Eroare de construcție: numele fișierului este prea lung
 
-This error can happen when building with Android Studio: the build stops with an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "C:\src\AndroidAPS").
+Această eroare poate apărea la construirea cu Android Studio: construirea se oprește cu o eroare care spune că numele fișierului este prea lung. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "C:\src\AndroidAPS").
 
-Din Android Studio: Asigurați-vă că "Gradle" a terminat de sincronizat și indexat după deschiderea proiectului și extragerea din GitHub. Executați o comandă Construiți->Curățați proiectul înainte de a face Reconstruiți proiectul. Executați fișier->Invalidați cache și Reporniți Android Studio.
+Din Android Studio: Asigurați-vă că "Gradle" a terminat de sincronizat și indexat după deschiderea proiectului și extragerea din GitHub. Executați o comandă Construiți->Curățați proiectul înainte de a face Reconstruiți proiectul. Executați File->Invalidate Caches și reporniți Android Studio.
 
 (FAQ-running-dev-version)=
 
-#### Alertă: Rularea versiunii dev. Bucla închisă este dezactivată
+#### Alertă: Se folosește versiunea dev. Bucla închisă este dezactivată
 
 **AAPS** shows this message when you run a development (dev) version without engineering mode: in a dev version, closed loop only works in engineering mode.
 
@@ -279,11 +279,11 @@ Sugestie: Faceți o copie a unui fișier de jurnal existent și redenumiți-l î
 
 ### Obiective
 
-#### Sunt blocat la un obiectiv și au nevoie de ajutor.
+#### Sunt blocat la un obiectiv și am nevoie de ajutor.
 
 First read [Completing the Objectives](../SettingUpAaps/CompletingTheObjectives.md). If you are still stuck, screen capture the question and answers and post them on the Discord AAPS channel. Nu uitați să spuneți care sunt opțiunile pe care le alegeți (sau nu) și de ce. Veți primi sugestii și ajutor, dar va trebui să găsiți răspunsurile.
 
-### Settings, passwords and backups
+### Setări, parole și copii de rezervă
 
 (FAQ-reset-master-password)=
 
@@ -292,49 +292,49 @@ First read [Completing the Objectives](../SettingUpAaps/CompletingTheObjectives.
 If you forgot your master password, you can reset it to your pump's serial number:
 
 1. Create an empty file named `PasswordReset` (no file extension) in the `extra` subfolder of your AAPS directory (usually `AAPS/extra`).
-2. Restart **AAPS**. Your pump must be connected: **AAPS** shows "Waiting for pump…" and needs to read the pump serial number within 30 seconds.
-3. **AAPS** shows "Password set!": your master password is now your **pump serial number**. The `PasswordReset` file is deleted automatically.
-4. Open **Settings** > **Protection** > **Master password** and set a new password.
+2. Reporniți **AAPS**. Pompa trebuie să fie conectată: **AAPS** afișează „Se așteaptă pompa…” și trebuie să citească numărul de serie al pompei în 30 de secunde.
+3. **AAPS** shows "Password set!": your master password is now your **pump serial number**. Fișierul `PasswordReset` este șters automat.
+4. Deschideți **Setări** > **Protecție** > **Parola principală** și setați o parolă nouă.
 
 If the pump is not reached in time, nothing changes: check the pump connection and try again.
 
-This only resets the master password. A settings, application or bolus password or PIN is not reset, but you can always use the master password instead of them.
+Aceasta resetează doar parola principală. A settings, application or bolus password or PIN is not reset, but you can always use the master password instead of them.
 
-    {admonition} Old settings files
+    {admonition} Fișiere de setări vechi
     :class: warning
-    Settings files exported with the old master password can only be imported with that old password.
+    Fișierele de setări exportate cu vechea parolă principală pot fi importate doar cu acea parolă veche.
 
 (FAQ-where-are-settings-files)=
 
 #### Unde pot găsi fișierele de setări?
 
-Settings files are stored in the `preferences` subfolder of the AAPS directory you chose in the [setup wizard](#SetupWizard-StoragePermission) (for example `/internal storage/AAPS/preferences`). If you set up a cloud folder (Google Drive), your exports can also be saved there. See [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md).
+Settings files are stored in the `preferences` subfolder of the AAPS directory you chose in the [setup wizard](#SetupWizard-StoragePermission) (for example `/internal storage/AAPS/preferences`). If you set up a cloud folder (Google Drive), your exports can also be saved there. Vedeți [Crearea și restaurarea copiilor de rezervă](../Maintenance/ExportImportSettings.md).
 
 AVERTISMENT: Asigurați-vă că nu vă pierdeți parola, deoarece fără ea nu veți putea importa un fișier de setări criptat!
 
 (FAQ-import-settings-earlier-versions)=
 
-#### How do I import settings from earlier versions of AAPS into AAPS v3 or v4 ?
+#### Cum import setările din versiuni mai vechi ale AAPS în AAPS v3 sau v4?
 
 You can only import settings (in AAPS v3 or v4) that were exported using AAPS v2.8x or later. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install the current AAPS version and import v2.8 settings in it.
 
-If you use the same key to build the old and the new version, you won't even have to import settings. You can install the new version over the old one.
+If you use the same key to build the old and the new version, you won't even have to import settings. Puteți instala versiunea nouă peste cea veche.
 
-There were some new objectives added. You'll need to validate them.
+Au fost adăugate câteva obiective noi. Va trebui să le validați.
 
 (FAQ-delete-treatments)=
 
-#### Where can I delete treatments?
+#### Unde pot șterge tratamentele?
 
-Open the **menu** (☰) and select **Treatments history**. Long press an entry to select it, tap more entries if needed, then tap the **trash can** icon and confirm. See [Treatments history](#aaps-screens-treatments).
+Deschideți **meniul** (☰) și selectați **Istoricul tratamentelor**. Long press an entry to select it, tap more entries if needed, then tap the **trash can** icon and confirm. Vedeți [Istoricul tratamentelor](#aaps-screens-treatments).
 
 ### Phone and connection problems
 
 (FAQ-aaps-stops)=
 
-#### AAPS se oprește zilnic cam la același timp.
+#### AAPS se oprește zilnic cam la aceeași oră.
 
-* Google Play Protect may shut down **AAPS** every morning on some phones. If this happens, go to the Google Play options and disable **Google Play Protect**.
+* Google Play Protect poate opri **AAPS** în fiecare dimineață pe unele telefoane. If this happens, go to the Google Play options and disable **Google Play Protect**.
 * Verificați de aplicațiile de "curățare" (spre exemplu CCleaner șamd) și dezinstalați-le.
 * Turn off all battery optimizations for **AAPS** (see [battery savings](#FAQ-battery-savings) below).
 
@@ -346,14 +346,14 @@ Your phone may suspend **AAPS** and related apps (CGM app, Bluetooth) when you a
 
 Turn off battery optimization for **AAPS**, your CGM app (e.g. xDrip) and the Bluetooth system app. The way to do this depends on the phone's brand, model and Android version:
 
-* see [Battery optimization](#generaltroubleshooting-android-related-issues) for Pixel, Samsung and Huawei phones,
+* vedeți [Optimizarea bateriei](#generaltroubleshooting-android-related-issues) pentru telefoanele Pixel, Samsung și Huawei,
 * in **AAPS**, open the **menu** (☰) > **About** and tap **Don't kill my app?**, or visit [Don't kill my app](https://dontkillmyapp.com/) for other brands.
 
 If you are not sure that battery savings cause your problem, you can temporarily turn off all battery savings on the phone: your battery will drain faster, but you will quickly see if the problem goes away.
 
 (FAQ-pump-unreachable-alerts)=
 
-#### Alerte ale pompei inaccesibile de mai multe ori pe zi sau noapte.
+#### Alerte „Pompă indisponibilă” de mai multe ori pe zi sau noaptea.
 
 Your phone may be suspending **AAPS** or even Bluetooth, causing it to lose the connection to the pump or RileyLink (see [battery savings](#FAQ-battery-savings) above).
 
@@ -363,51 +363,51 @@ You can also change when the alert is raised: press the **Settings** (gear) icon
 
 #### Dispozitivul de tip RileyLink/pompa nu răspund (RL/OL/EmaLink…)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
+Cu unele telefoane, apar deconectări Bluetooth de la dispozitivele de legătură (RL/OL/EmaLink).
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
+Unele au și dispozitive de legătură care nu răspund (AAPS arată că sunt conectate, dar dispozitivele de legătură nu pot ajunge la pompă sau nu o pot comanda).
 
 First try the **Reset RileyLink** button on the pump screen (see your pump's page: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). If this does not help, the easiest way to get all these parts working together is:
 
-1. Power off the Link.
+1. Opriți dispozitivul de legătură (Link).
 2. Quit **AAPS** (**menu** (☰) > **Exit**).
 3. Long press the **AAPS** icon, open the Android **App info**, tap **Force stop**, then **Storage** > **Clear cache** (do NOT clear storage/data!).
 4. Rarely some phones may need a reboot here. Puteți încerca fără repornire.
-5. Power on the Link.
-6. Start **AAPS**.
+5. Porniți dispozitivul de legătură (Link).
+6. Porniți **AAPS**.
 7. On the pump screen, tap **Pair RileyLink** and select your Link again.
 
-### Remote control
+### Control de la distanță
 
 (FAQ-aapsclient)=
 
 #### Configurarea și utilizarea aplicației la distanță AAPSClient
 
-**AAPSClient** is a separate app that lets a caregiver follow and control **AAPS** remotely. Since **AAPS** v4, controlling **AAPS** from AAPSClient needs a one-time pairing between the two apps. See:
+**AAPSClient** este o aplicație separată care permite unui îngrijitor să urmărească și să controleze **AAPS** de la distanță. Începând cu **AAPS** v4, controlul **AAPS** din AAPSClient necesită o asociere unică între cele două aplicații. Vedeți:
 
-* [The AAPSClient app](#aapsclient-app): installing, first start and pairing,
-* [Master ↔ Client control](#client-master-control): what can be controlled and how pairing works,
-* [AAPSClient on a smartwatch](#remotecontrol-smartwatches).
+* [Aplicația AAPSClient](#aapsclient-app): instalare, prima pornire și asociere,
+* [Controlul dispozitiv principal ↔ client](#client-master-control): ce se poate controla și cum funcționează asocierea,
+* [AAPSClient pe un ceas inteligent](#remotecontrol-smartwatches).
 
 (FAQ-hardened-mode)=
 
-#### Treatments I enter on the Nightscout website are not applied
+#### Tratamentele pe care le introduc pe site-ul Nightscout nu sunt aplicate
 
-That is [hardened mode](#client-master-control-hardened-mode). While client control is on — always in Simple Mode — **AAPS** takes changes only from paired clients, not from the Nightscout website or other apps. Enter them on a paired **AAPSClient** instead.
+Acesta este [modul securizat](#client-master-control-hardened-mode). While client control is on — always in Simple Mode — **AAPS** takes changes only from paired clients, not from the Nightscout website or other apps. Enter them on a paired **AAPSClient** instead.
 
 ### Alerts and warnings
 
-#### I have a red warning badge (red triangle) / AAPS won't enable closed loop / Loop stays in LGS / I had a yellow triangle
+#### Am o insignă roșie de avertizare (triunghi roșu) / AAPS nu activează bucla închisă / Bucla rămâne în LGS / Am avut un triunghi galben
 
 The red warning badge on the BG source shortcut is a security feature in AAPS. See [BG warning sign](#aaps-screens-bg-warning-sign) for the full explanation.
 
 A red warning badge on the BG source shortcut in the bottom bar (the red triangle of older versions) means that you have duplicate BGs and AAPS can't calculate precisely the deltas. A closed loop is switched to **Low Glucose Suspend** mode: it still reduces or suspends your basal to protect you against lows, but it gives no correction insulin. You need to delete one BG of each duplicated value in order to clear the warning. Tap the shortcut to open your [BG source screen](#aaps-screens-bg-source): the duplicate is highlighted in red. Long press one line you want to delete, check one of each lines that are doubled and tap the trash icon. You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also lose stats, IOB, COB, selected profile.
 
-Once the warning is gone, AAPS does not go back to **Closed Loop** by itself. Press the loop icon on the main screen and select **Closed Loop** again.
+Once the warning is gone, AAPS does not go back to **Closed Loop** by itself. Apăsați pictograma buclei de pe ecranul principal și selectați din nou **Buclă închisă**.
 
 Possible origin of the problem: xDrip and/or NS backfilling BGs.
 
-The yellow triangle of older versions meant unstable delay between each BG reading (BGs not received every 5 min regularly, or missing BGs), which often happens with Libre or after a G6 transmitter change. **AAPS** 4 no longer shows it: it recalculates the values in the background and the loop works correctly.
+The yellow triangle of older versions meant unstable delay between each BG reading (BGs not received every 5 min regularly, or missing BGs), which often happens with Libre or after a G6 transmitter change. **AAPS** 4 nu îl mai afișează: recalculează valorile în fundal, iar bucla funcționează corect.
 
 ### Omnipod DASH
 
@@ -417,7 +417,7 @@ The yellow triangle of older versions meant unstable delay between each BG readi
 
 The Pod state is included in the exported settings, so an active Pod can be moved to another phone by exporting the settings right before the move and importing them on the other phone. This is not officially supported and there is a risk of losing the Pod: if possible, try it when your Pod is about to expire.
 
-Read these sections first:
+Citiți mai întâi aceste secțiuni:
 
-* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
+* [Exportul și importul setărilor](#omnipod-dash-export-import) pe pagina Omnipod DASH și [Pompe fără tub](#ExportImportSettings-tubeless-pumps): pe telefonul nou, bifați **Înlocuiți și setările pompei** și folosiți un fișier exportat în timp ce purtați pompa (Pod) actuală,
 * [Discarding a pod](#omnipod-dash-discard-pod), to remove the Pod from the old phone afterwards. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.

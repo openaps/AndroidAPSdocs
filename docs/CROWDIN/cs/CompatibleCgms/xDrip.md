@@ -10,7 +10,7 @@ Pro aplikaci xDrip vypněte optimalizaci baterie a povolte činnost na pozadí.
 
 Nedovolte žádné jiné aplikaci nahrávat data (glykémii a ošetření) do Nightscoutu.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
+→ Nabídka (☰) (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → `Enabled` přepněte na **OFF** (5)
 
 ![Základní nastavení xDrip 1](../images/xDrip_Basic1.png)
 
@@ -34,7 +34,7 @@ Možnost `Alert on failures` by také měla být vypnutá (10). Jinak dostanete 
 
 ### **Inter-app Settings** (vysílání)
 
-If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
+Pokud používáte AAPS, musíte v xDrip v Inter-App settings zapnout vysílání, aby se data předávala do AAPS.
 
 → Nabídka (☰) (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
 
@@ -99,7 +99,7 @@ Postupujte podle návodů:
 #### Výměna vysílače
 
 - Vypněte původní přijímač Dexcom (pokud ho používáte) a nezapínejte ho znovu, dokud xDrip nezobrazuje hodnoty.
-- Forget the device in xDrip (System Status → Forget Device) AND in the smartphone's Bluetooth settings (shown as DexcomXX where XX are the last two digits of the transmitter serial number).
+- Odeberte zařízení v xDrip (System Status → Forget Device) A TAKÉ v nastavení Bluetooth v telefonu (zobrazuje se jako DexcomXX, kde XX jsou poslední dvě číslice sériového čísla vysílače).
 - Starý vysílač udržujte mimo dosah Bluetooth, aby se znovu nepřipojil.
 - Pak postupujte podle návodu [Spuštění vysílače G6 nebo ONE](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 

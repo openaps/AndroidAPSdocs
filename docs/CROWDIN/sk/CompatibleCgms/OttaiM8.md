@@ -7,7 +7,7 @@
 
 -   Spustite senzor
 
-- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Vyberte **Syai/Ottai** v [**Konfigurácia → Zdroj glykémie**](#Config-Builder-bg-source).
 
 Zapnite vysielanie v aplikácii Ottai:
 

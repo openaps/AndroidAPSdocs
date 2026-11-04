@@ -1,9 +1,9 @@
-# State of translation for the app and the documentation
+# Stato della traduzione dell'app e della documentazione
 
 The state is once per hour updated and reflects only the state in Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
+Attenzione: la percentuale di revisione è sempre minore o uguale alla percentuale di traduzione, ma Crowdin la mostra sopra le traduzioni.
 It's better to look only at the percentage level of translations to see if work is to be done.
 ```
 
@@ -13,14 +13,14 @@ After Crowdin translation a sync to Github is scheduled every day to transfer tr
 The acceptance of the PR is a manual task which will be done as fast as possible.
 ```
 
-## state app translation
+## Stato della traduzione dell'app
 
 State of the **app** translations per language (country code, percentage translation, percentage proofreading).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![Stato della traduzione dell'app](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## Stato della traduzione della documentazione
 
 State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![Stato della traduzione della documentazione](https://badges.awesome-crowdin.com/translation-13588158-310610.png)

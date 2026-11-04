@@ -1,24 +1,24 @@
-# Build instructions for the command-line
+# Bygginstruktioner för kommandoraden
 
 ```{admonition} For users familiar with the command-line and git
 :class: note
 
-The simplest option to build AAPS is the [Browser build](./BrowserBuild.md) alternative.
+Det enklaste sättet att bygga AAPS är alternativet [Bygge i webbläsaren](./BrowserBuild.md).
 ```
 
-Tested with Fedora and Debian Linux, other systems should work with minimal adjustments.
+Testat med Fedora och Debian Linux. Andra system bör fungera med små ändringar.
 
-## Requirements
+## Krav
 
-Consult the minimum required Java version from [this table](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Install the appropriate OpenJDK package using the system package manager. For example in Debian, the packages are named like `openjdk-21-jdk`. It should include `javac` and `keytool` binaries.
+Se vilken Java-version som minst krävs i [den här tabellen](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Installera rätt OpenJDK-paket med systemets pakethanterare. I Debian heter paketen till exempel `openjdk-21-jdk`. Det ska innehålla programmen `javac` och `keytool`.
 
-Download the *Android Command line tools* package from the [Android Studio page](https://developer.android.com/studio#command-line-tools-only). Android Studio itself is not required. More information about installing this package is found in [sdkmanager docs](https://developer.android.com/tools/sdkmanager). After the package is installed, you should manually set two [environment variables](https://developer.android.com/tools/variables): `ANDROID_HOME` and `PATH`. Finally, run `sdkmanager --licenses` to finish the installation.
+Ladda ned paketet *Android Command line tools* från [Android Studio-sidan](https://developer.android.com/studio#command-line-tools-only). Själva Android Studio behövs inte. Mer information om hur du installerar paketet finns i [dokumentationen för sdkmanager](https://developer.android.com/tools/sdkmanager). När paketet är installerat ska du själv ställa in två [miljövariabler](https://developer.android.com/tools/variables): `ANDROID_HOME` och `PATH`. Kör till sist `sdkmanager --licenses` för att slutföra installationen.
 
-## Building AAPS with Gradle wrapper
+## Bygga AAPS med Gradle wrapper
 
-### 1. Generate a Java keystore file for signing AAPS
+### 1. Skapa en Java-keystore-fil för att signera AAPS
 
-If you already have a keystore file for signing AAPS, reuse that.
+Om du redan har en keystore-fil för att signera AAPS, använd den igen.
 
 ```sh
 keytool -genkeypair -v \
@@ -29,19 +29,19 @@ keytool -genkeypair -v \
   -validity 20000
 ```
 
-You will need the keystore file and passphrase every time you update AAPS.
+Du behöver keystore-filen och lösenfrasen varje gång du uppdaterar AAPS.
 
-### 2. Compile the AAPS APK file
+### 2. Kompilera APK-filen för AAPS
 
-Clone the [git repo](https://github.com/nightscout/AndroidAPS) if not already cloned. AAPS uses the master branch for the latest stable version; ensure you are on the branch/tag you want to build.
+Klona [git-repot](https://github.com/nightscout/AndroidAPS) om du inte redan har gjort det. AAPS använder master-grenen för den senaste stabila versionen. Se till att du är på den gren/tagg som du vill bygga.
 
-Run `./gradlew :app:assembleFullRelease` in the repo. It automatically downloads Gradle, dependencies, and then compiles the code. When the build succeeds, you should have an unsigned APK at `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. It should have also installed an `apksigner` binary to `$ANDROID_HOME`. Update your `PATH` again.
+Kör `./gradlew :app:assembleFullRelease` i repot. Gradle och alla beroenden laddas ned automatiskt, och sedan kompileras koden. När bygget lyckas ska du ha en osignerad APK-fil i `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. Programmet `apksigner` ska också ha installerats i `$ANDROID_HOME`. Uppdatera din `PATH` igen.
 
-### 3. Create a signed APK file from the unsigned one
+### 3. Skapa en signerad APK-fil från den osignerade
 
 <!-- Suggest building outside the git repo, to minimize risk of accidental APK commits -->
 
-Change to your home directory and create a signed APK file:
+Gå till din hemkatalog och skapa en signerad APK-fil:
 
 ```sh
 apksigner sign \
@@ -51,4 +51,4 @@ apksigner sign \
   ./AndroidAPS/app/build/outputs/apk/full/release/app-full-release-unsigned.apk
 ```
 
-Now you have `app-full-release-signed.apk` ready for installation or upgrade.
+Nu har du `app-full-release-signed.apk` klar att installera eller uppgradera.

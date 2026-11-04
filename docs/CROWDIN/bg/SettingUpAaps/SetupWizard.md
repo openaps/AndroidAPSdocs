@@ -122,7 +122,7 @@ Android изисква специално разрешение за прилож
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. На Android 12 натиснете `Battery` (Батерия), а на Android 13+ натиснете `App battery usage` (Използване на батерията от приложението).
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
@@ -454,7 +454,7 @@ Android изисква специално разрешение за прилож
 
 ![Потвърждение при избор на истинска помпа](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
+Ако избраната помпа комуникира чрез Bluetooth, **AAPS** ще поиска разрешение за свързване с устройства наблизо, след като завършите съветника (вижте [Разрешение за Bluetooth](#setup-wizard-bluetooth-permission)).
 
 Ако вече сте настроили профила си и знаете как да свържете помпата си, можете да я свържете сега. Иначе засега оставете **Виртуална помпа** – можете да я смените по всяко време или да излезете от съветника за настройване със стрелката в горния ляв ъгъл и да оставите **AAPS** първо да ви покаже няколко стойности на кръвната захар.
 
@@ -505,7 +505,7 @@ OpenAPS AMA е най-простият алгоритъм. Той не подд�
 
 Тук стартираме Цел 1, въпреки че в момента настройката ни още не е напълно готова, за да изпълним успешно тази цел. Но това е началото.
 
-Press the "**Start**" button of **Objective 1**:
+Натиснете бутона „**Старт**“ на **Цел 1**:
 
 ![Списък с целите](../images/setup-wizard/Wizard-Objectives-List.png)
 

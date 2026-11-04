@@ -5,43 +5,43 @@
 
 Im Rahmen einer normalen Pumpen-Therapie sind verzögerte Boli ein guter Weg, um mit fettigen oder sonstigen langsam absorbierenden Mahlzeiten zurecht zu kommen, die die Glukosewerte im Blut länger erhöhen als das Insulin wirkt. Im Zusammenhang mit dem Loopen sind jedoch verzögerte Boli wenig sinnvoll (und werfen technische Schwierigkeiten auf), da sie im Grunde eine feste hohe temporäre Basalrate darstellen, was der normalen Funktionsweise des Loops - der die Basalraten dynamisch anpasst - widerspricht. Details zum [verzögerten Bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) findest Du unten.
 
-Es gibt aber trotzdem das Bedürfnis, mit solchen Mahlzeiten umzugehen. Which is why AAPS supports so called extended carbs or eCarbs.
+Es gibt aber trotzdem das Bedürfnis, mit solchen Mahlzeiten umzugehen. Deshalb unterstützt AAPS sogenannte verzögerte Kohlenhydrate oder eCarbs.
 
-eCarbs are carbs that are split up over several hours. Bei einer Standardmahlzeit, die mehr Kohlenhydrate enthält als Fett/Eiweiß, ist die Eingabe der Kohlenhydrate vor dem Verzehr (ggf. unter Reduzierung des Mahlzeiten-Bolus) normalerweise ausreichend, um eine zu frühe Insulinabgabe zu verhindern.  Aber bei langsamer absorbierenden Mahlzeiten, bei denen eine auf einmal eingegebene Kohlenhydratmenge dazu führen würde, dass der SMB zu viel IOB aufbaut, können eCarbs verwendet werden, um besser zu simulieren, wie die Kohlenhydrate (und alle anderen blutzuckersteigernden Faktoren) wirklich absorbiert werden und sich auf den Blutzuckerspiegel auswirken. Mit diesen Informationen kann der Loop den SMB zur Bewältigung dieser Kohlenhydrate besser einsetzen, was als eine Art dynamischer verzögerter Bolus zu sehen ist (dies sollte auch ohne SMB funktionieren, ist dann aber wahrscheinlich nicht so effektiv).
+eCarbs sind Kohlenhydrate, die auf mehrere Stunden verteilt werden. Bei einer Standardmahlzeit, die mehr Kohlenhydrate enthält als Fett/Eiweiß, ist die Eingabe der Kohlenhydrate vor dem Verzehr (ggf. unter Reduzierung des Mahlzeiten-Bolus) normalerweise ausreichend, um eine zu frühe Insulinabgabe zu verhindern.  Aber bei langsamer absorbierenden Mahlzeiten, bei denen eine auf einmal eingegebene Kohlenhydratmenge dazu führen würde, dass der SMB zu viel IOB aufbaut, können eCarbs verwendet werden, um besser zu simulieren, wie die Kohlenhydrate (und alle anderen blutzuckersteigernden Faktoren) wirklich absorbiert werden und sich auf den Blutzuckerspiegel auswirken. Mit diesen Informationen kann der Loop den SMB zur Bewältigung dieser Kohlenhydrate besser einsetzen, was als eine Art dynamischer verzögerter Bolus zu sehen ist (dies sollte auch ohne SMB funktionieren, ist dann aber wahrscheinlich nicht so effektiv).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Hinweis:** eCarbs sind nicht auf fett- oder eiweißreiche Mahlzeiten beschränkt: Sie können auch in allen Situationen helfen, in denen andere Einflüsse den Glukosewert steigen lassen, z. B. andere Medikamente wie Kortikosteroide.
 
 ## Methoden der Verwendung von eCarbs
 
-To enter eCarbs, open the **Carbs** dialog (**Treatments** → **Carbs**), enter the total carbs, set a **Duration**, and optionally shift the start with **Carb time** (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
+Um eCarbs einzugeben, öffne den Dialog **Kohlenhydrate** (**Behandlungen** → **Kohlenhydrate**), gib die gesamten Kohlenhydrate ein, setze eine **Dauer** und verschiebe bei Bedarf den Beginn mit **KH-Zeit** (*die Zahlen unten sind nur Beispiele, Du musst Deine eigenen Werte ausprobieren, bis der Glukoseverlauf für Deine Anwendungsfälle passt*):
 
 ![Kohlenhydrate eingeben](../images/eCarbs_Dialog.png)
 
-The eCarbs on the main screen: the number in brackets in the **COB** field shows the carbs still to come, and the **COB** graph shows each future eCarbs entry as an orange marker. If you don't see a **COB** graph, add one with **Add graph** below the graphs (see [AAPS screens](../DailyLifeWithAaps/AapsScreens.md)).
+Die eCarbs auf dem Startbildschirm: Die Zahl in Klammern im Feld **COB** zeigt die noch kommenden Kohlenhydrate, und das **COB**-Diagramm zeigt jeden künftigen eCarbs-Eintrag als orangefarbene Markierung. Wenn Du kein **COB**-Diagramm siehst, füge eines mit **Diagramm hinzufügen** unterhalb der Diagramme hinzu (siehe [AAPS-Bildschirme](../DailyLifeWithAaps/AapsScreens.md)).
 
 ![eCarbs in the COB field and on the COB graph](../images/eCarbs_Graph.png)
 
 (AapsScreens-carbs-type)=
-## Carbs type in the Bolus wizard: bread, cake or pizza
+## Kohlenhydrat-Typ im Bolus-Rechner: Brot, Kuchen oder Pizza
 
-In the [Bolus wizard](#aaps-screens-bolus-wizard), three buttons below the **Carbs** field let you choose how fast your meal is absorbed. Pick one before you confirm. Depending on the type, **AAPS** takes a part of the carbs you typed as normal carbs, and adds [extended carbs ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) later for slow, rich meals. Press the **(i)** icon next to the buttons to see the typical foods for the selected type and what it does to your carbs.
+Im [Bolus-Rechner](#aaps-screens-bolus-wizard) kannst Du mit drei Knöpfen unter dem Feld **Kohlenhydrate** auswählen, wie schnell Deine Mahlzeit aufgenommen wird. Wähle einen davon, bevor Du bestätigst. Je nach Typ verbucht **AAPS** einen Teil der eingegebenen Kohlenhydrate als normale Kohlenhydrate und fügt bei langsamen, reichhaltigen Mahlzeiten später [verzögerte Kohlenhydrate („eCarbs“)](#Extended-Carbs-extended-carbs-ecarbs) hinzu. Tippe auf das Symbol **(i)** neben den Knöpfen, um die typischen Lebensmittel für den gewählten Typ zu sehen und was er mit Deinen Kohlenhydraten macht.
 
-| Type                | Typical foods (examples from the app)                                                                | Carbs now, used for the bolus | eCarbs added                                         |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------- |
-| **Bread** (default) | Bread, savory pastries, yogurt, fruit, potatoes, rice, oatmeal, vegetables                           | 100 %                         | Keine                                                |
-| **Cake**            | Dumplings, pasta, Asian dishes rich in carbs and fats, sweet and yeast pastries, cereals, honey, jam | 90 %                          | 20 %, starting 60 minutes later, spread over 2 hours |
-| **Pizza**           | Lasagna, pizza, hamburgers, fries, baked potatoes, chips                                             | 80 %                          | 35 %, starting 60 minutes later, spread over 3 hours |
+| Typ                 | Typische Lebensmittel (Beispiele aus der App)                                                       | Kohlenhydrate jetzt, für den Bolus verwendet | Hinzugefügte eCarbs                                       |
+| ------------------- | --------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------- |
+| **Brot** (Standard) | Brot, salziges Gebäck, Joghurt, Obst, Kartoffeln, Reis, Hafer, Gemüse                               | 100 %                                        | Keine                                                     |
+| **Kuchen**          | Knödel, Nudeln, asiatische Küche (KH- und fettreich), Süß- und Hefeteig, Getreide, Honig, Marmelade | 90 %                                         | 20 %, beginnend 60 Minuten später, verteilt auf 2 Stunden |
+| **Pizza**           | Lasagne, Pizza, Hamburger, Pommes, gebackene Kartoffeln, Chips                                      | 80 %                                         | 35 %, beginnend 60 Minuten später, verteilt auf 3 Stunden |
 
-**Example**: you type 100 g and choose **Pizza**. The bolus is calculated for 80 g, recorded now. 35 g of eCarbs start 1 hour later and are spread over 3 hours.
+**Beispiel**: Du gibst 100 g ein und wählst **Pizza**. Der Bolus wird für 80 g berechnet, die jetzt erfasst werden. 35 g eCarbs beginnen 1 Stunde später und werden auf 3 Stunden verteilt.
 
 Gut zu wissen:
-* This is not a simple split: with **Cake** and **Pizza**, the carbs recorded add up to **more than you typed** (110 % and 115 %). The extra is only in the eCarbs.
-* The bolus only covers the carbs taken now. **AAPS** does not bolus up front for the eCarbs: the loop takes them into account once they start, like any other [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
-* If you set a **Carb time**, the eCarbs start 60 minutes after that time.
-* The confirmation dialog shows the eCarbs on their own line, _e.g._ "eCarbs 35g / 3h (+60min)".
-* Grams are rounded down to whole numbers.
-* The percentages, delays and durations are fixed; they can't be changed in the settings.
-* The choice is not remembered: the wizard opens on **Bread** every time.
+* Das ist keine einfache Aufteilung: Bei **Kuchen** und **Pizza** ergeben die erfassten Kohlenhydrate zusammen **mehr, als Du eingegeben hast** (110 % bzw. 115 %). Der Zuschlag steckt nur in den eCarbs.
+* Der Bolus deckt nur die jetzt gegessenen Kohlenhydrate ab. **AAPS** gibt für die eCarbs keinen Bolus im Voraus ab: Der Loop berücksichtigt sie, sobald sie beginnen, wie alle anderen [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
+* Wenn Du eine **KH-Zeit** einstellst, beginnen die eCarbs 60 Minuten nach diesem Zeitpunkt.
+* Der Bestätigungsdialog zeigt die eCarbs in einer eigenen Zeile, _z. B._ "eCarbs 35g / 3h (+60min)".
+* Die Gramm werden auf ganze Zahlen abgerundet.
+* Prozentsätze, Verzögerungen und Dauern sind fest vorgegeben und lassen sich in den Einstellungen nicht ändern.
+* Die Auswahl wird nicht gespeichert: Der Rechner öffnet sich jedes Mal mit **Brot**.
 
 ______________________________________________________________________
 
@@ -53,39 +53,39 @@ ______________________________________________________________________
 
 Es wird empfohlen, das APS-Plugin "OpenAPS SMB" zu nutzen, SMB zu aktivieren und die Einstellung *Aktiviere SMB während aktiver Kohlenhydrate* zu aktivieren.
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *Bolus wizard* and then use the *Carbs* dialog to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
+Bei einer Pizza könnte man z. B. über den *Bolus-Rechner* vorab einen (Teil-)Bolus abgeben und dann im Dialog *Kohlenhydrate* die restlichen Kohlenhydrate für eine Dauer von 4-6 Stunden eingeben, beginnend nach 1 oder 2 Stunden.
 
-For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carbs type](#AapsScreens-carbs-type) **Cake** or **Pizza** below the **Carbs** field (see above). The amounts and timing are fixed, so use the *Carbs* dialog instead if you want other values.
+Schneller geht es, wenn der *Bolus-Rechner* die eCarbs für Dich hinzufügt: Wähle unter dem Feld **Kohlenhydrate** den [Kohlenhydrat-Typ](#AapsScreens-carbs-type) **Kuchen** oder **Pizza** (siehe oben). Mengen und Zeiten sind fest vorgegeben. Wenn Du andere Werte möchtest, nutze stattdessen den Dialog *Kohlenhydrate*.
 
 **Wichtiger Hinweis:** Du musst natürlich ausprobieren und sehen, welche konkreten Werte für dich funktionieren. Du könntest auch die Einstellung *SMB-Basal-Limit in Minuten* vorsichtig anpassen, um den Algorithmus mehr oder weniger aggressiv zu einzustellen. Bei Low-Carb-Ernährung und fett-/eiweißreichen Mahlzeiten reicht es möglicherweise aus, nur eCarbs ohne manuellem Mahlzeitenbolus einzugeben (mehr dazu im Blogbeitrag oben). Wenn eCarbs eingegeben werden, wird im Careportal automatisch eine Notiz angelegt, damit es einfacher ist, die Eingaben zu überprüfen und zu verbessern.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Extended boluses and why they don't work in a closed-loop environment
+## Verzögerte Boli und warum sie im Closed Loop nicht funktionieren
 
-Wie oben bereits erwähnt sind verzögerte oder sog. Multi-Wave-Boli beim Loopen nicht sinnvoll. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+Wie oben bereits erwähnt sind verzögerte oder sog. Multi-Wave-Boli beim Loopen nicht sinnvoll. Details [findest Du unten](#why-extended-boluses-won-t-work-in-a-closed-loop-environment).
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Verzögerter Bolus und Wechsel zum Open Loop - nur für Dana- und Insight-Pumpe
 
 Es kam immer wieder der Wunsch auf, verzögerte Boli auch in AAPS zu nutzen, um spezielle Mahlzeiten wie gewohnt behandeln zu können.
 
-That's why **AAPS** offers an extended bolus for users of Dana and Insight pumps: open **Manage** and select **Extended Bolus**.
+Deshalb bietet **AAPS** Nutzern von Dana- und Insight-Pumpen einen verzögerten Bolus an: Öffne **Bearbeiten** und wähle **Verzögerter Bolus**.
 
-**AAPS** first warns you that the closed loop will be stopped while the extended bolus runs. Tap **OK** to continue:
+**AAPS** warnt Dich zunächst, dass der Closed Loop angehalten wird, solange der verzögerte Bolus läuft. Tippe auf **OK**, um fortzufahren:
 
 ![Warning: extended bolus stops closed loop mode](../images/extended_bolus_stops_loop.png)
 
-Enter the **Insulin** amount and the **Duration**, then tap the confirm button at the bottom and **OK**:
+Gib die **Insulin**-Menge und die **Dauer** ein, tippe dann unten auf den Bestätigungsknopf und auf **OK**:
 
 ![Extended bolus dialog with 2 U over 60 minutes](../images/extended_bolus_dialog.png)
 
-On the Insight pump, the extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+Bei der Insight-Pumpe ist der verzögerte Bolus *nicht verfügbar*, wenn die [TBR-Emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) verwendet wird.
 
-While the extended bolus is running, the loop runs in **Open Loop** mode (the loop icon on the main screen changes), and closed loop is switched on again automatically when the extended bolus ends:
+Während der verzögerte Bolus läuft, arbeitet der Loop im Modus **Open Loop** (das Loop-Symbol auf dem Startbildschirm ändert sich). Wenn der verzögerte Bolus endet, wird der Closed Loop automatisch wieder eingeschaltet:
 
 ![Open Loop icon on the main screen while an extended bolus is running](../images/extended_bolus_main_screen.png)
 
-The **Manage** menu shows a **Cancel** button with the rate and the elapsed / total time (for example **Cancel 2.00 U/h 1/60'**). Tap it to stop the extended bolus early:
+Das Menü **Bearbeiten** zeigt einen Knopf **Abbrechen** mit der Rate und der abgelaufenen / gesamten Zeit (zum Beispiel **Abbrechen 2.00 IE/h 1/60'**). Tippe darauf, um den verzögerten Bolus vorzeitig zu beenden:
 
 ![Cancel button of a running extended bolus in the Manage menu](../images/extended_bolus_running_manage.png)
 

@@ -2,235 +2,235 @@
 
 ## Geçici Hedefler nedir ve bunları nerede ayarlayabilir ve yapılandırabilirim?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+**Geçici Hedef** (kısaca **GH**), kullanıcının planlanan etkinlikler için [**KŞ** hedef aralığını](#profile-glucose-targets) değiştirmesini sağlayan bir **AAPS** özelliğidir. Bunu **AAPS**, kullanıcının insülin kullanımını değiştirerek yapar.
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+Bir glikoz hedefi, özellikle yalnızca kısa süreliyse (4 saatten kısa), glikoz seviyenizin ulaşmasını beklediğiniz veya istediğiniz *gerçek değer* olmak zorunda değildir. Daha çok, glikoz seviyelerinizi hedef aralıkta tutarken **AAPS**'e daha agresif veya daha az agresif olmasını söylemenin iyi bir yoludur.
 
-Temporary targets can be defined within those boundaries :
+Geçici hedefler şu sınırlar içinde tanımlanabilir:
 
-|         | Geçici hedef           |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/L or 72 mg/dL   |
-| Maximum | 10 mmol/L or 180 mg/dL |
+|          | Geçici hedef             |
+| -------- | ------------------------ |
+| Minimum  | 4 mmol/L veya 72 mg/dL   |
+| Maksimum | 10 mmol/L veya 180 mg/dL |
 
-**AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). They live on the **Temp Target** screen (**Manage** → **Temp Target**), which you can also open by simply tapping the **target chip** on the main screen.
+**AAPS**, egzersiz (**Aktivite**), öğünler (**Yakında Yenecek**) ve tahmin edilen hipoglisemi (**Hipo**) için uygun üç yerleşik **Geçici Hedef** ön ayarı sunar. Bunlar **Geçici Hedef** ekranında (**Yönet** → **Geçici Hedef**) bulunur; bu ekranı ana ekrandaki **hedef çipine** dokunarak da açabilirsiniz.
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+Kullanıcılar, **AAPS**'te bir **Geçici Hedef** seçerken elde edilebilecek sonuçlar konusunda gerçekçi beklentilere sahip olmalıdır. İstenen **KŞ** hedefine ulaşmanın başarısı birçok etkene bağlıdır: kullanıcının **AAPS** ayarlarının güvenilirliği, genel **KŞ** kontrolü, **AİNS**, insülin duyarlılığı, insülin direnci, egzersiz sırasındaki efor düzeyi vb.
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+Bir **Geçici Hedef**in istenen **KŞ** hedefine ulaşması yaklaşık 30 dakika veya daha uzun sürebilir. **AAPS**'in bir **KŞ** hedefine hemen ulaşması mümkün değildir; kullanıcılar bir **Geçici Hedef** seçerken bunu göz önünde bulundurmalıdır.
 
-The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. The values shown are the shipped defaults — you can [adjust each preset](#TempTargets-change-preset-defaults) to your own needs.
+Aşağıdaki bölümler **Geçici Hedef Aktivite**, **Geçici Hedef Yakında Yenecek** ve **Geçici Hedef Hipo** özelliklerini özetler. Gösterilen değerler, uygulamayla gelen varsayılan değerlerdir — [her ön ayarı](#TempTargets-change-preset-defaults) kendi ihtiyaçlarınıza göre ayarlayabilirsiniz.
 
-### TT - Activity
+### GH - Aktivite
 
-![TT Activity](../images/TempTarget2.png)
+![GH Aktivite](../images/TempTarget2.png)
 
-**BG Target (default preset, adjustable)**
+**KŞ hedefi (varsayılan ön ayar, değiştirilebilir)**
 
-AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
+AAPS, 1 sa 30 dk boyunca 140 mg/dL veya 7,8 mmol/L değerine ulaşmayı hedefler
 
-**Other considerations users may wish to factor in when selecting**:
+**Kullanıcıların seçim yaparken göz önüne almak isteyebileceği diğer konular**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+**KŞ** seviyesine bağlı olarak **AAPS**, **KŞ** hedefine ulaşmak için insülin kullanımını "azaltır". **KŞ** hedef aralıkta değilse (yani kullanıcının **Profil**inde seçili **KŞ** hedefinin üzerindeyse), **AAPS** bazalı açık tutabilir.
 
-In closed loop mode, **SMB**:
+Kapalı döngü modunda **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- devre dışı bırakılmış *olabilir* (aşağıda daha ayrıntılı anlatılıyor); ve/veya
+- **AAPS** negatif **AİNS** durumundaysa bazal etkinleştirilebilir veya <0.
 
-Users may also wish to consider:
+Kullanıcılar şunları da düşünebilir:
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- planlanan egzersizden 1-2 saat önce bu **GH**'yi *seçmek*, böylece AİNS'in daha düşük olmasını sağlamak (bu GH için doğru zamanlama kişiden kişiye değişir); ve
+- planlanan aktivite süresince daha düşük **AİNS** sağlamak için geçici bir Profil (azaltma) *seçmek*;
+- **AİNS** zaten azaldığı ve bazı kullanıcılarda egzersizden sonra **KŞ** hızla yükseldiği için **GH**'nin egzersizden kısa süre önce *devre dışı kalacak* şekilde zamanlandığından *emin olmak*.
 
-### TT - Eating soon
+### GH - Yakında Yenecek
 
-![TT Eating soon](../images/TempTarget1.png)
+![GH Yakında Yenecek](../images/TempTarget1.png)
 
-**BG Target (default preset, adjustable)**
+**KŞ hedefi (varsayılan ön ayar, değiştirilebilir)**
 
-AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
+AAPS, 45 dakika boyunca 90 mg/dL veya 5,0 mmol/L değerine ulaşmayı hedefler
 
-**Other considerations users may wish to factor in when selecting**:
+**Kullanıcıların seçim yaparken göz önüne almak isteyebileceği diğer konular**:
 
-In closed loop mode, **SMB**:
+Kapalı döngü modunda **SMB**:
 
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
+- etkin kalır; ve/veya
+- kullanıcının **Profil** ayarlarına bağlı olarak bazal da etkinleştirilebilir.
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+**KŞ** seviyesine bağlı olarak **AAPS**, istenen **KŞ** hedefine ulaşmak için kullanıcının **AAPS** ayar parametreleri içinde insülin kullanımını "artırır".
 
-### TT - Hypo
+### GH - Hipo
 
-![TT Hypo](../images/TempTarget3.png)
+![GH Hipo](../images/TempTarget3.png)
 
-**BG Target (default preset, adjustable)**
+**KŞ hedefi (varsayılan ön ayar, değiştirilebilir)**
 
-AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
+AAPS, 1 saat boyunca 160 mg/dL veya 8,9 mmol/L değerine ulaşmayı hedefler
 
-**Other considerations users may wish to factor in when selecting**:
+**Kullanıcıların seçim yaparken göz önüne almak isteyebileceği diğer konular**:
 
-In closed loop mode, **SMB**:
+Kapalı döngü modunda **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- devre dışı bırakılmış *olabilir* (aşağıda daha ayrıntılı anlatılıyor); ve/veya
+- **AAPS** negatif **AİNS** durumundaysa bazal etkinleştirilebilir veya <0.
 
 (TempTargets-manage-v4)=
 
-## Setting and managing temporary targets (Manage → Temp Target)
+## Geçici hedefleri ayarlama ve yönetme (Yönet → Geçici Hedef)
 
-In **AAPS** v4 you manage your TT **presets** and start a temporary target from the **Manage** screen (bottom navigation) → **Temp Target** (*“Manage and set temporary targets”*).
+**AAPS** v4'te GH **ön ayarlarınızı** yönetir ve geçici hedefi **Yönet** ekranından (alt gezinme çubuğu) → **Geçici Hedef** (*“Geçici hedefler belirleyin ve yönetin”*) başlatırsınız.
 
-![The Temp Target screen — preset carousel, editor and action bar](../images/v4/TempTarget/tt_management.png)
+![Geçici Hedef ekranı — ön ayar karuseli, düzenleyici ve eylem çubuğu](../images/v4/TempTarget/tt_management.png)
 
-The screen has three parts:
+Ekranın üç bölümü vardır:
 
-1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
-2. **Editor** (middle) — the **Temporary target** and **Duration** that will actually be applied, plus an **Activation** date/time.
-3. **Action bar** (bottom) — **➕ add**, **‘️ delete** and the **▶ activate** button.
+1. **Ön ayar karuseli** (üstte) — GH ön ayarlarınız arasında kaydırın. Her kart ön ayarın **adını**, **hedefini** ve **süresini** gösterir; o anda çalışan GH vurgulanır.
+2. **Düzenleyici** (ortada) — gerçekten uygulanacak **Geçici hedef** ve **Süre**, ayrıca bir **Etkinleştirme** tarihi/saati.
+3. **Eylem çubuğu** (altta) — **➕ ekle**, **‘️ sil** ve **▶ etkinleştir** düğmesi.
 
-Selecting a preset card loads its **target** and **duration** into the editor.
+Bir ön ayar kartını seçmek, onun **hedefini** ve **süresini** düzenleyiciye yükler.
 
-```{admonition} Built-in vs custom presets :class: note The built-in presets — **Eating Soon**, **Activity** and **Hypo** — always exist and **cannot be deleted** (you can change their values and save, though). Any presets you create yourself are **custom** and can be edited or deleted freely.
+```{admonition} Yerleşik ve özel ön ayarlar :class: note Yerleşik ön ayarlar — **Yakında Yenecek**, **Aktivite** ve **Hipo** — her zaman vardır ve **silinemez** (ancak değerlerini değiştirip kaydedebilirsiniz). Kendiniz oluşturduğunuz tüm ön ayarlar **özel** ön ayarlardır ve serbestçe düzenlenebilir veya silinebilir.
 
-    <br />### Activating a temporary target
+    <br />### Geçici hedefi etkinleştirme
     
-    Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. A confirmation shows the exact target, duration and reason before anything starts:
+    İstediğiniz ön ayara kaydırın (değerleri düzenleyiciye yüklenir), isterseniz düzenleyicide **hedefi**/**süreyi** değiştirin, sonra **▶ Etkinleştir** düğmesine dokunun. Herhangi bir şey başlamadan önce bir onay tam hedefi, süreyi ve nedeni gösterir:
     
-    ![Activation confirmation](../images/TempTarget8.png)
+    ![Etkinleştirme onayı](../images/TempTarget8.png)
     
-    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+    Onayladıktan sonra geçici hedef hemen (veya seçilen **Etkinleştirme** zamanında) başlar ve ayarlanan **süre** boyunca çalışır.
     
-    ```{admonition} Editing the numbers is a one-off — it does not change the preset
+    ```{admonition} Sayıları düzenlemek tek seferliktir — ön ayarı değiştirmez
     :class: important
-    The **target** and **duration** in the editor are the values **Activate** will use *right now*. If you change them, that change is **temporary**: it applies only to this activation and **does not modify the saved preset**. This lets you "tweak and activate" a one-off TT (for example activate *Activity* at a slightly different target today) without permanently altering the preset.
+    Düzenleyicideki **hedef** ve **süre**, **Etkinleştir** düğmesinin *şimdi* kullanacağı değerlerdir. Bunları değiştirirseniz, bu değişiklik **geçicidir**: yalnızca bu etkinleştirme için geçerlidir ve **kayıtlı ön ayarı değiştirmez**. Böylece ön ayarı kalıcı olarak değiştirmeden tek seferlik bir GH'yi "ayarlayıp etkinleştirebilirsiniz" (örneğin bugün *Aktivite*'yi biraz farklı bir hedefle etkinleştirmek).
     
 
-### Saving changes to a preset
+### Değişiklikleri bir ön ayara kaydetme
 
-If you *do* want to keep an edited value, **Save** it: when the editor differs from the selected preset, a **Save** icon appears in the top toolbar. Tapping it stores the current **target** and **duration** (and name, for custom presets) back into the selected preset. For the built-in presets, a **Revert to defaults** button (↺) also appears in the action bar: it brings back the preset's default values.
+Düzenlenen bir değeri *gerçekten* saklamak istiyorsanız, onu **Kaydet**in: düzenleyici seçili ön ayardan farklı olduğunda üst araç çubuğunda bir **Kaydet** simgesi görünür. Ona dokunmak, mevcut **hedefi** ve **süreyi** (özel ön ayarlarda adı da) seçili ön ayara geri kaydeder. Yerleşik ön ayarlar için eylem çubuğunda ayrıca bir **Varsayılanlara dön** düğmesi (↺) görünür: ön ayarın varsayılan değerlerini geri getirir.
 
-![Temp Target screen with the Save icon and the Revert to defaults button](../images/v4/TempTarget/tt_preset_save_revert.png)
+![Kaydet simgesi ve Varsayılanlara dön düğmesi ile Geçici Hedef ekranı](../images/v4/TempTarget/tt_preset_save_revert.png)
 
-So the rule of thumb is:
+Yani temel kural şudur:
 
-- **Activate** → use the numbers **once** (preset unchanged).
-- **Save** → make the numbers the preset's **new defaults**.
+- **Etkinleştir** → sayıları **bir kez** kullanır (ön ayar değişmez).
+- **Kaydet** → sayıları ön ayarın **yeni varsayılanları** yapar.
 
-To put a built-in preset back the way it shipped, select it and tap the **↺ Revert** button — it appears in the action bar only for a **built-in** preset whose values currently differ from its factory defaults, and it restores that preset's original **target** and **duration**.
+Yerleşik bir ön ayarı ilk hâline döndürmek için onu seçin ve **↺ Varsayılanlara dön** düğmesine dokunun — bu düğme eylem çubuğunda yalnızca değerleri şu anda fabrika varsayılanlarından farklı olan **yerleşik** bir ön ayar için görünür ve o ön ayarın özgün **hedefini** ve **süresini** geri yükler.
 
-### Adding and removing presets
+### Ön ayar ekleme ve kaldırma
 
-- **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
-- **‘️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
+- **➕ Ekle** — mevcut düzenleyici değerlerinden **yeni bir özel ön ayar** oluşturur. Yeni kart karuselde görünür.
+- **‘️ Sil** — seçili **özel** ön ayarı kaldırır. Yerleşik ön ayarlar (*Yakında Yenecek*, *Aktivite*, *Hipo*) silinemez.
 
-Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+En az iki **özel** ön ayarınız olduğunda karuseldeki sıralarını da değiştirebilirsiniz: üst çubuktaki **Yeniden sırala** simgesine (⇅) dokunun, ortadaki kartı **◀ / ▶ taşıma düğmeleriyle** adım adım taşıyın, sonra **✓** ile onaylayın. Yerleşik ön ayarlar yerlerini korur — yalnızca özel ön ayarlar taşınabilir. (Kontroller [profilleri yeniden sıralama](ProfileSwitch-ProfilePercentage.md) ile aynı görünür.)
 
-Your presets are part of the synced configuration, so they are shared across your master and paired clients.
+Ön ayarlarınız eşitlenen yapılandırmanın bir parçasıdır, bu yüzden ana biriminiz ve eşleştirilmiş istemcileriniz arasında paylaşılır.
 
-### Other ways to set a temporary target
+### Geçici hedef ayarlamanın diğer yolları
 
-A temporary target can also be set without opening this screen:
+Geçici hedef bu ekranı açmadan da ayarlanabilir:
 
-- with the **TT toggles in the Carbs dialog** — see [below](#TempTargets-carbs-dialog),
-- with a **preset button on the [QuickLaunch toolbar](QuickLaunch.md)** — the *Temp Target Presets* category in *Configure QuickLaunch* offers a one-tap button for each of your presets,
-- from a **Wear OS watch** (the **Temp Target** menu item / tile),
-- from a paired **client** — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md),
-- as part of a **[scene](Scenes.md)** (the *Temporary target* action), or
-- from an **Automation** rule (*Start temp target* / *Stop temp target*).
+- **Karbonhidrat iletişim kutusundaki GH anahtarları** ile — [aşağıya](#TempTargets-carbs-dialog) bakın,
+- **[Hızlı Başlatma araç çubuğundaki](QuickLaunch.md) bir ön ayar düğmesi** ile — *Hızlı Başlatma'yı yapılandırın* içindeki *Geçici Hedef Ön Ayarları* kategorisi, ön ayarlarınızın her biri için tek dokunuşla çalışan bir düğme sunar,
+- bir **Wear OS saatinden** (**Geçici Hedef** menü öğesi / paneli),
+- eşleştirilmiş bir **istemciden** — bkz. [Ana birim ↔ İstemci kontrolü](../RemoteFeatures/ClientMasterControl.md),
+- bir **[senaryonun](Scenes.md)** parçası olarak (*Geçici hedef* eylemi) veya
+- bir **Otomasyon** kuralından (*Geçici hedefi başlat* / *Geçici hedefi durdur*).
 
 * * *
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
-## Where can I select a Temp-Target?
+## Geçici Hedefi nerede seçebilirim?
 
-The quickest way is to tap the **target chip** on the main screen (it shows your current target range):
+En hızlı yol, ana ekrandaki **hedef çipine** dokunmaktır (çip mevcut hedef aralığınızı gösterir):
 
-![Target chip on the main screen](../images/TempTarget6.png)
+![Ana ekrandaki hedef çipi](../images/TempTarget6.png)
 
-This opens the **Temp Target** screen described above — swipe to a preset and tap **▶ Activate**. The same screen is also reachable via **Manage** → **Temp Target**.
+Bu, yukarıda anlatılan **Geçici Hedef** ekranını açar — bir ön ayara kaydırın ve **▶ Etkinleştir** düğmesine dokunun. Aynı ekrana **Yönet** → **Geçici Hedef** yoluyla da ulaşılabilir.
 
-(TempTargets-carbs-dialog)= When entering carbs, you don't need to open the **Temp Target** screen at all: the **Carbs dialog** (**Treatments** → **Carbs**) has **Start Hypo TT**, **Start Eating soon TT** and **Start Activity TT** toggles at the top. Switch one on and the corresponding preset is activated together with the carb entry:
+(TempTargets-carbs-dialog)= Karbonhidrat girerken **Geçici Hedef** ekranını açmanıza hiç gerek yoktur: **Karbonhidrat iletişim kutusunun** (**Tedaviler** → **Karbonhidrat**) üstünde **Hipo GH başlat**, **Yakında Yenecek GH başlat** ve **Aktivite GH başlat** anahtarları vardır. Birini açın; ilgili ön ayar, karbonhidrat girişiyle birlikte etkinleştirilir:
 
-![TT toggles in the Carbs dialog](../images/TempTarget5.png)
+![Karbonhidrat iletişim kutusundaki GH anahtarları](../images/TempTarget5.png)
 
-    {admonition} Automatic Hypo TT
+    {admonition} Otomatik Hipo GH
     :class: note
-    If you open the **Carbs dialog** while your glucose is below 72 mg/dL (4 mmol/L), **AAPS** pre-selects the **Start Hypo TT** toggle for you (unless a higher temporary target with a longer remaining duration is already running).
+    Glikozunuz 72 mg/dL (4 mmol/L) altındayken **Karbonhidrat iletişim kutusunu** açarsanız, **AAPS** sizin için **Hipo GH başlat** anahtarını önceden seçer (daha uzun kalan süreye sahip daha yüksek bir geçici hedef zaten çalışmıyorsa).
 
 (TempTargets-change-preset-defaults)=
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## Varsayılan Geçici Hedefi nerede değiştirip kendi tercihlerimle geçersiz kılabilirim?
 
-Each preset's **target** and **duration** are edited directly on the **Temp Target** screen — there is no separate preferences entry for this anymore:
+Her ön ayarın **hedefi** ve **süresi** doğrudan **Geçici Hedef** ekranında düzenlenir — bunun için artık ayrı bir tercih girdisi yoktur:
 
-1. Open the **Temp Target** screen (tap the target chip, or **Manage** → **Temp Target**).
-2. Swipe to the preset you want to change.
-3. Adjust **Temporary target** and/or **Duration** in the editor.
-4. Tap the **Save** icon that appears in the top toolbar.
+1. **Geçici Hedef** ekranını açın (hedef çipine dokunun veya **Yönet** → **Geçici Hedef**).
+2. Değiştirmek istediğiniz ön ayara kaydırın.
+3. Düzenleyicide **Geçici hedef** ve/veya **Süre** değerini ayarlayın.
+4. Üst araç çubuğunda görünen **Kaydet** simgesine dokunun.
 
-![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/TempTarget7.png)
+![Bir ön ayarı düzenleme — araç çubuğunda Kaydet simgesi, eylem çubuğunda Varsayılanlara dön](../images/TempTarget7.png)
 
-While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
+Düzenleyici, yerleşik bir ön ayarın fabrika değerlerinden farklı olduğu sürece eylem çubuğunda bir **↺ Varsayılanlara dön** düğmesi de görünür — ön ayarın özgün hedefini ve süresini geri yüklemek için ona dokunun.
 
-## How do I cancel a Temp-Target?
+## Geçici Hedefi nasıl iptal ederim?
 
-While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Tap it and confirm:
+Bir geçici hedef çalışırken, ana ekrandaki hedef çipi hedefi ve kalan süresini gösterir. Ona dokunun — **Geçici Hedef** ekranında çalışan ön ayar **AKTİF** olarak vurgulanır ve alttaki araç çubuğunun sonunda, **▶ Etkinleştir** düğmesinin hemen solunda kırmızı bir **✗ İptal** düğmesi görünür. Ona dokunun ve onaylayın:
 
-![Cancelling a running temp target](../images/TempTarget9.png)
+![Çalışan bir geçici hedefi iptal etme](../images/TempTarget9.png)
 
-A running temporary target can also be stopped from a **Wear OS watch**, from a paired **client**, or by an **Automation** rule (*Stop temp target*).
+Çalışan bir geçici hedef, bir **Wear OS saatinden**, eşleştirilmiş bir **istemciden** veya bir **Otomasyon** kuralıyla (*Geçici hedefi durdur*) da durdurulabilir.
 
 (TempTargets-hypo-temp-target)=
 
 ## Hipo Geçici-Hedefi
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+**Hipo Geçici Hedefi**, insülin alımını azaltarak **AAPS**'in kullanıcının düşük kan şekeri yaşamasını önlemesini sağlar. Kullanıcı **KŞ** değerinin düşeceğini tahmin ederse: genellikle **AAPS** bunu halletmelidir, ancak çok şey kullanıcının **AAPS'** ayarlarının ne kadar sağlam olduğuna bağlıdır. **Hipo Geçici Hedefi**, kullanıcının tahmin edilen düşüşün önüne geçmesini ve **AAPS**'i insülini azaltacak şekilde güncellemesini sağlar.
 
-Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
+Bazen hipoyu tedavi etmek için karbonhidrat yenildiğinde kullanıcının **KŞ** değeri hızla yükselebilir ve **AAPS**, **SMB**'leri etkinleştirerek hızla yükselen **KŞ**'ye karşı düzeltme yapar.
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating *'Enable SMB with high temp target'* in **Settings** → **OpenAPS SMB** (see further below):
+Bazı kullanıcılar **Hipo Geçici Hedefi** sırasında **SMB** verilmesini istemez. Bunun için **Ayarlar** → **OpenAPS SMB** içinde *'Yüksek geçici hedefte SMB'yi etkinleştir'* seçeneğini kapatın (aşağıya bakın):
 
-- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- İleri düzey, 9. görev: kullanıcı, OpenAPS SMB'de 100 mg/dL (5,6 mmol/L) veya daha yüksek **Geçici Hedefler** için *“Yüksek geçici hedefler duyarlılığı artırır”* seçeneğini etkinleştirebilir; bu durumda **AAPS** daha duyarlı olur.
 
-- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- İleri düzey, 9. görev: kullanıcı *“Yüksek geçici hedefte SMB'yi etkinleştir”* seçeneğini kapatabilir. Böylece **AAPS**'te AKRB > 0 olsa, “Düşük geçici hedefle SMB'yi etkinleştir” veya “SMB'yi her zaman etkinleştir” açık olsa ve OpenAPS SMB etkin olsa bile, yüksek geçici hedefler etkinken **AAPS** SMB vermez.
 
-Note: if you open the **Carbs dialog** while your blood glucose is less than 72 mg/dL or 4 mmol/L, **AAPS** pre-selects the **Start Hypo TT** toggle automatically.
+Not: Kan şekeriniz 72 mg/dL veya 4 mmol/L altındayken **Karbonhidrat iletişim kutusunu** açarsanız, **AAPS** **Hipo GH başlat** anahtarını otomatik olarak önceden seçer.
 
 (TempTargets-activity-temp-target)=
 
 ## Aktivite Geçici-Hedefi
 
-Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
+Egzersizden önce ve egzersiz sırasında, aktivite sırasında hipoglisemiyi önlemek için kullanıcının daha yüksek bir hedefe ihtiyacı olabilir.
 
-To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia.
+**Aktivite Geçici Hedefi**ni kolaylaştırmak için kullanıcı, varsayılan bir **Geçici Hedef - Aktivite** ayarlayabilir. Bu, **KŞ** düşüşünü yavaşlatmak ve hipoglisemiyi önlemek için insülin kullanımını azaltarak **KŞ** seviyelerini yükseltir.
 
-New users to **AAPS** may need to experiment and personalize their **Temp-Target Activity** default settings in order to optimize this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports).
+**AAPS**'e yeni başlayan kullanıcıların, bu özelliğin kendileri için en iyi şekilde çalışması için **Aktivite Geçici Hedefi** varsayılan ayarlarını denemeleri ve kişiselleştirmeleri gerekebilir. Egzersiz sırasında dengeli KŞ kontrolü sağlamak konusunda herkes farklıdır. Ayrıca bkz. [SSS'deki spor bölümü](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Bazı kullanıcılar, **Aktivite Geçici Hedefi** açıkken ve ondan önce bir **Profil değişimi** (**AAPS**'in insülin iletimini azaltmak için %100'ün altında bir Profil azaltması) etkinleştirmeyi de tercih eder. İkisini tek adımda başlatabilirsiniz: ana ekranda profil adına dokunun, yuvarlak **▶** düğmesine dokunun, %100'ün altında bir **Yüzde** ve bir **Süre** ayarlayın, sonra **Geçici hedef / Aktivite** anahtarını açın. Bkz. [Profil yüzdesini değiştirme](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. Then **AAPS** is more sensitive.
+İleri düzey, 9. görev: kullanıcılar, OpenAPS **SMB**'de 100 mg/dL (5,6 mmol/L) veya daha yüksek **Geçici Hedefler** için *'Yüksek geçici hedefler duyarlılığı artırır'* seçeneğini etkinleştirebilir. 99 mg/dL (5,5 mmol/L) hedefi normal bir hedeftir; ne yüksek ne düşüktür. O zaman **AAPS** daha duyarlıdır.
 
-Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS **SMB** active.
+Ayrıca *'Yüksek geçici hedefte SMB'yi etkinleştir'* kapalıysa, AKRB > 0 olsa, *'Düşük geçici hedefle SMB'yi etkinleştir'* veya *'SMB'yi her zaman etkinleştir'* açık olsa ve OpenAPS **SMB** etkin olsa bile **AAPS** **SMB** vermez.
 
 (TempTargets-eating-soon-temp-target)=
 
-## Yakında Öğün Geçici-Hedefi
+## Yakında Yenecek Geçici-Hedefi
 
-**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**Geçici Hedef Yakında Yenecek**, **KŞ**'nin yavaşça düşmesine yardım edebilir ve yemekten önce yeterli **AİNS** olmasını sağlar.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
+Bu, ön bolus yapmayan kullanıcılar için önemli bir araç olabilir. Ancak **Geçici Hedef Yakında Yenecek**'in etkinliği birkaç etkene bağlıdır: kullanıcının ayarları, düşük karbonhidratlı beslenip beslenmediği ve ön bolus ihtiyacını ortadan kaldırmak için hızlı etkili bir insülin (Fiasp veya Lyumjev gibi) kullanıp kullanmadığı. Normalde, kullanıcılar **AAPS**'te deneyim kazanana kadar **Geçici Hedef Yakında Yenecek** kullanırken ön bolus yapmayı beklemelidir; özellikle yüksek karbonhidratlı beslenen kullanıcılar için bu geçerlidir.
 
-You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+“Yakında yemek modu” hakkında daha fazla bilgiyi ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) makalesinde veya [burada](https://diyps.org/tag/eating-soon-mode/) okuyabilirsiniz.
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be 98 mg/dL (5.4 mmol/L) or lower.
+İleri düzey, [9. görev](#objectives-objective9): OpenAPS SMB kullanıyorsanız ve *'Düşük geçici hedefler duyarlılığı azaltır'* açıksa, **AAPS** biraz daha agresif çalışır. Bu seçenek için **Geçici Hedef**in 98 mg/dL (5,4 mmol/L) veya daha düşük olması gerekir.
 
-## How do I turn off SMB during Temp-Targets?
+## Geçici Hedefler sırasında SMB'yi nasıl kapatırım?
 
-To action this open **Settings** → **OpenAPS SMB** and deactivate *'Enable SMB with high temp target'*.
+Bunu yapmak için **Ayarlar** → **OpenAPS SMB** yolunu açın ve *'Yüksek geçici hedefte SMB'yi etkinleştir'* seçeneğini kapatın.
 
-![Enable SMB with high temp target preference](../images/TempTargetSMB.png)
+![Yüksek geçici hedefte SMB'yi etkinleştir tercihi](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS SMB active.
+Bu, AKRB > 0 olsa, *'Düşük geçici hedefle SMB'yi etkinleştir'* veya *'SMB'yi her zaman etkinleştir'* açık olsa ve OpenAPS SMB etkin olsa bile **AAPS**'in **SMB** vermemesini sağlar.

@@ -1,76 +1,76 @@
-# DanaRS, Dana-i and Dana-i2
+# DanaRS, Dana-i ו-Dana-i2
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards, a Dana-i or a Dana-i2. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*
+*הוראות אלה נועדו להגדרת האפליקציה והמשאבה אם יש לכם DanaRS משנת 2017 ואילך, Dana-i או Dana-i2. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*
 
-**Dana-i2 can be used from AAPS version 4.0 onwards.** It uses the same **Dana-i/RS** driver as the Dana-i.
+**ניתן להשתמש ב-Dana-i2 החל מגרסה 4.0 של AAPS.** היא משתמשת באותו מנהל התקן **Dana-i / RS** כמו Dana-i.
 
-* In DanaRS/i/i2 pump "BASAL A" is used by the app. Existing data gets overwritten.
+* במשאבת DanaRS/i/i2 האפליקציה משתמשת ב-"BASAL A". נתונים קיימים נמחקים ונכתבים מחדש.
 
-    {contents} Table of contents
+    {contents} תוכן העניינים
     :depth: 1
     :local: true
 
 ## Pump capabilities with AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually (see [Timezone traveling](#timezone-traveling-danarv2-danars)).
+* מתקשרת עם **AAPS** דרך ה-Bluetooth המובנה של הטלפון, בלי התקן תקשורת נוסף.
+* יש לטפל ידנית בשינויים של שעון הקיץ ושל אזור הזמן (ראו [נסיעות בין אזורי זמן](#timezone-traveling-danarv2-danars)).
 
 (DanaRS-Insulin-Pump-pairing-pump)=
 
 ## Pairing pump
 
-* Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-* Tap **Pump** and select **Dana-i/RS**.
+* יש לפתוח את **התפריט** (☰) בחלק העליון של המסך הראשי של **AAPS** ולבחור **הגדרות תצורה**.
+* יש ללחוץ על **משאבה** ולבחור **Dana-i / RS**.
     
-    ![Configuration > Pump with the Dana-i/RS plugin](../images/v4/Configuration/configuration_pump_list_2.png)
+    ![הגדרות תצורה > משאבה עם התוסף Dana-i/RS](../images/v4/Configuration/configuration_pump_list_2.png)
     
-    Once it is selected, the **Dana-i/RS** card shows two buttons, **Settings** and **Open plugin**:
+    לאחר הבחירה, בכרטיס **Dana-i / RS** מופיעים שני לחצנים, **הגדרות** ו-**פתיחת תוסף**:
     
-    ![The Dana-i/RS plugin selected in Configuration > Pump](../images/v4/Pumps/dana_i_rs_enabled.png)
+    ![התוסף Dana-i/RS נבחר בהגדרות תצורה > משאבה](../images/v4/Pumps/dana_i_rs_enabled.png)
     
-    **Settings** opens the settings of the Dana-i/RS driver:
+    **הגדרות** פותח את ההגדרות של מנהל ההתקן Dana-i/RS:
     
-    ![Dana-i/RS driver settings](../images/v4/Pumps/dana_i_rs_settings.png)
+    ![הגדרות מנהל ההתקן Dana-i/RS](../images/v4/Pumps/dana_i_rs_settings.png)
     
-    **Open plugin** (or **Manage** > **Pump**) opens the Dana-i/RS pump screen. Before a pump is paired it looks like this:
+    **פתיחת תוסף** (או **ניהול** > **משאבה**) פותח את מסך המשאבה של Dana-i/RS. לפני צימוד משאבה, המסך נראה כך:
     
-    ![Dana-i/RS pump screen before pairing](../images/v4/Pumps/dana_i_rs_pump_screen.png)
+    ![מסך המשאבה Dana-i/RS לפני הצימוד](../images/v4/Pumps/dana_i_rs_pump_screen.png)
 
-* On the pump screen, tap **Pairing**. **AAPS** scans for nearby pumps.
+* במסך המשאבה, יש ללחוץ על **צימוד**. **AAPS** סורק ומחפש משאבות קרובות.
 
-* Tap the entry for your pump in the list.
+* יש ללחוץ על השורה של המשאבה שלכם ברשימה.
     
-    ![The Pairing screen listing a Dana pump found by the scan](../images/DanaRS_i_Pairing.png)
+    ![מסך הצימוד מציג משאבת Dana שנמצאה בסריקה](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** This works the same way as other Bluetooth pairings you may know (for example, smartphone and car audio).
+* **יש לאשר את הצימוד במשאבה!** זה עובד כמו צימודי Bluetooth אחרים שאולי מוכרים לכם (למשל, טלפון חכם ומערכת השמע ברכב).
     
     ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
 * Follow the pairing process based on the type and firmware of your pump:
     
-    * For DanaRS v1, **AAPS** asks for the **Pump password (v1 only)**. Enter your pump password (see [Default password](#DanaRS-Insulin-Pump-default-password)).
-    * For DanaRS v3, **AAPS** asks you to press OK on the pump and type the 2 sequences of numbers and letters shown on the pump. Keep the pump display on by pressing the minus button until you have finished. Then tap **Done**.
-    * For Dana-i and Dana-i2, the standard Android pairing dialog appears. Enter the 6-digit number shown on the pump.
+    * ב-DanaRS v1, **AAPS** מבקש את **סיסמת משאבה (v1 בלבד)**. יש להזין את סיסמת המשאבה (ראו [סיסמת ברירת מחדל](#DanaRS-Insulin-Pump-default-password)).
+    * ב-DanaRS v3, **AAPS** מבקש ללחוץ על OK במשאבה ולהקליד את 2 רצפי המספרים והאותיות שמוצגים במשאבה. כדי שמסך המשאבה יישאר דולק עד הסוף, יש ללחוץ על לחצן המינוס. לאחר מכן יש ללחוץ על **בוצע**.
+    * ב-Dana-i וב-Dana-i2 מופיע חלון הצימוד הרגיל של Android. יש להזין את המספר בן 6 הספרות שמוצג במשאבה.
 
-* When **Pairing successful!** is shown, tap **Done**.
+* כשמופיע **ההתאמה בוצעה בהצלחה!**, יש ללחוץ על **בוצע**.
     
-    ![Pairing successful!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
+    ![ההתאמה בוצעה בהצלחה!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
     
-    You are back on the pump screen, which now shows your pump's status.
+    חוזרים למסך המשאבה, שמציג כעת את מצב המשאבה.
     
-    ![Dana-i/RS pump screen after pairing](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
+    ![מסך המשאבה Dana-i/RS לאחר הצימוד](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
 
-* In **Settings**, select **Bolus speed** to change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
+* ב-**הגדרות**, יש לבחור **מהירות הזרקת הבולוס** כדי לשנות את מהירות הבולוס שמוגדרת כברירת מחדל (12 s/U, 30 s/U או 60 s/U).
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
-* Set bolus step on pump to 0.05 U using Doctors menu (see pump user guide). **AAPS** reads the basal and bolus steps from the pump and uses them for every bolus, so a bolus always matches the step set on the pump. The pump screen shows them in the **Basal/Bolus step** row.
-* Enable extended boluses on pump
+* יש להגדיר במשאבה את צעד הבזאלי ל-0.01 U/h באמצעות תפריט הרופאים (ראו את מדריך המשתמש של המשאבה).
+* יש להגדיר במשאבה את צעד הבולוס ל-0.05 U באמצעות תפריט הרופאים (ראו את מדריך המשתמש של המשאבה). **AAPS** קורא את צעדי הבזאלי והבולוס מהמשאבה ומשתמש בהם בכל בולוס, כך שהבולוס תמיד מתאים לצעד שמוגדר במשאבה. מסך המשאבה מציג אותם בשורה **צעד בזאלי/בולוס**.
+* הפעלת בולוסים ממושכים במשאבה
 
-### Options shown only for some models
+### אפשרויות שמוצגות רק בחלק מהדגמים
 
-* **Auto lock**: on a Dana-i2, the **User options** screen (on the pump screen, **Manage** > **Pump**) has an **Auto lock** switch for the pump's auto lock setting. Press **Save options to pump** after changing it.
-* **Easy mode**: on pump models that have an easy menu mode, the pump screen shows an **Easy mode** row with **On** or **Off**.
-* If a Dana-i2 refuses a bolus, **AAPS** shows the reason, for example *Pump is not primed*, *Not enough insulin in the reservoir* or *Easy sleep mode is on in the pump*.
+* **נעילה אוטומטית**: ב-Dana-i2, במסך **אפשרויות משתמש** (במסך המשאבה, **ניהול** > **משאבה**) יש מתג **נעילה אוטומטית** להגדרת הנעילה האוטומטית של המשאבה. לאחר השינוי יש ללחוץ על **שמירת הגדרות במשאבה**.
+* **מצב Easy**: בדגמי משאבה שיש להם מצב תפריט קל (easy), מסך המשאבה מציג שורה **מצב Easy** עם **מופעל** או **כבוי**.
+* אם Dana-i2 מסרבת לתת בולוס, **AAPS** מציג את הסיבה, למשל *המשאבה לא תוחלה*, *אין מספיק אינסולין במכל* או *מצב Easy sleep מופעל במשאבה*.
 
 (DanaRS-Insulin-Pump-default-password)=
 
@@ -80,7 +80,7 @@
 * For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24).
     
     * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
-    * Number 3 is manufacturing date. 
+    * מספר 3 הוא תאריך הייצור. 
     * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
@@ -133,9 +133,9 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 ![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in the pump history that the correct bolus was given. You can do this on the pump itself, or in **AAPS** on the pump screen (**Manage** > **Pump**) > **Pump history** > **Boluses**.
-* Delete the error entry in [treatments](#screens-bolus-carbs) if you wish.
-* The real amount is read and recorded at the next connection. To force this, tap **Refresh** on the pump screen, or just wait for the next connection.
+* יש לבדוק בהיסטוריית המשאבה שניתן הבולוס הנכון. ניתן לעשות זאת במשאבה עצמה, או ב-**AAPS** במסך המשאבה (**ניהול** > **משאבה**) > **היסטוריית המשאבה** > **בולוסים**.
+* אם רוצים, ניתן למחוק את רשומת השגיאה ב[טיפולים](#screens-bolus-carbs).
+* הכמות האמיתית נקראת ונרשמת בחיבור הבא. כדי לכפות זאת, יש ללחוץ על **רענן** במסך המשאבה, או פשוט לחכות לחיבור הבא.
 
 ## Special note when switching phone
 
@@ -147,25 +147,25 @@ When switching to a new phone the following steps are necessary:
 ### DanaRS v1
 
 * **Manually pair** Dana RS with the new phone
-* If you tick **Also replace pump settings** when importing, the pump connection settings are imported too and AAPS on your new phone will already "know" the pump and therefore not start a Bluetooth scan. Therefore new phone and pump must be paired manually.
+* אם מסמנים את **גם החלף את הגדרות המשאבה** בזמן הייבוא, גם הגדרות החיבור למשאבה מיובאות, ו-AAPS בטלפון החדש כבר "מכיר" את המשאבה ולכן אינו מתחיל סריקת Bluetooth. Therefore new phone and pump must be paired manually.
 * Install AAPS on the new phone.
 * [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
 
 ### DanaRS v3, Dana-i, Dana-i2
 
 * Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
-* Sometimes you may need to clear the pairing information in **AAPS** first. On the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**. Then tap **Pairing** again.
+* לפעמים צריך קודם למחוק את נתוני הצימוד ב-**AAPS**. במסך המשאבה (**ניהול** > **משאבה**), יש ללחוץ על **ביטול צימוד** ולאשר את **לאפס את נתוני הצימוד?**. לאחר מכן יש ללחוץ שוב על **צימוד**.
 
-## Timezone traveling with DanaRS, Dana-i and Dana-i2 pumps
+## נסיעות בין אזורי זמן עם משאבות DanaRS, Dana-i ו-Dana-i2
 
 For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
 
 ## Where to get help
 
-Development of the DanaRS/Dana-i/Dana-i2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+הפיתוח של מנהל ההתקן של DanaRS/Dana-i/Dana-i2 נעשה על ידי הקהילה על בסיס **התנדבותי**. לפני שמבקשים עזרה, יש:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **לקרוא** את החלק הרלוונטי בתיעוד הזה, כדי לוודא איך התכונה אמורה לעבוד.
+2. **לשאול** בערוץ *#AAPS* ב-[Discord](https://discord.gg/4fQUWHZ4Mw), או באחד מ[ערוצי הקהילה](../GettingHelp/WhereCanIGetHelp.md) האחרים.
+3. **לדווח על באג**: לחפש ב[issues הקיימים](https://github.com/nightscout/AndroidAPS/issues); אם הבעיה לא מופיעה שם, לפתוח [issue חדש](https://github.com/nightscout/AndroidAPS/issues) ולצרף את [קובצי היומן](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+כשמבקשים עזרה, יש לציין את היצרן והדגם של הטלפון, את גרסת Android, את גרסת **AAPS** ותיאור פשוט של הבעיה באנגלית (מה השתנה, ומתי זה עבד בפעם האחרונה).

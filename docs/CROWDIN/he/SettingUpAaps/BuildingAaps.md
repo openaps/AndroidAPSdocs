@@ -2,7 +2,7 @@
 
 ## בנייה עצמית במקום הורדה
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. בנייה עצמית של היישום לשימוש אישי הינה חוקית אך אסור לתת את היישום לאחרים!**
+**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. בנייה עצמית של האפליקציה לשימוש אישי הינה חוקית אך אסור לתת את האפליקציה לאחרים!**
 
 See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
@@ -10,15 +10,15 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 Three methods are available to build the AAPS app:
 
-### Build with a browser (recommended)
+### בנייה בדפדפן (מומלץ)
 
-You can build the app in a web browser using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+ניתן לבנות את האפליקציה בדפדפן אינטרנט בעזרת GitHub Actions. מטלפון Android, דף ההגדרה של [AAPS Builder](#aaps-builder) מוביל אתכם שלב אחרי שלב, ואתם מתחילים כל בנייה בעצמכם. ממחשב או מ-iPhone אפשר גם לבנות עם fork ולשמור את האפליקציה ב-Google Drive שלכם.
 
 **[Follow these instructions.](./BrowserBuild.md)**
 
 ----
 
-### Build with Android Studio
+### בנייה ב-Android Studio
 
 You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
 
@@ -26,7 +26,7 @@ You can build the app with your computer using Android Studio. This used to be t
 
 ----
 
-### Build using the command-line
+### בנייה משורת הפקודה
 
 This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
 
@@ -35,16 +35,16 @@ This option is intended for those who prefer to build AAPS in local command-line
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## אם הבנייה נכשלת
 
-Each build method has its own troubleshooting section:
+לכל שיטת בנייה יש חלק משלה לפתרון תקלות:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**: [פתרון תקלות ב-AAPS Builder](#aaps-builder-troubleshooting)
+* **בנייה בדפדפן** ממחשב או מ-iPhone: [בנייה בדפדפן: פתרון תקלות](#aaps-ci-troubleshooting)
+* **Android Studio**: [פתרון תקלות ב-Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+איבדתם את ה-keystore או את הסיסמה שלו? ראו [התקנה מחדש של AAPS עם keystore חדש](#reinstall-aaps).
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+אם האפליקציה נבנתה אבל לא מותקנת בטלפון, ראו [העברה והתקנה של AAPS](TransferringAndInstallingAaps.md).
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+אם הבעיה שלכם לא מופיעה כאן, ראו [איפה אפשר לקבל עזרה](../GettingHelp/WhereCanIGetHelp.md).

@@ -13,20 +13,20 @@ Toto je odporúčaný spôsob, ako zostaviť AAPS z **telefónu s Androidom**. F
 
 **AAPS Builder** za vás zostaví aplikáciu AAPS na GitHube, bezplatnej webovej stránke na ukladanie kódu. Do telefónu nemusíte nič inštalovať a nemusíte otvárať žiadny prípravný súbor.
 
-A setup page walks you through it. Prvýkrát to trvá asi 10 minút:
+Celým postupom vás prevedie stránka nastavenia. Prvýkrát to trvá asi 10 minút:
 
-1. Create your own **private copy** of AAPS Builder in your GitHub account: the setup page opens GitHub with everything filled in, you only confirm. The build workflow, the file that tells GitHub how to build AAPS, is already in it.
-2. Create or upload your **signing key** (the keystore).
-3. Give the key to your repository as a GitHub **secret**.
-4. **Build** the app. One build takes 15 to 30 minutes.
-5. **Download and install** the app on your phone.
+1. Vytvorte si vo svojom účte GitHub vlastnú **súkromnú kópiu** AAPS Builder: stránka nastavenia otvorí GitHub so všetkým vyplneným, vy iba potvrdíte. Workflow zostavenia, teda súbor, ktorý GitHubu hovorí, ako zostaviť AAPS, už v nej je.
+2. Vytvorte alebo nahrajte svoj **podpisový kľúč** (úložisko kľúčov).
+3. Odovzdajte kľúč svojmu repozitáru ako GitHub **secret**.
+4. **Zostavte** aplikáciu. Jedno zostavenie trvá 15 až 30 minút.
+5. **Stiahnite a nainštalujte** aplikáciu do telefónu.
 
 **Nemusíte** vytvárať fork AndroidAPS: zdrojový kód AAPS sa pri každom zostavení stiahne z oficiálneho repozitára AndroidAPS. **Nepotrebujete** ani Disk Google: aplikáciu si stiahnete priamo z GitHubu.
 
 ```{admonition} Where the code comes from
 :class: note
 
-The build workflow is maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository, and your repository is a copy of it. The [workflow](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) in your copy is short: it runs the [build steps](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml) kept in that repository, so improvements reach you without any change to your repository. You can read both files. Pri zostavovaní workflow sťahuje iba oficiálny zdrojový kód AAPS a vlastné nástroje GitHubu na zostavenie. Vaše úložisko kľúčov nikdy neopustí váš prehliadač a váš súkromný repozitár.
+Workflow zostavenia udržiavajú vývojári AAPS v repozitári [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) a váš repozitár je jeho kópiou. [Workflow](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) vo vašej kópii je krátky: spúšťa [kroky zostavenia](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml), ktoré sú uložené v tom repozitári, takže vylepšenia sa k vám dostanú bez akejkoľvek zmeny vo vašom repozitári. Oba súbory si môžete prečítať. Pri zostavovaní workflow sťahuje iba oficiálny zdrojový kód AAPS a vlastné nástroje GitHubu na zostavenie. Vaše úložisko kľúčov nikdy neopustí váš prehliadač a váš súkromný repozitár.
 ```
 
 (aaps-builder-before-you-start)=
@@ -37,11 +37,11 @@ Budete potrebovať:
 
 - **Účet GitHub** (bezplatný). Ak ho nemáte, najprv si ho vytvorte na [github.com](https://github.com/signup).
 - **Webový prehliadač**: Chrome v telefóne alebo akýkoľvek prehliadač v počítači. Skôr než začnete, prihláste sa v tomto prehliadači na github.com.
-- **Máte v telefóne aplikáciu GitHub?** Môžete si ju nechať. Niektoré tlačidlá stránky nastavenia potom namiesto Chromu otvoria túto aplikáciu. Building works in the app, but the app **cannot download** the finished AAPS: [step 5](#aaps-builder-step5) shows how to switch to Chrome for the download.
+- **Máte v telefóne aplikáciu GitHub?** Môžete si ju nechať. Niektoré tlačidlá stránky nastavenia potom namiesto Chromu otvoria túto aplikáciu. Zostavovať sa dá aj v aplikácii, ale aplikácia **nedokáže stiahnuť** hotový AAPS: [krok 5](#aaps-builder-step5) ukazuje, ako na stiahnutie prepnúť do Chromu.
 - Vaše **existujúce úložisko kľúčov** (súbor `.jks`), jeho heslo a jeho alias, ak ste už AAPS zostavili a chcete ho aktualizovať bez preinštalovania.
 
 ```{warning}
-**Váš repozitár na zostavenie musí zostať súkromný.** Všetko, čo zostavenie vytvorí, vidí každý, kto vidí repozitár. Stránka nastavenia vám vytvorí súkromný repozitár. Never change it to public, and don't **fork** AAPS Builder instead: a fork is always public.
+**Váš repozitár na zostavenie musí zostať súkromný.** Všetko, čo zostavenie vytvorí, vidí každý, kto vidí repozitár. Stránka nastavenia vám vytvorí súkromný repozitár. Nikdy ho neprepínajte na verejný a namiesto toho nevytvárajte **fork** AAPS Builder: fork je vždy verejný.
 
 Súkromný repozitár dostane každý mesiac 2000 bezplatných minút GitHub Actions, čo stačí na niekoľko zostavení.
 ```
@@ -61,7 +61,7 @@ Potom vždy používajte ten istý kľúč. Keď vytvoríte nový kľúč, stiah
 
 Túto časť preskočte, ak ste nikdy nezostavovali AAPS predchádzajúcim spôsobom zostavenia v prehliadači (vlastná kópia AndroidAPS na GitHube, teda fork, s prípravným súborom a Diskom Google).
 
-Vaše úložisko kľúčov je vo vašom forku uložené ako secrety. GitHub secret už nikdy znova neukáže, preto ho nemôžete skopírovať do nového repozitára. Get a copy of your keystore first, then use it in [step 2](#aaps-builder-step2) with **I already have a keystore**.
+Vaše úložisko kľúčov je vo vašom forku uložené ako secrety. GitHub secret už nikdy znova neukáže, preto ho nemôžete skopírovať do nového repozitára. Najprv si vytvorte kópiu úložiska kľúčov a potom ju použite v [kroku 2](#aaps-builder-step2) s voľbou **I already have a keystore**.
 
 ```{warning}
 Nevyberajte **Create a new key**. AAPS zostavený s novým kľúčom nemôže aktualizovať AAPS vo vašom telefóne.
@@ -69,7 +69,7 @@ Nevyberajte **Create a new key**. AAPS zostavený s novým kľúčom nemôže ak
 
 Ktorý prípad je váš?
 
-- **Použili ste Možnosť 2** (nahrali ste vlastné úložisko kľúčov z Android Studia) a stále máte súbor `.jks`, jeho heslá a jeho alias: tu nemusíte nič robiť. Use that file in step 2.
+- **Použili ste Možnosť 2** (nahrali ste vlastné úložisko kľúčov z Android Studia) a stále máte súbor `.jks`, jeho heslá a jeho alias: tu nemusíte nič robiť. Tento súbor použite v kroku 2.
 - **Použili ste Možnosť 1** (kľúč vytvoril prípravný súbor) alebo už súbor úložiska kľúčov nemáte: exportujte ho zo svojho forku podľa postupu nižšie.
 
 Export úložiska kľúčov z forku:
@@ -82,7 +82,7 @@ Export úložiska kľúčov z forku:
    - `keyStoreInfo.txt`: vaše `KEYSTORE_PASSWORD`, `KEY_PASSWORD` a `ALIAS` (zvyčajne `key0`).
 5. Skopírujte `keystore.jks` do telefónu (alebo na Disk Google, aby ste ho mohli vybrať odtiaľ).
 
-In [step 2](#aaps-builder-step2) of the setup page:
+V [kroku 2](#aaps-builder-step2) stránky nastavenia:
 
 1. Ťuknite na **I already have a keystore**.
 2. V poli **Keystore file** zvoľte `keystore.jks`.
@@ -92,13 +92,13 @@ In [step 2](#aaps-builder-step2) of the setup page:
 
 Súbor `keystore.zip` a jeho `ZIP_PASSWORD` uchovávajte na bezpečnom mieste mimo telefónu: je to záloha vášho kľúča.
 
-To also save the builds of AAPS Builder in Google Drive, do [step 6](#aaps-builder-google-drive): the setup page gets a new `GDRIVE_OAUTH2` for you. Svoj fork si môžete ponechať, kým nebudete mať v telefóne nainštalovaný AAPS zostavený pomocou AAPS Builder.
+Ak chcete zostavenia z AAPS Builder ukladať aj na Disk Google, urobte [krok 6](#aaps-builder-google-drive): stránka nastavenia vám získa nový `GDRIVE_OAUTH2`. Svoj fork si môžete ponechať, kým nebudete mať v telefóne nainštalovaný AAPS zostavený pomocou AAPS Builder.
 
 ## Otvorte stránku nastavenia
 
 **→ [Otvoriť stránku nastavenia AAPS Builder](#aaps-builder-setup)**
 
-The setup page is part of this documentation, in your language. Keep this page open in another tab as well: the sections below explain each step of the setup page in more detail, with screenshots.
+Stránka nastavenia je súčasťou tejto dokumentácie, vo vašom jazyku. Túto stránku majte tiež otvorenú na inej karte: časti nižšie podrobnejšie vysvetľujú každý krok stránky nastavenia, so snímkami obrazovky.
 
 Stránka nastavenia otvára každú stránku GitHubu na novej karte Chromu. Ak sa chcete vrátiť na stránku nastavenia, ťuknite na tlačidlo kariet vedľa panela s adresou v Chrome (štvorček s číslom) a zvoľte stránku nastavenia AAPS Builder.
 
@@ -110,7 +110,7 @@ Stránka nastavenia beží celá vo vašom prehliadači: váš kľúč a heslá 
 
 ## Krok 1 – Vytvorte si súkromný repozitár na zostavenie
 
-This step creates your own private copy of AAPS Builder in your GitHub account, with the build workflow already in it. Iba vy vidíte repozitár a aplikácie, ktoré v ňom vzniknú.
+Tento krok vytvorí vo vašom účte GitHub vlastnú súkromnú kópiu AAPS Builder, v ktorej už je workflow zostavenia. Iba vy vidíte repozitár a aplikácie, ktoré v ňom vzniknú.
 
 1. Uistite sa, že ste v tomto prehliadači prihlásení na github.com.
 
@@ -119,42 +119,42 @@ This step creates your own private copy of AAPS Builder in your GitHub account, 
 3. V poli **Name of your repository** ponechajte navrhnutý názov `my-aaps`. Ak ste už repozitár vytvorili s iným názvom, zadajte presne tento názov.
 
    ```{note}
-   **Already have an AAPS Builder repository** (made with an earlier version of the setup page)? Don't create a new one: type its exact name, skip **Create my private repository**, and update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). Your secrets stay as they are. If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+   **Už máte repozitár AAPS Builder** (vytvorený staršou verziou stránky nastavenia)? Nevytvárajte nový: zadajte jeho presný názov, preskočte **Create my private repository** a raz aktualizujte jeho workflow podľa postupu v časti [Aktualizácia AAPS](#aaps-builder-updates). Vaše secrety zostanú tak, ako sú. Ak aj tak chcete nový repozitár, zvoľte názov, ktorý ešte nemáte, napríklad `my-aaps-2`, a v kroku 2 použite to isté úložisko kľúčov.
 
-   Don't type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+   Nezadávajte názov svojho forku AndroidAPS: fork je verejný a už sa zostavuje vlastným workflowom **AAPS CI**.
    ```
 
    ![Vyplnený krok 1 stránky nastavenia](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
 
-4. Skontrolujte riadok **Your repository:** ukazuje `github.com/<your username>/my-aaps`. The setup page remembers the name from your last visit: check it every time before you use its buttons.
+4. Skontrolujte riadok **Your repository:** ukazuje `github.com/<your username>/my-aaps`. Stránka nastavenia si pamätá názov z vašej poslednej návštevy: skontrolujte ho zakaždým, skôr než použijete jej tlačidlá.
 
 5. Ťuknite na **Create my private repository**.
 
-   ![The repository line and the Create my private repository button](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
+   ![Riadok s repozitárom a tlačidlo Create my private repository](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
 
-6. GitHub opens **Create a new repository** in a new tab. Everything is already filled in: under **Start with a template**, the template `nightscout/aaps-builder` with **Include all branches** off, and under **General**, your account as **Owner** and the name you chose.
+6. GitHub otvorí na novej karte stránku **Create a new repository**. Všetko je už vyplnené: v časti **Start with a template** šablóna `nightscout/aaps-builder` s vypnutou voľbou **Include all branches** a v časti **General** váš účet ako **Owner** a názov, ktorý ste zvolili.
 
    ![Stránka GitHubu Create a new repository](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
 
-   Don't change anything.
+   Nič nemeňte.
 
-7. Scroll down: under **Configuration**, **Choose visibility** is already **Private**. Tap the green **Create repository** button.
+7. Posuňte sa nižšie: v časti **Configuration** je **Choose visibility** už nastavené na **Private**. Ťuknite na zelené tlačidlo **Create repository**.
 
-   ![Visibility Private and the Create repository button](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
+   ![Viditeľnosť Private a tlačidlo Create repository](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
 
-   GitHub shows your new repository: it contains a folder `.github` (with the build workflow) and a file `README.md`. **Vráťte sa na kartu so stránkou nastavenia** kvôli kroku 2: ťuknite na tlačidlo kariet vedľa panela s adresou v Chrome a zvoľte stránku nastavenia.
+   GitHub ukáže váš nový repozitár: obsahuje priečinok `.github` (s workflowom zostavenia) a súbor `README.md`. **Vráťte sa na kartu so stránkou nastavenia** kvôli kroku 2: ťuknite na tlačidlo kariet vedľa panela s adresou v Chrome a zvoľte stránku nastavenia.
 
 ```{warning}
-**Your new repository is empty**, with no files? It was not created from the template, and it cannot build. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** on the setup page again.
+**Váš nový repozitár je prázdny**, bez súborov? Nevznikol zo šablóny a nedokáže zostavovať. Vymažte ho (**Settings** → spodná časť stránky → **Delete this repository**) a potom na stránke nastavenia znova ťuknite na **Create my private repository**.
 ```
 
 (aaps-builder-step2)=
 
-## Step 2 – Your signing key
+## Krok 2 – Váš podpisový kľúč
 
 Aplikácia musí byť podpísaná vaším vlastným kľúčom. Zvoľte jednu z dvoch kariet. Najprv si prečítajte [upozornenie o novom alebo existujúcom kľúči](#aaps-builder-before-you-start).
 
-![Setup page step 2: the two key options](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
+![Krok 2 stránky nastavenia: dve možnosti kľúča](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
 
 ### I already have a keystore
 
@@ -165,7 +165,7 @@ Aplikácia musí byť podpísaná vaším vlastným kľúčom. Zvoľte jednu z d
 5. Ak sa heslo kľúča líši od hesla úložiska kľúčov, zrušte zaškrtnutie **Key password is the same as the keystore password** a zadajte heslo kľúča.
 6. Ťuknite na **Check and continue**.
 
-Stránka skontroluje heslo a alias priamo vo vašom zariadení. **Keystore OK! Continue with step 3.** means everything is right. Ak stránka hlási, že heslo sa skontroluje pri zostavení, aj tak pokračujte: zostavenie vám povie, ak je niečo zle.
+Stránka skontroluje heslo a alias priamo vo vašom zariadení. **Keystore OK! Continue with step 3.** znamená, že je všetko v poriadku. Ak stránka hlási, že heslo sa skontroluje pri zostavení, aj tak pokračujte: zostavenie vám povie, ak je niečo zle.
 
 ### Create a new key
 
@@ -191,13 +191,13 @@ Stránka skontroluje heslo a alias priamo vo vašom zariadení. **Keystore OK! C
 
 (aaps-builder-step3)=
 
-## Step 3 – Give the key to your repository
+## Krok 3 – Odovzdajte kľúč svojmu repozitáru
 
-Step 3 unlocks when step 2 is done. Váš kľúč, jeho heslá a jeho alias sa zbalia do jednej hodnoty, secretu `KEYSTORE_SET`.
+Krok 3 sa odomkne, keď je hotový krok 2. Váš kľúč, jeho heslá a jeho alias sa zbalia do jednej hodnoty, secretu `KEYSTORE_SET`.
 
 1. Ťuknite na **Open the secrets page**.
 
-![Setup page step 3](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
+![Krok 3 stránky nastavenia](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
 
 2. GitHub otvorí stránku **New secret** vášho repozitára. V telefóne je pod ponukou nastavení: posuňte sa nižšie.
 
@@ -219,7 +219,7 @@ GitHub ukazuje **Page not found** (404)? Najprv skontrolujte, či ste v tomto pr
 
 (aaps-builder-step4)=
 
-## Step 4 – Build the app
+## Krok 4 – Zostavte aplikáciu
 
 1. Na stránke nastavenia ťuknite na **Open the build page**. GitHub otvorí stránku **Build AAPS** vášho repozitára.
 
@@ -227,12 +227,12 @@ GitHub ukazuje **Page not found** (404)? Najprv skontrolujte, či ste v tomto pr
 
    Ak sa namiesto toho otvorí **aplikácia GitHub**: ťuknite na **RUN WORKFLOW**, skontrolujte verziu a variant a znova ťuknite na **RUN WORKFLOW**. Aplikácia môže stále ukazovať **Nothing to see here**: potiahnite zoznam nadol, aby sa obnovil a ukázal vaše zostavenie. Potom pokračujte krokom 4 nižšie.
 
-2. If GitHub asks, tap the green button to enable workflows.
+2. Ak sa to GitHub spýta, ťuknite na zelené tlačidlo, ktoré povolí workflowy.
 
-   The list of workflows shows two entries: use **Build AAPS**. Ignore **AAPS Builder**: it holds the build steps and has no **Run workflow** button.
+   Zoznam workflowov ukazuje dve položky: použite **Build AAPS**. **AAPS Builder** ignorujte: obsahuje kroky zostavenia a nemá tlačidlo **Run workflow**.
 
 3. Ťuknite na **Run workflow**. Otvorí sa malý formulár:
-   - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
+   - **Version**: ponechajte `latest`, ak chcete zostaviť najnovšie vydanie AAPS, alebo zadajte číslo vydania, napríklad `4.0.0`.
    - **Variant**: na bežné používanie s pumpou ponechajte `fullRelease`. Ostatné varianty sú vysvetlené v časti [varianty zostavenia](#browserbuild-variant). `aapsclient3Release` zostaví **AAPSClient3**, ktorý je dostupný od verzie **AAPS** 4.0 (pozrite [O AAPSClient, AAPSClient2 a AAPSClient3](#remotecontrol-aapsclient-versions)).
    - Ťuknite na zelené tlačidlo **Run workflow**.
 
@@ -252,12 +252,12 @@ GitHub ukazuje **Page not found** (404)? Najprv skontrolujte, či ste v tomto pr
 
 Ak tam nie je tlačidlo **Build AAPS** ani **Run workflow**:
 
-- Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the button.
+- Otvorte svoj repozitár a skontrolujte, že obsahuje priečinok `.github` so súborom `workflows/build.yml`. Ak je repozitár prázdny, nevznikol zo šablóny: vymažte ho (**Settings** → spodná časť stránky → **Delete this repository**) a urobte [krok 1](#aaps-builder-step1) znova pomocou tlačidla.
 - Otvorte kartu **Actions**. Ak sa tam píše, že workflowy sú vypnuté, ťuknite na zelené tlačidlo, ktoré ich povolí, a potom v zozname ťuknite na **Build AAPS**.
 
 (aaps-builder-step5)=
 
-## Step 5 – Install the app on your phone
+## Krok 5 – Nainštalujte aplikáciu do telefónu
 
 ```{warning}
 **Pred každou aktualizáciou** [exportujte svoje nastavenia](#ExportImportSettings-Automating-Settings-Export) v AAPS a súbor skopírujte **mimo telefón** (Disk Google, Dropbox…). Uchovávajte tam aj niekoľko starších exportov a súbory APK, aby ste sa vždy mohli vrátiť späť.
@@ -304,21 +304,21 @@ Od septembra 2026 môže [overovanie vývojárov pre Android](#android-developer
 
 (aaps-builder-google-drive)=
 
-## Step 6 (optional) – Also save the app in Google Drive
+## Krok 6 (voliteľný) – Ukladajte aplikáciu aj na Disk Google
 
 Každé zostavenie si môžete nechať uložiť aj na svoj Disk Google, do priečinka `AAPS/<version>`. Je to voliteľné: aplikácia je vždy dostupná na stránke zostavenia.
 
-Potrebuje to ešte jeden secret, `GDRIVE_OAUTH2`. Step 6 of the setup page gets it from Google for you, on a phone or a computer. **AAPS** can then only see and change the files it creates in your Google Drive, nothing else.
+Potrebuje to ešte jeden secret, `GDRIVE_OAUTH2`. Krok 6 stránky nastavenia ho za vás získa od Googlu, v telefóne aj v počítači. **AAPS** potom na vašom Disku Google vidí a mení iba súbory, ktoré sám vytvorí, nič iné.
 
-1. On the setup page, tap **Connect Google Drive**. Google opens in a new tab.
-2. Choose your Google account and allow access. If Google says the app is not verified, tap **Advanced**, then **Go to …**.
-3. The new tab then shows an error such as **This site can't be reached** or **127.0.0.1 refused to connect**. **This is expected:** Google's answer is in the address of that tab. Tap the address bar, select the whole address (it starts with `http://127.0.0.1:47913/`) and copy it.
-4. Go back to the setup page tab within a few minutes: Google's answer is only valid for a short time, and only once. Paste the address into **Paste the copied address here** and tap **Get GDRIVE_OAUTH2**. The page shows **GDRIVE_OAUTH2 is ready**.
-5. Ťuknite na **Open the secrets page**. Ťuknite na **Copy name** a vložte ho do malého poľa **Name** (názov je `GDRIVE_OAUTH2`). Tap **Copy secret**, paste it into the big **Secret** box and tap **Add secret**.
+1. Na stránke nastavenia ťuknite na **Connect Google Drive**. Google sa otvorí na novej karte.
+2. Zvoľte svoj účet Google a povoľte prístup. Ak Google hlási, že aplikácia nie je overená, ťuknite na **Rozšírené** (Advanced) a potom na **Prejsť na …** (Go to …).
+3. Nová karta potom ukáže chybu, napríklad **Táto stránka nie je dostupná** (This site can't be reached) alebo **Server 127.0.0.1 odmietol pripojenie** (127.0.0.1 refused to connect). **Je to v poriadku:** odpoveď Googlu je v adrese tejto karty. Ťuknite na panel s adresou, označte celú adresu (začína sa `http://127.0.0.1:47913/`) a skopírujte ju.
+4. Do niekoľkých minút sa vráťte na kartu so stránkou nastavenia: odpoveď Googlu platí iba krátko a iba raz. Vložte adresu do poľa **Paste the copied address here** a ťuknite na **Get GDRIVE_OAUTH2**. Stránka ukáže **GDRIVE_OAUTH2 is ready**.
+5. Ťuknite na **Open the secrets page**. Ťuknite na **Copy name** a vložte ho do malého poľa **Name** (názov je `GDRIVE_OAUTH2`). Ťuknite na **Copy secret**, vložte ho do veľkého poľa **Secret** a ťuknite na **Add secret**.
 
 Od nasledujúceho zostavenia sa súbory APK ukladajú aj na Disk Google.
 
-Already have a `GDRIVE_OAUTH2` value from the preparation file of the other browser build methods? It works too: add it as the `GDRIVE_OAUTH2` secret.
+Už máte hodnotu `GDRIVE_OAUTH2` z prípravného súboru iných spôsobov zostavenia v prehliadači? Funguje tiež: pridajte ju ako secret `GDRIVE_OAUTH2`.
 
 Google prístup zruší, ak 6 mesiacov nič nezostavíte alebo ak zmeníte heslo ku Googlu. Zostavenie vám to potom oznámi: zopakujte tieto kroky. Pozrite [Platnosť obnovovacieho tokenu Google vypršala](#aaps-ci-google-token-expired).
 
@@ -328,43 +328,43 @@ Google prístup zruší, ak 6 mesiacov nič nezostavíte alebo ak zmeníte heslo
 
 Váš repozitár nikdy nič nezostaví sám: vy rozhodujete, kedy zostaviť, ktorú verziu a ktorý variant. Keď vyjde nová verzia AAPS:
 
-1. [Back up your settings](#aaps-builder-step5) as explained in step 5.
-2. Build the new version as in [step 4](#aaps-builder-step4). Ponechajte `latest` alebo zadajte číslo vydania.
-3. Download and install it as in [step 5](#aaps-builder-step5).
+1. [Zálohujte svoje nastavenia](#aaps-builder-step5) podľa postupu v kroku 5.
+2. Zostavte novú verziu ako v [kroku 4](#aaps-builder-step4). Ponechajte `latest` alebo zadajte číslo vydania.
+3. Stiahnite ju a nainštalujte ako v [kroku 5](#aaps-builder-step5).
 
-**Updates of the build steps** reach you by themselves: at every build, your repository runs the build steps released by the AAPS developers in nightscout/aaps-builder. Nothing changes in your repository, and there is no automatic build.
+**Aktualizácie krokov zostavenia** sa k vám dostanú samy: pri každom zostavení váš repozitár spustí kroky zostavenia, ktoré vývojári AAPS vydali v nightscout/aaps-builder. Vo vašom repozitári sa nič nezmení a nespustí sa žiadne automatické zostavenie.
 
-**Updates of your workflow file** are rare: only when the **Run workflow** form changes, for example for a new build variant, or once if your repository was made with an earlier version of the setup page (an empty repository with a short workflow file) or from the old template. The [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. Your `KEYSTORE_SET` secret stays as it is. On the setup page, open **Updating your copy** at the end of step 1:
+**Aktualizácie vášho súboru workflow** sú zriedkavé: iba keď sa zmení formulár **Run workflow**, napríklad kvôli novému variantu zostavenia, alebo raz, ak váš repozitár vznikol staršou verziou stránky nastavenia (prázdny repozitár s krátkym súborom workflow) alebo zo starej šablóny. Stránka [Aktualizácie a zmeny dokumentácie](../Maintenance/DocumentationUpdate.md) to vtedy oznámi. Váš secret `KEYSTORE_SET` zostáva bez zmeny. Na stránke nastavenia otvorte na konci kroku 1 časť **Updating your copy**:
 
-1. Tap **Open the newest workflow**. On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the **plain-text version** instead, press and hold the text, then **Select all** and **Copy**.
-2. Tap **Open my workflow file**.
-3. Replace the whole text with the copied workflow (long press on a phone: **Select all**, then **Paste**).
-4. Tap **Commit changes…**, then **Commit changes**.
+1. Ťuknite na **Open the newest workflow**. V počítači kliknite vpravo hore nad súborom na **ikonu kopírovania** („Copy raw file“). V telefóne namiesto toho otvorte **textovú verziu** (plain-text version), stlačte a podržte text a potom zvoľte **Vybrať všetko** (Select all) a **Kopírovať** (Copy).
+2. Ťuknite na **Open my workflow file**.
+3. Nahraďte celý text skopírovaným workflowom (v telefóne dlho podržte prst: **Vybrať všetko**, potom **Prilepiť** (Paste)).
+4. Ťuknite na **Commit changes…** a potom na **Commit changes**.
 
-The first line of the file shows its version.
+Prvý riadok súboru ukazuje jeho verziu.
 
 (aaps-builder-troubleshooting)=
 
 ## Riešenie problémov
 
-To see why a build failed, [read the build log](#aaps-ci-read-the-logs): the step names are different, but you find the error the same way. You can also [update a secret](#aaps-ci-update-secret) and [run the build again](#aaps-ci-rerun) the same way.
+Ak chcete zistiť, prečo zostavenie zlyhalo, [prečítajte si log zostavenia](#aaps-ci-read-the-logs): názvy krokov sú iné, ale chybu nájdete rovnako. Rovnako môžete aj [aktualizovať secret](#aaps-ci-update-secret) a [znova spustiť zostavenie](#aaps-ci-rerun).
 
-- **No "Build AAPS" or "Run workflow" button, or the repository is empty**: the repository was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the **Create my private repository** button.
+- **Chýba tlačidlo „Build AAPS“ alebo „Run workflow“, alebo je repozitár prázdny**: repozitár nevznikol zo šablóny. Vymažte ho (**Settings** → spodná časť stránky → **Delete this repository**) a urobte [krok 1](#aaps-builder-step1) znova pomocou tlačidla **Create my private repository**.
 - **Zostavenie sa zastaví s hlásením „This repository is PUBLIC“**: vo svojom repozitári otvorte **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private** a potom zostavte znova.
-- **"Secret KEYSTORE_SET is missing"**: do step 3 of the setup page.
-- **„The secret is too short“**, **„The secret is not a valid code“** alebo **„The secret does not contain a keystore“**: do secretu sa vložil nesprávny text, často samotné slovo `KEYSTORE_SET` alebo iba časť kódu. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 2 of the setup page first if you closed it).
-- **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 2 and 3 of the setup page.
+- **„Secret KEYSTORE_SET is missing“**: urobte krok 3 stránky nastavenia.
+- **„The secret is too short“**, **„The secret is not a valid code“** alebo **„The secret does not contain a keystore“**: do secretu sa vložil nesprávny text, často samotné slovo `KEYSTORE_SET` alebo iba časť kódu. Vo svojom repozitári otvorte **Settings** → **Secrets and variables** → **Actions**, upravte `KEYSTORE_SET` a znova vložte dlhý kód z **Copy secret** (ak ste stránku nastavenia zavreli, najprv zopakujte jej krok 2).
+- **„Keystore, password or alias is wrong“**: skontrolujte heslo a alias svojho úložiska kľúčov a potom zopakujte kroky 2 a 3 stránky nastavenia.
 - **„Version … does not exist“**: verzia, ktorú ste zadali, nie je vydanie AAPS. Použite `latest` alebo skontrolujte číslo vydania.
-- **"Variant … is not supported"**: your workflow file is an older version. Replace it as explained in [Updating AAPS](#aaps-builder-updates).
+- **„Variant … is not supported“**: váš súbor workflow je staršia verzia. Nahraďte ho podľa postupu v časti [Aktualizácia AAPS](#aaps-builder-updates).
 - **„Page not found“ (404), keď stránka nastavenia otvorí GitHub**: prihláste sa na github.com v tom istom prehliadači (GitHub ukazuje 404 pri súkromných repozitároch, keď nie ste prihlásení). Ak ste prihlásení, používateľské meno alebo názov repozitára v kroku 1 stránky nastavenia sa nezhoduje s vaším repozitárom. Zadajte presné názvy.
 - **„No GitHub user with this name“** v kroku 1: zadajte svoje používateľské meno na GitHube tak, ako je uvedené vo vašom profile GitHub, nie e-mail.
-- **Chýba odkaz Download alebo sa otvorila aplikácia GitHub**: aplikácia GitHub nedokáže sťahovať zostavenia. Open the build in Chrome as explained in [step 5](#aaps-builder-step5). Aby sa odkazy GitHubu neotvárali v aplikácii: Android **Nastavenia** → **Aplikácie** → **GitHub** → **Otvárať predvolene** (Open by default) → vypnite **Otvárať podporované odkazy** (Open supported links).
-- **"Google Drive access has expired or was revoked"**: redo [step 6](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
+- **Chýba odkaz Download alebo sa otvorila aplikácia GitHub**: aplikácia GitHub nedokáže sťahovať zostavenia. Otvorte zostavenie v Chrome podľa postupu v [kroku 5](#aaps-builder-step5). Aby sa odkazy GitHubu neotvárali v aplikácii: Android **Nastavenia** → **Aplikácie** → **GitHub** → **Otvárať predvolene** (Open by default) → vypnite **Otvárať podporované odkazy** (Open supported links).
+- **„Google Drive access has expired or was revoked“**: zopakujte [krok 6](#aaps-builder-google-drive) a aktualizujte secret `GDRIVE_OAUTH2`.
 
-For other GitHub and Google Drive issues, see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Pri iných problémoch s GitHubom a Diskom Google pozrite [Zostavenie v prehliadači: riešenie problémov](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ```{toctree}
 :hidden:
 
-AAPS Builder setup page <BrowserBuildAapsBuilderSetup.md>
+Stránka nastavenia AAPS Builder <BrowserBuildAapsBuilderSetup.md>
 ```

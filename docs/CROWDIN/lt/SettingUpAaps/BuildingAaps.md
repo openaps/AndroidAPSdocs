@@ -1,50 +1,50 @@
-# Building AAPS
+# AAPS kūrimas
 
 ## Kurti sau, o ne parsisiųsti
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**AAPS programėlės (apk failo) negalima atsisiųsti dėl medicinos prietaisų reglamentų. Sukurti programėlę savo reikmėms yra teisėta, bet jos kopijos negalima duoti kitiems!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Daugiau informacijos rasite [DUK puslapyje](../UsefulLinks/FAQ.md).
 
 ---
 
-Three methods are available to build the AAPS app:
+AAPS programėlę galima sukurti trimis būdais:
 
-### Build with a browser (recommended)
+### Kūrimas naršyklėje (rekomenduojama)
 
-You can build the app in a web browser using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Programėlę galite sukurti interneto naršyklėje naudodami GitHub Actions. Android telefone [AAPS Builder](#aaps-builder) sąrankos puslapis jus nuosekliai praves per visus veiksmus, o kiekvieną kūrimą paleidžiate patys. Kompiuteryje arba iPhone taip pat galite kurti su fork ir išsaugoti programėlę savo Google Drive.
 
-**[Follow these instructions.](./BrowserBuild.md)**
-
-----
-
-### Build with Android Studio
-
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
-
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Vadovaukitės šiomis instrukcijomis.](./BrowserBuild.md)**
 
 ----
 
-### Build using the command-line
+### Kūrimas su Android Studio
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Programėlę galite sukurti savo kompiuteryje naudodami Android Studio. Anksčiau tai buvo vienintelis kūrimo būdas, dabar Android Studio daugiausia naudoja kūrėjai, kurie ketina keisti kodą.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Vadovaukitės šiomis instrukcijomis.](./ComputerBuild.md)**
+
+----
+
+### Kūrimas komandinėje eilutėje
+
+Šis būdas skirtas tiems, kas nori kurti AAPS vietinėje komandinėje eilutėje, neįdiegę Android Studio.
+
+**[Vadovaukitės šiomis instrukcijomis.](./CLIBuild.md)**
 
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## Jei kūrimas nepavyksta
 
-Each build method has its own troubleshooting section:
+Kiekvienas kūrimo būdas turi savo trikčių šalinimo skyrių:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**: [AAPS Builder trikčių šalinimas](#aaps-builder-troubleshooting)
+* **Kūrimas naršyklėje** kompiuteryje arba iPhone: [Kūrimas naršyklėje: trikčių šalinimas](#aaps-ci-troubleshooting)
+* **Android Studio**: [Android Studio trikčių šalinimas](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Praradote raktų saugyklą arba jos slaptažodį? Žr. [AAPS įdiegimas iš naujo su nauja raktų saugykla](#reinstall-aaps).
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+Jei programėlė sukurta, bet neįsidiegia jūsų telefone, žr. [AAPS perkėlimas ir įdiegimas](TransferringAndInstallingAaps.md).
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Jei jūsų problemos sąraše nėra, žr. [Kur gauti pagalbos?](../GettingHelp/WhereCanIGetHelp.md)

@@ -1,9 +1,9 @@
 (aaps-ci-google-drive-auth)=
 
-# Browser build – Step 3: Authorize Google Drive
+# Construirea în browser – Pasul 3: Autorizați Google Drive
 
 ```{note}
-This is **Step 3** of the [Browser build](BrowserBuild.md). First complete [Step 2 – Create your signing keystore](BrowserBuildKeystore.md).
+Acesta este **Pasul 3** din [Construirea în browser](BrowserBuild.md). First complete [Step 2 – Create your signing keystore](BrowserBuildKeystore.md).
 ```
 
 ```{warning}
@@ -16,7 +16,7 @@ Note: If you already followed this part in the video, you can now skip to [Step 
 If the Google authorization does not start or the preparation page fails, close the preparation page, open `aaps-ci-preparation.html` again the same way as in Step 2, and start this step again. See [troubleshooting](#aaps-ci-preparation-web).
 ```
 
-Return to the preparation page tab.
+Reveniți la fila paginii de pregătire.
 
 Scroll down to the Google Drive Auth section and tap Start Auth.
 
@@ -26,7 +26,7 @@ Select your Google account.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH1.png)
 
-Scroll down and accept the access. The web page needs it to obtain the Google Drive authentication key.
+Derulați în jos și acceptați accesul. The web page needs it to obtain the Google Drive authentication key.
 
 Tap Continue.
 
@@ -36,7 +36,7 @@ The `GDRIVE_OAUTH2` field will populate, tap the top Copy button.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH3.png)
 
-Switch back to the GitHub tab.
+Reveniți la fila GitHub.
 
 Scroll down to Repository secrets and tap New repository secret.
 
@@ -44,7 +44,7 @@ If you followed Option 1 you should see this:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4.png)
 
-If you followed Option 2 there will be more keys:
+Dacă ați urmat Opțiunea 2, vor fi mai multe chei:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4b.png)
 
@@ -52,15 +52,15 @@ In the Name field, paste the text you just copied. Use a long touch on the text 
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH5.png)
 
-Switch to the preparation page tab.
+Treceți la fila paginii de pregătire.
 
-Tap the second Copy button.
+Apăsați al doilea buton Copy.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH6.png)
 
-Switch back to the GitHub tab.
+Reveniți la fila GitHub.
 
-1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+1. În câmpul Secret, lipiți textul pe care tocmai l-ați copiat. Use a long touch on the text box to show the paste menu.
 
 2. Tap Add secret.
 

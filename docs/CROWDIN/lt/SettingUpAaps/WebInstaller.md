@@ -1,71 +1,71 @@
 (web-installer)=
 
-# AAPS web installer
+# AAPS žiniatinklio diegimo programa
 
-Install the **AAPS** APK you built onto your Android phone, straight from this browser, over a USB cable. No command line, nothing to download. Installed this way (the ADB way), apps are **exempt from Google's Android developer verification**.
+Įdiekite savo sukurtą **AAPS** APK į Android telefoną tiesiai iš šios naršyklės, USB kabeliu. Nereikia komandinės eilutės, nieko nereikia atsisiųsti. Taip (ADB būdu) įdiegtoms programėlėms **Google Android kūrėjų tapatybės patikrinimas netaikomas**.
 
 ```{admonition} This page runs entirely in your browser
 :class: tip
 
-Your APK file and your phone's data never leave this computer: the page cannot send data anywhere (its *Content-Security-Policy* blocks all uploads; you can check this in the browser's developer tools, Network tab). Only ever use this page at its official address, linked from [Transferring and installing AAPS](#android-developer-verification-web) in the **AAPS** documentation.
+Jūsų APK failas ir telefono duomenys niekada nepalieka šio kompiuterio: puslapis negali niekur siųsti duomenų (jo *Content-Security-Policy* blokuoja bet kokį įkėlimą; tai galite patikrinti naršyklės kūrėjo įrankiuose, skirtuke Network). Šį puslapį naudokite tik jo oficialiu adresu, į kurį veda nuoroda iš puslapio [AAPS perkėlimas ir įdiegimas](#android-developer-verification-web) **AAPS** dokumentacijoje.
 ```
 
 <noscript>
 
-**JavaScript is disabled.** This page needs JavaScript to talk to your phone.
+**JavaScript išjungtas.** Šiam puslapiui reikia JavaScript, kad galėtų bendrauti su jūsų telefonu.
 
 </noscript>
 
 <div id="aapsi-unsupported" class="aapsi-box aapsi-error" hidden>
 
-**This browser cannot talk to USB devices.** Please open this page in **Google Chrome**, **Microsoft Edge** or **Opera**, on a computer or an Android device. Firefox, Safari and all iPhone browsers do not support WebUSB.
+**Ši naršyklė negali bendrauti su USB įrenginiais.** Atidarykite šį puslapį naršyklėje **Google Chrome**, **Microsoft Edge** arba **Opera** kompiuteryje arba Android įrenginyje. Firefox, Safari ir visos iPhone naršyklės nepalaiko WebUSB.
 
 </div>
 
 (web-installer-prepare)=
 
-## Step 1 – Before you start
+## 1 žingsnis – Prieš pradedant
 
-- **Enable USB debugging** on the phone (one-time setup):
-  - Go to **Settings** > **About phone** and tap **Build number** seven times, until the phone confirms you are a developer.
-  - Back in the main **Settings**, open **Developer options** and switch on **USB debugging**.
-- Connect the phone with a **data-capable USB cable** (some charging cables cannot transfer data: if the phone is never detected, try another cable).
-- **Close Android Studio** and any other program that uses ADB: only one program can talk to the phone at a time.
-- Have your **AAPS APK file** ready on this computer (for the browser build, download it from your Google Drive first).
+- Telefone **įjunkite USB derinimą** (vienkartinis nustatymas):
+  - Eikite į **Settings** (Nustatymai) > **About phone** (Apie telefoną) ir septynis kartus paspauskite **Build number** (Versijos numeris), kol telefonas patvirtins, kad esate kūrėjas.
+  - Grįžę į pagrindinį **Settings** meniu, atidarykite **Developer options** (Kūrėjo parinktys) ir įjunkite **USB debugging** (USB derinimas).
+- Prijunkite telefoną **USB kabeliu, kuriuo galima perduoti duomenis** (kai kuriais įkrovimo kabeliais duomenų perduoti negalima: jei telefonas niekada neaptinkamas, pabandykite kitą kabelį).
+- **Uždarykite Android Studio** ir bet kurią kitą ADB naudojančią programą: su telefonu vienu metu gali bendrauti tik viena programa.
+- Turėkite **AAPS APK failą** šiame kompiuteryje (jei kūrėte naršyklėje, pirmiausia atsisiųskite jį iš savo Google Drive).
 
-No computer? This page also works from Chrome on *another Android phone*, connected with a USB-C to USB-C cable.
+Neturite kompiuterio? Šis puslapis veikia ir iš Chrome *kitame Android telefone*, prijungtame USB-C–USB-C kabeliu.
 
 (web-installer-connect)=
 
-## Step 2 – Connect your phone
+## 2 žingsnis – Prijunkite telefoną
 
-Click the button, then pick your phone in the list the browser shows.
+Spauskite mygtuką, tada naršyklės rodomame sąraše pasirinkite savo telefoną.
 
-<button class="aapsi-btn" type="button" id="aapsi-connect-btn">Connect phone</button> <button class="aapsi-btn aapsi-secondary" type="button" id="aapsi-disconnect-btn" hidden>Disconnect</button>
+<button class="aapsi-btn" type="button" id="aapsi-connect-btn">Prijungti telefoną</button> <button class="aapsi-btn aapsi-secondary" type="button" id="aapsi-disconnect-btn" hidden>Atjungti</button>
 
 <span class="aapsi-status" id="aapsi-connect-status"></span>
 
 <div class="aapsi-box aapsi-warn" id="aapsi-authorize-hint" hidden>
 
-**Look at your phone now:** tap **Allow** on the "Allow USB debugging?" message, and tick *"Always allow from this computer"*. Don't see it? Unlock the phone's screen, or unplug and replug the cable.
+**Dabar pažiūrėkite į telefoną:** pranešime „Allow USB debugging?“ (Leisti USB derinimą?) spauskite **Allow** (Leisti) ir pažymėkite *„Always allow from this computer“* (Visada leisti iš šio kompiuterio). Nematote jo? Atrakinkite telefono ekraną arba ištraukite ir vėl įkiškite kabelį.
 
 </div>
 
 <div id="aapsi-connect-help" hidden>
 
-```{admonition} The phone doesn't show up, or connecting fails?
+```{admonition} Telefonas nerodomas arba nepavyksta prisijungti?
 :class: note
 
-- Check that **USB debugging** is on ([step 1](#web-installer-prepare)) and the cable is a data cable.
-- Close **Android Studio**, or run `adb kill-server` if you have ADB installed, then unplug and replug the phone.
-- On Windows, an OEM USB driver installed for your phone can also hold the connection: unplug other Android tools and try again.
+- Patikrinkite, ar įjungtas **USB debugging** ([1 žingsnis](#web-installer-prepare)) ir ar kabelis skirtas duomenims perduoti.
+- Uždarykite **Android Studio** arba, jei turite įdiegę ADB, paleiskite `adb kill-server`, tada ištraukite ir vėl prijunkite telefoną.
+- Windows sistemoje ryšį taip pat gali užimti jūsų telefonui įdiegta gamintojo (OEM) USB tvarkyklė: atjunkite kitus Android įrankius ir bandykite dar kartą.
 ```
 
 </div>
 
 (web-installer-file)=
 
-## Step 3 – Choose your AAPS APK file
+## 3 žingsnis – Pasirinkite AAPS APK failą
 
 <input type="file" id="aapsi-apk-input" accept=".apk" disabled />
 
@@ -73,11 +73,11 @@ Click the button, then pick your phone in the list the browser shows.
 
 (web-installer-install)=
 
-## Step 4 – Install
+## 4 žingsnis – Įdiekite
 
-Updating an existing **AAPS**? All its settings and history are kept, exactly like `adb install -r`.
+Atnaujinate jau įdiegtą **AAPS**? Visi jos nustatymai ir istorija išsaugomi, lygiai kaip su `adb install -r`.
 
-<button class="aapsi-btn" type="button" id="aapsi-install-btn" disabled>Install on phone</button>
+<button class="aapsi-btn" type="button" id="aapsi-install-btn" disabled>Įdiegti telefone</button>
 
 <div id="aapsi-progress-wrap" hidden>
 
@@ -88,7 +88,7 @@ Updating an existing **AAPS**? All its settings and history are kept, exactly li
 
 <div class="aapsi-box aapsi-success" id="aapsi-result-success" hidden>
 
-**AAPS is installed.** You can unplug the phone. If this was your first installation, continue with the [Setup Wizard](SetupWizard.md).
+**AAPS įdiegta.** Galite atjungti telefoną. Jei tai buvo pirmas diegimas, tęskite su [Sąrankos vedliu](SetupWizard.md).
 
 </div>
 
@@ -96,7 +96,7 @@ Updating an existing **AAPS**? All its settings and history are kept, exactly li
 
 <span id="aapsi-error-message"></span>
 
-Technical details:
+Techninė informacija:
 
 <pre id="aapsi-error-details"></pre>
 
@@ -104,37 +104,37 @@ Technical details:
 
 ----
 
-Part of the **AAPS** documentation. Built on the open-source [Tango (ya-webadb)](https://github.com/yume-chan/ya-webadb) libraries (MIT license). Page source and build instructions: [openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs).
+**AAPS** dokumentacijos dalis. Sukurta naudojant atvirojo kodo [Tango (ya-webadb)](https://github.com/yume-chan/ya-webadb) bibliotekas (MIT licencija). Puslapio šaltinio kodas ir kūrimo instrukcijos: [openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs).
 
-**AAPS** is a DIY system, not a commercial product: you build it, you install it, you are responsible for it. This page is provided by the community without any warranty.
+**AAPS** yra „pasidaryk pats“ (DIY) sistema, o ne komercinis produktas: jūs ją sukuriate, jūs ją įdiegiate, jūs už ją atsakote. Šį puslapį bendruomenė teikia be jokių garantijų.
 
 <div id="aapsi-msgs" hidden>
 
-- <span data-aapsi-msg="noDetails">(no further details)</span>
-- <span data-aapsi-msg="errSignature">This APK was built with a different signing key than the AAPS already installed on the phone. Use the same keystore as before, or export your AAPS settings and uninstall the old AAPS first (uninstalling loses all its settings and history: export first!).</span>
-- <span data-aapsi-msg="errDowngrade">The phone already has a newer version of this app. To go back to an older version, export your settings and uninstall the current app first.</span>
-- <span data-aapsi-msg="errStorage">There is not enough free storage on the phone. Free up some space and try again.</span>
-- <span data-aapsi-msg="errInvalidApk">The phone does not recognize this file as a valid APK. Check that you selected the right file and that the download completed.</span>
-- <span data-aapsi-msg="errOldSdk">The Android version on this phone is too old for this APK.</span>
-- <span data-aapsi-msg="errCanceled">The installation was declined on the phone. Watch the phone's screen and allow the installation when asked.</span>
-- <span data-aapsi-msg="errBusy">Another program is using the phone's ADB connection. Close Android Studio (or run "adb kill-server"), unplug and replug the cable, then try again.</span>
-- <span data-aapsi-msg="errLost">The connection to the phone was lost. Check the cable, then connect again.</span>
-- <span data-aapsi-msg="errGeneric">The installation failed. See the technical details below, and ask for help on the AAPS community channels if needed.</span>
-- <span data-aapsi-msg="errDisconnectedDuringInstall">The phone was disconnected during the installation. Reconnect it and try again: nothing is broken.</span>
-- <span data-aapsi-msg="waitingPick">Waiting for you to pick a device…</span>
-- <span data-aapsi-msg="noDevice">No device selected. Is USB debugging enabled, and is the cable a data cable?</span>
-- <span data-aapsi-msg="connecting">Connecting…</span>
-- <span data-aapsi-msg="phoneDisconnected">The phone was disconnected.</span>
-- <span data-aapsi-msg="androidDevice">Android device</span>
-- <span data-aapsi-msg="connectedTo">Connected to {name}.</span>
-- <span data-aapsi-msg="couldNotConnect">Could not connect.</span>
-- <span data-aapsi-msg="disconnected">Disconnected.</span>
-- <span data-aapsi-msg="notApk">"{file}" is not an .apk file. Please select the AAPS APK you built.</span>
-- <span data-aapsi-msg="emptyFile">This file is empty. Please check the download and select it again.</span>
-- <span data-aapsi-msg="notRealApk">"{file}" does not look like a real APK file. Did you select the right file?</span>
-- <span data-aapsi-msg="selected">Selected: {file} ({size})</span>
-- <span data-aapsi-msg="copying">Copying to phone… {done} of {total}</span>
-- <span data-aapsi-msg="installingOnPhone">Installing on the phone… (this can take a minute)</span>
+- <span data-aapsi-msg="noDetails">(daugiau informacijos nėra)</span>
+- <span data-aapsi-msg="errSignature">Šis APK sukurtas su kitu pasirašymo raktu nei telefone jau įdiegta AAPS. Naudokite tą pačią raktų saugyklą kaip anksčiau arba eksportuokite AAPS nustatymus ir pirmiausia pašalinkite senąją AAPS (pašalinus prarandami visi jos nustatymai ir istorija: pirmiausia eksportuokite!).</span>
+- <span data-aapsi-msg="errDowngrade">Telefone jau yra naujesnė šios programėlės versija. Jei norite grįžti prie senesnės versijos, eksportuokite nustatymus ir pirmiausia pašalinkite dabartinę programėlę.</span>
+- <span data-aapsi-msg="errStorage">Telefone nepakanka laisvos vietos. Atlaisvinkite vietos ir bandykite dar kartą.</span>
+- <span data-aapsi-msg="errInvalidApk">Telefonas neatpažįsta šio failo kaip tinkamo APK. Patikrinkite, ar pasirinkote tinkamą failą ir ar atsisiuntimas baigėsi.</span>
+- <span data-aapsi-msg="errOldSdk">Šio telefono Android versija per sena šiam APK.</span>
+- <span data-aapsi-msg="errCanceled">Diegimas telefone atmestas. Stebėkite telefono ekraną ir, kai bus paklausta, leiskite diegimą.</span>
+- <span data-aapsi-msg="errBusy">Telefono ADB ryšį naudoja kita programa. Uždarykite Android Studio (arba paleiskite „adb kill-server“), ištraukite ir vėl įkiškite kabelį, tada bandykite dar kartą.</span>
+- <span data-aapsi-msg="errLost">Ryšys su telefonu nutrūko. Patikrinkite kabelį ir prisijunkite dar kartą.</span>
+- <span data-aapsi-msg="errGeneric">Diegimas nepavyko. Žr. techninę informaciją žemiau ir, jei reikia, paprašykite pagalbos AAPS bendruomenės kanaluose.</span>
+- <span data-aapsi-msg="errDisconnectedDuringInstall">Diegimo metu telefonas buvo atjungtas. Prijunkite jį vėl ir bandykite dar kartą: niekas nesugadinta.</span>
+- <span data-aapsi-msg="waitingPick">Laukiama, kol pasirinksite įrenginį…</span>
+- <span data-aapsi-msg="noDevice">Įrenginys nepasirinktas. Ar įjungtas USB derinimas ir ar kabelis skirtas duomenims perduoti?</span>
+- <span data-aapsi-msg="connecting">Jungiamasi…</span>
+- <span data-aapsi-msg="phoneDisconnected">Telefonas atjungtas.</span>
+- <span data-aapsi-msg="androidDevice">Android įrenginys</span>
+- <span data-aapsi-msg="connectedTo">Prisijungta prie {name}.</span>
+- <span data-aapsi-msg="couldNotConnect">Nepavyko prisijungti.</span>
+- <span data-aapsi-msg="disconnected">Atjungta.</span>
+- <span data-aapsi-msg="notApk">„{file}“ nėra .apk failas. Pasirinkite savo sukurtą AAPS APK.</span>
+- <span data-aapsi-msg="emptyFile">Šis failas tuščias. Patikrinkite atsisiuntimą ir pasirinkite failą dar kartą.</span>
+- <span data-aapsi-msg="notRealApk">„{file}“ neatrodo kaip tikras APK failas. Ar pasirinkote tinkamą failą?</span>
+- <span data-aapsi-msg="selected">Pasirinkta: {file} ({size})</span>
+- <span data-aapsi-msg="copying">Kopijuojama į telefoną… {done} iš {total}</span>
+- <span data-aapsi-msg="installingOnPhone">Diegiama telefone… (tai gali užtrukti minutę)</span>
 - <span data-aapsi-msg="megabytes">{n} MB</span>
 
 </div>

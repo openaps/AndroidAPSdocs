@@ -107,7 +107,7 @@ Kdokoli, kdo QR kód uvidí, může číst váš Nightscout, a kód, který pár
 
 #### S PINem
 
-Klepněte na **OK**: hlavní zařízení zobrazí 8místný **PIN pro párování**, rozdělený do dvou skupin po čtyřech číslicích (například `1234 5678`). Tento PIN je **jednorázový** a **vyprší asi za dvě minuty**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
+Klepněte na **OK**: hlavní zařízení zobrazí 8místný **PIN pro párování**, rozdělený do dvou skupin po čtyřech číslicích (například `1234 5678`). Tento PIN je **jednorázový** a **vyprší asi za dvě minuty**. Stejně jako u QR kódu hlavní zařízení odmítne jméno klienta, které už je v jeho seznamu: každý klient dostane vlastní token Nightscoutu pod svým jménem.
 
 ![Obrazovka párování na hlavním zařízení s jednorázovým PINem (zde zobrazený PIN už vypršel)](../images/v4/ClientMaster/pairing_pin_master.png)
 
@@ -134,7 +134,7 @@ Namiřte fotoaparát na kód. Klient ukáže, co kód udělá — adresu Nightsc
 
 ```{admonition} Scanning is available on Android
 :class: note
-Skener zatím není dostupný v iOS a počítač nemá fotoaparát: tam použijte PIN.
+A computer without camera: use the PIN there.
 ```
 
 #### Zadání PINu
@@ -303,7 +303,7 @@ V nastavení označuje stejná malá **ikona mobilu** jednotlivé předvolby, kt
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Protože o uložené hodnotě rozhoduje hlavní zařízení, úprava položky konfigurace řízené hlavním zařízením nebo obousměrné předvolby z klienta vyžaduje, aby bylo hlavní zařízení **dostupné**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
+Protože o uložené hodnotě rozhoduje hlavní zařízení, úprava položky konfigurace řízené hlavním zařízením nebo obousměrné předvolby z klienta vyžaduje, aby bylo hlavní zařízení **dostupné**. Když je hlavní zařízení offline, jsou tyto ovládací prvky na klientovi vypnuté (viz [Když je hlavní zařízení offline](#clientmastercontrol-when-the-master-is-offline)).
 ```
 
 ---

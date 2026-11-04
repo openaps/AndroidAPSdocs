@@ -1,153 +1,153 @@
 (reinstall-aaps)=
-# Reinstalling AAPS with a new keystore
+# Yeni bir anahtar deposuyla AAPS'i yeniden yükleme
 
-Every **AAPS** apk is signed with a **keystore**. An update only installs over your current **AAPS** if it is signed with the **same keystore**: all your settings and data are then kept. That's why it is recommended to store the keystore and its password in a safe place.
+Her **AAPS** apk dosyası bir **anahtar deposu (keystore)** ile imzalanır. Bir güncelleme, mevcut **AAPS**'inizin üzerine yalnızca **aynı anahtar deposu** ile imzalanmışsa yüklenir: bu durumda tüm ayarlarınız ve verileriniz korunur. Bu nedenle anahtar deposunu ve parolasını güvenli bir yerde saklamanız önerilir.
 
-If you try to install an apk signed with a different keystore than before, you will get an error message explaining that the installation failed!
+Öncekinden farklı bir anahtar deposuyla imzalanmış bir apk yüklemeye çalışırsanız, yüklemenin başarısız olduğunu açıklayan bir hata mesajı alırsınız!
 
 (reinstall-aaps-when)=
-## When do you need to reinstall?
+## Ne zaman yeniden yüklemeniz gerekir?
 
-You need to uninstall and reinstall **AAPS** when your new apk is signed with a different keystore, for example:
+Yeni apk dosyanız farklı bir anahtar deposuyla imzalandığında **AAPS**'i kaldırıp yeniden yüklemeniz gerekir, örneğin:
 
-- You cannot find your old keystore or its password.
-- You created a new keystore, for example with [Option 1 of the browser build](../SettingUpAaps/BrowserBuildKeystore.md) or **Create a new key** in [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
-- You build on a new computer and did not copy your keystore to it.
+- Eski anahtar deponuzu veya parolasını bulamıyorsunuz.
+- [Tarayıcı ile oluşturmanın 1. seçeneği](../SettingUpAaps/BrowserBuildKeystore.md) ile veya [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) içinde **Create a new key** (yeni anahtar oluştur) ile yeni bir anahtar deposu oluşturdunuz.
+- Yeni bir bilgisayarda oluşturuyorsunuz ve anahtar deponuzu oraya kopyalamadınız.
 
-If you still have your keystore, you don't need this page: reuse it and [update **AAPS**](../Maintenance/UpdateToNewVersion.md) in place.
+Anahtar deponuz hâlâ duruyorsa bu sayfaya ihtiyacınız yok: onu yeniden kullanın ve [**AAPS**'i yerinde güncelleyin](../Maintenance/UpdateToNewVersion.md).
 
 (reinstall-aaps-before)=
-## Before you start
+## Başlamadan önce
 
-- Uninstalling **AAPS** deletes all its settings, your [objectives](../SettingUpAaps/CompletingTheObjectives.md) and the current pump connection. You get them back by importing your **settings file**, so make sure you have a recent one.
-- The settings file does not contain your treatment and glucose history. If you upload to [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), you can load it back after the reinstall (step 8).
-- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it.
-- **Omnipod and Medtrum users:** read [Tubeless pumps](#ExportImportSettings-tubeless-pumps) first. Your settings file must have been exported during the pod or patch you are wearing now.
-- If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) before you start.
+- **AAPS**'i kaldırmak tüm ayarlarını, [görevlerinizi](../SettingUpAaps/CompletingTheObjectives.md) ve mevcut pompa bağlantısını siler. Bunları **ayar dosyanızı** içe aktararak geri alırsınız, bu yüzden güncel bir ayar dosyanız olduğundan emin olun.
+- Ayar dosyası tedavi ve glikoz geçmişinizi içermez. [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md)'a yükleme yapıyorsanız, yeniden yüklemeden sonra geçmişi oradan geri alabilirsiniz (8. adım).
+- [**Ana parolanıza**](#Preferences-master-password) ihtiyacınız var: ayar dosyası onunla şifrelenir.
+- **Omnipod ve Medtrum kullanıcıları:** önce [Hortumsuz pompalar](#ExportImportSettings-tubeless-pumps) bölümünü okuyun. Ayar dosyanız, şu anda taktığınız Pod veya Patch süresince dışa aktarılmış olmalıdır.
+- Gerekirse, başlamadan önce [CGM/KŞ kaynağı alıcınızı kurun](../Getting-Started/CompatiblesCgms.md).
 
 (reinstall-aaps-steps)=
-## Steps
+## Adımlar
 
-The pictures show a move from **AAPS** 3.4 (steps 1 to 3) to **AAPS** 4 (steps 6 to 8). Other versions look slightly different.
+Resimler, **AAPS** 3.4'ten (1-3. adımlar) **AAPS** 4'e (6-8. adımlar) geçişi gösterir. Diğer sürümler biraz farklı görünür.
 
 (reinstall-aaps-export)=
 ### 1. Export your settings
 
-Export your settings with the **AAPS** currently installed on your phone. See [Settings Export](#ExportImportSettings-Settings-Export) for details.
+Ayarlarınızı, telefonunuzda şu anda yüklü olan **AAPS** ile dışa aktarın. Ayrıntılar için [Ayarları dışa aktarma](#ExportImportSettings-Settings-Export) bölümüne bakın.
 
-In **AAPS** 3.4: open **Maintenance** and tap **Export options**. Under **User Settings**, tick **Local Storage** and tap **OK**.
+**AAPS** 3.4'te: **Bakım**'ı açın ve **Dışa aktarma seçenekleri**'ne dokunun. **Kullanıcı Ayarları** altında **Yerel Depolama**'yı işaretleyin ve **Tamam**'a dokunun.
 
-*Note: you can also use [Cloud Storage](#preferences-maintenance-cloud) to have a safety backup copy: that's a good idea, but keep Local Storage for recovering settings quickly.*
+*Not: Güvenlik için bir yedek kopya tutmak üzere [Bulut Depolama](#preferences-maintenance-cloud) da kullanabilirsiniz: bu iyi bir fikirdir, ancak ayarları hızlıca geri yükleyebilmek için Yerel Depolama'yı da kullanın.*
 
-![Export options with User Settings set to Local Storage](../images/ReinstallAaps/reinstall_export_options_local.png)
+![Kullanıcı Ayarları Yerel Depolama olarak ayarlanmış dışa aktarma seçenekleri](../images/ReinstallAaps/reinstall_export_options_local.png)
 
-The button now reads **Export settings (local)**. Tap it.
+Düğmede artık **Ayarları dışa aktar (yerel)** yazar. Bu düğmeye dokunun.
 
-![Maintenance with the Export settings (local) button](../images/ReinstallAaps/reinstall_export_settings_local.png)
+![Ayarları dışa aktar (yerel) düğmesiyle Bakım ekranı](../images/ReinstallAaps/reinstall_export_settings_local.png)
 
-**AAPS** shows the name of the file it will create. Tap **OK**, type your master password and tap **OK**.
+**AAPS**, oluşturacağı dosyanın adını gösterir. **Tamam**'a dokunun, ana parolanızı yazın ve **Tamam**'a dokunun.
 
-![Export settings confirmation with the file name](../images/ReinstallAaps/reinstall_export_confirm.png)
+![Dosya adıyla birlikte ayarları dışa aktarma onayı](../images/ReinstallAaps/reinstall_export_confirm.png)
 
-In **AAPS** 4: open **Maintenance**, select the **Local** chip next to **Export settings** and tap **Export settings**.
+**AAPS** 4'te: **Bakım**'ı açın, **Ayarları dışa aktar** yanındaki **Yerel** çipini seçin ve **Ayarları dışa aktar**'a dokunun.
 
 (reinstall-aaps-copy)=
-### 2. Copy the settings file off your phone
+### 2. Ayar dosyasını telefonunuzdan başka bir yere kopyalayın
 
-The file is in the **preferences** folder of your [**AAPS** directory](#SetupWizard-StoragePermission), named like `2026-10-13_222735_full.json`. Copy or upload it to an external location (i.e. your computer, cloud storage service...). The file normally stays on your phone after the uninstall, but keep a copy elsewhere in case.
+Dosya, [**AAPS** dizininizdeki](#SetupWizard-StoragePermission) **preferences** klasöründedir ve adı `2026-10-13_222735_full.json` gibidir. Dosyayı harici bir konuma kopyalayın veya yükleyin (ör. bilgisayarınız, bulut depolama hizmeti...). Dosya normalde kaldırma işleminden sonra telefonunuzda kalır, ancak her ihtimale karşı başka bir yerde de bir kopyasını saklayın.
 
 (reinstall-aaps-nightscout-before)=
-### 3. Synchronize with Nightscout
+### 3. Nightscout ile senkronize edin
 
-This step is not mandatory but recommended if you use [DynISF](#Open-APS-features-DynamicISF): it will allow you to resume directly with the current settings instead of waiting 5 days to build necessary data for the plugin. NSClient V3 needs to be [enabled and configured](../SettingUpAaps/SettingUpTheReportingServer.md).
+Bu adım zorunlu değildir, ancak [DynISF](#Open-APS-features-DynamicISF) kullanıyorsanız önerilir: eklentinin ihtiyaç duyduğu verilerin oluşması için 5 gün beklemek yerine doğrudan mevcut ayarlarla devam etmenizi sağlar. NSClient V3'ün [etkinleştirilmiş ve yapılandırılmış](../SettingUpAaps/SettingUpTheReportingServer.md) olması gerekir.
 
-Make sure Nightscout has all your data before you uninstall.
+Kaldırmadan önce tüm verilerinizin Nightscout'ta olduğundan emin olun.
 
-Open **NSClient**, tap the **Full synchronization** button at the bottom of the screen, then **OK**.
+**NSClient**'ı açın, ekranın altındaki **Tam senkronizasyon** düğmesine dokunun, ardından **Tamam**'a dokunun.
 
-![NSClient screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
+![Tam senkronizasyon düğmesiyle NSClient ekranı](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
 
-*Note: the time necessary depends on your Nightscout hosting service.*
+*Not: Gereken süre Nightscout barındırma hizmetinize bağlıdır.*
 
-![Full synchronization confirmation](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
+![Tam senkronizasyon onayı](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
 
-**AAPS** then offers to clean up its database. **OK** removes data older than 3 months from the phone, which makes the synchronization much faster. **Cancel** synchronizes without cleaning up. The phone database is deleted when you uninstall anyway, so both are fine.
+**AAPS** ardından veritabanını temizlemeyi önerir. **Tamam**, 3 aydan eski verileri telefondan kaldırır; bu da senkronizasyonu çok hızlandırır. **Vazgeç** ise temizlemeden senkronize eder. Telefondaki veritabanı kaldırma sırasında zaten silinir, bu yüzden iki seçenek de uygundur.
 
-![Database cleanup question](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
+![Veritabanı temizleme sorusu](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
 
-Leave **AAPS** running until the synchronization is finished.
+Senkronizasyon bitene kadar **AAPS**'i çalışır durumda bırakın.
 
 (reinstall-aaps-build)=
-### 4. Build the new apk
+### 4. Yeni apk dosyasını oluşturun
 
-[Build](../SettingUpAaps/BuildingAaps.md) a new signed apk with your new keystore and transfer it to your phone.
+Yeni anahtar deponuzla imzalanmış yeni bir apk [oluşturun](../SettingUpAaps/BuildingAaps.md) ve telefonunuza aktarın.
 
 (reinstall-aaps-uninstall)=
-### 5. Uninstall AAPS
+### 5. AAPS'i kaldırın
 
-In your phone's **Settings** > **Apps** > **AAPS**, tap **Uninstall** and confirm with **OK**.
+Telefonunuzun **Ayarlar** > **Uygulamalar** > **AAPS** bölümünde **Kaldır**'a dokunun ve **Tamam** ile onaylayın.
 
-![App info of AAPS with the Uninstall button](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
+![Kaldır düğmesiyle AAPS uygulama bilgisi](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
 
 (reinstall-aaps-install)=
-### 6. Install and start the new AAPS
+### 6. Yeni AAPS'i yükleyin ve başlatın
 
-[Install](../SettingUpAaps/TransferringAndInstallingAaps.md) the new apk and start **AAPS**. The [setup wizard](../SettingUpAaps/SetupWizard.md) asks for the permissions **AAPS** needs: tap **Grant** for each of them. This also turns [battery optimization](#setup-wizard-bluetooth-battery-optimisation) off again.
+Yeni apk dosyasını [yükleyin](../SettingUpAaps/TransferringAndInstallingAaps.md) ve **AAPS**'i başlatın. [Kurulum sihirbazı](../SettingUpAaps/SetupWizard.md), **AAPS**'in ihtiyaç duyduğu izinleri ister: her biri için **İzin ver**'e dokunun. Bu, [pil optimizasyonunu](#setup-wizard-bluetooth-battery-optimisation) da yeniden kapatır.
 
-![Permissions Required list of the setup wizard](../images/ReinstallAaps/reinstall_permissions.png)
+![Kurulum sihirbazının Gerekli İzinler listesi](../images/ReinstallAaps/reinstall_permissions.png)
 
-For **AAPS Directory**, select the same **AAPS** folder as before (the one with the **preferences** folder in it), tap **Use this folder** and **Allow**.
+**AAPS Dizini** için öncekiyle aynı **AAPS** klasörünü (içinde **preferences** klasörü olanı) seçin, **Bu klasörü kullan**'a ve **İzin ver**'e dokunun.
 
-![Selecting the existing AAPS folder](../images/ReinstallAaps/reinstall_aaps_directory.png)
+![Mevcut AAPS klasörünü seçme](../images/ReinstallAaps/reinstall_aaps_directory.png)
 
-When **AAPS** finds your exported settings, the setup wizard shows a [Stored settings found](#setup-wizard-import-settings) screen where you can import them. You can also close the wizard and import from **Maintenance** as described below.
+**AAPS** dışa aktardığınız ayarları bulduğunda, kurulum sihirbazı bunları içe aktarabileceğiniz bir [Saklanan ayarlar bulundu](#setup-wizard-import-settings) ekranı gösterir. Sihirbazı kapatıp aşağıda anlatıldığı gibi **Bakım** bölümünden de içe aktarabilirsiniz.
 
 (reinstall-aaps-import)=
-### 7. Import your settings
+### 7. Ayarlarınızı içe aktarın
 
-If the settings file is no longer on your phone, copy it back to the **preferences** folder of your **AAPS** directory.
+Ayar dosyası artık telefonunuzda değilse, onu **AAPS** dizininizdeki **preferences** klasörüne geri kopyalayın.
 
-Open the menu (☰) > **Maintenance**, select the **Local** chip next to **Import settings** and tap **Import settings**.
+Menü (☰) > **Bakım** bölümünü açın, **Ayarları içe aktar** yanındaki **Yerel** çipini seçin ve **Ayarları içe aktar**'a dokunun.
 
-![Maintenance with Import settings](../images/ReinstallAaps/reinstall_maintenance_import.png)
+![Ayarları içe aktar düğmesiyle Bakım ekranı](../images/ReinstallAaps/reinstall_maintenance_import.png)
 
-The list shows each file with its **AAPS** version and how old it is. Choose the file you exported in step 1.
+Listede her dosya, **AAPS** sürümü ve ne kadar eski olduğu ile birlikte gösterilir. 1. adımda dışa aktardığınız dosyayı seçin.
 
-![List of settings files to import](../images/ReinstallAaps/reinstall_import_file_list.png)
+![İçe aktarılacak ayar dosyalarının listesi](../images/ReinstallAaps/reinstall_import_file_list.png)
 
-You don't need to set a master password in the new **AAPS** first. Type the master password you used for the export in **Decryption password** and tap **Decrypt**. **File was encrypted with a different password** is expected: the new **AAPS** doesn't know your password yet. The import restores it with your other settings.
+Yeni **AAPS**'te önce bir ana parola belirlemeniz gerekmez. Dışa aktarırken kullandığınız ana parolayı **Şifre çözme parolası** alanına yazın ve **Şifreyi çöz**'e dokunun. **Dosya farklı bir parolayla şifrelenmiş** mesajı normaldir: yeni **AAPS** parolanızı henüz bilmiyor. İçe aktarma, parolayı diğer ayarlarınızla birlikte geri yükler.
 
-![Decryption password for the settings file](../images/ReinstallAaps/reinstall_import_password.png)
+![Ayar dosyası için şifre çözme parolası](../images/ReinstallAaps/reinstall_import_password.png)
 
-Tick **Also replace pump settings**: without it, your pump and its settings are not restored. Omnipod and Medtrum users: only tick it if the file was exported during your current pod or patch (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
+**Pompa ayarlarını da değiştir** seçeneğini işaretleyin: bu olmadan pompanız ve ayarları geri yüklenmez. Omnipod ve Medtrum kullanıcıları: bunu yalnızca dosya mevcut Pod veya Patch'iniz sırasında dışa aktarıldıysa işaretleyin (bkz. [Hortumsuz pompalar](#ExportImportSettings-tubeless-pumps)).
 
-![Also replace pump settings ticked](../images/ReinstallAaps/reinstall_import_replace_pump.png)
+![Pompa ayarlarını da değiştir işaretli](../images/ReinstallAaps/reinstall_import_replace_pump.png)
 
-Tap **Import**, then **OK** to apply the settings and **OK** again on **Settings applied**.
+**İçe aktar**'a, ardından ayarları uygulamak için **Tamam**'a ve **Ayarlar uygulandı** ekranında yeniden **Tamam**'a dokunun.
 
-![Apply imported settings confirmation](../images/ReinstallAaps/reinstall_import_apply.png)
+![İçe aktarılan ayarları uygulama onayı](../images/ReinstallAaps/reinstall_import_apply.png)
 
 (reinstall-aaps-nightscout-after)=
-### 8. Get your history back from Nightscout
+### 8. Geçmişinizi Nightscout'tan geri alın
 
-Open the menu (☰) > [**Configuration**](../SettingUpAaps/ChangeAapsConfiguration.md) > **Communication** and tap **Open plugin** under **NSClientV3**. Check that the status shows **Connected**. If it doesn't, see [Troubleshooting NSClient](TroubleshootingNsClient.md).
+Menü (☰) > [**Konfigürasyon**](../SettingUpAaps/ChangeAapsConfiguration.md) > **İletişim** bölümünü açın ve **NSClientV3** altındaki **Eklentiyi aç**'a dokunun. Durumun **Bağlandı** olarak göründüğünü kontrol edin. Görünmüyorsa [NSClient'te Sorun Giderme](TroubleshootingNsClient.md) sayfasına bakın.
 
-![Communication with the NSClientV3 Open plugin button](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
+![NSClientV3 Eklentiyi aç düğmesiyle İletişim ekranı](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
 
-Tap the **Full synchronization** button at the bottom of the screen and **OK**. The database is new, so you can answer the cleanup question either way.
+Ekranın altındaki **Tam senkronizasyon** düğmesine ve **Tamam**'a dokunun. Veritabanı yeni olduğu için temizleme sorusunu istediğiniz gibi cevaplayabilirsiniz.
 
-![NSClientV3 screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
+![Tam senkronizasyon düğmesiyle NSClientV3 ekranı](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
 
-**AAPS** loads your data from Nightscout. The log shows **Full sync finished** when it is done.
+**AAPS**, verilerinizi Nightscout'tan yükler. İşlem bittiğinde günlükte **Full sync finished** görünür.
 
-![NSClientV3 log with Full sync finished](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
+![Full sync finished içeren NSClientV3 günlüğü](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
 
 (reinstall-aaps-check)=
-### 9. Check and keep looping
+### 9. Kontrol edin ve döngüye devam edin
 
-Check that your pump is connected and your CGM values arrive, then keep on looping.
+Pompanızın bağlı olduğunu ve CGM değerlerinizin geldiğini kontrol edin, ardından döngüye devam edin.
 
 (reinstall-aaps-afterwards)=
-## Afterwards
+## Sonrası
 
-Always keep using your new keystore from now on, and store it with its password somewhere safe, off your phone. See [Creating back-ups](../Maintenance/ExportImportSettings.md).
+Bundan sonra her zaman yeni anahtar deponuzu kullanın ve onu parolasıyla birlikte telefonunuzun dışında güvenli bir yerde saklayın. Bkz. [Yedek oluşturma](../Maintenance/ExportImportSettings.md).

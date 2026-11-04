@@ -1,24 +1,24 @@
-# Build instructions for the command-line
+# 명령줄 빌드 안내
 
 ```{admonition} For users familiar with the command-line and git
 :class: note
 
-The simplest option to build AAPS is the [Browser build](./BrowserBuild.md) alternative.
+AAPS를 빌드하는 가장 간단한 방법은 [브라우저 빌드](./BrowserBuild.md)입니다.
 ```
 
-Tested with Fedora and Debian Linux, other systems should work with minimal adjustments.
+Fedora와 Debian Linux에서 테스트했습니다. 다른 시스템도 조금만 조정하면 작동할 것입니다.
 
-## Requirements
+## 요구 사항
 
-Consult the minimum required Java version from [this table](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Install the appropriate OpenJDK package using the system package manager. For example in Debian, the packages are named like `openjdk-21-jdk`. It should include `javac` and `keytool` binaries.
+[이 표](#Building-APK-recommended-specification-of-computer-for-building-apk-file)에서 필요한 최소 Java 버전을 확인하십시오. 시스템 패키지 관리자로 알맞은 OpenJDK 패키지를 설치하십시오. 예를 들어 Debian에서는 패키지 이름이 `openjdk-21-jdk`와 같습니다. 이 패키지에는 `javac`와 `keytool` 실행 파일이 들어 있어야 합니다.
 
-Download the *Android Command line tools* package from the [Android Studio page](https://developer.android.com/studio#command-line-tools-only). Android Studio itself is not required. More information about installing this package is found in [sdkmanager docs](https://developer.android.com/tools/sdkmanager). After the package is installed, you should manually set two [environment variables](https://developer.android.com/tools/variables): `ANDROID_HOME` and `PATH`. Finally, run `sdkmanager --licenses` to finish the installation.
+[Android Studio 페이지](https://developer.android.com/studio#command-line-tools-only)에서 *Android Command line tools* 패키지를 다운로드하십시오. Android Studio 자체는 필요하지 않습니다. 이 패키지 설치에 대한 자세한 내용은 [sdkmanager 문서](https://developer.android.com/tools/sdkmanager)에 있습니다. 패키지를 설치한 후 두 개의 [환경 변수](https://developer.android.com/tools/variables) `ANDROID_HOME`과 `PATH`를 직접 설정해야 합니다. 마지막으로 `sdkmanager --licenses`를 실행하여 설치를 마치십시오.
 
-## Building AAPS with Gradle wrapper
+## Gradle wrapper로 AAPS 빌드하기
 
-### 1. Generate a Java keystore file for signing AAPS
+### 1. AAPS 서명용 Java 키 저장소 파일 만들기
 
-If you already have a keystore file for signing AAPS, reuse that.
+AAPS 서명용 키 저장소 파일이 이미 있으면 그 파일을 다시 사용하십시오.
 
 ```sh
 keytool -genkeypair -v \
@@ -29,19 +29,19 @@ keytool -genkeypair -v \
   -validity 20000
 ```
 
-You will need the keystore file and passphrase every time you update AAPS.
+AAPS를 업데이트할 때마다 키 저장소 파일과 암호 문구(passphrase)가 필요합니다.
 
-### 2. Compile the AAPS APK file
+### 2. AAPS APK 파일 컴파일하기
 
-Clone the [git repo](https://github.com/nightscout/AndroidAPS) if not already cloned. AAPS uses the master branch for the latest stable version; ensure you are on the branch/tag you want to build.
+아직 복제하지 않았다면 [git 저장소](https://github.com/nightscout/AndroidAPS)를 복제(clone)하십시오. AAPS는 최신 안정 버전에 master 브랜치를 사용합니다. 빌드하려는 브랜치/태그에 있는지 확인하십시오.
 
-Run `./gradlew :app:assembleFullRelease` in the repo. It automatically downloads Gradle, dependencies, and then compiles the code. When the build succeeds, you should have an unsigned APK at `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. It should have also installed an `apksigner` binary to `$ANDROID_HOME`. Update your `PATH` again.
+저장소 안에서 `./gradlew :app:assembleFullRelease`를 실행하십시오. Gradle과 종속 항목을 자동으로 다운로드한 다음 코드를 컴파일합니다. 빌드가 성공하면 `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`에 서명되지 않은 APK가 생깁니다. `$ANDROID_HOME`에 `apksigner` 실행 파일도 설치되었을 것입니다. `PATH`를 다시 업데이트하십시오.
 
-### 3. Create a signed APK file from the unsigned one
+### 3. 서명되지 않은 APK 파일로 서명된 APK 파일 만들기
 
 <!-- Suggest building outside the git repo, to minimize risk of accidental APK commits -->
 
-Change to your home directory and create a signed APK file:
+홈 디렉터리로 이동하여 서명된 APK 파일을 만드십시오:
 
 ```sh
 apksigner sign \
@@ -51,4 +51,4 @@ apksigner sign \
   ./AndroidAPS/app/build/outputs/apk/full/release/app-full-release-unsigned.apk
 ```
 
-Now you have `app-full-release-signed.apk` ready for installation or upgrade.
+이제 설치하거나 업그레이드할 수 있는 `app-full-release-signed.apk`가 준비되었습니다.

@@ -1,4 +1,4 @@
-# Compatible CGMs
+# CGM compatibili
 
 This section provides a brief overview of all compatible **CGMs/FGMs** with **AAPS**.
 
@@ -28,33 +28,33 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 ../CompatibleCgms/Caresens.md
 ```
 
-* [General recommendations](../CompatibleCgms/GeneralCGMRecommendation.md)
-* [Data Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md)
+* [Raccomandazioni generali](../CompatibleCgms/GeneralCGMRecommendation.md)
+* [Smoothing dei dati](../CompatibleCgms/SmoothingBloodGlucoseData.md)
 * [xDrip Settings](../CompatibleCgms/xDrip.md)
 * [Nightscout as BG Source](../CompatibleCgms/CgmNightscoutUpload.md): While it's possible to use Nightscout as a BG source for closed-loop insulin delivery, **this method is not recommended** due to its reliance on stable mobile data or Wi-Fi connectivity. This means your **CGM** data would only be received by **AAPS** when you have an online connection to your Nightscout site. For a more reliable setup, using a CGM with local broadcast from the receiver (as listed below) to **AAPS** is a much better option.
 
-| CGM                                                                                                    | Available [BG Sources](#Config-Builder-bg-source)                                                                                        |
-| ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                                             | BYODA, [xDrip](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                                                  |
-| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                                                           | [xDrip](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                                                         |
-| [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                                                          | [xDrip](../CompatibleCgms/xDrip.md)                                                                                                      |
-| [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                                             | BYODA or [xDrip](../CompatibleCgms/xDrip.md)                                                                                             |
-| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                                            | [xDrip](../CompatibleCgms/xDrip.md)                                                                                                      |
-| [Libre 3/3+](../CompatibleCgms/Libre3.md)                                                              | [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip)                                                                        |
-| [Libre 2/2+](../CompatibleCgms/Libre2.md)                                                              | [xDrip](../CompatibleCgms/xDrip.md) (EU only) or [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip)                       |
-| [Libre 1](../CompatibleCgms/Libre1.md)                                                                 | [xDrip](../CompatibleCgms/xDrip.md) (Diabox sends its readings through the xDrip source), Glimp or Tomato (MiaoMiao). Need a transmitter |
-| [Eversense](../CompatibleCgms/Eversense.md)                                                            | [xDrip](../CompatibleCgms/xDrip.md), ESEL/Eversense patched App or Notification Reader                                                   |
-| [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md)                                                  | [xDrip](../CompatibleCgms/xDrip.md) or MM640g + 600SeriesAndroidUploader App                                                             |
-| [PocTech](../CompatibleCgms/PocTech.md)                                                                | PocTech app                                                                                                                              |
-| Glunovo                                                                                                | Glunovo App                                                                                                                              |
-| Intelligo                                                                                              | Intelligo App                                                                                                                            |
-| [Ottai](../CompatibleCgms/OttaiM8.md), [Syai](../CompatibleCgms/SyaiTagX1.md)                          | Syai/Ottai (with the Ottai or Syai Tag app)                                                                                              |
-| Sibionics CGM                                                                                          | [Juggluco](../CompatibleCgms/Juggluco.md) or SI App (with the patched SI App or the Sibionics App)                                       |
-| Sinocare                                                                                               | Sino App (with the patched Sino App)                                                                                                     |
-| MicroTech (Aidex, LinX, LinX Vista, Equil G. Smart 2, Diaexpert 2)                                     | MicroTech CGM App                                                                                                                        |
-| Instara                                                                                                | Instara (with the Instara App)                                                                                                           |
-| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide                            | xDrip Companion App or [Juggluco](../CompatibleCgms/Juggluco.md)                                                                         |
-| Any CGM whose official app shows the glucose value in a notification (Dexcom, Medtronic, Eversense, …) | Notification Reader                                                                                                                      |
+| CGM                                                                                                    | Available [BG Sources](#Config-Builder-bg-source)                                                                                              |
+| ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                                             | BYODA, [xDrip](../CompatibleCgms/xDrip.md) o [Juggluco](../CompatibleCgms/Juggluco.md)                                                         |
+| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                                                           | [xDrip](../CompatibleCgms/xDrip.md) o [Juggluco](../CompatibleCgms/Juggluco.md)                                                                |
+| [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                                                          | [xDrip](../CompatibleCgms/xDrip.md)                                                                                                            |
+| [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                                             | BYODA o [xDrip](../CompatibleCgms/xDrip.md)                                                                                                    |
+| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                                            | [xDrip](../CompatibleCgms/xDrip.md)                                                                                                            |
+| [Libre 3/3+](../CompatibleCgms/Libre3.md)                                                              | [Juggluco](../CompatibleCgms/Juggluco.md) (con o senza xDrip)                                                                                  |
+| [Libre 2/2+](../CompatibleCgms/Libre2.md)                                                              | [xDrip](../CompatibleCgms/xDrip.md) (solo UE) o [Juggluco](../CompatibleCgms/Juggluco.md) (con o senza xDrip)                                  |
+| [Libre 1](../CompatibleCgms/Libre1.md)                                                                 | [xDrip](../CompatibleCgms/xDrip.md) (Diabox invia le sue letture tramite la sorgente xDrip), Glimp o Tomato (MiaoMiao). Serve un trasmettitore |
+| [Eversense](../CompatibleCgms/Eversense.md)                                                            | [xDrip](../CompatibleCgms/xDrip.md), ESEL/Eversense patched App or Notification Reader                                                         |
+| [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md)                                                  | [xDrip](../CompatibleCgms/xDrip.md) or MM640g + 600SeriesAndroidUploader App                                                                   |
+| [PocTech](../CompatibleCgms/PocTech.md)                                                                | App PocTech                                                                                                                                    |
+| Glunovo                                                                                                | App Glunovo                                                                                                                                    |
+| Intelligo                                                                                              | App Intelligo                                                                                                                                  |
+| [Ottai](../CompatibleCgms/OttaiM8.md), [Syai](../CompatibleCgms/SyaiTagX1.md)                          | Syai/Ottai (con l'app Ottai o Syai Tag)                                                                                                        |
+| Sibionics CGM                                                                                          | [Juggluco](../CompatibleCgms/Juggluco.md) or SI App (with the patched SI App or the Sibionics App)                                             |
+| Sinocare                                                                                               | Sino App (with the patched Sino App)                                                                                                           |
+| MicroTech (Aidex, LinX, LinX Vista, Equil G. Smart 2, Diaexpert 2)                                     | App MicroTech CGM                                                                                                                              |
+| Instara                                                                                                | Instara (con l'app Instara)                                                                                                                    |
+| [CareSens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide                            | xDrip Companion App or [Juggluco](../CompatibleCgms/Juggluco.md)                                                                               |
+| Any CGM whose official app shows the glucose value in a notification (Dexcom, Medtronic, Eversense, …) | Lettore Notifiche                                                                                                                              |
 
 (GettingStarted-TrustedBGSource)=
 
@@ -66,14 +66,14 @@ In order for **AAPS** to correctly identify them, the app sending **BG** reading
 
 Trusted data sources allow **SMB** delivery, all the time.
 
-| Sensor           |                                                          CGM app                                                          |
-| ---------------- |:-------------------------------------------------------------------------------------------------------------------------:|
-| Dexcom G6        |                                             BYODA, xDrip (**Direct, Native**)                                             |
-| Dexcom G7        |                BYODA, xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip)                 |
-| Dexcom ONE+      |                    xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip)                    |
-| Dexcom ONE/Stelo |                                                xDrip (**Direct, Native**)                                                 |
-| Libre 2/2+ (EU)  | xDrip (OOP2 **no calibration**), <br/>Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip) |
-| Libre 2/2+/3/3+  |                       Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip)                       |
-| Syai             |                                                         Syai App                                                          |
+| Sensore          |                                                            App CGM                                                             |
+| ---------------- |:------------------------------------------------------------------------------------------------------------------------------:|
+| Dexcom G6        |                                               BYODA, xDrip (**Direct, Native**)                                                |
+| Dexcom G7        |                    BYODA, xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** senza xDrip)                    |
+| Dexcom ONE+      |                       xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** senza xDrip)                        |
+| Dexcom ONE/Stelo |                                                   xDrip (**Direct, Native**)                                                   |
+| Libre 2/2+ (EU)  | xDrip (OOP2 **senza calibrazione**), <br/>Juggluco (**xDrip broadcast** senza xDrip, oppure **Patched Libre** con xDrip) |
+| Libre 2/2+/3/3+  |                         Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip)                          |
+| Syai             |                                                            App Syai                                                            |
 
 **Note: xDrip Companion apps and Follower modes (includes 640G/Eversense) are not trusted data sources.**

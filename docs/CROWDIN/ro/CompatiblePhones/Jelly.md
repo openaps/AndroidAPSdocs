@@ -2,7 +2,7 @@
 
 ## Jelly Star Mini
 
-**Features**
+**Funcții**
 
 * Android 13
 * 8 GB RAM
@@ -14,7 +14,7 @@
 
 **Dezavantaje**
 
-* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
+* Recomandat numai utilizatorilor experimentați ai buclei. Unele setări nu sunt ușor de recunoscut: trebuie să știți din experiența cu un telefon Android mare folosit pentru AAPS cum și unde se află lucrurile. Unele butoane AAPS sunt mici și greu de apăsat: aveți nevoie de o atingere precisă, nu de degete groase.
 * Poate fi folosit numai ca telefon special pentru buclă. E mai bine să aveți un telefon inteligent normal în buzunar. 
 
 ### Optimizarea vieții bateriei
@@ -27,7 +27,7 @@ Puteți lăsa asistența inteligentă activată, dar **trebuie dezactivată pent
 
 ![](../images/Jelly_Settings2.png)
 
-Poți activa NFC pentru senzorii Libre.
+Puteți activa NFC pentru senzorii Libre.
 
 ![](../images/Jelly_Settings3.png)
 
@@ -43,6 +43,6 @@ Nu uitați să dezactivați Google Play Protect.
 
 ### Remote Connection for Wear apk
 
-For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
+Pentru unele ceasuri inteligente, ca Samsung Galaxy, opțiunea „Remote connection” din Advanced features în aplicația Galaxy Wearable trebuie să fie **activată** pentru a folosi telefonul Jelly, **Wear.apk** și **AAPS** de la distanță prin Wi-Fi.
 
 ![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)

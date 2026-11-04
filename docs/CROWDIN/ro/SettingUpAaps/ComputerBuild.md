@@ -4,11 +4,11 @@
 
 Aceasta este metoda tradițională de a construi aplicația AAPS.
 
-Puteți construi aplicația fără un calculator folosind metoda [Browser Build](./BrowserBuild.md).
+Puteți construi aplicația fără calculator folosind metoda [Construirea în browser](./BrowserBuild.md).
 
-## Construiți-vă în loc să descărcați
+## Construiți aplicația, nu o descărcați
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Aplicația AAPS (un fișier apk) nu este disponibilă pentru descărcare, din cauza reglementărilor privind dispozitivele medicale. It is legal to build the app for your own use, but you must not give a copy to others!**
 
 See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
@@ -17,21 +17,21 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 (Building-APK-Recomded-specification-of-computer-for-building-apk-file)=
 ## Specificații pentru calculator și software pentru construirea AAPS
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
+* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. Vedeți tabelul de mai jos:
 
-| Versiune AAPS           | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                             | tested up to Quail 4                                   | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | tested up to Quail 4                                   | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | tested up to Quail 4                                   | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | tested up to Quail 4                                   | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                   | tested up to Quail 4                                   | 8.13   | 21  |
-| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                   | tested up to Quail 4                                   | 9      | 21  |
-| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                  | Latest                                                 | 9.8    | 21  |
+| Versiune AAPS           | Versiunea<br/>Android Studio<br/>preferată | Versiunea<br/>Android Studio<br/>alternativă | Gradle | JVM |
+| ----------------------- | ------------------------------------------------------ | -------------------------------------------------------- | ------ |:--- |
+| 2.6.2                   | 3.6.1                                                  |                                                          | 5.6.4  | 11  |
+| 2.8.2.1                 | 4.1.1                                                  |                                                          | 6.1.1  | 13  |
+| [3.1.0.3](#version3100) | 2020.3.1                                               | testat până la Quail 4                                   | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                    | testat până la Quail 4                                   | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                        | testat până la Quail 4                                   | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                     | testat până la Quail 4                                   | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                     | testat până la Quail 4                                   | 8.13   | 21  |
+| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                     | testat până la Quail 4                                   | 9      | 21  |
+| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                    | Latest                                                   | 9.8    | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+The "preferred version" is packaged with the appropriate JVM version. Versiunea preferată este și versiunea minimă pe care o puteți folosi pentru a construi **AAPS**. **NU** veți putea construi cu o versiune mai veche decât cea „preferată”. Dacă folosiți o altă versiune, pot apărea probleme legate de versiunea JVM. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
 
 The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
 
@@ -41,15 +41,15 @@ The Gradle version is linked to the source code, you will always get the correct
 <tbody>
   <tr>
     <th class="tg-baqh">OS (doar 64 biți)</th>
-    <td class="tg-baqh">Windows 10 or higher</td>
-    <td class="tg-baqh">macOS 12 or higher</td>
+    <td class="tg-baqh">Windows 10 sau mai nou</td>
+    <td class="tg-baqh">macOS 12 sau mai nou</td>
     <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">CPU (doar 64 biți)</th>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <td class="tg-baqh">Procesor x86_64 din 2017 sau mai nou (Intel Core i5 generația a 8-a, AMD Ryzen sau mai nou) cu <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">suport pentru virtualizare</a> (Intel VT-x sau AMD-V) activat în BIOS</td>
     <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <td class="tg-baqh">Procesor x86_64 din 2017 sau mai nou (Intel Core i5 generația a 8-a, AMD Ryzen sau mai nou) cu suport pentru virtualizare (Intel VT-x sau AMD-V) activat în BIOS</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Memorie RAM</th>
@@ -57,11 +57,11 @@ The Gradle version is linked to the source code, you will always get the correct
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disc</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. Se recomandă SSD.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Cel puțin 32 GB spațiu liber. Se recomandă SSD.</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Rezoluție</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">Minimum 1280 x 800 (se recomandă 1920 x 1080)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
@@ -74,7 +74,7 @@ The Gradle version is linked to the source code, you will always get the correct
 
 ## Ajutor și asistență în timpul procesului de construire
 
-Dacă întâmpinați dificultăți în procesul de construire a aplicației **AAPS**, există o secțiune de depanare [**Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md), vă rugăm să o consultați mai întâi.
+Dacă întâmpinați dificultăți în procesul de construire a aplicației **AAPS**, există o secțiune dedicată, [**Depanare Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md); vă rugăm să o consultați mai întâi.
 
 If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
@@ -101,19 +101,19 @@ Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there mi
 ```{admonition} Why Git? 
 :class: dropdown
 
-Git este cunoscut ca "_Versioning Control System_" (VCS).
-Git este un program care vă permite să urmăriți modificările din cod și să colaborați cu ceilalți. Veți folosi Git pentru a face o copie a codului sursă **AAPS** de pe siteul GitHub pe calculatorul local. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
+Git este cunoscut ca „_Versioning Control System_” (VCS, sistem de control al versiunilor).\
+Git este un program care vă permite să urmăriți modificările din cod și să colaborați cu alte persoane. Veți folosi Git pentru a face o copie a codului sursă **AAPS** de pe siteul GitHub pe calculatorul local. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
 #### Pași pentru instalarea Git
 
-1.  Verificați dacă nu aveți deja **Git** instalat. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
+1.  Verificați dacă nu aveți deja **Git** instalat. Puteți face acest lucru tastând "git" în bara de căutare Windows - dacă vedeți **"Git bash"** sau o altă formă de Git, este deja instalat și puteți merge direct la [instalare Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Orice versiune Git recentă ar trebui să funcționeze, selectați versiunea corectă în funcție de sistemul dumneavoastră, fie Mac, Windows sau Linux.
+2. Dacă nu aveți Git instalat, descărcați și instalați cea mai recentă versiune pentru sistemul dumneavoastră din secțiunea "Download" de [**aici**](https://git-scm.com/downloads). Orice versiune Git recentă ar trebui să funcționeze, selectați versiunea corectă în funcție de sistemul dumneavoastră, fie Mac, Windows sau Linux.
 
 **Notă pentru utilizatorii Mac:** pagina web Git vă va ghida, de asemenea, să instalați un program suplimentar numit "homebrew" pentru a facilita instalarea. Dacă instalați Git via homebrew, nu este nevoie să schimbați preferințele.
 
@@ -141,7 +141,7 @@ Unul dintre cele mai importante lucruri la instalarea Android Studio este **să 
 
 ```{admonition} Different UI
 :class: warning
-Important note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+Notă importantă: Android Studio și-a schimbat interfața în ultimele versiuni. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
 ```
 
 Versiunea de Android Studio este foarte importantă. Vedeți instrucțiunile [de mai sus](#Building-APK-recommended-specification-of-computer-for-building-apk-file) pentru a alege versiunea corectă a Android Studio.
@@ -213,7 +213,7 @@ Veți vedea acum ecranul de întâmpinare al Android Studio.
 ```{admonition} Why can it take a long time to download the AAPS code?
 :class: dropdown
 
-The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
+The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. Aceasta ar trebui să dureze aproximativ 1 minut. 
 
 Android Studio will then use **Gradle** (a development tool for Android apps) to identify other components needed to build these items on your computer. 
 ```
@@ -241,7 +241,7 @@ Acum îi vom spune aplicației Android Studio de unde să obțină codul:
 
 ```{admonition} INFORMATION
 :class: note
-Make a note of the directory. It is where your sourcecode is stored!
+Notați directorul. It is where your sourcecode is stored!
 ```
 
 Veți vedea acum un ecran care vă va spune că depozitul este clonat:
@@ -262,13 +262,13 @@ După ce depozitul este clonat cu succes, Android Studio va deschide proiectul c
 (computerbuild-NewUI)=
 ```{admonition} New UI
 :class: note
-Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
+Android Studio și-a schimbat recent interfața. New installations of Android Studio use the new UI by default!
 
 Only if your Android Studio looks different, you might need to switch to the new UI:
 Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
-In **Appearance & Behavior**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
+În **Appearance & Behavior**, mergeți la **New UI** și bifați **Enable new UI**. Then restart Android Studio to start using it.
 
-If you don't find the option **New UI** don't worry: you are already using it!
+Dacă nu găsiți opțiunea **New UI**, nu vă faceți griji: o folosiți deja!
 ```
 
 
@@ -281,7 +281,7 @@ Android Studio va începe automat o "sincronizare proiect Gradle", care va dura 
 ```{admonition} NEVER UPDATE GRADLE!
 :class: warning
 
-Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+Android Studio poate recomanda actualizarea sistemului gradle. **Never update gradle!** This will lead to difficulties.
 ```
 
 Only on windows computers: You might get a notification about windows defender running: Click on **Automatically** and confirm, it will make the build run faster!
@@ -313,9 +313,9 @@ If the automatic setting is successful, your current version of **Git** will be 
 
 
 If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
-* manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
+* introduceți manual calea pe care ați notat-o [mai devreme](#BuildingAaps-steps-for-installing-git), sau
 * click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
-* Verify your settings with the **Test** button!
+* Verificați setările cu butonul **Test**!
 
   ![Git not found](../images/Building-the-App/039_GitTestError.png)
 
@@ -325,7 +325,7 @@ If you find that **git.exe** is not found automatically, or that clicking "Test"
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
-Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
+Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. Pentru mai multe informații despre acest subiect, urmați [acest link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
 
 For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
 ```
@@ -334,7 +334,7 @@ For our purposes, this just means that we generate a signing or "keystore" file 
 **Important: Make sure the gradle sync is finished successfully before proceeding!**
 
 
-Apăsați pe meniul hamburger din stânga sus pentru a deschide bara de meniu. Select **Build** (1), then select **Generate Signed App Bundle / APK** (2)
+Apăsați pe meniul hamburger din stânga sus pentru a deschide bara de meniu. Selectați **Build** (1), apoi selectați **Generate Signed App Bundle / APK** (2)
 
 ![Construiți apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
@@ -359,9 +359,9 @@ You will only need to create the keystore once.
 If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
-**_Note:_** The key store is a file in which the information for signing the app is stored. Este criptat și informația este securizată cu parole.
+**_Notă:_** Keystore-ul este un fișier în care sunt stocate informațiile pentru semnarea aplicației. Este criptat și informația este securizată cu parole.
 
-![Creați cheia privată (key store)](../images/Building-the-App/043_Keystore.png)
+![Create key store (crearea keystore-ului)](../images/Building-the-App/043_Keystore.png)
 
 * Apăsați pe simbolul "dosar" (1) pentru a selecta o cale pe calculator pentru fișierul dumneavoastră keystore.
 
@@ -369,7 +369,7 @@ If you have built AAPS before, do NOT create a new keystore but select your exis
 
 ```{admonition} WARNING!
 :class: warning
-Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AAPS update!
+Notați-vă unde este stocat keystore-ul. Veți avea nevoie de el când veți construi următoarea actualizare AAPS!
 ```
 
 * Acum alegeți o parolă simplă (și notați-o), introduceți-o în caseta cu parolă (2), și confirmați (2).
@@ -377,7 +377,7 @@ Make sure to note down for yourself where your keystore is stored. You will need
   Parolele pentru fișierul keystore și cheia nu trebuie să fie sofisticate. If you lose your password in the future, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
 ```{warning}
-**Avoid special characters in your passwords.** Use only letters and digits for the keystore and key passwords. In particular, do not use `$`, a backtick, `"` or `\`. If you later switch to the [Browser build](#aaps-ci-option2) and reuse this keystore, these characters can make the signing step fail, see [Browser build troubleshooting](#aaps-ci-password-special-characters).
+**Avoid special characters in your passwords.** Use only letters and digits for the keystore and key passwords. În special, nu folosiți `$`, un backtick, `"` sau `\`. If you later switch to the [Browser build](#aaps-ci-option2) and reuse this keystore, these characters can make the signing step fail, see [Browser build troubleshooting](#aaps-ci-password-special-characters).
 ```
 
 * Aliasul implicit (3) pentru cheia dumneavoastră este "key0", lăsați acest lucru neschimbat.
@@ -386,7 +386,7 @@ Make sure to note down for yourself where your keystore is stored. You will need
 
 ```{admonition} WARNING!
 :class: warning
-Note down these passwords! You will need them when you build the next AAPS update!
+Notați aceste parole! You will need them when you build the next AAPS update!
 ```
 
 * Valabilitatea este în mod implicit de 25 de ani, lăsați-o așa cum este.
@@ -396,14 +396,14 @@ Note down these passwords! You will need them when you build the next AAPS updat
 * Apăsați "OK" (8) pentru a continua:
 
 
-On the **Generate signed App Bundle or APK** page, the path to your keystore will now be displayed. Acum reintroduceți parola pentru Key Store (1) și parola Key (2) și bifați căsuța (3) pentru memorarea parolelor, astfel încât să nu fie nevoie să le introduceți din nou data viitoare când generați fișierul APK (de exemplu, atunci când faceți actualizarea la o versiune nouă de AAPS). Apăsați pe "Următorul" (4):
+Pe pagina **Generate signed App Bundle or APK** va fi afișată acum calea către keystore. Acum reintroduceți parola pentru Key Store (1) și parola Key (2) și bifați căsuța (3) pentru memorarea parolelor, astfel încât să nu fie nevoie să le introduceți din nou data viitoare când generați fișierul APK (de exemplu, atunci când faceți actualizarea la o versiune nouă de AAPS). Apăsați pe "Următorul" (4):
 
 ![Rețineți parolele](../images/Building-the-App/044_RememberPwd.png)
 
 
 On the next screen, select build variant "fullRelease" (1) and click "Create" (3). You should remember the destination folder displayed at (2), as later you will find your built apk file there!
 
-   ![Select build variant](../images/Building-the-App/045_BuildPath.png)
+   ![Selectați varianta de construire](../images/Building-the-App/045_BuildPath.png)
 
 Android Studio will now build the **AAPS** apk. Acesta va arăta „Gradle Build rulează” (2) în dreapta jos. The process takes some time, depending on your computer and internet connection, so **be patient!** If you want to watch the progress of the build, click on the small hammer "build" (1) at the bottom of Android Studio:
 
@@ -417,7 +417,7 @@ Android Studio va afișa informația "CONSTRUIRE REUȘITĂ" după ce construcți
 
 ![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 
-**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio.md)._**
+**_Dacă construirea nu a reușit, consultați [secțiunea Depanare Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
 În caseta de Notificări, apăsați pe linkul albastru "localizați":
 

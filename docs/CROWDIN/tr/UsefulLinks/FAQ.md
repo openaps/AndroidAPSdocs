@@ -1,12 +1,12 @@
 # Döngü kullanıcıları için SSS
 
-How to add questions to the FAQ: Follow these [instructions](../SupportingAaps/HowToEditTheDocs.md)
+SSS'ye soru ekleme: Bu [talimatları](../SupportingAaps/HowToEditTheDocs.md) izleyin
 
 ## General
 
 ### Can I just download the AAPS installation file?
 
-Hayır. AAPS için indirilebilir bir apk dosyası yoktur. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Nedeni ise:
+Hayır. AAPS için indirilebilir bir apk dosyası yoktur. Uygulamayı kendiniz [oluşturmanız](../SettingUpAaps/BuildingAaps.md) gerekir. Nedeni ise:
 
 AAPS, pompanızı kontrol etmek ve insülin vermek için kullanılır. Avrupa'daki mevcut düzenlemelere göre IIa veya IIb olarak sınıflandırılan tüm sistemler, çeşitli çalışmalar ve imzalar gerektiren düzenleyici onay (CE işareti) gerektiren tıbbi cihazlardır. Düzenlenmemiş bir cihazı dağıtmak yasa dışıdır. Dünyanın başka yerlerinde de benzer düzenlemeler var.
 
@@ -18,87 +18,87 @@ Bu yüzden apk'ler mevcut değildir.
 
 ### How to begin?
 
-Start with [Preparing to start with AAPS](../Getting-Started/PreparingForAaps.md): it walks you through everything below in more detail.
+[AAPS ile başlamaya hazırlık](../Getting-Started/PreparingForAaps.md) sayfasıyla başlayın: bu sayfa aşağıdaki her şeyi daha ayrıntılı anlatır.
 
 Her şeyden önce, **döngülenebilir donanım bileşenleri almanız** gerekir:
 
-* A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
-* an [Android smartphone](../Getting-Started/Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
-* a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
+* [Desteklenen bir insülin pompası](../Getting-Started/CompatiblePumps.md), 
+* bir [Android akıllı telefon](../Getting-Started/Phones.md) (Apple iOS, AAPS tarafından desteklenmez - [iOS Loop](https://loopkit.github.io/loopdocs/)'a bakabilirsiniz) ve
+* bir [sürekli glikoz izleme sistemi](../Getting-Started/CompatiblesCgms.md). 
 
-Secondly, you have to **setup your software components**: [AAPS](../SettingUpAaps/BuildingAaps.md), [CGM/FGM source](../Getting-Started/CompatiblesCgms.md) and a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+İkinci olarak, **yazılım bileşenlerinizi kurmanız** gerekir: [AAPS](../SettingUpAaps/BuildingAaps.md), [CGM/FGM kaynağı](../Getting-Started/CompatiblesCgms.md) ve bir [raporlama sunucusu](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Thirdly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your [basal rate and carb ratio](../SettingUpAaps/YourAapsProfile.md) are accurate. Tüm öneriler, temel ihtiyaçlarınızın karşılandığını ve gördüğünüz herhangi bir tepe veya dip noktasının, bu nedenle bazı tek seferlik ayarlamalar (egzersiz, stres vb.) gerektiren diğer faktörlerin bir sonucu olduğunu varsayar. Kapalı döngünün güvenlik için yapabileceği ayarlamalar sınırlandırılmıştır ([OpenAPS Referans Tasarımında](https://openaps.org/reference-design/) izin verilen maksimum geçici bazal oranına bakın), bu izin verilen dozun temeldeki yanlış bir bazalı düzeltmek için boşa harcamak istemediğiniz anlamına gelir. Örneğin, yemekten önce genellikle düşük seviyeniz varsa, muhtemelen bazal oranınızın ayarlanması gerekir. You can use [Autotune](#autotune-how-autotune-calculates-adjustments) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old-fashioned way](https://integrateddiabetes.com/basal-testing/).
+Üçüncü olarak, **tedavi faktörlerinizi kontrol etmek için OpenAPS referans tasarımını öğrenmeli ve anlamalısınız**. Kapalı döngünün temel ilkesi, [bazal oranınızın ve karbonhidrat oranınızın](../SettingUpAaps/YourAapsProfile.md) doğru olmasıdır. Tüm öneriler, bazal ihtiyaçlarınızın karşılandığını ve gördüğünüz yükselme ya da düşüşlerin başka etkenlerden (egzersiz, stres vb.) kaynaklandığını, bu yüzden tek seferlik ayarlamalar gerektirdiğini varsayar. Kapalı döngünün güvenlik için yapabileceği ayarlamalar sınırlandırılmıştır ([OpenAPS Referans Tasarımı](https://openaps.org/reference-design/)'nda izin verilen en yüksek geçici bazal oranına bakın). Bu yüzden izin verilen dozu, yanlış ayarlanmış temel bir bazalı düzeltmek için harcamak istemezsiniz. Örneğin öğün saatine yaklaşırken sık sık düşük geçici bazal görüyorsanız, muhtemelen bazalınızın ayarlanması gerekir. [OtoAyar](#autotune-how-autotune-calculates-adjustments) ile çok sayıda veriyi değerlendirebilirsiniz: OtoAyar, bazalların ve/veya İDF'nin ayarlanması gerekip gerekmediğini ve nasıl ayarlanacağını, ayrıca karbonhidrat oranının değişmesi gerekip gerekmediğini önerir. Ya da bazalınızı [eski usulle](https://integrateddiabetes.com/basal-testing/) test edip ayarlayabilirsiniz.
 
-### What practicalities of looping do I have?
+### Döngü kullanımında hangi pratik konular var?
 
 #### Password protection
 
-If you don't want your settings to be easily changed, you can protect them with a password, a PIN or your phone's biometric authentication (fingerprint, face). Open **Settings** > **Protection** > **Settings protection** and choose the type of protection. You can also protect the whole app or only boluses in the same place. See [Settings protection](#Preferences-settings-protection) for details.
+Ayarlarınızın kolayca değiştirilmesini istemiyorsanız, onları bir parola, bir PIN veya telefonunuzun biyometrik kimlik doğrulaması (parmak izi, yüz) ile koruyabilirsiniz. **Ayarlar** > **Koruma** > **Ayar koruması**'nı açın ve koruma türünü seçin. Aynı yerde uygulamanın tamamını veya yalnızca bolusları da koruyabilirsiniz. Ayrıntılar için [Ayar koruması](#Preferences-settings-protection) bölümüne bakın.
 
-#### Android Wear Smartwatches
+#### Android Wear akıllı saatler
 
-If you use the AAPS watch app to bolus or change settings, every request has to be confirmed on the watch: after you send it, the watch shows a summary with a **CONFIRM** button. See [Remote control from a Wear OS watch](../RemoteFeatures/RemoteControlWearOS.md).
+Bolus vermek veya ayarları değiştirmek için AAPS saat uygulamasını kullanıyorsanız, her isteğin saatte onaylanması gerekir: isteği gönderdikten sonra saat, **ONAYLA** düğmesi olan bir özet gösterir. [Wear OS akıllı saatiniz üzerinden AAPS'in kullanımı](../RemoteFeatures/RemoteControlWearOS.md) sayfasına bakın.
 
 (FAQ-disconnect-pump)=
 
-#### Disconnect pump
+#### Pompa bağlantısını kesme
 
 Duş almak, banyo yapmak, yüzmek, spor yapmak veya diğer etkinlikler için pompanızı çıkarırsanız, AAPS'e AİNS'i doğru tutmak için insülin verilmediğini bildirmelisiniz.
 
-The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the AAPS main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, press the icon again and pick a new duration: you don't need to reconnect first. See [Disconnecting the pump for showering or activity](#pumps-cannulas-disconnecting) for how to avoid a lack of insulin during long disconnections.
+Pompanın bağlantısı, AAPS ana ekranındaki [döngü simgesi](#AapsScreens-loop-status) ile kesilebilir: simgeye basın ve ihtiyacınız olan süreyle **Pompa bağlantısını kes**'i seçin. Etkinlik planlanandan uzun sürerse simgeye tekrar basın ve yeni bir süre seçin: önce yeniden bağlanmanız gerekmez. Uzun süreli bağlantı kesintilerinde insülin eksikliğini nasıl önleyeceğinizi öğrenmek için [Duş veya etkinlik için pompanın bağlantısını kesme](#pumps-cannulas-disconnecting) bölümüne bakın.
 
-#### Recommendations not only based on one single CGM reading
+#### Öneriler tek bir CGM değerine dayanmaz
 
 Güvenlik için yapılan öneriler bir CGM okumasına değil, ortalama deltaya dayanmaktadır. Bu nedenle, bazı okumaları kaçırırsanız, AAPS'in tekrar döngüye girmesi, verileri geri aldıktan sonra biraz zaman alabilir.
 
-#### Further readings
+#### Ek okumalar
 
-There are several blogs with good tips to help you understand the practicalities of looping. Some of them are no longer online: the links below marked "archived copy" open a saved copy on the Internet Archive.
+Döngünün pratik yönlerini anlamanıza yardımcı olacak iyi ipuçları içeren birkaç blog var. Bunların bazıları artık çevrimiçi değil: aşağıda "arşiv kopyası" olarak işaretlenen bağlantılar, Internet Archive'da kayıtlı bir kopyayı açar.
 
-    * [Fine-tuning Settings](https://web.archive.org/web/20171029031305/http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM (archived copy)
-    * [Why DIA matters](https://web.archive.org/web/20231130035027/http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM (archived copy)
+    * [Fine-tuning Settings](https://web.archive.org/web/20171029031305/http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM (arşiv kopyası)
+    * [Why DIA matters](https://web.archive.org/web/20231130035027/http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM (arşiv kopyası)
     * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-    * [Hormones and autosens](https://web.archive.org/web/20170902081839/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM (archived copy)
+    * [Hormones and autosens](https://web.archive.org/web/20170902081839/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM (arşiv kopyası)
     
 
 (what-emergency-equipment-is-recommended-to-take-with-me)= (FAQ-emergency-equipment)=
 
-### What emergency equipment is recommended to take with me?
+### Yanımda hangi acil durum ekipmanını bulundurmam önerilir?
 
 İnsülin pompası tedavisi olan diğer tüm T1D'ler gibi aynı acil durum ekipmanına sahip olmalısınız. AAPS ile döngü kurarken, yanınızda veya yakınında aşağıdaki ek ekipmanın bulunması şiddetle tavsiye edilir:
 
 * Akıllı telefonunuzu, saatinizi ve (gerekirse) BT okuyucusunu veya Link cihazını şarj etmek için pil takımı ve kablolar
 * Pompa pilleri
-* Access to your backups, both on the phone and in the cloud (e.g. Google Drive, Dropbox), so that you can set up AAPS again on another phone (see [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md)): 
-  * the current [apk](../SettingUpAaps/BuildingAaps.md) of AAPS and of any other apps you use (e.g. xDrip, Juggluco, BYODA).
-  * your keystore file (from building the apk) and its password,
-  * your latest settings export files from AAPS and your other apps,
-  * your **AAPS** master password: you cannot import the settings file without it.
+* Hem telefondaki hem de buluttaki (ör. Google Drive, Dropbox) yedeklerinize erişim; böylece AAPS'i başka bir telefonda yeniden kurabilirsiniz (bkz. [Yedek oluşturma ve geri yükleme](../Maintenance/ExportImportSettings.md)): 
+  * AAPS'in ve kullandığınız diğer uygulamaların (ör. xDrip, Juggluco, BYODA) güncel [apk](../SettingUpAaps/BuildingAaps.md) dosyası.
+  * anahtar deposu (keystore) dosyanız (apk'yi oluştururken kullanılan) ve parolası,
+  * AAPS'ten ve diğer uygulamalarınızdan en son dışa aktardığınız ayar dosyaları,
+  * **AAPS** ana parolanız: ayar dosyasını bu parola olmadan içe aktaramazsınız.
 
 (FAQ-organize-backups)=
 
-#### How to organize my backups?
+#### Yedeklerimi nasıl düzenlemeliyim?
 
-Export settings very regularly: after each pod or reservoir change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Birkaç eski dışa aktarma dosyasını saklayın.
+Ayarları çok düzenli olarak dışa aktarın: her pod veya rezervuar değişiminden sonra, profilinizi değiştirdikten sonra, bir görevi tamamladığınızda, pompanızı değiştirirseniz… Hiçbir şey değişmese bile ayda bir kez dışa aktarın. Birkaç eski dışa aktarma dosyasını saklayın.
 
-**AAPS** can do this for you: it can export your settings automatically (for example with an [Automation](#ExportImportSettings-Automating-Settings-Export) after each pod change) and save the export directly to a cloud folder (Google Drive). See [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md).
+**AAPS** bunu sizin için yapabilir: ayarlarınızı otomatik olarak dışa aktarabilir (örneğin her pod değişiminden sonra bir [Otomasyon](#ExportImportSettings-Automating-Settings-Export) ile) ve dışa aktarılan dosyayı doğrudan bir bulut klasörüne (Google Drive) kaydedebilir. Bkz. [Yedek oluşturma ve geri yükleme](../Maintenance/ExportImportSettings.md).
 
-### How can I safely and securely attach the CGM/FGM?
+### CGM/FGM'yi güvenli ve sağlam bir şekilde nasıl sabitleyebilirim?
 
-Bantlayabilirsiniz. Yaygın CGM sistemleri için önceden delinmiş birkaç çeşit sensör bantları mevcuttur. (Google, eBay veya Amazon'da arama yapın). Bazı looper'lar daha ucuz standart kinesiyoloji bandı veya tıbbi rulo bant kullanır.
+Bantlayabilirsiniz. Yaygın CGM sistemleri için önceden delinmiş birkaç çeşit sensör bantları mevcuttur. (Google, eBay veya Amazon'da arama yapın). Bazı döngü kullanıcıları daha ucuz standart kinesiyoloji bandı veya rocktape kullanır.
 
-Siz bunu düzeltebilirsiniz. CGM/FGM'yi bir bantla sabitleyen üst kol bilezikleri de satın alabilirsiniz (Google, eBay veya Amazon'da arama yapın).
+Sabitleyebilirsiniz. CGM/FGM'yi bir bantla sabitleyen üst kol bilezikleri de satın alabilirsiniz (Google, eBay veya Amazon'da arama yapın).
 
 ## APS algorithm
 
-### Why does OpenAPS AMA show "dia: 3" even though I have a different DIA in my profile?
+### Profilimde farklı bir İES olmasına rağmen OpenAPS AMA neden "dia: 3" gösteriyor?
 
-With **OpenAPS AMA** selected in **Configuration** > **APS**, **Open plugin** shows the data sent to the algorithm. In its **Profile** section, `dia` is always 3.0 or less:
+**Konfigürasyon** > **APS (YPS)** içinde **OpenAPS AMA** seçiliyken, **Eklentiyi aç** algoritmaya gönderilen verileri gösterir. Bu ekranın **Profil** bölümünde `dia` her zaman 3.0 veya daha azdır:
 
-![OpenAPS AMA plugin screen with dia 3.0 in the profile data](../images/screens/openaps_ama_plugin.png)
+![Profil verilerinde dia 3.0 gösteren OpenAPS AMA eklenti ekranı](../images/screens/openaps_ama_plugin.png)
 
-AMA algoritmasında, İES aslında 'insülin etkisinin süresi' anlamına gelmez. Eskiden İES'ine bağlanan bir parametreydi. Şimdi ise 'düzeltme bolusunun ne zaman biteceği' anlamına geliyor. AİNS'in hesaplanmasıyla ilgisi yoktur. OpenAPS SMB'de artık bu parametreye gerek yoktur.
+AMA algoritmasında, İES aslında 'insülin etkisinin süresi' anlamına gelmez. Eskiden İES'e bağlı olan bir parametredir. Şimdi ise 'düzeltme bolusunun ne zaman biteceği' anlamına geliyor. AİNS'in hesaplanmasıyla ilgisi yoktur. OpenAPS SMB'de artık bu parametreye gerek yoktur.
 
 ## Other settings
 
@@ -106,50 +106,50 @@ AMA algoritmasında, İES aslında 'insülin etkisinin süresi' anlamına gelmez
 
 (FAQ-nsclient-blocked)=
 
-#### AAPSClient (or AAPS) does not upload data: "Blocked by…". What can I do?
+#### AAPSClient (veya AAPS) veri yüklemiyor: "… tarafından engellendi". Ne yapabilirim?
 
-The NSClient status shows why no data is sent:
+NSClient durumu, neden veri gönderilmediğini gösterir:
 
-* **Blocked by connectivity options**: the connection settings do not allow the current connection. For example, you are on cellular data but only Wi-Fi is allowed, or you are not on one of the allowed Wi-Fi networks (SSIDs).
-* **Blocked by charging options**: the connection settings only allow syncing while the phone is charging (or only on battery), and this is not the case right now.
-* **No connectivity**: the phone has no internet connection.
+* **Bağlantı seçenekleri tarafından engellendi**: bağlantı ayarları mevcut bağlantıya izin vermiyor. Örneğin hücresel veri kullanıyorsunuz ama yalnızca Wi-Fi'ye izin verilmiş, ya da izin verilen Wi-Fi ağlarından (SSID'ler) birine bağlı değilsiniz.
+* **Şarj seçenekleri tarafından engellendi**: bağlantı ayarları senkronizasyona yalnızca telefon şarj olurken (veya yalnızca pildeyken) izin veriyor ve şu anda durum bu değil.
+* **Bağlantı yok**: telefonun internet bağlantısı yok.
 
-Check the [NSClient connection settings](#Preferences-nsclient): **Use cellular data**, **Use roaming**, **Use WiFi**, **WiFi SSID**, **Sync on battery** and **Sync while charging**.
+[NSClient bağlantı ayarlarını](#Preferences-nsclient) kontrol edin: **Hücresel veri kullan**, **Roaming kullan**, **WiFi kullan**, **WiFi SSID**, **Pildeyken senk. yap** ve **Şarj olurken senk. yap**.
 
 ### CGM settings
 
 (FAQ-advanced-filtering)=
 
-#### Why does AAPS say 'SMB always and after carbs disabled because active BG source doesn't support advanced filtering'?
+#### AAPS neden 'Aktif KŞ kaynağı gelişmiş filtrelemeyi desteklemediği için SMB (Super Micro Bolus) her zaman ve karbonhidratlardan sonra devre dışı bırakıldı' diyor?
 
-**Enable SMB always** and **Enable SMB after carbs** can only be used with a [trusted BG data source](#GettingStarted-TrustedBGSource): a sensor and CGM app that can tell **AAPS** which sensor the readings come from. With any other BG source, **AAPS** switches these two options off and shows this message. Check the list of trusted sources and, if your sensor is listed, make sure you use one of the CGM apps shown for it. See also [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+**SMB'yi her zaman etkinleştir** ve **Karbonhidratlardan sonra SMB'yi etkinleştir** yalnızca [güvenilir bir KŞ veri kaynağı](#GettingStarted-TrustedBGSource) ile kullanılabilir: **AAPS**'e değerlerin hangi sensörden geldiğini bildirebilen bir sensör ve CGM uygulaması. Diğer tüm KŞ kaynaklarında **AAPS** bu iki seçeneği kapatır ve bu mesajı gösterir. Güvenilir kaynaklar listesini kontrol edin. Sensörünüz listede varsa, onun için gösterilen CGM uygulamalarından birini kullandığınızdan emin olun. Ayrıca bkz. [Kan şekeri verilerini yumuşatma](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Pump
 
 #### Batteries
 
-Looping can reduce the pump battery faster than normal use because the system interacts through Bluetooth far more than a manual user does. O zaman iletişim zorlaştığı için pili %25 oranında değiştirmek en iyisidir. Nightscout sitenizdeki PUMP_WARN_BATT_P değişkenini kullanarak pompa pili için uyarı alarmları ayarlayabilirsiniz. Pil ömrünü artırmanın püf noktaları şunları içerir:
+Döngü, pompa pilini normal kullanımdan daha hızlı tüketebilir, çünkü sistem Bluetooth üzerinden elle kullanan birinden çok daha fazla iletişim kurar. İletişim zorlaştığı için pili %25'e düştüğünde değiştirmek en iyisidir. Nightscout sitenizdeki PUMP_WARN_BATT_P değişkenini kullanarak pompa pili için uyarı alarmları ayarlayabilirsiniz. Pil ömrünü artırmanın püf noktaları şunları içerir:
 
 * LCD'nin açık kaldığı süreyi azaltın (pompa ayarları menüsünde)
 * arka ışığın açık kalma süresini kısaltın (pompa ayarları menüsünde)
 * titreşim yerine bir bip sesiyle bildirim ayarlarını seçin (pompa ayarları menüsünden)
 * yeniden doldurmak için yalnızca pompadaki düğmelere basın, tüm geçmişi, pil seviyesini ve rezervuar hacmini görüntülemek için AAPS'i kullanın.
-* AAPS uygulaması, bazı telefonlarda enerji tasarrufu veya boş RAM için genellikle kapatılabilir. AAPS her başlatmada yeniden başlatıldığında, pompaya bir Bluetooth bağlantısı kurar ve mevcut bazal oranı ve bolus geçmişini yeniden okur. Bu pil tüketir. To see if this is happening, enable **Log app start event** in the NSClient **Advanced settings**: Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, turn off battery optimization for AAPS so that the phone stops closing it down: see [battery savings](#FAQ-battery-savings) below.
+* AAPS uygulaması bazı telefonlarda enerji tasarrufu için veya RAM'i boşaltmak için sık sık kapatılabilir. AAPS her başlatmada yeniden başlatıldığında, pompaya bir Bluetooth bağlantısı kurar ve mevcut bazal oranı ve bolus geçmişini yeniden okur. Bu pil tüketir. Bunun olup olmadığını görmek için NSClient **Gelişmiş Ayarlar** bölümünde **Uygulama başlatma olayını günlüğe kaydet**'i açın: Nightscout, AAPS her yeniden başladığında bir olay alır; bu da sorunu takip etmeyi kolaylaştırır. Bunun daha az olması için AAPS'in pil optimizasyonunu kapatın, böylece telefon onu kapatmayı bırakır: aşağıdaki [pil tasarrufu](#FAQ-battery-savings) bölümüne bakın.
 * üretim sürecinden kalan balmumu veya yağ izi kalmadığından emin olmak için pil kutuplarını alkolle temizleyin.
-* for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy while in storage) but it doesn't always work to break it 100%. Pili ekranda %100 görünene kadar 2-3 kez çıkarıp yeniden takın veya pil anahtarını kullanarak pili kısa bir süre için her iki terminale birden uygulayarak takmadan önce kısa devre yapın.
-* see also more tips for [particular types of battery](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+* [Dana R/RS pompaları](../CompatiblePumps/DanaRS-Insulin-Pump.md) için başlatma işlemi, pasivasyon filmini (depolama sırasında enerji kaybını önler) bilerek kırmak için pilden yüksek akım çeker, ancak bu her zaman filmi %100 kırmaz. Pili ekranda %100 görünene kadar 2-3 kez çıkarıp yeniden takın veya pil anahtarını kullanarak pili kısa bir süre için her iki terminale birden uygulayarak takmadan önce kısa devre yapın.
+* [belirli pil türleri](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life) için daha fazla ipucuna da bakın
 
-#### Changing reservoirs and cannulas
+#### Rezervuarları ve kanülleri değiştirme
 
-The reservoir must be changed directly on the pump, then the change is recorded in **AAPS**. Follow the step-by-step [guide for changing the pump reservoir and cannula](#pumps-cannulas-changing-reservoir-and-cannula).
+Rezervuar doğrudan pompada değiştirilir, ardından değişiklik **AAPS**'e kaydedilir. Adım adım [pompa rezervuarı ve kanül değiştirme kılavuzunu](#pumps-cannulas-changing-reservoir-and-cannula) izleyin.
 
-### Wallpaper
+### Duvar kağıdı
 
-You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phone-wallpaper).
+Telefonunuz için AAPS duvar kağıdını [Telefonlar sayfasında](#Phones-phone-wallpaper) bulabilirsiniz.
 
 ### Daily usage
 
-Many of the situations below can be prepared once as a [scene](#scenes): a preset that switches profile, temp target and other settings with one tap. **AAPS** offers ready-made templates, for example *Exercise*, *Sleep*, *Alcohol* or *Bathing*.
+Aşağıdaki durumların çoğu bir kez [senaryo](#scenes) olarak hazırlanabilir: senaryo, profili, geçici hedefi ve diğer ayarları tek dokunuşla değiştiren bir ön ayardır. **AAPS** hazır şablonlar sunar, örneğin *Egzersiz*, *Uyku*, *Alkol* veya *Banyo yapma*.
 
 #### Hygiene
 
@@ -157,81 +157,81 @@ Many of the situations below can be prepared once as a [scene](#scenes): a prese
 
 ##### What to do when taking a shower or bath?
 
-Duş veya banyo yaparken pompayı çıkarabilirsiniz. Bu kısa süre için buna ihtiyacınız olmayabilir, ancak AİNS hesaplamalarının doğru olması için AAPS'e bağlantınızın kesildiğini söylemelisiniz. See [description above](#FAQ-disconnect-pump). The *Bathing* [scene](#scenes) template does this for you.
+Duş veya banyo yaparken pompayı çıkarabilirsiniz. Bu kısa süre için buna ihtiyacınız olmayabilir, ancak AİNS hesaplamalarının doğru olması için AAPS'e bağlantınızın kesildiğini söylemelisiniz. [Yukarıdaki açıklamaya](#FAQ-disconnect-pump) bakın. *Banyo yapma* [senaryo](#scenes) şablonu bunu sizin için yapar.
 
 #### Work
 
-İşinize bağlı olarak, iş günlerinde farklı tedavi faktörleri kullanmayı tercih edebilirsiniz. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. Örneğin, daha az zorlu bir işiniz varsa (örneğin, masada oturmak) %100'den yüksek bir profile veya tüm gün aktif ve ayaktaysanız %100'den az bir profile geçebilirsiniz. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, or if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need, or save your workday settings as a [scene](#scenes).
+İşinize bağlı olarak, iş günlerinde farklı tedavi faktörleri kullanmayı tercih edebilirsiniz. Bir döngü kullanıcısı olarak, tipik bir iş gününüz için bir [profil değişimi](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) yapmayı düşünmelisiniz. Örneğin, daha az zorlu bir işiniz varsa (örneğin, masada oturmak) %100'den yüksek bir profile veya tüm gün aktif ve ayaktaysanız %100'den az bir profile geçebilirsiniz. Normalden çok daha erken veya geç çalışıyorsanız ya da farklı vardiyalarda çalışıyorsanız, yüksek veya düşük bir geçici hedef ya da [profilinizde zaman kaydırma](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) da düşünebilirsiniz. İkinci bir profil de oluşturabilirsiniz (ör. 'ev' ve 'iş günü') ve her gün gerçekten ihtiyacınız olan profile profil değişimi yapabilir ya da iş günü ayarlarınızı bir [senaryo](#scenes) olarak kaydedebilirsiniz.
 
 ### Leisure activities
 
 (FAQ-sports)=
 
-#### Sports
+#### Spor
 
-Döngü öncesi zamanlardan kalma eski spor alışkanlıklarınızı yeniden çalışmanız gerekiyor. Daha önce olduğu gibi sadece bir veya daha fazla spor karbonhidratı tüketirseniz, kapalı döngü sistemi bunları tanıyacak ve uygun şekilde düzeltecektir.
+Döngü öncesi dönemden kalan spor alışkanlıklarınızı gözden geçirmeniz gerekir. Daha önce olduğu gibi sadece bir veya daha fazla spor karbonhidratı tüketirseniz, kapalı döngü sistemi bunları tanıyacak ve uygun şekilde düzeltecektir.
 
-Böylece daha fazla aktif karbonhidrat olurdu, ancak aynı zamanda döngü, insülini verir ve etkisiz hale getirirdi.
+Böylece daha fazla aktif karbonhidratınız olur, ama aynı zamanda döngü buna karşı koyar ve insülin verir.
 
 Döngü yaparken şu adımları denemelisiniz:
 
-* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
-* Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target. With a percentage below 100 % and a duration, the same **Activate** screen offers a **Temporary target / Activity** switch that starts both at once.
-* If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
+* %100'ün altında bir [profil değişimi](#ProfileSwitch-change-percentage) yapın: ana ekranda profil adına dokunun, yuvarlak **▶** düğmesine dokunun, sonra **Yüzde** ve **Süre** değerlerini ayarlayın.
+* Standart hedefinizin üzerinde bir [aktivite geçici hedefi](#TempTargets-activity-temp-target) ayarlayın. Yüzde %100'ün altındaysa ve bir süre ayarlıysa, aynı **Etkinleştir** ekranı ikisini birden başlatan bir **Geçici hedef / Aktivite** anahtarı sunar.
+* SMB kullanıyorsanız ["Yüksek geçici hedefte SMB'yi etkinleştir"](#Open-APS-features-enable-smb-with-high-temp-targets) ve ["SMB'yi her zaman etkinleştir"](#Open-APS-features-enable-smb-always) ayarlarının kapalı olduğundan emin olun.
 
-Bu ayarlar için önce ve sonra çalıştırma önemlidir. Değişiklikleri spordan önce zamanında yapın ve kas dolgusunun etkisini göz önünde bulundurun.
+Bu ayarlarda önceden ve sonradan hazırlık önemlidir. Değişiklikleri spordan önce zamanında yapın ve kasların yeniden dolmasının (glikojen depoları) etkisini göz önünde bulundurun.
 
-The *Exercise* and *Post-exercise Night* [scene](#scenes) templates bundle these settings, so you can start them with one tap. If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../DailyLifeWithAaps/Automations.md) to start the profile switch and TT, or the scene. Konum tabanlı otomasyon da bir fikir olabilir ancak ön işlemeyi zorlaştırır.
+*Egzersiz* ve *Egzersiz Sonrası Gece* [senaryo](#scenes) şablonları bu ayarları bir araya getirir, böylece onları tek dokunuşla başlatabilirsiniz. Düzenli olarak aynı saatte spor yapıyorsanız (ör. spor salonunuzdaki bir ders), profil değişimini ve GH'yi ya da senaryoyu başlatmak için [otomasyon](../DailyLifeWithAaps/Automations.md) kullanmayı düşünebilirsiniz. Konuma dayalı otomasyon da bir fikir olabilir, ancak önceden hazırlığı zorlaştırır.
 
-Profil değişikliğinin yüzdesi, aktivite geçici hedefinizin değeri ve değişiklikler için en iyi zaman bireyseldir. Sizin için doğru değeri arıyorsanız güvenli taraftan başlayın (daha düşük yüzde ve daha yüksek GH ile başlayın).
+Profil değişiminin yüzdesi, aktivite geçici hedefinizin değeri ve değişiklikler için en iyi zaman kişiden kişiye değişir. Sizin için doğru değeri arıyorsanız güvenli taraftan başlayın (daha düşük yüzde ve daha yüksek GH ile başlayın).
 
 #### Sex
 
-Pompayı 'özgür' olabilmek için kaldırabilirsiniz, ancak AAPS'e AİNS hesaplamalarının doğru olması için söylemelisiniz. See [description above](#FAQ-disconnect-pump).
+Pompayı 'özgür' olabilmek için kaldırabilirsiniz, ancak AAPS'e AİNS hesaplamalarının doğru olması için söylemelisiniz. [Yukarıdaki açıklamaya](#FAQ-disconnect-pump) bakın.
 
 #### Drinking alcohol
 
-Algoritma alkolden etkilenen KŞ'yi doğru bir şekilde tahmin edemediği için kapalı döngü modunda alkol içmek risklidir. AAPS'de aşağıdaki işlevleri kullanarak bunu tedavi etmek için kendi yönteminizi kontrol etmeniz gerekir:
+Algoritma alkolden etkilenen KŞ'yi doğru bir şekilde tahmin edemediği için kapalı döngü modunda alkol içmek risklidir. Bunu yönetmek için AAPS'teki aşağıdaki işlevlerle kendi yönteminizi denemeniz gerekir:
 
 * Kapalı döngü modunun devre dışı bırakılması ve diyabetin manuel olarak tedavi edilmesi veya
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
-* do a [profile switch](#ProfileSwitch-change-percentage) to noticeably less than 100% 
+* yüksek geçici hedefler ayarlayıp UAM'yi (bildirilmemiş öğünler) kapatarak döngünün bildirilmemiş bir öğün yüzünden AİNS'i artırmasını önlemek veya
+* belirgin şekilde %100'ün altında bir [profil değişimi](#ProfileSwitch-change-percentage) yapmak 
 
-The *Alcohol* [scene](#scenes) template is a starting point you can adapt to your own method.
+*Alkol* [senaryo](#scenes) şablonu, kendi yönteminize uyarlayabileceğiniz bir başlangıç noktasıdır.
 
 Alkol içerken, karbonhidrat yiyerek hipoglisemiyi manuel olarak önlemek için CGM'nize her zaman göz kulak olmalısınız.
 
-#### Sleeping
+#### Uyku
 
-##### How can I loop during the night without mobile and Wi-Fi radiation?
+##### Geceleri mobil ve Wi-Fi radyasyonu olmadan nasıl döngü kullanabilirim?
 
-Birçok kullanıcı geceleri telefonu uçak moduna alıyor. If you want the loop to support you when you are sleeping, proceed as follows (this will only work if your CGM app runs on the same phone as AAPS, such as xDrip, Juggluco or BYODA; it will NOT work if you get the BG-readings via Nightscout):
+Birçok kullanıcı geceleri telefonu uçak moduna alıyor. Uyurken döngünün size destek olmasını istiyorsanız şöyle ilerleyin (bu yalnızca CGM uygulamanız AAPS ile aynı telefonda çalışıyorsa işe yarar, örneğin xDrip, Juggluco veya BYODA; KŞ değerlerini Nightscout üzerinden alıyorsanız İŞE YARAMAZ):
 
 1. Cep telefonunuzda uçak modunu açın.
 2. Uçak modu aktif olana kadar bekleyin.
 3. Bluetooth'u açın.
 
-Şu anda arama almıyorsunuz ve internete bağlı değilsiniz. Ama döngü hala çalışıyor.
+Şu anda arama almıyorsunuz ve internete bağlı değilsiniz. Ama döngü hâlâ çalışıyor.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip) when phone is in airplane mode. In xDrip, go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+Bazı kişiler, telefon uçak modundayken yerel yayın (local broadcast) ile ilgili sorunlar yaşamıştır (AAPS, xDrip'ten KŞ değerlerini almaz). xDrip'te Settings > Inter-app settings > Identify receiver yolunu açın ve `info.nightscout.androidaps` girin.
 
 ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-If you want different settings at night (for example a higher target), the *Sleep* [scene](#scenes) template is a good starting point.
+Geceleri farklı ayarlar istiyorsanız (örneğin daha yüksek bir hedef), *Uyku* [senaryo](#scenes) şablonu iyi bir başlangıç noktasıdır.
 
-#### Traveling
+#### Seyahat
 
 ##### How to deal with time zone changes?
 
-Dana R ve Dana R Korean ile hiçbir şey yapmanıza gerek yok. For other pumps see [time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+Dana R ve Dana R Korean ile hiçbir şey yapmanıza gerek yok. Diğer pompalar için daha fazla ayrıntıyı [Saat dilimi değişikliği ve yaz saati uygulaması](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) sayfasında bulabilirsiniz.
 
 ### Medical topics
 
 #### Hospitalization
 
-If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../UsefulLinks/ClinicianGuideToAaps.md).
+AAPS ve kendin yap (DIY) döngü hakkında klinisyenlerinizle bilgi paylaşmak isterseniz, [Klinisyenler İçin – AAPS'e Genel Giriş ve Kılavuz](../UsefulLinks/ClinicianGuideToAaps.md) belgesini yazdırabilirsiniz.
 
-#### Medical appointment with your endocrinologist
+#### Endokrinoloğunuzla randevu
 
 ##### Reporting
 
@@ -239,41 +239,41 @@ Nightscout raporlarınızı (https://YOUR-NS-SITE.com/report) gösterebilir veya
 
 ## Frequent questions on Discord and their answers...
 
-### My problem is not listed here.
+### Sorunum burada listelenmemiş.
 
-See [where to get help](../GettingHelp/WhereCanIGetHelp.md). If you found the solution yourself, **remind us to add it to this list!**
+Bkz. [Nereden yardım alabilirim?](../GettingHelp/WhereCanIGetHelp.md) Çözümü kendiniz bulduysanız, **bunu bu listeye eklememizi bize hatırlatın!**
 
-### Building and installing
+### Oluşturma ve yükleme
 
 (FAQ-build-errors)=
 
 #### I have problems, errors building the app.
 
-Please check the troubleshooting page for the way you build **AAPS** (see [Building AAPS](../SettingUpAaps/BuildingAaps.md)):
+Lütfen **AAPS**'i oluşturma yönteminize uygun sorun giderme sayfasına bakın (bkz. [AAPS'i oluşturma](../SettingUpAaps/BuildingAaps.md)):
 
-* building with a browser: [Browser build: troubleshooting](#aaps-ci-troubleshooting),
-* building with Android Studio: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+* tarayıcı ile oluşturma: [Tarayıcı ile oluşturma: sorun giderme](#aaps-ci-troubleshooting),
+* Android Studio ile oluşturma: [Android Studio'da Sorun Giderme](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 (FAQ-build-error-file-name-too-long)=
 
 #### Build error: file name too long
 
-This error can happen when building with Android Studio: the build stops with an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "C:\src\AndroidAPS").
+Bu hata Android Studio ile oluştururken görülebilir: oluşturma, dosya adının çok uzun olduğunu belirten bir hatayla durur. Olası çözümler: Kaynak dosyalarınızı sürücünüzün kök dizinine daha yakın bir dizine taşıyın (ör. "C:\src\AndroidAPS").
 
-Android Studio'dan: Projeyi açıp GitHub'dan çektikten sonra "Gradle"ın senkronizasyon ve indekslemenin yapıldığından emin olun. Bir Yeniden Proje yapmadan önce Temiz bir Proje yürütün. Execute File->Invalidate Caches ardından Android Studio'yu tekrar başlatın.
+Android Studio'dan: Projeyi açıp GitHub'dan çektikten sonra "Gradle"ın senkronizasyonu ve dizinlemeyi bitirdiğinden emin olun. Rebuild Project yapmadan önce Build->Clean Project çalıştırın. File->Invalidate Caches and Restart ile Android Studio'yu yeniden başlatın.
 
 (FAQ-running-dev-version)=
 
-#### Alert: Running dev version. Closed loop is disabled
+#### Uyarı: Geliştirici sürümü çalışıyor. Kapalı Döngü devre dışı
 
-**AAPS** shows this message when you run a development (dev) version without engineering mode: in a dev version, closed loop only works in engineering mode.
+Mühendislik modu olmadan bir geliştirme (dev) sürümü çalıştırdığınızda **AAPS** bu mesajı gösterir: dev sürümünde kapalı döngü yalnızca mühendislik modunda çalışır.
 
-The dev version is meant for testing, not for actual looping: read [Development branch](../AdvancedOptions/DevBranch.md) before going further.
+Dev sürümü test içindir, gerçek döngü kullanımı için değildir: devam etmeden önce [Geliştirme dalı](../AdvancedOptions/DevBranch.md) sayfasını okuyun.
 
-To turn on engineering mode:
+Mühendislik modunu açmak için:
 
-1. Place a file named `engineering_mode` in the `extra` subfolder of your AAPS directory (the folder you chose in the setup wizard, usually `AAPS/extra`). Herhangi bir dosya, doğru şekilde adlandırıldığı sürece iş görür.
-2. Restart **AAPS** so that it finds the file.
+1. AAPS dizininizin `extra` alt klasörüne `engineering_mode` adlı bir dosya koyun (kurulum sihirbazında seçtiğiniz klasör, genellikle `AAPS/extra`). Herhangi bir dosya, doğru şekilde adlandırıldığı sürece iş görür.
+2. Dosyayı bulması için **AAPS**'i yeniden başlatın.
 
 İpucu: Mevcut bir günlük dosyasının bir kopyasını alın ve onu "engineering_mode" olarak yeniden adlandırın (not: dosya uzantısı olmayacak).
 
@@ -281,143 +281,143 @@ To turn on engineering mode:
 
 #### I'm stuck on an objective and need help.
 
-First read [Completing the Objectives](../SettingUpAaps/CompletingTheObjectives.md). If you are still stuck, screen capture the question and answers and post them on the Discord AAPS channel. Hangi seçenekleri seçtiğinizi (veya seçmediğinizi) ve nedenini söylemeyi unutmayın. İpuçları ve yardım alacaksınız ancak yanıtları bulmanız gerekecek.
+Önce [Görevleri tamamlama](../SettingUpAaps/CompletingTheObjectives.md) sayfasını okuyun. Hâlâ takıldıysanız, soruların ve yanıtların ekran görüntüsünü alın ve Discord AAPS kanalında paylaşın. Hangi seçenekleri seçtiğinizi (veya seçmediğinizi) ve nedenini söylemeyi unutmayın. İpuçları ve yardım alacaksınız ancak yanıtları bulmanız gerekecek.
 
-### Settings, passwords and backups
+### Ayarlar, parolalar ve yedekler
 
 (FAQ-reset-master-password)=
 
-#### How to reset the master password?
+#### Ana parola nasıl sıfırlanır?
 
-If you forgot your master password, you can reset it to your pump's serial number:
+Ana parolanızı unuttuysanız, onu pompanızın seri numarasına sıfırlayabilirsiniz:
 
-1. Create an empty file named `PasswordReset` (no file extension) in the `extra` subfolder of your AAPS directory (usually `AAPS/extra`).
-2. Restart **AAPS**. Your pump must be connected: **AAPS** shows "Waiting for pump…" and needs to read the pump serial number within 30 seconds.
-3. **AAPS** shows "Password set!": your master password is now your **pump serial number**. The `PasswordReset` file is deleted automatically.
-4. Open **Settings** > **Protection** > **Master password** and set a new password.
+1. AAPS dizininizin `extra` alt klasöründe (genellikle `AAPS/extra`) `PasswordReset` adlı boş bir dosya (dosya uzantısı olmadan) oluşturun.
+2. **AAPS**'i yeniden başlatın. Pompanız bağlı olmalıdır: **AAPS** "Pompa bekleniyor…" gösterir ve pompa seri numarasını 30 saniye içinde okuması gerekir.
+3. **AAPS** "Parola belirlendi!" gösterir: ana parolanız artık **pompa seri numaranızdır**. `PasswordReset` dosyası otomatik olarak silinir.
+4. **Ayarlar** > **Koruma** > **Ana parola**'yı açın ve yeni bir parola belirleyin.
 
-If the pump is not reached in time, nothing changes: check the pump connection and try again.
+Pompaya zamanında ulaşılamazsa hiçbir şey değişmez: pompa bağlantısını kontrol edin ve tekrar deneyin.
 
-This only resets the master password. A settings, application or bolus password or PIN is not reset, but you can always use the master password instead of them.
+Bu yalnızca ana parolayı sıfırlar. Ayar, uygulama veya bolus parolası ya da PIN'i sıfırlanmaz, ancak bunların yerine her zaman ana parolayı kullanabilirsiniz.
 
-    {admonition} Old settings files
+    {admonition} Eski ayar dosyaları
     :class: warning
-    Settings files exported with the old master password can only be imported with that old password.
+    Eski ana parolayla dışa aktarılan ayar dosyaları yalnızca o eski parolayla içe aktarılabilir.
 
 (FAQ-where-are-settings-files)=
 
 #### Where can I find settings files?
 
-Settings files are stored in the `preferences` subfolder of the AAPS directory you chose in the [setup wizard](#SetupWizard-StoragePermission) (for example `/internal storage/AAPS/preferences`). If you set up a cloud folder (Google Drive), your exports can also be saved there. See [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md).
+Ayar dosyaları, [kurulum sihirbazında](#SetupWizard-StoragePermission) seçtiğiniz AAPS dizininin `preferences` alt klasöründe saklanır (örneğin `/internal storage/AAPS/preferences`). Bir bulut klasörü (Google Drive) ayarladıysanız, dışa aktarılan dosyalarınız oraya da kaydedilebilir. Bkz. [Yedek oluşturma ve geri yükleme](../Maintenance/ExportImportSettings.md).
 
 UYARI: Parolanızı kesinlikle kaybetmeyin çünkü onsuz şifreli bir ayar dosyasını içe aktaramazsınız!
 
 (FAQ-import-settings-earlier-versions)=
 
-#### How do I import settings from earlier versions of AAPS into AAPS v3 or v4 ?
+#### Önceki AAPS sürümlerinden ayarları AAPS v3 veya v4'e nasıl içe aktarırım?
 
-You can only import settings (in AAPS v3 or v4) that were exported using AAPS v2.8x or later. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install the current AAPS version and import v2.8 settings in it.
+(AAPS v3 veya v4'te) yalnızca AAPS v2.8x veya sonraki bir sürümle dışa aktarılmış ayarları içe aktarabilirsiniz. v2.8x'ten eski bir AAPS sürümü kullanıyorduysanız veya v2.8x'ten eski ayar dosyalarını kullanmanız gerekiyorsa, önce AAPS v2.8'i yüklemeniz gerekir. v2.x'in eski ayarlarını v2.8'e içe aktarın. Her şeyin yolunda olduğunu kontrol ettikten sonra ayarları v2.8'den dışa aktarabilirsiniz. Güncel AAPS sürümünü yükleyin ve v2.8 ayarlarını ona içe aktarın.
 
-If you use the same key to build the old and the new version, you won't even have to import settings. You can install the new version over the old one.
+Eski ve yeni sürümü oluşturmak için aynı anahtarı kullanırsanız, ayarları içe aktarmanız bile gerekmez. Yeni sürümü eskisinin üzerine yükleyebilirsiniz.
 
 Bazı yeni görevler eklendi. Onları doğrulamanız gerekecek.
 
 (FAQ-delete-treatments)=
 
-#### Where can I delete treatments?
+#### Tedavileri nerede silebilirim?
 
-Open the **menu** (☰) and select **Treatments history**. Long press an entry to select it, tap more entries if needed, then tap the **trash can** icon and confirm. See [Treatments history](#aaps-screens-treatments).
+**Menüyü** (☰) açın ve **Tedavi geçmişi**'ni seçin. Seçmek için bir girişe uzun basın, gerekirse başka girişlere de dokunun, sonra **çöp kutusu** simgesine dokunun ve onaylayın. Bkz. [Tedavi geçmişi](#aaps-screens-treatments).
 
-### Phone and connection problems
+### Telefon ve bağlantı sorunları
 
 (FAQ-aaps-stops)=
 
-#### AAPS stops everyday around the same time.
+#### AAPS her gün aşağı yukarı aynı saatte duruyor.
 
-* Google Play Protect may shut down **AAPS** every morning on some phones. If this happens, go to the Google Play options and disable **Google Play Protect**.
+* Bazı telefonlarda Google Play Protect **AAPS**'i her sabah kapatabilir. Bu olursa, Google Play seçeneklerine gidin ve **Google Play Protect**'i kapatın.
 * "Temizleme" uygulamalarını (yani CCleaner vb.) kontrol edin ve bunları kaldırın.
-* Turn off all battery optimizations for **AAPS** (see [battery savings](#FAQ-battery-savings) below).
+* **AAPS** için tüm pil optimizasyonlarını kapatın (aşağıdaki [pil tasarrufu](#FAQ-battery-savings) bölümüne bakın).
 
 (FAQ-battery-savings)=
 
-#### How to configure battery savings?
+#### Pil tasarrufu nasıl ayarlanır?
 
-Your phone may suspend **AAPS** and related apps (CGM app, Bluetooth) when you are not using it. **AAPS** then cannot do its work, and Bluetooth connections to the sensor and pump (or RileyLink) may be shut down, causing "pump unreachable" alerts and communication errors.
+Telefonunuz, siz kullanmadığınızda **AAPS**'i ve ilgili uygulamaları (CGM uygulaması, Bluetooth) askıya alabilir. Bu durumda **AAPS** işini yapamaz ve sensör ile pompaya (veya RileyLink'e) olan Bluetooth bağlantıları kapanabilir; bu da "pompaya ulaşılamıyor" uyarılarına ve iletişim hatalarına yol açar.
 
-Turn off battery optimization for **AAPS**, your CGM app (e.g. xDrip) and the Bluetooth system app. The way to do this depends on the phone's brand, model and Android version:
+**AAPS**, CGM uygulamanız (ör. xDrip) ve Bluetooth sistem uygulaması için pil optimizasyonunu kapatın. Bunun yolu telefonun markasına, modeline ve Android sürümüne bağlıdır:
 
-* see [Battery optimization](#generaltroubleshooting-android-related-issues) for Pixel, Samsung and Huawei phones,
-* in **AAPS**, open the **menu** (☰) > **About** and tap **Don't kill my app?**, or visit [Don't kill my app](https://dontkillmyapp.com/) for other brands.
+* Pixel, Samsung ve Huawei telefonlar için [Pil optimizasyonu](#generaltroubleshooting-android-related-issues) bölümüne bakın,
+* diğer markalar için **AAPS**'te **menü** (☰) > **Hakkında**'yı açın ve **Uygulamamı kapatma?**'ya dokunun ya da [Don't kill my app](https://dontkillmyapp.com/) sitesini ziyaret edin.
 
-If you are not sure that battery savings cause your problem, you can temporarily turn off all battery savings on the phone: your battery will drain faster, but you will quickly see if the problem goes away.
+Sorununuza pil tasarrufunun neden olduğundan emin değilseniz, telefondaki tüm pil tasarruflarını geçici olarak kapatabilirsiniz: piliniz daha hızlı biter, ama sorunun geçip geçmediğini hızlıca görürsünüz.
 
 (FAQ-pump-unreachable-alerts)=
 
-#### Pump unreachable alerts several times a day or at night.
+#### Günde birkaç kez veya geceleri "Pompaya ulaşılamıyor" uyarıları.
 
-Your phone may be suspending **AAPS** or even Bluetooth, causing it to lose the connection to the pump or RileyLink (see [battery savings](#FAQ-battery-savings) above).
+Telefonunuz **AAPS**'i, hatta Bluetooth'u askıya alıyor olabilir; bu da pompa veya RileyLink ile bağlantının kopmasına neden olur (yukarıdaki [pil tasarrufu](#FAQ-battery-savings) bölümüne bakın).
 
-You can also change when the alert is raised: press the **Settings** (gear) icon on the top right of the main screen, then select **Local alerts** > **Pump unreachable threshold** (30 to 300 minutes). Check your pump's page: some recommend a value, e.g. 120 minutes for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md).
+Uyarının ne zaman verileceğini de değiştirebilirsiniz: ana ekranın sağ üstündeki **Ayarlar** (dişli) simgesine basın, sonra **Yerel uyarılar** > **Pompa ulaşılamaz eşiği**'ni seçin (30 ile 300 dakika arası). Pompanızın sayfasına bakın: bazı sayfalar bir değer önerir, ör. [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) için 120 dakika.
 
 (FAQ-link-unresponsive)=
 
-#### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+#### Link cihazım/pompam/pod'um yanıt vermiyor (RL/OL/EmaLink…)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
+Bazı telefonlarda Link cihazlarıyla (RL/OL/EmaLink) Bluetooth bağlantısı kopar.
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
+Bazı cihazların da yanıt vermeyen bağlantıları da vardır (AAPS, bağlı olduklarını ancak bağlantıların pompaya ulaşamadığını veya komuta edemediğini söylüyor).
 
-First try the **Reset RileyLink** button on the pump screen (see your pump's page: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). If this does not help, the easiest way to get all these parts working together is:
+Önce pompa ekranındaki **RileyLink'i Sıfırla** düğmesini deneyin (pompanızın sayfasına bakın: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Bu işe yaramazsa, tüm bu parçaları birlikte çalıştırmanın en kolay yolu şudur:
 
-1. Power off the Link.
-2. Quit **AAPS** (**menu** (☰) > **Exit**).
-3. Long press the **AAPS** icon, open the Android **App info**, tap **Force stop**, then **Storage** > **Clear cache** (do NOT clear storage/data!).
-4. Rarely some phones may need a reboot here. Yeniden başlatmadan deneyebilirsiniz.
-5. Power on the Link.
-6. Start **AAPS**.
-7. On the pump screen, tap **Pair RileyLink** and select your Link again.
+1. Link cihazını kapatın.
+2. **AAPS**'ten çıkın (**menü** (☰) > **Çıkış**).
+3. **AAPS** simgesine uzun basın, Android **App info** (Uygulama bilgileri) ekranını açın, **Force stop** (Durmaya zorla) düğmesine, ardından **Storage** (Depolama) > **Clear cache** (Önbelleği temizle) öğesine dokunun (depolama alanını/verileri TEMİZLEMEYİN!).
+4. Nadiren bazı telefonların bu noktada yeniden başlatılması gerekebilir. Yeniden başlatmadan deneyebilirsiniz.
+5. Link cihazını açın.
+6. **AAPS**'i başlatın.
+7. Pompa ekranında **RileyLink'i Eşleştir**'e dokunun ve Link cihazınızı yeniden seçin.
 
-### Remote control
+### Uzaktan kontrol
 
 (FAQ-aapsclient)=
 
-#### Configuring and Using the AAPSClient remote app
+#### AAPSClient uzaktan kontrol uygulamasını yapılandırma ve kullanma
 
-**AAPSClient** is a separate app that lets a caregiver follow and control **AAPS** remotely. Since **AAPS** v4, controlling **AAPS** from AAPSClient needs a one-time pairing between the two apps. See:
+**AAPSClient**, bir bakım verenin **AAPS**'i uzaktan izlemesini ve kontrol etmesini sağlayan ayrı bir uygulamadır. **AAPS** v4'ten beri, **AAPS**'i AAPSClient'tan kontrol etmek için iki uygulama arasında tek seferlik bir eşleştirme gerekir. Bkz.:
 
-* [The AAPSClient app](#aapsclient-app): installing, first start and pairing,
-* [Master ↔ Client control](#client-master-control): what can be controlled and how pairing works,
-* [AAPSClient on a smartwatch](#remotecontrol-smartwatches).
+* [AAPSClient uygulaması](#aapsclient-app): yükleme, ilk başlatma ve eşleştirme,
+* [Ana birim ↔ İstemci kontrolü](#client-master-control): neyin kontrol edilebildiği ve eşleştirmenin nasıl çalıştığı,
+* [Akıllı saatte AAPSClient](#remotecontrol-smartwatches).
 
 (FAQ-hardened-mode)=
 
-#### Treatments I enter on the Nightscout website are not applied
+#### Nightscout web sitesinde girdiğim tedaviler uygulanmıyor
 
-That is [hardened mode](#client-master-control-hardened-mode). While client control is on — always in Simple Mode — **AAPS** takes changes only from paired clients, not from the Nightscout website or other apps. Enter them on a paired **AAPSClient** instead.
+Bunun nedeni [güçlendirilmiş mod](#client-master-control-hardened-mode). İstemci kontrolü açıkken (Basit modda her zaman açıktır) **AAPS** değişiklikleri yalnızca eşleştirilmiş istemcilerden alır; Nightscout web sitesinden veya diğer uygulamalardan almaz. Bunun yerine tedavileri eşleştirilmiş bir **AAPSClient**'ta girin.
 
-### Alerts and warnings
+### Alarmlar ve uyarılar
 
-#### I have a red warning badge (red triangle) / AAPS won't enable closed loop / Loop stays in LGS / I had a yellow triangle
+#### Kırmızı bir uyarı rozetim (kırmızı üçgen) var / AAPS kapalı döngüyü etkinleştirmiyor / Döngü LGS'de kalıyor / Sarı bir üçgenim vardı
 
-The red warning badge on the BG source shortcut is a security feature in AAPS. See [BG warning sign](#aaps-screens-bg-warning-sign) for the full explanation.
+KŞ kaynağı kısayolundaki kırmızı uyarı rozeti, AAPS'teki bir güvenlik özelliğidir. Ayrıntılı açıklama için [KŞ uyarı işareti](#aaps-screens-bg-warning-sign) bölümüne bakın.
 
-A red warning badge on the BG source shortcut in the bottom bar (the red triangle of older versions) means that you have duplicate BGs and AAPS can't calculate precisely the deltas. A closed loop is switched to **Low Glucose Suspend** mode: it still reduces or suspends your basal to protect you against lows, but it gives no correction insulin. You need to delete one BG of each duplicated value in order to clear the warning. Tap the shortcut to open your [BG source screen](#aaps-screens-bg-source): the duplicate is highlighted in red. Long press one line you want to delete, check one of each lines that are doubled and tap the trash icon. Çok fazla çift KŞ varsa AAPS veritabanını sıfırlamanız gerekebilir. In this case, you'll also lose stats, IOB, COB, selected profile.
+Alt çubuktaki KŞ kaynağı kısayolunda kırmızı bir uyarı rozeti (eski sürümlerdeki kırmızı üçgen), yinelenen KŞ değerleriniz olduğu ve AAPS'in deltaları doğru hesaplayamadığı anlamına gelir. Kapalı döngü **Düşük Glikoz Duraklatma (LGS)** moduna geçer: sizi düşük şekere karşı korumak için bazalınızı yine azaltır veya durdurur, ama düzeltme insülini vermez. Uyarıyı kaldırmak için yinelenen her değerden bir KŞ'yi silmeniz gerekir. [KŞ kaynağı ekranınızı](#aaps-screens-bg-source) açmak için kısayola dokunun: yinelenen değer kırmızıyla vurgulanır. Silmek istediğiniz bir satıra uzun basın, iki kez görünen her satırdan birini işaretleyin ve çöp kutusu simgesine dokunun. Çok fazla çift KŞ varsa AAPS veritabanını sıfırlamanız gerekebilir. Bu durumda istatistikleri, AİNS'i, AKRB'yi ve seçili profili de kaybedersiniz.
 
-Once the warning is gone, AAPS does not go back to **Closed Loop** by itself. Press the loop icon on the main screen and select **Closed Loop** again.
+Uyarı kalktıktan sonra AAPS kendiliğinden **Kapalı Döngü**'ye geri dönmez. Ana ekrandaki döngü simgesine basın ve yeniden **Kapalı Döngü**'yü seçin.
 
-Sorunun olası kaynağı: xDrip ve/veya NS geri döngülü KŞ girdileridir.
+Sorunun olası kaynağı: xDrip ve/veya NS'nin KŞ değerlerini geriye dönük doldurması (backfill).
 
-The yellow triangle of older versions meant unstable delay between each BG reading (BGs not received every 5 min regularly, or missing BGs), which often happens with Libre or after a G6 transmitter change. **AAPS** 4 no longer shows it: it recalculates the values in the background and the loop works correctly.
+Eski sürümlerdeki sarı üçgen, KŞ okumaları arasındaki sürenin düzensiz olduğu anlamına geliyordu (KŞ değerleri düzenli olarak 5 dakikada bir gelmiyor veya bazı KŞ değerleri eksik); bu genellikle Libre ile veya bir G6 verici değişiminden sonra olur. **AAPS** 4 artık bunu göstermez: değerleri arka planda yeniden hesaplar ve döngü doğru çalışır.
 
 ### Omnipod DASH
 
 (FAQ-move-dash-pod)=
 
-#### Can I move an active DASH Pod to another phone?
+#### Aktif bir DASH Pod'unu başka bir telefona taşıyabilir miyim?
 
-The Pod state is included in the exported settings, so an active Pod can be moved to another phone by exporting the settings right before the move and importing them on the other phone. This is not officially supported and there is a risk of losing the Pod: if possible, try it when your Pod is about to expire.
+Pod durumu dışa aktarılan ayarlara dahildir. Bu yüzden aktif bir Pod başka bir telefona taşınabilir: taşımadan hemen önce ayarları dışa aktarın ve diğer telefonda içe aktarın. Bu resmi olarak desteklenmez ve Pod'u kaybetme riski vardır: mümkünse Pod'unuzun süresi dolmak üzereyken deneyin.
 
-Read these sections first:
+Önce şu bölümleri okuyun:
 
-* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
-* [Discarding a pod](#omnipod-dash-discard-pod), to remove the Pod from the old phone afterwards. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.
+* Omnipod DASH sayfasındaki [Ayarları dışa ve içe aktarma](#omnipod-dash-export-import) ve [Hortumsuz pompalar](#ExportImportSettings-tubeless-pumps): yeni telefonda **Pompa ayarlarını da değiştir**'i işaretleyin ve şu anda taktığınız Pod takılıyken dışa aktarılmış bir dosya kullanın,
+* Pod'u daha sonra eski telefondan kaldırmak için [Pod'u çıkarma](#omnipod-dash-discard-pod). Pod çıkarılana kadar eski telefonu uçak modunda tutun; böylece iki telefon hiçbir zaman Pod ile aynı anda iletişim kurmaz.

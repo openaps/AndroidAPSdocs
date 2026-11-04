@@ -1,100 +1,100 @@
-# Update with Android Studio
+# Android Studio로 업데이트
 
-## 다운로드 대신에 당신 스스로 빌드하세요
+## 다운로드 대신 직접 빌드
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS**는 의료기기 관련 규정 때문에 다운로드할 수 없습니다. 본인이 사용하기 위해 앱을 빌드하는 것은 합법이지만, 다른 사람에게 복사본을 주어서는 안 됩니다! 자세한 내용은 [FAQ 페이지](../UsefulLinks/FAQ.md)를 참조하십시오.
 
 ```{note}
-In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+새 컴퓨터에서 **AAPS**를 빌드하려면 백업해 둔 키 저장소 파일을 새 컴퓨터로 복사하십시오. 그런 다음 이 안내 대신 [**AAPS** 첫 빌드 절차](../SettingUpAaps/BuildingAaps.md)를 따르십시오. 다른 점은 하나뿐입니다. 새 키 저장소를 만드는 대신 새 컴퓨터에 복사해 둔 키 저장소를 선택할 수 있습니다.
 ```
 
-## Overview for updating to a new version of AAPS with Android Studio
+## Android Studio로 AAPS 새 버전으로 업데이트하는 과정 개요
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+문제가 생기면 별도의 [Android Studio 문제 해결](../GettingHelp/TroubleshootingAndroidStudio.md) 페이지를 참조하십시오.
 
-### Export your settings
+### 설정 내보내기
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+휴대폰에 있는 기존 **AAPS** 버전에서 설정을 내보내십시오. 필요하지 않을 수도 있지만, 만일을 위해 해 두는 것이 좋습니다.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+방법이 기억나지 않으면 [백업 만들기와 복원하기](ExportImportSettings.md) 페이지를 참조하십시오.
 
-### Check your Android Studio version
+### Android Studio 버전 확인
 
-The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+필요한 최소 버전은 [빌드 안내](#Building-APK-recommended-specification-of-computer-for-building-apk-file)에 설명되어 있습니다. 사용 중인 버전이 더 오래되었다면 [먼저 Android Studio를 업데이트하십시오](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
-### Update your local copy
+### 로컬 복사본 업데이트
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Android Studio에서 기존 AAPS 프로젝트를 여십시오. 프로젝트를 선택해야 할 수도 있습니다. AAPS 프로젝트를 (더블) 클릭하십시오.
 
-  ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
+  ![Android Studio - 프로젝트 선택](../images/update/01_ProjectSelection.png)
 
-* In the menu bar of Android Studio, select Git -> Fetch
+* Android Studio의 메뉴 표시줄에서 Git -> Fetch를 선택하십시오.
 
-   ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+   ![Android Studio 메뉴 - Git - Fetch](../images/update/02_GitFetch.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* 오른쪽 아래에 Fetch가 성공했다는 메시지가 표시됩니다.
 
-   ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+   ![Android Studio 메뉴 - Git - Fetch 성공](../images/update/03_GitFetchSuccessful.png)
 
-* In the menu bar, now select Git -> Pull
+* 이제 메뉴 표시줄에서 Git -> Pull을 선택하십시오.
 
-   ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+   ![Android Studio 메뉴 - Git - Pull](../images/update/04_GitPull.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* 모든 옵션은 그대로(origin/master) 두고 Pull을 선택하십시오.
 
-   ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+   ![Android Studio - Git - Pull 대화 상자](../images/update/05_GitPullOptions.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* 다운로드가 진행되는 동안 기다리십시오. 진행 상황은 아래쪽 바에 정보로 표시됩니다. 다운로드가 끝나면 성공 메시지가 표시됩니다.
 
   ```{note}
-  The files that were updated may vary! This is not an indication of a problem.
+  업데이트된 파일은 다를 수 있습니다! 문제가 있다는 뜻은 아닙니다.
   ```
 
-   ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+   ![Android Studio - Pull 성공](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* 일부 종속 항목을 다운로드하기 위해 Gradle Sync가 실행됩니다. 끝날 때까지 기다리십시오.
 
   ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM version
+### JVM 버전 확인
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+같은 컴퓨터에서 이전 버전의 **AAPS**를 이미 빌드한 적이 있다면 특히 이 확인이 필요합니다.
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+[빌드 안내](#Building-APK-recommended-specification-of-computer-for-building-apk-file)에서 지금 빌드하는 **AAPS** 버전에 맞는 JVM 버전을 확인하십시오. 그런 다음 [Incompatible Gradle JVM](#incompatible-gradle-jvm)에 설명된 단계를 따라 현재 올바른 버전을 사용하고 있는지 확인하십시오.
 
 (Update-to-new-version-build-the-signed-apk)=
-### Build the Signed APK
+### 서명된 APK 빌드
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+이제 소스 코드는 현재 릴리스 버전이며, 모든 전제 조건을 확인했습니다. 이제 [서명된 APK 빌드 섹션](#Building-APK-generate-signed-apk)에 설명된 대로 서명된 APK를 빌드할 차례입니다.
 
 (Update-to-new-version-transfer-and-install)=
 
-### Transfer and install the apk
-You need to transfer the apk to your phone so you can install it.
+### APK 전송 및 설치
+APK를 설치하려면 휴대폰으로 전송해야 합니다.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+Android Studio에서 기존과 같은 키 저장소로 빌드했다면 휴대폰의 기존 앱을 삭제할 필요가 없습니다. APK를 설치할 때 안내에 따라 업데이트를 설치하십시오.
+서명된 APK를 위해 Android Studio에서 새 키 저장소를 만든 경우처럼 다른 상황에서는 APK를 설치하기 전에 이전 앱을 삭제해야 합니다. **반드시 설정을 내보내십시오!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
+[AAPS 전송 및 설치](../SettingUpAaps/TransferringAndInstallingAaps.md) 안내를 참조하십시오. Google의 [Android 개발자 인증](#android-developer-verification)이 적용되는 곳에서는(국가에 따라 2026년 9월부터) APK 파일을 눌러 설치하는 대신 [ADB](#android-developer-verification-adb)로 설치하십시오.
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
+[여기](#Update-to-new-version-check-aaps-version-on-phone)에서 계속하십시오.
 
 (update-computer-build-troubleshooting)=
 
 ## Troubleshooting
 
-If anything goes wrong, don't panic.
+문제가 생겨도 당황하지 마십시오.
 
-Take a breath!
+숨을 한 번 고르십시오!
 
-Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+그런 다음 문제가 이미 별도의 [Android Studio 문제 해결](../GettingHelp/TroubleshootingAndroidStudio.md) 페이지에 설명되어 있는지 확인하십시오.
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+더 도움이 필요하면 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 또는 [Discord](https://discord.gg/4fQUWHZ4Mw)에서 다른 **AAPS** 사용자에게 문의하십시오.

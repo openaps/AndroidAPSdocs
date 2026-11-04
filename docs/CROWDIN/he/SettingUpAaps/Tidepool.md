@@ -1,66 +1,66 @@
 # Tidepool
 
-Tidepool is a third party tool that collects data regarding BG, insulin and carbs (and the notes you add to your treatments) and can be used to analyze and share this data with your clinical team. Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool הוא כלי של צד שלישי שאוסף נתונים על רמת הסוכר בדם, אינסולין ופחמימות (וגם את ההערות שמוסיפים לטיפולים). ניתן להשתמש בו כדי לנתח את הנתונים האלה ולשתף אותם עם הצוות הרפואי. החל מגרסה 3.2 של AAPS ניתן להשתמש ב-Tidepool כחלופה ל-Nightscout כדי לעמוד בחלק מהדרישות של משימה 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
 
-It is important to understand that Tidepool is for reporting only. It is NOT a real-time follow app. If you need to have followers apart from the main AAPS phone, you must set up Nightscout as well.
+חשוב להבין ש-Tidepool משמש לדיווח בלבד. It is NOT a real-time follow app. אם יש צורך בעוקבים מלבד הטלפון הראשי של AAPS, יש להגדיר גם Nightscout.
 
 Note: the Tidepool organization has brought the iOS Loop product to market with FDA approval. This effort has nothing to do with their data reporting platform or AAPS.
 
 
-## Step 1 - Set up a Tidepool account
+## שלב 1 - יצירת חשבון Tidepool
 
-- Navigate to [tidepool.org](https://www.tidepool.org/)
+- יש לעבור אל [tidepool.org](https://www.tidepool.org/)
 
-- Select “Personal Sign Up” or “Sign Up”
+- לבחור “Personal Sign Up” או “Sign Up” (הרשמה)
 
-- Create and document an email and password
+- ליצור כתובת דוא"ל וסיסמה ולרשום אותן
 
-- Select “Personal Account” and click “Continue”
+- לבחור “Personal Account” (חשבון אישי) וללחוץ על “Continue” (המשך)
 
-- Complete the patient information section and accept the terms of use
+- למלא את פרטי המטופל ולאשר את תנאי השימוש
 
-- Verify your email address via the instructions received to your email
+- לאמת את כתובת הדוא"ל לפי ההוראות שנשלחו אליה
 
 
-## Step 2 - Connect AAPS to Tidepool
+## שלב 2 - חיבור AAPS ל-Tidepool
 
-- Open the **menu** (☰) in the top-left corner of the main screen and select "**Configuration**"
+- יש לפתוח את **התפריט** (☰) בפינה העליונה של המסך הראשי ולבחור "**הגדרות תצורה**"
 
-- Open the "**Communication**" category and enable "**Tidepool**":
+- יש לפתוח את הקטגוריה "**תקשורת**" ולהפעיל את "**Tidepool**":
 
-![Enable Tidepool](../images/v4/Tidepool/tidepool_enable.png)
+![הפעלת Tidepool](../images/v4/Tidepool/tidepool_enable.png)
 
-- Tap "**Open plugin**" underneath Tidepool, then tap the **Login** icon (an arrow going into a door) in the top-right corner
+- יש להקיש על "**פתיחת תוסף**" מתחת ל-Tidepool, ואז להקיש על סמל **התחברות** (חץ שנכנס לדלת) בפינה העליונה של המסך
 
-- A browser window opens on the Tidepool login page. Log in with the email address and password you created in Step 1 above:
+- חלון דפדפן נפתח בדף ההתחברות של Tidepool. יש להתחבר עם כתובת הדוא"ל והסיסמה שנוצרו בשלב 1 למעלה:
 
-![Tidepool login page](../images/v4/Tidepool/tidepool_login.png)
+![דף ההתחברות של Tidepool](../images/v4/Tidepool/tidepool_login.png)
 
-- After a successful login the browser closes and the Tidepool screen shows the status "**Connected**"; the log below documents the data uploads. If the login fails, confirm your credentials are correct and that you have verified your email address with Tidepool.
+- לאחר התחברות מוצלחת הדפדפן נסגר, ומסך Tidepool מציג את המצב "**מחובר**". היומן שמתחת מתעד את העלאות הנתונים. אם ההתחברות נכשלת, יש לבדוק שפרטי ההתחברות נכונים ושכתובת הדוא"ל אומתה מול Tidepool.
 
-![Tidepool connected](../images/v4/Tidepool/tidepool_status.png)
+![Tidepool מחובר](../images/v4/Tidepool/tidepool_status.png)
 
-- In the "**Settings**" of the Tidepool plugin, open "**Connection settings**". By default "**Use Nightscout connection settings**" is on, so Tidepool uploads under the same conditions you set for Nightscout. Turn it off if you want separate conditions for Tidepool, for example to upload to Tidepool only on Wi-Fi and while charging, while Nightscout also uses mobile data.
+- ב"**הגדרות**" של התוסף Tidepool, יש לפתוח את "**הגדרות חיבור**". כברירת מחדל "**שימוש בהגדרות החיבור של Nightscout**" מופעל, ולכן Tidepool מעלה נתונים באותם תנאים שהוגדרו עבור Nightscout. ניתן לכבות אותו כדי להגדיר תנאים נפרדים עבור Tidepool, למשל כדי להעלות ל-Tidepool רק ברשת Wi-Fi ובזמן טעינה, בזמן ש-Nightscout משתמש גם בנתונים סלולריים.
 
-![Connection settings with Use Nightscout connection settings on](../images/v4/Tidepool/tidepool_connection_settings.png) ![Separate connection settings for Tidepool](../images/v4/Tidepool/tidepool_connection_settings_separate.png)
+![הגדרות חיבור כאשר "שימוש בהגדרות החיבור של Nightscout" מופעל](../images/v4/Tidepool/tidepool_connection_settings.png) ![הגדרות חיבור נפרדות עבור Tidepool](../images/v4/Tidepool/tidepool_connection_settings_separate.png)
 
 For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
 
 (tidepool-menu)=
-## The Tidepool buttons
+## הלחצנים של Tidepool
 
-In the top-right corner of the Tidepool screen:
+בפינה העליונה של מסך Tidepool:
 
-- The **Login** or **Logout** icon — connect to or disconnect from your Tidepool account. Only one of them is shown: **Login** while you are logged out, **Logout** while you are logged in. **AAPS** asks you to confirm before it logs you out.
-- The gear icon — the Tidepool settings.
+- סמל **התחברות** או **התנתקות** — התחברות לחשבון Tidepool או התנתקות ממנו. רק אחד מהם מוצג: **התחברות** כאשר לא מחוברים, **התנתקות** כאשר מחוברים. **AAPS** מבקש אישור לפני ההתנתקות.
+- סמל גלגל השיניים — הגדרות Tidepool.
 
-The buttons at the bottom of the Tidepool screen:
+הלחצנים בתחתית מסך Tidepool:
 
-- "**Upload now**" — upload new data straight away instead of waiting for the next automatic upload.
-- "**Full synchronization**" — upload all data stored in **AAPS** again.
-- "**Purge all data**" — delete **all** data that **AAPS** has uploaded to your Tidepool account. This cannot be undone. Use it only to remove wrong or duplicate data, then run "**Full synchronization**" to upload your data again.
-- "**Clear log**" — empty the log shown on the Tidepool screen.
+- "**העלאה עכשיו**" — העלאה של נתונים חדשים מיד, בלי לחכות להעלאה האוטומטית הבאה.
+- "**סנכרון מלא**" — העלאה מחדש של כל הנתונים השמורים ב-**AAPS**.
+- "**מחיקת כל הנתונים**" — מחיקה של **כל** הנתונים ש-**AAPS** העלה לחשבון Tidepool. לא ניתן לבטל פעולה זו. יש להשתמש בזה רק כדי להסיר נתונים שגויים או כפולים, ואז להפעיל "**סנכרון מלא**" כדי להעלות את הנתונים מחדש.
+- "**ניקוי היומן**" — ריקון היומן שמוצג במסך Tidepool.
 
-![The Tidepool screen and its buttons](../images/v4/Tidepool/tidepool_menu.png)
+![מסך Tidepool והלחצנים שלו](../images/v4/Tidepool/tidepool_menu.png)
 
-In Tidepool, the data uploaded by **AAPS** 4 is shown under the device name **AAPS**. See [What changed in AAPS v4](#v4changes-tidepool) if you used Tidepool with an older version. 
+ב-Tidepool, הנתונים ש-**AAPS** 4 מעלה מוצגים תחת שם המכשיר **AAPS**. ראו [מה השתנה ב-AAPS v4](#v4changes-tidepool) אם השתמשתם ב-Tidepool עם גרסה ישנה יותר. 

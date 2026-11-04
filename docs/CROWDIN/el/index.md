@@ -70,11 +70,12 @@ In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provi
 ## Ευρετήριο της τεκμηρίωσης του AAPS
 
 ```{toctree}
-:caption: Χρήση αυτής της τεκμηρίωσης
+:caption: Using this documentation
+:titlesonly:
 
-Αλλαγή γλώσσας και έκδοσης <./NavigateDoc/ChangeLanguageVersion.md>
-Αναζήτηση στην τεκμηρίωση <./NavigateDoc/SearchDoc.md>
-Ενημερώσεις και αλλαγές της τεκμηρίωσης <./Maintenance/DocumentationUpdate.md>
+Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
+Search the documentation <./NavigateDoc/SearchDoc.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Ξεκινώντας

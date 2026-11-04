@@ -8,9 +8,9 @@
 
 Wenn **AAPS** zum ersten Mal installiert wird, muss jedes Ziel erreicht und abgeschlossen werden, bevor das nächste in Angriff genommen werden kann. Mit dem Erreichen der **Ziele** werden nach und nach neue Funktionalitäten freigeschaltet.
 
-**Ziel 1 bis 8** führen Dich von der **AAPS**-Konfiguration auf Deinem Smartphone hin zum „einfachen“ Hybrid-Closed-Loop. Es wird ungefähr 6 Wochen dauern diese Ziele abzuschließen. Bis zum **Ziel 5** kannst Du eine virtuelle Pumpe einsetzen (und in der Zwischenzeit einen anderen Weg für die Insulinabgabe nutzen). **Objectives 9 and 10** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. Eine genauere Aufstellung darüber, wie viel Zeit für die einzelnen Ziele einzuplanen ist, findest Du hier: [Wie lange dauert es?](#preparing-how-long-will-it-take)
+**Ziel 1 bis 8** führen Dich von der **AAPS**-Konfiguration auf Deinem Smartphone hin zum „einfachen“ Hybrid-Closed-Loop. Es wird ungefähr 6 Wochen dauern diese Ziele abzuschließen. Bis zum **Ziel 5** kannst Du eine virtuelle Pumpe einsetzen (und in der Zwischenzeit einen anderen Weg für die Insulinabgabe nutzen). **Ziel 9 und 10** sind dafür gedacht, sich mit erweiterten **AAPS**-Funktionen vertraut zu machen, mit denen eine noch bessere Kontrolle Deines Diabetes möglich sein kann. Es dauert bis zu 3 Monate (oder möglicherweise noch länger), diese Ziele abzuschließen. Eine genauere Aufstellung darüber, wie viel Zeit für die einzelnen Ziele einzuplanen ist, findest Du hier: [Wie lange dauert es?](#preparing-how-long-will-it-take)
 
-As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
+Neben dem Vorangehen durch die **Ziele**, kannst Du - bei Bedarf - auch einzelne, bereits abgeschlossene, Ziele zurücksetzen und damit erneut durchlaufen: [zurück zu einem früheren Ziel](#CompletingTheObjectives-go-back-in-objectives).
 
 ## Einstellungen sichern
 
@@ -27,31 +27,31 @@ In der **Einstellungsdatei** wird nicht nur Dein Fortschritt bei den **Zielen**,
 Wenn etwas mit Deinem **AAPS**-Smartphone passiert und Du keine Sicherung Deiner Einstellungen hast, musst Du die **Ziele** von vorne beginnen. Der Fortschritt durch die **Ziele** braucht Zeit und die Situation diese erneut durchlaufen zu müssen, weil Du beispielsweise Dein Smartphone verloren hast, sollte am besten vermieden werden.
 
 (objectives-objective1)=
-## Objective 1: Setting up visualization and monitoring, analyzing basals and ratios
+## Ziel 1: Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren
 
-**Ziel 1** fordert die Einrichtung Deiner technischen Grundausstattung in **AAPS**. No progress can be made until this step has been completed.
+**Ziel 1** fordert die Einrichtung Deiner technischen Grundausstattung in **AAPS**. Du kannst nicht weitermachen, bevor dieser Schritt abgeschlossen ist.
 
-- Select the correct CGM/FGM in [Configuration → BG Source](#Config-Builder-bg-source). Siehe [BZ-Quelle](../Getting-Started/CompatiblesCgms.md) für weitere Informationen.
-- Select the correct Pump in [Configuration → Pump](#Config-Builder-pump) to ensure your pump can communicate with **AAPS**. Wähle eine **virtuelle Pumpe** aus, wenn Du ein Pumpenmodell für das Loopen nutzt, das keine **AAPS**-Unterstützung hat oder wenn Du Dich durch die ersten **Ziele** arbeiten möchtest ohne Dein aktuelles Setup nutzen zu wollen. Siehe [Insulinpumpen](../Getting-Started/CompatiblePumps.md) für weitere Informationen.
-- If using Nightscout:
+- Wähle das richtige CGM/FGM unter [Konfiguration → BZ-Quelle](#Config-Builder-bg-source) aus. Siehe [BZ-Quelle](../Getting-Started/CompatiblesCgms.md) für weitere Informationen.
+- Wähle die richtige Pumpe unter [Konfiguration → Pumpe](#Config-Builder-pump) aus, um sicherzustellen, dass Deine Pumpe mit **AAPS** kommunizieren kann. Wähle eine **virtuelle Pumpe** aus, wenn Du ein Pumpenmodell für das Loopen nutzt, das keine **AAPS**-Unterstützung hat oder wenn Du Dich durch die ersten **Ziele** arbeiten möchtest ohne Dein aktuelles Setup nutzen zu wollen. Siehe [Insulinpumpen](../Getting-Started/CompatiblePumps.md) für weitere Informationen.
+- Bei Verwendung von Nightscout:
   - Befolge die Anleitung auf der [Nightscout](../SettingUpAaps/Nightscout.md)-Seite, damit ** Nightscout** **AAPS**-Daten empfangen und anzeigen kann.
-  - Note that the URL in **NSClientV3** must be **_without_ "/api/v1/"** at the end - see [Settings → NSClientV3](#Preferences-nsclient).
-- If using Tidepool:
+  - Beachte, dass die URL in **NSClientV3** am Ende **_kein_ „/api/v1/“** enthalten darf – siehe [Einstellungen → NSClientV3](#Preferences-nsclient).
+- Bei Verwendung von Tidepool:
   - Befolge die Anleitung auf der [Tidepool](../SettingUpAaps/Tidepool.md)-Seite, damit ** Tidepool** **AAPS**-Daten empfangen und anzeigen kann.
 
-Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
+Hinweis: *Es kann sein, dass Du auf den nächsten Sensor-Glukosewert warten musst, bevor **AAPS** ihn erkennt.*
 
 (objectives-objective2)=
 ## Ziel 2: Lerne, wie AAPS bedient wird
 
-**Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below. Each task shows its status (**1**): the orange "**Not completed yet**" turns into "**Completed, well done!**" as soon as **AAPS** has registered the action. Tap **Hint** (**2**) underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
+Für **Ziel 2** müssen mehrere „Aufgaben“ erledigt werden, wie im Screenshot unten gezeigt. Jede Aufgabe zeigt ihren Status (**1**): Das orangefarbene „**Noch nicht abgeschlossen**“ wird zu „**Abgeschlossen, gut gemacht!**“, sobald **AAPS** die Aktion registriert hat. Tippe unter einer Aufgabe auf **Hinweis** (**2**), um die passende Dokumentation zu öffnen, falls Dir eine Aktion noch nicht vertraut ist.
 
 ![Screenshot objective 2](../images/Objective2_V2_5.png)
 
 Aufgaben, die zum Abschließen des **Ziel 2** notwendig sind, sind:
 - Setze Dein **Profil** für 10 Min. auf 90%.
-  - _Hint_: Tap your Profile name on the main screen to open the **Profile** screen, then use the **Activate** (▶) button and set percentage and duration. Weitere Informationen findest Du unter [Profilwechsel & Prozentuale Profilanpassung](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Hinweis_: **AAPS** akzeptiert keine Basalraten, die kleiner als 0,05 IU/h sind. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Nach Abschluss des Ziels, wechsele auf Dein reguläres **Profil** zurück.
+  - _Hinweis_: Tippe auf dem Startbildschirm auf Deinen Profilnamen, um den Bildschirm **Profil** zu öffnen, verwende dann den Knopf **Aktivieren** (▶) und lege Prozentsatz und Dauer fest. Weitere Informationen findest Du unter [Profilwechsel & Prozentuale Profilanpassung](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+  - _Hinweis_: **AAPS** akzeptiert keine Basalraten, die kleiner als 0,05 IU/h sind. Enthält Dein **Profil** Basalraten von 0,05 IE/h oder weniger, musst Du ein temporäres **Profil** mit höheren Basalraten erstellen, bevor Du diese Aufgabe abschließt. Nach Abschluss des Ziels, wechsele auf Dein reguläres **Profil** zurück.
 - Simulate "taking a shower" by [disconnecting your pump](#AapsScreens-loop-status) in **AAPS** for a duration of 1h.
   - _Hint_: press the loop icon on the main screen to open the Loop dialog, then choose a duration under **Disconnect pump**.
 - End "taking a shower" by reconnecting your pump.

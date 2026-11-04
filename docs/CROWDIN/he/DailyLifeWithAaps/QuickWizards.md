@@ -1,7 +1,7 @@
 (quickwizards)=
-# QuickWizards (one-tap boluses)
+# אשף מהיר (בולוס בלחיצה אחת)
 
-A **QuickWizard** is a saved one-tap button for a recurring meal or situation. It carries a fixed amount of **carbs** (and how to dose for them), so you can deliver a bolus — or just log carbs — with a single tap and a confirmation, instead of opening the full bolus calculator every time.
+**אשף מהיר** הוא לחצן שמור, שפועל בלחיצה אחת, עבור ארוחה או מצב שחוזרים על עצמם. הוא כולל כמות קבועה של **פחמימות** (ואת אופן המינון עבורן). כך ניתן לתת בולוס, או רק לרשום פחמימות, בלחיצה אחת ובאישור אחד, במקום לפתוח בכל פעם את מחשבון הבולוס המלא.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,96 +10,96 @@ A **QuickWizard** is a saved one-tap button for a recurring meal or situation. I
 
 ---
 
-## Opening QuickWizards
+## פתיחת האשף המהיר
 
-Open the **Manage** screen (bottom navigation) and choose **QuickWizard** (*“Manage quick wizard presets”*).
-
----
-
-## Managing QuickWizards
-
-Your QuickWizards are shown as a **swipeable card carousel** (each card shows the button text, carbs and valid time range). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
-
-![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
-
-The editor's main fields are:
-
-- **Button text** — the label shown on the button.
-- **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#quickwizard_validity).
-- **Calculator Options** and **Device Selection** — see below.
+יש לפתוח את מסך **ניהול** (בסרגל הניווט התחתון) ולבחור **אשף מהיר** (*"ניהול הגדרות מוכנות של האשף המהיר"*).
 
 ---
 
-## The three modes
+## ניהול האשפים המהירים
 
-The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
+האשפים המהירים מוצגים כ**קרוסלת כרטיסים שאפשר להחליק ביניהם** (כל כרטיס מציג את טקסט הלחצן, הפחמימות וטווח הזמן התקף). העורך שמתחת מגדיר את האשף **שנבחר**. בסרגל הפעולות התחתון יש לחצני **➕ הוספה**, **⧉ שכפול**, **🗑️ מחיקה** ולחצן **▶** להפעלת האשף המהיר שנבחר.
 
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
-- **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
-- **Carbs** — records the configured **carbs only**, with **no bolus**.
+![עורך האשף המהיר: מצב, פחמימות, זמן הפחמימות וטווח זמן תקף](../images/v4/QuickWizard/quickwizard_editor.png)
 
----
+השדות העיקריים בעורך הם:
 
-## Calculator Options (Wizard mode)
-
-For a **Wizard**-mode button you choose which inputs the calculation uses:
-
-- **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
-- **Bolus percentage** — scale the calculated bolus.
-- **Add eCarbs** — also schedule extended carbs.
-
-![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
+- **טקסט הכפתור**: התווית שמוצגת על הלחצן.
+- **פחמימות** ו**זמן הפחמימות**: כמות הפחמימות וההזזה שלה בזמן.
+- **טווח זמן תקף**: ראו [תוקף](#quickwizard_validity).
+- **אפשרויות מחשבון** ו**בחירת מכשיר**: ראו בהמשך.
 
 ---
 
-## Validity — when the button appears
+## שלושת המצבים
 
-(quickwizard_validity)= The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet and from the [QuickLaunch toolbar](QuickLaunch.md). A toolbar button is not deleted: it comes back when the window opens again.
+הבורר בראש העורך, **אשף / אינסולין / פחמימות**, קובע **מה הלחצן עושה** בלחיצה:
 
-When the valid time range is shorter than 4 hours, the button is also hidden for 30 minutes after you use it, so that the same meal is not entered twice by mistake.
+- **אשף**: מפעיל את **מחשבון הבולוס** המלא עבור הפחמימות שהוגדרו, לפי **ערך הסוכר (BG), האינסולין הפעיל (IOB), הפחמימות הפעילות (COB) והמגמה** הנוכחיים (בהתאם ל*אפשרויות מחשבון* שבהמשך). הוא נותן את הבולוס *המחושב* ורושם את הפחמימות. זהו האשף המהיר הקלאסי.
+- **אינסולין**: נותן **כמות אינסולין קבועה שהוגדרה מראש**, ללא חישוב.
+- **פחמימות**: רושם **רק את הפחמימות** שהוגדרו, **ללא בולוס**.
 
 ---
 
-## Invocation points — where you use it
+## אפשרויות מחשבון (מצב אשף)
 
-The **Device Selection** toggles decide where each QuickWizard appears:
+עבור לחצן במצב **אשף** בוחרים באילו נתונים החישוב משתמש:
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). A QuickWizard shown on the phone can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
+- **שימוש ב־BG**, **שימוש ב־COB**, **שימוש ב־IOB** (עם *אינסולין פעיל חיובי בלבד*), **שימוש במגמה** (*הכול / חיובי בלבד / שלילי בלבד*), **שימוש ביעד זמני**, **שימוש בהתראה**.
+- **אחוז הבולוס**: שינוי גודל הבולוס המחושב באחוזים.
+- **הוספת פחמימות ממושכות**: תזמון גם של פחמימות ממושכות.
+
+![אפשרויות מחשבון, אחוז הבולוס ובחירת מכשיר](../images/v4/QuickWizard/quickwizard_options.png)
+
+---
+
+## תוקף: מתי הלחצן מופיע
+
+(quickwizard_validity)= **טווח זמן תקף** (*מ־ / עד*) קובע **מתי** האשף המהיר מוצג וזמין לשימוש. לחצן שמוגדר, למשל, ל-**06:00–10:00** מופיע רק בבוקר. כך אשף מהיר של *ארוחת בוקר* לא מעמיס על המסך (ולא נלחץ בטעות) בארוחת הערב. מחוץ לטווח הזמן שלו הלחצן מוסתר מחלון **טיפולים** ומ[סרגל ההפעלה המהירה](QuickLaunch.md). לחצן בסרגל לא נמחק: הוא חוזר כאשר טווח הזמן מתחיל שוב.
+
+כאשר טווח הזמן התקף קצר מ-4 שעות, הלחצן מוסתר גם למשך 30 דקות אחרי השימוש בו, כדי שאותה ארוחה לא תוזן פעמיים בטעות.
+
+---
+
+## נקודות הפעלה: איפה משתמשים בו
+
+המתגים של **בחירת מכשיר** קובעים איפה כל אשף מהיר מופיע:
+
+- **הצגה בטלפון**: האשף מופיע ב**חלון [טיפולים](../Maintenance/V4Changes.md)** (והמינון המחושב מוצג ישירות על הלחצן). אשף מהיר שמוצג בטלפון אפשר גם **להצמיד כלחצן פעולה מהירה במסך הסקירה**: יש לפתוח את *הגדרת הפעלה מהירה* (סמל ⚙ בסרגל [הפעלה מהירה](QuickLaunch.md)) ולהוסיף אותו מהקטגוריה **אשף מהיר**.
+- **הצגה בשעון**: האשף מופיע ב**אריח האשף המהיר ב-Wear OS** (יש להחליק אליו בקרוסלת האריחים של השעון, ואז ללחוץ על לחצן כדי להפעיל אותו, בדיוק כמו ב[אריח התרחישים](#scenes-from-watch)).
 
 ```{admonition} Don't see Device Selection?
 :class: note
-The **Device Selection** section only appears in the editor when the **Wear** plugin is enabled and its **Wear control** preference is on. Without it, every QuickWizard simply shows on the phone.
+החלק **בחירת מכשיר** מופיע בעורך רק כאשר התוסף **Wear** מופעל וההגדרה **שליטה באמצעות Wear** שלו מופעלת. בלי זה, כל אשף מהיר פשוט מוצג בטלפון.
 ```
 
-On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
+בטלפון האשפים המהירים מופיעים בראש החלונית התחתונה **טיפולים**:
 
-![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
+![אשפים מהירים (למעלה) בחלונית התחתונה טיפולים כשהיא פתוחה](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…and as a quick-action button on the overview:
+…וכלחצן פעולה מהירה במסך הסקירה:
 
-![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
+![לחצן פעולה מהירה של אשף מהיר במסך הסקירה](../images/v4/QuickWizard/quickwizard_overview.png)
 
-![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
+![אריח האשף המהיר בשעון Wear OS](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
+גם **מכשיר לקוח** מצומד (**AAPSClient**) יכול להפעיל אשף מהיר. **המכשיר הראשי** מחשב את המינון ונותן אותו (ראו [שליטה בין מכשיר ראשי ↔ מכשיר לקוח](../RemoteFeatures/ClientMasterControl.md)).
 
-Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** (the master-authored confirmation, when triggered from a client or watch) before anything is delivered.
+לא משנה מאיפה הוא הופעל, לחיצה על אשף מהיר מציגה תמיד **אישור** לפני שמשהו ניתן (כשההפעלה היא ממכשיר לקוח או משעון, את האישור יוצר המכשיר הראשי).
 
-A QuickWizard is refused when its dose is above your max bolus, or when its carbs or eCarbs are above your max carbs (for example after you lowered the limit). When the carbs are above the limit, the button in the **Treatments** sheet is disabled. Edit the QuickWizard or the limit.
+אשף מהיר נדחה כאשר המינון שלו גבוה מהבולוס המרבי, או כאשר הפחמימות או הפחמימות הממושכות שלו גבוהות מכמות הפחמימות המרבית (למשל אחרי שהמגבלה הורדה). כאשר הפחמימות גבוהות מהמגבלה, הלחצן בחלון **טיפולים** מושבת. יש לערוך את האשף המהיר או את המגבלה.
 
 ---
 
-## Adding and removing
+## הוספה והסרה
 
-- **➕ Add** — create a new QuickWizard.
-- **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **➕ הוספה**: יצירת אשף מהיר חדש.
+- **⧉ שכפול**: העתקת אשף קיים כנקודת התחלה.
+- **🗑️ מחיקה**: הסרת אשף.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+כאשר יש שני אשפים מהירים או יותר, אפשר גם לשנות את הסדר שלהם בקרוסלה: יש ללחוץ על הסמל **שינוי סדר** (⇅) בסרגל העליון, להזיז את הכרטיס שבמרכז בעזרת **לחצני ההזזה ◀ / ▶**, ואז לאשר עם **✓**. (הפקדים נראים כמו ב[שינוי סדר הפרופילים](ProfileSwitch-ProfilePercentage.md).)
 
-QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
+האשפים המהירים הם חלק מההגדרות המסונכרנות, ולכן הם משותפים למכשיר הראשי ולמכשירי הלקוח המצומדים.
 
 ---
 

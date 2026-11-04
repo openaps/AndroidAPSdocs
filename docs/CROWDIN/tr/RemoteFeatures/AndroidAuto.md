@@ -1,69 +1,69 @@
 # Android Auto
 
-**AAPS** is capable of sending you information about your current status as a message, directly into Android Auto in your car.
+**AAPS**, güncel durumunuzu doğrudan arabanızdaki Android Auto'ya bir mesaj olarak gönderebilir.
 
 ## Requirements
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
+**AAPS**, Android Auto'nun bir özelliğini kullanır. Bu özellik, telefondaki uygulamaların mesajlarını arabanın ses sisteminin ekranına iletir.
 
-That means that:
+Bu şu anlama gelir:
 
-* Android must allow **AAPS** to show notifications and
-* As **AAPS** is an unofficial App, allow the use of "unknown sources" with Android Auto.
+* Android, **AAPS**'in bildirim göstermesine izin vermeli ve
+* **AAPS** resmi bir uygulama olmadığı için, Android Auto'da "bilinmeyen kaynaklar" kullanımına izin verin.
 
 ![AAPS CGM data on Android Auto](../images/android_auto_01.png)
 
 (androidauto-check-that-aaps-can-show-notifications)=
 
-## Check that AAPS can show notifications
+## AAPS'in bildirim gösterebildiğini kontrol edin
 
-**AAPS** always shows a status notification with your current glucose, IOB and COB. This is the notification that Android Auto displays in the car. There is nothing to switch on in **AAPS**, but Android must allow **AAPS** to show notifications.
+**AAPS** her zaman güncel glikozunuzu, AİNS ve AKRB değerlerinizi içeren bir durum bildirimi gösterir. Bu, Android Auto'nun arabada gösterdiği bildirimdir. **AAPS** içinde açılacak bir şey yoktur, ancak Android, **AAPS**'in bildirim göstermesine izin vermelidir.
 
-On your phone, open **Settings** > **Apps** > **AAPS** > **Notifications** and make sure **All AAPS notifications** is on.
+Telefonunuzda **Ayarlar** > **Uygulamalar** > **AAPS** > **Bildirimler** menüsünü açın ve **Tüm AAPS bildirimleri** seçeneğinin açık olduğundan emin olun.
 
-![All AAPS notifications switched on](../images/android_auto_notifications_all.png)
+![Tüm AAPS bildirimleri açık](../images/android_auto_notifications_all.png)
 
-Scroll down and make sure **Ongoing status** is on: this is the channel of the status notification.
+Aşağı kaydırın ve **Devam eden durum** seçeneğinin açık olduğundan emin olun: bu, durum bildiriminin kanalıdır.
 
-![Ongoing status notification channel switched on](../images/android_auto_ongoing_channel.png)
+![Devam eden durum bildirim kanalı açık](../images/android_auto_ongoing_channel.png)
 
-Please check now that you see the **AAPS** status notification on the phone before you walk to your car!
+Lütfen arabanıza gitmeden önce telefonda **AAPS** durum bildirimini gördüğünüzü kontrol edin!
 
-![AAPS notification on the phone](../images/android_auto_04.png)
+![Telefondaki AAPS bildirimi](../images/android_auto_04.png)
 
 (androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
-## Allow the use of "unknown sources" with Android Auto.
+## Android Auto'da "bilinmeyen kaynaklar" kullanımına izin verin.
 
-As **AAPS** is not an official Android Auto app, notifications have to be activated for "unknown sources" in Android Auto. This is done through the use of the developer mode which we will show you here.
+**AAPS** resmi bir Android Auto uygulaması olmadığı için, Android Auto'da "bilinmeyen kaynaklar" için bildirimler etkinleştirilmelidir. Bu, burada size göstereceğimiz geliştirici modu ile yapılır.
 
-Go to your car and connect your mobile with the car's audio system.
+Arabanıza gidin ve telefonunuzu arabanın ses sistemine bağlayın.
 
-You should now see a screen similar to this screen.
+Şimdi buna benzer bir ekran görmelisiniz.
 
 ![Enable developer mode](../images/android_auto_05.png)
 
-Press on the **setting** icon to start the configuration.
+Ayarları başlatmak için **ayarlar** simgesine basın.
 
-Scroll down to the end of the page and select **see more in the phone**.
+Sayfanın en altına kaydırın ve **telefonda daha fazlasını görün** (see more in the phone) seçeneğini seçin.
 
 ![Enable developer mode](../images/android_auto_06.png)
 
-Now on the mobile we will activate the developer mode.
+Şimdi telefonda geliştirici modunu etkinleştireceğiz.
 
-The first screen looks like this. Scroll down to the end of the page.
+İlk ekran böyle görünür. Sayfanın en altına kaydırın.
 
 ![Enable developer mode](../images/android_auto_07.png)
 
-There you see the version of Android Auto listed. Tap 10 times (in word ten) on the version of Android Auto. With this hidden combination you have now enabled developer mode.
+Orada Android Auto'nun sürümünü görürsünüz. Android Auto sürümüne 10 kez (yazıyla: on) dokunun. Bu gizli kombinasyon ile artık geliştirici modunu etkinleştirdiniz.
 
 ![Enable developer mode](../images/android_auto_08.png)
 
-Confirm that you want to enable the developer mode in the modal dialog "Allow development settings?".
+Açılan "Geliştirme ayarlarına izin verilsin mi?" ("Allow development settings?") penceresinde geliştirici modunu etkinleştirmek istediğinizi onaylayın.
 
 ![Enable developer mode](../images/android_auto_09.png)
 
-In the **developer settings** enable the "Unknown sources".
+**Geliştirici ayarları** içinde "Bilinmeyen kaynaklar" ("Unknown sources") seçeneğini etkinleştirin.
 
 ![Enable developer mode](../images/android_auto_10.png)
 
@@ -73,9 +73,9 @@ Now you can quit developer mode if you want. Tap three dots menu on the top righ
 
 Arabanızda Android Auto'da sağ alt taraftaki **sayı simgesine** dokunun.
 
-![number icon - Android Auto in car](../images/android_auto_11.png)
+![sayı simgesi - arabada Android Auto](../images/android_auto_11.png)
 
-Your CGM data will be shown as follows:
+CGM verileriniz şöyle gösterilir:
 
 ![AAPS CGM data on Android Auto](../images/android_auto_01.png)
 
@@ -83,4 +83,4 @@ Your CGM data will be shown as follows:
 
 ## Sorun giderme:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
+* Bildirimi görmüyorsanız, Android'de [AAPS'in bildirim göstermesine izin verip vermediğinizi](#androidauto-check-that-aaps-can-show-notifications) ve [Android Auto'nun bildirimlere erişim hakkı olup olmadığını](#androidauto-allow-the-use-of-unknown-sources-with-android-auto) kontrol edin.

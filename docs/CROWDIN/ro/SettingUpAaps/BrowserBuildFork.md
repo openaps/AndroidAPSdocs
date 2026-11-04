@@ -6,22 +6,22 @@
 This is **Step 1** of the [Browser build](BrowserBuild.md).
 ```
 
-You will need to store your personal Android Java Key and Google Drive information as secrets in GitHub (later in the process, we will explain how).
+Va trebui să salvați în GitHub, ca secrete, cheia Android Java personală și informațiile Google Drive (vă explicăm mai târziu cum).
 
 Since this cannot be done inside the public repository of AndroidAPS, you need to make your personal copy of the source code (called a fork).
 
-## GitHub account
+## Cont GitHub
 
 You need to [create a GitHub account](https://github.com/signup) if you don't have one yet.  
 You can sign up with your email, or you can sign up with Google. Follow the registration and verification process.
 
-When you have an account, [sign in to GitHub](https://github.com/login).
+Când aveți un cont, [conectați-vă la GitHub](https://github.com/login).
 
 ## Fork AndroidAPS
 
-Open the official AndroidAPS repository following [this link](https://github.com/nightscout/AndroidAPS).
+Deschideți depozitul oficial AndroidAPS folosind [acest link](https://github.com/nightscout/AndroidAPS).
 
-Tap on the fork icon. This will create a copy inside your own account.
+Apăsați pictograma fork. This will create a copy inside your own account.
 
 ![fork_aaps](../images/Building-the-App/CI/ForkAAPS.png)
 
@@ -29,23 +29,23 @@ Scroll down the next screen and tap **Create Fork**.
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Note: you can **unselect** "Copy the master branch only" if you will want to build developer versions or customizations.*
+*Notă: puteți **debifa** „Copy the master branch only” (copiați numai ramura master) dacă veți vrea să construiți versiuni pentru dezvoltatori sau versiuni personalizate.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-You cannot fork and you see this?<br/><br/>
+Nu puteți face fork și vedeți acest mesaj?<br/><br/>
 **`No available destinations to fork this repository.`**<br/><br/>
-![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)<br/><br/>
-This means you already have an existing fork of AndroidAPS.<br/>
-Make sure it's up to date and continue to Preparation Steps.
+![Fork existent](../images/Building-the-App/CI/ForkAAPS3b.png)<br/><br/>
+Înseamnă că aveți deja un fork al AndroidAPS.<br/>
+Asigurați-vă că este actualizat și continuați cu pașii de pregătire.
 ```
 
 ```{warning}
 **Never delete your fork without having done a backup of your secrets!**
 ```
 
-GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab open.
+GitHub afișează acum copia dumneavoastră personală a AndroidAPS. Leave this web browser tab open.
 
 ![forked_aaps](../images/Building-the-App/CI/ForkAAPS4.png)
 

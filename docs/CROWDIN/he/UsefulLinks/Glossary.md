@@ -1,151 +1,151 @@
 # מילון מונחים
 
-**AAPS** = AndroidAPS is the name of the Android app.
+**AAPS** = AndroidAPS הוא השם של אפליקציית ה-Android.
 
-**AAPSClient** = the follower app for caregivers. On a follower phone it follows a user’s **AAPS** through the user’s **Nightscout** site and, once paired with the **AAPS** phone, controls it remotely. Not to be confused with **NSClient**. Further info → [Wiki - 'The AAPSClient app'](../RemoteFeatures/AapsClient.md) and [Master ↔ Client control](#client-master-control).
+**AAPSClient** = אפליקציית המעקב למטפלים. בטלפון עוקב היא עוקבת אחרי **AAPS** של המשתמש דרך אתר ה-**Nightscout** שלו. אחרי צימוד לטלפון ה-**AAPS**, היא גם שולטת בו מרחוק. לא לבלבל עם **NSClient**. מידע נוסף → [ויקי - 'האפליקציה AAPSClient'](../RemoteFeatures/AapsClient.md) ו-[שליטה בין מכשיר ראשי ↔ מכשיר לקוח](#client-master-control).
 
-**Activity** = Insulin activity, representing the speed of decay of IOB. See [Wiki - 'DIA'](#Config-Builder-insulin-dia) and the related **BGI**.
+**פעילות אינסולין** (Activity) = פעילות האינסולין, שמייצגת את המהירות שבה ה-IOB יורד. ראו [ויקי - 'DIA'](#Config-Builder-insulin-dia) ואת **BGI** הקשור.
 
-**AID** = Automated Insulin Delivery. The term generally used in clinical practice and research for a system which automatically adjusts insulin delivery using **CGM** data. **APS** and **closed loop** mean the same thing → see also **OS-AID**.
+**AID** = מתן אינסולין אוטומטי (Automated Insulin Delivery). המונח המקובל בעבודה הקלינית ובמחקר למערכת שמתאימה את מתן האינסולין באופן אוטומטי לפי נתוני **CGM**. **APS** ו**לולאה סגורה** פירושם אותו דבר → ראו גם **OS-AID**.
 
-**APS** = Artificial Pancreas System → see also **AID**.
+**APS** = מערכת לבלב מלאכותי (Artificial Pancreas System) → ראו גם **AID**.
 
-**AMA** = Advanced Meal Assist. An algorithm which allows **AAPS** to increase the user’s basal more aggressively after a meal bolus. Further info → [Wiki - 'Advanced Meal Assist (AMA)'](#Open-APS-features-advanced-meal-assist-ama).
+**AMA** = Advanced Meal Assist. אלגוריתם שמאפשר ל-**AAPS** להעלות את הבזאלי בצורה אגרסיבית יותר אחרי בולוס לארוחה. מידע נוסף → [ויקי - 'סיוע מתקדם לארוחות (AMA)'](#Open-APS-features-advanced-meal-assist-ama).
 
-**Adjustment Factor** = used within **DynamicISF** and is a value set within a user's **Settings** between 1% and 300%. This acts as a multiplier on the **TDD** value. See [Wiki - DynamicISF adjustment factor](#dyn-isf-adjustment-factor)
+**מקדם ההתאמה** (Adjustment Factor) = משמש ב-**DynamicISF**. זהו ערך בין 1% ל-300% שמגדירים ב**הגדרות**. This acts as a multiplier on the **TDD** value. ראו [ויקי - מקדם ההתאמה של DynamicISF](#dyn-isf-adjustment-factor)
 
-**Android Auto** = a system used to host certain functions of an Android smartphone’s features, including **AAPS**, within a car's display. Further info → [Wiki - 'android auto'](../RemoteFeatures/AndroidAuto.md).
+**Android Auto** = a system used to host certain functions of an Android smartphone’s features, including **AAPS**, within a car's display. מידע נוסף → [ויקי - 'Android Auto'](../RemoteFeatures/AndroidAuto.md).
 
-**APK** = Android application Package. A software installation file. Further info → [Wiki - 'Building APK'](../SettingUpAaps/BuildingAaps.md).
+**APK** = חבילת אפליקציה של Android (Android application Package). A software installation file. מידע נוסף → [ויקי - 'בניית ה-APK'](../SettingUpAaps/BuildingAaps.md).
 
-**Autosens** = calculation of sensitivity to insulin over a 24-hour and an 8-hour window etc. Further info → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Autosens** = חישוב הרגישות לאינסולין בחלונות זמן של 24 שעות ושל 8 שעות וכו'. מידע נוסף → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
-**Azure** = cloud computing platform to host **Nightscout** web app → see also **Nightscout**.
+**Azure** = פלטפורמת מחשוב ענן לאירוח אפליקציית האינטרנט **Nightscout** → ראו גם **Nightscout**.
 
-**BAT** = status light for low pump battery, shown in the status row of **AAPS'** main screen → see also **CAN** / **RES** / **SEN**.
+**BAT** = אור חיווי לסוללת משאבה חלשה, שמוצג בשורת המצב במסך הראשי של **AAPS** → ראו גם **CAN** / **RES** / **SEN**.
 
-**BG** = blood glucose.
+**BG** = רמת הסוכר בדם (blood glucose).
 
-**BGI** = blood glucose impact. The degree to which **BG** 'should' rise or fall based on insulin activity alone.
+**BGI** = השפעת רמת הסוכר בדם (blood glucose impact). המידה שבה רמת הסוכר (**BG**) 'אמורה' לעלות או לרדת על סמך פעילות האינסולין בלבד.
 
-**BG source** = An AAPS setting for configuring the source for blood glucose data. See [Wiki - BG Source](#Config-Builder-bg-source)
+**BG source** (מקור ערכי הסוכר) = הגדרה ב-AAPS שקובעת מאיפה מגיעים נתוני הסוכר. ראו [ויקי - מקור ערכי הסוכר](#Config-Builder-bg-source)
 
-**Bridge** = an additional device transforming **FGM** to **CGM**.
+**Bridge** (גשר) = התקן נוסף שהופך **FGM** ל-**CGM**.
 
-**BR** = Basal Rate. The amount of insulin in a given time block to maintain **BG** at a stable level. → see also **IC** / **ISF**.
+**BR** = קצב בזאלי (Basal Rate). כמות האינסולין בפרק זמן נתון, שנועדה לשמור על רמת הסוכר (**BG**) יציבה. → see also **IC** / **ISF**.
 
-**BYODA** = Build Your Own Dexcom App. A way to generate the user’s own Dexcom App for reading out the sensor data Dexcom G6.
+**BYODA** = Build Your Own Dexcom App. דרך ליצור אפליקציית Dexcom משלכם, לקריאת נתוני החיישן Dexcom G6.
 
-**CAGE** = Cannula AGE. Displayed on **AAPS'** main screen and in Nightscout, based on the user's **Prime/Fill** careportal entries → see also **Nightscout**.
+**CAGE** = Cannula AGE. מוצג במסך הראשי של **AAPS** וב-Nightscout, לפי רישומי **תיחול/מילוי** בפורטל הטיפולים → ראו גם **Nightscout**.
 
-**CAN** = status light for overdue cannula change, shown in the status row of **AAPS'** main screen → see also **BAT** / **RES** / **SEN**.
+**CAN** = אור חיווי שמראה שעבר הזמן להחליף את הצינורית. הוא מוצג בשורת המצב במסך הראשי של **AAPS** → ראו גם **BAT** / **RES** / **SEN**.
 
 **CGM** = Continuous Glucose Monitor → see also **FGM**.
 
-**Closed Loop** = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an **AAPS’s** algorithm and the user’s **Profile** settings without requiring the user’s approval. Further info → [Wiki - 'closed loop'](#KeyAapsFeatures-ClosedLoop) and see also **HCL** / **FCL**.
+**לולאה סגורה** (Closed Loop) = מערכת לולאה סגורה שמתאימה באופן אוטומטי את מתן האינסולין הבזאלי לפי האלגוריתם של **AAPS** והגדרות ה**פרופיל** של המשתמש, בלי צורך באישור המשתמש. מידע נוסף → [ויקי - 'לולאה סגורה'](#KeyAapsFeatures-ClosedLoop), וראו גם **HCL** / **FCL**.
 
-**COB** = Carbs On Board. This is the amount of carbohydrates currently available for the user's digestion → see also IOB.
+**COB** = פחמימות פעילות (Carbs On Board). זוהי כמות הפחמימות שעדיין זמינה לעיכול בגוף → ראו גם IOB.
 
-**CSF** = יחס רגישות לפחמימות. i.e. how much does the user’s **BG** increase for 1g of carbs absorbed.
+**CSF** = גורם הרגישות לפחמימות (Carbs Sensitivity Factor). כלומר, בכמה עולה רמת הסוכר (**BG**) על כל 1 גרם פחמימות שנספג.
 
-**DIA** = Duration of Insulin Action. Further info → [Wiki - 'DIA'](#Config-Builder-insulin-dia) and see also → [DIABETTECH - 'DIA'](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/).
+**DIA** = Duration of Insulin Action. מידע נוסף → [ויקי - 'DIA'](#Config-Builder-insulin-dia) וראו גם → [DIABETTECH - 'DIA'](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/).
 
-**DST** = Daylight Saving Time. See [Wiki - Timezone Change and Daylight Saving](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
+**DST** = שעון קיץ (Daylight Saving Time). ראו [ויקי - שינוי אזור זמן ושעון קיץ](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
 
-**Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s **TDD** and **BG**.
+**Dynamic ISF (או DynISF)** = תכונה ב-**AAPS** שמתאימה באופן דינמי את גורם הרגישות לאינסולין (**ISF**) לפי ה-**TDD** ורמת הסוכר (**BG**) של המשתמש.
 
-**eCarbs** = extended Carbs. Carbs split up over several hours (e.g. to cover fat/protein), which lets **AAPS** spread the insulin like an extended bolus. Further info → [Wiki - 'Extended Carbs'](../DailyLifeWithAaps/ExtendedCarbs.md)
+**eCarbs** = extended Carbs. פחמימות שמחולקות על פני כמה שעות (למשל כדי לכסות שומן/חלבון), וכך **AAPS** יכול לפזר את האינסולין כמו בבולוס ממושך. מידע נוסף → [ויקי - 'פחמימות ממושכות'](../DailyLifeWithAaps/ExtendedCarbs.md)
 
-**FCL** = Full Closed Loop. A loop which needs no mealtime input from the user: no carb counting and no meal bolus. Further info → [Wiki - 'full closed loop'](../AdvancedOptions/FullClosedLoop.md) and see also **HCL**.
+**FCL** = לולאה סגורה מלאה (Full Closed Loop). לולאה שלא צריכה מהמשתמש שום קלט בזמן הארוחות: בלי ספירת פחמימות ובלי בולוס לארוחה. מידע נוסף → [ויקי - 'לולאה סגורה מלאה'](../AdvancedOptions/FullClosedLoop.md), וראו גם **HCL**.
 
-**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. Further info → [Wiki - 'BG source'](#Config-Builder-bg-source) and see also 'CGM'.
+**FGM** = ניטור סוכר בהבזק (Flash Glucose Monitor), כמו Abbott Freestyle Libre. מידע נוסף → [ויקי - 'מקור ערכי הסוכר'](#Config-Builder-bg-source), וראו גם 'CGM'.
 
-**git** = a tool used to store and download the **AAPS’** source code.
+**git** = כלי המשמש לאחסון ולהורדה של קוד המקור של **AAPS**.
 
-**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. Further info → [Wiki - 'update APK'](../Maintenance/UpdateToNewVersion.md).
+**GitHub** = שירות אינטרנט שמאחסן את קוד המקור של **AAPS** ואת ניהול הגרסאות שלו (מעקב אחר שינויים בקבצים ותיאום העבודה עליהם, במיוחד בצוותים), ויכול גם לבנות את האפליקציה. הוא נחוץ גם לעדכוני **APK**. מידע נוסף → [ויקי - 'עדכון ה-APK'](../Maintenance/UpdateToNewVersion.md).
 
-**Glimp** = an app to collect values from Freestyle Libre.
+**Glimp** = אפליקציה לאיסוף ערכים מ-Freestyle Libre.
 
-**HCL (or Hybrid Closed Loop)** = a loop which automates insulin delivery between meals, but still requires the user to bolus for meals. Nearly every system in everyday use, including **AAPS**, is a hybrid closed loop → see also **FCL** / **Closed Loop**.
+**HCL (או Hybrid Closed Loop)** = לולאה סגורה היברידית: לולאה שמנהלת באופן אוטומטי את מתן האינסולין בין הארוחות, אבל המשתמש עדיין צריך לתת בולוס לארוחות. כמעט כל מערכת שנמצאת בשימוש יומיומי, כולל **AAPS**, היא לולאה סגורה היברידית → ראו גם **FCL** / **לולאה סגורה**.
 
-**IC (I:C, ICR, CR, carb ratio)** = Insulin to Carb ratio. Note that this is conventionally g/U despite the acronym suggesting inverse.
+**IC (I:C, ICR, CR, carb ratio)** = יחס אינסולין לפחמימות (Insulin to Carb ratio). חשוב לדעת: לפי המוסכמה היחידה היא g/U (גרם ליחידה), אף שהקיצור מרמז על ההפך.
 
-**IOB** = Insulin On Board. Insulin active in the user’s body. See [Wiki - Insulin on Board](#aaps-screens-iob)
+**IOB** = אינסולין פעיל (Insulin On Board). Insulin active in the user’s body. ראו [ויקי - אינסולין פעיל](#aaps-screens-iob)
 
-**ISF** = Insulin Sensitivity Factor. The expected decrease in BG as a result of one unit of insulin. Unit is either mg/dL/U or mmol/L/U. These are not equivalent without a conversion!
+**ISF** = Insulin Sensitivity Factor. הירידה הצפויה ברמת הסוכר בעקבות יחידת אינסולין אחת. היחידה היא mg/dL/U או mmol/L/U. הן אינן שוות ערך בלי המרה!
 
-**Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuild).
+**Keystore (או JKS)** = Java Key Store: קובץ מוצפן שבו נשמרים התעודות והמפתחות האישיים שלכם (developer certificates). הוא נחוץ לבנייה (ולבנייה מחדש) של **AAPS**.
 
-**LGS** = Low Glucose Suspend. See [Wiki - Low Glucose Suspend](#KeyAapsFeatures-LGS)
+**LGS** = השהיה עקב ערך סוכר נמוך (Low Glucose Suspend). ראו [ויקי - השהיה עקב ערך סוכר נמוך](#KeyAapsFeatures-LGS)
 
-**LineageOS** = free and open-source operating system for smartphones etc. When using Accu-Chek Combo see [Wiki - Combo pump](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md).
+**LineageOS** = free and open-source operating system for smartphones etc. כשמשתמשים ב-Accu-Chek Combo, ראו [ויקי - משאבת Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md).
 
-**Log files** = **AAPS’** records of the user's actions (useful for troubleshooting and debugging). Further info → [Wiki - 'log files'](../GettingHelp/AccessingLogFiles.md).
+**קבצי יומן** (Log files) = הרישומים של **AAPS** על פעולות המשתמש (שימושיים לפתרון תקלות ולניפוי באגים). מידע נוסף → [ויקי - 'קבצי יומן'](../GettingHelp/AccessingLogFiles.md).
 
-**maxIOB** = maximum total IOB. This is a safety feature and prevents **AAPS** delivering insulin over the user’s settings. Further info → [Wiki - 'Maximum total IOB OpenAPS can’t go over'](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
+**maxIOB** = maximum total IOB. This is a safety feature and prevents **AAPS** delivering insulin over the user’s settings. מידע נוסף → [ויקי - 'סך האינסולין הפעיל המרבי ש-OpenAPS אינו יכול לחרוג ממנו'](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
 
-**min_5m_carbimpact** = safety feature that is a calculation of default carb decay when carb absorption cannot be determined based on the user’s blood’s reactions. Further info → [Wiki - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
+**min_5m_carbimpact** = safety feature that is a calculation of default carb decay when carb absorption cannot be determined based on the user’s blood’s reactions. מידע נוסף → [ויקי - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
 
-**Nightscout** = open source project to access and report **CGM** data. The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
+**Nightscout** = open source project to access and report **CGM** data. מרכז הנתונים של נתוני **AAPS** של המשתמש. הוא יכול להפיק דוחות כדי לראות את נתוני ה-**Nightscout** ההיסטוריים, כמו HbA1c צפוי, זמן בטווח, או לחפש דפוסים בנתונים בעזרת תרשים אחוזונים וכו'.
 
 **Nightscout** → see also **Nightscout Reporter**. This is particularly useful for parents following their child's diabetes management.
 
-**Nightscout Reporter Tool** = a tool which generates PDFs reports from Nightscout web app data. See 'Nightscout Reporter', 'NS Reporter' @ Facebook.
+**Nightscout Reporter Tool** = כלי שמפיק דוחות PDF מנתוני אפליקציית האינטרנט Nightscout. See 'Nightscout Reporter', 'NS Reporter' @ Facebook.
 
-**NSClient** (**NSClientV3**) = the **AAPS** plugin that synchronizes data with **Nightscout** (**Configuration** → **Communication**). It is not the same as **AAPSClient**, the follower app. Further info → [Wiki - 'NSClient'](#Preferences-nsclient).
+**NSClient** (**NSClientV3**) = התוסף של **AAPS** שמסנכרן נתונים עם **Nightscout** (**הגדרות תצורה** ← **תקשורת**). זה לא אותו דבר כמו **AAPSClient**, אפליקציית המעקב. מידע נוסף → [ויקי - 'NSClient'](#Preferences-nsclient).
 
-**OpenAPS** = Open Artificial Pancreas System, the predecessor project and basis of AAPS.
+**OpenAPS** = Open Artificial Pancreas System (מערכת לבלב מלאכותי פתוחה), הפרויקט הקודם שעליו מבוסס AAPS.
 
-**Open Loop system** = an **AAPS** feature that will recommend adjustments and which must be performed manually by the user on **AAPS**. Further info → [Wiki - 'Open Loop'](#KeyAapsFeatures-OpenLoop).
+**מערכת לולאה פתוחה** (Open Loop system) = תכונה של **AAPS** שממליצה על התאמות, והמשתמש צריך לבצע אותן ידנית ב-**AAPS**. מידע נוסף → [ויקי - 'לולאה פתוחה'](#KeyAapsFeatures-OpenLoop).
 
-**Oref0 / Oref1** = sensitivity detection and "reference design implementation version 0/1". It is the key algorithm behind OpenAPS. Further info → [Wiki - 'sensitivity detection'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
+**Oref0 / Oref1** = sensitivity detection and "reference design implementation version 0/1". זהו האלגוריתם המרכזי מאחורי OpenAPS. מידע נוסף → [ויקי - 'זיהוי רגישות'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
 
-**OS-AID** = Open-Source Automated Insulin Delivery. An **AID** system built from open-source software, such as **AAPS**, **OpenAPS**, Loop or Trio. These systems are not formally approved by health bodies (FDA, NHS etc.) → see also **AID**.
+**OS-AID** = מתן אינסולין אוטומטי בקוד פתוח (Open-Source Automated Insulin Delivery). מערכת **AID** שבנויה מתוכנה בקוד פתוח, כמו **AAPS**, **OpenAPS**, Loop או Trio. מערכות אלה אינן מאושרות באופן רשמי על ידי גופי בריאות (FDA, NHS וכו') → ראו גם **AID**.
 
-**Peak time** = time of maximum effect of insulin given. Further info → [Wiki - 'Duration of insulin action (DIA) and peak'](#Config-Builder-insulin-dia).
+**זמן השיא** (Peak time) = הזמן שבו השפעת האינסולין שניתן היא הגדולה ביותר. מידע נוסף → [ויקי - 'משך פעולת האינסולין (DIA) והשיא'](#Config-Builder-insulin-dia).
 
-**PH** = Pump History. This can be accessed in **AAPS’** treatments history: open the **menu** (☰) at the top left of the main screen and select **Treatments**.
+**PH** = Pump History. אפשר לראות אותה בהיסטוריית הטיפולים של **AAPS**: יש לפתוח את ה**תפריט** (☰) בפינה העליונה של המסך הראשי ולבחור **טיפולים**.
 
-**Predictions** = predictions for **BG** in the future based on different calculations. Further info → [Wiki - 'prediction lines'](#aaps-screens-prediction-lines).
+**תחזיות** (Predictions) = תחזיות לרמת הסוכר (**BG**) בעתיד, לפי חישובים שונים. מידע נוסף → [ויקי - 'קווי תחזית'](#aaps-screens-prediction-lines).
 
-**Profile** = the user’s basic treatment settings (basal rate, **DIA**, **IC**, **ISF**, **BG** target). **AAPS** only uses profiles created within **AAPS** (**Manage** → **Profile**), but **Nightscout** **Profiles** can be copied (synchronised) to **AAPS**. Further info → [Wiki - 'Your AAPS profile'](../SettingUpAaps/YourAapsProfile.md).
+**פרופיל** (Profile) = הגדרות הטיפול הבסיסיות של המשתמש (קצב בזאלי, **DIA**, **IC**, **ISF**, יעד הסוכר (**BG**)). **AAPS** משתמש רק בפרופילים שנוצרו ב-**AAPS** (**ניהול** ← **פרופיל**), אבל אפשר להעתיק (לסנכרן) **פרופילים** של **Nightscout** אל **AAPS**. מידע נוסף → [ויקי - 'פרופיל AAPS שלכם'](../SettingUpAaps/YourAapsProfile.md).
 
-**Profile switch** = (temporary) switch of the user’s **Profile** to a different **Profile** saved within **AAPS**.
+**החלפת פרופיל** (Profile switch) = החלפה (זמנית) של ה**פרופיל** של המשתמש ל**פרופיל** אחר ששמור ב-**AAPS**.
 
-**Profile Percentage** = a (temporary) percentage increase or decrease applied to a user’s **Profile** for a selected time period.
+**אחוז הפרופיל** (Profile Percentage) = הגדלה או הקטנה (זמנית) באחוזים של ה**פרופיל** של המשתמש, לפרק זמן שנבחר.
 
-**RES** = status light for overdue reservoir change, shown in the status row of **AAPS'** main screen → see also **BAT** / **CAN** / **SEN**.
+**RES** = אור חיווי שמראה שעבר הזמן להחליף את המכל. הוא מוצג בשורת המצב במסך הראשי של **AAPS** → ראו גם **BAT** / **CAN** / **SEN**.
 
-**RileyLink** = open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication.
+**RileyLink** = התקן חומרה בקוד פתוח שמגשר בין Bluetooth Low Energy (BLE) לבין תקשורת אלחוטית ב-916MHz (למשאבות Medtronic ישנות) או ב-433MHz (למשאבות Omnipod Eros).
 
-**SAGE** = sensor age. This is displayed on the main screen of **AAPS** and in **Nightscout**, based on the user's **Sensor Insert** careportal entries → see also **Nightscout**.
+**SAGE** = sensor age. זה מוצג במסך הראשי של **AAPS** וב-**Nightscout**, לפי רישומי **הכנסת חיישן** בפורטל הטיפולים → ראו גם **Nightscout**.
 
-**SEN** = status light for overdue sensor change, shown in the status row of **AAPS'** main screen → see also **BAT** / **CAN** / **RES**.
+**SEN** = אור חיווי שמראה שעבר הזמן להחליף את החיישן. הוא מוצג בשורת המצב במסך הראשי של **AAPS** → ראו גם **BAT** / **CAN** / **RES**.
 
-**Sensitivity detection** = calculation of sensitivity to insulin as a result of exercise, hormones etc. see also → [DIABETTECH - 'Autosens'](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**זיהוי רגישות** (Sensitivity detection) = חישוב הרגישות לאינסולין כתוצאה מפעילות גופנית, הורמונים וכו'. ראו גם → [DIABETTECH - 'Autosens'](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
-**Sensor noise** = a term used to describe the unstable **CGM’s** readings leading to "jumping" **BG** values. Further info → [Wiki - 'Smoothing blood glucose data'](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+**רעש חיישן** (Sensor noise) = מונח לקריאות לא יציבות של ה-**CGM**, שגורמות לערכי סוכר (**BG**) "קופצים". מידע נוסף → [ויקי - 'החלקת נתוני הגלוקוז בדם'](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-**SMB** = Super Micro Bolus. An **AAPS** feature for faster insulin delivery in order to adjust **BG**. Further info → [Wiki - '**SMB**'](#Open-APS-features-super-micro-bolus-smb) and see also **UAM**.
+**SMB** = Super Micro Bolus. תכונה של **AAPS** למתן אינסולין מהיר יותר, כדי לתקן את רמת הסוכר (**BG**). מידע נוסף → [ויקי - '**SMB**'](#Open-APS-features-super-micro-bolus-smb), וראו גם **UAM**.
 
-**Super bolus** = shift of basal to bolus insulin for faster **BG** adjustment.
+**סופר בולוס** (Super bolus) = העברה של אינסולין בזאלי לבולוס, כדי לתקן את רמת הסוכר (**BG**) מהר יותר.
 
-**TBB** = total base basal (sum of basal rate within 24 hours) → see also **TBR** / **TDD**.
+**TBB** = סך הבזאלי הבסיסי (סכום הקצב הבזאלי ב-24 שעות) → ראו גם **TBR** / **TDD**.
 
-**TBR** = temporary basal rate → see also **TBB** / **TDD**.
+**TBR** = קצב בזאלי זמני → ראו גם **TBB** / **TDD**.
 
-**TDD** = total daily dose (bolus + basal per day) → see also **TBB** / **TBR**.
+**TDD** = מינון יומי כולל (בולוס + בזאלי ליום) → ראו גם **TBB** / **TBR**.
 
-**TT** = temporary target: temporary increase/decrease of the user’s **BG** target (range) e.g. for eating or sport activities. Further info → [Wiki - 'temp targets'](../DailyLifeWithAaps/TempTargets.md).
+**TT** = יעד זמני: העלאה או הורדה זמנית של יעד הסוכר (הטווח) (**BG**) של המשתמש, למשל לאכילה או לפעילות ספורטיבית. מידע נוסף → [ויקי - 'יעדים זמניים'](../DailyLifeWithAaps/TempTargets.md).
 
-**UAM** = unannounced meals. Detection of significant increase in **BG** levels due to meals, adrenaline or other influences and attempt to adjust this. Further info → [Wiki - 'UAM'](#enable-uam) and see also **SMB**.
+**UAM** = ארוחות לא מוכרזות (unannounced meals). זיהוי עלייה משמעותית ברמת הסוכר (**BG**) עקב ארוחות, אדרנלין או השפעות אחרות, וניסיון להתאים את הטיפול לכך. מידע נוסף → [ויקי - 'UAM'](#enable-uam), וראו גם **SMB**.
 
-**Virtual pump** = an **AAPS** feature which allows the user to try **AAPS’** functions, or lets PWD whose pump model has no **AAPS** driver use **AAPS** as an open loop → see also **Open Loop**.
+**משאבה וירטואלית** (Virtual pump) = תכונה של **AAPS** שמאפשרת למשתמש לנסות את הפונקציות של **AAPS**, או מאפשרת לאנשים עם סוכרת (PWD) שלדגם המשאבה שלהם אין מנהל התקן ב-**AAPS** להשתמש ב-**AAPS** כלולאה פתוחה → ראו גם **לולאה פתוחה**.
 
-**Wallpaper** = **AAPS** background image see phones page.
+**טפט** (Wallpaper) = תמונת הרקע של **AAPS**, ראו את דף הטלפונים.
 
-**xDrip** = open source software to read **CGM** systems.
+**xDrip** = תוכנה בקוד פתוח לקריאת מערכות **CGM**.
 
-**Zero-temp** = מינון בזאלי זמני של 0% (הפסקה זמנית של מתן האינסולין הבזאלי).
+**Zero-temp** = בזאלי זמני של 0% (בלי מתן אינסולין בזאלי).
 
 → see also [the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)

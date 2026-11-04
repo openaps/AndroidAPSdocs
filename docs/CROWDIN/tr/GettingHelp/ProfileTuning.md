@@ -1,142 +1,142 @@
-# Tweaking the AAPS' Profile
+# AAPS profilinde ince ayar
 
 ```{admonition} This is NOT a medical advice
 :class: warning
-Please work with your care team for support and advice on your diabetes management.</br>
-Use this guide only once you have [set up your **Profile** correctly](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), following all **AAPS** objectives.
+Diyabet yönetiminizle ilgili destek ve tavsiye için lütfen sağlık ekibinizle birlikte çalışın.</br>
+Bu kılavuzu yalnızca tüm **AAPS** görevlerini izleyerek [**Profil** kurulumunuzu doğru şekilde yaptıktan](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md) sonra kullanın.
 ```
 
-This guide explains the logic of the OpenAPS algorithm results with a given __Profile__, and provides information about which values in **AAPS** may be adjusted when certain situations or patterns are observed. The suggestions about basal testing below may diverge from what your care team advises.
+Bu kılavuz, belirli bir __Profil__ ile OpenAPS algoritma sonuçlarının mantığını açıklar ve belirli durumlar veya örüntüler gözlemlendiğinde **AAPS**'te hangi değerlerin ayarlanabileceği hakkında bilgi verir. Aşağıdaki bazal testi önerileri, sağlık ekibinizin tavsiyelerinden farklı olabilir.
 
-Using **closed loop** may make basal testing easier and may significantly reduce the hypo risk if your __Profile__ basal is too strong.
+**Kapalı döngü** kullanmak bazal testini kolaylaştırabilir ve __Profil__ bazalınız fazla güçlüyse hipo riskini önemli ölçüde azaltabilir.
 
-## Changing profile's settings, how to proceed
+## Profil ayarlarını değiştirme: nasıl ilerlenir
 
-1. Ensure you have read and understand __AAPS’__ recommended settings and advice below. Not following this advice may make the adjusting process problematic and less likely to get a well tuned __Profile__
-2. Carefully observe and compare, **over several days**, what is happening with your __BG__ and __IOB__.
-3. Keep an eye out for patterns with **AAPS** that happen around the same time (almost) everyday.
-4. It's important to do this over several days. Poor results tend to be yielded from using data observed on a single day to make __Profile’s__ adjustment decisions.
-5. After you have observed a repeatable pattern of behavior, e.g. at 1PM you see a spike in __BG__ or a negative __IOB__ value, only then start to make small changes to your __Profile__.
-6. It's important to limit the changes you make to one thing at a time. Ör. increase your basal by 10% around 1PM.
-7. After every change, it's important to monitor the impact on your __BG__ and __IOB__ for the next few days.
-8. Repeat this pattern, observe, decide, tweak again if needed
+1. Aşağıdaki __AAPS__ önerilerini ve tavsiyelerini okuyup anladığınızdan emin olun. Bu tavsiyelere uymamak ayarlama sürecini zorlaştırabilir ve iyi ayarlanmış bir __Profil__ elde etme olasılığını azaltabilir
+2. __KŞ__ ve __AİNS__ değerlerinizde neler olduğunu **birkaç gün boyunca** dikkatle gözlemleyin ve karşılaştırın.
+3. **AAPS** ile (neredeyse) her gün aynı saatlerde gerçekleşen örüntülere dikkat edin.
+4. Bunu birkaç gün boyunca yapmak önemlidir. __Profil__ ayarlama kararlarını tek bir günde gözlemlenen verilere göre vermek genellikle kötü sonuçlar doğurur.
+5. Tekrarlanan bir örüntü gözlemledikten sonra (ör. saat 13:00'te __KŞ__'de ani bir yükselme veya negatif bir __AİNS__ değeri görüyorsanız), ancak o zaman __Profil__'inizde küçük değişiklikler yapmaya başlayın.
+6. Her seferinde yalnızca tek bir şeyi değiştirmeniz önemlidir. Ör. bazalınızı saat 13:00 civarında %10 artırın.
+7. Her değişiklikten sonra, sonraki birkaç gün boyunca bunun __KŞ__ ve __AİNS__ üzerindeki etkisini izlemeniz önemlidir.
+8. Bu adımları tekrarlayın: gözlemleyin, karar verin, gerekirse yeniden ince ayar yapın
 
-Don't rush, go slow!
+Acele etmeyin, yavaş gidin!
 
-## Recommended settings and advice while tweaking basal
+## Bazalda ince ayar yaparken önerilen ayarlar ve tavsiyeler
 
-- Do all testing with [closed loop enabled](#AapsScreens-loop-status).
-- **Turn <u>OFF</u> all [automations](../DailyLifeWithAaps/Automations.md)**
-- **Turn <u>OFF</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)** so that they will not try to adapt your profile.
-- Do not make manual user actions (manual bolus, temp targets etc…) while testing: let the system use the **Profile** settings only.
-- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board, Carbs On Board (and Sensitivity change). On graph 2, use Deviations and Blood Glucose Impact. When asking for advice, always include those on your screenshots.
-- COB=0[*](#profiletuning-cob-zero)
+- Tüm testleri [kapalı döngü etkinken](#AapsScreens-loop-status) yapın.
+- **Tüm [otomasyonları](../DailyLifeWithAaps/Automations.md) <u>KAPATIN</u>**
+- **[DynISF](#Open-APS-features-DynamicISF), [OtoİDF](#Open-APS-features-auto-isf) ve [Otoduyarlılık](#Open-APS-features-autosens) özelliklerini <u>KAPATIN</u>**; böylece profilinizi uyarlamaya çalışmazlar.
+- Test sırasında elle kullanıcı işlemleri (elle bolus, geçici hedefler vb.) yapmayın: sistemin yalnızca **Profil** ayarlarını kullanmasına izin verin.
+- [Ek grafikler](#AapsScreens-section-g-additional-graphs) için: 1. grafikte Aktif İnsülin, Aktif Karbonhidrat (ve Duyarlılık değişikliği) kullanın. 2. grafikte Sapmalar ve Kan Şekeri Etkisi kullanın. Tavsiye isterken ekran görüntülerinize bunları her zaman ekleyin.
+- AKRB=0[*](#profiletuning-cob-zero)
 
-Other considerations that should ideally be avoided, as they influence the data and can lead to poor conclusions:
-- No physical activities.
-- No stress.
-- No illness.
-- No extreme weather like high or low temperatures.
-- No failed pump or CGM sessions.
-- No unannounced carbs.
+Verileri etkiledikleri ve yanlış sonuçlara yol açabildikleri için ideal olarak kaçınılması gereken diğer durumlar:
+- Fiziksel aktivite yok.
+- Stres yok.
+- Hastalık yok.
+- Çok sıcak veya çok soğuk gibi aşırı hava koşulları yok.
+- Başarısız pompa veya CGM oturumu yok.
+- Bildirilmemiş karbonhidrat yok.
 
-Also note:
-- If your [basal rate profile](#your-aaps-profile-basal-rates) is correct, when you are on target with COB=0[*](#profiletuning-cob-zero) and IOB=0, you will remain constantly on target whatever your **ISF** (**ISF** is only used when you are higher than your **BG** target).
-- You need to check the actual **IOB** but also the **IOB** chart, to observe how the **IOB** evolved during the past few hours.
+Ayrıca şunlara dikkat edin:
+- [Bazal oran profiliniz](#your-aaps-profile-basal-rates) doğruysa, AKRB=0[*](#profiletuning-cob-zero) ve AİNS=0 iken hedefteyseniz, **İDF** değeriniz ne olursa olsun sürekli hedefte kalırsınız (**İDF** yalnızca **KŞ** hedefinizin üzerindeyken kullanılır).
+- Yalnızca güncel **AİNS** değerine değil, **AİNS**'in son birkaç saatte nasıl değiştiğini görmek için **AİNS** grafiğine de bakmanız gerekir.
 
 (profiletuning-cob-zero)=
 
-***COB = 0**
+***AKRB = 0**
 
-Meaning that the meal is digested, and there are no more carbs in your body.
+Yani yemek sindirilmiştir ve vücudunuzda artık karbonhidrat kalmamıştır.
 
-**AAPS** might indicate [COB=0 while you still have carbs on board](../DailyLifeWithAaps/CobCalculation.md).
+**AAPS**, [vücudunuzda hâlâ karbonhidrat varken AKRB=0](../DailyLifeWithAaps/CobCalculation.md) gösterebilir.
 
-## [Profile](../SettingUpAaps/YourAapsProfile.md) definitions
+## [Profil](../SettingUpAaps/YourAapsProfile.md) tanımları
 
-A too **strong Profile** indicates some combination of the following:
+Fazla **güçlü bir Profil** aşağıdakilerin bir kombinasyonunu gösterir:
 
-- [ISF](#your-aaps-profile-insulin-sensitivity-factor) number is too small.
-- The [basal](#your-aaps-profile-basal-rates) number is too big.
-- [I:C](#your-aaps-profile-insulin-to-carbs-ratio) number is too small.
+- [İDF](#your-aaps-profile-insulin-sensitivity-factor) sayısı çok küçük.
+- [Bazal](#your-aaps-profile-basal-rates) sayısı çok büyük.
+- [I:C](#your-aaps-profile-insulin-to-carbs-ratio) sayısı çok küçük.
 
-## IOB Observations
+## AİNS gözlemleri
 
-*Note: you can also use Loopalyzer IOB graph in Nightscout reports to view IOB on several days.*
+*Not: Birkaç günlük AİNS'i görmek için Nightscout raporlarındaki Loopalyzer AİNS grafiğini de kullanabilirsiniz.*
 
-If you observe the following patterns after a few days, consider the following changes:
+Birkaç gün sonra aşağıdaki örüntüleri gözlemlerseniz, şu değişiklikleri düşünün:
 
-### IOB positive
+### AİNS pozitif
 
-- **Profile** basal might not be strong enough (this could also be because of things like unannounced food, illness, bad site absorption, etc.)
+- **Profil** bazalı yeterince güçlü olmayabilir (bu, bildirilmemiş yemek, hastalık, kanül bölgesinde kötü emilim vb. nedenlerden de olabilir)
 
-![Positive IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
+![Pozitif AİNS](../images/troubleshooting/profiletuning/PositiveInsulin.png)
 
-### IOB negative
+### AİNS negatif
 
-- Default basal too strong.
-- May be the effect from past exercise/physical activity.
+- Varsayılan bazal fazla güçlü.
+- Geçmişteki egzersizin/fiziksel aktivitenin etkisi olabilir.
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin.png)
+![Negatif AİNS](../images/troubleshooting/profiletuning/NegativeInsulin.png)
 
-- Previous meal: too much bolus (which resulted in a very long zero temp basal)
+- Önceki yemek: fazla bolus (bu da çok uzun bir sıfır geçici bazale yol açtı)
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
+![Negatif AİNS](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
 
-## BG Target Observations
+## KŞ hedefi gözlemleri
 
-### Stuck High
+### Yüksekte takılı kalma
 
-- __ISF's__ number is high and not strong enough (calculated insulin is too weak)
+- __İDF__ sayısı yüksek ve yeterince güçlü değil (hesaplanan insülin çok zayıf)
 
-![Stuck High](../images/troubleshooting/profiletuning/StuckHigh.png)
+![Yüksekte takılı kalma](../images/troubleshooting/profiletuning/StuckHigh.png)
 
-- __Profile__ basal might not be strong enough (**SMBs** do not have enough "basal stock" to use)
-- A security ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) might have kicked in and is limiting insulin injection. Verify in the **APS** plugin screen (**Configuration → APS → Open plugin**); see [SMB](#Open-APS-features-super-micro-bolus-smb).
-- Technical issue: site absorption, infusion set, ...
+- __Profil__ bazalı yeterince güçlü olmayabilir (**SMB**'lerin kullanabileceği yeterli "bazal stoku" yok)
+- Bir güvenlik sınırı ([maks. AİNS](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) devreye girmiş ve insülin verilmesini sınırlıyor olabilir. **APS** eklenti ekranında kontrol edin (**Konfigürasyon → APS (YPS) → Eklentiyi aç**); bkz. [SMB](#Open-APS-features-super-micro-bolus-smb).
+- Teknik sorun: kanül bölgesinde emilim, infüzyon seti, ...
 
-### Stuck Low
+### Düşükte takılı kalma
 
-- __ISF__ too strong and the number needs to be raised higher
-- __Profile__ basal too strong (if also negative IOB)
+- __İDF__ fazla güçlü ve sayının yükseltilmesi gerekiyor
+- __Profil__ bazalı fazla güçlü (AİNS de negatifse)
 
-### Rollercoaster (ups and downs)
+### Hız treni (inişler ve çıkışlar)
 
-- **ISF** too strong? See your [AAPS Profile](#your-aaps-profile-insulin-sensitivity-factor)
+- **İDF** fazla güçlü mü? [AAPS profilinize](#your-aaps-profile-insulin-sensitivity-factor) bakın
 
-![Rollercoaster](../images/troubleshooting/profiletuning/StrongISF.png)
+![Hız treni](../images/troubleshooting/profiletuning/StrongISF.png)
 
-## BG After Meals Observations
+## Yemek sonrası KŞ gözlemleri
 
-### Fast rise and BG going high
+### Hızlı yükseliş ve KŞ'nin yükselmesi
 
-- Food contains fast carbs (like fruit juice).
-- Consider doing a pre-bolus or a slightly earlier pre-bolus.
-- Bolus (IC or injected %) not strong enough.
+- Yiyecek hızlı karbonhidrat içeriyor (meyve suyu gibi).
+- Ön bolus yapmayı veya ön bolusu biraz daha erken yapmayı düşünün.
+- Bolus (IC veya enjekte edilen %) yeterince güçlü değil.
 
-![Rise High](../images/troubleshooting/profiletuning/FastRise.png)
+![Yükselip yüksekte kalma](../images/troubleshooting/profiletuning/FastRise.png)
 
-### Fast rise and then BG going low
+### Hızlı yükseliş ve ardından KŞ'nin düşmesi
 
-- Consider doing a pre-bolus, your **Profile** might be too aggressive (over correction of the raise)
-- Bolus too strong.
+- Ön bolus yapmayı düşünün, **Profil**'iniz fazla agresif olabilir (yükselişe aşırı düzeltme)
+- Bolus fazla güçlü.
 
 
 
-## [How to calculate your I:C](#your-aaps-profile-insulin-to-carbs-ratio)
+## [I:C oranınızı nasıl hesaplarsınız](#your-aaps-profile-insulin-to-carbs-ratio)
 
-1. First, you need the correct default basal settings in your **Profile**.
-2. Start on target, better without negative IOB.
-3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Very accurately measure a known portion of carbs, and record the start time and Start IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). Don't forget to eat the carbs ;)
-4. After some hours, when COB=0[*](#profiletuning-cob-zero) and you're back on target, record end time, and note down the End IOB, check the total insulin given as before and call it End insulin. *NOTE: The time frame is NOT important, as long as it is longer than your digestion*
-5. From the difference between Start and End insulin amount, subtract/add the difference end IOB - start IOB. Then subtract the basal insulin calculated from your **Profile's** settings.
-6. If __BG__ is in target, you'll have the total insulin used to “digest” your carbs. Calculate your **I:C**.
+1. Önce **Profil**'inizde doğru varsayılan bazal ayarlarına ihtiyacınız var.
+2. Hedefte başlayın, tercihen negatif AİNS olmadan.
+3. Verilen toplam insülini **Yönet → Pompa** bölümünden (veya pompa geçmişinden) kaydedin ve buna Başlangıç insülini deyin. Bilinen bir karbonhidrat porsiyonunu çok doğru ölçün, başlangıç saatini ve Başlangıç AİNS'ini kaydedin. Ardından karbonhidrat ve bolus bilgilerini bolus sihirbazıyla (mevcut ayarlı I:C ile) **AAPS**'e girin. Karbonhidratları yemeyi unutmayın ;)
+4. Birkaç saat sonra, AKRB=0[*](#profiletuning-cob-zero) olduğunda ve tekrar hedefe döndüğünüzde bitiş saatini kaydedin, Bitiş AİNS'ini not edin, verilen toplam insülini önceki gibi kontrol edin ve buna Bitiş insülini deyin. *NOT: Zaman aralığı, sindiriminizden uzun olduğu sürece ÖNEMLİ DEĞİLDİR*
+5. Başlangıç ve Bitiş insülin miktarları arasındaki farktan, bitiş AİNS - başlangıç AİNS farkını çıkarın/ekleyin. Ardından **Profil** ayarlarınızdan hesaplanan bazal insülini çıkarın.
+6. __KŞ__ hedefteyse, karbonhidratlarınızı “sindirmek” için kullanılan toplam insülini elde etmiş olursunuz. **I:C** oranınızı hesaplayın.
 
-### Explanations for the I:C calculations
+### I:C hesaplamalarının açıklaması
 
-- With a **Profile** that has the correct default basal rate, during any time frame, you should stay on target and have an IOB near 0. You get your **Profile** basal only.
-- You add carbs and bolus to this mix. Wait till your body digests all the carbs and be back on **BG** target. Your insulin usage will be the sum of your basal + the insulin needed for the carbs. You calculate the insulin used for your basal (by using your **Profile**) and the surplus will be the insulin used to digest the carbs.
-- If the time frame is too short, there will be carbs undigested, thus your "insulin needed for the carbs" will be wrong.
-- If the time frame is too long, nothing bad will happen. You'll use all your carbs and you'll get more basal. At the end, you'll subtract the basal from the total insulin used, the extended time frame (with more basal use) will not affect the result.
+- Doğru varsayılan bazal oranına sahip bir **Profil** ile, herhangi bir zaman aralığında hedefte kalmanız ve AİNS'inizin 0'a yakın olması gerekir. Yalnızca **Profil** bazalınızı alırsınız.
+- Buna karbonhidrat ve bolus eklersiniz. Vücudunuzun tüm karbonhidratları sindirmesini ve **KŞ** hedefine geri dönmesini bekleyin. İnsülin kullanımınız, bazalınızın ve karbonhidratlar için gereken insülinin toplamı olacaktır. Bazalınız için kullanılan insülini (**Profil**'inizi kullanarak) hesaplarsınız; geri kalanı karbonhidratları sindirmek için kullanılan insülindir.
+- Zaman aralığı çok kısaysa sindirilmemiş karbonhidrat kalır, bu nedenle "karbonhidratlar için gereken insülin" değeriniz yanlış olur.
+- Zaman aralığı çok uzunsa kötü bir şey olmaz. Tüm karbonhidratlarınızı kullanırsınız ve daha fazla bazal alırsınız. Sonunda bazalı kullanılan toplam insülinden çıkaracağınız için, uzatılmış zaman aralığı (daha fazla bazal kullanımıyla) sonucu etkilemez.
 
-Originally written up by @Robby (Discord) on tips and tricks to help tune your **AAPS Profile**, reviewed and edited by the community (thank you!).
+İlk olarak @Robby (Discord) tarafından **AAPS Profil**'inizin ince ayarına yardımcı olacak ipuçları olarak yazılmış, topluluk tarafından gözden geçirilip düzenlenmiştir (teşekkürler!).

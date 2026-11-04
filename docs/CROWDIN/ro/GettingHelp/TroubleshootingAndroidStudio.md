@@ -8,7 +8,7 @@
 ```
 
 (troubleshooting_androidstudio-lost-keystore)=
-## Cheie (keystore) pierdută
+## Keystore pierdut
 If you lost your keystore or its password, an apk signed with a new keystore cannot update your current **AAPS**: you have to uninstall and reinstall it. See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
 ## Sincronizare Gradle eșuată
@@ -24,9 +24,9 @@ Gradle Sync can fail for various reasons. When you receive a message saying that
 *Important*: După ce ați urmat instrucțiunile pentru problema specifică, trebuie să declanșați din nou [sincronizare Gradle](#gradle-resync).
 
 (troubleshooting_androidstudio-uncommitted-changes)=
-### Modificări neangajate
+### Modificări necomise
 
-If you receive a failure message like this one:
+Dacă primiți un mesaj de eroare ca acesta:
 
 ![Gradle Uncommitted Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
@@ -34,7 +34,7 @@ If you receive a failure message like this one:
 Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 
 There are uncommitted changes.
-Clone sources again as described in wiki and do not allow gradle update
+Clonați din nou sursele, așa cum este descris în wiki, și nu permiteți actualizarea gradle
 ```
 
 #### Step 1 - Check git installation
@@ -43,13 +43,13 @@ Clone sources again as described in wiki and do not allow gradle update
     git --version
     ```
 
-    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
+    ![Versiunea Git în Gradle](../images/studioTroubleshooting/03_GitVersion.png)
 
     Note: There is a space and two hyphens between Git and version!
 
-  * You must receive a message saying what Git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
+  * You must receive a message saying what Git version is installed, as you can see in the screenshot above. În acest caz, mergeți la [Pasul 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get a message saying
+  * Dacă primiți un mesaj care spune
     ```
     Git: command not found
     ```
@@ -59,31 +59,31 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
+  * Dacă Git este instalat, ați repornit computerul (pe Windows) și Git tot nu poate fi găsit:
 
   * Search your computer for a file "git.exe".
 
     Note for yourself, which directory it is saved in.
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Add the directory where you have found your Git installation.
+  * Mergeți la variabilele de mediu (Environment variables) din Windows, selectați variabila „PATH” și apăsați „Edit”. Add the directory where you have found your Git installation.
 
-  * Save and close.
+  * Salvați și închideți.
 
-  * Restart Android Studio.
+  * Reporniți Android Studio.
 
 (troubleshooting-android-studio-check-for-uncommitted-changes)=
 #### Step 2: Check for uncommitted changes.
 
   * În Android Studio, deschideți fila 'Commit' (1) în partea stângă. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either "Changes" (called "Default changeset" in older Android Studio versions) (2) or "Unversioned Files" (3):
+  * Puteți vedea fie „Changes” (numit „Default changeset” în versiunile mai vechi de Android Studio) (2), fie „Unversioned Files” (3):
 
     * For "Changes", you probably updated 'Gradle' or changed some of the file contents by mistake.
 
     * Right click on "Changes" and select "Rollback…" (1)
 
-      ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
+      ![Fila Commit: anularea modificărilor (Rollback)](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+    * The files are fetched again from the Git server. Dacă nu există alte modificări în fila Commit, mergeți la [Pasul 3](#gradle-resync).
 
   * If you can see "Unversioned Files", you might have stored files in your source code directory by mistake. Maybe they are important files: like your keystore file, that should be moved elsewhere. If you don't know what those files are and you have not created them yourself, you can delete them.
 
@@ -91,18 +91,18 @@ Clone sources again as described in wiki and do not allow gradle update
 
     * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the **AAPS** directory anymore.
 
-      If there are no other changes in the Commit tab, go to [Step 3](#gradle-resync).
+      Dacă nu există alte modificări în fila Commit, mergeți la [Pasul 3](#gradle-resync).
 
 
-#### Step 3: Resync Gradle (again)
+#### Pasul 3: Resincronizați Gradle (din nou)
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+Urmați instrucțiunile de la [Resincronizare Gradle](#gradle-resync).
 
 ### Git Pull Failed - Please tell me who you are
 
-If you see this message, Git needs you to identify yourself.
+Dacă vedeți acest mesaj, Git are nevoie să vă identificați.
 
-![Git identification](../images/studioTroubleshooting/164_Git_Identify.png)
+![Identificare Git](../images/studioTroubleshooting/164_Git_Identify.png)
 
 Open the terminal and type the following two commands, one after the other.
 
@@ -118,9 +118,9 @@ Your name needs to be written between quotation marks.
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 (incompatible-gradle-jvm)=
-### Incompatible Gradle JVM
+### Gradle JVM incompatibil
 
-![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
+![Gradle JVM incompatibil](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
 
 ```
 Your build is currently configured to use incompatible Java 21.0.3 and Gradle 8.2.
@@ -139,7 +139,7 @@ Sau:
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
+Dacă primiți mesajul de eroare de mai sus, trebuie să descărcați versiunea JVM corectă înainte să încercați din nou construirea:
 
 1.  Check in the [requirement table](#Building-APK-recommended-specification-of-computer-for-building-apk-file) which JVM version you need for the **AAPS** version you are building, and make a note of it.
 
@@ -147,22 +147,22 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select **Download JDK** (2).
+3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. Exemplul de mai jos arată că JVM 21 este etichetat „jbr-21”. Dacă îl găsiți, selectați-l și ați terminat. If not available, then select **Download JDK** (2).
 
 
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+![Selectați Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
 4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select any Vendor. Location (3): do not change. Click **Download** (4).
 
-![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
+![Selectați JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
 5.  Close the **Settings** dialog with **OK**.
-6. You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](#gradle-resync).
+6. You now need to restart the Gradle Sync. Urmați instrucțiunile de la [Resincronizare Gradle](#gradle-resync).
 
 (incompatible-version-of-android-gradle-plugin)=
 ### Incompatible version of Android Gradle plugin
 
-  If you experience the following error message
+  Dacă primiți următorul mesaj de eroare
 
 `The project is using an incompatible version (AGP x.x.x) of the Android Gradle plugin. Latest supported version is AGP x.x.x`
 
@@ -181,9 +181,9 @@ If you experience the above error message, you need to download a correct JVM ve
 
     Make sure the button shown at (2) is *NOT* selected.
 
-    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+    ![Modul offline Gradle](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+  * Acum trebuie să declanșați o [resincronizare Gradle](#gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Imposibil de pornit procesul daemon
@@ -192,10 +192,10 @@ If you experience the above error message, you need to download a correct JVM ve
 
   There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Captura de ecran Nu poate porni procesul daemon](../images/AndroidStudioWin10_32bitError.png)
+  ![Captură de ecran: Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
-### Gradle Resync
+### Resincronizare Gradle
 
   If you can still see the message that the gradle sync failed, now select the link **Try again** (1). ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
@@ -204,7 +204,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
   * Open the Gradle tab (1) on the right border of Android Studio.
 
-    ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
+    ![Reîncărcare Gradle](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
   * Right-click on AAPS (2)
 
@@ -216,10 +216,10 @@ When you generate the signed apk, you might get the notification that generation
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-This is a false warning. Check the directory for your selected "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
+Acesta este un avertisment fals. Check the directory for your selected "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
 
 
-## App was created with compiler/kotlin warnings
+## Aplicația a fost creată cu avertismente de compilator/kotlin
 
 If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
 
@@ -228,45 +228,45 @@ If your build completed successfully but you get compiler or kotlin warnings (in
 Your apk was built successfully and can be transferred to your phone!
 
 
-## No CGM data is received by AAPS
+## AAPS nu primește date CGM
 
-* If you are using patched Dexcom G6 app: this app is outdated. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
+* If you are using patched Dexcom G6 app: this app is outdated. Folosiți în schimb aplicația [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 
-* If you are using xDrip: identify receiver as described on [xDrip settings page](#xdrip-identify-receiver).
+* Dacă folosiți xDrip: identificați receptorul așa cum este descris pe [pagina de setări xDrip](#xdrip-identify-receiver).
 
 
 ## Apk not installed
 
 ![phone app not installed](../images/Update_AppNotInstalled.png)
 
-* Asigurați-vă că ați transferat fișierul "app-release.apk" pe telefon.
+* Asigurați-vă că ați transferat fișierul „app-full-release.apk” pe telefon.
 * This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 * Dacă "Aplicația nu este instalată" este afișată pe telefon, urmați acești pași:
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
-2. Uninstall **AAPS** on your phone.
+1. [Exportați setările](../Maintenance/ExportImportSettings.md) (în versiunea AAPS deja instalată pe telefon)
+2. Dezinstalați **AAPS** de pe telefon.
 3. Enable airplane mode & turn off Bluetooth.
-4. Instalați noua versiune ("app-full release.apk")
-5. [Importă setările](../Maintenance/ExportImportSettings.md)
+4. Instalați noua versiune („app-full-release.apk”)
+5. [Importați setările](../Maintenance/ExportImportSettings.md)
 6. Turn Bluetooth back on and disable airplane mode
 
 ## Apk installed but old version
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
+Dacă ați construit aplicația cu succes, ați transferat-o pe telefon și ați instalat-o cu succes, dar numărul versiunii a rămas același, poate ați uitat să [actualizați copia locală](#Update-to-new-version-update-your-local-copy)
 
 ## Niciuna dintre cele de mai sus nu a funcționat
 
-If none of the above tips helped you might consider building the apk from scratch:
+Dacă niciunul dintre sfaturile de mai sus nu v-a ajutat, puteți încerca să construiți apk-ul de la zero:
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
+1. [Exportați setările](../Maintenance/ExportImportSettings.md) (în versiunea AAPS deja instalată pe telefon)
 
 2. Have your key password and key store password ready.
 
-    Sau folosiți o nouă cheie de identificare (keystore).
+    Sau folosiți pur și simplu un keystore nou.
 
-3. Build the apk from scratch as described [here](#Building-APK-download-AAPS-code).
+3. Construiți apk-ul de la zero, așa cum este descris [aici](#Building-APK-download-AAPS-code).
 
-4. When you have built the apk successfully delete the existing apk on your phone, transfer the new apk to your phone and install.
+4. După ce ați construit apk-ul cu succes, ștergeți apk-ul existent de pe telefon, transferați noul apk pe telefon și instalați-l.
 5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
 6. You should check your battery optimization options and disable them again.
 
@@ -276,4 +276,4 @@ If the above does not solve your build issue you may wish to try to uninstall An
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
+Instalați Android Studio de la zero, așa cum este descris [aici](#Building-APK-install-android-studio).

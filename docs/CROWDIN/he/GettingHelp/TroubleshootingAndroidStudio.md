@@ -9,7 +9,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## אבד ה-keystore
-If you lost your keystore or its password, an apk signed with a new keystore cannot update your current **AAPS**: you have to uninstall and reinstall it. See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+אם איבדתם את ה-keystore או את הסיסמה שלו, apk שחתום באמצעות keystore חדש לא יכול לעדכן את ה-**AAPS** הנוכחי: צריך להסיר את ההתקנה ולהתקין אותו מחדש. ראו [התקנה מחדש של AAPS עם keystore חדש](#reinstall-aaps).
 
 ## Gradle Sync failed
 Gradle Sync can fail for various reasons. When you receive a message saying that 'gradle sync failed', open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
@@ -24,11 +24,11 @@ Gradle Sync can fail for various reasons. When you receive a message saying that
 *Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
 
 (troubleshooting_androidstudio-uncommitted-changes)=
-### שינויים שלא הוגשו
+### שינויים שלא נכללו בקומיט (Uncommitted changes)
 
 If you receive a failure message like this one:
 
-![Gradle Uncommitted Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Gradle: שינויים שלא נכללו בקומיט](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 ```
 Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
@@ -38,7 +38,7 @@ Clone sources again as described in wiki and do not allow gradle update
 ```
 
 #### שלב 1 - בדקו את התקנת git
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal (2).
+  * פתחו את הלשונית Terminal (1) בתחתית Android Studio, העתיקו את הטקסט הבא והדביקו או הקלידו אותו ב-terminal (2).
     ```
     git --version
     ```
@@ -49,7 +49,7 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * You must receive a message saying what Git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get a message saying
+  * למקרה שתקבלו את ההודעה
     ```
     Git: command not found
     ```
@@ -57,29 +57,29 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * [בדקו את התקנת git](#BuildingAaps-steps-for-installing-git)
 
-  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
+  * אם אתם עובדים ב-Windows ו-Git הותקן זה עתה, הפעילו מחדש את המחשב כדי ש-Git יהיה זמין בכל המערכת אחרי ההתקנה
 
-  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
+  * אם Git מותקן, הפעלתם מחדש את המחשב (ב-Windows), ועדיין Git לא נמצא:
 
   * חפשו במחשבכם את הקובץ "git.exe".
 
     Note for yourself, which directory it is saved in.
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Add the directory where you have found your Git installation.
+  * עברו אל Environment variables (משתני הסביבה) ב-Windows, בחרו את המשתנה "PATH" ולחצו על Edit. Add the directory where you have found your Git installation.
 
-  * שמירו וסגירו.
+  * שמרו וסגרו.
 
   * הפעילו מחדש את Android Studio.
 
 (troubleshooting-android-studio-check-for-uncommitted-changes)=
-#### שלב 2: בדקו אם יש שינויים לא שלא הוגשו (uncommitted changes).
+#### שלב 2: בדקו אם יש שינויים שלא נכללו בקומיט (uncommitted changes).
 
-  * In Android Studio, open the 'Commit' tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either "Changes" (called "Default changeset" in older Android Studio versions) (2) or "Unversioned Files" (3):
+  * In Android Studio, open the 'Commit' tab (1) on the left-hand side. ![לשונית Commit: שינויים שלא נכללו בקומיט](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * יופיע "Changes" (בגרסאות ישנות של Android Studio: "Default changeset") (2) או "Unversioned Files" (3):
 
-    * For "Changes", you probably updated 'Gradle' or changed some of the file contents by mistake.
+    * אם מופיע "Changes", כנראה עדכנתם את 'Gradle' או שיניתם בטעות תוכן של קבצים מסוימים.
 
-    * Right click on "Changes" and select "Rollback…" (1)
+    * לחצו לחיצה ימנית על "Changes" ובחרו "Rollback…" (1)
 
       ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
@@ -94,7 +94,7 @@ Clone sources again as described in wiki and do not allow gradle update
       If there are no other changes in the Commit tab, go to [Step 3](#gradle-resync).
 
 
-#### שלב 3: סנכרן מחדש את Gradle (שוב)
+#### שלב 3: סנכרון מחדש של Gradle (שוב)
 
 Follow the instructions at [Gradle Resync](#gradle-resync).
 
@@ -139,7 +139,7 @@ Or:
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
+אם מתקבלת הודעת השגיאה לעיל, עליכם להוריד גרסת JVM מתאימה לפני שתוכלו לנסות לבנות שוב:
 
 1.  Check in the [requirement table](#Building-APK-recommended-specification-of-computer-for-building-apk-file) which JVM version you need for the **AAPS** version you are building, and make a note of it.
 
@@ -147,12 +147,12 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select **Download JDK** (2).
+3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. אם היא לא זמינה, בחרו **Download JDK** (2).
 
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select any Vendor. Location (3): do not change. Click **Download** (4).
+4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select any Vendor. Location (3): do not change. לחצו על **Download** (4).
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -197,7 +197,7 @@ If you experience the above error message, you need to download a correct JVM ve
 (gradle-resync)=
 ### Gradle Resync
 
-  If you can still see the message that the gradle sync failed, now select the link **Try again** (1). ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  אם עדיין מופיעה ההודעה שסנכרון Gradle נכשל, בחרו עכשיו בקישור **Try again** (1). ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
   If you don't see the message anymore, you can still trigger this manually:
@@ -212,7 +212,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Generate Signed APK generated successfully with 0 build variants
 
-When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
+כשאתם יוצרים את ה-apk החתום, ייתכן שתקבלו הודעה שהיצירה הצליחה אבל נוצרו '0 build variants':
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -230,29 +230,29 @@ Your apk was built successfully and can be transferred to your phone!
 
 ## No CGM data is received by AAPS
 
-* If you are using patched Dexcom G6 app: this app is outdated. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
+* אם אתם משתמשים באפליקציית Dexcom G6 מתוקנת: האפליקציה הזו מיושנת. השתמשו באפליקציה [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) במקום זאת.
 
-* If you are using xDrip: identify receiver as described on [xDrip settings page](#xdrip-identify-receiver).
+* אם אתם משתמשים ב-xDrip: הגדירו זיהוי מקלט (identify receiver) כמו שמתואר ב[דף הגדרות xDrip](#xdrip-identify-receiver).
 
 
-## Apk not installed
+## ה-apk לא הותקן
 
-![phone app not installed](../images/Update_AppNotInstalled.png)
+![בטלפון: האפליקציה לא הותקנה](../images/Update_AppNotInstalled.png)
 
 * ודאו שהעברתם את הקובץ "app-full-release.apk" לטלפון שלכם.
-* This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
-* אם הטלפון מציג הודעת "אפליקציה לא מותקנת", בצעו את השלבים הבאים:
+* השגיאה הזו בדרך כלל אומרת שה-apk החדש חתום באמצעות keystore אחר מזה של ה-**AAPS** המותקן. אם ה-keystore הקודם עדיין אצלכם, בחרו בו ובנו שוב. אחרת, ראו [התקנה מחדש של AAPS עם keystore חדש](#reinstall-aaps).
+* אם הטלפון מציג את ההודעה "App not installed" (האפליקציה לא הותקנה), בצעו את השלבים הבאים:
 
 1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
 2. Uninstall **AAPS** on your phone.
-3. Enable airplane mode & turn off Bluetooth.
+3. הפעילו מצב טיסה וכבו את ה-Bluetooth.
 4. התקינו גרסה חדשה ("app-full-release.apk")
 5. [ייבוא הגדרות](../Maintenance/ExportImportSettings.md)
-6. Turn Bluetooth back on and disable airplane mode
+6. הפעילו שוב את ה-Bluetooth וכבו את מצב הטיסה
 
-## Apk installed but old version
+## ה-apk הותקן, אבל זו גרסה ישנה
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
+אם בניתם את האפליקציה בהצלחה, העברתם אותה לטלפון והתקנתם אותה בהצלחה, אבל מספר הגרסה נשאר אותו דבר, ייתכן ששכחתם [לעדכן את העותק המקומי](#Update-to-new-version-update-your-local-copy)
 
 ## אף אחת מהאפשרויות לא עזרה
 
@@ -262,13 +262,13 @@ If none of the above tips helped you might consider building the apk from scratc
 
 2. Have your key password and key store password ready.
 
-    או שתצרו מאגר מפתחות חדש.
+    או פשוט להשתמש ב-keystore חדש.
 
 3. Build the apk from scratch as described [here](#Building-APK-download-AAPS-code).
 
 4. When you have built the apk successfully delete the existing apk on your phone, transfer the new apk to your phone and install.
 5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
-6. בדקו את אפשרויות אופטימיזציית הסוללה שלכם והשביתו אותן שוב.
+6. בדקו את הגדרות אופטימיזציית הסוללה והשביתו אותן שוב.
 
 ## במקרה הגרוע ביותר
 

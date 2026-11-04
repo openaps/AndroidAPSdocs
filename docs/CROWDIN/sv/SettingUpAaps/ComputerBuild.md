@@ -1,89 +1,89 @@
 <!-- Android Studio Build, FKA Computer Build. Preserve filenames to avoid breaking URLs. -->
 
-# Android Studio Build
+# Bygge med Android Studio
 
-This is the traditional method to build your AAPS app.
+Det här är det traditionella sättet att bygga din AAPS-app.
 
-You can build the app without a computer using the [Browser Build](./BrowserBuild.md) method.
+Du kan bygga appen utan dator med metoden [Bygge i webbläsaren](./BrowserBuild.md).
 
-## Build yourself instead of download
+## Bygg själv i stället för att ladda ned
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**AAPS-appen (en apk-fil) finns inte att ladda ned, på grund av reglerna för medicintekniska produkter. Det är lagligt att bygga appen för eget bruk, men du får inte ge en kopia till andra!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Se sidan [Vanliga frågor](../UsefulLinks/FAQ.md) för mer information.
 
 ---
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
-## Computer and software specifications for building AAPS
+## Krav på dator och programvara för att bygga AAPS
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
+* Du kan behöva en viss version av **[Android Studio](https://developer.android.com/studio/)** för att bygga APK:n. Se tabellen nedan:
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                             | tested up to Quail 4                                   | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | tested up to Quail 4                                   | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | tested up to Quail 4                                   | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | tested up to Quail 4                                   | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                   | tested up to Quail 4                                   | 8.13   | 21  |
-| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                   | tested up to Quail 4                                   | 9      | 21  |
-| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                  | Latest                                                 | 9.8    | 21  |
+| AAPS-version            | Rekommenderad<br/>version av<br/>Android Studio | Alternativ<br/>version av<br/>Android Studio | Gradle | JVM |
+| ----------------------- | ----------------------------------------------------------- | -------------------------------------------------------- | ------ |:--- |
+| 2.6.2                   | 3.6.1                                                       |                                                          | 5.6.4  | 11  |
+| 2.8.2.1                 | 4.1.1                                                       |                                                          | 6.1.1  | 13  |
+| [3.1.0.3](#version3100) | 2020.3.1                                                    | testad upp till Quail 4                                  | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                         | testad upp till Quail 4                                  | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                             | testad upp till Quail 4                                  | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                          | testad upp till Quail 4                                  | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                          | testad upp till Quail 4                                  | 8.13   | 21  |
+| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                          | testad upp till Quail 4                                  | 9      | 21  |
+| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                         | Senaste                                                  | 9.8    | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+Den "rekommenderade versionen" levereras med rätt JVM-version. Den rekommenderade versionen är också den lägsta version som du kan använda för att bygga **AAPS**. Du kan **INTE** bygga med en version som är äldre än den "rekommenderade". Om du använder en annan version kan du få problem med JVM-versionen. Se sidan [Felsökning av Android Studio](#troubleshooting_androidstudio-uncommitted-changes) för hjälp med att lösa de här problemen. Om din nuvarande version av Android Studio inte finns i tabellen måste du först uppdatera den.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+Gradle-versionen hör ihop med källkoden. Du får alltid rätt Gradle-version när du laddar ned eller uppdaterar källkoden. Den nämns här bara som information. Du behöver inte göra något med den.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* [32-bitars Windows](#troubleshooting_androidstudio-unable-to-start-daemon-process) stöds inte av Android Studio. Tänk på att **både 64-bitars processor och 64-bitars operativsystem är ett krav.** Om ditt system INTE uppfyller detta krav måste du byta den maskinvara eller programvara det gäller, eller hela systemet.
 
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 10 or higher</td>
-    <td class="tg-baqh">macOS 12 or higher</td>
-    <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
+    <th class="tg-baqh">OS (endast 64-bitars)</th>
+    <td class="tg-baqh">Windows 10 eller senare</td>
+    <td class="tg-baqh">macOS 12 eller senare</td>
+    <td class="tg-baqh">Alla Linux-distributioner som stöder Gnome, KDE eller Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 eller senare</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
-    <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <th class="tg-baqh"><p align="center">CPU (endast 64-bitars)</th>
+    <td class="tg-baqh">x86_64-processor från 2017 eller nyare (Intel Core i5 av 8:e generationen, AMD Ryzen eller nyare) med <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">stöd för virtualisering</a> (Intel VT-x eller AMD-V) aktiverat i BIOS</td>
+    <td class="tg-baqh">Apple Silicon (M1 eller nyare), eller Intel Core av 6:e generationen eller nyare (stödet för Intel-Mac håller på att fasas ut)</td>
+    <td class="tg-baqh">x86_64-processor från 2017 eller nyare (Intel Core i5 av 8:e generationen, AMD Ryzen eller nyare) med stöd för virtualisering (Intel VT-x eller AMD-V) aktiverat i BIOS</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16 GB eller mer (8 GB är det absoluta minimum för bara Android Studio, 32 GB rekommenderas)</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. SSD is recommended.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Minst 32 GB ledigt utrymme. SSD rekommenderas.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
+    <th class="tg-baqh"><p align="center">Upplösning</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Minst 1280 x 800 (1920 x 1080 rekommenderas)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Bredband</td>
   </tr>
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**Vi rekommenderar starkt (men det är inget krav) att du använder en SSD (Solid State Disk) i stället för en HDD (hårddisk), eftersom det går snabbare att bygga APK-filen för AAPS.**  Du kan ändå använda en HDD när du bygger APK-filen för **AAPS**. Om du gör det kan bygget ta lång tid, men när det väl har startat kan du låta det köra utan tillsyn.
 
-## Help and support during the building process
+## Hjälp och stöd under bygget
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) section, please consult that first.
+Om du får problem när du bygger appen **AAPS** finns det ett eget avsnitt för [**felsökning av Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md). Läs det först.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Om du tycker att något i bygginstruktionerna är fel, saknas eller är otydligt, eller om du fortfarande har problem, kontakta andra användare av **AAPS** i gruppen på [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) eller på [Discord](https://discord.gg/4fQUWHZ4Mw). Om du själv vill ändra något (uppdatera skärmbilder _osv._), skicka in en [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
-## Step-by-step guide to building the AAPS app
+## Steg-för-steg-guide för att bygga appen AAPS
 
 ```{admonition} WARNING
 :class: warning
-If you have built AAPS before, you don't need to take all the following steps again.
-Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
+Om du har byggt AAPS tidigare behöver du inte göra alla följande steg igen.
+Gå direkt till [guiden för uppdatering](../Maintenance/UpdateToNewVersion.md)!
 ```
 
 ```{contents} The overall steps for building the **AAPS** apk file
@@ -91,347 +91,347 @@ Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)
 :local: true
 ```
 
-In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow.
+I den här guiden hittar du _exempel_ på skärmbilder från bygget av APK-filen för **AAPS**. Eftersom **Android Studio** – programmet som vi använder för att bygga APK-filen för **AAPS** – uppdateras regelbundet, kan skärmbilderna skilja sig något från din installation, men du bör ändå kunna följa dem.
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
+Eftersom **Android Studio** körs på Windows, Mac OS X och Linux kan det också finnas små skillnader i stegen mellan plattformarna.
 
 (install-git-if-you-dont-have-it)=
-### Install Git
+### Installera Git
 
 ```{admonition} Why Git? 
 :class: dropdown
 
-Git is known as a “_Versioning Control System_” (VCS).\
-Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
+Git är ett så kallat ”_versionshanteringssystem_” (Versioning Control System, VCS).\
+Git är ett program som låter dig följa ändringar i kod och samarbeta med andra. Du använder Git för att göra en kopia av källkoden för **AAPS** från webbplatsen GitHub till din egen dator. Sedan använder du Android Studio på din dator för att bygga appen **AAPS** (APK). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
-#### Steps for Installing Git
+#### Steg för att installera Git
 
-1.  Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
+1.  Kontrollera att du inte redan har **Git** installerat. Det gör du genom att skriva ”git” i sökfältet i Windows – om du ser **”Git bash”** eller någon annan form av Git är det redan installerat, och du kan gå direkt till [installera Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
+2. Om du inte har Git installerat, hämta och installera den senaste versionen för ditt system från avsnittet "Download" [**här**](https://git-scm.com/downloads). Alla nya versioner av Git bör fungera. Välj rätt version för ditt system, Mac, Windows eller Linux.
 
-**Note for Mac users:** the Git webpage will also guide you to install an additional program called "homebrew" to aid the installation. If you install Git via homebrew, there is no need to change any preferences.
+**Obs! för Mac-användare:** webbsidan för Git hänvisar dig också till att installera ett extra program som heter "homebrew" som hjälp vid installationen. Om du installerar Git med homebrew behöver du inte ändra några inställningar.
 
 (Make_a_note_of_Git_path)=
 
-* During the installation, when you are asked to "select destination location" make a note of _where_ Git is being installed (the "**installation path**") you will need to check it in the next step. It will be something similar to "C:\Program Files\Git\cmd\git.exe"
+* När du under installationen ombeds att "select destination location" (välja målplats), skriv upp _var_ Git installeras (”**installationssökvägen**”). Du behöver kontrollera den i nästa steg. Den ser ut ungefär så här: "C:\Program Files\Git\cmd\git.exe"
 
-*  As you proceed through several steps of the Git installation, just accept all the default options.
+*  Godkänn bara alla standardalternativ i de olika stegen i installationen av Git.
 
-*  After the install, if you forgot to make a note of the where Git was installed, you can find it as follows: type "git" into the PC search bar, right click on "Git bash", select "open file location" hover over the "Git bash" icon with your mouse, which will then reveal where it is installed.
+*  Om du glömde att skriva upp var Git installerades kan du hitta det så här efter installationen: skriv "git" i sökfältet i Windows, högerklicka på "Git bash", välj "open file location" (öppna filplatsen) och håll muspekaren över ikonen "Git bash". Då ser du var det är installerat.
 
-* Reboot your computer before the next step.
+* Starta om datorn före nästa steg.
 
 (Building-APK-install-android-studio)=
 ### Install Android Studio
 
-- **You have to be online all of the time during the following steps, as Android Studio downloads several updates**
+- **Du måste vara ansluten till internet hela tiden under följande steg, eftersom Android Studio hämtar flera uppdateringar**
 
 ```{admonition} What is Android Studio?
 :class: dropdown
-Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
+Android Studio är ett program som körs på din dator. Med det kan du hämta källkod från internet (med Git) och bygga appar för smarttelefoner (och smartklockor). Du kan inte ”förstöra” en aktuell version av **AAPS** som loopar på din smarttelefon genom att bygga en ny eller uppdaterad app på din dator med Android Studio – det är helt separata processer. 
 ```
 
-One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
+En av de viktigaste sakerna när du installerar Android Studio är att **ha tålamod!** Under installationen och konfigurationen hämtar Android Studio mycket data, och det tar tid.
 
 ```{admonition} Different UI
 :class: warning
-Important note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+Viktigt: Android Studio har ändrat sitt gränssnitt i de senaste versionerna. Den här guiden visar stegen med det *nya gränssnittet*. Skärmbilderna togs med "Ladybug", så nyare versioner kan se lite annorlunda ut. Om du fortfarande använder det äldre gränssnittet kan du först byta Android Studio till det nya gränssnittet enligt [de här instruktionerna](#computerbuild-NewUI).
 ```
 
-The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
+Versionen av Android Studio är mycket viktig. Se [instruktionerna ovan](#Building-APK-recommended-specification-of-computer-for-building-apk-file) för att välja rätt version av Android Studio.
 
-Download the [current version of Android Studio](https://developer.android.com/studio) or an older version from the [**Archives**](https://developer.android.com/studio/archive) and accept the download agreements.
+Hämta den [aktuella versionen av Android Studio](https://developer.android.com/studio) eller en äldre version från [**Archives**](https://developer.android.com/studio/archive) (arkivet) och godkänn villkoren för nedladdningen.
 
 ![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
-Once the download is finished, start the downloaded application to install it on your computer. You might need to accept/confirm some warnings about downloaded apps from Windows!
+När nedladdningen är klar startar du det nedladdade programmet för att installera det på datorn. Du kan behöva godkänna/bekräfta några varningar från Windows om nedladdade appar!
 
-Install Android Studio by clicking "Next", as shown in the following screenshots. You do **not** need to change any settings!
+Installera Android Studio genom att klicka på "Next", som på skärmbilderna nedan. Du behöver **inte** ändra några inställningar!
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+Om du vill spara hårddiskutrymme kan du avmarkera Android Virtual Device: det används inte för att bygga **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
 ![Configuration_Settings](../images/Building-the-App/013_InstallLadybug.png)
 
-Now click on "Install":
+Klicka nu på "Install":
 
 ![Choose_start_Menu_Folder](../images/Building-the-App/014_InstallLadybug.png)
 
-Once it's completed, press "Next"
+När det är klart trycker du på "Next"
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finish" to start Android Studio for the first time.
+I det sista steget klickar du på "Finish" för att starta Android Studio för första gången.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
-You will be asked if you want to help improve Android Studio. Choose the option to your liking, it won't make any difference for the following steps.
+Du får frågan om du vill hjälpa till att förbättra Android Studio. Välj det alternativ du vill. Det påverkar inte stegen nedan.
 
 ![Help_improve_Android_Studio](../images/Building-the-App/020_ImproveAS.png)
 
-The welcome screen greets you to the installation of Android Studio. Press "Next".
+Välkomstskärmen hälsar dig välkommen till installationen av Android Studio. Tryck på "Next".
 
 ![Welcome](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
 
-Select "Standard" as installation type.
+Välj "Standard" som installationstyp.
 
 ![Install_Type](../images/Building-the-App/023_DefaultInstallation.png)
 
-Verify the settings by clicking "Next" again.
+Bekräfta inställningarna genom att klicka på "Next" igen.
 
 ![Verify_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
-Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
+Nu måste du godkänna licensavtalen. Till vänster finns två avsnitt (1 + 3) som du ska välja ett i taget, och för vart och ett väljer du "Accept" (2 + 4) till höger.
 
-Then the "Finish" (5) button can be clicked.
+Sedan kan du klicka på knappen "Finish" (5).
 
 ![License_Agreement](../images/Building-the-App/025_LicenseAgreement.png)
 
-Some Android packages will now be downloaded and installed. Be patient and wait.
+Nu laddas några Android-paket ned och installeras. Ha tålamod och vänta.
 
-When it's finished, you will find the following screen where you can select "Finish" again.
+När det är klart visas följande skärm, där du kan välja "Finish" igen.
 
 ![Downloading_Components](../images/Building-the-App/026_DownloadFinished.png)
 
-You will now see the Welcome screen of Android Studio.
+Nu visas välkomstskärmen i Android Studio.
 
 ![Welcome_to_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
 
 (Building-APK-download-AAPS-code)=
-### Download the AAPS code
+### Ladda ned koden för AAPS
 
 ```{admonition} Why can it take a long time to download the AAPS code?
 :class: dropdown
 
-The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
+Första gången **AAPS** hämtas ansluter Android Studio via internet till webbplatsen GitHub för att hämta källkoden för **AAPS**. Det bör ta ungefär 1 minut. 
 
-Android Studio will then use **Gradle** (a development tool for Android apps) to identify other components needed to build these items on your computer. 
+Sedan använder Android Studio **Gradle** (ett utvecklingsverktyg för Android-appar) för att ta reda på vilka andra komponenter som behövs för att bygga appen på din dator. 
 ```
 
-On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left.
+På välkomstskärmen i Android Studio, kontrollera att "**Projects**" (1) är markerat till vänster.
 
-Then click "**Clone Repository**" (2) on the right:
+Klicka sedan på "**Clone Repository**" (2) till höger:
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
-We will now tell Android Studio where to get the code from:
+Nu talar vi om för Android Studio var koden ska hämtas från:
 
 ![Get from Version Control](../images/Building-the-App/033_CloneGit.png)
 
-* "Repository URL" should be selected (by default) on the left (1).
-* "Git" should be selected (by default) as version control (2).
-* Now copy this URL:
+* "Repository URL" ska vara valt (som standard) till vänster (1).
+* "Git" ska vara valt (som standard) som versionshantering (2).
+* Kopiera nu den här URL:en:
     ```
     https://github.com/nightscout/AndroidAPS.git
     ```
-    and paste it into the URL textbox (3).
+    och klistra in den i textrutan URL (3).
 
-* Check the (default) directory for saving the cloned code does not already exist on your computer (4). You can change it to some directory, but please remember where you stored it!
-* Now click the button "Clone" (5).
+* Kontrollera att (standard)katalogen där den klonade koden ska sparas inte redan finns på din dator (4). Du kan byta till en annan mapp, men kom ihåg var du sparade den!
+* Klicka nu på knappen "Clone" (5).
 
 ```{admonition} INFORMATION
 :class: note
-Make a note of the directory. It is where your sourcecode is stored!
+Skriv upp katalogen. Det är där din källkod sparas!
 ```
 
-You will now see a screen telling you that the repository is being cloned:
+Nu visas en skärm som talar om att repot klonas:
 
 ![cloning_repository](../images/Building-the-App/034_CloningProgress.png)
 
-At some point, Android Studio will close and start again. You may be asked whether you want to trust the project. Click on "Trust project":
+Vid något tillfälle stängs Android Studio och startar igen. Du kan få frågan om du litar på projektet. Klicka på "Trust project":
 
   ![Trust project](../images/Building-the-App/035_TrustProject.png)
 
 
-Only for Windows users: If your firewall asks for permission, grant access:
+Bara för Windows-användare: om brandväggen ber om behörighet, ge åtkomst:
 
- ![Firewall permission java](../images/AndroidStudio361_18.png)
+ ![Brandväggsbehörighet för java](../images/AndroidStudio361_18.png)
 
-After the repository is cloned successfully, Android Studio will open the cloned project.
+När repot har klonats öppnar Android Studio det klonade projektet.
 
 (computerbuild-NewUI)=
 ```{admonition} New UI
 :class: note
-Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
+Android Studio har nyligen ändrat sitt gränssnitt. Nya installationer av Android Studio använder det nya gränssnittet som standard!
 
-Only if your Android Studio looks different, you might need to switch to the new UI:
-Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
-In **Appearance & Behavior**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
+Bara om ditt Android Studio ser annorlunda ut kan du behöva byta till det nya gränssnittet:
+Klicka på hamburgermenyn uppe till vänster och välj sedan **Settings** (eller **Preferences** på Apple-datorer).
+I **Appearance & Behavior** går du till **New UI** och markerar **Enable new UI**. Starta sedan om Android Studio för att börja använda det.
 
-If you don't find the option **New UI** don't worry: you are already using it!
+Om du inte hittar alternativet **New UI**, oroa dig inte: då använder du det redan!
 ```
 
 
-When Android Studio opened, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
+När Android Studio har öppnats, vänta tålmodigt (det kan ta några minuter), och framför allt: uppdatera **inte** projektet som föreslås i popup-fönstret.
 
-Android Studio will start a "Gradle project sync" automatically, which will take a couple of minutes to finish. You can see it (still) running:
+Android Studio startar automatiskt en "Gradle project sync", som tar några minuter. Du kan se att den (fortfarande) körs:
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
 ```{admonition} NEVER UPDATE GRADLE!
 :class: warning
 
-Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+Android Studio kan rekommendera att du uppdaterar gradle-systemet. **Uppdatera aldrig gradle!** Det leder till problem.
 ```
 
-Only on windows computers: You might get a notification about windows defender running: Click on **Automatically** and confirm, it will make the build run faster!
+Bara på Windows-datorer: Du kan få en avisering om att Windows Defender körs. Klicka på **Automatically** (automatiskt) och bekräfta – då går bygget snabbare!
 
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
 
-You can leave the gradle sync running and follow the next steps already.
+Du kan låta gradle-synkroniseringen köra och redan fortsätta med nästa steg.
 
 (Building-APK-set-git-path-in-preferences)=
-### Set Git path in Android Studio preferences
+### Ange sökvägen till Git i inställningarna i Android Studio
 
-Now we will tell Android studio where to find Git, which you installed [earlier](#install-git-if-you-dont-have-it).
+Nu ska vi tala om för Android Studio var Git finns, som du installerade [tidigare](#install-git-if-you-dont-have-it).
 
-* Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
+* Bara för Windows-användare: Se till att du har startat om datorn efter att du [installerade Git](#install-git-if-you-dont-have-it). Om inte, starta om nu och öppna Android Studio igen
 
-In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git** (2)
+Öppna hamburgermenyn i det övre vänstra hörnet i **Android Studio** och gå till **File** > **Settings** (på Windows) eller **Android Studio** > **Preferences** (på Mac). Då öppnas följande fönster. Klicka för att fälla ut listan **Version Control** (1) och välj **Git** (2)
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
+Kontrollera om **Android Studio** automatiskt hittar rätt **Path to Git executable** (sökväg till Git-programmet) genom att klicka på knappen "Test" (1):
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
 
-If the automatic setting is successful, your current version of **Git** will be displayed next to the path.
+Om den automatiska inställningen lyckas visas din aktuella version av **Git** bredvid sökvägen.
 
    ![Git_version_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
 
-If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
-* manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
-* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
-* Verify your settings with the **Test** button!
+Om **git.exe** inte hittas automatiskt, eller om ett klick på "Test" ger ett fel, kan du antingen
+* skriva in sökvägen som du sparade [tidigare](#BuildingAaps-steps-for-installing-git) för hand, eller
+* klicka på mappikonen (1) och gå för hand till katalogen där **git.exe** installerades [tidigare](#BuildingAaps-steps-for-installing-git)
+* Kontrollera dina inställningar med knappen **Test**!
 
-  ![Git not found](../images/Building-the-App/039_GitTestError.png)
+  ![Git hittades inte](../images/Building-the-App/039_GitTestError.png)
 
 (Building-APK-generate-signed-apk)=
-### Build the AAPS "signed" APK
+### Bygg den "signerade" APK-filen för AAPS
 
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
-Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
+Android kräver att varje app är _signerad_, så att den senare bara kan uppdateras från samma pålitliga källa som släppte den ursprungliga appen. Mer information om detta finns via [den här länken](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
 
-For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+För oss betyder det bara att vi skapar en signeringsfil, en så kallad ”keystore”-fil, och använder den när vi bygger appen **AAPS**.
 ```
 
 
-**Important: Make sure the gradle sync is finished successfully before proceeding!**
+**Viktigt: Se till att gradle-synkroniseringen har slutförts utan fel innan du fortsätter!**
 
 
-Click the hamburger menu on the top left to open the menu bar. Select **Build** (1), then select **Generate Signed App Bundle / APK** (2)
+Klicka på hamburgermenyn uppe till vänster för att öppna menyraden. Välj **Build** (1) och välj sedan **Generate Signed App Bundle / APK** (2)
 
-![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
+![Bygg APK](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Select "APK" (1) instead of "Android App Bundle" and click "Next" (2):
+Välj "APK" (1) i stället för "Android App Bundle" och klicka på "Next" (2):
 
-![APK instead of bundle](../images/Building-the-App/041_APK.png)
+![APK i stället för bundle](../images/Building-the-App/041_APK.png)
 
-In the next screen, make sure that "Module" is set to "AndroidAPS.app" (1). The part before ".app" is the name of the folder you cloned the code into.
+På nästa skärm, kontrollera att "Module" är inställt på "AndroidAPS.app" (1). Delen före ".app" är namnet på mappen som du klonade koden till.
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
 :class: note
-If you want to create the apk for your watch, you now need to select AndroidAPS.wear!
+Om du vill skapa APK-filen för din klocka ska du nu välja AndroidAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
-Click "Create new..." (2) to start creating your key store.
+Klicka på "Create new..." (2) för att börja skapa din keystore.
 
 ```{admonition} INFORMATION!
 :class: note
-You will only need to create the keystore once.
-If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+Du behöver bara skapa din keystore en gång.
+Om du har byggt AAPS tidigare ska du INTE skapa en ny keystore, utan välja din befintliga och ange dess lösenord!
 ```
 
-**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
+**_Obs!_** Keystore är en fil där informationen för att signera appen sparas. Den är krypterad och informationen skyddas med lösenord.
 
-![Create key store](../images/Building-the-App/043_Keystore.png)
+![Skapa keystore](../images/Building-the-App/043_Keystore.png)
 
-* Click the "folder" symbol (1) to select a path on your computer for your key store.
+* Klicka på symbolen "folder" (1) för att välja en plats på datorn för din keystore.
 
-  Do **not** use the directory where you stored your sourcecode but some directory that you would also transfer to a new computer.
+  Använd **inte** katalogen där du sparade källkoden, utan en katalog som du också skulle flytta över till en ny dator.
 
 ```{admonition} WARNING!
 :class: warning
-Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AAPS update!
+Skriv upp var din keystore är sparad. Du behöver den när du bygger nästa uppdatering av AAPS!
 ```
 
-* Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
+* Välj nu ett enkelt lösenord (och skriv upp det), skriv in det i lösenordsrutan (2) och bekräfta det (2).
 
-  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+  Lösenorden för keystore och nyckel behöver inte vara avancerade. Om du tappar bort ditt lösenord i framtiden, se [Installera om AAPS med en ny keystore](#reinstall-aaps).
 
 ```{warning}
-**Avoid special characters in your passwords.** Use only letters and digits for the keystore and key passwords. In particular, do not use `$`, a backtick, `"` or `\`. If you later switch to the [Browser build](#aaps-ci-option2) and reuse this keystore, these characters can make the signing step fail, see [Browser build troubleshooting](#aaps-ci-password-special-characters).
+**Undvik specialtecken i dina lösenord.** Använd bara bokstäver och siffror för lösenorden till keystore och nyckel. Använd särskilt inte `$`, backtick, `"` eller `\`. Om du senare byter till [Bygge i webbläsaren](#aaps-ci-option2) och återanvänder den här keystore, kan de här tecknen göra att signeringen misslyckas, se [Bygge i webbläsaren: felsökning](#aaps-ci-password-special-characters).
 ```
 
-* The default alias (3) for your key is "key0", leave this unchanged.
+* Standardaliaset (3) för din nyckel är "key0". Ändra inte det.
 
-* You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
+* Nu behöver du ett lösenord för din nyckel. För att göra det enkelt kan du använda samma lösenord som för din keystore ovan, om du vill. Skriv in ett lösenord (4) och bekräfta det.
 
 ```{admonition} WARNING!
 :class: warning
-Note down these passwords! You will need them when you build the next AAPS update!
+Skriv upp de här lösenorden! Du behöver dem när du bygger nästa uppdatering av AAPS!
 ```
 
-* The validity is 25 years by default, leave it as it is.
+* Giltighetstiden är 25 år som standard. Låt den vara som den är.
 
-* Enter your first and last name (5). No other information needs to be added but you are free to do (6-7).
+* Skriv in ditt förnamn och efternamn (5). Ingen annan information behöver fyllas i, men du får gärna göra det (6-7).
 
-* Click "OK" (8) to continue:
-
-
-On the **Generate signed App Bundle or APK** page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
-
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+* Klicka på "OK" (8) för att fortsätta:
 
 
-On the next screen, select build variant "fullRelease" (1) and click "Create" (3). You should remember the destination folder displayed at (2), as later you will find your built apk file there!
+På sidan **Generate signed App Bundle or APK** visas nu sökvägen till din keystore. Skriv nu in lösenordet för Key Store (1) och lösenordet för Key (2) igen och markera rutan (3) för att komma ihåg lösenorden, så att du inte behöver skriva in dem nästa gång du bygger APK-filen (alltså när du uppdaterar till en ny version av AAPS). Klicka på "Next" (4):
 
-   ![Select build variant](../images/Building-the-App/045_BuildPath.png)
+![Kom ihåg lösenorden](../images/Building-the-App/044_RememberPwd.png)
 
-Android Studio will now build the **AAPS** apk. It will show "Gradle Build running" (2) at the bottom right. The process takes some time, depending on your computer and internet connection, so **be patient!** If you want to watch the progress of the build, click on the small hammer "build" (1) at the bottom of Android Studio:
 
-![Gradle Running](../images/Building-the-App/046_BuildRunning.png)
+På nästa skärm väljer du byggvarianten "fullRelease" (1) och klickar på "Create" (3). Kom ihåg målmappen som visas vid (2), eftersom du senare hittar din färdiga APK-fil där!
 
-Now you can watch the building progress:
+   ![Välj byggvariant](../images/Building-the-App/045_BuildPath.png)
+
+Android Studio bygger nu APK-filen för **AAPS**. Längst ned till höger visas "Gradle Build running" (2). Det tar en stund, beroende på din dator och internetanslutning, så **ha tålamod!** Om du vill följa hur bygget går, klicka på den lilla hammaren "build" (1) längst ned i Android Studio:
+
+![Gradle körs](../images/Building-the-App/046_BuildRunning.png)
+
+Nu kan du följa hur bygget går:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification icon (1) to bring up the Notifications, and then on **locate** (2):
+Android Studio visar meddelandet "BUILD SUCCESSFUL" när bygget är klart. Du kan få en avisering som du kan klicka på för att välja "locate". Om du missar det, klicka på aviseringsikonen (1) för att visa Notifications (aviseringar), och sedan på **locate** (2):
 
-![Build finished](../images/Building-the-App/049_ReopenNotification.png)
+![Bygget är klart](../images/Building-the-App/049_ReopenNotification.png)
 
-**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio.md)._**
+**_Om bygget inte lyckades, se avsnittet [Felsökning av Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
-In the Notifications box, click on the blue link "locate":
+Klicka på den blå länken "locate" i rutan Notifications:
 
-![Locate build](../images/Building-the-App/048_BuildFinished.png) Your file manager will open and show you the build apk file that you have just built.
+![Hitta bygget](../images/Building-the-App/048_BuildFinished.png) Din filhanterare öppnas och visar APK-filen som du just har byggt.
 
-   ![File location apk](../images/Building-the-App/050_LocateAPK.png)
+   ![Var APK-filen finns](../images/Building-the-App/050_LocateAPK.png)
 
-Congratulations! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs.
+Grattis! Nu har du byggt APK-filen för **AAPS**. I nästa avsnitt av dokumentationen överför du filen till din smarttelefon.
 
 ```{tip}
-If you think you might want to use an Android Wear smartwatch in the future, this is the best time to build the AAPS Wear apk to be sure it will be synchronized with your AAPS apk.
+Om du tror att du kanske vill använda en smartklocka med Android Wear i framtiden, är det här det bästa tillfället att bygga Wear-APK:n för AAPS, så att den säkert stämmer överens med din APK för AAPS.
 ```
 
-Move to the next stage of [Transferring and Installing **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
+Gå vidare till nästa steg: [Överföra och installera **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
 
 
 

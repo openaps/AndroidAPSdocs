@@ -1,8 +1,8 @@
-# Component Overview
+# Panoramica dei componenti
 
 **AAPS** is not just a (self-built) application; it is one of several modules of your closed loop system. Before deciding on components, it is a good idea to look at the component documentation.
 
-![Components overview](../images/modules.png)
+![Panoramica dei componenti](../images/modules.png)
 
 ```{admonition} IMPORTANT SAFETY NOTICE
 :class: important
@@ -11,10 +11,10 @@ The foundation of **AAPS** safety features discussed in this documentation is bu
 
 Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
 
-Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
+Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen. [Maggiori informazioni qui](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
-## Necessary Modules
+## Moduli necessari
 
 ### Good individual dosage algorithm for your diabetes therapy
 
@@ -23,7 +23,7 @@ Even though this is not something to create or buy, it is probably the most unde
 The **Profile** includes:
 
 - BR (Basal rates): provides background insulin;
-- ISF (insulin sensitivity factor): how much your blood glucose level will be reduced by 1 unit of insulin;
+- ISF (fattore di sensibilità all'insulina): di quanto scende la tua glicemia con 1 unità di insulina;
 - CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin.
 
 Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
@@ -32,9 +32,9 @@ Alongside your **Profile**, you also need to configure your **insulin** in **Man
 
 More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
 
-### Phone
+### Telefono
 
-See the dedicated page [Phones](../Getting-Started/Phones.md).
+Vedi la pagina dedicata [Telefoni](../Getting-Started/Phones.md).
 
 ### Insulin pump
 
@@ -52,35 +52,35 @@ The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice ho
 - Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon as some CGM values are in.
 - All pumps **AAPS** can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
 
-### BG Source
+### Sorgente Glicemia
 
-See the dedicated page [Compatible CGMs](../Getting-Started/CompatiblesCgms.md).
+Vedi la pagina dedicata [CGM compatibili](../Getting-Started/CompatiblesCgms.md).
 
-### **AAPS**-.apk file
+### File .apk di **AAPS**
 
-The main component of the system. In order to install the app, you have to build the apk-file yourself first. Instructions are [here](../SettingUpAaps/BuildingAaps.md).
+Il componente principale del sistema. In order to install the app, you have to build the apk-file yourself first. Le istruzioni sono [qui](../SettingUpAaps/BuildingAaps.md).
 
-### Reporting server
+### Server di report
 
 A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS: [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
 
-The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set one up, as it is required to fulfill [**Objective 1**](#objectives-objective1).
+Il server di report è indipendente dagli altri moduli. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. Però devi comunque configurarne uno, perché serve per completare l'[**Obiettivo 1**](#objectives-objective1).
 
 Additional information on how to set up your reporting server can be found [here](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-## Optional Modules
+## Moduli opzionali
 
 ### Smartwatch
 
-You can choose any smartwatch running **Wear OS 3** or newer. See [Watches](../Getting-Started/Watches.md) for details.
+Puoi scegliere qualsiasi smartwatch con **Wear OS 3** o successivo. See [Watches](../Getting-Started/Watches.md) for details.
 
-Users are creating a [list of tested phones and watches](#Phones-list-of-tested-phones). There are different watchfaces for use with **AAPS**, which you can find [here](../WearOS/WearOsSmartwatch.md).
+Gli utenti stanno creando un [elenco di telefoni e smartwatch testati](#Phones-list-of-tested-phones). There are different watchfaces for use with **AAPS**, which you can find [here](../WearOS/WearOsSmartwatch.md).
 
 ### xDrip
 
 Even if you don't need the xDrip app as your **BG Source**, you can still use it, for example for alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when an alarm should be active, choose whether it can override silent mode, etc. Some xDrip information can be found [here](../CompatibleCgms/xDrip.md). Please be aware that the documentation for this app is not always up to date, as it changes quickly.
 
-## What to do while waiting for modules
+## Cosa fare mentre aspetti i moduli
 
 It sometimes takes a while to get all the modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
 

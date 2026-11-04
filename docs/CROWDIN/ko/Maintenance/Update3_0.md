@@ -1,4 +1,4 @@
-# Updating to AAPS 3.0
+# AAPS 3.0으로 업데이트
 
 (update30-failure-message-data-from-different-pump)=
 

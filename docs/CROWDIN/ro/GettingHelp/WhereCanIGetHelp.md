@@ -1,6 +1,6 @@
-# Where can I get help?
+# Unde pot primi ajutor?
 
-## I'm stuck; what should I do? Who can I ask?
+## Nu știu cum să continui. Ce trebuie să fac? Pe cine pot întreba?
 
 This project is based on volunteer work and a few rules apply to any requests for help to avoid unnecessary time being wasted by those who kindly pay it forward:
 
@@ -14,16 +14,16 @@ For support on CGM sources please use the Facebook groups or Discord channels fo
 
 ## Make sure to join the AndroidAPS users group on Facebook or Discord!
 
-Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and/or [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
+Alăturați-vă [grupului principal AndroidAPS de pe Facebook](https://www.facebook.com/groups/1900195340201874/) și/sau [AndroidAPS pe Discord](https://discord.gg/4fQUWHZ4Mw). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. Există și un grup pentru utilizatorii pompei Combo, [AAPSCombo](https://www.facebook.com/groups/127507891261169/), care au o configurare puțin mai specifică.
 
 Please note that Facebook has recently removed external links shared within the **AAPS** Facebook group and this includes current and historic posts which contain external links to the **AAPS** Notes / Read the docs. For new users who are working through the Objectives and reviewing historic **AAPS** Facebook posts please search key terms as discussed within the **AAPS** notes for further assistance.
 
-## Other resources in English
+## Alte resurse în limba engleză
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): covers all DIY closed loop systems (OpenAPS, Loop and AndroidAPS)
 * [xDrip - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM în general
-* [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
+* [AndroidAPS pe Discord](https://discord.gg/4fQUWHZ4Mw)
 
 ## Country / language specific resources
 
@@ -31,20 +31,20 @@ Please note that Facebook has recently removed external links shared within the 
 
 * [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australian users of OpenAPS, Loop and AndroidAPS
 
-### Czech and Slovak
+### Cehia și Slovacia
 
 * [AAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech-speaking users of AndroidAPS
 
-### France
+### Franța
 
 * [AndroidAPS France (Toutes Pompes)](https://www.facebook.com/groups/268922660715266)
 * [DIY AndroidAPS, parents d'enfants Dt1](https://www.facebook.com/groups/262497886779069) : French support group for AAPS for children
 
-### Germany
+### Germania
 
 * [Open Source Looper Community](https://de.loopercommunity.org/): German looper community for Open Source Loop, diabetes in general, communication, support and local meet-up
 * [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
-* [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
+* [Grupul Facebook NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
 * [Looped-DE](https://www.facebook.com/groups/loopedDE/)
 
 ### Țările de Jos
@@ -52,11 +52,11 @@ Please note that Facebook has recently removed external links shared within the 
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch-speaking users of OpenAPS, Loop and AndroidAPS
 * [CGM in the cloud Țările de Jos](https://www.facebook.com/groups/1764754560436596)
 
-### Norway
+### Norvegia
 
 * [Looped Norge](https://www.facebook.com/groups/loopednorge/)
 
-### Poland
+### Polonia
 
 * [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group
 

@@ -1,17 +1,17 @@
 (aaps-ci-ios-ipad)=
 
-# Option 1 · iPhone / iPad – Generate a new keystore
+# אפשרות 1 · iPhone / iPad – יצירת keystore חדש
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on **iPhone / iPad** (iPad shown as an example).
+[אפשרות 1](BrowserBuildO1.md) (יצירת keystore חדש) ב-**iPhone / iPad** (iPad מוצג כדוגמה).
 ```
 
-## 1. Download the preparation file
+## 1. הורדת קובץ ההכנה
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Open the preparation file and generate the keystore
+## 2. פתיחת קובץ ההכנה ויצירת ה-keystore
 
 Compatible with iOS (using iPad as an example)
 <!--crowdin: exclude-->
@@ -30,4 +30,4 @@ Compatible with iOS (using iPad as an example)
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**הבא: [שלב 3 – אישור Google Drive](BrowserBuildGoogleDrive.md) →**

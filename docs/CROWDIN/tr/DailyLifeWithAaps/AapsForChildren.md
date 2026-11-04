@@ -1,31 +1,31 @@
-# AAPS for children
+# Çocuklar için AAPS
 
-**AAPS** can be used successfully with type 1 kids as well. However, there are some things to consider.
+**AAPS**, tip 1 diyabetli çocuklarda da başarıyla kullanılabilir. Ancak dikkate almanız gereken bazı noktalar vardır.
 
 ## Dikkat edilmesi gereken önemli noktalar
 
-### Initial Profile
+### Başlangıç profili
 
-Setting the correct [**Profile**](../SettingUpAaps/YourAapsProfile.md) (basal rate, ISF, I:C...) and [insulin type](#Config-Builder-insulin-dia) (DIA) may prove difficult for children with type 1, especially when growth hormones are involved. Take your time to test and ensure that you are happy with your child’s basal, I:C, ISF and DIA. Test them in real life with your kid next to you before starting remote monitoring and remote treatment. Weekends or school holidays might be a good time for that.
+Doğru [**Profil**](../SettingUpAaps/YourAapsProfile.md) (bazal oran, İDF, IC...) ve [insülin tipi](#Config-Builder-insulin-dia) (İES) ayarlamak, tip 1 diyabetli çocuklarda zor olabilir; özellikle büyüme hormonları devredeyken. Çocuğunuzun bazal, IC, İDF ve İES değerlerini test etmek ve onlardan emin olmak için kendinize zaman tanıyın. Uzaktan izleme ve uzaktan tedaviye başlamadan önce bunları gerçek hayatta, çocuğunuz yanınızdayken test edin. Hafta sonları veya okul tatilleri bunun için iyi bir zaman olabilir.
 
-### Monitor and adjust your child’s Profile where necessary
+### Çocuğunuzun profilini izleyin ve gerektiğinde ayarlayın
 
-As the child grows, **Profile** adjustments will be necessary in order to account for your child’s body’s demands and needs. However this issue exists for all type 1 children including those who are on other pumps or injections.
+Çocuk büyüdükçe, vücudunun ihtiyaçlarını karşılamak için **Profil** ayarlamaları gerekecektir. Ancak bu sorun, başka pompa veya enjeksiyon kullananlar dahil, tip 1 diyabetli tüm çocuklar için geçerlidir.
 
-### Keeping the phone in range
+### Telefonu menzil içinde tutmak
 
-Think about how you will keep the child’s phone in range of their pump and **CGM**. This can be challenging with children who are too young to be responsible for a phone. An **AAPS** phone with a good Bluetooth connection range should be selected as well as finding a comfortable way for the child to carry the pump and phone. Many solutions exist, like insulin pump belts that also have space for a phone, or a harness to carry like a backpack.
+Çocuğun telefonunu pompasının ve **CGM**'inin menzili içinde nasıl tutacağınızı düşünün. Bu, bir telefonun sorumluluğunu alamayacak kadar küçük çocuklarda zor olabilir. Bluetooth bağlantı menzili iyi olan bir **AAPS** telefonu seçilmeli ve çocuğun pompayı ve telefonu rahatça taşıyabileceği bir yol bulunmalıdır. Birçok çözüm vardır; örneğin telefon için de yeri olan insülin pompası kemerleri veya sırt çantası gibi taşınan bir askı.
 
-### How to protect your child’s AAPS from being misused?
+### Çocuğunuzun AAPS'inin kötüye kullanılması nasıl önlenir?
 
-There are several protection settings available in **AAPS** to prevent the child or a stranger from misusing **AAPS**. See [Settings → Protection](#Preferences-protection) to add password or biometric protection to boluses, settings changes, or even **AAPS** itself.
+Çocuğun veya bir yabancının **AAPS**'i kötüye kullanmasını önlemek için **AAPS**'te birkaç güvenlik ayarı vardır. Boluslara, ayar değişikliklerine, hatta **AAPS**'in kendisine parola veya biyometrik koruma eklemek için [Ayarlar → Koruma](#Preferences-protection) bölümüne bakın.
 
-## Remote monitoring and remote control
+## Uzaktan izleme ve uzaktan kumanda
 
-Remote monitoring is an essential functionality when using **AAPS** for children. See the dedicated section [Remote Monitoring](../RemoteFeatures/RemoteMonitoring.md) to explore possible options.
+**AAPS**'i çocuklar için kullanırken uzaktan izleme temel bir işlevdir. Olası seçenekleri incelemek için [Uzaktan İzleme](../RemoteFeatures/RemoteMonitoring.md) bölümüne bakın.
 
-Remote monitoring and treatment can be hugely beneficial for parents of a type 1 child and this is particularly so when the child attends kindergarten and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan.
+Uzaktan izleme ve tedavi, tip 1 diyabetli bir çocuğun ebeveynleri için çok faydalı olabilir; özellikle çocuk anaokuluna ve ilkokula gittiğinde. Ancak öğretmenlerin ve eğitimcilerin çocuğunuzun tedavi planından haberdar olduğundan emin olun.
 
-Work out how adding in remote control is going to work with/enhance the existing plan. Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher "follow" phone.
+Uzaktan kumandanın mevcut planla nasıl çalışacağını ve planı nasıl iyileştireceğini belirleyin. Birçok ebeveyn, çocuk bakıcıları ile ayrı bir iletişim kanalı olmasını faydalı bulur; örneğin öğretmen için ucuz, küçük bir "takip" telefonu.
 
-Examples for school care plans can be found in the [files section of AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook. 
+Okul bakım planı örneklerini Facebook'taki [AAPS kullanıcıları grubunun dosyalar bölümünde](https://www.facebook.com/groups/AndroidAPSUsers/files/) bulabilirsiniz. 

@@ -1,457 +1,457 @@
-# Operation of AAPS via your Wear OS smartwatch
+# Wear OS akıllı saatiniz üzerinden AAPS'in kullanımı
 
 (Watchfaces-aaps-watchfaces)=
 
-## AAPS Watchfaces
+## AAPS saat arayüzleri
 
 ```{warning}
-The classic **AAPS** watchfaces run on Wear OS 5 and older only, and Wear OS 5 already limits them. On **Wear OS 6 and newer** the watch app installs one watchface in Google's Watch Face Format instead: your custom watchface as a picture, or the **Complications watchface**. See [Wear OS watch face changes](#wearos-watchface-changes) for what breaks on each Wear OS version, and [the watchface AAPS installs](#wearos-aaps-v4-watchface) for Wear OS 6.
+Klasik **AAPS** saat arayüzleri yalnızca Wear OS 5 ve daha eski sürümlerde çalışır ve Wear OS 5 onları zaten kısıtlar. **Wear OS 6 ve daha yeni** sürümlerde saat uygulaması bunun yerine Google'ın Watch Face Format biçiminde tek bir saat arayüzü yükler: resim olarak özel saat arayüzünüz veya **Komplikasyonlu saat arayüzü**. Her Wear OS sürümünde neyin bozulduğu için [Wear OS saat arayüzü değişiklikleri](#wearos-watchface-changes) bölümüne, Wear OS 6 için [AAPS'in yüklediği saat arayüzü](#wearos-aaps-v4-watchface) bölümüne bakın.
 ```
 
-On Wear OS 5 and older, several classic watchfaces are built into the **AAPS** watch app. They show the glucose value with delta, IOB, the active basal rate and a graph of the readings. Two taps work on them:
+Wear OS 5 ve daha eski sürümlerde **AAPS** saat uygulamasında birkaç klasik saat arayüzü bulunur. Bunlar glikoz değerini delta ile birlikte, AİNS'i, etkin bazal oranı ve okumaların grafiğini gösterir. Bunlarda iki dokunma işlemi çalışır:
 
-* Double-tap the glucose value to open the **AAPS** main menu
-* Double-tap the graph to change its time range
+* **AAPS** ana menüsünü açmak için glikoz değerine iki kez dokunun
+* Zaman aralığını değiştirmek için grafiğe iki kez dokunun
 
-On every Wear OS version, the [complications](#Watchfaces-complications) and the [tiles](#WearOsSmartwatch-wear-os-tiles) described on this page work with any watchface that has room for them.
+Her Wear OS sürümünde, bu sayfada anlatılan [komplikasyonlar](#Watchfaces-complications) ve [paneller](#WearOsSmartwatch-wear-os-tiles), onlara yeri olan her saat arayüzüyle çalışır.
 
 ## Configuration
 
-Enable **Wear** in [**Configuration** > **Communication**](#Config-Builder-wear).
+[**Konfigürasyon** > **İletişim**](#Config-Builder-wear) bölümünde **Wear** seçeneğini etkinleştirin.
 
-To bolus or take other actions from the watch, turn on **Wear control**. The bolus wizard options for the watch are set in the same place: see [Settings > Wear](#preferences-wear). While **Wear control** is off, the phone refuses every treatment or mode change sent from the watch, and the watch shows *"Wear control is turned off in the Wear settings on the phone."*
+Saatten bolus yapmak veya başka işlemler yapmak için **Wear kontrolü** seçeneğini açın. Saat için bolus sihirbazı seçenekleri de aynı yerde ayarlanır: bkz. [Ayarlar > Wear](#preferences-wear). **Wear kontrolü** kapalıyken telefon, saatten gönderilen her tedaviyi veya mod değişikliğini reddeder ve saat *"Saat kontrolü, telefondaki Wear ayarlarında kapalı."* mesajını gösterir.
 
-With **Open plugin** on the **Wear** card you open the Wear screen:
+**Wear** kartındaki **Eklentiyi aç** ile Wear ekranını açarsınız:
 
-![Wear plugin screen](../images/screens/wear_plugin.png)
+![Wear eklentisi ekranı](../images/screens/wear_plugin.png)
 
-The top line shows the name of the connected watch, or **(No Watch Connected)**. From this screen you can
+Üst satırda bağlı saatin adı veya **(Saat Bağlı Değil)** gösterilir. Bu ekranda şunları yapabilirsiniz:
 
-* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
-* Choose which watchface **AAPS** installs on the watch (**Watchface installed on watch**: your custom watchface, or the complications watchface). This card is only shown while a **Wear OS 6** or newer watch is connected. See [the watchface AAPS installs](#wearos-aaps-v4-watchface).
-* Manage the **Custom Watchface** (the card is shown while a watch is connected): **Load Watchface** sends a custom watchface to the watch, **Infos Watchface** lists the details of the loaded watchface and the fields it contains, **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) in your browser, and **Export template** saves a template you can edit. A preview of the loaded watchface is shown below the buttons. See [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface).
+* Resend all data. Saat bir süre bağlı değilse ve bilgileri saate göndermek istiyorsanız yararlı olabilir.
+* Saatinizdeki ayarları doğrudan telefonunuzdan açın.
+* **AAPS**'in saate hangi saat arayüzünü yükleyeceğini seçin (**Saatte yüklü saat arayüzü**: özel saat arayüzünüz veya Komplikasyonlu saat arayüzü). Bu kart yalnızca **Wear OS 6** veya daha yeni bir saat bağlıyken gösterilir. Bkz. [AAPS'in yüklediği saat arayüzü](#wearos-aaps-v4-watchface).
+* **Özel saat arayüzü** kartını yönetin (kart, bir saat bağlıyken gösterilir): **Saat arayüzü yükle** saate özel bir saat arayüzü gönderir, **Saat arayüzü bilgisi** yüklenen saat arayüzünün ayrıntılarını ve içerdiği alanları listeler, **Diğer saat arayüzleri** tarayıcınızda [paylaşım sayfasını](../ExchangeSiteCustomWatchfaces/index.md) açar ve **Şablonu Dışarı Aktar** düzenleyebileceğiniz bir şablon kaydeder. Yüklenen saat arayüzünün önizlemesi düğmelerin altında gösterilir. Bkz. [AAPS saat arayüzüne geçiş](#WearOS_changing-to-AAPS-watchface).
 
-Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
+AAPS'ten gelen bildirimlerin saatte engellenmediğinden emin olun. Bir işlemin onayı (ör. bolus, geçici hedef) bir bildirimle gelir; bu bildirimi kaydırıp onay işaretine dokunmanız gerekir.
 
 ## Accessing main menu of AAPS
 
-![AAPS main menu on the watch](../images/wearos/main_menu.png)
+![Saatteki AAPS ana menüsü](../images/wearos/main_menu.png)
 
-To open the main menu of **AAPS**, use one of these:
+**AAPS** ana menüsünü açmak için şunlardan birini kullanın:
 
-* open **AAPS** from the watch's app list
-* tap an **AAPS** complication that opens the menu, see [Complication related settings](#WearOsSmartwatch-complication-settings)
-* tap the **BG Graph** tile with its **Tap action** set to **Main Menu**, see [Tile settings](#WearOsSmartwatch-wear-os-tiles)
-* on a classic **AAPS** watchface, double-tap the glucose value
+* saatin uygulama listesinden **AAPS**'i açın
+* menüyü açan bir **AAPS** komplikasyonuna dokunun, bkz. [Komplikasyonla ilgili ayarlar](#WearOsSmartwatch-complication-settings)
+* **Dokunma eylemi** **Ana Menü** olarak ayarlanmış **KŞ Grafiği** paneline dokunun, bkz. [Panel ayarları](#WearOsSmartwatch-wear-os-tiles)
+* klasik bir **AAPS** saat arayüzünde glikoz değerine iki kez dokunun
 
 (WearOsSmartwatch-loop-status)=
 
-## Loop Status screen
+## Döngü durumu ekranı
 
-The **Loop Status** screen gives a summary of what the loop is doing, without taking out your phone. Open it from the AAPS main menu (**Loop status**, or **Status → Loop**), or by tapping the **Blood Glucose** complication. The **Status** menu also has a **Pump** page and a **TDD** page with the total daily doses.
+**Döngü durumu** ekranı, telefonunuzu çıkarmadan döngünün ne yaptığının bir özetini verir. Bu ekranı AAPS ana menüsünden (**Döngü durumu** veya **Durum → Döngü**) ya da **Kan Şekeri** komplikasyonuna dokunarak açın. **Durum** menüsünde ayrıca bir **Pompa** sayfası ve toplam günlük dozları gösteren bir **GTD** sayfası vardır.
 
-![Status menu: Pump, Loop and TDD](../images/wearos/status_menu.png)
+![Durum menüsü: Pompa, Döngü ve GTD](../images/wearos/status_menu.png)
 
-![Loop Status screen](../images/wearos/loop_status.png)
+![Döngü durumu ekranı](../images/wearos/loop_status.png)
 
-The screen is a list of cards. Scroll down to see them all:
+Ekran bir kart listesidir. Hepsini görmek için aşağı kaydırın:
 
-* **Running mode** — the current mode (closed loop, open loop, LGS, suspended, disconnected…) and, for a temporary mode, how long it still runs.
-* **Loop result** — when the loop last ran, and the temporary basal or SMB it requested.
-* **Scene** — only while a [scene](#scenes-from-watch) is active: its name, the time left (or **Until ended** for a scene without end time) and the **Follow-up** scene that starts when it ends.
-* **Targets** — your target, and the temporary target if one is running.
-* **Profile** — the name of the active profile, with its **Percentage** and **Timeshift** when they are not the default values. A temporary profile switch is highlighted and shows how long it still runs and the profile it **Returns to** when it ends.
-* **Sensitivity** — the same lines as the sensitivity chip on the phone's main screen: the autosens value and the profile, variable and effective ISF.
+* **Çalışma modu** — geçerli mod (kapalı döngü, açık döngü, LGS, askıya alındı, bağlantı kesildi…) ve geçici bir mod için ne kadar daha süreceği.
+* **Döngü Sonucu** — döngünün en son ne zaman çalıştığı ve istediği geçici bazal veya SMB.
+* **Senaryo** — yalnızca bir [senaryo](#scenes-from-watch) etkinken: senaryonun adı, kalan süresi (bitiş zamanı olmayan bir senaryo için **Sona erene kadar**) ve bittiğinde başlayan **Devam** senaryosu.
+* **Hedefler** — hedefiniz ve çalışıyorsa geçici hedef.
+* **Profil** — etkin profilin adı; varsayılan değerlerde değilse **Yüzde** ve **Zaman kayması** ile birlikte. Geçici bir profil değişimi vurgulanır; ne kadar daha süreceğini ve bittiğinde döneceği profili (**Geri döner**) gösterir.
+* **Duyarlılık** — telefonun ana ekranındaki duyarlılık çipiyle aynı satırlar: Otoduyarlılık değeri ile profil, değişken ve etkin İDF.
 
-A small scene icon next to a running mode, a temporary target or a profile switch means it was **set by the active scene**. The same icon is shown in the **Running mode** picker.
+Bir çalışma modunun, geçici hedefin veya profil değişiminin yanındaki küçük senaryo simgesi, bunun etkin senaryo tarafından ayarlandığını gösterir (**Aktif senaryo tarafından ayarlandı**). Aynı simge **Çalışma modu** seçicisinde de gösterilir.
 
-![Profile card with a temporary profile switch set by a scene](../images/wearos/loop_status_profile_scene.png)
+![Senaryo tarafından ayarlanmış geçici profil değişimini gösteren profil kartı](../images/wearos/loop_status_profile_scene.png)
 
 (WearOsSmartwatch-bolus-calculator)=
 
-## The bolus calculator on the watch
+## Saatteki bolus hesaplayıcısı
 
-Open **Calculator** from the **AAPS** main menu, from the [Actions tile](#WearOsSmartwatch-wear-os-tiles) or from a complication set to open the wizard. It walks through a few pages, swipe from right to left to go on:
+**Hesaplayıcı**'yı **AAPS** ana menüsünden, [Eylemler panelinden](#WearOsSmartwatch-wear-os-tiles) veya sihirbazı açacak şekilde ayarlanmış bir komplikasyondan açın. Hesaplayıcı birkaç sayfadan geçer; devam etmek için sağdan sola kaydırın:
 
-| Karbonhidrat                                                    | Request                                                             | Result                                                            | Calculation                                                                       | Confirm                                                             |
-| --------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| ![Carbs page](../images/wearos/calculator/calculator_carbs.png) | ![Request page](../images/wearos/calculator/calculator_request.png) | ![Result page](../images/wearos/calculator/calculator_result.png) | ![Calculation details](../images/wearos/calculator/calculator_result_details.png) | ![Confirm page](../images/wearos/calculator/calculator_confirm.png) |
+| Karbonhidrat                                                              | İstek                                                                | Sonuç                                                               | Hesaplama                                                                           | Onayla                                                              |
+| ------------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| ![Karbonhidrat sayfası](../images/wearos/calculator/calculator_carbs.png) | ![İstek sayfası](../images/wearos/calculator/calculator_request.png) | ![Sonuç sayfası](../images/wearos/calculator/calculator_result.png) | ![Hesaplama ayrıntıları](../images/wearos/calculator/calculator_result_details.png) | ![Onay sayfası](../images/wearos/calculator/calculator_confirm.png) |
 
-1. **Carbs**: enter the carbs with the **+10**, **+5**, **−** and **+** buttons.
-2. **Request**: the last page before the phone takes over. It shows what you entered: the carbs, and the meal type, carb time and percentage when you use them, see [Optional pages](#WearOsSmartwatch-calculator-optional-pages). Tap the check mark to send it to the phone, which runs the calculation.
-3. **Result**: the bolus **AAPS** proposes, with the carbs under it: the carbs now and the eCarbs later, the carb time and the bell of the eat reminder. Adjust the dose with **−** and **+**, see below. Scroll down for the **Calculation** card: tap it to see every line of the calculation, the same as on the phone.
-4. **Confirm**: swipe to the second page and tap the check mark. The phone delivers the bolus and records the carbs.
+1. **Karbonhidrat**: karbonhidratı **+10**, **+5**, **−** ve **+** düğmeleriyle girin.
+2. **İstek**: telefon devralmadan önceki son sayfa. Girdiklerinizi gösterir: karbonhidratı ve kullanıyorsanız öğün türünü, karb. zamanını ve yüzdeyi; bkz. [İsteğe bağlı sayfalar](#WearOsSmartwatch-calculator-optional-pages). Hesaplamayı yapan telefona göndermek için onay işaretine dokunun.
+3. **Sonuç**: **AAPS**'in önerdiği bolus ve altında karbonhidratlar: şimdiki karbonhidratlar ve sonraki yKarb, karb. zamanı ve yemek hatırlatıcısının zili. Dozu **−** ve **+** ile ayarlayın, aşağıya bakın. **Hesaplama** kartı için aşağı kaydırın: hesaplamanın her satırını görmek için karta dokunun, telefondakiyle aynıdır.
+4. **Onayla**: ikinci sayfaya kaydırın ve onay işaretine dokunun. Telefon bolusu iletir ve karbonhidratları kaydeder.
 
 (WearOsSmartwatch-calculator-optional-pages)=
 
-### Optional pages
+### İsteğe bağlı sayfalar
 
-Three watch settings each add a page after **Carbs**. They are off by default. Open the **AAPS** main menu, then **Settings** > **Interface**, and turn on the ones you want; when more than one is on, the pages come in the order **Meal type**, **Carb time**, **Percentage**. The dots at the bottom of the calculator show how many pages it has.
+Saatteki üç ayarın her biri **Karbonhidrat** sayfasından sonra bir sayfa ekler. Bu ayarlar varsayılan olarak kapalıdır. **AAPS** ana menüsünü, ardından **Ayarlar** > **Arayüz** bölümünü açın ve istediğiniz ayarları açın; birden fazlası açıksa sayfalar **Öğün türü**, **Karb. zamanı**, **Yüzde** sırasıyla gelir. Hesaplayıcının altındaki noktalar, kaç sayfası olduğunu gösterir.
 
-| Ayarlar                                                                                  | Meal type                                                               | Carb time                                                               | Percentage                                                                |
-| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| ![Calculator settings on the watch](../images/wearos/calculator/calculator_settings.png) | ![Meal type page](../images/wearos/calculator/calculator_meal_type.png) | ![Carb time page](../images/wearos/calculator/calculator_carb_time.png) | ![Percentage page](../images/wearos/calculator/calculator_percentage.png) |
+| Ayarlar                                                                               | Öğün türü                                                                  | Karb. zamanı                                                                  | Yüzde                                                                   |
+| ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| ![Saatteki hesaplayıcı ayarları](../images/wearos/calculator/calculator_settings.png) | ![Öğün türü sayfası](../images/wearos/calculator/calculator_meal_type.png) | ![Karb. zamanı sayfası](../images/wearos/calculator/calculator_carb_time.png) | ![Yüzde sayfası](../images/wearos/calculator/calculator_percentage.png) |
 
-* **Calculator Meal Type**: **Bread**, **Cake** or **Pizza**, which splits the carbs of a slow meal into carbs now and eCarbs later, see [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
-* **Calculator Carb Time**: the minutes until you eat, with a **Set alarm** bell for the eat reminder, see [Carb time and the eat reminder](#WearOsSmartwatch-wizard-carb-time).
-* **Calculator Percentage**: a percentage of the calculated bolus, for example 70 % when you want a smaller dose. It starts at the **Bolus percentage** of the phone's [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result), 100 % unless you changed it. See also the note under [Adjusting the bolus on the result page](#WearOsSmartwatch-wizard-result).
+* **Hesaplayıcı öğün türü**: **Ekmek**, **Kek** veya **Pizza**; yavaş bir öğünün karbonhidratlarını şimdiki karbonhidrat ve sonraki yKarb olarak böler, bkz. [Öğün türünü seçme](#WearOsSmartwatch-wizard-meal-type).
+* **Hesaplayıcı karb. zamanı**: yemeğe kadar kalan dakikalar ve yemek hatırlatıcısı için bir **Alarmı ayarla** zili, bkz. [Karb. zamanı ve yemek hatırlatıcısı](#WearOsSmartwatch-wizard-carb-time).
+* **Hesaplayıcı yüzdesi**: hesaplanan bolusun bir yüzdesi; örneğin daha küçük bir doz istediğinizde %70. Telefonun [Bolus sihirbazı ayarları](#Preferences-deliver-this-part-of-bolus-wizard-result) içindeki **Bolus yüzdesi** değeriyle başlar; bunu değiştirmediyseniz %100'dür. Ayrıca [Sonuç sayfasında bolusu ayarlama](#WearOsSmartwatch-wizard-result) altındaki nota bakın.
 
 (WearOsSmartwatch-wizard-result)=
 
-### Adjusting the bolus on the result page
+### Sonuç sayfasında bolusu ayarlama
 
-The result page shows the bolus **AAPS** proposes, together with a **−** and a **+** button. Use them to adjust the dose before you confirm it, without going back to the phone.
+Sonuç sayfası, **AAPS**'in önerdiği bolusu bir **−** ve bir **+** düğmesiyle birlikte gösterir. Telefona dönmeden, onaylamadan önce dozu ayarlamak için bu düğmeleri kullanın.
 
-| Proposed                                                                          | More                                                                                | Less                                                                                   |
-| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| ![The proposed bolus](../images/wearos/calculator/calculator_result_proposed.png) | ![The bolus raised by 0.20 U](../images/wearos/calculator/calculator_result_up.png) | ![The bolus lowered by 0.10 U](../images/wearos/calculator/calculator_result_down.png) |
+| Önerilen                                                                      | Daha fazla                                                                       | Daha az                                                                            |
+| ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| ![Önerilen bolus](../images/wearos/calculator/calculator_result_proposed.png) | ![0,20 Ü artırılmış bolus](../images/wearos/calculator/calculator_result_up.png) | ![0,10 Ü azaltılmış bolus](../images/wearos/calculator/calculator_result_down.png) |
 
-* Each press changes the bolus by **one step of your pump**, so the amounts offered always match what your pump can actually deliver.
-* **Press and hold** a button to keep changing the value. The longer you hold, the faster it goes.
-* You cannot go below **0 U**, nor above your **max bolus** setting.
+* Her basış bolusu **pompanızın bir adımı** kadar değiştirir; böylece sunulan miktarlar her zaman pompanızın gerçekten verebileceği miktarlara uyar.
+* Değeri değiştirmeye devam etmek için düğmeyi **basılı tutun**. Ne kadar uzun basılı tutarsanız değer o kadar hızlı değişir.
+* **0 Ü** altına veya **maksimum bolus** ayarınızın üstüne çıkamazsınız.
 
-The running total is shown on the result page, so you always see the amount you are about to confirm. The change is shown after the carbs, for example *(+0.20 U)*, and the button you used turns green for more or red for less.
+Güncel toplam sonuç sayfasında gösterilir; böylece onaylamak üzere olduğunuz miktarı her zaman görürsünüz. Değişiklik karbonhidratlardan sonra gösterilir, örneğin *(+0,20 Ü)*; kullandığınız düğme artış için yeşile, azalış için kırmızıya döner.
 
-If **AAPS** had to limit the dose, for example because the calculated bolus is above your **max bolus** setting, a warning line in amber below the total says so (for example *"Bolus constraint applied"*). The same applies to a limited carbs amount.
+**AAPS** dozu sınırlamak zorunda kaldıysa, örneğin hesaplanan bolus **maksimum bolus** ayarınızın üstünde olduğu için, toplamın altındaki kehribar renkli bir uyarı satırı bunu belirtir (örneğin *"Bolus kısıtlaması uygulandı"*). Aynısı sınırlanmış bir karbonhidrat miktarı için de geçerlidir.
 
-```{admonition} This is not the same as Calculator Percentage :class: note The **Calculator Percentage** setting lets you enter a *percentage* of the calculated bolus **before** the result page appears. The **−** and **+** buttons adjust the *final amount* **on** the result page. You can use both.
+```{admonition} Bu, Hesaplayıcı yüzdesi ile aynı şey değildir :class: note **Hesaplayıcı yüzdesi** ayarı, sonuç sayfası görünmeden **önce** hesaplanan bolusun bir *yüzdesini* girmenizi sağlar. **−** ve **+** düğmeleri ise *son miktarı* **doğrudan** sonuç sayfasında ayarlar. İkisini birlikte kullanabilirsiniz.
 
     <br />(WearOsSmartwatch-wizard-meal-type)=
     
-    ### Choosing the meal type
+    ### Öğün türünü seçme
     
-    The watch calculator can split the carbs of a slow meal into carbs now and eCarbs later, like the [carbs type](#AapsScreens-carbs-type) of the phone wizard. Turn on **Calculator Meal Type** in the watch's **Settings** > **Interface**. The setting is off by default, and then the **Meal type** page is skipped.
+    Saatteki hesaplayıcı, telefon sihirbazındaki [karbonhidrat türü](#AapsScreens-carbs-type) gibi, yavaş bir öğünün karbonhidratlarını şimdiki karbonhidrat ve sonraki yKarb olarak bölebilir. Saatin **Ayarlar** > **Arayüz** bölümünde **Hesaplayıcı öğün türü** ayarını açın. Bu ayar varsayılan olarak kapalıdır; kapalıyken **Öğün türü** sayfası atlanır.
     
-    * After you enter the carbs, a **Meal type** page shows three icons: **Bread**, **Cake** and **Pizza**. Tap an icon: its name and the carbs it gives show below the icons, for example *65 g* for bread, or *52+22 g* for pizza (52 g now and 22 g of eCarbs later). **Bread** is the default and keeps all the carbs now.
-    * The request and confirm pages show the carbs in the same way (*52+22 g*). The result page also shows when the eCarbs start and how long they last.
-    * The bolus is calculated only for the carbs eaten now. The split uses the same numbers as the phone wizard.
+    * Karbonhidratı girdikten sonra bir **Öğün türü** sayfası üç simge gösterir: **Ekmek**, **Kek** ve **Pizza**. Bir simgeye dokunun: simgenin adı ve verdiği karbonhidrat simgelerin altında gösterilir, örneğin ekmek için *65 g* veya pizza için *52+22 g* (şimdi 52 g ve sonra 22 g yKarb). **Ekmek** varsayılandır ve tüm karbonhidratları şimdiye koyar.
+    * İstek ve onay sayfaları karbonhidratları aynı şekilde gösterir (*52+22 g*). Sonuç sayfası ayrıca yKarb'ın ne zaman başlayacağını ve ne kadar süreceğini gösterir.
+    * Bolus yalnızca şimdi yenen karbonhidratlar için hesaplanır. Bölme, telefon sihirbazıyla aynı sayıları kullanır.
     
     (WearOsSmartwatch-wizard-carb-time)=
     
-    ### Carb time and the eat reminder
+    ### Karb. zamanı ve yemek hatırlatıcısı
     
-    With **Calculator Carb Time** turned on in the watch's **Settings** > **Interface**, a **Carb time** page follows the carbs: the minutes until you eat, like the [carb time](#aaps-screens-bolus-wizard) of the phone wizard. **Now** is the default. **−** and **+** move it in steps of 5 minutes, up to an hour before or after now. A time in the past is for carbs you have eaten already.
+    Saatin **Ayarlar** > **Arayüz** bölümünde **Hesaplayıcı karb. zamanı** açıksa, karbonhidratlardan sonra bir **Karb. zamanı** sayfası gelir: telefon sihirbazındaki [karb. zamanı](#aaps-screens-bolus-wizard) gibi, yemeğe kadar kalan dakikalar. **Şimdi** varsayılandır. **−** ve **+** zamanı 5 dakikalık adımlarla, şimdiden en fazla bir saat önceye veya sonraya kaydırır. Geçmişteki bir zaman, önceden yediğiniz karbonhidratlar içindir.
     
-    With a time in the future, a **Set alarm** bell appears under the value. It is on by default, tap it to turn it off. The request and result pages show the carb time, for example *+30 min*, and the bell. The phone records the carbs at that time, moves the eCarbs of the meal type with it, and starts its **time to eat** reminder.
+    Gelecekteki bir zamanda, değerin altında bir **Alarmı ayarla** zili görünür. Zil varsayılan olarak açıktır; kapatmak için ona dokunun. İstek ve sonuç sayfaları karb. zamanını (örneğin *+30 dk*) ve zili gösterir. Telefon karbonhidratları o zamana kaydeder, öğün türünün yKarb'ını da onunla birlikte kaydırır ve **Yemek vakti** hatırlatıcısını başlatır.
     
-    | Result | BG graph | Running | Time to eat |
+    | Sonuç | KŞ grafiği | Çalışıyor | Yemek vakti |
     | --- | --- | --- | --- |
-    | ![Result page with a carb time](../images/wearos/calculator/calculator_result_carb_time.png) | ![The reminder in the BG graph](../images/wearos/eat_reminder/eat_reminder_graph.png) | ![The running reminder](../images/wearos/eat_reminder/eat_reminder_running.png) | ![The reminder rings](../images/wearos/eat_reminder/eat_reminder_ringing.png) |
+    | ![Karb. zamanı olan sonuç sayfası](../images/wearos/calculator/calculator_result_carb_time.png) | ![KŞ grafiğindeki hatırlatıcı](../images/wearos/eat_reminder/eat_reminder_graph.png) | ![Çalışan hatırlatıcı](../images/wearos/eat_reminder/eat_reminder_running.png) | ![Hatırlatıcı çalıyor](../images/wearos/eat_reminder/eat_reminder_ringing.png) |
     
-    The reminder also lives on the watch, so it rings when the phone is out of reach too:
+    Hatırlatıcı saatte de çalışır; böylece telefon yanınızda değilken de çalar:
     
-    * The **BG Graph** screen, the **BG Graph** tile and the graph of the **Complications watchface** draw a dashed orange line where the reminder rings, with the minutes left next to it.
-    * While it runs, a silent **Time to eat** notification with **Stop** and **+5 min** sits in the notification stream. It comes back when you swipe it away, until the reminder is over.
-    * When the time has come, the watch vibrates, and again every half minute for five minutes until you answer. The notification offers **Silence** and **+5 min**, and swiping it away silences it too.
+    * **KŞ Grafiği** ekranı, **KŞ Grafiği** paneli ve **Komplikasyonlu saat arayüzü**nün grafiği, hatırlatıcının çalacağı yere kesik çizgili turuncu bir çizgi ve yanında kalan dakikaları çizer.
+    * Hatırlatıcı çalışırken, bildirim akışında **Durdur** ve **+5 dk** düğmeleri olan sessiz bir **Yemek vakti** bildirimi durur. Kaydırarak kapatırsanız, hatırlatıcı bitene kadar geri gelir.
+    * Zaman geldiğinde saat titreşir ve siz yanıt verene kadar beş dakika boyunca her yarım dakikada bir tekrar titreşir. Bildirim **Sessize al** ve **+5 dk** seçeneklerini sunar; bildirimi kaydırarak kapatmak da onu sessize alır.
     
-    **Stop**, **Silence** and **+5 min** do the same on the watch, on the phone and on an **AAPSClient**, and all of them show the same reminder.
+    **Durdur**, **Sessize al** ve **+5 dk** saatte, telefonda ve bir **AAPSClient** üzerinde aynı işi yapar ve hepsi aynı hatırlatıcıyı gösterir.
     
     (Watchfaces-complications)=
     
-    ## Complications
+    ## Komplikasyonlar
     
-    _Complication_ is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+    _Komplikasyon_, geleneksel saatçilikten gelen bir terimdir; ana saat arayüzüne yapılan bir eklemeyi anlatır: başka bir küçük pencere veya alt kadran (tarih, haftanın günü, ay evresi vb. ile). Wear OS 2.0 bu yaklaşımı getirir: hava durumu, bildirimler, fitness sayaçları gibi özel veri sağlayıcıları, komplikasyonları destekleyen her saat arayüzüne eklenebilir.
     
-    AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+    AAPS Wear OS uygulaması `2.6` sürümünden beri komplikasyonları destekler ve komplikasyonları destekleyen her üçüncü taraf saat arayüzünün AAPS ile ilgili verileri (eğilimle birlikte KŞ, AİNS, AKRB vb.) gösterecek şekilde yapılandırılmasına izin verir.
     
-    Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+    Komplikasyonlar ayrıca AAPS işlevlerine **kısayol** olarak da kullanılır. Bunlara dokunarak AAPS ile ilgili menüleri ve diyalogları açabilirsiniz (komplikasyon türüne ve yapılandırmaya bağlı olarak).
     
-    ![The Complications watchface, every slot filled with an AAPS complication](../images/wearos/complications_on_watchface.png)
+    ![Komplikasyonlu saat arayüzü, her yer bir AAPS komplikasyonuyla dolu](../images/wearos/complications_on_watchface.png)
     
-    ### Complication Types
+    ### Komplikasyon türleri
     
-    AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+    AAPS Wear OS uygulaması önceden tanımlanmış biçimlere göre yalnızca ham veri sağlar. Komplikasyonların nerede ve nasıl gösterileceğine (düzen, kenarlık, renk ve yazı tipi dahil) üçüncü taraf saat arayüzü karar verir. Mevcut birçok Wear OS komplikasyon türünden AAPS şunları kullanır:
     
-    * `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
-    * `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
-    * `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
-    * `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
-    * `SMALL IMAGE` / `MONOCHROMATIC IMAGE` - A small icon. In a `SMALL IMAGE` slot AAPS draws it in its own colour; in a `MONOCHROMATIC IMAGE` slot the watchface tints it.
+    * `SHORT TEXT` - Her biri 7 karakterlik iki satır metin içerir; bazen değer ve etiket olarak adlandırılır. Genellikle bir daire veya küçük bir hap şeklinin içinde gösterilir: alt alta veya yan yana. Çok az yeri olan bir komplikasyondur. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
+    * `LONG TEXT` - Her biri yaklaşık 20 karakterlik iki satır metin içerir. Genellikle bir dikdörtgen veya uzun bir hap şeklinin içinde gösterilir: alt alta. Daha fazla ayrıntı ve metin olarak durum bilgisi için kullanılır.
+    * `RANGED VALUE` - Yüzde gibi önceden tanımlanmış bir aralıktaki değerler için kullanılır. Simge ve etiket içerir, genellikle dairesel bir ilerleme kadranı olarak gösterilir.
+    * `LARGE IMAGE` - Arka plan olarak kullanılabilen özel bir arka plan resmi (saat arayüzü destekliyorsa).
+    * `SMALL IMAGE` / `MONOCHROMATIC IMAGE` - Küçük bir simge. `SMALL IMAGE` yerinde AAPS simgeyi kendi rengiyle çizer; `MONOCHROMATIC IMAGE` yerinde simgeyi saat arayüzü renklendirir.
     
-    ### Complication Setup
+    ### Komplikasyon kurulumu
     
-    To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+    Saat arayüzüne komplikasyon eklemek için saat arayüzüne uzun basın ve altındaki dişli simgesine dokunarak yapılandırın. Saat arayüzünün bunları nasıl yapılandırdığına bağlı olarak ya yer tutuculara dokunun ya da saat arayüzünün komplikasyon kurulum menüsüne girin. AAPS complications are grouped under the AAPS menu entry.
     
-    When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+    Saat arayüzünde komplikasyonları yapılandırırken Wear OS, saat arayüzünde seçilen komplikasyon yerine sığabilecek komplikasyonları listeler ve filtreler. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
     
-    ### Complications provided by AAPS
+    ### AAPS'in sağladığı komplikasyonlar
     
-    AAPS provides the complications below. "Opens" is what a tap does with **Complication Tap Action** left at **Default**, see [Complication related settings](#WearOsSmartwatch-complication-settings).
+    AAPS aşağıdaki komplikasyonları sağlar. "Açar", **Komplikasyon Dokunma Eylemi** **Varsayılan** olarak bırakıldığında bir dokunuşun ne yaptığını gösterir, bkz. [Komplikasyonla ilgili ayarlar](#WearOsSmartwatch-complication-settings).
     
-    **Glucose**
+    **Glikoz**
     
-    * **Blood Glucose** (`SHORT TEXT`, opens _Loop Status_): the glucose value with the trend arrow on the first line, the age of the reading and the delta on the second.
-    * **Blood Glucose (large)** (`SHORT TEXT`, opens _BG Graph_): the glucose value alone on the first line, so the watchface can draw it big. The age and the trend arrow are on the second line.
-    * **BG Graph** (`SMALL IMAGE` / `LARGE IMAGE`, opens _BG Graph_): the BG graph as a picture, for watchfaces with an image slot. This is the graph on the **Complications watchface**.
-    * **Full Status** (`LONG TEXT`, opens _Menu_): most of the data in one line: the glucose value with the trend arrow, the delta and the age of the reading, then carbs on board, insulin on board and the basal rate.
-    * **Full Status (flipped)** (`LONG TEXT`, opens _Menu_): the same, with the two lines swapped, for watchfaces that show only one of the two lines of a `LONG TEXT` slot.
+    * **Kan Şekeri** (`SHORT TEXT`, _Döngü durumu_ ekranını açar): ilk satırda glikoz değeri ve eğilim oku, ikinci satırda okumanın yaşı ve delta.
+    * **Kan Şekeri (büyük)** (`SHORT TEXT`, _KŞ Grafiği_ ekranını açar): ilk satırda yalnızca glikoz değeri; böylece saat arayüzü onu büyük çizebilir. Yaş ve eğilim oku ikinci satırdadır.
+    * **KŞ Grafiği** (`SMALL IMAGE` / `LARGE IMAGE`, _KŞ Grafiği_ ekranını açar): resim yeri olan saat arayüzleri için resim olarak KŞ grafiği. Bu, **Komplikasyonlu saat arayüzü**ndeki grafiktir.
+    * **Tam durum** (`LONG TEXT`, _Menü_'yü açar): verilerin çoğu tek satırda: eğilim okuyla glikoz değeri, delta ve okumanın yaşı, ardından aktif karbonhidrat, aktif insülin ve bazal oranı.
+    * **Tam durum (çevrilmiş)** (`LONG TEXT`, _Menü_'yü açar): aynısı, iki satırın yeri değiştirilmiş olarak; `LONG TEXT` yerinin iki satırından yalnızca birini gösteren saat arayüzleri için.
     
-    **Insulin and carbs**
+    **İnsülin ve karbonhidrat**
     
-    * **IoB Icon** (`SHORT TEXT`, opens _Bolus_): insulin on board with a syringe icon.
-    * **IoB Detailed** (`SHORT TEXT`, opens _Bolus_): total insulin on board on the first line, the bolus and basal parts on the second.
-    * **CoB Icon** (`SHORT TEXT`, opens _Wizard_): carbs on board with a carbs icon.
-    * **CoB Detailed** (`SHORT TEXT`, opens _Wizard_): the carbs on board now on the first line, the carbs still to come (eCarbs) on the second.
-    * **CoB & IoB** (`SHORT TEXT`, opens _Wizard_): insulin on board on the first line, carbs on board on the second.
+    * **AİNS simgesi** (`SHORT TEXT`, _Bolus_ açar): şırınga simgesiyle aktif insülin.
+    * **Detaylı AİNS** (`SHORT TEXT`, _Bolus_ açar): ilk satırda toplam aktif insülin, ikinci satırda bolus ve bazal kısımları.
+    * **AKRB simgesi** (`SHORT TEXT`, _Hesaplayıcı_'yı açar): karbonhidrat simgesiyle aktif karbonhidrat.
+    * **Detaylı AKRB** (`SHORT TEXT`, _Hesaplayıcı_'yı açar): ilk satırda şu anki aktif karbonhidrat, ikinci satırda henüz gelecek karbonhidratlar (yKarb).
+    * **AKRB & AİNS** (`SHORT TEXT`, _Hesaplayıcı_'yı açar): ilk satırda aktif insülin, ikinci satırda aktif karbonhidrat.
     
-    **Basal and target**
+    **Bazal ve hedef**
     
-    * **Basal rate** (`SHORT TEXT`, opens _Menu_): the current basal rate.
-    * **BR & IoB** (`SHORT TEXT`, opens _Menu_): insulin on board on the first line, the basal rate on the second.
-    * **BR & Target** (`SHORT TEXT`, opens _Temp Target_): the target on the first line, with the time left when a temporary target runs, and the basal rate on the second.
-    * **Target** (`SHORT TEXT`, opens _Temp Target_): the target on the first line and, while a temporary target runs, its time left on the second.
-    * **BR, CoB & IoB** (`SHORT TEXT`, opens _Menu_): the basal rate on the first line, carbs on board and insulin on board on the second.
+    * **Bazal oranı** (`SHORT TEXT`, _Menü_'yü açar): geçerli bazal oranı.
+    * **Bazal & AİNS** (`SHORT TEXT`, _Menü_'yü açar): ilk satırda aktif insülin, ikinci satırda bazal oranı.
+    * **Bazal & Hedef** (`SHORT TEXT`, _Geçici Hedef_ açar): ilk satırda hedef (geçici hedef çalışırken kalan süreyle birlikte), ikinci satırda bazal oranı.
+    * **Hedef** (`SHORT TEXT`, _Geçici Hedef_ açar): ilk satırda hedef ve geçici hedef çalışırken ikinci satırda kalan süresi.
+    * **Bazal, AKRB & AİNS** (`SHORT TEXT`, _Menü_'yü açar): ilk satırda bazal oranı, ikinci satırda aktif karbonhidrat ve aktif insülin.
     
-    **Loop and phone**
+    **Döngü ve telefon**
     
-    * **Running mode** (`SMALL IMAGE` / `ICON`, opens _Running mode picker_): the current loop mode as an icon: closed loop, open loop, low glucose suspend, suspended, disconnected or disabled. A tap opens a picker with the mode changes allowed right now, for example **Suspend loop**, **Disconnect pump**, **Resume loop** or **Reconnect pump**. The same picker is in the **AAPS** main menu under **Running mode**.
-    * **Uploader/Phone Battery** (`RANGED VALUE` / `SHORT TEXT` / `ICON`, opens _Status_): the battery of the **AAPS** phone, as a gauge with a battery icon, as a number, or as the icon alone. It updates together with the other **AAPS** data, usually every 5 minutes with a new reading.
+    * **Çalışma modu** (`SMALL IMAGE` / `ICON`, _Çalışma modu seçicisini_ açar): geçerli döngü modu simge olarak: kapalı döngü, açık döngü, düşük glikozda askıya alma, askıya alındı, bağlantı kesildi veya devre dışı. Dokunma, o anda izin verilen mod değişikliklerini içeren bir seçici açar, örneğin **Döngüyü askıya al**, **Pompa bağlantısını kes**, **Döngüyü devam ettir** veya **Pompayı tekrar bağla**. Aynı seçici **AAPS** ana menüsünde **Çalışma modu** altında da bulunur.
+    * **Yükleyici/Telefon Pili** (`RANGED VALUE` / `SHORT TEXT` / `ICON`, _Durum_ açar): **AAPS** telefonunun pili; pil simgeli bir gösterge, bir sayı veya yalnızca simge olarak. Diğer **AAPS** verileriyle birlikte, genellikle her 5 dakikada bir yeni okumayla güncellenir.
     
-    The **Running mode** picker, as opened from the complication, the main menu or the Running mode tile:
+    Komplikasyondan, ana menüden veya Çalışma modu panelinden açılan **Çalışma modu** seçicisi:
     
-    ![Running mode picker with the modes you can switch to](../images/wearos/running_mode_picker.png)
+    ![Geçebileceğiniz modları gösteren Çalışma modu seçicisi](../images/wearos/running_mode_picker.png)
     
     (WearOsSmartwatch-complication-settings)=
     
-    ### Complication related settings
+    ### Komplikasyonla ilgili ayarlar
     
-    In the **AAPS** main menu on the watch, open **Settings** > **Complication**:
+    Saatteki **AAPS** ana menüsünde **Ayarlar** > **Komplikasyon** bölümünü açın:
     
-    ![Settings > Complication on the watch](../images/wearos/settings_complication.png)
+    ![Saatte Ayarlar > Komplikasyon](../images/wearos/settings_complication.png)
     
-    * **Complication Tap Action** (default `Default`): what a tap on an **AAPS** complication opens, for all complications at once:
-      * _Default_: what the complication itself opens, see the list above
-      * _Menu_: the **AAPS** main menu
-      * _Calculator_: the bolus calculator
-      * _Treatment_: the treatment dialog, insulin and carbs
-      * _eCarbs_: the eCarbs dialog
-      * _Status_: the status menu
-      * _Running mode_: the running mode picker. Needs **Wear control** turned on in the phone's Wear settings, otherwise the main menu opens instead.
-      * _None_: a tap does nothing
-    * **BG graph time range** (default `3 hours`): how many hours the **BG Graph** complication shows, 1, 3 or 6. The BG Graph tile has its own setting.
-    * **Unicode in Complications** (default `On`): the complications use Unicode symbols like `Δ` for the delta, `⁞` as separator and `⎍` for the basal rate. How they look depends on the font of the watchface. Turn this `Off` when a watchface draws them as boxes or blanks.
+    * **Komplikasyon Dokunma Eylemi** (varsayılan `Varsayılan`): bir **AAPS** komplikasyonuna dokunmanın neyi açacağı, tüm komplikasyonlar için birlikte:
+      * _Varsayılan_: komplikasyonun kendisinin açtığı ekran, yukarıdaki listeye bakın
+      * _Menü_: **AAPS** ana menüsü
+      * _Hesaplayıcı_: bolus hesaplayıcısı
+      * _Tedavi_: tedavi diyaloğu, insülin ve karbonhidrat
+      * _yKarb_: yKarb diyaloğu
+      * _Durum_: durum menüsü
+      * _Çalışma modu_: çalışma modu seçicisi. Telefonun Wear ayarlarında **Wear kontrolü** açık olmalıdır, aksi halde onun yerine ana menü açılır.
+      * _Hiçbiri_: dokunma bir şey yapmaz
+    * **KŞ grafiği zaman aralığı** (varsayılan `3 saat`): **KŞ Grafiği** komplikasyonunun kaç saati gösterdiği: 1, 3 veya 6. KŞ Grafiği panelinin kendi ayarı vardır.
+    * **Komplikasyonlarda Unicode** (varsayılan `Açık`): komplikasyonlar delta için `Δ`, ayırıcı olarak `⁞` ve bazal oranı için `⎍` gibi Unicode simgeleri kullanır. Nasıl göründükleri saat arayüzünün yazı tipine bağlıdır. Bir saat arayüzü bunları kutu veya boşluk olarak çiziyorsa bu ayarı `Kapalı` yapın.
     
     (WearOsSmartwatch-wear-os-tiles)=
     
-    ## Wear OS Tiles
+    ## Wear OS panelleri
     
-    Tiles are the pages you reach by swiping from the watchface. **AAPS** brings seven of them, each a set of up to four buttons. A tap on a button opens the matching dialog on the watch, or asks you to confirm, and the phone then does the work. A tile is a shortcut, not a status display: it does not hold the state of the phone app.
+    Paneller, saat arayüzünden kaydırarak ulaştığınız sayfalardır. **AAPS** bunlardan yedisini sunar; her biri en fazla dört düğmeden oluşur. Bir düğmeye dokunmak saatte ilgili diyaloğu açar veya onay ister; ardından işi telefon yapar. Panel bir kısayoldur, durum ekranı değildir: telefon uygulamasının durumunu tutmaz.
     
-    Before using the tiles, turn on **Wear control** in [Settings > Wear](#preferences-wear).
+    Panelleri kullanmadan önce [Ayarlar > Wear](#preferences-wear) bölümünde **Wear kontrolü** seçeneğini açın.
     
-    ### Adding a tile
+    ### Panel ekleme
     
-    There are two ways, depending on your watch and phone:
+    Saatinize ve telefonunuza bağlı olarak iki yol vardır:
     
-    1. On the watch: swipe from the watchface past the last tile to **Add tile** and pick an **AAPS** tile. On most watches a long-press on a tile also opens the add and remove view.
-    2. On the phone, in the companion app for your watch (**Galaxy Wearable** for Samsung, **Wear OS** for other brands): open **Tiles**, tap **Add** and pick the **AAPS** tiles you want. The order of the tiles can be changed by dragging.
+    1. Saatte: saat arayüzünden son panelin ötesine, **Add tile** (Panel ekle) seçeneğine kadar kaydırın ve bir **AAPS** paneli seçin. Çoğu saatte bir panele uzun basmak da ekleme ve kaldırma görünümünü açar.
+    2. Telefonda, saatinizin yardımcı uygulamasında (Samsung için **Galaxy Wearable**, diğer markalar için **Wear OS**): **Tiles** (Paneller) bölümünü açın, **Add** (Ekle) düğmesine dokunun ve istediğiniz **AAPS** panellerini seçin. Panellerin sırası sürüklenerek değiştirilebilir.
     
-    ![The seven AAPS tiles in the companion app](../images/wearos/tiles/tiles_list_companion_app.png)
+    ![Yardımcı uygulamadaki yedi AAPS paneli](../images/wearos/tiles/tiles_list_companion_app.png)
     
-    ### Tile settings
+    ### Panel ayarları
     
-    The **Actions**, **Temp Target**, **BG Graph** and **Scene** tiles have settings on the watch. Open the **AAPS** main menu, then **Settings** > **Tiles**, and pick the tile. A long-press on the tile also opens its settings, except on Pixel watches. The other three tiles are filled from the phone and have nothing to set on the watch.
+    **Eylemler**, **Geçici Hedef**, **KŞ Grafiği** ve **Senaryo** panellerinin saatte ayarları vardır. **AAPS** ana menüsünü, ardından **Ayarlar** > **Paneller** bölümünü açın ve paneli seçin. Pixel saatler dışında, panele uzun basmak da panelin ayarlarını açar. Diğer üç panel telefondan doldurulur ve saatte ayarlanacak bir şeyleri yoktur.
     
-    | Main menu | Settings | Tiles |
+    | Ana menü | Ayarlar | Paneller |
     | --- | --- | --- |
-    | ![AAPS main menu, Settings](../images/wearos/tiles/tile_settings_menu.png) | ![Settings, Tiles](../images/wearos/tiles/tile_settings_settings.png) | ![Tiles, pick the tile](../images/wearos/tiles/tile_settings_tiles.png) |
+    | ![AAPS ana menüsü, Ayarlar](../images/wearos/tiles/tile_settings_menu.png) | ![Ayarlar, Paneller](../images/wearos/tiles/tile_settings_settings.png) | ![Paneller, paneli seçin](../images/wearos/tiles/tile_settings_tiles.png) |
     
-    The settings of a tile are a list of its four places. Tap a place to pick what it shows, or **None** to leave it empty.
+    Bir panelin ayarları, panelin dört yerinin listesidir. Ne göstereceğini seçmek için bir yere dokunun veya boş bırakmak için **Hiçbiri** seçin.
     
-    | Long-press on the tile | Settings of the Temp Target tile |
+    | Panele uzun basma | Geçici Hedef panelinin ayarları |
     | --- | --- |
-    | ![Long-press on a tile, tap the pencil](../images/wearos/tiles/tile_settings_long_press.png) | ![Temp Target tile settings, one entry per place](../images/wearos/tiles/tile_settings_temp_target.png) |
+    | ![Panele uzun basın, kaleme dokunun](../images/wearos/tiles/tile_settings_long_press.png) | ![Geçici Hedef paneli ayarları, her yer için bir giriş](../images/wearos/tiles/tile_settings_temp_target.png) |
     
-    Every tile has four places. A tile with more entries than that shows the first four.
+    Her panelin dört yeri vardır. Bundan fazla girişi olan bir panel ilk dördünü gösterir.
     
-    ### Actions tile
+    ### Eylemler paneli
     
-    ![Actions tile](../images/wearos/tiles/tile_actions.png)
+    ![Eylemler paneli](../images/wearos/tiles/tile_actions.png)
     
-    Shortcuts to the dialogs of the **AAPS** watch app. Pick up to four of these in the tile settings:
+    **AAPS** saat uygulamasının diyaloglarına kısayollar. Panel ayarlarında bunlardan en fazla dördünü seçin:
     
-    * **Calc**: the bolus calculator, with a carbs input, an optional percentage [1] and an optional meal type [2]
-    * **Treat**: insulin and carbs in one go
-    * **Insulin**: a bolus, entered in units
-    * **Carbs**: carbs, also extended carbs. A **negative** amount is accepted, down to your current COB, to correct carbs you entered earlier. Carb removals are shown on the watch's BG graph.
-    * **eCarbs**: extended carbs
-    * **TempT**: a temporary target with a custom target and duration
-    * **Profile switch**: a profile switch with percentage, time shift and duration
+    * **Hesap**: karbonhidrat girişi, isteğe bağlı yüzde [1] ve isteğe bağlı öğün türü [2] ile bolus hesaplayıcısı
+    * **Tedavi**: insülin ve karbonhidrat tek seferde
+    * **İnsülin**: birim olarak girilen bir bolus
+    * **Karbonhidrat**: karbonhidrat, yayma karbonhidrat da. Daha önce girdiğiniz karbonhidratları düzeltmek için, mevcut AKRB'nize kadar **negatif** bir miktar kabul edilir. Karbonhidrat çıkarmaları saatin KŞ grafiğinde gösterilir.
+    * **yKarb**: yayma karbonhidrat
+    * **GH**: özel hedef ve süreyle geçici hedef
+    * **Profil değişimi**: yüzde, zaman kaydırma ve süre ile profil değişimi
     
-    ![Actions tile settings: one entry per place](../images/wearos/tiles/tile_settings_actions.png)
+    ![Eylemler paneli ayarları: her yer için bir giriş](../images/wearos/tiles/tile_settings_actions.png)
     
-    The dialogs the buttons open. Swipe from right to left to reach the next page of a dialog, and tap the check mark on the last page to send the request to the phone:
+    Düğmelerin açtığı diyaloglar. Bir diyaloğun sonraki sayfasına geçmek için sağdan sola kaydırın ve isteği telefona göndermek için son sayfadaki onay işaretine dokunun:
     
-    | Treat | Insulin | Carbs | eCarbs | TempT | Profile switch |
+    | Tedavi | İnsülin | Karbonhidrat | yKarb | GH | Profil değişimi |
     | --- | --- | --- | --- | --- | --- |
-    | ![Treatment dialog, insulin page](../images/wearos/dialogs/dialog_treatment.png) | ![Insulin dialog](../images/wearos/dialogs/dialog_insulin.png) | ![Carbs dialog](../images/wearos/dialogs/dialog_carbs.png) | ![eCarbs dialog](../images/wearos/dialogs/dialog_ecarbs.png) | ![Temp Target dialog, duration page](../images/wearos/dialogs/dialog_temp_target.png) | ![Profile switch dialog](../images/wearos/dialogs/dialog_profile_switch.png) |
+    | ![Tedavi diyaloğu, insülin sayfası](../images/wearos/dialogs/dialog_treatment.png) | ![İnsülin diyaloğu](../images/wearos/dialogs/dialog_insulin.png) | ![Karbonhidrat diyaloğu](../images/wearos/dialogs/dialog_carbs.png) | ![yKarb diyaloğu](../images/wearos/dialogs/dialog_ecarbs.png) | ![Geçici Hedef diyaloğu, süre sayfası](../images/wearos/dialogs/dialog_temp_target.png) | ![Profil değişimi diyaloğu](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] In the watch's **Settings** > **Interface**, turn on **Calculator Percentage** to show the percentage input in the bolus calculator. The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). The other calculator settings are those of the phone under **Settings** > **Bolus wizard settings**.
+    [1] Bolus hesaplayıcısında yüzde girişini göstermek için saatin **Ayarlar** > **Arayüz** bölümünde **Hesaplayıcı yüzdesi** ayarını açın. Varsayılan yüzde, telefondaki ["Bolus yüzdesi"](#Preferences-deliver-this-part-of-bolus-wizard-result) ayarından gelir. Diğer hesaplayıcı ayarları, telefondaki **Ayarlar** > **Bolus sihirbazı ayarları** altındaki ayarlardır.
     
-    [2] In the watch's **Settings** > **Interface**, turn on **Calculator Meal Type** to show the **Meal type** page, where you pick **Bread**, **Cake** or **Pizza** to split the carbs of a slow meal into carbs now and eCarbs later. See [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
+    [2] **Öğün türü** sayfasını göstermek için saatin **Ayarlar** > **Arayüz** bölümünde **Hesaplayıcı öğün türü** ayarını açın; bu sayfada yavaş bir öğünün karbonhidratlarını şimdiki karbonhidrat ve sonraki yKarb olarak bölmek için **Ekmek**, **Kek** veya **Pizza** seçersiniz. Bkz. [Öğün türünü seçme](#WearOsSmartwatch-wizard-meal-type).
     
-    ### Temp Target tile
+    ### Geçici Hedef paneli
     
-    ![Temp Target tile](../images/wearos/tiles/tile_temp_target.png)
+    ![Geçici Hedef paneli](../images/wearos/tiles/tile_temp_target.png)
     
-    Temporary targets from the phone's presets. Set the duration and the target of each preset on the phone under **Settings** > [Default temp targets](#Preferences-default-temp-targets). Pick up to four of these in the tile settings:
+    Telefondaki ön ayarlardan geçici hedefler. Her ön ayarın süresini ve hedefini telefonda **Ayarlar** > [Varsayılan geçici hedefler](#Preferences-default-temp-targets) altında ayarlayın. Panel ayarlarında bunlardan en fazla dördünü seçin:
     
-    * **Activity**: for sport
-    * **Eating**: eating soon, a lower target so there is more insulin on board at the meal
-    * **Hypo**: a higher target during a hypo treatment
-    * **Manual**: a custom target and duration
-    * **Cancel**: stops the running temporary target. The button is shown only while a temporary target is running.
+    * **Aktivite**: spor için
+    * **Yemek**: yakında yemek; öğünde daha fazla aktif insülin olması için daha düşük bir hedef
+    * **Hipo**: hipo tedavisi sırasında daha yüksek bir hedef
+    * **Manuel**: özel hedef ve süre
+    * **İptal**: çalışan geçici hedefi durdurur. Bu düğme yalnızca bir geçici hedef çalışırken gösterilir.
     
-    ### Quick Wizard tile
+    ### Hızlı Asistan paneli
     
-    ![Quick Wizard tile](../images/wearos/tiles/tile_quick_wizard.png)
+    ![Hızlı Asistan paneli](../images/wearos/tiles/tile_quick_wizard.png)
     
-    The [QuickWizard](#quickwizards) entries of the phone that have **Show on Watch** turned on, within their valid hours. A carbs entry shows its carbs in g, an insulin entry its fixed dose in U. A tap runs the entry after a confirmation on the watch. There is nothing to set on the watch: edit the entries on the phone, and turn on **Show on Watch** under **Device Selection** for each entry you want on the tile. Outside the valid hours of all your entries, the tile shows **No config available**.
+    Telefondaki [Hızlı Asistan](#quickwizards) girişlerinden **Saatte Göster** açık olanlar, geçerli saatleri içinde. Karbonhidrat girişi karbonhidratını g olarak, insülin girişi sabit dozunu Ü olarak gösterir. Bir dokunuş, saatte onaydan sonra girişi çalıştırır. Saatte ayarlanacak bir şey yoktur: girişleri telefonda düzenleyin ve panelde görmek istediğiniz her giriş için **Cihaz Seçimi** altında **Saatte Göster** seçeneğini açın. Tüm girişlerinizin geçerli saatleri dışında panel **Mevcut yapılandırma yok** gösterir.
     
-    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/quickwizard_watch_phone.png)
+    ![Saatte Göster açık bir Hızlı Asistan girişi ve göründüğü panel](../images/quickwizard_watch_phone.png)
     
-    ### Scene tile
+    ### Senaryo paneli
     
-    ![Scene tile](../images/wearos/tiles/tile_scene.png)
+    ![Senaryo paneli](../images/wearos/tiles/tile_scene.png)
     
-    The [Scenes](#scenes-from-watch) of the phone. Each of the four places is set to **Automatic**, **None** or one scene in the tile settings. An **Automatic** place takes the next scene from the phone's list that no other place has claimed. A place set to a scene that no longer exists on the phone shows **Unavailable**.
+    Telefondaki [Senaryolar](#scenes-from-watch). Dört yerin her biri panel ayarlarında **Otomatik**, **Hiçbiri** veya bir senaryo olarak ayarlanır. **Otomatik** bir yer, telefonun listesinden başka bir yerin almadığı sonraki senaryoyu alır. Telefonda artık bulunmayan bir senaryoya ayarlanmış bir yer **Mevcut değil** gösterir.
     
-    ![Scene tile settings, four places set to Automatic](../images/wearos/tiles/tile_settings_scene.png)
+    ![Senaryo paneli ayarları, dört yer Otomatik olarak ayarlı](../images/wearos/tiles/tile_settings_scene.png)
     
-    ### Running mode tile
+    ### Çalışma modu paneli
     
-    ![Running mode tile](../images/wearos/tiles/tile_running_mode.png)
+    ![Çalışma modu paneli](../images/wearos/tiles/tile_running_mode.png)
     
-    The [running modes](#aaps-screens-running-mode) you can switch to from the current one, with the same icons as on the phone: closed loop, low glucose suspend, open loop, disable loop, suspend loop and disconnect pump, or resume and reconnect while one of those runs. **Suspend loop** and **Disconnect pump** ask for a duration first. The phone decides which modes are offered, the watch shows the first four and leaves out **Disable loop** when **Suspend loop** is on the list.
+    Geçerli moddan geçebileceğiniz [çalışma modları](#aaps-screens-running-mode), telefondakiyle aynı simgelerle: kapalı döngü, düşük glikozda askıya alma, açık döngü, döngüyü devre dışı bırakma, döngüyü askıya alma ve pompa bağlantısını kesme; bunlardan biri çalışırken de devam ettirme ve tekrar bağlama. **Döngüyü askıya al** ve **Pompa bağlantısını kes** önce bir süre sorar. Hangi modların sunulacağına telefon karar verir; saat ilk dördünü gösterir ve listede **Döngüyü askıya al** varsa **Döngüyü devre dışı bırak** seçeneğini göstermez.
     
-    ### User Action tile
+    ### Kullanıcı Eylemi paneli
     
-    ![User Action tile](../images/wearos/tiles/tile_user_action.png)
+    ![Kullanıcı Eylemi paneli](../images/wearos/tiles/tile_user_action.png)
     
-    One button for each [automation](#automations-automation-triggers) on the phone whose trigger is **User action**. A tap asks you to confirm, then the phone runs the automation's actions. The buttons are named after the automations, so give them short names. There is nothing to set on the watch.
+    Telefonda tetikleyicisi **Kullanıcı eylemi** olan her [otomasyon](#automations-automation-triggers) için bir düğme. Dokunma onay ister, ardından telefon otomasyonun eylemlerini çalıştırır. Düğmeler otomasyonların adını taşır; bu yüzden onlara kısa adlar verin. Saatte ayarlanacak bir şey yoktur.
     
-    ### BG Graph tile
+    ### KŞ Grafiği paneli
     
-    ![BG Graph tile](../images/wearos/tiles/tile_bg_graph.png)
+    ![KŞ Grafiği paneli](../images/wearos/tiles/tile_bg_graph.png)
     
-    The glucose value with arrow, delta and age, below it IOB, COB, basal rate and target, and the BG graph with predictions, boluses, carbs and SMBs. Two settings on the watch: **Time range** (1, 3 or 6 hours) and **Tap action**, which opens the full **BG Graph**, the **Main Menu** or the **Loop Status** screen.
+    Ok, delta ve yaş ile glikoz değeri; altında AİNS, AKRB, bazal oranı ve hedef; ayrıca tahminler, boluslar, karbonhidratlar ve SMB'lerle KŞ grafiği. Saatte iki ayar vardır: **Zaman aralığı** (1, 3 veya 6 saat) ve tam **KŞ Grafiği** ekranını, **Ana Menü**'yü veya **Döngü durumu** ekranını açan **Dokunma eylemi**.
     
-    ![The BG Graph screen](../images/wearos/bg_graph.png)
+    ![KŞ Grafiği ekranı](../images/wearos/bg_graph.png)
     
-    ![BG Graph tile settings: Time range and Tap action](../images/wearos/tiles/tile_settings_bg_graph.png)
+    ![KŞ Grafiği paneli ayarları: Zaman aralığı ve Dokunma eylemi](../images/wearos/tiles/tile_settings_bg_graph.png)
     
-    ## Always on
+    ## Her zaman açık
     
-    This section and the next apply to the classic **AAPS** watchfaces on Wear OS 5 and older. On Wear OS 6 the **Complications watchface** has an always-on display of its own, see [the watchface AAPS installs](#wearos-aaps-v4-watchface).
+    Bu bölüm ve bir sonraki, Wear OS 5 ve daha eski sürümlerdeki klasik **AAPS** saat arayüzleri için geçerlidir. Wear OS 6'da **Komplikasyonlu saat arayüzü**nün kendi her zaman açık ekranı vardır, bkz. [AAPS'in yüklediği saat arayüzü](#wearos-aaps-v4-watchface).
     
-    Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
+    Android Wear OS akıllı saatlerinde uzun pil ömrü zor bir konudur. Some smartwatches get as much as 30 hours before recharging. En iyi güç tasarrufu için ekran, kullanılmadığında kapatılmalıdır. Most watches support the “Always on” display.
     
-    Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lighting up fewer pixels to save power on OLED displays.
+    AAPS sürüm 3'ten beri, her zaman açık modda “Basitleştirilmiş Kullanıcı Arayüzü” (Simplify UI) kullanılabilir. This UI only contains the blood glucose, direction, and time. Bu arayüz güç için optimize edilmiştir: daha seyrek güncellenir, daha az bilgi gösterir ve OLED ekranlarda güç tasarrufu için daha az piksel yakar.
     
-    The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “Always On Mode” or “Always On and Charging”.
+    Basitleştirilmiş kullanıcı arayüzü modu, AAPS(DijitalStil) ve AAPS(Özel) saat arayüzleri için kullanılabilir. Basitleştirilmiş kullanıcı arayüzü isteğe bağlıdır ve saat arayüzü ayarlarından yapılandırılır (saat arayüzüne uzun basın ve “düzenle” veya dişli simgesine dokunun). “Basitleştirilmiş Kullanıcı Arayüzü” yapılandırmasını seçin ve “Her Zaman Açık Modu” veya “Her Zaman Açık ve Şarj Oluyor” olarak ayarlayın.
     
-    ### Night-time mode
+    ### Gece modu
     
-    While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
+    Şarj sırasında ekranın gece boyunca “her zaman açık” kalması ve kan şekerinizi göstermesi yararlı olur. Ancak standart saat arayüzleri çok parlaktır ve çok fazla bilgi gösterir; uykulu gözlerle ayrıntıları okumak zordur. Bu nedenle saat arayüzüne bir seçenek ekledik: yapılandırmada ayarlanırsa kullanıcı arayüzü yalnızca şarj sırasında basitleştirilir.
     
-    The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “During Charging” or “Always On and Charging”.
+    Basitleştirilmiş kullanıcı arayüzü modu, AAPS(DijitalStil) ve AAPS(Özel) saat arayüzleri için kullanılabilir. Basitleştirilmiş kullanıcı arayüzü isteğe bağlıdır ve saat arayüzü ayarlarından yapılandırılır (saat arayüzüne uzun basın ve “düzenle” veya dişli simgesine dokunun). “Basitleştirilmiş Kullanıcı Arayüzü” yapılandırmasını seçin ve “Şarj Olurken” veya “Her Zaman Açık ve Şarj Oluyor” olarak ayarlayın.
     
-    The Android developer options enable your watch to stay awake during charging. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options.
+    The Android developer options enable your watch to stay awake during charging. Geliştirici seçeneklerini kullanılabilir yapmak için [resmi belgelere](https://developer.android.com/training/wearables/get-started/debugging) bakın. Geliştirici seçeneklerinde “Şarj olurken uyanık kal” (“Stay awake when charging”) ayarını “açık” yapın.
     
-    Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
+    Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. Saatler yanmayı önlemek için genellikle ekranı karartır; öneriler için kullanım kılavuzunuza, üreticiye veya internete bakın.
     
-    ![Watchface Nightstand](../images/Watchface_nightstand.jpg)
+    ![Komodin üzerindeki saat arayüzü](../images/Watchface_nightstand.jpg)
     
-    ![Simplified UI](../images/Watchface_simplified_ui.png)
+    ![Basitleştirilmiş kullanıcı arayüzü](../images/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Phone alarms on the watch
+    ## Saatte telefon alarmları
     
-    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![Saatte bir telefon alarmı](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. The watch vibrates, and again every half minute for five minutes until you answer. A notification shows the title and the text of the alarm, with the same answers as the [time to eat](#WearOsSmartwatch-wizard-carb-time) reminder:
+    Saat, telefonun alarmlarını gösterir; böylece telefonun neden ses çıkardığını görür ve bileğinizden yanıt verebilirsiniz. Saat titreşir ve siz yanıt verene kadar beş dakika boyunca her yarım dakikada bir tekrar titreşir. Bir bildirim, alarmın başlığını ve metnini [yemek vakti](#WearOsSmartwatch-wizard-carb-time) hatırlatıcısıyla aynı yanıtlarla gösterir:
     
-    * **Silence**, or a swipe: the alarm stops, and the alarm screen on the phone closes.
-    * **Mute 5 min**: the alarm stops and rings again after five minutes, on the phone and on the watch.
+    * **Sessize al** veya kaydırma: alarm durur ve telefondaki alarm ekranı kapanır.
+    * **5 dk sessiz**: alarm durur ve beş dakika sonra telefonda ve saatte tekrar çalar.
     
-    Two kinds of alarm reach the watch:
+    Saate iki tür alarm ulaşır:
     
-    * The alarm screen of the phone (pump errors, automation alarms, BG alarms): **Silence** and **Mute 5 min**.
-    * Urgent notifications with a sound, like *Pump unreachable* or a Nightscout alarm: **Silence** only. The phone has only **Dismiss** for those, and they come back by themselves while their cause lasts.
+    * Telefonun alarm ekranı (pompa hataları, otomasyon alarmları, KŞ alarmları): **Sessize al** ve **5 dk sessiz**.
+    * *Pompaya ulaşılamıyor* veya bir Nightscout alarmı gibi sesli acil bildirimler: yalnızca **Sessize al**. Telefonda bunlar için yalnızca **Kapat** vardır ve nedenleri sürdükçe kendiliğinden geri gelirler.
     
-    The *time to eat* reminder is not sent this way: the watch rings that one by itself.
+    *Yemek vakti* hatırlatıcısı bu yolla gönderilmez: saat onu kendisi çaldırır.
     
-    ## Snooze Alert shortcut
+    ## Uyarı erteleme kısayolu
     
-    The watch [shows the alarm](#WearOsSmartwatch-phone-alarms) itself; the shortcut is a second way to silence it, with one press. It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+    Saat alarmı kendisi [gösterir](#WearOsSmartwatch-phone-alarms); kısayol, alarmı tek basışla sessize almanın ikinci bir yoludur. It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Not: Alarm mesajını yine de telefonunuzda kontrol etmeniz ve buna göre işlem yapmanız gerekir, ancak bunu daha sonra yapabilirsiniz. Saatinizde iki düğme varsa, bir tuşu `AAPS Snooze Alert` (Türkçe: AAPS Uyarı Erteleme) programına atayabilirsiniz.
     
-    To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
+    Samsung Watch 4'te düğmeyi bağlamak için `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert` yoluna gidin
     
-    On a watchface with complications, an **App shortcut** complication set to **AAPS Snooze Alert** does the same with a tap. The [alternative setup of the Complications watchface](#wearos-complications-watchface-setup) uses its top-right slot for it.
+    Komplikasyonlu bir saat arayüzünde, **AAPS Uyarı Erteleme** olarak ayarlanmış bir **App shortcut** (uygulama kısayolu) komplikasyonu aynı işi bir dokunuşla yapar. [Komplikasyonlu saat arayüzünün alternatif kurulumu](#wearos-complications-watchface-setup) bunun için sağ üst yeri kullanır.
     
-    ### Snooze xDrip
+    ### xDrip'i erteleme
     
-    When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm. 
+    xDrip kullanıyorsanız ve saatte xDrip yüklüyse, 'AAPS Snooze Alert' kısayolu tüm xDrip alarmlarını da erteler. 
     
     
-    ## Performance and battery life tips
+    ## Performans ve pil ömrü ipuçları
     
-    Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+    Wear OS saatleri gücü çok sınırlı cihazlardır. Saat kasasının boyutu, içindeki pilin kapasitesini sınırlar. Hem donanım hem de yazılım tarafındaki son gelişmelere rağmen Wear OS saatlerin hâlâ her gün şarj edilmesi gerekir.
     
-    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
+    Pil ömrü bir günden kısaysa (sabahtan akşama kadar), sorunları gidermek için bazı ipuçları şunlardır.
     
-    Main battery-demanding areas are:
+    Pili en çok tüketen alanlar şunlardır:
     
-    * Active display with a backlight on (for LED) or in full intensity mode (for OLED)
-    * Rendering on screen
-    * Radio communication over Bluetooth
+    * Arka ışığı açık (LED için) veya tam yoğunluk modunda (OLED için) etkin ekran
+    * Ekranda çizim
+    * Bluetooth üzerinden radyo iletişimi
     
-    Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in _display time_ area:
+    İletişimden ödün veremeyeceğimiz (güncel verilere ihtiyacımız var) ve en güncel verilerin çizilmesini istediğimiz için, optimizasyonların çoğu _ekran süresi_ alanında yapılabilir:
     
-    * Stock watchfaces are usually better optimized than custom one, downloaded from the store.
-    * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
-    * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-    * Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-    * Use a dark theme on the watchface. On OLED displays fewer lit pixels mean less power and less burn-in.
-    * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
-    * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
-    * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-    * Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
-    * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+    * Hazır saat arayüzleri genellikle mağazadan indirilen özel saat arayüzlerinden daha iyi optimize edilmiştir.
+    * Etkin olmayan / kısık modda çizilen veri miktarını sınırlayan saat arayüzlerini kullanmak daha iyidir.
+    * Üçüncü taraf hava durumu widget'ları gibi, harici kaynaklardan veri kullanan başka komplikasyonları karıştırırken dikkatli olun.
+    * Daha basit saat arayüzleriyle başlayın. Komplikasyonları birer birer ekleyin ve pil ömrünü nasıl etkilediklerini gözlemleyin.
+    * Saat arayüzünde koyu tema kullanın. OLED ekranlarda daha az yanan piksel, daha az güç tüketimi ve daha az ekran yanması demektir.
+    * Saatinizde hangisinin daha iyi çalıştığını kontrol edin: AAPS'in hazır saat arayüzleri mi, yoksa AAPS komplikasyonlu başka saat arayüzleri mi.
+    * Birkaç gün boyunca, farklı aktivite profilleriyle gözlemleyin. Çoğu saat; bakma, hareket ve kullanımla ilgili diğer tetikleyicilerde ekranı açar.
+    * Performansı etkileyen genel sistem ayarlarınızı kontrol edin: bildirimler, arka ışık / etkin ekran zaman aşımı, GPS'in ne zaman etkinleştirildiği.
+    * Diğer kullanıcıların deneyimleri ve bildirdikleri pil ömrü için [test edilen telefon ve saatlerin listesine](#Phones-list-of-tested-phones) bakın ve [topluluğa sorun](../GettingHelp/WhereCanIGetHelp.md).
+    * **Saat arayüzünde veya komplikasyonda gösterilen verilerin güncel olduğunu garanti edemeyiz**. Sonuçta bir saat arayüzünün veya bir komplikasyonun ne zaman güncelleneceğine Wear OS karar verir. AAPS uygulaması güncelleme istese bile sistem, pil tasarrufu için güncellemeleri ertelemeye veya yok saymaya karar verebilir. Emin olmadığınızda ve saatin pili azaldığında her zaman telefondaki ana AAPS uygulamasından tekrar kontrol edin.
     
     (Watchfaces-troubleshooting-the-wear-app)=
     
-    ## Troubleshooting the wear app
+    ## Wear uygulamasında sorun giderme
     
-    If the watch shows no data or old data, first check the connection between the watch and the phone, see [Troubleshooting the AAPS watch - AAPS phone communication](#wear-os-watch-phone-communication). For a watch on Wear OS 5, see also the [general troubleshooting recommendations for Wear OS 5](#wear-os-5-troubleshooting). A complication that does not update has the same causes as a tile or watchface that does not update, so check those first.
+    Saat hiç veri göstermiyorsa veya eski veri gösteriyorsa, önce saat ile telefon arasındaki bağlantıyı kontrol edin, bkz. [AAPS saati - AAPS telefonu iletişiminde sorun giderme](#wear-os-watch-phone-communication). Wear OS 5 kullanan bir saat için ayrıca [Wear OS 5 için genel sorun giderme önerilerine](#wear-os-5-troubleshooting) bakın. Güncellenmeyen bir komplikasyonun nedenleri, güncellenmeyen bir panel veya saat arayüzünün nedenleriyle aynıdır; bu yüzden önce bunları kontrol edin.
     
-    ## Additional AAPS custom watchfaces are also available
+    ## Ek AAPS özel saat arayüzleri de mevcuttur
     
-    [Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+    [Buradan](../ExchangeSiteCustomWatchfaces/index.md) diğer kullanıcıların yaptığı özel saat arayüzlerini içeren Zip dosyalarını indirebilirsiniz.
     
-    ## Build your own watchface
+    ## Kendi saat arayüzünüzü oluşturun
     
-    If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
+    Kendi saat arayüzünüzü oluşturmak istiyorsanız [buradaki kılavuzu](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md) izleyin.
     
-    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+    Özel bir saat arayüzü oluşturduktan sonra kendi **AAPS** özel saat arayüzünüzü başkalarıyla paylaşabilirsiniz; zip dosyası GitHub'a bir Pull Request ile "ExchangeSiteCustomWatchfaces" klasörüne yüklenebilir. Pull request birleştirilirken dokümantasyon ekibi CustomWatchface.png dosyasını çıkarır ve adının başına Zip dosyasının adını ekler.
     
     (WearOsSmartwatch-complications-watchface-download)=
     
-    ## Make your own version of the Complications watchface
+    ## Komplikasyonlu saat arayüzünün kendi sürümünüzü yapın
     
-    The **Complications watchface** that **AAPS** installs on Wear OS 6 (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)) is made with Samsung's **Watch Face Studio**. Its project file is free to download, so you can change it to your taste, or use it on a watch with Wear OS 5 or older where **AAPS** does not install it:
+    **AAPS**'in Wear OS 6'da yüklediği **Komplikasyonlu saat arayüzü** (bkz. [AAPS'in yüklediği saat arayüzü](#wearos-aaps-v4-watchface)) Samsung'un **Watch Face Studio** aracıyla yapılmıştır. Proje dosyası ücretsiz indirilebilir; böylece onu zevkinize göre değiştirebilir veya **AAPS**'in onu yüklemediği Wear OS 5 ya da daha eski bir saatte kullanabilirsiniz:
     
-    [Complications watchface (AAPS V4), zip](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/wearos/Complications_watchface_AAPS_V4.zip)
+    [Komplikasyonlu saat arayüzü (AAPS V4), zip](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/wearos/Complications_watchface_AAPS_V4.zip)
     
-    The zip holds four files:
+    Zip dosyası dört dosya içerir:
     
-    * `AAPS V4_0_2.wfs`: the project. Open it in [Watch Face Studio](https://developer.samsung.com/watch-face-studio/download.html), change what you like, and install it on the watch from there.
-    * `com.watchfacestudio.aapsv4.apk`: the watchface as it is, ready to install with [adb](https://developer.android.com/tools/releases/platform-tools): `adb install com.watchfacestudio.aapsv4.apk` with the watch connected over ADB debugging.
-    * `README.txt`: the two recommended complication setups, the same as on the [Wear OS page](#wearos-complications-watchface-setup).
-    * `AAPS V4.png`: a preview.
+    * `AAPS V4_0_2.wfs`: proje. Bunu [Watch Face Studio](https://developer.samsung.com/watch-face-studio/download.html) içinde açın, istediğinizi değiştirin ve oradan saate yükleyin.
+    * `com.watchfacestudio.aapsv4.apk`: saat arayüzünün kendisi, [adb](https://developer.android.com/tools/releases/platform-tools) ile yüklemeye hazır: saat ADB hata ayıklama ile bağlıyken `adb install com.watchfacestudio.aapsv4.apk`.
+    * `README.txt`: önerilen iki komplikasyon kurulumu, [Wear OS sayfasındakiyle](#wearos-complications-watchface-setup) aynı.
+    * `AAPS V4.png`: bir önizleme.
     
-    ```{admonition} This is not a custom watchface
+    ```{admonition} Bu bir özel saat arayüzü değildir
     :class: note
-    The zip is not a custom watchface for **Load Watchface** in the **Wear** plugin, and the phone cannot install it. It must be unzipped and installed on the watch with Watch Face Studio or adb, as above.
+    Bu zip, **Wear** eklentisindeki **Saat arayüzü yükle** için bir özel saat arayüzü değildir ve telefon onu yükleyemez. Zip açılmalı ve yukarıdaki gibi Watch Face Studio veya adb ile saate yüklenmelidir.

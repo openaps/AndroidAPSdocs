@@ -1,4 +1,4 @@
-Both keystore options (Option 1 and Option 2) use the same preparation file. Download it:
+Ambele opțiuni pentru keystore (Opțiunea 1 și Opțiunea 2) folosesc același fișier de pregătire. Descărcați-l:
 
 - [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
@@ -14,8 +14,8 @@ Or visit the latest release page:
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2. Backup copy hosted on this site:
- - If the external link is also unavailable, you can use this backup file to download.
+2. Copie de rezervă găzduită pe acest site:
+ - Dacă nici linkul extern nu este disponibil, puteți descărca acest fișier de rezervă.
 <!--crowdin:disable-->
 
 ```{eval-rst}

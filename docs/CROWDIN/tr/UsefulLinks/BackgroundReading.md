@@ -6,7 +6,7 @@ Donanımınızı kurmadan önce, her şeyin nasıl çalıştığını anlamak ve
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[OpenAPS dokümantasyonu - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Loop Docs - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
@@ -26,11 +26,11 @@ Donanımınızı kurmadan önce, her şeyin nasıl çalıştığını anlamak ve
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+Adam Brown'ın [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) kitabı
 
-[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
+Gary Scheiner'ın [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) kitabı
 
-["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts
+John Walsh ve Ruth Roberts'ın ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) kitabı
 
 ## Kendin Yap kapalı döngü sistemleri hakkında kaynaklar ve makaleler
 

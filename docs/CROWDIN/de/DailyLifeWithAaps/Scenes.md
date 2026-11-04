@@ -1,7 +1,7 @@
 (scenes)=
-# Scenes (situation presets)
+# Szenen (Voreinstellungen für bestimmte Situationen)
 
-A **scene** is a named preset that applies a **bundle of actions at once** — for example a *Sleep*, *Exercise* or *Sick Day* preset that switches your profile, sets a temporary target, toggles SMB and adds a care-portal note with a single tap, optionally for a set duration.
+Eine **Szene** ist eine benannte Voreinstellung, die **mehrere Aktionen auf einmal** ausführt – zum Beispiel eine Voreinstellung *Schlaf*, *Sport* oder *Krankheitstag*, die mit einem einzigen Tippen Dein Profil wechselt, ein temporäres Ziel setzt, SMB ein- oder ausschaltet und eine Careportal-Notiz einträgt, auf Wunsch für eine festgelegte Dauer.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,172 +10,172 @@ A **scene** is a named preset that applies a **bundle of actions at once** — f
 
 ---
 
-## What is a scene
+## Was ist eine Szene
 
-Instead of changing several things by hand every time a recurring situation comes up, you set them up once as a scene and activate it with one tap. A scene can bundle any of these actions:
+Statt jedes Mal mehrere Dinge von Hand zu ändern, wenn eine wiederkehrende Situation eintritt, richtest Du sie einmal als Szene ein und aktivierst sie mit einem Tippen. Eine Szene kann jede dieser Aktionen bündeln:
 
-- **Profile switch** — switch profile and/or scale it by percentage (e.g. 70 %).
-- **Temporary target** — set a temp target (e.g. *Activity*, *Eating soon*, or a custom value).
-- **SMB on/off** — enable or disable super-micro-boluses while the scene is active.
-- **Loop mode** — change the running mode (e.g. to a more conservative mode).
-- **Care-portal note** — log an event (e.g. *Exercise*, *Sickness*) so it shows on the graph and in Nightscout.
+- **Profilwechsel** – das Profil wechseln und/oder es prozentual anpassen (z. B. 70 %).
+- **Temporäres Ziel** – ein temporäres Ziel setzen (z. B. *Aktivität*, *Bald essen* oder einen eigenen Wert).
+- **SMB ein/aus** – Super-Mikroboli aktivieren oder deaktivieren, solange die Szene aktiv ist.
+- **AAPS-Modus** – den AAPS-Modus ändern (z. B. auf einen vorsichtigeren Modus).
+- **Careportal-Notiz** – ein Ereignis eintragen (z. B. *Sport*, *Krankheit*), damit es im Diagramm und in Nightscout erscheint.
 
-A scene also has a **duration** — a fixed time (minutes/hours/days) or *Indefinite (manual end)* — and an **end action** that runs when it finishes: either a **notification**, or it can **chain** into another scene (for example *Sick Day → Exercise*).
+Eine Szene hat außerdem eine **Dauer** – eine feste Zeit (Minuten/Stunden/Tage) oder *Unbegrenzt (manuelles Ende)* – und eine **Aktion am Ende**, die ausgeführt wird, wenn sie endet: entweder eine **Benachrichtigung**, oder sie kann in eine andere Szene **übergehen** (zum Beispiel *Krankheitstag → Sport*).
 
 ---
 
-## Managing scenes
+## Szenen verwalten
 
-Open **Manage → Scenes** to see, create, edit, enable/disable and reorder your scenes.
+Öffne **Bearbeiten → Szenen**, um Deine Szenen anzusehen, zu erstellen, zu bearbeiten, ein- oder auszuschalten und neu zu ordnen.
 
 ![The Scenes management screen](../images/v4/Scenes/scenes_list.png)
 
-Each scene card shows:
+Jede Szenen-Karte zeigt:
 
-- a **checkbox** to enable/disable the scene,
-- an **icon** and **name**,
-- a summary — *“N actions, duration”*, and the **→ chained scene** if it chains into another one,
-- and three buttons: **▶ activate**, **✏️ edit**, **🗑️ delete**.
+- ein **Kästchen**, um die Szene ein- oder auszuschalten,
+- ein **Symbol** und einen **Namen**,
+- eine Zusammenfassung – *„N Aktionen, Dauer“* – und die **→ Folgeszene**, wenn sie in eine andere übergeht,
+- und drei Knöpfe: **▶ aktivieren**, **✏️ bearbeiten**, **🗑️ löschen**.
 
-Tap the **+** button to create a new scene.
+Tippe auf den Knopf **+**, um eine neue Szene zu erstellen.
 
 ---
 
-## Creating or editing a scene
+## Eine Szene erstellen oder bearbeiten
 
-### Start from a template
+### Mit einer Vorlage beginnen
 
-To **create** a scene, tap the **+** button on the Scenes screen. The first step is **Start from template**: pick a ready-made scene for a common situation — *Exercise*, *Sick Day*, *Sick Day — Vomiting*, *Sleep*, *Post-exercise Night*, *Pre-meal*, *Alcohol*, *Driving*, *Bathing*, *Luteal Phase*, *Hot Weather*, *Medical Procedure* — or start from a *Blank* scene. Each template **pre-fills the recommended actions** and you can adjust everything in the following steps.
+Um eine Szene zu **erstellen**, tippe im Bildschirm Szenen auf den Knopf **+**. Der erste Schritt ist **Mit einer Vorlage beginnen**: Wähle eine fertige Szene für eine typische Situation – *Sport*, *Krankheitstag*, *Krankheitstag — Erbrechen*, *Schlaf*, *Nacht nach dem Sport*, *Vor der Mahlzeit*, *Alkohol*, *Autofahren*, *Baden*, *Lutealphase*, *Heißes Wetter*, *Medizinischer Eingriff* – oder beginne mit einer *Leeren Vorlage*. Jede Vorlage **füllt die empfohlenen Aktionen vor**, und Du kannst in den folgenden Schritten alles anpassen.
 
 ![“Start from template” — pick a starting point](../images/v4/Scenes/templates_picker.png)
 
-After you pick a template, its purpose is explained — *when* and *why* to use it — before you continue:
+Nachdem Du eine Vorlage gewählt hast, wird ihr Zweck erklärt – *wann* und *warum* Du sie verwendest –, bevor es weitergeht:
 
 ![A template's explanation](../images/v4/Scenes/template_explanation.png)
 
-### Step through the actions
+### Die Aktionen Schritt für Schritt durchgehen
 
-The rest of the editor is a short **step-by-step** wizard. Each step is one action type with an *“Include … in scene”* switch — turn it on only for the actions you want this scene to perform, and leave the rest off.
+Der Rest des Editors ist ein kurzer Assistent, der Dich **Schritt für Schritt** führt. Jeder Schritt ist eine Art von Aktion mit einem Schalter *„… in die Szene aufnehmen“* – schalte ihn nur bei den Aktionen ein, die diese Szene ausführen soll, und lass die übrigen aus.
 
 ![The scene editor — the Profile switch step](../images/v4/Scenes/scene_editor.png)
 
-Work through the steps with **Next**/**Back**: *Profile switch*, *Temporary target*, *SMB*, *Loop mode*, *Care-portal note*, then the **duration**, the **end action** (notify or chain into another scene), and finally the scene's **name and icon**. Save when you are done. (To **edit** an existing scene, tap its **✏️** button — you go straight into these steps.)
+Gehe die Schritte mit **Weiter**/**Zurück** durch: *Profilwechsel*, *Temporäres Ziel*, *SMB*, *AAPS-Modus*, *Careportal-Notiz*, dann die **Dauer**, die **Aktion am Ende** (benachrichtigen oder in eine andere Szene übergehen) und zum Schluss **Name und Symbol** der Szene. Speichere, wenn Du fertig bist. (Um eine vorhandene Szene zu **bearbeiten**, tippe auf ihren Knopf **✏️** – Du landest direkt in diesen Schritten.)
 
-Each step starts with a short explanation of what the action does. The steps look like this, here with the *Exercise* template:
+Jeder Schritt beginnt mit einer kurzen Erklärung, was die Aktion bewirkt. So sehen die Schritte aus, hier mit der Vorlage *Sport*:
 
-**Temporary target** — pick one of your temp target presets:
+**Temporäres Ziel** – wähle eine Deiner Vorlagen für temporäre Ziele:
 
 ![The Temporary target step](../images/v4/Scenes/scene_editor_step3.png)
 
-**SMB** — enable or disable SMB while the scene is active:
+**SMB** – SMB aktivieren oder deaktivieren, solange die Szene aktiv ist:
 
 ![The SMB step](../images/v4/Scenes/scene_editor_step4.png)
 
-**Running mode** — optionally change the loop mode:
+**AAPS-Modus** – den AAPS-Modus optional ändern:
 
 ![The Running mode step](../images/v4/Scenes/scene_editor_step5.png)
 
-**Careportal** — the event type and note to log:
+**Careportal** – Ereignistyp und Notiz, die eingetragen werden:
 
 ![The Careportal step](../images/v4/Scenes/scene_editor_step6.png)
 
-**Duration** — how long the scene stays active; 0 means until you end it yourself:
+**Dauer** – wie lange die Szene aktiv bleibt; 0 bedeutet, bis Du sie selbst beendest:
 
 ![The Duration step](../images/v4/Scenes/scene_editor_step7.png)
 
-**Follow-up scene** — optionally the scene that starts when this one ends:
+**Folgeszene** – optional die Szene, die startet, wenn diese endet:
 
 ![The Follow-up scene step](../images/v4/Scenes/scene_editor_followup.png)
 
-**Scene** — the name and the icon. Press **Finish** to save:
+**Szene** – Name und Symbol. Tippe zum Speichern auf **Fertigstellen**:
 
 ![The name and icon step](../images/v4/Scenes/scene_editor_step9.png)
 
 ---
 
-## Activating a scene
+## Eine Szene aktivieren
 
-Activate a scene from the **Scenes** list (the **▶** button) or from the **Scenes** entry in the bottom navigation. In the **Scenes** sheet of the bottom navigation, each scene shows the same summary as in the Scenes list, and the **pencil** at the top of the sheet opens **Manage → Scenes** to create or edit your scenes.
+Aktiviere eine Szene in der Liste **Szenen** (Knopf **▶**) oder über den Eintrag **Szenen** in der unteren Navigationsleiste. Im Fenster **Szenen** der unteren Navigationsleiste zeigt jede Szene dieselbe Zusammenfassung wie in der Liste der Szenen, und der **Stift** oben im Fenster öffnet **Bearbeiten → Szenen**, um Deine Szenen zu erstellen oder zu bearbeiten.
 
 ![The Scenes sheet of the bottom navigation](../images/v4/Scenes/scenes_sheet.png)
 
-If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+Ist der [Bolus-Schutz](#Preferences-protection) eingeschaltet, fragt **AAPS** danach, bevor eine Szene startet oder endet. Zum Ändern einer Szene ist dagegen der [Schutz der Einstellungen](#Preferences-settings-protection) nötig.
 
-Before anything is applied you get a **confirmation** that lists exactly what the scene will do, so you can review it:
+Bevor irgendetwas übernommen wird, bekommst Du eine **Bestätigung**, die genau auflistet, was die Szene tun wird, damit Du es prüfen kannst:
 
 ![Scene activation confirmation, listing the bundled actions](../images/v4/Scenes/scene_confirmation.png)
 
-If the scene chains into another one, the confirmation ends with **→** and the name of that follow-up scene, the same way it is shown in the Scenes list.
+Geht die Szene in eine andere über, endet die Bestätigung mit **→** und dem Namen dieser Folgeszene, genauso wie in der Liste der Szenen.
 
-When you start the scene from the **Scenes** entry of the bottom navigation, the confirmation is a simpler dialog with the same list of actions. Press **OK** to activate:
+Startest Du die Szene über den Eintrag **Szenen** der unteren Navigationsleiste, ist die Bestätigung ein einfacherer Dialog mit derselben Liste von Aktionen. Tippe zum Aktivieren auf **OK**:
 
 ![Scene confirmation when started from the bottom navigation](../images/v4/Scenes/scene_confirmation_from_sheet.png)
 
-After you confirm, the actions are applied and the **active scene** is shown at the top of the overview with an **End Scene** button. If the scene chains into another one, the banner also names that follow-up scene:
+Nach Deiner Bestätigung werden die Aktionen ausgeführt, und die **aktive Szene** wird oben in der Übersicht mit einem Knopf **Szene beenden** angezeigt. Geht die Szene in eine andere über, nennt der Hinweis auch diese Folgeszene:
 
 ![The active-scene banner on the overview, with the End Scene button](../images/v4/Scenes/scene_active_banner.png)
 
-The scene's actions stay in effect until:
+Die Aktionen der Szene bleiben wirksam, bis:
 
-- its **duration** ends (the **end action** runs — a notification, or it chains into the next scene), or
-- you tap **End Scene** to end it manually. If the scene chains into another one, you get two choices: **Skip to** the follow-up scene (the active scene ends and the follow-up starts now), or **End Scene** (the active scene ends and the follow-up does not start).
+- ihre **Dauer** abläuft (dann wird die **Aktion am Ende** ausgeführt – eine Benachrichtigung oder der Übergang in die nächste Szene), oder
+- Du auf **Szene beenden** tippst, um sie von Hand zu beenden. Geht die Szene in eine andere über, hast Du zwei Möglichkeiten: **Zu … springen**, also zur Folgeszene (die aktive Szene endet, und die Folgeszene startet sofort), oder **Szene beenden** (die aktive Szene endet, und die Folgeszene startet nicht).
 
-A scene without follow-up only asks you to confirm:
+Eine Szene ohne Folgeszene fragt nur nach Deiner Bestätigung:
 
 ![End Scene dialog](../images/v4/Scenes/scene_end_dialog.png)
 
-Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started).
+Beim Beenden einer Szene werden ihre Änderungen **rückgängig gemacht** (zum Beispiel der Profilwechsel und das temporäre Ziel, die sie gestartet hat).
 
-While a scene is active, the profile and the target on the main screen carry a small scene icon when the scene set them. The **Scenes** sheet of the bottom navigation stays available to start another scene:
+Solange eine Szene aktiv ist, tragen Profil und Zielwert auf dem Startbildschirm ein kleines Szenen-Symbol, wenn die Szene sie gesetzt hat. Das Fenster **Szenen** der unteren Navigationsleiste bleibt verfügbar, um eine andere Szene zu starten:
 
 ![The Scenes sheet while a scene is active](../images/v4/Scenes/scenes_sheet_active.png)
 
-When the duration runs out on its own, the changes are reverted straight away and the banner changes to **Scene ended** with a **Dismiss** button. Dismissing only clears the banner from the screen — the scene itself is already over, so automation rules and a chained scene carry on without waiting for it.
+Läuft die Dauer von selbst ab, werden die Änderungen sofort rückgängig gemacht, und der Hinweis wechselt zu **Szene beendet** mit einem Knopf **Schließen**. Schließen entfernt nur den Hinweis vom Bildschirm – die Szene selbst ist schon vorbei, deshalb laufen Automatisierungsregeln und eine Folgeszene weiter, ohne darauf zu warten.
 
 ---
 
-## Triggering scenes from Automation
+## Szenen über Automatisierungen auslösen
 
-A scene does not have to be started by hand — **Automation** can run it for you. When you add an action to an automation rule (**Manage → Automation**), the action picker has a **Scenes** category:
+Eine Szene muss nicht von Hand gestartet werden – die **Automatisierung** kann das für Dich erledigen. Fügst Du einer Automatisierungsregel eine Aktion hinzu (**Bearbeiten → Automatisierung**), hat die Auswahl der Aktionen eine Kategorie **Szenen**:
 
-- **Run scene** — activate a scene when the rule's triggers fire (for example at a set time, when you arrive somewhere, or when glucose crosses a threshold).
-- **Enable scene** / **Disable scene** — make a scene available (or unavailable) without activating it.
+- **Szene ausführen** – aktiviert eine Szene, wenn die Bedingungen der Regel erfüllt sind (zum Beispiel zu einer bestimmten Uhrzeit, wenn Du irgendwo ankommst oder wenn die Glukose eine Schwelle überschreitet).
+- **Szene aktivieren** / **Szene deaktivieren** – macht eine Szene verfügbar (oder nicht verfügbar), ohne sie zu starten.
 
 ![The “Scenes” actions in the Automation action picker](../images/v4/Scenes/automation_scene_action.png)
 
-Automation can also **react to** a scene: the trigger list includes a **Scene** trigger, so a rule can run only while a particular scene is active. Combined with a scene's **end action** (revert, notify, or chain into another scene), this lets scenes start, follow on and finish automatically.
+Die Automatisierung kann auch **auf eine Szene reagieren**: Die Liste der Bedingungen enthält eine Bedingung **Szene**, sodass eine Regel nur ausgeführt wird, solange eine bestimmte Szene aktiv ist. Zusammen mit der **Aktion am Ende** einer Szene (rückgängig machen, benachrichtigen oder in eine andere Szene übergehen) können Szenen so automatisch starten, aufeinander folgen und enden.
 
 ---
 
-## Scenes with Master/Client and a watch
+## Szenen mit Master/Client und Smartwatch
 
-The **currently active scene is synchronized** across all of your paired devices — activate it on one phone and the others show it too.
+**Die aktive Szene wird auf allen gekoppelten Geräten abgeglichen** – aktivierst Du sie auf einem Smartphone, zeigen die anderen sie auch an.
 
-A paired **client** (**AAPSClient**) can also activate or end a scene: the request is sent to the **master**, which authors the confirmation and applies the scene on its own state. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for how that works.
+Ein gekoppelter **Client** (**AAPSClient**) kann eine Szene ebenfalls aktivieren oder beenden: Die Anfrage geht an den **Master**, der die Bestätigung formuliert und die Szene auf seinem eigenen Stand ausführt. Wie das funktioniert, steht unter [Master ↔ Client-Steuerung](../RemoteFeatures/ClientMasterControl.md).
 
 (scenes-from-watch)=
-### From a Wear OS watch
+### Von einer Wear OS-Smartwatch
 
-Scenes are available on a **Wear OS watch** as a **Scene tile**. Swipe to the **Scene** tile in the watch's tile carousel (add it from the carousel's tile list first if it isn't there yet) and tap the scene you want to start:
+Szenen gibt es auf einer **Wear OS-Smartwatch** als **Szenen-Kachel**. Wische im Kachel-Karussell der Smartwatch zur Kachel **Szene** (füge sie zuerst aus der Kachel-Liste des Karussells hinzu, falls sie noch nicht da ist) und tippe auf die Szene, die Du starten willst:
 
 ![The Scene tile on a Wear OS watch](../images/v4/Scenes/scene_watch_tile.png)
 
-The tile has four slots. By default each slot fills itself **automatically** with the next of your enabled scenes, in the order they have on the phone. To choose yourself, **long-press the tile** and open its settings: for each of the four slots you can keep **Automatic**, pin a **specific scene**, or select **None** to leave the slot empty. A slot pinned to a scene that has since been deleted or disabled shows **Unavailable** — pick another scene for it.
+Die Kachel hat vier Plätze. Standardmäßig füllt sich jeder Platz **automatisch** mit der nächsten Deiner eingeschalteten Szenen, in der Reihenfolge, die sie auf dem Smartphone haben. Um selbst zu wählen, **drücke lange auf die Kachel** und öffne ihre Einstellungen: Für jeden der vier Plätze kannst Du **Automatisch** beibehalten, eine **bestimmte Szene** festlegen oder **Kein(e)** wählen, um den Platz leer zu lassen. Ein Platz, der auf eine inzwischen gelöschte oder ausgeschaltete Szene festgelegt ist, zeigt **Nicht verfügbar** – wähle dafür eine andere Szene.
 
-The watch then shows a confirmation — tap **✓** to activate, or swipe back to cancel:
+Die Smartwatch zeigt dann eine Bestätigung – tippe auf **✓**, um zu aktivieren, oder wische zurück, um abzubrechen:
 
 ![Confirming a scene on the watch](../images/v4/Scenes/scene_watch_confirm.png)
 
-Just like on a client, the **master authors the confirmation and runs the scene**; the watch only relays the request (via the client phone, if the watch is paired to a client).
+Genau wie bei einem Client **formuliert der Master die Bestätigung und führt die Szene aus**; die Smartwatch leitet die Anfrage nur weiter (über das Client-Smartphone, wenn die Smartwatch mit einem Client gekoppelt ist).
 
-While a scene is running — or its **Scene ended** banner is still showing on the phone — the tile shows an **End** button with the name of the scene under it. Tap it to end the active scene, or to clear the leftover banner, from your wrist.
+Solange eine Szene läuft – oder ihr Hinweis **Szene beendet** noch auf dem Smartphone steht –, zeigt die Kachel einen Knopf **Ende** mit dem Namen der Szene darunter. Tippe darauf, um die aktive Szene zu beenden oder den übrig gebliebenen Hinweis zu entfernen, direkt vom Handgelenk aus.
 
-If the running scene chains into another one, the tile also shows a **Skip** button with the name of the follow-up scene under it. These are the same two choices as on the phone:
+Geht die laufende Szene in eine andere über, zeigt die Kachel außerdem einen Knopf **Überspringen** mit dem Namen der Folgeszene darunter. Das sind dieselben zwei Möglichkeiten wie auf dem Smartphone:
 
-- **End** — the active scene ends. The confirmation tells you that the follow-up will not start.
-- **Skip** — the active scene ends and the follow-up scene starts now. The confirmation names both scenes.
+- **Ende** – die aktive Szene endet. Die Bestätigung weist darauf hin, dass die Folgeszene nicht startet.
+- **Überspringen** – die aktive Szene endet, und die Folgeszene startet sofort. Die Bestätigung nennt beide Szenen.
 
-The watch's [Loop Status screen](#WearOsSmartwatch-loop-status) also shows the active scene, the time it has left and its follow-up.
+Der [Bildschirm Loop-Status](#WearOsSmartwatch-loop-status) der Smartwatch zeigt ebenfalls die aktive Szene, ihre verbleibende Zeit und ihre Folgeszene.
 
 ---
 

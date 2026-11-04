@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-31 October 2026: Version 4.0.0 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+31 octombrie 2026: A fost lansată versiunea 4.0.0. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
 
 ```
 
@@ -15,9 +15,9 @@ This documentation explains how to set up and use **AAPS**. You can navigate thr
 
 ## Prezentare generală a documentației AAPS
 
-Section **1) Getting Started**, the [Introduction](Getting-Started/Introduction.md) explains the general concept of what an artificial pancreas system (APS) is designed to do. Acesta subliniază informațiile generale ale sistemului de tip buclă închisă, de ce **AAPS** a fost dezvoltat, compară **AAPS** cu alte sisteme, și adresează problematica de siguranță. Vă dă sugestii despre cum să vorbiți cu medicul curant despre **AAPS**, explică de ce trebuie să construiți aplicația **AAPS** singur/ă în loc să o descărcați pur și simplu, și oferă o privire de ansamblu despre conectivitatea tipică a sistemului **AAPS**. De asemenea abordează tematica accesibilității și discută despre cine ar putea să beneficieze de pe urma **AAPS**.
+Secțiunea **1) Primii pași**: pagina [Introducere în APS și AAPS](Getting-Started/Introduction.md) explică ideea generală a ceea ce trebuie să facă un sistem de pancreas artificial (APS). Acesta subliniază informațiile generale ale sistemului de tip buclă închisă, de ce **AAPS** a fost dezvoltat, compară **AAPS** cu alte sisteme, și adresează problematica de siguranță. Vă dă sugestii despre cum să vorbiți cu medicul curant despre **AAPS**, explică de ce trebuie să construiți aplicația **AAPS** singur/ă în loc să o descărcați pur și simplu, și oferă o privire de ansamblu despre conectivitatea tipică a sistemului **AAPS**. De asemenea abordează tematica accesibilității și discută despre cine ar putea să beneficieze de pe urma **AAPS**.
 
-[Pregătirea pentru AAPS](./Getting-Started/PreparingForAaps.md) oferă mai multe detalii despre elementele ce țin de siguranță, și despre telefoanele, senzorii de monitorizare continuă a glicemiei (CGM) și pompele de insulină compatibile cu **AAPS**. Oferă o privire de ansamblu despre procesul prin care veți trece, și oferă o cronologie aproximativă pentru obținerea unei funcționalități complete **AAPS**. Această secțiune vă pregătește din punct de vedere tehnic să vă puneți la punct configurarea **AAPS** cât mai repede și eficient posibil. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
+[Pregătirea pentru AAPS](./Getting-Started/PreparingForAaps.md) oferă mai multe detalii despre elementele ce țin de siguranță, și despre telefoanele, senzorii de monitorizare continuă a glicemiei (CGM) și pompele de insulină compatibile cu **AAPS**. Oferă o privire de ansamblu despre procesul prin care veți trece, și oferă o cronologie aproximativă pentru obținerea unei funcționalități complete **AAPS**. Această secțiune vă pregătește din punct de vedere tehnic să vă puneți la punct configurarea **AAPS** cât mai repede și eficient posibil. Subsecțiunea [CGM-uri compatibile](./Getting-Started/CompatiblesCgms.md) explică cum să vă optimizați configurarea CGM și ce opțiuni de netezire sunt cele mai bune.
 
 Acum că aveți o înțelegere solidă a procesului, puteți începe să faceți sistemul de buclă închisă **AAPS**.
 
@@ -29,7 +29,7 @@ Section **4) [Configure AAPS](./SettingUpAaps/SetupWizard.md)** covers setting u
 
 Section **5) [Daily life with AAPS](./DailyLifeWithAaps/AapsScreens.md)** covers key **AAPS** features, to help you use (and customize) **AAPS**. This includes understanding the screens, carbs-on-board, sensitivity, DynamicISF, profile switching, temp targets, extended carbs (or eCarbs), automations, and [reviewing your data](./Maintenance/Reviewing.md) in the history browser and statistics. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, [traveling with AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md), and sports. Întrebările obișnuite și răspunsurile sunt localizate în secțiunea de depanare.
 
-Section **6) [Remote AAPS features](./RemoteFeatures/RemoteControl.md)** highlights a real strength of **AAPS**. Există o gamă largă de posibilități pentru trimiterea de la distanță a comenzilor către sau pur și simplu urmărirea datelor din **AAPS**. Acest lucru este la fel de util pentru îngrijitorii care doresc să folosească **AAPS** pentru minori, și pentru adulții cu diabet, care fie doresc să își monitorizeze mai ușor nivelurile de zahăr (și alte metrice) și pe alte dispozitive (pe ceas, în mașină _șamd_) decât pe telefon, sau care au persoane apropiate care doresc să-i monitorizeze. Acestă secțiune oferă, de asemenea, ghidaj pentru utilizarea Android Auto astfel încât să puteți vedea nivelurile glicemiei în autoturism.
+Secțiunea **6) [Funcțiile AAPS de la distanță](./RemoteFeatures/RemoteControl.md)** prezintă unul dintre marile puncte forte ale **AAPS**. Există o gamă largă de posibilități pentru trimiterea de la distanță a comenzilor către sau pur și simplu urmărirea datelor din **AAPS**. Acest lucru este la fel de util pentru îngrijitorii care doresc să folosească **AAPS** pentru minori, și pentru adulții cu diabet, care fie doresc să își monitorizeze mai ușor nivelurile de zahăr (și alte metrice) și pe alte dispozitive (pe ceas, în mașină _șamd_) decât pe telefon, sau care au persoane apropiate care doresc să-i monitorizeze. Acestă secțiune oferă, de asemenea, ghidaj pentru utilizarea Android Auto astfel încât să puteți vedea nivelurile glicemiei în autoturism.
 
 Section **7) [Wear OS smartwatches](./WearOS/BuildingAapsWearOS.md)** gives information and procedures to use an Android **Wear OS** smartwatch with the dedicated **AAPS** watchfaces or custom watchfaces, either as a remote control of your phone or just a display indicator.
 
@@ -40,9 +40,9 @@ Section **9) [Help & Troubleshooting](GettingHelp/WhereCanIGetHelp.md)** should 
 
 Section **10)** covers **[Advanced AAPS options](./AdvancedOptions/FullClosedLoop.md)** such as how to progress from using **AAPS** for hybrid-closed looping (bolusing for meals _etc._) to full closed looping (no bolusing), how to [tune your profile](./GettingHelp/ProfileTuning.md) and use Autotune, and details development and engineering modes. Majoritatea utilizatorilor se descurcă bine cu versiunea principală sau "Master" de **AAPS** fără să se mai uite la aceste opțiuni, această secțiune este pentru utilizatorii care au deja un control bun și caută să își îmbunătățească în continuare configurarea.
 
-In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. Poți dona bani, echipamente sau expertiză. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
+În secțiunea **11) [Cum să susțineți AAPS](SupportingAaps/HowCanIHelp.md)** găsiți informații despre cum puteți sprijini acest proiect. Puteți dona bani, echipamente sau expertiză. Puteți sugera sau face chiar dumneavoastră modificări în documentație, puteți ajuta la [traducerea documentației](SupportingAaps/Translations.md) și vă puteți dona datele prin proiectul Open Humans.
 
-Section **12) Resources**, contains archived or additional documentation, including a subsection for [clinicians](UsefulLinks/ClinicianGuideToAaps.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. Mai multe referințe și resurse pentru diabet și sisteme buclă închisă sunt conținute, de asemenea, în această secțiune. It includes the [Glossary](./UsefulLinks/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. Aici trebuie venit pentru a afla ce înseamnă termenii ISF sau TT, spre exemplu.
+Secțiunea **12) Resurse** conține documentație arhivată sau suplimentară, inclusiv o subsecțiune pentru [medici](UsefulLinks/ClinicianGuideToAaps.md) interesați de tehnologia de pancreas artificial cu sursă deschisă, cum este **AAPS**, sau pentru pacienții care doresc să împărtășească astfel de informații cu medicii lor; acest subiect este tratat și în introducere. Mai multe referințe și resurse pentru diabet și sisteme buclă închisă sunt conținute, de asemenea, în această secțiune. It includes the [Glossary](./UsefulLinks/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. Aici trebuie venit pentru a afla ce înseamnă termenii ISF sau TT, spre exemplu.
 
 
  ### Doriți să începeți cu **AAPS**? Citiți mai multe despre **AAPS** în [Introducere](Getting-Started/Introduction.md).
@@ -55,7 +55,7 @@ Nu utilizați **AAPS** dacă iei inhibitori SGLT-2 (glifozine), deoarece acești
 ```
 
 ```{admonition} Disclaimer
-:class: notă
+:class: note
 
 - Toate informațiile și codul descrise aici sunt destinate exclusiv scopurilor informative și educaționale. Folosiți [Nightscout](https://nightscout.github.io/) și **AAPS** pe propriul risc, și nu utilizați informațiile sau codul pentru a lua decizii medicale. În prezent, Nightscout nu face nicio încercare de respectare a confidențialității HIPAA. 
 - Folosirea codului de pe github.com este fără garanție sau suport formal de orice fel. Vă rugăm să examinați fișierul LICENSE al acestui depozit pentru mai multe detalii.
@@ -65,12 +65,13 @@ Nu utilizați **AAPS** dacă iei inhibitori SGLT-2 (glifozine), deoarece acești
 
 ```
 
-(index-aaps-documentation)=
+(index-aaps-documentation-index)=
 
 ## Indexul documentației AAPS
 
 ```{toctree}
 :caption: Using this documentation
+:titlesonly:
 
 Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
 Search the documentation <./NavigateDoc/SearchDoc.md>
@@ -99,21 +100,21 @@ Building AAPS <./SettingUpAaps/BuildingAaps.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
 ```
 ```{toctree}
-:caption: 3) Setting up the reporting server
+:caption: 3) Configurarea serverului de raportare
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+Configurarea serverului de raportare <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Configure AAPS
+:caption: 4) Configurarea AAPS
 
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Settings <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+Asistent de configurare AAPS <./SettingUpAaps/SetupWizard.md>
+Profilul dumneavoastră AAPS <./SettingUpAaps/YourAapsProfile.md>
+Modificarea configurației AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Configurație (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Setări <./SettingUpAaps/Preferences.md>
+Îndeplinirea obiectivelor <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}

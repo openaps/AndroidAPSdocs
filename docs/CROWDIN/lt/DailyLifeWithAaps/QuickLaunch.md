@@ -1,154 +1,154 @@
 (quicklaunch)=
-# QuickLaunch (overview quick-action toolbar)
+# QuickLaunch (greitųjų veiksmų įrankių juosta pagrindiniame ekrane)
 
-**QuickLaunch** is the small **quick-action toolbar** that floats at the bottom of the **AAPS** overview, just above the bottom navigation. It is a customizable row of one-tap buttons: you decide which actions live there, in which order, so the things you do most often are always one tap away on the main screen.
+**QuickLaunch** – tai nedidelė **greitųjų veiksmų įrankių juosta** **AAPS** pagrindinio ekrano apačioje, iškart virš apatinės navigacijos juostos. Tai mygtukų eilutė, kurią galite pritaikyti sau: patys nusprendžiate, kokie veiksmai joje bus ir kokia tvarka. Taip dažniausiai atliekami veiksmai pagrindiniame ekrane visada pasiekiami vienu bakstelėjimu.
 
 ```{contents} Table of contents
 :depth: 2
 :local: true
 ```
 
-![The QuickLaunch toolbar on the overview](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
+![QuickLaunch įrankių juosta pagrindiniame ekrane](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
 
 ---
 
-## Using the toolbar
+## Įrankių juostos naudojimas
 
-The toolbar sits on the **overview**, between the graphs and the bottom navigation:
+Įrankių juosta yra **pagrindiniame ekrane**, tarp grafikų ir apatinės navigacijos juostos:
 
-![The QuickLaunch toolbar in place on the overview](../images/v4/QuickLaunch/quicklaunch_overview.png)
+![QuickLaunch įrankių juosta savo vietoje pagrindiniame ekrane](../images/v4/QuickLaunch/quicklaunch_overview.png)
 
-- **Tap** an icon to run its action — exactly as if you had opened it from its normal screen (a bolus or treatment still shows its usual confirmation first).
-- **Long-press** an icon to see a **tooltip** with the action's name and a short description.
-- If you add **more buttons than fit** on screen, the extra ones move into an **overflow menu** (the **⋮** button at the end of the toolbar).
-- Each icon keeps its action's **color** (e.g. insulin, carbs, temp target), so it is recognizable at a glance.
+- **Bakstelėkite** piktogramą, kad atliktumėte jos veiksmą – lygiai taip pat, lyg būtumėte jį atidarę įprastame ekrane (bolusui ar terapijai vis tiek pirmiausia rodomas įprastas patvirtinimas).
+- **Ilgai paspauskite** piktogramą, kad pamatytumėte **paaiškinimą** su veiksmo pavadinimu ir trumpu aprašymu.
+- Jei pridėsite **daugiau mygtukų, nei telpa** ekrane, papildomi mygtukai perkeliami į **papildomą meniu** (mygtukas **⋮** įrankių juostos gale).
+- Kiekviena piktograma turi savo veiksmo **spalvą** (pvz., insulino, angliavandenių, laikino tikslo), todėl ją galima atpažinti iš pirmo žvilgsnio.
 
 ```{admonition} The toolbar is always there
 :class: note
-The last button is always **Configure QuickLaunch** (the **⚙️** gear). It cannot be removed, so you can always reach the configuration screen straight from the toolbar. By default the toolbar contains just two buttons — the **Bolus wizard** and this gear.
+Paskutinis mygtukas visada yra **Konfigūruoti QuickLaunch** (krumpliaratis **⚙️**). Jo pašalinti negalima, todėl konfigūravimo ekraną visada galite atidaryti tiesiai iš įrankių juostos. Pagal numatytuosius nustatymus įrankių juostoje yra tik du mygtukai: **Boluso patarėjas** ir šis krumpliaratis.
 ```
 
 ---
 
-## Configuring QuickLaunch
+## QuickLaunch konfigūravimas
 
-Tap the **⚙️** gear on the toolbar (or open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → … → Configure QuickLaunch**) to open the **Configure QuickLaunch** screen (*“Customize quick-action buttons on overview”*).
+Bakstelėkite įrankių juostoje esantį krumpliaratį **⚙️** (arba atidarykite **[Konfigūracija](../SettingUpAaps/ConfigBuilder.md) → … → Konfigūruoti QuickLaunch**), kad atidarytumėte ekraną **Konfigūruoti QuickLaunch** (*„Tinkinti greitųjų veiksmų mygtukus pagrindiniame ekrane“*).
 
-![Configure QuickLaunch — Selected actions, then the catalog of actions to add](../images/v4/QuickLaunch/quicklaunch_config.png)
+![Konfigūruoti QuickLaunch – pasirinkti veiksmai, o po jais veiksmų, kuriuos galima pridėti, katalogas](../images/v4/QuickLaunch/quicklaunch_config.png)
 
-The screen has two parts:
+Ekraną sudaro dvi dalys:
 
-- **Selected actions** (at the top) — the buttons currently on your toolbar, in toolbar order.
-- A **catalog** below it — every action you can add, grouped by category. Each catalog entry has a **➕** button to add it.
+- **Pasirinkti veiksmai** (viršuje) – mygtukai, kurie dabar yra jūsų įrankių juostoje, ta pačia tvarka kaip juostoje.
+- Po jais esantis **katalogas** – visi veiksmai, kuriuos galite pridėti, sugrupuoti pagal kategorijas. Kiekvienas katalogo įrašas turi mygtuką **➕**, kuriuo jį galima pridėti.
 
-### Selected actions — reorder, edit, remove
+### Pasirinkti veiksmai – tvarkos keitimas, redagavimas, šalinimas
 
-Each selected action has:
+Kiekvienas pasirinktas veiksmas turi:
 
-- a **⠿ drag handle** — press and drag to **reorder** the buttons (the order here is the order on the toolbar),
-- a **−** button — **remove** it from the toolbar,
-- and, for a **Profile** shortcut only, a **✏️** button to edit its percentage/duration (see [Profile shortcuts](#profile-shortcuts)).
+- **⠿ tempimo rankenėlę** – paspauskite ir vilkite, kad **pakeistumėte mygtukų tvarką** (tvarka čia yra ta pati kaip įrankių juostoje),
+- mygtuką **−** – juo veiksmą **pašalinsite** iš įrankių juostos,
+- o **Profilis** spartusis mygtukas dar turi mygtuką **✏️**, kuriuo galima keisti jo procentą ir trukmę (žr. [Profilio spartieji mygtukai](#profile-shortcuts)).
 
-Changes take effect **immediately** — there is no separate *Save*. Adding an action drops it at the end of the toolbar; reorder it from there.
+Pakeitimai įsigalioja **iš karto** – atskiro mygtuko *Išsaugoti* nėra. Pridėtas veiksmas atsiduria įrankių juostos gale; iš ten galite pakeisti jo vietą.
 
 ---
 
-## The action categories
+## Veiksmų kategorijos
 
-The catalog groups everything you can add into the following categories, in this order. Categories that have nothing to offer (e.g. you have no scenes) are simply not shown.
+Kataloge viskas, ką galite pridėti, sugrupuota į šias kategorijas tokia tvarka. Kategorijos, kuriose nėra ką pasiūlyti (pvz., jei neturite scenarijų), tiesiog nerodomos.
 
-### Treatment
+### Terapija
 
-The everyday treatment and CGM dialogs:
+Kasdieniai terapijos ir NGJ dialogai:
 
-- **Insulin** — deliver a bolus manually.
-- **Carbs** — record carbs without insulin.
-- **Bolus wizard** — open the bolus calculator.
-- **Treatment** — record insulin and carbs together.
-- **CGM** — open your CGM app (e.g. xDrip).
-- **Calibration** — calibrate the CGM sensor.
+- **Insulinas** – rankiniu būdu suleisti bolusą.
+- **Angliavandeniai** – įrašyti angliavandenius be insulino.
+- **Boluso patarėjas** – atidaryti boluso skaičiuotuvą.
+- **Terapija** – kartu įrašyti insuliną ir angliavandenius.
+- **NGJ** – atidaryti NGJ programėlę (pvz., xDrip).
+- **Kalibravimas** – kalibruoti NGJ jutiklį.
 
-### Care Portal
+### Terapijos įrašai
 
-The care-portal events and device-maintenance records:
+Terapijos įrašų įvykiai ir įrenginių priežiūros įrašai:
 
-- **BG Check**, **Note**, **Exercise**, **Question**, **Announcement**,
-- **Sensor Insert**, **Pump Battery Change**, **Pump Site Change**, **Prime/Fill**, **Site Rotation**.
+- **Gliukomatis**, **Pastaba**, **Sportas**, **Klausimas**, **Pranešimas**,
+- **Jutiklio įvedimas**, **Baterijos keitimas**, **Infuzijos vietos keitimas**, **Užpildymas**, **Vietų rotacija**.
 
-**Prime/Fill** and **Pump Battery Change** are only offered when your pump uses them. Patch pumps, for example, fill and change the battery in their own activation steps, so these entries are not shown for them (as in the **Manage** sheet).
+**Užpildymas** ir **Baterijos keitimas** siūlomi tik tada, kai jūsų pompa juos naudoja. Pavyzdžiui, pompos be vamzdelio (patch) užsipildo ir bateriją keičia savo aktyvavimo žingsniuose, todėl šie įrašai joms nerodomi (kaip ir meniu **Valdymas**).
 
-![The Care Portal category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
+![Kategorija „Terapijos įrašai“ kataloge](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
 
-These are the same entries you would otherwise reach through the **[Treatments](#v4changes-treatments)** and **[Manage](#v4changes-manage)** sheets — QuickLaunch just puts the ones you use on the overview.
+Tai tie patys įrašai, kuriuos kitaip pasiektumėte per meniu **[Terapija](#v4changes-treatments)** ir **[Valdymas](#v4changes-manage)** – QuickLaunch tiesiog perkelia tuos, kuriuos naudojate, į pagrindinį ekraną.
 
-### Manage
+### Valdymas
 
-The screens of the **[Manage](#v4changes-manage)** sheet, in the same order, so you can open the one you use most from the toolbar:
+Meniu **[Valdymas](#v4changes-manage)** ekranai ta pačia tvarka, todėl dažniausiai naudojamą ekraną galite atidaryti tiesiai iš įrankių juostos:
 
-- **Profile**, **Insulin settings** (manage and activate insulin configurations — named differently from **Insulin** on purpose, because that button delivers a bolus), **Temp Target**, **QuickWizard**, **Scenes**, **Automation**, **Food**,
-- **Running mode** — close or open the loop, suspend it, or disconnect the pump,
-- **Authorized clients** — only on a master or a paired client.
+- **Profilis**, **Insulino nustatymai** (insulino konfigūracijų tvarkymas ir aktyvavimas; pavadinimas tyčia skiriasi nuo **Insulinas**, nes tas mygtukas suleidžia bolusą), **Laikinas tikslas**, **Greitasis vedlys**, **Scenarijai**, **Automatizacija**, **Maistas**,
+- **Veikimo režimas** – uždaryti arba atidaryti ciklą, jį sustabdyti arba atjungti pompą,
+- **Autorizuoti klientai** – tik pagrindiniame įrenginyje arba susietame kliente.
 
-These buttons open the screen; they do not start anything by themselves. To start a scene or a QuickWizard in one tap, add it from the **Scenes** or **Quick Wizard** category below.
+Šie mygtukai tik atidaro ekraną; patys jie nieko nepradeda. Jei norite scenarijų ar Greitąjį vedlį paleisti vienu bakstelėjimu, pridėkite jį iš toliau esančios kategorijos **Scenarijai** arba **Greitasis vedlys**.
 
-![The Manage category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![The Manage category, continued](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
+![Kategorija „Valdymas“ kataloge](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![Kategorija „Valdymas“ (tęsinys)](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
 
-### Quick Wizard
+### Greitasis vedlys
 
-Each of your **[QuickWizard](QuickWizards.md)** presets can be added as a button, so a recurring meal is one tap from the overview. The button carries the preset's name and shows the carbs/insulin amount; tapping it runs the QuickWizard with its usual confirmation.
+Kiekvieną **[Greitojo vedlio](QuickWizards.md)** ruošinį galima pridėti kaip mygtuką, todėl pasikartojantis valgis pagrindiniame ekrane pasiekiamas vienu bakstelėjimu. Mygtuke rodomas ruošinio pavadinimas ir angliavandenių / insulino kiekis; jį bakstelėjus Greitasis vedlys vykdomas su įprastu patvirtinimu.
 
-QuickWizards set to show on the watch only are not offered. A QuickWizard button on the toolbar follows the same rules as in the **Treatments** sheet: it is hidden outside its [valid time range](#quickwizard_validity) and for a short time after use. It stays in your toolbar configuration and comes back when the QuickWizard can be used again.
+Greitojo vedlio ruošiniai, kurie nustatyti rodyti tik laikrodyje, nesiūlomi. Greitojo vedlio mygtukui įrankių juostoje taikomos tos pačios taisyklės kaip meniu **Terapija**: jis paslepiamas už [galiojimo laiko intervalo](#quickwizard_validity) ribų ir trumpam po panaudojimo. Jis lieka įrankių juostos konfigūracijoje ir vėl atsiranda, kai Greitąjį vedlį vėl galima naudoti.
 
-### Scenes
+### Scenarijai
 
-Each enabled **[scene](Scenes.md)** can be added as a button. Tapping it asks for confirmation, then activates the scene (the same bundle of actions you would get from the Scenes screen). This category appears only if you have at least one scene.
+Kiekvieną įjungtą **[scenarijų](Scenes.md)** galima pridėti kaip mygtuką. Jį bakstelėjus prašoma patvirtinimo, tada scenarijus aktyvuojamas (tas pats veiksmų rinkinys, kurį gautumėte ekrane Scenarijai). Ši kategorija rodoma tik tada, jei turite bent vieną scenarijų.
 
-The tooltip and the catalog show the same summary as **Manage → Scenes**, for example *"3 actions, 2 h → Cooldown"*, where the name after the arrow is the follow-up scene.
+Paaiškinime ir kataloge rodoma ta pati santrauka kaip **Valdymas → Scenarijai**, pavyzdžiui, *„3 veiksmai, 2 val. → Cooldown“*; pavadinimas po rodykle yra po jo einantis scenarijus.
 
 ### Automatizavimas
 
-Your **user-action** automation rules (the ones you trigger by hand) can be added as buttons. Tapping one asks for confirmation, then runs that rule's actions.
+Automatizacijos taisykles su **Naudotojo veiksmas** (tas, kurias paleidžiate rankiniu būdu) galima pridėti kaip mygtukus. Bakstelėjus mygtuką prašoma patvirtinimo, tada vykdomi tos taisyklės veiksmai.
 
 ```{admonition} Automation buttons run on the master
 :class: note
-Automation executes on the **master**, so automation shortcuts are offered and run only on the master. They are not available on a paired **[client](../RemoteFeatures/ClientMasterControl.md)**.
+Automatizacija vykdoma **pagrindiniame įrenginyje**, todėl automatizacijos spartieji mygtukai siūlomi ir vykdomi tik pagrindiniame įrenginyje. Susietame **[kliente](../RemoteFeatures/ClientMasterControl.md)** jų nėra.
 ```
 
-### Temp Target Presets
+### Laikino tikslo ruošiniai
 
-Each of your **[Temp Target](TempTargets.md)** presets can be added as a button (its name, its target and its duration are shown, for example *"Eating soon — 5.0 mmol/L, 45 min"*). Tapping it asks for confirmation, then starts that temp target.
+Kiekvieną **[laikino tikslo](TempTargets.md)** ruošinį galima pridėti kaip mygtuką (rodomas jo pavadinimas, tikslas ir trukmė, pavyzdžiui, *„Netrukus valgysiu – 5,0 mmol/l, 45 min“*). Jį bakstelėjus prašoma patvirtinimo, tada pradedamas tas laikinas tikslas.
 
-![The dynamic categories — Quick Wizard and Temp Target Presets (Scenes and Automation appear when you have some)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
+![Dinaminės kategorijos – Greitasis vedlys ir Laikino tikslo ruošiniai (Scenarijai ir Automatizacija rodomi, kai jų turite)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
 
 (profile-shortcuts)=
 ### Profile
 
-Every **[profile](ProfileSwitch-ProfilePercentage.md)** can be added as a **shortcut** that performs a **profile switch** in one tap. Unlike most shortcuts, a Profile shortcut carries its own **percentage** and **duration**, which you set after adding it with the **✏️** button:
+Kiekvieną **[profilį](ProfileSwitch-ProfilePercentage.md)** galima pridėti kaip **spartųjį mygtuką**, kuris vienu bakstelėjimu atlieka **profilio keitimą**. Kitaip nei dauguma sparčiųjų mygtukų, profilio spartusis mygtukas turi savo **procentą** ir **trukmę**. Juos nustatote pridėję mygtuką, paspaudę **✏️**:
 
-- **Percentage** (30–250 %, in steps of 5 %) — scale the profile when it is applied. 100 % uses it as-is.
-- **Duration** (0–10080 min, that is up to 7 days, in steps of 10 min) — how long the switch lasts. **0 = Permanent** (until you switch again).
+- **Procentais** (30–250 %, po 5 %) – proporcingai pakeičia profilį, kai jis pritaikomas. 100 % palieka profilį nepakeistą.
+- **Trukmė** (0–10080 min, t. y. iki 7 dienų, po 10 min) – kiek laiko galioja profilio keitimas. **0 = Nuolatinis** (kol vėl pakeisite profilį).
 
-![Profile shortcuts and plugin categories in the catalog](../images/v4/QuickLaunch/quicklaunch_categories.png)
+![Profilio spartieji mygtukai ir įskiepių kategorijos kataloge](../images/v4/QuickLaunch/quicklaunch_categories.png)
 
-This lets you keep several buttons for the **same** profile at different strengths — for example *“Profile 100 %”* and *“Profile 70 % for 2 h”* — and apply either with a single tap. (You can add the same profile more than once with different settings.)
+Taip galite turėti kelis mygtukus **tam pačiam** profiliui su skirtingu stiprumu, pavyzdžiui, *„Profilis 100 %“* ir *„Profilis 70 % 2 val.“*, ir bet kurį iš jų pritaikyti vienu bakstelėjimu. (Tą patį profilį galite pridėti kelis kartus su skirtingais nustatymais.)
 
-### Plugins
+### Įskiepiai
 
-![Plugin shortcuts in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
+![Įskiepių spartieji mygtukai kataloge](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
 
-Finally, any **enabled plugin** that has its own screen can be added as a shortcut to open it directly. These are grouped by plugin type — **Pump**, **BG Source**, **APS**, **Loop**, **Sensitivity detection**, **Smoothing**, **Calibration**, **Constraints**, **Communication** and **General** — so you can, for instance, jump straight to your pump or loop screen from the overview.
+Galiausiai bet kurį **įjungtą įskiepį**, kuris turi savo ekraną, galima pridėti kaip spartųjį mygtuką, kuris tą ekraną iškart atidaro. Jie sugrupuoti pagal įskiepio tipą – **Pompa**, **Glikemijos šaltinis**, **DKS**, **Ciklas**, **Jautrumo nustatymas**, **Glodinimas**, **Kalibravimas**, **Apribojimai**, **Ryšys** ir **Bendrieji**, todėl, pavyzdžiui, iš pagrindinio ekrano galite iškart pereiti į pompos ar ciklo ekraną.
 
 ---
 
-## QuickLaunch and Master/Client
+## QuickLaunch, pagrindinis įrenginys ir klientas
 
-Unlike most of your settings, the **QuickLaunch toolbar is configured per device** — it is stored **locally and is not synced** between your master and paired clients, so each device keeps its own set of buttons. (It *is* included in a settings **backup/export**, so a restore brings it back on the same device.)
+Kitaip nei dauguma jūsų nustatymų, **QuickLaunch įrankių juosta konfigūruojama kiekviename įrenginyje atskirai** – ji saugoma **tik įrenginyje ir nesinchronizuojama** tarp pagrindinio įrenginio ir susietų klientų, todėl kiekvienas įrenginys turi savo mygtukų rinkinį. (Tačiau ji *įtraukiama* į nustatymų **atsarginę kopiją / eksportą**, todėl atkūrus nustatymus tame pačiame įrenginyje ji grįžta.)
 
-What each device can put on its toolbar still depends on what it has: QuickWizards, scenes, temp-target presets and profiles all sync, so a client's catalog offers the same items — you simply choose them per device. A few details to know:
+Tai, ką kiekvienas įrenginys gali įdėti į savo įrankių juostą, vis tiek priklauso nuo to, ką jis turi: Greitojo vedlio ruošiniai, scenarijai, laikino tikslo ruošiniai ir profiliai sinchronizuojami, todėl kliento kataloge siūlomi tie patys elementai – jūs tiesiog pasirenkate juos kiekviename įrenginyje atskirai. Keletas dalykų, kuriuos verta žinoti:
 
-- Buttons whose target no longer exists (a deleted QuickWizard, scene or preset, a disabled rule) are **skipped automatically**.
-- **Automation** shortcuts are offered and run only on the **master** (automation executes on the master). Scene, QuickWizard, temp-target and profile buttons are available on a client.
-- When you tap a button on a client that must run on the master (a bolus, temp target, profile switch or scene), the **master** carries it out and authors the confirmation. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md).
+- Mygtukai, kurių elemento nebėra (ištrintas Greitojo vedlio ruošinys, scenarijus ar ruošinys, išjungta taisyklė), **automatiškai praleidžiami**.
+- **Automatizacijos** spartieji mygtukai siūlomi ir vykdomi tik **pagrindiniame įrenginyje** (automatizacija vykdoma pagrindiniame įrenginyje). Scenarijų, Greitojo vedlio, laikino tikslo ir profilio mygtukai pasiekiami ir kliente.
+- Kai kliente bakstelite mygtuką, kurio veiksmas turi būti atliktas pagrindiniame įrenginyje (bolusas, laikinas tikslas, profilio keitimas ar scenarijus), jį atlieka **pagrindinis įrenginys** ir jis pateikia patvirtinimą. Žr. [Pagrindinio įrenginio ↔ kliento valdymas](../RemoteFeatures/ClientMasterControl.md).
 
 ---
 

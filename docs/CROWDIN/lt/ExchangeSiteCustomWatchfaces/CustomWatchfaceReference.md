@@ -1,45 +1,45 @@
-# Custom Watchface Reference Document
+# Pasirinktinio ciferblato žinynas
 
-This page is for designers of new Watchfaces. It will list all the keywords and features available when you want to create or animate a new watchface.
+Šis puslapis skirtas naujų ciferblatų kūrėjams. Jame išvardyti visi raktiniai žodžiai ir funkcijos, kurių reikia norint sukurti arba animuoti naują ciferblatą.
 
-- New features and keys available in Custom Watchface V2 (Wear apk 3.3.0 or above) are available [here](#cwf-reference-new-v2-features)
+- Naujos funkcijos ir raktai, galimi pasirinktiniame ciferblate V2 (Wear apk 3.3.0 ar naujesnė), aprašyti [čia](#cwf-reference-new-v2-features)
 
-## Custom Watchface Format
+## Pasirinktinio ciferblato formatas
 
-Custom Watchface is an open format designed for AAPS and associated to the new "AAPS (Custom)" watchface available on Watch.
+Pasirinktinis ciferblatas (Custom Watchface) yra atviras formatas, sukurtas AAPS ir susietas su nauju laikrodyje esančiu ciferblatu „AAPS (Custom)“.
 
-The Watchface file is a simple zip file, but to be recognized as a Watchface file, the zip file must contain the following files:
+Ciferblato failas yra paprastas zip failas, bet kad jis būtų atpažintas kaip ciferblato failas, zip faile turi būti šie failai:
 
-- One image file named CustomWatchface (can be bitmap files `CustomWatchface.jpg`, `CustomWatchface.png` or a vector `CustomWatchface.svg`). This file is the little icon used to select the watchface when you click on "Load Watchface" button, and also the image visible within AAPS Wear plugin.
-- One file named `CustomWatchface.json` (see [JSON structure](#cwf-reference-json-structure) below). This second file is the core file that will include all information required to design the watchface. This json file must be valid (it's probably the most tricky point when you edit manually this file within a text editor, because a missing or additional comma is enough to break the json format). This JSON file must also include a `"metadata"` block with a `"name"` key with not empty value. This will be the name of your custom watchface (see [Metadata settings](#cwf-reference-metadata-settings) below)
-- the size of this zip should be as small as possible (less than about 500kb). If this file is too big, it will just be blocked and not transmitted to the watch.
+- Vienas paveikslėlio failas, pavadintas CustomWatchface (gali būti rastriniai failai `CustomWatchface.jpg`, `CustomWatchface.png` arba vektorinis `CustomWatchface.svg`). Šis failas yra maža ikona, naudojama ciferblatui pasirinkti, kai paspaudžiate mygtuką „Įkelti ciferblatą“, ir paveikslėlis, matomas AAPS Wear įskiepyje.
+- Vienas failas, pavadintas `CustomWatchface.json` (žr. [JSON struktūra](#cwf-reference-json-structure) žemiau). Šis antrasis failas yra pagrindinis. Jame bus visa informacija, reikalinga ciferblatui sukurti. Šis json failas turi būti teisingas (tai turbūt sunkiausia vieta, kai šį failą redaguojate rankiniu būdu teksto redaktoriuje, nes vieno trūkstamo ar papildomo kablelio pakanka, kad json formatas būtų sugadintas). Šiame JSON faile taip pat turi būti blokas `"metadata"` su raktu `"name"`, kurio reikšmė nėra tuščia. Tai bus jūsų pasirinktinio ciferblato pavadinimas (žr. [Metaduomenų nustatymai](#cwf-reference-metadata-settings) žemiau)
+- šis zip failas turi būti kuo mažesnis (mažiau nei apie 500 kb). Jei šis failas per didelis, jis bus tiesiog užblokuotas ir neperduotas į laikrodį.
 
-The zip file can also contain some additional resource files:
+Zip faile taip pat gali būti papildomų išteklių failų:
 
-- Hardcoded file names for images that will be used used in standard views included in the watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](#cwf-reference-list-of-hardcoded-resource-files) below). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Note that the best quality associated to the smallest size will generally be with svg files (vector format).
-- Additional resource files with free names. These additional files can be either image files, or font files (`ttf` and `otf` format are accepted for fonts). Note that for these additional files, the `filename` (without extension) will be used as the keyValue, within JSON file, to specify where or when these files should be used.
-  - image files are often used as background of text views or for dynamic animation (like battery level from 0% to 100%)
-  - font files allow you to use dedicated fonts within your watchface
+- Iš anksto nustatyti paveikslėlių failų pavadinimai, kurie bus naudojami ciferblato standartiniuose rodiniuose (pvz., `Background`, `CoverChart`... žr. [Iš anksto nustatytų išteklių failų sąrašas](#cwf-reference-list-of-hardcoded-resource-files) žemiau). Visi šie failai gali būti `jpg`, `png` arba `svg` formato. tačiau daugumai jų turėsite naudoti `png` arba `svg`, nes jie palaiko permatomumą (jpg failai mažesni už png, bet be permatomumo). Atkreipkite dėmesį, kad geriausia kokybė su mažiausiu dydžiu paprastai būna su svg failais (vektorinis formatas).
+- Papildomi išteklių failai su laisvai pasirinktais pavadinimais. Šie papildomi failai gali būti paveikslėlių failai arba šriftų failai (šriftams tinka `ttf` ir `otf` formatai). Atkreipkite dėmesį, kad šių papildomų failų `filename` (be plėtinio) bus naudojamas kaip rakto reikšmė (keyValue) JSON faile, nurodant, kur arba kada šie failai turi būti naudojami.
+  - paveikslėlių failai dažnai naudojami kaip teksto rodinių fonas arba dinaminei animacijai (pvz., baterijos lygiui nuo 0% iki 100%)
+  - šriftų failai leidžia jūsų ciferblate naudoti specialius šriftus
 
 (cwf-reference-json-structure)=
 
-## JSON Structure
+## JSON struktūra
 
-JSON files can be edited in Notepad (or notepad++) text editor (prefer notepad++ that recognize JSON and use color formatting)
+JSON failus galima redaguoti teksto redaktoriumi Notepad (arba notepad++) (geriau notepad++, kuris atpažįsta JSON ir naudoja spalvinį formatavimą)
 
-- it contains string keys `"string_key":` and key values that can be strings like `"key value"`, integer, boolean like `true`or `false` or block of data.
-- each value is separated by a comma `,`
-- A block of data starts by `{`  and ends by `}`
-- the json file is a whole block so it starts by  `{`  and ends by `}`, and inside this file all embedded blocks are associated to a `"key"` that should be unique within the block
-- To improve readability of json file, it's generally indented (each new key is on a new line, each new block is shifted on the right by 4 spaces characters)
+- jame yra eilutės raktai `"string_key":` ir rakto reikšmės, kurios gali būti eilutės, pvz., `"key value"`, sveikieji skaičiai, loginės reikšmės, pvz., `true` arba `false`, arba duomenų blokai.
+- kiekviena reikšmė atskiriama kableliu `,`
+- Duomenų blokas prasideda `{`  ir baigiasi `}`
+- json failas yra vienas visas blokas, todėl jis prasideda  `{`  ir baigiasi `}`, o šio failo viduje visi įdėtiniai blokai susieti su `"key"`, kuris bloke turi būti unikalus
+- Kad json failą būtų lengviau skaityti, jis paprastai rašomas su įtraukomis (kiekvienas naujas raktas naujoje eilutėje, kiekvienas naujas blokas pastumtas į dešinę 4 tarpais)
 
 (cwf-reference-metadata-settings)=
 
-### Metadata Settings
+### Metaduomenų nustatymai
 
-This block is the first block included into the json file and is mandatory. It contains all the information associated to this watchface, like the name, the author, the date of creation or update, the author version or the plugin version.
+Šis blokas yra pirmasis json faile ir yra privalomas. Jame yra visa su šiuo ciferblatu susijusi informacija, pvz., pavadinimas, autorius, sukūrimo ar atnaujinimo data, autoriaus versija arba įskiepio versija.
 
-See below an example of metadata block:
+Žemiau pateiktas metaduomenų bloko pavyzdys:
 
 ```text
 "metadata": {
@@ -52,17 +52,17 @@ See below an example of metadata block:
 },
 ```
 
-Note that `/` used for the date is a special character, so to be recognize correctly within json file, you have to put before an "escape" character `\`
+Atkreipkite dėmesį, kad datoje naudojamas `/` yra specialusis simbolis. Kad json failas jį teisingai atpažintų, prieš jį turite parašyti „escape“ simbolį `\`
 
-You can see in some json file an additional key `"filename"`, this key will be automatically created or updated when the custom watchface will be loaded within AAPS (it will be used to show to the user the zip filename within exports folder), so you can remove this key within metadata block.
+Kai kuriuose json failuose galite matyti papildomą raktą `"filename"`. Šis raktas bus automatiškai sukurtas arba atnaujintas, kai pasirinktinis ciferblatas bus įkeltas į AAPS (jis naudojamas parodyti naudotojui zip failo pavadinimą exports aplanke), todėl šį raktą galite iš metaduomenų bloko pašalinti.
 
 (cwf-reference-general-parameter-settings)=
 
-### General parameter settings
+### Bendrųjų parametrų nustatymai
 
-After the first block with metadata, you will set some general parameters (see [List of general parameters](#cwf-reference-list-of-general-parameters) below), this allow you to set Graph colors (Carbs, Bolus, BG values...), and also default colors for value in range, hyper or hypo (default colors of BG value and arrows)
+Po pirmojo bloko su metaduomenimis nustatysite kai kuriuos bendruosius parametrus (žr. [Bendrųjų parametrų sąrašas](#cwf-reference-list-of-general-parameters) žemiau). Tai leidžia nustatyti grafiko spalvas (angliavandeniai, bolusas, KG reikšmės...) ir numatytąsias spalvas reikšmėms diapazone, hiperglikemijai ar hipoglikemijai (numatytosios KG reikšmės ir rodyklių spalvos)
 
-See below an example of general parameters
+Žemiau pateiktas bendrųjų parametrų pavyzdys
 
 ```text
 "highColor": "#FFFF00",
@@ -78,11 +78,11 @@ See below an example of general parameters
 ```
 (cwf-reference-imageview-settings)=
 
-### ImageView settings
+### ImageView nustatymai
 
-Custom image can be tuned using correct filename associated to each ImageView included into custom watchface Layout, then the json block is only here to define the position, the size, if the view is visible or not, and optionally tune the color:
+Pasirinktinį paveikslėlį galima pritaikyti naudojant teisingą failo pavadinimą, susietą su kiekvienu ImageView, esančiu pasirinktinio ciferblato išdėstyme (Layout). Tada json blokas reikalingas tik vietai, dydžiui, rodinio matomumui nustatyti ir, jei norite, spalvai pakeisti:
 
-See below an example of an Image block for second_hand, (in this case there are no image included into zip file so default second hand image will be used, but tuned with a custom color.
+Žemiau pateiktas paveikslėlio bloko pavyzdys rodiniui second_hand (šiuo atveju į zip failą neįtrauktas joks paveikslėlis, todėl bus naudojamas numatytasis sekundžių rodyklės paveikslėlis, bet su pasirinktine spalva).
 
 ```text
 "second_hand": {
@@ -94,7 +94,7 @@ See below an example of an Image block for second_hand, (in this case there are 
     "color": "#BC906A"
 }
 ```
-To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest line with the keyValue `bgColor`
+Kad second_hand būtų nuspalvinta numatytąja KG spalva (lowRange, midRange arba highRange), tereikia pakeisti paskutinę eilutę rakto reikšme `bgColor`
 
 ```json
     "color": "bgColor"
@@ -102,9 +102,9 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
 
 (cwf-reference-textview-settings)=
 
-### TextView settings
+### TextView nustatymai
 
-TextView have more available parameters compare to ImageView: you can tune rotation (integer value in degrees), textsize (integer value in pixel), gravity (to define if text value will be centered (default value), or aligned left or right), set the font, fontStyle and fontColor, and also background color of the TextView
+TextView turi daugiau parametrų nei ImageView: galite nustatyti sukimą (sveikasis skaičius laipsniais), textsize (sveikasis skaičius pikseliais), gravity (ar teksto reikšmė bus centruota (numatytoji reikšmė), ar lygiuota kairėje arba dešinėje), nustatyti font, fontStyle ir fontColor, taip pat TextView fono spalvą
 
 ```text
 "basalRate": {
@@ -121,7 +121,7 @@ TextView have more available parameters compare to ImageView: you can tune rotat
     "fontColor": "#BDBDBD"
 },
 ```
-Note that if you don't want to manage one view within your watchface, then put the `"visibility"` key to `"gone"` but also set size and position outside visible area like that:
+Atkreipkite dėmesį, kad jei nenorite naudoti kurio nors rodinio savo ciferblate, raktą `"visibility"` nustatykite į `"gone"`, bet taip pat dydį ir vietą nustatykite už matomos srities ribų, štai taip:
 
 ```text
 "second": {
@@ -138,23 +138,23 @@ Note that if you don't want to manage one view within your watchface, then put t
     "fontColor": "#BDBDBD"
 },
 ```
-If size and position are within visible area, you can get some "flash" of the hidden value during the refresh of the watchface.
+Jei dydis ir vieta yra matomoje srityje, atnaujinant ciferblatą galite trumpai pamatyti paslėptą reikšmę („blyksnį“).
 
-If you want to customize background image of a text view, then you can use the key `"background":` and put the filename of image included into zip file as keyValue, you can also just change the background color using `"color:"` key.
+Jei norite pakeisti teksto rodinio fono paveikslėlį, galite naudoti raktą `"background":` ir kaip rakto reikšmę nurodyti zip faile esančio paveikslėlio failo pavadinimą. Taip pat galite tiesiog pakeisti fono spalvą raktu `"color:"`.
 
 ```json
 "background": "fileName"
 ```
 
-You also have 4 specific textViews (named freetext1 to freetext4) that have a specific parameter `"textvalue":` that can be used to set for example a label
+Taip pat yra 4 specialūs teksto rodiniai (pavadinti nuo freetext1 iki freetext4), turintys specialų parametrą `"textvalue":`. Jį galima naudoti, pavyzdžiui, užrašui nustatyti
 
 (cwf-reference-chartview-settings)=
 
-### ChartView settings
+### ChartView nustatymai
 
-Chart view is a very specific view that can share some parameters with ImageView or with TextView...
+Grafiko rodinys yra labai ypatingas rodinys. Jis gali turėti kai kuriuos tokius pačius parametrus kaip ImageView arba TextView...
 
-Standard settings for this view is very simple:
+Standartiniai šio rodinio nustatymai yra labai paprasti:
 
 ```text
 "chart": {
@@ -165,160 +165,160 @@ Standard settings for this view is very simple:
     "visibility": "visible"
 },
 ```
-The 2 additional parameters you can include for Chart view is a background color (default is transparent), using `"color"` key or a background image using `"background"` key.
+Grafiko rodiniui galite pridėti 2 papildomus parametrus: fono spalvą (numatytoji yra permatoma) raktu `"color"` arba fono paveikslėlį raktu `"background"`.
 
 (cwf-reference-how-to-build-watchface)=
 
-## How to build/design your first Watchface
+## Kaip sukurti savo pirmąjį ciferblatą
 
-### Tools required
+### Reikalingi įrankiai
 
-- Text editor: My advice is to use NotePad++ (or equivalent) that is a simple text editor, but added value is you can see formatted text with color code, so it's easier to detect errors. any simple text editor will do the job. Since the purpose is to tune json information.
-- Image editor (bitmap and/or vector)
-  - If you use Bitmap
-    - Image editor should be able to manage transparency (required for all image above background), and png format (if you used bitmap image)
-    - Background image can  be in jpg format (smaller that png)
-    - Image editor should allow you to measure in pixel graphical objects (can be a simple square) (top, left, width, height)
-    - Image editor should be able to show you colors with RRGGBB code in hexadecimal
-    - Image editor should be able to resize image to 400px x 400px (very important to work with this resolution)
-  - If you use Vector
-    - Vector image should be exported in svg format
+- Teksto redaktorius: patariu naudoti NotePad++ (ar panašų). Tai paprastas teksto redaktorius, bet jo privalumas – tekstas rodomas su spalviniu kodu, todėl lengviau rasti klaidas. tiks bet koks paprastas teksto redaktorius. Nes tikslas – keisti json informaciją.
+- Paveikslėlių redaktorius (rastrinis ir (arba) vektorinis)
+  - Jei naudojate rastrinius paveikslėlius
+    - Paveikslėlių redaktorius turi palaikyti permatomumą (būtina visiems paveikslėliams virš fono) ir png formatą (jei naudojate rastrinius paveikslėlius)
+    - Fono paveikslėlis gali būti jpg formato (mažesnis už png)
+    - Paveikslėlių redaktorius turi leisti išmatuoti grafinius objektus pikseliais (tai gali būti paprastas kvadratas) (top, left, width, height)
+    - Paveikslėlių redaktorius turi rodyti spalvas RRGGBB kodu šešioliktainiu formatu
+    - Paveikslėlių redaktorius turi mokėti pakeisti paveikslėlio dydį į 400px x 400px (labai svarbu dirbti su šia raiška)
+  - Jei naudojate vektorinius paveikslėlius
+    - Vektorinis paveikslėlis turi būti eksportuotas svg formatu
 
-### Get template to not start from scratch
+### Gaukite šabloną, kad nereikėtų pradėti nuo nulio
 
-When you want to design your first watchface, the best is to start by the default watchface (this will ensure you to have latest version with all available views correctly sorted)
+Kurdami pirmąjį ciferblatą geriausia pradėti nuo numatytojo ciferblato (taip turėsite naujausią versiją su visais galimais rodiniais, išdėstytais teisinga tvarka)
 
-- You can get zip file by clicking on "Export Template" button within Wear plugin and get zip file within AAPS/exports folder
-- Note that you will need to have a watch connected to AAPS to see Custom Watchface buttons (but watch is also required to check, test and tune your custom watchface)
+- Zip failą gausite paspaudę mygtuką „Eksportuoti šabloną“ Wear įskiepyje. Zip failas atsiras aplanke AAPS/exports
+- Atkreipkite dėmesį, kad pasirinktinio ciferblato mygtukus matysite tik tada, kai prie AAPS bus prijungtas laikrodis (laikrodis taip pat reikalingas pasirinktiniam ciferblatui tikrinti, testuoti ir derinti)
 
-Default watchface is very simple and zip file will contains only the 2 files:
+Numatytasis ciferblatas labai paprastas, jo zip faile bus tik 2 failai:
 
-- CustomWatchface.png (image of default watchface for WF selection)
+- CustomWatchface.png (numatytojo ciferblato paveikslėlis ciferblato pasirinkimui)
 - CustomWatchface.json
 
-### Organize your files within your computer
+### Failų tvarkymas kompiuteryje
 
-The easiest way to work is to have phone connected to the computer, and work with two specific folders:
+Paprasčiausia dirbti, kai telefonas prijungtas prie kompiuterio, ir naudoti du aplankus:
 
-- one explorer opened on a specific folder that will have all files (json, bitmap images, vector images, fonts), and the CustomWatchface.zip file within it
-- another explorer (or navigation tree tuned) opened to have Phone/AAPS/exports folder available
+- viena failų naršyklė atidaryta specialiame aplanke, kuriame yra visi failai (json, rastriniai paveikslėliai, vektoriniai paveikslėliai, šriftai) ir jame esantis failas CustomWatchface.zip
+- kita failų naršyklė (arba pritaikytas aplankų medis) atidaryta, kad būtų pasiekiamas aplankas Phone/AAPS/exports
 
-That way working is very easy: each time you tune json file with a text editor, image with image editor (bitmap or vector) you have to just:
+Taip dirbti labai paprasta: kiekvieną kartą, kai pakeičiate json failą teksto redaktoriumi arba paveikslėlį paveikslėlių redaktoriumi (rastriniu ar vektoriniu), jums tereikia:
 
-1. save your modifications in each app
-2. drag and drop all files within CustomWatchface.zip file
-3. drag and drop CustomWatchface.zip into AAPS/exports folder of the phone
-4. send CustomWatchface to the watch to check the results
+1. išsaugoti pakeitimus kiekvienoje programoje
+2. nuvilkti visus failus į failą CustomWatchface.zip
+3. nuvilkti CustomWatchface.zip į telefono aplanką AAPS/exports
+4. nusiųsti CustomWatchface į laikrodį ir patikrinti rezultatą
 
-### Initialize Watchface customization
+### Ciferblato pritaikymo pradžia
 
-First step you will have to define a watchface Name (necessary to select it easily for testing), and start to tune metadata keys at the beginning of json file
+Pirmiausia turėsite nustatyti ciferblato pavadinimą (jis reikalingas, kad testuojant ciferblatą būtų lengva pasirinkti) ir pradėti keisti metaduomenų raktus json failo pradžioje
 
-Then you will have to define which information you want to show so which view should be visible or hidden.
+Tada turėsite nuspręsti, kokią informaciją norite rodyti, t. y. kurie rodiniai turi būti matomi, o kurie paslėpti.
 
-- will you manage second or not?
-- do you want to design an analog watch or a digital watch (or both...)
+- ar rodysite sekundes, ar ne?
+- ar norite sukurti analoginį, ar skaitmeninį laikrodį (ar abu...)
 
-Now you can start to modify json file with the `"visibility":` key of each view set to `"visible"` or `"gone"` (if you want to keep or not the view)
+Dabar galite pradėti keisti json failą: kiekvieno rodinio raktui `"visibility":` nustatykite `"visible"` arba `"gone"` (ar norite rodinį palikti, ar ne)
 
-You can also start to tune approximately top, left margin and width height values to start organizing the watchface (these values will be tuned later using image editor)
+Taip pat galite apytiksliai nustatyti top, left margin ir width, height reikšmes, kad pradėtumėte dėlioti ciferblatą (vėliau šios reikšmės bus patikslintos paveikslėlių redaktoriumi)
 
-Note: everything is design within a **400px x 400px rectangle**. So everything will be position in absolute coordinates within this size.
+Pastaba: viskas kuriama **400px x 400px stačiakampyje**. Todėl viskas išdėstoma absoliučiomis koordinatėmis šio dydžio ribose.
 
-When you design your first watchface, you have to know that everything is organized by layer from the Back to the Top, so each view (ImageView or TextView) can hide something that is behind...
-
-
-
-![CustomWatchface layers](../images/CustomWatchface_1.jpg)
+Kurdami pirmąjį ciferblatą turite žinoti, kad viskas išdėstyta sluoksniais nuo apatinio iki viršutinio, todėl kiekvienas rodinys (ImageView arba TextView) gali uždengti tai, kas yra už jo...
 
 
 
-Then within json file all views are sorted from the Back to the Top (this will help you to remember what is behind what...)
+![Pasirinktinio ciferblato sluoksniai](../images/CustomWatchface_1.jpg)
 
-If you design or tune your first custom watchface, start by simple things: change visibility of some views, include a dedicated background image without changing json file...
 
-### Manage colors
 
-Within json file, you will have several keys to specify colors: `"color"`, `"fontColor"`for views, but also `"highColor"`, `"midColor"`, `"lowColor"`, ... (see [List of General Parameters](#cwf-reference-list-of-general-parameters))
+json faile visi rodiniai surikiuoti nuo apatinio iki viršutinio (tai padės prisiminti, kas yra už ko...)
 
-Colors are specified with a text field that starts by `#` followed by RRGGBB (Red, Green, Blue) values in hexadecimal format:
+Jei kuriate ar keičiate savo pirmąjį pasirinktinį ciferblatą, pradėkite nuo paprastų dalykų: pakeiskite kai kurių rodinių matomumą, įdėkite savo fono paveikslėlį nekeisdami json failo...
 
-- `"#FFFFFF"` is white, and `"#000000"` is black, `"#FF0000"` is red...
+### Spalvų valdymas
 
-You can also include 2 additional values for alpha layer and specify a transparency level (AARRGGBB):
+json faile bus keli raktai spalvoms nurodyti: `"color"`, `"fontColor"` rodiniams, bet taip pat `"highColor"`, `"midColor"`, `"lowColor"`, ... (žr. [Bendrųjų parametrų sąrašas](#cwf-reference-list-of-general-parameters))
 
-- `"#00000000"`is completely transparent, and `"#FF000000"` is completely opaque ( so  `"#FF000000"` is equivalent to  `"#000000"`)
+Spalvos nurodomos teksto lauku, kuris prasideda `#`, o po jo eina RRGGBB (raudona, žalia, mėlyna) reikšmės šešioliktainiu formatu:
 
-You can also use the specific keyvalue `"bgColor"` to automatically use `"highColor"`, `"midColor"`, `"lowColor"` specified in general parameters according to BG Value:
+- `"#FFFFFF"` yra balta, `"#000000"` – juoda, `"#FF0000"` – raudona...
 
-- `"fontColor": "bgColor",` will automatically set the font color of the view according to BG Value
-- Note that `sgv` (for BG Value) and `direction` (for trend arrow) views automatically apply BG colors set into general parameters (for these 2 views, if you want to have different colors, you will have to use advanced [dynData](#cwf-reference-dyndata-feature) feature with one step color...)
+Taip pat galite pridėti 2 papildomas alfa sluoksnio reikšmes ir nurodyti permatomumo lygį (AARRGGBB):
 
-For more information concerning ImageViews and `"color":` key, see dedicated chapter [Tune image color](#cwf-reference-tune-image-color) below.
+- `"#00000000"` yra visiškai permatoma, o `"#FF000000"` – visiškai nepermatoma ( taigi  `"#FF000000"` yra tas pats kaip  `"#000000"`)
 
-### Include Hardcoded images
+Taip pat galite naudoti specialią rakto reikšmę `"bgColor"`, kad pagal KG reikšmę būtų automatiškai naudojamos bendruosiuose parametruose nurodytos `"highColor"`, `"midColor"`, `"lowColor"`:
 
-the easiest way to start tuning your watchface is to include within zip file some images with a specific names (see [List of Hardcoded resource files](#cwf-reference-list-of-hardcoded-resource-files))
+- `"fontColor": "bgColor",` automatiškai nustatys rodinio šrifto spalvą pagal KG reikšmę
+- Atkreipkite dėmesį, kad rodiniai `sgv` (KG reikšmei) ir `direction` (tendencijos rodyklei) automatiškai naudoja bendruosiuose parametruose nustatytas KG spalvas (jei šiems 2 rodiniams norite kitų spalvų, turėsite naudoti išplėstinę [dynData](#cwf-reference-dyndata-feature) funkciją su vieno žingsnio spalva...)
 
-- Image should be in `.jpg`, `.png` or `.svg` format. but be careful, jpg doesn't manage transparency, so should be only used for background layer. For all intermediate layers (cover_chart, cover_plate, hands) use either `.png`or `.svg` image
+Daugiau informacijos apie ImageViews ir raktą `"color":` rasite skyriuje [Paveikslėlio spalvos keitimas](#cwf-reference-tune-image-color) žemiau.
 
-- If you have a vector image editor (like for example Illustrator), prefer this format that will produce small text files with `.svg` extension the best quality.
-- You should take care to use exact filename (including High/lower case)
+### Iš anksto nustatytų paveikslėlių įtraukimas
 
-Now if you want a dedicated background image, you only have to include within the zip file a file named `Background.jpg` (without changing anything else). Send the zip file to the watch and check the result!
+paprasčiausias būdas pradėti keisti ciferblatą – įdėti į zip failą paveikslėlių su specialiais pavadinimais (žr. [Iš anksto nustatytų išteklių failų sąrašas](#cwf-reference-list-of-hardcoded-resource-files))
 
-If you want to customize hour_hand, minute_hand or second_hand for an analog watch, simply include `HourHand.png` (or `HourHand.svg`), `MinuteHand.png` and `SecondHand.png`.
+- Paveikslėlis turi būti `.jpg`, `.png` arba `.svg` formato. tačiau būkite atsargūs: jpg nepalaiko permatomumo, todėl turi būti naudojamas tik fono sluoksniui. Visiems tarpiniams sluoksniams (cover_chart, cover_plate, hands) naudokite `.png` arba `.svg` paveikslėlį
 
-- these images will automatically rotate around the center of the image, so the images should be set to 00:00:00 (and for a "full frame" analog watch, use a size of 400 x 400 px positioned at top 0 left 0)
+- Jei turite vektorinių paveikslėlių redaktorių (pavyzdžiui, Illustrator), rinkitės šį formatą: jis sukuria mažus teksto failus su plėtiniu `.svg` ir geriausią kokybę.
+- Būtinai naudokite tikslų failo pavadinimą (įskaitant didžiąsias ir mažąsias raides)
 
-You can also noticed within [List of Hardcoded resource files](#cwf-reference-list-of-hardcoded-resource-files) that for each image view, you have two additional hardcoded filenames `High` and `Low` (for example you can include other images named `BackgroundHigh.jpg` and `BackgroundLow.jpg` within zip file). then image will automatically change according to you BG level (within Range, Hyper or Hypo). See AIMICO watchface as example.
+Jei norite savo fono paveikslėlio, tereikia į zip failą įdėti failą, pavadintą `Background.jpg` (nieko kito nekeičiant). Nusiųskite zip failą į laikrodį ir patikrinkite rezultatą!
+
+Jei norite pakeisti analoginio laikrodžio hour_hand, minute_hand arba second_hand, tiesiog įdėkite `HourHand.png` (arba `HourHand.svg`), `MinuteHand.png` ir `SecondHand.png`.
+
+- šie paveikslėliai automatiškai sukasi aplink paveikslėlio centrą, todėl paveikslėliuose turi būti nustatyta 00:00:00 (o „pilno kadro“ analoginiam laikrodžiui naudokite 400 x 400 px dydį, vieta top 0, left 0)
+
+[Iš anksto nustatytų išteklių failų sąraše](#cwf-reference-list-of-hardcoded-resource-files) taip pat matysite, kad kiekvienam paveikslėlio rodiniui yra du papildomi iš anksto nustatyti failų pavadinimai `High` ir `Low` (pavyzdžiui, į zip failą galite įdėti kitus paveikslėlius, pavadintus `BackgroundHigh.jpg` ir `BackgroundLow.jpg`). tada paveikslėlis automatiškai keisis pagal jūsų KG lygį (diapazone, hiperglikemija arba hipoglikemija). Pavyzdžiu žr. ciferblatą AIMICO.
 
 (cwf-reference-tune-image-color)=
 
-### Tune image color
+### Paveikslėlio spalvos keitimas
 
-`"color"` key can  be used to tune default image color:
+Raktu `"color"` galima pakeisti numatytąją paveikslėlio spalvą:
 
-- applied on background view, it will set the background color (default black)
-- applied on cover_plate (simple dial) or hands, it will change the default image (white) by the color specified (including `"bgColor"`)
+- pritaikytas fono rodiniui, jis nustatys fono spalvą (numatytoji juoda)
+- pritaikytas cover_plate (paprastam ciferblatui) arba rodyklėms, jis pakeis numatytąjį paveikslėlį (baltą) nurodyta spalva (įskaitant `"bgColor"`)
 
-When you apply `"color"` key on a bitmap image (`.jpg` or `.png`), color will apply an interesting effect on color saturation. So you will still recognize your bitmap.
+Kai raktą `"color"` pritaikote rastriniam paveikslėliui (`.jpg` arba `.png`), spalva sukurs įdomų spalvų sodrumo efektą. Taigi savo rastrinį paveikslėlį vis tiek atpažinsite.
 
-Finally on `.svg` image file, `"color"`key will have no effect, consider color of vector files as hardcoded within the image. If you want to change colors, you will have to include several `svg` files, and use advanced [dynData](#cwf-reference-dyndata-feature) feature to change it
+Galiausiai `.svg` paveikslėlio failui raktas `"color"` neturės jokio poveikio: vektorinių failų spalvos laikomos nustatytomis pačiame paveikslėlyje. Jei norite keisti spalvas, turėsite įdėti kelis `svg` failus ir jiems keisti naudoti išplėstinę [dynData](#cwf-reference-dyndata-feature) funkciją
 
-### Use additional fonts for TextViews
+### Papildomų šriftų naudojimas TextViews
 
-Several defaults font are already available within wear apk (see font keys included into [key values](#cwf-reference-key-values) chapter). But if you want to use additional fonts not available as default, you can include additional fonts within zip file:
+Keli numatytieji šriftai jau yra wear apk (žr. šriftų raktus skyriuje [Rakto reikšmės](#cwf-reference-key-values)). Tačiau jei norite naudoti papildomus šriftus, kurių nėra numatytųjų sąraše, papildomus šriftus galite įdėti į zip failą:
 
-- the 2 accepted font format are `.ttf` and `.otf` files
-- if you include a custom font within zip file, for example with a file named `myCustomFont.ttf`, then you will have to use the filename to use it within json file for a TextView:
+- leidžiami 2 šriftų formatai: `.ttf` ir `.otf` failai
+- jei į zip failą įdedate pasirinktinį šriftą, pavyzdžiui, failą `myCustomFont.ttf`, json faile TextView turėsite jį nurodyti failo pavadinimu:
 
 ```
 "font": "myCustomFont",
 ```
 
-Keep in mind that some fonts can be included into big files (and you are limited to a maximum size for zip file). So if you only use very few characters (numbers, `.`, `,`), you can use free tools to remove unused characters (for example [here](https://products.aspose.app/font/generator/ttf-to-ttf)) and then reduce font size.
+Atminkite, kad kai kurie šriftai gali būti dideli failai (o zip failo dydis yra ribotas). Taigi, jei naudojate labai mažai simbolių (skaičius, `.`, `,`), galite nemokamais įrankiais pašalinti nenaudojamus simbolius (pavyzdžiui, [čia](https://products.aspose.app/font/generator/ttf-to-ttf)) ir taip sumažinti šrifto dydį.
 
 (cwf-reference-advanced-features)=
 
-## Advanced features
+## Išplėstinės funkcijos
 
 (cwf-reference-preference-feature)=
 
-### Preferences Feature
+### Nustatymų funkcija
 
-CustomWatchface can automatically tune some watch preferences to have the correct visualization of the watchface (if authorization is given within Wear preferencesby the user).
+Pasirinktinis ciferblatas gali automatiškai pakeisti kai kuriuos laikrodžio nustatymus, kad ciferblatas būtų rodomas teisingai (jei naudotojas tai leido Wear nustatymuose).
 
-But this feature should be used with care. Preferences are common with all other watchfaces. So several rules to respect with this feature:
+Tačiau šią funkciją reikia naudoti atsargiai. Nustatymai yra bendri su visais kitais ciferblatais. Todėl naudojant šią funkciją reikia laikytis kelių taisyklių:
 
-- never set preferences concerning hidden views
-- try to maximize the visible views
-- feel free to oversize the width of certain views:
-  - TBR can be shown as percentage (small width, but also as absolute values much wider)
-  - delta or avg delta with detailed information can be wide
-  - same for iob2: this view can have total iob, but if detailed iob is selected, then text size can be very long
+- niekada nenustatykite nustatymų, susijusių su paslėptais rodiniais
+- stenkitės, kad matomų rodinių būtų kuo daugiau
+- drąsiai darykite kai kuriuos rodinius platesnius:
+  - Laikiną valandinę bazę galima rodyti procentais (siauras plotis), bet taip pat absoliučiomis reikšmėmis (daug platesnis)
+  - pokytis arba vidutinis pokytis su išsamia informacija gali būti platus
+  - tas pats su iob2: šiame rodinyje gali būti bendras AIO, bet jei pasirinktas detalus AIO, tekstas gali būti labai ilgas
 
-If you still need some very specific settings to have a correct display (in example below, if there is not enough space for detailed iob, you can "force" this parameter to `false` of your watch, you can include within metadata block some settings constraint like that
+Jei vis tiek reikia labai specifinių nustatymų, kad vaizdas būtų teisingas (žemiau esančiame pavyzdyje, jei detaliam AIO nepakanka vietos, galite „priverstinai“ nustatyti šį laikrodžio parametrą į `false`), metaduomenų bloke galite įrašyti tokį nustatymo apribojimą
 
 ```text
 "metadata": {
@@ -332,33 +332,33 @@ If you still need some very specific settings to have a correct display (in exam
 },
 ```
 
-If user authorize custom watchface to modify watch parameter (setting within wear plugin) then Show detailed iob will be set to "disable", and locked to disable (no modification of this parameter possible, until authorization is disabled within wear plugin parameter, or another watchface is selected)
+Jei naudotojas leido pasirinktiniam ciferblatui keisti laikrodžio parametrus (nustatymas Wear įskiepyje), tada „Rodyti detalų AIO“ bus išjungtas ir užrakintas išjungtoje padėtyje (šio parametro keisti negalima, kol leidimas nebus išjungtas Wear įskiepio parametruose arba nebus pasirinktas kitas ciferblatas)
 
-- Note that when a user select a watchface, he can see the number of "required parameter" during watchface selection
+- Atkreipkite dėmesį, kad naudotojas, rinkdamasis ciferblatą, mato „privalomų parametrų“ skaičių
 
-In example below Gota watchface has one required parameter. If authorization is not given it will be shown in white color, but authorization is given, then this parameter will be set and locked on the watch (in this case the number is in orange color)
+Žemiau esančiame pavyzdyje ciferblatas Gota turi vieną privalomą parametrą. Jei leidimas nesuteiktas, skaičius rodomas balta spalva. Jei leidimas suteiktas, šis parametras bus nustatytas ir užrakintas laikrodyje (šiuo atveju skaičius rodomas oranžine spalva)
 
-![Required parameters](../images/CustomWatchface_2.jpg)
+![Privalomi parametrai](../images/CustomWatchface_2.jpg)
 
 
 
 (cwf-reference-twinview-feature)=
 
-### TwinView Feature
+### TwinView funkcija
 
-Twin views provide an easy way to adjust the view position based on the visible views. This does not have the power of a layout entirely made up of LinearLayout, but can handle many common cases.
+Poriniai rodiniai (twin views) leidžia lengvai pakeisti rodinio vietą pagal tai, kurie rodiniai matomi. Tai nėra taip galinga kaip išdėstymas, sudarytas vien iš LinearLayout, bet tinka daugeliui įprastų atvejų.
 
-In example below you can see AAPS (Cockpit) watchface with all views visible within settings, and the same watchface with "Show rig battery" disabled and "Show avg delta" disabled
+Žemiau esančiame pavyzdyje matote ciferblatą AAPS (Cockpit), kai nustatymuose matomi visi rodiniai, ir tą patį ciferblatą, kai išjungta „Rodyti įrenginio bateriją“ ir „Rodyti vidutinį pokytį“
 
-![Twin Views](../images/CustomWatchface_3.jpg)
+![Poriniai rodiniai](../images/CustomWatchface_3.jpg)
 
-You can see that when one of the twin views is hidden, the other is shifted to be centered
+Matote, kad kai vienas iš porinių rodinių paslėptas, kitas pasislenka į centrą
 
-in this example, you can see that within `"uploader_battery"` block, we have `"twinView":` key is added to define `"rig_battery"` view, and in `"rig_battery"` block  `"twinView":` key define `"uploader_battery"` as twin. Then then additional key `"leftOffsetTwinHidden":` define the number of pixel to shift the view when twin is hidden.
+šiame pavyzdyje matote, kad bloke `"uploader_battery"` pridėtas raktas `"twinView":`, nurodantis rodinį `"rig_battery"`, o bloke `"rig_battery"` raktas `"twinView":` nurodo `"uploader_battery"` kaip porinį. Tada papildomas raktas `"leftOffsetTwinHidden":` nurodo, keliais pikseliais pastumti rodinį, kai porinis rodinys paslėptas.
 
-To calculate this number, you can see that the difference between the leftMargin of each of the twin views is 50 pixels, so the offset to stay centered is half in one direction or the other.
+Šį skaičių apskaičiuoti paprasta: skirtumas tarp porinių rodinių leftMargin yra 50 pikselių, todėl, kad rodinys liktų centre, poslinkis yra pusė šio skirtumo į vieną ar kitą pusę.
 
-If the twin views are positioned vertically, in this case you must use the key `"topOffsetTwinHidden":`
+Jei poriniai rodiniai išdėstyti vertikaliai, tokiu atveju turite naudoti raktą `"topOffsetTwinHidden":`
 
 ```text
 "uploader_battery": {
@@ -394,33 +394,33 @@ If the twin views are positioned vertically, in this case you must use the key `
 ```
 (cwf-reference-dyndata-feature)=
 
-### DynData Feature
+### DynData funkcija
 
-DynData is the most powerful feature if you want to include some animation within you watchface, according to some internal values (like BG value, BG level, delta, % of battery... see list of available data [here](#cwf-reference-dyndata-key-values))
+DynData yra galingiausia funkcija, jei norite į ciferblatą įtraukti animaciją pagal kai kurias vidines reikšmes (pvz., KG reikšmę, KG lygį, pokytį, baterijos %... galimų duomenų sąrašą žr. [čia](#cwf-reference-dyndata-key-values))
 
-To illustrate this feature, I will take the example of AAPS (SteamPunk) watchface:
+Šiai funkcijai paaiškinti paimsiu ciferblato AAPS (SteamPunk) pavyzdį:
 
 ![CustomWatchface_4](../images/CustomWatchface_4.png)
 
-In this watchface, we will have to manage the [rotation of BG value](#cwf-reference-background-management) (from 30 degrees to 330 degrees) on the right, the [dynamic range of avg_delta](#cwf-reference-avg-delta-management) (scale up to 5mgdl, 10mgdl or 20mgdl according to value), the [rotation of pointer](#cwf-reference-dynamic-rotation-management) that should be synchronized to the scale, and also the different layer of the views...
+Šiame ciferblate turėsime valdyti [KG reikšmės sukimą](#cwf-reference-background-management) (nuo 30 iki 330 laipsnių) dešinėje, [avg_delta dinaminį diapazoną](#cwf-reference-avg-delta-management) (skalė iki 5 mgdl, 10 mgdl arba 20 mgdl pagal reikšmę), [rodyklės sukimą](#cwf-reference-dynamic-rotation-management), kuris turi būti suderintas su skale, taip pat skirtingus rodinių sluoksnius...
 
-To be able to manage this Watchface, see below all the images included into the zip file:
+Kad galėtumėte valdyti šį ciferblatą, žemiau matote visus zip faile esančius paveikslėlius:
 
-Note: to be able to see the transparency, all these images are on a yellow background and surrounded by a red square
+Pastaba: kad matytumėte permatomumą, visi šie paveikslėliai yra ant geltono fono ir apjuosti raudonu kvadratu
 
-![Steampunk images](../images/CustomWatchface_5.jpg)
+![Steampunk paveikslėliai](../images/CustomWatchface_5.jpg)
 
-- On the first row, Background.jpg and CoverPlate.png will be automatically mapped with associated view (default views filename), and steampunk_pointer.png will be managed by dynData
-- On the second row you see the 3 scales of dynamic range for avg_delta that will also be managed by dynData
-- On the third row, chartBackground.jpg will be linked manually within chart view, HourHand.png and finally MinuteHand.png files will be automatically mapped with associated views
+- Pirmoje eilutėje Background.jpg ir CoverPlate.png bus automatiškai susieti su atitinkamu rodiniu (numatytieji rodinių failų pavadinimai), o steampunk_pointer.png bus valdomas per dynData
+- Antroje eilutėje matote 3 dinaminio diapazono skales rodiniui avg_delta. Jos taip pat bus valdomos per dynData
+- Trečioje eilutėje chartBackground.jpg bus rankiniu būdu susietas grafiko rodinyje, o HourHand.png ir MinuteHand.png failai bus automatiškai susieti su atitinkamais rodiniais
 
 (cwf-reference-background-management)=
 
-#### Background management
+#### Fono valdymas
 
-First, concerning BG value image, no choice here, it can only be in the background layer (otherwise it will be in front of the chart view and chart will not be visible!). So we will have to map BG value to the background, and then rotate background image according to BG value.
+Pirma, dėl KG reikšmės paveikslėlio pasirinkimo nėra: jis gali būti tik fono sluoksnyje (kitaip jis būtų prieš grafiko rodinį ir grafikas nebūtų matomas!). Taigi turėsime susieti KG reikšmę su fonu ir tada sukti fono paveikslėlį pagal KG reikšmę.
 
-Within `"background"` block, we will include 2 dedicated keys to make this rotation:
+Bloke `"background"` įrašysime 2 specialius raktus šiam sukimui:
 
 ```text
 "background": {
@@ -433,11 +433,11 @@ Within `"background"` block, we will include 2 dedicated keys to make this rotat
     "visibility": "visible"
 },
 ```
-`"dynData":` key will define which block should be used to define the animation (value, range, conversion...) here this block was named "rotateSgv" (choose an explicit name when you use this feature),
+Raktas `"dynData":` nurodo, kuris blokas bus naudojamas animacijai apibrėžti (reikšmė, diapazonas, konvertavimas...); čia šis blokas pavadintas „rotateSgv“ (naudodami šią funkciją rinkitės aiškų pavadinimą),
 
-`"rotationOffset": true,` will define that the expected animation according to value should be a rotation. (others available keys are `"leftOffset"` and `"topOffset"` if you want to create a slider)
+`"rotationOffset": true,` nurodo, kad laukiama animacija pagal reikšmę turi būti sukimas. (kiti galimi raktai yra `"leftOffset"` ir `"topOffset"`, jei norite sukurti slankiklį)
 
-Now we will go at the end of the file, after the last view:
+Dabar eisime į failo pabaigą, po paskutinio rodinio:
 
 ```text
 "second_hand": {
@@ -454,21 +454,21 @@ Now we will go at the end of the file, after the last view:
         "maxData": 330
     },
 ```
-You can see that after the latest view (`"second_hand"`), we added a new `"dynData": { ... }` block that  will contains all the animations:
+Matote, kad po paskutinio rodinio (`"second_hand"`) pridėjome naują bloką `"dynData": { ... }`, kuriame bus visos animacijos:
 
-The block defined within `"background"`view was named `"rotateSgv"`, it's the first block you will find into `"dynData"`!
+Rodinyje `"background"` nurodytas blokas pavadintas `"rotateSgv"`. Tai pirmasis blokas, kurį rasite `"dynData"`!
 
-This block is simple: you have a first key named `"valueKey":` that will be used to define which value should be used. in this case `"sgv"` is a "keyValue" that defines BG value (note that in most cases the keyValue has the same name that the view that shows this information).
+Šis blokas paprastas: pirmasis raktas `"valueKey":` nurodo, kuri reikšmė turi būti naudojama. šiuo atveju `"sgv"` yra „keyValue“, nurodanti KG reikšmę (atkreipkite dėmesį, kad dažniausiai keyValue vadinasi taip pat kaip rodinys, kuris rodo šią informaciją).
 
-Concerning BG value, default min data is set to 39mgdl and max  data is set to 400mgdl (see [DynData reference key values](#cwf-reference-dyndata-key-values) below all available keyValues and associated min/max data values).
+KG reikšmei numatytasis min data nustatytas į 39 mgdl, o max data – į 400 mgdl (visas galimas keyValues ir susijusias min/max data reikšmes žr. [DynData rakto reikšmių žinynas](#cwf-reference-dyndata-key-values) žemiau).
 
-Within `"rotateSgv"` block the two additional keys (`"minData":` and `"maxData":`) will be used to tune min and max data to 30 and 330. With these min and max values, we will be able to directly use data value (without any conversion) to rotate background in degrees. In this situation all BG values above 330mgdl will be limited to 330, upper limit of the image.
+Bloke `"rotateSgv"` du papildomi raktai (`"minData":` ir `"maxData":`) naudojami mažiausiai ir didžiausiai reikšmei nustatyti: 30 ir 330. Su šiomis min ir max reikšmėmis galėsime tiesiogiai naudoti duomenų reikšmę (be jokio konvertavimo) fonui sukti laipsniais. Šiuo atveju visos KG reikšmės virš 330 mgdl bus apribotos iki 330, t. y. viršutinės paveikslėlio ribos.
 
-#### Chart management
+#### Grafiko valdymas
 
-Default background of chart is transparent, so to hide BG scale included into background image, we will need to include a dedicated background image (this image will include the overall shadows of Steampunk watchface). The link to chartBackground.jpg file is done with `"background":` key
+Numatytasis grafiko fonas yra permatomas. Kad paslėptume fono paveikslėlyje esančią KG skalę, reikės įtraukti specialų fono paveikslėlį (šiame paveikslėlyje bus bendri Steampunk ciferblato šešėliai). Failas chartBackground.jpg susiejamas raktu `"background":`
 
-Of course, the sizing and positioning of the view must be done to the pixel!
+Žinoma, rodinio dydis ir vieta turi būti nustatyti tiksliai iki pikselio!
 
 ```text
 "chart": {
@@ -482,15 +482,15 @@ Of course, the sizing and positioning of the view must be done to the pixel!
 ```
 (cwf-reference-avg-delta-management)=
 
-#### Avg delta management
+#### Vidutinio pokyčio valdymas
 
-To be able to manage dynamic range of avg delta, we will use the four freetext views. freetext1 will be used to manage the image scale, and freetext2 to freetext4 will be used to manage pointer rotation according to scale.
+Vidutinio pokyčio dinaminiam diapazonui valdyti naudosime keturis freetext rodinius. freetext1 bus naudojamas skalės paveikslėliui valdyti, o nuo freetext2 iki freetext4 – rodyklės sukimui pagal skalę.
 
 **freetext1**
 
-As explain before, freetext views are in front of chart and in front of background, that's why we included transparent area to see these images (right side and bottom side of the image)
+Kaip paaiškinta anksčiau, freetext rodiniai yra prieš grafiką ir prieš foną, todėl įtraukėme permatomą sritį, kad šie paveikslėliai būtų matomi (dešinėje ir apatinėje paveikslėlio dalyje)
 
-Note that the removed bottom part of these images has been used as background of chart to have a perfect integration.
+Atkreipkite dėmesį, kad iš šių paveikslėlių pašalinta apatinė dalis panaudota kaip grafiko fonas, kad viskas idealiai derėtų.
 
 ```text
 "freetext1": {
@@ -503,7 +503,7 @@ Note that the removed bottom part of these images has been used as background of
     "dynData": "avgDeltaBackground"
 },
 ```
-For this view we include the link to another `"dynData"`block named `avgDeltaBackground`. This block will manage avgDelta scale according to avgDelta value.
+Šiame rodinyje įtraukiame nuorodą į kitą `"dynData"`bloką, pavadintą `avgDeltaBackground`. Šis blokas valdys avgDelta skalę pagal avgDelta reikšmę.
 
 ```text
 "avgDeltaBackground": {
@@ -521,24 +521,24 @@ For this view we include the link to another `"dynData"`block named `avgDeltaBac
     "image8": "steampunk_gauge_mgdl_20"
 },
 ```
-- `"valueKey":` will make the link with `"avg_delta"` value
-- min and max Data will also limit the range to the maximum value available within this watchface (from -20mgdl to 20mgdl). For mmol users, keep in mind that all internal values are always in mgdl within AAPS.
+- `"valueKey":` susies su reikšme `"avg_delta"`
+- min ir max Data taip pat apribos diapazoną iki didžiausios šiame ciferblate galimos reikšmės (nuo -20 mgdl iki 20 mgdl). mmol naudotojai turėtų atsiminti, kad AAPS viduje visos reikšmės visada yra mgdl.
 
-Then we will see here how to manage dynamic background image according to value.
+Toliau pamatysime, kaip valdyti dinaminį fono paveikslėlį pagal reikšmę.
 
-`"invalidImage":` is the key to manage image to show when we have an invalid data (or missing data). Here we make the link to additional resource image including into zip file with 5 mgdl scale
+`"invalidImage":` yra raktas paveikslėliui, kuris rodomas, kai duomenys netinkami (arba jų nėra). Čia susiejame su papildomu zip faile esančiu paveikslėlio ištekliumi su 5 mgdl skale
 
-Then we will use a series of images, starting from `"image1":` to `"image8":`. The number of provided images will define the number of steps between `minData` and `maxData`.
+Tada naudosime paveikslėlių seriją nuo `"image1":` iki `"image8":`. Pateiktų paveikslėlių skaičius nustato žingsnių skaičių tarp `minData` ir `maxData`.
 
-- `image1` will define image to show when avg_delta is equal or close to `minData` and the image with the highest number (here `image8`) will be used to define the image that should be shown when avg_delta is equal or close to `maxData`
-- between -20mgdl and 20mgdl, the overall range is 40mgdl, divided by 8 (number of images provided), we will have 8 steps of 5mgdl
-- Now we can map background images according to avg_delta value, starting from the lowest values: between -20 and -15, and also between -15 and -10 we will use  `steampunk_gauge_mgdl_20` for the scale, then between -10 and -5 `steampunk_gauge_mgdl_10`, and so on until +15 and +20 where we will again use `steampunk_gauge_mgdl_20` background image
+- `image1` nustato paveikslėlį, rodomą, kai avg_delta lygus arba artimas `minData`, o paveikslėlis su didžiausiu numeriu (čia `image8`) nustato paveikslėlį, rodomą, kai avg_delta lygus arba artimas `maxData`
+- tarp -20 mgdl ir 20 mgdl bendras diapazonas yra 40 mgdl; padalijus iš 8 (pateiktų paveikslėlių skaičius), gausime 8 žingsnius po 5 mgdl
+- Dabar galime susieti fono paveikslėlius su avg_delta reikšme, pradedant nuo mažiausių reikšmių: tarp -20 ir -15, taip pat tarp -15 ir -10 skalei naudosime `steampunk_gauge_mgdl_20`, tada tarp -10 ir -5 `steampunk_gauge_mgdl_10`, ir taip toliau iki +15 ir +20, kur vėl naudosime fono paveikslėlį `steampunk_gauge_mgdl_20`
 
 (cwf-reference-dynamic-rotation-management)=
 
-**freetext2 to freetext4**
+**nuo freetext2 iki freetext4**
 
-For these views we will combine dynamic images and rotation feature explained before:
+Šiems rodiniams sujungsime dinaminius paveikslėlius ir anksčiau paaiškintą sukimo funkciją:
 
 ```text
 "freetext2": {
@@ -572,7 +572,7 @@ For these views we will combine dynamic images and rotation feature explained be
     "rotationOffset": true
 },
 ```
-Here each view is dedicated to a specific scale (so is linked to a dedicated dynData block), you can also notice that `"rotationOffset":` key is enabled for these 3 views.Now take a look on the first dynData block:
+Čia kiekvienas rodinys skirtas konkrečiai skalei (todėl susietas su atskiru dynData bloku). Taip pat matote, kad šiems 3 rodiniams įjungtas raktas `"rotationOffset":`. Dabar pažiūrėkime į pirmąjį dynData bloką:
 
 ```text
 "avgDelta5": {
@@ -594,19 +594,19 @@ Here each view is dedicated to a specific scale (so is linked to a dedicated dyn
     "image8": "null"
 },
 ```
-Here, even if dynamic range will be used only between -5 and +5 avg_delta data, it's important to keep the overall range of -20, +20mgdl to ensure that the pointer will be synchronize with the background during scale switches. That's why we keep the same overall range than for `avgDeltaBackground`  and the same number of steps (8 images).
+Nors dinaminis diapazonas bus naudojamas tik avg_delta duomenims tarp -5 ir +5, svarbu palikti bendrą diapazoną nuo -20 iki +20 mgdl, kad keičiantis skalei rodyklė būtų suderinta su fonu. Todėl paliekame tą patį bendrą diapazoną kaip `avgDeltaBackground`  ir tą patį žingsnių skaičių (8 paveikslėliai).
 
-You can note that either `"invalidImage"` or several `"imagexx"` are with `"null"` key value (it could be any string not existing as a filename within zip file). When a filename is not found, then view background image will be transparent. So the setting ensure that pointer will only be visible for step 4 and step 5 (avg delta between -5mgdl and +5 mgdl), and will not be visible outside this range.
+Matote, kad `"invalidImage"` arba keli `"imagexx"` turi rakto reikšmę `"null"` (tai gali būti bet kokia eilutė, kuri nėra failo pavadinimas zip faile). Kai failo pavadinimas nerandamas, rodinio fono paveikslėlis bus permatomas. Taigi šis nustatymas užtikrina, kad rodyklė bus matoma tik 4 ir 5 žingsniuose (vidutinis pokytis tarp -5 mgdl ir +5 mgdl) ir nebus matoma už šio diapazono.
 
-Now we can see a new block `"rotationOffset":` that will have inside two keys `"minValue":` and `"maxValue":`. These values are used to make the conversion between internal data (in mgdl), and the angle rotation we want to have.
+Dabar matome naują bloką `"rotationOffset":`, kuriame yra du raktai `"minValue":` ir `"maxValue":`. Šios reikšmės naudojamos konvertuoti vidinius duomenis (mgdl) į norimą pasukimo kampą.
 
-- Steampunk watchface is designed to have maximum from -30 degrees to 30 degrees rotation for the pointer. So according to the scale (here from -5mgdl to 5mgdl), we will want to have 30 degrees for these values. Because `minData` and `maxData`are 4 times greater, then the corresponding minValues and maxValues are 4 * 30 degrees so -120 and +120 degrees. But for all rotation above or below +-30 degrees the pointer will be hidden (no image visible), and the pointer will only be visible for values between -5 and +5mgdl... So it's exactly what is expected here.
+- Steampunk ciferblatas sukurtas taip, kad rodyklė suktųsi daugiausia nuo -30 iki 30 laipsnių. Taigi pagal skalę (čia nuo -5 mgdl iki 5 mgdl) šioms reikšmėms norėsime turėti 30 laipsnių. Kadangi `minData` ir `maxData` yra 4 kartus didesni, atitinkami minValues ir maxValues yra 4 * 30 laipsnių, t. y. -120 ir +120 laipsnių. Tačiau esant bet kokiam sukimui virš arba žemiau ±30 laipsnių rodyklė bus paslėpta (paveikslėlis nematomas), o rodyklė bus matoma tik reikšmėms tarp -5 ir +5 mgdl... Būtent to čia ir reikia.
 
-The other dynData blocks are defined the same way to tune `"avgDelta10"`and `"avgDelta20"`
+Kiti dynData blokai nurodomi taip pat, kad būtų keičiami `"avgDelta10"` ir `"avgDelta20"`
 
-#### loop view
+#### loop rodinys
 
-in Steampunk watchface loop green and red arrows (for status) are disabled, this is also managed with a dedicated dynData block associated to loop view.
+Steampunk ciferblate ciklo žalios ir raudonos rodyklės (būsenai) yra išjungtos. Tai taip pat valdoma specialiu dynData bloku, susietu su loop rodiniu.
 
 ```text
     "loopArrows": {
@@ -615,15 +615,15 @@ in Steampunk watchface loop green and red arrows (for status) are disabled, this
         "image2": "redArrows"
     }
 ```
-Because this block is only called by loop View, and default data managed by this view is loop information, then `"valueKey":` key is optional.
+Kadangi šį bloką naudoja tik loop rodinys, o numatytieji šio rodinio duomenys yra ciklo informacija, raktas `"valueKey":` nėra privalomas.
 
-Default `minData` and `maxData` for loop are defined to 0min and 28min, so with two images, all data values below 14 min will be shown with background `image1` and all data values above 14 min will be shown with `image2`. 14 min is exactly the threshold to switch from green arrow to red arrow.
+Numatytieji ciklo `minData` ir `maxData` yra 0 min ir 28 min, todėl su dviem paveikslėliais visos reikšmės iki 14 min bus rodomos su fonu `image1`, o visos reikšmės virš 14 min – su `image2`. 14 min yra būtent ta riba, kai žalia rodyklė pasikeičia į raudoną.
 
-In this example, `greyArrows`, `greenArrows` and `redArrows` files are not included into zip file, so these arrows are just removed (invisible), but you can use this block "as is" if you want to tune status arrows with custom background images.
+Šiame pavyzdyje failai `greyArrows`, `greenArrows` ir `redArrows` į zip failą neįtraukti, todėl šios rodyklės tiesiog pašalinamos (nematomos). Tačiau šį bloką galite naudoti tokį, koks yra, jei norite pakeisti būsenos rodykles pasirinktiniais fono paveikslėliais.
 
-#### rig_battery and uploader_battery views
+#### rig_battery ir uploader_battery rodiniai
 
-To finish the overview of dynData feature, we will take a look on battery management. The idea here is to customize text color according to battery level (from 0 to 100%)
+dynData funkcijos apžvalgą baigsime pažiūrėję, kaip valdoma baterija. Idėja – keisti teksto spalvą pagal baterijos lygį (nuo 0 iki 100%)
 
 ```text
 "uploader_battery": {
@@ -659,11 +659,11 @@ To finish the overview of dynData feature, we will take a look on battery manage
     "topOffsetTwinHidden": 13
 },
 ```
-You can see here that these both views share the same `dynData` block named `batteryIcons`. It's possible because by default attached data is the one of the view (to without specifying a  `"valueKey":` key within  `batteryIcons` block, it will be applied with `uploader_battery` data or `rig_battery` data according to the view).
+Matote, kad abu šie rodiniai naudoja tą patį `dynData` bloką, pavadintą `batteryIcons`. Tai įmanoma, nes pagal numatymą susieti duomenys yra paties rodinio duomenys (taigi nenurodžius rakto `"valueKey":` bloke `batteryIcons`, jis bus pritaikytas `uploader_battery` arba `rig_battery` duomenims, priklausomai nuo rodinio).
 
-Note these two views also use TwinView feature explain [here](#cwf-reference-twinview-feature).
+Atkreipkite dėmesį, kad šie du rodiniai taip pat naudoja [čia](#cwf-reference-twinview-feature) paaiškintą TwinView funkciją.
 
-Now lets take a look on dynData block:
+Dabar pažiūrėkime į dynData bloką:
 
 ```text
 "batteryIcons": {
@@ -675,27 +675,27 @@ Now lets take a look on dynData block:
     "fontColor5": "#000000"        
 },
 ```
-Here we use exactly the same logic that for dynamic background image, but with dedicated keys (`"invalidFontColor"` and  `"fontColor1"` to `"fontColor5"` to specify 5 steps of 20% each one).
+Čia naudojame lygiai tą pačią logiką kaip dinaminiam fono paveikslėliui, tik su specialiais raktais (`"invalidFontColor"` ir nuo `"fontColor1"` iki `"fontColor5"`, kad nurodytume 5 žingsnius po 20%).
 
-- `"fontColor1"` (dark red) will be used for all values below 20%, and white will be used for all values above this threshold.
-- If you want to lower the threshold to "below 10%", you just have to add 5 additional keys from `"fontColor6"` to `"fontColor10"` , but you can also adjust each color if you want progressive variation from green to yellow, orange and red...
+- `"fontColor1"` (tamsiai raudona) bus naudojama visoms reikšmėms žemiau 20%, o balta – visoms reikšmėms virš šios ribos.
+- Jei norite sumažinti ribą iki „žemiau 10%“, tereikia pridėti 5 papildomus raktus nuo `"fontColor6"` iki `"fontColor10"` , bet taip pat galite pakeisti kiekvieną spalvą, jei norite palaipsnio perėjimo nuo žalios į geltoną, oranžinę ir raudoną...
 
 (cwf-reference-dynpref-feature)=
 
-### DynPref Feature
+### DynPref funkcija
 
-Before reading this chapter, you have to understand how [dynData](#cwf-reference-dyndata-feature) works, because DynPref is an advanced usage of DynData: You will now be able to adjust each DynData block according to preferences set by the user:
+Prieš skaitydami šį skyrių, turite suprasti, kaip veikia [dynData](#cwf-reference-dyndata-feature), nes DynPref yra išplėstinis DynData naudojimas: dabar galėsite kiekvieną DynData bloką pritaikyti pagal naudotojo pasirinktus nustatymus:
 
-To illustrate DynPref feature, we will use two example:
+DynPref funkcijai paaiškinti naudosime du pavyzdžius:
 
-- Steampunk watchface (simple use to include into the same watchface mgdl and mmol version, watchface will automatically switch according to unit selected into aaps).
-- AAPS V2 watchface will combine different preferences to be able to manage text color and background according to dark and match divider preferences.
+- Steampunk ciferblatas (paprastas naudojimas, kai į tą patį ciferblatą įtraukiama mgdl ir mmol versija; ciferblatas automatiškai persijungs pagal AAPS pasirinktus vienetus).
+- Ciferblatas AAPS V2 sujungs skirtingus nustatymus, kad galėtų valdyti teksto spalvą ir foną pagal nustatymus „Tamsus“ ir „Vienodos spalvos skirtukas“.
 
-#### Simple usage of dynPref within Steampunk watchface
+#### Paprastas dynPref naudojimas Steampunk ciferblate
 
-Within Steampunk, we have two sets of images according to units: `background` image that will have BG scale and will turn according to BG value. and `freeText1` that contains dynamic scale according to avgDelta value.To be able to have one watchface that will automatically show correct units, we should select image according to unit selected.
+Steampunk ciferblate turime du paveikslėlių rinkinius pagal vienetus: paveikslėlis `background`, kuriame yra KG skalė ir kuris sukasi pagal KG reikšmę. ir `freeText1`, kuriame yra dinaminė skalė pagal avgDelta reikšmę. Kad vienas ciferblatas automatiškai rodytų teisingus vienetus, paveikslėlį turime parinkti pagal pasirinktus vienetus.
 
-To do that we will replace `dynData` key by a `dynPref`key within view block:
+Tam rodinio bloke raktą `dynData` pakeisime raktu `dynPref`:
 
 ```text
  "background": {
@@ -708,9 +708,9 @@ To do that we will replace `dynData` key by a `dynPref`key within view block:
     "visibility": "visible"
 },
 ```
-Usage of `dynPref`keys will be very close to `dynData`keys explained in previous chapter
+Raktai `dynPref` naudojami labai panašiai kaip ankstesniame skyriuje paaiškinti raktai `dynData`
 
-Now we will take a look at the end of the json file, after `dynData` block:
+Dabar pažiūrėkime į json failo pabaigą, po bloko `dynData`:
 
 ```text
 "dynData": {
@@ -737,22 +737,22 @@ Now we will take a look at the end of the json file, after `dynData` block:
     ...
 }
 ```
-You can see that the dynpref key defined within `background` view block (`"dynPref": "rotateSgv"`) exists into the `dynPref` json block included at the end of json file:
+Matote, kad rodinio `background` bloke nurodytas dynPref raktas (`"dynPref": "rotateSgv"`) yra json bloke `dynPref`, esančiame json failo pabaigoje:
 
-This block should contains a `"prefKey"`key that will define which preference should be used. In this example the key `"key_units"` is linked to units selected within AAPS on phone, and value is `"true"`if selected unit is mgdl, `"false"`if selected unit is mmol.
+Šiame bloke turi būti raktas `"prefKey"`, kuris nurodo, kurį nustatymą naudoti. Šiame pavyzdyje raktas `"key_units"` susietas su vienetais, pasirinktais AAPS telefone, o reikšmė yra `"true"`, jei pasirinkti vienetai yra mgdl, ir `"false"`, jei pasirinkti vienetai yra mmol.
 
-Then you will find two json blocks that will use "dynData" format, and that will be used according to selected preference
+Tada rasite du json blokus, kurie naudoja „dynData“ formatą ir bus naudojami pagal pasirinktą nustatymą
 
-Note that the "HardCoded" file name for Background image is now replaced by a dynamic image that will be the same whatever the BG value (`Background_mgdl.png`file if key_units is "true", `Background_mmol.png` if key_units is false), and we also include an `"invalidImage"` key to always have a background image even if no data has been received from the phone.
+Atkreipkite dėmesį, kad iš anksto nustatytas fono paveikslėlio failo pavadinimas dabar pakeistas dinaminiu paveikslėliu, kuris bus tas pats, nepriklausomai nuo KG reikšmės (failas `Background_mgdl.png`, jei key_units yra „true“, `Background_mmol.png`, jei key_units yra false). Taip pat įtraukiame raktą `"invalidImage"`, kad fono paveikslėlis būtų visada, net jei iš telefono negauta jokių duomenų.
 
-#### Combine different preferences within dynPref with AAPS V2
+#### Skirtingų nustatymų sujungimas dynPref su AAPS V2
 
-Most of the time, when you set a preference, it's not to get "dynamic behavior", but only the results according to what you select, but within dynPref, it's considered as a dynamic feature...
+Dažniausiai nustatymą keičiate ne dėl „dinaminio elgesio“, o tik dėl rezultato pagal tai, ką pasirenkate, tačiau dynPref tai laikoma dinamine funkcija...
 
-- when in `dynData`you specify one full block of parameters (with images, fontColor, Color, ...), with `dynPref`, you will be able to combine each parameter according to one specific preference.
-- Here we will see how match divider preference will be associated to dark preference to show when it's enabled (true) white text on black background on dark watchface (dark parameter true) or black text on white background on light watchface (dark false)...
+- kai `dynData` nurodote vieną pilną parametrų bloką (su paveikslėliais, fontColor, Color, ...), su `dynPref` galėsite kiekvieną parametrą derinti pagal vieną konkretų nustatymą.
+- Čia pamatysime, kaip nustatymas „Vienodos spalvos skirtukas“ derinamas su nustatymu „Tamsus“, kad, kai jis įjungtas (true), tamsiame ciferblate (parametras „Tamsus“ true) būtų rodomas baltas tekstas ant juodo fono, o šviesiame ciferblate („Tamsus“ false) – juodas tekstas ant balto fono...
 
-First lets see the beginning of json file:
+Pirmiausia pažiūrėkime į json failo pradžią:
 
 ```text
 "dynPrefColor": "prefColorDark",
@@ -767,9 +767,9 @@ First lets see the beginning of json file:
     "dynPref": "dark"
 },
 ```
-`"dynPrefColor": "prefColorDark"` will specify the dynPref block of all default colors outside views. These colors will be tuned according to dark parameter within `"prefColorDark"`:
+`"dynPrefColor": "prefColorDark"` nurodo dynPref bloką visoms numatytosioms spalvoms už rodinių ribų. Šios spalvos bus keičiamos pagal parametrą „Tamsus“ bloke `"prefColorDark"`:
 
-And at the end, within the `dynPref` block, you will have a specific dynPref block for default colors:
+Ir pabaigoje bloke `dynPref` bus specialus dynPref blokas numatytosioms spalvoms:
 
 ```text
 "prefColorDark": {
@@ -796,9 +796,9 @@ And at the end, within the `dynPref` block, you will have a specific dynPref blo
     }
 }
 ```
-The difference between this dynPref block and the other standard dynPref blocks used for views is that here you don't have a dynData block for each value of `"key_dark"` parameter, but only the list of main colors (`highColor`, `midColor` , ...)
+Šis dynPref blokas skiriasi nuo kitų standartinių dynPref blokų, naudojamų rodiniams, tuo, kad čia nėra dynData bloko kiekvienai parametro `"key_dark"` reikšmei, o tik pagrindinių spalvų sąrašas (`highColor`, `midColor` , ...)
 
-Lets now take a look on items included into the "divider banner" (in example below `"basalRate"` view linked to `"matchDivider"` dynPref view):
+Dabar pažiūrėkime į elementus, esančius „skirtuko juostoje“ (žemiau esančiame pavyzdyje rodinys `"basalRate"`, susietas su dynPref rodiniu `"matchDivider"`):
 
 ```text
 "basalRate": {
@@ -812,7 +812,7 @@ Lets now take a look on items included into the "divider banner" (in example bel
     "dynPref": "matchDivider"
 },
 ```
-Then within dynPref block, you can see that Match divider parameter (`key_match_divider` key), include the 2 blocks "true" and "false", but these two blocks are only used to define that view will use either "dark" dynBlock (so exactly the same background and text color than the otherviews outside the banner), or "white" dynBLock that will set opposite colors for background and text...
+Tada dynPref bloke matote, kad parametras „Vienodos spalvos skirtukas“ (raktas `key_match_divider`) turi 2 blokus „true“ ir „false“, bet šie du blokai tik nurodo, kad rodinys naudos arba „dark“ dynBlock (taigi lygiai tokią pačią fono ir teksto spalvą kaip kiti rodiniai už juostos ribų), arba „white“ dynBLock, kuris nustatys priešingas fono ir teksto spalvas...
 
 ```text
 "matchDivider": {
@@ -836,13 +836,13 @@ Then within dynPref block, you can see that Match divider parameter (`key_match_
     }
 },
 ```
-Note that here you are within a "dynData" block, then to define a color or a fontColor, you will use a dynData (not specified here), and a single step (`"color1"` and `'fontColor1'` are used)
+Atkreipkite dėmesį, kad čia esate „dynData“ bloke, todėl spalvai arba fontColor nustatyti naudosite dynData (čia nenurodytas) ir vieną žingsnį (naudojami `"color1"` ir `'fontColor1'`)
 
-- for all parameter other than `image` default "invalid value (if not set specifically by `"invalidColor"` key or `"invalidFontColor"` keys) will be `"color1"` and `"fontColor1"`.
+- visiems parametrams, išskyrus `image`, numatytoji „netinkama reikšmė“ (jei ji specialiai nenustatyta raktu `"invalidColor"` arba raktais `"invalidFontColor"`) bus `"color1"` ir `"fontColor1"`.
 
 
 
-Then we will see a third example with iob views (`iob1` and `iob2`), where we will use smaller text for detailed iob and bigger text for total iob:
+Tada pamatysime trečią pavyzdį su AIO rodiniais (`iob1` ir `iob2`), kur detaliam AIO naudosime mažesnį tekstą, o bendram AIO – didesnį:
 
 ```text
 "iob1": {
@@ -869,7 +869,7 @@ Then we will see a third example with iob views (`iob1` and `iob2`), where we wi
     "dynPref": "prefIob2"
 },
 ```
-You will see within default view settings the text size (19 on `iob1` and 24 on `iob2`) and the two different `dynPref` block that should tune textsize (according to detailed iob parameter), and colors (according to dark parameter)
+Numatytuosiuose rodinio nustatymuose matysite teksto dydį (19 rodinyje `iob1` ir 24 rodinyje `iob2`) ir du skirtingus `dynPref` blokus, kurie keis textsize (pagal detalaus AIO parametrą) ir spalvas (pagal parametrą „Tamsus“)
 
 ```text
 "prefIob1": {
@@ -893,11 +893,11 @@ You will see within default view settings the text size (19 on `iob1` and 24 on 
     }
 },
 ```
-You can see here that according to detailed iob parameter (`"key_show_detailed_iob"` key), when it's "true" then textsize is defined to a fix value bigger than default (24 instead of 19): this is done using textsize "step" feature, within only one value so one step... (note that for all parameter others than images,if invalidTextSize is not set, then textsize1 will be used for invalid data)
+Čia matote, kad pagal detalaus AIO parametrą (raktas `"key_show_detailed_iob"`), kai jis yra „true“, textsize nustatomas į fiksuotą reikšmę, didesnę už numatytąją (24 vietoj 19): tai daroma naudojant textsize „žingsnių“ funkciją su viena reikšme, taigi vienu žingsniu... (atkreipkite dėmesį, kad visiems parametrams, išskyrus paveikslėlius, jei invalidTextSize nenustatytas, netinkamiems duomenims bus naudojamas textsize1)
 
-Then "dark" dynPref block will be used to set color and fontColor
+Tada „dark“ dynPref blokas bus naudojamas color ir fontColor nustatyti
 
-In this example the dynData block that will be used for iob1 view will be if detailed IOB is enabled and dark enabled:
+Šiame pavyzdyje rodiniui iob1, kai įjungtas detalus AIO ir įjungtas tamsus režimas, bus naudojamas toks dynData blokas:
 
 ```text
 {
@@ -907,9 +907,9 @@ In this example the dynData block that will be used for iob1 view will be if det
 },
 ```
 
-So the text will be in white on black background and the size 24 will replace default size of 19 set into the view
+Taigi tekstas bus baltas ant juodo fono, o dydis 24 pakeis rodinyje nustatytą numatytąjį dydį 19
 
-The dynData block that will be used for the same view iob1 if detailed IOB is disabled and dark disabled will be:
+Tam pačiam rodiniui iob1, kai detalus AIO išjungtas ir tamsus režimas išjungtas, bus naudojamas toks dynData blokas:
 
 ```text
 {
@@ -918,118 +918,118 @@ The dynData block that will be used for the same view iob1 if detailed IOB is di
 },
 ```
 
-Now the text will be in black on white background with a size of 19
+Dabar tekstas bus juodas ant balto fono, dydis 19
 
-#### Tips and tricks for dynPref
+#### DynPref patarimai
 
-- You can combine as many pref than you want, but be careful, the number of blocks to describe can increase very fast (it's exponential): if you chain 3 parameters and you want to define all situations, you will have 8 blocks to describe, if each parameter has only 2 values...
-- Be careful to not build "infinite loop" (for example if dynpref1 block should be completed by dynpref2 block that should be completed by dynpref1 block...). In this case the dynpref blocks will be considered as invalid...
-- Do not forget to include the numeric index after the key (when you use for example `"textsize"`key within a view, you will have to use `"textsize1"`within the dynPref  value block, because it's a "dynData" format, so linked to value with a single step in this case)
-- Only one key `"valueKey"` should be set for one view, so if the final `dynData` block is built from several `dynPref`blocks, do not include several `"valueKey"`  (and associated `"minData"`, `"maxData"`, ...)
+- Galite derinti tiek nustatymų, kiek norite, bet būkite atsargūs: aprašomų blokų skaičius gali labai greitai augti (eksponentiškai): jei sujungsite 3 parametrus ir norėsite aprašyti visas situacijas, turėsite aprašyti 8 blokus, jei kiekvienas parametras turi tik 2 reikšmes...
+- Saugokitės, kad nesukurtumėte „begalinio ciklo“ (pavyzdžiui, jei dynpref1 bloką turi papildyti dynpref2 blokas, kurį turi papildyti dynpref1 blokas...). Šiuo atveju dynpref blokai bus laikomi netinkamais...
+- Nepamirškite po rakto parašyti skaitinio indekso (pavyzdžiui, jei rodinyje naudojate raktą `"textsize"`, dynPref reikšmių bloke turėsite naudoti `"textsize1"`, nes tai yra „dynData“ formatas, šiuo atveju susietas su reikšme vienu žingsniu)
+- Vienam rodiniui turi būti nustatytas tik vienas raktas `"valueKey"`, todėl jei galutinis `dynData` blokas sudaromas iš kelių `dynPref` blokų, neįtraukite kelių `"valueKey"`  (ir susijusių `"minData"`, `"maxData"`, ...)
 
 (cwf-reference-new-v2-features)=
 
-### New Features in CustomWatchface V2 (AAPS V3.3.0 or above)
+### Naujos funkcijos pasirinktiniame ciferblate V2 (AAPS V3.3.0 ar naujesnė)
 
-Note that the watchfaces using these new features or views will require the latest wear apk built from 3.3.0 version of AAPS.
+Atkreipkite dėmesį, kad ciferblatams, naudojantiems šias naujas funkcijas ar rodinius, reikės naujausio wear apk, sukurto iš AAPS 3.3.0 versijos.
 
-If you use a zip "v2" with a watch that includes CustomWatchface V1, you will have missing information or wrong content into the watchface.
+Jei „v2“ zip failą naudosite su laikrodžiu, kuriame yra CustomWatchface V1, ciferblate trūks informacijos arba turinys bus neteisingas.
 
-CustomWatchface V2 includes these new features:
+CustomWatchface V2 turi šias naujas funkcijas:
 
-- [New Status view](#cwf-reference-new-status-feature)
-- [New TempTarget view](#cwf-reference-new-temp-target-feature)
-- [New Reservoir Level view](#cwf-reference-new-reservoir-level-feature)
-- [New Formatting Feature](#cwf-reference-new-formating-feature)
-- [Show External data for Follower](#cwf-reference-show-external-datas) (up to 3 set of data within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
+- [Naujas būsenos (Status) rodinys](#cwf-reference-new-status-feature)
+- [Naujas laikino tikslo (TempTarget) rodinys](#cwf-reference-new-temp-target-feature)
+- [Naujas rezervuaro lygio (Reservoir Level) rodinys](#cwf-reference-new-reservoir-level-feature)
+- [Nauja formatavimo funkcija](#cwf-reference-new-formating-feature)
+- [Išorinių duomenų rodymas sekėjui](#cwf-reference-show-external-datas) (iki 3 duomenų rinkinių viename ciferblate: AAPS, AAPSCLIENT ir AAPSCLIENT2)
 
 (cwf-reference-new-status-feature)=
 
-#### New Status view
+#### Naujas būsenos (Status) rodinys
 
-The key of this view is `"status"` and associated block is automatically included into the template exported from wear apk "Custom Watchface V2" (built from AAPS 3.3.0 version or above)
+Šio rodinio raktas yra `"status"`, o susijęs blokas automatiškai įtraukiamas į šabloną, eksportuotą iš wear apk „Custom Watchface V2“ (sukurto iš AAPS 3.3.0 ar naujesnės versijos)
 
-This view was included into previous AAPS (NoChart), AAPS (BigChart) and AAPS (Large) previous existing watchfaces available and include a string value (built within wear apk).
+Šis rodinys buvo ankstesniuose ciferblatuose AAPS (NoChart), AAPS (BigChart) ir AAPS (Large) ir jame buvo eilutės reikšmė (sukurta wear apk).
 
-These previous watchfaces have been removed and replaced by 3 new custom watchfaces in AAPS 3.3.0.
+Šie ankstesni ciferblatai pašalinti ir AAPS 3.3.0 pakeisti 3 naujais pasirinktiniais ciferblatais.
 
-- the minimum information is IOB value (always visible whatever IOB parameter into watch)
-- then you have detailed IOB values (BolusIOB|BasalIOB) if enabled within preferences
-- and BGI value (again if enabled within preferences)
+- mažiausia informacija yra AIO reikšmė (visada matoma, nepriklausomai nuo AIO parametro laikrodyje)
+- tada detalios AIO reikšmės (BolusIOB|BasalIOB), jei įjungtos nustatymuose
+- ir KGĮ reikšmė (taip pat, jei įjungta nustatymuose)
 
-This `"status"` view is associated with `"key_show_loop_status"` key (within dynPref) to manage visibility.
+Šis rodinys `"status"` susietas su raktu `"key_show_loop_status"` (dynPref bloke), kuris valdo matomumą.
 
-This view could be managed in V1 using `"iob1"`, `"iob2"` and `"bgi"`  existing views, but with the need of complex dynPref settings to manage spacing within each information according to different settings selected within Watch.
+V1 versijoje šį rodinį buvo galima valdyti naudojant esamus rodinius `"iob1"`, `"iob2"` ir `"bgi"`, bet reikėjo sudėtingų dynPref nustatymų, kad būtų valdomi tarpai tarp kiekvienos informacijos pagal skirtingus laikrodyje pasirinktus nustatymus.
 
 (cwf-reference-new-temp-target-feature)=
 
-#### New TempTarget view
+#### Naujas laikino tikslo (TempTarget) rodinys
 
-The key of this view is `"tempTarget"` and associated block is automatically included into the template exported from wear apk "Custom Watchface V2" (built from AAPS 3.3.0 version or above).
+Šio rodinio raktas yra `"tempTarget"`, o susijęs blokas automatiškai įtraukiamas į šabloną, eksportuotą iš wear apk „Custom Watchface V2“ (sukurto iš AAPS 3.3.0 ar naujesnės versijos).
 
-It shows within watchface:
+Ciferblate jis rodo:
 
-- Profile target (single value or min-max target values) (default color in white)
-- Loop adjusted target (default color in Green)
-- Temp Target defined by user (default color in Yellow)
+- Profilio tikslą (viena reikšmė arba min–max tikslo reikšmės) (numatytoji spalva balta)
+- Ciklo pakoreguotą tikslą (numatytoji spalva žalia)
+- Naudotojo nustatytą laikiną tikslą (numatytoji spalva geltona)
 
-This `"tempTarget"` view is associated with `"key_show_temp_target"` key (within dynPref) to manage visibility.
+Šis rodinys `"tempTarget"` susietas su raktu `"key_show_temp_target"` (dynPref bloke), kuris valdo matomumą.
 
-The DynData Key (associated with color information) is `"tempTarget"` (default DynData key associated with TempTarget View)
+DynData raktas (susijęs su spalvos informacija) yra `"tempTarget"` (numatytasis DynData raktas, susietas su TempTarget rodiniu)
 
-DynData value equals:
+DynData reikšmė lygi:
 
-- 0 (Profile Target),
-- 1 (Loop Target) or
-- 2 (User Temp Target)
+- 0 (profilio tikslas),
+- 1 (ciklo tikslas) arba
+- 2 (naudotojo laikinas tikslas)
 
-Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
+Atkreipkite dėmesį, kad šis rodinys taip pat galimas išoriniams duomenims (žr. [žemiau](#cwf-reference-show-external-datas)) su raktais `"tempTarget_Ext1"` ir  `"tempTarget_Ext2"` (rodinys ir DynData)
 
 (cwf-reference-new-reservoir-level-feature)=
 
-#### New Reservoir Level view
+#### Naujas rezervuaro lygio (Reservoir Level) rodinys
 
-The key of this view is `"reservoir"` and associated block is automatically included into the template exported from wear apk "Custom Watchface V2" (built from AAPS 3.3.0 version or above).
+Šio rodinio raktas yra `"reservoir"`, o susijęs blokas automatiškai įtraukiamas į šabloną, eksportuotą iš wear apk „Custom Watchface V2“ (sukurto iš AAPS 3.3.0 ar naujesnės versijos).
 
-This view show Reservoir level (in `U`) with a White default color, Yellow if Warning Level, Red if Urgent Level
+Šis rodinys rodo rezervuaro lygį (`U`): numatytoji spalva balta, geltona – įspėjimo lygis, raudona – skubus lygis
 
-This `"reservoir"` view is associated with `"key_show_reservoir_level"` key (within dynPref) to manage visibility.
+Šis rodinys `"reservoir"` susietas su raktu `"key_show_reservoir_level"` (dynPref bloke), kuris valdo matomumą.
 
-The DynData Keys associated with Reservoir Level are:
+Su rezervuaro lygiu susieti DynData raktai:
 
--  `"reservoir"`  (Default DynData Key associated with Reservoir Level view) associated with level in insulin `U`
-  - Min Value is 0.0 U
-  - Max Value is 500.0 U
+-  `"reservoir"`  (numatytasis DynData raktas, susietas su rezervuaro lygio rodiniu), susietas su insulino kiekiu `U`
+  - Min reikšmė yra 0,0 V
+  - Max reikšmė yra 500,0 V
 -  `"reservoirLevel"`
-  - 0 (Standard Level, White Color by default)
-  - 1 (Warning Level, Yellow color by default)
-  - 2 (Urgent Level, Red color by default)
+  - 0 (standartinis lygis, numatytoji spalva balta)
+  - 1 (įspėjimo lygis, numatytoji spalva geltona)
+  - 2 (skubus lygis, numatytoji spalva raudona)
 
-Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
+Atkreipkite dėmesį, kad šis rodinys taip pat galimas išoriniams duomenims (žr. [žemiau](#cwf-reference-show-external-datas)) su raktais `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` ir  `"reservoirLevel_Ext2"` (rodinys ir DynData).
 
 (cwf-reference-new-formating-feature)=
 
-#### New Formatting feature for DynData or DynPref
+#### Nauja formatavimo funkcija DynData arba DynPref
 
-You can now manage a custom formatting of raw values received by the watch and included in [dyndata key value table](#cwf-reference-dyndata-key-values) below.
+Dabar galite pasirinktinai formatuoti laikrodžio gautas neapdorotas reikšmes, išvardytas [dyndata rakto reikšmių lentelėje](#cwf-reference-dyndata-key-values) žemiau.
 
-To illustrate how this feature works, lets take as an example AAPS (Large) watchface and look at the results according to "time ago value" and the new "status" view visible or not:
+Kad parodytume, kaip veikia ši funkcija, paimkime pavyzdžiu ciferblatą AAPS (Large) ir pažiūrėkime rezultatus pagal „prieš kiek laiko“ reikšmę ir tai, ar matomas naujasis rodinys „status“:
 
 ![AAPS (Large)](../images/CustomWatchface_6.jpg)
 
-- In first screenshot in the left, status view is visible (with IOB, detailed IOB and BGI), so only 1/3 of the line is available to show timestamp (very compact information with `1'`, and for uploader battery information `U: 55%`)
-- In second screenshot, now `status`view has been hidden in watch parameter, so you have a lot of place available to show full label for timestamp information and uploader battery (`1 minute ago` and `Uploader : 55%`)
-- In the third screenshot in the right, you have exactly the same setting within watch, but now timestamp has changed and is above "1". now the custom watchface is able to show the label updated with plural management (`2 minutes ago`)
+- Pirmoje ekrano kopijoje kairėje rodinys status yra matomas (su AIO, detaliu AIO ir KGĮ), todėl laikui (timestamp) rodyti lieka tik 1/3 eilutės (labai glausta informacija su `1'`, o telefono baterijos informacija – `U: 55%`)
+- Antroje ekrano kopijoje rodinys `status` paslėptas laikrodžio parametruose, todėl lieka daug vietos rodyti pilną laiko ir telefono baterijos užrašą (`1 minute ago` ir `Uploader : 55%`)
+- Trečioje ekrano kopijoje dešinėje laikrodžio nustatymai lygiai tokie patys, bet dabar laikas (timestamp) pasikeitė ir yra didesnis už „1“. dabar pasirinktinis ciferblatas gali rodyti atnaujintą užrašą su daugiskaitos valdymu (`2 minutes ago`)
 
-I will not explain below how the whole views are managed within zip file (positioning of each view according to different settings), but I will only focus on the way we manage formatting feature and associated dynamic value within AAPS (Large) watchface.
+Žemiau neaiškinsiu, kaip zip faile valdomi visi rodiniai (kiekvieno rodinio vieta pagal skirtingus nustatymus), o kalbėsiu tik apie tai, kaip ciferblate AAPS (Large) valdoma formatavimo funkcija ir susijusi dinaminė reikšmė.
 
 
 
-**This feature requires "dynamic block"** (it can be either a `dynData` block or a `dynPref` block)
+**Šiai funkcijai reikia „dinaminio bloko“** (tai gali būti `dynData` blokas arba `dynPref` blokas)
 
-- For AAPS (Large) Watchface, we wanted to have the format tuned according to parameters (short or long format according to `status` view visibility) so we used a `dynPref` block for that.
+- Ciferblate AAPS (Large) norėjome, kad formatas keistųsi pagal parametrus (trumpas arba ilgas formatas pagal rodinio `status` matomumą), todėl tam naudojome `dynPref` bloką.
 
-First lets start by the views:
+Pirmiausia pradėkime nuo rodinių:
 
 ```text
 "uploader_battery": {
@@ -1064,16 +1064,16 @@ First lets start by the views:
     "fontColor": "#FFFFFF"
 },
 ```
-here the most important key is `"dynValue"`: Having this key information will enable dynamic management of raw value. the boolean behind (true or false) will define if value should be "converted or not"
+čia svarbiausias raktas yra `"dynValue"`: šis raktas įjungia neapdorotos reikšmės dinaminį valdymą. po jo esanti loginė reikšmė (true arba false) nurodo, ar reikšmė turi būti „konvertuojama, ar ne“
 
-- `false`: raw value will be use as it is without any limitation or conversion
-- `true`: raw value will be converted (using `minData` and `maxData` keys in dynData block and using `minValue` and `maxValue` defined in dynData)
+- `false`: neapdorota reikšmė bus naudojama tokia, kokia yra, be jokių apribojimų ar konvertavimo
+- `true`: neapdorota reikšmė bus konvertuojama (naudojant dynData bloko raktus `minData` ir `maxData` ir dynData nurodytus `minValue` ir `maxValue`)
 
-For this watchface, raw values are used without any conversion, so for both views, `"dynValue"` key as been set to `false`.
+Šiame ciferblate neapdorotos reikšmės naudojamos be jokio konvertavimo, todėl abiem rodiniams raktas `"dynValue"` nustatytas į `false`.
 
 
 
-Now we will take a look on `"uploader"` block defined within `"dynPref"`:
+Dabar pažiūrėkime į bloką `"uploader"`, nurodytą bloke `"dynPref"`:
 
 ```text
 "uploader": {
@@ -1090,30 +1090,30 @@ Now we will take a look on `"uploader"` block defined within `"dynPref"`:
     }
 },
 ```
-By default  `"uploader_battery"` view is linked to `"uploader_battery"` , so no need to add an explicit line with
+Pagal numatymą rodinys `"uploader_battery"` susietas su `"uploader_battery"` , todėl nereikia pridėti atskiros eilutės su
 
-`"valueKey": "uploader_battery"` (min value 0, max value 100, and raw value is percentage of phone battery)
+`"valueKey": "uploader_battery"` (min reikšmė 0, max reikšmė 100, o neapdorota reikšmė yra telefono baterijos procentai)
 
-The formatting string is included into `"textvalue1"` key (`"textvalue1"`, `"textvalue2"`, etc keys are linked to `"textvalue"` key that could be included into `view` block)
+Formatavimo eilutė įrašyta rakte `"textvalue1"` (raktai `"textvalue1"`, `"textvalue2"` ir t. t. susieti su raktu `"textvalue"`, kuris gali būti bloke `view`)
 
-- `"textvalue"`  key can be used with formatting information within the view block (in this situation format will be static, whatever the value or the settings)
-- If you want to modify formatting information according to settings or values, then all dynData feature can be applied, and the dedicated keys are `"invalidTextValue"` key (without "formatting information" because value is not valid) and `"textvalue1"`, `"textvalue2"`... (and as many values that you want to manage steps between minData and maxData)
-- the additional `"dynPref"` keys are used to define other blocks for positioning variation and color variation depending on visible views, dark and matchDivider settings
+- Raktą `"textvalue"`  galima naudoti su formatavimo informacija rodinio bloke (tokiu atveju formatas bus statinis, nepriklausomai nuo reikšmės ar nustatymų)
+- Jei norite keisti formatavimo informaciją pagal nustatymus ar reikšmes, galima taikyti visą dynData funkciją. Specialūs raktai yra `"invalidTextValue"` (be „formatavimo informacijos“, nes reikšmė netinkama) ir `"textvalue1"`, `"textvalue2"`... (ir tiek reikšmių, kiek žingsnių tarp minData ir maxData norite valdyti)
+- papildomi `"dynPref"` raktai naudojami kitiems blokams nurodyti: vietos ir spalvos kitimui pagal matomus rodinius ir nustatymus dark bei matchDivider
 
-Concerning now the formatting string, syntax is the following: `%[flags][width][.precision]f`
+Formatavimo eilutės sintaksė yra tokia: `%[flags][width][.precision]f`
 
-- `%` is the beginning of a formatting, `f` is the end and should be used for Double value conversion.
-  - Note that if you want to use `%` character within your string, you will have to use `%%` to specify that it's not a formatting string but percentage character.
-- `[flag]` is optional, mainly can be `+` if you always want a sign before the number, or `(` if you want negative values in parentheses
-- `[width]`  is optional, define the minimum number of characters to be written to the output
-- `[.precision]` used to define number of digits after radix point.
-  - Note that values are Double so it's wise to always set a precision (to avoid a lot of characters after radix point due to kotlin precision)
+- `%` yra formatavimo pradžia, `f` – pabaiga; ji turi būti naudojama Double reikšmei konvertuoti.
+  - Atkreipkite dėmesį, kad jei savo eilutėje norite naudoti simbolį `%`, turėsite rašyti `%%`, kad būtų aišku, jog tai ne formatavimo eilutė, o procento simbolis.
+- `[flag]` nebūtinas, dažniausiai tai gali būti `+`, jei visada norite ženklo prieš skaičių, arba `(`, jei norite neigiamas reikšmes rodyti skliausteliuose
+- `[width]`  nebūtinas, nurodo mažiausią išvedamų simbolių skaičių
+- `[.precision]` nurodo skaitmenų skaičių po kablelio.
+  - Atkreipkite dėmesį, kad reikšmės yra Double tipo, todėl protinga visada nustatyti tikslumą (kad dėl kotlin tikslumo po kablelio nebūtų daug simbolių)
 
-So in the above example `%.0f` will show Double value as an integer
+Taigi aukščiau esančiame pavyzdyje `%.0f` rodys Double reikšmę kaip sveikąjį skaičių
 
 
 
-Let's now take a look on timestamp dynPref block to manage plural:
+Dabar pažiūrėkime į timestamp dynPref bloką, valdantį daugiskaitą:
 
 ```text
 "timestamp": {
@@ -1133,365 +1133,365 @@ Let's now take a look on timestamp dynPref block to manage plural:
     }
 },
 ```
-- here if `status` view is visible (so  `"key_show_loop_status"` key is `true`), a single format is used (`"textvalue1"`), with `'`  as "unit"
-- if  `status` view is hidden, you have 2 different format used one for 0 or 1 with singular, and another format for values above 2 with plural
-  - `"minData"` and `"maxData"` are used to define the range and be sure the switch from singular to plural will be done between 1 and 2 values
-  - Note that `"maxData"` (integer) has been set to 3 and not 2, just because Double data managed into the system is not integer, so a value a bit above or a bit lower 1 may have singular or plural format even if after rounding to integer, the value equals 1.
+- čia, jei rodinys `status` matomas (taigi raktas `"key_show_loop_status"` yra `true`), naudojamas vienas formatas (`"textvalue1"`), su `'` kaip „vienetu“
+- jei rodinys `status` paslėptas, naudojami 2 skirtingi formatai: vienas 0 arba 1 su vienaskaita, kitas reikšmėms nuo 2 su daugiskaita
+  - `"minData"` ir `"maxData"` naudojami diapazonui nustatyti ir užtikrinti, kad perėjimas iš vienaskaitos į daugiskaitą įvyktų tarp reikšmių 1 ir 2
+  - Atkreipkite dėmesį, kad `"maxData"` (sveikasis skaičius) nustatytas į 3, o ne 2, nes sistemoje naudojami Double duomenys nėra sveikieji skaičiai, todėl reikšmė, šiek tiek didesnė ar mažesnė už 1, gali turėti vienaskaitos arba daugiskaitos formatą, net jei suapvalinus iki sveikojo skaičiaus reikšmė lygi 1.
 
-- For `timestamp` view, it's important to set `"dynValue"` key to `false`,  otherwise because of formatting (singular/plural), all values above 3 will be limited to `3 minutes ago` with conversion using `maxData`...
+- Rodiniui `timestamp` svarbu raktą `"dynValue"` nustatyti į `false`,  nes kitaip dėl formatavimo (vienaskaita / daugiskaita) visos reikšmės virš 3 bus apribotos iki `3 minutes ago` dėl konvertavimo naudojant `maxData`...
 
 
 
-**Additional comment concerning formatting feature**
+**Papildomas komentaras apie formatavimo funkciją**
 
-- keep in mind that the only dynamic values available are the one listed [here](#cwf-reference-dyndata-key-values)
-- All `BG` values are in mgdl unit, if you want to use formatting feature to show values in mmol units, you will have to manage mgdl to mmol conversion. Within a `dynData` or `dynPref` block, the key that should be used to name the block that will include `"minValue"`and `"maxValue"` for value conversion should be named `"dynValue": { ...  }`. (see [Dyn Data Keys](#cwf-reference-dyndata-keys))
-- If within a view you want to use a static formatting string, with `"textvalue"` key to define format, and `"dynValue"` key to define usage of dynamic value, then you will have to also use a `"dynData"` or a `"dynPref"`block (even if empty), to be able to use formatting feature.
-- `"textvalue1"`, `"textvalue2"` to textvalue*n* can be used without formatting feature to replace double value step by a dedicated text label (for example with `"day_name"` key value and  seven steps to define custom name of the dayx of the week, ... )
+- atminkite, kad galimos tik tos dinaminės reikšmės, kurios išvardytos [čia](#cwf-reference-dyndata-key-values)
+- Visos `BG` reikšmės yra mgdl vienetais. Jei norite formatavimo funkcija rodyti reikšmes mmol vienetais, turėsite patys konvertuoti mgdl į mmol. `dynData` arba `dynPref` bloke raktas, kuriuo pavadinamas blokas su `"minValue"` ir `"maxValue"` reikšmei konvertuoti, turi vadintis `"dynValue": { ...  }`. (žr. [DynData raktai](#cwf-reference-dyndata-keys))
+- Jei rodinyje norite naudoti statinę formatavimo eilutę, kai formatą nurodo raktas `"textvalue"`, o dinaminės reikšmės naudojimą – raktas `"dynValue"`, tada, kad galėtumėte naudoti formatavimo funkciją, taip pat turėsite naudoti bloką `"dynData"` arba `"dynPref"` (net jei tuščią).
+- `"textvalue1"`, `"textvalue2"` iki textvalue*n* galima naudoti ir be formatavimo funkcijos, kad double reikšmės žingsnis būtų pakeistas specialiu teksto užrašu (pavyzdžiui, su rakto reikšme `"day_name"` ir septyniais žingsniais savaitės dienų pavadinimams nurodyti, ... )
 
-- For full documentation you can see [Class Formatter](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)
+- Visą dokumentaciją rasite čia: [Class Formatter](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)
 
 (cwf-reference-show-external-datas)=
 
-#### Show External data for Follower
+#### Išorinių duomenų rodymas sekėjui
 
-Custom Watchface is now able to display on the same watchface up to 3 set of data: AAPS, AAPSCLIENT and AAPSCLIENT2
+Pasirinktinis ciferblatas dabar gali viename ciferblate rodyti iki 3 duomenų rinkinių: AAPS, AAPSCLIENT ir AAPSCLIENT2
 
-To use this feature, you need to:
+Norėdami naudoti šią funkciją, turite:
 
-- have at least 2 of the 3 following apps installed in phone (AAPS, AAPSCLIENT, AAPSCLIENT2)
-- enable Broadcast data in AAPSCLIENT and/or AAPSCLIENT2 to broadcast data to the main app used to sync with CustomWatchface (AAPS or AAPSCLIENT)
-- Use a CustomWatchface that implement Views with Key including `_Ext1` or `_Ext2` (see [Key and KeyValue reference](#cwf-reference-key-and-keyvalue-reference) below)
+- telefone turi būti įdiegtos bent 2 iš šių 3 programėlių (AAPS, AAPSCLIENT, AAPSCLIENT2)
+- AAPSCLIENT ir (arba) AAPSCLIENT2 įjungti duomenų siuntimą (Broadcast data), kad duomenys būtų siunčiami į pagrindinę programėlę, kuri sinchronizuojama su CustomWatchface (AAPS arba AAPSCLIENT)
+- Naudokite pasirinktinį ciferblatą, kuriame yra rodiniai su raktais, turinčiais `_Ext1` arba `_Ext2` (žr. [Raktų ir rakto reikšmių žinynas](#cwf-reference-key-and-keyvalue-reference) žemiau)
 
-Note that if main app in phone is AAPSCLIENT and secondary app which broadcast data is AAPSCLIENT2, you will have to enable `Switch external data in watchface` parameter within Custom Watchface dedicated parameter if you use a watchface which use standard views and Ext1 additional views (Ext1 is linked to AAPSCLIENT and Ext2 is linked to AAPSCLIENT2)
+Atkreipkite dėmesį, kad jei pagrindinė programėlė telefone yra AAPSCLIENT, o antroji, siunčianti duomenis, yra AAPSCLIENT2, pasirinktinio ciferblato parametruose turėsite įjungti parametrą `Switch external data in watchface` (sukeisti išorinius duomenis ciferblate), jei naudojate ciferblatą su standartiniais rodiniais ir papildomais Ext1 rodiniais (Ext1 susietas su AAPSCLIENT, o Ext2 – su AAPSCLIENT2)
 
-Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"patient_name_Ext2"` *) have been added to be able to automatically include patient name (set within AAPS preferences) within watchface (see example below)
+Be to, pridėti trys nauji rodiniai (`"patient_name"` , `"patient_name_Ext1"`  ir `"patient_name_Ext2"` *), kad ciferblate būtų galima automatiškai rodyti paciento vardą (nustatytą AAPS nustatymuose) (žr. pavyzdį žemiau)
 
 ![CustomWatchface_7](../images/CustomWatchface_7.png)
 
 (cwf-reference-key-and-keyvalue-reference)=
 
-## Key and KeyValue reference
+## Raktų ir rakto reikšmių žinynas
 
 (cwf-reference-list-of-metadata-keys)=
 
-### List of Metadata keys
+### Metaduomenų raktų sąrašas
 
 (cwf-reference-list-of-standard-metadata-keys)=
 
-#### List of Standard information metadata keys
+#### Standartinės informacijos metaduomenų raktų sąrašas
 
-| Key                | Comment                                                                                                        |
-| ------------------ | -------------------------------------------------------------------------------------------------------------- |
-| `"name"`           | Name of custom watchface                                                                                       |
-| `"author"`         | Name or pseudo of the author(s)                                                                                |
-| `"created_at"`     | Creation (or update) date, be careful `/` is a special character, so if you use it for the date put `\`before |
-| `"cwf_version"`    | Watchface plugin compatible with the design of your watchface                                                  |
-| `"author_version"` | The author can specify here the version of his watchface                                                       |
-| `"comment"`        | Free text that can be used to give some information or limitation of current watchface                         |
+| Raktas             | Comment                                                                                                                                  |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `"name"`           | Pasirinktinio ciferblato pavadinimas                                                                                                     |
+| `"author"`         | Autoriaus (-ių) vardas arba slapyvardis                                                                                                  |
+| `"created_at"`     | Sukūrimo (arba atnaujinimo) data. Būkite atsargūs: `/` yra specialusis simbolis, todėl jei jį naudojate datoje, prieš jį parašykite `\` |
+| `"cwf_version"`    | Ciferblato įskiepis, suderinamas su jūsų ciferblato dizainu                                                                              |
+| `"author_version"` | Čia autorius gali nurodyti savo ciferblato versiją                                                                                       |
+| `"comment"`        | Laisvas tekstas, kuriame galima pateikti informaciją arba šio ciferblato apribojimus                                                     |
 
 (cwf-reference-preference-keys)=
 
-#### Preference keys
+#### Nustatymų raktai
 
-| Key                           | Default value and Comment                                                                                                                                                                                                                                    |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `"key_show_detailed_iob"`     | true will lock detailed IOB data on view `iob2`, then `iob1` (if visible and not replaced by an icon) will show iob total.<br />false will lock total iob on `iob2`view. can be used if the width of `iob2`is too small to show correctly detailed iob |
-| `"key_show_detailed_delta"`   | false (only if design is not compatible with the width of detailed delta for `delta`and `avg_delta` views)                                                                                                                                                   |
-| `"key_show_bgi"`              | true if your design requires `bgi` information                                                                                                                                                                                                               |
-| `"key_show_iob"`              | true if your design requires `iob1` or `iob2`views                                                                                                                                                                                                           |
-| `"key_show_cob"`              | true if your design requires `cob1` or `cob2`views                                                                                                                                                                                                           |
-| `"key_show_delta"`            | true if your design requires `delta` information                                                                                                                                                                                                             |
-| `"key_show_avg_delta"`        | true if your design requires `avg_delta` information                                                                                                                                                                                                         |
-| `"key_show_temp_target"`      | true if your design requires `tempTarget` information                                                                                                                                                                                                        |
-| `"key_show_reservoir_level"`  | true if your design requires `reservoir` information                                                                                                                                                                                                         |
-| `"key_show_uploader_battery"` | true if your design requires `uploader_battery` (phone battery) information                                                                                                                                                                                  |
-| `"key_show_rig_battery"`      | true if your design requires `rig_battery` information                                                                                                                                                                                                       |
-| `"key_show_temp_basal"`       | true if your design requires `basalRate` information                                                                                                                                                                                                         |
-| `"key_show_direction"`        | true if your design requires `direction` information (BG variation arrows)                                                                                                                                                                                   |
-| `"key_show_ago"`              | true if your design requires `timestamp` information (minutes ago for last received BG)                                                                                                                                                                      |
-| `"key_show_bg"`               | true if your design requires `sgv` information (BG value)                                                                                                                                                                                                    |
-| `"key_show_loop_status"`      | true if your design requires `loop` information (loop status and ago)                                                                                                                                                                                        |
-| `"key_show_week_number"`      | true if your design requires `week_number` information                                                                                                                                                                                                       |
-| `"key_show_date"`             | true if your design requires `Date`, `Month` or `Day of the week` information                                                                                                                                                                                |
+| Raktas                        | Numatytoji reikšmė ir komentaras                                                                                                                                                                                                                                |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"key_show_detailed_iob"`     | true užrakins detalius AIO duomenis rodinyje `iob2`, tada `iob1` (jei matomas ir nepakeistas ikona) rodys bendrą AIO.<br />false užrakins bendrą AIO rodinyje `iob2`. galima naudoti, jei `iob2` plotis per mažas, kad detalus AIO būtų rodomas teisingai |
+| `"key_show_detailed_delta"`   | false (tik jei dizainas nesuderinamas su detalaus pokyčio pločiu rodiniuose `delta` ir `avg_delta`)                                                                                                                                                             |
+| `"key_show_bgi"`              | true, jei jūsų dizainui reikia informacijos `bgi`                                                                                                                                                                                                               |
+| `"key_show_iob"`              | true, jei jūsų dizainui reikia rodinių `iob1` arba `iob2`                                                                                                                                                                                                       |
+| `"key_show_cob"`              | true, jei jūsų dizainui reikia rodinių `cob1` arba `cob2`                                                                                                                                                                                                       |
+| `"key_show_delta"`            | true, jei jūsų dizainui reikia informacijos `delta`                                                                                                                                                                                                             |
+| `"key_show_avg_delta"`        | true, jei jūsų dizainui reikia informacijos `avg_delta`                                                                                                                                                                                                         |
+| `"key_show_temp_target"`      | true, jei jūsų dizainui reikia informacijos `tempTarget`                                                                                                                                                                                                        |
+| `"key_show_reservoir_level"`  | true, jei jūsų dizainui reikia informacijos `reservoir`                                                                                                                                                                                                         |
+| `"key_show_uploader_battery"` | true, jei jūsų dizainui reikia informacijos `uploader_battery` (telefono baterija)                                                                                                                                                                              |
+| `"key_show_rig_battery"`      | true, jei jūsų dizainui reikia informacijos `rig_battery`                                                                                                                                                                                                       |
+| `"key_show_temp_basal"`       | true, jei jūsų dizainui reikia informacijos `basalRate`                                                                                                                                                                                                         |
+| `"key_show_direction"`        | true, jei jūsų dizainui reikia informacijos `direction` (KG kitimo rodyklės)                                                                                                                                                                                    |
+| `"key_show_ago"`              | true, jei jūsų dizainui reikia informacijos `timestamp` (prieš kiek minučių gauta paskutinė KG)                                                                                                                                                                 |
+| `"key_show_bg"`               | true, jei jūsų dizainui reikia informacijos `sgv` (KG reikšmė)                                                                                                                                                                                                  |
+| `"key_show_loop_status"`      | true, jei jūsų dizainui reikia informacijos `loop` (ciklo būsena ir prieš kiek laiko)                                                                                                                                                                           |
+| `"key_show_week_number"`      | true, jei jūsų dizainui reikia informacijos `week_number`                                                                                                                                                                                                       |
+| `"key_show_date"`             | true, jei jūsų dizainui reikia informacijos `Date`, `Month` arba `Day of the week`                                                                                                                                                                              |
 
-#### Internal keys
+#### Vidiniai raktai
 
-| Key                   | Comment                                                                                                                                                                                       |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"filename"`          | This key will be created (or updated) automatically when the watchface is loaded and will contains local zip filename within exports folder                                                   |
-| `"cwf_authorization"` | this key will be created (when the watchface is loaded) and updated each time authorization preference is changed in Wear settings, and it will be used to synchronize authorization to watch |
+| Raktas                | Comment                                                                                                                                                                                         |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"filename"`          | Šis raktas bus automatiškai sukurtas (arba atnaujintas), kai ciferblatas bus įkeltas. Jame bus vietinio zip failo pavadinimas exports aplanke                                                   |
+| `"cwf_authorization"` | šis raktas bus sukurtas (kai ciferblatas įkeliamas) ir atnaujinamas kiekvieną kartą, kai Wear nustatymuose pakeičiamas leidimo nustatymas. Jis naudojamas leidimui sinchronizuoti su laikrodžiu |
 
 (cwf-reference-list-of-general-parameters)=
 
-### List of General parameters
+### Bendrųjų parametrų sąrašas
 
-| Key                      | Comment                                                                                                                                                                                                                                                   |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"highColor"`            | `"#FFFF00"`(default Yellow): Color of BG value, trend arrows and bg value in graph if bg is above upper limit (Hyper)                                                                                                                                     |
-| `"midColor"`             | `"#00FF00"`(default Green): Color of BG value, trend arrows and bg value in graph if bg is within range                                                                                                                                                   |
-| `"lowColor"`             | `"#FF0000"`(default Red): Color of BG value, trend arrows and bg value in graph if bg is below lower limit (Hypo)                                                                                                                                         |
-| `"lowBatColor"`          | `"#E53935"`(default Dark Red): Color of `uploader_battery` when value is low (below 30%)                                                                                                                                                                  |
-| `"carbColor"`            | `"#FB8C00"`(default Orange): Color of Carbs points within graph                                                                                                                                                                                           |
-| `"basalBackgroundColor"` | `"#0000FF"`(default Dark blue): Color of TBR curve within graph                                                                                                                                                                                           |
-| `"basalCenterColor"`     | `"#64B5F6"`(default Light blue): Color of Bolus or SMB points within graph                                                                                                                                                                                |
-| `"gridColor"`            | `"#FFFFFF"`(default White): Color of lines and text scale within graph                                                                                                                                                                                    |
-| `"pointSize"`            | 2 (default): size of points in graph (1 for small point, 2 for big points)                                                                                                                                                                                |
-| `"enableSecond"`         | false (default): specify if watchface will manage seconds or not within `time`, `second` or `second_hand` views. it's important to be consistent between view visibility and this overall setting that will allow update every second of time information |
-| `"dayNameFormat"`        | "E" (default): from "E" to "EEEE" specify dayname format (number, short name, full name)                                                                                                                                                                  |
-| `"monthFormat"`          | "MMM" (default): from "M" to "MMMM" specify month format (number, short name, full name)                                                                                                                                                                  |
+| Raktas                   | Comment                                                                                                                                                                                                                         |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"highColor"`            | `"#FFFF00"`(numatytoji geltona): KG reikšmės, tendencijos rodyklių ir KG reikšmių grafike spalva, kai KG virš viršutinės ribos (hiperglikemija)                                                                                 |
+| `"midColor"`             | `"#00FF00"`(numatytoji žalia): KG reikšmės, tendencijos rodyklių ir KG reikšmių grafike spalva, kai KG yra diapazone                                                                                                            |
+| `"lowColor"`             | `"#FF0000"`(numatytoji raudona): KG reikšmės, tendencijos rodyklių ir KG reikšmių grafike spalva, kai KG žemiau apatinės ribos (hipoglikemija)                                                                                  |
+| `"lowBatColor"`          | `"#E53935"`(numatytoji tamsiai raudona): `uploader_battery` spalva, kai reikšmė maža (žemiau 30%)                                                                                                                               |
+| `"carbColor"`            | `"#FB8C00"`(numatytoji oranžinė): angliavandenių taškų grafike spalva                                                                                                                                                           |
+| `"basalBackgroundColor"` | `"#0000FF"`(numatytoji tamsiai mėlyna): laikinos valandinės bazės kreivės grafike spalva                                                                                                                                        |
+| `"basalCenterColor"`     | `"#64B5F6"`(numatytoji šviesiai mėlyna): boluso arba SMB taškų grafike spalva                                                                                                                                                   |
+| `"gridColor"`            | `"#FFFFFF"`(numatytoji balta): linijų ir teksto skalės grafike spalva                                                                                                                                                           |
+| `"pointSize"`            | 2 (numatytoji): taškų dydis grafike (1 – maži taškai, 2 – dideli taškai)                                                                                                                                                        |
+| `"enableSecond"`         | false (numatytoji): nurodo, ar ciferblatas rodys sekundes rodiniuose `time`, `second` arba `second_hand`. svarbu, kad rodinių matomumas derėtų su šiuo bendru nustatymu, kuris leidžia laiko informaciją atnaujinti kas sekundę |
+| `"dayNameFormat"`        | "E" (numatytoji): nuo "E" iki "EEEE" nurodo savaitės dienos pavadinimo formatą (skaičius, trumpas pavadinimas, pilnas pavadinimas)                                                                                              |
+| `"monthFormat"`          | "MMM" (numatytoji): nuo "M" iki "MMMM" nurodo mėnesio formatą (skaičius, trumpas pavadinimas, pilnas pavadinimas)                                                                                                               |
 
 (cwf-reference-list-of-hardcoded-resource-files)=
 
-### List of HardCoded resource files
+### Iš anksto nustatytų išteklių failų sąrašas
 
-For most images, High and Low suffix allow tuning of image according to BG level (in Range, Hyper or Hypo)
+Daugumai paveikslėlių priesagos High ir Low leidžia keisti paveikslėlį pagal KG lygį (diapazone, hiperglikemija arba hipoglikemija)
 
-| Filenames                                                       | Comment                                                                                                                                                                  |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| CustomWatchface                                                 | Image shown for watchface selection and within Wear plugin                                                                                                               |
-| Background,<br />BackgroundHigh,<br />BackgroundLow | none (default black): Background image. background is always visible and default color is black if no image provided. Color can be modified to fit watchface design      |
-| CoverChart,<br />CoverChartHigh,<br />CoverChartLow | none (default): Image in front of Chart (transparency should be available to see Chart behind) Can be used to limit boundaries of graph                                  |
-| CoverPlate,<br />CoverPlateHigh,<br />CoverPlateLow | simple dial (default): image in front of all text values. transparency mandatory to see all values that are behind                                                       |
-| HourHand,<br />HourHandHigh,<br />HourHandLow       | hour_hand (default): image of hour hand. a default image is provided and can be colored to fit analog design. Note axis for rotation will be the center of the image     |
-| MinuteHand,<br />MinuteHandHigh,<br />MinuteHandLow | minute_hand (default): image of minute hand. a default image is provided and can be colored to fit analog design. Note axis for rotation will be the center of the image |
-| SecondHand,<br />SecondHandHigh,<br />SecondHandLow | second_hand (default): image of second hand. a default image is provided and can be colored to fit analog design. Note axis for rotation will be the center of the image |
-| ArrowNone                                                       | ?? (default): image shown when no valid arrow is available.                                                                                                              |
-| ArrowDoubleUp                                                   | ↑↑ (default): image of double arrow up                                                                                                                                   |
-| ArrowSingleUp                                                   | ↑ (default): image of single arrow up                                                                                                                                    |
-| Arrow45Up                                                       | ↗ (default): image of fortyfive arrow up                                                                                                                                 |
-| ArrowFlat                                                       | → (default): image of flat arrow                                                                                                                                         |
-| Arrow45Down                                                     | ↘ (default): image of fortyfive arrow down                                                                                                                               |
-| ArrowSingleDown                                                 | ↓ (default): image of single arrow down                                                                                                                                  |
-| ArrowDoubleDown                                                 | ↓↓ (default): image of double arrow down                                                                                                                                 |
+| Failų pavadinimai                                               | Comment                                                                                                                                                                                                       |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CustomWatchface                                                 | Paveikslėlis, rodomas renkantis ciferblatą ir Wear įskiepyje                                                                                                                                                  |
+| Background,<br />BackgroundHigh,<br />BackgroundLow | nėra (numatytasis juodas): fono paveikslėlis. fonas visada matomas, o jei paveikslėlis nepateiktas, numatytoji spalva yra juoda. Spalvą galima pakeisti, kad derėtų prie ciferblato dizaino                   |
+| CoverChart,<br />CoverChartHigh,<br />CoverChartLow | nėra (numatytasis): paveikslėlis prieš grafiką (turi būti permatomas, kad matytųsi už jo esantis grafikas). Galima naudoti grafiko riboms apriboti                                                            |
+| CoverPlate,<br />CoverPlateHigh,<br />CoverPlateLow | paprastas ciferblatas (numatytasis): paveikslėlis prieš visas teksto reikšmes. permatomumas privalomas, kad matytųsi visos už jo esančios reikšmės                                                            |
+| HourHand,<br />HourHandHigh,<br />HourHandLow       | hour_hand (numatytasis): valandų rodyklės paveikslėlis. pateiktas numatytasis paveikslėlis, kurį galima nuspalvinti pagal analoginį dizainą. Atkreipkite dėmesį, kad sukimo ašis bus paveikslėlio centras     |
+| MinuteHand,<br />MinuteHandHigh,<br />MinuteHandLow | minute_hand (numatytasis): minučių rodyklės paveikslėlis. pateiktas numatytasis paveikslėlis, kurį galima nuspalvinti pagal analoginį dizainą. Atkreipkite dėmesį, kad sukimo ašis bus paveikslėlio centras   |
+| SecondHand,<br />SecondHandHigh,<br />SecondHandLow | second_hand (numatytasis): sekundžių rodyklės paveikslėlis. pateiktas numatytasis paveikslėlis, kurį galima nuspalvinti pagal analoginį dizainą. Atkreipkite dėmesį, kad sukimo ašis bus paveikslėlio centras |
+| ArrowNone                                                       | ?? (numatytasis): paveikslėlis, rodomas, kai nėra tinkamos rodyklės.                                                                                                                                          |
+| ArrowDoubleUp                                                   | ↑↑ (numatytasis): dvigubos rodyklės aukštyn paveikslėlis                                                                                                                                                      |
+| ArrowSingleUp                                                   | ↑ (numatytasis): viengubos rodyklės aukštyn paveikslėlis                                                                                                                                                      |
+| Arrow45Up                                                       | ↗ (numatytasis): 45 laipsnių rodyklės aukštyn paveikslėlis                                                                                                                                                    |
+| ArrowFlat                                                       | → (numatytasis): horizontalios rodyklės paveikslėlis                                                                                                                                                          |
+| Arrow45Down                                                     | ↘ (numatytasis): 45 laipsnių rodyklės žemyn paveikslėlis                                                                                                                                                      |
+| ArrowSingleDown                                                 | ↓ (numatytasis): viengubos rodyklės žemyn paveikslėlis                                                                                                                                                        |
+| ArrowDoubleDown                                                 | ↓↓ (numatytasis): dvigubos rodyklės žemyn paveikslėlis                                                                                                                                                        |
 
-For each above filenames, extension can be either `.jpg`, `.png` or `.svg`. But be careful, `.jpg`doesn't manage transparency (so most of the files should be with .png or .svg to not hide view that are behind...)
+Kiekvieno aukščiau nurodyto failo plėtinys gali būti `.jpg`, `.png` arba `.svg`. Tačiau būkite atsargūs: `.jpg` nepalaiko permatomumo (todėl dauguma failų turėtų būti .png arba .svg, kad neuždengtų už jų esančių rodinių...)
 
 (cwf-reference-list-of-view-keys)=
 
-### List of View keys
+### Rodinių raktų sąrašas
 
-This list is sorted from background to foreground this is very important when you organize your watchface to know this order because some image or text can be hidden by other images.
+Šis sąrašas surikiuotas nuo fono iki priekinio plano. Kuriant ciferblatą labai svarbu žinoti šią tvarką, nes kai kuriuos paveikslėlius ar tekstą gali uždengti kiti paveikslėliai.
 
-Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for multi users Watchfaces.
+Pastaba: visi raktai, kurių pabaigoje yra `_Ext1` arba `_Ext2`, yra nauji ir skirti kelių naudotojų ciferblatams.
 
-| Key                                                                                    | Type of view        | Data attached                                                                                                                         | DynData Key                                                                                                                                      |
-| -------------------------------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `"background"`                                                                         | Image View          |                                                                                                                                       |                                                                                                                                                  |
-| `"chart"`                                                                              | Specific Chart View | Graphical curves                                                                                                                      |                                                                                                                                                  |
-| `"cover_chart"`                                                                        | Image View          |                                                                                                                                       |                                                                                                                                                  |
-| `"freetext1"`                                                                          | Text View           |                                                                                                                                       |                                                                                                                                                  |
-| `"freetext2"`                                                                          | Text View           |                                                                                                                                       |                                                                                                                                                  |
-| `"freetext3"`                                                                          | Text View           |                                                                                                                                       |                                                                                                                                                  |
-| `"freetext4"`                                                                          | Text View           |                                                                                                                                       |                                                                                                                                                  |
-| `"patient_name"` *<br/>`"patient_name_Ext1"` *<br/>`"patient_name_Ext2"` * | Text View           | Patient Name                                                                                                                          |                                                                                                                                                  |
-| `"iob1"`<br/>`"iob1_Ext1"` *<br/>`"iob1_Ext2"` *                           | Text View           | IOB label or IOB Total                                                                                                                |                                                                                                                                                  |
-| `"iob2"`<br/>`"iob2_Ext1"` *<br/>`"iob2_Ext2"` *                           | Text View           | IOB Total or IOB Detailed                                                                                                             |                                                                                                                                                  |
-| `"cob1"`<br/>`"cob1_Ext1"` *<br/>`"cob1_Ext2"` *                           | Text View           | Carb label                                                                                                                            |                                                                                                                                                  |
-| `"cob2"`<br/>`"cob2_Ext1"` *<br/>`"cob2_Ext2"` *                           | Text View           | COB Value                                                                                                                             |                                                                                                                                                  |
-| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                        | Text View           | Short delta (5 min)                                                                                                                   | delta<br/>delta_Ext1<br/>delta_Ext2                                                                                                  |
-| `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *            | Text View           | Avg Delta (15 min)                                                                                                                    | avg_delta<br/>avg_delta_Ext1<br/>avg_delta_Ext2                                                                                  |
-| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *        | Text View           | BG Target (single value or min - max targets values)                                                                                  | tempTarget<br/>tempTarget_Ext1<br/>tempTarget_Ext2                                                                                   |
-| `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` *           | Text View           | Reservoir level                                                                                                                       | reservoir<br/>reservoirLevel<br/>reservoir_Ext1<br/>reservoirLevel_Ext1<br/>reservoir_Ext2<br/>reservoirLevel_Ext2 |
-| `"uploader_battery"`                                                                   | Text View           | phone battery level (%)                                                                                                               | uploader_battery                                                                                                                                 |
-| `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` *      | Text View           | rig battery level (%)                                                                                                                 | rig_battery<br/>rig_battery_Ext1<br/>rig_battery_Ext2                                                                            |
-| `"basalRate"`<br/>`"basalRate_Ext1"` *<br/>`"basalRate_Ext2"` *            | Text View           | % or absolute value                                                                                                                   |                                                                                                                                                  |
-| `"bgi"`<br/>`"bgi_Ext1"` *<br/>`"bgi_Ext2"` *                              | Text View           | mgdl/(5 min) or mmol/(5 min)                                                                                                          |                                                                                                                                                  |
-| `"status"` *<br/>`"status_Ext1"` *<br/>`"status_Ext2"` *                   | Text View           | Synthesis of IOB (whatever IOB setting in watch), Detailed IOB (according to setting in watch and BGI (according to setting in watch) |                                                                                                                                                  |
-| `"time"`                                                                               | Text View           | HH:MM or HH:MM:SS                                                                                                                     |                                                                                                                                                  |
-| `"hour"`                                                                               | Text View           | HH                                                                                                                                    |                                                                                                                                                  |
-| `"minute"`                                                                             | Text View           | MM                                                                                                                                    |                                                                                                                                                  |
-| `"second"`                                                                             | Text View           | SS                                                                                                                                    |                                                                                                                                                  |
-| `"timePeriod"`                                                                         | Text View           | AM or PM                                                                                                                              |                                                                                                                                                  |
-| `"day_name"`                                                                           | Text View           | name of the day (cf. dayNameFormat)                                                                                                   | day_name                                                                                                                                         |
-| `"day"`                                                                                | Text View           | DD date                                                                                                                               | day                                                                                                                                              |
-| `"week_number"`                                                                        | Text View           | (WW) week number                                                                                                                      | week_number                                                                                                                                      |
-| `"month"`                                                                              | Text View           | month name (cf. monthFormat)                                                                                                          |                                                                                                                                                  |
-| `"loop"`<br/>`"loop_Ext1"` *<br/>`"loop_Ext2"` *                           | Text View           | min ago since last run and status (color arrows in background), color arrows can be tuned with DynData                                | loop                                                                                                                                             |
-| `"direction"`<br/>`"direction_Ext1"` *<br/>`"direction_Ext2"` *            | Image View          | TrendArrows                                                                                                                           | direction                                                                                                                                        |
-| `"timestamp"`<br/>`"timestamp_Ext1"` *<br/>`"timestamp_Ext2"` *            | Text View           | integer (min ago)                                                                                                                     | timestamp                                                                                                                                        |
-| `"sgv"`<br/>`"sgv_Ext1"` *<br/>`"sgv_Ext2"` *                              | Text View           | sgv value (mgdl or mmol)                                                                                                              | sgv<br />sgvLevel<br/>sgv_Ext1<br />sgvLevel_Ext1<br/>sgv_Ext2<br />sgvLevel_Ext2                                  |
-| `"cover_plate"`                                                                        | Image View          |                                                                                                                                       |                                                                                                                                                  |
-| `"hour_hand"`                                                                          | Image View          |                                                                                                                                       |                                                                                                                                                  |
-| `"minute_hand"`                                                                        | Image View          |                                                                                                                                       |                                                                                                                                                  |
-| `"second_hand"`                                                                        | Image View          |                                                                                                                                       |                                                                                                                                                  |
+| Raktas                                                                                 | Rodinio tipas        | Susieti duomenys                                                                                                                           | DynData raktas                                                                                                                                   |
+| -------------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `"background"`                                                                         | Image View           |                                                                                                                                            |                                                                                                                                                  |
+| `"chart"`                                                                              | Specialus Chart View | Grafinės kreivės                                                                                                                           |                                                                                                                                                  |
+| `"cover_chart"`                                                                        | Image View           |                                                                                                                                            |                                                                                                                                                  |
+| `"freetext1"`                                                                          | Text View            |                                                                                                                                            |                                                                                                                                                  |
+| `"freetext2"`                                                                          | Text View            |                                                                                                                                            |                                                                                                                                                  |
+| `"freetext3"`                                                                          | Text View            |                                                                                                                                            |                                                                                                                                                  |
+| `"freetext4"`                                                                          | Text View            |                                                                                                                                            |                                                                                                                                                  |
+| `"patient_name"` *<br/>`"patient_name_Ext1"` *<br/>`"patient_name_Ext2"` * | Text View            | Naudotojo vardas                                                                                                                           |                                                                                                                                                  |
+| `"iob1"`<br/>`"iob1_Ext1"` *<br/>`"iob1_Ext2"` *                           | Text View            | AIO užrašas arba bendras AIO                                                                                                               |                                                                                                                                                  |
+| `"iob2"`<br/>`"iob2_Ext1"` *<br/>`"iob2_Ext2"` *                           | Text View            | Bendras AIO arba detalus AIO                                                                                                               |                                                                                                                                                  |
+| `"cob1"`<br/>`"cob1_Ext1"` *<br/>`"cob1_Ext2"` *                           | Text View            | Angliavandenių užrašas                                                                                                                     |                                                                                                                                                  |
+| `"cob2"`<br/>`"cob2_Ext1"` *<br/>`"cob2_Ext2"` *                           | Text View            | AAO reikšmė                                                                                                                                |                                                                                                                                                  |
+| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                        | Text View            | Trumpas pokytis (5 min)                                                                                                                    | delta<br/>delta_Ext1<br/>delta_Ext2                                                                                                  |
+| `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *            | Text View            | Vidutinis pokytis (15 min)                                                                                                                 | avg_delta<br/>avg_delta_Ext1<br/>avg_delta_Ext2                                                                                  |
+| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *        | Text View            | KG tikslas (viena reikšmė arba min–max tikslo reikšmės)                                                                                    | tempTarget<br/>tempTarget_Ext1<br/>tempTarget_Ext2                                                                                   |
+| `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` *           | Text View            | Rezervuaro lygis                                                                                                                           | reservoir<br/>reservoirLevel<br/>reservoir_Ext1<br/>reservoirLevel_Ext1<br/>reservoir_Ext2<br/>reservoirLevel_Ext2 |
+| `"uploader_battery"`                                                                   | Text View            | telefono baterijos lygis (%)                                                                                                               | uploader_battery                                                                                                                                 |
+| `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` *      | Text View            | įrenginio baterijos lygis (%)                                                                                                              | rig_battery<br/>rig_battery_Ext1<br/>rig_battery_Ext2                                                                            |
+| `"basalRate"`<br/>`"basalRate_Ext1"` *<br/>`"basalRate_Ext2"` *            | Text View            | % arba absoliuti reikšmė                                                                                                                   |                                                                                                                                                  |
+| `"bgi"`<br/>`"bgi_Ext1"` *<br/>`"bgi_Ext2"` *                              | Text View            | mgdl/(5 min) arba mmol/(5 min)                                                                                                             |                                                                                                                                                  |
+| `"status"` *<br/>`"status_Ext1"` *<br/>`"status_Ext2"` *                   | Text View            | AIO (nepriklausomai nuo AIO nustatymo laikrodyje), detalaus AIO (pagal nustatymą laikrodyje) ir KGĮ (pagal nustatymą laikrodyje) suvestinė |                                                                                                                                                  |
+| `"time"`                                                                               | Text View            | HH:MM arba HH:MM:SS                                                                                                                        |                                                                                                                                                  |
+| `"hour"`                                                                               | Text View            | HH                                                                                                                                         |                                                                                                                                                  |
+| `"minute"`                                                                             | Text View            | MM                                                                                                                                         |                                                                                                                                                  |
+| `"second"`                                                                             | Text View            | SS                                                                                                                                         |                                                                                                                                                  |
+| `"timePeriod"`                                                                         | Text View            | AM arba PM                                                                                                                                 |                                                                                                                                                  |
+| `"day_name"`                                                                           | Text View            | dienos pavadinimas (žr. dayNameFormat)                                                                                                     | day_name                                                                                                                                         |
+| `"day"`                                                                                | Text View            | DD data                                                                                                                                    | day                                                                                                                                              |
+| `"week_number"`                                                                        | Text View            | (WW) savaitės numeris                                                                                                                      | week_number                                                                                                                                      |
+| `"month"`                                                                              | Text View            | mėnesio pavadinimas (žr. monthFormat)                                                                                                      |                                                                                                                                                  |
+| `"loop"`<br/>`"loop_Ext1"` *<br/>`"loop_Ext2"` *                           | Text View            | prieš kiek minučių buvo paskutinis paleidimas ir būsena (spalvotos rodyklės fone), spalvotas rodykles galima keisti per DynData            | loop                                                                                                                                             |
+| `"direction"`<br/>`"direction_Ext1"` *<br/>`"direction_Ext2"` *            | Image View           | TrendArrows                                                                                                                                | direction                                                                                                                                        |
+| `"timestamp"`<br/>`"timestamp_Ext1"` *<br/>`"timestamp_Ext2"` *            | Text View            | sveikasis skaičius (prieš kiek min.)                                                                                                       | timestamp                                                                                                                                        |
+| `"sgv"`<br/>`"sgv_Ext1"` *<br/>`"sgv_Ext2"` *                              | Text View            | sgv reikšmė (mgdl arba mmol)                                                                                                               | sgv<br />sgvLevel<br/>sgv_Ext1<br />sgvLevel_Ext1<br/>sgv_Ext2<br />sgvLevel_Ext2                                  |
+| `"cover_plate"`                                                                        | Image View           |                                                                                                                                            |                                                                                                                                                  |
+| `"hour_hand"`                                                                          | Image View           |                                                                                                                                            |                                                                                                                                                  |
+| `"minute_hand"`                                                                        | Image View           |                                                                                                                                            |                                                                                                                                                  |
+| `"second_hand"`                                                                        | Image View           |                                                                                                                                            |                                                                                                                                                  |
 
-**View added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
+**Rodinys pridėtas pasirinktiniame ciferblate V2.0 ar naujesniame (yra AAPS 3.3.0 wear apk ar naujesnėje)*
 
 (cwf-reference-list-of-json-keys)=
 
-### List of Json keys
+### Json raktų sąrašas
 
 (cwf-reference-common-keys)=
 
-#### Common keys
+#### Bendrieji raktai
 
- that can be used on all view types (Text View, image View, graph view)
+ kuriuos galima naudoti visų tipų rodiniuose (Text View, image View, graph view)
 
-| Key                      | type    | comment / value                                                                                                                                                                        |
-| ------------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"width"`                | int     | width of view in pixel                                                                                                                                                                 |
-| `"height"`               | int     | height of view in pixel                                                                                                                                                                |
-| `"topmargin"`            | int     | top margin in pixel                                                                                                                                                                    |
-| `"leftmargin"`           | int     | left margin in pixel                                                                                                                                                                   |
-| `"rotation"`             | int     | rotation angle in degrees                                                                                                                                                              |
-| `"visibility"`           | string  | see key value table                                                                                                                                                                    |
-| `"dynData"`              | string  | key block name that will specify dynamic data to link and associated animation (colors, image, shift, rotation)<br />`"dynData": "customName",` (see below )                     |
-| `"leftOffset"`           | boolean | include this key with key value true to enable horizontal shift (positive or negative value) due to dynData value                                                                      |
-| `"topOffset"`            | boolean | include this key with key value true to enable vertical shift (positive or negative value) due to dynData value                                                                        |
-| `"rotationOffset"`       | boolean | include this key with key value true to enable rotation (positive or negative value) due to dynData value                                                                              |
-| `"twinView"`             | string  | key of the other view (generally the other view also include the twinView parameter with the key of this view in it)                                                                   |
-| `"topOffsetTwinHidden"`  | int     | number of pixel to shift view position vertically if twin view is hidden (positive or negative value)<br />topOffsetTwinHidden = (topOffset twinView - topOffset thisView)/2     |
-| `"leftOffsetTwinHidden"` | int     | number of pixel to shift view position horizontally if twin view is hidden (positive or negative value)<br />leftOffsetTwinHidden= (leftOffset twinView - leftOffset thisView)/2 |
-| `"dynPref"`              | string  | key block name that will specify dynamic pref to link and associated animation (colors, image, shift, rotation)<br />`"dynPref": "customName",` (see below )                     |
+| Raktas                   | type    | komentaras / reikšmė                                                                                                                                                                            |
+| ------------------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"width"`                | int     | rodinio plotis pikseliais                                                                                                                                                                       |
+| `"height"`               | int     | rodinio aukštis pikseliais                                                                                                                                                                      |
+| `"topmargin"`            | int     | viršutinė paraštė pikseliais                                                                                                                                                                    |
+| `"leftmargin"`           | int     | kairioji paraštė pikseliais                                                                                                                                                                     |
+| `"rotation"`             | int     | pasukimo kampas laipsniais                                                                                                                                                                      |
+| `"visibility"`           | string  | žr. rakto reikšmių lentelę                                                                                                                                                                      |
+| `"dynData"`              | string  | rakto bloko pavadinimas, nurodantis susiejamus dinaminius duomenis ir susijusią animaciją (spalvos, paveikslėlis, poslinkis, sukimas)<br />`"dynData": "customName",` (žr. žemiau )       |
+| `"leftOffset"`           | boolean | įtraukite šį raktą su rakto reikšme true, kad būtų įjungtas horizontalus poslinkis (teigiama arba neigiama reikšmė) pagal dynData reikšmę                                                       |
+| `"topOffset"`            | boolean | įtraukite šį raktą su rakto reikšme true, kad būtų įjungtas vertikalus poslinkis (teigiama arba neigiama reikšmė) pagal dynData reikšmę                                                         |
+| `"rotationOffset"`       | boolean | įtraukite šį raktą su rakto reikšme true, kad būtų įjungtas sukimas (teigiama arba neigiama reikšmė) pagal dynData reikšmę                                                                      |
+| `"twinView"`             | string  | kito rodinio raktas (paprastai kitame rodinyje taip pat yra parametras twinView su šio rodinio raktu)                                                                                           |
+| `"topOffsetTwinHidden"`  | int     | keliais pikseliais vertikaliai pastumti rodinį, jei porinis rodinys paslėptas (teigiama arba neigiama reikšmė)<br />topOffsetTwinHidden = (topOffset twinView - topOffset thisView)/2     |
+| `"leftOffsetTwinHidden"` | int     | keliais pikseliais horizontaliai pastumti rodinį, jei porinis rodinys paslėptas (teigiama arba neigiama reikšmė)<br />leftOffsetTwinHidden= (leftOffset twinView - leftOffset thisView)/2 |
+| `"dynPref"`              | string  | rakto bloko pavadinimas, nurodantis susiejamus dinaminius nustatymus ir susijusią animaciją (spalvos, paveikslėlis, poslinkis, sukimas)<br />`"dynPref": "customName",` (žr. žemiau )     |
 
 (cwf-reference-textview-keys)=
 
-#### TextView keys
+#### TextView raktai
 
-| Key            | type    | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| -------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `"textsize"`   | int     | size of font in pixel (keep in mind that font can include top and bottom margin so the real text size will generally be smaller than the number of pixel set). Note that size should be smaller than view height to not be truncated                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `"gravity"`    | string  | see key value table                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `"font"`       | string  | see key value table for available fonts.<br />Can also be font filename (without extension) for fonts included into zip file                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `"fontStyle"`  | string  | see key value table                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `"fontColor"`  | string  | Manage color of the font<br />`"#RRGGBB"`: color code in RGB format, hexadecimal values #FF0000 is red<br />`"#AARRGGBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `"allCaps"`    | boolean | true if you want text in uppercase (mainly day name or month name)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `"background"` | string  | `resource_filename` you can include a resource image as background of the text view (resource file will be resized to fit height and width of text view, but keeping image ratio). text value will be in front of background image.<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `"color"`      | string  | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRGGBB"`: color code in RGB format, hexadecimal values #FF0000 is red<br />`"#AARRGGBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on image<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
-| `"textvalue"`  | string  | Key specific to the 4 free text views included into the layout (from freetext1 to freetext4), this allow you to set the text that should be included (can be a label, or just `:` if you want to add a separator between hour view and minute view...)  
-From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a format string for the other textViews (to use with `dynValue` key and `dynData` or `dynPref`). for example                                                                                                                                                                                                                                                                                                                                                           |
-| `"dynValue"`*  | boolean | true if you want to include raw value in (double). Useful with `textvalue` key if you want a dedicated format to show value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Raktas         | type    | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| -------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"textsize"`   | int     | šrifto dydis pikseliais (atminkite, kad šriftas gali turėti viršutinę ir apatinę paraštę, todėl tikrasis teksto dydis paprastai bus mažesnis už nustatytą pikselių skaičių). Atkreipkite dėmesį, kad dydis turi būti mažesnis už rodinio aukštį, kad tekstas nebūtų nukirptas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `"gravity"`    | string  | žr. rakto reikšmių lentelę                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `"font"`       | string  | galimus šriftus žr. rakto reikšmių lentelėje.<br />Taip pat gali būti šrifto failo pavadinimas (be plėtinio) šriftams, įtrauktiems į zip failą                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `"fontStyle"`  | string  | žr. rakto reikšmių lentelę                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `"fontColor"`  | string  | Valdo šrifto spalvą<br />`"#RRGGBB"`: spalvos kodas RGB formatu, šešioliktainės reikšmės, #FF0000 yra raudona<br />`"#AARRGGBB"`: AA nurodo alfa informaciją (permatomumą), 00 – permatoma, FF – nepermatoma<br />`"bgColor"`: rakto reikšmė bgColor yra paprastas būdas naudoti highColor, midColor arba lowColor pagal KG reikšmę                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `"allCaps"`    | boolean | true, jei norite tekstą didžiosiomis raidėmis (dažniausiai dienos arba mėnesio pavadinimui)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `"background"` | string  | `resource_filename` galite įdėti išteklių paveikslėlį kaip teksto rodinio foną (išteklių failas bus pritaikytas teksto rodinio aukščiui ir pločiui, išlaikant paveikslėlio proporcijas). teksto reikšmė bus prieš fono paveikslėlį.<br />- Atkreipkite dėmesį, kad šį raktą taip pat galima naudoti rodiniui `chart`, kad grafikui būtų nustatytas pasirinktinis fonas prieš fono paveikslėlį                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `"color"`      | string  | Valdo rodinio fono spalvą arba keičia paveikslėlio spalvą (tik rastriniam)<br />`"#RRGGBB"`: spalvos kodas RGB formatu, šešioliktainės reikšmės, #FF0000 yra raudona<br />`"#AARRGGBB"`: AA nurodo alfa informaciją (permatomumą), 00 – permatoma, FF – nepermatoma<br />`"bgColor"`: rakto reikšmė bgColor yra paprastas būdas naudoti highColor, midColor arba lowColor pagal KG reikšmę<br />- Numatytiesiems įdėtiniams paveikslėliams (rodyklės, ciferblatas) spalva bus pritaikyta tiesiogiai, rastriniams paveikslėliams (jpg arba png) bus pritaikytas sodrumo gradiento filtras<br />- svg šis parametras neturės jokio poveikio (svg failų spalvos keisti negalima)<br />- Atkreipkite dėmesį, kad šį raktą taip pat galima naudoti rodiniui `chart`, kad grafikui būtų nustatytas pasirinktinis fonas prieš fono paveikslėlį |
+| `"textvalue"`  | string  | Raktas, skirtas tik 4 išdėstyme esantiems laisvo teksto rodiniams (nuo freetext1 iki freetext4). Jis leidžia nustatyti rodomą tekstą (tai gali būti užrašas arba tiesiog `:`, jei norite pridėti skirtuką tarp valandų ir minučių rodinių...)  
+Nuo Custom Watchface įskiepio v2 (AAPS 3.3) textvalue galima naudoti formato eilutei kituose textViews nurodyti (naudojama su raktu `dynValue` ir `dynData` arba `dynPref`). pavyzdžiui                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `"dynValue"`*  | boolean | true, jei norite įtraukti neapdorotą reikšmę (double). Naudinga su raktu `textvalue`, jei norite specialaus reikšmės rodymo formato                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
-**Key added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
+**Raktas pridėtas pasirinktiniame ciferblate V2.0 ar naujesniame (yra AAPS 3.3.0 wear apk ar naujesnėje)*
 
 (cwf-reference-imageview-keys)=
 
-#### ImageView keys
+#### ImageView raktai
 
-| Key       | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `"color"` | string | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRGGBB"`: color code in RGB format, hexadecimal values #FF0000 is red<br />`"#AARRGGBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on image<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
+| Raktas    | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| --------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"color"` | string | Valdo rodinio fono spalvą arba keičia paveikslėlio spalvą (tik rastriniam)<br />`"#RRGGBB"`: spalvos kodas RGB formatu, šešioliktainės reikšmės, #FF0000 yra raudona<br />`"#AARRGGBB"`: AA nurodo alfa informaciją (permatomumą), 00 – permatoma, FF – nepermatoma<br />`"bgColor"`: rakto reikšmė bgColor yra paprastas būdas naudoti highColor, midColor arba lowColor pagal KG reikšmę<br />- Numatytiesiems įdėtiniams paveikslėliams (rodyklės, ciferblatas) spalva bus pritaikyta tiesiogiai, rastriniams paveikslėliams (jpg arba png) bus pritaikytas sodrumo gradiento filtras<br />- svg šis parametras neturės jokio poveikio (svg failų spalvos keisti negalima)<br />- Atkreipkite dėmesį, kad šį raktą taip pat galima naudoti rodiniui `chart`, kad grafikui būtų nustatytas pasirinktinis fonas prieš fono paveikslėlį |
 
 (cwf-reference-chartview-keys)=
 
-#### ChartView keys
+#### ChartView raktai
 
-| Key            | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `"color"`      | string | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRGGBB"`: color code in RGB format, hexadecimal values #FF0000 is red<br />`"#AARRGGBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on image<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
-| `"background"` | string | `resource_filename` you can include a resource image as background of the text view (resource file will be resized to fit height and width of text view, but keeping image ratio). text value will be in front of background image.<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Raktas         | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| -------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"color"`      | string | Valdo rodinio fono spalvą arba keičia paveikslėlio spalvą (tik rastriniam)<br />`"#RRGGBB"`: spalvos kodas RGB formatu, šešioliktainės reikšmės, #FF0000 yra raudona<br />`"#AARRGGBB"`: AA nurodo alfa informaciją (permatomumą), 00 – permatoma, FF – nepermatoma<br />`"bgColor"`: rakto reikšmė bgColor yra paprastas būdas naudoti highColor, midColor arba lowColor pagal KG reikšmę<br />- Numatytiesiems įdėtiniams paveikslėliams (rodyklės, ciferblatas) spalva bus pritaikyta tiesiogiai, rastriniams paveikslėliams (jpg arba png) bus pritaikytas sodrumo gradiento filtras<br />- svg šis parametras neturės jokio poveikio (svg failų spalvos keisti negalima)<br />- Atkreipkite dėmesį, kad šį raktą taip pat galima naudoti rodiniui `chart`, kad grafikui būtų nustatytas pasirinktinis fonas prieš fono paveikslėlį |
+| `"background"` | string | `resource_filename` galite įdėti išteklių paveikslėlį kaip teksto rodinio foną (išteklių failas bus pritaikytas teksto rodinio aukščiui ir pločiui, išlaikant paveikslėlio proporcijas). teksto reikšmė bus prieš fono paveikslėlį.<br />- Atkreipkite dėmesį, kad šį raktą taip pat galima naudoti rodiniui `chart`, kad grafikui būtų nustatytas pasirinktinis fonas prieš fono paveikslėlį                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 (cwf-reference-key-values)=
 
-### Key values
+### Rakto reikšmės
 
-| Key value                    | key        | comment                                                                           |
-| ---------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| `"gone"`                     | visibility | view hidden                                                                       |
-| `"visible"`                  | visibility | view visible in watchface (but visibility can be enable or disable in parameters) |
-| `"center"`                   | gravity    | text is vertical and horizontal centered into the view                            |
-| `"left"`                     | gravity    | text is vertical centered but left aligned into the view                          |
-| `"right"`                    | gravity    | text is vertical centered but right aligned into the view                         |
-| `"sans_serif"`               | font       |                                                                                   |
-| `"default"`                  | font       |                                                                                   |
-| `"default_bold"`             | font       |                                                                                   |
-| `"monospace"`                | font       |                                                                                   |
-| `"serif"`                    | font       |                                                                                   |
-| `"roboto_condensed_bold"`    | font       |                                                                                   |
-| `"roboto_condensed_light"`   | font       |                                                                                   |
-| `"roboto_condensed_regular"` | font       |                                                                                   |
-| `"roboto_slab_light"`        | font       |                                                                                   |
-| `"normal"`                   | fontStyle  |                                                                                   |
-| `"bold"`                     | fontStyle  |                                                                                   |
-| `"bold_italic"`              | fontStyle  |                                                                                   |
-| `"italic"`                   | fontStyle  |                                                                                   |
+| Rakto reikšmė                | raktas     | comment                                                                             |
+| ---------------------------- | ---------- | ----------------------------------------------------------------------------------- |
+| `"gone"`                     | visibility | rodinys paslėptas                                                                   |
+| `"visible"`                  | visibility | rodinys matomas ciferblate (bet matomumą galima įjungti arba išjungti parametruose) |
+| `"center"`                   | gravity    | tekstas rodinyje centruotas vertikaliai ir horizontaliai                            |
+| `"left"`                     | gravity    | tekstas rodinyje centruotas vertikaliai, bet lygiuotas kairėje                      |
+| `"right"`                    | gravity    | tekstas rodinyje centruotas vertikaliai, bet lygiuotas dešinėje                     |
+| `"sans_serif"`               | font       |                                                                                     |
+| `"default"`                  | font       |                                                                                     |
+| `"default_bold"`             | font       |                                                                                     |
+| `"monospace"`                | font       |                                                                                     |
+| `"serif"`                    | font       |                                                                                     |
+| `"roboto_condensed_bold"`    | font       |                                                                                     |
+| `"roboto_condensed_light"`   | font       |                                                                                     |
+| `"roboto_condensed_regular"` | font       |                                                                                     |
+| `"roboto_slab_light"`        | font       |                                                                                     |
+| `"normal"`                   | fontStyle  |                                                                                     |
+| `"bold"`                     | fontStyle  |                                                                                     |
+| `"bold_italic"`              | fontStyle  |                                                                                     |
+| `"italic"`                   | fontStyle  |                                                                                     |
 
 (cwf-reference-dyndata-keys)=
 
-### DynData keys
+### DynData raktai
 
-| Key                       | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"dynData"`               | block  | define the block of all dynamic data blocks that will be used for the views. generally after the last view.<br />All the keys defined within this block will be used as key Value within view block:<br />`"dynData": { dynData blocks }`<br />and each block is defined by a custom name and several keys inside:<br />`"customName": { one dynData block }`                                                                                                                         |
-| `"valueKey"`              | string | name of dynamic data to use (generally same that associated view key).<br />If not existing, the default will be the values used for the view that uses this block. <br />for example you can define one block to customize battery level percentage without specifying valueKey, and then use the same block to customize uploader_battery and rig_battery                                                                                                                                     |
-| `"minData"`               | int    | specify the minimum value to take into account for AAPS data : for example if value is sgv (unit mgdl internally), if minData is set to 50, all bg values below 50mgdl will be set to 50.<br />- Note that minData and maxData will be used to calculate dynamic values (in pixel or in degrees).                                                                                                                                                                                                       |
-| `"maxData"`               | int    | specify the maximum value to take into account for AAPS data : for example if value is sgv (unit mgdl internally), if maxData is set to 330, all bg values above 330mgdl will be set to 330.                                                                                                                                                                                                                                                                                                                  |
-| `"leftOffset"`            | block  | Specify the horizontal shift of the view according to min and max values in pixels.<br />- It includes `minValue` key, `maxValue` key and `invalidValue` key (optional)<br />- If data is below or equal minData, then the view will be shifted to minValue pixels, and if data is above or equal to maxData, then the view will be shifted to maxValue pixels<br />Note that to apply this shift, `leftOffset` should be set to true within the view                                       |
-| `"topOffset"`             | block  | Specify the vertical shift of the view according to min and max values in pixels.<br />- It includes `minValue` key, `maxValue` key and `invalidValue` key (optional)<br />- If data is below or equal minData, then the view will be shifted to minValue pixels, and if data is above or equal to maxData, then the view will be shifted to maxValue pixels<br />Note that to apply this shift topOffset should be set to true within the view                                             |
-| `"rotationOffset"`        | block  | Specify the rotation angle in degrees of the view according to min and max values.<br />- It includes `minValue` key, `maxValue` Key and `invalidValue` key (optional)<br />- If data is below or equal `minData`, then the view will rotate by `minValue` degrees, and if data is above or equal to `maxData`, then the view will rotate by `maxValue` degrees<br />Note that to apply this rotation, `rotationOffset` should be set to true within the view                               |
-| `"dynValue"`*             | block  | Specify the dynValue conversion from min and max range to min and max values.<br />- It includes `minValue` key, `maxValue` Key and `invalidValue` key (optional)<br />- If data is below or equal `minData`, then the dynValue sent will be minValue (converted to double) , and if data is above or equal to `maxData`, then the dynValue calculated will be maxValue (converted to double)<br />Note that to apply this conversion, `dynValue` key should be set to true within the view |
-| `"minValue"`              | int    | result value to apply to the view (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                                                                                |
-| `"maxValue"`              | int    | result value to apply to the view (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                                                                                |
-| `"invalidValue"`          | int    | result value to apply to the view if data is invalid (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                                                             |
-| `"invalidImage"`          | string | `resource_filename` to use for the ImageView or background TextView if the data is invalid                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| image*1_to_n*           | string | `resource_filename` image to use for each step between minData (or close to minData) with `"image1"` and maxData (or close to maxData) with image*n*<br />If for example your put 5 images (from image1 to image5), the range between minData and maxData will be divided in 5 steps and according to data value, the corresponding image will be shown                                                                                                                                                 |
-| `"invalidFontColor"`      | string | Manage fontColor steps if the data is invalid<br />`"#RRGGBB"` or `"#AARRGGBB"`: Color to use if an invalid data is received (can be transparent if AA=00)                                                                                                                                                                                                                                                                                                                                              |
-| fontColor*1_to_n*       | string | Manage fontColor steps<br />`"#RRGGBB"` or `"#AARRGGBB"`: color to use for each step between minData (or close to minData) with `"fontColor1"` and maxData (or close to maxData) with fontColor*n*                                                                                                                                                                                                                                                                                                      |
-| `"invalidColor"`          | string | Manage background color or image color steps if the data is invalid<br />`"#RRGGBB"` or `"#AARRGGBB"`: Color to use if an invalid data is received (can be transparent if AA=00)                                                                                                                                                                                                                                                                                                                        |
-| color*1_to_n*           | string | Manage background color or image Color steps<br />`"#RRGGBB"` or `"#AARRGGBB"`: color to use for each step between minData (or close to minData) with `"color1"` and maxData (or close to maxData) with color*n*                                                                                                                                                                                                                                                                                        |
-| `"invalidTextSize"`       | int    | Manage text size steps if the data is invalid                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| textsize*1_to_n*        | int    | Manage text size to use for each step between minData (or close to minData) with `"textsize1"` and maxData (or close to maxData) with textsize*n*                                                                                                                                                                                                                                                                                                                                                             |
-| `"invalidLeftOffset"`     | int    | Manage leftOffset steps if the data is invalid                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| leftOffset*1_to_n*      | int    | Manage leftOffset to use for each step between minData (or close to minData) with `"leftOffset1"` and maxData (or close to maxData) with leftOffset*n*<br />Note, can be used with dynPref to shift a view when another is hidden...                                                                                                                                                                                                                                                                    |
-| `"invalidTopOffset"`      | int    | Manage topOffset steps if the data is invalid                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| topOffset*1_to_n*       | int    | Manage topOffset to use for each step between minData (or close to minData) with topOffset1 and maxData (or close to maxData) with topOffset*n*<br />Note, can be used with dynPref to shift a view when another is hidden...                                                                                                                                                                                                                                                                           |
-| `"invalidRotationOffset"` | int    | Manage rotationOffset steps if the data is invalid                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| rotationOffset*1_to_n*  | int    | Manage rotationOffset to use for each step between minData (or close to minData) with rotationOffset1 and maxData (or close to maxData) with rotationOffset*n*                                                                                                                                                                                                                                                                                                                                                |
-| `"invalidTextvalue"`*     | string | Manage textvalue if the data in invalid                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| textvalue*1_to_n* *     | string | Manage textvalue to use for each step between minData (or close to minData) with textvalue1 and maxData (or close to maxData) with textvalue*n*<br />Note, can include formatting string if `"dynValue"` is set to true within view                                                                                                                                                                                                                                                                     |
+| Raktas                    | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"dynData"`               | block  | nurodo visų dinaminių duomenų blokų bloką, kuris bus naudojamas rodiniams. paprastai po paskutinio rodinio.<br />Visi šiame bloke nurodyti raktai bus naudojami kaip rakto reikšmė rodinio bloke:<br />`"dynData": { dynData blocks }`<br />o kiekvienas blokas nurodomas pasirinktiniu pavadinimu ir keliais jame esančiais raktais:<br />`"customName": { one dynData block }`                                                                                                                   |
+| `"valueKey"`              | string | naudojamų dinaminių duomenų pavadinimas (paprastai toks pat kaip susieto rodinio raktas).<br />Jei jo nėra, numatytosios bus tos reikšmės, kurias naudoja šį bloką naudojantis rodinys. <br />pavyzdžiui, galite sukurti vieną bloką baterijos lygio procentams pritaikyti nenurodydami valueKey ir tada tą patį bloką naudoti uploader_battery ir rig_battery pritaikyti                                                                                                                                    |
+| `"minData"`               | int    | nurodo mažiausią AAPS duomenų reikšmę, į kurią atsižvelgiama: pavyzdžiui, jei reikšmė yra sgv (viduje mgdl vienetais) ir minData nustatytas į 50, visos KG reikšmės žemiau 50 mgdl bus nustatytos į 50.<br />- Atkreipkite dėmesį, kad minData ir maxData naudojami dinaminėms reikšmėms apskaičiuoti (pikseliais arba laipsniais).                                                                                                                                                                                  |
+| `"maxData"`               | int    | nurodo didžiausią AAPS duomenų reikšmę, į kurią atsižvelgiama: pavyzdžiui, jei reikšmė yra sgv (viduje mgdl vienetais) ir maxData nustatytas į 330, visos KG reikšmės virš 330 mgdl bus nustatytos į 330.                                                                                                                                                                                                                                                                                                                  |
+| `"leftOffset"`            | block  | Nurodo horizontalų rodinio poslinkį pikseliais pagal min ir max reikšmes.<br />- Jame yra raktas `minValue`, raktas `maxValue` ir raktas `invalidValue` (nebūtinas)<br />- Jei duomenys mažesni arba lygūs minData, rodinys bus pastumtas minValue pikselių, o jei duomenys didesni arba lygūs maxData, rodinys bus pastumtas maxValue pikselių<br />Atkreipkite dėmesį, kad šiam poslinkiui pritaikyti rodinyje `leftOffset` turi būti nustatytas į true                                                |
+| `"topOffset"`             | block  | Nurodo vertikalų rodinio poslinkį pikseliais pagal min ir max reikšmes.<br />- Jame yra raktas `minValue`, raktas `maxValue` ir raktas `invalidValue` (nebūtinas)<br />- Jei duomenys mažesni arba lygūs minData, rodinys bus pastumtas minValue pikselių, o jei duomenys didesni arba lygūs maxData, rodinys bus pastumtas maxValue pikselių<br />Atkreipkite dėmesį, kad šiam poslinkiui pritaikyti rodinyje topOffset turi būti nustatytas į true                                                     |
+| `"rotationOffset"`        | block  | Nurodo rodinio pasukimo kampą laipsniais pagal min ir max reikšmes.<br />- Jame yra raktas `minValue`, raktas `maxValue` ir raktas `invalidValue` (nebūtinas)<br />- Jei duomenys mažesni arba lygūs `minData`, rodinys pasisuks `minValue` laipsnių, o jei duomenys didesni arba lygūs `maxData`, rodinys pasisuks `maxValue` laipsnių<br />Atkreipkite dėmesį, kad šiam sukimui pritaikyti rodinyje `rotationOffset` turi būti nustatytas į true                                                       |
+| `"dynValue"`*             | block  | Nurodo dynValue konvertavimą iš min ir max diapazono į min ir max reikšmes.<br />- Jame yra raktas `minValue`, raktas `maxValue` ir raktas `invalidValue` (nebūtinas)<br />- Jei duomenys mažesni arba lygūs `minData`, siunčiama dynValue bus minValue (konvertuota į double), o jei duomenys didesni arba lygūs `maxData`, apskaičiuota dynValue bus maxValue (konvertuota į double)<br />Atkreipkite dėmesį, kad šiam konvertavimui pritaikyti rodinyje raktas `dynValue` turi būti nustatytas į true |
+| `"minValue"`              | int    | rodiniui pritaikoma galutinė reikšmė (raktas galioja tik leftOffset, topOffset arba rotationOffset bloke)                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `"maxValue"`              | int    | rodiniui pritaikoma galutinė reikšmė (raktas galioja tik leftOffset, topOffset arba rotationOffset bloke)                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `"invalidValue"`          | int    | rodiniui pritaikoma galutinė reikšmė, jei duomenys netinkami (raktas galioja tik leftOffset, topOffset arba rotationOffset bloke)                                                                                                                                                                                                                                                                                                                                                                                          |
+| `"invalidImage"`          | string | `resource_filename`, naudojamas ImageView arba TextView fonui, jei duomenys netinkami                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| image*1_to_n*           | string | `resource_filename` paveikslėlis, naudojamas kiekvienam žingsniui: nuo minData (arba artimos minData) su `"image1"` iki maxData (arba artimos maxData) su image*n*<br />Jei, pavyzdžiui, įdedate 5 paveikslėlius (nuo image1 iki image5), diapazonas tarp minData ir maxData bus padalytas į 5 žingsnius ir pagal duomenų reikšmę bus rodomas atitinkamas paveikslėlis                                                                                                                                               |
+| `"invalidFontColor"`      | string | Valdo fontColor žingsnius, jei duomenys netinkami<br />`"#RRGGBB"` arba `"#AARRGGBB"`: spalva, naudojama, kai gaunami netinkami duomenys (gali būti permatoma, jei AA=00)                                                                                                                                                                                                                                                                                                                                            |
+| fontColor*1_to_n*       | string | Valdo fontColor žingsnius<br />`"#RRGGBB"` arba `"#AARRGGBB"`: spalva kiekvienam žingsniui nuo minData (arba artimos minData) su `"fontColor1"` iki maxData (arba artimos maxData) su fontColor*n*                                                                                                                                                                                                                                                                                                                   |
+| `"invalidColor"`          | string | Valdo fono spalvos arba paveikslėlio spalvos žingsnius, jei duomenys netinkami<br />`"#RRGGBB"` arba `"#AARRGGBB"`: spalva, naudojama, kai gaunami netinkami duomenys (gali būti permatoma, jei AA=00)                                                                                                                                                                                                                                                                                                               |
+| color*1_to_n*           | string | Valdo fono spalvos arba paveikslėlio spalvos žingsnius<br />`"#RRGGBB"` arba `"#AARRGGBB"`: spalva kiekvienam žingsniui nuo minData (arba artimos minData) su `"color1"` iki maxData (arba artimos maxData) su color*n*                                                                                                                                                                                                                                                                                              |
+| `"invalidTextSize"`       | int    | Teksto dydžio žingsnių valdymas, jei duomenys netinkami                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| textsize*1_to_n*        | int    | Valdo kiekvienam žingsniui naudojamą teksto dydį: nuo minData (arba artimos minData) su `"textsize1"` iki maxData (arba artimos maxData) su textsize*n*                                                                                                                                                                                                                                                                                                                                                                    |
+| `"invalidLeftOffset"`     | int    | leftOffset žingsnių valdymas, jei duomenys netinkami                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| leftOffset*1_to_n*      | int    | Valdo kiekvienam žingsniui naudojamą leftOffset: nuo minData (arba artimos minData) su `"leftOffset1"` iki maxData (arba artimos maxData) su leftOffset*n*<br />Pastaba: galima naudoti su dynPref, kad rodinys pasislinktų, kai kitas paslėptas...                                                                                                                                                                                                                                                                  |
+| `"invalidTopOffset"`      | int    | topOffset žingsnių valdymas, jei duomenys netinkami                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| topOffset*1_to_n*       | int    | Valdo kiekvienam žingsniui naudojamą topOffset: nuo minData (arba artimos minData) su topOffset1 iki maxData (arba artimos maxData) su topOffset*n*<br />Pastaba: galima naudoti su dynPref, kad rodinys pasislinktų, kai kitas paslėptas...                                                                                                                                                                                                                                                                         |
+| `"invalidRotationOffset"` | int    | rotationOffset žingsnių valdymas, jei duomenys netinkami                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| rotationOffset*1_to_n*  | int    | Valdo kiekvienam žingsniui naudojamą rotationOffset: nuo minData (arba artimos minData) su rotationOffset1 iki maxData (arba artimos maxData) su rotationOffset*n*                                                                                                                                                                                                                                                                                                                                                         |
+| `"invalidTextvalue"`*     | string | textvalue valdymas, jei duomenys netinkami                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| textvalue*1_to_n* *     | string | Valdo kiekvienam žingsniui naudojamą textvalue: nuo minData (arba artimos minData) su textvalue1 iki maxData (arba artimos maxData) su textvalue*n*<br />Pastaba: gali būti formatavimo eilutė, jei rodinyje `"dynValue"` nustatytas į true                                                                                                                                                                                                                                                                          |
 
-**Key added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
+**Raktas pridėtas pasirinktiniame ciferblate V2.0 ar naujesniame (yra AAPS 3.3.0 wear apk ar naujesnėje)*
 
 (cwf-reference-dyndata-key-values)=
 
-### DynData key values
+### DynData rakto reikšmės
 
-| Key value                                                                                   | key      | comment                                                                                                                                                                                                                                                           |
-| ------------------------------------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"sgv"`<br/>`"sgv_Ext1"` *<br>`"sgv_Ext2"` *                                    | valueKey | default minData = 39 mgdl<br />default maxData = 400 mgdl<br />- Note that real maxData is linked to your sensor and units are always in mgdl for internal values                                                                                     |
-| `"sgvLevel"`<br/>`"sgvLevel_Ext1"` *<br/>`"sgvLevel_Ext2"` *                    | valueKey | default minData = -1 (Hypo)<br />default maxData = 1 (Hyper)<br />if BG is within Range = 0                                                                                                                                                           |
-| `"direction"`<br/>`"direction_Ext1"` *<br/>`"direction_Ext2"` *                 | valueKey | default minData = 1 (double Down)<br />default maxData = 7 (double Up)<br />flat arrow data = 4<br />Error or missing data = 0                                                                                                                  |
-| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                             | valueKey | default minData = -25 mgdl<br />default maxData = 25 mgdl<br />- Note that real min and maxData can be above, and units are always mgdl for internal values                                                                                           |
-| `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *                 | valueKey | default minData = -25 mgdl<br />default maxData = 25 mgdl<br />- Note that real min and maxData can be above, and units are always mgdl for internal values                                                                                           |
-| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *             | valueKey | default minData = 0 (Profile Target)<br />default maxData = 2 (Temp Target)<br />Target is adjusted by the loop = 1<br/>Default or missing information = 0                                                                                      |
-| `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` *                | valueKey | default minData = 0 U<br />default maxData = 500 U                                                                                                                                                                                                          |
-| `"reservoirLevel"`*<br/>`"reservoirLevel_Ext1"` *<br/>`"reservoirLevel_Ext2"` * | valueKey | default minData = 0 (Standard Color)<br/>default maxData = 2 (Urgent Color)<br/>Warning Color = 1                                                                                                                                                     |
-| `"uploader_battery"`                                                                        | valueKey | default minData = 0 %<br />default maxData = 100%                                                                                                                                                                                                           |
-| `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` *           | valueKey | default minData = 0 %<br />default maxData = 100%                                                                                                                                                                                                           |
-| `"timestamp"`<br/>`"timestamp_Ext1"` *<br/>`"timestamp_Ext2"` *                 | valueKey | default minData = 0 min<br />default maxData = 60 min                                                                                                                                                                                                       |
-| `"loop"`<br/>`"loop_Ext1"` *<br/>`"loop_Ext2"` *                                | valueKey | default minData = 0 min<br />default maxData = 28 min<br />- Note that status arrows are in green below 14 min and in red above 14 min so if you put 2 images, you can replace status background with your custom images with default min and maxData |
-| `"day"`                                                                                     | valueKey | default minData = 1<br />default maxData = 31                                                                                                                                                                                                               |
-| `"day_name"`                                                                                | valueKey | default minData = 1<br />default maxData = 7                                                                                                                                                                                                                |
-| `"month"`                                                                                   | valueKey | default minData = 1<br />default maxData = 12                                                                                                                                                                                                               |
-| `"week_number"`                                                                             | valueKey | default minData = 1<br />default maxData = 53                                                                                                                                                                                                               |
+| Rakto reikšmė                                                                               | raktas   | comment                                                                                                                                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `"sgv"`<br/>`"sgv_Ext1"` *<br>`"sgv_Ext2"` *                                    | valueKey | numatytasis minData = 39 mgdl<br />numatytasis maxData = 400 mgdl<br />- Atkreipkite dėmesį, kad tikrasis maxData priklauso nuo jūsų jutiklio, o vidinių reikšmių vienetai visada yra mgdl                                                                               |
+| `"sgvLevel"`<br/>`"sgvLevel_Ext1"` *<br/>`"sgvLevel_Ext2"` *                    | valueKey | numatytasis minData = -1 (hipoglikemija)<br />numatytasis maxData = 1 (hiperglikemija)<br />jei KG yra diapazone = 0                                                                                                                                                     |
+| `"direction"`<br/>`"direction_Ext1"` *<br/>`"direction_Ext2"` *                 | valueKey | numatytasis minData = 1 (dviguba žemyn)<br />numatytasis maxData = 7 (dviguba aukštyn)<br />horizontalios rodyklės duomenys = 4<br />Klaida arba nėra duomenų = 0                                                                                                  |
+| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                             | valueKey | numatytasis minData = -25 mgdl<br />numatytasis maxData = 25 mgdl<br />- Atkreipkite dėmesį, kad tikrieji min ir maxData gali būti didesni, o vidinių reikšmių vienetai visada yra mgdl                                                                                  |
+| `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *                 | valueKey | numatytasis minData = -25 mgdl<br />numatytasis maxData = 25 mgdl<br />- Atkreipkite dėmesį, kad tikrieji min ir maxData gali būti didesni, o vidinių reikšmių vienetai visada yra mgdl                                                                                  |
+| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *             | valueKey | numatytasis minData = 0 (profilio tikslas)<br />numatytasis maxData = 2 (laikinas tikslas)<br />Tikslas pakoreguotas ciklo = 1<br/>Numatytoji arba trūkstama informacija = 0                                                                                       |
+| `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` *                | valueKey | numatytasis minData = 0 V<br />numatytasis maxData = 500 V                                                                                                                                                                                                                     |
+| `"reservoirLevel"`*<br/>`"reservoirLevel_Ext1"` *<br/>`"reservoirLevel_Ext2"` * | valueKey | numatytasis minData = 0 (standartinė spalva)<br/>numatytasis maxData = 2 (skubi spalva)<br/>Įspėjimo spalva = 1                                                                                                                                                          |
+| `"uploader_battery"`                                                                        | valueKey | numatytasis minData = 0 %<br />numatytasis maxData = 100%                                                                                                                                                                                                                      |
+| `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` *           | valueKey | numatytasis minData = 0 %<br />numatytasis maxData = 100%                                                                                                                                                                                                                      |
+| `"timestamp"`<br/>`"timestamp_Ext1"` *<br/>`"timestamp_Ext2"` *                 | valueKey | numatytasis minData = 0 min<br />numatytasis maxData = 60 min                                                                                                                                                                                                                  |
+| `"loop"`<br/>`"loop_Ext1"` *<br/>`"loop_Ext2"` *                                | valueKey | numatytasis minData = 0 min<br />numatytasis maxData = 28 min<br />- Atkreipkite dėmesį, kad būsenos rodyklės yra žalios iki 14 min ir raudonos po 14 min, todėl įdėję 2 paveikslėlius galite pakeisti būsenos foną savo paveikslėliais su numatytaisiais min ir maxData |
+| `"day"`                                                                                     | valueKey | numatytasis minData = 1<br />numatytasis maxData = 31                                                                                                                                                                                                                          |
+| `"day_name"`                                                                                | valueKey | numatytasis minData = 1<br />numatytasis maxData = 7                                                                                                                                                                                                                           |
+| `"month"`                                                                                   | valueKey | numatytasis minData = 1<br />numatytasis maxData = 12                                                                                                                                                                                                                          |
+| `"week_number"`                                                                             | valueKey | numatytasis minData = 1<br />numatytasis maxData = 53                                                                                                                                                                                                                          |
 
-**Key added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
+**Raktas pridėtas pasirinktiniame ciferblate V2.0 ar naujesniame (yra AAPS 3.3.0 wear apk ar naujesnėje)*
 
 (cwf-reference-dynpref-keys)=
 
-### DynPref keys
+### DynPref raktai
 
-| Key              | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ---------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"dynPref"`      | block  | define the block of all dynamic preference blocks that will be used for the views. Generally after the last view or after the dynData block.<br />All the keys defined within this block will be used as key Value within view block:<br />`"dynPref": { dynPref blocks }`<br />and each block is defined by a custom name and several keys inside:<br />`"customName": { one dynPref block }`                                                                                                                 |
-| `"dynPref"`      | string | *Within a view Block*<br />name of dynamic dynPref block to use (generally same that associated view key or associated preference).                                                                                                                                                                                                                                                                                                                                                                                              |
-| `"dynPref"`      | string | *Within a partial dynData Block included into a dynPref Block*<br />name of dynamic dynPref block to use to complete the dynData block. This allow you to tune a dynData block according to several preferences                                                                                                                                                                                                                                                                                                                  |
-| `"dynPrefColor"` | string | this key is specific to the main block with all main colors (highColor, midColor, lowColor, graph colors...). you will use it if you want to tune main colors according to preferences                                                                                                                                                                                                                                                                                                                                                 |
-| `"prefKey"`      | string | specify the preference key Value that will be used to get user preferences (see [PrefKey values](#cwf-reference-prefkey-values) below). This key should be used within a `dynPref` block.<br />Then according to preference key, the `dynPref`block should contains as many keys than prefKey has values.<br />Note that most of the time preferences are "Boolean" so you should find within the dynPref block these two dynData blocks: <br />`"true": { dynData Block },`<br />`"false": { dynData Block }` |
-| `"true"`         | block  | most preferences will set a boolean `"true"` or `"false"`. You will specify the dynData block to use if preference selected by user is true.<br />Note that if the block also contains a `"dynPref":`key, the dynData block will be merged with other block. This allow you to tune for example color according to one preference, and textsize according to another preference                                                                                                                                                  |
-| `"false"`        | block  | most preferences will set a boolean `"true"` or `"false"`. You will specify the dynData block to use if preference selected by user is false.<br />Note that if the block also contains a `"dynPref":`key, the dynData block will be merged with other block. This allow you to tune for example color according to one preference, and textsize according to another preference                                                                                                                                                 |
+| Raktas           | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ---------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `"dynPref"`      | block  | nurodo visų dinaminių nustatymų blokų bloką, kuris bus naudojamas rodiniams. Paprastai po paskutinio rodinio arba po dynData bloko.<br />Visi šiame bloke nurodyti raktai bus naudojami kaip rakto reikšmė rodinio bloke:<br />`"dynPref": { dynPref blocks }`<br />o kiekvienas blokas nurodomas pasirinktiniu pavadinimu ir keliais jame esančiais raktais:<br />`"customName": { one dynPref block }`                                                                                         |
+| `"dynPref"`      | string | *Rodinio bloke*<br />naudojamo dinaminio dynPref bloko pavadinimas (paprastai toks pat kaip susieto rodinio raktas arba susietas nustatymas).                                                                                                                                                                                                                                                                                                                                                                      |
+| `"dynPref"`      | string | *Daliniame dynData bloke, esančiame dynPref bloke*<br />dinaminio dynPref bloko, kuriuo papildomas dynData blokas, pavadinimas. Tai leidžia pritaikyti dynData bloką pagal kelis nustatymus                                                                                                                                                                                                                                                                                                                        |
+| `"dynPrefColor"` | string | šis raktas skirtas tik pagrindiniam blokui su visomis pagrindinėmis spalvomis (highColor, midColor, lowColor, grafiko spalvos...). jį naudosite, jei norite pagrindines spalvas keisti pagal nustatymus                                                                                                                                                                                                                                                                                                                  |
+| `"prefKey"`      | string | nurodo nustatymo rakto reikšmę, kuri bus naudojama naudotojo nustatymams gauti (žr. [PrefKey reikšmės](#cwf-reference-prefkey-values) žemiau). Šis raktas turi būti naudojamas `dynPref` bloke.<br />Tada pagal nustatymo raktą `dynPref` bloke turi būti tiek raktų, kiek prefKey turi reikšmių.<br />Atkreipkite dėmesį, kad dažniausiai nustatymai yra „Boolean“, todėl dynPref bloke turėtų būti šie du dynData blokai: <br />`"true": { dynData Block },`<br />`"false": { dynData Block }` |
+| `"true"`         | block  | dauguma nustatymų nustato loginę reikšmę `"true"` arba `"false"`. Nurodysite dynData bloką, naudojamą, jei naudotojo pasirinktas nustatymas yra true.<br />Atkreipkite dėmesį, kad jei bloke taip pat yra raktas `"dynPref":`, dynData blokas bus sujungtas su kitu bloku. Tai leidžia, pavyzdžiui, keisti spalvą pagal vieną nustatymą, o textsize – pagal kitą nustatymą                                                                                                                                         |
+| `"false"`        | block  | dauguma nustatymų nustato loginę reikšmę `"true"` arba `"false"`. Nurodysite dynData bloką, naudojamą, jei naudotojo pasirinktas nustatymas yra false.<br />Atkreipkite dėmesį, kad jei bloke taip pat yra raktas `"dynPref":`, dynData blokas bus sujungtas su kitu bloku. Tai leidžia, pavyzdžiui, keisti spalvą pagal vieną nustatymą, o textsize – pagal kitą nustatymą                                                                                                                                        |
 
 (cwf-reference-prefkey-values)=
 
-### PrefKey values
+### PrefKey reikšmės
 
-All keys included into [Preference keys](#cwf-reference-preference-keys) chapter above can be used to tune view parameters
+Visi raktai, išvardyti skyriuje [Nustatymų raktai](#cwf-reference-preference-keys) aukščiau, gali būti naudojami rodinio parametrams keisti
 
-You can also use these additional keys below included into AAPS (Custom) specific parameters:
+Taip pat galite naudoti šiuos papildomus raktus, esančius AAPS (Custom) specialiuose parametruose:
 
-| Key                   | type    | comment                                                                                                                                                                                                                                                                                                                                                             |
+| Raktas                | type    | comment                                                                                                                                                                                                                                                                                                                                                             |
 | --------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"key_units"`         | boolean | *true*: if units selected on AAPS is mgdl<br />*false*: if units selected on AAPS is mmol                                                                                                                                                                                                                                                                     |
-| `"key_dark"`          | boolean | *true*: to use a dark background<br />*false*: to use a light background<br />Note: this parameter is often used in previous AAPS watchfaces (AAPS, AAPS V2...)                                                                                                                                                                                         |
-| `"key_match_divider"` | boolean | *true*: divider included into AAPS, AAPS v2 watchfaces will not be visible<br />*false*: divider included into AAPS, AAPS v2 watchfaces will be visible<br />Note: this setting is often combine with dark preference (using `dynPref` key into `dynData`block) to set text color (and background) on the same or opposite color than dark parameter... |
+| `"key_units"`         | boolean | *true*: jei AAPS pasirinkti vienetai yra mgdl<br />*false*: jei AAPS pasirinkti vienetai yra mmol                                                                                                                                                                                                                                                             |
+| `"key_dark"`          | boolean | *true*: naudoti tamsų foną<br />*false*: naudoti šviesų foną<br />Pastaba: šis parametras dažnai naudojamas ankstesniuose AAPS ciferblatuose (AAPS, AAPS V2...)                                                                                                                                                                                         |
+| `"key_match_divider"` | boolean | *true*: skirtukas įtrauktas į AAPS, AAPS v2 ciferblatuose nebus matomas<br />*false*: skirtukas įtrauktas į AAPS, AAPS v2 ciferblatuose bus matomas<br />Pastaba: šis nustatymas dažnai derinamas su nustatymu „Tamsus“ (naudojant raktą `dynPref` bloke `dynData`), kad teksto spalva (ir fonas) būtų tokia pati arba priešinga parametrui „Tamsus“... |

@@ -1,6 +1,6 @@
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The DASH driver is a well-established way to loop with Omnipod.
+Bu talimatlar **Omnipod DASH** nesli pompayı **(Omnipod Eros DEĞİL)** yapılandırmak içindir. DASH sürücüsü, Omnipod ile döngü kurmanın iyice yerleşmiş bir yoludur.
 
 ```{contents} Table of contents
 :depth: 1
@@ -9,354 +9,354 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 
 ## Omnipod DASH özellikleri
 
-Key characteristics of the **Omnipod DASH** ('DASH'):
+**Omnipod DASH**'in ('DASH') temel özellikleri:
 
-- The DASH pods are identified by a **blue needle cap** (the older EROS pod has a clear needle cap). The pods are otherwise identical in terms of physical dimensions.
-- DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-- The DASH's Bluetooth connection is used only when sending a command (e.g a Bolus), and disconnects right after issuing the command.
-- **AAPS** will wait for pod's accessibility to send commands.
-- On pod activation, **AAPS** will find and connect to a new DASH pod.
-- Expected range from phone: 5-10 meters (YMMV).
+- DASH Pod'ları **mavi iğne kapağından** tanınır (eski EROS Pod'unun iğne kapağı şeffaftır). Bunun dışında Pod'lar fiziksel boyut olarak birbirinin aynıdır.
+- DASH için bir BLE bağlantı/köprü cihazı gerekmez (RileyLink, OrangeLink veya EmaLink GEREKMEZ).
+- DASH'in Bluetooth bağlantısı yalnızca bir komut gönderilirken (ör. bir Bolus) kullanılır ve komut verildikten hemen sonra kesilir.
+- **AAPS**, komut göndermek için Pod'a erişilebilir olmasını bekler.
+- Pod etkinleştirilirken **AAPS** yeni bir DASH Pod'u bulur ve ona bağlanır.
+- Telefondan beklenen menzil: 5-10 metre (duruma göre değişebilir).
 
 (omnipod-dash-constraints)=
 
-## Omnipod DASH known AAPS constraints/issues
-- General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to turn on **Bluetooth bonding** (in the **Advanced Settings** section of the [Dash settings](#omnipod-dash-advanced-settings)) to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
-- DST and timezone changes are not applied automatically. After a clock change you must update the pod manually: press **Refresh** on the DASH pump screen, then press **Set time** (shown when the pod and phone time zones differ) or perform a **Profile Switch** (see [Timezone change for Omnipod Dash](#timezone-traveling-with-pumps)).
-- Dash only supports basal rate in 0.05 U/h steps. If you try to set Basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you open **Pod History** on the DASH pump screen, it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
-- The settings file contains the active Pod session. Export your settings after each Pod activation, and see [Export and import settings](#omnipod-dash-export-import) before importing settings.
-- When setting a new basal profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basal profile won't automatically re-start. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
-- If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
-- There are a number of known issues with Bluetooth which can cause pod activation problems. See [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md) for the known issue and solutions to these problems.
+## Omnipod DASH: AAPS'teki bilinen kısıtlamalar/sorunlar
+- Genel öneri, **AAPS**'i Android 14 veya 16'da çalıştırmaktır. Android 15 ile ilgili topluluktan bildirilen birçok [sorun](https://github.com/nightscout/AndroidAPS/issues/3471) vardır. Ancak Android 15 kullanıyorsanız, Pod'ları başarıyla etkinleştirmek ve kullanmak için büyük olasılıkla **Bluetooth eşleşmesi** ayarını açmanız gerekecek ([Dash ayarlarının](#omnipod-dash-advanced-settings) **Gelişmiş Ayarlar** bölümünde); eşleşme (bonding) ayarları hakkında daha fazla bilgi için [Genel sorun giderme](../GettingHelp/GeneralTroubleshooting.md) sayfasına bakın.
+- Yaz saati (DST) ve saat dilimi değişiklikleri otomatik olarak uygulanmaz. Saat değiştikten sonra Pod'u elle güncellemeniz gerekir: DASH pompa ekranında **Yenile**'ye, ardından **Saati ayarla**'ya basın (Pod ile telefonun saat dilimleri farklı olduğunda görünür) veya bir **Profil değişimi** yapın (bkz. [Omnipod Dash için saat dilimi değişikliği](#timezone-traveling-with-pumps)).
+- Dash, bazal oranı yalnızca 0,05 Ü/sa adımlarla destekler. **AAPS profilinizde** bazalı 0,01 adımlarla ayarlamaya çalışırsanız, Pod oranı 0,05 adımlara yuvarlasa da AAPS uyarı vermez. DASH pompa ekranında **Pod Geçmişi**'ni açarsanız, 0,05 bazal ayarlandığını gösterir. Bu aynı zamanda **AAPS**'te DASH için izin verilen en düşük bazal oranın 0,05 Ü/sa olduğu anlamına gelir.
+- Ayar dosyası etkin Pod oturumunu içerir. Her Pod etkinleştirmesinden sonra ayarlarınızı dışa aktarın ve ayarları içe aktarmadan önce [Ayarları dışa ve içe aktarma](#omnipod-dash-export-import) bölümüne bakın.
+- Yeni bir bazal profil ayarlanırken DASH, yeni bazal **Profili** ayarlamadan önce iletimi askıya alır. İletişim kesilirse veya bir hata olursa bazal profil kendiliğinden yeniden başlamaz. Ayrıntılar için [İnsülin İletimine Devam Etme](#omnipod-dash-resuming-insulin-delivery) bölümüne bakın.
+- Alarmlar yapılandırılmışsa ve Pod'un süresi dolmak üzereyse, alarmlar susturulana kadar Pod bip sesi çıkarmaya devam eder; ayrıntılar için [Pod Alarmlarını Susturma](#omnipod-dash-silencing-pod-alerts) bölümüne bakın.
+- Pod etkinleştirme sorunlarına yol açabilen, Bluetooth ile ilgili bir dizi bilinen sorun vardır. Bilinen sorun ve bu sorunların çözümleri için [Bluetooth sorunlarını giderme](../GettingHelp/BluetoothTroubleshooting.md) sayfasına bakın.
 
 (hardware-software-requirements)=
 
 (omnipod-dash-hardware-software-requirements)=
 ## Donanım ve yazılım gereksinimleri
 
-- Omnipod DASH is identified by the blue needle cap.
+- Omnipod DASH, mavi iğne kapağından tanınır.
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-- **A Compatible Android phone** with Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info). In addition, the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
-    -  The **AAPS** Omnipod Dash driver connects with the DASH Pod using Bluetooth.  
-      **AAPS** will automatically establish a new Bluetooth connection to the Pod every time it needs to send a command (e.g a Bolus), after sending the command the Bluetooth connection is immediately disconnected.
+- Bluetooth Low Energy (BLE) destekli **uyumlu bir Android telefon** (daha fazla bilgi için [Telefonlar](../Getting-Started/Phones.md) sayfasına bakın). Ayrıca aşağıdaki bilgiler, DASH'i uyumlu bir telefonda başarıyla etkinleştirmek ve kullanmak için dikkat etmeniz gereken diğer önemli konularda size yol gösterecektir:
+    -  **AAPS** Omnipod Dash sürücüsü, DASH Pod'una Bluetooth ile bağlanır.  
+      **AAPS**, bir komut göndermesi gerektiğinde (ör. bir Bolus) her seferinde Pod ile otomatik olarak yeni bir Bluetooth bağlantısı kurar; komutu gönderdikten sonra Bluetooth bağlantısı hemen kesilir.
        - **NOT:**
-         - The Bluetooth connection can be interrupted/disturbed by other Bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... Devices like this can cause connection errors or pod activation issues on some models of phones. It's a good idea to review the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) list for known working configurations when choosing the phone for an Omnipod DASH setup.
-         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#omnipod-dash-troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
-    - The phone must run **Android 12 or newer**, with **AAPS** built and installed using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions. Always run the latest released version.
-- A supported [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
+         - Bluetooth bağlantısı, **AAPS**'i çalıştıran telefona bağlı kulaklık gibi diğer Bluetooth cihazları tarafından kesilebilir veya bozulabilir. Bu tür cihazlar bazı telefon modellerinde bağlantı hatalarına veya Pod etkinleştirme sorunlarına neden olabilir. Omnipod DASH kurulumu için telefon seçerken, çalıştığı bilinen yapılandırmalar için [test edilmiş donanım kurulumları](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) listesine göz atmanız iyi olur.
+         - Pod etkinleştirme sorunlarına yol açabilen, Bluetooth ile ilgili bir dizi bilinen sorun vardır (diğer Bluetooth sorunlarıyla ilgili öneriler için [Sorun giderme](#omnipod-dash-troubleshooting) bölümüne bakın), özellikle de [Bluetooth ile ilgili sorunlar](#omnipod-dash-bluetooth-related-issues) bölümüne.
+    - Telefonda **Android 12 veya daha yenisi** çalışmalı ve **AAPS**, [**APK oluşturma**](../SettingUpAaps/BuildingAaps.md) talimatlarına göre oluşturulup kurulmalıdır. Her zaman yayınlanmış en son sürümü kullanın.
+- Desteklenen bir [**Sürekli Glikoz Monitörü (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-The instructions below explain how to activate a new pod session using **AAPS**. You should wait for your current Pod to be close to expiry, as you will need to activate a new Pod with **AAPS**. Once a pod is de-activated it cannot be reused/re-activated, the de-activation is final.
+Aşağıdaki talimatlar, **AAPS** ile yeni bir Pod oturumunun nasıl etkinleştirileceğini açıklar. Mevcut Pod'unuzun süresi dolmak üzere olana kadar beklemelisiniz, çünkü **AAPS** ile yeni bir Pod etkinleştirmeniz gerekecek. Bir Pod devre dışı bırakıldıktan sonra yeniden kullanılamaz veya yeniden etkinleştirilemez; devre dışı bırakma kesindir.
 
 ## Başlamadan önce
 
-Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as  **[Omnipod and AAPS Constraints and Issues](#omnipod-dash-constraints)** to avoid running into a known problem.
+Bilinen bir sorunla karşılaşmamak için bu kılavuzun tamamını, **Başlamadan Önce** bölümünü ve **[Omnipod ve AAPS Kısıtlamaları ve Sorunları](#omnipod-dash-constraints)** bölümünü okuyup anladığınızdan emin olun.
 
-### **SAFETY FIRST** - You **SHOULD NOT** try to connect **AAPS** to a pod for the first time without having access to all of the following:
-1. Extra pods (3 or more spare)
-2. Spare Insulin and MDI equipment
-3. A working Omnipod PDM (In case **AAPS** fails)
-4. Supported Phones are a must! (See [Hardware/Software Requirements](#hardware-software-requirements))
-5. Correct version of AAPS built and installed
+### **ÖNCE GÜVENLİK** - Aşağıdakilerin tümüne erişiminiz olmadan **AAPS**'i bir Pod'a ilk kez bağlamaya **ÇALIŞMAMALISINIZ**:
+1. Ek Pod'lar (3 veya daha fazla yedek)
+2. Yedek insülin ve MDI (kalem/şırınga ile tedavi) malzemeleri
+3. Çalışan bir Omnipod PDM (**AAPS** çalışmazsa diye)
+4. Desteklenen telefonlar şarttır! (Bkz. [Donanım/Yazılım Gereksinimleri](#hardware-software-requirements))
+5. AAPS'in doğru sürümü oluşturulmuş ve kurulmuş olmalı
 
-### Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.
-- Before using **AAPS** you or your care giver would have had to manage the Pod using the Omnipod PDM (or in some regions a Phone app) to send commands to your DASH (e.g a Bolus).
-- The DASH can only facilitate a single Bluetooth device (e.g PDM or Phone) connection to manage and send commands.
-- The device that successfully activates the pod is the only device allowed to communicate with that Pod from that point forward. This means that once you activate a DASH with your Android phone using **AAPS**, **you will no longer be able to use your PDM with that pod!** For the time that Pod is active the **AAPS** Dash driver running on your Android phone is now the new PDM for your pod.
-- **DO NOT Throw away your PDM!** It is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or **AAPS** is not working correctly.
+### AAPS Dash sürücüsü Pod'unuzu etkinleştirdikten sonra Omnipod Dash PDM'niz gereksiz hale gelir.
+- **AAPS**'i kullanmadan önce siz veya bakımınızı yapan kişi, DASH'inize komut göndermek (ör. bir Bolus) için Pod'u Omnipod PDM ile (veya bazı bölgelerde bir telefon uygulamasıyla) yönetiyordunuz.
+- DASH, yönetim ve komut gönderme için yalnızca tek bir Bluetooth cihazıyla (ör. PDM veya telefon) bağlantı kurabilir.
+- Pod'u başarıyla etkinleştiren cihaz, o andan itibaren o Pod ile iletişim kurmasına izin verilen tek cihazdır. Bu, DASH'i Android telefonunuzda **AAPS** ile etkinleştirdiğinizde **o Pod ile artık PDM'nizi kullanamayacağınız** anlamına gelir! Pod etkin olduğu sürece Android telefonunuzda çalışan **AAPS** Dash sürücüsü, Pod'unuzun yeni PDM'sidir.
+- **PDM'nizi ATMAYIN!** Yedek olarak ve acil durumlar için, örneğin telefonunuz kaybolursa veya **AAPS** düzgün çalışmazsa, saklamanız önerilir.
 
-### Your pod **WILL NOT** stop delivering insulin when it is not connected to AAPS.
-Default basal rates are programmed on the pod on activation as defined in the current active [**Profile**](../SettingUpAaps/YourAapsProfile.md).  
-As long as **AAPS** is operational it will send basal rate adjustment commands that run for a maximum of 120 minutes.  
-When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod ➜ phone distance) the pod will automatically fall back to default basal rates as defined in your [**Profile**](../SettingUpAaps/YourAapsProfile.md).
+### Pod'unuz AAPS'e bağlı olmadığında insülin iletimini **DURDURMAZ**.
+Varsayılan bazal oranlar, etkinleştirme sırasında o anda etkin olan [**Profilde**](../SettingUpAaps/YourAapsProfile.md) tanımlandığı şekilde Pod'a programlanır.  
+**AAPS** çalıştığı sürece, en fazla 120 dakika süren bazal oran ayarlama komutları gönderir.  
+Pod herhangi bir nedenle yeni komut almazsa (örneğin Pod ➜ telefon mesafesi nedeniyle iletişim kesildiği için), Pod otomatik olarak [**Profilinizde**](../SettingUpAaps/YourAapsProfile.md) tanımlanan varsayılan bazal oranlara geri döner.
 
-### AAPS Profile(s) do not support 30 minute basal rate time frames
-If you are new to **AAPS** and are setting up your basal rate [**Profile**](../SettingUpAaps/YourAapsProfile.md) for the first time, please be aware that basal rates starting on a half-hour basis are not supported. For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact Basal **Profile** in **AAPS**.  
-You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does NOT support this feature.
+### AAPS Profilleri 30 dakikalık bazal oran zaman dilimlerini desteklemez
+**AAPS**'te yeniyseniz ve bazal oran [**Profilinizi**](../SettingUpAaps/YourAapsProfile.md) ilk kez ayarlıyorsanız, yarım saatte başlayan bazal oranların desteklenmediğini unutmayın. Örneğin Omnipod PDM'nizde 09:30'da başlayan ve 2 saat sürüp 11:30'da biten 1,1 ünitelik bir bazal oranınız varsa, bu Bazal **Profilini** **AAPS**'te birebir aynı şekilde oluşturmak mümkün değildir.  
+Bu 1,1 ünitelik bazal oranın zaman aralığını 9:00-11:00 veya 10:00-12:00 olarak değiştirmeniz gerekir. DASH donanımı 30 dakikalık bazal oran **Profil** adımlarını desteklese de **AAPS** bu özelliği DESTEKLEMEZ.
 
-### 0U/h Profile basal rates are NOT supported in AAPS
-While the DASH does support a zero basal rate, **AAPS** uses multiples of the user's **Profile** basal rate to determine automated treatment; it cannot function with a zero basal rate.  
-Instead a temporary zero basal rate can be achieved through the "Disconnect pump" function, or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.  
-**NOTE:** The lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
+### 0 Ü/sa Profil bazal oranları AAPS'te DESTEKLENMEZ
+DASH sıfır bazal oranını desteklese de **AAPS**, otomatik tedaviyi belirlemek için kullanıcının **Profil** bazal oranının katlarını kullanır; bu nedenle sıfır bazal oranıyla çalışamaz.  
+Bunun yerine geçici sıfır bazal oranı, "Pompa bağlantısını kes" işleviyle ya da Döngüyü devre dışı bırak/Geçici bazal oranı veya Döngüyü askıya al/Geçici bazal oranı birleşimiyle elde edilebilir.  
+**NOT:** **AAPS**'te DASH için izin verilen en düşük bazal oran 0,05 Ü/sa'tir.
 
-## Selecting Dash in AAPS
+## AAPS'te Dash'i seçme
 
-There are **two** ways to select the Omnipod DASH driver in **AAPS**:
+**AAPS**'te Omnipod DASH sürücüsünü seçmenin **iki** yolu vardır:
 
 ### Option 1: New installations
 
-When you install **AAPS** for the first time, the **Setup Wizard** guides you through the key features and installation requirements of **AAPS**. When you reach the **Pump** step, select **Omnipod Dash**.
+**AAPS**'i ilk kez kurduğunuzda **Kurulum Sihirbazı**, **AAPS**'in temel özellikleri ve kurulum gereksinimleri konusunda size yol gösterir. **Pompa** adımına geldiğinizde **Omnipod Dash**'i seçin.
 
-![The Pump step of the setup wizard with Omnipod Dash](../images/setup-wizard/Wizard-Pump-Omnipod.png)
+![Kurulum sihirbazının Omnipod Dash seçili Pompa adımı](../images/setup-wizard/Wizard-Pump-Omnipod.png)
 
-If you are not sure yet, you can select **Virtual Pump** for now and select **Omnipod Dash** later, after setting up **AAPS** (see Option 2).
+Henüz emin değilseniz, şimdilik **Sanal pompa**'yı seçebilir ve **AAPS**'i kurduktan sonra **Omnipod Dash**'i seçebilirsiniz (bkz. Seçenek 2).
 
 (omnipod-dash-option-2-config-builder)=
-### Option 2: The Configuration screen
+### Seçenek 2: Konfigürasyon ekranı
 
-On an existing installation you can select the **Omnipod Dash** pump from the **Configuration** screen:
+Mevcut bir kurulumda **Omnipod Dash** pompasını **Konfigürasyon** ekranından seçebilirsiniz:
 
-1. Open the **menu** (☰) in the top-left corner of the main screen and select **Configuration**.
-2. Tap **Pump** and select the radio button of **Omnipod Dash** (*"Pump integration for Omnipod Dash (the new, Bluetooth-enabled model with a blue needle cap)"*).
+1. Ana ekranın sol üst köşesindeki **menüyü** (☰) açın ve **Konfigürasyon**'u seçin.
+2. **Pompa**'ya dokunun ve **Omnipod Dash** seçenek düğmesini seçin (*"Omnipod Dash için pompa entegrasyonu (mavi iğne başlıklı, Bluetooth özellikli model)."*).
 
-3. Once it is selected, the **Omnipod Dash** card shows two buttons:
-   - **Settings** opens the [Dash settings](#omnipod-dash-settings).
-   - **Open plugin** opens the [DASH pump screen](#omnipod-dash-tab).
+3. Seçildikten sonra **Omnipod Dash** kartında iki düğme görünür:
+   - **Ayarlar**, [Dash ayarlarını](#omnipod-dash-settings) açar.
+   - **Eklentiyi aç**, [DASH pompa ekranını](#omnipod-dash-tab) açar.
 
-   ![The Omnipod Dash plugin enabled in Configuration > Pump](../images/v4/Pumps/dash_enabled.png)
+   ![Konfigürasyon > Pompa bölümünde etkinleştirilmiş Omnipod Dash eklentisi](../images/v4/Pumps/dash_enabled.png)
 
 ### Verification of Omnipod Driver Selection
 
-To check that **Omnipod Dash** is selected, open **Manage** (bottom navigation of the main screen) and tap **Pump**. The DASH pump screen opens, as shown in the next section.
+**Omnipod Dash**'in seçili olduğunu kontrol etmek için **Yönet**'i (ana ekranın alt gezinme çubuğu) açın ve **Pompa**'ya dokunun. Bir sonraki bölümde gösterildiği gibi DASH pompa ekranı açılır.
 
 (omnipod-dash-tab)=
 
-## The DASH pump screen
+## DASH pompa ekranı
 
-The DASH pump screen is where you manage your pods: activate and deactivate them, refresh the pod status, silence alerts and look at the pod history. Open it with **Manage** > **Pump**, or with **Open plugin** on the **Omnipod Dash** card in **Configuration** > **Pump**.
+DASH pompa ekranı, Pod'larınızı yönettiğiniz yerdir: Pod'ları etkinleştirir ve devre dışı bırakır, Pod durumunu yeniler, alarmları susturur ve Pod geçmişine bakarsınız. Bu ekranı **Yönet** > **Pompa** ile veya **Konfigürasyon** > **Pompa** içindeki **Omnipod Dash** kartında **Eklentiyi aç** ile açın.
 
-This is the screen without an active pod:
+Etkin Pod olmadığında ekran şöyledir:
 
-![The DASH pump screen without an active pod](../images/v4/Pumps/dash_pump_screen.png)
+![Etkin Pod olmadan DASH pompa ekranı](../images/v4/Pumps/dash_pump_screen.png)
 
-And this is the screen with an active pod:
+Etkin bir Pod varken ekran şöyledir:
 
-![The DASH pump screen with an active pod](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
+![Etkin Pod ile DASH pompa ekranı](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
-The **Settings** (gear) icon in the top-right corner opens the [Dash settings](#omnipod-dash-settings).
+Sağ üst köşedeki **Ayarlar** (dişli) simgesi [Dash ayarlarını](#omnipod-dash-settings) açar.
 
-***NOTE:** If a field on the pump screen shows (uncertain), press **Refresh** to update the pod status.*
+***NOT:** Pompa ekranındaki bir alan (belirsiz) gösteriyorsa, Pod durumunu güncellemek için **Yenile**'ye basın.*
 
 ### Fields
 
-- **Bluetooth Address:** The Bluetooth address of the pod.
+- **Bluetooth Adresi:** Pod'un Bluetooth adresi.
 
-- **Connection quality:** How reliably **AAPS** connects to the pod, shown as *successful connections / all connection attempts :: success rate*, for example `412/420 :: 98.10 %`. After more than 50 successful connections, the value turns yellow below 90 % and red below 70 %. A low value points to a Bluetooth problem (see [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues)).
+- **Bağlantı kalitesi:** **AAPS**'in Pod'a ne kadar güvenilir bağlandığı; *başarılı bağlantılar / tüm bağlantı denemeleri :: başarı oranı* olarak gösterilir, örneğin `412/420 :: 98.10 %`. 50'den fazla başarılı bağlantıdan sonra değer %90'ın altında sarıya, %70'in altında kırmızıya döner. Düşük bir değer Bluetooth sorununa işaret eder (bkz. [Bluetooth ile ilgili sorunlar](#omnipod-dash-bluetooth-related-issues)).
 
-- **Delivery Status:** The raw delivery status reported by the pod. This field is shown only in engineering mode builds.
+- **İletim Durumu:** Pod'un bildirdiği ham iletim durumu. Bu alan yalnızca mühendislik modu sürümlerinde gösterilir.
 
-- **Unique ID:** The unique ID **AAPS** gave to the pod during activation.
+- **Özgün kimlik:** **AAPS**'in etkinleştirme sırasında Pod'a verdiği benzersiz kimlik.
 
-- **LOT Number:** The production lot number of the pod.
+- **Parti Numarası:** Pod'un üretim parti (LOT) numarası.
 
-- **Sequence Number:** The sequence number of the pod.
+- **Sıra Numarası:** Pod'un sıra numarası.
 
-- **Firmware Version:** The firmware and Bluetooth versions of the pod.
+- **Üretici yazılımı sürümü:** Pod'un üretici yazılımı ve Bluetooth sürümleri.
 
-- **Time on Pod:** The current time on the pod, with its time zone. The text turns red when the time zone of the pod is different from the time zone of the phone, and yellow when the pod time is more than 10 minutes off.
+- **Pod saati:** Pod'daki geçerli saat ve saat dilimi. Pod'un saat dilimi telefonun saat diliminden farklı olduğunda metin kırmızıya, Pod saati 10 dakikadan fazla saptığında sarıya döner.
 
-- **Pod Expires:** The date and time when the pod expires (72 hours after activation). The text turns yellow in the last 4 hours before this time. It never turns red, because the pod keeps delivering insulin after it.
+- **Pod Sona Erme:** Pod'un süresinin dolacağı tarih ve saat (etkinleştirmeden 72 saat sonra). Bu zamandan önceki son 4 saatte metin sarıya döner. Pod bu zamandan sonra da insülin vermeye devam ettiği için metin hiçbir zaman kırmızıya dönmez.
 
-- **Pod Hard End:** The end of the pod's grace period (8 hours after **Pod Expires**, for a maximum pod life of 80 hours). The text turns yellow when the grace period starts (at **Pod Expires**) and red in the last 4 hours before the hard end. During the grace period it also shows the time left, for example *(17m remaining)*. The pod stops delivering insulin at the hard end and must be changed.
+- **Pod Zorunlu Sonu:** Pod'un ek süresinin sonu (**Pod Sona Erme** zamanından 8 saat sonra; en uzun Pod ömrü 80 saattir). Ek süre başladığında (**Pod Sona Erme** zamanında) metin sarıya, zorunlu sondan önceki son 4 saatte kırmızıya döner. Ek süre boyunca kalan süreyi de gösterir, örneğin *(17dk kaldı)*. Pod, zorunlu sonda insülin vermeyi durdurur ve değiştirilmesi gerekir.
 
-- **Pod Status:** The state of the pod: **No Active Pod**, **Setup in progress**, **Running**, **Suspended** or, after a pod fault, **ALARM**.
+- **Pod Durumu:** Pod'un durumu: **Aktif Pod Yok**, **Kurulum devam ediyor**, **Çalışıyor**, **Askıya Alındı** veya bir Pod hatasından sonra **ALARM**.
 
-- **Last Connection:** How long ago **AAPS** last communicated with the pod.
+- **Son Bağlantı:** **AAPS**'in Pod ile en son ne kadar önce iletişim kurduğu.
 
-  - *Moments ago* - less than 10 seconds ago.
+  - *Az önce* - 10 saniyeden kısa bir süre önce.
 
-  - *Less than a minute ago* - between 10 and 60 seconds ago.
+  - *Bir dakikadan az bir süre önce* - 10 ile 60 saniye önce.
 
-  - *XX minutes ago* - more than 1 minute ago (and *X hours and XX minutes ago* after an hour).
+  - *XX dakika önce* - 1 dakikadan daha önce (bir saatten sonra *X saat ve XX dakika önce*).
 
-- **Last bolus:** The amount of the last bolus sent to the pod and how long ago it was given. An unconfirmed bolus is marked (uncertain).
+- **Son Bolus:** Pod'a gönderilen son bolusun miktarı ve ne kadar önce verildiği. Onaylanmamış bir bolus (belirsiz) olarak işaretlenir.
 
-- **Base Basal Rate:** The basal rate programmed for the current time in your basal **Profile**.
+- **Bazal Oranı:** Bazal **Profilinizde** şu anki saat için programlanmış bazal oran.
 
-- **Temp Basal Rate:** The temporary basal rate (TBR) that is currently running, with its start time and duration. This field is only shown while a TBR is running.
+- **Geçici Bazal Oranı:** O anda çalışan geçici bazal oranı (GBO); başlangıç saati ve süresiyle birlikte. Bu alan yalnızca bir GBO çalışırken gösterilir.
 
-- **Reservoir:** Shows *Over 50 U left* when more than 50 units are left in the reservoir. Below 50 units, the exact amount is shown. The value turns red below 20 units.
+- **Rezervuar:** Rezervuarda 50 üniteden fazla insülin kaldığında *50 Ü üzeri kaldı* gösterir. 50 ünitenin altında tam miktar gösterilir. 20 ünitenin altında değer kırmızıya döner.
 
-- **Total Delivered:** The total amount of insulin delivered from the reservoir. This includes the insulin used for priming.
+- **Toplam İletilen:** Rezervuardan iletilen toplam insülin miktarı. Buna Pod'u hazırlamak (prime) için kullanılan insülin de dahildir.
 
-- **Active Pod Alerts:** Alerts that are currently active on the pod, for example *Pod will expire soon* or *Low Reservoir*.
+- **Etkin Pod Alarmları:** O anda Pod'da etkin olan alarmlar, örneğin *Pod yakında sona erecek* veya *Düşük Rezervuar*.
 
-- **Errors:** The pod fault, if the pod has failed, shown in red as *Pod Fault:* followed by the fault code and name, for example *Pod Fault: 020 ALARM_OCCLUDED*. Review the [Pod History](#omnipod-dash-view-pod-history) and the log files for past errors and more detailed information. See [Pod Failures](#omnipod-dash-pod-failures).
+- **Hatalar:** Pod arızalandıysa Pod hatası; kırmızı renkte *Pod Hatası:* ve ardından hata kodu ve adı olarak gösterilir, örneğin *Pod Hatası: 020 ALARM_OCCLUDED*. Geçmiş hatalar ve daha ayrıntılı bilgi için [Pod Geçmişi](#omnipod-dash-view-pod-history)'ni ve günlük dosyalarını inceleyin. Bkz. [Pod Hataları](#omnipod-dash-pod-failures).
 
-- **PDM Notification:** Shown only after a pod fault. It shows the fault the way the Omnipod PDM would have shown it: a title (for example *Occlusion Detected*, *Empty Reservoir* or *Pod Expired*), what happened (for example *Insulin delivery stopped. Change Pod now.*) and a *Ref:* code.
+- **PDM Bildirimi:** Yalnızca bir Pod hatasından sonra gösterilir. Hatayı Omnipod PDM'nin göstereceği şekilde gösterir: bir başlık (örneğin *Tıkanma tespit edildi*, *Rezervuar Boş* veya *Pod Süresi Doldu*), ne olduğu (örneğin *İnsülin iletimi durdu. Pod'u şimdi değiştirin.*) ve bir *Ref:* kodu.
 
-### Buttons
+### Düğmeler
 
-The buttons at the bottom of the pump screen change with the state of the pod. Only the buttons that make sense at that moment are shown.
+Pompa ekranının altındaki düğmeler Pod'un durumuna göre değişir. Yalnızca o anda anlamlı olan düğmeler gösterilir.
 
-- **Refresh:** Asks the pod for its current status.
-  - *Use it to update the pod status and to clear fields that show (uncertain).*
-  - *See the [Troubleshooting](#omnipod-dash-troubleshooting) section below for more information.*
+- **Yenile:** Pod'dan geçerli durumunu ister.
+  - *Pod durumunu güncellemek ve (belirsiz) gösteren alanları temizlemek için kullanın.*
+  - *Daha fazla bilgi için aşağıdaki [Sorun giderme](#omnipod-dash-troubleshooting) bölümüne bakın.*
 
-- **Silence Alerts:** Stops the pod alert beeps (for example pod expiry or low reservoir). Shown only while the pod has an active alert. See [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts).
+- **Alarmları Sustur:** Pod'un alarm bip seslerini durdurur (örneğin Pod süre sonu veya düşük rezervuar). Yalnızca Pod'da etkin bir alarm varken gösterilir. Bkz. [Pod Alarmlarını Susturma](#omnipod-dash-silencing-pod-alerts).
 
-- **Resume Delivery:** Resumes insulin delivery on a suspended pod. Shown only when delivery is suspended. See [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery).
+- **İletime devam et:** Askıya alınmış bir Pod'da insülin iletimine devam eder. Yalnızca iletim askıya alındığında gösterilir. Bkz. [İnsülin İletimine Devam Etme](#omnipod-dash-resuming-insulin-delivery).
 
-- **Set time:** Updates the pod to the time zone of your phone by sending your basal **Profile** again. Shown only when the time zone of the pod differs from the time zone of your phone.
+- **Saati ayarla:** Bazal **Profilinizi** yeniden göndererek Pod'u telefonunuzun saat dilimine göre günceller. Yalnızca Pod'un saat dilimi telefonunuzun saat diliminden farklı olduğunda gösterilir.
 
-- [**Activate Pod**](#omnipod-dash-activate-pod): Primes and activates a new pod. Shown when no pod is active.
+- [**Pod'u Etkinleştir**](#omnipod-dash-activate-pod): Yeni bir Pod'u hazırlar (prime) ve etkinleştirir. Etkin Pod olmadığında gösterilir.
 
-- [**Deactivate Pod**](#omnipod-dash-deactivate-pod): Deactivates the active pod. Shown as soon as a pod is paired with **AAPS**, also when an activation stopped part-way (for example because the pod failed during activation). **AAPS** asks you to confirm before it deactivates the pod.
+- [**Pod'u Devre Dışı Bırak**](#omnipod-dash-deactivate-pod): Etkin Pod'u devre dışı bırakır. Bir Pod **AAPS** ile eşleştirildiği anda gösterilir; bir etkinleştirme yarıda kaldığında da (örneğin Pod etkinleştirme sırasında arızalandığı için) gösterilir. **AAPS**, Pod'u devre dışı bırakmadan önce onaylamanızı ister.
 
-- **Play Test Beep:** Makes the pod play a single test beep.
+- **Test Bip Sesi Çal:** Pod'un tek bir test bip sesi çalmasını sağlar.
 
-- [**Pod History**](#omnipod-dash-view-pod-history): Shows the activity history of the active pod.
+- [**Pod Geçmişi**](#omnipod-dash-view-pod-history): Etkin Pod'un etkinlik geçmişini gösterir.
 
-- **Discard Pod:** Removes an unfinished pod from **AAPS**. Shown only when a pod activation stopped part-way. **AAPS** asks you to confirm. After discarding, **AAPS** can no longer communicate with that pod: remove it from your body.
+- **Pod'u Çıkar:** Tamamlanmamış bir Pod'u **AAPS**'ten kaldırır. Yalnızca bir Pod etkinleştirmesi yarıda kaldığında gösterilir. **AAPS** onaylamanızı ister. Çıkarma işleminden sonra **AAPS** artık o Pod ile iletişim kuramaz: Pod'u vücudunuzdan çıkarın.
 
-![The Pod Management menu](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+![Pod Yönetimi menüsü](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version, which had a separate **Pod Management** menu. In **AAPS** 4 all these actions, including **Activate Pod**, **Deactivate Pod**, **Play Test Beep** and **Pod History**, are buttons with text labels directly on the pump screen.
+Yukarıdaki ekran görüntüsü, ayrı bir **Pod Yönetimi** menüsü olan eski bir **AAPS** sürümüne aittir. **AAPS** 4'te **Pod'u Etkinleştir**, **Pod'u Devre Dışı Bırak**, **Test Bip Sesi Çal** ve **Pod Geçmişi** dahil tüm bu işlemler, doğrudan pompa ekranında yazılı etiketli düğmelerdir.
 ```
 
 (omnipod-dash-activate-pod)=
 
-## Activate Pod
+## Pod'u Etkinleştirme
 
-1. Open the DASH pump screen (**Manage** > **Pump**) and press **Activate Pod**. The activation wizard opens.
+1. DASH pompa ekranını açın (**Yönet** > **Pompa**) ve **Pod'u Etkinleştir**'e basın. Etkinleştirme sihirbazı açılır.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
+   Yukarıdaki ekran görüntüsü eski bir **AAPS** sürümüne aittir. **AAPS** 4'te **Pod'u Etkinleştir**, **Pod Yönetimi** menüsü yerine doğrudan DASH pompa ekranındaki bir düğmedir.
    ```
 
-   If you have never activated a **Profile** in **AAPS** before, the wizard first shows the **Profile required** step: select the profile to apply on activation and continue.
+   Daha önce **AAPS**'te hiç **Profil** etkinleştirmediyseniz, sihirbaz önce **Profil gerekli** adımını gösterir: etkinleştirmede uygulanacak profili seçin ve devam edin.
 
-2. The **Fill Pod** step is shown. Fill a new pod with enough insulin for 3 days, **at least 80 units**. Listen for two beeps from the pod: they mean the minimum amount of 80 units has been filled. Empty the fill syringe completely, even after hearing the two beeps. Do not remove the pod's needle cap yet.
+2. **Pod'u Doldur** adımı gösterilir. Yeni bir Pod'u 3 gün yetecek kadar, **en az 80 ünite** insülinle doldurun. Pod'dan iki bip sesi gelmesini dinleyin: bu sesler en az 80 ünitenin doldurulduğu anlamına gelir. İki bip sesini duyduktan sonra bile doldurma şırıngasını tamamen boşaltın. Pod'un iğne kapağını henüz çıkarmayın.
 
-   ***NOTE:** When you calculate the amount of insulin you need for 3 days, remember that priming the pod uses about 3-10 units.*
+   ***NOT:** 3 gün için gereken insülin miktarını hesaplarken, Pod'u hazırlamanın (prime) yaklaşık 3-10 ünite kullandığını unutmayın.*
 
    ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)
 
    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-   Make sure that the new pod and the phone running **AAPS** are close to each other and press **Next**.
+   Yeni Pod ile **AAPS**'i çalıştıran telefonun birbirine yakın olduğundan emin olun ve **İleri**'ye basın.
 
-3. If you use more than one insulin in **AAPS**, the **Select Insulin** step is shown. It shows the **Currently active** insulin. If you filled the pod with a different insulin, press **Change** and select it. **AAPS** applies a **Profile Switch** with this insulin when the activation is finished. Press **Next**.
+3. **AAPS**'te birden fazla insülin kullanıyorsanız **İnsülin Seçin** adımı gösterilir. Bu adım **Şu anda aktif** olan insülini gösterir. Pod'u farklı bir insülinle doldurduysanız **Değiştir**'e basın ve o insülini seçin. Etkinleştirme bittiğinde **AAPS** bu insülinle bir **Profil değişimi** uygular. **İleri**'ye basın.
 
-   ![The Select Insulin step](../images/v4/Pumps/dash_wizard_select_insulin.png)
+   ![İnsülin Seçin adımı](../images/v4/Pumps/dash_wizard_select_insulin.png)
 
-4. On the **Initialize Pod** step, **AAPS** pairs with the new pod and primes it. You hear a click followed by a series of ticking sounds as the pod primes itself. When this has finished successfully, the **Next** button appears. Press **Next**.
+4. **Pod'u Başlat** adımında **AAPS** yeni Pod ile eşleşir ve onu hazırlar (prime). Pod kendini hazırlarken bir tık sesi ve ardından bir dizi tıkırtı sesi duyarsınız. Bu işlem başarıyla bittiğinde **İleri** düğmesi görünür. **İleri**'ye basın.
 
    ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-   ***NOTE**: If an error message such as _Scan failed_ or _'Could not find an available pod for activation'_ appears (this can happen), do not panic. Press **Retry**. In most cases the activation then continues successfully.*
+   ***NOT**: _Tarama başarısız oldu_ veya _'Could not find an available pod for activation'_ (etkinleştirme için uygun Pod bulunamadı) gibi bir hata mesajı görünürse (bu olabilir), paniğe kapılmayın. **Tekrar dene**'ye basın. Çoğu durumda etkinleştirme bundan sonra başarıyla devam eder.*
 
    ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
-   If the pod has failed (for example because its activation time was exceeded), **Deactivate Pod** is shown instead of **Retry**. Use it and start again with a new pod.
+   Pod arızalandıysa (örneğin etkinleştirme süresi aşıldığı için), **Tekrar dene** yerine **Pod'u Devre Dışı Bırak** gösterilir. Bunu kullanın ve yeni bir Pod ile baştan başlayın.
 
-   If you press **Cancel** before the activation is finished, **AAPS** asks you to confirm that you want to exit. Press **OK** to leave the wizard, or **Cancel** to stay.
+   Etkinleştirme bitmeden **Vazgeç**'e basarsanız **AAPS**, çıkmak istediğinizi onaylamanızı ister. Sihirbazdan çıkmak için **Tamam**'a, sihirbazda kalmak için **Vazgeç**'e basın.
 
-   ![The Exit confirmation](../images/v4/Pumps/dash_wizard_exit_confirm.png)
+   ![Çıkış onayı](../images/v4/Pumps/dash_wizard_exit_confirm.png)
 
-5. If you manage pump site rotation in **AAPS** (**Manage pump site rotation** in the [Site Rotation](#Aapsscreens-site-rotation) settings), the **Site location** step is shown. Select where you are going to place the pod on the body diagram and press **Next**, or press **Skip**.
+5. Pompa bölge rotasyonunu **AAPS**'te yönetiyorsanız ([Bölge Rotasyonu](#Aapsscreens-site-rotation) ayarlarında **Pompa bölge rotasyonunu yönetin**), **Bölge konumu** adımı gösterilir. Vücut şemasında Pod'u nereye yerleştireceğinizi seçin ve **İleri**'ye basın ya da **Atla**'ya basın.
 
-   ![The Site location step](../images/v4/Pumps/dash_wizard_site_location.png)
+   ![Bölge konumu adımı](../images/v4/Pumps/dash_wizard_site_location.png)
 
-6. Next, prepare the infusion site for the new pod. Wash your hands to avoid any risk of infection. Clean the infusion site with soap and water or an alcohol wipe, and let the skin air dry completely before you continue. If the adhesive irritates your skin, consider using a barrier wipe or barrier spray.
+6. Ardından yeni Pod için infüzyon bölgesini hazırlayın. Enfeksiyon riskini önlemek için ellerinizi yıkayın. İnfüzyon bölgesini sabun ve suyla veya alkollü mendille temizleyin ve devam etmeden önce cildin havayla tamamen kurumasını bekleyin. Yapışkan cildinizi tahriş ediyorsa, bariyer mendili veya bariyer spreyi kullanmayı düşünün.
 
-   On the **Attach Pod** step, remove the pod's blue plastic needle cap. If the cannula or anything else sticks out of the pod, or it looks unusual, **STOP**: press **Cancel** and start again with a new pod. If everything looks **OK**, take off the white paper backing from the adhesive and stick the pod to the chosen site on your body.
+   **Pod'u Tak** adımında Pod'un mavi plastik iğne kapağını çıkarın. Kanül veya başka bir şey Pod'dan dışarı çıkıyorsa ya da Pod olağan dışı görünüyorsa **DURUN**: **Vazgeç**'e basın ve yeni bir Pod ile baştan başlayın. Her şey **YOLUNDA** görünüyorsa, yapışkanın üzerindeki beyaz koruyucu kağıdı çıkarın ve Pod'u vücudunuzda seçtiğiniz bölgeye yapıştırın.
 
-   When finished, press **Next**.
+   Bitirdiğinizde **İleri**'ye basın.
 
    ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
-7. A confirmation dialog appears: *When you press OK, the cannula will be inserted.* **Press OK ONLY if you are ready to insert the cannula!**
+7. Bir onay iletişim kutusu görünür: *Tamam'a bastığınızda kanül yerleştirilecektir.* **Tamam'a YALNIZCA kanülü yerleştirmeye hazırsanız basın!**
 
    ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
-8. On the **Insert Cannula** step, **AAPS** sets your basal schedule and the pod inserts the cannula. This can take some time (1-2 minutes maximum). **Be patient!**
+8. **Kanül Yerleştir** adımında **AAPS** bazal programınızı ayarlar ve Pod kanülü yerleştirir. Bu biraz zaman alabilir (en fazla 1-2 dakika). **Sabırlı olun!**
 
-   ***NOTE:** It is good practice to pinch the skin near the cannula insertion point before the cannula is inserted. This helps the needle go in smoothly and lowers your chance of occlusions (blockages).*
+   ***NOT:** Kanül yerleştirilmeden önce kanülün gireceği noktanın yakınındaki cildi sıkıştırmak iyi bir uygulamadır. Bu, iğnenin sorunsuz girmesine yardımcı olur ve tıkanıklık olasılığını azaltır.*
 
    ![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
-9. When the cannula has been inserted successfully, the **Next** button appears. Press **Next**.
+9. Kanül başarıyla yerleştirildiğinde **İleri** düğmesi görünür. **İleri**'ye basın.
 
    ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
-10. The **Pod Activated** step is shown. Check that the cannula has been inserted correctly, and change the pod if you think it has not.
+10. **Pod Etkinleştirildi** adımı gösterilir. Kanülün doğru yerleştirildiğini kontrol edin; doğru yerleştirilmediğini düşünüyorsanız Pod'u değiştirin.
 
-    Press **Finish**.
+    **Bitir**'e basın.
 
-    Tebrikler! You have now started a new pod session.
+    Tebrikler! Artık yeni bir Pod oturumu başlattınız.
 
     ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
-11. You are back on the DASH pump screen. It now shows the information of your active pod, including the current basal rate, reservoir level, insulin delivered, pod errors and alerts. **Activate Pod** is replaced by **Deactivate Pod**: you cannot activate another pod without deactivating the active pod first.
+11. DASH pompa ekranına geri dönersiniz. Ekran artık etkin Pod'unuzun bilgilerini gösterir: geçerli bazal oran, rezervuar seviyesi, iletilen insülin, Pod hataları ve alarmlar dahil. **Pod'u Etkinleştir**'in yerini **Pod'u Devre Dışı Bırak** alır: etkin Pod'u önce devre dışı bırakmadan başka bir Pod etkinleştiremezsiniz.
 
-    ***NOTE:** For more details on the information shown, see [The DASH pump screen](#omnipod-dash-tab).*
+    ***NOT:** Gösterilen bilgiler hakkında daha fazla ayrıntı için [DASH pompa ekranı](#omnipod-dash-tab) bölümüne bakın.*
 
     ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-    ***NOTE:** It is good practice to export your settings AFTER activating the pod. Export your settings after each pod change and once a month. Copy the exported settings file to a cloud storage location (for example Google Drive) or somewhere off your phone in case you lose your phone (see [**Export settings**](../Maintenance/ExportImportSettings.md)).*
+    ***NOT:** Pod'u etkinleştirdikten SONRA ayarlarınızı dışa aktarmak iyi bir uygulamadır. Ayarlarınızı her Pod değişiminden sonra ve ayda bir dışa aktarın. Telefonunuzu kaybetme ihtimaline karşı dışa aktarılan ayar dosyasını bir bulut depolama alanına (örneğin Google Drive) veya telefonunuzun dışında bir yere kopyalayın (bkz. [**Ayarları dışa aktar**](../Maintenance/ExportImportSettings.md)).*
 
-If an earlier activation stopped after the pod was primed, pressing **Activate Pod** continues from the **Attach Pod** step.
+Daha önceki bir etkinleştirme Pod hazırlandıktan sonra durduysa, **Pod'u Etkinleştir**'e basmak işlemi **Pod'u Tak** adımından sürdürür.
 
 (omnipod-dash-deactivate-pod)=
 
 ## Deactivate Pod
 
-Under normal circumstances, a pod lasts three days (72 hours), plus a grace period of 8 hours after the pod expiry warning: 80 hours in total.
+Normal koşullarda bir Pod üç gün (72 saat) dayanır; buna Pod süre sonu uyarısından sonraki 8 saatlik ek süre eklenir: toplam 80 saat.
 
-To deactivate a pod (either because it expired or because it failed):
+Bir Pod'u devre dışı bırakmak için (süresi dolduğu ya da arızalandığı için):
 
-1. Open the DASH pump screen (**Manage** > **Pump**) and press **Deactivate Pod**.
+1. DASH pompa ekranını açın (**Yönet** > **Pompa**) ve **Pod'u Devre Dışı Bırak**'a basın.
 
-   ![The Deactivate Pod button on the DASH pump screen](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![DASH pompa ekranındaki Pod'u Devre Dışı Bırak düğmesi](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-2. On the **Deactivate Pod** step, press **Next**. A dialog asks *A deactivated Pod can not be used again. Deactivate this Pod now?* Press **OK** to start deactivating the pod, or **Cancel** to keep it. Deactivation suspends all insulin delivery and cannot be undone.
+2. **Pod'u Devre Dışı Bırak** adımında **İleri**'ye basın. Bir iletişim kutusu şunu sorar: *Devre dışı bırakılmış bir Pod tekrar kullanılamaz. Bu Pod'u şimdi devre dışı bırakmak istiyor musunuz?* Pod'u devre dışı bırakmaya başlamak için **Tamam**'a, Pod'u korumak için **Vazgeç**'e basın. Devre dışı bırakma tüm insülin iletimini askıya alır ve geri alınamaz.
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
-3. The **Deactivating Pod** step is shown while **AAPS** deactivates the pod. The pod beeps to confirm that deactivation was successful.
+3. **AAPS** Pod'u devre dışı bırakırken **Pod Devre dışı bırakılıyor** adımı gösterilir. Pod, devre dışı bırakmanın başarılı olduğunu bip sesiyle onaylar.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the wizard shows its progress as a row of dots at the top instead of a progress bar.
+   Yukarıdaki ekran görüntüsü eski bir **AAPS** sürümüne aittir. **AAPS** 4'te sihirbaz ilerlemesini bir ilerleme çubuğu yerine üstte bir sıra nokta olarak gösterir.
    ```
 
-   When deactivation has finished successfully, the **Next** button appears. Press **Next**.
+   Devre dışı bırakma başarıyla bittiğinde **İleri** düğmesi görünür. **İleri**'ye basın.
 
    ![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
 
-   If deactivation fails, an error message and a **Discard Pod** button are shown. See [Discarding a pod](#omnipod-dash-discard-pod) below before you use it. You can also press **Cancel** and try **Deactivate Pod** again later.
+   Devre dışı bırakma başarısız olursa bir hata mesajı ve **Pod'u Çıkar** düğmesi gösterilir. Bu düğmeyi kullanmadan önce aşağıdaki [Pod'u çıkarma](#omnipod-dash-discard-pod) bölümüne bakın. Ayrıca **Vazgeç**'e basıp daha sonra **Pod'u Devre Dışı Bırak**'ı yeniden deneyebilirsiniz.
 
-4. The **Pod Deactivated** step is shown. Remove the pod from your body and press **Finish**.
+4. **Pod Devre dışı bırakıldı** adımı gösterilir. Pod'u vücudunuzdan çıkarın ve **Bitir**'e basın.
 
    ![Deactivate_Pod_6](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_6.jpg)
 
-5. You are back on the DASH pump screen. Check that the **Pod Status** field shows **No Active Pod** and that the **Activate Pod** button is shown again.
+5. DASH pompa ekranına geri dönersiniz. **Pod Durumu** alanında **Aktif Pod Yok** yazdığını ve **Pod'u Etkinleştir** düğmesinin yeniden gösterildiğini kontrol edin.
 
-   ![The DASH pump screen showing No Active Pod](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
+   ![Aktif Pod Yok gösteren DASH pompa ekranı](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
 (omnipod-dash-discard-pod)=
 
-### Discarding a pod
+### Pod'u çıkarma
 
-Only discard a pod when all communication with it keeps failing. If **AAPS** can still communicate with the pod, use **Deactivate Pod** instead.
+Bir Pod'u yalnızca onunla tüm iletişim sürekli başarısız olduğunda çıkarın. **AAPS** Pod ile hâlâ iletişim kurabiliyorsa bunun yerine **Pod'u Devre Dışı Bırak**'ı kullanın.
 
-- **AAPS** asks you to confirm before it discards the pod.
-- After that, **AAPS** can no longer communicate with that pod.
-- **Insulin delivery has NOT been suspended**, because the pod was not deactivated properly. **Remove the pod from your body!**
-- The **Pod Discarded** step confirms that the pod state has been discarded. Press **Finish**. You can now activate a new pod.
+- **AAPS**, Pod'u çıkarmadan önce onaylamanızı ister.
+- Bundan sonra **AAPS** o Pod ile artık iletişim kuramaz.
+- Pod düzgün devre dışı bırakılmadığı için **insülin iletimi askıya ALINMAMIŞTIR**. **Pod'u vücudunuzdan çıkarın!**
+- **Pod Çıkarıldı** adımı, Pod durumunun silindiğini onaylar. **Bitir**'e basın. Artık yeni bir Pod etkinleştirebilirsiniz.
 
 (omnipod-dash-resuming-insulin-delivery)=
 
-## Resuming Insulin Delivery
+## İnsülin İletimine Devam Etme
 
-**NOTE**: During **Profile Switches**, like when using the PDM, **AAPS** must suspend delivery on the pod before setting the new basal **Profile**. If communication fails between the suspend and resume commands, delivery can stay suspended. Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
+**NOT**: **Profil değişimleri** sırasında, PDM kullanırken olduğu gibi, **AAPS** yeni bazal **Profili** ayarlamadan önce Pod'da iletimi askıya almak zorundadır. Askıya alma ve devam ettirme komutları arasında iletişim başarısız olursa iletim askıda kalabilir. Daha fazla ayrıntı için sorun giderme bölümündeki [**İletim askıya alındı**](#omnipod-dash-delivery-suspended) kısmını okuyun.
 
-When insulin delivery is suspended, you need to tell the pod to resume insulin delivery. When the command has been processed successfully, the pod delivers insulin again using the basal rate for the current time from your active basal **Profile**. The pod again accepts commands for bolus, **TBR** and **SMB**.
+İnsülin iletimi askıya alındığında, Pod'a insülin iletimine devam etmesini söylemeniz gerekir. Komut başarıyla işlendiğinde Pod, etkin bazal **Profilinizdeki** şu anki saate ait bazal oranı kullanarak yeniden insülin verir. Pod yeniden bolus, **GBO** ve **SMB** komutlarını kabul eder.
 
-1. Open the DASH pump screen and check that the **Pod Status** field shows **Suspended**. Press **Resume Delivery** to tell the pod to resume normal insulin delivery.
+1. DASH pompa ekranını açın ve **Pod Durumu** alanında **Askıya Alındı** yazdığını kontrol edin. Pod'a normal insülin iletimine devam etmesini söylemek için **İletime devam et**'e basın.
 
    ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
 
-2. When the command was successful, the **Pod Status** field shows **Running** and the **Resume Delivery** button disappears.
+2. Komut başarılı olduğunda **Pod Durumu** alanında **Çalışıyor** yazar ve **İletime devam et** düğmesi kaybolur.
 
    ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
 
@@ -364,119 +364,119 @@ When insulin delivery is suspended, you need to tell the pod to resume insulin d
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshots above are from an earlier **AAPS** version, which showed a confirmation dialog. In **AAPS** 4 you confirm the result on the DASH pump screen: the **Pod Status** field shows **Running** and the **Resume Delivery** button is gone.
+   Yukarıdaki ekran görüntüleri, bir onay iletişim kutusu gösteren eski bir **AAPS** sürümüne aittir. **AAPS** 4'te sonucu DASH pompa ekranında doğrularsınız: **Pod Durumu** alanında **Çalışıyor** yazar ve **İletime devam et** düğmesi kaybolur.
    ```
 
-   If the command fails, **AAPS** shows a warning dialog starting with *Failed to resume delivery*. Press **Refresh** and try again.
+   Komut başarısız olursa **AAPS**, *İletim devam ettirilemedi* ile başlayan bir uyarı iletişim kutusu gösterir. **Yenile**'ye basın ve yeniden deneyin.
 
-   ![The Failed to resume delivery warning](../images/v4/Pumps/dash_resume_failed.png)
+   ![İletim devam ettirilemedi uyarısı](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
 ## Silencing Pod Alerts
 
-This section explains how to stop the pod beeps when the pod approaches the end of its life. When these beeps start depends on the **Alerts** settings (see [Dash Settings](#omnipod-dash-settings)):
+Bu bölüm, Pod ömrünün sonuna yaklaştığında Pod'un bip seslerini nasıl durduracağınızı açıklar. Bu bip seslerinin ne zaman başlayacağı **Alarmlar** ayarlarına bağlıdır (bkz. [Dash Ayarları](#omnipod-dash-settings)):
 
-- **Reminder at hours before expiry (72 Hours):** how many hours before the 72-hour expiry the pod starts to beep.
-- **Alert at hours before shutdown (80 Hours):** how many hours before the 80-hour shutdown the pod beeps again.
+- **Süre bitiminden önce hatırlatma (72 Saat):** Pod'un 72 saatlik süre sonundan kaç saat önce bip sesi çıkarmaya başlayacağı.
+- **Pompa kapanmadan önce uyar (80 Saat):** Pod'un 80 saatlik kapanmadan kaç saat önce yeniden bip sesi çıkaracağı.
 
-The maximum life of a pod is 80 hours (3 days 8 hours). However, the pod manufacturer recommends not going beyond 72 hours (3 days).
+Bir Pod'un en uzun ömrü 80 saattir (3 gün 8 saat). Ancak Pod üreticisi 72 saati (3 günü) aşmamayı önerir.
 
-***NOTE**: The **Silence Alerts** button is only shown on the DASH pump screen while the pod has an active alert, for example pod expiry or low reservoir. If the **Silence Alerts** button is not shown but you hear the pod beeping, press **Refresh**.*
+***NOT**: **Alarmları Sustur** düğmesi, DASH pompa ekranında yalnızca Pod'da etkin bir alarm varken gösterilir; örneğin Pod süre sonu veya düşük rezervuar. **Alarmları Sustur** düğmesi gösterilmiyor ama Pod'un bip sesi çıkardığını duyuyorsanız **Yenile**'ye basın.*
 
-1. When the reminder time is reached, the pod beeps to tell you that it will expire soon and that you need to change it. On the DASH pump screen, the **Pod Expires (1)** field shows the exact time the pod will expire (72 hours after activation). The text turns yellow 4 hours before this time. After it, **Pod Hard End** turns yellow and shows the time left until the pod stops delivering insulin. The **Active Pod Alerts (2)** field shows **Pod will expire soon**, and the **Silence Alerts (3)** button is shown.
+1. Hatırlatma zamanı geldiğinde Pod, süresinin yakında dolacağını ve değiştirmeniz gerektiğini bildirmek için bip sesi çıkarır. DASH pompa ekranında **Pod Sona Erme (1)** alanı, Pod'un süresinin dolacağı kesin zamanı gösterir (etkinleştirmeden 72 saat sonra). Bu zamandan 4 saat önce metin sarıya döner. Bu zamandan sonra **Pod Zorunlu Sonu** sarıya döner ve Pod insülin vermeyi durdurana kadar kalan süreyi gösterir. **Etkin Pod Alarmları (2)** alanında **Pod yakında sona erecek** yazar ve **Alarmları Sustur (3)** düğmesi gösterilir.
 
    ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
-2. Press **Silence Alerts**. **AAPS** sends the command to the pod to stop the expiry beeps.
+2. **Alarmları Sustur**'a basın. **AAPS**, süre sonu bip seslerini durdurmak için Pod'a komut gönderir.
 
    ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version, where this screen was the **DASH** tab. In **AAPS** 4 the **Silence Alerts** button is on the DASH pump screen (**Manage** > **Pump**).
+   Yukarıdaki ekran görüntüsü, bu ekranın **DASH** sekmesi olduğu eski bir **AAPS** sürümüne aittir. **AAPS** 4'te **Alarmları Sustur** düğmesi DASH pompa ekranındadır (**Yönet** > **Pompa**).
    ```
 
-3. When the alerts have been silenced, the alert is no longer shown in the **Active Pod Alerts** field, the **Silence Alerts** button disappears, and the pod stops its expiry beeps.
+3. Alarmlar susturulduğunda alarm artık **Etkin Pod Alarmları** alanında gösterilmez, **Alarmları Sustur** düğmesi kaybolur ve Pod süre sonu bip seslerini durdurur.
 
    ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version, which showed a confirmation dialog. In **AAPS** 4 you confirm the result on the DASH pump screen: the alert is gone from the **Active Pod Alerts** field.
+   Yukarıdaki ekran görüntüsü, bir onay iletişim kutusu gösteren eski bir **AAPS** sürümüne aittir. **AAPS** 4'te sonucu DASH pompa ekranında doğrularsınız: alarm **Etkin Pod Alarmları** alanından kaybolur.
    ```
 
-   If the command fails, **AAPS** shows a warning dialog starting with *Failed to silence alerts*. Press **Refresh** and try again.
+   Komut başarısız olursa **AAPS**, *Uyarılar susturulamadı* ile başlayan bir uyarı iletişim kutusu gösterir. **Yenile**'ye basın ve yeniden deneyin.
 
-The low reservoir alert works the same way. When the insulin left in the pod drops to the **Number of units** set in the **Alerts** settings, the pod beeps. The **Reservoir** field shows the amount left, the **Active Pod Alerts** field shows **Low Reservoir**, and the **Silence Alerts** button is shown. Press **Silence Alerts** to stop the beeps, and plan your next pod change.
+Düşük rezervuar alarmı da aynı şekilde çalışır. Pod'da kalan insülin, **Alarmlar** ayarlarında belirlenen **Ünite sayısı** değerine düştüğünde Pod bip sesi çıkarır. **Rezervuar** alanı kalan miktarı, **Etkin Pod Alarmları** alanı **Düşük Rezervuar** uyarısını gösterir ve **Alarmları Sustur** düğmesi görünür. Bip seslerini durdurmak için **Alarmları Sustur**'a basın ve bir sonraki Pod değişiminizi planlayın.
 
-![The DASH pump screen with a Low Reservoir alert](../images/v4/Pumps/dash_low_reservoir_alert.png)
+![Düşük Rezervuar alarmı olan DASH pompa ekranı](../images/v4/Pumps/dash_low_reservoir_alert.png)
 
 (omnipod-dash-view-pod-history)=
 
-## View Pod History
+## Pod Geçmişini Görüntüleme
 
-This section explains how to look at the history of your active pod and filter it by type of action. The pod history shows the commands sent to your active pod and their results during its three-day (72 - 80 hours) life.
+Bu bölüm, etkin Pod'unuzun geçmişine nasıl bakacağınızı ve geçmişi işlem türüne göre nasıl filtreleyeceğinizi açıklar. Pod geçmişi, etkin Pod'unuza üç günlük (72 - 80 saat) ömrü boyunca gönderilen komutları ve sonuçlarını gösterir.
 
-It is useful to check the boluses, TBRs and basal commands that were sent to the pod. The other categories help with troubleshooting and show the order of events that led up to a failure.
+Pod'a gönderilen bolusları, GBO'ları ve bazal komutlarını kontrol etmek için kullanışlıdır. Diğer kategoriler sorun gidermeye yardımcı olur ve bir arızaya yol açan olayların sırasını gösterir.
 
-**NOTE:** **Only the last command can be uncertain**. New commands *are not sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. To 'fix' an uncertain command, press **Refresh** on the DASH pump screen.
+**NOT:** **Yalnızca son komut belirsiz olabilir**. **Son 'belirsiz' komut 'onaylandı' veya 'reddedildi' durumuna geçene kadar** yeni komutlar *gönderilmez*. Belirsiz bir komutu 'düzeltmek' için DASH pompa ekranında **Yenile**'ye basın.
 
-1. Open the DASH pump screen and press **Pod History**.
+1. DASH pompa ekranını açın ve **Pod Geçmişi**'ne basın.
 
    ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
+   Yukarıdaki ekran görüntüsü eski bir **AAPS** sürümüne aittir. **AAPS** 4'te **Pod Geçmişi**, **Pod Yönetimi** menüsü yerine doğrudan DASH pompa ekranındaki bir düğmedir.
    ```
 
-2. The **Pod History** screen opens with the **All** filter selected. It lists every command with its time and result, newest first, grouped by day. Use the filter buttons at the top (for example **Boluses** or **Basals**) to show only one type of command. Press the back arrow to return to the DASH pump screen.
+2. **Pod Geçmişi** ekranı, **Tümü** filtresi seçili olarak açılır. Her komutu zamanı ve sonucuyla, en yenisi en üstte ve güne göre gruplanmış olarak listeler. Yalnızca bir komut türünü göstermek için üstteki filtre düğmelerini kullanın (örneğin **Boluslar** veya **Bazallar**). DASH pompa ekranına dönmek için geri okuna basın.
 
    ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
    ```{admonition} Older screenshot
    :class: note
-   The second screenshot above is from an earlier **AAPS** version, where you picked the type of command from a **Type** list. In **AAPS** 4 you use the filter buttons shown in the first screenshot.
+   Yukarıdaki ikinci ekran görüntüsü, komut türünü bir **Tür** listesinden seçtiğiniz eski bir **AAPS** sürümüne aittir. **AAPS** 4'te ilk ekran görüntüsünde gösterilen filtre düğmelerini kullanırsınız.
    ```
 
-   For boluses, the amount is followed by the bolus type when it is not a normal bolus, for example *0.05 U (SMB)* or *0.05 U (Basal correction)*. A basal correction is a very small bolus (one pod pulse, 0.05 U) that the driver sends by itself; you did not request it.
+   Boluslarda, normal bolus olmadığında miktarın ardından bolus türü gelir; örneğin *0,05 Ü (SMB)* veya *0,05 Ü (Bazal düzeltme)*. Bazal düzeltme, sürücünün kendiliğinden gönderdiği çok küçük bir bolustur (bir Pod darbesi, 0,05 Ü); bunu siz istemediniz.
 
    ```{admonition} Why basal corrections happen
    :class: note
-   The pod delivers basal insulin in pulses of 0.05 U, timed by an internal clock. Each time the basal rate changes (for example when the loop sets a new **TBR**), the pod restarts this clock, and the pulse it was counting towards is lost. Because the loop changes the basal rate often, especially overnight, the pod can end up delivering less basal insulin than expected.
+   Pod, bazal insülini dahili bir saatle zamanlanan 0,05 Ü'lik darbelerle verir. Bazal oran her değiştiğinde (örneğin döngü yeni bir **GBO** ayarladığında) Pod bu saati yeniden başlatır ve saymakta olduğu darbe kaybolur. Döngü bazal oranı sık değiştirdiği için, özellikle gece boyunca, Pod beklenenden daha az bazal insülin verebilir.
 
-   **AAPS** compares the basal insulin the pod reports as delivered with what it should have delivered. When the shortfall reaches half a pulse or more, the driver delivers one extra pulse as a basal correction, so you still get the basal insulin your profile and the loop asked for. No correction is sent while the pod is suspended, or while a zero **TBR** is running.
+   **AAPS**, Pod'un verildiğini bildirdiği bazal insülini vermesi gereken miktarla karşılaştırır. Eksik miktar yarım darbe veya daha fazlasına ulaştığında sürücü bazal düzeltme olarak bir ek darbe verir; böylece profilinizin ve döngünün istediği bazal insülini yine de alırsınız. Pod askıya alınmışken veya sıfır **GBO** çalışırken düzeltme gönderilmez.
    ```
 
 (omnipod-dash-settings)=
 
 ## Dash Ayarları
 
-There are two ways to open the Dash driver settings:
+Dash sürücü ayarlarını açmanın iki yolu vardır:
 
-- Press the **Settings** (gear) icon in the top-right corner of the [DASH pump screen](#omnipod-dash-tab).
-- Open the **menu** (☰) in the top-left corner of the main screen and select **Configuration** > **Pump**. On the **Omnipod Dash** card, press **Settings**.
+- [DASH pompa ekranının](#omnipod-dash-tab) sağ üst köşesindeki **Ayarlar** (dişli) simgesine basın.
+- Ana ekranın sol üst köşesindeki **menüyü** (☰) açın ve **Konfigürasyon** > **Pompa**'yı seçin. **Omnipod Dash** kartında **Ayarlar**'a basın.
 
-The settings are grouped into four expandable sections: **Confirmation Beeps**, **Alerts**, **Notifications** and **Advanced Settings**. Tap a section to open it:
+Ayarlar, açılıp kapanabilen dört bölümde gruplanmıştır: **Onay Bipleri**, **Alarmlar**, **Bildirimler** ve **Gelişmiş Ayarlar**. Bir bölümü açmak için üzerine dokunun:
 
-![The Dash settings](../images/v4/Pumps/dash_settings.png)
+![Dash ayarları](../images/v4/Pumps/dash_settings.png)
 
-Most settings are on/off switches.
+Ayarların çoğu açma/kapama anahtarıdır.
 
-### Confirmation Beeps
+### Onay Bipleri
 
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
-Confirmation beeps from the pod for bolus, basal, SMB and TBR delivery and changes.
+Bolus, bazal, SMB ve GBO iletimi ve değişiklikleri için Pod'dan gelen onay bip sesleri.
 
-**Bolus beeps enabled:**    The pod beeps when a bolus is delivered. On by default.
+**Bolus bip seslerini etkinleştir:**    Bir bolus verildiğinde Pod bip sesi çıkarır. Varsayılan olarak açıktır.
 
-**Basal beeps enabled:**    The pod beeps when a new basal rate is set, or when the active basal rate is canceled or changed. Off by default.
+**Bazal bip seslerini etkinleştir:**    Yeni bir bazal oran ayarlandığında veya etkin bazal oran iptal edildiğinde ya da değiştirildiğinde Pod bip sesi çıkarır. Varsayılan olarak kapalıdır.
 
-**SMB beeps enabled:**  The pod beeps when an SMB is delivered. On by default.
+**SMB bip seslerini etkinleştir:**  Bir SMB verildiğinde Pod bip sesi çıkarır. Varsayılan olarak açıktır.
 
-**TBR beeps enabled:**  The pod beeps when a TBR is set or canceled. Off by default.
+**GBO bip seslerini etkinleştir:**  Bir GBO ayarlandığında veya iptal edildiğinde Pod bip sesi çıkarır. Varsayılan olarak kapalıdır.
 
 ### Alerts
 
@@ -484,237 +484,237 @@ Confirmation beeps from the pod for bolus, basal, SMB and TBR delivery and chang
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 these settings are in the expandable **Alerts** section.
+Yukarıdaki ekran görüntüsü eski bir **AAPS** sürümüne aittir. **AAPS** 4'te bu ayarlar açılıp kapanabilen **Alarmlar** bölümündedir.
 ```
 
-Pod alerts for pod expiry, shutdown and low reservoir. When you change these settings while a pod is active, **AAPS** sends the new alert settings to the pod.
+Pod süre sonu, kapanma ve düşük rezervuar için Pod alarmları. Bir Pod etkinken bu ayarları değiştirdiğinizde **AAPS** yeni alarm ayarlarını Pod'a gönderir.
 
-***NOTE:** An **AAPS** notification is ALWAYS shown for any alert once **AAPS** has communicated with the pod after the alert was triggered. Dismissing the notification does NOT stop the pod alert. To stop the alert, open the DASH pump screen and press **Silence Alerts**.*
+***NOT:** Alarm tetiklendikten sonra **AAPS** Pod ile iletişim kurar kurmaz, her alarm için HER ZAMAN bir **AAPS** bildirimi gösterilir. Bildirimi kapatmak Pod alarmını DURDURMAZ. Alarmı durdurmak için DASH pompa ekranını açın ve **Alarmları Sustur**'a basın.*
 
-**Expiration reminder enabled:**    When this is on, the pod beeps when the reminder time is reached. On by default.
+**Süre sonu hatırlatıcısını etkinleştir:**    Bu ayar açıkken, hatırlatma zamanı geldiğinde Pod bip sesi çıkarır. Varsayılan olarak açıktır.
 
-**Reminder at hours before expiry (72 Hours):** How many hours before the 72-hour pod expiry the reminder starts (1 to 24 hours; default 4).
+**Süre bitiminden önce hatırlatma (72 Saat):** Hatırlatmanın, Pod'un 72 saatlik süre sonundan kaç saat önce başlayacağı (1 ile 24 saat arası; varsayılan 4).
 
-**Expiration alert enabled:**   When this is on, the pod beeps when the alert time is reached, and again 1 hour before shutdown. On by default.
+**Süre sonu alarmını etkinleştir:**   Bu ayar açıkken, alarm zamanı geldiğinde ve kapanmadan 1 saat önce yeniden Pod bip sesi çıkarır. Varsayılan olarak açıktır.
 
-**Alert at hours before shutdown (80 Hours):**  How many hours before the 80-hour pod shutdown the alert starts (1 to 8 hours; default 8).
+**Pompa kapanmadan önce uyar (80 Saat):**  Alarmın, Pod'un 80 saatlik kapanmasından kaç saat önce başlayacağı (1 ile 8 saat arası; varsayılan 8).
 
-**Low reservoir alert enabled:**    The pod alerts you when the insulin left in the reservoir drops to the value in **Number of units**. On by default.
+**Düşük rezervuar uyarısını etkinleştir:**    Rezervuarda kalan insülin **Ünite sayısı** değerine düştüğünde Pod sizi uyarır. Varsayılan olarak açıktır.
 
-**Number of units:**    The number of units at which the low reservoir alert is triggered (5 to 50 units; default 20).
+**Ünite sayısı:**    Düşük rezervuar alarmının tetikleneceği ünite sayısı (5 ile 50 ünite arası; varsayılan 20).
 
 ### Notifications
 
 ![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
-Choose whether **AAPS** plays a sound with its notifications when it is uncertain whether a TBR, SMB or bolus was delivered, and when delivery is suspended.
+Bir GBO'nun, SMB'nin veya bolusun verilip verilmediğinden emin olunamadığında ve iletim askıya alındığında **AAPS**'in bildirimleriyle birlikte ses çalıp çalmayacağını seçin.
 
-***NOTE:** These are phone notifications only; the pod itself does not beep.*
+***NOT:** Bunlar yalnızca telefon bildirimleridir; Pod'un kendisi bip sesi çıkarmaz.*
 
-**Sound for uncertain TBR notifications enabled:**  Plays a sound with the notification when **AAPS** is uncertain whether a TBR was set.
+**Belirsiz GBO bildirimleri için sesi etkinleştir:**  **AAPS** bir GBO'nun ayarlanıp ayarlanmadığından emin olamadığında bildirimle birlikte ses çalar.
 
-**Sound for uncertain SMB notifications enabled:**  Plays a sound with the notification when **AAPS** is uncertain whether an SMB was delivered.
+**Belirsiz SMB bildirimleri için sesi etkinleştir:**  **AAPS** bir SMB'nin verilip verilmediğinden emin olamadığında bildirimle birlikte ses çalar.
 
-**Sound for uncertain bolus notifications enabled:**    Plays a sound with the notification when **AAPS** is uncertain whether a bolus was delivered.
+**Belirsiz bolus bildirimleri için sesi etkinleştir:**    **AAPS** bir bolusun verilip verilmediğinden emin olamadığında bildirimle birlikte ses çalar.
 
-**Sound when delivery suspended notification enabled:**     Plays a sound with the notification when insulin delivery is suspended.
+**İletimin askıya alındığı bildirimi etkinleştirildiğinde sesle uyar:**     İnsülin iletimi askıya alındığında bildirimle birlikte ses çalar.
 
 (omnipod-dash-advanced-settings)=
 
 ### Advanced Settings
 
-![The Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
+![Gelişmiş Ayarlar bölümü](../images/v4/Pumps/dash_settings_advanced.png)
 
-**Bluetooth bonding:**  Bonds the pod with the phone over Bluetooth. Try it only if the pod cannot keep a stable connection, for example on Android 15 (see [Omnipod DASH known AAPS constraints/issues](#omnipod-dash-constraints)). When it is on, the phone shows pairing requests that you must accept. Leave it off if the pod connects fine. It has no effect below Android 15. Off by default.
+**Bluetooth eşleşmesi:**  Pod'u telefonla Bluetooth üzerinden eşleştirir (bonding). Bunu yalnızca Pod sabit bir bağlantı sağlayamıyorsa deneyin, örneğin Android 15'te (bkz. [Omnipod DASH: AAPS'teki bilinen kısıtlamalar/sorunlar](#omnipod-dash-constraints)). Bu ayar açıkken telefon, kabul etmeniz gereken eşleştirme istekleri gösterir. Pod düzgün bağlanıyorsa bu ayarı kapalı bırakın. Android 15'ten önceki sürümlerde hiçbir etkisi yoktur. Varsayılan olarak kapalıdır.
 
-## Insulin and cannula age
+## İnsülin ve kanül yaşı
 
-The [status row](#screens-sensor-level-battery) on the main screen shows the age of your insulin and cannula. With Omnipod, these work a little differently than with tube-based pumps.
+Ana ekrandaki [durum satırı](#screens-sensor-level-battery) insülininizin ve kanülünüzün yaşını gösterir. Omnipod'da bunlar hortumlu pompalardan biraz farklı çalışır.
 
-**AAPS** records a cannula change and an insulin change automatically each time you activate a pod. This resets the **Insulin** and **Cannula** ages to zero after every pod change. You do not need to record them yourself with **Prime/Fill**. This is because the pod inserts the cannula directly into the skin where it is attached: Omnipod does not use a tube.
+**AAPS**, her Pod etkinleştirdiğinizde otomatik olarak bir kanül değişimi ve bir insülin değişimi kaydeder. Bu, her Pod değişiminden sonra **İnsülin** ve **Kanül** yaşlarını sıfırlar. Bunları **Hazırla/doldur** ile kendiniz kaydetmeniz gerekmez. Bunun nedeni, Pod'un kanülü yapıştırıldığı yerde doğrudan cilde yerleştirmesidir: Omnipod hortum kullanmaz.
 
-**Pump battery** age is not reported: the battery and the insulin reservoir are built into each pod, and the battery always lasts longer than the pod itself (maximum 80 hours).
+**Pompa pili** yaşı bildirilmez: pil ve insülin rezervuarı her Pod'un içinde yerleşiktir ve pil her zaman Pod'un kendisinden daha uzun dayanır (en fazla 80 saat).
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version, where these ages were shown in the **Careportal** section of the **Actions** tab. In **AAPS** 4 they are shown in the status row on the main screen.
+Yukarıdaki ekran görüntüsü, bu yaşların **Eylemler** sekmesinin **Careportal** bölümünde gösterildiği eski bir **AAPS** sürümüne aittir. **AAPS** 4'te bu yaşlar ana ekrandaki durum satırında gösterilir.
 ```
 
 ### Level
 
 **Insulin Level**
 
-The insulin level shown is the amount reported by the pod. However, the pod only reports the actual reservoir level when it is below 50 units. Until then, *Over 50 U left* is shown. The amount reported is not exact: when the pod reports 'empty', in most cases the reservoir still has a few units of insulin left.
+Gösterilen insülin seviyesi, Pod'un bildirdiği miktardır. Ancak Pod gerçek rezervuar seviyesini yalnızca 50 ünitenin altındayken bildirir. O zamana kadar *50 Ü üzeri kaldı* gösterilir. Bildirilen miktar kesin değildir: Pod 'boş' bildirdiğinde çoğu durumda rezervuarda hâlâ birkaç ünite insülin kalmıştır.
 
-The DASH pump screen shows the level as follows:
+DASH pompa ekranı seviyeyi şöyle gösterir:
 
-  * **Over 50 U left** - The pod reports more than 50 units in the reservoir.
-  * **Below 50 units** - The exact amount of insulin left in the reservoir, as reported by the pod.
+  * **50 Ü üzeri kaldı** - Pod rezervuarda 50 üniteden fazla insülin olduğunu bildirir.
+  * **50 ünitenin altında** - Pod'un bildirdiği şekilde, rezervuarda kalan tam insülin miktarı.
 
 Additional note:
-  * **SMS** - Returns the value, or 50+U when over 50 units, in SMS responses.
-  * **Nightscout** - Uploads a value of 50 when over 50 units to Nightscout (version 14.07 and older). Newer versions report a value of 50+ when over 50 units.
+  * **SMS** - SMS yanıtlarında değeri veya 50 ünitenin üzerindeyken 50+U değerini döndürür.
+  * **Nightscout** - 50 ünitenin üzerindeyken Nightscout'a 50 değerini yükler (sürüm 14.07 ve daha eskisi). Daha yeni sürümler 50 ünitenin üzerindeyken 50+ değerini bildirir.
 
 (omnipod-dash-troubleshooting)=
 
 ## Troubleshooting
 
-This section covers common known issues and solutions for Omnipod DASH use with AAPS. There is also [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
+Bu bölüm, Omnipod DASH'in AAPS ile kullanımında sık görülen bilinen sorunları ve çözümlerini içerir. Dokümantasyonda ayrıca [Genel sorun giderme](../GettingHelp/GeneralTroubleshooting.md) bölümü de vardır; bazı Pod sorunlarıyla ilgili konuları da kapsadığı için bu bölümü de incelemelisiniz.
 
 ---
 
 (omnipod-dash-bluetooth-related-issues)=
 
-## Bluetooth related issues
+## Bluetooth ile ilgili sorunlar
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Bluetooth bağlantılarıyla, pompa/Pod bağlantısının kopmasıyla veya etkinleştirme ve bağlantı sorunlarıyla ilgili bilinen sorunlar için: [Bluetooth sorunlarını giderme](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (omnipod-dash-delivery-suspended)=
 
-### Delivery suspended
+### İletim askıya alındı
 
-  - Artık iletimi askıya alma butonu yok. If you want to "suspend" the pod, you can set a zero **TBR** for x minutes.
-  - During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile**. İki komut arasında iletişim başarısız olursa, iletim askıya alınabilir. Bu olduğunda:
+  - Artık iletimi askıya alma butonu yok. Pod'u "askıya almak" istiyorsanız, x dakika için sıfır **GBO** ayarlayabilirsiniz.
+  - **Profil değişimleri** sırasında DASH, yeni bazal **Profili** ayarlamadan önce iletimi askıya almak zorundadır. İki komut arasında iletişim başarısız olursa, iletim askıya alınabilir. Bu olduğunda:
      - Bazal, SMB, Manuel bolus vb. içeren insülin iletimi olmayacaktır.
      - Komutlardan birinin onaylanmadığına dair bir bildirim olabilir: bu, hatanın ne zaman gerçekleştiğine bağlıdır.
-     - **AAPS** will try to set the new basal profile every 15 minutes.
-     - **AAPS** will show a notification informing that the delivery is suspended every 15 minutes, if the delivery is still suspended (resume delivery failed).
-     - The [**Resume Delivery**](#omnipod-dash-resuming-insulin-delivery) button is shown on the DASH pump screen if you want to resume delivery manually.
-     - If **AAPS** fails to resume delivery on its own (this happens if the pod is unreachable, sound is muted, etc), the pod will start beeping 4 times every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20 minutes.
-  - For unconfirmed commands, press **Refresh** on the DASH pump screen to confirm or deny them.
+     - **AAPS**, yeni bazal profili her 15 dakikada bir ayarlamayı dener.
+     - İletim hâlâ askıya alınmışsa (iletime devam etme başarısız olduysa), **AAPS** her 15 dakikada bir iletimin askıya alındığını bildiren bir bildirim gösterir.
+     - İletime elle devam etmek isterseniz DASH pompa ekranında [**İletime devam et**](#omnipod-dash-resuming-insulin-delivery) düğmesi gösterilir.
+     - **AAPS** iletime kendisi devam edemezse (bu, Pod'a ulaşılamadığında, ses kapalı olduğunda vb. olur), Pod 3 dakika boyunca her dakika 4 kez bip sesi çıkarır; iletim 20 dakikadan uzun süre askıda kalırsa bu her 15 dakikada bir tekrarlanır.
+  - Onaylanmamış komutlar için, onaylamak veya reddetmek üzere DASH pompa ekranında **Yenile**'ye basın.
 
-*****NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !******
+*****NOT:** Pod'dan bip sesleri duyduğunuzda, telefonu kontrol etmeden iletimin devam edeceğini varsaymayın; iletim askıda kalabilir, ***bu yüzden kontrol etmeniz gerekir!******
 
 ---
 (omnipod-dash-pod-failures)=
 
 ### Pod Failures
 
-- Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself.
-- It is best practice not to raise support / replacement cases with Insulet, since AAPS is not an approved method of using the Pods.
-- A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+- Pod'lar, Pod'un kendi donanım sorunları da dahil olmak üzere çeşitli nedenlerle ara sıra arızalanabilir.
+- AAPS, Pod'ları kullanmanın onaylı bir yöntemi olmadığından Insulet'e destek veya değişim talebi açmamak en iyisidir.
+- Nedeni bulmanıza yardımcı olacak hata kodlarının listesini [**burada bulabilirsiniz**](https://github.com/openaps/openomni/wiki/Fault-event-codes).
 
-When a pod fails, it stops delivering insulin and beeps continuously. **AAPS** shows a notification on the main screen with the fault code and name, and the *Ref:* code, for example *Pod Fault: 020 ALARM_OCCLUDED*. Press **Dismiss** to close the notification. This does not stop the pod beeping.
+Bir Pod arızalandığında insülin vermeyi durdurur ve sürekli bip sesi çıkarır. **AAPS**, ana ekranda hata kodu ve adıyla birlikte *Ref:* kodunu içeren bir bildirim gösterir, örneğin *Pod Hatası: 020 ALARM_OCCLUDED*. Bildirimi kapatmak için **Kapat**'a basın. Bu, Pod'un bip seslerini durdurmaz.
 
-![A pod fault notification](../images/v4/Pumps/dash_pod_fault_notification.png)
+![Bir Pod hatası bildirimi](../images/v4/Pumps/dash_pod_fault_notification.png)
 
-On the DASH pump screen, the **Pod Status** field shows **ALARM**, the **Errors** field shows the pod fault, and the **PDM Notification** field explains it, for example *Occlusion Detected. Insulin delivery stopped. Change Pod now. Check your BG*.
+DASH pompa ekranında **Pod Durumu** alanında **ALARM** yazar, **Hatalar** alanı Pod hatasını gösterir ve **PDM Bildirimi** alanı hatayı açıklar, örneğin *Tıkanma tespit edildi. İnsülin iletimi durdu. Pod'u şimdi değiştirin. KŞ'nizi kontrol edin*.
 
-![The DASH pump screen after a pod fault](../images/v4/Pumps/dash_pump_screen_pod_fault.png)
+![Bir Pod hatasından sonra DASH pompa ekranı](../images/v4/Pumps/dash_pump_screen_pod_fault.png)
 
-A failed pod cannot be used again. Check your blood glucose, then [deactivate the pod](#omnipod-dash-deactivate-pod) and activate a new one.
+Arızalanan bir Pod yeniden kullanılamaz. Kan şekerinizi kontrol edin, ardından [Pod'u devre dışı bırakın](#omnipod-dash-deactivate-pod) ve yeni bir Pod etkinleştirin.
 
 ---
 ### Preventing error 49 pod failures
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a built-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. The exact origin of a “49 pod failure” often is hard to trace. It can happen, for example, after application crashes, when running a development version or after a re-installation.
+Bu hata, bir komut için yanlış Pod durumu veya bir insülin iletim komutu sırasında oluşan bir hata ile ilgilidir. This is when the driver and Pod disagree on the actual state. Pod (yerleşik bir güvenlik önlemi olarak) bu durumda düzeltilemeyen 49 (0x31) hata koduyla tepki verir ve “screamer” (çığlık atan) denen duruma geçer: bu uzun ve rahatsız edici bip sesi, ancak Pod'un arkasındaki uygun yere bir delik açılarak durdurulabilir. “49 Pod arızasının” kesin nedenini bulmak çoğu zaman zordur. Bu durum örneğin uygulama çöktükten sonra, bir geliştirme sürümü çalıştırırken veya yeniden kurulumdan sonra olabilir.
 
 ---
 
 ### Pump Unreachable Alerts
 
-When no communication can be established with the pod for a pre-configured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by pressing the **Settings** (gear) icon on the top right of the main screen, then selecting **Local Alerts** ➜ **Pump unreachable threshold**. Recommended value is alerting after **120** minutes.
+Önceden ayarlanmış bir süre boyunca Pod ile iletişim kurulamazsa “Pompaya ulaşılamıyor” uyarısı verilir. Pompaya ulaşılamıyor uyarıları, ana ekranın sağ üst köşesindeki **Ayarlar** (dişli) simgesine basıp ardından **Yerel uyarılar** ➜ **Pompa ulaşılamaz eşiği** seçilerek yapılandırılabilir. Önerilen değer, **120** dakika sonra uyarı vermektir.
 
 ---
 (omnipod-dash-export-import)=
-### Export and import settings
+### Ayarları dışa ve içe aktarma
 
-Exporting **AAPS** settings lets you restore all your settings and Objectives, for example after reinstalling **AAPS** or on a new phone. **Export your settings right after each Pod activation** and copy the file to a safe place off your phone (for example Google Drive), so the active Pod can be restored too. See [Creating and restoring back-ups](#ExportImportSettings-Settings-Export).
+**AAPS** ayarlarını dışa aktarmak, örneğin **AAPS**'i yeniden kurduktan sonra veya yeni bir telefonda, tüm ayarlarınızı ve Görevlerinizi geri yüklemenizi sağlar. Etkin Pod'un da geri yüklenebilmesi için **ayarlarınızı her Pod etkinleştirmesinden hemen sonra dışa aktarın** ve dosyayı telefonunuzun dışında güvenli bir yere (örneğin Google Drive) kopyalayın. Bkz. [Yedek oluşturma ve geri yükleme](#ExportImportSettings-Settings-Export).
 
 ```{admonition} Importing settings can end your active Pod
 :class: warning
-On the phone that is already running the Pod, leave **Also replace pump settings** unticked: the Pod session is kept and only the other settings are imported. Tick it only on a new phone, with a file exported during the Pod you are wearing now. See [Tubeless pumps](#ExportImportSettings-tubeless-pumps).
+Pod'u zaten çalıştıran telefonda **Pompa ayarlarını da değiştir** seçeneğini işaretlemeden bırakın: Pod oturumu korunur ve yalnızca diğer ayarlar içe aktarılır. Bu seçeneği yalnızca yeni bir telefonda ve şu anda taktığınız Pod sırasında dışa aktarılmış bir dosyayla işaretleyin. Bkz. [Hortumsuz pompalar](#ExportImportSettings-tubeless-pumps).
 ```
 
-If the imported settings contain a Pod that is no longer active, see the next section.
+İçe aktarılan ayarlar artık etkin olmayan bir Pod içeriyorsa sonraki bölüme bakın.
 
 ---
-### Importing settings that contain Pod state from an inactive Pod
+### Etkin olmayan bir Pod'un durumunu içeren ayarları içe aktarma
 
-When importing settings containing data for a Pod that is no longer active, AAPS will try to connect with it, which will obviously fail. You cannot activate a new Pod in this situation.
+Artık etkin olmayan bir Pod'un verilerini içeren ayarları içe aktardığınızda AAPS ona bağlanmaya çalışır ve bu doğal olarak başarısız olur. Bu durumda yeni bir Pod etkinleştiremezsiniz.
 
-To remove the old pod session:
-1. On the DASH pump screen, press **Deactivate Pod**. The deactivation will most likely fail.
-2. When it fails, press **Discard Pod** and confirm (see [Discarding a pod](#omnipod-dash-discard-pod)).
-3. Once the old pod is removed, you can activate a new pod.
+Eski Pod oturumunu kaldırmak için:
+1. DASH pompa ekranında **Pod'u Devre Dışı Bırak**'a basın. Devre dışı bırakma büyük olasılıkla başarısız olur.
+2. Başarısız olduğunda **Pod'u Çıkar**'a basın ve onaylayın (bkz. [Pod'u çıkarma](#omnipod-dash-discard-pod)).
+3. Eski Pod kaldırıldıktan sonra yeni bir Pod etkinleştirebilirsiniz.
 
-### Generic error: java.lang.IllegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
+### Genel hata: java.lang.IllegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
 
-If you receive this error when attempting to Initialize a new pod **AAPS** fails as it still has settings for an old pod stored in configuration.
+Yeni bir Pod'u başlatmaya çalışırken bu hatayı alıyorsanız, **AAPS** yapılandırmasında hâlâ eski bir Pod'un ayarları kayıtlı olduğu için işlem başarısız olur.
 
 ![omnipod_address_in_use](../images/DASH_images/Errors/omnipod_address_in_use.png)
 
-This can happen if you restore from a backup, or a pod deactivation fails.
+Bu, bir yedekten geri yükleme yaptığınızda veya bir Pod'u devre dışı bırakma başarısız olduğunda olabilir.
 
-To resolve it, press **Cancel** to leave the activation. On the DASH pump screen, press **Discard Pod** if it is shown. Otherwise press **Deactivate Pod**, and when the deactivation fails, press **Discard Pod** (see [Discarding a pod](#omnipod-dash-discard-pod)).
+Bunu çözmek için etkinleştirmeden çıkmak üzere **Vazgeç**'e basın. DASH pompa ekranında, gösteriliyorsa **Pod'u Çıkar**'a basın. Gösterilmiyorsa **Pod'u Devre Dışı Bırak**'a basın ve devre dışı bırakma başarısız olduğunda **Pod'u Çıkar**'a basın (bkz. [Pod'u çıkarma](#omnipod-dash-discard-pod)).
 
-You should now be able to Activate a new pod.
+Artık yeni bir Pod etkinleştirebilmelisiniz.
 
 ---
-### Reinstalling AAPS
+### AAPS'i yeniden kurma
 
-When uninstalling **AAPS** you will lose all your settings, objectives and the current Pod session. **To restore them make sure you have a recent exported settings file available!**
+**AAPS**'i kaldırdığınızda tüm ayarlarınızı, görevlerinizi ve mevcut Pod oturumunu kaybedersiniz. **Bunları geri yüklemek için yakın zamanda dışa aktarılmış bir ayar dosyanızın olduğundan emin olun!**
 
-When on an active Pod, use an export made during the current Pod session (see [Export and import settings](#omnipod-dash-export-import)).
+Etkin bir Pod kullanırken, mevcut Pod oturumu sırasında yapılmış bir dışa aktarımı kullanın (bkz. [Ayarları dışa ve içe aktarma](#omnipod-dash-export-import)).
 
-1. Export your settings and store a copy in a safe place (e.g Google Drive).
-2. Uninstall **AAPS** and restart your phone.
-3. Install the new version of **AAPS**.
+1. Ayarlarınızı dışa aktarın ve bir kopyasını güvenli bir yerde (ör. Google Drive) saklayın.
+2. **AAPS**'i kaldırın ve telefonunuzu yeniden başlatın.
+3. **AAPS**'in yeni sürümünü kurun.
 4. Ayarlarınızı içe aktarın.
 5. Verify all preferences (optionally import settings again).
-6. Activate a new pod.
+6. Yeni bir Pod etkinleştirin.
 7. Tamamlandığında, mevcut ayarları dışa aktarın.
 
 ---
 ### Updating AAPS to a newer version
 
-In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod session.
+In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. Bu, etkin bir Pod oturumu sırasında da mümkündür.
 
 1. Ayarlarınızı dışa aktarın.
-2. Install the new **AAPS** version.
+2. Yeni **AAPS** sürümünü kurun.
 3. Kurulumun başarılı olduğunu doğrulayın
-4. RESUME the Pod or activate a new pod.
+4. Pod'u DEVAM ETTİRİN veya yeni bir Pod etkinleştirin.
 5. Tamamlandığında, mevcut ayarları dışa aktarın.
 
 ---
 ### Omnipod driver alerts
 
-The Omnipod Dash driver presents a variety of unique alerts on the **main screen**, most of them are informational and can be dismissed while some provide the user with an action requiring their input to resolve the cause of the triggered alert.
+Omnipod Dash sürücüsü **ana ekranda** çeşitli özel uyarılar gösterir; bunların çoğu bilgi amaçlıdır ve kapatılabilir, bazıları ise tetiklenen uyarının nedenini çözmek için kullanıcıdan bir işlem yapmasını ister.
 
 A summary of the main alerts that you may encounter is listed below:
 
-- *Pod Fault: XXX NAME*, followed by *Ref: ...*: the pod has failed and stopped delivering insulin. Change the pod. See [Pod Failures](#omnipod-dash-pod-failures).
-- *No Active Pod*: no pod session was found. This notification keeps coming back until you activate a new pod. Once a pod is activated, it disappears automatically.
-- *Insulin delivery suspended*: the pod has suspended insulin delivery. See [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery).
-- *Setting basal profile might have failed. İletim durdurulmuş olabilir! Please manually refresh the Pod status on the pump screen and resume delivery if needed.* Setting the basal **Profile** on the pod may have failed. Press **Refresh** on the DASH pump screen, and press **Resume Delivery** if it is shown.
-- *Unable to verify whether SMB (X U) succeeded. Refresh pod status to confirm or deny this command.* **AAPS** could not confirm that the **SMB** was delivered. Press **Refresh** on the DASH pump screen and check the **Last bolus** field.
-- *Bolus delivery status uncertain. Refresh pod status to confirm or deny.* The same for a normal bolus: press **Refresh** on the DASH pump screen.
-- *Timezone on pod is different from the timezone on phone. Basal rate is incorrect. Switch profile to fix* See the DST and timezone note in [Omnipod DASH known AAPS constraints/issues](#omnipod-dash-constraints).
+- *Pod Hatası: XXX AD* ve ardından *Ref: ...*: Pod arızalanmış ve insülin vermeyi durdurmuştur. Pod'u değiştirin. Bkz. [Pod Hataları](#omnipod-dash-pod-failures).
+- *Aktif Pod Yok*: Pod oturumu bulunamadı. Bu bildirim, yeni bir Pod etkinleştirene kadar tekrar tekrar gelir. Bir Pod etkinleştirildiğinde bildirim kendiliğinden kaybolur.
+- *İnsülin iletimi askıya alındı*: Pod insülin iletimini askıya almıştır. Bkz. [İnsülin İletimine Devam Etme](#omnipod-dash-resuming-insulin-delivery).
+- *Bazal profili ayarlama başarısız olmuş olabilir. İletim durdurulmuş olabilir! Lütfen pompa ekranında Pod durumunu elle yenileyin ve gerekirse iletime devam edin.* Bazal **Profilin** Pod'a ayarlanması başarısız olmuş olabilir. DASH pompa ekranında **Yenile**'ye basın ve gösteriliyorsa **İletime devam et**'e basın.
+- *SMB (X Ü) işleminin başarılı olup olmadığı doğrulanamadı. Bu komutun sonucunu teyit etmek veya reddetmek için pod durumunu yenileyin.* **AAPS**, **SMB**'nin verildiğini doğrulayamadı. DASH pompa ekranında **Yenile**'ye basın ve **Son Bolus** alanını kontrol edin.
+- *Bolus iletim durumu belirsiz. Onaylamak veya reddetmek için pod durumunu yenileyin.* Normal bir bolus için de aynısı geçerlidir: DASH pompa ekranında **Yenile**'ye basın.
+- *Pod'un saat dilimi, telefondaki saat diliminden farklıdır. Bazal oran yanlış. Düzeltmek için profili değiştirin* [Omnipod DASH: AAPS'teki bilinen kısıtlamalar/sorunlar](#omnipod-dash-constraints) bölümündeki yaz saati (DST) ve saat dilimi notuna bakın.
 
 (omnipod-dash-where-to-get-help-for-dash)=
 
-## Where to get help
+## Nereden yardım alabilirsiniz?
 
-All of the development work for the DASH is done by the community on a **volunteer** basis; please keep this in mind and use the following guidelines before requesting assistance:
+DASH için tüm geliştirme çalışmaları topluluk tarafından **gönüllü** olarak yapılır; lütfen bunu aklınızda tutun ve yardım istemeden önce aşağıdaki yönergeleri izleyin:
 
 -  **Seviye 0:** Sorun yaşadığınız işlevin nasıl çalışması gerektiğini anladığınızdan emin olmak için bu dokümantasyonun ilgili bölümünü okuyun.
--  **Seviye 1:** Bu dokümantasyonu kullanmanıza rağmen hâlâ çözemediğiniz sorunlarla karşılaşıyorsanız, lütfen [bu davet bağlantısını](https://discord.gg/4fQUWHZ4Mw) kullanarak **Discord**'da * #AAPS* kanalına gidin. There are also numerous Facebook and other groups you can ask in too (see [**Getting Help**](../GettingHelp/WhereCanIGetHelp.md))
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues). If it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
+-  **Seviye 1:** Bu dokümantasyonu kullanmanıza rağmen hâlâ çözemediğiniz sorunlarla karşılaşıyorsanız, lütfen [bu davet bağlantısını](https://discord.gg/4fQUWHZ4Mw) kullanarak **Discord**'da * #AAPS* kanalına gidin. Soru sorabileceğiniz çok sayıda Facebook grubu ve başka grup da vardır (bkz. [**Nereden yardım alabilirim?**](../GettingHelp/WhereCanIGetHelp.md))
+-  **Seviye 2:** Sorununuzun daha önce bildirilip bildirilmediğini görmek için [Issues](https://github.com/nightscout/AndroidAPS/issues) sayfasındaki mevcut sorunları arayın. Sorun zaten varsa lütfen onaylayın, yorum yazın veya sorununuzla ilgili bilgi ekleyin. Yoksa lütfen [yeni bir sorun (issue)](https://github.com/nightscout/AndroidAPS/issues) oluşturun ve [günlük dosyalarınızı](../GettingHelp/AccessingLogFiles.md) ekleyin.
 -  **Sabırlı olun - topluluğumuzun üyelerinin çoğu iyi huylu gönüllülerden oluşur ve sorunları çözmek genellikle hem kullanıcılar hem de geliştiriciler için zaman ve sabır gerektirir.**
 
-When requesting help come prepared with the following information to help those in the community with your specific questions and problems:
-- Android phone make and model
-- Android OS version (e.g 15 or 16)
-  - Did you recently upgrade your Android OS version?
-- The version of **AAPS** you are running
-- Plain english description of the problem you are facing considering some of the following things
-   - Was it working before now?
-   - When did it work or not work?
-   - Did you make any changes to configuration or profile settings?
-   - Did you pair a new Bluetooth device?
-   - Did you upgrade or install a new app?
-   - How long was it working before it stopped working?
+Yardım isterken, topluluktakilerin özel sorularınıza ve sorunlarınıza yardımcı olabilmesi için aşağıdaki bilgileri hazırlayın:
+- Android telefonun markası ve modeli
+- Android işletim sistemi sürümü (ör. 15 veya 16)
+  - Android işletim sistemi sürümünüzü yakın zamanda yükselttiniz mi?
+- Kullandığınız **AAPS** sürümü
+- Yaşadığınız sorunun, aşağıdaki noktalar da göz önünde bulundurularak sade bir dille açıklaması
+   - Daha önce çalışıyor muydu?
+   - Ne zaman çalıştı veya çalışmadı?
+   - Yapılandırmada veya profil ayarlarında değişiklik yaptınız mı?
+   - Yeni bir Bluetooth cihazı eşleştirdiniz mi?
+   - Yeni bir uygulamayı güncellediniz veya kurdunuz mu?
+   - Çalışmayı durdurmadan önce ne kadar süre çalıştı?

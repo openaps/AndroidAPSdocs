@@ -80,7 +80,7 @@
 * Dla DanaRS z oprogramowaniem v3 lub Dana-i domyślne hasło wynika z daty produkcji i ma postać MMDD, gdzie MM to miesiąc, a DD to dzień produkcji pompy (np. „0124” oznacza miesiąc 01 i dzień 24).
     
     * W MAIN MENU wybierz REVIEW, a następnie otwórz z podmenu SHIPPING INFORMATION
-    * Number 3 is manufacturing date. 
+    * Pozycja 3 to data produkcji. 
     * Dla wersji v3/i to hasło służy tylko do zablokowania menu w pompie. Nie używa się go do komunikacji i nie trzeba go wprowadzać w AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=

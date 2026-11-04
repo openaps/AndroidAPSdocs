@@ -2,7 +2,7 @@
 
 ## AAPS działa wyłącznie dzięki wysiłkom wolontariuszy i nie posiada opłacanych pracowników.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. Twórcy oddają swój wolny czas za darmo. Nie byłoby jednak w porządku oczekiwać, że poniosą też dodatkowe koszty, aby coś tak wspaniałego było otwarte (open source) i darmowe dla wszystkich.
+Twórcy to rodzice, opiekunowie, bliscy i osoby z cukrzycą. Pracują razem, aby rozwijać i ulepszać rozwiązanie bardzo częstej potrzeby. Twórcy oddają swój wolny czas za darmo. Nie byłoby jednak w porządku oczekiwać, że poniosą też dodatkowe koszty, aby coś tak wspaniałego było otwarte (open source) i darmowe dla wszystkich.
 
 *Aby w pełni przetestować nowy zestaw, twórcy potrzebują zapasowego telefonu i zapasowej pompy, ponieważ nie można go używać na człowieku, dopóki nie działa stabilnie. Nowsze modele trzeba testować, gdy tylko stają się dostępne. Część przekazanych pieniędzy jest też potrzebna na koszty wysyłki tego sprzętu do twórców w różnych krajach. Czasem miło jest też dołożyć się do kosztów, aby twórcy mogli opuścić swoje ciemne pokoje i spotkać się na konferencjach i wydarzeniach, gdzie mogą razem wymieniać pomysły.*
 
@@ -23,7 +23,7 @@ Jeśli tłumaczysz coś po raz pierwszy, zacznij od tekstów aplikacji. To jest 
 
 Możesz też zacząć tłumaczyć dokumentację równolegle lub później.
 
-You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
+Stan tłumaczeń aplikacji i dokumentacji dla poszczególnych języków możesz sprawdzić [tutaj](StateOfTranslations.md).
 
 * Jeśli chcesz przetłumaczyć **aplikację** na inne języki (dziękujemy), użyj [crowdin](https://crowdin.com/project/androidaps).
 * Jeśli chcesz przetłumaczyć **dokumentację** na inne języki (dziękujemy), użyj [crowdin](https://crowdin.com/project/androidapsdocs). 

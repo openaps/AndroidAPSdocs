@@ -1,8 +1,8 @@
 (aaps-builder-setup)=
 
-# AAPS Builder setup page
+# Pagina de configurare AAPS Builder
 
-Build your own **AAPS** app in GitHub. No programs to install, no terminal. Takes about 10 minutes the first time, then you start each build yourself.
+Build your own **AAPS** app in GitHub. No programs to install, no terminal. Prima dată durează aproximativ 10 minute, apoi porniți dumneavoastră fiecare construire.
 
 Each step is explained in more detail, with screenshots, in [Browser build with AAPS Builder](#aaps-builder). Keep that page open in another tab.
 
@@ -18,12 +18,12 @@ This creates your own private copy of AAPS Builder in your GitHub account: a rep
 <input class="aapsb-input" type="text" id="aapsb-user" autocomplete="username" spellcheck="false" placeholder="my-github-name" />
 <span class="aapsb-msg" id="aapsb-userMsg"></span>
 
-First log in to github.com in this browser (no account? create one for free). Then come back here. Use your username (shown in your GitHub profile), not your e-mail: the page asks GitHub whether this username exists.
+Mai întâi conectați-vă la github.com în acest browser (nu aveți cont? creați unul gratuit). Apoi reveniți aici. Use your username (shown in your GitHub profile), not your e-mail: the page asks GitHub whether this username exists.
 
 <label class="aapsb-label" for="aapsb-repo">Name of your repository</label>
 <input class="aapsb-input" type="text" id="aapsb-repo" spellcheck="false" placeholder="my-aaps" />
 
-Keep the suggestion. Already created your repository with another name? Type that exact name here.
+Păstrați sugestia. Already created your repository with another name? Scrieți aici exact acel nume.
 
 ```{note}
 **Already have an AAPS Builder repository** (made with an earlier version of this page)? Do not create a new one: type its exact name here, skip the button below, and update its workflow once: see **Updating your copy** at the end of this step. Your secrets stay as they are.
@@ -39,15 +39,15 @@ Check this name before you use the buttons below: the page remembers the name fr
 
 <a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Create my private repository</a>
 
-On the GitHub page that opens, everything is already filled in: the template `nightscout/aaps-builder`, your account as owner, the name of your repository, and **Private**. Do not change anything, and leave **Include all branches** unticked.
+On the GitHub page that opens, everything is already filled in: the template `nightscout/aaps-builder`, your account as owner, the name of your repository, and **Private**. Nu schimbați nimic și lăsați **Include all branches** (includeți toate ramurile) nebifat.
 
 1. Click the green **Create repository** button.
-2. GitHub shows your new repository with a folder `.github` and a file `README.md`: the build workflow is in it. Come back to this page for step 2.
+2. GitHub shows your new repository with a folder `.github` and a file `README.md`: the build workflow is in it. Reveniți la această pagină pentru pasul 2.
 
 ```{admonition} Your new repository is empty (no files)?
 :class: warning
 
-It was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** again.
+Nu a fost creat din șablon. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** again.
 ```
 
 ```{admonition} Updating your copy (existing AAPS Builder repository)
@@ -66,9 +66,9 @@ The build steps are updated for you: at every build, your repository runs the ve
 
 (aaps-builder-setup-step2)=
 
-## Step 2 – Your signing key
+## Pasul 2 – Cheia de semnare
 
-The app must be signed with your own key. Always use the same key, otherwise you have to uninstall AAPS (and lose its settings) to update. Choose one of the two tabs.
+The app must be signed with your own key. Always use the same key, otherwise you have to uninstall AAPS (and lose its settings) to update. Alegeți una dintre cele două file.
 
 `````{tab-set}
 
@@ -98,7 +98,7 @@ For example from Android Studio (.jks).
 ````
 
 ````{tab-item} Create a new key
-First time building AAPS? A new key is created here in your browser. Nothing is sent anywhere.
+First time building AAPS? O cheie nouă este creată aici, în browserul dumneavoastră. Nimic nu este trimis nicăieri.
 
 <label class="aapsb-label" for="aapsb-newPass">Choose a password (at least 8 characters, no accented letters)</label>
 <input class="aapsb-input" type="password" id="aapsb-newPass" autocomplete="new-password">
@@ -127,11 +127,11 @@ You will need all three if you ever build AAPS another way, e.g. with Android St
 
 `````
 (aaps-builder-setup-step3)=
-## Step 3 – Give the key to your repository
+## Pasul 3 – Dați cheia depozitului dumneavoastră
 <span id="aapsb-s3wait">Finish step 2 first.</span>
 
 <div id="aapsb-s3ready" hidden>
-  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Open the secrets page</a> Opens: <code class="aapsb-repoUrl"></code> Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1. 2. Tap "Copy name", then paste it into the small "Name" field: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copy name</button> 3. Tap "Copy secret", then paste the long code into the big "Secret" box: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copy secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> The secret is a very long code (thousands of characters), NOT the word KEYSTORE_SET. Copy and paste the name first, then the long code. 4. Tap "Add secret". Done, you never need to do this again.
+  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Open the secrets page</a> Opens: <code class="aapsb-repoUrl"></code> Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1. 2. Tap "Copy name", then paste it into the small "Name" field: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copy name</button> 3. Tap "Copy secret", then paste the long code into the big "Secret" box: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copy secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> The secret is a very long code (thousands of characters), NOT the word KEYSTORE_SET. Copiați și lipiți mai întâi numele, apoi codul lung. 4. Tap "Add secret". Done, you never need to do this again.
 </div>
 (aaps-builder-setup-step4)=
 ## Step 4 – Build the app
@@ -140,17 +140,17 @@ You will need all three if you ever build AAPS another way, e.g. with Android St
 
    Opens: <code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1. The GitHub app opened instead? Tap "RUN WORKFLOW", check the version and variant, and tap "RUN WORKFLOW" again. If the app still shows "Nothing to see here", pull the list down to see your build.
+   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1. S-a deschis în schimb aplicația GitHub? Tap "RUN WORKFLOW", check the version and variant, and tap "RUN WORKFLOW" again. If the app still shows "Nothing to see here", pull the list down to see your build.
 2. If asked, click the green button to enable workflows.
 The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
-3. Click "Run workflow", then the green "Run workflow" button. "latest" builds the newest AAPS version. ***tip:*** *you can build another version by typing its [tag](https://github.com/nightscout/AndroidAPS/tags) name instead of "latest"*
-4. Wait about 15–30 minutes. A green check means it is done.
+3. Click "Run workflow", then the green "Run workflow" button. „latest” construiește cea mai nouă versiune AAPS. ***tip:*** *you can build another version by typing its [tag](https://github.com/nightscout/AndroidAPS/tags) name instead of "latest"*
+4. Așteptați aproximativ 15–30 de minute. O bifă verde înseamnă că s-a terminat.
 Want an e-mail when the build is done? GitHub only e-mails you when a build fails. To also get one when it succeeds: on github.com, open your profile picture → Settings → Notifications → System → Actions, and untick "Only notify for failed workflows".
 
 ```{admonition} No "Build AAPS" / "Run workflow" button?
 :class: warning
 
-1. Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-setup-step1) again with the button.
+1. Deschideți depozitul și verificați că are un dosar `.github` cu fișierul `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-setup-step1) again with the button.
 2. Open the Actions tab. If it says workflows are disabled, click the green button to enable them. Then click "Build AAPS" in the list.
 ```
 
@@ -161,27 +161,27 @@ Want an e-mail when the build is done? GitHub only e-mails you when a build fail
 ```{admonition} Before every update: back up your settings!
 :class: warning
 
-1. In AAPS: Maintenance → Export settings. (Do this regularly anyway, e.g. after a profile change or once a month.)
+1. În AAPS: Mentenanță → Exportați setările. (Do this regularly anyway, e.g. after a profile change or once a month.)
 2. Copy the exported file OFF the phone, e.g. to Google Drive or Dropbox. A backup that only lives on the phone is lost together with the phone.
 3. Keep the APK files and several older exports there too. Then you can always go back.
 
 [How to export settings](#ExportImportSettings-Settings-Export) · [AAPS FAQ: how to organize backups](#FAQ-organize-backups)
 ```
 
-1. Open this page on your phone, in the web browser (Chrome). Log in to github.com if asked.
+1. Deschideți această pagină pe telefon, în browserul web (Chrome). Conectați-vă la github.com dacă vi se cere.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openRuns" target="_blank" rel="noopener">Open my builds</a>
 
-   The GitHub app opened instead? It cannot download builds. In the app, open the newest build and tap "Artifacts ↗", or tap the share icon and choose Chrome (or "Copy link", then paste the link in Chrome's address bar). Continue in Chrome.
+   S-a deschis în schimb aplicația GitHub? It cannot download builds. In the app, open the newest build and tap "Artifacts ↗", or tap the share icon and choose Chrome (or "Copy link", then paste the link in Chrome's address bar). Continuați în Chrome.
 
    Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1.
 
    To stop GitHub links opening in the app: Android Settings → Apps → GitHub → Open by default → turn off "Open supported links".
 3. Tap the newest build with a green check ✅.
-4. Scroll down to the build summary and tap the big link "📱 Download AAPS …" (or scroll further down to "Artifacts" and tap aaps-….apk). Scroll with your finger on the text, not on the diagram of the build steps.
+4. Derulați în jos până la rezumatul construirii și apăsați linkul mare „📱 Download AAPS …” (or scroll further down to "Artifacts" and tap aaps-….apk). Derulați cu degetul pe text, nu pe diagrama pașilor de construire.
 5. When the download is done, tap the file and choose Install. If asked, allow installing apps from this source.
-6. aaps-wear-….apk is for a smartwatch. Skip it if you do not use one.
+6. aaps-wear-….apk este pentru un ceas inteligent. Skip it if you do not use one.
 
-The APK is not shown under "Code" in your repository, only on the build page. It is kept for 14 days.
+The APK is not shown under "Code" in your repository, only on the build page. Este păstrat 14 zile.
 
 New AAPS version? Back up your settings, then build it with [step 4](#aaps-builder-setup-step4). Your repository never builds anything by itself.
 
@@ -189,14 +189,14 @@ New AAPS version? Back up your settings, then build it with [step 4](#aaps-build
 
 ## Step 6 – Optional: get the app in Google Drive
 
-Want the APK to show up in your Google Drive (kept forever)? Add one more secret, GDRIVE_OAUTH2. This page gets it from Google for you. AAPS can then only see and change the files it creates in your Google Drive, nothing else.
+Want the APK to show up in your Google Drive (kept forever)? Adăugați încă un secret, GDRIVE_OAUTH2. Această pagină îl obține de la Google pentru dumneavoastră. AAPS can then only see and change the files it creates in your Google Drive, nothing else.
 
 1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Connect Google Drive</a>
 
-   Google opens in a new tab. Choose your Google account and allow AAPS to see and change its own files. If Google says the app is not verified, tap "Advanced", then "Go to …".
+   Google se deschide într-o filă nouă. Alegeți contul Google și permiteți AAPS să vadă și să modifice propriile fișiere. Dacă Google spune că aplicația nu este verificată, apăsați „Advanced” (avansat), apoi „Go to …” (accesați …).
 2. Then the new tab shows an error like **"This site can't be reached"** or **"127.0.0.1 refused to connect"**. **This is expected.** Google's answer is in the address of that tab.
 
-   Tap the address bar of that tab, select all of the address and copy it. It starts with `http://127.0.0.1:47913/`. Come back to this page within a few minutes: the answer is only valid for a short time.
+   Tap the address bar of that tab, select all of the address and copy it. Începe cu `http://127.0.0.1:47913/`. Come back to this page within a few minutes: the answer is only valid for a short time.
 3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
@@ -215,12 +215,12 @@ Want the APK to show up in your Google Drive (kept forever)? Add one more secret
 ```{admonition} Already have a GDRIVE_OAUTH2 value?
 :class: dropdown
 
-A value from the AAPS preparation page of the other browser build works too: open the secrets page, add the name `GDRIVE_OAUTH2` and paste your value. See [Save the builds in Google Drive](#aaps-builder-google-drive).
+A value from the AAPS preparation page of the other browser build works too: open the secrets page, add the name `GDRIVE_OAUTH2` and paste your value. Vedeți [Salvarea construirilor în Google Drive](#aaps-builder-google-drive).
 ```
 
 Next build, the APKs are also saved in Google Drive in the folder AAPS/&lt;version&gt;.
 
-If you do not build for 6 months, or change your Google password, Google stops the access. The build then says so: redo this step.
+If you do not build for 6 months, or change your Google password, Google stops the access. Construirea vă spune atunci acest lucru: refaceți acest pas.
 
 ----
 
@@ -242,7 +242,7 @@ Everything on this page runs in your browser. Your key and passwords are never s
 - <span data-aapsb-msg="errAlias">Alias not found in the keystore. Available: {aliases}</span>
 - <span data-aapsb-msg="errFormat">This does not look like a keystore file.</span>
 - <span data-aapsb-msg="okHave">Keystore OK! Continue with step 3.</span>
-- <span data-aapsb-msg="okHaveUnchecked">Keystore read. The password will be checked when you build. Continue with step 3.</span>
+- <span data-aapsb-msg="okHaveUnchecked">Keystore read. Parola va fi verificată la construire. Continue with step 3.</span>
 - <span data-aapsb-msg="errShort">The password must be at least 8 characters.</span>
 - <span data-aapsb-msg="errAscii">Use only a–z, A–Z, 0–9 and symbols such as ! ? # – no spaces, no accented letters and not |</span>
 - <span data-aapsb-msg="errMatch">The passwords do not match.</span>

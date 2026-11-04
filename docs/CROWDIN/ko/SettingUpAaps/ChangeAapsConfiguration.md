@@ -1,43 +1,43 @@
-# Making changes to your AAPS configuration
+# AAPS 구성 변경하기
 
-After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
+**[설정 마법사](../SettingUpAaps/SetupWizard.md)**를 마친 후, **AAPS** 구성의 일부만 바꾸려면 마법사 전체를 다시 실행할 필요가 없습니다.
 
-There are three routes to change **AAPS**' configuration. As to which route you take, it is simply a matter of convenience or personal preference, as each route leads to the same settings.
+**AAPS** 구성을 바꾸는 방법은 세 가지입니다. 어느 방법을 쓸지는 편의나 개인 취향의 문제일 뿐입니다. 모든 방법이 같은 설정으로 이어집니다.
 
-These are as follows:
+다음과 같습니다:
 
-1. The **Configuration** screen,
-2. The **Settings** screen or
-3. A plugin's **Settings**, opened from its category in **Configuration**.
+1. **구성** 화면,
+2. **설정** 화면 또는
+3. **구성**의 해당 범주에서 여는 플러그인의 **설정**.
 
-Here we explain which option is most convenient for each situation:
+각 상황에 가장 편리한 옵션을 여기서 설명합니다:
 
-## Configuration
+## 구성
 
-Open the **menu** (☰) in the top-left corner of the main screen and choose **Configuration**:
+메인 화면 왼쪽 위의 **메뉴**(☰)를 열고 **구성**을 선택하십시오:
 
-![Open Configuration from the top-left menu](../images/v4/Configuration/configuration_menu.png)
+![왼쪽 위 메뉴에서 구성 열기](../images/v4/Configuration/configuration_menu.png)
 
-**Configuration** is used to **choose which plugins are active** — your CGM, pump, APS algorithm, sensitivity detection, synchronization and more, grouped by category. It is the same screen the Setup Wizard configured for you.
+**구성**은 **어떤 플러그인을 활성화할지 선택**하는 데 사용합니다. CGM, 펌프, APS 알고리즘, 민감도 감지, 동기화 등이 범주별로 묶여 있습니다. 설정 마법사가 구성해 준 것과 같은 화면입니다.
 
-The documentation of the Configuration screen is available [here](../SettingUpAaps/ConfigBuilder.md).
+구성 화면에 대한 문서는 [여기](../SettingUpAaps/ConfigBuilder.md)에 있습니다.
 
-## Settings
+## 설정
 
-Tap the **Settings** (gear) icon in the top-right corner of the main screen. This opens the settings of **all enabled plugins in a single place**, grouped into expandable sections:
+메인 화면 오른쪽 위의 **설정**(톱니바퀴) 아이콘을 누르십시오. **활성화된 모든 플러그인의 설정을 한 곳에서** 엽니다. 설정은 펼칠 수 있는 섹션으로 묶여 있습니다:
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![펼칠 수 있는 섹션이 있는 설정 화면](../images/v4/Configuration/settings_overview.png)
 
-This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+구성 옵션을 어디에서 찾아야 할지 잘 모를 때 좋은 방법입니다. 하지만 플러그인 하나의 구성만 바꾸려는 경우에는 조금 번거로울 수 있습니다.
 
-The documentation of the settings is available [here](../SettingUpAaps/Preferences.md).
+설정에 대한 문서는 [여기](../SettingUpAaps/Preferences.md)에 있습니다.
 
-## A plugin's Settings
+## 플러그인의 설정
 
-Inside **Configuration**, open a category and tap "**Settings**" underneath the active plugin. You are taken directly to the settings of **that plugin only**:
+**구성**에서 범주를 열고 활성 플러그인 아래의 "**설정**"을 누르십시오. **그 플러그인만의** 설정으로 바로 이동합니다:
 
-![Settings and Open plugin underneath the active plugin](../images/v4/Configuration/configuration_open_plugin.png)
+![활성 플러그인 아래의 설정과 플러그인 열기](../images/v4/Configuration/configuration_open_plugin.png)
 
-For example, this is a good route if you know that you want to change the configuration for your pump: open **Configuration → Pump**, then tap "**Settings**" under the selected pump.
+예를 들어 펌프 구성을 바꾸려는 경우 좋은 방법입니다. **구성 → 펌프**를 열고, 선택한 펌프 아래의 "**설정**"을 누르십시오.
 
-This is a "shortcut" to the same settings shown on the general **Settings** screen.
+일반 **설정** 화면에 나오는 것과 같은 설정으로 가는 "바로 가기"입니다.

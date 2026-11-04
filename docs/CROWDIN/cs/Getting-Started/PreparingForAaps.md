@@ -32,7 +32,7 @@ Tato poškození mohou zahrnovat **ztrátu zraku a trvalou neuropatii (bolesti)*
 
 #### Jak rychle můžu snížit můj HbA1c bez rizika trvalých následků?
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. Autoři studie navrhli, že **"snížení hodnoty HbA1c během jakéhokoli šestiměsíčního období by mělo být omezeno na méně než 2%, aby se zabránilo postupu retinopatie... Příliš rychlý úvodní pokles glykémie by mohl způsobit silné nebo dočasné zhoršení postupu retinopatie."**
+Jedna retrospektivní [studie](https://pubmed.ncbi.nlm.nih.gov/1464975/) se 76 pacienty uvádí, že riziko postupu retinopatie se zvýšilo 1,6krát, 2,4krát a 3,8krát, pokud HbA1c kleslo během 6 měsíců o 1 %, 2 % nebo 3 %. Autoři studie navrhli, že **"snížení hodnoty HbA1c během jakéhokoli šestiměsíčního období by mělo být omezeno na méně než 2%, aby se zabránilo postupu retinopatie... Příliš rychlý úvodní pokles glykémie by mohl způsobit silné nebo dočasné zhoršení postupu retinopatie."**
 
 Poznámka: Pokud používáte jiné jednotky HbA1c (mmol/mol místo %), kalkulačku HbA1c najdete [zde](https://www.diabetes.co.uk/hba1c-units-converter.html).
 
@@ -51,9 +51,9 @@ Obecně se uznává, že lidé s _nově_ zjištěným diabetem 1. typu (kteří 
 :class: danger
 SGLT-2 inhibitory, nazývané také glifloziny, brání zpětnému vstřebávání glukózy v ledvinách. Glifloziny snižují glykémii nepředvídatelně, a proto je při používání systému uzavřené smyčky, jako je AAPS, NESMÍTE užívat! Znamenalo by to značné riziko ketoacidózy nebo hypoglykémie! Kombinace těchto léků se systémem, který snižuje bazální dávky, aby glykémii zvýšil, je obzvlášť nebezpečná. 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. Problém je v tom, že inhibitory způsobí, že tělo část sacharidů vyloučí, a AAPS o tom neví. V těle je pak příliš mnoho inzulínu ve srovnání se vstřebanými sacharidy a dojde k hypoglykémii.
+Stručně řečeno:
+- **Příklad 1: riziko hypoglykémie**
+>Během oběda použijete **AAPS** k bolusu na 45 g sacharidů. Problém je v tom, že inhibitory způsobí, že tělo část sacharidů vyloučí, a AAPS o tom neví. V těle je pak příliš mnoho inzulínu ve srovnání se vstřebanými sacharidy a dojde k hypoglykémii.
 
 - **Příklad 2: riziko ketoacidózy**
 >Inhibitory na pozadí vylučují část sacharidů, a tím snižují vaši glykémii. **AAPS** automaticky řekne pumpě, aby podávala méně inzulínu, včetně bazálu. Postupem času může vaše glykémie zůstávat pod cílovou hodnotou tak dlouho, až tělo nemá dost bazálního inzulínu na zpracování sacharidů, a dojde ke ketoacidóze. Ketoacidóza u lidí s diabetem 1. typu obvykle vzniká kvůli poruše pumpy. To by spustilo upozornění v telefonu a bylo by to vidět na vysoké glykémii. U gliflozinů je ale nebezpečné to, že AAPS žádné upozornění nezobrazí, protože pumpa dál funguje a glykémie může zůstat v cílovém rozmezí.
@@ -80,7 +80,7 @@ V počátečních fázích zahájení provozu **AAPS** může docházet k potí�
 
 #### Čas potřebný k sestavení aplikace a postup k plné smyčce
 
-The time to build the **AAPS** app depends on your level of expertise and technical ability. Nezkušenému uživateli může sestavení **AAPS** trvat (s pomocí komunity) půl dne až celý den. Jak budete v průběhu času získávat více zkušeností, postup sestavení nových verzí **AAPS** se výrazně urychlí.
+Doba sestavení aplikace **AAPS** závisí na vaší úrovni zkušeností a technických dovedností. Nezkušenému uživateli může sestavení **AAPS** trvat (s pomocí komunity) půl dne až celý den. Jak budete v průběhu času získávat více zkušeností, postup sestavení nových verzí **AAPS** se výrazně urychlí.
 
 Se sestavením vám pomohou tyto části dokumentace:
 
@@ -123,7 +123,7 @@ Pokud si s něčím nejste jistí, neváhejte se obrátit na komunitu AAPS – h
 
 
 
-#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
+#### [Kde získat pomoc?](../GettingHelp/WhereCanIGetHelp.md)
 
 Cílem této sekce je poskytnout novým uživatelům odkazy na zdroje, aby získali pomoc včetně přístupu ke komunitní podpoře složené z nových i zkušených uživatelů, kteří mohou objasnit otázky, a vyřešit obvyklé nástrahy, které přicházejí s AAPS.
 
@@ -173,12 +173,12 @@ Zde je přibližný časový rámec:
 | Nastavení GitHubu pro sestavení v prohlížeči                   |          1–4 hodiny           |
 | Nastavení reportovacího serveru                                |           1 hodina            |
 | Instalace aplikace pro CGM (xDrip, BYODA, …)                   |           1 hodina            |
-| Configuring CGM → xDrip → AAPS initially                       |           1 hodina            |
+| Prvotní nastavení CGM → xDrip → AAPS                           |           1 hodina            |
 | Prvotní nastavení AAPS → pumpa                                 |           1 hodina            |
 | Nastavení AAPS → Nightscout/Tidepool (pouze reporty)           |           1 hodina            |
-| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers      |           1 hodina            |
+| Volitelně: Nastavení Nightscout ↔ **AAPS** a NSFollowers       |           1 hodina            |
 | Cíl 1: Nastavit vizualizaci a monitoring                       |           1 hodina            |
-| Cíl 2: Naučte se, jak ovládat AAPS                             |            2 hours            |
+| Cíl 2: Naučte se, jak ovládat AAPS                             |           2 hodiny            |
 | Cíl 3: Prokažte své znalosti                                   |           až 14 dní           |
 | Cíl 4: Začít s otevřenou smyčkou                               |         Nejméně 7 dní         |
 | Cíl 5: Porozumět otevřené smyčce                               |             7 dnů             |

@@ -1,77 +1,77 @@
 (browser-build)=
 
-# Browser build
+# Kūrimas naršyklėje
 
-Building AAPS with GitHub Actions.
+AAPS kūrimas su GitHub Actions.
 
-**Minimum AAPS version supported is 3.3.2.1.**
+**Mažiausia palaikoma AAPS versija yra 3.3.2.1.**
 
 ## Kurti sau, o ne parsisiųsti
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**AAPS programėlės (apk failo) negalima atsisiųsti dėl medicinos prietaisų reglamentų. Sukurti programėlę savo reikmėms yra teisėta, bet jos kopijos negalima duoti kitiems!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Daugiau informacijos rasite [DUK puslapyje](../UsefulLinks/FAQ.md).
 
 (Building-APK-without-a-computer)=
 
-## Choose how to build
+## Pasirinkite, kaip kurti
 
-Pick the method that matches the device you build from:
+Pasirinkite būdą, kuris tinka įrenginiui, kuriuo kuriate:
 
-### On an Android phone: AAPS Builder (recommended)
+### Android telefone: AAPS Builder (rekomenduojama)
 
-A setup page walks you through creating your own private build repository in GitHub. Nothing to install, no preparation file, and you start each build yourself. You download the app directly from GitHub. Google Drive is optional.
+Sąrankos puslapis padės žingsnis po žingsnio sukurti savo privačią kūrimo saugyklą GitHub. Nieko nereikia diegti, nereikia paruošimo failo, o kiekvieną kūrimą paleidžiate patys. Programėlę atsisiunčiate tiesiai iš GitHub. Google Drive nebūtinas.
 
-This also works from a computer browser.
+Tai veikia ir kompiuterio naršyklėje.
 
-**→ [Build with AAPS Builder](BrowserBuildAapsBuilder.md)**
+**→ [Kūrimas su AAPS Builder](BrowserBuildAapsBuilder.md)**
 
-### On a computer or an iPhone / iPad: fork and preparation file
+### Kompiuteryje arba iPhone / iPad: fork ir paruošimo failas
 
-You make a copy (fork) of the AAPS source code in GitHub, create your keystore with a preparation file, and the built app is saved to your Google Drive. Follow the four steps below.
+GitHub sukuriate AAPS šaltinio kodo kopiją (fork), raktų saugyklą sukuriate su paruošimo failu, o sukurta programėlė išsaugoma jūsų Google Drive. Atlikite toliau aprašytus keturis žingsnius.
 
 ```{note}
-**Already building with a fork?** Keep updating it as described in [Update with a browser](../Maintenance/UpdateBrowserBuild.md), or switch to AAPS Builder. To switch, first get a copy of your keystore from your fork: see [Coming from the previous browser build](#aaps-builder-from-fork).
+**Jau kuriate su fork?** Toliau jį atnaujinkite, kaip aprašyta puslapyje [Atnaujinimas naršyklėje (fork)](../Maintenance/UpdateBrowserBuild.md), arba pereikite prie AAPS Builder. Norėdami pereiti, pirmiausia gaukite savo raktų saugyklos kopiją iš fork: žr. [Perėjimas nuo ankstesnio kūrimo naršyklėje](#aaps-builder-from-fork).
 ```
 
-You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+Naršyklėje teks naudoti kelis skirtukus ir pereiti iš vieno į kitą. Chrome pavyzdys:
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
 ```{note}
-You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
+Teks pereiti iš vieno skirtuko į kitą: pradėkite uždarę visus skirtukus, kad perjungdami tarp jų nepasiklystumėte.
 ```
 
-#### What you'll need
+#### Ko jums reikės
 
-- A **Google account**, so the built app can be saved to your Google Drive.
-- A **GitHub account** (free) – you create this in Step 1.
-- A **web browser** that can keep several tabs open at once (Chrome is assumed below).
-- A small **helper to run the preparation file**. Which one you need depends on the device you build from – there is nothing to install now, Step 2 walks you through it for your device:
-  - **Computer (Windows / Mac / Linux):** Simple Web Server.
-  - **iPhone / iPad:** no extra app – you use the built-in Files app and browser.
+- **Google paskyros**, kad sukurta programėlė galėtų būti išsaugota jūsų Google Drive.
+- **GitHub paskyros** (nemokamos) – ją sukursite 1 žingsnyje.
+- **Interneto naršyklės**, kurioje vienu metu gali būti atidaryti keli skirtukai (toliau aprašoma Chrome).
+- Nedidelės **pagalbinės priemonės paruošimo failui paleisti**. Kurios reikia, priklauso nuo įrenginio, kuriuo kuriate – dabar nieko diegti nereikia, 2 žingsnyje bus paaiškinta, ko reikia jūsų įrenginiui:
+  - **Kompiuteris (Windows / Mac / Linux):** Simple Web Server.
+  - **iPhone / iPad:** papildomos programėlės nereikia – naudojate įtaisytąją programėlę Files ir naršyklę.
 
-#### The steps
+#### Žingsniai
 
-The browser build is a series of choices. Follow these steps in order:
+Kūrimas naršyklėje – tai pasirinkimų seka. Atlikite šiuos žingsnius iš eilės:
 
-1. **[Create your GitHub fork](BrowserBuildFork.md)** – make your personal copy of the AAPS source code.
-2. **[Create your signing keystore](BrowserBuildKeystore.md)** – the key decision: generate a new keystore (Option 1) or upload your existing one (Option 2), then follow the page for your device.
-3. **[Authorize Google Drive](BrowserBuildGoogleDrive.md)** – let GitHub save the built app to your Google Drive.
-4. **[Build the APK](BrowserBuildAPK.md)** – run the GitHub Actions workflow and pick your version and variant.
+1. **[Sukurkite savo GitHub fork](BrowserBuildFork.md)** – asmeninę AAPS šaltinio kodo kopiją.
+2. **[Sukurkite pasirašymo raktų saugyklą](BrowserBuildKeystore.md)** – svarbiausias sprendimas: sukurti naują raktų saugyklą (1 variantas) arba įkelti esamą (2 variantas), tada atlikite veiksmus, aprašytus jūsų įrenginiui skirtame puslapyje.
+3. **[Suteikite prieigą prie Google Drive](BrowserBuildGoogleDrive.md)** – leiskite GitHub išsaugoti sukurtą programėlę jūsų Google Drive.
+4. **[Sukurkite APK](BrowserBuildAPK.md)** – paleiskite GitHub Actions darbo eigą (workflow) ir pasirinkite versiją bei variantą.
 
-If you run into trouble, see **[Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations with a fork, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+Jei kyla problemų, žr. **[Kūrimas naršyklėje: trikčių šalinimas](../GettingHelp/BrowserBuildTroubleshooting.md)**. Papildomus veiksmus su fork rasite skyriuose [raktų saugyklos eksportavimas](#ci-keystore-export) arba [vieno pakeitimo įtraukimas (cherry-pick)](#github-cherry-pick).
 
 ----
 
-**Start with [Step 1 – Create your GitHub fork](BrowserBuildFork.md) →**
+**Pradėkite nuo [1 žingsnio – Sukurkite savo GitHub fork](BrowserBuildFork.md) →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Step 1: Create your fork <BrowserBuildFork.md>
-Step 2: Create your keystore <BrowserBuildKeystore.md>
-Step 3: Authorize Google Drive <BrowserBuildGoogleDrive.md>
-Step 4: Build the APK <BrowserBuildAPK.md>
+1 žingsnis: Sukurkite fork <BrowserBuildFork.md>
+2 žingsnis: Sukurkite raktų saugyklą <BrowserBuildKeystore.md>
+3 žingsnis: Suteikite prieigą prie Google Drive <BrowserBuildGoogleDrive.md>
+4 žingsnis: Sukurkite APK <BrowserBuildAPK.md>
 ```

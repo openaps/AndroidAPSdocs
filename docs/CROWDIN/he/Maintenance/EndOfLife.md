@@ -1,40 +1,40 @@
-# End of life
+# סוף התמיכה
 
-Even if your current AAPS system works exactly the way you like, upgrading is still worth it because newer releases bring safety fixes and bug corrections you may never notice until they matter, keep compatibility with new phone OS versions, CGM apps, pump firmware and Nightscout changes, add algorithm improvements and features that have been tested by the wider community, and ensure you stay on a version that is still supported and that others can actually help you troubleshoot. Some previous AAPS versions deliberately have no expiration date so they can keep working on older Android versions, so the lack of an expiration warning is not a sign that your version is still up to date or supported.
+גם אם מערכת AAPS הנוכחית שלכם עובדת בדיוק כמו שאתם רוצים, עדיין כדאי לשדרג. גרסאות חדשות מביאות תיקוני בטיחות ותיקוני באגים שאולי לא תשימו לב אליהם עד שהם יהיו חשובים; הן שומרות על תאימות לגרסאות חדשות של מערכת ההפעלה בטלפון, לאפליקציות CGM, לקושחת המשאבה ולשינויים ב-Nightscout; הן מוסיפות שיפורים באלגוריתם ותכונות שנבדקו על ידי הקהילה הרחבה; והן מבטיחות שתישארו בגרסה שעדיין נתמכת, ושאחרים באמת יוכלו לעזור לכם לפתור בה תקלות. לחלק מגרסאות AAPS הקודמות אין תאריך תפוגה בכוונה, כדי שיוכלו להמשיך לעבוד בגרסאות Android ישנות. לכן, אם אין אזהרת תפוגה, זה לא סימן שהגרסה שלכם עדיין עדכנית או נתמכת.
 
-Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#version-enforcement). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
+לכל גרסה של AAPS יכול להיות תאריך סיום. אחרי תאריך זה, AAPS עשוי [להגביל את הלולאה](#version-enforcement). AAPS מזהיר לפני שתוקף הגרסה פג. כדאי לתכנן את העדכון לפני תאריך הסיום, ולפעול לפי [מדריך העדכון](UpdateToNewVersion.md).
 
-## How to use this page
+## איך להשתמש בדף זה
 
-1. In AAPS, open the **menu** (☰) at the top left and choose **About**. You will see your AAPS version there.
-2. Find the same version in the first table below. Read the end date next to it. Dates are written as **year-month-day**. For example, `2026-10-30` means 30 October 2026.
-3. Check the [Release Notes](ReleaseNotes.md) and the [update guide](UpdateToNewVersion.md) before you update. The version you can use also depends on your phone's Android version.
+1. ב-AAPS, יש לפתוח את **התפריט** (☰) בפינה העליונה של המסך ולבחור **אודות**. שם תופיע גרסת AAPS שלכם.
+2. יש למצוא את אותה גרסה בטבלה הראשונה שלמטה. יש לקרוא את תאריך הסיום שלידה. התאריכים כתובים בתבנית **שנה-חודש-יום**. לדוגמה, `2026-10-30` פירושו 30 באוקטובר 2026.
+3. לפני העדכון, יש לבדוק את [הערות הגרסה](ReleaseNotes.md) ואת [מדריך העדכון](UpdateToNewVersion.md). הגרסה שאפשר להשתמש בה תלויה גם בגרסת Android של הטלפון.
 
-The table does not show an end date for every AAPS version. If your version is missing, its end date may not have been set yet. This does not mean it will be supported forever.
+הטבלה לא מציגה תאריך סיום לכל גרסה של AAPS. אם הגרסה שלכם חסרה, ייתכן שתאריך הסיום שלה עוד לא נקבע. זה לא אומר שהתמיכה בה תימשך לתמיד.
 
-## AAPS version end dates
+## תאריכי הסיום של גרסאות AAPS
 
-<div id="aaps-eol-status" role="status" aria-live="polite">Loading AAPS version data…</div>
+<div id="aaps-eol-status" role="status" aria-live="polite">נתוני הגרסאות של AAPS בטעינה…</div>
 <noscript>
-  Turn on JavaScript to see the tables.
+  יש להפעיל JavaScript כדי לראות את הטבלאות.
 </noscript>
 
 <div id="aaps-eol-versions" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">AAPS version</th><th scope="col">End date</th></tr></thead>
+    <thead><tr><th scope="col">גרסת AAPS</th><th scope="col">תאריך סיום</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
 
-## Android API levels
+## רמות API של Android
 
-Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
+Android נותן לכל גרסת מערכת **רמת API**, שהיא מספר שאפליקציות משתמשות בו. לדוגמה, רמת API 30 היא Android 11. הטבלה שלמטה משתמשת ברמות API מתוך נתוני הגרסאות של AAPS. גרסת AAPS בכל שורה היא הערך שרשום עבור רמת ה-API שמוצגת. זו לא רשימה מלאה של הגרסאות שאפשר להתקין.
 
 To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">Android API level</th><th scope="col">AAPS version listed</th></tr></thead>
+    <thead><tr><th scope="col">רמת API של Android</th><th scope="col">גרסת AAPS רשומה</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     ]));
     status.remove();
   } catch {
-    status.textContent = 'Could not load AAPS version data. Please try again later.';
+    status.textContent = 'Could not load AAPS version data. נא לנסות שוב מאוחר יותר.';
   }
 });
 </script>

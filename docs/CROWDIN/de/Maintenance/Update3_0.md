@@ -1,4 +1,4 @@
-# Updating to AAPS 3.0
+# Auf AAPS 3.0 aktualisieren
 
 (update30-failure-message-data-from-different-pump)=
 

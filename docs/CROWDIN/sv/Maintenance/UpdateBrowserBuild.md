@@ -1,115 +1,115 @@
-# Update with a browser (fork)
+# Uppdatera med bygge i webbläsaren (fork)
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+Har du byggt AAPS med **AAPS Builder**? Då behöver du inte denna sida: se [Uppdatera AAPS med AAPS Builder](#aaps-builder-updates).
 ```
 
-## Build yourself instead of download
+## Bygg själv i stället för att ladda ned
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** kan inte laddas ned, på grund av regler för medicintekniska produkter. Det är lagligt att bygga appen för eget bruk, men du får inte ge en kopia till andra! Se sidan [Vanliga frågor](../UsefulLinks/FAQ.md) för mer information.
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
-This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
+Om du vill uppdatera **AAPS** i webbläsaren för första gången: kopiera säkerhetskopian av din keystore-fil till din Google Drive. Följ sedan [instruktionerna för bygge av **AAPS** i webbläsaren](../SettingUpAaps/BrowserBuild.md) i stället för denna guide. I stället för att skapa en ny keystore måste du välja den som du har kopierat från din dator.
+Detta behöver du bara göra första gången. Vid senare uppdateringar kan du följa denna guide.
 ```
 
 ```{tip}
-**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+**Byter du till AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) är det enklare sättet att bygga i webbläsaren: ingen fork att synkronisera, och du laddar ned appen direkt från GitHub. Du behöver inte byta: denna guide fungerar fortfarande. Om du byter, hämta först en kopia av din keystore från din fork, enligt [Om du kommer från det tidigare bygget i webbläsaren](#aaps-builder-from-fork). Annars kan det nya bygget inte uppdatera AAPS på din telefon.
 ```
 
-## Overview for updating to a new version of AAPS with a browser
+## Översikt: uppdatera till en ny version av AAPS i webbläsaren
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Om du får problem, se den separata sidan [Bygge i webbläsaren: felsökning](../GettingHelp/BrowserBuildTroubleshooting.md).
 
-### Export your settings
+### Exportera dina inställningar
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Exportera dina inställningar från den **AAPS**-version som finns på din telefon nu. Du behöver dem kanske inte, men det är bättre att vara på den säkra sidan.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Se sidan [Skapa och återställa säkerhetskopior](ExportImportSettings.md) om du inte kommer ihåg hur du gör.
 
 (Update-to-new-version-update-your-repo)=
-### Update your GitHub repository
+### Uppdatera ditt repo på GitHub
 
-[Log into GitHub](https://github.com/login).
+[Logga in på GitHub](https://github.com/login).
 
-1. Select Repositories.
-2. Scroll down and select your own AndroidAPS repository.
+1. Välj Repositories.
+2. Scrolla ned och välj ditt eget AndroidAPS-repo.
 
-![Select AndroidAPS repo](../images/update/CI/GitHubUpdate1.png)
+![Välj AndroidAPS-repot](../images/update/CI/GitHubUpdate1.png)
 
-3. Verify you are using your own copy of AndroidAPS (Forked from nightscout/AndroidAPS)
-4. Tap Sync Fork to update it (the number of commits behind might differ from the picture)
+3. Kontrollera att du använder din egen kopia av AndroidAPS (Forked from nightscout/AndroidAPS)
+4. Tryck på Sync Fork för att uppdatera den (antalet commits som saknas kan vara ett annat än på bilden)
 
 
 
-![Sync AndroidAPS repo](../images/update/CI/GitHubUpdate2.png)
+![Synkronisera AndroidAPS-repot](../images/update/CI/GitHubUpdate2.png)
 
-5. Tap Update Branch
+5. Tryck på Update Branch
 
-![Update AndroidAPS repo](../images/update/CI/GitHubUpdate3.png)
+![Uppdatera AndroidAPS-repot](../images/update/CI/GitHubUpdate3.png)
 
-Note: if you have modified your copy of AndroidAPS by mistake, you will see this screen. Discard all changes (commits) to return to the released version.
+Obs: om du av misstag har ändrat din kopia av AndroidAPS ser du denna skärm. Ta bort alla ändringar (commits) för att gå tillbaka till den släppta versionen.
 
-![Discard rogue modifications](../images/update/CI/GitHubUpdate4.png)
+![Ta bort oönskade ändringar](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Good job.
+Nu har du synkroniserat (uppdaterat) din egen kopia med den senaste versionen av **AAPS**. Bra jobbat.
 
-![Repo sync'ed](../images/update/CI/GitHubUpdate5.png)
+![Repot är synkroniserat](../images/update/CI/GitHubUpdate5.png)
 
-### Run the Workflow to Build the Signed APK
+### Kör arbetsflödet för att bygga den signerade APK:n
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+1. I din kopia av AndroidAPS på GitHub väljer du Actions.
+2. Fäll ut All Workflows.
+3. Välj AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Scrolla ned och tryck på Run Workflow.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Låt grenen vara master. Kontrollera i **Select AAPS Version** att **4.0.0**, den nyaste versionen högst upp i listan, är vald. Om din fork inte är uppdaterad är en äldre version förvald: om du kör arbetsflödet med formuläret som det öppnas bygger du om den äldre versionen, och din app uppdateras inte. Välj [variant](#browserbuild-variant) (fullRelease) och tryck sedan på Run workflow.
 
    ```{note}
-   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   Listan med versioner är en del av arbetsflödet i din fork. Om **4.0.0** saknas är din fork inte synkroniserad än: gå tillbaka till [Uppdatera ditt repo på GitHub](#Update-to-new-version-update-your-repo).
    ```
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of **AAPS**. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
+6. Du ser meddelandet Workflow run was successfully requested. Uppdatera sidan i webbläsaren, så kan du följa hur bygget går. När körningen är klar visar AAPS CI en grön bock. Nu har du byggt den uppdaterade versionen av **AAPS**. Det betyder att APK:n för Master och Wear nu sparas direkt i din Google Drive (se nedan). APK:n för AAPSClient kan laddas ned från Github > nightscout > AndroidAPS [här](https://github.com/nightscout/AndroidAPS/releases)
 
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![Följ arbetsflödet](../images/update/CI/GitHubActions4.png)
 
 
-### Install the AAPS APK
+### Installera AAPS-APK:n
 
-1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+1. Öppna din Google Drive
+2. Gå till mappen AAPS och välj mappen för den nya versionen. Där hittar du både telefonversionen och versionen för Android Wear.
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+![Plats i Google Drive](../images/update/CI/GitHubActions5.png)
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+Från september 2026 kan Googles [verifiering av Android-utvecklare](#android-developer-verification) blockera installationen av APK-filen när du trycker på filen, beroende på vilket land du bor i. Kostnadsfria sätt att komma runt detta förklaras på den sidan.
 ```
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
+Fortsätt [här](#Update-to-new-version-check-aaps-version-on-phone)
 
 (update-browser-build-troubleshooting)=
 
-## Troubleshooting
+## Felsökning
 
-If anything goes wrong, don't panic.
+Om något går fel: få inte panik.
 
-Take a breath!
+Andas lugnt!
 
-Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
+Kontrollera sedan om ditt problem redan är beskrivet: se [Felsökning av AAPS Builder](#aaps-builder-troubleshooting) om du bygger med **AAPS Builder**, annars [Bygge i webbläsaren: felsökning](#aaps-ci-troubleshooting).
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Om du behöver mer hjälp, kontakta andra användare av **AAPS** på [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) eller [Discord](https://discord.gg/4fQUWHZ4Mw).

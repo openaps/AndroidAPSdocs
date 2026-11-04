@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-31 October 2026: Version 4.0.0 is out. Вижте [Бележки към версиите](#latestrelease), за да разберете какво е новото, и следвайте инструкциите в [Актуализиране до нова версия или клон](./Maintenance/UpdateToNewVersion.md), за да актуализирате.
+31 октомври 2026 г.: Излезе версия 4.0.0. Вижте [Бележки към версиите](#latestrelease), за да разберете какво е новото, и следвайте инструкциите в [Актуализиране до нова версия или клон](./Maintenance/UpdateToNewVersion.md), за да актуализирате.
 
 ```
 
@@ -17,7 +17,7 @@ Android APS (**AAPS**) е приложение с отворен код за х�
 
 В раздел **1) Първи стъпки** страницата [Въведение в APS и AAPS](Getting-Started/Introduction.md) обяснява общата идея за това какво трябва да прави една система за изкуствен панкреас (APS). Там са описани основите на затворения кръг като цяло и защо е създаден **AAPS**, **AAPS** е сравнен с други системи и е разгледана безопасността. Там има съвети как да говорите с медицинския си екип за **AAPS**, обяснено е защо трябва сами да компилирате приложението **AAPS**, вместо просто да го изтеглите, и има преглед на типичните връзки в една система **AAPS**. Разгледани са също достъпността и кой вероятно ще има полза от **AAPS**.
 
-[Подготовка за започване с AAPS](./Getting-Started/PreparingForAaps.md) дава повече подробности за безопасността, както и за телефоните, CGM (системите за продължително наблюдение на глюкозата) и инсулиновите помпи, които са съвместими с **AAPS**. Там е описан процесът, през който ще преминете, и приблизително колко време ще отнеме, докато използвате пълноценно всички функции на **AAPS**. Този раздел ви подготвя технически да сглобите своята система **AAPS** възможно най-бързо и ефективно. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
+[Подготовка за започване с AAPS](./Getting-Started/PreparingForAaps.md) дава повече подробности за безопасността, както и за телефоните, CGM (системите за продължително наблюдение на глюкозата) и инсулиновите помпи, които са съвместими с **AAPS**. Там е описан процесът, през който ще преминете, и приблизително колко време ще отнеме, докато използвате пълноценно всички функции на **AAPS**. Този раздел ви подготвя технически да сглобите своята система **AAPS** възможно най-бързо и ефективно. Подразделът [Съвместими CGM](./Getting-Started/CompatiblesCgms.md) обяснява как да оптимизирате настройката на вашия CGM и кои опции за изглаждане са най-добри.
 
 След като вече добре разбирате процеса, можете да започнете да сглобявате своя кръг с **AAPS**.
 
@@ -40,7 +40,7 @@ Android APS (**AAPS**) е приложение с отворен код за х�
 
 Раздел **10)** описва **[Разширени опции на AAPS](./AdvancedOptions/FullClosedLoop.md)**, например как да преминете от използване на **AAPS** като хибриден затворен кръг (с болуси за храненията _и т.н._) към напълно затворен кръг (без болуси), как да [настроите профила си](./GettingHelp/ProfileTuning.md) и да използвате Autotune, и описва подробно режима за разработчици и инженерния режим. Повечето потребители се справят напълно добре с основната версия („Master“) на **AAPS**, без да се занимават с тези опции. Този раздел е за потребители, които вече имат добър контрол и искат да подобрят още системата си.
 
-In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. Можете да дарите пари, оборудване или знания. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
+В раздел **11) [Как да подкрепите AAPS](SupportingAaps/HowCanIHelp.md)** даваме информация как можете да подкрепите този проект. Можете да дарите пари, оборудване или знания. Можете сами да предлагате/правите промени в документацията, да помогнете с [превода на документацията](SupportingAaps/Translations.md) и да предоставите данните си чрез проекта Open Humans.
 
 Раздел **12) Ресурси** съдържа архивна или допълнителна документация, включително подраздел за [лекари](UsefulLinks/ClinicianGuideToAaps.md), които проявяват интерес към технологиите за изкуствен панкреас с отворен код като **AAPS**, или за пациенти, които искат да споделят такава информация с лекарите си. Тази тема е разгледана и във въведението. В този раздел има и още източници и материали за диабета и затворения кръг. Той включва [Речник](./UsefulLinks/Glossary.md) – списък на съкращенията (или кратките имена), използвани в **AAPS**. Тук можете да разберете например какво означават термините ISF или TT.
 
@@ -51,7 +51,7 @@ In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provi
 :class: danger
 Безопасността на **AAPS** зависи от функциите за безопасност на вашия хардуер (телефон, помпа, CGM). Използвайте само напълно изправни инсулинова помпа и CGM, одобрени от FDA/CE. Не използвайте повредени, модифицирани или самостоятелно изработени инсулинови помпи или CGM приемници. Използвайте само оригинални консумативи (апликатори, канюли и резервоари за инсулин), одобрени от производителя за използване с вашата помпа и CGM. Използването на нетествани или модифицирани консумативи може да доведе до неточности и грешки в дозирането на инсулина, а това е значителен риск за потребителя. 
 
-Не използвайте **AAPS**, ако приемате SGLT-2 инхибитори (глифлозини), тъй като те понижават нивата на кръвната захар. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+Не използвайте **AAPS**, ако приемате SGLT-2 инхибитори (глифлозини), тъй като те понижават нивата на кръвната захар. Така увеличавате риска от диабетна кетоацидоза (DKA) поради намаленото подаване на инсулин и от хипогликемия поради понижените нива на кръвната захар. 
 ```
 
 ```{admonition} Disclaimer
@@ -70,11 +70,12 @@ In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provi
 ## Индекс на документацията на AAPS
 
 ```{toctree}
-:caption: Използване на тази документация
+:caption: Using this documentation
+:titlesonly:
 
-Смяна на езика и версията <./NavigateDoc/ChangeLanguageVersion.md>
-Търсене в документацията <./NavigateDoc/SearchDoc.md>
-Актуализации и промени в документацията <./Maintenance/DocumentationUpdate.md>
+Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
+Search the documentation <./NavigateDoc/SearchDoc.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Първи стъпки
@@ -106,14 +107,14 @@ In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provi
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Configure AAPS
+:caption: 4) Конфигуриране на AAPS
 
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Settings <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+Съветник за настройване на AAPS <./SettingUpAaps/SetupWizard.md>
+Вашият профил в AAPS <./SettingUpAaps/YourAapsProfile.md>
+Промени в конфигурацията на AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Конфигурация (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Настройки <./SettingUpAaps/Preferences.md>
+Изпълнение на целите <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -165,15 +166,15 @@ SMS команди <./RemoteFeatures/SMSCommands.md>
 ```
 
 ```{toctree}
-:caption: 8) Maintenance of AAPS
+:caption: 8) Поддръжка на AAPS
 
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-What changed in AAPS v4 <./Maintenance/V4Changes.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
-End of life <./Maintenance/EndOfLife.md>
+Създаване и възстановяване на резервни копия <./Maintenance/ExportImportSettings.md>
+Бележки към версиите <./Maintenance/ReleaseNotes.md>
+Какво се промени в AAPS v4 <./Maintenance/V4Changes.md>
+Актуализиране до нова версия или клон <./Maintenance/UpdateToNewVersion.md>
+- Актуализиране в браузъра (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Актуализиране с Android Studio <./Maintenance/UpdateComputerBuild.md>
+Край на поддръжката <./Maintenance/EndOfLife.md>
 
 ```
 

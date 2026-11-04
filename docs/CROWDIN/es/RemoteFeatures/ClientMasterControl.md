@@ -134,7 +134,7 @@ Apunta la cámara al código. El cliente muestra lo que hace el código (la dire
 
 ```{admonition} Scanning is available on Android
 :class: note
-El escáner todavía no está disponible en iOS, y un ordenador de escritorio no tiene cámara: usa allí el PIN.
+A computer without camera: use the PIN there.
 ```
 
 #### Introducir el PIN

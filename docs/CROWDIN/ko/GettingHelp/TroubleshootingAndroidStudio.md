@@ -1,6 +1,6 @@
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
 
-# Troubleshooting Android Studio
+# Android Studio 문제 해결
 
 ```{contents} List of common issues
 :depth: 2
@@ -8,112 +8,112 @@
 ```
 
 (troubleshooting_androidstudio-lost-keystore)=
-## Lost keystore
-If you lost your keystore or its password, an apk signed with a new keystore cannot update your current **AAPS**: you have to uninstall and reinstall it. See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+## 키 저장소를 잃어버린 경우
+키 저장소나 그 비밀번호를 잃어버렸다면, 새 키 저장소로 서명된 apk로는 현재 **AAPS**를 업데이트할 수 없습니다. 삭제하고 다시 설치해야 합니다. [새 키 저장소로 AAPS 재설치하기](#reinstall-aaps)를 보십시오.
 
-## Gradle Sync failed
-Gradle Sync can fail for various reasons. When you receive a message saying that 'gradle sync failed', open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
+## Gradle Sync 실패
+Gradle Sync는 여러 이유로 실패할 수 있습니다. 'gradle sync failed'라는 메시지가 나타나면 Android Studio 아래쪽의 "Build" 탭(1)을 열고 어떤 오류 메시지(2)가 표시되는지 확인하십시오.
 
-![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+![Gradle 실패](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 ```{contents} Likely reasons for gradle sync failures are:
 :depth: 1
 :local: true
 ```
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*중요*: 해당 문제에 대한 안내를 따른 다음에는 [Gradle Sync](#gradle-resync)를 다시 실행해야 합니다.
 
 (troubleshooting_androidstudio-uncommitted-changes)=
-### Uncommitted changes
+### 커밋되지 않은 변경 사항
 
-If you receive a failure message like this one:
+다음과 같은 실패 메시지가 나타나면:
 
-![Gradle Uncommitted Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Gradle 커밋되지 않은 변경 사항](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 ```
 Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 
 There are uncommitted changes.
-Clone sources again as described in wiki and do not allow gradle update
+위키에 설명된 대로 소스를 다시 clone하고 Gradle 업데이트를 허용하지 마십시오
 ```
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal (2).
+#### 1단계 - Git 설치 확인
+  * Android Studio 아래쪽의 터미널 탭(1)을 열고 다음 텍스트를 복사하여 터미널(2)에 붙여 넣거나 입력하십시오.
     ```
     git --version
     ```
 
-    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
+    ![Gradle Git 버전](../images/studioTroubleshooting/03_GitVersion.png)
 
-    Note: There is a space and two hyphens between Git and version!
+    참고: Git과 version 사이에는 공백 하나와 하이픈 두 개가 있습니다!
 
-  * You must receive a message saying what Git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
+  * 위 스크린샷처럼 설치된 Git 버전을 알려 주는 메시지가 나와야 합니다. 이 경우 [2단계](#troubleshooting-android-studio-check-for-uncommitted-changes)로 가십시오.
 
-  * In case you get a message saying
+  * 다음과 같은 메시지가 나타나면
     ```
     Git: command not found
     ```
-    your Git installation is not right.
+    Git 설치가 올바르지 않습니다.
 
-  * [Check git installation](#BuildingAaps-steps-for-installing-git)
+  * [Git 설치 확인](#BuildingAaps-steps-for-installing-git)
 
-  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
+  * Windows를 사용하고 있고 Git을 방금 설치했다면, 설치 후 Git을 어디에서나 사용할 수 있도록 컴퓨터를 다시 시작해야 합니다
 
-  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
+  * Git이 설치되어 있고 (Windows에서) 다시 시작했는데도 Git을 찾을 수 없으면:
 
-  * Search your computer for a file "git.exe".
+  * 컴퓨터에서 "git.exe" 파일을 찾으십시오.
 
-    Note for yourself, which directory it is saved in.
+    어느 디렉터리에 저장되어 있는지 적어 두십시오.
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Add the directory where you have found your Git installation.
+  * Windows의 환경 변수로 가서 "PATH" 변수를 선택하고 편집을 누르십시오. Git 설치를 찾은 디렉터리를 추가하십시오.
 
-  * Save and close.
+  * 저장하고 닫으십시오.
 
-  * Restart Android Studio.
+  * Android Studio를 다시 시작하십시오.
 
 (troubleshooting-android-studio-check-for-uncommitted-changes)=
-#### Step 2: Check for uncommitted changes.
+#### 2단계: 커밋되지 않은 변경 사항 확인.
 
-  * In Android Studio, open the 'Commit' tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either "Changes" (called "Default changeset" in older Android Studio versions) (2) or "Unversioned Files" (3):
+  * Android Studio에서 왼쪽에 있는 'Commit' 탭(1)을 여십시오. ![Commit 탭: 커밋되지 않은 변경 사항](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * "Changes"(이전 Android Studio 버전에서는 "Default changeset")(2) 또는 "Unversioned Files"(3)가 보입니다:
 
-    * For "Changes", you probably updated 'Gradle' or changed some of the file contents by mistake.
+    * "Changes"의 경우 아마 'Gradle'을 업데이트했거나 실수로 일부 파일 내용을 바꾸었을 것입니다.
 
-    * Right click on "Changes" and select "Rollback…" (1)
+    * "Changes"를 마우스 오른쪽 버튼으로 누르고 "Rollback…"을 선택하십시오 (1)
 
-      ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
+      ![Commit 탭: 변경 사항 되돌리기](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+    * 파일을 Git 서버에서 다시 가져옵니다. Commit 탭에 다른 변경 사항이 없으면 [3단계](#gradle-resync)로 가십시오.
 
-  * If you can see "Unversioned Files", you might have stored files in your source code directory by mistake. Maybe they are important files: like your keystore file, that should be moved elsewhere. If you don't know what those files are and you have not created them yourself, you can delete them.
+  * "Unversioned Files"가 보이면 실수로 소스 코드 디렉터리에 파일을 저장했을 수 있습니다. 키 저장소 파일처럼 중요한 파일일 수 있으며, 다른 곳으로 옮겨야 합니다. 그 파일이 무엇인지 모르고 직접 만든 파일이 아니라면 삭제해도 됩니다.
 
-    * Use your regular file explorer on your computer to move or cut and paste that file to a safe place.
+    * 컴퓨터의 일반 파일 탐색기를 사용하여 그 파일을 안전한 곳으로 옮기거나 잘라내어 붙여 넣으십시오.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the **AAPS** directory anymore.
+    * Android Studio로 돌아가 Commit 탭에서 Refresh 버튼(4)을 눌러 파일이 더 이상 **AAPS** 디렉터리에 저장되어 있지 않은지 확인하십시오.
 
-      If there are no other changes in the Commit tab, go to [Step 3](#gradle-resync).
+      Commit 탭에 다른 변경 사항이 없으면 [3단계](#gradle-resync)로 가십시오.
 
 
-#### Step 3: Resync Gradle (again)
+#### 3단계: Gradle 다시 동기화(한 번 더)
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+[Gradle 다시 동기화](#gradle-resync)의 안내를 따르십시오.
 
 ### Git Pull Failed - Please tell me who you are
 
-If you see this message, Git needs you to identify yourself.
+이 메시지가 보이면 Git이 사용자 정보를 알려 달라고 요청하는 것입니다.
 
-![Git identification](../images/studioTroubleshooting/164_Git_Identify.png)
+![Git 사용자 확인](../images/studioTroubleshooting/164_Git_Identify.png)
 
-Open the terminal and type the following two commands, one after the other.
+터미널을 열고 다음 두 명령을 차례로 입력하십시오.
 
 ```
 git config --global user.name "Your name here"
 git config --global user.email your.email@here.com
 ```
 
-Your name needs to be written between quotation marks.
+이름은 따옴표 안에 써야 합니다.
 
-![Git identification fix](../images/studioTroubleshooting/164_Git_Identify2.png)
+![Git 사용자 확인 해결](../images/studioTroubleshooting/164_Git_Identify2.png)
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
@@ -139,141 +139,141 @@ Or:
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
+위 오류 메시지가 나타나면 다시 빌드하기 전에 올바른 JVM 버전을 내려받아야 합니다:
 
-1.  Check in the [requirement table](#Building-APK-recommended-specification-of-computer-for-building-apk-file) which JVM version you need for the **AAPS** version you are building, and make a note of it.
+1.  [요구 사항 표](#Building-APK-recommended-specification-of-computer-for-building-apk-file)에서 빌드하려는 **AAPS** 버전에 필요한 JVM 버전을 확인하고 적어 두십시오.
 
-2. Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+2. Android Studio 오른쪽의 코끼리(1)를 눌러 Gradle 보기를 열고, 설정(2)을 연 다음 **Gradle Settings**(3)를 선택하십시오:
 
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
+![Gradle Settings 열기](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select **Download JDK** (2).
+3.  **Gradle JDK** 항목에서 알맞은 버전이 선택되어 있는지 확인하십시오(1). 선택되어 있지 않으면 항목을 누르고 목록에 이미 있는지 보십시오. 아래 예에서는 JVM 21이 “jbr-21”로 표시됩니다. 찾았으면 선택하기만 하면 끝입니다. 없으면 **Download JDK**(2)를 선택하십시오.
 
 
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+![Download JDK 선택](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select any Vendor. Location (3): do not change. Click **Download** (4).
+4. Version(1)에서 **AAPS** 버전에 필요한 JDK(요구 사항 표를 확인할 때 적어 둔 것)를 선택하십시오. Vendor(2)에서는 아무 Vendor나 선택하십시오. Location(3): 바꾸지 마십시오. **Download**(4)를 누르십시오.
 
-![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
+![JDK 17 선택](../images/studioTroubleshooting/163_JDKSelection.png)
 
-5.  Close the **Settings** dialog with **OK**.
-6. You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](#gradle-resync).
+5.  **OK**로 **Settings** 대화 상자를 닫으십시오.
+6. 이제 Gradle Sync를 다시 시작해야 합니다. [Gradle 다시 동기화](#gradle-resync)의 안내를 따르십시오.
 
 (incompatible-version-of-android-gradle-plugin)=
-### Incompatible version of Android Gradle plugin
+### 호환되지 않는 Android Gradle 플러그인 버전
 
-  If you experience the following error message
+  다음 오류 메시지가 나타나면
 
 `The project is using an incompatible version (AGP x.x.x) of the Android Gradle plugin. Latest supported version is AGP x.x.x`
 
-  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+  ![호환되지 않는 Android Gradle 플러그인 버전](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
-  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
+  오래된 버전의 Android Studio를 사용하고 있습니다. 메뉴에서 Help > Check for updates로 가서 찾은 Android Studio와 플러그인의 업데이트를 모두 설치하십시오.
 
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
 ### Could not resolve/No cached version
 
-  You might get this error message:
+  다음과 같은 오류 메시지가 나타날 수 있습니다:
 
 ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
-  * On the right side, open the Gradle tab (1).
+  * 오른쪽에서 Gradle 탭(1)을 여십시오.
 
-    Make sure the button shown at (2) is *NOT* selected.
+    (2)에 표시된 버튼이 선택되어 있지 *않은지* 확인하십시오.
 
-    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+    ![Gradle 오프라인 모드](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+  * 이제 [Gradle 다시 동기화](#gradle-resync)를 실행해야 합니다
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
-  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately there is nothing that the **AAPS** developers can do about this!
+  아래와 같은 오류 메시지가 보이면 아마 Windows 10 32비트 시스템을 사용하고 있을 것입니다. 이것은 Android Studio 3.5.1 이상에서 지원되지 않으며, 안타깝게도 **AAPS** 개발자가 할 수 있는 일이 없습니다!
 
-  There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  32비트 OS인지 64비트 OS인지 확인하는 방법은 인터넷에서 찾을 수 있습니다. 예: [이 페이지](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Unable to start daemon process 스크린샷](../images/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
-### Gradle Resync
+### Gradle 다시 동기화
 
-  If you can still see the message that the gradle sync failed, now select the link **Try again** (1). ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
-
-
-  If you don't see the message anymore, you can still trigger this manually:
-
-  * Open the Gradle tab (1) on the right border of Android Studio.
-
-    ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
-
-  * Right-click on AAPS (2)
-
-  * Click on "Reload Gradle Project" (3)
-
-## Generate Signed APK generated successfully with 0 build variants
-
-When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
-
-![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
-
-This is a false warning. Check the directory for your selected "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
+  Gradle Sync가 실패했다는 메시지가 아직 보이면 이제 **Try again**(1) 링크를 선택하십시오. ![Gradle Sync 실패 모드](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
-## App was created with compiler/kotlin warnings
+  메시지가 더 이상 보이지 않아도 수동으로 실행할 수 있습니다:
 
-If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
+  * Android Studio 오른쪽 가장자리에 있는 Gradle 탭(1)을 여십시오.
 
- ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+    ![Gradle 다시 불러오기](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-Your apk was built successfully and can be transferred to your phone!
+  * AAPS(2)를 마우스 오른쪽 버튼으로 누르십시오
+
+  * "Reload Gradle Project"(3)를 누르십시오
+
+## Generate Signed APK가 성공했지만 빌드 변형이 0개인 경우
+
+서명된 apk를 생성할 때 생성은 성공했지만 '0 build variants'(빌드 변형 0개)가 생성되었다는 알림이 나타날 수 있습니다:
+
+![빌드 변형이 0개로 생성된 APK](../images/studioTroubleshooting/14_BuildWith0Variants.png)
+
+이것은 잘못된 경고입니다. 생성할 때 선택한 "Destination folder"(대상 폴더) 디렉터리([서명된 APK 생성](#Building-APK-generate-signed-apk) 단계)를 확인하면 생성된 apk가 거기에 있습니다!
 
 
-## No CGM data is received by AAPS
+## 컴파일러/kotlin 경고와 함께 앱이 만들어진 경우
 
-* If you are using patched Dexcom G6 app: this app is outdated. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
+빌드는 성공했지만 컴파일러 또는 kotlin 경고(노란색 또는 파란색 느낌표로 표시)가 나타나면 이 경고는 그냥 무시해도 됩니다.
 
-* If you are using xDrip: identify receiver as described on [xDrip settings page](#xdrip-identify-receiver).
+ ![경고와 함께 완료된 Gradle](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+
+apk가 성공적으로 빌드되었으며 휴대폰으로 옮길 수 있습니다!
 
 
-## Apk not installed
+## AAPS가 CGM 데이터를 받지 못함
 
-![phone app not installed](../images/Update_AppNotInstalled.png)
+* 패치된 Dexcom G6 앱을 사용하고 있다면: 이 앱은 오래되었습니다. 대신 [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) 앱을 사용하십시오.
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
-* If "App not installed" is displayed on your phone follow these steps:
+* xDrip을 사용한다면: [xDrip 설정 페이지](#xdrip-identify-receiver)에 설명된 대로 수신기를 지정하십시오(identify receiver).
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
-2. Uninstall **AAPS** on your phone.
-3. Enable airplane mode & turn off Bluetooth.
-4. Install new version (“app-full-release.apk”)
-5. [설정 불러오기](../Maintenance/ExportImportSettings.md)
-6. Turn Bluetooth back on and disable airplane mode
 
-## Apk installed but old version
+## Apk가 설치되지 않음
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
+![휴대폰 앱이 설치되지 않음](../images/Update_AppNotInstalled.png)
 
-## None of the above worked
+* “app-full-release.apk” 파일을 휴대폰으로 옮겼는지 확인하십시오.
+* 이 오류는 보통 새 apk가 설치된 **AAPS**와 다른 키 저장소로 서명되었다는 뜻입니다. 이전 키 저장소가 아직 있으면 그것을 선택하고 다시 빌드하십시오. 그렇지 않으면 [새 키 저장소로 AAPS 재설치하기](#reinstall-aaps)를 보십시오.
+* 휴대폰에 "App not installed"(앱이 설치되지 않음)가 표시되면 다음 단계를 따르십시오:
 
-If none of the above tips helped you might consider building the apk from scratch:
+1. [설정 내보내기](../Maintenance/ExportImportSettings.md)(휴대폰에 이미 설치된 AAPS 버전에서)
+2. 휴대폰에서 **AAPS**를 삭제하십시오.
+3. 비행기 모드를 켜고 Bluetooth를 끄십시오.
+4. 새 버전 설치(“app-full-release.apk”)
+5. [설정 가져오기](../Maintenance/ExportImportSettings.md)
+6. Bluetooth를 다시 켜고 비행기 모드를 끄십시오
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
+## Apk가 설치되었지만 이전 버전임
 
-2. Have your key password and key store password ready.
+앱을 성공적으로 빌드하고 휴대폰으로 옮겨 설치까지 성공했는데 버전 번호가 그대로라면 [로컬 사본 업데이트](#Update-to-new-version-update-your-local-copy)를 잊었을 수 있습니다
 
-    Or you just use a new keystore.
+## 위의 어떤 방법도 효과가 없는 경우
 
-3. Build the apk from scratch as described [here](#Building-APK-download-AAPS-code).
+위의 어떤 방법도 도움이 되지 않으면 apk를 처음부터 빌드하는 것을 고려할 수 있습니다:
 
-4. When you have built the apk successfully delete the existing apk on your phone, transfer the new apk to your phone and install.
-5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
-6. You should check your battery optimization options and disable them again.
+1. [설정 내보내기](../Maintenance/ExportImportSettings.md)(휴대폰에 이미 설치된 AAPS 버전에서)
 
-## Worst case scenario
+2. 키 비밀번호와 키 저장소 비밀번호를 준비하십시오.
 
-If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scratch.  Some users find that this can resolve their build problem.  When deleting Android Studio, do not delete Android user settings and **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+    아니면 그냥 새 키 저장소를 사용하십시오.
+
+3. [여기](#Building-APK-download-AAPS-code)에 설명된 대로 apk를 처음부터 빌드하십시오.
+
+4. apk를 성공적으로 빌드했으면 휴대폰에 있는 기존 apk를 삭제하고, 새 apk를 휴대폰으로 옮겨 설치하십시오.
+5. [설정 가져오기](../Maintenance/ExportImportSettings.md)를 다시 하여 목표와 설정을 복원하십시오.
+6. 배터리 최적화 옵션을 확인하고 다시 끄십시오.
+
+## 최악의 경우
+
+위 방법으로 빌드 문제가 해결되지 않으면 Android Studio를 완전히 삭제하고 처음부터 다시 빌드해 볼 수 있습니다.  이렇게 하면 빌드 문제가 해결된다는 사용자도 있습니다.  Android Studio를 삭제할 때 Android 사용자 설정은 삭제하지 말고, **Android Studio와 관련된 모든 파일을 반드시 삭제하십시오.** 숨김 파일까지 포함하여 Android Studio를 완전히 제거하지 않으면, 삭제가 기존 문제를 해결하기는커녕 새로운 문제를 일으킬 수 있습니다. 완전히 삭제하는 방법은 인터넷에서 찾을 수 있습니다. 예:
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
+[여기](#Building-APK-install-android-studio)에 설명된 대로 Android Studio를 처음부터 다시 설치하십시오.

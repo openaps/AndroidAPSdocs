@@ -1,10 +1,10 @@
 # Freestyle Libre 1
 
-To use your Libre as a CGM that is getting new BG values every 5 minutes without having to scan the sensor, you need to buy an NFC to Bluetooth bridge (commercially available devices, based on the obsolete [LimiTTer](https://github.com/JoernL/LimiTTer) project).
+Jei norite naudoti Libre kaip NGJ, kuris kas 5 minutes gauna naujas KG reikšmes ir kurio nereikia skenuoti, turite įsigyti NFC–Bluetooth tarpinį ryšio įrenginį (parduodami įrenginiai, sukurti pagal nebevystomą [LimiTTer](https://github.com/JoernL/LimiTTer) projektą).
 
 ```{admonition} Libre 2, Libre 1 US and Libre Pro
 :class: warning
-Verify the bridge and the app you want to use are compatible with your sensor.  
+Patikrinkite, ar tarpinis ryšio įrenginys ir programėlė, kurią norite naudoti, suderinami su jūsų jutikliu.  
 ```
 
 Some bridges are still available on the market:
@@ -13,13 +13,13 @@ Some bridges are still available on the market:
 -   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Also available on AliExpress.
 -   Atom for Russian users.
 
-## 1. Using xDrip
+## 1. xDrip naudojimas
 
--   xDrip supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
+-   xDrip palaiko Miaomiao, Bubble, Blucon, Atom ir LibreAlarm.
 -   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
--   Follow setup instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
+-   Vadovaukitės nustatymo instrukcijomis [xDrip nustatymų puslapyje](../CompatibleCgms/xDrip.md).
 -    You also need OOP2 for Libre 1 US (and Libre 2 EU).
--   Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+-   Pasirinkite xDrip skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source).
 
 ## 2. Using Diabox
 
@@ -28,4 +28,4 @@ Some bridges are still available on the market:
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Pasirinkite xDrip skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source).

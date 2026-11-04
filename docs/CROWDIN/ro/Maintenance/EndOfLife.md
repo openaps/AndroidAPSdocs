@@ -2,13 +2,13 @@
 
 Even if your current AAPS system works exactly the way you like, upgrading is still worth it because newer releases bring safety fixes and bug corrections you may never notice until they matter, keep compatibility with new phone OS versions, CGM apps, pump firmware and Nightscout changes, add algorithm improvements and features that have been tested by the wider community, and ensure you stay on a version that is still supported and that others can actually help you troubleshoot. Some previous AAPS versions deliberately have no expiration date so they can keep working on older Android versions, so the lack of an expiration warning is not a sign that your version is still up to date or supported.
 
-Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#version-enforcement). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
+Each AAPS version can have an end date. După această dată, AAPS poate [limita bucla](#version-enforcement). AAPS vă avertizează înainte ca o versiune să expire. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
 
 ## How to use this page
 
-1. In AAPS, open the **menu** (☰) at the top left and choose **About**. You will see your AAPS version there.
-2. Find the same version in the first table below. Read the end date next to it. Dates are written as **year-month-day**. For example, `2026-10-30` means 30 October 2026.
-3. Check the [Release Notes](ReleaseNotes.md) and the [update guide](UpdateToNewVersion.md) before you update. The version you can use also depends on your phone's Android version.
+1. În AAPS, deschideți **meniul** (☰) din stânga sus și alegeți **Despre**. You will see your AAPS version there.
+2. Find the same version in the first table below. Read the end date next to it. Datele sunt scrise în formatul **an-lună-zi**. De exemplu, `2026-10-30` înseamnă 30 octombrie 2026.
+3. Check the [Release Notes](ReleaseNotes.md) and the [update guide](UpdateToNewVersion.md) before you update. Versiunea pe care o puteți folosi depinde și de versiunea Android a telefonului dumneavoastră.
 
 The table does not show an end date for every AAPS version. If your version is missing, its end date may not have been set yet. This does not mean it will be supported forever.
 
@@ -16,7 +16,7 @@ The table does not show an end date for every AAPS version. If your version is m
 
 <div id="aaps-eol-status" role="status" aria-live="polite">Loading AAPS version data…</div>
 <noscript>
-  Turn on JavaScript to see the tables.
+  Activați JavaScript pentru a vedea tabelele.
 </noscript>
 
 <div id="aaps-eol-versions" class="wy-table-responsive" hidden>
@@ -26,11 +26,11 @@ The table does not show an end date for every AAPS version. If your version is m
   </table>
 </div>
 
-## Android API levels
+## Nivelurile API Android
 
-Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
+Android gives each system version an **API level**, which is a number used by apps. De exemplu, nivelul API 30 este Android 11. The table below uses API levels from AAPS version data. Versiunea AAPS din fiecare rând este valoarea listată pentru nivelul API afișat. Aceasta nu este o listă completă a versiunilor pe care le puteți instala.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
+Pentru a alege o versiune AAPS potrivită telefonului dumneavoastră, folosiți [indicațiile despre versiunea Android din Notele de lansare](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>

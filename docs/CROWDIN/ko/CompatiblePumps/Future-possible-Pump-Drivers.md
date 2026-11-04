@@ -1,62 +1,62 @@
-# 가능한 펌프 드라이버.
+# 향후 지원 가능한 펌프 드라이버
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+이 페이지는 현재 시장에 나와 있는 여러 펌프와, 다른 루프 시스템에서의 지원 상태 및 AAPS에서의 지원 상태를 정리한 목록입니다. 마지막 부분에는 펌프가 "루프 가능"하려면 무엇이 필요한지에 대한 정보가 있습니다.
 
-    {contents} Table of contents
+    {contents} 목차
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## AAPS 연동 단계에 있는 펌프
 
-**Coming soon:** drivers for these pumps are in development and already running in test builds.
+**출시 예정:** 이 펌프들의 드라이버는 개발 중이며 이미 테스트 빌드에서 작동하고 있습니다.
 
-Omnipod 5 ([Homepage](https://www.omnipod.com/))
+Omnipod 5 ([홈페이지](https://www.omnipod.com/))
 
-![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+![개발 중인 Omnipod 5 드라이버](../images/future-pumps/omnipod5-driver.png)
 
-Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+Tandem: t:Mobi ([홈페이지](https://www.tandemdiabetes.com/))
 
-![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
+![개발 중인 Tandem t:Mobi 드라이버](../images/future-pumps/tandem-mobi-driver.png)
 
-## Pumps that are Loopable
+## 루프 가능한 펌프
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+### Kaleido ([홈페이지](https://www.hellokaleido.com/))
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**루프 상태:** 루프 후보 펌프이지만 현재 프로토콜은 알려져 있지 않습니다. 제조사는 오픈 소스에 관심이 없습니다.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**AAPS 하드웨어 요구 사항:** 없음. BT를 지원하는 것으로 보입니다.
 
-### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:slim X3 ([홈페이지](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+**루프 상태:** 앞으로 루프 후보가 될 수 있습니다. t:slim X3를 휴대폰으로 완전히 제어할 수 있게 되기를 기대합니다. 그러면 AAPS 지원이 가능해지지만, 일정과 기능은 아직 알 수 없습니다.
 
-**Hardware requirement for AAPS:** None. It is expected to be Bluetooth enabled.
+**AAPS 하드웨어 요구 사항:** 없음. 블루투스를 지원할 것으로 예상됩니다.
 
-**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+**의견:** 아직 출시되지 않았습니다. Tandem의 로드맵에서 t:slim X3는 t:Mobi(튜브 없는 버전 포함)와 Sigi(Tandem의 패치 펌프)에 밀려 계속 우선순위가 낮아지고 있는 것으로 보입니다.
 
-### Twiist ([Homepage](https://www.twiist.com/))
+### Twiist ([홈페이지](https://www.twiist.com/))
 
-**Loop status:** Loop candidate.
+**루프 상태:** 루프 후보입니다.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**AAPS 하드웨어 요구 사항:** 없음. 블루투스를 지원합니다.
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+### Willcare 인슐린 펌프 ([홈페이지](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+**루프 상태:** 현재는 루프 후보가 아니지만, 제조사 직원이 연락해 왔으며 펌프를 루프 가능하게 만드는 데 관심이 있습니다(프로파일 읽기/설정 명령만 빠진 것으로 보입니다).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**AAPS 하드웨어 요구 사항:** 없음. BT를 지원하는 것으로 보입니다.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+**의견:** 회사가 AAPS 연동에 관심이 있으므로 직접 구현할 수도 있습니다.
 
-### Ypsopump ([Homepage](https://www.ypsomed.com/))
+### Ypsopump ([홈페이지](https://www.ypsomed.com/))
 
-**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+**루프 상태:** 루프 후보입니다. 커뮤니티가 이 펌프의 블루투스 프로토콜을 리버스 엔지니어링했으므로 원칙적으로는 통신이 가능합니다.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**AAPS 하드웨어 요구 사항:** 없음. 블루투스를 지원합니다.
 
-**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
+**의견:** Ypsopump는 강력한 타사 암호화로 블루투스 통신을 보호합니다. 이를 다루는 것은 기술적으로 어렵기 때문에 신뢰할 수 있는 드라이버를 만들고 유지하기가 어렵습니다. 아직 실제로 사용할 수 있는 AAPS 드라이버는 없습니다.
 
-## Pumps no longer sold (companies no longer operating)
+## 더 이상 판매되지 않는 펌프(회사가 더 이상 운영되지 않음)
 
 ### Animas Vibe
 
@@ -66,53 +66,53 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**의견:** 2025년 3월에 지원이 종료되었습니다.
 
-## Pumps that aren't Loopable
+## 루프가 불가능한 펌프
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**의견:** Medtronic은 [철회](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps)했습니다.
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem: t:slim X2 ([홈페이지](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**의견:** Tandem 블루투스 프로토콜은 리버스 엔지니어링되었지만, t:slim X2에서는 볼러스만 주입할 수 있고 기저 주입은 제어할 수 없습니다. 따라서 루프에 안전하게 사용할 수 없습니다. Tandem이 휴대폰으로 X2를 완전히 제어하도록 허용하지 않는 한 이는 바뀌지 않을 것으로 보이며, 그런 기능은 오히려 t:slim X3와 함께 나올 가능성이 더 큽니다.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**의견:** 커뮤니티는 아직 Solo 펌프와 통신하는 데 성공하지 못했습니다.
 
-## Requirements for pumps being loopable
+## 펌프가 루프 가능하기 위한 요구 사항
 
-**Prerequisite**
+**전제 조건**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- 펌프가 어떤 형태로든 원격 제어를 지원해야 합니다. (BT, 무선 주파수 등)
+- 프로토콜이 해킹되었거나 문서화되어 있어야 합니다.
 
-**Minimal requirement**
+**최소 요구 사항**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- 임시 기저 주입량 설정
+- 상태 읽기
+- 임시 기저 주입량 취소
 
-**For oref1(SMB) or Bolusing:**
+**oref1(SMB) 또는 볼러스 주입을 위해:**
 
-- Set Bolus
+- 볼러스 설정
 
 **Good to have**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- 볼러스 취소
+- 기저 프로파일 읽기(거의 필수)
+- 기저 프로파일 설정(있으면 좋음)
+- 이력 읽기 
 
-**Other (not required but good to have)**
+**기타(필수는 아니지만 있으면 좋음)**
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
+- 확장 볼러스 설정
+- 확장 볼러스 취소
+- 이력 읽기
+- TDD 읽기
 
 ### Other pumps support
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+상태를 알고 싶은 다른 펌프가 있으면 Discord에서 문의하십시오.

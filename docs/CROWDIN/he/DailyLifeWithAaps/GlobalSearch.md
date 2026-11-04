@@ -1,7 +1,7 @@
 (global-search)=
-# Global search
+# חיפוש כללי
 
-**AAPS** v4 has a **global search** box at the top of the main screen. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
+ב-**AAPS** v4 יש תיבת **חיפוש כללי** בחלק העליון של המסך הראשי. מקלידים מילה, והחיפוש בודק בבת אחת את כל האפליקציה: תוספים, חלונות, מסכי הגדרות והגדרות בודדות. אם יש חיבור לאינטרנט, הוא בודק גם את **התיעוד של AndroidAPS**. זו הדרך המהירה ביותר להגיע להגדרה או למסך בלי לזכור איפה הם נמצאים.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,85 +10,85 @@
 
 ---
 
-## Opening search
+## פתיחת החיפוש
 
-Tap the **🔍 Search** field at the top of the **Overview** (next to the ☰ menu). Start typing and results appear as you type (after a short pause), grouped by category:
+יש ללחוץ על השדה **🔍 חיפוש** בחלק העליון של **מסך הסקירה** (ליד התפריט ☰). מתחילים להקליד, והתוצאות מופיעות תוך כדי הקלדה (אחרי הפסקה קצרה), מקובצות לפי קטגוריה:
 
-![Global search results, grouped by category](../images/v4/Search/search_results.png)
+![תוצאות החיפוש הכללי, מקובצות לפי קטגוריה](../images/v4/Search/search_results.png)
 
-Clear the box with the **✕**, or close search with the device **Back** button.
-
----
-
-## Search in English *or* your own language
-
-This is the part worth knowing: search matches against **both** the text in your **selected language** **and** the original **English** text.
-
-- If your app is in, say, German or Czech, you can type the **localized** word **or** the **English** word — either finds the setting.
-- A match on the **localized** title ranks highest, then the **English** title, then the localized and English **descriptions**.
-- Matching ignores **accents/diacritics** (so *ů* matches *u*, *é* matches *e*) and is **case-insensitive**.
-
-This means a guide or forum post written in English still leads you to the right setting even when your phone shows everything translated.
+אפשר לנקות את התיבה בעזרת **✕**, או לסגור את החיפוש בעזרת לחצן **חזרה** של המכשיר.
 
 ---
 
-## What search covers
+## חיפוש באנגלית *או* בשפה שלכם
 
-Results are grouped into these categories:
+זה החלק שחשוב להכיר: החיפוש משווה ל**שניהם**: לטקסט ב**שפה שבחרתם** **וגם** לטקסט המקורי ב**אנגלית**.
 
-- **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](../SettingUpAaps/ConfigBuilder.md)). Each plugin row carries its **enable switch**, so you can enable or disable a plugin right from the results — tapping the row of a disabled (toggleable) plugin enables it.
-- **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Screens that don't apply to your build are left out (for example *Pair with master* on a master, *Authorized clients* on a client).
-- **Preference categories** — the settings **screens** and sub-screens, both built-in (General, Appearance, Protection, Alerts, Maintenance, …) and from plugins, plus the small settings groups reached from dialogs (Fill buttons, Insulin/Carbs button steps, status-light thresholds, wizard settings, …).
-- **Preferences** — every **individual setting** that has a title. These are filtered to your build/mode, so you only see settings that actually apply (APS / NSClient / pump-control).
-- **Documentation** — pages from the online **AndroidAPS docs** (see below).
+- אם האפליקציה שלכם, למשל, בגרמנית או בצ'כית, אפשר להקליד את המילה **המתורגמת** **או** את המילה ב**אנגלית**: שתיהן ימצאו את ההגדרה.
+- התאמה לכותרת **המתורגמת** מקבלת את הדירוג הגבוה ביותר, אחריה הכותרת ב**אנגלית**, ואחר כך **התיאורים** המתורגמים ובאנגלית.
+- ההתאמה מתעלמת מ**סימני הטעמה/ניקוד** (כך *ů* מתאים ל-*u*, ו-*é* מתאים ל-*e*) ו**אינה מבחינה בין אותיות גדולות לקטנות**.
+
+כך מדריך או פוסט בפורום שנכתב באנגלית עדיין מוביל אתכם להגדרה הנכונה, גם כשהטלפון מציג הכול בתרגום.
+
+---
+
+## מה החיפוש כולל
+
+התוצאות מקובצות בקטגוריות האלה:
+
+- **תוספים**: כל תוסף שזמין בגרסה שלכם (אותם תוספים שמופיעים ב[הגדרות תצורה](../SettingUpAaps/ConfigBuilder.md)). בכל שורת תוסף יש **מתג הפעלה**, כך שאפשר להפעיל או להשבית תוסף ישירות מהתוצאות. לחיצה על שורה של תוסף מושבת (שאפשר להפעיל ולהשבית) מפעילה אותו.
+- **תיבות דו־שיח**: מסכי הטיפולים, הפעולות והניהול (אשף בולוס, אינסולין, בולוס ממושך, כיול, יעד זמני, פרופיל, …). מסכים שלא מתאימים לגרסה שלכם לא מוצגים (לדוגמה *צימוד למכשיר ראשי* במכשיר הראשי, *לקוחות מורשים* במכשיר לקוח).
+- **קטגוריות הגדרות**: **מסכי** ההגדרות ותתי־המסכים, גם המובנים (כללי, מראה, הגנה בסיסמאות, התראות, תחזוקה, …) וגם של התוספים, וגם קבוצות ההגדרות הקטנות שנפתחות מחלונות (לחצני מילוי, תוספות בלחצני אינסולין/פחמימות, ספים של אורות החיווי, הגדרות האשף, …).
+- **העדפות**: כל **הגדרה בודדת** שיש לה כותרת. הן מסוננות לפי הגרסה/המצב שלכם, כך שמוצגות רק הגדרות שבאמת רלוונטיות (APS / NSClient / שליטה במשאבה).
+- **תיעוד**: דפים מ**תיעוד AndroidAPS** המקוון (ראו בהמשך).
 
 ```{admonition} Settings that belong to a disabled plugin
 :class: note
-A preference whose plugin is currently **disabled** still shows up — **greyed out** and not tappable — with a *“Plugin … disabled”* note, so you can tell the setting exists and which plugin to enable to reach it.
+הגדרה שהתוסף שלה **מושבת** כרגע עדיין מופיעה, אבל **באפור** ואי אפשר ללחוץ עליה, עם ההערה *"התוסף … מושבת"*. כך אפשר לדעת שההגדרה קיימת, ואיזה תוסף יש להפעיל כדי להגיע אליה.
 
-![A greyed-out setting from a disabled plugin](../images/v4/Search/search_disabled_plugin.png)
+![הגדרה באפור מתוסף מושבת](../images/v4/Search/search_disabled_plugin.png)
 ```
 
 ---
 
-## Documentation results (online)
+## תוצאות מהתיעוד (מקוון)
 
-While the local search runs, **AAPS** also queries the official **AndroidAPS documentation** (hosted on ReadTheDocs) in parallel. Matching pages appear in a **Documentation** group at the bottom, each with a 📖 icon, the section title and a short snippet:
+בזמן שהחיפוש המקומי פועל, **AAPS** שולח במקביל שאילתה גם ל**תיעוד AndroidAPS** הרשמי (שמאוחסן ב-ReadTheDocs). דפים מתאימים מופיעים בקבוצה **תיעוד** בתחתית, כל אחד עם סמל 📖, כותרת הסעיף וקטע טקסט קצר:
 
-![Documentation (wiki) results with snippets](../images/v4/Search/search_documentation.png)
+![תוצאות מהתיעוד (wiki) עם קטעי טקסט](../images/v4/Search/search_documentation.png)
 
-- If the documentation is translated into your app language, **AAPS** searches the translated pages and the English pages at the same time. Pages in your language come first, then the English pages that were not already found.
-- Tapping a documentation result opens that page in your **browser**.
-- Documentation search needs **internet** — when you are offline you get a *“Documentation search requires internet connection”* note instead, and the local (in-app) results still work normally.
-
----
-
-## Opening a result
-
-Tap a result to go straight to it:
-
-- **Plugin** → opens that plugin.
-- **Dialog** → opens that screen or dialog.
-- **Preference category** → opens that settings screen.
-- **Preference** → opens the setting **in place** (jumps to it within its screen).
-- **Documentation** → opens the page in your browser.
-
-Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
+- אם התיעוד מתורגם לשפת האפליקציה שלכם, **AAPS** מחפש בדפים המתורגמים ובדפים באנגלית בו בזמן. דפים בשפה שלכם מופיעים קודם, ואחריהם הדפים באנגלית שעוד לא נמצאו.
+- לחיצה על תוצאה מהתיעוד פותחת את הדף ב**דפדפן**.
+- חיפוש בתיעוד דורש **אינטרנט**. כשאין חיבור, מופיעה במקום זאת ההערה *"חיפוש בתיעוד דורש חיבור לאינטרנט"*, והתוצאות המקומיות (בתוך האפליקציה) עדיין עובדות כרגיל.
 
 ---
 
-## Power-user shortcuts
+## פתיחת תוצאה
 
-Two special queries list a whole category at once:
+לחיצה על תוצאה מובילה ישירות אליה:
 
-- `%PLUGINS%` — list **all** plugins.
-- `%DIALOGS%` — list **all** dialogs/action screens.
+- **תוסף** ← פותח את התוסף.
+- **תיבת דו־שיח** ← פותחת את המסך או את החלון.
+- **קטגוריית הגדרות** ← פותחת את מסך ההגדרות.
+- **העדפה** ← פותחת את ההגדרה **במקומה** (קופצת אליה בתוך המסך שלה).
+- **תיעוד** ← פותח את הדף בדפדפן.
+
+פתיחת הגדרות ופעולות מוגנות עדיין מכבדת את **[ההגנה בסיסמאות](#Preferences-protection)** שלכם (PIN/סיסמה), בדיוק כמו אילו הגעתם לשם בעצמכם. אחרי פעולה על תוצאה, אפשר ללחוץ על **חזרה** כדי לחזור לתוצאות החיפוש.
+
+---
+
+## קיצורי דרך למשתמשים מתקדמים
+
+שתי שאילתות מיוחדות מציגות קטגוריה שלמה בבת אחת:
+
+- `%PLUGINS%`: הצגת **כל** התוספים.
+- `%DIALOGS%`: הצגת **כל** החלונות ומסכי הפעולות.
 
 ---
 
 ```{admonition} The index stays current
 :class: note
-The search index is built the first time you search and kept ready after that. It is rebuilt automatically when you **enable/disable a plugin** or **change the app language**, so results always reflect your current setup.
+אינדקס החיפוש נבנה בפעם הראשונה שמחפשים, ונשאר מוכן אחרי זה. הוא נבנה מחדש אוטומטית כאשר **מפעילים/משביתים תוסף** או **משנים את שפת האפליקציה**, כך שהתוצאות תמיד מתאימות למערכת הנוכחית שלכם.
 ```
 
 ---

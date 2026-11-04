@@ -1,195 +1,195 @@
-# Reviewing your data
+# Verilerinizi inceleme
 
-## AAPS History Browser
+## AAPS Geçmiş tarayıcısı
 
-**AAPS** keeps all your history (**BG**, treatments, basal, targets, **Profile Switch**, …) in a local database on the phone. This database is not part of the [settings export](../Maintenance/ExportImportSettings.md). You can review it in **AAPS** itself with the **History browser** and the **Statistics** screen described below. For long-term reviews and reports, upload your data to [Nightscout](../SettingUpAaps/Nightscout.md) or [Tidepool](../SettingUpAaps/Tidepool.md).
+**AAPS** tüm geçmişinizi (**KŞ**, tedaviler, bazal, hedefler, **Profil değişimi**, …) telefondaki yerel bir veritabanında saklar. Bu veritabanı [ayarların dışa aktarılmasına](../Maintenance/ExportImportSettings.md) dahil değildir. Bunu **AAPS** içinde, aşağıda açıklanan **Geçmiş tarayıcısı** ve **İstatistikler** ekranıyla inceleyebilirsiniz. Uzun süreli inceleme ve raporlar için verilerinizi [Nightscout](../SettingUpAaps/Nightscout.md)'a veya [Tidepool](../SettingUpAaps/Tidepool.md)'a yükleyin.
 
-**AAPS** history can be reviewed in the **History browser**: open the **menu** (☰) and select **History browser**.
+**AAPS** geçmişi **Geçmiş tarayıcısı** içinde incelenebilir: **menüyü** (☰) açın ve **Geçmiş tarayıcısı**'nı seçin.
 
-![History browser](../images/v4/Screens/history_browser.png)
+![Geçmiş tarayıcısı](../images/v4/Screens/history_browser.png)
 
-- Tap the **date card** to pick the day you want to review.
-- The graphs open zoomed out to show the **whole selected day**. Pinch to zoom in on part of it.
-- Use the **<** and **>** arrows to move one day back or forward, and **Now** to return to the current day.
-- The graphs show the same data as the main screen graphs (BG, treatments, basal, IOB, COB, activity, deviations...).
+- İncelemek istediğiniz günü seçmek için **tarih kartına** dokunun.
+- Grafikler, **seçilen günün tamamını** gösterecek şekilde uzaklaştırılmış olarak açılır. Bir bölümü yakınlaştırmak için iki parmağınızla büyütün.
+- Bir gün geri veya ileri gitmek için **<** ve **>** oklarını, bugüne dönmek için **Şimdi** düğmesini kullanın.
+- Grafikler, ana ekran grafikleriyle aynı verileri gösterir (KŞ, tedaviler, bazal, AİNS, AKRB, aktivite, sapmalar...).
 
 (reviewing-statistics)=
-## AAPS Statistics
+## AAPS İstatistikleri
 
-**AAPS** provides basic monitoring statistics.
+**AAPS** temel izleme istatistikleri sunar.
 
-Most values are referenced by ADA 2023 [recommendations](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes).
+Değerlerin çoğu ADA 2023 [önerilerine](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes) dayanır.
 
-To open them, open the **menu** (☰) and select **Statistics**.
+Bunları açmak için **menüyü** (☰) açın ve **İstatistikler**'i seçin.
 
-![Menu with Statistics](../images/Maintenance/statistics.png)
+![İstatistikler seçeneği olan menü](../images/Maintenance/statistics.png)
 
-The **Statistics** screen has four tabs: **Insulin**, **Time in Range**, **Glucose** and **Cycle**. Tap a tab, or swipe left or right to move between them.
+**İstatistikler** ekranında dört sekme vardır: **İnsülin**, **Hedef Aralıktaki Süre**, **Glikoz** ve **Döngü**. Sekmeler arasında geçmek için bir sekmeye dokunun veya sola ya da sağa kaydırın.
 
 (reviewing-tdd)=
-### Insulin tab: Total Daily Dose
+### İnsülin sekmesi: Günlük Toplam Doz
 
-The **Total Daily Dose** card shows one line per day for the previous days (up to one week) for which **AAPS** has insulin data, then their **Average**, then **Today** so far. Right after installing **AAPS**, only **Today** is shown. The columns are:
+**Günlük Toplam Doz** kartı, **AAPS**'in insülin verisi olan önceki günler (en fazla bir hafta) için her güne bir satır, ardından bunların **Ortalama** değerini ve sonra şu ana kadarki **Bugün** değerini gösterir. **AAPS** yüklendikten hemen sonra yalnızca **Bugün** gösterilir. Sütunlar şunlardır:
 
-- **Basal**: only basal.
-- **Bolus**: the sum of bolus treatments and SMBs.
-- **TDD Total**: the Total Daily Dose of insulin (**TDD**), the sum of bolus and basal insulin delivered during the day.
-- **Carbs**: declared carbs and eCarbs treatments.
+- **Bazal**: yalnızca bazal.
+- **Bolus**: bolus tedavilerinin ve SMB'lerin toplamı.
+- **GTD Toplam**: günlük toplam insülin dozu (**GTD**), gün içinde verilen bolus ve bazal insülinin toplamı.
+- **Karbonhidrat**: girilen karbonhidrat ve yKarb tedavileri.
 
-The **TDD** section is calculated when you open the page and takes a few seconds to compute. Tap **Recalculate** to compute it again.
+**GTD** bölümü sayfayı açtığınızda hesaplanır ve hesaplama birkaç saniye sürer. Yeniden hesaplamak için **Tekrar Hesapla**'ya dokunun.
 
-![Statistics: the Insulin tab with the Total Daily Dose](../images/Maintenance/statistics2.png)
+![İstatistikler: Günlük Toplam Doz ile İnsülin sekmesi](../images/Maintenance/statistics2.png)
 
-The **TDD** is your bolus plus basal insulin per day. Some doctors use - especially for new pumpers - a basal-bolus ratio of 50:50: the total base basal (**TBB**, the sum of your basal rates over 24 hours) should then be about half of the TDD. Others prefer a TBB of 32 % to 37 % of the TDD.
+**GTD**, günlük bolus ve bazal insülininizin toplamıdır. Bazı doktorlar - özellikle pompayı yeni kullananlar için - 50:50 bazal-bolus oranı kullanır: bu durumda toplam temel bazal (**TBB**, 24 saat boyunca bazal oranlarınızın toplamı) GTD'nin yaklaşık yarısı olmalıdır. Diğerleri GTD'nin %32 ile %37'si arasında bir TBB'yi tercih eder.
 
-Like most rules of thumb, this is of limited real validity. Your diabetes may vary!
+Çoğu pratik kural gibi, bunun gerçek geçerliliği de sınırlıdır. Diyabetiniz farklı olabilir!
 
-### Time in Range tab
+### Hedef Aralıktaki Süre sekmesi
 
-Time In Range (**TIR**): 70-180 mg/dL or 3.9-10 mmol/L.
+Hedef Aralıktaki Süre (**TIR**): 70-180 mg/dL veya 3,9-10 mmol/L.
 
-**TIR** information is available for 7 and 30 days, depending on the amount of data available within the **AAPS** database.
+**TIR** bilgisi, **AAPS** veritabanındaki veri miktarına bağlı olarak 7 ve 30 gün için gösterilir.
 
-Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are available below (the screen shows this range as 70-141).
+Dar Hedef Aralıktaki Süre (TITR) 70-140 mg/dL veya 3,9-7,8 mmol/L istatistikleri aşağıda bulunur (ekran bu aralığı 70-141 olarak gösterir).
 
-**Discuss targets with your endo**
+**Hedefleri endokrinoloğunuzla konuşun**
 
-Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
+Diyabetiniz farklı olabilir. Önerilen hedefleri endokrinoloğunuzla veya sizi destekleyen sağlık ekibiyle konuşmalısınız. Doğru kullanıldığında AAPS istatistikleri, __KŞ__ eğilimlerini takip etmek ve ilerlemeyi izlemek için etkili bir araç olabilir.
 
 ![Statistics](../images/Maintenance/statistics3.png)
 
-Below, the **Dexcom TIR** card shows detailed 14 days **TIR** statistics.
+Aşağıda, **Dexcom TIR** kartı ayrıntılı 14 günlük **TIR** istatistiklerini gösterir.
 
-**SD**: Standard Deviation, an [indicator](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) of BG variability (the highest = the worst).
+**SD**: Standart sapma, KŞ dalgalanmasının bir [göstergesi](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) (en yüksek = en kötü).
 
-HbA1c: the estimate of the resulting glycated hemoglobin, based on the average of CGM measurements. This is an indicative value that might not match blood HbA1c tests.
+HbA1c: CGM ölçümlerinin ortalamasına göre tahmin edilen glike hemoglobin değeri. Bu yalnızca yol gösteren bir değerdir ve kan HbA1c testlerinizle aynı olmayabilir.
 
 ![Statistics](../images/Maintenance/statistics4.png)
 
 (reviewing-statistics-agp)=
-### Glucose tab: Ambulatory Glucose Profile (AGP)
+### Glikoz sekmesi: Ambulatuvar Glikoz Profili (AGP)
 
-The **Ambulatory Glucose Profile** (**AGP**) shows how your glucose usually moves over the day. Choose the period with the buttons at the top: **Today**, **24h**, **7d**, **30d** or **90d**.
+**Ambulatuvar Glikoz Profili** (**AGP**), glikozunuzun gün içinde genellikle nasıl değiştiğini gösterir. Üstteki düğmelerle süreyi seçin: **Bugün**, **24sa**, **7 gün**, **30 gün** veya **90 gün**.
 
-- **The chart**: one day from midnight to midnight. The line is the **Median** (half of your readings at that hour were lower, half were higher). Around it, one band holds the middle half of your readings (**25–75%**) and a wider band most of them (**10–90%**). A narrow band means your glucose is similar from day to day at that hour. Dashed lines mark your **LOW mark**, 140 mg/dL (7.8 mmol/L) and your **HIGH mark**.
-- **Glycemic overview**: the time spent in your range, in the tight range (70–140 mg/dL or 3.9–7.8 mmol/L), above your range and below it, then your **Average** and **Median** glucose. Your range is the **LOW mark** and **HIGH mark** set in [Range for visualization](#Preferences-range-for-visualization).
-- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings. Like the HbA1c above, they might not match your blood HbA1c tests.
-- **SD** (standard deviation) and **CV** (coefficient of variation): how much your glucose varies. A lower value means steadier glucose.
-- **Days**: how many days of CGM data were used.
+- **Grafik**: gece yarısından gece yarısına bir gün. Çizgi **Medyan** değeridir (o saatteki ölçümlerinizin yarısı daha düşük, yarısı daha yüksekti). Çevresinde bir bant ölçümlerinizin ortadaki yarısını (**%25–75**), daha geniş bir bant ise çoğunu (**%10–90**) gösterir. Dar bir bant, o saatte glikozunuzun günden güne benzer olduğu anlamına gelir. Kesikli çizgiler **DÜŞÜK işareti**, 140 mg/dL (7,8 mmol/L) ve **YÜKSEK işareti** değerlerinizi gösterir.
+- **Glisemik genel bakış**: aralığınızda, dar aralıkta (70–140 mg/dL veya 3,9–7,8 mmol/L), aralığınızın üstünde ve altında geçen süre, ardından **Ortalama** ve **Medyan** glikoz değeriniz. Aralığınız, [Görselleştirme Aralığı](#Preferences-range-for-visualization) içinde ayarlanan **DÜŞÜK işareti** ve **YÜKSEK işareti** değerleridir.
+- **eA1c** ve **GMI**: CGM ölçümlerinizden hesaplanan iki HbA1c tahmini. Yukarıdaki HbA1c gibi, bunlar da kan HbA1c testlerinizle aynı olmayabilir.
+- **SD** (standart sapma) ve **CV** (varyasyon katsayısı): glikozunuzun ne kadar değiştiği. Daha düşük bir değer, daha dengeli glikoz demektir.
+- **Gün**: kaç günlük CGM verisinin kullanıldığı.
 
-![Statistics: the Glucose tab with the AGP chart](../images/Maintenance/statistics_agp.png) ![Statistics: Glycemic overview and glucose metrics](../images/Maintenance/statistics_agp2.png)
+![İstatistikler: AGP grafiği ile Glikoz sekmesi](../images/Maintenance/statistics_agp.png) ![İstatistikler: Glisemik genel bakış ve glikoz ölçüleri](../images/Maintenance/statistics_agp2.png)
 
-Below the AGP, the **Glucose Pentagon (CGP)** card draws five measures of your last 14 days of glucose as a pentagon. A smaller pentagon means better glucose control.
+AGP'nin altında, **Glikoz Pentagonu (CGP)** kartı son 14 gününüzün glikozuna ait beş ölçüyü bir beşgen olarak çizer. Daha küçük bir beşgen, daha iyi glikoz kontrolü demektir.
 
-![Statistics: the Glucose Pentagon](../images/Maintenance/statistics_cgp.png)
+![İstatistikler: Glikoz Pentagonu](../images/Maintenance/statistics_cgp.png)
 
-### Cycle tab: TDD Cycle Pattern
+### Döngü sekmesi: GTD Döngü Modeli
 
-**TDD Cycle Pattern** overlays your daily insulin totals in 28-day cycles, to help you spot recurring patterns. Each cycle is drawn as a line (**Individual cycles**), together with their average.
+**GTD Döngü Modeli**, tekrarlayan örüntüleri fark etmenize yardımcı olmak için günlük insülin toplamlarınızı 28 günlük döngüler halinde üst üste gösterir. Her döngü, ortalamalarıyla birlikte bir çizgi olarak çizilir (**Ayrı döngüler**).
 
-- **Raw TDD** / **Cleaned TDD**: choose the total daily dose as delivered, or the TDD minus insulin for carbs.
-- **Cycle offset**: moves the start of the cycle (0 to 27 days).
+- **Ham GTD** / **Temizlenmiş GTD**: verildiği şekliyle günlük toplam dozu veya karbonhidratlar için verilen insülin çıkarılmış GTD'yi seçin.
+- **Döngü kayması**: döngünün başlangıcını kaydırır (0 ile 27 gün arası).
 
-At least 56 days of data (2 cycles) are needed. With less data, the card shows **Not enough data (need at least 56 days for 2 cycles)**. The pattern is calculated only when you open the **Cycle** tab, because it reads 168 days of data.
+En az 56 günlük veri (2 döngü) gerekir. Daha az veri varsa kart **Yeterli veri yok (2 döngü için en az 56 gün gerekli)** mesajını gösterir. Model yalnızca **Döngü** sekmesini açtığınızda hesaplanır, çünkü 168 günlük veriyi okur.
 
 (aaps-screens-treatments)=
-## Treatments history
+## Tedavi geçmişi
 
-Open the **menu** (☰) in the top-left corner of the main screen and select **Treatments history**. In this view, you can view and alter the history of the following treatments, each on its own tab (swipe the tab row to see all of them):
+Ana ekranın sol üst köşesindeki **menüyü** (☰) açın ve **Tedavi geçmişi**'ni seçin. Bu görünümde aşağıdaki tedavilerin geçmişini görebilir ve değiştirebilirsiniz; her biri kendi sekmesindedir (hepsini görmek için sekme satırını kaydırın):
 
-* Carbs and bolus
+* Karbonhidrat ve bolus
 * [Yayma Bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temp basal
+* Geçici Bazal
 * [Geçici hedef](../DailyLifeWithAaps/TempTargets.md)
-* [Profil değiştir](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes and careportal entries
-* Running mode : history of loop status
-* User entry: other notes that are not sent to Nightscout
+* [Profil değişimi](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
+* Careportal: notlar ve careportal kayıtları
+* Çalışma modu: döngü durumunun geçmişi
+* Kullanıcı girişi: Nightscout'a gönderilmeyen diğer notlar
 
-At the end of each line, small icons show where the data comes from or has been sent to:
-* **Nightscout** icon (the Nightscout logo): the data comes from or has been recorded to Nightscout
-* **Pump** icon: the data comes from the pump history (it has been processed by the pump)
-* **Trash can** icon: the entry has been deleted (it is shown only when you display deleted entries with the **eye** icon at the top right)
+Her satırın sonundaki küçük simgeler, verinin nereden geldiğini veya nereye gönderildiğini gösterir:
+* **Nightscout** simgesi (Nightscout logosu): veri Nightscout'tan geldi veya Nightscout'a kaydedildi
+* **Pompa** simgesi: veri pompa geçmişinden geliyor (pompa tarafından işlendi)
+* **Çöp kutusu** simgesi: kayıt silindi (yalnızca sağ üstteki **göz** simgesiyle silinen kayıtları gösterdiğinizde görünür)
 
 (screens-bolus-carbs)=
-### Carbs and bolus
+### Karbonhidrat ve bolus
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![Karbonhidrat ve bolus](../images/TreatmentsView1.png)
 
-On this tab you can view the bolus and carbs log. Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
-* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionality
+Bu sekmede bolus ve karbonhidrat kaydını görebilirsiniz. Her bolus (satır **1**), insülin miktarının yanında kalan ilgili AİNS'i gösterir. Bolusun kaynağı şunlardan biri olabilir:
+* Öğün (İnsülin, Hızlı Asistan veya Bolus sihirbazı düğmeleriyle elle girilen)
+* SMB, SMB işlevi kullanıldığında
 
-The carbs entries (line **2**) are shown with their amount in grams.
+Karbonhidrat kayıtları (satır **2**) gram cinsinden miktarlarıyla gösterilir.
 
-If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text on the bolus line to show the details of how the bolus was calculated.
+İnsülin dozunu hesaplamak için [Bolus sihirbazı](#aaps-screens-bolus-wizard)'nı kullandıysanız, bolusun nasıl hesaplandığının ayrıntılarını görmek için bolus satırındaki “Calc” yazısına basabilirsiniz.
 
-Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
+Kullanılan pompaya bağlı olarak insülin ve karbonhidrat tek bir satırda gösterilebilir veya birden fazla satır oluşabilir: biri hesaplama ayrıntısı, biri karbonhidrat, biri de bolusun kendisi için.
 
-The Treatments history can be used to correct faulty carb entries (_i.e._ you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
+Tedavi geçmişi, hatalı karbonhidrat girişlerini düzeltmek için kullanılabilir (_örneğin_ karbonhidratı fazla veya az tahmin ettiyseniz). Mevcut bir kaydı düzenlemenin mümkün olmadığını unutmayın; şu adımları izlemeniz gerekir:
 
-1. Check and remember actual COB and IOB on the main screen.
-2. Depending on pump, carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount: press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.
-4. Make sure carbs are removed successfully by checking COB on the main screen again.
-5. Do the same for IOB if there is just one line including carbs and insulin.
+1. Ana ekrandaki güncel AKRB ve AİNS değerlerini kontrol edin ve not edin.
+2. Pompaya bağlı olarak karbonhidrat, insülinle birlikte tek satırda veya ayrı bir kayıt olarak gösterilebilir (ör. Dana RS ile).
+3. Hatalı karbonhidrat miktarı olan kaydı kaldırın: çöp kutusu simgesine basın, kaldırılacak satırları seçin ve işlemi bitirmek için çöp kutusu simgesine tekrar basın.
+4. Ana ekranda AKRB'yi tekrar kontrol ederek karbonhidratın başarıyla kaldırıldığından emin olun.
+5. Karbonhidrat ve insülini içeren tek bir satır varsa aynısını AİNS için de yapın.
 
-   → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+   → Karbonhidrat istenildiği gibi kaldırılmazsa ve burada açıklandığı gibi (6.) ek karbonhidrat eklerseniz, AKRB çok yüksek olur ve bu da çok fazla insülin verilmesine yol açabilir.
 
-6. Enter the correct carb amount again (**Treatments → Carbs** in the bottom navigation, or a [QuickLaunch](#quicklaunch) **Carbs** button) and make sure to set the correct event time.
-7. If there is just one line including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on the main screen after confirming the new entry.
+6. Doğru karbonhidrat miktarını tekrar girin (alt gezinme çubuğunda **Tedaviler → Karbonhidrat** veya bir [Hızlı Başlatma](#quicklaunch) **Karbonhidrat** düğmesi) ve doğru olay zamanını ayarladığınızdan emin olun.
+7. Karbonhidrat ve insülini içeren tek bir satır varsa insülin miktarını da eklemeniz gerekir. Doğru olay zamanını ayarladığınızdan emin olun ve yeni kaydı onayladıktan sonra ana ekranda AİNS'i kontrol edin.
 
-### Temp basal
+### Geçici Bazal
 
-![Temp Basal](../images/TreatmentsView2.png)
+![Geçici Bazal](../images/TreatmentsView2.png)
 
-The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). It can be:
-* Positive IOB if the temp basal was higher than the one set in the Profile
-* Negative IOB for a zero-temp (as on line **1**) or if the temp basal was lower than the one set in the Profile
+Döngünün uyguladığı **geçici bazallar** burada gösterilir. Bir kaydın AİNS üzerinde hâlâ etkisi varsa, bu bilgi oranın yanında gösterilir (satır **1**). Bu şunlar olabilir:
+* Geçici bazal, Profilde ayarlanandan yüksekse pozitif AİNS
+* Sıfır geçici bazal için (satır **1**'deki gibi) veya geçici bazal, Profilde ayarlanandan düşükse negatif AİNS
 
-Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
+Kayıtları silmek yalnızca Nightscout'taki raporlarınızı etkiler ve muhtemelen gerçek AİNS'inizi bozar - önerilmez.
 
-On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
+Bir satırın solundaki kırmızı S, “Askıya al” anlamına gelir: bazal o anda verilmediğinde görünür. Bu, örneğin pod değiştirme sırasında normal bir durumdur.
 
 ### Geçici hedef
 
 ![Geçici hedef](../images/TreatmentsView3.png)
 
-The history of temporary targets can be seen here.
+Geçici hedeflerin geçmişi burada görülebilir.
 
-### Profil değiştir
+### Profil değişimi
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profil değişimi](../images/TreatmentsView4.png)
 
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
+Profil değişimlerinin geçmişi burada görülebilir. Her profil değiştirdiğinizde birden fazla kayıt görebilirsiniz: hem NS'de hem de Pompa Geçmişinde saklanan satır **1**, gerçek değişime karşılık gelir. Nightscout'ta saklanan ancak Pompa Geçmişinde olmayan satır **2**, kullanıcının yaptığı profil değişimi isteğine karşılık gelir.
 
-Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
+Kayıtları silmek yalnızca Nightscout'taki raporlarınızı etkiler ve mevcut profili asla gerçekten değiştirmez.
 
-You can use the **Clone** button shown on line **2** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
+Bir **Profil değişimi**'nin kopyasını oluşturmak için satır **2**'de gösterilen **Klon** düğmesini kullanabilirsiniz. Daha fazla bilgi için [AAPS profiliniz > Profillerinizi yönetin](#your-aaps-profile-clone-profile-switch) bölümüne bakın.
 
 ### Careportal
 
-![Care portal](../images/TreatmentsView5.png)
+![Careportal](../images/TreatmentsView5.png)
 
-This tab shows all notes and careportal entries recorded in Nightscout.
+Bu sekme, Nightscout'a kaydedilen tüm notları ve careportal kayıtlarını gösterir.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Running mode
 
 ![Running mode](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
+Bu sekme, [döngü durumu](#AapsScreens-loop-status) değişikliklerinin geçmişini gösterir: açık, kapalı, LGS, askıya alma, bağlantıyı kesme.
 
-### User entry
+### Kullanıcı girişi
 
-![User entry](../images/screens/treatments_user_entry.png)
+![Kullanıcı girişi](../images/screens/treatments_user_entry.png)
 
-This tab lists the actions made in **AAPS** by the user or by an **Automation** (loop mode changes, profile switches, treatments, settings exports...). These entries are not sent to Nightscout.
+Bu sekme, **AAPS** içinde kullanıcı veya bir **Otomasyon** tarafından yapılan eylemleri listeler (döngü modu değişiklikleri, profil değişimleri, tedaviler, ayar dışa aktarmaları...). Bu kayıtlar Nightscout'a gönderilmez.
 
 ------
 
-## What is the difference between Nightscout vs Tidepool?
+## Nightscout ile Tidepool arasındaki fark nedir?
 
-Nightscout can facilitate the user’s storage of **AAPS’** data and offers a wide range of [reporting tools](https://nightscout.github.io/nightscout/reports/).
+Nightscout, **AAPS** verilerinin saklanmasını kolaylaştırır ve çok çeşitli [raporlama araçları](https://nightscout.github.io/nightscout/reports/) sunar.
 
-Whereas, Tidepool allows the user to [review their data](https://www.tidepool.org/viewing-your-data) and provides [simple sharing with your endo team](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
+Tidepool ise kullanıcının [verilerini incelemesini](https://www.tidepool.org/viewing-your-data) sağlar ve [endokrinoloji ekibinizle kolay paylaşım](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform) sunar.

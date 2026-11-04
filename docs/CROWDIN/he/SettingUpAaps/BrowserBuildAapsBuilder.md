@@ -1,9 +1,9 @@
 (aaps-builder)=
 
-# Browser build with AAPS Builder
+# בנייה בדפדפן עם AAPS Builder
 
 ```{note}
-This is the recommended way to build AAPS from an **Android phone**. It also works from any computer browser. For the other ways to build from a computer or an iPhone, see the [Browser build](BrowserBuild.md) overview.
+זו הדרך המומלצת לבנות את AAPS מ**טלפון Android**. היא עובדת גם מכל דפדפן במחשב. לדרכים האחרות לבנות ממחשב או מ-iPhone, ראו את הסקירה של [בנייה בדפדפן](BrowserBuild.md).
 ```
 
 ```{contents} In this page
@@ -11,360 +11,360 @@ This is the recommended way to build AAPS from an **Android phone**. It also wor
 :depth: 2
 ```
 
-**AAPS Builder** builds the AAPS app for you in GitHub, the free code-hosting website. There is nothing to install on your phone, and no preparation file to open.
+**AAPS Builder** בונה בשבילכם את אפליקציית AAPS ב-GitHub, אתר אחסון הקוד החינמי. אין מה להתקין בטלפון, ואין קובץ הכנה לפתוח.
 
-A setup page walks you through it. It takes about 10 minutes the first time:
+דף הגדרה מדריך אתכם בתהליך. בפעם הראשונה זה לוקח בערך 10 דקות:
 
-1. Create your own **private copy** of AAPS Builder in your GitHub account: the setup page opens GitHub with everything filled in, you only confirm. The build workflow, the file that tells GitHub how to build AAPS, is already in it.
-2. Create or upload your **signing key** (the keystore).
-3. Give the key to your repository as a GitHub **secret**.
-4. **Build** the app. One build takes 15 to 30 minutes.
-5. **Download and install** the app on your phone.
+1. יוצרים **עותק פרטי** משלכם של AAPS Builder בחשבון GitHub שלכם: דף ההגדרה פותח את GitHub כשהכול כבר ממולא, ואתם רק מאשרים. ה-workflow לבנייה, הקובץ שאומר ל-GitHub איך לבנות את AAPS, כבר נמצא בו.
+2. יוצרים או מעלים את **מפתח החתימה** (ה-keystore).
+3. נותנים את המפתח למאגר שלכם כ-**secret** של GitHub.
+4. **בונים** את האפליקציה. בנייה אחת לוקחת 15 עד 30 דקות.
+5. **מורידים ומתקינים** את האפליקציה בטלפון.
 
-You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from the official AndroidAPS repository at every build. You also do **not** need Google Drive: you download the app directly from GitHub.
+**אין** צורך ליצור fork של AndroidAPS: קוד המקור של AAPS יורד ממאגר AndroidAPS הרשמי בכל בנייה. **אין** צורך גם ב-Google Drive: מורידים את האפליקציה ישירות מ-GitHub.
 
 ```{admonition} Where the code comes from
 :class: note
 
-The build workflow is maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository, and your repository is a copy of it. The [workflow](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) in your copy is short: it runs the [build steps](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml) kept in that repository, so improvements reach you without any change to your repository. You can read both files. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
+ה-workflow לבנייה מתוחזק על ידי המפתחים של AAPS במאגר [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), והמאגר שלכם הוא עותק שלו. ה-[workflow](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) שבעותק שלכם קצר: הוא מריץ את [שלבי הבנייה](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml) שנמצאים במאגר ההוא, כך ששיפורים מגיעים אליכם בלי שום שינוי במאגר שלכם. אפשר לקרוא את שני הקבצים. בזמן הבנייה, ה-workflow מוריד רק את קוד המקור הרשמי של AAPS ואת כלי הבנייה של GitHub עצמו. ה-keystore שלכם אף פעם לא יוצא מהדפדפן שלכם ומהמאגר הפרטי שלכם.
 ```
 
 (aaps-builder-before-you-start)=
 
-## Before you start
+## לפני שמתחילים
 
-You will need:
+מה צריך:
 
-- A **GitHub account** (free). If you don't have one, create it on [github.com](https://github.com/signup) first.
-- A **web browser**: Chrome on your phone, or any browser on a computer. Log in to github.com in that browser before you start.
-- **GitHub app on your phone?** You can keep it. Some buttons of the setup page then open the app instead of Chrome. Building works in the app, but the app **cannot download** the finished AAPS: [step 5](#aaps-builder-step5) shows how to switch to Chrome for the download.
-- Your **existing keystore** (`.jks` file), its password and its alias, if you built AAPS before and want to update it without reinstalling.
+- **חשבון GitHub** (בחינם). אם אין לכם חשבון, קודם יש ליצור אותו ב-[github.com](https://github.com/signup).
+- **דפדפן אינטרנט**: Chrome בטלפון, או כל דפדפן במחשב. לפני שמתחילים, יש להתחבר ל-github.com בדפדפן הזה.
+- **אפליקציית GitHub בטלפון?** אפשר להשאיר אותה. במקרה כזה, חלק מהכפתורים של דף ההגדרה פותחים את האפליקציה במקום את Chrome. הבנייה עובדת באפליקציה, אבל האפליקציה **לא יכולה להוריד** את AAPS המוכן: [שלב 5](#aaps-builder-step5) מראה איך לעבור ל-Chrome כדי להוריד.
+- **ה-keystore הקיים** שלכם (קובץ `.jks`), הסיסמה שלו וה-alias שלו, אם כבר בניתם את AAPS בעבר ורוצים לעדכן אותו בלי התקנה מחדש.
 
 ```{warning}
-**Your build repository must stay private.** Everything a build produces is visible to anyone who can see the repository. The setup page creates a private repository for you. Never change it to public, and don't **fork** AAPS Builder instead: a fork is always public.
+**מאגר הבנייה שלכם חייב להישאר פרטי.** כל מה שהבנייה יוצרת גלוי לכל מי שיכול לראות את המאגר. דף ההגדרה יוצר בשבילכם מאגר פרטי. אין לשנות אותו אף פעם לציבורי, ואין ליצור **fork** של AAPS Builder במקום זה: fork תמיד ציבורי.
 
-A private repository gets 2000 free GitHub Actions minutes per month, which is enough for several builds.
+מאגר פרטי מקבל 2000 דקות חינם של GitHub Actions בחודש, וזה מספיק לכמה בניות.
 ```
 
 ```{warning}
-**New key or existing key: this decides whether you can update AAPS.**
+**מפתח חדש או מפתח קיים: זה קובע אם אפשר לעדכן את AAPS.**
 
-- **You already have AAPS on your phone, built with a keystore you still have**: choose **I already have a keystore** on the setup page and upload it. Your next build will update AAPS in place. Built AAPS with the previous browser build (your own fork)? Your keystore is in your fork: [get a copy of it first](#aaps-builder-from-fork).
-- **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+- **AAPS כבר מותקן בטלפון שלכם, והוא נבנה עם keystore שעדיין יש לכם**: בדף ההגדרה יש לבחור **I already have a keystore** (כבר יש לי keystore) ולהעלות אותו. הבנייה הבאה תעדכן את AAPS הקיים. בניתם את AAPS בבנייה הקודמת בדפדפן (עם fork משלכם)? ה-keystore שלכם נמצא ב-fork: [קודם יש לקבל עותק שלו](#aaps-builder-from-fork).
+- **אתם בונים את AAPS בפעם הראשונה, או שאיבדתם את ה-keystore או את הסיסמה שלו**: יש לבחור **Create a new key** (יצירת מפתח חדש). אפליקציה שנחתמה עם מפתח חדש **לא יכולה לעדכן** AAPS שנחתם עם מפתח אחר. יש לייצא את ההגדרות, להעתיק את הקובץ אל מחוץ לטלפון, להסיר את AAPS הישן, להתקין את החדש, ואז לייבא את ההגדרות: ראו [התקנה מחדש של AAPS עם keystore חדש](#reinstall-aaps).
 
-Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password and its alias (`key0`) somewhere safe, off your phone.
+אחרי זה תמיד יש להמשיך להשתמש באותו מפתח. כשיוצרים מפתח חדש, יש להוריד את הגיבוי שהדף מציע ולשמור אותו יחד עם הסיסמה וה-alias שלו (`key0`) במקום בטוח, מחוץ לטלפון.
 ```
 
 (aaps-builder-from-fork)=
 
-## Coming from the previous browser build (fork)
+## מעבר מהבנייה הקודמת בדפדפן (fork)
 
-Skip this section if you never built AAPS with the previous browser build method (your own copy, or fork, of AndroidAPS in GitHub, with the preparation file and Google Drive).
+אפשר לדלג על החלק הזה אם אף פעם לא בניתם את AAPS בשיטת הבנייה הקודמת בדפדפן (עותק משלכם, או fork, של AndroidAPS ב-GitHub, עם קובץ ההכנה ו-Google Drive).
 
-Your keystore is stored as secrets in your fork. GitHub never shows a secret again, so you can't copy it to your new repository. Get a copy of your keystore first, then use it in [step 2](#aaps-builder-step2) with **I already have a keystore**.
+ה-keystore שלכם שמור כ-secrets ב-fork שלכם. GitHub אף פעם לא מציג secret שוב, ולכן אי אפשר להעתיק אותו למאגר החדש. קודם יש לקבל עותק של ה-keystore, ואז להשתמש בו ב[שלב 2](#aaps-builder-step2) עם **I already have a keystore**.
 
 ```{warning}
-Don't choose **Create a new key**. AAPS built with a new key cannot update the AAPS on your phone.
+אין לבחור **Create a new key**. AAPS שנבנה עם מפתח חדש לא יכול לעדכן את AAPS שבטלפון שלכם.
 ```
 
-Which case is yours?
+איזה מקרה מתאים לכם?
 
-- **You used Option 2** (you uploaded your own keystore from Android Studio), and you still have the `.jks` file, its passwords and its alias: nothing to do here. Use that file in step 2.
-- **You used Option 1** (the preparation file created your key), or you no longer have your keystore file: export it from your fork as below.
+- **השתמשתם באפשרות 2** (העליתם keystore משלכם מ-Android Studio), ועדיין יש לכם את קובץ ה-`.jks`, הסיסמאות שלו וה-alias שלו: אין צורך לעשות כאן שום דבר. בקובץ הזה יש להשתמש בשלב 2.
+- **השתמשתם באפשרות 1** (קובץ ההכנה יצר את המפתח שלכם), או שכבר אין לכם את קובץ ה-keystore: יש לייצא אותו מה-fork כמו שמוסבר למטה.
 
-To export your keystore from your fork:
+כדי לייצא את ה-keystore מה-fork שלכם:
 
-1. In your fork, open **Settings** → **Secrets and variables** → **Actions** and add a secret named `ZIP_PASSWORD`. Choose a password with only English letters and numbers. It protects the file you are about to create.
-2. Open the **Actions** tab of your fork, tap **CI Keystore Export**, then **Run workflow**. More details: [Export your keystore](#ci-keystore-export).
-3. When the run has a green check, open your Google Drive: the file `keystore.zip` is in the folder **AAPS** → **KeyStore**. If the run fails at the Google Drive step, your fork's Google Drive access has expired: see [Google refresh token expired](#aaps-ci-google-token-expired).
-4. Download `keystore.zip` and open it with your `ZIP_PASSWORD`: on a computer, or on your phone with a file manager app that can open password-protected ZIP files. It contains:
-   - `keystore.jks`: your keystore,
-   - `keyStoreInfo.txt`: your `KEYSTORE_PASSWORD`, `KEY_PASSWORD` and `ALIAS` (usually `key0`).
-5. Copy `keystore.jks` to your phone (or to Google Drive, so you can pick it from there).
+1. ב-fork שלכם, יש לפתוח **Settings** ← **Secrets and variables** ← **Actions** ולהוסיף secret בשם `ZIP_PASSWORD`. יש לבחור סיסמה עם אותיות באנגלית ומספרים בלבד. היא מגינה על הקובץ שאתם עומדים ליצור.
+2. יש לפתוח את הלשונית **Actions** של ה-fork, להקיש על **CI Keystore Export**, ואז על **Run workflow**. פרטים נוספים: [ייצוא ה-keystore](#ci-keystore-export).
+3. כשההרצה מסתיימת עם וי ירוק, יש לפתוח את Google Drive שלכם: הקובץ `keystore.zip` נמצא בתיקייה **AAPS** ← **KeyStore**. אם ההרצה נכשלת בשלב של Google Drive, הגישה של ה-fork ל-Google Drive פגה: ראו [פג תוקפו של אסימון הרענון (refresh token) של Google](#aaps-ci-google-token-expired).
+4. יש להוריד את `keystore.zip` ולפתוח אותו עם ה-`ZIP_PASSWORD` שלכם: במחשב, או בטלפון עם אפליקציה לניהול קבצים שיכולה לפתוח קובצי ZIP מוגנים בסיסמה. הוא מכיל:
+   - `keystore.jks`: ה-keystore שלכם,
+   - `keyStoreInfo.txt`: ה-`KEYSTORE_PASSWORD`, ה-`KEY_PASSWORD` וה-`ALIAS` שלכם (בדרך כלל `key0`).
+5. יש להעתיק את `keystore.jks` לטלפון (או ל-Google Drive, כדי שאפשר יהיה לבחור אותו משם).
 
-In [step 2](#aaps-builder-step2) of the setup page:
+ב[שלב 2](#aaps-builder-step2) של דף ההגדרה:
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose `keystore.jks`.
-3. In **Keystore password**, type the `KEYSTORE_PASSWORD` from `keyStoreInfo.txt`.
-4. In **Key alias**, pick or type the `ALIAS` from `keyStoreInfo.txt`.
-5. If `KEY_PASSWORD` is different from `KEYSTORE_PASSWORD`, untick **Key password is the same as the keystore password** and type the `KEY_PASSWORD`.
+1. יש להקיש על **I already have a keystore**.
+2. ב-**Keystore file** יש לבחור את `keystore.jks`.
+3. ב-**Keystore password** יש להקליד את ה-`KEYSTORE_PASSWORD` מתוך `keyStoreInfo.txt`.
+4. ב-**Key alias** יש לבחור או להקליד את ה-`ALIAS` מתוך `keyStoreInfo.txt`.
+5. אם `KEY_PASSWORD` שונה מ-`KEYSTORE_PASSWORD`, יש לבטל את הסימון של **Key password is the same as the keystore password** ולהקליד את ה-`KEY_PASSWORD`.
 
-Keep `keystore.zip` and its `ZIP_PASSWORD` somewhere safe, off your phone: it is the backup of your key.
+יש לשמור את `keystore.zip` ואת ה-`ZIP_PASSWORD` שלו במקום בטוח, מחוץ לטלפון: זה הגיבוי של המפתח שלכם.
 
-To also save the builds of AAPS Builder in Google Drive, do [step 6](#aaps-builder-google-drive): the setup page gets a new `GDRIVE_OAUTH2` for you. You can keep your fork until AAPS built with AAPS Builder is installed on your phone.
+כדי לשמור גם את הבניות של AAPS Builder ב-Google Drive, יש לבצע את [שלב 6](#aaps-builder-google-drive): דף ההגדרה משיג בשבילכם `GDRIVE_OAUTH2` חדש. אפשר להשאיר את ה-fork עד ש-AAPS שנבנה עם AAPS Builder מותקן בטלפון שלכם.
 
-## Open the setup page
+## פתיחת דף ההגדרה
 
-**→ [Open the AAPS Builder setup page](#aaps-builder-setup)**
+**→ [פתיחת דף ההגדרה של AAPS Builder](#aaps-builder-setup)**
 
-The setup page is part of this documentation, in your language. Keep this page open in another tab as well: the sections below explain each step of the setup page in more detail, with screenshots.
+דף ההגדרה הוא חלק מהתיעוד הזה, בשפה שלכם. כדאי להשאיר את הדף הזה פתוח גם בלשונית אחרת: החלקים שלמטה מסבירים כל שלב של דף ההגדרה בפירוט רב יותר, עם צילומי מסך.
 
-The setup page opens each GitHub page in a new Chrome tab. To come back to the setup page, tap the tab button next to Chrome's address bar (the square with a number) and choose the AAPS Builder setup page.
+דף ההגדרה פותח כל דף של GitHub בלשונית חדשה של Chrome. כדי לחזור לדף ההגדרה, יש להקיש על כפתור הלשוניות ליד שורת הכתובת של Chrome (הריבוע עם המספר) ולבחור את דף ההגדרה של AAPS Builder.
 
-The setup page runs entirely in your browser: your key and passwords are never sent anywhere, except into the GitHub secret you paste them into yourself. Only your GitHub username is sent to GitHub, to check that it exists. It remembers your GitHub username and repository name, so you can come back to it at any time to reopen your secrets page or your builds.
+דף ההגדרה פועל כולו בדפדפן שלכם: המפתח והסיסמאות שלכם לא נשלחים לשום מקום, חוץ מה-secret ב-GitHub שאתם מדביקים אותם בו בעצמכם. רק שם המשתמש שלכם ב-GitHub נשלח ל-GitHub, כדי לבדוק שהוא קיים. הדף זוכר את שם המשתמש שלכם ב-GitHub ואת שם המאגר, כך שאפשר לחזור אליו בכל זמן כדי לפתוח שוב את דף ה-secrets או את הבניות שלכם.
 
-![The AAPS Builder setup page](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
+![דף ההגדרה של AAPS Builder](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
 
 (aaps-builder-step1)=
 
-## Step 1 – Create your private build repository
+## שלב 1 – יצירת מאגר בנייה פרטי
 
-This step creates your own private copy of AAPS Builder in your GitHub account, with the build workflow already in it. Only you can see it and the apps it builds.
+השלב הזה יוצר עותק פרטי משלכם של AAPS Builder בחשבון GitHub שלכם, עם ה-workflow לבנייה כבר בתוכו. רק אתם יכולים לראות אותו ואת האפליקציות שהוא בונה.
 
-1. Make sure you are logged in to github.com in this browser.
+1. יש לוודא שאתם מחוברים ל-github.com בדפדפן הזה.
 
-2. In **Your GitHub username**, type your GitHub username, not your e-mail. The page checks it with GitHub: **✓ GitHub user found** means it is right.
+2. ב-**Your GitHub username** (שם המשתמש שלך ב-GitHub) יש להקליד את שם המשתמש שלכם ב-GitHub, לא את כתובת הדוא"ל. הדף בודק אותו מול GitHub: **✓ GitHub user found** (משתמש GitHub נמצא) אומר שהוא נכון.
 
-3. In **Name of your repository**, keep the suggestion `my-aaps`. If you already created your repository with another name, type that exact name.
+3. ב-**Name of your repository** (שם המאגר שלך) יש להשאיר את ההצעה `my-aaps`. אם כבר יצרתם את המאגר בשם אחר, יש להקליד בדיוק את השם הזה.
 
    ```{note}
-   **Already have an AAPS Builder repository** (made with an earlier version of the setup page)? Don't create a new one: type its exact name, skip **Create my private repository**, and update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). Your secrets stay as they are. If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+   **כבר יש לכם מאגר של AAPS Builder** (שנוצר עם גרסה קודמת של דף ההגדרה)? אין ליצור מאגר חדש: יש להקליד את השם המדויק שלו, לדלג על **Create my private repository**, ולעדכן את ה-workflow שלו פעם אחת כמו שמוסבר ב[עדכון AAPS](#aaps-builder-updates). ה-secrets שלכם נשארים כמו שהם. אם בכל זאת רוצים מאגר חדש, יש לבחור שם שעוד אין לכם, למשל `my-aaps-2`, ולהשתמש באותו keystore בשלב 2.
 
-   Don't type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+   אין להקליד את השם של ה-fork שלכם של AndroidAPS: fork הוא ציבורי, והוא כבר בונה עם ה-workflow שלו, **AAPS CI**.
    ```
 
-   ![Setup page step 1 filled in](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
+   ![שלב 1 בדף ההגדרה, אחרי המילוי](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
 
-4. Check the line **Your repository:** it shows `github.com/<your username>/my-aaps`. The setup page remembers the name from your last visit: check it every time before you use its buttons.
+4. יש לבדוק את השורה **Your repository:** (המאגר שלך): היא מציגה `github.com/<your username>/my-aaps`. דף ההגדרה זוכר את השם מהביקור הקודם שלכם: יש לבדוק אותו בכל פעם לפני שמשתמשים בכפתורים שלו.
 
-5. Tap **Create my private repository**.
+5. יש להקיש על **Create my private repository** (יצירת המאגר הפרטי שלי).
 
-   ![The repository line and the Create my private repository button](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
+   ![שורת המאגר והכפתור Create my private repository](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
 
-6. GitHub opens **Create a new repository** in a new tab. Everything is already filled in: under **Start with a template**, the template `nightscout/aaps-builder` with **Include all branches** off, and under **General**, your account as **Owner** and the name you chose.
+6. GitHub פותח את **Create a new repository** בלשונית חדשה. הכול כבר ממולא: תחת **Start with a template**, התבנית `nightscout/aaps-builder` עם **Include all branches** כבוי, ותחת **General**, החשבון שלכם בתור **Owner** והשם שבחרתם.
 
-   ![GitHub Create a new repository page](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
+   ![הדף Create a new repository ב-GitHub](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
 
-   Don't change anything.
+   אין לשנות שום דבר.
 
-7. Scroll down: under **Configuration**, **Choose visibility** is already **Private**. Tap the green **Create repository** button.
+7. יש לגלול למטה: תחת **Configuration**, האפשרות **Choose visibility** כבר מוגדרת ל-**Private**. יש להקיש על הכפתור הירוק **Create repository**.
 
-   ![Visibility Private and the Create repository button](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
+   ![הנראות Private והכפתור Create repository](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
 
-   GitHub shows your new repository: it contains a folder `.github` (with the build workflow) and a file `README.md`. **Go back to the setup page tab** for step 2: tap the tab button next to Chrome's address bar and choose the setup page.
+   GitHub מציג את המאגר החדש שלכם: יש בו תיקייה `.github` (עם ה-workflow לבנייה) וקובץ `README.md`. **יש לחזור ללשונית של דף ההגדרה** לשלב 2: יש להקיש על כפתור הלשוניות ליד שורת הכתובת של Chrome ולבחור את דף ההגדרה.
 
 ```{warning}
-**Your new repository is empty**, with no files? It was not created from the template, and it cannot build. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** on the setup page again.
+**המאגר החדש שלכם ריק**, בלי קבצים? הוא לא נוצר מהתבנית, והוא לא יכול לבנות. יש למחוק אותו (**Settings** ← בתחתית הדף ← **Delete this repository**), ואז להקיש שוב על **Create my private repository** בדף ההגדרה.
 ```
 
 (aaps-builder-step2)=
 
-## Step 2 – Your signing key
+## שלב 2 – מפתח החתימה שלכם
 
-The app must be signed with your own key. Choose one of the two tabs. Read the [new key or existing key warning](#aaps-builder-before-you-start) first.
+האפליקציה חייבת להיחתם עם מפתח משלכם. יש לבחור אחת משתי הלשוניות. קודם יש לקרוא את [האזהרה על מפתח חדש או מפתח קיים](#aaps-builder-before-you-start).
 
-![Setup page step 2: the two key options](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
+![שלב 2 בדף ההגדרה: שתי האפשרויות למפתח](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
 
 ### I already have a keystore
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose your `.jks` file (or `.keystore`, `.p12`, `.pfx`). On a phone, copy the file to your phone or to Google Drive first.
-3. In **Keystore password**, type the keystore password.
-4. In **Key alias**, pick your alias from the list, or type it if there is no list. For keystores made with Android Studio it is usually `key0`.
-5. If your key password is different from the keystore password, untick **Key password is the same as the keystore password** and type the key password.
-6. Tap **Check and continue**.
+1. יש להקיש על **I already have a keystore**.
+2. ב-**Keystore file** (קובץ keystore) יש לבחור את קובץ ה-`.jks` שלכם (או `.keystore`, `.p12`, `.pfx`). בטלפון, קודם יש להעתיק את הקובץ לטלפון או ל-Google Drive.
+3. ב-**Keystore password** (סיסמת keystore) יש להקליד את הסיסמה של ה-keystore.
+4. ב-**Key alias** (ה-alias של המפתח) יש לבחור את ה-alias מהרשימה, או להקליד אותו אם אין רשימה. ב-keystore שנוצר ב-Android Studio הוא בדרך כלל `key0`.
+5. אם סיסמת המפתח שונה מסיסמת ה-keystore, יש לבטל את הסימון של **Key password is the same as the keystore password** (סיסמת המפתח זהה לסיסמת ה-keystore) ולהקליד את סיסמת המפתח.
+6. יש להקיש על **Check and continue** (בדיקה והמשך).
 
-The page checks the password and the alias on your device. **Keystore OK! Continue with step 3.** means everything is right. If it says the password will be checked when you build, continue anyway: the build tells you if something is wrong.
+הדף בודק את הסיסמה ואת ה-alias במכשיר שלכם. **Keystore OK! Continue with step 3.** (ה-keystore תקין! אפשר להמשיך לשלב 3.) אומר שהכול תקין. אם כתוב שהסיסמה תיבדק בזמן הבנייה, אפשר להמשיך בכל זאת: הבנייה תודיע לכם אם משהו לא תקין.
 
 ### Create a new key
 
-1. Tap **Create a new key**.
+1. יש להקיש על **Create a new key**.
 
-2. Choose a password and type it twice. Rules: at least 8 characters, only the letters a–z and A–Z, the digits 0–9 and symbols such as `! ? #`. No spaces, no accented letters, and not the `|` character.
+2. יש לבחור סיסמה ולהקליד אותה פעמיים. כללים: לפחות 8 תווים, רק האותיות a–z ו-A–Z, הספרות 0–9 וסמלים כמו `! ? #`. בלי רווחים, בלי אותיות עם סימנים (כמו é), ובלי התו `|`.
 
-3. Tap **Create key**. It takes a few seconds before **Key created** appears.
+3. יש להקיש על **Create key** (יצירת מפתח). עוברות כמה שניות עד שמופיע **Key created** (המפתח נוצר).
 
-   ![New key form with the password typed twice](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
+   ![טופס המפתח החדש עם הסיסמה שהוקלדה פעמיים](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
-4. Tap **Download backup (aaps-keystore.jks)**. If Chrome asks **Download file again?**, an older backup with the same name is already on your phone: tap **Download again**. Chrome then saves the new key as `aaps-keystore (1).jks`: that is the file that goes with this key, keep it and don't mix it up with the older one.
+4. יש להקיש על **Download backup (aaps-keystore.jks)** (הורדת גיבוי). אם Chrome שואל **Download file again?** (להוריד את הקובץ שוב?), גיבוי ישן יותר עם אותו שם כבר נמצא בטלפון: יש להקיש על **Download again** (הורדה חוזרת). אז Chrome שומר את המפתח החדש בשם `aaps-keystore (1).jks`: זה הקובץ ששייך למפתח הזה. יש לשמור אותו ולא להתבלבל בינו לבין הקובץ הישן.
 
-   Keep these three together, somewhere safe off your phone (for example your own cloud storage):
+   יש לשמור את שלושת הפריטים האלה יחד, במקום בטוח מחוץ לטלפון (למשל באחסון הענן שלכם):
 
-   - the file `aaps-keystore.jks`,
-   - your password,
-   - the alias of the key: **`key0`**.
+   - הקובץ `aaps-keystore.jks`,
+   - הסיסמה שלכם,
+   - ה-alias של המפתח: **`key0`**.
 
-   You need all three if you ever build AAPS another way, for example with Android Studio. Keys created with an earlier version of the setup page have the alias `aaps`.
+   צריך את שלושתם אם אי פעם תבנו את AAPS בדרך אחרת, למשל עם Android Studio. למפתחות שנוצרו בגרסה קודמת של דף ההגדרה יש את ה-alias `aaps`.
 
-   ![Key created and the backup box](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
+   ![המפתח נוצר, ותיבת הגיבוי](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
 
 (aaps-builder-step3)=
 
-## Step 3 – Give the key to your repository
+## שלב 3 – מתן המפתח למאגר שלכם
 
-Step 3 unlocks when step 2 is done. Your key, its passwords and its alias are packed into one value, the `KEYSTORE_SET` secret.
+שלב 3 נפתח כששלב 2 הושלם. המפתח, הסיסמאות שלו וה-alias שלו נארזים לערך אחד, ה-secret בשם `KEYSTORE_SET`.
 
-1. Tap **Open the secrets page**.
+1. יש להקיש על **Open the secrets page** (פתיחת דף ה-secrets).
 
-![Setup page step 3](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
+![שלב 3 בדף ההגדרה](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
 
-2. GitHub opens the **New secret** page of your repository. On a phone, it is below the settings menu: scroll down.
+2. GitHub פותח את הדף **New secret** של המאגר שלכם. בטלפון הוא נמצא מתחת לתפריט ההגדרות: יש לגלול למטה.
 
-![GitHub New secret form](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
+![הטופס New secret ב-GitHub](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
 
-3. Switch to the setup page tab and tap **Copy name**. Switch back to the GitHub tab and paste it into the small **Name** field. The name is `KEYSTORE_SET`.
+3. יש לעבור ללשונית של דף ההגדרה ולהקיש על **Copy name** (העתקת השם). יש לחזור ללשונית של GitHub ולהדביק אותו בשדה הקטן **Name**. השם הוא `KEYSTORE_SET`.
 
-4. Switch to the setup page tab and tap **Copy secret**. Switch back to the GitHub tab and paste it into the big **Secret** box (long press on a phone). The secret is a very long code, thousands of characters: the setup page shows its first characters next to the button. Don't paste the word `KEYSTORE_SET` there.
+4. יש לעבור ללשונית של דף ההגדרה ולהקיש על **Copy secret** (העתקת ה-secret). יש לחזור ללשונית של GitHub ולהדביק אותו בתיבה הגדולה **Secret** (בטלפון: לחיצה ארוכה). ה-secret הוא קוד ארוך מאוד, אלפי תווים: דף ההגדרה מציג את התווים הראשונים שלו ליד הכפתור. אין להדביק שם את המילה `KEYSTORE_SET`.
 
-5. Tap **Add secret**. `KEYSTORE_SET` now shows under **Repository secrets**.
+5. יש להקיש על **Add secret**. `KEYSTORE_SET` מופיע עכשיו תחת **Repository secrets**.
 
-![Repository secrets list with KEYSTORE_SET](../images/Building-the-App/CI/AapsBuilder13_SecretList.png)
+![רשימת Repository secrets עם KEYSTORE_SET](../images/Building-the-App/CI/AapsBuilder13_SecretList.png)
 
-You only need to do this once.
+את זה צריך לעשות רק פעם אחת.
 
 ```{tip}
-GitHub shows **Page not found** (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise the username or repository name in step 1 doesn't match your repository. Check the name on github.com, correct it in step 1, and tap the button again.
+GitHub מציג **Page not found** (404)? קודם יש לוודא שאתם מחוברים ל-github.com בדפדפן הזה: GitHub מציג 404 עבור מאגרים פרטיים כשלא מחוברים. אחרת, שם המשתמש או שם המאגר בשלב 1 לא תואמים למאגר שלכם. יש לבדוק את השם ב-github.com, לתקן אותו בשלב 1 ולהקיש שוב על הכפתור.
 ```
 
 (aaps-builder-step4)=
 
-## Step 4 – Build the app
+## שלב 4 – בניית האפליקציה
 
-1. On the setup page, tap **Open the build page**. GitHub opens the **Build AAPS** page of your repository.
+1. בדף ההגדרה, יש להקיש על **Open the build page** (פתיחת דף הבנייה). GitHub פותח את הדף **Build AAPS** של המאגר שלכם.
 
-   ![GitHub Build AAPS page with the Run workflow button](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
+   ![הדף Build AAPS ב-GitHub עם הכפתור Run workflow](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
 
-   If the **GitHub app** opens instead: tap **RUN WORKFLOW**, check the version and the variant, and tap **RUN WORKFLOW** again. The app may still show **Nothing to see here**: pull the list down to refresh it and see your build. Then continue with step 4 below.
+   אם במקום זה נפתחת **אפליקציית GitHub**: יש להקיש על **RUN WORKFLOW**, לבדוק את הגרסה ואת הווריאנט, ולהקיש שוב על **RUN WORKFLOW**. ייתכן שהאפליקציה עדיין תציג **Nothing to see here**: יש למשוך את הרשימה למטה כדי לרענן אותה ולראות את הבנייה. ואז להמשיך עם שלב 4 שלמטה.
 
-2. If GitHub asks, tap the green button to enable workflows.
+2. אם GitHub מבקש, יש להקיש על הכפתור הירוק כדי להפעיל את ה-workflows.
 
-   The list of workflows shows two entries: use **Build AAPS**. Ignore **AAPS Builder**: it holds the build steps and has no **Run workflow** button.
+   ברשימת תהליכי העבודה (workflows) יש שתי רשומות: יש להשתמש ב-**Build AAPS**. התעלמו מ-**AAPS Builder**: הוא מכיל את שלבי הבנייה ואין בו לחצן **Run workflow**.
 
-3. Tap **Run workflow**. A small form opens:
-   - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
-   - **Variant**: keep `fullRelease` for normal use with a pump. The other variants are explained in [build variants](#browserbuild-variant). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
-   - Tap the green **Run workflow** button.
+3. יש להקיש על **Run workflow**. נפתח טופס קטן:
+   - **Version** (גרסה): יש להשאיר `latest` כדי לבנות את הגרסה החדשה ביותר של AAPS, או להקליד מספר גרסה כמו `4.0.0`.
+   - **Variant** (וריאנט): יש להשאיר `fullRelease` לשימוש רגיל עם משאבה. שאר הווריאנטים מוסברים ב[וריאנטים של הבנייה](#browserbuild-variant). `aapsclient3Release` בונה את **AAPSClient3**, שזמין מגרסה 4.0 של **AAPS** (ראו [על AAPSClient, AAPSClient2 ו-AAPSClient3](#remotecontrol-aapsclient-versions)).
+   - יש להקיש על הכפתור הירוק **Run workflow**.
 
-   ![Run workflow form with latest and fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
+   ![הטופס Run workflow עם latest ו-fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
 
-4. The build starts and shows **In progress**, with two parts: **AAPS / Check**, then **AAPS / Build AAPS**.
+4. הבנייה מתחילה ומציגה **In progress** (בתהליך), עם שני חלקים: **AAPS / Check**, ואחריו **AAPS / Build AAPS**.
 
-   ![Build in progress](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
+   ![הבנייה בתהליך](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
 
-5. Wait 15 to 30 minutes. A green check means the build is done. A red cross means it failed: open the build to read the message, then see [troubleshooting](#aaps-builder-troubleshooting).
+5. יש לחכות 15 עד 30 דקות. סימן וי ירוק אומר שהבנייה הסתיימה. איקס אדום אומר שהבנייה נכשלה: יש לפתוח את הבנייה כדי לקרוא את ההודעה, ואז לעיין ב[פתרון תקלות](#aaps-builder-troubleshooting).
 
-   ![Finished build with a green check](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
+   ![בנייה שהסתיימה עם וי ירוק](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
 
    ```{tip}
-   **E-mail when a build is done:** GitHub only e-mails you when a build fails. To also get an e-mail when it succeeds: on github.com, open your profile picture → **Settings** → **Notifications** → **System** → **Actions**, and untick **Only notify for failed workflows**.
+   **דוא"ל כשבנייה מסתיימת:** GitHub שולח דוא"ל רק כשבנייה נכשלת. כדי לקבל דוא"ל גם כשהיא מצליחה: ב-github.com יש לפתוח את תמונת הפרופיל ← **Settings** ← **Notifications** ← **System** ← **Actions**, ולבטל את הסימון של **Only notify for failed workflows**.
    ```
 
-If there is no **Build AAPS** or **Run workflow** button:
+אם אין כפתור **Build AAPS** או **Run workflow**:
 
-- Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the button.
-- Open the **Actions** tab. If it says workflows are disabled, tap the green button to enable them, then tap **Build AAPS** in the list.
+- יש לפתוח את המאגר שלכם ולבדוק שיש בו תיקייה `.github` עם הקובץ `workflows/build.yml`. אם המאגר ריק, הוא לא נוצר מהתבנית: יש למחוק אותו (**Settings** ← בתחתית הדף ← **Delete this repository**) ולבצע שוב את [שלב 1](#aaps-builder-step1) עם הכפתור.
+- יש לפתוח את הלשונית **Actions**. אם כתוב שה-workflows מושבתים, יש להקיש על הכפתור הירוק כדי להפעיל אותם, ואז להקיש על **Build AAPS** ברשימה.
 
 (aaps-builder-step5)=
 
-## Step 5 – Install the app on your phone
+## שלב 5 – התקנת האפליקציה בטלפון
 
 ```{warning}
-**Before every update**, [export your settings](#ExportImportSettings-Automating-Settings-Export) in AAPS and copy the file **off the phone** (Google Drive, Dropbox…). Keep several older exports and the APK files there too, so you can always go back.
+**לפני כל עדכון**, יש [לייצא את ההגדרות](#ExportImportSettings-Automating-Settings-Export) ב-AAPS ולהעתיק את הקובץ **אל מחוץ לטלפון** (Google Drive, Dropbox…). כדאי לשמור שם גם כמה ייצואים ישנים יותר ואת קובצי ה-APK, כדי שתמיד אפשר יהיה לחזור אחורה.
 ```
 
-1. On your phone, open the setup page in **Chrome**. Log in to github.com if asked.
-2. Tap **Open my builds**, then the newest build with a green check.
+1. בטלפון, יש לפתוח את דף ההגדרה ב-**Chrome**. אם מתבקשים, יש להתחבר ל-github.com.
+2. יש להקיש על **Open my builds** (פתיחת הבניות שלי), ואז על הבנייה החדשה ביותר עם וי ירוק.
 
    ```{admonition} The GitHub app opened instead of Chrome?
    :class: note
 
-   The GitHub app cannot download builds. In the app, open the newest build, then tap **Artifacts ↗**, or tap the share icon at the top and choose **Chrome** (or **Copy link**, then paste the link in Chrome's address bar). The build opens in Chrome: continue with the next step there.
+   אפליקציית GitHub לא יכולה להוריד בניות. באפליקציה יש לפתוח את הבנייה החדשה ביותר, ואז להקיש על **Artifacts ↗**, או להקיש על סמל השיתוף למעלה ולבחור **Chrome** (או **Copy link**, ואז להדביק את הקישור בשורת הכתובת של Chrome). הבנייה נפתחת ב-Chrome: יש להמשיך שם עם השלב הבא.
 
-   To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
+   כדי שקישורים של GitHub לא ייפתחו באפליקציה: ב-Android **Settings** (הגדרות) ← **Apps** (אפליקציות) ← **GitHub** ← **Open by default** (פתיחה כברירת מחדל) ← לכבות את **Open supported links** (פתיחת קישורים נתמכים).
    ```
 
-   ![Finished build: status Success and 2 artifacts](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
+   ![בנייה שהסתיימה: מצב Success ו-2 artifacts](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
 
-3. Scroll down to the build summary and tap the **Download AAPS** link.
+3. יש לגלול למטה לסיכום הבנייה ולהקיש על הקישור **Download AAPS**.
 
-   ![Build summary with the Download AAPS link](../images/Building-the-App/CI/AapsBuilder51_DownloadLink.png)
+   ![סיכום הבנייה עם הקישור Download AAPS](../images/Building-the-App/CI/AapsBuilder51_DownloadLink.png)
 
    ```{tip}
-   Scroll with your finger on the text, not on the diagram of the build steps: the diagram moves instead of the page.
+   יש לגלול עם האצבע על הטקסט, לא על התרשים של שלבי הבנייה: אחרת התרשים זז במקום הדף.
    ```
 
-   You can also scroll further down to **Artifacts** and tap the download icon next to `aaps-….apk`.
+   אפשר גם לגלול עוד למטה אל **Artifacts** ולהקיש על סמל ההורדה ליד `aaps-….apk`.
 
-   ![Artifacts with the phone and watch apps](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
+   ![Artifacts עם האפליקציות לטלפון ולשעון](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
-4. When the download is done, open Chrome's menu **⋮** → **Downloads**, tap `aaps-….apk` and choose **Install**. If asked, allow installing apps from this source.
+4. כשההורדה מסתיימת, יש לפתוח את התפריט של Chrome **⋮** ← **Downloads** (הורדות), להקיש על `aaps-….apk` ולבחור **Install** (התקנה). אם מתבקשים, יש לאשר התקנת אפליקציות מהמקור הזה.
 
-   ![Chrome Downloads with the AAPS APK](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
+   ![ההורדות ב-Chrome עם ה-APK של AAPS](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
 
-`aaps-wear-….apk` is the smartwatch app. Skip it if you don't use one.
+`aaps-wear-….apk` היא האפליקציה לשעון החכם. אם אין לכם שעון כזה, אפשר לדלג עליה.
 
-The app is kept on the build page for **14 days**. It is not shown under **Code** in your repository. Copy it somewhere safe, off your phone, together with your settings exports.
+האפליקציה נשמרת בדף הבנייה במשך **14 ימים**. היא לא מופיעה תחת **Code** במאגר שלכם. יש להעתיק אותה למקום בטוח, מחוץ לטלפון, יחד עם קובצי ייצוא ההגדרות שלכם.
 
-For more ways to install the app, see [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+לדרכים נוספות להתקין את האפליקציה, ראו [העברה והתקנה של AAPS](TransferringAndInstallingAaps.md).
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+מספטמבר 2026, [אימות מפתחים ב-Android](#android-developer-verification) של Google עלול לחסום התקנה של ה-APK בהקשה על הקובץ, תלוי במדינה שלכם. פתרונות עקיפה בחינם מוסברים בדף ההוא.
 ```
 
 (aaps-builder-google-drive)=
 
-## Step 6 (optional) – Also save the app in Google Drive
+## שלב 6 (לא חובה) – שמירת האפליקציה גם ב-Google Drive
 
-You can also have each build saved to your Google Drive, in the folder `AAPS/<version>`. This is optional: the app is always available on the build page.
+אפשר גם לשמור כל בנייה ב-Google Drive שלכם, בתיקייה `AAPS/<version>`. זה לא חובה: האפליקציה תמיד זמינה בדף הבנייה.
 
-It needs one more secret, `GDRIVE_OAUTH2`. Step 6 of the setup page gets it from Google for you, on a phone or a computer. **AAPS** can then only see and change the files it creates in your Google Drive, nothing else.
+לשם כך צריך עוד secret אחד, `GDRIVE_OAUTH2`. שלב 6 של דף ההגדרה משיג אותו בשבילכם מ-Google, בטלפון או במחשב. אחרי זה **AAPS** יכול לראות ולשנות רק את הקבצים שהוא יוצר ב-Google Drive שלכם, ולא שום דבר אחר.
 
-1. On the setup page, tap **Connect Google Drive**. Google opens in a new tab.
-2. Choose your Google account and allow access. If Google says the app is not verified, tap **Advanced**, then **Go to …**.
-3. The new tab then shows an error such as **This site can't be reached** or **127.0.0.1 refused to connect**. **This is expected:** Google's answer is in the address of that tab. Tap the address bar, select the whole address (it starts with `http://127.0.0.1:47913/`) and copy it.
-4. Go back to the setup page tab within a few minutes: Google's answer is only valid for a short time, and only once. Paste the address into **Paste the copied address here** and tap **Get GDRIVE_OAUTH2**. The page shows **GDRIVE_OAUTH2 is ready**.
-5. Tap **Open the secrets page**. Tap **Copy name**, then paste it into the small **Name** field (the name is `GDRIVE_OAUTH2`). Tap **Copy secret**, paste it into the big **Secret** box and tap **Add secret**.
+1. בדף ההגדרה, יש להקיש על **Connect Google Drive** (חיבור Google Drive). Google נפתח בלשונית חדשה.
+2. יש לבחור את חשבון Google שלכם ולאשר גישה. אם Google אומר שהאפליקציה לא מאומתת, יש להקיש על **Advanced** (מתקדם), ואז על **Go to …** (מעבר אל …).
+3. אז הלשונית החדשה מציגה שגיאה כמו **This site can't be reached** או **127.0.0.1 refused to connect**. **זה צפוי:** התשובה של Google נמצאת בכתובת של הלשונית הזו. יש להקיש על שורת הכתובת, לסמן את כל הכתובת (היא מתחילה ב-`http://127.0.0.1:47913/`) ולהעתיק אותה.
+4. יש לחזור ללשונית של דף ההגדרה תוך כמה דקות: התשובה של Google תקפה רק לזמן קצר, ורק פעם אחת. יש להדביק את הכתובת ב-**Paste the copied address here** (הדביקו כאן את הכתובת שהועתקה) ולהקיש על **Get GDRIVE_OAUTH2**. הדף מציג **GDRIVE_OAUTH2 is ready** (GDRIVE_OAUTH2 מוכן).
+5. יש להקיש על **Open the secrets page** (פתיחת דף ה-secrets). יש להקיש על **Copy name**, ואז להדביק אותו בשדה הקטן **Name** (השם הוא `GDRIVE_OAUTH2`). יש להקיש על **Copy secret**, להדביק אותו בתיבה הגדולה **Secret** ולהקיש על **Add secret**.
 
-From the next build, the APKs are also saved in Google Drive.
+מהבנייה הבאה, קובצי ה-APK נשמרים גם ב-Google Drive.
 
-Already have a `GDRIVE_OAUTH2` value from the preparation file of the other browser build methods? It works too: add it as the `GDRIVE_OAUTH2` secret.
+כבר יש לכם ערך `GDRIVE_OAUTH2` מקובץ ההכנה של שיטות הבנייה האחרות בדפדפן? גם הוא עובד: יש להוסיף אותו בתור ה-secret `GDRIVE_OAUTH2`.
 
-Google stops the access if you don't build for 6 months, or if you change your Google password. The build then tells you so: redo these steps. See [Google refresh token expired](#aaps-ci-google-token-expired).
+Google מפסיקה את הגישה אם לא בונים במשך 6 חודשים, או אם משנים את הסיסמה של Google. במקרה כזה הבנייה תודיע לכם: יש לבצע שוב את השלבים האלה. ראו [פג תוקפו של אסימון הרענון (refresh token) של Google](#aaps-ci-google-token-expired).
 
 (aaps-builder-updates)=
 
 ## Updating AAPS
 
-Your repository never builds anything by itself: you decide when to build, which version and which variant. When a new AAPS version is released:
+המאגר שלכם אף פעם לא בונה שום דבר לבד: אתם מחליטים מתי לבנות, איזו גרסה ואיזה וריאנט. כשיוצאת גרסה חדשה של AAPS:
 
-1. [Back up your settings](#aaps-builder-step5) as explained in step 5.
-2. Build the new version as in [step 4](#aaps-builder-step4). Keep `latest`, or type the release number.
-3. Download and install it as in [step 5](#aaps-builder-step5).
+1. [יש לגבות את ההגדרות](#aaps-builder-step5) כמו שמוסבר בשלב 5.
+2. יש לבנות את הגרסה החדשה כמו ב[שלב 4](#aaps-builder-step4). יש להשאיר `latest`, או להקליד את מספר הגרסה.
+3. יש להוריד ולהתקין אותה כמו ב[שלב 5](#aaps-builder-step5).
 
-**Updates of the build steps** reach you by themselves: at every build, your repository runs the build steps released by the AAPS developers in nightscout/aaps-builder. Nothing changes in your repository, and there is no automatic build.
+**עדכונים של שלבי הבנייה** מגיעים אליכם מעצמם: בכל בנייה, המאגר שלכם מריץ את שלבי הבנייה שהמפתחים של AAPS מפרסמים ב-nightscout/aaps-builder. שום דבר לא משתנה במאגר שלכם, ואין בנייה אוטומטית.
 
-**Updates of your workflow file** are rare: only when the **Run workflow** form changes, for example for a new build variant, or once if your repository was made with an earlier version of the setup page (an empty repository with a short workflow file) or from the old template. The [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. Your `KEYSTORE_SET` secret stays as it is. On the setup page, open **Updating your copy** at the end of step 1:
+**עדכונים של קובץ ה-workflow שלכם** נדירים: רק כשהטופס **Run workflow** משתנה, למשל בגלל וריאנט בנייה חדש, או פעם אחת אם המאגר שלכם נוצר עם גרסה קודמת של דף ההגדרה (מאגר ריק עם קובץ workflow קצר) או מהתבנית הישנה. הדף [עדכונים ושינויים בתיעוד](../Maintenance/DocumentationUpdate.md) מודיע על כך. ה-secret `KEYSTORE_SET` שלכם נשאר כמו שהוא. בדף ההגדרה, יש לפתוח את **Updating your copy** (עדכון העותק שלך) בסוף שלב 1:
 
-1. Tap **Open the newest workflow**. On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the **plain-text version** instead, press and hold the text, then **Select all** and **Copy**.
-2. Tap **Open my workflow file**.
-3. Replace the whole text with the copied workflow (long press on a phone: **Select all**, then **Paste**).
-4. Tap **Commit changes…**, then **Commit changes**.
+1. יש להקיש על **Open the newest workflow** (פתיחת ה-workflow החדש ביותר). במחשב, יש ללחוץ על **סמל ההעתקה** ("Copy raw file") בפינה העליונה של הקובץ. בטלפון, יש לפתוח במקום זה את **גרסת הטקסט הפשוט**, ללחוץ לחיצה ארוכה על הטקסט, ואז לבחור **Select all** (בחירת הכול) ו-**Copy** (העתקה).
+2. יש להקיש על **Open my workflow file** (פתיחת קובץ ה-workflow שלי).
+3. יש להחליף את כל הטקסט ב-workflow שהועתק (בטלפון בלחיצה ארוכה: **Select all**, ואז **Paste**).
+4. יש להקיש על **Commit changes…**, ואז על **Commit changes**.
 
-The first line of the file shows its version.
+השורה הראשונה של הקובץ מציגה את הגרסה שלו.
 
 (aaps-builder-troubleshooting)=
 
-## Troubleshooting
+## פתרון תקלות
 
-To see why a build failed, [read the build log](#aaps-ci-read-the-logs): the step names are different, but you find the error the same way. You can also [update a secret](#aaps-ci-update-secret) and [run the build again](#aaps-ci-rerun) the same way.
+כדי לראות למה בנייה נכשלה, [יש לקרוא את יומן הבנייה](#aaps-ci-read-the-logs): שמות השלבים שונים, אבל מוצאים את השגיאה באותה דרך. באותה דרך אפשר גם [לעדכן secret](#aaps-ci-update-secret) ו[להריץ שוב את הבנייה](#aaps-ci-rerun).
 
-- **No "Build AAPS" or "Run workflow" button, or the repository is empty**: the repository was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the **Create my private repository** button.
-- **The build stops with "This repository is PUBLIC"**: in your repository, open **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, then build again.
-- **"Secret KEYSTORE_SET is missing"**: do step 3 of the setup page.
-- **"The secret is too short"**, **"The secret is not a valid code"** or **"The secret does not contain a keystore"**: the wrong text was pasted into the secret, often the word `KEYSTORE_SET` itself, or only part of the code. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 2 of the setup page first if you closed it).
-- **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 2 and 3 of the setup page.
-- **"Version … does not exist"**: the version you typed is not an AAPS release. Use `latest`, or check the release number.
-- **"Variant … is not supported"**: your workflow file is an older version. Replace it as explained in [Updating AAPS](#aaps-builder-updates).
-- **"Page not found" (404) when the setup page opens GitHub**: log in to github.com in the same browser (GitHub shows 404 for private repositories when you are not logged in). If you are logged in, the username or repository name in step 1 of the setup page does not match your repository. Type the exact names.
-- **"No GitHub user with this name"** in step 1: type your GitHub username, as shown in your GitHub profile, not your e-mail.
-- **No Download link, or the GitHub app opened**: the GitHub app cannot download builds. Open the build in Chrome as explained in [step 5](#aaps-builder-step5). To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
-- **"Google Drive access has expired or was revoked"**: redo [step 6](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
+- **אין כפתור "Build AAPS" או "Run workflow", או שהמאגר ריק**: המאגר לא נוצר מהתבנית. יש למחוק אותו (**Settings** ← בתחתית הדף ← **Delete this repository**) ולבצע שוב את [שלב 1](#aaps-builder-step1) עם הכפתור **Create my private repository**.
+- **הבנייה נעצרת עם "This repository is PUBLIC"**: במאגר שלכם יש לפתוח **Settings** ← **General** ← **Danger Zone** ← **Change visibility** ← **Private**, ואז לבנות שוב.
+- **"Secret KEYSTORE_SET is missing"**: יש לבצע את שלב 3 של דף ההגדרה.
+- **"The secret is too short"**, **"The secret is not a valid code"** או **"The secret does not contain a keystore"**: הודבק ב-secret טקסט שגוי, לרוב המילה `KEYSTORE_SET` עצמה, או רק חלק מהקוד. במאגר שלכם, יש לפתוח **Settings** ← **Secrets and variables** ← **Actions**, לערוך את `KEYSTORE_SET` ולהדביק שוב את הקוד הארוך מ-**Copy secret** (אם סגרתם את דף ההגדרה, קודם יש לבצע שוב את שלב 2 שלו).
+- **"Keystore, password or alias is wrong"**: יש לבדוק את הסיסמה ואת ה-alias של ה-keystore, ואז לבצע שוב את שלבים 2 ו-3 של דף ההגדרה.
+- **"Version … does not exist"**: הגרסה שהקלדתם אינה גרסה של AAPS. יש להשתמש ב-`latest`, או לבדוק את מספר הגרסה.
+- **"Variant … is not supported"**: קובץ ה-workflow שלכם הוא גרסה ישנה. יש להחליף אותו כמו שמוסבר ב[עדכון AAPS](#aaps-builder-updates).
+- **"Page not found" (404) כשדף ההגדרה פותח את GitHub**: יש להתחבר ל-github.com באותו דפדפן (GitHub מציג 404 למאגרים פרטיים כשלא מחוברים). אם אתם מחוברים, שם המשתמש או שם המאגר בשלב 1 של דף ההגדרה לא תואמים למאגר שלכם. יש להקליד את השמות המדויקים.
+- **"No GitHub user with this name"** בשלב 1: יש להקליד את שם המשתמש שלכם ב-GitHub, כמו שהוא מופיע בפרופיל GitHub שלכם, לא את כתובת הדוא"ל.
+- **אין קישור Download, או שנפתחה אפליקציית GitHub**: אפליקציית GitHub לא יכולה להוריד בניות. יש לפתוח את הבנייה ב-Chrome כמו שמוסבר ב[שלב 5](#aaps-builder-step5). כדי שקישורים של GitHub לא ייפתחו באפליקציה: ב-Android **Settings** (הגדרות) ← **Apps** (אפליקציות) ← **GitHub** ← **Open by default** (פתיחה כברירת מחדל) ← לכבות את **Open supported links** (פתיחת קישורים נתמכים).
+- **"Google Drive access has expired or was revoked"**: יש לבצע שוב את [שלב 6](#aaps-builder-google-drive) ולעדכן את ה-secret `GDRIVE_OAUTH2`.
 
-For other GitHub and Google Drive issues, see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+לבעיות אחרות ב-GitHub וב-Google Drive, ראו [בנייה בדפדפן: פתרון תקלות](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ```{toctree}
 :hidden:
 
-AAPS Builder setup page <BrowserBuildAapsBuilderSetup.md>
+דף ההגדרה של AAPS Builder <BrowserBuildAapsBuilderSetup.md>
 ```

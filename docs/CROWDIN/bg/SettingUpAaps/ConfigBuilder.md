@@ -70,8 +70,8 @@
 
 Редакторът на инсулина ви позволява да:
 
-* give the insulin an **Insulin nickname** so it is easy to recognise,
-* set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Action, in hours), either by typing the value or using the **–** / **+** buttons,
+* дадете на инсулина **Никнейм на инсулин**, за да го разпознавате лесно,
+* зададете **Пик** (времето до максималната активност на инсулина, в минути) и **DIA** (време на действие на инсулина, в часове), като въведете стойността или използвате бутоните **–** / **+**,
 * докоснете бутон с готова стойност в **Избери пик от** – **Novorapid** (75 мин), **Fiasp** (55 мин) или **Lyumjev** (45 мин) – за да попълните с една стъпка стандартното време на пика за този инсулин.
 
 Позволените диапазони са еднакви, независимо кой инсулин използвате:
@@ -225,48 +225,48 @@ AAPS моделира времето на действие на инсулина
     - **Без калибрация**: стойностите от сензора се използват такива, каквито са. Използвайте тази опция, когато сензорът вече е фабрично калибриран и е точен. Това е стойността по подразбиране.
     - **Линейна калибрация**: **AAPS** коригира стойностите от сензора с наклон и отместване, които изчислява от въведените от вас измервания от пръст.
     
-    How to use **Linear calibration**:
+    Как да използвате **Линейна калибрация**:
     
-    1. Select **Linear calibration** in the **Calibration** category.
-    2. When you insert a new sensor, log the sensor change: use **Log sensor change** on the calibration screen, or enter a CGM sensor insert in the Careportal. This tells **AAPS** when the sensor session started. If **AAPS** notices a gap of more than 30 minutes in the readings, it may ask you to mark a sensor change; this prompt appears on the master only, not on a client.
-    3. Open the plugin and tap **Add calibration**. Enter your fingerstick value. **AAPS** pairs it with the sensor value from the last 10 minutes.
+    1. Изберете **Линейна калибрация** в категорията **Калибрация**.
+    2. Когато поставите нов сензор, запишете смяната на сензора: използвайте **Запиши смяна на сензор** на екрана за калибрация или въведете поставяне на сензор на CGM в Портала за лечения. Така **AAPS** знае кога е започнала сесията на сензора. Ако **AAPS** забележи прекъсване на стойностите за повече от 30 минути, може да ви попита дали да отбележи смяна на сензора; това запитване се показва само на главния телефон, не на клиент.
+    3. Отворете плъгина и докоснете **Добави калибрация**. Въведете стойността си, измерена от пръст. **AAPS** я свързва в двойка със стойността от сензора от последните 10 минути.
     
-    A calibration is accepted only when:
+    Калибрацията се приема само когато:
     
-    - a sensor change is logged and at least **2 hours** have passed since then (warm-up),
-    - your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
-    - there is a CGM reading from the last 10 minutes,
-    - it is for the current moment. You cannot enter older fingerstick values.
+    - е записана смяна на сензора и оттогава са минали поне **2 часа** (загряване),
+    - глюкозата ви е стабилна. Ако се променя твърде бързо, диалоговият прозорец ви казва това и показва границата,
+    - има стойност от CGM от последните 10 минути,
+    - тя е за текущия момент. Не можете да въвеждате по-стари измервания от пръст.
     
-    How the correction works:
+    Как работи корекцията:
     
-    - **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
-    - Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. The line therefore follows your sensor as it drifts.
-    - At least **2 pairs** are needed.
-    - If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
-    - The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
-    - Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. This protects you from a wrong entry.
+    - **AAPS** прекарва права линия през двойките на текущия сензор: `corrected value = slope × sensor value + offset`.
+    - По-новите двойки тежат повече от по-старите: двойка на 2 дни тежи около 37 %, двойка на 4 дни – около 14 %. Така линията следва сензора ви, докато стойностите му се отклоняват.
+    - Необходими са поне **2 двойки**.
+    - Ако двойките са близо една до друга (разлика под 54 mg/dl / 3 mmol/l), стойностите само се изместват (отместване, без наклон).
+    - Наклонът се държи между 0,55 и 1,6. Наклон извън този диапазон се ограничава до най-близката стойност.
+    - Граница за безопасност: ако корекцията при 100 mg/dl (5,5 mmol/l) би била повече от ±30 mg/dl (1,7 mmol/l), не се прилага корекция. Това ви пази от грешно въведена стойност.
     
-    What it changes:
+    Какво променя:
     
-    - The corrected value is used everywhere: the BG on the main screen, the graph and the loop. The sensor readings themselves are not changed. The correction is applied on top, also to the earlier readings of the current sensor.
-    - A new sensor change starts from zero. Pairs from earlier sensors no longer count.
-    - On the graph, a calibration is shown as a marker at the fingerstick value.
-    - Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
+    - Коригираната стойност се използва навсякъде: КЗ на главния екран, графиката и кръга. Самите стойности от сензора не се променят. Корекцията се прилага върху тях, също и към по-ранните стойности на текущия сензор.
+    - Нова смяна на сензора започва от нулата. Двойките от по-ранни сензори вече не се вземат предвид.
+    - На графиката калибрацията се показва като маркер при стойността, измерена от пръст.
+    - Калибрациите се синхронизират чрез Nightscout, така че клиентите ви показват същите коригирани стойности.
     
-    Check and remove entries:
+    Проверка и премахване на записи:
     
-    - **Open plugin** shows the status (for example *Slope 0.85, mid-range correction -0.4*), a chart of your pairs with the line, and the list of entries.
-    - If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. The line is calculated again at once.
+    - **Отвори плъгин** показва състоянието (например *Наклон 0,85, корекция в средния диапазон -0,4*), графика на двойките ви с линията и списъка със записите.
+    - Ако някой запис е грешен (например сте имали захар по пръста), докоснете иконата на кошче до него. Линията се изчислява отново веднага.
     
-    ```{admonition} Using xDrip+ as BG source?
+    ```{admonition} Използвате xDrip+ като източник на КЗ?
     :class: note
-    xDrip+ has its own calibration. Calibrate in one place only, so that the sensor values are not corrected twice.
+    xDrip+ има собствена калибрация. Калибрирайте само на едно място, за да не се коригират стойностите от сензора два пъти.
     
 
-    {admonition} Calibrate with care
+    {admonition} Калибрирайте внимателно
     :class: warning
-    A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Измийте ръцете си преди измерване и не калибрирайте, докато глюкозата ви се променя бързо.
+    Грешна стойност от пръст води до грешни стойности на глюкозата и следователно до грешно дозиране на инсулина. Измийте ръцете си преди измерване и не калибрирайте, докато глюкозата ви се променя бързо.
 
 ![Конфигурация > Калибрация](../images/v4/Configuration/configuration_calibration.png)
 
@@ -305,7 +305,7 @@ AAPS моделира времето на действие на инсулина
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * [Carelevo](../CompatiblePumps/CareLevo.md)
 * Виртуална помпа: отворен кръг – само предложения от **AAPS** 
-  * as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
+  * докато правите първите си стъпки с **AAPS**, по време на първите [цели](../SettingUpAaps/CompletingTheObjectives.md)
   * за помпа, която все още няма драйвер
 
 (config-builder-wrong-pump-data)=
@@ -326,7 +326,7 @@ AAPS моделира времето на действие на инсулина
 
 Изберете вида определяне на чувствителност. За повече подробности за различните варианти, моля, [прочетете тук](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Тази функция анализира историческите данни в движение и прави корекции, ако установи, че реагирате на инсулина по-чувствително (или обратно – по-резистентно) от обикновено. Повече подробности как се изчислява самият коефициент на чувствителност ще намерите в [Основни функции на AAPS > Autosens](#Open-APS-features-autosens).
 
-You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SENS% and watching the white line. Имайте предвид, че трябва да сте стигнали до [Цел 8](#objectives-objective8), за да може определянето на чувствителност/[Autosens](#Open-APS-features-autosens) автоматично да променя количеството подаван инсулин. Преди да стигнете до тази цел, процентът на Autosens / линията на графиката се показва само за информация.
+Можете да видите чувствителността си на главния екран в [допълнителна графика](#AapsScreens-section-g-additional-graphs), като изберете SENS% и следите бялата линия. Имайте предвид, че трябва да сте стигнали до [Цел 8](#objectives-objective8), за да може определянето на чувствителност/[Autosens](#Open-APS-features-autosens) автоматично да променя количеството подаван инсулин. Преди да стигнете до тази цел, процентът на Autosens / линията на графиката се показва само за информация.
 
 ### Настройки за абсорбция
 

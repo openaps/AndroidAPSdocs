@@ -9,41 +9,41 @@
 ../CompatiblePhones/Huawei.md
 ```
 
-The current version of **AAPS** (4.0) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), **Android 16 is preferred**, Android 15 is not recommended.
+**AAPS**'in güncel sürümü (4.0), Google **Android 12.0 veya üzeri** sürümlü bir Android akıllı telefon gerektirir. Yeni bir telefon almayı düşünüyorsanız (Ocak 2026 itibarıyla) **Android 16 tercih edilir**, Android 15 önerilmez.
 
-Check [Facebook or Discord](../GettingHelp/WhereCanIGetHelp.md) for latest updates on this subject.
+Bu konudaki son gelişmeler için [Facebook veya Discord](../GettingHelp/WhereCanIGetHelp.md)'a bakın.
 
-Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+Güvenlik nedeniyle kullanıcıların **AAPS** sürümlerini güncel tutmaları önemle tavsiye edilir. Ancak Android 12.0 veya daha yeni bir cihaz kullanamayan kullanıcılar için eski Android sürümleriyle uyumlu eski **AAPS** sürümleri hâlâ mevcuttur, bkz.: [Sürüm notları](#maintenance-android-version-aaps-version).
 
 - [Jelly Pro Ayarları](../CompatiblePhones/Jelly.md)
 - [Huawei Ayarları](../CompatiblePhones/Huawei.md)
 
 (Phones-list-of-tested-phones)=
 
-## List of tested phones
+## Test edilen telefonların listesi
 
-We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) that you can [explore with a friendly interface](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Contribute by filling out the [Google form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) and adding your setup!
+[Test edilmiş donanım kurulumlarının](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) bir listesini tutuyoruz. Bu listeyi [kolay kullanımlı bir arayüzle inceleyebilirsiniz](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). [Google formunu](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) doldurarak ve kurulumunuzu ekleyerek katkıda bulunun!
 
-This list provides user feedback on the usage of a phone along with **AAPS** and a given pump and CGM. It can help you check if your phone / pump / CGM has been used successfully by other users.
+Bu liste, kullanıcıların bir telefonu **AAPS** ve belirli bir pompa ve CGM ile kullanma deneyimlerini gösterir. Telefonunuzun / pompanızın / CGM'nizin başka kullanıcılar tarafından başarıyla kullanılıp kullanılmadığını kontrol etmenize yardımcı olabilir.
 
-The document is read-only. With CTRL-F, you can search in the text of the Google sheet.
+Belge salt okunurdur. CTRL-F ile Google tablosunun metninde arama yapabilirsiniz.
 
-To record your test of a hardware setup, please fill in this [form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). After you fill in the form data, the sheet is updated automatically every 5 minutes.
+Bir donanım kurulumu ile yaptığınız testi kaydetmek için lütfen bu [formu](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) doldurun. Formu doldurduktan sonra tablo her 5 dakikada bir otomatik olarak güncellenir.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
+Tabloyla ilgili bir sorununuz olursa Discord'da tablonun sorumlusu *@theodoor5137* ile iletişime geçin veya [nasıl yardım alabileceğinizi](../GettingHelp/WhereCanIGetHelp.md) anlatan sayfaya bakın.
 
-## I didn't find my phone
+## Telefonumu bulamadım
 
-If you have questions regarding a specific phone model, please search or ask in our [Facebook or Discord community](../GettingHelp/WhereCanIGetHelp.md).
+Belirli bir telefon modeli hakkında sorularınız varsa lütfen [Facebook veya Discord topluluğumuzda](../GettingHelp/WhereCanIGetHelp.md) arayın veya sorun.
 
-To make a donation of smartphone or smartwatch models that still need testing, please email <donations@androidaps.org>.
+Hâlâ test edilmesi gereken akıllı telefon veya akıllı saat modellerini bağışlamak için lütfen <donations@androidaps.org> adresine e-posta gönderin.
 
 (Phones-phone-wallpaper)=
 
-## Phone wallpaper
+## Telefon duvar kağıdı
 
-If you want to decorate your phone with more **AAPS**, you can download your background image [here](../images/bg_phone.jpg)!
+Telefonunuzu daha fazla **AAPS** ile süslemek isterseniz, arka plan resmini [buradan](../images/bg_phone.jpg) indirebilirsiniz!
 
 ![phone background](../images/bg_phone_thump.jpg)
 
-Design: Thiago :)
+Tasarım: Thiago :)

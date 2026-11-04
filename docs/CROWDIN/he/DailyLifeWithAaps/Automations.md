@@ -7,42 +7,42 @@
 
 ## What is an Automation?
 
-"**Automation**" is a feature which can automate tasks in AAPS.
+"**אוטומציה**" היא תכונה שיכולה לבצע משימות באופן אוטומטי ב-AAPS.
 
-Automation performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a Wi-Fi SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
+האוטומציה מבצעת פעולות מסוימות בהתאם לתנאי אחד או יותר, או לטריגרים. טריגרים יכולים לכלול אירועים לא סדירים, כמו רמות סוכר נמוכות או גבוהות בדם (BG), או כמות מוגדרת של אינסולין פעיל (IOB) שלילי. אוטומציות יכולות לטפל גם באירועים חוזרים, כמו ארוחות או פעילות גופנית בשעות מסוימות ביום, או כאשר המשתמש נמצא במרחק מסוים ממיקום GPS או באזור של רשת Wi-Fi (SSID). Automation can execute AAPS settings backups based on a schedule or on every Pod change.
 
-Automation rules are created and modified from the **Automation** screen (**Manage → Automation**). Each rule is defined by two properties:
+כללי אוטומציה נוצרים ונערכים במסך **אוטומציה** (**ניהול ← אוטומציה**). Each rule is defined by two properties:
 
-- One or more conditions or 'triggers' that start an action.
+- תנאי אחד או יותר, או ‘טריגרים’, שמפעילים פעולה.
 
     Think of a certain time schedule, an event or properties value in AAPS
 
 - One or more actions to perform.
 
-    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
+    כגון התראה, הגדרת אחוז פרופיל או ייצוא הגדרות AAPS בעת החלפת פוד.
 
 
 There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
 
 ## How Automation can help
 
-1. **Automate recurring tasks:** Automatically executing programmed actions without user interaction.
+1. **ביצוע אוטומטי של משימות חוזרות:** פעולות מתוכנתות מתבצעות אוטומטית, בלי התערבות של המשתמש.
 
 1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
 
-1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**.
+1. **אפשרות לשיפור איזון הסוכר:** למשל, **אוטומציות** יכולות לעזור להבטיח ש**יעדים זמניים** יוגדרו תמיד כשצריך, גם בתקופות עמוסות או בתקופות של שכחה. למשל, אם לילד עם סוכרת יש שיעור ספורט בבית הספר בימי שלישי בשעה 10:00 ובימי חמישי בשעה 14:00, והוא זקוק ליעד זמני גבוה ('TT') שיופעל 30 דקות לפני הפעילות, ניתן להפעיל את **היעד הזמני** באמצעות **אוטומציה**.
 
-1. **Enabling AAPS to be highly customized** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
+1. **התאמה אישית רבה של AAPS**, כך שיהיה אגרסיבי יותר או פחות במצבים מסוימים, לפי העדפת המשתמש. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
 
 The example below illustrates how an **Automation** can enable steps to be eliminated.
 
-User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
+משתמש מתאמן בכל בוקר בשעה 6:00: עליו לזכור להגדיר ידנית ב-AAPS "יעד זמני - פעילות" בשעה 5:00, לפני האימון.
 
-![Manual actions without automation](../images/Automations/automation_concept_manual.png)
+![פעולות ידניות ללא אוטומציה](../images/Automations/automation_concept_manual.png)
 
-The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
+המשתמש הגדיר **אוטומציה** שתפעיל בשעה 5:00 ‘יעד זמני - פעילות’, כדי שה-**BG** וה-**IOB** יהיו מיטביים לקראת האימון בשעה 6:00:
 
-![Actions done by an automation](../images/Automations/automation_concept_automated.png)
+![פעולות שבוצעו על ידי אוטומציה](../images/Automations/automation_concept_automated.png)
 
 ## Key considerations before starting with Automations
 
@@ -50,13 +50,13 @@ The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ t
 
 1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
 
-1. **Requirements for Automations are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
+1. **הדרישות מאוטומציות צפויות להשתנות כאשר שגרת היום משתנה**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). למשל, אם יוצאים לחופשה ואין עוד צורך באוטומציה לשיעורי ספורט בבית הספר או לאימון יומי, או אם צריך לשנות את השעות.
 
 1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
 
-1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens.
+1. אם אתם משתמשים ב-Autosens, נסו להשתמש ב**יעדים זמניים** במקום ב**החלפות פרופיל**. **יעדים זמניים** אינם מאפסים את Autosens בחזרה ל-0. **Profile Switches** reset Autosens.
 
-1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/L for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/L for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
+1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. למשל, "הפעלת יעד זמני של 7.0 mmol/L למשך 30 דקות" או "הפעלת **פרופיל** 110% למשך 10 דקות" _וגם_ "הפעלת יעד זמני של 5.0 mmol/L למשך 10 דקות". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
 
 ## When can I start using Automation?
 
@@ -64,39 +64,39 @@ The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ t
 
 ## Where are Automations located in AAPS?
 
-Open **Manage** in the bottom navigation of the main screen and select **Automation**.
+יש לפתוח את **ניהול** בסרגל הניווט התחתון של המסך הראשי ולבחור **אוטומציה**.
 
 ## How can I set up an Automation?
 
-To set up an **Automation**, press the **+** button on the Automation screen to create a ‘rule’:
+כדי להגדיר **אוטומציה**, יש ללחוץ על הלחצן **+** במסך האוטומציה וליצור ‘כלל’:
 
 ![Automation create](../images/Automations/automation_create.png)
 
-* give your ‘rule’ a title (Task name);
-* press "**EDIT**" under **Condition**. On the **Condition** screen, choose how the triggers are combined (**And**, **Or**, **Exclusive or**) and press "**Add trigger**":
+* לתת ל‘כלל’ כותרת (שם משימה);
+* ללחוץ על "**עריכה**" תחת **תנאי**. במסך **תנאי**, לבחור כיצד הטריגרים משולבים (**וגם**, **או**, **או בררני (XOR)**) וללחוץ על "**הוספת טריגר**":
 
 ![Automation condition](../images/Automations/automation_trigger_editor.png)
 
-* add at least one trigger:
+* להוסיף לפחות טריגר אחד:
 
-![Automation triggers](../images/Automations/automation_triggers.png)
+![טריגרים של אוטומציה](../images/Automations/automation_triggers.png)
 
-* press "**ADD**" under **Action** and select one action:
+* ללחוץ על "**הוספה**" תחת **פעולה** ולבחור פעולה אחת:
 
-![Automation actions](../images/Automations/automation_actions.png)
+![פעולות אוטומציה](../images/Automations/automation_actions.png)
 
-* save the rule with the **Save** button, and make sure the checkbox left of the rule name is ‘ticked’ to activate the **Automation**:
+* לשמור את הכלל באמצעות הלחצן **שמירה**, ולוודא שתיבת הסימון שליד שם הכלל ‘מסומנת’ כדי להפעיל את ה**אוטומציה**:
 
-![Automation activated](../images/Automations/automation_rule_activated.png)
+![אוטומציה מופעלת](../images/Automations/automation_rule_activated.png)
 
-To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** as either activated (‘ticked') or deactivated (‘unticked’):
+להשבתת כלל **אוטומציה**, יש לבטל את סימון התיבה שליד שם ה**אוטומציה**. הדוגמה הבאה מציגה **אוטומציה** מופעלת (‘מסומנת’) או מושבתת (‘לא מסומנת’):
 
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+![הפעלה וכיבוי של כללי אוטומציה](../images/Automations/automation_rule_activated_deactivated.png)
 
 
-When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
+בעת הגדרת **אוטומציה**, ניתן לבדוק אותה תחילה באמצעות בחירת האפשרות ‘הודעה’ תחת "פעולות". כך **AAPS** מציג תחילה הודעה, במקום לבצע את הפעולה בפועל. כאשר אתם בטוחים שההודעה מופיעה בזמן ובתנאים הנכונים, ניתן לעדכן את כלל ה**אוטומציה** ולהחליף את ה‘הודעה’ ב‘פעולה’ אמיתית.
 
-![Alert actions](../images/Automations/automation_alert_actions.png)
+![פעולות התראה](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -105,17 +105,17 @@ When setting up an **Automation**, you can first test it by activating the ‘no
 ```
 
 
-## When rules are checked
+## מתי הכללים נבדקים
 
-**AAPS** checks all **Automation** rules each time a new glucose reading has been processed, so rules are evaluated at the pace of your CGM, also while the phone screen is off. Rules are also checked when the phone starts charging, when the network or location changes, and when a Bluetooth device connects. Only one check runs at a time, so a rule whose actions take a while (for example a pump command) cannot be executed twice.
+**AAPS** בודק את כל כללי ה**אוטומציה** בכל פעם שמתקבל ומעובד ערך סוכר חדש, כך שהכללים נבדקים בקצב של ה-CGM שלכם, גם כשמסך הטלפון כבוי. הכללים נבדקים גם כשהטלפון מתחיל להיטען, כשהרשת או המיקום משתנים, וכשמתחבר מכשיר Bluetooth. רק בדיקה אחת רצה בכל פעם, ולכן כלל שהפעולות שלו לוקחות זמן (למשל פקודה למשאבה) לא יכול להתבצע פעמיים.
 
 ## Safety limits
 
 There are safety limits set for **Automations**:
 
-* A **Temp Target** set by an **Automation** has to be between 72 and 180 mg/dL (or 4 and 10 mmol/L).
-* The **Profile Percentage** has to be between 50% and 130%.
-* There is a 5 minute time limit between executions of **Automation** (and first execution).
+* **יעד זמני** שמוגדר על ידי **אוטומציה** חייב להיות בין 72 ל-180 mg/dL (או בין 4 ל-10 mmol/L).
+* **אחוז הפרופיל** חייב להיות בין 50% ל-130%.
+* קיימת מגבלת זמן של 5 דקות בין ביצועי **אוטומציה** (וגם לפני הביצוע הראשון).
 
 ## Correct use of negative values
 
@@ -125,285 +125,285 @@ There are safety limits set for **Automations**:
 Please be careful when selecting a negative value in **Automation**
 ```
 
-Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
+יש להיזהר בבחירת ‘ערך שלילי’ בתוך ‘תנאי’, כגון "פחות מ-", ב**אוטומציות**. For example:
 
-![Comparison operators](../images/Automations/automation_comparison_operators.png)
+![אופרטורים של השוואה](../images/Automations/automation_comparison_operators.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/L" (or "-2mg/dL") will:
+**דוגמה 1:** יצירת תנאי **"פחות מ-"** "-0.1mmol/L" (או "-2mg/dL") פירושה:
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
+Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. יש לזכור שהערך -0.1 (-2) עצמו **אינו** נכלל בתנאי זה. (התנאי "שווה או פחות מ- -0.1mmol/L (-2 mg/dL)" _כן_ יכלול את -0.1 mmol/L או -2 mg/dL).
 
-**Example 2:** Creating a Condition "is greater than" -0.1mmol/L (-2mg/dL) will:
+**דוגמה 2:** יצירת תנאי "גדול מ-" -0.1mmol/L (-2mg/dL) פירושה:
 
-Trigger an **Automation** for any number which is **greater than** -0.1mmol/L (-2mg/dL). This includes numbers like 0, 0.2, 0.4mmol/L, (0, 4, 8mg/dL) and any other positive number.
+הפעלת **אוטומציה** עבור כל מספר ש**גדול מ-** -0.1mmol/L (-2mg/dL). הדבר כולל מספרים כגון 0, 0.2, 0.4mmol/L, (0, 4, 8mg/dL) וכל מספר חיובי אחר.
 
 It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.
 
 (automations-automation-triggers)=
-## Automation Triggers
+## טריגרים של אוטומציה
 
-![Automation Triggers](../images/Automations/automation_triggers.png)
+![טריגרים של אוטומציה](../images/Automations/automation_triggers.png)
 
-Scroll down to see the rest of the list:
+יש לגלול למטה כדי לראות את שאר הרשימה:
 
-![Automation Triggers, continued](../images/Automations/automation_trigger_picker_2.png)
+![טריגרים של אוטומציה, המשך](../images/Automations/automation_trigger_picker_2.png)
 
-There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. The list below is non-exhaustive:
+המשתמש יכול לבחור ‘טריגרים’ שונים. טריגרים הם התנאים שחייבים להתקיים כדי שהאוטומציה תתבצע. The list below is non-exhaustive:
 
-**Trigger:** connect conditions
+**טריגר:** חיבור תנאים
 
 **Options:**
 
 Several conditions can be linked with
 * “And”
-* “Or”
-* “Exclusive or” (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+* “או”
+* “או בררני (XOR)” (כלומר, אם תנאי אחד בלבד מתקיים, הפעולה או הפעולות יבוצעו)
 
-**Trigger:** time vs. recurring time
+**טריגר:** זמן לעומת זמן חוזרני
 
 **Options:**
 
 * time = single time event
-* recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+* זמן חוזרני = משהו שקורה באופן קבוע (למשל פעם בשבוע, בכל יום עבודה וכדומה)
 
-**Trigger:** location
+**טריגר:** מיקום
 
 **Options:**
 
-* in [Settings > Automation](#preferences-maintenance-settings), the user can select their required location service.
+* ב[הגדרות > אוטומציה](#preferences-maintenance-settings), המשתמש יכול לבחור את שירות המיקום הרצוי.
 
-**Trigger:** location service
+**טריגר:** שירות מיקום
 
 **Options:**
 
 * Use passive location: **AAPS** only takes locations when other apps are requesting it.
-* Use network location: Location of your Wi-Fi.
+* שימוש במיקום מבוסס רשת: מיקום ה-Wi-Fi שלכם.
 * Use GPS location (Attention! This can cause excessive battery drain!)
 
-**Triggers** : pump and sensor data
+**טריגרים**: נתוני משאבה וחיישן
 
-* Cannula age trigger: Available for all pumps
-* Insulin age trigger: Available for supported pumps
-* Battery age trigger: Available for supported pumps
-* Sensor age trigger: always available
-* Pod Activation trigger: Available for patch pumps
+* טריגר גיל הצינורית: זמין לכל המשאבות
+* טריגר גיל האינסולין: זמין למשאבות נתמכות
+* טריגר גיל סוללת המשאבה: זמין למשאבות נתמכות
+* טריגר גיל החיישן: זמין תמיד
+* טריגר הפעלת הפוד: זמין למשאבות פאץ'
 
-Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+שימו לב: בכל הטריגרים הקשורים לגיל, לא סביר שהשוואת שוויון תפעיל את הכלל, ולכן במקרה זה נדרשים שני טריגרים כדי ליצור טווח.
 
-* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
-* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* טריגר רמת המכל: זמין לכל המשאבות. ההשוואה "NOT\_AVAILABLE" אינה פועלת עבור טריגר זה, כי הערך תמיד מלא ב-**AAPS**.
+* טריגר רמת סוללת המשאבה: זמין למשאבות נתמכות. ההשוואה "NOT\_AVAILABLE" אינה פועלת עבור טריגר זה, כי הערך תמיד מלא ב-**AAPS**.
 
 (automations-automation-action)=
 ## פעולות
 
 ![Automation Actions](../images/Automations/automation_actions.png)
 
-Scroll down to see the rest of the list:
+יש לגלול למטה כדי לראות את שאר הרשימה:
 
-![Automation Actions, continued](../images/Automations/automation_action_picker_2.png)
+![פעולות אוטומציה, המשך](../images/Automations/automation_action_picker_2.png)
 
-**Actions:** start **Temp Target**
+**פעולות:** הפעלת **יעד זמני**
 
 **Options:**
 
-* **BG** must be between 72 mg/dL and 180 mg/dL (4 mmol/L and 10 mmol/L)
-* **TT** works only if there is no previous Temp Target — **AAPS** adds this automatically as a "**Preconditions: Temp target not exists**" line to the rule
+* ערך ה-**BG** חייב להיות בין 72 mg/dL ל-180 mg/dL (בין 4 mmol/L ל-10 mmol/L)
+* **TT** פועל רק אם אין יעד זמני קודם. **AAPS** מוסיף זאת לכלל אוטומטית כשורה "**תנאים מוקדמים: יעד זמני לא קיים**"
 
-**Actions:** stop **Temp Target**
+**פעולות:** הפסקת **יעד זמני**
 
 **Options:**
 
 none
 
-**Actions:** **Profile Percentage**
+**פעולות:** **אחוז הפרופיל**
 
 **Options:**
 
-* **Profile** must be between 50% and 130%
+* **פרופיל** חייב להיות בין 50% ל-130%
 * works only if the previous Percentage is 100%
 
-**Actions:** **Change smoothing** (in the **Loop & insulin** group)
+**פעולות:** **שינוי החלקה** (בקבוצה **לולאה & אינסולין**)
 
 **Options:**
 
-* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
-* runs only if that smoothing method is not already active — **AAPS** adds this automatically as a "**Preconditions: Smoothing … is not active**" line to the rule. Once the selected smoothing is active, the rule is skipped silently.
-* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
-  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
-  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
+* לבחור את [שיטת ההחלקה](../CompatibleCgms/SmoothingBloodGlucoseData.md) שאליה רוצים לעבור. הרשימה זהה לרשימה תחת **הגדרות תצורה** > **החלקה**, והפעולה עושה בדיוק מה ששינוי שם עושה: השיטה החדשה נשמרת, מסונכרנת למכשירי הלקוח המצומדים, ונתוני הסוכר מוחלקים מחדש מיד.
+* פועל רק אם שיטת ההחלקה הזו עדיין לא פעילה. **AAPS** מוסיף זאת לכלל אוטומטית כשורה "**תנאים מוקדמים: החלקה … אינה פעילה**". כשההחלקה שנבחרה כבר פעילה, הכלל לא מתבצע, בלי הודעה.
+* דוגמה: חיישן חדש הוא לעיתים קרובות רועש ביום הראשון שלו. שני כללים עם הטריגר **גיל החיישן** נותנים סינון חזק יותר בזמן שהחיישן מתייצב, ואחר כך החלקה ללא השהיה:
+  * **גיל החיישן** פחות מ-24 שעות: **שינוי החלקה** ל**מסנן קלמן Unscented (UKF)**
+  * **גיל החיישן** יותר מ-24 שעות: **שינוי החלקה** ל**החלקת ממוצע**
 
-**Actions:** **Note** (in the **Alerts** group of the list)
-
-**Options:**
-
-* select the event to record: **Note**, **Exercise**, **Question**, **Announcement** or **Pump Site Change**, and an optional note. The name of the action changes to the event you select.
-* **Duration**: used for **Note**, **Exercise** and **Pump Site Change**. **Question** and **Announcement** have no duration: they record your current BG instead.
-* **Pump Site Change** resets the cannula age, as if you had recorded a site change by hand. Example: some pumps (like the Combo) record a reservoir change by themselves, but not the site change. If you always change both together, a rule with **Insulin age** less than 1 hour and **Cannula age** more than 24 hours can record the site change for you.
-
-![The events of the Note action](../images/Automations/automation_action_careportal_events.png) ![The Note action set to Pump Site Change](../images/Automations/automation_action_careportal_site_change.png)
-
-**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
+**פעולות:** **הערה** (בקבוצה **התראות** ברשימה)
 
 **Options:**
 
-* enter the text of the message. It is sent to all the phone numbers allowed in the [SMS Communicator](../RemoteFeatures/SMSCommands.md) settings. The SMS Communicator plugin must be enabled.
+* לבחור את האירוע לתיעוד: **הערה**, **פעילות גופנית**, **שאלה**, **הכרזה** או **החלפת צינורית משאבה**, ואפשר להוסיף הערה. שם הפעולה משתנה לפי האירוע שנבחר.
+* **משך**: משמש עבור **הערה**, **פעילות גופנית** ו**החלפת צינורית משאבה**. ל**שאלה** ול**הכרזה** אין משך: במקום זאת הן מתעדות את ערך הסוכר הנוכחי.
+* **החלפת צינורית משאבה** מאפסת את גיל הצינורית, כאילו תיעדתם החלפת אתר עירוי באופן ידני. דוגמה: חלק מהמשאבות (כמו Combo) מתעדות בעצמן החלפת מכל, אבל לא את החלפת אתר העירוי. אם תמיד מחליפים את שניהם יחד, כלל עם **גיל האינסולין** פחות משעה ו**גיל הצינורית** יותר מ-24 שעות יכול לתעד עבורכם את החלפת אתר העירוי.
 
-**Actions:** **Change profile to** (in the **Profile** group)
+![האירועים של הפעולה ‘הערה’](../images/Automations/automation_action_careportal_events.png) ![הפעולה ‘הערה’ מוגדרת ל‘החלפת צינורית משאבה’](../images/Automations/automation_action_careportal_site_change.png)
 
-**Options:**
-
-* select the **Profile** to activate. It is activated at 100%, without timeshift. If this profile is already active, the action does nothing.
-
-**Actions:** **Enable/disable SMB** (in the **Loop & insulin** group)
+**פעולות:** **שליחת מסרונים לכל המספרים** (בקבוצה **התראות**)
 
 **Options:**
 
-* choose **On** or **Off**. This changes the **Enable SMB** setting of OpenAPS SMB, exactly as if you had changed it in **Settings**, and stays until you or another rule change it back.
+* להזין את טקסט ההודעה. היא נשלחת לכל מספרי הטלפון המורשים בהגדרות [תקשורת SMS](../RemoteFeatures/SMSCommands.md). התוסף ‘תקשורת SMS’ חייב להיות מופעל.
 
-**Actions:** **Run Autotune** (in the **Loop & insulin** group)
-
-**Options:**
-
-* select the profile to tune and the number of days: see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule).
-
-**Actions:** **Stop processing** (in the **Loop & insulin** group)
+**פעולות:** **החלפת פרופיל ל-** (בקבוצה **פרופיל**)
 
 **Options:**
 
-* none. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Add it to a rule that must take priority over the rules below it (see [the order of the Automations](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* לבחור את ה**פרופיל** שיופעל. הוא מופעל ב-100%, ללא הזזת זמן (timeshift). אם פרופיל זה כבר פעיל, הפעולה לא עושה דבר.
 
-**Actions:** **Run scene**, **Enable scene**, **Disable scene** (in the **Scenes** group)
+**פעולות:** **הפעלה/השבתה של SMB** (בקבוצה **לולאה & אינסולין**)
 
 **Options:**
 
-* select the [scene](Scenes.md) to run, enable or disable.
+* לבחור **מופעל** או **כבוי**. פעולה זו משנה את ההגדרה **הפעלת SMB** של OpenAPS SMB, בדיוק כאילו שיניתם אותה ב**הגדרות**, והשינוי נשאר עד שאתם או כלל אחר משנים אותה בחזרה.
+
+**פעולות:** **הפעלת כוונון אוטומטי** (בקבוצה **לולאה & אינסולין**)
+
+**Options:**
+
+* לבחור את הפרופיל לכוונון ואת מספר הימים: ראו [הרצת Autotune באמצעות כלל אוטומציה](#autotune-run-autotune-with-an-automation-rule).
+
+**פעולות:** **הפסקת עיבוד** (בקבוצה **לולאה & אינסולין**)
+
+**Options:**
+
+* ללא. כל עוד התנאים של כלל עם פעולה זו מתקיימים, **AAPS** לא בודק את הכללים שמתחתיו ברשימה. ברגע שהתנאים שלו כבר לא מתקיימים, הכללים שמתחתיו נבדקים כרגיל. יש להוסיף אותה לכלל שצריך לקבל עדיפות על פני הכללים שמתחתיו (ראו [סדר האוטומציות](#Automations-the-order-of-the-automations-in-the-list-matters)).
+
+**פעולות:** **הרצת תרחיש**, **הפעלת תרחיש**, **השבתת תרחיש** (בקבוצה **תרחישים**)
+
+**Options:**
+
+* לבחור את ה[תרחיש](Scenes.md) להרצה, להפעלה או להשבתה.
 
 Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
 
-![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
+![ערכים של פעולת יעד זמני](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## The order of the **Automations** in the list matters
- **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+ **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. למשל, אם ה**אוטומציה** ‘Low’ היא ה**אוטומציה** החשובה ביותר, מעל כל הכללים האחרים, אז **אוטומציה** זו צריכה להופיע בראש רשימת ה**אוטומציות** של המשתמש, כפי שמודגם להלן:
 
 
-![List of automation rules](../images/Automations/automation_rule_list.png)
+![רשימת כללי אוטומציה](../images/Automations/automation_rule_list.png)
 
-To reprioritize the **Automation** rules, touch and hold the **=** handle on the right side of the rule. Reorder the **Automations** by moving the rules up or down.
+כדי לשנות את סדר העדיפויות של כללי ה**אוטומציה**, יש לגעת ולהחזיק את הידית **=** שבקצה השורה של הכלל. שנו את סדר ה**אוטומציות** באמצעות הזזת הכללים למעלה או למטה.
 
-![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
+![שינוי הסדר של כללי אוטומציה](../images/Automations/automation_rule_reorder.png)
 
 ## How to delete Automation rules
 
 To delete an **Automation** rule click on the trash icon.
 
-![Delete automation rules](../images/Automations/automation_rule_delete.png)
+![מחיקת כללי אוטומציה](../images/Automations/automation_rule_delete.png)
 
 ## Examples of Automations
 
-Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
+Below are examples of **Automations**. דיונים נוספים על **אוטומציות** ועל האופן שבו משתמשים התאימו אישית את ה**אוטומציה** שלהם ניתן למצוא בקבוצות דיון ב-Facebook או ב-Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
 
 (automations-low-glucose-temp-target)=
-### ערך מטרה זמני בתגובה לרמת סוכר נמוכה
+### יעד זמני בתגובה לרמת סוכר נמוכה
 
-This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
+**אוטומציה** זו מפעילה **יעד זמני** אוטומטי כאשר ה-**BG** יורד מתחת לסף מסוים. כאן, כשהגלוקוז פחות מ-70 mg/dL, מופעל יעד של 110 mg/dL למשך 30 דקות:
 
-![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
+![דוגמה: כלל לרמת סוכר נמוכה](../images/Automations/automation_example_low_glucose_rule.png)
 
-### Lunch Time Temp Target (with ‘Location’)
+### יעד זמני לארוחת הצהריים (עם ‘מיקום’)
 
-![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
+![דוגמה: כלל לארוחת צהריים](../images/Automations/automation_example_lunch_rule.png)
 
-This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will not activate.
+This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  לכן, אם המשתמש לא נמצא בעבודה ביום מסוים, **אוטומציה** זו לא תופעל.
 
-This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive BG to 90 mg/dL (or 5 mmol/L) in preparation for lunch.
+**אוטומציה** זו תגדיר **יעד זמני** נמוך (אכילה בקרוב) בשעה 13:00, כדי להוריד את ה-BG ל-90 mg/dL (או 5 mmol/L) לקראת ארוחת הצהריים.
 
-The ‘Trigger’ location has a name, a position (tap **Pick from map**, or use your current location) and a radius in metres, and fires when you are inside (or outside) the area:
+לטריגר ‘מיקום’ יש שם, נקודה על המפה (יש להקיש על **בחירה מהמפה**, או להשתמש במיקום הנוכחי) ורדיוס במטרים. הוא מופעל כשנמצאים בתוך האזור (או מחוצה לו):
 
-![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
+![דוגמה: כלל לארוחת צהריים עם תנאי מיקום](../images/Automations/automation_example_lunch_location_condition.png)
 
-Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location.
+בגלל החיבור ‘וגם’, ה**אוטומציה** מתבצעת רק ב‘זמן שנבחר’ ורק אם המשתמש נמצא במיקום שנבחר.
 
-The **Automation** will not be triggered on any other time at this location or at this time outside the 50-metre radius around the chosen position.
+ה**אוטומציה** לא תופעל בשום זמן אחר במיקום זה, וגם לא בזמן זה מחוץ לרדיוס של 50 מטר סביב הנקודה שנבחרה.
 
-### Wi-Fi SSID Location Automation
+### אוטומציה לפי מיקום Wi-Fi SSID
 
-Using a Wi-Fi SSID is a good option to trigger an **Automation** while within range of a specific Wi-Fi network (compared with GPS): it is fairly precise, uses less battery, and works in enclosed spaces where GPS and other location services might not be available.
+שימוש ב-Wi-Fi SSID הוא אפשרות טובה להפעלת **אוטומציה** כשנמצאים בטווח של רשת Wi-Fi מסוימת (בהשוואה ל-GPS): הוא די מדויק, צורך פחות סוללה ופועל במקומות סגורים, שבהם GPS ושירותי מיקום אחרים עשויים לא להיות זמינים.
 
-Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
-
-
-The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
-and while being connected to a home Wi-Fi network (3).
+להלן דוגמה נוספת להגדרת **יעד זמני** לפני ארוחת הבוקר בימי עבודה בלבד (1).
 
 
-It will then set a **Temp Target** of 75 mg/dL for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is traveling on vacation, for instance.
+ה**אוטומציה** תופעל בשעה 05:30 רק בימים שני עד שישי (2)  
+וכל עוד יש חיבור לרשת ה-Wi-Fi של הבית (3).
 
-![Wi-Fi rule: task name (1), weekday time condition (2) and Wi-Fi SSID condition (3)](../images/Automations/automation_example_wifi_rule.png)
 
-Scroll down to see the action: a **Temp Target** of 75 mg/dL for 30 minutes (4).
+לאחר מכן היא תגדיר **יעד זמני** של 75 mg/dL למשך 30 דקות (4). אחד היתרונות של הוספת המיקום הוא שהאוטומציה לא תופעל, למשל, כשהמשתמש בחופשה.
 
-![Wi-Fi rule action: Start temp target of 75 mg/dL for 30 minutes (4)](../images/Automations/automation_example_wifi_action.png)
+![כלל Wi-Fi: שם משימה (1), תנאי זמן בימי חול (2) ותנאי Wi-Fi SSID (3)](../images/Automations/automation_example_wifi_rule.png)
 
-Here is the screenshot detailing the **Automation** triggers:
+יש לגלול למטה כדי לראות את הפעולה: **יעד זמני** של 75 mg/dL למשך 30 דקות (4).
 
-1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
-1) Wi-Fi SSID = My_Home_WiFi_Name
+![פעולת כלל ה-Wi-Fi: הפעלת יעד זמני של 75 mg/dL למשך 30 דקות (4)](../images/Automations/automation_example_wifi_action.png)
 
-![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
+להלן צילום המסך המפרט את הטריגרים של ה**אוטומציה**:
+
+1) תחת ה-“וגם” הראשי (שני התנאים חייבים להתקיים כדי להפעיל) 1) זמן חוזרני = ימים שני עד שישי (M,T,W,T,F) בשעה 5:30  
+1) WiFi SSID = My_Home_WiFi_Name
+
+![דוגמה: תנאי WiFi](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
 ## Automating Preference Settings Export
 
-### Unattended Exports: scheduled (daily)
+### ייצוא ללא השגחה: מתוזמן (יומי)
 
-Screenshots detailing the Automation triggers:
+צילומי מסך המפרטים את הטריגרים של האוטומציה:
 
-1) Condition: Recurring time = M,T,W,T,F At 8:00am 1) Action: Settings Export (For "Text in treatments" enter "Daily")
+1) תנאי: זמן חוזרני = ימים שני עד שישי (M,T,W,T,F) בשעה 8:00 1) פעולה: יצוא הגדרות (בשדה "טקסט בטיפול" יש להזין "יומי")
 
 ![Scheduled exports](../images/Automations/automation_settings_export_daily.png)
 
-Note: Export execution will be logged on Careportal
+הערה: ביצוע הייצוא יתועד בפורטל הטיפולים (Careportal)
 
-### Unattended Exports: Pod Activation (patch pump only)
+### ייצוא ללא השגחה: הפעלת הפוד (משאבת פאץ' בלבד)
 
-Screenshots detailing the Automation triggers:
+צילומי מסך המפרטים את הטריגרים של האוטומציה:
 
-1) Condition: Pod Activation 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+1) תנאי: הפעלת הפוד 1) פעולה: יצוא הגדרות (בשדה "טקסט בטיפול" יש להזין "הפעלת פוד: ייצוא הגדרות")
 
-![Export on Pod activation](../images/Automations/automation_settings_export_pod_activation.png)
+![ייצוא בעת הפעלת הפוד](../images/Automations/automation_settings_export_pod_activation.png)
 
-Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Settings → Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
+הערה: ביצוע הייצוא יתועד בפורטל הטיפולים (Careportal). Note : Automation will not trigger **at all** if you have not done a manual settings export before. ראו [הגדרות ← תחזוקה](#preferences-maintenance-settings) להפעלה נכונה של ייצוא הגדרות ללא השגחה.
 
 
 ## Automation Logs
 
-**AAPS** shows a log of the most recent **Automation** events at the bottom of the **Automation** screen, below the rules. Use it to verify that your rules triggered when you expected them to.
+**AAPS** מציג יומן של אירועי ה**אוטומציה** האחרונים בתחתית מסך ה**אוטומציה**, מתחת לכללים. ניתן להשתמש בו כדי לוודא שהכללים הופעלו כפי שציפיתם.
 
-In the example below, the **Low glucose temp target** rule (1) (see [Low Glucose Temp Target](#automations-low-glucose-temp-target) above) is enabled. The log (2) shows that at 03:09 PM, glucose fell below 70 mg/dL and the rule triggered:
-* the action was "Start temp target: 110mg/dL@30 min": a **Temp Target** of 110 mg/dL for 30 minutes;
-* **OK** at the end means that the action was carried out successfully.
+בדוגמה הבאה, הכלל **Low glucose temp target** (1) (ראו [יעד זמני בתגובה לרמת סוכר נמוכה](#automations-low-glucose-temp-target) לעיל) מופעל. היומן (2) מראה שבשעה 15:09 הגלוקוז ירד מתחת ל-70 mg/dL והכלל הופעל:
+* הפעולה הייתה "הפעלת יעד זמני: 110mg/dL@30 min": **יעד זמני** של 110 mg/dL למשך 30 דקות;
+* **אישור** בסוף השורה מציין שהפעולה בוצעה בהצלחה.
 
-![Automation screen: an enabled rule (1) and its log entry (2)](../images/Automations/automation_example_log.png)
+![מסך האוטומציה: כלל מופעל (1) והרשומה שלו ביומן (2)](../images/Automations/automation_example_log.png)
 
 (automations-troubleshooting)=
 
-## Troubleshooting
+## פתרון תקלות
 
 * Problem: __My automations are not being triggered by AAPS?__
 
-Check that the box left of the **Automation** name is ‘ticked’ to ensure the rule is activated:
+יש לוודא שהתיבה שליד שם ה**אוטומציה** ‘מסומנת’, כדי שהכלל יהיה מופעל:
 
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+![הפעלה וכיבוי של כללי אוטומציה](../images/Automations/automation_rule_activated_deactivated.png)
 
 * Problem: __My automations are being triggered in the wrong order.__
 
-Check your rule prioritization order as discussed above here.
+יש לבדוק את סדר העדיפויות של הכללים, כפי שהוסבר לעיל.
 
-* Problem: __A condition shows "Unknown trigger … - never true".__
+* בעיה: __תנאי מציג "טריגר לא ידוע … - אינו מתקיים לעולם".__
 
-The rule contains a trigger that this version of **AAPS** cannot read, for example after you went back to an older version or imported settings from a newer one. Such a trigger is never true, so the rule does not run. It is kept unchanged, so a newer version can still use it. Edit the rule and replace the trigger, or update **AAPS**.
+הכלל מכיל טריגר שגרסה זו של **AAPS** לא יכולה לקרוא, למשל לאחר חזרה לגרסה ישנה יותר או לאחר ייבוא הגדרות מגרסה חדשה יותר. טריגר כזה אף פעם לא מתקיים, ולכן הכלל לא מתבצע. הוא נשמר ללא שינוי, כך שגרסה חדשה יותר עדיין יכולה להשתמש בו. יש לערוך את הכלל ולהחליף את הטריגר, או לעדכן את **AAPS**.
 
 ## Alternatives to Automations
 

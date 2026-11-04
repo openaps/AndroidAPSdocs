@@ -1,4 +1,4 @@
-# Updating to AAPS 2.7
+# AAPS 2.7'ye güncelleme
 
 <head>
   <meta http-equiv="Refresh" content="0; URL=https://androidaps.readthedocs.io/en/latest/Maintenance/Update2_7.html" />

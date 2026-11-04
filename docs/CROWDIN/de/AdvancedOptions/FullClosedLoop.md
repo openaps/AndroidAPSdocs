@@ -171,7 +171,7 @@ Der untenstehende Abschnitt enthält Anleitungen, wie man die **Automatisierungs
 
 Der Schlüssel zum erfolgreichen **FCL**: **Zu Beginn eines mahlzeitbedingten Glukoseanstiegs muss der Loop so schnell wie möglich sehr große automatische SMBs abgeben**, um das benötigte **IOB** „aufzuholen“ (vergleiche mit Deinem üblichen Bolus für eine ähnliche Mahlzeit im **HCL**!)
 
-To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might not be meal-related and which might be.
+Dazu solltest Du die Daten aus Deinem **HCL** auswerten, um festzustellen, welche **Deltas** wahrscheinlich nicht mit Mahlzeiten zusammenhängen und welche schon.
 
 - Da Du die **Automatisierung** auch nur in einem vordefinierten Zeitfenster ausführen lassen kannst, musst Du auch nur in diesem analysieren.
 - Wenn Deine Mahlzeiten in der Zusammensetzung sehr unterschiedlich sind (z.B. ein eher kohlenhydratreiches Frühstück, aber ein kohlenhydratarmes Mittagessen), kannst Du Dich dafür entscheiden für jedes der Zeitfenster zwei verschiedene **Automatisierungen** (bzw. Automatisierungsgruppen) zu erstellen.
@@ -218,7 +218,7 @@ Sensible **IOB-Schwellenwerte**, bei denen Du die Aggressivität Deines Loops re
 
 Der **IOB**-Schwellenwert kann in Deiner **Automatisierung** schnell angepasst werden, um auch außergewöhnliche Mahlzeiten abzudecken oder um ihn für eine folgende Sporteinheit zu senken.
 
-Automation (#3), "iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
+Automatisierung (#3), „iobTH erreicht => **SMBs** aus“, beendet das aggressive Boosten der **SMBs** (oder pausiert es, bis eine weitere kohlenhydratbedingte Anstiegswelle kommt).
 
 ![Automation #3: IOB of 5.5 or more with no temp target running starts a temp target of 111 mg/dl](../images/fullClosedLoop04.png)
 
@@ -327,12 +327,12 @@ Nachdem **Automatisierungen** für Abendessenzeiten erstellt sind, ist es beispi
     - Damit Snacks keine **SMBs**, wie für eine volle Mahlzeit, auslösen, setze ein temporäres Ziel > 100, wenn Du snackst (so wie Du es auch für Sport und Hypo-Snacks tust)
 - SMBs liefern insgesamt zu viel Insulin
     - Prüfe in Echtzeit im Bildschirm des **APS**-Moduls, ob **SMB max. Bereichserweiterung** kleiner eingestellt werden muss
-    - Check (real-time) in the **APS** plugin screen whether **Percentage Profile** must  be set smaller
+    - Prüfe in Echtzeit im Bildschirm des **APS**-Moduls, ob der **Prozentsatz des Profils** kleiner eingestellt werden muss
     - Das SMB Abgabeverhältnis kann vermutlich kleiner eingestellt werden. Als Hinweis: In diesem Fall wirkt sich das auf alle **SMBs** (und alle Zeitfenster) aus,
 - Probleme mit der Insulin-Restwirkung ('tail') nach den Mahlzeiten
     - Du brauchst möglicherweise einen Snack (bei einer Hypo-Vorhersage) oder Glukosetabletten (wenn Du bereits in der Hypo-Zone bist). Aber beachte, dass die benötigten Kohlenhydrate, die der Loop zu einem bestimmten Zeitpunkt angeben wird, zu hoch sein werden. Der Loop hat keinerlei Informationen über Deine Kohlenhydrataufnahme (obwohl Du möglicherweise erraten kannst, wie viel mehr, einschließlich der Kohlenhydrate aus Fetten und Proteinen immer noch darauf wartet, verstoffwechselt zu werden).
     - Eine wertvolle Information wäre, ob das Problem hauptsächlich bereits in der Glukose-Anstiegsphase entsteht. Dann könnte eine einfach Lösung sein, iobTH zu verringern.
-    - Wenn der Bedarf an zusätzlichen Kohlenhydraten häufig auftritt, notiere Dir, wie viele Gramm benötigt wurden (ohne das, was Du möglicherweise zu viel genommen hast und dann wieder etwas Insulin erforderte).  Nimm dann den in Deinem Profil hinterlegten Korrekturfaktor (IC) und schätze ab, wie viel Insulin weniger die **SMBs** hätten liefern sollen, und gehe mit diesen Informationen in die Nachjustierung (beim **Prozentsatz des Profils** in den **Automatisierungen** oder eventuell auch beim eingestellten iobTH). This may relate to the **SMBs** given when glucose was high, or also to the **SMBs** during the **BG** rise.
+    - Wenn der Bedarf an zusätzlichen Kohlenhydraten häufig auftritt, notiere Dir, wie viele Gramm benötigt wurden (ohne das, was Du möglicherweise zu viel genommen hast und dann wieder etwas Insulin erforderte).  Nimm dann den in Deinem Profil hinterlegten Korrekturfaktor (IC) und schätze ab, wie viel Insulin weniger die **SMBs** hätten liefern sollen, und gehe mit diesen Informationen in die Nachjustierung (beim **Prozentsatz des Profils** in den **Automatisierungen** oder eventuell auch beim eingestellten iobTH). Das kann an den **SMBs** liegen, die bei hohem Glukosewert abgegeben wurden, oder auch an den **SMBs** während des **Glukose**anstiegs.
     - Es könnte gut sein, dass Du höhere **Glukose**spitzen zum Vermeiden einer Hypo akzeptieren musst. Oder stelle Deine Ernährung auf kleinere Kohlenhydrat- und höhere Fett- und Proteinmengen um.
 
 

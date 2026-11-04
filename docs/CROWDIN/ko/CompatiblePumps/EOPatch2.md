@@ -1,278 +1,278 @@
 # EOPatch2
 
-The patch needs rapid-acting U-100 insulin, such as NovoRapid or Humalog. Use the rapid-acting insulin your doctor has prescribed for you.
+패치에는 NovoRapid나 Humalog 같은 초속효성 U-100 인슐린이 필요합니다. 의사가 처방한 초속효성 인슐린을 사용하십시오.
 
-The smallest dose the patch can deliver is 0.05 U. Set every basal rate in your **Profile** to at least 0.05 U/hr, in steps of 0.05 U/hr. Otherwise **AAPS** rounds each rate to the nearest 0.05 U/hr (never down to 0) and uses the rates the patch really gives, so the total insulin per day differs slightly from your **Profile**. In the same way, boluses must be at least 0.05 U.
+패치가 주입할 수 있는 최소 용량은 0.05 U입니다. **프로파일**의 모든 기저 주입량을 0.05 U/hr 이상, 0.05 U/hr 단위로 설정하십시오. 그렇지 않으면 **AAPS**가 각 주입량을 가장 가까운 0.05 U/hr로 반올림하고(0으로 내리지는 않음) 패치가 실제로 주입하는 값을 사용합니다. 그래서 하루 총 인슐린 양이 **프로파일**과 조금 다릅니다. 마찬가지로 볼러스도 0.05 U 이상이어야 합니다.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## AAPS에서 사용할 수 있는 펌프 기능
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually.
+* 추가 통신 장치 없이 휴대폰의 자체 블루투스로 **AAPS**와 통신합니다.
+* 서머타임(DST)과 시간대 변경은 수동으로 처리해야 합니다.
 
-## Pump setup
+## 펌프 설정
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. In the **Pump** section, select **EOPatch2**.
-1. Press the Back key to return to the main screen.
+1. **AAPS** 메인 화면 왼쪽 위의 **메뉴**(☰)를 열고 **구성**을 선택하십시오.
+1. **펌프** 부분에서 **EOPatch2**를 선택하십시오.
+1. 뒤로 키를 눌러 메인 화면으로 돌아가십시오.
 
-![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png) ![Configuration > Pump with the EOPatch2 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![구성 항목이 있는 메뉴](../images/v4/Configuration/configuration_menu.png) ![EOPatch2 플러그인이 있는 구성 > 펌프](../images/v4/Configuration/configuration_pump_list_3.png)
 
-Once it is selected, the **EOPatch2** card shows two buttons, **Settings** and **Open plugin**:
+선택하면 **EOPatch2** 카드에 **설정**과 **플러그인 열기** 두 버튼이 표시됩니다:
 
-![The EOPatch2 plugin selected in Configuration > Pump](../images/v4/Pumps/eopatch2_enabled.png)
+![구성 > 펌프에서 선택된 EOPatch2 플러그인](../images/v4/Pumps/eopatch2_enabled.png)
 
-## Settings
+## 설정
 
-Open the EOPatch2 settings in one of two ways:
+EOPatch2 설정은 두 가지 방법 중 하나로 엽니다:
 
-* press **Settings** on the **EOPatch2** card in **Configuration**, or
-* open the pump screen (**Manage** → **Pump**) and press the gear icon in the top-right corner.
+* **구성**의 **EOPatch2** 카드에서 **설정**을 누르거나,
+* 펌프 화면(**관리** → **펌프**)을 열고 오른쪽 위의 톱니바퀴 아이콘을 누릅니다.
 
-There are three settings:
+설정은 세 가지입니다:
 
-![EOPatch2 settings](../images/v4/Pumps/eopatch_settings.png)
+![EOPatch2 설정](../images/v4/Pumps/eopatch_settings.png)
 
-### Low reservoir Alerts
+### 레저버 부족 경고
 
-A warning appears when the insulin left in the patch drops to this amount or less. You can set it from 10 to 50 U, in steps of 5 U. The default is 10 U.
+패치에 남은 인슐린이 이 양 이하로 줄면 경고가 나타납니다. 10 ~ 50 U 범위에서 5 U 단위로 설정할 수 있습니다. 기본값은 10 U입니다.
 
 ### Patch expiration Reminder
 
-Reminds you how much time is left before the current patch expires. You can set it from 1 to 24 hours, in steps of 1 hour. The default is 4 hours.
+현재 패치가 만료되기 전에 남은 시간을 알려 줍니다. 1 ~ 24시간 범위에서 1시간 단위로 설정할 수 있습니다. 기본값은 4시간입니다.
 
-### Patch buzzer Reminders
+### 패치 신호 알림
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. It has no effect on your normal basal. The default is off.
+이 설정을 켜면 볼러스, 확장 볼러스 또는 임시 기저가 시작될 때와 끝날 때 패치에서 삐 소리가 납니다. 일반 기저에는 영향을 주지 않습니다. 기본값은 꺼짐입니다.
 
-## Activating a new patch
+## 새 패치 활성화
 
-### Open the activation wizard
+### 활성화 마법사 열기
 
-Open the pump screen with **Manage** → **Pump** (or press **Open plugin** on the **EOPatch2** card in **Configuration**). When no patch is active, the screen shows **Not activated** and an **Activate Patch** button at the bottom.
+**관리** → **펌프**로 펌프 화면을 여십시오(또는 **구성**의 **EOPatch2** 카드에서 **플러그인 열기**를 누르십시오). 활성 패치가 없으면 화면에 **활성화되지 않음**이 표시되고 아래쪽에 **패치 활성화** 버튼이 있습니다.
 
-Press **Activate Patch** to start the wizard.
+**패치 활성화**를 눌러 마법사를 시작하십시오.
 
-![The EOPatch2 pump screen with the Activate Patch button](../images/v4/Pumps/eopatch_pump_screen.png)
+![패치 활성화 버튼이 있는 EOPatch2 펌프 화면](../images/v4/Pumps/eopatch_pump_screen.png)
 
-The wizard guides you through each step. The row of dots at the top shows how far along you are.
+마법사가 각 단계를 안내합니다. 위쪽의 점들은 어디까지 진행했는지 보여 줍니다.
 
 ```{note}
-If you have never activated a **Profile** in **AAPS**, the wizard first shows a **Profile required** page. Select the profile to use and press **Activate profile**.
+**AAPS**에서 **프로파일**을 한 번도 활성화한 적이 없으면, 마법사는 먼저 **프로파일 필요** 페이지를 보여 줍니다. 사용할 프로파일을 선택하고 **프로파일 활성화**를 누르십시오.
 ```
 
-### Filling Insulin
+### 인슐린 채우기
 
-Insert the syringe needle into the insulin fill port on the patch. Slowly push the plunger to fill the patch. Once there is more than 80 U in the patch, it beeps once and starts up (boots).
+주사기 바늘을 패치의 인슐린 채우기 포트에 꽂으십시오. 플런저를 천천히 밀어 패치를 채우십시오. 패치에 80 U 이상이 들어가면 삐 소리가 한 번 나고 패치가 시작(부팅)됩니다.
 
-When you hear the beep, press **Start pairing**.
+삐 소리가 들리면 **페어링 시작**을 누르십시오.
 
-![The Filling Insulin step with the Start pairing button](../images/v4/Pumps/eopatch_activate_filling.png)
+![페어링 시작 버튼이 있는 인슐린 채우기 단계](../images/v4/Pumps/eopatch_activate_filling.png)
 
 ```{warning}
-- Do not turn the needle action lever until the wizard tells you to. Turning it too early can cause serious problems during filling or the safety check.
-- The patch holds 80 to 200 U. If you put in less than 80 U, the patch does not work.
-- Take the insulin out of the refrigerator 15 to 30 minutes before filling, so it reaches room temperature. The insulin must be at least 10°C.
+- 마법사가 지시할 때까지 바늘 작동 레버를 돌리지 마십시오. 너무 일찍 돌리면 채우기나 안전 점검 중에 심각한 문제가 생길 수 있습니다.
+- 패치에는 80 ~ 200 U가 들어갑니다. 80 U보다 적게 넣으면 패치가 작동하지 않습니다.
+- 인슐린이 상온이 되도록 채우기 15 ~ 30분 전에 냉장고에서 꺼내 두십시오. 인슐린은 10°C 이상이어야 합니다.
 ```
 
-### Patch pairing
+### 패치 페어링
 
-**AAPS** now tries to pair with the patch automatically. During pairing, two Android Bluetooth pairing requests appear. Press **OK** on the first one. Press **OK** again on the second one, which shows a passkey.
+이제 **AAPS**가 자동으로 패치와 페어링을 시도합니다. 페어링 중에 Android 블루투스 페어링 요청이 두 번 나타납니다. 첫 번째 요청에서 **확인**을 누르십시오. 패스키가 표시되는 두 번째 요청에서도 **확인**을 누르십시오.
 
 ```{warning}
-- Keep the patch and your phone within 30 cm of each other while pairing.
-- After the patch has booted, it beeps every 3 minutes until pairing is complete.
-- You must finish activating the patch within 60 minutes of it booting. If you cannot, discard the patch.
+- 페어링하는 동안 패치와 휴대폰을 30 cm 이내로 가까이 두십시오.
+- 패치가 부팅된 후에는 페어링이 끝날 때까지 3분마다 삐 소리가 납니다.
+- 패치가 부팅된 후 60분 안에 패치 활성화를 끝내야 합니다. 끝내지 못하면 패치를 폐기하십시오.
 ```
 
-![Patch pairing step](../images/EOPatch/Bild6.png) ![First Bluetooth pairing request](../images/EOPatch/Bild7.png) ![Second Bluetooth pairing request with the passkey](../images/EOPatch/Bild8.png)
+![패치 페어링 단계](../images/EOPatch/Bild6.png) ![첫 번째 블루투스 페어링 요청](../images/EOPatch/Bild7.png) ![패스키가 표시된 두 번째 블루투스 페어링 요청](../images/EOPatch/Bild8.png)
 
 ```{admonition} Older screenshot
 :class: note
-The two Bluetooth pairing screenshots are from an earlier **AAPS** version: the **AAPS** screen behind the Android pairing request looks different in **AAPS** 4.
+두 블루투스 페어링 스크린샷은 이전 **AAPS** 버전의 것입니다. Android 페어링 요청 뒤에 보이는 **AAPS** 화면은 **AAPS** 4에서 다르게 보입니다.
 ```
 
-### Select insulin
+### 인슐린 선택
 
-Select the insulin you filled the patch with and press **Next**. **AAPS** applies a profile switch with this insulin after activation.
+패치에 채운 인슐린을 선택하고 **다음**을 누르십시오. **AAPS**는 활성화 후 이 인슐린으로 프로파일 전환을 적용합니다.
 
-### Prepare for attaching the Patch
+### 패치 부착 준비
 
-Remove the adhesive tape from the patch, then press **Next**.
+패치에서 접착 테이프를 떼어 낸 다음 **다음**을 누르십시오.
 
-If a needle sticks out, or if the patch is wet, dirty or its adhesive tape is folded, press **Discard** instead and use a new patch.
+바늘이 튀어나와 있거나, 패치가 젖었거나 더럽거나, 접착 테이프가 접혀 있으면 대신 **폐기**를 누르고 새 패치를 사용하십시오.
 
-![Prepare for attaching the Patch step](../images/EOPatch/Bild9.png)
+![패치 부착 준비 단계](../images/EOPatch/Bild9.png)
 
-### Site location
+### 부착 위치
 
-This step only appears if **Manage pump site rotation** is turned on in the site rotation settings. Tap the place on the body diagram where you will attach the patch and press **Next**, or press **Skip**.
+이 단계는 위치 순환 설정에서 **펌프 위치 순환 관리**가 켜져 있을 때만 나타납니다. 몸 그림에서 패치를 붙일 곳을 누르고 **다음**을 누르거나, **건너뛰기**를 누르십시오.
 
-### Attaching the Patch
+### 패치 부착
 
-Insulin should go into a spot with fatty tissue under the skin, but few nerves or blood vessels. The abdomen, arm or thigh are good choices. Clean and dry the site, then attach the patch to your skin.
+인슐린은 피부 아래에 지방 조직이 있고 신경이나 혈관이 적은 곳에 들어가야 합니다. 배, 팔 또는 허벅지가 좋습니다. 부착 부위를 깨끗이 하고 말린 다음 패치를 피부에 붙이십시오.
 
-Check the infusion site, then press **Start safety check**.
+주입 부위를 확인한 다음 **안전 점검 시작**을 누르십시오.
 
 ```{warning}
-- Press down the edges of the patch tape evenly, so the whole patch sticks firmly to your skin.
-- If the patch does not stick completely, air can get between the patch and your skin. This weakens the adhesive and the water resistance of the patch.
+- 패치 전체가 피부에 단단히 붙도록 패치 테이프의 가장자리를 고르게 눌러 주십시오.
+- 패치가 완전히 붙지 않으면 패치와 피부 사이에 공기가 들어갈 수 있습니다. 그러면 패치의 접착력과 방수 기능이 약해집니다.
 ```
 
-![Attaching the Patch step](../images/EOPatch/Bild10.png)
+![패치 부착 단계](../images/EOPatch/Bild10.png)
 
-### Safety check
+### 안전 점검
 
-The safety check takes about 30 seconds. When it is finished, the patch beeps once. If it fails, press **Retry**.
+안전 점검은 약 30초 걸립니다. 안전 점검이 끝나면 패치에서 삐 소리가 한 번 납니다. 실패하면 **재시도**를 누르십시오.
 
 ```{warning}
-For safe use, do not turn the needle action lever until the safety check is complete.
+안전한 사용을 위해 안전 점검이 끝날 때까지 바늘 작동 레버를 돌리지 마십시오.
 ```
 
-![Attaching the Patch step with the Start safety check button](../images/EOPatch/Bild11.png) ![Safety check in progress](../images/EOPatch/Bild12.png)
+![안전 점검 시작 버튼이 있는 패치 부착 단계](../images/EOPatch/Bild11.png) ![안전 점검 진행 중](../images/EOPatch/Bild12.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots from **Prepare for attaching the Patch** to **Safety check** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+**패치 부착 준비**부터 **안전 점검**까지의 스크린샷은 이전 **AAPS** 버전의 것이며 **AAPS** 4에서는 다르게 보일 수 있습니다.
 ```
 
 ### Inserting the needle
 
-Hold the patch firmly. Turn the needle action lever upward by more than 100° to insert the needle. The patch beeps once when the needle is inserted correctly. Then keep turning the lever all the way to remove it. Press **Next**.
+패치를 단단히 잡으십시오. 바늘을 삽입하려면 바늘 작동 레버를 위쪽으로 100° 넘게 돌리십시오. 바늘이 올바르게 삽입되면 패치에서 삐 소리가 한 번 납니다. 그런 다음 레버를 끝까지 계속 돌려 레버를 제거하십시오. **다음**을 누르십시오.
 
 ```{caution}
-If you go to the next step without hearing the beep, a **Needle insertion Error** appears. Check for the beep and press **Retry**. If the error remains, press **Discard** to deactivate the patch.
+삐 소리를 듣지 않고 다음 단계로 가면 **바늘 삽입 오류**가 나타납니다. 삐 소리를 확인하고 **재시도**를 누르십시오. 오류가 계속되면 **폐기**를 눌러 패치를 비활성화하십시오.
 ```
 
-### Patch activation completed
+### 패치 활성화 완료
 
-The last page confirms that the patch is active and that it will remind you when it nears its expiration time. Press **Finish** to go back to the pump screen.
+마지막 페이지는 패치가 활성화되었고 만료 시간이 다가오면 알려 준다는 것을 확인해 줍니다. **완료**를 눌러 펌프 화면으로 돌아가십시오.
 
-## Discarding the patch
+## 패치 폐기
 
-Replace the patch when it is low on insulin, when it expires, or if it is faulty. We recommend using each patch for no more than 84 hours after it boots.
+패치에 인슐린이 부족하거나, 만료되었거나, 고장 났으면 패치를 교체하십시오. 각 패치는 부팅 후 84시간 이하로 사용하는 것을 권장합니다.
 
-1. Open the pump screen (**Manage** → **Pump**). While a patch is active, press **Discard Patch**.
-1. The **Discard Patch** page shows the time left and the insulin left in the patch. Press **Discard Patch**.
-1. A dialog asks you to confirm. Press **Discard Patch** again.
-1. When the patch has been deactivated, the wizard shows **Discarding the patch is completed.** Remove the patch from your body and press **Confirm**.
+1. 펌프 화면(**관리** → **펌프**)을 여십시오. 패치가 활성 상태일 때 **패치 폐기**를 누르십시오.
+1. **패치 폐기** 페이지에는 패치의 남은 시간과 남은 인슐린이 표시됩니다. **패치 폐기**를 누르십시오.
+1. 확인을 요청하는 대화 상자가 나타납니다. **패치 폐기**를 다시 누르십시오.
+1. 패치가 비활성화되면 마법사에 **패치 폐기가 완료되었습니다.**가 표시됩니다. 몸에서 패치를 떼어 내고 **확인**을 누르십시오.
 
-After that, the wizard continues straight on to activating a new patch (see above). Press the back arrow if you want to stop here.
+그 후 마법사는 바로 새 패치 활성화로 이어집니다(위 참조). 여기서 멈추려면 뒤로 화살표를 누르십시오.
 
-While no patch is active, **AAPS** shows the pump as suspended and records a 0 U/hr temporary basal, so no basal insulin is counted in IOB until the next patch is activated.
+활성 패치가 없는 동안 **AAPS**는 펌프를 일시 중지 상태로 표시하고 0 U/hr 임시 기저를 기록합니다. 그래서 다음 패치가 활성화될 때까지 기저 인슐린이 IOB에 포함되지 않습니다.
 
-![The EOPatch2 pump screen with the DISCARD/CHANGE PATCH button](../images/EOPatch/Bild13.png) ![Discard Patch page](../images/EOPatch/Bild14.png) ![Discard Patch confirmation dialog](../images/EOPatch/Bild15.png) ![Discarding the patch is completed](../images/EOPatch/Bild16.png)
+![패치 폐기/교체(DISCARD/CHANGE PATCH) 버튼이 있는 EOPatch2 펌프 화면](../images/EOPatch/Bild13.png) ![패치 폐기 페이지](../images/EOPatch/Bild14.png) ![패치 폐기 확인 대화 상자](../images/EOPatch/Bild15.png) ![패치 폐기 완료](../images/EOPatch/Bild16.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Discard Patch**.
+위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 **관리** → **펌프**에서 펌프 화면을 열며, 화면의 버튼 이름은 **패치 폐기**입니다.
 ```
 
 ```{admonition} If the patch does not respond
 :class: warning
-If **AAPS** cannot reach the patch, it may show a page about turning off the patch's alarm by hand: remove the patch from your body, peel off the adhesive tape, and use a clip to press firmly into the hole next to the insulin fill port.
+**AAPS**가 패치와 통신할 수 없으면 패치 알람을 수동으로 끄는 방법에 대한 페이지가 나타날 수 있습니다: 몸에서 패치를 떼어 내고, 접착 테이프를 벗긴 다음, 클립으로 인슐린 채우기 포트 옆의 구멍을 세게 누르십시오.
 
-The **Discard Patch** page also has a **Force Reset** button. It only clears the patch from **AAPS**, without sending any command to the patch. The patch keeps delivering insulin until its battery runs out or you turn it off by hand. Use it only if a normal discard fails, and remove the patch from your body.
+**패치 폐기** 페이지에는 **강제 초기화** 버튼도 있습니다. 이 버튼은 패치에 명령을 보내지 않고 **AAPS**에서만 패치를 지웁니다. 패치는 배터리가 다 되거나 직접 끌 때까지 인슐린을 계속 주입합니다. 일반 폐기가 실패할 때만 사용하고, 몸에서 패치를 떼어 내십시오.
 ```
 
-## Suspending and resuming insulin delivery
+## 인슐린 주입 일시 중지 및 재개
 
-Suspending insulin delivery also cancels any extended bolus and temporary basal. When you resume, these are **not** restarted. While insulin delivery is suspended, the patch beeps every 15 minutes.
+인슐린 주입을 일시 중지하면 진행 중인 확장 볼러스와 임시 기저도 취소됩니다. 재개할 때 이들은 다시 시작되지 **않습니다**. 인슐린 주입이 일시 중지된 동안 패치는 15분마다 삐 소리를 냅니다.
 
-### Suspending insulin delivery
+### 인슐린 주입 일시 중지
 
-1. Open the pump screen (**Manage** → **Pump**) and press **Suspend pump**.
-1. A dialog explains what will be suspended. Press **Confirm**.
-1. In the **Basal Suspending Time** dialog, choose how long to suspend: 30 min, 1 hr, 1 hr 30 min or 2 hr. Press **Confirm**.
+1. 펌프 화면(**관리** → **펌프**)을 열고 **펌프 일시 중지**를 누르십시오.
+1. 무엇이 일시 중지되는지 설명하는 대화 상자가 나타납니다. **확인**을 누르십시오.
+1. **기저 중지 시간** 대화 상자에서 일시 중지할 시간을 선택하십시오: 30분, 1시간, 1시간 30분 또는 2시간. **확인**을 누르십시오.
 
-Insulin delivery is suspended for the time you chose.
+선택한 시간 동안 인슐린 주입이 일시 중지됩니다.
 
-![The EOPatch2 pump screen with the SUSPEND button](../images/EOPatch/Bild17.png) ![Suspend confirmation dialog](../images/EOPatch/Bild18.png) ![Basal Suspending Time dialog](../images/EOPatch/Bild19.png)
+![일시 중지(SUSPEND) 버튼이 있는 EOPatch2 펌프 화면](../images/EOPatch/Bild17.png) ![일시 중지 확인 대화 상자](../images/EOPatch/Bild18.png) ![기저 중지 시간 대화 상자](../images/EOPatch/Bild19.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Suspend pump**.
+위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 **관리** → **펌프**에서 펌프 화면을 열며, 화면의 버튼 이름은 **펌프 일시 중지**입니다.
 ```
 
-### Resuming insulin delivery
+### 인슐린 주입 재개
 
-1. Open the pump screen (**Manage** → **Pump**) and press **Resume pump**.
-1. In the **Resume insulin delivery** dialog, press **Confirm**.
+1. 펌프 화면(**관리** → **펌프**)을 열고 **펌프 재개**를 누르십시오.
+1. **인슐린 주입 재개** 대화 상자에서 **확인**을 누르십시오.
 
-![The EOPatch2 pump screen with the RESUME button](../images/EOPatch/Bild20.png) ![Resume insulin delivery dialog](../images/EOPatch/Bild21.png)
+![재개(RESUME) 버튼이 있는 EOPatch2 펌프 화면](../images/EOPatch/Bild20.png) ![인슐린 주입 재개 대화 상자](../images/EOPatch/Bild21.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Resume pump**.
+위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 **관리** → **펌프**에서 펌프 화면을 열며, 화면의 버튼 이름은 **펌프 재개**입니다.
 ```
 
 ```{warning}
-When the suspend time ends, **AAPS** shows an **End of insulin suspend** warning. Insulin delivery does **not** restart until you confirm it. If you do not, you could develop hyperglycemia.
+일시 중지 시간이 끝나면 **AAPS**에 **인슐린 일시 중지 종료** 경고가 표시됩니다. 확인하기 전까지 인슐린 주입은 다시 시작되지 **않습니다**. 확인하지 않으면 고혈당이 생길 수 있습니다.
 ```
 
 (eopatch2-alarms-and-warnings)=
 
-## Alarms and warnings
+## 알람 및 경고
 
 ### Alarms
 
-Alarms are for urgent, top-priority situations and need your action straight away. **AAPS** sounds an alarm that keeps going until you acknowledge it, and shows the message as a notification on the **Overview** screen. An alarm means there is a problem with the patch in use. In many cases the patch has to be discarded and replaced with a new one.
+알람은 우선순위가 가장 높은 긴급 상황을 위한 것이며 즉시 조치가 필요합니다. **AAPS**는 확인할 때까지 계속 울리는 알람을 내고, **개요** 화면에 메시지를 알림으로 표시합니다. 알람은 사용 중인 패치에 문제가 있다는 뜻입니다. 대부분의 경우 패치를 폐기하고 새 패치로 교체해야 합니다.
 
-When you press **Confirm** on the notification, **AAPS** handles the alarm. For most alarms, this deactivates the patch. For an **Inappropriate temperature** alarm, the button is **Retry**.
+알림에서 **확인**을 누르면 **AAPS**가 알람을 처리합니다. 대부분의 알람에서는 이때 패치가 비활성화됩니다. **부적합한 온도** 알람에서는 버튼이 **재시도**입니다.
 
-![EOPatch2 alarm](../images/EOPatch/Bild22.png) ![EOPatch2 alarm after the patch was deactivated](../images/EOPatch/Bild23.png)
-
-```{admonition} Older screenshot
-:class: note
-The alarm screenshots are from an earlier **AAPS** version and may look different in **AAPS** 4.
-```
-
-The different alarms are explained below.
-
-| Alarm                      | Explanation                                                                                                                                                    |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | The patch has run out of insulin.                                                                                                                              |
-| Patch expired              | The patch's usage time is over, and it cannot deliver any more insulin.                                                                                        |
-| Occlusion                  | The patch's insulin path seems to be blocked.                                                                                                                  |
-| Power on self-test failure | The patch found an unexpected error during its self-test after booting.                                                                                        |
-| Inappropriate temperature  | The patch is outside its normal operating temperature while you activate or use it. Move the patch to a place with a suitable temperature (4.4 to 37°C).       |
-| Needle insertion Error     | The needle was not inserted correctly during activation. Check that the needle insertion edge of the patch and the needle action lever are in a straight line. |
-| Patch battery Error        | The patch's internal battery is about to run out and the patch will power off.                                                                                 |
-| Patch activation Error     | The patch was not fully activated within 60 minutes of booting.                                                                                                |
-| Patch Error                | The patch found an unexpected error while being activated or used.                                                                                             |
-
-### Warnings
-
-Warnings are for medium- or low-priority situations. A warning appears as a notification on the **Overview** screen.
-
-![EOPatch2 warning shown on the Overview screen](../images/EOPatch/Bild24.png)
+![EOPatch2 알람](../images/EOPatch/Bild22.png) ![패치가 비활성화된 후의 EOPatch2 알람](../images/EOPatch/Bild23.png)
 
 ```{admonition} Older screenshot
 :class: note
-This screenshot is from an earlier **AAPS** version: in **AAPS** 4 the warning appears on the main screen, which looks different.
+알람 스크린샷은 이전 **AAPS** 버전의 것이며 **AAPS** 4에서는 다르게 보일 수 있습니다.
 ```
 
-The different warnings are explained below.
+각 알람은 아래에서 설명합니다.
 
-| Warning                      | Explanation                                                                                                                   |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | The suspend time you chose is over. Press **Resume pump** on the notification to restart insulin delivery.                    |
-| Low reservoir                | The insulin left in the patch is below the amount set in **Low reservoir Alerts**.                                            |
-| Patch operating life expired | The patch's usage period is over.                                                                                             |
-| Patch will expire soon       | The patch must be discarded in 1 hour.                                                                                        |
-| Incomplete Patch activation  | Patch activation was interrupted for more than 3 minutes after pairing. Open the pump screen and finish activating the patch. |
-| Patch battery low            | The patch's battery is low.                                                                                                   |
+| Alarm          | 설명                                                                          |
+| -------------- | --------------------------------------------------------------------------- |
+| 레저버 비어 있음      | 패치의 인슐린이 다 떨어졌습니다.                                                          |
+| 패치 만료됨         | 패치의 사용 시간이 끝나서 더 이상 인슐린을 주입할 수 없습니다.                                        |
+| 주입구 막힘         | 패치의 인슐린 경로가 막힌 것 같습니다.                                                      |
+| 전원 켜기 자가 진단 실패 | 패치가 부팅 후 자가 진단 중에 예상하지 못한 오류를 발견했습니다.                                       |
+| 부적합한 온도        | 패치를 활성화하거나 사용하는 동안 패치가 정상 작동 온도를 벗어났습니다. 패치를 적절한 온도(4.4 ~ 37°C)의 장소로 옮기십시오. |
+| 바늘 삽입 오류       | 활성화 중에 바늘이 올바르게 삽입되지 않았습니다. 패치의 바늘 삽입 가장자리와 바늘 작동 레버가 일직선에 있는지 확인하십시오.      |
+| 패치 배터리 오류      | 패치의 내장 배터리가 곧 다 떨어져서 패치가 꺼집니다.                                              |
+| 패치 활성화 오류      | 패치가 부팅 후 60분 안에 완전히 활성화되지 않았습니다.                                            |
+| 패치 오류          | 패치를 활성화하거나 사용하는 중에 예상하지 못한 오류를 발견했습니다.                                      |
 
-## Where to get help
+### 경고
 
-Development of the EOPatch2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+경고는 중간 또는 낮은 우선순위의 상황을 위한 것입니다. 경고는 **개요** 화면에 알림으로 나타납니다.
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+![개요 화면에 표시된 EOPatch2 경고](../images/EOPatch/Bild24.png)
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+```{admonition} Older screenshot
+:class: note
+이 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 경고가 메인 화면에 나타나며, 모양이 다릅니다.
+```
+
+각 경고는 아래에서 설명합니다.
+
+| Warning      | 설명                                                           |
+| ------------ | ------------------------------------------------------------ |
+| 인슐린 일시 중지 종료 | 선택한 일시 중지 시간이 끝났습니다. 인슐린 주입을 다시 시작하려면 알림에서 **펌프 재개**를 누르십시오. |
+| 레저버 부족       | 패치에 남은 인슐린이 **레저버 부족 경고**에서 설정한 양보다 적습니다.                    |
+| 패치 작동 수명 만료됨 | 패치의 사용 기간이 끝났습니다.                                            |
+| 패치가 곧 만료됨    | 1시간 안에 패치를 폐기해야 합니다.                                         |
+| 패치 활성화 미완료   | 페어링 후 패치 활성화가 3분 넘게 중단되었습니다. 펌프 화면을 열고 패치 활성화를 끝내십시오.        |
+| 패치 배터리 부족    | 패치의 배터리가 부족합니다.                                              |
+
+## 도움을 받을 수 있는 곳
+
+EOPatch2 드라이버는 커뮤니티가 **자원봉사**로 개발합니다. 도움을 요청하기 전에:
+
+1. 기능이 어떻게 작동해야 하는지 확인하려면 이 문서의 관련 부분을 **읽으십시오**.
+2. [Discord](https://discord.gg/4fQUWHZ4Mw)의 *#AAPS* 채널이나 다른 [커뮤니티 채널](../GettingHelp/WhereCanIGetHelp.md)에서 **질문하십시오**.
+3. [기존 이슈](https://github.com/nightscout/AndroidAPS/issues)를 검색하여 **버그를 보고하십시오**. 목록에 없으면 [새 이슈](https://github.com/nightscout/AndroidAPS/issues)를 열고 [로그 파일](../GettingHelp/AccessingLogFiles.md)을 첨부하십시오.
+
+도움을 요청할 때는 휴대폰 제조사와 모델, Android 버전, **AAPS** 버전, 그리고 문제를 쉬운 말로 설명한 내용(무엇이 바뀌었는지, 마지막으로 정상 작동한 때가 언제인지)을 포함하십시오.

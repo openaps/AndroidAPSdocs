@@ -29,7 +29,7 @@ Szczegóły znajdziesz na stronie [FAQ](../UsefulLinks/FAQ.md).
 | [3.3.2](#version3300)   | Meerkat (2024.3.1)                                 | testowane do Quail 4                                   | 8.11.1 | 21  |
 | [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                 | testowane do Quail 4                                   | 8.13   | 21  |
 | [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                 | testowane do Quail 4                                   | 9      | 21  |
-| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                | Latest                                                 | 9.8    | 21  |
+| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                | Najnowsza                                              | 9.8    | 21  |
 
 „Zalecana wersja” zawiera odpowiednią wersję JVM. Zalecana wersja jest też minimalną wersją, której możesz użyć do zbudowania **AAPS**. **NIE** zbudujesz aplikacji w wersji starszej niż „zalecana”. Jeśli używasz innej wersji, mogą wystąpić problemy związane z wersją JVM. Zobacz stronę [Rozwiązywanie problemów z Android Studio](#troubleshooting_androidstudio-uncommitted-changes), aby rozwiązać te problemy. Jeśli Twojej obecnej wersji Android Studio nie ma w tabeli, MUSISZ ją najpierw zaktualizować.
 
@@ -41,27 +41,27 @@ Wersja Gradle jest powiązana z kodem źródłowym. Zawsze otrzymasz właściwą
 <tbody>
   <tr>
     <th class="tg-baqh">System operacyjny (tylko 64-bit)</th>
-    <td class="tg-baqh">Windows 10 or higher</td>
-    <td class="tg-baqh">macOS 12 or higher</td>
-    <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
+    <td class="tg-baqh">Windows 10 lub nowszy</td>
+    <td class="tg-baqh">macOS 12 lub nowszy</td>
+    <td class="tg-baqh">Dowolna dystrybucja Linuksa, która obsługuje Gnome, KDE lub Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 lub nowsza</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Procesor (tylko 64-bit)</th>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
-    <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <td class="tg-baqh">Procesor x86_64 z 2017 roku lub nowszy (Intel Core i5 8. generacji, AMD Ryzen lub nowszy) z <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">obsługą wirtualizacji</a> (Intel VT-x lub AMD-V) włączoną w BIOS-ie</td>
+    <td class="tg-baqh">Apple Silicon (M1 lub nowszy) albo Intel Core 6. generacji lub nowszy (wsparcie dla Maców z procesorami Intel jest stopniowo wycofywane)</td>
+    <td class="tg-baqh">Procesor x86_64 z 2017 roku lub nowszy (Intel Core i5 8. generacji, AMD Ryzen lub nowszy) z obsługą wirtualizacji (Intel VT-x lub AMD-V) włączoną w BIOS-ie</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Pamięć RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16 GB lub więcej (8 GB to absolutne minimum dla samego Android Studio, zalecane jest 32 GB)</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Dysk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. Zalecany jest dysk SSD.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Co najmniej 32 GB wolnego miejsca. Zalecany jest dysk SSD.</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Rozdzielczość</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">Minimum 1280 x 800 (zalecane 1920 x 1080)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
@@ -93,7 +93,7 @@ Przejdź od razu do [instrukcji aktualizacji](../Maintenance/UpdateToNewVersion.
 
 W tej instrukcji znajdziesz _przykładowe_ zrzuty ekranu z budowania pliku apk **AAPS**. **Android Studio** – program, którego używamy do budowania apk **AAPS** – jest regularnie aktualizowany. Dlatego zrzuty ekranu mogą różnić się od Twojej instalacji, ale nadal powinno się dać według nich postępować.
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
+**Android Studio** działa na Windows, Mac OS X i Linux, więc kroki na różnych systemach mogą się nieco różnić.
 
 (install-git-if-you-dont-have-it)=
 ### Zainstaluj Git
@@ -102,18 +102,18 @@ Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there mi
 :class: dropdown
 
 Git to tak zwany „_system kontroli wersji_” (VCS).\
-Git to program, który pozwala śledzić zmiany w kodzie i współpracować z innymi. Użyjesz Git, aby skopiować kod źródłowy **AAPS** ze strony GitHub na swój komputer. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
+Git to program, który pozwala śledzić zmiany w kodzie i współpracować z innymi. Użyjesz Git, aby skopiować kod źródłowy **AAPS** ze strony GitHub na swój komputer. Potem użyjesz Android Studio na komputerze, aby zbudować aplikację **AAPS** (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
 #### Kroki instalacji Git
 
-1.  Sprawdź, czy nie masz już zainstalowanego **Git**. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
+1.  Sprawdź, czy nie masz już zainstalowanego **Git**. Możesz to zrobić, wpisując „git” w pasku wyszukiwania Windows. Jeśli widzisz **„Git bash”** lub inną formę Git, jest on już zainstalowany i możesz od razu przejść do [instalacji Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Powinna działać każda nowsza wersja Git. Wybierz wersję dla swojego systemu: Mac, Windows lub Linux.
+2. Jeśli nie masz zainstalowanego Git, pobierz i zainstaluj najnowszą wersję dla swojego systemu z sekcji „Download” [**tutaj**](https://git-scm.com/downloads). Powinna działać każda nowsza wersja Git. Wybierz wersję dla swojego systemu: Mac, Windows lub Linux.
 
 **Uwaga dla użytkowników Maca:** strona Git poprowadzi Cię też przez instalację dodatkowego programu „homebrew”, który pomaga w instalacji. Jeśli instalujesz Git przez Homebrew, nie musisz zmieniać żadnych ustawień.
 
@@ -141,7 +141,7 @@ Jedna z najważniejszych rzeczy przy instalacji Android Studio to **cierpliwoś�
 
 ```{admonition} Different UI
 :class: warning
-Important note: Android Studio changed its UI during the last releases. Ta instrukcja pokazuje kroki w *nowym interfejsie*. Zrzuty ekranu wykonano w wersji „Ladybug”, więc nowsze wersje mogą wyglądać trochę inaczej. Jeśli nadal używasz starego interfejsu, możesz najpierw przełączyć Android Studio na nowy interfejs według [tych instrukcji](#computerbuild-NewUI).
+Ważne: Android Studio zmieniło swój interfejs w ostatnich wersjach. Ta instrukcja pokazuje kroki w *nowym interfejsie*. Zrzuty ekranu wykonano w wersji „Ladybug”, więc nowsze wersje mogą wyglądać trochę inaczej. Jeśli nadal używasz starego interfejsu, możesz najpierw przełączyć Android Studio na nowy interfejs według [tych instrukcji](#computerbuild-NewUI).
 ```
 
 Wersja Android Studio jest bardzo ważna. Zobacz [instrukcje powyżej](#Building-APK-recommended-specification-of-computer-for-building-apk-file), aby wybrać właściwą wersję Android Studio.
@@ -156,7 +156,7 @@ Zainstaluj Android Studio, klikając „Next”, jak na poniższych zrzutach ekr
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+Jeśli chcesz zaoszczędzić miejsce na dysku, możesz odznaczyć Android Virtual Device: nie jest potrzebne do budowania **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -170,7 +170,7 @@ Gdy instalacja się zakończy, naciśnij „Next”
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finish" to start Android Studio for the first time.
+W ostatnim kroku kliknij „Finish”, aby pierwszy raz uruchomić Android Studio.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -302,7 +302,7 @@ W lewym górnym rogu **Android Studio** otwórz menu (hamburger) i przejdź do *
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
+Sprawdź, czy **Android Studio** potrafi samo znaleźć właściwą ścieżkę **Path to Git executable**, klikając przycisk „Test” (1):
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
@@ -314,7 +314,7 @@ Jeśli automatyczne ustawienie się uda, obok ścieżki pojawi się Twoja obecna
 
 Jeśli **git.exe** nie zostanie znaleziony automatycznie albo kliknięcie „Test” kończy się błędem, możesz:
 * ręcznie wpisać ścieżkę, którą zapisałeś [wcześniej](#BuildingAaps-steps-for-installing-git), albo
-* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
+* kliknąć ikonę folderu (1) i ręcznie przejść do folderu, w którym [wcześniej](#BuildingAaps-steps-for-installing-git) zainstalowano **git.exe**
 * Sprawdź ustawienia przyciskiem **Test**!
 
   ![Nie znaleziono Git](../images/Building-the-App/039_GitTestError.png)
@@ -356,7 +356,7 @@ Kliknij „Create new...” (2), aby zacząć tworzyć magazyn kluczy.
 ```{admonition} INFORMATION!
 :class: note
 Magazyn kluczy tworzysz tylko raz.
-If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+Jeśli już wcześniej budowałeś AAPS, NIE twórz nowego magazynu kluczy, tylko wybierz istniejący i wpisz jego hasła!
 ```
 
 **_Uwaga:_** magazyn kluczy (keystore) to plik, w którym są zapisane informacje do podpisania aplikacji. Jest zaszyfrowany, a informacje są chronione hasłami.
@@ -369,7 +369,7 @@ If you have built AAPS before, do NOT create a new keystore but select your exis
 
 ```{admonition} WARNING!
 :class: warning
-Zapisz sobie, gdzie jest przechowywany Twój magazyn kluczy. You will need it when you build the next AAPS update!
+Zapisz sobie, gdzie jest przechowywany Twój magazyn kluczy. Będziesz go potrzebować przy budowaniu następnej aktualizacji AAPS!
 ```
 
 * Teraz wybierz proste hasło (i zapisz je), wpisz je w polu hasła (2) i potwierdź je (2).

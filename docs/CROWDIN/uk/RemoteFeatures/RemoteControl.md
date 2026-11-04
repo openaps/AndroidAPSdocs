@@ -7,8 +7,8 @@
 
 Є чотири дуже ефективні інструменти для віддаленого керування **AAPS**:
 
-1) [SMS-команди](#RemoteControl_SMS-Commands) (телефон-послідовник може бути Android або iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (телефон-послідовник — Android; версія для iPhone розробляється) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS або інший комп'ютер/пристрій), переважно для стеження: див. примітку про [керування з клієнта](#client-master-control) в цьому розділі.  
-4) [Розумні годинники](#RemoteControl_smartwatches) (Android)
+1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower device is an Android phone or tablet, or a Windows, Mac or Linux computer; on an iPhone you [build the app yourself](#aapsclient-iphone)) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
+4) [Smartwatches](#RemoteControl_smartwatches) (Android)
 
 Перші три підходять переважно для доглядачів/батьків, але розумні годинники дуже корисні і для доглядачів/батьків, **і** для дорослих з діабетом.
 

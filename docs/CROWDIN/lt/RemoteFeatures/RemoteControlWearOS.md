@@ -1,457 +1,457 @@
-# Operation of AAPS via your Wear OS smartwatch
+# AAPS valdymas Wear OS išmaniuoju laikrodžiu
 
 (Watchfaces-aaps-watchfaces)=
 
 ## AAPS Watchfaces
 
 ```{warning}
-The classic **AAPS** watchfaces run on Wear OS 5 and older only, and Wear OS 5 already limits them. On **Wear OS 6 and newer** the watch app installs one watchface in Google's Watch Face Format instead: your custom watchface as a picture, or the **Complications watchface**. See [Wear OS watch face changes](#wearos-watchface-changes) for what breaks on each Wear OS version, and [the watchface AAPS installs](#wearos-aaps-v4-watchface) for Wear OS 6.
+Klasikiniai **AAPS** ciferblatai veikia tik Wear OS 5 ir senesnėse versijose, o Wear OS 5 juos jau riboja. **Wear OS 6 ir naujesnėse** versijose laikrodžio programėlė vietoj jų įdiegia vieną ciferblatą Google Watch Face Format formatu: jūsų pasirinktinį ciferblatą kaip paveikslėlį arba **Elementų ciferblatas**. Kas neveikia kiekvienoje Wear OS versijoje, žr. [Wear OS ciferblatų pakeitimai](#wearos-watchface-changes), o apie Wear OS 6 – [AAPS įdiegiamas ciferblatas](#wearos-aaps-v4-watchface).
 ```
 
-On Wear OS 5 and older, several classic watchfaces are built into the **AAPS** watch app. They show the glucose value with delta, IOB, the active basal rate and a graph of the readings. Two taps work on them:
+Wear OS 5 ir senesnėse versijose į **AAPS** laikrodžio programėlę įtraukti keli klasikiniai ciferblatai. Juose rodoma gliukozės reikšmė su pokyčiu, AIO, aktyvi valandinė bazė ir rodmenų grafikas. Juose veikia du palietimai:
 
-* Double-tap the glucose value to open the **AAPS** main menu
-* Double-tap the graph to change its time range
+* Dukart bakstelėkite gliukozės reikšmę, kad atidarytumėte **AAPS** pagrindinį meniu
+* Dukart bakstelėkite grafiką, kad pakeistumėte jo laiko intervalą
 
-On every Wear OS version, the [complications](#Watchfaces-complications) and the [tiles](#WearOsSmartwatch-wear-os-tiles) described on this page work with any watchface that has room for them.
+Visose Wear OS versijose šiame puslapyje aprašyti [ekrano elementai](#Watchfaces-complications) ir [plytelės](#WearOsSmartwatch-wear-os-tiles) veikia su bet kuriuo ciferblatu, kuriame jiems yra vietos.
 
 ## Configuration
 
-Enable **Wear** in [**Configuration** > **Communication**](#Config-Builder-wear).
+Įjunkite **Išmanieji laikrodžiai** skiltyje [**Konfigūracija** > **Ryšys**](#Config-Builder-wear).
 
-To bolus or take other actions from the watch, turn on **Wear control**. The bolus wizard options for the watch are set in the same place: see [Settings > Wear](#preferences-wear). While **Wear control** is off, the phone refuses every treatment or mode change sent from the watch, and the watch shows *"Wear control is turned off in the Wear settings on the phone."*
+Kad galėtumėte laikrodžiu leisti bolusą ar atlikti kitus veiksmus, įjunkite **Valdymas per Wear**. Laikrodžio boluso skaičiuotuvo parinktys nustatomos toje pačioje vietoje: žr. [Nustatymai > Išmanieji laikrodžiai](#preferences-wear). Kol **Valdymas per Wear** išjungtas, telefonas atmeta kiekvieną iš laikrodžio atsiųstą terapijos ar režimo pakeitimą, o laikrodis rodo *„Telefono AAPS skiltyje „Išmanieji laikrodžiai“ išjungta parinktis „Valdymas per Wear“.“*
 
-With **Open plugin** on the **Wear** card you open the Wear screen:
+Kortelėje **Išmanieji laikrodžiai** paspaudę **Atidaryti įskiepį**, atidarysite Wear ekraną:
 
-![Wear plugin screen](../images/screens/wear_plugin.png)
+![Wear įskiepio ekranas](../images/screens/wear_plugin.png)
 
-The top line shows the name of the connected watch, or **(No Watch Connected)**. From this screen you can
+Viršutinėje eilutėje rodomas prijungto laikrodžio pavadinimas arba **(nėra prijungto laikrodžio)**. Šiame ekrane galite
 
-* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* Resend all data. Gali būti naudinga, jei laikrodis kurį laiką nebuvo prijungtas ir norite perduoti informaciją į laikrodį.
 * Open settings on your watch directly from your phone.
-* Choose which watchface **AAPS** installs on the watch (**Watchface installed on watch**: your custom watchface, or the complications watchface). This card is only shown while a **Wear OS 6** or newer watch is connected. See [the watchface AAPS installs](#wearos-aaps-v4-watchface).
-* Manage the **Custom Watchface** (the card is shown while a watch is connected): **Load Watchface** sends a custom watchface to the watch, **Infos Watchface** lists the details of the loaded watchface and the fields it contains, **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) in your browser, and **Export template** saves a template you can edit. A preview of the loaded watchface is shown below the buttons. See [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface).
+* Pasirinkti, kurį ciferblatą **AAPS** įdiegs laikrodyje (**Ciferblatas įdiegtas laikrodyje**: jūsų pasirinktinis ciferblatas arba elementų ciferblatas). Ši kortelė rodoma tik tada, kai prijungtas **Wear OS 6** ar naujesnės versijos laikrodis. Žr. [AAPS įdiegiamas ciferblatas](#wearos-aaps-v4-watchface).
+* Tvarkyti **Pasirinktinis ciferblatas** (kortelė rodoma, kai laikrodis prijungtas): **Įkelti ciferblatą** išsiunčia pasirinktinį ciferblatą į laikrodį, **Ciferblato info** parodo įkelto ciferblato informaciją ir jame esančius laukus, **Daugiau ciferblatų** naršyklėje atidaro [mainų svetainę](../ExchangeSiteCustomWatchfaces/index.md), o **Eksportuoti šabloną** išsaugo šabloną, kurį galite redaguoti. Po mygtukais rodoma įkelto ciferblato peržiūra. Žr. [Perėjimas prie AAPS ciferblato](#WearOS_changing-to-AAPS-watchface).
 
-Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
+Įsitikinkite, kad laikrodyje AAPS pranešimai nėra užblokuoti. Veiksmo (pvz., boluso, laikino tikslo) patvirtinimas gaunamas pranešimu, kurį reikės perbraukti ir pažymėti varnele.
 
-## Accessing main menu of AAPS
+## Pagrindinio AAPS meniu atidarymas
 
-![AAPS main menu on the watch](../images/wearos/main_menu.png)
+![AAPS pagrindinis meniu laikrodyje](../images/wearos/main_menu.png)
 
-To open the main menu of **AAPS**, use one of these:
+Norėdami atidaryti **AAPS** pagrindinį meniu, naudokite vieną iš šių būdų:
 
-* open **AAPS** from the watch's app list
-* tap an **AAPS** complication that opens the menu, see [Complication related settings](#WearOsSmartwatch-complication-settings)
-* tap the **BG Graph** tile with its **Tap action** set to **Main Menu**, see [Tile settings](#WearOsSmartwatch-wear-os-tiles)
-* on a classic **AAPS** watchface, double-tap the glucose value
+* atidarykite **AAPS** iš laikrodžio programėlių sąrašo
+* bakstelėkite **AAPS** ekrano elementą, kuris atidaro meniu, žr. [Su ekrano elementais susiję nustatymai](#WearOsSmartwatch-complication-settings)
+* bakstelėkite plytelę **KG grafikas**, kurios **Veiksmas palietus** nustatytas į **Pagrindinis meniu**, žr. [Plytelės nustatymai](#WearOsSmartwatch-wear-os-tiles)
+* klasikiniame **AAPS** ciferblate dukart bakstelėkite gliukozės reikšmę
 
 (WearOsSmartwatch-loop-status)=
 
-## Loop Status screen
+## Ekranas Ciklo būsena
 
-The **Loop Status** screen gives a summary of what the loop is doing, without taking out your phone. Open it from the AAPS main menu (**Loop status**, or **Status → Loop**), or by tapping the **Blood Glucose** complication. The **Status** menu also has a **Pump** page and a **TDD** page with the total daily doses.
+Ekranas **Ciklo būsena** trumpai parodo, ką daro ciklas, nereikia išsitraukti telefono. Atidarykite jį iš AAPS pagrindinio meniu (**Ciklo būsena** arba **Būklė → Ciklas**) arba bakstelėję ekrano elementą **Kraujo gliukozė**. Meniu **Būklė** taip pat yra puslapis **Pompa** ir puslapis **BPD** su bendromis paros dozėmis.
 
-![Status menu: Pump, Loop and TDD](../images/wearos/status_menu.png)
+![Meniu Būklė: Pompa, Ciklas ir BPD](../images/wearos/status_menu.png)
 
-![Loop Status screen](../images/wearos/loop_status.png)
+![Ekranas Ciklo būsena](../images/wearos/loop_status.png)
 
-The screen is a list of cards. Scroll down to see them all:
+Ekranas yra kortelių sąrašas. Slinkite žemyn, kad pamatytumėte visas:
 
-* **Running mode** — the current mode (closed loop, open loop, LGS, suspended, disconnected…) and, for a temporary mode, how long it still runs.
-* **Loop result** — when the loop last ran, and the temporary basal or SMB it requested.
-* **Scene** — only while a [scene](#scenes-from-watch) is active: its name, the time left (or **Until ended** for a scene without end time) and the **Follow-up** scene that starts when it ends.
-* **Targets** — your target, and the temporary target if one is running.
-* **Profile** — the name of the active profile, with its **Percentage** and **Timeshift** when they are not the default values. A temporary profile switch is highlighted and shows how long it still runs and the profile it **Returns to** when it ends.
-* **Sensitivity** — the same lines as the sensitivity chip on the phone's main screen: the autosens value and the profile, variable and effective ISF.
+* **Veikimo režimas** – dabartinis režimas (uždaras ciklas, atviras ciklas, LGS, sustabdytas, atjungtas…) ir, jei režimas laikinas, kiek laiko jis dar veiks.
+* **Ciklo rezultatas** – kada ciklas paskutinį kartą veikė ir kokios laikinos bazės ar SMB jis paprašė.
+* **Scenarijus** – tik kai [scenarijus](#scenes-from-watch) aktyvus: jo pavadinimas, likęs laikas (arba **Kol bus baigta**, jei scenarijus neturi pabaigos laiko) ir **Kitas scenarijus**, kuris prasidės jam pasibaigus.
+* **Tikslai** – jūsų tikslas ir laikinas tikslas, jei jis veikia.
+* **Profilis** – aktyvaus profilio pavadinimas su **Profilio procentas** ir **Laiko perstūmimas**, kai jie skiriasi nuo numatytųjų reikšmių. Laikinas profilio keitimas paryškinamas: rodoma, kiek laiko jis dar veiks ir į kurį profilį grįš pasibaigus (**Grįžtama į profilį**).
+* **Jautrumas** – tos pačios eilutės kaip jautrumo ženklelyje telefono pagrindiniame ekrane: Autosens reikšmė ir profilio, kintamas bei faktinis JIF.
 
-A small scene icon next to a running mode, a temporary target or a profile switch means it was **set by the active scene**. The same icon is shown in the **Running mode** picker.
+Maža scenarijaus piktograma šalia veikimo režimo, laikino tikslo ar profilio keitimo reiškia, kad jį **nustatė aktyvus scenarijus**. Ta pati piktograma rodoma ir **Veikimo režimas** pasirinkimo sąraše.
 
-![Profile card with a temporary profile switch set by a scene](../images/wearos/loop_status_profile_scene.png)
+![Profilio kortelė su scenarijaus nustatytu laikinu profilio keitimu](../images/wearos/loop_status_profile_scene.png)
 
 (WearOsSmartwatch-bolus-calculator)=
 
-## The bolus calculator on the watch
+## Boluso skaičiuotuvas laikrodyje
 
-Open **Calculator** from the **AAPS** main menu, from the [Actions tile](#WearOsSmartwatch-wear-os-tiles) or from a complication set to open the wizard. It walks through a few pages, swipe from right to left to go on:
+Atidarykite **Skaičiuotuvas** iš **AAPS** pagrindinio meniu, iš [plytelės Veiksmai](#WearOsSmartwatch-wear-os-tiles) arba iš ekrano elemento, nustatyto atidaryti skaičiuotuvą. Jis veda per kelis puslapius, norėdami tęsti, braukite iš dešinės į kairę:
 
-| Angliavandeniai                                                 | Request                                                             | Result                                                            | Calculation                                                                       | Confirm                                                             |
-| --------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| ![Carbs page](../images/wearos/calculator/calculator_carbs.png) | ![Request page](../images/wearos/calculator/calculator_request.png) | ![Result page](../images/wearos/calculator/calculator_result.png) | ![Calculation details](../images/wearos/calculator/calculator_result_details.png) | ![Confirm page](../images/wearos/calculator/calculator_confirm.png) |
+| Angliavandeniai                                                               | Užklausa                                                                 | Rezultatas                                                                | Skaičiavimas                                                                          | Patvirtinti                                                                 |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| ![Puslapis Angliavandeniai](../images/wearos/calculator/calculator_carbs.png) | ![Puslapis Užklausa](../images/wearos/calculator/calculator_request.png) | ![Puslapis Rezultatas](../images/wearos/calculator/calculator_result.png) | ![Skaičiavimo informacija](../images/wearos/calculator/calculator_result_details.png) | ![Puslapis Patvirtinti](../images/wearos/calculator/calculator_confirm.png) |
 
-1. **Carbs**: enter the carbs with the **+10**, **+5**, **−** and **+** buttons.
-2. **Request**: the last page before the phone takes over. It shows what you entered: the carbs, and the meal type, carb time and percentage when you use them, see [Optional pages](#WearOsSmartwatch-calculator-optional-pages). Tap the check mark to send it to the phone, which runs the calculation.
-3. **Result**: the bolus **AAPS** proposes, with the carbs under it: the carbs now and the eCarbs later, the carb time and the bell of the eat reminder. Adjust the dose with **−** and **+**, see below. Scroll down for the **Calculation** card: tap it to see every line of the calculation, the same as on the phone.
-4. **Confirm**: swipe to the second page and tap the check mark. The phone delivers the bolus and records the carbs.
+1. **AV**: angliavandenius įveskite mygtukais **+10**, **+5**, **−** ir **+**.
+2. **Užklausa**: paskutinis puslapis, prieš perduodant darbą telefonui. Jame rodoma, ką įvedėte: angliavandenius, taip pat maisto tipą, angliavandenių laiką ir procentą, jei juos naudojate, žr. [Papildomi puslapiai](#WearOsSmartwatch-calculator-optional-pages). Bakstelėkite varnelę, kad išsiųstumėte į telefoną, kuris atliks skaičiavimą.
+3. **Rezultatas**: **AAPS** siūlomas bolusas, o po juo angliavandeniai: dabar suvalgomi angliavandeniai ir vėlesni i-AV, angliavandenių laikas ir valgymo priminimo varpelis. Dozę koreguokite mygtukais **−** ir **+**, žr. toliau. Slinkite žemyn iki kortelės **Skaičiavimas**: bakstelėkite ją, kad pamatytumėte kiekvieną skaičiavimo eilutę, tokią pačią kaip telefone.
+4. **Patvirtinti**: perbraukite į antrą puslapį ir bakstelėkite varnelę. Telefonas suleidžia bolusą ir įrašo angliavandenius.
 
 (WearOsSmartwatch-calculator-optional-pages)=
 
-### Optional pages
+### Papildomi puslapiai
 
-Three watch settings each add a page after **Carbs**. They are off by default. Open the **AAPS** main menu, then **Settings** > **Interface**, and turn on the ones you want; when more than one is on, the pages come in the order **Meal type**, **Carb time**, **Percentage**. The dots at the bottom of the calculator show how many pages it has.
+Trys laikrodžio nustatymai kiekvienas prideda po puslapį po puslapio **AV**. Numatytai jie išjungti. Atidarykite **AAPS** pagrindinį meniu, tada **Nustatymai** > **Sąsaja**, ir įjunkite norimus; jei įjungtas daugiau nei vienas, puslapiai eina tokia tvarka: **Maisto tipas**, **Angliavandenių laikas**, **Procentais**. Taškai skaičiuotuvo apačioje rodo, kiek jame yra puslapių.
 
-| Parametrai                                                                               | Meal type                                                               | Carb time                                                               | Percentage                                                                |
-| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| ![Calculator settings on the watch](../images/wearos/calculator/calculator_settings.png) | ![Meal type page](../images/wearos/calculator/calculator_meal_type.png) | ![Carb time page](../images/wearos/calculator/calculator_carb_time.png) | ![Percentage page](../images/wearos/calculator/calculator_percentage.png) |
+| Parametrai                                                                                 | Maisto tipas                                                                   | Angliavandenių laikas                                                                   | Procentais                                                                    |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| ![Skaičiuotuvo nustatymai laikrodyje](../images/wearos/calculator/calculator_settings.png) | ![Puslapis Maisto tipas](../images/wearos/calculator/calculator_meal_type.png) | ![Puslapis Angliavandenių laikas](../images/wearos/calculator/calculator_carb_time.png) | ![Puslapis Procentais](../images/wearos/calculator/calculator_percentage.png) |
 
-* **Calculator Meal Type**: **Bread**, **Cake** or **Pizza**, which splits the carbs of a slow meal into carbs now and eCarbs later, see [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
-* **Calculator Carb Time**: the minutes until you eat, with a **Set alarm** bell for the eat reminder, see [Carb time and the eat reminder](#WearOsSmartwatch-wizard-carb-time).
-* **Calculator Percentage**: a percentage of the calculated bolus, for example 70 % when you want a smaller dose. It starts at the **Bolus percentage** of the phone's [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result), 100 % unless you changed it. See also the note under [Adjusting the bolus on the result page](#WearOsSmartwatch-wizard-result).
+* **Skaičiuotuvo maisto tipas**: **Duona**, **Pyragas** arba **Pica** – lėtai įsisavinamo maisto angliavandenius padalija į dabar suvalgomus angliavandenius ir vėlesnius i-AV, žr. [Maisto tipo pasirinkimas](#WearOsSmartwatch-wizard-meal-type).
+* **Skaičiuotuvo AV laikas**: minutės iki valgio, su varpeliu **Nustatyti įspėjimą** valgymo priminimui, žr. [Angliavandenių laikas ir valgymo priminimas](#WearOsSmartwatch-wizard-carb-time).
+* **Skaičiuotuvas proc.**: apskaičiuoto boluso procentas, pavyzdžiui, 70 %, kai norite mažesnės dozės. Pradinė reikšmė yra **Boluso procentas** iš telefono [boluso patarėjo nustatymų](#Preferences-deliver-this-part-of-bolus-wizard-result), 100 %, jei jo nekeitėte. Taip pat žr. pastabą skyriuje [Boluso koregavimas rezultato puslapyje](#WearOsSmartwatch-wizard-result).
 
 (WearOsSmartwatch-wizard-result)=
 
-### Adjusting the bolus on the result page
+### Boluso koregavimas rezultato puslapyje
 
-The result page shows the bolus **AAPS** proposes, together with a **−** and a **+** button. Use them to adjust the dose before you confirm it, without going back to the phone.
+Rezultato puslapyje rodomas **AAPS** siūlomas bolusas kartu su mygtukais **−** ir **+**. Jais galite pakoreguoti dozę prieš ją patvirtindami, negrįždami į telefoną.
 
-| Proposed                                                                          | More                                                                                | Less                                                                                   |
-| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| ![The proposed bolus](../images/wearos/calculator/calculator_result_proposed.png) | ![The bolus raised by 0.20 U](../images/wearos/calculator/calculator_result_up.png) | ![The bolus lowered by 0.10 U](../images/wearos/calculator/calculator_result_down.png) |
+| Siūloma                                                                         | Daugiau                                                                            | Mažiau                                                                               |
+| ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| ![Siūlomas bolusas](../images/wearos/calculator/calculator_result_proposed.png) | ![Bolusas padidintas 0,20 V](../images/wearos/calculator/calculator_result_up.png) | ![Bolusas sumažintas 0,10 V](../images/wearos/calculator/calculator_result_down.png) |
 
-* Each press changes the bolus by **one step of your pump**, so the amounts offered always match what your pump can actually deliver.
-* **Press and hold** a button to keep changing the value. The longer you hold, the faster it goes.
-* You cannot go below **0 U**, nor above your **max bolus** setting.
+* Kiekvienas paspaudimas pakeičia bolusą **vienu jūsų pompos žingsniu**, todėl siūlomi kiekiai visada atitinka tai, ką jūsų pompa iš tikrųjų gali suleisti.
+* **Paspauskite ir palaikykite** mygtuką, kad reikšmė keistųsi toliau. Kuo ilgiau laikote, tuo greičiau keičiasi.
+* Negalima nusileisti žemiau **0 V** ir pakilti aukščiau jūsų **maks. boluso** nustatymo.
 
-The running total is shown on the result page, so you always see the amount you are about to confirm. The change is shown after the carbs, for example *(+0.20 U)*, and the button you used turns green for more or red for less.
+Bendra suma rodoma rezultato puslapyje, todėl visada matote kiekį, kurį ketinate patvirtinti. Pakeitimas rodomas po angliavandenių, pavyzdžiui, *(+0,20 V)*, o paspaustas mygtukas tampa žalias, jei didinote, arba raudonas, jei mažinote.
 
-If **AAPS** had to limit the dose, for example because the calculated bolus is above your **max bolus** setting, a warning line in amber below the total says so (for example *"Bolus constraint applied"*). The same applies to a limited carbs amount.
+Jei **AAPS** turėjo apriboti dozę, pavyzdžiui, nes apskaičiuotas bolusas viršija jūsų **maks. boluso** nustatymą, po bendra suma gintarine spalva rodoma įspėjimo eilutė (pavyzdžiui, *„Pritaikytas boluso apribojimas“*). Tas pats taikoma ir apribotam angliavandenių kiekiui.
 
-```{admonition} This is not the same as Calculator Percentage :class: note The **Calculator Percentage** setting lets you enter a *percentage* of the calculated bolus **before** the result page appears. The **−** and **+** buttons adjust the *final amount* **on** the result page. You can use both.
+```{admonition} Tai nėra tas pats kaip Skaičiuotuvas proc. :class: note Nustatymas **Skaičiuotuvas proc.** leidžia įvesti apskaičiuoto boluso *procentą* **prieš** pasirodant rezultato puslapiui. Mygtukai **−** ir **+** koreguoja *galutinį kiekį* **rezultato** puslapyje. Galite naudoti abu.
 
     <br />(WearOsSmartwatch-wizard-meal-type)=
     
-    ### Choosing the meal type
+    ### Maisto tipo pasirinkimas
     
-    The watch calculator can split the carbs of a slow meal into carbs now and eCarbs later, like the [carbs type](#AapsScreens-carbs-type) of the phone wizard. Turn on **Calculator Meal Type** in the watch's **Settings** > **Interface**. The setting is off by default, and then the **Meal type** page is skipped.
+    Laikrodžio skaičiuotuvas gali lėtai įsisavinamo maisto angliavandenius padalyti į dabar suvalgomus angliavandenius ir vėlesnius i-AV, kaip telefono skaičiuotuvo [maisto tipas](#AapsScreens-carbs-type). Laikrodžio **Nustatymai** > **Sąsaja** įjunkite **Skaičiuotuvo maisto tipas**. Numatytai šis nustatymas išjungtas, tada puslapis **Maisto tipas** praleidžiamas.
     
-    * After you enter the carbs, a **Meal type** page shows three icons: **Bread**, **Cake** and **Pizza**. Tap an icon: its name and the carbs it gives show below the icons, for example *65 g* for bread, or *52+22 g* for pizza (52 g now and 22 g of eCarbs later). **Bread** is the default and keeps all the carbs now.
-    * The request and confirm pages show the carbs in the same way (*52+22 g*). The result page also shows when the eCarbs start and how long they last.
-    * The bolus is calculated only for the carbs eaten now. The split uses the same numbers as the phone wizard.
+    * Įvedus angliavandenius, puslapyje **Maisto tipas** rodomos trys piktogramos: **Duona**, **Pyragas** ir **Pica**. Bakstelėkite piktogramą: jos pavadinimas ir angliavandeniai rodomi po piktogramomis, pavyzdžiui, *65 g* duonai arba *52+22 g* picai (52 g dabar ir 22 g i-AV vėliau). **Duona** yra numatytasis pasirinkimas ir visus angliavandenius palieka dabar.
+    * Užklausos ir patvirtinimo puslapiuose angliavandeniai rodomi taip pat (*52+22 g*). Rezultato puslapyje taip pat rodoma, kada prasideda i-AV ir kiek laiko jie trunka.
+    * Bolusas apskaičiuojamas tik dabar suvalgomiems angliavandeniams. Padalijimui naudojami tie patys skaičiai kaip telefono skaičiuotuve.
     
     (WearOsSmartwatch-wizard-carb-time)=
     
-    ### Carb time and the eat reminder
+    ### Angliavandenių laikas ir valgymo priminimas
     
-    With **Calculator Carb Time** turned on in the watch's **Settings** > **Interface**, a **Carb time** page follows the carbs: the minutes until you eat, like the [carb time](#aaps-screens-bolus-wizard) of the phone wizard. **Now** is the default. **−** and **+** move it in steps of 5 minutes, up to an hour before or after now. A time in the past is for carbs you have eaten already.
+    Kai laikrodžio **Nustatymai** > **Sąsaja** įjungtas **Skaičiuotuvo AV laikas**, po angliavandenių eina puslapis **Angliavandenių laikas**: minutės iki valgio, kaip telefono skaičiuotuvo [angliavandenių laikas](#aaps-screens-bolus-wizard). Numatytoji reikšmė yra **Dabar**. **−** ir **+** keičia ją 5 minučių žingsniais, iki valandos prieš dabar arba po dabar. Laikas praeityje skirtas jau suvalgytiems angliavandeniams.
     
-    With a time in the future, a **Set alarm** bell appears under the value. It is on by default, tap it to turn it off. The request and result pages show the carb time, for example *+30 min*, and the bell. The phone records the carbs at that time, moves the eCarbs of the meal type with it, and starts its **time to eat** reminder.
+    Kai laikas ateityje, po reikšme atsiranda varpelis **Nustatyti įspėjimą**. Numatytai jis įjungtas, bakstelėkite jį, kad išjungtumėte. Užklausos ir rezultato puslapiuose rodomas angliavandenių laikas, pavyzdžiui, *+30 min*, ir varpelis. Telefonas įrašo angliavandenius tuo laiku, kartu perkelia maisto tipo i-AV ir paleidžia priminimą **Laikas valgyti**.
     
-    | Result | BG graph | Running | Time to eat |
+    | Rezultatas | KG grafikas | Veikia | Laikas valgyti |
     | --- | --- | --- | --- |
-    | ![Result page with a carb time](../images/wearos/calculator/calculator_result_carb_time.png) | ![The reminder in the BG graph](../images/wearos/eat_reminder/eat_reminder_graph.png) | ![The running reminder](../images/wearos/eat_reminder/eat_reminder_running.png) | ![The reminder rings](../images/wearos/eat_reminder/eat_reminder_ringing.png) |
+    | ![Rezultato puslapis su angliavandenių laiku](../images/wearos/calculator/calculator_result_carb_time.png) | ![Priminimas KG grafike](../images/wearos/eat_reminder/eat_reminder_graph.png) | ![Veikiantis priminimas](../images/wearos/eat_reminder/eat_reminder_running.png) | ![Priminimas skamba](../images/wearos/eat_reminder/eat_reminder_ringing.png) |
     
-    The reminder also lives on the watch, so it rings when the phone is out of reach too:
+    Priminimas veikia ir laikrodyje, todėl jis suskamba net tada, kai telefonas yra toli:
     
-    * The **BG Graph** screen, the **BG Graph** tile and the graph of the **Complications watchface** draw a dashed orange line where the reminder rings, with the minutes left next to it.
-    * While it runs, a silent **Time to eat** notification with **Stop** and **+5 min** sits in the notification stream. It comes back when you swipe it away, until the reminder is over.
-    * When the time has come, the watch vibrates, and again every half minute for five minutes until you answer. The notification offers **Silence** and **+5 min**, and swiping it away silences it too.
+    * Ekrane **KG grafikas**, plytelėje **KG grafikas** ir **Elementų ciferblatas** grafike toje vietoje, kur suskambės priminimas, nubrėžiama oranžinė brūkšninė linija, o šalia jos rodomos likusios minutės.
+    * Kol priminimas veikia, pranešimų sraute yra tylus pranešimas **Laikas valgyti** su mygtukais **Sustabdyti** ir **+5 min**. Jį nubraukus, jis vėl atsiranda, kol priminimas baigsis.
+    * Atėjus laikui, laikrodis vibruoja ir vibruoja vėl kas pusę minutės penkias minutes, kol atsakysite. Pranešime yra **Nutildyti** ir **+5 min**, o jį nubraukus jis taip pat nutildomas.
     
-    **Stop**, **Silence** and **+5 min** do the same on the watch, on the phone and on an **AAPSClient**, and all of them show the same reminder.
+    **Sustabdyti**, **Nutildyti** ir **+5 min** veikia vienodai laikrodyje, telefone ir **AAPSClient**, ir visur rodomas tas pats priminimas.
     
     (Watchfaces-complications)=
     
-    ## Complications
+    ## Ekrano elementai
     
-    _Complication_ is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+    _Ekrano elementas_ (angl. complication) – tai terminas iš tradicinės laikrodžių gamybos, kur jis reiškia priedą prie pagrindinio ciferblato – papildomą mažą langelį ar mažesnį ciferblatą (su data, savaitės diena, mėnulio faze ir pan.). Wear OS 2.0 perėmė šią idėją ir leidžia prie bet kurio ciferblato, palaikančio ekrano elementus, pridėti pasirinktinių duomenų teikėjų duomenis, pvz., orus, pranešimus, sporto skaitiklius ir kt.
     
-    AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+    AAPS Wear OS programėlė ekrano elementus palaiko nuo versijos `2.6` ir leidžia bet kurį trečiosios šalies ciferblatą, palaikantį ekrano elementus, nustatyti taip, kad jis rodytų su AAPS susijusius duomenis (KG su tendencija, AIO, AAO ir kt.).
     
-    Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+    Ekrano elementai taip pat veikia kaip AAPS funkcijų **sparčiosios nuorodos**. Bakstelėję juos, galite atidaryti su AAPS susijusius meniu ir langus (priklauso nuo ekrano elemento tipo ir konfigūracijos).
     
-    ![The Complications watchface, every slot filled with an AAPS complication](../images/wearos/complications_on_watchface.png)
+    ![Elementų ciferblatas, kurio kiekvienoje vietoje yra AAPS ekrano elementas](../images/wearos/complications_on_watchface.png)
     
-    ### Complication Types
+    ### Ekrano elementų tipai
     
-    AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+    AAPS Wear OS programėlė pateikia tik neapdorotus duomenis pagal iš anksto nustatytus formatus. Kur ir kaip rodyti ekrano elementus, įskaitant jų išdėstymą, rėmelį, spalvą ir šriftą, sprendžia trečiosios šalies ciferblatas. Iš daugelio galimų Wear OS ekrano elementų tipų AAPS naudoja:
     
-    * `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
-    * `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
-    * `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
-    * `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
-    * `SMALL IMAGE` / `MONOCHROMATIC IMAGE` - A small icon. In a `SMALL IMAGE` slot AAPS draws it in its own colour; in a `MONOCHROMATIC IMAGE` slot the watchface tints it.
+    * `SHORT TEXT` – dvi teksto eilutės po 7 simbolius, kartais vadinamos reikšme ir pavadinimu. Paprastai rodomas apskritime arba mažame ovale – vienas po kitu arba vienas šalia kito. Tai ekrano elementas, kuriame labai mažai vietos. Kad tilptų, AAPS stengiasi pašalinti nereikalingus simbolius: suapvalina reikšmes, pašalina nulius reikšmių pradžioje ir pabaigoje ir pan.
+    * `LONG TEXT` – dvi teksto eilutės, maždaug po 20 simbolių. Paprastai rodomas stačiakampyje arba ilgame ovale – vienas po kitu. Naudojamas išsamesnei informacijai ir tekstinei būsenai.
+    * `RANGED VALUE` – naudojamas reikšmėms iš iš anksto nustatyto intervalo, pvz., procentams. Turi piktogramą, pavadinimą ir paprastai rodomas kaip apskritimo formos eigos indikatorius.
+    * `LARGE IMAGE` – pasirinktinis fono paveikslėlis, kurį galima naudoti kaip foną (jei ciferblatas tai palaiko).
+    * `SMALL IMAGE` / `MONOCHROMATIC IMAGE` – maža piktograma. Vietoje `SMALL IMAGE` AAPS ją piešia savo spalva; vietoje `MONOCHROMATIC IMAGE` ją nuspalvina ciferblatas.
     
-    ### Complication Setup
+    ### Ekrano elementų sąranka
     
-    To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+    Norėdami pridėti ekrano elementą prie ciferblato, ilgai palaikykite ciferblatą ir spustelėkite apačioje esančią krumpliaračio piktogramą. Priklausomai nuo to, kaip juos nustato konkretus ciferblatas, spustelėkite rezervuotas vietas arba atidarykite ciferblato ekrano elementų sąrankos meniu. AAPS ekrano elementai sugrupuoti po AAPS meniu įrašu.
     
-    When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+    Kai nustatote ekrano elementus ciferblate, Wear OS parodo ir atfiltruoja sąrašą elementų, kurie tinka pasirinktai ciferblato vietai. Jei konkretaus ekrano elemento sąraše nerandate, tikriausiai jo tipas netinka šiai vietai.
     
-    ### Complications provided by AAPS
+    ### AAPS teikiami ekrano elementai
     
-    AAPS provides the complications below. "Opens" is what a tap does with **Complication Tap Action** left at **Default**, see [Complication related settings](#WearOsSmartwatch-complication-settings).
+    AAPS teikia toliau išvardytus ekrano elementus. „Atidaro“ – tai, ką atlieka bakstelėjimas, kai **Elementų skirtuko veiksmai** palikta **Numatytasis**, žr. [Su ekrano elementais susiję nustatymai](#WearOsSmartwatch-complication-settings).
     
-    **Glucose**
+    **Gliukozė**
     
-    * **Blood Glucose** (`SHORT TEXT`, opens _Loop Status_): the glucose value with the trend arrow on the first line, the age of the reading and the delta on the second.
-    * **Blood Glucose (large)** (`SHORT TEXT`, opens _BG Graph_): the glucose value alone on the first line, so the watchface can draw it big. The age and the trend arrow are on the second line.
-    * **BG Graph** (`SMALL IMAGE` / `LARGE IMAGE`, opens _BG Graph_): the BG graph as a picture, for watchfaces with an image slot. This is the graph on the **Complications watchface**.
-    * **Full Status** (`LONG TEXT`, opens _Menu_): most of the data in one line: the glucose value with the trend arrow, the delta and the age of the reading, then carbs on board, insulin on board and the basal rate.
-    * **Full Status (flipped)** (`LONG TEXT`, opens _Menu_): the same, with the two lines swapped, for watchfaces that show only one of the two lines of a `LONG TEXT` slot.
+    * **Kraujo gliukozė** (`SHORT TEXT`, atidaro _Ciklo būsena_): pirmoje eilutėje gliukozės reikšmė su tendencijos rodykle, antroje – rodmens amžius ir pokytis.
+    * **Kraujo gliukozė (didelis)** (`SHORT TEXT`, atidaro _KG grafikas_): pirmoje eilutėje tik gliukozės reikšmė, kad ciferblatas galėtų ją rodyti didelę. Amžius ir tendencijos rodyklė yra antroje eilutėje.
+    * **KG grafikas** (`SMALL IMAGE` / `LARGE IMAGE`, atidaro _KG grafikas_): KG grafikas kaip paveikslėlis, ciferblatams su paveikslėlio vieta. Tai grafikas, rodomas **Elementų ciferblatas**.
+    * **Pilna informacija** (`LONG TEXT`, atidaro _Meniu_): dauguma duomenų vienoje eilutėje: gliukozės reikšmė su tendencijos rodykle, pokytis ir rodmens amžius, tada aktyvūs angliavandeniai, aktyvus insulinas ir valandinė bazė.
+    * **Pilna informacija (atvirkščiai)** (`LONG TEXT`, atidaro _Meniu_): tas pats, tik sukeistos abi eilutės – ciferblatams, kurie rodo tik vieną iš dviejų `LONG TEXT` vietos eilučių.
     
-    **Insulin and carbs**
+    **Insulinas ir angliavandeniai**
     
-    * **IoB Icon** (`SHORT TEXT`, opens _Bolus_): insulin on board with a syringe icon.
-    * **IoB Detailed** (`SHORT TEXT`, opens _Bolus_): total insulin on board on the first line, the bolus and basal parts on the second.
-    * **CoB Icon** (`SHORT TEXT`, opens _Wizard_): carbs on board with a carbs icon.
-    * **CoB Detailed** (`SHORT TEXT`, opens _Wizard_): the carbs on board now on the first line, the carbs still to come (eCarbs) on the second.
-    * **CoB & IoB** (`SHORT TEXT`, opens _Wizard_): insulin on board on the first line, carbs on board on the second.
+    * **AIO ikonėlė** (`SHORT TEXT`, atidaro _Bolusas_): aktyvus insulinas su švirkšto piktograma.
+    * **AIO detaliai** (`SHORT TEXT`, atidaro _Bolusas_): pirmoje eilutėje bendras aktyvus insulinas, antroje – boluso ir valandinės bazės dalys.
+    * **AAO ikonėlė** (`SHORT TEXT`, atidaro _Skaičiuotuvas_): aktyvūs angliavandeniai su angliavandenių piktograma.
+    * **AAO detaliai** (`SHORT TEXT`, atidaro _Skaičiuotuvas_): pirmoje eilutėje dabartiniai aktyvūs angliavandeniai, antroje – dar laukiami angliavandeniai (i-AV).
+    * **AAO & AIO** (`SHORT TEXT`, atidaro _Skaičiuotuvas_): pirmoje eilutėje aktyvus insulinas, antroje – aktyvūs angliavandeniai.
     
-    **Basal and target**
+    **Valandinė bazė ir tikslas**
     
-    * **Basal rate** (`SHORT TEXT`, opens _Menu_): the current basal rate.
-    * **BR & IoB** (`SHORT TEXT`, opens _Menu_): insulin on board on the first line, the basal rate on the second.
-    * **BR & Target** (`SHORT TEXT`, opens _Temp Target_): the target on the first line, with the time left when a temporary target runs, and the basal rate on the second.
-    * **Target** (`SHORT TEXT`, opens _Temp Target_): the target on the first line and, while a temporary target runs, its time left on the second.
-    * **BR, CoB & IoB** (`SHORT TEXT`, opens _Menu_): the basal rate on the first line, carbs on board and insulin on board on the second.
+    * **Valandinė bazė** (`SHORT TEXT`, atidaro _Meniu_): dabartinė valandinė bazė.
+    * **VB & AIO** (`SHORT TEXT`, atidaro _Meniu_): pirmoje eilutėje aktyvus insulinas, antroje – valandinė bazė.
+    * **VB & tikslas** (`SHORT TEXT`, atidaro _Laikinas tikslas_): pirmoje eilutėje tikslas, o kai veikia laikinas tikslas, ir likęs laikas, antroje – valandinė bazė.
+    * **Tikslas** (`SHORT TEXT`, atidaro _Laikinas tikslas_): pirmoje eilutėje tikslas, o kol veikia laikinas tikslas, antroje – jo likęs laikas.
+    * **VB, AAO & AIO** (`SHORT TEXT`, atidaro _Meniu_): pirmoje eilutėje valandinė bazė, antroje – aktyvūs angliavandeniai ir aktyvus insulinas.
     
-    **Loop and phone**
+    **Ciklas ir telefonas**
     
-    * **Running mode** (`SMALL IMAGE` / `ICON`, opens _Running mode picker_): the current loop mode as an icon: closed loop, open loop, low glucose suspend, suspended, disconnected or disabled. A tap opens a picker with the mode changes allowed right now, for example **Suspend loop**, **Disconnect pump**, **Resume loop** or **Reconnect pump**. The same picker is in the **AAPS** main menu under **Running mode**.
-    * **Uploader/Phone Battery** (`RANGED VALUE` / `SHORT TEXT` / `ICON`, opens _Status_): the battery of the **AAPS** phone, as a gauge with a battery icon, as a number, or as the icon alone. It updates together with the other **AAPS** data, usually every 5 minutes with a new reading.
+    * **Veikimo režimas** (`SMALL IMAGE` / `ICON`, atidaro _Veikimo režimo pasirinkimą_): dabartinis ciklo režimas kaip piktograma: uždaras ciklas, atviras ciklas, stabdymas esant žemai glikemijai, sustabdytas, atjungtas arba išjungtas. Bakstelėjus atidaromas pasirinkimų sąrašas su šiuo metu leidžiamais režimo pakeitimais, pavyzdžiui, **Sustabdyti ciklą**, **Atjungti pompą**, **Atnaujinti ciklą** arba **Iš naujo prijungti pompą**. Tas pats pasirinkimų sąrašas yra **AAPS** pagrindiniame meniu, punkte **Veikimo režimas**.
+    * **Telefono baterija** (`RANGED VALUE` / `SHORT TEXT` / `ICON`, atidaro _Būklė_): **AAPS** telefono baterija kaip skalė su baterijos piktograma, kaip skaičius arba tik kaip piktograma. Ji atnaujinama kartu su kitais **AAPS** duomenimis, paprastai kas 5 minutes gavus naują rodmenį.
     
-    The **Running mode** picker, as opened from the complication, the main menu or the Running mode tile:
+    **Veikimo režimas** pasirinkimų sąrašas, atidarytas iš ekrano elemento, pagrindinio meniu arba plytelės Veikimo režimas:
     
-    ![Running mode picker with the modes you can switch to](../images/wearos/running_mode_picker.png)
+    ![Veikimo režimo pasirinkimų sąrašas su režimais, į kuriuos galite perjungti](../images/wearos/running_mode_picker.png)
     
     (WearOsSmartwatch-complication-settings)=
     
-    ### Complication related settings
+    ### Su ekrano elementais susiję nustatymai
     
-    In the **AAPS** main menu on the watch, open **Settings** > **Complication**:
+    Laikrodžio **AAPS** pagrindiniame meniu atidarykite **Nustatymai** > **Ekrano elementas**:
     
-    ![Settings > Complication on the watch](../images/wearos/settings_complication.png)
+    ![Nustatymai > Ekrano elementas laikrodyje](../images/wearos/settings_complication.png)
     
-    * **Complication Tap Action** (default `Default`): what a tap on an **AAPS** complication opens, for all complications at once:
-      * _Default_: what the complication itself opens, see the list above
-      * _Menu_: the **AAPS** main menu
-      * _Calculator_: the bolus calculator
-      * _Treatment_: the treatment dialog, insulin and carbs
-      * _eCarbs_: the eCarbs dialog
-      * _Status_: the status menu
-      * _Running mode_: the running mode picker. Needs **Wear control** turned on in the phone's Wear settings, otherwise the main menu opens instead.
-      * _None_: a tap does nothing
-    * **BG graph time range** (default `3 hours`): how many hours the **BG Graph** complication shows, 1, 3 or 6. The BG Graph tile has its own setting.
-    * **Unicode in Complications** (default `On`): the complications use Unicode symbols like `Δ` for the delta, `⁞` as separator and `⎍` for the basal rate. How they look depends on the font of the watchface. Turn this `Off` when a watchface draws them as boxes or blanks.
+    * **Elementų skirtuko veiksmai** (numatyta `Default`): ką atidaro bakstelėjimas ant **AAPS** ekrano elemento, iš karto visiems elementams:
+      * _Numatytasis_: tai, ką atidaro pats ekrano elementas, žr. sąrašą aukščiau
+      * _Meniu_: **AAPS** pagrindinis meniu
+      * _Skaičiuotuvas_: boluso skaičiuotuvas
+      * _Terapija_: terapijos langas, insulinas ir angliavandeniai
+      * _i-AV_: i-AV langas
+      * _Būklė_: būklės meniu
+      * _Veikimo režimas_: veikimo režimo pasirinkimų sąrašas. Reikia, kad telefono Wear nustatymuose būtų įjungtas **Valdymas per Wear**, kitaip vietoj jo atidaromas pagrindinis meniu.
+      * _Nėra_: bakstelėjimas nieko nedaro
+    * **KG grafiko laiko intervalas** (numatyta `3 hours`): kiek valandų rodo ekrano elementas **KG grafikas**: 1, 3 arba 6. Plytelė KG grafikas turi savo nustatymą.
+    * **Unikodas elementuose** (numatyta `On`): ekrano elementuose naudojami Unikodo simboliai, pvz., `Δ` pokyčiui, `⁞` kaip skirtukas ir `⎍` valandinei bazei. Kaip jie atrodo, priklauso nuo ciferblato šrifto. Išjunkite (`Off`), jei ciferblatas juos rodo kaip langelius arba tuščias vietas.
     
     (WearOsSmartwatch-wear-os-tiles)=
     
-    ## Wear OS Tiles
+    ## Wear OS plytelės
     
-    Tiles are the pages you reach by swiping from the watchface. **AAPS** brings seven of them, each a set of up to four buttons. A tap on a button opens the matching dialog on the watch, or asks you to confirm, and the phone then does the work. A tile is a shortcut, not a status display: it does not hold the state of the phone app.
+    Plytelės – tai puslapiai, kuriuos pasiekiate braukdami nuo ciferblato. **AAPS** pateikia septynias plyteles, kiekvienoje – iki keturių mygtukų. Bakstelėjus mygtuką, laikrodyje atidaromas atitinkamas langas arba prašoma patvirtinti, o darbą atlieka telefonas. Plytelė yra spartusis mygtukas, o ne būsenos rodinys: ji nesaugo telefono programėlės būsenos.
     
-    Before using the tiles, turn on **Wear control** in [Settings > Wear](#preferences-wear).
+    Prieš naudodami plyteles, įjunkite **Valdymas per Wear** skiltyje [Nustatymai > Išmanieji laikrodžiai](#preferences-wear).
     
-    ### Adding a tile
+    ### Plytelės pridėjimas
     
-    There are two ways, depending on your watch and phone:
+    Yra du būdai, priklausomai nuo jūsų laikrodžio ir telefono:
     
-    1. On the watch: swipe from the watchface past the last tile to **Add tile** and pick an **AAPS** tile. On most watches a long-press on a tile also opens the add and remove view.
-    2. On the phone, in the companion app for your watch (**Galaxy Wearable** for Samsung, **Wear OS** for other brands): open **Tiles**, tap **Add** and pick the **AAPS** tiles you want. The order of the tiles can be changed by dragging.
+    1. Laikrodyje: nuo ciferblato braukite pro paskutinę plytelę iki **Add tile** (pridėti plytelę) ir pasirinkite **AAPS** plytelę. Daugumoje laikrodžių ilgai palaikius plytelę taip pat atidaromas pridėjimo ir šalinimo rodinys.
+    2. Telefone, jūsų laikrodžio susietoje programėlėje (**Galaxy Wearable** – Samsung, **Wear OS** – kitiems gamintojams): atidarykite **Tiles** (plytelės), bakstelėkite **Add** (pridėti) ir pasirinkite norimas **AAPS** plyteles. Plytelių tvarką galima keisti jas tempiant.
     
-    ![The seven AAPS tiles in the companion app](../images/wearos/tiles/tiles_list_companion_app.png)
+    ![Septynios AAPS plytelės susietoje programėlėje](../images/wearos/tiles/tiles_list_companion_app.png)
     
-    ### Tile settings
+    ### Plytelės nustatymai
     
-    The **Actions**, **Temp Target**, **BG Graph** and **Scene** tiles have settings on the watch. Open the **AAPS** main menu, then **Settings** > **Tiles**, and pick the tile. A long-press on the tile also opens its settings, except on Pixel watches. The other three tiles are filled from the phone and have nothing to set on the watch.
+    Plytelės **Veiksmai**, **Laikinas tikslas**, **KG grafikas** ir **Scenarijus** turi nustatymus laikrodyje. Atidarykite **AAPS** pagrindinį meniu, tada **Nustatymai** > **Plytelės**, ir pasirinkite plytelę. Ilgai palaikius plytelę taip pat atidaromi jos nustatymai, išskyrus Pixel laikrodžius. Kitos trys plytelės užpildomos iš telefono, ir laikrodyje jose nėra ką nustatyti.
     
-    | Main menu | Settings | Tiles |
+    | Pagrindinis meniu | Nustatymai | Plytelės |
     | --- | --- | --- |
-    | ![AAPS main menu, Settings](../images/wearos/tiles/tile_settings_menu.png) | ![Settings, Tiles](../images/wearos/tiles/tile_settings_settings.png) | ![Tiles, pick the tile](../images/wearos/tiles/tile_settings_tiles.png) |
+    | ![AAPS pagrindinis meniu, Nustatymai](../images/wearos/tiles/tile_settings_menu.png) | ![Nustatymai, Plytelės](../images/wearos/tiles/tile_settings_settings.png) | ![Plytelės, pasirinkite plytelę](../images/wearos/tiles/tile_settings_tiles.png) |
     
-    The settings of a tile are a list of its four places. Tap a place to pick what it shows, or **None** to leave it empty.
+    Plytelės nustatymai – tai jos keturių vietų sąrašas. Bakstelėkite vietą ir pasirinkite, ką ji rodys, arba **Nėra**, kad ji liktų tuščia.
     
-    | Long-press on the tile | Settings of the Temp Target tile |
+    | Ilgas plytelės palaikymas | Plytelės Laikinas tikslas nustatymai |
     | --- | --- |
-    | ![Long-press on a tile, tap the pencil](../images/wearos/tiles/tile_settings_long_press.png) | ![Temp Target tile settings, one entry per place](../images/wearos/tiles/tile_settings_temp_target.png) |
+    | ![Ilgai palaikykite plytelę, bakstelėkite pieštuką](../images/wearos/tiles/tile_settings_long_press.png) | ![Plytelės Laikinas tikslas nustatymai, po vieną įrašą kiekvienai vietai](../images/wearos/tiles/tile_settings_temp_target.png) |
     
-    Every tile has four places. A tile with more entries than that shows the first four.
+    Kiekviena plytelė turi keturias vietas. Jei plytelė turi daugiau įrašų, rodomi pirmieji keturi.
     
-    ### Actions tile
+    ### Plytelė Veiksmai
     
-    ![Actions tile](../images/wearos/tiles/tile_actions.png)
+    ![Plytelė Veiksmai](../images/wearos/tiles/tile_actions.png)
     
-    Shortcuts to the dialogs of the **AAPS** watch app. Pick up to four of these in the tile settings:
+    Sparčiosios nuorodos į **AAPS** laikrodžio programėlės langus. Plytelės nustatymuose pasirinkite iki keturių iš šių:
     
-    * **Calc**: the bolus calculator, with a carbs input, an optional percentage [1] and an optional meal type [2]
-    * **Treat**: insulin and carbs in one go
-    * **Insulin**: a bolus, entered in units
-    * **Carbs**: carbs, also extended carbs. A **negative** amount is accepted, down to your current COB, to correct carbs you entered earlier. Carb removals are shown on the watch's BG graph.
-    * **eCarbs**: extended carbs
-    * **TempT**: a temporary target with a custom target and duration
-    * **Profile switch**: a profile switch with percentage, time shift and duration
+    * **Skaič.**: boluso skaičiuotuvas su angliavandenių įvedimu, papildomu procentu [1] ir papildomu maisto tipu [2]
+    * **Terap**: insulinas ir angliavandeniai vienu kartu
+    * **Insulinas**: bolusas, įvedamas vienetais
+    * **AV**: angliavandeniai, taip pat ištęsti angliavandeniai. Priimamas ir **neigiamas** kiekis, iki jūsų dabartinių AAO, kad galėtumėte pataisyti anksčiau įvestus angliavandenius. Pašalinti angliavandeniai rodomi laikrodžio KG grafike.
+    * **i-AV**: ištęsti angliavandeniai
+    * **LaikinasTikslas**: laikinas tikslas su pasirinktu tikslu ir trukme
+    * **Profilio keitimas**: profilio keitimas su procentu, laiko perstūmimu ir trukme
     
-    ![Actions tile settings: one entry per place](../images/wearos/tiles/tile_settings_actions.png)
+    ![Plytelės Veiksmai nustatymai: po vieną įrašą kiekvienai vietai](../images/wearos/tiles/tile_settings_actions.png)
     
-    The dialogs the buttons open. Swipe from right to left to reach the next page of a dialog, and tap the check mark on the last page to send the request to the phone:
+    Langai, kuriuos atidaro mygtukai. Braukite iš dešinės į kairę, kad pereitumėte į kitą lango puslapį, ir paskutiniame puslapyje bakstelėkite varnelę, kad išsiųstumėte užklausą į telefoną:
     
-    | Treat | Insulin | Carbs | eCarbs | TempT | Profile switch |
+    | Terap | Insulinas | AV | i-AV | LaikinasTikslas | Profilio keitimas |
     | --- | --- | --- | --- | --- | --- |
-    | ![Treatment dialog, insulin page](../images/wearos/dialogs/dialog_treatment.png) | ![Insulin dialog](../images/wearos/dialogs/dialog_insulin.png) | ![Carbs dialog](../images/wearos/dialogs/dialog_carbs.png) | ![eCarbs dialog](../images/wearos/dialogs/dialog_ecarbs.png) | ![Temp Target dialog, duration page](../images/wearos/dialogs/dialog_temp_target.png) | ![Profile switch dialog](../images/wearos/dialogs/dialog_profile_switch.png) |
+    | ![Terapijos langas, insulino puslapis](../images/wearos/dialogs/dialog_treatment.png) | ![Insulino langas](../images/wearos/dialogs/dialog_insulin.png) | ![Angliavandenių langas](../images/wearos/dialogs/dialog_carbs.png) | ![i-AV langas](../images/wearos/dialogs/dialog_ecarbs.png) | ![Laikino tikslo langas, trukmės puslapis](../images/wearos/dialogs/dialog_temp_target.png) | ![Profilio keitimo langas](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] In the watch's **Settings** > **Interface**, turn on **Calculator Percentage** to show the percentage input in the bolus calculator. The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). The other calculator settings are those of the phone under **Settings** > **Bolus wizard settings**.
+    [1] Laikrodžio **Nustatymai** > **Sąsaja** įjunkite **Skaičiuotuvas proc.**, kad boluso skaičiuotuve būtų rodomas procento įvedimas. Numatytasis procentas imamas iš telefono nustatymo [„Boluso procentas“](#Preferences-deliver-this-part-of-bolus-wizard-result). Kiti skaičiuotuvo nustatymai yra telefono nustatymai skiltyje **Nustatymai** > **Boluso patarėjo nustatymai**.
     
-    [2] In the watch's **Settings** > **Interface**, turn on **Calculator Meal Type** to show the **Meal type** page, where you pick **Bread**, **Cake** or **Pizza** to split the carbs of a slow meal into carbs now and eCarbs later. See [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
+    [2] Laikrodžio **Nustatymai** > **Sąsaja** įjunkite **Skaičiuotuvo maisto tipas**, kad būtų rodomas puslapis **Maisto tipas**, kuriame pasirenkate **Duona**, **Pyragas** arba **Pica**, kad lėtai įsisavinamo maisto angliavandeniai būtų padalyti į dabar suvalgomus angliavandenius ir vėlesnius i-AV. Žr. [Maisto tipo pasirinkimas](#WearOsSmartwatch-wizard-meal-type).
     
-    ### Temp Target tile
+    ### Plytelė Laikinas tikslas
     
-    ![Temp Target tile](../images/wearos/tiles/tile_temp_target.png)
+    ![Plytelė Laikinas tikslas](../images/wearos/tiles/tile_temp_target.png)
     
-    Temporary targets from the phone's presets. Set the duration and the target of each preset on the phone under **Settings** > [Default temp targets](#Preferences-default-temp-targets). Pick up to four of these in the tile settings:
+    Laikini tikslai iš telefono ruošinių. Kiekvieno ruošinio trukmę ir tikslą nustatykite telefone skiltyje **Nustatymai** > [Numatytieji laikini tikslai](#Preferences-default-temp-targets). Plytelės nustatymuose pasirinkite iki keturių iš šių:
     
-    * **Activity**: for sport
-    * **Eating**: eating soon, a lower target so there is more insulin on board at the meal
-    * **Hypo**: a higher target during a hypo treatment
-    * **Manual**: a custom target and duration
-    * **Cancel**: stops the running temporary target. The button is shown only while a temporary target is running.
+    * **Sportas**: sportui
+    * **Valgis**: netrukus valgysiu – žemesnis tikslas, kad valgant būtų daugiau aktyvaus insulino
+    * **Hipo**: aukštesnis tikslas gydant hipoglikemiją
+    * **Rankiniu būdu**: pasirinktas tikslas ir trukmė
+    * **Atšaukti**: sustabdo veikiantį laikiną tikslą. Mygtukas rodomas tik tada, kai veikia laikinas tikslas.
     
-    ### Quick Wizard tile
+    ### Plytelė Greitasis vedlys
     
-    ![Quick Wizard tile](../images/wearos/tiles/tile_quick_wizard.png)
+    ![Plytelė Greitasis vedlys](../images/wearos/tiles/tile_quick_wizard.png)
     
-    The [QuickWizard](#quickwizards) entries of the phone that have **Show on Watch** turned on, within their valid hours. A carbs entry shows its carbs in g, an insulin entry its fixed dose in U. A tap runs the entry after a confirmation on the watch. There is nothing to set on the watch: edit the entries on the phone, and turn on **Show on Watch** under **Device Selection** for each entry you want on the tile. Outside the valid hours of all your entries, the tile shows **No config available**.
+    Telefono [Greitojo vedlio](#quickwizards) įrašai, kuriuose įjungta **Rodyti laikrodyje**, jų galiojimo valandomis. Angliavandenių įrašas rodo savo angliavandenius g, insulino įrašas – savo fiksuotą dozę V. Bakstelėjus įrašas įvykdomas, kai jį patvirtinate laikrodyje. Laikrodyje nėra ką nustatyti: įrašus redaguokite telefone ir kiekvienam įrašui, kurį norite matyti plytelėje, skiltyje **Įrenginio pasirinkimas** įjunkite **Rodyti laikrodyje**. Už visų jūsų įrašų galiojimo valandų ribų plytelėje rodoma **Nėra konfigūracijos**.
     
-    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/quickwizard_watch_phone.png)
+    ![Greitojo vedlio įrašas su įjungta parinktimi Rodyti laikrodyje ir plytelė, kurioje jis rodomas](../images/quickwizard_watch_phone.png)
     
-    ### Scene tile
+    ### Plytelė Scenarijus
     
-    ![Scene tile](../images/wearos/tiles/tile_scene.png)
+    ![Plytelė Scenarijus](../images/wearos/tiles/tile_scene.png)
     
-    The [Scenes](#scenes-from-watch) of the phone. Each of the four places is set to **Automatic**, **None** or one scene in the tile settings. An **Automatic** place takes the next scene from the phone's list that no other place has claimed. A place set to a scene that no longer exists on the phone shows **Unavailable**.
+    Telefono [scenarijai](#scenes-from-watch). Plytelės nustatymuose kiekviena iš keturių vietų nustatoma į **Automatiškai**, **Nėra** arba vieną scenarijų. Vieta **Automatiškai** paima kitą scenarijų iš telefono sąrašo, kurio nepasirinko jokia kita vieta. Vieta, nustatyta į scenarijų, kurio telefone nebėra, rodo **Nepasiekiama**.
     
-    ![Scene tile settings, four places set to Automatic](../images/wearos/tiles/tile_settings_scene.png)
+    ![Plytelės Scenarijus nustatymai, keturios vietos nustatytos į Automatiškai](../images/wearos/tiles/tile_settings_scene.png)
     
-    ### Running mode tile
+    ### Plytelė Veikimo režimas
     
-    ![Running mode tile](../images/wearos/tiles/tile_running_mode.png)
+    ![Plytelė Veikimo režimas](../images/wearos/tiles/tile_running_mode.png)
     
-    The [running modes](#aaps-screens-running-mode) you can switch to from the current one, with the same icons as on the phone: closed loop, low glucose suspend, open loop, disable loop, suspend loop and disconnect pump, or resume and reconnect while one of those runs. **Suspend loop** and **Disconnect pump** ask for a duration first. The phone decides which modes are offered, the watch shows the first four and leaves out **Disable loop** when **Suspend loop** is on the list.
+    [Veikimo režimai](#aaps-screens-running-mode), į kuriuos galite perjungti iš dabartinio, su tomis pačiomis piktogramomis kaip telefone: uždaras ciklas, stabdymas esant žemai glikemijai, atviras ciklas, ciklo išjungimas, ciklo sustabdymas ir pompos atjungimas, arba atnaujinimas ir prijungimas iš naujo, kol veikia vienas iš jų. **Sustabdyti ciklą** ir **Atjungti pompą** pirmiausia paprašo trukmės. Kuriuos režimus siūlyti, sprendžia telefonas, laikrodis rodo pirmuosius keturis ir praleidžia **Išjungti ciklą**, kai sąraše yra **Sustabdyti ciklą**.
     
-    ### User Action tile
+    ### Plytelė Naudotojo veiksmas
     
-    ![User Action tile](../images/wearos/tiles/tile_user_action.png)
+    ![Plytelė Naudotojo veiksmas](../images/wearos/tiles/tile_user_action.png)
     
-    One button for each [automation](#automations-automation-triggers) on the phone whose trigger is **User action**. A tap asks you to confirm, then the phone runs the automation's actions. The buttons are named after the automations, so give them short names. There is nothing to set on the watch.
+    Po vieną mygtuką kiekvienai telefono [automatizacijai](#automations-automation-triggers), kurios sąlyga yra **Naudotojo veiksmas**. Bakstelėjus prašoma patvirtinti, tada telefonas atlieka automatizacijos veiksmus. Mygtukai pavadinti pagal automatizacijas, todėl suteikite joms trumpus pavadinimus. Laikrodyje nėra ką nustatyti.
     
-    ### BG Graph tile
+    ### Plytelė KG grafikas
     
-    ![BG Graph tile](../images/wearos/tiles/tile_bg_graph.png)
+    ![Plytelė KG grafikas](../images/wearos/tiles/tile_bg_graph.png)
     
-    The glucose value with arrow, delta and age, below it IOB, COB, basal rate and target, and the BG graph with predictions, boluses, carbs and SMBs. Two settings on the watch: **Time range** (1, 3 or 6 hours) and **Tap action**, which opens the full **BG Graph**, the **Main Menu** or the **Loop Status** screen.
+    Gliukozės reikšmė su rodykle, pokyčiu ir amžiumi, po ja AIO, AAO, valandinė bazė ir tikslas, taip pat KG grafikas su prognozėmis, bolusais, angliavandeniais ir SMB. Laikrodyje du nustatymai: **Laiko intervalas** (1, 3 arba 6 valandos) ir **Veiksmas palietus**, kuris atidaro visą **KG grafikas**, **Pagrindinis meniu** arba ekraną **Ciklo būsena**.
     
-    ![The BG Graph screen](../images/wearos/bg_graph.png)
+    ![Ekranas KG grafikas](../images/wearos/bg_graph.png)
     
-    ![BG Graph tile settings: Time range and Tap action](../images/wearos/tiles/tile_settings_bg_graph.png)
+    ![Plytelės KG grafikas nustatymai: Laiko intervalas ir Veiksmas palietus](../images/wearos/tiles/tile_settings_bg_graph.png)
     
-    ## Always on
+    ## Visada įjungtas ekranas
     
-    This section and the next apply to the classic **AAPS** watchfaces on Wear OS 5 and older. On Wear OS 6 the **Complications watchface** has an always-on display of its own, see [the watchface AAPS installs](#wearos-aaps-v4-watchface).
+    Šis ir kitas skyriai taikomi klasikiniams **AAPS** ciferblatams Wear OS 5 ir senesnėse versijose. Wear OS 6 sistemoje **Elementų ciferblatas** turi savo visada įjungto ekrano režimą, žr. [AAPS įdiegiamas ciferblatas](#wearos-aaps-v4-watchface).
     
-    Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
+    Ilgas Android Wear OS išmaniųjų laikrodžių baterijos veikimo laikas yra iššūkis. Kai kurie išmanieji laikrodžiai be įkrovimo veikia iki 30 valandų. Kad būtų taupoma kuo daugiau energijos, kai laikrodis nenaudojamas, ekranas turėtų būti išjungtas. Dauguma laikrodžių palaiko visada įjungtą ekraną („Always on“).
     
-    Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lighting up fewer pixels to save power on OLED displays.
+    Nuo AAPS 3 versijos visada įjungto ekrano režimu galima naudoti „Supaprastinta sąsaja“. Šioje sąsajoje rodoma tik gliukozė kraujyje, kryptis ir laikas. Ši sąsaja optimizuota energijos taupymui: atnaujinama rečiau, rodo mažiau informacijos ir šviečia mažiau taškų, kad OLED ekranuose būtų taupoma energija.
     
-    The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “Always On Mode” or “Always On and Charging”.
+    Supaprastintos sąsajos režimas galimas ciferblatams Digital Style ir Custom. Supaprastinta sąsaja nebūtina ir nustatoma ciferblato nustatymuose (ilgai palaikykite ciferblatą ir spustelėkite „edit“ arba krumpliaračio piktogramą). Pasirinkite nustatymą „Supaprastinta sąsaja“ ir nustatykite jį į „Visada įjungta“ arba „Režimas: visada įjungta kraunant“.
     
-    ### Night-time mode
+    ### Naktinis režimas
     
-    While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
+    Įkraunant būtų naudinga, jei ekranas galėtų likti visada įjungtas ir naktį rodytų jūsų gliukozę kraujyje. Tačiau standartiniai ciferblatai yra per ryškūs, juose per daug informacijos, o mieguistomis akimis detales sunku įskaityti. Todėl pridėjome parinktį, kuri, jei ji įjungta konfigūracijoje, supaprastina ciferblato sąsają tik įkrovimo metu.
     
-    The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “During Charging” or “Always On and Charging”.
+    Supaprastintos sąsajos režimas galimas ciferblatams Digital Style ir Custom. Supaprastinta sąsaja nebūtina ir nustatoma ciferblato nustatymuose (ilgai palaikykite ciferblatą ir spustelėkite „edit“ arba krumpliaračio piktogramą). Pasirinkite nustatymą „Supaprastinta sąsaja“ ir nustatykite jį į „Įkrovimo metu“ arba „Režimas: visada įjungta kraunant“.
     
-    The Android developer options enable your watch to stay awake during charging. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options.
+    Android kūrėjo parinktys leidžia laikrodžiui neužmigti įkrovimo metu. Kaip įjungti kūrėjo parinktis, žr. [oficialią dokumentaciją](https://developer.android.com/training/wearables/get-started/debugging). Kūrėjo parinktyse nustatykite „Stay awake when charging“ (neužmigti įkraunant) į „on“.
     
-    Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
+    Pastaba: ne visi ekranai gerai toleruoja visada įjungtą režimą. Dėl to ekrane gali išdegti vaizdas, ypač senesniuose OLED ekranuose. Laikrodžiai paprastai pritemdo ekraną, kad vaizdas neišdegtų; patarimų ieškokite naudotojo vadove, pas gamintoją arba internete.
     
-    ![Watchface Nightstand](../images/Watchface_nightstand.jpg)
+    ![Ciferblatas naktinio staliuko režimu](../images/Watchface_nightstand.jpg)
     
-    ![Simplified UI](../images/Watchface_simplified_ui.png)
+    ![Supaprastinta sąsaja](../images/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Phone alarms on the watch
+    ## Telefono aliarmai laikrodyje
     
-    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![Telefono aliarmas laikrodyje](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. The watch vibrates, and again every half minute for five minutes until you answer. A notification shows the title and the text of the alarm, with the same answers as the [time to eat](#WearOsSmartwatch-wizard-carb-time) reminder:
+    Laikrodis rodo telefono aliarmus, todėl matote, kodėl telefonas skamba, ir galite atsakyti nuo riešo. Laikrodis vibruoja ir vibruoja vėl kas pusę minutės penkias minutes, kol atsakysite. Pranešime rodomas aliarmo pavadinimas ir tekstas, su tais pačiais atsakymais kaip priminimo [Laikas valgyti](#WearOsSmartwatch-wizard-carb-time):
     
-    * **Silence**, or a swipe: the alarm stops, and the alarm screen on the phone closes.
-    * **Mute 5 min**: the alarm stops and rings again after five minutes, on the phone and on the watch.
+    * **Nutildyti** arba nubraukimas: aliarmas nutyla, o telefono aliarmo ekranas užsidaro.
+    * **Nutildyti 5 min.**: aliarmas nutyla ir po penkių minučių vėl suskamba telefone ir laikrodyje.
     
-    Two kinds of alarm reach the watch:
+    Į laikrodį patenka dviejų rūšių aliarmai:
     
-    * The alarm screen of the phone (pump errors, automation alarms, BG alarms): **Silence** and **Mute 5 min**.
-    * Urgent notifications with a sound, like *Pump unreachable* or a Nightscout alarm: **Silence** only. The phone has only **Dismiss** for those, and they come back by themselves while their cause lasts.
+    * Telefono aliarmo ekranas (pompos klaidos, automatizacijų aliarmai, KG aliarmai): **Nutildyti** ir **Nutildyti 5 min.**
+    * Skubūs pranešimai su garsu, pvz., *Pompa nepasiekiama* ar Nightscout aliarmas: tik **Nutildyti**. Telefone jiems yra tik **Atmesti**, ir jie patys vėl atsiranda, kol išlieka jų priežastis.
     
-    The *time to eat* reminder is not sent this way: the watch rings that one by itself.
+    Priminimas *Laikas valgyti* šiuo būdu nesiunčiamas: laikrodis jį skambina pats.
     
-    ## Snooze Alert shortcut
+    ## Aliarmo nutildymo spartusis mygtukas
     
-    The watch [shows the alarm](#WearOsSmartwatch-phone-alarms) itself; the shortcut is a second way to silence it, with one press. It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+    Laikrodis pats [rodo aliarmą](#WearOsSmartwatch-phone-alarms); spartusis mygtukas yra antras būdas jį nutildyti vienu paspaudimu. Galima sukurti spartųjį mygtuką AAPS perspėjimams / aliarmams nutildyti. Nutildyti garsą laikrodžiu patogu ir greičiau, nereikia siekti telefono. Pastaba: aliarmo pranešimą telefone vis tiek reikia patikrinti ir atitinkamai sureaguoti, bet tai galite padaryti vėliau. Jei jūsų laikrodis turi du mygtukus, vieną iš jų galite priskirti programai `AAPS Snooze Alert`.
     
-    To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
+    Norėdami susieti mygtuką Samsung Watch 4 laikrodyje, eikite į `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
     
-    On a watchface with complications, an **App shortcut** complication set to **AAPS Snooze Alert** does the same with a tap. The [alternative setup of the Complications watchface](#wearos-complications-watchface-setup) uses its top-right slot for it.
+    Ciferblate su ekrano elementais tą patį vienu bakstelėjimu atlieka ekrano elementas **App shortcut** (programėlės spartusis mygtukas), nustatytas į **Nutildyti AAPS aliarmą**. [Alternatyvi Elementų ciferblato sąranka](#wearos-complications-watchface-setup) tam naudoja viršutinę dešinę vietą.
     
-    ### Snooze xDrip
+    ### xDrip nutildymas
     
-    When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm. 
+    Jei naudojate xDrip ir xDrip įdiegtas laikrodyje, spartusis mygtukas „Nutildyti AAPS aliarmą“ nutildys ir bet kurį xDrip aliarmą. 
     
     
-    ## Performance and battery life tips
+    ## Patarimai dėl veikimo ir baterijos
     
-    Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+    Wear OS laikrodžiai – tai įrenginiai, turintys labai mažai energijos. Laikrodžio korpuso dydis riboja jame esančios baterijos talpą. Net ir su naujausiais aparatinės ir programinės įrangos patobulinimais Wear OS laikrodžius vis dar reikia įkrauti kasdien.
     
-    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
+    Jei baterija išsenka greičiau nei per dieną (nuo ryto iki vakaro), štai keli patarimai, kaip išspręsti problemas.
     
-    Main battery-demanding areas are:
+    Daugiausia baterijos naudoja:
     
-    * Active display with a backlight on (for LED) or in full intensity mode (for OLED)
-    * Rendering on screen
-    * Radio communication over Bluetooth
+    * Aktyvus ekranas su įjungtu foniniu apšvietimu (LED) arba visu ryškumu (OLED)
+    * Vaizdo piešimas ekrane
+    * Radijo ryšys per Bluetooth
     
-    Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in _display time_ area:
+    Kadangi negalime aukoti ryšio (mums reikia naujausių duomenų) ir norime rodyti naujausius duomenis, daugumą optimizavimų galima atlikti _ekrano veikimo laiko_ srityje:
     
-    * Stock watchfaces are usually better optimized than custom one, downloaded from the store.
-    * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
-    * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-    * Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-    * Use a dark theme on the watchface. On OLED displays fewer lit pixels mean less power and less burn-in.
-    * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
-    * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
-    * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-    * Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
-    * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+    * Gamykliniai ciferblatai paprastai geriau optimizuoti nei pasirinktiniai, atsisiųsti iš parduotuvės.
+    * Geriau naudoti ciferblatus, kurie neaktyviu / pritemdytu režimu rodo mažiau duomenų.
+    * Būkite atidūs derindami kitus ekrano elementus, pvz., trečiųjų šalių orų valdiklius ar kitus, naudojančius duomenis iš išorinių šaltinių.
+    * Pradėkite nuo paprastesnių ciferblatų. Pridėkite po vieną ekrano elementą ir stebėkite, kaip jie veikia baterijos veikimo laiką.
+    * Ciferblate naudokite tamsią temą. OLED ekranuose mažiau šviečiančių taškų reiškia mažesnes energijos sąnaudas ir mažiau išdegimo.
+    * Patikrinkite, kas jūsų laikrodyje veikia geriau: gamykliniai AAPS ciferblatai ar kiti ciferblatai su AAPS ekrano elementais.
+    * Stebėkite kelias dienas, esant skirtingam aktyvumui. Daugelis laikrodžių įjungia ekraną, kai į juos pažiūrite, juos pajudinate arba dėl kitų su naudojimu susijusių priežasčių.
+    * Patikrinkite bendruosius sistemos nustatymus, kurie veikia našumą: pranešimus, foninio apšvietimo / aktyvaus ekrano išsijungimo laiką, kada įjungiamas GPS.
+    * Peržiūrėkite [išbandytų telefonų ir laikrodžių sąrašą](#Phones-list-of-tested-phones) ir [paklauskite bendruomenės](../GettingHelp/WhereCanIGetHelp.md) apie kitų naudotojų patirtį ir nurodytą baterijos veikimo laiką.
+    * **Negalime garantuoti, kad ciferblate ar ekrano elemente rodomi duomenys yra naujausi**. Galiausiai tik Wear OS sprendžia, kada atnaujinti ciferblatą ar ekrano elementą. Net kai AAPS programėlė prašo atnaujinti, sistema gali nuspręsti atnaujinimą atidėti arba ignoruoti, kad tausotų bateriją. Jei abejojate ir laikrodžio baterija senka, visada pasitikrinkite pagrindinėje AAPS programėlėje telefone.
     
     (Watchfaces-troubleshooting-the-wear-app)=
     
-    ## Troubleshooting the wear app
+    ## Wear programėlės trikčių šalinimas
     
-    If the watch shows no data or old data, first check the connection between the watch and the phone, see [Troubleshooting the AAPS watch - AAPS phone communication](#wear-os-watch-phone-communication). For a watch on Wear OS 5, see also the [general troubleshooting recommendations for Wear OS 5](#wear-os-5-troubleshooting). A complication that does not update has the same causes as a tile or watchface that does not update, so check those first.
+    Jei laikrodis nerodo duomenų arba rodo senus duomenis, pirmiausia patikrinkite laikrodžio ir telefono ryšį, žr. [AAPS laikrodžio ir AAPS telefono ryšio trikčių šalinimas](#wear-os-watch-phone-communication). Jei laikrodyje veikia Wear OS 5, taip pat žr. [bendrąsias Wear OS 5 trikčių šalinimo rekomendacijas](#wear-os-5-troubleshooting). Neatsinaujinančio ekrano elemento priežastys tos pačios kaip neatsinaujinančios plytelės ar ciferblato, todėl pirmiausia patikrinkite jas.
     
-    ## Additional AAPS custom watchfaces are also available
+    ## Yra ir daugiau pasirinktinių AAPS ciferblatų
     
-    [Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+    [Čia](../ExchangeSiteCustomWatchfaces/index.md) galite atsisiųsti Zip failus su kitų naudotojų sukurtais pasirinktiniais ciferblatais.
     
-    ## Build your own watchface
+    ## Susikurkite savo ciferblatą
     
-    If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
+    Jei norite susikurti savo ciferblatą, vadovaukitės [šiomis instrukcijomis](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
     
-    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+    Susikūrę pasirinktinį ciferblatą, savo **AAPS** pasirinktiniu ciferblatu galite pasidalyti su kitais: zip failą galima įkelti į aplanką "ExchangeSiteCustomWatchfaces" per Pull Request GitHub. Sujungiant pull request, dokumentacijos komanda išskleis failą CustomWatchface.png ir prie jo pavadinimo pradžios pridės Zip failo pavadinimą.
     
     (WearOsSmartwatch-complications-watchface-download)=
     
-    ## Make your own version of the Complications watchface
+    ## Susikurkite savo Elementų ciferblato versiją
     
-    The **Complications watchface** that **AAPS** installs on Wear OS 6 (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)) is made with Samsung's **Watch Face Studio**. Its project file is free to download, so you can change it to your taste, or use it on a watch with Wear OS 5 or older where **AAPS** does not install it:
+    **Elementų ciferblatas**, kurį **AAPS** įdiegia Wear OS 6 sistemoje (žr. [AAPS įdiegiamas ciferblatas](#wearos-aaps-v4-watchface)), sukurtas su Samsung **Watch Face Studio**. Jo projekto failą galima atsisiųsti nemokamai, todėl galite jį pakeisti pagal savo skonį arba naudoti laikrodyje su Wear OS 5 ar senesne versija, kur **AAPS** jo neįdiegia:
     
-    [Complications watchface (AAPS V4), zip](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/wearos/Complications_watchface_AAPS_V4.zip)
+    [Elementų ciferblatas (AAPS V4), zip](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/wearos/Complications_watchface_AAPS_V4.zip)
     
-    The zip holds four files:
+    Zip faile yra keturi failai:
     
-    * `AAPS V4_0_2.wfs`: the project. Open it in [Watch Face Studio](https://developer.samsung.com/watch-face-studio/download.html), change what you like, and install it on the watch from there.
-    * `com.watchfacestudio.aapsv4.apk`: the watchface as it is, ready to install with [adb](https://developer.android.com/tools/releases/platform-tools): `adb install com.watchfacestudio.aapsv4.apk` with the watch connected over ADB debugging.
-    * `README.txt`: the two recommended complication setups, the same as on the [Wear OS page](#wearos-complications-watchface-setup).
-    * `AAPS V4.png`: a preview.
+    * `AAPS V4_0_2.wfs`: projektas. Atidarykite jį programoje [Watch Face Studio](https://developer.samsung.com/watch-face-studio/download.html), pakeiskite, ką norite, ir iš ten įdiekite į laikrodį.
+    * `com.watchfacestudio.aapsv4.apk`: ciferblatas toks, koks yra, paruoštas įdiegti su [adb](https://developer.android.com/tools/releases/platform-tools): `adb install com.watchfacestudio.aapsv4.apk`, kai laikrodis prijungtas per ADB derinimą.
+    * `README.txt`: dvi rekomenduojamos ekrano elementų sąrankos, tokios pačios kaip [Wear OS puslapyje](#wearos-complications-watchface-setup).
+    * `AAPS V4.png`: peržiūra.
     
-    ```{admonition} This is not a custom watchface
+    ```{admonition} Tai nėra pasirinktinis ciferblatas
     :class: note
-    The zip is not a custom watchface for **Load Watchface** in the **Wear** plugin, and the phone cannot install it. It must be unzipped and installed on the watch with Watch Face Studio or adb, as above.
+    Šis zip failas nėra pasirinktinis ciferblatas, skirtas **Įkelti ciferblatą** įskiepyje **Išmanieji laikrodžiai**, ir telefonas negali jo įdiegti. Jį reikia išskleisti ir įdiegti į laikrodį su Watch Face Studio arba adb, kaip aprašyta aukščiau.

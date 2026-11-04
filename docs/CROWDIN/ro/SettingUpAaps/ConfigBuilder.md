@@ -1,8 +1,8 @@
-# Configuration (Config Builder)
+# Configurație (Config Builder)
 
-```{admonition} Coming from AAPS v3? :class: note The **Config Builder** is now called **Configuration** and is in the **menu** (☰). See [What changed in AAPS v4](#v4-changes).
+```{admonition} Coming from AAPS v3? :class: note **Config Builder** se numește acum **Configurație** și se află în **meniu** (☰). See [What changed in AAPS v4](#v4-changes).
 
-    <br />**Configuration** is where you choose which plugins are active (CGM, pump, APS algorithm, sensitivity, sync, …) and open each plugin and its settings. The [walkthrough](#configuration-v4) is below; the rest of this page describes each section in detail.
+    <br />În **Configurație** alegeți ce module sunt active (CGM, pompă, algoritm APS, sensibilitate, sincronizare, …) și deschideți fiecare modul și setările lui. The [walkthrough](#configuration-v4) is below; the rest of this page describes each section in detail.
     
     (configuration-v4)=
     ## Configuration in AAPS v4
@@ -11,11 +11,11 @@
     
     ![The top-left menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
     
-    Plugins are grouped by **category** — for example *Smoothing*, *Calibration*, *Sensitivity detection*, *APS*, *Communication* and *General*. Each row shows the category name and the **currently active** plugin (e.g. *APS → OpenAPS SMB*). Tap a row to open a category.
+    Plugins are grouped by **category** — for example *Smoothing*, *Calibration*, *Sensitivity detection*, *APS*, *Communication* and *General*. Each row shows the category name and the **currently active** plugin (e.g. *APS → OpenAPS SMB*). Apăsați un rând pentru a deschide o categorie.
     
-    ![The Configuration screen, listing plugin categories](../images/v4/Configuration/configuration_plugins.png)
+    ![Ecranul Configurație, cu lista categoriilor de module](../images/v4/Configuration/configuration_plugins.png)
     
-    Inside a category you see the plugins available for it. For single-choice categories you pick the active one; some categories are multi-select (*“Choose any that apply”*). Each plugin offers two actions:
+    În interiorul unei categorii vedeți modulele disponibile pentru ea. For single-choice categories you pick the active one; some categories are multi-select (*“Choose any that apply”*). Each plugin offers two actions:
     
     - **Open plugin** — opens the plugin's own screen.
     - **Settings** — opens the plugin's preferences (settings may be grouped into expandable sections).
@@ -64,17 +64,17 @@ Vedeți [Profilul dumneavoastră AAPS](../SettingUpAaps/YourAapsProfile.md) pent
 
 ## Insulină
 
-![Insulin settings](../images/manage/insulin_settings.png)
+![Setări insulină](../images/manage/insulin_settings.png)
 
-In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Open **Manage → Insulin settings** to set up the insulin you are using.
+In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Deschideți **Gestionați → Setări insulină** pentru a configura insulina pe care o folosiți.
 
 The insulin editor lets you:
 
-* give the insulin an **Insulin nickname** so it is easy to recognise,
-* set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Action, in hours), either by typing the value or using the **–** / **+** buttons,
+* dați insulinei un **Pseudonim insulină**, ca să o recunoașteți ușor,
+* setați **Vârf** (timpul până la activitatea maximă a insulinei, în minute) și **DIA** (durata de acțiune a insulinei, în ore), fie scriind valoarea, fie folosind butoanele **–** / **+**,
 * tap a **Load peak from** preset button — **Novorapid** (75 min), **Fiasp** (55 min) or **Lyumjev** (45 min) — to fill in the standard peak time for that insulin in one step.
 
-The allowed ranges are the same whatever insulin you use:
+Intervalele permise sunt aceleași, indiferent de insulina folosită:
 
 * **DIA**: 5 to 9 hours (5 to 10 hours if the patient type is set to **Pregnant**). See [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to choose a value.
 * **Peak**: 35 to 120 minutes.
@@ -85,16 +85,16 @@ Mai multe informații pentru a înțelege Profilul Insulinei așa cum este indic
 
 (Config-Builder-insulin-change-active)=
 
-### Changing the insulin in use (DIA or peak)
+### Schimbarea insulinei folosite (DIA sau vârf)
 
 The insulin marked **ACTIVE** is the one your running profile uses. Its fields are greyed out: you cannot edit or delete it. This way, the insulin name shown in your running profile always matches the settings actually in use.
 
 To change the DIA or peak you are using:
 
-1. Open **Manage → Insulin settings**. If the screen opens read-only (a **✏️ pencil** in the top bar), tap the pencil and unlock your settings.
-2. Tap **+** (*Add new insulin*). **AAPS** creates a copy of the insulin shown on screen.
+1. Deschideți **Gestionați → Setări insulină**. Dacă ecranul se deschide doar pentru citire (un **✏️ creion** în bara de sus), apăsați creionul și deblocați setările.
+2. Apăsați **+** (*Adăugați o nouă insulină*). **AAPS** creează o copie a insulinei afișate pe ecran.
 3. Set the new **Peak** and/or **DIA**, then tap the save icon (top right).
-4. Tap **▶** (*Activate insulin*) and confirm. The new insulin becomes **ACTIVE**.
+4. Apăsați **▶** (*Activați insulina*) și confirmați. The new insulin becomes **ACTIVE**.
 
 ```{admonition} The name includes peak and DIA :class: note **AAPS** adds the peak, DIA and concentration to the insulin name automatically (for example *Fiasp 55m 8h U100*), so you can tell your configurations apart at a glance.
 
@@ -104,7 +104,7 @@ To change the DIA or peak you are using:
     
     In **AAPS** 4 there is no list of insulin types to choose from. Every insulin uses the same exponential activity curve; only its **Peak** and **DIA** differ. The **Load peak from** presets in the insulin editor fill in the recommended peak for the most common insulins in one tap (the small ⓘ next to **Load peak from** lists them with their peak values). You can still adjust the **Peak** and **DIA** afterwards.
     
-    Only change the peak away from its recommended value if you understand the effect of doing so. The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the curves.
+    Schimbați vârful față de valoarea recomandată doar dacă înțelegeți efectul acestei schimbări. [Graficul curbei insulinei](#AapsScreens-insulin-profile) vă ajută să înțelegeți curbele.
     
     #### Novorapid
     
@@ -131,7 +131,7 @@ To change the DIA or peak you are using:
     #### Custom peak
     
     * There is no separate "Free-Peak Oref" insulin type in **AAPS** 4: enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a preset.
-    * A custom peak is useful if you use an insulin that is not in the list, or a mixture of different insulins.
+    * Un vârf personalizat este util dacă folosiți o insulină care nu este în listă sau un amestec de insuline diferite.
     
     (Config-Builder-insulin-dia)=
     ### Duration of insulin action (DIA) and peak
@@ -140,35 +140,35 @@ To change the DIA or peak you are using:
     In looping, decreasing DIA or peak will always increase administered insulin. DIA works differently in AAPS than in commercial AID systems, and careless changes to these settings can change insulin dosing in a way which is much larger or smaller than expected.
     
 
-AAPS models the timeline of insulin action with a mathematical formula, configured using **DIA** and the closely related **peak** settings. DIA is the theoretical duration until IOB reaches zero and peak is the point in time when the effect of insulin is strongest. This yields an IOB curve and an activity curve, which is simply the **rate** of IOB decay.
+AAPS models the timeline of insulin action with a mathematical formula, configured using **DIA** and the closely related **peak** settings. DIA este durata teoretică până când IOB ajunge la zero, iar vârful este momentul în care efectul insulinei este cel mai puternic. This yields an IOB curve and an activity curve, which is simply the **rate** of IOB decay.
 
 Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). This missing basal insulin is fully subtracted from the IOB, explaining why IOB will in practice reach zero many hours earlier than the configured DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
 
-To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin settings**. AAPS displays the active insulin configuration like this:
+Pentru a configura DIA și vârful, apăsați **Gestionați** pe ecranul principal, apoi apăsați **Setări insulină**. AAPS displays the active insulin configuration like this:
 
-![Sample insulin configuration](../images/manage/insulin_profile.png)
+![Exemplu de configurație a insulinei](../images/manage/insulin_profile.png)
 
 In this example, the peak setting is 55 minutes, DIA is 8 hours and [insulin concentration](#Insulin-Concentration) is the standard 100 IU/mL.
 
 Due to the influence of zero-temping explained above and the formula used for IOB decay in AAPS, most users set a clearly higher DIA than in commercial systems. In general, many people find that a **DIA** of 9h works well for them. After you have more experience with AAPS and have a well-tuned profile, you can try to find personalized DIA and peak settings with the information below.
 
-````{admonition} Details on the impact of DIA and peak configuration :class: dropdown
+````{admonition} Detalii despre impactul configurării DIA și a vârfului :class: dropdown
 
 Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Aceste grafice arată impactul exact al DIA și al vârfului asupra curbelor IOB, pe tot intervalul de valori permise.
 
-Adjusting DIA:
+Ajustarea DIA:
 
 ```{image} ../images/iob_remaining_static_peak.png :width: 400px
 
-    <br />Adjusting peak:
+    <br />Ajustarea vârfului:
     
     ```{image} ../images/iob_remaining_static_dia.png
     :width: 400px
     
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+În final, o comparație în care DIA și vârful sunt ajustate în paralel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
 
 ```{image} ../images/iob_remaining_uniform.png :width: 400px
 
@@ -184,8 +184,8 @@ Finally, a comparison adjusting DIA and peak in parallel. The logic here is that
     * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
     
     (Config-Builder-bg-source)=
-    ## BG Source
-    Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+    ## Sursă glicemie
+    Selectați sursa de glicemie pe care o folosiți. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
     
     ![Configuration > BG Source](../images/v4/Configuration/configuration_bg_source.png)
     
@@ -225,73 +225,73 @@ Finally, a comparison adjusting DIA and peak in parallel. The logic here is that
     - **No calibration**: the sensor values are used as they are. Use this when the sensor is already factory-calibrated and accurate. This is the default.
     - **Linear calibration**: **AAPS** corrects the sensor values with a slope and an offset that it computes from your fingerstick entries.
     
-    How to use **Linear calibration**:
+    Cum folosiți **Calibrare liniară**:
     
-    1. Select **Linear calibration** in the **Calibration** category.
-    2. When you insert a new sensor, log the sensor change: use **Log sensor change** on the calibration screen, or enter a CGM sensor insert in the Careportal. This tells **AAPS** when the sensor session started. If **AAPS** notices a gap of more than 30 minutes in the readings, it may ask you to mark a sensor change; this prompt appears on the master only, not on a client.
-    3. Open the plugin and tap **Add calibration**. Enter your fingerstick value. **AAPS** pairs it with the sensor value from the last 10 minutes.
+    1. Selectați **Calibrare liniară** în categoria **Calibrare**.
+    2. Când puneți un senzor nou, înregistrați schimbarea senzorului: folosiți **Înregistrați schimbarea senzorului** pe ecranul de calibrare sau introduceți o inserare de senzor CGM în Careportal. Astfel **AAPS** știe când a început sesiunea senzorului. Dacă **AAPS** observă o pauză de peste 30 de minute între citiri, vă poate cere să marcați o schimbare de senzor; această întrebare apare doar pe dispozitivul principal, nu pe un client.
+    3. Deschideți modulul și apăsați **Adăugați calibrare**. Introduceți valoarea măsurată din deget. **AAPS** pairs it with the sensor value from the last 10 minutes.
     
-    A calibration is accepted only when:
+    O calibrare este acceptată doar dacă:
     
-    - a sensor change is logged and at least **2 hours** have passed since then (warm-up),
-    - your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
-    - there is a CGM reading from the last 10 minutes,
-    - it is for the current moment. You cannot enter older fingerstick values.
+    - este înregistrată o schimbare de senzor și au trecut de atunci cel puțin **2 ore** (încălzire),
+    - glicemia dumneavoastră este stabilă. Dacă se schimbă prea repede, dialogul vă spune acest lucru și arată limita,
+    - există o citire CGM din ultimele 10 minute,
+    - este pentru momentul actual. Nu puteți introduce valori mai vechi măsurate din deget.
     
-    How the correction works:
+    Cum funcționează corecția:
     
-    - **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
-    - Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. The line therefore follows your sensor as it drifts.
-    - At least **2 pairs** are needed.
-    - If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
-    - The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
-    - Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. This protects you from a wrong entry.
+    - **AAPS** trasează o linie dreaptă prin perechile senzorului actual: `corrected value = slope × sensor value + offset`.
+    - Perechile mai noi contează mai mult decât cele mai vechi: o pereche veche de 2 zile contează cam 37 %, o pereche veche de 4 zile cam 14 %. Astfel, linia urmează senzorul atunci când acesta deviază.
+    - Este nevoie de cel puțin **2 perechi**.
+    - Dacă perechile sunt apropiate (diferență mai mică de 54 mg/dL / 3 mmol/L), valorile sunt doar deplasate (decalaj, fără pantă).
+    - Panta este păstrată între 0,55 și 1,6. O pantă în afara acestui interval este limitată la cea mai apropiată valoare.
+    - Limită de siguranță: dacă la 100 mg/dL (5,5 mmol/L) corecția ar fi mai mare de ±30 mg/dL (1,7 mmol/L), nu se aplică nicio corecție. Aceasta vă protejează de o valoare introdusă greșit.
     
-    What it changes:
+    Ce se schimbă:
     
-    - The corrected value is used everywhere: the BG on the main screen, the graph and the loop. The sensor readings themselves are not changed. The correction is applied on top, also to the earlier readings of the current sensor.
-    - A new sensor change starts from zero. Pairs from earlier sensors no longer count.
-    - On the graph, a calibration is shown as a marker at the fingerstick value.
-    - Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
+    - Valoarea corectată este folosită peste tot: glicemia de pe ecranul principal, graficul și bucla. Citirile senzorului în sine nu sunt modificate. Corecția este aplicată peste ele, și pentru citirile anterioare ale senzorului actual.
+    - O nouă schimbare de senzor pornește de la zero. Perechile de la senzorii anteriori nu mai contează.
+    - Pe grafic, o calibrare este afișată ca un marcaj la valoarea măsurată din deget.
+    - Calibrările sunt sincronizate prin Nightscout, astfel încât clienții dumneavoastră arată aceleași valori corectate.
     
-    Check and remove entries:
+    Verificați și eliminați înregistrări:
     
-    - **Open plugin** shows the status (for example *Slope 0.85, mid-range correction -0.4*), a chart of your pairs with the line, and the list of entries.
-    - If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. The line is calculated again at once.
+    - **Deschideți modulul** arată starea (de exemplu *Pantă 0,85, corecție la mijlocul intervalului -0,4*), un grafic al perechilor cu linia și lista înregistrărilor.
+    - Dacă o înregistrare este greșită (de exemplu, aveați zahăr pe deget), apăsați pictograma coș de gunoi de lângă ea. Linia este calculată din nou imediat.
     
-    ```{admonition} Using xDrip+ as BG source?
+    ```{admonition} Folosiți xDrip+ ca sursă de glicemie?
     :class: note
-    xDrip+ has its own calibration. Calibrate in one place only, so that the sensor values are not corrected twice.
+    xDrip+ are propria calibrare. Calibrați într-un singur loc, pentru ca valorile senzorului să nu fie corectate de două ori.
     
 
-    {admonition} Calibrate with care
+    {admonition} Calibrați cu atenție
     :class: warning
-    A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Wash your hands before measuring, and do not calibrate while your glucose is changing fast.
+    O valoare greșită măsurată din deget duce la valori greșite ale glicemiei și, prin urmare, la doze greșite de insulină. Wash your hands before measuring, and do not calibrate while your glucose is changing fast.
 
-![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)
+![Configurație > Calibrare](../images/v4/Configuration/configuration_calibration.png)
 
 (Config-Builder-pump)=
 
 ## Pompă
 
-Alegeți tipul de pompă pe care îl folosiți. Vedeți pagina [Pompe Compatibile](../Getting-Started/CompatiblePumps.md) pentru mai multe informații despre configurare.
+Alegeți tipul de pompă pe care îl folosiți. Vedeți pagina [Pompele compatibile](../Getting-Started/CompatiblePumps.md) pentru mai multe informații despre configurare.
 
-![Configuration > Pump](../images/v4/Configuration/configuration_pump_list_1.png)
+![Configurație > Pompă](../images/v4/Configuration/configuration_pump_list_1.png)
 
-Scroll down to see all the pump drivers:
+Derulați în jos pentru a vedea toate driverele de pompă:
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_2.png)
+![Configurație > Pompă, continuare](../images/v4/Configuration/configuration_pump_list_2.png)
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_3.png)
+![Configurație > Pompă, continuare](../images/v4/Configuration/configuration_pump_list_3.png)
 
-![Configuration > Pump, end of the list](../images/v4/Configuration/configuration_pump_list_4.png)
+![Configurație > Pompă, sfârșitul listei](../images/v4/Configuration/configuration_pump_list_4.png)
 
-When you select another pump, **AAPS** asks you to confirm the change:
+Când selectați altă pompă, **AAPS** vă cere să confirmați schimbarea:
 
-![Switch plugin confirmation](../images/v4/Pumps/switch_plugin_dialog.png)
+![Confirmarea schimbării modulului](../images/v4/Pumps/switch_plugin_dialog.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
-* Dana R Coreeană (pentru pompa DanaR domestică)
+* Dana R Korean (pentru pompa DanaR vândută în Coreea)
 * Dana Rv2 (Pompa DanaR cu actualizare de firmware neoficială)
 * [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 * [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
@@ -305,16 +305,16 @@ When you select another pump, **AAPS** asks you to confirm the change:
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * [Carelevo](../CompatiblePumps/CareLevo.md)
 * Pompă virtuală: doar sugestii pentru buclă deschisă - **AAPS** 
-  * as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
+  * pe măsură ce faceți primii pași cu **AAPS**, în timpul primelor [obiective](../SettingUpAaps/CompletingTheObjectives.md)
   * pentru pompa care încă nu are driver
 
 (config-builder-wrong-pump-data)=
 
-### Message: "Data is coming from different pump"
+### Mesaj: „Datele vin de la o pompă diferită”
 
 **AAPS** remembers the pump it is connected to (pump type and serial number). If it receives data from another pump, for example after your pump was replaced by a new one of the same model, it shows this message and ignores the data from that pump:
 
-![Data is coming from different pump](../images/Screen_DifferentPump.png)
+![Datele vin de la o pompă diferită](../images/Screen_DifferentPump.png)
 
 To use the new pump, change the pump driver: select **Virtual pump**, confirm, then select your pump again. **AAPS** then registers the pump it is connected to now.
 
@@ -322,11 +322,11 @@ To use the new pump, change the pump driver: select **Virtual pump**, confirm, t
 
 ## Detectare Sensibilitate
 
-![Configuration > Sensitivity detection](../images/v4/Configuration/configuration_sensitivity_detection.png)
+![Configurație > Detectare sensibilitate](../images/v4/Configuration/configuration_sensitivity_detection.png)
 
 Alegeți tipul de detecție a sensibilității. Pentru mai multe detalii despre diferite designuri, vă rugăm să [citiți aici](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Această funcție analizează în timp real datele istorice și face ajustări dacă consideră că reacționați mai sensibil (sau invers, sunteți mai rezistent) la insulină decât de obicei. More details about how the sensitivity ratio itself is calculated can be found in [Key AAPS Features > Autosens](#Open-APS-features-autosens).
 
-You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SENS% and watching the white line. Notă, trebuie să fiți în [Obiectivul 8](#objectives-objective8) pentru a permite Detectării Sensibilității /[Autosens](#Open-APS-features-autosens) să ajusteze automat cantitatea de insulină administrată. Înainte de a ajunge la acest obiectiv, procentajul Autosens / linia din grafic este afișată doar pentru informare.
+Puteți vedea sensibilitatea pe ecranul principal într-un [grafic suplimentar](#AapsScreens-section-g-additional-graphs), selectând SENS% și urmărind linia albă. Notă, trebuie să fiți în [Obiectivul 8](#objectives-objective8) pentru a permite Detectării Sensibilității /[Autosens](#Open-APS-features-autosens) să ajusteze automat cantitatea de insulină administrată. Înainte de a ajunge la acest obiectiv, procentajul Autosens / linia din grafic este afișată doar pentru informare.
 
 ### Setări absorbție
 
@@ -336,9 +336,9 @@ Dacă utilizați Oref1 cu **SMB** trebuie să schimbați **min_5m_carbimpact** (
 
 ## APS
 
-![Configuration > APS](../images/v4/Configuration/configuration_aps.png)
+![Configurație > APS](../images/v4/Configuration/configuration_aps.png)
 
-Selectați algoritmul APS dorit pentru ajustări ale terapiei. You can view the active detail of the chosen algorithm with **Open plugin**.
+Selectați algoritmul APS dorit pentru ajustări ale terapiei. Puteți vedea detaliile active ale algoritmului ales cu **Deschideți modulul**.
 
 * OpenAPS AMA 
   * Asistență Avansată pentru Masă: algoritmul mai vechi nu mai este recomandat.
@@ -348,19 +348,19 @@ Selectați algoritmul APS dorit pentru ajustări ale terapiei. You can view the 
   * Spre deosebire de AMA, SMB nu folosește rate bazale temporare pentru a controla nivelurile glicemiei, ci în principal mici **Super Micro Bolusuri**.
   * Notă: Este recomandat să utilizați acest algoritm de la început, chiar dacă nu veți primi Super Micro Bolusuri (SMB) până la [Obiectivul 9](#objectives-objective9).
 * [Auto ISF](#Open-APS-features-auto-isf) 
-  * Experimental algorithm for advanced users. It is only listed once the objectives are completed.
+  * Experimental algorithm for advanced users. Apare în listă doar după ce obiectivele sunt îndeplinite.
 
-If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manually to **8** (default value for SMB) in [Settings → Absorption settings](#Preferences-min_5m_carbimpact).
+Dacă treceți de la algoritmul AMA la SMB, *min_5m_carbimpact* trebuie schimbat manual la **8** (valoarea implicită pentru SMB) în [Setări → Setări absorbție](#Preferences-min_5m_carbimpact).
 
 ## Buclă
 
 This module cannot be disabled as it is a core part of **AAPS**.
 
-![Configuration > Loop](../images/v4/Configuration/configuration_loop.png)
+![Configurație > Buclă](../images/v4/Configuration/configuration_loop.png)
 
 ## Constrângeri
 
-![Configuration > Constraints](../images/v4/Configuration/configuration_constraints.png)
+![Configurație > Constrângeri](../images/v4/Configuration/configuration_constraints.png)
 
 ### Obiective
 
@@ -368,19 +368,19 @@ This module cannot be disabled as it is a core part of **AAPS**.
 
 Vedeți pagina [Obiective](../SettingUpAaps/CompletingTheObjectives.md) pentru mai multe informații.
 
-## Communication
+## Comunicare
 
-In this category (called **Synchronization** in **AAPS** v3), you choose if/where you want **AAPS** to send your data to.
+În această categorie (numită **Sincronizare** în **AAPS** v3) alegeți dacă și unde doriți ca **AAPS** să trimită datele dumneavoastră.
 
-![Configuration > Communication](../images/v4/Configuration/configuration_communication.png)
+![Configurație > Comunicare](../images/v4/Configuration/configuration_communication.png)
 
-Scroll down to see the rest of the list:
+Derulați în jos pentru a vedea restul listei:
 
-![Configuration > Communication, continued](../images/v4/Configuration/configuration_communication_2.png)
+![Configurație > Comunicare, continuare](../images/v4/Configuration/configuration_communication_2.png)
 
 ### NSClientV3
 
-Poate fi folosit ca un [server de raportare](../SettingUpAaps/SettingUpTheReportingServer.md) și/sau pentru [monitorizare de la distanță](../RemoteFeatures/RemoteMonitoring.md), [control de la distanță](../RemoteFeatures/RemoteControl.md).
+Poate fi folosit ca un [server de raportare](../SettingUpAaps/SettingUpTheReportingServer.md) și/sau pentru [monitorizare la distanță](../RemoteFeatures/RemoteMonitoring.md), [control de la distanță](../RemoteFeatures/RemoteControl.md).
 
 See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to set up NSClientV3 synchronization.
 
@@ -392,7 +392,7 @@ Vedeți [Tidepool](../SettingUpAaps/Tidepool.md).
 
 ### xDrip
 
-Used to **send** data such as glucose values and treatments to xDrip+ on the same phone. Its settings also hold **Send status to xDrip+**, a status line with IOB and COB that xDrip+ and some watch companion apps display.
+Folosit pentru a **trimite** date, cum ar fi valorile glicemiei și tratamentele, către xDrip+ de pe același telefon. Its settings also hold **Send status to xDrip+**, a status line with IOB and COB that xDrip+ and some watch companion apps display.
 
 ### Open Humans
 
@@ -402,11 +402,11 @@ Vedeți [Open Humans](../SupportingAaps/OpenHumans.md).
 
 ### Ceas
 
-Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is explained on [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md). After enabling the plugin, choose its options in [Settings > Wear](#preferences-wear). Using the watch is explained on [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
+Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is explained on [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md). După ce activați modulul, alegeți opțiunile lui în [Setări > Ceas](#preferences-wear). Using the watch is explained on [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
 
 (external-companion-apps)=
 
-### External Companion Apps
+### Aplicații tip companion externe
 
 Broadcasts **AAPS** status data on the phone so that other apps installed on it can display it — for example watch or widget companion apps. The broadcast includes glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Enable it only if a companion app you use asks for this data.
 
@@ -420,23 +420,23 @@ Conexiune la dispozitivul Garmin (Fenix, Edge…)
 
 ## Tratamente
 
-Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through **Treatments → Carbs** in the bottom navigation (see [Carbs](#screens-bolus-carbs)).
+Deschideți **meniul** (☰) și selectați [Istoricul tratamentelor](#aaps-screens-treatments) pentru a vedea tratamentele care au fost înregistrate. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through **Treatments → Carbs** in the bottom navigation (see [Carbs](#screens-bolus-carbs)).
 
 ## General
 
-In **AAPS** 4 the **General** category of **Configuration** only lists **Autotune**. The other features described below are always available and no longer need to be enabled here; each paragraph says where to find them.
+In **AAPS** 4 the **General** category of **Configuration** only lists **Autotune**. Celelalte funcții descrise mai jos sunt mereu disponibile și nu mai trebuie activate aici; fiecare paragraf spune unde le găsiți.
 
-![Configuration > General](../images/v4/Configuration/configuration_general.png)
+![Configurație > General](../images/v4/Configuration/configuration_general.png)
 
 ### Privire de ansamblu
 
-The [main screen](#AapsScreens-the-homescreen) of **AAPS** is not a plugin any more and has no settings of its own in **Configuration**. The options that used to be here are in **Settings** (gear icon): [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs), [Status lights](#Preferences-status-lights) and the [Bolus percentage](#Preferences-deliver-this-part-of-bolus-wizard-result) used by the bolus wizard. The super bolus option of **AAPS** 3.x is [not available as a setting](#Preferences-advanced-settings-overview) in **AAPS** 4.
+[Ecranul principal](#AapsScreens-the-homescreen) al **AAPS** nu mai este un modul și nu are setări proprii în **Configurație**. The options that used to be here are in **Settings** (gear icon): [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs), [Status lights](#Preferences-status-lights) and the [Bolus percentage](#Preferences-deliver-this-part-of-bolus-wizard-result) used by the bolus wizard. The super bolus option of **AAPS** 3.x is [not available as a setting](#Preferences-advanced-settings-overview) in **AAPS** 4.
 
 (Config-Builder-actions)=
 
 ### Acțiuni
 
-The Actions tab of **AAPS** 3.x no longer exists. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
+Fila Acțiuni din **AAPS** 3.x nu mai există. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
 
 ### Automatizare
 
@@ -466,9 +466,9 @@ Open the **menu** (☰) and select **Maintenance** to export / import settings a
 
 ![Maintenance screen, log files](../images/screens/maintenance.png)
 
-![Maintenance screen, file management](../images/screens/maintenance_2.png)
+![Ecranul Mentenanță, gestionarea fișierelor](../images/screens/maintenance_2.png)
 
-![Maintenance screen, database management](../images/screens/maintenance_3.png)
+![Ecranul Mentenanță, gestionarea bazei de date](../images/screens/maintenance_3.png)
 
 ### Configurarea Sistemului (Config Builder)
 

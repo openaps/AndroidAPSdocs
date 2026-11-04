@@ -134,7 +134,7 @@ PIN 碼可保護透過 Nightscout 傳送的配對密鑰。只將 PIN 碼分享�
 
 ```{admonition} Scanning is available on Android
 :class: note
-iOS 目前尚未提供掃描器，桌上型電腦也沒有相機：請改用 PIN 碼。
+A computer without camera: use the PIN there.
 ```
 
 #### 輸入 PIN 碼

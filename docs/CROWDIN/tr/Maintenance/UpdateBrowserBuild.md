@@ -1,106 +1,106 @@
-# Update with a browser (fork)
+# Tarayıcı ile güncelleme (fork)
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+AAPS'i **AAPS Builder** ile mi oluşturdunuz? Bu sayfaya ihtiyacınız yok: [AAPS'i AAPS Builder ile güncelleme](#aaps-builder-updates) bölümüne bakın.
 ```
 
-## Programı İndirmek yerine kendiniz oluşturun...
+## İndirmek yerine kendiniz oluşturun
 
-**AAPS** is not available to download, due to regulations concerning medical devices. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Tıbbi cihazlarla ilgili düzenlemeler nedeniyle **AAPS** indirilmeye hazır olarak sunulmaz. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz! Ayrıntılar için [SSS sayfasına](../UsefulLinks/FAQ.md) bakın.
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
-This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
+**AAPS**'i ilk kez tarayıcı ile yükseltmek istiyorsanız: yedek anahtar deposu dosyanızı Google Drive'ınıza kopyalayın. Ardından bu kılavuz yerine [Tarayıcı ile **AAPS** oluşturma yöntemini](../SettingUpAaps/BrowserBuild.md) izleyin. Yeni bir anahtar deposu oluşturmak yerine bilgisayarınızdan kopyaladığınız anahtar deposunu seçmelisiniz.
+Bu işlem yalnızca ilk seferde zorunludur. Sonraki yükseltmelerde bu kılavuzu izleyebilirsiniz.
 ```
 
 ```{tip}
-**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+**AAPS Builder'a mı geçiyorsunuz?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) daha basit bir tarayıcı ile oluşturma yöntemidir: senkronize edilecek bir fork yoktur ve uygulamayı doğrudan GitHub'dan indirirsiniz. Geçmek zorunda değilsiniz: bu kılavuz çalışmaya devam eder. Geçerseniz, önce [Önceki tarayıcı ile oluşturmadan gelenler](#aaps-builder-from-fork) bölümünde anlatıldığı gibi fork'unuzdan anahtar deponuzun bir kopyasını alın. Aksi halde yeni oluşturulan uygulama telefonunuzdaki AAPS'i güncelleyemez.
 ```
 
-## Overview for updating to a new version of AAPS with a browser
+## Tarayıcı ile AAPS'in yeni bir sürümüne güncellemeye genel bakış
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Sorun yaşarsanız [Tarayıcı ile oluşturma: sorun giderme](../GettingHelp/BrowserBuildTroubleshooting.md) ayrı sayfasına bakın.
 
 ### Export your settings
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Telefonunuzdaki mevcut **AAPS** sürümünden ayarlarınızı dışa aktarın. Belki gerekmez ama tedbirli olmak daha iyidir.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Bunu nasıl yapacağınızı hatırlamıyorsanız [Ayarları dışa ve içe aktarma](ExportImportSettings.md) sayfasına bakın.
 
 (Update-to-new-version-update-your-repo)=
-### Update your GitHub repository
+### GitHub deponuzu güncelleyin
 
-[Log into GitHub](https://github.com/login).
+[GitHub'a giriş yapın](https://github.com/login).
 
-1. Select Repositories.
-2. Scroll down and select your own AndroidAPS repository.
+1. Repositories seçin.
+2. Aşağı kaydırın ve kendi AndroidAPS deponuzu seçin.
 
-![Select AndroidAPS repo](../images/update/CI/GitHubUpdate1.png)
+![AndroidAPS deposunu seçme](../images/update/CI/GitHubUpdate1.png)
 
-3. Verify you are using your own copy of AndroidAPS (Forked from nightscout/AndroidAPS)
-4. Tap Sync Fork to update it (the number of commits behind might differ from the picture)
+3. AndroidAPS'in kendi kopyanızı kullandığınızı doğrulayın (Forked from nightscout/AndroidAPS)
+4. Güncellemek için Sync Fork'a dokunun (geride olan commit sayısı resimdekinden farklı olabilir)
 
 
 
-![Sync AndroidAPS repo](../images/update/CI/GitHubUpdate2.png)
+![AndroidAPS deposunu senkronize etme](../images/update/CI/GitHubUpdate2.png)
 
-5. Tap Update Branch
+5. Update Branch'e dokunun
 
-![Update AndroidAPS repo](../images/update/CI/GitHubUpdate3.png)
+![AndroidAPS deposunu güncelleme](../images/update/CI/GitHubUpdate3.png)
 
-Note: if you have modified your copy of AndroidAPS by mistake, you will see this screen. Discard all changes (commits) to return to the released version.
+Not: AndroidAPS kopyanızı yanlışlıkla değiştirdiyseniz bu ekranı görürsünüz. Yayınlanmış sürüme dönmek için tüm değişiklikleri (commit'leri) silin (Discard).
 
-![Discard rogue modifications](../images/update/CI/GitHubUpdate4.png)
+![İstenmeyen değişiklikleri silme](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Good job.
+Artık kendi kopyanızı **AAPS**'in en son sürümüyle senkronize ettiniz (güncellediniz). Tebrikler.
 
-![Repo sync'ed](../images/update/CI/GitHubUpdate5.png)
+![Depo senkronize edildi](../images/update/CI/GitHubUpdate5.png)
 
-### Run the Workflow to Build the Signed APK
+### İmzalı APK'yı oluşturmak için iş akışını (workflow) çalıştırın
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+1. AndroidAPS'in GitHub kopyanızda Actions seçin.
+2. All Workflows'u genişletin.
+3. AAPS-CI seçin
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Aşağı kaydırın ve Run Workflow'a dokunun.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Dalı master olarak bırakın. **Select AAPS Version** alanında, listenin en üstündeki en yeni sürüm olan **4.0.0**'ın seçili olduğunu kontrol edin. Fork'unuz güncel değilse, önceden seçilen sürüm daha eski bir sürümdür: iş akışını form açıldığı haliyle çalıştırırsanız bu eski sürümü yeniden oluşturursunuz ve uygulamanız güncellenmez. [Varyantı](#browserbuild-variant) (fullRelease) seçin ve ardından Run workflow'a dokunun.
 
    ```{note}
-   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   Sürüm listesi, fork'unuzdaki iş akışının bir parçasıdır. **4.0.0** listede yoksa fork'unuz henüz senkronize edilmemiştir: [GitHub deponuzu güncelleyin](#Update-to-new-version-update-your-repo) adımına geri dönün.
    ```
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of **AAPS**. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
+6. Workflow run was successfully requested mesajını göreceksiniz. Tarayıcı sayfanızı yenileyin, ardından oluşturma ilerlemesini izleyebilirsiniz. İşlem bittiğinde AAPS CI işleminin yanında yeşil bir onay işareti görünür. **AAPS**'in güncellenmiş sürümünü başarıyla oluşturdunuz. Bu, Master ve Wear apk'sının artık doğrudan Google Drive'ınıza kaydedildiği anlamına gelir (aşağıdaki gibi). AAPSClient apk'sını Github > nightscout > AndroidAPS sayfasından, [buradan](https://github.com/nightscout/AndroidAPS/releases) indirebilirsiniz
 
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![İş akışını izleme](../images/update/CI/GitHubActions4.png)
 
 
-### Install the AAPS APK
+### AAPS APK'sını yükleyin
 
-1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+1. Google Drive'ınızı açın
+2. AAPS klasörüne girin, yeni sürüm klasörünü seçin. Orada hem telefon hem de Android Wear sürümlerini bulacaksınız.
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+![Google Drive konumu](../images/update/CI/GitHubActions5.png)
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+Eylül 2026'dan itibaren Google'ın [Android geliştirici doğrulaması](#android-developer-verification), ülkenize bağlı olarak APK'yı dosyaya dokunarak yüklemeyi engelleyebilir. Ücretsiz çözüm yolları o sayfada açıklanmıştır.
 ```
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
+[Buradan](#Update-to-new-version-check-aaps-version-on-phone) devam edin
 
 (update-browser-build-troubleshooting)=
 
@@ -110,6 +110,6 @@ Bir şeyler ters giderse, panik yapmayın.
 
 Bir Nefes Alın!
 
-Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
+Ardından sorununuzun zaten belgelenip belgelenmediğini kontrol edin: **AAPS Builder** ile oluşturuyorsanız [AAPS Builder sorun giderme](#aaps-builder-troubleshooting), aksi halde [Tarayıcı ile oluşturma: sorun giderme](#aaps-ci-troubleshooting) bölümüne bakın.
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Daha fazla yardıma ihtiyacınız olursa lütfen [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) veya [Discord](https://discord.gg/4fQUWHZ4Mw) üzerindeki diğer **AAPS** kullanıcılarına ulaşın.

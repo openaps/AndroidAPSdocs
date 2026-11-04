@@ -131,7 +131,7 @@ Po każdym wyborze trzeba potwierdzić.
 
 Musisz sprawdzić, skąd biorą się zduplikowane BG:
 
-* Czy w Twojej stronie Nightscout jest włączony Dexcom bridge? Wyłącz bridge: przejdź do panelu administracyjnego Twojej instancji Nightscout, edytuj zmienną "enable" i usuń z niej część "bridge". (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Czy w Twojej stronie Nightscout jest włączony Dexcom bridge? Wyłącz bridge: przejdź do panelu administracyjnego Twojej instancji Nightscout, edytuj zmienną "enable" i usuń z niej część "bridge". (Dla Heroku [szczegóły znajdziesz tutaj](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Czy kilka źródeł wysyła Twoje BG do Nightscout? Jeśli używasz aplikacji BYODA, włącz wysyłanie w **AAPS**, ale nie włączaj go w xDrip, jeśli go używasz.
 * Czy masz obserwujących, którzy odbierają Twoje BG, ale też wysyłają je ponownie do Twojej strony Nightscout?
 * Ostatnia możliwość: w [ustawieniach NSClient](#Preferences-nsclient) wybierz ustawienia synchronizacji i wyłącz opcję "Odbieraj dane CGM z NS".
@@ -247,7 +247,7 @@ Po przekroczeniu progu ostrzeżenia wartości są pokazane na żółto.
 
 Po przekroczeniu progu krytycznego wartości są pokazane na czerwono.
 
-The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+Wiek jest zawsze pokazywany w krótkiej formie, niezależnie od rozmiaru ekranu: *4h* pierwszego dnia, *3d4h* później.
 
 Progi możesz zmienić małą ikoną **Ustawienia**, widoczną, gdy wiersz stanu jest **rozwinięty** (strzałka po prawej) – zobacz [Wskaźniki stanu](#Preferences-status-lights).
 
@@ -308,11 +308,11 @@ Tak samo działa to na [dodatkowych wykresach](#aaps-screens-additional-graphs) 
 
 (aaps-screens-graph-clock-change)=
 
-#### Clock changes
+#### Zmiany czasu
 
-When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+Gdy zegar telefonu przeskoczył, przy zmianie czasu letniego/zimowego albo w nowej strefie czasowej, przerywana pionowa linia zaznacza ten moment na wykresie BG, z małą ikoną zegara u dołu. Ta sama przerywana linia przechodzi też przez [dodatkowe wykresy](#aaps-screens-additional-graphs) poniżej.
 
-![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
+![Znacznik zmiany czasu: przerywana linia z ikoną zegara, obok linii „teraz”](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -342,7 +342,7 @@ Gdy **PRED** jest włączone, AAPS rysuje swoje prognozy jako **kropkowane linie
 
 Gdy dwie prognozy dają te same wartości, ich kropki nakładają się i widzisz tylko jeden kolor (np. UAM na IOB, gdy BG jest płaska).
 
-* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
+* Linia **COB** (pomarańczowa): [węglowodany aktywne](CobCalculation.md) (w całym AAPS pomarańczowy oznacza COB i węglowodany)
     
     Ta linia prognozy pokazuje, dokąd pójdzie Twoja BG (nie samo COB!) przy obecnych ustawieniach **profilu**, przy założeniu, że odchylenia z powodu wchłaniania węglowodanów pozostaną stałe. Ta linia pojawia się tylko wtedy, gdy są znane COB.
 
@@ -364,7 +364,7 @@ Gdy dwie prognozy dają te same wartości, ich kropki nakładają się i widzisz
 
 * Linia **aCOB** (jasna, półprzezroczysta pomarańczowa): przyspieszone wchłanianie węglowodanów
     
-    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Przestarzałe i mało przydatne.
+    Podobna do COB, ale zakłada stałe tempo wchłaniania węglowodanów 10 mg/dl/5 min (0,555 mmol/l/5 min). Przestarzałe i mało przydatne.
     
     *Ta linia pojawia się tylko wtedy, gdy używasz starszego algorytmu [AMA](#Config-Builder-aps).*
 
@@ -469,7 +469,7 @@ Pokazuje wrażliwość obliczoną przez [DynamicISF](../DailyLifeWithAaps/Dynami
 
 Te dane mogą być dostępne, gdy używasz [smartwatcha z Wear OS](../WearOS/WearOsSmartwatch.md). Włącz je w aplikacji **AAPS** Wear i daj zgodę na dostęp do danych o zdrowiu.
 
-Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+Kroki są rysowane jako słupki, a tętno jako zakrzywiona linia, która ma przerwy tam, gdzie zegarek nie wysłał danych.
 
 #### Odchylenia (DEV)
 
@@ -485,7 +485,7 @@ Ta linia pokazuje, o ile BG „powinna” wzrosnąć lub spaść tylko z powodu 
 
 ![Odchylenia i BGI](../images/main/graph_dev_bgi.png)
 
-Dobrze jest pokazywać tę linię razem ze słupkami odchyleń. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Porównanie linii BGI i słupków odchyleń to kolejny sposób, by zrozumieć, jak zmienia się **BG**. Tutaj, w czasie oznaczonym **1**, słupki odchyleń są wyraźnie nad linią BGI: BG rośnie bardziej, niż wyjaśnia to sama aktywność insuliny (np. po węglowodanach). W czasie oznaczonym **2** słupki odchyleń są poniżej zera (czerwone): BG jest niższa, niż oczekiwał algorytm.
+Dobrze jest pokazywać tę linię razem ze słupkami odchyleń. Mają tę samą skalę, ale inną niż pozostałe dodatkowe dane, więc dobrze jest pokazać je na osobnym wykresie, jak wyżej. Porównanie linii BGI i słupków odchyleń to kolejny sposób, by zrozumieć, jak zmienia się **BG**. Tutaj, w czasie oznaczonym **1**, słupki odchyleń są wyraźnie nad linią BGI: BG rośnie bardziej, niż wyjaśnia to sama aktywność insuliny (np. po węglowodanach). W czasie oznaczonym **2** słupki odchyleń są poniżej zera (czerwone): BG jest niższa, niż oczekiwał algorytm.
 
 ### Sekcja F – Pasek QuickLaunch
 
@@ -507,13 +507,13 @@ Aby podać określoną ilość insuliny bez użycia [kalkulatora bolusa](#aaps-s
 
 Włączając **Rozpocznij TT WkrótcePosiłek**, możesz automatycznie uruchomić [cel tymczasowy „Wkrótce posiłek”](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Dodatkowy wiersz **Czas**, ustawiony na **Teraz**, pozwala zapisać wstrzyknięcie insuliny z przeszłości: użyj **-** / **+**, aby go zmienić, albo dotknij strzałki, aby wpisać minuty lub wybrać datę i godzinę.
+Jeśli nie chcesz podawać bolusa przez pompę, tylko zapisać ilość insuliny (np. insulinę podaną penem), włącz "**Bolus zostanie jedynie odnotowany (nie będzie podany przez pompę)**". Dodatkowy wiersz **Czas**, ustawiony na **Teraz**, pozwala zapisać wstrzyknięcie insuliny z przeszłości: użyj **-** / **+**, aby go zmienić, albo dotknij strzałki, aby wpisać minuty lub wybrać datę i godzinę.
 
 ![Wiersz Czas, zwinięty](../images/v4/Screens/insulin_dialog_record_only_time.png) ![Wiersz Czas, otwarty strzałką](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Przyciskami **+0.5 / +1.0 / +2.0** możesz szybko zwiększyć ilość insuliny. Wartości przyrostu możesz zmienić w [ustawieniach kalkulatora bolusa](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-Okna insuliny możesz też używać, gdy pompa jest wstrzymana lub odłączona, np. aby zapisać insulinę wstrzykniętą penem. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
+Okna insuliny możesz też używać, gdy pompa jest wstrzymana lub odłączona, np. aby zapisać insulinę wstrzykniętą penem. W takim przypadku "**Bolus zostanie jedynie odnotowany (nie będzie podany przez pompę)**" jest wymuszone (pokazane na czerwono) i pojawiają się dodatkowe pola do wyboru typu insuliny oraz przesunięcia **Czas** dla wstrzyknięcia z przeszłości:
 
 ![Okno insuliny z odłączoną pompą](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -527,7 +527,7 @@ Niektóre [ustawione z góry cele tymczasowe](#TempTargets-hypo-temp-target) (Hi
 
 **Czas węglowodanów**: kiedy będziesz jeść lub jadłeś węglowodany.
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). Ten wiersz jest zwinięty, abyś nie wpisał do niego gramów przez pomyłkę: użyj **-** / **+**, aby go zmienić, albo dotknij strzałki, aby go otworzyć i wpisać wartość.
+**Czas trwania**: używany dla [„przedłużonych węglowodanów”](ExtendedCarbs.md). Ten wiersz jest zwinięty, abyś nie wpisał do niego gramów przez pomyłkę: użyj **-** / **+**, aby go zmienić, albo dotknij strzałki, aby go otworzyć i wpisać wartość.
 
 Przyciskami **+5 / +10 / +20** możesz szybko zwiększyć ilość węglowodanów.
 
@@ -590,7 +590,7 @@ Wiersz ikon pod nagłówkiem pokazuje, które dane wchodzą do obliczenia (BG, t
 * Ze względów bezpieczeństwa nie można wyłączyć IOB, gdy włączone jest COB, bo grozi to podaniem za dużej ilości insuliny, jeśli **AAPS** nie uwzględni tego, co już zostało podane.
 * Jeśli włączysz COB i IOB, uwzględnione zostaną niewchłonięte węglowodany, które nie są jeszcze pokryte insuliną, oraz cała insulina podana jako TBR lub SMB.
 * Jeśli włączysz IOB bez COB, **AAPS** uwzględni już podaną insulinę, ale nie odejmie jej od węglowodanów, które jeszcze mają się wchłonąć. Pojawia się wtedy komunikat o „brakujących węglowodanach”.
-* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. W ten sposób dodawane są tylko nowe węglowodany, ponieważ główny posiłek niekoniecznie zostanie wchłonięty, więc IOB nie będzie dokładnie pasował do COB wkrótce po bolusie posiłkowym.
+* Jeśli podajesz bolus na **dodatkowe jedzenie** krótko po bolusie posiłkowym (np. dodatkowy deser), pomocne może być **wyłączenie wszystkich danych**. W ten sposób dodawane są tylko nowe węglowodany, ponieważ główny posiłek niekoniecznie zostanie wchłonięty, więc IOB nie będzie dokładnie pasował do COB wkrótce po bolusie posiłkowym.
 * Ze względów bezpieczeństwa **cel tymczasowy** jest uwzględniany w obliczeniu tylko wtedy, gdy sam włączysz tę pozycję.
 
 (AapsScreens-section-j)=
@@ -619,20 +619,20 @@ Pole **Czas węglowodanów** służy do bolusa z wyprzedzeniem: możesz powiedzi
 
 ![Ustaw alarm dla przyszłych węglowodanów](../images/Home2021_BolusWizard_EatingReminder.png)
 
-The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
+Przypomnienie startuje, gdy bolus zostanie podany. Gdy przypomnienie działa, na ekranie głównym pasek **Czas coś zjeść** odlicza czas, z przyciskami **Stop** i **+5 min**. **+5 min** przesuwa koniec oczekiwania o pięć minut później, a pasek pokazuje całkowity czas oczekiwania. Gdy nadejdzie czas, przypomnienie dzwoni własnym dźwiękiem: łagodnym dźwiękiem minutnika kuchennego. Oprócz **Wycisz alarm** (ekran zostaje otwarty) i **Wycisz i zamknij** ekran alarmu ma też przycisk **+5 min**, który rozpoczyna nowe, pięciominutowe oczekiwanie. Gdy przypomnienie już zadzwoni, pasek pokazuje *Czas minął* z przyciskami **+5 min** i **Zamknij**; **Wycisz i zamknij** usuwa też pasek. Pasek i alarm są też pokazywane w **AAPSClient** oraz na [zegarku](#WearOsSmartwatch-wizard-carb-time). Przypomnienie nie tworzy minutnika w aplikacji zegara w telefonie. Jeśli Android nie pozwala **AAPS** ustawiać alarmów, kalkulator poprosi Cię o zezwolenie na *Alarmy i przypomnienia* dla **AAPS** w ustawieniach Androida. Dzwonek nie jest dostępny, gdy czas węglowodanów jest w przeszłości.
 
-![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
+![Pasek Czas coś zjeść na ekranie głównym, z +5 min i Stop](../images/main/main_eat_reminder_bar.png)
 
-![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+![Ekran alarmu Czas coś zjeść: +5 min, Wycisz alarm, Wycisz i zamknij](../images/main/eat_reminder_alarm.png)
 
-Pole **BG** jest zwykle już wypełnione ostatnim odczytem z CGM. Jeśli nie masz działającego CGM, to pole będzie puste. Gdy odczyt jest świeży, wiersz **BG** pozostaje zwinięty. The field follows new readings while the wizard is open, until you change it yourself.
+Pole **BG** jest zwykle już wypełnione ostatnim odczytem z CGM. Jeśli nie masz działającego CGM, to pole będzie puste. Gdy odczyt jest świeży, wiersz **BG** pozostaje zwinięty. Pole śledzi nowe odczyty, dopóki kalkulator jest otwarty, aż sam zmienisz jego wartość.
 
-Przycisk wyniku na dole pokazuje proponowany bolus; po jego naciśnięciu musisz potwierdzić, zanim zostanie podana jakakolwiek insulina. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
+Przycisk wyniku na dole pokazuje proponowany bolus; po jego naciśnięciu musisz potwierdzić, zanim zostanie podana jakakolwiek insulina. Dopóki potwierdzenie czeka, pętla nie podaje SMB, więc bolus, który potwierdzasz, nadal jest prawidłowy. Jeśli w tym momencie podawany jest SMB, **OK** czeka, aż podawanie się zakończy.
 
 Warto wiedzieć:
 
 * Jeśli obliczony bolus jest większy niż Twój **[Maksymalny bolus](#Preferences-maximum-bolus)**, zostaje zmniejszony do maksymalnego bolusa, a potwierdzenie pokazuje ostrzeżenie "Zastosowano ograniczenie bolusa". [Szybki kalkulator](../DailyLifeWithAaps/QuickWizards.md) jest w takim przypadku odrzucany.
-* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
+* Gdy bolus jest tylko zapisywany (np. gdy pompa jest odłączona), ostrzeżenie "**Bolus zostanie jedynie odnotowany (nie będzie podany przez pompę)**" zostaje na górze okna, także podczas przewijania.
 * Bolus, który podajesz ręcznie, ma pierwszeństwo przed [SMB](#Open-APS-features-super-micro-bolus-smb), który czeka na podanie: SMB jest anulowany, a pętla oblicza ponownie. Jeśli SMB jest właśnie podawany, Twój bolus jest odrzucany z komunikatem "SMB jest właśnie podawany. Spróbuj ponownie, gdy zakończy się podawanie." Insulina nie jest podawana, a węglowodany wpisane z tym bolusem nie są zapisywane: poczekaj chwilę i wpisz je ponownie.
 
 (AapsScreens-wrong-cob-detection)=

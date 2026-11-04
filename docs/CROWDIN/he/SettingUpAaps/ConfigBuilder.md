@@ -1,51 +1,51 @@
-# Configuration (Config Builder)
+# הגדרות תצורה (Config Builder)
 
-```{admonition} Coming from AAPS v3? :class: note The **Config Builder** is now called **Configuration** and is in the **menu** (☰). See [What changed in AAPS v4](#v4-changes).
+```{admonition} מגיעים מ-AAPS v3? :class: note **בונה התצורה** (Config Builder) נקרא עכשיו **הגדרות תצורה** ונמצא ב**תפריט** (☰). ראו [מה השתנה ב-AAPS v4](#v4-changes).
 
-    <br />**Configuration** is where you choose which plugins are active (CGM, pump, APS algorithm, sensitivity, sync, …) and open each plugin and its settings. The [walkthrough](#configuration-v4) is below; the rest of this page describes each section in detail.
+    <br />ב-**הגדרות תצורה** בוחרים אילו תוספים פעילים (CGM, משאבה, אלגוריתם APS, רגישות, סנכרון, …), ופותחים כל תוסף ואת ההגדרות שלו. [ההסבר שלב אחר שלב](#configuration-v4) נמצא למטה; שאר הדף מתאר כל חלק בפירוט.
     
     (configuration-v4)=
-    ## Configuration in AAPS v4
+    ## הגדרות תצורה ב-AAPS v4
     
-    In **AAPS** v4, tap the **menu** (☰) in the **top-left** corner of the main screen and choose **Configuration** (*“Set up your configuration (CGM, pump, …) and enable features”*).
+    ב-**AAPS** v4, יש להקיש על **התפריט** (☰) בפינה **העליונה** של המסך הראשי ולבחור **הגדרות תצורה** (*“הגדירו את התצורה שלכם (חיישן, משאבה וכו') ואפשרו תכונות”*).
     
-    ![The top-left menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+    ![התפריט שבפינה העליונה, עם הפריט הגדרות תצורה](../images/v4/Configuration/configuration_menu.png)
     
-    Plugins are grouped by **category** — for example *Smoothing*, *Calibration*, *Sensitivity detection*, *APS*, *Communication* and *General*. Each row shows the category name and the **currently active** plugin (e.g. *APS → OpenAPS SMB*). Tap a row to open a category.
+    התוספים מקובצים לפי **קטגוריה** — למשל *החלקה*, *כיול*, *זיהוי רגישות*, *APS*, *תקשורת* ו-*כללי*. כל שורה מציגה את שם הקטגוריה ואת התוסף **הפעיל כרגע** (למשל *APS ← OpenAPS SMB*). יש להקיש על שורה כדי לפתוח קטגוריה.
     
-    ![The Configuration screen, listing plugin categories](../images/v4/Configuration/configuration_plugins.png)
+    ![מסך הגדרות תצורה עם רשימת קטגוריות התוספים](../images/v4/Configuration/configuration_plugins.png)
     
-    Inside a category you see the plugins available for it. For single-choice categories you pick the active one; some categories are multi-select (*“Choose any that apply”*). Each plugin offers two actions:
+    בתוך קטגוריה מוצגים התוספים שזמינים עבורה. בקטגוריות של בחירה יחידה בוחרים את התוסף הפעיל; בחלק מהקטגוריות אפשר לבחור כמה תוספים (*“בחרו את כל האפשרויות המתאימות”*). לכל תוסף יש שתי פעולות:
     
-    - **Open plugin** — opens the plugin's own screen.
-    - **Settings** — opens the plugin's preferences (settings may be grouped into expandable sections).
+    - **פתיחת תוסף** — פותח את המסך של התוסף.
+    - **הגדרות** — פותח את ההעדפות של התוסף (ההגדרות יכולות להיות מקובצות בחלקים שאפשר להרחיב).
     
-    ![A category showing its plugins, each with “Open plugin” and “Settings”](../images/v4/Configuration/configuration_open_plugin.png)
+    ![קטגוריה שמציגה את התוספים שלה, לכל אחד “פתיחת תוסף” ו“הגדרות”](../images/v4/Configuration/configuration_open_plugin.png)
     
     (configuration_sync_icon)=
-    ### The mobile icon — “synced from the master”
+    ### סמל הטלפון הנייד — “מסונכרן מהמכשיר הראשי”
     
-    A small **mobile (phone) icon** next to a category or setting means that item is **synchronized from the master** — its value/selection is delivered to this device over the NSClientV3 (Nightscout) channel.
+    סמל קטן של **טלפון נייד** ליד קטגוריה או הגדרה אומר שהפריט הזה **מסונכרן מהמכשיר הראשי** — הערך או הבחירה שלו מועברים למכשיר הזה דרך הערוץ NSClientV3 (Nightscout).
     
-    On a **client** (**AAPSClient**) these items are **kept in sync with the master**. The icon is only shown on a client, so it does not appear in the screenshot above, which was taken on the main **AAPS** app. On a client it typically appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS*. Exactly how the master and clients stay aligned — and which settings you can change from either side — is covered under [Master ↔ Client control](#client-master-config-prefs).
+    במכשיר **לקוח** (**AAPSClient**) הפריטים האלה **נשמרים מסונכרנים עם המכשיר הראשי**. הסמל מוצג רק במכשיר לקוח, ולכן הוא לא מופיע בצילום המסך שלמעלה, שצולם באפליקציית **AAPS** הראשית. במכשיר לקוח הוא מופיע בדרך כלל ליד *החלקה*, *כיול*, *זיהוי רגישות* ו-*APS*. איך בדיוק המכשיר הראשי ומכשירי הלקוח נשארים מתואמים — ואילו הגדרות אפשר לשנות מכל צד — מוסבר ב-[שליטה בין מכשיר ראשי ↔ מכשיר לקוח](#client-master-config-prefs).
     
-    The same icon also appears **inside the settings**, next to the individual preferences that are synced. In the example below *Absorption cutoff* carries the icon; settings without the icon are configured per device:
+    אותו סמל מופיע גם **בתוך ההגדרות**, ליד כל העדפה שמסונכרנת. בדוגמה שלמטה הסמל מופיע ליד *סף הפסקת חישוב ספיגה*; הגדרות בלי הסמל מוגדרות בכל מכשיר בנפרד:
     
-    ![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+    ![ההגדרות של תוסף — סמל הטלפון הנייד מסמן את ההעדפות המסונכרנות](../images/v4/ClientMaster/preferences_synced_icon.png)
     
-    Items **without** the icon are configured **per device**. The most important example is the **NSClientV3 (Communication)** connection itself — the **Nightscout URL**, **access token** and **websockets** are set on each phone individually, so they do **not** show the mobile icon.
+    פריטים **בלי** הסמל מוגדרים **בכל מכשיר בנפרד**. הדוגמה החשובה ביותר היא החיבור **NSClientV3 (תקשורת)** עצמו — **כתובת Nightscout**, **אסימון הגישה** ו-**WebSockets** מוגדרים בכל טלפון בנפרד, ולכן **לא** מופיע לידם סמל הטלפון הנייד.
     
     ---
     
     (Config-Builder-tab-or-hamburger-menu)=
-    ## Opening a plugin screen
+    ## פתיחת מסך של תוסף
     
-    Each plugin screen is opened in one of these ways (the tabs and the eye checkbox of **AAPS** v3 are gone, see [What changed in AAPS v4](#v4-changes)):
+    אפשר לפתוח כל מסך של תוסף באחת מהדרכים האלה (הלשוניות ותיבת הסימון עם העין של **AAPS** v3 כבר לא קיימות, ראו [מה השתנה ב-AAPS v4](#v4-changes)):
     
-    - **Configuration** → the plugin's category → **Open plugin**,
-    - the **Manage** sheet of the bottom navigation, for the screens you use most (Profile, Insulin settings, Pump, Automation, Food...),
-    - a [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) button that you add yourself,
-    - the **search bar** on the main screen.
+    - **הגדרות תצורה** ← הקטגוריה של התוסף ← **פתיחת תוסף**,
+    - חלון **ניהול** בסרגל הניווט התחתון, עבור המסכים שבהם משתמשים הכי הרבה (פרופיל, הגדרות אינסולין, משאבה, אוטומציה, מזון...),
+    - לחצן [הפעלה מהירה](../DailyLifeWithAaps/QuickLaunch.md) שמוסיפים בעצמכם,
+    - **שורת החיפוש** במסך הראשי.
     
     ```{contents}
     :backlinks: entry
@@ -56,219 +56,219 @@
 
 ## Profile
 
-This module cannot be disabled as it is a core part of **AAPS**.
+לא ניתן להשבית את המודול הזה, כי הוא חלק מרכזי של **AAPS**.
 
-See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
+ראו [פרופיל AAPS שלכם](../SettingUpAaps/YourAapsProfile.md) להבנה בסיסית של מה שנמצא ב**פרופיל** שלכם.
 
 (insulin)= (Config-Builder-insulin)=
 
 ## אינסולין
 
-![Insulin settings](../images/manage/insulin_settings.png)
+![הגדרות אינסולין](../images/manage/insulin_settings.png)
 
-In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Open **Manage → Insulin settings** to set up the insulin you are using.
+ב-**AAPS** 4 האינסולין כבר לא תוסף שבוחרים ב**הגדרות תצורה**. יש לפתוח את **ניהול ← הגדרות אינסולין** כדי להגדיר את האינסולין שבו אתם משתמשים.
 
-The insulin editor lets you:
+עורך האינסולין מאפשר:
 
-* give the insulin an **Insulin nickname** so it is easy to recognise,
-* set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Action, in hours), either by typing the value or using the **–** / **+** buttons,
-* tap a **Load peak from** preset button — **Novorapid** (75 min), **Fiasp** (55 min) or **Lyumjev** (45 min) — to fill in the standard peak time for that insulin in one step.
+* לתת לאינסולין **כינוי לאינסולין**, כדי שיהיה קל לזהות אותו,
+* להגדיר את ה**שיא** (הזמן עד לפעילות האינסולין המרבית, בדקות) ואת ה-**DIA** (משך פעולת האינסולין, בשעות), בהקלדת הערך או בעזרת הלחצנים **–** / **+**,
+* להקיש על לחצן של הגדרה מוכנה ב**טעינת שיא מתוך** — **נובוראפיד** (75 דקות), **פיאספ** (55 דקות) או **ליומג'ב** (45 דקות) — כדי למלא בצעד אחד את זמן השיא הרגיל של אותו אינסולין.
 
-The allowed ranges are the same whatever insulin you use:
+הטווחים המותרים זהים לכל סוג אינסולין:
 
-* **DIA**: 5 to 9 hours (5 to 10 hours if the patient type is set to **Pregnant**). See [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to choose a value.
-* **Peak**: 35 to 120 minutes.
+* **DIA**: 5 עד 9 שעות (5 עד 10 שעות אם סוג המטופל מוגדר ל**הריון**). ראו [משך פעולת האינסולין (DIA) והשיא](#Config-Builder-insulin-dia) כדי לבחור ערך.
+* **שיא**: 35 עד 120 דקות.
 
-The **IOB** (insulin on board) and **Activity** curves shown at the bottom of the editor update as you change the values, so you can see straight away how your settings shape the insulin action.
+העקומות **IOB** (אינסולין פעיל) ו**פעילות אינסולין** שמוצגות בתחתית העורך מתעדכנות בזמן שמשנים את הערכים, כך שאפשר לראות מיד איך ההגדרות שלכם משפיעות על פעולת האינסולין.
 
 More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
 
 (Config-Builder-insulin-change-active)=
 
-### Changing the insulin in use (DIA or peak)
+### שינוי האינסולין שבשימוש (DIA או שיא)
 
-The insulin marked **ACTIVE** is the one your running profile uses. Its fields are greyed out: you cannot edit or delete it. This way, the insulin name shown in your running profile always matches the settings actually in use.
+האינסולין שמסומן **פעיל** הוא האינסולין שבו משתמש הפרופיל הפועל שלכם. השדות שלו באפור: אי אפשר לערוך או למחוק אותו. כך שם האינסולין שמוצג בפרופיל הפועל תמיד תואם להגדרות שבאמת נמצאות בשימוש.
 
-To change the DIA or peak you are using:
+כדי לשנות את ה-DIA או את השיא שבשימוש:
 
-1. Open **Manage → Insulin settings**. If the screen opens read-only (a **✏️ pencil** in the top bar), tap the pencil and unlock your settings.
-2. Tap **+** (*Add new insulin*). **AAPS** creates a copy of the insulin shown on screen.
-3. Set the new **Peak** and/or **DIA**, then tap the save icon (top right).
-4. Tap **▶** (*Activate insulin*) and confirm. The new insulin becomes **ACTIVE**.
+1. יש לפתוח את **ניהול ← הגדרות אינסולין**. אם המסך נפתח לקריאה בלבד (**✏️ עיפרון** בסרגל העליון), יש להקיש על העיפרון ולבטל את נעילת ההגדרות.
+2. יש להקיש על **+** (*הוספת אינסולין חדש*). **AAPS** יוצר עותק של האינסולין שמוצג במסך.
+3. יש להגדיר את ה**שיא** ו/או את ה-**DIA** החדשים, ואז להקיש על סמל השמירה (בחלק העליון של המסך).
+4. יש להקיש על **▶** (*הפעלת אינסולין*) ולאשר. האינסולין החדש הופך ל**פעיל**.
 
-```{admonition} The name includes peak and DIA :class: note **AAPS** adds the peak, DIA and concentration to the insulin name automatically (for example *Fiasp 55m 8h U100*), so you can tell your configurations apart at a glance.
+```{admonition} השם כולל את השיא ואת ה-DIA :class: note **AAPS** מוסיף אוטומטית לשם האינסולין את השיא, את ה-DIA ואת הריכוז (למשל *Fiasp 55m 8h U100*), כך שאפשר להבחין בין ההגדרות שלכם במבט אחד.
 
-    <br />You can delete the old insulin once it is no longer active.
+    <br />אפשר למחוק את האינסולין הישן כשהוא כבר לא פעיל.
     
-    ### The "Load peak from" presets
+    ### ההגדרות המוכנות של "טעינת שיא מתוך"
     
-    In **AAPS** 4 there is no list of insulin types to choose from. Every insulin uses the same exponential activity curve; only its **Peak** and **DIA** differ. The **Load peak from** presets in the insulin editor fill in the recommended peak for the most common insulins in one tap (the small ⓘ next to **Load peak from** lists them with their peak values). You can still adjust the **Peak** and **DIA** afterwards.
+    ב-**AAPS** 4 אין רשימה של סוגי אינסולין לבחירה. כל אינסולין משתמש באותה עקומת פעילות מעריכית; רק הערכים **שיא** ו-**DIA** שלו שונים. ההגדרות המוכנות של **טעינת שיא מתוך** בעורך האינסולין ממלאות בהקשה אחת את השיא המומלץ לסוגי האינסולין הנפוצים ביותר (הסמל הקטן ⓘ ליד **טעינת שיא מתוך** מציג אותם עם ערכי השיא שלהם). אחר כך עדיין אפשר לשנות את הערכים **שיא** ו-**DIA**.
     
-    Only change the peak away from its recommended value if you understand the effect of doing so. The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the curves.
+    יש לשנות את השיא מהערך המומלץ רק אם מבינים את ההשפעה של השינוי. [גרף עקומת האינסולין](#AapsScreens-insulin-profile) עוזר להבין את העקומות.
     
     #### Novorapid
     
-    ![Insulin curve with the Novorapid peak](../images/Profile/ConfBuild_Insulin_RAO.png)
+    ![עקומת אינסולין עם השיא של Novorapid](../images/Profile/ConfBuild_Insulin_RAO.png)
     
-    * recommended for Humalog, Novolog and Novorapid (called *Rapid-Acting Oref* in **AAPS** v3)
-    * Peak = 75 minutes after injection
+    * מומלץ עבור Humalog, Novolog ו-Novorapid (נקרא *Rapid-Acting Oref* ב-**AAPS** v3)
+    * שיא = 75 דקות אחרי ההזרקה
     
     #### Fiasp
     
-    ![Insulin curve with the Fiasp peak](../images/Profile/ConfBuild_Insulin_URO.png)
+    ![עקומת אינסולין עם השיא של Fiasp](../images/Profile/ConfBuild_Insulin_URO.png)
     
-    * recommended for Fiasp (called *Ultra-Rapid Oref* in **AAPS** v3)
-    * Peak = 55 minutes after injection
+    * מומלץ עבור Fiasp (נקרא *Ultra-Rapid Oref* ב-**AAPS** v3)
+    * שיא = 55 דקות אחרי ההזרקה
     
     (Config-Builder-lyumjev)=
     #### Lyumjev
     
-    ![Insulin curve with the Lyumjev peak](../images/Profile/ConfBuild_Insulin_L.png)
+    ![עקומת אינסולין עם השיא של Lyumjev](../images/Profile/ConfBuild_Insulin_L.png)
     
-    * recommended for Lyumjev
-    * Peak = 45 minutes after injection
+    * מומלץ עבור Lyumjev
+    * שיא = 45 דקות אחרי ההזרקה
     
-    #### Custom peak
+    #### שיא מותאם אישית
     
-    * There is no separate "Free-Peak Oref" insulin type in **AAPS** 4: enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a preset.
-    * A custom peak is useful if you use an insulin that is not in the list, or a mixture of different insulins.
+    * ב-**AAPS** 4 אין סוג אינסולין נפרד בשם "Free-Peak Oref": אפשר להזין כל **שיא** (35 עד 120 דקות) ישירות ב[עורך האינסולין](#Config-Builder-insulin), בלי להשתמש בהגדרה מוכנה.
+    * שיא מותאם אישית שימושי אם משתמשים באינסולין שאינו ברשימה, או בתערובת של סוגי אינסולין שונים.
     
     (Config-Builder-insulin-dia)=
-    ### Duration of insulin action (DIA) and peak
+    ### משך פעולת האינסולין (DIA) והשיא
     
     ```{warning}
-    In looping, decreasing DIA or peak will always increase administered insulin. DIA works differently in AAPS than in commercial AID systems, and careless changes to these settings can change insulin dosing in a way which is much larger or smaller than expected.
+    בלולאה, הקטנה של ה-DIA או של השיא תמיד מגדילה את כמות האינסולין שניתנת. ה-DIA פועל ב-AAPS אחרת מאשר במערכות AID מסחריות, ושינויים לא זהירים בהגדרות האלה יכולים לשנות את מינון האינסולין בצורה גדולה או קטנה הרבה יותר מהצפוי.
     
 
-AAPS models the timeline of insulin action with a mathematical formula, configured using **DIA** and the closely related **peak** settings. DIA is the theoretical duration until IOB reaches zero and peak is the point in time when the effect of insulin is strongest. This yields an IOB curve and an activity curve, which is simply the **rate** of IOB decay.
+AAPS מתאר את ציר הזמן של פעולת האינסולין בנוסחה מתמטית, שמוגדרת בעזרת ה-**DIA** והגדרת ה**שיא** שקשורה אליו מאוד. ה-DIA הוא משך הזמן התיאורטי עד שה-IOB מגיע לאפס, והשיא הוא נקודת הזמן שבה השפעת האינסולין היא החזקה ביותר. כך מתקבלות עקומת IOB ועקומת פעילות, שהיא פשוט **קצב** הירידה של ה-IOB.
 
-Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). This missing basal insulin is fully subtracted from the IOB, explaining why IOB will in practice reach zero many hours earlier than the configured DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
+חשוב לזכור שכאשר AAPS פועל בלולאה, זה נורמלי שיהיו תקופות של [בזאלי זמני אפס](#Open-APS-features-super-micro-bolus-smb). האינסולין הבזאלי החסר הזה מופחת במלואו מה-IOB, וזה מסביר למה בפועל ה-IOB מגיע לאפס שעות רבות לפני ה-DIA שהוגדר. אפשר לראות בנפרד את [IOB הבולוס ו-IOB הבזאלי](#aaps-screens-iob-cob-basal-sens) מהמסך הראשי.
 
-To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin settings**. AAPS displays the active insulin configuration like this:
+כדי להגדיר את ה-DIA ואת השיא, יש להקיש על **ניהול** במסך הראשי, ואז על **הגדרות אינסולין**. AAPS מציג את הגדרות האינסולין הפעילות כך:
 
-![Sample insulin configuration](../images/manage/insulin_profile.png)
+![דוגמה להגדרות אינסולין](../images/manage/insulin_profile.png)
 
-In this example, the peak setting is 55 minutes, DIA is 8 hours and [insulin concentration](#Insulin-Concentration) is the standard 100 IU/mL.
+בדוגמה הזו הגדרת השיא היא 55 דקות, ה-DIA הוא 8 שעות ו[ריכוז האינסולין](#Insulin-Concentration) הוא הריכוז הרגיל של 100 IU/mL.
 
-Due to the influence of zero-temping explained above and the formula used for IOB decay in AAPS, most users set a clearly higher DIA than in commercial systems. In general, many people find that a **DIA** of 9h works well for them. After you have more experience with AAPS and have a well-tuned profile, you can try to find personalized DIA and peak settings with the information below.
+בגלל ההשפעה של בזאלי זמני אפס שהוסברה למעלה, ובגלל הנוסחה שבה AAPS משתמש לירידת ה-IOB, רוב המשתמשים מגדירים DIA גבוה בבירור מאשר במערכות מסחריות. באופן כללי, אנשים רבים מגלים ש-**DIA** של 9 שעות מתאים להם. אחרי שתצברו יותר ניסיון עם AAPS ויהיה לכם פרופיל מכוונן היטב, תוכלו לנסות למצוא הגדרות DIA ושיא אישיות בעזרת המידע שלמטה.
 
-````{admonition} Details on the impact of DIA and peak configuration :class: dropdown
+````{admonition} פרטים על ההשפעה של הגדרות ה-DIA והשיא :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+מכיוון שלקצב הבזאלי יש השפעה עקיפה על ירידת ה-IOB ב-AAPS, קצב בזאלי גבוה מדי יכול להסתיר DIA גבוה מדי, וגם להפך. הגיוני לכוונן קודם בזהירות את הקצבים הבזאליים, ורק אחר כך לשנות את ה-DIA ואת השיא. בנוסף, חשוב לזכור שהגדרות ה-DIA והשיא משפיעות זו על זו: ההשפעה של ה-DIA תלויה בשיא, וגם להפך.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+התרשימים האלה מראים את ההשפעה המדויקת של ה-DIA והשיא על עקומות ה-IOB, בכל טווח הערכים המותרים.
 
-Adjusting DIA:
+שינוי ה-DIA:
 
 ```{image} ../images/iob_remaining_static_peak.png :width: 400px
 
-    <br />Adjusting peak:
+    <br />שינוי השיא:
     
     ```{image} ../images/iob_remaining_static_dia.png
     :width: 400px
     
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+לבסוף, השוואה שבה ה-DIA והשיא משתנים במקביל. ההיגיון כאן הוא ששני הערכים משתנים באותו יחס, כך ש-`49/35 ~ 7/5`. או באופן דומה, `120/93 ~ 9/7`. המרווחים יהיו עקביים בלי קשר ל-DIA או לשיא ההתחלתיים, כל עוד השינוי היחסי זהה בשניהם.
 
 ```{image} ../images/iob_remaining_uniform.png :width: 400px
 
-    <br />Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+    <br />שימו לב שכאשר ה-DIA והשיא משתנים בצורה הזו, כל נקודה בעקומה זזה באותו יחס.
     
     ````
     
-    #### Further reading on DIA and peak configuration
+    #### קריאה נוספת על הגדרות DIA ושיא
     
-    * [Technical details and historical background from the AAPS predecessor, OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
-    * [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
-    * [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
-    * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
+    * [פרטים טכניים ורקע היסטורי מ-OpenAPS, הקודם של AAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
+    * [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) באתר Diabettech.
+    * [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) באתר See My CGM (ארכיון).
+    * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) ומאמרים נוספים באתר Bionic Wookie, שממליצים על DIA של 9 שעות עבור Lyumjev, Fiasp, NovoRapid, Humalog.
     
     (Config-Builder-bg-source)=
-    ## BG Source
-    Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+    ## מקור ערכי הסוכר
+    יש לבחור את מקור ערכי הסוכר שבו אתם משתמשים. ראו את הדף [מקורות ערכי סוכר](../Getting-Started/CompatiblesCgms.md) למידע נוסף על ההגדרה.
     
-    ![Configuration > BG Source](../images/v4/Configuration/configuration_bg_source.png)
+    ![הגדרות תצורה > מקור ערכי הסוכר](../images/v4/Configuration/configuration_bg_source.png)
     
-    Scroll down to see the other sources:
+    יש לגלול למטה כדי לראות את שאר המקורות:
     
-    ![Configuration > BG Source, continued](../images/v4/Configuration/configuration_bg_source_2.png)
+    ![הגדרות תצורה > מקור ערכי הסוכר, המשך](../images/v4/Configuration/configuration_bg_source_2.png)
     
-    ![Configuration > BG Source, end of the list](../images/v4/Configuration/configuration_bg_source_3.png)
+    ![הגדרות תצורה > מקור ערכי הסוכר, סוף הרשימה](../images/v4/Configuration/configuration_bg_source_3.png)
     
-    * [xDrip+ BG](../CompatibleCgms/xDrip.md) - also for compatible apps such as [Juggluco](../CompatibleCgms/Juggluco.md)
-    * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
+    * [נתוני סוכר מ-xDrip+](../CompatibleCgms/xDrip.md) - גם עבור אפליקציות תואמות כמו [Juggluco](../CompatibleCgms/Juggluco.md)
+    * [נתוני סוכר מ-NSClient](../CompatibleCgms/CgmNightscoutUpload.md) - רק אם אתם יודעים מה אתם עושים, ראו [מקורות ערכי סוכר](../Getting-Started/CompatiblesCgms.md).
     * [MM640g](../CompatibleCgms/MM640g.md)
-    * Glimp - only version 4.15.57 and newer are supported
+    * Glimp - נתמכות רק גרסה 4.15.57 וגרסאות חדשות יותר
     * [BYODA (Build Your Own Dexcom App)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
-    * MicroTech CGM App - for the Aidex / LinX CGM
+    * MicroTech CGM App - עבור ה-CGM של Aidex / LinX
     * [Poctech](../CompatibleCgms/PocTech.md)
-    * Tomato (MiaoMiao) - Tomato App for MiaoMiao device
-    * [Glunovo](https://infinovo.com/) - Glunovo App for Glunovo CGM system
-    * Intelligo - Intelligo App
-    * Syai/Ottai - for the Syai and Ottai apps (see [Syai Tag](../CompatibleCgms/SyaiTagX1.md) and [Ottai](../CompatibleCgms/OttaiM8.md))
-    * SI App - patched SI App or Sibionics App for Sibionics CGM
-    * Sino App - patched app for Sinocare CGM
-    * Notification Reader - reads glucose values from the notifications shown by official CGM apps (Dexcom, Medtronic, Eversense, etc.)
-    * Instara - Instara App
-    * Random BG - generates random BG data for testing. It can only be enabled in an engineering (developer) build with the **Virtual Pump**, so in a normal **AAPS** installation it cannot be used.
+    * Tomato (MiaoMiao) - אפליקציית Tomato עבור ההתקן MiaoMiao
+    * [Glunovo](https://infinovo.com/) - אפליקציית Glunovo עבור מערכת ה-CGM של Glunovo
+    * Intelligo - אפליקציית Intelligo
+    * Syai/Ottai - עבור האפליקציות Syai ו-Ottai (ראו [Syai Tag](../CompatibleCgms/SyaiTagX1.md) ו-[Ottai](../CompatibleCgms/OttaiM8.md))
+    * SI App - אפליקציית SI מתוקנת או אפליקציית Sibionics עבור ה-CGM של Sibionics
+    * Sino App - אפליקציה מתוקנת עבור ה-CGM של Sinocare
+    * קורא התראות - קורא ערכי סוכר מההתראות שמציגות אפליקציות ה-CGM הרשמיות (Dexcom, Medtronic, Eversense וכו')
+    * Instara - אפליקציית Instara
+    * נתוני סוכר אקראיים (Random BG) - מפיק נתוני סוכר אקראיים לבדיקות. אפשר להפעיל אותו רק בבנייה הנדסית (בנייה למפתחים) עם **משאבה וירטואלית**, ולכן בהתקנה רגילה של **AAPS** אי אפשר להשתמש בו.
     
-    ## Smoothing
+    ## החלקה
     
-    ![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+    ![הגדרות תצורה > החלקה](../images/v4/Configuration/configuration_smoothing.png)
     
-    See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+    ראו [החלקת נתוני הגלוקוז בדם](../CompatibleCgms/SmoothingBloodGlucoseData.md).
     
-    ## Calibration
+    ## כיול
     
-    Choose how **AAPS** treats the values it receives from your sensor:
+    יש לבחור איך **AAPS** מטפל בערכים שהוא מקבל מהחיישן שלכם:
     
-    - **No calibration**: the sensor values are used as they are. Use this when the sensor is already factory-calibrated and accurate. This is the default.
-    - **Linear calibration**: **AAPS** corrects the sensor values with a slope and an offset that it computes from your fingerstick entries.
+    - **ללא כיול**: ערכי החיישן משמשים כפי שהם. יש להשתמש באפשרות הזו כאשר החיישן כבר מכויל מהמפעל ומדויק. זו ברירת המחדל.
+    - **כיול ליניארי**: **AAPS** מתקן את ערכי החיישן בעזרת שיפוע והיסט שהוא מחשב ממדידות האצבע שלכם.
     
-    How to use **Linear calibration**:
+    איך משתמשים ב**כיול ליניארי**:
     
-    1. Select **Linear calibration** in the **Calibration** category.
-    2. When you insert a new sensor, log the sensor change: use **Log sensor change** on the calibration screen, or enter a CGM sensor insert in the Careportal. This tells **AAPS** when the sensor session started. If **AAPS** notices a gap of more than 30 minutes in the readings, it may ask you to mark a sensor change; this prompt appears on the master only, not on a client.
-    3. Open the plugin and tap **Add calibration**. Enter your fingerstick value. **AAPS** pairs it with the sensor value from the last 10 minutes.
+    1. יש לבחור **כיול ליניארי** בקטגוריה **כיול**.
+    2. כשמכניסים חיישן חדש, יש לרשום את החלפת החיישן: להשתמש ב**רישום החלפת חיישן** במסך הכיול, או להזין הכנסת חיישן CGM בפורטל הטיפולים. כך **AAPS** יודע מתי התחיל החיישן הנוכחי. אם **AAPS** מזהה פער של יותר מ-30 דקות בערכים, הוא עשוי לבקש לסמן החלפת חיישן; הבקשה הזו מופיעה רק במכשיר הראשי, לא במכשיר לקוח.
+    3. יש לפתוח את התוסף וללחוץ על **הוספת כיול**. יש להזין את ערך מדידת האצבע. **AAPS** מצמיד אותו לערך החיישן מ-10 הדקות האחרונות.
     
-    A calibration is accepted only when:
+    כיול מתקבל רק כאשר:
     
-    - a sensor change is logged and at least **2 hours** have passed since then (warm-up),
-    - your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
-    - there is a CGM reading from the last 10 minutes,
-    - it is for the current moment. You cannot enter older fingerstick values.
+    - נרשמה החלפת חיישן ועברו מאז לפחות **2 שעות** (זמן חימום),
+    - רמת הסוכר יציבה. אם היא משתנה מהר מדי, החלון מודיע על כך ומציג את המגבלה,
+    - יש ערך CGM מ-10 הדקות האחרונות,
+    - הכיול הוא לרגע הנוכחי. אי אפשר להזין ערכים ישנים של מדידת אצבע.
     
-    How the correction works:
+    איך התיקון עובד:
     
-    - **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
-    - Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. The line therefore follows your sensor as it drifts.
-    - At least **2 pairs** are needed.
-    - If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
-    - The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
-    - Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. This protects you from a wrong entry.
+    - **AAPS** מעביר קו ישר דרך הזוגות של החיישן הנוכחי: `corrected value = slope × sensor value + offset`.
+    - לזוגות חדשים יש משקל גבוה יותר מאשר לזוגות ישנים: לזוג בן יומיים יש משקל של כ-37 %, ולזוג בן 4 ימים כ-14 %. כך הקו עוקב אחרי החיישן כאשר הוא סוטה עם הזמן.
+    - נדרשים לפחות **2 זוגות**.
+    - אם הזוגות קרובים זה לזה (הפרש של פחות מ-54 mg/dL / 3 mmol/L), רק הערכים מוזזים (היסט, בלי שיפוע).
+    - השיפוע נשמר בין 0.55 ל-1.6. שיפוע מחוץ לטווח הזה מוגבל לערך הקרוב ביותר.
+    - מגבלת בטיחות: אם התיקון ב-100 mg/dL (5.5 mmol/L) יהיה גדול מ-±30 mg/dL (1.7 mmol/L), לא מוחל תיקון. כך אתם מוגנים מפני הזנה שגויה.
     
-    What it changes:
+    מה זה משנה:
     
-    - The corrected value is used everywhere: the BG on the main screen, the graph and the loop. The sensor readings themselves are not changed. The correction is applied on top, also to the earlier readings of the current sensor.
-    - A new sensor change starts from zero. Pairs from earlier sensors no longer count.
-    - On the graph, a calibration is shown as a marker at the fingerstick value.
-    - Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
+    - הערך המתוקן משמש בכל מקום: ערך הסוכר במסך הראשי, הגרף והלולאה. ערכי החיישן עצמם לא משתנים. התיקון מוחל מעליהם, גם על הערכים הקודמים של החיישן הנוכחי.
+    - החלפת חיישן חדשה מתחילה מאפס. זוגות מחיישנים קודמים כבר לא נחשבים.
+    - בגרף, כיול מוצג כסימן בערך של מדידת האצבע.
+    - הכיולים מסונכרנים דרך Nightscout, כך שמכשירי הלקוח מציגים את אותם ערכים מתוקנים.
     
-    Check and remove entries:
+    בדיקה ומחיקה של רשומות:
     
-    - **Open plugin** shows the status (for example *Slope 0.85, mid-range correction -0.4*), a chart of your pairs with the line, and the list of entries.
-    - If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. The line is calculated again at once.
+    - **פתיחת תוסף** מציג את המצב (למשל *שיפוע 0.85, תיקון טווח אמצע -0.4*), גרף של הזוגות עם הקו, ואת רשימת הרשומות.
+    - אם רשומה שגויה (למשל, היה סוכר על האצבע), יש ללחוץ על סמל הפח שלידה. הקו מחושב מחדש מיד.
     
-    ```{admonition} Using xDrip+ as BG source?
+    ```{admonition} משתמשים ב-xDrip+ כמקור ערכי סוכר?
     :class: note
-    xDrip+ has its own calibration. Calibrate in one place only, so that the sensor values are not corrected twice.
+    ל-xDrip+ יש כיול משלו. יש לכייל במקום אחד בלבד, כדי שערכי החיישן לא יתוקנו פעמיים.
     
 
-    {admonition} Calibrate with care
+    {admonition} יש לכייל בזהירות
     :class: warning
-    A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Wash your hands before measuring, and do not calibrate while your glucose is changing fast.
+    ערך שגוי של מדידת אצבע מוביל לערכי סוכר שגויים, ולכן למינון אינסולין שגוי. יש לשטוף ידיים לפני המדידה, ולא לכייל כאשר רמת הסוכר משתנה מהר.
 
-![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)
+![הגדרות תצורה > כיול](../images/v4/Configuration/configuration_calibration.png)
 
 (Config-Builder-pump)=
 
@@ -276,19 +276,19 @@ Finally, a comparison adjusting DIA and peak in parallel. The logic here is that
 
 Select the pump you are using. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
 
-![Configuration > Pump](../images/v4/Configuration/configuration_pump_list_1.png)
+![הגדרות תצורה > משאבה](../images/v4/Configuration/configuration_pump_list_1.png)
 
-Scroll down to see all the pump drivers:
+יש לגלול למטה כדי לראות את כל מנהלי ההתקן של המשאבות:
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_2.png)
+![הגדרות תצורה > משאבה, המשך](../images/v4/Configuration/configuration_pump_list_2.png)
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_3.png)
+![הגדרות תצורה > משאבה, המשך](../images/v4/Configuration/configuration_pump_list_3.png)
 
-![Configuration > Pump, end of the list](../images/v4/Configuration/configuration_pump_list_4.png)
+![הגדרות תצורה > משאבה, סוף הרשימה](../images/v4/Configuration/configuration_pump_list_4.png)
 
-When you select another pump, **AAPS** asks you to confirm the change:
+כאשר בוחרים משאבה אחרת, **AAPS** מבקש לאשר את השינוי:
 
-![Switch plugin confirmation](../images/v4/Pumps/switch_plugin_dialog.png)
+![אישור החלפת תוסף](../images/v4/Pumps/switch_plugin_dialog.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * Dana R Korean (for domestic DanaR pump)
@@ -305,28 +305,28 @@ When you select another pump, **AAPS** asks you to confirm the change:
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * [Carelevo](../CompatiblePumps/CareLevo.md)
 * Virtual pump: open loop - **AAPS** suggestions only 
-  * as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
+  * בצעדים הראשונים שלכם עם **AAPS**, במהלך ה[משימות](../SettingUpAaps/CompletingTheObjectives.md) הראשונות
   * for pump which doesn't have any driver yet
 
 (config-builder-wrong-pump-data)=
 
-### Message: "Data is coming from different pump"
+### הודעה: "הנתונים מגיעים ממשאבה אחרת"
 
-**AAPS** remembers the pump it is connected to (pump type and serial number). If it receives data from another pump, for example after your pump was replaced by a new one of the same model, it shows this message and ignores the data from that pump:
+**AAPS** זוכר את המשאבה שאליה הוא מחובר (סוג המשאבה והמספר הסידורי). אם הוא מקבל נתונים ממשאבה אחרת, למשל אחרי שהמשאבה הוחלפה במשאבה חדשה מאותו דגם, הוא מציג את ההודעה הזו ומתעלם מהנתונים של המשאבה הזו:
 
-![Data is coming from different pump](../images/Screen_DifferentPump.png)
+![הנתונים מגיעים ממשאבה אחרת](../images/Screen_DifferentPump.png)
 
-To use the new pump, change the pump driver: select **Virtual pump**, confirm, then select your pump again. **AAPS** then registers the pump it is connected to now.
+כדי להשתמש במשאבה החדשה, יש להחליף את מנהל ההתקן של המשאבה: לבחור **משאבה וירטואלית**, לאשר, ואז לבחור שוב את המשאבה שלכם. **AAPS** רושם אז את המשאבה שאליה הוא מחובר עכשיו.
 
 (Config-Builder-sensitivity-detection)=
 
 ## זיהוי רגישות
 
-![Configuration > Sensitivity detection](../images/v4/Configuration/configuration_sensitivity_detection.png)
+![הגדרות תצורה > זיהוי רגישות](../images/v4/Configuration/configuration_sensitivity_detection.png)
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about how the sensitivity ratio itself is calculated can be found in [Key AAPS Features > Autosens](#Open-APS-features-autosens).
+Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. פרטים נוספים על אופן החישוב של יחס הרגישות עצמו נמצאים ב[תכונות מרכזיות של AAPS > Autosens](#Open-APS-features-autosens).
 
-You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SENS% and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+אפשר לראות את הרגישות שלכם במסך הראשי ב[גרף נוסף](#AapsScreens-section-g-additional-graphs), על ידי בחירת SENS% וצפייה בקו הלבן. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
 ### הגדרות ספיגה
 
@@ -336,9 +336,9 @@ If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The va
 
 ## APS
 
-![Configuration > APS](../images/v4/Configuration/configuration_aps.png)
+![הגדרות תצורה > APS](../images/v4/Configuration/configuration_aps.png)
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm with **Open plugin**.
+Select the desired APS algorithm for therapy adjustments. אפשר לראות את הפרטים הפעילים של האלגוריתם שנבחר בעזרת **פתיחת תוסף**.
 
 * OpenAPS AMA 
   * Advanced Meal Assist: older algorithm not recommended anymore.
@@ -347,20 +347,20 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
   * Super Micro Bolus: most recent algorithm recommended for all users.
   * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
   * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
-* [Auto ISF](#Open-APS-features-auto-isf) 
-  * Experimental algorithm for advanced users. It is only listed once the objectives are completed.
+* [רגישות אוטומטית](#Open-APS-features-auto-isf) 
+  * אלגוריתם ניסיוני למשתמשים מתקדמים. הוא מופיע ברשימה רק אחרי שהמשימות הושלמו.
 
-If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manually to **8** (default value for SMB) in [Settings → Absorption settings](#Preferences-min_5m_carbimpact).
+במעבר מאלגוריתם AMA לאלגוריתם SMB, יש לשנות ידנית את *min_5m_carbimpact* ל-**8** (ערך ברירת המחדל עבור SMB) ב[הגדרות ← הגדרות ספיגה](#Preferences-min_5m_carbimpact).
 
 ## לולאה
 
-This module cannot be disabled as it is a core part of **AAPS**.
+לא ניתן להשבית את המודול הזה, כי הוא חלק מרכזי של **AAPS**.
 
-![Configuration > Loop](../images/v4/Configuration/configuration_loop.png)
+![הגדרות תצורה > לולאה](../images/v4/Configuration/configuration_loop.png)
 
 ## Constraints
 
-![Configuration > Constraints](../images/v4/Configuration/configuration_constraints.png)
+![הגדרות תצורה > מגבלות](../images/v4/Configuration/configuration_constraints.png)
 
 ### Objectives
 
@@ -368,21 +368,21 @@ This module cannot be disabled as it is a core part of **AAPS**.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
 
-## Communication
+## תקשורת
 
-In this category (called **Synchronization** in **AAPS** v3), you choose if/where you want **AAPS** to send your data to.
+בקטגוריה הזו (שנקראה **סנכרון** ב-**AAPS** v3) בוחרים אם ולאן **AAPS** ישלח את הנתונים שלכם.
 
-![Configuration > Communication](../images/v4/Configuration/configuration_communication.png)
+![הגדרות תצורה > תקשורת](../images/v4/Configuration/configuration_communication.png)
 
-Scroll down to see the rest of the list:
+יש לגלול למטה כדי לראות את שאר הרשימה:
 
-![Configuration > Communication, continued](../images/v4/Configuration/configuration_communication_2.png)
+![הגדרות תצורה > תקשורת, המשך](../images/v4/Configuration/configuration_communication_2.png)
 
 ### NSClientV3
 
 Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md).
 
-See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to set up NSClientV3 synchronization.
+ראו [סנכרון עם שרת הדיווח](#SetupWizard-synchronization-with-the-reporting-server-and-more) כדי להגדיר סנכרון של NSClientV3.
 
 ### Tidepool
 
@@ -392,7 +392,7 @@ See [Tidepool](../SettingUpAaps/Tidepool.md).
 
 ### xDrip
 
-Used to **send** data such as glucose values and treatments to xDrip+ on the same phone. Its settings also hold **Send status to xDrip+**, a status line with IOB and COB that xDrip+ and some watch companion apps display.
+משמש ל**שליחת** נתונים כמו ערכי סוכר וטיפולים ל-xDrip+ באותו טלפון. ההגדרות שלו כוללות גם את **שליחת מצב ל־xDrip+**, שורת מצב עם IOB ו-COB, ש-xDrip+ וחלק מאפליקציות השעון הנלוות מציגים.
 
 ### Open Humans
 
@@ -402,17 +402,17 @@ See [Open Humans](../SupportingAaps/OpenHumans.md).
 
 ### Wear
 
-Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is explained on [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md). After enabling the plugin, choose its options in [Settings > Wear](#preferences-wear). Using the watch is explained on [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
+ניטור ושליטה ב-**AAPS** משעון Wear OS. הגדרת השעון מוסברת בדף [שעון חכם עם Wear OS](../WearOS/WearOsSmartwatch.md). אחרי הפעלת התוסף, יש לבחור את האפשרויות שלו ב[הגדרות > Wear](#preferences-wear). השימוש בשעון מוסבר בדף [תפעול AAPS בעזרת שעון Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
 (external-companion-apps)=
 
-### External Companion Apps
+### אפליקציות נלוות חיצוניות
 
-Broadcasts **AAPS** status data on the phone so that other apps installed on it can display it — for example watch or widget companion apps. The broadcast includes glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Enable it only if a companion app you use asks for this data.
+משדר נתוני מצב של **AAPS** בטלפון, כדי שאפליקציות אחרות שמותקנות בו יוכלו להציג אותם — למשל אפליקציות נלוות לשעון או לווידג'טים. השידור כולל ערך סוכר ומגמה, IOB, COB, בזאלי ובזאלי זמני, שם הפרופיל, מצב הלולאה, סוללת הטלפון והמשאבה, רמת המכל והתקדמות הבולוס. יש להפעיל אותו רק אם אפליקציה נלווית שבה אתם משתמשים מבקשת את הנתונים האלה.
 
-Apps known to read this broadcast are [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi and Amazfit watches), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS complications and widgets, and Android Auto through GlucoDataAuto) and the G-Watch app. Their setup is described on [Smartwatches and AAPS](#watches-external-companion-apps). Some of them also use **Send status to xDrip+** from the **xDrip** plugin above for a status line with IOB and COB.
+אפליקציות שידוע שהן קוראות את השידור הזה הן [WatchDrip+](https://bigdigital.home.blog/) (שעוני Xiaomi ו-Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (רכיבים (complications) ווידג'טים ב-Wear OS, ו-Android Auto דרך GlucoDataAuto) ואפליקציית G-Watch. ההגדרה שלהן מתוארת בדף [שעונים חכמים ו־AAPS](#watches-external-companion-apps). חלק מהן משתמשות גם ב**שליחת מצב ל־xDrip+** מהתוסף **xDrip** שלמעלה, לשורת מצב עם IOB ו-COB.
 
-In earlier versions this plugin was called **Samsung Tizen**, after the [G-Watch app for Samsung Tizen watches](#Watchfaces-tizen) it was first made for.
+בגרסאות קודמות התוסף הזה נקרא **Samsung Tizen**, על שם [אפליקציית G-Watch לשעוני Samsung Tizen](#Watchfaces-tizen) שעבורה הוא נוצר בהתחלה.
 
 ### Garmin
 
@@ -420,27 +420,27 @@ Connection to Garmin device (Fenix, Edge...)
 
 ## טיפולים
 
-Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through **Treatments → Carbs** in the bottom navigation (see [Carbs](#screens-bolus-carbs)).
+יש לפתוח את **התפריט** (☰) ולבחור [היסטוריית טיפולים](#aaps-screens-treatments) כדי לראות את הטיפולים שנרשמו. אם רוצים לערוך או למחוק רשומה (למשל אכלתם פחות פחמימות ממה שציפיתם), יש לבחור 'הסרה' ולהזין את הערך החדש (ולשנות את השעה אם צריך) דרך **טיפולים ← פחמימות** בסרגל הניווט התחתון (ראו [פחמימות](#screens-bolus-carbs)).
 
 ## General
 
-In **AAPS** 4 the **General** category of **Configuration** only lists **Autotune**. The other features described below are always available and no longer need to be enabled here; each paragraph says where to find them.
+ב-**AAPS** 4 הקטגוריה **כללי** ב**הגדרות תצורה** כוללת רק את **כוונון אוטומטי**. התכונות האחרות שמתוארות למטה זמינות תמיד, וכבר לא צריך להפעיל אותן כאן; בכל פסקה כתוב איפה למצוא אותן.
 
-![Configuration > General](../images/v4/Configuration/configuration_general.png)
+![הגדרות תצורה > כללי](../images/v4/Configuration/configuration_general.png)
 
-### סקירה כללית
+### מסך הסקירה
 
-The [main screen](#AapsScreens-the-homescreen) of **AAPS** is not a plugin any more and has no settings of its own in **Configuration**. The options that used to be here are in **Settings** (gear icon): [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs), [Status lights](#Preferences-status-lights) and the [Bolus percentage](#Preferences-deliver-this-part-of-bolus-wizard-result) used by the bolus wizard. The super bolus option of **AAPS** 3.x is [not available as a setting](#Preferences-advanced-settings-overview) in **AAPS** 4.
+[המסך הראשי](#AapsScreens-the-homescreen) של **AAPS** כבר לא תוסף, ואין לו הגדרות משלו ב**הגדרות תצורה**. האפשרויות שהיו כאן נמצאות עכשיו ב**הגדרות** (סמל גלגל השיניים): [הצגת הערות בתיבות דו־שיח](#Preferences-show-notes-field-in-treatments-dialogs), [אורות חיווי](#Preferences-status-lights) ו[אחוז הבולוס](#Preferences-deliver-this-part-of-bolus-wizard-result) שבו משתמש אשף הבולוס. אפשרות הסופר בולוס של **AAPS** 3.x [לא זמינה כהגדרה](#Preferences-advanced-settings-overview) ב-**AAPS** 4.
 
 (Config-Builder-actions)=
 
 ### פעולות
 
-The Actions tab of **AAPS** 3.x no longer exists. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
+הלשונית Actions (פעולות) של **AAPS** 3.x כבר לא קיימת. הלחצנים שלה נמצאים עכשיו בחלון **ניהול** — ראו [לאן נעלמה הלשונית Actions?](#screens-action-tab).
 
 ### אוטומציה
 
-**Manage → Automation** lets you manage your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
+**ניהול ← אוטומציה** מאפשר לנהל את [האוטומציות](../DailyLifeWithAaps/Automations.md) שלכם, החל מ[משימה 10](#objectives-objective10).
 
 (Config-Builder-sms-communicator)=
 
@@ -450,7 +450,7 @@ Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Com
 
 ### מזון
 
-**Manage → Food** displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+**ניהול ← מזון** מציג את הגדרות המזון המוכנות שהוגדרו במסד נתוני המזון של Nightscout, ראו [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) למידע נוסף על ההגדרה.
 
 Note: Entries cannot be used in the **AAPS** calculator. (View only)
 
@@ -462,14 +462,14 @@ You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
 
 ### תחזוקה
 
-Open the **menu** (☰) and select **Maintenance** to export / import settings and manage log files.
+יש לפתוח את **התפריט** (☰) ולבחור **תחזוקה** כדי לייצא / לייבא הגדרות ולנהל את קובצי היומן.
 
-![Maintenance screen, log files](../images/screens/maintenance.png)
+![מסך התחזוקה, קובצי היומן](../images/screens/maintenance.png)
 
-![Maintenance screen, file management](../images/screens/maintenance_2.png)
+![מסך התחזוקה, ניהול קבצים](../images/screens/maintenance_2.png)
 
-![Maintenance screen, database management](../images/screens/maintenance_3.png)
+![מסך התחזוקה, ניהול מסד הנתונים](../images/screens/maintenance_3.png)
 
-### בונה התצורה
+### הגדרות תצורה
 
-Now called **Configuration**: this current page.
+נקרא עכשיו **הגדרות תצורה**: הדף הנוכחי.

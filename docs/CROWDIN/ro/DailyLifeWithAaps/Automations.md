@@ -11,7 +11,7 @@
 
 Automation performs specific actions based on one or more conditions or triggers. Declanșatoarele pot include evenimente neregulate, cum ar fi niveluri scăzute sau crescute ale glicemiei în sânge (BG) sau o cantitate negativă stabilită de insulină la bord (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a Wi-Fi SSID area. Automatizarea poate face copiile de rezervă ale setărilor AAPS pe baza unei planificări sau la fiecare schimbare de pompă (Omnipod).
 
-Automation rules are created and modified from the **Automation** screen (**Manage → Automation**). Fiecare regulă este definită de două caracteristici:
+Regulile de automatizare se creează și se modifică din ecranul **Automatizare** (**Gestionați → Automatizare**). Fiecare regulă este definită de două caracteristici:
 
 - Una sau mai multe condiții sau "declanșatoare" care inițiază o acțiune.
 
@@ -19,7 +19,7 @@ Automation rules are created and modified from the **Automation** screen (**Mana
 
 - Una sau mai multe acțiuni de efectuat.
 
-    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
+    Cum ar fi o alarmă, setarea unui procentaj de profil sau exportul setărilor AAPS la schimbarea pompei (Pod).
 
 
 Există o gamă largă de opțiuni de automatizare, iar utilizatorii sunt încurajați să le studieze în cadrul aplicației AAPS, în secțiunea Automatizare. You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
@@ -36,29 +36,29 @@ Există o gamă largă de opțiuni de automatizare, iar utilizatorii sunt încur
 
 Exemplul de mai jos ilustrează cum o **Automatizare** poate permite eliminarea pașilor.
 
-Utilizatorul face exerciții în fiecare dimineață la ora 6 dimineața: trebuie să își amintească să stabilească manual o țintă temporară în AAPS la 5 dimineața, înainte de a face exerciții.
+Utilizatorul face exerciții fizice în fiecare dimineață la ora 6: trebuie să își amintească să seteze manual în AAPS, la ora 5, o „Țintă temporară - Exercițiu fizic”, înainte de exerciții.
 
-![Manual actions without automation](../images/Automations/automation_concept_manual.png)
+![Acțiuni manuale fără automatizare](../images/Automations/automation_concept_manual.png)
 
-Utilizatorul a setat o **Automatizare** care să declanșeze o "Țintă temporară de activitate" la ora 5 dimineața pentru a se asigura că **glicemia** și **IOB** sunt optime, în vederea pregătirii exercițiului său de la 6 dimineața:
+Utilizatorul a setat o **Automatizare** care declanșează la ora 5 o ‘Țintă temporară - Exercițiu fizic’, pentru ca **glicemia** și **IOB** să fie optime în vederea exercițiilor de la ora 6:
 
-![Actions done by an automation](../images/Automations/automation_concept_automated.png)
+![Acțiuni făcute de o automatizare](../images/Automations/automation_concept_automated.png)
 
 ## Considerații-cheie înainte de a începe cu automatizările
 
-1. Înainte de a configura anumite automatizări, ar trebui să aveți un control rezonabil **al glicemiei** cu **AAPS**. Automatizările nu ar trebui folosite pentru a compensa setările suboptime ale bazalelor, **ISF** sau **ICR** (discutate mai jos). Evitați să setați o **schimbare a profilului** automată pentru a compensa creșterile de **glicemie** din cauza _, spre exemplu, _ alimentelor, acestea sunt gestionate mai bine prin intermediul altor strategii (SMB șamd).
+1. Înainte de a configura anumite automatizări, ar trebui să aveți un control rezonabil **al glicemiei** cu **AAPS**. Automatizările nu ar trebui folosite pentru a compensa setări nepotrivite ale bazalei, **ISF** sau **IC** (vedeți mai jos). Evitați să setați o **schimbare a profilului** automată pentru a compensa creșterile de **glicemie** din cauza _, spre exemplu, _ alimentelor, acestea sunt gestionate mai bine prin intermediul altor strategii (SMB șamd).
 
-1. Cum este cu orice tehnologie, **CGM**, **pompele** și telefoanele se pot defecta: probleme tehnice sau erori ale senzorilor pot întrerupe acțiunile **Automatizărilor**, și este nevoie de intervenții manuale.
+1. Ca orice tehnologie, **CGM**, **pompele** și telefoanele se pot defecta: probleme tehnice sau erori ale senzorului pot întrerupe acțiunile **Automatizărilor** și poate fi nevoie de intervenție manuală.
 
 1. **Requirements for Automations are likely to change as routines change**. Atunci când schimbați între perioade de lucru/școală/vacanță, setați un memento în calendar pentru a verifica care **Automatizări** sunt în prezent active (sunt ușor de activat și de dezactivat). For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
 
 1. **Automatizările** pot intra în conflict unele cu altele, și este bine să revizuiești orice nouă **Automatizare** care se stabilește cu atenție într-un mediu sigur; și să înțelegeți de ce o **automatizare** poate sau nu să fi fost declanșată în modul în care vă așteptați.
 
-1. Dacă utilizați Autosens, încercați să faceți uz de **Ținte Temporare** în locul **Schimbărilor de profil**. **Țintele temporare** nu resetează Autosens înapoi la 0. **Profile Switches** reset Autosens.
+1. Dacă utilizați Autosens, încercați să faceți uz de **Ținte Temporare** în locul **Schimbărilor de profil**. **Țintele temporare** nu resetează Autosens înapoi la 0. **Schimbările de profil** resetează Autosens.
 
 1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/L for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/L for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
 
-## When can I start using Automation?
+## Când pot începe să folosesc Automatizarea?
 
 **Automations** can be started in **objective 10**.
 
@@ -66,37 +66,37 @@ Utilizatorul a setat o **Automatizare** care să declanșeze o "Țintă temporar
 
 Open **Manage** in the bottom navigation of the main screen and select **Automation**.
 
-## How can I set up an Automation?
+## Cum pot configura o Automatizare?
 
 To set up an **Automation**, press the **+** button on the Automation screen to create a ‘rule’:
 
 ![Automation create](../images/Automations/automation_create.png)
 
 * give your ‘rule’ a title (Task name);
-* press "**EDIT**" under **Condition**. On the **Condition** screen, choose how the triggers are combined (**And**, **Or**, **Exclusive or**) and press "**Add trigger**":
+* apăsați „**EDITAȚI**” sub **Condiție**. On the **Condition** screen, choose how the triggers are combined (**And**, **Or**, **Exclusive or**) and press "**Add trigger**":
 
-![Automation condition](../images/Automations/automation_trigger_editor.png)
+![Condiția automatizării](../images/Automations/automation_trigger_editor.png)
 
-* add at least one trigger:
+* adăugați cel puțin un declanșator:
 
 ![Automation triggers](../images/Automations/automation_triggers.png)
 
-* press "**ADD**" under **Action** and select one action:
+* apăsați „**ADĂUGAȚI**” sub **Acțiune** și selectați o acțiune:
 
-![Automation actions](../images/Automations/automation_actions.png)
+![Acțiunile automatizării](../images/Automations/automation_actions.png)
 
 * save the rule with the **Save** button, and make sure the checkbox left of the rule name is ‘ticked’ to activate the **Automation**:
 
-![Automation activated](../images/Automations/automation_rule_activated.png)
+![Automatizare activată](../images/Automations/automation_rule_activated.png)
 
-To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** as either activated (‘ticked') or deactivated (‘unticked’):
+Pentru a dezactiva o regulă de **Automatizare**, debifați caseta din stânga numelui **Automatizării**. The example below shows an **Automation** as either activated (‘ticked') or deactivated (‘unticked’):
 
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+![Reguli de automatizare pornite și oprite](../images/Automations/automation_rule_activated_deactivated.png)
 
 
 When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
 
-![Alert actions](../images/Automations/automation_alert_actions.png)
+![Acțiuni de alertă](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -105,33 +105,33 @@ When setting up an **Automation**, you can first test it by activating the ‘no
 ```
 
 
-## When rules are checked
+## Când sunt verificate regulile
 
-**AAPS** checks all **Automation** rules each time a new glucose reading has been processed, so rules are evaluated at the pace of your CGM, also while the phone screen is off. Rules are also checked when the phone starts charging, when the network or location changes, and when a Bluetooth device connects. Only one check runs at a time, so a rule whose actions take a while (for example a pump command) cannot be executed twice.
+**AAPS** checks all **Automation** rules each time a new glucose reading has been processed, so rules are evaluated at the pace of your CGM, also while the phone screen is off. Regulile sunt verificate și când telefonul începe să se încarce, când se schimbă rețeaua sau locația și când se conectează un dispozitiv Bluetooth. Only one check runs at a time, so a rule whose actions take a while (for example a pump command) cannot be executed twice.
 
-## Safety limits
+## Limite de siguranță
 
-There are safety limits set for **Automations**:
+Pentru **Automatizări** există limite de siguranță:
 
 * A **Temp Target** set by an **Automation** has to be between 72 and 180 mg/dL (or 4 and 10 mmol/L).
-* The **Profile Percentage** has to be between 50% and 130%.
-* There is a 5 minute time limit between executions of **Automation** (and first execution).
+* **Procentajul profilului** trebuie să fie între 50% și 130%.
+* Între două execuții ale **Automatizării** (și înainte de prima execuție) există o limită de timp de 5 minute.
 
 ## Correct use of negative values
 
 ```{admonition} Warning
 :class: warning
 
-Please be careful when selecting a negative value in **Automation**
+Aveți grijă când alegeți o valoare negativă în **Automatizare**
 ```
 
 Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. Spre exemplu:
 
-![Comparison operators](../images/Automations/automation_comparison_operators.png)
+![Operatori de comparație](../images/Automations/automation_comparison_operators.png)
 
 **Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
+Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Rețineți că -0,1 (-2) în sine **nu este** inclus în această condiție. (The condition "is equal or lesser than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **Example 2:** Creating a Condition "is greater than" -0.1mmol/L (-2mg/dL) will:
 
@@ -144,7 +144,7 @@ It is important to carefully consider the exact intention of your **Automation**
 
 ![Automation Triggers](../images/Automations/automation_triggers.png)
 
-Scroll down to see the rest of the list:
+Derulați în jos pentru a vedea restul listei:
 
 ![Automation Triggers, continued](../images/Automations/automation_trigger_picker_2.png)
 
@@ -152,7 +152,7 @@ There are various ‘Triggers’ that can be selected by the user. Triggers are 
 
 **Trigger:** connect conditions
 
-**Options:**
+**Opțiuni:**
 
 Several conditions can be linked with
 * "Și"
@@ -161,28 +161,28 @@ Several conditions can be linked with
 
 **Trigger:** time vs. recurring time
 
-**Options:**
+**Opțiuni:**
 
 * time = single time event
-* recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+* timp recurent = ceva ce se întâmplă regulat (de ex. o dată pe săptămână, în fiecare zi lucrătoare etc.)
 
 **Trigger:** location
 
-**Options:**
+**Opțiuni:**
 
-* in [Settings > Automation](#preferences-maintenance-settings), the user can select their required location service.
+* în [Setări > Automatizare](#preferences-maintenance-settings), utilizatorul poate selecta serviciul de localizare dorit.
 
-**Trigger:** location service
+**Declanșator:** serviciu de localizare
 
-**Options:**
+**Opțiuni:**
 
 * Use passive location: **AAPS** only takes locations when other apps are requesting it.
-* Folosiți locația rețelei: locația Wi-Fi.
-* Utilizează locația GPS (Atenție! This can cause excessive battery drain!)
+* Utilizați localizarea bazată pe rețea: locația rețelei Wi-Fi.
+* Utilizați localizarea GPS (Atenție! This can cause excessive battery drain!)
 
 **Triggers** : pump and sensor data
 
-* Cannula age trigger: Available for all pumps
+* Declanșatorul Vechimea canulei: disponibil pentru toate pompele
 * Insulin age trigger: Available for supported pumps
 * Battery age trigger: Available for supported pumps
 * Sensor age trigger: always available
@@ -196,123 +196,123 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 (automations-automation-action)=
 ## Acțiune
 
-![Automation Actions](../images/Automations/automation_actions.png)
+![Acțiunile automatizării](../images/Automations/automation_actions.png)
 
-Scroll down to see the rest of the list:
+Derulați în jos pentru a vedea restul listei:
 
-![Automation Actions, continued](../images/Automations/automation_action_picker_2.png)
+![Acțiunile automatizării, continuare](../images/Automations/automation_action_picker_2.png)
 
 **Actions:** start **Temp Target**
 
-**Options:**
+**Opțiuni:**
 
-* **BG** must be between 72 mg/dL and 180 mg/dL (4 mmol/L and 10 mmol/L)
+* **Glicemia** trebuie să fie între 72 mg/dL și 180 mg/dL (4 mmol/L și 10 mmol/L)
 * **TT** works only if there is no previous Temp Target — **AAPS** adds this automatically as a "**Preconditions: Temp target not exists**" line to the rule
 
 **Actions:** stop **Temp Target**
 
-**Options:**
+**Opțiuni:**
 
 niciunul
 
 **Actions:** **Profile Percentage**
 
-**Options:**
+**Opțiuni:**
 
-* **Profile** must be between 50% and 130%
+* **Profilul** trebuie să fie între 50% și 130%
 * works only if the previous Percentage is 100%
 
-**Actions:** **Change smoothing** (in the **Loop & insulin** group)
+**Acțiuni:** **Schimbați netezirea** (în grupul **Buclă & insulină**)
 
-**Options:**
+**Opțiuni:**
 
-* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
+* selectați [metoda de netezire](../CompatibleCgms/SmoothingBloodGlucoseData.md) la care doriți să treceți. Lista este aceeași ca în **Configurație** > **Netezire**, iar acțiunea face exact ce face o schimbare de acolo: metoda nouă este salvată, sincronizată cu clienții asociați, iar datele de glicemie sunt netezite din nou imediat.
 * runs only if that smoothing method is not already active — **AAPS** adds this automatically as a "**Preconditions: Smoothing … is not active**" line to the rule. Once the selected smoothing is active, the rule is skipped silently.
-* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
-  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
-  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
+* Exemplu: un senzor nou are adesea mult zgomot în prima zi. Două reguli cu declanșatorul **Vechimea senzorului** dau o filtrare mai puternică cât timp senzorul se stabilizează și o netezire fără întârziere după aceea:
+  * **Vechimea senzorului** mai mică de 24 h: **Schimbați netezirea** la **Filtru Kalman Nescentrat**
+  * **Vechimea senzorului** mai mare de 24 h: **Schimbați netezirea** la **Netezire medie**
 
-**Actions:** **Note** (in the **Alerts** group of the list)
+**Acțiuni:** **Notă** (în grupul **Alerte** din listă)
 
-**Options:**
+**Opțiuni:**
 
-* select the event to record: **Note**, **Exercise**, **Question**, **Announcement** or **Pump Site Change**, and an optional note. The name of the action changes to the event you select.
-* **Duration**: used for **Note**, **Exercise** and **Pump Site Change**. **Question** and **Announcement** have no duration: they record your current BG instead.
-* **Pump Site Change** resets the cannula age, as if you had recorded a site change by hand. Example: some pumps (like the Combo) record a reservoir change by themselves, but not the site change. If you always change both together, a rule with **Insulin age** less than 1 hour and **Cannula age** more than 24 hours can record the site change for you.
+* selectați evenimentul de înregistrat: **Notă**, **Activitate fizică**, **Întrebare**, **Anunț** sau **Schimbare canulă/loc infuzie**, și o notă opțională. The name of the action changes to the event you select.
+* **Durată**: folosită pentru **Notă**, **Activitate fizică** și **Schimbare canulă/loc infuzie**. **Question** and **Announcement** have no duration: they record your current BG instead.
+* **Schimbare canulă/loc infuzie** resetează vechimea canulei, ca și cum ați fi înregistrat manual o schimbare a locului de infuzie. Example: some pumps (like the Combo) record a reservoir change by themselves, but not the site change. If you always change both together, a rule with **Insulin age** less than 1 hour and **Cannula age** more than 24 hours can record the site change for you.
 
-![The events of the Note action](../images/Automations/automation_action_careportal_events.png) ![The Note action set to Pump Site Change](../images/Automations/automation_action_careportal_site_change.png)
+![Evenimentele acțiunii Notă](../images/Automations/automation_action_careportal_events.png) ![The Note action set to Pump Site Change](../images/Automations/automation_action_careportal_site_change.png)
 
-**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
+**Acțiuni:** **Trimiteți SMS către toate numerele** (în grupul **Alerte**)
 
-**Options:**
+**Opțiuni:**
 
-* enter the text of the message. It is sent to all the phone numbers allowed in the [SMS Communicator](../RemoteFeatures/SMSCommands.md) settings. The SMS Communicator plugin must be enabled.
+* introduceți textul mesajului. It is sent to all the phone numbers allowed in the [SMS Communicator](../RemoteFeatures/SMSCommands.md) settings. The SMS Communicator plugin must be enabled.
 
-**Actions:** **Change profile to** (in the **Profile** group)
+**Acțiuni:** **Schimbați profilul în** (în grupul **Profil**)
 
-**Options:**
+**Opțiuni:**
 
-* select the **Profile** to activate. It is activated at 100%, without timeshift. If this profile is already active, the action does nothing.
+* select the **Profile** to activate. It is activated at 100%, without timeshift. Dacă acest profil este deja activ, acțiunea nu face nimic.
 
-**Actions:** **Enable/disable SMB** (in the **Loop & insulin** group)
+**Acțiuni:** **Activați/dezactivați SMB** (în grupul **Buclă & insulină**)
 
-**Options:**
+**Opțiuni:**
 
-* choose **On** or **Off**. This changes the **Enable SMB** setting of OpenAPS SMB, exactly as if you had changed it in **Settings**, and stays until you or another rule change it back.
+* alegeți **Pornit** sau **Oprit**. This changes the **Enable SMB** setting of OpenAPS SMB, exactly as if you had changed it in **Settings**, and stays until you or another rule change it back.
 
-**Actions:** **Run Autotune** (in the **Loop & insulin** group)
+**Acțiuni:** **Rulați Autotune** (în grupul **Buclă & insulină**)
 
-**Options:**
+**Opțiuni:**
 
 * select the profile to tune and the number of days: see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule).
 
-**Actions:** **Stop processing** (in the **Loop & insulin** group)
+**Acțiuni:** **Oprire procesare** (în grupul **Buclă & insulină**)
 
-**Options:**
+**Opțiuni:**
 
-* none. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Add it to a rule that must take priority over the rules below it (see [the order of the Automations](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* niciunul. Cât timp condițiile unei reguli cu această acțiune sunt adevărate, **AAPS** nu verifică regulile aflate sub ea în listă. Imediat ce condițiile ei sunt din nou false, regulile de dedesubt sunt verificate ca de obicei. Adăugați-o la o regulă care trebuie să aibă prioritate față de regulile de sub ea (vedeți [ordinea Automatizărilor](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
-**Actions:** **Run scene**, **Enable scene**, **Disable scene** (in the **Scenes** group)
+**Acțiuni:** **Rulați scenariul**, **Activați scenariul**, **Dezactivați scenariul** (în grupul **Scenarii**)
 
-**Options:**
+**Opțiuni:**
 
 * select the [scene](Scenes.md) to run, enable or disable.
 
 Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
 
-![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
+![Valori pentru acțiunea țintă temporară](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## The order of the **Automations** in the list matters
- **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+ **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. De exemplu, dacă **Automatizarea** „Glicemie scăzută” este cea mai importantă **Automatizare**, mai importantă decât toate celelalte reguli, atunci această **Automatizare** trebuie să apară în partea de sus a listei de **Automatizări** a utilizatorului, așa cum se vede mai jos:
 
 
-![List of automation rules](../images/Automations/automation_rule_list.png)
+![Lista regulilor de automatizare](../images/Automations/automation_rule_list.png)
 
-To reprioritize the **Automation** rules, touch and hold the **=** handle on the right side of the rule. Reorder the **Automations** by moving the rules up or down.
+To reprioritize the **Automation** rules, touch and hold the **=** handle on the right side of the rule. Reordonați **Automatizările** mutând regulile în sus sau în jos.
 
-![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
+![Reordonarea regulilor de automatizare](../images/Automations/automation_rule_reorder.png)
 
 ## How to delete Automation rules
 
 To delete an **Automation** rule click on the trash icon.
 
-![Delete automation rules](../images/Automations/automation_rule_delete.png)
+![Ștergerea regulilor de automatizare](../images/Automations/automation_rule_delete.png)
 
 ## Examples of Automations
 
-Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
+Mai jos sunt exemple de **Automatizări**. Mai multe discuții despre **Automatizări** și despre felul în care utilizatorii și-au personalizat **Automatizarea** găsiți în grupurile de discuții de pe Facebook sau pe Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
 
 (automations-low-glucose-temp-target)=
 ### Țintă temporară în caz de hipoglicemie
 
 This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
-![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
+![Exemplu: regulă pentru glicemie scăzută](../images/Automations/automation_example_low_glucose_rule.png)
 
 ### Lunch Time Temp Target (with ‘Location’)
 
-![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
+![Exemplu: regulă pentru prânz](../images/Automations/automation_example_lunch_rule.png)
 
 This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will not activate.
 
@@ -320,7 +320,7 @@ This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to dri
 
 The ‘Trigger’ location has a name, a position (tap **Pick from map**, or use your current location) and a radius in metres, and fires when you are inside (or outside) the area:
 
-![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
+![Exemplu: regulă pentru prânz cu condiție de localizare](../images/Automations/automation_example_lunch_location_condition.png)
 
 Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location.
 
@@ -330,11 +330,11 @@ The **Automation** will not be triggered on any other time at this location or a
 
 Using a Wi-Fi SSID is a good option to trigger an **Automation** while within range of a specific Wi-Fi network (compared with GPS): it is fairly precise, uses less battery, and works in enclosed spaces where GPS and other location services might not be available.
 
-Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
+Iată un alt exemplu de setare a unei **Ținte temporare** doar în zilele lucrătoare, înainte de micul dejun (1).
 
 
-The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
-and while being connected to a home Wi-Fi network (3).
+**Automatizarea** se va declanșa la ora 05:30 doar de luni până vineri (2)  
+și doar când telefonul este conectat la rețeaua Wi-Fi de acasă (3).
 
 
 It will then set a **Temp Target** of 75 mg/dL for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is traveling on vacation, for instance.
@@ -350,7 +350,7 @@ Here is the screenshot detailing the **Automation** triggers:
 1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
-![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
+![Exemplu: condiție Wi-Fi](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
@@ -362,7 +362,7 @@ Screenshots detailing the Automation triggers:
 
 1) Condiție: Timp recurent = L, M, Mi, J, V la 8:00 dimineața 1) Acțiune: Setări Export (pentru "Text în tratamente" introduceți "Zilnic")
 
-![Scheduled exports](../images/Automations/automation_settings_export_daily.png)
+![Exporturi programate](../images/Automations/automation_settings_export_daily.png)
 
 Note: Export execution will be logged on Careportal
 
@@ -372,7 +372,7 @@ Screenshots detailing the Automation triggers:
 
 1) Condiție: Activare pompă 1) Acțiune: Setări Export (pentru "Text în tratamente" introduceți "Activare Pompă: setări export")
 
-![Export on Pod activation](../images/Automations/automation_settings_export_pod_activation.png)
+![Export la activarea pompei](../images/Automations/automation_settings_export_pod_activation.png)
 
 Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Settings → Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
 
@@ -391,19 +391,19 @@ In the example below, the **Low glucose temp target** rule (1) (see [Low Glucose
 
 ## Depanare
 
-* Problem: __My automations are not being triggered by AAPS?__
+* Problemă: __Automatizările mele nu sunt declanșate de AAPS?__
 
 Check that the box left of the **Automation** name is ‘ticked’ to ensure the rule is activated:
 
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+![Reguli de automatizare pornite și oprite](../images/Automations/automation_rule_activated_deactivated.png)
 
 * Problem: __My automations are being triggered in the wrong order.__
 
-Check your rule prioritization order as discussed above here.
+Verificați ordinea de prioritate a regulilor, așa cum s-a discutat mai sus.
 
-* Problem: __A condition shows "Unknown trigger … - never true".__
+* Problem: __A condition shows "Unknown trigger … - niciodată adevărat”.__
 
-The rule contains a trigger that this version of **AAPS** cannot read, for example after you went back to an older version or imported settings from a newer one. Such a trigger is never true, so the rule does not run. It is kept unchanged, so a newer version can still use it. Edit the rule and replace the trigger, or update **AAPS**.
+The rule contains a trigger that this version of **AAPS** cannot read, for example after you went back to an older version or imported settings from a newer one. Such a trigger is never true, so the rule does not run. It is kept unchanged, so a newer version can still use it. Editați regula și înlocuiți declanșatorul sau actualizați **AAPS**.
 
 ## Alternatives to Automations
 

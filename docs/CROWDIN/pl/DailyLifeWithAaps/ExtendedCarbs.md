@@ -9,7 +9,7 @@ Potrzeba obsługi takich posiłków jednak nadal istnieje. Dlatego AAPS obsługu
 
 eCarbs to węglowodany rozłożone na kilka godzin. Przy zwykłych posiłkach, w których jest więcej węglowodanów niż tłuszczu/białka, zwykle wystarczy wpisać węglowodany od razu (i w razie potrzeby zmniejszyć pierwszy bolus), aby uniknąć zbyt wczesnego podania insuliny.  Przy posiłkach wolniej wchłanianych, gdy wpisanie wszystkich węglowodanów od razu daje zbyt dużo IOB z SMB, możesz użyć eCarbs. Pozwalają one dokładniej odwzorować, jak węglowodany (i równoważniki węglowodanów, które wpisujesz dla innych makroskładników) są wchłaniane i jak wpływają na glikemię. Dzięki tej informacji pętla może podawać SMB bardziej stopniowo, aby pokryć te węglowodany. Można to traktować jak dynamiczny bolus przedłużony (powinno to działać także bez SMB, ale zapewne mniej skutecznie).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Uwaga:** eCarbs nie służą tylko do posiłków tłustych lub bogatych w białko. Możesz ich używać w każdej sytuacji, w której coś podnosi poziom cukru, np. przy innych lekach, takich jak kortykosteroidy.
 
 ## Jak używać eCarbs
 
@@ -26,7 +26,7 @@ eCarbs na ekranie głównym: liczba w nawiasie w polu **COB** pokazuje węglowod
 
 W [Kalkulatorze bolusa](#aaps-screens-bolus-wizard) trzy przyciski pod polem **Węglowodany** pozwalają wybrać, jak szybko wchłania się Twój posiłek. Wybierz jeden z nich przed potwierdzeniem. W zależności od typu **AAPS** traktuje część wpisanych węglowodanów jako zwykłe węglowodany, a przy wolno wchłanianych, sycących posiłkach dodaje później [przedłużone węglowodany („eCarbs”)](#Extended-Carbs-extended-carbs-ecarbs). Naciśnij ikonę **(i)** obok przycisków, aby zobaczyć typowe produkty dla wybranego typu i to, co ten typ robi z Twoimi węglowodanami.
 
-| Typ                      | Typical foods (examples from the app)                                                                                        | Węglowodany teraz, użyte do bolusa | Dodane eCarbs                                          |
+| Typ                      | Typowe produkty (przykłady z aplikacji)                                                                                      | Węglowodany teraz, użyte do bolusa | Dodane eCarbs                                          |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------ |
 | **Pieczywo** (domyślnie) | Pieczywo, wytrawne wypieki, jogurt, owoce, ziemniaki, ryż, płatki owsiane, warzywa                                           | 100%                               | Brak                                                   |
 | **Ciasto**               | Pierogi, makaron, kuchnia azjatycka bogata w węglowodany i tłuszcze, słodkie i drożdżowe wypieki, płatki zbożowe, miód, dżem | 90%                                | 20%, początek 60 minut później, rozłożone na 2 godziny |
@@ -60,9 +60,9 @@ Szybciej będzie, jeśli *Kalkulator bolusa* doda eCarbs za Ciebie: wybierz [typ
 **Ważne uwagi:** Oczywiście musisz sam sprawdzić, jakie konkretne wartości działają u Ciebie. Możesz też ostrożnie zmienić ustawienie *Maks. minut bazy dostarczone jako SMB*, aby algorytm był bardziej lub mniej agresywny. Przy posiłkach z małą ilością węglowodanów i dużą ilością tłuszczu/białka może wystarczyć użycie samych eCarbs, bez ręcznych bolusów (zobacz wpis na blogu powyżej). Gdy eCarbs są tworzone, powstaje też notatka w Portalu opieki, która zapisuje wszystkie wpisane dane. Dzięki temu łatwiej jest krok po kroku poprawiać swoje wartości.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Extended boluses and why they don't work in a closed-loop environment
+## Bolusy przedłużone i dlaczego nie działają w zamkniętej pętli
 
-Jak wspomniano powyżej, bolusy przedłużone lub wielofalowe nie działają dobrze w zamkniętej pętli. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+Jak wspomniano powyżej, bolusy przedłużone lub wielofalowe nie działają dobrze w zamkniętej pętli. [Szczegóły znajdziesz poniżej](#why-extended-boluses-won-t-work-in-a-closed-loop-environment)
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Bolus przedłużony i przejście na otwartą pętlę - tylko pompy Dana i Insight

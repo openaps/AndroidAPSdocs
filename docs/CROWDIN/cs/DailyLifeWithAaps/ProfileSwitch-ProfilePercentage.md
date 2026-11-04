@@ -2,7 +2,7 @@
 
 Tato část vysvětluje, co je **přepnutí profilu** a **procento profilu**. Jak vytvořit **profil**, se dozvíte v části [Váš profil AAPS](#your-aaps-profile-create-and-edit-profiles).
 
-Na začátku cesty s **AAPS** si musíte vytvořit **profil**, pochopit, jak provést **přepnutí profilu**, a naučit se, jaký vliv má **procento profilu** v **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
+Na začátku cesty s **AAPS** si musíte vytvořit **profil**, pochopit, jak provést **přepnutí profilu**, a naučit se, jaký vliv má **procento profilu** v **AAPS**. Vlastnosti **přepnutí profilu** nebo **procenta profilu** mohou být zvlášť užitečné pro:
 
 - menstruační cyklus – v **automatizacích** lze nastavit procentní úpravu **profilu**, aby se **AAPS** přizpůsobil různým fázím hormonálního cyklu a předpokládané inzulínové rezistenci.
 
@@ -10,7 +10,7 @@ Na začátku cesty s **AAPS** si musíte vytvořit **profil**, pochopit, jak pro
 
 - lidi pracující v noci nebo na směny – v **profilu** lze nastavit posun času. Počet hodin posunu v **profilu** odpovídá tomu, o kolik později nebo dříve půjde uživatel spát nebo vstane.
 
-Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. Díky tomu **AAPS** počítá dávky inzulínu pro uživatele vyváženě. Snížení bazálu v **profilu** uživatele v **AAPS** přinese jen malý užitek, pokud algoritmus dál používá stejné hodnoty ISF a I:C.
+Proč použít **procento profilu**, a ne dočasnou úpravu bazálu? Aby bylo **procento profilu** účinnější, sníží nebo zvýší ve stejném poměru bazál, ISF i I:C. Díky tomu **AAPS** počítá dávky inzulínu pro uživatele vyváženě. Snížení bazálu v **profilu** uživatele v **AAPS** přinese jen malý užitek, pokud algoritmus dál používá stejné hodnoty ISF a I:C.
 
 (ProfileSwitch-change-percentage)=
 
@@ -54,9 +54,9 @@ Potřebujete alespoň jeden uložený **profil**. **Procento profilu** se vždy 
 
 V **AAPS** v4 se profily spravují a aktivují na obrazovce **Spravovat** (spodní navigace) → **Profil** (*„Spravovat a aktivovat profily“*).
 
-Obrazovka Profil ukazuje vaše profily jako **karusel karet, kterými lze přejíždět**. Karta běžícího profilu je označena **AKTIVNÍ** a ukazuje jeho celkový denní bazál (např. *∑ 30,15 U*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+Obrazovka Profil ukazuje vaše profily jako **karusel karet, kterými lze přejíždět**. Karta běžícího profilu je označena **AKTIVNÍ** a ukazuje jeho celkový denní bazál (např. *∑ 30,15 U*). Pod vybranou kartou vidíte podrobnosti tohoto profilu – typ inzulínu (**Inzulín**) a rozpisy **I:C**, **ISF**, **bazál** a **cíl** s grafy.
 
-When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
+Když běží dočasné přepnutí, karta **AKTIVNÍ** ukazuje jeho procento a posun času se zbývajícím časem, například *110% +2 h · 2 h 40 min*, nad ukazatelem průběhu. Obojí se obnovuje každých 30 sekund. Podrobnosti pod kartou pak mají dva sloupce: hodnoty profilu modře a hodnoty, které se používají s procentem, červeně.
 
 ![Obrazovka Profil – karusel profilů, podrobnosti a panel akcí](../images/v4/Profiles/profile_manage.png)
 
@@ -78,7 +78,7 @@ Vyberte profil a klepněte na **▶ Aktivovat**. Na obrazovce **Aktivovat** mů�
 
 ![Obrazovka Aktivovat – procento, trvání, posun času, čas](../images/v4/Profiles/profile_activate.png)
 
-- **Procento** (30–250 %, pokaždé začíná na 100 %) – změní celý profil v daném poměru. 100 % použije profil beze změny; například 70 % sníží bazál a vypočtenou dávku inzulínu (bolusy na jídlo i korekce) o 30 %. Nemění vaše cílové glykémie ani vstřebávání sacharidů. See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
+- **Procento** (30–250 %, pokaždé začíná na 100 %) – změní celý profil v daném poměru. 100 % použije profil beze změny; například 70 % sníží bazál a vypočtenou dávku inzulínu (bolusy na jídlo i korekce) o 30 %. Nemění vaše cílové glykémie ani vstřebávání sacharidů. Celý účinek popisuje část [Procento profilu](#ProfileSwitch-profile-percentage).
 - **Trvání** (0–10080 minut, tj. až 7 dní) – jak dlouho přepnutí trvá. **0 = bez omezení** (dokud znovu nepřepnete); jiná hodnota než 0 po skončení vrátí předchozí profil.
 - **Dočasný cíl / Aktivita** – objeví se jen tehdy, když nastavíte **Trvání** a **Procento** pod 100 %. Zapněte ho, pokud chcete na stejnou dobu spustit také [dočasný cíl Aktivita](#TempTargets-activity-temp-target), jako byste to udělali před cvičením.
 - **Posun času** – ukazuje *0h*; klepnutím na **Změnit** posunete rozpis dopředu nebo dozadu až o 23 hodin (užitečné při práci na směny nebo na cestách). Viz [Posun času](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
@@ -127,27 +127,27 @@ Vliv **procenta profilu** shrnuje tato tabulka:
 
 | Přepnutí profilu  
 procento |     Účinek     |     I:C  
-g/U     | Example  
+g/U     | Příklad  
 15 g |          ISF  
-mmol/L/U  
-mg/dL/U          | U to lower  
-2mmol/L  
-40mg/dL |
-|:---------------------------:|:--------------:|:-----------------:|:--------------:|:------------------------------------------:|:------------------------------:|
+mmol/l/U  
+mg/dl/U          | U na snížení o  
+2 mmol/l  
+40 mg/dl |
+|:---------------------------:|:--------------:|:-----------------:|:--------------:|:------------------------------------------:|:------------------------------------:|
 |            90 %             |     Slabší     | 5/0,9  
-=**5,55** |     2.7 U      | 2,2/0,9  
+=**5,55** |     2,7 U      | 2,2/0,9  
 =**2,4**  
   
 40/0,9  
-=**44,4** |             0.8 U              |
+=**44,4** |                0,8 U                 |
 |          **100 %**          | **Standardní** |       **5**       |    **3 U**     |                **2,2  
-40**                |           **0.9** U            |
+40**                |              **0,9** U               |
 |            130 %            |    Silnější    | 5/1,3  
-=**3,85** |     3.9 U      | 2,2/1,3  
+=**3,85** |     3,9 U      | 2,2/1,3  
 =**1,7**  
   
 40/1,3  
-=**30,8** |             1.2 U              |
+=**30,8** |                1,2 U                 |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
@@ -155,7 +155,7 @@ mg/dL/U          | U to lower
 
 „Posun času“ v **profilu** uživatele posune nastavení **profilu** v rámci denního (cirkadiánního) cyklu o zadaný počet hodin. To může pomoci:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
+- **lidem pracujícím v noci nebo na směny**: při nočních směnách se počet hodin posunu v **profilu** nastaví podle toho, o kolik později nebo dříve půjde uživatel spát nebo vstane; 
 - **uživatelům, kteří při cestování mění časová pásma**; nebo
 - **dětem s diabetem 1. typu**, které mají pevný večerní režim a inzulínovou rezistenci zohledněnou ve svém **profilu**. Pokud dítě z jakéhokoli důvodu půjde spát později, může pečovatel použít na **profil** dítěte „posun času“, aby **AAPS** reagoval na inzulínovou rezistenci v době, kterou uživatel zvolí.
 
@@ -171,7 +171,7 @@ Jde vždy o to, nastavení **profilu** z které hodiny má nahradit nastavení p
 
 ![Směry posunu profilu v čase](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+Tento způsob ukládání snímků **profilu** umožňuje mnohem přesnější výpočet minulosti a také sledování změn **profilu**.
 
 (ProfileSwitch-keep-for-later)=
 

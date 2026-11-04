@@ -1,193 +1,193 @@
-# Set up AAPS on your Wear OS watch
+# Ställ in AAPS på din klocka med Wear OS
 
-The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
+Instruktionerna nedan gäller **AAPS Wear**-apk:n som du behöver bygga. Om du inte har byggt den än, se guiden som länkas [här](../WearOS/BuildingAapsWearOS.md). När du bygger ska du använda samma keystore-fil som du använde för **AAPS**-apk:n för telefonen.
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with its matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
+En del av informationen gäller också Wear-apk:n för **AAPSClient** och **PumpControl** **Wear**. Varje **Wear**-app kommunicerar med sin matchande telefonapp. Exempel: appen **AAPSClient Wear** kan användas för att visa data från **AAPSClient**, inte data från **AAPS**. När flera klientvarianter (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) är installerade samtidigt har brickorna för varje variant en liten rubrik i variantens egen accentfärg, så att du kan skilja dem åt när du sveper.
 
-## Wear OS Versions and compatibility
+## Wear OS-versioner och kompatibilitet
 
 (wearos-watchface-changes)=
 
-### Wear OS watch face changes (impact on AAPS watchfaces)
+### Ändringar av urtavlor i Wear OS (påverkan på AAPS-urtavlor)
 
 ```{admonition} Why newer Wear OS watches break AAPS watchfaces
 :class: warning
 
-In June 2025 Google [announced changes](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html) that phase out the legacy watch face engine (the AndroidX / Wearable Support Library, or "WSL", engine) in favour of the newer declarative **Watch Face Format**. The **AAPS** custom watchfaces are built on the legacy engine, so the newer the Wear OS version, the more likely an AAPS watchface is to misbehave or stop working.
+I juni 2025 [meddelade Google ändringar](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html) som fasar ut den gamla motorn för urtavlor (AndroidX / Wearable Support Library, eller ”WSL”) till förmån för det nyare deklarativa **Watch Face Format**. De anpassade urtavlorna för **AAPS** är byggda på den gamla motorn. Ju nyare Wear OS-version, desto troligare är det att en AAPS-urtavla fungerar dåligt eller slutar fungera.
 
-This affects the **watchfaces** specifically — AAPS **complications**, tiles and remote-control functions are not impacted. It is also why **a firmware/system update on a Wear OS watch can break AAPS watchfaces**, and a watch cannot be rolled back to an older Wear OS version afterwards. If your AAPS watchface currently works, **disable automatic watch updates**.
+Detta gäller bara **urtavlorna**. AAPS **komplikationer**, brickor och fjärrstyrningsfunktioner påverkas inte. Det är också anledningen till att **en uppdatering av firmware/system på en klocka med Wear OS kan förstöra AAPS-urtavlor**, och en klocka kan inte återställas till en äldre Wear OS-version efteråt. Om din AAPS-urtavla fungerar nu: **stäng av automatiska uppdateringar av klockan**.
 ```
 
-The table below summarises how Google's change affects the AAPS (legacy-engine) watchfaces by Wear OS version:
+Tabellen nedan sammanfattar hur Googles ändring påverkar AAPS-urtavlorna (gammal motor) i olika Wear OS-versioner:
 
-| Wear OS version         | Base Android | API level | Impact on AAPS (legacy) watchfaces                                                                                                                                                          |
-| ----------------------- | ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wear OS 6               | Android 16   | 36        | **Legacy watchfaces no longer available** — AAPS installs a [Watch Face Format watchface](#wearos-aaps-v4-watchface) instead: your custom watchface, or the AAPS V4 complications watchface |
-| Wear OS 5               | Android 14   | 34        | **Severe** — active (interactive) mode often fails, complications freeze, animations stop                                                                                                   |
-| Wear OS 4               | Android 13   | 33        | **Moderate** — throttling, missed updates, partial failures                                                                                                                                 |
-| Wear OS 3.0 / 3.2 / 3.5 | Android 11   | 30        | **Low** — legacy engine still supported                                                                                                                                                     |
+| Wear OS-version         | Grundläggande Android-version | API-nivå | Påverkan på AAPS-urtavlor (gammal motor)                                                                                                                                                       |
+| ----------------------- | ----------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Wear OS 6               | Android 16                    | 36       | **Gamla urtavlor finns inte längre** – AAPS installerar i stället en [urtavla i Watch Face Format](#wearos-aaps-v4-watchface): din anpassade urtavla eller urtavlan AAPS V4 med komplikationer |
+| Wear OS 5               | Android 14                    | 34       | **Allvarlig** – aktivt (interaktivt) läge fungerar ofta inte, komplikationer fryser, animationer stannar                                                                                       |
+| Wear OS 4               | Android 13                    | 33       | **Måttlig** – strypning, missade uppdateringar, delvisa fel                                                                                                                                    |
+| Wear OS 3.0 / 3.2 / 3.5 | Android 11                    | 30       | **Låg** – den gamla motorn stöds fortfarande                                                                                                                                                   |
 
-If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication, fed by the [External Companion Apps](#external-companion-apps) plugin of **AAPS**. On **Wear OS 6 and newer**, AAPS installs a replacement watchface built in the new format — see below.
+Om din klocka har en version där AAPS-urtavlor inte fungerar pålitligt kan du i stället visa AAPS-data med **komplikationer** på en kompatibel urtavla, eller använda [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) med en komplikation som får data från pluginet [Externa hjälpappar](#external-companion-apps) i **AAPS**. På **Wear OS 6 och nyare** installerar AAPS en ersättande urtavla som är byggd i det nya formatet – se nedan.
 
 (wearos-aaps-v4-watchface)=
 
-### Wear OS 6 and newer — the watchface AAPS installs
+### Wear OS 6 och nyare – urtavlan som AAPS installerar
 
-Watches running **Wear OS 6 or newer** cannot run the classic AAPS watchfaces as watchfaces. For these watches the AAPS watch app brings two watchfaces built in Google's new **Watch Face Format**. Wear OS lets an app install only **one** watchface, so you choose which of the two is on the watch:
+Klockor med **Wear OS 6 eller nyare** kan inte köra de klassiska AAPS-urtavlorna som urtavlor. För dessa klockor har AAPS-appen på klockan med sig två urtavlor som är byggda i Googles nya **Watch Face Format**. Wear OS låter en app installera bara **en** urtavla, så du väljer vilken av de två som ska finnas på klockan:
 
-- **Custom watchface** (default): shows the custom watchface you loaded from the phone with **Load Watchface** (see [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface)). The watch draws your design as a picture, so every existing custom watchface works. The complication slots a custom watchface may define are **not available** in this picture, because Wear OS only delivers complication data to a real watchface. Long-press the face to reach its one setting: whether the always-on display shows a plain clock or your own design, dimmed.
-- **Complications watchface** (the **AAPS V4** watchface): its **seven complication slots** come **preconfigured with AAPS data**: BG value, IOB, COB, the [BG Graph complication](#Watchfaces-complications), basal rate / temp target, and the **Running Mode** icon in the top-left slot (tap it to change the loop mode from the watch). Tap the time at the top to open the watch's alarm app. You can change what each slot shows in the watch face editor.
+- **Anpassad urtavla** (standard): visar den anpassade urtavla som du har laddat från telefonen med **Ladda urtavla** (se [Byta till en AAPS-urtavla](#WearOS_changing-to-AAPS-watchface)). Klockan ritar din design som en bild, så alla befintliga anpassade urtavlor fungerar. Komplikationsplatserna som en anpassad urtavla kan ha är **inte tillgängliga** i den här bilden, eftersom Wear OS bara skickar komplikationsdata till en riktig urtavla. Tryck länge på urtavlan för att komma till dess enda inställning: om skärmen i alltid på-läge ska visa en enkel klocka eller din egen design, nedtonad.
+- **Urtavla med komplikationer** (urtavlan **AAPS V4**): dess **sju komplikationsplatser** är **förinställda med AAPS-data**: BG-värde, IOB, COB, [komplikationen BG-graf](#Watchfaces-complications), basaldos / tillfälligt målvärde och ikonen för **Körläge** på platsen uppe till vänster (tryck på den för att byta loopläge från klockan). Tryck på tiden högst upp för att öppna klockans alarmapp. Du kan ändra vad varje plats visar i klockans redigerare för urtavlor.
 
-You choose on the phone: open the **Wear** plugin and, under **Watchface installed on watch**, select one of the two. This card is only shown while a Wear OS 6 or newer watch is connected. **AAPS** asks you to confirm, because the watch replaces its face immediately. Switching away from the **Complications watchface** also resets the complications you changed in the watch face editor back to the defaults, and the confirmation says so. While the **Complications watchface** is selected, the custom watchface buttons are hidden and a preview of the face is shown instead. If you load a custom watchface while the **Complications watchface** is selected, **AAPS** reminds you to switch to **Custom watchface** to see it on the watch.
+Du väljer på telefonen: öppna pluginet **Klocka (Wear)** och välj en av de två under **Urtavla installerad på klockan**. Det här kortet visas bara när en klocka med Wear OS 6 eller nyare är ansluten. **AAPS** ber dig bekräfta, eftersom klockan byter urtavla direkt. Om du byter från **Urtavla med komplikationer** återställs också de komplikationer som du har ändrat i redigeraren för urtavlor till standardvärdena, och bekräftelsen säger det. När **Urtavla med komplikationer** är vald är knapparna för anpassad urtavla dolda, och en förhandsvisning av urtavlan visas i stället. Om du laddar en anpassad urtavla när **Urtavla med komplikationer** är vald påminner **AAPS** dig om att byta till **Anpassad urtavla** för att se den på klockan.
 
-- The selected watchface is **installed and activated automatically** the first time the AAPS watch app runs on such a watch, and it is **updated automatically** together with the watch app.
-- If you removed the watchface, an **Install watchface** entry appears at the bottom of the watch's AAPS **main menu** — tap it to reinstall.
+- Den valda urtavlan **installeras och aktiveras automatiskt** första gången AAPS-appen körs på en sådan klocka, och den **uppdateras automatiskt** tillsammans med klockappen.
+- Om du har tagit bort urtavlan visas posten **Installera urtavla** längst ned i **Huvudmeny** i AAPS-appen på klockan – tryck på den för att installera om.
 
-While a watch running Wear OS 5 or older is connected, the **Watchface installed on watch** card is not shown at all (the mechanism it relies on requires Wear OS 6); the classic watchfaces run there as before.
+När en klocka med Wear OS 5 eller äldre är ansluten visas kortet **Urtavla installerad på klockan** inte alls (funktionen som det bygger på kräver Wear OS 6). Där fungerar de klassiska urtavlorna som förut.
 
 (wearos-complications-watchface-setup)=
 
-### Complications watchface — recommended setup
+### Urtavla med komplikationer – rekommenderad inställning
 
-The **Complications watchface** has seven complication slots. Long-press the watchface, tap **Customize**, and pick a data source for each slot. The slots are numbered as in the watch face editor: **1** left, **2** centre, **3** right, **4** the graph, **5** bottom, **6** top-left and **7** top-right.
+**Urtavla med komplikationer** har sju komplikationsplatser. Tryck länge på urtavlan, tryck på **Customize** (Anpassa) och välj en datakälla för varje plats. Platserna är numrerade som i redigeraren för urtavlor: **1** vänster, **2** mitten, **3** höger, **4** grafen, **5** nederst, **6** uppe till vänster och **7** uppe till höger.
 
-| Default setup                                                                                   | Alternative setup                                                                                       |
-| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| ![Complications watchface, default setup](../images/wearos/complications_watchface_default.png) | ![Complications watchface, alternative setup](../images/wearos/complications_watchface_alternative.png) |
+| Standardinställning                                                                                      | Alternativ inställning                                                                                          |
+| -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| ![Urtavla med komplikationer, standardinställning](../images/wearos/complications_watchface_default.png) | ![Urtavla med komplikationer, alternativ inställning](../images/wearos/complications_watchface_alternative.png) |
 
-| Slot | Position  | Default                                                             | Alternative                           |
-| ---- | --------- | ------------------------------------------------------------------- | ------------------------------------- |
-| 1    | Left      | IoB Icon                                                            | CoB & IoB                             |
-| 2    | Centre    | Blood Glucose                                                       | Blood Glucose                         |
-| 3    | Right     | CoB Icon                                                            | BR & Target                           |
-| 4    | Graph     | BG Graph                                                            | BG Graph                              |
-| 5    | Bottom    | BR & Target                                                         | Uploader/Phone Battery                |
-| 6    | Top-left  | Running mode                                                        | Running mode                          |
-| 7    | Top-right | Uploader/Phone Battery, or an app shortcut to **AAPS Snooze Alert** | App shortcut to **AAPS Snooze Alert** |
+| Plats | Placering         | Standard                                                                   | Alternativ                             |
+| ----- | ----------------- | -------------------------------------------------------------------------- | -------------------------------------- |
+| 1     | Vänster           | IoB-ikon                                                                   | CoB & IoB                              |
+| 2     | Mitten            | Blodsocker                                                                 | Blodsocker                             |
+| 3     | Höger             | CoB-ikon                                                                   | BR & mål                               |
+| 4     | Graf              | BG-graf                                                                    | BG-graf                                |
+| 5     | Nederst           | BR & mål                                                                   | Uppladdare/telefonbatteri              |
+| 6     | Uppe till vänster | Körläge                                                                    | Körläge                                |
+| 7     | Uppe till höger   | Uppladdare/telefonbatteri, eller en appgenväg till **AAPS Snooze-varning** | Appgenväg till **AAPS Snooze-varning** |
 
-The **AAPS Snooze Alert** shortcut is picked from the watch's own **App shortcut** complications. Tapping it snoozes the alarm that is sounding on the phone.
+Genvägen **AAPS Snooze-varning** väljs bland klockans egna komplikationer av typen **App shortcut** (appgenväg). När du trycker på den snoozas larmet som ljuder på telefonen.
 
 ```{tip}
-Turn on **Always-on display** on the watch (**Settings** > **Display**). The watchface then keeps showing your glucose when the wrist is down, instead of a blank or a plain clock.
+Slå på **Always-on display** (alltid på-skärm) på klockan (**Settings** (Inställningar) > **Display** (Skärm)). Då fortsätter urtavlan att visa ditt glukosvärde när armen är nere, i stället för en tom skärm eller en enkel klocka.
 ```
 
 ```{admonition} No complication data while the watch is locked
 :class: note
-If a **Lock type** is set under **Settings** > **Security and privacy**, the watch hides complication data while it is locked, and the watchface shows empty slots until you unlock it. To keep the data visible, turn off **Hide information** in the same menu.
+Om ett **Lock type** (låstyp) är inställt under **Settings** (Inställningar) > **Security and privacy** (Säkerhet och integritet) döljer klockan komplikationsdata när den är låst, och urtavlan visar tomma platser tills du låser upp den. Stäng av **Hide information** (Dölj information) i samma meny för att data ska fortsätta att synas.
 ```
 
 ### Wear OS 3
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (described below) or ADB.  
-No limitation in **AAPS Wear** operations.
+Installera **AAPS Wear**-apk:n med [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (beskrivs nedan) eller ADB.  
+Inga begränsningar i funktionerna i **AAPS Wear**.
 
 (BuildingAapsWearOs-WearOS5)=
 
-### Wear OS 4 and Wear OS 5
+### Wear OS 4 och Wear OS 5
 
-Example: Galaxy Watch 4, 5, 6, 7 and Ultra or Pixel Watch that have **not** been updated to Wear OS 6 yet. Check the version under **Settings** > **About watch** > **Software**.
+Exempel: Galaxy Watch 4, 5, 6, 7 och Ultra eller Pixel Watch som **inte** har uppdaterats till Wear OS 6 än. Kontrollera versionen under **Settings** (Inställningar) > **About watch** (Om klockan) > **Software** (Programvara).
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (for Wear OS 5 follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk)). All **AAPS Wear** functions work, but the classic **AAPS** watchfaces are limited as described in the table above: throttled on Wear OS 4, often failing on Wear OS 5.
+Installera **AAPS Wear**-apk:n med [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (för Wear OS 5, följ [den här videon](https://www.youtube.com/watch?v=yef_qGvcCnk)). Alla funktioner i **AAPS Wear** fungerar, men de klassiska urtavlorna för **AAPS** är begränsade enligt tabellen ovan: strypta på Wear OS 4 och fungerar ofta inte på Wear OS 5.
 
 ```{admonition} Wear OS 5
 :class: warning
-On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
+På Wear OS 5 måste AAPS-urtavlan väljas med Wear Installer 2 direkt efter att Wear-appen har installerats: installationsprogrammet erbjuder urtavlan **AAPS (anpassad)** i slutet av installationen. Om du råkar byta till en annan urtavla, gör om installationen. Det kan hända att du inte kan ändra inställningarna för urtavlan (Mörkt, Matchande avdelare osv.).
 
-If the classic watchface currently works for you, **disable automatic watch updates**: the next firmware update is likely to break it. If you update to Wear OS 6 anyway, read the section above: **AAPS** then installs its own watchface in the new format.
+Om den klassiska urtavlan fungerar för dig nu: **stäng av automatiska uppdateringar av klockan**. Nästa uppdatering av firmware kommer troligen att förstöra den. Om du ändå uppdaterar till Wear OS 6, läs avsnittet ovan: **AAPS** installerar då en egen urtavla i det nya formatet.
 ```
 
-If the watchface is too unreliable, consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication instead. It needs the [External Companion Apps](#external-companion-apps) plugin enabled in **AAPS**.
+Om urtavlan inte fungerar pålitligt nog kan du i stället använda [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) med en komplikation. Det kräver att pluginet [Externa hjälpappar](#external-companion-apps) är aktiverat i **AAPS**.
 
-### Wear OS 6 and newer
+### Wear OS 6 och nyare
 
-Example: Galaxy Watch 4 and newer with One UI 8 Watch, Pixel Watch after the 2025 update. Most Galaxy and Pixel watches have received this update.
+Exempel: Galaxy Watch 4 och nyare med One UI 8 Watch, Pixel Watch efter uppdateringen 2025. De flesta Galaxy- och Pixel-klockor har fått den här uppdateringen.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). The classic watchfaces are not available; **AAPS** installs the watchface selected on the phone automatically, see [the watchface AAPS installs](#wearos-aaps-v4-watchface). No limitation in **AAPS Wear** operations.
+Installera **AAPS Wear**-apk:n med [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). De klassiska urtavlorna finns inte. **AAPS** installerar automatiskt den urtavla som är vald på telefonen, se [urtavlan som AAPS installerar](#wearos-aaps-v4-watchface). Inga begränsningar i funktionerna i **AAPS Wear**.
 
-## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
+## Så ställer du in en smartklocka Samsung Galaxy Watch 4 med **AAPS**
 
-This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
+Det här avsnittet utgår från att du är helt ny med smartklockor. Det ger en grundläggande introduktion till en populär klocka, **Galaxy Watch 4**, och sedan en steg-för-steg-guide för att ställa in **AAPS** på klockan.
 
-_This guide was written for a Galaxy Watch running Wear OS 3._ On Wear OS 4 and later the watch asks for a **pairing code** when a phone or computer connects over ADB. Wear Installer 2 and the terminal procedure [below](#BuildingAapsWearOs-WearOS5-TShoot) both support it.
+_Den här guiden skrevs för en Galaxy Watch med Wear OS 3._ På Wear OS 4 och senare ber klockan om en **parkopplingskod** när en telefon eller dator ansluter via ADB. Både Wear Installer 2 och arbetssättet med terminalen [nedan](#BuildingAapsWearOs-WearOS5-TShoot) stöder det.
 
-Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+Här finns grundläggande installationsguider för [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) och [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
-## Basic smartwatch familiarity
+## Grundläggande kunskap om smartklockor
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+När du har gjort grundinställningen av klockan enligt videon ovan går du till Play Butik på telefonen och laddar ner följande appar: "Galaxy Wearable", “Samsung” och antingen “Easy Fire tools” eller "Wear Installer 2".
 
-There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
+Det finns många YouTube-videor från andra som hjälper dig att lära känna din nya smartklocka, till exempel:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
+Appen “Galaxy Wearable” har också en bruksanvisning. Öppna Galaxy Wearable på telefonen, sök efter klockan och försök parkoppla klockan med telefonen. Beroende på din version kan du bli ombedd att installera ytterligare en app, “galaxy watch 4 plugin”, från Play Butik (det tar en stund att ladda ner). Installera den på telefonen och försök sedan parkoppla klockan och telefonen igen i Wearable-appen. Gå igenom ett antal menyer och kryssa i olika inställningar.
 
-## Setting up a Samsung account
+## Skapa ett Samsung-konto
 
-You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
+Se till att e-postkontot som du använder för Samsung-kontot har ett födelsedatum som gör användaren minst 13 år. Annars är det mycket svårt att godkänna Samsungs behörigheter. Om du har gett ditt barn under 13 år ett Gmail-konto och använder den e-postadressen, kan du inte bara ändra det till ett vuxenkonto. Ett sätt att komma runt detta är att ändra födelsedatumet så att åldern blir 12 år och 364 dagar. Nästa dag omvandlas kontot till ett vuxenkonto, och du kan fortsätta att skapa Samsung-kontot.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
-## Transferring the **AAPS** Wear app onto your **AAPS** phone
+## Överföra Wear-appen för **AAPS** till din **AAPS**-telefon
 
-Loading the Wear.apk from Android Studio to your phone can be done either by:
+Du kan överföra Wear.apk från Android Studio till telefonen på ett av följande sätt:
 
-a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
+a)  med en USB-kabel lägger du apk-filen för **AAPS** Wear på telefonen och ”sidladdar” den sedan till klockan. Överför Wear.apk till telefonen via USB, till mappen för nedladdningar, eller
 
-b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
+b)  klipp ut och klistra in Wear.apk från Android Studio på din Google Drive.
 
 
-To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained. If Wear Installer 2 does not work for you, try Easy Fire Tools or ADB, both described below.
+För att sidladda AAPS till klockan kan du använda något av följande: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Här rekommenderar vi Wear Installer 2, eftersom instruktionerna och förloppet i videon är så tydliga och väl förklarade. Om Wear Installer 2 inte fungerar för dig, prova Easy Fire Tools eller ADB. Båda beskrivs nedan.
 
-### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+### Använda Wear Installer 2 för att sidladda **AAPS** Wear från telefonen till klockan
 
- ![Wear Installer 2 app icon](../images/wearos/wear_installer2_icon.png)
+ ![Appikonen för Wear Installer 2](../images/wearos/wear_installer2_icon.png)
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+Wear Installer 2, som är utvecklad av [Malcolm Bryant](https://www.youtube.com/@Freepoc), kan laddas ner från Google Play till telefonen. Med den kan du sidladda Wear-appen för AAPS till klockan. Appen innehåller en praktisk [video](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) om hur du sidladdar (”how to sideload”).
 
 ```{tip}
-For Wear OS 5 watches follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk).
-See troubleshooting tips [below](#BuildingAapsWearOs-WearOS5-TShoot).
+För klockor med Wear OS 5, följ [den här videon](https://www.youtube.com/watch?v=yef_qGvcCnk).
+Se felsökningstipsen [nedan](#BuildingAapsWearOs-WearOS5-TShoot).
 ```
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it while setting up the phone).
+Där finns alla detaljer som behövs (öppna gärna videon på en annan enhet så att du kan titta på den medan du ställer in telefonen).
 
-As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+Som det sägs i videon: när du är klar ska du stänga av ADB debugging (ADB-felsökning) på klockan, så att klockans batteri inte töms.
 
-Alternatively, but not for Wear OS 5, you can:
+Som alternativ, men inte för Wear OS 5, kan du:
 
-### Use Easy Fire tools to side-load the **AAPS** wear on the watch
+### Använda Easy Fire tools för att sidladda **AAPS** Wear till klockan
 
-1)   Download _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ from the Play Store onto phone
+1)   Ladda ner _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ från Play Butik till telefonen
 
 ![image](../images/wearos/easyfire01.png)
 
-2)  Make yourself a developer in the watch (once set up and connected to phone):
+2)  Gör dig själv till utvecklare på klockan (när den är inställd och ansluten till telefonen):
 
-Go to **Settings** > **System** > **About** > **Versions** (the menu names vary between watch brands — on some watches it is **About watch** > **Software info** > **Software version**).
+Gå till **Settings** (Inställningar) > **System** > **About** (Om) > **Versions** (Versioner) (menynamnen skiljer sig mellan olika klockmärken – på vissa klockor är det **About watch** (Om klockan) > **Software info** (Programvaruinformation) > **Software version** (Programvaruversion)).
 
 ![image](../images/wearos/easyfire02.png)
 
-Rapidly tap on **Build number** (or **Software version**) several times until a message tells you that you are now a developer.
+Tryck snabbt flera gånger på **Build number** (Versionsnummer) (eller **Software version**) tills ett meddelande säger att du nu är utvecklare.
 
 ![image](../images/wearos/easyfire03.png)
 
-Go back to **Settings** > **System**: a new **Developer options** menu is now shown.
+Gå tillbaka till **Settings** > **System**: en ny meny, **Developer options** (Utvecklaralternativ), visas nu.
 
-In **Developer options**, turn on **ADB debugging** and **Wireless debugging**, and confirm the prompts. Wireless debugging then shows the watch's **IP address & Port**, something like: **192.168.1.214** : 5555. You only need the IP address (here **192.168.1.214**), not the port number after the colon. Note that the IP address can change, for example every time you change to a new phone handset for AAPS.
+I **Developer options** slår du på **ADB debugging** (ADB-felsökning) och **Wireless debugging** (Trådlös felsökning) och bekräftar frågorna. Wireless debugging visar sedan klockans **IP address & Port** (IP-adress och port), ungefär så här: **192.168.1.214** : 5555. Du behöver bara IP-adressen (här **192.168.1.214**), inte portnumret efter kolonet. Observera att IP-adressen kan ändras, till exempel varje gång du byter till en ny telefon för AAPS.
 
 ![image](../images/wearos/easyfire04.png)
 
-STEP 3)     Enter IP address _e.g._ **192.168.1.214** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address).
+STEG 3)     Ange IP-adressen, _t.ex._ **192.168.1.214**, i Easy Fire tools på telefonen (öppna hamburgermenyn till vänster, gå till inställningarna och ange IP-adressen).
 
 ![image](../images/wearos/easyfire05.png)
 
-Then click the plug socket icon on the top right. It will turn green when connected.
+Klicka sedan på ikonen med eluttaget uppe till höger. Den blir grön när den är ansluten.
 
 ![image](../images/wearos/easyfire06.png)
 
 
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  aaps-wear.apk onto the smartwatch using Easy Fire tools
+STEG 4) Följ instruktionerna [här](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) för att sidladda (dvs. överföra) aaps-wear.apk till smartklockan med Easy Fire tools
 
 
 ![image](../images/wearos/easyfire07.png)
@@ -195,147 +195,147 @@ STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/0
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-### Using the terminal
-Connect your smartwatch and computer to the same Wi-Fi network.
+### Använda terminalen
+Anslut smartklockan och datorn till samma Wi-Fi-nätverk.
 
-- To install ADB download it from: https://developer.android.com/tools/releases/platform-tools
-- Open a terminal.
-- For Windows, create a new folder named `adb` under your disk `C:`. Open the `platform-tools-latest-windows.zip` file you downloaded above. Copy all files inside `platform-tools` to `C:\adb` and open this folder with a command prompt (right click and Open in Terminal). Type the command below to set the path to the folder where ADB is located: `setx PATH "%PATH%;C:\adb"`
-- For Mac instead of installing manually you can use homebrew: `brew install android-platform-tools`
+- Ladda ner ADB härifrån för att installera det: https://developer.android.com/tools/releases/platform-tools
+- Öppna en terminal.
+- På Windows skapar du en ny mapp med namnet `adb` på din disk `C:`. Öppna filen `platform-tools-latest-windows.zip` som du laddade ner ovan. Kopiera alla filer i `platform-tools` till `C:\adb` och öppna mappen i en kommandotolk (högerklicka och välj Open in Terminal (Öppna i terminal)). Skriv kommandot nedan för att ställa in sökvägen till mappen där ADB finns: `setx PATH "%PATH%;C:\adb"`
+- På Mac kan du använda Homebrew i stället för att installera manuellt: `brew install android-platform-tools`
 
-On the watch:
-- Go to Settings → About watch → **Software Information**
-- Tap Software version 7 times until you see Developer mode enabled.
-- Go to Settings → Developer options. Enable **ADB debugging**
-- Go to Settings → Developer options → Wireless debugging → **Pair new device**
+På klockan:
+- Gå till Settings (Inställningar) → About watch (Om klockan) → **Software Information** (Programvaruinformation)
+- Tryck 7 gånger på Software version (Programvaruversion) tills du ser Developer mode enabled (utvecklarläget är aktiverat).
+- Gå till Settings (Inställningar) → Developer options (Utvecklaralternativ). Slå på **ADB debugging** (ADB-felsökning)
+- Gå till Settings (Inställningar) → Developer options (Utvecklaralternativ) → Wireless debugging (Trådlös felsökning) → **Pair new device** (Parkoppla ny enhet)
 
-You will see a Wi-Fi pairing code and IP address and port appearing:
+En Wi-Fi-parkopplingskod, IP-adress och port visas:
 
-![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/ADB03.png)
+![Klockans skärm som visar Wi-Fi-parkopplingskoden, IP-adressen och porten](../images/wearos/ADB03.png)
 
-- In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299`
-- You will be asked for the pairing code. Enter it.
-- You will see a response:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
-- In the terminal type: <br>`adb devices`.<br> You should see something like:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
+- I terminalen: `adb pair ipaddress:port` Till exempel: `adb pair 10.10.1.125:36299`
+- Du blir ombedd att ange parkopplingskoden. Ange den.
+- Du får ett svar:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
+- Skriv i terminalen: <br>`adb devices`.<br> Du bör se något i stil med:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
-- You will see:<br> `Performing Streamed Install`<br> `Success`
+- Gå nu till mappen på datorn där Wear-apk:n finns och skriv<br> `adb install wear-full.apk` <br>där du ersätter wear-full.apk med namnet på din apk-fil.
+- Du ser:<br> `Performing Streamed Install`<br> `Success`
 
 
 (wear-os-5-troubleshooting)=
 
-### General troubleshooting recommendations for Wear OS 5
+### Allmänna felsökningsråd för Wear OS 5
 
-- Do not use Wi-Fi Tethering. That won't work.
-- You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
-- Make sure you are connecting to your local network where phone and watch can see each other (do not use your Wi-Fi guest network to connect).
-- Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
-- Make sure to be near your main router, then restart both phone and watch.
+- Använd inte Wi-Fi-delning (Wi-Fi Tethering). Det fungerar inte.
+- Du behöver inte slå på ADB-felsökning på telefonen (bara på klockan). Stäng av ADB-felsökning på telefonen.
+- Se till att du ansluter till ditt lokala nätverk, där telefonen och klockan kan se varandra (använd inte ditt Wi-Fi-gästnätverk).
+- Se till att klockan och telefonen är på samma nätverk och samma Wi-Fi-enhet. Särskilt Wi-Fi-repeatrar eller åtkomstpunkter kan orsaka problem.
+- Var nära din huvudrouter och starta sedan om både telefonen och klockan.
 
-**Pairing :**
+**Parkoppling:**
 
-- Watch: Wireless Debugging: note the IP address.
-- Wear Installer: Enter the IP in the Wear Installer app.
-- Select Pair new, note the pairing code and port number displayed.
-- Wear Installer: enter the pairing code + space + port number.
-- Wear installer should report pairing was successful. If it does not, exit the Wear Installer, then try again.
+- Klockan: Wireless debugging (Trådlös felsökning): anteckna IP-adressen.
+- Wear Installer: ange IP-adressen i appen Wear Installer.
+- Välj Pair new (Parkoppla ny), anteckna parkopplingskoden och portnumret som visas.
+- Wear Installer: ange parkopplingskoden + mellanslag + portnumret.
+- Wear Installer ska visa att parkopplingen lyckades. Om den inte gör det: stäng Wear Installer och försök igen.
 
-Once paired you should be able to install the AAPS wear apk:
+När enheterna är parkopplade ska du kunna installera AAPS Wear-apk:n:
 
-- Exit/close, then restart Wear Installer.
-- On wireless debug, note the IP and Port number and make sure you check/enter the IP and port number in Wear Installer.
-- Note: the port number is different from the one used for pairing!
+- Stäng Wear Installer och starta den sedan igen.
+- Under Wireless debugging (Trådlös felsökning): anteckna IP-adressen och portnumret, och se till att du kontrollerar/anger IP-adressen och portnumret i Wear Installer.
+- Obs! Portnumret är ett annat än det som används för parkopplingen!
 
-## Setting up the connection between the watch and the phone from **AAPS**
+## Ställa in anslutningen mellan klockan och telefonen i **AAPS**
 
-The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. To do this, enable the Wear plugin:
+Det sista steget är att ställa in **AAPS** på telefonen så att den samarbetar med **Wear.apk** på klockan. För att göra detta aktiverar du pluginet Klocka (Wear):
 
-* Go to the **AAPS** app on the phone
+* Gå till appen **AAPS** på telefonen
 
-* Open the **menu** (☰) in the top-left corner and go to **Configuration** > **Communication**
+* Öppna **menyn** (☰) uppe till vänster och gå till **Konfiguration** > **Kommunikation**
 
-* Tick the **Wear** box
+* Kryssa i rutan **Klocka (Wear)**
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![Konfiguration > Kommunikation med Klocka (Wear) aktiverat](../images/v4/Configuration/configuration_communication_wear.png)
 
-To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
+För att ge bolus eller göra andra åtgärder från klockan, slå också på **Kontrollera från Wear-klocka** i [Inställningar > Klocka (Wear)](#preferences-wear).
 
-To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Then swipe right until you get to all the **AAPS**  faces.
+För att byta till en annan urtavla för **AAPS** trycker du länge på urtavlan på klockans startskärm och trycker på **Customize** (Anpassa). Svep sedan åt höger tills du kommer till alla urtavlor för **AAPS**.
 
-If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
-
-
-![Wear plugin showing the connected Galaxy Watch, and the AAPS app on the watch](../images/wearos/wear_apk_installed.png)
+Om Wear.apk för **AAPS** har sidladdats till smartklockan ser det ut så här:
 
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via Wi-Fi.
+![Pluginet Klocka (Wear) som visar den anslutna Galaxy Watch, och AAPS-appen på klockan](../images/wearos/wear_apk_installed.png)
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+
+För vissa smartklockor, till exempel Samsung Galaxy, måste 'Remote Connection' (fjärranslutning) under Samsung Galaxys Advanced Features (Avancerade funktioner) vara **påslaget** för att du ska kunna använda **Wear.apk** och **AAPS** på distans via Wi-Fi.
+
+![Galaxy Wearable, Advanced features, Remote connection påslaget](../images/wearos/galaxy_wearable_remote_connection.png)
 
 (wear-os-watch-phone-communication)=
 
-### Troubleshooting the **AAPS** watch- **AAPS** phone communication
+### Felsökning av kommunikationen mellan **AAPS**-klockan och **AAPS**-telefonen
 
-1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
-2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
-3.  Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
-4.  It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
-5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** Wear apk onto the watch: the watch app of a browser build is the `aaps-wear-….apk` file, see [Building the Wear app](../WearOS/BuildingAapsWearOS.md). If the file you installed is any of the following: a) an **AAPSClient** Wear apk (while the phone runs **AAPS**); b) a `.aab` file; or c) a file with the word ‘debug’ in its name, you have not selected the correct Wear OS apk during the build.
-6.  Check that your router is not isolating the devices from one another.
+1.  Om EasyFire tools inte ansluter eller om du får ‘authorisation failed’ (behörighet nekad) > kontrollera att IP-adressen är rätt inmatad.
+2.  Kontrollera att smartklockan är ansluten till internet (och inte bara till telefonen via Bluetooth).
+3.  Kontrollera att **AAPS**-telefonen och smartklockan är parkopplade eller länkade i Samsung-appen.
+4.  Det kan också hjälpa att starta om telefonen och smartklockan helt (det vill säga stänga av och slå på telefonen)
+5.  Om du har lyckats ladda ner Wear.apk till telefonen men inte får några BG-data, _kontrollera_ att du har sidladdat rätt Wear-apk för **AAPS** till klockan: klockappen från en webbläsarbyggd version är filen `aaps-wear-….apk`, se [Bygga Wear-appen för AAPS](../WearOS/BuildingAapsWearOS.md). Om filen som du installerade är någon av följande: a) en Wear-apk för **AAPSClient** (medan telefonen kör **AAPS**), b) en `.aab`-fil, eller c) en fil med ordet ‘debug’ i namnet, så har du inte valt rätt Wear OS-apk när du byggde.
+6.  Kontrollera att din router inte isolerar enheterna från varandra.
 
-More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
+Fler felsökningstips finns [här](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
 (WearOS_changing-to-AAPS-watchface)=
 
-## Changing to an AAPS Watchface on your WearOS watch
+## Byta till en AAPS-urtavla på din klocka med Wear OS
 
-There are a number of watchfaces available in the standard build of the AAPS Wear OS APK build. Once you have installed the AAPS Wear APK on your watch, they will be available. Here are the steps for selecting one:
+Det finns flera urtavlor i standardbygget av apk-filen för AAPS Wear OS. De blir tillgängliga när du har installerat AAPS Wear-apk:n på klockan. Så här väljer du en av dem:
 
-1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
+1. På klockan (om den har Wear OS): tryck länge på den aktuella urtavlan för att öppna väljaren för urtavlor. Bläddra hela vägen åt höger tills du ser knappen "Add Watch Face" (Lägg till urtavla) och välj den
 
-![Watchface selector with the Add watch face button](../images/wearos/watchface_add.png)
+![Väljaren för urtavlor med knappen Add watch face (Lägg till urtavla)](../images/wearos/watchface_add.png)
 
-2. Scroll through the list until you find "AAPS (Custom)" (depending on the watch, the watch faces of installed apps are listed under a "Downloaded" section or grouped by app) and click the middle of the image to add it to your shortlist of current watchfaces. Don't worry about the current appearance of the "AAPS (Custom)" watchface, we will select your preferred skin in the next step.
+2. Bläddra i listan tills du hittar "AAPS (anpassad)" (beroende på klockan visas urtavlorna från installerade appar under rubriken "Downloaded" (Nedladdade) eller grupperade per app). Klicka mitt på bilden för att lägga till den i din korta lista med aktuella urtavlor. Bry dig inte om hur urtavlan "AAPS (anpassad)" ser ut just nu. Du väljer det utseende du vill ha i nästa steg.
 
-![List of AAPS watchfaces, with AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
+![Lista med AAPS-urtavlor, med AAPS (anpassad)](../images/wearos/watchface_list_aaps.png)
 
-3. Now open AAPS on your phone and open the Wear plugin: **Configuration** > **Communication** > **Wear** > **Open plugin** (tick **Wear** first if it is not enabled).
+3. Öppna nu AAPS på telefonen och öppna pluginet Klocka (Wear): **Konfiguration** > **Kommunikation** > **Klocka (Wear)** > **Öppna plugin** (kryssa först i **Klocka (Wear)** om det inte är aktiverat).
 
-![Wear plugin with the Custom Watchface card](../images/wearos/wear_plugin_custom_watchface.png)
+![Pluginet Klocka (Wear) med kortet för anpassad urtavla](../images/wearos/wear_plugin_custom_watchface.png)
 
-4. Click on the "Load Watchface" button and select the watchface that you like
+4. Klicka på knappen "Ladda urtavla" och välj den urtavla som du vill ha
 
-![Select Custom Watchface list](../images/wearos/select_custom_watchface.png)
+![Listan för att välja anpassad urtavla](../images/wearos/select_custom_watchface.png)
 
-5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. The **Wear** screen on the phone now shows the name of the loaded watchface and a preview of it. **Infos Watchface** lists its details and the fields it contains, and **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) where you can download other custom watchfaces. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
+5. Titta på klockan. Urtavlan "AAPS (anpassad)" ska nu visa det utseende som du har valt. Vänta några sekunder tills den har uppdaterats. Skärmen **Klocka (Wear)** på telefonen visar nu namnet på den laddade urtavlan och en förhandsvisning av den. **Info om urtavla** visar detaljer om urtavlan och vilka fält den innehåller, och **Fler urtavlor** öppnar [utbytessidan](../ExchangeSiteCustomWatchfaces/index.md) där du kan ladda ner andra anpassade urtavlor. Nu kan du anpassa komplikationerna med mera: tryck länge på urtavlan och tryck sedan på knappen "Customize" (Anpassa) på bilden av urtavlan.
 
 ```{admonition} Complications on a custom watchface
 :class: note
-Custom watchfaces made with version 3.0 or newer of the custom watchface format can contain up to five complication slots, with their position and size defined by the watchface (**Complication layout**). On the watch, long-press the watchface, tap **Customize** and tap **Complication 1** to **Complication 5** to choose the data source shown in each slot. The same rows are listed in the watch's AAPS app under **Settings** > **AAPS(Custom)**; tapping one there opens the same picker. **Complication type priority** decides whether a slot prefers a value or gauge, text, or an icon when the data source offers several. A changed priority only applies the next time you pick a data source for that slot.
+Anpassade urtavlor som är gjorda med version 3.0 eller nyare av formatet för anpassade urtavlor kan ha upp till fem komplikationsplatser, med position och storlek bestämda av urtavlan (**Komplikationslayout**). På klockan: tryck länge på urtavlan, tryck på **Customize** (Anpassa) och tryck på **Komplikation 1** till **Komplikation 5** för att välja vilken datakälla som visas på varje plats. Samma rader finns i AAPS-appen på klockan under **Inställningar** > **AAPS (anpassad)**. Om du trycker på en av dem där öppnas samma väljare. **Prioritering av komplikationstyp** bestämmer om en plats ska föredra ett värde eller en mätare, text eller en ikon när datakällan erbjuder flera. En ändrad prioritet gäller först nästa gång du väljer en datakälla för den platsen.
 
-These slots only work on watches running **Wear OS 5 or older**, where the custom watchface runs as a real watchface. On **Wear OS 6 and newer**, the custom watchface is shown as a picture without its complication slots, and steps 1 and 2 above are not needed: make sure **Custom watchface** is selected under **Watchface installed on watch** in the phone's **Wear** plugin (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)).
+Dessa platser fungerar bara på klockor med **Wear OS 5 eller äldre**, där den anpassade urtavlan körs som en riktig urtavla. På **Wear OS 6 och nyare** visas den anpassade urtavlan som en bild utan sina komplikationsplatser, och steg 1 och 2 ovan behövs inte: se till att **Anpassad urtavla** är vald under **Urtavla installerad på klockan** i pluginet **Klocka (Wear)** på telefonen (se [urtavlan som AAPS installerar](#wearos-aaps-v4-watchface)).
 ```
 
-## AAPSv2 watchface - Legend
+## Urtavlan AAPSv2 – förklaring
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+![Förklaring till urtavlan AAPSv2](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A – tid sedan senaste loopkörning
 
-B - CGM reading
+B – CGM-värde
 
-C - minutes since last CGM reading
+C – minuter sedan senaste CGM-värde
 
-D - change compared to last CGM reading (in mmol or mg/dL)
+D – ändring jämfört med förra CGM-värdet (i mmol/l eller mg/dl)
 
-E - average change CGM reading last 15 minutes
+E – genomsnittlig ändring av CGM-värdet de senaste 15 minuterna
 
-F - phone battery
+F – telefonens batteri
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G – basaldos (visas i U/h vid standarddos och i % vid tillfällig basal, TBR)
 
-H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H – BGI (blood glucose impact, insulinets påverkan på blodsockret) -> hur mycket BG ”borde” stiga eller sjunka enbart på grund av insulinaktiviteten.
 
-I - carbs (carbs on board | e-carbs in the future)
+I – kolhydrater (aktiva kolhydrater | e-carbs i framtiden)
 
-J - insulin on board (from bolus | from basal)
+J – aktivt insulin (från bolus | från basal)

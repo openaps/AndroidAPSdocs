@@ -1,57 +1,57 @@
-# How to configure a Huawei phone
+# Kaip nustatyti Huawei telefoną
 
-**Which phones this page covers:** Huawei phones running **EMUI 12 to EMUI 15**. All of these are based on Android 12, the minimum for the current version of **AAPS**. On a phone with an older EMUI version, you can only use an [older AAPS version](#maintenance-android-version-aaps-version).
+**Kuriems telefonams skirtas šis puslapis:** Huawei telefonams su **EMUI 12–EMUI 15**. Visos šios versijos paremtos Android 12. Tai mažiausia Android versija, kurios reikia dabartinei **AAPS** versijai. Telefone su senesne EMUI versija galite naudoti tik [senesnę AAPS versiją](#maintenance-android-version-aaps-version).
 
-```{admonition} HarmonyOS NEXT / HarmonyOS 5 phones :class: warning
+```{admonition} HarmonyOS NEXT / HarmonyOS 5 telefonai :class: warning
 
-Recent Huawei phones sold in China run HarmonyOS NEXT (HarmonyOS 5 and above). This system is not Android anymore and cannot run **AAPS**. ```
+Naujausiuose Kinijoje parduodamuose Huawei telefonuose veikia HarmonyOS NEXT (HarmonyOS 5 ir naujesnė). Ši sistema nebėra Android, todėl joje **AAPS** neveikia. ```
 
-Huawei phones close apps running in the background very aggressively. Apply all the settings below to **AAPS** and to your CGM app (for example xDrip+ or Juggluco), otherwise the loop and glucose readings may stop when the screen is off.
+Huawei telefonai labai agresyviai uždaro fone veikiančias programėles. Visus toliau nurodytus nustatymus pritaikykite **AAPS** ir savo NGJ programėlei (pavyzdžiui, xDrip+ arba Juggluco). Kitaip, kai ekranas išjungtas, ciklas ir gliukozės rodmenys gali sustoti.
 
-Menu names can differ slightly between models. If you can't find a setting, type its name in the search bar at the top of **Settings**.
+Meniu pavadinimai skirtinguose modeliuose gali šiek tiek skirtis. Jei nerandate nustatymo, įveskite jo pavadinimą paieškos juostoje **Settings** (Nustatymai) viršuje.
 
-The screenshots below come from an older EMUI version. The settings are the same on EMUI 12 to 15.
+Toliau pateiktos ekrano nuotraukos yra iš senesnės EMUI versijos. EMUI 12–15 versijose nustatymai tokie patys.
 
-## Ignore battery optimization
+## Baterijos optimizavimo ignoravimas
 
-1. Open **Settings > Apps > Apps**.
-2. Tap the menu **⋮** in the top right corner and select **Special access > Battery optimization**.
-3. Tap the arrow at the top of the list and select **All apps**.
-4. Select **AAPS** and choose **Don't allow**. Huawei won't optimize apps in this list anymore.
-5. Repeat for your CGM app.
+1. Atverkite **Settings > Apps > Apps**.
+2. Viršutiniame dešiniajame kampe spauskite meniu **⋮** ir pasirinkite **Special access > Battery optimization** (specialioji prieiga > baterijos optimizavimas).
+3. Spauskite rodyklę sąrašo viršuje ir pasirinkite **All apps** (visos programos).
+4. Pasirinkite **AAPS** ir nurodykite **Don't allow** (neleisti). Šiame sąraše esančių programėlių Huawei nebeoptimizuos.
+5. Tą patį pakartokite su savo NGJ programėle.
 
 ![Huawei - ignoruoti baterijos optimizavimą](../images/Huawei_BatteryOptimization.png)
 
-## App launch: allow running in the background
+## App launch: leiskite veikti fone
 
-1. Open **Settings > Battery > App launch** (or **Settings > Apps > Apps >** select the app **> Battery > App launch**).
-2. Find **AAPS** and turn off **Manage automatically**.
-3. In the **Manage manually** window, turn on all three options: 
-    - **Auto-launch**
-    - **Secondary launch** (can be launched by other apps)
-    - **Run in background**
-4. Repeat for your CGM app.
+1. Atverkite **Settings > Battery > App launch** (arba **Settings > Apps > Apps >** pasirinkite programėlę **> Battery > App launch**).
+2. Raskite **AAPS** ir išjunkite **Manage automatically** (tvarkyti automatiškai).
+3. Lange **Manage manually** (tvarkyti rankiniu būdu) įjunkite visas tris parinktis: 
+    - **Auto-launch (automatinis paleidimas)**
+    - **Secondary launch** (programėlę gali paleisti kitos programėlės)
+    - **Run in background (veikimas fone)**
+4. Tą patį pakartokite su savo NGJ programėle.
 
 ![Huawei baterijos funkcijos](../images/Huawei_BatteryOptions.png)
 
-## Lock AAPS in the recent apps
+## AAPS užrakinimas paskutinių programėlių sąraše
 
-Locked apps are not closed when you clear the recent apps list.
+Užrakintos programėlės neuždaromos, kai išvalote paskutinių programėlių sąrašą.
 
-1. Open the recent apps list.
-2. Swipe down on the **AAPS** card. A lock symbol appears on the card.
-3. Do the same for your CGM app.
+1. Atverkite paskutinių programėlių sąrašą.
+2. Perbraukite žemyn ant **AAPS** kortelės. Ant kortelės atsiras spynos ženklas.
+3. Tą patį padarykite su savo NGJ programėle.
 
-![Huawei - užrakinti programą](../images/Huawei_LockApp.png)
+![Huawei - užrakinti programėlę](../images/Huawei_LockApp.png)
 
-## Power saving mode
+## Energijos taupymo režimas
 
-Keep **Power saving mode** and **Ultra power saving** turned off (**Settings > Battery**). They close background apps regardless of the settings above.
+Laikykite išjungtus režimus **Power saving mode** ir **Ultra power saving** (**Settings > Battery**). Jie uždaro fone veikiančias programėles, nepaisant aukščiau nurodytų nustatymų.
 
-## If AAPS still stops in the background
+## Jei AAPS vis tiek sustoja fone
 
-See [Don't kill my app](https://dontkillmyapp.com/huawei) for more Huawei-specific solutions.
+Daugiau Huawei skirtų sprendimų rasite svetainėje [Don't kill my app](https://dontkillmyapp.com/huawei).
 
-## Honor phones
+## Honor telefonai
 
-Honor is a separate brand now and its phones run MagicOS instead of EMUI. The background settings are very similar: look for **App launch** in the app's battery settings, turn off **Manage automatically** and allow all three options, then remove the app from battery optimization.
+Honor dabar yra atskiras prekės ženklas, o jo telefonuose veikia MagicOS, ne EMUI. Fono nustatymai labai panašūs: programėlės baterijos nustatymuose ieškokite **App launch**, išjunkite **Manage automatically** ir leiskite visas tris parinktis, tada pašalinkite programėlę iš baterijos optimizavimo.

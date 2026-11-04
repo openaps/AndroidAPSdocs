@@ -19,7 +19,7 @@ Miej realistyczne oczekiwania co do wyników, które można osiągnąć, gdy wyb
 
 Osiągnięcie żądanego celu **BG** po ustawieniu **celu tymczasowego** może trwać około 30 minut lub dłużej. **AAPS** nie może osiągnąć celu **BG** natychmiast. Pamiętaj o tym, gdy wybierasz **cel tymczasowy**.
 
-The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. Pokazane wartości to ustawienia domyślne — możesz [dostosować każdy preset](#TempTargets-change-preset-defaults) do swoich potrzeb.
+Poniższe sekcje opisują funkcje **celu tymczasowego Ćwiczenia**, **celu tymczasowego Wkrótce posiłek** i **celu tymczasowego Hipo**. Pokazane wartości to ustawienia domyślne — możesz [dostosować każdy preset](#TempTargets-change-preset-defaults) do swoich potrzeb.
 
 ### TT - Ćwiczenia
 
@@ -42,7 +42,7 @@ Możesz też rozważyć:
 
 - *wybranie* tego **TT** 1–2 godziny przed planowanymi ćwiczeniami, aby mieć mniejsze IOB (właściwy czas dla tego TT jest u każdego inny); i
 - *wybranie* tymczasowego profilu (zmniejszenie) na czas planowanej aktywności, aby mieć mniejsze **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- *zaplanowanie*, aby **TT** został *wyłączony* krótko przed ćwiczeniami, ponieważ **IOB** jest już mniejsze, a u niektórych osób **BG** szybko rośnie po ćwiczeniach.
 
 ### TT - Wkrótce posiłek
 
@@ -193,9 +193,9 @@ Czasem po zjedzeniu węglowodanów na leczenie hipoglikemii **BG** może szybko 
 
 Niektórzy użytkownicy chcą uniknąć podawania **SMB** w czasie **celu tymczasowego Hipo**. Robisz to, wyłączając *'Włącz SMB z wysokim tymczasowym poziomem docelowym'* w **Ustawienia** → **OpenAPS SMB** (zobacz niżej):
 
-- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- Dla zaawansowanych, zadanie 9: możesz włączyć *„Wysoki cel tymczasowy zwiększa wrażliwość”* dla **celów tymczasowych** od 100 mg/dl (5,6 mmol/l) wzwyż w OpenAPS SMB — wtedy **AAPS** będzie bardziej wrażliwy.
 
-- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- Dla zaawansowanych, zadanie 9: możesz wyłączyć *„Włącz SMB z wysokim tymczasowym poziomem docelowym”*. Wtedy **AAPS** nie poda SMB, gdy działa wysoki cel tymczasowy, nawet jeśli **AAPS** ma COB > 0, włączone jest „Włącz SMB z niskim tymczasowym poziomem docelowym” lub „Zawsze włącz SMB” i OpenAPS SMB jest aktywny.
 
 Uwaga: jeśli otworzysz **okno Węglowodany**, gdy Twoja glukoza jest niższa niż 72 mg/dl lub 4 mmol/l, **AAPS** sam zaznaczy przełącznik **Rozpocznij TT Hipo**.
 
@@ -209,7 +209,7 @@ Aby ułatwić korzystanie z **celu tymczasowego Ćwiczenia**, możesz ustawić d
 
 Nowi użytkownicy **AAPS** mogą potrzebować prób i dopasowania domyślnych ustawień **celu tymczasowego Ćwiczenia**, aby ta funkcja działała u nich jak najlepiej. Każdy człowiek inaczej osiąga stabilną kontrolę BG podczas ćwiczeń. Zobacz też [sekcję o sporcie w FAQ](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. Możesz uruchomić oba w jednym kroku: dotknij nazwy profilu na ekranie głównym, dotknij okrągłego przycisku **▶**, ustaw **Procent** poniżej 100% i **Czas trwania**, a potem włącz **Cel tymczasowy / Aktywność**. Zobacz [Zmiana procentu profilu](#ProfileSwitch-change-percentage).
+Niektórzy wolą też włączyć **Zmianę profilu** (zmniejszenie profilu < 100%, aby **AAPS** podawał mniej insuliny) przed i w trakcie **celu tymczasowego Ćwiczenia**. Możesz uruchomić oba w jednym kroku: dotknij nazwy profilu na ekranie głównym, dotknij okrągłego przycisku **▶**, ustaw **Procent** poniżej 100% i **Czas trwania**, a potem włącz **Cel tymczasowy / Aktywność**. Zobacz [Zmiana procentu profilu](#ProfileSwitch-change-percentage).
 
 Dla zaawansowanych, zadanie 9: możesz włączyć *'Wysoki cel tymczasowy zwiększa wrażliwość'* dla **celów tymczasowych** od 100 mg/dl (5,6 mmol/l) wzwyż w OpenAPS **SMB**. Cel 99 mg/dl (5,5 mmol/l) jest celem normalnym, ani wysokim, ani niskim. Wtedy **AAPS** jest bardziej wrażliwy.
 
@@ -219,9 +219,9 @@ Dodatkowo, jeśli *'Włącz SMB z wysokim tymczasowym poziomem docelowym'* jest 
 
 ## Cel tymczasowy Wkrótce posiłek
 
-**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**Cel tymczasowy Wkrótce posiłek** może pomóc łagodnie obniżyć **BG** i zapewnić odpowiednią ilość **IOB** przed jedzeniem.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
+To może być ważne narzędzie dla osób, które nie podają bolusa przed posiłkiem. Skuteczność **celu tymczasowego Wkrótce posiłek** zależy jednak od wielu czynników, takich jak: Twoje ustawienia, czy stosujesz dietę niskowęglowodanową i czy używasz szybko działającej insuliny (np. Fiasp lub Lyumjev), aby nie musieć podawać bolusa przed posiłkiem. Zwykle, dopóki nie masz doświadczenia z **AAPS**, musisz liczyć się z podawaniem bolusa przed posiłkiem także przy **celu tymczasowym Wkrótce posiłek**. Dotyczy to szczególnie diety z dużą ilością węglowodanów.
 
 Więcej o „trybie Eating soon” możesz przeczytać w artykule ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) lub [tutaj](https://diyps.org/tag/eating-soon-mode/).
 

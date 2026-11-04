@@ -1,26 +1,26 @@
-# State of translation for the app and the documentation
+# Översättningsstatus för appen och dokumentationen
 
-The state is once per hour updated and reflects only the state in Crowdin.
+Statusen uppdateras en gång i timmen och visar bara läget i Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
-It's better to look only at the percentage level of translations to see if work is to be done.
+Observera: andelen korrekturläst är alltid lägre än eller lika med andelen översatt, men Crowdin visar stapeln för korrekturläsning ovanpå stapeln för översättning.
+Det är bäst att bara titta på hur många procent som är översatt för att se om det finns arbete kvar.
 ```
 
 ```{admonition} needed time for final publication
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Efter översättningen i Crowdin körs en synkronisering till GitHub varje dag. Den för över översättningarna till GitHub som en pull request (PR).
 
-The acceptance of the PR is a manual task which will be done as fast as possible.
+Att godkänna PR:en görs för hand och sker så snabbt som möjligt.
 ```
 
-## state app translation
+## Status för översättningen av appen
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+Status för översättningen av **appen** per språk (landskod, procent översatt, procent korrekturläst).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![Status för översättningen av appen](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## Status för översättningen av dokumentationen
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+Status för översättningen av **dokumentationen** per språk (landskod, procent översatt, procent korrekturläst).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![Status för översättningen av dokumentationen](https://badges.awesome-crowdin.com/translation-13588158-310610.png)

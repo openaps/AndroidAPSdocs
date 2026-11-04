@@ -1,7 +1,7 @@
 (v4-changes)=
-# What changed in AAPS v4
+# AAPS v4'te neler değişti
 
-This page collects the notable **changes in behavior** between **AAPS** v3 and v4 — things that work differently, have moved, or have been removed — so existing users know what to expect when they update. See also the [Release Notes](ReleaseNotes.md) and the [update manual](UpdateToNewVersion.md).
+Bu sayfa, **AAPS** v3 ile v4 arasındaki önemli **davranış değişikliklerini** toplar: farklı çalışan, yeri değişen veya kaldırılan şeyler. Böylece mevcut kullanıcılar güncelleme yaptıklarında ne bekleyeceklerini bilirler. Ayrıca [Sürüm notları](ReleaseNotes.md) ve [güncelleme kılavuzu](UpdateToNewVersion.md) sayfalarına bakın.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,160 +10,160 @@ This page collects the notable **changes in behavior** between **AAPS** v3 and v
 
 ---
 
-## NSClient v1 has been removed
+## NSClient v1 kaldırıldı
 
-**AAPS** v3 shipped **two** Nightscout synchronization plugins:
+**AAPS** v3 ile **iki** Nightscout senkronizasyon eklentisi geliyordu:
 
-- **NSClient** — the legacy client (the old Nightscout REST / socket.io API, also called *“v1”*), and
-- **NSClientV3** — the client for the newer Nightscout **API v3**.
+- **NSClient**: eski istemci (eski Nightscout REST / socket.io API'si, *“v1”* olarak da bilinir) ve
+- **NSClientV3**: daha yeni Nightscout **API v3** için istemci.
 
-In **AAPS** v4 the legacy **NSClient (v1)** plugin has been **removed**. Only **NSClientV3** remains for synchronizing with Nightscout.
+**AAPS** v4'te eski **NSClient (v1)** eklentisi **kaldırıldı**. Nightscout ile senkronizasyon için yalnızca **NSClientV3** kaldı.
 
 ```{admonition} What you need to do
 :class: important
-If you (or your **AAPSClient** follower) were still synchronizing with the old **NSClient (v1)** plugin, switch to **NSClientV3** before/after updating:
+Siz (veya **AAPSClient** takipçiniz) hâlâ eski **NSClient (v1)** eklentisiyle senkronize ediyorsanız, güncellemeden önce veya sonra **NSClientV3**'e geçin:
 
-- Open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → Communication → NSClientV3**.
-- Enter your **Nightscout URL** and an **access token** (NSClientV3 uses an access token, *not* the old API secret — see [creating a token](https://nightscout.github.io/nightscout/security/#create-a-token)).
-- Your Nightscout site must support the **API v3** (Nightscout 15 or newer).
-- If you use **websockets**, enable or disable them on **both** the master and the follower — never on only one.
+- **[Konfigürasyon](../SettingUpAaps/ConfigBuilder.md) → İletişim → NSClientV3** bölümünü açın.
+- **Nightscout URL**'nizi ve bir **erişim belirteci** girin (NSClientV3 eski API secret'ı *değil*, bir erişim belirteci kullanır; bkz. [belirteç oluşturma](https://nightscout.github.io/nightscout/security/#create-a-token)).
+- Nightscout sitenizin **API v3**'ü desteklemesi gerekir (Nightscout 15 veya daha yeni).
+- **websockets** kullanıyorsanız, bunları **hem** ana birimde hem de takipçide etkinleştirin veya devre dışı bırakın; asla yalnızca birinde değil.
 ```
 
-This affects only how the app talks to Nightscout; your data on Nightscout is unchanged.
+Bu yalnızca uygulamanın Nightscout ile nasıl iletişim kurduğunu etkiler; Nightscout'taki verileriniz değişmez.
 
 ---
 
-## The bottom navigation: Treatments, Scenes and Manage
+## Alt gezinme çubuğu: Tedaviler, Senaryolar ve Yönet
 
-In **AAPS** v3 you moved around the app with a row of **tabs** (Overview, Actions, Treatments, …), and several features were **plugins** you enabled in the Config Builder (**Actions**, **Automation**, **Food**, …).
+**AAPS** v3'te uygulamada bir sıra **sekme** ile geziniyordunuz (Genel Bakış, Eylemler, Tedaviler, …) ve birçok özellik, Config Builder'da etkinleştirdiğiniz **eklentilerdi** (**Eylemler**, **Otomasyon**, **Yiyecek**, …).
 
-In **AAPS** v4 the tabs are gone, and so is the eye checkbox in the Config Builder that showed a plugin as a tab. The main screen is the **Overview**, and a **bottom navigation** gives you three sheets. **Actions, Automation and Food are no longer plugins** — there is nothing to enable in [Configuration](../SettingUpAaps/ConfigBuilder.md) (the renamed Config Builder); their functions now live in these sheets.
+**AAPS** v4'te sekmeler kaldırıldı. Config Builder'da bir eklentiyi sekme olarak gösteren göz onay kutusu da kaldırıldı. Ana ekran **Genel Bakış** ekranıdır ve bir **alt gezinme çubuğu** size üç panel sunar. **Eylemler, Otomasyon ve Yiyecek artık eklenti değildir**: [Konfigürasyon](../SettingUpAaps/ConfigBuilder.md) bölümünde (Config Builder'ın yeni adı) etkinleştirilecek bir şey yoktur; işlevleri artık bu panellerdedir.
 
 (v4changes-treatments)=
-### Treatments — enter and deliver
+### Tedaviler: girme ve verme
 
-The **Treatments** sheet is where you record or deliver a treatment: **Bolus wizard**, **Insulin** (manual bolus), **Carbs**, **Treatment** (insulin + carbs together), **Calibration**, **CGM** (open your CGM app, when one is configured), and your **[QuickWizards](../DailyLifeWithAaps/QuickWizards.md)**.
+**Tedaviler** paneli, bir tedaviyi kaydettiğiniz veya verdiğiniz yerdir: **Bolus sihirbazı**, **İnsülin** (manuel bolus), **Karbonhidrat**, **Tedavi** (insülin + karbonhidrat birlikte), **Kalibrasyon**, **CGM** (yapılandırılmışsa CGM uygulamanızı açar) ve **[Hızlı Asistan](../DailyLifeWithAaps/QuickWizards.md)** kayıtlarınız.
 
-![The Treatments bottom sheet](../images/v4/BehavioralChanges/treatments_sheet.png)
+![Tedaviler alt paneli](../images/v4/BehavioralChanges/treatments_sheet.png)
 
-On a **Wear OS watch** the same treatments are entered from the watch's **AAPS menu** (Bolus wizard / Calculator, eCarbs, Treatment, …):
+Bir **Wear OS saatinde** aynı tedaviler, saatin **AAPS menüsünden** girilir (Bolus sihirbazı / Hesaplayıcı, yKarb, Tedavi, …):
 
-![The treatment actions in the watch's AAPS menu](../images/v4/BehavioralChanges/treatments_watch.png)
+![Saatin AAPS menüsündeki tedavi işlemleri](../images/v4/BehavioralChanges/treatments_watch.png)
 
-### Scenes
+### Senaryolar
 
-Your situation presets — see [Scenes](../DailyLifeWithAaps/Scenes.md).
+Duruma göre ön ayarlarınız; bkz. [Senaryolar](../DailyLifeWithAaps/Scenes.md).
 
 (v4changes-manage)=
-### Manage — manage and activate
+### Yönet: yönetme ve etkinleştirme
 
-The **Manage** sheet is where you manage and activate everything else: **[Profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulin settings** (your insulin configurations), **[Temp Target](../DailyLifeWithAaps/TempTargets.md)**, **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)** presets, **[Scenes](../DailyLifeWithAaps/Scenes.md)**, **Automation**, **Food**, **Site Rotation**, **Pump**, **[Authorized clients](../RemoteFeatures/ClientMasterControl.md)** — plus the pump actions that used to be on the *Actions* tab (**Extended Bolus**, **cancel temp basal**, **Prime/Fill**, **Sensor Insert**, **Pump Battery Change**).
+**Yönet** paneli, diğer her şeyi yönettiğiniz ve etkinleştirdiğiniz yerdir: **[Profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **İnsülin ayarları** (insülin yapılandırmalarınız), **[Geçici Hedef](../DailyLifeWithAaps/TempTargets.md)**, **[Hızlı Asistan](../DailyLifeWithAaps/QuickWizards.md)** ön ayarları, **[Senaryolar](../DailyLifeWithAaps/Scenes.md)**, **Otomasyon**, **Yiyecek**, **Bölge Rotasyonu**, **Pompa**, **[Yetkili istemciler](../RemoteFeatures/ClientMasterControl.md)**; ayrıca eskiden *Eylemler* sekmesinde olan pompa işlemleri (**Yayma Bolus**, **Geçici bazalı iptal et**, **Hazırla/doldur**, **Sensör yerleştirme**, **Pompa Pil Değişimi**).
 
-![The Manage bottom sheet](../images/v4/BehavioralChanges/manage_sheet.png)
+![Yönet alt paneli](../images/v4/BehavioralChanges/manage_sheet.png)
 
-All of your existing automation rules and food entries are kept; only the way you reach these features has changed.
+Mevcut tüm otomasyon kurallarınız ve yiyecek kayıtlarınız korunur; yalnızca bu özelliklere ulaşma şekliniz değişti.
 
 (screens-action-tab)=
-#### Where did the Actions tab go?
+#### Eylemler sekmesi nereye gitti?
 
-**AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
+**AAPS** 3.x'te bir "Eylemler" sekmesi vardı. **AAPS** 4'te işlevleri başka yerlerdedir:
 
-* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
-* **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
-* **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
-* **History browser**, **Statistics** (TDD): in the **menu** (☰).
+* **Profil değişimi** ve **Profil yüzdesi**: ana ekranda [profil adına](#aaps-screens-profile--target) dokunun veya **Yönet → Profil** yolunu kullanın. Bkz. [Profil yüzdesini değiştirme](#ProfileSwitch-change-percentage).
+* **Geçici hedef**: ana ekranda [hedefe](#aaps-screens-profile--target) basın veya **Yönet → Geçici Hedef** yolunu kullanın.
+* **Hazırla/doldur**, **Sensör yerleştirme**, **KŞ Kontrol** ve diğer careportal kayıtları: genişletilmiş [durum panelinde](#aaps-screens-careportal), **Yönet** içinde veya [Hızlı Başlatma](../DailyLifeWithAaps/QuickLaunch.md) düğmeleri olarak.
+* **Geçmiş tarayıcısı**, **İstatistikler** (GTD): **menüde** (☰).
 
 ```{admonition} Profile switch and profile percentage
 :class: note
-In **AAPS** v3, a long press on the profile name opened the profile switch dialog (percentage, duration, Activity temp target). In **AAPS** v4, **tap** the profile name (or **Manage → Profile**), then tap the round **▶** button at the bottom right to open the same settings. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+**AAPS** v3'te profil adına uzun basmak profil değişimi penceresini açıyordu (yüzde, süre, Aktivite geçici hedefi). **AAPS** v4'te profil adına **dokunun** (veya **Yönet → Profil**), ardından aynı ayarları açmak için sağ alttaki yuvarlak **▶** düğmesine dokunun. Bkz. [Profil yüzdesini değiştirme](#ProfileSwitch-change-percentage).
 ```
 
 ---
 
 (v4changes-read-only-management)=
-## Settings protection now also locks the management screens
+## Ayarların güvenliği artık yönetim ekranlarını da kilitler
 
-In **AAPS** v3, [Settings protection](#Preferences-settings-protection) asked for your password only when you opened the settings. You could still add or edit profiles in the **Local Profile** tab without it.
+**AAPS** v3'te [Ayarların güvenliği](#Preferences-settings-protection) parolanızı yalnızca ayarları açtığınızda soruyordu. **Yerel Profil** sekmesinde profilleri parola olmadan yine de ekleyip düzenleyebiliyordunuz.
 
-In **AAPS** v4, Settings protection also covers editing on the management screens: **Profile**, **Insulin settings**, **Temp Target** and **QuickWizard**. If your settings are locked, these screens open **read-only**:
+**AAPS** v4'te Ayarların güvenliği, yönetim ekranlarındaki düzenlemeyi de kapsar: **Profil**, **İnsülin ayarları**, **Geçici Hedef** ve **Hızlı Asistan**. Ayarlarınız kilitliyse, bu ekranlar **salt okunur** açılır:
 
-- You can browse the entries and **▶ Activate** or use them.
-- The **Add / Edit / Clone / Delete** buttons are **hidden**. Only the **✏️ pencil** in the top bar shows that you can unlock editing.
+- Kayıtlara göz atabilir ve onları **▶ Etkinleştir** ile etkinleştirebilir veya kullanabilirsiniz.
+- **Ekle / Düzenle / Klon / Sil** düğmeleri **gizlidir**. Yalnızca üst çubuktaki **✏️ kalem**, düzenlemenin kilidini açabileceğinizi gösterir.
 
-![The read-only Profile screen — only Activate at the bottom, pencil in the top bar](../images/v4/Profiles/profile_manage_readonly.png)
+![Salt okunur Profil ekranı: altta yalnızca Etkinleştir, üst çubukta kalem](../images/v4/Profiles/profile_manage_readonly.png)
 
 ```{admonition} What you need to do
 :class: important
-To add, edit, clone or delete an entry, tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics). The buttons appear.
+Bir kaydı eklemek, düzenlemek, klonlamak veya silmek için üst çubuktaki **✏️ kaleme** dokunun ve ayarlar parolanızı girin (veya biyometrik doğrulamayı kullanın). Düğmeler görünür.
 
-If you don't need to protect your settings, you can turn Settings protection off in **Settings → Protection**.
+Ayarlarınızı korumanız gerekmiyorsa, Ayar korumasını **Ayarlar → Koruma** bölümünden kapatabilirsiniz.
 ```
 
 ---
 
 (v4changes-active-insulin)=
-## The insulin in use can't be edited
+## Kullanımdaki insülin düzenlenemez
 
-In **AAPS** v3, you could change the DIA of the insulin you were using at any time.
+**AAPS** v3'te kullandığınız insülinin İES'ini istediğiniz zaman değiştirebiliyordunuz.
 
-In **AAPS** v4, the insulin marked **ACTIVE** in **Manage → Insulin settings** is greyed out: you cannot edit or delete it.
+**AAPS** v4'te **Yönet → İnsülin ayarları** içinde **AKTİF** olarak işaretlenen insülin gri görünür: onu düzenleyemez veya silemezsiniz.
 
-When you upgrade, **AAPS** keeps the insulin and DIA that your v3 profile switches already stored. If it finds older records whose insulin is known but whose DIA is not, it uses a default DIA for them and shows a message once, for example *Older records had no insulin duration, so 9.0 hours was used for Lyumjev. Check your insulin settings — already migrated records are not updated afterwards.* Check your insulin settings when you see it.
+Yükseltme yaptığınızda **AAPS**, v3 profil değişimlerinizin zaten kaydettiği insülini ve İES'i korur. İnsülini bilinen ama İES'i bilinmeyen eski kayıtlar bulursa, bunlar için varsayılan bir İES kullanır ve bir kez bir mesaj gösterir, örneğin *Eski kayıtlarda insülin süresi bilgisi bulunmadığından, Lyumjev için 9,0 saat değeri kullanılmıştır. İnsülin ayarlarınızı kontrol edin; halihazırda taşınmış olan kayıtlar sonradan güncellenmez.* Bu mesajı gördüğünüzde insülin ayarlarınızı kontrol edin.
 
 ```{admonition} What you need to do
 :class: important
-To change the DIA or peak, add a new insulin with **+**, adjust it, save it and **▶ Activate** it. See [Changing the insulin in use](#Config-Builder-insulin-change-active).
+İES'i veya tepe zamanını değiştirmek için **+** ile yeni bir insülin ekleyin, ayarlayın, kaydedin ve **▶ Etkinleştir** ile etkinleştirin. Bkz. [Kullanımdaki insülini değiştirme](#Config-Builder-insulin-change-active).
 ```
 
 ---
 
 (v4changes-remote-control)=
-## AAPSClient remote control needs pairing
+## AAPSClient uzaktan kontrolü eşleştirme gerektirir
 
-In **AAPS** v3, **AAPSClient** controlled **AAPS** by writing care-portal treatments to Nightscout, and could not deliver a bolus.
+**AAPS** v3'te **AAPSClient**, Nightscout'a careportal tedavileri yazarak **AAPS**'i kontrol ediyordu ve bolus veremiyordu.
 
-In **AAPS** v4, the client and the main phone are **paired** once, and every command is signed. The main phone checks and confirms each command, and a client can now also deliver a bolus.
+**AAPS** v4'te istemci ve ana telefon bir kez **eşleştirilir** ve her komut imzalanır. Ana telefon her komutu kontrol eder ve onaylar; artık bir istemci bolus da verebilir.
 
-- Each client has a **[role](#client-master-control-roles)** that limits what it may do.
-- While client control is on, the main phone is in **[hardened mode](#client-master-control-hardened-mode)**: treatments and changes typed directly into Nightscout (the website, other apps) are no longer applied.
-- Each client gets a **[Nightscout token of its own](#client-master-control-own-token)** with only the rights it needs.
+- Her istemcinin, neler yapabileceğini sınırlayan bir **[rolü](#client-master-control-roles)** vardır.
+- İstemci kontrolü açıkken ana telefon **[güçlendirilmiş moddadır](#client-master-control-hardened-mode)**: doğrudan Nightscout'a (web sitesi, diğer uygulamalar) yazılan tedaviler ve değişiklikler artık uygulanmaz.
+- Her istemci, yalnızca ihtiyaç duyduğu haklara sahip **[kendi Nightscout belirtecini](#client-master-control-own-token)** alır.
 
 ```{admonition} What you need to do
 :class: important
-Pair each **AAPSClient** with the main phone: see [Master ↔ Client control](#client-master-control). With an admin token on the main phone, the main phone shows a QR code that sets up and pairs the client in one scan. If you used to enter treatments on the Nightscout website, enter them on a paired client instead.
+Her **AAPSClient**'ı ana telefonla eşleştirin: bkz. [Ana birim ↔ İstemci kontrolü](#client-master-control). Ana telefonda bir yönetici (admin) belirteci varsa, ana telefon tek bir taramayla istemciyi kuran ve eşleştiren bir QR kodu gösterir. Eskiden tedavileri Nightscout web sitesinde giriyorsanız, artık bunları eşleştirilmiş bir istemcide girin.
 ```
 
 ---
 
-## Duplicate BG data now switches the loop to Low Glucose Suspend
+## Yinelenen KŞ verileri artık döngüyü Düşük Glikoz Duraklatma moduna geçirir
 
-When **AAPS** receives the same BG reading twice (a red warning badge on the BG source shortcut in the bottom bar), it cannot calculate your trend reliably, so it stops giving correction insulin.
+**AAPS** aynı KŞ değerini iki kez aldığında (alt çubuktaki KŞ kaynağı kısayolunda kırmızı bir uyarı işareti), eğiliminizi güvenilir şekilde hesaplayamaz, bu yüzden düzeltme insülini vermeyi durdurur.
 
-In **AAPS** v3 this happened quietly in the background: your loop still showed as **Closed Loop**, even though it could no longer correct.
+**AAPS** v3'te bu arka planda sessizce oluyordu: döngünüz düzeltme yapamadığı hâlde yine **Kapalı Döngü** olarak görünüyordu.
 
-In **AAPS** v4 the change is visible. A closed loop is switched to **Low Glucose Suspend** mode, and the loop dialog tells you why: *"LGS mode due to doubled values in BG source"*. **AAPS** can still reduce or suspend your basal to protect you against lows.
+**AAPS** v4'te bu değişiklik görünür. Kapalı döngü **Düşük Glikoz Duraklatma** moduna geçirilir ve döngü penceresi nedenini söyler: *"KŞ kaynağında iki katına çıkmış değerler nedeniyle LGS modu"*. **AAPS**, sizi düşüklere karşı korumak için bazalınızı yine de azaltabilir veya durdurabilir.
 
 ```{admonition} What you need to do
 :class: important
-Find and remove the duplicate readings — see [BG warning sign](#aaps-screens-bg-warning-sign).
+Yinelenen değerleri bulun ve silin; bkz. [KŞ uyarı işareti](#aaps-screens-bg-warning-sign).
 
-Once they are gone, **AAPS** stays in **Low Glucose Suspend**. It does not go back to **Closed Loop** on its own: press and hold the loop icon and select **Closed Loop** again.
+Bunlar silindikten sonra **AAPS** **Düşük Glikoz Duraklatma** modunda kalır. Kendiliğinden **Kapalı Döngü** moduna geri dönmez: döngü simgesine basılı tutun ve tekrar **Kapalı Döngü**'yü seçin.
 ```
 
 ---
 
 (v4changes-tidepool)=
-## Tidepool: data now shows under the device name AAPS
+## Tidepool: veriler artık AAPS cihaz adı altında görünür
 
-In **AAPS** v3, the data uploaded to [Tidepool](../SettingUpAaps/Tidepool.md) was shown in Tidepool under another device name.
+**AAPS** v3'te [Tidepool](../SettingUpAaps/Tidepool.md)'a yüklenen veriler Tidepool'da başka bir cihaz adı altında gösteriliyordu.
 
-In **AAPS** v4, the data is shown under the device name **AAPS**. After the update, **AAPS** starts a new data set in Tidepool. Your older data stays in Tidepool under the old device name.
+**AAPS** v4'te veriler **AAPS** cihaz adı altında gösterilir. Güncellemeden sonra **AAPS**, Tidepool'da yeni bir veri seti başlatır. Eski verileriniz Tidepool'da eski cihaz adı altında kalır.
 
 ```{admonition} What you need to do
 :class: important
-Usually nothing: new data simply appears under **AAPS**.
+Genellikle hiçbir şey yapmanız gerekmez: yeni veriler doğrudan **AAPS** altında görünür.
 
-Do **not** run "**Full synchronization**" while the old data is still in Tidepool: the same data would then be there twice. If you want all your data under the new name, use the "**Purge all data**" button on the [Tidepool screen](#tidepool-menu) first (it also deletes the old data uploaded by **AAPS**), then run "**Full synchronization**". Only the data still stored in **AAPS** on your phone can be uploaded again.
+Eski veriler hâlâ Tidepool'dayken "**Tam senkronizasyon**" işlemini **çalıştırmayın**: aynı veriler o zaman iki kez bulunur. Tüm verilerinizin yeni ad altında olmasını istiyorsanız, önce [Tidepool ekranındaki](#tidepool-menu) "**Tüm verileri sil**" düğmesini kullanın (bu, **AAPS** tarafından yüklenen eski verileri de siler), ardından "**Tam senkronizasyon**" çalıştırın. Yalnızca telefonunuzda **AAPS** içinde hâlâ saklanan veriler yeniden yüklenebilir.
 ```
 
 ---

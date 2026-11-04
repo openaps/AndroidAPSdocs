@@ -1,18 +1,18 @@
 # A dedicated Google account for AAPS (optional)
 
-Some **AAPS** users prefer to use their main email account for **AAPS** as well. Alternatively, some **AAPS** users (or their caregivers) set-up a dedicated **AAPS** email account - this is optional, we give an example of how to do it below.
+Some **AAPS** users prefer to use their main email account for **AAPS** as well. Kiti **AAPS** naudotojai (arba juos prižiūrintys asmenys) susikuria atskirą **AAPS** el. pašto paskyrą. Tai nebūtina, o žemiau pateikiame pavyzdį, kaip tai padaryti.
 
-If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go straight to the next section, [building AAPS](../SettingUpAaps/BuildingAaps.md).
+Jei nenorite kurti atskiros **AAPS** Gmail paskyros, galite iš karto pereiti į kitą skyrių [AAPS kūrimas](../SettingUpAaps/BuildingAaps.md).
 
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
-- Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
-- By harmonizing the setup, it will make online support simpler across users with similar folder structure.
-- Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
-- Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
-- Gmail allows you to register up to 4 accounts under the same phone number.
+- Su atskira Google Drive vieta nerizikuojate, kad funkcija **Eksportuoti nustatymus** užpildys jūsų asmeninės Google Drive vietos limitą.
+- Kiekviena **AAPS** versija (ir pagalbinės programėlės, pvz., xDrip, BYODA ir kt.) bus saugoma vienoje vietoje, nepriklausomai nuo jūsų kompiuterio. If your PC or phone is stolen/lost/broken you will still have access.
+- Kai sąranka vienoda, pagalba internetu paprastesnė, nes naudotojų aplankų struktūra panaši.
+- Priklausomai nuo sąrankos (žr. žemiau), bendruomenėje galėsite bendrauti kitu vardu (slapyvardžiu), o tai gali apsaugoti jūsų privatumą. 
+- Vaikai, sergantys 1 tipo diabetu, gali toliau naudoti savo „kasdienę“ nepilnamečio el. pašto paskyrą, o **AAPS** ir susijusioms funkcijoms, kurioms reikia suaugusiojo paskyros, naudoti atskirą paskyrą.
+- Gmail leidžia vienu telefono numeriu užregistruoti iki 4 paskyrų.
 ```
 
 ## How to set up a dedicated Google account for AAPS
@@ -23,125 +23,125 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 
 Requirements:
 
-* You have a Windows’ PC (Windows 10 or newer) and an Android phone (Android 12 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
-* The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
+* Turite kompiuterį su Windows (Windows 10 arba naujesne) ir Android telefoną (Android 12 arba naujesnį), kuriame veiks **AAPS** programėlė. Abiejuose įrenginiuose turi būti įdiegti visi naujausi saugos naujinimai, interneto ryšys ir administratoriaus teisės, nes kai kuriems žingsniams reikia atsisiųsti ir įdiegti programas.
+* Android telefone jau nustatytas jūsų asmeninis „kasdienis“ el. pašto adresas, pvz., Gmail paskyra.
 
 ```{admonition} Things to consider when setting up your new account
 :class: dropdown
-- You could use a name different to your own, which has relevance to the account (like t1dsuperstar) for privacy reasons. You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
-- The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. It will use the “everyday” email address for verification;
-- We will setup email forwarding such that any email sent to the new dedicated AAPS account will be forwarded to the primary one (so there is no need to check two different mailboxes);
-- Use separate passwords for your _everyday_ Gmail account and the AAPS-dedicated Gmail account
-- If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
-- If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
+- Dėl privatumo galite naudoti ne savo vardą, o su paskyra susijusį pavadinimą (pvz., t1dsuperstar). You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
+- Naujoji **AAPS** paskyra tapatybei patvirtinti naudos tą patį telefono numerį kaip ir jūsų „_kasdienė_“ paskyra. Tapatybei patvirtinti ji naudos „kasdienį“ el. pašto adresą;
+- Nustatysime el. laiškų peradresavimą, kad visi laiškai, siunčiami į naująją AAPS paskyrą, būtų peradresuojami į pagrindinę paskyrą (taip nereikės tikrinti dviejų pašto dėžučių);
+- Savo _kasdienei_ Gmail paskyrai ir AAPS Gmail paskyrai naudokite skirtingus slaptažodžius
+- Jei vienai Gmail paskyrai naudojate Google „2-step verification“ (dviejų veiksmų patvirtinimą, dar vadinamą kelių veiksnių autentifikavimu), verta jį įjungti abiem Gmail paskyroms.
+- Jei planuojate naudoti Google „Passkeys“ (prieigos raktus), užregistruokite kelis įrenginius. This is so you don’t lock yourself out. Tai darykite tik įrenginiuose, prie kurių niekas kitas negali prieiti (_t. y._ ne kompiuteryje su bendra paskyra, kurią gali atrakinti kiti žmonės).
 ```
 
 
 ```{admonition} Video Walkthrough!
 :class: note
-Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
+Spustelėkite [čia](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>), kad pamatytumėte vaizdo įrašą, kaip sukurti atskirą Google paskyrą.
 ```
 
  These are the steps outlined in the video:
 
 In this example: 
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
-- Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
+- Jūsų esama „_kasdienė_“ Google paskyra yra <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
+- Jūsų nauja „_AAPS_“ Gmail paskyra bus: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Go to <https://myaccount.google.com> 
+### Eikite į <https://myaccount.google.com> 
 
- If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
+ Jei jau esate prisijungę prie Google, būsite nukreipti į savo „kasdienės“ paskyros puslapį **My Account** (mano paskyra). (1) Puslapio viršuje dešinėje spustelėkite savo profilio nuotrauką (šiuo atveju tai paprastas ![](../images/Building-the-App/building_0002.png)) (2) pasirinkite „_add another account_“ (pridėti kitą paskyrą).
 
 ![](../images/Building-the-App/building_0005.png)
 
 
-### Enter your NEW dedicated account details: 
+### Įveskite NAUJOS atskiros paskyros duomenis: 
 
-- Enter the new account: 
-- Create Account
-- for my personal use. 
+- Įveskite naujos paskyros duomenis: 
+- Paskyros sukūrimas
+- „for my personal use“ (asmeniniam naudojimui). 
 
 
-### Enter your persona:
- - Enter firstname
- - lastname
- - birthdate (needs to be an Adult age)
+### Įveskite savo asmens duomenis:
+ - Įveskite vardą
+ - pavardę
+ - gimimo datą (turite būti pilnametis)
 
-### Choose your NEW email address & password
+### Pasirinkite NAUJĄ el. pašto adresą ir slaptažodį
 
-This example appends “.AAPS” to Donald Muck’s existing one…\
-Set a password
+Šiame pavyzdyje prie esamo Donald Muck adreso pridedama „.AAPS“…\
+Nustatykite slaptažodį
 
-### Enter a phone number which can receive the SMS verification
+### Įveskite telefono numerį, kuriuo galima gauti patvirtinimo SMS
 
-Gmail will now send you a unique code to enter for validation.
+Gmail atsiųs unikalų kodą, kurį reikės įvesti patvirtinimui.
 
-### Enter the recovery email address
+### Įveskite atkūrimo el. pašto adresą
 
-In this case it will be your existing “_everyday_” email…
+Šiuo atveju tai bus jūsų esamas „_kasdienis_“ el. pašto adresas…
 
-### Finish setting up the account
+### Paskyros sąrankos užbaigimas
 
-Gmail will display the account name. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
+Gmail parodys paskyros pavadinimą. Bus paprašyta sutikti su Gmail taisyklėmis ir sąlygomis bei patvirtinti suasmeninimo nustatymus.
 
-### Customize the new profile display
+### Naujo profilio rodinio pritaikymas
 
-At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
+Dabar turėtumėte matyti Gmail puslapį MyAccount su nauja **AAPS** el. pašto paskyra. Pagal numatytuosius nustatymus profilio nuotrauka bus pirmoji jūsų vardo raidė. Pakeiskite ją į kažką išskirtinio, kad paskyrų nesupainiotumėte… šiame pavyzdyje Donald.Muck.AAPS vietoj ![](../images/Building-the-App/building_0002.png) pasirinko ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
-### Open the Gmail website on both windows to configure the new account
+### Atidarykite Gmail svetainę abiejuose languose ir sukonfigūruokite naują paskyrą
 
-So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account\
-This part can be a bit confusing, since you will have to switch back and forth between both accounts. To make it easier, open 2 separate browser windows on top of each other:
+Kad nereikėtų stebėti atskiros el. pašto paskyros, peradresuokite visus laiškus iš naujos **AAPS** paskyros į savo kasdienę paskyrą\
+Ši dalis gali būti šiek tiek paini, nes teks perjunginėti tarp abiejų paskyrų. Kad būtų paprasčiau, atidarykite 2 atskirus naršyklės langus vieną virš kito:
 
-1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen…
-2. Right click on your Browser logo in your taskbar
-3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
+1. Perkelkite esamą naršyklės langą į ekrano viršų ir pakeiskite jo dydį, kad jis užimtų tik maždaug viršutinę ekrano pusę…
+2. Užduočių juostoje dešiniuoju pelės mygtuku spustelėkite naršyklės logotipą
+3. Meniu pasirinkite „New Window“ (naujas langas)... ir pakeiskite jo dydį, kad jis užimtų tik apatinę ekrano pusę.
 
-Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Kiekviename naršyklės lange atidarykite <https://gmail.com>. Įsitikinkite, kad asmeninė paskyra yra viršuje, o nauja **AAPS** paskyra apačioje ir kad ją lengva atpažinti pagal profilio nuotrauką viršutiniame dešiniajame kampe. Jei reikia, paskyrą visada galite perjungti spustelėję profilio nuotrauką ir pasirinkę reikiamą paskyrą.
 
 ![](../images/Building-the-App/building_0009.png)
 
-Your Gmail homepages screen should look like this:\
+Jūsų Gmail pradiniai puslapiai turėtų atrodyti taip:\
 ![](../images/Building-the-App/building_0010.png)
 
- ### In the new Gmail account (bottom window), open Gmail settings…
+ ### Naujoje Gmail paskyroje (apatiniame lange) atidarykite Gmail nustatymus…
 
-- Click on the gear on the left of the profile picture
-- then select “**See all Settings**”
+- Spustelėkite krumpliaratį kairėje nuo profilio nuotraukos
+- tada pasirinkite „**See all Settings**“ (žiūrėti visus nustatymus)
 
 ![](../images/Building-the-App/building_0011.png)
 
-### Setup forwarding…
+### Peradresavimo nustatymas…
 
-- Click on the “Forwarding and POP/IMAP” Setting tab
-- Click on “add a forwarding address”
-- Add your “everyday” email address
-- Gmail will send a verification code to your “everyday” email address.
-- You will switch back to your everyday profile and click on the link to verify that you accept the forwarding (or get the code from Gmail’s verification email in your “everyday” Gmail window and cut and paste it in your “new AAPS dedicated” Gmail window).
+- Spustelėkite nustatymų skirtuką „Forwarding and POP/IMAP“ (peradresavimas ir POP/IMAP)
+- Spustelėkite „add a forwarding address“ (pridėti peradresavimo adresą)
+- Pridėkite savo „kasdienį“ el. pašto adresą
+- Gmail atsiųs patvirtinimo kodą į jūsų „kasdienį“ el. pašto adresą.
+- Grįžkite į savo kasdienį profilį ir spustelėkite nuorodą, kad patvirtintumėte peradresavimą (arba paimkite kodą iš Gmail patvirtinimo laiško savo „kasdieniame“ Gmail lange ir nukopijuokite jį į „naujos AAPS paskyros“ Gmail langą).
 
-There is quite a bit of back and forth between the windows but this will ensure that when you check your “everyday” account emails you will also see the emails forwarded from your AAPS dedicated account such as Gmail alerts.
+Teks kelis kartus perjunginėti langus, bet taip, tikrindami „kasdienės“ paskyros laiškus, matysite ir iš AAPS paskyros peradresuotus laiškus, pavyzdžiui, Gmail įspėjimus.
 
 ![](../images/Building-the-App/building_0012.png)
 
-### Verify the forwarded email address
+### Peradresuoto el. pašto adreso patvirtinimas
 
-- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email.
-- Open it and “click the link to confirm the request”
+- „Kasdienėje“ Gmail paskyroje (viršutiniame lange) gausite laišką „Gmail forwarding Confirmation“ (Gmail peradresavimo patvirtinimas).
+- Atidarykite jį ir spustelėkite nuorodą užklausai patvirtinti („click the link to confirm the request“)
 
-### Archive forwarded emails in the new dedicated Gmail account (bottom window)
+### Peradresuotų laiškų archyvavimas naujoje AAPS Gmail paskyroje (apatinis langas)
 
 <!---->
 
-1. Refresh the bottom window
-2. Check “forward incoming email”
-3. And archive Gmail’s copy (to keep your new dedicated mailbox clean)
-4. Scroll all the way to the bottom to save your changes\
+1. Atnaujinkite apatinį langą
+2. Pažymėkite „forward incoming email“ (peradresuoti gaunamus laiškus)
+3. Ir pasirinkite archyvuoti Gmail kopiją (kad nauja pašto dėžutė liktų tvarkinga)
+4. Slinkite iki pat apačios ir išsaugokite pakeitimus\
    ![](../images/Building-the-App/building_0013.png)
 
 ![](../images/Building-the-App/building_0014.png)
 
-Congratulations! Now you have created an AAPS-dedicated Google account. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
+Sveikiname! Now you have created an AAPS-dedicated Google account. Kitas žingsnis – [sukurti AAPS programėlę](../SettingUpAaps/BuildingAaps.md).

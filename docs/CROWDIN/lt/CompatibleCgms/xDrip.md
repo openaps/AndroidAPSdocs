@@ -1,193 +1,193 @@
-# xDrip settings
+# xDrip nustatymai
 
-If not already set up, download and install the latest xDrip release from the [xDrip releases page](https://github.com/NightscoutFoundation/xDrip/releases).
+Jei dar to nepadarėte, atsisiųskite ir įdiekite naujausią xDrip versiją iš [xDrip versijų puslapio](https://github.com/NightscoutFoundation/xDrip/releases).
 
-Disable battery optimization and allow background activity for the xDrip app.
+Išjunkite xDrip programėlės baterijos optimizavimą ir leiskite jai veikti fone.
 
-## Pagrindiniai visų stebėjimo sistemų nustatymai
+## Pagrindiniai visų NGJ ir FGM sistemų nustatymai
 
-### Disable Nightscout upload
+### Nightscout įkėlimo išjungimas
 
-You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Neleiskite jokiai kitai programėlei siųsti duomenų (gliukozės ir terapijos įrašų) į Nightscout.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
+→ Meniu ☰ (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → išjunkite (**OFF**) `Enabled` (5)
 
-![xDrip Basic Settings 1](../images/xDrip_Basic1.png)
+![xDrip pagrindiniai nustatymai 1](../images/xDrip_Basic1.png)
 
-#### Disable automatic calibration and treatments
+#### Automatinės kalibracijos ir terapijos išjungimas
 
-Make sure `Automatic Calibration` (7) is deactivated. If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
+Įsitikinkite, kad `Automatic Calibration` (7) išjungta. Jei langelis `Automatic Calibration` pažymėtas, vieną kartą įjunkite `Download treatments` (6), tada nuimkite `Automatic Calibration` žymėjimą ir vėl išjunkite `Download treatments`.
 
-![xDrip Basic Settings 2](../images/xDrip_Basic2.png)
+![xDrip pagrindiniai nustatymai 2](../images/xDrip_Basic2.png)
 
-Tap `Extra Options`(8)
+Spauskite `Extra Options`(8)
 
-    {admonition} Safety warning
+    {admonition} Saugos įspėjimas
     :class: warning
-    You must deactivate "Upload treatments" from xDrip, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
+    xDrip programėlėje privalote išjungti „Upload treatments“. Kitaip terapijos įrašai AAPS gali dubliuotis, o AAO ir AIO bus neteisingi.
 
-Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
+Išjunkite `Upload treatments`(9) ir įsitikinkite, kad **NENAUDOSITE** `Back-fill data` (11).
 
-Option `Alert on failures` should also be deactivated (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
+Parinktis `Alert on failures` taip pat turi būti išjungta (10). Kitaip, jei kils Wi-Fi ar mobiliojo ryšio problemų arba serveris bus nepasiekiamas, kas 5 minutes gausite aliarmą.
 
-![xDrip Basic Settings 3](../images/xDrip_Basic3.png)
+![xDrip pagrindiniai nustatymai 3](../images/xDrip_Basic3.png)
 
-### **Inter-app Settings** (Broadcast)
+### **Inter-app Settings** (transliacija)
 
-If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
+Jei naudojate AAPS, xDrip skiltyje Inter-App settings turite įjungti transliaciją, kad duomenys būtų perduodami į AAPS.
 
-→ Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
+→ Meniu ☰ (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
 
-In order for the values to be identical in AAPS with respect to xDrip, you should activate `Send the displayed glucose value` (5).
+Kad AAPS rodytų tokias pačias reikšmes kaip xDrip, įjunkite `Send the displayed glucose value` (5).
 
-Enable Compatible Broadcast (6).
+Įjunkite Compatible Broadcast (6).
 
-![xDrip Basic Settings 4](../images/xDrip_Basic4.png)
+![xDrip pagrindiniai nustatymai 4](../images/xDrip_Basic4.png)
 
-If you have also activated `Accept treatments` in xDrip and `Enable broadcasts to xDrip` in AAPS xDrip plugin, then xDrip will receive insulin, carbs and basal rate information from AAPS.
+Jei xDrip programėlėje įjungėte `Accept treatments`, o AAPS xDrip įskiepyje – `Įjungti duomenų perdavimą į xDrip+`, xDrip gaus iš AAPS informaciją apie insuliną, angliavandenius ir valandinę bazę.
 
-If you enable `Accept Calibrations`, xDrip will use the calibrations from AAPS. Be careful when you use this feature with Dexcom sensors: read [this](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) first.
+Jei įjungsite `Accept Calibrations`, xDrip naudos kalibracijas iš AAPS. Būkite atsargūs, kai šią funkciją naudojate su Dexcom jutikliais: pirmiausia perskaitykite [šį straipsnį](https://navid200.github.io/xDrip/docs/Calibrate-G6.html).
 
-Remember to disable Import Sounds to avoid xDrip making a ringtone every time AAPS sends a basal/profile change.
+Nepamirškite išjungti Import Sounds, kad xDrip neskambėtų kaskart, kai AAPS siunčia valandinės bazės ar profilio pakeitimą.
 
-![xDrip Basic Settings 5](../images/xDrip_Basic5.png)
+![xDrip pagrindiniai nustatymai 5](../images/xDrip_Basic5.png)
 
 (xdrip-identify-receiver)=
 
-#### Nustatyti gavėjus
+#### Identify receiver (gavėjo nustatymas)
 
-- If you discover problems with local broadcast (AAPS not receiving BG values from xDrip) go to → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
-- Dėmesio: automatinis taisymas kartais keičia raidę i iš mažosios į didžiąją I raidę. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip.
+- Jei kyla problemų su vietiniu transliavimu (AAPS negauna KG reikšmių iš xDrip), eikite → Meniu ☰ (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) ir įveskite `info.nightscout.androidaps`, jei naudojate AAPS versiją (jei naudojate PumpControl versiją, įveskite `info.nightscout.aapspumpcontrol`!!).
+- Dėmesio: automatinis taisymas kartais keičia raidę i iš mažosios į didžiąją I raidę. Rašydami `info.nightscout.androidaps` (arba `info.nightscout.aapspumpcontrol`, jei naudojate PumpControl), **turite naudoti tik mažąsias raides**. Didžioji raidė I neleistų programėlei gauti KG reikšmių iš xDrip.
     
     ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-## Use AAPS to calibrate in xDrip
+## Kalibravimas xDrip programėlėje naudojant AAPS
 
-- If you want to be able to use AAPS to calibrate then in xDrip go to Settings → Interapp Compatibility → Accept Calibrations and select ON. 
-- You may also want to review the options in Settings → Less Common Settings → Advanced Calibration Settings.
+- Jei norite kalibruoti naudodami AAPS, xDrip programėlėje eikite į Settings → Interapp Compatibility → Accept Calibrations ir pasirinkite ON. 
+- Taip pat galite peržiūrėti parinktis skiltyje Settings → Less Common Settings → Advanced Calibration Settings.
 
-## Dexcom sensors
+## Dexcom jutikliai
 
-Everything related to the Dexcom sensor and transmitter themselves (starting, stopping, replacing, calibrating, troubleshooting) is documented and kept up to date in the [xDrip Dexcom documentation](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Follow those instructions for the sensor; the settings connecting xDrip to **AAPS** (described above on this page) are the only AAPS-specific part.
+Viskas, kas susiję su pačiu Dexcom jutikliu ir siųstuvu (paleidimas, sustabdymas, keitimas, kalibravimas, trikčių šalinimas), aprašyta ir nuolat atnaujinama [xDrip Dexcom dokumentacijoje](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Jutikliui naudokite tas instrukcijas. Vienintelė AAPS skirta dalis yra xDrip ir **AAPS** sujungimo nustatymai (aprašyti aukščiau šiame puslapyje).
 
-### Dexcom G6 and ONE
+### Dexcom G6 ir ONE
 
-- Set up xDrip following the [recommended settings](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html).
-- The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-- When using xDrip as receiver uninstall the Dexcom app first. **You cannot connect xDrip and the Dexcom app with the transmitter at the same time!**
-- If you need Clarity and want to profit from xDrip features, use the [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip, or use xDrip as a Companion app receiving notifications from the official Dexcom app (with possible delays in BG readings).
+- Nustatykite xDrip pagal [rekomenduojamus nustatymus](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html).
+- Dexcom G6 ir ONE siųstuvai vienu metu gali būti prijungti prie Dexcom imtuvo (arba t:slim pompos) ir prie vienos programėlės jūsų telefone.
+- Kai xDrip naudojate kaip imtuvą, pirmiausia pašalinkite Dexcom programėlę. **Negalite tuo pačiu metu prie siųstuvo prijungti ir xDrip, ir Dexcom programėlės!**
+- Jei jums reikia Clarity ir norite naudotis xDrip funkcijomis, naudokite [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) su vietiniu transliavimu į xDrip arba naudokite xDrip kaip Companion App, kuri gauna pranešimus iš oficialios Dexcom programėlės (KG rodmenys gali vėluoti).
 
-#### Sensor restarts
+#### Jutiklio paleidimas iš naujo
 
-- xDrip always uses the transmitter's [native algorithm](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) with current transmitters; there is no reason to disable it.
-- [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) only function on old transmitters (firmware 1.6.5.25 or earlier), where they are needed to prevent the sensor stopping after 10 days. Recent (Firefly) transmitters ignore them.
-- Restarting a sensor on a Firefly transmitter requires [removing the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) and readings can be significantly in error after the restart, which is dangerous when looping: read [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) in full and [calibrate carefully](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
+- Su dabartiniais siųstuvais xDrip visada naudoja siųstuvo [vidinį algoritmą](https://navid200.github.io/xDrip/docs/Native-Algorithm.html); jo išjungti nėra jokios priežasties.
+- [Išankstinis paleidimas iš naujo (preemptive restart)](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) veikia tik su senais siųstuvais (programinė įranga 1.6.5.25 arba senesnė). Su jais jis reikalingas, kad jutiklis nesustotų po 10 dienų. Naujesni (Firefly) siųstuvai jo nepaiso.
+- Norint iš naujo paleisti jutiklį su Firefly siųstuvu, reikia [nuimti siųstuvą](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), o po paleidimo iš naujo rodmenys gali būti labai netikslūs. Tai pavojinga naudojant ciklą: visą puslapį [Jutiklio paleidimas iš naujo](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) perskaitykite iki galo ir [kruopščiai kalibruokite](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
 
 (xdrip-connect-g6-transmitter-for-the-first-time)=
 
-#### Start, stop and replace sensors
+#### Jutiklių paleidimas, sustabdymas ir keitimas
 
-Follow the instructions:
+Vadovaukitės šiomis instrukcijomis:
 
-- [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html)
-- [Stop and start a G6 or ONE sensor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)
-- [Remove the transmitter from a sensor](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)
-- [Transmitter lifetime](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) can only be extended ([hard reset](https://navid200.github.io/xDrip/docs/Hard-Reset.html)) on rebatteried or modified transmitters, not on Firefly.
+- [G6 arba ONE siųstuvo paleidimas](https://navid200.github.io/xDrip/docs/Starting-G6.html)
+- [G6 arba ONE jutiklio sustabdymas ir paleidimas](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)
+- [Siųstuvo nuėmimas nuo jutiklio](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)
+- [Siųstuvo veikimo laiką](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) galima pratęsti ([visiškas atstatymas, hard reset](https://navid200.github.io/xDrip/docs/Hard-Reset.html)) tik siųstuvams su pakeista baterija arba modifikuotiems siųstuvams, ne Firefly.
 
 (xdrip-replace-transmitter)=
 
-#### Replace a transmitter
+#### Siųstuvo keitimas
 
-- Turn the original Dexcom receiver off (if used) and do not turn it back on before xDrip shows readings.
-- Forget the device in xDrip (System Status → Forget Device) AND in the smartphone's Bluetooth settings (shown as DexcomXX where XX are the last two digits of the transmitter serial number).
-- Keep the old transmitter out of Bluetooth range to prevent reconnection.
-- Then follow [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+- Išjunkite originalų Dexcom imtuvą (jei jį naudojate) ir neįjunkite jo, kol xDrip nepradės rodyti rodmenų.
+- Pamirškite įrenginį xDrip programėlėje (System Status → Forget Device) IR telefono Bluetooth nustatymuose (jis rodomas kaip DexcomXX, kur XX yra paskutiniai du siųstuvo serijos numerio skaitmenys).
+- Seną siųstuvą laikykite už Bluetooth veikimo zonos ribų, kad jis vėl neprisijungtų.
+- Tada vadovaukitės puslapiu [G6 arba ONE siųstuvo paleidimas](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
-### Dexcom G7, ONE+ and Stelo
+### Dexcom G7, ONE+ ir Stelo
 
-- Follow the [G7, ONE+ and Stelo instructions](https://navid200.github.io/xDrip/docs/Dexcom/G7.html) (a recent xDrip release is required — see the linked page).
-- See also the [Dexcom G7, ONE+ and Stelo page](../CompatibleCgms/DexcomG7.md) for the available setups with **AAPS**.
+- Vadovaukitės [G7, ONE+ ir Stelo instrukcijomis](https://navid200.github.io/xDrip/docs/Dexcom/G7.html) (reikia naujos xDrip versijos – žr. nurodytą puslapį).
+- Galimas sąrankas su **AAPS** rasite puslapyje [Dexcom G7, ONE+ ir Stelo](../CompatibleCgms/DexcomG7.md).
 
 (xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
-### Troubleshooting Dexcom and xDrip
+### Dexcom ir xDrip trikčių šalinimas
 
-- [G6/ONE connectivity troubleshooting](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)
-- [G7/ONE+/Stelo troubleshooting](https://navid200.github.io/xDrip/docs/Dexcom/G7_Troubleshooting.html)
-- [Problem when starting a new sensor](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html)
-- Full list: see **Troubleshooting** on the [xDrip Dexcom page](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+- [G6/ONE ryšio trikčių šalinimas](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)
+- [G7/ONE+/Stelo trikčių šalinimas](https://navid200.github.io/xDrip/docs/Dexcom/G7_Troubleshooting.html)
+- [Problema paleidžiant naują jutiklį](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html)
+- Visas sąrašas: žr. skyrių **Troubleshooting** [xDrip Dexcom puslapyje](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 ## Libre 1
 
-- Setup your NFC to Bluetooth bridge in xDrip
+- NFC–Bluetooth tilto (bridge) nustatymas xDrip programėlėje
     
-    → Hamburger Menu (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
+    → Meniu ☰ (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
 
-- In Bluetooth Settings set the checkboxes exactly as in the screenshots below (5)
+- Skiltyje Bluetooth Settings pažymėkite langelius lygiai taip, kaip toliau pateiktose ekrano nuotraukose (5)
     
-    - Disable watchdogs as they will reset the phone Bluetooth and interrupt your pump connection.
+    - Išjunkite stebėjimo funkcijas (watchdogs), nes jos iš naujo paleidžia telefono Bluetooth ir nutraukia ryšį su pompa.
     
-    ![xDrip Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+    ![xDrip Libre Bluetooth nustatymai 1](../images/xDrip_Libre_BTSettings1.png)
 
-- You can try to enable the following settings (7)
+- Galite pabandyti įjungti šiuos nustatymus (7)
     
     - Naudotis skanavimu
     - Trust Auto-Connect
     - Use Background Scans
 
-- If you easily lose connection to the bridge or have difficulties recovering connection, **DISABLE THEM** (8).
+- Jei ryšys su tiltu (bridge) dažnai nutrūksta arba sunkiai atsikuria, **JUOS IŠJUNKITE** (8).
     
-    ![xDrip Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+    ![xDrip Libre Bluetooth nustatymai 2](../images/xDrip_Libre_BTSettings2.png)
 
-- Leave all other options disabled unless you know why you want to enable them.
+- Visas kitas parinktis palikite išjungtas, nebent žinote, kodėl norite jas įjungti.
     
-    ![xDrip Libre Bluetooth Settings 3](../images/xDrip_Libre_BTSettings3.png)
+    ![xDrip Libre Bluetooth nustatymai 3](../images/xDrip_Libre_BTSettings3.png)
 
-### Libre smart reader battery level
+### Libre išmaniojo skaitytuvo baterijos lygis
 
-- Battery level of bridges such as MiaoMiao and Bubble can be displayed in AAPS (not Blucon).
-- Details can be found on [screenshots page](#screens-sensor-level-battery).
+- Tiltų, pavyzdžiui, MiaoMiao ir Bubble, baterijos lygį galima rodyti AAPS (Blucon – ne).
+- Daugiau informacijos rasite puslapyje [AAPS ekranai](#screens-sensor-level-battery).
 
-### Connect Libre Transmitter & start sensor
+### Libre siųstuvo prijungimas ir jutiklio paleidimas
 
-- If your sensor requires it (Libre 2 EU and Libre 1 US) install the latest out of process algorithm.
+- Jei jūsų jutikliui to reikia (Libre 2 EU ir Libre 1 US), įdiekite naujausią išorinį algoritmą (out of process algorithm).
 
-- Your sensor must be already started using the vendor app or the reader (xDrip cannot start or stop Libre sensors).
+- Jutiklis jau turi būti paleistas gamintojo programėle arba skaitytuvu (xDrip negali paleisti ar sustabdyti Libre jutiklių).
 
-- Set the data source to Libre Bluetooth.
+- Nustatykite duomenų šaltinį Libre Bluetooth.
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre Bluetooth in Hardware Data source (3)
+    → Meniu ☰ (1) → Settings (2) → skiltyje Hardware Data source pasirinkite Libre Bluetooth (3)
     
-    ![xDrip Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+    ![xDrip Libre siųstuvo ir jutiklio paleidimas 1](../images/xDrip_Libre_Transmitter01.png)
 
-- Scan Bluetooth and connect the bridge.
+- Nuskenuokite Bluetooth ir prijunkite tiltą.
     
-    → Hamburger Menu (1) → Scan Bluetooth (2) → Scan (3)
+    → Meniu ☰ (1) → Scan Bluetooth (2) → Scan (3)
     
-    - If xDrip can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
+    - Jei xDrip neranda tilto, įsitikinkite, kad jis neprijungtas prie gamintojo programėlės. Įkraukite jį ir atstatykite (reset).
     
-    ![xDrip Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+    ![xDrip Libre siųstuvo ir jutiklio paleidimas 2](../images/xDrip_Libre_Transmitter02.png)
 
-- Start the sensor in xDrip.
+- Paleiskite jutiklį xDrip programėlėje.
     
-        {admonition} Safety warning
+        {admonition} Saugos įspėjimas
         :class: warning
-        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
+        Nenaudokite jutiklio duomenų, kol nesibaigė vienos valandos įšilimo laikas: reikšmės gali būti labai didelės, o AAPS gali priimti klaidingus sprendimus.
     
-    → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
+    → Meniu ☰ (1) → Start sensor (2) → Start sensor (3) → Nustatykite tikslų laiką, kada paleidote jutiklį skaitytuvu ar gamintojo programėle. Jei jį paleidote ne šiandien, atsakykite „Not Today“ (4).
 
-![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip: Libre siųstuvo ir jutiklio paleidimas 3](../images/xDrip_Libre_Transmitter03.png)
 
 (xdrip-libre2-patched-app)=
 
-## Libre 2 patched app
+## Libre 2 pataisyta programėlė
 
-- Set the data source to Libre patched app.
+- Nustatykite duomenų šaltinį Libre patched app (pataisyta programėlė).
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre (patched App) in Hardware Data source (3)
+    → Meniu ☰ (1) → Settings (2) → skiltyje Hardware Data source pasirinkite Libre (patched App) (3)
     
-    ![xDrip Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
+    ![xDrip Libre pataisyta programėlė 1](../images/xDrip_Libre_Patched01.png)
 
-- You can add `BgReading:d,xdrip libre_receiver:v` under Less Common Settings->Extra Logging Settings->Extra tags for logging. Taip bus įrašomi papildomi klaidų pranešimai trikčių šalinimui.
+- Galite pridėti `BgReading:d,xdrip libre_receiver:v` skiltyje Less Common Settings->Extra Logging Settings->Extra tags for logging. Taip bus įrašomi papildomi klaidų pranešimai trikčių šalinimui.
 
-![xDrip LibreLink logging](../images/Libre2_Tags.png)
+![xDrip LibreLink žurnalo įrašai](../images/Libre2_Tags.png)

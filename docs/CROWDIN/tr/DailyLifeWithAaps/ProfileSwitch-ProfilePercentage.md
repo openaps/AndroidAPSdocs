@@ -1,182 +1,182 @@
-# Profile switch & Profile Percentage
+# Profil değişimi ve profil yüzdesi
 
-This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn how to create a **Profile** in [Your AAPS Profile](#your-aaps-profile-create-and-edit-profiles).
+Bu bölüm **Profil değişimi** ve **Profil yüzdesi**nin ne olduğunu açıklar. Bir **Profil**'in nasıl oluşturulacağını [AAPS profiliniz](#your-aaps-profile-create-and-edit-profiles) sayfasında öğrenebilirsiniz.
 
-When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
+**AAPS** yolculuğunuza başlarken bir **Profil** oluşturmanız, **Profil değişimi**'nin nasıl yapıldığını anlamanız ve **AAPS**'teki **Profil yüzdesi**nin etkisini öğrenmeniz gerekir. **Profil değişimi** veya **Profil yüzdesi** özellikleri özellikle şu durumlarda faydalı olabilir:
 
-- the Menstrual Cycle - a percentage adjustment within a **Profile** can be set up in **Automations** in order to allow **AAPS** to accommodate for different stages of the hormone cycle and with predicted insulin resistance.
+- Adet döngüsü - **AAPS**'in hormon döngüsünün farklı evrelerine ve beklenen insülin direncine uyum sağlaması için **Otomasyonlar** içinde bir **Profil** yüzde ayarı kurulabilir.
 
-- Exercise - a percentage adjustment within a **Profile** can be set up in **Automations** for exercise in order to reduce basal intake.
+- Egzersiz - bazal insülini azaltmak için **Otomasyonlar** içinde egzersize yönelik bir **Profil** yüzde ayarı kurulabilir.
 
-- Night or pattern shift workers - a time shift in **Profile** can be set up for pattern shift workers by altering the number of hours in the **Profile** to how much later/earlier the user will go to bed or wake up.
+- Gece veya vardiyalı çalışanlar - vardiyalı çalışanlar için **Profil**'de bir zaman kaydırma kurulabilir. Bunun için **Profil**'deki saat sayısı, kullanıcının ne kadar geç/erken yatacağına veya kalkacağına göre değiştirilir.
 
-Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
+Neden geçici bazal ayarı yerine **Profil yüzdesi** kullanılmalı? Daha etkili olması için **Profil yüzdesi** bazal, İDF ve IC değerlerini aynı oranda azaltır veya artırır. Böylece **AAPS**, kullanıcının insülinini verirken dengeli bir hesaplama yapar. Algoritma İDF ve IC için aynı oranları kullanmaya devam ederse, kullanıcının **AAPS**'teki **Profil**'inde yalnızca bazali azaltmanın faydası azdır.
 
 (ProfileSwitch-change-percentage)=
 
-## Change the Profile Percentage from the main screen
+## Profil yüzdesini ana ekrandan değiştirme
 
-You need at least one saved **Profile**. A **Profile Percentage** is always applied through a **Profile Switch**: you activate a **Profile** again, this time with a percentage.
+En az bir kayıtlı **Profil**'e ihtiyacınız var. **Profil yüzdesi** her zaman bir **Profil değişimi** ile uygulanır: bir **Profil**'i yeniden etkinleştirirsiniz, bu kez bir yüzdeyle.
 
-```{admonition} Coming from AAPS 3? :class: note A long press on the profile name no longer opens the profile switch dialog. **Tap** the profile name, then tap the round **▶** button at the bottom right: it opens the same settings (percentage, duration, Activity temp target).
+```{admonition} AAPS 3'ten mi geçiyorsunuz? :class: note Profil adına uzun basmak artık profil değişimi iletişim kutusunu açmıyor. Profil adına **dokunun**, ardından sağ alttaki yuvarlak **▶** düğmesine dokunun: aynı ayarlar açılır (yüzde, süre, Aktivite geçici hedefi).
 
-    <br />1. On the main screen, **tap the profile name** (next to the star icon). The [Profile screen](#ProfileSwitch-manage-v4) opens on the card of the running **Profile**, marked **ACTIVE**.
+    <br />1. Ana ekranda **profil adına dokunun** (yıldız simgesinin yanında). [Profil ekranı](#ProfileSwitch-manage-v4), çalışan **Profil**'in **AKTİF** olarak işaretli kartında açılır.
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/ProfileSwitch2.png)
+       ![Profil ekranını açmak için ana ekranda profil adına dokunun](../images/ProfileSwitch2.png)
     
-    2. To keep the same **Profile**, leave the **ACTIVE** card selected. To change **Profile** at the same time, swipe to another card.
-    3. Tap the round **▶** button (**Activate**) at the bottom right. The **Activate** screen opens.
-    4. Set the **Percentage** with **−** / **+** (steps of 5 %), or type it in (30 to 250 %). The field always starts at **100 %**: it does not show the percentage that is running now. For example, enter **80** for 20 % less insulin, or **120** for 20 % more.
-    5. Set the **Duration** in minutes:
-       * **0** keeps the new percentage until you make another **Profile Switch**;
-       * any other value ends the switch after that time, and **AAPS** goes back to the **Profile** that was running before.
+    2. Aynı **Profil**'i korumak için **AKTİF** kartı seçili bırakın. Aynı anda **Profil**'i de değiştirmek için başka bir karta kaydırın.
+    3. Sağ alttaki yuvarlak **▶** düğmesine (**Etkinleştir**) dokunun. **Etkinleştir** ekranı açılır.
+    4. **Yüzde** değerini **−** / **+** ile (%5'lik adımlarla) ayarlayın veya yazarak girin (%30 ile %250 arası). Alan her zaman **%100** ile başlar: şu anda çalışan yüzdeyi göstermez. Örneğin %20 daha az insülin için **80**, %20 daha fazla insülin için **120** girin.
+    5. **Süre** değerini dakika olarak ayarlayın:
+       * **0**, siz başka bir **Profil değişimi** yapana kadar yeni yüzdeyi korur;
+       * başka herhangi bir değer, değişimi bu sürenin sonunda bitirir ve **AAPS** önceden çalışan **Profil**'e geri döner.
     
-       ![The Activate screen set to 80 % for 60 minutes](../images/v4/Profiles/profile_activate_percentage.png)
+       ![%80 ve 60 dakikaya ayarlanmış Etkinleştir ekranı](../images/v4/Profiles/profile_activate_percentage.png)
     
-    6. Tap **▶ Activate** at the bottom of the screen. Check the summary in the **Profile switch** dialog and tap **OK**.
+    6. Ekranın altındaki **▶ Etkinleştir** düğmesine dokunun. **Profil değişimi** iletişim kutusundaki özeti kontrol edin ve **Tamam**'a dokunun.
     
-       ![The confirmation dialog — profile, percentage and duration](../images/v4/Profiles/profile_activate_confirm.png)
+       ![Onay iletişim kutusu — profil, yüzde ve süre](../images/v4/Profiles/profile_activate_confirm.png)
     
-    Back on the main screen, the profile name shows the percentage and the remaining time, for example *Normal (80%) (59')*, and turns yellow while a switch with a duration is running. A star marks the switch on the glucose graph. See [the main screen](#aaps-screens-profile--target).
+    Ana ekrana döndüğünüzde profil adı yüzdeyi ve kalan süreyi gösterir, örneğin *Normal (80%) (59')*. Süreli bir değişim çalışırken ad sarı renkte görünür. Glikoz grafiğinde değişim bir yıldızla işaretlenir. Bkz. [ana ekran](#aaps-screens-profile--target).
     
-    ![The main screen while an 80 % profile switch is running](../images/v4/Profiles/profile_switch_running.png)
+    ![%80'lik bir profil değişimi çalışırken ana ekran](../images/v4/Profiles/profile_switch_running.png)
     
-    To **go back to 100 %** before the end, repeat the steps and keep **Percentage** at 100 and **Duration** at 0.
+    Süre bitmeden **%100'e geri dönmek** için adımları tekrarlayın ve **Yüzde** değerini 100, **Süre** değerini 0 olarak bırakın.
     
-    ```{admonition} One-tap percentages
+    ```{admonition} Tek dokunuşla yüzdeler
     :class: tip
-    If you often use the same percentage (sport, illness), add a [Profile shortcut](#profile-shortcuts) to the Quick Launch bar, or create a [scene](Scenes.md). Both apply a profile with a preset percentage and duration in one tap.
+    Aynı yüzdeyi sık kullanıyorsanız (spor, hastalık), Hızlı Başlatma çubuğuna bir [Profil kısayolu](#profile-shortcuts) ekleyin veya bir [senaryo](Scenes.md) oluşturun. İkisi de tek dokunuşla, önceden ayarlanmış bir yüzde ve süreyle bir profil uygular.
     
 
 (ProfileSwitch-manage-v4)=
 
-## Managing and activating profiles (Manage → Profile)
+## Profilleri yönetme ve etkinleştirme (Yönet → Profil)
 
-In **AAPS** v4 profiles are managed and activated from the **Manage** screen (bottom navigation) → **Profile** (*“Manage and activate profiles”*).
+**AAPS** v4'te profiller **Yönet** ekranından (alt gezinme çubuğu) → **Profil** (*“Profilleri yönetin ve etkinleştirin”*) ile yönetilir ve etkinleştirilir.
 
-The Profile screen shows your profiles as a **swipeable card carousel**. The card of the running profile is marked **ACTIVE** and shows its total daily basal (e.g. *∑ 30.15 U*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+Profil ekranı profillerinizi **kaydırılabilir bir kart karuseli** olarak gösterir. Çalışan profilin kartı **AKTİF** olarak işaretlenir ve toplam günlük bazalını gösterir (ör. *∑ 30,15 Ü*). Seçili kartın altında o profilin ayrıntılarını görürsünüz — **İnsülin** türü ve grafikleriyle birlikte **IC**, **İDF**, **bazal** ve **hedef** programları.
 
-When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
+Geçici bir değişim çalışırken **AKTİF** kart, bir ilerleme çubuğunun üstünde yüzdeyi ve zaman kaydırmayı kalan süreyle birlikte gösterir, örneğin *110% +2 h · 2 h 40 min*. İkisi de 30 saniyede bir yenilenir. Aşağıdaki ayrıntılar bu durumda iki sütunda gösterilir: profilin değerleri mavi, yüzdeyle birlikte kullanılan değerler kırmızı renktedir.
 
-![The Profile screen — profile carousel, details and action bar](../images/v4/Profiles/profile_manage.png)
+![Profil ekranı — profil karuseli, ayrıntılar ve eylem çubuğu](../images/v4/Profiles/profile_manage.png)
 
-The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **‘️ Delete**, and the round **▶ Activate** button on the right. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
+Alttaki düğmeler **seçili** profil üzerinde çalışır: **➕ Ekle**, **✏️ Düzenle**, **⧉ Klon** ve **‘️ Sil**, sağda ise yuvarlak **▶ Etkinleştir** düğmesi. Düzenleyicide dört programın (IC / İDF / BAZAL / HDF) nasıl doldurulacağı için [Profil oluşturma ve düzenleme](#your-aaps-profile-create-and-edit-profiles) bölümüne bakın.
 
-**⧉ Clone** uses the two-squares icon often used for *copy*, but there is nothing to paste: it makes the duplicate in one step. Confirm *Clone profile "Normal"?* and a new profile named *Normal copy* is added at the end of the carousel and selected, ready for **✏️ Edit** (where you can also rename it). This is not the same as cloning a past **Profile Switch** from the Treatments history, which creates a new profile *with the percentage and time shift applied*. See [Keep a profile switch for later use](#ProfileSwitch-keep-for-later).
+**⧉ Klon**, genellikle *kopyalama* için kullanılan iki kare simgesini kullanır, ancak yapıştırılacak bir şey yoktur: kopyayı tek adımda oluşturur. *"Normal" profili kopyalansın mı?* sorusunu onaylayın. *Normal kopya* adlı yeni bir profil karuselin sonuna eklenir ve seçilir; **✏️ Düzenle** ile düzenlemeye hazırdır (burada adını da değiştirebilirsiniz). Bu, Tedavi geçmişinden geçmiş bir **Profil değişimi**'ni kopyalamakla aynı şey değildir. O işlem *yüzde ve zaman kaydırma uygulanmış* yeni bir profil oluşturur. Bkz. [Bir profil değişimini daha sonra kullanmak üzere saklama](#ProfileSwitch-keep-for-later).
 
-(ProfileSwitch-read-only-mode)= **Only the ▶ Activate button?** Your settings are protected, so the screen opens read-only. Tap the **✏️ pencil** in the top bar and enter your settings password. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+(ProfileSwitch-read-only-mode)= **Yalnızca ▶ Etkinleştir düğmesi mi var?** Ayarlarınız korunuyor, bu yüzden ekran salt okunur açılır. Üst çubuktaki **✏️ kaleme** dokunun ve ayarlar parolanızı girin. Bkz. [Ayar koruması artık yönetim ekranlarını da kilitler](#v4changes-read-only-management).
 
-### Reordering profiles
+### Profilleri yeniden sıralama
 
-If you have more than one profile you can choose their order in the carousel: tap the **Reorder** icon (⇅, two arrows pointing up and down) in the top bar. The page indicator is replaced by **◀ / ▶ move buttons** with a *position / total* readout — step the centred card earlier or later, then confirm with **✓** (or discard with **✕**). The new order is saved once, when you confirm.
+Birden fazla profiliniz varsa karuseldeki sıralarını seçebilirsiniz: üst çubuktaki **Yeniden sırala** simgesine (⇅, yukarı ve aşağı bakan iki ok) dokunun. Sayfa göstergesinin yerine *konum / toplam* bilgisiyle birlikte **◀ / ▶ taşıma düğmeleri** gelir — ortadaki kartı öne veya arkaya taşıyın, ardından **✓** ile onaylayın (veya **✕** ile vazgeçin). Yeni sıra, onayladığınızda bir kez kaydedilir.
 
-![Reorder mode — move buttons and position readout](../images/v4/Profiles/profile_reorder.png)
+![Yeniden sıralama modu — taşıma düğmeleri ve konum bilgisi](../images/v4/Profiles/profile_reorder.png)
 
-### Activating a profile
+### Bir profili etkinleştirme
 
-Select a profile and tap **▶ Activate**. The **Activate** screen lets you tailor how the **Profile Switch** is applied:
+Bir profil seçin ve **▶ Etkinleştir** düğmesine dokunun. **Etkinleştir** ekranında **Profil değişimi**'nin nasıl uygulanacağını ayarlayabilirsiniz:
 
-![The Activate screen — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
+![Etkinleştir ekranı — yüzde, süre, zaman kaydırma, zaman](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
-- **Duration** (0–10080 minutes, that is up to 7 days) — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
-- **Temporary target / Activity** — appears only when you set a **Duration** and a **Percentage** below 100 %. Switch it on to also start an [Activity temp target](#TempTargets-activity-temp-target) for the same duration, as you would before exercise.
-- **Time shift** — shows *0h*; tap **Change** to move the schedule forward or back by up to 23 hours (useful for shift work or travel). See [Time shift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
-- **Reuse** — appears when the running switch has a percentage other than 100 % or a time shift, for example **Reuse 80% 0h**. Tap it to fill in the same percentage and time shift, for instance to prolong a switch that is about to end.
+- **Yüzde** (%30–250, her seferinde %100 ile başlar) — tüm profili ölçekler. %100 profili olduğu gibi kullanır; örneğin %70, bazali ve hesaplanan insülin dozunu (hem yemek bolusları hem düzeltmeler) %30 azaltır. Glikoz hedeflerinizi veya karbonhidrat emilimini değiştirmez. Tüm etkisi için [Profil yüzdesi](#ProfileSwitch-profile-percentage) bölümüne bakın.
+- **Süre** (0–10080 dakika, yani en fazla 7 gün) — değişimin ne kadar süreceği. **0 = süresiz** (yeniden değiştirene kadar); sıfır dışındaki bir değer, süre bitince önceki profile geri döner.
+- **Geçici hedef / Aktivite** — yalnızca bir **Süre** ve %100'ün altında bir **Yüzde** ayarladığınızda görünür. Egzersizden önce yapacağınız gibi, aynı süre için bir [Aktivite geçici hedefi](#TempTargets-activity-temp-target) de başlatmak için bunu açın.
+- **Zaman kaydırma** — *0h* gösterir; programı en fazla 23 saat ileri veya geri almak için **Değiştir**'e dokunun (vardiyalı çalışma veya seyahat için faydalıdır). Bkz. [Zaman kaydırma](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
+- **Yeniden kullan** — çalışan değişimin yüzdesi %100'den farklıysa veya bir zaman kaydırması varsa görünür, örneğin **80% 0sa yeniden kullan**. Aynı yüzde ve zaman kaydırmayı doldurmak için buna dokunun, örneğin bitmek üzere olan bir değişimi uzatmak için.
     
-    ![The Reuse button while an 80 % switch is running](../images/v4/Profiles/profile_activate_reuse.png)
+    ![Bir %80 değişim çalışırken Yeniden kullan düğmesi](../images/v4/Profiles/profile_activate_reuse.png)
 
-- **Time** — *Now* by default. You can pick another time, up to 24 hours before or after now. A switch set in the future starts at that time; an Activity temp target set with it then also starts at that time.
+- **Zaman** — varsayılan olarak *Şimdi*. Şimdiden en fazla 24 saat önce veya sonra başka bir zaman seçebilirsiniz. Gelecekteki bir zamana ayarlanan değişim o zaman başlar; onunla birlikte ayarlanan bir Aktivite geçici hedefi de o zaman başlar.
     
-    ![Choosing the time of a profile switch](../images/v4/Profiles/profile_activate_time_picker.png)
+    ![Profil değişiminin zamanını seçme](../images/v4/Profiles/profile_activate_time_picker.png)
 
-- **Notes** — only shown if [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs) is on.
+- **Notlar** — yalnızca [Diyaloglarda notları göster](#Preferences-show-notes-field-in-treatments-dialogs) açıksa gösterilir.
 
-If the basal rates at the chosen percentage are not compatible with your pump, a warning appears at the top and **▶ Activate** stays disabled: choose another percentage.
+Seçilen yüzdedeki bazal oranlar pompanızla uyumlu değilse, üstte bir uyarı görünür ve **▶ Etkinleştir** devre dışı kalır: başka bir yüzde seçin.
 
-Tap **▶ Activate**, then **OK** in the confirmation dialog. The running profile then carries the **ACTIVE** badge on its card.
+**▶ Etkinleştir**'e, ardından onay iletişim kutusunda **Tamam**'a dokunun. Çalışan profilin kartında artık **AKTİF** rozeti görünür.
 
-```{admonition} Your pump may round the basal rates :class: note Each pump can only give basal rates in its own steps (for example 0.05 U/h), so it rounds the rates of your **Profile**. **AAPS** then uses the basal the pump really gives, so IOB and TDD stay correct. If the pump gives a little more or less insulin per day than your **Profile**, the notice *"Basal profile in pump updated"* tells you how much, for example *"it gives 10.00 U per day instead of 10.12 U"*.
+```{admonition} Pompanız bazal oranları yuvarlayabilir :class: note Her pompa bazal oranları yalnızca kendi adımlarıyla (örneğin 0,05 Ü/sa) verebilir, bu yüzden **Profil**'inizdeki oranları yuvarlar. Ardından **AAPS** pompanın gerçekten verdiği bazali kullanır, böylece AİNS ve GTD doğru kalır. Pompa günlük olarak **Profil**'inizden biraz daha fazla veya daha az insülin veriyorsa, *"Pompadaki bazal profili güncellendi"* bildirimi farkı söyler, örneğin *"günlük 10,12 Ü yerine 10,00 Ü değerini uygular"*.
 
-If the pump reports a basal that is far from your **Profile**, **AAPS** keeps the **Profile** basal and asks you to check the basal rates in the pump.
+Pompa **Profil**'inizden çok farklı bir bazal bildirirse, **AAPS** **Profil** bazalini korur ve pompadaki bazal oranları kontrol etmenizi ister.
 
-    <br />```{admonition} Percentage and time shift make one profile go a long way
+    <br />```{admonition} Yüzde ve zaman kaydırma ile tek profil birçok durumu karşılar
     :class: note
-    Rather than building many similar profiles, keep one base profile and apply it at a different **percentage** or **time shift** for recurring situations (illness, exercise, travel). This is exactly what [scenes](Scenes.md) automate.
+    Birbirine benzeyen birçok profil oluşturmak yerine bir temel profil tutun ve tekrarlayan durumlar (hastalık, egzersiz, seyahat) için onu farklı bir **yüzde** veya **zaman kaydırma** ile uygulayın. [Senaryolar](Scenes.md) tam olarak bunu otomatikleştirir.
     
 
-A profile switch is not limited to this screen. The same switch can also be triggered from a **Wear OS watch**, a paired **client** (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)), a **[scene](Scenes.md)**, or an **Automation** rule.
+Profil değişimi yalnızca bu ekranla sınırlı değildir. Aynı değişim bir **Wear OS saatinden**, eşleştirilmiş bir **istemciden** (bkz. [Ana birim ↔ İstemci kontrolü](../RemoteFeatures/ClientMasterControl.md)), bir **[senaryodan](Scenes.md)** veya bir **Otomasyon** kuralından da başlatılabilir.
 
 (ProfileSwitch-profile-percentage)=
 
 ## Profile Percentage
 
-It is important that a user understands the essential features of a **Profile Percentage**. By applying a percentage increase or decrease to a **Profile Switch** this will apply in the same percentage to either raise or lower the user’s settings parameters as set within the **Profile**.
+Kullanıcının bir **Profil yüzdesi**nin temel özelliklerini anlaması önemlidir. Bir **Profil değişimi**'ne yüzde artış veya azalış uygulandığında, kullanıcının **Profil**'de ayarlı parametreleri aynı yüzdeyle yükseltilir veya düşürülür.
 
-For example: a **Profile Switch** to 130% (means the user is 30% more insulin resistant) will instruct **AAPS** to
+Örneğin: %130'luk bir **Profil değişimi** (kullanıcının insüline %30 daha dirençli olduğu anlamına gelir) **AAPS**'e şunları yaptırır:
 
-- **increase** the basal rate by 30%; 
-- **lower** the **ISF**: by dividing by 1.3;
-- **lower** the **I:C** by dividing by 1.3.
+- bazal oranı %30 **artırır**; 
+- **İDF**'yi 1,3'e bölerek **düşürür**;
+- **IC**'yi 1,3'e bölerek **düşürür**.
 
-Remember lowering the **ISF** or **I:C** means a stronger ratio and more insulin being administered. This fact can be easily overlooked by new users to **AAPS**.
+Unutmayın: **İDF** veya **IC** değerini düşürmek, daha güçlü bir oran ve daha fazla insülin verilmesi anlamına gelir. Bu durum, **AAPS**'e yeni başlayan kullanıcılar tarafından kolayca gözden kaçırılabilir.
 
-Once selected, **AAPS** readjusts the default basal rate, and **AAPS** (open or closed) will continue to work on top of the selected percentage **Profile**.
+Seçimden sonra **AAPS** varsayılan bazal oranı yeniden ayarlar ve **AAPS** (açık veya kapalı döngü) seçilen yüzdeli **Profil** üzerinden çalışmaya devam eder.
 
-The effect of a **Profile** Percentage is summarized in the table below:
+Bir **Profil** yüzdesinin etkisi aşağıdaki tabloda özetlenmiştir:
 
-| Profile Switch  
-Percentage |    Effect    |     I:C  
-g/U     | Example  
-15 g |          ISF  
-mmol/L/U  
-mg/dL/U          | U to lower  
+| Profil değişimi  
+Yüzdesi |     Etki     |     IC  
+g/Ü      | Örnek  
+15 g |          İDF  
+mmol/L/Ü  
+mg/dL/Ü          | Düşürmek için gereken Ü  
 2mmol/L  
 40mg/dL |
-|:---------------------------:|:------------:|:-----------------:|:--------------:|:------------------------------------------:|:------------------------------:|
-|             90%             |    Weaker    | 5/0.9  
-=**5.55** |     2.7 U      | 2.2/0.9  
-=**2.4**  
+|:-------------------------:|:------------:|:-----------------:|:------------:|:------------------------------------------:|:-------------------------------------------:|
+|            %90            |  Daha zayıf  | 5/0,9  
+=**5,55** |    2,7 Ü     | 2,2/0,9  
+=**2,4**  
   
-40/0.9  
-=**44.4** |             0.8 U              |
-|          **100%**           | **Standard** |       **5**       |    **3 U**     |                **2.2  
-40**                |           **0.9** U            |
-|            130%             |   Stronger   | 5/1.3  
-=**3.85** |     3.9 U      | 2.2/1.3  
-=**1.7**  
+40/0,9  
+=**44,4** |                    0,8 Ü                    |
+|         **%100**          | **Standart** |       **5**       |   **3 Ü**    |                **2,2  
+40**                |                  **0,9** Ü                  |
+|           %130            |  Daha güçlü  | 5/1,3  
+=**3,85** |    3,9 Ü     | 2,2/1,3  
+=**1,7**  
   
-40/1.3  
-=**30.8** |             1.2 U              |
+40/1,3  
+=**30,8** |                    1,2 Ü                    |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
-## Time shift of the Circadian Percentage Profile
+## Sirkadiyen Yüzde Profilinin zaman kaydırması
 
-A ‘time shift’ within a user’s **Profile** feature will move the user’s **Profile’s** settings around the day-to-day clock (‘circadian’) to the desired number of hours entered. This can be helpful for:
+Kullanıcının **Profil**'indeki ‘zaman kaydırma’ özelliği, **Profil**'in ayarlarını günlük saat (‘sirkadiyen’) üzerinde girilen saat sayısı kadar kaydırır. Bu şu durumlarda faydalı olabilir:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
-- **users changing time zones during travelling**; or
-- **users who are type 1 children**: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
+- **gece veya vardiyalı çalışanlar**: gece vardiyasında çalışırken **Profil**'deki saat sayısı, kullanıcının ne kadar geç/erken yatacağına veya kalkacağına göre değiştirilir; 
+- **seyahatte saat dilimi değiştiren kullanıcılar**; veya
+- **tip 1 diyabetli çocuklar**: belirli bir yatma rutini olan ve insülin direnci **Profil**'lerinde hesaba katılmış çocuklar. Herhangi bir nedenle çocuğun daha geç yatması bekleniyorsa, bakım veren kişi çocuğun **Profil**'ine bir ‘zaman kaydırma’ uygulayabilir. Böylece **AAPS**, insülin direncine kullanıcının belirlediği zaman diliminde tepki verir.
 
-It is always a question of which hour’s **Profile’s** settings should replace the settings of the current time. Bu süre ne kadarsa x saat kaydırılmalıdır. So please be mindful of the directions as described in the following example:
+Her zaman şu sorudur: hangi saatin **Profil** ayarları, şimdiki saatin ayarlarının yerine geçmeli? Bu saat x saat kaydırılmalıdır. Bu nedenle lütfen aşağıdaki örnekte anlatılan yönlere dikkat edin:
 
 - Mevcut zaman: 12:00
 - **Pozitif** zaman kaydırma 
-    - 2:00 **+10 s** -> 12:00
+    - 2:00 **+10 sa** -> 12:00
     - Pozitif zaman kayması nedeniyle normalde 12:00'de kullanılan ayarlar yerine 2:00'den itibaren olan ayarlar kullanılacaktır.
 - **Negatif** zaman kaydırma 
-    - 22:00 **-10 s** -> 12:00
-    - Negatif zaman kayması nedeniyle normalde 12:00'de kullanılan ayarlar yerine 22:00 (10 pm) ayarları kullanılacaktır.
+    - 22:00 **-10 sa** -> 12:00
+    - Negatif zaman kayması nedeniyle normalde 12:00'de kullanılan ayarlar yerine 22:00 (akşam 10) ayarları kullanılacaktır.
 
-![Profil değişimi zaman kaydırma talimatları](../images/ProfileSwitch_PlusMinus2.png)
+![Profil değişiminde zaman kaydırmanın yönleri](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+**Profil**'in anlık görüntülerini alan bu mekanizma, geçmişin çok daha kesin hesaplanmasını ve **Profil** değişikliklerinin izlenebilmesini sağlar.
 
 (ProfileSwitch-keep-for-later)=
 
-## Keep a profile switch for later use
+## Bir profil değişimini daha sonra kullanmak üzere saklama
 
-Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.
+Yüzde ve/veya zaman kaydırma ile bir profil değişimi yaptıktan sonra, bu geçici profilin bir kopyasını yeni bir profil olarak kaydedebilirsiniz.
 
-To do this, open the menu (☰) → **Treatments** and go to the **Profile switch** tab, see [Clone a Profile switch to a new Profile](#your-aaps-profile-clone-profile-switch).
+Bunun için menüyü (☰) açın → **Tedaviler** ve **Profil değişimi** sekmesine gidin, bkz. [Bir Profil değişimini yeni bir Profile klonlama](#your-aaps-profile-clone-profile-switch).

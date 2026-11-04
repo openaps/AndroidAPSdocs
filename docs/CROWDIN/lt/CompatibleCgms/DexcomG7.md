@@ -1,103 +1,103 @@
-# Dexcom G7, ONE+ and Stelo
+# Dexcom G7, ONE+ ir Stelo
 
 
-## Fundamental in advance
+## Svarbu žinoti iš anksto
 
-Noteworthy is the fact that the G7, ONE+ and Stelo systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Svarbu žinoti, kad G7, ONE+ ir Stelo sistemos, palyginti su G6, neglodina reikšmių nei programėlėje, nei skaitytuve. Daugiau informacijos rasite [čia](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ```{admonition} Smoothing method 
-Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
+Perskaitykite [glodinimo metodo](../CompatibleCgms/SmoothingBloodGlucoseData.md) patarimus, kurį naudoti su Dexcom G7/ONE+/Stelo
 ```
 
-## 1. xDrip (direct connection to G7, ONE+ or Stelo)
+## 1. xDrip (tiesioginis ryšys su G7, ONE+ arba Stelo)
 
-- xDrip connects to the sensor itself: uninstall the Dexcom app, as only one app can connect to the sensor. To keep the Dexcom app, use [xDrip Companion App](#DexcomG7-xdrip-companion-app) instead.
-- Follow the instructions here: [xDrip G7, ONE+ and Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). A recent xDrip release is required — see the linked page for the minimum version.
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- xDrip pats jungiasi prie jutiklio: pašalinkite Dexcom programėlę, nes prie jutiklio gali jungtis tik viena programėlė. Jei norite pasilikti Dexcom programėlę, verčiau naudokite [xDrip Companion App](#DexcomG7-xdrip-companion-app).
+- Vadovaukitės čia pateiktomis instrukcijomis: [xDrip G7, ONE+ ir Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). Reikia naujos xDrip versijos – mažiausią versiją rasite nuorodoje pateiktame puslapyje.
+- Pasirinkite xDrip skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source).
 
-- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
+- Sureguliuokite xDrip nustatymus pagal paaiškinimus xDrip nustatymų puslapyje [xDrip nustatymai](../CompatibleCgms/xDrip.md).
 
-## 2. Build Your Own Dexcom App (G7 only)
+## 2. Build Your Own Dexcom App (tik G7)
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated. Not available for ONE+ or Stelo.
+Dexcom BYODA yra labai sena programėlės versija, jos atnaujinti negalima. Netinka ONE+ ir Stelo.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) palaiko vietinį duomenų siuntimą (local broadcast) į AAPS
 
--   This app lets you use your Dexcom G7 with any Android smartphone.
--   Uninstall the original Dexcom app
--   Install the downloaded apk
--   Enter sensor code in patched app
--   After a short time BYODA should pick up the sensor signal.
+-   Ši programėlė leidžia naudoti Dexcom G7 su bet kuriuo Android išmaniuoju telefonu.
+-   Pašalinkite originalią Dexcom programėlę
+-   Įdiekite atsisiųstą apk
+-   Įveskite jutiklio kodą pataisytoje programėlėje
+-   Po trumpo laiko BYODA turėtų pagauti jutiklio signalą.
 
 (DexcomG7-xdrip-companion-app)=
 
-## 3. xDrip Companion App (G7, ONE+ and Stelo)
+## 3. xDrip Companion App (G7, ONE+ ir Stelo)
 
-The official Dexcom app stays connected to the sensor. xDrip reads the glucose values from the notifications of the Dexcom app and sends them to **AAPS**.
+Oficiali Dexcom programėlė lieka prijungta prie jutiklio. xDrip nuskaito gliukozės reikšmes iš Dexcom programėlės pranešimų ir siunčia jas į **AAPS**.
 
 ```{admonition} Not a trusted data source
 :class: note
-**AAPS** does not consider xDrip in Companion App mode a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs are not allowed all the time.
+**AAPS** nelaiko xDrip Companion App režimu [patikimu glikemijos duomenų šaltiniu](#GettingStarted-TrustedBGSource): SMB ne visada leidžiami.
 ```
 
-### Read the Dexcom app notifications
+### Dexcom programėlės pranešimų skaitymas
 
-- Keep the Dexcom app installed and connected to the sensor. Its notifications must stay visible: do not silence or hide them.
-- Download and install [xDrip](https://github.com/NightscoutFoundation/xDrip). Use the same glucose units in xDrip as in the Dexcom app.
-- In xDrip, go to **Settings** > **Hardware Data Source** and select **Companion App**.
+- Palikite Dexcom programėlę įdiegtą ir prijungtą prie jutiklio. Jos pranešimai turi likti matomi: jų nenutildykite ir neslėpkite.
+- Atsisiųskite ir įdiekite [xDrip](https://github.com/NightscoutFoundation/xDrip). xDrip naudokite tuos pačius gliukozės vienetus kaip ir Dexcom programėlėje.
+- xDrip programėlėje eikite į **Settings** > **Hardware Data Source** ir pasirinkite **Companion App**.
 
   ![xDrip Hardware Data Source: Companion App](../images/xDrip_Companion_DataSource.png)
 
-- xDrip asks for permission to read notifications. Tap **OK**, then select **xDrip** in the list and turn on **Allow notification access**.
+- xDrip paprašys leidimo skaityti pranešimus. Spauskite **OK**, tada sąraše pasirinkite **xDrip** ir įjunkite **Allow notification access** (leisti pasiekti pranešimus).
 
-  ![Notification access list](../images/xDrip_Companion_NotificationAccess1.png)
+  ![Prieigos prie pranešimų sąrašas](../images/xDrip_Companion_NotificationAccess1.png)
 
-- If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because xDrip was not installed from the Play Store:
+- Jei **Allow notification access** yra pilkas (*Controlled by Restricted Setting*), Android jį blokuoja, nes xDrip buvo įdiegtas ne iš Play Store:
 
-  ![Notification access controlled by restricted setting](../images/xDrip_Companion_Restricted.png)
+  ![Prieiga prie pranešimų valdoma apribotu nustatymu](../images/xDrip_Companion_Restricted.png)
 
-  Open the xDrip app info (long press the xDrip icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Then go back to the notification access screen and allow it.
+  Atverkite xDrip programėlės informaciją (ilgai spauskite xDrip piktogramą > **App info**), viršuje dešinėje spauskite trijų taškų meniu ir pasirinkite **Allow restricted settings** (leisti apribotus nustatymus). Tada grįžkite į prieigos prie pranešimų ekraną ir leiskite prieigą.
 
-  ![App info: Allow restricted settings](../images/xDrip_Companion_AllowRestricted.png)
+  ![Programėlės informacija: Allow restricted settings](../images/xDrip_Companion_AllowRestricted.png)
 
-  ![Notification access allowed for xDrip](../images/xDrip_Companion_NotificationAccess2.png)
+  ![Prieiga prie pranešimų leista xDrip programėlei](../images/xDrip_Companion_NotificationAccess2.png)
 
-- Readings appear in xDrip when the Dexcom app shows a new value. If nothing appears, you may need to start a sensor in xDrip: this has no effect on the real sensor. Stelo gives a reading every 15 minutes in this mode.
+- Rodmenys xDrip atsiranda, kai Dexcom programėlė parodo naują reikšmę. Jei niekas neatsiranda, gali reikėti xDrip programėlėje paleisti jutiklį: tai neturi jokio poveikio tikram jutikliui. Šiuo režimu Stelo pateikia rodmenį kas 15 minučių.
 
 ### Companion Bluetooth (G7)
 
-When the Dexcom app is connected to a G7 sensor, xDrip can also listen to the readings the sensor sends to the Dexcom app over Bluetooth. xDrip does not pair with the sensor and you do not need to enter the sensor code: the Dexcom app stays in control.
+Kai Dexcom programėlė prijungta prie G7 jutiklio, xDrip taip pat gali klausytis rodmenų, kuriuos jutiklis per Bluetooth siunčia Dexcom programėlei. xDrip nesusiejamas su jutikliu ir jums nereikia įvesti jutiklio kodo: valdymas lieka Dexcom programėlei.
 
-With **Companion Bluetooth**, xDrip gets the exact time and trend of each reading from the sensor, instead of the time the notification appeared, and fills gaps when the phone was out of range (backfill).
+Su **Companion Bluetooth** xDrip gauna tikslų kiekvieno rodmens laiką ir kitimo kryptį tiesiai iš jutiklio, o ne pranešimo atsiradimo laiką, ir užpildo spragas, kai telefonas buvo už ryšio ribų (backfill).
 
-- In xDrip, go to **Settings** > **Less common settings** > **Bluetooth Settings** and enable **Companion Bluetooth**.
+- xDrip programėlėje eikite į **Settings** > **Less common settings** > **Bluetooth Settings** ir įjunkite **Companion Bluetooth**.
 
   ![xDrip Bluetooth Settings: Companion Bluetooth](../images/xDrip_Companion_Bluetooth.png)
 
-- This does not work on all phones and Android versions. Disable it if you see problems.
-- If an old Dexcom sensor is still in the phone's Bluetooth list, xDrip might listen to the wrong one: in Android **Settings** > **Connected devices**, forget sensors you no longer use.
-- Companion Bluetooth is made for the G7. With ONE+ and Stelo, rely on notifications.
+- Tai veikia ne visuose telefonuose ir ne visose Android versijose. Jei pastebite problemų, šią funkciją išjunkite.
+- Jei senas Dexcom jutiklis vis dar yra telefono Bluetooth sąraše, xDrip gali klausytis ne to jutiklio: Android **Settings** > **Connected devices** (Nustatymai, Prijungti įrenginiai) pamirškite jutiklius, kurių nebenaudojate.
+- Companion Bluetooth sukurtas G7 jutikliui. Su ONE+ ir Stelo naudokite pranešimus.
 
-### Configuration in AAPS
+### Konfigūravimas AAPS
 
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
-- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
+- Pasirinkite xDrip skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source).
+- Sureguliuokite xDrip nustatymus pagal paaiškinimus xDrip nustatymų puslapyje [xDrip nustatymai](../CompatibleCgms/xDrip.md).
 
-## 4. Juggluco (G7 and ONE+)
+## 4. Juggluco (G7 ir ONE+)
 
-Version 9.0+ required
+Reikia 9.0 ar naujesnės versijos
 
-- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+- Išjunkite programėlę, kuri anksčiau buvo prijungta prie jutiklio: pašalinkite programėlę arba naudokite „Force Stop“ (priverstinai sustabdyti). Programėlės nustatymuose išjunkite leidimą „Nearby Devices“ (netoliese esantys įrenginiai). Apribokite programėlės baterijos naudojimą.
 
-- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+- Pamirškite jutiklį Bluetooth nustatymuose: Android nustatymuose susietų įrenginių sąraše raskite jutiklį ir pasirinkite „Forget“ (pamiršti). Dexcom G7 jutiklių pavadinimai prasideda DXCM.
 
-- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+- Venkite kitų jutiklių trikdžių: laikykite senus Dexcom jutiklius už Bluetooth ryšio ribų.
 
-- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+- Prijunkite G7 jutiklį prie Juggluco: atverkite Juggluco → kairysis meniu → Photo. Nuskenuokite duomenų matricos kodą ant G7 jutiklio aplikatoriaus. Palaukite iki 5 minučių, kol Juggluco suras jutiklį.
 
-- Pairing requirements: Agree to pair the sensor with Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+- Susiejimo reikalavimai: sutikite susieti jutiklį su Juggluco. Susiejimo metu ekranas turi būti neužrakintas. Jei susieti nepavyksta, prieš bandydami dar kartą palaukite 5 minutes.
 
-- Exception: Wear OS watches can bond without pressing an agree button.
+- Išimtis: Wear OS laikrodžiai gali susieti be sutikimo mygtuko paspaudimo.

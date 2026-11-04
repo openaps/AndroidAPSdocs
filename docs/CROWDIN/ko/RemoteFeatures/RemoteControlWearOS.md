@@ -1,457 +1,457 @@
-# Operation of AAPS via your Wear OS smartwatch
+# Wear OS 스마트워치로 AAPS 사용하기
 
 (Watchfaces-aaps-watchfaces)=
 
-## AAPS Watchfaces
+## AAPS 워치 페이스
 
 ```{warning}
-The classic **AAPS** watchfaces run on Wear OS 5 and older only, and Wear OS 5 already limits them. On **Wear OS 6 and newer** the watch app installs one watchface in Google's Watch Face Format instead: your custom watchface as a picture, or the **Complications watchface**. See [Wear OS watch face changes](#wearos-watchface-changes) for what breaks on each Wear OS version, and [the watchface AAPS installs](#wearos-aaps-v4-watchface) for Wear OS 6.
+기존 **AAPS** 워치 페이스는 Wear OS 5 이하에서만 작동하며, Wear OS 5에서도 이미 제한이 있습니다. **Wear OS 6 이상**에서는 워치 앱이 대신 Google의 Watch Face Format으로 된 워치 페이스 하나를 설치합니다. 그림으로 된 사용자 지정 워치 페이스이거나 **컴플리케이션 워치 페이스**입니다. Wear OS 버전마다 무엇이 작동하지 않는지는 [Wear OS 워치 페이스 변경 사항](#wearos-watchface-changes)을, Wear OS 6에 대해서는 [AAPS가 설치하는 워치 페이스](#wearos-aaps-v4-watchface)를 참조하십시오.
 ```
 
-On Wear OS 5 and older, several classic watchfaces are built into the **AAPS** watch app. They show the glucose value with delta, IOB, the active basal rate and a graph of the readings. Two taps work on them:
+Wear OS 5 이하에서는 여러 기존 워치 페이스가 **AAPS** 워치 앱에 들어 있습니다. 이 워치 페이스는 혈당 값과 증분, IOB, 현재 기저 주입량, 측정값 그래프를 표시합니다. 이 워치 페이스에서는 두 가지 탭 동작이 작동합니다:
 
-* Double-tap the glucose value to open the **AAPS** main menu
-* Double-tap the graph to change its time range
+* 혈당 값을 두 번 탭하면 **AAPS** 메인 메뉴가 열립니다
+* 그래프를 두 번 탭하면 그래프의 시간 범위가 바뀝니다
 
-On every Wear OS version, the [complications](#Watchfaces-complications) and the [tiles](#WearOsSmartwatch-wear-os-tiles) described on this page work with any watchface that has room for them.
+모든 Wear OS 버전에서, 이 페이지에서 설명하는 [컴플리케이션](#Watchfaces-complications)과 [타일](#WearOsSmartwatch-wear-os-tiles)은 이를 위한 공간이 있는 모든 워치 페이스에서 작동합니다.
 
-## Configuration
+## 구성
 
-Enable **Wear** in [**Configuration** > **Communication**](#Config-Builder-wear).
+[**구성** > **통신**](#Config-Builder-wear)에서 **워치**를 활성화하십시오.
 
-To bolus or take other actions from the watch, turn on **Wear control**. The bolus wizard options for the watch are set in the same place: see [Settings > Wear](#preferences-wear). While **Wear control** is off, the phone refuses every treatment or mode change sent from the watch, and the watch shows *"Wear control is turned off in the Wear settings on the phone."*
+워치에서 볼러스를 주입하거나 다른 동작을 하려면 **워치 제어**를 켜십시오. 워치용 볼러스 마법사 옵션도 같은 곳에서 설정합니다: [설정 > 워치](#preferences-wear)를 참조하십시오. **워치 제어**가 꺼져 있는 동안 휴대폰은 워치에서 보낸 모든 처치와 모드 변경을 거부하며, 워치에는 *"휴대폰의 워치 설정에서 워치 제어가 꺼져 있습니다."*가 표시됩니다.
 
-With **Open plugin** on the **Wear** card you open the Wear screen:
+**워치** 카드에서 **플러그인 열기**를 누르면 워치 화면이 열립니다:
 
-![Wear plugin screen](../images/screens/wear_plugin.png)
+![워치 플러그인 화면](../images/screens/wear_plugin.png)
 
-The top line shows the name of the connected watch, or **(No Watch Connected)**. From this screen you can
+맨 위 줄에는 연결된 워치의 이름 또는 **(연결된 워치가 없습니다)**가 표시됩니다. 이 화면에서 다음을 할 수 있습니다.
 
-* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
-* Choose which watchface **AAPS** installs on the watch (**Watchface installed on watch**: your custom watchface, or the complications watchface). This card is only shown while a **Wear OS 6** or newer watch is connected. See [the watchface AAPS installs](#wearos-aaps-v4-watchface).
-* Manage the **Custom Watchface** (the card is shown while a watch is connected): **Load Watchface** sends a custom watchface to the watch, **Infos Watchface** lists the details of the loaded watchface and the fields it contains, **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) in your browser, and **Export template** saves a template you can edit. A preview of the loaded watchface is shown below the buttons. See [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface).
+* KEEP 워치가 한동안 연결되지 않았고, 정보를 워치로 보내고 싶을 때 도움이 될 수 있습니다.
+* 휴대폰에서 바로 워치의 설정을 엽니다.
+* **AAPS**가 워치에 설치할 워치 페이스를 선택합니다(**워치에 설치된 워치 페이스**: 사용자 지정 워치 페이스 또는 컴플리케이션 워치 페이스). 이 카드는 **Wear OS 6** 이상의 워치가 연결되어 있을 때만 표시됩니다. [AAPS가 설치하는 워치 페이스](#wearos-aaps-v4-watchface)를 참조하십시오.
+* **사용자 지정 워치 페이스**를 관리합니다(워치가 연결되어 있을 때 카드가 표시됨): **워치 페이스 불러오기**는 사용자 지정 워치 페이스를 워치로 보내고, **워치 페이스 정보**는 불러온 워치 페이스의 세부 정보와 포함된 필드를 보여주고, **더 많은 워치 페이스**는 브라우저에서 [교환 사이트](../ExchangeSiteCustomWatchfaces/index.md)를 열고, **템플릿 내보내기**는 편집할 수 있는 템플릿을 저장합니다. 버튼 아래에 불러온 워치 페이스의 미리 보기가 표시됩니다. [AAPS 워치 페이스로 바꾸기](#WearOS_changing-to-AAPS-watchface)를 참조하십시오.
 
-Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
+워치에서 AAPS 알림이 차단되지 않았는지 확인하십시오. 동작(예: 볼러스, 임시 목표)의 확인은 알림으로 옵니다. 알림을 밀고 체크 표시를 눌러야 합니다.
 
-## Accessing main menu of AAPS
+## AAPS 메인 메뉴 열기
 
-![AAPS main menu on the watch](../images/wearos/main_menu.png)
+![워치의 AAPS 메인 메뉴](../images/wearos/main_menu.png)
 
-To open the main menu of **AAPS**, use one of these:
+**AAPS** 메인 메뉴를 열려면 다음 중 하나를 사용하십시오:
 
-* open **AAPS** from the watch's app list
-* tap an **AAPS** complication that opens the menu, see [Complication related settings](#WearOsSmartwatch-complication-settings)
-* tap the **BG Graph** tile with its **Tap action** set to **Main Menu**, see [Tile settings](#WearOsSmartwatch-wear-os-tiles)
-* on a classic **AAPS** watchface, double-tap the glucose value
+* 워치의 앱 목록에서 **AAPS**를 엽니다
+* 메뉴를 여는 **AAPS** 컴플리케이션을 탭합니다. [컴플리케이션 관련 설정](#WearOsSmartwatch-complication-settings)을 참조하십시오
+* **탭 동작**이 **메인 메뉴**로 설정된 **혈당 그래프** 타일을 탭합니다. [타일 설정](#WearOsSmartwatch-wear-os-tiles)을 참조하십시오
+* 기존 **AAPS** 워치 페이스에서 혈당 값을 두 번 탭합니다
 
 (WearOsSmartwatch-loop-status)=
 
-## Loop Status screen
+## 루프 상태 화면
 
-The **Loop Status** screen gives a summary of what the loop is doing, without taking out your phone. Open it from the AAPS main menu (**Loop status**, or **Status → Loop**), or by tapping the **Blood Glucose** complication. The **Status** menu also has a **Pump** page and a **TDD** page with the total daily doses.
+**루프 상태** 화면은 휴대폰을 꺼내지 않고도 루프가 무엇을 하고 있는지 요약해서 보여줍니다. AAPS 메인 메뉴(**루프 상태** 또는 **상태 → 루프**)에서 열거나, **혈당** 컴플리케이션을 탭하여 엽니다. **상태** 메뉴에는 **펌프** 페이지와 총 일일 용량을 보여주는 **TDD** 페이지도 있습니다.
 
-![Status menu: Pump, Loop and TDD](../images/wearos/status_menu.png)
+![상태 메뉴: 펌프, 루프, TDD](../images/wearos/status_menu.png)
 
-![Loop Status screen](../images/wearos/loop_status.png)
+![루프 상태 화면](../images/wearos/loop_status.png)
 
-The screen is a list of cards. Scroll down to see them all:
+이 화면은 카드 목록입니다. 아래로 스크롤하면 모든 카드를 볼 수 있습니다:
 
-* **Running mode** — the current mode (closed loop, open loop, LGS, suspended, disconnected…) and, for a temporary mode, how long it still runs.
-* **Loop result** — when the loop last ran, and the temporary basal or SMB it requested.
-* **Scene** — only while a [scene](#scenes-from-watch) is active: its name, the time left (or **Until ended** for a scene without end time) and the **Follow-up** scene that starts when it ends.
-* **Targets** — your target, and the temporary target if one is running.
-* **Profile** — the name of the active profile, with its **Percentage** and **Timeshift** when they are not the default values. A temporary profile switch is highlighted and shows how long it still runs and the profile it **Returns to** when it ends.
-* **Sensitivity** — the same lines as the sensitivity chip on the phone's main screen: the autosens value and the profile, variable and effective ISF.
+* **실행 모드** — 현재 모드(폐쇄 루프, 개방 루프, LGS, 일시 중지됨, 연결 해제됨…)와, 임시 모드인 경우 남은 시간.
+* **루프 결과** — 루프가 마지막으로 실행된 시간과, 루프가 요청한 임시 기저 또는 SMB.
+* **장면** — [장면](#scenes-from-watch)이 활성화되어 있을 때만 표시: 장면 이름, 남은 시간(종료 시간이 없는 장면은 **종료할 때까지**), 그리고 장면이 끝나면 시작되는 **후속 장면**.
+* **목표** — 목표와, 임시 목표가 실행 중이면 그 임시 목표.
+* **프로파일** — 활성 프로파일의 이름. **퍼센트**와 **시간 이동**이 기본값이 아니면 함께 표시됩니다. 임시 프로파일 전환은 강조 표시되며, 남은 시간과 끝난 뒤 **되돌아갈 프로파일**을 보여줍니다.
+* **민감도** — 휴대폰 메인 화면의 민감도 칩과 같은 줄: autosens 값과 프로파일, 가변, 유효 ISF.
 
-A small scene icon next to a running mode, a temporary target or a profile switch means it was **set by the active scene**. The same icon is shown in the **Running mode** picker.
+실행 모드, 임시 목표 또는 프로파일 전환 옆의 작은 장면 아이콘은 **활성 장면이 설정함**을 뜻합니다. **실행 모드** 선택 화면에도 같은 아이콘이 표시됩니다.
 
-![Profile card with a temporary profile switch set by a scene](../images/wearos/loop_status_profile_scene.png)
+![장면이 설정한 임시 프로파일 전환이 있는 프로파일 카드](../images/wearos/loop_status_profile_scene.png)
 
 (WearOsSmartwatch-bolus-calculator)=
 
-## The bolus calculator on the watch
+## 워치의 볼러스 계산기
 
-Open **Calculator** from the **AAPS** main menu, from the [Actions tile](#WearOsSmartwatch-wear-os-tiles) or from a complication set to open the wizard. It walks through a few pages, swipe from right to left to go on:
+**AAPS** 메인 메뉴, [동작 타일](#WearOsSmartwatch-wear-os-tiles), 또는 마법사를 열도록 설정된 컴플리케이션에서 **계산기**를 여십시오. 몇 개의 페이지를 차례로 거칩니다. 다음으로 가려면 오른쪽에서 왼쪽으로 미십시오:
 
-| Carbs                                                           | Request                                                             | Result                                                            | Calculation                                                                       | Confirm                                                             |
-| --------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| ![Carbs page](../images/wearos/calculator/calculator_carbs.png) | ![Request page](../images/wearos/calculator/calculator_request.png) | ![Result page](../images/wearos/calculator/calculator_result.png) | ![Calculation details](../images/wearos/calculator/calculator_result_details.png) | ![Confirm page](../images/wearos/calculator/calculator_confirm.png) |
+| Carbs                                                         | KEEP                                                          | KEEP                                                         | 계산                                                                     | KEEP                                                          |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------- | ------------------------------------------------------------- |
+| ![탄수화물 페이지](../images/wearos/calculator/calculator_carbs.png) | ![요청 페이지](../images/wearos/calculator/calculator_request.png) | ![결과 페이지](../images/wearos/calculator/calculator_result.png) | ![계산 세부 정보](../images/wearos/calculator/calculator_result_details.png) | ![확인 페이지](../images/wearos/calculator/calculator_confirm.png) |
 
-1. **Carbs**: enter the carbs with the **+10**, **+5**, **−** and **+** buttons.
-2. **Request**: the last page before the phone takes over. It shows what you entered: the carbs, and the meal type, carb time and percentage when you use them, see [Optional pages](#WearOsSmartwatch-calculator-optional-pages). Tap the check mark to send it to the phone, which runs the calculation.
-3. **Result**: the bolus **AAPS** proposes, with the carbs under it: the carbs now and the eCarbs later, the carb time and the bell of the eat reminder. Adjust the dose with **−** and **+**, see below. Scroll down for the **Calculation** card: tap it to see every line of the calculation, the same as on the phone.
-4. **Confirm**: swipe to the second page and tap the check mark. The phone delivers the bolus and records the carbs.
+1. **탄수화물**: **+10**, **+5**, **−**, **+** 버튼으로 탄수화물을 입력합니다.
+2. **요청**: 휴대폰이 처리를 넘겨받기 전의 마지막 페이지입니다. 입력한 내용을 보여줍니다: 탄수화물, 그리고 사용하는 경우 식사 유형, 탄수화물 시간, 퍼센트. [선택 페이지](#WearOsSmartwatch-calculator-optional-pages)를 참조하십시오. 체크 표시를 탭하면 휴대폰으로 보내지고, 휴대폰이 계산을 실행합니다.
+3. **결과**: **AAPS**가 제안하는 볼러스와 그 아래의 탄수화물: 지금 먹는 탄수화물과 나중의 eCarbs, 탄수화물 시간, 식사 알림의 종 아이콘. **−**와 **+**로 용량을 조정합니다. 아래를 참조하십시오. 아래로 스크롤하면 **계산** 카드가 있습니다. 탭하면 휴대폰과 같은 계산의 모든 줄을 볼 수 있습니다.
+4. **확인**: 두 번째 페이지로 밀고 체크 표시를 탭합니다. 휴대폰이 볼러스를 주입하고 탄수화물을 기록합니다.
 
 (WearOsSmartwatch-calculator-optional-pages)=
 
-### Optional pages
+### 선택 페이지
 
-Three watch settings each add a page after **Carbs**. They are off by default. Open the **AAPS** main menu, then **Settings** > **Interface**, and turn on the ones you want; when more than one is on, the pages come in the order **Meal type**, **Carb time**, **Percentage**. The dots at the bottom of the calculator show how many pages it has.
+워치 설정 세 가지가 각각 **탄수화물** 다음에 페이지를 하나씩 추가합니다. 기본값은 꺼짐입니다. **AAPS** 메인 메뉴를 연 다음 **설정** > **인터페이스**로 가서 원하는 설정을 켜십시오. 둘 이상 켜면 페이지는 **식사 유형**, **탄수화물 시간**, **퍼센트** 순서로 나옵니다. 계산기 아래쪽의 점은 페이지가 몇 개인지 보여줍니다.
 
-| Settings                                                                                 | Meal type                                                               | Carb time                                                               | Percentage                                                                |
-| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| ![Calculator settings on the watch](../images/wearos/calculator/calculator_settings.png) | ![Meal type page](../images/wearos/calculator/calculator_meal_type.png) | ![Carb time page](../images/wearos/calculator/calculator_carb_time.png) | ![Percentage page](../images/wearos/calculator/calculator_percentage.png) |
+| 설정                                                                 | 식사 유형                                                              | KEEP                                                                 | 퍼센트                                                               |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | -------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| ![워치의 계산기 설정](../images/wearos/calculator/calculator_settings.png) | ![식사 유형 페이지](../images/wearos/calculator/calculator_meal_type.png) | ![탄수화물 시간 페이지](../images/wearos/calculator/calculator_carb_time.png) | ![퍼센트 페이지](../images/wearos/calculator/calculator_percentage.png) |
 
-* **Calculator Meal Type**: **Bread**, **Cake** or **Pizza**, which splits the carbs of a slow meal into carbs now and eCarbs later, see [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
-* **Calculator Carb Time**: the minutes until you eat, with a **Set alarm** bell for the eat reminder, see [Carb time and the eat reminder](#WearOsSmartwatch-wizard-carb-time).
-* **Calculator Percentage**: a percentage of the calculated bolus, for example 70 % when you want a smaller dose. It starts at the **Bolus percentage** of the phone's [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result), 100 % unless you changed it. See also the note under [Adjusting the bolus on the result page](#WearOsSmartwatch-wizard-result).
+* **계산기 식사 유형**: **빵**, **케이크** 또는 **피자**. 천천히 소화되는 식사의 탄수화물을 지금 먹는 탄수화물과 나중의 eCarbs로 나눕니다. [식사 유형 선택하기](#WearOsSmartwatch-wizard-meal-type)를 참조하십시오.
+* **계산기 탄수화물 시간**: 식사할 때까지 남은 분. 식사 알림을 위한 **알람 설정** 종 아이콘이 있습니다. [탄수화물 시간과 식사 알림](#WearOsSmartwatch-wizard-carb-time)을 참조하십시오.
+* **계산기의 퍼센트**: 계산된 볼러스의 퍼센트입니다. 예를 들어 더 적은 용량을 원할 때 70 %로 설정합니다. 시작값은 휴대폰의 [볼러스 마법사 설정](#Preferences-deliver-this-part-of-bolus-wizard-result)에 있는 **볼러스 비율**이며, 바꾸지 않았다면 100 %입니다. [결과 페이지에서 볼러스 조정하기](#WearOsSmartwatch-wizard-result) 아래의 참고도 확인하십시오.
 
 (WearOsSmartwatch-wizard-result)=
 
-### Adjusting the bolus on the result page
+### 결과 페이지에서 볼러스 조정하기
 
-The result page shows the bolus **AAPS** proposes, together with a **−** and a **+** button. Use them to adjust the dose before you confirm it, without going back to the phone.
+결과 페이지는 **AAPS**가 제안하는 볼러스를 **−** 버튼, **+** 버튼과 함께 보여줍니다. 이 버튼으로 휴대폰으로 돌아가지 않고, 확인하기 전에 용량을 조정할 수 있습니다.
 
-| Proposed                                                                          | More                                                                                | Less                                                                                   |
-| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| ![The proposed bolus](../images/wearos/calculator/calculator_result_proposed.png) | ![The bolus raised by 0.20 U](../images/wearos/calculator/calculator_result_up.png) | ![The bolus lowered by 0.10 U](../images/wearos/calculator/calculator_result_down.png) |
+| 제안된 값                                                                  | 늘림                                                                     | 줄임                                                                       |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| ![제안된 볼러스](../images/wearos/calculator/calculator_result_proposed.png) | ![0.20 U 늘린 볼러스](../images/wearos/calculator/calculator_result_up.png) | ![0.10 U 줄인 볼러스](../images/wearos/calculator/calculator_result_down.png) |
 
-* Each press changes the bolus by **one step of your pump**, so the amounts offered always match what your pump can actually deliver.
-* **Press and hold** a button to keep changing the value. The longer you hold, the faster it goes.
-* You cannot go below **0 U**, nor above your **max bolus** setting.
+* 한 번 누를 때마다 볼러스가 **펌프의 한 단계**만큼 바뀝니다. 그래서 제시되는 양은 항상 펌프가 실제로 주입할 수 있는 양과 맞습니다.
+* 버튼을 **길게 누르면** 값이 계속 바뀝니다. 오래 누를수록 더 빨리 바뀝니다.
+* **0 U** 아래로 내려가거나 **최대 볼러스** 설정보다 높게 올라갈 수 없습니다.
 
-The running total is shown on the result page, so you always see the amount you are about to confirm. The change is shown after the carbs, for example *(+0.20 U)*, and the button you used turns green for more or red for less.
+현재 합계가 결과 페이지에 표시되므로, 확인하려는 양을 항상 볼 수 있습니다. 변경량은 탄수화물 다음에 표시되며(예: *(+0.20 U)*), 사용한 버튼은 늘리면 녹색, 줄이면 빨간색으로 바뀝니다.
 
-If **AAPS** had to limit the dose, for example because the calculated bolus is above your **max bolus** setting, a warning line in amber below the total says so (for example *"Bolus constraint applied"*). The same applies to a limited carbs amount.
+**AAPS**가 용량을 제한해야 했다면(예: 계산된 볼러스가 **최대 볼러스** 설정보다 큰 경우), 합계 아래에 주황색 경고 줄이 이를 알려줍니다(예: *"볼러스 제한 적용됨"*). 제한된 탄수화물 양도 마찬가지입니다.
 
-```{admonition} This is not the same as Calculator Percentage :class: note The **Calculator Percentage** setting lets you enter a *percentage* of the calculated bolus **before** the result page appears. The **−** and **+** buttons adjust the *final amount* **on** the result page. You can use both.
+```{admonition} 계산기의 퍼센트와 같지 않습니다 :class: note **계산기의 퍼센트** 설정은 결과 페이지가 나타나기 **전에** 계산된 볼러스의 *퍼센트*를 입력하게 합니다. **−**와 **+** 버튼은 결과 페이지**에서** *최종 양*을 조정합니다. 둘 다 사용할 수 있습니다.
 
     <br />(WearOsSmartwatch-wizard-meal-type)=
     
-    ### Choosing the meal type
+    ### 식사 유형 선택하기
     
-    The watch calculator can split the carbs of a slow meal into carbs now and eCarbs later, like the [carbs type](#AapsScreens-carbs-type) of the phone wizard. Turn on **Calculator Meal Type** in the watch's **Settings** > **Interface**. The setting is off by default, and then the **Meal type** page is skipped.
+    워치 계산기는 휴대폰 마법사의 [탄수화물 유형](#AapsScreens-carbs-type)처럼, 천천히 소화되는 식사의 탄수화물을 지금 먹는 탄수화물과 나중의 eCarbs로 나눌 수 있습니다. 워치의 **설정** > **인터페이스**에서 **계산기 식사 유형**을 켜십시오. 이 설정은 기본값이 꺼짐이며, 꺼져 있으면 **식사 유형** 페이지를 건너뜁니다.
     
-    * After you enter the carbs, a **Meal type** page shows three icons: **Bread**, **Cake** and **Pizza**. Tap an icon: its name and the carbs it gives show below the icons, for example *65 g* for bread, or *52+22 g* for pizza (52 g now and 22 g of eCarbs later). **Bread** is the default and keeps all the carbs now.
-    * The request and confirm pages show the carbs in the same way (*52+22 g*). The result page also shows when the eCarbs start and how long they last.
-    * The bolus is calculated only for the carbs eaten now. The split uses the same numbers as the phone wizard.
+    * 탄수화물을 입력하면 **식사 유형** 페이지에 아이콘 세 개가 표시됩니다: **빵**, **케이크**, **피자**. 아이콘을 탭하면 그 이름과 나오는 탄수화물이 아이콘 아래에 표시됩니다. 예를 들어 빵은 *65 g*, 피자는 *52+22 g*(지금 52 g, 나중에 eCarbs 22 g)입니다. **빵**이 기본값이며 모든 탄수화물을 지금 먹는 것으로 둡니다.
+    * 요청 페이지와 확인 페이지도 탄수화물을 같은 방식(*52+22 g*)으로 표시합니다. 결과 페이지에는 eCarbs가 언제 시작하고 얼마나 오래 지속되는지도 표시됩니다.
+    * 볼러스는 지금 먹는 탄수화물에 대해서만 계산됩니다. 나누는 방식은 휴대폰 마법사와 같은 숫자를 사용합니다.
     
     (WearOsSmartwatch-wizard-carb-time)=
     
-    ### Carb time and the eat reminder
+    ### 탄수화물 시간과 식사 알림
     
-    With **Calculator Carb Time** turned on in the watch's **Settings** > **Interface**, a **Carb time** page follows the carbs: the minutes until you eat, like the [carb time](#aaps-screens-bolus-wizard) of the phone wizard. **Now** is the default. **−** and **+** move it in steps of 5 minutes, up to an hour before or after now. A time in the past is for carbs you have eaten already.
+    워치의 **설정** > **인터페이스**에서 **계산기 탄수화물 시간**을 켜면, 탄수화물 다음에 **탄수화물 시간** 페이지가 나옵니다. 휴대폰 마법사의 [탄수화물 시간](#aaps-screens-bolus-wizard)처럼, 식사할 때까지 남은 분입니다. **지금**이 기본값입니다. **−**와 **+**로 5분 단위로 바꿀 수 있으며, 지금보다 최대 1시간 전 또는 후까지 가능합니다. 과거 시간은 이미 먹은 탄수화물을 위한 것입니다.
     
-    With a time in the future, a **Set alarm** bell appears under the value. It is on by default, tap it to turn it off. The request and result pages show the carb time, for example *+30 min*, and the bell. The phone records the carbs at that time, moves the eCarbs of the meal type with it, and starts its **time to eat** reminder.
+    미래 시간을 고르면 값 아래에 **알람 설정** 종 아이콘이 나타납니다. 기본값은 켜짐이며, 탭하면 꺼집니다. 요청 페이지와 결과 페이지에 탄수화물 시간(예: *+30분*)과 종 아이콘이 표시됩니다. 휴대폰은 그 시간에 탄수화물을 기록하고, 식사 유형의 eCarbs도 함께 옮기며, **식사할 시간** 알림을 시작합니다.
     
-    | Result | BG graph | Running | Time to eat |
+    | 결과 | 혈당 그래프 | 진행 중 | 식사할 시간 |
     | --- | --- | --- | --- |
-    | ![Result page with a carb time](../images/wearos/calculator/calculator_result_carb_time.png) | ![The reminder in the BG graph](../images/wearos/eat_reminder/eat_reminder_graph.png) | ![The running reminder](../images/wearos/eat_reminder/eat_reminder_running.png) | ![The reminder rings](../images/wearos/eat_reminder/eat_reminder_ringing.png) |
+    | ![탄수화물 시간이 있는 결과 페이지](../images/wearos/calculator/calculator_result_carb_time.png) | ![혈당 그래프의 알림](../images/wearos/eat_reminder/eat_reminder_graph.png) | ![진행 중인 알림](../images/wearos/eat_reminder/eat_reminder_running.png) | ![알림이 울림](../images/wearos/eat_reminder/eat_reminder_ringing.png) |
     
-    The reminder also lives on the watch, so it rings when the phone is out of reach too:
+    알림은 워치에도 있으므로, 휴대폰이 손이 닿지 않는 곳에 있어도 울립니다:
     
-    * The **BG Graph** screen, the **BG Graph** tile and the graph of the **Complications watchface** draw a dashed orange line where the reminder rings, with the minutes left next to it.
-    * While it runs, a silent **Time to eat** notification with **Stop** and **+5 min** sits in the notification stream. It comes back when you swipe it away, until the reminder is over.
-    * When the time has come, the watch vibrates, and again every half minute for five minutes until you answer. The notification offers **Silence** and **+5 min**, and swiping it away silences it too.
+    * **혈당 그래프** 화면, **혈당 그래프** 타일, **컴플리케이션 워치 페이스**의 그래프에는 알림이 울리는 위치에 주황색 점선이 그려지고, 그 옆에 남은 분이 표시됩니다.
+    * 알림이 진행되는 동안 **정지**와 **+5분** 버튼이 있는 소리 없는 **식사할 시간** 알림이 알림 목록에 머뭅니다. 밀어서 없애도 알림 시간이 끝날 때까지 다시 나타납니다.
+    * 시간이 되면 워치가 진동하며, 응답할 때까지 5분 동안 30초마다 다시 진동합니다. 알림에는 **음소거**와 **+5분**이 있으며, 밀어서 없애도 음소거됩니다.
     
-    **Stop**, **Silence** and **+5 min** do the same on the watch, on the phone and on an **AAPSClient**, and all of them show the same reminder.
+    **정지**, **음소거**, **+5분**은 워치, 휴대폰, **AAPSClient**에서 모두 같은 일을 하며, 모두 같은 알림을 표시합니다.
     
     (Watchfaces-complications)=
     
-    ## Complications
+    ## 컴플리케이션
     
-    _Complication_ is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+    _컴플리케이션_(complication)은 전통적인 시계 제작에서 온 용어로, 메인 워치 페이스에 더한 것을 말합니다. 또 다른 작은 창이나 보조 다이얼(날짜, 요일, 달의 위상 등) 같은 것입니다. Wear OS 2.0은 이 개념을 가져와 날씨, 알림, 피트니스 카운터 등 사용자 지정 데이터 제공자를 컴플리케이션을 지원하는 모든 워치 페이스에 추가할 수 있게 합니다.
     
-    AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+    AAPS Wear OS 앱은 빌드 `2.6`부터 컴플리케이션을 지원하며, 컴플리케이션을 지원하는 모든 타사 워치 페이스에서 AAPS 관련 데이터(추세가 있는 혈당, IOB, COB 등)를 표시하도록 설정할 수 있습니다.
     
-    Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+    컴플리케이션은 AAPS 기능으로 가는 **바로 가기** 역할도 합니다. 컴플리케이션을 탭하면 AAPS 관련 메뉴와 대화 상자를 열 수 있습니다(컴플리케이션 종류와 설정에 따라 다릅니다).
     
-    ![The Complications watchface, every slot filled with an AAPS complication](../images/wearos/complications_on_watchface.png)
+    ![컴플리케이션 워치 페이스, 모든 슬롯이 AAPS 컴플리케이션으로 채워짐](../images/wearos/complications_on_watchface.png)
     
-    ### Complication Types
+    ### 컴플리케이션 종류
     
-    AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+    AAPS Wear OS 앱은 미리 정해진 형식에 따라 원시 데이터만 제공합니다. 컴플리케이션을 어디에, 어떻게 그릴지는 배치, 테두리, 색상, 글꼴을 포함하여 타사 워치 페이스가 결정합니다. 여러 Wear OS 컴플리케이션 종류 중에서 AAPS는 다음을 사용합니다:
     
-    * `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
-    * `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
-    * `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
-    * `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
-    * `SMALL IMAGE` / `MONOCHROMATIC IMAGE` - A small icon. In a `SMALL IMAGE` slot AAPS draws it in its own colour; in a `MONOCHROMATIC IMAGE` slot the watchface tints it.
+    * `SHORT TEXT` - 각각 7자인 두 줄의 텍스트가 들어 있습니다. 값과 라벨이라고도 부릅니다. 보통 원이나 작은 알약 모양 안에 그려지며, 위아래로 또는 나란히 배치됩니다. 공간이 매우 좁은 컴플리케이션입니다. AAPS는 공간에 맞추기 위해 불필요한 문자를 없앱니다. 값을 반올림하고, 값의 앞뒤에 있는 0을 없애는 등의 방법을 씁니다.
+    * `LONG TEXT` - 각각 약 20자인 두 줄의 텍스트가 들어 있습니다. 보통 직사각형이나 긴 알약 모양 안에 그려지며, 위아래로 배치됩니다. 더 자세한 정보와 문자로 된 상태를 표시할 때 사용합니다.
+    * `RANGED VALUE` - 퍼센트처럼 미리 정해진 범위의 값에 사용합니다. 아이콘과 라벨이 있으며, 보통 원형 진행 다이얼로 그려집니다.
+    * `LARGE IMAGE` - 배경으로 사용할 수 있는 사용자 지정 배경 이미지입니다(워치 페이스가 지원하는 경우).
+    * `SMALL IMAGE` / `MONOCHROMATIC IMAGE` - 작은 아이콘입니다. `SMALL IMAGE` 슬롯에서는 AAPS가 자체 색상으로 그리고, `MONOCHROMATIC IMAGE` 슬롯에서는 워치 페이스가 색을 입힙니다.
     
-    ### Complication Setup
+    ### 컴플리케이션 설정하기
     
-    To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+    워치 페이스에 컴플리케이션을 추가하려면, 길게 누른 다음 아래의 톱니바퀴 아이콘을 눌러 설정하십시오. 워치 페이스의 설정 방식에 따라 자리 표시자를 탭하거나, 워치 페이스의 컴플리케이션 설정 메뉴로 들어가십시오. AAPS 컴플리케이션은 AAPS 메뉴 항목 아래에 모여 있습니다.
     
-    When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+    워치 페이스에서 컴플리케이션을 설정할 때 Wear OS는 워치 페이스에서 선택한 위치에 들어갈 수 있는 컴플리케이션만 골라서 목록으로 보여줍니다. 목록에서 특정 컴플리케이션을 찾을 수 없다면, 아마도 그 종류를 해당 위치에 사용할 수 없기 때문입니다.
     
-    ### Complications provided by AAPS
+    ### AAPS가 제공하는 컴플리케이션
     
-    AAPS provides the complications below. "Opens" is what a tap does with **Complication Tap Action** left at **Default**, see [Complication related settings](#WearOsSmartwatch-complication-settings).
+    AAPS는 아래 컴플리케이션을 제공합니다. "열기"는 **컴플리케이션 탭 동작**을 **기본**으로 두었을 때 탭하면 열리는 화면입니다. [컴플리케이션 관련 설정](#WearOsSmartwatch-complication-settings)을 참조하십시오.
     
-    **Glucose**
+    **혈당**
     
-    * **Blood Glucose** (`SHORT TEXT`, opens _Loop Status_): the glucose value with the trend arrow on the first line, the age of the reading and the delta on the second.
-    * **Blood Glucose (large)** (`SHORT TEXT`, opens _BG Graph_): the glucose value alone on the first line, so the watchface can draw it big. The age and the trend arrow are on the second line.
-    * **BG Graph** (`SMALL IMAGE` / `LARGE IMAGE`, opens _BG Graph_): the BG graph as a picture, for watchfaces with an image slot. This is the graph on the **Complications watchface**.
-    * **Full Status** (`LONG TEXT`, opens _Menu_): most of the data in one line: the glucose value with the trend arrow, the delta and the age of the reading, then carbs on board, insulin on board and the basal rate.
-    * **Full Status (flipped)** (`LONG TEXT`, opens _Menu_): the same, with the two lines swapped, for watchfaces that show only one of the two lines of a `LONG TEXT` slot.
+    * **혈당** (`SHORT TEXT`, _루프 상태_ 열기): 첫 줄에는 추세 화살표가 있는 혈당 값, 둘째 줄에는 측정값의 경과 시간과 증분.
+    * **혈당 (크게)** (`SHORT TEXT`, _혈당 그래프_ 열기): 첫 줄에는 혈당 값만 있어서 워치 페이스가 크게 그릴 수 있습니다. 경과 시간과 추세 화살표는 둘째 줄에 있습니다.
+    * **혈당 그래프** (`SMALL IMAGE` / `LARGE IMAGE`, _혈당 그래프_ 열기): 이미지 슬롯이 있는 워치 페이스를 위한, 그림으로 된 혈당 그래프. **컴플리케이션 워치 페이스**에 있는 그래프입니다.
+    * **전체 상태** (`LONG TEXT`, _메뉴_ 열기): 대부분의 데이터를 한 줄에: 추세 화살표가 있는 혈당 값, 증분, 측정값의 경과 시간, 그리고 활성 탄수화물, 활성 인슐린, 기저 주입량.
+    * **전체 상태 (반전)** (`LONG TEXT`, _메뉴_ 열기): 같은 내용이지만 두 줄의 순서가 바뀝니다. `LONG TEXT` 슬롯의 두 줄 중 한 줄만 표시하는 워치 페이스를 위한 것입니다.
     
-    **Insulin and carbs**
+    **인슐린과 탄수화물**
     
-    * **IoB Icon** (`SHORT TEXT`, opens _Bolus_): insulin on board with a syringe icon.
-    * **IoB Detailed** (`SHORT TEXT`, opens _Bolus_): total insulin on board on the first line, the bolus and basal parts on the second.
-    * **CoB Icon** (`SHORT TEXT`, opens _Wizard_): carbs on board with a carbs icon.
-    * **CoB Detailed** (`SHORT TEXT`, opens _Wizard_): the carbs on board now on the first line, the carbs still to come (eCarbs) on the second.
-    * **CoB & IoB** (`SHORT TEXT`, opens _Wizard_): insulin on board on the first line, carbs on board on the second.
+    * **IoB 아이콘** (`SHORT TEXT`, _볼러스_ 열기): 주사기 아이콘이 있는 활성 인슐린.
+    * **IoB 상세** (`SHORT TEXT`, _볼러스_ 열기): 첫 줄에는 전체 활성 인슐린, 둘째 줄에는 볼러스 부분과 기저 부분.
+    * **CoB 아이콘** (`SHORT TEXT`, _마법사_ 열기): 탄수화물 아이콘이 있는 활성 탄수화물.
+    * **CoB 상세** (`SHORT TEXT`, _마법사_ 열기): 첫 줄에는 지금의 활성 탄수화물, 둘째 줄에는 아직 들어올 탄수화물(eCarbs).
+    * **CoB & IoB** (`SHORT TEXT`, _마법사_ 열기): 첫 줄에는 활성 인슐린, 둘째 줄에는 활성 탄수화물.
     
-    **Basal and target**
+    **기저와 목표**
     
-    * **Basal rate** (`SHORT TEXT`, opens _Menu_): the current basal rate.
-    * **BR & IoB** (`SHORT TEXT`, opens _Menu_): insulin on board on the first line, the basal rate on the second.
-    * **BR & Target** (`SHORT TEXT`, opens _Temp Target_): the target on the first line, with the time left when a temporary target runs, and the basal rate on the second.
-    * **Target** (`SHORT TEXT`, opens _Temp Target_): the target on the first line and, while a temporary target runs, its time left on the second.
-    * **BR, CoB & IoB** (`SHORT TEXT`, opens _Menu_): the basal rate on the first line, carbs on board and insulin on board on the second.
+    * **기저 주입량** (`SHORT TEXT`, _메뉴_ 열기): 현재 기저 주입량.
+    * **BR & IoB** (`SHORT TEXT`, _메뉴_ 열기): 첫 줄에는 활성 인슐린, 둘째 줄에는 기저 주입량.
+    * **BR & 목표** (`SHORT TEXT`, _임시 목표_ 열기): 첫 줄에는 목표(임시 목표가 실행 중이면 남은 시간 포함), 둘째 줄에는 기저 주입량.
+    * **목표** (`SHORT TEXT`, _임시 목표_ 열기): 첫 줄에는 목표, 임시 목표가 실행 중이면 둘째 줄에 남은 시간.
+    * **BR, CoB & IoB** (`SHORT TEXT`, _메뉴_ 열기): 첫 줄에는 기저 주입량, 둘째 줄에는 활성 탄수화물과 활성 인슐린.
     
-    **Loop and phone**
+    **루프와 휴대폰**
     
-    * **Running mode** (`SMALL IMAGE` / `ICON`, opens _Running mode picker_): the current loop mode as an icon: closed loop, open loop, low glucose suspend, suspended, disconnected or disabled. A tap opens a picker with the mode changes allowed right now, for example **Suspend loop**, **Disconnect pump**, **Resume loop** or **Reconnect pump**. The same picker is in the **AAPS** main menu under **Running mode**.
-    * **Uploader/Phone Battery** (`RANGED VALUE` / `SHORT TEXT` / `ICON`, opens _Status_): the battery of the **AAPS** phone, as a gauge with a battery icon, as a number, or as the icon alone. It updates together with the other **AAPS** data, usually every 5 minutes with a new reading.
+    * **실행 모드** (`SMALL IMAGE` / `ICON`, _실행 모드 선택 화면_ 열기): 현재 루프 모드를 아이콘으로 표시: 폐쇄 루프, 개방 루프, 저혈당 주입 정지, 일시 중지됨, 연결 해제됨 또는 비활성화됨. 탭하면 지금 가능한 모드 변경을 고르는 선택 화면이 열립니다. 예: **루프 일시 중지**, **펌프 연결 해제**, **루프 재개**, **펌프 재연결**. 같은 선택 화면이 **AAPS** 메인 메뉴의 **실행 모드**에도 있습니다.
+    * **업로더/휴대폰 배터리** (`RANGED VALUE` / `SHORT TEXT` / `ICON`, _상태_ 열기): **AAPS** 휴대폰의 배터리. 배터리 아이콘이 있는 게이지, 숫자, 또는 아이콘만으로 표시합니다. 다른 **AAPS** 데이터와 함께 업데이트되며, 보통 새 측정값이 올 때마다 5분마다 업데이트됩니다.
     
-    The **Running mode** picker, as opened from the complication, the main menu or the Running mode tile:
+    컴플리케이션, 메인 메뉴 또는 실행 모드 타일에서 연 **실행 모드** 선택 화면:
     
-    ![Running mode picker with the modes you can switch to](../images/wearos/running_mode_picker.png)
+    ![바꿀 수 있는 모드가 있는 실행 모드 선택 화면](../images/wearos/running_mode_picker.png)
     
     (WearOsSmartwatch-complication-settings)=
     
-    ### Complication related settings
+    ### 컴플리케이션 관련 설정
     
-    In the **AAPS** main menu on the watch, open **Settings** > **Complication**:
+    워치의 **AAPS** 메인 메뉴에서 **설정** > **컴플리케이션**을 여십시오:
     
-    ![Settings > Complication on the watch](../images/wearos/settings_complication.png)
+    ![워치의 설정 > 컴플리케이션](../images/wearos/settings_complication.png)
     
-    * **Complication Tap Action** (default `Default`): what a tap on an **AAPS** complication opens, for all complications at once:
-      * _Default_: what the complication itself opens, see the list above
-      * _Menu_: the **AAPS** main menu
-      * _Calculator_: the bolus calculator
-      * _Treatment_: the treatment dialog, insulin and carbs
-      * _eCarbs_: the eCarbs dialog
-      * _Status_: the status menu
-      * _Running mode_: the running mode picker. Needs **Wear control** turned on in the phone's Wear settings, otherwise the main menu opens instead.
-      * _None_: a tap does nothing
-    * **BG graph time range** (default `3 hours`): how many hours the **BG Graph** complication shows, 1, 3 or 6. The BG Graph tile has its own setting.
-    * **Unicode in Complications** (default `On`): the complications use Unicode symbols like `Δ` for the delta, `⁞` as separator and `⎍` for the basal rate. How they look depends on the font of the watchface. Turn this `Off` when a watchface draws them as boxes or blanks.
+    * **컴플리케이션 탭 동작** (기본값 `기본`): **AAPS** 컴플리케이션을 탭하면 무엇이 열리는지, 모든 컴플리케이션에 한 번에 적용됩니다:
+      * _기본_: 컴플리케이션 자체가 여는 화면, 위 목록 참조
+      * _메뉴_: **AAPS** 메인 메뉴
+      * _계산기_: 볼러스 계산기
+      * _처치_: 처치 대화 상자, 인슐린과 탄수화물
+      * _eCarbs_: eCarbs 대화 상자
+      * _상태_: 상태 메뉴
+      * _실행 모드_: 실행 모드 선택 화면. 휴대폰의 워치 설정에서 **워치 제어**를 켜야 합니다. 그렇지 않으면 대신 메인 메뉴가 열립니다.
+      * _없음_: 탭해도 아무 일도 일어나지 않습니다
+    * **혈당 그래프 시간 범위** (기본값 `3시간`): **혈당 그래프** 컴플리케이션이 몇 시간을 표시할지, 1, 3 또는 6. 혈당 그래프 타일에는 따로 설정이 있습니다.
+    * **컴플리케이션에서 유니코드 사용** (기본값 `켜짐`): 컴플리케이션이 증분에 `Δ`, 구분자에 `⁞`, 기저 주입량에 `⎍` 같은 유니코드 기호를 사용합니다. 기호가 어떻게 보이는지는 워치 페이스의 글꼴에 따라 다릅니다. 워치 페이스가 기호를 네모나 빈칸으로 그리면 이 설정을 `꺼짐`으로 하십시오.
     
     (WearOsSmartwatch-wear-os-tiles)=
     
-    ## Wear OS Tiles
+    ## Wear OS 타일
     
-    Tiles are the pages you reach by swiping from the watchface. **AAPS** brings seven of them, each a set of up to four buttons. A tap on a button opens the matching dialog on the watch, or asks you to confirm, and the phone then does the work. A tile is a shortcut, not a status display: it does not hold the state of the phone app.
+    타일은 워치 페이스에서 밀어서 이동하는 페이지입니다. **AAPS**는 타일 7개를 제공하며, 각 타일에는 버튼이 최대 4개 있습니다. 버튼을 탭하면 워치에서 해당 대화 상자가 열리거나 확인을 요청하고, 그다음 휴대폰이 작업을 수행합니다. 타일은 바로 가기이지 상태 표시가 아닙니다. 휴대폰 앱의 상태를 담고 있지 않습니다.
     
-    Before using the tiles, turn on **Wear control** in [Settings > Wear](#preferences-wear).
+    타일을 사용하기 전에 [설정 > 워치](#preferences-wear)에서 **워치 제어**를 켜십시오.
     
-    ### Adding a tile
+    ### 타일 추가하기
     
-    There are two ways, depending on your watch and phone:
+    워치와 휴대폰에 따라 두 가지 방법이 있습니다:
     
-    1. On the watch: swipe from the watchface past the last tile to **Add tile** and pick an **AAPS** tile. On most watches a long-press on a tile also opens the add and remove view.
-    2. On the phone, in the companion app for your watch (**Galaxy Wearable** for Samsung, **Wear OS** for other brands): open **Tiles**, tap **Add** and pick the **AAPS** tiles you want. The order of the tiles can be changed by dragging.
+    1. 워치에서: 워치 페이스에서 마지막 타일을 지나 **Add tile**(타일 추가)까지 밀고 **AAPS** 타일을 고르십시오. 대부분의 워치에서는 타일을 길게 눌러도 추가 및 삭제 화면이 열립니다.
+    2. 휴대폰에서, 워치의 동반 앱(삼성은 **Galaxy Wearable**, 다른 브랜드는 **Wear OS**)에서: **Tiles**(타일)를 열고 **Add**(추가)를 탭한 다음 원하는 **AAPS** 타일을 고르십시오. 타일의 순서는 끌어서 바꿀 수 있습니다.
     
-    ![The seven AAPS tiles in the companion app](../images/wearos/tiles/tiles_list_companion_app.png)
+    ![동반 앱의 AAPS 타일 7개](../images/wearos/tiles/tiles_list_companion_app.png)
     
-    ### Tile settings
+    ### 타일 설정
     
-    The **Actions**, **Temp Target**, **BG Graph** and **Scene** tiles have settings on the watch. Open the **AAPS** main menu, then **Settings** > **Tiles**, and pick the tile. A long-press on the tile also opens its settings, except on Pixel watches. The other three tiles are filled from the phone and have nothing to set on the watch.
+    **동작**, **임시 목표**, **혈당 그래프**, **장면** 타일은 워치에 설정이 있습니다. **AAPS** 메인 메뉴를 연 다음 **설정** > **타일**로 가서 타일을 고르십시오. Pixel 워치를 제외하면, 타일을 길게 눌러도 그 타일의 설정이 열립니다. 나머지 세 타일은 휴대폰에서 내용이 채워지며, 워치에서 설정할 것이 없습니다.
     
-    | Main menu | Settings | Tiles |
+    | 메인 메뉴 | 설정 | 타일 |
     | --- | --- | --- |
-    | ![AAPS main menu, Settings](../images/wearos/tiles/tile_settings_menu.png) | ![Settings, Tiles](../images/wearos/tiles/tile_settings_settings.png) | ![Tiles, pick the tile](../images/wearos/tiles/tile_settings_tiles.png) |
+    | ![AAPS 메인 메뉴, 설정](../images/wearos/tiles/tile_settings_menu.png) | ![설정, 타일](../images/wearos/tiles/tile_settings_settings.png) | ![타일, 타일 고르기](../images/wearos/tiles/tile_settings_tiles.png) |
     
-    The settings of a tile are a list of its four places. Tap a place to pick what it shows, or **None** to leave it empty.
+    타일 설정은 타일의 네 자리 목록입니다. 자리를 탭하여 무엇을 표시할지 고르거나, 비워 두려면 **없음**을 고르십시오.
     
-    | Long-press on the tile | Settings of the Temp Target tile |
+    | 타일 길게 누르기 | 임시 목표 타일의 설정 |
     | --- | --- |
-    | ![Long-press on a tile, tap the pencil](../images/wearos/tiles/tile_settings_long_press.png) | ![Temp Target tile settings, one entry per place](../images/wearos/tiles/tile_settings_temp_target.png) |
+    | ![타일을 길게 누르고 연필을 탭](../images/wearos/tiles/tile_settings_long_press.png) | ![임시 목표 타일 설정, 자리마다 항목 하나](../images/wearos/tiles/tile_settings_temp_target.png) |
     
-    Every tile has four places. A tile with more entries than that shows the first four.
+    모든 타일에는 자리가 네 개 있습니다. 항목이 그보다 많은 타일은 처음 네 개를 표시합니다.
     
-    ### Actions tile
+    ### 동작 타일
     
-    ![Actions tile](../images/wearos/tiles/tile_actions.png)
+    ![동작 타일](../images/wearos/tiles/tile_actions.png)
     
-    Shortcuts to the dialogs of the **AAPS** watch app. Pick up to four of these in the tile settings:
+    **AAPS** 워치 앱의 대화 상자로 가는 바로 가기입니다. 타일 설정에서 다음 중 최대 4개를 고르십시오:
     
-    * **Calc**: the bolus calculator, with a carbs input, an optional percentage [1] and an optional meal type [2]
-    * **Treat**: insulin and carbs in one go
-    * **Insulin**: a bolus, entered in units
-    * **Carbs**: carbs, also extended carbs. A **negative** amount is accepted, down to your current COB, to correct carbs you entered earlier. Carb removals are shown on the watch's BG graph.
-    * **eCarbs**: extended carbs
-    * **TempT**: a temporary target with a custom target and duration
-    * **Profile switch**: a profile switch with percentage, time shift and duration
+    * **Calc**: 볼러스 계산기. 탄수화물 입력, 선택 사항인 퍼센트 [1], 선택 사항인 식사 유형 [2]
+    * **처치**: 인슐린과 탄수화물을 한 번에
+    * **인슐린**: 단위(U)로 입력하는 볼러스
+    * **탄수화물**: 탄수화물, 확장 탄수화물도 가능. 현재 COB까지 **음수** 양도 받을 수 있어서, 앞서 입력한 탄수화물을 고칠 수 있습니다. 탄수화물 제거는 워치의 혈당 그래프에 표시됩니다.
+    * **eCarbs**: 확장 탄수화물
+    * **임시 목표**: 목표와 기간을 직접 정하는 임시 목표
+    * **프로파일 전환**: 퍼센트, 시간 이동, 기간이 있는 프로파일 전환
     
-    ![Actions tile settings: one entry per place](../images/wearos/tiles/tile_settings_actions.png)
+    ![동작 타일 설정: 자리마다 항목 하나](../images/wearos/tiles/tile_settings_actions.png)
     
-    The dialogs the buttons open. Swipe from right to left to reach the next page of a dialog, and tap the check mark on the last page to send the request to the phone:
+    버튼이 여는 대화 상자. 대화 상자의 다음 페이지로 가려면 오른쪽에서 왼쪽으로 밀고, 마지막 페이지에서 체크 표시를 탭하여 요청을 휴대폰으로 보내십시오:
     
-    | Treat | Insulin | Carbs | eCarbs | TempT | Profile switch |
+    | 처치 | 인슐린 | 탄수화물 | eCarbs | 임시 목표 | 프로파일 전환 |
     | --- | --- | --- | --- | --- | --- |
-    | ![Treatment dialog, insulin page](../images/wearos/dialogs/dialog_treatment.png) | ![Insulin dialog](../images/wearos/dialogs/dialog_insulin.png) | ![Carbs dialog](../images/wearos/dialogs/dialog_carbs.png) | ![eCarbs dialog](../images/wearos/dialogs/dialog_ecarbs.png) | ![Temp Target dialog, duration page](../images/wearos/dialogs/dialog_temp_target.png) | ![Profile switch dialog](../images/wearos/dialogs/dialog_profile_switch.png) |
+    | ![처치 대화 상자, 인슐린 페이지](../images/wearos/dialogs/dialog_treatment.png) | ![인슐린 대화 상자](../images/wearos/dialogs/dialog_insulin.png) | ![탄수화물 대화 상자](../images/wearos/dialogs/dialog_carbs.png) | ![eCarbs 대화 상자](../images/wearos/dialogs/dialog_ecarbs.png) | ![임시 목표 대화 상자, 기간 페이지](../images/wearos/dialogs/dialog_temp_target.png) | ![프로파일 전환 대화 상자](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] In the watch's **Settings** > **Interface**, turn on **Calculator Percentage** to show the percentage input in the bolus calculator. The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). The other calculator settings are those of the phone under **Settings** > **Bolus wizard settings**.
+    [1] 워치의 **설정** > **인터페이스**에서 **계산기의 퍼센트**를 켜면 볼러스 계산기에 퍼센트 입력이 표시됩니다. 기본 퍼센트는 휴대폰의 ["볼러스 비율"](#Preferences-deliver-this-part-of-bolus-wizard-result) 설정에서 가져옵니다. 나머지 계산기 설정은 휴대폰의 **설정** > **볼러스 마법사 설정**에 있는 설정을 따릅니다.
     
-    [2] In the watch's **Settings** > **Interface**, turn on **Calculator Meal Type** to show the **Meal type** page, where you pick **Bread**, **Cake** or **Pizza** to split the carbs of a slow meal into carbs now and eCarbs later. See [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
+    [2] 워치의 **설정** > **인터페이스**에서 **계산기 식사 유형**을 켜면 **식사 유형** 페이지가 표시됩니다. 여기서 **빵**, **케이크** 또는 **피자**를 골라 천천히 소화되는 식사의 탄수화물을 지금 먹는 탄수화물과 나중의 eCarbs로 나눕니다. [식사 유형 선택하기](#WearOsSmartwatch-wizard-meal-type)를 참조하십시오.
     
-    ### Temp Target tile
+    ### 임시 목표 타일
     
-    ![Temp Target tile](../images/wearos/tiles/tile_temp_target.png)
+    ![임시 목표 타일](../images/wearos/tiles/tile_temp_target.png)
     
-    Temporary targets from the phone's presets. Set the duration and the target of each preset on the phone under **Settings** > [Default temp targets](#Preferences-default-temp-targets). Pick up to four of these in the tile settings:
+    휴대폰의 프리셋에 있는 임시 목표입니다. 각 프리셋의 기간과 목표는 휴대폰의 **설정** > [기본 임시 목표](#Preferences-default-temp-targets)에서 설정하십시오. 타일 설정에서 다음 중 최대 4개를 고르십시오:
     
-    * **Activity**: for sport
-    * **Eating**: eating soon, a lower target so there is more insulin on board at the meal
-    * **Hypo**: a higher target during a hypo treatment
-    * **Manual**: a custom target and duration
-    * **Cancel**: stops the running temporary target. The button is shown only while a temporary target is running.
+    * **활동**: 운동할 때
+    * **식사**: 곧 식사할 때. 목표를 낮추어 식사 때 활성 인슐린이 더 많게 합니다
+    * **저혈당**: 저혈당 처치 동안 목표를 높입니다
+    * **수동**: 목표와 기간을 직접 정합니다
+    * **취소**: 실행 중인 임시 목표를 멈춥니다. 이 버튼은 임시 목표가 실행 중일 때만 표시됩니다.
     
-    ### Quick Wizard tile
+    ### 빠른 마법사 타일
     
-    ![Quick Wizard tile](../images/wearos/tiles/tile_quick_wizard.png)
+    ![빠른 마법사 타일](../images/wearos/tiles/tile_quick_wizard.png)
     
-    The [QuickWizard](#quickwizards) entries of the phone that have **Show on Watch** turned on, within their valid hours. A carbs entry shows its carbs in g, an insulin entry its fixed dose in U. A tap runs the entry after a confirmation on the watch. There is nothing to set on the watch: edit the entries on the phone, and turn on **Show on Watch** under **Device Selection** for each entry you want on the tile. Outside the valid hours of all your entries, the tile shows **No config available**.
+    휴대폰의 [빠른 마법사](#quickwizards) 항목 중 **워치에 표시**가 켜져 있는 항목이, 유효 시간 안에 표시됩니다. 탄수화물 항목은 탄수화물을 g으로, 인슐린 항목은 고정 용량을 U로 표시합니다. 탭하면 워치에서 확인한 후 항목이 실행됩니다. 워치에서 설정할 것은 없습니다. 휴대폰에서 항목을 편집하고, 타일에 표시할 각 항목의 **장치 선택**에서 **워치에 표시**를 켜십시오. 모든 항목의 유효 시간 밖에서는 타일에 **가능한 환경설정 없음**이 표시됩니다.
     
-    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/quickwizard_watch_phone.png)
+    ![워치에 표시가 켜진 빠른 마법사 항목과 그 항목이 나타나는 타일](../images/quickwizard_watch_phone.png)
     
-    ### Scene tile
+    ### 장면 타일
     
-    ![Scene tile](../images/wearos/tiles/tile_scene.png)
+    ![장면 타일](../images/wearos/tiles/tile_scene.png)
     
-    The [Scenes](#scenes-from-watch) of the phone. Each of the four places is set to **Automatic**, **None** or one scene in the tile settings. An **Automatic** place takes the next scene from the phone's list that no other place has claimed. A place set to a scene that no longer exists on the phone shows **Unavailable**.
+    휴대폰의 [장면](#scenes-from-watch)입니다. 타일 설정에서 네 자리 각각을 **자동**, **없음** 또는 장면 하나로 설정합니다. **자동** 자리는 휴대폰 목록에서 다른 자리가 아직 차지하지 않은 다음 장면을 가져옵니다. 휴대폰에 더 이상 없는 장면으로 설정된 자리는 **사용할 수 없음**을 표시합니다.
     
-    ![Scene tile settings, four places set to Automatic](../images/wearos/tiles/tile_settings_scene.png)
+    ![장면 타일 설정, 네 자리 모두 자동으로 설정됨](../images/wearos/tiles/tile_settings_scene.png)
     
-    ### Running mode tile
+    ### 실행 모드 타일
     
-    ![Running mode tile](../images/wearos/tiles/tile_running_mode.png)
+    ![실행 모드 타일](../images/wearos/tiles/tile_running_mode.png)
     
-    The [running modes](#aaps-screens-running-mode) you can switch to from the current one, with the same icons as on the phone: closed loop, low glucose suspend, open loop, disable loop, suspend loop and disconnect pump, or resume and reconnect while one of those runs. **Suspend loop** and **Disconnect pump** ask for a duration first. The phone decides which modes are offered, the watch shows the first four and leaves out **Disable loop** when **Suspend loop** is on the list.
+    현재 모드에서 바꿀 수 있는 [실행 모드](#aaps-screens-running-mode)가 휴대폰과 같은 아이콘으로 표시됩니다: 폐쇄 루프, 저혈당 주입 정지, 개방 루프, 루프 비활성화, 루프 일시 중지, 펌프 연결 해제, 또는 이 중 하나가 실행 중일 때는 재개와 재연결. **루프 일시 중지**와 **펌프 연결 해제**는 먼저 기간을 묻습니다. 어떤 모드를 제공할지는 휴대폰이 정합니다. 워치는 처음 네 개를 표시하며, 목록에 **루프 일시 중지**가 있으면 **루프 비활성화**는 빼고 표시합니다.
     
-    ### User Action tile
+    ### 사용자 동작 타일
     
-    ![User Action tile](../images/wearos/tiles/tile_user_action.png)
+    ![사용자 동작 타일](../images/wearos/tiles/tile_user_action.png)
     
-    One button for each [automation](#automations-automation-triggers) on the phone whose trigger is **User action**. A tap asks you to confirm, then the phone runs the automation's actions. The buttons are named after the automations, so give them short names. There is nothing to set on the watch.
+    트리거가 **사용자 동작**인 휴대폰의 [자동화](#automations-automation-triggers)마다 버튼이 하나씩 있습니다. 탭하면 확인을 요청하고, 그다음 휴대폰이 자동화의 동작을 실행합니다. 버튼 이름은 자동화 이름을 따르므로, 자동화 이름을 짧게 지으십시오. 워치에서 설정할 것은 없습니다.
     
-    ### BG Graph tile
+    ### 혈당 그래프 타일
     
-    ![BG Graph tile](../images/wearos/tiles/tile_bg_graph.png)
+    ![혈당 그래프 타일](../images/wearos/tiles/tile_bg_graph.png)
     
-    The glucose value with arrow, delta and age, below it IOB, COB, basal rate and target, and the BG graph with predictions, boluses, carbs and SMBs. Two settings on the watch: **Time range** (1, 3 or 6 hours) and **Tap action**, which opens the full **BG Graph**, the **Main Menu** or the **Loop Status** screen.
+    화살표, 증분, 경과 시간이 있는 혈당 값, 그 아래에 IOB, COB, 기저 주입량, 목표, 그리고 예측, 볼러스, 탄수화물, SMB가 있는 혈당 그래프입니다. 워치에 설정이 두 가지 있습니다: **시간 범위**(1, 3 또는 6시간)와 **탭 동작**입니다. 탭 동작은 전체 **혈당 그래프**, **메인 메뉴** 또는 **루프 상태** 화면을 엽니다.
     
-    ![The BG Graph screen](../images/wearos/bg_graph.png)
+    ![혈당 그래프 화면](../images/wearos/bg_graph.png)
     
-    ![BG Graph tile settings: Time range and Tap action](../images/wearos/tiles/tile_settings_bg_graph.png)
+    ![혈당 그래프 타일 설정: 시간 범위와 탭 동작](../images/wearos/tiles/tile_settings_bg_graph.png)
     
-    ## Always on
+    ## 상시 표시
     
-    This section and the next apply to the classic **AAPS** watchfaces on Wear OS 5 and older. On Wear OS 6 the **Complications watchface** has an always-on display of its own, see [the watchface AAPS installs](#wearos-aaps-v4-watchface).
+    이 섹션과 다음 섹션은 Wear OS 5 이하의 기존 **AAPS** 워치 페이스에 해당합니다. Wear OS 6에서는 **컴플리케이션 워치 페이스**에 자체 상시 표시 화면이 있습니다. [AAPS가 설치하는 워치 페이스](#wearos-aaps-v4-watchface)를 참조하십시오.
     
-    Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
+    Android Wear OS 스마트워치에서 배터리를 오래 사용하기는 어렵습니다. 일부 스마트워치는 충전 없이 30시간까지 사용할 수 있습니다. 전력을 가장 잘 아끼려면 사용하지 않을 때 화면을 꺼야 합니다. 대부분의 워치는 “상시 표시”(Always on) 화면을 지원합니다.
     
-    Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lighting up fewer pixels to save power on OLED displays.
+    AAPS 버전 3부터 상시 표시 모드에서 “UI 단순화”를 사용할 수 있습니다. 이 UI에는 혈당, 추세 방향, 시간만 표시됩니다. 이 UI는 전력에 최적화되어 업데이트가 덜 자주 일어나고, 정보를 적게 표시하며, OLED 디스플레이에서 전력을 아끼기 위해 켜지는 픽셀 수를 줄입니다.
     
-    The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “Always On Mode” or “Always On and Charging”.
+    단순화된 UI 모드는 Digital Style 워치 페이스와 사용자 지정 워치 페이스에서 사용할 수 있습니다. 단순화된 UI는 선택 사항이며, 워치 페이스 설정에서 설정합니다(워치 페이스를 길게 누르고 “편집” 또는 톱니바퀴 아이콘을 누르십시오). “UI 단순화” 설정을 선택하고 “항상 켜짐 모드” 또는 “항상 켜짐 및 충전 중”으로 설정하십시오.
     
-    ### Night-time mode
+    ### 야간 모드
     
-    While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
+    충전 중에 화면이 “상시 표시” 상태를 유지하며 밤새 혈당을 보여주면 도움이 됩니다. 그러나 기본 워치 페이스는 너무 밝고 정보가 너무 많아서, 잠이 덜 깬 눈으로는 자세한 내용을 읽기 어렵습니다. 그래서 설정에서 켜면 충전 중에만 워치 페이스의 UI를 단순하게 하는 옵션을 추가했습니다.
     
-    The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “During Charging” or “Always On and Charging”.
+    단순화된 UI 모드는 Digital Style 워치 페이스와 사용자 지정 워치 페이스에서 사용할 수 있습니다. 단순화된 UI는 선택 사항이며, 워치 페이스 설정에서 설정합니다(워치 페이스를 길게 누르고 “편집” 또는 톱니바퀴 아이콘을 누르십시오). “UI 단순화” 설정을 선택하고 “충전 중” 또는 “항상 켜짐 및 충전 중”으로 설정하십시오.
     
-    The Android developer options enable your watch to stay awake during charging. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options.
+    Android 개발자 옵션을 사용하면 충전 중에 워치 화면이 계속 켜져 있게 할 수 있습니다. 개발자 옵션을 사용할 수 있게 하려면 [공식 문서](https://developer.android.com/training/wearables/get-started/debugging)를 참조하십시오. 개발자 옵션에서 “Stay awake when charging”(충전 중 화면 켜짐 유지)을 “on”(켜짐)으로 설정하십시오.
     
-    Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
+    참고: 모든 디스플레이가 상시 표시를 잘 견디지는 못합니다. 특히 오래된 OLED 디스플레이에서는 화면 번인이 생길 수 있습니다. 워치는 보통 번인을 막기 위해 화면을 어둡게 합니다. 사용 설명서, 제조사 또는 인터넷에서 조언을 확인하십시오.
     
-    ![Watchface Nightstand](../images/Watchface_nightstand.jpg)
+    ![침대 옆 워치 페이스](../images/Watchface_nightstand.jpg)
     
-    ![Simplified UI](../images/Watchface_simplified_ui.png)
+    ![단순화된 UI](../images/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Phone alarms on the watch
+    ## 워치에 표시되는 휴대폰 알람
     
-    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![워치에서 울리는 휴대폰 알람](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. The watch vibrates, and again every half minute for five minutes until you answer. A notification shows the title and the text of the alarm, with the same answers as the [time to eat](#WearOsSmartwatch-wizard-carb-time) reminder:
+    워치는 휴대폰의 알람을 표시합니다. 그래서 휴대폰이 왜 소리를 내는지 알 수 있고 손목에서 응답할 수 있습니다. 워치가 진동하며, 응답할 때까지 5분 동안 30초마다 다시 진동합니다. 알림에는 알람의 제목과 내용이 표시되며, [식사할 시간](#WearOsSmartwatch-wizard-carb-time) 알림과 같은 응답이 있습니다:
     
-    * **Silence**, or a swipe: the alarm stops, and the alarm screen on the phone closes.
-    * **Mute 5 min**: the alarm stops and rings again after five minutes, on the phone and on the watch.
+    * **음소거** 또는 밀어서 없애기: 알람이 멈추고, 휴대폰의 알람 화면이 닫힙니다.
+    * **5분 음소거**: 알람이 멈추고 5분 뒤에 휴대폰과 워치에서 다시 울립니다.
     
-    Two kinds of alarm reach the watch:
+    두 종류의 알람이 워치에 전달됩니다:
     
-    * The alarm screen of the phone (pump errors, automation alarms, BG alarms): **Silence** and **Mute 5 min**.
-    * Urgent notifications with a sound, like *Pump unreachable* or a Nightscout alarm: **Silence** only. The phone has only **Dismiss** for those, and they come back by themselves while their cause lasts.
+    * 휴대폰의 알람 화면(펌프 오류, 자동화 알람, 혈당 알람): **음소거**와 **5분 음소거**.
+    * *펌프에 연결할 수 없습니다* 또는 Nightscout 알람처럼 소리가 있는 긴급 알림: **음소거**만. 휴대폰에는 이런 알림에 **닫기**만 있으며, 원인이 계속되는 동안 저절로 다시 나타납니다.
     
-    The *time to eat* reminder is not sent this way: the watch rings that one by itself.
+    *식사할 시간* 알림은 이 방법으로 보내지지 않습니다. 워치가 직접 울립니다.
     
-    ## Snooze Alert shortcut
+    ## 경고 스누즈 바로 가기
     
-    The watch [shows the alarm](#WearOsSmartwatch-phone-alarms) itself; the shortcut is a second way to silence it, with one press. It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+    워치가 [알람을 직접 표시](#WearOsSmartwatch-phone-alarms)합니다. 바로 가기는 한 번 눌러 알람을 끄는 두 번째 방법입니다. AAPS의 경고/알람을 스누즈하는 바로 가기를 만들 수 있습니다. 휴대폰을 꺼내지 않고 워치로 소리를 끄면 편리하고 더 빠릅니다. 참고: 휴대폰에서 알람 메시지를 확인하고 그에 맞게 처리해야 하지만, 나중에 확인해도 됩니다. 워치에 버튼이 두 개 있으면, 버튼 하나를 `AAPS Snooze Alert` 프로그램에 할당할 수 있습니다.
     
-    To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
+    Samsung Watch 4에서 버튼을 연결하려면 `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`(설정 > 고급 기능 > 버튼 사용자 지정 > 두 번 누르기 > AAPS 스누즈 알림)로 가십시오.
     
-    On a watchface with complications, an **App shortcut** complication set to **AAPS Snooze Alert** does the same with a tap. The [alternative setup of the Complications watchface](#wearos-complications-watchface-setup) uses its top-right slot for it.
+    컴플리케이션이 있는 워치 페이스에서는 **AAPS 스누즈 알림**으로 설정한 **App shortcut**(앱 바로 가기) 컴플리케이션을 탭해도 같은 일을 합니다. [컴플리케이션 워치 페이스의 다른 설정](#wearos-complications-watchface-setup)에서는 오른쪽 위 슬롯을 이 용도로 씁니다.
     
-    ### Snooze xDrip
+    ### xDrip 스누즈
     
-    When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm. 
+    xDrip을 사용하고 워치에 xDrip이 설치되어 있으면, 'AAPS Snooze Alert' 바로 가기는 모든 xDrip 알람도 스누즈합니다. 
     
     
-    ## Performance and battery life tips
+    ## 성능과 배터리 수명 팁
     
-    Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+    Wear OS 워치는 전력 제약이 매우 큰 장치입니다. 워치 케이스의 크기 때문에 들어가는 배터리의 용량이 제한됩니다. 하드웨어와 소프트웨어 모두 최근에 발전했지만, Wear OS 워치는 여전히 매일 충전해야 합니다.
     
-    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
+    배터리 사용 시간이 하루(새벽부터 해 질 녘까지)보다 짧다면, 다음은 문제를 해결하기 위한 몇 가지 팁입니다.
     
-    Main battery-demanding areas are:
+    배터리를 많이 쓰는 주요 부분:
     
-    * Active display with a backlight on (for LED) or in full intensity mode (for OLED)
-    * Rendering on screen
-    * Radio communication over Bluetooth
+    * 백라이트가 켜진(LED) 또는 최대 밝기 모드인(OLED) 활성 화면
+    * 화면 그리기
+    * 블루투스 무선 통신
     
-    Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in _display time_ area:
+    통신은 줄일 수 없고(최신 데이터가 필요함) 가장 최근 데이터를 그리고 싶으므로, 대부분의 최적화는 _화면 표시 시간_ 부분에서 할 수 있습니다:
     
-    * Stock watchfaces are usually better optimized than custom one, downloaded from the store.
-    * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
-    * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-    * Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-    * Use a dark theme on the watchface. On OLED displays fewer lit pixels mean less power and less burn-in.
-    * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
-    * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
-    * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-    * Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
-    * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+    * 기본 워치 페이스는 보통 스토어에서 내려받은 사용자 지정 워치 페이스보다 더 잘 최적화되어 있습니다.
+    * 비활성 / 어두운 모드에서 그리는 데이터 양을 제한하는 워치 페이스를 사용하는 것이 좋습니다.
+    * 타사 날씨 위젯처럼 외부 소스의 데이터를 사용하는 다른 컴플리케이션을 함께 쓸 때는 주의하십시오.
+    * 단순한 워치 페이스부터 시작하십시오. 컴플리케이션을 한 번에 하나씩 추가하고 배터리 수명에 어떤 영향을 주는지 관찰하십시오.
+    * 워치 페이스에 어두운 테마를 사용하십시오. OLED 디스플레이에서는 켜진 픽셀이 적을수록 전력 소모와 번인이 줄어듭니다.
+    * 워치에서 무엇이 더 잘 작동하는지 확인하십시오: AAPS 기본 워치 페이스 또는 AAPS 컴플리케이션을 사용하는 다른 워치 페이스.
+    * 활동 패턴이 다른 며칠 동안 관찰하십시오. 대부분의 워치는 손목을 들어 볼 때, 움직일 때, 그 밖의 사용 관련 동작이 있을 때 화면을 켭니다.
+    * 성능에 영향을 주는 전체 시스템 설정을 확인하십시오: 알림, 백라이트/활성 화면 시간 제한, GPS가 켜지는 시점.
+    * [테스트된 휴대폰과 워치 목록](#Phones-list-of-tested-phones)을 확인하고, 다른 사용자의 경험과 보고된 배터리 수명에 대해 [커뮤니티에 물어보십시오](../GettingHelp/WhereCanIGetHelp.md).
+    * **워치 페이스나 컴플리케이션에 표시된 데이터가 최신이라고 보장할 수 없습니다**. 결국 워치 페이스나 컴플리케이션을 언제 업데이트할지는 Wear OS가 결정합니다. AAPS 앱이 업데이트를 요청해도, 시스템은 배터리를 아끼기 위해 업데이트를 미루거나 무시할 수 있습니다. 확실하지 않을 때나 워치의 배터리가 부족할 때는 항상 휴대폰의 AAPS 메인 앱에서 다시 확인하십시오.
     
     (Watchfaces-troubleshooting-the-wear-app)=
     
-    ## Troubleshooting the wear app
+    ## 워치 앱 문제 해결
     
-    If the watch shows no data or old data, first check the connection between the watch and the phone, see [Troubleshooting the AAPS watch - AAPS phone communication](#wear-os-watch-phone-communication). For a watch on Wear OS 5, see also the [general troubleshooting recommendations for Wear OS 5](#wear-os-5-troubleshooting). A complication that does not update has the same causes as a tile or watchface that does not update, so check those first.
+    워치에 데이터가 없거나 오래된 데이터가 표시되면, 먼저 워치와 휴대폰 사이의 연결을 확인하십시오. [AAPS 워치 - AAPS 휴대폰 통신 문제 해결](#wear-os-watch-phone-communication)을 참조하십시오. Wear OS 5 워치는 [Wear OS 5에 대한 일반 문제 해결 권장 사항](#wear-os-5-troubleshooting)도 참조하십시오. 업데이트되지 않는 컴플리케이션은 업데이트되지 않는 타일이나 워치 페이스와 원인이 같으므로, 그것부터 확인하십시오.
     
-    ## Additional AAPS custom watchfaces are also available
+    ## 추가 AAPS 사용자 지정 워치 페이스도 있습니다
     
-    [Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+    [여기](../ExchangeSiteCustomWatchfaces/index.md)에서 다른 사용자가 만든 사용자 지정 워치 페이스 Zip 파일을 내려받을 수 있습니다.
     
-    ## Build your own watchface
+    ## 나만의 워치 페이스 만들기
     
-    If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
+    나만의 워치 페이스를 만들려면 [이 안내](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md)를 따르십시오.
     
-    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+    사용자 지정 워치 페이스를 만들었다면, 나만의 **AAPS** 사용자 지정 워치 페이스를 다른 사람과 공유할 수 있습니다. GitHub에 풀 리퀘스트로 zip 파일을 "ExchangeSiteCustomWatchfaces" 폴더에 올리면 됩니다. 풀 리퀘스트를 병합할 때 문서 팀이 CustomWatchface.png 파일을 꺼내 Zip 파일의 파일 이름을 앞에 붙입니다.
     
     (WearOsSmartwatch-complications-watchface-download)=
     
-    ## Make your own version of the Complications watchface
+    ## 나만의 컴플리케이션 워치 페이스 만들기
     
-    The **Complications watchface** that **AAPS** installs on Wear OS 6 (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)) is made with Samsung's **Watch Face Studio**. Its project file is free to download, so you can change it to your taste, or use it on a watch with Wear OS 5 or older where **AAPS** does not install it:
+    **AAPS**가 Wear OS 6에 설치하는 **컴플리케이션 워치 페이스**([AAPS가 설치하는 워치 페이스](#wearos-aaps-v4-watchface) 참조)는 Samsung의 **Watch Face Studio**로 만들었습니다. 프로젝트 파일은 무료로 내려받을 수 있으므로, 취향에 맞게 바꾸거나 **AAPS**가 설치하지 않는 Wear OS 5 이하의 워치에서 사용할 수 있습니다:
     
-    [Complications watchface (AAPS V4), zip](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/wearos/Complications_watchface_AAPS_V4.zip)
+    [컴플리케이션 워치 페이스 (AAPS V4), zip](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/wearos/Complications_watchface_AAPS_V4.zip)
     
-    The zip holds four files:
+    zip에는 파일 네 개가 들어 있습니다:
     
-    * `AAPS V4_0_2.wfs`: the project. Open it in [Watch Face Studio](https://developer.samsung.com/watch-face-studio/download.html), change what you like, and install it on the watch from there.
-    * `com.watchfacestudio.aapsv4.apk`: the watchface as it is, ready to install with [adb](https://developer.android.com/tools/releases/platform-tools): `adb install com.watchfacestudio.aapsv4.apk` with the watch connected over ADB debugging.
-    * `README.txt`: the two recommended complication setups, the same as on the [Wear OS page](#wearos-complications-watchface-setup).
-    * `AAPS V4.png`: a preview.
+    * `AAPS V4_0_2.wfs`: 프로젝트. [Watch Face Studio](https://developer.samsung.com/watch-face-studio/download.html)에서 열고, 원하는 대로 바꾼 다음, 거기서 워치에 설치하십시오.
+    * `com.watchfacestudio.aapsv4.apk`: 그대로의 워치 페이스. ADB 디버깅으로 워치를 연결한 상태에서 [adb](https://developer.android.com/tools/releases/platform-tools)로 바로 설치할 수 있습니다: `adb install com.watchfacestudio.aapsv4.apk`
+    * `README.txt`: 권장하는 컴플리케이션 설정 두 가지. [Wear OS 페이지](#wearos-complications-watchface-setup)와 같습니다.
+    * `AAPS V4.png`: 미리 보기.
     
-    ```{admonition} This is not a custom watchface
+    ```{admonition} 사용자 지정 워치 페이스가 아닙니다
     :class: note
-    The zip is not a custom watchface for **Load Watchface** in the **Wear** plugin, and the phone cannot install it. It must be unzipped and installed on the watch with Watch Face Studio or adb, as above.
+    이 zip은 **워치** 플러그인의 **워치 페이스 불러오기**용 사용자 지정 워치 페이스가 아니며, 휴대폰은 이것을 설치할 수 없습니다. 위와 같이 압축을 풀고 Watch Face Studio나 adb로 워치에 설치해야 합니다.

@@ -1,249 +1,249 @@
-# Preparing to start with AAPS
+# AAPS ile başlamaya hazırlık
 
-Welcome. This documentation aims to guide users who are preparing to set up and start using the Android Artificial Pancreas System (**AAPS**).
+Welcome. Bu dokümantasyon, Android Yapay Pankreas Sistemini (**AAPS**) kurmaya ve kullanmaya hazırlanan kullanıcılara yol göstermeyi amaçlar.
 
-## Finding your way around the documentation
+## Dokümantasyonda yolunuzu bulma
 
-An **index** and explanation of the documentation structure can be found [here](../index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. There you will find an overview of the purpose of the different documentation sections. You can also use the headings to the left of this page to navigate through the documentation. Finally, there is a handy search function, directly below the **AAPS** symbol.
+Dokümantasyonun yapısına ait bir **dizin** ve açıklama [burada](../index.md) bulunur. Buraya dokümantasyonun sol üstündeki **AAPS** simgesine tıklayarak da ulaşabilirsiniz. Orada farklı dokümantasyon bölümlerinin amacına dair bir genel bakış bulacaksınız. Dokümantasyonda gezinmek için bu sayfanın solundaki başlıkları da kullanabilirsiniz. Son olarak, **AAPS** simgesinin hemen altında kullanışlı bir arama işlevi vardır.
 
-We aim to make it easy to determine both the capabilities and limitations of **AAPS**. It can be disappointing to discover after investing time in reading the documentation that you might not have a compatible insulin pump or CGM, or that **AAPS** offers different functionality than hoped for.
+**AAPS**'in hem yeteneklerini hem de sınırlarını kolayca anlamanızı sağlamayı amaçlıyoruz. Dokümantasyonu okumaya zaman ayırdıktan sonra uyumlu bir insülin pompanız veya CGM'niz olmadığını ya da **AAPS**'in umduğunuzdan farklı işlevler sunduğunu öğrenmek hayal kırıklığı yaratabilir.
 
-Many experience-related details in the **AAPS** documentation make more sense when you are actually using **AAPS** in real-time. Just as it is difficult to learn a sport only by reading the rules, it takes a combination of learning the foundations of the rules for safely operating **AAPS** and then learning how best to apply those rules as you start to use **AAPS**.
+**AAPS** dokümantasyonundaki deneyime dayalı birçok ayrıntı, **AAPS**'i gerçek zamanlı olarak kullanmaya başladığınızda daha anlamlı hale gelir. Bir sporu yalnızca kurallarını okuyarak öğrenmek zor olduğu gibi, önce **AAPS**'i güvenli kullanmanın temel kurallarını öğrenmeniz, sonra da **AAPS**'i kullanmaya başladıkça bu kuralları en iyi nasıl uygulayacağınızı öğrenmeniz gerekir.
 
 (preparing-safety-first)=
 
 ## Önce Güvenlik
-“With great power comes great responsibility…”
+“Büyük güç, büyük sorumluluk getirir…”
 
-### Technical safety
-**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
+### Teknik güvenlik
+**AAPS** çok sayıda güvenlik özelliğine sahiptir. Bunlar, belirli parametrelerin test edilmesini ve çoktan seçmeli soruların yanıtlanmasını içeren bir dizi [Görevin](../SettingUpAaps/CompletingTheObjectives.md) aşama aşama tamamlanmasıyla kademeli olarak kaldırılan kısıtlamalar getirir. **AAPS** özellikleri, Görevler başarıyla tamamlandıkça açılır. Bu süreç, kullanıcının **AAPS**'in farklı özelliklerini öğrenirken Açık Döngü'den Kapalı Döngü'ye aşama aşama ve güvenli bir şekilde geçmesini sağlar.
 
-The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimize these issues.
+[Görevler](../SettingUpAaps/CompletingTheObjectives.md), **AAPS** geliştiricilerinin yeni kullanıcılarda gözlemlediği tipik hatalar ve genel eğilimler dikkate alınarak **AAPS**'e mümkün olan en iyi girişi sağlamak için tasarlanmıştır. Hatalar, yeni başlayan kişi deneyimsiz olduğu ve **AAPS**'e başlamak için çok aceleci davrandığı ya da önemli noktaları gözden kaçırdığı için olabilir. [Görevler](../SettingUpAaps/CompletingTheObjectives.md) bu sorunları en aza indirmeyi amaçlar.
 
-### Medical safety
+### Tıbbi güvenlik
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
 :class: danger
-Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
+Kan şekeri kontrolündeki hızlı iyileşmeler ve HbA1c düşüşü konusunda dikkatli olunmalıdır 
 ```
 
-An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicians make their patients aware of this issue.
+Önemli bir güvenlik konusu şudur: **Bir süredir yüksek glikoz düzeyleri olan kişilerde HbA1c'nin hızla düşmesi ve kan şekeri kontrolünün iyileşmesi kalıcı hasara yol açabilir**. Diyabetli birçok kişi bunun farkında değildir ve tüm klinisyenler hastalarını bu konuda bilgilendirmez.
 
-This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 11.1 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
+Bu hasar **görme kaybı ve kalıcı nöropatiyi (ağrı)** içerebilir. Ortalama glikoz düzeylerini daha yavaş düşürerek bu hasarın oluşmasını önlemek mümkündür. Şu anda HbA1c değeriniz yüksekse ve **AAPS**'e (veya başka bir kapalı döngü sistemine) geçiyorsanız, başlamadan önce _lütfen_ bu olası riski klinik ekibinizle konuşun ve onlarla birlikte, güvenli glikoz hedeflerini kademeli olarak düşüren bir zaman planı üzerinde anlaşın. Başlangıçta **AAPS**'te daha yüksek glikoz hedeflerini kolayca ayarlayabilir (şu anda seçebileceğiniz en yüksek hedef 11,1 mmol/L'dir, ancak gerekirse bilerek zayıf bir profil de kullanabilirsiniz), ardından aylar geçtikçe hedefi düşürebilirsiniz.
 
-#### How quickly can I reduce my HbA1c without risking permanent damage?
+#### Kalıcı hasar riski olmadan HbA1c değerimi ne kadar hızlı düşürebilirim?
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
+76 hasta üzerinde yapılan geriye dönük bir [çalışma](https://pubmed.ncbi.nlm.nih.gov/1464975/), HbA1c 6 aylık bir dönemde sırasıyla %1, %2 veya %3 düştüğünde retinopatinin ilerleme riskinin 1,6 kat, 2,4 kat ve 3,8 kat arttığını bildirdi. Araştırmacılar şunu önerdi: **"Retinopatinin ilerlemesini önlemek için herhangi bir 6 aylık dönemde HbA1c değerindeki düşüş %2'den az ile sınırlandırılmalıdır.... Glisemik kontrolün başlangıcında çok hızlı bir düşüş, retinopatinin ilerlemesinde ciddi veya geçici bir kötüleşmeye neden olabilir."**
 
-N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for an HbA1c calculator tool.
+Not: Farklı HbA1c birimleri (% yerine mmol/mol) kullanıyorsanız, HbA1c hesaplama aracı için [buraya](https://www.diabetes.co.uk/hba1c-units-converter.html) tıklayın.
 
-In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
+954 hasta üzerinde yapılan başka bir geriye dönük [değerlendirmede](https://academic.oup.com/brain/article/138/1/43/337923) araştırmacılar şunu belirtti:
 
-**"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."**
+**"HbA1c'de 3 ay içinde 2–3 puanlık (%) bir düşüşle diyabette tedaviye bağlı nöropati gelişmesi için mutlak risk %20 idi; HbA1c'de 3 ay içinde >4 puanlık (%) bir düşüşle diyabette tedaviye bağlı nöropati gelişmesi için mutlak risk %80'i aştı."**
 
-A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read other reviews on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) and [here](https://www.mdpi.com/1999-4923/15/7/1791).
+Bu çalışma hakkındaki bir [yorum](https://academic.oup.com/brain/article/138/1/2/340563) da komplikasyonlardan kaçınmak için **hedefin A1c'yi 3 ayda <%2 düşürmek olması gerektiğini** kabul etti. Bu konudaki diğer incelemeleri [burada](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) ve [burada](https://www.mdpi.com/1999-4923/15/7/1791) okuyabilirsiniz.
 
-It is generally recognized that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
+_Yeni_ tanı almış tip 1 diyabetlilerin (tanı anında, insülin tedavisine başlamadan önce genellikle HbA1c değerleri çok yüksektir) tanıdan hemen sonra HbA1c değerlerini bu risklerle aynı ölçüde karşılaşmadan hızla düşürebildikleri genel olarak kabul edilir, çünkü kan şekerleri bu kadar uzun bir süre yüksek kalmamıştır. Yine de bu, klinisyeninizle konuşmanız gereken bir konudur.
 
 (PreparingForAaps-no-sglt-2-inhibitors)=
-### No SGLT-2 inhibitors
+### SGLT-2 inhibitörleri kullanmayın
 
 ```{admonition} NO SGLT-2 inhibitors
 :class: danger
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
+Glifozinler olarak da adlandırılan SGLT-2 inhibitörleri, böbrekte glikozun geri emilimini engeller. Glifozinler kan şekeri düzeylerini öngörülemeyecek şekilde düşürür. Bu nedenle AAPS gibi bir kapalı döngü sistemi kullanırken bu ilaçları KESİNLİKLE KULLANMAMALISINIZ! Ciddi bir ketoasidoz ve/veya hipoglisemi riski olur! Bu ilacın, KŞ'yi yükseltmek için bazal oranları düşüren bir sistemle birlikte kullanılması özellikle tehlikelidir. 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. The problem is that, unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs. This leaves your body with too much insulin compared to the absorbed carbs, resulting in hypoglycemia.
+Özetle:
+- **Örnek 1: Hipo riski**
+>Öğle yemeğinde 45 g karbonhidrat tüketmenize göre **AAPS** ile bolus yaparsınız. Sorun şudur: AAPS'in bilmediği bir şekilde, inhibitörler vücudun karbonhidratların bir kısmını atmasına neden olur. Bu da vücudunuzda emilen karbonhidratlara göre çok fazla insülin kalmasına ve hipoglisemiye yol açar.
 
-- **Example 2: risk of Ketoacidosis**
->The inhibitors eliminate some of the carbs in the background, causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake, including basal. Over time this can result in your BG remaining below target value, to the point where the body does not have enough background insulin to absorb any carbs, resulting in ketoacidosis. Ordinarily, ketoacidosis develops in T1D patients because their pump fails, which would trigger alerts on their phone and be noticeable due to a high BG value. However, the danger with gliflozins is that there would be no AAPS alerts, as the pump remains operational and the BG potentially remains within target.
+- **Örnek 2: Ketoasidoz riski**
+>İnhibitörler arka planda karbonhidratların bir kısmını atar ve KŞ'nizin düşmesine neden olur. **AAPS** pompaya bazal dahil insülin iletimini azaltmasını otomatik olarak söyler. Zamanla bu, KŞ'nizin hedef değerin altında kalmasına yol açabilir. Sonunda vücutta herhangi bir karbonhidratı kullanmak için yeterli temel insülin kalmaz ve ketoasidoz gelişir. Normalde tip 1 diyabetli hastalarda ketoasidoz pompa arızası nedeniyle gelişir. Bu durum telefonda alarmları tetikler ve yüksek KŞ değeri nedeniyle fark edilir. Ancak glifozinlerle tehlike şudur: pompa çalışmaya devam ettiği ve KŞ büyük olasılıkla hedef aralıkta kaldığı için AAPS alarmı olmaz.
 
-Common brand names of SGLT-2 inhibitors include: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro, and Xigduo XR, others.
+SGLT-2 inhibitörlerinin yaygın ticari adları şunlardır: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro ve Xigduo XR ve diğerleri.
 ```
 
 
-### Key principles of looping with AAPS
+### AAPS ile döngü kullanmanın temel ilkeleri
 
-The key principles and concepts of looping must be understood before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there!
+**AAPS**'i kullanmadan önce döngünün temel ilkelerini ve kavramlarını anlamanız gerekir. Bunu, **AAPS** dokümantasyonunu okumaya kendi zamanınızı ayırarak ve Görevleri tamamlayarak sağlarsınız. Görevler, **AAPS**'i güvenli ve etkili kullanmanız için size sağlam bir temel vermeyi amaçlar. **AAPS** dokümantasyonunun hacmi ilk başta çok fazla görünebilir, ama sabırlı olun ve sürece güvenin - doğru yaklaşımla başaracaksınız!
 
-The speed of progression will depend upon the individual, but be aware that completion of all the objectives typically takes 6 - 9 weeks. Many people start to build, install and set up **AAPS** well in advance of starting to use it. To aid with this, the system has a "virtual pump" which can be used during completion of the early objectives, so that you can become familiar with **AAPS** without actually using it to deliver insulin. A detailed breakdown of the timeline is given below, be aware that by objective 7 of **AAPS** you are closed looping, the later objectives add in additional features like **SMB** and **automations** which are useful to some users, but not essential to the core function of **AAPS**.
+İlerleme hızı kişiye göre değişir, ancak tüm görevlerin tamamlanmasının genellikle 6 - 9 hafta sürdüğünü bilin. Birçok kişi **AAPS**'i kullanmaya başlamadan çok önce oluşturmaya, kurmaya ve ayarlamaya başlar. Buna yardımcı olmak için sistemde, ilk görevleri tamamlarken kullanabileceğiniz bir "sanal pompa" vardır. Böylece **AAPS**'i gerçekten insülin vermek için kullanmadan onu tanıyabilirsiniz. Zaman çizelgesinin ayrıntılı dökümü aşağıdadır. **AAPS**'in 7. görevinde kapalı döngüye geçmiş olduğunuzu bilin; sonraki görevler **SMB** ve **otomasyonlar** gibi ek özellikler ekler. Bunlar bazı kullanıcılar için yararlıdır, ancak **AAPS**'in temel işlevi için gerekli değildir.
 
-Success with **AAPS** requires a proactive approach, a willingness to reflect on the BG data and flexibility to make the necessary adjustments to **AAPS** in order to improve your outcomes. Just as it is nearly impossible to learn to play a sport by reading about the rules alone, the same can be said of **AAPS**.
+**AAPS** ile başarılı olmak için proaktif bir yaklaşım, KŞ verileri üzerinde düşünmeye istekli olmak ve sonuçlarınızı iyileştirmek için **AAPS**'te gerekli ayarlamaları yapacak esnekliğe sahip olmak gerekir. Bir sporu yalnızca kurallarını okuyarak öğrenmek neredeyse imkânsız olduğu gibi, aynı şey **AAPS** için de söylenebilir.
 
-#### Plan for delays and minor issues in getting everything set up and running
+#### Her şeyi kurup çalıştırırken gecikmeler ve küçük sorunlar için plan yapın
 
-In the preliminary stages of getting started with **AAPS**, you may experience difficulties getting all the components of the loop communicating effectively with each other (and potential followers), and when fine-tuning your settings. Some glitches cannot be resolved until **AAPS** is used in everyday life, but plenty of help is available on the Facebook group and Discord. Please plan accordingly and choose "good" times, like a quiet morning of a weekend (i.e. not late at night or when you are tired, or before a big meeting or travel) to troubleshoot and resolve issues.
+**AAPS**'e başlamanın ilk aşamalarında, döngünün tüm bileşenlerinin birbiriyle (ve olası takipçilerle) düzgün iletişim kurmasını sağlarken ve ayarlarınıza ince ayar yaparken zorluklar yaşayabilirsiniz. Bazı aksaklıklar ancak **AAPS** günlük hayatta kullanıldığında çözülebilir, ancak Facebook grubunda ve Discord'da çok sayıda yardım bulabilirsiniz. Lütfen buna göre plan yapın ve sorunları gidermek ve çözmek için "uygun" zamanlar seçin, örneğin bir hafta sonu sakin bir sabah (yani gece geç saatlerde, yorgunken, önemli bir toplantıdan veya seyahatten önce değil).
 
-#### Technology compatibility
+#### Teknoloji uyumluluğu
 
-**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](../Getting-Started/CompatiblesCgms.md), [pump](../Getting-Started/CompatiblePumps.md) and [phone](../Getting-Started/Phones.md) sections.
+**AAPS** yalnızca belirli insülin pompaları, CGM'ler ve telefonlarla uyumludur ve bazı teknolojiler bazı ülkelerde kullanılamayabilir. Hayal kırıklığı yaşamamak için lütfen [CGM](../Getting-Started/CompatiblesCgms.md), [pompa](../Getting-Started/CompatiblePumps.md) ve [telefon](../Getting-Started/Phones.md) bölümlerini okuyun.
 
-#### App build time and progressing to full looping
+#### Uygulamayı oluşturma süresi ve tam döngüye geçiş
 
-The time to build the **AAPS** app depends on your level of expertise and technical ability. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build **AAPS**. The process will significantly speed up for newer **AAPS** versions, as you become more experienced.
+**AAPS** uygulamasını oluşturma süresi, uzmanlık düzeyinize ve teknik becerinize bağlıdır. Deneyimsiz kullanıcılar için **AAPS**'i oluşturmak genellikle yarım gün veya tam bir gün (topluluğun yardımıyla) sürebilir. Deneyim kazandıkça yeni **AAPS** sürümleri için bu süreç önemli ölçüde hızlanır.
 
-Several parts of this documentation are dedicated to helping you through the build process:
+Bu dokümantasyonun birçok bölümü, oluşturma sürecinde size yardımcı olmak için hazırlanmıştır:
 
-- [Building AAPS](../SettingUpAaps/BuildingAaps.md) takes you step-by-step through building the app and installing it on your phone;
+- [AAPS'i oluşturma](../SettingUpAaps/BuildingAaps.md) sayfası, uygulamayı oluşturma ve telefonunuza kurma adımlarında size adım adım yol gösterir;
 
-- the [FAQ](../UsefulLinks/FAQ.md) answers common questions and explains the errors most likely to occur; and
+- [SSS](../UsefulLinks/FAQ.md) sık sorulan soruları yanıtlar ve en sık karşılaşılan hataları açıklar; ve
 
-- the [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) hub collects solutions to the most frequent problems, organised by topic.
+- [Sorun giderme](../GettingHelp/GeneralTroubleshooting.md) merkezi, en sık görülen sorunların çözümlerini konulara göre toplar.
 
-How long it takes to get to closed looping depends on the individual; an approximate timeline for reaching full looping with **AAPS** is given [below](#preparing-how-long-will-it-take).
+Kapalı döngüye ulaşma süresi kişiye göre değişir; **AAPS** ile tam döngüye ulaşmak için yaklaşık bir zaman çizelgesi [aşağıda](#preparing-how-long-will-it-take) verilmiştir.
 
 
-#### Keystore & configuration settings export file
+#### Anahtar deposu (keystore) & yapılandırma ayarları dışa aktarma dosyası
 
-A “keystore” (.jks file) is a password encrypted file unique to your own copy of **AAPS**. Your Android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. In short, as part of the **AAPS** build, you should:
+“Anahtar deposu” (keystore, .jks dosyası), kendi **AAPS** kopyanıza özel, parola ile şifrelenmiş bir dosyadır. Android telefonunuz, anahtar deposu olmadan hiç kimsenin sizin kopyanızı güncelleyememesini sağlamak için bu dosyayı kullanır. Kısacası, **AAPS**'i oluştururken şunları yapmalısınız:
 
-1.  Save your keystore file (.jks file used to sign your app) in a safe place;
+1.  Anahtar deposu dosyanızı (uygulamanızı imzalamak için kullanılan .jks dosyası) güvenli bir yerde saklayın;
 
-2.  Keep a note of your password for your keystore file.
+2.  Anahtar deposu dosyanızın parolasını not edin.
 
-How you save the keystore depends on your build method:
+Anahtar deposunu nasıl saklayacağınız, oluşturma yönteminize bağlıdır:
 
-- **Android Studio (computer) build**: the keystore is created during the build — see [Generate signed APK](#Building-APK-generate-signed-apk) for instructions on where to save it.
-- **AAPS Builder**: keep the backup file `aaps-keystore.jks` the setup page offered when you created your key, with its password and alias. If you uploaded your own keystore, keep that file.
-- **Browser build with a fork**: use the dedicated [Export keystore](#ci-keystore-export) workflow to download a copy to your Google Drive.
+- **Android Studio ile (bilgisayarda) oluşturma**: anahtar deposu oluşturma sırasında yaratılır - nereye kaydedeceğinizi öğrenmek için [İmzalı APK oluşturma](#Building-APK-generate-signed-apk) bölümüne bakın.
+- **AAPS Builder**: anahtarınızı oluşturduğunuzda kurulum sayfasının size sunduğu `aaps-keystore.jks` yedek dosyasını, parolası ve takma adı (alias) ile birlikte saklayın. Kendi anahtar deponuzu yüklediyseniz o dosyayı saklayın.
+- **Fork ile tarayıcıda oluşturma**: bir kopyasını Google Drive'ınıza indirmek için bu iş için hazırlanmış [Export keystore](#ci-keystore-export) iş akışını (workflow) kullanın.
 
-This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year.
+Bu sayede, **AAPS**'in her yeni sürümünü oluştururken tam olarak aynı anahtar deposu dosyasını kullanabilirsiniz. Ortalama olarak her yıl 2 **AAPS** güncellemesi gerekir.
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](../Maintenance/ExportImportSettings.md). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
+Ayrıca **AAPS**, [tüm yapılandırma ayarlarınızı dışa aktarma](../Maintenance/ExportImportSettings.md) olanağı sunar. Bu sayede telefon değiştirirken veya uygulamayı güncellerken/yeniden kurarken sisteminizi en az kesintiyle güvenli bir şekilde geri yükleyebilirsiniz. 
 
 #### Troubleshooting
 
-Please feel free to reach out to the AAPS community if there is anything you feel unsure about - there is no such thing as a silly question! All users with various levels of experience are encouraged to ask questions. Response times to questions are usually quick due to the number of **AAPS** users.
+Emin olmadığınız bir şey varsa AAPS topluluğuna danışmaktan çekinmeyin - aptalca soru diye bir şey yoktur! Her deneyim düzeyindeki tüm kullanıcılar soru sormaya teşvik edilir. **AAPS** kullanıcılarının sayısı fazla olduğu için sorulara genellikle hızlı yanıt verilir.
 
-##### [ask on the AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
+##### [AAPS Facebook grubunda sorun](https://www.facebook.com/groups/AndroidAPSUsers/)
 
-##### [ask on the AAPS Discord channel](https://discord.gg/4fQUWHZ4Mw)
-
-
+##### [AAPS Discord kanalında sorun](https://discord.gg/4fQUWHZ4Mw)
 
 
 
-#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
 
-This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
 
-#### [Section For Clinicians](../UsefulLinks/ClinicianGuideToAaps.md)
+#### [Nereden yardım alabilirim](../GettingHelp/WhereCanIGetHelp.md)?
 
-This is a [section specifically for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+Bu bölüm, yeni kullanıcılara yardım almak için kaynak bağlantıları sunmayı amaçlar. Buna, soruları netleştirebilen ve AAPS ile ilgili olağan sorunları çözebilen yeni ve deneyimli kullanıcılardan oluşan topluluk desteğine erişim de dahildir.
 
-## What are we going to build and install?
+#### [Klinisyenler için bölüm](../UsefulLinks/ClinicianGuideToAaps.md)
 
-This diagram provides an overview of the key components (both hardware and software) of the **AAPS** system:
+Bu, AAPS ve açık kaynaklı yapay pankreas teknolojisi hakkında daha fazla bilgi edinmek isteyen [klinisyenlere özel bir bölümdür](../UsefulLinks/ClinicianGuideToAaps.md). Giriş sayfasında [klinik ekibinizle nasıl konuşacağınıza](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) dair yönlendirmeler de vardır.
+
+## Neyi oluşturacağız ve kuracağız?
+
+Bu diyagram, **AAPS** sisteminin temel bileşenlerine (hem donanım hem yazılım) genel bir bakış sunar:
 
 ![preparing_overview](../images/preparing_images/AAPS_preparing_overview_01.png)
 
 
-In addition to the three basic hardware components (phone, pump, glucose sensor), we also need: 1) The **AAPS** app 2) A reporting server and 3) A continuous glucose monitor (CGM) app
+Üç temel donanım bileşenine (telefon, pompa, glikoz sensörü) ek olarak şunlara da ihtiyacımız var: 1) **AAPS** uygulaması 2) Bir raporlama sunucusu ve 3) Bir sürekli glikoz monitörü (CGM) uygulaması
 
-### 1) An Android Phone Application: **AAPS**
+### 1) Bir Android telefon uygulaması: **AAPS**
 
-**AAPS** is an app that runs on Android smartphones & devices. You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from GitHub, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. You will then transfer the **AAPS** app across to your smartphone (by email, USB cable _etc._) and install it.
+**AAPS**, Android akıllı telefonlarda & cihazlarda çalışan bir uygulamadır. Adım adım bir kılavuz kullanarak **AAPS** uygulamasını (bir apk dosyası) kendiniz oluşturacaksınız: **AAPS** kaynak kodunu GitHub'dan indirecek, gerekli programları (Android Studio, GitHub Desktop) bilgisayarınıza kuracak ve kendi **AAPS** uygulama kopyanızı oluşturacaksınız. Ardından **AAPS** uygulamasını akıllı telefonunuza (e-posta, USB kablosu _vb._ ile) aktarır ve kurarsınız.
 
-### 2) A reporting server: Nightscout (Tidepool*)
+### 2) Bir raporlama sunucusu: Nightscout (Tidepool*)
 
-In order to fully take advantage of **AAPS**, you need to set up a Nightscout server. You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout is used to collect data from **AAPS** over time and can generate detailed reports correlating CGM and insulin patterns. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. Attempting to analyze your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene. Tidepool is also available as an alternative to Nightscout.
+**AAPS**'ten tam olarak yararlanmak için bir Nightscout sunucusu kurmanız gerekir. Bunu [kendiniz yapabilir](https://nightscout.github.io/nightscout/new_user/#free-diy) veya küçük bir ücret ödeyerek sizin için kurulan bir [yönetilen Nightscout hizmeti](https://nightscout.github.io/#nightscout-as-a-service) kullanabilirsiniz. Nightscout, **AAPS**'ten zaman içinde veri toplamak için kullanılır ve CGM ile insülin örüntülerini ilişkilendiren ayrıntılı raporlar oluşturabilir. Bakım verenler, çocuklarının diyabet yönetimini takip etmek için Nightscout üzerinden **AAPS** uygulamasıyla uzaktan iletişim de kurabilir. Bu uzaktan iletişim özellikleri arasında glikoz ve insülin düzeylerinin gerçek zamanlı izlenmesi, uzaktan insülin bolusu (SMS ile) ve öğün bildirimi bulunur. Diyabet sonuçlarınızı CGM verilerine pompa verilerinden ayrı bakarak analiz etmeye çalışmak, sürücünün gözlerinin göremediği ve yolcunun ona çevreyi anlattığı bir araba kullanmaya benzer. Nightscout'a alternatif olarak Tidepool da kullanılabilir.
 
-### 3) CGM sensor app
+### 3) CGM sensör uygulaması
 
-Depending on your glucose sensor/CGM, you will need a compatible app for receiving glucose readings and sending them to **AAPS**. The different options are shown below and more information is given in the [compatible CGMs section](../Getting-Started/CompatiblesCgms.md):
+Glikoz sensörünüze/CGM'nize bağlı olarak, glikoz ölçümlerini almak ve **AAPS**'e göndermek için uyumlu bir uygulamaya ihtiyacınız olacak. Farklı seçenekler aşağıda gösterilmiştir. Daha fazla bilgiyi [uyumlu CGM'ler bölümünde](../Getting-Started/CompatiblesCgms.md) bulabilirsiniz:
 
 ![dexcom_options](../images/preparing_images/AAPS_connectivity_Dex_02.png) ![libre_options](../images/preparing_images/AAPSconnectivity_libre.png) ![eversense_options](../images/preparing_images/AAPS_connectivity_eversense.png)
 
-### Maintenance of the **AAPS** system
+### **AAPS** sisteminin bakımı
 
-Both **Nightscout** and **AAPS** must be updated approximately once a year, as improved versions are released. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Notification of these updates will be given on the Facebook groups and Discord servers. The release notes will make it clear what the scenario is. There are likely to be many people asking similar questions to you at update time, and you will have support for performing the updates.
+Geliştirilmiş sürümler yayımlandıkça hem **Nightscout** hem de **AAPS** yaklaşık yılda bir kez güncellenmelidir. Bazı durumlarda güncelleme ertelenebilir, bazı durumlarda ise güncelleme güçlü bir şekilde önerilir veya güvenlik için zorunlu kabul edilir. Bu güncellemeler Facebook gruplarında ve Discord sunucularında duyurulur. Sürüm notları durumun ne olduğunu açıkça belirtir. Güncelleme zamanında büyük olasılıkla sizinle benzer sorular soran pek çok kişi olacaktır ve güncellemeleri yaparken destek alacaksınız.
 
 (preparing-how-long-will-it-take)=
-## How long will it take to set everything up?
+## Her şeyi kurmak ne kadar sürer?
 
-As mentioned earlier, using **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
+Daha önce belirtildiği gibi, **AAPS** kullanmak, kendi zamanınızı ayırmanızı gerektiren bir “yolculuk” gibidir. Tek seferlik bir kurulum değildir. **AAPS**'i oluşturmak, **AAPS** ve **CGM** yazılımını kurup yapılandırmak ve **AAPS** ile açık döngüden hibrit kapalı döngüye geçmek için güncel tahmin toplamda yaklaşık 4 ila 6 aydır. Bu nedenle, hâlâ farklı bir insülin verme sistemi kullanıyor olsanız bile, **AAPS** uygulamasını oluşturmaya ve ilk görevleri tamamlamaya mümkün olan en kısa sürede öncelik vermeniz önerilir (5. göreve kadar sanal pompa kullanabilirsiniz).
 
-Some of the objectives require a given amount of days to pass to make sure you understand the new functionality. It is not possible to bypass this waiting time; these minimum waiting times have been set for your own safety.
+Bazı görevler, yeni işlevleri anladığınızdan emin olmak için belirli bir sayıda günün geçmesini gerektirir. Bu bekleme süresini atlamak mümkün değildir; bu minimum bekleme süreleri kendi güvenliğiniz için belirlenmiştir.
 
-Here is an approximate timeframe:
+Yaklaşık bir zaman çizelgesi:
 
-| Tasks                                                         |           Approx time            |
-| ------------------------------------------------------------- |:--------------------------------:|
-| Initial reading of the documentation                          |             1-2 days             |
-| Configuring GitHub to allow the browser build                 |            1-4 hours             |
-| Setting up a reporting server                                 |              1 hour              |
-| Installing a CGM app (xDrip, BYODA, …)                        |              1 hour              |
-| Configuring CGM → xDrip → AAPS initially                      |              1 hour              |
-| Configuring AAPS → pump initially                             |              1 hour              |
-| Configuring AAPS → Nightscout/Tidepool (reporting only)       |              1 hour              |
-| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers     |              1 hour              |
-| Objective 1: Setting up visualization and monitoring          |              1 hour              |
-| Objective 2: Learn how to control AAPS                        |             2 hours              |
-| Görev 3: Bilginizi kanıtlayın                                 |          Up to 14 days           |
-| Görev 4: Bir Açık döngüye başlamak                            |        Minimum of 7 days         |
-| Objective 5: Understanding your open loop                     |              7 days              |
-| Objective 6: Starting to close the loop (Low Glucose Suspend) |   Minimum of 5, up to 14 days    |
-| Objective 7: Tuning the closed loop                           |  Minimum of 1 day, up to 7 days  |
-| Objective 8: Adjust basals and ratios, enable Autosens        | Minimum of 7 days, up to 14 days |
-| Objective 9: Enabling Super Micro Bolus (SMB)                 |        Minimum of 28 days        |
-| Görev 10: Otomasyon                                           |        Minimum of 28 days        |
+| Yapılacak işler                                                         |        Yaklaşık süre         |
+| ----------------------------------------------------------------------- |:----------------------------:|
+| Dokümantasyonun ilk okunması                                            |           1-2 gün            |
+| GitHub'ı tarayıcıda oluşturmaya izin verecek şekilde yapılandırma       |           1-4 saat           |
+| Bir raporlama sunucusu kurma                                            |            1 hour            |
+| Bir CGM uygulaması kurma (xDrip, BYODA, …)                              |            1 hour            |
+| CGM → xDrip → AAPS ilk yapılandırması                                   |            1 hour            |
+| AAPS → pompa ilk yapılandırması                                         |            1 hour            |
+| AAPS → Nightscout/Tidepool yapılandırması (yalnızca raporlama)          |            1 hour            |
+| İsteğe bağlı: Nightscout ↔ **AAPS** & NSFollowers yapılandırması        |            1 hour            |
+| 1. Görev: Görselleştirme ve izlemeyi kurma                              |            1 hour            |
+| 2. Görev: AAPS'i kontrol etmeyi öğrenme                                 |            2 saat            |
+| Görev 3: Bilginizi kanıtlayın                                           |       En fazla 14 gün        |
+| 4. Görev: Açık döngüye başlama                                          |         En az 7 gün          |
+| 5. Görev: Açık döngünüzü anlama                                         |            7 gün             |
+| 6. Görev: Döngüyü kapatmaya başlama (Düşük Glikoz Duraklatma)           |   En az 5, en fazla 14 gün   |
+| 7. Görev: Kapalı döngüyü ayarlama                                       | En az 1 gün, en fazla 7 gün  |
+| 8. Görev: Bazalları ve oranları ayarlama, Otoduyarlılık'ı etkinleştirme | En az 7 gün, en fazla 14 gün |
+| 9. Görev: Süper Mikro Bolus'u (SMB) etkinleştirme                       |         En az 28 gün         |
+| 10. Görev: Otomasyon                                                    |         En az 28 gün         |
 
-Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
+**AAPS** tam olarak çalışır hale geldikten sonra da genel diyabet yönetiminizi iyileştirmek için ayarlarınıza düzenli olarak ince ayar yapmanız gerekecektir.
 
 ## Requirements
 
-### Medical considerations
+### Tıbbi konular
 
-In addition to the medical warnings in the [safety section](#preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
+[Güvenlik bölümündeki](#preparing-safety-first) tıbbi uyarılara ek olarak, pompada hangi insülini kullandığınıza bağlı olarak farklı parametreler de vardır.
 
-#### Insulin choice
+#### İnsülin seçimi
 
-**AAPS** calculations are based on insulin concentrations of 100U/ml (same as pump’s standard). You configure your insulin in **Manage → Insulin settings**: set its **Peak** and **DIA**, or use **Load peak from** to fill in the standard peak time of one of the presets:
+**AAPS** hesaplamaları 100 Ü/ml insülin konsantrasyonuna (pompanın standardı ile aynı) dayanır. İnsülininizi **Yönet → İnsülin ayarları** bölümünde yapılandırırsınız: **Tepe** ve **İES** değerlerini ayarlayın veya ön ayarlardan birinin standart tepe zamanını doldurmak için **Tepe değerini şuradan yükle** seçeneğini kullanın:
 
-- **Novorapid** (also for Humalog and NovoLog)
+- **Novorapid** (Humalog ve NovoLog için de)
 - **Fiasp**
 - **Lyumjev**
 
-Advanced users can enter any peak time (35 to 120 minutes) directly, for example for a mixture of insulins. See [Insulin settings](#Config-Builder-insulin).
+İleri düzey kullanıcılar, örneğin insülin karışımları için herhangi bir tepe zamanını (35 ila 120 dakika) doğrudan girebilir. Bkz. [İnsülin ayarları](#Config-Builder-insulin).
 
 
-### Technical
+### Teknik konular
 
-This documentation aims to reduce the technical expertise required to an absolute minimum. To build the **AAPS** app, you have several options — see [Building AAPS](../SettingUpAaps/BuildingAaps.md) for an overview:
+Bu dokümantasyon, gereken teknik bilgiyi en aza indirmeyi amaçlar. **AAPS** uygulamasını oluşturmak için birkaç seçeneğiniz var - genel bakış için [AAPS'i oluşturma](../SettingUpAaps/BuildingAaps.md) sayfasına bakın:
 
-- **Browser build** (recommended): build the app directly from your smartphone using GitHub Actions, with no computer or Android Studio required. With [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) you only need a GitHub account: you download the app directly from GitHub. The fork method also needs a Google account to store the app in your Google Drive.
-- **Android Studio build**: build the app on your computer using Android Studio. This is mostly used by developers who intend to make code changes.
-- **Command-line build**: for users who prefer to build locally without installing Android Studio.
+- **Tarayıcı ile oluşturma** (önerilir): bilgisayar veya Android Studio gerekmeden, GitHub Actions kullanarak uygulamayı doğrudan akıllı telefonunuzdan oluşturun. [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) ile yalnızca bir GitHub hesabına ihtiyacınız vardır: uygulamayı doğrudan GitHub'dan indirirsiniz. Fork yöntemi, uygulamayı Google Drive'ınızda saklamak için ayrıca bir Google hesabı gerektirir.
+- **Android Studio ile oluşturma**: uygulamayı bilgisayarınızda Android Studio kullanarak oluşturun. Bu yöntem çoğunlukla kodda değişiklik yapmak isteyen geliştiriciler tarafından kullanılır.
+- **Komut satırı ile oluşturma**: Android Studio kurmadan yerel olarak oluşturmayı tercih eden kullanıcılar için.
 
-Beyond building the app, you also need to set up a reporting server, configure several Android phone apps and develop expertise in diabetes management. This can be achieved by moving step-by-step, being patient, and with help from the **AAPS** community. If you are already able to navigate the internet and manage your own Gmail emails, building **AAPS** is a feasible task. Just take your time.
+Uygulamayı oluşturmanın ötesinde, bir raporlama sunucusu kurmanız, birkaç Android telefon uygulamasını yapılandırmanız ve diyabet yönetiminde uzmanlık kazanmanız da gerekir. Bunu adım adım ilerleyerek, sabırlı olarak ve **AAPS** topluluğunun yardımıyla başarabilirsiniz. İnternette gezinebiliyor ve kendi Gmail e-postalarınızı yönetebiliyorsanız, **AAPS**'i oluşturmak yapılabilir bir iştir. Acele etmeyin.
 
-### Smartphones
+### Akıllı telefonlar
 
-#### AAPS and Android Versions
+#### AAPS ve Android sürümleri
 
-The current version of **AAPS** (4.0) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), Android 16 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+**AAPS**'in güncel sürümü (4.0), Google **Android 12.0 veya üzeri** sürümlü bir Android akıllı telefon gerektirir. Yeni bir telefon almayı düşünüyorsanız (Ocak 2026 itibarıyla) Android 16 tercih edilir.<br/> Güvenlik nedeniyle kullanıcıların **AAPS** sürümlerini güncel tutmaları önemle tavsiye edilir. Ancak Android 12.0 veya daha yeni bir cihaz kullanamayan kullanıcılar için eski Android sürümleriyle uyumlu eski **AAPS** sürümleri hâlâ mevcuttur, bkz.: [Sürüm notları](#maintenance-android-version-aaps-version).
 
-#### Smartphone model choice
-The exact model you buy depends on the desired function(s). You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
+#### Akıllı telefon modeli seçimi
+Satın alacağınız model, istediğiniz işlev(ler)e bağlıdır. Çalışan kurulumlarla ilgili önerileri ve kullanıcı geri bildirimlerini [Telefonlar sayfasında](../Getting-Started/Phones.md) bulabilirsiniz.
 
-Users are encouraged to keep their phone Android version up-to-date, including with security parameters. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
+Kullanıcıların telefonlarının Android sürümünü, güvenlik güncellemeleri de dahil olmak üzere, güncel tutmaları önerilir. Ancak **AAPS**'te yeniyseniz veya teknik konularda uzman değilseniz, telefonunuzu güncellemeyi başkaları güncelleyip çeşitli forumlarımızda bunun güvenli olduğunu onaylayana kadar ertelemek isteyebilirsiniz.
 
 ```{admonition} Delaying Samsung phone updates
 :class: warning
-Samsung has an unfortunate track record of forcing updates on their phones, which can cause Bluetooth connectivity issues. To disable these forced updates, you need to switch the phone to "developer mode":
+Ne yazık ki Samsung'un telefonlarına zorla güncelleme yükleme geçmişi vardır. Bu güncellemeler Bluetooth bağlantı sorunlarına neden olabilir. Bu zorunlu güncellemeleri kapatmak için telefonu "geliştirici moduna" almanız gerekir:
 
-1. Go to **Settings** > **About phone** > **Software information**, then tap **Build number** until it confirms you have unlocked developer mode.
-2. Go back to the main **Settings** menu, where you should see a new **Developer options** menu item.
-3. Open **Developer options**, scroll to find **Auto system update**, and turn it off.
+1. **Settings** > **About phone** > **Software information** (Ayarlar › Telefon hakkında › Yazılım bilgileri) bölümüne gidin, ardından geliştirici modunun açıldığını onaylayana kadar **Build number** (Yapım numarası) öğesine dokunun.
+2. Ana **Settings** (Ayarlar) menüsüne geri dönün. Burada yeni bir **Developer options** (Geliştirici seçenekleri) menü öğesi görmelisiniz.
+3. **Developer options** (Geliştirici seçenekleri) menüsünü açın, **Auto system update** (Otomatik sistem güncellemesi) seçeneğini bulana kadar kaydırın ve kapatın.
 ```
 
 ```{admonition} Google Play Protect potential issue
 :class: warning
-There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. If this happens, you will have to go to the Google Play options and disable **Google Play Protect**. Not all phone models or all Android versions are affected.
+**AAPS**'in her sabah Google Play Protect tarafından keyfi olarak kapatıldığına dair birkaç bildirim olmuştur. Bu olursa Google Play seçeneklerine gidip **Google Play Protect**'i devre dışı bırakmanız gerekir. Tüm telefon modelleri veya tüm Android sürümleri etkilenmez.
 ```
 
 ```{admonition} Android developer verification
 :class: note
-From September 2026, Google is gradually introducing [Android developer verification](#android-developer-verification), which changes how a self-built app is installed on the phone. Building **AAPS** is not affected, and free installation methods remain available — see the linked page for details.
+Google, Eylül 2026'dan itibaren [Android geliştirici doğrulamasını](#android-developer-verification) kademeli olarak kullanıma sunuyor. Bu, kendi oluşturduğunuz bir uygulamanın telefona nasıl kurulacağını değiştirir. **AAPS**'i oluşturma bundan etkilenmez ve ücretsiz kurulum yöntemleri kullanılmaya devam eder - ayrıntılar için bağlantılı sayfaya bakın.
 ```
 

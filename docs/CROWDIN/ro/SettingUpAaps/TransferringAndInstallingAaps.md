@@ -2,7 +2,7 @@
 
 În secțiunea anterioară, [Construirea **AAPS**](../SettingUpAaps/BuildingAaps.md), ați construit aplicația AAPS</strong> **(care este un fișier apk) pe un computer.</p>
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip or another CGM receiver app) to your Android smartphone, and then **install** the app(s). Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
+The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip or another CGM receiver app) to your Android smartphone, and then **install** the app(s). După instalarea **AAPS** pe telefonul inteligent, veți putea trece la [**configurarea buclei AAPS**](../SettingUpAaps/SetupWizard.md).
 
 This page also explains [Android developer verification](#android-developer-verification), a change Google is rolling out from September 2026 that affects installing self-built apps, and the [free installation methods](#android-developer-verification-free-methods) that keep working after the change.
 
@@ -57,14 +57,14 @@ In case you get a security notice that you are not allowed to install apps from 
 
 After the installation finishes, you are done with this step.
 
-You should see the **AAPS** icon and be able to open the app.
+Ar trebui să vedeți pictograma **AAPS** și să puteți deschide aplicația.
 
 ```{warning}
 **NOTIFICAT DE SIGURANȚĂ**
 V-ați amintit să nu permiteți instalarea de pe Google Drive?
 ```
 
-Vă rugăm să continuați cu [Configurare buclă AAPS](../SettingUpAaps/SetupWizard.md).
+Vă rugăm să continuați cu [configurarea buclei AAPS](../SettingUpAaps/SetupWizard.md).
 
 ### Opțiunea 2. Utilizați un cablu USB pentru a transfera fișiere
 
@@ -80,7 +80,7 @@ Once you have transferred the file by dragging it across, open the "Downloads" f
 
 The first time, Android tells you that the phone is not allowed to install unknown apps from this source. Press "**Settings**":
 
-![Security notice for unknown apps](../images/install/install_02_unknown_apps_notice.png)
+![Notificare de securitate pentru aplicații necunoscute](../images/install/install_02_unknown_apps_notice.png)
 
 Enable "**Allow from this source**", then go back:
 
@@ -99,7 +99,7 @@ When the installation is finished, press "**Open**" to start **AAPS**, or "**Don
 Remember to disable "Allow from this source" again after the installation, as it is a security risk to leave it enabled all the time.
 ```
 
-Vă rugăm să continuați cu [Configurare buclă AAPS](../SettingUpAaps/SetupWizard.md).
+Vă rugăm să continuați cu [configurarea buclei AAPS](../SettingUpAaps/SetupWizard.md).
 
 (transferring-installing-play-protect-warning)=
 ## Google Play Protect warning
@@ -114,22 +114,22 @@ If the installation is **blocked** with a message about an unverified developer 
 
 (android-developer-verification)=
 
-## Android developer verification
+## Verificarea dezvoltatorilor Android
 
 Google is introducing **Android developer verification**: on most Android phones, apps will only install if they were registered with Google by a verified developer. This also applies to apps installed from an APK file ("sideloading") — which is how you install the **AAPS** app you built yourself.
 
-### What is changing
+### Ce se schimbă
 
-When you install **AAPS** on a phone with Google services (a "certified" Android device — virtually every phone sold with the Play Store), Android will check whether the app comes from a developer registered with Google. If not, the normal installation by tapping the APK file is blocked.
+Când instalați **AAPS** pe un telefon cu servicii Google (un dispozitiv Android „certificat” — practic orice telefon vândut cu Play Store), Android va verifica dacă aplicația provine de la un dezvoltator înregistrat la Google. If not, the normal installation by tapping the APK file is blocked.
 
 **The check happens when an app is installed or updated.** It does not remove apps that are already installed and running.
 
 Google is rolling this out gradually:
 
-| When               | What happens                                                                                                                              |
+| Când               | Ce se întâmplă                                                                                                                            |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | August 2026        | Free "limited distribution" developer accounts are open worldwide, and the "advanced flow" starts rolling out to phones                   |
-| September 30, 2026 | Verification is enforced in **Brazil, Indonesia, Singapore and Thailand**, for apps installed from Google Play and a few other app stores |
+| 30 septembrie 2026 | Verification is enforced in **Brazil, Indonesia, Singapore and Thailand**, for apps installed from Google Play and a few other app stores |
 | 2027               | Enforcement expands to the **rest of the world** and to **all installations**, including APK files                                        |
 
 Details are published by Google on the [Android developer verification](https://developer.android.com/developer-verification) pages, including a [FAQ](https://developer.android.com/developer-verification/guides/faq). Google may still adjust dates and details; this page will be updated as the rollout progresses.
@@ -146,11 +146,11 @@ Details are published by Google on the [Android developer verification](https://
 
 ## Free ways to install AAPS
 
-You do **not** need to pay Google anything to keep using **AAPS**. There are several free methods; pick the one that matches your situation.
+You do **not** need to pay Google anything to keep using **AAPS**. Există mai multe metode gratuite; alegeți-o pe cea care se potrivește situației dumneavoastră.
 
 ```{admonition} Which method should I use?
 :class: tip
-- You have a **computer** (whichever way you built **AAPS**): use [ADB](#android-developer-verification-adb) or, if you prefer to avoid the command line, the [web installer](#android-developer-verification-web). Both are exempt from verification, have no limits, and need no Google account.
+- Aveți un **computer** (indiferent cum ați construit **AAPS**): folosiți [ADB](#android-developer-verification-adb) sau, dacă preferați să evitați linia de comandă, [instalatorul web](#android-developer-verification-web). Ambele sunt scutite de verificare, nu au limite și nu necesită un cont Google.
 - You have **no computer at all**: use the [advanced flow](#android-developer-verification-advanced-flow) on your phone.
 - You prefer to register with Google so the normal "tap the APK" installation keeps working: a [free limited distribution account](#android-developer-verification-limited-account) exists, but it is untested with **AAPS**.
 ```
@@ -165,13 +165,13 @@ One-time preparation:
 
 1. On your phone, enable the hidden developer options: go to **Settings** > **About phone** (on some phones **Software information**) and tap **Build number** seven times, until the phone confirms you are a developer.
 1. Go back to the main **Settings**, open the new **Developer options** entry and enable **USB debugging**.
-1. On your computer, make sure ADB is available:
+1. Pe computer, asigurați-vă că ADB este disponibil:
    - If you use **Android Studio**, ADB is already installed with it.
    - Otherwise, download Google's free [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) and unzip the folder. No installation is needed; ADB is the `adb` program inside that folder.
 
 Installing (and later updating) **AAPS**:
 
-1. Connect the phone to the computer with a USB cable. There is no need to transfer the APK file to the phone first: ADB sends it straight from the computer.
+1. Conectați telefonul la computer cu un cablu USB. Nu este nevoie să transferați mai întâi fișierul APK pe telefon: ADB îl trimite direct de pe computer.
 1. On the phone, accept the **Allow USB debugging?** prompt (the first time only).
 1. On the computer, open a terminal (command prompt) in the folder containing ADB and the **AAPS** APK file, and run:
 
@@ -179,31 +179,31 @@ Installing (and later updating) **AAPS**:
    adb install -r app-full-release.apk
    ```
 
-   Replace `app-full-release.apk` with the actual name of your APK file. The `-r` option updates an already installed **AAPS** while keeping all its data and settings.
+   Înlocuiți `app-full-release.apk` cu numele real al fișierului dumneavoastră APK. The `-r` option updates an already installed **AAPS** while keeping all its data and settings.
 
-1. Wait for `Success` to be displayed. **AAPS** is now installed on your phone.
+1. Așteptați până când este afișat `Success`. **AAPS** este acum instalat pe telefonul dumneavoastră.
 
-The same command is used for every future update. The [Wear OS pages](../WearOS/WearOsSmartwatch.md) already use ADB in the same way to install the watch app.
+Aceeași comandă se folosește pentru fiecare actualizare viitoare. The [Wear OS pages](../WearOS/WearOsSmartwatch.md) already use ADB in the same way to install the watch app.
 
 If you would rather not use a cable: on Android 11 and later, **wireless debugging** (also under **Developer options**) can do the same over Wi-Fi, after a one-time pairing with a code shown on the phone.
 
 (android-developer-verification-web)=
 
-### Option 2: Install from a web page (computer, no command line)
+### Opțiunea 2: Instalare dintr-o pagină web (computer, fără linie de comandă)
 
-If the command line is not for you, a web page can do exactly what ADB does, directly from your browser. Because it talks to the phone through the same mechanism as ADB, it carries the **same exemption from verification** — but there is nothing to download, no folder to unzip and no command to type.
+Dacă linia de comandă nu este pentru dumneavoastră, o pagină web poate face exact ce face ADB, direct din browser. Because it talks to the phone through the same mechanism as ADB, it carries the **same exemption from verification** — but there is nothing to download, no folder to unzip and no command to type.
 
 This is the easiest route if you used the [browser build](#browser-build) and have never opened a command line.
 
 1. Enable **USB debugging** on the phone (steps 1 and 2 of the [ADB method](#android-developer-verification-adb) above — one-time setup).
 1. Open the **[AAPS web installer](#web-installer)** in your browser.
-1. Connect the phone with a USB cable and follow the instructions on the page: connect, choose your APK file, and install.
+1. Conectați telefonul cu un cablu USB și urmați instrucțiunile de pe pagină: conectați, alegeți fișierul APK și instalați.
 
 Three things to know:
 
 - It only works in **Chrome, Edge or Opera**. Firefox and Safari cannot talk to USB devices.
 - Only one program can use the phone's ADB connection at a time, so **close Android Studio** (or anything else that uses ADB) before connecting.
-- A web page connected this way gets full control of your phone. **Use only the address above**, from the **AAPS** documentation — never an installer page found through a search engine. The **AAPS** web installer runs entirely in your browser: your APK file is not uploaded anywhere.
+- O pagină web conectată în acest mod primește control complet asupra telefonului dumneavoastră. **Use only the address above**, from the **AAPS** documentation — never an installer page found through a search engine. The **AAPS** web installer runs entirely in your browser: your APK file is not uploaded anywhere.
 
 ```{admonition} No computer? A second phone works too
 :class: tip
@@ -217,19 +217,19 @@ The web installer also works from **Chrome on another Android phone** with a USB
 Google provides an escape hatch for experienced users who understand the risks of installing unverified apps, called the **advanced flow**. Google started rolling it out to phones in August 2026, ahead of enforcement, so you can set it up now. It is a one-time setup on the phone itself, which **takes 24 hours** to complete:
 
 1. Enable the hidden developer options (see step 1 of the ADB method above), then open **Settings** > **Developer options** > **Apps from unverified developers**.
-1. Turn on **Allow apps from unverified developers**. The phone asks for your screen lock to confirm it is you.
+1. Turn on **Allow apps from unverified developers**. Telefonul vă cere blocarea ecranului pentru a confirma că sunteți dumneavoastră.
 1. The phone asks whether someone is asking you to turn on this setting, and explains that banks, government agencies or police would never ask you to do so. Read the warning and confirm that nobody is pressuring or guiding you (this is a protection against scammers).
 1. **Restart your phone.** This starts a one-time **24-hour waiting period**.
 1. After 24 hours, go back to **Settings** > **Developer options** > **Apps from unverified developers** to finish the setup.
-1. Choose whether to allow unverified apps for **7 days** or **indefinitely**. For **AAPS**, choose **indefinitely**, otherwise your next update will be blocked once the 7 days have passed.
+1. Alegeți dacă permiteți aplicațiile neverificate timp de **7 zile** sau **pe termen nelimitat**. For **AAPS**, choose **indefinitely**, otherwise your next update will be blocked once the 7 days have passed.
 
 After this setup, installing or updating the **AAPS** APK works as it does today, with one extra warning that the app is from an unverified developer — tap **Install anyway**.
 
-Good to know:
+Bine de știut:
 
 - You can turn **Developer options** off again afterwards: the advanced flow stays enabled. Google also does not give apps (such as banking apps) any way to detect that the advanced flow is enabled.
-- If you turn the advanced flow off, installing **or updating** **AAPS** is blocked again (your installed **AAPS** keeps running). You have a 10-minute window to turn it back on; after that, the 24-hour waiting period starts again.
-- Changing the phone's clock does not shorten the waiting period, and ADB cannot skip it.
+- If you turn the advanced flow off, installing **or updating** **AAPS** is blocked again (your installed **AAPS** keeps running). Aveți la dispoziție 10 minute pentru a-l reactiva; după aceea, perioada de așteptare de 24 de ore începe din nou.
+- Schimbarea ceasului telefonului nu scurtează perioada de așteptare, iar ADB nu o poate sări.
 - Google states that your choice follows your Google account to your other devices, so a new phone should not mean another 24-hour wait.
 - If you cannot find **Apps from unverified developers** in the developer options, your phone has not received the feature yet. It is delivered by a system component called **Android Developer Verifier**, which Google is rolling out gradually through the Play Store. You can help it along by opening **Android Developer Verifier** in the Play Store.
 
@@ -239,7 +239,7 @@ Google describes this as a first version and may still change the screens and st
 
 (android-developer-verification-limited-account)=
 
-### Option 4: Register with Google (free limited distribution account)
+### Opțiunea 4: Înregistrare la Google (cont gratuit cu distribuție limitată)
 
 Google offers a **free** developer account type for hobbyists and personal use, called a **limited distribution account**, open to everyone since August 2026:
 
@@ -251,20 +251,20 @@ Google offers a **free** developer account type for hobbyists and personal use, 
 ```{warning}
 Google has not explained how registration works when many people build the same open-source app: every self-built **AAPS** uses the same package name (`info.nightscout.androidaps`) with a different signing key, and Google's FAQ states that a package name already in use by others cannot be claimed outright and requires an additional review. The outcome of such a review is unknown, and the paid developer account ($25 and a government ID) does not help here: paying only removes the 20-device cap, not the package name review.
 
-For this reason, step-by-step instructions cannot be written yet. This section will be completed once registration has been tested with **AAPS**. In the meantime, ADB, the web installer and the advanced flow above are reliable alternatives.
+For this reason, step-by-step instructions cannot be written yet. Această secțiune va fi completată după ce înregistrarea va fi testată cu **AAPS**. In the meantime, ADB, the web installer and the advanced flow above are reliable alternatives.
 ```
 
-## What does not change
+## Ce nu se schimbă
 
-- Building **AAPS** yourself, with any of the three [build methods](BuildingAaps.md).
+- Construirea **AAPS** de către dumneavoastră, cu oricare dintre cele trei [metode de construire](BuildingAaps.md).
 - Your GitHub account, your build repository (AAPS Builder) or fork, and your keystore.
-- Your installed **AAPS** app, your settings and your [objectives](CompletingTheObjectives.md).
-- Phones without Google services, and [ADB installations](#android-developer-verification-adb) in general.
+- Aplicația **AAPS** instalată, setările dumneavoastră și [obiectivele](CompletingTheObjectives.md).
+- Telefoanele fără servicii Google și, în general, [instalările cu ADB](#android-developer-verification-adb).
 
 ## Unde să obțineți ajutor
 
 1. **Read** Google's [developer verification FAQ](https://developer.android.com/developer-verification/guides/faq) for questions about the verification itself.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md), if an installation is blocked.
+2. **Întrebați** pe canalul *#AAPS* de pe [Discord](https://discord.gg/4fQUWHZ4Mw) sau pe unul dintre celelalte [canale ale comunității](../GettingHelp/WhereCanIGetHelp.md), dacă o instalare este blocată.
 3. When asking for help, include your phone make and model, Android version, your country, and the exact message displayed when the installation fails.
 
 ```{toctree}

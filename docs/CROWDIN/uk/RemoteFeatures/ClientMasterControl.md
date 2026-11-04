@@ -134,7 +134,7 @@ QR-код основного телефону можна відскануват�
 
 ```{admonition} Scanning is available on Android
 :class: note
-Сканер поки що недоступний на iOS, а комп'ютер не має камери: там використовуйте PIN.
+A computer without camera: use the PIN there.
 ```
 
 #### Введення PIN

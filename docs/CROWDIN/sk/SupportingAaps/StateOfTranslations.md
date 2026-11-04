@@ -1,16 +1,16 @@
-# State of translation for the app and the documentation
+# Stav prekladu aplikácie a dokumentácie
 
 Stav sa aktualizuje raz za hodinu a ukazuje len stav v Crowdine.
 
 ```{tip}
-Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
+Pozor: percento korektúry je vždy nižšie alebo rovnaké ako percento prekladov, ale Crowdin ho zobrazuje cez percento prekladov.
 Ak chcete zistiť, či je ešte potrebné niečo preložiť, pozerajte sa radšej len na percento prekladov.
 ```
 
 ```{admonition} needed time for final publication
 Po preklade v Crowdine sa každý deň spustí synchronizácia na GitHub, ktorá prenesie preklady na GitHub ako pull request (PR).
 
-The acceptance of the PR is a manual task which will be done as fast as possible.
+Prijatie PR je ručný krok a vykoná sa čo najrýchlejšie.
 ```
 
 ## stav prekladu aplikácie

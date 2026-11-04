@@ -5,17 +5,17 @@ Obě možnosti úložiště klíčů (možnost 1 i možnost 2) používají stej
 ````{admonition} Note
 :class: note
 
-1. Pokud tuto stránku otevřete uvnitř aplikace (ve webovém zobrazení), soubor HTML se nemusí stáhnout. Please copy the URL and open it in your browser instead:
+1. Pokud tuto stránku otevřete uvnitř aplikace (ve webovém zobrazení), soubor HTML se nemusí stáhnout. Zkopírujte místo toho adresu URL a otevřete ji ve svém prohlížeči:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-Or visit the latest release page:
+Nebo otevřete stránku nejnovějšího vydání:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2. Backup copy hosted on this site:
- - If the external link is also unavailable, you can use this backup file to download.
+2. Záložní kopie uložená na tomto webu:
+ - Pokud nefunguje ani externí odkaz, můžete soubor stáhnout z této záložní kopie.
 <!--crowdin:disable-->
 
 ```{eval-rst}

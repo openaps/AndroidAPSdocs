@@ -1,104 +1,104 @@
-# How to translate strings for the AAPS app or the documentation
+# Kaip versti AAPS programėlės arba dokumentacijos tekstus
 
-* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* Programėlės tekstams versti eikite į <https://crowdin.com/project/androidaps> ir prisijunkite su savo GitHub paskyra
+* Dokumentacijai versti apsilankykite <https://crowdin.com/project/androidapsdocs> ir prisijunkite su savo GitHub paskyra
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* Išsiųskite prašymą prisijungti prie dokumentacijos komandos. Norėdami tai padaryti, spauskite norimos kalbos vėliavą, o tada kito puslapio viršutiniame dešiniajame kampe spauskite mygtuką "Join" (prisijungti). Nurodykite kalbą, šiek tiek papasakokite apie save ir savo AAPS patirtį ir parašykite, ar norite būti vertėju, ar korektoriumi (korektoriais gali būti tik vertimo įgūdžių turintys ir patyrę AAPS naudotojai).
 
-```{admonition} Time for Approval :class: note
+```{admonition} Patvirtinimo laikas :class: note
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+Patvirtinimas atliekamas rankiniu būdu. Esame ne pelno organizacija, todėl negarantuojame atsakymo laiko (SLA), bet paprastai patvirtiname per < 1 dieną. Jei ne, susisiekite su dokumentacijos komanda per Facebook arba Discord.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](../images/translation_flags.png)
+    <br />* Kai jus patvirtinsime, spauskite vėliavą
+       ![Kai jus patvirtinsime, spauskite vėliavą](../images/translation_flags.png)
     
-    ## Translation of the app
+    ## Programėlės vertimas
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### AAPS programėlės tekstų vertimas
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * Jei neturite pageidavimų, kuriuos tekstus versti, tiesiog spauskite mygtuką "Translate All" (versti viską) ir pradėkite. Bus parodyti tekstai, kuriuos reikia išversti.
     
-       ![Click translate all](../images/translations-click-translate-all.png)
+       ![Spauskite Translate All](../images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Jei norite versti atskirą failą, suraskite jį per paieškos langą arba medžio struktūrą ir spauskite failo pavadinimą. Taip pradėsite versti to failo tekstus.
     
-       ![Click strings.xml](../images/translations-click-strings.png)
+       ![Spauskite strings.xml](../images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Verskite sakinius kairėje pusėje: įrašykite naują vertimą arba panaudokite ir pataisykite pasiūlymą
     
-       ![Translation app](../images/translations-translate.png)
-    
-    
-    ### Proofread strings for AAPS app
-    
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
-    
-       ![Proofreading mode app](../images/translations-proofreading-mode.png) 
+       ![Programėlės vertimas](../images/translations-translate.png)
     
     
-      and approve translated texts 
+    ### AAPS programėlės tekstų korektūra
     
-       ![approve text](../images/translations-proofreading.png)
+    * Korektoriai pradeda kalbos pradžios ekrane pasirinkdami "Proofread" (korektūra).
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+       ![Programėlės korektūros režimas](../images/translations-proofreading-mode.png)
+    
+    
+      ir patvirtina išverstus tekstus
+    
+       ![patvirtinti tekstą](../images/translations-proofreading.png)
+    
+    Kai korektorius patvirtina vertimą, jis įtraukiamas į kitą AAPS versiją.
     
     (translations-translation-of-the-documentation)=
-    ## Translation of the documentation
+    ## Dokumentacijos vertimas
     
-    * Click the name of the docs page you want to translate
+    * Spauskite dokumentacijos puslapio, kurį norite versti, pavadinimą
     
-    ![Click docs page](../images/translation_WikiPage.png)
+    ![Spauskite dokumentacijos puslapį](../images/translation_WikiPage.png)
     
     
-    * Translate sentences by sentence
+    * Verskite sakinį po sakinio
     
-        1. The yellow text is the text you are working at the moment.
+        1. Geltonas tekstas – tai tekstas, kurį šiuo metu verčiate.
     
-        1. The green text is already translated. You don't need to do this again.
+        1. Žalias tekstas jau išverstas. Jo dar kartą versti nereikia.
     
-        1. The red text is the remaining text which have to be translated.
+        1. Raudonas tekstas – tai likęs tekstas, kurį dar reikia išversti.
     
-        1. This is the source text you are working on at the moment
+        1. Tai šaltinio tekstas, kurį šiuo metu verčiate
     
-        1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
+        1. Tai vertimas, kurį rengiate. Galite nukopijuoti tekstą iš viršaus arba pasirinkti vieną iš žemiau esančių pasiūlymų.
     
-        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
-        1. Press the "save" button to save a proposal for the translation. It will then be passed to a proofreader for final check.
+        1. Tai vertimo pasiūlymai. Čia ypač matysite, kiek, Crowdin vertinimu, pasiūlymas tinka, arba ar tekstas jau buvo išverstas anksčiau ir vėl atsirado tik todėl, kad buvo perkeltas, o ne pakeistas.
+        1. Paspauskite mygtuką "save" (išsaugoti), kad išsaugotumėte vertimo pasiūlymą. Tada vertimą galutinai patikrins korektorius.
     
-    ![Translation docs](../images/translation_WikiTranslate.png)
+    ![Dokumentacijos vertimas](../images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * Išverstas puslapis dokumentacijoje nebus paskelbtas, kol
     
-        1. the translation is proofread
+        1. vertimą patikrino korektorius
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
+        1. baigėsi Crowdin ir GitHub sinchronizavimas (kartą per valandą), kuris sukuria PR GitHub sistemoje.
     
-        1. the PR in Github was approved.
+        1. Github sistemoje buvo patvirtintas PR.
     
-    In general this needs 1 - 3 days but might during holiday take a little bit longer.
+    Paprastai tai užtrunka 1–3 dienas, bet per atostogas gali užtrukti šiek tiek ilgiau.
     
-    ### Translating links
+    ### Nuorodų vertimas
     
-    ```{admonition} Links are not translated anymore
+    ```{admonition} Nuorodos nebeverčiamos
     :class: note
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Nuorodos nebeverčiamos. Anksčiau čia buvo atskiras skyrius, bet jo nebeliko: perėjus prie Markdown ir myst_parser, angliškame tekste aiškiai kuriame žymes (labels) ir automatiškai perkeliame jas į kitas kalbas.
     
     
 
-You are translating the text which represents the link. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
+Jūs verčiate tekstą, kuris rodomas kaip nuoroda. Būkite atsargūs ir **nepašalinkite** nuorodos, kurią žymi žymų pora `<0></0>` (arba kiti skaičiai, jei vienoje pastraipoje yra daugiau nuorodų).
 
-It's the proofreaders job to have a special look on this!
+Korektoriai turi į tai atkreipti ypatingą dėmesį!
 
-### Proofreading
+### Korektūra
 
-* Proofreaders have to switch to Proofreading mode
+* Korektoriai turi pereiti į korektūros režimą (Proofreading)
     
-    ![Proofreading mode docs](../images/translation_WikiProofreadingmode.png)
+    ![Dokumentacijos korektūros režimas](../images/translation_WikiProofreadingmode.png)
     
     and approve translated texts
     
-    ![approve text](../images/translations-proofreading.png)
+    ![patvirtinti tekstą](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. To speed up the process you can inform docs team about new translations.
+* Kai korektorius patvirtina vertimą, jis įtraukiamas į kitą dokumentacijos kūrimą (build). Jis vyksta ne pagal tvarkaraštį, o pagal poreikį, maždaug kartą per savaitę, išskyrus atostogų laikotarpį. Kad procesas vyktų greičiau, galite pranešti dokumentacijos komandai apie naujus vertimus.

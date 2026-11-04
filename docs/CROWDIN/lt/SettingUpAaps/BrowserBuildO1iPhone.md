@@ -1,19 +1,19 @@
 (aaps-ci-ios-ipad)=
 
-# Option 1 · iPhone / iPad – Generate a new keystore
+# 1 variantas · iPhone / iPad – Sugeneruokite naują raktų saugyklą
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on **iPhone / iPad** (iPad shown as an example).
+[1 variantas](BrowserBuildO1.md) (naujos raktų saugyklos generavimas) **iPhone / iPad** įrenginyje (pavyzdyje rodomas iPad).
 ```
 
-## 1. Download the preparation file
+## 1. Atsisiųskite paruošimo failą
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Open the preparation file and generate the keystore
+## 2. Atidarykite paruošimo failą ir sugeneruokite raktų saugyklą
 
-Compatible with iOS (using iPad as an example)
+Tinka iOS (pavyzdyje naudojamas iPad)
 <!--crowdin: exclude-->
 
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -30,4 +30,4 @@ Compatible with iOS (using iPad as an example)
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**Toliau: [3 žingsnis – Suteikite prieigą prie Google Drive](BrowserBuildGoogleDrive.md) →**

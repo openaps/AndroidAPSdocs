@@ -1,44 +1,44 @@
 # 혈당 데이터 평활화
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+**혈당** 데이터가 튀거나 잡음이 많으면 **AAPS**가 인슐린을 잘못 주입하여 고혈당이나 저혈당이 생길 수 있습니다. CGM에서 오류가 보이거나 데이터가 튄다면, 문제가 해결될 때까지 루프를 끄는 것이 중요합니다. CGM에 따라 이런 문제는 **AAPS**의 CGM 구성 때문일 수도 있고(아래에서 설명합니다), CGM 센서 부착 위치의 문제 때문일 수도 있습니다(이 경우 CGM 센서를 교체해야 할 수 있습니다).
 
-## Smoothing data within AAPS
+## AAPS 안에서 데이터 평활화하기
 
-**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
+**AAPS**는 CGM 앱이 아니라 **AAPS** 안에서 데이터를 평활화하는 옵션을 제공합니다. **메뉴**(☰)를 열고 [**구성**](../SettingUpAaps/ConfigBuilder.md)을 선택한 다음 **평활화**를 선택하십시오. 옵션은 네 가지이며 한 번에 하나만 활성화할 수 있습니다: **평활화 없음**, **지수 평활화**, **평균 평활화**, **Unscented Kalman Filter**.
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![구성 > 평활화](../images/v4/Configuration/configuration_smoothing.png)
 
 ### Exponential smoothing
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+일반적으로 처음에는 이 옵션을 권장합니다. 잡음을 가장 강하게 줄이고 가장 최근 값을 다시 계산하기 때문입니다. 다만 다른 특정 권장 사항은 아래 표를 참조하십시오.
 
 ### Average smoothing
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
+이 옵션은 이전에 일부 CGM 플랫폼에 구현되어 있던 역방향 평활화(back smoothing)와 비슷하게 작동합니다. 최근 혈당 값의 변화에 더 빠르게 반응하므로, 노이즈가 많은 CGM 데이터에 잘못 반응하기 쉽습니다.
 
-### No Smoothing
+### 평활화 없음
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+CGM 데이터가 **AAPS**로 전송되기 전에 수집 앱에서 이미 제대로 평활화되는 경우에만 이 옵션을 사용하십시오.
 
 ### Unscented Kalman Filter (UKF)
 
-This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+이 옵션은 통계 모델을 사용하여, 들어오는 측정값(잡음이 있을 수 있음)으로부터 실제 혈당 값과 그 변화 속도를 계속 추정합니다. 센서의 현재 잡음 수준에 자동으로 맞춥니다. 또한 갑자기 튀는 이상 측정값을 감지하여 버립니다. 지수 평활화와 평균 평활화보다 발전된 대안입니다. 고정된 방법 대신 센서의 변하는 잡음 수준에 맞춰 평활화가 스스로 조정되기를 원할 때 유용합니다.
 
 (smoothing-xdrip-dexcom-g6)=
 
-## Suggestions to use smoothing
+## 평활화 사용 권장 사항
 
-You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
+**평활화 변경** [자동화 동작](#automations-automation-action)을 사용하여 평활화 방법을 자동으로 바꿀 수도 있습니다. 예를 들어 센서 사용 기간에 따라 바꿀 수 있습니다.
 
-|               | Exponential |  Average  | No Smoothing |
-| ------------- |:-----------:|:---------:|:------------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended  |
-| G7/ONE+/Stelo |  If noisy   | If stable |              |
+|               |     지수     | Average | 평활화 없음 |
+| ------------- |:----------:|:-------:|:------:|
+| G5/G6/ONE     | 노이즈가 많은 경우 |         |   권장   |
+| G7/ONE+/Stelo | 노이즈가 많은 경우 | 안정적인 경우 |        |
 
-Libre sensors are noisy and can require smoothing. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Libre 센서는 잡음이 많아 평활화가 필요할 수 있습니다. xDrip 직접 연결이나 패치된 앱 데이터 소스(다른 앱에서 받는 경우, Juggluco 포함)를 사용할 때는 [앱 안에서 이미 평활화가 이루어집니다](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
-| -------------------- |:--------:|:------------:|:------------:|:-----------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.     |   Average    |       N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None     |   Average    |       None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.     |     N.A.     |       None        |
+| 센서 / 데이터 소스         | Juggluco | xDrip 직접 연결 | xDrip 브리지 | xDrip 패치된 앱 |
+| ------------------- |:--------:|:-----------:|:---------:|:-----------:|
+| Libre 1/14 days/Pro |  해당 없음   |    해당 없음    |  Average  |    해당 없음    |
+| Libre 2/2+ (EU)     | Average  |    None     |  Average  |    None     |
+| Libre 2/2+/3/3+     | Average  |    해당 없음    |   해당 없음   |    None     |

@@ -1,249 +1,249 @@
-# Remote control of AAPS
+# AAPS'in uzaktan kontrolü
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-There are four highly effective tools for remotely managing **AAPS**:
+**AAPS**'i uzaktan yönetmek için dört çok etkili araç vardır:
 
-1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower phone is Android; an iPhone version is in development) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
+1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower device is an Android phone or tablet, or a Windows, Mac or Linux computer; on an iPhone you [build the app yourself](#aapsclient-iphone)) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
 4) [Smartwatches](#RemoteControl_smartwatches) (Android)
 
-The first three are mostly appropriate for caregivers/parents, but smartwatches are very useful for caregivers/parents **and** for adults with diabetes themselves.
+İlk üçü çoğunlukla bakım verenler/ebeveynler için uygundur. Akıllı saatler ise hem bakım verenler/ebeveynler **hem de** diyabetli yetişkinlerin kendileri için çok faydalıdır.
 
 ![image](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
 (RemoteControl_SMS-Commands)=
 
-## 1) SMS Commands
+## 1) SMS Komutları
 
-See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Ayrı [SMS Komutları](../RemoteFeatures/SMSCommands.md) sayfasına bakın.
 
 (RemoteControl_aapsclient)=
 ## 2) AAPSClient
 
-**AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver the same screens and buttons to send commands remotely to **AAPS**:
+**AAPSClient** görünüş olarak **AAPS**'in kendisine çok benzer. Bakım verene, **AAPS**'e uzaktan komut göndermek için aynı ekranları ve düğmeleri sunar:
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![AAPSClient ana ekranı](../images/v4/AapsClient/aapsclient_home.png)
 
 (remotecontrol-aapsclient-versions)=
-### About AAPSClient, AAPSClient2 and AAPSClient3
+### AAPSClient, AAPSClient2 ve AAPSClient3 hakkında
 
-There are 3 versions of the client app: **AAPSClient**, **AAPSClient2** and **AAPSClient3**. They work the same way. The only difference is that they can be installed side by side on the same follower phone.
+İstemci uygulamasının 3 sürümü vardır: **AAPSClient**, **AAPSClient2** ve **AAPSClient3**. Hepsi aynı şekilde çalışır. Tek fark, aynı takipçi telefona yan yana yüklenebilmeleridir.
 
-A caregiver who follows one person needs only **AAPSClient**. To follow and remote control a second person (with their own **Nightscout** site and their own **AAPS** phone), install **AAPSClient2** as well, and **AAPSClient3** for a third person. Each app is set up and [paired](#aapsclient-pairing-with-the-master) on its own, with the **Nightscout** site and the **AAPS** phone of the person it follows.
+Bir kişiyi takip eden bakım verenin yalnızca **AAPSClient**'a ihtiyacı vardır. İkinci bir kişiyi (kendi **Nightscout** sitesi ve kendi **AAPS** telefonu olan) takip etmek ve uzaktan kontrol etmek için **AAPSClient2**'yi de yükleyin. Üçüncü bir kişi için de **AAPSClient3**'ü yükleyin. Her uygulama, takip ettiği kişinin **Nightscout** sitesi ve **AAPS** telefonuyla ayrı ayrı kurulur ve [eşleştirilir](#aapsclient-pairing-with-the-master).
 
-To tell the apps apart, some elements have a different color: yellow for **AAPSClient**, blue for **AAPSClient2** and green for **AAPSClient3**. Those elements are the app icon, the widget background, and the **AAPS** status section on the home screen of the app. <br/> Note: the opacity of the widget background can be set in the widget configuration. At a low opacity the color is hard to see.
+Uygulamaları birbirinden ayırmak için bazı öğelerin rengi farklıdır: **AAPSClient** için sarı, **AAPSClient2** için mavi ve **AAPSClient3** için yeşil. Bu öğeler uygulama simgesi, widget arka planı ve uygulamanın ana ekranındaki **AAPS** durum bölümüdür. <br/> Not: widget arka planının opaklığı widget yapılandırmasında ayarlanabilir. Opaklık düşükse renk zor görünür.
 
-![Widget and status section colors of AAPSClient, AAPSClient2 and AAPSClient3](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
+![AAPSClient, AAPSClient2 ve AAPSClient3'ün widget ve durum bölümü renkleri](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
 
-### Download and installation
+### İndirme ve yükleme
 
-**AAPSClient** can be installed on a single phone or multiple follower phones (i.e. parent 1’s follower phone and parent 2’s follower phone) in order for both caregivers to be granted access and remote control a patient's **AAPS** phone.
+**AAPSClient**, iki bakım verenin de bir hastanın **AAPS** telefonuna erişebilmesi ve onu uzaktan kontrol edebilmesi için tek bir telefona veya birden fazla takipçi telefona (ör. 1. ebeveynin ve 2. ebeveynin takipçi telefonu) yüklenebilir.
 
-To download **AAPSClient**, navigate to the [GitHub repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+**AAPSClient**'ı indirmek için [GitHub deposuna](https://github.com/nightscout/AndroidAPS/releases/) gidin ve şu dosyaya tıklayın: **“app-AAPSClient-release_x.x.x.x”** (aşağıdaki ekran görüntüsündekinden daha yeni bir sürüm olabilir):
 
 ![image](../images/remote_control_and_following/AAPSClient_download_02.png)
 
-Then go to  _downloads_ on your computer. On Windows, _downloads_ will show in the right hand ribbon:
+Ardından bilgisayarınızda _indirilenler_ klasörüne gidin. Windows'ta _indirilenler_ sağ taraftaki şeritte görünür:
 
 ![image](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
-Once downloaded, click _show in folder_ to locate the file.
+İndirme bittikten sonra dosyayı bulmak için _klasörde göster_ seçeneğine tıklayın.
 
-The **AAPSClient** apk can now be either:
+**AAPSClient** apk'sı artık şu yollardan biriyle aktarılabilir:
 
-Transferred by a USB cable onto the follower phone; or Dragged into Google drive folder, and then added onto the follower phone by clicking on the "app-AAPSClient-release" file.
+USB kablosuyla takipçi telefona aktarılabilir; veya Google Drive klasörüne sürüklenip ardından "app-AAPSClient-release" dosyasına tıklanarak takipçi telefona eklenebilir.
 
-Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the GitHub repository as described above. The reason is that you can't install both **AAPS** and **AAPSClient** on the same phone, signed by a different key. <br/> To build **AAPSClient** yourself, follow the same process as [regular AAPS build](../SettingUpAaps/BuildingAaps.md). On the **Generate signed App Bundle or APK** page, select **aapsclientRelease** instead of **fullRelease**.
+Kendiniz için **AAPS**'e ve başka birini izlemek için **AAPSClient**'a ihtiyacınız varsa, **AAPSClient**'ı yukarıda anlatıldığı gibi GitHub deposundan indirmek yerine kendiniz oluşturmanız gerekir. Bunun nedeni, farklı anahtarlarla imzalanmış **AAPS** ve **AAPSClient**'ı aynı telefona yükleyememenizdir. <br/> **AAPSClient**'ı kendiniz oluşturmak için [normal AAPS oluşturma](../SettingUpAaps/BuildingAaps.md) ile aynı işlemi izleyin. **Generate signed App Bundle or APK** sayfasında **fullRelease** yerine **aapsclientRelease** seçin.
 
-The same rule applies when you install several client apps (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) on one follower phone: they must all be signed with the **same key**. Otherwise Android refuses to install the second one (error `INSTALL_FAILED_DUPLICATE_PERMISSION`).
+Bir takipçi telefona birden fazla istemci uygulaması (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) yüklediğinizde de aynı kural geçerlidir: hepsi **aynı anahtarla** imzalanmalıdır. Aksi halde Android ikincisini yüklemeyi reddeder (hata `INSTALL_FAILED_DUPLICATE_PERMISSION`).
 
-### Synchronization: AAPSClient and AAPS set up
+### Senkronizasyon: AAPSClient ve AAPS kurulumu
 
-Once the __AAPSClient__ apk is installed on the follower phone, make sure **NSClientV3** is set up the same way on both phones for Nightscout 15 (see the [update notes](../Maintenance/UpdateToNewVersion.md)). The example below shows the synchronization set-up with NSClientV3 and Nightscout 15; other data sources are available in __AAPS__ (e.g. xDrip).
+__AAPSClient__ apk'sı takipçi telefona yüklendikten sonra, Nightscout 15 için **NSClientV3**'ün her iki telefonda da aynı şekilde ayarlandığından emin olun (bkz. [güncelleme notları](../Maintenance/UpdateToNewVersion.md)). Aşağıdaki örnek, NSClientV3 ve Nightscout 15 ile senkronizasyon kurulumunu gösterir. __AAPS__'te başka veri kaynakları da vardır (ör. xDrip).
 
-In **Configuration** > **Communication**, the user synchronizes their data with Nightscout through __NSClientV3__ (using the v3 API), set up the same way for both __AAPS__ and the follower phone.
+**Konfigürasyon** > **İletişim** bölümünde kullanıcı, verilerini __NSClientV3__ (v3 API) üzerinden Nightscout ile senkronize eder. Bu, hem __AAPS__ hem de takipçi telefonda aynı şekilde ayarlanır.
 
-![Configuration > Communication with NSClientV3 selected](../images/v4/Configuration/configuration_communication.png)
+![NSClientV3 seçili Konfigürasyon > İletişim](../images/v4/Configuration/configuration_communication.png)
 
-The user must ensure that __both__ the AAPS and AAPS Client phones are synched together by setting up NSClientV3 on each. On the follower phone this can be done by scanning a QR code shown by **AAPS** instead, see [Pairing AAPSClient with AAPS](#remotecontrol-pairing) below:
+Kullanıcı, her birinde NSClientV3'ü kurarak AAPS ve AAPSClient telefonlarının __ikisinin de__ birlikte senkronize olduğundan emin olmalıdır. Takipçi telefonda bunun yerine **AAPS**'in gösterdiği bir QR kodu taranabilir, aşağıdaki [AAPSClient'ı AAPS ile eşleştirme](#remotecontrol-pairing) bölümüne bakın:
 
-- Enter your **Nightscout URL** in the NSClientV3 **Settings**
+- NSClientV3 **Ayarlar** bölümüne **Nightscout URL** adresinizi girin
 
-- Enter your **Nightscout access token** in the same settings. Please follow the notes [here](https://nightscout.github.io/nightscout/security/#create-a-token). On the **AAPS** phone use an **admin token**: with it **AAPS** makes a token of its own for each follower phone.
+- Aynı ayarlarda **Nightscout erişim belirteci** alanına belirtecinizi girin. Lütfen [buradaki](https://nightscout.github.io/nightscout/security/#create-a-token) notları izleyin. **AAPS** telefonunda bir **yönetici belirteci** (admin token) kullanın: **AAPS** bununla her takipçi telefon için ayrı bir belirteç oluşturur.
 
-- Enable **Use websockets** on **both** phones. On the **AAPS** phone websockets are **required** for remote control: without them, **AAPS** cannot receive commands from **AAPSClient**. On both phones they also make synchronization faster, at the cost of slightly higher battery use.
+- **Her iki** telefonda da **Websocket'leri kullan** seçeneğini etkinleştirin. **AAPS** telefonunda websocket'ler uzaktan kontrol için **zorunludur**: bunlar olmadan **AAPS**, **AAPSClient**'tan komut alamaz. Her iki telefonda da senkronizasyonu hızlandırırlar, ancak pil kullanımı biraz artar.
 
-![Settings > NSClientV3 with Nightscout URL, Nightscout access token and Use websockets](../images/preferences/settings_nsclient.png)
+![Nightscout URL, Nightscout erişim belirteci ve Websocket'leri kullan ile Ayarlar > NSClientV3](../images/preferences/settings_nsclient.png)
 
 
-The user should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ in the **NSClientV3** screen of each phone. At this point **AAPSClient** follows **AAPS** (BG, treatments, profile), but it cannot control it yet: pair the two phones as described below.
+Kullanıcı, her iki telefonun **NSClientV3** ekranında hem __AAPSClient__ hem de __AAPS__ için ‘Bağlandı’ göründüğünden emin olmalıdır. Bu noktada **AAPSClient**, **AAPS**'i takip eder (KŞ, tedaviler, profil), ancak henüz kontrol edemez: iki telefonu aşağıda anlatıldığı gibi eşleştirin.
 
 (remotecontrol-pairing)=
-### Pairing AAPSClient with AAPS (remote control)
+### AAPSClient'ı AAPS ile eşleştirme (uzaktan kontrol)
 
-From **AAPS** version 4, **AAPSClient** controls **AAPS** through a secure, **paired** connection. Synchronization alone is not enough: until the phones are paired, **AAPSClient** only shows **Manage** with a view-only **Profile** and **Pair with master**.
+**AAPS** sürüm 4'ten itibaren **AAPSClient**, **AAPS**'i güvenli ve **eşleştirilmiş** bir bağlantı üzerinden kontrol eder. Yalnızca senkronizasyon yeterli değildir: telefonlar eşleştirilene kadar **AAPSClient** yalnızca **Yönet** ekranını gösterir; burada yalnızca görüntülenebilen **Profil** ve **Ana birimle eşleştir** vardır.
 
-1. On the **AAPS** phone, open **Manage → Authorized clients** and turn on **Allow client control** (it is off by default, and always on in Simple Mode).
-2. Tap **+**, enter a name for the follower phone, choose how it is set up and choose its **role**:
-   - **QR code: Nightscout and pairing** — **AAPS** shows a QR code that sets up Nightscout on the follower phone and pairs it, in one scan. This needs an admin token in the **AAPS** phone's NSClientV3 settings.
-   - **PIN** — for a follower phone without a camera, already connected to Nightscout: note the one-time **PIN** (valid for about two minutes).
-3. On the **AAPSClient** phone, scan the code (in the Setup Wizard, or **Manage → Pair with master → Scan QR code**), or open **Manage → Pair with master** and enter the PIN. Confirm.
+1. **AAPS** telefonunda **Yönet → Yetkili istemciler** bölümünü açın ve **İstemci kontrolüne izin ver** seçeneğini açın (varsayılan olarak kapalıdır, Basit modda her zaman açıktır).
+2. **+** düğmesine dokunun, takipçi telefon için bir ad girin, nasıl kurulacağını seçin ve **rolünü** seçin:
+   - **QR kodu: Nightscout ve eşleştirme** — **AAPS**, takipçi telefonda Nightscout'u kuran ve telefonu tek taramada eşleştiren bir QR kodu gösterir. Bunun için **AAPS** telefonunun NSClientV3 ayarlarında bir yönetici belirteci gerekir.
+   - **PIN** — kamerası olmayan ve zaten Nightscout'a bağlı bir takipçi telefon için: tek kullanımlık **PIN**'i not edin (yaklaşık iki dakika geçerlidir).
+3. **AAPSClient** telefonunda kodu tarayın (Kurulum Sihirbazında veya **Yönet → Ana birimle eşleştir → QR kodunu tarat** ile) ya da **Yönet → Ana birimle eşleştir** bölümünü açıp PIN'i girin. Onayla.
 
-The follower phone then appears as **Active** in the **Authorized clients** list, and **AAPSClient** shows **Treatments**, **Scenes** and **Manage**. The follower phone gets a Nightscout token of its own, with only the rights it needs. The full procedure, with screenshots and troubleshooting, is on [Master ↔ Client control](#client_master_master_setup).
+Takipçi telefon ardından **Yetkili istemciler** listesinde **Etkin** olarak görünür ve **AAPSClient** **Tedaviler**, **Senaryolar** ve **Yönet** ekranlarını gösterir. Takipçi telefon, yalnızca ihtiyaç duyduğu haklara sahip kendi Nightscout belirtecini alır. Ekran görüntüleri ve sorun gidermeyle birlikte tam yöntem [Ana birim ↔ İstemci kontrolü](#client_master_master_setup) sayfasındadır.
 
-Check that the set-up works: enter carbs on **AAPSClient**, confirm the amount shown, and check that the entry appears in **Treatments** on both phones.
+Kurulumun çalıştığını kontrol edin: **AAPSClient**'ta karbonhidrat girin, gösterilen miktarı onaylayın ve girişin her iki telefonda da **Tedaviler** içinde göründüğünü kontrol edin.
 
 (remotecontrol-nightscout-access-token)=
 
-### Troubleshooting 'Nightscout access token' configuration issues
+### 'Nightscout erişim belirteci' yapılandırma sorunlarını giderme
 
-The precise 'Nightscout access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not.
+'Nightscout erişim belirteci' yapılandırmasının ayrıntıları, Nightscout sağlayıcınızın ücretli barındırılan bir site olup olmamasına göre değişebilir.
 
-If you are struggling with **AAPS** to accept the 'Nightscout access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'Nightscout access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
+**AAPS**'in 'Nightscout erişim belirteci'ni kabul etmesinde zorlanıyorsanız ve ücretli barındırılan bir Nightscout sitesi kullanıyorsanız, 'Nightscout erişim belirteci' sorunlarını nasıl çözeceğinizi önce Nightscout sağlayıcınıza danışabilirsiniz. Aksi halde lütfen **AAPS** grubuna başvurun, ancak bunu yapmadan önce [buradaki](https://nightscout.github.io/nightscout/security/#create-a-token) notları doğru izlediğinizi tekrar kontrol edin.
 
-### What AAPSClient offers
+### AAPSClient'ın sundukları
 
-Once paired, **AAPSClient** offers the caregiver almost the same screens as **AAPS** itself:
+Eşleştirildikten sonra **AAPSClient**, bakım verene **AAPS**'in kendisiyle neredeyse aynı ekranları sunar:
 
-- **Treatments**: insulin bolus, carbs and the bolus wizard.
-- **Scenes**: start and stop [scenes](../DailyLifeWithAaps/Scenes.md).
-- **Manage**: profiles, insulin settings, temporary targets, QuickWizard, automation, food, site rotation, pairing and the running temp basal.
-- **Main menu**: treatments history, history browser, statistics, maintenance, configuration.
+- **Tedaviler**: insülin bolusu, karbonhidrat ve bolus sihirbazı.
+- **Senaryolar**: [senaryoları](../DailyLifeWithAaps/Scenes.md) başlatma ve durdurma.
+- **Yönet**: profiller, insülin ayarları, geçici hedefler, Hızlı Asistan, otomasyon, yiyecek, bölge rotasyonu, eşleştirme ve çalışan geçici bazal.
+- **Ana Menü**: tedavi geçmişi, geçmiş tarayıcısı, istatistikler, bakım, konfigürasyon.
 
-There is no pump and no objectives on **AAPSClient**. See [The AAPSClient app](AapsClient.md) for a detailed description.
+**AAPSClient**'ta pompa ve görevler yoktur. Ayrıntılı açıklama için [AAPSClient uygulaması](AapsClient.md) sayfasına bakın.
 
-**AAPSClient** lets the caregiver make most of the adjustments allowed directly in **AAPS**, **including insulin boluses**, remotely over the mobile or internet network. Every command is signed and sent through Nightscout to the **AAPS** phone, which checks it against its own data, caps it, shows you its own confirmation, and only then executes it. **AAPSClient** _can_ be much faster than [SMS Commands](../RemoteFeatures/SMSCommands.md), especially for commands that would need authentication.
+**AAPSClient**, bakım verenin **AAPS**'te doğrudan yapılabilen ayarlamaların çoğunu, **insülin bolusları dahil**, mobil ağ veya internet üzerinden uzaktan yapmasını sağlar. Her komut imzalanır ve Nightscout üzerinden **AAPS** telefonuna gönderilir. Telefon komutu kendi verileriyle karşılaştırır, sınırlar, size kendi onay ekranını gösterir ve ancak ondan sonra uygular. **AAPSClient**, özellikle kimlik doğrulama gerektiren komutlarda [SMS Komutları](../RemoteFeatures/SMSCommands.md)'ndan çok daha hızlı _olabilir_.
 
-Treatments entered in Nightscout by other means (for example the Nightscout website) are not applied while client control is on: **AAPS** is then in [hardened mode](#client-master-control-hardened-mode) and takes changes only from paired clients. With client control off, they are applied only if the matching **Receive** options are enabled in the [Synchronization section of NSClient preferences](#Preferences-nsclient-synchronization).
+Başka yollarla (örneğin Nightscout web sitesinden) Nightscout'a girilen tedaviler, istemci kontrolü açıkken uygulanmaz: **AAPS** bu durumda [güçlendirilmiş moddadır](#client-master-control-hardened-mode) ve değişiklikleri yalnızca eşleştirilmiş istemcilerden alır. İstemci kontrolü kapalıyken bunlar yalnızca [NSClient tercihlerinin Senkronizasyon bölümünde](#Preferences-nsclient-synchronization) ilgili **NS'den … al** seçenekleri etkinse uygulanır.
 
-Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc).
+**AAPSClient** ile uzaktan kontrol yalnızca senkronizasyonunuz iyi çalışıyorsa önerilir (_yani_ GH, GBO vb. kendiliğinden değişmesi gibi istenmeyen veri değişiklikleri görmüyorsanız).
 
-### AAPSClient with smartwatch options
+### Akıllı saat seçenekleriyle AAPSClient
 
-A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the caregiver's phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. This will show current BG and loop status. Once **AAPSClient** is paired with **AAPS**, the watch actions (including boluses, carbs, temp targets and profile changes) are relayed through **AAPSClient** to **AAPS**, which confirms and executes them: see [Wear OS on a client](#clientmastercontrol-wear-os-on-a-client). You can read more about Smartwatches [here](#remotecontrol-smartwatches).
+Akıllı saat, çocuklarda **AAPS**'i yönetmeye yardımcı olmak için çok faydalı bir araç olabilir. A couple of different configurations are possible. **AAPSClient** bakım verenin telefonunda yüklüyse, [**AAPSClient WearOS** uygulaması](https://github.com/nightscout/AndroidAPS/releases/) indirilip ebeveynin telefonuna bağlı uyumlu bir akıllı saate yüklenebilir. Bu, güncel KŞ ve döngü durumunu gösterir. **AAPSClient**, **AAPS** ile eşleştirildikten sonra saat eylemleri (bolus, karbonhidrat, geçici hedef ve profil değişiklikleri dahil) **AAPSClient** üzerinden **AAPS**'e iletilir, o da bunları onaylar ve uygular: bkz. [İstemcide Wear OS](#clientmastercontrol-wear-os-on-a-client). Akıllı saatler hakkında daha fazlasını [burada](#remotecontrol-smartwatches) okuyabilirsiniz.
 
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#RemoteControl_aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
+Nightscout'un “bulutta” bir sunucu olmasının yanı sıra, doğrudan iPhone'unuzdaki App Store'dan indirilebilen özel bir **Nightscout** uygulaması da vardır. Android takipçi telefonunuz varsa, özel bir Nightscout uygulaması yoktur ve [**AAPSClient**](#RemoteControl_aapsclient) kullanmak daha iyidir. Yalnızca takip etmek istiyor ve tedavi göndermek istemiyorsanız Play Store'dan [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) uygulamasını indirip yükleyebilirsiniz.
 
-Once you have installed the **Nightscout** app on your iPhone, open the app and follow the set-up prompts, entering your Nightscout address (see below, left). The form of this may vary depending on how your Nightscout is hosted. (_e.g._ http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (see below, right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app:
+**Nightscout** uygulamasını iPhone'unuza yükledikten sonra uygulamayı açın ve kurulum adımlarını izleyerek Nightscout adresinizi girin (aşağıda, solda). Bu adresin biçimi, Nightscout'unuzun nerede barındırıldığına göre değişebilir. (_ör._ http://youraddresshere.herokuapp.com). Ardından Nightscout API secret'ınızı girin (aşağıda, sağda). API parolası sorulmazsa, uygulamanın üst kısmındaki asma kilide tıklayarak bunu girmeniz gerekir:
 
 ![image](../images/remote-control-24.png)
 
-More info on setup is available directly from [Nightscout](https://nightscout.github.io/nightscout/discover/)
+Kurulum hakkında daha fazla bilgi doğrudan [Nightscout](https://nightscout.github.io/nightscout/discover/) sayfasında bulunabilir
 
-When you first log in, you will have a very simple display. Customize the display options, by selecting the “hamburger” in the top right and scrolling down:
+İlk girişte çok basit bir ekran görürsünüz. Sağ üstteki “hamburger” menüsünü seçip aşağı kaydırarak görüntüleme seçeneklerini özelleştirin:
 
 ![image](../images/remote-control-25.png)
 
-Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up.
+“Settings” (Ayarlar) bölümüne kadar aşağı kaydırın. KŞ gösteriminde varsayılan ölçek logaritmik olduğundan “scale” (ölçek) ayarını “linear” (doğrusal) yapmak isteyebilirsiniz. Pompa bazalının görünmesi için “render basal” altında “default” seçin.
 
 ![image](../images/remote-control-25b.png)
 
-Select your desired options. Uncheck alarms if you use an alternative app for alarms.
+İstediğiniz seçenekleri seçin. Alarmlar için başka bir uygulama kullanıyorsanız alarmların işaretini kaldırın.
 
 ![image](../images/remote-control-26.png)
 
-Continue to scroll down until you get to “show plugins”.
+“show plugins” bölümüne gelene kadar aşağı kaydırmaya devam edin.
 
-You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS).
+“careportal” seçeneğinin işaretli olduğundan emin olmanız gerekir. Başka çeşitli ölçümleri de seçebilirsiniz (en faydalıları: IOB, care portal, pump, cannula age, insulin age, basal profile ve OpenAPS).
 
-Importantly, you now need to click “save” at the bottom for these changes to take effect.
+Önemli: bu değişikliklerin geçerli olması için şimdi en alttaki “save” (kaydet) düğmesine tıklamanız gerekir.
 
 ![image](../images/remote-control-27.png)
 
-After pressing “save” the app will return to your main Nightscout screen which will look a little like this:
+“save” düğmesine bastıktan sonra uygulama ana Nightscout ekranınıza döner. Ekran aşağı yukarı şöyle görünür:
 
-1. Current glucose value
-2. Information on AAPS system status - touch the individual tabs on the screen to display more detail. Add or remove these display options using hamburger menu.
-3. Recent glucose trace with treatments (carbs, boluses) displayed
-4. Longer-term glucose trace
-5. "Hamburger" menu for setting display options, generating reports, editing profiles and Nightscout admin tools
-6. "**+**" menu for entering treatments (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies them).
-7. Select different time period to display
-8. Basal insulin profile
-9. Green line = historical glucose Blue lines = predicted glucose
+1. Güncel glikoz değeri
+2. AAPS sistem durumu bilgileri - daha fazla ayrıntı görmek için ekrandaki sekmelere tek tek dokunun. Bu görüntüleme seçeneklerini hamburger menüsünden ekleyin veya kaldırın.
+3. Tedavilerle (karbonhidrat, bolus) birlikte son glikoz eğrisi
+4. Daha uzun süreli glikoz eğrisi
+5. Görüntüleme seçeneklerini ayarlamak, rapor oluşturmak, profilleri düzenlemek ve Nightscout yönetici araçları için "hamburger" menüsü
+6. Tedavi girmek için "**+**" menüsü (**AAPS**'in bunları ne zaman uyguladığı için [aşağıya](#RemoteControl_nightscout-treatments) bakın).
+7. Gösterilecek farklı bir zaman aralığı seçin
+8. Bazal insülin profili
+9. Yeşil çizgi = geçmiş glikoz Mavi çizgiler = tahmin edilen glikoz
 
 ![image](../images/remote-control-28.png)
 
-Looking in more detail at the top left menu of the Nightscout app:
+Nightscout uygulamasının sol üst menüsüne daha ayrıntılı bakalım:
 
-1. Careportal retrospective edit
-2. Turn on/off alarms
-3. Hamburger - for setting preferences
-4. Careportal - Log treatment (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies these)
+1. Careportal ile geriye dönük düzenleme
+2. Alarmları aç/kapat
+3. Hamburger - tercihleri ayarlamak için
+4. Careportal - Tedavi kaydı (**AAPS**'in bunları ne zaman uyguladığı için [aşağıya](#RemoteControl_nightscout-treatments) bakın)
 
-![Nightscout top bar](../images/remote-control-29.png)
+![Nightscout üst çubuğu](../images/remote-control-29.png)
 
-There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
+Bu ekrandaki gri sekmelerde **AAPS** sisteminin durumu hakkında çok fazla bilgi vardır (bir sekmeye dokunursanız daha da fazla bilgi görünür):
 
-1. 5min glucose trend
-2. Bolus wizard preview
-3. Press on Basal to see your current profile and basal information
-4. Time since latest CGM reading in AAPS
-5. **Pump**: insulin, battery % and when AAPS last connected to it
-6. Last time AAPS refreshed - if this is longer than 5 mins it can indicate a connection issue between AAPS phone and pump/CGM
-7. Press on IOB to see split of basal and bolus insulin
-8. Insulin age in reservoir
+1. 5 dakikalık glikoz eğilimi
+2. Bolus sihirbazı önizlemesi
+3. Güncel profilinizi ve bazal bilgilerinizi görmek için Basal'a basın
+4. AAPS'teki son CGM ölçümünden bu yana geçen süre
+5. **Pompa**: insülin, pil yüzdesi ve AAPS'in pompaya en son ne zaman bağlandığı
+6. AAPS'in son yenileme zamanı - bu süre 5 dakikadan uzunsa AAPS telefonu ile pompa/CGM arasında bağlantı sorunu olabilir
+7. Bazal ve bolus insülin dağılımını görmek için IOB'ye basın
+8. Rezervuardaki insülinin yaşı
 9. Kanül yaşı
-10. Battery status of AAPS phone
-11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
+10. AAPS telefonunun pil durumu
+11. Veritabanınızın boyutu. Çok dolarsa (yalnızca kendi kurduğunuz Nightscout'ta; barındırma hizmetlerinde bunu dikkate almayın) bağlantı sorunları yaşamaya başlayabilirsiniz. Bu sayıyı küçültmek için Admin tools menüsünden (hamburger menüsü üzerinden) veri silebilirsiniz.
 
 ![image](../images/remote-control-30.png)
 
 ![image](../images/remote-control-31.png)
 
-Press "refresh" at the bottom of the page to close the popup.
+Açılır pencereyi kapatmak için sayfanın altındaki "refresh" düğmesine basın.
 
 (RemoteControl_nightscout-treatments)=
-### Sending treatments through the Nightscout app to AAPS
+### Nightscout uygulaması üzerinden AAPS'e tedavi gönderme
 
-In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed by the client, then checked and confirmed by the **AAPS** phone. While client control is on, the **AAPS** phone is in [hardened mode](#client-master-control-hardened-mode): treatments, temporary targets and profile switches entered on the Nightscout website or in the Nightscout app are **not** applied. The Nightscout app is then a tool for following only.
+**AAPS** 4'te **AAPS**'i uzaktan kontrol etmenin desteklenen yolu **eşleştirilmiş bir AAPSClient**'tır, bkz. [Ana birim ↔ İstemci kontrolü](#client-master-control): her istemcinin ne yapabileceğini sınırlayan bir [rolü](#client-master-control-roles) vardır ve her komut istemci tarafından imzalanır, ardından **AAPS** telefonu tarafından kontrol edilir ve onaylanır. İstemci kontrolü açıkken **AAPS** telefonu [güçlendirilmiş moddadır](#client-master-control-hardened-mode): Nightscout web sitesinde veya Nightscout uygulamasında girilen tedaviler, geçici hedefler ve profil değişimleri **uygulanmaz**. Nightscout uygulaması bu durumda yalnızca takip için bir araçtır.
 
 ```{admonition} Only when client control is off
 :class: warning
-If **Allow client control** is off in **Manage → Authorized clients** (and Simple Mode is off), **AAPS** applies careportal entries from Nightscout only for the data types you turned on under **Receive** in the [Synchronization section of the NSClientV3 settings](#Preferences-nsclient-synchronization): carbs, temporary targets, profile switches and the other careportal entries. Insulin is never delivered this way: a "Correction bolus" entered in Nightscout is only *announced*, and **AAPS** counts it as insulin on board without delivering it. This set-up is not recommended for remote control; use a paired **AAPSClient** instead.
+**Yönet → Yetkili istemciler** içinde **İstemci kontrolüne izin ver** kapalıysa (ve Basit mod da kapalıysa), **AAPS** Nightscout'tan gelen careportal girişlerini yalnızca [NSClientV3 ayarlarının Senkronizasyon bölümünde](#Preferences-nsclient-synchronization) **NS'den … al** seçenekleriyle açtığınız veri türleri için uygular: karbonhidratlar, geçici hedefler, profil değişimleri ve diğer careportal girişleri. İnsülin bu yolla asla verilmez: Nightscout'ta girilen bir "Correction bolus" (düzeltme bolusu) yalnızca *bildirilir*; **AAPS** bunu vermeden aktif insülin (AİNS) olarak sayar. Bu kurulum uzaktan kontrol için önerilmez; bunun yerine eşleştirilmiş bir **AAPSClient** kullanın.
 ```
 
-Read more about **Nightscout** options [here](https://nightscout.github.io/)
+**Nightscout** seçenekleri hakkında daha fazlasını [burada](https://nightscout.github.io/) okuyun
 
-### Tips for getting the most out of the Nightscout app
+### Nightscout uygulamasından en iyi şekilde yararlanmak için ipuçları
 
-1). If you get “stuck” on a page and want to be able to see the main screen again, just click “refresh” (bottom middle) and this will take you back to the **Nightscout** homepage with the BG graph.
+1). Bir sayfada “takılırsanız” ve ana ekranı tekrar görmek isterseniz, “refresh” (yenile) düğmesine (alt ortada) tıklamanız yeterlidir. Bu sizi KŞ grafiğinin olduğu **Nightscout** ana sayfasına geri götürür.
 
-To see the current profile which is running on the phone, press the various icons on the screen above the graph. More info (current carb ratio, sensitivity and timezone etc.) can be seen by pressing “basal” and “OpenAPS” gives info about the profile and current target etc. Both the phone battery% and the pump battery % can also be monitored. BWP gives information on what the algorithm thinks will happen in the future, given the IOB and COB.
+Telefonda çalışan güncel profili görmek için grafiğin üstündeki çeşitli simgelere basın. “basal” düğmesine basarak daha fazla bilgi (güncel karbonhidrat oranı, duyarlılık, saat dilimi vb.) görülebilir. “OpenAPS” ise profil, güncel hedef vb. hakkında bilgi verir. Telefonun pil yüzdesi ve pompanın pil yüzdesi de izlenebilir. BWP, AİNS ve AKRB'ye göre algoritmanın gelecekte ne olacağını düşündüğünü gösterir.
 
-#### Other icons in the menu: what does the pencil (edit) mean?
+#### Menüdeki diğer simgeler: kalem (düzenleme) ne anlama geliyor?
 
-You can (technically) use the edit pencil to move or delete bolus or correction treatments from the last 48h.
+Düzenleme kalemini (teknik olarak) son 48 saatteki bolus veya düzeltme tedavilerini taşımak ya da silmek için kullanabilirsiniz.
 
-More about this [here](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
+Bu konuda daha fazlası [burada](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
 
-Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn’t currently work well with **AAPS** and we recommend making changes like this via the **AAPS** app directly.
+Bu, bildirilmiş (ama bolusu yapılmamış) karbonhidratları silmek için faydalı olabilir. Ancak pratikte şu anda **AAPS** ile iyi çalışmıyor. Bu tür değişiklikleri doğrudan **AAPS** uygulamasında yapmanızı öneririz.
 
 (RemoteControl_smartwatches)= (remotecontrol-smartwatches)=
 
-## 4) Smartwatches
+## 4) Akıllı saatler
 
-### Option 1) Controlling AAPS from a Wear OS Watch
+### Seçenek 1) AAPS'i bir Wear OS saatinden kontrol etme
 
-![Wear Remote 1](../images/Wear_Remote1.png)
+![Wear uzaktan kontrol 1](../images/Wear_Remote1.png)
 
-Once you have [setup **AAPS** on your watch](../WearOS/BuildingAapsWearOS.md), extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
+[Saatinizde **AAPS**'i kurduktan](../WearOS/BuildingAapsWearOS.md) sonra, akıllı saat arayüzleri ve işlevleri hakkında ayrıntılı bilgileri [Wear AAPS'in akıllı saatte kullanımı](../WearOS/WearOsSmartwatch.md) sayfasında bulabilirsiniz.
 
-As a brief overview, the following functions can be triggered from the smartwatch:
+Kısaca, akıllı saatten şu işlevler başlatılabilir:
 
-* set a temporary target
+* geçici hedef ayarlama
 
-* use the bolus calculator (calculation variables can be defined in settings on the phone)
+* bolus hesaplayıcıyı kullanma (hesaplama değişkenleri telefondaki ayarlarda tanımlanabilir)
 
-* administer eCarbs
+* yKarb girme
 
-* administer a bolus (insulin + carbs)
+* bolus yapma (insülin + karbonhidrat)
 
 * watch settings
 
@@ -253,46 +253,46 @@ As a brief overview, the following functions can be triggered from the smartwatc
 
 * check loop status
 
-* check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+* profili kontrol etme ve değiştirme, CPP (Sirkadiyen Yüzde Profili = zaman kaydırma + yüzde)
 
-* show TDD (Total daily dose = bolus + basal per day)
+* GTD'yi gösterme (Günlük Toplam Doz = günlük bolus + bazal)
 
-* Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to the network)
+* Bakım veren ile tip 1 diyabetli çocuk farklı yerlerdeyken uzaktan bolus (her iki cihaz da ağa bağlı olduğu sürece **AAPS** saati ve **AAPS** telefonu için mümkündür)
 
-#### Communication from caregivers to the watch using other apps (like WhatsApp)
+#### Bakım verenlerden saate başka uygulamalarla (WhatsApp gibi) iletişim
 
-It is possible to add additional apps to the watch, like WhatsApp, for messaging (for example) between caregivers and kids. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. You need to be 13 or older to have a Samsung account, and this needs to be set up in the same email address which is used on the Android phone.
+Saate WhatsApp gibi başka uygulamalar eklemek mümkündür, örneğin bakım verenler ile çocuklar arasında mesajlaşma için. Telefona bağlı yalnızca BİR Google hesabı olması önemlidir; aksi halde saat bu verileri almaz. Samsung hesabı açmak için 13 yaşında veya daha büyük olmanız gerekir. Bu hesap, Android telefonda kullanılan e-posta adresiyle açılmalıdır.
 
-A video explaining getting WhatsApp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of WhatsApp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
+Galaxy 4 saatte mesajlaşma için WhatsApp kurulumunu anlatan bir video [burada](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/) gösterilmektedir (WhatsApp'ın tüm işlevlerini kullanamazsınız)
 
-Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for WhatsApp messages to announce with a slight vibration, and also for the WhatsApp message to display over the existing watchface.
+Hem **AAPS** telefonundaki **Galaxy wearable** uygulamasında hem de saatte ayar yapıldığında, WhatsApp mesajları hafif bir titreşimle bildirilebilir ve mesaj mevcut saat arayüzünün üzerinde görünebilir.
 
-### Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
+### Seçenek 2) Telefondaki **AAPS**'i uzaktan kontrol etmek için saatte **AAPS**
 
-Similarly to using a follower phone with **AAPSClient** or SMS commands (see the sections above), a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via Bluetooth and needs neither Nightscout nor an authentication code. As a side-note, if both smartwatch and **AAPS** phone linked by Bluetooth are also on a Wi-Fi/Cellular data network, the watch will also interact with the **AAPS** phone, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations, which can be useful in circumstances where the T1D child is in school.
+**AAPSClient** veya SMS komutlarıyla takipçi telefon kullanımına benzer şekilde (yukarıdaki bölümlere bakın), akıllı saat de **AAPS**'i uzaktan kontrol etmek ve tam profil verisi sağlamak için kullanılabilir. Takipçi telefon kullanımından önemli bir fark şudur: akıllı saat ile **AAPS** telefonu arasındaki bağlantı Bluetooth üzerindendir ve ne Nightscout ne de kimlik doğrulama kodu gerektirir. Ek bir not: Bluetooth ile bağlı akıllı saat ve **AAPS** telefonu ayrıca bir Wi-Fi/mobil veri ağındaysa, saat **AAPS** telefonuyla bu ağ üzerinden de iletişim kurar ve iletişim mesafesi uzar. Buna, **AAPS** saati olan bakım veren ile (**AAPS** telefonu olan) tip 1 diyabetli çocuk farklı yerlerdeyken uzaktan bolus yapmak da dahildir. Bu, örneğin çocuk okuldayken faydalı olabilir.
 
-A remote control smartwatch is therefore often useful in any situation where:
+Bu nedenle uzaktan kontrol yapabilen bir akıllı saat, şu durumlarda genellikle faydalıdır:
 
-a)  **AAPSClient** or **SMS** commands cannot work; or
+a)  **AAPSClient** veya **SMS** komutları çalışamıyorsa; veya
 
-b)  The user wishes to avoid typing an authentication code (as required for SMS commands).
+b)  Kullanıcı kimlik doğrulama kodu yazmak istemiyorsa (SMS komutlarında gerektiği gibi).
 
-A smartwatch needs **Wear OS 3 or newer** to be able to control **AAPS**. Please check the technical specifications of the watch, and see the [Smartwatches page](../Getting-Started/Watches.md). Search, or ask in the **AAPS** Facebook/Discord groups if unsure.
+Bir akıllı saatin **AAPS**'i kontrol edebilmesi için **Wear OS 3 veya daha yenisi** gerekir. Lütfen saatin teknik özelliklerini kontrol edin ve [Akıllı saatler sayfasına](../Getting-Started/Watches.md) bakın. Emin değilseniz arama yapın veya **AAPS** Facebook/Discord gruplarında sorun.
 
-Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Watch 4 (40mm) are given below. The [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) watch is also a popular choice. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community.
+Popüler Samsung Galaxy Watch 4 (40mm) üzerinde **AAPS** kurulumu için özel adım adım kılavuzlar aşağıda verilmiştir. [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) saat de popüler bir seçimdir. Başkaları için faydalı olacağını düşündüğünüz farklı bir akıllı saati kurma deneyiminiz varsa, bulgularınızı daha geniş **AAPS** topluluğuyla paylaşmak için lütfen bunu bu sayfalara ekleyin: [dokümantasyonu düzenleyin](../SupportingAaps/HowToEditTheDocs.md).
 
-### Option 3) AAPSClient on a watch for remote control of **AAPS** on a phone
+### Seçenek 3) Telefondaki **AAPS**'i uzaktan kontrol etmek için saatte AAPSClient
 
-![Wear Remote 2](../images/Wear_Remote2.png)
+![Wear uzaktan kontrol 2](../images/Wear_Remote2.png)
 
-The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
+Saat yazılımı olan **AAPSClient** Wear apk'sı, doğrudan [GitHub](https://github.com/nightscout/AndroidAPS/releases/) üzerinden indirilebilir.
 
-To download the software, click on the watch app that matches the client app on the phone: **wear-aapsclient-release_**_version_ goes with **AAPSClient**, **wear-aapsclient2-release_**_version_ goes with **AAPSClient2** (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)):
+Yazılımı indirmek için telefondaki istemci uygulamasına uyan saat uygulamasına tıklayın: **wear-aapsclient-release_**_sürüm_, **AAPSClient** ile; **wear-aapsclient2-release_**_sürüm_, **AAPSClient2** ile kullanılır (bkz. [AAPSClient, AAPSClient2 ve AAPSClient3 hakkında](#remotecontrol-aapsclient-versions)):
 
 ![image](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
 
 
-Then "save as" and save the file to a convenient location on your computer:
+Ardından "save as" (farklı kaydet) seçin ve dosyayı bilgisayarınızda uygun bir yere kaydedin:
 
 
 ![image](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
@@ -302,7 +302,7 @@ Then "save as" and save the file to a convenient location on your computer:
 
 
 
-The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
+**AAPSClient** wear apk'sı telefonunuza aktarılabilir ve **AAPS** Wear uygulamasıyla aynı şekilde saate yüklenebilir. Ayrıntılar: [Wear uygulamasını AAPS telefonunuza aktarma](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
 
 
 

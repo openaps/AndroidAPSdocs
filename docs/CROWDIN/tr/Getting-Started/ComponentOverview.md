@@ -1,89 +1,89 @@
 # Bileşenlere Genel Bakış
 
-**AAPS** is not just a (self-built) application; it is one of several modules of your closed loop system. Before deciding on components, it is a good idea to look at the component documentation.
+**AAPS** yalnızca (kendi oluşturduğunuz) bir uygulama değildir; kapalı döngü sisteminizin birkaç modülünden biridir. Bileşenlere karar vermeden önce bileşenlerin dokümantasyonuna bakmak iyi bir fikirdir.
 
-![Components overview](../images/modules.png)
+![Bileşenlere genel bakış](../images/modules.png)
 
 ```{admonition} IMPORTANT SAFETY NOTICE
 :class: important
 
-The foundation of **AAPS** safety features discussed in this documentation is built on the safety features of the hardware used to build your system. For closing an automated insulin dosing loop, it is critically important that you only use an insulin pump and CGM that are tested, fully functioning and approved by the official instances of your country. Bu bileşenlerin donanımında veya yazılımında yapılan değişiklikler, beklenmeyen insülin iletimine ve dolayısıyla kullanıcı için önemli risklere yol açabilir. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, **do not use** these for creating an **AAPS** system.
+Bu dokümantasyonda anlatılan **AAPS** güvenlik özelliklerinin temeli, sisteminizi kurmak için kullanılan donanımın güvenlik özelliklerine dayanır. Otomatik insülin dozlama döngüsünü kapatmak için yalnızca test edilmiş, tam olarak çalışan ve ülkenizin resmi kurumlarınca onaylanmış bir insülin pompası ve CGM kullanmanız son derece önemlidir. Bu bileşenlerin donanımında veya yazılımında yapılan değişiklikler, beklenmeyen insülin iletimine ve dolayısıyla kullanıcı için önemli risklere yol açabilir. Bozuk, değiştirilmiş veya kendi yapımı insülin pompaları ya da CGM alıcıları bulursanız veya size önerilirse, bunları bir **AAPS** sistemi kurmak için **kullanmayın**.
 
 Ek olarak, sadece orijinal aksesuarların kullanılması da bir o kadar önemlidir. Yerleştirme yardımcıları, kanüller ve rezervuarlar, pompanız veya CGM ile kullanım için üretici tarafından onaylanmalıdır. Test edilmemiş veya modifiye edilmiş aksesuarların kullanılması, CGM Sisteminin yanlış olmasına ve insülin iletim hatalarına neden olabilir. Yanlış dozda insülin çok tehlikelidir. Test edilmemiş veya modifiye edilmiş aksesuarlar kullanarak hayatınız ile oynamayın.
 
-Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. Kan Şekerini artırmak için bazal oranları düşüren bir sistemle kombinasyon tehlikelidir. Çünkü gliflozin nedeniyle Kan Şekerindeki bu artış gerçekleşmeyebilir ve tehlikeli bir insülin eksikliği durumu meydana gelerek ketoasidoza sebep olabilir. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
+Son olarak, SGLT-2 inhibitörleri (gliflozinler) kullanmamalısınız, çünkü bunlar kan şekerini önceden hesaplanamayacak şekilde düşürür. KŞ'yi yükseltmek için bazal oranları düşüren bir sistemle birlikte kullanım özellikle tehlikelidir. Çünkü gliflozin nedeniyle KŞ bu şekilde yükselmeyebilir ve tehlikeli bir insülin eksikliği durumu oluşabilir. [Daha fazla bilgi burada](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
 ## Gerekli Modüller
 
 ### Diyabet tedaviniz için iyi bir kişisel dozaj algoritması
 
-Even though this is not something to create or buy, it is probably the most underestimated 'module' — but it is essential. When you let an algorithm help manage your diabetes, it needs to know the right settings so it does not make severe mistakes. Even if you are still missing other modules, you can already verify and adapt your **Profile** in collaboration with your diabetes team.
+Bu, oluşturulacak veya satın alınacak bir şey olmasa da büyük olasılıkla en çok hafife alınan 'modüldür' — ama çok önemlidir. Diyabetinizi yönetmek için bir algoritmadan yardım aldığınızda, algoritmanın ciddi hatalar yapmaması için doğru ayarları bilmesi gerekir. Diğer modüller henüz eksik olsa bile, **Profil**inizi diyabet ekibinizle birlikte şimdiden kontrol edebilir ve ayarlayabilirsiniz.
 
-The **Profile** includes:
+**Profil** şunları içerir:
 
-- BR (Basal rates): provides background insulin;
-- ISF (insulin sensitivity factor): how much your blood glucose level will be reduced by 1 unit of insulin;
-- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin.
+- BR (bazal oranlar): arka plan insülinini sağlar;
+- İDF (insülin duyarlılık faktörü): 1 ünite insülinin kan şekerinizi ne kadar düşüreceğini gösterir;
+- CR (karbonhidrat oranı): bir ünite insülinin kaç gram karbonhidratı karşıladığını gösterir.
 
 Çoğu looper, gün boyunca hormonal insülin duyarlılığına dayanan sirkadiyen (günlük) Bazal Oran, İDF ve Karbonhidrat Oranı kullanır.
 
-Alongside your **Profile**, you also need to configure your **insulin** in **Manage → Insulin settings**, including its DIA (duration of insulin action) — see [Insulin settings](#Config-Builder-insulin-dia).
+**Profil**inizin yanında **insülininizi** de **Yönet → İnsülin ayarları** içinde, İES'si (insülin etki süresi) dahil olarak yapılandırmanız gerekir — bkz. [İnsülin ayarları](#Config-Builder-insulin-dia).
 
-More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
+**Profil**iniz hakkında daha fazla bilgi [ayrı sayfasında](../SettingUpAaps/YourAapsProfile.md) bulunur.
 
 ### Telefon
 
-See the dedicated page [Phones](../Getting-Started/Phones.md).
+Ayrı sayfaya bakın: [Telefonlar](../Getting-Started/Phones.md).
 
 ### İnsülin pompası
 
-See the dedicated page [Compatible Pumps](../Getting-Started/CompatiblePumps.md).
+Ayrı sayfaya bakın: [Uyumlu pompalar](../Getting-Started/CompatiblePumps.md).
 
-**Advantages and disadvantages of some pump models**
+**Bazı pompa modellerinin avantajları ve dezavantajları**
 
-The Combo, the Insight and the older Medtronic are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. And the battery is a default one you can buy at any gas station, 24-hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+Combo, Insight ve eski Medtronic sağlam pompalardır ve döngüde kullanılabilir. Combo, standart bir Luer-Lock bağlantısı olduğu için çok daha fazla infüzyon seti türü arasından seçim yapma avantajına sahiptir. Pili de standart bir pildir. Her benzin istasyonunda veya 24 saat açık markette satın alabilirsiniz. Gerçekten gerekirse otel odasındaki kumandadan çalabilir/ödünç alabilirsiniz ;-).
 
-The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
+Bununla birlikte, tercih edilen pompa olarak DanaR/RS ve Dana-i'nin Combo'ya karşı avantajları şunlardır:
 
 - Dana-i/RS ile ilk eşleştirme daha kolaydır. Ancak bunu genellikle yalnızca bir kez yaparsınız, bu nedenle yalnızca yeni bir özelliği farklı pompalarla test etmek istediğinizde etki eder.
-- Şimdiye kadar Combo, ekran ayrıştırma ile çalışıyor. Genel olarak harika çalışıyor ama yavaş. Döngü için bu çok önemli değil çünkü her şey arka planda çalışıyor. Still there is much more time you need to be connected so more time when the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
-- Combo, GBO'larin sonunda titrer, DanaR, SMB'de titrer (veya bip sesi çıkarır). At nighttime, you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable so that it does neither beep nor vibrate.
-- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon as some CGM values are in.
-- All pumps **AAPS** can talk with are waterproof on delivery. Sızdırmaz pil bölmesi ve rezervuar doldurma sistemi sayesinde yalnızca Dana pompaları "garanti kapsamında su geçirmezdir".
+- Şimdiye kadar Combo, ekran ayrıştırma ile çalışıyor. Genel olarak harika çalışıyor ama yavaş. Döngü için bu çok önemli değil çünkü her şey arka planda çalışıyor. Yine de bağlı kalmanız gereken süre çok daha uzundur. Bu yüzden Bluetooth bağlantısının kopabileceği süre de daha uzundur. Bolus verirken & yemek yaparken telefonunuzdan uzaklaşırsanız bu kolay değildir.
+- Combo, GBO'ların sonunda titrer, DanaR ise SMB'de titrer (veya bip sesi çıkarır). Geceleri büyük olasılıkla SMB'den çok GBO kullanırsınız.  Dana-i/RS, ne bip sesi çıkaracak ne de titreyecek şekilde ayarlanabilir.
+- Dana-i/RS'deki geçmişin karbonhidratlarla birlikte birkaç saniyede okunabilmesi sayesinde, çevrimdışıyken telefonu kolayca değiştirebilir ve birkaç CGM değeri gelir gelmez döngüye devam edebilirsiniz.
+- **AAPS**'in iletişim kurabildiği tüm pompalar teslim edildiğinde su geçirmezdir. Sızdırmaz pil bölmesi ve rezervuar doldurma sistemi sayesinde yalnızca Dana pompaları "garanti kapsamında su geçirmezdir".
 
 ### KŞ kaynağı
 
-See the dedicated page [Compatible CGMs](../Getting-Started/CompatiblesCgms.md).
+Ayrı sayfaya bakın: [Uyumlu CGM'ler](../Getting-Started/CompatiblesCgms.md).
 
-### **AAPS**-.apk file
+### **AAPS**-.apk dosyası
 
-The main component of the system. In order to install the app, you have to build the apk-file yourself first. Instructions are [here](../SettingUpAaps/BuildingAaps.md).
+Sistemin ana bileşeni. Uygulamayı yüklemek için önce apk dosyasını kendiniz oluşturmanız gerekir. Talimatlar [burada](../SettingUpAaps/BuildingAaps.md).
 
-### Reporting server
+### Raporlama sunucusu
 
-A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS: [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
+Raporlama sunucusu glikoz ve tedavi verilerinizi gösterir ve ayrıntılı analiz için raporlar oluşturur. Şu anda AAPS ile kullanılabilen iki raporlama sunucusu vardır: [Nightscout](#SettingUpTheReportingServer-nightscout) ve [Tidepool](#SettingUpTheReportingServer-tidepool). İkisi de diyabet verilerinizi zaman içinde görselleştirmenin yollarını sunar, **hedef aralıktaki süre** (TIR) ve diğer ölçümler hakkında istatistikler verir.
 
-The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set one up, as it is required to fulfill [**Objective 1**](#objectives-objective1).
+Raporlama sunucusu diğer modüllerden bağımsızdır. Bir raporlama sunucusu kullanmak istemiyorsanız, bunun **AAPS**'i uzun süre çalıştırmak için zorunlu olmadığını bilmelisiniz. Ancak yine de bir tane kurmanız gerekir, çünkü [**1. Görev**](#objectives-objective1) için gereklidir.
 
-Additional information on how to set up your reporting server can be found [here](../SettingUpAaps/SettingUpTheReportingServer.md).
+Raporlama sunucunuzu nasıl kuracağınızla ilgili ek bilgileri [burada](../SettingUpAaps/SettingUpTheReportingServer.md) bulabilirsiniz.
 
 ## Opsiyonel Modüller
 
 ### Akıllı saat
 
-You can choose any smartwatch running **Wear OS 3** or newer. See [Watches](../Getting-Started/Watches.md) for details.
+**Wear OS 3** veya daha yeni bir sürümle çalışan herhangi bir akıllı saati seçebilirsiniz. Ayrıntılar için [Akıllı saatler](../Getting-Started/Watches.md) sayfasına bakın.
 
-Users are creating a [list of tested phones and watches](#Phones-list-of-tested-phones). There are different watchfaces for use with **AAPS**, which you can find [here](../WearOS/WearOsSmartwatch.md).
+Kullanıcılar bir [test edilmiş telefonlar ve saatler listesi](#Phones-list-of-tested-phones) oluşturuyor. **AAPS** ile kullanılabilecek farklı saat arayüzleri vardır. Bunları [burada](../WearOS/WearOsSmartwatch.md) bulabilirsiniz.
 
 ### xDrip
 
-Even if you don't need the xDrip app as your **BG Source**, you can still use it, for example for alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when an alarm should be active, choose whether it can override silent mode, etc. Some xDrip information can be found [here](../CompatibleCgms/xDrip.md). Please be aware that the documentation for this app is not always up to date, as it changes quickly.
+xDrip uygulamasına **KŞ kaynağı** olarak ihtiyacınız olmasa bile, onu yine de kullanabilirsiniz, örneğin alarmlar veya farklı bir kan şekeri gösterimi için. İstediğiniz kadar alarm kurabilir, bir alarmın ne zaman etkin olacağını belirleyebilir, sessiz modu geçersiz kılıp kılamayacağını seçebilirsiniz vb. xDrip hakkında bazı bilgileri [burada](../CompatibleCgms/xDrip.md) bulabilirsiniz. Bu uygulama hızlı değiştiği için dokümantasyonunun her zaman güncel olmadığını unutmayın.
 
 ## Modülleri beklerken yapılması gerekenler
 
-It sometimes takes a while to get all the modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
+Döngüyü kapatmak için gereken tüm modülleri edinmek bazen biraz zaman alır. Ama merak etmeyin, beklerken yapabileceğiniz çok şey var. Bazal oranları (BR), insülin-karbonhidrat oranını (IC), insülin duyarlılık faktörlerini (İDF) vb. kontrol etmek ve (gerekirse) ayarlamak **gereklidir**. Belki açık döngü de sistemi test etmek ve **AAPS**'i tanımak için iyi bir yol olabilir. Bu modda **AAPS**, elle uygulayabileceğiniz tedavi önerileri verir.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../UsefulLinks/BackgroundReading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Buradaki dokümanları okumaya devam edebilir, diğer döngü kullanıcılarıyla çevrimiçi veya yüz yüze iletişim kurabilir, dokümanları veya diğer döngü kullanıcılarının yazdıklarını [okuyabilirsiniz](../UsefulLinks/BackgroundReading.md) (yine de dikkatli olun: her şey doğru değildir veya sizin için uygun olmayabilir).
 
-**Done?** If you have your **AAPS** components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective, and set up your hardware.
+**Bitti mi?** **AAPS** bileşenlerinizin hepsi hazırsa (tebrikler!) veya en azından açık döngü modunda başlamaya yetecek kadarı varsa, her yeni Görevden önce [Görev açıklamasını](../SettingUpAaps/CompletingTheObjectives.md) okumalı ve donanımınızı kurmalısınız.

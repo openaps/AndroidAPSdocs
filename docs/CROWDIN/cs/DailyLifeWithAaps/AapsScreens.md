@@ -131,7 +131,7 @@ Po každém výběru je potřeba potvrzení.
 
 Musíte zjistit, proč dostáváte duplicitní hodnoty glykémie:
 
-* Máte na svém webu Nightscout zapnutý Dexcom bridge? Vypněte bridge v administraci své instance Nightscout: upravte proměnnou "enable" a odstraňte z ní část "bridge". (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Máte na svém webu Nightscout zapnutý Dexcom bridge? Vypněte bridge v administraci své instance Nightscout: upravte proměnnou "enable" a odstraňte z ní část "bridge". (Pro Heroku [najdete podrobnosti zde](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Nahrává vaši glykémii do Nightscoutu více zdrojů? Pokud používáte aplikaci BYODA, povolte nahrávání v **AAPS**, ale nepovolujte ho v xDripu, pokud ho používáte.
 * Máte sledující, kteří vaši glykémii přijímají, ale zároveň ji znovu nahrávají do vašeho Nightscoutu?
 * Poslední možnost: v [nastavení NSClient](#Preferences-nsclient) vyberte nastavení Synchronizace a vypněte volbu „Přijímat data CGM z NS“.
@@ -247,7 +247,7 @@ Pokud dojde k dosažení prahové hodnoty, zobrazí se hodnoty žlutě.
 
 Pokud dojde k dosažení kritické prahové hodnoty, hodnoty se zobrazí červeně.
 
-The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+Stáří se vždy zobrazuje ve zkrácené podobě, bez ohledu na velikost obrazovky: *4h* v první den, později *3d4h*.
 
 Meze můžete změnit malou ikonou **Nastavení**, která se zobrazí, když je stavový řádek **rozbalený** (šipka vpravo) – viz [Stavové indikátory](#Preferences-status-lights).
 
@@ -308,11 +308,11 @@ Stejně to funguje i v [doplňkových grafech](#aaps-screens-additional-graphs) 
 
 (aaps-screens-graph-clock-change)=
 
-#### Clock changes
+#### Změny času
 
-When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+Když se čas v telefonu skokově změnil, při přechodu na letní nebo zimní čas nebo v novém časovém pásmu, označí tento okamžik v grafu glykémie čárkovaná svislá čára s malou ikonou hodin u své paty. Stejná čárkovaná čára prochází i [doplňkovými grafy](#aaps-screens-additional-graphs) níže.
 
-![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
+![Značka změny času: čárkovaná čára s ikonou hodin vedle čáry „teď“](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -342,7 +342,7 @@ Když je **PRED** zapnuté, kreslí AAPS své predikce jako **tečkované čáry
 
 Když dvě predikce dávají stejné hodnoty, jejich tečky se překrývají a vidíte jen jednu z barev (například UAM přes IOB, když je glykémie stabilní).
 
-* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
+* Křivka **COB** (oranžová): [zbývající sacharidy](CobCalculation.md) (oranžová se v celém AAPS používá pro COB a sacharidy)
     
     Tato predikční křivka ukazuje, kam se bude ubírat vaše glykémie (ne samotný COB!) podle aktuálního nastavení **profilu**, za předpokladu, že odchylky způsobené vstřebáváním sacharidů zůstanou stejné. Tato linka se zobrazí pouze v případě, že je známý COB.
 
@@ -364,7 +364,7 @@ Když dvě predikce dávají stejné hodnoty, jejich tečky se překrývají a v
 
 * Křivka **aCOB** (bledá, průhledná oranžová): zrychlené vstřebávání sacharidů
     
-    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Zastaralé a jen málo užitečné.
+    Podobně jako COB, ale předpokládá pevnou rychlost vstřebávání sacharidů 10 mg/dl/5 min (0,555 mmol/l/5 min). Zastaralé a jen málo užitečné.
     
     *Tato křivka se zobrazí jen tehdy, když používáte starší algoritmus [AMA](#Config-Builder-aps).*
 
@@ -469,7 +469,7 @@ Ukazuje citlivost vypočtenou funkcí [DynamicISF](../DailyLifeWithAaps/DynamicI
 
 Tato data mohou být k dispozici, když používáte [chytré hodinky s Wear OS](../WearOS/WearOsSmartwatch.md). Povolte je v aplikaci **AAPS** Wear a udělte oprávnění k údajům o zdraví.
 
-Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+Kroky se kreslí jako sloupce a tepová frekvence jako zakřivená čára, která se přeruší tam, kde hodinky neposlaly žádná data.
 
 #### Odchylky (ODCH)
 
@@ -485,7 +485,7 @@ Tato čára ukazuje, jak moc by glykémie „měla“ stoupat nebo klesat jen po
 
 ![Odchylky a BGI](../images/main/graph_dev_bgi.png)
 
-Je dobré zobrazit tuto čáru spolu se sloupci odchylek. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Porovnání čáry BGI a sloupců odchylek je další způsob, jak pochopit, jak **glykémie** kolísá. Zde v čase označeném **1** jsou sloupce odchylek vysoko nad čarou BGI: glykémie stoupá víc, než vysvětluje samotná aktivita inzulínu (například po sacharidech). V čase označeném **2** jsou sloupce odchylek pod nulou (červené): glykémie je nižší, než algoritmus očekával.
+Je dobré zobrazit tuto čáru spolu se sloupci odchylek. Mají stejné měřítko, ale jiné než ostatní volitelná data, proto je dobré je zobrazit v samostatném grafu, jak je ukázáno výše. Porovnání čáry BGI a sloupců odchylek je další způsob, jak pochopit, jak **glykémie** kolísá. Zde v čase označeném **1** jsou sloupce odchylek vysoko nad čarou BGI: glykémie stoupá víc, než vysvětluje samotná aktivita inzulínu (například po sacharidech). V čase označeném **2** jsou sloupce odchylek pod nulou (červené): glykémie je nižší, než algoritmus očekával.
 
 ### Část F – Panel nástrojů QuickLaunch
 
@@ -507,13 +507,13 @@ Pro podání určitého množství inzulínu bez použití [bolusové kalkulačk
 
 Zapnutím volby **Spustit dočasný cíl Před jídlem** můžete automaticky spustit [dočasný cíl „Před jídlem“](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Další řádek **Čas**, nastavený na **Nyní**, umožňuje zaznamenat injekci inzulínu podanou v minulosti: změňte ho tlačítky **-** / **+**, nebo klepněte na šipku a zadejte minuty nebo vyberte datum a čas.
+Pokud nechcete podat bolus pumpou, ale jen zaznamenat množství inzulínu (např. inzulín podaný perem), zapněte „**Bolus nebude pumpou vydán, pouze zaznamenán**“. Další řádek **Čas**, nastavený na **Nyní**, umožňuje zaznamenat injekci inzulínu podanou v minulosti: změňte ho tlačítky **-** / **+**, nebo klepněte na šipku a zadejte minuty nebo vyberte datum a čas.
 
 ![Řádek Čas, sbalený](../images/v4/Screens/insulin_dialog_record_only_time.png) ![Řádek Čas, otevřený šipkou](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Tlačítky **+0.5 / +1.0 / +2.0** můžete rychle zvýšit množství inzulínu. Hodnoty přírůstků můžete změnit v [nastavení bolusové kalkulačky](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-Dialog Inzulín můžete použít i tehdy, když je pumpa pozastavená nebo odpojená, např. pro záznam inzulínu podaného perem. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
+Dialog Inzulín můžete použít i tehdy, když je pumpa pozastavená nebo odpojená, např. pro záznam inzulínu podaného perem. V tomto případě je „**Bolus nebude pumpou vydán, pouze zaznamenán**“ vynuceně zapnuté (zobrazené červeně) a objeví se další pole pro výběr typu inzulínu a posunu **Čas** pro injekci podanou v minulosti:
 
 ![Dialog Inzulín s odpojenou pumpou](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -527,7 +527,7 @@ Některé [přednastavené dočasné cíle](#TempTargets-hypo-temp-target) (Hypo
 
 **Čas sacharidů**: Kdy budete jíst / kdy jste jedli sacharidy.
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). Tento řádek je sbalený, abyste do něj omylem nezadali gramy: změňte ho tlačítky **-** / **+**, nebo klepněte na šipku, řádek otevřete a zadejte hodnotu.
+**Trvání**: Používá se pro [„rozložené sacharidy“](ExtendedCarbs.md). Tento řádek je sbalený, abyste do něj omylem nezadali gramy: změňte ho tlačítky **-** / **+**, nebo klepněte na šipku, řádek otevřete a zadejte hodnotu.
 
 Tlačítky **+5 / +10 / +20** můžete rychle zvýšit množství sacharidů.
 
@@ -590,7 +590,7 @@ Bolusovou kalkulačku můžete použít při jakékoli aktuální **glykémii**,
 * Z bezpečnostních důvodů nelze vstup IOB vypnout, když je zapnutý COB, protože byste riskovali příliš mnoho inzulínu – **AAPS** by nepočítal s tím, co už bylo podáno.
 * Když zapnete COB i IOB, započítají se nevstřebané sacharidy, které ještě nejsou pokryty inzulínem, a veškerý inzulín podaný jako dočasný bazál (TBR) nebo SMB.
 * Když zapnete IOB bez COB, **AAPS** započítá už podaný inzulín, ale neodečte ho proti sacharidům, které se ještě budou vstřebávat. To vede k oznámení o 'chybějících sacharidech'.
-* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. Tak lze přidat pouze nově zkonzumované sacharidy, jelikož hlavní jídlo dosud nemusí být stráveno, takže IOB krátce po bolusu k jídlu nebude přesně odpovídat množství COB.
+* Pokud podáváte bolus na **další jídlo** krátce po bolusu na jídlo (např. dezert navíc), může být užitečné **vypnout všechny vstupy**. Tak lze přidat pouze nově zkonzumované sacharidy, jelikož hlavní jídlo dosud nemusí být stráveno, takže IOB krátce po bolusu k jídlu nebude přesně odpovídat množství COB.
 * Z bezpečnostních důvodů se **dočasný cíl** započítá do výpočtu, jen když jeho vstup zapnete ručně.
 
 (AapsScreens-section-j)=
@@ -619,20 +619,20 @@ Pole **Čas sacharidů** slouží pro předstihový bolus: můžete systému ř�
 
 ![Nastavení alarmu pro budoucí sacharidy](../images/Home2021_BolusWizard_EatingReminder.png)
 
-The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
+Připomínka začne běžet, jakmile je bolus podán. Během běhu odpočítává na hlavní obrazovce lišta **Čas na jídlo** s tlačítky **Zastavit** a **+5 min**. **+5 min** posune konec čekání o pět minut později a lišta ukazuje celkovou dobu čekání. Když nastane čas, připomínka zazvoní vlastním zvukem, jemnou kuchyňskou minutkou. Kromě tlačítek **Ztišit alarm** (obrazovka zůstane otevřená) a **Ztišit a zavřít** nabízí obrazovka alarmu také **+5 min**, které spustí nové pětiminutové čekání. Po zazvonění lišta ukazuje *Čas vypršel* s tlačítky **+5 min** a **Zavřít**; **Ztišit a zavřít** odstraní i lištu. Lišta a alarm se zobrazují také v **AAPSClient** a na [hodinkách](#WearOsSmartwatch-wizard-carb-time). Připomínka nevytváří minutku v aplikaci Hodiny ve vašem telefonu. Pokud Android nedovolí **AAPS** nastavovat alarmy, kalkulačka vás požádá, abyste v nastavení Androidu pro **AAPS** povolili *Alarmy a připomenutí*. Zvonek se pro čas sacharidů v minulosti nenabízí.
 
-![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
+![Lišta Čas na jídlo na hlavní obrazovce s tlačítky +5 min a Zastavit](../images/main/main_eat_reminder_bar.png)
 
-![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+![Obrazovka alarmu Čas na jídlo: +5 min, Ztišit alarm, Ztišit a zavřít](../images/main/eat_reminder_alarm.png)
 
-Pole **Glykémie** je obvykle už vyplněné poslední hodnotou z vašeho CGM. Pokud právě nemáte senzor v provozu, pak bude pole prázdné. Když je hodnota čerstvá, zůstává řádek **Glykémie** sbalený. The field follows new readings while the wizard is open, until you change it yourself.
+Pole **Glykémie** je obvykle už vyplněné poslední hodnotou z vašeho CGM. Pokud právě nemáte senzor v provozu, pak bude pole prázdné. Když je hodnota čerstvá, zůstává řádek **Glykémie** sbalený. Když je kalkulačka otevřená, pole se aktualizuje podle nových hodnot, dokud ho sami nezměníte.
 
-Tlačítko s výsledkem dole ukazuje navržený bolus; po jeho stisknutí se před podáním inzulínu zobrazí žádost o potvrzení. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
+Tlačítko s výsledkem dole ukazuje navržený bolus; po jeho stisknutí se před podáním inzulínu zobrazí žádost o potvrzení. Zatímco čeká potvrzení, smyčka nepodává žádné SMB, takže bolus, který potvrdíte, je stále správný. Pokud se v tu chvíli právě podává SMB, **OK** počká, až skončí.
 
 Dobré vědět:
 
 * Pokud je vypočtený bolus vyšší než váš **[Maximální bolus](#Preferences-maximum-bolus)**, sníží se na maximální bolus a v potvrzení se zobrazí varování „Použito omezení bolusu“. [Rychlý bolus](../DailyLifeWithAaps/QuickWizards.md) se v takovém případě odmítne.
-* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
+* Když se bolus pouze zaznamenává (například když je pumpa odpojená), zůstává varování „**Bolus nebude pumpou vydán, pouze zaznamenán**“ nahoře v dialogu, i když posouváte obsah.
 * Bolus, který podáte ručně, má přednost před [SMB](#Open-APS-features-super-micro-bolus-smb), který čeká na podání: SMB se zruší a smyčka počítá znovu. Pokud se SMB právě podává, váš bolus se odmítne se zprávou „Právě nyní se vydává SMB. Zkuste to znovu po dokončení výdeje.“ Nepodá se žádný inzulín a sacharidy zadané s tímto bolusem se neuloží: chvíli počkejte a zadejte je znovu.
 
 (AapsScreens-wrong-cob-detection)=

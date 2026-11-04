@@ -122,7 +122,7 @@ Wykonaj te kroki w Androidzie 16. W innych wersjach ekrany mogą się trochę r�
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. W Androidzie 12 kliknij `Battery` (Bateria), w Androidzie 13+ kliknij `App battery usage` (Wykorzystanie baterii przez aplikację).
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
@@ -454,7 +454,7 @@ Gdy wybierzesz prawdziwą pompę, **AAPS** poprosi o potwierdzenie, bo skopiuje 
 
 ![Potwierdzenie przy wyborze prawdziwej pompy](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
+Jeśli wybrana pompa komunikuje się przez Bluetooth, **AAPS** po zakończeniu kreatora poprosi o uprawnienie do łączenia z urządzeniami w pobliżu (patrz [Uprawnienie Bluetooth](#setup-wizard-bluetooth-permission)).
 
 Jeśli masz już skonfigurowany profil i wiesz, jak połączyć pompę, możesz ją połączyć teraz. W przeciwnym razie na razie zostaw **Pompa wirtualna** — możesz to zmienić w każdej chwili albo wyjść z Kreatora konfiguracji strzałką w lewym górnym rogu i pozwolić, aby **AAPS** najpierw pokazał ci kilka wartości glikemii.
 
@@ -505,7 +505,7 @@ Naciśnij „**Otwórz Zadania**”:
 
 Tutaj rozpoczynamy Zadanie 1, nawet jeśli w tej chwili konfiguracja nie jest jeszcze gotowa, aby to Zadanie ukończyć. Ale to jest początek.
 
-Press the "**Start**" button of **Objective 1**:
+Naciśnij przycisk „**Start**” przy **Zadaniu 1**:
 
 ![Lista zadań](../images/setup-wizard/Wizard-Objectives-List.png)
 

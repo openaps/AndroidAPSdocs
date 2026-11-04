@@ -1,14 +1,14 @@
 # Zukünftig ggf. loopbare Pumpen
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+Dies ist eine Liste einiger Pumpen auf dem Markt, mit dem Stand ihrer Unterstützung in anderen Loop-Systemen und ihrem Status in AAPS. Am Ende findest Du einige Informationen dazu, was eine Pumpe braucht, um „Loop-fähig“ zu sein.
 
-    {contents} Table of contents
+    {contents} Inhaltsverzeichnis
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## Pumpen in der AAPS-Integrationsphase
 
-**Coming soon:** drivers for these pumps are in development and already running in test builds.
+**Demnächst:** Treiber für diese Pumpen sind in Entwicklung und laufen bereits in Test-Builds.
 
 Omnipod 5 ([Homepage](https://www.omnipod.com/))
 
@@ -28,21 +28,21 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+**Loop Status:** Möglicher künftiger Loop-Kandidat. Die Hoffnung ist, dass die t:slim X3 die volle Steuerung über ein Smartphone erlaubt, was eine Unterstützung durch AAPS ermöglichen würde; Zeitplan und Funktionen sind aber noch unbekannt.
 
-**Hardware Voraussetzungen für AAPS:** Keine. It is expected to be Bluetooth enabled.
+**Hardware Voraussetzungen für AAPS:** Keine. Sie wird voraussichtlich Bluetooth haben.
 
-**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+**Kommentare:** Noch nicht erschienen. Die t:slim X3 scheint in Tandems Planung immer wieder zugunsten der t:Mobi (einschließlich einer schlauchlosen Version) und der Sigi (ihrer Patch-Pumpe) zurückgestellt zu werden.
 
 ### Twiist ([Homepage](https://www.twiist.com/))
 
-**Loop status:** Loop candidate.
+**Loop Status:** Loop-Kandidat.
 
-**Hardware Voraussetzungen für AAPS:** Keine. It is Bluetooth enabled.
+**Hardware Voraussetzungen für AAPS:** Keine. Sie hat Bluetooth.
 
 ### Willcare Insulin Pumpe ([Homepage](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+**Loop Status:** Derzeit kein Loop-Kandidat, aber Mitarbeiter des Herstellers haben uns kontaktiert und sind daran interessiert, die Pumpe loopfähig zu machen (es scheinen nur die Befehle zum Lesen und Setzen des Profils zu fehlen).
 
 **Hardware Voraussetzungen für AAPS:** Keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
 
@@ -50,11 +50,11 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Ypsopump ([Homepage](https://www.ypsomed.com/))
 
-**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+**Loop Status:** Loop-Kandidat. Das Bluetooth-Protokoll der Pumpe wurde von der Community entschlüsselt (Reverse Engineering), sodass eine Kommunikation grundsätzlich möglich ist.
 
-**Hardware Voraussetzungen für AAPS:** Keine. It is Bluetooth enabled.
+**Hardware Voraussetzungen für AAPS:** Keine. Sie hat Bluetooth.
 
-**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
+**Kommentare:** Die Ypsopump schützt ihre Bluetooth-Kommunikation mit einer aufwendigen Verschlüsselung eines Drittanbieters. Die Arbeit damit ist technisch anspruchsvoll, was den Bau und die Pflege eines zuverlässigen Treibers schwierig macht. Einen produktionsreifen AAPS-Treiber gibt es noch nicht.
 
 ## Nicht mehr verkaufte Pumpen (Firmen nicht mehr aktiv)
 
@@ -76,7 +76,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**Kommentare:** Das Bluetooth-Protokoll von Tandem wurde entschlüsselt, auf der t:slim X2 können aber nur Boli abgegeben werden – die Basalabgabe lässt sich nicht steuern –, daher kann sie nicht sicher zum Loopen verwendet werden. Das wird sich wohl nur ändern, wenn Tandem die volle Steuerung der X2 über ein Smartphone erlaubt, was eher mit der t:slim X3 kommen dürfte.
 
 ### Accu-Chek Solo
 

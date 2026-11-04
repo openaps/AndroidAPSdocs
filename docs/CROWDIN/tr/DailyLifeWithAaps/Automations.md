@@ -5,406 +5,406 @@
 :depth: 2
 ```
 
-## What is an Automation?
+## Otomasyon nedir?
 
-"**Automation**" is a feature which can automate tasks in AAPS.
+"**Otomasyon**", AAPS'teki görevleri otomatik hale getirebilen bir özelliktir.
 
-Automation performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a Wi-Fi SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
+Otomasyon, bir veya daha fazla koşula ya da tetikleyiciye göre belirli eylemleri gerçekleştirir. Tetikleyiciler, düşük veya yüksek kan şekeri (KŞ) seviyeleri ya da belirli bir miktarda negatif aktif insülin (AİNS) gibi düzensiz olayları içerebilir. Otomasyonlar ayrıca günün belirli saatlerindeki öğünler veya egzersiz gibi yinelenen olayları ya da kullanıcının bir GPS konumuna veya bir Wi-Fi SSID alanına belirli bir uzaklıkta olduğu durumları da yönetebilir. Otomasyon, AAPS ayarlarını bir zaman planına göre veya her Pod değişiminde yedekleyebilir.
 
-Automation rules are created and modified from the **Automation** screen (**Manage → Automation**). Each rule is defined by two properties:
+Otomasyon kuralları **Otomasyon** ekranından (**Yönet → Otomasyon**) oluşturulur ve değiştirilir. Her kural iki özellikle tanımlanır:
 
-- One or more conditions or 'triggers' that start an action.
+- Bir eylemi başlatan bir veya daha fazla koşul ya da 'tetikleyici'.
 
-    Think of a certain time schedule, an event or properties value in AAPS
+    Belirli bir zaman planı, bir olay veya AAPS'teki bir değer gibi düşünün
 
-- One or more actions to perform.
+- Yapılacak bir veya daha fazla eylem.
 
-    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
-
-
-There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
-
-## How Automation can help
-
-1. **Automate recurring tasks:** Automatically executing programmed actions without user interaction.
-
-1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
-
-1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**.
-
-1. **Enabling AAPS to be highly customized** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
-
-The example below illustrates how an **Automation** can enable steps to be eliminated.
-
-User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
-
-![Manual actions without automation](../images/Automations/automation_concept_manual.png)
-
-The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
-
-![Actions done by an automation](../images/Automations/automation_concept_automated.png)
-
-## Key considerations before starting with Automations
-
-1. Before setting up certain Automations, you should have reasonable **BG** control with **AAPS**. Automations should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
-
-1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
-
-1. **Requirements for Automations are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
-
-1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
-
-1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens.
-
-1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/L for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/L for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
-
-## When can I start using Automation?
-
-**Automations** can be started in **objective 10**.
-
-## Where are Automations located in AAPS?
-
-Open **Manage** in the bottom navigation of the main screen and select **Automation**.
-
-## How can I set up an Automation?
-
-To set up an **Automation**, press the **+** button on the Automation screen to create a ‘rule’:
-
-![Automation create](../images/Automations/automation_create.png)
-
-* give your ‘rule’ a title (Task name);
-* press "**EDIT**" under **Condition**. On the **Condition** screen, choose how the triggers are combined (**And**, **Or**, **Exclusive or**) and press "**Add trigger**":
-
-![Automation condition](../images/Automations/automation_trigger_editor.png)
-
-* add at least one trigger:
-
-![Automation triggers](../images/Automations/automation_triggers.png)
-
-* press "**ADD**" under **Action** and select one action:
-
-![Automation actions](../images/Automations/automation_actions.png)
-
-* save the rule with the **Save** button, and make sure the checkbox left of the rule name is ‘ticked’ to activate the **Automation**:
-
-![Automation activated](../images/Automations/automation_rule_activated.png)
-
-To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** as either activated (‘ticked') or deactivated (‘unticked’):
-
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+    Örneğin bir alarm, bir profil yüzdesi ayarlamak veya Pod değişiminde AAPS ayarlarını dışa aktarmak.
 
 
-When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
+Çok çeşitli Otomasyon seçenekleri vardır. Kullanıcıların bunları AAPS uygulamasının Otomasyon bölümünde incelemeleri önerilir. Diğer kullanıcıların Otomasyon örnekleri için [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) ve [**Discord**](https://discord.gg/4fQUWHZ4Mw) üzerindeki AAPS kullanıcı gruplarında da arama yapabilirsiniz.
 
-![Alert actions](../images/Automations/automation_alert_actions.png)
+## Otomasyon nasıl yardımcı olabilir
+
+1. **Yinelenen görevleri otomatikleştirmek:** Programlanmış eylemleri kullanıcı müdahalesi olmadan otomatik olarak gerçekleştirmek.
+
+1. **Karar yorgunluğunu azaltmak:** **Otomasyonların** temel faydası, kullanıcıyı **AAPS**'te elle müdahale yapma yükünden kurtarmasıdır. [Araştırmalara](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) göre tip 1 diyabetle yaşayan kişiler her gün ortalama 180 ek karar vermek zorundadır. **Otomasyonlar** zihinsel yükü azaltabilir ve kullanıcının zihinsel enerjisini hayatın diğer alanlarına ayırmasını sağlar.
+
+1. **Glisemik kontrolü iyileştirme olasılığı:** örneğin **Otomasyonlar**, yoğun zamanlarda veya unutkanlık dönemlerinde bile **Geçici Hedeflerin** gerektiğinde her zaman ayarlanmasına yardımcı olabilir. Örneğin, diyabetli bir çocuğun okulda salı günleri saat 10:00'da ve perşembe günleri saat 14:00'te spor dersi varsa ve spordan 30 dakika önce yüksek bir Geçici Hedef ('GH') başlatılması gerekiyorsa, bu **Geçici Hedef** bir **Otomasyon** ile etkinleştirilebilir.
+
+1. **AAPS'in büyük ölçüde kişiselleştirilebilmesi:** kullanıcının tercihine göre belirli durumlarda daha fazla veya daha az agresif olması. Örneğin, gece ortasında negatif **AİNS** oluşursa belirli bir süre için geçici olarak azaltılmış bir **Profil** % başlatmak. Negatif AİNS, mevcut **Profil**'in çok güçlü olabileceğini gösterir.
+
+Aşağıdaki örnek, bir **Otomasyonun** bazı adımları nasıl ortadan kaldırabileceğini gösterir.
+
+Kullanıcı her sabah saat 6'da egzersiz yapıyor: egzersizden önce, saat 5'te AAPS'te elle bir "Geçici Hedef-Aktivite" ayarlamayı hatırlaması gerekiyor.
+
+![Otomasyon olmadan elle yapılan eylemler](../images/Automations/automation_concept_manual.png)
+
+Kullanıcı, saat 6'daki egzersize hazırlık olarak **KŞ** ve **AİNS** değerlerinin en uygun düzeyde olması için saat 5'te bir ‘Geçici Hedef-Aktivite’ tetikleyen bir **Otomasyon** ayarlamıştır:
+
+![Bir otomasyonun yaptığı eylemler](../images/Automations/automation_concept_automated.png)
+
+## Otomasyonlara başlamadan önce dikkat edilmesi gereken önemli noktalar
+
+1. Bazı Otomasyonları kurmadan önce **AAPS** ile makul bir **KŞ** kontrolünüz olmalıdır. Otomasyonlar, uygun olmayan bazal, **İDF** veya **IC** ayarlarını telafi etmek için kullanılmamalıdır (aşağıda ayrıca ele alınmıştır). **KŞ** yükselmelerini (_ör._ yemek nedeniyle) dengelemek için otomatik bir **Profil değişimi** ayarlamaktan kaçının. Bunlar başka yöntemlerle (SMB'ler vb.) daha iyi yönetilir.
+
+1. Her teknolojide olduğu gibi **CGM'ler**, **Pompalar** ve telefonlar arızalanabilir: Teknik sorunlar veya sensör hataları **Otomasyon** eylemlerini bozabilir ve elle müdahale gerekebilir.
+
+1. **Rutinler değiştikçe Otomasyon gereksinimleri de büyük olasılıkla değişir**. İş/okul/tatil dönemleri arasında geçiş yaparken, hangi **Otomasyonların** şu anda etkin olduğunu gözden geçirmek için takviminize bir hatırlatıcı koyun (bunları etkinleştirmek ve devre dışı bırakmak kolaydır). Örneğin tatile çıktığınızda ve okul sporu veya günlük egzersiz için kurulan bir Otomasyona artık ihtiyacınız olmadığında ya da zamanlamaları ayarlamanız gerektiğinde.
+
+1. **Otomasyonlar** birbiriyle çakışabilir. Yeni **Otomasyon** ayarlarını güvenli bir ortamda dikkatle gözden geçirmek ve bir **Otomasyonun** beklediğiniz şekilde neden tetiklendiğini veya tetiklenmediğini anlamak iyi olur.
+
+1. Otoduyarlılık kullanıyorsanız, **Profil değişimleri** yerine **Geçici Hedefleri** kullanmaya çalışın. **Geçici Hedefler** Otoduyarlılık'ı 0'a sıfırlamaz. **Profil değişimleri** Otoduyarlılık'ı sıfırlar.
+
+1. Çoğu **Otomasyon** yalnızca **sınırlı bir süre** için ayarlanmalıdır. Bu sürenin sonunda **AAPS** durumu yeniden değerlendirebilir ve gerekirse, koşul hâlâ sağlanıyorsa **Otomasyonu** tekrarlayabilir. Örneğin, "30 dk için 7,0 mmol/L geçici hedef başlat" veya "10 dk için **Profil** %110 başlat" _ve_ "10 dk için 5,0 mmol/L geçici hedef başlat". **Otomasyonları** kalıcı değişiklikler yapmak için kullanmak (ör. daha güçlü bir profil yüzdesine geçmek) hipoglisemi riski taşır.
+
+## Otomasyonu ne zaman kullanmaya başlayabilirim?
+
+**Otomasyonlar** **10. görevde** kullanılmaya başlanabilir.
+
+## Otomasyonlar AAPS'te nerede bulunur?
+
+Ana ekranın alt gezinme çubuğunda **Yönet**'i açın ve **Otomasyon**'u seçin.
+
+## Bir Otomasyonu nasıl kurabilirim?
+
+Bir **Otomasyon** kurmak için Otomasyon ekranındaki **+** düğmesine basarak bir ‘kural’ oluşturun:
+
+![Otomasyon oluşturma](../images/Automations/automation_create.png)
+
+* ‘kuralınıza’ bir başlık verin (Görev adı);
+* **Koşul** altındaki "**DÜZENLE**"ye basın. **Koşul** ekranında tetikleyicilerin nasıl birleştirileceğini seçin (**Ve**, **Veya**, **Özel veya**) ve "**Tetikleyici ekle**"ye basın:
+
+![Otomasyon koşulu](../images/Automations/automation_trigger_editor.png)
+
+* en az bir tetikleyici ekleyin:
+
+![Otomasyon tetikleyicileri](../images/Automations/automation_triggers.png)
+
+* **Eylem** altındaki "**EKLE**"ye basın ve bir eylem seçin:
+
+![Otomasyon eylemleri](../images/Automations/automation_actions.png)
+
+* kuralı **Kaydet** düğmesiyle kaydedin ve **Otomasyonu** etkinleştirmek için kural adının solundaki kutunun ‘işaretli’ olduğundan emin olun:
+
+![Otomasyon etkinleştirildi](../images/Automations/automation_rule_activated.png)
+
+Bir **Otomasyon** kuralını devre dışı bırakmak için **Otomasyon** adının solundaki kutunun işaretini kaldırın. Aşağıdaki örnek, etkinleştirilmiş (‘işaretli’) veya devre dışı bırakılmış (‘işaretsiz’) bir **Otomasyonu** gösterir:
+
+![Açılıp kapatılan otomasyon kuralları](../images/Automations/automation_rule_activated_deactivated.png)
+
+
+Bir **Otomasyon** kurarken, önce "Eylemler" altındaki ‘bildirim’ seçeneğini etkinleştirerek onu test edebilirsiniz. Bu, **AAPS**'in bir eylemi gerçekten otomatik yapmak yerine önce bir bildirim göstermesini sağlar. Bildirimin doğru zamanda/koşullarda tetiklendiğinden emin olduğunuzda, **Otomasyon** kuralını güncelleyerek ‘Bildirim’i bir ‘Eylem’ ile değiştirebilirsiniz.
+
+![Uyarı eylemleri](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
 
-**Automations** are still active when the Loop is disabled!
+**Otomasyonlar**, Döngü devre dışıyken de etkindir!
 ```
 
 
-## When rules are checked
+## Kurallar ne zaman kontrol edilir
 
-**AAPS** checks all **Automation** rules each time a new glucose reading has been processed, so rules are evaluated at the pace of your CGM, also while the phone screen is off. Rules are also checked when the phone starts charging, when the network or location changes, and when a Bluetooth device connects. Only one check runs at a time, so a rule whose actions take a while (for example a pump command) cannot be executed twice.
+**AAPS**, her yeni glikoz ölçümü işlendiğinde tüm **Otomasyon** kurallarını kontrol eder. Böylece kurallar, telefon ekranı kapalıyken de CGM'nizin hızında değerlendirilir. Kurallar ayrıca telefon şarj olmaya başladığında, ağ veya konum değiştiğinde ve bir Bluetooth cihazı bağlandığında da kontrol edilir. Aynı anda yalnızca bir kontrol çalışır. Bu yüzden eylemleri biraz zaman alan bir kural (örneğin bir pompa komutu) iki kez çalıştırılamaz.
 
-## Safety limits
+## Güvenlik sınırları
 
-There are safety limits set for **Automations**:
+**Otomasyonlar** için güvenlik sınırları vardır:
 
-* A **Temp Target** set by an **Automation** has to be between 72 and 180 mg/dL (or 4 and 10 mmol/L).
-* The **Profile Percentage** has to be between 50% and 130%.
-* There is a 5 minute time limit between executions of **Automation** (and first execution).
+* Bir **Otomasyon** tarafından ayarlanan **Geçici Hedef** 72 ile 180 mg/dL (veya 4 ile 10 mmol/L) arasında olmalıdır.
+* **Profil yüzdesi** %50 ile %130 arasında olmalıdır.
+* **Otomasyon** çalışmaları arasında (ve ilk çalışmada) 5 dakikalık bir süre sınırı vardır.
 
-## Correct use of negative values
+## Negatif değerlerin doğru kullanımı
 
 ```{admonition} Warning
 :class: warning
 
-Please be careful when selecting a negative value in **Automation**
+Lütfen **Otomasyonda** negatif bir değer seçerken dikkatli olun
 ```
 
-Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
+**Otomasyonlarda** ‘Koşul’ içinde "küçükse" gibi bir ‘negatif değer’ seçerken dikkatli olunmalıdır. Örneğin:
 
-![Comparison operators](../images/Automations/automation_comparison_operators.png)
+![Karşılaştırma işleçleri](../images/Automations/automation_comparison_operators.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/L" (or "-2mg/dL") will:
+**Örnek 1:** **"küçükse"** "-0,1mmol/L" (veya "-2mg/dL") Koşulu oluşturmak şunu yapar:
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
+**-0,1 (-2)'den kesinlikle küçük** olan her sayı için bir **Otomasyon** tetikler. Buna -0,2, -0,3, -0,4 (-4, -6, -8) gibi sayılar dahildir. -0,1 (-2) değerinin kendisinin bu koşula **dahil olmadığını** unutmayın. ("-0,1mmol/L (-2 mg/dL) ile eşit veya küçükse" koşulu, -0,1 mmol/L veya -2 mg/dL değerini _dahil ederdi_).
 
-**Example 2:** Creating a Condition "is greater than" -0.1mmol/L (-2mg/dL) will:
+**Örnek 2:** "büyükse" -0,1mmol/L (-2mg/dL) Koşulu oluşturmak şunu yapar:
 
-Trigger an **Automation** for any number which is **greater than** -0.1mmol/L (-2mg/dL). This includes numbers like 0, 0.2, 0.4mmol/L, (0, 4, 8mg/dL) and any other positive number.
+-0,1mmol/L (-2mg/dL) değerinden **büyük** olan her sayı için bir **Otomasyon** tetikler. Buna 0, 0,2, 0,4mmol/L (0, 4, 8mg/dL) gibi sayılar ve diğer tüm pozitif sayılar dahildir.
 
-It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.
+Bu koşulları ve değerleri seçerken **Otomasyonunuzun** tam olarak ne yapmasını istediğinizi dikkatle düşünmeniz önemlidir.
 
 (automations-automation-triggers)=
-## Automation Triggers
+## Otomasyon Tetikleyicileri
 
-![Automation Triggers](../images/Automations/automation_triggers.png)
+![Otomasyon Tetikleyicileri](../images/Automations/automation_triggers.png)
 
-Scroll down to see the rest of the list:
+Listenin geri kalanını görmek için aşağı kaydırın:
 
-![Automation Triggers, continued](../images/Automations/automation_trigger_picker_2.png)
+![Otomasyon Tetikleyicileri, devamı](../images/Automations/automation_trigger_picker_2.png)
 
-There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. The list below is non-exhaustive:
+Kullanıcının seçebileceği çeşitli ‘Tetikleyiciler’ vardır. Tetikleyiciler, otomasyonun çalışması için sağlanması gereken koşullardır. Aşağıdaki liste eksiksiz değildir:
 
-**Trigger:** connect conditions
+**Tetikleyici:** koşulları bağlama
 
-**Options:**
+**Seçenekler:**
 
-Several conditions can be linked with
+Birkaç koşul şunlarla bağlanabilir:
 * “And”
 * “Or”
-* “Exclusive or” (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+* “Özel veya” (koşullardan biri, ve yalnızca biri geçerliyse eylem(ler) gerçekleşir)
 
-**Trigger:** time vs. recurring time
+**Tetikleyici:** zaman ve yinelenen zaman
 
-**Options:**
+**Seçenekler:**
 
-* time = single time event
+* zaman = tek seferlik zaman olayı
 * yinelenen zaman = düzenli olarak gerçekleşen bir şey (yani haftada bir, her iş günü vb.)
 
-**Trigger:** location
+**Tetikleyici:** konum
 
-**Options:**
+**Seçenekler:**
 
-* in [Settings > Automation](#preferences-maintenance-settings), the user can select their required location service.
+* Kullanıcı [Ayarlar > Otomasyon](#preferences-maintenance-settings) içinde kullanmak istediği konum servisini seçebilir.
 
-**Trigger:** location service
+**Tetikleyici:** konum servisi
 
-**Options:**
+**Seçenekler:**
 
-* Use passive location: **AAPS** only takes locations when other apps are requesting it.
+* Pasif konumu kullan: **AAPS** konumu yalnızca başka uygulamalar istediğinde alır.
 * Use network location: Location of your Wi-Fi.
-* GPS konumunu kullanın (Dikkat! This can cause excessive battery drain!)
+* GPS konumunu kullan (Dikkat! Bu, pilin çok hızlı bitmesine neden olabilir!)
 
-**Triggers** : pump and sensor data
+**Tetikleyiciler**: pompa ve sensör verileri
 
-* Cannula age trigger: Available for all pumps
-* Insulin age trigger: Available for supported pumps
-* Battery age trigger: Available for supported pumps
-* Sensor age trigger: always available
-* Pod Activation trigger: Available for patch pumps
+* Kanül yaşı tetikleyicisi: Tüm pompalarda kullanılabilir
+* İnsülin yaşı tetikleyicisi: Desteklenen pompalarda kullanılabilir
+* Pil yaşı tetikleyicisi: Desteklenen pompalarda kullanılabilir
+* Sensör yaşı tetikleyicisi: her zaman kullanılabilir
+* Pod aktivasyonu tetikleyicisi: Patch pompalarda kullanılabilir
 
-Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+Yaşla ilgili tüm tetikleyicilerde eşitlik karşılaştırmasının tetiklenmesi pek olası değildir. Bu durumda bir aralık oluşturmak için iki tetikleyici gerekir
 
-* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
-* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* Rezervuar seviyesi tetikleyicisi: Tüm pompalarda kullanılabilir. Değer **AAPS**'te her zaman dolu olduğu için "NOT\_AVAILABLE" karşılaştırması bu tetikleyicide çalışmaz
+* Pompa pil seviyesi tetikleyicisi: Desteklenen pompalarda kullanılabilir. Değer **AAPS**'te her zaman dolu olduğu için "NOT\_AVAILABLE" karşılaştırması bu tetikleyicide çalışmaz
 
 (automations-automation-action)=
 ## Eylem
 
-![Automation Actions](../images/Automations/automation_actions.png)
+![Otomasyon Eylemleri](../images/Automations/automation_actions.png)
 
-Scroll down to see the rest of the list:
+Listenin geri kalanını görmek için aşağı kaydırın:
 
-![Automation Actions, continued](../images/Automations/automation_action_picker_2.png)
+![Otomasyon Eylemleri, devamı](../images/Automations/automation_action_picker_2.png)
 
-**Actions:** start **Temp Target**
+**Eylemler:** **Geçici Hedef** başlat
 
-**Options:**
+**Seçenekler:**
 
-* **BG** must be between 72 mg/dL and 180 mg/dL (4 mmol/L and 10 mmol/L)
-* **TT** works only if there is no previous Temp Target — **AAPS** adds this automatically as a "**Preconditions: Temp target not exists**" line to the rule
+* **KŞ** 72 mg/dL ile 180 mg/dL (4 mmol/L ile 10 mmol/L) arasında olmalıdır
+* **GH** yalnızca önceden bir Geçici Hedef yoksa çalışır. **AAPS** bunu kurala otomatik olarak "**Ön koşullar: Geçici Hedef mevcut değil**" satırı olarak ekler
 
-**Actions:** stop **Temp Target**
+**Eylemler:** **Geçici Hedef** durdur
 
-**Options:**
+**Seçenekler:**
 
 none
 
-**Actions:** **Profile Percentage**
+**Eylemler:** **Profil yüzdesi**
 
-**Options:**
+**Seçenekler:**
 
-* **Profile** must be between 50% and 130%
-* works only if the previous Percentage is 100%
+* **Profil** %50 ile %130 arasında olmalıdır
+* yalnızca önceki yüzde %100 ise çalışır
 
-**Actions:** **Change smoothing** (in the **Loop & insulin** group)
+**Eylemler:** **Yumuşatmayı değiştir** (**Döngü & insülin** grubunda)
 
-**Options:**
+**Seçenekler:**
 
-* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
-* runs only if that smoothing method is not already active — **AAPS** adds this automatically as a "**Preconditions: Smoothing … is not active**" line to the rule. Once the selected smoothing is active, the rule is skipped silently.
-* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
-  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
-  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
+* geçilecek [yumuşatma yöntemini](../CompatibleCgms/SmoothingBloodGlucoseData.md) seçin. Liste, **Konfigürasyon** > **Yumuşatma** altındaki listeyle aynıdır ve eylem, orada yapılan bir değişikliğin yaptığının tam olarak aynısını yapar: yeni yöntem kaydedilir, eşleştirilmiş istemcilerle senkronize edilir ve KŞ verileri hemen yeniden yumuşatılır.
+* yalnızca bu yumuşatma yöntemi zaten etkin değilse çalışır. **AAPS** bunu kurala otomatik olarak "**Ön koşullar: Yumuşatma … etkin değil**" satırı olarak ekler. Seçilen yumuşatma etkin olduğunda kural sessizce atlanır.
+* Örnek: yeni bir sensör ilk gününde çoğu zaman gürültülüdür. **Sensör yaşı** tetikleyicisini kullanan iki kural, sensör otururken daha güçlü filtreleme, sonrasında ise gecikmesiz yumuşatma sağlar:
+  * **Sensör yaşı** 24 saatten az: **Yumuşatmayı değiştir** → **Kokusuz Kalman Filtresi**
+  * **Sensör yaşı** 24 saatten fazla: **Yumuşatmayı değiştir** → **Ortalama yumuşatma**
 
-**Actions:** **Note** (in the **Alerts** group of the list)
+**Eylemler:** **Not** (listenin **Alarmlar** grubunda)
 
-**Options:**
+**Seçenekler:**
 
-* select the event to record: **Note**, **Exercise**, **Question**, **Announcement** or **Pump Site Change**, and an optional note. The name of the action changes to the event you select.
-* **Duration**: used for **Note**, **Exercise** and **Pump Site Change**. **Question** and **Announcement** have no duration: they record your current BG instead.
-* **Pump Site Change** resets the cannula age, as if you had recorded a site change by hand. Example: some pumps (like the Combo) record a reservoir change by themselves, but not the site change. If you always change both together, a rule with **Insulin age** less than 1 hour and **Cannula age** more than 24 hours can record the site change for you.
+* kaydedilecek olayı seçin: **Not**, **Egzersiz**, **Soru**, **Duyuru** veya **Pompa Kanül Değişimi**, ve isteğe bağlı bir not. Eylemin adı, seçtiğiniz olaya göre değişir.
+* **Süre**: **Not**, **Egzersiz** ve **Pompa Kanül Değişimi** için kullanılır. **Soru** ve **Duyuru** için süre yoktur: bunun yerine mevcut KŞ'nizi kaydederler.
+* **Pompa Kanül Değişimi**, kanül değişimini elle kaydetmişsiniz gibi kanül yaşını sıfırlar. Örnek: bazı pompalar (Combo gibi) rezervuar değişimini kendileri kaydeder, ama kanül değişimini kaydetmez. Her ikisini her zaman birlikte değiştiriyorsanız, **İnsülin yaşı** 1 saatten az ve **Kanül yaşı** 24 saatten fazla olan bir kural, kanül değişimini sizin yerinize kaydedebilir.
 
-![The events of the Note action](../images/Automations/automation_action_careportal_events.png) ![The Note action set to Pump Site Change](../images/Automations/automation_action_careportal_site_change.png)
+![Not eyleminin olayları](../images/Automations/automation_action_careportal_events.png) ![Pompa Kanül Değişimi olarak ayarlanmış Not eylemi](../images/Automations/automation_action_careportal_site_change.png)
 
-**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
+**Eylemler:** **Tüm numaralara SMS gönder** (**Alarmlar** grubunda)
 
-**Options:**
+**Seçenekler:**
 
-* enter the text of the message. It is sent to all the phone numbers allowed in the [SMS Communicator](../RemoteFeatures/SMSCommands.md) settings. The SMS Communicator plugin must be enabled.
+* mesajın metnini girin. Mesaj, [SMS Komünikatör](../RemoteFeatures/SMSCommands.md) ayarlarında izin verilen tüm telefon numaralarına gönderilir. SMS Komünikatör eklentisi etkin olmalıdır.
 
-**Actions:** **Change profile to** (in the **Profile** group)
+**Eylemler:** **Profili değiştir** (**Profil** grubunda)
 
-**Options:**
+**Seçenekler:**
 
-* select the **Profile** to activate. It is activated at 100%, without timeshift. If this profile is already active, the action does nothing.
+* etkinleştirilecek **Profil**'i seçin. Profil %100 olarak, zaman kaydırması olmadan etkinleştirilir. Bu profil zaten etkinse eylem hiçbir şey yapmaz.
 
-**Actions:** **Enable/disable SMB** (in the **Loop & insulin** group)
+**Eylemler:** **SMB'yi etkinleştir/devre dışı bırak** (**Döngü & insülin** grubunda)
 
-**Options:**
+**Seçenekler:**
 
-* choose **On** or **Off**. This changes the **Enable SMB** setting of OpenAPS SMB, exactly as if you had changed it in **Settings**, and stays until you or another rule change it back.
+* **Açık** veya **Kapalı** seçin. Bu, OpenAPS SMB'nin **SMB etkinleştir** ayarını, **Ayarlar**'da değiştirmişsiniz gibi aynen değiştirir. Siz veya başka bir kural geri değiştirene kadar böyle kalır.
 
-**Actions:** **Run Autotune** (in the **Loop & insulin** group)
+**Eylemler:** **OtoAyar'ı Çalıştır** (**Döngü & insülin** grubunda)
 
-**Options:**
+**Seçenekler:**
 
-* select the profile to tune and the number of days: see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule).
+* ayarlanacak profili ve gün sayısını seçin: bkz. [Otomasyon kuralı ile OtoAyar'ı çalıştırma](#autotune-run-autotune-with-an-automation-rule).
 
-**Actions:** **Stop processing** (in the **Loop & insulin** group)
+**Eylemler:** **İşlemeyi durdur** (**Döngü & insülin** grubunda)
 
-**Options:**
+**Seçenekler:**
 
-* none. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Add it to a rule that must take priority over the rules below it (see [the order of the Automations](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* yok. Bu eylemi içeren bir kuralın koşulları doğru olduğu sürece, **AAPS** listede bu kuralın altındaki kuralları kontrol etmez. Koşulları yeniden yanlış olduğunda, alttaki kurallar her zamanki gibi kontrol edilir. Bu eylemi, altındaki kurallardan öncelikli olması gereken bir kurala ekleyin (bkz. [Otomasyonların sırası](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
-**Actions:** **Run scene**, **Enable scene**, **Disable scene** (in the **Scenes** group)
+**Eylemler:** **Senaryoyu çalıştır**, **Senaryoyu etkinleştir**, **Senaryoyu devre dışı bırak** (**Senaryolar** grubunda)
 
-**Options:**
+**Seçenekler:**
 
-* select the [scene](Scenes.md) to run, enable or disable.
+* çalıştırılacak, etkinleştirilecek veya devre dışı bırakılacak [senaryoyu](Scenes.md) seçin.
 
-Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
+‘Eylem’ eklendikten sonra, varsayılan değerlere tıklayıp onları ayarlayarak istenen sayıya değiştirmeniz gerekir.
 
-![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
+![Geçici hedef eyleminin değerleri](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
-## The order of the **Automations** in the list matters
- **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+## Listedeki **Otomasyonların** sırası önemlidir
+ **AAPS**, oluşturulan kuralları **Otomasyon** listesinin en üstünden başlayarak öncelik sırasına göre uygular. Örneğin, ‘Düşük’ **Otomasyonu** diğer tüm kurallardan daha önemli olan **Otomasyon** ise, bu **Otomasyon** aşağıda gösterildiği gibi kullanıcının **Otomasyon** listesinin en üstünde olmalıdır:
 
 
-![List of automation rules](../images/Automations/automation_rule_list.png)
+![Otomasyon kurallarının listesi](../images/Automations/automation_rule_list.png)
 
-To reprioritize the **Automation** rules, touch and hold the **=** handle on the right side of the rule. Reorder the **Automations** by moving the rules up or down.
+**Otomasyon** kurallarını yeniden önceliklendirmek için kuralın sağ tarafındaki **=** tutamacına dokunup basılı tutun. **Otomasyonları** kuralları yukarı veya aşağı taşıyarak yeniden sıralayın.
 
-![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
+![Otomasyon kurallarını yeniden sıralama](../images/Automations/automation_rule_reorder.png)
 
-## How to delete Automation rules
+## Otomasyon kuralları nasıl silinir
 
-To delete an **Automation** rule click on the trash icon.
+Bir **Otomasyon** kuralını silmek için çöp kutusu simgesine tıklayın.
 
-![Delete automation rules](../images/Automations/automation_rule_delete.png)
+![Otomasyon kurallarını silme](../images/Automations/automation_rule_delete.png)
 
-## Examples of Automations
+## Otomasyon örnekleri
 
-Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
+Aşağıda **Otomasyon** örnekleri verilmiştir. **Otomasyonlar** ve kullanıcıların **Otomasyonlarını** kendilerine göre nasıl uyarladıkları hakkında daha fazla tartışmayı Facebook tartışma gruplarında veya Discord'da bulabilirsiniz. Aşağıdaki örnekler, kullanıcı **Otomasyonun** nasıl çalışacağını iyi anlamadan kopyalanmamalıdır.
 
 (automations-low-glucose-temp-target)=
 ### Düşük Glikoz Geçici Hedefi
 
-This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
+Bu **Otomasyon**, **KŞ** belirli bir eşiğin altına düştüğünde otomatik bir **Geçici Hedef** başlatır. Burada glikoz 70 mg/dL'den küçük olduğunda 30 dakika için 110 mg/dL hedef başlatılır:
 
-![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
+![Örnek: düşük glikoz kuralı](../images/Automations/automation_example_low_glucose_rule.png)
 
-### Lunch Time Temp Target (with ‘Location’)
+### Öğle Yemeği Geçici Hedefi (‘Konum’ ile)
 
-![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
+![Örnek: öğle yemeği kuralı](../images/Automations/automation_example_lunch_rule.png)
 
-This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will not activate.
+Bu **Otomasyon**, her hafta içi öğle yemeğini işte aşağı yukarı aynı saatte yiyen bir kullanıcı için oluşturulmuştur. Ancak yalnızca kullanıcı belirlenen bir ‘konum’ içindeyse tetiklenir.  Yani kullanıcı bir gün işte değilse bu **Otomasyon** etkinleşmez.
 
-This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive BG to 90 mg/dL (or 5 mmol/L) in preparation for lunch.
+Bu **Otomasyon**, öğle yemeğine hazırlık olarak KŞ'yi 90 mg/dL'ye (veya 5 mmol/L'ye) getirmek için saat 13:00'te düşük bir **Geçici Hedef** (Yakında Yenecek) ayarlar.
 
-The ‘Trigger’ location has a name, a position (tap **Pick from map**, or use your current location) and a radius in metres, and fires when you are inside (or outside) the area:
+Konum ‘Tetikleyicisinin’ bir adı, bir konumu (**Haritadan seç**'e dokunun veya mevcut konumunuzu kullanın) ve metre cinsinden bir yarıçapı vardır. Alanın içindeyken (veya dışındayken) tetiklenir:
 
-![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
+![Örnek: konum koşullu öğle yemeği kuralı](../images/Automations/automation_example_lunch_location_condition.png)
 
-Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location.
+‘Ve’ bağlantısı nedeniyle **Otomasyon** yalnızca ‘seçilen zaman’ içinde ve kullanıcı seçilen konumdaysa çalışır.
 
-The **Automation** will not be triggered on any other time at this location or at this time outside the 50-metre radius around the chosen position.
+**Otomasyon** bu konumda başka bir zamanda veya bu zamanda seçilen konumun çevresindeki 50 metrelik yarıçapın dışında tetiklenmez.
 
-### Wi-Fi SSID Location Automation
+### Wi-Fi SSID Konum Otomasyonu
 
-Using a Wi-Fi SSID is a good option to trigger an **Automation** while within range of a specific Wi-Fi network (compared with GPS): it is fairly precise, uses less battery, and works in enclosed spaces where GPS and other location services might not be available.
+Bir Wi-Fi SSID kullanmak, belirli bir Wi-Fi ağının menzilindeyken bir **Otomasyon** tetiklemek için (GPS'e göre) iyi bir seçenektir: oldukça hassastır, daha az pil kullanır ve GPS ile diğer konum servislerinin kullanılamayabileceği kapalı alanlarda çalışır.
 
-Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
-
-
-The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
-and while being connected to a home Wi-Fi network (3).
+İşte yalnızca iş günlerinde kahvaltıdan önce (1) bir **Geçici Hedef** ayarlamanın başka bir örneği.
 
 
-It will then set a **Temp Target** of 75 mg/dL for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is traveling on vacation, for instance.
+**Otomasyon** yalnızca pazartesi-cuma günleri saat 05:30'da (2)  
+ve bir ev Wi-Fi ağına bağlıyken (3) tetiklenir.
 
-![Wi-Fi rule: task name (1), weekday time condition (2) and Wi-Fi SSID condition (3)](../images/Automations/automation_example_wifi_rule.png)
 
-Scroll down to see the action: a **Temp Target** of 75 mg/dL for 30 minutes (4).
+Ardından 30 dakika için 75 mg/dL'lik bir **Geçici Hedef** ayarlar (4). Konumu eklemenin avantajlarından biri, örneğin kullanıcı tatilde seyahat ederken tetiklenmemesidir.
 
-![Wi-Fi rule action: Start temp target of 75 mg/dL for 30 minutes (4)](../images/Automations/automation_example_wifi_action.png)
+![Wi-Fi kuralı: görev adı (1), hafta içi zaman koşulu (2) ve Wi-Fi SSID koşulu (3)](../images/Automations/automation_example_wifi_rule.png)
 
-Here is the screenshot detailing the **Automation** triggers:
+Eylemi görmek için aşağı kaydırın: 30 dakika için 75 mg/dL'lik bir **Geçici Hedef** (4).
 
-1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
+![Wi-Fi kuralı eylemi: 30 dakika için 75 mg/dL geçici hedef başlat (4)](../images/Automations/automation_example_wifi_action.png)
+
+**Otomasyon** tetikleyicilerini ayrıntılı gösteren ekran görüntüsü:
+
+1) Ana “VE” altında (tetiklenmesi için iki koşulun da sağlanması gerekir) 1) Yinelenen zaman = Pts,Sal,Çrş,Prş,Cum Saat 05:30  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
-![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
+![Örnek: Wi-Fi koşulu](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
-## Automating Preference Settings Export
+## Tercih Ayarlarının Dışa Aktarımını Otomatikleştirme
 
-### Unattended Exports: scheduled (daily)
+### Gözetimsiz Dışa Aktarmalar: zamanlanmış (günlük)
 
-Screenshots detailing the Automation triggers:
+Otomasyon tetikleyicilerini ayrıntılı gösteren ekran görüntüleri:
 
-1) Condition: Recurring time = M,T,W,T,F At 8:00am 1) Action: Settings Export (For "Text in treatments" enter "Daily")
+1) Koşul: Yinelenen zaman = Pts,Sal,Çrş,Prş,Cum Saat 08:00 1) Eylem: Ayarları dışa aktar ("Tedavi metinleri:" için "Günlük" girin)
 
-![Scheduled exports](../images/Automations/automation_settings_export_daily.png)
+![Zamanlanmış dışa aktarmalar](../images/Automations/automation_settings_export_daily.png)
 
-Note: Export execution will be logged on Careportal
+Not: Dışa aktarma işlemi Careportal'a kaydedilir
 
-### Unattended Exports: Pod Activation (patch pump only)
+### Gözetimsiz Dışa Aktarmalar: Pod aktivasyonu (yalnızca Patch pompa)
 
-Screenshots detailing the Automation triggers:
+Otomasyon tetikleyicilerini ayrıntılı gösteren ekran görüntüleri:
 
-1) Condition: Pod Activation 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+1) Koşul: Pod aktivasyonu 1) Eylem: Ayarları dışa aktar ("Tedavi metinleri:" için "Pod aktivasyonu: ayarların dışa aktarımı" girin)
 
-![Export on Pod activation](../images/Automations/automation_settings_export_pod_activation.png)
+![Pod aktivasyonunda dışa aktarma](../images/Automations/automation_settings_export_pod_activation.png)
 
-Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Settings → Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
+Not: Dışa aktarma işlemi Careportal'a kaydedilir. Not: Daha önce elle bir ayar dışa aktarımı yapmadıysanız Otomasyon **hiç** tetiklenmez. Gözetimsiz ayar dışa aktarımını doğru etkinleştirmek için [Ayarlar → Bakım](#preferences-maintenance-settings) bölümüne bakın.
 
 
-## Automation Logs
+## Otomasyon Günlükleri
 
-**AAPS** shows a log of the most recent **Automation** events at the bottom of the **Automation** screen, below the rules. Use it to verify that your rules triggered when you expected them to.
+**AAPS**, son **Otomasyon** olaylarının günlüğünü **Otomasyon** ekranının altında, kuralların altında gösterir. Kurallarınızın beklediğiniz zamanda tetiklendiğini doğrulamak için bunu kullanın.
 
-In the example below, the **Low glucose temp target** rule (1) (see [Low Glucose Temp Target](#automations-low-glucose-temp-target) above) is enabled. The log (2) shows that at 03:09 PM, glucose fell below 70 mg/dL and the rule triggered:
-* the action was "Start temp target: 110mg/dL@30 min": a **Temp Target** of 110 mg/dL for 30 minutes;
-* **OK** at the end means that the action was carried out successfully.
+Aşağıdaki örnekte **Düşük glikoz geçici hedefi** kuralı (1) (yukarıdaki [Düşük Glikoz Geçici Hedefi](#automations-low-glucose-temp-target) bölümüne bakın) etkindir. Günlük (2), saat 03:09 PM'de (15:09) glikozun 70 mg/dL'nin altına düştüğünü ve kuralın tetiklendiğini gösterir:
+* eylem "Geçici hedefi başlat: 110mg/dL@30 dk" idi: 30 dakika için 110 mg/dL'lik bir **Geçici Hedef**;
+* Sondaki **Tamam**, eylemin başarıyla gerçekleştirildiği anlamına gelir.
 
-![Automation screen: an enabled rule (1) and its log entry (2)](../images/Automations/automation_example_log.png)
+![Otomasyon ekranı: etkin bir kural (1) ve günlük girdisi (2)](../images/Automations/automation_example_log.png)
 
 (automations-troubleshooting)=
 
 ## Troubleshooting
 
-* Problem: __My automations are not being triggered by AAPS?__
+* Sorun: __Otomasyonlarım AAPS tarafından tetiklenmiyor mu?__
 
-Check that the box left of the **Automation** name is ‘ticked’ to ensure the rule is activated:
+Kuralın etkin olduğundan emin olmak için **Otomasyon** adının solundaki kutunun ‘işaretli’ olduğunu kontrol edin:
 
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+![Açılıp kapatılan otomasyon kuralları](../images/Automations/automation_rule_activated_deactivated.png)
 
-* Problem: __My automations are being triggered in the wrong order.__
+* Sorun: __Otomasyonlarım yanlış sırayla tetikleniyor.__
 
-Check your rule prioritization order as discussed above here.
+Yukarıda anlatılan kural öncelik sıranızı kontrol edin.
 
-* Problem: __A condition shows "Unknown trigger … - never true".__
+* Sorun: __Bir koşul "Bilinmeyen tetikleyici … - asla doğru değil" gösteriyor.__
 
-The rule contains a trigger that this version of **AAPS** cannot read, for example after you went back to an older version or imported settings from a newer one. Such a trigger is never true, so the rule does not run. It is kept unchanged, so a newer version can still use it. Edit the rule and replace the trigger, or update **AAPS**.
+Kural, **AAPS**'in bu sürümünün okuyamadığı bir tetikleyici içeriyor; örneğin daha eski bir sürüme döndükten veya daha yeni bir sürümden ayarları içe aktardıktan sonra. Böyle bir tetikleyici asla doğru olmaz, bu yüzden kural çalışmaz. Tetikleyici değiştirilmeden saklanır, böylece daha yeni bir sürüm onu hâlâ kullanabilir. Kuralı düzenleyip tetikleyiciyi değiştirin veya **AAPS**'i güncelleyin.
 
-## Alternatives to Automations
+## Otomasyonlara alternatifler
 
 For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. 

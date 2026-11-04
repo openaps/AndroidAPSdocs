@@ -1,236 +1,236 @@
-# How to use Autotune plugin
+# Så använder du Autotune-pluginet
 
-Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
+Autotune-pluginet är en implementering av OpenAPS autotune-algoritm i AAPS. Det analyserar din senaste AAPS-historik och föreslår ändringar av dina basaldoser, ISF och KH-kvot.
 
-Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+Autotune-pluginet finns i AAPS-versioner sedan [3.4](#version3400) men är dolt som standard.
 
 (autotune-how-autotune-calculates-adjustments)=
-## How Autotune calculates adjustments
+## Hur Autotune beräknar ändringar
 
-Autotune looks back over your recent AAPS history — CGM readings, boluses, carbs and temporary basal rates — and works out where your **Profile** (basal rates, ISF, carb ratio) doesn't quite match what actually happened to your BG.
+Autotune går igenom din senaste AAPS-historik – CGM-värden, bolusar, kolhydrater och tillfälliga basaldoser – och räknar ut var din **Profil** (basaldoser, ISF, KH-kvot) inte riktigt stämmer med vad som faktiskt hände med ditt BG.
 
-For each 5-minute data point, it compares your **actual BG change** to the change your Profile predicted, and sorts the resulting deviation into one of three buckets:
+För varje datapunkt (var 5:e minut) jämför den din **faktiska BG-ändring** med den ändring som din profil förutsade, och sorterar avvikelsen i en av tre grupper:
 
-* deviations that happened with no carbs on board and no insulin activity (used to tune **basal rates**, hour by hour),
-* deviations that happened after a bolus/correction with no carbs (used to tune **ISF**), or
-* deviations that happened while carbs were absorbing (used to tune **carb ratio**).
+* avvikelser som hände utan kolhydrater ombord och utan insulinaktivitet (används för att justera **basaldoser**, timme för timme),
+* avvikelser som hände efter en bolus/korrigering utan kolhydrater (används för att justera **ISF**), eller
+* avvikelser som hände medan kolhydrater absorberades (används för att justera **KH-kvot**).
 
-It then looks at the pattern of deviations in each bucket (using percentiles rather than a simple average, so a few noisy data points don't skew the result) and proposes a new value for that hour/parameter.
+Sedan tittar den på mönstret av avvikelser i varje grupp (med percentiler i stället för ett enkelt medelvärde, så att några få störda datapunkter inte förvränger resultatet) och föreslår ett nytt värde för den timmen/parametern.
 
-To keep any single run from overcorrecting, each Autotune run only ever moves a value a fraction of the way towards what the data suggests: up to 10% for ISF and carb ratio, and up to 20% for each basal segment. Overall drift is further capped by the **Max autosens ratio** / **Min autosens ratio** settings (see [Other settings](#autotune-other-settings) below) — the same bounds that limit Autosens. This is why Autotune is meant to be run repeatedly (day after day, or nightly) rather than trusted after a single run: results should converge gradually, and a big jump on one run is a sign to double check your data (missed carbs, a bad sensor day, _etc._) rather than to trust it blindly.
+För att en enskild körning inte ska rätta för mycket flyttar varje Autotune-körning ett värde bara en del av vägen mot det som datan pekar på: högst 10 % för ISF och KH-kvot, och högst 20 % för varje basalperiod. Den totala ändringen begränsas dessutom av inställningarna **Autosens max** / **Autosens min** (se [Övriga inställningar](#autotune-other-settings) nedan) – samma gränser som begränsar Autosens. Därför är Autotune gjort för att köras flera gånger (dag efter dag, eller varje natt) och inte för att man ska lita på det efter en enda körning: resultaten ska närma sig ett stabilt värde steg för steg, och ett stort hopp i en körning är ett tecken på att du ska dubbelkolla din data (glömda kolhydrater, en dålig sensordag, _etc._) i stället för att lita blint på det.
 
-Autotune can be run three ways: manually as a one-off from within the plugin (as described below), automatically every night via an [automation rule](#autotune-run-autotune-with-an-automation-rule), or — outside of AAPS entirely — as a standalone command-line tool against exported data, which is how some community guides describe using it without a phone actively running AAPS.
+Autotune kan köras på tre sätt: manuellt som en enstaka körning inifrån pluginet (som beskrivs nedan), automatiskt varje natt med en [automationsregel](#autotune-run-autotune-with-an-automation-rule), eller – helt utanför AAPS – som ett fristående kommandoradsverktyg på exporterad data. Det är så vissa guider i gemenskapen beskriver hur man använder det utan en telefon som kör AAPS.
 
-*For the underlying oref0 algorithm in full mathematical detail, see [OpenAPS's Autotune documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
+*Den underliggande oref0-algoritmen med alla matematiska detaljer finns i [OpenAPS dokumentation om Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
 
-## Show the Autotune plugin
+## Visa Autotune-pluginet
 
-Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+Skapa en tom fil som heter `enable_autotune` i undermappen `extra` i telefonens [AAPS-katalog](#preferences-maintenance-settings).
 
-***NOTE: Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one. Several users have put the file into the wrong folder.***
+***OBS! Kontrollera i AAPS-inställningarna var din AAPS-katalog finns, och att du har lagt filen i rätt katalog. Flera användare har lagt filen i fel mapp.***
 
-![Enable Autotune](../images/Autotune/Autotune_0.png)
+![Aktivera Autotune](../images/Autotune/Autotune_0.png)
 
-Restart **AAPS**. Then open the **menu** (☰), select **Configuration**, then the **General** category, and tick **Autotune**. The card then shows **Settings** and **Open plugin**:
+Starta om **AAPS**. Öppna sedan **menyn** (☰), välj **Konfiguration**, sedan kategorin **Generellt**, och markera **Autotune**. Kortet visar då **Inställningar** och **Öppna plugin**:
 
-![Autotune ticked in Configuration > General](../images/v4/Configuration/configuration_general_autotune.png)
+![Autotune markerat i Konfiguration > Generellt](../images/v4/Configuration/configuration_general_autotune.png)
 
-## Autotune user interface
+## Autotunes användargränssnitt
 
-Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
+Tryck på **Öppna plugin** på kortet **Autotune** för att öppna Autotune-skärmen:
 
-![Autotune screen with the profile, the number of days of data and a warning about the selected profile](../images/Autotune/Autotune_1b.png)
+![Autotune-skärmen med profilen, antalet dagar med data och en varning om den valda profilen](../images/Autotune/Autotune_1b.png)
 
-- You can select in the Profile dropdown menu the input profile you want to tune (by default your current active profile is selected)
-  - Note: each time you select a new profile, previous results will be removed and the **Number of days of data** will be set to its default value
-- Then **Number of days of data** (called **Tune days** in older versions) is to select the number of days used in calculation to tune your profile. The minimum value is 1 day and the maximum value 30 days. This number should not be too small to get correct iterative and smooth results (above 7 days for each calculation)
-  - Note: each time you change the **Number of days of data**, previous results will be removed
-- Last Run is a link that recover your latest valid calculation. If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successful run.
-- Warning show you for example some information about selected profile (if you have several IC values or several ISF values)
-  - Note: Autotune calculation works with only a single IC and a single ISF value. There is currently no existing Autotune algorithm to tune a circadian IC or circadian ISF. If your input profile  has several values, you can see in warning section the average value taken into account to tune your profile.
-- Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, IC, ISF, basal and target)
-  - Note: Autotune will only tune your IC (single value), ISF (single value) and basal (with circadian variation). Units and target will remain unchanged in output profile.
+- I rullgardinsmenyn Profil kan du välja den angivna profil som du vill justera (som standard är din aktiva profil vald)
+  - Obs! Varje gång du väljer en ny profil tas tidigare resultat bort och **Antal dagar med data** sätts till sitt standardvärde
+- Sedan används **Antal dagar med data** (som hette **Tune days** i äldre versioner) för att välja hur många dagar som används i beräkningen när din profil justeras. Minsta värdet är 1 dag och högsta värdet är 30 dagar. Antalet ska inte vara för litet, annars blir resultaten inte korrekta och jämna efter flera körningar (mer än 7 dagar för varje beräkning)
+  - Obs! Varje gång du ändrar **Antal dagar med data** tas tidigare resultat bort
+- Kördes senast är en länk som hämtar tillbaka din senaste giltiga beräkning. Om du inte har startat Autotune under den aktuella dagen, eller om tidigare resultat togs bort när du ändrade en beräkningsparameter ovan, kan du hämta tillbaka parametrar och resultat från den senaste lyckade körningen.
+- Varning visar till exempel information om den valda profilen (om du har flera IC-värden eller flera ISF-värden)
+  - Obs! Autotune räknar bara med ett enda IC-värde och ett enda ISF-värde. Det finns för närvarande ingen Autotune-algoritm som kan justera en dygnsbaserad IC eller en dygnsbaserad ISF. Om din angivna profil har flera värden ser du under varningen vilket medelvärde som används för att justera din profil.
+- Knappen Kontrollera profilen öppnar profilvisaren så att du snabbt kan kontrollera din profil (enheter, IC, ISF, basal och målvärde)
+  - Obs! Autotune justerar bara din IC (ett värde), ISF (ett värde) och basal (med dygnsvariation). Enheter och målvärde är oförändrade i den nya profilen.
 
-- "Run Autotune" will launch Autotune calculation with selected profile and the selected number of days of data
-  - Note: Autotune calculation can take a long time. Once launched, you can switch to another view (home, ...) and come back later in Autotune plugin to see results
+- "Kör Autotune" startar Autotune-beräkningen med den valda profilen och det valda antalet dagar med data
+  - Obs! Autotune-beräkningen kan ta lång tid. När beräkningen har startat kan du byta till en annan vy (startskärmen, ...) och senare gå tillbaka till Autotune-pluginet för att se resultatet
 
-  ![Autotune Run start](../images/Autotune/Autotune_2b.png)
+  ![Autotune-körning startar](../images/Autotune/Autotune_2b.png)
 
-- Then during the run you will see intermediate results below
+- Under körningen ser du sedan delresultat nedan
 
-  - Note: During run, settings are locked, so you cannot change anymore selected input profile or the number of day. You will have to wait the end of current calculation if you want to launch another run with other parameters.
+  - Obs! Under körningen är inställningarna låsta, så du kan inte längre ändra den valda angivna profilen eller antalet dagar. Du måste vänta tills den pågående beräkningen är klar om du vill starta en ny körning med andra parametrar.
 
-  ![Autotune during run](../images/Autotune/Autotune_3b.png)
+  ![Autotune under körning](../images/Autotune/Autotune_3b.png)
 
-- When Autotune calculation is finished, you will see the result (Tuned profile) and four buttons below.
+- När Autotune-beräkningen är klar ser du resultatet (den justerade profilen) och fyra knappar nedanför.
 
-  ![Autotune Result](../images/Autotune/Autotune_4b.png)
+  ![Autotune-resultat](../images/Autotune/Autotune_4b.png)
 
-- It's important to always compare input profile (column "Profile"), output profile (column "Tuned") and the percentage of variation for each value (Column "%").
+- Det är viktigt att alltid jämföra den angivna profilen (kolumnen "Profil"), den nya profilen (kolumnen "Justerad") och den procentuella ändringen för varje värde (kolumnen "%").
 
-- For basal rates, you also have the number of "missing days". You have missing days when Autotune don't have enough data categorized as "Basal" to tune basal rate for this period (for example after each meal when you have carbs absorption). This number should be as low as possible especially when basal is important (for example during the night or at the end of the afternoon)
+- För basaldoser ser du också antalet "saknade dagar". Du har saknade dagar när Autotune inte har tillräckligt med data som klassats som "Basal" för att justera basaldosen för den perioden (till exempel efter varje måltid när du har kolhydratabsorption). Antalet ska vara så lågt som möjligt, särskilt när basalen är viktig (till exempel under natten eller i slutet av eftermiddagen)
 
-- The "Compare profiles" button open the profile comparator view. Input profile is in blue, and output profile (named "Tuned") is in red.
+- Knappen "Jämför profiler" öppnar vyn där du jämför profiler. Den angivna profilen är blå och den nya profilen (som heter "Justerad") är röd.
 
-  - Note: in the example below input profile has circadian variation for IC and ISF, but output calculated profile has a single value. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+  - Obs! I exemplet nedan har den angivna profilen dygnsvariation för IC och ISF, men den beräknade nya profilen har ett enda värde. Om det är viktigt för dig att få en dygnsbaserad ny profil, se [Dygnsbaserad IC- eller ISF-profil](#autotune-circadian-ic-or-isf-profile) nedan.
 
-  ![Autotune Compare profiles](../images/Autotune/Autotune_5.png)
+  ![Autotune Jämför profiler](../images/Autotune/Autotune_5.png)
 
-- If you trust results (low percentage of variation between input profile and output profile), you can click on "Activate profile" button and then click on OK to validated.
+- Om du litar på resultatet (liten procentuell ändring mellan den angivna och den nya profilen) kan du klicka på knappen "Aktivera profil" och sedan på OK för att bekräfta.
 
-  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
-  - If you already have a profile named "Tuned" in **Manage → Profile**, then this profile will be updated with calculated Autotune profile before the activation
+  - "Aktivera profil" skapar automatiskt en ny profil "Justerad" i din profillista (**Hantera → Profil**).
+  - Om du redan har en profil som heter "Justerad" i **Hantera → Profil** uppdateras den profilen med den beräknade Autotune-profilen innan den aktiveras
 
-  ![Autotune Activate profile](../images/Autotune/Autotune_6.png)
+  ![Autotune Aktivera profil](../images/Autotune/Autotune_6.png)
 
-- If you think Tuned profile must be adjusted (for example if you think some variation are too important), then you can click on "Copy to local profile" button
+- Om du tycker att den justerade profilen behöver ändras (till exempel om du tycker att vissa ändringar är för stora) kan du klicka på knappen "Kopiera till lokal profil"
 
-  - A new profile with the prefix "Tuned" and the date and time of the run will be created in **Manage → Profile**
+  - En ny profil med prefixet "Justerad" och datum och tid för körningen skapas i **Hantera → Profil**
 
-  ![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
+  ![Autotune Kopiera till lokal profil](../images/Autotune/Autotune_7.png)
 
-- You can then edit the Tuned profile: open **Manage** > **Profile**, swipe to the card named "Tuned" with the date and time of the run, and tap the **Edit** (pencil) button
+- Du kan sedan redigera den justerade profilen: öppna **Hantera** > **Profil**, svep till kortet som heter "Justerad" med datum och tid för körningen, och tryck på knappen **Redigera** (pennan)
 
-  - the values in the profile will be rounded in the user interface to your pump capabilities
+  - värdena i profilen avrundas i användargränssnittet till vad din pump klarar
 
-  ![Autotune local profile update](../images/Autotune/Autotune_8.png)
+  ![Autotune uppdatering av lokal profil](../images/Autotune/Autotune_8.png)
 
-- If you want to replace your input profile with Autotune result, click on "Update input profile" button and validate the Popup with OK
+- Om du vill ersätta din angivna profil med Autotune-resultatet, klicka på knappen "Uppdatera angiven profil" och bekräfta popup-fönstret med OK
 
-  - Note: if you click on "Activate profile" after "Update input profile", then you will activate your updated profile and not the default "Tuned" profile.
+  - Obs! Om du klickar på "Aktivera profil" efter "Uppdatera angiven profil" aktiverar du din uppdaterade profil och inte standardprofilen "Justerad".
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_9.png)
+  ![Autotune Uppdatera angiven profil](../images/Autotune/Autotune_9.png)
 
-- If you have updated your input profile, then the "Update input profile" button is replaced by "Revert input profile" button (see screenshot below). You can that way immediately see if your current input profile in **Manage → Profile** already includes the result of last run or not. You also have the possibility to recover your input profile without autotune result with this button
+- Om du har uppdaterat din angivna profil ersätts knappen "Uppdatera angiven profil" av knappen "Återställ angiven profil" (se skärmbilden nedan). På så sätt ser du direkt om din angivna profil i **Hantera → Profil** redan innehåller resultatet från den senaste körningen eller inte. Med den här knappen kan du också få tillbaka din angivna profil utan Autotunes resultat
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_10.png)
+  ![Autotune Uppdatera angiven profil](../images/Autotune/Autotune_10.png)
 
 
 
-## Autotune settings
+## Autotune-inställningar
 
 (autotune-plugin-settings)=
 
-### Autotune plugin settings
+### Inställningar för Autotune-pluginet
 
-  ![Autotune settings in AAPS 4](../images/preferences/settings_autotune.png)
+  ![Autotune-inställningar i AAPS 4](../images/preferences/settings_autotune.png)
 
 ```{admonition} Only DEV
 :class: note
-The **Auto switch profile** feature is only available in Dev/Engineering mode.
+Funktionen **Byt profil automatiskt** finns bara i Dev/Engineering Mode.
 ```
 
-- **Auto switch profile** (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. If you change this setting to On, the input profile will automatically be updated by the Tuned profile, and it will be activated.
-  - **Be Careful, you must trust and verify during several following days, that after an update and activation of Tuned profile without modification, it improves your loop**
+- **Byt profil automatiskt** (standard Av): se [Kör Autotune med en automationsregel](#autotune-run-autotune-with-an-automation-rule) nedan. Om du sätter denna inställning till På uppdateras den angivna profilen automatiskt med den justerade profilen, och den aktiveras.
+  - **Var försiktig: du måste lita på och kontrollera under flera dagar efteråt att din loop blir bättre efter att du har uppdaterat och aktiverat den justerade profilen utan ändringar**
 
-- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). It will prevent (when Off) to categorize UAM as basal.
-  - Note: if you have at least one hour of Carbs absorption detected during one day, then all data categorized as "UAM" will be categorized as basal, whatever this setting (On or Off)
-- **Default tune days** (default 5): You can define the default value with this setting. Each time you select a new profile in the Autotune plugin, the **Number of days of data** will be replaced by this default value
-- **Use circadian IC/ISF** (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+- **Kategorisera UAM som basal** (standard Av): Denna inställning är för dig som använder AAPS utan att ange några kolhydrater (Full UAM). När den är Av hindrar den att UAM klassas som basal.
+  - Obs! Om minst en timme med kolhydratabsorption har upptäckts under en dag klassas all data som klassats som "UAM" som basal, oavsett denna inställning (På eller Av)
+- **Standardantal dagar för Autotune** (standard 5): Med denna inställning bestämmer du standardvärdet. Varje gång du väljer en ny profil i Autotune-pluginet ersätts **Antal dagar med data** med detta standardvärde
+- **Använd dygnsbaserad IC/ISF** (standard Av): se [Dygnsbaserad IC- eller ISF-profil](#autotune-circadian-ic-or-isf-profile) nedan.
 
 (autotune-other-settings)=
-### Other settings
+### Övriga inställningar
 
-- Autotune also uses Max autosens ratio and Min autosens ratio to limit variation. You can see and adjust these values in [**Settings** > **Absorption settings** > **Advanced Settings**](../SettingUpAaps/Preferences.md) (**Autosens max** and **Autosens min**).
+- Autotune använder också Autosens max och Autosens min för att begränsa ändringen. Du kan se och ändra dessa värden i [**Inställningar** > **Absorptionsinställningar** > **Avancerade inställningar**](../SettingUpAaps/Preferences.md) (**Autosens max** och **Autosens min**).
 
-  ![Autosens max and Autosens min in the advanced absorption settings](../images/preferences/settings_absorption_advanced.png)
+  ![Autosens max och Autosens min i de avancerade absorptionsinställningarna](../images/preferences/settings_absorption_advanced.png)
 
 
 
-## Advanced feature
+## Avancerad funktion
 
 (autotune-circadian-ic-or-isf-profile)=
 
-### Circadian IC or ISF profile
+### Dygnsbaserad IC- eller ISF-profil
 
-- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can enable **Use circadian IC/ISF** (called "Apply average result in circadian IC/ISF" in older versions)
+- Om din profil har stora variationer i IC och/eller ISF och du litar helt på dina dygnsbaserade tider och variationer kan du slå på **Använd dygnsbaserad IC/ISF** (som hette "Apply average result in circadian IC/ISF" i äldre versioner)
 
-  - Note that Autotune calculation will always be done with a single value, and circadian variation will not be tuned by Autotune. This setting only apply average variation calculated for IC and/or ISF on your circadian values
+  - Observera att Autotune alltid räknar med ett enda värde, och att Autotune inte justerar dygnsvariationen. Denna inställning använder bara den genomsnittliga ändring som beräknats för IC och/eller ISF på dina dygnsbaserade värden
 
-- See on screenshot below Tuned profile with Apply average variation Off (on the left) and On (on the right)
+- Skärmbilden nedan visar en justerad profil med Använd genomsnittlig ändring Av (till vänster) och På (till höger)
 
-  ![Autotune default screen](../images/Autotune/Autotune_13.png)
+  ![Autotunes standardskärm](../images/Autotune/Autotune_13.png)
 
 
 
-### Tune specific days of the week
+### Justera vissa veckodagar
 
-- If you tap the **eye** icon on the right of the **Number of days of data** field, you will see the day selection. You can specify which day of the week should be included in Autotune calculation (in screenshot below you can see an example for "working days" with Saturday and Sunday removed from autotune calculation)
-  - If the number of days included in Autotune calculation is lower than the **Number of days of data**, then you will see how many days will be included on the right of the days selector (10 days in the example below)
-  - This setting gives good results only if the number of remaining days is not too small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
+- Om du trycker på ikonen **öga** till höger om fältet **Antal dagar med data** ser du dagvalet. Du kan välja vilka veckodagar som ska tas med i Autotune-beräkningen (i skärmbilden nedan ser du ett exempel för "arbetsdagar" där lördag och söndag är borttagna från Autotune-beräkningen)
+  - Om antalet dagar som tas med i Autotune-beräkningen är lägre än **Antal dagar med data** ser du hur många dagar som tas med till höger om dagväljaren (10 dagar i exemplet nedan)
+  - Denna inställning ger bara bra resultat om antalet återstående dagar inte är för litet (om du till exempel justerar en viss profil för helgdagar med bara söndag och lördag valda, ska du sätta **Antal dagar med data** till minst 21 eller 28 för att få med 6 eller 8 dagar i Autotune-beräkningen)
 
-  ![Autotune default screen](../images/Autotune/Autotune_14b.png)
+  ![Autotunes standardskärm](../images/Autotune/Autotune_14b.png)
 
-- During Autotune calculation, you can see the progress of the calculations ("Partial result day 1 / 4 tuned" in the example below, with Saturday and Sunday excluded)
+- Under Autotune-beräkningen kan du följa hur beräkningen går ("Delresultat för dag 1 / 4 justerat" i exemplet nedan, där lördag och söndag är uteslutna)
 
-  ![Autotune default screen](../images/Autotune/Autotune_15b.png)
+  ![Autotunes standardskärm](../images/Autotune/Autotune_15b.png)
 
 
 
 (autotune-run-autotune-with-an-automation-rule)=
 
-## Run Autotune with an automation rule
+## Kör Autotune med en automationsregel
 
 ```{admonition} Only DEV
 :class: note
-The **Auto switch profile** feature is only available in Dev/Engineering mode.
+Funktionen **Byt profil automatiskt** finns bara i Dev/Engineering Mode.
 ```
 
-First step is to define correct trigger for an automation rule with Autotune:
+Det första steget är att välja rätt utlösare för en automationsregel med Autotune:
 
-Note: for more information on how to set an automation rule, see [here](../DailyLifeWithAaps/Automations.md).
+Obs! Mer information om hur du skapar en automationsregel finns [här](../DailyLifeWithAaps/Automations.md).
 
-- You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be run daily (each new run you shift one day later and quickly profile modification should be tiny)
+- Välj utlösaren Återkommande tid: kör Autotune bara en gång per dag. Autotune är gjort för att köras dagligen (vid varje ny körning flyttas perioden en dag framåt, och profilen bör snabbt bara ändras mycket lite)
 
-  ![Autotune default screen](../images/Autotune/Autotune_16.png)
+  ![Autotunes standardskärm](../images/Autotune/Autotune_16.png)
 
-- It's better at the beginning to run Autotune during the day to be able to check results. If you want to run Autotune during the night, you have to select in the trigger 4AM or later to include current day in next Autotune Calculation.
+- I början är det bättre att köra Autotune på dagen så att du kan kontrollera resultatet. Om du vill köra Autotune på natten måste du välja 04:00 eller senare i utlösaren, så att den aktuella dagen tas med i nästa Autotune-beräkning.
 
-  ![Autotune default screen](../images/Autotune/Autotune_17.png)
+  ![Autotunes standardskärm](../images/Autotune/Autotune_17.png)
 
-- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
+- Sedan kan du välja åtgärden **Kör Autotune** (i gruppen **Loop & insulin**)
 
-  ![Autotune default screen](../images/Autotune/Autotune_18.png)
+  ![Autotunes standardskärm](../images/Autotune/Autotune_18.png)
 
-- You can then adjust the parameters of the action for your run. In a new action, **Select profile to tune** shows the first profile of your local profile list, the **Tune days** field is empty and all days are selected. Choose the profile to tune and enter the number of **Tune days** (1 to 30).
+- Sedan kan du ställa in åtgärdens parametrar för din körning. I en ny åtgärd visar **Välj profil att justera** den första profilen i din lokala profillista, fältet **Dagar att justera** är tomt och alla dagar är valda. Välj profilen som ska justeras och ange antal **Dagar att justera** (1 till 30).
 
-  ![Autotune default screen](../images/Autotune/Autotune_19b.png)
+  ![Autotunes standardskärm](../images/Autotune/Autotune_19b.png)
 
-- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "**Auto switch profile**" to enabled to automatically update and activate profile tuned after calculation.
+- Om du efter några dagar litar helt på Autotunes resultat och den procentuella ändringen är liten kan du slå på [Autotune-inställningen](#autotune-plugin-settings) "**Byt profil automatiskt**" så att profilen uppdateras och den justerade profilen aktiveras automatiskt efter beräkningen.
 
-Note: if you want to automatically tune profiles for specific days of the week (for example a profile for "Weekend days" and another one for "Working days"), then create one rule for each profile, select the same days in Trigger and in Autotune Action, Tune days must be high enough to be sure tuning will be done with at least 6 or 8 days, and don't forget to select time after 4AM in trigger...
+Obs! Om du vill justera profiler automatiskt för vissa veckodagar (till exempel en profil för "helgdagar" och en annan för "arbetsdagar"), skapa en regel för varje profil, välj samma dagar i utlösaren och i Autotune-åtgärden. Antalet dagar att justera måste vara så högt att justeringen säkert görs med minst 6 eller 8 dagar, och glöm inte att välja en tid efter 04:00 i utlösaren...
 
-- See below an example of rule that runs every working day (Monday to Friday) at 04:00 and tunes the profile "Normal" with 14 **Tune days**, working days only (so only 10 days are included in the Autotune calculation).
+- Nedan ser du ett exempel på en regel som körs varje arbetsdag (måndag till fredag) kl. 04:00 och justerar profilen "Normal" med 14 **Dagar att justera**, bara arbetsdagar (så bara 10 dagar tas med i Autotune-beräkningen).
 
-  ![Autotune default screen](../images/Autotune/Autotune_20b.png)
+  ![Autotunes standardskärm](../images/Autotune/Autotune_20b.png)
 
 
 
-## Tips and trick's
+## Tips och tricks
 
-Autotune works with information existing in your database, so if you just installed AAPS on a new phone, you will have to wait several days before being able to launch Autotune with enough days to get relevant results.
+Autotune arbetar med informationen i din databas. Om du nyss har installerat AAPS på en ny telefon måste du därför vänta flera dagar innan du kan starta Autotune med tillräckligt många dagar för att få relevanta resultat.
 
-Autotune is just an help, it's important to regularly check if you agree with calculated profile. If you have any doubt, change Autotune settings (for example the number of days) or copy results in local profile and adjust profile before using it.
+Autotune är bara ett hjälpmedel. Det är viktigt att regelbundet kontrollera om du håller med om den beräknade profilen. Om du är osäker, ändra Autotune-inställningarna (till exempel antalet dagar) eller kopiera resultatet till en lokal profil och justera profilen innan du använder den.
 
-Always use Autotune several days manually to check results before applying them. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
+Kör alltid Autotune manuellt under flera dagar för att kontrollera resultatet innan du använder det. Börja använda Automation först när du litar helt på Autotunes resultat och när skillnaden mellan den tidigare och den beräknade profilen har blivit mycket liten (aldrig tidigare)
 
-- Autotune can work very well for some users and not for others, so **If you don't trust Autotune result, don't use it**
+- Autotune kan fungera mycket bra för vissa användare och inte för andra, så **om du inte litar på Autotunes resultat, använd det inte**
 
-It's also important to analyze Autotune results to understand (or try to understand) why Autotune proposes these modifications
+Det är också viktigt att analysera Autotunes resultat för att förstå (eller försöka förstå) varför Autotune föreslår dessa ändringar
 
-- you can have a whole increase or decrease of the strength of your profile (for example increase of total basal associated to decrease of ISF and IC values). it could be associated to several following days with autosens correction above 100% (more aggressivity required) or below 100% (you are more sensitive)
-- Sometimes Autotune proposes a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
+- hela din profil kan bli starkare eller svagare (till exempel högre total basal tillsammans med lägre ISF- och IC-värden). det kan hänga ihop med flera dagar i följd med autosens-korrigering över 100 % (mer aggressivitet krävs) eller under 100 % (du är känsligare)
+- Ibland föreslår Autotune en annan balans mellan basaldoser och IC/ISF (t.ex. lägre basal och mer aggressiv IC/ISF)
 
-We advise to not use Autotune in the following cases:
+Vi avråder från att använda Autotune i följande fall:
 
-- You don't enter all your carbs
-  - If you don't enter carbs correction for hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs, especially correction for hypo.
-- You have a lot of periods with UAM detected during the day.
-  - Do you have entered all your carbs and correctly estimated your Carbs?
-  - All UAM periods (except if you enter no carbs during a day and categorized UAM as basal is disabled), all your UAM periods will be categorized as basal, this can increase a lot your basal (much more than necessary)
+- Du anger inte alla dina kolhydrater
+  - Om du inte anger kolhydrater som du äter för att rätta en hypo ser Autotune en oväntad ökning av ditt BG och ökar dina basaldoser 4 timmar tidigare. Det kan vara motsatsen till vad du behöver för att undvika hypo, särskilt mitt i natten. Därför är det viktigt att ange alla kolhydrater, särskilt de som rättar en hypo.
+- Du har många perioder med upptäckt UAM under dagen.
+  - Har du angett alla dina kolhydrater och uppskattat dem rätt?
+  - Alla UAM-perioder (utom om du inte anger några kolhydrater under en dag och Kategorisera UAM som basal är avstängt): alla dina UAM-perioder klassas som basal, och det kan öka din basal mycket (mycket mer än nödvändigt)
 
-- Your carbs absorption is very slow: if most of your carbs absorption are calculated with min_5m_carbimpact parameter (you can see these periods with a little orange dot in the top of COB curve), the calculation of COB could be wrong and leads to wrong results.
-  - When you practice sport, you are generally more sensitive and your BG doesn't rise a lot, so during or after an exercise, it's usual to see some periods with slow carbs. But if you have too often unexpected slow carb absorption, then you may need a profile adjustment (higher value of IC) or a min_5m_carbimpact a bit too high.
-- You have "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you have long periods of wrong BG values. If during the past weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
-- If the percentage of modification is too important
-  - You can try to increase the number of days to get smoother results
+- Din kolhydratabsorption är mycket långsam: om det mesta av din kolhydratabsorption beräknas med parametern min_5m_carbimpact (du ser dessa perioder som en liten orange punkt överst på COB-kurvan) kan COB-beräkningen bli fel och ge felaktiga resultat.
+  - När du tränar är du oftast känsligare och ditt BG stiger inte så mycket, så under eller efter träning är det vanligt att se perioder med långsamma kolhydrater. Men om du ofta har oväntat långsam kolhydratabsorption kan du behöva justera profilen (högre IC-värde) eller så är min_5m_carbimpact lite för högt.
+- Du har "mycket dåliga dagar", till exempel när du har fastnat flera timmar i hyperglykemi och behövt en mycket stor mängd insulin för att komma ner i målintervallet, eller när du efter ett sensorbyte har långa perioder med felaktiga BG-värden. Om du under de senaste veckorna bara har en eller 2 "dåliga dagar" kan du manuellt stänga av dessa dagar i Autotune-beräkningen för att utesluta dem, och återigen **noga kontrollera om du kan lita på resultatet**
+- Om den procentuella ändringen är för stor
+  - Du kan prova att öka antalet dagar för att få jämnare resultat

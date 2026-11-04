@@ -7,7 +7,7 @@
 
 Er zijn vier zeer effectieve hulpmiddelen om **AAPS** op afstand te beheren:
 
-1) [SMS-commando's](#RemoteControl_SMS-Commands) (de volgtelefoon kan Android of iOS zijn), 2) [AAPSClient](#RemoteControl_aapsclient) (de volgtelefoon is Android; een iPhone-versie is in ontwikkeling) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS of een andere computer/ander apparaat), vooral om te volgen: zie de opmerking over [client besturing](#client-master-control) in dat deel.  
+1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower device is an Android phone or tablet, or a Windows, Mac or Linux computer; on an iPhone you [build the app yourself](#aapsclient-iphone)) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
 4) [Smartwatches](#RemoteControl_smartwatches) (Android)
 
 De eerste drie zijn vooral geschikt voor verzorgers/ouders, maar smartwatches zijn erg handig voor verzorgers/ouders **en** voor volwassenen met diabetes zelf.

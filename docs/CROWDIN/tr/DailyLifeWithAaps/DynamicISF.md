@@ -1,136 +1,136 @@
 (Open-APS-features-DynamicISF)=
-# Dynamic ISF (DynISF)
+# Dinamik İDF (DynISF)
 
-Up until now, with **AMA** and **SMB**, **ISF** was defined in the **Profile** and was static for each defined period in the day. But in reality, a person’s **ISF** is not that static and varies depending on their **BG** level: when at a high BG level, the user will need more insulin to bring their **BG** down 50 mg/dL / 3 mmol/L than they would at a lower **BG**. [Autosens](#Open-APS-features-autosens) was the first algorithm to try and address this issue, by adjusting **ISF** outside of mealtimes.
+Şimdiye kadar **AMA** ve **SMB** ile **İDF**, **Profil**'de tanımlanıyordu ve günün her tanımlı dilimi için sabitti. Ama gerçekte bir kişinin **İDF**'si o kadar sabit değildir ve **KŞ** seviyesine göre değişir: KŞ yüksekken, kullanıcının **KŞ**'sini 50 mg/dL / 3 mmol/L düşürmek için, daha düşük bir **KŞ**'de olduğundan daha fazla insüline ihtiyacı olur. [Otoduyarlılık](#Open-APS-features-autosens), bu sorunu çözmeye çalışan ilk algoritmaydı. Öğün zamanları dışında **İDF**'yi ayarlıyordu.
 
-**Dynamic ISF** (also called **DynISF**) serves the same purpose but is more advanced as it can be used at all times. It is recommended only for advanced users that have a good handle on their **AAPS**’ controls and monitoring. Read the [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf) below before trying it out.
+**Dinamik İDF** (**DynISF** olarak da bilinir) aynı amaca hizmet eder, ama her zaman kullanılabildiği için daha gelişmiştir. Yalnızca **AAPS**’in kontrollerini ve izlemesini iyi bilen ileri düzey kullanıcılara önerilir. Denemeden önce aşağıdaki [Dinamik İDF'yi etkinleştirirken dikkat edilmesi gerekenler](#dyn-isf-things-to-consider-when-activating-dynamicisf) bölümünü okuyun.
 
 ```{admonition} CAUTION - Automations or Profile Percentage change
 :class: warning
 
-**Automations** should always be used with care. This is particularly so with **Dynamic ISF**.
+**Otomasyonlar** her zaman dikkatle kullanılmalıdır. Bu, özellikle **Dinamik İDF** için geçerlidir.
 
-When using **Dynamic ISF**, disable any temporary **Profile** change as an **Automation** rule, because it would cause **Dynamic ISF** to be overly aggressive in correction bolusing and result in hypoglycemia. This is the exact purpose of **Dynamic ISF** and so there is no need for **AAPS** to be told to provide additional insulin by way of Automation in the event of high **BGs**.
+**Dinamik İDF** kullanırken, geçici bir **Profil** değişikliği yapan tüm **Otomasyon** kurallarını devre dışı bırakın. Aksi halde **Dinamik İDF** düzeltme boluslarında aşırı agresif olur ve hipoglisemiye yol açar. Bu tam olarak **Dinamik İDF**'nin görevidir. Bu yüzden yüksek **KŞ** durumunda **AAPS**'e Otomasyon ile ek insülin vermesini söylemeye gerek yoktur.
 
 ```
 
-To use **Dynamic ISF**, **AAPS'** database requires a minimum of 7 days of the user's **AAPS** data.
+**Dinamik İDF**'yi kullanmak için **AAPS'in** veritabanında kullanıcının en az 7 günlük **AAPS** verisi olmalıdır.
 
-## What does Dynamic ISF do?
+## Dinamik İDF ne yapar?
 
-**Dynamic ISF** adapts the insulin sensitivity factor (**ISF**) dynamically based on the user's:
+**Dinamik İDF**, insülin duyarlılık faktörünü (**İDF**) kullanıcının şu değerlerine göre dinamik olarak uyarlar:
 
-- Total Daily Dose of insulin (**TDD**); and
-- current and predicted blood glucose values.
+- Günlük toplam insülin dozu (**GTD**); ve
+- mevcut ve tahmin edilen kan şekeri değerleri.
 
-When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation of the app).
+**Dinamik İDF** kullanılırken **Profil**'e girilen **İDF** değerleri artık hiç kullanılmaz. Tek istisna, **AAPS** veritabanında yeterli GTD verisi olmadığında yedek değer olarak kullanılmalarıdır (*ör.* uygulama yeni kurulduğunda).
 
-**SMB/AMA** - an example of a user's **Profile** with static **ISF** as set by the user and utilised by **SMB** and **AMA**.
+**SMB/AMA** - kullanıcının ayarladığı, **SMB** ve **AMA** tarafından kullanılan sabit **İDF** ile bir kullanıcı **Profil**'i örneği.
 
-![Static ISF](../images/DynamicISF/profile_viewer_isf.png)
+![Sabit İDF](../images/DynamicISF/profile_viewer_isf.png)
 
-**Dynamic ISF** - an example of a user's **ISF** subject to change as determined by **Dynamic ISF**.
+**Dinamik İDF** - **Dinamik İDF**'nin belirlediği şekilde değişen bir kullanıcı **İDF**'si örneği.
 
-![Dyn ISF](../images/DynamicISF/DynISF2.png)
+![Dinamik İDF](../images/DynamicISF/DynISF2.png)
 
-The section circled in red shows: `profile ISF` -> `ISF as calculated by DynISF`. <br/> Tapping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+Kırmızı daire içindeki bölüm şunu gösterir: `profile ISF` -> `ISF as calculated by DynISF`. <br/> Bu bölüme dokunmak, ek bilgiler gösteren bir iletişim kutusu açar; örneğin hesaplayıcı ve karbonhidrat emilimi için kullanılan **İDF** (aşağıdaki [İDF'nin diğer kullanımları](#dynisf-other-usages-of-isf) bölümüne bakın).
 
-The **DynISF** value can also be shown in a graph: tap **Add graph** below the graphs on the main screen and select **VSENS** (variable sensitivity). It shows as a white line (bottom of the image above).
+**DynISF** değeri bir grafikte de gösterilebilir: ana ekrandaki grafiklerin altında **Grafik ekle**'ye dokunun ve **DDYRLLK** (değişken duyarlılık) seçin. Bu değer beyaz bir çizgi olarak görünür (yukarıdaki görüntünün alt kısmı).
 
-## How is Dynamic ISF calculated?
+## Dinamik İDF nasıl hesaplanır?
 
-**Dynamic ISF** uses Chris Wilson’s model to determine **ISF** instead of the user's static **ISF** value as set within the **Profile**. A detailed explanation can be found here: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
+**Dinamik İDF**, **İDF**'yi belirlemek için kullanıcının **Profil**'de ayarladığı sabit **İDF** değeri yerine Chris Wilson'ın modelini kullanır. Ayrıntılı bir açıklamayı burada bulabilirsiniz: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
 
-The **Dynamic ISF** equation implemented is: `ISF = 1800 / ((TDD * DynISF Adjust Factor) * Ln (( current BG / insulin divisor) + 1 ))`
+Uygulanan **Dinamik İDF** denklemi şudur: `ISF = 1800 / ((TDD * DynISF Adjust Factor) * Ln (( current BG / insulin divisor) + 1 ))`
 
-The variables used in this equation are detailed below.<br/> Note : `Ln` stands for natural logarithm, a mathematical function.
+Bu denklemde kullanılan değişkenler aşağıda ayrıntılı olarak açıklanmıştır.<br/> Not: `Ln`, matematiksel bir fonksiyon olan doğal logaritma anlamına gelir.
 
-The implementation uses the above equation to calculate current **ISF** and in the oref1 [predictions for **IOB**, **ZT** (zero-temping) and **UAM**](#aaps-screens-prediction-lines). It is also used for **COB** and in the bolus wizard (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+Uygulama, yukarıdaki denklemi mevcut **İDF**'yi hesaplamak için ve oref1'in [**AİNS**, **ZT** (sıfır geçici bazal) ve **UAM** tahminlerinde](#aaps-screens-prediction-lines) kullanır. Ayrıca **AKRB** için ve bolus sihirbazında da kullanılır (aşağıdaki [İDF'nin diğer kullanımları](#dynisf-other-usages-of-isf) bölümüne bakın).
 
-### TDD (Total Daily Dose)
-TDD will use a combination of the following values:
-1.  7 day's average **TDD**;
-2.  the previous day’s **TDD**; and
-3.  a weighted average of the last eight (8) hours of insulin use extrapolated out for 24 hours.
+### GTD (Günlük Toplam Doz)
+GTD, aşağıdaki değerlerin bir birleşimini kullanır:
+1.  7 günlük ortalama **GTD**;
+2.  önceki günün **GTD**'si; ve
+3.  son sekiz (8) saatteki insülin kullanımının ağırlıklı ortalaması, 24 saate göre hesaplanmış olarak.
 
-The **TDD** used in the above equation is weighted one third of each of the above values.
+Yukarıdaki denklemde kullanılan **GTD**, yukarıdaki değerlerin her birinin üçte bir ağırlıkla alınmasıyla hesaplanır.
 
-### Dynamic ISF Adjustment Factor
+### Dinamik İDF Ayarlama Faktörü
 
-This is set within the user’s **Settings** and is used to make **Dynamic ISF** more or less aggressive. See the [Preferences](#dyn-isf-preferences) section below.
+Bu, kullanıcının **Ayarlar**'ında belirlenir ve **Dinamik İDF**'yi daha fazla veya daha az agresif yapmak için kullanılır. Aşağıdaki [Tercihler](#dyn-isf-preferences) bölümüne bakın.
 
-### Insulin Divisor
-The insulin divisor depends on the peak of the insulin used and is inversely proportional to the peak time. For Lyumjev this value is 75, for Fiasp, 65 and regular rapid insulin, 55.
+### İnsülin Böleni
+İnsülin böleni, kullanılan insülinin tepe zamanına bağlıdır ve tepe zamanı ile ters orantılıdır. Bu değer Lyumjev için 75, Fiasp için 65 ve normal hızlı etkili insülin için 55'tir.
 
-### ISF based on predicted BG for dosing decisions
+### Doz kararları için tahmin edilen KŞ'ye dayalı İDF
 
-Dynamic sensitivity is computed with the **current BG** value, and displayed as your current ISF in **AAPS**. But when doing dosing calculations, the oref1 algorithm computes and uses **Future ISF** instead.
+Dinamik duyarlılık **mevcut KŞ** değeri ile hesaplanır ve **AAPS**'te mevcut İDF'niz olarak gösterilir. Ancak doz hesaplarken oref1 algoritması bunun yerine **Gelecek İDF**'yi hesaplar ve kullanır.
 
-This is done to prevent dosing too much insulin when **BG** is low or predicted to go low.
+Bunun amacı, **KŞ** düşükken veya düşmesi tahmin edilirken çok fazla insülin verilmesini önlemektir.
 
-**Future ISF** uses the same formula as described above, except that it may use **minimum predicted BG** instead of **current BG**. **Minimum predicted BG**, [as calculated in oref1](#aaps-screens-how-predictions-become-a-dosing-decision), is the minimum value your BG is predicted to go during all the course of the predictions.
+**Gelecek İDF**, yukarıda anlatılan formülün aynısını kullanır. Tek fark, **mevcut KŞ** yerine **minimum tahmini KŞ**'yi kullanabilmesidir. [oref1'de hesaplandığı şekliyle](#aaps-screens-how-predictions-become-a-dosing-decision) **minimum tahmini KŞ**, tahminlerin tüm süresi boyunca KŞ'nizin ulaşacağı tahmin edilen en düşük değerdir.
 
-* If the current **BG** is above target<br/> **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
-* If eventual **BG** is above target and glucose levels are increasing,<br/> **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
-* Otherwise:<br/>BG is used in the formula as follows: `minimum predicted BG`.
+* Mevcut **KŞ** hedefin üzerindeyse<br/> **ve** **KŞ** seviyeleri +/- 3 mg/dL aralığında sabitse:<br/>Formülde KŞ şöyle kullanılır: `average(minimum predicted BG, current BG)`.
+* Nihai **KŞ** hedefin üzerindeyse ve glikoz seviyeleri yükseliyorsa,<br/> **veya** nihai **KŞ** mevcut **KŞ**'nin üzerindeyse:<br/>Formülde KŞ şöyle kullanılır: `current BG`.
+* Diğer durumlarda:<br/>Formülde KŞ şöyle kullanılır: `minimum predicted BG`.
 
-For a simplified explanation, refer to the screenshot below, which illustrates the above situation. Orange dots use **predicted BG**, purple dots use **average(predicted BG, current BG)**, and blue dots use **current BG**.
+Basit bir açıklama için, yukarıdaki durumu gösteren aşağıdaki ekran görüntüsüne bakın. Turuncu noktalar **tahmini KŞ**'yi, mor noktalar **average(tahmini KŞ, mevcut KŞ)**'yi ve mavi noktalar **mevcut KŞ**'yi kullanır.
 
 ![DynISF_BGValue.png](../images/DynamicISF/DynISF_BGValue.png)
 
 (dynisf-other-usages-of-isf)=
-## Other usages of ISF
+## İDF'nin diğer kullanımları
 
-### ISF and COB absorption
+### İDF ve AKRB emilimi
 
-As described in the [COB Calculation](../DailyLifeWithAaps/CobCalculation.md) page, usually, the absorption of COB is calculated with this formula :   
+[AKRB hesaplaması](../DailyLifeWithAaps/CobCalculation.md) sayfasında anlatıldığı gibi, AKRB emilimi genellikle şu formülle hesaplanır:   
 `absorbed_carbs = deviation * ic / isf`  
-When using **Dynamic ISF**, the **ISF** used here is the average of past 24h Dynamic ISF values.
+**Dinamik İDF** kullanılırken, burada kullanılan **İDF** son 24 saatteki Dinamik İDF değerlerinin ortalamasıdır.
 
-### ISF in Bolus Wizard
+### Bolus sihirbazında İDF
 
-When using the [Bolus wizard](#aaps-screens-bolus-wizard), **ISF** is used if **BG** is above target to add a correction.
+[Bolus sihirbazı](#aaps-screens-bolus-wizard) kullanılırken, **KŞ** hedefin üzerindeyse düzeltme eklemek için **İDF** kullanılır.
 
-When using **Dynamic ISF**, the **ISF** used here is the average of past 24h Dynamic ISF values.
+**Dinamik İDF** kullanılırken, burada kullanılan **İDF** son 24 saatteki Dinamik İDF değerlerinin ortalamasıdır.
 
 (dyn-isf-preferences)=
 ## Ayarlar
 
-Check **Use dynamic sensitivity** in [Settings > OpenAPS SMB](#Preferences-openaps-smb-settings) to activate. New settings become available once selected.
+Etkinleştirmek için [Ayarlar > OpenAPS SMB](#Preferences-openaps-smb-settings) içinde **Dinamik hassasiyet kullanın** seçeneğini işaretleyin. Seçildikten sonra yeni ayarlar kullanılabilir hale gelir.
 
-![Dynamic ISF settings](../images/preferences/settings_dynamic_isf.png)
+![Dinamik İDF ayarları](../images/preferences/settings_dynamic_isf.png)
 
 (dyn-isf-adjustment-factor)=
-### DynamicISF adjustment factor
-**Dynamic ISF** works based on a single rule which is supposed to apply to everyone, implying that people having the same **TDD** would have the same sensitivity. As each user has their own personal sensitivity, the **Adjustment Factor** allows the user to define whether they are more or less sensitive to insulin than the "standard" person.
+### Dinamik İDF ayarlama faktörü
+**Dinamik İDF**, herkese uygulanması beklenen tek bir kurala göre çalışır. Bu, aynı **GTD**'ye sahip kişilerin aynı duyarlılığa sahip olacağı anlamına gelir. Her kullanıcının kendine özgü bir duyarlılığı olduğu için, **Ayarlama Faktörü** kullanıcının insüline "standart" bir kişiden daha duyarlı mı yoksa daha az duyarlı mı olduğunu belirlemesini sağlar.
 
-The **Adjustment Factor** is a value between 1% and 300%. This acts as a multiplier on the **TDD** value.
+**Ayarlama Faktörü** %1 ile %300 arasında bir değerdir. Bu değer **GTD** değeri ile çarpılır.
 
-* Increasing this value above 100 % makes **DynISF** more aggressive: the **ISF** values become *smaller* (_i.e._ more insulin required to decrease **BG** levels a small amount)
-* Lowering this value under 100% makes **DynISF** less aggressive: the **ISF** values become larger (_i.e._ less insulin required to decrease **BG** levels a small amount).
+* Bu değeri %100'ün üzerine çıkarmak **DynISF**'yi daha agresif yapar: **İDF** değerleri *küçülür* (_yani_ **KŞ** seviyelerini biraz düşürmek için daha fazla insülin gerekir)
+* Bu değeri %100'ün altına indirmek **DynISF**'yi daha az agresif yapar: **İDF** değerleri büyür (_yani_ **KŞ** seviyelerini biraz düşürmek için daha az insülin gerekir).
 
-The **Adjustment Factor** is also altered when activating a [**Profile Switch** with percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). A lower **Profile Percentage** will lower the **Adjustment Factor**, and vice versa in respect of higher **Profile Percentage**.
+Yüzde ile bir [**Profil değişimi**](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) etkinleştirildiğinde de **Ayarlama Faktörü** değişir. Daha düşük bir **Profil yüzdesi** **Ayarlama Faktörü**'nü düşürür; daha yüksek bir **Profil yüzdesi** ise onu yükseltir.
 
-For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned, the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
+Örneğin, **Ayarlama Faktörü**'nüz %80 ise ve %80'e bir **Profil Değişimi** yapılırsa, sonuçta **Ayarlama Faktörü** `0.8*0.8=0.64` olur.
 
-This means that, when using **DynISF**, you can use **Profile Percentage** to temporarily fine tune your sensitivity manually. This can be useful for physical activity (lower percentage), illness (higher percentage), etc.
+Bu, **DynISF** kullanırken duyarlılığınızı geçici olarak elle ince ayarlamak için **Profil yüzdesi**'ni kullanabileceğiniz anlamına gelir. Bu, fiziksel aktivite (daha düşük yüzde), hastalık (daha yüksek yüzde) vb. durumlarda faydalı olabilir.
 
-### LGS threshold
+### LGS Eşiği
 
-**BG** value below which insulin is suspended (low glucose suspend). Default value uses the standard target model. A user can set this value between 60 mg/dL (3.3 mmol/L) and 100 mg/dL (5.5 mmol/L). Values below 65/3.6 result in use of the default model.
+Altına inildiğinde insülinin askıya alındığı **KŞ** değeri (düşük glikozda askıya alma). Varsayılan değer standart hedef modelini kullanır. Kullanıcı bu değeri 60 mg/dL (3,3 mmol/L) ile 100 mg/dL (5,5 mmol/L) arasında ayarlayabilir. 65/3,6'nın altındaki değerler varsayılan modelin kullanılmasına yol açar.
 
-### DynamicISF adjust sensitivity
+### Dinamik İDF hassasiyet ayarı
 
-This setting (*"Adjust sensitivity calculations when using DynamicISF"*) replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled. Unlike Autosens, this option does not adjust **ISF** values.
+Bu ayar (*"Dinamik İDF kullanırken hassasiyet hesaplamalarını ayarlayın"*) Otoduyarlılık'ın yerini alır ve standart Otoduyarlılık'ın yaptığı gibi, bazal oranı artırmak ve azaltmak için son 24 saatlik **GTD**/7 günlük **GTD** oranını temel alır. Hedefi duyarlılığa göre ayarlama seçenekleri etkinse, bu hesaplanan değer hedefi ayarlamak için de kullanılır. Otoduyarlılık'tan farklı olarak, bu seçenek **İDF** değerlerini ayarlamaz.
 
 (dyn-isf-things-to-consider-when-activating-dynamicisf)=
-## Things to consider when activating Dynamic ISF
+## Dinamik İDF'yi etkinleştirirken dikkat edilmesi gerekenler
 
-* **Dynamic ISF** is recommended only for advanced users that have a good handle on their **AAPS'** controls and monitoring. Users should ideally have attained good control with **SMB** before moving onto **Dynamic ISF**.
-* As mentioned above, turn off all [**Automations**](../DailyLifeWithAaps/Automations.md) which activate a **Profile Percentage** in relation to **BG** because it will be too aggressive and may over deliver in insulin! This is already part of the **Dynamic ISF** algorithm.
-* [Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) is taken into account for the Dynamic ISF calculation (see [Dynamic ISF Adjustment Factor](#dyn-isf-adjustment-factor) above). It is bad practice to use a **Profile Percentage** other than 100% for a long time. If you determine that your **Profile** has changed, create a new **Profile** with your revised values in order to replicate the **Profile** with a specific percentage.
-* **Dynamic ISF** may not work for everyone. Specifically, you may see unexpected results if one of these situations apply to you:
-  * Variable lifestyle (inconsistent eating or physical activity patterns)
-  * Inconsistent TDD or sensitivity from day to day.
-* There is no precise guide to set the initial value of the **Adjustment Factor**. However, as a starting point: assuming your **Profile** values are correct, when you are in range and **BG** levels are flat, the **DynISF** value should be about the same as the one you had in your **Profile** before.<br/>If you see that **Dynamic ISF** is too aggressive, lower the **Adjustment Factor**, and vice-versa.
-* Even though **DynISF** does not use **Profile ISF** at all, if you notice that your sensitivity is very different from what was previously stored in your **Profile**, you should consider keeping it up-to-date. This may be useful in case you lose your **AAPS** data (_e.g._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
+* **Dinamik İDF** yalnızca **AAPS'in** kontrollerini ve izlemesini iyi bilen ileri düzey kullanıcılara önerilir. Kullanıcılar ideal olarak **Dinamik İDF**'ye geçmeden önce **SMB** ile iyi bir kontrol sağlamış olmalıdır.
+* Yukarıda belirtildiği gibi, **KŞ**'ye bağlı olarak bir **Profil yüzdesi** etkinleştiren tüm [**Otomasyonları**](../DailyLifeWithAaps/Automations.md) kapatın. Aksi halde çok agresif olur ve gereğinden fazla insülin verebilir! Bu zaten **Dinamik İDF** algoritmasının bir parçasıdır.
+* Dinamik İDF hesaplamasında [Profil yüzdesi](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) dikkate alınır (yukarıdaki [Dinamik İDF Ayarlama Faktörü](#dyn-isf-adjustment-factor) bölümüne bakın). %100'den farklı bir **Profil yüzdesi**'ni uzun süre kullanmak kötü bir uygulamadır. **Profil**'inizin değiştiğini fark ederseniz, **Profil**'i belirli bir yüzde ile kullanmak yerine güncellenmiş değerlerinizle yeni bir **Profil** oluşturun.
+* **Dinamik İDF** herkes için işe yaramayabilir. Özellikle aşağıdaki durumlardan biri sizin için geçerliyse beklenmedik sonuçlar görebilirsiniz:
+  * Değişken yaşam tarzı (düzensiz yemek yeme veya fiziksel aktivite alışkanlıkları)
+  * Günden güne değişen GTD veya duyarlılık.
+* **Ayarlama Faktörü**'nün başlangıç değerini belirlemek için kesin bir kılavuz yoktur. Ancak başlangıç noktası olarak: **Profil** değerlerinizin doğru olduğunu varsayarsak, hedef aralıktayken ve **KŞ** seviyeleri sabitken **DynISF** değeri, daha önce **Profil**'inizde olan değerle yaklaşık aynı olmalıdır.<br/>**Dinamik İDF**'nin çok agresif olduğunu görürseniz **Ayarlama Faktörü**'nü düşürün; çok zayıf olduğunu görürseniz yükseltin.
+* **DynISF**, **Profil İDF**'sini hiç kullanmasa da, duyarlılığınızın daha önce **Profil**'inizde kayıtlı olandan çok farklı olduğunu fark ederseniz, onu güncel tutmayı düşünmelisiniz. Bu, **AAPS** verilerinizi kaybettiğinizde (_ör._ yeni telefon, yeni **AAPS** sürümü…) faydalı olabilir, çünkü sonraki 7 gün boyunca yedek değer olarak **Profil İDF**'niz kullanılır.

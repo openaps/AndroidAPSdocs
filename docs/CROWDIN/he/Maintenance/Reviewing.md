@@ -1,17 +1,17 @@
-# Reviewing your data
+# סקירת הנתונים שלכם
 
-## AAPS History Browser
+## דפדפן ההיסטוריה של AAPS
 
-**AAPS** keeps all your history (**BG**, treatments, basal, targets, **Profile Switch**, …) in a local database on the phone. This database is not part of the [settings export](../Maintenance/ExportImportSettings.md). You can review it in **AAPS** itself with the **History browser** and the **Statistics** screen described below. For long-term reviews and reports, upload your data to [Nightscout](../SettingUpAaps/Nightscout.md) or [Tidepool](../SettingUpAaps/Tidepool.md).
+**AAPS** שומר את כל ההיסטוריה שלכם (**BG**, טיפולים, בזאלי, יעדים, **החלפת פרופיל**, …) במסד נתונים מקומי בטלפון. מסד הנתונים הזה אינו חלק מ[ייצוא ההגדרות](../Maintenance/ExportImportSettings.md). ניתן לסקור אותו ב-**AAPS** עצמו בעזרת **דפדפן היסטוריה** ומסך **סטטיסטיקה** שמתוארים בהמשך. לסקירות ולדוחות לטווח ארוך, יש להעלות את הנתונים ל-[Nightscout](../SettingUpAaps/Nightscout.md) או ל-[Tidepool](../SettingUpAaps/Tidepool.md).
 
-**AAPS** history can be reviewed in the **History browser**: open the **menu** (☰) and select **History browser**.
+ניתן לסקור את ההיסטוריה של **AAPS** ב**דפדפן היסטוריה**: יש לפתוח את **התפריט** (☰) ולבחור **דפדפן היסטוריה**.
 
-![History browser](../images/v4/Screens/history_browser.png)
+![דפדפן היסטוריה](../images/v4/Screens/history_browser.png)
 
-- Tap the **date card** to pick the day you want to review.
-- The graphs open zoomed out to show the **whole selected day**. Pinch to zoom in on part of it.
-- Use the **<** and **>** arrows to move one day back or forward, and **Now** to return to the current day.
-- The graphs show the same data as the main screen graphs (BG, treatments, basal, IOB, COB, activity, deviations...).
+- יש להקיש על **כרטיס התאריך** כדי לבחור את היום שרוצים לסקור.
+- הגרפים נפתחים בתצוגה מוקטנת שמציגה את **כל היום שנבחר**. ניתן לצבוט כדי להגדיל חלק ממנו.
+- יש להשתמש בחצים **<** ו-**>** כדי לעבור יום אחד אחורה או קדימה, וב-**עכשיו** כדי לחזור ליום הנוכחי.
+- הגרפים מציגים את אותם נתונים כמו הגרפים במסך הראשי (BG, טיפולים, בזאלי, IOB, COB, פעילות, סטיות...).
 
 (reviewing-statistics)=
 ## AAPS Statistics
@@ -20,45 +20,45 @@
 
 Most values are referenced by ADA 2023 [recommendations](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes).
 
-To open them, open the **menu** (☰) and select **Statistics**.
+כדי לפתוח אותה, יש לפתוח את **התפריט** (☰) ולבחור **סטטיסטיקה**.
 
-![Menu with Statistics](../images/Maintenance/statistics.png)
+![תפריט עם סטטיסטיקה](../images/Maintenance/statistics.png)
 
-The **Statistics** screen has four tabs: **Insulin**, **Time in Range**, **Glucose** and **Cycle**. Tap a tab, or swipe left or right to move between them.
+במסך **סטטיסטיקה** יש ארבע לשוניות: **אינסולין**, **זמן בטווח**, **גלוקוז** ו**מחזור**. יש להקיש על לשונית, או להחליק ימינה או שמאלה כדי לעבור ביניהן.
 
 (reviewing-tdd)=
-### Insulin tab: Total Daily Dose
+### לשונית אינסולין: מינון יומי כולל
 
-The **Total Daily Dose** card shows one line per day for the previous days (up to one week) for which **AAPS** has insulin data, then their **Average**, then **Today** so far. Right after installing **AAPS**, only **Today** is shown. The columns are:
+הכרטיס **מינון יומי כולל** מציג שורה אחת לכל יום מהימים הקודמים (עד שבוע אחד) שיש עבורם ל-**AAPS** נתוני אינסולין, אחר כך את ה**ממוצע** שלהם, ואחר כך את **היום** עד עכשיו. מיד לאחר התקנת **AAPS**, מוצג רק **היום**. העמודות הן:
 
-- **Basal**: only basal.
-- **Bolus**: the sum of bolus treatments and SMBs.
-- **TDD Total**: the Total Daily Dose of insulin (**TDD**), the sum of bolus and basal insulin delivered during the day.
-- **Carbs**: declared carbs and eCarbs treatments.
+- **בזאלי**: בזאלי בלבד.
+- **בולוס**: סכום טיפולי הבולוס וה-SMB.
+- **מינון יומי מצטבר כולל**: המינון היומי הכולל של אינסולין (**TDD**), סכום אינסולין הבולוס והבזאלי שניתן במהלך היום.
+- **פחמימות**: טיפולי פחמימות ופחמימות ממושכות שהוזנו.
 
-The **TDD** section is calculated when you open the page and takes a few seconds to compute. Tap **Recalculate** to compute it again.
+החלק **TDD** מחושב כשפותחים את הדף, והחישוב לוקח כמה שניות. יש להקיש על **חשב מחדש** כדי לחשב אותו שוב.
 
-![Statistics: the Insulin tab with the Total Daily Dose](../images/Maintenance/statistics2.png)
+![סטטיסטיקה: לשונית האינסולין עם המינון היומי הכולל](../images/Maintenance/statistics2.png)
 
-The **TDD** is your bolus plus basal insulin per day. Some doctors use - especially for new pumpers - a basal-bolus ratio of 50:50: the total base basal (**TBB**, the sum of your basal rates over 24 hours) should then be about half of the TDD. Others prefer a TBB of 32 % to 37 % of the TDD.
+ה-**TDD** הוא אינסולין הבולוס ועוד האינסולין הבזאלי שלכם ליום. יש רופאים שמשתמשים - בעיקר אצל מתחילים עם משאבה - ביחס בזאלי-בולוס של 50:50: סך הבזאלי הבסיסי (**TBB**, סכום הקצבים הבזאליים שלכם במשך 24 שעות) צריך אז להיות בערך מחצית מה-TDD. אחרים מעדיפים TBB של 32 % עד 37 % מה-TDD.
 
-Like most rules of thumb, this is of limited real validity. Your diabetes may vary!
+כמו רוב כללי האצבע, גם לכלל הזה יש תוקף מעשי מוגבל. הסוכרת שלכם עשויה להיות שונה!
 
-### Time in Range tab
+### לשונית זמן בטווח
 
-Time In Range (**TIR**): 70-180 mg/dL or 3.9-10 mmol/L.
+זמן בטווח (**TIR**): 70-180 mg/dL או 3.9-10 mmol/L.
 
 **TIR** information is available for 7 and 30 days, depending on the amount of data available within the **AAPS** database.
 
-Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are available below (the screen shows this range as 70-141).
+סטטיסטיקה של זמן בטווח צר (TITR) 70-140 mg/dL או 3.9-7.8 mmol/L זמינה למטה (המסך מציג את הטווח הזה כ-70-141).
 
-**Discuss targets with your endo**
+**יש לדון ביעדים עם האנדוקרינולוג שלכם**
 
-Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
+Your diabetes may vary. יש לדון בכל יעד מוצע עם האנדוקרינולוג או עם הצוות הרפואי המטפל שלכם. בשימוש נכון, הסטטיסטיקה של AAPS יכולה להיות כלי יעיל למעקב אחר מגמות __רמת הסוכר בדם__ ולניטור ההתקדמות.
 
 ![Statistics](../images/Maintenance/statistics3.png)
 
-Below, the **Dexcom TIR** card shows detailed 14 days **TIR** statistics.
+למטה, הכרטיס **זמן בטווח דקסקום** מציג סטטיסטיקה מפורטת של **TIR** ל-14 ימים.
 
 **SD**: Standard Deviation, an [indicator](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) of BG variability (the highest = the worst).
 
@@ -67,124 +67,124 @@ HbA1c: the estimate of the resulting glycated hemoglobin, based on the average o
 ![Statistics](../images/Maintenance/statistics4.png)
 
 (reviewing-statistics-agp)=
-### Glucose tab: Ambulatory Glucose Profile (AGP)
+### לשונית גלוקוז: פרופיל גלוקוז אמבולטורי (AGP)
 
-The **Ambulatory Glucose Profile** (**AGP**) shows how your glucose usually moves over the day. Choose the period with the buttons at the top: **Today**, **24h**, **7d**, **30d** or **90d**.
+**פרופיל גלוקוז אמבולטורי** (**AGP**) מראה איך רמת הגלוקוז שלכם נעה בדרך כלל במהלך היום. יש לבחור את התקופה בעזרת הלחצנים בחלק העליון: **היום**, **24 ש׳**, **7 ימים**, **30 ימים** או **90 ימים**.
 
-- **The chart**: one day from midnight to midnight. The line is the **Median** (half of your readings at that hour were lower, half were higher). Around it, one band holds the middle half of your readings (**25–75%**) and a wider band most of them (**10–90%**). A narrow band means your glucose is similar from day to day at that hour. Dashed lines mark your **LOW mark**, 140 mg/dL (7.8 mmol/L) and your **HIGH mark**.
-- **Glycemic overview**: the time spent in your range, in the tight range (70–140 mg/dL or 3.9–7.8 mmol/L), above your range and below it, then your **Average** and **Median** glucose. Your range is the **LOW mark** and **HIGH mark** set in [Range for visualization](#Preferences-range-for-visualization).
-- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings. Like the HbA1c above, they might not match your blood HbA1c tests.
-- **SD** (standard deviation) and **CV** (coefficient of variation): how much your glucose varies. A lower value means steadier glucose.
-- **Days**: how many days of CGM data were used.
+- **התרשים**: יום אחד מחצות עד חצות. הקו הוא ה**חציון** (חצי מהקריאות שלכם באותה שעה היו נמוכות ממנו, וחצי היו גבוהות ממנו). סביבו, רצועה אחת מכילה את החצי האמצעי של הקריאות שלכם (**25–75%**) ורצועה רחבה יותר מכילה את רובן (**10–90%**). רצועה צרה פירושה שרמת הגלוקוז שלכם דומה מיום ליום באותה שעה. קווים מקווקווים מסמנים את ה**סימון נמוך**, את 140 mg/dL (7.8 mmol/L) ואת ה**סימון גבוה** שלכם.
+- **סקירה גליקמית**: הזמן שעבר בטווח שלכם, בטווח הצר (70–140 mg/dL או 3.9–7.8 mmol/L), מעל הטווח שלכם ומתחתיו, ואחר כך ה**ממוצע** וה**חציון** של הגלוקוז שלכם. הטווח שלכם הוא ה**סימון נמוך** וה**סימון גבוה** שהוגדרו ב[טווח להצגה](#Preferences-range-for-visualization).
+- **eA1c** ו-**GMI**: שני אומדנים של HbA1c שמחושבים מקריאות ה-CGM שלכם. כמו ה-HbA1c שלמעלה, ייתכן שהם לא יתאימו לבדיקות HbA1c בדם שלכם.
+- **SD** (סטיית תקן) ו-**CV** (מקדם השונות): כמה רמת הגלוקוז שלכם משתנה. ערך נמוך יותר פירושו גלוקוז יציב יותר.
+- **ימים**: כמה ימים של נתוני CGM שימשו לחישוב.
 
-![Statistics: the Glucose tab with the AGP chart](../images/Maintenance/statistics_agp.png) ![Statistics: Glycemic overview and glucose metrics](../images/Maintenance/statistics_agp2.png)
+![סטטיסטיקה: לשונית הגלוקוז עם תרשים ה-AGP](../images/Maintenance/statistics_agp.png) ![סטטיסטיקה: סקירה גליקמית ומדדי גלוקוז](../images/Maintenance/statistics_agp2.png)
 
-Below the AGP, the **Glucose Pentagon (CGP)** card draws five measures of your last 14 days of glucose as a pentagon. A smaller pentagon means better glucose control.
+מתחת ל-AGP, הכרטיס **מחומש גלוקוז (CGP)** משרטט חמישה מדדים של הגלוקוז שלכם ב-14 הימים האחרונים בצורת מחומש. מחומש קטן יותר פירושו איזון טוב יותר של הגלוקוז.
 
-![Statistics: the Glucose Pentagon](../images/Maintenance/statistics_cgp.png)
+![סטטיסטיקה: מחומש הגלוקוז](../images/Maintenance/statistics_cgp.png)
 
-### Cycle tab: TDD Cycle Pattern
+### לשונית מחזור: דפוס מחזורי TDD
 
-**TDD Cycle Pattern** overlays your daily insulin totals in 28-day cycles, to help you spot recurring patterns. Each cycle is drawn as a line (**Individual cycles**), together with their average.
+**דפוס מחזורי TDD** מציג זה על גבי זה את סכומי האינסולין היומיים שלכם במחזורים של 28 ימים, כדי לעזור לזהות דפוסים שחוזרים על עצמם. כל מחזור משורטט כקו (**מחזורים נפרדים**), יחד עם הממוצע שלהם.
 
-- **Raw TDD** / **Cleaned TDD**: choose the total daily dose as delivered, or the TDD minus insulin for carbs.
-- **Cycle offset**: moves the start of the cycle (0 to 27 days).
+- **TDD גולמי** / **TDD מתוקן**: בחירה בין המינון היומי הכולל כפי שניתן, לבין ה-TDD פחות האינסולין שניתן לפחמימות.
+- **היסט מחזור**: מזיז את תחילת המחזור (0 עד 27 ימים).
 
-At least 56 days of data (2 cycles) are needed. With less data, the card shows **Not enough data (need at least 56 days for 2 cycles)**. The pattern is calculated only when you open the **Cycle** tab, because it reads 168 days of data.
+נדרשים לפחות 56 ימים של נתונים (2 מחזורים). כשיש פחות נתונים, הכרטיס מציג **אין מספיק נתונים (נדרשים לפחות 56 ימים עבור 2 מחזורים)**. הדפוס מחושב רק כשפותחים את הלשונית **מחזור**, כי הוא קורא 168 ימים של נתונים.
 
 (aaps-screens-treatments)=
-## Treatments history
+## היסטוריית טיפולים
 
-Open the **menu** (☰) in the top-left corner of the main screen and select **Treatments history**. In this view, you can view and alter the history of the following treatments, each on its own tab (swipe the tab row to see all of them):
+יש לפתוח את **התפריט** (☰) בפינה העליונה של המסך הראשי ולבחור **היסטוריית טיפולים**. בתצוגה זו ניתן לראות ולשנות את ההיסטוריה של הטיפולים הבאים, כל אחד בלשונית משלו (יש להחליק את שורת הלשוניות כדי לראות את כולן):
 
-* Carbs and bolus
+* פחמ' ובולוס
 * [בולוס ממושך](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temp basal
-* [ערך מטרה זמני](../DailyLifeWithAaps/TempTargets.md)
+* בזאלי זמני
+* [יעד זמני](../DailyLifeWithAaps/TempTargets.md)
 * [החלפת פרופיל](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes and careportal entries
-* Running mode : history of loop status
-* User entry: other notes that are not sent to Nightscout
+* פורטל טיפולים: הערות ורשומות של פורטל הטיפולים
+* מצב הפעלה: היסטוריית מצב הלולאה
+* קלט המשתמש: הערות אחרות שלא נשלחות ל-Nightscout
 
-At the end of each line, small icons show where the data comes from or has been sent to:
-* **Nightscout** icon (the Nightscout logo): the data comes from or has been recorded to Nightscout
-* **Pump** icon: the data comes from the pump history (it has been processed by the pump)
-* **Trash can** icon: the entry has been deleted (it is shown only when you display deleted entries with the **eye** icon at the top right)
+בסוף כל שורה, סמלים קטנים מראים מאיפה הנתונים הגיעו או לאן הם נשלחו:
+* סמל **Nightscout** (הלוגו של Nightscout): הנתונים הגיעו מ-Nightscout או נרשמו ב-Nightscout
+* סמל **משאבה**: הנתונים הגיעו מהיסטוריית המשאבה (המשאבה עיבדה אותם)
+* סמל **פח אשפה**: הרשומה נמחקה (הוא מוצג רק כשמציגים רשומות שנמחקו בעזרת סמל ה**עין** בחלק העליון של המסך)
 
 (screens-bolus-carbs)=
-### Carbs and bolus
+### פחמ' ובולוס
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![פחמימות & בולוס](../images/TreatmentsView1.png)
 
-On this tab you can view the bolus and carbs log. Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
-* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionality
+בלשונית זו ניתן לראות את יומן הבולוסים והפחמימות. כל בולוס (שורה **1**) מציג ליד כמות האינסולין את ה-IOB שעוד נשאר ממנו. מקור הבולוס יכול להיות:
+* ארוחה (הוזן ידנית דרך הלחצנים אינסולין, אשף מהיר או אשף בולוס)
+* SMB, כשמשתמשים בתכונת ה-SMB
 
-The carbs entries (line **2**) are shown with their amount in grams.
+רשומות הפחמימות (שורה **2**) מוצגות עם הכמות שלהן בגרמים.
 
-If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text on the bolus line to show the details of how the bolus was calculated.
+אם השתמשתם ב[אשף הבולוס](#aaps-screens-bolus-wizard) כדי לחשב את מינון האינסולין, ניתן ללחוץ על הטקסט “Calc” בשורת הבולוס כדי לראות את פרטי החישוב של הבולוס.
 
-Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
+בהתאם למשאבה, אינסולין ופחמימות יכולים להופיע בשורה אחת, או בכמה שורות: אחת לפרטי החישוב, אחת לפחמימות ואחת לבולוס עצמו.
 
-The Treatments history can be used to correct faulty carb entries (_i.e._ you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
+ניתן להשתמש בהיסטוריית הטיפולים כדי לתקן רשומות פחמימות שגויות (_כלומר_ הערכתם את הפחמימות ביותר או בפחות מדי). שימו לב שלא ניתן לערוך רשומה קיימת, יש לפעול לפי התהליך הבא:
 
-1. Check and remember actual COB and IOB on the main screen.
-2. Depending on pump, carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount: press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.
-4. Make sure carbs are removed successfully by checking COB on the main screen again.
-5. Do the same for IOB if there is just one line including carbs and insulin.
+1. יש לבדוק ולזכור את ה-COB וה-IOB הנוכחיים במסך הראשי.
+2. בהתאם למשאבה, הפחמימות יכולות להופיע יחד עם האינסולין בשורה אחת או כרשומה נפרדת (למשל עם Dana RS).
+3. יש להסיר את הרשומה עם כמות הפחמימות השגויה: ללחוץ על סמל פח האשפה, לבחור את השורות להסרה, ואז ללחוץ שוב על סמל פח האשפה כדי לסיים.
+4. יש לוודא שהפחמימות הוסרו בהצלחה על ידי בדיקה חוזרת של ה-COB במסך הראשי.
+5. יש לעשות אותו דבר עבור ה-IOB אם יש רק שורה אחת שכוללת פחמימות ואינסולין.
 
-   → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+   → אם הפחמימות לא הוסרו כמתוכנן, ומוסיפים פחמימות נוספות כפי שמוסבר כאן (6.), ה-COB יהיה גבוה מדי וזה עלול לגרום למתן אינסולין גבוה מדי.
 
-6. Enter the correct carb amount again (**Treatments → Carbs** in the bottom navigation, or a [QuickLaunch](#quicklaunch) **Carbs** button) and make sure to set the correct event time.
-7. If there is just one line including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on the main screen after confirming the new entry.
+6. יש להזין שוב את כמות הפחמימות הנכונה (**טיפולים ← פחמימות** בסרגל הניווט התחתון, או לחצן **פחמימות** של [הפעלה מהירה](#quicklaunch)) ולוודא שמוגדרת שעת האירוע הנכונה.
+7. אם יש רק שורה אחת שכוללת פחמימות ואינסולין, יש להוסיף גם את כמות האינסולין. יש לוודא שמוגדרת שעת האירוע הנכונה ולבדוק את ה-IOB במסך הראשי לאחר אישור הרשומה החדשה.
 
-### Temp basal
+### בזאלי זמני
 
-![Temp Basal](../images/TreatmentsView2.png)
+![בזאלי זמני](../images/TreatmentsView2.png)
 
-The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). It can be:
-* Positive IOB if the temp basal was higher than the one set in the Profile
-* Negative IOB for a zero-temp (as on line **1**) or if the temp basal was lower than the one set in the Profile
+כאן מוצגים ה**קצבים הבזאליים הזמניים** שהלולאה הפעילה. כשלרשומה עדיין יש השפעה על ה-IOB, המידע מוצג ליד המינון (שורה **1**). הוא יכול להיות:
+* IOB חיובי אם הבזאלי הזמני היה גבוה מזה שמוגדר בפרופיל
+* IOB שלילי עבור בזאלי זמני אפס (כמו בשורה **1**) או אם הבזאלי הזמני היה נמוך מזה שמוגדר בפרופיל
 
-Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
+מחיקת הרשומות משפיעה רק על הדוחות שלכם ב-Nightscout, וכנראה תעוות את ה-IOB האמיתי שלכם - לא מומלץ לעשות זאת.
 
-On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
+בצד השורה, S אדומה פירושה “Suspend” (השהיה): זה קורה כשהבזאלי לא ניתן כרגע. זה מצב רגיל, למשל בזמן החלפת פוד.
 
-### ערך מטרה זמני
+### יעד זמני
 
-![ערך מטרה זמני](../images/TreatmentsView3.png)
+![יעד זמני](../images/TreatmentsView3.png)
 
-The history of temporary targets can be seen here.
+כאן ניתן לראות את היסטוריית היעדים הזמניים.
 
 ### החלפת פרופיל
 
 ![Profile Switch](../images/TreatmentsView4.png)
 
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
+כאן ניתן לראות את היסטוריית החלפות הפרופיל. ייתכן שתראו כמה רשומות בכל פעם שמחליפים פרופיל: שורה **1**, שנשמרת גם ב-NS וגם בהיסטוריית המשאבה, מתאימה להחלפה עצמה. שורה **2**, שנשמרת ב-Nightscout אבל לא בהיסטוריית המשאבה, מתאימה לבקשה להחלפת פרופיל שהמשתמש ביצע.
 
-Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
+מחיקת הרשומות משפיעה רק על הדוחות שלכם ב-Nightscout, ולעולם לא תשנה בפועל את הפרופיל הנוכחי.
 
-You can use the **Clone** button shown on line **2** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
+ניתן להשתמש בלחצן **שכפול** שמוצג בשורה **2** כדי ליצור עותק של **החלפת פרופיל**. למידע נוסף, ראו [פרופיל AAPS שלכם > ניהול הפרופילים שלכם](#your-aaps-profile-clone-profile-switch).
 
-### Careportal
+### פורטל הטיפולים
 
-![Care portal](../images/TreatmentsView5.png)
+![פורטל הטיפולים](../images/TreatmentsView5.png)
 
-This tab shows all notes and careportal entries recorded in Nightscout.
+לשונית זו מציגה את כל ההערות ורשומות פורטל הטיפולים שנרשמו ב-Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
-### Running mode
+### מצב הפעלה
 
-![Running mode](../images/TreatmentsView6.png)
+![מצב הפעלה](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
+לשונית זו מציגה את ההיסטוריה של שינויי [מצב הלולאה](#AapsScreens-loop-status): פתוחה, סגורה, LGS, השהיה, ניתוק.
 
-### User entry
+### קלט המשתמש
 
-![User entry](../images/screens/treatments_user_entry.png)
+![קלט המשתמש](../images/screens/treatments_user_entry.png)
 
-This tab lists the actions made in **AAPS** by the user or by an **Automation** (loop mode changes, profile switches, treatments, settings exports...). These entries are not sent to Nightscout.
+לשונית זו מפרטת את הפעולות שבוצעו ב-**AAPS** על ידי המשתמש או על ידי **אוטומציה** (שינויי מצב הלולאה, החלפות פרופיל, טיפולים, ייצוא הגדרות...). הרשומות האלה לא נשלחות ל-Nightscout.
 
 ------
 
