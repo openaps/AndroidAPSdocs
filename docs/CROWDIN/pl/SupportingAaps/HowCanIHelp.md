@@ -6,6 +6,16 @@ Twórcy to rodzice, opiekunowie, bliscy i osoby z cukrzycą. Pracują razem, aby
 
 *Aby w pełni przetestować nowy zestaw, twórcy potrzebują zapasowego telefonu i zapasowej pompy, ponieważ nie można go używać na człowieku, dopóki nie działa stabilnie. Nowsze modele trzeba testować, gdy tylko stają się dostępne. Część przekazanych pieniędzy jest też potrzebna na koszty wysyłki tego sprzętu do twórców w różnych krajach. Czasem miło jest też dołożyć się do kosztów, aby twórcy mogli opuścić swoje ciemne pokoje i spotkać się na konferencjach i wydarzeniach, gdzie mogą razem wymieniać pomysły.*
 
+(donate-to-aaps)=
+
+### How can I donate?
+
+You can support **AAPS** in several ways:
+
+* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## Potrafię programować! Jak mogę dołączyć?
 
 Super! Przejrzyj zgłoszone problemy (issues), zapytaj na kanale Discord – zawsze jest dużo do zrobienia! Na początek wybierz małe zadanie i zrób swój pierwszy pull request! :)
