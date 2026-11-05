@@ -32,6 +32,10 @@ Jei jūsų svetainė veikia Azure, daugelio žmonių ryšio problemos sumažėjo
 
 Ryšio problemas Azure galima apeiti taip: Application settings nustatykite HTTP protocol į 2.0 ir Websockets į ON
 
+    {admonition} Remote control needs websockets
+    :class: important
+    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+
 * Iš Nightscout negaunama KG rodmenų
 
 Jei **AAPS** prie Nightscout prisijungia teisingai, bet KG rodoma kaip N/A: [NSClientV3 nustatymuose](#Preferences-nsclient) atidarykite **Sinchronizacija** ir įjunkite **Gauti NGJ duomenis iš NS**. Ši parinktis paslėpta, kai įjungtas kliento valdymas ([sustiprintos apsaugos režimas](#client-master-control-hardened-mode)). Tokiu atveju patikrinkite, ar **Konfigūracija** → **Glikemijos šaltinis** pasirinkta **NSClient glikemija**.
