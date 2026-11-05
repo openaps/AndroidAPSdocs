@@ -74,7 +74,9 @@ Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring s
 
 - Введіть **Токен доступу Nightscout** у тих самих налаштуваннях. Будь ласка, дотримуйтеся інструкцій [тут](https://nightscout.github.io/nightscout/security/#create-a-token). На телефоні з **AAPS** використовуйте **токен адміністратора (admin token)**: з ним **AAPS** створює окремий токен для кожного телефону-послідовника.
 
-- Увімкніть **Використовувати websockets** на **обох** телефонах. На телефоні з **AAPS** websockets **обов'язкові** для віддаленого керування: без них **AAPS** не може отримувати команди від **AAPSClient**. На обох телефонах вони також прискорюють синхронізацію, але трохи більше витрачають батарею.
+- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. На обох телефонах вони також прискорюють синхронізацію, але трохи більше витрачають батарею.
+
+  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ![Налаштування > NSClientV3 з URL Nightscout, токеном доступу Nightscout і «Використовувати websockets»](../images/preferences/settings_nsclient.png)
 
