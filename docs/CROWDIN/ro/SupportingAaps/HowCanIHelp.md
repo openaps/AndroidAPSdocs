@@ -6,6 +6,16 @@ Developers are parents, caregivers, loved ones and people with diabetes working 
 
 *Pentru a putea testa în întregime un dispozitiv nou, dezvoltatorii trebuie să folosească un telefon de rezervă și o pompă de rezervă, deoarece sistemul nu poate fi folosit pe oameni atâta timp cât nu este stabil. Noile modele necesită testare pe măsură ce devin disponibile. O parte din banii donați sunt necesari, de asemenea, pentru a acoperi costurile logistice de curierat al acestor dispozitive între diferitele țări, între dezvoltatori. Câteodată este frumos să se contribuie la acoperirea costurilor pe care dezvoltatorii le suportă pentru a se putea întâlni la conferințe sau evenimente în vederea participării la ședințe care să le permită să-și pună împreună la muncă creativitatea și mintea analitică.*
 
+(donate-to-aaps)=
+
+### How can I donate?
+
+You can support **AAPS** in several ways:
+
+* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## Pot scrie cod! Cum pot participa?
 
 Ura! Uitați-vă la problemele existente, întrebați pe canalul de Discord, întotdeauna se va găsi ceva de făcut! Alegeți-vă o sarcină ușoară, pentru început, și faceți prima dumneavoastră cerere de fuziune (pull request)! :)
