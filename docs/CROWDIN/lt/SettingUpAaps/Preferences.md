@@ -372,7 +372,7 @@ Naudojant NSClientV3, visi duomenų įkėlėjai turi naudoti Nightscout API v3. 
 - Nightscout sukurkite *[administratoriaus prieigos raktą](https://nightscout.github.io/nightscout/security/#create-a-token)* (V3 API reikia [Nightscout 15](https://nightscout.github.io/update/update/)) ir įveskite jį lauke **Nightscout prieigos raktas** (ne savo API slaptažodį!). **AAPSClient** programėlėje vietoj to galite nuskaityti pagrindinio telefono QR kodą, kuris nustato kliento nuosavą prieigos raktą. Klientas, susietas PIN kodu, po susiejimo gauna savo prieigos raktą iš pagrindinio telefono. Žr. [Kliento nuosavas Nightscout prieigos raktas](#client-master-control-own-token).
 - Tai leidžia skaityti ir rašyti duomenis tarp Nightscout svetainės ir **AAPS**.
 - Jei įstrigote 1 mokymo etape, dar kartą patikrinkite, ar čia nėra rašybos klaidų.
-- Palikite įjungtą „Naudoti WebSocket“ (rekomenduojama).
+- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
 ### Synchronization
