@@ -30,7 +30,7 @@ Tabellen viser ikke en sluttdato for alle AAPS-versjoner. Hvis versjonen din man
 
 Android gir hver systemversjon et **API-nivå**, som er et tall apper bruker. For eksempel er API-nivå 30 Android 11. Tabellen nedenfor bruker API-nivåer fra AAPS-versjonsdataene. AAPS-versjonen i hver rad er verdien som er oppført for API-nivået som vises. Dette er ikke en fullstendig liste over versjoner du kan installere.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
+For å velge en AAPS-versjon til telefonen din, bruk [veiledningen om Android-versjoner i versjonsnotatene](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
     const label = list => list.length === 1 ? list[0]
-      : list.length === 2 ? `${list[0]} and ${list[1]}`
-      : `${list[0]} to ${list[list.length - 1]}`;
+      : list.length === 2 ? `${list[0]} og ${list[1]}`
+      : `${list[0]} til ${list[list.length - 1]}`;
     showRows('aaps-eol-versions', groups.reverse().map(g => [label(g.versions), g.endDate]));
     showRows('aaps-eol-android', android.map(entry => [
       entry.minAndroid === entry.maxAndroid
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     ]));
     status.remove();
   } catch {
-    status.textContent = 'Could not load AAPS version data. Prøv igjen senere.';
+    status.textContent = 'Kunne ikke laste inn AAPS-versjonsdata. Prøv igjen senere.';
   }
 });
 </script>

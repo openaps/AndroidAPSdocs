@@ -67,13 +67,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       typeof entry.endDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(entry.endDate)
     ).sort((a, b) => b.version.localeCompare(a.version, undefined, { numeric: true }));
     const android = data.filter(entry =>
-      entry && Number.isInteger(entry.minAndroid) && Number.isInteger(entry.maxAndroid) &&
-      typeof entry.supported === 'string' && entry.supported
+      entry && Number.isInteger(entry.minAndroid) && Number.isInteger(entry.maxAndroid)
     ).sort((a, b) => b.minAndroid - a.minAndroid);
     if (!versions.length && !android.length) throw new Error('No version data');
 
-    // Merge neighbouring versions that share an end date and the same x.y.z prefix
-    // (for example 3.2.0.0 to 3.2.0.3) into a single row.
+    showRows('aaps-eol-versions', versions.map(entry => [entry.version, entry.endDate]));
+    showRows('aaps-eol-android', android.map(entry => [
+      entry.minAndroid === entry.maxAndroid
+        ?
     const groups = [];
     for (const entry of versions.slice().reverse()) {
       const prefix = entry.version.split('.').slice(0, 3).join('.');

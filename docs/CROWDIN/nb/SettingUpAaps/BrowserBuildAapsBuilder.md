@@ -102,7 +102,7 @@ Oppsettsiden er en del av denne dokumentasjonen, på ditt språk. Hold også den
 
 Oppsettsiden åpner hver GitHub-side i en ny Chrome-fane. For å komme tilbake til oppsettsiden trykker du på faneknappen ved siden av adressefeltet i Chrome (firkanten med et tall) og velger oppsettsiden for AAPS Builder.
 
-![Tab switcher](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
+![Faneknappen](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
 
 Oppsettsiden kjører helt og holdent i nettleseren din: nøkkelen og passordene dine sendes aldri noe sted, bortsett fra inn i GitHub-hemmeligheten (secret) som du selv limer dem inn i. Bare GitHub-brukernavnet ditt sendes til GitHub, for å kontrollere at det finnes. Den husker GitHub-brukernavnet ditt og navnet på repositoryet, så du kan komme tilbake til den når som helst for å åpne siden for hemmeligheter eller byggene dine på nytt.
 
@@ -146,14 +146,14 @@ Dette steget oppretter din egen private kopi av AAPS Builder i GitHub-kontoen di
 
    GitHub viser det nye repositoryet ditt: det inneholder en mappe `.github` (med byggearbeidsflyten) og en fil `README.md`. **Gå tilbake til fanen med oppsettsiden** for steg 2: trykk på faneknappen ved siden av adressefeltet i Chrome og velg oppsettsiden.
 
-   ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
+   ![Nytt repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
 
 ```{warning}
 **Er det nye repositoryet ditt tomt**, uten filer? Da ble det ikke opprettet fra malen, og det kan ikke bygge. Slett det (**Settings** → nederst på siden → **Delete this repository**), og trykk så på **Opprett mitt private repository** på oppsettsiden igjen.
 ```
 
 ```{tip}
-GitHub says **my-aaps already exists in this account**? You already have your repository: close the GitHub tab and go on with the setup page. If your key is already in it, continue with [step 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+Sier GitHub **my-aaps already exists in this account**? Du har allerede repositoryet ditt: lukk GitHub-fanen og gå videre på oppsettsiden. Hvis nøkkelen din allerede ligger i det, fortsetter du med [steg 4](#aaps-builder-step4). Se [feilsøking](#aaps-builder-ts-repo-exists).
 ```
 
 (aaps-builder-step2)=
@@ -261,7 +261,7 @@ Viser GitHub **Page not found** (404)? Kontroller først at du er logget inn på
 Hvis det ikke finnes noen **Build AAPS**- eller **Run workflow**-knapp:
 
 - Åpne repositoryet ditt og kontroller at det har en mappe `.github` med filen `workflows/build.yml`. Hvis repositoryet er tomt, ble det ikke opprettet fra malen: slett det (**Settings** → nederst på siden → **Delete this repository**) og gjør [steg 1](#aaps-builder-step1) på nytt med knappen.
-- The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+- Filen er der, men GitHub viser **This workflow does not exist**: se [feilsøking](#aaps-builder-ts-workflow-not-found).
 - Åpne fanen **Actions**. Hvis det står at arbeidsflyter er deaktivert, trykker du på den grønne knappen for å aktivere dem, og deretter på **Build AAPS** i listen.
 
 (aaps-builder-step5)=
@@ -323,25 +323,25 @@ Det krever én hemmelighet til, `GDRIVE_OAUTH2`. Steg 6 på oppsettsiden henter 
 
 2. Velg Google-kontoen din og gi tilgang. Hvis Google sier at appen ikke er verifisert, trykker du på **Avansert** og deretter på **Gå til …**.
 
-   ![Choose an account](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
+   ![Velg en konto](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
 
-   ![Continue](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
+   ![Fortsett](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
 
-3. Den nye fanen viser så en feil som **Får ikke tilgang til dette nettstedet** eller **127.0.0.1 avviste tilkoblingen**. **Dette er som forventet:** svaret fra Google ligger i adressen til den fanen. Tap the address bar, then the copy icon next to the address (on a computer: select the whole address and copy it). Den begynner med `http://127.0.0.1:47913/`.
+3. Den nye fanen viser så en feil som **Får ikke tilgang til dette nettstedet** eller **127.0.0.1 avviste tilkoblingen**. **Dette er som forventet:** svaret fra Google ligger i adressen til den fanen. Trykk på adressefeltet, og deretter på kopieringsikonet ved siden av adressen (på en datamaskin: merk hele adressen og kopier den). Den begynner med `http://127.0.0.1:47913/`.
 
-   ![This site can't be reached](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
+   ![Får ikke tilgang til dette nettstedet](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
 
-   ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
+   ![Kopieringsikonet](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
 
 4. Gå tilbake til fanen med oppsettsiden innen noen få minutter: svaret fra Google er bare gyldig en kort stund, og bare én gang. Lim adressen inn i **Lim inn den kopierte adressen her** og trykk på **Hent GDRIVE_OAUTH2**. Siden viser **GDRIVE_OAUTH2 er klar**.
 
-   ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
+   ![Adressen er limt inn](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
 
-   ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
+   ![GDRIVE_OAUTH2 er klar](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
 
 5. Trykk på **Åpne siden for hemmeligheter**. Trykk på **Kopier navn**, og lim det inn i det lille feltet **Name** (navnet er `GDRIVE_OAUTH2`). Trykk på **Kopier hemmelighet**, lim den inn i den store boksen **Secret** og trykk på **Add secret**.
 
-   ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
+   ![Legg til hemmeligheten](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
 Fra neste bygg lagres APK-filene også i Google Drive.
 
@@ -364,7 +364,7 @@ Repositoryet ditt bygger aldri noe av seg selv: du bestemmer når det skal bygge
 **Oppdateringer av arbeidsflytfilen din** er sjeldne: bare når skjemaet **Run workflow** endres, for eksempel for en ny byggevariant, eller én gang hvis repositoryet ditt ble laget med en tidligere versjon av oppsettsiden (et tomt repository med en kort arbeidsflytfil) eller fra den gamle malen. Siden [Oppdateringer og endringer i dokumentasjonen](../Maintenance/DocumentationUpdate.md) sier fra om det. Hemmeligheten `KEYSTORE_SET` beholdes som den er. På oppsettsiden åpner du **Oppdatere kopien din** på slutten av steg 1:
 
 1. Trykk på **Åpne den nyeste arbeidsflyten**. På en datamaskin klikker du på **kopieringsikonet** («Copy raw file») øverst til høyre i filen. På en telefon åpner du i stedet **ren tekst-versjonen**, trykker og holder på teksten, og velger så **Merk alt** og **Kopier**.
-2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
+2. Trykk på **Åpne arbeidsflytfilen min**, deretter på menyen **⋯** øverst til høyre i filen og **Edit file… In place** (på en datamaskin klikker du på blyanten).
 3. Erstatt hele teksten med den kopierte arbeidsflyten (trykk og hold på en telefon: **Merk alt**, deretter **Lim inn**).
 4. Trykk på **Commit changes…**, og deretter på **Commit changes**.
 
@@ -372,7 +372,7 @@ Den første linjen i filen viser versjonen av den.
 
 ## Feilsøking
 
-Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
+Noe gikk galt? Se [Feilsøking for AAPS Builder](#aaps-builder-troubleshooting).
 
 ```{toctree}
 :hidden:
