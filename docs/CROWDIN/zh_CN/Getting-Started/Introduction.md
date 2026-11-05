@@ -42,9 +42,9 @@
 
 **图1** Android APS (Artificial Pancreas System，人工胰腺系统)，AAPS的基本构成。
 
-Android APS（**AAPS**）属于混合闭环系统，也叫人工胰腺系统（APS）。 It makes its insulin dosing calculations using established [OpenAPS](https://openaps.org/) algorithms (a set of rules) developed by the #WeAreNotWaiting T1D community.
+Android APS（**AAPS**）属于混合闭环系统，也叫人工胰腺系统（APS）。它使用由 #WeAreNotWaiting T1D社群开发的[OpenAPS](https://openaps.org/) 算法（一套计算规则）计算胰岛素剂量。
 
-Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (which can be used with a wider range of insulin pumps) was first developed in 2016 for a family member with type 1 diabetes. 自那时起， 很多与1型糖尿病有关的志愿者计算机开发团队和技术爱好者加入了进来，不断优化升级**AAPS** 。 Today, **AAPS** is used by many thousands of people worldwide. AAPS是一个高度可定制且多功能的系统，由于它是开源的，因此与众多开源糖尿病软件及平台实现良好兼容。目前 **AAPS** 系统的基本组件架构如上**图 1** 所示。
+由于 OpenAPS 只兼容部分老旧胰岛素泵，2016年为罹患1型糖尿病的家庭成员开发的**AAPS**诞生了（适配更广泛的胰岛素泵型号）。自那时起， 很多与1型糖尿病有关的志愿者计算机开发团队和技术爱好者加入了进来，不断优化升级**AAPS**。如今，**AAPS**已在全球范围内被成千上万的人使用。系统可高度定制且功能多样，由于它是开源的，能够很方便地兼容许多其他开源糖尿病软件和平台。目前 **AAPS** 系统的核心组件架构如上**图 1** 所示。
 
 
 
