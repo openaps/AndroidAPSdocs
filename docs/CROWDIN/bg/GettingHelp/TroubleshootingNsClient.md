@@ -32,6 +32,10 @@ Android може да постави телефона ви в режим на з
 
 Начин да заобиколите проблемите с връзката в Azure е в Application settings да зададете HTTP protocol на 2.0 и Websockets на ON
 
+    {admonition} Remote control needs websockets
+    :class: important
+    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+
 * Няма стойности на КЗ от Nightscout
 
 Ако **AAPS** се свързва правилно с Nightscout, но КЗ се показва като N/A: в [настройките на NSClientV3](#Preferences-nsclient) отворете **Синхронизация** и включете **Получаване на КЗ от Nightscout**. Тази опция е скрита, докато е включен контролът от клиентско приложение ([режим на засилена защита](#client-master-control-hardened-mode)); в този случай проверете дали в **Конфигурация** → **Източник на КЗ** е избрано **КЗ от NS**.
