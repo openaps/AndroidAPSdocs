@@ -243,7 +243,7 @@ Your range to analyze TIR (time in range) is configured separately in your repor
 
 יש ללחוץ על "**אסימון גישה של Nightscout**" ולהזין את אסימון הגישה של שרת ה-Nightscout שלכם. Without this token, access will not work. אם עדיין אין לכם אסימון, יש לעיין בתיעוד על הגדרת שרת הדיווח.
 
-יש להשאיר את "**שימוש ב־WebSockets**" מופעל, לתקשורת בזמן אמת עם Nightscout.
+Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 את שאר החלקים אפשר להשאיר בינתיים עם ערכי ברירת המחדל. הם מתוארים כאן כדי שתדעו איפה למצוא אותם בהמשך:
 
