@@ -32,6 +32,10 @@ Ak je vaša stránka hostovaná na Azure, mnohí ľudia zistili, že problémy s
 
 Ako náhradné riešenie problémov s pripojením na Azure nastavte v Application settings HTTP protocol na 2.0 a Websockets na ON
 
+    {admonition} Remote control needs websockets
+    :class: important
+    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+
 * Žiadna glykémia z Nightscoutu
 
 Ak sa **AAPS** pripojí k Nightscoutu správne, ale glykémia sa zobrazuje ako N/A: v [nastaveniach NSClientV3](#Preferences-nsclient) otvorte **Synchronizácia** a zapnite **Prijímať CGM dáta z NS**. Táto možnosť je skrytá, keď je zapnuté ovládanie z klienta ([režim zvýšeného zabezpečenia](#client-master-control-hardened-mode)). V takom prípade skontrolujte, či je v **Konfigurácia** → **Zdroj glykémie** vybraté **Glykémia z NS**.
