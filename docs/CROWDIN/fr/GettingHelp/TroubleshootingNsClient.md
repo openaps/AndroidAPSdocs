@@ -32,6 +32,10 @@ Si votre site est hébergé sur Azure, de nombreuses personnes ont constaté que
 
 Une solution aux problèmes de connexion dans Azure est de définir dans les paramètres de l'application le protocole HTTP à 2.0 et les Websockets à ON
 
+    {admonition} Remote control needs websockets
+    :class: important
+    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+
 * Pas de lecture de glycémie depuis Nightscout
 
 Si **AAPS** se connecte correctement à Nightscout mais que la glycémie s'affiche comme N/A : dans les [paramètres NSClientV3](#Preferences-nsclient), ouvrez **Synchronisation** et activez **Recevoir les données MGC depuis NS**. Cette option est masquée quand le contrôle client est activé ([mode renforcé](#client-master-control-hardened-mode)) ; dans ce cas, vérifiez que **Glycémie NSClient** est sélectionné dans **Configuration** → **Source GLY**.
