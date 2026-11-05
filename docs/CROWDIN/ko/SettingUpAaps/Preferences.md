@@ -372,7 +372,7 @@ NSClientV3를 사용할 때는 모든 업로더가 Nightscout API v3를 사용�
 - Nightscout에서 *[관리자 토큰(Admin token)](https://nightscout.github.io/nightscout/security/#create-a-token)*을 만들고(V3 API를 사용하려면 [Nightscout 15](https://nightscout.github.io/update/update/)가 필요합니다) **Nightscout 액세스 토큰**에 입력하십시오(API Secret이 아닙니다!). **AAPSClient**에서는 대신 메인 휴대폰의 QR 코드를 스캔할 수 있으며, 그러면 클라이언트 자신의 토큰이 설정됩니다. PIN으로 페어링한 클라이언트는 페어링 후 메인 휴대폰에서 자신의 토큰을 받습니다. [클라이언트의 자기 Nightscout 토큰](#client-master-control-own-token)을 참조하십시오.
 - 이 기능으로 Nightscout 웹사이트와 **AAPS** 사이에서 데이터를 읽고 쓸 수 있습니다.
 - 목표 1에서 더 진행되지 않으면 여기에 오타가 없는지 다시 확인하십시오.
-- "웹소켓 사용"은 켜진 상태로 두십시오(권장).
+- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
 ### Synchronization
