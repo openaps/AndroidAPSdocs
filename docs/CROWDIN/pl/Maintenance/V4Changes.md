@@ -27,6 +27,7 @@ Jeśli dane były nadal synchronizowane przez starą wtyczkę **NSClient (v1)** 
 - Wpisz **Adres URL strony Nightscout** i **token dostępu** (NSClientV3 używa tokena dostępu, *nie* starego API secret – zobacz [tworzenie tokena](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - Twoja strona Nightscout musi obsługiwać **API v3** (Nightscout 15 lub nowszy).
 - Jeśli używasz **websockets**, włącz je lub wyłącz na **obu** urządzeniach – na urządzeniu pacjenta i u obserwującego – nigdy tylko na jednym.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 Zmienia to tylko sposób, w jaki aplikacja komunikuje się z Nightscout. Twoje dane w Nightscout się nie zmieniają.
