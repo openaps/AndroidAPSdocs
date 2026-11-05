@@ -79,7 +79,7 @@ The iPhone version pairs with the master like the others. Unlike the computer ve
 
    ![השלב הגדרה מהמכשיר הראשי עם הלחצן סריקת קוד ה-QR](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **תקשורת** — רשימת התוספים מציעה רק את מה שטלפון עוקב צריך (NSClientV3, xDrip+, Wear, אפליקציות נלוות חיצוניות, Garmin). אם לא סרקתם קוד QR, יש להפעיל את **NSClientV3** ולהזין את **אותה כתובת URL של Nightscout** כמו בטלפון הראשי ואסימון גישה, עם **websockets** מופעלים — בדיוק כפי שמתואר ב[סנכרון](#RemoteControl_aapsclient).
+4. **תקשורת** — רשימת התוספים מציעה רק את מה שטלפון עוקב צריך (NSClientV3, xDrip+, Wear, אפליקציות נלוות חיצוניות, Garmin). אם לא סרקתם קוד QR, יש להפעיל את **NSClientV3** ולהזין את **אותה כתובת URL של Nightscout** כמו בטלפון הראשי ואסימון גישה, עם **websockets** מופעלים — בדיוק כפי שמתואר ב[סנכרון](#RemoteControl_aapsclient). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
    ![שלב התקשורת במכשיר הלקוח](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
