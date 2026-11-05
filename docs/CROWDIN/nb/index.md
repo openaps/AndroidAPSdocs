@@ -70,12 +70,12 @@ Ikke bruk **AAPS** hvis du tar SGLT-2-hemmere (glifloziner), fordi de senker blo
 ## Innholdsfortegnelse for AAPS-dokumentasjonen
 
 ```{toctree}
-:caption: Using this documentation
+:caption: Bruke denne dokumentasjonen
 :titlesonly:
 
-Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
-Search the documentation <./NavigateDoc/SearchDoc.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
+Bytte språk og versjon <./NavigateDoc/ChangeLanguageVersion.md>
+Søk i dokumentasjonen <./NavigateDoc/SearchDoc.md>
+Oppdateringer og endringer i dokumentasjonen <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Kom i gang
