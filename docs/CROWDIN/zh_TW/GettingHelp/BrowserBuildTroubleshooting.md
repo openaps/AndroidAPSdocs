@@ -3,7 +3,7 @@
 # 瀏覽器建置：疑難排解
 
 ```{note}
-This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
+本頁彙整 [瀏覽器建置](../SettingUpAaps/BrowserBuild.md) 的疑難排解提示。
 ```
 
 (aaps-builder-troubleshooting)=
