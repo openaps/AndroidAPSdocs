@@ -372,7 +372,7 @@ Bij gebruik van NSClientV3 moeten alle uploaders de Nightscout API v3 gebruiken.
 - Maak in Nightscout een *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* aan (hiervoor heb je [Nightscout 15](https://nightscout.github.io/update/update/) nodig om de V3 API te gebruiken) en vul het in bij **Nightscout toegangstoken** (niet je API Secret!). Op **AAPSClient** kun je in plaats daarvan de QR-code van de AAPS-telefoon scannen. Daarmee krijgt de client een eigen token. Een client die met de pincode is gekoppeld, krijgt na het koppelen een eigen token van de AAPS-telefoon. Zie [Het eigen Nightscout-token van de client](#client-master-control-own-token).
 - Hiermee kunnen gegevens worden gelezen en geschreven tussen de Nightscout-website en **AAPS**.
 - Als je vastzit in Doel 1, controleer dan goed of je hier geen typfouten hebt gemaakt.
-- Laat "Websockets gebruiken" aan staan (aanbevolen).
+- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
 ### Synchronisatie
