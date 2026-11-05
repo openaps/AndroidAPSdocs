@@ -6,6 +6,16 @@ Os desenvolvedores são pais, cuidadores, pessoas queridas e pessoas com diabete
 
 *Para testar bem um novo sistema, os desenvolvedores precisam de um telefone e de uma bomba extras, porque o sistema não pode ser usado em uma pessoa até estar estável. Modelos novos precisam ser testados quando chegam ao mercado. Uma parte do dinheiro doado também é necessária para os custos de envio desses materiais entre países até os desenvolvedores. Às vezes também é bom ajudar nos custos para que os desenvolvedores saiam dos seus quartos escuros e se encontrem em conferências e eventos, onde as suas mentes criativas e analíticas podem trocar ideias.*
 
+(donate-to-aaps)=
+
+### How can I donate?
+
+You can support **AAPS** in several ways:
+
+* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## Eu sei programar! Como posso participar?
 
 Oba! Veja as issues, pergunte no canal do Discord, sempre há muito a fazer! Comece com uma tarefa pequena e faça o seu primeiro pull request! :)
