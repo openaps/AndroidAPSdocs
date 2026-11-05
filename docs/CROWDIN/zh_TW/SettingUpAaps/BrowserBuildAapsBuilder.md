@@ -104,7 +104,7 @@ AAPS 開發人員會在 [nightscout/aaps-builder](https://github.com/nightscout/
 
 設定頁會在新的 Chrome 分頁中開啟各個 GitHub 頁面。要返回設定頁，點選 Chrome 位址列旁的分頁按鈕（帶數字的方框）並選擇 AAPS Builder 的設定頁。
 
-![Tab switcher](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
+![分頁切換器](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
 
 設定頁面完全在你的瀏覽器中執行：你的金鑰與密碼不會被傳送到任何地方，唯獨在你自行貼上至 GitHub 機密（secret）時除外。僅會將你的 GitHub 使用者名稱送到 GitHub，以檢查該帳號是否存在。它會記住你的 GitHub 使用者名稱與儲存庫名稱，因此你可以隨時回來重新開啟你的 Secrets 頁面或建置。
 
@@ -148,14 +148,14 @@ AAPS 開發人員會在 [nightscout/aaps-builder](https://github.com/nightscout/
 
    GitHub 會顯示你的新儲存庫，其中包含一個 `.github` 資料夾（內含建置工作流程）和一個 `README.md` 檔案。**返回設定頁的分頁**以進行步驟 2：點選 Chrome 位址列旁的分頁按鈕並選擇設定頁。
 
-   ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
+   ![新儲存庫](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
 
 ```{warning}
 **你的新儲存庫是空的**，裡面沒有任何檔案？這個儲存庫不是從範本建立的，因此無法進行建置。請刪除它（**設定** → 頁面底部 → **刪除此儲存庫**），然後再次點選設定頁面上的**建立我的私人儲存庫**。
 ```
 
 ```{tip}
-GitHub says **my-aaps already exists in this account**? You already have your repository: close the GitHub tab and go on with the setup page. If your key is already in it, continue with [step 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+GitHub 顯示 **my-aaps 已存在於此帳戶中**？您已經有自己的儲存庫：關閉 GitHub 分頁，然後繼續設定頁面上的操作。如果金鑰已經在其中，請繼續進行[步驟 4](#aaps-builder-step4)。請參閱[疑難排解](#aaps-builder-ts-repo-exists)。
 ```
 
 (aaps-builder-step2)=
@@ -263,7 +263,7 @@ GitHub 顯示 **找不到頁面**（404）？請先確認你已在此瀏覽器�
 如果沒有 **Build AAPS** 或 **Run workflow** 按鈕：
 
 - 開啟你的儲存庫，確認其中有一個 `.github` 資料夾，且內含 `workflows/build.yml` 檔案。如果儲存庫是空的，表示它不是從範本建立的：請刪除它（**設定** → 頁面底部 → **刪除此儲存庫**），然後按一下按鈕重新執行[步驟 1](#aaps-builder-step1)。
-- The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+- 檔案就在那裡，但 GitHub 顯示 **此工作流程不存在**：請參閱[疑難排解](#aaps-builder-ts-workflow-not-found)。
 - 開啟 **Actions** 分頁。若顯示工作流程已停用，請點選綠色按鈕啟用，然後在清單中點選 **Build AAPS**。
 
 (aaps-builder-step5)=
@@ -325,25 +325,25 @@ GitHub 顯示 **找不到頁面**（404）？請先確認你已在此瀏覽器�
 
 2. 選擇您的 Google 帳號並允許存取。如果 Google 顯示應用程式尚未通過驗證，請點選 **進階**，再點選 **前往……**。
 
-   ![Choose an account](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
+   ![選擇帳戶](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
 
-   ![Continue](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
+   ![繼續](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
 
-3. 接著，新分頁會顯示錯誤訊息，例如 **無法連上這個網站** 或 **127.0.0.1 拒絕連線**。**這是正常現象：**Google 的回應會顯示在該分頁的網址中。 Tap the address bar, then the copy icon next to the address (on a computer: select the whole address and copy it). 網址會以 `http://127.0.0.1:47913/` 開頭。
+3. 接著，新分頁會顯示錯誤訊息，例如 **無法連上這個網站** 或 **127.0.0.1 拒絕連線**。**這是正常現象：**Google 的回應會顯示在該分頁的網址中。點選網址列，再點選網址旁的複製圖示（在電腦上：選取整個網址並複製）。網址會以 `http://127.0.0.1:47913/` 開頭。
 
-   ![This site can't be reached](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
+   ![無法連線至這個網站](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
 
    ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
 
 4. 請在幾分鐘內返回設定頁面所在的分頁：Google 的回應只會在短時間內有效，而且只能使用一次。將網址貼到 **在此貼上複製的網址**，然後點選 **取得 GDRIVE_OAUTH2**。頁面會顯示 **GDRIVE_OAUTH2 已就緒**。
 
-   ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
+   ![已貼上網址](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
 
-   ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
+   ![GDRIVE_OAUTH2 已就緒](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
 
 5. 點選 **開啟機密頁面**。點選 **Copy name**，然後將它貼到較小的 **Name** 欄位（名稱是 `GDRIVE_OAUTH2`）。點選 **複製密鑰**，將密鑰貼到大型的 **密鑰**欄位中，再點選 **新增密鑰**。
 
-   ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
+   ![新增密鑰](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
 從下一次建置開始，APK 也會儲存在 Google Drive。
 
@@ -366,7 +366,7 @@ GitHub 顯示 **找不到頁面**（404）？請先確認你已在此瀏覽器�
 **工作流程檔案更新**並不常見：只有在**執行工作流程**表單有變更時才需要更新，例如新增建置變體；如果您的儲存庫是使用較舊版本的設定頁面（建立的空儲存庫中只有簡短的工作流程檔案），或是使用舊版範本建立的，則只需更新一次。詳情請參閱[文件更新與變更](../Maintenance/DocumentationUpdate.md)頁面。您的 `KEYSTORE_SET` 密鑰不需要變更。在設定頁面中，於步驟 1 底部開啟**更新您的副本**：
 
 1. 點選**開啟最新版工作流程**。使用電腦時，請點選檔案右上方的**複製圖示**（「複製原始檔案」）。使用手機時，請改為開啟**純文字版本**，按住文字，然後點選**全選**，再點選**複製**。
-2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
+2. 點選 **開啟我的工作流程檔案**，再點選檔案右上方的 **⋯** 選單，然後點選 **編輯檔案… In place**（在電腦上，請點選鉛筆圖示）。
 3. 用剛才複製的工作流程取代所有文字（在手機上長按文字，再點選**全選**，然後點選**貼上**）。
 4. 點選**提交變更…**，再點選**提交變更**。
 
@@ -374,7 +374,7 @@ GitHub 顯示 **找不到頁面**（404）？請先確認你已在此瀏覽器�
 
 ## 問題排除
 
-Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
+發生問題了嗎？請參閱 [AAPS Builder 疑難排解](#aaps-builder-troubleshooting)。
 
 ```{toctree}
 :hidden:
