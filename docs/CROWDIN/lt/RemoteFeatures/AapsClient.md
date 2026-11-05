@@ -79,7 +79,7 @@ Pirmą kartą paleista **AAPSClient** vykdo tą patį **Sąrankos vedlį**, kur�
 
    ![Žingsnis Nustatyti iš pagrindinio įrenginio su mygtuku Nuskaityti QR kodą](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Ryšys** – įskiepių sąraše yra tik tai, ko reikia sekėjui (NSClientV3, xDrip+, Wear, Išorinės susietos programėlės, Garmin). Jei QR kodo nenuskaitėte, įjunkite **NSClientV3** ir įveskite **tą patį Nightscout URL** kaip pagrindiniame telefone bei prieigos raktą, įjungę **WebSocket** – tiksliai taip, kaip aprašyta skyriuje [Sinchronizacija](#RemoteControl_aapsclient).
+4. **Ryšys** – įskiepių sąraše yra tik tai, ko reikia sekėjui (NSClientV3, xDrip+, Wear, Išorinės susietos programėlės, Garmin). Jei QR kodo nenuskaitėte, įjunkite **NSClientV3** ir įveskite **tą patį Nightscout URL** kaip pagrindiniame telefone bei prieigos raktą, įjungę **WebSocket** – tiksliai taip, kaip aprašyta skyriuje [Sinchronizacija](#RemoteControl_aapsclient). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
    ![Žingsnis Ryšys kliento įrenginyje](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
