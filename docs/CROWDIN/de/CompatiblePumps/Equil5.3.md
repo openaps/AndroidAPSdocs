@@ -31,7 +31,7 @@ Sobald sie ausgewählt ist, zeigt die Karte **Equil** zwei Schaltflächen: **Ein
 
 ![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
 
-**Plugin öffnen** (oder **Bearbeiten** → **Pumpe**) öffnet den Equil-Pumpenbildschirm. Bevor eine Pumpe gekoppelt ist, sieht er so aus:
+**Plugin öffnen** (oder **Verwalten** → **Pumpe**) öffnet den Equil-Pumpenbildschirm. Bevor eine Pumpe gekoppelt ist, sieht er so aus:
 
 ![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
 

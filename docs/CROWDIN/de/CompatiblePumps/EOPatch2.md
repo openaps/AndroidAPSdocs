@@ -31,7 +31,7 @@ Sobald sie ausgewählt ist, zeigt die Karte **EOPatch2** zwei Schaltflächen: **
 Die EOPatch2-Einstellungen öffnest Du auf zwei Wegen:
 
 * Tippe in der **Konfiguration** auf der Karte **EOPatch2** auf **Einstellungen** oder
-* öffne den Pumpenbildschirm (**Bearbeiten** → **Pumpe**) und tippe oben rechts auf das Zahnrad-Symbol.
+* öffne den Pumpenbildschirm (**Verwalten** → **Pumpe**) und tippe oben rechts auf das Zahnrad-Symbol.
 
 Es gibt drei Einstellungen:
 
@@ -53,7 +53,7 @@ Ist das eingeschaltet, piept der Patch, wenn ein Bolus, ein verzögerter Bolus o
 
 ### Aktivierungsassistenten öffnen
 
-Öffne den Pumpenbildschirm über **Bearbeiten** → **Pumpe** (oder tippe in der **Konfiguration** auf der Karte **EOPatch2** auf **Plugin öffnen**). Ist kein Patch aktiv, zeigt der Bildschirm **Nicht aktiviert** und unten die Schaltfläche **Patch aktivieren**.
+Öffne den Pumpenbildschirm über **Verwalten** → **Pumpe** (oder tippe in der **Konfiguration** auf der Karte **EOPatch2** auf **Plugin öffnen**). Ist kein Patch aktiv, zeigt der Bildschirm **Nicht aktiviert** und unten die Schaltfläche **Patch aktivieren**.
 
 Tippe auf **Patch aktivieren**, um den Assistenten zu starten.
 
@@ -156,7 +156,7 @@ Die letzte Seite bestätigt, dass der Patch aktiv ist und Dich erinnern wird, we
 
 Ersetze den Patch, wenn das Insulin knapp wird, wenn er abläuft oder wenn er fehlerhaft ist. Wir empfehlen, jeden Patch nach dem Booten höchstens 84 Stunden zu verwenden.
 
-1. Öffne den Pumpenbildschirm (**Bearbeiten** → **Pumpe**). Tippe bei aktivem Patch auf **Patch verwerfen**.
+1. Öffne den Pumpenbildschirm (**Verwalten** → **Pumpe**). Tippe bei aktivem Patch auf **Patch verwerfen**.
 1. Die Seite **Patch verwerfen** zeigt die verbleibende Zeit und die Restmenge Insulin im Patch. Tippe auf **Patch verwerfen**.
 1. Ein Dialog bittet um Bestätigung. Tippe noch einmal auf **Patch verwerfen**.
 1. Ist der Patch deaktiviert, zeigt der Assistent **Das Entfernen des Patches ist abgeschlossen.** Entferne den Patch von Deinem Körper und tippe auf **Bestätigen**.
@@ -169,7 +169,7 @@ Solange kein Patch aktiv ist, zeigt **AAPS** die Pumpe als unterbrochen an und e
 
 ```{admonition} Older screenshot
 :class: note
-Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 öffnest Du den Pumpenbildschirm über **Bearbeiten** → **Pumpe**, und die Schaltfläche darauf heißt **Patch verwerfen**.
+Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 öffnest Du den Pumpenbildschirm über **Verwalten** → **Pumpe**, und die Schaltfläche darauf heißt **Patch verwerfen**.
 ```
 
 ```{admonition} If the patch does not respond
@@ -185,7 +185,7 @@ Das Unterbrechen der Insulinabgabe bricht auch einen laufenden verzögerten Bolu
 
 ### Insulinabgabe unterbrechen
 
-1. Öffne den Pumpenbildschirm (**Bearbeiten** → **Pumpe**) und tippe auf **Pumpe pausieren**.
+1. Öffne den Pumpenbildschirm (**Verwalten** → **Pumpe**) und tippe auf **Pumpe pausieren**.
 1. Ein Dialog erklärt, was unterbrochen wird. Tippe auf **Bestätigen**.
 1. Wähle im Dialog **Basal Suspendierung Zeit**, wie lange unterbrochen werden soll: 30 min, 1 Std., 1 Std. 30 Min. oder 2 Std. Tippe auf **Bestätigen**.
 
@@ -195,19 +195,19 @@ Die Insulinabgabe wird für die gewählte Zeit unterbrochen.
 
 ```{admonition} Older screenshot
 :class: note
-Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 öffnest Du den Pumpenbildschirm über **Bearbeiten** → **Pumpe**, und die Schaltfläche darauf heißt **Pumpe pausieren**.
+Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 öffnest Du den Pumpenbildschirm über **Verwalten** → **Pumpe**, und die Schaltfläche darauf heißt **Pumpe pausieren**.
 ```
 
 ### Insulinabgabe fortsetzen
 
-1. Öffne den Pumpenbildschirm (**Bearbeiten** → **Pumpe**) und tippe auf **Pumpe fortsetzen**.
+1. Öffne den Pumpenbildschirm (**Verwalten** → **Pumpe**) und tippe auf **Pumpe fortsetzen**.
 1. Tippe im Dialog **Insulinabgabe fortsetzen** auf **Bestätigen**.
 
 ![The EOPatch2 pump screen with the RESUME button](../images/EOPatch/Bild20.png) ![Resume insulin delivery dialog](../images/EOPatch/Bild21.png)
 
 ```{admonition} Older screenshot
 :class: note
-Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 öffnest Du den Pumpenbildschirm über **Bearbeiten** → **Pumpe**, und die Schaltfläche darauf heißt **Pumpe fortsetzen**.
+Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4 öffnest Du den Pumpenbildschirm über **Verwalten** → **Pumpe**, und die Schaltfläche darauf heißt **Pumpe fortsetzen**.
 ```
 
 ```{warning}
@@ -237,7 +237,7 @@ Die einzelnen Alarme sind unten erklärt.
 | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Reservoir leer                   | Der Patch hat kein Insulin mehr.                                                                                                                                           |
 | Patch abgelaufen                 | Die Nutzungsdauer des Patches ist vorbei, er kann kein Insulin mehr abgeben.                                                                                               |
-| Verstopfung                      | Der Insulinweg des Patches scheint blockiert zu sein.                                                                                                                      |
+| Verschluss                       | Der Insulinweg des Patches scheint blockiert zu sein.                                                                                                                      |
 | Selbsttestfehler beim Starten    | Der Patch hat beim Selbsttest nach dem Booten einen unerwarteten Fehler gefunden.                                                                                          |
 | Ungeeignete Temperatur           | Der Patch ist beim Aktivieren oder Verwenden außerhalb seiner normalen Betriebstemperatur. Bring den Patch an einen Ort mit geeigneter Temperatur (4,4 bis 37 °C).         |
 | Fehler beim Einführen der Nadeln | Die Nadel wurde bei der Aktivierung nicht richtig eingeführt. Prüfe, ob die Nadeleinstichkante des Patches und der Hebel zur Nadelauslösung in einer geraden Linie liegen. |

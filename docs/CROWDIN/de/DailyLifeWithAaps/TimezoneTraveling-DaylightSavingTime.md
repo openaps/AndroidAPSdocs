@@ -6,7 +6,7 @@ Wenn sich die Zeitzone Deines Smartphones ändert, berechnet **AAPS** **IOB**, B
 
 ## Zeitzonenwechsel mit Omnipod-Dash
 
-* Aktualisiere den Pumpenstatus unter **Bearbeiten → Pumpe**
+* Aktualisiere den Pumpenstatus unter **Verwalten → Pumpe**
 * Wähle temporär ein anderes **Profil** aus und wechsel danach wieder zurück auf Dein Ausgangs- oder Dein gewünschtes **Profil**
 
 ## Zeitzonenwechsel mit DanaR, koreanische DanaR

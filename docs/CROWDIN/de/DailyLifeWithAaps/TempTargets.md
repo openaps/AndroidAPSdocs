@@ -13,7 +13,7 @@ Temporäre Ziele können innerhalb dieser Grenzen definiert werden:
 | Minimum | 4 mmol/l oder 72 mg/dl   |
 | Maximum | 10 mmol/l oder 180 mg/dl |
 
-**AAPS** bringt drei eingebaute Vorlagen für **temporäre Ziele** mit, passend für Sport (**Aktivität**), Mahlzeiten (**Bald essen**) und eine vorhergesagte Unterzuckerung (**Hypo**). Sie befinden sich im Bildschirm **Temporäre Ziele** (**Bearbeiten** → **Temporäre Ziele**), den Du auch einfach durch Tippen auf die **Zielwert-Anzeige** auf dem Startbildschirm öffnen kannst.
+**AAPS** bringt drei eingebaute Vorlagen für **temporäre Ziele** mit, passend für Sport (**Aktivität**), Mahlzeiten (**Bald essen**) und eine vorhergesagte Unterzuckerung (**Hypo**). Sie befinden sich im Bildschirm **Temporäre Ziele** (**Verwalten** → **Temporäre Ziele**), den Du auch einfach durch Tippen auf die **Zielwert-Anzeige** auf dem Startbildschirm öffnen kannst.
 
 Du musst verstehen, was Du mit der Funktion "**Temporäres Ziel**" in **AAPS** erreichen kannst. Das Erreichen eines gewünschten **Glukose**-Ziels hängt von verschiedenen Faktoren ab: der Zuverlässigkeit der **AAPS**-Einstellungen, der Qualität des gesamten **Glukose**-Managements, dem **IOB**, der Insulinempfindlichkeit, der Insulinresistenz, der Trainingsintensität und so weiter.
 
@@ -78,9 +78,9 @@ Im Closed-Loop-Modus, **SMB**s:
 
 (TempTargets-manage-v4)=
 
-## Temporäre Ziele setzen und verwalten (Bearbeiten → Temporäre Ziele)
+## Temporäre Ziele setzen und verwalten (Verwalten → Temporäre Ziele)
 
-In **AAPS** v4 verwaltest Du Deine **Vorlagen** für temporäre Ziele und startest ein temporäres Ziel über den Bildschirm **Bearbeiten** (untere Navigationsleiste) → **Temporäre Ziele** (*„Temporäre Ziele verwalten und setzen“*).
+In **AAPS** v4 verwaltest Du Deine **Vorlagen** für temporäre Ziele und startest ein temporäres Ziel über den Bildschirm **Verwalten** (untere Navigationsleiste) → **Temporäre Ziele** (*„Temporäre Ziele verwalten und setzen“*).
 
 ![The Temp Target screen — preset carousel, editor and action bar](../images/v4/TempTarget/tt_management.png)
 
@@ -150,7 +150,7 @@ Am schnellsten tippst Du auf dem Startbildschirm auf die **Zielwert-Anzeige** (s
 
 ![Target chip on the main screen](../images/TempTarget6.png)
 
-Damit öffnet sich der oben beschriebene Bildschirm **Temporäre Ziele** – wische zu einer Vorlage und tippe auf **▶ Aktivieren**. Derselbe Bildschirm ist auch über **Bearbeiten** → **Temporäre Ziele** erreichbar.
+Damit öffnet sich der oben beschriebene Bildschirm **Temporäre Ziele** – wische zu einer Vorlage und tippe auf **▶ Aktivieren**. Derselbe Bildschirm ist auch über **Verwalten** → **Temporäre Ziele** erreichbar.
 
 (TempTargets-carbs-dialog)= Wenn Du Kohlenhydrate eingibst, musst Du den Bildschirm **Temporäre Ziele** gar nicht öffnen: Der **Kohlenhydrat-Dialog** (**Behandlungen** → **Kohlenhydrate**) hat oben die Schalter **Starte Hypo-TT**, **Starte Essens-TT** und **Starte Aktivitäts-TT**. Schaltest Du einen davon ein, wird die passende Vorlage zusammen mit dem KH-Eintrag aktiviert:
 
@@ -166,7 +166,7 @@ Damit öffnet sich der oben beschriebene Bildschirm **Temporäre Ziele** – wis
 
 **Zielwert** und **Dauer** jeder Vorlage bearbeitest Du direkt im Bildschirm **Temporäre Ziele** – einen eigenen Eintrag in den Einstellungen gibt es dafür nicht mehr:
 
-1. Öffne den Bildschirm **Temporäre Ziele** (tippe auf die Zielwert-Anzeige oder auf **Bearbeiten** → **Temporäre Ziele**).
+1. Öffne den Bildschirm **Temporäre Ziele** (tippe auf die Zielwert-Anzeige oder auf **Verwalten** → **Temporäre Ziele**).
 2. Wische zu der Vorlage, die Du ändern möchtest.
 3. Passe im Editor **Temporäres Ziel** und/oder **Dauer** an.
 4. Tippe auf das Symbol **Speichern**, das in der oberen Leiste erscheint.

@@ -102,6 +102,8 @@ Sąrankos puslapis yra šios dokumentacijos dalis, jūsų kalba. Šį puslapį t
 
 Sąrankos puslapis kiekvieną GitHub puslapį atidaro naujame Chrome skirtuke. Norėdami grįžti į sąrankos puslapį, spauskite skirtukų mygtuką šalia Chrome adreso juostos (kvadratas su skaičiumi) ir pasirinkite AAPS Builder sąrankos puslapį.
 
+![Tab switcher](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
+
 Sąrankos puslapis veikia tik jūsų naršyklėje: jūsų raktas ir slaptažodžiai niekur nesiunčiami, išskyrus į GitHub slaptąją reikšmę (secret), į kurią juos įklijuojate patys. GitHub siunčiamas tik jūsų GitHub naudotojo vardas, kad būtų patikrinta, ar jis yra. Jis įsimena jūsų GitHub naudotojo vardą ir saugyklos pavadinimą, todėl bet kada galite prie jo grįžti ir vėl atidaryti slaptųjų reikšmių puslapį arba savo kūrimus.
 
 ![AAPS Builder sąrankos puslapis](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
@@ -144,8 +146,14 @@ Sąrankos puslapis veikia tik jūsų naršyklėje: jūsų raktas ir slaptažodž
 
    GitHub parodo jūsų naują saugyklą: joje yra aplankas `.github` (su kūrimo darbo eiga) ir failas `README.md`. 2 žingsniui **grįžkite į sąrankos puslapio skirtuką**: spauskite skirtukų mygtuką šalia Chrome adreso juostos ir pasirinkite sąrankos puslapį.
 
+   ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
+
 ```{warning}
 **Jūsų nauja saugykla tuščia**, be failų? Ji nebuvo sukurta iš šablono ir negali kurti. Ištrinkite ją (**Settings** → puslapio apačia → **Delete this repository**), tada sąrankos puslapyje dar kartą spauskite **Create my private repository**.
+```
+
+```{tip}
+GitHub says **my-aaps already exists in this account**? You already have your repository: close the GitHub tab and go on with the setup page. If your key is already in it, continue with [step 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
 (aaps-builder-step2)=
@@ -253,6 +261,7 @@ GitHub rodo **Page not found** (404)? Pirmiausia patikrinkite, ar šioje naršyk
 Jei nėra mygtuko **Build AAPS** arba **Run workflow**:
 
 - Atidarykite savo saugyklą ir patikrinkite, ar joje yra aplankas `.github` su failu `workflows/build.yml`. Jei saugykla tuščia, ji nebuvo sukurta iš šablono: ištrinkite ją (**Settings** → puslapio apačia → **Delete this repository**) ir dar kartą atlikite [1 žingsnį](#aaps-builder-step1) su mygtuku.
+- The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
 - Atidarykite skirtuką **Actions**. Jei rodoma, kad darbo eigos išjungtos, spauskite žalią mygtuką, kad jas įjungtumėte, tada sąraše spauskite **Build AAPS**.
 
 (aaps-builder-step5)=
@@ -311,10 +320,28 @@ Taip pat galite kiekvieną kūrimą išsaugoti savo Google Drive, aplanke `AAPS/
 Tam reikia dar vienos slaptosios reikšmės – `GDRIVE_OAUTH2`. Sąrankos puslapio 6 žingsnis gauna ją iš Google už jus, telefone arba kompiuteryje. Tada **AAPS** jūsų Google Drive gali matyti ir keisti tik savo sukurtus failus, nieko kito.
 
 1. Sąrankos puslapyje spauskite **Connect Google Drive**. Google atsidaro naujame skirtuke.
+
 2. Pasirinkite savo Google paskyrą ir suteikite prieigą. Jei Google rodo, kad programėlė nepatvirtinta, spauskite **Advanced**, tada **Go to …**.
-3. Tada naujame skirtuke rodoma klaida, pavyzdžiui, **This site can't be reached** arba **127.0.0.1 refused to connect**. **Taip ir turi būti:** Google atsakymas yra to skirtuko adrese. Spauskite adreso juostą, pažymėkite visą adresą (jis prasideda `http://127.0.0.1:47913/`) ir jį nukopijuokite.
+
+   ![Choose an account](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
+
+   ![Continue](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
+
+3. Tada naujame skirtuke rodoma klaida, pavyzdžiui, **This site can't be reached** arba **127.0.0.1 refused to connect**. **Taip ir turi būti:** Google atsakymas yra to skirtuko adrese. Tap the address bar, then the copy icon next to the address (on a computer: select the whole address and copy it). Jis prasideda `http://127.0.0.1:47913/`.
+
+   ![This site can't be reached](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
+
+   ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
+
 4. Per kelias minutes grįžkite į sąrankos puslapio skirtuką: Google atsakymas galioja tik trumpai ir tik vieną kartą. Įklijuokite adresą į lauką **Paste the copied address here** ir spauskite **Get GDRIVE_OAUTH2**. Puslapis rodo **GDRIVE_OAUTH2 is ready**.
+
+   ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
+
+   ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
+
 5. Spauskite **Open the secrets page**. Spauskite **Copy name**, tada įklijuokite jį į mažą lauką **Name** (pavadinimas yra `GDRIVE_OAUTH2`). Spauskite **Copy secret**, įklijuokite ją į didelį lauką **Secret** ir spauskite **Add secret**.
+
+   ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
 Nuo kito kūrimo APK failai taip pat išsaugomi Google Drive.
 
@@ -337,31 +364,15 @@ Jūsų saugykla niekada nieko nekuria pati: jūs sprendžiate, kada kurti, kuri�
 **Jūsų darbo eigos failo atnaujinimai** reikalingi retai: tik kai pasikeičia forma **Run workflow**, pavyzdžiui, dėl naujo kūrimo varianto, arba vieną kartą, jei jūsų saugykla sukurta su ankstesne sąrankos puslapio versija (tuščia saugykla su trumpu darbo eigos failu) arba iš senojo šablono. Tai nurodoma puslapyje [Dokumentacijos atnaujinimai ir pakeitimai](../Maintenance/DocumentationUpdate.md). Jūsų slaptoji reikšmė `KEYSTORE_SET` lieka tokia pati. Sąrankos puslapyje, 1 žingsnio pabaigoje, atidarykite **Updating your copy**:
 
 1. Spauskite **Open the newest workflow**. Kompiuteryje spauskite **kopijavimo piktogramą** („Copy raw file“) failo viršuje dešinėje. Telefone vietoj to atidarykite **paprasto teksto versiją**, palaikykite paspaudę tekstą, tada **Select all** ir **Copy**.
-2. Spauskite **Open my workflow file**.
+2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
 3. Pakeiskite visą tekstą nukopijuota darbo eiga (telefone ilgai paspauskite: **Select all**, tada **Paste**).
 4. Spauskite **Commit changes…**, tada **Commit changes**.
 
 Pirmoje failo eilutėje rodoma jo versija.
 
-(aaps-builder-troubleshooting)=
-
 ## Troubleshooting
 
-Norėdami sužinoti, kodėl kūrimas nepavyko, [perskaitykite kūrimo žurnalą](#aaps-ci-read-the-logs): žingsnių pavadinimai kiti, bet klaidą randate taip pat. Taip pat tokiu pat būdu galite [atnaujinti slaptąją reikšmę](#aaps-ci-update-secret) ir [vėl paleisti kūrimą](#aaps-ci-rerun).
-
-- **Nėra mygtuko „Build AAPS“ arba „Run workflow“, arba saugykla tuščia**: saugykla nebuvo sukurta iš šablono. Ištrinkite ją (**Settings** → puslapio apačia → **Delete this repository**) ir dar kartą atlikite [1 žingsnį](#aaps-builder-step1) su mygtuku **Create my private repository**.
-- **Kūrimas sustoja su pranešimu „This repository is PUBLIC“**: savo saugykloje atidarykite **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, tada kurkite dar kartą.
-- **„Secret KEYSTORE_SET is missing“**: atlikite sąrankos puslapio 3 žingsnį.
-- **„The secret is too short“**, **„The secret is not a valid code“** arba **„The secret does not contain a keystore“**: į slaptąją reikšmę įklijuotas netinkamas tekstas, dažnai pats žodis `KEYSTORE_SET` arba tik dalis kodo. Savo saugykloje atidarykite **Settings** → **Secrets and variables** → **Actions**, redaguokite `KEYSTORE_SET` ir dar kartą įklijuokite ilgą kodą iš **Copy secret** (jei sąrankos puslapį uždarėte, pirmiausia iš naujo atlikite jo 2 žingsnį).
-- **„Keystore, password or alias is wrong“**: patikrinkite savo raktų saugyklos slaptažodį ir pseudonimą, tada iš naujo atlikite sąrankos puslapio 2 ir 3 žingsnius.
-- **„Version … does not exist“**: įvesta versija nėra AAPS leidimas. Naudokite `latest` arba patikrinkite versijos numerį.
-- **„Variant … is not supported“**: jūsų darbo eigos failas yra senesnės versijos. Pakeiskite jį, kaip aprašyta skyriuje [AAPS atnaujinimas](#aaps-builder-updates).
-- **„Page not found“ (404), kai sąrankos puslapis atidaro GitHub**: toje pačioje naršyklėje prisijunkite prie github.com (kai nesate prisijungę, GitHub privačioms saugykloms rodo 404). Jei esate prisijungę, sąrankos puslapio 1 žingsnyje nurodytas naudotojo vardas arba saugyklos pavadinimas nesutampa su jūsų saugykla. Įveskite tikslius pavadinimus.
-- **„No GitHub user with this name“** 1 žingsnyje: įveskite savo GitHub naudotojo vardą, kaip jis rodomas jūsų GitHub profilyje, ne el. pašto adresą.
-- **Nėra nuorodos Download arba atsidarė GitHub programėlė**: GitHub programėlė negali atsisiųsti kūrimų. Atidarykite kūrimą Chrome, kaip aprašyta [5 žingsnyje](#aaps-builder-step5). Kad GitHub nuorodos nebūtų atidaromos programėlėje: Android **Settings** → **Apps** → **GitHub** → **Open by default** → išjunkite **Open supported links**.
-- **„Google Drive access has expired or was revoked“**: iš naujo atlikite [6 žingsnį](#aaps-builder-google-drive) ir atnaujinkite slaptąją reikšmę `GDRIVE_OAUTH2`.
-
-Kitas GitHub ir Google Drive problemas rasite puslapyje [Kūrimas naršyklėje: trikčių šalinimas](../GettingHelp/BrowserBuildTroubleshooting.md).
+Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
 
 ```{toctree}
 :hidden:

@@ -89,7 +89,7 @@ Nutze die Anleitung [AAPS auf Dein Smartphone übertragen und installieren](../S
 
 (update-computer-build-troubleshooting)=
 
-## Problembehandlung
+## Fehlerbehebung
 
 Keine Panik, wenn irgendetwas schiefläuft.
 

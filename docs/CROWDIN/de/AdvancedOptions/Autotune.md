@@ -78,18 +78,18 @@ Tippe auf der Karte **Autotune** auf **Modul öffnen**, um den Autotune-Bildschi
 
 - Wenn Du mit den Ergebnissen zufrieden bist (geringe Abweichungen zwischen dem Eingabeprofil und dem erzeugten Profil), kannst Du auf „Profil aktivieren“ tippen und mit „OK“ bestätigen.
 
-  - „Profil aktivieren“ legt automatisch ein neues Profil „Angepasst“ in Deiner Profilliste an (**Bearbeiten → Profil**).
-  - Gibt es unter **Bearbeiten → Profil** schon ein Profil namens „Angepasst“, wird dieses vor dem Aktivieren mit dem berechneten Autotune-Profil aktualisiert
+  - „Profil aktivieren“ legt automatisch ein neues Profil „Angepasst“ in Deiner Profilliste an (**Verwalten → Profil**).
+  - Gibt es unter **Verwalten → Profil** schon ein Profil namens „Angepasst“, wird dieses vor dem Aktivieren mit dem berechneten Autotune-Profil aktualisiert
 
   ![Autotune Activate profile](../images/Autotune/Autotune_6.png)
 
 - Wenn Du denkst, dass das angepasste/berechnete Profil verändert werden muss (z.B. wenn Du findest, dass einige Abweichungen zu gravierend sind), dann kannst Du auf 'In lokales Profil kopieren' klicken.
 
-  - Unter **Bearbeiten → Profil** wird ein neues Profil mit dem Präfix „Angepasst“ sowie Datum und Uhrzeit des Laufs angelegt
+  - Unter **Verwalten → Profil** wird ein neues Profil mit dem Präfix „Angepasst“ sowie Datum und Uhrzeit des Laufs angelegt
 
   ![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
 
-- Danach kannst Du das angepasste Profil bearbeiten: Öffne **Bearbeiten** > **Profil**, wische zur Karte „Angepasst“ mit Datum und Uhrzeit des Laufs und tippe auf den Knopf **Bearbeiten** (Stift)
+- Danach kannst Du das angepasste Profil bearbeiten: Öffne **Verwalten** > **Profil**, wische zur Karte „Angepasst“ mit Datum und Uhrzeit des Laufs und tippe auf den Knopf **Bearbeiten** (Stift)
 
   - Die Werte im Profil werden in der Benutzeroberfläche auf das gerundet, was Deine Pumpe kann
 
@@ -101,7 +101,7 @@ Tippe auf der Karte **Autotune** auf **Modul öffnen**, um den Autotune-Bildschi
 
   ![Autotune Update input profile](../images/Autotune/Autotune_9.png)
 
-- Wenn Du Dein Eingabeprofil angepasst hast, wird der Knopf „Eingabeprofil anpassen“ durch den Knopf „Eingabeprofil zurücksetzen“ ersetzt (siehe Screenshot unten). So siehst Du sofort, ob Dein aktuelles Eingabeprofil unter **Bearbeiten → Profil** das Ergebnis des letzten Laufs schon enthält oder nicht. Mit diesem Knopf kannst Du außerdem Dein Eingabeprofil ohne das Autotune-Ergebnis wiederherstellen
+- Wenn Du Dein Eingabeprofil angepasst hast, wird der Knopf „Eingabeprofil anpassen“ durch den Knopf „Eingabeprofil zurücksetzen“ ersetzt (siehe Screenshot unten). So siehst Du sofort, ob Dein aktuelles Eingabeprofil unter **Verwalten → Profil** das Ergebnis des letzten Laufs schon enthält oder nicht. Mit diesem Knopf kannst Du außerdem Dein Eingabeprofil ohne das Autotune-Ergebnis wiederherstellen
 
   ![Autotune Update input profile](../images/Autotune/Autotune_10.png)
 

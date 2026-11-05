@@ -28,7 +28,7 @@ Das **Profil** enthält:
 
 Die meisten Looper verwenden eine sogenannte zirkadiane Basalrate, Korrektur- und KH-Faktoren die sich an der hormonellen Insulinempfindlichkeit im Tagesverlauf orientieren.
 
-Neben Deinem **Profil** musst Du auch Dein **Insulin** unter **Bearbeiten → Insulineinstellungen** einrichten, einschließlich seiner DIA (Insulinwirkdauer), siehe [Insulineinstellungen](#Config-Builder-insulin-dia).
+Neben Deinem **Profil** musst Du auch Dein **Insulin** unter **Verwalten → Insulineinstellungen** einrichten, einschließlich seiner DIA (Insulinwirkdauer), siehe [Insulineinstellungen](#Config-Builder-insulin-dia).
 
 Weitere Informationen zu Deinem **Profil** findest Du [auf der gesonderten Seite](../SettingUpAaps/YourAapsProfile.md).
 

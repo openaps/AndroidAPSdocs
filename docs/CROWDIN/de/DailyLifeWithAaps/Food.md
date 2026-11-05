@@ -12,7 +12,7 @@ Die **Lebensmittel**-Datenbank ist Deine persönliche Liste gespeicherter Lebens
 
 ## Die Lebensmittel-Datenbank öffnen
 
-Öffne den Bildschirm **Bearbeiten** (untere Navigationsleiste) und wähle **Lebensmittel** (*„Einträge in der Lebensmittel-Datenbank verwalten“*). In **AAPS** v4 ist Lebensmittel **kein Modul mehr** – es muss nichts eingeschaltet werden; es ist ein eigener Bildschirm, den Du über das [Fenster Bearbeiten](#v4changes-manage) erreichst.
+Öffne den Bildschirm **Verwalten** (untere Navigationsleiste) und wähle **Lebensmittel** (*„Einträge in der Lebensmittel-Datenbank verwalten“*). In **AAPS** v4 ist Lebensmittel **kein Modul mehr** – es muss nichts eingeschaltet werden; es ist ein eigener Bildschirm, den Du über das [Fenster Verwalten](#v4changes-manage) erreichst.
 
 ---
 

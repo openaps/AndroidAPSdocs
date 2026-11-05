@@ -102,6 +102,8 @@ The setup page is part of this documentation, in your language. Keep this page o
 
 Η σελίδα ρύθμισης ανοίγει κάθε σελίδα του GitHub σε νέα καρτέλα του Chrome. Για να επιστρέψετε στη σελίδα ρύθμισης, πατήστε το κουμπί καρτελών δίπλα στη γραμμή διευθύνσεων του Chrome (το τετράγωνο με έναν αριθμό) και επιλέξτε τη σελίδα ρύθμισης του AAPS Builder.
 
+![Tab switcher](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
+
 Η σελίδα ρύθμισης λειτουργεί εξ ολοκλήρου στον browser σας: το κλειδί και οι κωδικοί σας δεν στέλνονται πουθενά, εκτός από το secret του GitHub στο οποίο τα επικολλάτε εσείς. Μόνο το όνομα χρήστη σας στο GitHub στέλνεται στο GitHub, για να ελεγχθεί ότι υπάρχει. Θυμάται το όνομα χρήστη σας στο GitHub και το όνομα του αποθετηρίου, ώστε να μπορείτε να επιστρέψετε οποιαδήποτε στιγμή για να ανοίξετε ξανά τη σελίδα των secrets ή τα builds σας.
 
 ![Η σελίδα ρύθμισης του AAPS Builder](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
@@ -144,8 +146,14 @@ This step creates your own private copy of AAPS Builder in your GitHub account, 
 
    GitHub shows your new repository: it contains a folder `.github` (with the build workflow) and a file `README.md`. **Επιστρέψτε στην καρτέλα της σελίδας ρύθμισης** για το βήμα 2: πατήστε το κουμπί καρτελών δίπλα στη γραμμή διευθύνσεων του Chrome και επιλέξτε τη σελίδα ρύθμισης.
 
+   ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
+
 ```{warning}
 **Your new repository is empty**, with no files? It was not created from the template, and it cannot build. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** on the setup page again.
+```
+
+```{tip}
+GitHub says **my-aaps already exists in this account**? You already have your repository: close the GitHub tab and go on with the setup page. If your key is already in it, continue with [step 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
 (aaps-builder-step2)=
@@ -253,6 +261,7 @@ Step 3 unlocks when step 2 is done. Το κλειδί σας, οι κωδικο�
 Αν δεν υπάρχει κουμπί **Build AAPS** ή **Run workflow**:
 
 - Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the button.
+- The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
 - Ανοίξτε την καρτέλα **Actions**. Αν λέει ότι τα workflows είναι απενεργοποιημένα, πατήστε το πράσινο κουμπί για να τα ενεργοποιήσετε και μετά πατήστε **Build AAPS** στη λίστα.
 
 (aaps-builder-step5)=
@@ -311,10 +320,28 @@ Step 3 unlocks when step 2 is done. Το κλειδί σας, οι κωδικο�
 Χρειάζεται ένα ακόμα secret, το `GDRIVE_OAUTH2`. Step 6 of the setup page gets it from Google for you, on a phone or a computer. **AAPS** can then only see and change the files it creates in your Google Drive, nothing else.
 
 1. On the setup page, tap **Connect Google Drive**. Google opens in a new tab.
+
 2. Choose your Google account and allow access. If Google says the app is not verified, tap **Advanced**, then **Go to …**.
-3. The new tab then shows an error such as **This site can't be reached** or **127.0.0.1 refused to connect**. **This is expected:** Google's answer is in the address of that tab. Tap the address bar, select the whole address (it starts with `http://127.0.0.1:47913/`) and copy it.
+
+   ![Choose an account](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
+
+   ![Continue](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
+
+3. The new tab then shows an error such as **This site can't be reached** or **127.0.0.1 refused to connect**. **This is expected:** Google's answer is in the address of that tab. Tap the address bar, then the copy icon next to the address (on a computer: select the whole address and copy it). It starts with `http://127.0.0.1:47913/`.
+
+   ![This site can't be reached](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
+
+   ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
+
 4. Go back to the setup page tab within a few minutes: Google's answer is only valid for a short time, and only once. Paste the address into **Paste the copied address here** and tap **Get GDRIVE_OAUTH2**. The page shows **GDRIVE_OAUTH2 is ready**.
+
+   ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
+
+   ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
+
 5. Πατήστε **Open the secrets page** (άνοιγμα της σελίδας secrets). Πατήστε **Copy name** και μετά επικολλήστε το στο μικρό πεδίο **Name** (το όνομα είναι `GDRIVE_OAUTH2`). Tap **Copy secret**, paste it into the big **Secret** box and tap **Add secret**.
+
+   ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
 Από το επόμενο build, τα APK αποθηκεύονται και στο Google Drive.
 
@@ -337,31 +364,15 @@ Already have a `GDRIVE_OAUTH2` value from the preparation file of the other brow
 **Updates of your workflow file** are rare: only when the **Run workflow** form changes, for example for a new build variant, or once if your repository was made with an earlier version of the setup page (an empty repository with a short workflow file) or from the old template. The [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. Your `KEYSTORE_SET` secret stays as it is. On the setup page, open **Updating your copy** at the end of step 1:
 
 1. Tap **Open the newest workflow**. On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the **plain-text version** instead, press and hold the text, then **Select all** and **Copy**.
-2. Tap **Open my workflow file**.
+2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
 3. Replace the whole text with the copied workflow (long press on a phone: **Select all**, then **Paste**).
 4. Tap **Commit changes…**, then **Commit changes**.
 
 The first line of the file shows its version.
 
-(aaps-builder-troubleshooting)=
-
 ## Αντιμετώπιση προβλημάτων
 
-To see why a build failed, [read the build log](#aaps-ci-read-the-logs): the step names are different, but you find the error the same way. You can also [update a secret](#aaps-ci-update-secret) and [run the build again](#aaps-ci-rerun) the same way.
-
-- **No "Build AAPS" or "Run workflow" button, or the repository is empty**: the repository was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the **Create my private repository** button.
-- **Το build σταματά με το μήνυμα "This repository is PUBLIC"**: στο αποθετήριό σας, ανοίξτε **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private** και μετά κάντε ξανά build.
-- **"Secret KEYSTORE_SET is missing"**: do step 3 of the setup page.
-- **"The secret is too short"**, **"The secret is not a valid code"** ή **"The secret does not contain a keystore"**: επικολλήθηκε λάθος κείμενο στο secret, συχνά η ίδια η λέξη `KEYSTORE_SET` ή μόνο ένα μέρος του κωδικού. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 2 of the setup page first if you closed it).
-- **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 2 and 3 of the setup page.
-- **"Version … does not exist"**: η έκδοση που πληκτρολογήσατε δεν είναι έκδοση του AAPS. Χρησιμοποιήστε `latest` ή ελέγξτε τον αριθμό της έκδοσης.
-- **"Variant … is not supported"**: your workflow file is an older version. Replace it as explained in [Updating AAPS](#aaps-builder-updates).
-- **"Page not found" (404) όταν η σελίδα ρύθμισης ανοίγει το GitHub**: συνδεθείτε στο github.com στον ίδιο browser (το GitHub δείχνει 404 για ιδιωτικά αποθετήρια όταν δεν είστε συνδεδεμένοι). Αν είστε συνδεδεμένοι, το όνομα χρήστη ή το όνομα του αποθετηρίου στο βήμα 1 της σελίδας ρύθμισης δεν ταιριάζει με το αποθετήριό σας. Πληκτρολογήστε ακριβώς τα ονόματα.
-- **"No GitHub user with this name"** στο βήμα 1: πληκτρολογήστε το όνομα χρήστη σας στο GitHub, όπως φαίνεται στο προφίλ σας στο GitHub, όχι το e-mail σας.
-- **Δεν υπάρχει σύνδεσμος Download ή άνοιξε η εφαρμογή GitHub**: η εφαρμογή GitHub δεν μπορεί να κατεβάσει builds. Open the build in Chrome as explained in [step 5](#aaps-builder-step5). Για να μην ανοίγουν οι σύνδεσμοι του GitHub στην εφαρμογή: στο Android **Ρυθμίσεις** → **Εφαρμογές** → **GitHub** → **Άνοιγμα από προεπιλογή** → απενεργοποιήστε το **Άνοιγμα υποστηριζόμενων συνδέσμων**.
-- **"Google Drive access has expired or was revoked"**: redo [step 6](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
-
-For other GitHub and Google Drive issues, see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
 
 ```{toctree}
 :hidden:

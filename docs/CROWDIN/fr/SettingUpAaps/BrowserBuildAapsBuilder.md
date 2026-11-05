@@ -102,6 +102,8 @@ The setup page is part of this documentation, in your language. Keep this page o
 
 La page de configuration ouvre chaque page GitHub dans un nouvel onglet Chrome. Pour revenir à la page de configuration, appuyez sur le bouton des onglets à côté de la barre d'adresse de Chrome (le carré avec un nombre) et choisissez la page de configuration AAPS Builder.
 
+![Tab switcher](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
+
 La page de configuration fonctionne entièrement dans votre navigateur : votre clé et vos mots de passe ne sont jamais envoyés nulle part, sauf dans le secret GitHub où vous les collez vous-même. Seul votre nom d'utilisateur GitHub est envoyé à GitHub, pour vérifier qu'il existe. Elle retient votre nom d'utilisateur GitHub et le nom de votre dépôt, vous pouvez donc y revenir à tout moment pour rouvrir votre page des secrets ou vos compilations.
 
 ![La page de configuration AAPS Builder](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
@@ -144,8 +146,14 @@ This step creates your own private copy of AAPS Builder in your GitHub account, 
 
    GitHub shows your new repository: it contains a folder `.github` (with the build workflow) and a file `README.md`. **Revenez à l'onglet de la page de configuration** pour l'étape 2 : appuyez sur le bouton des onglets à côté de la barre d'adresse de Chrome et choisissez la page de configuration.
 
+   ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
+
 ```{warning}
 **Your new repository is empty**, with no files? It was not created from the template, and it cannot build. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** on the setup page again.
+```
+
+```{tip}
+GitHub says **my-aaps already exists in this account**? You already have your repository: close the GitHub tab and go on with the setup page. If your key is already in it, continue with [step 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
 (aaps-builder-step2)=
@@ -253,6 +261,7 @@ GitHub affiche **Page not found** (404) ? Vérifiez d'abord que vous êtes conn
 S'il n'y a pas de bouton **Build AAPS** ou **Run workflow** :
 
 - Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the button.
+- The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
 - Ouvrez l'onglet **Actions**. S'il indique que les workflows sont désactivés, appuyez sur le bouton vert pour les activer, puis appuyez sur **Build AAPS** dans la liste.
 
 (aaps-builder-step5)=
@@ -311,10 +320,28 @@ Vous pouvez aussi faire enregistrer chaque compilation dans votre Google Drive, 
 Il faut pour cela un secret de plus, `GDRIVE_OAUTH2`. Step 6 of the setup page gets it from Google for you, on a phone or a computer. **AAPS** can then only see and change the files it creates in your Google Drive, nothing else.
 
 1. On the setup page, tap **Connect Google Drive**. Google opens in a new tab.
+
 2. Choose your Google account and allow access. If Google says the app is not verified, tap **Advanced**, then **Go to …**.
-3. The new tab then shows an error such as **This site can't be reached** or **127.0.0.1 refused to connect**. **This is expected:** Google's answer is in the address of that tab. Tap the address bar, select the whole address (it starts with `http://127.0.0.1:47913/`) and copy it.
+
+   ![Choose an account](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
+
+   ![Continue](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
+
+3. The new tab then shows an error such as **This site can't be reached** or **127.0.0.1 refused to connect**. **This is expected:** Google's answer is in the address of that tab. Tap the address bar, then the copy icon next to the address (on a computer: select the whole address and copy it). It starts with `http://127.0.0.1:47913/`.
+
+   ![This site can't be reached](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
+
+   ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
+
 4. Go back to the setup page tab within a few minutes: Google's answer is only valid for a short time, and only once. Paste the address into **Paste the copied address here** and tap **Get GDRIVE_OAUTH2**. The page shows **GDRIVE_OAUTH2 is ready**.
+
+   ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
+
+   ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
+
 5. Appuyez sur **Open the secrets page**. Appuyez sur **Copy name**, puis collez-le dans le petit champ **Name** (le nom est `GDRIVE_OAUTH2`). Tap **Copy secret**, paste it into the big **Secret** box and tap **Add secret**.
+
+   ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
 À partir de la compilation suivante, les APK sont aussi enregistrés dans Google Drive.
 
@@ -337,31 +364,15 @@ Votre dépôt ne compile jamais rien tout seul : c'est vous qui décidez quand 
 **Updates of your workflow file** are rare: only when the **Run workflow** form changes, for example for a new build variant, or once if your repository was made with an earlier version of the setup page (an empty repository with a short workflow file) or from the old template. The [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. Your `KEYSTORE_SET` secret stays as it is. On the setup page, open **Updating your copy** at the end of step 1:
 
 1. Tap **Open the newest workflow**. On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the **plain-text version** instead, press and hold the text, then **Select all** and **Copy**.
-2. Tap **Open my workflow file**.
+2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
 3. Replace the whole text with the copied workflow (long press on a phone: **Select all**, then **Paste**).
 4. Tap **Commit changes…**, then **Commit changes**.
 
 The first line of the file shows its version.
 
-(aaps-builder-troubleshooting)=
-
 ## Dépannage
 
-To see why a build failed, [read the build log](#aaps-ci-read-the-logs): the step names are different, but you find the error the same way. You can also [update a secret](#aaps-ci-update-secret) and [run the build again](#aaps-ci-rerun) the same way.
-
-- **No "Build AAPS" or "Run workflow" button, or the repository is empty**: the repository was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the **Create my private repository** button.
-- **La compilation s'arrête avec "This repository is PUBLIC"** : dans votre dépôt, ouvrez **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, puis compilez de nouveau.
-- **"Secret KEYSTORE_SET is missing"**: do step 3 of the setup page.
-- **"The secret is too short"**, **"The secret is not a valid code"** ou **"The secret does not contain a keystore"** : un mauvais texte a été collé dans le secret, souvent le mot `KEYSTORE_SET` lui-même, ou seulement une partie du code. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 2 of the setup page first if you closed it).
-- **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 2 and 3 of the setup page.
-- **"Version … does not exist"** : la version que vous avez tapée n'est pas une version publiée d'AAPS. Utilisez `latest`, ou vérifiez le numéro de version.
-- **"Variant … is not supported"**: your workflow file is an older version. Replace it as explained in [Updating AAPS](#aaps-builder-updates).
-- **"Page not found" (404) quand la page de configuration ouvre GitHub** : connectez-vous à github.com dans le même navigateur (GitHub affiche 404 pour les dépôts privés quand vous n'êtes pas connecté). Si vous êtes connecté, le nom d'utilisateur ou le nom du dépôt à l'étape 1 de la page de configuration ne correspond pas à votre dépôt. Tapez les noms exacts.
-- **"No GitHub user with this name"** à l'étape 1 : tapez votre nom d'utilisateur GitHub, tel qu'il apparaît dans votre profil GitHub, pas votre adresse e-mail.
-- **Pas de lien Download, ou l'application GitHub s'est ouverte** : l'application GitHub ne peut pas télécharger les compilations. Open the build in Chrome as explained in [step 5](#aaps-builder-step5). Pour que les liens GitHub ne s'ouvrent plus dans l'application : **Paramètres** Android (Settings) → **Applications** (Apps) → **GitHub** → **Ouvrir par défaut** (Open by default) → désactivez **Ouvrir les liens compatibles** (Open supported links).
-- **"Google Drive access has expired or was revoked"**: redo [step 6](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
-
-For other GitHub and Google Drive issues, see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
 
 ```{toctree}
 :hidden:

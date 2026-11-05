@@ -38,14 +38,14 @@
     ---
     
     (Config-Builder-tab-or-hamburger-menu)=
-    ## Opening a plugin screen
+    ## Einen Modul-Bildschirm öffnen
     
-    Each plugin screen is opened in one of these ways (the tabs and the eye checkbox of **AAPS** v3 are gone, see [What changed in AAPS v4](#v4-changes)):
+    Jeder Modul-Bildschirm lässt sich auf einem dieser Wege öffnen (die Reiter und das Augen-Kästchen aus **AAPS** v3 gibt es nicht mehr, siehe [Änderungen mit AAPS Version 4](#v4-changes)):
     
-    - **Configuration** → the plugin's category → **Open plugin**,
-    - the **Manage** sheet of the bottom navigation, for the screens you use most (Profile, Insulin settings, Pump, Automation, Food...),
-    - a [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) button that you add yourself,
-    - the **search bar** on the main screen.
+    - **Konfiguration** → die Kategorie des Moduls → **Modul öffnen**,
+    - das Fenster **Verwalten** in der unteren Navigationsleiste, für die Bildschirme, die Du am häufigsten nutzt (Profil, Insulineinstellungen, Pumpe, Automatisierung, Lebensmittel …),
+    - ein [Schnellstart](../DailyLifeWithAaps/QuickLaunch.md)-Knopf, den Du selbst hinzufügst,
+    - das **Suchfeld** auf dem Startbildschirm.
     
     ```{contents}
     :backlinks: entry
@@ -66,7 +66,7 @@ Im Abschnitt [Dein AAPS-Profil](../SettingUpAaps/YourAapsProfile.md) bekommst Du
 
 ![Insulin settings](../images/manage/insulin_settings.png)
 
-In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Open **Manage → Insulin settings** to set up the insulin you are using.
+In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Öffne **Verwalten → Insulineinstellungen**, um das Insulin einzurichten, das Du verwendest.
 
 The insulin editor lets you:
 
@@ -91,7 +91,7 @@ The insulin marked **ACTIVE** is the one your running profile uses. Its fields a
 
 To change the DIA or peak you are using:
 
-1. Open **Manage → Insulin settings**. If the screen opens read-only (a **✏️ pencil** in the top bar), tap the pencil and unlock your settings.
+1. Öffne **Verwalten → Insulineinstellungen**. If the screen opens read-only (a **✏️ pencil** in the top bar), tap the pencil and unlock your settings.
 2. Tap **+** (*Add new insulin*). **AAPS** creates a copy of the insulin shown on screen.
 3. Set the new **Peak** and/or **DIA**, then tap the save icon (top right).
 4. Tap **▶** (*Activate insulin*) and confirm. The new insulin becomes **ACTIVE**.
@@ -144,7 +144,7 @@ AAPS models the timeline of insulin action with a mathematical formula, configur
 
 Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). This missing basal insulin is fully subtracted from the IOB, explaining why IOB will in practice reach zero many hours earlier than the configured DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
 
-To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin settings**. AAPS displays the active insulin configuration like this:
+Um DIA und Wirkmaximum einzustellen, tippe auf dem Startbildschirm auf **Verwalten** und dann auf **Insulineinstellungen**. AAPS displays the active insulin configuration like this:
 
 ![Sample insulin configuration](../images/manage/insulin_profile.png)
 
@@ -436,11 +436,11 @@ The [main screen](#AapsScreens-the-homescreen) of **AAPS** is not a plugin any m
 
 ### Aktionen
 
-The Actions tab of **AAPS** 3.x no longer exists. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
+The Actions tab of **AAPS** 3.x no longer exists. Seine Knöpfe befinden sich jetzt im Fenster **Verwalten** – siehe [Wo ist der Reiter Aktionen geblieben?](#screens-action-tab).
 
 ### Automatisierung
 
-**Manage → Automation** lets you manage your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
+Unter **Verwalten → Automatisierung** verwaltest Du Deine [Automatisierungen](../DailyLifeWithAaps/Automations.md), ab [Ziel 10](#objectives-objective10).
 
 (Config-Builder-sms-communicator)=
 
@@ -450,7 +450,7 @@ Der SMS-Kommunikator erlaubt die Remotesteuerung einiger **AAPS**-Funktionen via
 
 ### Essen
 
-**Manage → Food** displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+**Verwalten → Lebensmittel** zeigt die Lebensmittel-Vorlagen aus der Nightscout-Lebensmitteldatenbank an; weitere Informationen zur Einrichtung findest Du in der [Nightscout-Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
 Hinweis: Die Einträge können nicht im **AAPS**-Bolus-Rechner verwendet werden. (reine Anzeigefunktion)
 

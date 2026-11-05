@@ -67,7 +67,7 @@ Sobald sie ausgewählt ist, zeigt die Karte **Medtrum** zwei Schaltflächen: **E
 
 ![The Medtrum plugin selected in Configuration > Pump](../images/v4/Pumps/medtrum_enabled.png)
 
-**Plugin öffnen** (oder **Bearbeiten → Pumpe**) öffnet den Medtrum-Pumpenbildschirm. Dort wechselst Du Patches und siehst den Pumpenstatus. Bevor ein Patch aktiviert ist, sieht er so aus:
+**Plugin öffnen** (oder **Verwalten → Pumpe**) öffnet den Medtrum-Pumpenbildschirm. Dort wechselst Du Patches und siehst den Pumpenstatus. Bevor ein Patch aktiviert ist, sieht er so aus:
 
 ![Medtrum pump screen before pairing](../images/v4/Pumps/medtrum_pump_screen.png)
 
@@ -189,7 +189,7 @@ Du kannst diese Einstellung bei der Medtrum-Pumpe ändern, wir empfehlen aber au
 
 #### Aktivierung starten
 
-Öffne den [Medtrum-Pumpenbildschirm](#nano-overview) (**Bearbeiten → Pumpe**) und tippe auf **Wechsele Patch**. Hast Du einen [Zugriffsschutz für die Einstellungen](#Preferences-protection) eingerichtet, musst Du zuerst Dein Passwort oder Deine PIN eingeben.
+Öffne den [Medtrum-Pumpenbildschirm](#nano-overview) (**Verwalten → Pumpe**) und tippe auf **Wechsele Patch**. Hast Du einen [Zugriffsschutz für die Einstellungen](#Preferences-protection) eingerichtet, musst Du zuerst Dein Passwort oder Deine PIN eingeben.
 
 Ist bereits ein Patch aktiv, wirst Du aufgefordert, ihn zuerst zu deaktivieren, siehe [Patch deaktivieren](#nano-deactivate-patch).
 
@@ -271,7 +271,7 @@ Er zeigt, wie viele Einheiten noch im Patch sind. Tippe auf **OK**, um zum Pumpe
 
 ### Patch deaktivieren
 
-Um den aktiven Patch zu deaktivieren, öffne den [Medtrum-Pumpenbildschirm](#nano-overview) (**Bearbeiten → Pumpe**) und tippe auf **Wechsele Patch**.
+Um den aktiven Patch zu deaktivieren, öffne den [Medtrum-Pumpenbildschirm](#nano-overview) (**Verwalten → Pumpe**) und tippe auf **Wechsele Patch**.
 
 ![Patch deaktivieren](../images/medtrum/activation/DeactivatePatch.png)
 
@@ -289,7 +289,7 @@ Ist die Deaktivierung abgeschlossen, ziehe die Nadel zurück und entferne den Pa
 
 ### Unterbrochene Aktivierung fortsetzen
 
-Wird eine Patch-Aktivierung unterbrochen, zum Beispiel weil der Smartphone-Akku leer ist, kannst Du sie fortsetzen. Öffne den [Medtrum-Pumpenbildschirm](#nano-overview) (**Bearbeiten → Pumpe**) und tippe auf **Wechsele Patch**.
+Wird eine Patch-Aktivierung unterbrochen, zum Beispiel weil der Smartphone-Akku leer ist, kannst Du sie fortsetzen. Öffne den [Medtrum-Pumpenbildschirm](#nano-overview) (**Verwalten → Pumpe**) und tippe auf **Wechsele Patch**.
 
 ![Unterbrochene Aktivierung fortsetzen](../images/medtrum/activation/ActivationInProgress.png)
 
@@ -308,7 +308,7 @@ Der Treiber liest den Aktivierungsstatus aus der Pumpe aus. Klappt das, macht de
 
 ## Pumpenbildschirm
 
-Der Medtrum-Pumpenbildschirm (**Bearbeiten → Pumpe**) zeigt den aktuellen Status des Medtrum-Patches. Er enthält außerdem Schaltflächen zum Wechseln des Patches, zum Zurücksetzen von Alarmen und zum Aktualisieren des Status. Ein Banner oben zeigt wichtige Zustände an, zum Beispiel **Patch nicht aktiviert** oder **Pumpe ist ausgesetzt**.
+Der Medtrum-Pumpenbildschirm (**Verwalten → Pumpe**) zeigt den aktuellen Status des Medtrum-Patches. Er enthält außerdem Schaltflächen zum Wechseln des Patches, zum Zurücksetzen von Alarmen und zum Aktualisieren des Status. Ein Banner oben zeigt wichtige Zustände an, zum Beispiel **Patch nicht aktiviert** oder **Pumpe ist ausgesetzt**.
 
 ![Medtrum pump screen with an active patch](../images/v4/Pumps/medtrum_pump_screen_active.png)
 
@@ -375,7 +375,7 @@ Nach einem Import der Einstellungen synchronisiert der Treiber die Historie mit 
 
 (medtrum-nano-troubleshooting)=
 
-## Problembehandlung
+## Fehlerbehebung
 
 ### Verbindungsprobleme
 

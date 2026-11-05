@@ -102,6 +102,8 @@
 
 דף ההגדרה פותח כל דף של GitHub בלשונית חדשה של Chrome. כדי לחזור לדף ההגדרה, יש להקיש על כפתור הלשוניות ליד שורת הכתובת של Chrome (הריבוע עם המספר) ולבחור את דף ההגדרה של AAPS Builder.
 
+![Tab switcher](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
+
 דף ההגדרה פועל כולו בדפדפן שלכם: המפתח והסיסמאות שלכם לא נשלחים לשום מקום, חוץ מה-secret ב-GitHub שאתם מדביקים אותם בו בעצמכם. רק שם המשתמש שלכם ב-GitHub נשלח ל-GitHub, כדי לבדוק שהוא קיים. הדף זוכר את שם המשתמש שלכם ב-GitHub ואת שם המאגר, כך שאפשר לחזור אליו בכל זמן כדי לפתוח שוב את דף ה-secrets או את הבניות שלכם.
 
 ![דף ההגדרה של AAPS Builder](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
@@ -144,8 +146,14 @@
 
    GitHub מציג את המאגר החדש שלכם: יש בו תיקייה `.github` (עם ה-workflow לבנייה) וקובץ `README.md`. **יש לחזור ללשונית של דף ההגדרה** לשלב 2: יש להקיש על כפתור הלשוניות ליד שורת הכתובת של Chrome ולבחור את דף ההגדרה.
 
+   ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
+
 ```{warning}
 **המאגר החדש שלכם ריק**, בלי קבצים? הוא לא נוצר מהתבנית, והוא לא יכול לבנות. יש למחוק אותו (**Settings** ← בתחתית הדף ← **Delete this repository**), ואז להקיש שוב על **Create my private repository** בדף ההגדרה.
+```
+
+```{tip}
+GitHub says **my-aaps already exists in this account**? You already have your repository: close the GitHub tab and go on with the setup page. If your key is already in it, continue with [step 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
 (aaps-builder-step2)=
@@ -253,6 +261,7 @@ GitHub מציג **Page not found** (404)? קודם יש לוודא שאתם מח
 אם אין כפתור **Build AAPS** או **Run workflow**:
 
 - יש לפתוח את המאגר שלכם ולבדוק שיש בו תיקייה `.github` עם הקובץ `workflows/build.yml`. אם המאגר ריק, הוא לא נוצר מהתבנית: יש למחוק אותו (**Settings** ← בתחתית הדף ← **Delete this repository**) ולבצע שוב את [שלב 1](#aaps-builder-step1) עם הכפתור.
+- The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
 - יש לפתוח את הלשונית **Actions**. אם כתוב שה-workflows מושבתים, יש להקיש על הכפתור הירוק כדי להפעיל אותם, ואז להקיש על **Build AAPS** ברשימה.
 
 (aaps-builder-step5)=
@@ -311,10 +320,28 @@ GitHub מציג **Page not found** (404)? קודם יש לוודא שאתם מח
 לשם כך צריך עוד secret אחד, `GDRIVE_OAUTH2`. שלב 6 של דף ההגדרה משיג אותו בשבילכם מ-Google, בטלפון או במחשב. אחרי זה **AAPS** יכול לראות ולשנות רק את הקבצים שהוא יוצר ב-Google Drive שלכם, ולא שום דבר אחר.
 
 1. בדף ההגדרה, יש להקיש על **Connect Google Drive** (חיבור Google Drive). Google נפתח בלשונית חדשה.
+
 2. יש לבחור את חשבון Google שלכם ולאשר גישה. אם Google אומר שהאפליקציה לא מאומתת, יש להקיש על **Advanced** (מתקדם), ואז על **Go to …** (מעבר אל …).
-3. אז הלשונית החדשה מציגה שגיאה כמו **This site can't be reached** או **127.0.0.1 refused to connect**. **זה צפוי:** התשובה של Google נמצאת בכתובת של הלשונית הזו. יש להקיש על שורת הכתובת, לסמן את כל הכתובת (היא מתחילה ב-`http://127.0.0.1:47913/`) ולהעתיק אותה.
+
+   ![Choose an account](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
+
+   ![Continue](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
+
+3. אז הלשונית החדשה מציגה שגיאה כמו **This site can't be reached** או **127.0.0.1 refused to connect**. **זה צפוי:** התשובה של Google נמצאת בכתובת של הלשונית הזו. Tap the address bar, then the copy icon next to the address (on a computer: select the whole address and copy it). היא מתחילה ב-`http://127.0.0.1:47913/`.
+
+   ![This site can't be reached](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
+
+   ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
+
 4. יש לחזור ללשונית של דף ההגדרה תוך כמה דקות: התשובה של Google תקפה רק לזמן קצר, ורק פעם אחת. יש להדביק את הכתובת ב-**Paste the copied address here** (הדביקו כאן את הכתובת שהועתקה) ולהקיש על **Get GDRIVE_OAUTH2**. הדף מציג **GDRIVE_OAUTH2 is ready** (GDRIVE_OAUTH2 מוכן).
+
+   ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
+
+   ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
+
 5. יש להקיש על **Open the secrets page** (פתיחת דף ה-secrets). יש להקיש על **Copy name**, ואז להדביק אותו בשדה הקטן **Name** (השם הוא `GDRIVE_OAUTH2`). יש להקיש על **Copy secret**, להדביק אותו בתיבה הגדולה **Secret** ולהקיש על **Add secret**.
+
+   ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
 מהבנייה הבאה, קובצי ה-APK נשמרים גם ב-Google Drive.
 
@@ -337,31 +364,15 @@ Google מפסיקה את הגישה אם לא בונים במשך 6 חודשים
 **עדכונים של קובץ ה-workflow שלכם** נדירים: רק כשהטופס **Run workflow** משתנה, למשל בגלל וריאנט בנייה חדש, או פעם אחת אם המאגר שלכם נוצר עם גרסה קודמת של דף ההגדרה (מאגר ריק עם קובץ workflow קצר) או מהתבנית הישנה. הדף [עדכונים ושינויים בתיעוד](../Maintenance/DocumentationUpdate.md) מודיע על כך. ה-secret `KEYSTORE_SET` שלכם נשאר כמו שהוא. בדף ההגדרה, יש לפתוח את **Updating your copy** (עדכון העותק שלך) בסוף שלב 1:
 
 1. יש להקיש על **Open the newest workflow** (פתיחת ה-workflow החדש ביותר). במחשב, יש ללחוץ על **סמל ההעתקה** ("Copy raw file") בפינה העליונה של הקובץ. בטלפון, יש לפתוח במקום זה את **גרסת הטקסט הפשוט**, ללחוץ לחיצה ארוכה על הטקסט, ואז לבחור **Select all** (בחירת הכול) ו-**Copy** (העתקה).
-2. יש להקיש על **Open my workflow file** (פתיחת קובץ ה-workflow שלי).
+2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
 3. יש להחליף את כל הטקסט ב-workflow שהועתק (בטלפון בלחיצה ארוכה: **Select all**, ואז **Paste**).
 4. יש להקיש על **Commit changes…**, ואז על **Commit changes**.
 
 השורה הראשונה של הקובץ מציגה את הגרסה שלו.
 
-(aaps-builder-troubleshooting)=
-
 ## פתרון תקלות
 
-כדי לראות למה בנייה נכשלה, [יש לקרוא את יומן הבנייה](#aaps-ci-read-the-logs): שמות השלבים שונים, אבל מוצאים את השגיאה באותה דרך. באותה דרך אפשר גם [לעדכן secret](#aaps-ci-update-secret) ו[להריץ שוב את הבנייה](#aaps-ci-rerun).
-
-- **אין כפתור "Build AAPS" או "Run workflow", או שהמאגר ריק**: המאגר לא נוצר מהתבנית. יש למחוק אותו (**Settings** ← בתחתית הדף ← **Delete this repository**) ולבצע שוב את [שלב 1](#aaps-builder-step1) עם הכפתור **Create my private repository**.
-- **הבנייה נעצרת עם "This repository is PUBLIC"**: במאגר שלכם יש לפתוח **Settings** ← **General** ← **Danger Zone** ← **Change visibility** ← **Private**, ואז לבנות שוב.
-- **"Secret KEYSTORE_SET is missing"**: יש לבצע את שלב 3 של דף ההגדרה.
-- **"The secret is too short"**, **"The secret is not a valid code"** או **"The secret does not contain a keystore"**: הודבק ב-secret טקסט שגוי, לרוב המילה `KEYSTORE_SET` עצמה, או רק חלק מהקוד. במאגר שלכם, יש לפתוח **Settings** ← **Secrets and variables** ← **Actions**, לערוך את `KEYSTORE_SET` ולהדביק שוב את הקוד הארוך מ-**Copy secret** (אם סגרתם את דף ההגדרה, קודם יש לבצע שוב את שלב 2 שלו).
-- **"Keystore, password or alias is wrong"**: יש לבדוק את הסיסמה ואת ה-alias של ה-keystore, ואז לבצע שוב את שלבים 2 ו-3 של דף ההגדרה.
-- **"Version … does not exist"**: הגרסה שהקלדתם אינה גרסה של AAPS. יש להשתמש ב-`latest`, או לבדוק את מספר הגרסה.
-- **"Variant … is not supported"**: קובץ ה-workflow שלכם הוא גרסה ישנה. יש להחליף אותו כמו שמוסבר ב[עדכון AAPS](#aaps-builder-updates).
-- **"Page not found" (404) כשדף ההגדרה פותח את GitHub**: יש להתחבר ל-github.com באותו דפדפן (GitHub מציג 404 למאגרים פרטיים כשלא מחוברים). אם אתם מחוברים, שם המשתמש או שם המאגר בשלב 1 של דף ההגדרה לא תואמים למאגר שלכם. יש להקליד את השמות המדויקים.
-- **"No GitHub user with this name"** בשלב 1: יש להקליד את שם המשתמש שלכם ב-GitHub, כמו שהוא מופיע בפרופיל GitHub שלכם, לא את כתובת הדוא"ל.
-- **אין קישור Download, או שנפתחה אפליקציית GitHub**: אפליקציית GitHub לא יכולה להוריד בניות. יש לפתוח את הבנייה ב-Chrome כמו שמוסבר ב[שלב 5](#aaps-builder-step5). כדי שקישורים של GitHub לא ייפתחו באפליקציה: ב-Android **Settings** (הגדרות) ← **Apps** (אפליקציות) ← **GitHub** ← **Open by default** (פתיחה כברירת מחדל) ← לכבות את **Open supported links** (פתיחת קישורים נתמכים).
-- **"Google Drive access has expired or was revoked"**: יש לבצע שוב את [שלב 6](#aaps-builder-google-drive) ולעדכן את ה-secret `GDRIVE_OAUTH2`.
-
-לבעיות אחרות ב-GitHub וב-Google Drive, ראו [בנייה בדפדפן: פתרון תקלות](../GettingHelp/BrowserBuildTroubleshooting.md).
+Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
 
 ```{toctree}
 :hidden:

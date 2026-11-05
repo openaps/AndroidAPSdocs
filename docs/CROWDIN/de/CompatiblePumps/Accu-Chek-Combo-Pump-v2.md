@@ -40,7 +40,7 @@ Beachte folgende Einschränkungen:
 * Temporäre Basalraten sind auf 500 % der aktuellen Basalrate begrenzt. **AAPS** berücksichtigt diese Grenze.
 * Der Loop ist deaktiviert, wenn das aktuell aktive Profil der Pumpe nicht Profil Nr. 1 ist. Das bleibt so, bis Profil Nr. 1 wieder das aktive ist. Ist das erledigt, bemerkt AAPS bei der nächsten Verbindung (entweder nach einer Weile von selbst oder weil Du auf dem Accu-Chek-Combo-Pumpenbildschirm auf **Aktualisieren** tippst), dass Profil Nr. 1 das aktuelle ist, und aktiviert den Loop wieder.
 * Wenn der Loop eine laufende Basalrate abbrechen will, wird stattdessen die Basalrate für 15 min. auf 90% oder 110% gesetzt. Das liegt daran, dass das Abbrechen eines TBR eine Warnung auf die Pumpe verursacht, die viele Vibrationen verursacht, und diese Vibrationen können nicht deaktiviert werden.
-* Die Stabiltät der Bluetooth-Verbindung variiert je nach verwendetem Telefon stark, dies kann zu “pump unreachable”-Alarmen führen und verhindern, dass die Verbindung zur Pumpe hergestellt werden kann. Tritt dieser Fehler auf, stelle sicher, dass Bluetooth eingeschaltet ist, und tippe auf dem Pumpenbildschirm (**Bearbeiten** > **Pumpe**) auf **Aktualisieren**, um zu sehen, ob es nur ein vorübergehendes Problem war. Kommt weiterhin keine Verbindung zustande, starte das Smartphone neu, das behebt das Problem in der Regel.
+* Die Stabiltät der Bluetooth-Verbindung variiert je nach verwendetem Telefon stark, dies kann zu “pump unreachable”-Alarmen führen und verhindern, dass die Verbindung zur Pumpe hergestellt werden kann. Tritt dieser Fehler auf, stelle sicher, dass Bluetooth eingeschaltet ist, und tippe auf dem Pumpenbildschirm (**Verwalten** > **Pumpe**) auf **Aktualisieren**, um zu sehen, ob es nur ein vorübergehendes Problem war. Kommt weiterhin keine Verbindung zustande, starte das Smartphone neu, das behebt das Problem in der Regel.
 * Bei einem anderen Problem hilft ein Neustart nicht, sondern es muss eine Taste an der Pumpe gedrückt werden (was den Bluetooth-Stack der Pumpe zurücksetzt), bevor die Pumpe wieder Verbindungen vom Smartphone annimmt.
 * Das Setzen einer TBR direkt auf der Pumpe ist im Closed Loop Betrieb nicht nötig und sollte möglichst nicht vorgenommen werden. Das Erkennen einer manuell gesetzten Basalrate kann bis zu 20 Minuten dauern und wird bei der Berechnung auch erst ab dem Zeitpunkt berücksichtigt, zu dem die TBR von AAPS eingelesen wird. Das führt dazu, dass die im Körper befindliche Insulinmenge (IOB) falsch berechnet wird.
 
@@ -118,7 +118,7 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
 
   ![Accu-Chek Combo driver settings](../images/v4/Pumps/accu_chek_combo_settings.png)
 
-  **Plugin öffnen** (oder **Bearbeiten** > **Pumpe**) öffnet den Accu-Chek-Combo-Pumpenbildschirm. Bevor eine Pumpe gekoppelt ist, zeigt er **Nicht mit einer Pumpe gekoppelt**:
+  **Plugin öffnen** (oder **Verwalten** > **Pumpe**) öffnet den Accu-Chek-Combo-Pumpenbildschirm. Bevor eine Pumpe gekoppelt ist, zeigt er **Nicht mit einer Pumpe gekoppelt**:
 
   ![Accu-Chek Combo pump screen before pairing](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
 
@@ -157,7 +157,7 @@ Deshalb wird die Kopplung nie zu 100 % problemlos funktionieren. Insbesondere w�
 (combov2-tab-contents)=
 ## Inhalt des Accu-Chek-Combo-Pumpenbildschirms
 
-Den Pumpenbildschirm öffnest Du über **Bearbeiten** > **Pumpe**. Ist eine Pumpe gekoppelt, zeigt er folgende Informationen (von oben nach unten):
+Den Pumpenbildschirm öffnest Du über **Verwalten** > **Pumpe**. Ist eine Pumpe gekoppelt, zeigt er folgende Informationen (von oben nach unten):
 
 ![Screenshot of the Accu-Chek Combo pump screen with pairing (older AAPS version)](../images/combo/combov2-tab-with-pairing.png)
 
@@ -195,8 +195,8 @@ Unten befinden sich diese Schaltflächen:
 Diese Einstellungen gibt es für den Combo-Treiber (**Konfiguration** > **Pumpe** > **Accu-Chek Combo** > **Einstellungen** oder das Einstellungssymbol (Zahnrad) auf dem Pumpenbildschirm). Die Einträge sind von oben nach unten aufgeführt:
 
 1. **Suchzeit (in Sekunden)**: Beim Koppeln macht der Treiber das Smartphone für die Pumpe sichtbar. Dies beinflusst die Dauer der Sichtbarkeit. Das Maximum (300 Sekunden = 5 Minuten) ist voreingestellt. Android erlaubt keine permanente Sichtbarkeit, sodass eine Dauer ausgewählt werden muss.
-2. **Insulinreservoirwechsel automatisch erkennen und eingeben**: Ist das aktiviert, trägt der Treiber den „Ampullenwechsel“ ein, den Du sonst selbst über **Bearbeiten** > **Nadelwechsel/Füllen** eingeben würdest. Dies wird [weiter unten](#combov2-autodetections) genauer beschrieben.
-3. **Batteriewechsel automatisch erkennen und eingeben**: Ist das aktiviert, trägt der Treiber den „Batteriewechsel“ ein, den Du sonst selbst über **Bearbeiten** > **Pumpenbatterie-Wechsel** eingeben würdest. Dies wird [weiter unten](#combov2-autodetections) genauer beschrieben.
+2. **Insulinreservoirwechsel automatisch erkennen und eingeben**: Ist das aktiviert, trägt der Treiber den „Ampullenwechsel“ ein, den Du sonst selbst über **Verwalten** > **Nadelwechsel/Füllen** eingeben würdest. Dies wird [weiter unten](#combov2-autodetections) genauer beschrieben.
+3. **Batteriewechsel automatisch erkennen und eingeben**: Ist das aktiviert, trägt der Treiber den „Batteriewechsel“ ein, den Du sonst selbst über **Verwalten** > **Pumpenbatterie-Wechsel** eingeben würdest. Dies wird [weiter unten](#combov2-autodetections) genauer beschrieben.
 4. **Aktiviere erweitertes Combo-Logging**: Dies erhöht die Anzahl der Log-Einträge durch den Treiber. **ACHTUNG**: Aktiviere diese Option nur, wenn Du von einem Entwickler oder einer Entwicklerin dazu aufgefordert wirst. Andernfalls kann das die **AAPS**-Protokolle mit sehr vielen Einträgen füllen und sie weniger nützlich machen.
 
 Koppeln und Kopplung aufheben erledigst Du auf dem Pumpenbildschirm, nicht in den Einstellungen (siehe oben).
@@ -221,7 +221,7 @@ Bestimmte Warnungen werden automatisch vom Treiber verworfen. Diese sind:
 - W2 „BATTERIE FAST LEER“: Der Treiber macht daraus eine Warnung „Batterie fast leer“, die auf dem AAPS-Startbildschirm angezeigt wird.
 - W3, W6, W7, W8: Sind alle rein informativ, daher ist es OK, dass der Treiber diese Meldungen automatisch verwirft/bestätigt
 
-Andere Warnungen werden _nicht automatisch_ verworfen/bestätigt. Fehlermeldungen werden ebenfalls _niemals automatisch_ verworfen/bestätigt. Beide werden gleich behandelt: Sie führen dazu, dass der Treiber einen Warndialog auf der AAPS-Oberfläche anzeigt und der laufende Befehl abgebrochen wird. Der Treiber wechselt dann in den Zustand „Fehler“ (siehe oben [Inhalt des Accu-Chek-Combo-Pumpenbildschirms](#combov2-tab-contents)). In diesem Zustand können keine weiteren Befehle ausgeführt werden. Du musst den Fehler auf der Pumpe lösen (z.B. kann ein Verstopfungs-Fehler einen Kanülenwechsel erfordern). Hast Du Dich um den Fehler gekümmert, kannst Du den normalen Betrieb fortsetzen, indem Du auf dem Accu-Chek-Combo-Pumpenbildschirm auf **Aktualisieren** tippst. Der Treiber verbindet sich dann mit der Combo und aktualisiert den Status und prüft, ob noch andere Fehler bestehen. Der Treiber aktualisiert den Pumpenstatus in regelmäßigen Abständen automatisch. Ein manuelles Aktualisieren ist also nicht unbedingt erforderlich.
+Andere Warnungen werden _nicht automatisch_ verworfen/bestätigt. Fehlermeldungen werden ebenfalls _niemals automatisch_ verworfen/bestätigt. Beide werden gleich behandelt: Sie führen dazu, dass der Treiber einen Warndialog auf der AAPS-Oberfläche anzeigt und der laufende Befehl abgebrochen wird. Der Treiber wechselt dann in den Zustand „Fehler“ (siehe oben [Inhalt des Accu-Chek-Combo-Pumpenbildschirms](#combov2-tab-contents)). In diesem Zustand können keine weiteren Befehle ausgeführt werden. Du musst den Fehler auf der Pumpe lösen (z.B. kann ein Verschluss-Fehler einen Kanülenwechsel erfordern). Hast Du Dich um den Fehler gekümmert, kannst Du den normalen Betrieb fortsetzen, indem Du auf dem Accu-Chek-Combo-Pumpenbildschirm auf **Aktualisieren** tippst. Der Treiber verbindet sich dann mit der Combo und aktualisiert den Status und prüft, ob noch andere Fehler bestehen. Der Treiber aktualisiert den Pumpenstatus in regelmäßigen Abständen automatisch. Ein manuelles Aktualisieren ist also nicht unbedingt erforderlich.
 
 Einen Bolus abzugeben ist ein Sonderfall. Dies wird über den Befehlsmodus, der während der Bolusabgabe keine Alarme bzw. Fehlermeldungen weitergibt, umgesetzt. Deshalb kann der Treiber Warnungen während der Bolusabgabe _nicht automatisch_ verwerfen bzw. bestätigen. Leider bedeutet das, dass die Combo in dieser Situation bis zum Ende des Bolus piepen wird. Der Alarm, der am häufigsten während einer Bolusabgabe auftritt, ist W1 'Ampulle fast leer'. Quittiere Combo-Warnungen während eines Bolus **nicht** manuell an der Pumpe. Du riskierst sonst, den Bolus zu unterbrechen. Der Treiber wird sich um die Warnungen kümmern, sobald der Bolus durchgelaufen ist.
 
@@ -265,13 +265,13 @@ Der Treiber tut sein Bestes, um sich mit der Combo zu verbinden und wendet einig
 
 #### Erreichbarkeit der Pumpe wiederherstellen
 
-* Wenn AAPS einen **Pumpe nicht erreichbar**-Alarm auslöst, hebe zuerst die Tastensperre auf und **drücke irgendeine Taste an der Pumpe** (z.B. den "Runter" Button). Sobald das Pumpendisplay ausgegangen ist, tippe auf dem Accu-Chek-Combo-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) auf **Aktualisieren**. Meistens funktioniert die Verbindung dann wieder.
+* Wenn AAPS einen **Pumpe nicht erreichbar**-Alarm auslöst, hebe zuerst die Tastensperre auf und **drücke irgendeine Taste an der Pumpe** (z.B. den "Runter" Button). Sobald das Pumpendisplay ausgegangen ist, tippe auf dem Accu-Chek-Combo-Pumpenbildschirm (**Verwalten** > **Pumpe**) auf **Aktualisieren**. Meistens funktioniert die Verbindung dann wieder.
 * Wenn das nicht hilft, starte dein Smartphone neu. Nach dem Neustart wird AAPS ebenfalls neu gestartet und es wird eine neue Verbindung zur Pumpe aufgebaut.
 
 * Die Tests haben gezeigt, dass bestimmte Smartphones den Fehler „Pumpe nicht erreichbar“ öfter auslösen als andere. Schaue in der [Liste von getesteten Smartphones](#Phones-list-of-tested-phones) nach erfolgreich getesteten Smartphones.
 
 #### Ursachen und Folgen von häufigen Kommunikationsfehlern
-* Auf Smartphones mit **wenig Speicher** (oder **aggressiven Enegierspar-**-Einstellungen) wird AAPS oft abgeschaltet. Das erkennst Du daran, dass beim Öffnen von AAPS die Behandlungsschaltflächen (Schnellstart-Leiste) auf dem Startbildschirm nicht angezeigt werden, weil das System noch initialisiert wird. Das kann „Pumpe nicht erreichbar“-Alarme beim Start auslösen. Im Feld **Letzte Verbindung** des Pumpenbildschirms (**Bearbeiten** > **Pumpe**) siehst Du, wann AAPS zuletzt mit der Pumpe kommuniziert hat.
+* Auf Smartphones mit **wenig Speicher** (oder **aggressiven Enegierspar-**-Einstellungen) wird AAPS oft abgeschaltet. Das erkennst Du daran, dass beim Öffnen von AAPS die Behandlungsschaltflächen (Schnellstart-Leiste) auf dem Startbildschirm nicht angezeigt werden, weil das System noch initialisiert wird. Das kann „Pumpe nicht erreichbar“-Alarme beim Start auslösen. Im Feld **Letzte Verbindung** des Pumpenbildschirms (**Verwalten** > **Pumpe**) siehst Du, wann AAPS zuletzt mit der Pumpe kommuniziert hat.
 
 ![Keine Verbindung zur Pumpe](../images/combo/combov2-tips-no-connection-to-pump.png)
 
@@ -315,7 +315,7 @@ Wenn die Lebensdauer der Batterie wesentlich kürzer ist, als die oben angegeben
 ### Erweiterter Bolus, Multiwave Bolus
 Ein gleichzeitiger erweiterter Bolus und Multiwave Bolus wird nicht vom OpenAPS-Algorithmus unterstützt. Aber ein ähnlicher Effekt kann durch folgende Alternativen erreicht werden:
 * Nutze **e-Carbs**, wenn Du Kohlenhydrate eingibst oder den Bolus-Rechner verwendest: Gib die Kohlenhydrate der ganzen Mahlzeit ein und die Dauer, über die sie voraussichtlich als Glukose im Blut ankommen. Das System berechnet dann kleine, gleichmäßig über die gesamte Dauer verteilte Kohlenhydratmengen, sodass der Algorithmus entsprechend Insulin abgibt und dabei laufend den Gesamtanstieg bzw. -abfall des Glukosewerts überwacht. Um eine Art Multi-Wave-Bolus nachzuahmen, kannst Du auch einen kleinen Einzelbolus mit e-carbs (verzögerte Kohlenhydrate) kombinieren.
-* Setze vor dem Essen für mehrere Stunden ein temporäres Ziel **Bald essen** von 80 mg/dl (4,4 mmol/l) (tippe auf das Ziel auf dem Startbildschirm oder auf **Bearbeiten** > **Temporäre Ziele**). Die Dauer sollte dem Intervall entsprechen, das Du für einen verlängerten/verzögerten Bolus verwenden würdest. Dadurch wird Dein Zielwert niedriger als üblich gehalten und somit die (benötigte) Insulinmenge erhöht werden.
+* Setze vor dem Essen für mehrere Stunden ein temporäres Ziel **Bald essen** von 80 mg/dl (4,4 mmol/l) (tippe auf das Ziel auf dem Startbildschirm oder auf **Verwalten** > **Temporäre Ziele**). Die Dauer sollte dem Intervall entsprechen, das Du für einen verlängerten/verzögerten Bolus verwenden würdest. Dadurch wird Dein Zielwert niedriger als üblich gehalten und somit die (benötigte) Insulinmenge erhöht werden.
 * Gib dann im **Bolus-Rechner** die gesamten Kohlenhydrate der Mahlzeit ein, übernimm die vorgeschlagenen Werte aber nicht direkt. Korrigiere die Insulindosis nach unten, wenn ein Multi-Wave-Bolus abgegeben werden soll. Der Algorithmus muss nun, abhängig von der Mahlzeit, zusätzliche Mikroboli (SMB) abgeben oder eine sehr hohe temporäre Basalrate setzen, um der Steigerung des Glukosewertes entgegenzuwirken. Hier solltest Du mit der Sicherheitsbegrenzung der Basalrate (Max. IE/h, maximales Basal-IOB) sehr vorsichtig experimentieren und sie bei Bedarf vorübergehend ändern.
 
 * Verwende den verzögerten Bolus oder den Multiwave-Bolus nicht direkt an der Pumpe. Der Treiber unterstützt sie nicht (siehe [Bevor Du beginnst](#combov2-before-you-begin)). Wird an der Pumpe trotzdem ein Multiwave-Bolus abgegeben, erfasst **AAPS** ihn aus der Pumpenhistorie als normalen Bolus plus verzögerten Bolus, sodass er im IOB berücksichtigt wird. Ein verzögerter Bolus funktioniert im Closed Loop nicht (Details auf [dieser Seite](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment)).

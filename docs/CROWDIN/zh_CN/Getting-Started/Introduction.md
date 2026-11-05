@@ -9,32 +9,32 @@
 
 人的胰腺不仅能调节血糖，还有很多其他功能。然而，**“人工胰腺系统”（APS）**通常是指能自动地将血糖水平保持在健康范围内的系统。
 
-要实现这样的功能一般来说需要持续检测 **血糖水平**，用检测到的血糖值来 **测算（预测）** 并输注合适计量的**胰岛素**。每隔几分钟就重复一次这样的过程，7×24小时全天候运行。当需要人工干预或关注时，系统通过**警报**提示用户。 This system is typically made up of a **glucose sensor**, an **insulin pump** and a **controller** which runs the calculations. In **AAPS** and other open-source systems the controller is an app on a phone. In most commercial systems it is software built into the pump itself, with a phone app used mainly for display and control.
+要实现这样的功能一般来说需要持续检测 **血糖水平**，用检测到的血糖值来 **测算（预测）** 并输注合适计量的**胰岛素**。每隔几分钟就重复一次这样的过程，7×24小时全天候运行。当需要人工干预或关注时，系统通过**警报**提示用户。该系统通常由**血糖仪**、**胰岛素泵**以及**控制设备**组成。在**AAPS**及其他开源闭环系统中，控制器通常是手机上的应用程序。多数商用闭环系统的程序内置在泵体中，手机 App 主要用于查看与操作。
 
-For background on how closed-loop systems developed and how they work, this 2022 review article is a good starting point. Bear in mind it predates most of the systems available today, so it is not a guide to what is currently on the market:
+如果想了解闭环系统的发展背景与工作原理，可将这篇 2022 年综述文献作为入门参考资料。请注意，该文献发表早于当前主流闭环系统，不可作为现有产品的操作指南：
 
-![封面](../images/FRONTIERS_Logo_Grey_RGB.png) [Closed-Loop Insulin Delivery Systems: Past, Present, and Future Directions](https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2022.919942/full) (Templer, _Frontiers in Endocrinology_, 2022).
+![封面](../images/FRONTIERS_Logo_Grey_RGB.png) [Closed-Loop Insulin Delivery Systems: Past, Present, and Future Directions](https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2022.919942/full) (Templer, _Frontiers in Endocrinology_, 2022)。
 
-So-called “dual-hormone” systems infuse glucagon alongside insulin, with the aim of preventing severe hypos and allowing even tighter blood glucose control. A first system of this kind has been approved in Europe, but it is supplied only through studies and projects, and others are still in development. None is on general sale yet.
+所谓 “双激素” 系统可同时输注胰高糖素与胰岛素，目的是预防严重低血糖，实现更精准的血糖管控。首个该类型系统已在欧洲获批，但仅在研究项目范围内提供，其余同类产品仍处于研发阶段。目前均未公开上市。
 
 人工胰腺可被视为[“糖尿病的自动驾驶系统”](https://www.artificialpancreasbook.com/)。这意味着什么？
 
-在航空领域，自动驾驶系统不可能完全取代飞行员，要不然飞行员就可以全程睡觉了。自动驾驶系统的作用在于辅助飞行员操作。 It relieves them of the burden of constantly having to manage the aircraft, allowing the pilot to concentrate on wider monitoring. The autopilot receives signals from various sensors, a computer evaluates the data together with the pilot’s specifications and then makes the necessary adjustments, alerting the pilot to any concerns. The pilot no longer has to worry about continually making decisions and this analogy can be applied to **AAPS**.
+在航空领域，自动驾驶系统不可能完全取代飞行员，要不然飞行员就可以全程睡觉了。自动驾驶系统的作用在于辅助飞行员操作。它无需飞行员持续操控飞行器，使其能够专注于整体状态监控。自动驾驶仪接收各类传感器信号，计算机结合飞行员设定参数评估数据并执行必要调整，出现异常时向飞行员发出提醒。飞行员无需持续做出调控决策，在**AAPS**上也是如此。
 
 ![image](../images/autopilot.png)
 
 (Introduction-what-does-hybrid-closed-loop-mean)=
 ## 什么是混合闭环（hybrid closed loop）？
 
-针对1型糖尿病的最佳解决方案是"功能性治愈"（比如通过移植受免疫保护的胰岛细胞实现）。 While the type 1 diabetic (T1D) community waits for that, a “full closed loop” artificial pancreas is probably the next best thing. 这种技术系统无需任何用户输入（如针对饮食的大剂量注射或运动前告知），即可实现良好的血糖调控。 Nearly every system in everyday use is a “hybrid” closed loop, because it uses a combination of automated technology and user input. The first full closed loop systems were approved in Europe in 2026, but none is widely available yet.
+针对1型糖尿病的最佳解决方案是"功能性治愈"（比如通过移植受免疫保护的胰岛细胞实现）。 （1型糖尿病）在等待功能性治愈方案期间，“全闭环” 人工胰腺系统是现阶段最优替代方案。这种技术系统无需任何用户输入（如针对饮食的大剂量注射或运动前告知），即可实现良好的血糖调控。当前在用的系统几乎都是需要结合自动调控与用户手动输入的 “混合闭环”系统。首批全闭环系统已于 2026 年在欧洲获批，但暂未普及。
 
 ## 闭环的由来？
 
-1型糖尿病（T1D）领域商业化技术的发展进程极为缓慢。 2013年，T1D患者群体发起了#WeAreNotWaiting（#我们不再等待）运动。他们利用胰岛素泵、血糖仪等目前可用的技术自己开发了各种系统来改进血糖控制方式、增强安全性、提高生活质量。 These are known as OS-AID (Open-Source Automated Insulin Delivery) systems (formerly DIY systems), because they are not formally approved by health bodies (FDA, NHS etc). There are four main OS-AID systems available: [OpenAPS](https://openaps.org/what-is-openaps/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [Trio](https://triodocs.org).
+1型糖尿病（T1D）领域商业化技术的发展进程极为缓慢。 2013年，T1D患者群体发起了#WeAreNotWaiting（#我们不再等待）运动。他们利用胰岛素泵、血糖仪等目前可用的技术自己开发了各种系统来改进血糖控制方式、增强安全性、提高生活质量。它们被称作 OS‑AID（开源自动胰岛素输注）系统（以前叫 DIY 系统），尚未获得药监机构（FDA、NHS 等）的正式批准。主流 OS‑AID 系统共有四款：[OpenAPS](https://openaps.org/what-is-openaps/)、**AAPS**、[Loop](https://loopkit.github.io/loopdocs/#what-is-loop)、[Trio](https://triodocs.org)。
 
-A great way to understand the fundamentals of OS-AID looping is to read Dana Lewis’s book “Automated Insulin Delivery”. 您可通过[此链接](https://www.artificialpancreasbook.com/)免费获取电子版(或购买实体书)。如果您想更多地了解**AAPS**的开发基础——[OpenAPS](https://openaps.org/what-is-openaps/)的详细信息，[OpenAPS 官网](https://openaps.org/what-is-openaps/)提供了丰富的学习资源。
+想要理解 OS‑AID 闭环的基础原理，推荐阅读 Dana Lewis 所写的《Automated Insulin Delivery》。您可通过[此链接](https://www.artificialpancreasbook.com/)免费获取电子版(或购买实体书)。如果您想更多地了解**AAPS**的开发基础——[OpenAPS](https://openaps.org/what-is-openaps/)的详细信息，[OpenAPS 官网](https://openaps.org/what-is-openaps/)提供了丰富的学习资源。
 
-Several commercial hybrid closed loop systems have also been launched. These are very different to OS-AID systems, mainly because many of them include a “learning algorithm” which adjusts how much insulin is delivered according to your insulin needs from previous days. Many people in the OS-AID community have already tried out commercial systems and compared them with their OS-AID system. You can find out more about how the different systems compare by asking on the dedicated Facebook groups for those systems, on the [AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/) or on [Discord](https://discord.com/invite/4fQUWHZ4Mw).
+目前多款商用混合闭环系统已推出上市。它们和 OS‑AID 系统有很大区别，核心区别在于多数商用方案内置 “自学习算法”，会根据你前几天的胰岛素需求调整胰岛素输注量。不少 OS‑AID 用户体验过商用闭环系统，并把它们和自己的 OS‑AID 系统进行比较。你可以在各个系统对应的 Facebook 专属群组、[AAPS 的 Facebook 群组](https://www.facebook.com/groups/AndroidAPSUsers/)或者 [Discord](https://discord.com/invite/4fQUWHZ4Mw) 上提问，了解更多不同系统之间的区别。
 
 ## 什么是 Android APS (AAPS)？
 
@@ -42,9 +42,9 @@ Several commercial hybrid closed loop systems have also been launched. These are
 
 **图1** Android APS (Artificial Pancreas System，人工胰腺系统)，AAPS的基本构成。
 
-Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System (APS). It makes its insulin dosing calculations using established [OpenAPS](https://openaps.org/) algorithms (a set of rules) developed by the #WeAreNotWaiting T1D community.
+Android APS（**AAPS**）属于混合闭环系统，也叫人工胰腺系统（APS）。它使用由 #WeAreNotWaiting T1D社群开发的[OpenAPS](https://openaps.org/) 算法（一套计算规则）计算胰岛素剂量。
 
-Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (which can be used with a wider range of insulin pumps) was first developed in 2016 for a family member with type 1 diabetes. 自那时起， 很多与1型糖尿病有关的志愿者计算机开发团队和技术爱好者加入了进来，不断优化升级**AAPS** 。 Today, **AAPS** is used by many thousands of people worldwide. AAPS是一个高度可定制且多功能的系统，由于它是开源的，因此与众多开源糖尿病软件及平台实现良好兼容。目前 **AAPS** 系统的基本组件架构如上**图 1** 所示。
+由于 OpenAPS 只兼容部分老旧胰岛素泵，2016年为罹患1型糖尿病的家庭成员开发的**AAPS**诞生了（适配更广泛的胰岛素泵型号）。自那时起， 很多与1型糖尿病有关的志愿者计算机开发团队和技术爱好者加入了进来，不断优化升级**AAPS**。如今，**AAPS**已在全球范围内被成千上万的人使用。系统可高度定制且功能多样，由于它是开源的，能够很方便地兼容许多其他开源糖尿病软件和平台。目前 **AAPS** 系统的核心组件架构如上**图 1** 所示。
 
 
 

@@ -102,6 +102,8 @@
 
 Страницата за настройка отваря всяка страница на GitHub в нов раздел на Chrome. За да се върнете към страницата за настройка, докоснете бутона за раздели до адресната лента на Chrome (квадратът с число) и изберете страницата за настройка на AAPS Builder.
 
+![Tab switcher](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
+
 Страницата за настройка работи изцяло във вашия браузър: вашият ключ и паролите никога не се изпращат никъде, освен в секрета в GitHub, в който сами ги поставяте. Към GitHub се изпраща само вашето потребителско име в GitHub, за да се провери дали съществува. Тя запомня вашето потребителско име в GitHub и името на хранилището, така че можете да се върнете към нея по всяко време, за да отворите отново страницата със секретите или компилациите си.
 
 ![Страницата за настройка на AAPS Builder](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
@@ -144,8 +146,14 @@
 
    GitHub показва вашето ново хранилище: то съдържа папка `.github` (с работния процес за компилиране) и файл `README.md`. **Върнете се в раздела със страницата за настройка** за стъпка 2: докоснете бутона за раздели до адресната лента на Chrome и изберете страницата за настройка.
 
+   ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
+
 ```{warning}
 **Новото ви хранилище е празно**, без файлове? То не е създадено от шаблона и не може да компилира. Изтрийте го (**Settings** → най-долу на страницата → **Delete this repository**), след това докоснете отново **Create my private repository** на страницата за настройка.
+```
+
+```{tip}
+GitHub says **my-aaps already exists in this account**? You already have your repository: close the GitHub tab and go on with the setup page. If your key is already in it, continue with [step 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
 (aaps-builder-step2)=
@@ -253,6 +261,7 @@ GitHub показва **Page not found** (404)? Първо проверете д
 Ако няма бутон **Build AAPS** или **Run workflow**:
 
 - Отворете хранилището си и проверете дали в него има папка `.github` с файла `workflows/build.yml`. Ако хранилището е празно, то не е създадено от шаблона: изтрийте го (**Settings** → най-долу на страницата → **Delete this repository**) и направете отново [стъпка 1](#aaps-builder-step1) с бутона.
+- The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
 - Отворете раздела **Actions**. Ако пише, че работните процеси са изключени, докоснете зеления бутон, за да ги разрешите, след това докоснете **Build AAPS** в списъка.
 
 (aaps-builder-step5)=
@@ -311,10 +320,28 @@ GitHub показва **Page not found** (404)? Първо проверете д
 За това е нужен още един секрет – `GDRIVE_OAUTH2`. Стъпка 6 на страницата за настройка го получава от Google вместо вас, на телефон или на компютър. Тогава **AAPS** може да вижда и променя само файловете, които сам създава във вашия Google Drive, и нищо друго.
 
 1. На страницата за настройка докоснете **Connect Google Drive**. Google се отваря в нов раздел.
+
 2. Изберете своя профил в Google и разрешете достъпа. Ако Google каже, че приложението не е потвърдено, докоснете **Advanced** (разширени), след това **Go to …** (към …).
-3. След това новият раздел показва грешка, например **This site can't be reached** или **127.0.0.1 refused to connect**. **Това е очаквано:** отговорът на Google е в адреса на този раздел. Докоснете адресната лента, изберете целия адрес (той започва с `http://127.0.0.1:47913/`) и го копирайте.
+
+   ![Choose an account](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
+
+   ![Continue](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
+
+3. След това новият раздел показва грешка, например **This site can't be reached** или **127.0.0.1 refused to connect**. **Това е очаквано:** отговорът на Google е в адреса на този раздел. Tap the address bar, then the copy icon next to the address (on a computer: select the whole address and copy it). Той започва с `http://127.0.0.1:47913/`.
+
+   ![This site can't be reached](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
+
+   ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
+
 4. Върнете се в раздела със страницата за настройка до няколко минути: отговорът на Google е валиден само за кратко време и само веднъж. Поставете адреса в **Paste the copied address here** и докоснете **Get GDRIVE_OAUTH2**. Страницата показва **GDRIVE_OAUTH2 is ready**.
+
+   ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
+
+   ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
+
 5. Докоснете **Open the secrets page**. Докоснете **Copy name**, след това поставете името в малкото поле **Name** (името е `GDRIVE_OAUTH2`). Докоснете **Copy secret**, поставете го в голямото поле **Secret** и докоснете **Add secret**.
+
+   ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
 От следващата компилация APK файловете се запазват и в Google Drive.
 
@@ -337,31 +364,15 @@ Google спира достъпа, ако не компилирате 6 месе�
 **Актуализациите на вашия файл с работния процес** са редки: само когато формулярът **Run workflow** се промени, например за нов вариант на компилацията, или веднъж, ако хранилището ви е създадено с по-стара версия на страницата за настройка (празно хранилище с кратък файл с работен процес) или от стария шаблон. Страницата [Актуализации и промени в документацията](../Maintenance/DocumentationUpdate.md) съобщава за това. Вашият секрет `KEYSTORE_SET` остава непроменен. На страницата за настройка отворете **Updating your copy** (актуализиране на вашето копие) в края на стъпка 1:
 
 1. Докоснете **Open the newest workflow**. На компютър натиснете **иконата за копиране** („Copy raw file“) горе вдясно на файла. На телефон вместо това отворете **обикновената текстова версия** (plain-text version), задръжте пръст върху текста, след това изберете **Избиране на всички** (Select all) и **Копиране** (Copy).
-2. Докоснете **Open my workflow file**.
+2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
 3. Заменете целия текст с копирания работен процес (на телефон с продължително натискане: **Избиране на всички** (Select all), след това **Поставяне** (Paste)).
 4. Докоснете **Commit changes…**, след това **Commit changes**.
 
 Първият ред на файла показва неговата версия.
 
-(aaps-builder-troubleshooting)=
-
 ## Отстраняване на неизправности
 
-За да видите защо компилацията е неуспешна, [прочетете лога на компилацията](#aaps-ci-read-the-logs): имената на стъпките са различни, но намирате грешката по същия начин. Можете също така по същия начин да [актуализирате секрет](#aaps-ci-update-secret) и да [стартирате компилацията отново](#aaps-ci-rerun).
-
-- **Няма бутон „Build AAPS“ или „Run workflow“ или хранилището е празно**: хранилището не е създадено от шаблона. Изтрийте го (**Settings** → най-долу на страницата → **Delete this repository**) и направете отново [стъпка 1](#aaps-builder-step1) с бутона **Create my private repository**.
-- **Компилацията спира със съобщението „This repository is PUBLIC“**: във вашето хранилище отворете **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, след това компилирайте отново.
-- **„Secret KEYSTORE_SET is missing“**: направете стъпка 3 на страницата за настройка.
-- **„The secret is too short“**, **„The secret is not a valid code“** или **„The secret does not contain a keystore“**: в секрета е поставен грешен текст – често самата дума `KEYSTORE_SET` или само част от кода. Във вашето хранилище отворете **Settings** → **Secrets and variables** → **Actions**, редактирайте `KEYSTORE_SET` и поставете отново дългия код от **Copy secret** (първо направете отново стъпка 2 на страницата за настройка, ако сте я затворили).
-- **„Keystore, password or alias is wrong“**: проверете паролата и псевдонима на хранилището за ключове, след това направете отново стъпки 2 и 3 на страницата за настройка.
-- **„Version … does not exist“**: версията, която сте въвели, не е издадена версия на AAPS. Използвайте `latest` или проверете номера на версията.
-- **„Variant … is not supported“**: вашият файл с работния процес е по-стара версия. Заменете го, както е обяснено в [Актуализиране на AAPS](#aaps-builder-updates).
-- **„Page not found“ (404), когато страницата за настройка отваря GitHub**: влезте в github.com в същия браузър (GitHub показва 404 за частни хранилища, когато не сте влезли). Ако сте влезли, потребителското име или името на хранилището в стъпка 1 на страницата за настройка не съвпада с вашето хранилище. Въведете точните имена.
-- **„No GitHub user with this name“** в стъпка 1: въведете потребителското си име в GitHub, както е показано във вашия профил в GitHub, а не вашия имейл.
-- **Няма връзка Download или се отвори приложението GitHub**: приложението GitHub не може да изтегля компилации. Отворете компилацията в Chrome, както е обяснено в [стъпка 5](#aaps-builder-step5). За да спрете отварянето на връзки към GitHub в приложението: Android **Настройки** (Settings) → **Приложения** (Apps) → **GitHub** → **Отваряне по подразбиране** (Open by default) → изключете **Отваряне на поддържаните връзки** (Open supported links).
-- **„Google Drive access has expired or was revoked“**: направете отново [стъпка 6](#aaps-builder-google-drive) и актуализирайте секрета `GDRIVE_OAUTH2`.
-
-За други проблеми с GitHub и Google Drive вижте [Отстраняване на неизправности при компилиране в браузъра](../GettingHelp/BrowserBuildTroubleshooting.md).
+Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
 
 ```{toctree}
 :hidden:

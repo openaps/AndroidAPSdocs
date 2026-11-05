@@ -3,10 +3,97 @@
 # Nettleserbygg: feilsøking
 
 ```{note}
-Denne siden samler feilsøkingstips for [Nettleserbygg](../SettingUpAaps/BrowserBuild.md).
-
-Bruker du **AAPS Builder**? Start med det egne [feilsøkingsavsnittet](#aaps-builder-troubleshooting) for den. Avsnittene om Google Drive nedenfor gjelder også for den.
+This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
 ```
+
+(aaps-builder-troubleshooting)=
+
+## AAPS Builder
+
+### Step 1: the repository
+
+(aaps-builder-ts-repo-exists)=
+
+#### "my-aaps already exists in this account"
+
+![Repository already exists](../images/Building-the-App/CI/AapsBuilder70_RepoExists.png)
+
+You already have this repository, for example from an earlier attempt. Close the GitHub tab, keep that name in step 1 of the setup page and go on. If you already did steps 2 and 3 for it, your key is still in it: continue with [step 4](#aaps-builder-step4). If it was made with an earlier version of the setup page, update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). You prefer a fresh start? Type another name, for example `my-aaps-2`, and use the same keystore in step 2.
+
+(aaps-builder-ts-user-not-found)=
+
+#### "No GitHub user with this name"
+
+![No GitHub user](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
+
+- **«Ingen GitHub-bruker med dette navnet»** i steg 1: skriv inn GitHub-brukernavnet ditt, slik det vises i GitHub-profilen din, ikke e-postadressen din.
+- **Ingen «Build AAPS»- eller «Run workflow»-knapp, eller repositoryet er tomt**: repositoryet ble ikke opprettet fra malen. Slett det (**Settings** → nederst på siden → **Delete this repository**) og gjør [steg 1](#aaps-builder-step1) på nytt med knappen **Opprett mitt private repository**.
+
+### Step 3: the secret
+
+(aaps-builder-ts-404)=
+
+#### "Page not found" (404)
+
+![GitHub 404](../images/Building-the-App/CI/AapsBuilder79_404.png)
+
+- **«Page not found» (404) når oppsettsiden åpner GitHub**: logg inn på github.com i den samme nettleseren (GitHub viser 404 for private repositoryer når du ikke er logget inn). Hvis du er logget inn, stemmer ikke brukernavnet eller navnet på repositoryet i steg 1 på oppsettsiden med repositoryet ditt. Skriv inn de nøyaktige navnene.
+
+### Step 4: the build
+
+(aaps-builder-ts-workflow-not-found)=
+
+#### "This workflow does not exist"
+
+![This workflow does not exist](../images/Building-the-App/CI/AapsBuilder71_WorkflowNotFound.png)
+
+Right after the repository is created, GitHub may not have read its workflow file yet: **Build AAPS** is missing from the **Actions** tab, and there is no **Run workflow** button. Any small change to the file makes GitHub read it:
+
+1. In your repository, open **Code**, then the folder `.github`, then `workflows`, then the file `build.yml`.
+2. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
+
+   ![File menu](../images/Building-the-App/CI/AapsBuilder72_FileMenu.png)
+
+3. Tap at the very end of the text and add an empty line (Enter). Tap **Commit changes…** at the top.
+
+   ![Editor](../images/Building-the-App/CI/AapsBuilder73_Editor.png)
+
+4. Tap **Commit changes** again.
+
+   ![Commit changes](../images/Building-the-App/CI/AapsBuilder74_CommitDialog.png)
+
+5. Open the **Actions** tab again: **Build AAPS** is now in the list of workflows (on a phone, the list opens with the icon at the left of **All workflows**). Tap it, then **Run workflow**.
+
+   ![List of workflows](../images/Building-the-App/CI/AapsBuilder75_WorkflowsSidebar.png)
+
+(aaps-builder-ts-build-failed)=
+
+#### The build failed (red cross)
+
+1. On the setup page, tap **Open my builds** and tap the build with the red cross.
+
+   ![Failed build](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
+
+2. The page of the build shows **Failure**, and which part failed: **AAPS / Check** (the repository, the secret, the version or the variant: nothing was built) or **AAPS / Build AAPS**.
+
+   ![Build page: Failure](../images/Building-the-App/CI/AapsBuilder77_RunFailed.png)
+
+3. Scroll down to **Annotations**, with your finger on the text, not on the diagram. The red lines explain the problem: tap **Show more** to read the whole message, then find it below.
+
+   ![Annotations](../images/Building-the-App/CI/AapsBuilder78_Annotations.png)
+
+- **«Secret KEYSTORE_SET is missing»** (hemmeligheten KEYSTORE_SET mangler): gjør steg 3 på oppsettsiden.
+- **Bygget stopper med «This repository is PUBLIC»** (repositoryet er offentlig): i repositoryet ditt åpner du **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, og bygger så på nytt.
+- **"Version … does not exist"**: only released versions of **AAPS** can be built, the ones on the [tags page](https://github.com/nightscout/AndroidAPS/tags) of nightscout/AndroidAPS, such as `3.3.2.0`. A branch name such as `dev` doesn't work. Use `latest`, or type a tag exactly as listed.
+- **«Variant … is not supported»** (varianten støttes ikke): arbeidsflytfilen din er en eldre versjon. Erstatt den som forklart under [Oppdatere AAPS](#aaps-builder-updates).
+- **«The secret is too short»**, **«The secret is not a valid code»** eller **«The secret does not contain a keystore»** (hemmeligheten er for kort, er ikke en gyldig kode eller inneholder ingen keystore-fil): feil tekst ble limt inn i hemmeligheten, ofte selve ordet `KEYSTORE_SET`, eller bare en del av koden. I repositoryet ditt åpner du **Settings** → **Secrets and variables** → **Actions**, redigerer `KEYSTORE_SET` og limer inn den lange koden fra **Kopier hemmelighet** på nytt (gjør steg 2 på oppsettsiden på nytt først hvis du har lukket den).
+- **«Keystore, password or alias is wrong»** (keystore-fil, passord eller alias er feil): kontroller passordet og aliaset til keystore-filen din, og gjør så steg 2 og 3 på oppsettsiden på nytt.
+- **«Google Drive access has expired or was revoked»** (Google Drive-tilgangen er utløpt eller trukket tilbake): gjør [steg 6](#aaps-builder-google-drive) på nytt og oppdater hemmeligheten `GDRIVE_OAUTH2`.
+- **Another error**: [read the build log](#aaps-ci-read-the-logs), then [run the build again](#aaps-ci-rerun). If it fails again the same way, ask for help with the name of the failed step and the error lines. Del aldri innholdet i hemmelighetene dine.
+
+### Step 5: the app
+
+- **Ingen Download-lenke, eller GitHub-appen åpnet seg**: GitHub-appen kan ikke laste ned bygg. Åpne bygget i Chrome som forklart i [steg 5](#aaps-builder-step5). For å hindre at GitHub-lenker åpnes i appen: Android-**Innstillinger** → **Apper** → **GitHub** → **Åpne som standard** → slå av **Åpne støttede linker**.
 
 ## Feilsøking av AAPS-CI
 

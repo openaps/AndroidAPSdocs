@@ -50,6 +50,12 @@ Your repository: <code class="aapsb-repoUrl"></code>
 המאגר לא נוצר מהתבנית. מחקו אותו (**Settings** ← תחתית הדף ← **Delete this repository**), ואז הקישו שוב על **Create my private repository**.
 ```
 
+```{admonition} GitHub says "my-aaps already exists in this account"?
+:class: tip
+
+You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+```
+
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
@@ -60,7 +66,7 @@ Your repository: <code class="aapsb-repoUrl"></code>
    במחשב, לחצו על **סמל ההעתקה** ("Copy raw file") בפינה הימנית העליונה של הקובץ. בטלפון, פתחו במקום זאת את <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">גרסת הטקסט הפשוט</a>, לחצו לחיצה ארוכה על הטקסט ← **Select all** ← **Copy**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   פותח את `.github/workflows/build.yml` ב-<code class="aapsb-repoUrl"></code> לעריכה.
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. החליפו את כל הטקסט ב-workflow שהעתקתם (בטלפון: לחיצה ארוכה ← **Select all** ← **Paste**), ואז לחצו פעמיים על **Commit changes…**. השורה הראשונה של הקובץ מציגה את הגרסה שלו.
 ```
 
@@ -151,7 +157,8 @@ Your repository: <code class="aapsb-repoUrl"></code>
 :class: warning
 
 1. פתחו את המאגר שלכם ובדקו שיש בו תיקייה `.github` עם הקובץ `workflows/build.yml`. אם המאגר ריק, הוא לא נוצר מהתבנית: מחקו אותו (**Settings** ← תחתית הדף ← **Delete this repository**) ובצעו שוב את [שלב 1](#aaps-builder-setup-step1) עם הכפתור.
-2. פתחו את הלשונית Actions. אם כתוב שה-workflows מושבתים, לחצו על הכפתור הירוק כדי להפעיל אותם. אחר כך לחצו על "Build AAPS" ברשימה.
+2. The file is there, but GitHub shows "This workflow does not exist": see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+3. פתחו את הלשונית Actions. אם כתוב שה-workflows מושבתים, לחצו על הכפתור הירוק כדי להפעיל אותם. אחר כך לחצו על "Build AAPS" ברשימה.
 ```
 
 (aaps-builder-setup-step5)=
@@ -196,7 +203,7 @@ Your repository: <code class="aapsb-repoUrl"></code>
    Google נפתח בלשונית חדשה. בחרו את חשבון Google שלכם ותנו ל-AAPS הרשאה לראות ולשנות את הקבצים שלו. אם Google מודיע שהאפליקציה לא מאומתת, הקישו על "Advanced", ואז על "Go to …".
 2. אחר כך הלשונית החדשה מציגה שגיאה כמו **"This site can't be reached"** או **"127.0.0.1 refused to connect"**. **זה צפוי.** התשובה של Google נמצאת בכתובת של הלשונית הזו.
 
-   הקישו על שורת הכתובת של הלשונית הזו, בחרו את כל הכתובת והעתיקו אותה. היא מתחילה ב-`http://127.0.0.1:47913/`. חזרו לדף הזה תוך כמה דקות: התשובה תקפה רק לזמן קצר.
+   Tap the address bar of that tab, then the copy icon next to the address (on a computer: select the whole address and copy it). היא מתחילה ב-`http://127.0.0.1:47913/`. חזרו לדף הזה תוך כמה דקות: התשובה תקפה רק לזמן קצר.
 3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
@@ -323,7 +330,7 @@ Your repository: <code class="aapsb-repoUrl"></code>
   const repo = () => repoInput.value.trim() || REPO_NAME;
 
   const LINKS = [
-    ['openWorkflowFile', '/edit/main/' + WORKFLOW_PATH],
+    ['openWorkflowFile', '/blob/HEAD/' + WORKFLOW_PATH],
     ['openSecrets', '/settings/secrets/actions/new'],
     ['openSecrets2', '/settings/secrets/actions/new'],
     ['openActions', '/actions/workflows/build.yml'],

@@ -108,13 +108,13 @@ Bei einer bestehenden Installation kannst Du die Pumpe **Omnipod Dash** im Bilds
 
 ### Überprüfung der Omnipod-Treiberauswahl
 
-Um zu prüfen, ob **Omnipod Dash** ausgewählt ist, öffne **Bearbeiten** (Navigationsleiste unten auf dem Startbildschirm) und tippe auf **Pumpe**. Der DASH-Pumpenbildschirm öffnet sich, wie im nächsten Abschnitt gezeigt.
+Um zu prüfen, ob **Omnipod Dash** ausgewählt ist, öffne **Verwalten** (Navigationsleiste unten auf dem Startbildschirm) und tippe auf **Pumpe**. Der DASH-Pumpenbildschirm öffnet sich, wie im nächsten Abschnitt gezeigt.
 
 (omnipod-dash-tab)=
 
 ## The DASH pump screen
 
-Auf dem DASH-Pumpenbildschirm verwaltest Du Deine Pods: Du aktivierst und deaktivierst sie, aktualisierst den Pod-Status, schaltest Alarme stumm und siehst Dir die Pod-Historie an. Du öffnest ihn über **Bearbeiten** > **Pumpe** oder über **Plugin öffnen** auf der Karte **Omnipod Dash** unter **Konfiguration** > **Pumpe**.
+Auf dem DASH-Pumpenbildschirm verwaltest Du Deine Pods: Du aktivierst und deaktivierst sie, aktualisierst den Pod-Status, schaltest Alarme stumm und siehst Dir die Pod-Historie an. Du öffnest ihn über **Verwalten** > **Pumpe** oder über **Plugin öffnen** auf der Karte **Omnipod Dash** unter **Konfiguration** > **Pumpe**.
 
 So sieht der Bildschirm ohne aktiven Pod aus:
 
@@ -211,7 +211,7 @@ Der Screenshot oben stammt aus einer früheren **AAPS**-Version, die noch ein ei
 
 ## Pod aktivieren
 
-1. Öffne den DASH-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) und tippe auf **Pod aktivieren**. Der Aktivierungsassistent öffnet sich.
+1. Öffne den DASH-Pumpenbildschirm (**Verwalten** > **Pumpe**) und tippe auf **Pod aktivieren**. Der Aktivierungsassistent öffnet sich.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
@@ -302,7 +302,7 @@ Normalerweise hält ein Pod drei Tage (72 Stunden) plus eine Kulanzzeit von 8 St
 
 So deaktivierst Du einen Pod (weil er abgelaufen oder ausgefallen ist):
 
-1. Öffne den DASH-Pumpenbildschirm (**Bearbeiten** > **Pumpe**) und tippe auf **Pod deaktivieren**.
+1. Öffne den DASH-Pumpenbildschirm (**Verwalten** > **Pumpe**) und tippe auf **Pod deaktivieren**.
 
    ![The Deactivate Pod button on the DASH pump screen](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
@@ -394,7 +394,7 @@ Die maximale Laufzeit eines Pods beträgt 80 Stunden (3 Tage und 8 Stunden). Der
 
    ```{admonition} Older screenshot
    :class: note
-   Der Screenshot oben stammt aus einer früheren **AAPS**-Version, in der dieser Bildschirm der Reiter **DASH** war. In **AAPS** 4 befindet sich die Schaltfläche **Alarme stummschalten** auf dem DASH-Pumpenbildschirm (**Bearbeiten** > **Pumpe**).
+   Der Screenshot oben stammt aus einer früheren **AAPS**-Version, in der dieser Bildschirm der Reiter **DASH** war. In **AAPS** 4 befindet sich die Schaltfläche **Alarme stummschalten** auf dem DASH-Pumpenbildschirm (**Verwalten** > **Pumpe**).
    ```
 
 3. Sind die Warnungen stummgeschaltet, wird die Warnung im Feld **Aktive Pod-Warnungen** nicht mehr angezeigt, die Schaltfläche **Alarme stummschalten** verschwindet, und der Pod hört mit den Ablauf-Signaltönen auf.

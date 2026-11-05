@@ -104,6 +104,8 @@ AAPS 開發人員會在 [nightscout/aaps-builder](https://github.com/nightscout/
 
 設定頁會在新的 Chrome 分頁中開啟各個 GitHub 頁面。要返回設定頁，點選 Chrome 位址列旁的分頁按鈕（帶數字的方框）並選擇 AAPS Builder 的設定頁。
 
+![分頁切換器](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
+
 設定頁面完全在你的瀏覽器中執行：你的金鑰與密碼不會被傳送到任何地方，唯獨在你自行貼上至 GitHub 機密（secret）時除外。僅會將你的 GitHub 使用者名稱送到 GitHub，以檢查該帳號是否存在。它會記住你的 GitHub 使用者名稱與儲存庫名稱，因此你可以隨時回來重新開啟你的 Secrets 頁面或建置。
 
 ![AAPS Builder 設定頁面](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
@@ -146,8 +148,14 @@ AAPS 開發人員會在 [nightscout/aaps-builder](https://github.com/nightscout/
 
    GitHub 會顯示你的新儲存庫，其中包含一個 `.github` 資料夾（內含建置工作流程）和一個 `README.md` 檔案。**返回設定頁的分頁**以進行步驟 2：點選 Chrome 位址列旁的分頁按鈕並選擇設定頁。
 
+   ![新儲存庫](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
+
 ```{warning}
 **你的新儲存庫是空的**，裡面沒有任何檔案？這個儲存庫不是從範本建立的，因此無法進行建置。請刪除它（**設定** → 頁面底部 → **刪除此儲存庫**），然後再次點選設定頁面上的**建立我的私人儲存庫**。
+```
+
+```{tip}
+GitHub 顯示 **my-aaps 已存在於此帳戶中**？您已經有自己的儲存庫：關閉 GitHub 分頁，然後繼續設定頁面上的操作。如果金鑰已經在其中，請繼續進行[步驟 4](#aaps-builder-step4)。請參閱[疑難排解](#aaps-builder-ts-repo-exists)。
 ```
 
 (aaps-builder-step2)=
@@ -255,6 +263,7 @@ GitHub 顯示 **找不到頁面**（404）？請先確認你已在此瀏覽器�
 如果沒有 **Build AAPS** 或 **Run workflow** 按鈕：
 
 - 開啟你的儲存庫，確認其中有一個 `.github` 資料夾，且內含 `workflows/build.yml` 檔案。如果儲存庫是空的，表示它不是從範本建立的：請刪除它（**設定** → 頁面底部 → **刪除此儲存庫**），然後按一下按鈕重新執行[步驟 1](#aaps-builder-step1)。
+- 檔案就在那裡，但 GitHub 顯示 **此工作流程不存在**：請參閱[疑難排解](#aaps-builder-ts-workflow-not-found)。
 - 開啟 **Actions** 分頁。若顯示工作流程已停用，請點選綠色按鈕啟用，然後在清單中點選 **Build AAPS**。
 
 (aaps-builder-step5)=
@@ -313,10 +322,28 @@ GitHub 顯示 **找不到頁面**（404）？請先確認你已在此瀏覽器�
 這需要再新增一個機密：`GDRIVE_OAUTH2`。設定頁面的第 6 步會在手機或電腦上代您從 Google 取得相關資料。 **AAPS** 之後只能查看及變更它在 Google Drive 中建立的檔案，無法存取其他內容。
 
 1. 在設定頁面上，點選 **連結 Google Drive**。 Google 會在新分頁中開啟。
+
 2. 選擇您的 Google 帳號並允許存取。如果 Google 顯示應用程式尚未通過驗證，請點選 **進階**，再點選 **前往……**。
-3. 接著，新分頁會顯示錯誤訊息，例如 **無法連上這個網站** 或 **127.0.0.1 拒絕連線**。**這是正常現象：**Google 的回應會顯示在該分頁的網址中。點選網址列，選取整個網址（開頭為 `http://127.0.0.1:47913/`），然後複製。
+
+   ![選擇帳戶](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
+
+   ![繼續](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
+
+3. 接著，新分頁會顯示錯誤訊息，例如 **無法連上這個網站** 或 **127.0.0.1 拒絕連線**。**這是正常現象：**Google 的回應會顯示在該分頁的網址中。點選網址列，再點選網址旁的複製圖示（在電腦上：選取整個網址並複製）。網址會以 `http://127.0.0.1:47913/` 開頭。
+
+   ![無法連線至這個網站](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
+
+   ![複製圖示](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
+
 4. 請在幾分鐘內返回設定頁面所在的分頁：Google 的回應只會在短時間內有效，而且只能使用一次。將網址貼到 **在此貼上複製的網址**，然後點選 **取得 GDRIVE_OAUTH2**。頁面會顯示 **GDRIVE_OAUTH2 已就緒**。
+
+   ![已貼上網址](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
+
+   ![GDRIVE_OAUTH2 已就緒](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
+
 5. 點選 **開啟機密頁面**。點選 **Copy name**，然後將它貼到較小的 **Name** 欄位（名稱是 `GDRIVE_OAUTH2`）。點選 **複製密鑰**，將密鑰貼到大型的 **密鑰**欄位中，再點選 **新增密鑰**。
+
+   ![新增密鑰](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
 從下一次建置開始，APK 也會儲存在 Google Drive。
 
@@ -339,31 +366,15 @@ GitHub 顯示 **找不到頁面**（404）？請先確認你已在此瀏覽器�
 **工作流程檔案更新**並不常見：只有在**執行工作流程**表單有變更時才需要更新，例如新增建置變體；如果您的儲存庫是使用較舊版本的設定頁面（建立的空儲存庫中只有簡短的工作流程檔案），或是使用舊版範本建立的，則只需更新一次。詳情請參閱[文件更新與變更](../Maintenance/DocumentationUpdate.md)頁面。您的 `KEYSTORE_SET` 密鑰不需要變更。在設定頁面中，於步驟 1 底部開啟**更新您的副本**：
 
 1. 點選**開啟最新版工作流程**。使用電腦時，請點選檔案右上方的**複製圖示**（「複製原始檔案」）。使用手機時，請改為開啟**純文字版本**，按住文字，然後點選**全選**，再點選**複製**。
-2. 點選**開啟我的工作流程檔案**。
+2. 點選 **開啟我的工作流程檔案**，再點選檔案右上方的 **⋯** 選單，然後點選 **編輯檔案… In place**（在電腦上，請點選鉛筆圖示）。
 3. 用剛才複製的工作流程取代所有文字（在手機上長按文字，再點選**全選**，然後點選**貼上**）。
 4. 點選**提交變更…**，再點選**提交變更**。
 
 檔案的第一行會顯示版本。
 
-(aaps-builder-troubleshooting)=
-
 ## 問題排除
 
-若要了解建置失敗的原因，請[查看建置記錄](#aaps-ci-read-the-logs)：雖然步驟名稱不同，但找出錯誤的方法相同。您也可以用相同方式[更新密鑰](#aaps-ci-update-secret)並[重新執行建置](#aaps-ci-rerun)。
-
-- **沒有「Build AAPS」或「Run workflow」按鈕，或儲存庫是空的**：這個儲存庫並非從範本建立。請刪除該儲存庫（**設定** → 頁面底部 → **刪除此儲存庫**），然後使用**建立我的私人儲存庫**按鈕重新執行[步驟 1](#aaps-builder-step1)。
-- **建置停止並顯示 "This repository is PUBLIC"**：在你的儲存庫中，開啟 **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**，然後再建置一次。
-- **「缺少密鑰 KEYSTORE_SET」**：請執行設定頁面的步驟 3。
-- **"The secret is too short"**、**"The secret is not a valid code"** 或 **"The secret does not contain a keystore"**：貼到 Secret 的文字不正確，常見是貼成 `KEYSTORE_SET` 這個字本身，或只貼了部分代碼。在您的儲存庫中，開啟**設定** → **密鑰與變數** → **Actions**，編輯 `KEYSTORE_SET`，然後再次貼上從**複製密鑰**取得的長碼（如果您已關閉設定頁面，請先重新執行設定頁面的步驟 2）。
-- **「Keystore、密碼或別名錯誤」**：請確認金鑰儲存庫的密碼和別名，然後重新執行設定頁面的步驟 2 和 3。
-- **"Version … does not exist"**：你輸入的版本不是 AAPS 的發佈版本。請使用 `latest`，或檢查發佈版本號。
-- **「不支援變體……」**：您的工作流程檔案版本過舊。請依照[更新 AAPS](#aaps-builder-updates)中的說明取代該檔案。
-- **當設定頁面開啟 GitHub 時顯示「Page not found」（404）**：請在同一個瀏覽器登入 github.com（未登入時，GitHub 會對私人儲存庫顯示 404）。如果你已登入，則是設定頁面第 1 步的使用者名稱或儲存庫名稱與你的儲存庫不相符。請輸入完全相同的名稱。
-- 第 1 步出現 **"No GitHub user with this name"**：請輸入你的 GitHub 使用者名稱（與你的 GitHub 個人檔案所示相同），而不是你的電子郵件。
-- **沒有 Download 連結，或開啟的是 GitHub 應用程式**：GitHub 應用程式無法下載建置產物。請依照[步驟 5](#aaps-builder-step5)的說明，在 Chrome 中開啟建置項目。若要停止 GitHub 連結在應用程式中開啟：Android **Settings** → **Apps** → **GitHub** → **Open by default** → 關閉 **Open supported links**。
-- **「Google Drive 存取權已逾期或遭到撤銷」**：請重新執行[步驟 6](#aaps-builder-google-drive)，並更新 `GDRIVE_OAUTH2` 密鑰。
-
-如有其他 GitHub 或 Google Drive 問題，請參閱[瀏覽器建置疑難排解](../GettingHelp/BrowserBuildTroubleshooting.md)。
+發生問題了嗎？請參閱 [AAPS Builder 疑難排解](#aaps-builder-troubleshooting)。
 
 ```{toctree}
 :hidden:

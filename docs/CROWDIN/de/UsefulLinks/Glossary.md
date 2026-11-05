@@ -108,7 +108,7 @@
 
 **Predictions** (dt. Vorhersage) = Vorhersage des zukünftigen Glukoseverlaufs (**BG**) auf Basis verschiedener Berechnungen. Weitere Informationen → [Wiki - 'Vorhersagelinien'](#aaps-screens-prediction-lines).
 
-**Profile** (dt. Profil) = Alle grundlegenden Einstellungen zur Behandlung Deines Diabetes (Basalrate, **DIA**, **IC**, **ISF**, **BZ**-Ziel). **AAPS** verwendet nur Profile, die in **AAPS** angelegt wurden (**Bearbeiten** → **Profil**), **Nightscout**-**Profile** können aber nach **AAPS** kopiert (synchronisiert) werden. Weitere Informationen → [Wiki - 'Dein AAPS-Profil'](../SettingUpAaps/YourAapsProfile.md).
+**Profile** (dt. Profil) = Alle grundlegenden Einstellungen zur Behandlung Deines Diabetes (Basalrate, **DIA**, **IC**, **ISF**, **BZ**-Ziel). **AAPS** verwendet nur Profile, die in **AAPS** angelegt wurden (**Verwalten** → **Profil**), **Nightscout**-**Profile** können aber nach **AAPS** kopiert (synchronisiert) werden. Weitere Informationen → [Wiki - 'Dein AAPS-Profil'](../SettingUpAaps/YourAapsProfile.md).
 
 **Profile switch** (dt. Profilwechsel) = (zeitlich begrenzter) Wechsel vom aktiven **Profil** auf ein anderes in **AAPS** gespeichertes **Profil**.
 

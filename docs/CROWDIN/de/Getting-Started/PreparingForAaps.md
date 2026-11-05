@@ -198,7 +198,7 @@ Zusätzlich zu den medizinischen Warnungen in den [Sicherheitshinweisen](#prepar
 
 #### Insulinwahl
 
-**AAPS**-Berechnungen gehen von einer Insulinkonzentration von 100U/ml aus. Dein Insulin richtest Du unter **Bearbeiten → Insulineinstellungen** ein: Stelle **Wirkmaximum** und **DIA** ein oder nutze **Wirkmaximum laden aus**, um die übliche Zeit bis zum Wirkmaximum einer der Vorlagen zu übernehmen:
+**AAPS**-Berechnungen gehen von einer Insulinkonzentration von 100U/ml aus. Dein Insulin richtest Du unter **Verwalten → Insulineinstellungen** ein: Stelle **Wirkmaximum** und **DIA** ein oder nutze **Wirkmaximum laden aus**, um die übliche Zeit bis zum Wirkmaximum einer der Vorlagen zu übernehmen:
 
 - **Novorapid** (auch für Humalog und NovoLog)
 - **Fiasp**

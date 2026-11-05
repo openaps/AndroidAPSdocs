@@ -33,7 +33,7 @@ Die kleinste Dosis, die der Patch abgeben kann, ist 0,05 IE. Setze Deine Basalra
 
 ## Einstellungen
 
-Öffne den Pumpenbildschirm über **Bearbeiten → Pumpe** (oder **Konfiguration → Pumpe → Plugin öffnen**).
+Öffne den Pumpenbildschirm über **Verwalten → Pumpe** (oder **Konfiguration → Pumpe → Plugin öffnen**).
 
 Öffne die CareLevo-Einstellungen über das Symbol **Einstellungen** (Zahnrad) oben rechts. Es gibt drei Einstellungen:
 

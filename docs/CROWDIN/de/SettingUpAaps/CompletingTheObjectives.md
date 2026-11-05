@@ -85,7 +85,7 @@ Von Zeit zu Zeit wird **AAPS** um neue Funktionen ergänzt. Dadurch können auch
 
 ## Ziel 4: Starte den Open Loop
 
-Der Sinn von **Ziel 4** ist zu erkennen, wie oft **AAPS** die Basalrate mit den Glukosewerten abgleicht und daraus Empfehlungen für temporäre Anpassungen der Basalrate gibt. Im Rahmen dieses **Ziels** wirst Du das erste Mal den Open Loop aktivieren und 20 vorgeschlagene temporäre Basalraten-Anpassungen akzeptieren. Wenn es notwendig sein sollte, übernimmst Du die Änderungen manuell in Deine Pumpe. Du wirst die Auswirkungen von [**temporären Zielen**](../DailyLifeWithAaps/TempTargets.md) erkennen und erleben. Wenn Du noch nicht weißt, wie Du in **AAPS** eine temporäre Basalrate setzt, sieh Dir die Pumpenaktionen im Fenster **Bearbeiten** an ([Wo ist der Reiter Aktionen geblieben?](#screens-action-tab)).
+Der Sinn von **Ziel 4** ist zu erkennen, wie oft **AAPS** die Basalrate mit den Glukosewerten abgleicht und daraus Empfehlungen für temporäre Anpassungen der Basalrate gibt. Im Rahmen dieses **Ziels** wirst Du das erste Mal den Open Loop aktivieren und 20 vorgeschlagene temporäre Basalraten-Anpassungen akzeptieren. Wenn es notwendig sein sollte, übernimmst Du die Änderungen manuell in Deine Pumpe. Du wirst die Auswirkungen von [**temporären Zielen**](../DailyLifeWithAaps/TempTargets.md) erkennen und erleben. Wenn Du noch nicht weißt, wie Du in **AAPS** eine temporäre Basalrate setzt, sieh Dir die Pumpenaktionen im Fenster **Verwalten** an ([Wo ist der Reiter Aktionen geblieben?](#screens-action-tab)).
 
 Das Ziel kann frühestens nach **7 Tagen** abgeschlossen werden. Das ist eine Pflichtwartezeit. Auch wenn alle Basalraten-Änderungen gemacht wurden, ist es vorher nicht möglich mit dem nächsten **Ziel** zu starten.
 
@@ -215,7 +215,7 @@ Das Ziel kann frühestens nach **28 Tagen** abgeschlossen werden. Das ist eine P
 Lies vorab die Dokumentation zu [Automatisierungen](../DailyLifeWithAaps/Automations.md).
 
 Richte die einfachste Automatisierungsregel ein, zum Beispiel eine Android-Benachrichtigung in ein paar Minuten:
-- Öffne **Bearbeiten → Automatisierung** und tippe auf den Knopf **+** (**Regel hinzufügen**).
+- Öffne **Verwalten → Automatisierung** und tippe auf den Knopf **+** (**Regel hinzufügen**).
 - Gib einen **Namen der Aufgabe** ein, zum Beispiel „Meine erste Automatisierungs-Benachrichtigung“.
 - Tippe unter **Bedingung** auf „**BEARBEITEN**“.
   - Tippe auf „**Trigger (Auslöser) hinzufügen**“ und wähle „**Zeit**“. **AAPS** legt einen Eintrag für heute mit der aktuellen Uhrzeit an.

@@ -146,7 +146,7 @@ Wegen der damit verbundenen Sicherheitsrisiken ist dieser Parameter standardmä�
 
 ### Ein neues Insulin mit einer anderen Konzentration anlegen
 
-Um ein Insulin mit einer anderen Konzentration anzulegen, öffne zuerst **Bearbeiten → Insulineinstellungen**.
+Um ein Insulin mit einer anderen Konzentration anzulegen, öffne zuerst **Verwalten → Insulineinstellungen**.
 
 - Tippe unten auf dem Bildschirm auf das Symbol „+“.
 - Wähle die gewünschte Konzentration aus dem Auswahlmenü (es gibt U10, U20, U50, U100 und U200).
@@ -179,7 +179,7 @@ Wenn Du von U100-Insulin kommst, passen Dein Profil, Deine bisherigen Daten und 
 
 1. **Wichtig:** AAPS übernimmt den Wechsel der Konzentration erst, wenn der Profilwechsel an die Pumpe übertragen wurde.
    - Dieser Schritt ist bei allen Patch-/Pod-Pumpen Pflicht.
-   - Bei Schlauchpumpen warte, bis der Profilwechsel an die Pumpe übertragen wurde, oder führe ihn über **Bearbeiten → Profil** oder die **Insulineinstellungen** aus.
+   - Bei Schlauchpumpen warte, bis der Profilwechsel an die Pumpe übertragen wurde, oder führe ihn über **Verwalten → Profil** oder die **Insulineinstellungen** aus.
 
 Das war's!
 
@@ -195,7 +195,7 @@ Das Schwierigste wird wahrscheinlich nicht der richtige Wechsel in AAPS sein, so
   - Führe einen zeitlich begrenzten Profilwechsel auf 200 % Deines normalen, laufenden Profils aus.
   - Öffne das Menü (☰) → **Behandlungen**, gehe zum Reiter **Profilwechsel** und klone das neue 200-%-Profil (siehe [Einen Profilwechsel in ein neues Profil klonen](#your-aaps-profile-clone-profile-switch)).
   - Wechsle bis zum nächsten Reservoir- oder Patch-Wechsel zurück zu Deinem normalen Profil.
-  - Gehe zu **Bearbeiten → Profil** und gib dem neuen Profil einen eindeutigen Namen (das wird Dein künftiges Profil für U200-Insulin in AAPS 4).
+  - Gehe zu **Verwalten → Profil** und gib dem neuen Profil einen eindeutigen Namen (das wird Dein künftiges Profil für U200-Insulin in AAPS 4).
 - Wenn Du Dynamischen ISF (DynISF) verwendest, musst Du ihn für mindestens eine Woche ausschalten:
   - Deine gesamte Historie in AAPS oder Nightscout ist in den falschen Einheiten (CU), also halb so hoch wie der echte Wert in Internationalen Einheiten. Warte nach dem Wechsel auf U200-Insulin mindestens eine Woche, bevor Du ihn wieder einschaltest.
 - Jetzt kannst Du beim nächsten Insulin- oder Pod-Wechsel das Insulin wechseln (auf ein neues U200, das Du in den **Insulineinstellungen** angelegt hast).

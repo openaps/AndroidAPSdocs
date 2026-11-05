@@ -26,7 +26,7 @@ Sobald sie ausgewählt ist, zeigt die Karte **Diaconn G8** zwei Schaltflächen: 
 
 **Einstellungen** öffnet die Einstellungen des Diaconn-G8-Treibers (siehe unten [Options-Einstellungen für Diaconn G8 Insulinpumpe](#diaconn-g8-insulin-pump-option-setting)).
 
-**Plugin öffnen** (oder **Bearbeiten** > **Pumpe**) öffnet den Diaconn-G8-Pumpenbildschirm. Bevor eine Pumpe gekoppelt ist, sieht er so aus:
+**Plugin öffnen** (oder **Verwalten** > **Pumpe**) öffnet den Diaconn-G8-Pumpenbildschirm. Bevor eine Pumpe gekoppelt ist, sieht er so aus:
 
 ![Diaconn G8 pump screen before pairing](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
@@ -57,7 +57,7 @@ Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 s
 
 ## Überprüfung des Pumpenstatus und Synchronisierung der Protokolle
 
-- Ist Deine Pumpe verbunden, öffne den Pumpenbildschirm (**Bearbeiten** > **Pumpe**). Er zeigt den Pumpenstatus (Batterie, Reservoir, letzte Verbindung, letzter Bolus, Basalrate und mehr).
+- Ist Deine Pumpe verbunden, öffne den Pumpenbildschirm (**Verwalten** > **Pumpe**). Er zeigt den Pumpenstatus (Batterie, Reservoir, letzte Verbindung, letzter Bolus, Basalrate und mehr).
 - Tippe auf **Aktualisieren**, um Dich mit der Pumpe zu verbinden, den Status zu aktualisieren und die Protokolle zu synchronisieren.
 - Tippe auf **Pumpen-Historie**, um die aus der Pumpe gelesene Historie zu sehen.
 
@@ -65,7 +65,7 @@ Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 s
 
 ```{admonition} Older screenshot
 :class: note
-Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 wird der Pumpenstatus auf dem Pumpenbildschirm (**Bearbeiten** > **Pumpe**) angezeigt und mit der Schaltfläche **Aktualisieren** synchronisiert.
+Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 wird der Pumpenstatus auf dem Pumpenbildschirm (**Verwalten** > **Pumpe**) angezeigt und mit der Schaltfläche **Aktualisieren** synchronisiert.
 ```
 
 (diaconn-g8-bluetooth-troubleshooting)=
@@ -97,7 +97,7 @@ Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 w
 
 ![grafik](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- Öffne in **AAPS** den Pumpenbildschirm (**Bearbeiten** > **Pumpe**), tippe auf **Kopplung aufheben** und bestätige **Kopplungsinformation zurücksetzen?**.
+- Öffne in **AAPS** den Pumpenbildschirm (**Verwalten** > **Pumpe**), tippe auf **Kopplung aufheben** und bestätige **Kopplungsinformation zurücksetzen?**.
 - Wiederhole den Bluetooth-Pairing-Prozess für die Pumpe (siehe oben).
 
 ## Weitere Informationen
@@ -107,7 +107,7 @@ Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 w
 ### Options-Einstellungen für Diaconn G8 Insulinpumpe
 
 - **Konfiguration** > **Pumpe** > **Diaconn G8** > **Einstellungen**
-- Oder tippe auf dem Pumpenbildschirm (**Bearbeiten** > **Pumpe**) oben rechts auf das Einstellungssymbol (Zahnrad).
+- Oder tippe auf dem Pumpenbildschirm (**Verwalten** > **Pumpe**) oben rechts auf das Einstellungssymbol (Zahnrad).
 
 ![Diaconn G8 driver settings](../images/v4/Pumps/diaconn_g8_settings.png)
 
@@ -115,14 +115,14 @@ Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 w
 - Ist die Option **Reservoirwechsel aufzeichnen** aktiviert, werden die entsprechenden Details automatisch in das Careportal hochgeladen, wenn das Ereignis „Insulinwechsel“ eintritt.
 - Ist die Option **Kanülenwechsel protokollieren** aktiviert, werden die entsprechenden Details automatisch in das Careportal hochgeladen, wenn das Ereignis „Kanülenwechsel“ eintritt.
 - Ist die Option **Katheterwechsel protokollieren** aktiviert, werden die entsprechenden Details automatisch als Notiz hinzugefügt, wenn das Ereignis „Schlauchwechsel“ eintritt.
-- Ist die Option **Batteriewechsel protokollieren** aktiviert, werden die entsprechenden Details automatisch in das Careportal hochgeladen, wenn das Ereignis „Batteriewechsel“ eintritt. Einen Batteriewechsel kannst Du auch selbst über **Bearbeiten** > **Pumpenbatterie-Wechsel** erfassen. (Hinweis: Um die Batterie zu wechseln, stoppe bitte alle laufenden Injektionsvorgänge.)
+- Ist die Option **Batteriewechsel protokollieren** aktiviert, werden die entsprechenden Details automatisch in das Careportal hochgeladen, wenn das Ereignis „Batteriewechsel“ eintritt. Einen Batteriewechsel kannst Du auch selbst über **Verwalten** > **Pumpenbatterie-Wechsel** erfassen. (Hinweis: Um die Batterie zu wechseln, stoppe bitte alle laufenden Injektionsvorgänge.)
 - **Diaconn Cloud-Sync** sendet die Pumpenprotokolle an die Diaconn Cloud.
 
 ![Diaconn G8 Aktionsmenü](../images/DiaconnG8/DiaconnG8_15.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 wird ein Batteriewechsel über **Bearbeiten** > **Pumpenbatterie-Wechsel** erfasst; einen Reiter **Aktionen** gibt es nicht.
+Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 wird ein Batteriewechsel über **Verwalten** > **Pumpenbatterie-Wechsel** erfasst; einen Reiter **Aktionen** gibt es nicht.
 ```
 
 ### Funktion verzögerter Bolus

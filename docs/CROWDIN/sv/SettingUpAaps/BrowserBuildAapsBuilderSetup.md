@@ -50,6 +50,12 @@ På GitHub-sidan som öppnas är allt redan ifyllt: mallen `nightscout/aaps-buil
 Det skapades inte från mallen. Radera det (**Settings** → längst ned på sidan → **Delete this repository**) och tryck sedan på **Create my private repository** igen.
 ```
 
+```{admonition} GitHub says "my-aaps already exists in this account"?
+:class: tip
+
+You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+```
+
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
@@ -60,7 +66,7 @@ Byggstegen uppdateras åt dig: vid varje bygge kör ditt repo den version som AA
    På en dator klickar du på **kopieringsikonen** ("Copy raw file") uppe till höger i filen. På en telefon öppnar du i stället <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">versionen med ren text</a> och håller fingret på texten → **Markera alla** → **Kopiera**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   Öppnar `.github/workflows/build.yml` i <code class="aapsb-repoUrl"></code> för redigering.
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. Ersätt hela texten med det kopierade arbetsflödet (på en telefon: håll fingret på texten → **Markera alla** → **Klistra in**) och klicka sedan på **Commit changes…** två gånger. Filens första rad visar dess version.
 ```
 
@@ -151,7 +157,8 @@ Vill du få e-post när bygget är klart? GitHub skickar bara e-post när ett by
 :class: warning
 
 1. Öppna ditt repo och kontrollera att det har mappen `.github` med filen `workflows/build.yml`. Om repot är tomt skapades det inte från mallen: radera det (**Settings** → längst ned på sidan → **Delete this repository**) och gör [steg 1](#aaps-builder-setup-step1) igen med knappen.
-2. Öppna fliken Actions. Om det står att arbetsflöden är inaktiverade, klicka på den gröna knappen för att aktivera dem. Klicka sedan på "Build AAPS" i listan.
+2. The file is there, but GitHub shows "This workflow does not exist": see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+3. Öppna fliken Actions. Om det står att arbetsflöden är inaktiverade, klicka på den gröna knappen för att aktivera dem. Klicka sedan på "Build AAPS" i listan.
 ```
 
 (aaps-builder-setup-step5)=
@@ -196,7 +203,7 @@ Vill du att APK-filen ska finnas i din Google Drive (sparas för alltid)? Lägg 
    Google öppnas i en ny flik. Välj ditt Google-konto och låt AAPS se och ändra sina egna filer. Om Google säger att appen inte är verifierad, tryck på "Advanced" (avancerat) och sedan på "Go to …" (gå till …).
 2. Sedan visar den nya fliken ett fel som **"This site can't be reached"** (webbplatsen kan inte nås) eller **"127.0.0.1 refused to connect"** (127.0.0.1 vägrade att ansluta). **Det här är normalt.** Googles svar finns i adressen till den fliken.
 
-   Tryck på adressfältet i den fliken, markera hela adressen och kopiera den. Den börjar med `http://127.0.0.1:47913/`. Kom tillbaka till den här sidan inom några minuter: svaret gäller bara en kort stund.
+   Tap the address bar of that tab, then the copy icon next to the address (on a computer: select the whole address and copy it). Den börjar med `http://127.0.0.1:47913/`. Kom tillbaka till den här sidan inom några minuter: svaret gäller bara en kort stund.
 3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here (klistra in den kopierade adressen här)</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
@@ -323,7 +330,7 @@ Allt på den här sidan körs i din webbläsare. Din nyckel och dina lösenord s
   const repo = () => repoInput.value.trim() || REPO_NAME;
 
   const LINKS = [
-    ['openWorkflowFile', '/edit/main/' + WORKFLOW_PATH],
+    ['openWorkflowFile', '/blob/HEAD/' + WORKFLOW_PATH],
     ['openSecrets', '/settings/secrets/actions/new'],
     ['openSecrets2', '/settings/secrets/actions/new'],
     ['openActions', '/actions/workflows/build.yml'],

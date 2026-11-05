@@ -21,7 +21,7 @@
   
   ![Configuration > Pump with the DanaR plugins](../images/v4/Configuration/configuration_pump_list_1.png)
 
-* Öffne den Pumpenbildschirm: Tippe auf der DanaR-Karte auf **Plugin öffnen** (oder gehe zu **Bearbeiten** > **Pumpe**).
+* Öffne den Pumpenbildschirm: Tippe auf der DanaR-Karte auf **Plugin öffnen** (oder gehe zu **Verwalten** > **Pumpe**).
 
 * Tippe auf **Koppeln**. Auf dem Kopplungsbildschirm: 
   * Gib unter **Pumpen-Passwort** das Passwort Deiner Pumpe ein (Standardpasswort ist 1234).

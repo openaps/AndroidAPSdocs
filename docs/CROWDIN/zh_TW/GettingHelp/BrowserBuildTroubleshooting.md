@@ -4,9 +4,96 @@
 
 ```{note}
 本頁彙整 [瀏覽器建置](../SettingUpAaps/BrowserBuild.md) 的疑難排解提示。
-
-正在使用 **AAPS Builder**？請先從其專屬的[疑難排解章節](#aaps-builder-troubleshooting)開始。下方有關 Google Drive 的章節同樣適用。
 ```
+
+(aaps-builder-troubleshooting)=
+
+## AAPS Builder
+
+### 步驟 1：儲存庫
+
+(aaps-builder-ts-repo-exists)=
+
+#### "my-aaps 已存在於此帳號中"
+
+![儲存庫已存在](../images/Building-the-App/CI/AapsBuilder70_RepoExists.png)
+
+您已經有此儲存庫，例如先前嘗試時建立的儲存庫。關閉 GitHub 分頁，在設定頁面的步驟 1 保留該名稱，然後繼續。如果您已為此完成步驟 2 和 3，金鑰仍在其中：請繼續[步驟 4](#aaps-builder-step4)。如果這是在較舊版本的設定頁面中建立的，請依照[更新 AAPS](#aaps-builder-updates)中的說明，更新其工作流程一次。想要重新開始嗎？輸入其他名稱，例如 `my-aaps-2`，並在步驟 2 使用相同的金鑰儲存區。
+
+(aaps-builder-ts-user-not-found)=
+
+#### "找不到此名稱的 GitHub 使用者"
+
+![找不到 GitHub 使用者](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
+
+- 第 1 步出現 **"No GitHub user with this name"**：請輸入你的 GitHub 使用者名稱（與你的 GitHub 個人檔案所示相同），而不是你的電子郵件。
+- **沒有「Build AAPS」或「Run workflow」按鈕，或儲存庫是空的**：這個儲存庫並非從範本建立。請刪除該儲存庫（**設定** → 頁面底部 → **刪除此儲存庫**），然後使用**建立我的私人儲存庫**按鈕重新執行[步驟 1](#aaps-builder-step1)。
+
+### 步驟 3：密碼
+
+(aaps-builder-ts-404)=
+
+#### "找不到頁面" (404)
+
+![GitHub 404](../images/Building-the-App/CI/AapsBuilder79_404.png)
+
+- **當設定頁面開啟 GitHub 時顯示「Page not found」（404）**：請在同一個瀏覽器登入 github.com（未登入時，GitHub 會對私人儲存庫顯示 404）。如果你已登入，則是設定頁面第 1 步的使用者名稱或儲存庫名稱與你的儲存庫不相符。請輸入完全相同的名稱。
+
+### 步驟 4：建置
+
+(aaps-builder-ts-workflow-not-found)=
+
+#### "此工作流程不存在"
+
+![此工作流程不存在](../images/Building-the-App/CI/AapsBuilder71_WorkflowNotFound.png)
+
+儲存庫建立後，GitHub 可能尚未讀取其中的工作流程檔案：**Build AAPS** 尚未出現在**Actions**分頁中，而且也沒有**Run workflow**按鈕。只要對檔案做一點小修改，就能讓 GitHub 讀取檔案：
+
+1. 在您的儲存庫中開啟**Code**，接著依序開啟 `.github` 資料夾、`workflows` 資料夾，然後開啟 `build.yml` 檔案。
+2. 點選檔案右上方的**⋯**選單，然後選取**Edit file… In place**（在電腦上，請點選鉛筆圖示）。
+
+   ![檔案選單](../images/Building-the-App/CI/AapsBuilder72_FileMenu.png)
+
+3. 點選文字最末端，並新增一個空白行（按 Enter）。點選頂端的**Commit changes…**。
+
+   ![編輯器](../images/Building-the-App/CI/AapsBuilder73_Editor.png)
+
+4. 再次點選**Commit changes**。
+
+   ![提交變更](../images/Building-the-App/CI/AapsBuilder74_CommitDialog.png)
+
+5. 再次開啟**Actions**分頁：現在**Build AAPS**已出現在工作流程清單中（在手機上，點選**All workflows**左側的圖示即可開啟清單）。點選該項目，然後選取**Run workflow**。
+
+   ![工作流程清單](../images/Building-the-App/CI/AapsBuilder75_WorkflowsSidebar.png)
+
+(aaps-builder-ts-build-failed)=
+
+#### 建置失敗（紅色叉號）
+
+1. 在設定頁面上，點選 **開啟我的建置項目**，再點選有紅色叉號的建置項目。
+
+   ![建置失敗](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
+
+2. 建置項目頁面會顯示 **失敗**，並指出失敗的部分：**AAPS / 檢查**（儲存庫、密鑰、版本或變體有問題：未建置任何內容），或 **AAPS / 建置 AAPS**。
+
+   ![建置頁面：失敗](../images/Building-the-App/CI/AapsBuilder77_RunFailed.png)
+
+3. 向下捲動至 **註解**，用手指點選文字，不要點選圖表。紅色線條說明了問題：點選 **顯示更多**以閱讀完整訊息，然後在下方找到該訊息。
+
+   ![註解](../images/Building-the-App/CI/AapsBuilder78_Annotations.png)
+
+- **「缺少密鑰 KEYSTORE_SET」**：請執行設定頁面的步驟 3。
+- **建置停止並顯示 "This repository is PUBLIC"**：在你的儲存庫中，開啟 **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**，然後再建置一次。
+- **「版本 … 不存在」**：只能建置已發布的 **AAPS** 版本，也就是 nightscout/AndroidAPS 的 [標籤頁](https://github.com/nightscout/AndroidAPS/tags)上列出的版本，例如 `3.3.2.0`。像 `dev` 這樣的分支名稱無法使用。請使用 `latest`，或輸入與清單所列完全相同的標籤。
+- **「不支援變體……」**：您的工作流程檔案版本過舊。請依照[更新 AAPS](#aaps-builder-updates)中的說明取代該檔案。
+- **"The secret is too short"**、**"The secret is not a valid code"** 或 **"The secret does not contain a keystore"**：貼到 Secret 的文字不正確，常見是貼成 `KEYSTORE_SET` 這個字本身，或只貼了部分代碼。在您的儲存庫中，開啟**設定** → **密鑰與變數** → **Actions**，編輯 `KEYSTORE_SET`，然後再次貼上從**複製密鑰**取得的長碼（如果您已關閉設定頁面，請先重新執行設定頁面的步驟 2）。
+- **「Keystore、密碼或別名錯誤」**：請確認金鑰儲存庫的密碼和別名，然後重新執行設定頁面的步驟 2 和 3。
+- **「Google Drive 存取權已逾期或遭到撤銷」**：請重新執行[步驟 6](#aaps-builder-google-drive)，並更新 `GDRIVE_OAUTH2` 密鑰。
+- **其他錯誤**：[閱讀建置記錄](#aaps-ci-read-the-logs)，然後[再次執行建置](#aaps-ci-rerun)。如果再次以相同方式失敗，請提供失敗步驟的名稱和錯誤行，尋求協助。請勿分享機密資料的內容。
+
+### 步驟 5：應用程式
+
+- **沒有 Download 連結，或開啟的是 GitHub 應用程式**：GitHub 應用程式無法下載建置產物。請依照[步驟 5](#aaps-builder-step5)的說明，在 Chrome 中開啟建置項目。若要停止 GitHub 連結在應用程式中開啟：Android **Settings** → **Apps** → **GitHub** → **Open by default** → 關閉 **Open supported links**。
 
 ## AAPS-CI 問題排除
 

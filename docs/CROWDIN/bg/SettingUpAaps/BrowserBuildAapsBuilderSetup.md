@@ -50,6 +50,12 @@ Your repository:<code class="aapsb-repoUrl"></code>
 То не е създадено от шаблона. Изтрийте го (**Settings** → най-долу на страницата → **Delete this repository**), след това докоснете отново **Create my private repository**.
 ```
 
+```{admonition} GitHub says "my-aaps already exists in this account"?
+:class: tip
+
+You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+```
+
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
@@ -60,7 +66,7 @@ Your repository:<code class="aapsb-repoUrl"></code>
    На компютър натиснете **иконата за копиране** („Copy raw file“) горе вдясно на файла. На телефон вместо това отворете <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">обикновената текстова версия</a>, задръжте пръст върху текста → **Избиране на всички** (Select all) → **Копиране** (Copy).
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   Отваря `.github/workflows/build.yml` в <code class="aapsb-repoUrl"></code> за редактиране.
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. Заменете целия текст с копирания работен процес (на телефон: продължително натискане → **Избиране на всички** (Select all) → **Поставяне** (Paste)), след това натиснете **Commit changes…** два пъти. Първият ред на файла показва неговата версия.
 ```
 
@@ -151,7 +157,8 @@ Your repository:<code class="aapsb-repoUrl"></code>
 :class: warning
 
 1. Отворете хранилището си и проверете дали в него има папка `.github` с файла `workflows/build.yml`. Ако хранилището е празно, то не е създадено от шаблона: изтрийте го (**Settings** → най-долу на страницата → **Delete this repository**) и направете отново [стъпка 1](#aaps-builder-setup-step1) с бутона.
-2. Отворете раздела Actions. Ако пише, че работните процеси са изключени, натиснете зеления бутон, за да ги разрешите. След това натиснете „Build AAPS“ в списъка.
+2. The file is there, but GitHub shows "This workflow does not exist": see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+3. Отворете раздела Actions. Ако пише, че работните процеси са изключени, натиснете зеления бутон, за да ги разрешите. След това натиснете „Build AAPS“ в списъка.
 ```
 
 (aaps-builder-setup-step5)=
@@ -196,7 +203,7 @@ APK файлът не се показва под „Code“ във вашето 
    Google се отваря в нов раздел. Изберете своя профил в Google и разрешете на AAPS да вижда и променя собствените си файлове. Ако Google каже, че приложението не е потвърдено, докоснете „Advanced“ (разширени), след това „Go to …“ (към …).
 2. След това новият раздел показва грешка, например **„This site can't be reached“** или **„127.0.0.1 refused to connect“**. **Това е очаквано.** Отговорът на Google е в адреса на този раздел.
 
-   Докоснете адресната лента на този раздел, изберете целия адрес и го копирайте. Той започва с `http://127.0.0.1:47913/`. Върнете се на тази страница до няколко минути: отговорът е валиден само за кратко време.
+   Tap the address bar of that tab, then the copy icon next to the address (on a computer: select the whole address and copy it). Той започва с `http://127.0.0.1:47913/`. Върнете се на тази страница до няколко минути: отговорът е валиден само за кратко време.
 3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
@@ -323,7 +330,7 @@ APK файлът не се показва под „Code“ във вашето 
   const repo = () => repoInput.value.trim() || REPO_NAME;
 
   const LINKS = [
-    ['openWorkflowFile', '/edit/main/' + WORKFLOW_PATH],
+    ['openWorkflowFile', '/blob/HEAD/' + WORKFLOW_PATH],
     ['openSecrets', '/settings/secrets/actions/new'],
     ['openSecrets2', '/settings/secrets/actions/new'],
     ['openActions', '/actions/workflows/build.yml'],

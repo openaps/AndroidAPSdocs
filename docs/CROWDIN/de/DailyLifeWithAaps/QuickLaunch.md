@@ -75,15 +75,15 @@ Die Careportal-Ereignisse und Einträge zur Wartung der Geräte:
 - **BZ-Test**, **Notiz**, **Bewegung**, **Frage**, **Ankündigung**,
 - **Sensor gesetzt**, **Pumpenbatterie-Wechsel**, **Pumpenkatheter-Wechsel**, **Nadelwechsel/Füllen**, **Wechsel der Setzstellen**.
 
-**Nadelwechsel/Füllen** und **Pumpenbatterie-Wechsel** werden nur angeboten, wenn Deine Pumpe sie verwendet. Patch-Pumpen zum Beispiel füllen und wechseln die Batterie in ihren eigenen Aktivierungsschritten, deshalb werden diese Einträge bei ihnen nicht angezeigt (wie im Fenster **Bearbeiten**).
+**Nadelwechsel/Füllen** und **Pumpenbatterie-Wechsel** werden nur angeboten, wenn Deine Pumpe sie verwendet. Patch-Pumpen zum Beispiel füllen und wechseln die Batterie in ihren eigenen Aktivierungsschritten, deshalb werden diese Einträge bei ihnen nicht angezeigt (wie im Fenster **Verwalten**).
 
 ![The Care Portal category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
 
-Das sind dieselben Einträge, die Du sonst über die Fenster **[Behandlungen](#v4changes-treatments)** und **[Bearbeiten](#v4changes-manage)** erreichst – Schnellstart legt nur die, die Du verwendest, in die Übersicht.
+Das sind dieselben Einträge, die Du sonst über die Fenster **[Behandlungen](#v4changes-treatments)** und **[Verwalten](#v4changes-manage)** erreichst – Schnellstart legt nur die, die Du verwendest, in die Übersicht.
 
-### Bearbeiten
+### Verwalten
 
-Die Bildschirme aus dem Fenster **[Bearbeiten](#v4changes-manage)**, in derselben Reihenfolge, damit Du den, den Du am häufigsten brauchst, aus der Leiste öffnen kannst:
+Die Bildschirme aus dem Fenster **[Verwalten](#v4changes-manage)**, in derselben Reihenfolge, damit Du den, den Du am häufigsten brauchst, aus der Leiste öffnen kannst:
 
 - **Profil**, **Insulineinstellungen** (Insulinkonfigurationen verwalten und aktivieren – bewusst anders benannt als **Insulin**, weil jener Knopf einen Bolus abgibt), **Temporäres Ziel**, **QuickWizard**, **Szenen**, **Automatisierung**, **Lebensmittel**,
 - **AAPS-Modus** – den Loop schließen oder öffnen, pausieren oder die Pumpe trennen,
@@ -103,7 +103,7 @@ QuickWizards, die nur auf der Smartwatch angezeigt werden sollen, werden nicht a
 
 Jede eingeschaltete **[Szene](Scenes.md)** kann als Knopf hinzugefügt werden. Ein Tippen darauf fragt nach einer Bestätigung und aktiviert dann die Szene (dieselben Aktionen, die Du auch über den Bildschirm Szenen bekommst). Diese Kategorie erscheint nur, wenn Du mindestens eine Szene hast.
 
-Der Hinweis und der Katalog zeigen dieselbe Zusammenfassung wie **Bearbeiten → Szenen**, zum Beispiel *„3 Aktionen, 2 h → Abkühlen“*, wobei der Name nach dem Pfeil die Folgeszene ist.
+Der Hinweis und der Katalog zeigen dieselbe Zusammenfassung wie **Verwalten → Szenen**, zum Beispiel *„3 Aktionen, 2 h → Abkühlen“*, wobei der Name nach dem Pfeil die Folgeszene ist.
 
 ### Automatisierung
 

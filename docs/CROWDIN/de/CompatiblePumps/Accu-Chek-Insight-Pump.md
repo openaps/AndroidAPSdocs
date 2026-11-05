@@ -42,7 +42,7 @@ Roche zieht sich aus dem Insulinpumpenmarkt zurück, um sein Diabetes-Portfolio 
     
        **Einstellungen** öffnet die Einstellungen des Accu-Chek-Insight-Treibers (siehe [Einstellungen in AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
     
-       **Plugin öffnen** (oder **Bearbeiten → Pumpe**) öffnet den Accu-Chek-Insight-Pumpenbildschirm. Bevor eine Pumpe gekoppelt ist, sieht er so aus:
+       **Plugin öffnen** (oder **Verwalten → Pumpe**) öffnet den Accu-Chek-Insight-Pumpenbildschirm. Bevor eine Pumpe gekoppelt ist, sieht er so aus:
     
        ![Accu-Chek Insight pump screen before pairing](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
     
@@ -66,7 +66,7 @@ Roche zieht sich aus dem Insulinpumpenmarkt zurück, um sein Diabetes-Portfolio 
     
        ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
     
-    * Um zu prüfen, ob alles in Ordnung ist, sieh Dir den Pumpenbildschirm an (**Bearbeiten → Pumpe**). Ist die Pumpe gekoppelt, zeigt er Informationen zur Pumpe, etwa **Seriennummer**, **Herstellungsdatum**, **Release-Softwareversion** und **Bluetooth-Adresse**.
+    * Um zu prüfen, ob alles in Ordnung ist, sieh Dir den Pumpenbildschirm an (**Verwalten → Pumpe**). Ist die Pumpe gekoppelt, zeigt er Informationen zur Pumpe, etwa **Seriennummer**, **Herstellungsdatum**, **Release-Softwareversion** und **Bluetooth-Adresse**.
     
        ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
     
@@ -125,7 +125,7 @@ Roche zieht sich aus dem Insulinpumpenmarkt zurück, um sein Diabetes-Portfolio 
     
     ### Der Pumpenbildschirm
     
-    Der Accu-Chek-Insight-Pumpenbildschirm (**Bearbeiten → Pumpe**) zeigt den aktuellen Status der Pumpe, zum Beispiel **Status**, **Zuletzt verbunden**, **Betriebsmodus**, **Batterie**, **Reservoirstand**, die heutigen Tagesgesamtdosen (**TDD Bolus**, **TDD Basal**), Basalraten und den letzten Bolus. Ist die Pumpe gekoppelt, gibt es diese Schaltflächen:
+    Der Accu-Chek-Insight-Pumpenbildschirm (**Verwalten → Pumpe**) zeigt den aktuellen Status der Pumpe, zum Beispiel **Status**, **Zuletzt verbunden**, **Betriebsmodus**, **Batterie**, **Reservoirstand**, die heutigen Tagesgesamtdosen (**TDD Bolus**, **TDD Basal**), Basalraten und den letzten Bolus. Ist die Pumpe gekoppelt, gibt es diese Schaltflächen:
     
     * **Aktualisieren**: Aktualisiert den Pumpenstatus.
     * **TBR-Ende-Benachrichtigung aktivieren (Pumpeneinstellung)** / **TBR-Ende-Benachrichtigung deaktivieren (Pumpeneinstellung)**: Eine Insight-Pumpe gibt standardmäßig einen Alarm aus, wenn eine TBR endet. Mit dieser Schaltfläche schaltest Du diesen Alarm ein oder aus, ohne dafür eine Konfigurationssoftware zu brauchen.

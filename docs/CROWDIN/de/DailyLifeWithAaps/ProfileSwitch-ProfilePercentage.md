@@ -50,9 +50,9 @@ Du brauchst mindestens ein gespeichertes **Profil**. Ein **Prozentsatz des Profi
 
 (ProfileSwitch-manage-v4)=
 
-## Profile verwalten und aktivieren (Bearbeiten → Profil)
+## Profile verwalten und aktivieren (Verwalten → Profil)
 
-In **AAPS** v4 werden Profile über den Bildschirm **Bearbeiten** (untere Navigationsleiste) → **Profil** (*„Profil verwalten und aktivieren“*) verwaltet und aktiviert.
+In **AAPS** v4 werden Profile über den Bildschirm **Verwalten** (untere Navigationsleiste) → **Profil** (*„Profil verwalten und aktivieren“*) verwaltet und aktiviert.
 
 Der Profil-Bildschirm zeigt Deine Profile als **Kartenkarussell zum Wischen**. Die Karte des laufenden Profils ist mit **AKTIV** markiert und zeigt seine gesamte tägliche Basalmenge (z. B. *∑ 30,15 IE*). Unter der ausgewählten Karte siehst Du die Details dieses Profils – den **Insulin**-Typ sowie die Zeitpläne für **IC**, **ISF**, **Basal** und **Ziel** mit Grafiken.
 

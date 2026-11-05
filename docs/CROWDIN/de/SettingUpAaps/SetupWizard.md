@@ -263,7 +263,7 @@ Gehe zurück zur Liste der Module und tippe auf „**WEITER**“, um zum nächst
 
 Ab **AAPS** Version 4 können Client-Geräte mit **AAPSClient** mit diesem Smartphone (dem **Master**) **gekoppelt** werden und es über signierte Befehle steuern, die über Nightscout gesendet werden. Das ist der neue empfohlene Weg, **AAPS** fernzusteuern – die vollständige Erklärung und Einrichtung findest Du unter [Master ↔ Client-Steuerung](../RemoteFeatures/ClientMasterControl.md).
 
-Auf diesem Bildschirm musst Du jetzt nichts einstellen; Clients kannst Du jederzeit später unter **Bearbeiten → Autorisierte Clients** koppeln. Dort fügst Du einen Client mit einem **QR-Code** (damit wird auch Nightscout auf dem Client eingerichtet) oder mit einer **PIN** hinzu und gibst ihm eine **Rolle**.
+Auf diesem Bildschirm musst Du jetzt nichts einstellen; Clients kannst Du jederzeit später unter **Verwalten → Autorisierte Clients** koppeln. Dort fügst Du einen Client mit einem **QR-Code** (damit wird auch Nightscout auf dem Client eingerichtet) oder mit einer **PIN** hinzu und gibst ihm eine **Rolle**.
 
 - „**Autorisierte Clients**“ – verwaltet die gekoppelten Client-Geräte, die diesen Master steuern dürfen.
 - „**Annahme von Nightscout-Daten**“ – das Annehmen von Behandlungen und Daten, die direkt in Nightscout eingegeben werden (der alte, weniger sichere Weg), ist jetzt standardmäßig ausgeschaltet. Öffne diese Einstellungen nur, wenn Du das noch brauchst, _z. B._ um Daten über Nightscout oder Apps von Drittanbietern einzugeben.
