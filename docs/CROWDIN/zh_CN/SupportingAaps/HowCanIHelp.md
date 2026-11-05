@@ -6,6 +6,16 @@ Developers are parents, caregivers, loved ones and people with diabetes working 
 
 *开发者需配备备用手机和备用胰岛素泵以完整测试新系统——因其稳定性未经验证前严禁用于人体。​ 新型设备上市后需及时进行兼容性测试。​ 部分捐赠资金需用于国际物流费用，以向开发者递送测试设备。​ 有时，资助开发者走出封闭的工作环境，在会议和活动中交流碰撞创意与专业见解，也是一种值得支持的方式。​*
 
+(donate-to-aaps)=
+
+### How can I donate?
+
+You can support **AAPS** in several ways:
+
+* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## 我具备编程能力！​ 如何参与？​
 
 太棒了！请查阅待解决问题（Issues），并在Discord频道中咨询——总有大量任务待协作！​ 建议从简单任务入手，完成您的首次Pull Request（代码提交）！​ :)
