@@ -74,7 +74,9 @@ __AAPSClient__ apk를 팔로워 휴대폰에 설치했으면, Nightscout 15를 �
 
 - 같은 설정에 **Nightscout 액세스 토큰**을 입력하십시오. [여기](https://nightscout.github.io/nightscout/security/#create-a-token)의 안내를 따르십시오. **AAPS** 휴대폰에서는 **admin 토큰**을 사용하십시오: 이 토큰으로 **AAPS**가 팔로워 휴대폰마다 자체 토큰을 만듭니다.
 
-- **두 휴대폰 모두**에서 **웹소켓 사용**을 켜십시오. **AAPS** 휴대폰에서 원격 제어를 하려면 웹소켓이 **필수**입니다: 웹소켓이 없으면 **AAPS**가 **AAPSClient**의 명령을 받을 수 없습니다. 두 휴대폰 모두에서 웹소켓은 동기화도 빠르게 하지만, 배터리를 조금 더 사용합니다.
+- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. 두 휴대폰 모두에서 웹소켓은 동기화도 빠르게 하지만, 배터리를 조금 더 사용합니다.
+
+  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ![설정 > Nightscout URL, Nightscout 액세스 토큰, 웹소켓 사용이 있는 NSClientV3](../images/preferences/settings_nsclient.png)
 
