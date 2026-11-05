@@ -6,6 +6,16 @@ Vývojáři jsou rodiče, pečovatelé, blízcí a lidé s diabetem, kteří spo
 
 *Pro otestování nových zařízení vývojáři potřebují testovací telefon a testovací pumpu - zařízení nelze testovat na člověku, dokud není stabilní. Novější modely se musí testovat, jakmile budou k dispozici. Část darovaných peněz je také potřeba na logistické náklady na odeslání tohoto vybavení vývojářům do různých zemí. Někdy je také pěkné přispět vývojářům na náklady, aby mohli opustit své tmavé pokoje, setkat se na konferencích a akcích a vzájemně si vyměnit tvůrčí a analytické nápady.*
 
+(donate-to-aaps)=
+
+### How can I donate?
+
+You can support **AAPS** in several ways:
+
+* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## Můžu napsat kód! Jak mohu přispět?
 
 Hurá! Podívejte se na seznam problémů, zeptejte se na discord fóru, tam je vždy mnoho věcí na práci! Najděte nejprve malý úkol a proveďte první pull request! :)
