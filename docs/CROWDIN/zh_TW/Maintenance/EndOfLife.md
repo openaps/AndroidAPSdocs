@@ -30,7 +30,7 @@
 
 Android 會為每個系統版本指定一個 **API 等級**，這是應用程式使用的數字。例如，API 等級 30 對應 Android 11。下列表格使用來自 AAPS 版本資料的 API 等級。每一列中的 AAPS 版本，是該列所示 API 等級所對應的數值。這不是你可安裝版本的完整清單。
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
+要為你的手機選擇 AAPS 版本，請參考[發行說明中的 Android 版本指引](#maintenance-android-version-aaps-version)。
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
