@@ -27,6 +27,7 @@ Se você (ou o seu seguidor **AAPSClient**) ainda sincronizava com o plugin anti
 - Digite a sua **URL do Nightscout** e um **token de acesso** (o NSClientV3 usa um token de acesso, *não* o antigo API secret — veja [como criar um token](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - O seu site do Nightscout precisa ser compatível com a **API v3** (Nightscout 15 ou mais novo).
 - Se você usa **websockets**, ative ou desative em **ambos**, no dispositivo principal e no seguidor — nunca em apenas um.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 Isso afeta apenas a forma como o app se comunica com o Nightscout; os seus dados no Nightscout não mudam.
