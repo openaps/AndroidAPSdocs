@@ -27,6 +27,7 @@ Ak ste vy (alebo váš sledujúci v **AAPSClient**) ešte synchronizovali so sta
 - Zadajte **Adresu Nightscoutu** a **prístupový token** (NSClientV3 používa prístupový token, *nie* starý API secret – pozrite [vytvorenie tokenu](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - Vaša stránka Nightscout musí podporovať **API v3** (Nightscout 15 alebo novší).
 - Ak používate **websockety**, zapnite alebo vypnite ich na **oboch** zariadeniach, na hlavnom aj na sledujúcom – nikdy iba na jednom.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 Týka sa to iba toho, ako aplikácia komunikuje s Nightscoutom; vaše dáta v Nightscoute sa nemenia.
