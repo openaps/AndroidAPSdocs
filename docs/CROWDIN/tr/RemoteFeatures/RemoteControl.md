@@ -74,7 +74,9 @@ Kullanıcı, her birinde NSClientV3'ü kurarak AAPS ve AAPSClient telefonların�
 
 - Aynı ayarlarda **Nightscout erişim belirteci** alanına belirtecinizi girin. Lütfen [buradaki](https://nightscout.github.io/nightscout/security/#create-a-token) notları izleyin. **AAPS** telefonunda bir **yönetici belirteci** (admin token) kullanın: **AAPS** bununla her takipçi telefon için ayrı bir belirteç oluşturur.
 
-- **Her iki** telefonda da **Websocket'leri kullan** seçeneğini etkinleştirin. **AAPS** telefonunda websocket'ler uzaktan kontrol için **zorunludur**: bunlar olmadan **AAPS**, **AAPSClient**'tan komut alamaz. Her iki telefonda da senkronizasyonu hızlandırırlar, ancak pil kullanımı biraz artar.
+- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. Her iki telefonda da senkronizasyonu hızlandırırlar, ancak pil kullanımı biraz artar.
+
+  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ![Nightscout URL, Nightscout erişim belirteci ve Websocket'leri kullan ile Ayarlar > NSClientV3](../images/preferences/settings_nsclient.png)
 
