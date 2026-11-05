@@ -372,7 +372,7 @@ More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
 - ב-Nightscout, צרו *[אסימון מנהל (admin)](https://nightscout.github.io/nightscout/security/#create-a-token)* (נדרש [Nightscout 15](https://nightscout.github.io/update/update/) כדי להשתמש ב-API V3) והזינו אותו ב**אסימון גישה של Nightscout** (לא ה-API Secret שלכם!). ב-**AAPSClient** ניתן במקום זאת לסרוק את קוד ה-QR של הטלפון הראשי, וכך מוגדר אסימון נפרד למכשיר הלקוח. מכשיר לקוח שצומד עם PIN מקבל אסימון משלו מהטלפון הראשי אחרי הצימוד. ראו [אסימון ה-Nightscout הנפרד של מכשיר הלקוח](#client-master-control-own-token).
 - This enables data to be read and written between both the Nightscout website and **AAPS**.
 - Double check for typos here if you are stuck in Objective 1.
-- השאירו את "שימוש ב־WebSockets" מופעל (מומלץ).
+- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
 ### Synchronization
