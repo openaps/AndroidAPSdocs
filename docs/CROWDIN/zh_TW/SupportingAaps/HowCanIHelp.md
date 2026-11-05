@@ -6,6 +6,16 @@
 
 *為了完全測試新設備，開發者需要備用手機和備用幫浦，因為直到系統穩定之前，他無法在人類身上使用。隨著新型號的推出，也需要進行測試。部分捐款還用於物流費用，例如將這些供應品跨國寄送給開發者。有時也希望能為開發者們提供支援，讓他們能夠走出黑暗的房間，參加會議和活動，讓他們的創造力和分析能力互相激盪。*
 
+(donate-to-aaps)=
+
+### How can I donate?
+
+You can support **AAPS** in several ways:
+
+* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## 我會寫程式！我該如何參與？
 
 太棒了！查看問題列表，並在 Discord 頻道中詢問，總有許多事情可以做！先選擇一個小任務並進行你的首次 pull request！ :)
