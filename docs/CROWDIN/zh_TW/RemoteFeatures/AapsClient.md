@@ -38,18 +38,18 @@
 
 所有現成檔案都在 [GitHub](https://github.com/nightscout/AndroidAPS/releases/) 最新版本的 *Assets* 清單中（點選版本頁面底部的 *Assets* 即可展開）。表格中的 *x.y.z* 代表版本號碼。請選擇符合您裝置的檔案：
 
-| Device                  | 下載檔案                                | 註釋                                                                                                                            |
-| ----------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Android phone or tablet | `app-aapsclient-release_x.y.z.apk`  | 安裝方式與主 app 相同：請參閱 [下載及安裝 AAPSClient](#RemoteControl_aapsclient) 和 [傳輸及安裝](../SettingUpAaps/TransferringAndInstallingAaps.md)。 |
-| Wear OS 手錶              | `wear-aapsclient-release_x.y.z.apk` | 搭配手機上的 AAPSClient app 使用。請參閱 [Wear OS 智慧型手錶](../WearOS/WearOsSmartwatch.md)。                                                  |
-| Windows 電腦              | `AAPSClient-x.y.z.msi`              | 開啟檔案即可安裝。                                                                                                                     |
-| Mac                     | `AAPSClient-x.y.z.dmg`              | 請參閱表格下方關於 macOS 的注意事項。                                                                                                        |
-| Linux（Debian、Ubuntu）    | `aapsclient_x.y.z_amd64.deb`        | 使用您的套件管理員安裝。                                                                                                                  |
-| iPhone                  | 無                                   | 沒有 App Store 版本，也沒有可供下載的檔案。你必須自行建置 app，請參閱 [iPhone 上的 AAPSClient](#aapsclient-iphone)。                                        |
+| 裝置                   | 下載檔案                                | 註釋                                                                                                                            |
+| -------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Android 手機或平板電腦      | `app-aapsclient-release_x.y.z.apk`  | 安裝方式與主 app 相同：請參閱 [下載及安裝 AAPSClient](#RemoteControl_aapsclient) 和 [傳輸及安裝](../SettingUpAaps/TransferringAndInstallingAaps.md)。 |
+| Wear OS 手錶           | `wear-aapsclient-release_x.y.z.apk` | 搭配手機上的 AAPSClient app 使用。請參閱 [Wear OS 智慧型手錶](../WearOS/WearOsSmartwatch.md)。                                                  |
+| Windows 電腦           | `AAPSClient-x.y.z.msi`              | 開啟檔案即可安裝。                                                                                                                     |
+| Mac                  | `AAPSClient-x.y.z.dmg`              | 請參閱表格下方關於 macOS 的注意事項。                                                                                                        |
+| Linux（Debian、Ubuntu） | `aapsclient_x.y.z_amd64.deb`        | 使用您的套件管理員安裝。                                                                                                                  |
+| iPhone               | 無                                   | 沒有 App Store 版本，也沒有可供下載的檔案。你必須自行建置 app，請參閱 [iPhone 上的 AAPSClient](#aapsclient-iphone)。                                        |
 
 **要追蹤兩位使用者？** 上述每個檔案也都有 *aapsclient2* / *AAPSClient2* 版本。這是第二個用戶端 app，會與第一個 app 一起安裝，因此一部裝置就能追蹤兩位使用者（請參閱 [關於 AAPSClient、AAPSClient2 和 AAPSClient3](#remotecontrol-aapsclient-versions)）。 **AAPSClient3** 不在版本資產中，請自行建置（[建置變體](#browserbuild-variant)）。
 
-**請忽略以下檔案：***pumpcontrol* 檔案（`app-pumpcontrol-release_…`、`wear-pumpcontrol-release_…`）並非用戶端。 Leave them out.
+**請忽略以下檔案：***pumpcontrol* 檔案（`app-pumpcontrol-release_…`、`wear-pumpcontrol-release_…`）並非用戶端。將它們排除在外。
 
 **Mac：首次啟動。**此 app 未經 Apple 公證，因此 macOS 第一次開啟時會封鎖它。點選 *完成*，接著開啟 *系統設定 → 隱私權與安全性*，向下捲動並點選 *仍要打開*。
 
