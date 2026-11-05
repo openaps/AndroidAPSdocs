@@ -79,7 +79,7 @@ Vid första starten kör **AAPSClient** samma **Installationsguide** som du kän
 
    ![Steget Ställ in från huvudenheten med knappen Skanna QR-kod](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Kommunikation** – listan med plugins visar bara det som en följare behöver (NSClientV3, xDrip+, Klocka (Wear), Externa hjälpappar, Garmin). Om du inte skannade någon QR-kod, aktivera **NSClientV3** och ange **samma Nightscout-URL** som på huvudtelefonen och en åtkomsttoken, med **websockets** aktiverade – precis som beskrivs i [Synkronisering](#RemoteControl_aapsclient).
+4. **Kommunikation** – listan med plugins visar bara det som en följare behöver (NSClientV3, xDrip+, Klocka (Wear), Externa hjälpappar, Garmin). Om du inte skannade någon QR-kod, aktivera **NSClientV3** och ange **samma Nightscout-URL** som på huvudtelefonen och en åtkomsttoken, med **websockets** aktiverade – precis som beskrivs i [Synkronisering](#RemoteControl_aapsclient). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
    ![Steget Kommunikation på klienten](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
