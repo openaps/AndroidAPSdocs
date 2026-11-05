@@ -6,6 +6,16 @@
 
 *Щоб повністю перевірити нову систему, розробникам потрібні запасний телефон і запасна помпа, бо систему не можна використовувати на людині, доки вона не стане стабільною. Нові моделі потрібно перевіряти, коли вони з'являються. Частина пожертв потрібна також на доставку цього обладнання розробникам з інших країн. Іноді також добре допомогти розробникам з витратами, щоб вони могли вийти зі своїх темних кімнат і зустрітися на конференціях і заходах, де вони обмінюються ідеями.*
 
+(donate-to-aaps)=
+
+### How can I donate?
+
+You can support **AAPS** in several ways:
+
+* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## Я вмію писати код! Як мені долучитися?
 
 Ура! Перегляньте issues (завдання) на GitHub, запитайте в каналі Discord — роботи завжди багато! Спочатку виберіть невелике завдання і зробіть свій перший pull request! :)
