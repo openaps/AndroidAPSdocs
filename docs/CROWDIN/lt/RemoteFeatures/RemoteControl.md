@@ -74,7 +74,9 @@ Naudotojas turi užtikrinti, kad __abu__ telefonai – AAPS ir AAPS Client – b
 
 - Tuose pačiuose nustatymuose laukelyje **Nightscout prieigos raktas** įveskite savo prieigos raktą. Vadovaukitės [šiais](https://nightscout.github.io/nightscout/security/#create-a-token) nurodymais. **AAPS** telefone naudokite **admin prieigos raktą**: su juo **AAPS** kiekvienam sekėjo telefonui sukuria atskirą prieigos raktą.
 
-- **Abiejuose** telefonuose įjunkite **Naudoti WebSocket**. **AAPS** telefone websockets nuotoliniam valdymui yra **būtini**: be jų **AAPS** negali gauti komandų iš **AAPSClient**. Abiejuose telefonuose jie taip pat pagreitina sinchronizaciją, bet šiek tiek daugiau naudoja bateriją.
+- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. Abiejuose telefonuose jie taip pat pagreitina sinchronizaciją, bet šiek tiek daugiau naudoja bateriją.
+
+  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ![Parametrai > NSClientV3 su Nightscout URL, Nightscout prieigos raktu ir Naudoti WebSocket](../images/preferences/settings_nsclient.png)
 
