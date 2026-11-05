@@ -27,6 +27,7 @@ Falls bei Dir (oder Deinem **AAPSClient**-Follower) noch das alte Modul **NSClie
 - Gib Deine **Nightscout-URL** und ein **Zugriffstoken** ein (NSClientV3 verwendet ein Zugriffstoken, *nicht* das alte API Secret – siehe [Token erstellen](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - Deine Nightscout-Seite muss die **API v3** unterstützen (Nightscout 15 oder neuer).
 - Wenn Du **Websockets** nutzt, schalte sie auf **beiden** Geräten ein oder aus, also auf Master und Follower – nie nur auf einem.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 Das betrifft nur die Verbindung zwischen App und Nightscout. Deine Daten in Nightscout bleiben unverändert.
