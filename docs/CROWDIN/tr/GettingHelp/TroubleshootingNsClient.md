@@ -32,6 +32,10 @@ Siteniz Azure'da barındırılıyorsa, birçok kişi Heroku'ya taşındıktan so
 
 Azure'daki bağlantı sorunlarına geçici bir çözüm: Uygulama ayarlarında (Application settings) HTTP protokolünü 2.0, Websockets'i de ON olarak ayarlayın
 
+    {admonition} Remote control needs websockets
+    :class: important
+    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+
 * Nightscout'tan KŞ okunamıyor
 
 **AAPS** Nightscout'a doğru bağlanıyor ama KŞ N/A olarak görünüyorsa: [NSClientV3 ayarlarında](#Preferences-nsclient) **Senkronizasyon** bölümünü açın ve **NS'den CGM verilerini al** seçeneğini açın. İstemci kontrolü açıkken ([güçlendirilmiş mod](#client-master-control-hardened-mode)) bu seçenek gizlenir; bu durumda **Konfigürasyon** → **KŞ kaynağı** içinde **NSClient KŞ** seçili olduğunu kontrol edin.
