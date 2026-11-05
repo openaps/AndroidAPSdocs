@@ -13,7 +13,7 @@
 
 如果想了解闭环系统的发展背景与工作原理，可将这篇 2022 年综述文献作为入门参考资料。请注意，该文献发表早于当前主流闭环系统，不可作为现有产品的操作指南：
 
-![封面](../images/FRONTIERS_Logo_Grey_RGB.png) [Closed-Loop Insulin Delivery Systems: Past, Present, and Future Directions](https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2022.919942/full) (Templer, _Frontiers in Endocrinology_, 2022).
+![封面](../images/FRONTIERS_Logo_Grey_RGB.png) [Closed-Loop Insulin Delivery Systems: Past, Present, and Future Directions](https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2022.919942/full) (Templer, _Frontiers in Endocrinology_, 2022)。
 
 所谓 “双激素” 系统可同时输注胰高糖素与胰岛素，目的是预防严重低血糖，实现更精准的血糖管控。首个该类型系统已在欧洲获批，但仅在研究项目范围内提供，其余同类产品仍处于研发阶段。目前均未公开上市。
 
@@ -30,11 +30,11 @@
 
 ## 闭环的由来？
 
-1型糖尿病（T1D）领域商业化技术的发展进程极为缓慢。 2013年，T1D患者群体发起了#WeAreNotWaiting（#我们不再等待）运动。他们利用胰岛素泵、血糖仪等目前可用的技术自己开发了各种系统来改进血糖控制方式、增强安全性、提高生活质量。 These are known as OS-AID (Open-Source Automated Insulin Delivery) systems (formerly DIY systems), because they are not formally approved by health bodies (FDA, NHS etc). There are four main OS-AID systems available: [OpenAPS](https://openaps.org/what-is-openaps/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [Trio](https://triodocs.org).
+1型糖尿病（T1D）领域商业化技术的发展进程极为缓慢。 2013年，T1D患者群体发起了#WeAreNotWaiting（#我们不再等待）运动。他们利用胰岛素泵、血糖仪等目前可用的技术自己开发了各种系统来改进血糖控制方式、增强安全性、提高生活质量。它们被称作 OS‑AID（开源自动胰岛素输注）系统（以前叫 DIY 系统），尚未获得药监机构（FDA、NHS 等）的正式批准。主流 OS‑AID 系统共有四款：[OpenAPS](https://openaps.org/what-is-openaps/)、**AAPS**、[Loop](https://loopkit.github.io/loopdocs/#what-is-loop)、[Trio](https://triodocs.org)。
 
-A great way to understand the fundamentals of OS-AID looping is to read Dana Lewis’s book “Automated Insulin Delivery”. 您可通过[此链接](https://www.artificialpancreasbook.com/)免费获取电子版(或购买实体书)。如果您想更多地了解**AAPS**的开发基础——[OpenAPS](https://openaps.org/what-is-openaps/)的详细信息，[OpenAPS 官网](https://openaps.org/what-is-openaps/)提供了丰富的学习资源。
+想要理解 OS‑AID 闭环的基础原理，推荐阅读 Dana Lewis 所写的《Automated Insulin Delivery》。您可通过[此链接](https://www.artificialpancreasbook.com/)免费获取电子版(或购买实体书)。如果您想更多地了解**AAPS**的开发基础——[OpenAPS](https://openaps.org/what-is-openaps/)的详细信息，[OpenAPS 官网](https://openaps.org/what-is-openaps/)提供了丰富的学习资源。
 
-Several commercial hybrid closed loop systems have also been launched. These are very different to OS-AID systems, mainly because many of them include a “learning algorithm” which adjusts how much insulin is delivered according to your insulin needs from previous days. Many people in the OS-AID community have already tried out commercial systems and compared them with their OS-AID system. You can find out more about how the different systems compare by asking on the dedicated Facebook groups for those systems, on the [AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/) or on [Discord](https://discord.com/invite/4fQUWHZ4Mw).
+目前多款商用混合闭环系统已推出上市。它们和 OS‑AID 系统有很大区别，核心区别在于多数商用方案内置 “自学习算法”，会根据你前几天的胰岛素需求调整胰岛素输注量。不少 OS‑AID 用户体验过商用闭环系统，并把它们和自己的 OS‑AID 系统进行比较。你可以在各个系统对应的 Facebook 专属群组、[AAPS 的 Facebook 群组](https://www.facebook.com/groups/AndroidAPSUsers/)或者 [Discord](https://discord.com/invite/4fQUWHZ4Mw) 上提问，了解更多不同系统之间的区别。
 
 ## 什么是 Android APS (AAPS)？
 
@@ -42,7 +42,7 @@ Several commercial hybrid closed loop systems have also been launched. These are
 
 **图1** Android APS (Artificial Pancreas System，人工胰腺系统)，AAPS的基本构成。
 
-Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System (APS). It makes its insulin dosing calculations using established [OpenAPS](https://openaps.org/) algorithms (a set of rules) developed by the #WeAreNotWaiting T1D community.
+Android APS（**AAPS**）属于混合闭环系统，也叫人工胰腺系统（APS）。 It makes its insulin dosing calculations using established [OpenAPS](https://openaps.org/) algorithms (a set of rules) developed by the #WeAreNotWaiting T1D community.
 
 Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (which can be used with a wider range of insulin pumps) was first developed in 2016 for a family member with type 1 diabetes. 自那时起， 很多与1型糖尿病有关的志愿者计算机开发团队和技术爱好者加入了进来，不断优化升级**AAPS** 。 Today, **AAPS** is used by many thousands of people worldwide. AAPS是一个高度可定制且多功能的系统，由于它是开源的，因此与众多开源糖尿病软件及平台实现良好兼容。目前 **AAPS** 系统的基本组件架构如上**图 1** 所示。
 
