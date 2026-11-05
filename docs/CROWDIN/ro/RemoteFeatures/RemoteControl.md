@@ -74,7 +74,9 @@ The user must ensure that __both__ the AAPS and AAPS Client phones are synched t
 
 - Introduceți **Codul de acces Nightscout** în aceleași setări. Please follow the notes [here](https://nightscout.github.io/nightscout/security/#create-a-token). On the **AAPS** phone use an **admin token**: with it **AAPS** makes a token of its own for each follower phone.
 
-- Activați **Utilizați websockets** pe **ambele** telefoane. On the **AAPS** phone websockets are **required** for remote control: without them, **AAPS** cannot receive commands from **AAPSClient**. On both phones they also make synchronization faster, at the cost of slightly higher battery use.
+- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. On both phones they also make synchronization faster, at the cost of slightly higher battery use.
+
+  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ![Setări > NSClientV3 cu Adresa Nightscout, Codul de acces Nightscout și Utilizați websockets](../images/preferences/settings_nsclient.png)
 
