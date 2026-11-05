@@ -27,6 +27,7 @@
 - יש להזין את **כתובת ה-URL של Nightscout** ואת **אסימון הגישה** (NSClientV3 משתמש באסימון גישה, *לא* ב-API secret הישן — ראו [יצירת אסימון](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - אתר ה-Nightscout שלכם חייב לתמוך ב-**API v3** (Nightscout 15 ומעלה).
 - אם משתמשים ב-**websockets**, יש להפעיל או להשבית אותם **בשני** המכשירים, הראשי והעוקב — אף פעם לא רק באחד מהם.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 השינוי משפיע רק על האופן שבו האפליקציה מתקשרת עם Nightscout; הנתונים שלכם ב-Nightscout לא משתנים.
