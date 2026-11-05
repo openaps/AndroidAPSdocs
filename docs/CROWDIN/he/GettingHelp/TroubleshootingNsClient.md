@@ -32,6 +32,10 @@ If your site is hosted on Azure, many people have found that connection issues h
 
 A workaround to connection issues in Azure is to set in Application settings HTTP protocol to 2.0 and Websockets to ON
 
+    {admonition} Remote control needs websockets
+    :class: important
+    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+
 * No BG reading from Nightscout
 
 אם **AAPS** מתחבר ל-Nightscout כראוי, אבל ערך הסוכר מוצג כ-N/A: ב[הגדרות NSClientV3](#Preferences-nsclient) יש לפתוח את **סנכרון** ולהפעיל את **קבלת נתוני CGM מ־Nightscout**. אפשרות זו מוסתרת כאשר השליטה ממכשיר לקוח מופעלת ([מצב מוקשח](#client-master-control-hardened-mode)); במקרה זה יש לוודא ש**נתוני סוכר מ-NSClient** נבחר ב**הגדרות תצורה** ← **מקור ערכי הסוכר**.
