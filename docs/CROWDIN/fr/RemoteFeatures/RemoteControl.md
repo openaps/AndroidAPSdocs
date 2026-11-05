@@ -74,7 +74,9 @@ L'utilisateur doit s'assurer que les téléphones AAPS et AAPS Client sont __tou
 
 - Saisissez votre **Jeton d'accès Nightscout** dans les mêmes paramètres. Suivez les notes [ici](https://nightscout.github.io/nightscout/security/#create-a-token). Sur le téléphone **AAPS**, utilisez un **jeton admin** : avec lui, **AAPS** crée son propre jeton pour chaque téléphone suiveur.
 
-- Activez **Utiliser les websockets** sur les **deux** téléphones. Sur le téléphone **AAPS**, les websockets sont **obligatoires** pour le contrôle à distance : sans eux, **AAPS** ne peut pas recevoir de commandes d'**AAPSClient**. Sur les deux téléphones, ils rendent aussi la synchronisation plus rapide, mais consomment un peu plus de batterie.
+- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. Sur les deux téléphones, ils rendent aussi la synchronisation plus rapide, mais consomment un peu plus de batterie.
+
+  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ![Paramètres > NSClientV3 avec URL Nightscout, Jeton d'accès Nightscout et Utiliser les websockets](../images/preferences/settings_nsclient.png)
 
