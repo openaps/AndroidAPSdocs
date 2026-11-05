@@ -333,7 +333,7 @@ GitHub 顯示 **找不到頁面**（404）？請先確認你已在此瀏覽器�
 
    ![無法連線至這個網站](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
 
-   ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
+   ![複製圖示](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
 
 4. 請在幾分鐘內返回設定頁面所在的分頁：Google 的回應只會在短時間內有效，而且只能使用一次。將網址貼到 **在此貼上複製的網址**，然後點選 **取得 GDRIVE_OAUTH2**。頁面會顯示 **GDRIVE_OAUTH2 已就緒**。
 
