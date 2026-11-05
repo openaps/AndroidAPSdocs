@@ -243,7 +243,7 @@ Stlačte „**Adresa Nightscoutu**“ a zadajte adresu svojho osobného servera 
 
 Stlačte „**Nightscout prístupový token**“ a zadajte prístupový token pre váš server Nightscout. Bez tohto tokenu prístup nebude fungovať. Ak ho ešte nemáte, pozrite si dokumentáciu k nastaveniu reportovacieho servera.
 
-Nechajte zapnuté „**Použiť websockety**“ pre komunikáciu s Nightscoutom v reálnom čase.
+Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 Ostatné časti môžete zatiaľ nechať v predvolenom nastavení. Popisujeme ich tu, aby ste neskôr vedeli, kde ich nájdete:
 
