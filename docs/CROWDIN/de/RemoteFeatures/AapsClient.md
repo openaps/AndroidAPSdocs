@@ -79,7 +79,7 @@ Beim ersten Start führt **AAPSClient** denselben **Einrichtungsassistenten** au
 
    ![The Set up from the master step with the Scan the QR code button](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Kommunikation** – die Liste bietet nur die Module an, die ein Follower braucht (NSClientV3, xDrip+, Wear, External Companion Apps, Garmin). Wenn Du keinen QR-Code gescannt hast, aktiviere **NSClientV3** und trage **dieselbe Nightscout-URL** wie auf dem Haupt-Smartphone sowie ein Zugriffstoken ein, mit eingeschalteten **Websockets** – genau wie unter [Synchronisation](#RemoteControl_aapsclient) beschrieben.
+4. **Kommunikation** – die Liste bietet nur die Module an, die ein Follower braucht (NSClientV3, xDrip+, Wear, External Companion Apps, Garmin). Wenn Du keinen QR-Code gescannt hast, aktiviere **NSClientV3** und trage **dieselbe Nightscout-URL** wie auf dem Haupt-Smartphone sowie ein Zugriffstoken ein, mit eingeschalteten **Websockets** – genau wie unter [Synchronisation](#RemoteControl_aapsclient) beschrieben. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
    ![Communication step on the client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
