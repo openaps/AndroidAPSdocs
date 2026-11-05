@@ -79,7 +79,7 @@ The iPhone version pairs with the master like the others. Unlike the computer ve
 
    ![QR kodunu tarayın düğmesiyle Ana birimden kurulumu yapın adımı](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **İletişim**: eklenti listesi yalnızca bir takipçinin ihtiyaç duyduklarını sunar (NSClientV3, xDrip+, Wear, Harici yardımcı uygulamalar, Garmin). Bir QR kodu taramadıysanız, **NSClientV3**'ü etkinleştirin, ana telefondakiyle **aynı Nightscout URL**'sini ve bir erişim belirtecini girin, **websockets** etkin olsun; tam olarak [Senkronizasyon](#RemoteControl_aapsclient) bölümünde açıklandığı gibi.
+4. **İletişim**: eklenti listesi yalnızca bir takipçinin ihtiyaç duyduklarını sunar (NSClientV3, xDrip+, Wear, Harici yardımcı uygulamalar, Garmin). Bir QR kodu taramadıysanız, **NSClientV3**'ü etkinleştirin, ana telefondakiyle **aynı Nightscout URL**'sini ve bir erişim belirtecini girin, **websockets** etkin olsun; tam olarak [Senkronizasyon](#RemoteControl_aapsclient) bölümünde açıklandığı gibi. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
    ![İstemcide İletişim adımı](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
