@@ -6,6 +6,16 @@
 
 *새 장비를 충분히 테스트하려면 개발자에게 여분의 휴대폰과 여분의 펌프가 필요합니다. 안정되기 전에는 사람에게 사용할 수 없기 때문입니다. 새 모델이 나오면 테스트해야 합니다. 기부금의 일부는 이 장비를 여러 나라의 개발자에게 보내는 배송비로도 필요합니다. 가끔은 개발자들이 어두운 방에서 나와 학회나 행사에서 서로 만나 창의적이고 분석적인 생각을 나눌 수 있도록 비용을 지원하는 것도 좋습니다.*
 
+(donate-to-aaps)=
+
+### How can I donate?
+
+You can support **AAPS** in several ways:
+
+* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## 코드를 작성할 수 있습니다! 어떻게 참여합니까?
 
 좋습니다! 이슈를 살펴보고 Discord 채널에서 물어보십시오. 할 일은 언제나 많습니다! 처음에는 작은 작업을 골라 첫 pull request를 보내십시오! :)
