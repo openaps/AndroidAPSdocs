@@ -79,7 +79,7 @@ Při prvním spuštění **AAPSClient** projde stejným **Průvodcem nastavením
 
    ![Krok Nastavit z hlavního zařízení s tlačítkem Naskenujte QR kód](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Komunikace** – seznam pluginů nabízí jen to, co sledující potřebuje (NSClientV3, xDrip+, Wear, Externí aplikace, Garmin). Pokud jste nenaskenovali QR kód, povolte **NSClientV3** a zadejte **stejnou URL Nightscoutu** jako na hlavním telefonu a přístupový token, se zapnutými **websockety** – přesně jak je popsáno v části [Synchronizace](#RemoteControl_aapsclient).
+4. **Komunikace** – seznam pluginů nabízí jen to, co sledující potřebuje (NSClientV3, xDrip+, Wear, Externí aplikace, Garmin). Pokud jste nenaskenovali QR kód, povolte **NSClientV3** a zadejte **stejnou URL Nightscoutu** jako na hlavním telefonu a přístupový token, se zapnutými **websockety** – přesně jak je popsáno v části [Synchronizace](#RemoteControl_aapsclient). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
    ![Krok Komunikace na klientovi](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
