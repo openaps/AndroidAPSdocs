@@ -79,7 +79,7 @@ Na primeira inicialização, o **AAPSClient** executa o mesmo **Assistente de Co
 
    ![O passo Configurar a partir do dispositivo principal com o botão Escaneie o código QR](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Comunicação** — a lista de plugins oferece apenas o que um seguidor precisa (NSClientV3, xDrip+, Wear, Apps companheiros externos, Garmin). Se você não leu um código QR, ative o **NSClientV3** e digite a **mesma URL do Nightscout** do telefone principal e um token de acesso, com os **websockets** ativados — exatamente como descrito em [Sincronização](#RemoteControl_aapsclient).
+4. **Comunicação** — a lista de plugins oferece apenas o que um seguidor precisa (NSClientV3, xDrip+, Wear, Apps companheiros externos, Garmin). Se você não leu um código QR, ative o **NSClientV3** e digite a **mesma URL do Nightscout** do telefone principal e um token de acesso, com os **websockets** ativados — exatamente como descrito em [Sincronização](#RemoteControl_aapsclient). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
    ![Passo Comunicação no cliente](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
