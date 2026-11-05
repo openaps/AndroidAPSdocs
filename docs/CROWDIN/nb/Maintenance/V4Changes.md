@@ -27,6 +27,7 @@ Hvis du (eller **AAPSClient**-følgeren din) fortsatt synkroniserte med den gaml
 - Skriv inn **Nightscout-URL-en** din og et **tilgangstoken** (NSClientV3 bruker et tilgangstoken, *ikke* den gamle API-nøkkelen — se [lage et token](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - Nightscout-siden din må støtte **API v3** (Nightscout 15 eller nyere).
 - Hvis du bruker **websockets**, slå dem på eller av på **både** hovedenheten og følgeren — aldri bare på én av dem.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 Dette påvirker bare hvordan appen snakker med Nightscout; dataene dine på Nightscout er uendret.
