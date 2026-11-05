@@ -243,7 +243,7 @@ Burada Nightscout raporlama sunucusunu ayarlarsınız. NSClientV3 ayarları kayd
 
 "**Nightscout erişim belirteci**" seçeneğine basın ve Nightscout sunucunuzun erişim belirtecini girin. Bu belirteç olmadan erişim çalışmaz. Henüz yoksa lütfen raporlama sunucusunun kurulumuyla ilgili dokümantasyona bakın.
 
-Nightscout ile gerçek zamanlı iletişim için "**Websocket'leri kullan**" seçeneğini açık bırakın.
+Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 Diğer bölümleri şimdilik varsayılan değerlerinde bırakabilirsiniz. Daha sonra nerede bulacağınızı bilmeniz için burada açıklanmıştır:
 
