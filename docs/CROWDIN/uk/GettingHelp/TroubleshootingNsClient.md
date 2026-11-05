@@ -32,6 +32,10 @@ Android може перевести ваш телефон у режим сну. 
 
 Обхідний шлях для проблем зі з’єднанням в Azure: в Application settings встановіть HTTP protocol на 2.0, а Websockets на ON
 
+    {admonition} Remote control needs websockets
+    :class: important
+    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+
 * Немає даних ГК з Nightscout
 
 Якщо **AAPS** правильно підключається до Nightscout, але ГК показується як N/A: у [налаштуваннях NSClientV3](#Preferences-nsclient) відкрийте **Синхронізація** і ввімкніть **Отримувати дані CGM з NS**. Цей параметр приховано, коли ввімкнено керування клієнтом ([захищений режим](#client-master-control-hardened-mode)); у такому разі перевірте, що в **Конфігурація** → **Джерело ГК** вибрано **NSClient ГК**.
