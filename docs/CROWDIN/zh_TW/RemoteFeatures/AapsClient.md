@@ -11,7 +11,7 @@
 
 ```{admonition} Which devices can run AAPSClient?
 :class: note
-From **AAPS** version 4, **AAPSClient** runs on Android phones and tablets, on Wear OS watches and on computers (Windows, Mac and Linux). On an iPhone there is no ready-made download: you build the app yourself. See the [table of downloads by device](#aapsclient-platforms).
+自 AAPS 4 版起，AAPSClient 可在 Android 手機和平板、Wear OS 手錶，以及 Windows、Mac 和 Linux 電腦上執行。 iPhone 沒有現成的下載檔，您必須自行建置 app。請參閱[依裝置分類的下載表格](#aapsclient-platforms)。
 ```
 
 ```{contents} Table of contents
@@ -36,9 +36,9 @@ From **AAPS** version 4, **AAPSClient** runs on Android phones and tablets, on W
 (aapsclient-platforms)=
 ## 取得 App
 
-All the ready-made files are in the *Assets* list of the latest release on [GitHub](https://github.com/nightscout/AndroidAPS/releases/) (click *Assets* at the bottom of the release to expand it). In the table, *x.y.z* stands for the version number. Choose the file that matches your device:
+所有現成檔案都在 [GitHub](https://github.com/nightscout/AndroidAPS/releases/) 最新版本的 *Assets* 清單中（點選版本頁面底部的 *Assets* 即可展開）。表格中的 *x.y.z* 代表版本號碼。請選擇符合您裝置的檔案：
 
-| Device                  | File to download                    | 註釋                                                                                                                                                                                           |
+| Device                  | 下載檔案                                | 註釋                                                                                                                                                                                           |
 | ----------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Android phone or tablet | `app-aapsclient-release_x.y.z.apk`  | Install it like the main app: see [Download and installation of AAPSClient](#RemoteControl_aapsclient) and [Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md). |
 | Wear OS watch           | `wear-aapsclient-release_x.y.z.apk` | Goes with the AAPSClient app on the phone. See [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md).                                                                                          |
