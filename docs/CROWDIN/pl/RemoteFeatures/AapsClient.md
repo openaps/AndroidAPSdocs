@@ -79,7 +79,7 @@ Przy pierwszym uruchomieniu **AAPSClient** uruchamia ten sam **Kreator konfigura
 
    ![Krok Konfiguracja z telefonu pacjenta z przyciskiem Zeskanuj kod QR](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Komunikacja** – lista wtyczek pokazuje tylko to, czego potrzebuje obserwujący (NSClientV3, xDrip+, Wear, Zewnętrzne aplikacje towarzyszące, Garmin). Jeśli nie zeskanowałeś kodu QR, włącz **NSClientV3** i wpisz **ten sam adres URL strony Nightscout** co na głównym telefonie oraz token dostępu, z włączonymi **websockets** – dokładnie tak, jak opisano w [Synchronizacja](#RemoteControl_aapsclient).
+4. **Komunikacja** – lista wtyczek pokazuje tylko to, czego potrzebuje obserwujący (NSClientV3, xDrip+, Wear, Zewnętrzne aplikacje towarzyszące, Garmin). Jeśli nie zeskanowałeś kodu QR, włącz **NSClientV3** i wpisz **ten sam adres URL strony Nightscout** co na głównym telefonie oraz token dostępu, z włączonymi **websockets** – dokładnie tak, jak opisano w [Synchronizacja](#RemoteControl_aapsclient). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
    ![Krok Komunikacja na urządzeniu opiekuna](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
