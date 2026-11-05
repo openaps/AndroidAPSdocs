@@ -372,7 +372,7 @@ Když používáte NSClientV3, musí všechny uploadery používat Nightscout AP
 - V Nightscoutu vytvořte *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (pro API V3 je potřeba [Nightscout 15](https://nightscout.github.io/update/update/)) a zadejte ho do pole **Přístupový token Nightscoutu** (ne váš API Secret!). V **AAPSClient** můžete místo toho naskenovat QR kód z hlavního telefonu, který nastaví vlastní token klienta. Klient spárovaný pomocí PINu dostane po spárování vlastní token z hlavního telefonu. Viz [Vlastní Nightscout token klienta](#client-master-control-own-token).
 - Toto umožňuje čtení a zápis dat mezi webem Nightscout a **AAPS**.
 - Pokud se nemůžete dostat přes Cíl 1, zkontrolujte, zda zde nemáte překlep.
-- Nechte „Použít websockety“ zapnuté (doporučeno).
+- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
 ### Synchronizace
