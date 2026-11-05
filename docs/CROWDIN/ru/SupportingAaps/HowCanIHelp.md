@@ -6,6 +6,16 @@ Developers are parents, caregivers, loved ones and people with diabetes working 
 
 *Для полного тестирования новой техники необходимо иметь дополнительный телефон и запасную помпу, так как людям нельзя пользоваться системой пока она не будет стабильной. Новые модели нуждаются в тестировании по мере появления. Некоторые из жертвуемых денег необходимы для расходов на доставку этих устройств разработчикам в разных странах. Иногда полезно сделать пожертвование, чтобы разработчики могли оставить свои темные комнаты и встретиться друг с другом на конференциях и мероприятиях, где они смогут дать своим творческим и аналитическим мозгам столкнуться.*
 
+(donate-to-aaps)=
+
+### How can I donate?
+
+You can support **AAPS** in several ways:
+
+* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## Я могу написать код! Как принять участие?
 
 Ура! Изучите проблемы, поспрашивайте в канале gitter, там всегда много дел! Сначала выберите небольшую задачу и внесите первый вклад в общий проект! :)
