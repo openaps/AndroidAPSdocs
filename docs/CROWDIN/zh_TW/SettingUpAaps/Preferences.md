@@ -372,7 +372,7 @@ NSClient 外掛（在組態選單中顯示為 **NSClientV3**）會與 Nightscout
 - 請在 Nightscout 中建立*[管理員權杖](https://nightscout.github.io/nightscout/security/#create-a-token)*（使用 V3 API 需要 [Nightscout 15](https://nightscout.github.io/update/update/)），並將權杖輸入**Nightscout 存取權杖**欄位（請勿輸入您的 API Secret！）。在**AAPSClient**上，您也可以掃描主要手機的 QR Code，系統會為用戶端建立專屬權杖。使用 PIN 碼配對的用戶端，配對後會從主要手機取得專屬權杖。請參閱[用戶端專屬的 Nightscout 權杖](#client-master-control-own-token)。
 - 這使得資料能在Nightscout網站與**AAPS**之間讀取和寫入。
 - 如果你在目標 1 中遇到困難，請再次檢查是否有拼寫錯誤。
-- 請保持「使用 websockets」為啟用狀態（建議設定）。
+- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
 ### 同步選項
