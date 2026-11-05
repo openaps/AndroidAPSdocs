@@ -27,6 +27,7 @@
 - Въведете своя **Nightscout адрес** и **токен за достъп** (NSClientV3 използва токен за достъп, *а не* стария API secret – вижте [създаване на токен](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - Вашият сайт Nightscout трябва да поддържа **API v3** (Nightscout 15 или по-нов).
 - Ако използвате **websockets**, включете ги или ги изключете на **двете** устройства – главния телефон и последователя – никога само на едното.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 Това засяга само начина, по който приложението комуникира с Nightscout; данните ви в Nightscout не се променят.
