@@ -134,7 +134,7 @@ Rett kameraet mot koden. Klienten viser hva koden gjør — Nightscout-adressen 
 
 ```{admonition} Scanning is available on Android
 :class: note
-A computer without camera: use the PIN there.
+En datamaskin uten kamera: bruk PIN-koden der.
 ```
 
 #### Skrive inn PIN-koden
