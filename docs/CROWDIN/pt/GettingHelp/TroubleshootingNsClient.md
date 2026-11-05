@@ -32,6 +32,10 @@ Se o seu site estiver alojado no Azure, muitas pessoas notaram que os problemas 
 
 Uma solução alternativa para problemas de ligação no Azure é definir, em Application settings, HTTP protocol para 2.0 e Websockets para ON
 
+    {admonition} Remote control needs websockets
+    :class: important
+    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+
 * Sem valores de glicose do Nightscout
 
 Se o **AAPS** se liga corretamente ao Nightscout mas a glicose aparece como N/A: nas [definições do NSClientV3](#Preferences-nsclient), abra **Sincronização** e ative **Receber dados CGM do NS**. Esta opção fica oculta enquanto o controlo pelo cliente estiver ligado ([modo reforçado](#client-master-control-hardened-mode)); nesse caso, verifique se **Glicose NSClient** está selecionada em **Configuração** → **Fonte da Glicose**.
