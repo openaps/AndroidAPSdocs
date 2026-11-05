@@ -6,6 +6,16 @@ Geliştiriciler; çok yaygın bir ihtiyaca yönelik bir çözüm geliştirmek ve
 
 *Yeni bir teçhizatı tam olarak test etmek için geliştiricilerin yedek bir telefona ve yedek bir pompaya sahip olmaları gerekir, çünkü kararlı olana kadar bir insan üzerinde kullanılamaz. Daha yeni modeller piyasaya çıktıkça test edilmelidir. Bağışlanan paranın bir kısmı, bu malzemelerin ülkeler arasında geliştiricilere nakliyesinin lojistik maliyetleri için de gereklidir. Bazen geliştiricilerin karanlık odalarından çıkıp konferanslarda ve etkinliklerde buluşmalarının ve yaratıcı ve analitik fikirlerini paylaşmalarının masraflarına katkıda bulunmak da güzeldir.*
 
+(donate-to-aaps)=
+
+### How can I donate?
+
+You can support **AAPS** in several ways:
+
+* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## Kod yazabilirim! Nasıl katılırım?
 
 Hey! Konulara (issues) bakın, discord kanalında sorun, her zaman yapılacak çok iş var! İlk başta küçük bir görev seçin ve ilk çekme isteğinizi yapın! :)
