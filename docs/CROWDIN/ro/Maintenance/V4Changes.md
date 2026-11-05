@@ -27,6 +27,7 @@ If you (or your **AAPSClient** follower) were still synchronizing with the old *
 - Enter your **Nightscout URL** and an **access token** (NSClientV3 uses an access token, *not* the old API secret — see [creating a token](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - Site-ul dumneavoastră Nightscout trebuie să accepte **API v3** (Nightscout 15 sau mai nou).
 - If you use **websockets**, enable or disable them on **both** the master and the follower — never on only one.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 This affects only how the app talks to Nightscout; your data on Nightscout is unchanged.
