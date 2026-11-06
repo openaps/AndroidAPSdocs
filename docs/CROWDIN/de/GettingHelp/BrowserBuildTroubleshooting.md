@@ -3,95 +3,95 @@
 # Browser-Build: Fehlerbehebung
 
 ```{note}
-This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
+Diese Seite sammelt Tipps zur Fehlerbehebung beim [Browser-Build](../SettingUpAaps/BrowserBuild.md).
 ```
 
 (aaps-builder-troubleshooting)=
 
 ## AAPS Builder
 
-### Step 1: the repository
+### Schritt 1: Das Repository
 
 (aaps-builder-ts-repo-exists)=
 
-#### "my-aaps already exists in this account"
+#### „my-aaps already exists in this account“
 
 ![Repository already exists](../images/Building-the-App/CI/AapsBuilder70_RepoExists.png)
 
-You already have this repository, for example from an earlier attempt. Close the GitHub tab, keep that name in step 1 of the setup page and go on. If you already did steps 2 and 3 for it, your key is still in it: continue with [step 4](#aaps-builder-step4). If it was made with an earlier version of the setup page, update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). You prefer a fresh start? Type another name, for example `my-aaps-2`, and use the same keystore in step 2.
+Du hast dieses Repository schon, zum Beispiel von einem früheren Versuch. Schließe den GitHub-Tab, behalte den Namen in Schritt 1 der Einrichtungsseite und mach weiter. Hast Du dafür schon die Schritte 2 und 3 gemacht, ist Dein Schlüssel noch darin: Mach mit [Schritt 4](#aaps-builder-step4) weiter. Wurde es mit einer früheren Version der Einrichtungsseite angelegt, aktualisiere seinen Workflow einmal, wie unter [AAPS aktualisieren](#aaps-builder-updates) beschrieben. Du möchtest lieber neu anfangen? Gib einen anderen Namen ein, zum Beispiel `my-aaps-2`, und verwende in Schritt 2 denselben Keystore.
 
 (aaps-builder-ts-user-not-found)=
 
-#### "No GitHub user with this name"
+#### „No GitHub user with this name“
 
 ![No GitHub user](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
 
 - **"No GitHub user with this name"** in Schritt 1: Gib Deinen GitHub-Benutzernamen so ein, wie er in Deinem GitHub-Profil steht, nicht Deine E-Mail-Adresse.
 - **Kein Knopf „Build AAPS“ oder „Run workflow“, oder das Repository ist leer**: Das Repository wurde nicht aus der Vorlage angelegt. Lösche es (**Settings** → unten auf der Seite → **Delete this repository**) und führe [Schritt 1](#aaps-builder-step1) mit dem Knopf **Create my private repository** erneut aus.
 
-### Step 3: the secret
+### Schritt 3: Das Secret
 
 (aaps-builder-ts-404)=
 
-#### "Page not found" (404)
+#### „Page not found“ (404)
 
 ![GitHub 404](../images/Building-the-App/CI/AapsBuilder79_404.png)
 
 - **"Page not found" (404), wenn die Einrichtungsseite GitHub öffnet**: Melde Dich im selben Browser bei github.com an (bei privaten Repositorys zeigt GitHub 404 an, wenn Du nicht angemeldet bist). Bist Du angemeldet, passt der Benutzername oder Repository-Name aus Schritt 1 der Einrichtungsseite nicht zu Deinem Repository. Gib die exakten Namen ein.
 
-### Step 4: the build
+### Schritt 4: Der Build
 
 (aaps-builder-ts-workflow-not-found)=
 
-#### "This workflow does not exist"
+#### „This workflow does not exist“
 
 ![This workflow does not exist](../images/Building-the-App/CI/AapsBuilder71_WorkflowNotFound.png)
 
-Right after the repository is created, GitHub may not have read its workflow file yet: **Build AAPS** is missing from the **Actions** tab, and there is no **Run workflow** button. Any small change to the file makes GitHub read it:
+Direkt nach dem Anlegen des Repositorys hat GitHub die Workflow-Datei eventuell noch nicht eingelesen: **Build AAPS** fehlt im Tab **Actions**, und es gibt keinen Knopf **Run workflow**. Jede kleine Änderung an der Datei sorgt dafür, dass GitHub sie einliest:
 
-1. In your repository, open **Code**, then the folder `.github`, then `workflows`, then the file `build.yml`.
-2. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
+1. Öffne in Deinem Repository **Code**, dann den Ordner `.github`, dann `workflows` und dann die Datei `build.yml`.
+2. Tippe oben rechts in der Datei auf das Menü **⋯** und dann auf **Edit file… In place** (am Computer klickst Du auf den Stift).
 
    ![File menu](../images/Building-the-App/CI/AapsBuilder72_FileMenu.png)
 
-3. Tap at the very end of the text and add an empty line (Enter). Tap **Commit changes…** at the top.
+3. Tippe ganz ans Ende des Textes und füge eine Leerzeile ein (Enter). Tippe oben auf **Commit changes…**.
 
    ![Editor](../images/Building-the-App/CI/AapsBuilder73_Editor.png)
 
-4. Tap **Commit changes** again.
+4. Tippe noch einmal auf **Commit changes**.
 
    ![Commit changes](../images/Building-the-App/CI/AapsBuilder74_CommitDialog.png)
 
-5. Open the **Actions** tab again: **Build AAPS** is now in the list of workflows (on a phone, the list opens with the icon at the left of **All workflows**). Tap it, then **Run workflow**.
+5. Öffne wieder den Tab **Actions**: **Build AAPS** steht jetzt in der Liste der Workflows (am Smartphone öffnet sich die Liste über das Symbol links neben **All workflows**). Tippe darauf und dann auf **Run workflow**.
 
    ![List of workflows](../images/Building-the-App/CI/AapsBuilder75_WorkflowsSidebar.png)
 
 (aaps-builder-ts-build-failed)=
 
-#### The build failed (red cross)
+#### Der Build ist fehlgeschlagen (rotes Kreuz)
 
-1. On the setup page, tap **Open my builds** and tap the build with the red cross.
+1. Tippe auf der Einrichtungsseite auf **Open my builds** und dann auf den Build mit dem roten Kreuz.
 
    ![Failed build](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
 
-2. The page of the build shows **Failure**, and which part failed: **AAPS / Check** (the repository, the secret, the version or the variant: nothing was built) or **AAPS / Build AAPS**.
+2. Die Seite des Builds zeigt **Failure** und welcher Teil fehlgeschlagen ist: **AAPS / Check** (das Repository, das Secret, die Version oder die Variante – es wurde nichts erstellt) oder **AAPS / Build AAPS**.
 
    ![Build page: Failure](../images/Building-the-App/CI/AapsBuilder77_RunFailed.png)
 
-3. Scroll down to **Annotations**, with your finger on the text, not on the diagram. The red lines explain the problem: tap **Show more** to read the whole message, then find it below.
+3. Scrolle nach unten zu **Annotations**. Lege den Finger dabei auf den Text, nicht auf das Diagramm. Die roten Zeilen erklären das Problem: Tippe auf **Show more**, um die ganze Meldung zu lesen, und suche sie dann unten.
 
    ![Annotations](../images/Building-the-App/CI/AapsBuilder78_Annotations.png)
 
 - **„Secret KEYSTORE_SET is missing“**: Führe Schritt 3 der Einrichtungsseite aus.
 - **Der Build bricht mit „This repository is PUBLIC“ ab**: Öffne in Deinem Repository **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private** und erstelle dann erneut.
-- **"Version … does not exist"**: only released versions of **AAPS** can be built, the ones on the [tags page](https://github.com/nightscout/AndroidAPS/tags) of nightscout/AndroidAPS, such as `3.3.2.0`. A branch name such as `dev` doesn't work. Use `latest`, or type a tag exactly as listed.
+- **„Version … does not exist“**: Nur veröffentlichte Versionen von **AAPS** lassen sich erstellen, also die auf der [Tags-Seite](https://github.com/nightscout/AndroidAPS/tags) von nightscout/AndroidAPS, zum Beispiel `3.3.2.0`. Ein Branch-Name wie `dev` funktioniert nicht. Verwende `latest` oder gib einen Tag genau so ein, wie er aufgeführt ist.
 - **„Variant … is not supported“**: Deine Workflow-Datei ist eine ältere Version. Ersetze sie wie unter [AAPS aktualisieren](#aaps-builder-updates) beschrieben.
 - **"The secret is too short"**, **"The secret is not a valid code"** oder **"The secret does not contain a keystore"**: Im Secret steht der falsche Text, oft das Wort `KEYSTORE_SET` selbst oder nur ein Teil des Codes. Öffne in Deinem Repository **Settings** → **Secrets and variables** → **Actions**, bearbeite `KEYSTORE_SET` und füge den langen Code aus **Copy secret** erneut ein (wiederhole zuerst Schritt 2 der Einrichtungsseite, falls Du sie geschlossen hast).
 - **„Keystore, password or alias is wrong“**: Prüfe Passwort und Alias Deines Keystores und wiederhole dann die Schritte 2 und 3 der Einrichtungsseite.
 - **„Google Drive access has expired or was revoked“**: Wiederhole [Schritt 6](#aaps-builder-google-drive) und aktualisiere das Secret `GDRIVE_OAUTH2`.
-- **Another error**: [read the build log](#aaps-ci-read-the-logs), then [run the build again](#aaps-ci-rerun). If it fails again the same way, ask for help with the name of the failed step and the error lines. Gib niemals den Inhalt Deiner Secrets weiter.
+- **Ein anderer Fehler**: [Lies das Build-Log](#aaps-ci-read-the-logs) und [starte den Build dann erneut](#aaps-ci-rerun). Schlägt er wieder auf dieselbe Weise fehl, bitte um Hilfe und nenne dabei den Namen des fehlgeschlagenen Schritts und die Fehlerzeilen. Gib niemals den Inhalt Deiner Secrets weiter.
 
-### Step 5: the app
+### Schritt 5: Die App
 
 - **Kein Download-Link, oder die GitHub-App hat sich geöffnet**: Die GitHub-App kann keine Builds herunterladen. Öffne den Build in Chrome, wie in [Schritt 5](#aaps-builder-step5) erklärt. Damit GitHub-Links nicht mehr in der App geöffnet werden: Android **Einstellungen** → **Apps** → **GitHub** → **Standardmäßig öffnen** → deaktiviere **Unterstützte Links öffnen**.
 
