@@ -53,7 +53,7 @@ Es wurde nicht aus der Vorlage angelegt. Delete it (**Settings** → bottom of t
 ```{admonition} GitHub says "my-aaps already exists in this account"?
 :class: tip
 
-You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). Siehe [Fehlerbehebung](#aaps-builder-ts-repo-exists).
 ```
 
 ```{admonition} Updating your copy (existing AAPS Builder repository)
