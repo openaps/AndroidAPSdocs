@@ -32,9 +32,9 @@ Falls Deine Nightscout-Seite bei Azure gehostet wird: Viele Nutzer haben eine Zu
 
 Ein Workaround für Verbindungsprobleme in Azure ist, in den 'Application settings' das HTTP Protokoll auf 2.0 zu setzen und die 'Websockets' einzuschalten.
 
-    {admonition} Remote control needs websockets
+    {admonition} Remote-Steuerung braucht Websockets
     :class: important
-    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+    Websockets sind für die Remote-Steuerung über **AAPSClient** auf beiden Smartphones **Pflicht**. Wenn die Websocket-Verbindung immer wieder abbricht, funktioniert die Remote-Steuerung nicht. Die Datensynchronisierung funktioniert noch, aber langsamer. Dein Nightscout-Host muss Websockets unterstützen.
 
 * Keine Blutzuckerwerte von Nightscout
 
