@@ -76,7 +76,7 @@ Stelle sicher, dass __beide__ Smartphones, das AAPS- und das AAPSClient-Smartpho
 
 - Aktiviere auf **beiden** Smartphones **Websockets verwenden**. Websockets sind für die Remote-Steuerung des **AAPSClient** auf beiden Smartphones **zwingend**. Ohne sie kann **AAPSClient** **AAPS** zwar folgen, kann aber nicht remote steuern. Auf beiden Smartphones beschleunigen sie außerdem die Synchronisierung, bei etwas höherem Akkuverbrauch.
 
-  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. Siehe [Fehlerbehebung für NSClient](../GettingHelp/TroubleshootingNsClient.md).
+  Dein Nightscout-Host muss Websockets unterstützen. Wenn die Websocket-Verbindung immer wieder abbricht, funktioniert die Remote-Steuerung nicht. Siehe [Fehlerbehebung für NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ![Settings > NSClientV3 with Nightscout URL, Nightscout access token and Use websockets](../images/preferences/settings_nsclient.png)
 
