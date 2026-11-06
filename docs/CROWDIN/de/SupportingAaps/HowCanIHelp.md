@@ -8,13 +8,13 @@ Eltern, Betreuer, geliebte Personen und Menschen mit Diabetes arbeiten zusammen,
 
 (donate-to-aaps)=
 
-### How can I donate?
+### Wie kann ich spenden?
 
-You can support **AAPS** in several ways:
+Du kannst **AAPS** auf verschiedenen Wegen unterstützen:
 
-* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
-* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
-* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+* **Nightscout Foundation:** Spende bei [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** unterstütze die Anstrengung, AAPS als medizinisches Gerät zu zertifizieren, unter [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** Schicke sie an die Adresse **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
 
 ## Ich kann programmieren! Wie kann ich mich beteiligen?
 
