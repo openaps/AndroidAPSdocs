@@ -55,25 +55,25 @@ Das **Watchface mit Komplikationen** hat sieben Komplikationsplätze. Tippe lang
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | ![Complications watchface, default setup](../images/wearos/complications_watchface_default.png) | ![Complications watchface, alternative setup](../images/wearos/complications_watchface_alternative.png) |
 
-| Platz | Position   | Standard                                                            | Alternative                           |
-| ----- | ---------- | ------------------------------------------------------------------- | ------------------------------------- |
-| 1     | Links      | IoB-Symbol                                                          | CoB & IoB                             |
-| 2     | Mitte      | Blutzucker                                                          | Blutzucker                            |
-| 3     | Rechts     | CoB-Symbol                                                          | BR & Target                           |
-| 4     | Diagramm   | BG-Graph                                                            | BG-Graph                              |
-| 5     | Unten      | BR & Target                                                         | Uploader/Smartphone-Akkustand         |
-| 6     | Oben links | AAPS-Modus                                                          | AAPS-Modus                            |
-| 7     | Top-right  | Uploader/Phone Battery, or an app shortcut to **AAPS Snooze Alert** | App shortcut to **AAPS Snooze Alert** |
+| Platz | Position    | Standard                                                                           | Alternative                                |
+| ----- | ----------- | ---------------------------------------------------------------------------------- | ------------------------------------------ |
+| 1     | Links       | IoB-Symbol                                                                         | CoB & IoB                                  |
+| 2     | Mitte       | Blutzucker                                                                         | Blutzucker                                 |
+| 3     | Rechts      | CoB-Symbol                                                                         | BR & Target                                |
+| 4     | Diagramm    | BG-Graph                                                                           | BG-Graph                                   |
+| 5     | Unten       | BR & Target                                                                        | Uploader/Smartphone-Akkustand              |
+| 6     | Oben links  | AAPS-Modus                                                                         | AAPS-Modus                                 |
+| 7     | Oben rechts | Uploader/Smartphone-Akkustand oder eine App-Verknüpfung zu **AAPS Schlummeralarm** | App-Verknüpfung zu **AAPS Schlummeralarm** |
 
-The **AAPS Snooze Alert** shortcut is picked from the watch's own **App shortcut** complications. Tapping it snoozes the alarm that is sounding on the phone.
+Die Verknüpfung **AAPS Schlummeralarm** wählst Du aus den Komplikationen **App-Verknüpfung** der Smartwatch selbst. Ein Tippen darauf schaltet den Alarm, der gerade auf dem Smartphone ertönt, stumm (Schlummern).
 
 ```{tip}
-Turn on **Always-on display** on the watch (**Settings** > **Display**). The watchface then keeps showing your glucose when the wrist is down, instead of a blank or a plain clock.
+Schalte auf der Smartwatch **Always On Display** ein (**Einstellungen** > **Anzeige**). Das Watchface zeigt dann Deinen Glukosewert weiter an, wenn das Handgelenk unten ist, statt eines leeren Bildschirms oder einer einfachen Uhr.
 ```
 
 ```{admonition} No complication data while the watch is locked
 :class: note
-If a **Lock type** is set under **Settings** > **Security and privacy**, the watch hides complication data while it is locked, and the watchface shows empty slots until you unlock it. To keep the data visible, turn off **Hide information** in the same menu.
+Wenn unter **Einstellungen** > **Sicherheit und Datenschutz** ein **Sperrtyp** festgelegt ist, blendet die Smartwatch Komplikationsdaten aus, solange sie gesperrt ist, und das Watchface zeigt leere Plätze, bis Du sie entsperrst. Damit die Daten sichtbar bleiben, schalte im selben Menü **Informationen ausblenden** aus.
 ```
 
 ### Wear OS 3
@@ -83,26 +83,26 @@ Keine Einschränkung bei **AAPS Wear-** Operationen.
 
 (BuildingAapsWearOs-WearOS5)=
 
-### Wear OS 4 and Wear OS 5
+### Wear OS 4 und Wear OS 5
 
-Example: Galaxy Watch 4, 5, 6, 7 and Ultra or Pixel Watch that have **not** been updated to Wear OS 6 yet. Check the version under **Settings** > **About watch** > **Software**.
+Beispiel: Galaxy Watch 4, 5, 6, 7 und Ultra oder Pixel Watch, die **noch nicht** auf Wear OS 6 aktualisiert wurden. Die Version findest Du unter **Einstellungen** > **Info zur Uhr** > **Software**.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (for Wear OS 5 follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk)). All **AAPS Wear** functions work, but the classic **AAPS** watchfaces are limited as described in the table above: throttled on Wear OS 4, often failing on Wear OS 5.
+Installiere die **AAPS Wear**-APK mit [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (für Wear OS 5 folge [diesem Video](https://www.youtube.com/watch?v=yef_qGvcCnk)). Alle Funktionen von **AAPS Wear** funktionieren, die klassischen **AAPS**-Watchfaces sind aber wie in der Tabelle oben beschrieben eingeschränkt: gedrosselt unter Wear OS 4, oft fehlerhaft unter Wear OS 5.
 
 ```{admonition} Wear OS 5
 :class: warning
-On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
+Unter Wear OS 5 muss das AAPS-Watchface direkt nach der Installation der Wear-App mit Wear Installer 2 ausgewählt werden: Der Installer bietet am Ende der Installation das Watchface **AAPS (Custom)** an. Wechselst Du versehentlich zu einem anderen Watchface, wiederhole die Installation. Die Einstellungen des Watchface (Dunkel, Querbalken farbgleich usw.) lassen sich eventuell nicht ändern.
 
-If the classic watchface currently works for you, **disable automatic watch updates**: the next firmware update is likely to break it. If you update to Wear OS 6 anyway, read the section above: **AAPS** then installs its own watchface in the new format.
+Wenn das klassische Watchface bei Dir zurzeit funktioniert, **schalte automatische Updates der Smartwatch aus**: Das nächste Firmware-Update macht es wahrscheinlich unbrauchbar. Wenn Du trotzdem auf Wear OS 6 aktualisierst, lies den Abschnitt oben: **AAPS** installiert dann sein eigenes Watchface im neuen Format.
 ```
 
-If the watchface is too unreliable, consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication instead. It needs the [External Companion Apps](#external-companion-apps) plugin enabled in **AAPS**.
+Ist das Watchface zu unzuverlässig, nutze stattdessen [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) mit einer Komplikation. Dafür muss in **AAPS** das Modul [Externe Begleit-Apps](#external-companion-apps) aktiviert sein.
 
-### Wear OS 6 and newer
+### Wear OS 6 und neuer
 
-Example: Galaxy Watch 4 and newer with One UI 8 Watch, Pixel Watch after the 2025 update. Most Galaxy and Pixel watches have received this update.
+Beispiel: Galaxy Watch 4 und neuer mit One UI 8 Watch, Pixel Watch nach dem Update 2025. Die meisten Galaxy- und Pixel-Smartwatches haben dieses Update erhalten.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). The classic watchfaces are not available; **AAPS** installs the watchface selected on the phone automatically, see [the watchface AAPS installs](#wearos-aaps-v4-watchface). No limitation in **AAPS Wear** operations.
+Installiere die **AAPS Wear**-APK mit [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). Die klassischen Watchfaces sind nicht verfügbar; **AAPS** installiert automatisch das auf dem Smartphone ausgewählte Watchface, siehe [Das Watchface, das AAPS installiert](#wearos-aaps-v4-watchface). Keine Einschränkungen bei den Funktionen von **AAPS Wear**.
 
 ## So richtest Du eine Samsung Galaxy Watch 4 mit **AAPS** ein
 
@@ -334,7 +334,7 @@ F - Batteriestatus des Smartphones
 
 G - Basalrate (Anzeige in IE/Std. bei Standard-BR und in % während einer TBR)
 
-H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - BGI (Blood Glucose Impact) -> wie stark der Glukosewert allein aufgrund der Insulinwirkung steigen oder fallen „sollte“.
 
 I - Kohlenhydrate (carbs on board | e-carbs in der Zukunft)
 
