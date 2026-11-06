@@ -1,6 +1,6 @@
 # FAQ für Looper
 
-How to add questions to the FAQ: Follow these [instructions](../SupportingAaps/HowToEditTheDocs.md)
+So fügst Du Fragen zu den FAQ hinzu: Folge dieser [Anleitung](../SupportingAaps/HowToEditTheDocs.md)
 
 ## Allgemein
 
@@ -18,7 +18,7 @@ Deshalb sind APKs nicht verfügbar.
 
 ### Wie soll man beginnen?
 
-Start with [Preparing to start with AAPS](../Getting-Started/PreparingForAaps.md): it walks you through everything below in more detail.
+Beginne mit [Vorbereitung für den Start mit AAPS](../Getting-Started/PreparingForAaps.md): Dort wird alles Folgende ausführlicher erklärt.
 
 Zunächst einmal musst du dir **loopbare Hardware-Komponenten** besorgen:
 
@@ -28,17 +28,17 @@ Zunächst einmal musst du dir **loopbare Hardware-Komponenten** besorgen:
 
 Danach musst Du **Deine Software-Komponenten** einrichten: [AAPS](../SettingUpAaps/BuildingAaps.md), eine [CGM/FGM-Quelle](../Getting-Started/CompatiblesCgms.md) und einen [Server für Berichte](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Als Drittes musst Du **das OpenAPS Referenz-Design lernen und verstehen, um Deine Behandlungs-Faktoren zu überprüfen**. Grundvoraussetzung des Loop ist, dass die [Basalraten und Kohlenhydratfaktoren](../SettingUpAaps/YourAapsProfile.md) stimmen. Alle Empfehlungen gehen davon aus, dass der Basalbedarf durch das Basalschema gedeckt ist und auftauchende Blutzuckerschwankungen andere Gründe haben (Bewegung, Stress etc.), für die einmalige Anpassungen erforderlich sind. Die Anpassungen, die der Closed Loop autmatisch vornehmen darf, sind aus Sicherheitsgründen begrenzt (siehe maximale erlaubte temporäre Basalrate [OpenAPS-Referenz-Design](https://openaps.org/reference-design/)). Das bedeutet, dass Du nicht den Loop dafür verwenden solltest, ein falsches Basalratenprofil zu korrigieren. Wenn Du zum Beispiel häufig vor einer Mahlzeit niedrige Werte hast, dann muss wahrscheinlich die Basalrate angepasst werden. You can use [Autotune](#autotune-how-autotune-calculates-adjustments) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Oder Du bestimmst und testest Deine Basalrate auf die [altmodische Art](https://integrateddiabetes.com/basal-testing/).
+Als Drittes musst Du **das OpenAPS Referenz-Design lernen und verstehen, um Deine Behandlungs-Faktoren zu überprüfen**. Grundvoraussetzung des Loop ist, dass die [Basalraten und Kohlenhydratfaktoren](../SettingUpAaps/YourAapsProfile.md) stimmen. Alle Empfehlungen gehen davon aus, dass der Basalbedarf durch das Basalschema gedeckt ist und auftauchende Blutzuckerschwankungen andere Gründe haben (Bewegung, Stress etc.), für die einmalige Anpassungen erforderlich sind. Die Anpassungen, die der Closed Loop autmatisch vornehmen darf, sind aus Sicherheitsgründen begrenzt (siehe maximale erlaubte temporäre Basalrate [OpenAPS-Referenz-Design](https://openaps.org/reference-design/)). Das bedeutet, dass Du nicht den Loop dafür verwenden solltest, ein falsches Basalratenprofil zu korrigieren. Wenn Du zum Beispiel häufig vor einer Mahlzeit niedrige Werte hast, dann muss wahrscheinlich die Basalrate angepasst werden. [Autotune](#autotune-how-autotune-calculates-adjustments) kann eine Möglichkeit sein, große Datenmengen zu analysieren und daraus abzuleiten, ob und wie die Basalrate und/oder Korrekturfaktoren (engl. ISF) angepasst werden müssen und auch, ob die Mahlzeitenfaktoren (engl. carb ratio) geändert werden müssen. Oder Du bestimmst und testest Deine Basalrate auf die [altmodische Art](https://integrateddiabetes.com/basal-testing/).
 
 ### Was ist beim Loopen zweckmäßig?
 
 #### Passwort-Schutz
 
-If you don't want your settings to be easily changed, you can protect them with a password, a PIN or your phone's biometric authentication (fingerprint, face). Open **Settings** > **Protection** > **Settings protection** and choose the type of protection. You can also protect the whole app or only boluses in the same place. See [Settings protection](#Preferences-settings-protection) for details.
+Wenn Deine Einstellungen nicht so leicht geändert werden sollen, kannst Du sie mit einem Passwort, einer PIN oder der biometrischen Authentifizierung Deines Smartphones (Fingerabdruck, Gesicht) schützen. Öffne **Einstellungen** > **Zugriffsschutz** > **Schutz der Einstellungen** und wähle die Art des Schutzes. An derselben Stelle kannst Du auch die ganze App oder nur die Boli schützen. Details findest Du unter [Schutz der Einstellungen](#Preferences-settings-protection).
 
 #### Android Wear Smartwatches
 
-If you use the AAPS watch app to bolus or change settings, every request has to be confirmed on the watch: after you send it, the watch shows a summary with a **CONFIRM** button. See [Remote control from a Wear OS watch](../RemoteFeatures/RemoteControlWearOS.md).
+Wenn Du mit der AAPS-Smartwatch-App Boli abgibst oder Einstellungen änderst, muss jede Anfrage auf der Smartwatch bestätigt werden: Nach dem Senden zeigt die Smartwatch eine Zusammenfassung mit dem Knopf **BESTÄTIGEN**. Siehe [Steuerung über eine Wear OS-Smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
 
 (FAQ-disconnect-pump)=
 
@@ -46,7 +46,7 @@ If you use the AAPS watch app to bolus or change settings, every request has to 
 
 Wenn Du Deine Pumpe zum Duschen, Baden und Schwimmen, Sport oder anderen Aktivitäten abnimmst, musst Du AAPS wissen lassen, dass kein Insulin geliefert wird. Nur so kann die IOB-Berechnung korrekt erfolgen.
 
-The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the AAPS main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, press the icon again and pick a new duration: you don't need to reconnect first. See [Disconnecting the pump for showering or activity](#pumps-cannulas-disconnecting) for how to avoid a lack of insulin during long disconnections.
+Die Pumpe kannst Du über das [Loop-Symbol](#AapsScreens-loop-status) auf dem AAPS-Startbildschirm trennen: Tippe darauf und wähle **Pumpe trennen** mit der gewünschten Dauer. Dauert die Aktivität länger als geplant, tippe erneut auf das Symbol und wähle eine neue Dauer: Du musst die Pumpe vorher nicht wieder verbinden. Wie Du bei langen Trennungen einen Insulinmangel vermeidest, findest Du unter [Die Pumpe zum Duschen oder für Aktivitäten trennen](#pumps-cannulas-disconnecting).
 
 #### Empfehlungen basieren nicht auf einzelnem CGM-Wert
 
@@ -54,7 +54,7 @@ Zur Sicherheit macht AAPS die Vorschläge auf Basis des aktuellen Glukose-Dursch
 
 #### Weiterführende Literatur
 
-There are several blogs with good tips to help you understand the practicalities of looping. Some of them are no longer online: the links below marked "archived copy" open a saved copy on the Internet Archive.
+Es gibt mehrere Blogs mit guten Tipps, die Dir helfen, das Loopen im Alltag zu verstehen. Einige davon sind nicht mehr online: Die unten mit „archived copy“ markierten Links öffnen eine gespeicherte Kopie im Internet Archive.
 
     * [Fine-tuning Settings](https://web.archive.org/web/20171029031305/http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM (archived copy)
     * [Why DIA matters](https://web.archive.org/web/20231130035027/http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM (archived copy)
@@ -70,19 +70,19 @@ Zunächst musst du natürlich dieselbe Notfall-Ausrüstung mitnehmen wie jeder a
 
 * Powerbar und Kabel, um bei Bedarf Dein Smartphone, Deine Uhr und ggf. Dein Bluetooth Reader laden zu können.
 * Pumpenbatterien
-* Access to your backups, both on the phone and in the cloud (e.g. Google Drive, Dropbox), so that you can set up AAPS again on another phone (see [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md)): 
-  * the current [apk](../SettingUpAaps/BuildingAaps.md) of AAPS and of any other apps you use (e.g. xDrip, Juggluco, BYODA).
-  * your keystore file (from building the apk) and its password,
-  * your latest settings export files from AAPS and your other apps,
-  * your **AAPS** master password: you cannot import the settings file without it.
+* Zugriff auf Deine Backups, sowohl auf dem Smartphone als auch in der Cloud (z. B. Google Drive, Dropbox), damit Du AAPS auf einem anderen Smartphone neu einrichten kannst (siehe [Backups erstellen und wiederherstellen](../Maintenance/ExportImportSettings.md)): 
+  * die aktuelle [APK](../SettingUpAaps/BuildingAaps.md) von AAPS und von allen anderen Apps, die Du nutzt (z. B. xDrip, Juggluco, BYODA),
+  * Deine Keystore-Datei (vom Erstellen der APK) und ihr Passwort,
+  * Deine neuesten Einstellungs-Exportdateien von AAPS und Deinen anderen Apps,
+  * Dein **AAPS**-Master-Passwort: Ohne es kannst Du die Einstellungsdatei nicht importieren.
 
 (FAQ-organize-backups)=
 
-#### How to organize my backups?
+#### Wie organisiere ich meine Backups?
 
-Export settings very regularly: after each pod or reservoir change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Behalte mehrere alte Exportdateien.
+Exportiere Deine Einstellungen sehr regelmäßig: nach jedem Pod- oder Reservoirwechsel, nach Änderungen an Deinem Profil, wenn Du ein Ziel abgeschlossen hast, wenn Du die Pumpe wechselst … Auch wenn sich nichts ändert, exportiere einmal im Monat. Behalte mehrere alte Exportdateien.
 
-**AAPS** can do this for you: it can export your settings automatically (for example with an [Automation](#ExportImportSettings-Automating-Settings-Export) after each pod change) and save the export directly to a cloud folder (Google Drive). See [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md).
+**AAPS** kann das für Dich übernehmen: Es kann Deine Einstellungen automatisch exportieren (zum Beispiel mit einer [Automatisierung](#ExportImportSettings-Automating-Settings-Export) nach jedem Pod-Wechsel) und den Export direkt in einem Cloud-Ordner (Google Drive) speichern. Siehe [Backups erstellen und wiederherstellen](../Maintenance/ExportImportSettings.md).
 
 ### Wie kann ich den CGM/FGM sicher und zuverlässig befestigen?
 
@@ -92,9 +92,9 @@ Du kannst es fixieren. Sie können auch Oberarm - Armbänder kaufen, die das CGM
 
 ## Der APS Algorithmus
 
-### Why does OpenAPS AMA show "dia: 3" even though I have a different DIA in my profile?
+### Warum zeigt OpenAPS AMA „dia: 3“, obwohl in meinem Profil eine andere DIA eingestellt ist?
 
-With **OpenAPS AMA** selected in **Configuration** > **APS**, **Open plugin** shows the data sent to the algorithm. In its **Profile** section, `dia` is always 3.0 or less:
+Wenn unter **Konfiguration** > **APS** **OpenAPS AMA** ausgewählt ist, zeigt **Plugin öffnen** die Daten, die an den Algorithmus gesendet werden. Im Abschnitt **Profil** steht `dia` immer auf 3.0 oder weniger:
 
 ![OpenAPS AMA plugin screen with dia 3.0 in the profile data](../images/screens/openaps_ama_plugin.png)
 
@@ -106,42 +106,42 @@ Im AMA bedeutet "dia" nicht "Insulinwirkungsdauer". Vielmehr ist "dia" ein Param
 
 (FAQ-nsclient-blocked)=
 
-#### AAPSClient (or AAPS) does not upload data: "Blocked by…". Was kann ich tun?
+#### AAPSClient (oder AAPS) lädt keine Daten hoch: „Blockiert durch …“. Was kann ich tun?
 
-The NSClient status shows why no data is sent:
+Der NSClient-Status zeigt, warum keine Daten gesendet werden:
 
-* **Blocked by connectivity options**: the connection settings do not allow the current connection. For example, you are on cellular data but only Wi-Fi is allowed, or you are not on one of the allowed Wi-Fi networks (SSIDs).
-* **Blocked by charging options**: the connection settings only allow syncing while the phone is charging (or only on battery), and this is not the case right now.
-* **No connectivity**: the phone has no internet connection.
+* **Blockiert durch Verbindungsoptionen**: Die Verbindungseinstellungen erlauben die aktuelle Verbindung nicht. Zum Beispiel nutzt Du mobile Daten, es ist aber nur WLAN erlaubt, oder Du bist in keinem der erlaubten WLAN-Netze (SSIDs).
+* **Blockiert durch Ladeoptionen**: Die Verbindungseinstellungen erlauben die Synchronisierung nur beim Laden (oder nur im Akkubetrieb), und das ist gerade nicht der Fall.
+* **Keine Verbindung**: Das Smartphone hat keine Internetverbindung.
 
-Check the [NSClient connection settings](#Preferences-nsclient): **Use cellular data**, **Use roaming**, **Use WiFi**, **WiFi SSID**, **Sync on battery** and **Sync while charging**.
+Prüfe die [Verbindungseinstellungen des NSClient](#Preferences-nsclient): **Mobile Daten verwenden**, **Roaming verwenden**, **WLAN verwenden**, **WLAN SSID**, **Synchronisieren bei Akku** und **Synchronisieren während des Ladens**.
 
 ### CGM Einstellungen
 
 (FAQ-advanced-filtering)=
 
-#### Why does AAPS say 'SMB always and after carbs disabled because active BG source doesn't support advanced filtering'?
+#### Warum meldet AAPS „SMB wird immer und nach Kohlenhydraten deaktiviert, weil die aktive BZ-Quelle keine geeignete Filterung der Werte unterstützt.“?
 
-**Enable SMB always** and **Enable SMB after carbs** can only be used with a [trusted BG data source](#GettingStarted-TrustedBGSource): a sensor and CGM app that can tell **AAPS** which sensor the readings come from. With any other BG source, **AAPS** switches these two options off and shows this message. Check the list of trusted sources and, if your sensor is listed, make sure you use one of the CGM apps shown for it. See also [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+**SMB immer aktivieren** und **SMB nach Mahlzeiten aktivieren** können nur mit einer [vertrauenswürdigen BZ-Datenquelle](#GettingStarted-TrustedBGSource) genutzt werden: einem Sensor mit CGM-App, die **AAPS** mitteilen kann, von welchem Sensor die Werte stammen. Bei jeder anderen BZ-Quelle schaltet **AAPS** diese beiden Optionen aus und zeigt diese Meldung. Prüfe die Liste der vertrauenswürdigen Quellen und stelle, falls Dein Sensor dort aufgeführt ist, sicher, dass Du eine der dafür genannten CGM-Apps nutzt. Siehe auch [Glättung der Glukosewerte](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Pumpe
 
 #### Batterien
 
-Looping can reduce the pump battery faster than normal use because the system interacts through Bluetooth far more than a manual user does. Es wird deshalb empfohlen, die Batterie spätestens bei 25% Ladung zu wechseln, weil dabei die Datenübertragung schon schwieriger werden kann. Du kannst einen Batterieladungsalarm in Nightscout erstellen, indem Du die Variable PUMP_WARN_BATT_P verwendest. Tipps um die Batteriedauer zu erhöhen:
+Das Loopen kann die Pumpenbatterie schneller entladen als die normale Nutzung, weil das System viel häufiger über Bluetooth kommuniziert als ein Mensch bei manueller Bedienung. Es wird deshalb empfohlen, die Batterie spätestens bei 25% Ladung zu wechseln, weil dabei die Datenübertragung schon schwieriger werden kann. Du kannst einen Batterieladungsalarm in Nightscout erstellen, indem Du die Variable PUMP_WARN_BATT_P verwendest. Tipps um die Batteriedauer zu erhöhen:
 
 * verringere die Zeit, bis der Bildschirm der Pumpe sich abschaltet (im Pumpenmenü)
 * Reduziere die Dauer der Displaybeleuchtung bei der Pumpe.
 * Stelle die Pumpenbenachrichtigung auf Töne statt Vibrieren.
 * benutze die Knöpfe auf der Pumpe nur zum Befüllen, alle weiteren Informationen wie Pumpenhistorie, Batteriestand und Reservoir-Füllstand solltest Du über AAPS checken.
-* Das Android-Betriebssystem Deines Smartphones kann öfter das Schließen der AAPS-App erzwingen, um Energie zu sparen oder Speicher freizugeben. Mit jedem Neustart von AAPS, wird auch eine neue Bluetooth-Verbindung zur Pumpe aufgebaut und dabei auch die aktuelle Basalrate und das Bolus-Protokoll neu eingelesen. Das verbraucht viel Energie. To see if this is happening, enable **Log app start event** in the NSClient **Advanced settings**: Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, turn off battery optimization for AAPS so that the phone stops closing it down: see [battery savings](#FAQ-battery-savings) below.
+* Das Android-Betriebssystem Deines Smartphones kann öfter das Schließen der AAPS-App erzwingen, um Energie zu sparen oder Speicher freizugeben. Mit jedem Neustart von AAPS, wird auch eine neue Bluetooth-Verbindung zur Pumpe aufgebaut und dabei auch die aktuelle Basalrate und das Bolus-Protokoll neu eingelesen. Das verbraucht viel Energie. Um zu sehen, ob das passiert, aktiviere **App-Start protokollieren** in den **Erweiterten Einstellungen** des NSClient: Nightscout erhält dann bei jedem Neustart von AAPS ein Ereignis, so lässt sich das Problem leicht verfolgen. Damit das seltener passiert, schalte die Akku-Optimierung für AAPS aus, damit das Smartphone AAPS nicht mehr beendet: siehe [Energiesparfunktionen](#FAQ-battery-savings) unten.
 * reinige die Batteriepole mit Alkohol um sicherzustellen, dass keine herstellungsbedingten Wachs- oder Fettreste mehr vorhanden sind.
-* for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy while in storage) but it doesn't always work to break it 100%. Dann kannst du entweder versuchen, die Batterie 2-3 Mal herauszunehmen und wieder einzusetzen, bis die Pumpe einen Batteriestand von 100 % anzeigt oder du schließt die Batterie schon vor dem Einsetzen dadurch kurz, dass du beide Batteriepole für den Bruchteil einer Sekunde mit einem metallischen Gegenstand überbrückst.
+* Bei [Dana R/RS-Pumpen](../CompatiblePumps/DanaRS-Insulin-Pump.md) zieht der Startvorgang einen hohen Strom aus der Batterie, um gezielt den Passivierungsfilm aufzubrechen (er verhindert Energieverlust bei der Lagerung). Das gelingt aber nicht immer zu 100 %. Dann kannst du entweder versuchen, die Batterie 2-3 Mal herauszunehmen und wieder einzusetzen, bis die Pumpe einen Batteriestand von 100 % anzeigt oder du schließt die Batterie schon vor dem Einsetzen dadurch kurz, dass du beide Batteriepole für den Bruchteil einer Sekunde mit einem metallischen Gegenstand überbrückst.
 * beachte auch die zusätzlichen Tipps für [bestimmte Batterien](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
 
 #### Insulin-Reservoir und Katheter wechseln
 
-The reservoir must be changed directly on the pump, then the change is recorded in **AAPS**. Follow the step-by-step [guide for changing the pump reservoir and cannula](#pumps-cannulas-changing-reservoir-and-cannula).
+Das Reservoir muss direkt an der Pumpe gewechselt werden, danach wird der Wechsel in **AAPS** erfasst. Folge der [Schritt-für-Schritt-Anleitung zum Wechsel von Reservoir und Kanüle](#pumps-cannulas-changing-reservoir-and-cannula).
 
 ### Smartphone-Hintergrundbild
 
@@ -149,7 +149,7 @@ Das AAPS Hintergrundbild für Dein Smartphone findest Du auf der [Smartphones-Se
 
 ### Alltagsgebrauch
 
-Many of the situations below can be prepared once as a [scene](#scenes): a preset that switches profile, temp target and other settings with one tap. **AAPS** offers ready-made templates, for example *Exercise*, *Sleep*, *Alcohol* or *Bathing*.
+Viele der folgenden Situationen kannst Du einmalig als [Szene](#scenes) vorbereiten: eine Voreinstellung, die Profil, temporäres Ziel und andere Einstellungen mit einem Tippen umschaltet. **AAPS** bietet fertige Vorlagen, zum Beispiel *Bewegung*, *Schlaf*, *Alkohol* oder *Baden*.
 
 #### Hygiene
 
@@ -157,11 +157,11 @@ Many of the situations below can be prepared once as a [scene](#scenes): a prese
 
 ##### Was mache ich, wenn ich duschen oder ein Bad nehmen möchte?
 
-Du kannst die Pumpe zum Duschen oder Baden ablegen. Für diesen kurzen Zeitraum benötigest Du sie möglicherweise nicht aber Du solltest AAPS sagen, dass Du die Verbindung getrennt hast, damit die IOB-Berechnungen korrekt sind. Siehe die [Beschreibung oben](#FAQ-disconnect-pump). The *Bathing* [scene](#scenes) template does this for you.
+Du kannst die Pumpe zum Duschen oder Baden ablegen. Für diesen kurzen Zeitraum benötigest Du sie möglicherweise nicht aber Du solltest AAPS sagen, dass Du die Verbindung getrennt hast, damit die IOB-Berechnungen korrekt sind. Siehe die [Beschreibung oben](#FAQ-disconnect-pump). Die [Szenen](#scenes)-Vorlage *Baden* erledigt das für Dich.
 
 #### Arbeit
 
-Je nach Job kannst Du verschiedene Behandlungsfaktoren an Werktagen anwenden. Als Looper solltest Du über einen [Profil-Wechsel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) für Deinen typischen Arbeitstag nachdenken. Zum Beispiel könntest Du zu einem Profil über 100% wechseln, wenn Du einen weniger anspruchsvollen Job hast (z. B. an einem Schreibtisch) oder weniger als 100%, wenn Du kontinuierlich körperlich während der Arbeit aktiv bist. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, or if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need, or save your workday settings as a [scene](#scenes).
+Je nach Job kannst Du verschiedene Behandlungsfaktoren an Werktagen anwenden. Als Looper solltest Du über einen [Profil-Wechsel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) für Deinen typischen Arbeitstag nachdenken. Zum Beispiel könntest Du zu einem Profil über 100% wechseln, wenn Du einen weniger anspruchsvollen Job hast (z. B. an einem Schreibtisch) oder weniger als 100%, wenn Du kontinuierlich körperlich während der Arbeit aktiv bist. Du kannst auch ein hohes oder niedriges temporäres Ziel oder eine [Zeitverschiebung Deines Profils](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) in Betracht ziehen, wenn Du viel früher oder später als üblich arbeitest oder im Schichtdienst arbeitest. Du kannst auch ein zweites Profil anlegen (z. B. „Zuhause“ und „Arbeitstag“) und täglich einen Profilwechsel zu dem Profil machen, das Du gerade brauchst, oder Deine Einstellungen für den Arbeitstag als [Szene](#scenes) speichern.
 
 ### Freizeitaktivitäten
 
@@ -175,13 +175,13 @@ Dann hast Du zwar mehr Kohlenhydrate gegessen, gleichzeitig steuert der Loop abe
 
 Beim Loopen solltest Du diese drei Schritte ausprobieren:
 
-* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
-* Setze ein [temporäres Ziel für Aktivität](#TempTargets-activity-temp-target), das oberhalb Deines Standardziels liegt. With a percentage below 100 % and a duration, the same **Activate** screen offers a **Temporary target / Activity** switch that starts both at once.
+* Mache einen [Profilwechsel](#ProfileSwitch-change-percentage) unter 100 %: Tippe auf dem Startbildschirm auf den Profilnamen, tippe auf den runden Knopf **▶** und stelle dann **Prozentsatz** und **Dauer** ein.
+* Setze ein [temporäres Ziel für Aktivität](#TempTargets-activity-temp-target), das oberhalb Deines Standardziels liegt. Mit einem Prozentsatz unter 100 % und einer Dauer bietet derselbe Bildschirm **Aktivieren** einen Schalter **Temporäres Ziel / Aktivität**, der beides gleichzeitig startet.
 * Wenn Du SMBs nutzt, achte darauf, dass ["Aktiviere SMB bei temporären Zielen oberhalb des regulären Ziels"](#Open-APS-features-enable-smb-with-high-temp-targets) und ["SMB immer aktivieren"](#Open-APS-features-enable-smb-always) deaktiviert sind.
 
 Für diese Einstellungen ist ein Vor- und Nachlauf wichtig. Nimm die Änderungen rechtzeitig vor Deinen sportlichen Aktivitäten vor und bedenke den Muskelauffülleffekt im Nachgang.
 
-The *Exercise* and *Post-exercise Night* [scene](#scenes) templates bundle these settings, so you can start them with one tap. If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../DailyLifeWithAaps/Automations.md) to start the profile switch and TT, or the scene. Auch standortbasierte Automation-Regeln kommen in Frage, allerdings musst Du Dir hier überlegen, wie Du den Vorlauf am besten realisieren kannst.
+Die [Szenen](#scenes)-Vorlagen *Bewegung* und *Nach der Bewegung (Nacht)* bündeln diese Einstellungen, sodass Du sie mit einem Tippen starten kannst. Wenn Du regelmäßig zur gleichen Zeit Sport machst (z. B. ein Kurs in Deinem Fitnessstudio), kannst Du überlegen, Profilwechsel und TT oder die Szene über eine [Automatisierung](../DailyLifeWithAaps/Automations.md) zu starten. Auch standortbasierte Automation-Regeln kommen in Frage, allerdings musst Du Dir hier überlegen, wie Du den Vorlauf am besten realisieren kannst.
 
 Der Prozentsatz des Profilwechsels, der Wert für das temporäre Ziel und die beste Zeit für die Änderungen, sind individuell. Taste Dich vorsichtig heran und baue ausreichend Sicherheit ein (starte mit einem niedrigeren Prozentsatz und einem höheren TT).
 
@@ -194,18 +194,18 @@ Du kannst die Pumpe ablegen, um "frei" zu sein, aber Du solltest das Trennen in 
 Alkoholkonsum ist im Closed Loop riskant, weil der Algorithmus einen von Alkohol beeinflussten BZ nicht richtig vorhersagen kann. Du musst Deinen eigenen Weg finden damit umzugehen, kannst aber folgende AAPS-Funktionen nutzen:
 
 * Deaktivierung des Closed Loop Modus und manuelle Behandlung des Diabetes oder
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
-* do a [profile switch](#ProfileSwitch-change-percentage) to noticeably less than 100% 
+* hohe temporäre Ziele setzen und UAM deaktivieren, damit der Loop das IOB nicht wegen einer unangekündigten Mahlzeit erhöht, oder
+* mache einen [Profilwechsel](#ProfileSwitch-change-percentage) auf deutlich unter 100 % 
 
-The *Alcohol* [scene](#scenes) template is a starting point you can adapt to your own method.
+Die [Szenen](#scenes)-Vorlage *Alkohol* ist ein Ausgangspunkt, den Du an Deine eigene Methode anpassen kannst.
 
 Wenn du Alkohol trinkst, musst du immer Dein CGM im Blick haben, um eine Hypoglykämie im Zweifel durch das Essen von Kohlenhydraten zu verhindern.
 
 #### Schlafen
 
-##### How can I loop during the night without mobile and Wi-Fi radiation?
+##### Wie kann ich nachts ohne Mobilfunk- und WLAN-Strahlung loopen?
 
-Viele Nutzer stellen nachts im Handy den Flugzeugmodus ein. If you want the loop to support you when you are sleeping, proceed as follows (this will only work if your CGM app runs on the same phone as AAPS, such as xDrip, Juggluco or BYODA; it will NOT work if you get the BG-readings via Nightscout):
+Viele Nutzer stellen nachts im Handy den Flugzeugmodus ein. Wenn der Loop Dich im Schlaf unterstützen soll, gehe so vor (das funktioniert nur, wenn Deine CGM-App auf demselben Smartphone läuft wie AAPS, z. B. xDrip, Juggluco oder BYODA; es funktioniert NICHT, wenn Du die Glukosewerte über Nightscout bekommst):
 
 1. Aktiviere im Handy den Flugzeugmodus.
 2. Warte, bis der Flugzeugmodus aktiv ist.
@@ -213,17 +213,17 @@ Viele Nutzer stellen nachts im Handy den Flugzeugmodus ein. If you want the loop
 
 Du empfängst jetzt weder Anrufe, noch bist du mit dem Internet verbunden. Aber der Loop funktioniert.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip) when phone is in airplane mode. In xDrip, go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+Manche Nutzer haben Probleme mit dem lokalen Broadcast festgestellt (AAPS empfängt keine Glukosewerte von xDrip), wenn das Smartphone im Flugmodus ist. Gehe in xDrip zu Einstellungen > Inter-App Einstellungen > Identifiziere Empfänger und gib `info.nightscout.androidaps` ein.
 
 ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-If you want different settings at night (for example a higher target), the *Sleep* [scene](#scenes) template is a good starting point.
+Wenn Du nachts andere Einstellungen möchtest (zum Beispiel einen höheren Zielwert), ist die [Szenen](#scenes)-Vorlage *Schlaf* ein guter Ausgangspunkt.
 
-#### Traveling
+#### Reisen
 
 ##### Wie gehe ich mit einem Zeitzonenwechsel um?
 
-Mit der DanaR und der DanaR Korean musst du nichts tun. For other pumps see [time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+Mit der DanaR und der DanaR Korean musst du nichts tun. Für andere Pumpen findest Du weitere Details auf der Seite [Reisen mit Zeitzonenwechsel](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
 
 ### Medizinische Themen
 
@@ -241,24 +241,24 @@ Du kannst entweder Deine Nightscout Berichte zeigen (https://DEINE-NS-SITE.com/r
 
 ### Mein Problem ist hier nicht aufgeführt.
 
-See [where to get help](../GettingHelp/WhereCanIGetHelp.md). If you found the solution yourself, **remind us to add it to this list!**
+Siehe [Wo bekomme ich Hilfe?](../GettingHelp/WhereCanIGetHelp.md). Wenn Du die Lösung selbst gefunden hast, **erinnere uns daran, sie in diese Liste aufzunehmen!**
 
-### Building and installing
+### Erstellen und Installieren
 
 (FAQ-build-errors)=
 
 #### Ich habe Probleme und/oder Fehler beim Erstellen der App.
 
-Please check the troubleshooting page for the way you build **AAPS** (see [Building AAPS](../SettingUpAaps/BuildingAaps.md)):
+Sieh Dir bitte die Seite zur Fehlerbehebung für die Art an, wie Du **AAPS** erstellst (siehe [AAPS erstellen](../SettingUpAaps/BuildingAaps.md)):
 
-* building with a browser: [Browser build: troubleshooting](#aaps-ci-troubleshooting),
-* building with Android Studio: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+* Erstellen im Browser: [Browser-Build: Fehlerbehebung](#aaps-ci-troubleshooting),
+* Erstellen mit Android Studio: [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 (FAQ-build-error-file-name-too-long)=
 
 #### Fehler beim App erstellen: Dateiname zu lang
 
-This error can happen when building with Android Studio: the build stops with an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "C:\src\AndroidAPS").
+Dieser Fehler kann beim Erstellen mit Android Studio auftreten: Der Build bricht mit der Fehlermeldung ab, dass der Dateiname zu lang ist. Mögliche Lösungen: Verschiebe Deine Quellen in ein Verzeichnis näher am Stammverzeichnis Deines Laufwerks (z. B. "C:\src\AndroidAPS").
 
 Von Android Studio: Stelle sicher, dass "Gradle" nach dem Öffnen des Projekts und dem Download von GitHub synchronisiert und indiziert ist. Führe Build -> Clean Project und danach Build -> Rebuild Project durch. Führe File -> Invalidate Caches... durch und starte Android Studio neu.
 
@@ -266,14 +266,14 @@ Von Android Studio: Stelle sicher, dass "Gradle" nach dem Öffnen des Projekts u
 
 #### Alarm: Entwickler-Version. Closed Loop ist nicht verfügbar.
 
-**AAPS** shows this message when you run a development (dev) version without engineering mode: in a dev version, closed loop only works in engineering mode.
+**AAPS** zeigt diese Meldung, wenn Du eine Entwicklungsversion (dev) ohne Entwickler-Modus nutzt: In einer dev-Version funktioniert der Closed Loop nur im Entwickler-Modus.
 
-The dev version is meant for testing, not for actual looping: read [Development branch](../AdvancedOptions/DevBranch.md) before going further.
+Die dev-Version ist zum Testen gedacht, nicht zum echten Loopen: Lies [Entwicklungszweig](../AdvancedOptions/DevBranch.md), bevor Du weitermachst.
 
-To turn on engineering mode:
+So schaltest Du den Entwickler-Modus ein:
 
-1. Place a file named `engineering_mode` in the `extra` subfolder of your AAPS directory (the folder you chose in the setup wizard, usually `AAPS/extra`). Jede Datei funktioniert so lange wie sie korrekt benannt ist.
-2. Restart **AAPS** so that it finds the file.
+1. Lege eine Datei namens `engineering_mode` im Unterordner `extra` Deines AAPS-Verzeichnisses ab (der Ordner, den Du im Einrichtungsassistenten gewählt hast, meist `AAPS/extra`). Jede Datei funktioniert so lange wie sie korrekt benannt ist.
+2. Starte **AAPS** neu, damit es die Datei findet.
 
 Tipp: Mache eine Kopie einer existierenden Logdatei und benenne sie in "engineering_mode" um (Aufpassen: keine Dateiendung!).
 
@@ -281,101 +281,101 @@ Tipp: Mache eine Kopie einer existierenden Logdatei und benenne sie in "engineer
 
 #### Ich stecke bei einem Ziel fest und brauche Hilfe.
 
-First read [Completing the Objectives](../SettingUpAaps/CompletingTheObjectives.md). If you are still stuck, screen capture the question and answers and post them on the Discord AAPS channel. Vergiss nicht zu sagen, welche Optionen du wählst (oder nicht) und warum. Du erhältst Tipps und Hilfe, aber Du musst die Antworten selber finden.
+Lies zuerst [Die Ziele abschließen](../SettingUpAaps/CompletingTheObjectives.md). Wenn Du dann immer noch nicht weiterkommst, mache einen Screenshot von Frage und Antworten und poste ihn im AAPS-Kanal auf Discord. Vergiss nicht zu sagen, welche Optionen du wählst (oder nicht) und warum. Du erhältst Tipps und Hilfe, aber Du musst die Antworten selber finden.
 
-### Settings, passwords and backups
+### Einstellungen, Passwörter und Backups
 
 (FAQ-reset-master-password)=
 
-#### How to reset the master password?
+#### Wie setze ich das Master-Passwort zurück?
 
-If you forgot your master password, you can reset it to your pump's serial number:
+Wenn Du Dein Master-Passwort vergessen hast, kannst Du es auf die Seriennummer Deiner Pumpe zurücksetzen:
 
-1. Create an empty file named `PasswordReset` (no file extension) in the `extra` subfolder of your AAPS directory (usually `AAPS/extra`).
-2. Restart **AAPS**. Your pump must be connected: **AAPS** shows "Waiting for pump…" and needs to read the pump serial number within 30 seconds.
-3. **AAPS** shows "Password set!": your master password is now your **pump serial number**. The `PasswordReset` file is deleted automatically.
-4. Open **Settings** > **Protection** > **Master password** and set a new password.
+1. Lege eine leere Datei namens `PasswordReset` (ohne Dateiendung) im Unterordner `extra` Deines AAPS-Verzeichnisses an (meist `AAPS/extra`).
+2. Starte **AAPS** neu. Deine Pumpe muss verbunden sein: **AAPS** zeigt „Warte auf Pumpe…“ und muss die Seriennummer der Pumpe innerhalb von 30 Sekunden auslesen.
+3. **AAPS** zeigt „Passwort festgelegt!“: Dein Master-Passwort ist jetzt die **Seriennummer Deiner Pumpe**. Die Datei `PasswordReset` wird automatisch gelöscht.
+4. Öffne **Einstellungen** > **Zugriffsschutz** > **Master-Passwort** und lege ein neues Passwort fest.
 
-If the pump is not reached in time, nothing changes: check the pump connection and try again.
+Wird die Pumpe nicht rechtzeitig erreicht, ändert sich nichts: Prüfe die Verbindung zur Pumpe und versuche es erneut.
 
-This only resets the master password. A settings, application or bolus password or PIN is not reset, but you can always use the master password instead of them.
+Damit wird nur das Master-Passwort zurückgesetzt. Ein Passwort oder eine PIN für Einstellungen, App oder Bolus wird nicht zurückgesetzt, Du kannst aber stattdessen jederzeit das Master-Passwort verwenden.
 
-    {admonition} Old settings files
+    {admonition} Alte Einstellungsdateien
     :class: warning
-    Settings files exported with the old master password can only be imported with that old password.
+    Einstellungsdateien, die mit dem alten Master-Passwort exportiert wurden, lassen sich nur mit diesem alten Passwort importieren.
 
 (FAQ-where-are-settings-files)=
 
 #### Wo finde ich die Einstellungsdateien?
 
-Settings files are stored in the `preferences` subfolder of the AAPS directory you chose in the [setup wizard](#SetupWizard-StoragePermission) (for example `/internal storage/AAPS/preferences`). If you set up a cloud folder (Google Drive), your exports can also be saved there. See [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md).
+Einstellungsdateien werden im Unterordner `preferences` des AAPS-Verzeichnisses gespeichert, das Du im [Einrichtungsassistenten](#SetupWizard-StoragePermission) gewählt hast (zum Beispiel `/internal storage/AAPS/preferences`). Wenn Du einen Cloud-Ordner (Google Drive) eingerichtet hast, können Deine Exporte auch dort gespeichert werden. Siehe [Backups erstellen und wiederherstellen](../Maintenance/ExportImportSettings.md).
 
 WARNUNG: Stelle sicher, dass Du Dein Passwort nicht verlierst, da Du ohne Passwort keine verschlüsselte Einstellungsdatei importieren kannst!
 
 (FAQ-import-settings-earlier-versions)=
 
-#### How do I import settings from earlier versions of AAPS into AAPS v3 or v4 ?
+#### Wie importiere ich Einstellungen aus älteren AAPS-Versionen in AAPS v3 oder v4?
 
-You can only import settings (in AAPS v3 or v4) that were exported using AAPS v2.8x or later. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install the current AAPS version and import v2.8 settings in it.
+Du kannst (in AAPS v3 oder v4) nur Einstellungen importieren, die mit AAPS v2.8x oder neuer exportiert wurden. Wenn Du eine AAPS-Version älter als v2.8x genutzt hast oder Einstellungsexporte von vor v2.8x verwenden musst, musst Du zuerst AAPS v2.8 installieren. Importiere die älteren Einstellungen von v2.x in v2.8. Wenn Du geprüft hast, dass alles in Ordnung ist, exportiere die Einstellungen aus v2.8. Installiere dann die aktuelle AAPS-Version und importiere dort die Einstellungen aus v2.8.
 
-If you use the same key to build the old and the new version, you won't even have to import settings. You can install the new version over the old one.
+Wenn Du für die alte und die neue Version denselben Schlüssel zum Erstellen verwendest, musst Du die Einstellungen nicht einmal importieren. Du kannst die neue Version über die alte installieren.
 
 Es wurden einige neue Ziele (Objectives) hinzugefügt. Du musst diese durchlaufen.
 
 (FAQ-delete-treatments)=
 
-#### Where can I delete treatments?
+#### Wo kann ich Behandlungen löschen?
 
-Open the **menu** (☰) and select **Treatments history**. Long press an entry to select it, tap more entries if needed, then tap the **trash can** icon and confirm. See [Treatments history](#aaps-screens-treatments).
+Öffne das **Menü** (☰) und wähle **Behandlungsverlauf**. Tippe lange auf einen Eintrag, um ihn auszuwählen, tippe bei Bedarf weitere Einträge an, tippe dann auf das Symbol **Papierkorb** und bestätige. Siehe [Behandlungsverlauf](#aaps-screens-treatments).
 
-### Phone and connection problems
+### Probleme mit Smartphone und Verbindung
 
 (FAQ-aaps-stops)=
 
 #### AAPS stoppt jeden Tag ungefähr zur gleichen Zeit.
 
-* Google Play Protect may shut down **AAPS** every morning on some phones. If this happens, go to the Google Play options and disable **Google Play Protect**.
+* Auf manchen Smartphones beendet Google Play Protect **AAPS** jeden Morgen. Passiert das, gehe in die Google Play-Optionen und deaktiviere **Google Play Protect**.
 * Schaue, ob Du "Cleaner" oder "Reinigungs" Apps hast und deinstalliere diese.
-* Turn off all battery optimizations for **AAPS** (see [battery savings](#FAQ-battery-savings) below).
+* Schalte alle Akku-Optimierungen für **AAPS** aus (siehe [Energiesparfunktionen](#FAQ-battery-savings) unten).
 
 (FAQ-battery-savings)=
 
 #### Wie konfiguriere ich die Akkuoptimierung?
 
-Your phone may suspend **AAPS** and related apps (CGM app, Bluetooth) when you are not using it. **AAPS** then cannot do its work, and Bluetooth connections to the sensor and pump (or RileyLink) may be shut down, causing "pump unreachable" alerts and communication errors.
+Dein Smartphone kann **AAPS** und zugehörige Apps (CGM-App, Bluetooth) anhalten, wenn Du es nicht benutzt. **AAPS** kann dann seine Arbeit nicht machen, und die Bluetooth-Verbindungen zu Sensor und Pumpe (oder RileyLink) können abbrechen. Das führt zu Alarmen „Pumpe nicht erreichbar“ und zu Kommunikationsfehlern.
 
-Turn off battery optimization for **AAPS**, your CGM app (e.g. xDrip) and the Bluetooth system app. The way to do this depends on the phone's brand, model and Android version:
+Schalte die Akku-Optimierung für **AAPS**, Deine CGM-App (z. B. xDrip) und die Bluetooth-System-App aus. Wie das geht, hängt von Marke, Modell und Android-Version Deines Smartphones ab:
 
-* see [Battery optimization](#generaltroubleshooting-android-related-issues) for Pixel, Samsung and Huawei phones,
-* in **AAPS**, open the **menu** (☰) > **About** and tap **Don't kill my app?**, or visit [Don't kill my app](https://dontkillmyapp.com/) for other brands.
+* siehe [Akku-Optimierung](#generaltroubleshooting-android-related-issues) für Pixel-, Samsung- und Huawei-Smartphones,
+* öffne in **AAPS** das **Menü** (☰) > **Über** und tippe auf **Meine App nicht beenden?** oder besuche für andere Marken [Don't kill my app](https://dontkillmyapp.com/).
 
-If you are not sure that battery savings cause your problem, you can temporarily turn off all battery savings on the phone: your battery will drain faster, but you will quickly see if the problem goes away.
+Wenn Du nicht sicher bist, ob Energiesparfunktionen Dein Problem verursachen, kannst Du vorübergehend alle Energiesparfunktionen des Smartphones ausschalten: Der Akku wird dann schneller leer, aber Du siehst schnell, ob das Problem verschwindet.
 
 (FAQ-pump-unreachable-alerts)=
 
 #### Alarm Pumpe nicht erreichbar mehrmals am Tag oder in der Nacht.
 
-Your phone may be suspending **AAPS** or even Bluetooth, causing it to lose the connection to the pump or RileyLink (see [battery savings](#FAQ-battery-savings) above).
+Dein Smartphone hält vielleicht **AAPS** oder sogar Bluetooth an, sodass die Verbindung zur Pumpe oder zum RileyLink verloren geht (siehe [Energiesparfunktionen](#FAQ-battery-savings) oben).
 
-You can also change when the alert is raised: press the **Settings** (gear) icon on the top right of the main screen, then select **Local alerts** > **Pump unreachable threshold** (30 to 300 minutes). Check your pump's page: some recommend a value, e.g. 120 minutes for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md).
+Du kannst auch ändern, wann der Alarm ausgelöst wird: Tippe oben rechts auf dem Startbildschirm auf das Symbol **Einstellungen** (Zahnrad) und wähle dann **Lokale Alarme** > **Grenzwert für Pumpe ist nicht erreichbar** (30 bis 300 Minuten). Sieh auf der Seite Deiner Pumpe nach: Für manche wird ein Wert empfohlen, z. B. 120 Minuten für [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md).
 
 (FAQ-link-unresponsive)=
 
 #### Mein Link/Pumpe/Pod reagiert nicht (RL/OL/EmaLink…)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
+Bei manchen Smartphones kommt es zu Bluetooth-Abbrüchen zu den Links (RL/OL/EmaLink).
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
+Einige haben auch nicht reagierende Verbindugnen zu ihren Geräten (AAPS sagt, dass sie verbunden sind, aber die Geräte können die Pumpe nicht erreichen oder Kommandos senden).
 
-First try the **Reset RileyLink** button on the pump screen (see your pump's page: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). If this does not help, the easiest way to get all these parts working together is:
+Versuche zuerst den Knopf **RileyLink zurücksetzen** im Pumpen-Bildschirm (siehe die Seite Deiner Pumpe: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Hilft das nicht, bringst Du alle Teile am einfachsten so wieder zum Zusammenspiel:
 
-1. Power off the Link.
-2. Quit **AAPS** (**menu** (☰) > **Exit**).
-3. Long press the **AAPS** icon, open the Android **App info**, tap **Force stop**, then **Storage** > **Clear cache** (do NOT clear storage/data!).
-4. Rarely some phones may need a reboot here. Du kannst es ohne Neustart versuchen.
-5. Power on the Link.
-6. Start **AAPS**.
-7. On the pump screen, tap **Pair RileyLink** and select your Link again.
+1. Schalte den Link aus.
+2. Beende **AAPS** (**Menü** (☰) > **Beenden**).
+3. Tippe lange auf das **AAPS**-Symbol, öffne die Android-**App-Info**, tippe auf **Beenden erzwingen** und dann auf **Speicher** > **Cache leeren** (NICHT den Speicher bzw. die Daten löschen!).
+4. Selten muss das Smartphone an dieser Stelle neu gestartet werden. Du kannst es ohne Neustart versuchen.
+5. Schalte den Link ein.
+6. Starte **AAPS**.
+7. Tippe im Pumpen-Bildschirm auf **Rileylink verbinden** und wähle Deinen Link erneut aus.
 
 ### Remote-Steuerung
 
@@ -383,41 +383,41 @@ First try the **Reset RileyLink** button on the pump screen (see your pump's pag
 
 #### AAPSClient Remote App konfigurieren und nutzen
 
-**AAPSClient** ist eine eigene App, mit der eine Betreuungsperson **AAPS** per Fernüberwachung verfolgen und fernsteuern kann. Since **AAPS** v4, controlling **AAPS** from AAPSClient needs a one-time pairing between the two apps. See:
+**AAPSClient** ist eine eigene App, mit der eine Betreuungsperson **AAPS** per Fernüberwachung verfolgen und fernsteuern kann. Seit **AAPS** v4 braucht die Steuerung von **AAPS** über AAPSClient eine einmalige Kopplung der beiden Apps. Siehe:
 
-* [The AAPSClient app](#aapsclient-app): installing, first start and pairing,
-* [Master ↔ Client control](#client-master-control): what can be controlled and how pairing works,
-* [AAPSClient on a smartwatch](#remotecontrol-smartwatches).
+* [Die AAPSClient-App](#aapsclient-app): Installation, erster Start und Kopplung,
+* [Master ↔ Client-Steuerung](#client-master-control): was gesteuert werden kann und wie die Kopplung funktioniert,
+* [AAPSClient auf einer Smartwatch](#remotecontrol-smartwatches).
 
 (FAQ-hardened-mode)=
 
-#### Treatments I enter on the Nightscout website are not applied
+#### Behandlungen, die ich auf der Nightscout-Website eingebe, werden nicht übernommen
 
-That is [hardened mode](#client-master-control-hardened-mode). While client control is on — always in Simple Mode — **AAPS** takes changes only from paired clients, not from the Nightscout website or other apps. Enter them on a paired **AAPSClient** instead.
+Das ist der [geschützte Modus](#client-master-control-hardened-mode). Solange die Client-Steuerung eingeschaltet ist (im einfachen Modus immer), übernimmt **AAPS** Änderungen nur von gekoppelten Clients, nicht von der Nightscout-Website oder anderen Apps. Gib sie stattdessen in einem gekoppelten **AAPSClient** ein.
 
-### Alerts and warnings
+### Alarme und Warnungen
 
-#### I have a red warning badge (red triangle) / AAPS won't enable closed loop / Loop stays in LGS / I had a yellow triangle
+#### Ich habe ein rotes Warnzeichen (rotes Dreieck) / AAPS aktiviert den Closed Loop nicht / Der Loop bleibt in LGS / Ich hatte ein gelbes Dreieck
 
-The red warning badge on the BG source shortcut is a security feature in AAPS. See [BG warning sign](#aaps-screens-bg-warning-sign) for the full explanation.
+Das rote Warnzeichen an der Verknüpfung zur BZ-Quelle ist eine Sicherheitsfunktion von AAPS. Die vollständige Erklärung findest Du unter [BZ-Warnzeichen](#aaps-screens-bg-warning-sign).
 
-A red warning badge on the BG source shortcut in the bottom bar (the red triangle of older versions) means that you have duplicate BGs and AAPS can't calculate precisely the deltas. A closed loop is switched to **Low Glucose Suspend** mode: it still reduces or suspends your basal to protect you against lows, but it gives no correction insulin. You need to delete one BG of each duplicated value in order to clear the warning. Tap the shortcut to open your [BG source screen](#aaps-screens-bg-source): the duplicate is highlighted in red. Long press one line you want to delete, check one of each lines that are doubled and tap the trash icon. Wenn es zu viele doppelte Glukosewerte geben sollte, muss eventuell die AAPS-Datenbank zurückgesetzt werden. In this case, you'll also lose stats, IOB, COB, selected profile.
+Ein rotes Warnzeichen an der Verknüpfung zur BZ-Quelle in der unteren Leiste (das rote Dreieck älterer Versionen) bedeutet, dass doppelte Glukosewerte vorliegen und AAPS die Deltas nicht genau berechnen kann. Ein Closed Loop wird in den Modus **Unterbrechung bei niedrigem BZ (LGS)** umgeschaltet: Er senkt oder unterbricht weiterhin Deine Basalrate, um Dich vor Unterzuckerungen zu schützen, gibt aber kein Korrekturinsulin. Um die Warnung zu beseitigen, musst Du von jedem doppelten Wert einen Glukosewert löschen. Tippe auf die Verknüpfung, um den Bildschirm Deiner [BZ-Quelle](#aaps-screens-bg-source) zu öffnen: Der doppelte Wert ist rot hervorgehoben. Tippe lange auf eine Zeile, die Du löschen möchtest, hake von jeder doppelten Zeile eine an und tippe auf das Papierkorb-Symbol. Wenn es zu viele doppelte Glukosewerte geben sollte, muss eventuell die AAPS-Datenbank zurückgesetzt werden. In diesem Fall verlierst Du außerdem Statistiken, IOB, COB und das gewählte Profil.
 
-Once the warning is gone, AAPS does not go back to **Closed Loop** by itself. Press the loop icon on the main screen and select **Closed Loop** again.
+Wenn die Warnung verschwunden ist, kehrt AAPS nicht von selbst zum **Closed Loop** zurück. Tippe auf dem Startbildschirm auf das Loop-Symbol und wähle wieder **Closed Loop**.
 
 Mögliche Ursache des Problems: xDrip und/oder NS, die nachträglich Glukosewerte eingetragen haben ('backfilling').
 
-The yellow triangle of older versions meant unstable delay between each BG reading (BGs not received every 5 min regularly, or missing BGs), which often happens with Libre or after a G6 transmitter change. **AAPS** 4 no longer shows it: it recalculates the values in the background and the loop works correctly.
+Das gelbe Dreieck älterer Versionen bedeutete unregelmäßige Abstände zwischen den Glukosewerten (Werte kommen nicht regelmäßig alle 5 Minuten oder fehlen), was oft bei Libre oder nach einem Transmitterwechsel beim G6 vorkommt. **AAPS** 4 zeigt es nicht mehr an: Es berechnet die Werte im Hintergrund neu, und der Loop funktioniert korrekt.
 
 ### Omnipod DASH
 
 (FAQ-move-dash-pod)=
 
-#### Can I move an active DASH Pod to another phone?
+#### Kann ich einen aktiven DASH-Pod auf ein anderes Smartphone übertragen?
 
-The Pod state is included in the exported settings, so an active Pod can be moved to another phone by exporting the settings right before the move and importing them on the other phone. This is not officially supported and there is a risk of losing the Pod: if possible, try it when your Pod is about to expire.
+Der Pod-Status ist in den exportierten Einstellungen enthalten. Ein aktiver Pod kann daher auf ein anderes Smartphone übertragen werden, indem Du die Einstellungen direkt vor dem Wechsel exportierst und auf dem anderen Smartphone importierst. Das wird nicht offiziell unterstützt, und Du riskierst, den Pod zu verlieren: Probiere es möglichst aus, wenn Dein Pod ohnehin bald abläuft.
 
-Read these sections first:
+Lies zuerst diese Abschnitte:
 
-* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
-* [Discarding a pod](#omnipod-dash-discard-pod), to remove the Pod from the old phone afterwards. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.
+* [Einstellungen exportieren und importieren](#omnipod-dash-export-import) auf der Seite zu Omnipod DASH und [Schlauchlose Pumpen](#ExportImportSettings-tubeless-pumps): Hake auf dem neuen Smartphone **Pumpeneinstellungen auch ersetzen** an und verwende eine Datei, die exportiert wurde, während Du Deinen aktuellen Pod getragen hast,
+* [Pod verwerfen](#omnipod-dash-discard-pod), um den Pod danach vom alten Smartphone zu entfernen. Lass das alte Smartphone im Flugmodus, bis der Pod verworfen ist, damit nie beide Smartphones gleichzeitig mit dem Pod kommunizieren.
