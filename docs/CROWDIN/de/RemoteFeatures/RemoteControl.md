@@ -74,7 +74,7 @@ Stelle sicher, dass __beide__ Smartphones, das AAPS- und das AAPSClient-Smartpho
 
 - Gib in denselben Einstellungen Dein **Nightscout Zugriffstoken** ein. Bitte folge den Hinweisen [hier](https://nightscout.github.io/nightscout/security/#create-a-token). Nutze auf dem **AAPS**-Smartphone ein **Admin-Token**: Damit erstellt **AAPS** für jedes Follower-Smartphone ein eigenes Token.
 
-- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. Auf beiden Smartphones beschleunigen sie außerdem die Synchronisierung, bei etwas höherem Akkuverbrauch.
+- Aktiviere auf **beiden** Smartphones **Websockets verwenden**. Websockets sind für die Remote-Steuerung des **AAPSClient** auf beiden Smartphones **zwingend**. Ohne sie kann **AAPSClient** **AAPS** zwar folgen, kann aber nicht remote steuern. Auf beiden Smartphones beschleunigen sie außerdem die Synchronisierung, bei etwas höherem Akkuverbrauch.
 
   Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
