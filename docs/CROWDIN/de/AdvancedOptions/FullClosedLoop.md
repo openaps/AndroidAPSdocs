@@ -40,7 +40,7 @@ Ein **FCL** (Full Closed Loop System) ist nicht für jeden geeignet:
 
 Es ist ratsam, zuerst eine gut abgestimmte Steuerung des Hybrid Closed Loop (**HCL**) zu haben, bevor Du den Schritt zum **FCL** überlegst.  Ein erfolgreicher **FCL** braucht eine sehr individuelle Abstimmung der Einstellungen, damit **AAPS** so Insulin abgibt, wie es DEIN gut laufender Hybrid-Closed-Loop-Modus tut (d. h. er ahmt ihn nach).
 
-**FCL** erfordert, das **Automationen** eingerichtet und optimiert werden. Bevor Du Dich auf **FCL** einlässt, musst Du ein sicheres Verständnis darüber haben, was ein Insulinmanagement braucht. Fehler können mit Gegenfehlern überdeckt werden. Dies kann ein labiles **FCL**-System zur Folge haben, dass danach nur schwer zu korrigieren ist. Du kannst erwarten, dass Du mit Deinem FCL einen %TIR erreichst, so wie Du ihn heute auch mit Deinem **HCL** hast.
+**FCL** erfordert, dass **Automationen** eingerichtet und optimiert werden. Bevor Du Dich auf **FCL** einlässt, musst Du ein sicheres Verständnis darüber haben, was ein Insulinmanagement braucht. Fehler können mit Gegenfehlern überdeckt werden. Dies kann ein labiles **FCL**-System zur Folge haben, dass danach nur schwer zu korrigieren ist. Du kannst erwarten, dass Du mit Deinem FCL einen %TIR erreichst, so wie Du ihn heute auch mit Deinem **HCL** hast.
 
 **FCL ist ein DIY-Setup von Automatisierungen, das vom Benutzer durch die Analyse seiner Daten sowohl aus seinen erfolgreichen HCL- als auch aus seinen ersten FCL-Erfahrungen bei der Anpassung seiner Einstellungen erstellt wird.**
 
