@@ -404,7 +404,8 @@ The new graph is added below the others — here a second additional graph with 
 ![Main screen with a second additional graph](../images/main/main_screen_additional_graph.png)
 
 Most users find the following configuration of additional graphs to be adequate :
-* Graph 1 with IOB, COB, Sensitivity change
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
 * Graph 2 with Deviations and BGI.
 
 #### Absolute insulin (ABS)
