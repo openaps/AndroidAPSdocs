@@ -29,7 +29,7 @@ Ein **Closed Loop** kann den Basaltest erleichtern und das Hypo-Risiko deutlich 
 - **Schalte alle [Automationen](../DailyLifeWithAaps/Automations.md) <u>AUS</u>**
 - **<u>Deaktiviere</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf) und [AutoSens](#Open-APS-features-autosens)**, damit diese nicht versuchen Dein Profil anzupassen.
 - Greife während des Tests nicht händisch ein (manueller Bolus, temporäre Ziele etc…): Lass das System nur die **Profil**-Einstellungen nutzen.
-- Für die [zusätzlichen Diagramme](#AapsScreens-section-g-additional-graphs): auf dem ersten Diagramm, lass Dir „Aktives Insulin“, „Aktive Kohlenhydrate“ (und Empfindlichkeitsänderung) anzeigen. Im zweiten Diagramm: „Abweichungen“ und „Blutzuckerwirkung“. Wenn Du Hilfestellung benötigst, füge Deiner Anfrage Screenshots dieser beiden Diagramme hinzu.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Wenn Du Hilfestellung benötigst, füge Deiner Anfrage Screenshots dieser beiden Diagramme hinzu.
 - COB=0[*](#profiletuning-cob-zero)
 
 Weitere Dinge, die möglichst vermieden werden sollten, weil sie die Daten beeinflussen und zu falschen Schlüssen führen können:
