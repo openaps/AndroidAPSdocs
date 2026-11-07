@@ -18,6 +18,7 @@ AAPS works with a number of insulin pumps. The following list shows the currentl
 ../CompatiblePumps/MedtronicPump.md
 ../CompatiblePumps/MedtrumNano.md
 ../CompatiblePumps/OmnipodDASH.md
+../CompatiblePumps/Omnipod5.md
 ../CompatiblePumps/OmnipodEros.md
 ../CompatiblePumps/Future-possible-Pump-Drivers.md
 ```
