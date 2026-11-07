@@ -79,7 +79,7 @@ iPhone 版本和其他版本一樣，會與主控端配對。與電腦版本不�
 
    ![「從主控端設定」步驟中的「掃描 QR Code」按鈕](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **通訊**——外掛清單只會顯示追蹤者需要的項目（NSClientV3、xDrip+、Wear、外部伴隨 App、Garmin）。如果您沒有掃描 QR Code，請啟用 **NSClientV3**，並輸入與主要手機相同的 **Nightscout 網址**和存取權杖，並啟用 **WebSocket**，設定方式詳見[同步](#RemoteControl_aapsclient)。 Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+4. **通訊**——外掛清單只會顯示追蹤者需要的項目（NSClientV3、xDrip+、Wear、外部伴隨 App、Garmin）。如果您沒有掃描 QR Code，請啟用 **NSClientV3**，並輸入與主要手機相同的 **Nightscout 網址**和存取權杖，並啟用 **WebSocket**，設定方式詳見[同步](#RemoteControl_aapsclient)。從**AAPSClient**進行遠端控制時，兩支手機都**必須**使用 WebSocket。
 
    ![用戶端的通訊步驟](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
