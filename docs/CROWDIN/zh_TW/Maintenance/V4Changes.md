@@ -25,7 +25,7 @@
 
 - 開啟 **[組態設定工具](../SettingUpAaps/ConfigBuilder.md) → 通訊 → NSClientV3**。
 - 輸入你的 **Nightscout 網址**和**存取權杖**（NSClientV3 使用存取權杖，*而非*舊版 API 密鑰；請參閱[建立權杖](https://nightscout.github.io/nightscout/security/#create-a-token)）。你的 Nightscout 網站必須支援 **API v3**（Nightscout 15 或更新版本）。如果你使用 **websocket**，請在主機和追蹤端上**同時**啟用或停用，切勿只在其中一端設定。
-- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+- 要從 **AAPSClient** 遠端控制，兩支手機都**必須**使用 WebSocket。
 ```
 
 這只會影響應用程式與 Nightscout 的通訊方式，不會變更 Nightscout 上的資料。
