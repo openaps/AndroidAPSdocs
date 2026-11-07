@@ -29,7 +29,7 @@ No tengas prisa, ¡ve despacio!
 - **<u>DESACTIVA</u> todas las [automatizaciones](../DailyLifeWithAaps/Automations.md)**
 - **<u>DESACTIVA</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)** para que no intenten adaptar tu perfil.
 - No hagas acciones manuales (bolo manual, objetivos temporales, etc.) durante las pruebas: deja que el sistema use solo los ajustes del **Perfil**.
-- Para los [gráficos adicionales](#AapsScreens-section-g-additional-graphs): en el gráfico 1, usa Insulina en cuerpo (IOB), Carbohidratos en cuerpo (COB) (y Cambio de sensibilidad). En el gráfico 2, usa Desviaciones e Impacto de la glucosa en sangre. Cuando pidas consejo, incluye siempre estos gráficos en tus capturas de pantalla.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Cuando pidas consejo, incluye siempre estos gráficos en tus capturas de pantalla.
 - COB=0[*](#profiletuning-cob-zero)
 
 Otras cosas que lo ideal es evitar, porque influyen en los datos y pueden llevar a malas conclusiones:
