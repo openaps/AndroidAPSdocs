@@ -422,8 +422,9 @@ The new graph is added below the others — here a second additional graph with 
 
 Majoritatea utilizatorilor găsesc următoarea configurație a graficelor suplimentare ca adecvată:
 
-* Graficul 1 cu IOB, COB, modificarea sensibilității
-* Graficul 2 cu abateri și impactul glicemiei.
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### Insulină absolută (ABS)
 
