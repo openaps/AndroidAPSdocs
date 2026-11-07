@@ -6,6 +6,7 @@ _These instructions are for configuring AAPS and your pump if you use uAP 550S. 
 
 The pump runs on standard **AAA batteries**.
 
+(AP550-Insulin-Pump-pairing-pump)=
 ## Pairing pump
 
 * On the AAPS homescreen press the hamburger menu on the top left corner and go to **Config Builder**.
@@ -109,10 +110,26 @@ The table below lists the common buttons on the AP550 pump and what each one doe
 The **Change the infusion set** button in the main menu is used whenever the delivery line has to be opened. There are two situations:
 
 * the insulin in the reservoir is used up and the reservoir has to be replaced with a new one:
-![AP550 change reservoir](../images/AP550/rewind_change_reservoir.jpg)
+
+  ![AP550 change reservoir, steps 1 to 3](../images/AP550/rewind_change_reservoir_1.jpg)
+
+  ![AP550 change reservoir, steps 4 to 6](../images/AP550/rewind_change_reservoir_2.jpg)
+
+  ![AP550 change reservoir, steps 7 to 9](../images/AP550/rewind_change_reservoir_3.jpg)
+
+  ![AP550 change reservoir, steps 10 to 12](../images/AP550/rewind_change_reservoir_4.jpg)
+
+  ![AP550 change reservoir, steps 13 and 14](../images/AP550/rewind_change_reservoir_5.jpg)
 
 * the infusion set (tubing and cannula) has to be replaced:
-![AP550 prime only](../images/AP550/prime_only.jpg)
+
+  ![AP550 prime only, steps 1 to 3](../images/AP550/prime_only_1.jpg)
+
+  ![AP550 prime only, steps 4 to 6](../images/AP550/prime_only_2.jpg)
+
+  ![AP550 prime only, steps 7 to 9](../images/AP550/prime_only_3.jpg)
+
+  ![AP550 prime only, steps 10 to 12](../images/AP550/prime_only_4.jpg)
 
 
 ### Pump alarms
@@ -323,4 +340,4 @@ time has changed. If the difference is over 24 hours, AAPS asks you to check
 the time on the phone and the pump first.
 
 Keep in mind that time shifts on the pump can cause wrong basal records in the
-pump history. See also [Timezone traveling with pumps](#timezone-traveling).
+pump history. See also [Timezone traveling with pumps](#timezone-traveling-with-pumps).
