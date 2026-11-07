@@ -422,8 +422,9 @@ The new graph is added below the others — here a second additional graph with 
 
 大多数用户发现以下附加图表配置足够：
 
-* 图表1：活性胰岛素（IOB）、活性碳水（COB）、敏感度动态调整（Autosens/DynamicISF）​
-* 图2：偏差和BGI。
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### Absolute insulin (ABS)
 
