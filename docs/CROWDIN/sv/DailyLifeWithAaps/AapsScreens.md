@@ -422,8 +422,9 @@ Den nya grafen läggs till under de andra – här en andra extra graf med **SEN
 
 De flesta användare tycker att följande inställning av extra grafer räcker:
 
-* Graf 1 med IOB, COB och känslighetsändring
-* Graf 2 med avvikelser och BGI.
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### Absolut insulinmängd (ABS)
 
