@@ -29,7 +29,7 @@ Neponáhľajte sa, postupujte pomaly!
 - **Vypnite (<u>OFF</u>) všetky [automatizácie](../DailyLifeWithAaps/Automations.md)**
 - **Vypnite (<u>OFF</u>) [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)**, aby sa nepokúšali prispôsobovať váš profil.
 - Počas testovania nerobte žiadne ručné zásahy (ručný bolus, dočasné ciele atď.): nechajte systém používať iba nastavenia **profilu**.
-- Pre [ďalšie grafy](#AapsScreens-section-g-additional-graphs): v grafe 1 použite Aktívny inzulín, Aktívne sacharidy (a Zmena citlivosti). V grafe 2 použite Odchýlky a Vplyv na glykémiu. Keď žiadate o radu, vždy ich majte na svojich snímkach obrazovky.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Keď žiadate o radu, vždy ich majte na svojich snímkach obrazovky.
 - COB=0[*](#profiletuning-cob-zero)
 
 Ďalšie vplyvy, ktorým by ste sa mali pokiaľ možno vyhnúť, pretože ovplyvňujú údaje a môžu viesť k zlým záverom:
