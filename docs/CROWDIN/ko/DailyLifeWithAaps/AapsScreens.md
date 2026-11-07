@@ -422,8 +422,9 @@ AAPS는 현재 혈당만 보고 인슐린을 주입하지 않습니다. 루프 �
 
 대부분의 사용자는 다음과 같은 추가 그래프 구성이면 충분하다고 생각합니다.
 
-* 그래프 1: IOB, COB, 민감도 변화
-* 그래프 2: 편차와 BGI
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### 절대 인슐린(ABS)
 
