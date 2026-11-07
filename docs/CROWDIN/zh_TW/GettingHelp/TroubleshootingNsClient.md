@@ -32,9 +32,9 @@ Android 可能會讓你的手機進入睡眠模式。檢查你的手機電源選
 
 Azure 連線問題的解決方法是在應用程式設定中將 HTTP 協議設為2.0，並將 Websockets 設為開啟。
 
-    {admonition} Remote control needs websockets
+    {admonition} 遠端控制需要 WebSocket
     :class: important
-    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+    要從 **AAPSClient** 遠端控制，兩支手機都**必須**使用 WebSocket。如果 WebSocket 連線持續中斷，遠端控制就無法運作。資料同步仍可運作，但速度會較慢。您的 Nightscout 主機必須支援 WebSocket。
 
 * Nightscout 沒有血糖讀取值
 
