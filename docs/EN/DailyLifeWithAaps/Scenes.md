@@ -124,7 +124,7 @@ A scene without follow-up only asks you to confirm:
 
 ![End Scene dialog](../images/v4/Scenes/scene_end_dialog.png)
 
-Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started).
+Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*.
 
 While a scene is active, the profile and the target on the main screen carry a small scene icon when the scene set them. The **Scenes** sheet of the bottom navigation stays available to start another scene:
 
