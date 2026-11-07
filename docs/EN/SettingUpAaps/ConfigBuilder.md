@@ -313,6 +313,7 @@ When you select another pump, **AAPS** asks you to confirm the change:
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * [Carelevo](../CompatiblePumps/CareLevo.md)
+* [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 * Virtual pump: open loop - **AAPS** suggestions only
   * as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   * for pump which doesn't have any driver yet

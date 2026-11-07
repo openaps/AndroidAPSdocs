@@ -33,6 +33,7 @@ AAPS works with a number of insulin pumps. The following list shows the currentl
 - [Diaconn G8](../CompatiblePumps/DiaconnG8.md) (Bluetooth)
 - [EOPatch2](../CompatiblePumps/EOPatch2.md) (Bluetooth)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md) (Bluetooth)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md) (Bluetooth)
 - Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
 - [Medtrum Nano 200U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
