@@ -406,7 +406,7 @@ The new graph is added below the others — here a second additional graph with 
 Most users find the following configuration of additional graphs to be adequate :
 * Graph 1 with IOB, BAS
 * Graph 2 with COB, Sensitivity change
-* Graph 2 with Deviations and BGI.
+* Graph 3 with Deviations and BGI.
 
 #### Absolute insulin (ABS)
 
