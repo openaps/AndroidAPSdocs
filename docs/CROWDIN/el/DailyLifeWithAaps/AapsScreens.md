@@ -422,8 +422,9 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 Οι περισσότεροι χρήστες βρίσκουν αρκετή την παρακάτω διαμόρφωση πρόσθετων γραφημάτων:
 
-* Γράφημα 1 με IOB, COB, Αλλαγή ευαισθησίας
-* Γράφημα 2 με Αποκλίσεις και BGI.
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### Απόλυτη ινσουλίνη (ABS)
 
