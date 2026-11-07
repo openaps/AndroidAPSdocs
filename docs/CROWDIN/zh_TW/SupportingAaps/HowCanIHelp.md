@@ -8,13 +8,13 @@
 
 (donate-to-aaps)=
 
-### How can I donate?
+### 如何捐款？
 
-You can support **AAPS** in several ways:
+您可以透過以下幾種方式支援 **AAPS**：
 
-* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
-* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
-* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+* **Nightscout Foundation：**前往 [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/) 捐款。
+* **Ko-fi：**前往 [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone)，協助籌措資金，讓 AAPS 取得醫療器材認證。
+* **Bitcoin：**請將款項匯至此地址 **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
 
 ## 我會寫程式！我該如何參與？
 
