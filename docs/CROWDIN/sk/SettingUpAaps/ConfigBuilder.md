@@ -1,475 +1,470 @@
 # Konfigurácia (Config Builder)
 
-```{admonition} Prechádzate z AAPS v3? :class: note **Config Builder** sa teraz volá **Konfigurácia** a nájdete ho v **menu** (☰). Pozrite [Čo sa zmenilo v AAPS v4](#v4-changes).
+```{admonition} Coming from AAPS v3?
+:class: note
+The **Config Builder** is now called **Configuration** and is in the **menu** (☰). See [What changed in AAPS v4](#v4-changes).
+```
 
-    <br />V **Konfigurácii** vyberáte, ktoré pluginy sú aktívne (CGM, pumpa, algoritmus APS, citlivosť, synchronizácia, …), a otvárate každý plugin a jeho nastavenia. [Postup krok za krokom](#configuration-v4) nájdete nižšie; zvyšok stránky podrobne opisuje každú časť.
-    
-    (configuration-v4)=
-    ## Konfigurácia v AAPS v4
-    
-    V **AAPS** v4 ťuknite na **menu** (☰) v **ľavom hornom** rohu hlavnej obrazovky a vyberte **Konfigurácia** (*„Nastavte si konfiguráciu (CGM, pumpa, …) a zapnite funkcie“*).
-    
-    ![Menu vľavo hore s položkou Konfigurácia](../images/v4/Configuration/configuration_menu.png)
-    
-    Pluginy sú zoskupené podľa **kategórie** – napríklad *Vyhladzovanie*, *Kalibrácia*, *Detekcia citlivosti*, *APS*, *Komunikácia* a *Všeobecné*. Každý riadok ukazuje názov kategórie a **práve aktívny** plugin (napr. *APS → OpenAPS SMB*). Ťuknutím na riadok otvoríte kategóriu.
-    
-    ![Obrazovka Konfigurácia so zoznamom kategórií pluginov](../images/v4/Configuration/configuration_plugins.png)
-    
-    V kategórii vidíte pluginy, ktoré sú pre ňu k dispozícii. V kategóriách s jednou voľbou vyberiete jeden aktívny plugin; niektoré kategórie umožňujú vybrať viac pluginov (*„Vyberte, čo sa použije.“*). Každý plugin ponúka dve akcie:
-    
-    - **Otvoriť plugin** – otvorí vlastnú obrazovku pluginu.
-    - **Nastavenia** – otvorí nastavenia pluginu (nastavenia môžu byť zoskupené do rozbaľovacích častí).
-    
-    ![Kategória s pluginmi, každý s „Otvoriť plugin“ a „Nastavenia“](../images/v4/Configuration/configuration_open_plugin.png)
-    
-    (configuration_sync_icon)=
-    ### Ikona mobilu – „synchronizované z hlavného zariadenia“
-    
-    Malá **ikona mobilu (telefónu)** vedľa kategórie alebo nastavenia znamená, že táto položka je **synchronizovaná z hlavného zariadenia (master)** – jej hodnota alebo výber prichádza do tohto zariadenia cez kanál NSClientV3 (Nightscout).
-    
-    Na **klientovi** (**AAPSClient**) sa tieto položky **udržiavajú v súlade s hlavným zariadením**. Ikona sa zobrazuje iba na klientovi, preto ju na snímke obrazovky vyššie, ktorá bola urobená v hlavnej aplikácii **AAPS**, nevidíte. Na klientovi sa zvyčajne zobrazuje pri *Vyhladzovanie*, *Kalibrácia*, *Detekcia citlivosti* a *APS*. Ako presne zostávajú hlavné zariadenie a klienti zosúladení a ktoré nastavenia môžete zmeniť na ktorej strane, opisuje časť [Ovládanie Master ↔ Client](#client-master-config-prefs).
-    
-    Rovnaká ikona sa zobrazuje aj **v nastaveniach**, pri jednotlivých nastaveniach, ktoré sa synchronizujú. V príklade nižšie má ikonu *Hraničný čas absorpcie (vstrebávania)*; nastavenia bez ikony sa nastavujú na každom zariadení zvlášť:
-    
-    ![Nastavenia pluginu – ikona mobilu označuje synchronizované nastavenia](../images/v4/ClientMaster/preferences_synced_icon.png)
-    
-    Položky **bez** ikony sa nastavujú **na každom zariadení zvlášť**. Najdôležitejším príkladom je samotné pripojenie **NSClientV3 (Komunikácia)** – **Adresa Nightscoutu**, **prístupový token** a **websockety** sa nastavujú na každom telefóne zvlášť, preto pri nich ikona mobilu **nie je**.
-    
-    ---
-    
-    (Config-Builder-tab-or-hamburger-menu)=
-    ## Otvorenie obrazovky pluginu
-    
-    Obrazovku pluginu otvoríte jedným z týchto spôsobov (karty a zaškrtávacie políčko s okom z **AAPS** v3 už nie sú, pozrite [Čo sa zmenilo v AAPS v4](#v4-changes)):
-    
-    - **Konfigurácia** → kategória pluginu → **Otvoriť plugin**,
-    - panel **Spravovať** v dolnej navigácii, pre obrazovky, ktoré používate najčastejšie (Profil, Nastavenia inzulínu, Pumpa, Automatizácia, Jedlo...),
-    - tlačidlo [Rýchleho spustenia](../DailyLifeWithAaps/QuickLaunch.md), ktoré si pridáte sami,
-    - **vyhľadávacie pole** na hlavnej obrazovke.
-    
-    ```{contents}
-    :backlinks: entry
-    :depth: 2
-    
+**Configuration** is where you choose which plugins are active (CGM, pump, APS algorithm, sensitivity, sync, …) and open each plugin and its settings. [Postup krok za krokom](#configuration-v4) nájdete nižšie; zvyšok stránky podrobne opisuje každú časť.
+
+(configuration-v4)=
+## Configuration in AAPS v4
+
+In **AAPS** v4, tap the **menu** (☰) in the **top-left** corner of the main screen and choose **Configuration** (_“Set up your configuration (CGM, pump, …) and enable features”_).
+
+![The top-left menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+
+Plugins are grouped by **category** — for example _Smoothing_, _Calibration_, _Sensitivity detection_, _APS_, _Communication_ and _General_. Každý riadok ukazuje názov kategórie a **práve aktívny** plugin (napr. _APS → OpenAPS SMB_). Ťuknutím na riadok otvoríte kategóriu.
+
+![The Configuration screen, listing plugin categories](../images/v4/Configuration/configuration_plugins.png)
+
+Inside a category you see the plugins available for it. V kategóriách s jednou voľbou vyberiete jeden aktívny plugin; niektoré kategórie umožňujú vybrať viac pluginov (_„Vyberte, čo sa použije.“_). Each plugin offers two actions:
+
+- **Open plugin** — opens the plugin's own screen.
+- **Settings** — opens the plugin's preferences (settings may be grouped into expandable sections).
+
+![A category showing its plugins, each with “Open plugin” and “Settings”](../images/v4/Configuration/configuration_open_plugin.png)
+
+(configuration_sync_icon)=
+### The mobile icon — “synced from the master”
+
+A small **mobile (phone) icon** next to a category or setting means that item is **synchronized from the master** — its value/selection is delivered to this device over the NSClientV3 (Nightscout) channel.
+
+Na **klientovi** (**AAPSClient**) sa tieto položky **udržiavajú v súlade s hlavným zariadením**. The icon is only shown on a client, so it does not appear in the screenshot above, which was taken on the main **AAPS** app. On a client it typically appears on _Smoothing_, _Calibration_, _Sensitivity detection_ and _APS_. Ako presne zostávajú hlavné zariadenie a klienti zosúladení a ktoré nastavenia môžete zmeniť na ktorej strane, opisuje časť [Ovládanie Master ↔ Client](#client-master-config-prefs).
+
+Rovnaká ikona sa zobrazuje aj **v nastaveniach**, pri jednotlivých nastaveniach, ktoré sa synchronizujú. In the example below _Absorption cutoff_ carries the icon; settings without the icon are configured per device:
+
+![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+
+Items **without** the icon are configured **per device**. Najdôležitejším príkladom je samotné pripojenie **NSClientV3 (Komunikácia)** – **Adresa Nightscoutu**, **prístupový token** a **websockety** sa nastavujú na každom telefóne zvlášť, preto pri nich ikona mobilu **nie je**.
+
+---
+
+(Config-Builder-tab-or-hamburger-menu)=
+## Opening a plugin screen
+
+Each plugin screen is opened in one of these ways (the tabs and the eye checkbox of **AAPS** v3 are gone, see [What changed in AAPS v4](#v4-changes)):
+
+- **Configuration** → the plugin's category → **Open plugin**,
+- the **Manage** sheet of the bottom navigation, for the screens you use most (Profile, Insulin settings, Pump, Automation, Food...),
+- a [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) button that you add yourself,
+- the **search bar** on the main screen.
+
+```{contents}
+:backlinks: entry
+:depth: 2
+```
 
 (ConfigBuilder_Profile)=
 
 ## Profil
 
-Tento modul sa nedá vypnúť, pretože je základnou súčasťou **AAPS**.
+This module cannot be disabled as it is a core part of **AAPS**.
 
-Základné informácie o tom, čo sa nachádza vo vašom **profile**, nájdete v časti [Váš profil AAPS](../SettingUpAaps/YourAapsProfile.md).
+See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
 
-(insulin)= (Config-Builder-insulin)=
-
+(insulin)=
+(Config-Builder-insulin)=
 ## Inzulín
 
-![Nastavenia inzulínu](../images/manage/insulin_settings.png)
+![Insulin settings](../images/manage/insulin_settings.png)
 
-V **AAPS** 4 už inzulín nie je plugin, ktorý sa vyberá v **Konfigurácii**. Inzulín, ktorý používate, nastavíte v **Spravovať → Nastavenia inzulínu**.
+In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Open **Manage → Insulin settings** to set up the insulin you are using.
 
 Editor inzulínu vám umožňuje:
 
-* zadať **Prezývka inzulínu**, aby ste inzulín ľahko rozpoznali,
-* nastaviť **Vrchol** (čas do maximálnej aktivity inzulínu, v minútach) a **DIA** (doba pôsobenia inzulínu, v hodinách), buď zadaním hodnoty, alebo tlačidlami **–** / **+**,
-* ťuknúť na tlačidlo predvoľby **Načítať vrchol z** – **Novorapid** (75 min), **Fiasp** (55 min) alebo **Lyumjev** (45 min) – a jedným krokom vyplniť štandardný čas vrcholu pre daný inzulín.
+- give the insulin an **Insulin nickname** so it is easy to recognise,
+- set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Action, in hours), either by typing the value or using the **–** / **+** buttons,
+- tap a **Load peak from** preset button — **Novorapid** (75 min), **Fiasp** (55 min) or **Lyumjev** (45 min) — to fill in the standard peak time for that insulin in one step.
 
 Povolené rozsahy sú rovnaké pre každý inzulín:
 
-* **DIA**: 5 až 9 hodín (5 až 10 hodín, ak je typ pacienta nastavený na **Tehotná**). Ako zvoliť hodnotu, nájdete v časti [Doba pôsobenia inzulínu (DIA) a vrchol](#Config-Builder-insulin-dia).
-* **Vrchol**: 35 až 120 minút.
+- **DIA**: 5 to 9 hours (5 to 10 hours if the patient type is set to **Pregnant**). See [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to choose a value.
+- **Peak**: 35 to 120 minutes.
 
-Krivky **IOB** (aktívny inzulín) a **Aktivita** v dolnej časti editora sa menia hneď, ako meníte hodnoty, takže okamžite vidíte, ako vaše nastavenia ovplyvňujú pôsobenie inzulínu.
+The **IOB** (insulin on board) and **Activity** curves shown at the bottom of the editor update as you change the values, so you can see straight away how your settings shape the insulin action.
 
-Viac informácií o inzulínovom profile, ako ho zobrazuje **AAPS**, nájdete [tu](#AapsScreens-insulin-profile).
+More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
 
 (Config-Builder-insulin-change-active)=
-
 ### Zmena používaného inzulínu (DIA alebo vrcholu)
 
-Inzulín označený **AKTÍVNY** je ten, ktorý používa váš bežiaci profil. Jeho polia sú sivé: nemôžete ho upraviť ani vymazať. Vďaka tomu sa názov inzulínu vo vašom bežiacom profile vždy zhoduje s nastaveniami, ktoré sa naozaj používajú.
+The insulin marked **ACTIVE** is the one your running profile uses. Jeho polia sú sivé: nemôžete ho upraviť ani vymazať. Vďaka tomu sa názov inzulínu vo vašom bežiacom profile vždy zhoduje s nastaveniami, ktoré sa naozaj používajú.
 
 Ak chcete zmeniť používané DIA alebo vrchol:
 
-1. Otvorte **Spravovať → Nastavenia inzulínu**. Ak sa obrazovka otvorí iba na čítanie (**✏️ ceruzka** v hornej lište), ťuknite na ceruzku a odomknite nastavenia.
-2. Ťuknite na **+** (*Pridať nový inzulín*). **AAPS** vytvorí kópiu inzulínu zobrazeného na obrazovke.
-3. Nastavte nový **Vrchol** a/alebo **DIA** a potom ťuknite na ikonu uloženia (vpravo hore).
-4. Ťuknite na **▶** (*Aktivovať inzulín*) a potvrďte. Nový inzulín sa stane **AKTÍVNYM**.
+1. Open **Manage → Insulin settings**. If the screen opens read-only (a **✏️ pencil** in the top bar), tap the pencil and unlock your settings.
+2. Tap **+** (_Add new insulin_). **AAPS** creates a copy of the insulin shown on screen.
+3. Set the new **Peak** and/or **DIA**, then tap the save icon (top right).
+4. Tap **▶** (_Activate insulin_) and confirm. The new insulin becomes **ACTIVE**.
 
-```{admonition} Názov obsahuje vrchol a DIA :class: note **AAPS** automaticky pridá do názvu inzulínu vrchol, DIA a koncentráciu (napríklad *Fiasp 55m 8h U100*), takže svoje konfigurácie na prvý pohľad rozlíšite.
+```{admonition} The name includes peak and DIA
+:class: note
+**AAPS** adds the peak, DIA and concentration to the insulin name automatically (for example _Fiasp 55m 8h U100_), so you can tell your configurations apart at a glance.
+```
 
-    <br />Starý inzulín môžete vymazať, keď už nie je aktívny.
-    
-    ### Predvoľby „Načítať vrchol z“
-    
-    V **AAPS** 4 už nie je zoznam typov inzulínu, z ktorého by ste vyberali. Každý inzulín používa rovnakú exponenciálnu krivku aktivity; líši sa iba jeho **Vrchol** a **DIA**. Predvoľby **Načítať vrchol z** v editore inzulínu jedným ťuknutím vyplnia odporúčaný vrchol pre najčastejšie inzulíny (malé ⓘ vedľa **Načítať vrchol z** ich vypíše aj s hodnotami vrcholu). **Vrchol** a **DIA** môžete potom ešte upraviť.
-    
-    Vrchol meňte mimo odporúčanej hodnoty iba vtedy, ak rozumiete, aký to bude mať účinok. [Graf krivky inzulínu](#AapsScreens-insulin-profile) vám pomôže krivkám porozumieť.
-    
-    #### Novorapid
-    
-    ![Krivka inzulínu s vrcholom Novorapid](../images/Profile/ConfBuild_Insulin_RAO.png)
-    
-    * odporúča sa pre Humalog, Novolog a Novorapid (v **AAPS** v3 sa volal *Rapid-Acting Oref*)
-    * Vrchol = 75 minút po podaní
-    
-    #### Fiasp
-    
-    ![Krivka inzulínu s vrcholom Fiasp](../images/Profile/ConfBuild_Insulin_URO.png)
-    
-    * odporúča sa pre Fiasp (v **AAPS** v3 sa volal *Ultra-Rapid Oref*)
-    * Vrchol = 55 minút po podaní
-    
-    (Config-Builder-lyumjev)=
-    #### Lyumjev
-    
-    ![Krivka inzulínu s vrcholom Lyumjev](../images/Profile/ConfBuild_Insulin_L.png)
-    
-    * odporúča sa pre Lyumjev
-    * Vrchol = 45 minút po podaní
-    
-    #### Vlastný vrchol
-    
-    * V **AAPS** 4 nie je samostatný typ inzulínu „Voliteľný vrchol Oref“ (Free-Peak Oref): ľubovoľný **Vrchol** (35 až 120 minút) zadajte priamo v [editore inzulínu](#Config-Builder-insulin), bez použitia predvoľby.
-    * Vlastný vrchol sa hodí, ak používate inzulín, ktorý v zozname nie je, alebo zmes rôznych inzulínov.
-    
-    (Config-Builder-insulin-dia)=
-    ### Doba pôsobenia inzulínu (DIA) a vrchol
-    
-    ```{warning}
-    Pri používaní okruhu znamená zníženie DIA alebo vrcholu vždy viac podaného inzulínu. DIA funguje v AAPS inak ako v komerčných systémoch AID a neopatrné zmeny týchto nastavení môžu zmeniť dávkovanie inzulínu oveľa viac alebo menej, než čakáte.
-    
+Starý inzulín môžete vymazať, keď už nie je aktívny.
 
-AAPS modeluje priebeh pôsobenia inzulínu matematickým vzorcom, ktorý sa nastavuje pomocou **DIA** a úzko súvisiaceho nastavenia **vrcholu**. DIA je teoretická doba, kým IOB klesne na nulu, a vrchol je okamih, keď je účinok inzulínu najsilnejší. Z toho vyplýva krivka IOB a krivka aktivity, ktorá je jednoducho **rýchlosť** poklesu IOB.
+### The "Load peak from" presets
 
-Majte na pamäti, že keď AAPS používa okruh, je normálne mať obdobia [nulového dočasného bazálu (zero-temping)](#Open-APS-features-super-micro-bolus-smb). Tento chýbajúci bazálny inzulín sa celý odpočíta od IOB, a preto IOB v praxi klesne na nulu o mnoho hodín skôr, než je nastavené DIA. [IOB z bolusov a IOB z bazálu](#aaps-screens-iob-cob-basal-sens) si môžete pozrieť zvlášť na hlavnej obrazovke.
+In **AAPS** 4 there is no list of insulin types to choose from. Každý inzulín používa rovnakú exponenciálnu krivku aktivity; líši sa iba jeho **Vrchol** a **DIA**. Predvoľby **Načítať vrchol z** v editore inzulínu jedným ťuknutím vyplnia odporúčaný vrchol pre najčastejšie inzulíny (malé ⓘ vedľa **Načítať vrchol z** ich vypíše aj s hodnotami vrcholu). **Vrchol** a **DIA** môžete potom ešte upraviť.
 
-Ak chcete nastaviť DIA a vrchol, ťuknite na hlavnej obrazovke na **Spravovať** a potom na **Nastavenia inzulínu**. AAPS zobrazí aktívnu konfiguráciu inzulínu takto:
+Vrchol meňte mimo odporúčanej hodnoty iba vtedy, ak rozumiete, aký to bude mať účinok. [Graf krivky inzulínu](#AapsScreens-insulin-profile) vám pomôže krivkám porozumieť.
 
-![Príklad konfigurácie inzulínu](../images/manage/insulin_profile.png)
+#### Novorapid
 
-V tomto príklade je vrchol nastavený na 55 minút, DIA na 8 hodín a [koncentrácia inzulínu](#Insulin-Concentration) je štandardných 100 IU/ml.
+![Insulin curve with the Novorapid peak](../images/Profile/ConfBuild_Insulin_RAO.png)
 
-Pre vplyv nulového dočasného bazálu opísaný vyššie a pre vzorec, ktorý AAPS používa na pokles IOB, nastavuje väčšina používateľov zreteľne dlhšie DIA ako v komerčných systémoch. Mnohým ľuďom vo všeobecnosti dobre funguje **DIA** 9 h. Keď budete mať s AAPS viac skúseností a dobre vyladený profil, môžete skúsiť nájsť vlastné nastavenie DIA a vrcholu pomocou informácií nižšie.
+- recommended for Humalog, Novolog and Novorapid (called _Rapid-Acting Oref_ in **AAPS** v3)
+- Peak = 75 minutes after injection
 
-````{admonition} Podrobnosti o vplyve nastavenia DIA a vrcholu :class: dropdown
+#### Fiasp
 
-Keďže bazálna dávka má v AAPS nepriamy vplyv na pokles IOB, príliš vysoké bazálne dávky môžu zakryť príliš vysoké DIA a naopak. Je rozumné najprv starostlivo vyladiť bazálne dávky a až potom upravovať DIA a vrchol. Majte tiež na pamäti, že nastavenia DIA a vrcholu sa navzájom ovplyvňujú: účinok DIA závisí od vrcholu a naopak.
+![Insulin curve with the Fiasp peak](../images/Profile/ConfBuild_Insulin_URO.png)
 
-Tieto grafy ukazujú presný vplyv DIA a vrcholu na krivky IOB v celom rozsahu povolených hodnôt.
+- recommended for Fiasp (called _Ultra-Rapid Oref_ in **AAPS** v3)
+- Peak = 55 minutes after injection
 
-Úprava DIA:
+(Config-Builder-lyumjev)=
+#### Lyumjev
 
-```{image} ../images/iob_remaining_static_peak.png :width: 400px
+![Insulin curve with the Lyumjev peak](../images/Profile/ConfBuild_Insulin_L.png)
 
-    <br />Úprava vrcholu:
-    
-    ```{image} ../images/iob_remaining_static_dia.png
-    :width: 400px
-    
+- recommended for Lyumjev
+- Peak = 45 minutes after injection
 
-Nakoniec porovnanie, keď sa DIA a vrchol upravujú súčasne. Logika je tu taká, že obe hodnoty sa upravia v rovnakom pomere, takže `49/35 ~ 7/5`. Alebo podobne `120/93 ~ 9/7`. Intervaly budú rovnaké bez ohľadu na východiskové DIA alebo vrchol, pokiaľ je pomerná zmena pre obe hodnoty rovnaká.
+#### Custom peak
 
-```{image} ../images/iob_remaining_uniform.png :width: 400px
+- There is no separate "Free-Peak Oref" insulin type in **AAPS** 4: enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a preset.
+- A custom peak is useful if you use an insulin that is not in the list, or a mixture of different insulins.
 
-    <br />Všimnite si, že keď sa DIA a vrchol upravujú týmto spôsobom, každý bod krivky sa posunie o rovnaký pomer.
-    
-    ````
-    
-    #### Ďalšie čítanie o nastavení DIA a vrcholu
-    
-    * [Technické podrobnosti a historické pozadie od predchodcu AAPS, OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
-    * [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) (prečo často používame nesprávnu dobu pôsobenia inzulínu) na Diabettech.
-    * [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) (exponenciálne krivky inzulínu a Fiasp) na See My CGM (archív).
-    * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) (upravený model Humalogu v uzavretom okruhu) a ďalšie články na Bionic Wookie, ktoré odporúčajú DIA 9 h pre Lyumjev, Fiasp, NovoRapid a Humalog.
-    
-    (Config-Builder-bg-source)=
-    ## Zdroj glykémie
-    Vyberte zdroj glykémie, ktorý používate. Ďalšie informácie o nastavení nájdete na stránke [Zdroj glykémie](../Getting-Started/CompatiblesCgms.md).
-    
-    ![Konfigurácia > Zdroj glykémie](../images/v4/Configuration/configuration_bg_source.png)
-    
-    Ďalšie zdroje uvidíte, keď posuniete obrazovku nadol:
-    
-    ![Konfigurácia > Zdroj glykémie, pokračovanie](../images/v4/Configuration/configuration_bg_source_2.png)
-    
-    ![Konfigurácia > Zdroj glykémie, koniec zoznamu](../images/v4/Configuration/configuration_bg_source_3.png)
-    
-    * [xDrip+ glykémia](../CompatibleCgms/xDrip.md) – aj pre kompatibilné aplikácie, napríklad [Juggluco](../CompatibleCgms/Juggluco.md)
-    * [Glykémia z NS](../CompatibleCgms/CgmNightscoutUpload.md) – iba ak viete, čo robíte, pozrite [Zdroj glykémie](../Getting-Started/CompatiblesCgms.md).
-    * [MM640g](../CompatibleCgms/MM640g.md)
-    * Glimp – podporovaná je iba verzia 4.15.57 a novšia
-    * [BYODA (Build Your Own Dexcom App – vlastnoručne zostavená aplikácia Dexcom)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
-    * MicroTech CGM aplikácia – pre CGM Aidex / LinX
-    * [Poctech](../CompatibleCgms/PocTech.md)
-    * Tomato (MiaoMiao) – aplikácia Tomato pre zariadenie MiaoMiao
-    * [Glunovo](https://infinovo.com/) – aplikácia Glunovo pre systém CGM Glunovo
-    * Intelligo – aplikácia Intelligo
-    * Syai/Ottai – pre aplikácie Syai a Ottai (pozrite [Syai Tag](../CompatibleCgms/SyaiTagX1.md) a [Ottai](../CompatibleCgms/OttaiM8.md))
-    * Aplikácia SI – upravená aplikácia SI alebo aplikácia Sibionics pre CGM Sibionics
-    * Aplikácia Sino – upravená aplikácia pre CGM Sinocare
-    * Čítačka notifikácií – číta hodnoty glykémie z notifikácií, ktoré zobrazujú oficiálne aplikácie CGM (Dexcom, Medtronic, Eversense atď.)
-    * Instara – aplikácia Instara
-    * Náhodná glykémia – generuje náhodné údaje glykémie na testovanie. Dá sa zapnúť iba vo vývojárskom (engineering) zostavení s **Virtuálnou pumpou**, takže v bežnej inštalácii **AAPS** sa použiť nedá.
-    
-    ## Vyhladzovanie
-    
-    ![Konfigurácia > Vyhladzovanie](../images/v4/Configuration/configuration_smoothing.png)
-    
-    Pozrite [Vyhladzovanie údajov glykémie](../CompatibleCgms/SmoothingBloodGlucoseData.md).
-    
-    ## Kalibrácia
-    
-    Vyberte, ako má **AAPS** zaobchádzať s hodnotami, ktoré dostáva zo senzora:
-    
-    - **Žiadna kalibrácia**: hodnoty zo senzora sa použijú tak, ako sú. Použite to, keď je senzor kalibrovaný už z výroby a je presný. Toto je predvolené nastavenie.
-    - **Lineárna kalibrácia**: **AAPS** opraví hodnoty zo senzora pomocou sklonu a posunu, ktoré vypočíta z vašich meraní z prsta.
-    
-    Ako používať **Lineárna kalibrácia**:
-    
-    1. V kategórii **Kalibrácia** vyberte **Lineárna kalibrácia**.
-    2. Keď zavediete nový senzor, zaznamenajte výmenu senzora: použite **Zaznamenať výmenu senzora** na obrazovke kalibrácie alebo zadajte zavedenie senzora CGM v Starostlivosti. Tak **AAPS** vie, kedy sa relácia senzora začala. Ak **AAPS** zistí, že v hodnotách chýba viac ako 30 minút, môže vás požiadať, aby ste označili výmenu senzora; táto výzva sa zobrazí iba na hlavnom zariadení, nie na klientovi.
-    3. Otvorte plugin a ťuknite na **Pridať kalibráciu**. Zadajte hodnotu z merania z prsta. **AAPS** k nej priradí hodnotu zo senzora z posledných 10 minút a vytvorí z nich dvojicu.
-    
-    Kalibrácia sa prijme iba vtedy, keď:
-    
-    - je zaznamenaná výmena senzora a odvtedy uplynuli aspoň **2 hodiny** (zahrievanie),
-    - je vaša glykémia stabilná. Ak sa mení príliš rýchlo, dialóg vás na to upozorní a ukáže limit,
-    - existuje hodnota z CGM z posledných 10 minút,
-    - ide o aktuálny okamih. Staršie hodnoty z merania z prsta zadať nemôžete.
-    
-    Ako funguje korekcia:
-    
-    - **AAPS** preloží dvojicami aktuálneho senzora priamku: `corrected value = slope × sensor value + offset`.
-    - Novšie dvojice majú väčšiu váhu ako staršie: dvojica stará 2 dni má váhu asi 37 %, dvojica stará 4 dni asi 14 %. Priamka preto sleduje posun (drift) vášho senzora.
-    - Potrebné sú aspoň **2 dvojice**.
-    - Ak sú dvojice blízko pri sebe (rozdiel menší ako 54 mg/dl / 3 mmol/l), hodnoty sa iba posunú (posun, bez sklonu).
-    - Sklon sa drží medzi 0,55 a 1,6. Sklon mimo tohto rozsahu sa obmedzí na najbližšiu hodnotu.
-    - Bezpečnostný limit: ak by korekcia pri 100 mg/dl (5,5 mmol/l) bola väčšia ako ±30 mg/dl (1,7 mmol/l), korekcia sa nepoužije. To vás chráni pred chybne zadanou hodnotou.
-    
-    Čo sa zmení:
-    
-    - Opravená hodnota sa používa všade: glykémia na hlavnej obrazovke, graf aj okruh. Samotné hodnoty zo senzora sa nemenia. Korekcia sa použije navyše, a to aj na skoršie hodnoty aktuálneho senzora.
-    - Nová výmena senzora začína od nuly. Dvojice zo skorších senzorov sa už nepočítajú.
-    - V grafe sa kalibrácia zobrazuje ako značka na hodnote z merania z prsta.
-    - Kalibrácie sa synchronizujú cez Nightscout, takže vaši klienti zobrazujú rovnaké opravené hodnoty.
-    
-    Kontrola a odstránenie záznamov:
-    
-    - **Otvoriť plugin** ukáže stav (napríklad *Sklon 0,85, korekcia stredného rozsahu -0,4*), graf vašich dvojíc s priamkou a zoznam záznamov.
-    - Ak je záznam chybný (napríklad ste mali na prste cukor), ťuknite na ikonu koša vedľa neho. Priamka sa hneď prepočíta.
-    
-    ```{admonition} Používate xDrip+ ako zdroj glykémie?
-    :class: note
-    xDrip+ má vlastnú kalibráciu. Kalibrujte iba na jednom mieste, aby sa hodnoty zo senzora neopravovali dvakrát.
-    
+(Config-Builder-insulin-dia)=
+### Duration of insulin action (DIA) and peak
 
-    {admonition} Kalibrujte opatrne
-    :class: warning
-    Nesprávna hodnota z prsta vedie k nesprávnym hodnotám glykémie, a tým aj k nesprávnemu dávkovaniu inzulínu. Pred meraním si umyte ruky a nekalibrujte, keď sa glykémia rýchlo mení.
+```{warning}
+In looping, decreasing DIA or peak will always increase administered insulin. DIA works differently in AAPS than in commercial AID systems, and careless changes to these settings can change insulin dosing in a way which is much larger or smaller than expected.
+```
 
-![Konfigurácia > Kalibrácia](../images/v4/Configuration/configuration_calibration.png)
+AAPS models the timeline of insulin action with a mathematical formula, configured using **DIA** and the closely related **peak** settings. DIA je teoretická doba, kým IOB klesne na nulu, a vrchol je okamih, keď je účinok inzulínu najsilnejší. This yields an IOB curve and an activity curve, which is simply the **rate** of IOB decay.
+
+Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). Tento chýbajúci bazálny inzulín sa celý odpočíta od IOB, a preto IOB v praxi klesne na nulu o mnoho hodín skôr, než je nastavené DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
+
+To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin settings**. AAPS zobrazí aktívnu konfiguráciu inzulínu takto:
+
+![Sample insulin configuration](../images/manage/insulin_profile.png)
+
+In this example, the peak setting is 55 minutes, DIA is 8 hours and [insulin concentration](#Insulin-Concentration) is the standard 100 IU/mL.
+
+Pre vplyv nulového dočasného bazálu opísaný vyššie a pre vzorec, ktorý AAPS používa na pokles IOB, nastavuje väčšina používateľov zreteľne dlhšie DIA ako v komerčných systémoch. In general, many people find that a **DIA** of 9h works well for them. Keď budete mať s AAPS viac skúseností a dobre vyladený profil, môžete skúsiť nájsť vlastné nastavenie DIA a vrcholu pomocou informácií nižšie.
+
+````{admonition} Details on the impact of DIA and peak configuration
+:class: dropdown
+
+Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+
+These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+
+Adjusting DIA:
+
+```{image} ../images/iob_remaining_static_peak.png
+:width: 400px
+```
+
+Adjusting peak:
+
+```{image} ../images/iob_remaining_static_dia.png
+:width: 400px
+```
+
+Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+
+```{image} ../images/iob_remaining_uniform.png
+:width: 400px
+```
+
+Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+
+````
+
+#### Further reading on DIA and peak configuration
+
+- [Technical details and historical background from the AAPS predecessor, OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
+- [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
+- [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
+- [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
+
+(Config-Builder-bg-source)=
+## Zdroj glykémie
+Select the blood glucose source you are using. Ďalšie informácie o nastavení nájdete na stránke [Zdroj glykémie](../Getting-Started/CompatiblesCgms.md).
+
+![Configuration > BG Source](../images/v4/Configuration/configuration_bg_source.png)
+
+Scroll down to see the other sources:
+
+![Configuration > BG Source, continued](../images/v4/Configuration/configuration_bg_source_2.png)
+
+![Configuration > BG Source, end of the list](../images/v4/Configuration/configuration_bg_source_3.png)
+
+- [xDrip+ BG](../CompatibleCgms/xDrip.md) - also for compatible apps such as [Juggluco](../CompatibleCgms/Juggluco.md)
+- [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
+- [MM640g](../CompatibleCgms/MM640g.md)
+- Glimp - only version 4.15.57 and newer are supported
+- [BYODA (Build Your Own Dexcom App)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+- MicroTech CGM App - for the Aidex / LinX CGM
+- [Poctech](../CompatibleCgms/PocTech.md)
+- Tomato (MiaoMiao) - Tomato App for MiaoMiao device
+- [Glunovo](https://infinovo.com/) - Glunovo App for Glunovo CGM system
+- Intelligo - Intelligo App
+- Syai/Ottai - for the Syai and Ottai apps (see [Syai Tag](../CompatibleCgms/SyaiTagX1.md) and [Ottai](../CompatibleCgms/OttaiM8.md))
+- SI App - patched SI App or Sibionics App for Sibionics CGM
+- Sino App - patched app for Sinocare CGM
+- Notification Reader - reads glucose values from the notifications shown by official CGM apps (Dexcom, Medtronic, Eversense, etc.)
+- Instara - Instara App
+- Random BG - generates random BG data for testing. Dá sa zapnúť iba vo vývojárskom (engineering) zostavení s **Virtuálnou pumpou**, takže v bežnej inštalácii **AAPS** sa použiť nedá.
+
+## Smoothing
+
+![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+
+See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+
+## Kalibrácia
+
+Choose how **AAPS** treats the values it receives from your sensor:
+
+- **No calibration**: the sensor values are used as they are. Použite to, keď je senzor kalibrovaný už z výroby a je presný. Toto je predvolené nastavenie.
+- **Linear calibration**: **AAPS** corrects the sensor values with a slope and an offset that it computes from your fingerstick entries.
+
+How to use **Linear calibration**:
+
+1. V kategórii **Kalibrácia** vyberte **Lineárna kalibrácia**.
+2. Keď zavediete nový senzor, zaznamenajte výmenu senzora: použite **Zaznamenať výmenu senzora** na obrazovke kalibrácie alebo zadajte zavedenie senzora CGM v Starostlivosti. Tak **AAPS** vie, kedy sa relácia senzora začala. Ak **AAPS** zistí, že v hodnotách chýba viac ako 30 minút, môže vás požiadať, aby ste označili výmenu senzora; táto výzva sa zobrazí iba na hlavnom zariadení, nie na klientovi.
+3. Otvorte plugin a ťuknite na **Pridať kalibráciu**. Zadajte hodnotu z merania z prsta. **AAPS** k nej priradí hodnotu zo senzora z posledných 10 minút a vytvorí z nich dvojicu.
+
+A calibration is accepted only when:
+
+- a sensor change is logged and at least **2 hours** have passed since then (warm-up),
+- your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
+- there is a CGM reading from the last 10 minutes,
+- it is for the current moment. Staršie hodnoty z merania z prsta zadať nemôžete.
+
+How the correction works:
+
+- **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
+- Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. Priamka preto sleduje posun (drift) vášho senzora.
+- At least **2 pairs** are needed.
+- If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
+- The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
+- Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. To vás chráni pred chybne zadanou hodnotou.
+
+What it changes:
+
+- The corrected value is used everywhere: the BG on the main screen, the graph and the loop. Samotné hodnoty zo senzora sa nemenia. Korekcia sa použije navyše, a to aj na skoršie hodnoty aktuálneho senzora.
+- A new sensor change starts from zero. Dvojice zo skorších senzorov sa už nepočítajú.
+- On the graph, a calibration is shown as a marker at the fingerstick value.
+- Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
+
+Check and remove entries:
+
+- **Open plugin** shows the status (for example _Slope 0.85, mid-range correction -0.4_), a chart of your pairs with the line, and the list of entries.
+- If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. Priamka sa hneď prepočíta.
+
+```{admonition} Using xDrip+ as BG source?
+:class: note
+xDrip+ has its own calibration. Calibrate in one place only, so that the sensor values are not corrected twice.
+```
+
+```{admonition} Calibrate with care
+:class: warning
+A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Wash your hands before measuring, and do not calibrate while your glucose is changing fast.
+```
+
+![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)
 
 (Config-Builder-pump)=
-
 ## Pumpa
+Vyberte pumpu, ktorú používate. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
 
-Vyberte pumpu, ktorú používate. Viac informácií nájdete na stránke [Kompatibilné pumpy](../Getting-Started/CompatiblePumps.md).
-
-![Konfigurácia > Pumpa](../images/v4/Configuration/configuration_pump_list_1.png)
+![Configuration > Pump](../images/v4/Configuration/configuration_pump_list_1.png)
 
 Všetky ovládače púmp uvidíte, keď posuniete obrazovku nadol:
 
-![Konfigurácia > Pumpa, pokračovanie](../images/v4/Configuration/configuration_pump_list_2.png)
+![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_2.png)
 
-![Konfigurácia > Pumpa, pokračovanie](../images/v4/Configuration/configuration_pump_list_3.png)
+![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_3.png)
 
-![Konfigurácia > Pumpa, koniec zoznamu](../images/v4/Configuration/configuration_pump_list_4.png)
+![Configuration > Pump, end of the list](../images/v4/Configuration/configuration_pump_list_4.png)
 
-Keď vyberiete inú pumpu, **AAPS** vás požiada o potvrdenie zmeny:
+When you select another pump, **AAPS** asks you to confirm the change:
 
-![Potvrdenie prepnutia pluginu](../images/v4/Pumps/switch_plugin_dialog.png)
+![Switch plugin confirmation](../images/v4/Pumps/switch_plugin_dialog.png)
 
-* [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
-* Dana R Korean (pre domácu kórejskú verziu pumpy DanaR)
-* Dana Rv2 (pumpa DanaR s neoficiálnou aktualizáciou firmvéru)
-* [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
-* [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
-* [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
-* Omnipod pre [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
-* Dash pre [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
-* [Medtronic](../CompatiblePumps/MedtronicPump.md)
-* [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
-* [EOPatch2](../CompatiblePumps/EOPatch2.md)
-* [Medtrum](../CompatiblePumps/MedtrumNano.md)
-* [Equil 5.3](../CompatiblePumps/Equil5.3.md)
-* [CareLevo](../CompatiblePumps/CareLevo.md)
-* Virtuálna pumpa: otvorený okruh – **AAPS** iba navrhuje, inzulín nepodáva 
-  * keď s **AAPS** robíte prvé kroky, počas prvých [cieľov](../SettingUpAaps/CompletingTheObjectives.md)
-  * pre pumpu, ktorá ešte nemá žiadny ovládač
+- [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
+- Dana R Korean (pre domácu kórejskú verziu pumpy DanaR)
+- Dana Rv2 (pumpa DanaR s neoficiálnou aktualizáciou firmvéru)
+- [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+- [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
+- [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
+- Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
+- Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+- [Medtronic](../CompatiblePumps/MedtronicPump.md)
+- [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
+- [EOPatch2](../CompatiblePumps/EOPatch2.md)
+- [Medtrum](../CompatiblePumps/MedtrumNano.md)
+- [Equil 5.3](../CompatiblePumps/Equil5.3.md)
+- [Carelevo](../CompatiblePumps/CareLevo.md)
+- Virtual pump: open loop - **AAPS** suggestions only
+  - as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
+  - pre pumpu, ktorá ešte nemá žiadny ovládač
 
 (config-builder-wrong-pump-data)=
-
 ### Správa: „Dáta prichádzajú z inej pumpy“
 
-**AAPS** si pamätá pumpu, ku ktorej je pripojený (typ pumpy a sériové číslo). Ak dostane dáta z inej pumpy, napríklad po výmene pumpy za novú rovnakého modelu, zobrazí túto správu a dáta z tejto pumpy ignoruje:
+**AAPS** remembers the pump it is connected to (pump type and serial number). Ak dostane dáta z inej pumpy, napríklad po výmene pumpy za novú rovnakého modelu, zobrazí túto správu a dáta z tejto pumpy ignoruje:
 
-![Dáta prichádzajú z inej pumpy](../images/Screen_DifferentPump.png)
+![Data is coming from different pump](../images/Screen_DifferentPump.png)
 
-Ak chcete použiť novú pumpu, zmeňte ovládač pumpy: vyberte **Virtuálna pumpa**, potvrďte a potom znova vyberte svoju pumpu. **AAPS** potom zaregistruje pumpu, ku ktorej je teraz pripojený.
+To use the new pump, change the pump driver: select **Virtual pump**, confirm, then select your pump again. **AAPS** then registers the pump it is connected to now.
 
 (Config-Builder-sensitivity-detection)=
 
 ## Detekcia citlivosti
 
-![Konfigurácia > Detekcia citlivosti](../images/v4/Configuration/configuration_sensitivity_detection.png)
+![Configuration > Sensitivity detection](../images/v4/Configuration/configuration_sensitivity_detection.png)
 
-Vyberte akým spôsobom má byť zisťovaná vaša citlivosť na inzulín. Viac informácií o jednotlivých možnostiach nájdete [tu](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Táto funkcia priebežne analyzuje vaše dáta a upravuje parametre, ak rozpozná, že reagujete na inzulín citlivejšie (alebo naopak, odolnejšie) ako obvykle. Viac podrobností o tom, ako sa počíta samotný pomer citlivosti, nájdete v časti [Kľúčové funkcie AAPS > Autosens](#Open-APS-features-autosens).
+Vyberte akým spôsobom má byť zisťovaná vaša citlivosť na inzulín. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Táto funkcia priebežne analyzuje vaše dáta a upravuje parametre, ak rozpozná, že reagujete na inzulín citlivejšie (alebo naopak, odolnejšie) ako obvykle. More details about how the sensitivity ratio itself is calculated can be found in [Key AAPS Features > Autosens](#Open-APS-features-autosens).
 
-Svoju citlivosť môžete sledovať na hlavnej obrazovke v [doplnkovom grafe](#AapsScreens-section-g-additional-graphs): vyberte SENS% a sledujte bielu čiaru. Upozorňujeme, že musíte plniť [Cieľ 8](#objectives-objective8), aby detekcia citlivosti/[Autosens](#Open-APS-features-autosens) automaticky upravila množstvo podaného inzulínu. Pred dosiahnutím tohto cieľa sa percento Autosensu / čiara v grafe zobrazí len pre informáciu.
+You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SENS% and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Pred dosiahnutím tohto cieľa sa percento Autosensu / čiara v grafe zobrazí len pre informáciu.
 
 ### Nastavenie vstrebávania sacharidov
-
-Ak používate Oref1 s **SMB**, musíte zmeniť **min_5m_carbimpact** na 8. Hodnota sa používa iba počas chýbajúcich údajov **CGM** alebo keď fyzickou aktivitou „spálite“ nárast glykémie, ktorý by inak spôsobil rozklad COB v **AAPS**. V prípadoch, keď [absorpciu sacharidov](../DailyLifeWithAaps/CobCalculation.md) nemožno dynamicky vypočítať na základe reakcií vašej glykémie, systém do sacharidov vloží predvolený rozklad. V podstate je to niečo ako poistka.
+If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. V podstate je to niečo ako poistka.
 
 (Config-Builder-aps)=
-
 ## APS
 
-![Konfigurácia > APS](../images/v4/Configuration/configuration_aps.png)
+![Configuration > APS](../images/v4/Configuration/configuration_aps.png)
 
-Zvoľte ktorý algoritmus má AAPS používať na prispôsobenie dávkovania vášho inzulínu. Aktuálne podrobnosti zvoleného algoritmu si pozriete cez **Otvoriť plugin**.
+Zvoľte ktorý algoritmus má AAPS používať na prispôsobenie dávkovania vášho inzulínu. You can view the active detail of the chosen algorithm with **Open plugin**.
+- OpenAPS AMA
+  - Advanced Meal Assist: starší algoritmus sa už neodporúča.
+  - Jednoducho povedané, výhoda je v tom, že po podaní bolusu k jedlu môže systém rýchlejšie nastaviť vysoký dočasný bazál, AK spoľahlivo zadáte sacharidy.
+- [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb)
+  - Super Micro Bolus: najnovší algoritmus, odporúčaný pre všetkých používateľov.
+  - In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
+  - Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
+- [Auto ISF](#Open-APS-features-auto-isf)
+  - Experimentálny algoritmus pre pokročilých používateľov. Zobrazí sa v zozname až po splnení cieľov.
 
-* OpenAPS AMA 
-  * Advanced Meal Assist: starší algoritmus sa už neodporúča.
-  * Jednoducho povedané, výhoda je v tom, že po podaní bolusu k jedlu môže systém rýchlejšie nastaviť vysoký dočasný bazál, AK spoľahlivo zadáte sacharidy.
-* [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb) 
-  * Super Micro Bolus: najnovší algoritmus, odporúčaný pre všetkých používateľov.
-  * Na rozdiel od AMA nepoužíva SMB na riadenie glykémie dočasné bazály, ale hlavne malé **Super Micro Bolusy**.
-  * Poznámka: Odporúča sa používať tento algoritmus od začiatku, aj keď v skutočnosti nebudete dostávať SMB do [Cieľa 9](#objectives-objective9).
-* [Auto ISF](#Open-APS-features-auto-isf) 
-  * Experimentálny algoritmus pre pokročilých používateľov. Zobrazí sa v zozname až po splnení cieľov.
-
-Ak prechádzate z algoritmu AMA na SMB, musíte *min_5m_carbimpact* ručne zmeniť na **8** (predvolená hodnota pre SMB) v [Nastavenia → Nastavenie vstrebávania sacharidov](#Preferences-min_5m_carbimpact).
+If switching from AMA to SMB algorithm, _min_5m_carbimpact_ must be changed manually to **8** (default value for SMB) in [Settings → Absorption settings](#Preferences-min_5m_carbimpact).
 
 ## Okruh
 
-Tento modul sa nedá vypnúť, pretože je základnou súčasťou **AAPS**.
+This module cannot be disabled as it is a core part of **AAPS**.
 
-![Konfigurácia > Okruh](../images/v4/Configuration/configuration_loop.png)
+![Configuration > Loop](../images/v4/Configuration/configuration_loop.png)
 
 ## Obmedzenia
 
-![Konfigurácia > Obmedzenia](../images/v4/Configuration/configuration_constraints.png)
+![Configuration > Constraints](../images/v4/Configuration/configuration_constraints.png)
 
 ### Ciele
 
-**AAPS** má vzdelávací program (sériu cieľov), ktoré musíte krok za krokom splniť. Mal by vás bezpečne previesť nastavením systému s uzavretým okruhom.
+**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. Mal by vás bezpečne previesť nastavením systému s uzavretým okruhom.
 
-Viac informácií nájdete na stránke [Ciele](../SettingUpAaps/CompletingTheObjectives.md).
+See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
 
 ## Komunikácia
 
-V tejto kategórii (v **AAPS** v3 sa volala **Synchronizácia**) vyberáte, či a kam má **AAPS** posielať vaše dáta.
+In this category (called **Synchronization** in **AAPS** v3), you choose if/where you want **AAPS** to send your data to.
 
-![Konfigurácia > Komunikácia](../images/v4/Configuration/configuration_communication.png)
+![Configuration > Communication](../images/v4/Configuration/configuration_communication.png)
 
 Zvyšok zoznamu uvidíte, keď posuniete obrazovku nadol:
 
-![Konfigurácia > Komunikácia, pokračovanie](../images/v4/Configuration/configuration_communication_2.png)
+![Configuration > Communication, continued](../images/v4/Configuration/configuration_communication_2.png)
 
 ### NSClientV3
 
-Môže sa použiť ako [reportovací server](../SettingUpAaps/SettingUpTheReportingServer.md) a/alebo na [vzdialené sledovanie](../RemoteFeatures/RemoteMonitoring.md), [vzdialené ovládanie](../RemoteFeatures/RemoteControl.md).
+Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md).
 
-Ako nastaviť synchronizáciu NSClientV3, nájdete v časti [Synchronizácia s reportovacím serverom](#SetupWizard-synchronization-with-the-reporting-server-and-more).
+See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to set up NSClientV3 synchronization.
 
 ### Tidepool
 
-Môže sa použiť ako [reportovací server](../SettingUpAaps/SettingUpTheReportingServer.md).
+Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Pozrite [Tidepool](../SettingUpAaps/Tidepool.md).
+See [Tidepool](../SettingUpAaps/Tidepool.md).
 
 ### xDrip
 
-Slúži na **odosielanie** dát, napríklad hodnôt glykémie a ošetrení, do xDrip+ v tom istom telefóne. Jeho nastavenia obsahujú aj **Odosielať stav do xDrip+**, riadok stavu s IOB a COB, ktorý zobrazuje xDrip+ a niektoré sprievodné aplikácie pre hodinky.
+Used to **send** data such as glucose values and treatments to xDrip+ on the same phone. Its settings also hold **Send status to xDrip+**, a status line with IOB and COB that xDrip+ and some watch companion apps display.
 
 ### Open Humans
 
-Pozrite [Open Humans](../SupportingAaps/OpenHumans.md).
+See [Open Humans](../SupportingAaps/OpenHumans.md).
 
 (Config-Builder-wear)=
-
 ### Wear
-
-Sledujte a ovládajte **AAPS** z hodiniek s Wear OS. Nastavenie hodiniek je opísané na stránke [Nastavenie AAPS na hodinkách s Wear OS](../WearOS/WearOsSmartwatch.md). Po zapnutí pluginu vyberte jeho možnosti v [Nastavenia > Wear](#preferences-wear). Používanie hodiniek je opísané na stránke [Ovládanie AAPS pomocou inteligentných hodiniek s Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
+Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is explained on [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md). After enabling the plugin, choose its options in [Settings > Wear](#preferences-wear). Using the watch is explained on [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
 
 (external-companion-apps)=
-
 ### Externé sprievodné (Companion) aplikácie
 
-Vysiela stavové údaje **AAPS** v telefóne, aby ich mohli zobraziť iné aplikácie nainštalované v tom istom telefóne – napríklad sprievodné aplikácie pre hodinky alebo widgety. Vysielanie obsahuje glykémiu a trend, IOB, COB, bazál a dočasný bazál, názov profilu, stav okruhu, batériu telefónu a pumpy, stav zásobníka a priebeh bolusu. Zapnite ho, iba ak tieto údaje vyžaduje sprievodná aplikácia, ktorú používate.
+Broadcasts **AAPS** status data on the phone so that other apps installed on it can display it — for example watch or widget companion apps. Vysielanie obsahuje glykémiu a trend, IOB, COB, bazál a dočasný bazál, názov profilu, stav okruhu, batériu telefónu a pumpy, stav zásobníka a priebeh bolusu. Zapnite ho, iba ak tieto údaje vyžaduje sprievodná aplikácia, ktorú používate.
 
-Aplikácie, o ktorých vieme, že toto vysielanie čítajú, sú [WatchDrip+](https://bigdigital.home.blog/) (hodinky Xiaomi a Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (komplikácie a widgety pre Wear OS a Android Auto cez GlucoDataAuto) a aplikácia G-Watch. Ich nastavenie je opísané na stránke [Inteligentné hodinky a AAPS](#watches-external-companion-apps). Niektoré z nich používajú aj **Odosielať stav do xDrip+** z pluginu **xDrip** vyššie, kvôli riadku stavu s IOB a COB.
+Apps known to read this broadcast are [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi and Amazfit watches), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS complications and widgets, and Android Auto through GlucoDataAuto) and the G-Watch app. Their setup is described on [Smartwatches and AAPS](#watches-external-companion-apps). Some of them also use **Send status to xDrip+** from the **xDrip** plugin above for a status line with IOB and COB.
 
-V starších verziách sa tento plugin volal **Samsung Tizen**, podľa [aplikácie G-Watch pre hodinky Samsung Tizen](#Watchfaces-tizen), pre ktorú bol pôvodne vytvorený.
+In earlier versions this plugin was called **Samsung Tizen**, after the [G-Watch app for Samsung Tizen watches](#Watchfaces-tizen) it was first made for.
 
 ### Garmin
 
 Pripojenie k zariadeniu Garmin (Fenix, Edge...)
-
 ## Ošetrenia
-
-Otvorte **menu** (☰) a vyberte [História ošetrení](#aaps-screens-treatments), kde uvidíte zaznamenané ošetrenia. Ak chcete záznam upraviť alebo vymazať (napr. ste zjedli menej sacharidov, ako ste čakali), vyberte „Odstrániť“ a zadajte novú hodnotu (v prípade potreby zmeňte čas) cez **Ošetrenia → Sacharidy** v dolnej navigácii (pozrite [Sacharidy](#screens-bolus-carbs)).
+Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through **Treatments → Carbs** in the bottom navigation (see [Carbs](#screens-bolus-carbs)).
 
 ## Všeobecne
 
-V **AAPS** 4 kategória **Všeobecné** v **Konfigurácii** obsahuje iba **Autotune**. Ostatné funkcie opísané nižšie sú vždy k dispozícii a netreba ich tu zapínať; v každom odseku je uvedené, kde ich nájdete.
+In **AAPS** 4 the **General** category of **Configuration** only lists **Autotune**. Ostatné funkcie opísané nižšie sú vždy k dispozícii a netreba ich tu zapínať; v každom odseku je uvedené, kde ich nájdete.
 
-![Konfigurácia > Všeobecné](../images/v4/Configuration/configuration_general.png)
+![Configuration > General](../images/v4/Configuration/configuration_general.png)
 
 ### Prehľad
 
-[Hlavná obrazovka](#AapsScreens-the-homescreen) **AAPS** už nie je plugin a v **Konfigurácii** nemá vlastné nastavenia. Možnosti, ktoré tu boli predtým, sú v **Nastaveniach** (ikona ozubeného kolieska): [Zobraziť poznámky v dialogových oknách](#Preferences-show-notes-field-in-treatments-dialogs), [Indikátory stavu](#Preferences-status-lights) a [Percento bolusu](#Preferences-deliver-this-part-of-bolus-wizard-result), ktoré používa bolusová kalkulačka. Možnosť superbolusu z **AAPS** 3.x [nie je dostupná ako nastavenie](#Preferences-advanced-settings-overview) v **AAPS** 4.
+The [main screen](#AapsScreens-the-homescreen) of **AAPS** is not a plugin any more and has no settings of its own in **Configuration**. The options that used to be here are in **Settings** (gear icon): [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs), [Status lights](#Preferences-status-lights) and the [Bolus percentage](#Preferences-deliver-this-part-of-bolus-wizard-result) used by the bolus wizard. The super bolus option of **AAPS** 3.x is [not available as a setting](#Preferences-advanced-settings-overview) in **AAPS** 4.
 
 (Config-Builder-actions)=
-
 ### Akcie
 
-Karta Akcie z **AAPS** 3.x už neexistuje. Jej tlačidlá sú teraz v paneli **Spravovať** – pozrite [Kam zmizla karta Akcie?](#screens-action-tab).
+The Actions tab of **AAPS** 3.x no longer exists. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
 
 ### Automatizácia
 
-**Spravovať → Automatizácia** vám umožní spravovať vaše [automatizácie](../DailyLifeWithAaps/Automations.md), a to od [Cieľa 10](#objectives-objective10).
+**Manage → Automation** lets you manage your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
 
 (Config-Builder-sms-communicator)=
-
 ### SMS komunikátor
-
-Umožňuje vzdialene opatrovateľom ovládať niektoré funkcie **AAPS** prostredníctvom SMS, ďalšie informácie o nastavení nájdete v časti [SMS príkazy](../RemoteFeatures/SMSCommands.md).
+Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
 
 ### Jedlo
+**Manage → Food** displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-**Spravovať → Jedlo** zobrazuje predvoľby jedál definované v databáze jedál Nightscoutu, ďalšie informácie o nastavení nájdete v [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
-
-Poznámka: Záznamy nie je možné použiť v kalkulačke **AAPS**. (iba na zobrazenie)
+Note: Entries cannot be used in the **AAPS** calculator. (iba na zobrazenie)
 
 (Config-Builder-autotune)=
-
 ### Autotune
 
-Môžete povoliť Autotune, pozrite [tu](../AdvancedOptions/Autotune.md).
+You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
 
 ### Údržba
 
-Otvorte **menu** (☰) a vyberte **Údržba**, kde môžete exportovať / importovať nastavenia a spravovať log súbory.
+Open the **menu** (☰) and select **Maintenance** to export / import settings and manage log files.
 
-![Obrazovka Údržba, log súbory](../images/screens/maintenance.png)
+![Maintenance screen, log files](../images/screens/maintenance.png)
 
-![Obrazovka Údržba, správa súborov](../images/screens/maintenance_2.png)
+![Maintenance screen, file management](../images/screens/maintenance_2.png)
 
-![Obrazovka Údržba, správa databázy](../images/screens/maintenance_3.png)
+![Maintenance screen, database management](../images/screens/maintenance_3.png)
 
 ### Konfigurácia
 
-Teraz sa volá **Konfigurácia**: táto stránka.
+Now called **Configuration**: this current page.

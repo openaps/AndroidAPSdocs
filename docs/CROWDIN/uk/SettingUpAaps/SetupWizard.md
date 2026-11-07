@@ -243,7 +243,7 @@ Your range to analyze TIR (time in range) is configured separately in your repor
 
 Натисніть «**Токен доступу Nightscout**» і введіть токен доступу для вашого сервера Nightscout. Without this token, access will not work. Якщо у вас його ще немає, перегляньте документацію про налаштування сервера звітів.
 
-Залиште ввімкненим «**Використовувати websockets**» для звʼязку з Nightscout у реальному часі.
+Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 Інші розділи поки що можна залишити з типовими значеннями. Їх описано тут, щоб ви знали, де знайти їх пізніше:
 

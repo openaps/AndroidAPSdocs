@@ -79,7 +79,7 @@ Bij de eerste start doorloopt **AAPSClient** dezelfde **Setup Wizard** die je ke
 
    ![De stap Instellen vanaf de master met de knop Scan de QR-code](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Communicatie**: de lijst met plugins toont alleen wat een volger nodig heeft (NSClientV3, xDrip+, Wear, Externe Companion Apps, Garmin). Heb je geen QR-code gescand? Zet dan **NSClientV3** aan en vul **dezelfde Nightscout URL** in als op de AAPS-telefoon, plus een toegangstoken, met **websockets** aan, precies zoals beschreven in [Synchronisatie](#RemoteControl_aapsclient).
+4. **Communicatie**: de lijst met plugins toont alleen wat een volger nodig heeft (NSClientV3, xDrip+, Wear, Externe Companion Apps, Garmin). Heb je geen QR-code gescand? Zet dan **NSClientV3** aan en vul **dezelfde Nightscout URL** in als op de AAPS-telefoon, plus een toegangstoken, met **websockets** aan, precies zoals beschreven in [Synchronisatie](#RemoteControl_aapsclient). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
    ![De stap Communicatie op de client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 

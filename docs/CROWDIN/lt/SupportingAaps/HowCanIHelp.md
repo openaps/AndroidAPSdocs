@@ -6,6 +6,16 @@ Kūrėjai – tai tėvai, prižiūrintys asmenys, artimieji ir diabetu sergantys
 
 *Norėdami visiškai išbandyti naują įrangą, kūrėjai turi turėti atsarginį telefoną ir atsarginę pompą, nes kol sistema neveikia stabiliai, jos negalima naudoti žmogui. Newer models need testing as they become available. Dalis paaukotų pinigų taip pat reikalinga šių priemonių siuntimo kūrėjams į kitas šalis išlaidoms padengti. Kartais taip pat malonu prisidėti prie kūrėjų išlaidų, kad jie galėtų išeiti iš savo tamsių kambarių ir susitikti konferencijose bei renginiuose, kur jų kūrybingi ir analitiški protai galėtų keistis idėjomis.*
 
+(donate-to-aaps)=
+
+### How can I donate?
+
+You can support **AAPS** in several ways:
+
+* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## Aš moku rašyti kodą! How do I participate?
 
 Yay! Peržiūrėkite problemas (issues), paklauskite Discord kanale – darbų visada daug! Pradžiai pasirinkite nedidelę užduotį ir sukurkite savo pirmąjį pull request (PR)! :)

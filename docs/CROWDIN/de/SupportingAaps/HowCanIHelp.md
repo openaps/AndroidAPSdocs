@@ -6,6 +6,16 @@ Eltern, Betreuer, geliebte Personen und Menschen mit Diabetes arbeiten zusammen,
 
 *Um ein neues Gerät vollständig zu testen, benötigen die Entwickler ein Ersatzgerät und eine Ersatzpumpe, denn diese Tests können nicht an Menschen durchgeführt werden, bevor AndroidAPS stabil läuft. Neuere Pumpenmodelle und CGM-Geräte müssen getestet werden, sobald sie verfügbar sind. Ein Teil des gespendeten Geldes wird auch für den weltweiten Versand dieser Testgeräte an die Entwickler benötigt. Manchmal ist es auch schön, zu den Kosten der Entwickler beizutragen, ihre abgedunkelten Räume zu verlassen und einander auf Konferenzen und Veranstaltungen zu treffen, damit sich ihre kreativen und analytischen Köpfe gegenseitig abschwingen können.*
 
+(donate-to-aaps)=
+
+### Wie kann ich spenden?
+
+Du kannst **AAPS** auf verschiedenen Wegen unterstützen:
+
+* **Nightscout Foundation:** Spende bei [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** unterstütze die Anstrengung, AAPS als medizinisches Gerät zu zertifizieren, unter [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** Schicke sie an die Adresse **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## Ich kann programmieren! Wie kann ich mich beteiligen?
 
 Juhuu! Schau dir die Issues an, frag im discord Channel. Es gibt immer viel zu tun! Suche dir zunächst eine kleine Aufgabe aus und mache deinen ersten pull request! :)

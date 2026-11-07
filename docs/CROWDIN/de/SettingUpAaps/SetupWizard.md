@@ -243,7 +243,7 @@ Tippe auf „**Nightscout-URL**“ und gib die Adresse Deines persönlichen Nigh
 
 Tippe auf „**Nightscout Zugriffstoken**“ und gib das Zugriffstoken für Deinen Nightscout-Server ein. Ohne dieses Token, wird der Zugriff nicht funktionieren. Hast Du es noch nicht, lies bitte in der Dokumentation zur Einrichtung des Reporting-Servers nach.
 
-Lass „**Websockets verwenden**“ für die Echtzeitkommunikation mit Nightscout eingeschaltet.
+Lass „**Websockets verwenden**“ für die Echtzeitkommunikation mit Nightscout eingeschaltet. Websockets sind für die Remote-Steuerung des **AAPSClient** auf beiden Smartphones **zwingend**.
 
 Die übrigen Abschnitte kannst Du vorerst auf ihren Standardwerten lassen. Sie werden hier beschrieben, damit Du später weißt, wo Du sie findest:
 

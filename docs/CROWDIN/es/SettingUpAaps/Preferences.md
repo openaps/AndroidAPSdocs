@@ -372,7 +372,7 @@ Con NSClientV3, todos los programas que suben datos deben usar la API v3 de Nigh
 - En Nightscout, crea un *[token de administrador (Admin)](https://nightscout.github.io/nightscout/security/#create-a-token)* (necesitas [Nightscout 15](https://nightscout.github.io/update/update/) para usar la API V3) e introdúcelo en **Token de acceso de Nightscout** (¡no tu API Secret!). En **AAPSClient** puedes escanear en su lugar el código QR del teléfono principal, que crea un token propio para el cliente. Un cliente emparejado con el PIN recibe su propio token del teléfono principal después del emparejamiento. Consulta [El token de Nightscout propio del cliente](#client-master-control-own-token).
 - Esto permite leer y escribir datos entre el sitio web de Nightscout y **AAPS**.
 - Si te quedas atascado en el Objetivo 1, revisa bien que no haya errores de escritura aquí.
-- Deja activado «Usar WebSockets» (recomendado).
+- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
 ### KEEP

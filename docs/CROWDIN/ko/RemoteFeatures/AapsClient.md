@@ -79,7 +79,7 @@ The iPhone version pairs with the master like the others. Unlike the computer ve
 
    ![QR 코드 스캔 버튼이 있는 마스터에서 설정 단계](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **통신** — 플러그인 목록에는 팔로워에게 필요한 것만 있습니다(NSClientV3, xDrip+, 워치, 외부 연동 앱, Garmin). QR 코드를 스캔하지 않았다면 **NSClientV3**를 켜고, 메인 휴대폰과 **같은 Nightscout URL**과 액세스 토큰을 입력하고, **websockets**를 켜십시오. [동기화](#RemoteControl_aapsclient)에 설명된 그대로 하십시오.
+4. **통신** — 플러그인 목록에는 팔로워에게 필요한 것만 있습니다(NSClientV3, xDrip+, 워치, 외부 연동 앱, Garmin). QR 코드를 스캔하지 않았다면 **NSClientV3**를 켜고, 메인 휴대폰과 **같은 Nightscout URL**과 액세스 토큰을 입력하고, **websockets**를 켜십시오. [동기화](#RemoteControl_aapsclient)에 설명된 그대로 하십시오. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
    ![클라이언트의 통신 단계](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 

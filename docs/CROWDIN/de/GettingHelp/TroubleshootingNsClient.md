@@ -32,6 +32,10 @@ Falls Deine Nightscout-Seite bei Azure gehostet wird: Viele Nutzer haben eine Zu
 
 Ein Workaround für Verbindungsprobleme in Azure ist, in den 'Application settings' das HTTP Protokoll auf 2.0 zu setzen und die 'Websockets' einzuschalten.
 
+    {admonition} Remote-Steuerung braucht Websockets
+    :class: important
+    Websockets sind für die Remote-Steuerung über **AAPSClient** auf beiden Smartphones **Pflicht**. Wenn die Websocket-Verbindung immer wieder abbricht, funktioniert die Remote-Steuerung nicht. Die Datensynchronisierung funktioniert noch, aber langsamer. Dein Nightscout-Host muss Websockets unterstützen.
+
 * Keine Blutzuckerwerte von Nightscout
 
 Wenn sich **AAPS** korrekt mit Nightscout verbindet, die Glukosewerte aber als N/A angezeigt werden: Öffne in den [NSClientV3-Einstellungen](#Preferences-nsclient) den Bereich **Synchronisierung** und schalte **CGM Daten von NS empfangen** ein. Diese Option ist ausgeblendet, solange die Client-Steuerung eingeschaltet ist ([geschützter Modus](#client-master-control-hardened-mode)). Prüfe in diesem Fall, ob unter **Konfiguration** → **BZ-Quelle** **Nightscout-Client BZ** ausgewählt ist.

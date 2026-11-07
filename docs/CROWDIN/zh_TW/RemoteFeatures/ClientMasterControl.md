@@ -57,7 +57,7 @@
 - **主控端**使用一般的 `full` **AAPS** 版本，並已連線至你的幫浦。
 - **主控端**使用 **NSClientV3** 連線至你的 Nightscout，且顯示為*已連線*。請提供 Nightscout 的<strong>管理員權杖</strong>：主控端會使用此權杖，為每個用戶端建立專屬權杖，並以 QR Code 顯示給用戶端。
 - **用戶端**使用 **[AAPSClient](AapsClient.md)**（或供其他病患使用的 **AAPSClient2**／**AAPSClient3**，請參閱[關於 AAPSClient、AAPSClient2 和 AAPSClient3](#remotecontrol-aapsclient-versions)）。用戶端必須使用<strong>同一個</strong> Nightscout。如果使用主控端的 QR Code 進行設定，用戶端會從主控端取得 Nightscout 位址和權杖；否則，請先在用戶端自行設定 **NSClientV3**。
-- 兩支手機都必須啟用 **WebSockets**：指令只能透過 WebSocket 連線傳送至主控端。啟用用戶端控制時，**AAPS** 會在主控端和已配對的用戶端上保持 WebSockets 啟用。
+- 要從 **AAPSClient** 遠端控制，兩支手機都**必須**使用 WebSocket。指令只有幾秒鐘的有效時間：沒有 WebSocket 時，指令會直接失敗，不會延遲送達。啟用用戶端控制時，**AAPS** 會在主控端和已配對的用戶端上保持 WebSockets 啟用。您的 Nightscout 主機必須支援 WebSocket。
 ```
 
 配對和同步是兩件不同的事：
@@ -339,7 +339,7 @@ PIN 碼可保護透過 Nightscout 傳送的配對密鑰。只將 PIN 碼分享�
 | 用戶端顯示**主控端離線**                                      | 確認主控端手機已喚醒並正在執行**AAPS**；兩支手機都已連線至**NSClientV3**；兩端都已啟用**websocket**；且使用相同的 Nightscout 網站。                                                           |
 | 用戶端顯示**尚未配對**                                       | 請前往**管理 → 與主控端配對**重新配對。確認用戶端在主控端的**已授權的用戶端**清單中顯示為**啟用中**。                                                                                          |
 | 主控端**拒絕**指令                                         | 主控端會依據目前狀態重新驗證，例如選擇的設定檔已不存在，或幫浦類型不符。請在主控端重新檢查。                                                                                                      |
-| 指令可以正常運作，但**速度很慢**                                  | 請在兩支手機上啟用**WebSocket**（否則應用程式會改用速度較慢的輪詢方式）。                                                                                                         |
+| 指令**失敗**，或主端經常**離線**                                | 從**AAPSClient**進行遠端控制時，兩支手機都**必須**使用 WebSocket。如果 WebSocket 連線持續中斷，遠端控制就無法運作。請參閱 [NSClient 疑難排解](../GettingHelp/TroubleshootingNsClient.md)。        |
 | 配對遭取消，並顯示 *「無法儲存配對密鑰」*                              | 沒有任何變更。請重新開始配對；如果仍持續失敗，請重新啟動**AAPSClient**後再試一次。                                                                                                    |
 | 配對後沒有任何反應                                           | 確認主控端已開啟**允許用戶端控制**，且主控端已連線至 Nightscout。                                                                                                            |
 | 在**新增用戶端**對話框中，無法選擇 QR Code 選項                      | 對話框會說明原因。*不是管理員權杖*：請在主控端設定 Nightscout 管理員權杖，或使用**PIN**新增用戶端。*未連線*：請等到主控端在**NSClientV3**中顯示*已連線*。                                                    |

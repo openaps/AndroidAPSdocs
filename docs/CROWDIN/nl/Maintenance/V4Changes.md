@@ -27,6 +27,7 @@ Synchroniseerde je (of je **AAPSClient**-volger) nog met de oude plugin **NSClie
 - Vul je **Nightscout URL** en een **toegangstoken** in (NSClientV3 gebruikt een toegangstoken, *niet* de oude API secret, zie [een token aanmaken](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - Je Nightscout-site moet **API v3** ondersteunen (Nightscout 15 of nieuwer).
 - Gebruik je **websockets**? Zet ze dan op **zowel** de master als de volger aan of uit, nooit op maar één van beide.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 Dit verandert alleen hoe de app met Nightscout communiceert; je gegevens op Nightscout blijven hetzelfde.

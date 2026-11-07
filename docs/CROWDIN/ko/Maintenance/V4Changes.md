@@ -27,6 +27,7 @@
 - **Nightscout URL**과 **액세스 토큰**을 입력하십시오(NSClientV3는 이전 API secret이 *아니라* 액세스 토큰을 사용합니다. [토큰 만들기](https://nightscout.github.io/nightscout/security/#create-a-token) 참조).
 - Nightscout 사이트가 **API v3**를 지원해야 합니다(Nightscout 15 이상).
 - **websockets**를 사용한다면 마스터와 팔로워 **양쪽 모두**에서 켜거나 끄십시오. 한쪽에서만 켜면 안 됩니다.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 이것은 앱이 Nightscout와 통신하는 방식에만 영향을 줍니다. Nightscout에 있는 데이터는 바뀌지 않습니다.

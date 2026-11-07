@@ -32,6 +32,10 @@ Android가 휴대폰을 절전 모드로 전환할 수 있습니다. 휴대폰�
 
 Azure에서 연결 문제를 피하는 방법은 Application settings에서 HTTP protocol을 2.0으로, Websockets를 ON으로 설정하는 것입니다
 
+    {admonition} Remote control needs websockets
+    :class: important
+    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+
 * Nightscout에서 혈당 측정값을 받지 못함
 
 **AAPS**가 Nightscout에 올바르게 연결되지만 혈당이 N/A로 표시되면: [NSClientV3 설정](#Preferences-nsclient)에서 **동기화**를 열고 **NS에서 CGM 데이터 받기**를 켜십시오. 클라이언트 제어가 켜져 있는 동안([강화 모드](#client-master-control-hardened-mode))에는 이 옵션이 숨겨집니다. 이 경우 **구성** → **혈당 출처**에서 **NSClient 혈당**이 선택되어 있는지 확인하십시오.

@@ -243,7 +243,7 @@ Spauskite „**Nightscout URL**“ ir įveskite savo asmeninio Nightscout server
 
 Spauskite „**Nightscout prieigos raktas**“ ir įveskite savo Nightscout serverio prieigos raktą. Be šio prieigos rakto prieiga neveiks. Jei jo dar neturite, perskaitykite ataskaitų serverio nustatymo dokumentaciją.
 
-Palikite įjungtą „**Naudoti WebSocket**“, kad ryšys su Nightscout vyktų realiuoju laiku.
+Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 Kitas skiltis kol kas galite palikti su numatytosiomis reikšmėmis. Jos aprašytos čia, kad vėliau žinotumėte, kur jų ieškoti:
 

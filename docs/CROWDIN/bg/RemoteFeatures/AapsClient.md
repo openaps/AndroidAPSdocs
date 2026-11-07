@@ -79,7 +79,7 @@ The iPhone version pairs with the master like the others. Unlike the computer ve
 
    ![Стъпката „Настройване от главния телефон“ с бутона „Сканирайте QR кода“](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Комуникация** – списъкът с плъгини предлага само това, което е нужно на последовател (NSClientV3, xDrip+, Часовник (Wear), Външни приложения за проследяване, Garmin). Ако не сте сканирали QR код, включете **NSClientV3** и въведете **същия адрес на Nightscout** като на основния телефон и токен за достъп, с включени **websockets** – точно както е описано в [Синхронизация](#RemoteControl_aapsclient).
+4. **Комуникация** – списъкът с плъгини предлага само това, което е нужно на последовател (NSClientV3, xDrip+, Часовник (Wear), Външни приложения за проследяване, Garmin). Ако не сте сканирали QR код, включете **NSClientV3** и въведете **същия адрес на Nightscout** като на основния телефон и токен за достъп, с включени **websockets** – точно както е описано в [Синхронизация](#RemoteControl_aapsclient). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
    ![Стъпката „Комуникация“ на клиента](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 

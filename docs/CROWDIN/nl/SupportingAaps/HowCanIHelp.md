@@ -6,6 +6,16 @@ Ontwikkelaars zijn ouders, verzorgers, naasten en mensen met diabetes die samenw
 
 *Om een nieuwe rig volledig te testen, hebben ontwikkelaars een reservetelefoon en een reservepomp nodig. Een rig mag pas bij een mens worden gebruikt als hij stabiel is. Nieuwe modellen moeten worden getest wanneer deze beschikbaar komen. Een deel van het gedoneerde geld is ook nodig voor de kosten om deze spullen naar de ontwikkelaars in verschillende landen te versturen. Soms is het ook fijn om bij te dragen aan de kosten van de ontwikkelaars om hun donkere kamers te verlaten en elkaar te ontmoeten op conferenties en evenementen, zodat ze elkaar kunnen inspireren met hun creatieve en analytische ideeën.*
 
+(donate-to-aaps)=
+
+### How can I donate?
+
+You can support **AAPS** in several ways:
+
+* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## Ik kan programmeren! Hoe doe ik mee?
 
 Top! Bekijk de issues op GitHub en stel je vragen in het Discord-kanaal. Er is altijd veel te doen! Kies eerst een kleine taak en maak je eerste pull request! :)

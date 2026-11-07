@@ -372,7 +372,7 @@ NSClientV3 kullanırken tüm yükleyiciler Nightscout API v3'ü kullanmalıdır.
 - Nightscout'ta bir *[Admin belirteci](https://nightscout.github.io/nightscout/security/#create-a-token)* oluşturun (V3 API'yi kullanmak için [Nightscout 15](https://nightscout.github.io/update/update/) gerekir) ve bunu **Nightscout erişim belirteci** alanına girin (API Secret'ınızı değil!). **AAPSClient**'ta bunun yerine ana telefonun QR kodunu tarayabilirsiniz. Bu, istemcinin kendi belirtecini ayarlar. PIN ile eşleştirilen bir istemci, eşleştirmeden sonra kendi belirtecini ana telefondan alır. Bkz. [İstemcinin kendi Nightscout belirteci](#client-master-control-own-token).
 - Bu, verilerin hem Nightscout web sitesi hem de **AAPS** arasında okunmasını ve yazılmasını sağlar.
 - 1. Görevde takılıp kalırsanız, burada yazım hatası olup olmadığını iki kez kontrol edin.
-- "Websocket'leri kullan" seçeneğini etkin bırakın (önerilir).
+- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
 ### Senkronizasyon

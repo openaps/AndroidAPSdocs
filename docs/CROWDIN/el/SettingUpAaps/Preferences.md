@@ -372,7 +372,7 @@ As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAa
 - Στο Nightscout, δημιουργήστε ένα *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (χρειάζεται [Nightscout 15](https://nightscout.github.io/update/update/) για να χρησιμοποιηθεί το V3 API) και γράψτε το στο **Διακριτικό πρόσβασης Nightscout** (όχι το API Secret σας!). Στο **AAPSClient** μπορείτε αντί γι' αυτό να σαρώσετε τον κωδικό QR του κύριου τηλεφώνου, που ρυθμίζει ένα δικό του διακριτικό (token) για τον πελάτη. Ένας πελάτης που έκανε σύζευξη με το PIN παίρνει το δικό του διακριτικό από το κύριο τηλέφωνο μετά τη σύζευξη. Δείτε [Το δικό του διακριτικό Nightscout του πελάτη](#client-master-control-own-token).
 - Αυτό επιτρέπει την ανάγνωση και την εγγραφή δεδομένων ανάμεσα στον ιστότοπο Nightscout και το **AAPS**.
 - Ελέγξτε προσεκτικά για τυπογραφικά λάθη εδώ, αν έχετε κολλήσει στο Βήμα 1.
-- Αφήστε ενεργό το «Χρήση websockets» (συνιστάται).
+- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
 ### Συγχρονισμός

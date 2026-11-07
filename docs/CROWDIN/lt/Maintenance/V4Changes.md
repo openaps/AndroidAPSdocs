@@ -27,6 +27,7 @@ Jei jūs (arba jūsų **AAPSClient** sekėjas) vis dar sinchronizavote su senuoj
 - Įveskite savo **Nightscout URL** ir **prieigos raktą** (NSClientV3 naudoja prieigos raktą (access token), *ne* senąjį API slaptažodį (API secret) – žr. [prieigos rakto sukūrimas](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - Jūsų Nightscout svetainė turi palaikyti **API v3** (Nightscout 15 arba naujesnė versija).
 - Jei naudojate **WebSocket**, įjunkite arba išjunkite juos **abiejuose** įrenginiuose – ir pagrindiniame įrenginyje, ir sekėjo įrenginyje – niekada tik viename.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 Tai keičia tik tai, kaip programėlė bendrauja su Nightscout; jūsų duomenys Nightscout nepasikeičia.

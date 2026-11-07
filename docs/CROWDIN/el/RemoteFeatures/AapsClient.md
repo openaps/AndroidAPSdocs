@@ -79,7 +79,7 @@ The iPhone version pairs with the master like the others. Unlike the computer ve
 
    ![Το βήμα Ρύθμιση από την κύρια συσκευή με το κουμπί Σάρωση του κωδικού QR](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Επικοινωνία** — η λίστα προσθέτων δείχνει μόνο ό,τι χρειάζεται ένας ακόλουθος (NSClientV3, xDrip+, Wear, Εξωτερικές συνοδευτικές εφαρμογές, Garmin). Αν δεν σαρώσατε κωδικό QR, ενεργοποιήστε το **NSClientV3** και εισάγετε την **ίδια Διεύθυνση Nightscout** όπως στο κύριο τηλέφωνο και ένα διακριτικό πρόσβασης (access token), με ενεργοποιημένα τα **websockets** — ακριβώς όπως περιγράφεται στο [Συγχρονισμός](#RemoteControl_aapsclient).
+4. **Επικοινωνία** — η λίστα προσθέτων δείχνει μόνο ό,τι χρειάζεται ένας ακόλουθος (NSClientV3, xDrip+, Wear, Εξωτερικές συνοδευτικές εφαρμογές, Garmin). Αν δεν σαρώσατε κωδικό QR, ενεργοποιήστε το **NSClientV3** και εισάγετε την **ίδια Διεύθυνση Nightscout** όπως στο κύριο τηλέφωνο και ένα διακριτικό πρόσβασης (access token), με ενεργοποιημένα τα **websockets** — ακριβώς όπως περιγράφεται στο [Συγχρονισμός](#RemoteControl_aapsclient). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
    ![Το βήμα Επικοινωνία στον πελάτη](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 

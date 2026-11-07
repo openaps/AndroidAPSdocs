@@ -243,7 +243,7 @@ Appuyez sur « **URL Nightscout** » et saisissez l'adresse de votre serveur N
 
 Appuyez sur « **Jeton d'accès Nightscout** » et saisissez le jeton d'accès de votre serveur Nightscout. Sans ce jeton, l'accès ne fonctionnera pas. Si vous ne l'avez pas encore, consultez la documentation sur la mise en place du serveur de rapports.
 
-Laissez « **Utiliser les websockets** » activé pour une communication en temps réel avec Nightscout.
+Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 Les autres sections peuvent garder leurs valeurs par défaut pour l'instant. Elles sont décrites ici pour que vous sachiez où les trouver plus tard :
 

@@ -243,7 +243,7 @@ Press "**Nightscout URL**" and enter your personal Nightscout server address (th
 
 Press "**Nightscout access token**" and enter the access token for your Nightscout server. Fără acest jeton, accesul nu va funcționa. Dacă nu îl aveți încă, consultați documentația pentru configurarea serverului de raportare.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout.
+Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 Celelalte secțiuni pot rămâne deocamdată la valorile implicite. They are described here so you know where to find them later:
 

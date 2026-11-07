@@ -74,7 +74,9 @@ Transferred by a USB cable onto the follower phone; or Dragged into Google drive
 
 - יש להזין את **אסימון גישה של Nightscout** באותן הגדרות. נא לפעול לפי ההנחיות [כאן](https://nightscout.github.io/nightscout/security/#create-a-token). בטלפון **AAPS** יש להשתמש ב**אסימון מנהל (admin)**: בעזרתו **AAPS** יוצר אסימון נפרד לכל טלפון עוקב.
 
-- יש להפעיל את **שימוש ב־WebSockets** ב**שני** הטלפונים. בטלפון **AAPS**, ה-WebSockets **נדרשים** לשליטה מרחוק: בלעדיהם **AAPS** לא יכול לקבל פקודות מ-**AAPSClient**. בשני הטלפונים הם גם מאיצים את הסנכרון, במחיר של צריכת סוללה מעט גבוהה יותר.
+- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. בשני הטלפונים הם גם מאיצים את הסנכרון, במחיר של צריכת סוללה מעט גבוהה יותר.
+
+  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ![הגדרות > NSClientV3 עם כתובת Nightscout, אסימון גישה של Nightscout ושימוש ב־WebSockets](../images/preferences/settings_nsclient.png)
 

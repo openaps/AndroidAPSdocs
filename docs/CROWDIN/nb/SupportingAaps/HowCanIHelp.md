@@ -6,6 +6,16 @@ Utviklerne er foreldre, omsorgspersoner, pårørende og personer med diabetes so
 
 *For å teste et nytt oppsett fullt ut trenger utviklerne en ekstra telefon og en ekstra pumpe, siden det ikke kan brukes på et menneske før det er stabilt. Nyere modeller må testes etter hvert som de kommer. Noe av pengene som doneres, går også til å frakte dette utstyret over landegrensene til utviklerne. Noen ganger er det også fint å bidra til utviklernes kostnader når de forlater de mørke rommene sine og møter hverandre på konferanser og arrangementer, slik at de kreative og analytiske hodene deres kan utveksle ideer.*
 
+(donate-to-aaps)=
+
+### How can I donate?
+
+You can support **AAPS** in several ways:
+
+* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## Jeg kan skrive kode! Hvordan deltar jeg?
 
 Hurra! Se på sakene (issues) på GitHub, spør i Discord-kanalen, det er alltid mye å gjøre! Velg en liten oppgave først, og lag din første pull request! :)

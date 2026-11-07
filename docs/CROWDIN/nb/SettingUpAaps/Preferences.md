@@ -372,7 +372,7 @@ Når du bruker NSClientV3, må alle opplastere bruke Nightscout API v3. Hvis en 
 - I Nightscout oppretter du et *[Admin-token](https://nightscout.github.io/nightscout/security/#create-a-token)* (krever [Nightscout 15](https://nightscout.github.io/update/update/) for å bruke V3-API-et) og skriver det inn i **Nightscout tilgangstoken** (ikke API Secret!). På **AAPSClient** kan du i stedet skanne QR-koden fra hovedtelefonen, som setter opp et eget token for klienten. En klient som er sammenkoblet med PIN, får sitt eget token fra hovedtelefonen etter sammenkoblingen. Se [Klientens eget Nightscout-token](#client-master-control-own-token).
 - Dette gjør at data kan leses og skrives mellom Nightscout-nettstedet og **AAPS**.
 - Dobbeltsjekk for skrivefeil her hvis du står fast i opplæringsmål 1.
-- La «Bruk websockets» være på (anbefalt).
+- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
 ### Synkronisering

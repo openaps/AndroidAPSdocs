@@ -243,7 +243,7 @@ Toque em "**URL do Nightscout**" e introduza o endereço do seu servidor Nightsc
 
 Toque em "**Token de acesso do Nightscout**" e introduza o token de acesso do seu servidor Nightscout. Without this token, access will not work. Se ainda não o tiver, consulte a documentação sobre a configuração do servidor de relatórios.
 
-Deixe "**Usar websockets**" ativado para a comunicação em tempo real com o Nightscout.
+Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 As restantes secções podem ficar com os valores predefinidos por agora. São descritas aqui para saber onde as encontrar mais tarde:
 

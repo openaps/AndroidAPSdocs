@@ -210,7 +210,7 @@ La colonne *Auth* des tableaux ci-dessous indique si une telle authentification 
 
 | Commande             | Auth | Fonction et *Réponse*                                                                                |
 | -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| POMPE                | Non  | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP                 | Non  | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
 | PUMP DISCONNECT *30* | Oui  | Pour déconnecter la pompe pendant *30* minutes                                                       |
 | PUMP CONNECT         | Oui  | Pompe reconnectée                                                                                    |
 

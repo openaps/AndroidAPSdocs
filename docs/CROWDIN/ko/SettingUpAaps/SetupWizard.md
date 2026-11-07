@@ -243,7 +243,7 @@ TIR(범위 내 시간)을 분석하는 범위는 리포팅 서버에서 따로 �
 
 "**Nightscout 액세스 토큰**"을 누르고 Nightscout 서버의 액세스 토큰을 입력하십시오. 이 토큰이 없으면 접근할 수 없습니다. 아직 토큰이 없다면 리포팅 서버 설정 문서를 확인하십시오.
 
-Nightscout와 실시간으로 통신하도록 "**웹소켓 사용**"은 켜 둔 채로 두십시오.
+Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 나머지 섹션은 지금은 기본값으로 두어도 됩니다. 나중에 어디에서 찾을 수 있는지 알 수 있도록 여기에서 설명합니다:
 

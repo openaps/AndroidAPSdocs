@@ -153,7 +153,7 @@ In diesem Schritt legst Du in Deinem GitHub-Konto Deine eigene private Kopie von
 ```
 
 ```{tip}
-GitHub says **my-aaps already exists in this account**? You already have your repository: close the GitHub tab and go on with the setup page. If your key is already in it, continue with [step 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+GitHub meldet **my-aaps already exists in this account**? Du hast Dein Repository schon: Schließe den GitHub-Tab und mach auf der Einrichtungsseite weiter. Ist Dein Schlüssel schon darin, mach mit [Schritt 4](#aaps-builder-step4) weiter. Siehe [Fehlerbehebung](#aaps-builder-ts-repo-exists).
 ```
 
 (aaps-builder-step2)=
@@ -261,7 +261,7 @@ GitHub zeigt **Page not found** (404)? Prüfe zuerst, ob Du in diesem Browser be
 Wenn es keine Schaltfläche **Build AAPS** oder **Run workflow** gibt:
 
 - Öffne Dein Repository und prüfe, ob es einen Ordner `.github` mit der Datei `workflows/build.yml` enthält. Ist das Repository leer, wurde es nicht aus der Vorlage angelegt: Lösche es (**Settings** → unten auf der Seite → **Delete this repository**) und führe [Schritt 1](#aaps-builder-step1) erneut mit dem Knopf aus.
-- The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+- Die Datei ist da, aber GitHub zeigt **This workflow does not exist**: siehe [Fehlerbehebung](#aaps-builder-ts-workflow-not-found).
 - Öffne den Tab **Actions**. Steht dort, dass Workflows deaktiviert sind, tippe auf die grüne Schaltfläche, um sie zu aktivieren, und dann in der Liste auf **Build AAPS**.
 
 (aaps-builder-step5)=
@@ -327,7 +327,7 @@ Dafür brauchst Du ein weiteres Secret, `GDRIVE_OAUTH2`. Schritt 6 der Einrichtu
 
    ![Continue](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
 
-3. Der neue Tab zeigt dann einen Fehler wie **Die Website ist nicht erreichbar** oder **127.0.0.1 hat die Verbindung abgelehnt**. **Das ist so gewollt:** Die Antwort von Google steht in der Adresse dieses Tabs. Tap the address bar, then the copy icon next to the address (on a computer: select the whole address and copy it). Sie beginnt mit `http://127.0.0.1:47913/`.
+3. Der neue Tab zeigt dann einen Fehler wie **Die Website ist nicht erreichbar** oder **127.0.0.1 hat die Verbindung abgelehnt**. **Das ist so gewollt:** Die Antwort von Google steht in der Adresse dieses Tabs. Tippe auf die Adressleiste und dann auf das Kopieren-Symbol neben der Adresse (am Computer: markiere die ganze Adresse und kopiere sie). Sie beginnt mit `http://127.0.0.1:47913/`.
 
    ![This site can't be reached](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
 
@@ -364,7 +364,7 @@ Dein Repository erstellt nie etwas von selbst: Du entscheidest, wann welche Vers
 **Aktualisierungen Deiner Workflow-Datei** sind selten: nur wenn sich das Formular **Run workflow** ändert, zum Beispiel für eine neue Build-Variante, oder einmalig, wenn Dein Repository mit einer früheren Version der Einrichtungsseite (ein leeres Repository mit einer kurzen Workflow-Datei) oder aus der alten Vorlage angelegt wurde. Die Seite [Aktualisierungen & Änderungen der Dokumentation](../Maintenance/DocumentationUpdate.md) weist darauf hin. Dein Secret `KEYSTORE_SET` bleibt, wie es ist. Öffne auf der Einrichtungsseite am Ende von Schritt 1 **Updating your copy**:
 
 1. Tippe auf **Open the newest workflow**. Klicke auf einem Computer oben rechts in der Datei auf das **Kopier-Symbol** („Copy raw file“). Öffne auf einem Smartphone stattdessen die **Nur-Text-Version**, halte den Text gedrückt und wähle dann **Alles auswählen** und **Kopieren**.
-2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
+2. Tippe auf **Open my workflow file**, dann oben rechts in der Datei auf das Menü **⋯** und auf **Edit file… In place** (am Computer klickst Du auf den Stift).
 3. Ersetze den gesamten Text durch den kopierten Workflow (auf einem Smartphone lange drücken: **Alles auswählen**, dann **Einfügen**).
 4. Tippe auf **Commit changes…** und dann auf **Commit changes**.
 
@@ -372,7 +372,7 @@ Die erste Zeile der Datei zeigt ihre Version.
 
 ## Fehlerbehebung
 
-Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
+Ein Fehler ist aufgetreten? Siehe [Fehlerbehebung für den AAPS Builder](#aaps-builder-troubleshooting).
 
 ```{toctree}
 :hidden:

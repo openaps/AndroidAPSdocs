@@ -372,7 +372,7 @@ Pri používaní NSClientV3 musia všetky nástroje na nahrávanie dát použív
 - V Nightscoute vytvorte *[token s rolou Admin](https://nightscout.github.io/nightscout/security/#create-a-token)* (na použitie V3 API je potrebný [Nightscout 15](https://nightscout.github.io/update/update/)) a zadajte ho do poľa **Nightscout prístupový token** (nie váš API Secret!). V **AAPSClient** môžete namiesto toho naskenovať QR kód hlavného telefónu, čím sa nastaví vlastný token klienta. Klient spárovaný pomocou PIN dostane po spárovaní vlastný token z hlavného telefónu. Pozrite si [Vlastný Nightscout token klienta](#client-master-control-own-token).
 - To vám umožní čítanie a zápis údajov medzi webovou stránkou Nightscout a **AAPS**.
 - Ak ste sa zasekli pri Cieli 1, prekontrolujte si zadané údaje.
-- Nechajte zapnuté „Použiť websockety“ (odporúčané).
+- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
 ### Synchronizácia

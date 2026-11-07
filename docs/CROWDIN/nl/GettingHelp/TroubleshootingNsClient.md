@@ -32,6 +32,10 @@ Als je site op Azure draait: veel mensen merkten dat de verbindingsproblemen min
 
 Een oplossing voor verbindingsproblemen in Azure: zet in de Application settings het HTTP-protocol op 2.0 en Websockets op ON
 
+    {admonition} Remote control needs websockets
+    :class: important
+    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+
 * Geen BG-waarden van Nightscout
 
 Als **AAPS** goed verbinding maakt met Nightscout, maar BG als N/A wordt getoond: open in de [NSClientV3-instellingen](#Preferences-nsclient) het onderdeel **Synchronisatie** en zet **Ontvang CGM gegevens van NS** aan. Deze optie is verborgen als client-besturing aan staat ([Beveiligde modus](#client-master-control-hardened-mode)). Controleer in dat geval of **NSClient BG** is gekozen bij **Configuratie** → **BG bron**.

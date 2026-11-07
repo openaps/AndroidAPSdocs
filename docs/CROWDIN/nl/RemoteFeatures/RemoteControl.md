@@ -74,7 +74,9 @@ De gebruiker moet ervoor zorgen dat __beide__ telefoons, AAPS en AAPS Client, me
 
 - Voer je **Nightscout toegangstoken** in bij dezelfde instellingen. Volg de notities [hier](https://nightscout.github.io/nightscout/security/#create-a-token). Gebruik op de **AAPS**-telefoon een **admin-token**: daarmee maakt **AAPS** voor elke volgtelefoon een eigen token.
 
-- Zet **Websockets gebruiken** aan op **beide** telefoons. Op de **AAPS**-telefoon zijn websockets **verplicht** voor bediening op afstand: zonder websockets kan **AAPS** geen opdrachten van **AAPSClient** ontvangen. Op beide telefoons maken ze de synchronisatie ook sneller, maar de batterij raakt iets sneller leeg.
+- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. Op beide telefoons maken ze de synchronisatie ook sneller, maar de batterij raakt iets sneller leeg.
+
+  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ![Instellingen > NSClientV3 met Nightscout URL, Nightscout toegangstoken en Websockets gebruiken](../images/preferences/settings_nsclient.png)
 

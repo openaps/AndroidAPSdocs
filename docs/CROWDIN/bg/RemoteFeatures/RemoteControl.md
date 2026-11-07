@@ -74,7 +74,9 @@ APK файлът на **AAPSClient** вече може да бъде:
 
 - Въведете **Токен за достъп до Nightscout** в същите настройки. Моля, следвайте указанията [тук](https://nightscout.github.io/nightscout/security/#create-a-token). На телефона с **AAPS** използвайте **администраторски токен** (admin token): с него **AAPS** създава отделен токен за всеки телефон на последовател.
 
-- Включете **Използвай websockets** на **двата** телефона. На телефона с **AAPS** websockets са **задължителни** за дистанционното управление: без тях **AAPS** не може да получава команди от **AAPSClient**. И на двата телефона те ускоряват синхронизацията, но батерията се изразходва малко повече.
+- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. И на двата телефона те ускоряват синхронизацията, но батерията се изразходва малко повече.
+
+  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ![Настройки > NSClientV3 с Nightscout адрес, Токен за достъп до Nightscout и Използвай websockets](../images/preferences/settings_nsclient.png)
 

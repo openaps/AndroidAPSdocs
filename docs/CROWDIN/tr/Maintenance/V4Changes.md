@@ -27,6 +27,7 @@ Siz (veya **AAPSClient** takipçiniz) hâlâ eski **NSClient (v1)** eklentisiyle
 - **Nightscout URL**'nizi ve bir **erişim belirteci** girin (NSClientV3 eski API secret'ı *değil*, bir erişim belirteci kullanır; bkz. [belirteç oluşturma](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - Nightscout sitenizin **API v3**'ü desteklemesi gerekir (Nightscout 15 veya daha yeni).
 - **websockets** kullanıyorsanız, bunları **hem** ana birimde hem de takipçide etkinleştirin veya devre dışı bırakın; asla yalnızca birinde değil.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 Bu yalnızca uygulamanın Nightscout ile nasıl iletişim kurduğunu etkiler; Nightscout'taki verileriniz değişmez.

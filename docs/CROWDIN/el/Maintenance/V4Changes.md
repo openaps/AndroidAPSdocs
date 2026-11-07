@@ -27,6 +27,7 @@
 - Εισάγετε τη **Διεύθυνση Nightscout** και ένα **διακριτικό πρόσβασης (access token)** (το NSClientV3 χρησιμοποιεί access token, *όχι* το παλιό API secret — δείτε [δημιουργία token](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - Ο ιστότοπος Nightscout σας πρέπει να υποστηρίζει το **API v3** (Nightscout 15 ή νεότερο).
 - Αν χρησιμοποιείτε **websockets**, ενεργοποιήστε ή απενεργοποιήστε τα και στις **δύο** συσκευές, στην κύρια (master) και στον ακόλουθο — ποτέ μόνο στη μία.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 Αυτό αλλάζει μόνο τον τρόπο που η εφαρμογή επικοινωνεί με το Nightscout. Τα δεδομένα σας στο Nightscout δεν αλλάζουν.

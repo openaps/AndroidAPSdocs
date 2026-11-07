@@ -372,7 +372,7 @@ Avec NSClientV3, tous les outils qui envoient des données (uploaders) doivent u
 - Dans Nightscout, créez un *[jeton Admin](https://nightscout.github.io/nightscout/security/#create-a-token)* (il faut [Nightscout 15](https://nightscout.github.io/update/update/) pour utiliser l'API V3) et saisissez-le dans **Jeton d'accès Nightscout** (pas votre API Secret !). Sur **AAPSClient**, vous pouvez à la place scanner le QR code du téléphone principal, ce qui configure un jeton propre au client. Un client appairé avec le code PIN reçoit son propre jeton du téléphone principal après l'appairage. Voir [Le jeton Nightscout propre au client](#client-master-control-own-token).
 - Cela permet de lire et d'écrire des données entre le site web Nightscout et **AAPS**.
 - Vérifiez deux fois les fautes de frappe ici si vous êtes coincé dans l'objectif 1.
-- Laissez « Utiliser les websockets » activé (recommandé).
+- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
 ### Synchronisation

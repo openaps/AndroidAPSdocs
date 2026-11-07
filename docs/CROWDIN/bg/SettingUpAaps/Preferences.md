@@ -372,7 +372,7 @@ min_5m_carbimpact определя стандартното въздействи
 - В Nightscout създайте *[Admin токен](https://nightscout.github.io/nightscout/security/#create-a-token)* (за V3 API е нужен [Nightscout 15](https://nightscout.github.io/update/update/)) и го въведете в **Токен за достъп до Nightscout** (не вашия API Secret!). В **AAPSClient** вместо това можете да сканирате QR кода на главния телефон – така се настройва собствен токен на клиента. Клиент, свързан с PIN, получава собствен токен от главния телефон след свързването. Вижте [Собственият токен за Nightscout на клиента](#client-master-control-own-token).
 - Така данните могат да се четат и записват и в двете посоки между сайта на Nightscout и **AAPS**.
 - Ако не можете да преминете цел 1, проверете тук внимателно за грешки при писане.
-- Оставете „Използвай websockets“ включено (препоръчително).
+- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
 ### Синхронизация

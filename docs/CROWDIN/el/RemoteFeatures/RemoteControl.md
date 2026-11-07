@@ -74,7 +74,9 @@ Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring s
 
 - Γράψτε το **Διακριτικό πρόσβασης Nightscout** στις ίδιες ρυθμίσεις. Ακολουθήστε τις οδηγίες [εδώ](https://nightscout.github.io/nightscout/security/#create-a-token). Στο τηλέφωνο **AAPS** χρησιμοποιήστε ένα **admin token** (διακριτικό διαχειριστή): με αυτό το **AAPS** φτιάχνει δικό του διακριτικό για κάθε τηλέφωνο ακόλουθου.
 
-- Ενεργοποιήστε το **Χρήση websockets** **και στα δύο** τηλέφωνα. Στο τηλέφωνο **AAPS** τα websockets είναι **απαραίτητα** για τον απομακρυσμένο έλεγχο: χωρίς αυτά, το **AAPS** δεν μπορεί να λάβει εντολές από το **AAPSClient**. Και στα δύο τηλέφωνα κάνουν επίσης τον συγχρονισμό πιο γρήγορο, με λίγο μεγαλύτερη κατανάλωση μπαταρίας.
+- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. Και στα δύο τηλέφωνα κάνουν επίσης τον συγχρονισμό πιο γρήγορο, με λίγο μεγαλύτερη κατανάλωση μπαταρίας.
+
+  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ![Ρυθμίσεις > NSClientV3 με Διεύθυνση Nightscout, Διακριτικό πρόσβασης Nightscout και Χρήση websockets](../images/preferences/settings_nsclient.png)
 

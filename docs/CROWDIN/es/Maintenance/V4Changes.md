@@ -27,6 +27,7 @@ Si tú (o tu seguidor **AAPSClient**) aún sincronizabas con el antiguo compleme
 - Introduce tu **URL de Nightscout** y un **token de acceso** (NSClientV3 usa un token de acceso, *no* el antiguo API secret; consulta [crear un token](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - Tu sitio de Nightscout debe admitir la **API v3** (Nightscout 15 o posterior).
 - Si usas **websockets**, actívalos o desactívalos en **ambos**, el máster y el seguidor; nunca solo en uno.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 Esto solo afecta a cómo la app se comunica con Nightscout; tus datos en Nightscout no cambian.

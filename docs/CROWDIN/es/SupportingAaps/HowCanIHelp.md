@@ -6,6 +6,16 @@ Los desarrolladores son padres, madres, cuidadores, familiares y personas con di
 
 *Para probar bien un nuevo sistema, los desarrolladores necesitan un teléfono y una bomba de repuesto, porque no se puede usar en una persona hasta que sea estable. Los modelos nuevos necesitan pruebas cuando salen al mercado. Parte del dinero donado también es necesario para los costes de envío de estos materiales entre países hasta los desarrolladores. A veces también es bueno ayudar con los costes de los desarrolladores para que salgan de sus habitaciones oscuras y se reúnan en conferencias y eventos, donde sus mentes creativas y analíticas pueden intercambiar ideas.*
 
+(donate-to-aaps)=
+
+### How can I donate?
+
+You can support **AAPS** in several ways:
+
+* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+
 ## ¡Sé escribir código! ¿Cómo puedo participar?
 
 ¡Genial! Mira los issues, pregunta en el canal de Discord, ¡siempre hay mucho por hacer! ¡Elige primero una tarea pequeña y haz tu primer pull request! :)

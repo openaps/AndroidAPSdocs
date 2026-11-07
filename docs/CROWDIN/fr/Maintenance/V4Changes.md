@@ -27,6 +27,7 @@ Si vous (ou votre suiveur **AAPSClient**) synchronisiez encore avec l'ancien plu
 - Saisissez votre **URL Nightscout** et un **jeton d'accès** (NSClientV3 utilise un jeton d'accès, *pas* l'ancien API secret ; voir [créer un jeton](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - Votre site Nightscout doit prendre en charge l'**API v3** (Nightscout 15 ou plus récent).
 - Si vous utilisez les **websockets**, activez-les ou désactivez-les sur **les deux** téléphones, le maître et le suiveur, jamais sur un seul.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
 Cela change seulement la façon dont l'application communique avec Nightscout. Vos données sur Nightscout ne changent pas.
