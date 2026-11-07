@@ -422,8 +422,9 @@ El gráfico nuevo se añade debajo de los demás. Aquí, un segundo gráfico adi
 
 A la mayoría de usuarios les basta la siguiente configuración de gráficos adicionales:
 
-* Gráfico 1 con IOB, COB, Cambio de sensibilidad
-* Gráfico 2 con Desviaciones y BGI.
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### Insulina absoluta (ABS)
 
