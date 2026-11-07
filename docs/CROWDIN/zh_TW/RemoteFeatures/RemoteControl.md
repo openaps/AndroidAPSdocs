@@ -74,9 +74,9 @@
 
 - 在相同的設定中輸入您的 **Nightscout 存取權杖**。請遵循[此處](https://nightscout.github.io/nightscout/security/#create-a-token)的說明. 在 **AAPS** 手機上使用**管理員權杖**：**AAPS** 會以此權杖為每支追蹤端手機建立專屬權杖。
 
-- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. 在兩支手機上啟用 WebSocket 也能加快同步速度，但會稍微增加電池耗電量。
+- 在**兩支**手機上啟用**使用 WebSocket**。從**AAPSClient**進行遠端控制時，兩支手機都**必須**使用 WebSocket。若未使用 WebSocket，**AAPSClient** 可以追蹤 **AAPS**，但無法控制它。在兩支手機上啟用 WebSocket 也能加快同步速度，但會稍微增加電池耗電量。
 
-  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+  您的 Nightscout 主機必須支援 WebSocket。如果 WebSocket 連線持續中斷，遠端控制就無法運作。請參閱 [NSClient 疑難排解](../GettingHelp/TroubleshootingNsClient.md)。
 
 ![「設定 &gt; NSClientV3」畫面，包含 Nightscout 網址、Nightscout 存取權杖和「使用 WebSocket」](../images/preferences/settings_nsclient.png)
 
