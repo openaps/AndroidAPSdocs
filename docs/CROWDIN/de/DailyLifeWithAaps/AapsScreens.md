@@ -422,8 +422,9 @@ Das neue Diagramm wird unter den anderen eingefügt – hier ein zweites zusätz
 
 Viele kommen mit der folgenden Konfiguration zusätzlicher Diagramme gut zurecht:
 
-* Diagramm 1 mit „Aktives Insulin“, „Aktive Kohlenhydrate“, „Sensitivität“
-* Diagramm 2 mit „Abweichungen“ und „Blutzuckerwirkung“.
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### Absolute Insulinmenge (ABS)
 
