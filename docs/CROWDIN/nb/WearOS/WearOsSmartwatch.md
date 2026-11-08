@@ -318,7 +318,7 @@ Disse plassene virker bare på klokker med **Wear OS 5 eller eldre**, der den eg
 
 ## AAPSv2-urskive – forklaring
 
-![Forklaring til AAPSv2-urskiven](../images/Watchface_Legend.png)
+![Forklaring til AAPSv2-urskiven](../images/wearos/Watchface_Legend.png)
 
 A – tid siden forrige loop-kjøring
 
