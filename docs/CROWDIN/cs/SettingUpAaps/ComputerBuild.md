@@ -255,7 +255,7 @@ V určitém okamžiku se Android Studio zavře a znovu spustí. Můžete být do
 
 Pouze pro uživatele Windows: Pokud firewall požaduje oprávnění, udělte mu je:
 
- ![Oprávnění firewallu pro Javu](../images/AndroidStudio361_18.png)
+ ![Oprávnění firewallu pro Javu](../images/Building-the-App/AndroidStudio361_18.png)
 
 Po úspěšném dokončení klonování repozitáře otevře Android Studio naklonovaný projekt.
 
