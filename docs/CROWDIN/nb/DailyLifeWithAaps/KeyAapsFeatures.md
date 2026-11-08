@@ -8,7 +8,7 @@ Loopstatusen vises på hovedskjermen med ett av ikonene nedenfor.
 
 Se [AAPS-skjermbilder > Hovedskjermen > Loopstatus](#AapsScreens-loop-status) for informasjon om hvordan du velger loop-modus, og om de andre ikonene på bildet (4 til 6).
 
-![Loopstatus](../images/main_loop_status.png)
+![Loopstatus](../images/main/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ Hvis dette valget er aktivert, kan sensitivitetsdeteksjonen (Autosens) heve mål
 
 Hvis målet endres på grunn av sensitivitetsdeteksjon, vises det med grønn bakgrunn på hovedskjermen.
 
-![Mål endret av Autosens](../images/main_target_modified_by_autosens.png)
+![Mål endret av Autosens](../images/main/main_target_modified_by_autosens.png)
 
 Denne innstillingen er tilgjengelig når enten «Bruk dynamisk sensitivitet» eller «Bruk Autosens» er aktivert.
 
