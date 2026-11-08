@@ -211,7 +211,7 @@ Sull'orologio:
 
 You will see a Wi-Fi pairing code and IP address and port appearing:
 
-![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/ADB03.png)
+![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/watch_wifi_pairing_code.png)
 
 - Nel terminale: `adb pair ipaddress:port` Ad es. `adb pair 10.10.1.125:36299`
 - You will be asked for the pairing code. Inseriscilo.
