@@ -55,14 +55,14 @@ Bu Authenticator uygulamaları, mobil bankacılık veya alışverişte olduğu g
 
 Telefonunuzda **Uygulamalar > AAPS > İzinler** bölümüne gidin. **SMS** ve **Telefon** izinlerinin verildiğinden emin olun.
 
-![image](../images/remote-control-08.png)
+![image](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android, uygulama mağazasından yüklenmemiş uygulamalar (örneğin **AAPS**) için **SMS** iznini engelleyebilir. **SMS** iznini verirken bu mesajı görürseniz telefonun **Ayarlar > Uygulamalar > AAPS** bölümünü açın, **⋮** menüsüne (sağ üstte) dokunun ve **Kısıtlanmış ayarlara izin ver** seçeneğini seçin. Ardından **SMS** iznini tekrar verin.
 ```
 
-![Uygulamanın SMS erişimi reddedildi](../images/sms_permission_restricted.png)
+![Uygulamanın SMS erişimi reddedildi](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### Tarih ve saat senkronizasyonu
 
@@ -82,7 +82,7 @@ Telefon ayarlarını kontrol ettikten sonra, **AAPS** uygulamasında [**Konfigü
 
 **SMS ile uzaktan komutlara izin ver** seçeneğini etkinleştirin. **Kodun sonunda ek zorunlu PIN** ve **Authenticator (kimlik doğrulama) kurulumu** seçenekleri ancak bu etkinleştirildikten sonra görünür:
 
-![SMS Komünikatör ayarları](../images/sms_communicator_settings.png)
+![SMS Komünikatör ayarları](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### İzin verilen telefon numaraları
@@ -97,7 +97,7 @@ Numaranın önündeki “+” işaretinin gerekip gerekmediği bulunduğunuz yer
 
 Eklenecek birden fazla telefon numarası varsa, bunları noktalı virgülle ayırın ve **numaralar arasında BOŞLUK BIRAKMAYIN** (bu çok önemlidir!). **Tamam** seçeneğini seçin:
 
-![İzin verilen telefon numaraları](../images/sms_allowed_numbers.png)
+![İzin verilen telefon numaraları](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### Uzaktan bolus için en kısa ara
 
@@ -115,7 +115,7 @@ PIN gereksinimleri:
 
 Daha güvenli bir PIN için aynı rakamı birçok kez (_örn._ 111111) veya bir sıra (_örn._ 123456) kullanmayın.
 
-![Kodun sonunda ek zorunlu PIN](../images/sms_pin.png)
+![Kodun sonunda ek zorunlu PIN](../images/remote_control_and_following/sms_pin.png)
 
 #### Authenticator kurulumu
 
@@ -123,7 +123,7 @@ Daha güvenli bir PIN için aynı rakamı birçok kez (_örn._ 111111) veya bir 
 * _Bakım verenin telefonunda_ yüklü Authenticator uygulamasını açın, yeni bir bağlantı kurun ve
 * **AAPS OTP kod kurulumu için QR kodu tarayın** altında gösterilen QR kodunu bakım veren telefonuyla tarayın.
 
-![QR kodu ile Authenticator kurulumu](../images/sms_authenticator_setup.png)
+![QR kodu ile Authenticator kurulumu](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * **Tek Kullanımlık Parolayı (OTP) Test Edin** altında, bakım veren telefonundaki Authenticator uygulamasından aldığınız tek kullanımlık kodu ve ardından PIN'inizi **Kontrol edilecek kod** alanına girin:
 
@@ -134,7 +134,7 @@ Daha güvenli bir PIN için aynı rakamı birçok kez (_örn._ 111111) veya bir 
 
 Giriş doğruysa, kırmızı “HATALI PIN” yazısı otomatik olarak yeşil “Tamam” yazısına dönüşür. **Basmanız gereken bir düğme yoktur!** İşlem artık tamamlanmıştır; kodu girdikten sonra basmanız gereken bir “Tamam” düğmesi yoktur:
 
-![Tek Kullanımlık Parola testi ve Kimlik Doğrulayıcıları Sıfırlama](../images/sms_authenticator_test.png)
+![Tek Kullanımlık Parola testi ve Kimlik Doğrulayıcıları Sıfırlama](../images/remote_control_and_following/sms_authenticator_test.png)
 
 Artık SMS komutları kurulumunuz tamamlanmış olmalıdır.
 
@@ -146,7 +146,7 @@ Tanımlanmış kimlik doğrulayıcıları kaldırmak istiyorsanız **Authenticat
 
 1)  Her şeyi doğru kurduğunuzu kontrol etmek için, bakım veren telefonundan **AAPS** telefonuna SMS olarak “bg” yazıp göndererek bağlantıyı test edin. Burada gösterilene benzer bir yanıt almalısınız:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 Hiç yanıt almazsanız aşağıdaki [Sorun giderme](#SMSCommands-troubleshooting) bölümüne bakın.
 
@@ -154,7 +154,7 @@ Hiç yanıt almazsanız aşağıdaki [Sorun giderme](#SMSCommands-troubleshootin
 
 Bir SMS komutunu ilk kez gönderirken, nasıl çalıştığını görmek için bunu **AAPS** telefonunun yanında deneyin:
 
-![image](../images/remote-control-16.png)
+![image](../images/remote_control_and_following/remote-control-16.png)
 
 Bakım verenin telefonu, uzaktan gönderilen SMS komutunun başarıyla uygulanıp uygulanmadığını bildiren bir yanıt SMS'ini **AAPS**'ten alır.
 
@@ -182,7 +182,7 @@ Hipoglisemiden kaçınmak için temkinli başlamak iyi bir fikirdir: karbonhidra
 
 Komutlar İngilizce gönderilmelidir. Yanıt metni zaten [çevrilmişse](#translations-translate-strings-for-AAPS-app) yanıt sizin dilinizde olur. Komutlar büyük/küçük harfe duyarlı değildir; küçük veya büyük harf kullanabilirsiniz.
 
-![SMS Komutları örneği](../images/SMSCommands.png)
+![SMS Komutları örneği](../images/remote_control_and_following/SMSCommands.png)
 
 Aşağıdaki **SMS Komutları Tabloları** tüm olası SMS komutlarını gösterir. Anlaşılmasına yardımcı olmak için _örnek değerler_ verilmiştir. Komutlar, **AAPS** uygulamasının kendisinde izin verilen değer aralıklarının (hedefler, profil yüzdesi vb.) aynısını kullanır.
 
@@ -191,11 +191,11 @@ Aşağıdaki **SMS Komutları Tabloları** tüm olası SMS komutlarını göster
 
 Bazı SMS komutları hemen yanıt verir, bazı SMS komutları ise Authenticator uygulaması ile güçlü **kimlik doğrulama** gerektirir. “**BG**” (güncel glikoz değerini isteyen) gibi basit bir sorgu hızlıca yazılır, kimlik doğrulama gerektirmez ve aşağıda gösterilen **AAPS** durum bilgisini döndürür:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 Daha fazla güvenlik gerektiren komutlar için bir kod girilmesi gerekir, örneğin:
 
-![Kimliği doğrulanmış SMS](../images/remote-control-07.png)
+![Kimliği doğrulanmış SMS](../images/remote_control_and_following/remote-control-07.png)
 
 Aşağıdaki tablolardaki *Doğrulama* sütunu, her komut için böyle güçlü bir kimlik doğrulamanın gerekip gerekmediğini gösterir.
 
@@ -311,12 +311,12 @@ Bunun nedeni şunlardan biri olabilir:
 ### SMS komutlarına hiç yanıt gelmiyor
 
 Bakım veren telefonunda ve/veya **AAPS** telefonunda şu seçenekleri devre dışı bırakmayı deneyin:
-* **Sohbet mesajı olarak gönder** ![SMS'i sohbet mesajı olarak göndermeyi devre dışı bırakın](../images/SMSdisableChat.png)
+* **Sohbet mesajı olarak gönder** ![SMS'i sohbet mesajı olarak göndermeyi devre dışı bırakın](../images/remote_control_and_following/SMSdisableChat.png)
 * Android Mesajlar veya Google Mesajlar uygulamasını kullanıyorsanız RCS mesajlaşmayı devre dışı bırakın:
   - Mesajlar uygulamasında ilgili SMS konuşmasını açın
   - Sağ üst köşedeki üç nokta seçenekler menüsünü seçin
   - "Detaylar"ı seçin
-  - "Yalnızca SMS ve MMS mesajları gönder" ("Only send SMS and MMS messages") seçeneğini etkinleştirin ![RCS'yi sohbet mesajı olarak göndermeyi devre dışı bırakın](../images/SMSdisableRCS.png)
+  - "Yalnızca SMS ve MMS mesajları gönder" ("Only send SMS and MMS messages") seçeneğini etkinleştirin ![RCS'yi sohbet mesajı olarak göndermeyi devre dışı bırakın](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### Komutları uygularken oluşan hatalar
 
@@ -331,7 +331,7 @@ Komutun başarılı olmamasının birkaç olası nedeni vardır:
 
 Sık görülen hatalar aşağıdaki örneklerde gösterilmiştir:
 
-![image](../images/remote-control-17.png)
+![image](../images/remote_control_and_following/remote-control-17.png)
 
 ### Kimliği doğrulanmış bir komutu nasıl durdurabilirim?
 
