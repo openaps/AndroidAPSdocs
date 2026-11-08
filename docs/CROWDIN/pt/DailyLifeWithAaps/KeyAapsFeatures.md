@@ -8,7 +8,7 @@ O **AAPS** tem vários modos do loop, como Loop Fechado (1), Suspensão Glicose 
 
 Veja [Ecrãs do AAPS > Ecrã principal > Estado do loop](#AapsScreens-loop-status) para saber como selecionar o modo do loop e o que significam os outros ícones da imagem (4 a 6).
 
-![Estado do loop](../images/main_loop_status.png)
+![Estado do loop](../images/main/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ Se esta opção estiver ativada, a deteção de sensibilidade (Autosens) pode su
 
 Se o alvo for modificado pela deteção de sensibilidade, é mostrado com fundo verde no ecrã principal.
 
-![Alvo modificado pelo Autosens](../images/main_target_modified_by_autosens.png)
+![Alvo modificado pelo Autosens](../images/main/main_target_modified_by_autosens.png)
 
 Esta definição está disponível quando «Usar sensibilidade dinâmica» ou «Usar Autosens» está ativada.
 
