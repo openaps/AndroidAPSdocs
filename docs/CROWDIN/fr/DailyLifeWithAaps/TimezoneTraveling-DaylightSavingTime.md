@@ -33,7 +33,7 @@ Pour éviter cela, il y a deux possibilités :
    * Choisissez votre **Profil** et appuyez sur **▶ Activer**
    * Réglez le « **Décalage horaire** » selon votre destination et appuyez sur **Activer**.
    
-   ![Changement de profil avec décalage horaire](../images/ProfileSwitchTimeShift2.png)
+   ![Changement de profil avec décalage horaire](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * par ex. Vienne -> New York : **Changement de profil** +6 heures
    * par ex. Vienne -> Sydney : **Changement de profil** -8 heures
