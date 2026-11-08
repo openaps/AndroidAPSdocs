@@ -1,6 +1,6 @@
 # Vzdialené sledovanie
 
-![Sledovanie detí](../images/KidsMonitoring.png)
+![Sledovanie detí](../images/remote_control_and_following/KidsMonitoring.png)
 
 __AAPS__ ponúka niekoľko funkcií na vzdialené sledovanie detí s diabetom 1. typu a umožňuje aj vzdialené príkazy, ktoré posielajú pokyny do __AAPS__ na diaľku. Podobne sa dá __AAPSClient__ použiť aj na vzdialené sledovanie __AAPS__ vášho partnera alebo priateľa.
 
