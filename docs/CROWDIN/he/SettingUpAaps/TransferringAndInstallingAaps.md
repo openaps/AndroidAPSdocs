@@ -31,11 +31,11 @@ Open [Google.com](https://www.google.com/) in your web browser and login to your
 
 On the right upper side select the Drive app in the Google menu.
 
-![Start Drive App](../images/GoogleDriveInWebbrowser.png)
+![Start Drive App](../images/install/GoogleDriveInWebbrowser.png)
 
 לחצו על **New** (חדש) בפינה השמאלית העליונה (או לחצו לחיצה ימנית על אזור ריק מתחת לקבצים ולתיקיות) ובחרו **File upload** (העלאת קובץ).
 
-![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
+![Upload apk file with Google Drive App](../images/install/GoogleDriveUploadFile.png)
 
 The apk file should now be uploaded on Google Drive.
 
@@ -43,17 +43,17 @@ The apk file should now be uploaded on Google Drive.
 
 Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
 
-![start the Google Drive app](../images/GoogleDriveMobileAPPLaunch.png)
+![start the Google Drive app](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 כדי להתחיל בהתקנת ה-apk, יש להקיש על שם הקובץ באפליקציית Google Drive בטלפון.
 
-![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
+![launch the apk installation](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 אם מופיעה הודעת אבטחה שאסור כרגע להתקין אפליקציות מ-Google Drive, הקישו על "Settings" (הגדרות) ואפשרו זאת לזמן קצר, ואחר כך בטלו שוב את ההרשאה, כי השארת ההרשאה פעילה כל הזמן היא סיכון אבטחה.
 
-![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Security Notice Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Security Notice Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Security Notice Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 כשההתקנה מסתיימת, השלב הזה הושלם.
 
