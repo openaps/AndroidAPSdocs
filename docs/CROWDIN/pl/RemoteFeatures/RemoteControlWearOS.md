@@ -309,13 +309,13 @@ Jeśli **AAPS** musiał ograniczyć dawkę, np. dlatego, że obliczony bolus jes
     
     Pozycje [Szybkiego kalkulatora](#quickwizards) z telefonu, które mają włączone **Pokaż na zegarku**, w godzinach, w których są ważne. Pozycja z węglowodanami pokazuje węglowodany w g, a pozycja z insuliną stałą dawkę w U. Dotknięcie uruchamia pozycję po potwierdzeniu na zegarku. Na zegarku nie ma nic do ustawienia: edytuj pozycje w telefonie i włącz **Pokaż na zegarku** w sekcji **Wybór urządzenia** dla każdej pozycji, którą chcesz mieć na kafelku. Poza godzinami ważności wszystkich Twoich pozycji kafelek pokazuje **Konfiguracja nie jest dostępna**.
     
-    ![Pozycja Szybkiego kalkulatora z włączonym Pokaż na zegarku i kafelek, na którym się pojawia](../images/quickwizard_watch_phone.png)
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Kafelek Scena
+    ### Scene tile
     
-    ![Kafelek Scena](../images/wearos/tiles/tile_scene.png)
+    ![Scene tile](../images/wearos/tiles/tile_scene.png)
     
-    [Sceny](#scenes-from-watch) z telefonu. Każde z czterech miejsc w ustawieniach kafelka ma wartość **Automatyczna**, **Brak** lub jedną scenę. Miejsce **Automatyczna** bierze następną scenę z listy w telefonie, której nie zajęło inne miejsce. Miejsce ustawione na scenę, której nie ma już w telefonie, pokazuje **Niedostępna**.
+    The [Scenes](#scenes-from-watch) of the phone. Każde z czterech miejsc w ustawieniach kafelka ma wartość **Automatyczna**, **Brak** lub jedną scenę. Miejsce **Automatyczna** bierze następną scenę z listy w telefonie, której nie zajęło inne miejsce. Miejsce ustawione na scenę, której nie ma już w telefonie, pokazuje **Niedostępna**.
     
     ![Ustawienia kafelka Scena, cztery miejsca ustawione na Automatyczna](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,17 +361,17 @@ Jeśli **AAPS** musiał ograniczyć dawkę, np. dlatego, że obliczony bolus jes
     
     Uwaga: nie wszystkie ekrany dobrze znoszą tryb Always On. Może to powodować wypalenie ekranu, szczególnie w starszych ekranach OLED. Zegarki zwykle przyciemniają ekran, aby zapobiec wypaleniu; sprawdź instrukcję obsługi, informacje producenta lub poszukaj porad w internecie.
     
-    ![Tarcza zegarka w trybie nocnym](../images/Watchface_nightstand.jpg)
+    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Uproszczony interfejs](../images/Watchface_simplified_ui.png)
+    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Alarmy telefonu na zegarku
+    ## Phone alarms on the watch
     
-    ![Alarm telefonu na zegarku](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    Zegarek pokazuje alarmy telefonu, więc widzisz, dlaczego telefon wydaje dźwięk, i możesz odpowiedzieć z nadgarstka. Zegarek wibruje i powtarza to co pół minuty przez pięć minut, dopóki nie odpowiesz. Powiadomienie pokazuje tytuł i tekst alarmu, z tymi samymi odpowiedziami co przypomnienie [Czas coś zjeść](#WearOsSmartwatch-wizard-carb-time):
+    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. Zegarek wibruje i powtarza to co pół minuty przez pięć minut, dopóki nie odpowiesz. Powiadomienie pokazuje tytuł i tekst alarmu, z tymi samymi odpowiedziami co przypomnienie [Czas coś zjeść](#WearOsSmartwatch-wizard-carb-time):
     
     * **Wycisz** lub odsunięcie powiadomienia: alarm się zatrzymuje, a ekran alarmu na telefonie się zamyka.
     * **Wycisz na 5 min**: alarm się zatrzymuje i dzwoni ponownie po pięciu minutach, na telefonie i na zegarku.
