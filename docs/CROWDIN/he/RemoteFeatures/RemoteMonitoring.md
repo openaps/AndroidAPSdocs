@@ -1,6 +1,6 @@
 # ניטור מרחוק
 
-![Monitoring children](../images/KidsMonitoring.png)
+![Monitoring children](../images/remote_control_and_following/KidsMonitoring.png)
 
 __AAPS__ מציע כמה תכונות לניטור מרחוק של ילדים עם סוכרת סוג 1, וגם מאפשר פקודות מרחוק ששולחות הוראות ל-__AAPS__ מרחוק. Similarly, __AAPSClient__ can also be used for remote monitoring to follow your partner's or friend's __AAPS__.
 
