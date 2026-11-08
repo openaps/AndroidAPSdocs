@@ -55,14 +55,14 @@ De här autentiseringsapparna skapar ett tidsbegränsat engångslösenord med 6 
 
 Gå till **Appar > AAPS > Behörigheter** på din telefon. Se till att **SMS** och **Telefon** är tillåtna.
 
-![image](../images/remote-control-08.png)
+![image](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android kan blockera behörigheten **SMS** för appar som inte har installerats från en appbutik, som **AAPS**. Om du ser det här meddelandet när du ger behörigheten **SMS**, öppna telefonens **Inställningar > Appar > AAPS**, tryck på menyn **⋮** (uppe till höger) och välj **Tillåt begränsade inställningar**. Ge sedan behörigheten **SMS** igen.
 ```
 
-![Appen nekades åtkomst till SMS](../images/sms_permission_restricted.png)
+![Appen nekades åtkomst till SMS](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### Synkronisera datum och tid
 
@@ -82,7 +82,7 @@ När telefonens inställningar är kontrollerade går du till [**Konfiguration**
 
 Aktivera **Tillåt fjärrkommandon via SMS**. Alternativen **Extra obligatorisk PIN-kod på slutet av token** och **Konfiguration av autentisering** visas först när detta är aktiverat:
 
-![Inställningar för SMS-kommunikation](../images/sms_communicator_settings.png)
+![Inställningar för SMS-kommunikation](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Godkända telefonnummer
@@ -97,7 +97,7 @@ Observera att ”+” före numret kanske behövs, beroende på var du bor. För
 
 Om du vill lägga till mer än ett telefonnummer, skilj dem åt med semikolon, **UTAN mellanslag mellan numren** (det är mycket viktigt!). Välj **OK**:
 
-![Godkända telefonnummer](../images/sms_allowed_numbers.png)
+![Godkända telefonnummer](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### Minsta tid mellan fjärrbolus
 
@@ -115,7 +115,7 @@ Krav på PIN-koden:
 
 För en säkrare PIN-kod, använd inte samma siffra många gånger (_t.ex._ 111111) eller en sekvens (_t.ex._ 123456).
 
-![Extra obligatorisk PIN-kod på slutet av token](../images/sms_pin.png)
+![Extra obligatorisk PIN-kod på slutet av token](../images/remote_control_and_following/sms_pin.png)
 
 #### Konfiguration av autentisering
 
@@ -123,7 +123,7 @@ För en säkrare PIN-kod, använd inte samma siffra många gånger (_t.ex._ 1111
 * Öppna autentiseringsappen som du har installerat på _den anhörigas telefon_, lägg till en ny anslutning och
 * Använd den anhörigas telefon för att skanna QR-koden som visas under **Skanna koden för att ställa in OTP-koder för AAPS**.
 
-![Konfiguration av autentisering med QR-kod](../images/sms_authenticator_setup.png)
+![Konfiguration av autentisering med QR-kod](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * Under **Testa engångslösenord** anger du engångskoden från autentiseringsappen på den anhörigas telefon, följd av din PIN-kod, i **Kod att kontrollera**:
 
@@ -134,7 +134,7 @@ Exempel:
 
 Om inmatningen är rätt ändras den röda texten ”FEL PIN” automatiskt till ett grönt ”OK”. **Det finns ingen knapp att trycka på!** Processen är nu klar. Det finns ingen ”OK”-knapp som du behöver trycka på efter att du har angett koden:
 
-![Testa engångslösenord och Återställ autentiseringsfunktioner](../images/sms_authenticator_test.png)
+![Testa engångslösenord och Återställ autentiseringsfunktioner](../images/remote_control_and_following/sms_authenticator_test.png)
 
 Nu ska SMS-kommandona vara inställda.
 
@@ -146,7 +146,7 @@ Använd knappen **Återställ autentiseringsfunktioner** längst ned på skärme
 
 1)  För att kontrollera att allt är rätt inställt, testa anslutningen genom att skicka ”bg” som SMS från den anhörigas telefon till **AAPS**-telefonen. Du bör få ett svar som liknar det som visas här:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 Om du inte får något svar, se avsnittet [Felsökning](#SMSCommands-troubleshooting) nedan.
 
@@ -154,7 +154,7 @@ Om du inte får något svar, se avsnittet [Felsökning](#SMSCommands-troubleshoo
 
 När du skickar ett SMS-kommando för första gången, gör det när du är i närheten av **AAPS**-telefonen, så att du ser hur det fungerar:
 
-![image](../images/remote-control-16.png)
+![image](../images/remote_control_and_following/remote-control-16.png)
 
 Den anhörigas telefon får ett SMS som svar från **AAPS** som bekräftar om SMS-kommandot har utförts.
 
@@ -182,7 +182,7 @@ För att undvika hypo är det en bra idé att börja försiktigt och ge **mindre
 
 Kommandona måste skickas på engelska. Svaret kommer på ditt språk om svarstexten redan är [översatt](#translations-translate-strings-for-AAPS-app). Kommandona är inte skiftlägeskänsliga, du kan använda små eller stora bokstäver.
 
-![Exempel på SMS-kommandon](../images/SMSCommands.png)
+![Exempel på SMS-kommandon](../images/remote_control_and_following/SMSCommands.png)
 
 **Tabellerna med SMS-kommandon** nedan visar alla möjliga SMS-kommandon. _Exempelvärden_ finns med för att göra det lättare att förstå. Kommandona har samma intervall av möjliga värden (målvärden, procent av profil osv.) som är tillåtna i själva **AAPS**-appen.
 
@@ -191,11 +191,11 @@ Kommandona måste skickas på engelska. Svaret kommer på ditt språk om svarste
 
 Vissa SMS-kommandon ger ett svar direkt, och vissa SMS-kommandon kräver stark **autentisering** via autentiseringsappen. En enkel fråga som ”**BG**” (som ber om aktuellt glukosvärde) går snabbt att skriva, behöver ingen autentisering och returnerar statusinformationen från **AAPS** som visas nedan:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 Kommandon som behöver mer säkerhet kräver att du anger en kod, till exempel:
 
-![SMS med autentisering](../images/remote-control-07.png)
+![SMS med autentisering](../images/remote_control_and_following/remote-control-07.png)
 
 Kolumnen *Autentisering* i tabellerna nedan visar om ett kommando kräver stark autentisering.
 
@@ -311,12 +311,12 @@ Det kan bero på något av följande:
 ### Inget svar alls på SMS-kommandon
 
 Prova att inaktivera följande alternativ på den anhörigas telefon och/eller **AAPS**-telefonen:
-* **Send as chat message** (Skicka som chattmeddelande) ![Inaktivera SMS som chattmeddelande](../images/SMSdisableChat.png)
+* **Send as chat message** (Skicka som chattmeddelande) ![Inaktivera SMS som chattmeddelande](../images/remote_control_and_following/SMSdisableChat.png)
 * Om du använder appen Android Messages eller Google Messages, inaktivera RCS-meddelanden:
   - öppna SMS-konversationen i Meddelanden
   - Välj menyn med tre punkter uppe till höger
   - välj "Detaljer"
-  - Aktivera "Only send SMS and MMS messages" (skicka bara SMS och MMS) ![Inaktivera RCS som chattmeddelande](../images/SMSdisableRCS.png)
+  - Aktivera "Only send SMS and MMS messages" (skicka bara SMS och MMS) ![Inaktivera RCS som chattmeddelande](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### Fel när kommandon ska utföras
 
@@ -331,7 +331,7 @@ Det finns flera möjliga orsaker till att kommandot inte lyckas:
 
 Vanliga fel visas i exemplen nedan:
 
-![image](../images/remote-control-17.png)
+![image](../images/remote_control_and_following/remote-control-17.png)
 
 ### Hur kan jag stoppa ett kommando när det redan har autentiserats?
 
