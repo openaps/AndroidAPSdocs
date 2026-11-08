@@ -172,7 +172,7 @@ Gå tillbaka med pilen i det övre vänstra hörnet. Guiden visar nu "**Lösenor
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**TAPPA INTE BORT DITT HUVUDLÖSENORD**. Skriv ner det, _t.ex._ på Google Drive. Det är ett bra ställe, eftersom Google säkerhetskopierar det åt dig. Din telefon eller dator kan krascha, och då kanske du inte har någon aktuell kopia. Om du glömmer ditt huvudlösenord kan det vara svårt att senare återställa din profilkonfiguration och dina framsteg i **Mål**.
+**TAPPA INTE BORT DITT HUVUDLÖSENORD**. Skriv ner det, _t.ex._ på Google Drive. Det är ett bra ställe, eftersom Google säkerhetskopierar det åt dig. Din telefon eller dator kan krascha, och då kanske du inte har någon aktuell kopia. Om du glömmer ditt huvudlösenord kan det vara svårt att senare återställa din profilkonfiguration och dina framsteg i **Mål**. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 När du är klar, tryck på "**Nästa**" för att gå till nästa skärm.
