@@ -39,7 +39,7 @@ A cor do valor de glicose mostra o estado em relação à [faixa](#Preferences-r
 
 #### Status do loop
 
-![Status do loop](../images/Home2020_LoopStatus.png)
+![Status do loop](../images/main_loop_status.png)
 
 Ao lado do círculo de glicose, um ícone mostra o modo de operação do loop (de cima para baixo na imagem):
 
@@ -166,7 +166,7 @@ Toque no nome do perfil para abrir a [tela Perfil](#aaps-screens-profile), onde 
 
 Para **mudar a porcentagem do perfil** (e a duração), toque no nome do perfil e depois no botão redondo **▶** (Ativar) no canto inferior direito da tela Perfil. No **AAPS** 3.x esta tela abria com um toque longo no nome do perfil; no **AAPS** 4 um toque longo não faz nada. Passo a passo: [Alterar a porcentagem do perfil](#ProfileSwitch-change-percentage).
 
-![Perfil com uma troca de perfil ativa](../images/Home2020_ProfileSwitch.png)
+![Perfil com uma troca de perfil ativa](../images/main_profile_switch.png)
 
 1. Exibição normal com a ativação de um perfil padrão.
 2. Troca de perfil com uma porcentagem específica de 90% e uma duração restante de 9 minutos — o nome do perfil fica amarelo enquanto uma troca de perfil temporária está em andamento.
@@ -174,7 +174,7 @@ Para **mudar a porcentagem do perfil** (e a duração), toque no nome do perfil 
 
 #### Alvo
 
-![Tempo restante do alvo temporário](../images/Home2020_TT.png)
+![Tempo restante do alvo temporário](../images/main_temp_target.png)
 
 O alvo de glicose atual aparece abaixo do nome do perfil.
 
@@ -200,7 +200,7 @@ Se o **AAPS** detectar resistência ou sensibilidade, o alvo muda em relação a
 
 #### IOB, COB, basal e sensibilidade
 
-![IOB, COB, basal e sensibilidade](../images/Home2020_TBR.png)
+![IOB, COB, basal e sensibilidade](../images/main_iob_cob_basal_sensitivity.png)
 
 1. **Seringa**: insulina ativa (IOB) - quantidade de insulina ativa no seu corpo  
     O valor da insulina ativa seria zero se só a sua basal padrão estivesse em andamento e não houvesse insulina restante de bólus anteriores. 
@@ -234,7 +234,7 @@ As notificações de carboidratos necessários podem ser enviadas ao Nightscout,
 
 ### Seção C - Linha de status
 
-![Linha de status](../images/Home2020_StatusLights.png)
+![Linha de status](../images/main_status_row.png)
 
 A linha de status dá um aviso visual para
 
@@ -320,7 +320,7 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 Toque no ícone de **lápis** no canto superior direito do gráfico para abrir as configurações do gráfico:
 
-![Configuração do gráfico principal](../images/Home2020_MainGraphSetting.png)
+![Configuração do gráfico principal](../images/main_graph_settings.png)
 
 * **Altura do gráfico** ajusta a altura em que o gráfico é desenhado.
 * **ACT** sobrepõe a curva de atividade da insulina: uma linha contínua amarelo-esverdeada <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (não confunda com a previsão UAM amarela pontilhada)
@@ -408,7 +408,7 @@ Os gráficos adicionais acompanham o gráfico principal: quando você rola ou d�
 
 Para configurar um gráfico adicional, toque no ícone de **lápis** no canto superior direito dele:
 
-![Configurações adicionais do gráfico](../images/Home2020_AdditionalGraphSetting.png)
+![Configurações adicionais do gráfico](../images/main_additional_graph_settings.png)
 
 Selecione os chips dos dados que você quer ver neste gráfico; o botão **Remover** apaga o gráfico.
 
@@ -490,7 +490,7 @@ Esta linha mostra quanto a glicose "deveria" subir ou cair só com base na ativi
 
 ### Seção F - Barra de acesso rápido
 
-![Barra de acesso rápido](../images/Home2020_Buttons.png)
+![Barra de acesso rápido](../images/main_quicklaunch_toolbar.png)
 
 A barra flutuante na parte de baixo da tela contém suas ações de **[acesso rápido](../DailyLifeWithAaps/QuickLaunch.md)**. A pequena **engrenagem** abre a configuração do acesso rápido, onde você escolhe quais botões aparecem (tratamentos, registros do CarePortal, ações do CGM, as telas do painel **Gerenciar**, botões do [Assistente rápido](../DailyLifeWithAaps/QuickWizards.md), [Cenários](../DailyLifeWithAaps/Scenes.md) e mais).
 
@@ -502,7 +502,7 @@ Enquanto a bomba está **desconectada**, os botões de tratamento continuam na b
 
 #### Insulina
 
-![Diálogo Insulina](../images/Home2020_ButtonInsulin.png)
+![Diálogo Insulina](../images/insulin_dialog.png)
 
 Para dar uma certa quantidade de insulina sem usar a [calculadora de bólus](#aaps-screens-bolus-wizard).
 
@@ -520,7 +520,7 @@ O diálogo de insulina também pode ser usado quando a bomba está suspensa ou d
 
 #### Carboidratos
 
-![Diálogo Carboidratos](../images/Home2020_ButtonCarbs.png)
+![Diálogo Carboidratos](../images/carbs_dialog.png)
 
 Para registrar carboidratos sem dar bólus.
 
@@ -574,7 +574,7 @@ Toque na bolha para abrir o painel **Notificação**. Cada mensagem mostra a hor
 
 ## Assistente de Bólus
 
-![Assistente de Bólus](../images/Home2020_BolusWizard_v2.png)
+![Assistente de Bólus](../images/bolus_wizard.png)
 
 Quando você quer dar um bólus de refeição, normalmente é daqui que você o faz.
 
@@ -618,7 +618,7 @@ O campo **Tempo dos carboidratos** serve para o pré-bólus: assim você informa
 
 **Definir alarme** (lembrete de refeição): quando um tempo dos carboidratos no futuro é informado, aparece um interruptor "**Definir alarme**" para lembrar você, na hora indicada, de comer os carboidratos que você registrou no **AAPS**:
 
-![Definir alarme para carboidratos futuros](../images/Home2021_BolusWizard_EatingReminder.png)
+![Definir alarme para carboidratos futuros](../images/bolus_wizard_set_alarm.png)
 
 The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
