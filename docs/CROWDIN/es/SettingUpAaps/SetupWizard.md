@@ -172,7 +172,7 @@ Vuelve atrás con la flecha de la esquina superior izquierda. El asistente muest
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**NO PIERDAS TU CONTRASEÑA MAESTRA**. Anótala, _p. ej._ en Google Drive, que es un buen lugar porque Google hace copias de seguridad por ti. Tu teléfono o tu ordenador pueden fallar y quizá no tengas una copia actual. Si olvidas tu contraseña maestra, puede ser difícil recuperar más tarde la configuración de tu perfil y tu progreso en los **Objetivos**.
+**NO PIERDAS TU CONTRASEÑA MAESTRA**. Anótala, _p. ej._ en Google Drive, que es un buen lugar porque Google hace copias de seguridad por ti. Tu teléfono o tu ordenador pueden fallar y quizá no tengas una copia actual. Si olvidas tu contraseña maestra, puede ser difícil recuperar más tarde la configuración de tu perfil y tu progreso en los **Objetivos**. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 Cuando termines, pulsa «**SIGUIENTE**» para ir a la siguiente pantalla.
