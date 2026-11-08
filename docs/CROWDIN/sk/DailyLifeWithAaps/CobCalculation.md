@@ -53,7 +53,7 @@ Ak sa namiesto hodnoty vypočítanej z odchýlok **glykémie** použije minimál
 
 __AAPS__ bežne zisťuje vstrebávanie sacharidov podľa odchýlok **glykémie**. Ak používateľ zadal sacharidy, ale **AAPS** nedokáže zistiť ich odhadované vstrebávanie z odchýlok **glykémie**, použije na výpočet vstrebávania metódu [min_5m_carbimpact](#Preferences-min_5m_carbimpact) (tzv. „záložná metóda“, fallback). Keďže táto metóda počíta iba minimálne vstrebávanie sacharidov a nezohľadňuje odchýlky **glykémie**, môže viesť k nesprávnym hodnotám COB.
 
-![Nápoveda pri nesprávnej hodnote COB](../images/Calculator_SlowCarbAbsorption.png)
+![Nápoveda pri nesprávnej hodnote COB](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Na obrázku vyššie bola v 66 % času absorpcia sacharidov vypočítaná pomocou min_5m_carbimpact namiesto hodnoty zistenej z odchýlok. To naznačuje, že používateľ mohol mať menej **COB**, ako vypočítal algoritmus.
 
