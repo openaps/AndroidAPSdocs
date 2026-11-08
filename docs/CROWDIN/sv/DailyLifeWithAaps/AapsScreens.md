@@ -39,7 +39,7 @@ Färgen på BG-värdet visar läget i förhållande till det angivna [intervalle
 
 #### Loopstatus
 
-![Loopstatus](../images/Home2020_LoopStatus.png)
+![Loopstatus](../images/main_loop_status.png)
 
 Bredvid BG-cirkeln visar en ikon loopens körläge (uppifrån och ner i bilden):
 
@@ -166,7 +166,7 @@ Tryck på profilnamnet för att öppna [skärmen Profil](#aaps-screens-profile).
 
 För att **ändra profilens procent** (och dess varaktighet), tryck på profilnamnet och sedan på den runda knappen **▶** (Aktivera) nere till höger på skärmen Profil. I **AAPS** 3.x öppnades den här skärmen med ett långt tryck på profilnamnet. I **AAPS** 4 händer ingenting vid ett långt tryck. Steg för steg: [Ändra profilens procent](#ProfileSwitch-change-percentage).
 
-![Profil med ett aktivt profilbyte](../images/Home2020_ProfileSwitch.png)
+![Profil med ett aktivt profilbyte](../images/main_profile_switch.png)
 
 1. Vanlig visning med en vanlig profil aktiverad.
 2. Profilbyte med en viss procent på 90 % och en återstående tid på 9 minuter – profilnamnet blir gult medan ett tillfälligt profilbyte pågår.
@@ -174,7 +174,7 @@ För att **ändra profilens procent** (och dess varaktighet), tryck på profilna
 
 #### Målvärde
 
-![Återstående tid för tillfälligt målvärde](../images/Home2020_TT.png)
+![Återstående tid för tillfälligt målvärde](../images/main_temp_target.png)
 
 Det nuvarande målvärdet för blodsockret visas under profilnamnet.
 
@@ -200,7 +200,7 @@ Om **AAPS** upptäcker resistens eller känslighet ändras målvärdet från det
 
 #### IOB, COB, basal och känslighet
 
-![IOB, COB, basal och känslighet](../images/Home2020_TBR.png)
+![IOB, COB, basal och känslighet](../images/main_iob_cob_basal_sensitivity.png)
 
 1. **Spruta**: aktivt insulin (IOB) – mängden insulin som fortfarande verkar i din kropp  
     Värdet för aktivt insulin skulle vara noll om bara din vanliga basal kördes och det inte fanns något insulin kvar från tidigare bolusar. 
@@ -234,7 +234,7 @@ Aviseringar om att kolhydrater behövs kan skickas till Nightscout om du vill. D
 
 ### Avsnitt C – Statusraden
 
-![Statusraden](../images/Home2020_StatusLights.png)
+![Statusraden](../images/main_status_row.png)
 
 Statusraden ger en visuell varning för
 
@@ -320,7 +320,7 @@ När telefonens klocka hoppade, vid byte till eller från sommartid eller i en n
 
 Tryck på **penn**ikonen i grafens övre högra hörn för att öppna grafinställningarna:
 
-![Inställning för huvudgrafen](../images/Home2020_MainGraphSetting.png)
+![Inställning för huvudgrafen](../images/main_graph_settings.png)
 
 * **Grafhöjd** ändrar hur hög grafen ritas.
 * **AKT** lägger till insulinets aktivitetskurva: en heldragen gulgrön linje <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (blanda inte ihop den med den prickade gula UAM-prognosen)
@@ -408,7 +408,7 @@ De extra graferna följer huvudgrafen: när du skrollar eller zoomar BG-grafen f
 
 För att ställa in en extra graf, tryck på **penn**ikonen i grafens övre högra hörn:
 
-![Fler grafinställningar](../images/Home2020_AdditionalGraphSetting.png)
+![Fler grafinställningar](../images/main_additional_graph_settings.png)
 
 Välj de chip som motsvarar de data du vill se i den här grafen. Knappen **Ta bort** raderar grafen.
 
@@ -490,7 +490,7 @@ Det är bra att visa den här linjen tillsammans med avvikelsestaplarna. De har 
 
 ### Avsnitt F – Verktygsfältet Snabbstart
 
-![Verktygsfältet Snabbstart](../images/Home2020_Buttons.png)
+![Verktygsfältet Snabbstart](../images/main_quicklaunch_toolbar.png)
 
 Det flytande verktygsfältet längst ner på skärmen innehåller dina åtgärder för **[Snabbstart](../DailyLifeWithAaps/QuickLaunch.md)**. Det lilla **kugghjulet** öppnar inställningarna för Snabbstart, där du väljer vilka knappar som visas (behandlingar, Careportal-poster, CGM-åtgärder, skärmarna i panelen **Hantera**, knappar för [Snabbknapp](../DailyLifeWithAaps/QuickWizards.md), [Scener](../DailyLifeWithAaps/Scenes.md) och mer).
 
@@ -502,7 +502,7 @@ Medan pumpen är **frånkopplad** finns behandlingsknapparna kvar i verktygsfäl
 
 #### Insulin
 
-![Dialogrutan Insulin](../images/Home2020_ButtonInsulin.png)
+![Dialogrutan Insulin](../images/insulin_dialog.png)
 
 För att ge en viss mängd insulin utan att använda [kalkylatorn](#aaps-screens-bolus-wizard).
 
@@ -520,7 +520,7 @@ Dialogrutan Insulin kan också användas när pumpen är pausad eller frånkoppl
 
 #### Kolhydrater
 
-![Dialogrutan Kolhydrater](../images/Home2020_ButtonCarbs.png)
+![Dialogrutan Kolhydrater](../images/carbs_dialog.png)
 
 För att registrera kolhydrater utan bolus.
 
@@ -574,7 +574,7 @@ Tryck på bubblan för att öppna panelen **Avisering**. Varje meddelande visar 
 
 ## Kalkylator
 
-![Kalkylator](../images/Home2020_BolusWizard_v2.png)
+![Kalkylator](../images/bolus_wizard.png)
 
 Det är härifrån du normalt ger en måltidsbolus.
 
@@ -618,7 +618,7 @@ Fältet **KH-tid** är till för förbolus: där kan du tala om för systemet at
 
 **Ställ in alarm** (påminnelse om att äta): när en KH-tid i framtiden anges visas reglaget "**Ställ in alarm**" så att du får en påminnelse vid den angivna tiden om när du ska äta de kolhydrater som du har angett i **AAPS**:
 
-![Ställ in alarm för kolhydrater i framtiden](../images/Home2021_BolusWizard_EatingReminder.png)
+![Ställ in alarm för kolhydrater i framtiden](../images/bolus_wizard_set_alarm.png)
 
 Påminnelsen startar när bolusen har levererats. Medan den pågår räknar ett fält **Dags att äta** på huvudskärmen ned, med **Stoppa** och **+5 min**. **+5 min** flyttar slutet av väntan fem minuter senare, och fältet visar den totala väntetiden. När tiden är inne ringer påminnelsen med ett eget ljud, en mjuk äggklocka. Förutom **Tysta larm** (skärmen förblir öppen) och **Tysta och stäng** har larmskärmen **+5 min**, som startar en ny väntan på fem minuter. När den har ringt visar fältet *Tiden är ute* med **+5 min** och **Avfärda**; **Tysta och stäng** tar också bort fältet. Fältet och larmet visas också i **AAPSClient** och på [klockan](#WearOsSmartwatch-wizard-carb-time). Påminnelsen skapar ingen timer i telefonens klockapp. Om Android inte låter **AAPS** ställa in alarm ber kalkylatorn dig att tillåta *Alarm och påminnelser* för **AAPS** i Android-inställningarna. Klocksymbolen visas inte för en kolhydrattid bakåt i tiden.
 
