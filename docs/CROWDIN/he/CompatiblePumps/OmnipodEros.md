@@ -281,7 +281,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 התהליך שלהלן מראה כיצד להשהות ולחדש את מתן האינסולין.
 
-*הערה - אם לא מוצג לחצן **השהיה***, הוא מוסתר כברירת מחדל. יש להפעיל את **הצגת לחצן "השהיית מתן אינסולין" במסך המשאבה** ב[הגדרות Omnipod](#OmnipodEros-omnipod-settings), בסעיף **אחר**.
+*הערה - אם לא מוצג לחצן **השהיה***, הוא מוסתר כברירת מחדל. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Suspending Insulin Delivery
 
@@ -591,7 +591,7 @@ This feature is useful for verifying boluses, TBRs, basal changes that were give
   צילום המסך למעלה הוא מגרסה קודמת של **AAPS**. ב-**AAPS** 4 זהו לחצן טקסט בשם **הגדרת שעה** במסך המשאבה Omnipod.
   ```
 
-- **השהיה:** משהה את מתן האינסולין בפוד הפעיל. מוצג רק אם הוא הופעל בהגדרות (**הצגת לחצן "השהיית מתן אינסולין" במסך המשאבה**).
+- **השהיה:** משהה את מתן האינסולין בפוד הפעיל. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Provides AAPS notifications and audible phone alerts when it is uncertain if TBR
 
 Provides advanced settings to assist debugging.
 
-- **הצגת לחצן "השהיית מתן אינסולין" במסך המשאבה:** מסתיר או מציג את הלחצן **השהיה** במסך המשאבה Omnipod.
+- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
 - **הצגת לחצן "יומן פעימות" בתפריט ניהול פוד:** ההגדרה עדיין מופיעה ברשימה, אבל בגרסה הנוכחית של מסך המשאבה אין לחצן **יומן פעימות**.
 
 - **הצגת לחצן "סטטיסטיקת ריילילינק" בתפריט ניהול פוד:** מסתיר או מציג את הלחצן **סטטיסטיקת ריילילינק** במסך המשאבה Omnipod.
