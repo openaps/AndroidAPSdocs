@@ -9,7 +9,7 @@
 
 ## Hlavná obrazovka
 
-![Hlavná obrazovka](../images/Home_Homescreen.png)
+![Hlavná obrazovka](../images/main/Home_Homescreen.png)
 
 Toto je prvá obrazovka, s ktorou sa stretnete po otvorení **AAPS** a obsahuje väčšinu informácií, ktoré budete denne potrebovať.
 
@@ -33,13 +33,13 @@ Farba hodnoty glykémie odráža stav v zadanom [rozsahu](#Preferences-range-for
 * červená = pod rozsahom
 * žltá = nad rozsahom
 
-![Kruh glykémie v rozsahu, zelený](../images/Home_Delta.png) ![Kruh glykémie nad rozsahom, žltý](../images/Home_Delta_high.png) ![Kruh glykémie pod rozsahom, červený](../images/Home_Delta_low.png)
+![Kruh glykémie v rozsahu, zelený](../images/main/Home_Delta.png) ![Kruh glykémie nad rozsahom, žltý](../images/main/Home_Delta_high.png) ![Kruh glykémie pod rozsahom, červený](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
 #### Stav okruhu
 
-![Stav okruhu](../images/main_loop_status.png)
+![Stav okruhu](../images/main/main_loop_status.png)
 
 Vedľa kruhu glykémie ikona ukazuje režim prevádzky okruhu (na obrázku zhora nadol):
 
@@ -166,7 +166,7 @@ Aktuálny profil sa zobrazuje vedľa ikony hviezdičky.
 
 Ak chcete **zmeniť percento profilu** (a jeho trvanie), ťuknite na názov profilu a potom na okrúhle tlačidlo **▶** (Aktivovať) vpravo dole na obrazovke Profil. V **AAPS** 3.x sa táto obrazovka otvárala dlhým stlačením názvu profilu; v **AAPS** 4 dlhé stlačenie nerobí nič. Postup krok za krokom: [Zmena percenta profilu](#ProfileSwitch-change-percentage).
 
-![Profil s aktívnym prepnutím profilu](../images/main_profile_switch.png)
+![Profil s aktívnym prepnutím profilu](../images/main/main_profile_switch.png)
 
 1. Bežné zobrazenie so štandardnou aktiváciou profilu.
 2. Prepnutie profilu s percentom 90 % a zostávajúcim trvaním 9 minút – kým beží dočasné prepnutie profilu, názov profilu je žltý.
@@ -174,7 +174,7 @@ Ak chcete **zmeniť percento profilu** (a jeho trvanie), ťuknite na názov prof
 
 #### Cieľ
 
-![Zostávajúci čas dočasného cieľa](../images/main_temp_target.png)
+![Zostávajúci čas dočasného cieľa](../images/main/main_temp_target.png)
 
 Pod názvom profilu sa zobrazuje aktuálna cieľová glykémia.
 
@@ -200,7 +200,7 @@ Ak **AAPS** zistí rezistenciu alebo citlivosť, cieľ sa zmení oproti hodnote 
 
 #### IOB, COB, bazál a citlivosť
 
-![IOB, COB, bazál a citlivosť](../images/main_iob_cob_basal_sensitivity.png)
+![IOB, COB, bazál a citlivosť](../images/main/main_iob_cob_basal_sensitivity.png)
 
 1. **Injekčná striekačka**: aktívny inzulín (IOB) – množstvo aktívneho inzulínu vo vašom tele  
     Hodnota aktívneho inzulínu by bola nula, keby bežal iba váš štandardný bazál a nezostával žiadny inzulín z predchádzajúcich bolusov. 
@@ -234,7 +234,7 @@ Upozornenia na potrebu sacharidov je možné v prípade potreby odoslať do Nigh
 
 ### Sekcia C – Riadok stavu
 
-![Riadok stavu](../images/main_status_row.png)
+![Riadok stavu](../images/main/main_status_row.png)
 
 Riadok stavu vizuálne upozorňuje na
 
@@ -320,7 +320,7 @@ Keď čas v telefóne skočil, pri prechode na letný alebo zimný čas alebo v 
 
 Stlačením ikony **ceruzky** v pravom hornom rohu grafu otvoríte nastavenia grafu:
 
-![Nastavenie hlavného grafu](../images/main_graph_settings.png)
+![Nastavenie hlavného grafu](../images/main/main_graph_settings.png)
 
 * **Výška grafu** určuje, aký vysoký bude graf.
 * **AKT** pridá krivku aktivity inzulínu: plnú žltozelenú čiaru <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (nezamieňajte si ju s bodkovanou žltou predikciou UAM)
@@ -408,7 +408,7 @@ Pod hlavným grafom môžete aktivovať ďalšie grafy. V [Jednoduchom móde](#p
 
 Ak chcete nastaviť ďalší graf, stlačte ikonu **ceruzky** v jeho pravom hornom rohu:
 
-![Ďalšie nastavenia grafov](../images/main_additional_graph_settings.png)
+![Ďalšie nastavenia grafov](../images/main/main_additional_graph_settings.png)
 
 Vyberte rámčeky zodpovedajúce údajom, ktoré chcete v tomto grafe vidieť; tlačidlo **Odstrániť** graf vymaže.
 
@@ -490,7 +490,7 @@ Je vhodné zobrazovať túto čiaru spoločne so stĺpcami odchýlky. Majú rovn
 
 ### Sekcia F – Lišta Rýchleho spustenia
 
-![Lišta Rýchleho spustenia](../images/main_quicklaunch_toolbar.png)
+![Lišta Rýchleho spustenia](../images/main/main_quicklaunch_toolbar.png)
 
 Plávajúca lišta v dolnej časti obrazovky obsahuje vaše akcie **[Rýchleho spustenia](../DailyLifeWithAaps/QuickLaunch.md)**. Malé **ozubené koliesko** otvorí nastavenie Rýchleho spustenia, kde vyberiete, ktoré tlačidlá sa zobrazia (ošetrenia, záznamy v Starostlivosti, akcie CGM, obrazovky z panela **Spravovať**, tlačidlá [Rýchleho sprievodcu](../DailyLifeWithAaps/QuickWizards.md), [Scény](../DailyLifeWithAaps/Scenes.md) a ďalšie).
 
@@ -502,7 +502,7 @@ Keď je pumpa **odpojená**, tlačidlá ošetrení zostávajú na lište, naprí
 
 #### Inzulín
 
-![Dialóg Inzulín](../images/insulin_dialog.png)
+![Dialóg Inzulín](../images/v4/Screens/insulin_dialog.png)
 
 Na podanie určitého množstva inzulínu bez použitia [bolusovej kalkulačky](#aaps-screens-bolus-wizard).
 
@@ -520,7 +520,7 @@ Dialóg Inzulín môžete použiť aj vtedy, keď je pumpa pozastavená alebo od
 
 #### Sacharidy
 
-![Dialóg Sacharidy](../images/carbs_dialog.png)
+![Dialóg Sacharidy](../images/v4/Screens/carbs_dialog.png)
 
 Zadávanie sacharidov bez podávania bolusu.
 
@@ -574,7 +574,7 @@ Nad dolnou lištou vpravo sa môže zobraziť **bublina notifikácií**. Zhroma�
 
 ## Bolusová kalkulačka
 
-![Bolusová kalkulačka](../images/bolus_wizard.png)
+![Bolusová kalkulačka](../images/v4/Screens/bolus_wizard.png)
 
 Keď chcete podať bolus k jedlu, zvyčajne ho podávate odtiaľto.
 
@@ -618,7 +618,7 @@ Pole **Čas sacharidov** slúži na predbolus: systému oznámite, že sacharidy
 
 **Nastaviť upozornenie** (pripomienka jedla): keď zadáte čas sacharidov v budúcnosti, zobrazí sa prepínač „**Nastaviť upozornenie**“, aby vám v zadanom čase pripomenul, že máte zjesť sacharidy, ktoré ste zadali do **AAPS**:
 
-![Nastavenie upozornenia pre budúce sacharidy](../images/bolus_wizard_set_alarm.png)
+![Nastavenie upozornenia pre budúce sacharidy](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
 Pripomienka sa spustí, keď je bolus podaný. Kým beží, na hlavnej obrazovke odpočítava čas lišta **Čas na jedlo** s tlačidlami **Zastaviť** a **+5 min**. **+5 min** posunie koniec čakania o päť minút neskôr a lišta ukazuje celkový čas čakania. Keď nastane čas, pripomienka zazvoní vlastným zvukom, jemnou kuchynskou minútkou. Okrem tlačidiel **Stíšiť alarm** (obrazovka zostane otvorená) a **Stíšiť a zavrieť** ponúka obrazovka alarmu aj **+5 min**, ktoré spustí nové päťminútové čakanie. Po zazvonení lišta ukazuje *Čas vypršal* s tlačidlami **+5 min** a **Zatvoriť**; **Stíšiť a zavrieť** odstráni aj lištu. Lišta a alarm sa zobrazujú aj v **AAPSClient** a na [hodinkách](#WearOsSmartwatch-wizard-carb-time). Pripomienka nevytvára minútku v aplikácii Hodiny vo vašom telefóne. Ak Android nedovolí **AAPS** nastavovať alarmy, kalkulačka vás požiada, aby ste v nastaveniach Androidu povolili pre **AAPS** *Alarmy a pripomienky*. Zvonček sa pri čase sacharidov v minulosti neponúka.
 
@@ -640,7 +640,7 @@ Dobré vedieť:
 
 #### Chybná detekcia COB
 
-![Pomalé vstrebávanie sacharidov](../images/Calculator_SlowCarbAbsorption.png)
+![Pomalé vstrebávanie sacharidov](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Ak sa po použití bolusovej kalkulačky zobrazí vyššie uvedené upozornenie, **AAPS** zistil, že vypočítaná hodnota COB môže byť nesprávna. Ak si teda chcete znova podať bolus po predchádzajúcom jedle s COB, dávajte pozor na predávkovanie!
 
@@ -719,7 +719,7 @@ Viac podrobností nájdete v [časti APS na stránke Konfigurácia](#Config-Buil
 
 ## Profil
 
-![Profil](../images/Screenshots_Profile.png)
+![Profil](../images/screens/Screenshots_Profile.png)
 
 **Spravovať → Profil** (alebo ťuknutie na názov profilu na hlavnej obrazovke) otvorí obrazovku Profil: vaše profily ako karty, medzi ktorými prechádzate potiahnutím, s tlačidlami na pridanie, úpravu, klonovanie, vymazanie a **aktiváciu** profilu.
 
@@ -733,7 +733,7 @@ Profil obsahuje informácie o vašich individuálnych nastaveniach diabetu, ďal
 
 ## NSClient
 
-![NSClient](../images/Screenshots_NSClient.png)
+![NSClient](../images/screens/Screenshots_NSClient.png)
 
 **Konfigurácia → Komunikácia → NSClientV3 → Otvoriť plugin** zobrazuje stav pripojenia k vašej stránke Nightscout: URL, stav websocketu, front a log synchronizácie.
 
@@ -745,7 +745,7 @@ V prípade problémov nájdete ďalšie informácie na tejto [stránke](../Getti
 
 ## Zdroj glykémie – xDrip, BYODA...
 
-![Obrazovka Zdroj glykémie](../images/Screenshots_BGSource.png)
+![Obrazovka Zdroj glykémie](../images/screens/Screenshots_BGSource.png)
 
 **Konfigurácia → Zdroj glykémie → Otvoriť plugin** zobrazuje históriu hodnôt z CGM a umožňuje odstrániť hodnoty pri poruche (napr. falošne nízke hodnoty pri stlačení senzora) alebo duplicitné hodnoty.
 
