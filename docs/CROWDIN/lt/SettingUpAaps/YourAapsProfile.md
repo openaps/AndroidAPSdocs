@@ -31,7 +31,7 @@ Paskutinius keturis parametrus (gliukozės tikslus, valandinę bazę, jautrumo i
 
 Žemiau pateiktos **AAPS** ekrano kopijos su profilio _pavyzdžiu_. Atkreipkite dėmesį: žemiau pateiktame profilio pavyzdyje yra daug laiko taškų. Kai pradedate naudoti **AAPS**, jūsų profilis greičiausiai bus daug paprastesnis.
 
-![Aktyvaus profilio pavyzdys](../images/Profile-Example-Active.png)
+![Aktyvaus profilio pavyzdys](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## Gliukozės tikslai
@@ -55,7 +55,7 @@ Jei tikslas jūsų **profilyje** labai platus (pvz., 3 mmol/l ar daugiau [50 mg/
 
 **Žemiau esančiame paveiksle** parodyta, kaip galima nustatyti tikslą **AAPS** profilyje.
 
-![Target](../images/Profile_Target.png)
+![Target](../images/v4/Profiles/Profile_Target.png)
 
 **KG** tikslai nustatomi pagal jūsų asmeninius pageidavimus ir poreikius. Pavyzdžiui, jei nerimaujate dėl hipoglikemijos naktį, nuo 21:00 iki 7:00 tikslą galite nustatyti šiek tiek aukštesnį – 117 mg/dL (6,5 mmol/l). Jei norite, kad prieš pusryčių bolusą ryte turėtumėte pakankamai aktyvaus insulino organizme (AIO), nuo 7:00 iki 8:00 galite nustatyti žemesnį tikslą – 81 mg/dL (4,5 mmol/l).
 
@@ -89,7 +89,7 @@ Ir atvirkščiai: per maža valandinė bazė gali sukelti aukštą KG, ir nepavy
 
 **Žemiau esančiame paveiksle** parodyta, kaip galima nustatyti valandinę bazę **AAPS** profilyje.
 
-![Valandinė bazė](../images/Profile_BasalRates.png)
+![Valandinė bazė](../images/v4/Profiles/Profile_BasalRates.png)
 
 Teisinga valandinė bazė nustatoma bandymų ir klaidų būdu, ir tai reikia daryti pasitarus su savo gydymo komanda.
 
@@ -147,7 +147,7 @@ Iš šių pavyzdžių matyti, kad kuo _mažesnė_ **JIF** reikšmė, tuo mažiau
 
 Per mažas **JIF** (taigi agresyvesnis, tai nėra retas atvejis) gali sukelti „perkorekcijas“, nes **AAPS** apskaičiuoja, kad aukštai **KG** koreguoti reikia daugiau insulino, nei iš tikrųjų reikia. Dėl to KG gali svyruoti kaip „kalneliai“ (ypač badaujant), kaip parodyta paveiksle žemiau. Tokiu atveju **JIF** reikšmę reikia padidinti, kad **AAPS** būtų mažiau agresyvi. Tada **AAPS** leis mažesnes korekcines dozes ir nepersistengs koreguodama aukštą **KG**, dėl ko **KG** nukristų per žemai.
 
-![ISF too low](../images/isf.jpg)
+![ISF too low](../images/v4/Profiles/isf.jpg)
 
 Ir atvirkščiai: per didelis **JIF** gali lemti per mažas korekcijas, t. y. jūsų **KG** lieka virš tikslo – tai ypač pastebima naktį.
 
@@ -155,7 +155,7 @@ Ir atvirkščiai: per didelis **JIF** gali lemti per mažas korekcijas, t. y. j�
 
 **Žemiau esančiame paveiksle** parodyta, kaip galima nustatyti JIF reikšmes **AAPS** profilyje.
 
-![Profilio JIF](../images/Profile_ISF.png)
+![Profilio JIF](../images/v4/Profiles/Profile_ISF.png)
 
 Paprastas pradinis būdas nustatyti dienos JIF – apskaičiuoti jį pagal bendrą paros dozę (BPD) taikant 1700 (94) taisyklę. Daugiau informacijos rasite Gary Scheiner knygos [„Think like a Pancreas“](https://amzn.eu/d/iVU0RGe) 7 skyriuje.
 
@@ -213,7 +213,7 @@ Dažnai skirtingu paros metu **IA** būna skirtingas dėl hormonų lygio ir fizi
 
 **Žemiau esančiame paveiksle** parodytas naudotojo **IA** pavyzdys ir kaip jį galima nustatyti **AAPS profilyje**. Įvedant šias reikšmes įvedama paskutinė santykio dalis, todėl insulino ir angliavandenių santykis 1:3,5 įvedamas tiesiog kaip „3,5“.
 
-![Profilio IA](../images/Profile_ICR.png)
+![Profilio IA](../images/v4/Profiles/Profile_ICR.png)
 
 Jei suvirškinus maistą ir **AIO** grįžus į nulį jūsų **KG** lieka aukštesnė nei prieš valgį, greičiausiai jūsų **IA** per silpnas (_t. y._ skaičius per didelis, ir jį reikia palaipsniui mažinti). Ir atvirkščiai: jei jūsų **KG** žemesnė nei prieš valgį, **IA** per stiprus (_t. y._ skaičius per mažas, ir jį reikia palaipsniui didinti).
 
@@ -292,7 +292,7 @@ Jei keičiate savo **profilį**, įsitikinkite, kad redaguojate tinkamą **profi
 
 Profilio pagalbininkas siūlo dviejų skirtingų vaikų ligoninių duomenų rinkinius. Tai yra pagalba jums kuriant pradinį profilį jūsų vaikui (iki 18 metų).
 
-![Profilio pagalbininkas vaikams 1](../images/ProfileHelperKids1.png)
+![Profilio pagalbininkas vaikams 1](../images/v4/Profiles/ProfileHelperKids1.png)
 
 1. Įsitikinkite, kad esate skirtuke **1 profilis**.
 2. Lauke **Profilio tipas** įsitikinkite, kad pasirinkta „Numatytasis profilis“.
@@ -303,7 +303,7 @@ Profilio pagalbininkas siūlo dviejų skirtingų vaikų ligoninių duomenų rink
 7. Atidarykite skirtuką **Palyginimas**. Bus parodytas dviejų pakoreguotų profilių palyginimas (žr. ekrano kopiją žemiau).
 8. Jei norite pradėti derinti savo profilį pagal vieną iš šių pasiūlymų, palyginimo apačioje paspauskite mygtuką **Klonuoti**.
 
-![Profilio pagalbininkas vaikams 2](../images/ProfileHelperKids2.png)
+![Profilio pagalbininkas vaikams 2](../images/v4/Profiles/ProfileHelperKids2.png)
 
 ### Profilio keitimas
 
@@ -312,7 +312,7 @@ Profilio pagalbininkas siūlo dviejų skirtingų vaikų ligoninių duomenų rink
 (your-aaps-profile-clone-profile-switch)=
 ### Profilio keitimo klonavimas į naują profilį
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profile Switch](../images/Maintenance/TreatmentsView4.png)
 
 [Terapijos istorijoje](#aaps-screens-treatments) rodomi visi ankstesni **profilio keitimai**. Skirtuke **Profilio keitimas** galite naudoti ankstesnį **profilio keitimą** kaip pagrindą naujam **profiliui** sukurti. Tokiu atveju laiko perstūmimas ir procentas bus pritaikyti naujam vietiniam profiliui. Paspauskite mygtuką **Klonuoti**, rodomą **2** eilutėje.
 
@@ -335,14 +335,14 @@ Tai gali būti naudinga, kai ketinate daryti didelius pakeitimus sudėtingesniam
 
 Tačiau tam svarbu Nightscout redaktoriuje klonuoti visą **duomenų bazės įrašą**, kurį sudaro keli profiliai (mėlyna rodyklė ekrano kopijoje žemiau). Tada naujiems duomenų bazės įrašams priskiriama dabartinė data. Išsaugojus pakeistą / naują **profilį** galima aktyvuoti **AAPS** įprastu [profilio keitimu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-![Duomenų bazės įrašų klonavimas](../images/Nightscout_Profile_Editor.PNG)
+![Duomenų bazės įrašų klonavimas](../images/v4/Profiles/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### Dviejų profilių palyginimas
 
 Taip pat galite naudoti [Profilio pagalbininką](#aaps-screens-profile-helper) (meniu ☰ → **Profilio pagalbininkas**), kad palygintumėte du skirtingus profilius arba profilio keitimus (vieno iš jūsų profilių procentą, anksčiau naudotą [profilio keitime](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)).
 
-![Profilio pagalbininkas 1](../images/ProfileHelper1.png)
+![Profilio pagalbininkas 1](../images/v4/Profiles/ProfileHelper1.png)
 
 1. Įsitikinkite, kad esate skirtuke **1 profilis**.
 2. Lauke **Profilio tipas** pasirinkite „Galimas profilis“, kad galėtumėte rinktis iš visų išsaugotų **profilių**.
@@ -352,4 +352,4 @@ Taip pat galite naudoti [Profilio pagalbininką](#aaps-screens-profile-helper) (
 6. Pasirinkite **profilio keitimą**, su kuriuo norite palyginti.
 7. Atidarykite skirtuką **Palyginimas**. Bus parodytas dviejų profilių palyginimas (žr. ekrano kopiją žemiau).
 
-![Profilio pagalbininkas 2](../images/ProfileHelper2.png)
+![Profilio pagalbininkas 2](../images/v4/Profiles/ProfileHelper2.png)
