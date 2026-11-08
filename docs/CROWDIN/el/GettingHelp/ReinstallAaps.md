@@ -21,7 +21,7 @@
 
 - Η απεγκατάσταση του **AAPS** διαγράφει όλες τις ρυθμίσεις του, τα [Βήματα](../SettingUpAaps/CompletingTheObjectives.md) σας και την τρέχουσα σύνδεση με την αντλία. Τα παίρνετε πίσω με εισαγωγή του **αρχείου ρυθμίσεων** σας, οπότε βεβαιωθείτε ότι έχετε ένα πρόσφατο.
 - Το αρχείο ρυθμίσεων δεν περιέχει το ιστορικό θεραπειών και γλυκόζης σας. Αν ανεβάζετε δεδομένα στο [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), μπορείτε να το φορτώσετε ξανά μετά την επανεγκατάσταση (βήμα 8).
-- Χρειάζεστε τον [**κύριο κωδικό**](#Preferences-master-password) σας: το αρχείο ρυθμίσεων είναι κρυπτογραφημένο με αυτόν.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Χρήστες Omnipod και Medtrum:** διαβάστε πρώτα την ενότητα [Αντλίες χωρίς σωληνάκι](#ExportImportSettings-tubeless-pumps). Το αρχείο ρυθμίσεων πρέπει να έχει εξαχθεί κατά τη διάρκεια του pod ή του patch που φοράτε τώρα.
 - Αν χρειάζεται, [ρυθμίστε τον δέκτη της πηγής CGM/BG](../Getting-Started/CompatiblesCgms.md) πριν ξεκινήσετε.
 
