@@ -255,7 +255,7 @@ På et tidspunkt lukkes Android Studio og starter på nytt. Du kan bli spurt om 
 
 Bare for Windows-brukere: Hvis brannmuren din ber om tillatelse, gi tilgang:
 
- ![Brannmurtillatelse for Java](../images/AndroidStudio361_18.png)
+ ![Brannmurtillatelse for Java](../images/Building-the-App/AndroidStudio361_18.png)
 
 Når repositoryet er klonet, åpner Android Studio det klonede prosjektet.
 
