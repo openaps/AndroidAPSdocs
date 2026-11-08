@@ -255,7 +255,7 @@ Bir noktada Android Studio kapanıp yeniden açılacaktır. Projeye güvenmek is
 
 Yalnızca Windows kullanıcıları için: Güvenlik duvarınız izin isterse erişim izni verin:
 
- ![Java için güvenlik duvarı izni](../images/AndroidStudio361_18.png)
+ ![Java için güvenlik duvarı izni](../images/Building-the-App/AndroidStudio361_18.png)
 
 After the repository is cloned successfully, Android Studio will open the cloned project.
 
