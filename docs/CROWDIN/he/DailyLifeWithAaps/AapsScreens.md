@@ -39,7 +39,7 @@ The color of the BG value reflects the status to the defined [range](#Preference
 
 #### Loop status
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Loop status](../images/main_loop_status.png)
 
 ליד עיגול הסוכר, סמל מציג את מצב ההפעלה של הלולאה (מלמעלה למטה בתמונה):
 
@@ -166,7 +166,7 @@ The color of the BG value reflects the status to the defined [range](#Preference
 
 כדי **לשנות את אחוז הפרופיל** (ואת משך הזמן שלו), יש להקיש על שם הפרופיל, ואז להקיש על הלחצן העגול **▶** (הפעלה) בפינה התחתונה של מסך הפרופיל. ב-**AAPS** 3.x המסך הזה נפתח בלחיצה ארוכה על שם הפרופיל; ב-**AAPS** 4 לחיצה ארוכה לא עושה דבר. שלב אחר שלב: [שינוי אחוז הפרופיל](#ProfileSwitch-change-percentage).
 
-![פרופיל עם החלפת פרופיל פעילה](../images/Home2020_ProfileSwitch.png)
+![פרופיל עם החלפת פרופיל פעילה](../images/main_profile_switch.png)
 
 1. Regular display with a standard profile activation.
 2. החלפת פרופיל עם אחוז של 90% וזמן שנותר של 9 דקות - שם הפרופיל הופך לצהוב כל עוד החלפת פרופיל זמנית פועלת.
@@ -174,7 +174,7 @@ The color of the BG value reflects the status to the defined [range](#Preference
 
 #### יעד
 
-![הזמן שנותר ליעד הזמני](../images/Home2020_TT.png)
+![הזמן שנותר ליעד הזמני](../images/main_temp_target.png)
 
 יעד רמת הסוכר הנוכחי מוצג מתחת לשם הפרופיל.
 
@@ -200,7 +200,7 @@ The color of the BG value reflects the status to the defined [range](#Preference
 
 #### IOB, COB, בזאלי ורגישות
 
-![IOB, COB, בזאלי ורגישות](../images/Home2020_TBR.png)
+![IOB, COB, בזאלי ורגישות](../images/main_iob_cob_basal_sensitivity.png)
 
 1. **מזרק**: אינסולין פעיל (IOB) - כמות האינסולין הפעיל בגוף  
     ערך האינסולין הפעיל יהיה אפס אם רק הבזאלי הרגיל פעל ולא נשאר אינסולין מבולוסים קודמים. 
@@ -234,7 +234,7 @@ This is when the oref algorithm thinks it can't rescue you by zero-temping, and 
 
 ### חלק C - שורת המצב
 
-![שורת המצב](../images/Home2020_StatusLights.png)
+![שורת המצב](../images/main_status_row.png)
 
 שורת המצב נותנת אזהרה חזותית עבור
 
@@ -320,7 +320,7 @@ This information is also shown on this graph :
 
 לחיצה על סמל **העיפרון** בפינה העליונה של הגרף פותחת את הגדרות הגרף:
 
-![הגדרות הגרף הראשי](../images/Home2020_MainGraphSetting.png)
+![הגדרות הגרף הראשי](../images/main_graph_settings.png)
 
 * **גובה הגרף** קובע את גובה הגרף.
 * **פעילות** (ACT) מוסיף את עקומת פעילות האינסולין: קו מלא בצבע צהוב-ירוק <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (לא לבלבל עם תחזית ה-UAM הצהובה המנוקדת)
@@ -408,7 +408,7 @@ AAPS לא נותן אינסולין לפי ערך הסוכר הנוכחי בלב
 
 כדי להגדיר גרף נוסף, יש ללחוץ על סמל **העיפרון** בפינה העליונה שלו:
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Additional graph settings](../images/main_additional_graph_settings.png)
 
 יש לבחור את השבבים של הנתונים שרוצים לראות בגרף הזה; הלחצן **הסרה** מוחק את הגרף.
 
@@ -490,7 +490,7 @@ It is a good combination to display this line along with the Deviation bars. ה�
 
 ### חלק F - סרגל ההפעלה המהירה
 
-![סרגל ההפעלה המהירה (QuickLaunch)](../images/Home2020_Buttons.png)
+![סרגל ההפעלה המהירה (QuickLaunch)](../images/main_quicklaunch_toolbar.png)
 
 הסרגל הצף בתחתית המסך מכיל את פעולות **[הפעלה מהירה](../DailyLifeWithAaps/QuickLaunch.md)** שלכם. **גלגל השיניים** הקטן פותח את הגדרות ההפעלה המהירה, שבהן בוחרים אילו לחצנים יוצגו (טיפולים, רשומות פורטל טיפולים, פעולות CGM, המסכים של חלון **ניהול**, לחצני [אשף מהיר](../DailyLifeWithAaps/QuickWizards.md), [תרחישים](../DailyLifeWithAaps/Scenes.md) ועוד).
 
@@ -502,7 +502,7 @@ It is a good combination to display this line along with the Deviation bars. ה�
 
 #### אינסולין
 
-![חלון אינסולין](../images/Home2020_ButtonInsulin.png)
+![חלון אינסולין](../images/insulin_dialog.png)
 
 To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
 
@@ -520,7 +520,7 @@ To give a certain amount of insulin without using the [bolus calculator](#aaps-s
 
 #### פחמימות
 
-![חלון פחמימות](../images/Home2020_ButtonCarbs.png)
+![חלון פחמימות](../images/carbs_dialog.png)
 
 נועד לרישום פחמימות ללא בולוס.
 
@@ -574,7 +574,7 @@ To give a certain amount of insulin without using the [bolus calculator](#aaps-s
 
 ## אשף הבולוס
 
-![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
+![Bolus wizard](../images/bolus_wizard.png)
 
 When you want to make a meal bolus, this is where you will normally make it from.
 
@@ -618,7 +618,7 @@ When you want to make a meal bolus, this is where you will normally make it from
 
 **הגדרת התראה** (תזכורת לאכילה): כאשר מוזן זמן פחמימות בעתיד, מופיע מתג "**הגדרת התראה**", כדי לקבל תזכורת בזמן שנקבע לאכול את הפחמימות שהוזנו ב-**AAPS**:
 
-![הגדרת התראה לפחמימות עתידיות](../images/Home2021_BolusWizard_EatingReminder.png)
+![הגדרת התראה לפחמימות עתידיות](../images/bolus_wizard_set_alarm.png)
 
 התזכורת מתחילה כאשר הבולוס הוזרק. בזמן שהיא פועלת, פס **זמן לאכול** במסך הראשי סופר לאחור, עם **עצירה** ו-**+5 דק׳**. **+5 דק׳** מזיז את סוף ההמתנה בחמש דקות קדימה, והפס מציג את זמן ההמתנה הכולל. כשהזמן מגיע, התזכורת מצלצלת בצליל משלה, טיימר מטבח רך. מלבד **השתקת ההתראה** (המסך נשאר פתוח) ו**השתקה וסגירה**, מסך ההתראה מציע גם **+5 דק׳**, שמתחיל המתנה חדשה של חמש דקות. אחרי הצלצול, בפס כתוב *הזמן הגיע*, עם **+5 דק׳** ו**סגירה**; גם **השתקה וסגירה** מסירה את הפס. הפס וההתראה מוצגים גם ב-**AAPSClient**, וגם ב[שעון](#WearOsSmartwatch-wizard-carb-time). התזכורת לא יוצרת טיימר באפליקציית השעון של הטלפון. אם Android לא מאפשר ל-**AAPS** להגדיר התראות, האשף מבקש לאפשר *שעונים מעוררים ותזכורות* עבור **AAPS** בהגדרות Android. הפעמון לא מוצע כאשר זמן הפחמימות הוא בעבר.
 
