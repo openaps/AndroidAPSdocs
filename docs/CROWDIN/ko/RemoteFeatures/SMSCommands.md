@@ -55,14 +55,14 @@
 
 휴대폰에서 **Apps > AAPS > Permissions**(앱 › AAPS › 권한)로 이동하십시오. **SMS**와 **Phone**(전화)이 허용되어 있는지 확인하십시오.
 
-![이미지](../images/remote-control-08.png)
+![이미지](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android는 **AAPS**처럼 앱 스토어에서 설치하지 않은 앱의 **SMS** 권한을 차단할 수 있습니다. **SMS** 권한을 허용할 때 이 메시지가 보이면 휴대폰의 **Settings > Apps > AAPS**(설정 › 앱 › AAPS)를 열고, **⋮** 메뉴(오른쪽 위)를 누른 다음 **Allow restricted settings**(제한된 설정 허용)를 선택하십시오. 그런 다음 **SMS** 권한을 다시 허용하십시오.
 ```
 
-![앱의 SMS 접근이 거부됨](../images/sms_permission_restricted.png)
+![앱의 SMS 접근이 거부됨](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### 날짜와 시간 동기화
 
@@ -82,7 +82,7 @@ Android는 **AAPS**처럼 앱 스토어에서 설치하지 않은 앱의 **SMS**
 
 **SMS로 원격 명령 허용**을 활성화하십시오. **토큰 끝에 붙이는 추가 필수 PIN**과 **인증 설정** 옵션은 이 설정을 활성화한 후에만 나타납니다:
 
-![SMS 통신기 설정](../images/sms_communicator_settings.png)
+![SMS 통신기 설정](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### 허용된 전화번호
@@ -97,7 +97,7 @@ Android는 **AAPS**처럼 앱 스토어에서 설치하지 않은 앱의 **SMS**
 
 추가할 전화번호가 두 개 이상이면 세미콜론으로 구분하고, **번호 사이에 공백을 넣지 마십시오**(매우 중요합니다!). **확인**을 선택하십시오:
 
-![허용된 전화번호](../images/sms_allowed_numbers.png)
+![허용된 전화번호](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### 원격 볼러스 최소 간격
 
@@ -115,7 +115,7 @@ PIN 조건은 다음과 같습니다:
 
 더 안전한 PIN을 위해 같은 숫자를 여러 번(_예_: 111111) 또는 연속된 숫자(_예_: 123456)를 사용하지 마십시오.
 
-![토큰 끝에 붙이는 추가 필수 PIN](../images/sms_pin.png)
+![토큰 끝에 붙이는 추가 필수 PIN](../images/remote_control_and_following/sms_pin.png)
 
 #### Authenticator setup
 
@@ -123,7 +123,7 @@ PIN 조건은 다음과 같습니다:
 * _보호자 휴대폰_에서 설치한 인증 앱을 열고, 새 연결을 설정한 다음
 * 보호자 휴대폰으로 **코드를 스캔하여 AAPS OTP 코드 설정** 아래에 표시된 QR 코드를 스캔하십시오.
 
-![QR 코드로 인증 설정](../images/sms_authenticator_setup.png)
+![QR 코드로 인증 설정](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * **일회성 비밀번호 테스트** 아래의 **확인할 코드**에 보호자 휴대폰의 인증 앱에서 받은 일회용 비밀번호와 그 뒤에 PIN을 입력하십시오:
 
@@ -134,7 +134,7 @@ PIN 조건은 다음과 같습니다:
 
 입력이 올바르면 빨간색 “잘못된 PIN” 텍스트가 자동으로 초록색 “확인”으로 바뀝니다. **누를 버튼은 없습니다!** 이제 과정이 끝났습니다. 코드를 입력한 후 눌러야 하는 “확인” 버튼은 없습니다:
 
-![일회성 비밀번호 테스트와 인증 초기화](../images/sms_authenticator_test.png)
+![일회성 비밀번호 테스트와 인증 초기화](../images/remote_control_and_following/sms_authenticator_test.png)
 
 이제 SMS 명령 설정이 끝났습니다.
 
@@ -146,7 +146,7 @@ PIN 조건은 다음과 같습니다:
 
 1)  모든 것이 올바르게 설정되었는지 확인하려면, 보호자 휴대폰에서 **AAPS** 휴대폰으로 “bg”라는 SMS 메시지를 보내 연결을 테스트하십시오. 다음과 비슷한 응답을 받아야 합니다:
 
-![이미지](../images/remote-control-06.png)
+![이미지](../images/remote_control_and_following/remote-control-06.png)
 
 응답을 받지 못하면 아래의 [문제 해결](#SMSCommands-troubleshooting) 섹션을 확인하십시오.
 
@@ -154,7 +154,7 @@ PIN 조건은 다음과 같습니다:
 
 SMS 명령을 처음 보낼 때는 **AAPS** 휴대폰이 있는 곳에서 시도하여 어떻게 작동하는지 확인하십시오:
 
-![이미지](../images/remote-control-16.png)
+![이미지](../images/remote_control_and_following/remote-control-16.png)
 
 보호자 휴대폰은 원격 SMS 명령이 성공적으로 실행되었는지 확인하는 답장 SMS를 **AAPS**에서 받습니다.
 
@@ -182,7 +182,7 @@ SMS 명령을 처음 보낼 때는 **AAPS** 휴대폰이 있는 곳에서 시도
 
 명령은 영어로 보내야 합니다. 응답 문자열이 이미 [번역](#translations-translate-strings-for-AAPS-app)되어 있으면 응답은 사용하는 언어로 옵니다. 명령은 대소문자를 구분하지 않으므로 소문자나 대문자를 사용할 수 있습니다.
 
-![SMS 명령 예시](../images/SMSCommands.png)
+![SMS 명령 예시](../images/remote_control_and_following/SMSCommands.png)
 
 아래의 **SMS 명령 표**에 사용할 수 있는 모든 SMS 명령이 있습니다. 이해를 돕기 위해 _예시 값_을 적었습니다. 명령에 사용할 수 있는 값의 범위(목표, 프로파일 퍼센트 등)는 **AAPS** 앱에서 허용되는 범위와 같습니다.
 
@@ -191,11 +191,11 @@ SMS 명령을 처음 보낼 때는 **AAPS** 휴대폰이 있는 곳에서 시도
 
 어떤 SMS 명령은 바로 응답하고, 어떤 SMS 명령은 인증 앱을 통한 강력한 **인증**이 필요합니다. “**BG**”(현재 혈당을 요청함) 같은 간단한 조회는 입력하기 쉽고, 인증이 필요 없으며, 아래와 같은 **AAPS** 상태 정보를 반환합니다:
 
-![이미지](../images/remote-control-06.png)
+![이미지](../images/remote_control_and_following/remote-control-06.png)
 
 보안이 더 필요한 명령은 코드를 입력해야 합니다. 예:
 
-![SMS 인증됨](../images/remote-control-07.png)
+![SMS 인증됨](../images/remote_control_and_following/remote-control-07.png)
 
 아래 표의 *인증* 열은 각 명령에 이런 강력한 인증이 필요한지 보여 줍니다.
 
@@ -311,12 +311,12 @@ SMS 명령을 처음 보낼 때는 **AAPS** 휴대폰이 있는 곳에서 시도
 ### SMS 명령에 대한 응답이 전혀 없음
 
 보호자 휴대폰 및/또는 **AAPS** 휴대폰에서 다음 옵션을 비활성화해 보십시오:
-* **Send as chat message**(채팅 메시지로 보내기) ![채팅 메시지로 보내는 SMS 비활성화](../images/SMSdisableChat.png)
+* **Send as chat message**(채팅 메시지로 보내기) ![채팅 메시지로 보내는 SMS 비활성화](../images/remote_control_and_following/SMSdisableChat.png)
 * Android 메시지 앱 또는 Google 메시지 앱을 사용하는 경우 RCS 메시지를 비활성화하십시오:
   - 메시지 앱에서 해당 SMS 대화를 엽니다
   - 오른쪽 위의 옵션 메뉴(점 세 개)를 선택합니다
   - "Details"(세부정보)를 선택합니다
-  - "Only send SMS and MMS messages"(SMS 및 MMS 메시지만 보내기) 활성화 ![채팅 메시지로 보내는 RCS 비활성화](../images/SMSdisableRCS.png)
+  - "Only send SMS and MMS messages"(SMS 및 MMS 메시지만 보내기) 활성화 ![채팅 메시지로 보내는 RCS 비활성화](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### 명령 실행 오류
 
@@ -331,7 +331,7 @@ SMS 명령을 처음 보낼 때는 **AAPS** 휴대폰이 있는 곳에서 시도
 
 흔한 오류는 아래 예시에 있습니다:
 
-![이미지](../images/remote-control-17.png)
+![이미지](../images/remote_control_and_following/remote-control-17.png)
 
 ### 인증된 명령은 어떻게 중지할 수 있습니까?
 
