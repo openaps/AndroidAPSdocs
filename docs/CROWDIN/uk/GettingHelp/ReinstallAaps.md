@@ -21,7 +21,7 @@
 
 - Видалення **AAPS** видаляє всі його налаштування, ваші [завдання](../SettingUpAaps/CompletingTheObjectives.md) і поточне з'єднання з помпою. Ви повернете їх, імпортувавши ваш **файл налаштувань**, тому переконайтеся, що у вас є свіжий файл.
 - Файл налаштувань не містить історії терапії та глюкози. Якщо ви вивантажуєте дані в [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), ви можете завантажити її назад після перевстановлення (крок 8).
-- Вам потрібен ваш [**Головний пароль**](#Preferences-master-password): файл налаштувань зашифровано ним.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Користувачі Omnipod і Medtrum:** спочатку прочитайте розділ [Безтрубкові помпи](#ExportImportSettings-tubeless-pumps). Ваш файл налаштувань має бути експортований під час Pod або патча, який ви носите зараз.
 - Якщо потрібно, [налаштуйте приймач вашого CGM / джерела ГК](../Getting-Started/CompatiblesCgms.md), перш ніж почати.
 
