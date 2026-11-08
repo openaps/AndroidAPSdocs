@@ -33,7 +33,7 @@
    * 選取你的**設定檔**，然後點選**▶ 註冊**
    * 依照目的地設定「**時間偏移**」，然後點選**註冊**。
    
-   ![設定切換與時間調整](../images/ProfileSwitchTimeShift2.png)
+   ![設定切換與時間調整](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * 例如，維也納 → 紐約：**設定檔切換** +6 小時
    * 例如，維也納 → 雪梨：**設定檔切換** -8 小時
