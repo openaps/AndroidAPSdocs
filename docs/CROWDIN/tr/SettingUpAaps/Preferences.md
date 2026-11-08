@@ -474,7 +474,19 @@ Ayarlar açıklayıcı olmalıdır.
 
 **Rahatsız Etmeyin modunu geçersiz kıl** (varsayılan olarak açık): **AAPS** alarmları, telefon sessizdeyken veya Rahatsız Etmeyin modundayken bile çalar. **AAPS**'in bu modlara uyması gerekiyorsa bunu kapatın: bu durumda alarmlar çalmaz, Rahatsız Etmeyin modunda ise telefonda ve saatte yalnızca titreşir. Rahatsız Etmeyin modunda gelen döngü önerileri sessiz gösterilir.
 
-Bir alarm çaldığında alarm ekranında **Alarmı sessize al** (ekran açık kalır, böylece mesajı okuyabilirsiniz) ve **Sessize al ve kapat** seçenekleri bulunur. Bildirim alanında alarm bildirimini kaydırarak kapatmak alarmı susturur. Daha sonra **AAPS**'i açtığınızda, yanıtlamadığınız bir alarm yeniden gösterilir.
+When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Bildirim alanında alarm bildirimini kaydırarak kapatmak alarmı susturur. Daha sonra **AAPS**'i açtığınızda, yanıtlamadığınız bir alarm yeniden gösterilir.
+
+(preferences-alarm-sound-volume-vibration)=
+### Alarm sound, volume and vibration
+
+- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
+- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
+- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
+- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+
+![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+
+- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
 
 (preferences-maintenance-settings)=
 ## Bakım ayarları
