@@ -192,7 +192,7 @@ Om du får felmeddelandet ovan behöver du ladda ner rätt JVM-version innan du 
 
   Det finns information på internet om hur du tar reda på om du har ett 32-bitars eller 64-bitars operativsystem, t.ex. [den här](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Skärmbild Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Skärmbild Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Synkronisera om Gradle
@@ -237,7 +237,7 @@ Din apk byggdes utan problem och kan föras över till telefonen!
 
 ## Apk inte installerad
 
-![appen har inte installerats på telefonen](../images/Update_AppNotInstalled.png)
+![appen har inte installerats på telefonen](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Se till att du har fört över filen ”app-full-release.apk” till din telefon.
 * Det här felet betyder oftast att den nya apk:n är signerad med en annan keystore än din installerade **AAPS**. Om du fortfarande har din tidigare keystore, välj den och bygg igen. Annars, se [Installera om AAPS med en ny keystore](#reinstall-aaps).
