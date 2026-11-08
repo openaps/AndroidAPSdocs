@@ -2,7 +2,7 @@
 
 Freestyle Libre 3 (FSL3) kräver en särskild inställning för att skicka BG-värden till AAPS. Det finns två sätt att få värden från Freestyle Libre 3 (FSL3) till AAPS.
 
-![FL3](../images/d912c1d3-06d2-4b58-ad7c-025ca1980fae.jpeg)
+![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
 
 Metoderna nedan använder den separata appen Juggluco. Den använder Juggluco för att ta emot rådata från sensorn varje minut, som sedan skickas till xDrip eller AAPS. Nya sensorer kan startas antingen med appen Libre 3 eller direkt i Juggluco. Guiden nedan visar hur du startar en sensor med appen Juggluco. Om sensorn har startats med ett inloggat LibreView-konto kan du också växla mellan Juggluco och appen Libre 3 som mottagare.
 
