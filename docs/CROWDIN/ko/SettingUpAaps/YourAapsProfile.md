@@ -31,7 +31,7 @@
 
 아래는 **AAPS**의 _예시_ 프로파일 스크린샷입니다. 아래의 예시 프로파일에는 시간 지점이 매우 많습니다. **AAPS**를 처음 시작할 때는 프로파일이 이보다 훨씬 단순할 것입니다.
 
-![활성 프로파일 예시](../images/Profile-Example-Active.png)
+![활성 프로파일 예시](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## 혈당 목표
@@ -55,7 +55,7 @@
 
 **아래 그림**은 **AAPS** 프로파일에서 목표를 설정하는 예를 보여 줍니다.
 
-![목표](../images/Profile_Target.png)
+![목표](../images/v4/Profiles/Profile_Target.png)
 
 **혈당** 목표는 개인의 선호와 필요에 따라 설정합니다. 예를 들어 밤에 저혈당이 걱정된다면, 오후 9시부터 오전 7시까지 목표를 117 mg/dL (6.5 mmol/L)로 약간 높게 설정할 수 있습니다. 아침 식사 볼러스 전에 아침에 활성 인슐린(IOB)이 충분히 있도록 하려면, 오전 7시 - 8시에 더 낮은 목표인 81 mg/dL (4.5 mmol/L)을 설정할 수 있습니다.
 
@@ -89,7 +89,7 @@
 
 **아래 그림**은 **AAPS** 프로파일에서 기저 주입량을 설정하는 예를 보여 줍니다.
 
-![기저 주입량](../images/Profile_BasalRates.png)
+![기저 주입량](../images/v4/Profiles/Profile_BasalRates.png)
 
 기저 주입량은 시행착오를 거쳐 맞추며, 당뇨병 치료팀과 상의하여 해야 합니다.
 
@@ -147,7 +147,7 @@
 
 **ISF**가 너무 낮으면(따라서 더 공격적이며, 흔한 경우입니다) ‘과잉 보정’이 생길 수 있습니다. **AAPS**가 높은 **혈당**을 보정하는 데 실제보다 더 많은 인슐린이 필요하다고 계산하기 때문입니다. 그러면 아래 그림처럼 혈당이 ‘롤러코스터’처럼 오르내릴 수 있습니다(특히 굶을 때). 이런 경우에는 **AAPS**가 덜 공격적이 되도록 **ISF** 값을 높여야 합니다. 그러면 **AAPS**가 더 적은 보정량을 주입하여, 높은 **혈당**을 과잉 보정해 **저혈당**이 되는 것을 막습니다.
 
-![너무 낮은 ISF](../images/isf.jpg)
+![너무 낮은 ISF](../images/v4/Profiles/isf.jpg)
 
 반대로 **ISF**를 너무 높게 설정하면 보정이 부족해져 **혈당**이 목표보다 높게 남습니다. 특히 밤에 잘 보입니다.
 
@@ -155,7 +155,7 @@
 
 **AAPS** 프로파일에서 ISF 값을 설정하는 예는 **아래 그림**을 보십시오.
 
-![프로파일 ISF](../images/Profile_ISF.png)
+![프로파일 ISF](../images/v4/Profiles/Profile_ISF.png)
 
 낮 시간 ISF를 정하는 기본 출발점은 1,700(94) 규칙을 사용하여 하루 총 인슐린량(TDD)을 기준으로 하는 것입니다. 자세한 내용은 Gary Scheiner의 [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) 7장에 있습니다.
 
@@ -213,7 +213,7 @@
 
 **아래 그림**은 한 사용자의 **ICR**과 이를 **AAPS 프로파일**에서 설정하는 예를 보여 줍니다. 이 값을 입력할 때는 비율의 마지막 부분만 입력합니다. 그래서 인슐린 대 탄수화물 비율 1:3.5는 그냥 “3.5”로 입력합니다.
 
-![프로파일 ICR](../images/Profile_ICR.png)
+![프로파일 ICR](../images/v4/Profiles/Profile_ICR.png)
 
 식사가 소화되고 **IOB**가 0으로 돌아온 뒤에도 **혈당**이 식사 전보다 높게 남아 있다면, **ICR**이 너무 약할 가능성이 큽니다(_즉_ 숫자가 너무 크므로 조금씩 낮추어야 합니다). 반대로 **혈당**이 식사 전보다 낮다면 **ICR**이 너무 강한 것입니다(_즉_ 숫자가 너무 작으므로 조금씩 높여야 합니다).
 
@@ -292,7 +292,7 @@ IOB가 음수가 되는 이유와 해야 할 조치는 다음과 같습니다:
 
 프로파일 도우미는 두 병원의 어린이 데이터 세트를 제공하여 18세까지의 어린이에게 맞는 첫 프로파일을 찾도록 돕습니다.
 
-![어린이용 프로파일 도우미 1](../images/ProfileHelperKids1.png)
+![어린이용 프로파일 도우미 1](../images/v4/Profiles/ProfileHelperKids1.png)
 
 1. **프로파일 1** 탭에 있는지 확인하십시오.
 2. **프로파일 종류**에서 "기본 프로파일"이 선택되어 있는지 확인하십시오.
@@ -303,7 +303,7 @@ IOB가 음수가 되는 이유와 해야 할 조치는 다음과 같습니다:
 7. **비교** 탭을 여십시오. 조정된 두 프로파일의 비교가 표시됩니다(아래 스크린샷 참조).
 8. 이 제안 중 하나를 바탕으로 프로파일 조정을 시작하려면, 비교 화면 아래에 있는 **복사** 버튼을 사용하십시오.
 
-![어린이용 프로파일 도우미 2](../images/ProfileHelperKids2.png)
+![어린이용 프로파일 도우미 2](../images/v4/Profiles/ProfileHelperKids2.png)
 
 ### 프로파일 전환
 
@@ -312,7 +312,7 @@ IOB가 음수가 되는 이유와 해야 할 조치는 다음과 같습니다:
 (your-aaps-profile-clone-profile-switch)=
 ### 프로파일 전환을 새 프로파일로 복사하기
 
-![프로파일 전환](../images/TreatmentsView4.png)
+![프로파일 전환](../images/Maintenance/TreatmentsView4.png)
 
 [처치 이력](#aaps-screens-treatments)에는 지난 모든 **프로파일 전환**이 표시됩니다. **프로파일 전환** 탭으로 가면, 지난 **프로파일 전환**을 바탕으로 새 **프로파일**을 만들 수 있습니다. 이 경우 시간 이동과 퍼센트가 새 로컬 프로파일에 적용됩니다. **2**번 줄에 표시된 **복사** 버튼을 사용하십시오.
 
@@ -335,14 +335,14 @@ IOB가 음수가 되는 이유와 해야 할 조치는 다음과 같습니다:
 
 그러려면 Nightscout 편집기에서 여러 프로파일로 이루어진 **데이터베이스 레코드** 전체를 복사하는 것이 중요합니다(아래 스크린샷의 파란 화살표). 그러면 새 데이터베이스 레코드에는 현재 날짜가 붙습니다. 저장한 후, 바뀐/새 **프로파일**은 **AAPS**에서 일반적인 [프로파일 전환](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)으로 활성화할 수 있습니다.
 
-![데이터베이스 레코드 복사](../images/Nightscout_Profile_Editor.PNG)
+![데이터베이스 레코드 복사](../images/v4/Profiles/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### 두 프로파일 비교하기
 
 [프로파일 도우미](#aaps-screens-profile-helper)(메뉴 ☰ → **프로파일 도우미**)를 사용하여 서로 다른 두 프로파일 또는 프로파일 전환(이전에 [프로파일 전환](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)에서 사용한 프로파일의 퍼센트)을 비교할 수도 있습니다.
 
-![프로파일 도우미 1](../images/ProfileHelper1.png)
+![프로파일 도우미 1](../images/v4/Profiles/ProfileHelper1.png)
 
 1. **프로파일 1** 탭에 있는지 확인하십시오.
 2. **프로파일 종류**에서 "사용 가능한 프로파일"을 선택하여 저장된 모든 **프로파일** 중에서 고르십시오.
@@ -352,4 +352,4 @@ IOB가 음수가 되는 이유와 해야 할 조치는 다음과 같습니다:
 6. 비교 대상 **프로파일 전환**을 선택하십시오.
 7. **비교** 탭을 여십시오. 두 프로파일의 비교가 표시됩니다(아래 스크린샷 참조).
 
-![프로파일 도우미 2](../images/ProfileHelper2.png)
+![프로파일 도우미 2](../images/v4/Profiles/ProfileHelper2.png)
