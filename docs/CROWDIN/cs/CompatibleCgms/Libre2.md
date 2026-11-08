@@ -63,7 +63,7 @@ Technicky se aktuální hodnota glykémie posílá do xDrip každou minutu. Filt
 
 → Nabídka (☰) → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![Rozšířená nastavení xDrip pro Libre 2 a surové hodnoty](../images/xDrip_Libre3_Smooth.png)
+![Rozšířená nastavení xDrip pro Libre 2 a surové hodnoty](../images/libre3/xDrip_Libre3_Smooth.png)
 
 Pro smyčku je to povinné. Křivky vypadají hladce a výsledky smyčky jsou výborné. Surové hodnoty, na kterých jsou založeny výstrahy, trochu více kolísají, ale odpovídají hodnotám, které ukazuje i čtečka. Kromě toho lze v grafu xDrip zobrazit surové hodnoty, abyste mohli včas reagovat na rychlé změny. Zapněte prosím Less Common Settings \> Advanced Settings for Libre2 \> „show Raw values“ a „show Sensors Infos“. Surové hodnoty se pak navíc zobrazují jako malé bílé tečky a v systémové nabídce jsou k dispozici další informace o senzoru.
 
