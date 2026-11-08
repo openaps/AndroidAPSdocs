@@ -422,8 +422,9 @@ The new graph is added below the others — here a second additional graph with 
 
 Большинство пользователей считают достаточной следующую конфигурацию дополнительных графиков:
 
-* График 1 с Активным инсулином (IOB, АктИнс), Активными углеводами (COB, АктУг), Изменением чувствительности
-* Диаграмма 2 с отклонениями и влиянием ГК
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### Absolute insulin (ABS)
 

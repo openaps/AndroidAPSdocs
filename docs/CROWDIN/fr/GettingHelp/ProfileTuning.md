@@ -29,7 +29,7 @@ Ne vous précipitez pas, allez doucement !
 - **<u>DÉSACTIVEZ</u> toutes les [automatisations](../DailyLifeWithAaps/Automations.md)**
 - **<u>DÉSACTIVEZ</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)** pour qu'ils n'essaient pas d'adapter votre profil.
 - Ne faites aucune action manuelle (bolus manuel, cibles temporaires, etc.) pendant les tests : laissez le système utiliser seulement les paramètres du **Profil**.
-- Pour les [graphiques supplémentaires](#AapsScreens-section-g-additional-graphs) : sur le graphique 1, affichez Insuline Active (IA), Glucides Actifs (GA) (et Changement de sensibilité). Sur le graphique 2, affichez Déviations et Impact sur la glycémie (BGI). Quand vous demandez des conseils, ajoutez toujours ces graphiques à vos captures d'écran.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Quand vous demandez des conseils, ajoutez toujours ces graphiques à vos captures d'écran.
 - GA=0[*](#profiletuning-cob-zero)
 
 Autres éléments à éviter si possible, car ils influencent les données et peuvent mener à de mauvaises conclusions :

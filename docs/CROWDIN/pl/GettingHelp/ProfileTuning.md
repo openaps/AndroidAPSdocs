@@ -29,7 +29,7 @@ Nie spiesz się, działaj powoli!
 - **<u>WYŁĄCZ</u> wszystkie [automatyzacje](../DailyLifeWithAaps/Automations.md)**
 - **<u>WYŁĄCZ</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)**, aby nie próbowały dostosowywać Twojego profilu.
 - Podczas testów nie wykonuj ręcznych działań (ręczny bolus, cele tymczasowe itp.): pozwól systemowi używać tylko ustawień **Profilu**.
-- Dla [dodatkowych wykresów](#AapsScreens-section-g-additional-graphs): na wykresie 1 użyj Insulina na pokładzie (IOB), Węglowodany aktywne (COB) (oraz Zmiana wrażliwości). Na wykresie 2 użyj Odchylenia i Wpływ na glikemię. Gdy prosisz o radę, zawsze pokaż je na swoich zrzutach ekranu.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Gdy prosisz o radę, zawsze pokaż je na swoich zrzutach ekranu.
 - COB=0[*](#profiletuning-cob-zero)
 
 Inne czynniki, których najlepiej unikać, bo wpływają na dane i mogą prowadzić do błędnych wniosków:

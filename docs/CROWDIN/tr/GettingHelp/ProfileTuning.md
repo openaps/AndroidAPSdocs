@@ -29,7 +29,7 @@ Acele etmeyin, yavaş gidin!
 - **Tüm [otomasyonları](../DailyLifeWithAaps/Automations.md) <u>KAPATIN</u>**
 - **[DynISF](#Open-APS-features-DynamicISF), [OtoİDF](#Open-APS-features-auto-isf) ve [Otoduyarlılık](#Open-APS-features-autosens) özelliklerini <u>KAPATIN</u>**; böylece profilinizi uyarlamaya çalışmazlar.
 - Test sırasında elle kullanıcı işlemleri (elle bolus, geçici hedefler vb.) yapmayın: sistemin yalnızca **Profil** ayarlarını kullanmasına izin verin.
-- [Ek grafikler](#AapsScreens-section-g-additional-graphs) için: 1. grafikte Aktif İnsülin, Aktif Karbonhidrat (ve Duyarlılık değişikliği) kullanın. 2. grafikte Sapmalar ve Kan Şekeri Etkisi kullanın. Tavsiye isterken ekran görüntülerinize bunları her zaman ekleyin.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Tavsiye isterken ekran görüntülerinize bunları her zaman ekleyin.
 - AKRB=0[*](#profiletuning-cob-zero)
 
 Verileri etkiledikleri ve yanlış sonuçlara yol açabildikleri için ideal olarak kaçınılması gereken diğer durumlar:

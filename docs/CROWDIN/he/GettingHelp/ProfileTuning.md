@@ -29,7 +29,7 @@ Don't rush, go slow!
 - **Turn <u>OFF</u> all [automations](../DailyLifeWithAaps/Automations.md)**
 - **<u>כבו</u> את [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)** כדי שלא ינסו להתאים את הפרופיל שלכם.
 - אל תבצעו פעולות משתמש ידניות (בולוס ידני, יעדים זמניים וכו'…) במהלך הבדיקה: תנו למערכת להשתמש רק בהגדרות ה**פרופיל**.
-- עבור [הגרפים הנוספים](#AapsScreens-section-g-additional-graphs): בגרף 1 השתמשו באינסולין פעיל בגוף, בפחמימות פעילות (ובשינוי ברגישות). בגרף 2 השתמשו בסטיות ובהשפעת רמת הסוכר בדם. When asking for advice, always include those on your screenshots.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. When asking for advice, always include those on your screenshots.
 - COB=0[*](#profiletuning-cob-zero)
 
 דברים נוספים שעדיף להימנע מהם, כי הם משפיעים על הנתונים ועלולים להוביל למסקנות שגויות:

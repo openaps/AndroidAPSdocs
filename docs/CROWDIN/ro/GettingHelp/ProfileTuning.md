@@ -29,7 +29,7 @@ Nu vă grăbiți, mergeți încet!
 - **Turn <u>OFF</u> all [automations](../DailyLifeWithAaps/Automations.md)**
 - **Turn <u>OFF</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)** so that they will not try to adapt your profile.
 - Do not make manual user actions (manual bolus, temp targets etc…) while testing: let the system use the **Profile** settings only.
-- Pentru [graficele suplimentare](#AapsScreens-section-g-additional-graphs): pe graficul 1, folosiți Insulină activă, Carbohidrați la bord (și Modificarea sensibilității). Pe graficul 2, folosiți Deviații și Impactul asupra glicemiei. Când cereți sfaturi, includeți întotdeauna aceste grafice în capturile de ecran.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Când cereți sfaturi, includeți întotdeauna aceste grafice în capturile de ecran.
 - COB=0[*](#profiletuning-cob-zero)
 
 Other considerations that should ideally be avoided, as they influence the data and can lead to poor conclusions:
