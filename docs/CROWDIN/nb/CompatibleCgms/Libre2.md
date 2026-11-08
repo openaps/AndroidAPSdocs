@@ -63,7 +63,7 @@ Teknisk sett overføres den gjeldende blodsukkerverdien til xDrip hvert minutt. 
 
 → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip avanserte innstillinger for Libre 2 og råverdier](../images/xDrip_Libre3_Smooth.png)
+![xDrip avanserte innstillinger for Libre 2 og råverdier](../images/libre3/xDrip_Libre3_Smooth.png)
 
 Dette er obligatorisk for looping. Kurvene ser jevne ut, og loop-resultatene er gode. Råverdiene som alarmene bygger på, hopper litt mer, men tilsvarer verdiene som leseren også viser. I tillegg kan råverdiene vises i xDrip-grafen, slik at du kan reagere i tide på raske endringer. Slå på Less Common Settings \> Advanced Settings for Libre2 \> «show Raw values» og «show Sensors Infos». Da vises råverdiene i tillegg som små hvite prikker, og mer sensorinformasjon er tilgjengelig i systemmenyen.
 
