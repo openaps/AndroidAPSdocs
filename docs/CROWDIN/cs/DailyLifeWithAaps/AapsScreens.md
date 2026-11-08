@@ -39,7 +39,7 @@ Barva hodnoty glykémie ukazuje, jak se hodnota má k nastavenému [rozsahu](#Pr
 
 #### Stav smyčky
 
-![Stav smyčky](../images/Home2020_LoopStatus.png)
+![Stav smyčky](../images/main_loop_status.png)
 
 Vedle kruhu glykémie ukazuje ikona režim smyčky (na obrázku shora dolů):
 
@@ -166,7 +166,7 @@ Klepnutím na název profilu otevřete [obrazovku Profil](#aaps-screens-profile)
 
 Chcete-li **změnit procento profilu** (a jeho trvání), klepněte na název profilu a pak na kulaté tlačítko **▶** (Aktivovat) vpravo dole na obrazovce Profil. V **AAPS** 3.x se tato obrazovka otevírala dlouhým stiskem názvu profilu; v **AAPS** 4 dlouhý stisk nic nedělá. Postup krok za krokem: [Změna procenta profilu](#ProfileSwitch-change-percentage).
 
-![Profil s aktivním přepnutím profilu](../images/Home2020_ProfileSwitch.png)
+![Profil s aktivním přepnutím profilu](../images/main_profile_switch.png)
 
 1. Běžné zobrazení při aktivaci standardního profilu.
 2. Přepnutí profilu s procentem 90 % a zbývající dobou 9 minut – během dočasného přepnutí profilu je název profilu žlutý.
@@ -174,7 +174,7 @@ Chcete-li **změnit procento profilu** (a jeho trvání), klepněte na název pr
 
 #### Cíl
 
-![Zbývající doba dočasného cíle](../images/Home2020_TT.png)
+![Zbývající doba dočasného cíle](../images/main_temp_target.png)
 
 Pod názvem profilu je zobrazena aktuální cílová glykémie.
 
@@ -200,7 +200,7 @@ Pokud **AAPS** zjistí rezistenci nebo citlivost, cíl se změní oproti hodnot�
 
 #### IOB, COB, bazál a citlivost
 
-![IOB, COB, bazál a citlivost](../images/Home2020_TBR.png)
+![IOB, COB, bazál a citlivost](../images/main_iob_cob_basal_sensitivity.png)
 
 1. **Injekční stříkačka**: aktivní inzulín (IOB) – množství aktivního inzulínu ve vašem těle  
     Pokud by běžel jen váš standardní bazál a nezbýval žádný inzulín z předchozích bolusů, byla by hodnota aktivního inzulínu nulová. 
@@ -234,7 +234,7 @@ V případě potřeby může být notifikace vyžadovaných sacharidů odeslána
 
 ### Část C – Stavový řádek
 
-![Stavový řádek](../images/Home2020_StatusLights.png)
+![Stavový řádek](../images/main_status_row.png)
 
 Stavový řádek vizuálně upozorňuje na
 
@@ -320,7 +320,7 @@ Když se čas v telefonu skokově změnil, při přechodu na letní nebo zimní 
 
 Stiskem ikony **tužky** v pravém horním rohu grafu otevřete nastavení grafu:
 
-![Nastavení hlavního grafu](../images/Home2020_MainGraphSetting.png)
+![Nastavení hlavního grafu](../images/main_graph_settings.png)
 
 * **Výška grafu** mění výšku vykresleného grafu.
 * **AKT** přidá křivku aktivity inzulínu: plná žlutozelená čára <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (nezaměňujte s tečkovanou žlutou predikcí UAM)
@@ -408,7 +408,7 @@ Doplňkové grafy sledují hlavní graf: když posouváte nebo zvětšujete graf
 
 Chcete-li doplňkový graf nastavit, stiskněte ikonu **tužky** v jeho pravém horním rohu:
 
-![Nastavení doplňkových grafů](../images/Home2020_AdditionalGraphSetting.png)
+![Nastavení doplňkových grafů](../images/main_additional_graph_settings.png)
 
 Vyberte položky odpovídající datům, která chcete v tomto grafu vidět; tlačítko **Odebrat** graf smaže.
 
@@ -490,7 +490,7 @@ Je dobré zobrazit tuto čáru spolu se sloupci odchylek. Mají stejné měřít
 
 ### Část F – Panel nástrojů QuickLaunch
 
-![Panel nástrojů QuickLaunch](../images/Home2020_Buttons.png)
+![Panel nástrojů QuickLaunch](../images/main_quicklaunch_toolbar.png)
 
 Plovoucí panel nástrojů ve spodní části obrazovky obsahuje vaše akce **[Rychlého spuštění](../DailyLifeWithAaps/QuickLaunch.md)**. Malé **ozubené kolo** otevře nastavení QuickLaunch, kde vyberete, která tlačítka se zobrazí (ošetření, záznamy péče, akce CGM, obrazovky z panelu **Spravovat**, tlačítka [Rychlý bolus](../DailyLifeWithAaps/QuickWizards.md), [Scény](../DailyLifeWithAaps/Scenes.md) a další).
 
@@ -502,7 +502,7 @@ Když je pumpa **odpojena**, tlačítka ošetření zůstávají v panelu nástr
 
 #### Inzulín
 
-![Dialog Inzulín](../images/Home2020_ButtonInsulin.png)
+![Dialog Inzulín](../images/insulin_dialog.png)
 
 Pro podání určitého množství inzulínu bez použití [bolusové kalkulačky](#aaps-screens-bolus-wizard).
 
@@ -520,7 +520,7 @@ Dialog Inzulín můžete použít i tehdy, když je pumpa pozastavená nebo odpo
 
 #### Sacharidy
 
-![Dialog Sacharidy](../images/Home2020_ButtonCarbs.png)
+![Dialog Sacharidy](../images/carbs_dialog.png)
 
 Zadání sacharidů bez podání bolusu.
 
@@ -574,7 +574,7 @@ Klepnutím na bublinu otevřete panel **Oznámení**. U každé zprávy je uvede
 
 ## Bolusová kalkulačka
 
-![Bolusová kalkulačka](../images/Home2020_BolusWizard_v2.png)
+![Bolusová kalkulačka](../images/bolus_wizard.png)
 
 Když chcete podat bolus na jídlo, obvykle ho podáte odsud.
 
@@ -618,7 +618,7 @@ Pole **Čas sacharidů** slouží pro předstihový bolus: můžete systému ř�
 
 **Nastavit alarm** (připomínka jídla): když zadáte čas sacharidů v budoucnosti, objeví se přepínač „**Nastavit alarm**“, aby vám v zadaný čas připomněl, že máte sníst sacharidy, které jste zadali do **AAPS**:
 
-![Nastavení alarmu pro budoucí sacharidy](../images/Home2021_BolusWizard_EatingReminder.png)
+![Nastavení alarmu pro budoucí sacharidy](../images/bolus_wizard_set_alarm.png)
 
 Připomínka začne běžet, jakmile je bolus podán. Během běhu odpočítává na hlavní obrazovce lišta **Čas na jídlo** s tlačítky **Zastavit** a **+5 min**. **+5 min** posune konec čekání o pět minut později a lišta ukazuje celkovou dobu čekání. Když nastane čas, připomínka zazvoní vlastním zvukem, jemnou kuchyňskou minutkou. Kromě tlačítek **Ztišit alarm** (obrazovka zůstane otevřená) a **Ztišit a zavřít** nabízí obrazovka alarmu také **+5 min**, které spustí nové pětiminutové čekání. Po zazvonění lišta ukazuje *Čas vypršel* s tlačítky **+5 min** a **Zavřít**; **Ztišit a zavřít** odstraní i lištu. Lišta a alarm se zobrazují také v **AAPSClient** a na [hodinkách](#WearOsSmartwatch-wizard-carb-time). Připomínka nevytváří minutku v aplikaci Hodiny ve vašem telefonu. Pokud Android nedovolí **AAPS** nastavovat alarmy, kalkulačka vás požádá, abyste v nastavení Androidu pro **AAPS** povolili *Alarmy a připomenutí*. Zvonek se pro čas sacharidů v minulosti nenabízí.
 
