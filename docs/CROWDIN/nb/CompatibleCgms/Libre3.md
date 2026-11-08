@@ -2,7 +2,7 @@
 
 Freestyle Libre 3 (FSL3) krever et eget oppsett for å få BS-verdier inn i AAPS. Det finnes to mulige måter å få Freestyle Libre 3-verdier (FSL3) inn i AAPS på.
 
-![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
+![FL3](../images/libre3/libre3_juggluco_xdrip_data_flow.jpeg)
 
 Metodene nedenfor bruker den separate appen Juggluco. Den bruker Juggluco til å motta rådata med 1-minutts intervall fra sensoren, som så sendes videre til xDrip eller AAPS. Nye sensorer kan startes enten med Libre 3-appen eller direkte i Juggluco. Veiledningen nedenfor viser hvordan du starter en sensor med Juggluco-appen. Hvis sensoren ble startet mens du var logget inn med en LibreView-konto, kan du også bytte mellom Juggluco og Libre 3-appen som mottaker.
 
@@ -38,7 +38,7 @@ Blodsukkerverdiene mottas av xDrip-appen på telefonen.
 
   → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![xDrip avanserte innstillinger for Libre 2 og råverdier](../images/xDrip_Libre3_Smooth.png)
+  ![xDrip avanserte innstillinger for Libre 2 og råverdier](../images/libre3/xDrip_Libre3_Smooth.png)
 
 
 
