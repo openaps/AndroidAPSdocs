@@ -74,7 +74,7 @@ Trebuie să aveți cu dumneavoastră același echipament de urgență ca oricare
   * the current [apk](../SettingUpAaps/BuildingAaps.md) of AAPS and of any other apps you use (e.g. xDrip, Juggluco, BYODA).
   * your keystore file (from building the apk) and its password,
   * cele mai recente fișiere de export al setărilor din AAPS și din celelalte aplicații,
-  * parola principală **AAPS**: fără ea nu puteți importa fișierul de setări.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ If you forgot your master password, you can reset it to your pump's serial numbe
 
 1. Create an empty file named `PasswordReset` (no file extension) in the `extra` subfolder of your AAPS directory (usually `AAPS/extra`).
 2. Reporniți **AAPS**. Pompa trebuie să fie conectată: **AAPS** afișează „Se așteaptă pompa…” și trebuie să citească numărul de serie al pompei în 30 de secunde.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. **AAPS** shows "Password set!": your master password is now your **pump serial number**. Fișierul `PasswordReset` este șters automat.
+
 4. Deschideți **Setări** > **Protecție** > **Parola principală** și setați o parolă nouă.
 
 If the pump is not reached in time, nothing changes: check the pump connection and try again.
