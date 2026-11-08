@@ -172,7 +172,7 @@ Gehe mit dem Pfeil oben links zurück. Der Assistent zeigt jetzt „**Passwort f
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Bitte **VERLIERE DEIN MASTER-PASSWORT NICHT**. Notiere es Dir _z. B._ in Google Drive; das ist ein guter Ort, weil Google es für Dich sichert. Dein Smartphone oder Dein PC kann abstürzen und Du hast dann möglicherweise keine aktuelle Kopie zur Hand. Wenn Du Dein Master-Passwort vergessen hast, wird es schwierig, Deine Profilkonfiguration wiederherzustellen und den Fortschritt bei der Bearbeitung der **Ziele** (Objectives) später zu rekonstruieren. See [How to reset the master password?](#FAQ-reset-master-password)
+Bitte **VERLIERE DEIN MASTER-PASSWORT NICHT**. Notiere es Dir _z. B._ in Google Drive; das ist ein guter Ort, weil Google es für Dich sichert. Dein Smartphone oder Dein PC kann abstürzen und Du hast dann möglicherweise keine aktuelle Kopie zur Hand. Wenn Du Dein Master-Passwort vergessen hast, wird es schwierig, Deine Profilkonfiguration wiederherzustellen und den Fortschritt bei der Bearbeitung der **Ziele** (Objectives) später zu rekonstruieren. Siehe [Wie setze ich das Master-Passwort zurück?](#FAQ-reset-master-password)
 ```
 
 Wenn Du fertig bist, tippe auf „**WEITER**“, um zum nächsten Bildschirm zu gelangen.
