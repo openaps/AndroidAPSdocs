@@ -46,7 +46,7 @@ Notă: *Este posibil să trebuiască să așteptați următoarea valoare a glice
 
 **Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below. Fiecare sarcină își arată starea (**1**): textul portocaliu „**Încă incomplet**” devine „**Finalizat cu succes. Bravo!**” imediat ce **AAPS** a înregistrat acțiunea. Tap **Hint** (**2**) underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
 
-![Screenshot objective 2](../images/Objective2_V2_5.png)
+![Screenshot objective 2](../images/objectives/Objective2_V2_5.png)
 
 Sarcinile pentru îndeplinirea **Obiectivului 2** sunt:
 - Set your **Profile** to 90% for a duration of 10 min.
@@ -96,7 +96,7 @@ Timpul minim pentru îndeplinirea acestui obiectiv: **7 zile**. Acesta este un t
 
 Pentru a reduce numărul de modificări propuse ale ratei bazale în bucla deschisă, puteți folosi în continuare sfaturile descrise în [**Obiectivul 3**](#objectives-objective3). Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. Cu cât valoarea este mai mare, cu atât veți primi mai puține notificări de schimbare.
 
-![Cerere de schimbare minimală în bucla deschisă](../images/OpenLoop_MinimalRequestChange2.png)
+![Cerere de schimbare minimală în bucla deschisă](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ This means that when you are on **Objective 6**, if sensor glucose levels are dr
 
 - If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
 
-![Example negative IOB](../images/Objective6_negIOB.png)
+![Example negative IOB](../images/objectives/Objective6_negIOB.png)
 
 - Stabiliți intervalul țintă puțin mai mare decât de obicei ați intenționa, doar pentru a fi în siguranță și pentru a adăuga un tampon de siguranță.
 - Enable 'Low Glucose Suspend' mode by pressing the Loop icon on the main screen and choosing **Low Glucose Suspend** as running mode.
@@ -245,6 +245,6 @@ Press "**More**" under an objective to see its tasks again:
 
 If you wish to go back in the **Objectives** for whatever reason, open the finished **Objective** with "**More**" and tap "**Reset finished state**":
 
-![Mergeți înapoi la obiective](../images/Objective_ClearFinished.png)
+![Mergeți înapoi la obiective](../images/objectives/Objective_ClearFinished.png)
 
 In the same way, the **Objective** you are currently working on can be restarted with "**Reset started state**".
