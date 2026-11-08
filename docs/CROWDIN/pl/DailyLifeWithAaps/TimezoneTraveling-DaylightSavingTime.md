@@ -33,7 +33,7 @@ Aby tego uniknąć, masz dwie możliwości:
    * Wybierz swój **Profil** i dotknij **▶ Aktywuj**
    * Ustaw „**Zmiana czasu**” zgodnie z miejscem docelowym i dotknij **Aktywuj**.
    
-   ![Zmiana profilu z przesunięciem czasu](../images/ProfileSwitchTimeShift2.png)
+   ![Zmiana profilu z przesunięciem czasu](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * np. Wiedeń -> Nowy Jork: **Zmiana profilu** +6 godzin
    * np. Wiedeń -> Sydney: **Zmiana profilu** -8 godzin
