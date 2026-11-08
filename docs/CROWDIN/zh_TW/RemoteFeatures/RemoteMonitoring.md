@@ -1,6 +1,6 @@
 # 遠端監控
 
-![監控兒童](../images/KidsMonitoring.png)
+![監控兒童](../images/remote_control_and_following/KidsMonitoring.png)
 
 __AAPS__ 提供多項功能，可遠端監測第 1 型糖尿病兒童的狀況，也能傳送遠端指令給__AAPS__。同樣地，__AAPSClient__ 也可用於遠端監控，追蹤你伴侶或朋友的 __AAPS__。
 
