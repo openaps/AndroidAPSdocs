@@ -21,7 +21,7 @@ Wenn Du Deinen Keystore noch hast, brauchst Du diese Seite nicht: Verwende ihn w
 
 - Beim Deinstallieren von **AAPS** werden alle Einstellungen, Deine [Ziele](../SettingUpAaps/CompletingTheObjectives.md) und die aktuelle Pumpenverbindung gelöscht. Du bekommst sie zurück, indem Du Deine **Einstellungsdatei** importierst. Stelle also sicher, dass Du eine aktuelle hast.
 - Die Einstellungsdatei enthält nicht den Verlauf Deiner Behandlungen und Glukosewerte. Wenn Du zu [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md) hochlädst, kannst Du ihn nach der Neuinstallation wieder laden (Schritt 8).
-- Du brauchst Dein [**Master-Passwort**](#Preferences-master-password): Die Einstellungsdatei ist damit verschlüsselt.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Nutzer von Omnipod und Medtrum:** Lies zuerst [Schlauchlose Pumpen](#ExportImportSettings-tubeless-pumps). Deine Einstellungsdatei muss während des Pods bzw. Patches exportiert worden sein, den Du gerade trägst.
 - [Richte bei Bedarf den Empfänger Deiner CGM- bzw. BZ-Quelle ein](../Getting-Started/CompatiblesCgms.md), bevor Du anfängst.
 
