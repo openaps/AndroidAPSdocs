@@ -59,7 +59,7 @@ Most of the frustrations of standalone **AAPS** watches come from interacting wi
 
 Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor Bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below.
 
-![image](../images/watch_standalone_aaps_and_xdrip.png)
+![image](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
@@ -88,7 +88,7 @@ Recent **Wear OS** changes progressively break the custom **AAPS** watchfaces (t
 
 After [installing **AAPS** onto your watch](../WearOS/WearOsSmartwatch.md), you will automatically be able to select your preferred watchface from these **AAPS**-dedicated watchfaces. On most watches, you simply long-press on the home screen until the screen shrinks and swipe right to select an alternative screen:
 
-![image](../images/watchfaces_aaps_selection.png)
+![image](../images/watches/watchfaces_aaps_selection.png)
 
 These are the basic screens embedded in **AAPS**, there are [more watchfaces](#WearOS_changing-to-AAPS-watchface) and you can also use [complications](#Watchfaces-complications).
 
@@ -122,7 +122,7 @@ There are some watch faces for Garmin that integrate with [AAPS](https://apps.ga
 
 ![Configuration > Communication: the Garmin card](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with **AAPS**. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to **AAPS**. It is available in the ConnectIQ store; enable the **Garmin** plugin in **Configuration → Communication**. ![AAPS Glucose Watch watchface with numbered fields](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with **AAPS**. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to **AAPS**. It is available in the ConnectIQ store; enable the **Garmin** plugin in **Configuration → Communication**. ![AAPS Glucose Watch watchface with numbered fields](../images/watches/Garmin_WF-annotated.png)
 
 1. Highest and lowest glucose values on the graph
 2. Glucose change per minute
@@ -155,7 +155,7 @@ Here below some of the follow-only watch options popular with **AAPS** users:
 
 **WatchDrip+** is a community-developed companion app that displays glucose and loop data on various smartwatch models, mostly Xiaomi (_e.g._ Mi Band) and Amazfit brands:
 
-![image](../images/watch_watchdrip_plus.png)
+![image](../images/watches/watch_watchdrip_plus.png)
 
 Since version 0.5, **WatchDrip+** reads its data directly from **AAPS**, without xDrip+ as a relay. On the **AAPS** phone:
 
@@ -170,9 +170,9 @@ You can read more about them, including how to set them up, on the [WatchDrip+ w
 
 ### Pebble watch
 
-![image](../images/watch_pebble.png)
+![image](../images/watches/watch_pebble.png)
 
-![image](../images/watch_pebble_watchface.png)
+![image](../images/watches/watch_pebble_watchface.png)
 
 
 Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 to 2016, and may still be available second-hand. Fitbit took over Pebble’s assets. Pebble users can use the Urchin watchface to view Nightscout data. Displayed data options include IOB, currently active temp basal rate and predictions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
