@@ -89,7 +89,7 @@ Quand vous entendez le bip, appuyez sur **Démarrer l'appairage**.
 - Vous devez terminer l'activation du patch dans les 60 minutes après son démarrage. Si vous ne pouvez pas, retirez le patch.
 ```
 
-![Étape d'appairage du Patch](../images/EOPatch/Bild6.png) ![Première demande d'appairage Bluetooth](../images/EOPatch/Bild7.png) ![Deuxième demande d'appairage Bluetooth avec la clé d'accès](../images/EOPatch/Bild8.png)
+![Étape d'appairage du Patch](../images/EOPatch/eopatch_pairing.png) ![Première demande d'appairage Bluetooth](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Deuxième demande d'appairage Bluetooth avec la clé d'accès](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@ Retirez le ruban adhésif du patch, puis appuyez sur **Suivant**.
 
 Si une aiguille dépasse, ou si le patch est mouillé, sale ou si son ruban adhésif est plié, appuyez plutôt sur **Supprimer** et utilisez un nouveau patch.
 
-![Étape Préparez-vous à coller le Patch](../images/EOPatch/Bild9.png)
+![Étape Préparez-vous à coller le Patch](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Localisation du site
 
@@ -123,7 +123,7 @@ Vérifiez le site de perfusion, puis appuyez sur **Démarrer la vérification de
 - Si le patch ne colle pas complètement, de l'air peut passer entre le patch et votre peau. Cela affaiblit l'adhésif et la résistance à l'eau du patch.
 ```
 
-![Étape Coller le Patch](../images/EOPatch/Bild10.png)
+![Étape Coller le Patch](../images/EOPatch/eopatch_attaching.png)
 
 ### Contrôle de sécurité
 
@@ -133,7 +133,7 @@ Le contrôle de sécurité dure environ 30 secondes. Quand il est terminé, le p
 Pour une utilisation sûre, ne tournez pas le levier de l'aiguille avant la fin du contrôle de sécurité.
 ```
 
-![Étape Coller le Patch avec le bouton Démarrer la vérification de sécurité](../images/EOPatch/Bild11.png) ![Contrôle de sécurité en cours](../images/EOPatch/Bild12.png)
+![Étape Coller le Patch avec le bouton Démarrer la vérification de sécurité](../images/EOPatch/eopatch_start_safety_check.png) ![Contrôle de sécurité en cours](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@ Ensuite, l'assistant passe directement à l'activation d'un nouveau patch (voir 
 
 Quand aucun patch n'est actif, **AAPS** affiche la pompe comme suspendue et enregistre un débit basal temporaire de 0 U/h ; ainsi, aucune insuline basale n'est comptée dans l'IA jusqu'à l'activation du patch suivant.
 
-![L'écran de la pompe EOPatch2 avec le bouton DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Page Retirer le Patch](../images/EOPatch/Bild14.png) ![Fenêtre de confirmation Retirer le Patch](../images/EOPatch/Bild15.png) ![La suppression du Patch est terminée](../images/EOPatch/Bild16.png)
+![L'écran de la pompe EOPatch2 avec le bouton DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![Page Retirer le Patch](../images/EOPatch/eopatch_discard_patch.png) ![Fenêtre de confirmation Retirer le Patch](../images/EOPatch/eopatch_discard_confirm.png) ![La suppression du Patch est terminée](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@ Suspendre l'injection d'insuline annule aussi tout bolus étendu et tout débit 
 
 L'injection d'insuline est suspendue pendant la durée choisie.
 
-![L'écran de la pompe EOPatch2 avec le bouton SUSPEND](../images/EOPatch/Bild17.png) ![Fenêtre de confirmation de la suspension](../images/EOPatch/Bild18.png) ![Fenêtre Durée de suspension Basal](../images/EOPatch/Bild19.png)
+![L'écran de la pompe EOPatch2 avec le bouton SUSPEND](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Fenêtre de confirmation de la suspension](../images/EOPatch/eopatch_suspend_confirm.png) ![Fenêtre Durée de suspension Basal](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@ Les captures d'écran ci-dessus viennent d'une version plus ancienne d'**AAPS**.
 1. Ouvrez l'écran de la pompe (**Gestion** → **Pompe**) et appuyez sur **Reprendre la pompe**.
 1. Dans la fenêtre **Reprendre l'injection d'insuline**, appuyez sur **Confirmer**.
 
-![L'écran de la pompe EOPatch2 avec le bouton RESUME](../images/EOPatch/Bild20.png) ![Fenêtre Reprendre l'injection d'insuline](../images/EOPatch/Bild21.png)
+![L'écran de la pompe EOPatch2 avec le bouton RESUME](../images/EOPatch/eopatch_pump_screen_resume.png) ![Fenêtre Reprendre l'injection d'insuline](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@ Les alarmes concernent des situations urgentes, de priorité maximale, et demand
 
 Quand vous appuyez sur **Confirmer** dans la notification, **AAPS** traite l'alarme. Pour la plupart des alarmes, cela désactive le patch. Pour une alarme **Température inadaptée**, le bouton est **Réessayer**.
 
-![Alarme EOPatch2](../images/EOPatch/Bild22.png) ![Alarme EOPatch2 après la désactivation du patch](../images/EOPatch/Bild23.png)
+![Alarme EOPatch2](../images/EOPatch/eopatch_alarm.png) ![Alarme EOPatch2 après la désactivation du patch](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@ Les différentes alarmes sont expliquées ci-dessous.
 
 Les avertissements concernent des situations de priorité moyenne ou basse. Un avertissement s'affiche sous forme de notification sur l'écran **Vue d'ensemble**.
 
-![Avertissement EOPatch2 affiché sur l'écran Vue d'ensemble](../images/EOPatch/Bild24.png)
+![Avertissement EOPatch2 affiché sur l'écran Vue d'ensemble](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note
