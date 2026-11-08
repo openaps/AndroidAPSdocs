@@ -114,7 +114,7 @@ Na końcu każdego wiersza małe ikony pokazują, skąd pochodzą dane lub doką
 (screens-bolus-carbs)=
 ### Węglowodany i bolus
 
-![Węglowodany i bolus](../images/TreatmentsView1.png)
+![Węglowodany i bolus](../images/Maintenance/TreatmentsView1.png)
 
 Na tej karcie widzisz dziennik bolusów i węglowodanów. Przy każdym bolusie (wiersz **1**) obok ilości insuliny widać pozostałą związaną z nim IOB. Bolus może pochodzić z:
 * Posiłku (wpisany ręcznie przyciskami Insulina, Szybki kalkulator lub Kalkulator bolusa)
@@ -141,7 +141,7 @@ Historii leczenia możesz użyć, aby poprawić błędne wpisy węglowodanów (_
 
 ### Baza tymczasowa
 
-![Baza tymczasowa](../images/TreatmentsView2.png)
+![Baza tymczasowa](../images/Maintenance/TreatmentsView2.png)
 
 Tutaj widać **bazy tymczasowe** ustawione przez pętlę. Gdy wpis nadal wpływa na IOB, informacja o tym jest pokazana obok dawki (wiersz **1**). Może to być:
 * Dodatnia IOB, jeśli baza tymczasowa była wyższa niż ustawiona w profilu
@@ -153,13 +153,13 @@ Czerwona litera S po lewej stronie wiersza oznacza „Wstrzymanie”: pojawia si
 
 ### Cel tymczasowy (TT)
 
-![Cel tymczasowy (TT)](../images/TreatmentsView3.png)
+![Cel tymczasowy (TT)](../images/Maintenance/TreatmentsView3.png)
 
 Tutaj widać historię celów tymczasowych.
 
 ### Zmiana profilu
 
-![Zmiana profilu](../images/TreatmentsView4.png)
+![Zmiana profilu](../images/Maintenance/TreatmentsView4.png)
 
 Tutaj widać historię zmian profilu. Przy każdej zmianie profilu możesz zobaczyć kilka wpisów: wiersz **1**, zapisany zarówno w NS, jak i w historii pompy, odpowiada faktycznej zmianie. Wiersz **2**, zapisany w Nightscout, ale nie w historii pompy, odpowiada żądaniu zmiany profilu wysłanemu przez użytkownika.
 
@@ -169,14 +169,14 @@ Przyciskiem **Sklonuj** w wierszu **2** możesz utworzyć kopię **Zmiany profil
 
 ### Portal opieki
 
-![Portal opieki](../images/TreatmentsView5.png)
+![Portal opieki](../images/Maintenance/TreatmentsView5.png)
 
 Ta karta pokazuje wszystkie notatki i wpisy portalu opieki zapisane w Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Tryb pracy
 
-![Tryb pracy](../images/TreatmentsView6.png)
+![Tryb pracy](../images/Maintenance/TreatmentsView6.png)
 
 Ta karta pokazuje historię zmian [stanu pętli](#AapsScreens-loop-status): otwarta, zamknięta, LGS, wstrzymanie, rozłączenie.
 
