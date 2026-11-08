@@ -281,7 +281,7 @@
 
 Η παρακάτω διαδικασία δείχνει πώς να κάνετε αναστολή και συνέχιση της χορήγησης ινσουλίνης.
 
-*ΣΗΜΕΙΩΣΗ - αν δεν βλέπετε κουμπί **Αναστολή***, είναι κρυφό από προεπιλογή. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*ΣΗΜΕΙΩΣΗ - αν δεν βλέπετε κουμπί **Αναστολή***, είναι κρυφό από προεπιλογή. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Αναστολή της χορήγησης ινσουλίνης
 
@@ -591,7 +591,7 @@
   Το παραπάνω στιγμιότυπο οθόνης είναι από παλαιότερη έκδοση του **AAPS**. Στο **AAPS** 4 αυτό είναι ένα κουμπί κειμένου με το όνομα **Ρύθμιση ώρας** στην οθόνη αντλίας Omnipod.
   ```
 
-- **Αναστολή:** Κάνει αναστολή της χορήγησης ινσουλίνης στο ενεργό Pod. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
+- **Αναστολή:** Κάνει αναστολή της χορήγησης ινσουλίνης στο ενεργό Pod. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@
 
 Προχωρημένες ρυθμίσεις που βοηθούν στον εντοπισμό σφαλμάτων.
 
-- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
+- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
 - **Εμφάνιση κουμπιού καταγραφής Pulse στο μενού Διαχείριση Pod:** Αυτή η ρύθμιση υπάρχει ακόμα στη λίστα, αλλά η τρέχουσα έκδοση της οθόνης αντλίας δεν έχει κουμπί **Αρχείο Καταγραφής Pulse**.
 
 - **Εμφάνιση του κουμπιού Στατιστικά RileyLink στο μενού Διαχείριση Pod:** Κρύβει ή εμφανίζει το κουμπί **Στατιστικά RileyLink** στην οθόνη αντλίας Omnipod.
