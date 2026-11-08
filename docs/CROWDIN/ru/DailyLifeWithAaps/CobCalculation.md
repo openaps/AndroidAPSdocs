@@ -53,7 +53,7 @@ The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the g
 
 В обычных расчетах __AAPS__ определяет усвоение углеводов по отклонениям **ГК**. В случае, если пользователь ввел углеводы, а **AAPS** не может рассчитать их предполагаемое усвоение по отклонениям **ГК**, то алгоритмом применяется метод [min_5m_carbimpact](#Preferences-min_5m_carbimpact) (так называемый "запасной вариант"). Поскольку этот метод вычисляет только минимальное усвоение углеводов, без учета отклонений **ГК**, то в этом случае возможны некорректные значения активных углеводов COB.
 
-![Подсказка о неверном значении COB](../images/Calculator_SlowCarbAbsorption.png)
+![Подсказка о неверном значении COB](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 In the screenshot above, 66% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. Это означает, что на самом деле у пользователя может быть меньше активных углеводов **COB**, чем рассчитывает алгоритм.
 
