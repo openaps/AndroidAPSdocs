@@ -89,7 +89,7 @@ Når du hører pipet, trykker du på **Start sammenkobling**.
 - Du må fullføre aktiveringen av patchen innen 60 minutter etter at den startet opp. Klarer du ikke det, må du forkaste patchen.
 ```
 
-![Steget Patch-sammenkobling](../images/EOPatch/Bild6.png) ![Første Bluetooth-forespørsel om sammenkobling](../images/EOPatch/Bild7.png) ![Andre Bluetooth-forespørsel om sammenkobling, med koden](../images/EOPatch/Bild8.png)
+![Steget Patch-sammenkobling](../images/EOPatch/eopatch_pairing.png) ![Første Bluetooth-forespørsel om sammenkobling](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Andre Bluetooth-forespørsel om sammenkobling, med koden](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@ Fjern den selvklebende tapen fra patchen, og trykk så på **Neste**.
 
 Hvis en nål stikker ut, eller hvis patchen er våt eller skitten, eller den selvklebende tapen er brettet, trykker du på **Forkast** i stedet og bruker en ny patch.
 
-![Steget Forbered på å plassere plasteret](../images/EOPatch/Bild9.png)
+![Steget Forbered på å plassere plasteret](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Stedplassering
 
@@ -123,7 +123,7 @@ Kontroller infusjonsstedet, og trykk så på **Start sikkerhetssjekk**.
 - Hvis patchen ikke sitter helt fast, kan det komme luft mellom patchen og huden. Det svekker både limet og vannmotstanden til patchen.
 ```
 
-![Steget Fester plasteret](../images/EOPatch/Bild10.png)
+![Steget Fester plasteret](../images/EOPatch/eopatch_attaching.png)
 
 ### Sikkerhetssjekk
 
@@ -133,7 +133,7 @@ Sikkerhetssjekken tar omtrent 30 sekunder. Når den er ferdig, piper patchen én
 For sikker bruk må du ikke dreie nålespaken før sikkerhetssjekken er fullført.
 ```
 
-![Steget Fester plasteret med knappen Start sikkerhetssjekk](../images/EOPatch/Bild11.png) ![Sikkerhetssjekk pågår](../images/EOPatch/Bild12.png)
+![Steget Fester plasteret med knappen Start sikkerhetssjekk](../images/EOPatch/eopatch_start_safety_check.png) ![Sikkerhetssjekk pågår](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@ Etter det går veiviseren rett videre til aktivering av en ny patch (se ovenfor)
 
 Mens ingen patch er aktiv, viser **AAPS** pumpen som pauset og registrerer en midlertidig basal på 0 E/t, så ingen basalinsulin telles med i IOB før neste patch er aktivert.
 
-![EOPatch2-pumpeskjermen med knappen DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Siden Forkast patch](../images/EOPatch/Bild14.png) ![Bekreftelsesdialogen for Forkast patch](../images/EOPatch/Bild15.png) ![Depotplasteret er forkastet](../images/EOPatch/Bild16.png)
+![EOPatch2-pumpeskjermen med knappen DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![Siden Forkast patch](../images/EOPatch/eopatch_discard_patch.png) ![Bekreftelsesdialogen for Forkast patch](../images/EOPatch/eopatch_discard_confirm.png) ![Depotplasteret er forkastet](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@ Når du pauser insulinleveringen, avbrytes også forlenget bolus og midlertidig 
 
 Insulinleveringen er pauset i den tiden du valgte.
 
-![EOPatch2-pumpeskjermen med knappen SUSPEND](../images/EOPatch/Bild17.png) ![Bekreftelsesdialogen for pause](../images/EOPatch/Bild18.png) ![Dialogen Basal pausetid](../images/EOPatch/Bild19.png)
+![EOPatch2-pumpeskjermen med knappen SUSPEND](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Bekreftelsesdialogen for pause](../images/EOPatch/eopatch_suspend_confirm.png) ![Dialogen Basal pausetid](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@ Skjermbildene ovenfor er fra en eldre **AAPS**-versjon. I **AAPS** 4 åpner du p
 1. Åpne pumpeskjermen (**Administrer** → **Pumpe**) og trykk på **Gjenoppta pumpe**.
 1. I dialogen **Gjenoppta insulinlevering** trykker du på **Bekreft**.
 
-![EOPatch2-pumpeskjermen med knappen RESUME](../images/EOPatch/Bild20.png) ![Dialogen Gjenoppta insulinlevering](../images/EOPatch/Bild21.png)
+![EOPatch2-pumpeskjermen med knappen RESUME](../images/EOPatch/eopatch_pump_screen_resume.png) ![Dialogen Gjenoppta insulinlevering](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@ Alarmer gjelder akutte situasjoner med høyeste prioritet og krever at du handle
 
 Når du trykker på **Bekreft** på varselet, håndterer **AAPS** alarmen. For de fleste alarmer betyr det at patchen deaktiveres. For alarmen **Upassende temperatur** er knappen **Prøv igjen**.
 
-![EOPatch2-alarm](../images/EOPatch/Bild22.png) ![EOPatch2-alarm etter at patchen ble deaktivert](../images/EOPatch/Bild23.png)
+![EOPatch2-alarm](../images/EOPatch/eopatch_alarm.png) ![EOPatch2-alarm etter at patchen ble deaktivert](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@ De ulike alarmene forklares nedenfor.
 
 Advarsler gjelder situasjoner med middels eller lav prioritet. En advarsel vises som et varsel på **Oversikt**-skjermen.
 
-![EOPatch2-advarsel vist på Oversikt-skjermen](../images/EOPatch/Bild24.png)
+![EOPatch2-advarsel vist på Oversikt-skjermen](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note
