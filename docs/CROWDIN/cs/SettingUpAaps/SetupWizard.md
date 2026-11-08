@@ -172,7 +172,7 @@ Vraťte se zpět šipkou v levém horním rohu. Průvodce teď zobrazí „**Hes
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**NEZTRAŤTE SVÉ HLAVNÍ HESLO**. Poznamenejte si ho _např._ na Disk Google. To je dobré místo, protože Google ho za vás zálohuje. Váš telefon nebo poočítač se může porouchat a vy byste mohli skončit bez vašeho aktuálního hesla. Pokud byste ztratili Hlavní heslo do aplikace (Master password), bylo by v budoucnu obtížné obnovit nastavení profilu a vaše splněné **Cíle**.
+**NEZTRAŤTE SVÉ HLAVNÍ HESLO**. Poznamenejte si ho _např._ na Disk Google. To je dobré místo, protože Google ho za vás zálohuje. Váš telefon nebo poočítač se může porouchat a vy byste mohli skončit bez vašeho aktuálního hesla. Pokud byste ztratili Hlavní heslo do aplikace (Master password), bylo by v budoucnu obtížné obnovit nastavení profilu a vaše splněné **Cíle**. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 Až budete hotovi, stiskněte „**DALŠÍ**“ a přejděte na další obrazovku.
