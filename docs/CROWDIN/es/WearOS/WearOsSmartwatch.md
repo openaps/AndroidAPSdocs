@@ -318,7 +318,7 @@ Estos espacios solo funcionan en relojes con **Wear OS 5 o más antiguo**, donde
 
 ## Leyenda de esferas AAPSv2
 
-![Leyenda de la esfera AAPSv2](../images/Watchface_Legend.png)
+![Leyenda de la esfera AAPSv2](../images/wearos/Watchface_Legend.png)
 
 A - tiempo desde la última ejecución del lazo
 
