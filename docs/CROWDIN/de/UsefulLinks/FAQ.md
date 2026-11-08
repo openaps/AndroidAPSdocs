@@ -74,7 +74,7 @@ Zunächst musst du natürlich dieselbe Notfall-Ausrüstung mitnehmen wie jeder a
   * die aktuelle [APK](../SettingUpAaps/BuildingAaps.md) von AAPS und von allen anderen Apps, die Du nutzt (z. B. xDrip, Juggluco, BYODA),
   * Deine Keystore-Datei (vom Erstellen der APK) und ihr Passwort,
   * Deine neuesten Einstellungs-Exportdateien von AAPS und Deinen anderen Apps,
-  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
+  * Dein **AAPS**-Master-Passwort: Ohne es kannst Du die Einstellungsdatei nicht importieren. Wenn Du es vergessen hast, siehe [Wie setze ich das Master-Passwort zurück?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -294,7 +294,7 @@ Wenn Du Dein Master-Passwort vergessen hast, kannst Du es auf die Seriennummer D
 1. Lege eine leere Datei namens `PasswordReset` (ohne Dateiendung) im Unterordner `extra` Deines AAPS-Verzeichnisses an (meist `AAPS/extra`).
 2. Starte **AAPS** neu. Deine Pumpe muss verbunden sein: **AAPS** zeigt „Warte auf Pumpe…“ und muss die Seriennummer der Pumpe innerhalb von 30 Sekunden auslesen.
   
-  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+  Für den Neustart beende **AAPS** über **Menü** (☰) > **Beenden** und öffne es dann wieder. **AAPS** sucht nur dann nach der Datei, wenn es komplett neu startet. Den Bildschirm zu schließen oder die App wegzuwischen reicht nicht, denn **AAPS** läuft im Hintergrund weiter. Erscheint „Warte auf Pumpe…“ nicht, tippe in der Android-**App-Info** von **AAPS** auf **Stopp erzwingen** oder starte Dein Smartphone neu. Du kannst auch Deine aktuelle **AAPS**-APK erneut über die installierte App installieren: Deine Einstellungen bleiben dabei erhalten.
 
 3. **AAPS** zeigt „Passwort festgelegt!“: Dein Master-Passwort ist jetzt die **Seriennummer Deiner Pumpe**. Die Datei `PasswordReset` wird automatisch gelöscht.
 
@@ -375,7 +375,7 @@ Versuche zuerst den Knopf **RileyLink zurücksetzen** im Pumpen-Bildschirm (sieh
 
 1. Schalte den Link aus.
 2. Beende **AAPS** (**Menü** (☰) > **Beenden**).
-3. Tippe lange auf das **AAPS**-Symbol, öffne die Android-**App-Info**, tippe auf **Beenden erzwingen** und dann auf **Speicher** > **Cache leeren** (NICHT den Speicher bzw. die Daten löschen!).
+3. Tippe lange auf das **AAPS**-Symbol, öffne die Android-**App-Info**, tippe auf **Stopp erzwingen** und dann auf **Speicher** > **Cache leeren** (NICHT den Speicher bzw. die Daten löschen!).
 4. Selten muss das Smartphone an dieser Stelle neu gestartet werden. Du kannst es ohne Neustart versuchen.
 5. Schalte den Link ein.
 6. Starte **AAPS**.
