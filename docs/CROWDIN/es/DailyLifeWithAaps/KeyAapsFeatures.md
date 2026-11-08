@@ -8,7 +8,7 @@ El estado del lazo se muestra en la pantalla principal con uno de los iconos de 
 
 Mira [Pantallas de AAPS > La pantalla principal > Estado del lazo](#AapsScreens-loop-status) para saber cómo elegir el modo del lazo y qué significan los otros iconos de la imagen (4 a 6).
 
-![Estado del lazo](../images/Home2020_LoopStatus.png)
+![Estado del lazo](../images/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ Si esta opción está activada, la detección de sensibilidad (Autosens) puede s
 
 Si el objetivo cambia por la detección de sensibilidad, se muestra con fondo verde en tu pantalla principal.
 
-![Objetivo modificado por Autosens](../images/Home2020_DynamicTargetAdjustment.png)
+![Objetivo modificado por Autosens](../images/main_target_modified_by_autosens.png)
 
 Este ajuste está disponible cuando «Usar sensibilidad dinámica» o «Usar Autosens» está activado.
 
