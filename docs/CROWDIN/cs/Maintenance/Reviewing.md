@@ -114,7 +114,7 @@ Na konci každého řádku malé ikony ukazují, odkud data pocházejí nebo kam
 (screens-bolus-carbs)=
 ### Sacharidy a bolusy
 
-![Sacharidy a bolusy](../images/TreatmentsView1.png)
+![Sacharidy a bolusy](../images/Maintenance/TreatmentsView1.png)
 
 Na této kartě můžete prohlížet záznamy bolusů a sacharidů. U každého bolusu (řádek **1**) je vedle množství inzulínu zobrazen zbývající IOB, který k němu patří. Původ bolusu může být:
 * Jídlo (zadané ručně tlačítky Inzulín, Rychlý bolus nebo Bolusová kalkulačka)
@@ -141,7 +141,7 @@ Historii ošetření můžete použít k opravě chybně zadaných sacharidů (_
 
 ### Dočasný bazál
 
-![Dočasný bazál](../images/TreatmentsView2.png)
+![Dočasný bazál](../images/Maintenance/TreatmentsView2.png)
 
 Zde se zobrazují **dočasné bazály** nastavené smyčkou. Pokud má záznam stále vliv na IOB, zobrazí se tato informace vedle dávky (řádek **1**). Může to být:
 * Kladný IOB, pokud byl dočasný bazál vyšší než bazál nastavený v profilu
@@ -153,13 +153,13 @@ Smazání záznamů ovlivní jen vaše reporty v Nightscoutu a pravděpodobně z
 
 ### Dočasný cíl
 
-![Dočasný cíl](../images/TreatmentsView3.png)
+![Dočasný cíl](../images/Maintenance/TreatmentsView3.png)
 
 Zde je vidět historie dočasných cílů.
 
 ### Přepnutí profilu
 
-![Přepnutí profilu](../images/TreatmentsView4.png)
+![Přepnutí profilu](../images/Maintenance/TreatmentsView4.png)
 
 Zde je vidět historie přepnutí profilu. Při každém přepnutí profilu můžete vidět více záznamů: řádek **1**, uložený v NS i v historii pumpy, odpovídá skutečnému přepnutí. Řádek **2**, uložený v Nightscoutu, ale ne v historii pumpy, odpovídá žádosti uživatele o přepnutí profilu.
 
@@ -169,14 +169,14 @@ Tlačítkem **Klonovat** na řádku **2** můžete vytvořit kopii **Přepnutí 
 
 ### Péče
 
-![Péče](../images/TreatmentsView5.png)
+![Péče](../images/Maintenance/TreatmentsView5.png)
 
 Tato karta ukazuje všechny poznámky a záznamy péče zaznamenané v Nightscoutu.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Režim smyčky
 
-![Režim smyčky](../images/TreatmentsView6.png)
+![Režim smyčky](../images/Maintenance/TreatmentsView6.png)
 
 Tato karta ukazuje historii změn [stavu smyčky](#AapsScreens-loop-status): otevřená, uzavřená, LGS, pozastavená, odpojená.
 
