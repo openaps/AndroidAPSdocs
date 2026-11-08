@@ -474,7 +474,19 @@ min_5m_carbimpact определя стандартното въздействи
 
 **Прескочи DND режима** (включено по подразбиране): алармите на **AAPS** звънят дори когато телефонът е без звук или в режим „Не безпокойте“. Изключете го, ако **AAPS** трябва да спазва тези режими: тогава алармите не звънят, а в режим „Не безпокойте“ само вибрират – на телефона и на часовника. Предложенията на кръга, които пристигат по време на режим „Не безпокойте“, се показват без звук.
 
-Когато звъни аларма, екранът на алармата предлага **Заглуши алармата** (екранът остава отворен, за да можете да прочетете съобщението) и **Заглуши и затвори**. Ако плъзнете известието за алармата встрани в панела с известия, алармата се заглушава. Когато по-късно отворите **AAPS**, аларма, на която не сте отговорили, се показва отново.
+When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Ако плъзнете известието за алармата встрани в панела с известия, алармата се заглушава. Когато по-късно отворите **AAPS**, аларма, на която не сте отговорили, се показва отново.
+
+(preferences-alarm-sound-volume-vibration)=
+### Alarm sound, volume and vibration
+
+- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
+- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
+- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
+- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+
+![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+
+- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
 
 (preferences-maintenance-settings)=
 ## Настройки за поддръжка
