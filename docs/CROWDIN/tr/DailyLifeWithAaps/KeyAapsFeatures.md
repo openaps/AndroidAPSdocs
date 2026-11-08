@@ -8,7 +8,7 @@ Döngü durumu ana ekranda aşağıdaki simgelerden biriyle gösterilir.
 
 Döngü modunu nasıl seçeceğiniz ve resimdeki diğer simgeler (4 ile 6 arası) hakkında bilgi için [AAPS ekranları > Ana ekran > Döngü durumu](#AapsScreens-loop-status) bölümüne bakın.
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Loop status](../images/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ Bu seçenek etkinse, duyarlılık algılama (otoduyarlılık) duyarlılık algı
 
 Hedef, duyarlılık algılama nedeniyle değiştirilirse ana ekranınızda yeşil arka planla gösterilir.
 
-![Otoduyarlılık tarafından değiştirilen hedef](../images/Home2020_DynamicTargetAdjustment.png)
+![Otoduyarlılık tarafından değiştirilen hedef](../images/main_target_modified_by_autosens.png)
 
 Bu ayar, "Dinamik hassasiyet kullanın" veya "Otoduyarlılık kullanın" seçeneklerinden biri etkin olduğunda kullanılabilir.
 
