@@ -309,13 +309,13 @@ Musste **AAPS** die Dosis begrenzen, zum Beispiel weil der berechnete Bolus übe
     
     Die [QuickWizard](#quickwizards)-Einträge des Smartphones, bei denen **Show on Watch** eingeschaltet ist, innerhalb ihrer gültigen Uhrzeiten. Ein Kohlenhydrat-Eintrag zeigt seine Kohlenhydrate in g, ein Insulin-Eintrag seine feste Dosis in IE. Ein Tippen führt den Eintrag nach einer Bestätigung auf der Smartwatch aus. Auf der Smartwatch gibt es nichts einzustellen: Bearbeite die Einträge auf dem Smartphone und schalte für jeden Eintrag, den Du auf der Kachel haben möchtest, unter **Device Selection** **Show on Watch** ein. Außerhalb der gültigen Uhrzeiten aller Deiner Einträge zeigt die Kachel **Keine Konfiguration verfügbar**.
     
-    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/quickwizard_watch_phone.png)
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Kachel Szene
+    ### Scene tile
     
     ![Scene tile](../images/wearos/tiles/tile_scene.png)
     
-    Die [Szenen](#scenes-from-watch) des Smartphones. Jeder der vier Plätze wird in den Kacheleinstellungen auf **Automatisch**, **Kein(e)** oder eine Szene gesetzt. Ein Platz auf **Automatisch** übernimmt die nächste Szene aus der Liste des Smartphones, die kein anderer Platz belegt. Ein Platz, der auf eine Szene gesetzt ist, die es auf dem Smartphone nicht mehr gibt, zeigt **Nicht verfügbar**.
+    The [Scenes](#scenes-from-watch) of the phone. Jeder der vier Plätze wird in den Kacheleinstellungen auf **Automatisch**, **Kein(e)** oder eine Szene gesetzt. Ein Platz auf **Automatisch** übernimmt die nächste Szene aus der Liste des Smartphones, die kein anderer Platz belegt. Ein Platz, der auf eine Szene gesetzt ist, die es auf dem Smartphone nicht mehr gibt, zeigt **Nicht verfügbar**.
     
     ![Scene tile settings, four places set to Automatic](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,17 +361,17 @@ Musste **AAPS** die Dosis begrenzen, zum Beispiel weil der berechnete Bolus übe
     
     Hinweis: Nicht alle Displays können always-on gut handhaben. Es kann dazu führen, dass sich der Bildschirm einbrennt, insbesondere auf den älteren OLED-Displays. Die Uhren verdunkeln das Display im Allgemeinen, um das Einbrennen zu verhindern; bitte informiere Dich über das Handbuch , Angaben des Herstellers oder das Internet für Ratschläge.
     
-    ![Watchface Nightstand](../images/Watchface_nightstand.jpg)
+    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Simplified UI](../images/Watchface_simplified_ui.png)
+    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Alarme des Smartphones auf der Smartwatch
+    ## Phone alarms on the watch
     
     ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    Die Smartwatch zeigt die Alarme des Smartphones an, sodass Du siehst, warum das Smartphone einen Ton macht, und vom Handgelenk aus reagieren kannst. Die Smartwatch vibriert, und dann alle halbe Minute fünf Minuten lang, bis Du reagierst. Eine Benachrichtigung zeigt Titel und Text des Alarms, mit denselben Antworten wie bei der Erinnerung [Zeit zum Essen](#WearOsSmartwatch-wizard-carb-time):
+    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. Die Smartwatch vibriert, und dann alle halbe Minute fünf Minuten lang, bis Du reagierst. Eine Benachrichtigung zeigt Titel und Text des Alarms, mit denselben Antworten wie bei der Erinnerung [Zeit zum Essen](#WearOsSmartwatch-wizard-carb-time):
     
     * **Stille** oder Wegwischen: Der Alarm stoppt, und der Alarmbildschirm auf dem Smartphone schließt sich.
     * **5 min. stummschalten**: Der Alarm stoppt und ertönt nach fünf Minuten erneut, auf dem Smartphone und auf der Smartwatch.
