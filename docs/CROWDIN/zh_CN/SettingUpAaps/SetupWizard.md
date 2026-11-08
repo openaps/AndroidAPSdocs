@@ -172,7 +172,7 @@ Go back with the arrow in the top left corner. The Wizard now shows "**Password 
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. 您的智能手机或电脑可能会崩溃，而您可能没有实际备份。如果您忘记了主密码，以后可能会很难恢复您的配置文件和进度，尤其是在完成目标的过程中。
+Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. 您的智能手机或电脑可能会崩溃，而您可能没有实际备份。如果您忘记了主密码，以后可能会很难恢复您的配置文件和进度，尤其是在完成目标的过程中。 See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 When you are done, press "**NEXT**" to go to the next screen.
