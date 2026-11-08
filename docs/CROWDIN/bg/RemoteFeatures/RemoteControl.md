@@ -134,21 +134,21 @@ APK файлът на **AAPSClient** вече може да бъде:
 
 След като инсталирате приложението **Nightscout** на iPhone, отворете го и следвайте подканите за настройка, като въведете адреса на вашия Nightscout (вижте по-долу, вляво). Видът на адреса може да е различен в зависимост от това къде е хостнат вашият Nightscout. (_напр._ http://youraddresshere.herokuapp.com). След това въведете API secret (паролата) на вашия Nightscout (вижте по-долу, вдясно). Ако не бъдете помолени за API паролата, трябва да я въведете, като натиснете катинарчето в горната част на приложението:
 
-![изображение](../images/remote-control-24.png)
+![изображение](../images/remote_control_and_following/remote-control-24.png)
 
 Повече информация за настройката има директно в [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
 Когато влезете за първи път, ще видите съвсем прост екран. Настройте опциите за показване, като изберете менюто „хамбургер“ горе вдясно и превъртите надолу:
 
-![изображение](../images/remote-control-25.png)
+![изображение](../images/remote_control_and_following/remote-control-25.png)
 
 Превъртете надолу до „Settings“ (Настройки). Може да искате да смените „scale“ (мащаб) на „linear“ (линеен), защото по подразбиране КЗ се показва в логаритмичен мащаб, а в „render basal“ (показване на базала) изберете „default“ (по подразбиране), за да се показва базалът на помпата.
 
-![изображение](../images/remote-control-25b.png)
+![изображение](../images/remote_control_and_following/remote-control-25b.png)
 
 Изберете желаните опции. Махнете отметката от алармите, ако използвате друго приложение за аларми.
 
-![изображение](../images/remote-control-26.png)
+![изображение](../images/remote_control_and_following/remote-control-26.png)
 
 Продължете да превъртате надолу, докато стигнете до „show plugins“ (показване на плъгините).
 
@@ -156,7 +156,7 @@ APK файлът на **AAPSClient** вече може да бъде:
 
 Важно: сега трябва да натиснете „save“ (запази) най-долу, за да влязат в сила промените.
 
-![изображение](../images/remote-control-27.png)
+![изображение](../images/remote_control_and_following/remote-control-27.png)
 
 След като натиснете „save“, приложението ще се върне на главния екран на Nightscout, който ще изглежда приблизително така:
 
@@ -170,7 +170,7 @@ APK файлът на **AAPSClient** вече може да бъде:
 8. Базален профил
 9. Зелена линия = КЗ досега Сини линии = прогнозна КЗ
 
-![изображение](../images/remote-control-28.png)
+![изображение](../images/remote_control_and_following/remote-control-28.png)
 
 По-подробно за менюто горе вляво в приложението Nightscout:
 
@@ -179,7 +179,7 @@ APK файлът на **AAPSClient** вече може да бъде:
 3. Хамбургер – за настройка на предпочитанията
 4. Портал за лечения – запис на лечение (вижте [по-долу](#RemoteControl_nightscout-treatments) кога **AAPS** ги прилага)
 
-![Горната лента на Nightscout](../images/remote-control-29.png)
+![Горната лента на Nightscout](../images/remote_control_and_following/remote-control-29.png)
 
 На този екран в сивите раздели има много информация за статуса на системата **AAPS** (а още повече информация се показва, ако докоснете раздела):
 
@@ -195,9 +195,9 @@ APK файлът на **AAPSClient** вече може да бъде:
 10. Статус на батерията на телефона с AAPS
 11. Размер на базата данни. Ако тя се напълни твърде много (само при Nightscout, който поддържате сами – хостнатите услуги могат да пренебрегнат това), може да започнат проблеми с връзката. Можете да изтриете данни, за да намалите този размер, в менюто Admin tools (през менюто „хамбургер“).
 
-![изображение](../images/remote-control-30.png)
+![изображение](../images/remote_control_and_following/remote-control-30.png)
 
-![изображение](../images/remote-control-31.png)
+![изображение](../images/remote_control_and_following/remote-control-31.png)
 
 Натиснете „refresh“ (опресни) в долната част на страницата, за да затворите изскачащия прозорец.
 
@@ -233,7 +233,7 @@ APK файлът на **AAPSClient** вече може да бъде:
 
 ### Вариант 1) Управление на AAPS от часовник с Wear OS
 
-![Дистанционно управление с Wear 1](../images/Wear_Remote1.png)
+![Дистанционно управление с Wear 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 След като [настроите **AAPS** на часовника](../WearOS/BuildingAapsWearOS.md), подробности за циферблатите и техните функции ще намерите в [Смарт часовник с Wear OS](../WearOS/WearOsSmartwatch.md).
 
@@ -285,19 +285,19 @@ APK файлът на **AAPSClient** вече може да бъде:
 
 ### Вариант 3) AAPSClient на часовника за дистанционно управление на **AAPS** на телефона
 
-![Дистанционно управление с Wear 2](../images/Wear_Remote2.png)
+![Дистанционно управление с Wear 2](../images/remote_control_and_following/Wear_Remote2.png)
 
 Софтуерът за часовника, **AAPSClient** Wear apk, може да се изтегли директно от [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 За да изтеглите софтуера, натиснете приложението за часовник, което отговаря на клиентското приложение на телефона: **wear-aapsclient-release_**_версия_ е за **AAPSClient**, **wear-aapsclient2-release_**_версия_ е за **AAPSClient2** (вижте [За AAPSClient, AAPSClient2 и AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![изображение](../images/github_release_wear_aapsclient_apk.png)
+![изображение](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 След това изберете „save as“ (запиши като) и запазете файла на удобно място на компютъра:
 
 
-![изображение](../images/save_as_wear_aapsclient_apk.png)
+![изображение](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 
