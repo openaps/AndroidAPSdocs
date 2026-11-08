@@ -63,7 +63,7 @@ Teknik olarak güncel kan şekeri değeri her dakika xDrip'e iletilir. Ağırlı
 
 → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip Libre 2 gelişmiş ayarları & ham değerler](../images/xDrip_Libre3_Smooth.png)
+![xDrip Libre 2 gelişmiş ayarları & ham değerler](../images/libre3/xDrip_Libre3_Smooth.png)
 
 Bu döngü için zorunludur. Eğriler düzgün görünür ve döngü sonuçları çok iyidir. Alarmların dayandığı ham değerler biraz daha oynaktır, ancak okuyucunun da gösterdiği değerlere karşılık gelir. Ayrıca hızlı değişikliklere zamanında tepki verebilmek için ham değerler xDrip grafiğinde gösterilebilir. Lütfen Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" ve "show Sensors Infos" seçeneklerini açın. Ham değerler ayrıca küçük beyaz noktalar olarak gösterilir ve ek sensör bilgileri sistem menüsünde bulunur.
 
