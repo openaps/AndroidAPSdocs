@@ -21,7 +21,7 @@ Pokud své úložiště klíčů stále máte, tuto stránku nepotřebujete: pou
 
 - Odinstalace **AAPS** smaže všechna jeho nastavení, vaše [cíle](../SettingUpAaps/CompletingTheObjectives.md) a aktuální připojení k pumpě. Získáte je zpět importem svého **souboru s nastavením**, proto se ujistěte, že máte nějaký nedávný.
 - Soubor s nastavením neobsahuje historii ošetření a glykémií. Pokud nahráváte data do [Nightscoutu](../SettingUpAaps/SettingUpTheReportingServer.md), můžete je po přeinstalaci načíst zpět (krok 8).
-- Potřebujete své [**hlavní heslo**](#Preferences-master-password): soubor s nastavením je jím zašifrovaný.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Uživatelé Omnipodu a Medtrumu:** nejprve si přečtěte [Pumpy bez hadičky](#ExportImportSettings-tubeless-pumps). Váš soubor s nastavením musí být exportovaný během podu nebo patche, který máte právě nasazený.
 - Pokud je to potřeba, [nastavte si přijímač zdroje CGM/glykémie](../Getting-Started/CompatiblesCgms.md) dříve, než začnete.
 
