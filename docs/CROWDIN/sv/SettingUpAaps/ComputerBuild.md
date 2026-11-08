@@ -255,7 +255,7 @@ Vid något tillfälle stängs Android Studio och startar igen. Du kan få fråga
 
 Bara för Windows-användare: om brandväggen ber om behörighet, ge åtkomst:
 
- ![Brandväggsbehörighet för java](../images/AndroidStudio361_18.png)
+ ![Brandväggsbehörighet för java](../images/Building-the-App/AndroidStudio361_18.png)
 
 När repot har klonats öppnar Android Studio det klonade projektet.
 
