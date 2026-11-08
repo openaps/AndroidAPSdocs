@@ -59,7 +59,7 @@
 
 額外的挑戰包括很難獲得足夠的電池續航能力，並且擁有足夠電池容量的手錶通常體積龐大且厚重。用戶反映，他們在使用手錶時遇到以下問題：需要花很多功夫調整作業系統和省電設定、啟動傳感器困難、藍牙範圍不足（難以同時維持與傳感器及幫浦的連線），以及防水性能令人存疑。示例顯示在下面的照片中。
 
-![圖像](../images/watch_standalone_aaps_and_xdrip.png)
+![圖像](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 如果你有興趣設定獨立運作的手錶，可以前往 **AAPS** Facebook 社團（建議搜尋「standalone」和「Lemfo」）及 Discord 閱讀相關貼文和留言，以取得更多資訊。
 
@@ -88,7 +88,7 @@
 
 在 [安裝 **AAPS** 到你的手錶後](../WearOS/WearOsSmartwatch.md)，你將自動能選擇你喜歡的錶盤，這些都是專為 **AAPS** 設計的錶盤。在大多數手錶上，你只需長按主畫面，直到畫面縮小，然後向右滑動以選擇另一個畫面：
 
-![圖像](../images/watchfaces_aaps_selection.png)
+![圖像](../images/watches/watchfaces_aaps_selection.png)
 
 這些是嵌入在 **AAPS** 中的基本畫面，還有[更多的錶盤](#WearOS_changing-to-AAPS-watchface)，並且你也可以使用[複雜功能](#Watchfaces-complications)。
 
@@ -122,7 +122,7 @@ Garmin ConnectIQ 商店中有一些可與 [AAPS](https://apps.garmin.com/search?
 
 ![組態 > 通訊：Garmin 卡片](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) 直接與 **AAPS** 整合。它除了顯示血糖數值外，還顯示循環狀態資料（體內胰島素、臨時基礎）並將心率數值傳送至 **AAPS**。您可以在 ConnectIQ 商店找到此錶盤；請在**組態 → 通訊**中啟用 **Garmin** 外掛。 ![含有編號欄位的 AAPS Glucose Watch 錶盤](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) 直接與 **AAPS** 整合。它除了顯示血糖數值外，還顯示循環狀態資料（體內胰島素、臨時基礎）並將心率數值傳送至 **AAPS**。您可以在 ConnectIQ 商店找到此錶盤；請在**組態 → 通訊**中啟用 **Garmin** 外掛。 ![含有編號欄位的 AAPS Glucose Watch 錶盤](../images/watches/Garmin_WF-annotated.png)
 
 1. 圖表上的最高與最低血糖值
 2. 每分鐘血糖變化量
@@ -155,7 +155,7 @@ Google 正將 Fitbit 整合至 Google Health，並將從歐盟地區的 Fitbit �
 
 **WatchDrip+** 是由社群開發的伴隨應用程式，可在多款智慧型手錶上顯示血糖與循環資料，支援的品牌以小米（_例如_ Mi Band）和 Amazfit 為主：
 
-![圖像](../images/watch_watchdrip_plus.png)
+![圖像](../images/watches/watch_watchdrip_plus.png)
 
 從 0.5 版開始，**WatchDrip+** 會直接從 **AAPS** 讀取資料，不再透過 xDrip+ 中繼。在 **AAPS** 手機上：
 
@@ -170,9 +170,9 @@ WatchDrip+ 的重新整理按鈕對 **AAPS** 沒有作用：每次讀取到新�
 
 ### Pebble 手錶
 
-![圖像](../images/watch_pebble.png)
+![圖像](../images/watches/watch_pebble.png)
 
-![圖像](../images/watch_pebble_watchface.png)
+![圖像](../images/watches/watch_pebble_watchface.png)
 
 
 Pebble 手錶（[現已停產](https://en.wikipedia.org/wiki/Pebble_(watch))）從 2013 年到 2016 年一般出售，可能仍有二手產品可供購買。 Fitbit 接管了 Pebble 的資產。 Pebble 用戶可以使用 Urchin 表盤查看 Nightscout 資料。顯示的資料選項包括 IOB、目前的臨時基礎速率和預測值。如果使用開放式循環，你可以透過 IFTTT 建立小程式：當收到來自 **AAPS** 的通知時，便傳送簡訊或 Pushover 通知。
