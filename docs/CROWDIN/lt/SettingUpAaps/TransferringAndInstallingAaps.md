@@ -31,11 +31,11 @@ Naršyklėje atidarykite [Google.com](https://www.google.com/) ir prisijunkite p
 
 Viršuje dešinėje Google meniu pasirinkite Drive programėlę.
 
-![Paleiskite Drive programėlę](../images/GoogleDriveInWebbrowser.png)
+![Paleiskite Drive programėlę](../images/install/GoogleDriveInWebbrowser.png)
 
 Spauskite **New** (Naujas) viršuje kairėje (arba dešiniuoju pelės mygtuku spauskite tuščią vietą po failais ir aplankais) ir pasirinkite **File upload** (Įkelti failą).
 
-![APK failo įkėlimas su Google Drive programėle](../images/GoogleDriveUploadFile.png)
+![APK failo įkėlimas su Google Drive programėle](../images/install/GoogleDriveUploadFile.png)
 
 Dabar apk failas turėtų būti įkeltas į Google Drive.
 
@@ -43,17 +43,17 @@ Dabar apk failas turėtų būti įkeltas į Google Drive.
 
 Pereikite prie telefono ir paleiskite Google Drive programėlę. Tai iš anksto įdiegta programėlė. Ją rasite ten, kur yra kitos Google programėlės, arba paieškoje įvedę programėlės pavadinimą.
 
-![paleiskite Google Drive programėlę](../images/GoogleDriveMobileAPPLaunch.png)
+![paleiskite Google Drive programėlę](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Paleiskite APK diegimą telefone, Google Drive programėlėje paspaudę failo pavadinimą.
 
-![paleiskite APK diegimą](../images/GoogleDriveMobileUploadedAPK.png)
+![paleiskite APK diegimą](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Jei gausite saugos pranešimą, kad šiuo metu negalima diegti programėlių iš Google Drive, spauskite „Settings“ (Nustatymai) ir trumpam tai leiskite, o po to vėl uždrauskite, nes palikti šį leidimą visą laiką įjungtą nesaugu.
 
-![Google Drive saugos pranešimas](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Google Drive saugos pranešimas](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Google Drive saugos pranešimas](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Google Drive saugos pranešimas](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 Kai diegimas baigsis, šis žingsnis atliktas.
 
