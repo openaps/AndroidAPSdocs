@@ -74,7 +74,7 @@ Döngünün pratik yönlerini anlamanıza yardımcı olacak iyi ipuçları içer
   * AAPS'in ve kullandığınız diğer uygulamaların (ör. xDrip, Juggluco, BYODA) güncel [apk](../SettingUpAaps/BuildingAaps.md) dosyası.
   * anahtar deposu (keystore) dosyanız (apk'yi oluştururken kullanılan) ve parolası,
   * AAPS'ten ve diğer uygulamalarınızdan en son dışa aktardığınız ayar dosyaları,
-  * **AAPS** ana parolanız: ayar dosyasını bu parola olmadan içe aktaramazsınız.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ Ana parolanızı unuttuysanız, onu pompanızın seri numarasına sıfırlayabil
 
 1. AAPS dizininizin `extra` alt klasöründe (genellikle `AAPS/extra`) `PasswordReset` adlı boş bir dosya (dosya uzantısı olmadan) oluşturun.
 2. **AAPS**'i yeniden başlatın. Pompanız bağlı olmalıdır: **AAPS** "Pompa bekleniyor…" gösterir ve pompa seri numarasını 30 saniye içinde okuması gerekir.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. **AAPS** "Parola belirlendi!" gösterir: ana parolanız artık **pompa seri numaranızdır**. `PasswordReset` dosyası otomatik olarak silinir.
+
 4. **Ayarlar** > **Koruma** > **Ana parola**'yı açın ve yeni bir parola belirleyin.
 
 Pompaya zamanında ulaşılamazsa hiçbir şey değişmez: pompa bağlantısını kontrol edin ve tekrar deneyin.
