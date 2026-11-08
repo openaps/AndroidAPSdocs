@@ -172,7 +172,7 @@ Torna indietro con la freccia in alto a sinistra. The Wizard now shows "**Passwo
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Please **DO NOT LOSE YOUR MASTER PASSWORD**. Annotala, _ad es._ su Google Drive: è un buon posto, perché Google ne fa il backup per te. Il tuo smartphone o il tuo PC possono rompersi e potresti non avere una copia aggiornata. Se dimentichi la Password Master, più tardi potrebbe essere difficile recuperare la configurazione del profilo e i progressi negli **Obiettivi**.
+Please **DO NOT LOSE YOUR MASTER PASSWORD**. Annotala, _ad es._ su Google Drive: è un buon posto, perché Google ne fa il backup per te. Il tuo smartphone o il tuo PC possono rompersi e potresti non avere una copia aggiornata. Se dimentichi la Password Master, più tardi potrebbe essere difficile recuperare la configurazione del profilo e i progressi negli **Obiettivi**. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 When you are done, press "**NEXT**" to go to the next screen.
