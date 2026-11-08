@@ -63,7 +63,7 @@ Techniškai dabartinė cukraus kiekio kraujyje reikšmė į xDrip perduodama kas
 
 → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip papildomi Libre 2 nustatymai ir neapdorotos reikšmės](../images/xDrip_Libre3_Smooth.png)
+![xDrip papildomi Libre 2 nustatymai ir neapdorotos reikšmės](../images/libre3/xDrip_Libre3_Smooth.png)
 
 This is mandatory for looping. Kreivės atrodo glodžios, o ciklo rezultatai puikūs. Neapdorotos reikšmės, kuriomis remiasi aliarmai, šokinėja šiek tiek daugiau, bet atitinka reikšmes, kurias rodo ir skaitytuvas. Be to, neapdorotas reikšmes galima rodyti xDrip grafike, kad galėtumėte laiku reaguoti į greitus pokyčius. Įjunkite Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" ir "show Sensors Infos". Tada neapdorotos reikšmės papildomai rodomos kaip maži balti taškai, o papildoma jutiklio informacija pasiekiama sistemos meniu.
 
