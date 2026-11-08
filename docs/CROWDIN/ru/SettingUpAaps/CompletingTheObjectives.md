@@ -46,7 +46,7 @@ Note: *You may need to wait for the next sensor glucose reading to arrive before
 
 **Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below. Each task shows its status (**1**): the orange "**Not completed yet**" turns into "**Completed, well done!**" as soon as **AAPS** has registered the action. Tap **Hint** (**2**) underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
 
-![Screenshot objective 2](../images/Objective2_V2_5.png)
+![Screenshot objective 2](../images/objectives/Objective2_V2_5.png)
 
 Tasks to complete **Objective 2** are:
 - Set your **Profile** to 90% for a duration of 10 min.
@@ -96,7 +96,7 @@ The minimal time to complete this objective: **7 days**. Это обязател
 
 To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. The higher the value, the fewer change notifications you will receive.
 
-![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
+![Open Loop minimal request change](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ This means that when you are on **Objective 6**, if sensor glucose levels are dr
 
 - If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
 
-![Example negative IOB](../images/Objective6_negIOB.png)
+![Example negative IOB](../images/objectives/Objective6_negIOB.png)
 
 - Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
 - Enable 'Low Glucose Suspend' mode by pressing the Loop icon on the main screen and choosing **Low Glucose Suspend** as running mode.
@@ -245,6 +245,6 @@ Press "**More**" under an objective to see its tasks again:
 
 If you wish to go back in the **Objectives** for whatever reason, open the finished **Objective** with "**More**" and tap "**Reset finished state**":
 
-![Возможность возврата к предыдущим целям](../images/Objective_ClearFinished.png)
+![Возможность возврата к предыдущим целям](../images/objectives/Objective_ClearFinished.png)
 
 In the same way, the **Objective** you are currently working on can be restarted with "**Reset started state**".
