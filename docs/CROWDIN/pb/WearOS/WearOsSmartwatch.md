@@ -211,7 +211,7 @@ No relógio:
 
 Você vai ver um código de pareamento Wi-Fi, o endereço IP e a porta:
 
-![Tela do relógio mostrando o código de pareamento Wi-Fi, o endereço IP e a porta](../images/wearos/ADB03.png)
+![Tela do relógio mostrando o código de pareamento Wi-Fi, o endereço IP e a porta](../images/wearos/watch_wifi_pairing_code.png)
 
 - No terminal: `adb pair ipaddress:port` Por exemplo: `adb pair 10.10.1.125:36299`
 - Será pedido o código de pareamento. Digite-o.
