@@ -255,7 +255,7 @@ W pewnym momencie Android Studio zamknie się i uruchomi ponownie. Możesz zosta
 
 Tylko dla użytkowników Windows: jeśli zapora sieciowa poprosi o zgodę, zezwól na dostęp:
 
- ![Zgoda zapory sieciowej dla Javy](../images/AndroidStudio361_18.png)
+ ![Zgoda zapory sieciowej dla Javy](../images/Building-the-App/AndroidStudio361_18.png)
 
 Gdy repozytorium zostanie sklonowane, Android Studio otworzy sklonowany projekt.
 
