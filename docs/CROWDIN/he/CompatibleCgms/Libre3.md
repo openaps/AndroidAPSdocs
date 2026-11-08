@@ -2,7 +2,7 @@
 
 Freestyle Libre 3 (FSL3) requires a unique setup to receive BG values in to AAPS. There are two possible ways of getting Freestyle Libre 3 (FSL3) values to AAPS.
 
-![FL3](../images/d912c1d3-06d2-4b58-ad7c-025ca1980fae.jpeg)
+![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
 
 השיטות שלהלן להשגת מטרה זו משתמשות באפליקציה הנפרדת Juggluco. שיטה זו משתמשת ב־Juggluco כדי לקבל מהחיישן נתונים גולמיים במרווחים של דקה אחת. הנתונים מועברים ל־xDrip או ל־AAPS. ניתן להפעיל חיישנים חדשים באמצעות אפליקציית Libre 3 או ישירות ב־Juggluco. המדריך שלהלן מתאר את תהליך הפעלת החיישן באמצעות אפליקציית Juggluco. אם החיישן הופעל כשהייתם מחוברים לחשבון Libreview, ניתן גם לעבור בין Juggluco לאפליקציית Libre 3 כמקלט.
 
