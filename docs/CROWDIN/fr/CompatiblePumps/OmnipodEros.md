@@ -281,7 +281,7 @@ Pour désactiver un pod (soit après son expiration soit à cause d'une erreur d
 
 La procédure ci-dessous montre comment suspendre et reprendre l'injection d'insuline.
 
-*REMARQUE - si vous ne voyez pas de bouton **Suspendre***, c'est qu'il est masqué par défaut. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*REMARQUE - si vous ne voyez pas de bouton **Suspendre***, c'est qu'il est masqué par défaut. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Suspendre l'injection d’Insuline
 
@@ -591,7 +591,7 @@ Les boutons en bas de l'écran de la pompe changent selon la situation. Les bout
   La capture d'écran ci-dessus vient d'une version plus ancienne d'**AAPS**. Dans **AAPS** 4, c'est un bouton avec le texte **Définir l'heure** sur l'écran de la pompe Omnipod.
   ```
 
-- **Suspendre :** Suspend l'injection d'insuline sur le pod actif. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
+- **Suspendre :** Suspend l'injection d'insuline sur le pod actif. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Fournit des notifications AAPS et des alertes audibles sur le téléphone lorsqu
 
 Fournit des paramètres avancés pour aider au débogage.
 
-- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
+- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
 - **Afficher le bouton Journal d'impulsions dans le menu de gestion des pods :** Ce paramètre est toujours listé, mais la version actuelle de l'écran de la pompe n'a pas de bouton **Enreg. Pulse**.
 
 - **Afficher le bouton Stats RileyLink dans le menu de gestion du pod :** Masque ou affiche le bouton **Stats RileyLink** sur l'écran de la pompe Omnipod.
