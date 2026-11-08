@@ -172,7 +172,7 @@ Wróć strzałką w lewym górnym rogu. Kreator pokazuje teraz „**Hasło ustaw
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**NIE ZGUB SWOJEGO HASŁA GŁÓWNEGO**. Zapisz je _np._ na Dysku Google. To dobre miejsce, bo Google robi dla ciebie kopię zapasową. Twój smartfon lub komputer może ulec awarii, a Ty możesz nie mieć aktualnej kopii. Jeśli zapomnisz hasła głównego (Master Password), później odzyskanie konfiguracji profilu i postępu w **Zadaniach** może być trudne.
+**NIE ZGUB SWOJEGO HASŁA GŁÓWNEGO**. Zapisz je _np._ na Dysku Google. To dobre miejsce, bo Google robi dla ciebie kopię zapasową. Twój smartfon lub komputer może ulec awarii, a Ty możesz nie mieć aktualnej kopii. Jeśli zapomnisz hasła głównego (Master Password), później odzyskanie konfiguracji profilu i postępu w **Zadaniach** może być trudne. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 Gdy skończysz, naciśnij „**DALEJ**”, aby przejść do następnego ekranu.
