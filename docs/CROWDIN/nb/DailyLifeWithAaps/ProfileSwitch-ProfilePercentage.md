@@ -22,7 +22,7 @@ Du trenger minst én lagret **profil**. En **profilprosent** brukes alltid gjenn
 
     <br />1. På hovedskjermen, **trykk på profilnavnet** (ved siden av stjerneikonet). [Profilskjermen](#ProfileSwitch-manage-v4) åpnes på kortet til **profilen** som kjører, merket **AKTIV**.
     
-       ![Trykk på profilnavnet på hovedskjermen for å åpne profilskjermen](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. For å beholde den samme **profilen**, la **AKTIV**-kortet være valgt. For å bytte **profil** samtidig, sveip til et annet kort.
     3. Trykk på den runde **▶**-knappen (**Aktiver**) nederst til høyre. Skjermen **Aktiver** åpnes.
@@ -169,7 +169,7 @@ Spørsmålet er alltid hvilken times innstillinger i **profilen** som skal ersta
     - 22:00 **-10 t** -> 12:00
     - Innstillingene fra 22:00 brukes i stedet for innstillingene som normalt brukes klokken 12:00, på grunn av den negative tidsforskyvingen.
 
-![Retninger for tidsforskyving ved profilbytte](../images/ProfileSwitch_PlusMinus2.png)
+![Retninger for tidsforskyving ved profilbytte](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 Denne mekanismen med å ta øyeblikksbilder av **profilen** gir en mye mer nøyaktig beregning av fortiden, og gjør det mulig å følge endringer i **profilen**.
 
