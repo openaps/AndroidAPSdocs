@@ -53,7 +53,7 @@ Si se usa la absorción mínima de carbohidratos (min_5m_carbimpact) en lugar de
 
 Normalmente, __AAPS__ detecta la absorción de carbohidratos a través de las desviaciones de **glucosa**. Si has introducido carbohidratos pero **AAPS** no puede detectar su absorción estimada a través de las desviaciones de **glucosa**, usará el método [min_5m_carbimpact](#Preferences-min_5m_carbimpact) para calcular la absorción (el llamado «fallback» o método de respaldo). Como este método solo calcula la absorción mínima de carbohidratos sin tener en cuenta las desviaciones de **glucosa**, puede dar valores de COB incorrectos.
 
-![Sugerencia sobre un valor incorrecto de COB](../images/Calculator_SlowCarbAbsorption.png)
+![Sugerencia sobre un valor incorrecto de COB](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 En la captura de pantalla de arriba, el 66 % del tiempo la absorción de carbohidratos se calculó con min_5m_carbimpact en lugar del valor detectado a partir de las desviaciones. Esto indica que es posible que tuvieras menos **COB** de lo que calculó el algoritmo.
 
