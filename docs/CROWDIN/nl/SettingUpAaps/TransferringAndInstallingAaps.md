@@ -31,11 +31,11 @@ Open [Google.com](https://www.google.com/) in je webbrowser en log in met je Goo
 
 Kies rechtsboven de app Drive in het Google-menu.
 
-![Drive-app starten](../images/GoogleDriveInWebbrowser.png)
+![Drive-app starten](../images/install/GoogleDriveInWebbrowser.png)
 
 Klik linksboven op **Nieuw** (of klik met de rechtermuisknop op een leeg gebied onder je bestanden en mappen) en kies **Bestand uploaden**.
 
-![APK-bestand uploaden met de Google Drive-app](../images/GoogleDriveUploadFile.png)
+![APK-bestand uploaden met de Google Drive-app](../images/install/GoogleDriveUploadFile.png)
 
 Het APK-bestand zou nu naar Google Drive geüpload moeten zijn.
 
@@ -43,17 +43,17 @@ Het APK-bestand zou nu naar Google Drive geüpload moeten zijn.
 
 Ga naar je telefoon en start de Google Drive-app. Het is een vooraf geïnstalleerde app. Je vindt hem bij de andere Google-apps, of door op de naam van de app te zoeken.
 
-![start de Google Drive-app](../images/GoogleDriveMobileAPPLaunch.png)
+![start de Google Drive-app](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Start de installatie van de APK door in de Google Drive-app op de telefoon op de bestandsnaam te tikken.
 
-![start de installatie van de APK](../images/GoogleDriveMobileUploadedAPK.png)
+![start de installatie van de APK](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Krijg je een beveiligingsmelding dat je op dit moment geen apps vanuit Google Drive mag installeren? Tik dan op "Instellingen" en sta het voor dat korte moment toe. Verbied het daarna weer, want het is een veiligheidsrisico om het altijd aan te laten staan.
 
-![Beveiligingsmelding Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Beveiligingsmelding Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Beveiligingsmelding Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Beveiligingsmelding Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 Als de installatie klaar is, ben je klaar met deze stap.
 
