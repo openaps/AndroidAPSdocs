@@ -21,7 +21,7 @@ Si vous avez encore votre keystore, vous n'avez pas besoin de cette page : réu
 
 - Désinstaller **AAPS** supprime tous ses paramètres, vos [objectifs](../SettingUpAaps/CompletingTheObjectives.md) et la connexion actuelle à la pompe. Vous les récupérez en important votre **fichier de paramètres** : assurez-vous donc d'en avoir un récent.
 - Le fichier de paramètres ne contient pas votre historique des traitements et de glycémie. Si vous envoyez vos données à [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), vous pouvez les recharger après la réinstallation (étape 8).
-- Vous avez besoin de votre [**mot de passe principal**](#Preferences-master-password) : le fichier de paramètres est chiffré avec lui.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Utilisateurs d'Omnipod et de Medtrum :** lisez d'abord [Pompes sans tubulure](#ExportImportSettings-tubeless-pumps). Votre fichier de paramètres doit avoir été exporté pendant le pod ou le patch que vous portez maintenant.
 - Si nécessaire, [configurez le récepteur de votre MGC / source de glycémie](../Getting-Started/CompatiblesCgms.md) avant de commencer.
 
