@@ -474,7 +474,19 @@ NSClientV3를 사용할 때는 모든 업로더가 Nightscout API v3를 사용�
 
 **방해 금지 모드 무시**(기본값 켜짐): 휴대폰이 무음이거나 방해 금지 모드여도 **AAPS** 알람이 울립니다. **AAPS**가 이 모드를 따라야 한다면 끄십시오: 그러면 알람이 울리지 않으며, 방해 금지 모드에서는 휴대폰과 워치에서 진동만 합니다. 방해 금지 모드 중에 오는 루프 제안은 소리 없이 표시됩니다.
 
-알람이 울리면 알람 화면에 **알람 음소거**(화면은 열린 상태로 남아 메시지를 읽을 수 있음)와 **음소거 후 닫기**가 있습니다. 알림 창에서 알람 알림을 밀어서 없애면 알람이 음소거됩니다. 나중에 **AAPS**를 열면, 응답하지 않은 알람이 다시 표시됩니다.
+When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. 알림 창에서 알람 알림을 밀어서 없애면 알람이 음소거됩니다. 나중에 **AAPS**를 열면, 응답하지 않은 알람이 다시 표시됩니다.
+
+(preferences-alarm-sound-volume-vibration)=
+### Alarm sound, volume and vibration
+
+- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
+- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
+- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
+- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+
+![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+
+- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
 
 (preferences-maintenance-settings)=
 ## 정비 설정
