@@ -2,7 +2,7 @@
 
 Freestyle Libre 3 (FSL3)의 혈당 값을 AAPS로 받으려면 특별한 설정이 필요합니다. Freestyle Libre 3 (FSL3) 값을 AAPS로 가져오는 방법은 두 가지가 있습니다.
 
-![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
+![FL3](../images/libre3/libre3_juggluco_xdrip_data_flow.jpeg)
 
 아래 방법은 모두 별도의 앱인 Juggluco를 사용합니다. Juggluco로 센서에서 1분 간격의 원시 데이터를 받고, 이 데이터를 xDrip 또는 AAPS로 보냅니다. 새 센서는 Libre 3 앱으로 시작하거나 Juggluco에서 직접 시작할 수 있습니다. 아래 안내는 Juggluco 앱으로 센서를 시작하는 방법을 설명합니다. 센서를 Libreview 계정에 로그인한 상태에서 시작했다면, 수신 앱을 Juggluco와 Libre 3 앱 사이에서 바꿀 수도 있습니다.
 
@@ -38,7 +38,7 @@ xDrip에서는 혈당 측정기 값과 센서 측정값의 차이를 보정하�
 
   → 햄버거 메뉴 → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![xDrip 고급 설정 Libre 2 및 원시 값](../images/xDrip_Libre3_Smooth.png)
+  ![xDrip 고급 설정 Libre 2 및 원시 값](../images/libre3/xDrip_Libre3_Smooth.png)
 
 
 
