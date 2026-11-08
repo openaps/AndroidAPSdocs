@@ -74,7 +74,7 @@ Thirdly, you have to learn and **understand the OpenAPS reference design to chec
   * קובץ ה-[apk](../SettingUpAaps/BuildingAaps.md) הנוכחי של AAPS ושל כל אפליקציה אחרת שבה אתם משתמשים (למשל xDrip, Juggluco, BYODA).
   * קובץ ה-keystore שלכם (מבניית ה-apk) והסיסמה שלו,
   * קובצי ייצוא ההגדרות האחרונים שלכם מ-AAPS ומהאפליקציות האחרות שלכם,
-  * הסיסמה הראשית שלכם ל-**AAPS**: בלעדיה לא ניתן לייבא את קובץ ההגדרות.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ If you want to share some information about AAPS and DIY looping with your clini
 
 1. יש ליצור קובץ ריק בשם `PasswordReset` (ללא סיומת קובץ) בתת-התיקייה `extra` של תיקיית AAPS שלכם (בדרך כלל `AAPS/extra`).
 2. יש להפעיל מחדש את **AAPS**. המשאבה חייבת להיות מחוברת: **AAPS** מציג "ממתין למשאבה…" וצריך לקרוא את המספר הסידורי של המשאבה תוך 30 שניות.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. **AAPS** מציג "הסיסמה הוגדרה!": הסיסמה הראשית שלכם היא עכשיו **המספר הסידורי של המשאבה**. הקובץ `PasswordReset` נמחק באופן אוטומטי.
+
 4. יש לפתוח את **הגדרות** > **הגנה בסיסמאות** > **סיסמה ראשית** ולהגדיר סיסמה חדשה.
 
 אם אין חיבור למשאבה בזמן, שום דבר לא משתנה: יש לבדוק את החיבור למשאבה ולנסות שוב.
