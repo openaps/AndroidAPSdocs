@@ -63,7 +63,7 @@ Technically, the current blood sugar value is transmitted to xDrip every minute.
 
 → 汉堡菜单 → 设置 → NFC 扫描功能 → 使用 xxx 方法时平滑 libre 3 数据
 
-![xDrip advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+![xDrip advanced settings Libre 2 & raw values](../images/libre3/xDrip_Libre3_Smooth.png)
 
 这对于闭环是强制性的。曲线看起来平滑，闭环结果非常好。触发警报的原始数值波动稍大，但与读取器显示数值完全一致。 In addition, the raw values can be displayed in the xDrip graph in order to be able to react in time to rapid changes. 请启用"较少使用设置 > Libre2高级设置"中的"显示原始数值"与"显示传感器信息"选项。此时原始数值将额外显示为白色小点，且系统菜单中可查看更多传感器信息。
 
