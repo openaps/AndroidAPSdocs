@@ -20,7 +20,7 @@ De meest gebruikte manieren om te volgen in combinatie met **AAPS** worden hiero
 
 ### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) en [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
-![Afbeelding](../images/following_dexcom_follow.png)
+![Afbeelding](../images/remote_control_and_following/following_dexcom_follow.png)
 
 * Dexcom Follow werkt op veel verschillende telefoons (zowel Android als iPhone). Je kunt Dexcom Follow ook gebruiken als je niet de officiële Dexcom-app gebruikt om sensorgegevens te ontvangen.
 
@@ -47,7 +47,7 @@ Voor Dexcom Follow worden de sensorgegevens dan vanaf de **AAPS**-telefoon geëx
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
-![Afbeelding](../images/following_nightguard.png)
+![Afbeelding](../images/remote_control_and_following/following_nightguard.png)
 
 Voordelen (volgens gebruikers):
 
@@ -73,7 +73,7 @@ Nadelen (volgens gebruikers)
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
-![Afbeelding](../images/following_nightwatch.png)
+![Afbeelding](../images/remote_control_and_following/following_nightwatch.png)
 
 
 * Nightwatch noemt zichzelf een Nightscout-client en bewaakt de Nightscout-glucosewaarden van de gebruiker op een Android-telefoon of -tablet.
@@ -132,7 +132,7 @@ Als je wilt, kun je daarna een "releaser" worden en [een persoonlijke Testflight
 
 
 
-![Afbeelding](../images/following_xdrip4ios.png)
+![Afbeelding](../images/remote_control_and_following/following_xdrip4ios.png)
 
 "Wat is **Shuggah**?" Een groep Oekraïense ontwikkelaars heeft de projectcode van xDrip4iOS (die openbaar op GitHub staat) gekopieerd en via een bedrijfsaccount in de App Store uitgebracht. De Shuggah-versie wordt op geen enkele manier beheerd door de ontwikkelaars van xDrip4iOS.
 
@@ -140,9 +140,9 @@ De [xDrip4iOS Facebook-groep](https://www.facebook.com/groups/853994615056838/an
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
-![Afbeelding](../images/following_sugarmate.png)
+![Afbeelding](../images/remote_control_and_following/following_sugarmate.png)
 
-![Afbeelding](../images/following_sugarmate_graph.png)
+![Afbeelding](../images/remote_control_and_following/following_sugarmate_graph.png)
 
 
 [Sugarmate](https://sugarmate.io/) kun je voor iPhone downloaden uit de App Store. Sugarmate werkt met:
@@ -155,7 +155,7 @@ Gebruikers van Sugarmate melden dat je het in de VS met Apple CarPlay kunt gebru
 
 ### [Spike](https://spike-app.com/) (iOS)
 
-![Afbeelding](../images/following_spike.png)
+![Afbeelding](../images/remote_control_and_following/following_spike.png)
 
 Spike kan gebruikt worden als hoofdontvanger of als volg-app en toont BG, alarmen, IOB en meer.
 
@@ -175,7 +175,7 @@ Zie [hier](../Getting-Started/Watches.md).
 
 ### M5Stack
 
-![Afbeelding](../images/following_m5stack.png)
+![Afbeelding](../images/remote_control_and_following/following_m5stack.png)
 
 De M5Stack is een klein doosje dat voor veel toepassingen geprogrammeerd kan worden. Het project van Martin, [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki), toont sensorglucosewaarden en trends, IOB en COB. Het zit in een plastic doosje met een kleurenscherm, een micro-SD-kaartsleuf, 3 knoppen, een luidspreker en een interne batterij. Het is een goede bloedglucosemonitor en vrij makkelijk in te stellen als je een Nightscout-account hebt. Meestal gebruiken mensen het op hun wifi thuis, maar sommige gebruikers melden dat ze het als scherm op de motor gebruiken, via een wifi-hotspot van hun telefoon.
 
@@ -183,9 +183,9 @@ De M5Stack is een klein doosje dat voor veel toepassingen geprogrammeerd kan wor
 
 SugarPixel is een apparaat dat als tweede scherm met alarmen dient voor continue glucosemonitoring. Het werkt samen met de Dexcom-app of de Nightscout-app op de smartphone van de gebruiker. Het apparaat toont bloedglucosewaarden in realtime. Deze CGM-monitor heeft geluidsalarmen met willekeurige tonen (die erg luid zijn), trilalarmen voor slechthorenden, instelbare weergaveopties en volgen door meerdere gebruikers als standaardfunctie.
 
-![Afbeelding](../images/following_sugarpixel.png)
+![Afbeelding](../images/remote_control_and_following/following_sugarpixel.png)
 
-![Afbeelding](../images/following_sugarpixel_led_display.png)
+![Afbeelding](../images/remote_control_and_following/following_sugarpixel_led_display.png)
 
 * SugarPixel heeft meerdere weergaveopties in mg/dl en mmol/l die je aan je wensen kunt aanpassen, met glucosewaarden in kleurcodes.
 * De standaardweergave toont BG, trendpijl en delta. Delta is de verandering (+ of -) ten opzichte van de vorige meting.
@@ -197,7 +197,7 @@ SugarPixel is een apparaat dat als tweede scherm met alarmen dient voor continue
 
 **Nightscout Clock** is opensourcesoftware die draait op het apparaat **Ulanzi TC001**. Het verbindt met de Dexcom-servers of Nightscout en toont bloedglucosewaarden in realtime.
 
-![Volgen met Nightscout Clock](../images/FollowingNightscoutClock.png)
+![Volgen met Nightscout Clock](../images/remote_control_and_following/FollowingNightscoutClock.png)
 
 * De klok ondersteunt zowel mmol/l als mg/dl en heeft hoorbare alarmen.
 * Er zijn verschillende weergaven beschikbaar, zie [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) voor een overzicht.
