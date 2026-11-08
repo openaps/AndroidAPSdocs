@@ -91,6 +91,8 @@
 
 Είναι υποχρεωτικός για να μπορείτε να κάνετε [εξαγωγή ρυθμίσεων](../Maintenance/ExportImportSettings.md), γιατί από την έκδοση 2.7 αυτές κρυπτογραφούνται.
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **Η βιομετρική προστασία μπορεί να μη λειτουργεί σε τηλέφωνα OnePlus. Αυτό είναι γνωστό πρόβλημα της OnePlus σε ορισμένα τηλέφωνα.**
 
 ![Ορισμός κύριου κωδικού](../images/preferences/master_password_dialog.png)
