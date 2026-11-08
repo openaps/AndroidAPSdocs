@@ -22,7 +22,7 @@
 
     <br />1. 在主畫面上，**點選設定檔名稱**（星號圖示旁）。系統會開啟[設定檔畫面](#ProfileSwitch-manage-v4)，並顯示目前執行中的<strong>設定檔</strong>卡片，卡片上會標示<strong>作用中</strong>。
     
-       ![在主畫面點選設定檔名稱，開啟設定檔畫面](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. 若要保留相同的<strong>設定檔</strong>，請維持選取<strong>作用中</strong>卡片。若要同時變更<strong>設定檔</strong>，請滑動至另一張卡片。
     3. 點選右下方的圓形<strong>▶</strong>按鈕（<strong>啟用</strong>）。系統會開啟<strong>啟用</strong>畫面。
@@ -169,7 +169,7 @@ mg/dL/U          | 降低血糖
     - 22:00 **-10 小時** -> 12:00
     - 由於負向時間調整，將使用22:00（晚上10點）的設定來取代通常在12:00使用的設定。
 
-![設定切換時間調整指引](../images/ProfileSwitch_PlusMinus2.png)
+![設定切換時間調整指引](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 此機制會擷取**設定檔**的快照，因此能更精確地計算過去的狀況，並追蹤**設定檔**的變更。
 
