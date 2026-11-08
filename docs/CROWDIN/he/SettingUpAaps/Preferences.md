@@ -91,6 +91,8 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
 
 ![Set master password](../images/preferences/master_password_dialog.png)
