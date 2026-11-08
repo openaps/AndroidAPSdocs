@@ -89,6 +89,7 @@ Direkt nach dem Anlegen des Repositorys hat GitHub die Workflow-Datei eventuell 
 - **"The secret is too short"**, **"The secret is not a valid code"** oder **"The secret does not contain a keystore"**: Im Secret steht der falsche Text, oft das Wort `KEYSTORE_SET` selbst oder nur ein Teil des Codes. Öffne in Deinem Repository **Settings** → **Secrets and variables** → **Actions**, bearbeite `KEYSTORE_SET` und füge den langen Code aus **Copy secret** erneut ein (wiederhole zuerst Schritt 2 der Einrichtungsseite, falls Du sie geschlossen hast).
 - **„Keystore, password or alias is wrong“**: Prüfe Passwort und Alias Deines Keystores und wiederhole dann die Schritte 2 und 3 der Einrichtungsseite.
 - **„Google Drive access has expired or was revoked“**: Wiederhole [Schritt 6](#aaps-builder-google-drive) und aktualisiere das Secret `GDRIVE_OAUTH2`.
+- **"Process completed with exit code 1" and a red line with only a link to `services.gradle.org`**, after less than a minute: the build could not download Gradle, a tool it needs to build the app. The Gradle website was not responding. Your repository and your settings are fine. Wait half an hour, then [run the build again](#aaps-ci-rerun).
 - **Ein anderer Fehler**: [Lies das Build-Log](#aaps-ci-read-the-logs) und [starte den Build dann erneut](#aaps-ci-rerun). Schlägt er wieder auf dieselbe Weise fehl, bitte um Hilfe und nenne dabei den Namen des fehlgeschlagenen Schritts und die Fehlerzeilen. Gib niemals den Inhalt Deiner Secrets weiter.
 
 ### Schritt 5: Die App
