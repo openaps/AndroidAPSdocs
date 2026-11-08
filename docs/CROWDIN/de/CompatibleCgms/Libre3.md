@@ -2,7 +2,7 @@
 
 Der Freestyle Libre 3 (FSL3) benötigt ein besonderes Setup, um Glukosewerte in AAPS verfügbar zu machen. Es gibt zwei Wege die Werte des Freestyle Libre 3 (FSL3) in AAPS verfügbar zu machen.
 
-![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
+![FL3](../images/libre3/libre3_juggluco_xdrip_data_flow.jpeg)
 
 Um das zu beheben, wird in den unten beschriebenen Methoden Juggluco als separate App eingesetzt. Juggluco reicht die minütlichen unveränderten Daten (Rohdaten) des Sensors an xDrip oder AAPS weiter. Neu gesetzte Sensoren können entweder mit der Libre 3 App oder direkt in Juggluco gestartet werden. Die Anleitung unten beschreibt, wie ein Sensor mit der Juggluco-App gestartet werden kann. Wenn der Sensor mit einem eingeloggten Libreview-Konto gestartet wurde, ist es auch möglich, zwischen Juggluco und der Libre 3 App als Empfänger zu wechseln.
 
@@ -38,7 +38,7 @@ Die Glukosewerte werden von der xDrip-App auf dem Deinem Smartphone empfangen.
 
   → Hamburger-Menü → Einstellungen → NFC-Scan-Funktionen → Libre3-Daten glätten, wenn Methode xxx verwendet wird
 
-  ![xDrip advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+  ![xDrip advanced settings Libre 2 & raw values](../images/libre3/xDrip_Libre3_Smooth.png)
 
 
 
