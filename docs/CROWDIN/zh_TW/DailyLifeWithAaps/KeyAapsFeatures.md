@@ -8,7 +8,7 @@
 
 如需瞭解如何選擇循環模式，以及圖片中其他圖示（4 到 6），請參閱 [AAPS 畫面 > 主畫面 > 循環狀態](#AapsScreens-loop-status)。
 
-![循環狀態](../images/Home2020_LoopStatus.png)
+![循環狀態](../images/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。它會根據這些
 
 如果因為偵測到敏感度而修改目標值，主畫面上會以綠色背景顯示。
 
-![目標由 autosens 調整](../images/Home2020_DynamicTargetAdjustment.png)
+![目標由 autosens 調整](../images/main_target_modified_by_autosens.png)
 
 啟用「使用動態敏感度」或「使用自動敏感度調整」其中一項後，即可使用此設定。
 
