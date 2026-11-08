@@ -46,7 +46,7 @@ Note: *You may need to wait for the next sensor glucose reading to arrive before
 
 Voor **Doel 2** moet je verschillende ‘taken’ uitvoeren, zoals te zien is in de schermafbeelding hieronder. Elke taak toont zijn status (**1**): het oranje "**Nog niet voltooid**" verandert in "**Voltooid, goed gedaan!**" zodra **AAPS** de actie heeft geregistreerd. Tik op **Tip** (**2**) onder een taak om de bijbehorende documentatie te openen, als je een bepaalde actie nog niet kent.
 
-![Schermafbeelding doel 2](../images/Objective2_V2_5.png)
+![Schermafbeelding doel 2](../images/objectives/Objective2_V2_5.png)
 
 Taken om **Doel 2** te voltooien:
 - Zet je **Profiel** op 90% voor een duur van 10 min.
@@ -96,7 +96,7 @@ De minimale tijd om dit doel te voltooien: **7 dagen**. Dit is een verplichte wa
 
 To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Daarnaast kun je met de instelling "**Minimum wijziging open loop**" in **Instellingen → Loop** het minimale percentage voor voorgestelde wijzigingen van de basaal aanpassen. Hoe hoger de waarde, hoe minder meldingen over wijzigingen je krijgt.
 
-![Minimum wijziging open loop](../images/OpenLoop_MinimalRequestChange2.png)
+![Minimum wijziging open loop](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ Dit betekent: als je in **Doel 6** zit en je sensorglucose daalt, verlaagt **AAP
 
 - Als je IOB negatief is (zie de schermafbeelding hieronder), kan in **Doel 6** een tijdelijke basaal (TBR) > 100% worden gestart.
 
-![Voorbeeld negatieve IOB](../images/Objective6_negIOB.png)
+![Voorbeeld negatieve IOB](../images/objectives/Objective6_negIOB.png)
 
 - Stel je streefbereik iets hoger in dan je normaal zou doen, voor de zekerheid en als extra veiligheidsmarge.
 - Zet de modus 'Stop bij laag' aan door op het Loop-pictogram in het hoofdscherm te drukken en **Stop bij laag** als bedrijfsmodus te kiezen.
@@ -245,6 +245,6 @@ Druk op "**Meer**" onder een doel om de taken weer te zien:
 
 Als je om welke reden dan ook terug wilt in de **Doelen**, open dan het voltooide **Doel** met "**Meer**" en tik op "**Voltooiing wissen**":
 
-![Teruggaan in doelen](../images/Objective_ClearFinished.png)
+![Teruggaan in doelen](../images/objectives/Objective_ClearFinished.png)
 
 Op dezelfde manier kun je het **Doel** waar je nu mee bezig bent opnieuw starten met "**Start wissen**".
