@@ -20,7 +20,7 @@
 
 ### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) ve [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
-![image](../images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
+![image](../images/following_dexcom_follow.png)
 
 * Dexcom Follow çok çeşitli telefonlarla uyumludur (hem Android hem de iPhone). Dexcom Follow, sensör verilerini almak için resmi Dexcom uygulamasını kullanmasanız bile kullanılabilir.
 
@@ -47,7 +47,7 @@ Dexcom Follow için sensör verileri, hangi uygulamayı kullandığınıza göre
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
-![image](../images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
+![image](../images/following_nightguard.png)
 
 Artıları (kullanıcıların bildirdiği):
 
@@ -73,7 +73,7 @@ Eksileri (kullanıcıların bildirdiği)
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
-![image](../images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
+![image](../images/following_nightwatch.png)
 
 
 * Nightwatch kendini bir Nightscout istemcisi olarak tanıtır ve kullanıcının Nightscout glikoz değerlerini Android telefon veya tablette izler.
@@ -132,7 +132,7 @@ xDripSwift, orijinal xDrip uygulamasının iOS'a aktarılmasıyla oluşturuldu v
 
 
 
-![image](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
+![image](../images/following_xdrip4ios.png)
 
 "**Shuggah** nedir?" Ukraynalı bir geliştirici grubu, xDrip4iOS proje kodunu (GitHub'da herkese açık olarak paylaşılır) kopyaladı ve bir şirket hesabı altında App Store'da yayınladı. Shuggah sürümü hiçbir şekilde xDrip4iOS geliştiricileri tarafından yönetilmez.
 
@@ -140,9 +140,9 @@ xDripSwift, orijinal xDrip uygulamasının iOS'a aktarılmasıyla oluşturuldu v
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
-![image](../images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
+![image](../images/following_sugarmate.png)
 
-![image](../images/21b83c41-85c6-4619-a702-a65450768855.png)
+![image](../images/following_sugarmate_graph.png)
 
 
 [Sugarmate](https://sugarmate.io/), App Store'dan iPhone'lara indirilebilir. Sugarmate şunlarla uyumludur:
@@ -155,7 +155,7 @@ Sugarmate kullanıcıları, ABD'de araç kullanırken glikoz değerlerini göste
 
 ### [Spike](https://spike-app.com/) (iOS)
 
-![image](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
+![image](../images/following_spike.png)
 
 Spike, birincil alıcı veya takipçi uygulaması olarak kullanılabilir; KŞ, alarmlar, AİNS ve daha fazlasını sağlar.
 
@@ -175,7 +175,7 @@ Web sitesi ve uygulama artık geliştirilmiyor. Destek [Facebook](https://www.fa
 
 ### M5Stack
 
-![image](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
+![image](../images/following_m5stack.png)
 
 M5Stack, birçok uygulama için programlanabilen küçük bir kutudur. Martin'in projesi [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki), sensör glikoz değerlerini ve eğilimlerini, AİNS ve AKRB'yi gösterir. Renkli ekranı, micro SD kart yuvası, 3 düğmesi, hoparlörü ve dahili pili olan plastik bir kutu içindedir. Çok iyi bir kan şekeri monitörüdür ve Nightscout hesabınız varsa kurulumu nispeten kolaydır. Kullanıcılar genellikle evdeki Wi-Fi ağında çalıştırır. Bazı kullanıcılar ise telefonun Wi-Fi erişim noktasıyla çalıştırarak motosiklet sürerken ekran olarak kullandığını bildiriyor.
 
@@ -183,9 +183,9 @@ M5Stack, birçok uygulama için programlanabilen küçük bir kutudur. Martin'in
 
 SugarPixel, sürekli glikoz izleme için ikincil bir glikoz gösterge ve uyarı cihazıdır. Kullanıcının akıllı telefonundaki Dexcom uygulamasına veya Nightscout uygulamasına bağlanır. Cihaz, kan şekeri değerlerini gerçek zamanlı gösterir. Bu CGM donanım monitörünün avantajları: rastgele ton üreten sesli uyarılar (çok yüksek sesli), işitme engelliler için titreşimli uyarılar, özelleştirilebilir ekran seçenekleri ve yerleşik çok kullanıcılı takip.
 
-![image](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
+![image](../images/following_sugarpixel.png)
 
-![image](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
+![image](../images/following_sugarpixel_led_display.png)
 
 * SugarPixel, kullanıcının ihtiyaçlarına uygun olarak mg/dL ve mmol/L cinsinden birden fazla ekran seçeneği ve renk kodlu glikoz değerleri sunar.
 * Standart arayüz KŞ, eğilim oku ve Delta'yı gösterir. Delta, son ölçümden bu yana olan + veya - değişimdir.
