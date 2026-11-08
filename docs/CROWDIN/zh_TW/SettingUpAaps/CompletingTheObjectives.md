@@ -46,7 +46,7 @@
 
 **目標 2**需要完成幾項「任務」，如下方螢幕截圖所示。每項任務都會顯示其狀態（**1**）：橘色的「**尚未完成**」會在**AAPS**記錄到您已執行該操作後，立即變成「**已完成，做得好！**」。如果您還不熟悉某項操作，請點選任務下方的**提示**（**2**），開啟相關說明文件。
 
-![目標 2 的截圖](../images/Objective2_V2_5.png)
+![目標 2 的截圖](../images/objectives/Objective2_V2_5.png)
 
 完成**目標 2**的任務為：
 - 將你的**設定檔**設為90%，持續10分鐘。
@@ -96,7 +96,7 @@
 
 為減少在開放循環中所提出的基礎率變更數，你仍可以使用[**目標 3**](#objectives-objective3)中所述的技巧。此外，您也可以在**設定 → 循環**中，透過「**開放模式最小變更量**」設定，調整建議基礎率變更的最低百分比。數值越高，你會收到的變更通知就越少。
 
-![開放循環最小請求變更](../images/OpenLoop_MinimalRequestChange2.png)
+![開放循環最小請求變更](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@
 
 - 若你的 IOB 為負值（請見下方螢幕截圖），則可在 **目標 6** 中觸發高於 100% 的臨時基礎率（TBR）。
 
-![例子：負IOB](../images/Objective6_negIOB.png)
+![例子：負IOB](../images/objectives/Objective6_negIOB.png)
 
 - 將你的目標範圍設置得比平常略高，以增加安全緩衝。
 - 按下主畫面上的循環圖示，並選擇**低血糖停幫浦**作為執行模式，即可啟用「低血糖停幫浦」模式。
@@ -245,6 +245,6 @@
 
 如果您因任何原因想回到**目標**，請點選已完成的**目標**下方的「**更多**」，然後點選「**重設完成狀態**」：
 
-![返回目標](../images/Objective_ClearFinished.png)
+![返回目標](../images/objectives/Objective_ClearFinished.png)
 
 同樣地，您目前正在進行的**目標**也可以透過「**重設開始狀態**」重新開始。
