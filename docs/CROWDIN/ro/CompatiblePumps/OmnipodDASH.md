@@ -535,7 +535,7 @@ The [status row](#screens-sensor-level-battery) on the main screen shows the age
 
 **Pump battery** age is not reported: the battery and the insulin reservoir are built into each pod, and the battery always lasts longer than the pod itself (maximum 80 hours).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note
