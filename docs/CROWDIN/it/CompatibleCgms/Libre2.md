@@ -63,7 +63,7 @@ Technically, the current blood sugar value is transmitted to xDrip every minute.
 
 → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+![xDrip advanced settings Libre 2 & raw values](../images/libre3/xDrip_Libre3_Smooth.png)
 
 This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip graph in order to be able to react in time to rapid changes. Attiva Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" e "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
 
