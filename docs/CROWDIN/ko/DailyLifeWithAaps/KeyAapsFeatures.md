@@ -8,7 +8,7 @@
 
 루프 모드를 선택하는 방법과 그림의 다른 아이콘(4~6)에 대한 정보는 [AAPS 화면 > 메인 화면 > 루프 상태](#AapsScreens-loop-status)를 참조하십시오.
 
-![루프 상태](../images/Home2020_LoopStatus.png)
+![루프 상태](../images/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ Autosens는 혈당 편차(양수/음수/중립)를 살펴봅니다. 이 편차�
 
 민감도 감지로 목표가 수정되면 메인 화면에 녹색 배경으로 표시됩니다.
 
-![autosens로 수정된 목표](../images/Home2020_DynamicTargetAdjustment.png)
+![autosens로 수정된 목표](../images/main_target_modified_by_autosens.png)
 
 이 설정은 "동적 민감도 사용" 또는 "Autosens 사용" 중 하나가 활성화되어 있을 때 사용할 수 있습니다.
 
