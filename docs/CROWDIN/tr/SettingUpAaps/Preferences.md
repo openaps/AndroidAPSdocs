@@ -91,6 +91,8 @@ Açık tema, koyu tema veya telefonun sistem ayarını izleme arasında seçim y
 
 2.7 sürümünden beri ayarlar şifrelendiği için [ayarları dışa aktarabilmek](../Maintenance/ExportImportSettings.md) için zorunludur.
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **Biometric protection may not work on OnePlus phones. Bu, bazı OnePlus telefonlarında bilinen bir sorundur.**
 
 ![Ana parola tanımlama](../images/preferences/master_password_dialog.png)
