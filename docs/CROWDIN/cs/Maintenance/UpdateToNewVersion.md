@@ -40,4 +40,4 @@ Po instalaci nového APK:
 - ujistěte se, že jste importovali svá nastavení; a
 - zkontrolujte své nastavení **AAPS** v **Nastavení** a ujistěte se, že je stále správné.
 
-![Dialog O aplikaci s nainstalovanou verzí AAPS](../images/about_dialog_version.png)
+![Dialog O aplikaci s nainstalovanou verzí AAPS](../images/update/about_dialog_version.png)
