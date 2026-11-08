@@ -74,7 +74,7 @@ Zunächst musst du natürlich dieselbe Notfall-Ausrüstung mitnehmen wie jeder a
   * die aktuelle [APK](../SettingUpAaps/BuildingAaps.md) von AAPS und von allen anderen Apps, die Du nutzt (z. B. xDrip, Juggluco, BYODA),
   * Deine Keystore-Datei (vom Erstellen der APK) und ihr Passwort,
   * Deine neuesten Einstellungs-Exportdateien von AAPS und Deinen anderen Apps,
-  * Dein **AAPS**-Master-Passwort: Ohne es kannst Du die Einstellungsdatei nicht importieren.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ Wenn Du Dein Master-Passwort vergessen hast, kannst Du es auf die Seriennummer D
 
 1. Lege eine leere Datei namens `PasswordReset` (ohne Dateiendung) im Unterordner `extra` Deines AAPS-Verzeichnisses an (meist `AAPS/extra`).
 2. Starte **AAPS** neu. Deine Pumpe muss verbunden sein: **AAPS** zeigt „Warte auf Pumpe…“ und muss die Seriennummer der Pumpe innerhalb von 30 Sekunden auslesen.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. **AAPS** zeigt „Passwort festgelegt!“: Dein Master-Passwort ist jetzt die **Seriennummer Deiner Pumpe**. Die Datei `PasswordReset` wird automatisch gelöscht.
+
 4. Öffne **Einstellungen** > **Zugriffsschutz** > **Master-Passwort** und lege ein neues Passwort fest.
 
 Wird die Pumpe nicht rechtzeitig erreicht, ändert sich nichts: Prüfe die Verbindung zur Pumpe und versuche es erneut.
