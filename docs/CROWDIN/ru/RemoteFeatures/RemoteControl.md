@@ -134,21 +134,21 @@ Remote control through **AAPSClient** is only recommended if your synchronizatio
 
 После установки приложения **Nightscout** на iPhone, откройте приложение и следуйте инструкциям настройки, введя адрес Nightscout (см. ниже, слева). Форма может быть разной, в зависимости от провайдера хостинга. (_например_ http://адресвашегосайта.herokuapp.com). Затем введите Nightscout API secret (см. ниже, справа). Если API-пароль не запрошен, то нужно ввести его, нажав на замок в верхней части приложения:
 
-![изображение](../images/remote-control-24.png)
+![изображение](../images/remote_control_and_following/remote-control-24.png)
 
 Дополнительная информация об установке доступна непосредственно на ресурсе [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
 When you first log in, you will have a very simple display. Customize the display options, by selecting the “hamburger” in the top right and scrolling down:
 
-![изображение](../images/remote-control-25.png)
+![изображение](../images/remote_control_and_following/remote-control-25.png)
 
 Прокрутите вниз до «Настройки». "Масштаб" можно заменить на "линейный" т. к. по умолчанию он логарифмический, и в строке «отображать базал» выберите «по умолчанию», чтобы появился график базала.
 
-![изображение](../images/remote-control-25b.png)
+![изображение](../images/remote_control_and_following/remote-control-25b.png)
 
 Select your desired options. Uncheck alarms if you use an alternative app for alarms.
 
-![изображение](../images/remote-control-26.png)
+![изображение](../images/remote_control_and_following/remote-control-26.png)
 
 Продолжайте прокручивать вниз до «показать расширения (плагины)».
 
@@ -156,7 +156,7 @@ Select your desired options. Uncheck alarms if you use an alternative app for al
 
 Не забудьте, это важно, чтобы эти изменения вступили в силу, нажать кнопку «сохранить» в нижней части.
 
-![изображение](../images/remote-control-27.png)
+![изображение](../images/remote_control_and_following/remote-control-27.png)
 
 После нажатия «сохранить» приложение вернется на главный экран Nightscout и будет выглядеть примерно так:
 
@@ -170,7 +170,7 @@ Select your desired options. Uncheck alarms if you use an alternative app for al
 8. Basal insulin profile
 9. Green line = historical glucose Blue lines = predicted glucose
 
-![изображение](../images/remote-control-28.png)
+![изображение](../images/remote_control_and_following/remote-control-28.png)
 
 В верхнем левом меню приложения Nightscout вы найдете дополнительную информацию:
 
@@ -179,7 +179,7 @@ Select your desired options. Uncheck alarms if you use an alternative app for al
 3. Hamburger - for setting preferences
 4. Careportal - Log treatment (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies these)
 
-![Nightscout top bar](../images/remote-control-29.png)
+![Nightscout top bar](../images/remote_control_and_following/remote-control-29.png)
 
 На серых вкладках огромное количество информации о состоянии системы **AAPS** (и еще больше информации если щелкуть по вкладкам):
 
@@ -195,9 +195,9 @@ Select your desired options. Uncheck alarms if you use an alternative app for al
 10. Battery status of AAPS phone
 11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
 
-![изображение](../images/remote-control-30.png)
+![изображение](../images/remote_control_and_following/remote-control-30.png)
 
-![изображение](../images/remote-control-31.png)
+![изображение](../images/remote_control_and_following/remote-control-31.png)
 
 Press "refresh" at the bottom of the page to close the popup.
 
@@ -233,7 +233,7 @@ If **Allow client control** is off in **Manage → Authorized clients** (and Sim
 
 ### Option 1) Controlling AAPS from a Wear OS Watch
 
-![Wear Remote 1](../images/Wear_Remote1.png)
+![Wear Remote 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 Once you have [setup **AAPS** on your watch](../WearOS/BuildingAapsWearOS.md), extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
 
@@ -285,19 +285,19 @@ Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Wat
 
 ### Вариант 3) AAPS на смарт-часах, для дистанционного управления **AAPS** на телефоне
 
-![Wear Remote 2](../images/Wear_Remote2.png)
+![Wear Remote 2](../images/remote_control_and_following/Wear_Remote2.png)
 
 The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 To download the software, click on the watch app that matches the client app on the phone: **wear-aapsclient-release_**_version_ goes with **AAPSClient**, **wear-aapsclient2-release_**_version_ goes with **AAPSClient2** (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![изображение](../images/github_release_wear_aapsclient_apk.png)
+![изображение](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 Затем «сохранить как» и сохранить файл в удобном месте на компьютере:
 
 
-![изображение](../images/save_as_wear_aapsclient_apk.png)
+![изображение](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 
