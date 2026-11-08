@@ -210,7 +210,7 @@ De kolom *Verificatie* in de tabellen hieronder geeft aan of zo'n sterke verific
 
 | Commando             | Verificatie | Functie & *Antwoord*                                                                                 |
 | -------------------- | ----------- | ---------------------------------------------------------------------------------------------------- |
-| POMP                 | Nee         | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP                 | Nee         | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
 | PUMP DISCONNECT *30* | Ja          | Om de pomp *30* minuten los te koppelen                                                              |
 | PUMP CONNECT         | Ja          | Pomp opnieuw verbonden                                                                               |
 
