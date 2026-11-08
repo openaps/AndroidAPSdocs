@@ -191,7 +191,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
   网络上已有相关方法可帮助判断操作系统是 32 位还是 64 位——例如[此链接](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d)。
 
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Screenshot Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### 重新同步 Gradle
@@ -236,7 +236,7 @@ APK 已成功生成，可传输至手机安装。
 
 ## APK 安装失败
 
-![phone app not installed](../images/Update_AppNotInstalled.png)
+![phone app not installed](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * 确认已将"app-full-release.apk"传输至手机
 * This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
