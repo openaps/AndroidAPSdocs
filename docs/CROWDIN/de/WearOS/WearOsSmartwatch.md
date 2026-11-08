@@ -211,7 +211,7 @@ Auf der Smartwatch:
 
 Es erscheinen ein WLAN-Kopplungscode sowie IP-Adresse und Port:
 
-![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/ADB03.png)
+![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/watch_wifi_pairing_code.png)
 
 - Im Terminal: `adb pair ipaddress:port` z B. `adb pair 10.10.1.125:36299`
 - Du wirst nach dem Koppelungscode gefragt werden. Gib ihn ein.
