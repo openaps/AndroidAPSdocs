@@ -74,7 +74,7 @@ Você precisa levar o mesmo equipamento de emergência que qualquer outra pessoa
   * o [apk](../SettingUpAaps/BuildingAaps.md) atual do AAPS e de todos os outros apps que você usa (por exemplo, xDrip, Juggluco, BYODA).
   * o seu arquivo de keystore (da compilação do apk) e a senha dele,
   * os seus arquivos mais recentes de exportação de configurações do AAPS e dos seus outros apps,
-  * a sua senha mestra do **AAPS**: sem ela, você não consegue importar o arquivo de configurações.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ Se você esqueceu sua senha mestra, pode redefini-la para o número de série da
 
 1. Crie um arquivo vazio chamado `PasswordReset` (sem extensão de arquivo) na subpasta `extra` do seu diretório do AAPS (normalmente `AAPS/extra`).
 2. Reinicie o **AAPS**. Sua bomba precisa estar conectada: o **AAPS** mostra "Aguardando a bomba…" e precisa ler o número de série da bomba em até 30 segundos.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. O **AAPS** mostra "Senha foi definida!": sua senha mestra agora é o **número de série da bomba**. O arquivo `PasswordReset` é apagado automaticamente.
+
 4. Abra **Configurações** > **Proteção** > **Senha mestra** e defina uma nova senha.
 
 Se a bomba não for alcançada a tempo, nada muda: verifique a conexão com a bomba e tente de novo.

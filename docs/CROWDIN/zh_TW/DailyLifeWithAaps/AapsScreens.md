@@ -9,7 +9,7 @@
 
 ## 主畫面
 
-![主畫面](../images/Home_Homescreen.png)
+![主畫面](../images/main/Home_Homescreen.png)
 
 這是你打開**AAPS**後會看到的第一個螢幕，裡面包含了你每天所需的大部分資訊。
 
@@ -33,13 +33,13 @@
 * 紅色 = 低於範圍
 * 黃色 = 高於範圍
 
-![血糖圓圈顯示在目標範圍內，呈綠色](../images/Home_Delta.png) ![血糖圓圈顯示高於目標範圍，呈黃色](../images/Home_Delta_high.png) ![血糖圓圈顯示低於目標範圍，呈紅色](../images/Home_Delta_low.png)
+![血糖圓圈顯示在目標範圍內，呈綠色](../images/main/Home_Delta.png) ![血糖圓圈顯示高於目標範圍，呈黃色](../images/main/Home_Delta_high.png) ![血糖圓圈顯示低於目標範圍，呈紅色](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
 #### 循環狀態
 
-![循環狀態](../images/Home2020_LoopStatus.png)
+![循環狀態](../images/main/main_loop_status.png)
 
 血糖圓圈旁的圖示會顯示循環的運作模式（由上至下，如圖所示）：
 
@@ -166,7 +166,7 @@
 
 若要**變更設定檔百分比**（以及持續時間），請點選設定檔名稱，再點選設定檔畫面右下角的圓形 **▶**（啟動）按鈕。在 **AAPS** 3.x 中，長按設定檔名稱會開啟此畫面；在 **AAPS** 4 中，長按則不會有任何作用。操作步驟：[變更設定檔百分比](#ProfileSwitch-change-percentage)。
 
-![目前有設定檔切換正在執行的設定檔](../images/Home2020_ProfileSwitch.png)
+![目前有設定檔切換正在執行的設定檔](../images/main/main_profile_switch.png)
 
 1. 平時顯示已啟用的標準設定檔。
 2. 設定檔切換：指定百分比為 90%，剩餘時間為 9 分鐘。臨時設定檔切換執行期間，設定檔名稱會變成黃色。
@@ -174,7 +174,7 @@
 
 #### 目標
 
-![臨時目標剩餘時間](../images/Home2020_TT.png)
+![臨時目標剩餘時間](../images/main/main_temp_target.png)
 
 目前的目標血糖值會顯示在設定檔名稱下方。
 
@@ -200,7 +200,7 @@
 
 #### IOB、COB、基礎胰島素與敏感度
 
-![IOB、COB、基礎胰島素與敏感度](../images/Home2020_TBR.png)
+![IOB、COB、基礎胰島素與敏感度](../images/main/main_iob_cob_basal_sensitivity.png)
 
 1. **注射器**：體內胰島素（IOB）－體內仍有作用的胰島素量  
     如果只有標準基礎胰島素持續輸注，且之前的注射沒有剩餘胰島素，體內胰島素數值就會是零。 
@@ -234,7 +234,7 @@
 
 ### 區段 C - 狀態列
 
-![狀態列](../images/Home2020_StatusLights.png)
+![狀態列](../images/main/main_status_row.png)
 
 狀態列會以視覺提示警示以下項目：
 
@@ -320,7 +320,7 @@
 
 按下圖表右上角的**鉛筆**圖示，即可開啟圖表設定：
 
-![主圖表設置](../images/Home2020_MainGraphSetting.png)
+![主圖表設置](../images/main/main_graph_settings.png)
 
 * **圖表高度**會調整圖表繪製的高度。
 * **ACT**會疊加胰島素作用曲線：一條實線黃綠色曲線 <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span>（請勿與黃色虛線 UAM 預測混淆）
@@ -408,7 +408,7 @@ AAPS 不會只根據目前的血糖值決定胰島素劑量；每次循環（約
 
 如要設定其他圖表，請按一下圖表右上角的**鉛筆**圖示：
 
-![其他圖表設置](../images/Home2020_AdditionalGraphSetting.png)
+![其他圖表設置](../images/main/main_additional_graph_settings.png)
 
 選取要在圖表中顯示的資料項目；按一下**移除**按鈕即可刪除圖表。
 
@@ -490,7 +490,7 @@ SMB 會以藍色三角形顯示在此圖表上，並依照與當天最大 SMB �
 
 ### F 節 — 快速啟動工具列
 
-![快速啟動工具列](../images/Home2020_Buttons.png)
+![快速啟動工具列](../images/main/main_quicklaunch_toolbar.png)
 
 螢幕底部的浮動工具列可讓您使用**[快速啟動](../DailyLifeWithAaps/QuickLaunch.md)**操作。小型**齒輪**圖示會開啟快速啟動設定，讓您選擇要顯示哪些按鈕（治療、照護入口項目、CGM 操作、**管理**工作表中的畫面、[快速嚮導](../DailyLifeWithAaps/QuickWizards.md)按鈕、[情境](../DailyLifeWithAaps/Scenes.md)等）。
 
@@ -502,7 +502,7 @@ SMB 會以藍色三角形顯示在此圖表上，並依照與當天最大 SMB �
 
 #### 胰島素
 
-![胰島素對話方塊](../images/Home2020_ButtonInsulin.png)
+![胰島素對話方塊](../images/v4/Screens/insulin_dialog.png)
 
 要在不使用[注射計算器](#aaps-screens-bolus-wizard)的情況下給予特定的胰島素量。
 
@@ -520,7 +520,7 @@ SMB 會以藍色三角形顯示在此圖表上，並依照與當天最大 SMB �
 
 #### 碳水化合物
 
-![碳水化合物對話方塊](../images/Home2020_ButtonCarbs.png)
+![碳水化合物對話方塊](../images/v4/Screens/carbs_dialog.png)
 
 紀錄碳水化合物而不進行注射。
 
@@ -574,7 +574,7 @@ SMB 會以藍色三角形顯示在此圖表上，並依照與當天最大 SMB �
 
 ## 注射嚮導
 
-![注射嚮導](../images/Home2020_BolusWizard_v2.png)
+![注射嚮導](../images/v4/Screens/bolus_wizard.png)
 
 當你想要進行餐前注射時，通常會從此處發起。
 
@@ -618,7 +618,7 @@ SMB 會以藍色三角形顯示在此圖表上，並依照與當天最大 SMB �
 
 **設定鬧鐘**（用餐提醒）：輸入未來的碳水化合物時間後，畫面會出現「**設定鬧鐘**」開關，提醒您在指定時間食用輸入至 **AAPS** 的碳水化合物：
 
-![為未來的碳水化合物設定鬧鐘](../images/Home2021_BolusWizard_EatingReminder.png)
+![為未來的碳水化合物設定鬧鐘](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
 注射完成後，提醒便會開始倒數。倒數期間，主畫面會顯示 **用餐時間** 欄位，並開始倒數，欄位中有 **停止** 和 **+5 分鐘** 按鈕。 **+5 分鐘** 會將等待結束時間延後 5 分鐘，而欄位會顯示總等待時間。時間到時，提醒會以專屬的柔和廚房計時器鈴聲響起。除了 **將警示設為靜音**（畫面會保持開啟）和 **設為靜音並關閉**，警示畫面也提供 **+5 分鐘**，可重新開始 5 分鐘的倒數。鈴聲響起後，欄位會顯示 *時間到了*，並提供 **+5 分鐘** 和 **關閉** 按鈕；按下 **設為靜音並關閉** 也會移除欄位。這個欄位和警示也會顯示在 **AAPSClient** 和[手錶](#WearOsSmartwatch-wizard-carb-time)上。這項提醒不會在手機的時鐘應用程式中建立計時器。如果 Android 不允許 **AAPS** 設定鬧鐘，嚮導會請您前往 Android 設定，允許 **AAPS** 使用*鬧鐘和提醒*功能。過去的用餐時間不會提供鈴聲提醒。
 
@@ -640,7 +640,7 @@ SMB 會以藍色三角形顯示在此圖表上，並依照與當天最大 SMB �
 
 #### 錯誤的 COB 偵測
 
-![碳水化合物吸收緩慢](../images/Calculator_SlowCarbAbsorption.png)
+![碳水化合物吸收緩慢](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 如果你在使用注射嚮導後看到上述警告，**AAPS** 已檢測到計算的 COB 值可能是錯誤的。因此，如果你想在之前的進食後再次注射 COB，你應該小心注射過量！
 
@@ -719,7 +719,7 @@ SMB 會以藍色三角形顯示在此圖表上，並依照與當天最大 SMB �
 
 ## 設定檔
 
-![設定檔](../images/Screenshots_Profile.png)
+![設定檔](../images/screens/Screenshots_Profile.png)
 
 **Manage → 設定檔**（或點選主畫面上的設定檔名稱）會開啟設定檔畫面：您的設定檔會以可滑動切換的卡片輪播方式呈現，並提供新增、編輯、複製、刪除及**啟用**設定檔的按鈕。
 
@@ -733,7 +733,7 @@ SMB 會以藍色三角形顯示在此圖表上，並依照與當天最大 SMB �
 
 ## NSClient
 
-![NSClient](../images/Screenshots_NSClient.png)
+![NSClient](../images/screens/Screenshots_NSClient.png)
 
 **Configuration → Communication → NSClientV3 → Open plugin**會顯示與 Nightscout 網站的連線狀態：網址、WebSocket 狀態、佇列，以及同步活動記錄。
 
@@ -745,7 +745,7 @@ SMB 會以藍色三角形顯示在此圖表上，並依照與當天最大 SMB �
 
 ## 血糖來源 - xDrip、BYODA……
 
-![血糖來源畫面](../images/Screenshots_BGSource.png)
+![血糖來源畫面](../images/screens/Screenshots_BGSource.png)
 
 **Configuration → BG Source → Open plugin**會顯示 CGM 讀取值的歷史紀錄，並可在讀取值異常（例如壓迫性低血糖）或重複時將其移除。
 

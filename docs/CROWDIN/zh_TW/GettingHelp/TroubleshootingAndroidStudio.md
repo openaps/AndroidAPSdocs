@@ -190,7 +190,7 @@ git config --global user.email 你的email@xxx.com
 
   網路上有關於如何判斷您是否擁有 32 位或 64 位作業系統的資訊 - 例如 [這個](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d)。
 
-  ![無法啟動守護進程的截圖](../images/AndroidStudioWin10_32bitError.png)
+  ![無法啟動守護進程的截圖](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Gradle 重新同步
@@ -235,7 +235,7 @@ git config --global user.email 你的email@xxx.com
 
 ## Apk 未安裝
 
-![未安裝手機應用程式](../images/Update_AppNotInstalled.png)
+![未安裝手機應用程式](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * 請確保你已將 "app-full-release.apk" 文件傳輸到你的手機。
 * 這通常表示新 APK 使用的金鑰庫與目前安裝的 **AAPS** 不同。如果您仍保有先前的金鑰庫，請選取該金鑰庫，然後重新建置。否則，請參閱[使用新金鑰庫重新安裝 AAPS](#reinstall-aaps)。

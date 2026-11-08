@@ -21,7 +21,7 @@
 
 - 解除安裝 **AAPS** 會刪除所有設定、您的[目標](../SettingUpAaps/CompletingTheObjectives.md)，以及目前的幫浦連線。您可以匯入**設定檔**來還原這些內容，因此請確認您有近期的設定檔。
 - 設定檔不包含您的治療和血糖歷史記錄。如果您有上傳資料到 [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md)，重新安裝後即可將資料載回（步驟 8）。
-- 您需要[**主密碼**](#Preferences-master-password)：設定檔是使用該密碼加密的。
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Omnipod 和 Medtrum 使用者：**請先閱讀[無管路幫浦](#ExportImportSettings-tubeless-pumps)。您的設定檔必須是在您目前佩戴的 pod 或貼片使用期間匯出的。
 - 如有需要，請在開始前[設定 CGM/血糖來源接收器](../Getting-Started/CompatiblesCgms.md)。
 

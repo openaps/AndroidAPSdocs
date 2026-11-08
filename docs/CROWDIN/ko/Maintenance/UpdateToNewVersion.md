@@ -40,4 +40,4 @@
 - 설정을 가져왔는지 확인하십시오.
 - **설정**에서 **AAPS** 설정을 확인하고 설정이 그대로 정확한지 확인하십시오.
 
-![설치된 AAPS 버전이 표시된 정보 대화 상자](../images/about_dialog_version.png)
+![설치된 AAPS 버전이 표시된 정보 대화 상자](../images/update/about_dialog_version.png)

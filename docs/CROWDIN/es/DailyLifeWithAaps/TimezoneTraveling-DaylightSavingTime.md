@@ -33,7 +33,7 @@ Para evitar esto, hay dos posibilidades:
    * Selecciona tu **Perfil** y toca **▶ Activar**
    * Ajusta el '**Desplazamiento de hora**' según tu destino y toca **Activar**.
    
-   ![Cambio de perfil con desplazamiento de hora](../images/ProfileSwitchTimeShift2.png)
+   ![Cambio de perfil con desplazamiento de hora](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * p. ej., Viena -> Nueva York: **Cambio de perfil** +6 horas
    * p. ej., Viena -> Sídney: **Cambio de perfil** -8 horas
@@ -118,14 +118,14 @@ Si usas la calculadora de **AAPS** para el bolo, no uses los datos de **COB** e 
    * Algunos teléfonos tienen dos ajustes: uno para ajustar la hora automáticamente (lo ideal es dejarlo activado) y otro para ajustar la zona horaria automáticamente (debes DESACTIVARLO: **Set automatically** («Establecer automáticamente») en **Time zone** («Zona horaria») en la captura de abajo).
    * Por desgracia, algunas versiones de Android tienen un solo interruptor para ajustar automáticamente tanto la hora como la zona horaria. Por ahora tendrás que desactivarlo.
 
-![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
+![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
 2. Busca una zona horaria que tenga la misma hora que tu ubicación actual, pero que no use horario de verano.
    
    * Hay una lista de estos países en [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Para la hora de Europa Central (CET) podría ser "Brazzaville" (Congo). Cambia la zona horaria del teléfono a Congo.
 
-![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
+![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
 3. En **AAPS**, actualiza la bomba y cambia al **Perfil** que quieras.
 

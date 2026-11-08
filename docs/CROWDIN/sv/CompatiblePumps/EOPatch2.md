@@ -89,7 +89,7 @@ När du hör pipet trycker du på **Påbörja parkoppling**.
 - Du måste aktivera podden färdigt inom 60 minuter efter att den har startat. Om du inte hinner det, kassera podden.
 ```
 
-![Steget Parkoppling](../images/EOPatch/Bild6.png) ![Första förfrågan om Bluetooth-parkoppling](../images/EOPatch/Bild7.png) ![Andra förfrågan om Bluetooth-parkoppling med koden](../images/EOPatch/Bild8.png)
+![Steget Parkoppling](../images/EOPatch/eopatch_pairing.png) ![Första förfrågan om Bluetooth-parkoppling](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Andra förfrågan om Bluetooth-parkoppling med koden](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@ Ta bort skyddstejpen från podden och tryck sedan på **Nästa**.
 
 Om en nål sticker ut, eller om podden är blöt, smutsig eller tejpen är vikt, tryck i stället på **Kassera** och använd en ny pod.
 
-![Steget Förbered för att sätta fast podden](../images/EOPatch/Bild9.png)
+![Steget Förbered för att sätta fast podden](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Plats
 
@@ -123,7 +123,7 @@ Kontrollera infusionsstället och tryck sedan på **Starta säkerhetskontroll**.
 - Om podden inte fäster helt kan luft komma in mellan podden och huden. Det försämrar fästet och poddens vattentålighet.
 ```
 
-![Steget Sätta fast podden](../images/EOPatch/Bild10.png)
+![Steget Sätta fast podden](../images/EOPatch/eopatch_attaching.png)
 
 ### Säkerhetskontroll
 
@@ -133,7 +133,7 @@ Säkerhetskontrollen tar cirka 30 sekunder. När den är klar piper podden en g�
 För säker användning: vrid inte nålspaken förrän säkerhetskontrollen är klar.
 ```
 
-![Steget Sätta fast podden med knappen Starta säkerhetskontroll](../images/EOPatch/Bild11.png) ![Säkerhetskontroll pågår](../images/EOPatch/Bild12.png)
+![Steget Sätta fast podden med knappen Starta säkerhetskontroll](../images/EOPatch/eopatch_start_safety_check.png) ![Säkerhetskontroll pågår](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@ Därefter går guiden direkt vidare till att aktivera en ny pod (se ovan). Tryck
 
 När ingen pod är aktiv visar **AAPS** pumpen som pausad och registrerar en tillfällig basal på 0 U/h. Därför räknas inget basalinsulin in i IOB förrän nästa pod har aktiverats.
 
-![Pumpskärmen för EOPatch2 med knappen DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Sidan Kassera pod](../images/EOPatch/Bild14.png) ![Dialogrutan för att bekräfta Kassera pod](../images/EOPatch/Bild15.png) ![Kassering av podden är slutförd](../images/EOPatch/Bild16.png)
+![Pumpskärmen för EOPatch2 med knappen DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![Sidan Kassera pod](../images/EOPatch/eopatch_discard_patch.png) ![Dialogrutan för att bekräfta Kassera pod](../images/EOPatch/eopatch_discard_confirm.png) ![Kassering av podden är slutförd](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@ När du pausar insulinleveransen avbryts också en pågående förlängd bolus o
 
 Insulinleveransen pausas under den tid du valde.
 
-![Pumpskärmen för EOPatch2 med knappen SUSPEND](../images/EOPatch/Bild17.png) ![Dialogrutan för att bekräfta paus](../images/EOPatch/Bild18.png) ![Dialogrutan Tid för basalpaus](../images/EOPatch/Bild19.png)
+![Pumpskärmen för EOPatch2 med knappen SUSPEND](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Dialogrutan för att bekräfta paus](../images/EOPatch/eopatch_suspend_confirm.png) ![Dialogrutan Tid för basalpaus](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@ Skärmbilderna ovan är från en tidigare version av **AAPS**. I **AAPS** 4 öpp
 1. Öppna pumpskärmen (**Hantera** → **Pump**) och tryck på **Återuppta pump**.
 1. Tryck på **Bekräfta** i dialogrutan **Återuppta insulinleverans**.
 
-![Pumpskärmen för EOPatch2 med knappen RESUME](../images/EOPatch/Bild20.png) ![Dialogrutan Återuppta insulinleverans](../images/EOPatch/Bild21.png)
+![Pumpskärmen för EOPatch2 med knappen RESUME](../images/EOPatch/eopatch_pump_screen_resume.png) ![Dialogrutan Återuppta insulinleverans](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@ Larm gäller brådskande situationer med högsta prioritet och kräver att du ag
 
 När du trycker på **Bekräfta** i aviseringen hanterar **AAPS** larmet. För de flesta larm inaktiveras podden då. För larmet **Olämplig temperatur** heter knappen **Försök igen**.
 
-![Larm från EOPatch2](../images/EOPatch/Bild22.png) ![Larm från EOPatch2 efter att podden har inaktiverats](../images/EOPatch/Bild23.png)
+![Larm från EOPatch2](../images/EOPatch/eopatch_alarm.png) ![Larm från EOPatch2 efter att podden har inaktiverats](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@ De olika larmen förklaras nedan.
 
 Varningar gäller situationer med medelhög eller låg prioritet. En varning visas som en avisering på **huvudskärmen**.
 
-![Varning från EOPatch2 som visas på huvudskärmen](../images/EOPatch/Bild24.png)
+![Varning från EOPatch2 som visas på huvudskärmen](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

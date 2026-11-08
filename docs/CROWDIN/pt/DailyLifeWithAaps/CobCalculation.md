@@ -84,7 +84,7 @@ Se os hidratos de carbono foram sobrestimados ou subestimados, isto pode ser cor
 
 O ecrã **Histórico de tratamentos** pode ser usado para corrigir um registo de hidratos de carbono errado, eliminando-o. Isto pode acontecer porque o utilizador sobrestimou ou subestimou os hidratos de carbono introduzidos:
 
-![Eliminar um registo de hidratos de carbono do Histórico de tratamentos](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Eliminar um registo de hidratos de carbono do Histórico de tratamentos](../images/treatments_history_delete_carbs.png)
 
 1. Verifique e memorize os valores atuais de **HCA** e **IA** no ecrã principal do **AAPS**.
 2. Abra o **Histórico de tratamentos** (menu lateral → *Histórico de tratamentos*), separador **Hidratos e bólus**. Dependendo da bomba, os hidratos de carbono podem aparecer junto com a insulina numa só linha ou como um registo separado (por exemplo, com a Dana RS).

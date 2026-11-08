@@ -291,13 +291,13 @@ Laikrodžio programinę įrangą, **AAPSClient** Wear apk, galima atsisiųsti ti
 
 Norėdami atsisiųsti programinę įrangą, paspauskite laikrodžio programėlę, atitinkančią kliento programėlę telefone: **wear-aapsclient-release_**_versija_ skirta **AAPSClient**, **wear-aapsclient2-release_**_versija_ skirta **AAPSClient2** (žr. [Apie AAPSClient, AAPSClient2 ir AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![image](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+![image](../images/github_release_wear_aapsclient_apk.png)
 
 
 Tada pasirinkite „save as“ (įrašyti kaip) ir įrašykite failą į patogią vietą kompiuteryje:
 
 
-![image](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+![image](../images/save_as_wear_aapsclient_apk.png)
 
 
 

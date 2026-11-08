@@ -21,7 +21,7 @@
 
 - **AAPS**를 삭제하면 모든 설정, [목표](../SettingUpAaps/CompletingTheObjectives.md), 현재 펌프 연결이 삭제됩니다. **설정 파일**을 가져오면 이것들을 되찾을 수 있으므로 최근 설정 파일이 있는지 확인하십시오.
 - 설정 파일에는 처치 이력과 혈당 이력이 들어 있지 않습니다. [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md)에 업로드하고 있다면 재설치 후에 이 이력을 다시 불러올 수 있습니다(8단계).
-- [**마스터 비밀번호**](#Preferences-master-password)가 필요합니다. 설정 파일은 이 비밀번호로 암호화됩니다.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Omnipod 및 Medtrum 사용자:** 먼저 [튜브 없는 펌프](#ExportImportSettings-tubeless-pumps)를 읽으십시오. 설정 파일은 지금 착용하고 있는 Pod 또는 패치를 사용하는 동안 내보낸 것이어야 합니다.
 - 필요하면 시작하기 전에 [CGM/혈당 출처 수신 앱을 설정](../Getting-Started/CompatiblesCgms.md)하십시오.
 

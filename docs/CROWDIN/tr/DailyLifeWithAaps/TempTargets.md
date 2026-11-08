@@ -23,7 +23,7 @@ Aşağıdaki bölümler **Geçici Hedef Aktivite**, **Geçici Hedef Yakında Yen
 
 ### GH - Aktivite
 
-![GH Aktivite](../images/TempTarget2.png)
+![GH Aktivite](../images/v4/TempTarget/TempTarget2.png)
 
 **KŞ hedefi (varsayılan ön ayar, değiştirilebilir)**
 
@@ -46,7 +46,7 @@ Kullanıcılar şunları da düşünebilir:
 
 ### GH - Yakında Yenecek
 
-![GH Yakında Yenecek](../images/TempTarget1.png)
+![GH Yakında Yenecek](../images/v4/TempTarget/TempTarget1.png)
 
 **KŞ hedefi (varsayılan ön ayar, değiştirilebilir)**
 
@@ -63,7 +63,7 @@ Kapalı döngü modunda **SMB**:
 
 ### GH - Hipo
 
-![GH Hipo](../images/TempTarget3.png)
+![GH Hipo](../images/v4/TempTarget/TempTarget3.png)
 
 **KŞ hedefi (varsayılan ön ayar, değiştirilebilir)**
 
@@ -96,11 +96,11 @@ Bir ön ayar kartını seçmek, onun **hedefini** ve **süresini** düzenleyiciy
 
     <br />### Geçici hedefi etkinleştirme
     
-    İstediğiniz ön ayara kaydırın (değerleri düzenleyiciye yüklenir), isterseniz düzenleyicide **hedefi**/**süreyi** değiştirin, sonra **▶ Etkinleştir** düğmesine dokunun. Herhangi bir şey başlamadan önce bir onay tam hedefi, süreyi ve nedeni gösterir:
+    İstediğiniz ön ayara kaydırın (değerleri düzenleyiciye yüklenir), isterseniz düzenleyicide **hedefi**/**süreyi** değiştirin, sonra **▶ Etkinleştir** düğmesine dokunun. A confirmation shows the exact target, duration and reason before anything starts:
     
-    ![Etkinleştirme onayı](../images/TempTarget8.png)
+    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    Onayladıktan sonra geçici hedef hemen (veya seçilen **Etkinleştirme** zamanında) başlar ve ayarlanan **süre** boyunca çalışır.
+    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
     ```{admonition} Sayıları düzenlemek tek seferliktir — ön ayarı değiştirmez
     :class: important
@@ -148,13 +148,13 @@ Geçici hedef bu ekranı açmadan da ayarlanabilir:
 
 En hızlı yol, ana ekrandaki **hedef çipine** dokunmaktır (çip mevcut hedef aralığınızı gösterir):
 
-![Ana ekrandaki hedef çipi](../images/TempTarget6.png)
+![Ana ekrandaki hedef çipi](../images/v4/TempTarget/TempTarget6.png)
 
 Bu, yukarıda anlatılan **Geçici Hedef** ekranını açar — bir ön ayara kaydırın ve **▶ Etkinleştir** düğmesine dokunun. Aynı ekrana **Yönet** → **Geçici Hedef** yoluyla da ulaşılabilir.
 
 (TempTargets-carbs-dialog)= Karbonhidrat girerken **Geçici Hedef** ekranını açmanıza hiç gerek yoktur: **Karbonhidrat iletişim kutusunun** (**Tedaviler** → **Karbonhidrat**) üstünde **Hipo GH başlat**, **Yakında Yenecek GH başlat** ve **Aktivite GH başlat** anahtarları vardır. Birini açın; ilgili ön ayar, karbonhidrat girişiyle birlikte etkinleştirilir:
 
-![Karbonhidrat iletişim kutusundaki GH anahtarları](../images/TempTarget5.png)
+![Karbonhidrat iletişim kutusundaki GH anahtarları](../images/v4/TempTarget/TempTarget5.png)
 
     {admonition} Otomatik Hipo GH
     :class: note
@@ -171,7 +171,7 @@ Her ön ayarın **hedefi** ve **süresi** doğrudan **Geçici Hedef** ekranında
 3. Düzenleyicide **Geçici hedef** ve/veya **Süre** değerini ayarlayın.
 4. Üst araç çubuğunda görünen **Kaydet** simgesine dokunun.
 
-![Bir ön ayarı düzenleme — araç çubuğunda Kaydet simgesi, eylem çubuğunda Varsayılanlara dön](../images/TempTarget7.png)
+![Bir ön ayarı düzenleme — araç çubuğunda Kaydet simgesi, eylem çubuğunda Varsayılanlara dön](../images/v4/TempTarget/TempTarget7.png)
 
 Düzenleyici, yerleşik bir ön ayarın fabrika değerlerinden farklı olduğu sürece eylem çubuğunda bir **↺ Varsayılanlara dön** düğmesi de görünür — ön ayarın özgün hedefini ve süresini geri yüklemek için ona dokunun.
 
@@ -179,7 +179,7 @@ Düzenleyici, yerleşik bir ön ayarın fabrika değerlerinden farklı olduğu s
 
 Bir geçici hedef çalışırken, ana ekrandaki hedef çipi hedefi ve kalan süresini gösterir. Ona dokunun — **Geçici Hedef** ekranında çalışan ön ayar **AKTİF** olarak vurgulanır ve alttaki araç çubuğunun sonunda, **▶ Etkinleştir** düğmesinin hemen solunda kırmızı bir **✗ İptal** düğmesi görünür. Ona dokunun ve onaylayın:
 
-![Çalışan bir geçici hedefi iptal etme](../images/TempTarget9.png)
+![Çalışan bir geçici hedefi iptal etme](../images/v4/TempTarget/TempTarget9.png)
 
 Çalışan bir geçici hedef, bir **Wear OS saatinden**, eşleştirilmiş bir **istemciden** veya bir **Otomasyon** kuralıyla (*Geçici hedefi durdur*) da durdurulabilir.
 
@@ -231,6 +231,6 @@ Bu, ön bolus yapmayan kullanıcılar için önemli bir araç olabilir. Ancak **
 
 Bunu yapmak için **Ayarlar** → **OpenAPS SMB** yolunu açın ve *'Yüksek geçici hedefte SMB'yi etkinleştir'* seçeneğini kapatın.
 
-![Yüksek geçici hedefte SMB'yi etkinleştir tercihi](../images/TempTargetSMB.png)
+![Yüksek geçici hedefte SMB'yi etkinleştir tercihi](../images/v4/TempTarget/TempTargetSMB.png)
 
 Bu, AKRB > 0 olsa, *'Düşük geçici hedefle SMB'yi etkinleştir'* veya *'SMB'yi her zaman etkinleştir'* açık olsa ve OpenAPS SMB etkin olsa bile **AAPS**'in **SMB** vermemesini sağlar.

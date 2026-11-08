@@ -74,7 +74,7 @@ Su savimi turite turėti tas pačias pagalbos priemones kaip ir kiekvienas 1 tip
   * dabartinis AAPS ir kitų jūsų naudojamų programėlių (pvz., xDrip, Juggluco, BYODA) [apk](../SettingUpAaps/BuildingAaps.md),
   * jūsų raktų saugyklos failas (sukurtas kuriant apk) ir jo slaptažodis,
   * naujausi AAPS ir kitų programėlių nustatymų eksporto failai,
-  * jūsų **AAPS** pagrindinis slaptažodis: be jo negalėsite importuoti nustatymų failo.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ Jei pamiršote pagrindinį slaptažodį, galite jį pakeisti į pompos serijos n
 
 1. Sukurkite tuščią failą, pavadintą `PasswordReset` (be plėtinio), AAPS aplanko poaplankyje `extra` (dažniausiai `AAPS/extra`).
 2. Paleiskite **AAPS** iš naujo. Pompa turi būti prijungta: **AAPS** rodo "Laukiama pompos…" ir per 30 sekundžių turi nuskaityti pompos serijos numerį.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. **AAPS** rodo "Slaptažodis nustatytas!": jūsų pagrindinis slaptažodis dabar yra **pompos serijos numeris**. Failas `PasswordReset` ištrinamas automatiškai.
+
 4. Atidarykite **Nustatymai** > **Apsauga** > **Pagrindinis slaptažodis** ir nustatykite naują slaptažodį.
 
 Jei pompa laiku nepasiekiama, niekas nepasikeičia: patikrinkite ryšį su pompa ir bandykite dar kartą.

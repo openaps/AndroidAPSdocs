@@ -91,6 +91,8 @@ Välj mellan ljust tema, mörkt tema eller att följa telefonens systeminställn
 
 Krävs för att du ska kunna [exportera inställningar](../Maintenance/ExportImportSettings.md), eftersom de krypteras från och med version 2.7.
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **Biometriskt skydd kanske inte fungerar på OnePlus-telefoner. Detta är ett känt problem hos OnePlus på vissa telefoner.**
 
 ![Ange huvudlösenord](../images/preferences/master_password_dialog.png)
@@ -472,7 +474,19 @@ Inställningarna bör vara självförklarande.
 
 **Ignorera Stör ej-läge** (på som standard): larmen i **AAPS** ringer även när telefonen är ljudlös eller i Stör ej-läge. Stäng av den om **AAPS** ska respektera dessa lägen: då ringer larmen inte, och i Stör ej-läge vibrerar de bara, på telefonen och på klockan. Loopförslag som kommer under Stör ej-läge visas utan ljud.
 
-När ett larm ringer erbjuder larmskärmen **Tysta larm** (skärmen förblir öppen så att du kan läsa meddelandet) och **Tysta och stäng**. Om du sveper bort larmaviseringen i aviseringsfältet tystas larmet. När du öppnar **AAPS** senare visas ett larm som du inte har svarat på igen.
+When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Om du sveper bort larmaviseringen i aviseringsfältet tystas larmet. När du öppnar **AAPS** senare visas ett larm som du inte har svarat på igen.
+
+(preferences-alarm-sound-volume-vibration)=
+### Alarm sound, volume and vibration
+
+- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
+- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
+- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
+- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+
+![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+
+- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
 
 (preferences-maintenance-settings)=
 ## Underhållsinställningar

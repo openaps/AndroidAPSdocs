@@ -84,7 +84,7 @@ Si los carbohidratos se sobrestimaron o subestimaron, puedes corregirlo en la pa
 
 La pantalla **Historial de tratamientos** permite corregir una entrada de carbohidratos errónea borrándola. Puede deberse a que sobrestimaste o subestimaste los carbohidratos introducidos:
 
-![Borrar una entrada de carbohidratos del Historial de tratamientos](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Borrar una entrada de carbohidratos del Historial de tratamientos](../images/treatments_history_delete_carbs.png)
 
 1. Comprueba y recuerda los valores actuales de **COB** e **IOB** en la pantalla principal de **AAPS**.
 2. Abre **Historial de tratamientos** (menú lateral → *Historial de tratamientos*), pestaña **Carbohidratos y bolos**. Según la bomba, los carbohidratos pueden aparecer junto con la insulina en una sola línea o como una entrada aparte (por ejemplo, con Dana RS).

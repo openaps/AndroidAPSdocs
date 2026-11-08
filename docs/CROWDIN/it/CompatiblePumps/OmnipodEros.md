@@ -281,7 +281,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 La procedura qui sotto mostra come sospendere e riprendere l'erogazione di insulina.
 
-*NOTE - if you do not see a **Suspend** button*, it is hidden by default. Attiva **Mostra il tasto "Sospendi erogazione" nella schermata del micro** nelle [impostazioni Omnipod](#OmnipodEros-omnipod-settings), sotto **Altro**.
+*NOTE - if you do not see a **Suspend** button*, it is hidden by default. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Sospendere l'erogazione di insulina
 
@@ -591,7 +591,7 @@ The buttons at the bottom of the pump screen change depending on the situation. 
   Lo screenshot qui sopra è di una versione precedente di **AAPS**. In **AAPS** 4 this is a text button named **Set time** on the Omnipod pump screen.
   ```
 
-- **Sospendi:** sospende l'erogazione di insulina sul pod attivo. Compare solo se è attivato nelle impostazioni (**Mostra il tasto "Sospendi erogazione" nella schermata del micro**).
+- **Sospendi:** sospende l'erogazione di insulina sul pod attivo. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Provides AAPS notifications and audible phone alerts when it is uncertain if TBR
 
 Provides advanced settings to assist debugging.
 
-- **Mostra il tasto "Sospendi erogazione" nella schermata del micro:** nasconde o mostra il tasto **Sospendi** nella schermata del micro Omnipod.
+- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
 - **Show Pulse Log button in Pod Management menu:** This setting is still listed, but the current version of the pump screen has no **Pulse Log** button.
 
 - **Show RileyLink Stats button in Pod Management menu:** Hide or display the **RileyLink Stats** button on the Omnipod pump screen.

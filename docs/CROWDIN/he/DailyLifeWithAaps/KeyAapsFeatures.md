@@ -8,7 +8,7 @@ The loop status is shown on the main screen with one of the icons below.
 
 ראו [מסכי AAPS ← המסך הראשי ← מצב הלולאה](#AapsScreens-loop-status) למידע על בחירת מצב הלולאה ועל הסמלים האחרים בתמונה (4 עד 6).
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Loop status](../images/main/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ When enabled, new settings become available.
 
 אם היעד משתנה בגלל זיהוי הרגישות, הוא מוצג עם רקע ירוק במסך הראשי.
 
-![יעד ששונה על ידי autosens](../images/Home2020_DynamicTargetAdjustment.png)
+![יעד ששונה על ידי autosens](../images/main/main_target_modified_by_autosens.png)
 
 ההגדרה הזו זמינה כאשר "שימוש ברגישות דינמית" או "שימוש ב-Autosens" מופעלת.
 

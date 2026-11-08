@@ -23,7 +23,7 @@ The sections below summarize the features of **Temp-Target Activity**, **Temp-Ta
 
 ### OT - Actividad
 
-![Objetivo temporal "Actividad"](../images/TempTarget2.png)
+![Objetivo temporal "Actividad"](../images/v4/TempTarget/TempTarget2.png)
 
 **Objetivo de glucosa (preajuste predeterminado, ajustable)**
 
@@ -46,7 +46,7 @@ Los usuarios también pueden considerar:
 
 ### OT - Comiendo Pronto
 
-![OT Comiendo Pronto](../images/TempTarget1.png)
+![OT Comiendo Pronto](../images/v4/TempTarget/TempTarget1.png)
 
 **Objetivo de glucosa (preajuste predeterminado, ajustable)**
 
@@ -63,7 +63,7 @@ Según el nivel de **glucosa**, **AAPS** «aumentará» el uso de insulina, dent
 
 ### OT - Hipo
 
-![Objetivo temporal "Hipo"](../images/TempTarget3.png)
+![Objetivo temporal "Hipo"](../images/v4/TempTarget/TempTarget3.png)
 
 **Objetivo de glucosa (preajuste predeterminado, ajustable)**
 
@@ -96,11 +96,11 @@ Al elegir una tarjeta de preajuste, su **objetivo** y su **duración** se cargan
 
     <br />### Activar un objetivo temporal
     
-    Desliza hasta el preajuste que quieres (sus valores se cargan en el editor), si quieres ajusta el **objetivo**/la **duración** en el editor y luego toca **▶ Activar**. Una confirmación muestra el objetivo, la duración y el motivo exactos antes de que empiece nada:
+    Desliza hasta el preajuste que quieres (sus valores se cargan en el editor), si quieres ajusta el **objetivo**/la **duración** en el editor y luego toca **▶ Activar**. A confirmation shows the exact target, duration and reason before anything starts:
     
-    ![Confirmación de la activación](../images/TempTarget8.png)
+    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    Después de confirmar, el objetivo temporal empieza de inmediato (o a la hora de **Activación** elegida) y dura la **duración** indicada.
+    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
     ```{admonition} Editar los números es solo para una vez — no cambia el preajuste
     :class: important
@@ -148,13 +148,13 @@ También puedes poner un objetivo temporal sin abrir esta pantalla:
 
 La forma más rápida es tocar el **chip del objetivo** en la pantalla principal (muestra tu rango objetivo actual):
 
-![Chip del objetivo en la pantalla principal](../images/TempTarget6.png)
+![Chip del objetivo en la pantalla principal](../images/v4/TempTarget/TempTarget6.png)
 
 Así se abre la pantalla **Objetivo temporal** descrita arriba — desliza hasta un preajuste y toca **▶ Activar**. A la misma pantalla también se llega con **Administrar** → **Objetivo temporal**.
 
 (TempTargets-carbs-dialog)= Al introducir carbohidratos no hace falta abrir la pantalla **Objetivo temporal**: el **diálogo Carbohidratos** (**Tratamientos** → **Carbohidratos**) tiene arriba los interruptores **Iniciar OT Hipo**, **Iniciar OT Comiendo Pronto** e **Iniciar OT Actividad**. Activa uno y el preajuste correspondiente se activa junto con la entrada de carbohidratos:
 
-![Interruptores de OT en el diálogo Carbohidratos](../images/TempTarget5.png)
+![Interruptores de OT en el diálogo Carbohidratos](../images/v4/TempTarget/TempTarget5.png)
 
     {admonition} OT Hipo automático
     :class: note
@@ -171,7 +171,7 @@ El **objetivo** y la **duración** de cada preajuste se editan directamente en l
 3. Ajusta el **Objetivo temporal** y/o la **Duración** en el editor.
 4. Toca el icono **Guardar** que aparece en la barra superior.
 
-![Editar un preajuste — icono Guardar en la barra superior, Restablecer en la barra de acciones](../images/TempTarget7.png)
+![Editar un preajuste — icono Guardar en la barra superior, Restablecer en la barra de acciones](../images/v4/TempTarget/TempTarget7.png)
 
 Mientras el editor es distinto de los valores de fábrica de un preajuste incluido, también aparece un botón **↺ Restablecer** en la barra de acciones — tócalo para devolver el objetivo y la duración originales del preajuste.
 
@@ -179,7 +179,7 @@ Mientras el editor es distinto de los valores de fábrica de un preajuste inclui
 
 Mientras un objetivo temporal está en marcha, el chip del objetivo en la pantalla principal muestra el objetivo y el tiempo que le queda. Tócalo — en la pantalla **Objetivo temporal** el preajuste en marcha se resalta como **ACTIVO**, y aparece un botón rojo **✗ Cancelar** al final de la barra inferior, justo a la izquierda del botón **▶ Activar**. Tócalo y confirma:
 
-![Cancelar un objetivo temporal en marcha](../images/TempTarget9.png)
+![Cancelar un objetivo temporal en marcha](../images/v4/TempTarget/TempTarget9.png)
 
 Un objetivo temporal en marcha también se puede detener desde un **reloj Wear OS**, desde un **cliente** emparejado o con una regla de **Automatización** (*Detener objetivo temporal*).
 
@@ -231,6 +231,6 @@ Avanzado, [objetivo 9](#objectives-objective9): si usas OpenAPS SMB y tienes act
 
 Para hacerlo, abre **Ajustes** → **OpenAPS SMB** y desactiva *'Habilitar SMB con objetivo temporal elevado'*.
 
-![Preferencia Habilitar SMB con objetivo temporal elevado](../images/TempTargetSMB.png)
+![Preferencia Habilitar SMB con objetivo temporal elevado](../images/v4/TempTarget/TempTargetSMB.png)
 
 Así **AAPS** no dará **SMB**, aunque haya COB > 0, *'Habilitar SMB con objetivo temporal bajo'* o *'Habilitar SMB siempre'* activados y OpenAPS SMB activo.

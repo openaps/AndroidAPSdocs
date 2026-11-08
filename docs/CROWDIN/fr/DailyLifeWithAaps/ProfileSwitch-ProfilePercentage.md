@@ -22,7 +22,7 @@ Vous avez besoin d'au moins un **Profil** enregistré. Un **Pourcentage de profi
 
     <br />1. Sur l'écran principal, **appuyez sur le nom du profil** (à côté de l'icône étoile). L'[écran Profil](#ProfileSwitch-manage-v4) s'ouvre sur la carte du **Profil** en cours, marquée **ACTIF**.
     
-       ![Appuyez sur le nom du profil sur l'écran principal pour ouvrir l'écran Profil](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Pour garder le même **Profil**, laissez la carte **ACTIF** sélectionnée. Pour changer de **Profil** en même temps, faites glisser vers une autre carte.
     3. Appuyez sur le bouton rond **▶** (**Activer**) en bas à droite. L'écran **Activer** s'ouvre.
@@ -169,7 +169,7 @@ La question est toujours : les paramètres de quelle heure du **Profil** doiven
     - 22:00 **-10 h** -> 12:00
     - Les paramètres à partir de 22:00 seront utilisés à la place des paramètres normalement utilisés à 12:00 en raison du décalage horaire négatif.
 
-![Sens du décalage horaire dans un changement de profil](../images/ProfileSwitch_PlusMinus2.png)
+![Sens du décalage horaire dans un changement de profil](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 

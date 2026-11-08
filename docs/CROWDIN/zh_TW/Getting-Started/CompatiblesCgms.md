@@ -33,28 +33,28 @@
 * [xDrip 設定](../CompatibleCgms/xDrip.md)
 * [Nightscout 作為血糖資料來源](../CompatibleCgms/CgmNightscoutUpload.md): 儘管可以使用 Nightscout 作為閉環胰島素給藥的血糖資料來源，但**這種方法不推薦**，因為其依賴穩定的行動網路或 Wi-Fi 連接。這意味著你的**CGM**資料只有在與你的 Nightscout 網站保持在線連接時，才會被**AAPS**接收。若要讓設定更可靠，使用可從接收器本機廣播資料的 CGM（如下所列），再將資料傳送至 **AAPS**，會是更好的選擇。
 
-| CGM                                                                          | 可用的[血糖資料來源](#Config-Builder-bg-source)                                                              |
-| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                   | BYODA、[xDrip](../CompatibleCgms/xDrip.md) 或 [Juggluco](../CompatibleCgms/Juggluco.md)               |
-| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                                 | [xDrip](../CompatibleCgms/xDrip.md) 或 [Juggluco](../CompatibleCgms/Juggluco.md)                     |
-| [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                                | [xDrip](../CompatibleCgms/xDrip.md)                                                                 |
-| [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                   | BYODA 或 [xDrip](../CompatibleCgms/xDrip.md)                                                         |
-| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                  | [xDrip](../CompatibleCgms/xDrip.md)                                                                 |
-| [Libre 3/3+](../CompatibleCgms/Libre3.md)                                    | [Juggluco](../CompatibleCgms/Juggluco.md)（可搭配或不搭配 xDrip）                                            |
-| [Libre 2/2+](../CompatibleCgms/Libre2.md)                                    | [xDrip](../CompatibleCgms/xDrip.md)（僅限歐盟）或 [Juggluco](../CompatibleCgms/Juggluco.md)（可搭配或不搭配 xDrip） |
-| [Libre 1](../CompatibleCgms/Libre1.md)                                       | [xDrip](../CompatibleCgms/xDrip.md)（Diabox 會透過 xDrip 來源傳送讀取值）、Glimp 或 Tomato（MiaoMiao）。需要發射器        |
-| [Eversense](../CompatibleCgms/Eversense.md)                                  | [xDrip](../CompatibleCgms/xDrip.md)、ESEL/Eversense 修補版 App 或 Notification Reader                    |
-| [Enlite（MM640G/MM630G）](../CompatibleCgms/MM640g.md)                         | [xDrip](../CompatibleCgms/xDrip.md) 或 MM640g + 600SeriesAndroidUploader App                         |
-| [PocTech](../CompatibleCgms/PocTech.md)                                      | PocTech App                                                                                         |
-| Glunovo                                                                      | Glunovo App                                                                                         |
-| Intelligo                                                                    | Intelligo App                                                                                       |
-| [Ottai](../CompatibleCgms/OttaiM8.md)、[Syai](../CompatibleCgms/SyaiTagX1.md) | Syai/Ottai（搭配 Ottai 或 Syai Tag App）                                                                 |
-| Sibionics CGM                                                                | [Juggluco](../CompatibleCgms/Juggluco.md) 或 SI App（搭配 SI 修補版 App 或 Sibionics App）                   |
-| Sinocare                                                                     | Sino App（搭配 Sino 修補版 App）                                                                           |
-| MicroTech（Aidex、LinX、LinX Vista、Equil G. Smart 2、Diaexpert 2）                | MicroTech CGM 應用程式                                                                                  |
-| Instara                                                                      | Instara（搭配 Instara App）                                                                             |
-| [Caresens](../CompatibleCgms/Caresens.md)，Simplera，iCan，LinX，SmartGuide      | xDrip Companion App 或 [Juggluco](../CompatibleCgms/Juggluco.md)                                     |
-| 任何會在通知中顯示血糖值的 CGM 官方 App（Dexcom、Medtronic、Eversense 等）                       | 通知讀取器                                                                                               |
+| CGM                                                                          | 可用的[血糖資料來源](#Config-Builder-bg-source)                                                                                                        |
+| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                   | BYODA, [xDrip](../CompatibleCgms/xDrip.md), [Juggluco](../CompatibleCgms/Juggluco.md) or [Notification Reader](#DexcomG7-notification-reader) |
+| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                                 | [xDrip](../CompatibleCgms/xDrip.md), [Juggluco](../CompatibleCgms/Juggluco.md) or [Notification Reader](#DexcomG7-notification-reader)        |
+| [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                                | [xDrip](../CompatibleCgms/xDrip.md) or [Notification Reader](#DexcomG7-notification-reader)                                                   |
+| [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                   | BYODA, [xDrip](../CompatibleCgms/xDrip.md) or [Notification Reader](#DexcomG6-notification-reader)                                            |
+| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                  | [xDrip](../CompatibleCgms/xDrip.md) or [Notification Reader](#DexcomG6-notification-reader)                                                   |
+| [Libre 3/3+](../CompatibleCgms/Libre3.md)                                    | [Juggluco](../CompatibleCgms/Juggluco.md)（可搭配或不搭配 xDrip）                                                                                      |
+| [Libre 2/2+](../CompatibleCgms/Libre2.md)                                    | [xDrip](../CompatibleCgms/xDrip.md)（僅限歐盟）或 [Juggluco](../CompatibleCgms/Juggluco.md)（可搭配或不搭配 xDrip）                                           |
+| [Libre 1](../CompatibleCgms/Libre1.md)                                       | [xDrip](../CompatibleCgms/xDrip.md)（Diabox 會透過 xDrip 來源傳送讀取值）、Glimp 或 Tomato（MiaoMiao）。需要發射器                                                  |
+| [Eversense](../CompatibleCgms/Eversense.md)                                  | [xDrip](../CompatibleCgms/xDrip.md)、ESEL/Eversense 修補版 App 或 Notification Reader                                                              |
+| [Enlite（MM640G/MM630G）](../CompatibleCgms/MM640g.md)                         | [xDrip](../CompatibleCgms/xDrip.md) 或 MM640g + 600SeriesAndroidUploader App                                                                   |
+| [PocTech](../CompatibleCgms/PocTech.md)                                      | PocTech App                                                                                                                                   |
+| Glunovo                                                                      | Glunovo App                                                                                                                                   |
+| Intelligo                                                                    | Intelligo App                                                                                                                                 |
+| [Ottai](../CompatibleCgms/OttaiM8.md)、[Syai](../CompatibleCgms/SyaiTagX1.md) | Syai/Ottai（搭配 Ottai 或 Syai Tag App）                                                                                                           |
+| Sibionics CGM                                                                | [Juggluco](../CompatibleCgms/Juggluco.md) 或 SI App（搭配 SI 修補版 App 或 Sibionics App）                                                             |
+| Sinocare                                                                     | Sino App（搭配 Sino 修補版 App）                                                                                                                     |
+| MicroTech（Aidex、LinX、LinX Vista、Equil G. Smart 2、Diaexpert 2）                | MicroTech CGM 應用程式                                                                                                                            |
+| Instara                                                                      | Instara（搭配 Instara App）                                                                                                                       |
+| [Caresens](../CompatibleCgms/Caresens.md)，Simplera，iCan，LinX，SmartGuide      | xDrip Companion App 或 [Juggluco](../CompatibleCgms/Juggluco.md)                                                                               |
+| 任何會在通知中顯示血糖值的 CGM 官方 App（Dexcom、Medtronic、Eversense 等）                       | 通知讀取器                                                                                                                                         |
 
 (GettingStarted-TrustedBGSource)=
 
@@ -66,14 +66,28 @@
 
 可信任的資料來源，允許**SMB**可以啟動。
 
-| 傳感器              |                                          CGM 應用程式                                           |
-| ---------------- |:-------------------------------------------------------------------------------------------:|
-| Dexcom G6        |                                   BYODA、xDrip（**直接、原生**）                                    |
-| Dexcom G7        |             BYODA、xDrip（**直接、原生**）、<br/>Juggluco（**xDrip 廣播**，不需安裝 xDrip）             |
-| Dexcom ONE+      |                xDrip（**直接、原生**）、<br/>Juggluco（**xDrip 廣播**，不需安裝 xDrip）                |
-| Dexcom ONE/Stelo |                                      xDrip（**直接、原生**）                                       |
-| Libre 2/2+ (歐盟)  | xDrip（OOP2 **不需校正**）、<br/>Juggluco（**xDrip 廣播**，不需安裝 xDrip；或搭配 xDrip 使用**修補版 Libre**） |
-| Libre 2/2+/3/3+  |                 Juggluco（**xDrip 廣播**，不需安裝 xDrip；或搭配 xDrip 使用**修補版 Libre**）                 |
-| Syai             |                                          Syai App                                           |
+**AAPS** checks the sensor named in the latest **BG** reading it received, whichever **BG** source delivered it. After you change your **BG** source, the **SMB** "always" settings appear only once the first reading from the new source has arrived.
 
-**注意：xDrip Companion App 和追蹤者模式（包含 640G/Eversense）並非可信任的資料來源。**
+| 傳感器             |                                                                                 CGM 應用程式                                                                                 |
+| --------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Dexcom G6       |                             BYODA, xDrip (**Direct, Native**), <br/>Dexcom app ([Notification Reader](#DexcomG6-notification-reader))                              |
+| Dexcom G7       | BYODA, xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip), <br/>Dexcom app ([Notification Reader](#DexcomG7-notification-reader)) |
+| Dexcom ONE+     |    xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip), <br/>Dexcom app ([Notification Reader](#DexcomG7-notification-reader))     |
+| Dexcom ONE      |                                 xDrip (**Direct, Native**), <br/>Dexcom app ([Notification Reader](#DexcomG6-notification-reader))                                 |
+| Dexcom Stelo    |                                 xDrip (**Direct, Native**), <br/>Dexcom app ([Notification Reader](#DexcomG7-notification-reader))                                 |
+| Libre 2/2+ (歐盟) |                                  xDrip (OOP2), <br/>Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip)                                  |
+| Libre 2/2+/3/3+ |                                                       Juggluco（**xDrip 廣播**，不需安裝 xDrip；或搭配 xDrip 使用**修補版 Libre**）                                                        |
+| Syai, Ottai     |                      Syai or Ottai app (**Syai/Ottai** source or **Notification Reader**), <br/>Juggluco (**xDrip broadcast** without xDrip)                       |
+
+**Note: xDrip Companion apps, Medtronic, Eversense and all other sensors are not trusted data sources.**
+
+```{admonition} Online BG sources are not recommended for closed looping
+:class: warning
+Some sources that need an internet connection can also be trusted:
+- xDrip **Dexcom Share follower** (any Dexcom sensor)
+- the **Nightscout** BG source (**AAPSClient**, or **AAPS** following your Nightscout site), when the uploader names one of the sensors above
+
+These sources are **not recommended** for a closed loop. When your phone or the CGM uploader loses its connection, **AAPS** receives no **BG** readings and cannot loop. Readings also arrive late, after the delay of the cloud service. Use a CGM app that sends its readings to **AAPS** directly on the phone (as listed in the table above) whenever possible.
+
+Other follower modes (xDrip Nightscout or Web follower, CareLink follower, Juggluco Nightscout) are never trusted.
+```

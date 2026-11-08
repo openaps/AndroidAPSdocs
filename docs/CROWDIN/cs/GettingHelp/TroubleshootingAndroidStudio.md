@@ -192,7 +192,7 @@ Pokud vidíte výše uvedenou chybovou zprávu, musíte před novým pokusem o s
 
   Na internetu najdete informace o tom, jak zjistit, zda máte 32bitový nebo 64bitový operační systém – například [tento návod](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Screenshot Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Nová synchronizace Gradle
@@ -237,7 +237,7 @@ Vaše apk bylo úspěšně sestaveno a můžete ho přenést do telefonu!
 
 ## Apk není nainstalováno
 
-![aplikace v telefonu není nainstalována](../images/Update_AppNotInstalled.png)
+![aplikace v telefonu není nainstalována](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Ujistěte se, že jste do telefonu přenesli soubor „app-full-release.apk“.
 * Tato chyba obvykle znamená, že nové apk je podepsané jiným úložištěm klíčů než vaše nainstalovaná aplikace **AAPS**. Pokud ještě máte své předchozí úložiště klíčů, vyberte ho a sestavte znovu. Jinak viz [Přeinstalace AAPS s novým úložištěm klíčů](#reinstall-aaps).

@@ -281,7 +281,7 @@ Om een pod uit te schakelen (nadat hij zijn maximale looptijd heeft bereikt, of 
 
 Hieronder lees je hoe je de insulinetoediening onderbreekt en hervat.
 
-*LET OP - zie je geen knop **Onderbreken***, dan is die standaard verborgen. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*LET OP - zie je geen knop **Onderbreken***, dan is die standaard verborgen. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Insulinetoediening onderbreken
 
@@ -591,7 +591,7 @@ De knoppen onderaan het pompscherm veranderen afhankelijk van de situatie. Knopp
   De schermafbeelding hierboven komt uit een eerdere versie van **AAPS**. In **AAPS** 4 is dit een tekstknop met de naam **Tijd instellen** op het Omnipod-pompscherm.
   ```
 
-- **Onderbreken:** onderbreekt de insulinetoediening van de actieve pod. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
+- **Onderbreken:** onderbreekt de insulinetoediening van de actieve pod. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Geeft AAPS-meldingen en hoorbare telefoonwaarschuwingen als het niet zeker is of
 
 Geavanceerde instellingen die helpen bij het zoeken naar fouten.
 
-- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
+- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
 - **Knop voor het uitlezen van het Pulslog weergeven in het Podbeheer menu:** deze instelling staat nog in de lijst, maar het huidige pompscherm heeft geen knop **Pulse Log**.
 
 - **Knop voor RileyLink statistieken weergeven in het Omnipod-tabblad:** verbergt of toont de knop **RileyLink statistieken** op het Omnipod-pompscherm.

@@ -59,7 +59,7 @@ Väčšina frustrácií zo samostatných hodiniek **AAPS** pramení z interakcie
 
 Ďalšou výzvou je, že je ťažké dosiahnuť dostatočnú výdrž batérie a hodinky s dostatočnou výdržou batérie sú často objemné a hrubé. Používatelia hlásia boj s operačným systémom a nastaveniami úspory energie, ťažkosti so spustením senzorov na hodinkách, slabý dosah Bluetooth (na udržanie spojenia so senzorom aj s pumpou) a pochybnú odolnosť voči vode. Na fotografiách nižšie je zopár príkladov.
 
-![obrázok](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![obrázok](../images/watch_standalone_aaps_and_xdrip.png)
 
 Ak chcete nastaviť samostatné hodinky, ďalšie informácie nájdete v príspevkoch a komentároch v skupine **AAPS** na Facebooku (dobré výrazy na hľadanie sú „standalone“ a „Lemfo“) a na Discorde.
 
@@ -88,7 +88,7 @@ Nedávne zmeny vo **Wear OS** postupne pokazia vlastné ciferníky **AAPS** (č�
 
 Po [nainštalovaní **AAPS** do hodiniek](../WearOS/WearOsSmartwatch.md) si budete môcť automaticky vybrať preferovaný ciferník z ciferníkov určených pre **AAPS**. Na väčšine hodiniek jednoducho stačí dlho stlačiť domovskú obrazovku, kým sa nezmenší, a potom potiahnutím prstom doprava vyberte alternatívnu obrazovku:
 
-![obrázok](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![obrázok](../images/watchfaces_aaps_selection.png)
 
 Toto sú základné obrazovky vložené do **AAPS**. Existuje [viac ciferníkov](#WearOS_changing-to-AAPS-watchface) a môžete použiť aj [komplikácie](#Watchfaces-complications).
 
@@ -155,7 +155,7 @@ Nižšie sú uvedené niektoré z možností hodiniek určených iba na sledovan
 
 **WatchDrip+** je sprievodná aplikácia vyvinutá komunitou, ktorá zobrazuje glykémiu a dáta okruhu na rôznych modeloch inteligentných hodiniek, hlavne značiek Xiaomi (_napr._ Mi Band) a Amazfit:
 
-![obrázok](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![obrázok](../images/watch_watchdrip_plus.png)
 
 Od verzie 0.5 číta **WatchDrip+** dáta priamo z **AAPS**, bez xDrip+ ako sprostredkovateľa. V telefóne s **AAPS**:
 
@@ -170,9 +170,9 @@ Viac o nich, vrátane ich nastavenia, si môžete prečítať na [webovej strán
 
 ### Pebble hodinky
 
-![obrázok](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![obrázok](../images/watch_pebble.png)
 
-![obrázok](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![obrázok](../images/watch_pebble_watchface.png)
 
 
 Hodinky Pebble ([už sa nevyrábajú](https://en.wikipedia.org/wiki/Pebble_(watch))) boli v bežnom predaji v rokoch 2013 až 2016 a stále môžu byť dostupné z druhej ruky. Fitbit prevzal majetok spoločnosti Pebble. Používatelia Pebble môžu na zobrazenie údajov Nightscout použiť ciferník Urchin. Medzi zobrazené možnosti údajov patrí IOB, aktívny dočasný bazál a predikcie. Ak používate otvorený okruh, môžete pomocou IFTTT vytvoriť applet, ktorý po prijatí notifikácie z **AAPS** pošle SMS alebo notifikáciu cez Pushover.

@@ -172,7 +172,7 @@ Revenez en arrière avec la flèche en haut à gauche. L'assistant affiche maint
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**NE PERDEZ PAS VOTRE MOT DE PASSE PRINCIPAL**. Notez-le, _p. ex._ sur Google Drive : c'est un bon endroit, car Google en fait une sauvegarde pour vous. Votre smartphone ou PC peuvent vous lâcher et vous pourriez ne pas avoir de sauvegarde locale. Si vous oubliez votre mot de passe principal, il peut être difficile de récupérer la configuration de votre profil et de progresser dans les **Objectifs** par la suite.
+**NE PERDEZ PAS VOTRE MOT DE PASSE PRINCIPAL**. Notez-le, _p. ex._ sur Google Drive : c'est un bon endroit, car Google en fait une sauvegarde pour vous. Votre smartphone ou PC peuvent vous lâcher et vous pourriez ne pas avoir de sauvegarde locale. Si vous oubliez votre mot de passe principal, il peut être difficile de récupérer la configuration de votre profil et de progresser dans les **Objectifs** par la suite. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 Quand vous avez terminé, appuyez sur « **SUIVANT** » pour passer à l'écran suivant.

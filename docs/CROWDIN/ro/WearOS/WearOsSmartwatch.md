@@ -211,7 +211,7 @@ Pe ceas:
 
 You will see a Wi-Fi pairing code and IP address and port appearing:
 
-![Ecranul ceasului cu codul de asociere Wi-Fi, adresa IP și portul](../images/wearos/ADB03.png)
+![Ecranul ceasului cu codul de asociere Wi-Fi, adresa IP și portul](../images/wearos/watch_wifi_pairing_code.png)
 
 - În terminal: `adb pair ipaddress:port` De ex. `adb pair 10.10.1.125:36299`
 - Vi se va cere codul de asociere. Introduceți-l.

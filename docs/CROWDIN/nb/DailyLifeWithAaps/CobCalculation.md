@@ -84,7 +84,7 @@ Hvis karbohydratene er over- eller undervurdert, kan dette korrigeres i skjermen
 
 Skjermen **Behandlingshistorikk** kan brukes til å korrigere en feil karbohydratoppføring ved å slette den. Dette kan skyldes at du over- eller undervurderte karbohydratene du registrerte:
 
-![Slette en karbohydratoppføring fra Behandlingshistorikk](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Slette en karbohydratoppføring fra Behandlingshistorikk](../images/treatments_history_delete_carbs.png)
 
 1. Sjekk og husk gjeldende **COB** og **IOB** på hovedskjermen i **AAPS**.
 2. Åpne **Behandlingshistorikk** (sidemenyen → *Behandlingshistorikk*), fanen **Karbo og bolus**. Avhengig av pumpen kan karbohydratene vises sammen med insulin på én linje, eller som en egen oppføring (for eksempel med Dana RS).

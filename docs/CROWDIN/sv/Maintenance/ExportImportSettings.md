@@ -97,6 +97,8 @@ Vi rekommenderar att du exporterar inställningarna regelbundet, särskilt före
 
 **Obs**: _De exporterade inställningarna krypteras med ditt huvudlösenord för AAPS: utan huvudlösenordet som användes vid exporten kan du inte importera inställningsfilen!_
 
+If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+
 ### Exportera eller importera inställningar
 Öppna **menyn** (☰) och välj **Underhåll** för att exportera eller importera inställningar. Under **Filhantering** väljer chipen **Lokal** och **Moln** bredvid **Exportera inställningar** och **Importera inställningar** var inställningsfilen sparas eller läses: **Lokal** är AAPS-katalogen på din telefon, **Moln** går att välja när en [Molnkatalog](#preferences-maintenance-cloud) är inställd. När du trycker på ett chip slås det på eller av. Minst ett är alltid valt, och båda raderna har samma val. Tryck sedan på själva **Exportera inställningar** eller **Importera inställningar** för att starta.
 

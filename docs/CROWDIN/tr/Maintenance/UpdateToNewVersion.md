@@ -40,4 +40,4 @@ Yeni apk'yı yükledikten sonra:
 - ayarlarınızı içe aktardığınızdan emin olun; ve
 - lütfen **Ayarlar** altındaki **AAPS** ayarlarınızı kontrol edin ve hâlâ doğru olduklarından emin olun.
 
-![Yüklü AAPS sürümünü gösteren Hakkında iletişim kutusu](../images/about_dialog_version.png)
+![Yüklü AAPS sürümünü gösteren Hakkında iletişim kutusu](../images/update/about_dialog_version.png)

@@ -211,7 +211,7 @@ Wear OS 5가 아니라면 다음 방법도 사용할 수 있습니다:
 
 Wi-Fi 페어링 코드와 IP 주소 및 포트가 표시됩니다:
 
-![Wi-Fi 페어링 코드와 IP 주소 및 포트를 보여주는 워치 화면](../images/wearos/ADB03.png)
+![Wi-Fi 페어링 코드와 IP 주소 및 포트를 보여주는 워치 화면](../images/wearos/watch_wifi_pairing_code.png)
 
 - 터미널에서: `adb pair ipaddress:port` 예: `adb pair 10.10.1.125:36299`
 - 페어링 코드를 입력하라는 요청이 나옵니다. 코드를 입력하십시오.

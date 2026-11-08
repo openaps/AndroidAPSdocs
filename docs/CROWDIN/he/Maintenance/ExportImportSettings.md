@@ -97,6 +97,8 @@ It is recommended to do regular settings exports, especially before and after ma
 
 **Note**: _The exported settings will be encrypted with your AAPS master password: without the master password used for exporting you will be unable to import the settings file!_
 
+If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+
 ### Exporting or Importing Settings
 כדי לייצא או לייבא הגדרות, יש לפתוח את **התפריט** (☰) ולבחור **תחזוקה**. בחלק **ניהול קבצים**, השבבים **מקומי** ו-**ענן** ליד **ייצוא הגדרות** ו-**ייבוא הגדרות** קובעים לאן קובץ ההגדרות נשמר או מאיפה הוא נקרא: **מקומי** פירושו תיקיית AAPS בטלפון, ו-**ענן** זמין אחרי שמגדירים [תיקיית ענן](#preferences-maintenance-cloud). לחיצה על שבב מפעילה או מכבה אותו; תמיד נשאר לפחות שבב אחד מסומן, ושתי השורות משתמשות באותה בחירה. אחר כך יש ללחוץ על **ייצוא הגדרות** או על **ייבוא הגדרות** עצמם כדי להתחיל.
 

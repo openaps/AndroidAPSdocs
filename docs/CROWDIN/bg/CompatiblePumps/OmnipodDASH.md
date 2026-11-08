@@ -535,7 +535,7 @@
 
 Възрастта на **Батерия на помпата** не се отчита: батерията и резервоарът за инсулин са вградени във всеки пач, а батерията винаги издържа по-дълго от самия пач (максимум 80 часа).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

@@ -33,7 +33,7 @@ For å unngå dette finnes det to muligheter:
    * Velg din **Profil** og trykk på **▶ Aktiver**
    * Sett «**Tidsforskyving**» etter reisemålet ditt og trykk på **Aktiver**.
    
-   ![Profilbytte med tidsforskyving](../images/ProfileSwitchTimeShift2.png)
+   ![Profilbytte med tidsforskyving](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * f.eks. Wien -> New York: **Profilbytte** +6 timer
    * f.eks. Wien -> Sydney: **Profilbytte** -8 timer
@@ -118,14 +118,14 @@ Hvis du gir bolus med kalkulatoren i **AAPS**, ikke bruk **COB**- og **IOB**-dat
    * Noen telefoner har to innstillinger, én for automatisk innstilling av tiden (som helst bør stå på) og én for automatisk innstilling av tidssonen (som du må slå AV: **Angi automatisk** under **Tidssone** på skjermbildet nedenfor).
    * Dessverre har noen Android-versjoner bare én bryter som slår på automatisk innstilling av både tid og tidssone. Dette må du slå av inntil videre.
 
-![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
+![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
 2. Finn en tidssone som har samme tid som der du er nå, men som ikke bruker sommertid.
    
    * En liste over disse landene finner du på [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * For sentraleuropeisk tid (CET) kan dette være «Brazzaville» (Kongo). Bytt telefonens tidssone til Kongo.
 
-![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
+![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
 3. Oppdater pumpen i **AAPS** og bytt til ønsket **Profil**.
 

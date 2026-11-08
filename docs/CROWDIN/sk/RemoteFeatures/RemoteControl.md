@@ -291,13 +291,13 @@ Softvér pre hodinky, Wear apk **AAPSClient**, si môžete stiahnuť priamo z [G
 
 Na stiahnutie softvéru kliknite na aplikáciu pre hodinky, ktorá zodpovedá klientskej aplikácii v telefóne: **wear-aapsclient-release_**_verzia_ patrí k **AAPSClient**, **wear-aapsclient2-release_**_verzia_ patrí k **AAPSClient2** (pozrite [O AAPSClient, AAPSClient2 a AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![obrázok](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+![obrázok](../images/github_release_wear_aapsclient_apk.png)
 
 
 Potom zvoľte „save as“ (uložiť ako) a uložte súbor na vhodné miesto v počítači:
 
 
-![obrázok](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+![obrázok](../images/save_as_wear_aapsclient_apk.png)
 
 
 

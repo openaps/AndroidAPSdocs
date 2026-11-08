@@ -22,7 +22,7 @@ Ti serve almeno un **Profilo** salvato. A **Profile Percentage** is always appli
 
     <br />1. On the main screen, **tap the profile name** (next to the star icon). The [Profile screen](#ProfileSwitch-manage-v4) opens on the card of the running **Profile**, marked **ACTIVE**.
     
-       ![Tocca il nome del profilo nella schermata principale per aprire la schermata Profilo](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Per tenere lo stesso **Profilo**, lascia selezionata la scheda **ATTIVO**. To change **Profile** at the same time, swipe to another card.
     3. Tocca il pulsante rotondo **▶** (**Attiva**) in basso a destra. Si apre la schermata **Attiva**.
@@ -169,7 +169,7 @@ La domanda è sempre: le impostazioni di quale ora del **Profilo** devono sostit
     - 22:00 **-10 h** -> 12:00
     - Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Profile switch timeshift directions](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 Questo meccanismo, che salva delle "istantanee" del **Profilo**, permette un calcolo molto più preciso del passato e la possibilità di seguire le modifiche del **Profilo**.
 

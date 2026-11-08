@@ -281,7 +281,7 @@
 
 Нижче показано, як призупинити та відновити введення інсуліну.
 
-*ПРИМІТКА - якщо ви не бачите кнопки **Призупинити***, вона прихована за замовчуванням. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*ПРИМІТКА - якщо ви не бачите кнопки **Призупинити***, вона прихована за замовчуванням. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Призупинення введення інсуліну
 
@@ -591,7 +591,7 @@
   Знімок екрана вище зроблено в старішій версії **AAPS**. В **AAPS** 4 це текстова кнопка **Встановити час** на екрані помпи Omnipod.
   ```
 
-- **Призупинити:** призупиняє введення інсуліну на активному Pod. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
+- **Призупинити:** призупиняє введення інсуліну на активному Pod. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Pod подає звукові сигнали підтвердження під �
 
 Розширені налаштування для пошуку помилок.
 
-- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
+- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
 - **Показувати кнопку «Журнал імпульсів» у меню керування Pod:** це налаштування ще є в списку, але в поточній версії екрана помпи немає кнопки **Журнал імпульсів**.
 
 - **Показувати кнопку «Статистика RileyLink» у меню керування Pod:** приховати або показати кнопку **Статистика RileyLink** на екрані помпи Omnipod.

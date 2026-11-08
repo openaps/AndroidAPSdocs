@@ -281,7 +281,7 @@
 
 以下步驟說明如何暫停及恢復胰島素輸注。
 
-*注意：如果您沒有看到**暫停**按鈕*，這是因為按鈕預設為隱藏。請在[Omnipod 設定](#OmnipodEros-omnipod-settings)的**其他**項目中，啟用**在幫浦畫面上顯示暫停輸注按鈕**。
+*注意：如果您沒有看到**暫停**按鈕*，這是因為按鈕預設為隱藏。 Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### 暫停胰島素投放
 
@@ -591,7 +591,7 @@
   上方的螢幕截圖來自較早版本的 **AAPS**。在 **AAPS** 4 中，Omnipod 幫浦畫面上有一個名為 **設定時間** 的文字按鈕。
   ```
 
-- **暫停：**暫停目前啟用中藥量的胰島素輸送。只有在設定中啟用**在幫浦畫面上顯示暫停輸注按鈕**時才會顯示。
+- **暫停：**暫停目前啟用中藥量的胰島素輸送。 Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Pod 通訊裝置的設定。請在幫浦畫面上按下 **配對 RileyLink** 按
 
 提供進階設定以協助除錯。
 
-- **在幫浦畫面上顯示暫停輸注按鈕：**在 Omnipod 幫浦畫面上隱藏或顯示**暫停**按鈕。
+- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
 - **在 Pod 管理選單顯示脈衝記錄按鈕：**雖然仍列出此設定，但目前版本的幫浦畫面沒有**脈衝記錄**按鈕。
 
 - **在 Pod 管理選單顯示 RileyLink 統計資料按鈕：**在 Omnipod 幫浦畫面上隱藏或顯示**RileyLink 統計資料**按鈕。

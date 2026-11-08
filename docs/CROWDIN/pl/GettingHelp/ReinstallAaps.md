@@ -21,7 +21,7 @@ Jeśli wciąż masz swój magazyn kluczy, ta strona nie jest Ci potrzebna: użyj
 
 - Odinstalowanie **AAPS** usuwa wszystkie jego ustawienia, Twoje [zadania](../SettingUpAaps/CompletingTheObjectives.md) i obecne połączenie z pompą. Odzyskasz je, importując swój **plik ustawień**, więc upewnij się, że masz aktualny.
 - Plik ustawień nie zawiera historii leczenia ani historii glukozy. Jeśli wysyłasz dane do [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), możesz je wczytać z powrotem po ponownej instalacji (krok 8).
-- Potrzebujesz swojego [**hasła głównego**](#Preferences-master-password): plik ustawień jest nim zaszyfrowany.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Użytkownicy Omnipod i Medtrum:** najpierw przeczytaj [Pompy bez drenu](#ExportImportSettings-tubeless-pumps). Twój plik ustawień musi być wyeksportowany w czasie noszenia obecnego poda lub patcha.
 - W razie potrzeby przed rozpoczęciem [skonfiguruj odbiornik źródła CGM/BG](../Getting-Started/CompatiblesCgms.md).
 

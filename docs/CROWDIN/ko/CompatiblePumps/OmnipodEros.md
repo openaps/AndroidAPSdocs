@@ -281,7 +281,7 @@ Pod를 비활성화하려면 (만료되었거나 Pod 고장이 났을 때):
 
 아래 과정은 인슐린 주입을 중지하고 재개하는 방법을 보여 줍니다.
 
-*참고 - **중지** 버튼이 보이지 않으면*, 기본적으로 숨겨져 있기 때문입니다. [Omnipod 설정](#OmnipodEros-omnipod-settings)의 **기타**에서 **펌프 화면에 주입 중지 버튼 표시**를 켜십시오.
+*참고 - **중지** 버튼이 보이지 않으면*, 기본적으로 숨겨져 있기 때문입니다. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### 인슐린 주입 중지
 
@@ -591,7 +591,7 @@ Pod 통신 장치가 한동안 휴대폰의 블루투스 범위 밖에 있었다
   위의 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 Omnipod 펌프 화면에 있는 **시간 설정**이라는 텍스트 버튼입니다.
   ```
 
-- **중지:** 활성 Pod의 인슐린 주입을 중지합니다. 설정에서 켰을 때만 표시됩니다 (**펌프 화면에 주입 중지 버튼 표시**).
+- **중지:** 활성 Pod의 인슐린 주입을 중지합니다. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ TBR, SMB 또는 볼러스 이벤트가 성공했는지 불확실할 때 AAPS 알
 
 디버깅을 돕는 고급 설정을 제공합니다.
 
-- **펌프 화면에 주입 중지 버튼 표시:** Omnipod 펌프 화면의 **주입 중지** 버튼을 숨기거나 표시합니다.
+- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
 - **Pod 관리 메뉴에 Pulse 로그 버튼 표시:** 이 설정은 아직 목록에 있지만, 현재 버전의 펌프 화면에는 **Pulse 로그** 버튼이 없습니다.
 
 - **Pod 관리 메뉴에 RileyLink 통계 버튼 표시:** Omnipod 펌프 화면의 **RileyLink 통계** 버튼을 숨기거나 표시합니다.

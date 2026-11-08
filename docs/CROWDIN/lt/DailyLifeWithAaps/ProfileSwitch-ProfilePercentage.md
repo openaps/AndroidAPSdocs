@@ -22,7 +22,7 @@ You need at least one saved **Profile**. A **Profile Percentage** is always appl
 
     <br />1. On the main screen, **tap the profile name** (next to the star icon). The [Profile screen](#ProfileSwitch-manage-v4) opens on the card of the running **Profile**, marked **ACTIVE**.
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Jei norite palikti tą patį **profilį**, palikite pasirinktą kortelę **AKTYVUS**. To change **Profile** at the same time, swipe to another card.
     3. Tap the round **▶** button (**Activate**) at the bottom right. The **Activate** screen opens.
@@ -169,7 +169,7 @@ It is always a question of which hour’s **Profile’s** settings should replac
     - 22:00 **-10 h** -> 12:00
     - Dėl neigiamo laiko perstūmimo vietoje nustatymų, kurie paprastai taikomi 12:00, bus naudojami 22:00 nustatymai.
 
-![Profilio keitimo laiko perstūmimo kryptys](../images/ProfileSwitch_PlusMinus2.png)
+![Profilio keitimo laiko perstūmimo kryptys](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 Toks **profilio** momentinių kopijų darymas leidžia daug tiksliau apskaičiuoti praeitį ir sekti **profilio** pakeitimus.
 

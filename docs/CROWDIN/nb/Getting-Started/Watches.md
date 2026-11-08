@@ -59,7 +59,7 @@ Det meste av frustrasjonen med frittstående **AAPS**-klokker kommer av å jobbe
 
 Andre utfordringer er at det er vanskelig å få god nok batteritid, og at klokker med nok batteri ofte er store og tykke. Brukere forteller om kamp mot operativsystemet og strømsparingsinnstillingene, problemer med å starte sensorer på klokken, dårlig Bluetooth-rekkevidde (for å holde kontakten med både sensor og pumpe) og tvilsom vanntetthet. Eksempler vises på bildene nedenfor.
 
-![bilde](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![bilde](../images/watch_standalone_aaps_and_xdrip.png)
 
 Hvis du vil sette opp en frittstående klokke, kan du lese innleggene og kommentarene i **AAPS**-gruppen på Facebook (gode søkeord er «standalone» og «Lemfo») og på Discord for mer informasjon.
 
@@ -88,7 +88,7 @@ Nyere endringer i **Wear OS** ødelegger gradvis de egne **AAPS**-urskivene (jo 
 
 Etter at du har [installert **AAPS** på klokken](../WearOS/WearOsSmartwatch.md), kan du automatisk velge den urskiven du liker best blant disse egne **AAPS**-urskivene. På de fleste klokker trykker du og holder på startskjermen til skjermen krymper, og sveiper så mot høyre for å velge en annen skjerm:
 
-![bilde](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![bilde](../images/watchfaces_aaps_selection.png)
 
 Dette er de grunnleggende skjermene som er innebygd i **AAPS**. Det finnes [flere urskiver](#WearOS_changing-to-AAPS-watchface), og du kan også bruke [komplikasjoner](#Watchfaces-complications).
 
@@ -155,7 +155,7 @@ Her er noen av klokkene for bare følging som er populære blant **AAPS**-bruker
 
 **WatchDrip+** er en hjelpeapp utviklet av brukermiljøet som viser glukose- og loop-data på ulike smartklokkemodeller, for det meste Xiaomi (_f.eks._ Mi Band) og Amazfit:
 
-![bilde](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![bilde](../images/watch_watchdrip_plus.png)
 
 Fra versjon 0.5 leser **WatchDrip+** dataene direkte fra **AAPS**, uten xDrip+ som mellomledd. På **AAPS**-telefonen:
 
@@ -170,9 +170,9 @@ Du kan lese mer om dem, blant annet hvordan du setter dem opp, på [nettsiden ti
 
 ### Pebble-klokke
 
-![bilde](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![bilde](../images/watch_pebble.png)
 
-![bilde](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![bilde](../images/watch_pebble_watchface.png)
 
 
 Pebble-klokker ([produseres ikke lenger](https://en.wikipedia.org/wiki/Pebble_(watch))) ble solgt fra 2013 til 2016, og kan fortsatt finnes brukt. Fitbit overtok Pebbles eiendeler. Pebble-brukere kan bruke urskiven Urchin til å se Nightscout-data. Data som kan vises, er blant annet IOB, aktiv midlertidig basal og prognoser. Hvis du bruker åpen loop, kan du bruke IFTTT til å lage en applet som sier: hvis det er mottatt en varsling fra **AAPS**, send enten en SMS eller en Pushover-varsling.

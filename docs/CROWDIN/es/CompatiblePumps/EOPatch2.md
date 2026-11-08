@@ -89,7 +89,7 @@ Ahora **AAPS** intenta emparejarse con el parche de forma automática. Durante e
 - Debes terminar de activar el parche en los 60 minutos siguientes a su arranque. Si no puedes, descarta el parche.
 ```
 
-![Paso de emparejamiento del parche](../images/EOPatch/Bild6.png) ![Primera solicitud de emparejamiento Bluetooth](../images/EOPatch/Bild7.png) ![Segunda solicitud de emparejamiento Bluetooth con la clave de acceso](../images/EOPatch/Bild8.png)
+![Paso de emparejamiento del parche](../images/EOPatch/eopatch_pairing.png) ![Primera solicitud de emparejamiento Bluetooth](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Segunda solicitud de emparejamiento Bluetooth con la clave de acceso](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@ Quita la cinta adhesiva del parche y luego pulsa **Siguiente**.
 
 Si sale una aguja, o si el parche está mojado o sucio o su cinta adhesiva está doblada, pulsa **Descartar** y usa un parche nuevo.
 
-![Paso Prepárate para colocar el parche](../images/EOPatch/Bild9.png)
+![Paso Prepárate para colocar el parche](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Ubicación de la zona
 
@@ -123,7 +123,7 @@ Revisa el lugar de infusión y luego pulsa **Empezar la revisión de seguridad**
 - Si el parche no se pega por completo, puede entrar aire entre el parche y la piel. Esto debilita el adhesivo y la resistencia al agua del parche.
 ```
 
-![Paso Coloca el parche en tu cuerpo](../images/EOPatch/Bild10.png)
+![Paso Coloca el parche en tu cuerpo](../images/EOPatch/eopatch_attaching.png)
 
 ### Comprobaciones de seguridad
 
@@ -133,7 +133,7 @@ La revisión de seguridad dura unos 30 segundos. Cuando termina, el parche pita 
 Para un uso seguro, no gires la palanca de la aguja hasta que termine la revisión de seguridad.
 ```
 
-![Paso Coloca el parche en tu cuerpo con el botón Empezar la revisión de seguridad](../images/EOPatch/Bild11.png) ![Revisión de seguridad en curso](../images/EOPatch/Bild12.png)
+![Paso Coloca el parche en tu cuerpo con el botón Empezar la revisión de seguridad](../images/EOPatch/eopatch_start_safety_check.png) ![Revisión de seguridad en curso](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@ Después, el asistente pasa directamente a activar un parche nuevo (ver arriba).
 
 Mientras no hay ningún parche activo, **AAPS** muestra la bomba como suspendida y registra una basal temporal de 0 U/h, así que no se cuenta insulina basal en la IOB hasta que se active el siguiente parche.
 
-![La pantalla de la bomba EOPatch2 con el botón DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Página Descartar parche](../images/EOPatch/Bild14.png) ![Cuadro de confirmación de Descartar parche](../images/EOPatch/Bild15.png) ![El parche se ha desactivado por completo](../images/EOPatch/Bild16.png)
+![La pantalla de la bomba EOPatch2 con el botón DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![Página Descartar parche](../images/EOPatch/eopatch_discard_patch.png) ![Cuadro de confirmación de Descartar parche](../images/EOPatch/eopatch_discard_confirm.png) ![El parche se ha desactivado por completo](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@ Al suspender la administración de insulina también se cancela cualquier bolo e
 
 La administración de insulina se suspende durante el tiempo que elegiste.
 
-![La pantalla de la bomba EOPatch2 con el botón SUSPENDER](../images/EOPatch/Bild17.png) ![Cuadro de confirmación de la suspensión](../images/EOPatch/Bild18.png) ![Cuadro Tiempo de suspensión basal](../images/EOPatch/Bild19.png)
+![La pantalla de la bomba EOPatch2 con el botón SUSPENDER](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Cuadro de confirmación de la suspensión](../images/EOPatch/eopatch_suspend_confirm.png) ![Cuadro Tiempo de suspensión basal](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@ Las capturas de pantalla de arriba son de una versión anterior de **AAPS**. En 
 1. Abre la pantalla de la bomba (**Administrar** → **Bomba**) y pulsa **Reanudar bomba**.
 1. En el cuadro **Reanudar la administración de insulina**, pulsa **Confirmar**.
 
-![La pantalla de la bomba EOPatch2 con el botón REANUDAR](../images/EOPatch/Bild20.png) ![Cuadro Reanudar la administración de insulina](../images/EOPatch/Bild21.png)
+![La pantalla de la bomba EOPatch2 con el botón REANUDAR](../images/EOPatch/eopatch_pump_screen_resume.png) ![Cuadro Reanudar la administración de insulina](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@ Las alarmas son para situaciones urgentes y de máxima prioridad, y necesitan qu
 
 Cuando pulsas **Confirmar** en la notificación, **AAPS** gestiona la alarma. En la mayoría de las alarmas, esto desactiva el parche. En la alarma **Temperatura inadecuada**, el botón es **Reintentar**.
 
-![Alarma de EOPatch2](../images/EOPatch/Bild22.png) ![Alarma de EOPatch2 después de desactivar el parche](../images/EOPatch/Bild23.png)
+![Alarma de EOPatch2](../images/EOPatch/eopatch_alarm.png) ![Alarma de EOPatch2 después de desactivar el parche](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@ Las distintas alarmas se explican a continuación.
 
 Las advertencias son para situaciones de prioridad media o baja. Una advertencia aparece como notificación en la pantalla **Inicio**.
 
-![Advertencia de EOPatch2 en la pantalla Inicio](../images/EOPatch/Bild24.png)
+![Advertencia de EOPatch2 en la pantalla Inicio](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

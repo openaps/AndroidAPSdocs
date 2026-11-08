@@ -97,6 +97,8 @@
 
 **注意**：_匯出的設定將使用你的 AAPS 主密碼進行加密：若沒有用於匯出的主密碼， 你將無法匯入設定檔！_
 
+If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+
 ### 匯出或匯入設定
 若要匯出或匯入設定，請開啟**選單**（☰），然後選擇**維護**。在**檔案管理**中，**匯出設定**和**匯入設定**旁的**本機**與**雲端**選項，可讓您選擇設定檔的儲存位置或讀取來源：**本機**是手機上的 AAPS 資料夾；設定好[雲端資料夾](#preferences-maintenance-cloud)後，即可使用**雲端**。點選選項即可開啟或關閉；至少會保留一個選項為選取狀態，而且兩列會共用相同的選擇。接著點選**匯出設定**或**匯入設定**按鈕即可開始。
 

@@ -281,7 +281,7 @@ Bir Pod'u devre dışı bırakmak için (süresi dolduğunda veya Pod hatasında
 
 Aşağıdaki işlem, insülin iletimini nasıl askıya alacağınızı ve nasıl devam ettireceğinizi gösterir.
 
-*NOT - **Askıya al** düğmesini görmüyorsanız*, bu düğme varsayılan olarak gizlidir. [Omnipod ayarlarında](#OmnipodEros-omnipod-settings) **Diğer** altında **Pompa ekranında İletimi Askıya Al düğmesini göster** ayarını etkinleştirin.
+*NOT - **Askıya al** düğmesini görmüyorsanız*, bu düğme varsayılan olarak gizlidir. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### İnsülin İletiminin Askıya Alınması
 
@@ -591,7 +591,7 @@ Pompa ekranının altındaki düğmeler duruma göre değişir. Şu anda kullan�
   Yukarıdaki ekran görüntüsü daha eski bir **AAPS** sürümüne aittir. **AAPS** 4'te bu, Omnipod pompa ekranında **Saati ayarla** adlı bir metin düğmesidir.
   ```
 
-- **Askıya al:** Etkin Pod'da insülin iletimini askıya alır. Yalnızca ayarlarda etkinleştirilmişse gösterilir (**Pompa ekranında İletimi Askıya Al düğmesini göster**).
+- **Askıya al:** Etkin Pod'da insülin iletimini askıya alır. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
 
   ![askıya al](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ GBO, SMB veya bolus işlemlerinin başarılı olup olmadığı belirsiz olduğun
 
 Hata ayıklamaya yardımcı olmak için gelişmiş ayarlar sağlar.
 
-- **Pompa ekranında İletimi Askıya Al düğmesini göster:** Omnipod pompa ekranındaki **Askıya al** düğmesini gizler veya gösterir.
+- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
 - **Pod Yönetimi menüsünde Darbe Günlüğü düğmesini göster:** Bu ayar hâlâ listede bulunur, ancak pompa ekranının güncel sürümünde **Darbe Günlüğü** düğmesi yoktur.
 
 - **Pod Yönetimi menüsünde RileyLink İstatistikleri düğmesini göster:** Omnipod pompa ekranındaki **RileyLink İstatistikleri** düğmesini gizler veya gösterir.

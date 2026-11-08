@@ -97,6 +97,8 @@ Zalecamy regularny eksport ustawień, zwłaszcza przed zmianami w konfiguracji i
 
 **Uwaga**: _Wyeksportowane ustawienia są szyfrowane hasłem głównym AAPS: bez hasła głównego użytego przy eksporcie nie zaimportujesz pliku ustawień!_
 
+If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+
 ### Eksport lub import ustawień
 Aby wyeksportować lub zaimportować ustawienia, otwórz **menu** (☰) i wybierz **Konserwacja**. W sekcji **Zarządzanie plikami** elementy **Lokalnie** i **Chmura** obok **Eksport ustawień** i **Importuj ustawienia** określają, gdzie plik ustawień jest zapisywany lub skąd jest czytany: **Lokalnie** to katalog AAPS w Twoim telefonie, **Chmura** jest dostępna, gdy ustawisz [Katalog w chmurze](#preferences-maintenance-cloud). Dotknięcie elementu włącza go lub wyłącza; co najmniej jeden jest zawsze wybrany, a oba wiersze mają ten sam wybór. Następnie dotknij samego **Eksport ustawień** lub **Importuj ustawienia**, aby zacząć.
 

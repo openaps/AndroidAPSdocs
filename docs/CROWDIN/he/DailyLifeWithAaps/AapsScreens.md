@@ -9,7 +9,7 @@
 
 ## המסך הראשי
 
-![המסך הראשי](../images/Home_Homescreen.png)
+![המסך הראשי](../images/main/Home_Homescreen.png)
 
 This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
 
@@ -33,13 +33,13 @@ The color of the BG value reflects the status to the defined [range](#Preference
 * אדום = מתחת לטווח
 * צהוב = מעל הטווח
 
-![עיגול הסוכר בטווח, ירוק](../images/Home_Delta.png) ![עיגול הסוכר מעל הטווח, צהוב](../images/Home_Delta_high.png) ![עיגול הסוכר מתחת לטווח, אדום](../images/Home_Delta_low.png)
+![עיגול הסוכר בטווח, ירוק](../images/main/Home_Delta.png) ![עיגול הסוכר מעל הטווח, צהוב](../images/main/Home_Delta_high.png) ![עיגול הסוכר מתחת לטווח, אדום](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
 #### Loop status
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Loop status](../images/main/main_loop_status.png)
 
 ליד עיגול הסוכר, סמל מציג את מצב ההפעלה של הלולאה (מלמעלה למטה בתמונה):
 
@@ -166,7 +166,7 @@ The color of the BG value reflects the status to the defined [range](#Preference
 
 כדי **לשנות את אחוז הפרופיל** (ואת משך הזמן שלו), יש להקיש על שם הפרופיל, ואז להקיש על הלחצן העגול **▶** (הפעלה) בפינה התחתונה של מסך הפרופיל. ב-**AAPS** 3.x המסך הזה נפתח בלחיצה ארוכה על שם הפרופיל; ב-**AAPS** 4 לחיצה ארוכה לא עושה דבר. שלב אחר שלב: [שינוי אחוז הפרופיל](#ProfileSwitch-change-percentage).
 
-![פרופיל עם החלפת פרופיל פעילה](../images/Home2020_ProfileSwitch.png)
+![פרופיל עם החלפת פרופיל פעילה](../images/main/main_profile_switch.png)
 
 1. Regular display with a standard profile activation.
 2. החלפת פרופיל עם אחוז של 90% וזמן שנותר של 9 דקות - שם הפרופיל הופך לצהוב כל עוד החלפת פרופיל זמנית פועלת.
@@ -174,7 +174,7 @@ The color of the BG value reflects the status to the defined [range](#Preference
 
 #### יעד
 
-![הזמן שנותר ליעד הזמני](../images/Home2020_TT.png)
+![הזמן שנותר ליעד הזמני](../images/main/main_temp_target.png)
 
 יעד רמת הסוכר הנוכחי מוצג מתחת לשם הפרופיל.
 
@@ -200,7 +200,7 @@ The color of the BG value reflects the status to the defined [range](#Preference
 
 #### IOB, COB, בזאלי ורגישות
 
-![IOB, COB, בזאלי ורגישות](../images/Home2020_TBR.png)
+![IOB, COB, בזאלי ורגישות](../images/main/main_iob_cob_basal_sensitivity.png)
 
 1. **מזרק**: אינסולין פעיל (IOB) - כמות האינסולין הפעיל בגוף  
     ערך האינסולין הפעיל יהיה אפס אם רק הבזאלי הרגיל פעל ולא נשאר אינסולין מבולוסים קודמים. 
@@ -234,7 +234,7 @@ This is when the oref algorithm thinks it can't rescue you by zero-temping, and 
 
 ### חלק C - שורת המצב
 
-![שורת המצב](../images/Home2020_StatusLights.png)
+![שורת המצב](../images/main/main_status_row.png)
 
 שורת המצב נותנת אזהרה חזותית עבור
 
@@ -320,7 +320,7 @@ This information is also shown on this graph :
 
 לחיצה על סמל **העיפרון** בפינה העליונה של הגרף פותחת את הגדרות הגרף:
 
-![הגדרות הגרף הראשי](../images/Home2020_MainGraphSetting.png)
+![הגדרות הגרף הראשי](../images/main/main_graph_settings.png)
 
 * **גובה הגרף** קובע את גובה הגרף.
 * **פעילות** (ACT) מוסיף את עקומת פעילות האינסולין: קו מלא בצבע צהוב-ירוק <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (לא לבלבל עם תחזית ה-UAM הצהובה המנוקדת)
@@ -408,7 +408,7 @@ AAPS לא נותן אינסולין לפי ערך הסוכר הנוכחי בלב
 
 כדי להגדיר גרף נוסף, יש ללחוץ על סמל **העיפרון** בפינה העליונה שלו:
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Additional graph settings](../images/main/main_additional_graph_settings.png)
 
 יש לבחור את השבבים של הנתונים שרוצים לראות בגרף הזה; הלחצן **הסרה** מוחק את הגרף.
 
@@ -490,7 +490,7 @@ It is a good combination to display this line along with the Deviation bars. ה�
 
 ### חלק F - סרגל ההפעלה המהירה
 
-![סרגל ההפעלה המהירה (QuickLaunch)](../images/Home2020_Buttons.png)
+![סרגל ההפעלה המהירה (QuickLaunch)](../images/main/main_quicklaunch_toolbar.png)
 
 הסרגל הצף בתחתית המסך מכיל את פעולות **[הפעלה מהירה](../DailyLifeWithAaps/QuickLaunch.md)** שלכם. **גלגל השיניים** הקטן פותח את הגדרות ההפעלה המהירה, שבהן בוחרים אילו לחצנים יוצגו (טיפולים, רשומות פורטל טיפולים, פעולות CGM, המסכים של חלון **ניהול**, לחצני [אשף מהיר](../DailyLifeWithAaps/QuickWizards.md), [תרחישים](../DailyLifeWithAaps/Scenes.md) ועוד).
 
@@ -502,7 +502,7 @@ It is a good combination to display this line along with the Deviation bars. ה�
 
 #### אינסולין
 
-![חלון אינסולין](../images/Home2020_ButtonInsulin.png)
+![חלון אינסולין](../images/v4/Screens/insulin_dialog.png)
 
 To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
 
@@ -520,7 +520,7 @@ To give a certain amount of insulin without using the [bolus calculator](#aaps-s
 
 #### פחמימות
 
-![חלון פחמימות](../images/Home2020_ButtonCarbs.png)
+![חלון פחמימות](../images/v4/Screens/carbs_dialog.png)
 
 נועד לרישום פחמימות ללא בולוס.
 
@@ -574,7 +574,7 @@ To give a certain amount of insulin without using the [bolus calculator](#aaps-s
 
 ## אשף הבולוס
 
-![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
+![Bolus wizard](../images/v4/Screens/bolus_wizard.png)
 
 When you want to make a meal bolus, this is where you will normally make it from.
 
@@ -618,7 +618,7 @@ When you want to make a meal bolus, this is where you will normally make it from
 
 **הגדרת התראה** (תזכורת לאכילה): כאשר מוזן זמן פחמימות בעתיד, מופיע מתג "**הגדרת התראה**", כדי לקבל תזכורת בזמן שנקבע לאכול את הפחמימות שהוזנו ב-**AAPS**:
 
-![הגדרת התראה לפחמימות עתידיות](../images/Home2021_BolusWizard_EatingReminder.png)
+![הגדרת התראה לפחמימות עתידיות](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
 התזכורת מתחילה כאשר הבולוס הוזרק. בזמן שהיא פועלת, פס **זמן לאכול** במסך הראשי סופר לאחור, עם **עצירה** ו-**+5 דק׳**. **+5 דק׳** מזיז את סוף ההמתנה בחמש דקות קדימה, והפס מציג את זמן ההמתנה הכולל. כשהזמן מגיע, התזכורת מצלצלת בצליל משלה, טיימר מטבח רך. מלבד **השתקת ההתראה** (המסך נשאר פתוח) ו**השתקה וסגירה**, מסך ההתראה מציע גם **+5 דק׳**, שמתחיל המתנה חדשה של חמש דקות. אחרי הצלצול, בפס כתוב *הזמן הגיע*, עם **+5 דק׳** ו**סגירה**; גם **השתקה וסגירה** מסירה את הפס. הפס וההתראה מוצגים גם ב-**AAPSClient**, וגם ב[שעון](#WearOsSmartwatch-wizard-carb-time). התזכורת לא יוצרת טיימר באפליקציית השעון של הטלפון. אם Android לא מאפשר ל-**AAPS** להגדיר התראות, האשף מבקש לאפשר *שעונים מעוררים ותזכורות* עבור **AAPS** בהגדרות Android. הפעמון לא מוצע כאשר זמן הפחמימות הוא בעבר.
 
@@ -640,7 +640,7 @@ When you want to make a meal bolus, this is where you will normally make it from
 
 #### זיהוי שגוי של פחמימות פעילות
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+![Slow carb absorption](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 If you see the warning above after using bolus wizard, **AAPS** has detected that the calculated COB value may be wrong. So, if you want to bolus again after a previous meal with COB, you should be aware of overdosing!
 
@@ -719,7 +719,7 @@ Calculations are run each time the system gets a fresh reading from the CGM.
 
 ## Profile
 
-![Profile](../images/Screenshots_Profile.png)
+![Profile](../images/screens/Screenshots_Profile.png)
 
 **ניהול ← פרופיל** (או הקשה על שם הפרופיל במסך הראשי) פותח את מסך הפרופיל: הפרופילים שלכם כקרוסלה של כרטיסים שאפשר להחליק ביניהם, עם לחצנים להוספה, עריכה, שכפול, מחיקה ו**הפעלה** של פרופיל.
 
@@ -733,7 +733,7 @@ Profile contains information on your individual diabetes settings, see the detai
 
 ## NSClient
 
-![NSClient](../images/Screenshots_NSClient.png)
+![NSClient](../images/screens/Screenshots_NSClient.png)
 
 **הגדרות תצורה ← תקשורת ← NSClientV3 ← פתיחת תוסף** מציג את מצב החיבור לאתר Nightscout שלכם: כתובת URL, מצב websocket, תור ויומן של פעולות הסנכרון.
 
@@ -745,7 +745,7 @@ Profile contains information on your individual diabetes settings, see the detai
 
 ## מקור ערכי הסוכר - xDrip, BYODA...
 
-![מסך מקור ערכי הסוכר](../images/Screenshots_BGSource.png)
+![מסך מקור ערכי הסוכר](../images/screens/Screenshots_BGSource.png)
 
 **הגדרות תצורה ← מקור ערכי הסוכר ← פתיחת תוסף** מציג את היסטוריית קריאות ה-CGM ומאפשר להסיר קריאות במקרה של תקלה (למשל compression low - ערך נמוך שגוי בגלל לחץ על החיישן) או קריאות כפולות.
 

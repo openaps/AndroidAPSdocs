@@ -89,7 +89,7 @@ Gdy usłyszysz sygnał, naciśnij **Rozpocznij parowanie**.
 - Aktywację patcha musisz zakończyć w ciągu 60 minut od jego uruchomienia. Jeśli nie zdążysz, odrzuć patch.
 ```
 
-![Krok parowania patcha](../images/EOPatch/Bild6.png) ![Pierwsza prośba o parowanie Bluetooth](../images/EOPatch/Bild7.png) ![Druga prośba o parowanie Bluetooth z kluczem dostępu](../images/EOPatch/Bild8.png)
+![Krok parowania patcha](../images/EOPatch/eopatch_pairing.png) ![Pierwsza prośba o parowanie Bluetooth](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Druga prośba o parowanie Bluetooth z kluczem dostępu](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@ Zdejmij taśmę samoprzylepną z patcha, a potem naciśnij **Dalej**.
 
 Jeśli igła wystaje albo patch jest mokry, brudny lub jego taśma samoprzylepna jest zagięta, naciśnij zamiast tego **Odrzuć** i użyj nowego patcha.
 
-![Krok Przygotuj się do założenia Patcha](../images/EOPatch/Bild9.png)
+![Krok Przygotuj się do założenia Patcha](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Miejsce wkłucia
 
@@ -123,7 +123,7 @@ Sprawdź miejsce wkłucia, a potem naciśnij **Rozpocznij kontrolę bezpieczeńs
 - Jeśli patch nie przylega całkowicie, między patch a skórę może dostać się powietrze. To osłabia klej i wodoodporność patcha.
 ```
 
-![Krok Zakładanie Patcha](../images/EOPatch/Bild10.png)
+![Krok Zakładanie Patcha](../images/EOPatch/eopatch_attaching.png)
 
 ### Kontrola bezpieczeństwa
 
@@ -133,7 +133,7 @@ Kontrola bezpieczeństwa trwa około 30 sekund. Gdy się zakończy, patch wyda j
 Dla bezpieczeństwa nie obracaj dźwigni igły, dopóki kontrola bezpieczeństwa się nie zakończy.
 ```
 
-![Krok Zakładanie Patcha z przyciskiem Rozpocznij kontrolę bezpieczeństwa](../images/EOPatch/Bild11.png) ![Trwa kontrola bezpieczeństwa](../images/EOPatch/Bild12.png)
+![Krok Zakładanie Patcha z przyciskiem Rozpocznij kontrolę bezpieczeństwa](../images/EOPatch/eopatch_start_safety_check.png) ![Trwa kontrola bezpieczeństwa](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@ Potem kreator od razu przechodzi do aktywacji nowego patcha (patrz wyżej). Jeś
 
 Gdy żaden patch nie jest aktywny, **AAPS** pokazuje pompę jako wstrzymaną i zapisuje bazę tymczasową 0 U/godz., więc insulina bazowa nie jest liczona do IOB, dopóki nie aktywujesz następnego patcha.
 
-![Ekran pompy EOPatch2 z przyciskiem DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Strona Odrzuć Patch](../images/EOPatch/Bild14.png) ![Okno potwierdzenia Odrzuć Patch](../images/EOPatch/Bild15.png) ![Usuwanie Patcha zostało zakończone](../images/EOPatch/Bild16.png)
+![Ekran pompy EOPatch2 z przyciskiem DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![Strona Odrzuć Patch](../images/EOPatch/eopatch_discard_patch.png) ![Okno potwierdzenia Odrzuć Patch](../images/EOPatch/eopatch_discard_confirm.png) ![Usuwanie Patcha zostało zakończone](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@ Wstrzymanie podawania insuliny anuluje też trwający bolus przedłużony i baz�
 
 Podawanie insuliny zostanie wstrzymane na wybrany czas.
 
-![Ekran pompy EOPatch2 z przyciskiem SUSPEND](../images/EOPatch/Bild17.png) ![Okno potwierdzenia wstrzymania](../images/EOPatch/Bild18.png) ![Okno Czas zawieszenia bazy](../images/EOPatch/Bild19.png)
+![Ekran pompy EOPatch2 z przyciskiem SUSPEND](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Okno potwierdzenia wstrzymania](../images/EOPatch/eopatch_suspend_confirm.png) ![Okno Czas zawieszenia bazy](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@ Zrzuty ekranu powyżej pochodzą z wcześniejszej wersji **AAPS**. W **AAPS** 4 
 1. Otwórz ekran pompy (**Zarządzaj** → **Pompa**) i naciśnij **Wznów pompę**.
 1. W oknie **Wznów podawanie insuliny** naciśnij **Potwierdź**.
 
-![Ekran pompy EOPatch2 z przyciskiem RESUME](../images/EOPatch/Bild20.png) ![Okno Wznów podawanie insuliny](../images/EOPatch/Bild21.png)
+![Ekran pompy EOPatch2 z przyciskiem RESUME](../images/EOPatch/eopatch_pump_screen_resume.png) ![Okno Wznów podawanie insuliny](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@ Alarmy dotyczą pilnych sytuacji o najwyższym priorytecie i wymagają od Ciebie
 
 Gdy naciśniesz **Potwierdź** w powiadomieniu, **AAPS** obsłuży alarm. W przypadku większości alarmów patch zostanie wtedy dezaktywowany. Przy alarmie **Niewłaściwa temperatura** przycisk to **Ponów**.
 
-![Alarm EOPatch2](../images/EOPatch/Bild22.png) ![Alarm EOPatch2 po dezaktywacji patcha](../images/EOPatch/Bild23.png)
+![Alarm EOPatch2](../images/EOPatch/eopatch_alarm.png) ![Alarm EOPatch2 po dezaktywacji patcha](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@ Poszczególne alarmy są opisane poniżej.
 
 Ostrzeżenia dotyczą sytuacji o średnim lub niskim priorytecie. Ostrzeżenie pojawia się jako powiadomienie na **ekranie głównym**.
 
-![Ostrzeżenie EOPatch2 na ekranie głównym](../images/EOPatch/Bild24.png)
+![Ostrzeżenie EOPatch2 na ekranie głównym](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

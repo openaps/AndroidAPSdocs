@@ -89,7 +89,7 @@ Als je de piep hoort, druk je op **Begin met koppelen**.
 - Je moet de patch binnen 60 minuten na het opstarten volledig activeren. Lukt dat niet, verwijder de patch dan.
 ```
 
-![Stap Patch koppelen](../images/EOPatch/Bild6.png) ![Eerste Bluetooth-koppelverzoek](../images/EOPatch/Bild7.png) ![Tweede Bluetooth-koppelverzoek met de toegangscode](../images/EOPatch/Bild8.png)
+![Stap Patch koppelen](../images/EOPatch/eopatch_pairing.png) ![Eerste Bluetooth-koppelverzoek](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Tweede Bluetooth-koppelverzoek met de toegangscode](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@ Verwijder de plakstrip van de patch en druk dan op **Volgende**.
 
 Als er een naald uitsteekt, of als de patch nat of vuil is of de plakstrip gevouwen is, druk dan in plaats daarvan op **Verwijder** en gebruik een nieuwe patch.
 
-![Stap Bereid je voor om patch aan te brengen](../images/EOPatch/Bild9.png)
+![Stap Bereid je voor om patch aan te brengen](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Plaatsingsplek
 
@@ -123,7 +123,7 @@ Controleer de infuusplaats en druk dan op **Start veiligheidscontrole**.
 - Als de patch niet helemaal plakt, kan er lucht tussen de patch en je huid komen. Dat maakt de plakkracht en de waterbestendigheid van de patch zwakker.
 ```
 
-![Stap Patch aanbrengen](../images/EOPatch/Bild10.png)
+![Stap Patch aanbrengen](../images/EOPatch/eopatch_attaching.png)
 
 ### Veiligheidscontrole
 
@@ -133,7 +133,7 @@ De veiligheidscontrole duurt ongeveer 30 seconden. Als die klaar is, piept de pa
 Draai voor veilig gebruik de hendel voor de naald niet voordat de veiligheidscontrole klaar is.
 ```
 
-![Stap Patch aanbrengen met de knop Start veiligheidscontrole](../images/EOPatch/Bild11.png) ![Veiligheidscontrole bezig](../images/EOPatch/Bild12.png)
+![Stap Patch aanbrengen met de knop Start veiligheidscontrole](../images/EOPatch/eopatch_start_safety_check.png) ![Veiligheidscontrole bezig](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@ Daarna gaat de wizard direct verder met het activeren van een nieuwe patch (zie 
 
 Zolang er geen patch actief is, toont **AAPS** de pomp als onderbroken en legt het een tijdelijk basaal van 0 E/u vast, zodat er geen basale insuline in de IOB wordt meegeteld tot de volgende patch geactiveerd is.
 
-![Het pompscherm van EOPatch2 met de knop DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Pagina Patch verwijderen](../images/EOPatch/Bild14.png) ![Bevestigingsvenster Patch verwijderen](../images/EOPatch/Bild15.png) ![Het verwijderen van de patch is voltooid](../images/EOPatch/Bild16.png)
+![Het pompscherm van EOPatch2 met de knop DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![Pagina Patch verwijderen](../images/EOPatch/eopatch_discard_patch.png) ![Bevestigingsvenster Patch verwijderen](../images/EOPatch/eopatch_discard_confirm.png) ![Het verwijderen van de patch is voltooid](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@ Als je de insulinetoediening onderbreekt, wordt ook een lopende vertraagde bolus
 
 De insulinetoediening wordt onderbroken voor de tijd die je hebt gekozen.
 
-![Het pompscherm van EOPatch2 met de knop SUSPEND](../images/EOPatch/Bild17.png) ![Bevestigingsvenster voor onderbreken](../images/EOPatch/Bild18.png) ![Venster Periode uitstel basaal](../images/EOPatch/Bild19.png)
+![Het pompscherm van EOPatch2 met de knop SUSPEND](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Bevestigingsvenster voor onderbreken](../images/EOPatch/eopatch_suspend_confirm.png) ![Venster Periode uitstel basaal](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@ De schermafbeeldingen hierboven komen uit een eerdere versie van **AAPS**. In **
 1. Open het pompscherm (**Beheren** → **Pomp**) en druk op **Hervat pomp**.
 1. Druk in het venster **Insuline toediening hervatten** op **Bevestigen**.
 
-![Het pompscherm van EOPatch2 met de knop RESUME](../images/EOPatch/Bild20.png) ![Venster Insuline toediening hervatten](../images/EOPatch/Bild21.png)
+![Het pompscherm van EOPatch2 met de knop RESUME](../images/EOPatch/eopatch_pump_screen_resume.png) ![Venster Insuline toediening hervatten](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@ Alarmen zijn voor dringende situaties met de hoogste prioriteit en vragen direct
 
 Als je op de melding op **Bevestigen** drukt, handelt **AAPS** het alarm af. Bij de meeste alarmen wordt de patch daarbij gedeactiveerd. Bij het alarm **Ongeschikte temperatuur** is de knop **Opnieuw**.
 
-![EOPatch2-alarm](../images/EOPatch/Bild22.png) ![EOPatch2-alarm nadat de patch gedeactiveerd is](../images/EOPatch/Bild23.png)
+![EOPatch2-alarm](../images/EOPatch/eopatch_alarm.png) ![EOPatch2-alarm nadat de patch gedeactiveerd is](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@ De verschillende alarmen worden hieronder uitgelegd.
 
 Waarschuwingen zijn voor situaties met gemiddelde of lage prioriteit. Een waarschuwing verschijnt als melding op het scherm **Overzicht**.
 
-![EOPatch2-waarschuwing op het scherm Overzicht](../images/EOPatch/Bild24.png)
+![EOPatch2-waarschuwing op het scherm Overzicht](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

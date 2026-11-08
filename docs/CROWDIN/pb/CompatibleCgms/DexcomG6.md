@@ -21,7 +21,7 @@ Leia mais no [artigo](https://www.diabettech.com/artificial-pancreas/diy-looping
 - Os transmissores Dexcom G6 e ONE podem ser conectados ao mesmo tempo ao receptor Dexcom (ou, como alternativa, à bomba t:slim) e a um app no seu telefone.
 - Ao usar o xDrip como receptor, desinstale primeiro o app da Dexcom. **Você não pode conectar o xDrip e o app da Dexcom ao transmissor ao mesmo tempo!**
 - Se você precisa do Clarity e quer aproveitar os alarmes do xDrip, use o [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (somente G6) com transmissão local (local broadcast) para o xDrip.
-- Você também pode usar o xDrip como app companheiro (companion app) do app oficial da Dexcom, mas pode haver atrasos nas leituras de glicose.
+- You can also use xDrip as a companion app of the official Dexcom app, but you might experience delays in BG readings. To read the Dexcom app notifications without xDrip, as a trusted data source, use the [Notification Reader](#DexcomG6-notification-reader).
 - Com os transmissores atuais, o xDrip sempre usa o [algoritmo nativo](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) do transmissor; não há motivo para desativá-lo. Os [reinícios preventivos](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) só funcionam em transmissores antigos (firmware 1.6.5.25 ou anterior), onde são necessários para evitar que o sensor pare após 10 dias; os transmissores recentes (Firefly) os ignoram. Veja [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) antes de tentar qualquer reinício.
 - Tudo o que se refere ao próprio sensor e ao transmissor está documentado na [página Dexcom do xDrip](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
@@ -52,6 +52,53 @@ O Dexcom BYODA é agora uma versão muito antiga do app e não pode ser atualiza
 
 -   Selecione '640G/Eversense' como fonte de dados.
 -   O comando 'start sensor' precisa ser executado no xDrip para receber valores. Isso não afeta o seu sensor atual, que é controlado pelo Build Your Own Dexcom App.
+
+(DexcomG6-notification-reader)=
+## If using G6 or ONE with the Notification Reader
+
+The official Dexcom G6 or ONE app stays connected to the transmitter. **AAPS** reads the glucose value directly from the notification of the Dexcom app, without any other app in between.
+
+```{admonition} Trusted data source
+:class: note
+Readings from the Dexcom G6 and ONE apps are a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs can be allowed all the time.
+```
+
+Compared to BYODA or xDrip, the Notification Reader has limits:
+
+- **No trend arrow** and **no backfill**: readings missed while the phone was off or out of range are lost.
+- Each reading gets the time the notification appeared, not the exact time of the sensor reading.
+- Only values between 40 and 405 mg/dL (2.2 and 22.5 mmol/L) are read. "LOW" and "HIGH" are not read.
+
+### Set up the Dexcom app
+
+-   Keep the Dexcom app installed and connected to the transmitter.
+-   Make sure the Dexcom app shows the current glucose value in its notification. As notificações dele devem continuar visíveis: não silencie nem oculte essas notificações.
+-   Use the same glucose units (mg/dL or mmol/L) in the Dexcom app as in **AAPS**. Otherwise **AAPS** cannot read the value.
+
+### Configuração no AAPS
+
+-   Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and confirm the switch.
+
+    ![BG Source: Notification Reader selected](../images/NotificationReader_BgSource.png)
+
+-   Back on the main screen, **AAPS** shows **Permissions Required**. Next to **Notification Access**, tap **Grant**.
+
+    ![Permissions Required: Notification Access](../images/NotificationReader_Permissions.png)
+
+-   Android opens its notification access list (its name depends on your Android version, for example *Notification read, reply & control*). Select **AAPS**, turn on **Allow notification access** and confirm with **Allow**.
+
+    ![Android asks to allow notification access for AAPS](../images/NotificationReader_AllowDialog.png)
+
+    Android warns that **AAPS** could read all your notifications. **AAPS** only reads the notifications of supported CGM apps and ignores all others.
+
+    ![Notification access allowed for AAPS](../images/NotificationReader_AccessOn.png)
+
+-   If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because **AAPS** was not installed from the Play Store. Open the **AAPS** app info (long press the **AAPS** icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Depois volte à tela de acesso a notificações e permita o acesso.
+-   Readings appear in **AAPS** when the Dexcom app shows a new value.
+
+```{warning}
+If the Dexcom app notification shows more than one glucose number, or none, **AAPS** skips that notification.
+```
 
 
 (DexcomG6-troubleshooting-g6)=

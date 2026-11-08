@@ -21,7 +21,7 @@ Om du fortfarande har din keystore behöver du inte den här sidan: använd den 
 
 - När du avinstallerar **AAPS** raderas alla dess inställningar, dina [mål](../SettingUpAaps/CompletingTheObjectives.md) och den aktuella pumpanslutningen. Du får tillbaka dem genom att importera din **inställningsfil**, så se till att du har en ny.
 - Inställningsfilen innehåller inte din historik med behandlingar och glukosvärden. Om du laddar upp till [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md) kan du läsa in den igen efter ominstallationen (steg 8).
-- Du behöver ditt [**huvudlösenord**](#Preferences-master-password): inställningsfilen är krypterad med det.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Användare av Omnipod och Medtrum:** läs [Slanglösa pumpar](#ExportImportSettings-tubeless-pumps) först. Din inställningsfil måste ha exporterats under den pod som du har på dig nu.
 - Om det behövs, [ställ in mottagaren för din CGM/BG-källa](../Getting-Started/CompatiblesCgms.md) innan du börjar.
 

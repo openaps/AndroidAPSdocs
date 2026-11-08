@@ -59,7 +59,7 @@ Die meisten Frustrationen mit Standalone **AAPS**-Smartwatches entstehen aus der
 
 Ein weiteres Problem ist es eine Smartwatch mit langer Akkulaufzeit, die in der Regel klobig und dick sind, zu finden. Typische Probleme mit denen gekämpft werden sind Betriebssystem- und Energiespar-Einstellungen, das Starten von Sensoren über die Smartwatch, geringe Bluetooth-Reichweite (um die Verbindung mit Pumpe und Sensor zu halten) und fraglicher Wasserfestigkeit. Beispiele finden sich in den Fotos unten.
 
-![grafik](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![grafik](../images/watch_standalone_aaps_and_xdrip.png)
 
 Wenn Du eine Stand-Alone-Smartwatch einrichten möchtest, lies die Beiträge und Kommentare in der **AAPS**-Facebook-Gruppe (gute Suchbegriffe sind „standalone“ und „Lemfo“) und auf Discord.
 
@@ -88,7 +88,7 @@ Neuere Änderungen an **Wear OS** machen die eigenen **AAPS**-Watchfaces nach un
 
 Nach der [Installation von **AAPS** auf Deiner Smartwatch](../WearOS/WearOsSmartwatch.md), kannst Du automatisch, eines der speziellen **AAPS**-Watchfaces auswählen. Bei den meisten Smartwatches drückst Du dazu so lange auf den Startbildschirm, bis dieser schrumpft, wischt dann nach rechts und kannst dann eine andere Anzeige auswählen:
 
-![grafik](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![grafik](../images/watchfaces_aaps_selection.png)
 
 Dies sind die Standardanzeigen, die Bestandteil von **AAPS** sind. Es gibt [weitere Watchfaces](#WearOS_changing-to-AAPS-watchface) und Du kannst auch [Komplikationen](#Watchfaces-complications) verwenden.
 
@@ -155,7 +155,7 @@ Hier fassen wir einige der bei **AAPS**-Nutzenden populären Follower-Optionen z
 
 **WatchDrip+** ist eine von der Community entwickelte Begleit-App, die Glukose- und Loop-Daten auf verschiedenen Smartwatch-Modellen anzeigt, vor allem von Xiaomi (_z. B._ Mi Band) und Amazfit:
 
-![grafik](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![grafik](../images/watch_watchdrip_plus.png)
 
 Ab Version 0.5 liest **WatchDrip+** die Daten direkt aus **AAPS**, ohne xDrip+ als Zwischenstation. Auf dem **AAPS**-Smartphone:
 
@@ -170,9 +170,9 @@ Mehr darüber, auch zur Einrichtung, findest Du auf der [Website von WatchDrip+]
 
 ### Pebble Smartwatch
 
-![grafik](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![grafik](../images/watch_pebble.png)
 
-![grafik](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![grafik](../images/watch_pebble_watchface.png)
 
 
 Pebble Smartwatches ([Produktion mittlerweile eingestellt](https://en.wikipedia.org/wiki/Pebble_(watch))) wurden von 2013 bis 2016 verkauft, und sind zum Teil gebraucht noch erhältlich. Fitbit übernahm das Pebble-Vermögen. Pebble-Nutzende können die Urchin Uhr verwenden, um Nightscout-Daten anzuzeigen. Informationen, die angezeigt werden: Aktives Insulin, die aktive temporäre Basalrate und Glukosewert-Vorhersagen. Im Open Loop kannst Du mit IFTTT ein Applet erstellen, das bei einer Benachrichtigung von **AAPS** eine SMS oder eine Pushover-Benachrichtigung sendet.

@@ -97,6 +97,8 @@ Il est recommandé d'exporter régulièrement les paramètres, surtout avant et 
 
 **Remarque** : _Les paramètres exportés seront chiffrés avec votre mot de passe principal AAPS : sans le mot de passe principal utilisé pour l'export, vous ne pourrez pas importer le fichier de paramètres !_
 
+If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+
 ### Exporter ou importer les paramètres
 Pour exporter ou importer les paramètres, ouvrez le **menu** (☰) et choisissez **Maintenance**. Sous **Gestion de fichiers**, les puces **Local** et **Cloud** à côté de **Exporter les paramètres** et **Importer les paramètres** choisissent où le fichier de paramètres est enregistré ou lu : **Local** est le répertoire AAPS sur votre téléphone, **Cloud** est disponible dès qu'un [Répertoire Cloud](#preferences-maintenance-cloud) est configuré. Appuyer sur une puce l'active ou la désactive ; au moins une reste toujours choisie, et les deux lignes partagent le même choix. Appuyez ensuite sur **Exporter les paramètres** ou **Importer les paramètres** pour commencer.
 

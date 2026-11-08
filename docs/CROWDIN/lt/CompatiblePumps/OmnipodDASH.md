@@ -535,7 +535,7 @@ Kiekvieną kartą aktyvuojant Pod, **AAPS** automatiškai įrašo kaniulės keit
 
 **Pompos baterija**: amžius nerodomas, nes baterija ir insulino rezervuaras yra įmontuoti kiekviename Pod, o baterija visada veikia ilgiau nei pats Pod (daugiausia 80 valandų).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

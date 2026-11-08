@@ -172,7 +172,7 @@ Gå tilbake med pilen øverst til venstre. Veiviseren viser nå «**Passord defi
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**IKKE MIST HOVEDPASSORDET DITT**. Noter det _f.eks._ på Google Drive, som er et godt sted fordi Google tar sikkerhetskopi for deg. Smarttelefonen eller PC-en din kan krasje, og da har du kanskje ingen kopi. Hvis du glemmer hovedpassordet ditt, kan det bli vanskelig å gjenopprette profilkonfigurasjonen og framgangen din gjennom **Opplæringsmålene** senere.
+**IKKE MIST HOVEDPASSORDET DITT**. Noter det _f.eks._ på Google Drive, som er et godt sted fordi Google tar sikkerhetskopi for deg. Smarttelefonen eller PC-en din kan krasje, og da har du kanskje ingen kopi. Hvis du glemmer hovedpassordet ditt, kan det bli vanskelig å gjenopprette profilkonfigurasjonen og framgangen din gjennom **Opplæringsmålene** senere. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 Når du er ferdig, trykker du på «**NESTE**» for å gå til neste skjerm.

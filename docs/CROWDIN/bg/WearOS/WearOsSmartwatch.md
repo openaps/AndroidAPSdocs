@@ -211,7 +211,7 @@ Wear Installer 2, разработено от [Malcolm Bryant](https://www.youtu
 
 Ще видите да се появяват код за сдвояване по Wi-Fi, IP адрес и порт:
 
-![Екран на часовника с кода за сдвояване по Wi-Fi, IP адреса и порта](../images/wearos/ADB03.png)
+![Екран на часовника с кода за сдвояване по Wi-Fi, IP адреса и порта](../images/wearos/watch_wifi_pairing_code.png)
 
 - В терминала: `adb pair ipaddress:port` Напр. `adb pair 10.10.1.125:36299`
 - Ще бъдете попитани за кода за сдвояване. Въведете го.

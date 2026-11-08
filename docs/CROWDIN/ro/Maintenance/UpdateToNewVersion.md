@@ -40,4 +40,4 @@ After you installed the new apk:
 - asigurați-vă că ați importat setările; și
 - verificați setările **AAPS** din **Setări** și asigurați-vă că sunt în continuare corecte.
 
-![Dialogul Despre cu versiunea AAPS instalată](../images/about_dialog_version.png)
+![Dialogul Despre cu versiunea AAPS instalată](../images/update/about_dialog_version.png)

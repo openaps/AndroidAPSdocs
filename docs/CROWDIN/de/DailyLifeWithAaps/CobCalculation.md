@@ -84,7 +84,7 @@ Wurden Kohlenhydrate über- oder unterschätzt, kannst Du das wie [hier](#screen
 
 Im Bildschirm **Behandlungsverlauf** kannst Du einen falschen Kohlenhydrat-Eintrag korrigieren, indem Du ihn löschst. Dies kann dann notwendig sein, wenn die Kohlenhydratmenge über- oder unterschätzt wurde:
 
-![Deleting a carb entry from Treatments history](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Deleting a carb entry from Treatments history](../images/treatments_history_delete_carbs.png)
 
 1. Prüfe und merke Dir die aktuellen Werte für **COB** und **IOB** auf dem **AAPS**-Startbildschirm.
 2. Öffne den **Behandlungsverlauf** (Menü → *Behandlungsverlauf*), Reiter **Kohlenhydrate & Bolus**. Je nach Pumpe werden die Kohlenhydrate zusammen mit dem Insulin in einer Zeile oder als eigener Eintrag angezeigt (z. B. bei der Dana RS).

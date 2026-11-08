@@ -84,7 +84,7 @@ Ak boli sacharidy nadhodnotené alebo podhodnotené, môžete to opraviť na obr
 
 Obrazovku **História ošetrení** môžete použiť na opravu chybného záznamu sacharidov tak, že ho vymažete. Môže to byť preto, že používateľ pri zadávaní sacharidy nadhodnotil alebo podhodnotil:
 
-![Vymazanie záznamu sacharidov z histórie ošetrení](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Vymazanie záznamu sacharidov z histórie ošetrení](../images/treatments_history_delete_carbs.png)
 
 1. Skontrolujte a zapamätajte si aktuálne **COB** a **IOB** na hlavnej obrazovke **AAPS**.
 2. Otvorte **História ošetrení** (bočné menu → *História ošetrení*), kartu **Sacharidy a bolusy**. Podľa typu pumpy sa sacharidy môžu zobraziť spolu s inzulínom v jednom riadku alebo ako samostatný záznam (napr. pri Dana RS).

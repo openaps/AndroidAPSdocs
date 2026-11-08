@@ -22,37 +22,37 @@ Bir noktada sizden bir çekme isteği (pull request, PR) oluşturmanız istenece
 
 1. <https://github.com/openaps/AndroidAPSdocs> adresine gidin ve deponun kendi kopyanızı oluşturmak için sağ üstteki Fork düğmesine basın.
 
-![Depoyu fork'lama](../images/PR0.png)
+![Depoyu fork'lama](../images/docs_pr_fork_repository.png)
 
 2. Herhangi bir sayfaya gidin ve düzenlemek istediğiniz sayfayı açın. Sağ üst köşedeki "Edit in GitHub" (GitHub'da düzenle) bağlantısına tıklayabilirsiniz. Bu yalnızca İngilizce sayfalar için mümkündür. 
 
-![dokümanı düzenle](../images/PR1.png)
+![dokümanı düzenle](../images/docs_pr_edit_on_github.png)
 
 Veya düzenlenecek sayfa içeriğinin üst çubuğunda görünen kalem simgesine tıklayın. Bunun için GitHub hesabınıza giriş yapmış olmanız gerekir (hesabınız yoksa, kolayca oluşturabilirsiniz).
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. Adım 2'deki seçeneklerden biri veya diğeri, düzenlemelerinizin kaydedileceği deponuzda yeni bir dal oluşturacaktır. Bu dosyada düzenlemelerinizi yapabilirsiniz.
 
 Doküman sayfaları için Markdown kullanıyoruz. Dosyaların uzantısı ".md"dir. Markdown belirtimi sabit değildir ve şu anda Markdown dosyalarımız için myst_parser kullanıyoruz. [Aşağıda anlatılan](#edit-the-docs-code-syntax) doğru sözdizimini kullanmaya dikkat edin.
 
-![Dalı düzenle](../images/PR3.png)
+![Dalı düzenle](../images/docs_pr_edit_file.png)
 
 4. "<>Edit file" (dosyayı düzenle) sekmesinde çalıştınız. Değiştirdiğiniz her şeyin istediğiniz gibi göründüğünden emin olmak için (yazım hatalarını kontrol edin) "Preview changes" (değişiklikleri önizle) sekmesini seçin ve sayfaya yeniden bakın. Gerekli bir iyileştirme görürseniz, daha fazla iyileştirme yapmak için düzenleme sekmesine geri dönün. 
 
-![preview mode](../images/PR5.png)
+![preview mode](../images/docs_pr_preview_changes.png)
 
 5. Düzenlemelerinizi bitirdiğinizde, sayfanın en altına gidin. Alttaki kutuda, yorumlarınızı "Add an optional extended description..." (isteğe bağlı ayrıntılı açıklama ekleyin) yazan metin alanına yazın. Varsayılan başlık dosya adıdır. Değişikliğin **nedenini** açıklayan bir cümle eklemeye çalışın. Nedeni belirtmek, gözden geçirenlerin PR ile ne yapmak istediğinizi anlamasına yardımcı olur.
 
-![Commit yorumları](../images/PR4.png)
+![Commit yorumları](../images/docs_pr_commit_description.png)
 
 6. Yeşil "Propose file changes" (dosya değişikliklerini öner) veya "Commit changes" (değişiklikleri kaydet) düğmesine tıklayın. Açılan sayfada "Create Pull Request" (çekme isteği oluştur) düğmesine, sonraki sayfada da tekrar "Create Pull Request" düğmesine tıklayın.
 
-![create pull request](../images/PR6.png)
+![create pull request](../images/docs_pr_create_pull_request.png)
 
 7. Bu, bir çekme isteğinin (PR) açılmasını tamamlar. GitHub, PR'a bir numara verir. Bu numara başlıktan sonra, bir kare işaretinin (#) arkasında görünür. Geri bildirimi kontrol etmek için bu sayfaya dönün (veya size e-postayla GitHub bildirimleri gönderildiyse, PR ile ilgili herhangi bir etkinlik hakkında bilgilendiren e-postalar alacaksınız). Düzenleme şimdi, ekibin AAPS için ana belgelere geçmeden önce gözden geçireceği ve potansiyel olarak geri bildirimde bulunacağı bir PR listesinde olacak! PR'nin ilerlemesini kontrol etmek isterseniz, GitHub hesabınızın sağ üst köşesindeki zil logosuna tıklayıp tüm PR'lerinizi görebilirsiniz.
 
-![PR tracking](../images/PR7.png)
+![PR tracking](../images/docs_pr_tracking.png)
 
 Not: Fork'unuz ve dalınız (branch) kendi kişisel GitHub hesabınızda kalmaya devam eder. PR'nizin birleştiğine dair bir bildirim aldıktan sonra, işiniz bittiyse şubenizi silebilirsiniz (Adım 7'in bildirim alanı, kapatıldığında veya birleştiğinde şubeyi silmek için bir bağlantı sağlayacaktır). Gelecekteki düzenlemeler için, bu prosedürü izlerseniz, düzenlemeler her zaman AndroidAPSdocs depolarının güncellenmiş bir sürümüyle başlayacaktır. PR başlatmak için başka bir yöntem kullanmayı seçerseniz (örneğin, başlangıç noktası olarak fork'unuzun master dalından başlayarak düzenleme), önce bir "compare" (karşılaştırma) yaparak ve fork'unuzu son güncellemenizden bu yana gelen tüm güncellemeleri birleştirerek deponuzun güncel olduğundan emin olmanız gerekir. İnsanlar depolarını güncellemeyi unutmaya meyilli olduğundan, "karşılaştırma" yapmaya alışana kadar yukarıda özetlenen PR sürecini kullanmanızı öneririz.
 

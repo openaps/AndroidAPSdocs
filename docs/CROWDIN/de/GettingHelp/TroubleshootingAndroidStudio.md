@@ -192,7 +192,7 @@ Wenn Du die obige Fehlermeldung bekommst, musst Du eine passende JVM-Version her
 
   Es gibt im Internet eine Reihe von Anleitungen (wie z. B. [diese](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d)), die beschreiben, wie Du herausfindest, ob Du ein 32-Bit oder 64-Bit Betriebssystem hast.
 
-  ![Screenshot konnte den Daemon-Prozess nicht starten](../images/AndroidStudioWin10_32bitError.png)
+  ![Screenshot konnte den Daemon-Prozess nicht starten](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Gradle Resync
@@ -237,7 +237,7 @@ Deine App wurde erfolgreich gebaut und kann auf das Smartphone übertragen werde
 
 ## APK not installed / Installation fehlgeschlagen
 
-![phone app not installed](../images/Update_AppNotInstalled.png)
+![phone app not installed](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Stelle sicher, dass Du die “app-full-release.apk” auf Dein Smartphone übertragen hast.
 * Dieser Fehler bedeutet meist, dass die neue APK mit einem anderen Keystore signiert ist als Dein installiertes **AAPS**. Wenn Du Deinen bisherigen Keystore noch hast, wähle ihn aus und erstelle die APK erneut. Andernfalls siehe [AAPS mit einem neuen Keystore neu installieren](#reinstall-aaps).

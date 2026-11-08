@@ -535,7 +535,7 @@ Die [Statuszeile](#screens-sensor-level-battery) auf dem Startbildschirm zeigt d
 
 Das Alter der **Pumpenbatterie** wird nicht angezeigt: Batterie und Insulinreservoir sind in jeden Pod eingebaut, und die Batterie hält immer länger als der Pod selbst (maximal 80 Stunden).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

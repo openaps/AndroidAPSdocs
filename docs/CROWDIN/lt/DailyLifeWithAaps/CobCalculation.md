@@ -84,7 +84,7 @@ Jei angliavandenių kiekis buvo įvestas per didelis arba per mažas, jį galima
 
 Ekrane **Terapijos istorija** klaidingą angliavandenių įrašą galima pataisyti jį ištrinant. This may be because the user over or underestimated the carb entry:
 
-![Angliavandenių įrašo ištrynimas iš terapijos istorijos](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Angliavandenių įrašo ištrynimas iš terapijos istorijos](../images/treatments_history_delete_carbs.png)
 
 1. Patikrinkite ir įsiminkite dabartinius **AAO** ir **AIO** pagrindiniame **AAPS** ekrane.
 2. Atidarykite **Terapijos istorija** (šoninis meniu → *Terapijos istorija*), skirtuką **AV ir bolusai**. Priklausomai nuo pompos, angliavandeniai gali būti rodomi vienoje eilutėje kartu su insulinu arba kaip atskiras įrašas (pvz., su Dana RS).

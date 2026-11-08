@@ -535,7 +535,7 @@ Velg om **AAPS** skal spille av en lyd med varslingene sine når det er usikkert
 
 Alder på **Pumpebatteri** rapporteres ikke: batteriet og insulinreservoaret er innebygd i hver pod, og batteriet varer alltid lenger enn selve poden (maksimalt 80 timer).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

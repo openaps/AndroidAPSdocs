@@ -74,7 +74,7 @@ Du må ha med deg det samme nødutstyret som alle andre med type 1-diabetes og i
   * den nyeste [apk-filen](../SettingUpAaps/BuildingAaps.md) til AAPS og til andre apper du bruker (for eksempel xDrip, Juggluco, BYODA).
   * keystore-filen din (fra byggingen av apk-filen) og passordet til den,
   * de nyeste eksportfilene med innstillinger fra AAPS og de andre appene dine,
-  * **AAPS**-hovedpassordet ditt: du kan ikke importere innstillingsfilen uten det.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ Hvis du har glemt hovedpassordet ditt, kan du tilbakestille det til pumpens seri
 
 1. Lag en tom fil med navnet `PasswordReset` (ingen filendelse) i undermappen `extra` i AAPS-mappen din (vanligvis `AAPS/extra`).
 2. Start **AAPS** på nytt. Pumpen må være tilkoblet: **AAPS** viser «Venter på pumpen…» og må lese pumpens serienummer innen 30 sekunder.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. **AAPS** viser «Passord definert!»: hovedpassordet ditt er nå **pumpens serienummer**. Filen `PasswordReset` slettes automatisk.
+
 4. Åpne **Innstillinger** > **Beskyttelse** > **Hovedpassord** og sett et nytt passord.
 
 Hvis pumpen ikke nås i tide, endres ingenting: sjekk pumpetilkoblingen og prøv igjen.

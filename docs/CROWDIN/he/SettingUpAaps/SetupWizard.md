@@ -172,7 +172,7 @@ If you don't understand, or can't agree to the end user license agreement please
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**אסור לאבד את הסיסמה הראשית**. כדאי לרשום אותה, _למשל_ ב-Google Drive. זה מקום טוב, כי Google מגבה אותו עבורכם. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+**אסור לאבד את הסיסמה הראשית**. כדאי לרשום אותה, _למשל_ ב-Google Drive. זה מקום טוב, כי Google מגבה אותו עבורכם. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 בסיום, יש ללחוץ על "**הבא**" כדי לעבור למסך הבא.

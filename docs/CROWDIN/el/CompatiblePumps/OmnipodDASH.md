@@ -535,7 +535,7 @@
 
 Η ηλικία της **Μπαταρία αντλίας** δεν αναφέρεται: η μπαταρία και η δεξαμενή ινσουλίνης είναι ενσωματωμένες σε κάθε Pod, και η μπαταρία διαρκεί πάντα περισσότερο από το ίδιο το Pod (το πολύ 80 ώρες).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

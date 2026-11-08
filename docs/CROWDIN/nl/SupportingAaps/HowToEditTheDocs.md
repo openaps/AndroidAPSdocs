@@ -22,37 +22,37 @@ In ons voorbeeld maken we een wijziging in AndroidAPSdocs. Dit kan op elke Windo
 
 1. Ga naar <https://github.com/openaps/AndroidAPSdocs> en klik rechtsboven op Fork om je eigen kopie van de repository te maken.
 
-![Repo forken](../images/PR0.png)
+![Repo forken](../images/docs_pr_fork_repository.png)
 
 2. Ga naar een willekeurige pagina en navigeer naar de pagina die je wilt bewerken. Je kunt rechtsboven op de link "Edit in GitHub" klikken. Dat kan alleen bij Engelse pagina's. 
 
-![document bewerken](../images/PR1.png)
+![document bewerken](../images/docs_pr_edit_on_github.png)
 
 Of klik op het potloodicoon dat in de bovenste balk van de te bewerken pagina verschijnt. Je moet hiervoor al ingelogd zijn op je GitHub-account (heb je er nog geen, dan is die makkelijk aan te maken).
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. Met een van de opties in stap 2 wordt een nieuwe branch gemaakt in JOUW repository. Daar worden je wijzigingen opgeslagen. Maak je wijzigingen in het bestand.
 
 We gebruiken markdown voor de pagina's van de docs. De bestanden hebben de extensie ".md". De Markdown-specificatie ligt niet vast. We gebruiken op dit moment de myst_parser voor onze markdown-bestanden. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
-![Branch bewerken](../images/PR3.png)
+![Branch bewerken](../images/docs_pr_edit_file.png)
 
 4. Je hebt gewerkt in het tabblad "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Zie je nog iets dat beter kan, ga dan terug naar het tabblad om te bewerken en maak meer verbeteringen. 
 
-![voorbeeldweergave](../images/PR5.png)
+![voorbeeldweergave](../images/docs_pr_preview_changes.png)
 
 5. Als je klaar bent met bewerken, scroll je naar onderaan de pagina. Schrijf in het vak onderaan je opmerkingen in het tekstveld met de tekst "Add an optional extended description...". De standaardtitel bevat de bestandsnaam. Schrijf als het kan een zin die de **reden** voor de wijziging uitlegt. De reden helpt reviewers te begrijpen wat je met de PR wilt bereiken.
 
-![commit-opmerkingen](../images/PR4.png)
+![commit-opmerkingen](../images/docs_pr_commit_description.png)
 
 6. Klik op de groene knop "Propose file changes" of "Commit changes". Klik op de pagina die verschijnt op "Create Pull Request" en klik op de volgende pagina nog een keer op "Create Pull Request".
 
-![pull request maken](../images/PR6.png)
+![pull request maken](../images/docs_pr_create_pull_request.png)
 
 7. Daarmee is de pull request (PR) geopend. GitHub geeft de PR een nummer. Dat staat na de titel en een hekje (#). Kom terug naar deze pagina om te kijken of er feedback is (of, als je GitHub-meldingen per e-mail krijgt, krijg je e-mails over alle activiteit op de PR). De wijziging staat nu in een lijst met PR's. Het team bekijkt die en geeft misschien feedback, voordat de wijziging in de hoofddocumentatie van AAPS komt! Wil je zien hoe het met de PR gaat, klik dan op het belletje rechtsboven in je GitHub-account. Daar zie je al je PR's.
 
-![PR volgen](../images/PR7.png)
+![PR volgen](../images/docs_pr_tracking.png)
 
 PS: Je fork en branch blijven gewoon in je eigen GitHub-account staan. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Volg je bij volgende wijzigingen deze werkwijze, dan begin je altijd met een bijgewerkte versie van de AndroidAPSdocs repositories. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Mensen vergeten vaak hun repo bij te werken. Daarom raden we aan om de PR-werkwijze hierboven te gebruiken, tot je gewend bent aan het doen van een "compare".
 

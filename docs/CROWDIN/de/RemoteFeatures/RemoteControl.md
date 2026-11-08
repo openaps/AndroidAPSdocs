@@ -291,13 +291,13 @@ Die Software für die Smartwatch, die **AAPSClient** Wear-APK, kann direkt von [
 
 Um die Software herunterzuladen, klicke auf die Smartwatch-App, die zur Client-App auf dem Smartphone passt: **wear-aapsclient-release_**_Version_ gehört zu **AAPSClient**, **wear-aapsclient2-release_**_Version_ zu **AAPSClient2** (siehe [Über AAPSClient, AAPSClient2 und AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![grafik](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+![grafik](../images/github_release_wear_aapsclient_apk.png)
 
 
 Dann "Speichern unter" und speichere die Datei an einem Ort Deiner Wahl auf Deinem Computer:
 
 
-![grafik](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+![grafik](../images/save_as_wear_aapsclient_apk.png)
 
 
 

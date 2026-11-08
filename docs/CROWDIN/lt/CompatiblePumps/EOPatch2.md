@@ -89,7 +89,7 @@ Išgirdę pyptelėjimą, spauskite **Pradėti susiejimą**.
 - Pompos aktyvavimą turite užbaigti per 60 minučių nuo jos įsijungimo. Jei nespėsite, pompą pašalinkite.
 ```
 
-![Žingsnis „Pompa susiejama“](../images/EOPatch/Bild6.png) ![Pirmoji Bluetooth susiejimo užklausa](../images/EOPatch/Bild7.png) ![Antroji Bluetooth susiejimo užklausa su prieigos kodu](../images/EOPatch/Bild8.png)
+![Žingsnis „Pompa susiejama“](../images/EOPatch/eopatch_pairing.png) ![Pirmoji Bluetooth susiejimo užklausa](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Antroji Bluetooth susiejimo užklausa su prieigos kodu](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@ Nuo pompos nuimkite lipnią juostą ir spauskite **Toliau**.
 
 Jei adata kyšo arba pompa šlapia, nešvari ar jos lipni juosta užlenkta, spauskite **Pašalinti** ir naudokite naują pompą.
 
-![Žingsnis „Pasiruoškite priklijuoti pompą“](../images/EOPatch/Bild9.png)
+![Žingsnis „Pasiruoškite priklijuoti pompą“](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Infuzijos vieta
 
@@ -123,7 +123,7 @@ Patikrinkite infuzijos vietą ir spauskite **Pradėti saugos patikrą**.
 - Jei pompa prilimpa ne visa, tarp pompos ir odos gali patekti oro. Tai susilpnina pompos lipnumą ir atsparumą vandeniui.
 ```
 
-![Žingsnis „Pompos priklijavimas“](../images/EOPatch/Bild10.png)
+![Žingsnis „Pompos priklijavimas“](../images/EOPatch/eopatch_attaching.png)
 
 ### Saugos patikra
 
@@ -133,7 +133,7 @@ Saugos patikra trunka apie 30 sekundžių. Kai ji baigiama, pompa vieną kartą 
 Saugos sumetimais nesukite adatos įvedimo svirtelės, kol saugos patikra nebaigta.
 ```
 
-![Žingsnis „Pompos priklijavimas“ su mygtuku „Pradėti saugos patikrą“](../images/EOPatch/Bild11.png) ![Vykdoma saugos patikra](../images/EOPatch/Bild12.png)
+![Žingsnis „Pompos priklijavimas“ su mygtuku „Pradėti saugos patikrą“](../images/EOPatch/eopatch_start_safety_check.png) ![Vykdoma saugos patikra](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@ Po to vedlys iš karto pereina prie naujos pompos aktyvavimo (žr. aukščiau). 
 
 Kol nėra aktyvios pompos, **AAPS** rodo pompą kaip sustabdytą ir įrašo 0 V/val. laikiną bazę, todėl iki kitos pompos aktyvavimo į AIO neįskaičiuojamas joks bazinis insulinas.
 
-![EOPatch2 pompos ekranas su mygtuku DISCARD/CHANGE PATCH (pašalinti / keisti pompą)](../images/EOPatch/Bild13.png) ![Puslapis „Pašalinti pompą“](../images/EOPatch/Bild14.png) ![Pompos pašalinimo patvirtinimo langas](../images/EOPatch/Bild15.png) ![Pompa pašalinta](../images/EOPatch/Bild16.png)
+![EOPatch2 pompos ekranas su mygtuku DISCARD/CHANGE PATCH (pašalinti / keisti pompą)](../images/EOPatch/eopatch_pump_screen_discard.png) ![Puslapis „Pašalinti pompą“](../images/EOPatch/eopatch_discard_patch.png) ![Pompos pašalinimo patvirtinimo langas](../images/EOPatch/eopatch_discard_confirm.png) ![Pompa pašalinta](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@ Sustabdžius insulino tiekimą, taip pat atšaukiamas ištęstas bolusas ir laik
 
 Insulino tiekimas sustabdomas jūsų pasirinktam laikui.
 
-![EOPatch2 pompos ekranas su mygtuku SUSPEND (sustabdyti)](../images/EOPatch/Bild17.png) ![Sustabdymo patvirtinimo langas](../images/EOPatch/Bild18.png) ![Langas „Bazės sustabdymo laikas“](../images/EOPatch/Bild19.png)
+![EOPatch2 pompos ekranas su mygtuku SUSPEND (sustabdyti)](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Sustabdymo patvirtinimo langas](../images/EOPatch/eopatch_suspend_confirm.png) ![Langas „Bazės sustabdymo laikas“](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@ Aukščiau esančios ekrano kopijos yra iš ankstesnės **AAPS** versijos. **AAP
 1. Atidarykite pompos ekraną (**Valdymas** → **Pompa**) ir spauskite **Atnaujinti pompos veikimą**.
 1. Lange **Atnaujinti insulino tiekimą** spauskite **Patvirtinti**.
 
-![EOPatch2 pompos ekranas su mygtuku RESUME (atnaujinti)](../images/EOPatch/Bild20.png) ![Langas „Atnaujinti insulino tiekimą“](../images/EOPatch/Bild21.png)
+![EOPatch2 pompos ekranas su mygtuku RESUME (atnaujinti)](../images/EOPatch/eopatch_pump_screen_resume.png) ![Langas „Atnaujinti insulino tiekimą“](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@ Aliarmai skirti skubioms, svarbiausioms situacijoms, ir į juos reikia reaguoti 
 
 Kai pranešime spaudžiate **Patvirtinti**, **AAPS** apdoroja aliarmą. Daugumos aliarmų atveju tai išjungia pompą. Aliarmo **Netinkama temperatūra** atveju mygtukas yra **Bandyti dar kartą**.
 
-![EOPatch2 aliarmas](../images/EOPatch/Bild22.png) ![EOPatch2 aliarmas po pompos išjungimo](../images/EOPatch/Bild23.png)
+![EOPatch2 aliarmas](../images/EOPatch/eopatch_alarm.png) ![EOPatch2 aliarmas po pompos išjungimo](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@ Toliau paaiškinti įvairūs aliarmai.
 
 Įspėjimai skirti vidutinio ar žemo prioriteto situacijoms. Įspėjimas rodomas kaip pranešimas **pagrindiniame ekrane**.
 
-![EOPatch2 įspėjimas pagrindiniame ekrane](../images/EOPatch/Bild24.png)
+![EOPatch2 įspėjimas pagrindiniame ekrane](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

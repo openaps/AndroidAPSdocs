@@ -59,7 +59,7 @@ While there is no clear specification which helps you to know if a watch will wo
 
 Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor Bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below.
 
-![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![image](../images/watch_standalone_aaps_and_xdrip.png)
 
 אם אתם מעוניינים להגדיר שעון עצמאי, קראו את הפרסומים והתגובות בקבוצת **AAPS**  ב־Facebook (מונחי חיפוש טובים הם “standalone” ו־“Lemfo”) וב־Discord למידע נוסף.
 
@@ -88,7 +88,7 @@ If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of di
 
 After [installing **AAPS** onto your watch](../WearOS/WearOsSmartwatch.md), you will automatically be able to select your preferred watchface from these **AAPS**-dedicated watchfaces. On most watches, you simply long-press on the home screen until the screen shrinks and swipe right to select an alternative screen:
 
-![image](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![image](../images/watchfaces_aaps_selection.png)
 
 These are the basic screens embedded in **AAPS**, there are [more watchfaces](#WearOS_changing-to-AAPS-watchface) and you can also use [complications](#Watchfaces-complications).
 
@@ -155,7 +155,7 @@ Here below some of the follow-only watch options popular with **AAPS** users:
 
 **WatchDrip+** היא אפליקציה נלווית שפותחה על ידי הקהילה, שמציגה נתוני גלוקוז ולולאה בדגמים שונים של שעונים חכמים, בעיקר של המותגים Xiaomi (_למשל_ Mi Band) ו-Amazfit:
 
-![image](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![image](../images/watch_watchdrip_plus.png)
 
 החל מגרסה 0.5, **WatchDrip+** קוראת את הנתונים שלה ישירות מ-**AAPS**, בלי xDrip+ כמתווך. בטלפון ה-**AAPS**:
 
@@ -170,9 +170,9 @@ Here below some of the follow-only watch options popular with **AAPS** users:
 
 ### Pebble watch
 
-![image](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![image](../images/watch_pebble.png)
 
-![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![image](../images/watch_pebble_watchface.png)
 
 
 Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 to 2016, and may still be available second-hand. Fitbit took over Pebble’s assets. Pebble users can use the Urchin watchface to view Nightscout data. אפשרויות הנתונים המוצגים כוללות אינסולין פעיל (IOB), קצב בזאלי זמני הפעיל כעת ותחזיות. בלולאה פתוחה אפשר להשתמש ב־IFTTT כדי ליצור applet שאומר: אם התקבלה הודעה מ־**AAPS**  אז לשלוח SMS או הודעת pushover.

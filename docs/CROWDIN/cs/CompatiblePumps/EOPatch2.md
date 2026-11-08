@@ -89,7 +89,7 @@ Když uslyšíte pípnutí, stiskněte **Začít párovat**.
 - Aktivaci patche musíte dokončit do 60 minut od jeho nabootování. Pokud to nestihnete, patch zahoďte.
 ```
 
-![Krok Párování pumpy](../images/EOPatch/Bild6.png) ![První žádost o spárování přes Bluetooth](../images/EOPatch/Bild7.png) ![Druhá žádost o spárování přes Bluetooth s přístupovým klíčem](../images/EOPatch/Bild8.png)
+![Krok Párování pumpy](../images/EOPatch/eopatch_pairing.png) ![První žádost o spárování přes Bluetooth](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Druhá žádost o spárování přes Bluetooth s přístupovým klíčem](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@ Odstraňte z patche lepicí pásku a pak stiskněte **Další**.
 
 Pokud jehla vyčnívá nebo je patch mokrý, špinavý či má ohnutou lepicí pásku, stiskněte místo toho **Zahodit** a použijte nový patch.
 
-![Krok Připravte se na připojení pumpy](../images/EOPatch/Bild9.png)
+![Krok Připravte se na připojení pumpy](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Umístění
 
@@ -123,7 +123,7 @@ Zkontrolujte infuzní místo a pak stiskněte **Spustit kontrolu bezpečnosti**.
 - Pokud patch nedrží úplně, může se mezi patch a kůži dostat vzduch. To oslabuje lepidlo a voděodolnost patche.
 ```
 
-![Krok Připojení pumpy](../images/EOPatch/Bild10.png)
+![Krok Připojení pumpy](../images/EOPatch/eopatch_attaching.png)
 
 ### Kontrola bezpečnosti
 
@@ -133,7 +133,7 @@ Kontrola bezpečnosti trvá asi 30 sekund. Po jejím dokončení patch jednou p�
 Pro bezpečné použití neotáčejte pákou jehly, dokud není kontrola bezpečnosti dokončena.
 ```
 
-![Krok Připojení pumpy s tlačítkem Spustit kontrolu bezpečnosti](../images/EOPatch/Bild11.png) ![Probíhá kontrola bezpečnosti](../images/EOPatch/Bild12.png)
+![Krok Připojení pumpy s tlačítkem Spustit kontrolu bezpečnosti](../images/EOPatch/eopatch_start_safety_check.png) ![Probíhá kontrola bezpečnosti](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@ Potom průvodce pokračuje rovnou aktivací nového patche (viz výše). Pokud z
 
 Dokud není aktivní žádný patch, **AAPS** ukazuje pumpu jako pozastavenou a zaznamená dočasný bazál 0 U/h, takže se do IOB nezapočítává žádný bazální inzulín, dokud není aktivován další patch.
 
-![Obrazovka pumpy EOPatch2 s tlačítkem DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Stránka Zahodit pumpu](../images/EOPatch/Bild14.png) ![Dialog pro potvrzení Zahodit pumpu](../images/EOPatch/Bild15.png) ![Zahození pumpy je dokončeno](../images/EOPatch/Bild16.png)
+![Obrazovka pumpy EOPatch2 s tlačítkem DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![Stránka Zahodit pumpu](../images/EOPatch/eopatch_discard_patch.png) ![Dialog pro potvrzení Zahodit pumpu](../images/EOPatch/eopatch_discard_confirm.png) ![Zahození pumpy je dokončeno](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@ Pozastavení výdeje inzulínu také zruší prodloužený bolus a dočasný baz
 
 Výdej inzulínu je pozastaven na zvolenou dobu.
 
-![Obrazovka pumpy EOPatch2 s tlačítkem SUSPEND](../images/EOPatch/Bild17.png) ![Dialog pro potvrzení pozastavení](../images/EOPatch/Bild18.png) ![Dialog Čas pozastavení pumpy](../images/EOPatch/Bild19.png)
+![Obrazovka pumpy EOPatch2 s tlačítkem SUSPEND](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Dialog pro potvrzení pozastavení](../images/EOPatch/eopatch_suspend_confirm.png) ![Dialog Čas pozastavení pumpy](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@ Snímky obrazovky výše pocházejí ze starší verze **AAPS**. V **AAPS** 4 ot
 1. Otevřete obrazovku pumpy (**Spravovat** → **Pumpa**) a stiskněte **Obnovit pumpu**.
 1. V dialogu **Obnovit výdej inzulínu** stiskněte **Potvrdit**.
 
-![Obrazovka pumpy EOPatch2 s tlačítkem RESUME](../images/EOPatch/Bild20.png) ![Dialog Obnovit výdej inzulínu](../images/EOPatch/Bild21.png)
+![Obrazovka pumpy EOPatch2 s tlačítkem RESUME](../images/EOPatch/eopatch_pump_screen_resume.png) ![Dialog Obnovit výdej inzulínu](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@ Alarmy jsou pro naléhavé situace s nejvyšší prioritou a vyžadují váš ok
 
 Když v oznámení stisknete **Potvrdit**, **AAPS** alarm zpracuje. U většiny alarmů se tím patch deaktivuje. U alarmu **Nevhodná teplota** je tlačítko **Opakovat**.
 
-![Alarm EOPatch2](../images/EOPatch/Bild22.png) ![Alarm EOPatch2 po deaktivaci patche](../images/EOPatch/Bild23.png)
+![Alarm EOPatch2](../images/EOPatch/eopatch_alarm.png) ![Alarm EOPatch2 po deaktivaci patche](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@ Jednotlivé alarmy jsou vysvětleny níže.
 
 Varování jsou pro situace se střední nebo nízkou prioritou. Varování se zobrazí jako oznámení na obrazovce **Přehled**.
 
-![Varování EOPatch2 zobrazené na obrazovce Přehled](../images/EOPatch/Bild24.png)
+![Varování EOPatch2 zobrazené na obrazovce Přehled](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

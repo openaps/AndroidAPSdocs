@@ -309,13 +309,13 @@ Se o **AAPS** tiver de limitar a dose, por exemplo porque o bólus calculado est
     
     As entradas do [Assistente Rápido](#quickwizards) do telefone que têm **Mostrar no relógio** ativado, dentro das suas horas válidas. Uma entrada de hidratos mostra os hidratos em g, uma entrada de insulina a sua dose fixa em U. Um toque executa a entrada, depois de uma confirmação no relógio. Não há nada para definir no relógio: edite as entradas no telefone e ative **Mostrar no relógio** em **Seleção do dispositivo** para cada entrada que quer no mosaico. Fora das horas válidas de todas as suas entradas, o mosaico mostra **Nenhuma configuração disponível**.
     
-    ![Uma entrada do Assistente Rápido com Mostrar no relógio ativado, e o mosaico onde aparece](../images/quickwizard_watch_phone.png)
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Mosaico Cena
+    ### Scene tile
     
-    ![Mosaico Cena](../images/wearos/tiles/tile_scene.png)
+    ![Scene tile](../images/wearos/tiles/tile_scene.png)
     
-    As [Cenas](#scenes-from-watch) do telefone. Cada um dos quatro lugares é definido como **Automático**, **Nenhum** ou uma cena, nas definições do mosaico. Um lugar **Automático** fica com a cena seguinte da lista do telefone que nenhum outro lugar ocupou. Um lugar definido com uma cena que já não existe no telefone mostra **Indisponível**.
+    The [Scenes](#scenes-from-watch) of the phone. Cada um dos quatro lugares é definido como **Automático**, **Nenhum** ou uma cena, nas definições do mosaico. Um lugar **Automático** fica com a cena seguinte da lista do telefone que nenhum outro lugar ocupou. Um lugar definido com uma cena que já não existe no telefone mostra **Indisponível**.
     
     ![Definições do mosaico Cena, quatro lugares definidos como Automático](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,17 +361,17 @@ Se o **AAPS** tiver de limitar a dose, por exemplo porque o bólus calculado est
     
     Nota: nem todos os ecrãs lidam bem com o modo sempre ligado. Pode causar marcas permanentes no ecrã (burn-in), sobretudo nos ecrãs OLED mais antigos. Em geral, os relógios escurecem o ecrã para evitar o burn-in; consulte o manual do utilizador, o fabricante ou a internet para obter conselhos.
     
-    ![Watchface na mesa de cabeceira](../images/Watchface_nightstand.jpg)
+    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Interface simplificada](../images/Watchface_simplified_ui.png)
+    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Alarmes do telefone no relógio
+    ## Phone alarms on the watch
     
-    ![Um alarme do telefone no relógio](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    O relógio mostra os alarmes do telefone, para que veja porque é que o telefone faz um som e possa responder a partir do pulso. O relógio vibra, e de novo a cada meio minuto durante cinco minutos, até responder. Uma notificação mostra o título e o texto do alarme, com as mesmas respostas do lembrete [Hora de comer](#WearOsSmartwatch-wizard-carb-time):
+    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. O relógio vibra, e de novo a cada meio minuto durante cinco minutos, até responder. Uma notificação mostra o título e o texto do alarme, com as mesmas respostas do lembrete [Hora de comer](#WearOsSmartwatch-wizard-carb-time):
     
     * **Silenciar**, ou deslizar: o alarme para, e o ecrã de alarme no telefone fecha-se.
     * **Silenciar 5 min**: o alarme para e volta a tocar ao fim de cinco minutos, no telefone e no relógio.

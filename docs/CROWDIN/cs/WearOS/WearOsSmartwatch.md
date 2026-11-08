@@ -211,7 +211,7 @@ Na hodinkách:
 
 Zobrazí se párovací kód Wi-Fi a IP adresa s portem:
 
-![Obrazovka hodinek s párovacím kódem Wi-Fi, IP adresou a portem](../images/wearos/ADB03.png)
+![Obrazovka hodinek s párovacím kódem Wi-Fi, IP adresou a portem](../images/wearos/watch_wifi_pairing_code.png)
 
 - V terminálu: `adb pair ipaddress:port` Např. `adb pair 10.10.1.125:36299`
 - Budete požádáni o párovací kód. Zadejte ho.

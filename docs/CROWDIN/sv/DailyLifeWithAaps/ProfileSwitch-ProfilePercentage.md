@@ -22,7 +22,7 @@ Du behöver minst en sparad **Profil**. **Procent av profil** används alltid ge
 
     <br />1. På huvudskärmen **trycker du på profilnamnet** (bredvid stjärnikonen). [Skärmen Profil](#ProfileSwitch-manage-v4) öppnas på kortet för den **Profil** som körs, märkt **AKTIV**.
     
-       ![Tryck på profilnamnet på huvudskärmen för att öppna skärmen Profil](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Om du vill behålla samma **Profil** låter du kortet **AKTIV** vara valt. Om du samtidigt vill byta **Profil** sveper du till ett annat kort.
     3. Tryck på den runda knappen **▶** (**Aktivera**) nere till höger. Skärmen **Aktivera** öppnas.
@@ -169,7 +169,7 @@ Frågan är alltid vilken timmes inställningar i **Profil** som ska ersätta in
     - 22:00 **-10 h** -> 12:00
     - Inställningarna från 22:00 används i stället för de inställningar som normalt används klockan 12:00, eftersom tidsförskjutningen är negativ.
 
-![Riktningar för tidsförskjutning vid profilbyte](../images/ProfileSwitch_PlusMinus2.png)
+![Riktningar för tidsförskjutning vid profilbyte](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 Den här metoden, där en ögonblicksbild av **Profil** sparas, gör att det förflutna beräknas mycket mer exakt, och det går att följa ändringar i **Profil**.
 

@@ -40,4 +40,4 @@ Po zainstalowaniu nowego pliku apk:
 - upewnij się, że zaimportowałeś ustawienia; oraz
 - sprawdź ustawienia **AAPS** w **Ustawieniach** i upewnij się, że nadal są prawidłowe.
 
-![Okno „O aplikacji” z zainstalowaną wersją AAPS](../images/about_dialog_version.png)
+![Okno „O aplikacji” z zainstalowaną wersją AAPS](../images/update/about_dialog_version.png)

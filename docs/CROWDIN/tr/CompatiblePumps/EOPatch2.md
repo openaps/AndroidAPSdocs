@@ -89,7 +89,7 @@ Bip sesini duyunca **Eşleştirmeye başla** düğmesine basın.
 - Patch'i etkinleştirme işlemini, Patch açıldıktan sonraki 60 dakika içinde bitirmelisiniz. Bitiremezseniz Patch'i çıkarın.
 ```
 
-![Patch eşleştirme adımı](../images/EOPatch/Bild6.png) ![Birinci Bluetooth eşleştirme isteği](../images/EOPatch/Bild7.png) ![Geçiş anahtarını gösteren ikinci Bluetooth eşleştirme isteği](../images/EOPatch/Bild8.png)
+![Patch eşleştirme adımı](../images/EOPatch/eopatch_pairing.png) ![Birinci Bluetooth eşleştirme isteği](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Geçiş anahtarını gösteren ikinci Bluetooth eşleştirme isteği](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@ Patch'in yapışkan bandını çıkarın, ardından **İleri** düğmesine bası
 
 Bir iğne dışarı çıkıyorsa veya Patch ıslak, kirli ya da yapışkan bandı katlanmışsa, bunun yerine **Çıkar** düğmesine basın ve yeni bir Patch kullanın.
 
-![Patch'i takmaya hazırlanın adımı](../images/EOPatch/Bild9.png)
+![Patch'i takmaya hazırlanın adımı](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Bölge konumu
 
@@ -123,7 +123,7 @@ Bu adım yalnızca bölge rotasyonu ayarlarında **Pompa bölge rotasyonunu yön
 - Patch tam yapışmazsa Patch ile cildiniz arasına hava girebilir. Bu, Patch'in yapışmasını ve suya dayanıklılığını zayıflatır.
 ```
 
-![Patch'i takın adımı](../images/EOPatch/Bild10.png)
+![Patch'i takın adımı](../images/EOPatch/eopatch_attaching.png)
 
 ### Güvenlik kontrolü
 
@@ -133,7 +133,7 @@ Güvenlik kontrolü yaklaşık 30 saniye sürer. Bittiğinde Patch bir kez bip s
 Güvenli kullanım için güvenlik kontrolü tamamlanana kadar iğne hareket kolunu çevirmeyin.
 ```
 
-![Güvenlik kontrolünü başlat düğmesi olan Patch'i takın adımı](../images/EOPatch/Bild11.png) ![Güvenlik kontrolü sürüyor](../images/EOPatch/Bild12.png)
+![Güvenlik kontrolünü başlat düğmesi olan Patch'i takın adımı](../images/EOPatch/eopatch_start_safety_check.png) ![Güvenlik kontrolü sürüyor](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@ Bundan sonra sihirbaz doğrudan yeni bir Patch'i etkinleştirme adımlarına ge�
 
 Etkin bir Patch yokken **AAPS** pompayı askıya alınmış olarak gösterir ve 0 Ü/sa'lik bir geçici bazal kaydeder; böylece bir sonraki Patch etkinleştirilene kadar AİNS'te hiç bazal insülin sayılmaz.
 
-![DISCARD/CHANGE PATCH düğmesi olan EOPatch2 pompa ekranı](../images/EOPatch/Bild13.png) ![Patch'i Çıkar sayfası](../images/EOPatch/Bild14.png) ![Patch'i Çıkar onay iletişim kutusu](../images/EOPatch/Bild15.png) ![Patch atma işlemi tamamlandı](../images/EOPatch/Bild16.png)
+![DISCARD/CHANGE PATCH düğmesi olan EOPatch2 pompa ekranı](../images/EOPatch/eopatch_pump_screen_discard.png) ![Patch'i Çıkar sayfası](../images/EOPatch/eopatch_discard_patch.png) ![Patch'i Çıkar onay iletişim kutusu](../images/EOPatch/eopatch_discard_confirm.png) ![Patch atma işlemi tamamlandı](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@ Yukarıdaki ekran görüntüleri daha eski bir **AAPS** sürümüne aittir. **AA
 
 İnsülin iletimi seçtiğiniz süre boyunca askıya alınır.
 
-![SUSPEND düğmesi olan EOPatch2 pompa ekranı](../images/EOPatch/Bild17.png) ![Askıya alma onay iletişim kutusu](../images/EOPatch/Bild18.png) ![Bazal Askıya Alma Süresi iletişim kutusu](../images/EOPatch/Bild19.png)
+![SUSPEND düğmesi olan EOPatch2 pompa ekranı](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Askıya alma onay iletişim kutusu](../images/EOPatch/eopatch_suspend_confirm.png) ![Bazal Askıya Alma Süresi iletişim kutusu](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@ Yukarıdaki ekran görüntüleri daha eski bir **AAPS** sürümüne aittir. **AA
 1. Pompa ekranını açın (**Yönet** → **Pompa**) ve **Pompayı devam ettir** düğmesine basın.
 1. **İnsülin iletimini devam ettir** iletişim kutusunda **Onayla** düğmesine basın.
 
-![RESUME düğmesi olan EOPatch2 pompa ekranı](../images/EOPatch/Bild20.png) ![İnsülin iletimini devam ettir iletişim kutusu](../images/EOPatch/Bild21.png)
+![RESUME düğmesi olan EOPatch2 pompa ekranı](../images/EOPatch/eopatch_pump_screen_resume.png) ![İnsülin iletimini devam ettir iletişim kutusu](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@ Alarmlar acil, en yüksek öncelikli durumlar içindir ve hemen müdahale etmeni
 
 Bildirimdeki **Onayla** düğmesine bastığınızda **AAPS** alarmı işler. Çoğu alarmda bu işlem Patch'i devre dışı bırakır. **Uygun olmayan sıcaklık** alarmında düğme **Tekrar dene** olur.
 
-![EOPatch2 alarmı](../images/EOPatch/Bild22.png) ![Patch devre dışı bırakıldıktan sonra EOPatch2 alarmı](../images/EOPatch/Bild23.png)
+![EOPatch2 alarmı](../images/EOPatch/eopatch_alarm.png) ![Patch devre dışı bırakıldıktan sonra EOPatch2 alarmı](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@ Farklı alarmlar aşağıda açıklanmıştır.
 
 Uyarılar orta veya düşük öncelikli durumlar içindir. Uyarı, **Genel Bakış** ekranında bir bildirim olarak görünür.
 
-![Genel Bakış ekranında gösterilen EOPatch2 uyarısı](../images/EOPatch/Bild24.png)
+![Genel Bakış ekranında gösterilen EOPatch2 uyarısı](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

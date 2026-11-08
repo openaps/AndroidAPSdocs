@@ -22,37 +22,37 @@ W naszym przykładzie wprowadzimy zmianę w AndroidAPSdocs. Możesz to zrobić n
 
 1. Przejdź do <https://github.com/openaps/AndroidAPSdocs> i kliknij Fork w prawym górnym rogu, aby utworzyć własną kopię repozytorium.
 
-![Fork repozytorium](../images/PR0.png)
+![Fork repozytorium](../images/docs_pr_fork_repository.png)
 
 2. Przejdź na dowolną stronę i znajdź stronę, którą chcesz edytować. Możesz kliknąć link „Edit in GitHub” w prawym górnym rogu. Działa to tylko na stronach w języku angielskim. 
 
-![edycja dokumentu](../images/PR1.png)
+![edycja dokumentu](../images/docs_pr_edit_on_github.png)
 
 Albo kliknij ikonę ołówka, która pojawia się na górnym pasku edytowanej strony. Musisz być już zalogowany na swoje konto GitHub (jeśli go nie masz, łatwo je założyć).
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. Każda z opcji w kroku 2 utworzy nową gałąź w TWOIM repozytorium, w której zostaną zapisane Twoje zmiany. Wprowadź zmiany w pliku.
 
 Strony dokumentacji piszemy w Markdown. Pliki mają rozszerzenie „.md”. Specyfikacja Markdown nie jest ustalona na stałe, a obecnie do naszych plików Markdown używamy myst_parser. Uważaj, aby używać poprawnej składni, jak [opisano poniżej](#edit-the-docs-code-syntax).
 
-![Gałąź edycji](../images/PR3.png)
+![Gałąź edycji](../images/docs_pr_edit_file.png)
 
 4. Pracowałeś na karcie „<>Edit file”. Wybierz kartę „Preview changes”, aby spojrzeć na zmiany świeżym okiem i upewnić się, że wszystko wygląda tak, jak chciałeś (sprawdź literówki). Jeśli widzisz, że coś trzeba jeszcze poprawić, wróć na kartę edycji i wprowadź kolejne poprawki. 
 
-![tryb podglądu](../images/PR5.png)
+![tryb podglądu](../images/docs_pr_preview_changes.png)
 
 5. Gdy skończysz edycję, przewiń na dół strony. W polu na dole strony wpisz swoje komentarze w polu tekstowym z napisem „Add an optional extended description...”. Domyślny tytuł zawiera nazwę pliku. Postaraj się dodać zdanie, które wyjaśnia **powód** zmiany. Podanie powodu pomaga recenzentom zrozumieć, co chcesz osiągnąć tym PR.
 
-![komentarze do commita](../images/PR4.png)
+![komentarze do commita](../images/docs_pr_commit_description.png)
 
 6. Kliknij zielony przycisk „Propose file changes” lub „Commit changes”. Na stronie, która się pojawi, kliknij „Create Pull Request”, a potem na następnej stronie znowu kliknij „Create Pull Request”.
 
-![tworzenie pull request](../images/PR6.png)
+![tworzenie pull request](../images/docs_pr_create_pull_request.png)
 
 7. W ten sposób pull request (PR) jest otwarty. GitHub nadaje PR numer, który znajdziesz po tytule i znaku #. Wracaj na tę stronę, aby sprawdzić odpowiedzi (albo, jeśli powiadomienia GitHub przychodzą do Ciebie e-mailem, dostaniesz e-maile o każdej aktywności w PR). Twoja zmiana jest teraz na liście PR, które zespół sprawdzi i może skomentuje, zanim zostanie dodana do głównej dokumentacji AAPS! Jeśli chcesz sprawdzić postęp PR, kliknij ikonę dzwonka w prawym górnym rogu swojego konta GitHub. Zobaczysz tam wszystkie swoje PR.
 
-![Śledzenie PR](../images/PR7.png)
+![Śledzenie PR](../images/docs_pr_tracking.png)
 
 PS: Twój fork i gałąź nadal zostają na Twoim osobistym koncie GitHub. Gdy dostaniesz powiadomienie, że Twój PR został scalony, możesz usunąć swoją gałąź, jeśli już jej nie potrzebujesz (w obszarze powiadomień z kroku 7 pojawi się link do usunięcia gałęzi, gdy PR zostanie zamknięty lub scalony). Jeśli przy kolejnych zmianach użyjesz tej samej procedury, Twoje zmiany zawsze zaczną się od aktualnej wersji repozytoriów AndroidAPSdocs. Jeśli wybierzesz inną metodę rozpoczęcia PR (np. edycję zaczynając od gałęzi master w Twoim forku), musisz najpierw upewnić się, że Twoje repozytorium jest aktualne: wykonaj „compare” i scal wszystkie zmiany, które pojawiły się od ostatniej aktualizacji Twojego forka. Ludzie często zapominają aktualizować swoje repozytoria, dlatego zalecamy używanie opisanego wyżej procesu PR, dopóki nie nauczysz się wykonywać „compare”.
 

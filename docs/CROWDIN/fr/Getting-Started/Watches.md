@@ -59,7 +59,7 @@ La plupart des difficultés avec les montres **AAPS** autonomes viennent de l'ut
 
 Autres difficultés : il est difficile d'avoir une autonomie de batterie suffisante, et les montres avec une batterie suffisante sont souvent grosses et épaisses. Les utilisateurs signalent des problèmes avec le système et les paramètres d'économie d'énergie, des difficultés pour démarrer les capteurs sur la montre, une faible portée Bluetooth (pour garder la connexion avec le capteur et la pompe) et une étanchéité douteuse. Des exemples sont visibles sur les photos ci-dessous.
 
-![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![image](../images/watch_standalone_aaps_and_xdrip.png)
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
@@ -88,7 +88,7 @@ Les changements récents de **Wear OS** cassent peu à peu les cadrans **AAPS** 
 
 Après avoir [installé **AAPS** sur votre montre](../WearOS/WearOsSmartwatch.md), vous pourrez directement choisir votre cadran préféré parmi ces cadrans dédiés à **AAPS**. Sur la plupart des montres, il suffit d'appuyer longuement sur l'écran d'accueil jusqu'à ce que l'écran se réduise, puis de glisser vers la droite pour choisir un autre écran :
 
-![image](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![image](../images/watchfaces_aaps_selection.png)
 
 Ce sont les écrans de base intégrés à **AAPS**. Il existe [d'autres cadrans](#WearOS_changing-to-AAPS-watchface) et vous pouvez aussi utiliser des [complications](#Watchfaces-complications).
 
@@ -155,7 +155,7 @@ Voici quelques options de montres de suivi uniquement, populaires chez les utili
 
 **WatchDrip+** est une application compagnon développée par la communauté, qui affiche les données de glycémie et de boucle sur divers modèles de montres connectées, surtout des marques Xiaomi (_par ex._ Mi Band) et Amazfit :
 
-![image](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![image](../images/watch_watchdrip_plus.png)
 
 Depuis la version 0.5, **WatchDrip+** lit ses données directement depuis **AAPS**, sans passer par xDrip+. Sur le téléphone **AAPS** :
 
@@ -170,9 +170,9 @@ Vous pouvez en savoir plus sur ces montres, y compris comment les configurer, su
 
 ### Montre Pebble
 
-![image](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![image](../images/watch_pebble.png)
 
-![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![image](../images/watch_pebble_watchface.png)
 
 
 Les montres Pebble ([plus fabriquées](https://en.wikipedia.org/wiki/Pebble_(watch))) ont été vendues de 2013 à 2016, et on peut encore en trouver d'occasion. Fitbit a repris les actifs de Pebble. Les utilisateurs de Pebble peuvent utiliser le cadran Urchin pour voir les données de Nightscout. Les données affichées peuvent inclure l'IA, le débit basal temporaire actif et les prédictions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.

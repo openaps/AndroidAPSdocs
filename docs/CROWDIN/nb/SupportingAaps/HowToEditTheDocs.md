@@ -22,37 +22,37 @@ I eksempelet vårt skal vi gjøre en endring i AndroidAPSdocs. Dette kan gjøres
 
 1. Gå til <https://github.com/openaps/AndroidAPSdocs> og trykk på Fork øverst til høyre for å lage din egen kopi av repositoryet.
 
-![Fork av repositoryet](../images/PR0.png)
+![Fork av repositoryet](../images/docs_pr_fork_repository.png)
 
 2. Gå til en hvilken som helst side og naviger til siden du vil redigere. Du kan klikke på lenken «Edit in GitHub» øverst til høyre. Dette er bare mulig på engelske sider. 
 
-![rediger dokument](../images/PR1.png)
+![rediger dokument](../images/docs_pr_edit_on_github.png)
 
 Eller klikk på blyantikonet som vises i den øverste linjen på sideinnholdet du vil redigere. Du må allerede være logget inn på GitHub-kontoen din for å gjøre dette (hvis du ikke har en, er det enkelt å opprette en).
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. Uansett hvilket av alternativene i steg 2 du velger, lages det en ny gren i DITT repository, der endringene dine blir lagret. Gjør endringene dine i filen.
 
 Vi bruker Markdown for dokumentasjonssidene. Filene har endelsen «.md». Markdown-spesifikasjonen er ikke fast, og vi bruker for øyeblikket myst_parser for Markdown-filene våre. Pass på å bruke riktig syntaks, som [beskrevet nedenfor](#edit-the-docs-code-syntax).
 
-![Rediger gren](../images/PR3.png)
+![Rediger gren](../images/docs_pr_edit_file.png)
 
 4. Du har jobbet i fanen «<>Edit file». Velg fanen «Preview changes» for å se på endringene med friske øyne og sjekke at alt ser ut slik du mente (sjekk for skrivefeil). Hvis du ser noe som bør forbedres, gå tilbake til redigeringsfanen og gjør flere forbedringer. 
 
-![forhåndsvisning](../images/PR5.png)
+![forhåndsvisning](../images/docs_pr_preview_changes.png)
 
 5. Når du er ferdig med endringene, bla til bunnen av siden. I boksen nederst skriver du kommentarene dine i tekstfeltet der det står «Add an optional extended description...». Standardtittelen inneholder filnavnet. Prøv å ta med en setning som forklarer **grunnen** til endringen. Når du forklarer grunnen, forstår de som går gjennom PR-en lettere hva du prøver å oppnå.
 
-![commit-kommentarer](../images/PR4.png)
+![commit-kommentarer](../images/docs_pr_commit_description.png)
 
 6. Klikk på den grønne knappen «Propose file changes» eller «Commit changes». På siden som vises, klikker du på «Create Pull Request», og på neste side klikker du på «Create Pull Request» en gang til.
 
-![lag pull request](../images/PR6.png)
+![lag pull request](../images/docs_pr_create_pull_request.png)
 
 7. Dermed har du åpnet en pull request, en PR. GitHub gir PR-en et nummer, som står etter tittelen og et nummertegn (#). Gå tilbake til denne siden for å se etter tilbakemeldinger (eller, hvis du får GitHub-varsler på e-post, får du e-post om all aktivitet på PR-en). Endringen ligger nå i en liste over PR-er som teamet går gjennom og eventuelt gir tilbakemelding på, før den tas inn i hoveddokumentasjonen for AAPS! Hvis du vil følge med på framdriften til PR-en, kan du klikke på bjelleikonet øverst til høyre i GitHub-kontoen din og se alle PR-ene dine.
 
-![Følge med på PR-en](../images/PR7.png)
+![Følge med på PR-en](../images/docs_pr_tracking.png)
 
 PS: Forken og grenen din ligger fortsatt på din egen GitHub-konto. Når du får beskjed om at PR-en din er merget, kan du slette grenen hvis du er ferdig med den (varslingsområdet i steg 7 gir deg en lenke for å slette grenen når den er lukket eller merget). Hvis du følger denne framgangsmåten ved senere endringer, starter du alltid med en oppdatert versjon av AndroidAPSdocs-repositoryet. Hvis du velger en annen måte å starte en PR på (for eksempel ved å redigere med master-grenen i din egen fork som utgangspunkt), må du først sørge for at repositoryet ditt er oppdatert: gjør en «compare» først, og merge inn alle endringer som har skjedd siden du sist oppdaterte forken din. Siden folk ofte glemmer å oppdatere repositoryet sitt, anbefaler vi at du bruker PR-prosessen beskrevet ovenfor til du er fortrolig med å gjøre «compares».
 

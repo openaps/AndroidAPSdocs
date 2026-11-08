@@ -22,37 +22,37 @@ Pavyzdyje redaguosime AndroidAPSdocs. Tai galima padaryti bet kuriame Windows ko
 
 1. Eikite į <https://github.com/openaps/AndroidAPSdocs> ir viršuje dešinėje spauskite Fork, kad susikurtumėte savo saugyklos kopiją.
 
-![Fork saugykla](../images/PR0.png)
+![Fork saugykla](../images/docs_pr_fork_repository.png)
 
 2. Atidarykite bet kurį puslapį ir pereikite į puslapį, kurį norite redaguoti. Galite spausti nuorodą "Edit in GitHub" (redaguoti GitHub) viršutiniame dešiniajame kampe. Tai galima tik angliškuose puslapiuose. 
 
-![dokumento redagavimas](../images/PR1.png)
+![dokumento redagavimas](../images/docs_pr_edit_on_github.png)
 
 Arba spauskite pieštuko piktogramą, kuri rodoma redaguojamo puslapio turinio viršutinėje juostoje. Tam turite būti prisijungę prie savo Github paskyros (jei jos neturite, susikurti ją paprasta).
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. Bet kuri iš 2 žingsnio parinkčių sukurs naują atšaką JŪSŲ saugykloje. Joje bus išsaugoti jūsų pakeitimai. Pakeiskite failą.
 
 Dokumentacijos puslapiams naudojame markdown. Failų plėtinys yra ".md". Markdown specifikacija nėra fiksuota, todėl šiuo metu savo markdown failams naudojame myst_parser. Atidžiai naudokite teisingą sintaksę, kaip [aprašyta toliau](#edit-the-docs-code-syntax).
 
-![Atšakos redagavimas](../images/PR3.png)
+![Atšakos redagavimas](../images/docs_pr_edit_file.png)
 
 4. Dirbote kortelėje "<>Edit file" (redaguoti failą). Pasirinkite kortelę "Preview changes" (peržiūrėti pakeitimus) ir šviežiu žvilgsniu patikrinkite, ar viskas, ką pakeitėte, atrodo taip, kaip norėjote (patikrinkite rašybos klaidas). Jei matote, ką dar reikia pataisyti, grįžkite į redagavimo kortelę ir tęskite taisymą. 
 
-![peržiūros režimas](../images/PR5.png)
+![peržiūros režimas](../images/docs_pr_preview_changes.png)
 
 5. Baigę redaguoti, slinkite į puslapio apačią. Apačioje esančiame laukelyje parašykite komentarą teksto lauke "Add an optional extended description..." (papildomas aprašymas). Numatytajame pavadinime yra failo pavadinimas. Pabandykite parašyti sakinį, kuris paaiškina pakeitimo **priežastį**. Nurodyta priežastis padeda peržiūrintiems suprasti, ką norite padaryti šiuo PR.
 
-![commit komentarai](../images/PR4.png)
+![commit komentarai](../images/docs_pr_commit_description.png)
 
 6. Spauskite žalią mygtuką "Propose file changes" arba "Commit changes" (pasiūlyti / įrašyti pakeitimus). Atsidariusiame puslapyje spauskite "Create Pull Request", o kitame puslapyje dar kartą spauskite "Create Pull Request".
 
-![pull request kūrimas](../images/PR6.png)
+![pull request kūrimas](../images/docs_pr_create_pull_request.png)
 
 7. Taip pull request (PR) sukurtas. GitHub suteikia PR numerį. Jis rodomas po pavadinimo, po grotelių ženklo. Grįžkite į šį puslapį ir patikrinkite, ar yra atsiliepimų (arba, jei GitHub pranešimai siunčiami jums el. paštu, gausite laiškus apie kiekvieną PR veiksmą). Pakeitimas dabar bus PR sąraše. Komanda jį peržiūrės ir, galbūt, parašys atsiliepimą, prieš įtraukdama į pagrindinę AAPS dokumentaciją! Jei norite patikrinti, kaip sekasi jūsų PR, savo GitHub paskyroje viršutiniame dešiniajame kampe spauskite varpelio piktogramą ir pamatysite visus savo PR.
 
-![PR stebėjimas](../images/PR7.png)
+![PR stebėjimas](../images/docs_pr_tracking.png)
 
 PS: jūsų fork ir atšaka liks jūsų asmeninėje GitHub paskyroje. Gavę pranešimą, kad jūsų PR sujungtas (merged), galite ištrinti savo atšaką, jei jos nebereikia (kai PR uždaromas arba sujungiamas, 7 žingsnio pranešimų srityje bus nuoroda atšakai ištrinti). Jei ir toliau redaguosite šiuo būdu, visada pradėsite nuo naujausios AndroidAPSdocs saugyklų versijos. Jei PR pradėsite kitu būdu (pvz., redaguodami nuo savo fork saugyklos master atšakos), pirmiausia turėsite atnaujinti savo saugyklą: atlikite "compare" (palyginimą) ir sujunkite visus pakeitimus, atsiradusius nuo paskutinio jūsų fork atnaujinimo. Žmonės dažnai pamiršta atnaujinti savo saugyklas, todėl rekomenduojame naudoti aukščiau aprašytą PR būdą, kol išmoksite atlikti "compare".
 

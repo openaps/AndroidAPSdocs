@@ -40,4 +40,4 @@ These steps are the same for every build method. Patikrinkite [versijų pastabos
 - įsitikinkite, kad importavote savo nustatymus; ir
 - patikrinkite **AAPS** nustatymus skiltyje **Nustatymai** ir įsitikinkite, kad jie vis dar teisingi.
 
-![Langas „Apie“ su įdiegta AAPS versija](../images/about_dialog_version.png)
+![Langas „Apie“ su įdiegta AAPS versija](../images/update/about_dialog_version.png)

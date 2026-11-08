@@ -309,13 +309,13 @@ Jei **AAPS** turėjo apriboti dozę, pavyzdžiui, nes apskaičiuotas bolusas vir
     
     Telefono [Greitojo vedlio](#quickwizards) įrašai, kuriuose įjungta **Rodyti laikrodyje**, jų galiojimo valandomis. Angliavandenių įrašas rodo savo angliavandenius g, insulino įrašas – savo fiksuotą dozę V. Bakstelėjus įrašas įvykdomas, kai jį patvirtinate laikrodyje. Laikrodyje nėra ką nustatyti: įrašus redaguokite telefone ir kiekvienam įrašui, kurį norite matyti plytelėje, skiltyje **Įrenginio pasirinkimas** įjunkite **Rodyti laikrodyje**. Už visų jūsų įrašų galiojimo valandų ribų plytelėje rodoma **Nėra konfigūracijos**.
     
-    ![Greitojo vedlio įrašas su įjungta parinktimi Rodyti laikrodyje ir plytelė, kurioje jis rodomas](../images/quickwizard_watch_phone.png)
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Plytelė Scenarijus
+    ### Scene tile
     
-    ![Plytelė Scenarijus](../images/wearos/tiles/tile_scene.png)
+    ![Scene tile](../images/wearos/tiles/tile_scene.png)
     
-    Telefono [scenarijai](#scenes-from-watch). Plytelės nustatymuose kiekviena iš keturių vietų nustatoma į **Automatiškai**, **Nėra** arba vieną scenarijų. Vieta **Automatiškai** paima kitą scenarijų iš telefono sąrašo, kurio nepasirinko jokia kita vieta. Vieta, nustatyta į scenarijų, kurio telefone nebėra, rodo **Nepasiekiama**.
+    The [Scenes](#scenes-from-watch) of the phone. Plytelės nustatymuose kiekviena iš keturių vietų nustatoma į **Automatiškai**, **Nėra** arba vieną scenarijų. Vieta **Automatiškai** paima kitą scenarijų iš telefono sąrašo, kurio nepasirinko jokia kita vieta. Vieta, nustatyta į scenarijų, kurio telefone nebėra, rodo **Nepasiekiama**.
     
     ![Plytelės Scenarijus nustatymai, keturios vietos nustatytos į Automatiškai](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,17 +361,17 @@ Jei **AAPS** turėjo apriboti dozę, pavyzdžiui, nes apskaičiuotas bolusas vir
     
     Pastaba: ne visi ekranai gerai toleruoja visada įjungtą režimą. Dėl to ekrane gali išdegti vaizdas, ypač senesniuose OLED ekranuose. Laikrodžiai paprastai pritemdo ekraną, kad vaizdas neišdegtų; patarimų ieškokite naudotojo vadove, pas gamintoją arba internete.
     
-    ![Ciferblatas naktinio staliuko režimu](../images/Watchface_nightstand.jpg)
+    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Supaprastinta sąsaja](../images/Watchface_simplified_ui.png)
+    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Telefono aliarmai laikrodyje
+    ## Phone alarms on the watch
     
-    ![Telefono aliarmas laikrodyje](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    Laikrodis rodo telefono aliarmus, todėl matote, kodėl telefonas skamba, ir galite atsakyti nuo riešo. Laikrodis vibruoja ir vibruoja vėl kas pusę minutės penkias minutes, kol atsakysite. Pranešime rodomas aliarmo pavadinimas ir tekstas, su tais pačiais atsakymais kaip priminimo [Laikas valgyti](#WearOsSmartwatch-wizard-carb-time):
+    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. Laikrodis vibruoja ir vibruoja vėl kas pusę minutės penkias minutes, kol atsakysite. Pranešime rodomas aliarmo pavadinimas ir tekstas, su tais pačiais atsakymais kaip priminimo [Laikas valgyti](#WearOsSmartwatch-wizard-carb-time):
     
     * **Nutildyti** arba nubraukimas: aliarmas nutyla, o telefono aliarmo ekranas užsidaro.
     * **Nutildyti 5 min.**: aliarmas nutyla ir po penkių minučių vėl suskamba telefone ir laikrodyje.

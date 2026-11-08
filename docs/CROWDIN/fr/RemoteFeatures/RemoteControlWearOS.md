@@ -309,13 +309,13 @@ Si **AAPS** a dû limiter la dose, par exemple parce que le bolus calculé dépa
     
     Les entrées [Assistant Rapide](#quickwizards) du téléphone pour lesquelles **Afficher sur la montre** est activé, pendant leurs heures de validité. Une entrée de glucides affiche ses glucides en g, une entrée d'insuline sa dose fixe en U. Un appui lance l'entrée après une confirmation sur la montre. Il n'y a rien à régler sur la montre : modifiez les entrées sur le téléphone, et activez **Afficher sur la montre** sous **Sélection du périphérique** pour chaque entrée que vous voulez sur la tuile. En dehors des heures de validité de toutes vos entrées, la tuile affiche **Aucune configuration disponible**.
     
-    ![Une entrée Assistant Rapide avec Afficher sur la montre activé, et la tuile où elle apparaît](../images/quickwizard_watch_phone.png)
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Tuile Scénario
+    ### Scene tile
     
-    ![Tuile Scénario](../images/wearos/tiles/tile_scene.png)
+    ![Scene tile](../images/wearos/tiles/tile_scene.png)
     
-    Les [scénarios](#scenes-from-watch) du téléphone. Chacun des quatre emplacements est réglé sur **Automatique**, **Aucun** ou un scénario dans les paramètres de la tuile. Un emplacement **Automatique** prend le scénario suivant de la liste du téléphone qui n'est pas déjà pris par un autre emplacement. Un emplacement réglé sur un scénario qui n'existe plus sur le téléphone affiche **Indisponible**.
+    The [Scenes](#scenes-from-watch) of the phone. Chacun des quatre emplacements est réglé sur **Automatique**, **Aucun** ou un scénario dans les paramètres de la tuile. Un emplacement **Automatique** prend le scénario suivant de la liste du téléphone qui n'est pas déjà pris par un autre emplacement. Un emplacement réglé sur un scénario qui n'existe plus sur le téléphone affiche **Indisponible**.
     
     ![Paramètres de la tuile Scénario, quatre emplacements réglés sur Automatique](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,17 +361,17 @@ Si **AAPS** a dû limiter la dose, par exemple parce que le bolus calculé dépa
     
     Remarque : tous les écrans ne supportent pas bien le mode toujours allumé. Cela peut marquer l'écran de façon permanente (burn-in), en particulier sur les anciens écrans OLED. Les montres baissent généralement la luminosité de l'écran pour éviter ce marquage ; consultez le manuel de votre montre, le fabricant ou Internet pour obtenir des conseils.
     
-    ![Cadran mode table de nuit](../images/Watchface_nightstand.jpg)
+    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Interface simplifiée](../images/Watchface_simplified_ui.png)
+    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Alarmes du téléphone sur la montre
+    ## Phone alarms on the watch
     
-    ![Une alarme du téléphone sur la montre](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    La montre affiche les alarmes du téléphone : vous voyez pourquoi le téléphone sonne et vous pouvez répondre depuis votre poignet. La montre vibre, puis de nouveau toutes les 30 secondes pendant cinq minutes jusqu'à ce que vous répondiez. Une notification affiche le titre et le texte de l'alarme, avec les mêmes réponses que le rappel [C'est l'heure de manger](#WearOsSmartwatch-wizard-carb-time) :
+    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. La montre vibre, puis de nouveau toutes les 30 secondes pendant cinq minutes jusqu'à ce que vous répondiez. Une notification affiche le titre et le texte de l'alarme, avec les mêmes réponses que le rappel [C'est l'heure de manger](#WearOsSmartwatch-wizard-carb-time) :
     
     * **Silence**, ou un balayage : l'alarme s'arrête, et l'écran d'alarme du téléphone se ferme.
     * **Muet 5 min** : l'alarme s'arrête et sonne de nouveau après cinq minutes, sur le téléphone et sur la montre.

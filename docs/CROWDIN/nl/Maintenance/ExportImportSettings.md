@@ -97,6 +97,8 @@ Het is aan te raden om regelmatig de instellingen te exporteren, vooral vóór e
 
 **Let op**: _De geëxporteerde instellingen worden versleuteld met je AAPS hoofdwachtwoord: zonder het hoofdwachtwoord dat bij het exporteren is gebruikt, kun je het instellingenbestand niet importeren!_
 
+If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+
 ### Instellingen exporteren of importeren
 Om instellingen te exporteren of te importeren, open je het **menu** (☰) en kies je **Onderhoud**. Onder **Bestandsbeheer** kies je met de chips **Lokaal** en **Cloud** naast **Exporteer instellingen** en **Importeer instellingen** waar het instellingenbestand wordt opgeslagen of vandaan wordt gelezen: **Lokaal** is de AAPS map op je telefoon, **Cloud** is beschikbaar zodra er een [Cloud map](#preferences-maintenance-cloud) is ingesteld. Tik op een chip om hem aan of uit te zetten; er blijft altijd minstens één gekozen, en beide rijen gebruiken dezelfde keuze. Tik daarna op **Exporteer instellingen** of **Importeer instellingen** zelf om te beginnen.
 

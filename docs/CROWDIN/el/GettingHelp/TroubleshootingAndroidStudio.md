@@ -192,7 +192,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
   Στο διαδίκτυο υπάρχουν πληροφορίες για το πώς να δείτε αν έχετε λειτουργικό σύστημα 32-bit ή 64-bit, π.χ. [αυτές εδώ](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Στιγμιότυπο οθόνης Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Στιγμιότυπο οθόνης Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Επανασυγχρονισμός Gradle
@@ -237,7 +237,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Το apk δεν εγκαταστάθηκε
 
-![η εφαρμογή δεν εγκαταστάθηκε στο τηλέφωνο](../images/Update_AppNotInstalled.png)
+![η εφαρμογή δεν εγκαταστάθηκε στο τηλέφωνο](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Βεβαιωθείτε ότι έχετε μεταφέρει το αρχείο "app-full-release.apk" στο τηλέφωνό σας.
 * Αυτό το σφάλμα συνήθως σημαίνει ότι το νέο apk είναι υπογεγραμμένο με διαφορετικό keystore από το εγκατεστημένο **AAPS** σας. Αν έχετε ακόμη το προηγούμενο keystore σας, επιλέξτε το και κάντε ξανά build. Αλλιώς, δείτε [Επανεγκατάσταση του AAPS με νέο keystore](#reinstall-aaps).

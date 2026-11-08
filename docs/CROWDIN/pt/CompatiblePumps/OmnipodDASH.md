@@ -535,7 +535,7 @@ O **AAPS** regista automaticamente uma mudança de cânula e uma mudança de ins
 
 A idade da **Bateria da Bomba** não é indicada: a bateria e o reservatório de insulina estão integrados em cada Pod, e a bateria dura sempre mais do que o próprio Pod (máximo 80 horas).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

@@ -8,7 +8,7 @@ Ciklo būsena rodoma pagrindiniame ekrane viena iš toliau pateiktų piktogramų
 
 Kaip pasirinkti ciklo režimą ir ką reiškia kitos paveikslėlio piktogramos (4–6), žr. [AAPS ekranai > Pagrindinis ekranas > Ciklo būsena](#AapsScreens-loop-status).
 
-![Ciklo būsena](../images/Home2020_LoopStatus.png)
+![Ciklo būsena](../images/main/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ When enabled, new settings become available.
 
 Jei tikslas pakeistas dėl jautrumo nustatymo, pagrindiniame ekrane jis rodomas žaliame fone.
 
-![Autosens pakeistas tikslas](../images/Home2020_DynamicTargetAdjustment.png)
+![Autosens pakeistas tikslas](../images/main/main_target_modified_by_autosens.png)
 
 Šis nustatymas pasiekiamas, kai įjungtas „Naudoti dinaminį jautrumą“ arba „Naudoti Autosens“.
 

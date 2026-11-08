@@ -192,7 +192,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
   Vous trouverez sur Internet des informations pour savoir si vous avez un système 32 bits ou 64 bits, par ex. [celle-ci](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Copie d'écran Impossible de démarrer le processus daemon](../images/AndroidStudioWin10_32bitError.png)
+  ![Copie d'écran Impossible de démarrer le processus daemon](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Resynchronisation Gradle
@@ -237,7 +237,7 @@ Votre apk a été compilé avec succès et peut être transféré sur votre tél
 
 ## Apk non installé
 
-![Application téléphone non installée](../images/Update_AppNotInstalled.png)
+![Application téléphone non installée](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
 * Cette erreur veut généralement dire que le nouvel apk est signé avec un autre keystore que votre **AAPS** installé. Si vous avez encore votre ancien keystore, sélectionnez-le et compilez à nouveau. Sinon, voir [Réinstaller AAPS avec un nouveau keystore](#reinstall-aaps).

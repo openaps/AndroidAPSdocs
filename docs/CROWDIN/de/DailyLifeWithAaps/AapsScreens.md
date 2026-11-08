@@ -9,7 +9,7 @@
 
 ## Der Startbildschirm
 
-![Main screen](../images/Home_Homescreen.png)
+![Main screen](../images/main/Home_Homescreen.png)
 
 Wenn Du **AAPS** öffnest, ist dies die erste Ansicht. Sie enthält die meisten der täglich benötigten Informationen.
 
@@ -33,13 +33,13 @@ Die Farbe des Glukosewertes zeigt wie sich der Wert zum definierten [Zielbereich
 * rot = unterhalb des Zielbereichs
 * gelb = oberhalb des Zielbereichs
 
-![BG circle in range, green](../images/Home_Delta.png) ![BG circle above range, yellow](../images/Home_Delta_high.png) ![BG circle below range, red](../images/Home_Delta_low.png)
+![BG circle in range, green](../images/main/Home_Delta.png) ![BG circle above range, yellow](../images/main/Home_Delta_high.png) ![BG circle below range, red](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
 #### Loop Status
 
-![Loop Status](../images/Home2020_LoopStatus.png)
+![Loop Status](../images/main/main_loop_status.png)
 
 Neben dem BZ-Kreis zeigt ein Symbol den AAPS-Modus des Loops an (im Bild von oben nach unten):
 
@@ -166,7 +166,7 @@ Tippe auf den Profilnamen, um den [Profil-Bildschirm](#aaps-screens-profile) zu 
 
 Um **den Prozentsatz des Profils zu ändern** (und die Dauer), tippe auf den Profilnamen und dann unten rechts im Profil-Bildschirm auf den runden Knopf **▶** (Aktivieren). In **AAPS** 3.x öffnete sich dieser Bildschirm mit einem langen Druck auf den Profilnamen. In **AAPS** 4 bewirkt ein langer Druck nichts. Schritt für Schritt: [Den Prozentsatz des Profils ändern](#ProfileSwitch-change-percentage).
 
-![Profile with an active profile switch](../images/Home2020_ProfileSwitch.png)
+![Profile with an active profile switch](../images/main/main_profile_switch.png)
 
 1. Normale Anzeige mit einer Standardprofil-Aktivierung.
 2. Profilwechsel mit einem Prozentsatz von 90 % und einer verbleibenden Dauer von 9 Minuten – der Profilname wird gelb, solange ein zeitlich begrenzter Profilwechsel läuft.
@@ -174,7 +174,7 @@ Um **den Prozentsatz des Profils zu ändern** (und die Dauer), tippe auf den Pro
 
 #### Ziel
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Temp target remaining duration](../images/main/main_temp_target.png)
 
 Der aktuelle BZ-Zielwert wird unter dem Profilnamen angezeigt.
 
@@ -200,7 +200,7 @@ Erkennt **AAPS** eine Resistenz oder Empfindlichkeit, weicht das Ziel von dem im
 
 #### IOB, COB, Basal und Empfindlichkeit
 
-![IOB, COB, Basal und Empfindlichkeit](../images/Home2020_TBR.png)
+![IOB, COB, Basal und Empfindlichkeit](../images/main/main_iob_cob_basal_sensitivity.png)
 
 1. **Spritze**: Insulin an Bord (IOB) - Menge an aktivem Insulin im Körper  
     Das Insulin an Bord wäre null, wenn nur Deine normale Basalrate liefe und kein Insulin aus früheren Boli mehr wirken würde. 
@@ -234,7 +234,7 @@ Auf Wunsch können die Kohlenhydrat-Vorschläge an Nightscout gesandt werden. In
 
 ### Abschnitt C - Statuszeile
 
-![Status row](../images/Home2020_StatusLights.png)
+![Status row](../images/main/main_status_row.png)
 
 Die Statuszeile warnt optisch bei
 
@@ -320,7 +320,7 @@ Ist die Uhr des Smartphones gesprungen, bei einer Zeitumstellung oder in einer n
 
 Tippe oben rechts im Diagramm auf das **Stift**-Symbol, um die Einstellungen des Diagramms zu öffnen:
 
-![Main graph setting](../images/Home2020_MainGraphSetting.png)
+![Main graph setting](../images/main/main_graph_settings.png)
 
 * **Diagrammhöhe** stellt ein, wie hoch das Diagramm gezeichnet wird.
 * **ACT** blendet die Kurve der Insulinaktivität ein: eine durchgezogene gelbgrüne Linie <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (nicht zu verwechseln mit der gepunkteten gelben UAM-Vorhersage)
@@ -408,7 +408,7 @@ Die zusätzlichen Diagramme folgen dem Hauptdiagramm: Wenn Du im BZ-Diagramm scr
 
 Um ein zusätzliches Diagramm einzustellen, tippe oben rechts darin auf das **Stift**-Symbol:
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Additional graph settings](../images/main/main_additional_graph_settings.png)
 
 Wähle die Anzeigen für die Daten, die Du in diesem Diagramm sehen möchtest. Der Knopf **Entfernen** löscht das Diagramm.
 
@@ -490,7 +490,7 @@ Es ergibt eine gute Kombination diese Linie zusammen mit den Balken für Abweich
 
 ### Abschnitt F - Schnellstart-Leiste
 
-![QuickLaunch toolbar](../images/Home2020_Buttons.png)
+![QuickLaunch toolbar](../images/main/main_quicklaunch_toolbar.png)
 
 Die schwebende Leiste unten auf dem Bildschirm enthält Deine **[Schnellstart](../DailyLifeWithAaps/QuickLaunch.md)**-Aktionen. Das kleine **Zahnrad** öffnet die Schnellstart-Konfiguration. Dort wählst Du, welche Knöpfe angezeigt werden (Behandlungen, Careportal-Einträge, CGM-Aktionen, die Bildschirme aus dem Fenster **Verwalten**, [QuickWizard](../DailyLifeWithAaps/QuickWizards.md)-Knöpfe, [Szenen](../DailyLifeWithAaps/Scenes.md) und mehr).
 
@@ -502,7 +502,7 @@ Solange die Pumpe **getrennt** ist, bleiben die Knöpfe für Behandlungen in der
 
 #### Insulin
 
-![Insulin dialog](../images/Home2020_ButtonInsulin.png)
+![Insulin dialog](../images/v4/Screens/insulin_dialog.png)
 
 Um einen Bolus abzugeben, ohne den [Bolus-Rechner](#aaps-screens-bolus-wizard) zu nutzen.
 
@@ -520,7 +520,7 @@ Der Insulin-Dialog kann auch verwendet werden, wenn die Pumpe pausiert oder getr
 
 #### Kohlenhydrate
 
-![Carbs dialog](../images/Home2020_ButtonCarbs.png)
+![Carbs dialog](../images/v4/Screens/carbs_dialog.png)
 
 Kohlenhydrate ohne Bolus dokumentieren.
 
@@ -574,7 +574,7 @@ Tippe auf die Blase, um das Fenster **Benachrichtigung** zu öffnen. Bei jeder M
 
 ## Bolus-Rechner
 
-![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
+![Bolus wizard](../images/v4/Screens/bolus_wizard.png)
 
 Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
@@ -618,7 +618,7 @@ Das Feld „**Zeitpunkt der KH-Aufnahme**“ ist für einen Spritz-Ess-Abstand g
 
 **Erinnerung einstellen** (Essenserinnerung): Wenn ein Zeitpunkt für Kohlenhydrate in der Zukunft eingegeben wird, erscheint ein Schalter „**Erinnerung einstellen**“, damit Du zur angegebenen Zeit daran erinnert wirst, die in **AAPS** eingegebenen Kohlenhydrate zu essen:
 
-![Set alarm for future carbs](../images/Home2021_BolusWizard_EatingReminder.png)
+![Set alarm for future carbs](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
 Die Erinnerung startet, wenn der Bolus abgegeben wurde. Solange sie läuft, zählt auf dem Startbildschirm eine Leiste **Zeit zum Essen** herunter, mit **Stopp** und **+5 Min.**. **+5 Min.** verschiebt das Ende der Wartezeit um fünf Minuten nach hinten, und die Leiste zeigt die gesamte Wartezeit. Ist es so weit, klingelt die Erinnerung mit einem eigenen Ton, einer sanften Küchenuhr. Neben **Alarm stummschalten** (der Bildschirm bleibt offen) und **Stummschalten und schließen** bietet der Alarm-Bildschirm **+5 Min.** an, womit eine neue Wartezeit von fünf Minuten beginnt. Hat sie geklingelt, zeigt die Leiste *Die Wartezeit ist abgelaufen* mit **+5 Min.** und **Schließen**. **Stummschalten und schließen** entfernt auch die Leiste. Die Leiste und der Alarm werden auch in **AAPSClient** und auf der [Smartwatch](#WearOsSmartwatch-wizard-carb-time) angezeigt. Die Erinnerung legt keinen Timer in der Uhr-App Deines Smartphones an. Wenn Android **AAPS** keine Alarme erlaubt, bittet Dich der Assistent, für **AAPS** in den Android-Einstellungen *Alarme und Erinnerungen* zu erlauben. Für einen Kohlenhydrat-Zeitpunkt in der Vergangenheit wird die Glocke nicht angeboten.
 
@@ -640,7 +640,7 @@ Gut zu wissen:
 
 #### Fehlerhafte Erkennung der aktiven Kohlenhydrate (COB)
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+![Slow carb absorption](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Wenn Du nach Verwendung des Bolus-Rechners, die oben gezeigte Warnung siehst, hat **AAPS** erkannt, dass die aktiven Kohlenhydrate (COB) möglicherweise falsch berechnet wurden. Wenn Du kurz nach einer vorangegangenen Mahlzeit (mit noch aktiven Kohlenhydraten) erneut einen Bolus abgeben willst, solltest Du Dir der Gefahr einer Überdosierung bewusst sein!
 
@@ -719,7 +719,7 @@ Weitere Details findest Du im [APS-Abschnitt der Seite Konfiguration](#Config-Bu
 
 ## Profil
 
-![Profil](../images/Screenshots_Profile.png)
+![Profil](../images/screens/Screenshots_Profile.png)
 
 **Verwalten → Profil** (oder ein Tippen auf den Profilnamen auf dem Startbildschirm) öffnet den Profil-Bildschirm: Deine Profile als Karten zum Durchwischen, mit Knöpfen zum Hinzufügen, Bearbeiten, Klonen, Löschen und **Aktivieren** eines Profils.
 
@@ -733,7 +733,7 @@ Das Profil enthält Informationen zu Deinen individuellen Diabetes-Einstellungen
 
 ## Nightscout-Client
 
-![Nightscout-Client](../images/Screenshots_NSClient.png)
+![Nightscout-Client](../images/screens/Screenshots_NSClient.png)
 
 **Konfiguration → Kommunikation → NSClientV3 → Modul öffnen** zeigt den Status der Verbindung zu Deiner Nightscout-Seite: URL, Websocket-Status, Warteschlange und ein Protokoll der Synchronisierung.
 
@@ -745,7 +745,7 @@ Für die Fehlerbehebung schlage auf der [dieser Seite](../GettingHelp/Troublesho
 
 ## BZ-Quelle - xDrip+, BYODA …
 
-![BG Source screen](../images/Screenshots_BGSource.png)
+![BG Source screen](../images/screens/Screenshots_BGSource.png)
 
 **Konfiguration → BZ-Quelle → Modul öffnen** zeigt die Historie der CGM-Werte und bietet die Möglichkeit, Werte bei Fehlern (z. B. Kompressionstief) oder doppelte Werte zu entfernen.
 

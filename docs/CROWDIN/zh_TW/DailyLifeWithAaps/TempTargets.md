@@ -23,7 +23,7 @@
 
 ### 臨時目標 - 活動
 
-![臨時目標活動](../images/TempTarget2.png)
+![臨時目標活動](../images/v4/TempTarget/TempTarget2.png)
 
 **血糖目標（預設值，可調整）**
 
@@ -46,7 +46,7 @@ AAPS 會以 140 mg/dL 或 7.8 mmol/L 為目標，持續 1 小時 30 分鐘。
 
 ### 臨時目標 - 即將用餐
 
-![即將用餐臨時目標](../images/TempTarget1.png)
+![即將用餐臨時目標](../images/v4/TempTarget/TempTarget1.png)
 
 **血糖目標（預設值，可調整）**
 
@@ -63,7 +63,7 @@ AAPS 會以 90 mg/dL 或 5.0 mmol/L 為目標，持續 45 分鐘。
 
 ### 臨時目標 - 低血糖
 
-![臨時目標 低血糖](../images/TempTarget3.png)
+![臨時目標 低血糖](../images/v4/TempTarget/TempTarget3.png)
 
 **血糖目標（預設值，可調整）**
 
@@ -96,11 +96,11 @@ AAPS 會以 160 mg/dL 或 8.9 mmol/L 為目標，持續 1 小時。
 
     <br />### 啟用臨時目標
     
-    滑動至所需的預設值（其數值會載入編輯器），可視需要在編輯器中調整**目標**／**持續時間**，然後點選 **▶ 啟用**。啟動前會顯示確認畫面，列出確切的目標、持續時間和原因：
+    滑動至所需的預設值（其數值會載入編輯器），可視需要在編輯器中調整**目標**／**持續時間**，然後點選 **▶ 啟用**。 A confirmation shows the exact target, duration and reason before anything starts:
     
-    ![啟用確認畫面](../images/TempTarget8.png)
+    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    確認後，臨時目標會立即開始（或在所選的**啟用**時間開始），並持續設定的時間。
+    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
     ```{admonition} 編輯數值只會套用一次，不會變更預設值
     :class: important
@@ -148,13 +148,13 @@ AAPS 會以 160 mg/dL 或 8.9 mmol/L 為目標，持續 1 小時。
 
 最快的方法是點選主畫面上的**目標標籤**（會顯示目前的目標範圍）：
 
-![主畫面上的目標標籤](../images/TempTarget6.png)
+![主畫面上的目標標籤](../images/v4/TempTarget/TempTarget6.png)
 
 這會開啟上方所述的**臨時目標**畫面 — 滑動到要使用的預設值，然後點選 **▶ 啟用**。也可以透過**管理** → **臨時目標**開啟相同畫面。
 
 (TempTargets-carbs-dialog)= 輸入碳水化合物時，完全不需要開啟**臨時目標**畫面：**碳水化合物**對話方塊（**治療** → **碳水化合物**）頂端有「**開始低血糖 TT**」、「**開始即將用餐 TT**」和「**開始活動 TT**」切換開關。開啟其中一個開關後，系統會在新增碳水化合物資料時一併啟用對應的預設值：
 
-![碳水化合物對話方塊中的 TT 切換開關](../images/TempTarget5.png)
+![碳水化合物對話方塊中的 TT 切換開關](../images/v4/TempTarget/TempTarget5.png)
 
     {admonition} 自動啟用低血糖 TT
     :class: note
@@ -171,7 +171,7 @@ AAPS 會以 160 mg/dL 或 8.9 mmol/L 為目標，持續 1 小時。
 3. 在編輯器中調整**臨時目標**和／或**持續時間**。
 4. 點選頂端工具列中出現的**儲存**圖示。
 
-![編輯預設值 — 工具列中的「儲存」圖示，以及動作列中的「還原」](../images/TempTarget7.png)
+![編輯預設值 — 工具列中的「儲存」圖示，以及動作列中的「還原」](../images/v4/TempTarget/TempTarget7.png)
 
 當編輯器中的設定與內建預設值的原始設定不同時，動作列也會出現 **↺ 還原**按鈕 — 點選即可還原預設值的原始目標值和持續時間。
 
@@ -179,7 +179,7 @@ AAPS 會以 160 mg/dL 或 8.9 mmol/L 為目標，持續 1 小時。
 
 啟用臨時目標期間，主畫面上的目標標籤會顯示目標值和剩餘時間。點選目標標籤 — 在**臨時目標**畫面中，正在執行的預設值會標示為**啟用中**；底部工具列的末端、**▶ 啟用**按鈕左側，會出現紅色的 **✗ 取消**按鈕。點選該按鈕並確認：
 
-![取消正在執行的臨時目標](../images/TempTarget9.png)
+![取消正在執行的臨時目標](../images/v4/TempTarget/TempTarget9.png)
 
 也可以透過 **Wear OS 手錶**、已配對的**用戶端**，或**自動化**規則（「*停止臨時目標*」）停止正在執行的臨時目標。
 
@@ -231,6 +231,6 @@ AAPS 會以 160 mg/dL 或 8.9 mmol/L 為目標，持續 1 小時。
 
 若要啟用此功能，請開啟**設定** → **OpenAPS SMB**，並停用「*啟用高臨時目標時使用 SMB*」。
 
-![「啟用高臨時目標時使用 SMB」偏好設定](../images/TempTargetSMB.png)
+![「啟用高臨時目標時使用 SMB」偏好設定](../images/v4/TempTarget/TempTargetSMB.png)
 
 如此一來，即使活性碳水化合物大於 0、「*啟用低臨時目標時使用 SMB*」或「*一律啟用 SMB*」已開啟，且 OpenAPS SMB 正在運作，**AAPS** 仍不會給予 **SMB**。

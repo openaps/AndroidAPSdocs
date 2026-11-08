@@ -276,7 +276,7 @@ xDrip+ has its own calibration. Calibrate in one place only, so that the sensor 
 
 ```{admonition} Calibrate with care
 :class: warning
-A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Lavez-vous les mains avant la mesure, et n'étalonnez pas quand votre glycémie change vite.
+A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Wash your hands before measuring, and do not calibrate while your glucose is changing fast.
 ```
 
 ![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)

@@ -22,7 +22,7 @@ Potřebujete alespoň jeden uložený **profil**. **Procento profilu** se vždy 
 
     <br />1. Na hlavní obrazovce **klepněte na název profilu** (vedle ikony hvězdičky). Otevře se [obrazovka Profil](#ProfileSwitch-manage-v4) na kartě běžícího **profilu**, která je označena **AKTIVNÍ**.
     
-       ![Klepnutím na název profilu na hlavní obrazovce otevřete obrazovku Profil](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Pokud chcete ponechat stejný **profil**, nechte vybranou kartu **AKTIVNÍ**. Pokud chcete zároveň změnit **profil**, přejeďte na jinou kartu.
     3. Klepněte na kulaté tlačítko **▶** (**Aktivovat**) vpravo dole. Otevře se obrazovka **Aktivovat**.
@@ -169,7 +169,7 @@ Jde vždy o to, nastavení **profilu** z které hodiny má nahradit nastavení p
     - 22:00 **-10 h** -> 12:00
     - Nastavení platná od 22:00 budou použita namísto těch, která normálně platí ve 12:00, protože posouváme profil dozadu.
 
-![Směry posunu profilu v čase](../images/ProfileSwitch_PlusMinus2.png)
+![Směry posunu profilu v čase](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 Tento způsob ukládání snímků **profilu** umožňuje mnohem přesnější výpočet minulosti a také sledování změn **profilu**.
 

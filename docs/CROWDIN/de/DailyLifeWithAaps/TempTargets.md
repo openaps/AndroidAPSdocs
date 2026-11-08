@@ -23,7 +23,7 @@ Die folgenden Abschnitte fassen zusammen, wie **temporäres Ziel Aktivität**, *
 
 ### Temporäres Ziel - Aktivität
 
-![TT Activity](../images/TempTarget2.png)
+![TT Activity](../images/v4/TempTarget/TempTarget2.png)
 
 **Glukose-Zielwert (Standardvorlage, anpassbar)**
 
@@ -46,7 +46,7 @@ Es ist eine Überlegung wert:
 
 ### Temporäres Ziel - Bald essen
 
-![TT Eating soon](../images/TempTarget1.png)
+![TT Eating soon](../images/v4/TempTarget/TempTarget1.png)
 
 **Glukose-Zielwert (Standardvorlage, anpassbar)**
 
@@ -63,7 +63,7 @@ Im Closed-Loop-Modus, **SMB**s:
 
 ### Temporäres Ziel - Hypo
 
-![TT Hypo](../images/TempTarget3.png)
+![TT Hypo](../images/v4/TempTarget/TempTarget3.png)
 
 **Glukose-Zielwert (Standardvorlage, anpassbar)**
 
@@ -96,11 +96,11 @@ Wählst Du eine Karte aus, werden ihr **Zielwert** und ihre **Dauer** in den Edi
 
     <br />### Ein temporäres Ziel aktivieren
     
-    Wische zur gewünschten Vorlage (ihre Werte werden in den Editor geladen), passe bei Bedarf **Zielwert**/**Dauer** im Editor an und tippe dann auf **▶ Aktivieren**. Eine Bestätigung zeigt den genauen Zielwert, die Dauer und die Begründung, bevor etwas startet:
+    Wische zur gewünschten Vorlage (ihre Werte werden in den Editor geladen), passe bei Bedarf **Zielwert**/**Dauer** im Editor an und tippe dann auf **▶ Aktivieren**. A confirmation shows the exact target, duration and reason before anything starts:
     
-    ![Aktivierungsbestätigung](../images/TempTarget8.png)
+    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    Nachdem Du bestätigt hast, startet das temporäre Ziel sofort (oder zum gewählten Zeitpunkt der **Aktivierung**) und läuft für die eingestellte **Dauer**.
+    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
     ```{admonition} Das Ändern der Zahlen gilt nur einmal – die Vorlage bleibt unverändert
     :class: important
@@ -148,13 +148,13 @@ Ein temporäres Ziel lässt sich auch setzen, ohne diesen Bildschirm zu öffnen:
 
 Am schnellsten tippst Du auf dem Startbildschirm auf die **Zielwert-Anzeige** (sie zeigt Deinen aktuellen Zielbereich):
 
-![Target chip on the main screen](../images/TempTarget6.png)
+![Target chip on the main screen](../images/v4/TempTarget/TempTarget6.png)
 
 Damit öffnet sich der oben beschriebene Bildschirm **Temporäre Ziele** – wische zu einer Vorlage und tippe auf **▶ Aktivieren**. Derselbe Bildschirm ist auch über **Verwalten** → **Temporäre Ziele** erreichbar.
 
 (TempTargets-carbs-dialog)= Wenn Du Kohlenhydrate eingibst, musst Du den Bildschirm **Temporäre Ziele** gar nicht öffnen: Der **Kohlenhydrat-Dialog** (**Behandlungen** → **Kohlenhydrate**) hat oben die Schalter **Starte Hypo-TT**, **Starte Essens-TT** und **Starte Aktivitäts-TT**. Schaltest Du einen davon ein, wird die passende Vorlage zusammen mit dem KH-Eintrag aktiviert:
 
-![TT toggles in the Carbs dialog](../images/TempTarget5.png)
+![TT toggles in the Carbs dialog](../images/v4/TempTarget/TempTarget5.png)
 
     {admonition} Automatisches Hypo-TT
     :class: note
@@ -171,7 +171,7 @@ Damit öffnet sich der oben beschriebene Bildschirm **Temporäre Ziele** – wis
 3. Passe im Editor **Temporäres Ziel** und/oder **Dauer** an.
 4. Tippe auf das Symbol **Speichern**, das in der oberen Leiste erscheint.
 
-![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/TempTarget7.png)
+![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/v4/TempTarget/TempTarget7.png)
 
 Solange der Editor von den Werkseinstellungen einer eingebauten Vorlage abweicht, erscheint in der Aktionsleiste außerdem ein Knopf **↺ Zurücksetzen** – tippe darauf, um den ursprünglichen Zielwert und die ursprüngliche Dauer der Vorlage wiederherzustellen.
 
@@ -179,7 +179,7 @@ Solange der Editor von den Werkseinstellungen einer eingebauten Vorlage abweicht
 
 Solange ein temporäres Ziel läuft, zeigt die Zielwert-Anzeige auf dem Startbildschirm den Zielwert und die Restzeit. Tippe darauf – im Bildschirm **Temporäre Ziele** ist die laufende Vorlage als **AKTIV** hervorgehoben, und am Ende der unteren Leiste, direkt links neben dem Knopf **▶ Aktivieren**, erscheint ein roter Knopf **✗ Abbrechen**. Tippe darauf und bestätige:
 
-![Cancelling a running temp target](../images/TempTarget9.png)
+![Cancelling a running temp target](../images/v4/TempTarget/TempTarget9.png)
 
 Ein laufendes temporäres Ziel kann auch von einer **Wear OS-Smartwatch**, von einem gekoppelten **Client** oder durch eine **Automatisierungsregel** (*Temporäres Ziel (TT) stoppen*) beendet werden.
 
@@ -231,6 +231,6 @@ Für Fortgeschrittene, [Ziel (objective) 9](#objectives-objective9): Wenn Du Ope
 
 Öffne dazu **Einstellungen** → **OpenAPS SMB** und deaktiviere *„SMB bei hohen temporären Zielen aktivieren“*.
 
-![Enable SMB with high temp target preference](../images/TempTargetSMB.png)
+![Enable SMB with high temp target preference](../images/v4/TempTarget/TempTargetSMB.png)
 
 Damit stellst Du sicher, dass **AAPS** keine **SMBs** abgibt, auch wenn COB > 0 ist, *„SMB bei niedrigen temporären Zielen aktivieren“* oder *„SMB immer aktivieren“* eingeschaltet und OpenAPS SMB aktiv ist.

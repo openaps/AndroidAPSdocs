@@ -59,7 +59,7 @@ Bağımsız **AAPS** saatleriyle ilgili sıkıntıların çoğu, küçük bir ek
 
 Diğer zorluklar: yeterli pil ömrü elde etmek zordur ve pili yeterli olan saatler genellikle iri ve kalındır. Kullanıcılar şu sorunları bildiriyor: işletim sistemi ve güç tasarrufu ayarlarıyla uğraşmak, saatte sensör başlatmanın zorluğu, zayıf Bluetooth menzili (hem sensörle hem de pompayla bağlantıyı korumak için) ve şüpheli su geçirmezlik. Örnekler aşağıdaki fotoğraflarda gösterilmiştir.
 
-![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![image](../images/watch_standalone_aaps_and_xdrip.png)
 
 Bağımsız bir saat kurmak istiyorsanız, daha fazla bilgi için **AAPS** Facebook grubundaki (iyi arama sözcükleri “standalone” ve “Lemfo”) ve Discord'daki gönderileri ve yorumları okuyun.
 
@@ -88,7 +88,7 @@ Son **Wear OS** değişiklikleri özel **AAPS** saat arayüzlerini giderek bozuy
 
 [**AAPS**'i saatinize yükledikten](../WearOS/WearOsSmartwatch.md) sonra, bu **AAPS**'e özel saat arayüzlerinden istediğinizi otomatik olarak seçebilirsiniz. Çoğu saatte ana ekrana, ekran küçülene kadar uzun basmanız ve başka bir ekran seçmek için sağa kaydırmanız yeterlidir:
 
-![image](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![image](../images/watchfaces_aaps_selection.png)
 
 Bunlar **AAPS**'te yerleşik temel ekranlardır. [Daha fazla saat arayüzü](#WearOS_changing-to-AAPS-watchface) vardır ve [komplikasyonları](#Watchfaces-complications) da kullanabilirsiniz.
 
@@ -155,7 +155,7 @@ Aşağıda **AAPS** kullanıcıları arasında popüler olan bazı yalnızca tak
 
 **WatchDrip+**, topluluk tarafından geliştirilen bir yardımcı uygulamadır. Glikoz ve döngü verilerini çeşitli akıllı saat modellerinde gösterir; çoğunlukla Xiaomi (_ör._ Mi Band) ve Amazfit markalarında:
 
-![image](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![image](../images/watch_watchdrip_plus.png)
 
 **WatchDrip+** 0.5 sürümünden beri verilerini aracı olarak xDrip+ kullanmadan doğrudan **AAPS**'ten okur. **AAPS** telefonunda:
 
@@ -170,9 +170,9 @@ Kurulum dahil, bunlar hakkında daha fazla bilgiyi [WatchDrip+ web sitesinde](ht
 
 ### Pebble saat
 
-![image](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![image](../images/watch_pebble.png)
 
-![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![image](../images/watch_pebble_watchface.png)
 
 
 Pebble saatler ([artık üretilmiyor](https://en.wikipedia.org/wiki/Pebble_(watch))) 2013'ten 2016'ya kadar genel satışta idi ve hâlâ ikinci el bulunabilir. Fitbit, Pebble'ın varlıklarını devraldı. Pebble kullanıcıları Nightscout verilerini görmek için Urchin saat arayüzünü kullanabilir. Gösterilen veri seçenekleri arasında AİNS, şu anda aktif geçici bazal oranı ve tahminler vardır. Açık döngü kullanıyorsanız IFTTT ile bir applet oluşturabilirsiniz: **AAPS** bir bildirim gönderdiğinde SMS veya pushover bildirimi gönderilir.

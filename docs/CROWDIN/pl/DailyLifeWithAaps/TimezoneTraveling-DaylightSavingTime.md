@@ -33,7 +33,7 @@ Aby tego uniknąć, masz dwie możliwości:
    * Wybierz swój **Profil** i dotknij **▶ Aktywuj**
    * Ustaw „**Zmiana czasu**” zgodnie z miejscem docelowym i dotknij **Aktywuj**.
    
-   ![Zmiana profilu z przesunięciem czasu](../images/ProfileSwitchTimeShift2.png)
+   ![Zmiana profilu z przesunięciem czasu](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * np. Wiedeń -> Nowy Jork: **Zmiana profilu** +6 godzin
    * np. Wiedeń -> Sydney: **Zmiana profilu** -8 godzin
@@ -118,14 +118,14 @@ Jeśli podajesz bolus z kalkulatora **AAPS**, nie używaj danych **COB** i **IOB
    * Niektóre telefony mają dwa ustawienia: jedno do automatycznego ustawiania czasu (które najlepiej zostawić włączone) i jedno do automatycznego ustawiania strefy czasowej (które MUSISZ wyłączyć: **Ustaw automatycznie** (Set automatically) w sekcji **Strefa czasowa** (Time zone) na zrzucie ekranu poniżej).
    * Niestety niektóre wersje Androida mają jeden przełącznik, który włącza automatyczne ustawianie zarówno czasu, jak i strefy czasowej. Na razie musisz to wyłączyć.
 
-![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
+![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
 2. Znajdź strefę czasową, która ma ten sam czas co Twoja obecna lokalizacja, ale nie używa czasu letniego.
    
    * Lista tych krajów jest dostępna tutaj: [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Dla czasu środkowoeuropejskiego (CET) może to być „Brazzaville” (Kongo). Zmień strefę czasową telefonu na Kongo.
 
-![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
+![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
 3. W **AAPS** odśwież pompę i przełącz na wybrany **Profil**.
 

@@ -291,13 +291,13 @@ APK файлът на **AAPSClient** вече може да бъде:
 
 За да изтеглите софтуера, натиснете приложението за часовник, което отговаря на клиентското приложение на телефона: **wear-aapsclient-release_**_версия_ е за **AAPSClient**, **wear-aapsclient2-release_**_версия_ е за **AAPSClient2** (вижте [За AAPSClient, AAPSClient2 и AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![изображение](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+![изображение](../images/github_release_wear_aapsclient_apk.png)
 
 
 След това изберете „save as“ (запиши като) и запазете файла на удобно място на компютъра:
 
 
-![изображение](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+![изображение](../images/save_as_wear_aapsclient_apk.png)
 
 
 

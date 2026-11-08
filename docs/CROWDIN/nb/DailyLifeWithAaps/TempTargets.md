@@ -23,7 +23,7 @@ Avsnittene nedenfor oppsummerer funksjonene i **midlertidig mål Aktivitet**, **
 
 ### TT - Aktivitet
 
-![Midl. mål Aktivitet](../images/TempTarget2.png)
+![Midl. mål Aktivitet](../images/v4/TempTarget/TempTarget2.png)
 
 **BS-mål (standard forhåndsinnstilling, kan endres)**
 
@@ -46,7 +46,7 @@ Du kan også vurdere:
 
 ### TT - Spise snart
 
-![Midl. mål Spise snart](../images/TempTarget1.png)
+![Midl. mål Spise snart](../images/v4/TempTarget/TempTarget1.png)
 
 **BS-mål (standard forhåndsinnstilling, kan endres)**
 
@@ -63,7 +63,7 @@ Avhengig av **BS**-nivået vil **AAPS** «øke» insulinbruken, innenfor grensen
 
 ### TT - Hypo
 
-![Midl. mål Hypo](../images/TempTarget3.png)
+![Midl. mål Hypo](../images/v4/TempTarget/TempTarget3.png)
 
 **BS-mål (standard forhåndsinnstilling, kan endres)**
 
@@ -96,11 +96,11 @@ Når du velger et kort, lastes **målet** og **varigheten** inn i redigeringsfel
 
     <br />### Aktivere et midlertidig mål
     
-    Sveip til forhåndsinnstillingen du vil bruke (verdiene lastes inn i redigeringsfeltet), juster eventuelt **målet**/**varigheten** i redigeringsfeltet, og trykk så på **▶ Aktiver**. En bekreftelse viser nøyaktig mål, varighet og årsak før noe starter:
+    Sveip til forhåndsinnstillingen du vil bruke (verdiene lastes inn i redigeringsfeltet), juster eventuelt **målet**/**varigheten** i redigeringsfeltet, og trykk så på **▶ Aktiver**. A confirmation shows the exact target, duration and reason before anything starts:
     
-    ![Bekreftelse av aktivering](../images/TempTarget8.png)
+    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    Når du har bekreftet, starter det midlertidige målet med en gang (eller på valgt **Aktivering**-tidspunkt) og kjører så lenge **varigheten** er satt til.
+    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
     ```{admonition} Å endre tallene gjelder bare én gang — forhåndsinnstillingen endres ikke
     :class: important
@@ -148,13 +148,13 @@ Du kan også sette et midlertidig mål uten å åpne denne skjermen:
 
 Det raskeste er å trykke på **målbrikken** på hovedskjermen (den viser målområdet ditt nå):
 
-![Målbrikken på hovedskjermen](../images/TempTarget6.png)
+![Målbrikken på hovedskjermen](../images/v4/TempTarget/TempTarget6.png)
 
 Dette åpner skjermen **Midlertidig mål** som er beskrevet ovenfor — sveip til en forhåndsinnstilling og trykk på **▶ Aktiver**. Du når den samme skjermen også via **Administrer** → **Midlertidig mål**.
 
 (TempTargets-carbs-dialog)= Når du registrerer karbohydrater, trenger du ikke å åpne skjermen **Midlertidig mål** i det hele tatt: **Karbo-dialogen** (**Behandlinger** → **Karbo**) har bryterne **Start midlertidig mål Hypo**, **Start midlertidig mål Spise snart** og **Start midlertidig mål Aktivitet** øverst. Slå på én av dem, så aktiveres den tilhørende forhåndsinnstillingen sammen med karbohydratregistreringen:
 
-![Brytere for midlertidig mål i Karbo-dialogen](../images/TempTarget5.png)
+![Brytere for midlertidig mål i Karbo-dialogen](../images/v4/TempTarget/TempTarget5.png)
 
     {admonition} Automatisk midlertidig mål Hypo
     :class: note
@@ -171,7 +171,7 @@ Dette åpner skjermen **Midlertidig mål** som er beskrevet ovenfor — sveip ti
 3. Juster **Midlertidig mål** og/eller **Varighet** i redigeringsfeltet.
 4. Trykk på **Lagre**-ikonet som vises i verktøylinjen øverst.
 
-![Redigere en forhåndsinnstilling — Lagre-ikonet i verktøylinjen, Tilbakestill i handlingslinjen](../images/TempTarget7.png)
+![Redigere en forhåndsinnstilling — Lagre-ikonet i verktøylinjen, Tilbakestill i handlingslinjen](../images/v4/TempTarget/TempTarget7.png)
 
 Så lenge redigeringsfeltet avviker fra fabrikkverdiene til en innebygd forhåndsinnstilling, vises også knappen **↺ Tilbakestill** i handlingslinjen — trykk på den for å gjenopprette forhåndsinnstillingens opprinnelige mål og varighet.
 
@@ -179,7 +179,7 @@ Så lenge redigeringsfeltet avviker fra fabrikkverdiene til en innebygd forhånd
 
 Mens et midlertidig mål kjører, viser målbrikken på hovedskjermen målet og gjenstående tid. Trykk på den — på skjermen **Midlertidig mål** er forhåndsinnstillingen som kjører, uthevet som **AKTIV**, og en rød **✗ Avbryt**-knapp vises i enden av verktøylinjen nederst, rett til venstre for knappen **▶ Aktiver**. Trykk på den og bekreft:
 
-![Avbryte et midlertidig mål som kjører](../images/TempTarget9.png)
+![Avbryte et midlertidig mål som kjører](../images/v4/TempTarget/TempTarget9.png)
 
 Et midlertidig mål som kjører, kan også stoppes fra en **Wear OS-klokke**, fra en paret **klient** eller av en **Automasjon**-regel (*Avbryt midlertidig mål*).
 
@@ -231,6 +231,6 @@ Avansert, [opplæringsmål 9](#objectives-objective9): Hvis du bruker OpenAPS SM
 
 For å gjøre dette åpner du **Innstillinger** → **OpenAPS SMB** og slår av *«Aktiver SMB ved høyt midlertidig mål»*.
 
-![Innstillingen Aktiver SMB ved høyt midlertidig mål](../images/TempTargetSMB.png)
+![Innstillingen Aktiver SMB ved høyt midlertidig mål](../images/v4/TempTarget/TempTargetSMB.png)
 
 Dette sikrer at **AAPS** ikke gir **SMB-er**, selv om COB > 0, *«Aktiver SMB ved lavt midlertidig mål»* eller *«Aktiver SMB alltid»* er på og OpenAPS SMB er aktiv.

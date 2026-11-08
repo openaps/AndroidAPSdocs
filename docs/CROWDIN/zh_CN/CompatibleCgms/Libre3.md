@@ -2,7 +2,7 @@
 
 Freestyle Libre 3 (FSL3) 需要特殊设置才能将血糖值传输至AAPS系统。获取Freestyle Libre 3 (FSL3)数值至AAPS系统存在两种可行方案。
 
-![FL3](../images/d912c1d3-06d2-4b58-ad7c-025ca1980fae.jpeg)
+![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
 
 以下实现方法需配合使用独立应用程序Juggluco。 It uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip or AAPS. 新传感器既可通过Libre 3应用程序启动，也可直接在Juggluco中激活。以下指南说明了使用Juggluco应用程序启动传感器的流程。若传感器启动时已登录Libreview账户，接收端可在Juggluco和Libre 3应用之间切换使用。
 

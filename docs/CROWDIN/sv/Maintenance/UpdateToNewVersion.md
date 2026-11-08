@@ -40,4 +40,4 @@ När du har installerat den nya APK:n:
 - se till att du har importerat dina inställningar; och
 - kontrollera inställningarna för **AAPS** under **Inställningar** och se till att de fortfarande stämmer.
 
-![Dialogrutan Om med den installerade AAPS-versionen](../images/about_dialog_version.png)
+![Dialogrutan Om med den installerade AAPS-versionen](../images/update/about_dialog_version.png)

@@ -211,7 +211,7 @@ Laikrodyje:
 
 Pamatysite Wi-Fi susiejimo kodą, IP adresą ir prievadą:
 
-![Laikrodžio ekranas su Wi-Fi susiejimo kodu, IP adresu ir prievadu](../images/wearos/ADB03.png)
+![Laikrodžio ekranas su Wi-Fi susiejimo kodu, IP adresu ir prievadu](../images/wearos/watch_wifi_pairing_code.png)
 
 - Terminale: `adb pair ipaddress:port` Pvz. `adb pair 10.10.1.125:36299`
 - Būsite paprašyti įvesti susiejimo kodą. Įveskite jį.

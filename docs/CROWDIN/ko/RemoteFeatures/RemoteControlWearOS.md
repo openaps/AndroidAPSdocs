@@ -309,13 +309,13 @@ Wear OS 5 이하에서는 여러 기존 워치 페이스가 **AAPS** 워치 앱�
     
     휴대폰의 [빠른 마법사](#quickwizards) 항목 중 **워치에 표시**가 켜져 있는 항목이, 유효 시간 안에 표시됩니다. 탄수화물 항목은 탄수화물을 g으로, 인슐린 항목은 고정 용량을 U로 표시합니다. 탭하면 워치에서 확인한 후 항목이 실행됩니다. 워치에서 설정할 것은 없습니다. 휴대폰에서 항목을 편집하고, 타일에 표시할 각 항목의 **장치 선택**에서 **워치에 표시**를 켜십시오. 모든 항목의 유효 시간 밖에서는 타일에 **가능한 환경설정 없음**이 표시됩니다.
     
-    ![워치에 표시가 켜진 빠른 마법사 항목과 그 항목이 나타나는 타일](../images/quickwizard_watch_phone.png)
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
-    ### 장면 타일
+    ### Scene tile
     
-    ![장면 타일](../images/wearos/tiles/tile_scene.png)
+    ![Scene tile](../images/wearos/tiles/tile_scene.png)
     
-    휴대폰의 [장면](#scenes-from-watch)입니다. 타일 설정에서 네 자리 각각을 **자동**, **없음** 또는 장면 하나로 설정합니다. **자동** 자리는 휴대폰 목록에서 다른 자리가 아직 차지하지 않은 다음 장면을 가져옵니다. 휴대폰에 더 이상 없는 장면으로 설정된 자리는 **사용할 수 없음**을 표시합니다.
+    The [Scenes](#scenes-from-watch) of the phone. 타일 설정에서 네 자리 각각을 **자동**, **없음** 또는 장면 하나로 설정합니다. **자동** 자리는 휴대폰 목록에서 다른 자리가 아직 차지하지 않은 다음 장면을 가져옵니다. 휴대폰에 더 이상 없는 장면으로 설정된 자리는 **사용할 수 없음**을 표시합니다.
     
     ![장면 타일 설정, 네 자리 모두 자동으로 설정됨](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,17 +361,17 @@ Wear OS 5 이하에서는 여러 기존 워치 페이스가 **AAPS** 워치 앱�
     
     참고: 모든 디스플레이가 상시 표시를 잘 견디지는 못합니다. 특히 오래된 OLED 디스플레이에서는 화면 번인이 생길 수 있습니다. 워치는 보통 번인을 막기 위해 화면을 어둡게 합니다. 사용 설명서, 제조사 또는 인터넷에서 조언을 확인하십시오.
     
-    ![침대 옆 워치 페이스](../images/Watchface_nightstand.jpg)
+    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![단순화된 UI](../images/Watchface_simplified_ui.png)
+    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## 워치에 표시되는 휴대폰 알람
+    ## Phone alarms on the watch
     
-    ![워치에서 울리는 휴대폰 알람](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    워치는 휴대폰의 알람을 표시합니다. 그래서 휴대폰이 왜 소리를 내는지 알 수 있고 손목에서 응답할 수 있습니다. 워치가 진동하며, 응답할 때까지 5분 동안 30초마다 다시 진동합니다. 알림에는 알람의 제목과 내용이 표시되며, [식사할 시간](#WearOsSmartwatch-wizard-carb-time) 알림과 같은 응답이 있습니다:
+    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. 워치가 진동하며, 응답할 때까지 5분 동안 30초마다 다시 진동합니다. 알림에는 알람의 제목과 내용이 표시되며, [식사할 시간](#WearOsSmartwatch-wizard-carb-time) 알림과 같은 응답이 있습니다:
     
     * **음소거** 또는 밀어서 없애기: 알람이 멈추고, 휴대폰의 알람 화면이 닫힙니다.
     * **5분 음소거**: 알람이 멈추고 5분 뒤에 휴대폰과 워치에서 다시 울립니다.
