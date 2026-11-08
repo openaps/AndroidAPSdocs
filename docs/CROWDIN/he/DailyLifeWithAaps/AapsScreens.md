@@ -422,8 +422,9 @@ AAPS לא נותן אינסולין לפי ערך הסוכר הנוכחי בלב
 
 Most users find the following configuration of additional graphs to be adequate :
 
-* Graph 1 with IOB, COB, Sensitivity change
-* Graph 2 with Deviations and BGI.
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### אינסולין מוחלט (ABS)
 

@@ -29,7 +29,7 @@ Neskubėkite, darykite tai lėtai!
 - **Išjunkite (<u>OFF</u>) visas [automatizacijas](../DailyLifeWithAaps/Automations.md)**
 - **Išjunkite (<u>OFF</u>) [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)**, kad jie nebandytų pritaikyti jūsų profilio.
 - Bandymo metu nieko nedarykite rankiniu būdu (rankinis bolusas, laikini tikslai ir pan.): leiskite sistemai naudoti tik **profilio** nustatymus.
-- [Papildomuose grafikuose](#AapsScreens-section-g-additional-graphs): 1 grafike rodykite Aktyvus insulinas organizme, Aktyvūs angliavandeniai organizme (ir Jautrumo pokyčiai). 2 grafike rodykite Nuokrypiai ir Glikemijos įtaka. Kai prašote patarimo, šiuos grafikus visada parodykite savo ekrano kopijose.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Kai prašote patarimo, šiuos grafikus visada parodykite savo ekrano kopijose.
 - AAO=0[*](#profiletuning-cob-zero)
 
 Kitos aplinkybės, kurių geriausia vengti, nes jos veikia duomenis ir gali lemti klaidingas išvadas:

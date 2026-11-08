@@ -35,11 +35,11 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 
 | CGM                                                          | Available [BG Sources](#Config-Builder-bg-source)            |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                   | BYODA, [xDrip](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md) |
-| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                 | [xDrip](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md) |
-| [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                | [xDrip](../CompatibleCgms/xDrip.md)                         |
-| [Dexcom G6](../CompatibleCgms/DexcomG6.md)                   | BYODA or [xDrip](../CompatibleCgms/xDrip.md)                |
-| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                  | [xDrip](../CompatibleCgms/xDrip.md)                         |
+| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                   | BYODA, [xDrip](../CompatibleCgms/xDrip.md), [Juggluco](../CompatibleCgms/Juggluco.md) or [Notification Reader](#DexcomG7-notification-reader) |
+| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                 | [xDrip](../CompatibleCgms/xDrip.md), [Juggluco](../CompatibleCgms/Juggluco.md) or [Notification Reader](#DexcomG7-notification-reader) |
+| [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                | [xDrip](../CompatibleCgms/xDrip.md) or [Notification Reader](#DexcomG7-notification-reader) |
+| [Dexcom G6](../CompatibleCgms/DexcomG6.md)                   | BYODA, [xDrip](../CompatibleCgms/xDrip.md) or [Notification Reader](#DexcomG6-notification-reader) |
+| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                  | [xDrip](../CompatibleCgms/xDrip.md) or [Notification Reader](#DexcomG6-notification-reader) |
 | [Libre 3/3+](../CompatibleCgms/Libre3.md)                    | [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip) |
 | [Libre 2/2+](../CompatibleCgms/Libre2.md)                    | [xDrip](../CompatibleCgms/xDrip.md) (EU only) or [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip) |
 | [Libre 1](../CompatibleCgms/Libre1.md)                       | [xDrip](../CompatibleCgms/xDrip.md) (Diabox sends its readings through the xDrip source), Glimp or Tomato (MiaoMiao). Need a transmitter |
@@ -66,14 +66,28 @@ In order for **AAPS** to correctly identify them, the app sending **BG** reading
 
 Trusted data sources allow **SMB** delivery, all the time.
 
+**AAPS** checks the sensor named in the latest **BG** reading it received, whichever **BG** source delivered it. After you change your **BG** source, the **SMB** "always" settings appear only once the first reading from the new source has arrived.
+
 | Sensor                |                           CGM app                            |
 | --------------------- | :----------------------------------------------------------: |
-| Dexcom G6             |              BYODA, xDrip (**Direct, Native**)              |
-| Dexcom G7             | BYODA, xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip) |
-| Dexcom ONE+           | xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip) |
-| Dexcom ONE/Stelo      |                 xDrip (**Direct, Native**)                  |
-| Libre 2/2+ (EU)       | xDrip (OOP2 **no calibration**), <br/>Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip) |
+| Dexcom G6             | BYODA, xDrip (**Direct, Native**), <br/>Dexcom app ([Notification Reader](#DexcomG6-notification-reader)) |
+| Dexcom G7             | BYODA, xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip), <br/>Dexcom app ([Notification Reader](#DexcomG7-notification-reader)) |
+| Dexcom ONE+           | xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip), <br/>Dexcom app ([Notification Reader](#DexcomG7-notification-reader)) |
+| Dexcom ONE            | xDrip (**Direct, Native**), <br/>Dexcom app ([Notification Reader](#DexcomG6-notification-reader)) |
+| Dexcom Stelo          | xDrip (**Direct, Native**), <br/>Dexcom app ([Notification Reader](#DexcomG7-notification-reader)) |
+| Libre 2/2+ (EU)       | xDrip (OOP2), <br/>Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip) |
 | Libre 2/2+/3/3+       | Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip) |
-| Syai                  |                           Syai App                           |
+| Syai, Ottai           | Syai or Ottai app (**Syai/Ottai** source or **Notification Reader**), <br/>Juggluco (**xDrip broadcast** without xDrip) |
 
-**Note: xDrip Companion apps and Follower modes (includes 640G/Eversense) are not trusted data sources.**
+**Note: xDrip Companion apps, Medtronic, Eversense and all other sensors are not trusted data sources.**
+
+```{admonition} Online BG sources are not recommended for closed looping
+:class: warning
+Some sources that need an internet connection can also be trusted:
+- xDrip **Dexcom Share follower** (any Dexcom sensor)
+- the **Nightscout** BG source (**AAPSClient**, or **AAPS** following your Nightscout site), when the uploader names one of the sensors above
+
+These sources are **not recommended** for a closed loop. When your phone or the CGM uploader loses its connection, **AAPS** receives no **BG** readings and cannot loop. Readings also arrive late, after the delay of the cloud service. Use a CGM app that sends its readings to **AAPS** directly on the phone (as listed in the table above) whenever possible.
+
+Other follower modes (xDrip Nightscout or Web follower, CareLink follower, Juggluco Nightscout) are never trusted.
+```

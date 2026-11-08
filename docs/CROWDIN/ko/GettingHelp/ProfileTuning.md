@@ -29,7 +29,7 @@
 - **모든 [자동화](../DailyLifeWithAaps/Automations.md)를 <u>끄십시오</u>**
 - **[DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)를 <u>끄십시오</u>**. 그러면 이 기능들이 프로파일을 조정하려고 하지 않습니다.
 - 테스트하는 동안에는 수동 사용자 동작(수동 볼러스, 임시 목표 등)을 하지 마십시오: 시스템이 **프로파일** 설정만 사용하게 하십시오.
-- [추가 그래프](#AapsScreens-section-g-additional-graphs): 그래프 1에서는 활성 인슐린 (IOB), 활성 탄수화물 (COB)(그리고 민감도 변화)를 사용하십시오. 그래프 2에서는 편차와 혈당 영향 (BGI)을 사용하십시오. 조언을 구할 때는 스크린샷에 항상 이 그래프들을 포함하십시오.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. 조언을 구할 때는 스크린샷에 항상 이 그래프들을 포함하십시오.
 - COB=0[*](#profiletuning-cob-zero)
 
 데이터에 영향을 주어 잘못된 결론으로 이어질 수 있으므로 되도록 피해야 할 다른 사항:

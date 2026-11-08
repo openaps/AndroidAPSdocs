@@ -422,8 +422,9 @@ Naujas grafikas pridedamas po kitais – čia antrasis papildomas grafikas su **
 
 Daugumai naudotojų pakanka tokios papildomų grafikų konfigūracijos:
 
-* 1 grafikas su AIO, AAO ir jautrumo pokyčiais
-* 2 grafikas su nuokrypiais ir glikemijos įtaka (KGĮ).
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### Visas insulinas (ABS)
 

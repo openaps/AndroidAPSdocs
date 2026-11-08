@@ -422,8 +422,9 @@ Le nouveau graphique est ajouté sous les autres. Ici, un deuxième graphique su
 
 La plupart des utilisateurs apprécient la configuration suivante pour les graphiques supplémentaires :
 
-* Graphique 1 avec IA, GA, changement de sensibilité
-* Graphique 2 avec Déviations et Impact glycémique.
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### Insuline absolue (ABS)
 

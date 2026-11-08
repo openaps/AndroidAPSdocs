@@ -29,7 +29,7 @@
 - **<u>Изключете</u> всички [автоматизации](../DailyLifeWithAaps/Automations.md)**
 - **<u>Изключете</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)**, за да не се опитват да променят профила ви.
 - Не правете ръчни действия (ръчен болус, временни цели и т.н.) по време на тестването: оставете системата да използва само настройките на **профила**.
-- За [допълнителните графики](#AapsScreens-section-g-additional-graphs): на графика 1 използвайте „Активен инсулин“, „Активни въглехидрати“ (и „Промяна в чувствителността“). На графика 2 използвайте „Отклонения“ и „Въздействие върху кръвната захар“. Когато търсите съвет, винаги включвайте тези графики в екранните снимки.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Когато търсите съвет, винаги включвайте тези графики в екранните снимки.
 - COB=0[*](#profiletuning-cob-zero)
 
 Други фактори, които в идеалния случай трябва да се избягват, защото влияят на данните и могат да доведат до грешни изводи:

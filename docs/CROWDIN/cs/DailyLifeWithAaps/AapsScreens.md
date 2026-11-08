@@ -422,8 +422,9 @@ Nový graf se přidá pod ostatní – zde druhý doplňkový graf se **SENZ%** 
 
 Většině uživatelů vyhovuje toto nastavení doplňkových grafů:
 
-* Graf 1 s IOB, COB a změnou citlivosti
-* Graf 2 s odchylkami a BGI.
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### Absolutní inzulín (ABS)
 

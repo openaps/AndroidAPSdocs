@@ -29,7 +29,7 @@ Stressa inte, ta det långsamt!
 - **Stäng <u>AV</u> alla [automatiseringar](../DailyLifeWithAaps/Automations.md)**
 - **Stäng <u>AV</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)** så att de inte försöker anpassa din profil.
 - Gör inga manuella åtgärder (manuell bolus, tillfälliga målvärden osv.) medan du testar: låt systemet bara använda inställningarna i **profilen**.
-- För de [extra graferna](#AapsScreens-section-g-additional-graphs): i graf 1, använd Aktivt insulin (IOB), Aktiva KH (COB) (och Känslighetsändring). I graf 2, använd Avvikelser och Blodglukospåverkan. När du ber om råd, ta alltid med dessa i dina skärmbilder.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. När du ber om råd, ta alltid med dessa i dina skärmbilder.
 - COB=0[*](#profiletuning-cob-zero)
 
 Andra saker som helst bör undvikas, eftersom de påverkar data och kan leda till felaktiga slutsatser:

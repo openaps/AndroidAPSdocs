@@ -422,8 +422,9 @@ Nowy wykres jest dodawany pod pozostałymi – tu drugi dodatkowy wykres z **SEN
 
 Większości użytkowników wystarcza taki układ dodatkowych wykresów:
 
-* Wykres 1 z IOB, COB, zmianą wrażliwości
-* Wykres 2 z odchyleniami i BGI.
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### Całkowita insulina (ABS)
 

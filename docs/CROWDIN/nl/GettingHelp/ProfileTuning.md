@@ -29,7 +29,7 @@ Haast je niet, doe het rustig aan!
 - **Zet alle [automatiseringen](../DailyLifeWithAaps/Automations.md) <u>UIT</u>**
 - **Zet [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf) en [AutoSens](#Open-APS-features-autosens) <u>UIT</u>**, zodat ze je profiel niet proberen aan te passen.
 - Doe tijdens het testen geen handmatige acties (handmatige bolus, tijdelijke streefdoelen enz.): laat het systeem alleen de instellingen van het **Profiel** gebruiken.
-- Voor de [extra grafieken](#AapsScreens-section-g-additional-graphs): gebruik in grafiek 1 Actieve insuline (IOB), Actieve koolhydraten (COB) (en Gevoeligheid wijziging). Gebruik in grafiek 2 Afwijkingen en Bloedglucose impact. Zet deze altijd op je screenshots als je om advies vraagt.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Zet deze altijd op je screenshots als je om advies vraagt.
 - COB=0[*](#profiletuning-cob-zero)
 
 Andere dingen die je het best kunt vermijden, omdat ze de gegevens beïnvloeden en tot verkeerde conclusies kunnen leiden:

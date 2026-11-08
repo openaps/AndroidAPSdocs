@@ -422,8 +422,9 @@ De nieuwe grafiek wordt onder de andere toegevoegd. Hier een tweede extra grafie
 
 De meeste gebruikers vinden de volgende instelling van extra grafieken voldoende:
 
-* Grafiek 1 met IOB, COB, Gevoeligheid wijziging
-* Grafiek 2 met Afwijkingen en BGI.
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### Absolute insuline (ABS)
 

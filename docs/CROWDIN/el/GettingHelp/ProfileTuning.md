@@ -29,7 +29,7 @@
 - **<u>Απενεργοποιήστε</u> όλους τους [αυτοματισμούς](../DailyLifeWithAaps/Automations.md)**
 - **<u>Απενεργοποιήστε</u> τα [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)**, ώστε να μην προσπαθούν να προσαρμόσουν το προφίλ σας.
 - Μην κάνετε χειροκίνητες ενέργειες (χειροκίνητο bolus, προσωρινούς στόχους κ.λπ.) κατά τις δοκιμές: αφήστε το σύστημα να χρησιμοποιεί μόνο τις ρυθμίσεις του **Προφίλ**.
-- Για τα [επιπλέον γραφήματα](#AapsScreens-section-g-additional-graphs): στο γράφημα 1, χρησιμοποιήστε Ενεργή ινσουλίνη, Ενεργοί υδατάνθρακες (και Αλλαγή ευαισθησίας). Στο γράφημα 2, χρησιμοποιήστε Αποκλίσεις και Επίδραση στη γλυκόζη αίματος. Όταν ζητάτε συμβουλές, να τα δείχνετε πάντα στα στιγμιότυπα οθόνης σας.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Όταν ζητάτε συμβουλές, να τα δείχνετε πάντα στα στιγμιότυπα οθόνης σας.
 - COB=0[*](#profiletuning-cob-zero)
 
 Άλλα πράγματα που καλό είναι να αποφύγετε, γιατί επηρεάζουν τα δεδομένα και μπορεί να οδηγήσουν σε λάθος συμπεράσματα:

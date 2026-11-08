@@ -422,8 +422,9 @@ Yeni grafik diğerlerinin altına eklenir — burada **DYRLLK%** ve **SAPMA** i�
 
 Çoğu kullanıcı ek grafikler için aşağıdaki yapılandırmayı yeterli bulur:
 
-* AİNS, AKRB, Duyarlılık değişikliği ile Grafik 1
-* Sapmalar ve KŞ etkisi ile Grafik 2.
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### Mutlak insülin (MUTLAK)
 

@@ -422,8 +422,9 @@ The new graph is added below the others — here a second additional graph with 
 
 Most users find the following configuration of additional graphs to be adequate :
 
-* Grafico 1 con IOB, COB, Variazione di sensibilità
-* Grafico 2 con Deviazioni e BGI.
+* Graph 1 with IOB, BAS
+* Graph 2 with COB, Sensitivity change
+* Graph 3 with Deviations and BGI.
 
 #### Insulina assoluta (ABS)
 
