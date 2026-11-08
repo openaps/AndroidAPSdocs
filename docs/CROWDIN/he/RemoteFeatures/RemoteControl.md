@@ -291,13 +291,13 @@ b) רוצים להימנע מהקלדת קוד אימות (כנדרש בפקוד
 
 להורדת התוכנה, יש ללחוץ על אפליקציית השעון שמתאימה לאפליקציית הלקוח בטלפון: **wear-aapsclient-release_**_version_ מתאימה ל-**AAPSClient**, ו-**wear-aapsclient2-release_**_version_ מתאימה ל-**AAPSClient2** (ראו [על AAPSClient, AAPSClient2 ו-AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![image](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+![image](../images/github_release_wear_aapsclient_apk.png)
 
 
 Then "save as" and save the file to a convenient location on your computer:
 
 
-![image](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+![image](../images/save_as_wear_aapsclient_apk.png)
 
 
 
