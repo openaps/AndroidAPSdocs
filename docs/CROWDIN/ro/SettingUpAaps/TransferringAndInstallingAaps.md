@@ -31,11 +31,11 @@ Deschideți [Google.com](https://www.google.com/) în navigatorul de internet ș
 
 În partea dreaptă sus selectați aplicația Drive din meniul Google.
 
-![Porniți aplicația Drive](../images/GoogleDriveInWebbrowser.png)
+![Porniți aplicația Drive](../images/install/GoogleDriveInWebbrowser.png)
 
 Click **New** at the top left (or right-click an empty area below your files and folders) and select **File upload**.
 
-![Încărcați fișierul apk cu aplicația Google Drive](../images/GoogleDriveUploadFile.png)
+![Încărcați fișierul apk cu aplicația Google Drive](../images/install/GoogleDriveUploadFile.png)
 
 Fișierul apk ar trebui să fie acum încărcat pe Google Drive.
 
@@ -43,17 +43,17 @@ Fișierul apk ar trebui să fie acum încărcat pe Google Drive.
 
 Comutați la mobil și porniți aplicația Google Drive. Este o aplicație preinstalată și poate fi găsită în locul în care celelalte aplicații Google sunt localizate sau prin căutarea numelui aplicației.
 
-![porniți aplicația Google Drive](../images/GoogleDriveMobileAPPLaunch.png)
+![porniți aplicația Google Drive](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Launch the apk installation by tapping the filename in the Google Drive App on the mobile.
 
-![lansați instalarea apk](../images/GoogleDriveMobileUploadedAPK.png)
+![lansați instalarea apk](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
 
-![Notificare de securitate Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Notificare de securitate Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Notificare de securitate Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Notificare de securitate Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 After the installation finishes, you are done with this step.
 
