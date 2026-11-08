@@ -53,7 +53,7 @@
 
 通常 __AAPS__ 會透過 **血糖** 變化來偵測碳水化合物的吸收狀況。如果用戶輸入了碳水化合物，但**AAPS**無法通過**BG**偏差檢測其預估吸收，則將使用[min_5m_carbimpact](#Preferences-min_5m_carbimpact) 方法來計算吸收（所謂的「後備」）。但因為這個方法只會計算最低的碳水化合物吸收量，而不考慮 **血糖** 的變化，所以也可能會導致 COB 數值不正確。
 
-![錯誤 COB 值的提示](../images/Calculator_SlowCarbAbsorption.png)
+![錯誤 COB 值的提示](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 在上面的截圖中，有 66% 的時間是用 min_5m_carbimpact 來計算碳水化合物的吸收量，而不是透過變動來偵測的數值。這表示使用者實際上的 **COB** ，可能比演算法計算出來的還要少。
 
