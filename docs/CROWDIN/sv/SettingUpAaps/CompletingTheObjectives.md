@@ -46,7 +46,7 @@ Obs! *Du kan behöva vänta på nästa glukosvärde från sensorn innan **AAPS**
 
 **Mål 2** består av flera ”uppgifter” som du ska utföra, se skärmbilden nedan. Varje uppgift visar sin status (**1**): den orange texten "**Inte slutfört ännu**" ändras till "**Slutfört, bra jobbat!**" så fort **AAPS** har registrerat åtgärden. Tryck på **Ledtråd** (**2**) under en uppgift för att öppna dokumentationen om den, om du inte känner till en viss åtgärd ännu.
 
-![Skärmbild mål 2](../images/Objective2_V2_5.png)
+![Skärmbild mål 2](../images/objectives/Objective2_V2_5.png)
 
 Uppgifterna för att slutföra **Mål 2** är:
 - Ställ in din **profil** på 90 % under 10 min.
@@ -96,7 +96,7 @@ Minsta tid för att slutföra det här målet: **7 dagar**. Det här är en obli
 
 För att minska antalet föreslagna ändringar av basaldosen i öppen loop kan du fortfarande använda tipsen i [**Mål 3**](#objectives-objective3). Du kan också ändra den minsta procentsatsen för föreslagna ändringar av basaldosen med inställningen "**Minsta ändring i öppen loop**" i **Inställningar → Loop**. Ju högre värde, desto färre aviseringar om ändringar får du.
 
-![Minsta ändring i öppen loop](../images/OpenLoop_MinimalRequestChange2.png)
+![Minsta ändring i öppen loop](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ Det betyder att när du är på **Mål 6** och sensorns glukosvärden sjunker, s
 
 - Om din IOB är negativ (se skärmbilden nedan) kan en tillfällig basaldos (TBR) > 100 % utlösas i **Mål 6**.
 
-![Exempel på negativ IOB](../images/Objective6_negIOB.png)
+![Exempel på negativ IOB](../images/objectives/Objective6_negIOB.png)
 
 - Ställ in ditt målområde lite högre än du brukar sikta på, bara för säkerhets skull och för att få en säkerhetsmarginal.
 - Aktivera läget ”Paus vid lågt blodsocker” genom att trycka på loopikonen på huvudskärmen och välja **Paus vid lågt blodsocker** som körläge.
@@ -245,6 +245,6 @@ Tryck på "**Mer**" under ett mål för att se dess uppgifter igen:
 
 Om du av någon anledning vill gå tillbaka i **Mål**, öppnar du det slutförda **Mål** med "**Mer**" och trycker på "**Nollställ slutfört läge**":
 
-![Go back in objectives](../images/Objective_ClearFinished.png)
+![Go back in objectives](../images/objectives/Objective_ClearFinished.png)
 
 På samma sätt kan du starta om det **Mål** som du arbetar med just nu med "**Nollställ startat läge**".
