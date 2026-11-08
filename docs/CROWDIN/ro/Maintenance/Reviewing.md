@@ -114,7 +114,7 @@ At the end of each line, small icons show where the data comes from or has been 
 (screens-bolus-carbs)=
 ### Carbohidrați și bolusuri
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![Carbs & bolus](../images/Maintenance/TreatmentsView1.png)
 
 On this tab you can view the bolus and carbs log. Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. Originea bolusului poate fi:
 * Masă (introdusă manual prin butoanele Insulină, Asistent Rapid sau Asistent bolusare)
@@ -141,7 +141,7 @@ The Treatments history can be used to correct faulty carb entries (_i.e._ you ov
 
 ### Bazală temporară
 
-![Bazală temporară](../images/TreatmentsView2.png)
+![Bazală temporară](../images/Maintenance/TreatmentsView2.png)
 
 The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). It can be:
 * Positive IOB if the temp basal was higher than the one set in the Profile
@@ -153,13 +153,13 @@ The **temp basals** applied by the loop are shown here. When there is still an i
 
 ### Țintă temporară
 
-![Țintă temporară](../images/TreatmentsView3.png)
+![Țintă temporară](../images/Maintenance/TreatmentsView3.png)
 
 The history of temporary targets can be seen here.
 
 ### Schimbare de profil
 
-![Schimbare de profil](../images/TreatmentsView4.png)
+![Schimbare de profil](../images/Maintenance/TreatmentsView4.png)
 
 The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
 
@@ -169,14 +169,14 @@ You can use the **Clone** button shown on line **2** to make a copy of a **Profi
 
 ### Careportal
 
-![Careportal](../images/TreatmentsView5.png)
+![Careportal](../images/Maintenance/TreatmentsView5.png)
 
 This tab shows all notes and careportal entries recorded in Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Mod de funcționare
 
-![Mod de funcționare](../images/TreatmentsView6.png)
+![Mod de funcționare](../images/Maintenance/TreatmentsView6.png)
 
 Această filă arată istoricul schimbărilor de [stare a buclei](#AapsScreens-loop-status): deschisă, închisă, LGS, suspendată, deconectată.
 
