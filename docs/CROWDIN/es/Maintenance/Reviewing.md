@@ -114,7 +114,7 @@ Al final de cada línea, unos iconos pequeños muestran de dónde vienen los dat
 (screens-bolus-carbs)=
 ### Carbohidratos y bolos
 
-![Carbohidratos y bolos](../images/TreatmentsView1.png)
+![Carbohidratos y bolos](../images/Maintenance/TreatmentsView1.png)
 
 En esta pestaña puedes ver el registro de bolos y carbohidratos. Cada bolo (línea **1**) muestra la IOB restante asociada junto a la cantidad de insulina. El origen del bolo puede ser:
 * Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
@@ -141,7 +141,7 @@ El historial de tratamientos se puede usar para corregir entradas de carbohidrat
 
 ### Basal temporal
 
-![Basal temporal](../images/TreatmentsView2.png)
+![Basal temporal](../images/Maintenance/TreatmentsView2.png)
 
 Aquí se muestran las **basales temporales** aplicadas por el lazo. Cuando una entrada todavía tiene efecto sobre la IOB, la información se muestra junto a la tasa (línea **1**). Puede ser:
 * IOB positiva si la basal temporal fue más alta que la del perfil
@@ -153,13 +153,13 @@ On the left of a line, a red S means “Suspend”: it happens when basal is not
 
 ### Objetivo temporal
 
-![Objetivo temporal](../images/TreatmentsView3.png)
+![Objetivo temporal](../images/Maintenance/TreatmentsView3.png)
 
 Aquí puedes ver el historial de objetivos temporales.
 
 ### Cambio de perfil
 
-![Cambio de perfil](../images/TreatmentsView4.png)
+![Cambio de perfil](../images/Maintenance/TreatmentsView4.png)
 
 Aquí puedes ver el historial de cambios de perfil. Es posible que veas varias entradas cada vez que cambias de perfil: la línea **1**, guardada en NS y en el historial de la bomba, corresponde al cambio real. La línea **2**, guardada en Nightscout pero no en el historial de la bomba, corresponde a la solicitud de cambio de perfil hecha por el usuario.
 
@@ -169,14 +169,14 @@ Puedes usar el botón **Duplicar** que aparece en la línea **2** para hacer una
 
 ### Portal de cuidados
 
-![Portal de cuidados](../images/TreatmentsView5.png)
+![Portal de cuidados](../images/Maintenance/TreatmentsView5.png)
 
 Esta pestaña muestra todas las notas y entradas del portal de cuidados guardadas en Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Modo de funcionamiento
 
-![Modo de funcionamiento](../images/TreatmentsView6.png)
+![Modo de funcionamiento](../images/Maintenance/TreatmentsView6.png)
 
 This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 
