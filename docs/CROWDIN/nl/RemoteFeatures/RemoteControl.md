@@ -134,21 +134,21 @@ Nightscout is een server in “de cloud”, maar er is ook een eigen **Nightscou
 
 Als je de **Nightscout**-app op je iPhone hebt geïnstalleerd, open je de app en volg je de stappen om hem in te stellen. Voer je Nightscout-adres in (zie hieronder, links). De vorm van dit adres kan anders zijn, afhankelijk van waar je Nightscout gehost wordt. (_bijv._ http://youraddresshere.herokuapp.com). Voer daarna je Nightscout API secret in (zie hieronder, rechts). Als niet om je API-wachtwoord wordt gevraagd, moet je het invoeren door op het hangslotje bovenaan in de app te tikken:
 
-![Afbeelding](../images/remote-control-24.png)
+![Afbeelding](../images/remote_control_and_following/remote-control-24.png)
 
 Meer informatie over het instellen vind je direct bij [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
 Als je voor het eerst inlogt, zie je een heel eenvoudig scherm. Pas de weergaveopties aan: tik op het “hamburgermenu” rechtsboven en scroll omlaag:
 
-![Afbeelding](../images/remote-control-25.png)
+![Afbeelding](../images/remote_control_and_following/remote-control-25.png)
 
 Scroll omlaag naar “Settings”. Misschien wil je “scale” op “linear” zetten, omdat de BG-weergave standaard logaritmisch is. Kies bij “render basal” de optie “default”, zodat de basaal van de pomp zichtbaar wordt.
 
-![Afbeelding](../images/remote-control-25b.png)
+![Afbeelding](../images/remote_control_and_following/remote-control-25b.png)
 
 Kies de opties die je wilt. Vink alarms uit als je een andere app voor alarmen gebruikt.
 
-![Afbeelding](../images/remote-control-26.png)
+![Afbeelding](../images/remote_control_and_following/remote-control-26.png)
 
 Scroll verder omlaag tot je bij “show plugins” komt.
 
@@ -156,7 +156,7 @@ Zorg dat “careportal” is aangevinkt. Je kunt ook verschillende andere gegeve
 
 Belangrijk: tik nu onderaan op “save”, anders worden deze wijzigingen niet toegepast.
 
-![Afbeelding](../images/remote-control-27.png)
+![Afbeelding](../images/remote_control_and_following/remote-control-27.png)
 
 Na het tikken op “save” gaat de app terug naar je Nightscout-hoofdscherm. Dat ziet er ongeveer zo uit:
 
@@ -170,7 +170,7 @@ Na het tikken op “save” gaat de app terug naar je Nightscout-hoofdscherm. Da
 8. Basaal insulineprofiel
 9. Groene lijn = glucose in het verleden Blauwe lijnen = voorspelde glucose
 
-![Afbeelding](../images/remote-control-28.png)
+![Afbeelding](../images/remote_control_and_following/remote-control-28.png)
 
 Het menu linksboven in de Nightscout-app in meer detail:
 
@@ -179,7 +179,7 @@ Het menu linksboven in de Nightscout-app in meer detail:
 3. Hamburgermenu - voor het instellen van voorkeuren
 4. Careportal - behandeling vastleggen (zie [hieronder](#RemoteControl_nightscout-treatments) wanneer **AAPS** deze toepast)
 
-![Nightscout top bar](../images/remote-control-29.png)
+![Nightscout top bar](../images/remote_control_and_following/remote-control-29.png)
 
 In de grijze tabbladen op dit scherm staat heel veel informatie over de status van het **AAPS**-systeem (en als je op een tabblad tikt, zie je nog meer):
 
@@ -195,9 +195,9 @@ In de grijze tabbladen op dit scherm staat heel veel informatie over de status v
 10. Batterijstatus van de AAPS-telefoon
 11. Grootte van je database. Als die te vol raakt (alleen bij zelf gehoste Nightscout - negeer dit bij betaalde hosting), kun je verbindingsproblemen krijgen. Je kunt gegevens verwijderen om dit getal kleiner te maken, in het menu Admin tools (via het hamburgermenu).
 
-![Afbeelding](../images/remote-control-30.png)
+![Afbeelding](../images/remote_control_and_following/remote-control-30.png)
 
-![Afbeelding](../images/remote-control-31.png)
+![Afbeelding](../images/remote_control_and_following/remote-control-31.png)
 
 Tik onderaan de pagina op "refresh" om de pop-up te sluiten.
 
@@ -233,7 +233,7 @@ Dit kan handig lijken om aangekondigde koolhydraten (waarvoor geen bolus is gege
 
 ### Optie 1) AAPS bedienen vanaf een Wear OS-horloge
 
-![Wear Remote 1](../images/Wear_Remote1.png)
+![Wear Remote 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 Als je [**AAPS** op je horloge hebt ingesteld](../WearOS/BuildingAapsWearOS.md), vind je uitgebreide details over de watchfaces en hun functies in [AAPS instellen op je Wear OS-horloge](../WearOS/WearOsSmartwatch.md).
 
@@ -285,19 +285,19 @@ Hieronder staan handleidingen om **AAPS** in te stellen op de populaire Samsung 
 
 ### Optie 3) AAPSClient op een horloge, om **AAPS** op een telefoon op afstand te bedienen
 
-![Wear Remote 2](../images/Wear_Remote2.png)
+![Wear Remote 2](../images/remote_control_and_following/Wear_Remote2.png)
 
 The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 Om de software te downloaden, klik je op de horloge-app die past bij de client-app op de telefoon: **wear-aapsclient-release_**_versie_ hoort bij **AAPSClient**, **wear-aapsclient2-release_**_versie_ hoort bij **AAPSClient2** (zie [Over AAPSClient, AAPSClient2 en AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![Afbeelding](../images/github_release_wear_aapsclient_apk.png)
+![Afbeelding](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 Kies dan "save as" (opslaan als) en sla het bestand op een handige plek op je computer op:
 
 
-![Afbeelding](../images/save_as_wear_aapsclient_apk.png)
+![Afbeelding](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 
