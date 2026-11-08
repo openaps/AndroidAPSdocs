@@ -474,7 +474,19 @@ NSClient 外掛（在組態選單中顯示為 **NSClientV3**）會與 Nightscout
 
 **覆寫勿擾模式**（預設開啟）：即使手機處於靜音或勿擾模式，**AAPS** 的警報仍會響起。如果您希望 **AAPS** 遵循這些模式，請將此功能關閉：警報屆時不會響起；在勿擾模式下，手機和手錶只會震動。在勿擾模式期間收到的循環建議會以靜音方式顯示。
 
-警報響起時，警報畫面會提供**靜音警報**（畫面會保持開啟，方便您讀取訊息）和**靜音並關閉**兩個選項。在通知列中將警報通知向旁滑掉，即可將警報靜音。稍後開啟 **AAPS** 時，未回應的警報會再次顯示。
+When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. 在通知列中將警報通知向旁滑掉，即可將警報靜音。稍後開啟 **AAPS** 時，未回應的警報會再次顯示。
+
+(preferences-alarm-sound-volume-vibration)=
+### Alarm sound, volume and vibration
+
+- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
+- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
+- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
+- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+
+![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+
+- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
 
 (preferences-maintenance-settings)=
 ## 維護設置
