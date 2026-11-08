@@ -192,7 +192,7 @@ Jeśli widzisz powyższy komunikat o błędzie, musisz pobrać właściwą wersj
 
   W internecie są informacje, jak sprawdzić, czy masz system 32-bitowy czy 64-bitowy – np. [ta strona](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Zrzut ekranu: Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Zrzut ekranu: Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Ponowna synchronizacja Gradle
@@ -237,7 +237,7 @@ Twój apk został zbudowany poprawnie i możesz go przenieść na telefon!
 
 ## Apk nie został zainstalowany
 
-![aplikacja na telefonie nie została zainstalowana](../images/Update_AppNotInstalled.png)
+![aplikacja na telefonie nie została zainstalowana](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Upewnij się, że plik „app-full-release.apk” jest przeniesiony na telefon.
 * Ten błąd zwykle oznacza, że nowy apk jest podpisany innym magazynem kluczy niż zainstalowany **AAPS**. Jeśli wciąż masz poprzedni magazyn kluczy, wybierz go i zbuduj ponownie. W przeciwnym razie zobacz [Ponowna instalacja AAPS z nowym magazynem kluczy](#reinstall-aaps).
