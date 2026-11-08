@@ -114,7 +114,7 @@ AGP 下方的**血糖五角圖（CGP）**卡片會將過去 14 天的五項血�
 (screens-bolus-carbs)=
 ### 碳水化合物與注射
 
-![碳水化合物與注射](../images/TreatmentsView1.png)
+![碳水化合物與注射](../images/Maintenance/TreatmentsView1.png)
 
 在此標籤中，你可以查看注射和碳水化合物的紀錄。每筆注射（第 **1** 行）旁邊都會顯示剩餘的相關活性胰島素（IOB）和胰島素劑量。注射的來源可以是：
 * 餐點（透過「胰島素」、「快速嚮導」或「注射嚮導」按鈕手動輸入）
@@ -141,7 +141,7 @@ AGP 下方的**血糖五角圖（CGP）**卡片會將過去 14 天的五項血�
 
 ### 臨時基礎
 
-![臨時基礎率](../images/TreatmentsView2.png)
+![臨時基礎率](../images/Maintenance/TreatmentsView2.png)
 
 循環應用的**臨時基礎**在此顯示。如果某筆項目仍對 IOB 有影響，相關資訊會顯示在速率旁邊（第 **1** 行）。它可以是：
 * 如果臨時基礎率高於設定檔中的基礎率，IOB 會是正值。
@@ -153,13 +153,13 @@ AGP 下方的**血糖五角圖（CGP）**卡片會將過去 14 天的五項血�
 
 ### 臨時目標
 
-![臨時目標](../images/TreatmentsView3.png)
+![臨時目標](../images/Maintenance/TreatmentsView3.png)
 
 臨時目標的歷史可以在這裡查看。
 
 ### 設定檔切換
 
-![設定檔切換](../images/TreatmentsView4.png)
+![設定檔切換](../images/Maintenance/TreatmentsView4.png)
 
 設定檔切換的歷史可以在這裡查看。每次切換設定檔時，可能會看到多筆項目：同時儲存在 NS 和幫浦紀錄中的第 **1** 行，代表實際發生的切換。儲存在 Nightscout、但未記錄於幫浦紀錄中的第 **2** 行，代表使用者提出的設定檔切換要求。
 
@@ -169,14 +169,14 @@ AGP 下方的**血糖五角圖（CGP）**卡片會將過去 14 天的五項血�
 
 ### 照護入口
 
-![照護入口](../images/TreatmentsView5.png)
+![照護入口](../images/Maintenance/TreatmentsView5.png)
 
 此分頁會顯示所有記錄在 Nightscout 中的備註和照護入口項目。
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### 運行模式
 
-![運行模式](../images/TreatmentsView6.png)
+![運行模式](../images/Maintenance/TreatmentsView6.png)
 
 此分頁會顯示[循環狀態](#AapsScreens-loop-status)的變更記錄：開啟、關閉、LGS、暫停、中斷連線。
 
