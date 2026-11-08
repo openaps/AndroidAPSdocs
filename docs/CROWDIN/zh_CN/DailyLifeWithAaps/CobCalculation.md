@@ -53,7 +53,7 @@ The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the g
 
 通常，__AAPS__通过**BG</0>偏差来检测碳水化合物的吸收情况。若用户已输入碳水化合物但**AAPS**无法通过**BG**偏差检测其预估吸收量，系统将采用[min_5m_carbimpact](#Preferences-min_5m_carbimpact)方法进行吸收量计算（即所谓的"回退机制"）。​ 由于这种方法只计算最小碳水化合物吸收量，而不考虑**BG**偏差，因此可能会导致错误的COB值。</p>
 
-![关于错误的碳水化合物吸收量（COB）值的提示](../images/Calculator_SlowCarbAbsorption.png)
+![关于错误的碳水化合物吸收量（COB）值的提示](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 In the screenshot above, 66% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. 这表明用户实际的**活性碳水**可能比算法计算的要少。
 
