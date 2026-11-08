@@ -31,11 +31,11 @@
 
 Πάνω δεξιά, στο μενού της Google, επιλέξτε την εφαρμογή Drive.
 
-![Έναρξη της εφαρμογής Drive](../images/GoogleDriveInWebbrowser.png)
+![Έναρξη της εφαρμογής Drive](../images/install/GoogleDriveInWebbrowser.png)
 
 Κάντε κλικ στο **Νέο** (New) πάνω αριστερά (ή κάντε δεξί κλικ σε μια κενή περιοχή κάτω από τα αρχεία και τους φακέλους σας) και επιλέξτε **Μεταφόρτωση αρχείου** (File upload).
 
-![Ανέβασμα του αρχείου apk με την εφαρμογή Google Drive](../images/GoogleDriveUploadFile.png)
+![Ανέβασμα του αρχείου apk με την εφαρμογή Google Drive](../images/install/GoogleDriveUploadFile.png)
 
 Το αρχείο apk θα πρέπει τώρα να έχει ανέβει στο Google Drive.
 
@@ -43,17 +43,17 @@
 
 Πηγαίνετε στο κινητό σας και ανοίξτε την εφαρμογή Google Drive. Είναι προεγκατεστημένη εφαρμογή και θα τη βρείτε εκεί που βρίσκονται οι άλλες εφαρμογές της Google ή αναζητώντας το όνομα της εφαρμογής.
 
-![ανοίξτε την εφαρμογή Google Drive](../images/GoogleDriveMobileAPPLaunch.png)
+![ανοίξτε την εφαρμογή Google Drive](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Ξεκινήστε την εγκατάσταση του apk πατώντας το όνομα του αρχείου στην εφαρμογή Google Drive στο κινητό.
 
-![ξεκινήστε την εγκατάσταση του apk](../images/GoogleDriveMobileUploadedAPK.png)
+![ξεκινήστε την εγκατάσταση του apk](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Αν εμφανιστεί ειδοποίηση ασφαλείας ότι αυτή τη στιγμή δεν επιτρέπεται η εγκατάσταση εφαρμογών από το Google Drive, πατήστε «Ρυθμίσεις» και επιτρέψτε την για αυτή τη σύντομη στιγμή. Μετά απαγορεύστε την ξανά, γιατί είναι κίνδυνος ασφαλείας να μένει ενεργή συνέχεια.
 
-![Ειδοποίηση ασφαλείας Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Ειδοποίηση ασφαλείας Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Ειδοποίηση ασφαλείας Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Ειδοποίηση ασφαλείας Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 Όταν τελειώσει η εγκατάσταση, έχετε ολοκληρώσει αυτό το βήμα.
 
