@@ -118,14 +118,14 @@ Insight는 시간이 바뀐 순간과, 어떤 (이전) 시간에서 어떤 (새)
    * 일부 휴대폰에는 설정이 두 개 있습니다. 하나는 시간 자동 설정(되도록 켜 두어야 함)이고, 다른 하나는 시간대 자동 설정입니다(꺼야 함: 아래 스크린샷에서 **Time zone**(시간대) 아래의 **Set automatically**(자동 설정)).
    * 안타깝게도 일부 Android 버전에는 시간과 시간대의 자동 설정을 함께 켜는 스위치가 하나만 있습니다. 지금은 이 기능을 꺼야 합니다.
 
-![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
+![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
 2. 현재 위치와 시간이 같지만 서머타임(DST)을 사용하지 않는 시간대를 찾으십시오.
    
    * 이 국가 목록은 [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)에서 볼 수 있습니다
    * 중앙유럽 표준시(CET)라면 "Brazzaville"(콩고)가 될 수 있습니다. 휴대폰의 시간대를 콩고로 바꾸십시오.
 
-![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
+![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
 3. **AAPS**에서 펌프를 새로 고치고 원하는 **프로파일**로 전환하십시오.
 
