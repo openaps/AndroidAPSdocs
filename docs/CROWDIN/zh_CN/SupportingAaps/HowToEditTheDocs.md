@@ -22,37 +22,37 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 1. 访问 <https://github.com/openaps/AndroidAPSdocs> 并点击右上角的「Fork」按钮，创建该代码库的您个人副本。
 
-![Fork repo](../images/PR0.png)
+![Fork repo](../images/docs_pr_fork_repository.png)
 
 2. 访问任意页面，然后导航至您需要编辑的目标页面。您可以点击右上角的「在 GitHub 上编辑」链接。此功能仅适用于英文页面。 
 
-![edit doc](../images/PR1.png)
+![edit doc](../images/docs_pr_edit_on_github.png)
 
 或者点击页面内容顶部工具栏中的铅笔图标进行编辑。执行此操作需已登录您的GitHub账户（若尚未注册，创建流程非常简单）。
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. 执行步骤2中的任一操作，都将在您的代码库中创建一个新分支，用于保存您的编辑内容。对文件进行编辑修改。
 
 我们的文档页面使用Markdown格式。 The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
-![Edit branch](../images/PR3.png)
+![Edit branch](../images/docs_pr_edit_file.png)
 
 4. 您当前处于「编辑文件」标签页中进行操作。 Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). 若发现需要改进之处，请返回编辑标签页继续完善。 
 
-![preview mode](../images/PR5.png)
+![preview mode](../images/docs_pr_preview_changes.png)
 
 5. 完成编辑后，请滚动至页面底部。在页面底部的文本框中，于显示「添加可选扩展描述...」的输入框内填写您的备注说明。默认标题会显示文件名。请尽量包含一句说明**修改原因**的描述。说明修改原因有助于审核者理解您在该PR中的意图。
 
-![commit comments](../images/PR4.png)
+![commit comments](../images/docs_pr_commit_description.png)
 
 6. 点击绿色的「Propose file changes」或「Commit changes」按钮。在跳转页面中点击「Create Pull Request」按钮，然后在下一页再次点击「Create Pull Request」。
 
-![create pull request](../images/PR6.png)
+![create pull request](../images/docs_pr_create_pull_request.png)
 
 7. 至此已完成拉取请求（PR）的创建流程。 GitHub会为PR分配一个编号，显示在标题和井号(#)之后。您可以返回该页面查看反馈（若已设置GitHub邮件通知，相关PR动态将通过邮件提醒您）。您的编辑现已加入待审PR列表，团队将在合并到AAPS主文档前进行审核并可能提供反馈！要查看PR进度，请点击您GitHub账户右上角的铃铛图标，即可查看所有PR状态。
 
-![PR tracking](../images/PR7.png)
+![PR tracking](../images/docs_pr_tracking.png)
 
 注：您的fork仓库和分支仍会保留在您个人的GitHub账户中。 After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). 今后编辑时，只要遵循此流程，您的修改将始终基于最新版的AndroidAPSdocs代码库开始。 If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. 鉴于用户常忘记更新代码库，我们建议先采用上述PR流程，待熟悉「compare」操作后再调整。
 
