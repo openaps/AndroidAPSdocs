@@ -21,7 +21,7 @@ Heb je je keystore nog, dan heb je deze pagina niet nodig: gebruik de keystore o
 
 - Als je **AAPS** verwijdert, worden alle instellingen, je [doelen](../SettingUpAaps/CompletingTheObjectives.md) en de huidige verbinding met de pomp gewist. Je krijgt ze terug door je **instellingenbestand** te importeren. Zorg dus dat je een recent bestand hebt.
 - Het instellingenbestand bevat niet je geschiedenis van behandelingen en glucose. Als je naar [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md) uploadt, kun je deze na het opnieuw installeren terugladen (stap 8).
-- Je hebt je [**Hoofdwachtwoord**](#Preferences-master-password) nodig: het instellingenbestand is daarmee versleuteld.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Gebruikers van Omnipod en Medtrum:** lees eerst [Pompen zonder slang](#ExportImportSettings-tubeless-pumps). Je instellingenbestand moet geëxporteerd zijn tijdens de pod of patch die je nu draagt.
 - [Stel zo nodig je CGM/BG-bron (ontvanger) in](../Getting-Started/CompatiblesCgms.md) voordat je begint.
 
