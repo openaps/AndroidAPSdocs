@@ -2,7 +2,7 @@
 
 Το Freestyle Libre 3 (FSL3) χρειάζεται ειδική ρύθμιση για να στέλνει τιμές BG στο AAPS. Υπάρχουν δύο τρόποι για να φτάνουν οι τιμές του Freestyle Libre 3 (FSL3) στο AAPS.
 
-![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
+![FL3](../images/libre3/libre3_juggluco_xdrip_data_flow.jpeg)
 
 Οι παρακάτω μέθοδοι χρησιμοποιούν την ξεχωριστή εφαρμογή Juggluco. Χρησιμοποιεί το Juggluco για να λαμβάνει ακατέργαστα δεδομένα ανά 1 λεπτό από τον αισθητήρα, τα οποία στη συνέχεια στέλνονται στο xDrip ή στο AAPS. Νέους αισθητήρες μπορείτε να τους ξεκινήσετε είτε με την εφαρμογή Libre 3 είτε απευθείας στο Juggluco. Οι παρακάτω οδηγίες δείχνουν πώς ξεκινάτε έναν αισθητήρα με την εφαρμογή Juggluco. Αν ο αισθητήρας ξεκίνησε με συνδεδεμένο λογαριασμό Libreview, μπορείτε επίσης να αλλάζετε τον δέκτη ανάμεσα στο Juggluco και την εφαρμογή Libre 3.
 
@@ -38,7 +38,7 @@
 
   → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![xDrip advanced settings Libre 2 & ακατέργαστες τιμές](../images/xDrip_Libre3_Smooth.png)
+  ![xDrip advanced settings Libre 2 & ακατέργαστες τιμές](../images/libre3/xDrip_Libre3_Smooth.png)
 
 
 
