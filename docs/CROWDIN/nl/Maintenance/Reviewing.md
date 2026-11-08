@@ -114,7 +114,7 @@ Aan het einde van elke regel tonen kleine pictogrammen waar de gegevens vandaan 
 (screens-bolus-carbs)=
 ### Koolhydraten en bolus
 
-![Koolhydraten & bolus](../images/TreatmentsView1.png)
+![Koolhydraten & bolus](../images/Maintenance/TreatmentsView1.png)
 
 Op dit tabblad zie je het logboek van bolussen en koolhydraten. Bij elke bolus (regel **1**) staat de resterende IOB van die bolus naast de hoeveelheid insuline. De bolus kan komen van:
 * Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
@@ -141,7 +141,7 @@ De Behandelingen geschiedenis kun je gebruiken om verkeerd ingevoerde koolhydrat
 
 ### Tijdelijk basaal
 
-![Tijdelijk basaal](../images/TreatmentsView2.png)
+![Tijdelijk basaal](../images/Maintenance/TreatmentsView2.png)
 
 De **tijdelijke basaalstanden** die de loop heeft ingesteld, worden hier getoond. Als een invoer nog invloed heeft op de IOB, staat die informatie naast de basaalstand (regel **1**). Dit kan zijn:
 * Positieve IOB als de tijdelijke basaal hoger was dan die in het profiel
@@ -153,13 +153,13 @@ On the left of a line, a red S means “Suspend”: it happens when basal is not
 
 ### Tijdelijk streefdoel
 
-![Tijdelijk streefdoel](../images/TreatmentsView3.png)
+![Tijdelijk streefdoel](../images/Maintenance/TreatmentsView3.png)
 
 Hier zie je de geschiedenis van tijdelijke streefdoelen.
 
 ### Profiel wissel
 
-![Profiel wissel](../images/TreatmentsView4.png)
+![Profiel wissel](../images/Maintenance/TreatmentsView4.png)
 
 Hier zie je de geschiedenis van profielwissels. Je kunt bij elke profielwissel meerdere regels zien: regel **1**, opgeslagen in zowel NS als de pompgeschiedenis, is de echte wissel. Regel **2**, opgeslagen in Nightscout maar niet in de pompgeschiedenis, is het verzoek voor een profielwissel door de gebruiker.
 
@@ -169,14 +169,14 @@ Met de knop **Dupliceren** in regel **2** kun je een kopie maken van een **Profi
 
 ### Careportal
 
-![Careportal](../images/TreatmentsView5.png)
+![Careportal](../images/Maintenance/TreatmentsView5.png)
 
 Dit tabblad toont alle notities en careportal-invoer die in Nightscout zijn opgeslagen.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Bedrijfsmodus
 
-![Bedrijfsmodus](../images/TreatmentsView6.png)
+![Bedrijfsmodus](../images/Maintenance/TreatmentsView6.png)
 
 This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 
