@@ -309,13 +309,13 @@ Si **AAPS** tuvo que limitar la dosis, por ejemplo porque el bolo calculado supe
     
     Las entradas de [Asistente rápido](#quickwizards) del teléfono que tienen activado **Mostrar en el reloj**, dentro de sus horas válidas. Una entrada de carbohidratos muestra sus carbohidratos en g, y una entrada de insulina su dosis fija en U. Un toque ejecuta la entrada después de una confirmación en el reloj. No hay nada que ajustar en el reloj: edita las entradas en el teléfono y activa **Mostrar en el reloj** en **Selección de dispositivo** en cada entrada que quieras en el mosaico. Fuera de las horas válidas de todas tus entradas, el mosaico muestra **No hay configuración disponible**.
     
-    ![Una entrada de Asistente rápido con Mostrar en el reloj activado, y el mosaico donde aparece](../images/quickwizard_watch_phone.png)
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Mosaico Escena
+    ### Scene tile
     
-    ![Mosaico Escena](../images/wearos/tiles/tile_scene.png)
+    ![Scene tile](../images/wearos/tiles/tile_scene.png)
     
-    Las [escenas](#scenes-from-watch) del teléfono. Cada uno de los cuatro espacios se ajusta a **Automático**, **Ninguno** o una escena en los ajustes del mosaico. Un espacio **Automático** toma la siguiente escena de la lista del teléfono que ningún otro espacio ha cogido. Un espacio ajustado a una escena que ya no existe en el teléfono muestra **No disponible**.
+    The [Scenes](#scenes-from-watch) of the phone. Cada uno de los cuatro espacios se ajusta a **Automático**, **Ninguno** o una escena en los ajustes del mosaico. Un espacio **Automático** toma la siguiente escena de la lista del teléfono que ningún otro espacio ha cogido. Un espacio ajustado a una escena que ya no existe en el teléfono muestra **No disponible**.
     
     ![Ajustes del mosaico Escena, cuatro espacios en Automático](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,17 +361,17 @@ Si **AAPS** tuvo que limitar la dosis, por ejemplo porque el bolo calculado supe
     
     Nota: no todas las pantallas soportan bien el modo siempre encendido. Puede quemar la pantalla, sobre todo en las pantallas OLED más antiguas. Los relojes suelen atenuar la pantalla para evitar que se queme; consulta el manual del usuario, al fabricante o internet para obtener consejos.
     
-    ![Esfera en la mesita de noche](../images/Watchface_nightstand.jpg)
+    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Interfaz simplificada](../images/Watchface_simplified_ui.png)
+    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Alarmas del teléfono en el reloj
+    ## Phone alarms on the watch
     
-    ![Una alarma del teléfono en el reloj](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    El reloj muestra las alarmas del teléfono, así ves por qué suena el teléfono y puedes responder desde la muñeca. El reloj vibra, y otra vez cada medio minuto durante cinco minutos hasta que respondas. Una notificación muestra el título y el texto de la alarma, con las mismas respuestas que el recordatorio [Hora de comer](#WearOsSmartwatch-wizard-carb-time):
+    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. El reloj vibra, y otra vez cada medio minuto durante cinco minutos hasta que respondas. Una notificación muestra el título y el texto de la alarma, con las mismas respuestas que el recordatorio [Hora de comer](#WearOsSmartwatch-wizard-carb-time):
     
     * **Silencio**, o deslizarla: la alarma se detiene y la pantalla de alarma del teléfono se cierra.
     * **Silenciar 5 min**: la alarma se detiene y vuelve a sonar después de cinco minutos, en el teléfono y en el reloj.
