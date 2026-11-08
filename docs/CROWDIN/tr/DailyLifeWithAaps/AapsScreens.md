@@ -9,7 +9,7 @@
 
 ## Ana ekran
 
-![Ana ekran](../images/Home_Homescreen.png)
+![Ana ekran](../images/main/Home_Homescreen.png)
 
 Bu, **AAPS**'i açtığınızda karşılaşacağınız ilk ekrandır ve günlük olarak ihtiyaç duyacağınız bilgilerin çoğunu içerir.
 
@@ -33,13 +33,13 @@ KŞ değerinin rengi, tanımlanan [aralığa](#Preferences-range-for-visualizati
 * kırmızı = aralığın altında
 * sarı = aralığın üstünde
 
-![Aralık içinde KŞ dairesi, yeşil](../images/Home_Delta.png) ![Aralığın üstünde KŞ dairesi, sarı](../images/Home_Delta_high.png) ![Aralığın altında KŞ dairesi, kırmızı](../images/Home_Delta_low.png)
+![Aralık içinde KŞ dairesi, yeşil](../images/main/Home_Delta.png) ![Aralığın üstünde KŞ dairesi, sarı](../images/main/Home_Delta_high.png) ![Aralığın altında KŞ dairesi, kırmızı](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
 #### Loop status
 
-![Loop status](../images/main_loop_status.png)
+![Loop status](../images/main/main_loop_status.png)
 
 KŞ dairesinin yanındaki bir simge, döngünün çalışma modunu gösterir (resimde yukarıdan aşağıya):
 
@@ -166,7 +166,7 @@ Profil ayrıntılarını görebileceğiniz ve [farklı profiller arasında geçi
 
 **Profil yüzdesini değiştirmek** (ve süresini ayarlamak) için profil adına dokunun, sonra Profil ekranının sağ altındaki yuvarlak **▶** (Etkinleştir) düğmesine dokunun. **AAPS** 3.x'te bu ekran profil adına uzun basılarak açılırdı; **AAPS** 4'te uzun basmanın bir etkisi yoktur. Adım adım: [Profil yüzdesini değiştirme](#ProfileSwitch-change-percentage).
 
-![Etkin profil değişimi olan profil](../images/main_profile_switch.png)
+![Etkin profil değişimi olan profil](../images/main/main_profile_switch.png)
 
 1. Standart profil etkinleştirmesiyle normal görünüm.
 2. %90 yüzdeli ve 9 dakika kalan süreli profil değişimi — geçici bir profil değişimi çalışırken profil adı sarıya döner.
@@ -174,7 +174,7 @@ Profil ayrıntılarını görebileceğiniz ve [farklı profiller arasında geçi
 
 #### Target
 
-![Geçici hedefin kalan süresi](../images/main_temp_target.png)
+![Geçici hedefin kalan süresi](../images/main/main_temp_target.png)
 
 Geçerli hedef kan şekeri seviyesi profil adının altında gösterilir.
 
@@ -200,7 +200,7 @@ Geçerli hedef kan şekeri seviyesi profil adının altında gösterilir.
 
 #### AİNS, AKRB, bazal ve duyarlılık
 
-![AİNS, AKRB, bazal ve duyarlılık](../images/main_iob_cob_basal_sensitivity.png)
+![AİNS, AKRB, bazal ve duyarlılık](../images/main/main_iob_cob_basal_sensitivity.png)
 
 1. **Şırınga**: aktif insülin (AİNS) - vücudunuzdaki aktif insülin miktarı  
     Yalnızca standart bazalınız çalışıyor olsaydı ve önceki boluslardan kalan insülin olmasaydı, aktif insülin değeri sıfır olurdu. 
@@ -234,7 +234,7 @@ Karbonhidrat bildirimleri, bolus hesaplayıcısının bildirimlerinden çok daha
 
 ### Bölüm C - Durum satırı
 
-![Durum satırı](../images/main_status_row.png)
+![Durum satırı](../images/main/main_status_row.png)
 
 Durum satırı şunlar için görsel uyarı verir
 
@@ -320,7 +320,7 @@ Telefonun saati ileri veya geri atladığında (yaz saati değişikliğinde veya
 
 Grafik ayarlarını açmak için grafiğin sağ üst köşesindeki **kalem** simgesine basın:
 
-![Ana grafik ayarı](../images/main_graph_settings.png)
+![Ana grafik ayarı](../images/main/main_graph_settings.png)
 
 * **Grafik yüksekliği**, grafiğin ne kadar yüksek çizileceğini ayarlar.
 * **AKTİVİTE**, insülin aktivite eğrisini üste ekler: düz sarı-yeşil bir çizgi <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (noktalı sarı UAM tahminiyle karıştırılmamalıdır)
@@ -408,7 +408,7 @@ Ek grafikler ana grafiği takip eder: KŞ grafiğini kaydırdığınızda veya y
 
 Bir ek grafiği yapılandırmak için sağ üst köşesindeki **kalem** simgesine basın:
 
-![Ek grafik ayarları](../images/main_additional_graph_settings.png)
+![Ek grafik ayarları](../images/main/main_additional_graph_settings.png)
 
 Bu grafikte görmek istediğiniz verilere karşılık gelen çipleri seçin; **Kaldır** düğmesi grafiği siler.
 
@@ -490,7 +490,7 @@ Bu çizgiyi Sapma çubuklarıyla birlikte göstermek iyi bir kombinasyondur. Ayn
 
 ### Bölüm F - Hızlı Başlatma araç çubuğu
 
-![Hızlı Başlatma araç çubuğu](../images/main_quicklaunch_toolbar.png)
+![Hızlı Başlatma araç çubuğu](../images/main/main_quicklaunch_toolbar.png)
 
 Ekranın altındaki kayan araç çubuğu **[Hızlı Başlatma](../DailyLifeWithAaps/QuickLaunch.md)** eylemlerinizi içerir. Küçük **dişli**, hangi düğmelerin gösterileceğini seçtiğiniz Hızlı Başlatma yapılandırmasını açar (tedaviler, careportal kayıtları, CGM eylemleri, **Yönet** panelinin ekranları, [Hızlı Asistan](../DailyLifeWithAaps/QuickWizards.md) düğmeleri, [Senaryolar](../DailyLifeWithAaps/Scenes.md) ve daha fazlası).
 
@@ -502,7 +502,7 @@ Pompanın **bağlantısı kesilmişken** tedavi düğmeleri araç çubuğunda ka
 
 #### İnsülin
 
-![İnsülin iletişim kutusu](../images/insulin_dialog.png)
+![İnsülin iletişim kutusu](../images/v4/Screens/insulin_dialog.png)
 
 [Bolus hesaplayıcısını](#aaps-screens-bolus-wizard) kullanmadan belirli bir miktarda insülin vermek için.
 
@@ -520,7 +520,7 @@ Pompa üzerinden bolus yapmak istemiyor, yalnızca bir insülin miktarını kayd
 
 #### Karbonhidrat
 
-![Karbonhidrat iletişim kutusu](../images/carbs_dialog.png)
+![Karbonhidrat iletişim kutusu](../images/v4/Screens/carbs_dialog.png)
 
 Karbonhidratları bolus olmadan kaydetmek için kullanılır.
 
@@ -574,7 +574,7 @@ Alt çubuğun üstünde, sağda bir **bildirim balonu** görünebilir. Balon **A
 
 ## Bolus Sihirbazı
 
-![Bolus sihirbazı](../images/bolus_wizard.png)
+![Bolus sihirbazı](../images/v4/Screens/bolus_wizard.png)
 
 Yemek bolusu yapmak istediğinizde normalde bunu buradan yaparsınız.
 
@@ -618,7 +618,7 @@ Profillerinizin listesini açmak için **Profil** satırının herhangi bir yeri
 
 **Alarmı ayarla** (yemek hatırlatıcısı): gelecekte bir karbonhidrat zamanı girildiğinde, **AAPS**'e girdiğiniz karbonhidratları ne zaman yiyeceğinizin belirtilen zamanda size hatırlatılması için "**Alarmı ayarla**" anahtarı görünür:
 
-![Gelecekteki karbonhidratlar için alarm ayarlama](../images/bolus_wizard_set_alarm.png)
+![Gelecekteki karbonhidratlar için alarm ayarlama](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
 Hatırlatıcı, bolus iletildiğinde başlar. Hatırlatıcı çalışırken ana ekrandaki **Yemek vakti** çubuğu geri sayar; çubukta **Durdur** ve **+5 dk** düğmeleri vardır. **+5 dk**, beklemenin sonunu beş dakika ileri alır ve çubuk toplam bekleme süresini gösterir. Süre dolduğunda hatırlatıcı kendi sesiyle, yumuşak bir mutfak zamanlayıcısı sesiyle çalar. Alarm ekranında **Alarmı sessize al** (ekran açık kalır) ve **Sessize al ve kapat** düğmelerinin yanında, yeni bir beş dakikalık bekleme başlatan **+5 dk** düğmesi de vardır. Alarm çaldıktan sonra çubukta *Süre doldu* yazar ve **+5 dk** ile **Kapat** düğmeleri görünür; **Sessize al ve kapat** çubuğu da kaldırır. Çubuk ve alarm **AAPSClient**'ta ve [saatte](#WearOsSmartwatch-wizard-carb-time) de gösterilir. Hatırlatıcı, telefonunuzun saat uygulamasında bir zamanlayıcı oluşturmaz. Android, **AAPS**'in alarm ayarlamasına izin vermiyorsa, sihirbaz sizden Android ayarlarında **AAPS** için *Alarmlar ve hatırlatıcılar* iznini vermenizi ister. Geçmişteki bir karbonhidrat zamanı için zil seçeneği sunulmaz.
 
@@ -640,7 +640,7 @@ Bilmekte fayda var:
 
 #### Yanlış AKRB tespiti
 
-![Yavaş karbonhidrat emilimi](../images/Calculator_SlowCarbAbsorption.png)
+![Yavaş karbonhidrat emilimi](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Bolus sihirbazını kullandıktan sonra yukarıdaki uyarıyı görürseniz, **AAPS** hesaplanan AKRB değerinin yanlış olabileceğini algılamıştır. Yani önceki bir öğünden sonra AKRB varken tekrar bolus yapmak isterseniz aşırı doza karşı dikkatli olun!
 
@@ -719,7 +719,7 @@ Daha fazla ayrıntı için [Konfigürasyon sayfasının APS bölümüne](#Config
 
 ## Profile
 
-![Profile](../images/Screenshots_Profile.png)
+![Profile](../images/screens/Screenshots_Profile.png)
 
 **Yönet → Profil** (veya ana ekranda profil adına dokunmak) Profil ekranını açar: profilleriniz kaydırılabilir kartlar halinde gösterilir; bir profili eklemek, düzenlemek, klonlamak, silmek ve **etkinleştirmek** için düğmeler vardır.
 
@@ -733,7 +733,7 @@ Profil, kişisel diyabet ayarlarınızla ilgili bilgileri içerir; daha fazla bi
 
 ## NSClient
 
-![NSClient](../images/Screenshots_NSClient.png)
+![NSClient](../images/screens/Screenshots_NSClient.png)
 
 **Konfigürasyon → İletişim → NSClientV3 → Eklentiyi aç**, Nightscout sitenizle bağlantının durumunu gösterir: URL, websocket durumu, kuyruk ve senkronizasyon etkinliğinin günlüğü.
 
@@ -745,7 +745,7 @@ Sorun giderme için bu [sayfaya](../GettingHelp/TroubleshootingNsClient.md) bak�
 
 ## KŞ kaynağı - xDrip, BYODA...
 
-![KŞ kaynağı ekranı](../images/Screenshots_BGSource.png)
+![KŞ kaynağı ekranı](../images/screens/Screenshots_BGSource.png)
 
 **Konfigürasyon → KŞ kaynağı → Eklentiyi aç**, CGM ölçümlerinin geçmişini gösterir ve hata (örneğin sıkışmaya bağlı düşük değer) veya yinelenen ölçüm durumunda ölçümleri silme seçeneği sunar.
 
