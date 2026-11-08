@@ -33,7 +33,7 @@ Abychom se tomu vyhnuli, existují dvě možnosti:
    * Vyberte svůj **Profil** a klepněte na **▶ Aktivovat**
    * Nastavte „**Posun času**“ podle cíle cesty a klepněte na **Aktivovat**.
    
-   ![Přepnutí profilu s posunem času](../images/ProfileSwitchTimeShift2.png)
+   ![Přepnutí profilu s posunem času](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * např. Vídeň -> New York: **Přepnutí profilu** +6 hodin
    * např. Vídeň -> Sydney: **Přepnutí profilu** -8 hodin
