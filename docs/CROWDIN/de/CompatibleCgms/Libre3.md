@@ -81,7 +81,7 @@ Wenn der Sensor mit einem eingeloggten Libreview-Konto gestartet wurde, ist es a
 4. Klicke im Menü Libre 3 auf „Start Sensor“, wähle „Ja“, „Weiter“ und scanne Deinen Sensor.
 5. Nach einigen Minuten sollten die Glukosewerte in der Libre 3 App angezeigt werden.
 
-Um von der Libre 3 App zu Juggluco zu wechseln, musst Du die Libre 3 App über Android-Einstellungen erzwingen und mit Schritt 1 & 2 fortfahren.
+Um von der Libre 3 App zu Juggluco zu wechseln, musst Du die Libre 3 App in den Android-Einstellungen beenden („Stopp erzwingen“) und mit Schritt 1 & 2 fortfahren.
 
 (libre3-experiences-and-troubleshooting)=
 ## Erfahrungen und Troubleshooting
@@ -90,7 +90,7 @@ Um von der Libre 3 App zu Juggluco zu wechseln, musst Du die Libre 3 App über A
 
 - Achte, darauf, dass Du die neueste Version der Juggluco App verwendest
 - Überprüfe Deine Einstellungen wie es hier in der Anleitung beschrieben ist
-- Es kann vorkommen, dass Du den Stopp der Libre 3 App und der Juggluco App erzwingen und anschließend einen Neustart durchführen musst.
+- Es kann vorkommen, dass Du die Libre 3 App und Juggluco beenden („Stopp erzwingen“) und anschließend neu starten musst.
 - Schalte Bluetooth aus und danach wieder ein
 - Warte einen Moment oder versuche Juggluco zu schließen
 - Ältere Versionen von Juggluco (vor 2.9.6) senden keine Daten des Libre 3 Sensors an verbundene Geräte (z.B. Juggluco auf WearOS) nach. Unter Umständen hilft es, in der gepatchten Libre 3 App auf "Daten erneut senden" (Juggluco-Menü) zu tippen.
