@@ -1,6 +1,6 @@
 # Uzaktan İzleme
 
-![Çocukları izleme](../images/KidsMonitoring.png)
+![Çocukları izleme](../images/remote_control_and_following/KidsMonitoring.png)
 
 __AAPS__, tip 1 diyabetli çocukların uzaktan izlenmesi için birçok özellik sunar. Ayrıca __AAPS__'e uzaktan talimat gönderen uzaktan komutları da kolaylaştırır. Aynı şekilde __AAPSClient__, eşinizin veya arkadaşınızın __AAPS__'ini takip etmek için uzaktan izlemede de kullanılabilir.
 
