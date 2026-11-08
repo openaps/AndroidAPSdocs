@@ -118,14 +118,14 @@ Als je een bolus geeft met de calculator van **AAPS**, gebruik dan geen **COB**-
    * Sommige telefoons hebben twee instellingen: één om de tijd automatisch in te stellen (die laat je het beste aan) en één om de tijdzone automatisch in te stellen (die moet je UIT zetten: **Set automatically** (Automatisch instellen) onder **Time zone** (Tijdzone) in de schermafbeelding hieronder).
    * Helaas hebben sommige Android-versies één schakelaar om zowel de tijd als de tijdzone automatisch in te stellen. Zet deze instelling voorlopig uit.
 
-![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
+![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
 2. Zoek een tijdzone met dezelfde tijd als op je huidige locatie, maar zonder zomertijd.
    
    * Een lijst van deze landen is beschikbaar op [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Voor Midden-Europese Tijd (CET) kan dit "Brazzaville" (Congo) zijn. Zet de tijdzone van je telefoon op Congo.
 
-![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
+![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
 3. Vernieuw in **AAPS** je pomp en schakel naar je gewenste **Profiel**.
 
