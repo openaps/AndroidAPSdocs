@@ -53,7 +53,7 @@ If minimal carbs absorption (min_5m_carbimpact) is used instead of value calcula
 
 Ordinarily __AAPS__ detects carb absorption through **BG** deviations. In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
 
-![Sugestie despre o valoare COB greșită](../images/Calculator_SlowCarbAbsorption.png)
+![Sugestie despre o valoare COB greșită](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 In the screenshot above, 66% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
 
