@@ -74,7 +74,7 @@ You have to have the same emergency equipment with you like every other T1D with
   * the current [apk](../SettingUpAaps/BuildingAaps.md) of AAPS and of any other apps you use (e.g. xDrip, Juggluco, BYODA).
   * your keystore file (from building the apk) and its password,
   * your latest settings export files from AAPS and your other apps,
-  * your **AAPS** master password: you cannot import the settings file without it.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ Se hai dimenticato la password master, puoi reimpostarla sul numero di serie del
 
 1. Crea un file vuoto chiamato `PasswordReset` (senza estensione) nella sottocartella `extra` della tua directory AAPS (di solito `AAPS/extra`).
 2. Riavvia **AAPS**. Il micro deve essere connesso: **AAPS** mostra "In attesa del micro…" e deve leggere il numero di serie del micro entro 30 secondi.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. **AAPS** mostra "Password impostata!": ora la tua password master è il **numero di serie del micro**. The `PasswordReset` file is deleted automatically.
+
 4. Apri **Impostazioni** > **Protezione** > **Password Master** e imposta una nuova password.
 
 If the pump is not reached in time, nothing changes: check the pump connection and try again.
