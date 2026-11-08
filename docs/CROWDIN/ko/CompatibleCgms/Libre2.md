@@ -63,7 +63,7 @@ Libre 2 및 2+ **EU** 모델만 해당합니다.
 
 → 햄버거 메뉴 → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip 고급 설정 Libre 2 및 원시 값](../images/xDrip_Libre3_Smooth.png)
+![xDrip 고급 설정 Libre 2 및 원시 값](../images/libre3/xDrip_Libre3_Smooth.png)
 
 루프를 사용하려면 반드시 필요합니다. 곡선이 매끄럽게 보이고 루프 결과도 아주 좋습니다. 알람의 기준이 되는 원시 값은 조금 더 흔들리지만, 리더기가 표시하는 값과 일치합니다. 또한 빠른 변화에 제때 대응할 수 있도록 xDrip 그래프에 원시 값을 표시할 수 있습니다. Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" 및 "show Sensors Infos"를 켜십시오. 그러면 원시 값이 작은 흰 점으로 추가로 표시되고, 시스템 메뉴에서 추가 센서 정보를 볼 수 있습니다.
 
