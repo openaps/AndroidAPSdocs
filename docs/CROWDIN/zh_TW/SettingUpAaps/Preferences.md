@@ -91,6 +91,8 @@
 
 出於安全要求，通常必須能夠[匯出設定](../Maintenance/ExportImportSettings.md)，因為從版本 2.7 開始它們是加密的。
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **生物識別保護可能在 OnePlus 手機上無法運作。這是部分 OnePlus 手機的已知問題。**
 
 ![設置主密碼](../images/preferences/master_password_dialog.png)
