@@ -31,11 +31,11 @@ Google은 2026년 9월부터 [Android 개발자 인증](#android-developer-verif
 
 오른쪽 위의 Google 메뉴에서 Drive 앱을 선택하십시오.
 
-![Drive 앱 시작](../images/GoogleDriveInWebbrowser.png)
+![Drive 앱 시작](../images/install/GoogleDriveInWebbrowser.png)
 
 왼쪽 위의 **New**(새로 만들기)를 클릭하고(또는 파일과 폴더 아래의 빈 곳을 마우스 오른쪽 버튼으로 클릭하고) **File upload**(파일 업로드)를 선택하십시오.
 
-![Google Drive 앱으로 apk 파일 업로드](../images/GoogleDriveUploadFile.png)
+![Google Drive 앱으로 apk 파일 업로드](../images/install/GoogleDriveUploadFile.png)
 
 이제 apk 파일이 Google Drive에 업로드되었을 것입니다.
 
@@ -43,17 +43,17 @@ Google은 2026년 9월부터 [Android 개발자 인증](#android-developer-verif
 
 휴대폰으로 가서 Google Drive 앱을 실행하십시오. 미리 설치된 앱이며, 다른 Google 앱이 있는 곳에서 찾거나 앱 이름으로 검색하여 찾을 수 있습니다.
 
-![Google Drive 앱 시작](../images/GoogleDriveMobileAPPLaunch.png)
+![Google Drive 앱 시작](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 휴대폰의 Google Drive 앱에서 파일 이름을 눌러 apk 설치를 시작하십시오.
 
-![apk 설치 시작](../images/GoogleDriveMobileUploadedAPK.png)
+![apk 설치 시작](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 지금은 Google Drive에서 앱을 설치할 수 없다는 보안 알림이 나오면 "Settings"(설정)를 누르고 그 짧은 시간 동안만 허용하십시오. 설치 후에는 다시 허용하지 않도록 설정하십시오. 항상 켜 두면 보안 위험이 있습니다.
 
-![Google Drive 보안 알림](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Google Drive 보안 알림](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Google Drive 보안 알림](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Google Drive 보안 알림](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 설치가 끝나면 이 단계는 완료입니다.
 
