@@ -535,7 +535,7 @@ La [ligne d'état](#screens-sensor-level-battery) de l'écran principal affiche 
 
 L'âge de la **Pile pompe** n'est pas indiqué : la pile et le réservoir d'insuline sont intégrés dans chaque pod, et la pile dure toujours plus longtemps que le pod lui-même (80 heures au maximum).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note
