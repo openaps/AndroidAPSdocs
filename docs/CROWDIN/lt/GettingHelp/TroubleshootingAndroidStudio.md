@@ -192,7 +192,7 @@ Jei gaunate aukščiau parodytą klaidos pranešimą, prieš bandydami kurti iš
 
   Internete yra informacijos, kaip nustatyti, ar jūsų OS yra 32 bitų, ar 64 bitų, pvz., [ši](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Ekrano kopija: Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Ekrano kopija: Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Gradle sinchronizavimas iš naujo
@@ -237,7 +237,7 @@ Jūsų apk sukurtas sėkmingai ir jį galima perkelti į telefoną!
 
 ## Apk neįdiegtas
 
-![Telefone programėlė neįdiegta](../images/Update_AppNotInstalled.png)
+![Telefone programėlė neįdiegta](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Įsitikinkite, kad į telefoną perkėlėte failą „app-full-release.apk“.
 * Ši klaida dažniausiai reiškia, kad naujas apk pasirašytas kita raktų saugykla nei įdiegta **AAPS**. Jei vis dar turite ankstesnę raktų saugyklą, pasirinkite ją ir sukurkite iš naujo. Kitu atveju žr. [AAPS įdiegimas iš naujo su nauja raktų saugykla](#reinstall-aaps).
