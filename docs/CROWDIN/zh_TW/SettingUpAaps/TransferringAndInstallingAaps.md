@@ -31,11 +31,11 @@ Google 將從 2026 年 9 月起逐步推出 [Android 開發人員驗證](#androi
 
 在右上方的 Google 選單中選擇雲端硬碟應用程式。
 
-![啟動雲端硬碟應用](../images/GoogleDriveInWebbrowser.png)
+![啟動雲端硬碟應用](../images/install/GoogleDriveInWebbrowser.png)
 
 點選左上角的**新增**（或在檔案和資料夾下方的空白處按右鍵），然後選取**檔案上傳**。
 
-![使用 Google 雲端硬碟應用上傳 apk 檔案](../images/GoogleDriveUploadFile.png)
+![使用 Google 雲端硬碟應用上傳 apk 檔案](../images/install/GoogleDriveUploadFile.png)
 
 APK 檔案應該已經上傳到 Google 雲端硬碟。
 
@@ -43,17 +43,17 @@ APK 檔案應該已經上傳到 Google 雲端硬碟。
 
 切換到你的手機並啟動 Google 雲端硬碟應用程式。他是預裝的應用程式，你可以在其他 Google 應用程式所在的位置找到他，或透過搜尋應用程式名稱來找到他。
 
-![啟動 Google 雲端硬碟應用](../images/GoogleDriveMobileAPPLaunch.png)
+![啟動 Google 雲端硬碟應用](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 在手機上的 Google 雲端硬碟 App 中點選檔案名稱，開始安裝 APK。
 
-![啟動 apk 安裝](../images/GoogleDriveMobileUploadedAPK.png)
+![啟動 apk 安裝](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 如果出現安全性通知，指出目前不允許從 Google 雲端硬碟安裝 App，請點選「設定」並暫時允許安裝。完成後，請關閉這項允許，因為一直開啟會有安全風險。
 
-![安全通知 Google 雲端硬碟](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![安全通知 Google 雲端硬碟](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![安全通知 Google 雲端硬碟](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![安全通知 Google 雲端硬碟](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 安裝完成後，此步驟就完成了。
 
