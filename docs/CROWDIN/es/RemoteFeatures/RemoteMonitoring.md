@@ -1,6 +1,6 @@
 # Seguimiento remoto
 
-![Seguimiento de niños](../images/KidsMonitoring.png)
+![Seguimiento de niños](../images/remote_control_and_following/KidsMonitoring.png)
 
 __AAPS__ ofrece varias funciones para el seguimiento remoto de niños con diabetes tipo 1, y también permite comandos remotos que envían instrucciones a __AAPS__ a distancia. Del mismo modo, __AAPSClient__ también se puede usar para el seguimiento remoto del __AAPS__ de tu pareja o de un amigo.
 
