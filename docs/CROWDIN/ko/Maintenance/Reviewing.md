@@ -114,7 +114,7 @@ AGP 아래의 **혈당 오각형 (CGP)** 카드는 최근 14일 혈당의 다섯
 (screens-bolus-carbs)=
 ### 탄수화물과 볼러스
 
-![탄수화물 & 볼러스](../images/TreatmentsView1.png)
+![탄수화물 & 볼러스](../images/Maintenance/TreatmentsView1.png)
 
 이 탭에서는 볼러스와 탄수화물 기록을 볼 수 있습니다. 각 볼러스(**1**번 줄)는 인슐린 양 옆에 남아 있는 관련 IOB를 보여 줍니다. 볼러스의 출처는 다음 중 하나입니다:
 * 식사(인슐린, 빠른 마법사 또는 볼러스 마법사 버튼으로 직접 입력)
@@ -141,7 +141,7 @@ AGP 아래의 **혈당 오각형 (CGP)** 카드는 최근 14일 혈당의 다섯
 
 ### 임시 기저
 
-![임시 기저](../images/TreatmentsView2.png)
+![임시 기저](../images/Maintenance/TreatmentsView2.png)
 
 루프가 적용한 **임시 기저**가 여기에 표시됩니다. 항목이 아직 IOB에 영향을 주고 있으면 그 정보가 주입량 옆에 표시됩니다(**1**번 줄). 다음 중 하나일 수 있습니다:
 * 임시 기저가 프로파일에 설정된 기저보다 높았으면 양수 IOB
@@ -153,13 +153,13 @@ AGP 아래의 **혈당 오각형 (CGP)** 카드는 최근 14일 혈당의 다섯
 
 ### Temporary target
 
-![Temporary target](../images/TreatmentsView3.png)
+![Temporary target](../images/Maintenance/TreatmentsView3.png)
 
 임시 목표 이력은 여기에서 볼 수 있습니다.
 
 ### 프로파일 전환
 
-![프로파일 전환](../images/TreatmentsView4.png)
+![프로파일 전환](../images/Maintenance/TreatmentsView4.png)
 
 프로파일 전환 이력은 여기에서 볼 수 있습니다. 프로파일을 전환할 때마다 여러 항목이 보일 수 있습니다: NS와 펌프 이력 양쪽에 저장된 **1**번 줄은 실제 전환에 해당합니다. Nightscout에는 저장되었지만 펌프 이력에는 없는 **2**번 줄은 사용자가 요청한 프로파일 전환에 해당합니다.
 
@@ -169,14 +169,14 @@ AGP 아래의 **혈당 오각형 (CGP)** 카드는 최근 14일 혈당의 다섯
 
 ### 케어포털
 
-![케어포털](../images/TreatmentsView5.png)
+![케어포털](../images/Maintenance/TreatmentsView5.png)
 
 이 탭은 Nightscout에 기록된 모든 메모와 케어포털 항목을 보여 줍니다.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### 실행 모드
 
-![실행 모드](../images/TreatmentsView6.png)
+![실행 모드](../images/Maintenance/TreatmentsView6.png)
 
 이 탭은 [루프 상태](#AapsScreens-loop-status) 변경 이력을 보여 줍니다: 개방, 폐쇄, LGS, 일시 중지, 연결 해제.
 
