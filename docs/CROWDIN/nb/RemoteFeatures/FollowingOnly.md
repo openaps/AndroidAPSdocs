@@ -20,7 +20,7 @@ De vanligste strategiene som brukes sammen med **AAPS**, er forklart nærmere ne
 
 ### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) og [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
-![bilde](../images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
+![bilde](../images/following_dexcom_follow.png)
 
 * Dexcom Follow er kompatibel med mange telefoner (både Android og iPhone). Dexcom Follow kan brukes selv om du ikke bruker den offisielle Dexcom-appen til å motta sensordata.
 
@@ -47,7 +47,7 @@ For Dexcom Follow eksporteres sensordataene da fra **AAPS**-telefonen, enten dir
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
-![bilde](../images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
+![bilde](../images/following_nightguard.png)
 
 Fordeler (rapportert av brukere):
 
@@ -73,7 +73,7 @@ Ulemper (rapportert av brukere)
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
-![bilde](../images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
+![bilde](../images/following_nightwatch.png)
 
 
 * Nightwatch markedsfører seg som en Nightscout-klient og følger brukerens glukoseverdier fra Nightscout på enten Android-telefon eller -nettbrett.
@@ -132,7 +132,7 @@ Hvis du vil, kan du deretter bli en «releaser» og [dele en personlig TestFligh
 
 
 
-![bilde](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
+![bilde](../images/following_xdrip4ios.png)
 
 «Hva er **Shuggah**?» En gruppe ukrainske utviklere kopierte prosjektkoden til xDrip4iOS (som deles åpent på GitHub) og ga den ut på App Store under en bedriftskonto. Shuggah-utgivelsen styres ikke på noen måte av xDrip4iOS-utviklerne.
 
@@ -140,9 +140,9 @@ Hvis du vil, kan du deretter bli en «releaser» og [dele en personlig TestFligh
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
-![bilde](../images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
+![bilde](../images/following_sugarmate.png)
 
-![bilde](../images/21b83c41-85c6-4619-a702-a65450768855.png)
+![bilde](../images/following_sugarmate_graph.png)
 
 
 [Sugarmate](https://sugarmate.io/) kan lastes ned til iPhone fra App Store. Sugarmate er kompatibel med:
@@ -155,7 +155,7 @@ Brukere av Sugarmate har rapportert at den kan brukes med Apple CarPlay i USA fo
 
 ### [Spike](https://spike-app.com/) (iOS)
 
-![bilde](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
+![bilde](../images/following_spike.png)
 
 Spike kan brukes som primær mottaker eller som følgerapp, og gir BS, alarmer, IOB og mer.
 
@@ -175,7 +175,7 @@ Se [her](../Getting-Started/Watches.md).
 
 ### M5 stack
 
-![bilde](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
+![bilde](../images/following_m5stack.png)
 
 M5Stack er en liten boks som kan programmeres til mange formål. Martins prosjekt [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) viser sensorglukoseverdier og trender, IOB og COB. Den ligger i en plastboks og har fargeskjerm, spor for micro SD-kort, 3 knapper, høyttaler og internt batteri. Den er en flott blodsukkerskjerm og er ganske enkel å sette opp hvis du har en Nightscout-konto. Brukere kjører den vanligvis på Wi-Fi hjemme, men noen brukere forteller at de bruker den som skjerm på motorsykkeltur, via Wi-Fi-deling fra en telefon.
 
@@ -183,9 +183,9 @@ M5Stack er en liten boks som kan programmeres til mange formål. Martins prosjek
 
 SugarPixel er en enhet som fungerer som en ekstra glukoseskjerm med varsler for kontinuerlig glukosemåling. Den kobles til Dexcom-appen eller Nightscout-appen på brukerens smarttelefon. Enheten viser blodsukkermålinger i sanntid. Denne CGM-skjermen har lydvarsler med tilfeldig genererte toner (som er utrolig høye), vibrasjonsvarsler for hørselshemmede, visningsvalg du kan tilpasse, og innebygd følging for flere brukere.
 
-![bilde](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
+![bilde](../images/following_sugarpixel.png)
 
-![bilde](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
+![bilde](../images/following_sugarpixel_led_display.png)
 
 * SugarPixel har flere visningsvalg i mg/dL og mmol/L som passer brukerens behov, med fargekodede glukoseverdier.
 * Standardvisningen viser BS, trendpil og delta. Delta er endringen, + eller -, fra forrige måling.
