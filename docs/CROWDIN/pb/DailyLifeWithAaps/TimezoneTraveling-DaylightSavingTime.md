@@ -33,7 +33,7 @@ Para evitar isso, existem duas possibilidades:
    * Selecione seu **Perfil** e toque em **▶ Ativar**
    * Defina '**Deslocamento de tempo**' de acordo com o seu destino e toque em **Ativar**.
    
-   ![Troca de perfil com deslocamento de tempo](../images/ProfileSwitchTimeShift2.png)
+   ![Troca de perfil com deslocamento de tempo](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * por exemplo, Viena -> Nova York: **Troca de Perfil** +6 horas
    * por exemplo, Viena -> Sydney: **Troca de Perfil** -8 horas
