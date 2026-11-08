@@ -55,14 +55,14 @@
 
 在你的手機上，前往**應用程式 > AAPS > 權限**。確保**簡訊** 和 **電話**已被允許。
 
-![圖像](../images/remote-control-08.png)
+![圖像](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android 可能會封鎖未從應用程式商店安裝的應用程式（例如 <strong x-id="1">AAPS</strong>）使用 <strong x-id="1">簡訊</strong> 權限。如果授予 <strong x-id="1">簡訊</strong> 權限時看到這則訊息，請開啟手機的 <strong x-id="1">設定 > 應用程式 > AAPS</strong>，點選右上角的 <strong x-id="1">⋮</strong> 選單，然後選取 <strong x-id="1">允許受限制的設定</strong>。接著再次授予 <strong x-id="1">簡訊</strong> 權限。
 ```
 
-![應用程式未獲准存取簡訊](../images/sms_permission_restricted.png)
+![應用程式未獲准存取簡訊](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### 日期和時間同步
 
@@ -82,7 +82,7 @@ Android 可能會封鎖未從應用程式商店安裝的應用程式（例如 <s
 
 啟用 **允許透過簡訊傳送遠端指令**。啟用此選項後，才會顯示 **權杖末尾的額外必填 PIN 碼** 和 **驗證器設定** 選項：
 
-![簡訊通訊器設定](../images/sms_communicator_settings.png)
+![簡訊通訊器設定](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### 允許的電話號碼
@@ -97,7 +97,7 @@ Android 可能會封鎖未從應用程式商店安裝的應用程式（例如 <s
 
 如果你有多個手機號碼需要添加，請用分號分隔，並且**號碼之間不得有空格**（這點非常重要！）。選取 **確定**：
 
-![允許的電話號碼](../images/sms_allowed_numbers.png)
+![允許的電話號碼](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### 遠端注射的最小距離
 
@@ -115,7 +115,7 @@ PIN 碼要求如下：
 
 為了讓 PIN 碼更安全，請勿重複使用同一個數字（_例如_ 111111），也不要使用連續數字（_例如_ 123456）。
 
-![令牌末尾的額外必需PIN碼](../images/sms_pin.png)
+![令牌末尾的額外必需PIN碼](../images/remote_control_and_following/sms_pin.png)
 
 #### 身份驗證器設置
 
@@ -123,7 +123,7 @@ PIN 碼要求如下：
 * 在 _照護者的手機_ 上打開你安裝的驗證器應用程式，建立新的連線，並且
 * 使用照護者的手機掃描 **掃描代碼以設定 AAPS OTP 驗證碼** 下方顯示的 QR Code。
 
-![使用 QR Code 設定驗證器](../images/sms_authenticator_setup.png)
+![使用 QR Code 設定驗證器](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * 在 **測試一次性密碼** 下方，於 **要檢查的代碼** 欄位輸入照護者手機上的驗證器應用程式所產生的一次性密碼，並在後方加上您的 PIN 碼：
 
@@ -134,7 +134,7 @@ PIN 碼要求如下：
 
 如果輸入正確，紅色字體「WRONG PIN」將自動變為綠色「OK」。**你無法按下任何按鈕！** 此過程已完成，輸入代碼後不需要再按「好」按鈕：
 
-![測試一次性密碼並重設驗證器](../images/sms_authenticator_test.png)
+![測試一次性密碼並重設驗證器](../images/remote_control_and_following/sms_authenticator_test.png)
 
 你現在已成功設定 SMS 指令。
 
@@ -146,7 +146,7 @@ PIN 碼要求如下：
 
 1) 要檢查你是否正確設置了一切，請從照護者手機以 SMS 簡訊輸入 “bg” 測試連線到 **AAPS** 手機。你應該會收到如下的回應：
 
-![圖像](../images/remote-control-06.png)
+![圖像](../images/remote_control_and_following/remote-control-06.png)
 
 如果你沒有收到任何回應，請檢查下方的 [問題排除](#SMSCommands-troubleshooting) 區段。
 
@@ -154,7 +154,7 @@ PIN 碼要求如下：
 
 當你第一次嘗試發送 SMS 指令時，建議你在 **AAPS** 手機的面前進行，以查看其運作方式：
 
-![圖像](../images/remote-control-16.png)
+![圖像](../images/remote_control_and_following/remote-control-16.png)
 
 照護者的手機將收到來自 **AAPS** 的簡訊，以確認遠端簡訊指令是否已成功執行。
 
@@ -182,7 +182,7 @@ PIN 碼要求如下：
 
 指令必須以英文發送，回覆將使用你當地的語系，如果該回覆字符串已經[翻譯](#translations-translate-strings-for-AAPS-app)。指令不區分大小寫，可以使用小寫或大寫字母。
 
-![SMS 指令範例](../images/SMSCommands.png)
+![SMS 指令範例](../images/remote_control_and_following/SMSCommands.png)
 
 下方的**簡訊指令表**顯示所有可能的簡訊指令。給出了一些_範例值_來幫助暸解。這些指令具有取自**AAPS**應用程式本身的相同可用值範圍（目標、百分比設定等）。
 
@@ -191,11 +191,11 @@ PIN 碼要求如下：
 
 某些簡訊指令會立即回應，而某些指令則需要透過驗證器應用進行強驗證。類似 “**BG**” 的簡單查詢（請求獲取當前血糖更新）非常快速，只需輸入，不需要驗證，並返回下方顯示的**AAPS**狀態信息：
 
-![圖像](../images/remote-control-06.png)
+![圖像](../images/remote_control_and_following/remote-control-06.png)
 
 某些需要更高安全性的指令需要輸入安全碼，例如：
 
-![已通過簡訊驗證](../images/remote-control-07.png)
+![已通過簡訊驗證](../images/remote_control_and_following/remote-control-07.png)
 
 下方表格中的*Auth*欄位指示每個命令是否需要此類強驗證。
 
@@ -210,7 +210,7 @@ PIN 碼要求如下：
 
 | 指令                   | 驗證 | 功能 & *回應*                                                                              |
 | -------------------- | -- | -------------------------------------------------------------------------------------- |
-| 幫浦                   | 否  | 上次連線：1 分鐘前<br/>基礎率：0.00 U/h @11:38 5/30 分鐘<br/>活性胰島素：0.5 U 剩餘量：34 U 電池：100 |
+| PUMP                 | 否  | 上次連線：1 分鐘前<br/>基礎率：0.00 U/h @11:38 5/30 分鐘<br/>活性胰島素：0.5 U 剩餘量：34 U 電池：100 |
 | PUMP DISCONNECT *30* | 是  | 在 *30* 分鐘內中斷幫浦                                                                         |
 | PUMP CONNECT         | 是  | 幫浦已重新連線                                                                                |
 
@@ -311,12 +311,12 @@ PIN 碼要求如下：
 ### 短信命令完全沒有回覆
 
 在看護者手機和/或 **AAPS** 手機上，請嘗試停用以下選項：
-* **作為聊天訊息發送** ![停用 SMS 作為聊天訊息](../images/SMSdisableChat.png)
+* **作為聊天訊息發送** ![停用 SMS 作為聊天訊息](../images/remote_control_and_following/SMSdisableChat.png)
 * 如果使用 Android 訊息應用程序或 Google 訊息應用程序，請停用 RCS 訊息：
   - 打開 Messages 中的特定 SMS 對話
   - 選擇右上角的選項省略號
   - 選擇「詳細訊息」
-  - 啟用「僅發送 SMS 和 MMS 訊息」 ![停用 RCS 作為聊天訊息](../images/SMSdisableRCS.png)
+  - 啟用「僅發送 SMS 和 MMS 訊息」 ![停用 RCS 作為聊天訊息](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### 執行命令時出錯
 
@@ -331,7 +331,7 @@ PIN 碼要求如下：
 
 常見錯誤的範例如下所示：
 
-![圖像](../images/remote-control-17.png)
+![圖像](../images/remote_control_and_following/remote-control-17.png)
 
 ### 一旦命令經過驗證，我該如何停止該命令？
 
