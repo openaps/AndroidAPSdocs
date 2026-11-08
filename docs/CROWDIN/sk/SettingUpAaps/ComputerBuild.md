@@ -255,7 +255,7 @@ V istom momente sa Android Studio zatvorí a znova spustí. Môže sa zobraziť 
 
 Iba pre používateľov Windows: ak sa váš firewall pýta na povolenie, povoľte prístup:
 
- ![Povolenie pre java vo firewalle](../images/AndroidStudio361_18.png)
+ ![Povolenie pre java vo firewalle](../images/Building-the-App/AndroidStudio361_18.png)
 
 Po úspešnom naklonovaní repozitára Android Studio otvorí naklonovaný projekt.
 
