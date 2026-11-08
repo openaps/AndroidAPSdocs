@@ -91,6 +91,8 @@ Elige entre el tema claro, el tema oscuro o seguir el ajuste del sistema del tel
 
 Obligatoria para poder [exportar los ajustes](../Maintenance/ExportImportSettings.md), porque están cifrados desde la versión 2.7.
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **La protección biométrica puede no funcionar en teléfonos OnePlus. Es un problema conocido de OnePlus en algunos teléfonos.**
 
 ![Establecer la contraseña maestra](../images/preferences/master_password_dialog.png)
