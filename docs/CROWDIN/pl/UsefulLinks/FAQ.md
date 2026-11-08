@@ -74,7 +74,7 @@ Musisz mieć przy sobie ten sam sprzęt awaryjny, co każda inna osoba z cukrzyc
   * aktualny plik [APK](../SettingUpAaps/BuildingAaps.md) AAPS i innych aplikacji, których używasz (np. xDrip, Juggluco, BYODA).
   * plik magazynu kluczy (keystore) z budowania APK i jego hasło,
   * najnowsze pliki eksportu ustawień z AAPS i innych aplikacji,
-  * hasło główne **AAPS**: bez niego nie zaimportujesz pliku ustawień.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ Jeśli zapomnisz hasła głównego, możesz je zresetować na numer seryjny pomp
 
 1. Utwórz pusty plik o nazwie `PasswordReset` (bez rozszerzenia) w podfolderze `extra` katalogu AAPS (zwykle `AAPS/extra`).
 2. Uruchom ponownie **AAPS**. Pompa musi być połączona: **AAPS** pokazuje „Oczekiwanie na pompę…” i musi odczytać numer seryjny pompy w ciągu 30 sekund.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. **AAPS** pokazuje „Hasło ustawione!”: Twoje hasło główne to teraz **numer seryjny pompy**. Plik `PasswordReset` zostanie usunięty automatycznie.
+
 4. Otwórz **Ustawienia** > **Ochrona aplikacji** > **Hasło główne** i ustaw nowe hasło.
 
 Jeśli AAPS nie połączy się z pompą na czas, nic się nie zmieni: sprawdź połączenie z pompą i spróbuj ponownie.
