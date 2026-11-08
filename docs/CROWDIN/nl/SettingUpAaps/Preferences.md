@@ -91,6 +91,8 @@ Kies tussen het lichte thema, het donkere thema of de systeeminstelling van je t
 
 Verplicht om [instellingen te kunnen exporteren](../Maintenance/ExportImportSettings.md), omdat die vanaf versie 2.7 versleuteld zijn.
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **Biometrische beveiliging werkt misschien niet op OnePlus-telefoons. Dit is een bekend probleem van OnePlus op sommige telefoons.**
 
 ![Hoofdwachtwoord instellen](../images/preferences/master_password_dialog.png)
