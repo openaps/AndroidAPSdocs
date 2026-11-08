@@ -255,7 +255,7 @@ Android Studio 시작 화면(Welcome)에서 왼쪽의 "**Projects**"(1)가 강�
 
 Windows 사용자만 해당: 방화벽이 권한을 요청하면 접근을 허용하십시오:
 
- ![Java 방화벽 권한](../images/AndroidStudio361_18.png)
+ ![Java 방화벽 권한](../images/Building-the-App/AndroidStudio361_18.png)
 
 저장소 복제가 끝나면 Android Studio가 복제된 프로젝트를 엽니다.
 
