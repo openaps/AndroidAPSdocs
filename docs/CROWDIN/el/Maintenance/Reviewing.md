@@ -114,7 +114,7 @@ HbA1c: η εκτίμηση της γλυκοζυλιωμένης αιμοσφα�
 (screens-bolus-carbs)=
 ### Υδατάνθρακες και bolus
 
-![Υδατάνθρακες και bolus](../images/TreatmentsView1.png)
+![Υδατάνθρακες και bolus](../images/Maintenance/TreatmentsView1.png)
 
 Σε αυτή την καρτέλα μπορείτε να δείτε το ιστορικό bolus και υδατανθράκων. Κάθε bolus (γραμμή **1**) δείχνει το IOB που απομένει από αυτό δίπλα στην ποσότητα ινσουλίνης. Η προέλευση του bolus μπορεί να είναι:
 * Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
@@ -141,7 +141,7 @@ HbA1c: η εκτίμηση της γλυκοζυλιωμένης αιμοσφα�
 
 ### Προσωρινός βασικός ρυθμός
 
-![Προσωρινός βασικός ρυθμός](../images/TreatmentsView2.png)
+![Προσωρινός βασικός ρυθμός](../images/Maintenance/TreatmentsView2.png)
 
 Οι **προσωρινοί βασικοί ρυθμοί** που εφαρμόστηκαν από το κύκλωμα εμφανίζονται εδώ. Όταν μια καταχώρηση έχει ακόμη επίδραση στο IOB, η πληροφορία εμφανίζεται δίπλα στον ρυθμό (γραμμή **1**). Μπορεί να είναι:
 * Θετικό IOB, αν ο προσωρινός βασικός ρυθμός ήταν υψηλότερος από αυτόν που ορίζει το προφίλ
@@ -153,13 +153,13 @@ On the left of a line, a red S means “Suspend”: it happens when basal is not
 
 ### Προσωρινός στόχος
 
-![Προσωρινός στόχος](../images/TreatmentsView3.png)
+![Προσωρινός στόχος](../images/Maintenance/TreatmentsView3.png)
 
 Εδώ μπορείτε να δείτε το ιστορικό των προσωρινών στόχων.
 
 ### Αλλαγή Προφίλ
 
-![Αλλαγή Προφίλ](../images/TreatmentsView4.png)
+![Αλλαγή Προφίλ](../images/Maintenance/TreatmentsView4.png)
 
 Εδώ μπορείτε να δείτε το ιστορικό των αλλαγών προφίλ. Μπορεί να δείτε πολλές καταχωρήσεις κάθε φορά που αλλάζετε προφίλ: η γραμμή **1**, αποθηκευμένη και στο NS και στο ιστορικό της αντλίας, αντιστοιχεί στην πραγματική αλλαγή. Η γραμμή **2**, αποθηκευμένη στο Nightscout αλλά όχι στο ιστορικό της αντλίας, αντιστοιχεί στο αίτημα αλλαγής προφίλ που έκανε ο χρήστης.
 
@@ -169,14 +169,14 @@ On the left of a line, a red S means “Suspend”: it happens when basal is not
 
 ### Careportal
 
-![Careportal](../images/TreatmentsView5.png)
+![Careportal](../images/Maintenance/TreatmentsView5.png)
 
 Αυτή η καρτέλα δείχνει όλες τις σημειώσεις και τις καταχωρήσεις careportal που έχουν καταγραφεί στο Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Τρόπος λειτουργίας
 
-![Τρόπος λειτουργίας](../images/TreatmentsView6.png)
+![Τρόπος λειτουργίας](../images/Maintenance/TreatmentsView6.png)
 
 This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 
