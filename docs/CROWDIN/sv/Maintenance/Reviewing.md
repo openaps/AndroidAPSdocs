@@ -114,7 +114,7 @@ I slutet av varje rad visar små ikoner varifrån data kommer eller vart de har 
 (screens-bolus-carbs)=
 ### Kolhydrater och bolus
 
-![Kolhydrater och bolus](../images/TreatmentsView1.png)
+![Kolhydrater och bolus](../images/Maintenance/TreatmentsView1.png)
 
 På den här fliken ser du loggen över bolusar och kolhydrater. Varje bolus (rad **1**) visar kvarvarande IOB för bolusen bredvid insulinmängden. Bolusen kan komma från:
 * Måltid (angiven manuellt med knapparna Insulin, Snabbknapp eller Kalkylator)
@@ -141,7 +141,7 @@ Behandlingshistoriken kan användas för att rätta felaktiga kolhydratposter (_
 
 ### Tillfällig basal
 
-![Tillfällig basal](../images/TreatmentsView2.png)
+![Tillfällig basal](../images/Maintenance/TreatmentsView2.png)
 
 De **tillfälliga basaler** som loopen har satt visas här. När en post fortfarande påverkar IOB visas informationen bredvid dosen (rad **1**). Det kan vara:
 * Positiv IOB om den tillfälliga basalen var högre än den som är inställd i profilen
@@ -153,13 +153,13 @@ Till vänster på en rad betyder ett rött S ”Suspend” (pausad): det händer
 
 ### Tillfälligt målvärde
 
-![Tillfälligt målvärde](../images/TreatmentsView3.png)
+![Tillfälligt målvärde](../images/Maintenance/TreatmentsView3.png)
 
 Här ser du historiken över tillfälliga målvärden.
 
 ### Profilbyte
 
-![Profilbyte](../images/TreatmentsView4.png)
+![Profilbyte](../images/Maintenance/TreatmentsView4.png)
 
 Här ser du historiken över profilbyten. Du kan se flera poster varje gång du byter profil: rad **1**, som sparas både i NS och i pumphistoriken, motsvarar själva bytet. Rad **2**, som sparas i Nightscout men inte i pumphistoriken, motsvarar användarens begäran om ett profilbyte.
 
@@ -169,14 +169,14 @@ Du kan använda knappen **Klona** på rad **2** för att göra en kopia av ett *
 
 ### Careportal
 
-![Careportal](../images/TreatmentsView5.png)
+![Careportal](../images/Maintenance/TreatmentsView5.png)
 
 Den här fliken visar alla anteckningar och Careportal-poster som har sparats i Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Körläge
 
-![Körläge](../images/TreatmentsView6.png)
+![Körläge](../images/Maintenance/TreatmentsView6.png)
 
 Den här fliken visar historiken över ändringar av [loopstatus](#AapsScreens-loop-status): öppen, sluten, LGS, pausad, frånkopplad.
 
