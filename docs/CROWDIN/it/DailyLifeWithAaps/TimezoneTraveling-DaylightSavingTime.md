@@ -33,7 +33,7 @@ Per evitarlo ci sono due possibilità:
    * Seleziona il tuo **Profilo** e tocca **▶ Attiva**
    * Set '**Time shift**' according to your destination and tap **Activate**.
    
-   ![Cambio profilo con sfasamento temporale](../images/ProfileSwitchTimeShift2.png)
+   ![Cambio profilo con sfasamento temporale](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * e.g. Vienna -> New York: **Profile Switch** +6 hours
    * e.g. Vienna -> Sydney: **Profile Switch** -8 hours
