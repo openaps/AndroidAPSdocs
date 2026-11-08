@@ -33,7 +33,7 @@ To avoid this there are two possibilities:
    * יש לבחור את ה**פרופיל** ולהקיש על **▶ הפעלה**
    * יש להגדיר '**היסט זמן**' בהתאם למקום היעד ולהקיש על **הפעלה**.
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![Profile switch with time shift](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * למשל וינה ← ניו יורק: **החלפת פרופיל** +6 שעות
    * למשל וינה ← סידני: **החלפת פרופיל** -8 שעות
