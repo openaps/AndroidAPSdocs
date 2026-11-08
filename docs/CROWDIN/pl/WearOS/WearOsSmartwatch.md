@@ -211,7 +211,7 @@ Na zegarku:
 
 Pojawi się kod parowania Wi-Fi oraz adres IP i port:
 
-![Ekran zegarka z kodem parowania Wi-Fi oraz adresem IP i portem](../images/wearos/ADB03.png)
+![Ekran zegarka z kodem parowania Wi-Fi oraz adresem IP i portem](../images/wearos/watch_wifi_pairing_code.png)
 
 - W terminalu: `adb pair ipaddress:port` Np. `adb pair 10.10.1.125:36299`
 - Pojawi się prośba o kod parowania. Wpisz go.
