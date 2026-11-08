@@ -91,6 +91,8 @@
 
 버전 2.7부터 설정이 암호화되므로, [설정 내보내기](../Maintenance/ExportImportSettings.md)를 하려면 반드시 필요합니다.
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **OnePlus 휴대폰에서는 생체 인식 보안이 작동하지 않을 수 있습니다. 이것은 일부 OnePlus 휴대폰에서 알려진 문제입니다.**
 
 ![마스터 비밀번호 설정](../images/preferences/master_password_dialog.png)
