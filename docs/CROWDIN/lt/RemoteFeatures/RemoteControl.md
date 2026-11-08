@@ -134,21 +134,21 @@ Nightscout yra serveris „debesyje“, bet yra ir atskira **Nightscout** progra
 
 Įdiegę **Nightscout** programėlę į iPhone, atidarykite ją ir vykdykite sąrankos nurodymus: įveskite savo Nightscout adresą (žr. žemiau, kairėje). Jo forma gali skirtis, priklausomai nuo to, kur talpinamas jūsų Nightscout. (_pvz._, http://youraddresshere.herokuapp.com). Tada įveskite savo Nightscout API secret (žr. žemiau, dešinėje). Jei API slaptažodžio neprašoma, jį reikia įvesti paspaudus spynos piktogramą programėlės viršuje:
 
-![image](../images/remote-control-24.png)
+![image](../images/remote_control_and_following/remote-control-24.png)
 
 Daugiau informacijos apie sąranką rasite tiesiai [Nightscout](https://nightscout.github.io/nightscout/discover/) svetainėje
 
 Pirmą kartą prisijungus, vaizdas bus labai paprastas. Rodymo parinktis pritaikykite pasirinkę „hamburger“ meniu (☰) viršuje dešinėje ir slinkdami žemyn:
 
-![image](../images/remote-control-25.png)
+![image](../images/remote_control_and_following/remote-control-25.png)
 
 Slinkite žemyn iki „Settings“ (nustatymai). Galite pakeisti „scale“ (skalė) į „linear“ (tiesinė), nes KG rodymui numatyta logaritminė skalė, o skiltyje „render basal“ (valandinės bazės rodymas) pasirinkite „default“ (numatyta), kad būtų rodoma pompos valandinė bazė.
 
-![image](../images/remote-control-25b.png)
+![image](../images/remote_control_and_following/remote-control-25b.png)
 
 Pasirinkite norimas parinktis. Jei aliarmams naudojate kitą programėlę, nuimkite aliarmų žymėjimą.
 
-![image](../images/remote-control-26.png)
+![image](../images/remote_control_and_following/remote-control-26.png)
 
 Slinkite toliau žemyn iki „show plugins“ (rodyti įskiepius).
 
@@ -156,7 +156,7 @@ Būtinai pažymėkite „careportal“. Taip pat galite pasirinkti įvairius kit
 
 Svarbu: dabar apačioje reikia paspausti „save“ (išsaugoti), kad pakeitimai įsigaliotų.
 
-![image](../images/remote-control-27.png)
+![image](../images/remote_control_and_following/remote-control-27.png)
 
 Paspaudus „save“, programėlė grįš į pagrindinį Nightscout ekraną, kuris atrodys maždaug taip:
 
@@ -170,7 +170,7 @@ Paspaudus „save“, programėlė grįš į pagrindinį Nightscout ekraną, kur
 8. Valandinės bazės profilis
 9. Žalia linija = ankstesnė glikemija Mėlynos linijos = prognozuojama glikemija
 
-![image](../images/remote-control-28.png)
+![image](../images/remote_control_and_following/remote-control-28.png)
 
 Išsamiau apie Nightscout programėlės meniu viršuje kairėje:
 
@@ -179,7 +179,7 @@ Išsamiau apie Nightscout programėlės meniu viršuje kairėje:
 3. Meniu (☰) – nustatymams keisti
 4. Careportal – terapijos įrašas (kada **AAPS** juos taiko, žr. [toliau](#RemoteControl_nightscout-treatments))
 
-![Nightscout viršutinė juosta](../images/remote-control-29.png)
+![Nightscout viršutinė juosta](../images/remote_control_and_following/remote-control-29.png)
 
 Šiame ekrane pilkuose skirtukuose yra labai daug informacijos apie **AAPS** sistemos būseną (o paspaudus skirtuką parodoma dar daugiau):
 
@@ -195,9 +195,9 @@ Išsamiau apie Nightscout programėlės meniu viršuje kairėje:
 10. AAPS telefono baterijos būsena
 11. Jūsų duomenų bazės dydis. Jei ji per daug prisipildo (tik savarankiškai įdiegtam Nightscout – mokamų paslaugų naudotojai gali to nepaisyti), gali prasidėti ryšio problemos. Norėdami sumažinti šį skaičių, galite ištrinti duomenis meniu Admin tools (per ☰ meniu).
 
-![image](../images/remote-control-30.png)
+![image](../images/remote_control_and_following/remote-control-30.png)
 
-![image](../images/remote-control-31.png)
+![image](../images/remote_control_and_following/remote-control-31.png)
 
 Paspauskite „refresh“ (atnaujinti) puslapio apačioje, kad uždarytumėte iškylantį langą.
 
@@ -233,7 +233,7 @@ Tai galėtų būti naudinga ištrinant įvestus angliavandenius, kuriems bolusas
 
 ### 1 variantas) AAPS valdymas iš Wear OS laikrodžio
 
-![Wear nuotolinis valdymas 1](../images/Wear_Remote1.png)
+![Wear nuotolinis valdymas 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 Kai [nustatysite **AAPS** laikrodyje](../WearOS/BuildingAapsWearOS.md), išsamią informaciją apie išmaniojo laikrodžio ciferblatus ir jų funkcijas rasite puslapyje [Wear AAPS naudojimas išmaniajame laikrodyje](../WearOS/WearOsSmartwatch.md).
 
@@ -285,19 +285,19 @@ Toliau pateiktos išsamios instrukcijos, kaip nustatyti **AAPS** populiariame Sa
 
 ### 3 variantas) AAPSClient laikrodyje, telefone esančiai **AAPS** valdyti nuotoliniu būdu
 
-![Wear nuotolinis valdymas 2](../images/Wear_Remote2.png)
+![Wear nuotolinis valdymas 2](../images/remote_control_and_following/Wear_Remote2.png)
 
 Laikrodžio programinę įrangą, **AAPSClient** Wear apk, galima atsisiųsti tiesiai iš [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 Norėdami atsisiųsti programinę įrangą, paspauskite laikrodžio programėlę, atitinkančią kliento programėlę telefone: **wear-aapsclient-release_**_versija_ skirta **AAPSClient**, **wear-aapsclient2-release_**_versija_ skirta **AAPSClient2** (žr. [Apie AAPSClient, AAPSClient2 ir AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![image](../images/github_release_wear_aapsclient_apk.png)
+![image](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 Tada pasirinkite „save as“ (įrašyti kaip) ir įrašykite failą į patogią vietą kompiuteryje:
 
 
-![image](../images/save_as_wear_aapsclient_apk.png)
+![image](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 
