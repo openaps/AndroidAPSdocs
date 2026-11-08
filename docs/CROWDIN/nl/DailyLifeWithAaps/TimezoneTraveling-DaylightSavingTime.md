@@ -33,7 +33,7 @@ Om dit te voorkomen zijn er twee mogelijkheden:
    * Kies je **Profiel** en tik op **▶ Activeer**
    * Stel '**Tijd verschuiving**' in volgens je bestemming en tik op **Activeer**.
    
-   ![Profiel wissel met tijdverschuiving](../images/ProfileSwitchTimeShift2.png)
+   ![Profiel wissel met tijdverschuiving](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * bijv. Wenen -> New York: **Profiel wissel** +6 uur
    * bijv. Wenen -> Sydney: **Profiel wissel** -8 uur
