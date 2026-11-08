@@ -291,13 +291,13 @@ The software for the watch, **AAPSClient** Wear apk, can be downloaded directly 
 
 Щоб завантажити програму, натисніть на застосунок для годинника, який відповідає клієнтському застосунку на телефоні: **wear-aapsclient-release_**_версія_ — для **AAPSClient**, **wear-aapsclient2-release_**_версія_ — для **AAPSClient2** (див. [Про AAPSClient, AAPSClient2 і AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![зображення](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+![зображення](../images/github_release_wear_aapsclient_apk.png)
 
 
 Потім виберіть «save as» (зберегти як) і збережіть файл у зручне місце на комп'ютері:
 
 
-![зображення](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+![зображення](../images/save_as_wear_aapsclient_apk.png)
 
 
 
