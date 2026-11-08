@@ -2,7 +2,7 @@
 
 Freestyle Libre 3 (FSL3), KŞ değerlerini AAPS'e almak için özel bir kurulum gerektirir. Freestyle Libre 3 (FSL3) değerlerini AAPS'e almanın iki yolu vardır.
 
-![FL3](../images/d912c1d3-06d2-4b58-ad7c-025ca1980fae.jpeg)
+![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
 
 Aşağıdaki yöntemler, ayrı bir uygulama olan Juggluco'yu kullanır. Sensörden ham, 1 dakika aralıklı verileri almak için Juggluco'yu kullanır; bu veriler sonra xDrip'e veya AAPS'e iletilir. Yeni sensörler Libre 3 uygulamasıyla ya da doğrudan Juggluco'da başlatılabilir. Aşağıdaki kılavuz, bir sensörün Juggluco uygulamasıyla nasıl başlatılacağını anlatır. Sensör, bir LibreView hesabında oturum açıkken başlatıldıysa, alıcı olarak Juggluco ile Libre 3 uygulaması arasında geçiş yapmak da mümkündür.
 
