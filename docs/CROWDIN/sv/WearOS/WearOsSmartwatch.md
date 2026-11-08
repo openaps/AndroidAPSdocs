@@ -318,7 +318,7 @@ Dessa platser fungerar bara på klockor med **Wear OS 5 eller äldre**, där den
 
 ## Urtavlan AAPSv2 – förklaring
 
-![Förklaring till urtavlan AAPSv2](../images/Watchface_Legend.png)
+![Förklaring till urtavlan AAPSv2](../images/wearos/Watchface_Legend.png)
 
 A – tid sedan senaste loopkörning
 
