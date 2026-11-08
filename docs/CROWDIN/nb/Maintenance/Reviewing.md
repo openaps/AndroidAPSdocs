@@ -114,7 +114,7 @@ På slutten av hver linje viser små ikoner hvor dataene kommer fra eller er sen
 (screens-bolus-carbs)=
 ### Karbo og bolus
 
-![Karbo & bolus](../images/TreatmentsView1.png)
+![Karbo & bolus](../images/Maintenance/TreatmentsView1.png)
 
 På denne fanen kan du se loggen over bolus og karbohydrater. Hver bolus (linje **1**) viser gjenværende tilhørende IOB ved siden av insulinmengden. Bolusen kan komme fra:
 * Måltid (registrert manuelt via knappene Insulin, Hurtigknapp eller Boluskalkulator)
@@ -141,7 +141,7 @@ Behandlingshistorikk kan brukes til å rette feil karbohydratoppføringer (_det 
 
 ### Midlertidig basal
 
-![Midlertidig basal](../images/TreatmentsView2.png)
+![Midlertidig basal](../images/Maintenance/TreatmentsView2.png)
 
 De **midlertidige basalene** som loopen har satt, vises her. Når en oppføring fortsatt påvirker IOB, vises informasjonen ved siden av dosen (linje **1**). Det kan være:
 * Positiv IOB hvis den midlertidige basalen var høyere enn den som er satt i profilen
@@ -153,13 +153,13 @@ Til venstre på en linje betyr en rød S «Pauset»: det skjer når det ikke gis
 
 ### Midlertidig mål
 
-![Midlertidig mål](../images/TreatmentsView3.png)
+![Midlertidig mål](../images/Maintenance/TreatmentsView3.png)
 
 Historikken over midlertidige mål kan ses her.
 
 ### Profilbytte
 
-![Profilbytte](../images/TreatmentsView4.png)
+![Profilbytte](../images/Maintenance/TreatmentsView4.png)
 
 Historikken over profilbytter kan ses her. Du kan se flere oppføringer hver gang du bytter profil: linje **1**, som er lagret både i NS og i pumpehistorikken, tilsvarer selve byttet. Linje **2**, som er lagret i Nightscout, men ikke i pumpehistorikken, tilsvarer forespørselen om profilbytte som brukeren gjorde.
 
@@ -169,14 +169,14 @@ Du kan bruke knappen **Dupliser** på linje **2** for å lage en kopi av et **Pr
 
 ### Helseportal
 
-![Helseportal](../images/TreatmentsView5.png)
+![Helseportal](../images/Maintenance/TreatmentsView5.png)
 
 Denne fanen viser alle merknader og helseportal-oppføringer som er registrert i Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Kjøremodus
 
-![Kjøremodus](../images/TreatmentsView6.png)
+![Kjøremodus](../images/Maintenance/TreatmentsView6.png)
 
 Denne fanen viser historikken over endringer i [loop-status](#AapsScreens-loop-status): åpen, lukket, LGS, pause, frakobling.
 
