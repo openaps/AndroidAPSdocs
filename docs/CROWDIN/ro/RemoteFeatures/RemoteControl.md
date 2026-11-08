@@ -134,21 +134,21 @@ As well as Nightscout being a server in “the Cloud”, there is also a dedicat
 
 Once you have installed the **Nightscout** app on your iPhone, open the app and follow the set-up prompts, entering your Nightscout address (see below, left). The form of this may vary depending on how your Nightscout is hosted. (_de ex._ http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (see below, right). Dacă nu vi se cere parola API, trebuie să o introduceți apăsând pe lacătul din partea de sus a aplicației:
 
-![imagine](../images/remote-control-24.png)
+![imagine](../images/remote_control_and_following/remote-control-24.png)
 
 More info on setup is available directly from [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
 When you first log in, you will have a very simple display. Customize the display options, by selecting the “hamburger” in the top right and scrolling down:
 
-![imagine](../images/remote-control-25.png)
+![imagine](../images/remote_control_and_following/remote-control-25.png)
 
 Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up.
 
-![imagine](../images/remote-control-25b.png)
+![imagine](../images/remote_control_and_following/remote-control-25b.png)
 
 Selectați opțiunile dorite. Debifați alarmele dacă folosiți o altă aplicație pentru alarme.
 
-![imagine](../images/remote-control-26.png)
+![imagine](../images/remote_control_and_following/remote-control-26.png)
 
 Continue to scroll down until you get to “show plugins”.
 
@@ -156,7 +156,7 @@ You need to make sure “careportal” is checked, and can also select various o
 
 Importantly, you now need to click “save” at the bottom for these changes to take effect.
 
-![imagine](../images/remote-control-27.png)
+![imagine](../images/remote_control_and_following/remote-control-27.png)
 
 După ce apăsați „save”, aplicația revine la ecranul principal Nightscout, care va arăta cam așa:
 
@@ -170,7 +170,7 @@ După ce apăsați „save”, aplicația revine la ecranul principal Nightscout
 8. Basal insulin profile
 9. Linia verde = valoarea istorică a glicemiei Linii albastre = glicemia prognozată
 
-![imagine](../images/remote-control-28.png)
+![imagine](../images/remote_control_and_following/remote-control-28.png)
 
 Looking in more detail at the top left menu of the Nightscout app:
 
@@ -179,7 +179,7 @@ Looking in more detail at the top left menu of the Nightscout app:
 3. Hamburger - pentru setarea preferințelor
 4. Careportal - Log treatment (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies these)
 
-![Bara de sus Nightscout](../images/remote-control-29.png)
+![Bara de sus Nightscout](../images/remote_control_and_following/remote-control-29.png)
 
 There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
 
@@ -195,9 +195,9 @@ There is a huge amount of information on the status of the **AAPS** system in th
 10. Battery status of AAPS phone
 11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
 
-![imagine](../images/remote-control-30.png)
+![imagine](../images/remote_control_and_following/remote-control-30.png)
 
-![imagine](../images/remote-control-31.png)
+![imagine](../images/remote_control_and_following/remote-control-31.png)
 
 Press "refresh" at the bottom of the page to close the popup.
 
@@ -233,7 +233,7 @@ Although this could potentially be useful for deleting announced (but not boluse
 
 ### Opțiunea 1) Controlul AAPS de pe un ceas Wear OS
 
-![Wear Remote 1](../images/Wear_Remote1.png)
+![Wear Remote 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 Once you have [setup **AAPS** on your watch](../WearOS/BuildingAapsWearOS.md), extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
 
@@ -285,19 +285,19 @@ Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Wat
 
 ### Opțiunea 3) AAPSClient pe un ceas, pentru controlul de la distanță al **AAPS** de pe un telefon
 
-![Wear Remote 2](../images/Wear_Remote2.png)
+![Wear Remote 2](../images/remote_control_and_following/Wear_Remote2.png)
 
 Programul pentru ceas, fișierul apk **AAPSClient** Wear, poate fi descărcat direct de pe [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 To download the software, click on the watch app that matches the client app on the phone: **wear-aapsclient-release_**_version_ goes with **AAPSClient**, **wear-aapsclient2-release_**_version_ goes with **AAPSClient2** (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![imagine](../images/github_release_wear_aapsclient_apk.png)
+![imagine](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 Then "save as" and save the file to a convenient location on your computer:
 
 
-![imagine](../images/save_as_wear_aapsclient_apk.png)
+![imagine](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 
