@@ -172,7 +172,7 @@ Grįžkite atgal rodykle viršutiniame kairiajame kampe. Dabar vedlys rodo „**
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**NEPAMESKITE SAVO PAGRINDINIO SLAPTAŽODŽIO**. Užsirašykite jį, _pvz._, Google Drive. Tai gera vieta, nes Google už jus daro atsargines kopijas. Jūsų telefonas ar kompiuteris gali sugesti, ir galite likti be jokios kopijos. Jei pamiršite pagrindinį slaptažodį, vėliau gali būti sunku atkurti profilio konfigūraciją ir **mokymo etapų** pažangą.
+**NEPAMESKITE SAVO PAGRINDINIO SLAPTAŽODŽIO**. Užsirašykite jį, _pvz._, Google Drive. Tai gera vieta, nes Google už jus daro atsargines kopijas. Jūsų telefonas ar kompiuteris gali sugesti, ir galite likti be jokios kopijos. Jei pamiršite pagrindinį slaptažodį, vėliau gali būti sunku atkurti profilio konfigūraciją ir **mokymo etapų** pažangą. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 Kai baigsite, spauskite „**TOLIAU**“, kad pereitumėte į kitą ekraną.
