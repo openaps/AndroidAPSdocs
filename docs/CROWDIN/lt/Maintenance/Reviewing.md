@@ -114,7 +114,7 @@ Kiekvienos eilutės gale mažos piktogramos rodo, iš kur duomenys gauti arba ku
 (screens-bolus-carbs)=
 ### AV ir bolusai
 
-![AV ir bolusai](../images/TreatmentsView1.png)
+![AV ir bolusai](../images/Maintenance/TreatmentsView1.png)
 
 Šiame skirtuke galite peržiūrėti bolusų ir angliavandenių žurnalą. Prie kiekvieno boluso (**1** eilutė) šalia insulino kiekio rodomas su juo susijęs likęs AIO. Bolusas gali būti:
 * Valgiui (įvestas rankiniu būdu mygtukais Insulinas, Greitasis vedlys arba Boluso patarėjas)
@@ -141,7 +141,7 @@ Terapijos istoriją galima naudoti klaidingiems angliavandenių įrašams taisyt
 
 ### Laikina bazė
 
-![Laikina bazė](../images/TreatmentsView2.png)
+![Laikina bazė](../images/Maintenance/TreatmentsView2.png)
 
 Čia rodomos ciklo nustatytos **laikinos bazės**. Kai įrašas vis dar turi įtakos AIO, ši informacija rodoma šalia bazės dydžio (**1** eilutė). Ji gali būti:
 * Teigiamas AIO, jei laikina bazė buvo didesnė už nustatytą profilyje
@@ -153,13 +153,13 @@ Raudona S raidė eilutės kairėje reiškia „Suspend“ (sustabdyta): taip bū
 
 ### Temporary target
 
-![Temporary target](../images/TreatmentsView3.png)
+![Temporary target](../images/Maintenance/TreatmentsView3.png)
 
 Čia matoma laikinų tikslų istorija.
 
 ### Profilio keitimas
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profile Switch](../images/Maintenance/TreatmentsView4.png)
 
 Čia matoma profilio keitimų istorija. Kiekvieną kartą keičiant profilį galite matyti kelis įrašus: **1** eilutė, įrašyta ir NS, ir pompos istorijoje, atitinka faktinį keitimą. **2** eilutė, įrašyta Nightscout, bet ne pompos istorijoje, atitinka naudotojo pateiktą profilio keitimo užklausą.
 
@@ -169,14 +169,14 @@ Mygtuku **Klonuoti**, rodomu **2** eilutėje, galite sukurti **Profilio keitimas
 
 ### Terapija
 
-![Terapija](../images/TreatmentsView5.png)
+![Terapija](../images/Maintenance/TreatmentsView5.png)
 
 Šiame skirtuke rodomos visos Nightscout įrašytos pastabos ir terapijos įrašai.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Veikimo režimas
 
-![Veikimo režimas](../images/TreatmentsView6.png)
+![Veikimo režimas](../images/Maintenance/TreatmentsView6.png)
 
 Šiame skirtuke rodoma [ciklo būsenos](#AapsScreens-loop-status) pokyčių istorija: atviras, uždaras, LGS, sustabdytas, atjungtas.
 
