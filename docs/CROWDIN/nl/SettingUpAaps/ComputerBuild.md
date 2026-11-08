@@ -255,7 +255,7 @@ Op een gegeven moment sluit Android Studio en start het opnieuw. Misschien word 
 
 Alleen voor Windows-gebruikers: vraagt je firewall om toestemming, geef dan toegang:
 
- ![Firewall toestemming java](../images/AndroidStudio361_18.png)
+ ![Firewall toestemming java](../images/Building-the-App/AndroidStudio361_18.png)
 
 Nadat de repository succesvol is gekloond, zal Android Studio het gekloonde project openen.
 
