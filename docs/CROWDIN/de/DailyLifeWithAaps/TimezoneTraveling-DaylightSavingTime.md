@@ -33,7 +33,7 @@ Um dies zu vermeiden, gibt es zwei Möglichkeiten:
    * Wähle Dein **Profil** und tippe auf **▶ Aktivieren**
    * Stelle die „**Zeitverschiebung**“ passend zu Deinem Reiseziel ein und tippe auf **Aktivieren**.
    
-   ![Profilwechsel mit Zeitverschiebung](../images/ProfileSwitchTimeShift2.png)
+   ![Profilwechsel mit Zeitverschiebung](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * z. B. Wien -> New York: **Profilwechsel** +6 Stunden
    * z. B. Wien -> Sydney: **Profilwechsel** -8 Stunden
