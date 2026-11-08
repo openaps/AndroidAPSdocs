@@ -23,7 +23,7 @@ Poniższe sekcje opisują funkcje **celu tymczasowego Ćwiczenia**, **celu tymcz
 
 ### TT - Ćwiczenia
 
-![TT Ćwiczenia](../images/TempTarget2.png)
+![TT Ćwiczenia](../images/v4/TempTarget/TempTarget2.png)
 
 **Cel BG (domyślny preset, można go zmienić)**
 
@@ -46,7 +46,7 @@ Możesz też rozważyć:
 
 ### TT - Wkrótce posiłek
 
-![TT Wkrótce posiłek](../images/TempTarget1.png)
+![TT Wkrótce posiłek](../images/v4/TempTarget/TempTarget1.png)
 
 **Cel BG (domyślny preset, można go zmienić)**
 
@@ -63,7 +63,7 @@ W zależności od poziomu **BG** **AAPS** „zwiększy” ilość podawanej insu
 
 ### TT - Hipo
 
-![TT Hipo](../images/TempTarget3.png)
+![TT Hipo](../images/v4/TempTarget/TempTarget3.png)
 
 **Cel BG (domyślny preset, można go zmienić)**
 
@@ -96,11 +96,11 @@ Wybranie karty presetu wczytuje jej **cel** i **czas trwania** do edytora.
 
     <br />### Aktywacja celu tymczasowego
     
-    Przewiń do wybranego presetu (jego wartości wczytają się do edytora), opcjonalnie zmień **cel**/**czas trwania** w edytorze, a potem dotknij **▶ Aktywuj**. Zanim cokolwiek się zacznie, potwierdzenie pokazuje dokładny cel, czas trwania i powód:
+    Przewiń do wybranego presetu (jego wartości wczytają się do edytora), opcjonalnie zmień **cel**/**czas trwania** w edytorze, a potem dotknij **▶ Aktywuj**. A confirmation shows the exact target, duration and reason before anything starts:
     
-    ![Potwierdzenie aktywacji](../images/TempTarget8.png)
+    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    Po potwierdzeniu cel tymczasowy zaczyna działać od razu (albo o wybranym czasie **Aktywacji**) i trwa przez ustawiony **czas trwania**.
+    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
     ```{admonition} Zmiana liczb działa tylko raz — nie zmienia presetu
     :class: important
@@ -148,13 +148,13 @@ Cel tymczasowy możesz też ustawić bez otwierania tego ekranu:
 
 Najszybciej jest dotknąć **elementu celu** na ekranie głównym (pokazuje on Twój aktualny zakres docelowy):
 
-![Element celu na ekranie głównym](../images/TempTarget6.png)
+![Element celu na ekranie głównym](../images/v4/TempTarget/TempTarget6.png)
 
 Otwiera to opisany wyżej ekran **Cel tymczasowy** — przewiń do presetu i dotknij **▶ Aktywuj**. Ten sam ekran otworzysz też przez **Zarządzaj** → **Cel tymczasowy**.
 
 (TempTargets-carbs-dialog)= Gdy wpisujesz węglowodany, nie musisz wcale otwierać ekranu **Cel tymczasowy**: **okno Węglowodany** (**Leczenie** → **Węglowodany**) ma na górze przełączniki **Rozpocznij TT Hipo**, **Rozpocznij TT WkrótcePosiłek** i **Rozpocznij TT Ćwiczenia**. Włącz jeden z nich, a odpowiedni preset zostanie aktywowany razem z wpisem węglowodanów:
 
-![Przełączniki TT w oknie Węglowodany](../images/TempTarget5.png)
+![Przełączniki TT w oknie Węglowodany](../images/v4/TempTarget/TempTarget5.png)
 
     {admonition} Automatyczny TT Hipo
     :class: note
@@ -171,7 +171,7 @@ Otwiera to opisany wyżej ekran **Cel tymczasowy** — przewiń do presetu i dot
 3. Zmień **Cel tymczasowy** i/lub **Czas trwania** w edytorze.
 4. Dotknij ikony **Zachowaj**, która pojawi się na górnym pasku.
 
-![Edycja presetu — ikona Zachowaj na pasku narzędzi, Przywróć na pasku akcji](../images/TempTarget7.png)
+![Edycja presetu — ikona Zachowaj na pasku narzędzi, Przywróć na pasku akcji](../images/v4/TempTarget/TempTarget7.png)
 
 Gdy edytor różni się od fabrycznych wartości presetu wbudowanego, na pasku akcji pojawia się też przycisk **↺ Przywróć** — dotknij go, aby przywrócić oryginalny cel i czas trwania presetu.
 
@@ -179,7 +179,7 @@ Gdy edytor różni się od fabrycznych wartości presetu wbudowanego, na pasku a
 
 Gdy działa cel tymczasowy, element celu na ekranie głównym pokazuje cel i pozostały czas. Dotknij go — na ekranie **Cel tymczasowy** działający preset jest wyróżniony jako **AKTYWNY**, a czerwony przycisk **✗ Anuluj** pojawia się na końcu dolnego paska, tuż na lewo od przycisku **▶ Aktywuj**. Dotknij go i potwierdź:
 
-![Anulowanie działającego celu tymczasowego](../images/TempTarget9.png)
+![Anulowanie działającego celu tymczasowego](../images/v4/TempTarget/TempTarget9.png)
 
 Działający cel tymczasowy możesz też zatrzymać z **zegarka z Wear OS**, ze sparowanego **urządzenia opiekuna** albo regułą **Automatyzacji** (*Zatrzymaj cel tymczasowy*).
 
@@ -231,6 +231,6 @@ Dla zaawansowanych, [zadanie 9](#objectives-objective9): jeśli używasz OpenAPS
 
 Aby to zrobić, otwórz **Ustawienia** → **OpenAPS SMB** i wyłącz *'Włącz SMB z wysokim tymczasowym poziomem docelowym'*.
 
-![Ustawienie Włącz SMB z wysokim tymczasowym poziomem docelowym](../images/TempTargetSMB.png)
+![Ustawienie Włącz SMB z wysokim tymczasowym poziomem docelowym](../images/v4/TempTarget/TempTargetSMB.png)
 
 Spowoduje to, że **AAPS** nie poda **SMB**, nawet gdy COB > 0, włączone jest *'Włącz SMB z niskim tymczasowym poziomem docelowym'* lub *'Zawsze włącz SMB'* i OpenAPS SMB jest aktywny.
