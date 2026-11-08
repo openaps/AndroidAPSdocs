@@ -23,7 +23,7 @@ The sections below summarize the features of **Temp-Target Activity**, **Temp-Ta
 
 ### AT - Atividade
 
-![AT Atividade](../images/TempTarget2.png)
+![AT Atividade](../images/v4/TempTarget/TempTarget2.png)
 
 **Alvo de glicose (predefinição, ajustável)**
 
@@ -46,7 +46,7 @@ Os utilizadores também podem considerar:
 
 ### AT - Comer Brevemente
 
-![AT Comer Brevemente](../images/TempTarget1.png)
+![AT Comer Brevemente](../images/v4/TempTarget/TempTarget1.png)
 
 **Alvo de glicose (predefinição, ajustável)**
 
@@ -63,7 +63,7 @@ Conforme o nível de **glicose**, o **AAPS** vai «aumentar» a insulina adminis
 
 ### AT - Hipo
 
-![AT Hipo](../images/TempTarget3.png)
+![AT Hipo](../images/v4/TempTarget/TempTarget3.png)
 
 **Alvo de glicose (predefinição, ajustável)**
 
@@ -96,11 +96,11 @@ Selecionar um cartão de predefinição carrega o seu **alvo** e a sua **duraç�
 
     <br />### Ativar um alvo temporário
     
-    Deslize até à predefinição que quer (os seus valores são carregados no editor), ajuste opcionalmente o **alvo**/a **duração** no editor e depois toque em **▶ Ativar**. Uma confirmação mostra o alvo, a duração e o motivo exatos antes de qualquer coisa começar:
+    Deslize até à predefinição que quer (os seus valores são carregados no editor), ajuste opcionalmente o **alvo**/a **duração** no editor e depois toque em **▶ Ativar**. A confirmation shows the exact target, duration and reason before anything starts:
     
-    ![Confirmação da ativação](../images/TempTarget8.png)
+    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    Depois de confirmar, o alvo temporário começa de imediato (ou à hora de **Ativação** escolhida) e dura a **duração** definida.
+    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
     ```{admonition} Editar os números é só para uma vez — não altera a predefinição
     :class: important
@@ -148,13 +148,13 @@ Também pode definir um alvo temporário sem abrir este ecrã:
 
 A forma mais rápida é tocar no **chip do alvo** no ecrã principal (mostra o seu intervalo alvo atual):
 
-![Chip do alvo no ecrã principal](../images/TempTarget6.png)
+![Chip do alvo no ecrã principal](../images/v4/TempTarget/TempTarget6.png)
 
 Isto abre o ecrã **Alvo temporário** descrito acima — deslize até uma predefinição e toque em **▶ Ativar**. O mesmo ecrã também pode ser aberto através de **Gerir** → **Alvo temporário**.
 
 (TempTargets-carbs-dialog)= Ao introduzir hidratos de carbono, não precisa de abrir o ecrã **Alvo temporário**: a **janela Hidratos** (**Tratamentos** → **Hidratos**) tem os interruptores **Iniciar AT de Hipo**, **Iniciar AT de Comer Brevemente** e **Iniciar AT de atividade** no topo. Ligue um deles e a predefinição correspondente é ativada juntamente com o registo dos hidratos:
 
-![Interruptores de AT na janela Hidratos](../images/TempTarget5.png)
+![Interruptores de AT na janela Hidratos](../images/v4/TempTarget/TempTarget5.png)
 
     {admonition} AT Hipo automático
     :class: note
@@ -171,7 +171,7 @@ O **alvo** e a **duração** de cada predefinição são editados diretamente no
 3. Ajuste o **Alvo Temporário** e/ou a **Duração** no editor.
 4. Toque no ícone **Guardar** que aparece na barra de ferramentas superior.
 
-![Editar uma predefinição — ícone Guardar na barra de ferramentas, Repor na barra de ações](../images/TempTarget7.png)
+![Editar uma predefinição — ícone Guardar na barra de ferramentas, Repor na barra de ações](../images/v4/TempTarget/TempTarget7.png)
 
 Enquanto o editor difere dos valores de origem de uma predefinição incorporada, também aparece um botão **↺ Repor** na barra de ações — toque nele para repor o alvo e a duração originais da predefinição.
 
@@ -179,7 +179,7 @@ Enquanto o editor difere dos valores de origem de uma predefinição incorporada
 
 Enquanto um alvo temporário está em curso, o chip do alvo no ecrã principal mostra o alvo e o tempo que falta. Toque nele — no ecrã **Alvo temporário**, a predefinição em curso aparece destacada como **ATIVO**, e aparece um botão vermelho **✗ Cancelar** no fim da barra de ferramentas em baixo, logo à esquerda do botão **▶ Ativar**. Toque nele e confirme:
 
-![Cancelar um alvo temporário em curso](../images/TempTarget9.png)
+![Cancelar um alvo temporário em curso](../images/v4/TempTarget/TempTarget9.png)
 
 Um alvo temporário em curso também pode ser parado a partir de um **relógio Wear OS**, de um **cliente** emparelhado ou por uma regra de **Automatização** (*Parar Alvo Temp*).
 
@@ -231,6 +231,6 @@ Avançado, [objetivo 9](#objectives-objective9): se usar o OpenAPS SMB e tiver *
 
 Para isso, abra **Definições** → **OpenAPS SMB** e desative *«Ativar SMB com alvo temporário alto»*.
 
-![Preferência Ativar SMB com alvo temporário alto](../images/TempTargetSMB.png)
+![Preferência Ativar SMB com alvo temporário alto](../images/v4/TempTarget/TempTargetSMB.png)
 
 Isto garante que o **AAPS** não administra **SMB**, mesmo com HCA > 0, *«Ativar SMB com alvo temporário baixo»* ou *«Ativar SMB sempre»* ativado e o OpenAPS SMB ativo.
