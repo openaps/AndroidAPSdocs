@@ -33,7 +33,7 @@ For å unngå dette finnes det to muligheter:
    * Velg din **Profil** og trykk på **▶ Aktiver**
    * Sett «**Tidsforskyving**» etter reisemålet ditt og trykk på **Aktiver**.
    
-   ![Profilbytte med tidsforskyving](../images/ProfileSwitchTimeShift2.png)
+   ![Profilbytte med tidsforskyving](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * f.eks. Wien -> New York: **Profilbytte** +6 timer
    * f.eks. Wien -> Sydney: **Profilbytte** -8 timer
