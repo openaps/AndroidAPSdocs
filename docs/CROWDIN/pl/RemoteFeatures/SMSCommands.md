@@ -55,14 +55,14 @@ Takie aplikacje tworzą jednorazowe, 6-cyfrowe hasło ważne przez krótki czas,
 
 Na telefonie przejdź do **Aplikacje > AAPS > Uprawnienia**. Upewnij się, że **SMS** i **Telefon** są dozwolone.
 
-![image](../images/remote-control-08.png)
+![image](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android może blokować uprawnienie **SMS** dla aplikacji, które nie zostały zainstalowane ze sklepu z aplikacjami, takich jak **AAPS**. Jeśli zobaczysz ten komunikat przy nadawaniu uprawnienia **SMS**, otwórz w telefonie **Ustawienia > Aplikacje > AAPS**, dotknij menu **⋮** (w prawym górnym rogu) i wybierz **Zezwól na ustawienia z ograniczonym dostępem** (Allow restricted settings). Potem ponownie nadaj uprawnienie **SMS**.
 ```
 
-![Aplikacja nie dostała dostępu do SMS](../images/sms_permission_restricted.png)
+![Aplikacja nie dostała dostępu do SMS](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### Synchronizacja daty i godziny
 
@@ -82,7 +82,7 @@ Otwórz ustawienia **Komunikatora SMS**.
 
 Włącz **Zezwalaj na zdalne polecenia przez SMS**. Opcje **Dodatkowy obowiązkowy PIN na końcu tokenu** i **Ustawienia uwierzytelnienia** pojawiają się dopiero po włączeniu tej opcji:
 
-![Ustawienia Komunikatora SMS](../images/sms_communicator_settings.png)
+![Ustawienia Komunikatora SMS](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Dozwolone numery telefonów
@@ -97,7 +97,7 @@ Wpisz numer(y) telefonu opiekuna. Podaj numer kierunkowy kraju i pomiń pierwsze
 
 Jeśli chcesz dodać więcej niż jeden numer telefonu, oddziel je średnikami, **BEZ spacji między numerami** (to bardzo ważne!). Wybierz **OK**:
 
-![Dozwolone numery telefonów](../images/sms_allowed_numbers.png)
+![Dozwolone numery telefonów](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### Minimalny odstęp między zdalnymi bolusami (min)
 
@@ -115,7 +115,7 @@ Wymagania dla PIN-u:
 
 Aby PIN był bezpieczniejszy, nie używaj wiele razy tej samej cyfry (_np._ 111111) ani ciągu kolejnych cyfr (_np._ 123456).
 
-![Dodatkowy obowiązkowy PIN na końcu tokenu](../images/sms_pin.png)
+![Dodatkowy obowiązkowy PIN na końcu tokenu](../images/remote_control_and_following/sms_pin.png)
 
 #### Ustawienia uwierzytelnienia
 
@@ -123,7 +123,7 @@ Aby PIN był bezpieczniejszy, nie używaj wiele razy tej samej cyfry (_np._ 1111
 * Otwórz zainstalowaną aplikację uwierzytelniającą na _telefonie opiekuna_, dodaj nowe połączenie i
 * Telefonem opiekuna zeskanuj kod QR pokazany pod **Zeskanuj kod, aby skonfigurować kody OTP AAPS**.
 
-![Konfiguracja uwierzytelniania z kodem QR](../images/sms_authenticator_setup.png)
+![Konfiguracja uwierzytelniania z kodem QR](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * W sekcji **Sprawdź hasło jednorazowe** wpisz w polu **Kod do sprawdzenia** hasło jednorazowe z aplikacji uwierzytelniającej na telefonie opiekuna, a po nim swój PIN:
 
@@ -134,7 +134,7 @@ Przykład:
 
 Jeśli wpis jest poprawny, czerwony napis „ZŁY PIN” zmieni się automatycznie na zielony „OK”. **Nie ma przycisku do naciśnięcia!** Proces jest zakończony. Po wpisaniu kodu nie musisz naciskać żadnego przycisku „OK”:
 
-![Sprawdzenie hasła jednorazowego i resetowanie uwierzytelniania](../images/sms_authenticator_test.png)
+![Sprawdzenie hasła jednorazowego i resetowanie uwierzytelniania](../images/remote_control_and_following/sms_authenticator_test.png)
 
 Polecenia SMS są teraz skonfigurowane.
 
@@ -146,7 +146,7 @@ Jeśli chcesz usunąć skonfigurowane aplikacje uwierzytelniające, użyj przyci
 
 1)  Aby sprawdzić, czy wszystko jest dobrze ustawione, przetestuj połączenie: wyślij SMS o treści „bg” z telefonu opiekuna na telefon z **AAPS**. Powinna przyjść odpowiedź podobna do tej:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 Jeśli nie dostaniesz żadnej odpowiedzi, sprawdź poniżej sekcję [Rozwiązywanie problemów](#SMSCommands-troubleshooting).
 
@@ -154,7 +154,7 @@ Jeśli nie dostaniesz żadnej odpowiedzi, sprawdź poniżej sekcję [Rozwiązywa
 
 Gdy wysyłasz polecenie SMS po raz pierwszy, zrób to w pobliżu telefonu z **AAPS**, aby zobaczyć, jak to działa:
 
-![image](../images/remote-control-16.png)
+![image](../images/remote_control_and_following/remote-control-16.png)
 
 Telefon opiekuna dostanie od **AAPS** SMS z odpowiedzią, który potwierdzi, czy zdalne polecenie SMS zostało wykonane.
 
@@ -182,7 +182,7 @@ Aby uniknąć hipoglikemii, na początku warto być ostrożnym i podać **mniej 
 
 Polecenia trzeba wysyłać po angielsku. Odpowiedź będzie w Twoim języku, jeśli tekst odpowiedzi jest już [przetłumaczony](#translations-translate-strings-for-AAPS-app). Wielkość liter w poleceniach nie ma znaczenia, możesz używać małych lub wielkich liter.
 
-![Przykład poleceń SMS](../images/SMSCommands.png)
+![Przykład poleceń SMS](../images/remote_control_and_following/SMSCommands.png)
 
 **Tabele poleceń SMS** poniżej pokazują wszystkie możliwe polecenia SMS. Dla lepszego zrozumienia podano _przykładowe wartości_. Polecenia mają ten sam zakres wartości (cele, procent profilu itp.), który jest dozwolony w samej aplikacji **AAPS**.
 
@@ -191,11 +191,11 @@ Polecenia trzeba wysyłać po angielsku. Odpowiedź będzie w Twoim języku, je�
 
 Niektóre polecenia SMS dają od razu odpowiedź, a niektóre wymagają silnego **uwierzytelnienia** przez aplikację uwierzytelniającą. Proste zapytanie, np. „**BG**” (prośba o aktualny poziom glukozy), szybko się wpisuje, nie wymaga uwierzytelnienia i zwraca informacje o stanie **AAPS** pokazane poniżej:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 Polecenia, które wymagają większego bezpieczeństwa, wymagają wpisania kodu, na przykład:
 
-![Uwierzytelniony SMS](../images/remote-control-07.png)
+![Uwierzytelniony SMS](../images/remote_control_and_following/remote-control-07.png)
 
 Kolumna *Auth* w tabelach poniżej pokazuje, czy dane polecenie wymaga takiego silnego uwierzytelnienia.
 
@@ -210,7 +210,7 @@ Kolumna *Auth* w tabelach poniżej pokazuje, czy dane polecenie wymaga takiego s
 
 | Polecenie            | Auth | Funkcja i *odpowiedź*                                                                                |
 | -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| POMPA                | Nie  | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP                 | Nie  | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
 | PUMP DISCONNECT *30* | Tak  | Odłącza pompę na *30* minut                                                                          |
 | PUMP CONNECT         | Tak  | Pompa ponownie podłączona                                                                            |
 
@@ -311,12 +311,12 @@ Może to mieć jedną z tych przyczyn:
 ### Brak jakiejkolwiek odpowiedzi na polecenia SMS
 
 Na telefonie opiekuna i/lub telefonie z **AAPS** spróbuj wyłączyć te opcje:
-* **Wyślij jako wiadomość czatu** ![Wyłącz SMS jako wiadomość czatu](../images/SMSdisableChat.png)
+* **Wyślij jako wiadomość czatu** ![Wyłącz SMS jako wiadomość czatu](../images/remote_control_and_following/SMSdisableChat.png)
 * Jeśli używasz aplikacji Android Messages lub Google Messages, wyłącz wiadomości RCS:
   - otwórz daną rozmowę SMS w aplikacji Wiadomości
   - Wybierz menu opcji (trzy kropki) w prawym górnym rogu
   - wybierz „Szczegóły”
-  - Włącz „Only send SMS and MMS messages” (wysyłaj tylko SMS i MMS) ![Wyłącz RCS jako wiadomość czatu](../images/SMSdisableRCS.png)
+  - Włącz „Only send SMS and MMS messages” (wysyłaj tylko SMS i MMS) ![Wyłącz RCS jako wiadomość czatu](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### Błędy przy wykonywaniu poleceń
 
@@ -331,7 +331,7 @@ Polecenie może się nie udać z kilku powodów:
 
 Częste błędy pokazują przykłady poniżej:
 
-![image](../images/remote-control-17.png)
+![image](../images/remote_control_and_following/remote-control-17.png)
 
 ### Jak zatrzymać polecenie, gdy zostało już uwierzytelnione?
 
