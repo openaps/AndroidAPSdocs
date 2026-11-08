@@ -255,7 +255,7 @@ In the last step, click on "Finish" to start Android Studio for the first time.
 
 Μόνο για χρήστες Windows: Αν το τείχος προστασίας σας ζητήσει άδεια, δώστε πρόσβαση:
 
- ![Άδεια τείχους προστασίας για java](../images/AndroidStudio361_18.png)
+ ![Άδεια τείχους προστασίας για java](../images/Building-the-App/AndroidStudio361_18.png)
 
 Όταν το αποθετήριο αντιγραφεί με επιτυχία, το Android Studio θα ανοίξει το project που αντιγράφηκε.
 
