@@ -192,7 +192,7 @@ Ak vidíte vyššie uvedenú chybovú správu, pred novým pokusom o zostavenie 
 
   Na internete nájdete informácie o tom, ako zistiť, či máte 32-bitový alebo 64-bitový operačný systém – napr. [tento článok](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Snímka obrazovky Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Snímka obrazovky Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Opätovná synchronizácia Gradle
@@ -237,7 +237,7 @@ Vaše APK sa úspešne zostavilo a môžete ho preniesť do telefónu!
 
 ## APK sa nenainštalovalo
 
-![aplikácia v telefóne nie je nainštalovaná](../images/Update_AppNotInstalled.png)
+![aplikácia v telefóne nie je nainštalovaná](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Uistite sa, že ste do telefónu preniesli súbor „app-full-release.apk“.
 * Táto chyba zvyčajne znamená, že nové APK je podpísané iným úložiskom kľúčov ako váš nainštalovaný **AAPS**. Ak ešte máte svoje predchádzajúce úložisko kľúčov, vyberte ho a zostavte APK znova. Inak pozrite [Preinštalovanie AAPS s novým úložiskom kľúčov](#reinstall-aaps).
