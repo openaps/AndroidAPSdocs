@@ -91,6 +91,8 @@ Välj mellan ljust tema, mörkt tema eller att följa telefonens systeminställn
 
 Krävs för att du ska kunna [exportera inställningar](../Maintenance/ExportImportSettings.md), eftersom de krypteras från och med version 2.7.
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **Biometriskt skydd kanske inte fungerar på OnePlus-telefoner. Detta är ett känt problem hos OnePlus på vissa telefoner.**
 
 ![Ange huvudlösenord](../images/preferences/master_password_dialog.png)
