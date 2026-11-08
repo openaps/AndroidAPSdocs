@@ -97,7 +97,7 @@ Insbesondere vor und nach den Konfigurationsänderungen, wird empfohlen, die Ein
 
 **Hinweis**: _Die exportierten Einstellungen werden mit Deinem AAPS Master-Passwort verschlüsselt: Ohne das Master-Passwort, das für den Export genutzt wurde, kannst Du die Datei mit Deinen Einstellungen nicht importieren!_
 
-If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+Wenn Du Dein Master-Passwort vergessen hast, kannst Du es [zurücksetzen](#FAQ-reset-master-password). Einstellungsdateien, die mit dem alten Passwort exportiert wurden, brauchen aber weiterhin das alte.
 
 ### Exportieren oder Importieren der Einstellungen
 Um Einstellungen zu exportieren oder zu importieren, öffne das **Menü** (☰) und wähle **Wartung**. Unter **Dateiverwaltung** legen die Auswahlfelder **Lokal** und **Cloud** neben **Einstellungen exportieren** und **Einstellungen importieren** fest, wohin die Einstellungsdatei gespeichert bzw. woher sie gelesen wird: **Lokal** ist das AAPS-Verzeichnis auf Deinem Smartphone, **Cloud** ist verfügbar, sobald ein [Cloud-Ordner](#preferences-maintenance-cloud) eingerichtet ist. Ein Tippen auf ein Auswahlfeld schaltet es ein oder aus; mindestens eines bleibt immer ausgewählt, und beide Zeilen teilen sich dieselbe Auswahl. Tippe dann auf **Einstellungen exportieren** bzw. **Einstellungen importieren** selbst, um zu starten.
