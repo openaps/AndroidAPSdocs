@@ -75,7 +75,7 @@ AAPS 用來控制你的幫浦並提供胰島素。根據歐洲現行法規，所
     
     * 您的金鑰庫檔案（建立 apk 時產生）及其密碼，
     * 您最近從 AAPS 和其他應用程式匯出的設定檔，
-    * 您的 **AAPS** 主密碼：沒有主密碼就無法匯入設定檔。</ul></li> </ul> 
+    * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)</ul></li> </ul> 
     
     (FAQ-organize-backups)=
     
@@ -294,7 +294,11 @@ AAPS 用來控制你的幫浦並提供胰島素。根據歐洲現行法規，所
     
     1. 在 AAPS 資料夾的 `extra` 子資料夾中建立一個名為 `PasswordReset` 的空白檔案（不含副檔名；通常是 `AAPS/extra`）。
     2. 重新啟動 **AAPS**。您的幫浦必須已連線：**AAPS** 會顯示「等待幫浦…」，並在 30 秒內讀取幫浦序號。
+      
+      To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+    
     3. **AAPS** 顯示「密碼已設定！」後，您的主密碼就會是**幫浦序號**。系統會自動刪除 `PasswordReset` 檔案。
+    
     4. 開啟 **設定** > **保護** > **主密碼**，並設定新密碼。
     
     如果系統未能及時連線至幫浦，設定不會變更：請檢查幫浦連線，然後再試一次。
