@@ -9,7 +9,7 @@
 
 ## Het hoofdscherm
 
-![Hoofdscherm](../images/Home_Homescreen.png)
+![Hoofdscherm](../images/main/Home_Homescreen.png)
 
 Dit is het eerste scherm dat je ziet als je **AAPS** opent. Het bevat de meeste informatie die je elke dag nodig hebt.
 
@@ -33,13 +33,13 @@ De kleur van de BG-waarde toont de stand ten opzichte van het ingestelde [bereik
 * rood = onder bereik
 * geel = boven bereik
 
-![BG-cirkel binnen bereik, groen](../images/Home_Delta.png) ![BG-cirkel boven bereik, geel](../images/Home_Delta_high.png) ![BG-cirkel onder bereik, rood](../images/Home_Delta_low.png)
+![BG-cirkel binnen bereik, groen](../images/main/Home_Delta.png) ![BG-cirkel boven bereik, geel](../images/main/Home_Delta_high.png) ![BG-cirkel onder bereik, rood](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
 #### Loop status
 
-![Loop status](../images/main_loop_status.png)
+![Loop status](../images/main/main_loop_status.png)
 
 Naast de BG-cirkel toont een pictogram de bedrijfsmodus van de loop (van boven naar beneden in de afbeelding):
 
@@ -166,7 +166,7 @@ Tik op de profielnaam om het [Profielscherm](#aaps-screens-profile) te openen. D
 
 **Om het profielpercentage te wijzigen** (en de tijdsduur), tik je op de profielnaam en daarna op de ronde knop **▶** (Activeer) rechtsonder in het Profielscherm. In **AAPS** 3.x opende dit scherm met lang drukken op de profielnaam; in **AAPS** 4 doet lang drukken niets. Stap voor stap: [Het profielpercentage wijzigen](#ProfileSwitch-change-percentage).
 
-![Profiel met een actieve profielwissel](../images/main_profile_switch.png)
+![Profiel met een actieve profielwissel](../images/main/main_profile_switch.png)
 
 1. Normale weergave met een standaard profielactivering.
 2. Profielwissel met een percentage van 90% en een resterende tijdsduur van 9 minuten. De profielnaam wordt geel zolang een tijdelijke profielwissel actief is.
@@ -174,7 +174,7 @@ Tik op de profielnaam om het [Profielscherm](#aaps-screens-profile) te openen. D
 
 #### Streefdoel
 
-![Resterende duur tijdelijk streefdoel](../images/main_temp_target.png)
+![Resterende duur tijdelijk streefdoel](../images/main/main_temp_target.png)
 
 Het huidige streefdoel voor de bloedglucose staat onder de profielnaam.
 
@@ -200,7 +200,7 @@ Als **AAPS** resistentie of gevoeligheid ziet, wijkt het streefdoel af van wat i
 
 #### IOB, COB, basaal en gevoeligheid
 
-![IOB, COB, basaal en gevoeligheid](../images/main_iob_cob_basal_sensitivity.png)
+![IOB, COB, basaal en gevoeligheid](../images/main/main_iob_cob_basal_sensitivity.png)
 
 1. **Spuit**: insuline aan boord (IOB) - hoeveelheid actieve insuline in je lichaam  
     De insuline aan boord zou nul zijn als alleen je standaard basaal liep en er geen insuline meer over was van eerdere bolussen. 
@@ -234,7 +234,7 @@ Meldingen 'koolhydraten nodig' kunnen naar Nightscout worden gestuurd als je dat
 
 ### Sectie C - Statusrij
 
-![Statusrij](../images/main_status_row.png)
+![Statusrij](../images/main/main_status_row.png)
 
 De statusrij geeft een zichtbare waarschuwing voor
 
@@ -320,7 +320,7 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 Druk op het **potlood**pictogram rechtsboven in de grafiek om de grafiekinstellingen te openen:
 
-![Hoofdgrafiek instelling](../images/main_graph_settings.png)
+![Hoofdgrafiek instelling](../images/main/main_graph_settings.png)
 
 * **Grafiekhoogte** bepaalt hoe hoog de grafiek wordt getekend.
 * **ACT** toont de curve van de insulineactiviteit: een ononderbroken geelgroene lijn <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (niet te verwarren met de gestippelde gele UAM-voorspelling)
@@ -408,7 +408,7 @@ De extra grafieken volgen de hoofdgrafiek: als je in de BG-grafiek scrolt of zoo
 
 Om een extra grafiek in te stellen, druk je op het **potlood**pictogram rechtsboven in die grafiek:
 
-![Instellingen extra grafieken](../images/main_additional_graph_settings.png)
+![Instellingen extra grafieken](../images/main/main_additional_graph_settings.png)
 
 Kies de chips voor de gegevens die je in deze grafiek wilt zien; de knop **Verwijderen** verwijdert de grafiek.
 
@@ -490,7 +490,7 @@ Het is een goede combinatie om deze lijn samen met de afwijkingsbalken te tonen.
 
 ### Sectie F - QuickLaunch-werkbalk
 
-![QuickLaunch-werkbalk](../images/main_quicklaunch_toolbar.png)
+![QuickLaunch-werkbalk](../images/main/main_quicklaunch_toolbar.png)
 
 De zwevende werkbalk onderaan het scherm bevat je **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)**-acties. Het kleine **tandwiel** opent de QuickLaunch-instellingen. Daar kies je welke knoppen je ziet (behandelingen, Careportal-invoer, CGM-acties, de schermen van het menu **Beheren**, [QuickWizard](../DailyLifeWithAaps/QuickWizards.md)-knoppen, [Scènes](../DailyLifeWithAaps/Scenes.md) en meer).
 
@@ -502,7 +502,7 @@ Als de pomp **ontkoppeld** is, blijven de behandelknoppen in de werkbalk, bijvoo
 
 #### Insuline
 
-![Dialoogvenster Insuline](../images/insulin_dialog.png)
+![Dialoogvenster Insuline](../images/v4/Screens/insulin_dialog.png)
 
 Om een bepaalde hoeveelheid insuline te geven zonder de [bolus calculator](#aaps-screens-bolus-wizard) te gebruiken.
 
@@ -520,7 +520,7 @@ Het dialoogvenster Insuline kun je ook gebruiken als de pomp onderbroken of ontk
 
 #### Koolhydraten
 
-![Dialoogvenster Koolhydraten](../images/carbs_dialog.png)
+![Dialoogvenster Koolhydraten](../images/v4/Screens/carbs_dialog.png)
 
 Om koolhydraten in te voeren zonder erbij te bolussen.
 
@@ -574,7 +574,7 @@ Tik op de bubbel om het paneel **Notificatie** te openen. Bij elk bericht staat 
 
 ## Bolus calculator
 
-![Bolus wizard](../images/bolus_wizard.png)
+![Bolus wizard](../images/v4/Screens/bolus_wizard.png)
 
 Als je een maaltijdbolus wilt geven, doe je dat meestal hier.
 
@@ -618,7 +618,7 @@ Het veld **Koolhydraattijd** is voor een bolus vooraf: zo vertel je het systeem 
 
 **Alarm instellen** (herinnering om te eten): als je een koolhydraattijd in de toekomst invult, verschijnt een schakelaar "**Alarm instellen**". Zo krijg je op het ingestelde moment een herinnering om de koolhydraten te eten die je in **AAPS** hebt ingevoerd:
 
-![Alarm instellen voor toekomstige koolhydraten](../images/bolus_wizard_set_alarm.png)
+![Alarm instellen voor toekomstige koolhydraten](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
 The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
@@ -640,7 +640,7 @@ Goed om te weten:
 
 #### Verkeerde COB-detectie
 
-![Langzame koolhydraat absorptie](../images/Calculator_SlowCarbAbsorption.png)
+![Langzame koolhydraat absorptie](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Als je de waarschuwing hierboven ziet na het gebruik van de bolus wizard, heeft **AAPS** gezien dat de berekende COB-waarde misschien niet klopt. Dus als je opnieuw wilt bolussen na een eerdere maaltijd met COB, let dan op dat je niet te veel insuline geeft!
 
@@ -719,7 +719,7 @@ Zie voor meer details de [sectie APS op de pagina Configuratie](#Config-Builder-
 
 ## Profiel
 
-![Profiel](../images/Screenshots_Profile.png)
+![Profiel](../images/screens/Screenshots_Profile.png)
 
 **Beheren → Profiel** (of tikken op de profielnaam op het hoofdscherm) opent het Profielscherm: je profielen als kaarten die je opzij kunt vegen, met knoppen om een profiel toe te voegen, te bewerken, te dupliceren, te verwijderen en te **activeren**.
 
@@ -733,7 +733,7 @@ Het profiel bevat informatie over jouw persoonlijke diabetesinstellingen. Zie de
 
 ## NSClient
 
-![NSClient](../images/Screenshots_NSClient.png)
+![NSClient](../images/screens/Screenshots_NSClient.png)
 
 **Configuratie → Communicatie → NSClientV3 → Plug-in openen** toont de status van de verbinding met je Nightscout-site: URL, websocket-status, wachtrij en een logboek van de synchronisatie.
 
@@ -745,7 +745,7 @@ Zie deze [pagina](../GettingHelp/TroubleshootingNsClient.md) voor het oplossen v
 
 ## BG bron - xDrip, BYODA...
 
-![Scherm BG bron](../images/Screenshots_BGSource.png)
+![Scherm BG bron](../images/screens/Screenshots_BGSource.png)
 
 **Configuratie → BG bron → Plug-in openen** toont de geschiedenis van CGM-waarden en geeft de mogelijkheid om waarden te verwijderen bij een storing (bijv. compression low) of bij dubbele waarden.
 
