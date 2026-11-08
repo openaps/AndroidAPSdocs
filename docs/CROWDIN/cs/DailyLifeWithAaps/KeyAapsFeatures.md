@@ -8,7 +8,7 @@ Stav smyčky se zobrazuje na hlavní obrazovce jednou z níže uvedených ikon.
 
 Informace o tom, jak zvolit režim smyčky, a o dalších ikonách na obrázku (4 až 6) najdete v části [Obrazovky AAPS > Hlavní obrazovka > Stav smyčky](#AapsScreens-loop-status).
 
-![Stav smyčky](../images/Home2020_LoopStatus.png)
+![Stav smyčky](../images/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ Pokud je tato možnost zapnutá, detekce citlivosti (Autosens) může zvýšit c
 
 Pokud je cíl upraven kvůli detekci citlivosti, zobrazí se na hlavní obrazovce se zeleným pozadím.
 
-![Cíl upravený funkcí Autosens](../images/Home2020_DynamicTargetAdjustment.png)
+![Cíl upravený funkcí Autosens](../images/main_target_modified_by_autosens.png)
 
 Toto nastavení je dostupné, když je zapnuté „Použít dynamickou citlivost“ nebo „Použít Autosens“.
 
