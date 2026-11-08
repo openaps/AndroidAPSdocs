@@ -318,7 +318,7 @@ To change to a different **AAPS**  watchface, long-press the watchface on the ho
 
 ## Циферблат AAPSv2 – легенда
 
-![Легенда циферблата AAPSv2](../images/Watchface_Legend.png)
+![Легенда циферблата AAPSv2](../images/wearos/Watchface_Legend.png)
 
 A – час від останнього запуску петлі
 
