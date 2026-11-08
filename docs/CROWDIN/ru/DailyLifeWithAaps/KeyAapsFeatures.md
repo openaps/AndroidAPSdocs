@@ -8,7 +8,7 @@ The loop status is shown on the main screen with one of the icons below.
 
 See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode and on the other icons in the picture (4 to 6).
 
-![Статус контура](../images/main_loop_status.png)
+![Статус контура](../images/main/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ Autosens отслеживает отклонения гликемии в кро�
 
 If the target is modified due to sensitivity detection, it will be displayed with a green background on your main screen.
 
-![цель изменена автоматически](../images/main_target_modified_by_autosens.png)
+![цель изменена автоматически](../images/main/main_target_modified_by_autosens.png)
 
 This setting is available when one of "Use dynamic sensitivity" or "Use Autosens" are enabled.
 
