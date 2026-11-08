@@ -21,7 +21,7 @@ Anahtar deponuz hâlâ duruyorsa bu sayfaya ihtiyacınız yok: onu yeniden kulla
 
 - **AAPS**'i kaldırmak tüm ayarlarını, [görevlerinizi](../SettingUpAaps/CompletingTheObjectives.md) ve mevcut pompa bağlantısını siler. Bunları **ayar dosyanızı** içe aktararak geri alırsınız, bu yüzden güncel bir ayar dosyanız olduğundan emin olun.
 - Ayar dosyası tedavi ve glikoz geçmişinizi içermez. [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md)'a yükleme yapıyorsanız, yeniden yüklemeden sonra geçmişi oradan geri alabilirsiniz (8. adım).
-- [**Ana parolanıza**](#Preferences-master-password) ihtiyacınız var: ayar dosyası onunla şifrelenir.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Omnipod ve Medtrum kullanıcıları:** önce [Hortumsuz pompalar](#ExportImportSettings-tubeless-pumps) bölümünü okuyun. Ayar dosyanız, şu anda taktığınız Pod veya Patch süresince dışa aktarılmış olmalıdır.
 - Gerekirse, başlamadan önce [CGM/KŞ kaynağı alıcınızı kurun](../Getting-Started/CompatiblesCgms.md).
 
