@@ -134,21 +134,21 @@ Kromě toho, že Nightscout je server v „cloudu“, existuje také samostatná
 
 Jakmile máte aplikaci **Nightscout** na iPhonu nainstalovanou, otevřete ji, postupujte podle pokynů a zadejte adresu svého Nightscoutu (viz níže vlevo). Přesná podoba se může lišit podle toho, jak je hostován váš Nightscout. (_např._ http://youraddresshere.herokuapp.com). Poté zadejte váš Nightscout API secret (viz níže vpravo). Pokud nejste požádáni o vložení API hesla, pak ho musíte zadat po kliknutí na zámek v horní části aplikace:
 
-![obrázek](../images/remote-control-24.png)
+![obrázek](../images/remote_control_and_following/remote-control-24.png)
 
 Více informací o nastavení je k dispozici přímo z [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
 Po prvním přihlášení uvidíte velmi jednoduché zobrazení. Možnosti zobrazení si upravte: vyberte nabídku („hamburger“) vpravo nahoře a posuňte se dolů:
 
-![obrázek](../images/remote-control-25.png)
+![obrázek](../images/remote_control_and_following/remote-control-25.png)
 
 Posuňte se dolů na „Nastavení“. Možná si budete přát změnit "měřítko" na "lineární", protože výchozí zobrazení glykémie je logaritmické, a pod "vykreslovat bazál" vyberte "výchozí" tak, aby se podávané bazály zobrazily.
 
-![obrázek](../images/remote-control-25b.png)
+![obrázek](../images/remote_control_and_following/remote-control-25b.png)
 
 Vyberte požadované možnosti. Pokud pro alarmy používáte jinou aplikaci, zrušte zaškrtnutí alarmů.
 
-![obrázek](../images/remote-control-26.png)
+![obrázek](../images/remote_control_and_following/remote-control-26.png)
 
 Pokračovat v posouvání dolů, dokud se nedostanete k „zobrazit pluginy“.
 
@@ -156,7 +156,7 @@ Musíte se ujistit, že je zaškrtnuta možnost "Portál péče" a můžete tak�
 
 Důležité je nyní kliknout na „uložit“ v dolní části obrazovky, aby se tyto změny projevily.
 
-![obrázek](../images/remote-control-27.png)
+![obrázek](../images/remote_control_and_following/remote-control-27.png)
 
 Po stisknutí tlačítka "Uložit" se aplikace vrátí na hlavní obrazovku Nightscout, která bude vypadat takto:
 
@@ -170,7 +170,7 @@ Po stisknutí tlačítka "Uložit" se aplikace vrátí na hlavní obrazovku Nigh
 8. Profil bazálního inzulínu
 9. Zelená čára = historické hodnoty glykémie Modré čáry = predikovaná glykémie
 
-![obrázek](../images/remote-control-28.png)
+![obrázek](../images/remote_control_and_following/remote-control-28.png)
 
 Podívejte se podrobněji do levého horního menu aplikace Nightscout:
 
@@ -179,7 +179,7 @@ Podívejte se podrobněji do levého horního menu aplikace Nightscout:
 3. Nabídka („hamburger“) – pro nastavení předvoleb
 4. Careportal – zaznamenání ošetření (kdy je **AAPS** použije, viz [níže](#RemoteControl_nightscout-treatments))
 
-![Horní lišta Nightscoutu](../images/remote-control-29.png)
+![Horní lišta Nightscoutu](../images/remote_control_and_following/remote-control-29.png)
 
 Na této obrazovce je na šedých kartách k dispozici velké množství informací o stavu **AAPS** systému (a ještě více informací se zobrazí při klepnutí na záložku):
 
@@ -195,9 +195,9 @@ Na této obrazovce je na šedých kartách k dispozici velké množství informa
 10. Stav baterie telefonu s AAPS
 11. Velikost vaší databáze. Pokud se příliš zaplní (jen u vlastního Nightscoutu – placené hostované služby to neřeší), mohou začít problémy s připojením. Data můžete smazat a velikost zmenšit v nabídce Admin tools (přes „hamburger“).
 
-![obrázek](../images/remote-control-30.png)
+![obrázek](../images/remote_control_and_following/remote-control-30.png)
 
-![obrázek](../images/remote-control-31.png)
+![obrázek](../images/remote_control_and_following/remote-control-31.png)
 
 Vyskakovací okno zavřete klepnutím na „refresh“ v dolní části stránky.
 
@@ -233,7 +233,7 @@ Ačkoli by to mohlo být užitečné pro smazání oznámených sacharidů (na k
 
 ### Možnost 1) Ovládání AAPS z hodinek s Wear OS
 
-![Wear Remote 1](../images/Wear_Remote1.png)
+![Wear Remote 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 Až budete mít [**AAPS** v hodinkách nastavené](../WearOS/BuildingAapsWearOS.md), podrobné informace o cifernících a jejich funkcích najdete na stránce [Chytré hodinky s Wear OS](../WearOS/WearOsSmartwatch.md).
 
@@ -285,19 +285,19 @@ Níže najdete konkrétní návody, jak nastavit **AAPS** na oblíbených hodink
 
 ### Možnost 3) AAPSClient na hodinkách ke vzdálenému řízení **AAPS** na telefonu
 
-![Wear Remote 2](../images/Wear_Remote2.png)
+![Wear Remote 2](../images/remote_control_and_following/Wear_Remote2.png)
 
 Software pro hodinky, **AAPSClient** Wear apk, můžete stáhnout přímo z [GitHubu](https://github.com/nightscout/AndroidAPS/releases/).
 
 Pro stažení softwaru klikněte na aplikaci pro hodinky, která odpovídá klientské aplikaci v telefonu: **wear-aapsclient-release_**_verze_ patří k **AAPSClient**, **wear-aapsclient2-release_**_verze_ patří k **AAPSClient2** (viz [O AAPSClient, AAPSClient2 a AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![obrázek](../images/github_release_wear_aapsclient_apk.png)
+![obrázek](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 "Uložte" nebo "Uložte jako" stažený soubor na vhodné místo na vašem počítači:
 
 
-![obrázek](../images/save_as_wear_aapsclient_apk.png)
+![obrázek](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 
