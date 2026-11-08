@@ -2,7 +2,7 @@
 
 Freestyle Libre 3 (FSL3) изисква специална настройка, за да получава AAPS стойности на КЗ. Има два възможни начина да получавате стойностите от Freestyle Libre 3 (FSL3) в AAPS.
 
-![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
+![FL3](../images/libre3/libre3_juggluco_xdrip_data_flow.jpeg)
 
 Методите по-долу използват отделното приложение Juggluco. Използва Juggluco, за да получава необработени данни от сензора на интервал от 1 минута, които след това се предават към xDrip или AAPS. Новите сензори могат да се стартират или с приложението Libre 3, или директно в Juggluco. Указанията по-долу описват процеса за стартиране на сензор с приложението Juggluco. Ако сензорът е стартиран, докато сте влезли в профил в LibreView, можете също да превключвате между Juggluco и приложението Libre 3 като приемник.
 
@@ -38,7 +38,7 @@ Juggluco може също да предава данни към LibreView, за
 
   → Меню (три черти) → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![Разширени настройки на xDrip за Libre 2 и необработени стойности](../images/xDrip_Libre3_Smooth.png)
+  ![Разширени настройки на xDrip за Libre 2 и необработени стойности](../images/libre3/xDrip_Libre3_Smooth.png)
 
 
 
