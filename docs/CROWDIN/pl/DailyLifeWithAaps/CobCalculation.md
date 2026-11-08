@@ -53,7 +53,7 @@ Jeśli zamiast wartości obliczonej z odchyleń **BG** używane jest minimalne w
 
 Zwykle __AAPS__ wykrywa wchłanianie węglowodanów na podstawie odchyleń **BG**. Jeśli wprowadzisz węglowodany, ale **AAPS** nie może wykryć ich wchłaniania na podstawie odchyleń **BG**, do obliczenia wchłaniania użyje metody [min_5m_carbimpact](#Preferences-min_5m_carbimpact) (tzw. „fallback”, metoda zapasowa). Ta metoda oblicza tylko minimalne wchłanianie węglowodanów, bez uwzględnienia odchyleń **BG**, więc może dać nieprawidłowe wartości COB.
 
-![Podpowiedź o nieprawidłowej wartości COB](../images/Calculator_SlowCarbAbsorption.png)
+![Podpowiedź o nieprawidłowej wartości COB](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Na powyższym zrzucie ekranu przez 66% czasu wchłanianie węglowodanów było obliczane z min_5m_carbimpact zamiast z wartości wykrytej z odchyleń. Oznacza to, że możesz mieć mniej **COB**, niż obliczył algorytm.
 
