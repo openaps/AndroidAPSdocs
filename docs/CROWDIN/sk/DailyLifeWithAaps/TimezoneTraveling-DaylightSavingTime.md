@@ -118,14 +118,14 @@ Ak podávate bolus pomocou kalkulačky **AAPS**, nepoužívajte údaje **COB** a
    * Niektoré telefóny majú dve nastavenia, jedno na automatické nastavenie času (ktoré by malo ideálne zostať zapnuté) a jedno na automatické nastavenie časového pásma (ktoré musíte VYPNÚŤ: **Nastaviť automaticky** (Set automatically) v časti **Časové pásmo** (Time zone) na snímke obrazovky nižšie).
    * Žiaľ, niektoré verzie Androidu majú jediný prepínač, ktorý zapína automatické nastavenie času aj časového pásma naraz. Toto budete musieť zatiaľ vypnúť.
 
-![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
+![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
 2. Nájdite časové pásmo, ktoré má rovnaký čas ako vaše aktuálne miesto, ale nepoužíva letný čas.
    
    * Zoznam týchto krajín nájdete na [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Pre stredoeurópsky čas (SEČ) to môže byť „Brazzaville“ (Kongo). Zmeňte časové pásmo telefónu na Kongo.
 
-![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
+![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
 3. V **AAPS** obnovte stav pumpy a prepnite sa na požadovaný **profil**.
 
