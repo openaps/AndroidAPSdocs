@@ -33,7 +33,7 @@ Bunu önlemek için iki olasılık vardır:
    * **Profil**inizi seçin ve **▶ Etkinleştir** düğmesine dokunun
    * '**Zaman kaydırma**' değerini varış yerinize göre ayarlayın ve **Etkinleştir** düğmesine dokunun.
    
-   ![Zaman kaydırmalı profil değişimi](../images/ProfileSwitchTimeShift2.png)
+   ![Zaman kaydırmalı profil değişimi](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * ör. Viyana -> New York: **Profil değişimi** +6 saat
    * ör. Viyana -> Sidney: **Profil değişimi** -8 saat
