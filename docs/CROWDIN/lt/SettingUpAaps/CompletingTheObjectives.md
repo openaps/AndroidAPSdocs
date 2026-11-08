@@ -46,7 +46,7 @@ Pastaba: *gali tekti palaukti, kol ateis kitas jutiklio gliukozės rodmuo, kad *
 
 **2 mokymo etape** reikia atlikti kelias „užduotis“, kaip parodyta ekrano kopijoje žemiau. Prie kiekvienos užduoties rodoma jos būsena (**1**): oranžinis užrašas „**Dar nebaigta**“ pasikeičia į „**Užbaigta, puiku!**“, kai tik **AAPS** užregistruoja veiksmą. Jei dar nežinote, kaip atlikti tam tikrą veiksmą, palieskite **Užuomina** (**2**) po užduotimi – atsidarys susijusi dokumentacija.
 
-![2 mokymo etapo ekrano kopija](../images/Objective2_V2_5.png)
+![2 mokymo etapo ekrano kopija](../images/objectives/Objective2_V2_5.png)
 
 **2 mokymo etapo** užduotys:
 - Nustatykite **profilį** 90 % 10 min. trukmei.
@@ -96,7 +96,7 @@ Trumpiausias laikas šiam mokymo etapui atlikti: **7 dienos**. Tai privalomas la
 
 Kad sumažintumėte siūlomų valandinės bazės pakeitimų skaičių atviro ciklo režimu, vis tiek galite naudoti patarimus, aprašytus [**3 mokymo etape**](#objectives-objective3). Be to, mažiausią procentinį rekomenduojamų valandinės bazės pakeitimų dydį galite pakeisti nustatymu „**Mažiausias pokytis atvirojo ciklo režimu**“, esančiu **Nustatymai → Ciklas**. Kuo didesnė reikšmė, tuo mažiau pranešimų apie pakeitimus gausite.
 
-![Mažiausias pokytis atvirojo ciklo režimu](../images/OpenLoop_MinimalRequestChange2.png)
+![Mažiausias pokytis atvirojo ciklo režimu](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ Tai reiškia, kad **6 mokymo etape**, jei jutiklio gliukozės reikšmės krinta,
 
 - Jei jūsų AIO yra neigiamas (žr. ekrano kopiją žemiau), **6 mokymo etape** gali būti nustatyta laikina valandinė bazė (TBR) > 100 %.
 
-![Neigiamo AIO pavyzdys](../images/Objective6_negIOB.png)
+![Neigiamo AIO pavyzdys](../images/objectives/Objective6_negIOB.png)
 
 - Saugumo dėlei nustatykite tikslinį intervalą šiek tiek aukštesnį nei įprastai – taip turėsite papildomą saugos atsargą.
 - Įjunkite režimą „Stabdymas esant žemai glikemijai“: pagrindiniame ekrane paspauskite ciklo piktogramą ir kaip veikimo režimą pasirinkite **Stabdymas esant žemai glikemijai**.
@@ -245,6 +245,6 @@ Paspauskite „**Daugiau**“ po mokymo etapu, kad vėl pamatytumėte jo užduot
 
 Jei dėl kokios nors priežasties norite grįžti atgal **mokymo etapuose**, atverkite atliktą **mokymo etapą** mygtuku „**Daugiau**“ ir palieskite „**Išvalyti užbaigimą**“:
 
-![Grįžti į tikslus](../images/Objective_ClearFinished.png)
+![Grįžti į tikslus](../images/objectives/Objective_ClearFinished.png)
 
 Taip pat **mokymo etapą**, kurį dabar atliekate, galima pradėti iš naujo mygtuku „**Išvalyti pradžią**“.
