@@ -254,7 +254,7 @@ Android Studio 版本非常重要。請參閱 [上面的指示](#Building-APK-re
 
 僅限Windows用戶：如果你的防火牆要求許可，請授予存取權限：
 
- ![防火牆權限java](../images/AndroidStudio361_18.png)
+ ![防火牆權限java](../images/Building-the-App/AndroidStudio361_18.png)
 
 倉庫成功複製後，Android Studio將打開複製的專案。
 
