@@ -55,14 +55,14 @@ Tieto aplikácie Authenticator vytvárajú časovo obmedzené jednorazové 6-mie
 
 V telefóne prejdite do **Aplikácie > AAPS > Povolenia** (Permissions). Uistite sa, že **SMS** a **Telefón** (Phone) sú povolené.
 
-![obrázok](../images/remote-control-08.png)
+![obrázok](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android môže blokovať povolenie **SMS** pre aplikácie, ktoré neboli nainštalované z obchodu s aplikáciami, ako je **AAPS**. Ak sa vám pri udeľovaní povolenia **SMS** zobrazí táto správa, otvorte v telefóne **Nastavenia > Aplikácie > AAPS**, ťuknite na ponuku **⋮** (vpravo hore) a vyberte **Povoliť obmedzené nastavenia** (Allow restricted settings). Potom povolenie **SMS** udeľte znova.
 ```
 
-![Aplikácii bol zamietnutý prístup k SMS](../images/sms_permission_restricted.png)
+![Aplikácii bol zamietnutý prístup k SMS](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### Synchronizácia dátumu a času
 
@@ -82,7 +82,7 @@ Otvorte nastavenia **SMS komunikátora**.
 
 Zapnite **Povoliť príkazy na diaľku cez SMS**. Možnosti **Ďalší povinný kód PIN na konci tokenu** a **Nastavenie autentifikátora** sa zobrazia až potom, ako to zapnete:
 
-![Nastavenia SMS komunikátora](../images/sms_communicator_settings.png)
+![Nastavenia SMS komunikátora](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Povolené telefónne čísla
@@ -97,7 +97,7 @@ Zadajte telefónne číslo (čísla) opatrovateľa. Uveďte kód krajiny a vynec
 
 Ak pridávate viac telefónnych čísel, oddeľte ich bodkočiarkami **BEZ medzery medzi číslami** (to je veľmi dôležité!). Vyberte **OK**:
 
-![Povolené telefónne čísla](../images/sms_allowed_numbers.png)
+![Povolené telefónne čísla](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### Minimálna vzdialenosť pre bolus na diaľku
 
@@ -115,7 +115,7 @@ Požiadavky na PIN:
 
 Aby bol PIN bezpečnejší, nepoužívajte veľakrát tú istú číslicu (_napr._ 111111) ani postupnosť (_napr._ 123456).
 
-![Ďalší povinný kód PIN na konci tokenu](../images/sms_pin.png)
+![Ďalší povinný kód PIN na konci tokenu](../images/remote_control_and_following/sms_pin.png)
 
 #### Nastavenie autentifikátora
 
@@ -123,7 +123,7 @@ Aby bol PIN bezpečnejší, nepoužívajte veľakrát tú istú číslicu (_napr
 * Otvorte nainštalovanú aplikáciu Authenticator na _telefóne opatrovateľa_, nastavte nové pripojenie a
 * Telefónom opatrovateľa naskenujte QR kód, ktorý sa zobrazí pod **Naskenujte kód pre nastavenie AAPS OTP kódov**.
 
-![Nastavenie autentifikátora pomocou QR kódu](../images/sms_authenticator_setup.png)
+![Nastavenie autentifikátora pomocou QR kódu](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * V časti **Otestujte jednorázové heslo** zadajte do poľa **Kód pre kontrolu** jednorazový kód z aplikácie Authenticator v telefóne opatrovateľa a za ním váš PIN:
 
@@ -134,7 +134,7 @@ Príklad:
 
 Ak je zadanie správne, červený text „NESPRÁVNY PIN“ sa automaticky zmení na zelené „OK“. **Nie je tu žiadne tlačidlo, ktoré by ste mali stlačiť!** Proces je hotový, po zadaní kódu nemusíte stlačiť žiadne tlačidlo „OK“:
 
-![Test jednorazového hesla a resetovanie autentifikátorov](../images/sms_authenticator_test.png)
+![Test jednorazového hesla a resetovanie autentifikátorov](../images/remote_control_and_following/sms_authenticator_test.png)
 
 Teraz by ste mali mať SMS príkazy nastavené.
 
@@ -146,7 +146,7 @@ Ak chcete odstrániť nastavené autentifikátory, použite tlačidlo **Resetova
 
 1)  Aby ste overili, že ste všetko nastavili správne, otestujte spojenie: z telefónu opatrovateľa pošlite do telefónu s **AAPS** SMS správu „bg“. Mali by ste dostať odpoveď podobnú tejto:
 
-![obrázok](../images/remote-control-06.png)
+![obrázok](../images/remote_control_and_following/remote-control-06.png)
 
 Ak nedostanete žiadnu odpoveď, pozrite si časť [Riešenie problémov](#SMSCommands-troubleshooting) nižšie.
 
@@ -154,7 +154,7 @@ Ak nedostanete žiadnu odpoveď, pozrite si časť [Riešenie problémov](#SMSCo
 
 Keď budete SMS príkaz posielať prvýkrát, skúste to v blízkosti telefónu s **AAPS**, aby ste videli, ako to funguje:
 
-![obrázok](../images/remote-control-16.png)
+![obrázok](../images/remote_control_and_following/remote-control-16.png)
 
 Telefón opatrovateľa dostane od **AAPS** SMS odpoveď, ktorá potvrdí, či bol SMS príkaz na diaľku úspešne vykonaný.
 
@@ -182,7 +182,7 @@ Aby ste predišli hypoglykémii, je dobré začať opatrne a podať bolus s **me
 
 Príkazy musíte posielať v angličtine. Odpoveď bude vo vašom jazyku, ak je text odpovede už [preložený](#translations-translate-strings-for-AAPS-app). Na veľkosti písmen v príkazoch nezáleží, môžete použiť malé aj veľké písmená.
 
-![Príklad SMS príkazov](../images/SMSCommands.png)
+![Príklad SMS príkazov](../images/remote_control_and_following/SMSCommands.png)
 
 **Tabuľky SMS príkazov** nižšie ukazujú všetky možné SMS príkazy. Pre lepšie pochopenie sú uvedené _príkladové hodnoty_. Príkazy majú rovnaký rozsah možných hodnôt (ciele, percento profilu atď.), aký je povolený v samotnej aplikácii **AAPS**.
 
@@ -191,11 +191,11 @@ Príkazy musíte posielať v angličtine. Odpoveď bude vo vašom jazyku, ak je 
 
 Niektoré SMS príkazy dajú odpoveď hneď, iné vyžadujú silné **overenie** cez aplikáciu Authenticator. Jednoduchý dotaz ako „**BG**“ (žiada aktuálnu glykémiu) sa rýchlo napíše, nepotrebuje overenie a vráti informácie o stave **AAPS**, ako vidíte nižšie:
 
-![obrázok](../images/remote-control-06.png)
+![obrázok](../images/remote_control_and_following/remote-control-06.png)
 
 Príkazy, ktoré potrebujú vyššiu bezpečnosť, vyžadujú zadanie kódu, napríklad:
 
-![Overená SMS](../images/remote-control-07.png)
+![Overená SMS](../images/remote_control_and_following/remote-control-07.png)
 
 Stĺpec *Overenie* v tabuľkách nižšie ukazuje, či každý príkaz vyžaduje takéto silné overenie.
 
@@ -210,7 +210,7 @@ Stĺpec *Overenie* v tabuľkách nižšie ukazuje, či každý príkaz vyžaduje
 
 | Príkaz               | Overenie | Funkcia a *odpoveď*                                                                                             |
 | -------------------- | -------- | --------------------------------------------------------------------------------------------------------------- |
-| PUMPA                | Nie      | Posledné Spoj: pred 1 min<br/>Doč. bazál: 0,00U/h @11:38 5/30min<br/>IOB: 0,5U Reserv: 34U Bat: 100 |
+| PUMP                 | Nie      | Posledné Spoj: pred 1 min<br/>Doč. bazál: 0,00U/h @11:38 5/30min<br/>IOB: 0,5U Reserv: 34U Bat: 100 |
 | PUMP DISCONNECT *30* | Áno      | Odpojí pumpu na *30* minút                                                                                      |
 | PUMP CONNECT         | Áno      | Pumpa bola znovu pripojená                                                                                      |
 
@@ -311,12 +311,12 @@ Môže to mať jeden z týchto dôvodov:
 ### Žiadna odpoveď na SMS príkazy
 
 V telefóne opatrovateľa a/alebo v telefóne s **AAPS** skúste vypnúť tieto možnosti:
-* **Send as chat message** ![Vypnutie odosielania SMS ako chatových správ](../images/SMSdisableChat.png)
+* **Send as chat message** ![Vypnutie odosielania SMS ako chatových správ](../images/remote_control_and_following/SMSdisableChat.png)
 * Ak používate aplikáciu Android Messages alebo Google Messages (Správy), vypnite správy RCS:
   - otvorte konkrétnu SMS konverzáciu v aplikácii Správy
   - Vyberte ponuku možností (tri bodky) v pravom hornom rohu
   - vyberte „Podrobnosti“ (Details)
-  - Zapnite „Only send SMS and MMS messages“ (posielať iba správy SMS a MMS) ![Vypnutie RCS ako chatových správ](../images/SMSdisableRCS.png)
+  - Zapnite „Only send SMS and MMS messages“ (posielať iba správy SMS a MMS) ![Vypnutie RCS ako chatových správ](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### Chyby pri vykonávaní príkazov
 
@@ -331,7 +331,7 @@ Príkaz nemusí byť úspešný z viacerých dôvodov:
 
 Časté chyby ukazujú príklady nižšie:
 
-![obrázok](../images/remote-control-17.png)
+![obrázok](../images/remote_control_and_following/remote-control-17.png)
 
 ### Ako môžem zastaviť príkaz, ktorý už bol overený?
 
