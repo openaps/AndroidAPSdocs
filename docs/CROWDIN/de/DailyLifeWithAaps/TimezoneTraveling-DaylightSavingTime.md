@@ -118,14 +118,14 @@ Wenn Du den **AAPS**-Bolus-Rechner zum Bolen verwendest, schließe **COB** und *
    * Manche Smartphones haben zwei Einstellungen: eine für die automatische Einstellung der Uhrzeit (die idealerweise eingeschaltet bleibt) und eine für die automatische Einstellung der Zeitzone (die Du AUSSCHALTEN musst: **Automatisch festlegen** unter **Zeitzone** im Screenshot unten).
    * Unglücklicherweise haben manche Android-Versionen nur eine Einstellmöglichkeit für beides zusammen. In diesem Fall musst Du eben beide ausschalten.
 
-![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
+![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
 2. Suche Dir eine Zeitzone, die dieselbe Uhrzeit wie Du hat, aber nicht zwischen Winter- und Sommerzeit wechselt.
    
    * Eine Liste dieser Länder findest Du z.B. auf [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/).
    * Für die Mitteleuropäische Zeit (MEZ) könnte das „Brazzaville“ (Kongo) sein. Stelle die Zeitzone Deines Smartphones auf Kongo um.
 
-![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
+![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
 3. Aktualisiere in **AAPS** die Pumpe und wechsle zu Deinem gewünschten **Profil**.
 
