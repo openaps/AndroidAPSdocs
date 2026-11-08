@@ -313,7 +313,7 @@ Temporary targets from the phone's presets. Set the duration and the target of e
 
 The [QuickWizard](#quickwizards) entries of the phone that have **Show on Watch** turned on, within their valid hours. A carbs entry shows its carbs in g, an insulin entry its fixed dose in U. A tap runs the entry after a confirmation on the watch. There is nothing to set on the watch: edit the entries on the phone, and turn on **Show on Watch** under **Device Selection** for each entry you want on the tile. Outside the valid hours of all your entries, the tile shows **No config available**.
 
-![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/quickwizard_watch_phone.png)
+![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
 
 ### Scene tile
 
@@ -365,9 +365,9 @@ The Android developer options enable your watch to stay awake during charging. T
 
 Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
 
-![Watchface Nightstand](../images/Watchface_nightstand.jpg)
+![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
 
-![Simplified UI](../images/Watchface_simplified_ui.png)
+![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
 
 (WearOsSmartwatch-phone-alarms)=
 

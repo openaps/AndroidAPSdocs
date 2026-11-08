@@ -55,14 +55,14 @@ These Authenticator apps produce a time-limited, one-time 6-digit password, simi
 
 On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phone** are allowed.
 
-![image](../images/remote-control-08.png)
+![image](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android can block the **SMS** permission for apps that were not installed from an app store, like **AAPS**. If you see this message when you grant the **SMS** permission, open the phone's **Settings > Apps > AAPS**, tap the **⋮** menu (top right) and select **Allow restricted settings**. Then grant the **SMS** permission again.
 ```
 
-![App was denied access to SMS](../images/sms_permission_restricted.png)
+![App was denied access to SMS](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### Date and time syncing
 
@@ -82,7 +82,7 @@ Open the **SMS Communicator** settings.
 
 Enable **Allow remote commands via SMS**. The **Additional mandatory PIN at token end** and **Authenticator setup** options only appear once this is enabled:
 
-![SMS Communicator settings](../images/sms_communicator_settings.png)
+![SMS Communicator settings](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Allowed phone numbers
@@ -97,7 +97,7 @@ Note that the “+” in front of the number may or may not be required based on
 
 If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select **OK**:
 
-![Allowed phone numbers](../images/sms_allowed_numbers.png)
+![Allowed phone numbers](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### Remote bolus min distance
 
@@ -115,7 +115,7 @@ PIN requirements are:
 
 For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a sequence (_e.g._ 123456).
 
-![Additional mandatory PIN at token end](../images/sms_pin.png)
+![Additional mandatory PIN at token end](../images/remote_control_and_following/sms_pin.png)
 
 #### Authenticator setup
 
@@ -123,7 +123,7 @@ For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a seque
 * Open your installed authenticator app on the _caregiver’s phone_, set up a new connection and
 * Use the caregiver phone to scan the QR code shown under **Scan code to setup AAPS OTP codes**.
 
-![Authenticator setup with QR code](../images/sms_authenticator_setup.png)
+![Authenticator setup with QR code](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * Under **Test One-Time-Password**, enter the one-time passcode from the authenticator app on the caregiver phone followed by your PIN in **Code to check**:
 
@@ -134,7 +134,7 @@ Example:
 
 If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
 
-![Test One-Time-Password and Reset Authenticators](../images/sms_authenticator_test.png)
+![Test One-Time-Password and Reset Authenticators](../images/remote_control_and_following/sms_authenticator_test.png)
 
 You should now be set up with SMS commands.
 
@@ -146,7 +146,7 @@ Use the **Reset Authenticators** button at the bottom of the **Authenticator set
 
 1)	To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
 
@@ -154,7 +154,7 @@ If you don't receive any response, check the [Troubleshooting](#SMSCommands-trou
 
 When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
 
-![image](../images/remote-control-16.png)
+![image](../images/remote_control_and_following/remote-control-16.png)
 
 The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully. 
 
@@ -183,7 +183,7 @@ To avoid hypos, it is a good idea to start conservatively, by bolusing **less in
 
 Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app). The commands are not case-sensitive, you can use lower or upper case.
 
-![SMS Commands Example](../images/SMSCommands.png)
+![SMS Commands Example](../images/remote_control_and_following/SMSCommands.png)
 
 The **SMS Commands Tables** below show all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the **AAPS** app itself.
 
@@ -192,11 +192,11 @@ The **SMS Commands Tables** below show all the possible SMS commands. _Example v
 
 Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 Commands which need more security require a code to be entered, for example:
 
-![SMS authenticated](../images/remote-control-07.png)
+![SMS authenticated](../images/remote_control_and_following/remote-control-07.png)
 
 The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
 
@@ -316,13 +316,13 @@ It could be for one of these reasons:
 
 On the caregiver phone and/or **AAPS** phone, try disabling the following options : 
 * **Send as chat message**
-![Disable SMS as chat message](../images/SMSdisableChat.png)
+![Disable SMS as chat message](../images/remote_control_and_following/SMSdisableChat.png)
 * If using Android Messages App or Google Messages App, disable RCS messaging:
   - open the specific SMS conversation in Messages
   - Select the options ellipsis in the top right corner
   - select "Details"
   - Activate "Only send SMS and MMS messages"
-  ![Disable RCS as chat message](../images/SMSdisableRCS.png)
+  ![Disable RCS as chat message](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### Errors carrying out commands
 
@@ -337,7 +337,7 @@ There are several possible reasons the command may not be successful:
 
 Common errors are shown in the examples below:
 
-![image](../images/remote-control-17.png)
+![image](../images/remote_control_and_following/remote-control-17.png)
 
 ### How can I stop a command once it has been authenticated?
 
