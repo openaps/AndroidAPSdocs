@@ -9,7 +9,7 @@
 
 ## Pagrindinis ekranas
 
-![Pagrindinis ekranas](../images/Home_Homescreen.png)
+![Pagrindinis ekranas](../images/main/Home_Homescreen.png)
 
 Tai pirmasis ekranas, kurį matote atidarę **AAPS**. Jame yra didžioji dalis informacijos, kurios jums reikia kasdien.
 
@@ -33,13 +33,13 @@ KG reikšmės spalva rodo, ar ji yra nustatytame [intervale](#Preferences-range-
 * raudona = žemiau ribų
 * geltona = virš ribų
 
-![KG apskritimas tikslinėse ribose, žalias](../images/Home_Delta.png) ![KG apskritimas virš ribų, geltonas](../images/Home_Delta_high.png) ![KG apskritimas žemiau ribų, raudonas](../images/Home_Delta_low.png)
+![KG apskritimas tikslinėse ribose, žalias](../images/main/Home_Delta.png) ![KG apskritimas virš ribų, geltonas](../images/main/Home_Delta_high.png) ![KG apskritimas žemiau ribų, raudonas](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
 #### Ciklo būsena
 
-![Ciklo būsena](../images/main_loop_status.png)
+![Ciklo būsena](../images/main/main_loop_status.png)
 
 Šalia KG apskritimo esanti piktograma rodo ciklo veikimo režimą (paveikslėlyje iš viršaus į apačią):
 
@@ -166,7 +166,7 @@ Bakstelėkite profilio pavadinimą, kad atidarytumėte [Profilio ekraną](#aaps-
 
 Norėdami **pakeisti profilio procentą** (ir jo trukmę), bakstelėkite profilio pavadinimą, tada bakstelėkite apvalų mygtuką **▶** (Aktyvuoti) Profilio ekrano apačioje dešinėje. **AAPS** 3.x šis ekranas atsidarydavo ilgai paspaudus profilio pavadinimą; **AAPS** 4 ilgas paspaudimas nieko nedaro. Žingsnis po žingsnio: [Profilio procento keitimas](#ProfileSwitch-change-percentage).
 
-![Profilis su aktyviu profilio keitimu](../images/main_profile_switch.png)
+![Profilis su aktyviu profilio keitimu](../images/main/main_profile_switch.png)
 
 1. Įprastas rodinys, kai aktyvuotas standartinis profilis.
 2. Profilio keitimas su 90 % procentu ir likusia 9 minučių trukme – kol veikia laikinas profilio keitimas, profilio pavadinimas tampa geltonas.
@@ -174,7 +174,7 @@ Norėdami **pakeisti profilio procentą** (ir jo trukmę), bakstelėkite profili
 
 #### Target
 
-![Likęs laikino tikslo laikas](../images/main_temp_target.png)
+![Likęs laikino tikslo laikas](../images/main/main_temp_target.png)
 
 Dabartinis tikslinis glikemijos lygis rodomas po profilio pavadinimu.
 
@@ -200,7 +200,7 @@ Jei **AAPS** aptinka rezistenciją ar jautrumą, tikslas skirsis nuo nustatyto p
 
 #### AIO, AAO, valandinė bazė ir jautrumas
 
-![AIO, AAO, valandinė bazė ir jautrumas](../images/main_iob_cob_basal_sensitivity.png)
+![AIO, AAO, valandinė bazė ir jautrumas](../images/main/main_iob_cob_basal_sensitivity.png)
 
 1. **Švirkštas**: aktyvus insulinas organizme (AIO) – aktyvaus insulino kiekis jūsų kūne  
     AIO būtų lygus nuliui, jei veiktų tik jūsų standartinė valandinė bazė ir nebūtų likę insulino iš ankstesnių bolusų. 
@@ -234,7 +234,7 @@ Jei norite, pranešimus apie reikalingus angliavandenius galima siųsti į Night
 
 ### Skiltis C – būsenos eilutė
 
-![Būsenos eilutė](../images/main_status_row.png)
+![Būsenos eilutė](../images/main/main_status_row.png)
 
 Būsenos eilutė vizualiai įspėja apie
 
@@ -320,7 +320,7 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 Paspauskite **pieštuko** piktogramą grafiko viršutiniame dešiniajame kampe, kad atidarytumėte grafiko nustatymus:
 
-![Pagrindinio grafiko nustatymai](../images/main_graph_settings.png)
+![Pagrindinio grafiko nustatymai](../images/main/main_graph_settings.png)
 
 * **Grafiko aukštis** keičia, kokio aukščio piešiamas grafikas.
 * **AKT** uždeda insulino aktyvumo kreivę: vientisa geltonai žalia linija <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (nepainiokite su taškuota geltona NDM prognoze)
@@ -408,7 +408,7 @@ Papildomi grafikai seka pagrindinį grafiką: kai slenkate ar priartinate KG gra
 
 Norėdami nustatyti papildomą grafiką, paspauskite **pieštuko** piktogramą jo viršutiniame dešiniajame kampe:
 
-![Additional graph settings](../images/main_additional_graph_settings.png)
+![Additional graph settings](../images/main/main_additional_graph_settings.png)
 
 Pasirinkite ženklelius, atitinkančius duomenis, kuriuos norite matyti šiame grafike; mygtukas **Pašalinti** ištrina grafiką.
 
@@ -490,7 +490,7 @@ Steps are drawn as columns, and the heart rate as a curved line that breaks wher
 
 ### Skiltis F – QuickLaunch įrankių juosta
 
-![QuickLaunch įrankių juosta](../images/main_quicklaunch_toolbar.png)
+![QuickLaunch įrankių juosta](../images/main/main_quicklaunch_toolbar.png)
 
 Plaukiojanti įrankių juosta ekrano apačioje talpina jūsų **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)** veiksmus. Mažas **krumpliaratis** atidaro QuickLaunch konfigūraciją, kurioje pasirenkate, kokie mygtukai rodomi (terapija, terapijos įrašai, NGJ veiksmai, meniu **Valdymas** ekranai, [Greitojo vedlio](../DailyLifeWithAaps/QuickWizards.md) mygtukai, [Scenarijai](../DailyLifeWithAaps/Scenes.md) ir kt.).
 
@@ -502,7 +502,7 @@ Kai pompa **atjungta**, terapijos mygtukai lieka įrankių juostoje, pavyzdžiui
 
 #### Insulinas
 
-![Insulino langas](../images/insulin_dialog.png)
+![Insulino langas](../images/v4/Screens/insulin_dialog.png)
 
 Suleisti tam tikrą insulino kiekį nenaudojant [boluso patarėjo](#aaps-screens-bolus-wizard).
 
@@ -520,7 +520,7 @@ Insulino langą galima naudoti ir tada, kai pompa sustabdyta ar atjungta, pvz., 
 
 #### Angliavandeniai
 
-![Angliavandenių langas](../images/carbs_dialog.png)
+![Angliavandenių langas](../images/v4/Screens/carbs_dialog.png)
 
 To record carbs without bolusing.
 
@@ -574,7 +574,7 @@ Bakstelėkite burbulą, kad atidarytumėte skydelį **Pranešimas**. Prie kiekvi
 
 ## Boluso patarėjas
 
-![Bolus wizard](../images/bolus_wizard.png)
+![Bolus wizard](../images/v4/Screens/bolus_wizard.png)
 
 Valgio bolusą paprastai leisite iš čia.
 
@@ -618,7 +618,7 @@ Laukas **Angliavandenių laikas** skirtas išankstiniam bolusui: juo sistemai nu
 
 **Nustatyti įspėjimą** (priminimas pavalgyti): kai įvedamas būsimas angliavandenių laikas, atsiranda jungiklis „**Nustatyti įspėjimą**“, kad nurodytu laiku jums būtų priminta suvalgyti į **AAPS** įvestus angliavandenius:
 
-![Įspėjimo nustatymas būsimiems angliavandeniams](../images/bolus_wizard_set_alarm.png)
+![Įspėjimo nustatymas būsimiems angliavandeniams](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
 The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
@@ -640,7 +640,7 @@ Naudinga žinoti:
 
 #### Wrong COB detection
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+![Slow carb absorption](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Jei pasinaudoję boluso patarėju matote aukščiau pateiktą įspėjimą, **AAPS** aptiko, kad apskaičiuota AAO reikšmė gali būti neteisinga. Todėl, jei po ankstesnio valgio, kai dar yra AAO, norite vėl leisti bolusą, saugokitės perdozavimo!
 
@@ -719,7 +719,7 @@ Daugiau informacijos rasite [Konfigūracijos puslapio APS skyriuje](#Config-Buil
 
 ## Profile
 
-![Profile](../images/Screenshots_Profile.png)
+![Profile](../images/screens/Screenshots_Profile.png)
 
 **Valdymas → Profilis** (arba bakstelėjimas ant profilio pavadinimo pagrindiniame ekrane) atidaro Profilio ekraną: jūsų profiliai rodomi kaip slenkamų kortelių karuselė su mygtukais profiliui pridėti, redaguoti, klonuoti, ištrinti ir **aktyvuoti**.
 
@@ -733,7 +733,7 @@ Profilyje yra informacija apie jūsų individualius diabeto nustatymus. Daugiau 
 
 ## NSClient
 
-![NSClient](../images/Screenshots_NSClient.png)
+![NSClient](../images/screens/Screenshots_NSClient.png)
 
 **Konfigūracija → Ryšys → NSClientV3 → Atidaryti įskiepį** rodo ryšio su jūsų Nightscout svetaine būseną: URL, websocket būseną, eilę ir sinchronizacijos veiklos žurnalą.
 
@@ -745,7 +745,7 @@ Trikčių šalinimas aprašytas šiame [puslapyje](../GettingHelp/Troubleshootin
 
 ## Glikemijos šaltinis – xDrip, BYODA...
 
-![Glikemijos šaltinio ekranas](../images/Screenshots_BGSource.png)
+![Glikemijos šaltinio ekranas](../images/screens/Screenshots_BGSource.png)
 
 **Konfigūracija → Glikemijos šaltinis → Atidaryti įskiepį** rodo NGJ rodmenų istoriją ir leidžia pašalinti rodmenis gedimo atveju (pvz., dėl suspaudimo klaidingai žemi rodmenys) arba pasikartojančius rodmenis.
 
