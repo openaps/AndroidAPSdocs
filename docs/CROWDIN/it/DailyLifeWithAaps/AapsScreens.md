@@ -39,7 +39,7 @@ The color of the BG value reflects the status to the defined [range](#Preference
 
 #### Stato loop
 
-![Stato loop](../images/Home2020_LoopStatus.png)
+![Stato loop](../images/main_loop_status.png)
 
 Next to the BG circle, an icon shows the running mode of the loop (from top to bottom in the picture):
 
@@ -166,7 +166,7 @@ Tap the profile name to open the [Profile screen](#aaps-screens-profile), where 
 
 To **change the profile percentage** (and its duration), tap the profile name, then tap the round **▶** (Activate) button at the bottom right of the Profile screen. In **AAPS** 3.x this screen opened with a long press on the profile name; in **AAPS** 4 a long press does nothing. Passo per passo: [Cambiare la percentuale del profilo](#ProfileSwitch-change-percentage).
 
-![Profilo con un cambio profilo attivo](../images/Home2020_ProfileSwitch.png)
+![Profilo con un cambio profilo attivo](../images/main_profile_switch.png)
 
 1. Regular display with a standard profile activation.
 2. Cambio profilo con una percentuale specifica del 90% e una durata residua di 9 minuti: il nome del profilo diventa giallo mentre è in corso un cambio profilo temporaneo.
@@ -174,7 +174,7 @@ To **change the profile percentage** (and its duration), tap the profile name, t
 
 #### Target
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Temp target remaining duration](../images/main_temp_target.png)
 
 The current target blood glucose level is displayed below the profile name.
 
@@ -200,7 +200,7 @@ Se **AAPS** rileva resistenza o sensibilità, il target cambia rispetto a quello
 
 #### IOB, COB, basale e sensibilità
 
-![IOB, COB, basale e sensibilità](../images/Home2020_TBR.png)
+![IOB, COB, basale e sensibilità](../images/main_iob_cob_basal_sensitivity.png)
 
 1. **Siringa**: insulin on board (IOB) - amount of active insulin inside your body  
     The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
@@ -234,7 +234,7 @@ Carb required notifications can be pushed to Nightscout if wished, in which case
 
 ### Sezione C - Riga di stato
 
-![Riga di stato](../images/Home2020_StatusLights.png)
+![Riga di stato](../images/main_status_row.png)
 
 La riga di stato dà un avviso visivo per
 
@@ -320,7 +320,7 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 Premi l'icona a **matita** nell'angolo in alto a destra del grafico per aprire le impostazioni del grafico:
 
-![Impostazioni del grafico principale](../images/Home2020_MainGraphSetting.png)
+![Impostazioni del grafico principale](../images/main_graph_settings.png)
 
 * **Graph height** adjusts how tall the graph is drawn.
 * **ACT** sovrappone la curva dell'attività dell'insulina: una linea continua giallo-verde <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (da non confondere con la previsione UAM gialla tratteggiata)
@@ -408,7 +408,7 @@ The additional graphs follow the main graph: when you scroll or zoom the BG grap
 
 Per configurare un grafico aggiuntivo, premi l'icona a **matita** nel suo angolo in alto a destra:
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Additional graph settings](../images/main_additional_graph_settings.png)
 
 Select the chips corresponding to the data you want to see on this graph; the **Remove** button deletes the graph.
 
@@ -490,7 +490,7 @@ It is a good combination to display this line along with the Deviation bars. Usa
 
 ### Section F - QuickLaunch toolbar
 
-![QuickLaunch toolbar](../images/Home2020_Buttons.png)
+![QuickLaunch toolbar](../images/main_quicklaunch_toolbar.png)
 
 The floating toolbar at the bottom of the screen holds your **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)** actions. The small **gear** opens the QuickLaunch configuration where you choose which buttons are shown (treatments, careportal entries, CGM actions, the screens of the **Manage** sheet, [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md) buttons, [Scenes](../DailyLifeWithAaps/Scenes.md) and more).
 
@@ -502,7 +502,7 @@ While the pump is **disconnected**, the treatment buttons stay in the toolbar, f
 
 #### Insulin
 
-![Insulin dialog](../images/Home2020_ButtonInsulin.png)
+![Insulin dialog](../images/insulin_dialog.png)
 
 To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
 
@@ -520,7 +520,7 @@ The insulin dialog can be used when the pump is suspended or disconnected as wel
 
 #### Carbs
 
-![Carbs dialog](../images/Home2020_ButtonCarbs.png)
+![Carbs dialog](../images/carbs_dialog.png)
 
 To record carbs without bolusing.
 
@@ -574,7 +574,7 @@ Tap the bubble to open the **Notification** panel. Ogni messaggio mostra l'ora i
 
 ## Calcolatore
 
-![Calcolatore](../images/Home2020_BolusWizard_v2.png)
+![Calcolatore](../images/bolus_wizard.png)
 
 Quando vuoi fare un bolo per un pasto, di solito lo fai da qui.
 
@@ -618,7 +618,7 @@ The **Carb time** field is for pre-bolusing so you can tell the system that ther
 
 **Set alarm** (eating reminder): when a carb time in the future is entered, a "**Set alarm**" switch appears so that you are reminded at the given time, when to eat the carbs you have input into **AAPS**:
 
-![Set alarm for future carbs](../images/Home2021_BolusWizard_EatingReminder.png)
+![Set alarm for future carbs](../images/bolus_wizard_set_alarm.png)
 
 The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
