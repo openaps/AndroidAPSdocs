@@ -114,7 +114,7 @@ Na konci každého riadka malé ikony ukazujú, odkiaľ dáta pochádzajú alebo
 (screens-bolus-carbs)=
 ### Sacharidy a bolusy
 
-![Sacharidy a bolusy](../images/TreatmentsView1.png)
+![Sacharidy a bolusy](../images/Maintenance/TreatmentsView1.png)
 
 Na tejto karte si môžete zobraziť záznam bolusov a sacharidov. Pri každom boluse (riadok **1**) sa vedľa množstva inzulínu zobrazuje zostávajúci súvisiaci IOB. Pôvod bolusu môže byť:
 * Jedlo (zadané ručne tlačidlami Inzulín, Rýchly sprievodca alebo Bolusová kalkulačka)
@@ -141,7 +141,7 @@ Históriu ošetrení môžete použiť na opravu chybne zadaných sacharidov (_n
 
 ### Dočasný bazál
 
-![Dočasný bazál](../images/TreatmentsView2.png)
+![Dočasný bazál](../images/Maintenance/TreatmentsView2.png)
 
 Tu sa zobrazujú **dočasné bazály**, ktoré nastavil okruh. Ak má záznam stále vplyv na IOB, táto informácia sa zobrazuje vedľa dávky (riadok **1**). Môže to byť:
 * Kladný IOB, ak bol dočasný bazál vyšší ako bazál nastavený v profile
@@ -153,13 +153,13 @@ Odstránenie záznamov ovplyvní iba vaše reporty v Nightscoute a pravdepodobne
 
 ### Dočasný cieľ
 
-![Dočasný cieľ](../images/TreatmentsView3.png)
+![Dočasný cieľ](../images/Maintenance/TreatmentsView3.png)
 
 Históriu dočasných cieľov si môžete pozrieť tu.
 
 ### Prepnutie profilu
 
-![Prepnutie profilu](../images/TreatmentsView4.png)
+![Prepnutie profilu](../images/Maintenance/TreatmentsView4.png)
 
 Históriu prepínania profilov si môžete pozrieť tu. Pri každom prepnutí profilu môžete vidieť viac záznamov: riadok **1**, uložený v NS aj v histórii pumpy, zodpovedá skutočnému prepnutiu. Riadok **2**, uložený v Nightscoute, ale nie v histórii pumpy, zodpovedá požiadavke používateľa na prepnutie profilu.
 
@@ -169,14 +169,14 @@ Tlačidlom **Klonovať** v riadku **2** môžete vytvoriť kópiu **Prepnutia pr
 
 ### Starostlivosť
 
-![Starostlivosť](../images/TreatmentsView5.png)
+![Starostlivosť](../images/Maintenance/TreatmentsView5.png)
 
 Táto karta zobrazuje všetky poznámky a záznamy v Starostlivosti zaznamenané v Nightscoute.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Režim prevádzky
 
-![Režim prevádzky](../images/TreatmentsView6.png)
+![Režim prevádzky](../images/Maintenance/TreatmentsView6.png)
 
 Táto karta zobrazuje históriu zmien [stavu okruhu](#AapsScreens-loop-status): otvorený, uzavretý, Ochrana pred nízkou glykémiou (LGS), pozastavený, odpojený.
 
