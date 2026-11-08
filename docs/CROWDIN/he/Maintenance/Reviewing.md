@@ -114,7 +114,7 @@ HbA1c: the estimate of the resulting glycated hemoglobin, based on the average o
 (screens-bolus-carbs)=
 ### פחמ' ובולוס
 
-![פחמימות & בולוס](../images/TreatmentsView1.png)
+![פחמימות & בולוס](../images/Maintenance/TreatmentsView1.png)
 
 בלשונית זו ניתן לראות את יומן הבולוסים והפחמימות. כל בולוס (שורה **1**) מציג ליד כמות האינסולין את ה-IOB שעוד נשאר ממנו. מקור הבולוס יכול להיות:
 * ארוחה (הוזן ידנית דרך הלחצנים אינסולין, אשף מהיר או אשף בולוס)
@@ -141,7 +141,7 @@ HbA1c: the estimate of the resulting glycated hemoglobin, based on the average o
 
 ### בזאלי זמני
 
-![בזאלי זמני](../images/TreatmentsView2.png)
+![בזאלי זמני](../images/Maintenance/TreatmentsView2.png)
 
 כאן מוצגים ה**קצבים הבזאליים הזמניים** שהלולאה הפעילה. כשלרשומה עדיין יש השפעה על ה-IOB, המידע מוצג ליד המינון (שורה **1**). הוא יכול להיות:
 * IOB חיובי אם הבזאלי הזמני היה גבוה מזה שמוגדר בפרופיל
@@ -153,13 +153,13 @@ HbA1c: the estimate of the resulting glycated hemoglobin, based on the average o
 
 ### יעד זמני
 
-![יעד זמני](../images/TreatmentsView3.png)
+![יעד זמני](../images/Maintenance/TreatmentsView3.png)
 
 כאן ניתן לראות את היסטוריית היעדים הזמניים.
 
 ### החלפת פרופיל
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profile Switch](../images/Maintenance/TreatmentsView4.png)
 
 כאן ניתן לראות את היסטוריית החלפות הפרופיל. ייתכן שתראו כמה רשומות בכל פעם שמחליפים פרופיל: שורה **1**, שנשמרת גם ב-NS וגם בהיסטוריית המשאבה, מתאימה להחלפה עצמה. שורה **2**, שנשמרת ב-Nightscout אבל לא בהיסטוריית המשאבה, מתאימה לבקשה להחלפת פרופיל שהמשתמש ביצע.
 
@@ -169,14 +169,14 @@ HbA1c: the estimate of the resulting glycated hemoglobin, based on the average o
 
 ### פורטל הטיפולים
 
-![פורטל הטיפולים](../images/TreatmentsView5.png)
+![פורטל הטיפולים](../images/Maintenance/TreatmentsView5.png)
 
 לשונית זו מציגה את כל ההערות ורשומות פורטל הטיפולים שנרשמו ב-Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### מצב הפעלה
 
-![מצב הפעלה](../images/TreatmentsView6.png)
+![מצב הפעלה](../images/Maintenance/TreatmentsView6.png)
 
 לשונית זו מציגה את ההיסטוריה של שינויי [מצב הלולאה](#AapsScreens-loop-status): פתוחה, סגורה, LGS, השהיה, ניתוק.
 
