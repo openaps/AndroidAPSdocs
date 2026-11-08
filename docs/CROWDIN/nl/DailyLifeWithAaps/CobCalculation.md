@@ -53,7 +53,7 @@ Als de minimale koolhydraatopname (min_5m_carbimpact) wordt gebruikt in plaats v
 
 Normaal detecteert __AAPS__ de opname van koolhydraten via **BG**-afwijkingen. Als de gebruiker koolhydraten heeft ingevoerd, maar **AAPS** de verwachte opname niet kan detecteren via **BG**-afwijkingen, dan gebruikt het in plaats daarvan de methode [min_5m_carbimpact](#Preferences-min_5m_carbimpact) om de opname te berekenen (de zogenaamde ‘fallback’). Deze methode berekent alleen de minimale koolhydraatopname zonder rekening te houden met **BG**-afwijkingen. Daardoor kunnen de COB-waarden onjuist zijn.
 
-![Hint bij verkeerde COB-waarde](../images/Calculator_SlowCarbAbsorption.png)
+![Hint bij verkeerde COB-waarde](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 In de schermafbeelding hierboven werd 66% van de tijd de koolhydraatopname berekend met min_5m_carbimpact in plaats van met de waarde die uit de afwijkingen werd gedetecteerd. Dit geeft aan dat de gebruiker misschien minder **COB** had dan het algoritme heeft berekend.
 
