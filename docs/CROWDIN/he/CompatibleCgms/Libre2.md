@@ -63,7 +63,7 @@ Only Libre 2 and 2+ **EU** models.
 
 → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![הגדרות מתקדמות של xDrip עבור Libre 2 וערכים גולמיים](../images/xDrip_Libre3_Smooth.png)
+![הגדרות מתקדמות של xDrip עבור Libre 2 וערכים גולמיים](../images/libre3/xDrip_Libre3_Smooth.png)
 
 This is mandatory for looping. The curves look smooth and the loop results are great. הערכים הגולמיים שעליהם מבוססות ההתראות קופצים מעט יותר, אבל הם תואמים לערכים שגם הקורא מציג. בנוסף, ניתן להציג את הערכים הגולמיים בגרף של xDrip, כדי להגיב בזמן לשינויים מהירים. הפעילו את Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" ואת "show Sensors Infos". לאחר מכן הערכים הגולמיים מוצגים גם כנקודות לבנות קטנות, ומידע נוסף על החיישן זמין בתפריט המערכת.
 
