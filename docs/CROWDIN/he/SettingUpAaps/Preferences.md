@@ -474,7 +474,19 @@ Settings should be self-explanatory.
 
 **עקיפת מצב 'נא לא להפריע'** (מופעל כברירת מחדל): ההתראות של **AAPS** מצלצלות גם כשהטלפון במצב שקט או במצב 'נא לא להפריע'. יש לכבות את האפשרות אם **AAPS** צריך לכבד את המצבים האלה: אז ההתראות לא מצלצלות, ובמצב 'נא לא להפריע' הן רק רוטטות, בטלפון ובשעון. הצעות של הלולאה שמגיעות במצב 'נא לא להפריע' מוצגות ללא צליל.
 
-כאשר התראה מצלצלת, מסך ההתראה מציע **השתקת ההתראה** (המסך נשאר פתוח, כדי שאפשר יהיה לקרוא את ההודעה) ו**השתקה וסגירה**. החלקה של הודעת ההתראה הצידה במגש ההודעות משתיקה את ההתראה. כאשר פותחים את **AAPS** מאוחר יותר, התראה שלא קיבלה מענה מוצגת שוב.
+When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. החלקה של הודעת ההתראה הצידה במגש ההודעות משתיקה את ההתראה. כאשר פותחים את **AAPS** מאוחר יותר, התראה שלא קיבלה מענה מוצגת שוב.
+
+(preferences-alarm-sound-volume-vibration)=
+### Alarm sound, volume and vibration
+
+- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
+- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
+- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
+- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+
+![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+
+- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
 
 (preferences-maintenance-settings)=
 ## הגדרות תחזוקה
