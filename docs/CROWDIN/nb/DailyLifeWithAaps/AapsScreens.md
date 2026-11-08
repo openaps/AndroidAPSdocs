@@ -9,7 +9,7 @@
 
 ## Hovedskjermen
 
-![Hovedskjermen](../images/Home_Homescreen.png)
+![Hovedskjermen](../images/main/Home_Homescreen.png)
 
 Dette er det første skjermbildet du møter når du åpner **AAPS**, og det inneholder det meste av informasjonen du trenger i hverdagen.
 
@@ -33,13 +33,13 @@ Fargen på BS-verdien viser hvor den ligger i forhold til det definerte [målomr
 * rød = under målområdet
 * gul = over målområdet
 
-![BS-sirkel i målområdet, grønn](../images/Home_Delta.png) ![BS-sirkel over målområdet, gul](../images/Home_Delta_high.png) ![BS-sirkel under målområdet, rød](../images/Home_Delta_low.png)
+![BS-sirkel i målområdet, grønn](../images/main/Home_Delta.png) ![BS-sirkel over målområdet, gul](../images/main/Home_Delta_high.png) ![BS-sirkel under målområdet, rød](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
 #### Loopstatus
 
-![Loopstatus](../images/main_loop_status.png)
+![Loopstatus](../images/main/main_loop_status.png)
 
 Ved siden av BS-sirkelen viser et ikon kjøremodusen til loopen (ovenfra og ned på bildet):
 
@@ -166,7 +166,7 @@ Trykk på profilnavnet for å åpne [Profil-skjermen](#aaps-screens-profile), de
 
 For å **endre profilprosenten** (og varigheten), trykk på profilnavnet og deretter på den runde **▶**-knappen (Aktiver) nederst til høyre på Profil-skjermen. I **AAPS** 3.x åpnet du dette skjermbildet ved å trykke og holde på profilnavnet; i **AAPS** 4 gjør trykk og hold ingenting. Steg for steg: [Endre profilprosenten](#ProfileSwitch-change-percentage).
 
-![Profil med et aktivt profilbytte](../images/main_profile_switch.png)
+![Profil med et aktivt profilbytte](../images/main/main_profile_switch.png)
 
 1. Vanlig visning med en standard profilaktivering.
 2. Profilbytte med en bestemt prosent på 90 % og en gjenværende varighet på 9 minutter — profilnavnet blir gult mens et midlertidig profilbytte kjører.
@@ -174,7 +174,7 @@ For å **endre profilprosenten** (og varigheten), trykk på profilnavnet og dere
 
 #### Mål
 
-![Gjenværende varighet for midlertidig mål](../images/main_temp_target.png)
+![Gjenværende varighet for midlertidig mål](../images/main/main_temp_target.png)
 
 Det gjeldende blodsukkermålet vises under profilnavnet.
 
@@ -200,7 +200,7 @@ Hvis **AAPS** oppdager resistens eller sensitivitet, endres målet fra det som e
 
 #### IOB, COB, basal og sensitivitet
 
-![IOB, COB, basal og sensitivitet](../images/main_iob_cob_basal_sensitivity.png)
+![IOB, COB, basal og sensitivitet](../images/main/main_iob_cob_basal_sensitivity.png)
 
 1. **Sprøyte**: aktivt insulin (IOB) - mengden aktivt insulin i kroppen din  
     Tallet for aktivt insulin ville vært null hvis bare standardbasalen din kjørte og det ikke var noe insulin igjen fra tidligere boluser. 
@@ -234,7 +234,7 @@ Varsler om at karbohydrater kreves kan sendes til Nightscout hvis du ønsker det
 
 ### Del C - Statusraden
 
-![Statusrad](../images/main_status_row.png)
+![Statusrad](../images/main/main_status_row.png)
 
 Statusraden gir en visuell advarsel for
 
@@ -320,7 +320,7 @@ Når klokken på telefonen har hoppet, ved overgang til eller fra sommertid elle
 
 Trykk på **blyant**-ikonet øverst til høyre i grafen for å åpne grafinnstillingene:
 
-![Innstilling for hovedgrafen](../images/main_graph_settings.png)
+![Innstilling for hovedgrafen](../images/main/main_graph_settings.png)
 
 * **Grafhøyde** justerer hvor høy grafen tegnes.
 * **ACT** legger insulinaktivitetskurven oppå: en heltrukket gulgrønn linje <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (ikke å forveksle med den prikkede gule UAM-prediksjonen)
@@ -408,7 +408,7 @@ De ekstra grafene følger hovedgrafen: når du ruller eller zoomer i BS-grafen, 
 
 For å sette opp en ekstra graf, trykk på **blyant**-ikonet øverst til høyre i den:
 
-![Innstillinger for ekstra grafer](../images/main_additional_graph_settings.png)
+![Innstillinger for ekstra grafer](../images/main/main_additional_graph_settings.png)
 
 Velg brikkene for dataene du vil se på denne grafen; knappen **Fjern** sletter grafen.
 
@@ -490,7 +490,7 @@ Det er en god kombinasjon å vise denne linjen sammen med avviksstolpene. De bru
 
 ### Del F - Hurtigstart-verktøylinjen
 
-![Hurtigstart-verktøylinjen](../images/main_quicklaunch_toolbar.png)
+![Hurtigstart-verktøylinjen](../images/main/main_quicklaunch_toolbar.png)
 
 Den flytende verktøylinjen nederst på skjermen inneholder **[Hurtigstart](../DailyLifeWithAaps/QuickLaunch.md)**-handlingene dine. Det lille **tannhjulet** åpner Hurtigstart-konfigurasjonen, der du velger hvilke knapper som vises (behandlinger, helseportal-oppføringer, CGM-handlinger, skjermene i **Administrer**-arket, [Hurtigknapp](../DailyLifeWithAaps/QuickWizards.md)-knapper, [Scener](../DailyLifeWithAaps/Scenes.md) og mer).
 
@@ -502,7 +502,7 @@ Mens pumpen er **frakoblet**, blir behandlingsknappene værende på verktøylinj
 
 #### Insulin
 
-![Insulin-dialog](../images/insulin_dialog.png)
+![Insulin-dialog](../images/v4/Screens/insulin_dialog.png)
 
 For å gi en bestemt mengde insulin uten å bruke [boluskalkulatoren](#aaps-screens-bolus-wizard).
 
@@ -520,7 +520,7 @@ Insulin-dialogen kan også brukes når pumpen er pauset eller frakoblet, for eks
 
 #### Karbo
 
-![Karbo-dialog](../images/carbs_dialog.png)
+![Karbo-dialog](../images/v4/Screens/carbs_dialog.png)
 
 For å registrere karbohydrater uten å gi bolus.
 
@@ -574,7 +574,7 @@ Trykk på boblen for å åpne **Varsling**-panelet. Hver melding viser tidspunkt
 
 ## Boluskalkulator
 
-![Boluskalkulator](../images/bolus_wizard.png)
+![Boluskalkulator](../images/v4/Screens/bolus_wizard.png)
 
 Når du vil gi en måltidsbolus, er det vanligvis her du gjør det.
 
@@ -618,7 +618,7 @@ Feltet **Karbotid** er for forhåndsbolus, slik at du kan fortelle systemet at d
 
 **Sett alarm** (spisepåminnelse): når du legger inn en karbotid fram i tid, vises en bryter «**Sett alarm**», slik at du på det gitte tidspunktet blir minnet på å spise karbohydratene du har lagt inn i **AAPS**:
 
-![Sett alarm for karbohydrater fram i tid](../images/bolus_wizard_set_alarm.png)
+![Sett alarm for karbohydrater fram i tid](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
 Påminnelsen starter når bolusen er gitt. Mens den kjører, viser hovedskjermen et felt **Tid for å spise** som teller ned, med **Stopp** og **+5 min**. **+5 min** flytter slutten på ventetiden fem minutter senere, og feltet viser den totale ventetiden. Når tiden er inne, ringer påminnelsen med sin egen lyd, en myk kjøkkentimer. I tillegg til **Demp alarm** (skjermen forblir åpen) og **Demp og lukk** har alarmskjermen **+5 min**, som starter en ny ventetid på fem minutter. Når den har ringt, viser feltet *Tiden er ute* med **+5 min** og **Forkast**; **Demp og lukk** fjerner også feltet. Feltet og alarmen vises også på **AAPSClient** og på [klokken](#WearOsSmartwatch-wizard-carb-time). Påminnelsen lager ikke en timer i klokkeappen på telefonen. Hvis Android ikke lar **AAPS** sette alarmer, ber kalkulatoren deg om å tillate *Alarmer og påminnelser* for **AAPS** i Android-innstillingene. Bjellen tilbys ikke for en karbotid som allerede har passert.
 
@@ -640,7 +640,7 @@ Greit å vite:
 
 #### Feil COB-deteksjon
 
-![Langsomt karbohydratopptak](../images/Calculator_SlowCarbAbsorption.png)
+![Langsomt karbohydratopptak](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Hvis du ser advarselen ovenfor etter å ha brukt boluskalkulatoren, har **AAPS** oppdaget at den beregnede COB-verdien kan være feil. Så hvis du vil gi bolus igjen etter et tidligere måltid med COB, må du være oppmerksom på faren for overdosering!
 
@@ -719,7 +719,7 @@ For flere detaljer, se [APS-delen på siden Konfigurasjon](#Config-Builder-aps).
 
 ## Profil
 
-![Profil](../images/Screenshots_Profile.png)
+![Profil](../images/screens/Screenshots_Profile.png)
 
 **Administrer → Profil** (eller et trykk på profilnavnet på hovedskjermen) åpner Profil-skjermen: profilene dine som en kortkarusell du kan sveipe i, med knapper for å legge til, redigere, duplisere, slette og **aktivere** en profil.
 
@@ -733,7 +733,7 @@ Profilen inneholder informasjon om dine individuelle diabetesinnstillinger. Se d
 
 ## NSClient
 
-![NSClient](../images/Screenshots_NSClient.png)
+![NSClient](../images/screens/Screenshots_NSClient.png)
 
 **Konfigurasjon → Kommunikasjon → NSClientV3 → Åpne plugin** viser statusen for tilkoblingen til Nightscout-siden din: URL, websocket-status, kø og en logg over synkroniseringsaktiviteten.
 
@@ -745,7 +745,7 @@ For feilsøking, se denne [siden](../GettingHelp/TroubleshootingNsClient.md).
 
 ## BS-kilde - xDrip, BYODA ...
 
-![BS-kilde-skjermen](../images/Screenshots_BGSource.png)
+![BS-kilde-skjermen](../images/screens/Screenshots_BGSource.png)
 
 **Konfigurasjon → BS-kilde → Åpne plugin** viser historikken over CGM-målinger og gir mulighet til å fjerne målinger ved feil (for eksempel kompresjonslav) eller dupliserte målinger.
 
