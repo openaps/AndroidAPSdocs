@@ -91,6 +91,8 @@ Pasirinkite šviesią temą, tamsią temą arba telefono sistemos nustatymą.
 
 Būtinas norint [eksportuoti nustatymus](../Maintenance/ExportImportSettings.md), nes nuo 2.7 versijos jie yra užšifruoti.
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **Biometrinė apsauga gali neveikti OnePlus telefonuose. Tai žinoma OnePlus problema kai kuriuose telefonuose.**
 
 ![Pagrindinio slaptažodžio nustatymas](../images/preferences/master_password_dialog.png)
