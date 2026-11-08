@@ -59,7 +59,7 @@ Daugiausia nusivylimų savarankiškais **AAPS** laikrodžiais kyla dėl mažyči
 
 Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Naudotojai praneša apie kovą su operacine sistema ir energijos taupymo nustatymais, sunkumus paleidžiant jutiklius laikrodyje, prastą Bluetooth ryšio nuotolį (norint išlaikyti ryšį ir su jutikliu, ir su pompa) ir abejotiną atsparumą vandeniui. Pavyzdžiai parodyti toliau esančiose nuotraukose.
 
-![image](../images/watch_standalone_aaps_and_xdrip.png)
+![image](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 Jei norite nustatyti savarankišką laikrodį, daugiau informacijos rasite **AAPS**  Facebook grupės įrašuose ir komentaruose (geri paieškos žodžiai: „standalone“ ir „Lemfo“) bei Discord.
 
@@ -88,7 +88,7 @@ Naujausi **Wear OS** pakeitimai palaipsniui gadina pasirinktinius **AAPS** cifer
 
 [Įdiegę **AAPS** į savo laikrodį](../WearOS/WearOsSmartwatch.md), iš šių **AAPS** ciferblatų automatiškai galėsite pasirinkti norimą. Daugumoje laikrodžių tiesiog ilgai spauskite pagrindinį ekraną, kol ekranas sumažės, ir braukite į dešinę, kad pasirinktumėte kitą ekraną:
 
-![image](../images/watchfaces_aaps_selection.png)
+![image](../images/watches/watchfaces_aaps_selection.png)
 
 Tai yra pagrindiniai į **AAPS** įtraukti ekranai. Yra ir [daugiau ciferblatų](#WearOS_changing-to-AAPS-watchface), taip pat galite naudoti [ekrano elementus](#Watchfaces-complications).
 
@@ -122,7 +122,7 @@ Garmin ConnectIQ parduotuvėje yra keletas Garmin ciferblatų, kurie jungiasi su
 
 ![Konfigūracija > Ryšys: kortelė Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) tiesiogiai sujungiamas su **AAPS**. Jis rodo ciklo būsenos duomenis (aktyvų insuliną organizme, laikiną valandinę bazę) kartu su gliukozės reikšmėmis ir siunčia pulso duomenis į **AAPS**. Jį galima rasti ConnectIQ parduotuvėje; įjunkite įskiepį **Garmin** skiltyje **Konfigūracija → Ryšys**. ![AAPS Glucose Watch ciferblatas su sunumeruotais laukais](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) tiesiogiai sujungiamas su **AAPS**. Jis rodo ciklo būsenos duomenis (aktyvų insuliną organizme, laikiną valandinę bazę) kartu su gliukozės reikšmėmis ir siunčia pulso duomenis į **AAPS**. Jį galima rasti ConnectIQ parduotuvėje; įjunkite įskiepį **Garmin** skiltyje **Konfigūracija → Ryšys**. ![AAPS Glucose Watch ciferblatas su sunumeruotais laukais](../images/watches/Garmin_WF-annotated.png)
 
 1. Didžiausia ir mažiausia gliukozės reikšmė grafike
 2. Gliukozės pokytis per minutę
@@ -155,7 +155,7 @@ Toliau pateikti keli tik sekimui skirti laikrodžiai, populiarūs tarp **AAPS** 
 
 **WatchDrip+** yra bendruomenės sukurta susieta programėlė, kuri rodo gliukozės ir ciklo duomenis įvairiuose išmaniųjų laikrodžių modeliuose, daugiausia Xiaomi (_pvz.,_ Mi Band) ir Amazfit:
 
-![image](../images/watch_watchdrip_plus.png)
+![image](../images/watches/watch_watchdrip_plus.png)
 
 Nuo 0.5 versijos **WatchDrip+** skaito duomenis tiesiai iš **AAPS**, be xDrip+ kaip tarpininko. **AAPS** telefone:
 
@@ -170,9 +170,9 @@ Daugiau apie juos, taip pat kaip juos nustatyti, galite perskaityti [WatchDrip+ 
 
 ### Pebble laikrodis
 
-![image](../images/watch_pebble.png)
+![image](../images/watches/watch_pebble.png)
 
-![image](../images/watch_pebble_watchface.png)
+![image](../images/watches/watch_pebble_watchface.png)
 
 
 Pebble laikrodžiai ([jau nebegaminami](https://en.wikipedia.org/wiki/Pebble_(watch))) buvo parduodami 2013–2016 m. ir dar gali būti įsigyjami naudoti. Fitbit took over Pebble’s assets. Pebble naudotojai gali peržiūrėti Nightscout duomenis naudodami Urchin ciferblatą. Galima rodyti AIO, šiuo metu aktyvią laikiną valandinę bazę ir prognozes. Jei naudojate atvirą ciklą, galite naudoti IFTTT ir sukurti programėlę (applet), kuri, gavus pranešimą iš **AAPS**, išsiųstų SMS arba pushover pranešimą.
