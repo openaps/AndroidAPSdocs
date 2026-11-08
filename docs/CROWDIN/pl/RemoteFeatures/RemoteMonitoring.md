@@ -1,6 +1,6 @@
 # Zdalny monitoring
 
-![Monitorowanie dzieci](../images/KidsMonitoring.png)
+![Monitorowanie dzieci](../images/remote_control_and_following/KidsMonitoring.png)
 
 __AAPS__ oferuje kilka funkcji do zdalnego monitorowania dzieci z cukrzycą typu 1. Umożliwia też zdalne polecenia, które wysyłają instrukcje do __AAPS__ na odległość. Podobnie __AAPSClient__ może służyć do zdalnego monitorowania __AAPS__ partnera lub przyjaciela.
 
