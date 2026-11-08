@@ -118,14 +118,14 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
    * 有些手機有兩項設定：一項是自動設定時間（理想情況下應保持開啟），另一項是自動設定時區（必須關閉：請在下方螢幕截圖中的 **Time zone** 下方，關閉 **Set automatically**）。
    * 不幸的是，有些 Android 版本只有一個開關，同時控制時間與時區的自動設定。你現在必須關閉這個開關。
 
-![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
+![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
 2. 找到一個與你目前所在地時間相同、但不使用 DST 的時區。
    
    * 可在此找到這些國家的列表 [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * 以中歐時間（CET）為例，可以選擇「Brazzaville」（剛果）。將手機的時區改為剛果。
 
-![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
+![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
 3. 在 **AAPS** 中重新整理幫浦，並切換至所需的 **設定檔**。
 
