@@ -172,7 +172,7 @@
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-請<strong>務必保管好您的主密碼，切勿遺失</strong>。請記下密碼，例如儲存在 Google 雲端硬碟中。Google 會為您備份資料，因此這是個不錯的選擇。你的智慧型手機或電腦可能會崩潰，並且你可能沒有實際副本。如果你忘記了主密碼，日後可能很難恢復你的設定檔案和在 **目標** 中的進展。
+請<strong>務必保管好您的主密碼，切勿遺失</strong>。請記下密碼，例如儲存在 Google 雲端硬碟中。Google 會為您備份資料，因此這是個不錯的選擇。你的智慧型手機或電腦可能會崩潰，並且你可能沒有實際副本。如果你忘記了主密碼，日後可能很難恢復你的設定檔案和在 **目標** 中的進展。 See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 完成後，按一下「**下一步**」前往下一個畫面。
