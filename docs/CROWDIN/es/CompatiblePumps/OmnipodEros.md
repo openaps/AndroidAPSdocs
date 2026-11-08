@@ -281,7 +281,7 @@ Para desactivar un pod (porque ha caducado o porque ha fallado):
 
 El proceso de abajo te muestra cómo suspender y reanudar la administración de insulina.
 
-*NOTA - si no ves el botón **Suspender***, es porque está oculto por defecto. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*NOTA - si no ves el botón **Suspender***, es porque está oculto por defecto. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Suspender la administración de insulina
 
@@ -591,7 +591,7 @@ Los botones de la parte de abajo de la pantalla de la bomba cambian según la si
   La captura de pantalla de arriba es de una versión anterior de **AAPS**. En **AAPS** 4 es un botón de texto llamado **Ajustar la hora** en la pantalla de la bomba Omnipod.
   ```
 
-- **Suspender:** suspende la administración de insulina en el pod activo. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
+- **Suspender:** suspende la administración de insulina en el pod activo. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ AAPS muestra notificaciones y alertas sonoras en el teléfono cuando no es segur
 
 Ajustes avanzados para ayudar a depurar errores.
 
-- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
+- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
 - **Mostrar botón de registro de pulsos en el menú de gestión del Pod:** este ajuste todavía aparece en la lista, pero la versión actual de la pantalla de la bomba no tiene botón **Registro de pulsos**.
 
 - **Mostrar botón de estadísticas de RileyLink en el menú de gestión del Pod:** oculta o muestra el botón **Estadísticas de RileyLink** en la pantalla de la bomba Omnipod.
