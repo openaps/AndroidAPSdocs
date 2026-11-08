@@ -134,21 +134,21 @@ Nightscout不仅是“云”中的服务器，还有专用的**Nightscout**应�
 
 在iPhone上安装**Nightscout**应用后，打开应用并按照设置提示操作，输入您的Nightscout地址（见下方左侧）。此形式可能因您的Nightscout托管方式而异。（_例如_ http://youraddresshere.herokuapp.com） 然后输入您的Nightscout API密钥（见下方右侧）。如果没有提示您输入API密码，则需要点击应用顶部的挂锁来输入：
 
-![image](../images/remote-control-24.png)
+![image](../images/remote_control_and_following/remote-control-24.png)
 
 有关设置的更多信息可直接从[Nightscout](https://nightscout.github.io/nightscout/discover/)获取
 
 首次登录时，您将看到一个非常简单的显示。通过选择右上角的“汉堡菜单”并向下滚动来自定义显示选项：
 
-![image](../images/remote-control-25.png)
+![image](../images/remote_control_and_following/remote-control-25.png)
 
 向下滚动到“设置”。您可能希望将“刻度”更改为“线性”，因为BG显示的坐标轴默认值刻度是对数刻度，并在“使用基础率”下选择“default”，以便显示泵基础量。
 
-![image](../images/remote-control-25b.png)
+![image](../images/remote_control_and_following/remote-control-25b.png)
 
 选择您所需的选项。如果您使用其他应用进行警报，请取消选中警报。
 
-![image](../images/remote-control-26.png)
+![image](../images/remote_control_and_following/remote-control-26.png)
 
 继续向下滚动，直到到达“显示插件。
 
@@ -156,7 +156,7 @@ Nightscout不仅是“云”中的服务器，还有专用的**Nightscout**应�
 
 重要的是，您现在需要点击底部的“保存”以使这些更改生效。
 
-![image](../images/remote-control-27.png)
+![image](../images/remote_control_and_following/remote-control-27.png)
 
 点击“保存”后，应用将返回您的主Nightscout屏幕，看起来像这样：
 
@@ -170,7 +170,7 @@ Nightscout不仅是“云”中的服务器，还有专用的**Nightscout**应�
 8. 基础胰岛素配置文件
 9. 绿色线=历史血糖 蓝色线=预测血糖
 
-![image](../images/remote-control-28.png)
+![image](../images/remote_control_and_following/remote-control-28.png)
 
 详细查看Nightscout应用右上角的菜单：
 
@@ -179,7 +179,7 @@ Nightscout不仅是“云”中的服务器，还有专用的**Nightscout**应�
 3. 汉堡菜单-用于设置首选项
 4. Careportal - Log treatment (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies these)
 
-![Nightscout top bar](../images/remote-control-29.png)
+![Nightscout top bar](../images/remote_control_and_following/remote-control-29.png)
 
 灰色选项卡（如果您点击选项卡，则会显示更多信息）上的屏幕上有大量关于**AAPS**系统状态的信息：
 
@@ -195,9 +195,9 @@ Nightscout不仅是“云”中的服务器，还有专用的**Nightscout**应�
 10. AAPS手机的电池状态
 11. 数据库大小。如果它变得太大（仅限DIY Nightscout-托管服务会忽略），您可能会开始遇到连接问题。您可以通过汉堡菜单中的管理工具菜单删除数据来清理数据库。
 
-![image](../images/remote-control-30.png)
+![image](../images/remote_control_and_following/remote-control-30.png)
 
-![image](../images/remote-control-31.png)
+![image](../images/remote_control_and_following/remote-control-31.png)
 
 点击页面底部的“刷新”以关闭弹出窗口。
 
@@ -233,7 +233,7 @@ If **Allow client control** is off in **Manage → Authorized clients** (and Sim
 
 ### 选项1) 从Wear OS手表控制AAPS
 
-![Wear Remote 1](../images/Wear_Remote1.png)
+![Wear Remote 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 一旦您在手表上[设置了**AAPS**](../WearOS/BuildingAapsWearOS.md)，您可以在[智能手表上操作Wear AAPS的详细信息](../WearOS/WearOsSmartwatch.md)中找到有关智能手表表盘及其功能的广泛信息。
 
@@ -285,19 +285,19 @@ Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Wat
 
 ### 选项3）手表上的AAPSClient用于远程控制手机上的**AAPS**
 
-![Wear Remote 2](../images/Wear_Remote2.png)
+![Wear Remote 2](../images/remote_control_and_following/Wear_Remote2.png)
 
 The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 To download the software, click on the watch app that matches the client app on the phone: **wear-aapsclient-release_**_version_ goes with **AAPSClient**, **wear-aapsclient2-release_**_version_ goes with **AAPSClient2** (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![image](../images/github_release_wear_aapsclient_apk.png)
+![image](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 然后点击“另存为”，并将文件保存到计算机上的方便位置：
 
 
-![image](../images/save_as_wear_aapsclient_apk.png)
+![image](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 
