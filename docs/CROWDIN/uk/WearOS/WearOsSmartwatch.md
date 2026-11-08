@@ -211,7 +211,7 @@ Wear Installer 2, розроблений [Malcolm Bryant](https://www.youtube.co
 
 З'являться код спарювання Wi-Fi, IP-адреса і порт:
 
-![Екран годинника з кодом спарювання Wi-Fi, IP-адресою і портом](../images/wearos/ADB03.png)
+![Екран годинника з кодом спарювання Wi-Fi, IP-адресою і портом](../images/wearos/watch_wifi_pairing_code.png)
 
 - У терміналі: `adb pair ipaddress:port` Наприклад: `adb pair 10.10.1.125:36299`
 - Вас попросять ввести код спарювання. Введіть його.
