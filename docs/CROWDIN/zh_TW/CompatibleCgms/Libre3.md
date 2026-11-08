@@ -2,7 +2,7 @@
 
 Freestyle Libre 3 (FSL3) 需要特殊設定才能將血糖值接收至 AAPS。有兩種可能的方法將 Freestyle Libre 3 (FSL3) 值傳送到 AAPS。
 
-![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
+![FL3](../images/libre3/libre3_juggluco_xdrip_data_flow.jpeg)
 
 下述方法使用單獨的應用程式 Juggluco 來實現此目的。此方法使用 Juggluco 接收感測器傳來的原始資料，資料間隔為 1 分鐘，接著再傳送至 xDrip 或 AAPS。可以使用 Libre 3 應用程式或直接在 Juggluco 中啟動新傳感器。下方指南說明如何使用 Juggluco 應用程式啟動傳感器的過程。如果傳感器是使用已登入 Libreview 帳戶啟動的，也可以在 Juggluco 和 Libre 3 應用程式之間切換作為接收器。
 
@@ -38,7 +38,7 @@ Freestyle Libre 3 (FSL3) 需要特殊設定才能將血糖值接收至 AAPS。�
 
   → 漢堡選單 → 設定 → NFC 掃描功能 → 使用 xxx 方法時平滑 Libre 3 資料
 
-  ![xDrip 進階設定：Libre 2 和原始值](../images/xDrip_Libre3_Smooth.png)
+  ![xDrip 進階設定：Libre 2 和原始值](../images/libre3/xDrip_Libre3_Smooth.png)
 
 
 
