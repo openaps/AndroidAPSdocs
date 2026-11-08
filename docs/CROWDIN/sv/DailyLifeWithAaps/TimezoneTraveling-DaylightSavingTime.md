@@ -118,14 +118,14 @@ Om du ger bolus med **AAPS:s** kalkylator, använd inte **COB**- och **IOB**-dat
    * Vissa telefoner har två inställningar: en för automatisk inställning av tiden (som helst ska vara på) och en för automatisk inställning av tidszonen (som du måste stänga AV: **Set automatically** (Ställ in automatiskt) under **Time zone** (Tidszon) på skärmbilden nedan).
    * Tyvärr har vissa Android-versioner bara en knapp som slår på automatisk inställning av både tid och tidszon. Den måste du stänga av tills vidare.
 
-![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
+![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
 2. Hitta en tidszon som har samma tid som där du är nu, men som inte använder sommartid.
    
    * En lista över dessa länder finns här: [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * För centraleuropeisk tid (CET) kan det vara "Brazzaville" (Kongo). Byt telefonens tidszon till Kongo.
 
-![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
+![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
 3. Uppdatera pumpen i **AAPS** och byt till önskad **profil**.
 
