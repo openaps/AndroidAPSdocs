@@ -91,6 +91,8 @@ Wybierz jasny motyw, ciemny motyw lub ustawienie systemowe telefonu.
 
 Wymagane, aby można było [eksportować ustawienia](../Maintenance/ExportImportSettings.md), bo od wersji 2.7 są one szyfrowane.
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **Ochrona biometryczna może nie działać na telefonach OnePlus. To znany problem niektórych telefonów OnePlus.**
 
 ![Ustaw hasło główne](../images/preferences/master_password_dialog.png)
