@@ -192,7 +192,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
   Há informações na internet sobre como saber se o seu sistema operacional é de 32 ou de 64 bits, por exemplo [esta](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Captura de tela: Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Captura de tela: Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Gradle Resync
@@ -237,7 +237,7 @@ O seu apk foi compilado com sucesso e pode ser transferido para o seu telefone!
 
 ## Apk não instalado
 
-![App do telefone não instalado](../images/Update_AppNotInstalled.png)
+![App do telefone não instalado](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Verifique se você transferiu o arquivo “app-full-release.apk” para o seu telefone.
 * Este erro normalmente significa que o novo apk foi assinado com uma keystore diferente da do **AAPS** instalado. Se você ainda tem a sua keystore anterior, selecione-a e compile de novo. Caso contrário, veja [Reinstalar o AAPS com uma nova keystore](#reinstall-aaps).
