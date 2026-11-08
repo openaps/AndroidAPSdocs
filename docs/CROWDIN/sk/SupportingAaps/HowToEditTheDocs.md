@@ -22,37 +22,37 @@ V našom príklade urobíme úpravu v AndroidAPSdocs. Dá sa to urobiť na akomk
 
 1. Prejdite na <https://github.com/openaps/AndroidAPSdocs> a vpravo hore kliknite na Fork. Tak si vytvoríte vlastnú kópiu repozitára.
 
-![Fork repozitára](../images/PR0.png)
+![Fork repozitára](../images/docs_pr_fork_repository.png)
 
 2. Prejdite na ľubovoľnú stránku a nájdite stránku, ktorú chcete upraviť. Môžete kliknúť na odkaz „Edit in GitHub“ v pravom hornom rohu. Dá sa to iba na anglických stránkach. 
 
-![úprava dokumentu](../images/PR1.png)
+![úprava dokumentu](../images/docs_pr_edit_on_github.png)
 
 Alebo kliknite na ikonu ceruzky, ktorá sa zobrazí v hornej lište obsahu stránky, ktorú chcete upraviť. Na to musíte byť prihlásení do svojho účtu GitHub (ak ho nemáte, založíte si ho jednoducho).
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. Ktorákoľvek z možností v kroku 2 vytvorí vo VAŠOM repozitári novú vetvu, do ktorej sa uložia vaše úpravy. Upravte súbor.
 
 Pre stránky dokumentácie používame Markdown. Súbory majú príponu „.md“. Špecifikácia Markdownu nie je pevne daná a pre naše súbory Markdown teraz používame myst_parser. Dbajte na správnu syntax, ako je [popísané nižšie](#edit-the-docs-code-syntax).
 
-![úprava vo vetve](../images/PR3.png)
+![úprava vo vetve](../images/docs_pr_edit_file.png)
 
 4. Doteraz ste pracovali na karte „<>Edit file“. Vyberte kartu „Preview changes“ a pozrite sa na text znova, aby ste si overili, že všetko, čo ste zmenili, vyzerá tak, ako ste chceli (skontrolujte preklepy). Ak vidíte, že treba niečo vylepšiť, vráťte sa na kartu úprav a urobte ďalšie úpravy. 
 
-![režim náhľadu](../images/PR5.png)
+![režim náhľadu](../images/docs_pr_preview_changes.png)
 
 5. Keď úpravy dokončíte, posuňte sa na koniec stránky. V poli dole napíšte svoje komentáre do textového poľa s nápisom „Add an optional extended description...“. Predvolený názov obsahuje názov súboru. Skúste pridať vetu, ktorá vysvetľuje **dôvod** zmeny. Keď uvediete dôvod, recenzenti ľahšie pochopia, čo chcete pomocou PR dosiahnuť.
 
-![komentáre k commitu](../images/PR4.png)
+![komentáre k commitu](../images/docs_pr_commit_description.png)
 
 6. Kliknite na zelené tlačidlo „Propose file changes“ alebo „Commit changes“. Na stránke, ktorá sa zobrazí, kliknite na „Create Pull Request“ a na ďalšej stránke znova kliknite na „Create Pull Request“.
 
-![vytvorenie pull requestu](../images/PR6.png)
+![vytvorenie pull requestu](../images/docs_pr_create_pull_request.png)
 
 7. Tým je otvorenie pull requestu (PR) dokončené. GitHub pridelí PR číslo, ktoré nájdete za názvom a znakom mriežky (#). Na túto stránku sa vracajte a kontrolujte spätnú väzbu (alebo, ak vám GitHub posiela upozornenia e-mailom, dostanete e-maily o každej aktivite v PR). Úprava bude teraz v zozname PR, ktoré tím skontroluje a prípadne k nim dá spätnú väzbu, kým ich zapracuje do hlavnej dokumentácie AAPS! Ak chcete sledovať, ako PR postupuje, kliknite na ikonu zvončeka v pravom hornom rohu svojho účtu GitHub a uvidíte všetky svoje PR.
 
-![sledovanie PR](../images/PR7.png)
+![sledovanie PR](../images/docs_pr_tracking.png)
 
 PS: Váš fork a vetva zostanú vo vašom osobnom účte GitHub. Keď dostanete upozornenie, že váš PR bol zlúčený, môžete svoju vetvu odstrániť, ak ju už nepotrebujete (v oblasti upozornení z kroku 7 bude odkaz na odstránenie vetvy, keď bude PR uzavretý alebo zlúčený). Ak budete pri ďalších úpravách postupovať takto, úpravy vždy začnú z aktuálnej verzie repozitárov AndroidAPSdocs. Ak na vytvorenie PR zvolíte iný postup (napr. úpravy, ktoré začínajú vo vetve master vášho forku), musíte sa uistiť, že váš repozitár je aktuálny: najprv vykonajte „compare“ (porovnanie) a zlúčte všetky zmeny, ktoré vznikli od poslednej aktualizácie vášho forku. Keďže ľudia často zabúdajú svoje repozitáre aktualizovať, odporúčame používať vyššie opísaný postup PR, kým sa s „compare“ (porovnaním) nezoznámite.
 
