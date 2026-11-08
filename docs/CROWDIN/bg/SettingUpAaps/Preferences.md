@@ -91,6 +91,8 @@
 
 Задължително е, за да можете да [експортирате настройките](../Maintenance/ExportImportSettings.md), тъй като от версия 2.7 те се шифроват.
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **Биометричната защита може да не работи на телефони OnePlus. Това е известен проблем на OnePlus при някои телефони.**
 
 ![Задаване на главна парола](../images/preferences/master_password_dialog.png)
