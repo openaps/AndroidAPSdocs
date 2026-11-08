@@ -309,13 +309,13 @@ Ensure notifications from AAPS are not blocked on the watch. אישור של פ�
     
     הפריטים של [האשף המהיר](#quickwizards) בטלפון שבהם **הצגה בשעון** מופעלת, בתוך שעות התוקף שלהם. פריט פחמימות מציג את הפחמימות שלו בגרם, ופריט אינסולין את המינון הקבוע שלו ב-U. הקשה מפעילה את הפריט אחרי אישור בשעון. אין מה להגדיר בשעון: יש לערוך את הפריטים בטלפון, ולהפעיל את **הצגה בשעון** תחת **בחירת מכשיר** בכל פריט שרוצים באריח. מחוץ לשעות התוקף של כל הפריטים שלכם, האריח מציג **אין הגדרה**.
     
-    ![פריט אשף מהיר עם הצגה בשעון מופעלת, והאריח שבו הוא מופיע](../images/quickwizard_watch_phone.png)
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
-    ### אריח תרחיש
+    ### Scene tile
     
-    ![אריח תרחיש](../images/wearos/tiles/tile_scene.png)
+    ![Scene tile](../images/wearos/tiles/tile_scene.png)
     
-    [התרחישים](#scenes-from-watch) של הטלפון. כל אחת מארבע המשבצות מוגדרת בהגדרות האריח ל-**אוטומטי**, ל-**ללא** או לתרחיש אחד. משבצת **אוטומטי** לוקחת את התרחיש הבא מהרשימה של הטלפון שאף משבצת אחרת לא תפסה. משבצת שמוגדרת לתרחיש שכבר לא קיים בטלפון מציגה **לא זמין**.
+    The [Scenes](#scenes-from-watch) of the phone. כל אחת מארבע המשבצות מוגדרת בהגדרות האריח ל-**אוטומטי**, ל-**ללא** או לתרחיש אחד. משבצת **אוטומטי** לוקחת את התרחיש הבא מהרשימה של הטלפון שאף משבצת אחרת לא תפסה. משבצת שמוגדרת לתרחיש שכבר לא קיים בטלפון מציגה **לא זמין**.
     
     ![הגדרות אריח התרחיש, ארבע משבצות מוגדרות לאוטומטי](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,17 +361,17 @@ Ensure notifications from AAPS are not blocked on the watch. אישור של פ�
     
     Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
     
-    ![פני שעון ליד המיטה](../images/Watchface_nightstand.jpg)
+    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![ממשק מפושט](../images/Watchface_simplified_ui.png)
+    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## התראות הטלפון בשעון
+    ## Phone alarms on the watch
     
-    ![התראה של הטלפון בשעון](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    השעון מציג את ההתראות של הטלפון, כך שאתם רואים למה הטלפון משמיע צליל ויכולים להגיב מפרק היד. השעון רוטט, ושוב כל חצי דקה במשך חמש דקות, עד שעונים לו. הודעה מציגה את הכותרת ואת הטקסט של ההתראה, עם אותן תשובות כמו בתזכורת [זמן לאכול](#WearOsSmartwatch-wizard-carb-time):
+    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. השעון רוטט, ושוב כל חצי דקה במשך חמש דקות, עד שעונים לו. הודעה מציגה את הכותרת ואת הטקסט של ההתראה, עם אותן תשובות כמו בתזכורת [זמן לאכול](#WearOsSmartwatch-wizard-carb-time):
     
     * **השתקה**, או החלקה הצידה: ההתראה נעצרת, ומסך ההתראה בטלפון נסגר.
     * **השתקה למשך 5 דקות**: ההתראה נעצרת ומצלצלת שוב אחרי חמש דקות, בטלפון ובשעון.
