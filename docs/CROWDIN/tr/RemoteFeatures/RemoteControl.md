@@ -291,13 +291,13 @@ Saat yazılımı olan **AAPSClient** Wear apk'sı, doğrudan [GitHub](https://gi
 
 Yazılımı indirmek için telefondaki istemci uygulamasına uyan saat uygulamasına tıklayın: **wear-aapsclient-release_**_sürüm_, **AAPSClient** ile; **wear-aapsclient2-release_**_sürüm_, **AAPSClient2** ile kullanılır (bkz. [AAPSClient, AAPSClient2 ve AAPSClient3 hakkında](#remotecontrol-aapsclient-versions)):
 
-![image](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+![image](../images/github_release_wear_aapsclient_apk.png)
 
 
 Ardından "save as" (farklı kaydet) seçin ve dosyayı bilgisayarınızda uygun bir yere kaydedin:
 
 
-![image](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+![image](../images/save_as_wear_aapsclient_apk.png)
 
 
 
