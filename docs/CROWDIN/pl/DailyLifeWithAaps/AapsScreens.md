@@ -9,7 +9,7 @@
 
 ## Ekran główny
 
-![Ekran główny](../images/Home_Homescreen.png)
+![Ekran główny](../images/main/Home_Homescreen.png)
 
 To pierwszy ekran, który zobaczysz po otwarciu **AAPS**. Zawiera większość informacji potrzebnych na co dzień.
 
@@ -33,13 +33,13 @@ Kolor wartości BG pokazuje jej położenie względem ustawionego [zakresu](#Pre
 * czerwony = poniżej zakresu
 * żółty = powyżej zakresu
 
-![Koło BG w zakresie, zielone](../images/Home_Delta.png) ![Koło BG powyżej zakresu, żółte](../images/Home_Delta_high.png) ![Koło BG poniżej zakresu, czerwone](../images/Home_Delta_low.png)
+![Koło BG w zakresie, zielone](../images/main/Home_Delta.png) ![Koło BG powyżej zakresu, żółte](../images/main/Home_Delta_high.png) ![Koło BG poniżej zakresu, czerwone](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
 #### Status pętli
 
-![Status pętli](../images/main_loop_status.png)
+![Status pętli](../images/main/main_loop_status.png)
 
 Obok koła BG ikona pokazuje tryb pracy pętli (na obrazku od góry do dołu):
 
@@ -166,7 +166,7 @@ Dotknij nazwy profilu, aby otworzyć [ekran profilu](#aaps-screens-profile), gdz
 
 Aby **zmienić procent profilu** (i czas jego trwania), dotknij nazwy profilu, a potem okrągłego przycisku **▶** (Aktywuj) w prawym dolnym rogu ekranu profilu. W **AAPS** 3.x ten ekran otwierał się po przytrzymaniu nazwy profilu; w **AAPS** 4 przytrzymanie nic nie robi. Krok po kroku: [Zmiana procentu profilu](#ProfileSwitch-change-percentage).
 
-![Profil z aktywną zmianą profilu](../images/main_profile_switch.png)
+![Profil z aktywną zmianą profilu](../images/main/main_profile_switch.png)
 
 1. Zwykły widok przy aktywacji standardowego profilu.
 2. Zmiana profilu z procentem 90% i pozostałym czasem 9 minut – nazwa profilu staje się żółta, gdy działa tymczasowa zmiana profilu.
@@ -174,7 +174,7 @@ Aby **zmienić procent profilu** (i czas jego trwania), dotknij nazwy profilu, a
 
 #### Cel
 
-![Pozostały czas celu tymczasowego](../images/main_temp_target.png)
+![Pozostały czas celu tymczasowego](../images/main/main_temp_target.png)
 
 Aktualny docelowy poziom glikemii jest pokazany pod nazwą profilu.
 
@@ -200,7 +200,7 @@ Jeśli **AAPS** wykryje oporność lub wrażliwość, cel zmieni się w stosunku
 
 #### IOB, COB, baza i wrażliwość
 
-![IOB, COB, baza i wrażliwość](../images/main_iob_cob_basal_sensitivity.png)
+![IOB, COB, baza i wrażliwość](../images/main/main_iob_cob_basal_sensitivity.png)
 
 1. **Strzykawka**: insulina aktywna (IOB) – ilość aktywnej insuliny w Twoim organizmie  
     Insulina aktywna wynosiłaby zero, gdyby działała tylko standardowa baza i nie zostało nic insuliny z wcześniejszych bolusów. 
@@ -234,7 +234,7 @@ Jeśli chcesz, powiadomienia o potrzebnych węglowodanach mogą być wysyłane d
 
 ### Sekcja C – Wiersz stanu
 
-![Wiersz stanu](../images/main_status_row.png)
+![Wiersz stanu](../images/main/main_status_row.png)
 
 Wiersz stanu daje wizualne ostrzeżenie dla
 
@@ -320,7 +320,7 @@ Gdy zegar telefonu przeskoczył, przy zmianie czasu letniego/zimowego albo w now
 
 Naciśnij ikonę **ołówka** w prawym górnym rogu wykresu, aby otworzyć ustawienia wykresu:
 
-![Ustawienia wykresu głównego](../images/main_graph_settings.png)
+![Ustawienia wykresu głównego](../images/main/main_graph_settings.png)
 
 * **Wysokość wykresu** zmienia wysokość rysowanego wykresu.
 * **ACT** nakłada krzywą aktywności insuliny: ciągła żółtozielona linia <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (nie myl jej z kropkowaną żółtą prognozą UAM)
@@ -408,7 +408,7 @@ Dodatkowe wykresy podążają za wykresem głównym: gdy przewijasz lub powięks
 
 Aby ustawić dodatkowy wykres, naciśnij ikonę **ołówka** w jego prawym górnym rogu:
 
-![Dodatkowe ustawienia wykresu](../images/main_additional_graph_settings.png)
+![Dodatkowe ustawienia wykresu](../images/main/main_additional_graph_settings.png)
 
 Wybierz elementy odpowiadające danym, które chcesz widzieć na tym wykresie; przycisk **Usuń** usuwa wykres.
 
@@ -490,7 +490,7 @@ Dobrze jest pokazywać tę linię razem ze słupkami odchyleń. Mają tę samą 
 
 ### Sekcja F – Pasek QuickLaunch
 
-![Pasek QuickLaunch](../images/main_quicklaunch_toolbar.png)
+![Pasek QuickLaunch](../images/main/main_quicklaunch_toolbar.png)
 
 Pływający pasek na dole ekranu zawiera Twoje akcje **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)**. Małe **koło zębate** otwiera ustawienia QuickLaunch, gdzie wybierasz, które przyciski są pokazane (leczenie, wpisy portalu opieki, akcje CGM, ekrany z panelu **Zarządzaj**, przyciski [Szybkiego kalkulatora](../DailyLifeWithAaps/QuickWizards.md), [Sceny](../DailyLifeWithAaps/Scenes.md) i inne).
 
@@ -502,7 +502,7 @@ Gdy pompa jest **odłączona**, przyciski leczenia zostają na pasku, np. do zap
 
 #### Insulina
 
-![Okno insuliny](../images/insulin_dialog.png)
+![Okno insuliny](../images/v4/Screens/insulin_dialog.png)
 
 Aby podać określoną ilość insuliny bez użycia [kalkulatora bolusa](#aaps-screens-bolus-wizard).
 
@@ -520,7 +520,7 @@ Okna insuliny możesz też używać, gdy pompa jest wstrzymana lub odłączona, 
 
 #### Węglowodany
 
-![Okno węglowodanów](../images/carbs_dialog.png)
+![Okno węglowodanów](../images/v4/Screens/carbs_dialog.png)
 
 Aby zapisać węglowodany bez podawania bolusa.
 
@@ -574,7 +574,7 @@ Dotknij dymka, aby otworzyć panel **Powiadomienie**. Każda wiadomość pokazuj
 
 ## Kalkulator bolusa
 
-![Kalkulator bolusa](../images/bolus_wizard.png)
+![Kalkulator bolusa](../images/v4/Screens/bolus_wizard.png)
 
 Gdy chcesz podać bolus do posiłku, zwykle robisz to właśnie tutaj.
 
@@ -618,7 +618,7 @@ Pole **Czas węglowodanów** służy do bolusa z wyprzedzeniem: możesz powiedzi
 
 **Ustaw alarm** (przypomnienie o jedzeniu): gdy wpiszesz czas węglowodanów w przyszłości, pojawia się przełącznik "**Ustaw alarm**", aby o podanej godzinie przypomnieć Ci, że masz zjeść węglowodany wpisane do **AAPS**:
 
-![Ustaw alarm dla przyszłych węglowodanów](../images/bolus_wizard_set_alarm.png)
+![Ustaw alarm dla przyszłych węglowodanów](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
 Przypomnienie startuje, gdy bolus zostanie podany. Gdy przypomnienie działa, na ekranie głównym pasek **Czas coś zjeść** odlicza czas, z przyciskami **Stop** i **+5 min**. **+5 min** przesuwa koniec oczekiwania o pięć minut później, a pasek pokazuje całkowity czas oczekiwania. Gdy nadejdzie czas, przypomnienie dzwoni własnym dźwiękiem: łagodnym dźwiękiem minutnika kuchennego. Oprócz **Wycisz alarm** (ekran zostaje otwarty) i **Wycisz i zamknij** ekran alarmu ma też przycisk **+5 min**, który rozpoczyna nowe, pięciominutowe oczekiwanie. Gdy przypomnienie już zadzwoni, pasek pokazuje *Czas minął* z przyciskami **+5 min** i **Zamknij**; **Wycisz i zamknij** usuwa też pasek. Pasek i alarm są też pokazywane w **AAPSClient** oraz na [zegarku](#WearOsSmartwatch-wizard-carb-time). Przypomnienie nie tworzy minutnika w aplikacji zegara w telefonie. Jeśli Android nie pozwala **AAPS** ustawiać alarmów, kalkulator poprosi Cię o zezwolenie na *Alarmy i przypomnienia* dla **AAPS** w ustawieniach Androida. Dzwonek nie jest dostępny, gdy czas węglowodanów jest w przeszłości.
 
@@ -640,7 +640,7 @@ Warto wiedzieć:
 
 #### Błędne wykrycie COB
 
-![Powolne wchłanianie węglowodanów](../images/Calculator_SlowCarbAbsorption.png)
+![Powolne wchłanianie węglowodanów](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Jeśli po użyciu kalkulatora bolusa widzisz powyższe ostrzeżenie, **AAPS** wykrył, że obliczona wartość COB może być błędna. Jeśli więc chcesz ponownie podać bolus po wcześniejszym posiłku z COB, uważaj na przedawkowanie!
 
@@ -719,7 +719,7 @@ Więcej szczegółów znajdziesz w [części APS na stronie Konfiguracja (Config
 
 ## Profil
 
-![Profil](../images/Screenshots_Profile.png)
+![Profil](../images/screens/Screenshots_Profile.png)
 
 **Zarządzaj → Profil** (lub dotknięcie nazwy profilu na ekranie głównym) otwiera ekran profilu: Twoje profile jako karuzela kart do przesuwania, z przyciskami do dodawania, edycji, klonowania, usuwania i **aktywowania** profilu.
 
@@ -733,7 +733,7 @@ Profil zawiera Twoje indywidualne ustawienia cukrzycy. Więcej informacji znajdz
 
 ## NSClient
 
-![NSClient](../images/Screenshots_NSClient.png)
+![NSClient](../images/screens/Screenshots_NSClient.png)
 
 **Konfiguracja → Komunikacja → NSClientV3 → Otwórz wtyczkę** pokazuje stan połączenia z Twoją stroną Nightscout: URL, stan websocket, kolejkę i dziennik synchronizacji.
 
@@ -745,7 +745,7 @@ Rozwiązywanie problemów opisuje ta [strona](../GettingHelp/TroubleshootingNsCl
 
 ## Źródło BG – xDrip, BYODA...
 
-![Ekran źródła BG](../images/Screenshots_BGSource.png)
+![Ekran źródła BG](../images/screens/Screenshots_BGSource.png)
 
 **Konfiguracja → Źródło BG → Otwórz wtyczkę** pokazuje historię odczytów CGM i pozwala usunąć odczyty w razie błędu (np. fałszywie niski odczyt z ucisku) lub duplikatów.
 
