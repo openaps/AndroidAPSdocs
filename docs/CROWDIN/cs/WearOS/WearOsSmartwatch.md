@@ -318,7 +318,7 @@ Tyto pozice fungují jen na hodinkách s **Wear OS 5 nebo starším**, kde vlast
 
 ## Ciferník AAPSv2 – Popis
 
-![Popis ciferníku AAPSv2](../images/Watchface_Legend.png)
+![Popis ciferníku AAPSv2](../images/wearos/Watchface_Legend.png)
 
 A - čas od posledního spuštění smyčky
 
