@@ -222,7 +222,7 @@ On the watch:
 
 You will see a Wi-Fi pairing code and IP address and port appearing:
 
-![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/ADB03.png)
+![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/watch_wifi_pairing_code.png)
 
 - In the terminal:
 `adb pair ipaddress:port`
