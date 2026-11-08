@@ -474,7 +474,19 @@ Ustawienia są zrozumiałe same przez się.
 
 **Powiadamiaj pomimo trybu Nie przeszkadzać** (domyślnie włączone): alarmy **AAPS** dzwonią nawet wtedy, gdy telefon jest wyciszony albo w trybie Nie przeszkadzać. Wyłącz tę opcję, jeśli **AAPS** ma respektować te tryby: alarmy wtedy nie dzwonią, a w trybie Nie przeszkadzać tylko wibrują, na telefonie i na zegarku. Sugestie pętli, które przyjdą w trybie Nie przeszkadzać, są pokazywane bez dźwięku.
 
-Gdy alarm dzwoni, ekran alarmu pokazuje przyciski **Wycisz alarm** (ekran zostaje otwarty, więc możesz przeczytać komunikat) i **Wycisz i zamknij**. Gdy odrzucisz powiadomienie o alarmie, przesuwając je w obszarze powiadomień, alarm zostanie wyciszony. Gdy później otworzysz **AAPS**, alarm, na który nie odpowiedziałeś, zostanie pokazany ponownie.
+When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Gdy odrzucisz powiadomienie o alarmie, przesuwając je w obszarze powiadomień, alarm zostanie wyciszony. Gdy później otworzysz **AAPS**, alarm, na który nie odpowiedziałeś, zostanie pokazany ponownie.
+
+(preferences-alarm-sound-volume-vibration)=
+### Alarm sound, volume and vibration
+
+- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
+- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
+- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
+- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+
+![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+
+- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
 
 (preferences-maintenance-settings)=
 ## Ustawienia konserwacji
