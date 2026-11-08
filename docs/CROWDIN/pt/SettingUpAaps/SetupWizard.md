@@ -172,7 +172,7 @@ Volte atrás com a seta no canto superior esquerdo. O assistente mostra agora "*
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**NÃO PERCA A SUA SENHA MESTRE**. Anote-a, _por exemplo_ no Google Drive, que é um bom local porque a Google faz cópias de segurança por si. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+**NÃO PERCA A SUA SENHA MESTRE**. Anote-a, _por exemplo_ no Google Drive, que é um bom local porque a Google faz cópias de segurança por si. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 Quando terminar, toque em "**SEGUINTE**" para ir para o ecrã seguinte.
