@@ -46,7 +46,7 @@ Note: *You may need to wait for the next sensor glucose reading to arrive before
 
 O **Objetivo 2** pede que várias ‘tarefas’ sejam feitas, como mostra a captura de tela abaixo. Cada tarefa mostra o seu status (**1**): o texto laranja "**Incompleto**" muda para "**Terminado, parabéns!**" assim que o **AAPS** registra a ação. Toque em **Dica** (**2**) abaixo de uma tarefa para abrir a documentação relacionada, caso você ainda não conheça uma ação.
 
-![Captura de tela do objetivo 2](../images/Objective2_V2_5.png)
+![Captura de tela do objetivo 2](../images/objectives/Objective2_V2_5.png)
 
 As tarefas para concluir o **Objetivo 2** são:
 - Defina o seu **Perfil** como 90% por 10 min.
@@ -96,7 +96,7 @@ Tempo mínimo para concluir este objetivo: **7 dias**. This is a mandatory wait 
 
 To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Além disso, você pode alterar a porcentagem mínima das alterações recomendadas da taxa basal com a configuração "**Alteração mínima no modo aberto**" em **Configurações → Loop**. The higher the value, the fewer change notifications you will receive.
 
-![Alteração mínima solicitada no loop aberto](../images/OpenLoop_MinimalRequestChange2.png)
+![Alteração mínima solicitada no loop aberto](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ Isso significa que, no **Objetivo 6**, se a glicose do sensor estiver caindo, o 
 
 - Se o seu IOB estiver negativo (veja a captura de tela abaixo), uma taxa basal temporária (TBR) > 100% pode ser acionada no **Objetivo 6**.
 
-![Exemplo de IOB negativo](../images/Objective6_negIOB.png)
+![Exemplo de IOB negativo](../images/objectives/Objective6_negIOB.png)
 
 - Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
 - Ative o modo 'Suspensão por glicose baixa' tocando no ícone do Loop na tela principal e escolhendo **Suspensão por glicose baixa** como modo de operação.
@@ -245,6 +245,6 @@ Toque em "**Mais**" abaixo de um objetivo para ver as tarefas dele de novo:
 
 Se por algum motivo você quiser voltar nos **Objetivos**, abra o **Objetivo** concluído com "**Mais**" e toque em "**Redefinir estado concluído**":
 
-![Go back in objectives](../images/Objective_ClearFinished.png)
+![Go back in objectives](../images/objectives/Objective_ClearFinished.png)
 
 Da mesma forma, o **Objetivo** em que você está trabalhando agora pode ser reiniciado com "**Redefinir estado iniciado**".
