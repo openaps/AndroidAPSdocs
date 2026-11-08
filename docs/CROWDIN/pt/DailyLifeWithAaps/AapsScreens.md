@@ -9,7 +9,7 @@
 
 ## O ecrã principal
 
-![Ecrã principal](../images/Home_Homescreen.png)
+![Ecrã principal](../images/main/Home_Homescreen.png)
 
 Este é o primeiro ecrã que vê quando abre o **AAPS**, e tem a maior parte da informação de que precisa no dia a dia.
 
@@ -33,13 +33,13 @@ A cor do valor da glicose mostra a sua posição em relação ao [intervalo](#Pr
 * vermelho = abaixo do intervalo
 * amarelo = acima do intervalo
 
-![Círculo da glicose no alvo, verde](../images/Home_Delta.png) ![Círculo da glicose acima do intervalo, amarelo](../images/Home_Delta_high.png) ![Círculo da glicose abaixo do intervalo, vermelho](../images/Home_Delta_low.png)
+![Círculo da glicose no alvo, verde](../images/main/Home_Delta.png) ![Círculo da glicose acima do intervalo, amarelo](../images/main/Home_Delta_high.png) ![Círculo da glicose abaixo do intervalo, vermelho](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
 #### Estado do loop
 
-![Estado do loop](../images/main_loop_status.png)
+![Estado do loop](../images/main/main_loop_status.png)
 
 Ao lado do círculo da glicose, um ícone mostra o modo de funcionamento do loop (de cima para baixo na imagem):
 
@@ -166,7 +166,7 @@ Toque no nome do perfil para abrir o [ecrã Perfil](#aaps-screens-profile), onde
 
 Para **mudar a percentagem do perfil** (e a sua duração), toque no nome do perfil e depois no botão redondo **▶** (Ativar), no canto inferior direito do ecrã Perfil. No **AAPS** 3.x, este ecrã abria-se ao premir durante algum tempo o nome do perfil; no **AAPS** 4, premir durante algum tempo não faz nada. Passo a passo: [Mudar a percentagem do perfil](#ProfileSwitch-change-percentage).
 
-![Perfil com uma troca de perfil ativa](../images/main_profile_switch.png)
+![Perfil com uma troca de perfil ativa](../images/main/main_profile_switch.png)
 
 1. Apresentação normal com a ativação de um perfil padrão.
 2. Troca de perfil com uma percentagem de 90% e uma duração restante de 9 minutos — o nome do perfil fica amarelo enquanto uma troca de perfil temporária está ativa.
@@ -174,7 +174,7 @@ Para **mudar a percentagem do perfil** (e a sua duração), toque no nome do per
 
 #### Alvo
 
-![Duração restante do alvo temporário](../images/main_temp_target.png)
+![Duração restante do alvo temporário](../images/main/main_temp_target.png)
 
 O nível de glicose alvo atual é mostrado por baixo do nome do perfil.
 
@@ -200,7 +200,7 @@ Se o **AAPS** detetar resistência ou sensibilidade, o alvo muda em relação ao
 
 #### IA, HCA, basal e sensibilidade
 
-![IA, HCA, basal e sensibilidade](../images/main_iob_cob_basal_sensitivity.png)
+![IA, HCA, basal e sensibilidade](../images/main/main_iob_cob_basal_sensitivity.png)
 
 1. **Seringa**: insulina ativa (IA) - quantidade de insulina ativa no seu corpo  
     O valor da insulina ativa seria zero se só estivesse a correr a sua basal padrão e não restasse insulina de bólus anteriores. 
@@ -234,7 +234,7 @@ Se quiser, as notificações de hidratos de carbono necessários podem ser envia
 
 ### Secção C - Linha de estado
 
-![Linha de estado](../images/main_status_row.png)
+![Linha de estado](../images/main/main_status_row.png)
 
 A linha de estado dá um aviso visual para
 
@@ -320,7 +320,7 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 Prima o ícone do **lápis** no canto superior direito do gráfico para abrir as definições do gráfico:
 
-![Definição do gráfico principal](../images/main_graph_settings.png)
+![Definição do gráfico principal](../images/main/main_graph_settings.png)
 
 * **Altura do gráfico** ajusta a altura com que o gráfico é desenhado.
 * **ATIV** sobrepõe a curva da atividade da insulina: uma linha contínua amarelo-esverdeada <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (não confundir com a previsão RNA amarela pontilhada)
@@ -408,7 +408,7 @@ Os gráficos adicionais seguem o gráfico principal: quando desliza ou faz zoom 
 
 Para configurar um gráfico adicional, prima o ícone do **lápis** no seu canto superior direito:
 
-![Definições adicionais dos gráficos](../images/main_additional_graph_settings.png)
+![Definições adicionais dos gráficos](../images/main/main_additional_graph_settings.png)
 
 Selecione os chips dos dados que quer ver neste gráfico; o botão **Remover** elimina o gráfico.
 
@@ -490,7 +490,7 @@ Esta linha mostra quanto a glicose «deveria» subir ou descer só por causa da 
 
 ### Secção F - Barra de ferramentas QuickLaunch
 
-![Barra de ferramentas QuickLaunch](../images/main_quicklaunch_toolbar.png)
+![Barra de ferramentas QuickLaunch](../images/main/main_quicklaunch_toolbar.png)
 
 A barra de ferramentas flutuante no fundo do ecrã tem as suas ações **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)**. A pequena **roda dentada** abre a configuração do QuickLaunch, onde escolhe que botões são mostrados (tratamentos, registos do Careportal, ações do CGM, os ecrãs do painel **Gerir**, botões do [Assistente Rápido](../DailyLifeWithAaps/QuickWizards.md), [Cenas](../DailyLifeWithAaps/Scenes.md) e mais).
 
@@ -502,7 +502,7 @@ Enquanto a bomba está **desligada**, os botões de tratamento ficam na barra de
 
 #### Insulina
 
-![Janela Insulina](../images/insulin_dialog.png)
+![Janela Insulina](../images/v4/Screens/insulin_dialog.png)
 
 Para dar uma certa quantidade de insulina sem usar a [calculadora de bólus](#aaps-screens-bolus-wizard).
 
@@ -520,7 +520,7 @@ A janela Insulina também pode ser usada quando a bomba está suspensa ou deslig
 
 #### Hidratos
 
-![Janela Hidratos](../images/carbs_dialog.png)
+![Janela Hidratos](../images/v4/Screens/carbs_dialog.png)
 
 Para registar hidratos de carbono sem fazer bólus.
 
@@ -574,7 +574,7 @@ Toque na bolha para abrir o painel **Notificação**. Cada mensagem mostra a hor
 
 ## Assistente de Bólus
 
-![Assistente de Bólus](../images/bolus_wizard.png)
+![Assistente de Bólus](../images/v4/Screens/bolus_wizard.png)
 
 Quando quer fazer um bólus de refeição, normalmente é aqui que o faz.
 
@@ -618,7 +618,7 @@ O campo **Hora dos hidratos** serve para o pré-bólus: assim pode dizer ao sist
 
 **Definir alarme** (lembrete para comer): quando é introduzida uma hora dos hidratos no futuro, aparece um interruptor "**Definir alarme**", para ser lembrado na hora indicada de comer os hidratos de carbono que introduziu no **AAPS**:
 
-![Definir alarme para hidratos de carbono futuros](../images/bolus_wizard_set_alarm.png)
+![Definir alarme para hidratos de carbono futuros](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
 The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
@@ -640,7 +640,7 @@ O botão de resultado no fundo mostra o bólus proposto; ao premi-lo, é pedida 
 
 #### Deteção errada dos HCA
 
-![Absorção lenta dos hidratos de carbono](../images/Calculator_SlowCarbAbsorption.png)
+![Absorção lenta dos hidratos de carbono](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Se vir o aviso acima depois de usar o assistente de bólus, o **AAPS** detetou que o valor calculado dos HCA pode estar errado. Por isso, se quiser fazer outro bólus depois de uma refeição anterior com HCA, tenha cuidado com uma sobredosagem!
 
@@ -719,7 +719,7 @@ Para mais detalhes, veja a [secção APS da página Configuração](#Config-Buil
 
 ## Perfil
 
-![Perfil](../images/Screenshots_Profile.png)
+![Perfil](../images/screens/Screenshots_Profile.png)
 
 **Gerir → Perfil** (ou um toque no nome do perfil no ecrã principal) abre o ecrã Perfil: os seus perfis num carrossel de cartões que pode deslizar, com botões para adicionar, editar, clonar, eliminar e **ativar** um perfil.
 
@@ -733,7 +733,7 @@ O perfil tem a informação das suas definições individuais da diabetes. Para 
 
 ## ClienteNS
 
-![ClienteNS](../images/Screenshots_NSClient.png)
+![ClienteNS](../images/screens/Screenshots_NSClient.png)
 
 **Configuração → Comunicação → NSClientV3 → Abrir plugin** mostra o estado da ligação ao seu site Nightscout: URL, estado do websocket, fila e um registo da atividade de sincronização.
 
@@ -745,7 +745,7 @@ Para resolver problemas, veja esta [página](../GettingHelp/TroubleshootingNsCli
 
 ## Fonte da Glicose - xDrip, BYODA...
 
-![Ecrã Fonte da Glicose](../images/Screenshots_BGSource.png)
+![Ecrã Fonte da Glicose](../images/screens/Screenshots_BGSource.png)
 
 **Configuração → Fonte da Glicose → Abrir plugin** mostra o histórico dos valores do CGM e permite remover valores em caso de falha (por exemplo, compressão baixa) ou de valores duplicados.
 
