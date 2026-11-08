@@ -53,7 +53,7 @@ In der **COB**-Kurve wird ein orangener Punkt angezeigt, wenn die minimale Kohle
 
 Normalerweise erkennt __AAPS__ eine Kohlenhydrat-Aufnahme anhand von **Glukosewert**-Veränderungen. Für den Fall, dass Du Kohlenhydrate eingegeben hast, aber **AAPS** die erwartete Absorption nicht durch **Glukosewert**-Veränderungen erkennen kann, wird als sog. Fallback zur Berechnung der Absorption die [min_5m_carbimpact](#Preferences-min_5m_carbimpact)-Methode verwendet. Da dieses Verfahren nur die minimale Kohlenhydrat-Aufnahme ohne Berücksichtigung von Glukosewert-Änderungen berechnet, kann dies zu falschen COB-Werten führen.
 
-![Hinweis fehlerhafte COB Werte](../images/Calculator_SlowCarbAbsorption.png)
+![Hinweis fehlerhafte COB Werte](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 In der Abbildung oben wurde 66% der Kohlenhydrat-Resorption durch min_5m_carbimpact statt des Wertes, der bei Abweichungen festgestellt wurde, mathematisch berechnet. Das deutet darauf hin, dass weniger Kohlenhydrate aktiv sind (**COB**), als es vom Algorithmus berechnet wurde.
 
