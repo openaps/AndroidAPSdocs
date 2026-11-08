@@ -53,7 +53,7 @@ Jei vietoj reikšmės, apskaičiuotos pagal **KG** nuokrypius, naudojamas minima
 
 Paprastai __AAPS__ nustato angliavandenių įsisavinimą pagal **KG** nuokrypius. Jei naudotojas įvedė angliavandenius, bet **AAPS** negali nustatyti numatomo jų įsisavinimo pagal **KG** nuokrypius, įsisavinimui apskaičiuoti bus naudojamas [min_5m_carbimpact](#Preferences-min_5m_carbimpact) metodas (vadinamasis atsarginis metodas, angl. fallback). Kadangi šiuo metodu apskaičiuojamas tik minimalus angliavandenių įsisavinimas, neatsižvelgiant į **KG** nuokrypius, AAO reikšmės gali būti neteisingos.
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![Hint on wrong COB value](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Pirmiau pateiktoje ekrano kopijoje 66 % laiko angliavandenių įsisavinimas buvo apskaičiuojamas pagal min_5m_carbimpact, o ne pagal nuokrypius nustatytą reikšmę. This indicates that the user may have had less **COB** than calculated by the algorithm.
 
