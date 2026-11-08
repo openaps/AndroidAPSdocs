@@ -46,7 +46,7 @@ Merk – *Du må kanskje vente på neste sensormåling før **AAPS** gjenkjenner
 
 **Opplæringsmål 2** krever at du utfører flere «oppgaver», som vist på skjermbildet nedenfor. Hver oppgave viser statusen sin (**1**): den oransje «**Enda ikke fullført**» blir til «**Fullført, bra jobba!**» så snart **AAPS** har registrert handlingen. Trykk på **Hint** (**2**) under en oppgave for å åpne den tilhørende dokumentasjonen, i tilfelle du ikke kjenner en bestemt handling ennå.
 
-![Skjermbilde opplæringsmål 2](../images/Objective2_V2_5.png)
+![Skjermbilde opplæringsmål 2](../images/objectives/Objective2_V2_5.png)
 
 Oppgavene for å fullføre **Opplæringsmål 2** er:
 - Sett **Profilen** din til 90 % med en varighet på 10 min.
@@ -96,7 +96,7 @@ Minste tid for å fullføre dette opplæringsmålet: **7 dager**. Dette er en ob
 
 For å redusere antallet foreslåtte basalendringer i åpen loop kan du fortsatt bruke tipsene i [**Opplæringsmål 3**](#objectives-objective3). I tillegg kan du endre minste prosent for anbefalte basalendringer med innstillingen «**Minimumsendring i åpen loop**» under **Innstillinger → Loop**. Jo høyere verdien er, desto færre varsler om endringer får du.
 
-![Minimumsendring i åpen loop](../images/OpenLoop_MinimalRequestChange2.png)
+![Minimumsendring i åpen loop](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ Det betyr at når du er på **Opplæringsmål 6** og sensorverdiene faller, redu
 
 - Hvis IOB er negativ (se skjermbildet nedenfor), kan en midlertidig basal (TBR) > 100 % utløses i **Opplæringsmål 6**.
 
-![Eksempel på negativ IOB](../images/Objective6_negIOB.png)
+![Eksempel på negativ IOB](../images/objectives/Objective6_negIOB.png)
 
 - Sett målområdet ditt litt høyere enn du vanligvis ville siktet mot, bare for å være på den sikre siden og legge inn en sikkerhetsmargin.
 - Slå på modusen «Stopp ved lavt BS» ved å trykke på Loop-ikonet på hovedskjermen og velge **Stopp ved lavt BS** som kjøremodus.
@@ -245,6 +245,6 @@ Trykk på «**Mer**» under et opplæringsmål for å se oppgavene igjen:
 
 Hvis du av en eller annen grunn vil gå tilbake i **Opplæringsmål**, åpner du det fullførte **Opplæringsmålet** med «**Mer**» og trykker på «**Nullstille ferdig-status**»:
 
-![Gå tilbake i opplæringsmålene](../images/Objective_ClearFinished.png)
+![Gå tilbake i opplæringsmålene](../images/objectives/Objective_ClearFinished.png)
 
 På samme måte kan **Opplæringsmålet** du holder på med nå, startes på nytt med «**Nullstille start-status**».
