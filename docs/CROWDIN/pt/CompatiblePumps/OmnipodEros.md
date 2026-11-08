@@ -281,7 +281,7 @@ Para desativar um Pod (por ter expirado ou por uma falha do Pod):
 
 O processo abaixo mostra como suspender e retomar a administração de insulina.
 
-*NOTA - se não vir o botão **Suspender***, é porque está oculto por predefinição. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*NOTA - se não vir o botão **Suspender***, é porque está oculto por predefinição. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Suspender a administração de insulina
 
@@ -591,7 +591,7 @@ Os botões na parte de baixo do ecrã da bomba mudam conforme a situação. Os b
   A captura de ecrã acima é de uma versão anterior do **AAPS**. No **AAPS** 4, é um botão de texto chamado **Definir hora** no ecrã da bomba Omnipod.
   ```
 
-- **Suspender:** suspende a administração de insulina no Pod ativo. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
+- **Suspender:** suspende a administração de insulina no Pod ativo. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Dá notificações no AAPS e alertas sonoros no telefone quando não há certeza
 
 Dá acesso a definições avançadas para ajudar a depurar erros.
 
-- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
+- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
 - **Mostrar botão de Pulse Log no menu de Gestão do Pod:** esta definição ainda aparece na lista, mas a versão atual do ecrã da bomba não tem o botão **Pulse Log**.
 
 - **Mostrar botão de Estatísticas do RileyLink no menu de Gestão do Pod:** oculta ou mostra o botão **Estatísticas do RileyLink** no ecrã da bomba Omnipod.
