@@ -8,7 +8,7 @@ Der Loop-Status wird auf dem Hauptbildschirm mit einem der Symbole unten angezei
 
 Informationen dazu, wie Du den Loop-Modus auswählst, und zu den übrigen Symbolen im Bild (4 bis 6) findest Du unter [AAPS-Bildschirme > Der Startbildschirm > Loop-Status](#AapsScreens-loop-status).
 
-![Loop Status](../images/Home2020_LoopStatus.png)
+![Loop Status](../images/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ Wenn diese Option aktiviert ist, kann die Empfindlichkeitserkennung (Autosens) d
 
 Wird der Zielwert aufgrund der Erkennung der Insulinempfindlichkeit geändert, wird er auf Deinem Startbildschirm mit grünem Hintergrund angezeigt.
 
-![Von Autosens angepasster Zielwert](../images/Home2020_DynamicTargetAdjustment.png)
+![Von Autosens angepasster Zielwert](../images/main_target_modified_by_autosens.png)
 
 Diese Einstellung ist verfügbar, wenn „Dynamische Empfindlichkeit verwenden“ oder „Autosens verwenden“ aktiviert ist.
 
