@@ -46,7 +46,7 @@ Not: ***AAPS**'in sensörü tanıması için bir sonraki sensör glikoz değerin
 
 **2. Görev**, aşağıdaki ekran görüntüsünde gösterildiği gibi birkaç ‘işin’ yapılmasını ister. Her iş kendi durumunu gösterir (**1**): **AAPS** işlemi kaydeder kaydetmez turuncu "**Henüz tamamlanmadı**" yazısı "**Tamamlandı, tebrikler!**" olarak değişir. Belirli bir işlemi henüz bilmiyorsanız, ilgili dokümantasyonu açmak için bir işin altındaki **İpucu**'na (**2**) dokunun.
 
-![2. Görev ekran görüntüsü](../images/Objective2_V2_5.png)
+![2. Görev ekran görüntüsü](../images/objectives/Objective2_V2_5.png)
 
 **2. Görev**'i tamamlamak için yapılacak işler şunlardır:
 - **Profil**'inizi 10 dakika süreyle %90'a ayarlayın.
@@ -96,7 +96,7 @@ Bu görevi tamamlamak için en kısa süre: **7 gün**. Bu zorunlu bir bekleme s
 
 Açık Döngü'deyken önerilen bazal oran değişikliklerinin sayısını azaltmak için [**3. Görev**](#objectives-objective3)'de anlatılan ipuçlarını yine kullanabilirsiniz. Ayrıca, önerilen bazal oran değişiklikleri için en küçük yüzdeyi **Ayarlar → Döngü** içindeki "**Açık modda minimum değişiklik**" ayarı ile değiştirebilirsiniz. Değer ne kadar yüksekse o kadar az değişiklik bildirimi alırsınız.
 
-![Açık Döngü en küçük istek değişikliği](../images/OpenLoop_MinimalRequestChange2.png)
+![Açık Döngü en küçük istek değişikliği](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ Bu, **6. Görev**'deyken sensör glikoz değerleri düşüyorsa **AAPS**'in baza
 
 - AİNS'iniz negatifse (aşağıdaki ekran görüntüsüne bakın), **6. Görev**'de > %100 olan bir geçici bazal oranı (GBO) tetiklenebilir.
 
-![Negatif AİNS örneği](../images/Objective6_negIOB.png)
+![Negatif AİNS örneği](../images/objectives/Objective6_negIOB.png)
 
 - Güvenli olmak ve bir güvenlik payı eklemek için hedef aralığınızı normalde hedeflediğinizden biraz daha yüksek ayarlayın.
 - 'Düşük Glikoz Duraklatma' modunu etkinleştirmek için ana ekrandaki Döngü simgesine basın ve çalışma modu olarak **Düşük Glikoz Duraklatma**'yı seçin.
@@ -245,6 +245,6 @@ Bir görevin işlerini yeniden görmek için o görevin altındaki "**Daha fazla
 
 Herhangi bir nedenle **Görevler**'de geri gitmek isterseniz, tamamlanmış **Görev**'i "**Daha fazla**" ile açın ve "**Bitmiş durumu sıfırla**"ya dokunun:
 
-![Görevlere geri dön](../images/Objective_ClearFinished.png)
+![Görevlere geri dön](../images/objectives/Objective_ClearFinished.png)
 
 Aynı şekilde, şu anda üzerinde çalıştığınız **Görev** "**Başlatılmış durumu sıfırla**" ile yeniden başlatılabilir.
