@@ -118,14 +118,14 @@ Si vous faites un bolus avec la calculatrice d'**AAPS**, n'utilisez pas les donn
    * Certains téléphones ont deux réglages : un pour le réglage automatique de l'heure (qui doit de préférence rester activé) et un pour le réglage automatique du fuseau horaire (que vous devez DÉSACTIVER : **Set automatically** (Définir automatiquement) sous **Time zone** (Fuseau horaire) dans la capture d'écran ci-dessous).
    * Malheureusement, certaines versions d'Android ont un seul bouton pour activer le réglage automatique de l'heure et du fuseau horaire en même temps. Vous devrez désactiver cette option pour le moment.
 
-![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
+![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
 2. Trouvez un fuseau horaire qui a la même heure que votre lieu actuel, mais qui n'utilise pas l'heure d'été.
    
    * Une liste de ces pays est disponible : [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Pour l'heure d'Europe centrale (CET), cela peut être « Brazzaville » (Congo). Changez le fuseau horaire de votre téléphone pour le Congo.
 
-![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
+![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
 3. Dans **AAPS**, actualisez votre pompe et passez au **Profil** souhaité.
 
