@@ -63,7 +63,7 @@ Technically, the current blood sugar value is transmitted to xDrip every minute.
 
 → Meniu hamburger → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![Setări avansate xDrip pentru Libre 2 & valori brute](../images/xDrip_Libre3_Smooth.png)
+![Setări avansate xDrip pentru Libre 2 & valori brute](../images/libre3/xDrip_Libre3_Smooth.png)
 
 Acest lucru este obligatoriu pentru buclă. Curbele sunt netede și rezultatele buclei sunt grozave. Valorile brute pe care se bazează alarmele oscilează puțin mai mult, dar corespund valorilor pe care le afișează și cititorul. In addition, the raw values can be displayed in the xDrip graph in order to be able to react in time to rapid changes. Vă rugăm să activați Less Common Settings \> Advanced Settings for Libre2 \> „show Raw values” (afișarea valorilor brute) și „show Sensors Infos” (afișarea informațiilor despre senzor). Apoi valorile brute sunt afișate în plus ca puncte mici albe, iar informații suplimentare despre senzor sunt disponibile în meniul sistemului.
 
