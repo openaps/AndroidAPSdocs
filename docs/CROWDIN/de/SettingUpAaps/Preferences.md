@@ -91,7 +91,7 @@ Wähle zwischen dem hellen Design, dem dunklen Design oder der Systemeinstellung
 
 Da ab Version 2.7 die Einstellungen verschlüsselt sind, wird ein Passwort benötigt, um die [Einstellungen exportieren](../Maintenance/ExportImportSettings.md) zu können.
 
-If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+Wenn Du Dein Master-Passwort vergessen hast, siehe [Wie setze ich das Master-Passwort zurück?](#FAQ-reset-master-password)
 
 **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
 
