@@ -91,6 +91,8 @@ Choose between the light theme, the dark theme, or following the phone's system 
 
 Obligatorie pentru a putea [exporta setările](../Maintenance/ExportImportSettings.md), deoarece acestea sunt criptate începând cu versiunea 2.7.
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **Biometric protection may not work on OnePlus phones. Aceasta este o problemă cunoscută a OnePlus pe unele telefoane.**
 
 ![Setați parola principală](../images/preferences/master_password_dialog.png)
