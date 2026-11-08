@@ -8,7 +8,7 @@ De loopstatus wordt op het hoofdscherm getoond met een van de iconen hieronder.
 
 Zie [AAPS-schermen > Het hoofdscherm > Loopstatus](#AapsScreens-loop-status) voor uitleg over het kiezen van de loopmodus en over de andere iconen in de afbeelding (4 tot 6).
 
-![Loop status](../images/main_loop_status.png)
+![Loop status](../images/main/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ Als deze optie aan staat, kan de gevoeligheidsdetectie (Autosens) het streefdoel
 
 Als het streefdoel is aangepast door de gevoeligheidsdetectie, wordt het op je hoofdscherm met een groene achtergrond getoond.
 
-![Streefdoel gewijzigd door autosens](../images/main_target_modified_by_autosens.png)
+![Streefdoel gewijzigd door autosens](../images/main/main_target_modified_by_autosens.png)
 
 Deze instelling is beschikbaar als "Gebruik dynamische gevoeligheid" of "Gebruik Autosens" aan staat.
 
