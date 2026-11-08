@@ -114,7 +114,7 @@ Ouvrez le **menu** (☰) en haut à gauche de l'écran principal et choisissez *
 (screens-bolus-carbs)=
 ### Glucides et bolus
 
-![Glucides et bolus](../images/TreatmentsView1.png)
+![Glucides et bolus](../images/Maintenance/TreatmentsView1.png)
 
 Dans cet onglet, vous pouvez voir le journal des bolus et des glucides. Chaque bolus (ligne **1**) affiche l'IA restante associée à côté de la quantité d'insuline. L'origine du bolus peut être :
 * Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
@@ -141,7 +141,7 @@ L'historique des traitements peut servir à corriger des saisies de glucides fau
 
 ### Basale Temp
 
-![Basal Temp](../images/TreatmentsView2.png)
+![Basal Temp](../images/Maintenance/TreatmentsView2.png)
 
 Les **débits basaux temporaires** appliqués par la boucle sont affichés ici. Quand une entrée a encore un effet sur l'IA, l'information est affichée à côté du débit (ligne **1**). Il peut s'agir de :
 * IA positive si le débit basal temporaire était plus élevé que celui défini dans le profil
@@ -153,13 +153,13 @@ On the left of a line, a red S means “Suspend”: it happens when basal is not
 
 ### Cible Temp
 
-![Cible Temp](../images/TreatmentsView3.png)
+![Cible Temp](../images/Maintenance/TreatmentsView3.png)
 
 L'historique des cibles temporaires est visible ici.
 
 ### Changement de profil
 
-![Changement de profil](../images/TreatmentsView4.png)
+![Changement de profil](../images/Maintenance/TreatmentsView4.png)
 
 L'historique des changements de profil est visible ici. Vous pouvez voir plusieurs entrées à chaque changement de profil : la ligne **1**, enregistrée à la fois dans NS et dans l'historique de la pompe, correspond au changement réel. La ligne **2**, enregistrée dans Nightscout mais pas dans l'historique de la pompe, correspond à la demande de changement de profil faite par l'utilisateur.
 
@@ -169,14 +169,14 @@ Vous pouvez utiliser le bouton **Dupliquer** affiché sur la ligne **2** pour fa
 
 ### Careportal
 
-![Careportal](../images/TreatmentsView5.png)
+![Careportal](../images/Maintenance/TreatmentsView5.png)
 
 Cet onglet montre toutes les notes et saisies du careportal enregistrées dans Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Mode de fonctionnement
 
-![Mode de fonctionnement](../images/TreatmentsView6.png)
+![Mode de fonctionnement](../images/Maintenance/TreatmentsView6.png)
 
 This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 
