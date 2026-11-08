@@ -89,6 +89,7 @@ Right after the repository is created, GitHub may not have read its workflow fil
 - **"The secret is too short"**(secret이 너무 짧음), **"The secret is not a valid code"**(secret이 올바른 코드가 아님) 또는 **"The secret does not contain a keystore"**(secret에 키 저장소가 없음): secret에 잘못된 텍스트를 붙여 넣었습니다. 흔히 `KEYSTORE_SET`이라는 단어 자체나 코드의 일부만 붙여 넣은 경우입니다. 저장소에서 **Settings** → **Secrets and variables** → **Actions**를 열고, `KEYSTORE_SET`을 편집하여 **Copy secret**으로 복사한 긴 코드를 다시 붙여 넣으십시오(설정 페이지를 닫았다면 먼저 설정 페이지의 2단계를 다시 하십시오).
 - **"Keystore, password or alias is wrong"**(키 저장소, 비밀번호 또는 별칭이 틀림): 키 저장소의 비밀번호와 별칭을 확인한 다음 설정 페이지의 2단계와 3단계를 다시 하십시오.
 - **"Google Drive access has expired or was revoked"**(Google Drive 액세스가 만료되었거나 취소됨): [6단계](#aaps-builder-google-drive)를 다시 하고 `GDRIVE_OAUTH2` secret을 업데이트하십시오.
+- **"Process completed with exit code 1" and a red line with only a link to `services.gradle.org`**, after less than a minute: the build could not download Gradle, a tool it needs to build the app. The Gradle website was not responding. Your repository and your settings are fine. Wait half an hour, then [run the build again](#aaps-ci-rerun).
 - **Another error**: [read the build log](#aaps-ci-read-the-logs), then [run the build again](#aaps-ci-rerun). If it fails again the same way, ask for help with the name of the failed step and the error lines. secret의 내용은 절대 공유하지 마십시오.
 
 ### Step 5: the app
