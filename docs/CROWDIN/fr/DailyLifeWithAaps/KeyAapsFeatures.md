@@ -8,7 +8,7 @@ L'état de la boucle est affiché sur l'écran principal avec l'une des icônes 
 
 Voir [Écrans AAPS > L'écran principal > État de la boucle](#AapsScreens-loop-status) pour savoir comment choisir le mode de la boucle et pour les autres icônes de l'image (4 à 6).
 
-![État de la boucle](../images/main_loop_status.png)
+![État de la boucle](../images/main/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ Si cette option est activée, le calcul de sensibilité (Autosens) peut augmente
 
 Si la cible est modifiée à cause du calcul de sensibilité, elle est affichée sur fond vert sur votre écran principal.
 
-![Cible modifiée par Autosens](../images/main_target_modified_by_autosens.png)
+![Cible modifiée par Autosens](../images/main/main_target_modified_by_autosens.png)
 
 Ce paramètre est disponible quand « Activer la sensibilité dynamique » ou « Utiliser Autosens » est activé.
 
