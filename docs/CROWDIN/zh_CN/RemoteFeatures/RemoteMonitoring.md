@@ -1,6 +1,6 @@
 # 远程监控
 
-![监控儿童](../images/KidsMonitoring.png)
+![监控儿童](../images/remote_control_and_following/KidsMonitoring.png)
 
 __AAPS__ offers several features for remote monitoring of type 1 diabetic children, and also facilitates remote commands which send instructions to __AAPS__ remotely. Similarly, __AAPSClient__ can also be used for remote monitoring to follow your partner's or friend's __AAPS__.
 
