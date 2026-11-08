@@ -91,6 +91,8 @@ Choose between the light theme, the dark theme, or following the phone's system 
 
 必须设置主密码才能[导出设置](../Maintenance/ExportImportSettings.md)，因为从版本2.7开始，设置是加密的。
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **生物识别保护功能可能在一加手机上无法正常工作。这是一些一加手机上已知的问题。**
 
 ![设置主密码](../images/preferences/master_password_dialog.png)
