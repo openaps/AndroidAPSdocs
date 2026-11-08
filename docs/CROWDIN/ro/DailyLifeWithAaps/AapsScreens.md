@@ -39,7 +39,7 @@ Culoarea valorii glicemiei indică starea curentă în raport cu [intervalul](#P
 
 #### Stare buclă
 
-![Stare buclă](../images/Home2020_LoopStatus.png)
+![Stare buclă](../images/main_loop_status.png)
 
 Lângă cercul glicemiei, o pictogramă arată modul de funcționare al buclei (de sus în jos în imagine):
 
@@ -166,7 +166,7 @@ Tap the profile name to open the [Profile screen](#aaps-screens-profile), where 
 
 To **change the profile percentage** (and its duration), tap the profile name, then tap the round **▶** (Activate) button at the bottom right of the Profile screen. In **AAPS** 3.x this screen opened with a long press on the profile name; in **AAPS** 4 a long press does nothing. Pas cu pas: [Schimbarea procentajului profilului](#ProfileSwitch-change-percentage).
 
-![Profil cu o schimbare de profil activă](../images/Home2020_ProfileSwitch.png)
+![Profil cu o schimbare de profil activă](../images/main_profile_switch.png)
 
 1. Afișaj normal cu activare standard a profilului.
 2. Profile switch with a specific percentage of 90% and a remaining duration of 9 minutes — the profile name turns yellow while a temporary profile switch is running.
@@ -174,7 +174,7 @@ To **change the profile percentage** (and its duration), tap the profile name, t
 
 #### Țintă
 
-![Durata rămasă pentru ținta temporară](../images/Home2020_TT.png)
+![Durata rămasă pentru ținta temporară](../images/main_temp_target.png)
 
 The current target blood glucose level is displayed below the profile name.
 
@@ -200,7 +200,7 @@ If **AAPS** detects resistance or sensitivity, the target will change from what 
 
 #### IOB, COB, bazală și sensibilitate
 
-![IOB, COB, bazală și sensibilitate](../images/Home2020_TBR.png)
+![IOB, COB, bazală și sensibilitate](../images/main_iob_cob_basal_sensitivity.png)
 
 1. **Seringă**: insulin on board (IOB) - amount of active insulin inside your body  
     The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
@@ -234,7 +234,7 @@ Notificările „Carbohidrați necesari” pot fi trimise către Nightscout, dac
 
 ### Secțiunea C - Rândul de stare
 
-![Rândul de stare](../images/Home2020_StatusLights.png)
+![Rândul de stare](../images/main_status_row.png)
 
 The status row gives a visual warning for
 
@@ -320,7 +320,7 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 Apăsați pictograma **creion** din colțul din dreapta sus al graficului pentru a deschide setările graficului:
 
-![Setările graficului principal](../images/Home2020_MainGraphSetting.png)
+![Setările graficului principal](../images/main_graph_settings.png)
 
 * **Graph height** adjusts how tall the graph is drawn.
 * **ACT** overlays the insulin activity curve: a solid yellow-green line <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (not to be confused with the dotted yellow UAM prediction)
@@ -408,7 +408,7 @@ Graficele suplimentare urmează graficul principal: când derulați sau măriți
 
 Pentru a configura un grafic suplimentar, apăsați pictograma **creion** din colțul lui din dreapta sus:
 
-![Setări grafice suplimentare](../images/Home2020_AdditionalGraphSetting.png)
+![Setări grafice suplimentare](../images/main_additional_graph_settings.png)
 
 Select the chips corresponding to the data you want to see on this graph; the **Remove** button deletes the graph.
 
@@ -490,7 +490,7 @@ Este o combinație bună să afișați această linie împreună cu barele de de
 
 ### Section F - QuickLaunch toolbar
 
-![QuickLaunch toolbar](../images/Home2020_Buttons.png)
+![QuickLaunch toolbar](../images/main_quicklaunch_toolbar.png)
 
 The floating toolbar at the bottom of the screen holds your **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)** actions. The small **gear** opens the QuickLaunch configuration where you choose which buttons are shown (treatments, careportal entries, CGM actions, the screens of the **Manage** sheet, [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md) buttons, [Scenes](../DailyLifeWithAaps/Scenes.md) and more).
 
@@ -502,7 +502,7 @@ While the pump is **disconnected**, the treatment buttons stay in the toolbar, f
 
 #### Insulină
 
-![Dialogul Insulină](../images/Home2020_ButtonInsulin.png)
+![Dialogul Insulină](../images/insulin_dialog.png)
 
 Pentru a administra o anumită cantitate de insulină fără a utiliza [ calculatorul de bolus](#aaps-screens-bolus-wizard).
 
@@ -520,7 +520,7 @@ The insulin dialog can be used when the pump is suspended or disconnected as wel
 
 #### CH
 
-![Dialogul Carbohidrați](../images/Home2020_ButtonCarbs.png)
+![Dialogul Carbohidrați](../images/carbs_dialog.png)
 
 Pentru a înregistra carbohidrați fără bolusare.
 
@@ -574,7 +574,7 @@ Tap the bubble to open the **Notification** panel. Each message shows the time i
 
 ## Asistent bolusare
 
-![Asistent bolusare](../images/Home2020_BolusWizard_v2.png)
+![Asistent bolusare](../images/bolus_wizard.png)
 
 Când doriți să faceți un bolus pentru o masă, în mod normal de aici veți face asta.
 
@@ -618,7 +618,7 @@ Câmpul **Timp carbohidrați** este pentru pre-bolusare astfel încât să pute�
 
 **Set alarm** (eating reminder): when a carb time in the future is entered, a "**Set alarm**" switch appears so that you are reminded at the given time, when to eat the carbs you have input into **AAPS**:
 
-![Set alarm for future carbs](../images/Home2021_BolusWizard_EatingReminder.png)
+![Set alarm for future carbs](../images/bolus_wizard_set_alarm.png)
 
 The reminder starts when the bolus has been delivered. Cât timp rulează, pe ecranul principal o bară **Este timpul să mâncați** face numărătoarea inversă, cu **Stop** și **+5 min**. **+5 min** mută sfârșitul așteptării cu cinci minute mai târziu, iar bara arată așteptarea totală. Când a venit momentul, mementoul sună cu propriul sunet, un cronometru de bucătărie discret. Pe lângă **Opriți sunetul** (ecranul rămâne deschis) și **Opriți sunetul și închideți**, ecranul alarmei oferă **+5 min**, care pornește o nouă așteptare de cinci minute. După ce a sunat, bara arată *Timpul a expirat* cu **+5 min** și **Renunțați**; **Opriți sunetul și închideți** elimină și bara. Bara și alarma sunt afișate și în **AAPSClient** și pe [ceas](#WearOsSmartwatch-wizard-carb-time). Mementoul nu creează un temporizator în aplicația ceas a telefonului. Dacă Android nu permite ca **AAPS** să seteze alarme, asistentul vă cere să permiteți *Alarme și mementouri* pentru **AAPS** în setările Android. Clopoțelul nu este oferit pentru o oră a carbohidraților din trecut.
 
