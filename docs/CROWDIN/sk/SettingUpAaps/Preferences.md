@@ -91,6 +91,8 @@ Vyberte svetlú tému, tmavú tému alebo nastavenie systému telefónu.
 
 Povinné pre možnosť [exportovať nastavenia](../Maintenance/ExportImportSettings.md), pretože sú od verzie 2.7 šifrované.
 
+If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+
 **Biometrická ochrana nemusí na telefónoch OnePlus fungovať. Toto je známy problém na niektorých telefónoch OnePlus.**
 
 ![Nastavenie hlavného hesla](../images/preferences/master_password_dialog.png)
