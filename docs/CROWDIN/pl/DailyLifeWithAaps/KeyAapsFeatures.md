@@ -8,7 +8,7 @@ Status pętli jest pokazany na ekranie głównym jedną z poniższych ikon.
 
 Informacje o tym, jak wybrać tryb pętli, oraz o innych ikonach na obrazku (4 do 6) znajdziesz w [Ekrany AAPS > Ekran główny > Status pętli](#AapsScreens-loop-status).
 
-![Status pętli](../images/main_loop_status.png)
+![Status pętli](../images/main/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ Jeśli ta opcja jest włączona, wykrywanie wrażliwości (autosens) może podni
 
 Jeśli cel zostanie zmieniony przez detekcję wrażliwości, na ekranie głównym będzie pokazany na zielonym tle.
 
-![Cel zmieniony przez autosens](../images/main_target_modified_by_autosens.png)
+![Cel zmieniony przez autosens](../images/main/main_target_modified_by_autosens.png)
 
 To ustawienie jest dostępne, gdy włączona jest opcja „Włącz wrażliwość dynamiczną” lub „Użyj Autosens”.
 
