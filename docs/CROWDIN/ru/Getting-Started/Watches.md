@@ -59,7 +59,7 @@ The best way to choose a smartwatch is to search for "watch" posts on either Dis
 
 Дополнительные проблемы заключаются в том, что трудно получить хороший срок службы батареи, а часы с хорошей батареей часто громоздкие и толстые. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor Bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below.
 
-![изображение](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![изображение](../images/watch_standalone_aaps_and_xdrip.png)
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
@@ -88,7 +88,7 @@ Recent **Wear OS** changes progressively break the custom **AAPS** watchfaces (t
 
 After [installing **AAPS** onto your watch](../WearOS/WearOsSmartwatch.md), you will automatically be able to select your preferred watchface from these **AAPS**-dedicated watchfaces. On most watches, you simply long-press on the home screen until the screen shrinks and swipe right to select an alternative screen:
 
-![изображение](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![изображение](../images/watchfaces_aaps_selection.png)
 
 These are the basic screens embedded in **AAPS**, there are [more watchfaces](#WearOS_changing-to-AAPS-watchface) and you can also use [complications](#Watchfaces-complications).
 
@@ -155,7 +155,7 @@ Here below some of the follow-only watch options popular with **AAPS** users:
 
 **WatchDrip+** is a community-developed companion app that displays glucose and loop data on various smartwatch models, mostly Xiaomi (_e.g._ Mi Band) and Amazfit brands:
 
-![изображение](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![изображение](../images/watch_watchdrip_plus.png)
 
 Since version 0.5, **WatchDrip+** reads its data directly from **AAPS**, without xDrip+ as a relay. On the **AAPS** phone:
 
@@ -170,9 +170,9 @@ You can read more about them, including how to set them up, on the [WatchDrip+ w
 
 ### Pebble watch
 
-![изображение](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![изображение](../images/watch_pebble.png)
 
-![изображение](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![изображение](../images/watch_pebble_watchface.png)
 
 
 Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 to 2016, and may still be available second-hand. Активы Pebble перешли к Fitbit. Пользователи Pebble могут пользоваться циферблатом Urchin для просмотра данных Nightscout. Отображаемые данные включают активный инсулин IOB, действующий временный базал и прогнозирование. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
