@@ -74,7 +74,7 @@ Musíte mať so sebou rovnaké núdzové vybavenie ako každý iný človek s di
   * aktuálny [súbor APK](../SettingUpAaps/BuildingAaps.md) AAPS a všetkých ďalších aplikácií, ktoré používate (napr. xDrip, Juggluco, BYODA).
   * váš súbor úložiska kľúčov (zo zostavenia APK) a jeho heslo,
   * vaše najnovšie súbory exportu nastavení z AAPS a z ďalších aplikácií,
-  * vaše hlavné heslo **AAPS**: bez neho nemôžete importovať súbor s nastaveniami.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ Ak ste zabudli hlavné heslo, môžete ho resetovať na sériové číslo vašej
 
 1. V podpriečinku `extra` vášho AAPS priečinka (zvyčajne `AAPS/extra`) vytvorte prázdny súbor s názvom `PasswordReset` (bez prípony).
 2. Reštartujte **AAPS**. Pumpa musí byť pripojená: **AAPS** zobrazí „Čakanie na pumpu…“ a do 30 sekúnd musí načítať sériové číslo pumpy.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. **AAPS** zobrazí „Heslo nastavené!“: vaše hlavné heslo je teraz **sériové číslo pumpy**. Súbor `PasswordReset` sa automaticky vymaže.
+
 4. Otvorte **Nastavenia** > **Ochrana** > **Hlavné heslo** a nastavte nové heslo.
 
 Ak sa pumpu nepodarí včas zastihnúť, nič sa nezmení: skontrolujte pripojenie pumpy a skúste to znova.
