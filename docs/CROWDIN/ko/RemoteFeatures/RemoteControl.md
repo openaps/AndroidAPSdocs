@@ -291,13 +291,13 @@ b)  사용자가 인증 코드 입력을 피하고 싶은 경우(SMS 명령에�
 
 소프트웨어를 다운로드하려면 휴대폰의 클라이언트 앱에 맞는 워치 앱을 누르십시오: **wear-aapsclient-release_**_version_은 **AAPSClient**용, **wear-aapsclient2-release_**_version_은 **AAPSClient2**용입니다([AAPSClient, AAPSClient2, AAPSClient3에 대하여](#remotecontrol-aapsclient-versions) 참조):
 
-![이미지](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+![이미지](../images/github_release_wear_aapsclient_apk.png)
 
 
 그런 다음 "save as"(다른 이름으로 저장)를 눌러 컴퓨터의 편한 위치에 파일을 저장하십시오:
 
 
-![이미지](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+![이미지](../images/save_as_wear_aapsclient_apk.png)
 
 
 
