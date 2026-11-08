@@ -63,7 +63,7 @@ Technicznie aktualna wartość glukozy jest wysyłana do xDrip co minutę. Domy�
 
 → Menu (☰) → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip: ustawienia zaawansowane Libre 2 i wartości surowe](../images/xDrip_Libre3_Smooth.png)
+![xDrip: ustawienia zaawansowane Libre 2 i wartości surowe](../images/libre3/xDrip_Libre3_Smooth.png)
 
 Jest to konieczne do używania pętli. Krzywe są gładkie, a wyniki pętli są bardzo dobre. Wartości surowe, na których opierają się alarmy, skaczą trochę bardziej, ale odpowiadają wartościom, które pokazuje też czytnik. Dodatkowo wartości surowe można pokazać na wykresie xDrip, aby na czas reagować na szybkie zmiany. Włącz Less Common Settings \> Advanced Settings for Libre2 \> „show Raw values” i „show Sensors Infos”. Wtedy wartości surowe są dodatkowo pokazywane jako małe białe kropki, a dodatkowe informacje o sensorze są dostępne w menu systemowym.
 
