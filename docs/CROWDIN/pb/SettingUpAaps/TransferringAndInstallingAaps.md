@@ -31,11 +31,11 @@ Abra [Google.com](https://www.google.com/) no seu navegador e entre na sua Conta
 
 On the right upper side select the Drive app in the Google menu.
 
-![Iniciar o app Drive](../images/GoogleDriveInWebbrowser.png)
+![Iniciar o app Drive](../images/install/GoogleDriveInWebbrowser.png)
 
 Clique em **New** (Novo) no canto superior esquerdo (ou clique com o botão direito em uma área vazia abaixo dos seus arquivos e pastas) e selecione **File upload** (Upload de arquivo).
 
-![Enviar o arquivo apk com o app Google Drive](../images/GoogleDriveUploadFile.png)
+![Enviar o arquivo apk com o app Google Drive](../images/install/GoogleDriveUploadFile.png)
 
 The apk file should now be uploaded on Google Drive.
 
@@ -43,17 +43,17 @@ The apk file should now be uploaded on Google Drive.
 
 Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
 
-![inicie o app Google Drive](../images/GoogleDriveMobileAPPLaunch.png)
+![inicie o app Google Drive](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Inicie a instalação do apk tocando no nome do arquivo no app Google Drive do celular.
 
-![inicie a instalação do apk](../images/GoogleDriveMobileUploadedAPK.png)
+![inicie a instalação do apk](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Se você receber um aviso de segurança de que no momento não é permitido instalar apps a partir do Google Drive, toque em "Settings" (Configurações) e permita isso só por esse curto momento. Depois, proíba de novo, porque deixar isso ativado o tempo todo é um risco de segurança.
 
-![Aviso de segurança do Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Aviso de segurança do Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Aviso de segurança do Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Aviso de segurança do Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 Depois que a instalação terminar, esta etapa está concluída.
 
