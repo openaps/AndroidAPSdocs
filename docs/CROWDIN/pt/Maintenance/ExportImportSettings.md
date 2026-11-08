@@ -97,6 +97,8 @@ Recomenda-se exportar as definições com regularidade, sobretudo antes e depois
 
 **Nota**: _As definições exportadas são encriptadas com a sua senha mestre do AAPS: sem a senha mestre usada na exportação não vai conseguir importar o ficheiro de definições!_
 
+If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+
 ### Exportar ou importar definições
 Para exportar ou importar definições, abra o **menu** (☰) e selecione **Manutenção**. Em **Gestão de ficheiros**, os chips **Local** e **Nuvem** ao lado de **Exportar definições** e **Importar definições** escolhem onde o ficheiro de definições é guardado ou de onde é lido: **Local** é a pasta AAPS no seu telefone, **Nuvem** fica disponível depois de configurar uma [Pasta na nuvem](#preferences-maintenance-cloud). Tocar num chip liga-o ou desliga-o; pelo menos um fica sempre selecionado, e as duas linhas partilham a mesma escolha. Depois toque no próprio **Exportar definições** ou **Importar definições** para começar.
 
