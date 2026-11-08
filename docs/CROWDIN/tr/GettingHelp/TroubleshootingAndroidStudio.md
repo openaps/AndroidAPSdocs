@@ -192,7 +192,7 @@ Yukarıdaki hata mesajını alırsanız, yeniden oluşturmayı denemeden önce d
 
   32 bit mi yoksa 64 bit işletim sistemi mi kullandığınızı nasıl anlayacağınız hakkında internette bilgi bulabilirsiniz - ör. [bu sayfa](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Screenshot Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Gradle Resync
@@ -237,7 +237,7 @@ Apk dosyanız başarıyla oluşturuldu ve telefonunuza aktarılabilir!
 
 ## Apk yüklenmedi
 
-![telefon uygulaması yüklenmedi](../images/Update_AppNotInstalled.png)
+![telefon uygulaması yüklenmedi](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * “app-full-release.apk” dosyasını telefonunuza aktardığınızdan emin olun.
 * Bu hata genellikle yeni apk dosyasının, yüklü **AAPS**'inizden farklı bir anahtar deposuyla imzalandığı anlamına gelir. Önceki anahtar deponuz hâlâ duruyorsa onu seçin ve yeniden oluşturun. Aksi halde [Yeni bir anahtar deposuyla AAPS'i yeniden yükleme](#reinstall-aaps) sayfasına bakın.
