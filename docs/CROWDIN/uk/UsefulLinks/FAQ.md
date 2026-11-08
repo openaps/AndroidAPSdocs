@@ -74,7 +74,7 @@ AAPS керує вашою помпою та вводить інсулін. Зг
   * поточний [apk](../SettingUpAaps/BuildingAaps.md) AAPS та інших застосунків, якими ви користуєтеся (наприклад, xDrip, Juggluco, BYODA),
   * ваш файл keystore (зі збірки apk) і його пароль,
   * ваші останні файли експорту налаштувань з AAPS та інших застосунків,
-  * ваш головний пароль **AAPS**: без нього не можна імпортувати файл налаштувань.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ AAPS керує вашою помпою та вводить інсулін. Зг
 
 1. Створіть порожній файл з назвою `PasswordReset` (без розширення файлу) у підпапці `extra` вашого каталогу AAPS (зазвичай `AAPS/extra`).
 2. Перезапустіть **AAPS**. Ваша помпа має бути підключена: **AAPS** показує «Очікування помпи…» і має зчитати серійний номер помпи протягом 30 секунд.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. **AAPS** показує «Пароль встановлено!»: тепер ваш головний пароль — це **серійний номер помпи**. Файл `PasswordReset` видаляється автоматично.
+
 4. Відкрийте **Налаштування** > **Захист** > **Головний пароль** і встановіть новий пароль.
 
 Якщо помпа не відповіла вчасно, нічого не змінюється: перевірте з’єднання з помпою і спробуйте ще раз.
