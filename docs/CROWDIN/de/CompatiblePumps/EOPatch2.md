@@ -89,7 +89,7 @@ Wenn Du den Piepton hörst, tippe auf **Kopplung starten**.
 - Du musst die Aktivierung innerhalb von 60 Minuten nach dem Booten abschließen. Schaffst Du das nicht, verwirf den Patch.
 ```
 
-![Patch pairing step](../images/EOPatch/Bild6.png) ![First Bluetooth pairing request](../images/EOPatch/Bild7.png) ![Second Bluetooth pairing request with the passkey](../images/EOPatch/Bild8.png)
+![Patch pairing step](../images/EOPatch/eopatch_pairing.png) ![First Bluetooth pairing request](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Second Bluetooth pairing request with the passkey](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@ Entferne das Klebeband vom Patch und tippe dann auf **Weiter**.
 
 Ragt eine Nadel heraus oder ist der Patch nass, verschmutzt oder sein Klebeband geknickt, tippe stattdessen auf **Verwerfen** und verwende einen neuen Patch.
 
-![Prepare for attaching the Patch step](../images/EOPatch/Bild9.png)
+![Prepare for attaching the Patch step](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Setzstelle
 
@@ -123,7 +123,7 @@ Prüfe die Infusionsstelle und tippe dann auf **Sicherheitsprüfung starten**.
 - Klebt der Patch nicht vollständig, kann Luft zwischen Patch und Haut gelangen. Das schwächt die Haftung und die Wasserdichtigkeit des Patches.
 ```
 
-![Attaching the Patch step](../images/EOPatch/Bild10.png)
+![Attaching the Patch step](../images/EOPatch/eopatch_attaching.png)
 
 ### Sicherheitsprüfung
 
@@ -133,7 +133,7 @@ Die Sicherheitsprüfung dauert etwa 30 Sekunden. Ist sie abgeschlossen, piept de
 Drehe aus Sicherheitsgründen den Hebel zur Nadelauslösung nicht, bevor die Sicherheitsprüfung abgeschlossen ist.
 ```
 
-![Attaching the Patch step with the Start safety check button](../images/EOPatch/Bild11.png) ![Sicherheitsüberprüfung läuft](../images/EOPatch/Bild12.png)
+![Attaching the Patch step with the Start safety check button](../images/EOPatch/eopatch_start_safety_check.png) ![Sicherheitsüberprüfung läuft](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@ Danach geht der Assistent direkt zur Aktivierung eines neuen Patches über (sieh
 
 Solange kein Patch aktiv ist, zeigt **AAPS** die Pumpe als unterbrochen an und erfasst eine temporäre Basalrate von 0 IE/h, sodass bis zur Aktivierung des nächsten Patches kein Basalinsulin im IOB berücksichtigt wird.
 
-![The EOPatch2 pump screen with the DISCARD/CHANGE PATCH button](../images/EOPatch/Bild13.png) ![Discard Patch page](../images/EOPatch/Bild14.png) ![Discard Patch confirmation dialog](../images/EOPatch/Bild15.png) ![Das Entfernen des Patches ist abgeschlossen](../images/EOPatch/Bild16.png)
+![The EOPatch2 pump screen with the DISCARD/CHANGE PATCH button](../images/EOPatch/eopatch_pump_screen_discard.png) ![Discard Patch page](../images/EOPatch/eopatch_discard_patch.png) ![Discard Patch confirmation dialog](../images/EOPatch/eopatch_discard_confirm.png) ![Das Entfernen des Patches ist abgeschlossen](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@ Das Unterbrechen der Insulinabgabe bricht auch einen laufenden verzögerten Bolu
 
 Die Insulinabgabe wird für die gewählte Zeit unterbrochen.
 
-![The EOPatch2 pump screen with the SUSPEND button](../images/EOPatch/Bild17.png) ![Suspend confirmation dialog](../images/EOPatch/Bild18.png) ![Basal Suspending Time dialog](../images/EOPatch/Bild19.png)
+![The EOPatch2 pump screen with the SUSPEND button](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Suspend confirmation dialog](../images/EOPatch/eopatch_suspend_confirm.png) ![Basal Suspending Time dialog](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@ Die Screenshots oben stammen aus einer früheren **AAPS**-Version. In **AAPS** 4
 1. Öffne den Pumpenbildschirm (**Verwalten** → **Pumpe**) und tippe auf **Pumpe fortsetzen**.
 1. Tippe im Dialog **Insulinabgabe fortsetzen** auf **Bestätigen**.
 
-![The EOPatch2 pump screen with the RESUME button](../images/EOPatch/Bild20.png) ![Resume insulin delivery dialog](../images/EOPatch/Bild21.png)
+![The EOPatch2 pump screen with the RESUME button](../images/EOPatch/eopatch_pump_screen_resume.png) ![Resume insulin delivery dialog](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@ Alarme sind für dringende Situationen mit höchster Priorität gedacht und erfo
 
 Tippst Du in der Benachrichtigung auf **Bestätigen**, bearbeitet **AAPS** den Alarm. Bei den meisten Alarmen wird dabei der Patch deaktiviert. Beim Alarm **Unangemessene Temperatur** heißt die Schaltfläche **Erneut versuchen**.
 
-![EOPatch2 alarm](../images/EOPatch/Bild22.png) ![EOPatch2 alarm after the patch was deactivated](../images/EOPatch/Bild23.png)
+![EOPatch2 alarm](../images/EOPatch/eopatch_alarm.png) ![EOPatch2 alarm after the patch was deactivated](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@ Die einzelnen Alarme sind unten erklärt.
 
 Warnungen sind für Situationen mit mittlerer oder niedriger Priorität gedacht. Eine Warnung erscheint als Benachrichtigung auf dem Bildschirm **Übersicht**.
 
-![EOPatch2 warning shown on the Overview screen](../images/EOPatch/Bild24.png)
+![EOPatch2 warning shown on the Overview screen](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note
