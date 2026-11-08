@@ -33,7 +33,7 @@ Kad to išvengtumėte, yra du būdai:
    * Pasirinkite savo **profilį** ir bakstelėkite **▶ Aktyvuoti**
    * Nustatykite '**Laiko perstūmimas**' pagal kelionės tikslą ir bakstelėkite **Aktyvuoti**.
    
-   ![Profilio keitimas su laiko perstūmimu](../images/ProfileSwitchTimeShift2.png)
+   ![Profilio keitimas su laiko perstūmimu](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * pvz., Viena -> Niujorkas: **Profilio keitimas** +6 valandos
    * pvz., Viena -> Sidnėjus: **Profilio keitimas** -8 valandos
