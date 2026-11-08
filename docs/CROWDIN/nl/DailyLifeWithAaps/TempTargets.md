@@ -23,7 +23,7 @@ The sections below summarize the features of **Temp-Target Activity**, **Temp-Ta
 
 ### TT - Activiteit
 
-![TT Activiteit](../images/TempTarget2.png)
+![TT Activiteit](../images/v4/TempTarget/TempTarget2.png)
 
 **BG-streefdoel (standaard voorinstelling, aan te passen)**
 
@@ -46,7 +46,7 @@ Gebruikers kunnen ook overwegen:
 
 ### TT - Eet binnenkort
 
-![TT Eet binnenkort](../images/TempTarget1.png)
+![TT Eet binnenkort](../images/v4/TempTarget/TempTarget1.png)
 
 **BG-streefdoel (standaard voorinstelling, aan te passen)**
 
@@ -63,7 +63,7 @@ Afhankelijk van de **BG** zal **AAPS** "meer" insuline geven, binnen de **AAPS**
 
 ### TT - Hypo
 
-![TT Hypo](../images/TempTarget3.png)
+![TT Hypo](../images/v4/TempTarget/TempTarget3.png)
 
 **BG-streefdoel (standaard voorinstelling, aan te passen)**
 
@@ -96,11 +96,11 @@ Als je een kaart met een voorinstelling kiest, worden het **streefdoel** en de *
 
     <br />### Een tijdelijk streefdoel activeren
     
-    Veeg naar de voorinstelling die je wilt (de waarden worden in de editor geladen), pas als je wilt het **streefdoel**/de **tijdsduur** aan in de editor en tik dan op **▶ Activeer**. Een bevestiging toont het precieze streefdoel, de tijdsduur en de reden, voordat er iets begint:
+    Veeg naar de voorinstelling die je wilt (de waarden worden in de editor geladen), pas als je wilt het **streefdoel**/de **tijdsduur** aan in de editor en tik dan op **▶ Activeer**. A confirmation shows the exact target, duration and reason before anything starts:
     
-    ![Bevestiging bij activeren](../images/TempTarget8.png)
+    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    Nadat je hebt bevestigd, begint het tijdelijk streefdoel direct (of op de gekozen tijd bij **Activatie**) en loopt het gedurende de ingestelde **tijdsduur**.
+    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
     ```{admonition} De getallen bewerken geldt maar één keer — de voorinstelling verandert niet
     :class: important
@@ -148,13 +148,13 @@ Je kunt een tijdelijk streefdoel ook instellen zonder dit scherm te openen:
 
 De snelste manier is tikken op de **streefdoel-chip** op het hoofdscherm (die toont je huidige streefbereik):
 
-![Streefdoel-chip op het hoofdscherm](../images/TempTarget6.png)
+![Streefdoel-chip op het hoofdscherm](../images/v4/TempTarget/TempTarget6.png)
 
 Dit opent het hierboven beschreven scherm **Tijdelijk streefdoel** — veeg naar een voorinstelling en tik op **▶ Activeer**. Hetzelfde scherm is ook te openen via **Beheren** → **Tijdelijk streefdoel**.
 
 (TempTargets-carbs-dialog)= Als je koolhydraten invoert, hoef je het scherm **Tijdelijk streefdoel** helemaal niet te openen: het **venster Koolhydraten** (**Behandelingen** → **Koolhydraten**) heeft bovenaan de schakelaars **Start Hypo TT**, **Start binnenkort eten TT** en **Start inspanning TT**. Zet er een aan, dan wordt de bijbehorende voorinstelling samen met de koolhydraten geactiveerd:
 
-![TT-schakelaars in het venster Koolhydraten](../images/TempTarget5.png)
+![TT-schakelaars in het venster Koolhydraten](../images/v4/TempTarget/TempTarget5.png)
 
     {admonition} Automatisch Hypo TT
     :class: note
@@ -171,7 +171,7 @@ Het **streefdoel** en de **tijdsduur** van elke voorinstelling bewerk je direct 
 3. Pas **Tijdelijk streefdoel** en/of **Tijdsduur** aan in de editor.
 4. Tik op het pictogram **Opslaan** dat in de bovenste werkbalk verschijnt.
 
-![Een voorinstelling bewerken — pictogram Opslaan in de werkbalk, Herstellen in de actiebalk](../images/TempTarget7.png)
+![Een voorinstelling bewerken — pictogram Opslaan in de werkbalk, Herstellen in de actiebalk](../images/v4/TempTarget/TempTarget7.png)
 
 Zolang de editor verschilt van de fabriekswaarden van een ingebouwde voorinstelling, staat er ook een knop **↺ Herstellen** in de actiebalk — tik erop om het oorspronkelijke streefdoel en de oorspronkelijke tijdsduur van de voorinstelling terug te zetten.
 
@@ -179,7 +179,7 @@ Zolang de editor verschilt van de fabriekswaarden van een ingebouwde voorinstell
 
 Zolang een tijdelijk streefdoel loopt, toont de streefdoel-chip op het hoofdscherm het streefdoel en de tijd die nog over is. Tik erop — in het scherm **Tijdelijk streefdoel** is de lopende voorinstelling gemarkeerd als **ACTIEF**, en er verschijnt een rode knop **✗ Afbreken** aan het eind van de werkbalk onderaan, direct links van de knop **▶ Activeer**. Tik erop en bevestig:
 
-![Een lopend tijdelijk streefdoel annuleren](../images/TempTarget9.png)
+![Een lopend tijdelijk streefdoel annuleren](../images/v4/TempTarget/TempTarget9.png)
 
 Een lopend tijdelijk streefdoel kan ook worden gestopt vanaf een **Wear OS-horloge**, vanaf een gekoppelde **client**, of door een regel in **Automatisering** (*Stop tijdelijk doel*).
 
@@ -231,6 +231,6 @@ Gevorderd, [doel 9](#objectives-objective9): als je OpenAPS SMB gebruikt en *'La
 
 Open hiervoor **Instellingen** → **OpenAPS SMB** en zet *'SMB toestaan bij hoog tijdelijk streefdoel'* uit.
 
-![Instelling SMB toestaan bij hoog tijdelijk streefdoel](../images/TempTargetSMB.png)
+![Instelling SMB toestaan bij hoog tijdelijk streefdoel](../images/v4/TempTarget/TempTargetSMB.png)
 
 Zo geeft **AAPS** geen **SMB's**, ook niet als COB > 0 is, *'SMB toestaan bij laag tijdelijk streefdoel'* of *'SMB altijd toestaan'* aan staat en OpenAPS SMB actief is.
