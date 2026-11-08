@@ -21,7 +21,7 @@ Si todavía tienes tu almacén de claves, no necesitas esta página: úsalo de n
 
 - Desinstalar **AAPS** borra todos sus ajustes, tus [objetivos](../SettingUpAaps/CompletingTheObjectives.md) y la conexión actual con la bomba. Los recuperas al importar tu **archivo de ajustes**, así que asegúrate de tener uno reciente.
 - El archivo de ajustes no contiene tu historial de tratamientos y de glucosa. Si subes los datos a [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), puedes volver a cargarlo después de reinstalar (paso 8).
-- Necesitas tu [**contraseña maestra**](#Preferences-master-password): el archivo de ajustes está cifrado con ella.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Usuarios de Omnipod y Medtrum:** lee primero [Bombas sin tubo](#ExportImportSettings-tubeless-pumps). Tu archivo de ajustes tiene que estar exportado durante el pod o parche que llevas ahora.
 - Si hace falta, [configura el receptor de tu MCG o fuente de glucosa](../Getting-Started/CompatiblesCgms.md) antes de empezar.
 
