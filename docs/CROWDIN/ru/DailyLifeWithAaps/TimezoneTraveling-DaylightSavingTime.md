@@ -33,7 +33,7 @@ These pumps require special care because **AAPS** uses history from the pump but
    * Select your **Profile** and tap **▶ Activate**
    * Set '**Time shift**' according to your destination and tap **Activate**.
    
-   ![Смена профиля с временным сдвигом](../images/ProfileSwitchTimeShift2.png)
+   ![Смена профиля с временным сдвигом](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * e.g. Vienna -> New York: **Profile Switch** +6 hours
    * e.g. Vienna -> Sydney: **Profile Switch** -8 hours
