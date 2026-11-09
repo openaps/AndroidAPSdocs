@@ -311,11 +311,11 @@ Musste **AAPS** die Dosis begrenzen, zum Beispiel weil der berechnete Bolus übe
     
     ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Scene tile
+    ### Kachel Szene
     
     ![Scene tile](../images/wearos/tiles/tile_scene.png)
     
-    The [Scenes](#scenes-from-watch) of the phone. Jeder der vier Plätze wird in den Kacheleinstellungen auf **Automatisch**, **Kein(e)** oder eine Szene gesetzt. Ein Platz auf **Automatisch** übernimmt die nächste Szene aus der Liste des Smartphones, die kein anderer Platz belegt. Ein Platz, der auf eine Szene gesetzt ist, die es auf dem Smartphone nicht mehr gibt, zeigt **Nicht verfügbar**.
+    Die [Szenen](#scenes-from-watch) des Smartphones. Jeder der vier Plätze wird in den Kacheleinstellungen auf **Automatisch**, **Kein(e)** oder eine Szene gesetzt. Ein Platz auf **Automatisch** übernimmt die nächste Szene aus der Liste des Smartphones, die kein anderer Platz belegt. Ein Platz, der auf eine Szene gesetzt ist, die es auf dem Smartphone nicht mehr gibt, zeigt **Nicht verfügbar**.
     
     ![Scene tile settings, four places set to Automatic](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -367,11 +367,11 @@ Musste **AAPS** die Dosis begrenzen, zum Beispiel weil der berechnete Bolus übe
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Phone alarms on the watch
+    ## Alarme des Smartphones auf der Smartwatch
     
     ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. Die Smartwatch vibriert, und dann alle halbe Minute fünf Minuten lang, bis Du reagierst. Eine Benachrichtigung zeigt Titel und Text des Alarms, mit denselben Antworten wie bei der Erinnerung [Zeit zum Essen](#WearOsSmartwatch-wizard-carb-time):
+    Die Smartwatch zeigt die Alarme des Smartphones an, sodass Du siehst, warum das Smartphone einen Ton macht, und vom Handgelenk aus reagieren kannst. Die Smartwatch vibriert, und dann alle halbe Minute fünf Minuten lang, bis Du reagierst. Eine Benachrichtigung zeigt Titel und Text des Alarms, mit denselben Antworten wie bei der Erinnerung [Zeit zum Essen](#WearOsSmartwatch-wizard-carb-time):
     
     * **Stille** oder Wegwischen: Der Alarm stoppt, und der Alarmbildschirm auf dem Smartphone schließt sich.
     * **5 min. stummschalten**: Der Alarm stoppt und ertönt nach fünf Minuten erneut, auf dem Smartphone und auf der Smartwatch.
