@@ -160,29 +160,29 @@ Wegen des oben erklärten Einflusses der Null-Temps und der Formel, mit der AAPS
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+Da die Basalrate in AAPS indirekt beeinflusst, wie schnell das IOB abnimmt, können zu hohe Basalraten eine zu hohe DIA verdecken und umgekehrt. Es ist sinnvoll, zuerst die Basalraten sorgfältig einzustellen, bevor Du DIA und Wirkmaximum anpasst. Bedenke außerdem, dass DIA und Wirkmaximum zusammenwirken: Die Wirkung der DIA hängt vom Wirkmaximum ab und umgekehrt.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Diese Diagramme zeigen genau, wie sich DIA und Wirkmaximum über den Bereich der erlaubten Werte auf die IOB-Kurven auswirken.
 
-Adjusting DIA:
+DIA anpassen:
 
 ```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Adjusting peak:
+Wirkmaximum anpassen:
 
 ```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Zum Schluss ein Vergleich, bei dem DIA und Wirkmaximum gleichzeitig angepasst werden. Dabei werden beide Werte im gleichen Verhältnis geändert, sodass `49/35 ~ 7/5`. Oder ebenso `120/93 ~ 9/7`. Die Abstände bleiben unabhängig von der Ausgangs-DIA oder dem Ausgangs-Wirkmaximum gleich, solange die relative Änderung für beide gleich ist.
 
 ```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+Werden DIA und Wirkmaximum auf diese Weise angepasst, verschiebt sich jeder Punkt der Kurve um denselben relativen Betrag.
 
 ````
 
