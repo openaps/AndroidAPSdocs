@@ -58,45 +58,45 @@ AAPS的“中枢”是您自己构建的 **应用程序**。构建过程有详�
 
 ## AAPS系统有哪些优势？
 
-**AAPS**采用的OpenAPS算法根据用户定义的参数（关键参数包括基础率、胰岛素敏感系数（ISF）、碳水系数（IC）、胰岛素作用时长（DIA）等），在无需人工干预的情况下，每5分钟响应探头新数据以调控血糖水平。
+**AAPS**采用的OpenAPS算法可以根据用户设定参数（基础率、胰岛素敏感系数、碳水系数、胰岛素作用时长等关键参数）调控血糖，每 5 分钟根据传感器新数据作出响应。
 
-Some of the reported advantages of using **AAPS** are extensive fine-tunable options, **Automations** and increased transparency of the system for the patient/caregiver. This can result in better control over your diabetes (or that of someone you are caring for), which in turn may give improved quality of life and increased peace of mind.
+对患者或者护理人员来说，使用**AAPS**的优势主要包括可以对各种参数进行精细的微调，各类**自动化操作**以及系统运行情况的高度透明。这有助于更好地管理自己（或您的家人）的糖尿病，进而改善生活质量、更加安心。
 
-投入时间，**AAPS**有可能带来以下好处
+当你在**AAPS**上投入精力，它可能带来以下好处：
 
 - 减轻管理 1 型糖尿病的压力与负担；
 
-- 精简因疾病产生的​​琐碎管理决策；
+- 减少 1 型糖尿病日常需要频繁做出的相关决策；
 
-- 根据实时数据提供个性化的动态胰岛素剂量，从而减少对低血糖治疗的需求，减少高血糖的发生；
+- 根据实时数据提供个性化的动态胰岛素剂量，从而降低低血糖风险和高血糖的发生；
 
-- 强化用户对​​胰岛素参数调优的知识储备与实操信心；
+- 强化用户对​​胰岛素参数调整优化的知识储备与实操信心；
 
-- 创建契合生活方式的​​自动化规则（**自动化**）；
+- 创建符合自身生活方式的自动规则（**自动化**）；
 
 - 改善睡眠质量，并总体上减少夜间干预的频率；
 
-- 为1型糖尿病患者的照护者提供远程监控和胰岛素输注管理功能；以及
+- 为1型糖尿病患者的护理人员提供远程监控和胰岛素输注管理功能；以及
 
-- 通过使用由**AAPS**控制的安卓手机，实现​​便携糖尿病设备集约化管理（包括动态和胰岛素控制装置）。
+- 通过使用由**AAPS**控制的安卓手机，可以更方便地集中管理糖尿病设备（包括动态血糖仪和胰岛素泵等）。
 
 
-**AAPS**最终能够​​赋能患者​​更高效地管理糖尿病，实现​​血糖稳定​​并改善​​远期健康收益​​。
+Ultimately, **AAPS** can empower individuals to better manage their diabetes, resulting in stable blood sugars and improved long term health outcomes.
 
 ### 具体优势包括：
 
 #### 1) 算法安全特性
 要了解oref0与oref1算法的内置安全机制，[请点击此处](https://openaps.org/reference-design/)。用户可自主设定安全限制参数。
 
-#### 2) Hardware flexibility
+#### 2）丰富的硬件兼容性
 
-**AAPS** works with a wide range of insulin pumps and sensors and offers flexibility as life changes. 例如，如果你用德康（Dexcom）的动态，但对它底板上的胶过敏，那你还可以换成雅培的Libre动态。 Users don't have to rebuild or reinstall the **AAPS** app, just select a different pump or BG source in **Configuration** to change your hardware. **AAPS** is independent of particular pump drivers and also contains a "virtual pump" so users can safely experiment before using it on themselves.
+**AAPS** 可适配多款胰岛素泵与血糖传感器，能够随生活状态变化灵活调整。例如，如果你用德康（Dexcom）的动态，但对它底板上的胶过敏，那你还可以换成雅培的Libre动态。用户无需重新编译或重装 **AAPS** 应用，只需在**配置项**中更换胰岛素泵或血糖数据源，即可切换硬件。 **AAPS**不依赖特定的泵驱动程序，并内置"虚拟泵"功能，便于用户在实际使用前进行安全测试。
 
-#### 3) Highly customisable, with wide parameters
+#### 3) 高度可定制，有丰富的参数可以调节
 
-用户可便捷地添加或删除功能模块，而且 **AAPS** 对开环和闭环模式都支持。以下是**AAPS**系统的潜在功能示例：
+用户可便捷地添加或删除功能模块，而且 **AAPS** 对开环和闭环模式都支持。下面列举一些 **AAPS** 系统能够实现的功能：
 
- a) The ability to set a lower **BG** target 30 min before eating; you can set the target as low as 72 mg/dL (4.0 mmol/L).
+ a) 可在吃饭前 30 分钟调低**血糖**目标值，最低可设至 72 mg/dL（4.0 mmol/L）。
 
  b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). 该自动化规则将根据您预设的持续时间内生效，并可限定仅在一周内的特定日期、每日具体时段，甚至特定地理位置触发。
 
