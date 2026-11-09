@@ -40,9 +40,9 @@ Die offizielle Dexcom-App bleibt mit dem Sensor verbunden. xDrip liest die Gluko
 
 ```{admonition} Not a trusted data source
 :class: note
-**AAPS** does not consider xDrip in Companion App mode a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs are not allowed all the time.
+**AAPS** betrachtet xDrip im Modus Companion App nicht als [vertrauenswürdige BZ-Datenquelle](#GettingStarted-TrustedBGSource): SMBs können nicht durchgehend erlaubt werden.
 
-To read the Dexcom app notifications without xDrip, as a trusted data source, use the [Notification Reader](#DexcomG7-notification-reader).
+Um die Benachrichtigungen der Dexcom-App ohne xDrip als vertrauenswürdige Datenquelle zu lesen, nutze den [Benachrichtigungsleser](#DexcomG7-notification-reader).
 ```
 
 ### Benachrichtigungen der Dexcom-App auslesen
@@ -115,12 +115,12 @@ Die offizielle Dexcom-App bleibt mit dem Sensor verbunden. **AAPS** liest den Gl
 Werte aus den Apps für Dexcom G7, ONE+ und Stelo sind eine [vertrauenswürdige BZ-Datenquelle](#GettingStarted-TrustedBGSource): SMBs können durchgehend erlaubt werden.
 ```
 
-Compared to the other methods on this page, the Notification Reader has limits:
+Im Vergleich zu den anderen Methoden auf dieser Seite hat der Benachrichtigungsleser Einschränkungen:
 
 - **Kein Trendpfeil** und **kein Backfill**: Werte, die verpasst werden, während das Smartphone aus oder außer Reichweite ist, gehen verloren.
 - Jeder Wert erhält den Zeitpunkt, zu dem die Benachrichtigung erschienen ist, nicht den genauen Zeitpunkt der Sensormessung.
 - Es werden nur Werte zwischen 40 und 405 mg/dl (2,2 und 22,5 mmol/l) gelesen. „LOW“ und „HIGH“ werden nicht gelesen.
-- Stelo gives a reading every 15 minutes.
+- Stelo liefert alle 15 Minuten einen Wert.
 
 ### Dexcom-App einrichten
 
