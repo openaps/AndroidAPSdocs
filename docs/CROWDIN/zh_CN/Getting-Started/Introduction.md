@@ -98,7 +98,7 @@ Ultimately, **AAPS** can empower individuals to better manage their diabetes, re
 
  a) 可在吃饭前 30 分钟调低**血糖**目标值，最低可设至 72 mg/dL（4.0 mmol/L）。
 
- b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). 该自动化规则将根据您预设的持续时间内生效，并可限定仅在一周内的特定日期、每日具体时段，甚至特定地理位置触发。
+ b) 如果存在胰岛素抵抗而导致血糖偏高，可以在**AAPS** 中设置一条**自动规则**：（例如）当血糖高于 8 mmol/L（144 mg/dL）时自动切换至 120% 配置文件（相比常规**配置**文件，基础率提升 20%，其他参数同步强化）。生效时间会根据你设定的时间执行。甚至可以甚至仅在每周特定时间、特定时段，甚至特定位置生效。
 
  c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin suspension for a set time period, directly via the phone.
 
