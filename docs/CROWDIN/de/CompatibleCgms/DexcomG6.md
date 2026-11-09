@@ -97,7 +97,7 @@ Im Vergleich zu BYODA oder xDrip hat der Benachrichtigungsleser Einschränkungen
 -   Werte erscheinen in **AAPS**, sobald die Dexcom-App einen neuen Wert anzeigt.
 
 ```{warning}
-If the Dexcom app notification shows more than one glucose number, or none, **AAPS** skips that notification.
+Zeigt die Benachrichtigung der Dexcom-App mehr als einen Glukosewert oder gar keinen an, überspringt **AAPS** diese Benachrichtigung.
 ```
 
 
