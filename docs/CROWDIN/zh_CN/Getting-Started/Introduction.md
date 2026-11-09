@@ -100,7 +100,7 @@ Ultimately, **AAPS** can empower individuals to better manage their diabetes, re
 
  b) 如果存在胰岛素抵抗而导致血糖偏高，可以在**AAPS** 中设置一条**自动规则**：（例如）当血糖高于 8 mmol/L（144 mg/dL）时自动切换至 120% 配置文件（相比常规**配置**文件，基础率提升 20%，其他参数同步强化）。生效时间会根据你设定的时间执行。甚至可以甚至仅在每周特定时间、特定时段，甚至特定位置生效。
 
- c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin suspension for a set time period, directly via the phone.
+ c) 如果孩子在你不知道的情况下突然运动，**AAPS** 支持直接通过手机，在一定时间段内暂停胰岛素输注。
 
  d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. 若系统计算的补充剂量超出实际需求，用户可通过"取消"功能直接中止缺失基础胰岛素的补注。
 
