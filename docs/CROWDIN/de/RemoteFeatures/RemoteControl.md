@@ -134,21 +134,21 @@ Genauso wie es Nightscout als einen Server "in der Cloud" gibt, gibt es auch ein
 
 Sobald Du die **Nightscout**-App auf Deinem iPhone installiert hast, öffne die App, folge den Anweisungen für die Einrichtung und gib Deine Nightscout-Adresse (siehe links unten) ein. Je nach Anbieter bei dem Deine Nightscout-Seite läuft, kann es etwas anders aussehen. (_z. B._ http://deineadresse.herokuapp.com). Gib dann Dein Nightscout API secret (Passwort) ein (siehe rechts unten). Wenn Du nicht nach Deinem API-Passwort gefragt wirst, klickst Du oben in der App auf das Schloss-Symbol und gibst es dann ein:
 
-![grafik](../images/remote-control-24.png)
+![grafik](../images/remote_control_and_following/remote-control-24.png)
 
 Weitere Informationen zur Einrichtung findest Du direkt bei [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
 Wenn Du Dich das erste Mal einloggst, wirst Du noch eine sehr einfach gestaltete Ansicht sehen. Passe die Anzeige an, indem Du das „Hamburger“-Menü oben rechts auswählst und nach unten scrollst:
 
-![grafik](../images/remote-control-25.png)
+![grafik](../images/remote_control_and_following/remote-control-25.png)
 
 Scrolle bis zu den „Einstellungen“ herunter. Die Darstellung der Glukosewerte erfolgt standardmäßig "logaritmisch". Das kannst Du unter "Skalierung" auf "Linear" ändern. Um das Basal der Pumpe einzublenden, ändere unter dem Abschnitt "Basalraten-Darstellung" den Wert auf "Standard“.
 
-![grafik](../images/remote-control-25b.png)
+![grafik](../images/remote_control_and_following/remote-control-25b.png)
 
 Wähle Deine gewünschten Optionen aus. Deaktiviere die Alarme, wenn Du für die Alarmierung andere Apps nutzt.
 
-![grafik](../images/remote-control-26.png)
+![grafik](../images/remote_control_and_following/remote-control-26.png)
 
 Scrolle weiter herunter bis zum Abschnitt "Zeige Plugins".
 
@@ -156,7 +156,7 @@ Wichtig ist, dass dort “Behandlungs-Portal” ausgewählt ist. In diesem Absch
 
 Wichtig ist, dass Du nach Deinen Änderungen unten auf "Speichern“ klickst, damit diese Änderungen wirksam werden.
 
-![grafik](../images/remote-control-27.png)
+![grafik](../images/remote_control_and_following/remote-control-27.png)
 
 Nach dem Drücken von „Speichern“ wird die App zum Hauptbildschirm der Nightscout-App zurückkehren. Es sollte ungefähr so aussehen:
 
@@ -170,7 +170,7 @@ Nach dem Drücken von „Speichern“ wird die App zum Hauptbildschirm der Night
 8. Basalrate (basales Insulinprofil)
 9. Grüne Linie = historische Glukosewerte Blaue Linien = prognostizierte Glukosewerte
 
-![grafik](../images/remote-control-28.png)
+![grafik](../images/remote_control_and_following/remote-control-28.png)
 
 Schauen wir uns das obere linke Menü der Nightscout-App etwas genauer an:
 
@@ -179,7 +179,7 @@ Schauen wir uns das obere linke Menü der Nightscout-App etwas genauer an:
 3. Hamburger - für Einstellungen
 4. Careportal – Behandlung erfassen (wann **AAPS** diese übernimmt, steht [unten](#RemoteControl_nightscout-treatments))
 
-![Nightscout top bar](../images/remote-control-29.png)
+![Nightscout top bar](../images/remote_control_and_following/remote-control-29.png)
 
 Es gibt auf diesem Bildschirm eine Vielzahl an Statusinformationen des **AAPS**-Systems in den grauen Tabs (und noch mehr Informationen werden angezeigt, wenn Du auf die Tabs tippst):
 
@@ -195,9 +195,9 @@ Es gibt auf diesem Bildschirm eine Vielzahl an Statusinformationen des **AAPS**-
 10. Akkustand des AAPS-Smartphones
 11. Größe Deiner Datenbank. Wenn diese zu voll wird (nur DIY Nightscout - bei gehosteten Diensten einfach ignorieren), können Verbindungsprobleme auftreten. Du kannst die Größe durch Datenlöschungen im Admin-Tool-Menü reduzieren (über das Hamburger-Menü).
 
-![grafik](../images/remote-control-30.png)
+![grafik](../images/remote_control_and_following/remote-control-30.png)
 
-![grafik](../images/remote-control-31.png)
+![grafik](../images/remote_control_and_following/remote-control-31.png)
 
 Tippe auf „Aktualisieren“ am unteren Ende der Seite, um das Popup zu schließen.
 
@@ -233,7 +233,7 @@ Obwohl dies potenziell nützlich sein könnte, um angekündigte (aber nicht gebo
 
 ### Option 1) AAPS von einer Wear-OS-Smartwatch aus steuern
 
-![Wear Remote 1](../images/Wear_Remote1.png)
+![Wear Remote 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 Sobald Du [**AAPS** auf Deiner Smartwatch fertig eingerichtet hast](../WearOS/BuildingAapsWearOS.md), findest Du ausführliche Informationen zu den Smartwatch-Watchfaces und den jeweiligen Funktionen in [Wear AAPS auf einer Smartwatch nutzen](../WearOS/WearOsSmartwatch.md).
 
@@ -285,19 +285,19 @@ Unten findest Du konkrete Anleitungen zur Einrichtung von **AAPS** auf der belie
 
 ### Option 3) **AAPS** auf dem Smartphone wird über AAPS auf der Smartwatch gesteuert
 
-![Wear Remote 2](../images/Wear_Remote2.png)
+![Wear Remote 2](../images/remote_control_and_following/Wear_Remote2.png)
 
 Die Software für die Smartwatch, die **AAPSClient** Wear-APK, kann direkt von [GitHub](https://github.com/nightscout/AndroidAPS/releases/) heruntergeladen werden.
 
 Um die Software herunterzuladen, klicke auf die Smartwatch-App, die zur Client-App auf dem Smartphone passt: **wear-aapsclient-release_**_Version_ gehört zu **AAPSClient**, **wear-aapsclient2-release_**_Version_ zu **AAPSClient2** (siehe [Über AAPSClient, AAPSClient2 und AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![grafik](../images/github_release_wear_aapsclient_apk.png)
+![grafik](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 Dann "Speichern unter" und speichere die Datei an einem Ort Deiner Wahl auf Deinem Computer:
 
 
-![grafik](../images/save_as_wear_aapsclient_apk.png)
+![grafik](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 
