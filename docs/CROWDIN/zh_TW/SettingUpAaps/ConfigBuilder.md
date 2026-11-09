@@ -160,29 +160,29 @@ AAPS 使用數學公式來模擬胰島素作用的時間軸，並透過 **DIA** 
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-由於基礎率會間接影響 AAPS 中 IOB 的衰減，因此基礎率過高可能會掩蓋 DIA 過長的問題，反之亦然。建議先仔細調整基礎率，再調整 DIA 和峰值。另外，DIA 和峰值的設定會彼此影響，也就是說，DIA 的效果取決於峰值，反之亦然。
+Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
 
-這些圖表顯示在允許的數值範圍內，DIA 和峰值對 IOB 曲線的確切影響。
+These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
 
-調整 DIA：
+Adjusting DIA:
 
-```{image} ../images/iob_remaining_static_peak.png
+```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-調整峰值：
+Adjusting peak:
 
-```{image} ../images/iob_remaining_static_dia.png
+```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-最後，以下比較了同時調整 DIA 和峰值的情況。此處的邏輯是，兩個數值都以相同的相對幅度調整，因此 `49/35 ~ 7/5`。同樣地，`120/93 ~ 9/7`。只要兩者的相對變化相同，無論 DIA 或峰值的基準值為何，間隔都會一致。
+Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
 
-```{image} ../images/iob_remaining_uniform.png
+```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-請注意，以這種方式調整 DIA 和峰值時，曲線上的每個點都會以相同的相對幅度移動。
+Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
 
 ````
 
