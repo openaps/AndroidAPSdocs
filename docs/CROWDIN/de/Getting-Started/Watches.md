@@ -59,7 +59,7 @@ Die meisten Frustrationen mit Standalone **AAPS**-Smartwatches entstehen aus der
 
 Ein weiteres Problem ist es eine Smartwatch mit langer Akkulaufzeit, die in der Regel klobig und dick sind, zu finden. Typische Probleme mit denen gekämpft werden sind Betriebssystem- und Energiespar-Einstellungen, das Starten von Sensoren über die Smartwatch, geringe Bluetooth-Reichweite (um die Verbindung mit Pumpe und Sensor zu halten) und fraglicher Wasserfestigkeit. Beispiele finden sich in den Fotos unten.
 
-![grafik](../images/watch_standalone_aaps_and_xdrip.png)
+![grafik](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 Wenn Du eine Stand-Alone-Smartwatch einrichten möchtest, lies die Beiträge und Kommentare in der **AAPS**-Facebook-Gruppe (gute Suchbegriffe sind „standalone“ und „Lemfo“) und auf Discord.
 
@@ -88,7 +88,7 @@ Neuere Änderungen an **Wear OS** machen die eigenen **AAPS**-Watchfaces nach un
 
 Nach der [Installation von **AAPS** auf Deiner Smartwatch](../WearOS/WearOsSmartwatch.md), kannst Du automatisch, eines der speziellen **AAPS**-Watchfaces auswählen. Bei den meisten Smartwatches drückst Du dazu so lange auf den Startbildschirm, bis dieser schrumpft, wischt dann nach rechts und kannst dann eine andere Anzeige auswählen:
 
-![grafik](../images/watchfaces_aaps_selection.png)
+![grafik](../images/watches/watchfaces_aaps_selection.png)
 
 Dies sind die Standardanzeigen, die Bestandteil von **AAPS** sind. Es gibt [weitere Watchfaces](#WearOS_changing-to-AAPS-watchface) und Du kannst auch [Komplikationen](#Watchfaces-complications) verwenden.
 
@@ -122,7 +122,7 @@ Im Garmin-ConnectIQ-Store gibt es einige Watchfaces für Garmin, die mit [AAPS](
 
 ![Configuration > Communication: the Garmin card](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) hat eine direkte **AAPS**-Integration. Es zeigt neben den Glukosewerten auch Daten über den Loop-Status (aktives Insulin, temporäres Basal) und sendet den Puls an **AAPS**. Es ist im ConnectIQ-Store erhältlich. Aktiviere das Modul **Garmin** unter **Konfiguration → Kommunikation**. ![AAPS Glucose Watch watchface with numbered fields](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) hat eine direkte **AAPS**-Integration. Es zeigt neben den Glukosewerten auch Daten über den Loop-Status (aktives Insulin, temporäres Basal) und sendet den Puls an **AAPS**. Es ist im ConnectIQ-Store erhältlich. Aktiviere das Modul **Garmin** unter **Konfiguration → Kommunikation**. ![AAPS Glucose Watch watchface with numbered fields](../images/watches/Garmin_WF-annotated.png)
 
 1. Höchster und niedrigster Glukosewert im Diagramm
 2. Glukoseänderung pro Minute
@@ -155,7 +155,7 @@ Hier fassen wir einige der bei **AAPS**-Nutzenden populären Follower-Optionen z
 
 **WatchDrip+** ist eine von der Community entwickelte Begleit-App, die Glukose- und Loop-Daten auf verschiedenen Smartwatch-Modellen anzeigt, vor allem von Xiaomi (_z. B._ Mi Band) und Amazfit:
 
-![grafik](../images/watch_watchdrip_plus.png)
+![grafik](../images/watches/watch_watchdrip_plus.png)
 
 Ab Version 0.5 liest **WatchDrip+** die Daten direkt aus **AAPS**, ohne xDrip+ als Zwischenstation. Auf dem **AAPS**-Smartphone:
 
@@ -170,9 +170,9 @@ Mehr darüber, auch zur Einrichtung, findest Du auf der [Website von WatchDrip+]
 
 ### Pebble Smartwatch
 
-![grafik](../images/watch_pebble.png)
+![grafik](../images/watches/watch_pebble.png)
 
-![grafik](../images/watch_pebble_watchface.png)
+![grafik](../images/watches/watch_pebble_watchface.png)
 
 
 Pebble Smartwatches ([Produktion mittlerweile eingestellt](https://en.wikipedia.org/wiki/Pebble_(watch))) wurden von 2013 bis 2016 verkauft, und sind zum Teil gebraucht noch erhältlich. Fitbit übernahm das Pebble-Vermögen. Pebble-Nutzende können die Urchin Uhr verwenden, um Nightscout-Daten anzuzeigen. Informationen, die angezeigt werden: Aktives Insulin, die aktive temporäre Basalrate und Glukosewert-Vorhersagen. Im Open Loop kannst Du mit IFTTT ein Applet erstellen, das bei einer Benachrichtigung von **AAPS** eine SMS oder eine Pushover-Benachrichtigung sendet.
