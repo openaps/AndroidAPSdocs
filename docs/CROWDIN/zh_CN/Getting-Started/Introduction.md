@@ -52,9 +52,9 @@ Android APS（**AAPS**）属于混合闭环系统，也叫人工胰腺系统（A
 
 AAPS的“中枢”是您自己构建的 **应用程序**。构建过程有详细的逐步操作指南。然后你需要在一部[兼容的](../Getting-Started/Phones.md)**安卓智能手机**上安装**AAPS  应用程序**（**1**）。有的用户倾向于用一部专门的手机来安装闭环，而非平时用的手机。这样（尤其是苹果手机用户）就无需将生活中的其他事务迁移至安卓平台，仅需通过该安卓设备运行AAPS闭环即可。
 
-除了 **AAPS** 之外，**安卓智能手机**还需要安装另一个 App。 This [additional app](../Getting-Started/CompatiblesCgms.md) receives glucose data from a sensor (**2**) by Bluetooth, and then sends the data internally on the phone to the **AAPS app**.
+除了 **AAPS** 之外，**安卓智能手机**还需要安装另一个 App。[这类APP](../Getting-Started/CompatiblesCgms.md)通过蓝牙从传感器 (**2**) 获取血糖数据，然后在手机内部将数据转发至** AAPS 应用**。
 
-**AAPS** 采用的是 OpenAPS 的决策过程(也就是**算法**)。 Beginners start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. 使用哪个算法 (oref0或 oref1) 取决于哪个算法最适合你的具体情况。两种算法均通过整合多维度参数，在每次接收探头新数据时进行实时运算， The algorithm then sends instructions to the insulin pump (**3**) on how much insulin to deliver by Bluetooth. All the information can be sent by mobile data or Wi-Fi to the internet (**4**). 如果需要的话，这些数据也可以分享给别人或者收集起来以供分析。 Optionally, you can also pair a [smartwatch](../Getting-Started/Watches.md) (**5**) with the phone to see your data at a glance and, with some watches, send basic commands to **AAPS**.
+**AAPS** 采用的是 OpenAPS 的决策过程(也就是**算法**)。初学者最开始可以使用基础的 **oref0** 算法，对AAPS比较熟悉之后可以切换到新的 **oref1** 算法。使用哪个算法 (oref0或 oref1) 取决于哪个算法最适合你的具体情况。两种算法均通过整合多维度参数，在每次接收探头新数据时进行实时运算，随后通过蓝牙向胰岛素泵（**3**）发送输注指令，告诉它需要输注多少胰岛素。所有运行数据可通过移动网络或Wi-Fi发送到网上（**4**）。如果需要的话，这些数据也可以分享给别人或者收集起来以供分析。您还可以选择将[智能手表](../Getting-Started/Watches.md)（**5**）与手机配对，快速查看数据，并且部分部分型号手表可以向 **AAPS** 发送基础操作指令。
 
 ## AAPS系统有哪些优势？
 
