@@ -367,11 +367,11 @@ Entkoppele es zuerst (**Verwalten → Mit Master koppeln → Entkoppeln**) und s
 
 **Die Kopplung wird abgebrochen mit „Das Kopplungs-Secret konnte nicht gespeichert werden“**
 
-Es wurde nichts geändert. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+Es wurde nichts geändert. Starte die Kopplung erneut. Schlägt sie weiter fehl, starte **AAPSClient** neu und versuche es noch einmal.
 
-**The client says it is not paired**
+**Der Client meldet, dass er nicht gekoppelt ist**
 
-Kopple ihn erneut über **Verwalten → Mit Master koppeln**. Check that the client is **Active** in the master's **Authorized clients** list.
+Kopple ihn erneut über **Verwalten → Mit Master koppeln**. Prüfe, ob der Client in der Liste **Autorisierte Clients** des Masters **Aktiv** ist.
 
 **Nach der Kopplung passiert nichts**
 
@@ -379,25 +379,25 @@ Stelle sicher, dass **Client-Steuerung erlauben** auf dem Master EINGESCHALTET i
 
 ### Kommandos
 
-**The client says the master is offline, or commands fail**
+**Der Client meldet, dass der Master offline ist, oder Befehle schlagen fehl**
 
-Check that:
+Prüfe Folgendes:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- das Master-Smartphone ist nicht im Ruhezustand und **AAPS** läuft,
+- beide Smartphones sind in **NSClientV3** mit derselben Nightscout-Seite verbunden,
+- **Websockets** sind auf beiden Smartphones aktiviert.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. Wenn die Websocket-Verbindung immer wieder abbricht, funktioniert die Remote-Steuerung nicht. Siehe [Fehlerbehebung für NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Websockets sind für die Remote-Steuerung über **AAPSClient** **zwingend erforderlich**. Wenn die Websocket-Verbindung immer wieder abbricht, funktioniert die Remote-Steuerung nicht. Siehe [Fehlerbehebung für NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**Der Master lehnt einen Befehl ab**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+Der Master prüft jeden Befehl erneut gegen seinen aktuellen Zustand, z. B. existiert das gewählte Profil nicht mehr oder der Pumpentyp passt nicht. Prüfe das auf dem Master.
 
 **Auf der Nightscout-Website eingegebene Behandlungen werden nicht übernommen**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+Das ist im [geschützten Modus](#client-master-control-hardened-mode) so vorgesehen. Gib sie stattdessen auf einem gekoppelten Client ein.
 
-### Nightscout tokens and settings
+### Nightscout-Token und -Einstellungen
 
 **Der Client meldet „Der Master hat den Befehl abgelehnt: Dieses Smartphone schreibt mit einem anderen als dem ihm zugeordneten Token in Nightscout“**
 
@@ -405,11 +405,11 @@ Der Client hat vorher sein eigenes Nightscout-Token verwendet und schreibt jetzt
 
 **Die Karte des Clients zeigt „Verwendet das Nightscout-Token …“ in Rot**
 
-Der Client schreibt noch mit einem Token, das mehr Rechte hat, als er braucht. The master sends the client its own token after pairing, but only if the master has an admin token. Prüfe das Token des Masters oder richte den Client noch einmal mit einem QR-Code ein.
+Der Client schreibt noch mit einem Token, das mehr Rechte hat, als er braucht. Der Master schickt dem Client nach der Kopplung sein eigenes Token, aber nur, wenn der Master ein Admin-Token hat. Prüfe das Token des Masters oder richte den Client noch einmal mit einem QR-Code ein.
 
 **Das NSClient-Protokoll auf dem Client zeigt „✕ SETTINGS … refused“, und seine Einstellungen folgen dem Master nicht mehr**
 
-Jemand anderes hat das Einstellungsdokument des Masters geschrieben, oder der Master hat einen neuen Schlüssel (zum Beispiel, nachdem seine Daten gelöscht wurden). A paired client takes the new key by itself the next time it connects to Nightscout. Ein Smartphone, das Nightscout nur liest, braucht noch einmal den QR-Code des Masters (**Nur Nightscout lesen → QR-Code anzeigen**).
+Jemand anderes hat das Einstellungsdokument des Masters geschrieben, oder der Master hat einen neuen Schlüssel (zum Beispiel, nachdem seine Daten gelöscht wurden). Ein gekoppelter Client übernimmt den neuen Schlüssel von selbst, wenn er sich das nächste Mal mit Nightscout verbindet. Ein Smartphone, das Nightscout nur liest, braucht noch einmal den QR-Code des Masters (**Nur Nightscout lesen → QR-Code anzeigen**).
 
 **Ein Client kann Nightscout nicht mehr lesen**
 
