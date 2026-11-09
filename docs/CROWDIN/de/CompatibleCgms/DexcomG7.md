@@ -106,49 +106,49 @@ Version 9.0+ ist erforderlich
 
 (DexcomG7-notification-reader)=
 
-## 5. Notification Reader (G7, ONE+ and Stelo)
+## 5. Benachrichtigungsleser (G7, ONE+ und Stelo)
 
-Die offizielle Dexcom-App bleibt mit dem Sensor verbunden. **AAPS** reads the glucose value directly from the notification of the Dexcom app, without any other app in between.
+Die offizielle Dexcom-App bleibt mit dem Sensor verbunden. **AAPS** liest den Glukosewert direkt aus der Benachrichtigung der Dexcom-App, ohne eine weitere App dazwischen.
 
 ```{admonition} Trusted data source
 :class: note
-Readings from the Dexcom G7, ONE+ and Stelo apps are a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs can be allowed all the time.
+Werte aus den Apps für Dexcom G7, ONE+ und Stelo sind eine [vertrauenswürdige BZ-Datenquelle](#GettingStarted-TrustedBGSource): SMBs können durchgehend erlaubt werden.
 ```
 
 Compared to the other methods on this page, the Notification Reader has limits:
 
-- **No trend arrow** and **no backfill**: readings missed while the phone was off or out of range are lost.
-- Each reading gets the time the notification appeared, not the exact time of the sensor reading.
-- Only values between 40 and 405 mg/dL (2.2 and 22.5 mmol/L) are read. "LOW" and "HIGH" are not read.
+- **Kein Trendpfeil** und **kein Backfill**: Werte, die verpasst werden, während das Smartphone aus oder außer Reichweite ist, gehen verloren.
+- Jeder Wert erhält den Zeitpunkt, zu dem die Benachrichtigung erschienen ist, nicht den genauen Zeitpunkt der Sensormessung.
+- Es werden nur Werte zwischen 40 und 405 mg/dl (2,2 und 22,5 mmol/l) gelesen. „LOW“ und „HIGH“ werden nicht gelesen.
 - Stelo gives a reading every 15 minutes.
 
-### Set up the Dexcom app
+### Dexcom-App einrichten
 
 - Lass die Dexcom-App installiert und mit dem Sensor verbunden.
-- Make sure the Dexcom app shows the current glucose value in its notification. Ihre Benachrichtigungen müssen sichtbar bleiben: Schalte sie nicht stumm und blende sie nicht aus.
-- Use the same glucose units (mg/dL or mmol/L) in the Dexcom app as in **AAPS**. Otherwise **AAPS** cannot read the value.
+- Achte darauf, dass die Dexcom-App den aktuellen Glukosewert in ihrer Benachrichtigung anzeigt. Ihre Benachrichtigungen müssen sichtbar bleiben: Schalte sie nicht stumm und blende sie nicht aus.
+- Verwende in der Dexcom-App dieselbe Glukoseeinheit (mg/dl oder mmol/l) wie in **AAPS**. Sonst kann **AAPS** den Wert nicht lesen.
 
 ### Konfiguration in AAPS
 
-- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and confirm the switch.
+- Wähle **Benachrichtigungsleser** unter [**Konfiguration → BZ-Quelle**](#Config-Builder-bg-source) und bestätige den Wechsel.
 
   ![BG Source: Notification Reader selected](../images/NotificationReader_BgSource.png)
 
-- Back on the main screen, **AAPS** shows **Permissions Required**. Next to **Notification Access**, tap **Grant**.
+- Zurück auf dem Startbildschirm zeigt **AAPS** **Berechtigungen erforderlich** an. Tippe neben **Zugriff auf Benachrichtigungen** auf **Berechtigung erteilen**.
 
   ![Permissions Required: Notification Access](../images/NotificationReader_Permissions.png)
 
-- Android opens its notification access list (its name depends on your Android version, for example *Notification read, reply & control*). Select **AAPS**, turn on **Allow notification access** and confirm with **Allow**.
+- Android öffnet seine Liste für den Zugriff auf Benachrichtigungen (ihr Name hängt von Deiner Android-Version ab, z. B. *Benachrichtigungen lesen, beantworten und steuern*). Wähle **AAPS**, aktiviere **Zugriff auf Benachrichtigungen zulassen** und bestätige mit **Zulassen**.
 
   ![Android asks to allow notification access for AAPS](../images/NotificationReader_AllowDialog.png)
 
-  Android warns that **AAPS** could read all your notifications. **AAPS** only reads the notifications of supported CGM apps and ignores all others.
+  Android warnt, dass **AAPS** alle Deine Benachrichtigungen lesen könnte. **AAPS** liest nur die Benachrichtigungen unterstützter CGM-Apps und ignoriert alle anderen.
 
   ![Notification access allowed for AAPS](../images/NotificationReader_AccessOn.png)
 
-- If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because **AAPS** was not installed from the Play Store. Open the **AAPS** app info (long press the **AAPS** icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Gehe dann zurück zum Bildschirm für den Zugriff auf Benachrichtigungen und erlaube ihn.
-- Readings appear in **AAPS** when the Dexcom app shows a new value.
+- Ist **Zugriff auf Benachrichtigungen zulassen** ausgegraut (*Durch eingeschränkte Einstellung festgelegt*), blockiert Android das, weil **AAPS** nicht aus dem Play Store installiert wurde. Öffne die App-Info von **AAPS** (lange auf das **AAPS**-Symbol drücken > **App-Info**), tippe oben rechts auf das Menü mit den drei Punkten und wähle **Eingeschränkte Einstellungen zulassen**. Gehe dann zurück zum Bildschirm für den Zugriff auf Benachrichtigungen und erlaube ihn.
+- Werte erscheinen in **AAPS**, sobald die Dexcom-App einen neuen Wert anzeigt.
 
 ```{warning}
-If the Dexcom app notification shows more than one glucose number, or none, **AAPS** skips that notification.
+Zeigt die Benachrichtigung der Dexcom-App mehr als einen Glukosewert oder gar keinen an, überspringt **AAPS** diese Benachrichtigung.
 ```
