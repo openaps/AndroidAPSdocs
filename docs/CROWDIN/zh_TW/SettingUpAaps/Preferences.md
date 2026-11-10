@@ -91,7 +91,7 @@
 
 出於安全要求，通常必須能夠[匯出設定](../Maintenance/ExportImportSettings.md)，因為從版本 2.7 開始它們是加密的。
 
-If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+如果您忘記主密碼，請參閱[如何重設主密碼？](#FAQ-reset-master-password)
 
 **生物識別保護可能在 OnePlus 手機上無法運作。這是部分 OnePlus 手機的已知問題。**
 
@@ -474,19 +474,19 @@ NSClient 外掛（在組態選單中顯示為 **NSClientV3**）會與 Nightscout
 
 **覆寫勿擾模式**（預設開啟）：即使手機處於靜音或勿擾模式，**AAPS** 的警報仍會響起。如果您希望 **AAPS** 遵循這些模式，請將此功能關閉：警報屆時不會響起；在勿擾模式下，手機和手錶只會震動。在勿擾模式期間收到的循環建議會以靜音方式顯示。
 
-When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. 在通知列中將警報通知向旁滑掉，即可將警報靜音。稍後開啟 **AAPS** 時，未回應的警報會再次顯示。
+鬧鈴響起時，鬧鈴畫面提供**靜音 5 分鐘**、**靜音鬧鈴**（畫面會保持開啟，方便您讀取訊息），以及**靜音並關閉**。在通知列中將警報通知向旁滑掉，即可將警報靜音。稍後開啟 **AAPS** 時，未回應的警報會再次顯示。
 
 (preferences-alarm-sound-volume-vibration)=
-### Alarm sound, volume and vibration
+### 鬧鈴音效、音量和震動
 
-- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
-- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
-- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
-- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+- **音效**：**AAPS** 的鬧鈴音效為內建，無法變更。
+- **音量**：**AAPS** 沒有自己的音量設定。開啟**覆寫勿擾模式**後，鬧鈴會使用手機的鬧鈴音量。關閉此設定時，鬧鈴會使用通知音量。
+- **逐漸提高通知音量**（預設開啟）：鬧鈴會從較小聲開始，逐漸變大聲。關閉此設定，鬧鈴就會立即以最大音量響起。
+- **震動**：在手機設定中，前往**應用程式** > **AAPS** > **通知**。首次鬧鈴響起後，該處會顯示**AAPS 鬧鈴**清單。點選鬧鈴可開啟或關閉其**震動**。請保持這些鬧鈴為開啟狀態。
 
-![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+![手機通知設定中的 AAPS 鬧鈴](../images/preferences/settings_alarm_channels.png) ![單一 AAPS 鬧鈴的震動設定](../images/preferences/settings_alarm_channel.png)
 
-- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
+- 高血糖、低血糖和無資料的血糖鬧鈴來自您的 CGM 應用程式或 Nightscout：請在該處設定音效和震動。
 
 (preferences-maintenance-settings)=
 ## 維護設置
