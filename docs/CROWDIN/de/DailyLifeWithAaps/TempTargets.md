@@ -96,11 +96,11 @@ Wählst Du eine Karte aus, werden ihr **Zielwert** und ihre **Dauer** in den Edi
 
     <br />### Ein temporäres Ziel aktivieren
     
-    Wische zur gewünschten Vorlage (ihre Werte werden in den Editor geladen), passe bei Bedarf **Zielwert**/**Dauer** im Editor an und tippe dann auf **▶ Aktivieren**. A confirmation shows the exact target, duration and reason before anything starts:
+    Wische zur gewünschten Vorlage (ihre Werte werden in den Editor geladen), passe bei Bedarf **Zielwert**/**Dauer** im Editor an und tippe dann auf **▶ Aktivieren**. Eine Bestätigung zeigt den genauen Zielwert, die Dauer und die Begründung, bevor etwas startet:
     
-    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
+    ![Aktivierungsbestätigung](../images/v4/TempTarget/TempTarget8.png)
     
-    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+    Nachdem Du bestätigt hast, startet das temporäre Ziel sofort (oder zum gewählten Zeitpunkt der **Aktivierung**) und läuft für die eingestellte **Dauer**.
     
     ```{admonition} Das Ändern der Zahlen gilt nur einmal – die Vorlage bleibt unverändert
     :class: important

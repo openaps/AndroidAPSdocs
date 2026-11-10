@@ -31,7 +31,7 @@ Die vier letzten Parameter (Glukoseziele, Basalraten, Insulinempfindlichkeitsfak
 
 **AAPS**-Screenshots eines _Beispiel_-Profils sind unten zu sehen. Dieses Beispielprofil enthält sehr viele Zeitfenster. Wenn Du mit **AAPS** startest, hast Du wahrscheinlich ein deutlich einfacheres Profil.
 
-![Example active profile](../images/Profile-Example-Active.png)
+![Example active profile](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## Glukoseziele
@@ -55,7 +55,7 @@ Ist der Zielbereich in Deinem **Profil** sehr breit (sagen wir 3 mmol/l oder meh
 
 Die **Abbildung unten** zeigt ein Beispiel wie im **AAPS**-Profil das Glukoseziel hinterlegt werden kann.
 
-![Ziel](../images/Profile_Target.png)
+![Ziel](../images/v4/Profiles/Profile_Target.png)
 
 **Glukoseziele** werden so gesetzt, dass sie zu Deinen eigenen Wünschen und Anforderungen passen. Wenn Du beispielsweise Angst vor nächtlichen Hypos hast, kannst Du Dein Glukoseziel von 21.00 - 07.00 Uhr auf 117 mg/dl setzen (6,5 mmol/l) setzen. Wenn Du erreichen möchtest, dass Du vor dem Frühstücksbolus am Morgen bereits genügend aktives Insulin (IOB) im Körper hast, könntest Du für die Zeit von 07.00 - 08.00 Uhr ein niedrigeres Ziel von 81 mg/dl (4,5 mmol/dl) setzen.
 
@@ -89,7 +89,7 @@ Umgekehrt kann eine zu niedrige Basalrate zu zu hohen Glukosewerten führen und 
 
 Die **Abbildung unten** zeigt ein Beispiel, wie im **AAPS**-Profil die Basalrate hinterlegt werden kann.
 
-![Basalraten](../images/Profile_BasalRates.png)
+![Basalraten](../images/v4/Profiles/Profile_BasalRates.png)
 
 Die richtigen Basalraten findest Du durch Ausprobieren („Trial and Error“), und das sollte in Abstimmung mit Deinem Diabetes-Team geschehen.
 
@@ -147,7 +147,7 @@ Ein **höherer / schwächerer ISF** (z. B. 45 statt 35) bedeutet, dass das Insul
 
 Ein zu niedriger **ISF** (und daher zu aggressiver; nicht unüblich) kann zu „Überkorrekturen“ führen. **AAPS** errechnet, dass mehr Insulin benötigt wird, um einen hohen **Glukosewert** zu korrigieren. Dies kann (besonders während des Fastens) zu einem „Achterbahn“-Verlauf der Glukosewerte führen, so wie es auf dem Bild unten dargestellt ist. In diesen Situationen sollte der **ISF**-Wert erhöht werden, um **AAPS** so weniger aggressiv zu machen. Dadurch wird sichergestellt, dass **AAPS** kleinere Korrekturdosen abgibt, und vermeidet damit die Überkorrektur eines hohen **Glukosewertes**, die einen niedrigen **Glukosewert** zur Folge haben würde.
 
-![ISF too low](../images/isf.jpg)
+![ISF too low](../images/v4/Profiles/isf.jpg)
 
 Umgekehrt kann ein zu hoher **ISF** zu zu schwachen Korrekturen führen. Dies bedeutet, dass Deine Glukosewerte - besonders in der Nacht - oberhalb Deines Zielwertes bleiben.
 
@@ -155,7 +155,7 @@ Umgekehrt kann ein zu hoher **ISF** zu zu schwachen Korrekturen führen. Dies be
 
 Die **Abbildung unten** zeigt an einem Beispiel, wie ISF-Werte in einem **AAPS**-Profil eingetragen werden können.
 
-![Profile ISF](../images/Profile_ISF.png)
+![Profile ISF](../images/v4/Profiles/Profile_ISF.png)
 
 Eine Möglichkeit einen ersten Wert für den ISF am Tage zu ermitteln, nutzt Deinen tägliches Gesamtinsulinbedarf (TDD) und die 1700- bzw. 94-Regel. Für weitere Informationen ist das Kapitel 7 des englischsprachigen Buches [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) von Gary Scheiner lesenswert.
 
@@ -213,7 +213,7 @@ Ein **höheres / schwächeres ICR** = mehr Kohlenhydrate pro Insulineinheit, d.h
 
 Die **Abbildung unten** zeigt beispielhaft das **ICR** einer Person und wie es in einem **AAPS-Profil** eingetragen werden kann. Bei der Eingabe dieser Werte geben wir nur den letzten Teil des Verhältnisses ein, ein Insulin-zu-Kohlenhydrat-Verhältnis von 1:3,5 wird also einfach als „3.5“ eingegeben.
 
-![Profile ICR](../images/Profile_ICR.png)
+![Profile ICR](../images/v4/Profiles/Profile_ICR.png)
 
 Wenn ein Essen verdaut wurde und das **IOB** auf Null zurückgekehrt ist, Dein **Glukosewert** aber höher als vor dem Essen bleibt, ist es wahrscheinlich, dass Dein **ICR** zu schwach ist (_d. h. _ der Wert ist zu hoch und sollte schrittweise gesenkt werden). Im umgekehrten Fall, der **Glukosewert** ist niedriger als vor der Mahlzeit, ist das **ICR** ist zu stark (_d. h._ der Wert ist zu klein und sollte schrittweise erhöht werden).
 
@@ -292,7 +292,7 @@ Der [Profil-Helfer](#aaps-screens-profile-helper) (Menü ☰ → **Profil-Helfer
 
 Profil-Helfer bietet Datensätze von zwei verschiedenen Kinderkrankenhäusern an, um ein anfängliches Profil für Dein Kind (bis 18 Jahre) zu finden.
 
-![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
+![Profile Helper Kids 1](../images/v4/Profiles/ProfileHelperKids1.png)
 
 1. Achte darauf, dass Du Dich im Reiter **Profil 1** befindest.
 2. Als **Profil-Typ**, wählst Du „Standard-Profil“ aus.
@@ -303,7 +303,7 @@ Profil-Helfer bietet Datensätze von zwei verschiedenen Kinderkrankenhäusern an
 7. Öffne den Reiter **Vergleich**. Ein Vergleich der beiden angepassten Profile wird angezeigt (siehe Screenshot unten).
 8. Möchtest Du Dein Profil ausgehend von einem dieser Vorschläge anpassen, verwende den Knopf **Klonen** unten im Vergleich.
 
-![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
+![Profile Helper Kids 2](../images/v4/Profiles/ProfileHelperKids2.png)
 
 ### Profil wechseln
 
@@ -312,7 +312,7 @@ Mehr Informationen findest Du im Abschnitt [Profilwechsel & Prozentuale Profilan
 (your-aaps-profile-clone-profile-switch)=
 ### Einen Profilwechsel in ein neues Profil klonen
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profile Switch](../images/Maintenance/TreatmentsView4.png)
 
 Der [Behandlungsverlauf](#aaps-screens-treatments) zeigt alle bisherigen **Profilwechsel**. Wenn Du zum Reiter **Profilwechsel** gehst, kannst Du einen bereits erfolgten **Profilwechsel** als Basis für ein neues **Profil** nutzen. Zeitverschiebung und Prozentsatz des Profilwechsels werden in das lokale neue Profil übernommen. Tippe auf den Knopf **Klonen** in Zeile **2**.
 
@@ -335,14 +335,14 @@ Wenn Du gravierende Änderungen an einem umfangreichen **Profil** vorgenommen ha
 
 Es ist dabei wichtig, den gesamten **-Datenbank-Datensatz**, der aus mehreren Profilen im Nightscout-Editor besteht (blauer Pfeil auf dem Screenshot unten), zu klonen. Der neue Datensatz enthält dann das aktuelle Datum. Nach dem Speichern kann das geänderte/neue **Profil** in **AAPS** mit einem regulären [Profilwechsel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) aktiviert werden.
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Clone database records](../images/v4/Profiles/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### Vergleiche zwei Profile
 
 Mit dem [Profil-Helfer](#aaps-screens-profile-helper) (Menü ☰ → **Profil-Helfer**) kannst Du auch zwei verschiedene Profile oder Profilwechsel vergleichen (Prozentsatz eines Deiner Profile, das zuvor in einem [Profilwechsel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) verwendet wurde).
 
-![Profile Helper 1](../images/ProfileHelper1.png)
+![Profile Helper 1](../images/v4/Profiles/ProfileHelper1.png)
 
 1. Achte darauf, dass Du Dich im Reiter **Profil 1** befindest.
 2. Wähle im **Profil-Typ** „Verfügbares Profil" aus und wähle aus allen gespeicherten **Profilen** aus.
@@ -352,4 +352,4 @@ Mit dem [Profil-Helfer](#aaps-screens-profile-helper) (Menü ☰ → **Profil-He
 6. Wähle das **Profilwechsel** aus, gegen den Du vergleichen möchtest.
 7. Öffne den Reiter **Vergleich**. Ein Vergleich der beiden Profile wird angezeigt (siehe Screenshot unten).
 
-![Profile Helper 2](../images/ProfileHelper2.png)
+![Profile Helper 2](../images/v4/Profiles/ProfileHelper2.png)

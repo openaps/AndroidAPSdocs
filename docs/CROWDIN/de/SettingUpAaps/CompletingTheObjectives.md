@@ -46,7 +46,7 @@ Hinweis: *Es kann sein, dass Du auf den nächsten Sensor-Glukosewert warten muss
 
 Für **Ziel 2** müssen mehrere „Aufgaben“ erledigt werden, wie im Screenshot unten gezeigt. Jede Aufgabe zeigt ihren Status (**1**): Das orangefarbene „**Noch nicht abgeschlossen**“ wird zu „**Abgeschlossen, gut gemacht!**“, sobald **AAPS** die Aktion registriert hat. Tippe unter einer Aufgabe auf **Hinweis** (**2**), um die passende Dokumentation zu öffnen, falls Dir eine Aktion noch nicht vertraut ist.
 
-![Screenshot objective 2](../images/Objective2_V2_5.png)
+![Screenshot objective 2](../images/objectives/Objective2_V2_5.png)
 
 Aufgaben, die zum Abschließen des **Ziel 2** notwendig sind, sind:
 - Setze Dein **Profil** für 10 Min. auf 90%.
@@ -96,7 +96,7 @@ Das Ziel kann frühestens nach **7 Tagen** abgeschlossen werden. Das ist eine Pf
 
 Um die Anzahl der vorgeschlagenen Basalrate-Änderungen im Open Loop zu reduzieren, helfen die Tipps des [** Ziel 3**](#objectives-objective3). Zusätzlich kannst Du mit der Einstellung „**Minimale Änderung im Open-Modus**“ unter **Einstellungen → Loop** den Mindest-Prozentsatz für empfohlene Änderungen der Basalrate festlegen. Je höher der Wert, desto weniger Benachrichtigungen über Änderungsvorschläge erhältst Du.
 
-![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
+![Open Loop minimal request change](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ Das heißt, während Du Dich im **Ziel 6** befindest, wird **AAPS** bei fallende
 
 - Wenn Dein IOB negativ ist (siehe Screenshot unten), kann auch in **Ziel 6** eine temporäre Basalrate (TBR) > 100% gesetzt werden.
 
-![Example negative IOB](../images/Objective6_negIOB.png)
+![Example negative IOB](../images/objectives/Objective6_negIOB.png)
 
 - Nutze einen zusätzlichen Sicherheitspuffer, in dem Du Deinen Zielbereich etwas höher setzt, als Du es normalerweise tun würdest.
 - Aktiviere den Modus „Unterbrechung bei niedrigem BZ (LGS)“, indem Du auf dem Startbildschirm auf das Loop-Symbol tippst und **Unterbrechung bei niedrigem BZ (LGS)** als AAPS-Modus wählst.
@@ -245,6 +245,6 @@ Tippe unter einem Ziel auf „**Mehr**“, um seine Aufgaben wieder zu sehen:
 
 Möchtest Du aus irgendeinem Grund in den **Zielen** zurückgehen, öffne das abgeschlossene **Ziel** mit „**Mehr**“ und tippe auf „**Ziel erneut öffnen**“:
 
-![Go back in objectives](../images/Objective_ClearFinished.png)
+![Go back in objectives](../images/objectives/Objective_ClearFinished.png)
 
 Auf die gleiche Weise kannst Du das **Ziel**, an dem Du gerade arbeitest, mit „**Ziel neu starten**“ neu beginnen.

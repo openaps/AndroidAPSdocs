@@ -40,9 +40,9 @@ Dexcom BYODA 現在是非常舊的應用程式版本，且無法更新。不適�
 
 ```{admonition} Not a trusted data source
 :class: note
-**AAPS** does not consider xDrip in Companion App mode a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs are not allowed all the time.
+**AAPS** 不會將 Companion App 模式下的 xDrip 視為[可信任的血糖資料來源](#GettingStarted-TrustedBGSource)：無法一直允許微量注射。
 
-To read the Dexcom app notifications without xDrip, as a trusted data source, use the [Notification Reader](#DexcomG7-notification-reader).
+若要在不使用 xDrip 的情況下讀取 Dexcom App 通知，並將其作為可信任的資料來源，請使用[通知讀取器](#DexcomG7-notification-reader)。
 ```
 
 ### 讀取 Dexcom App 通知
@@ -106,49 +106,49 @@ Dexcom App 連線至 G7 感測器時，xDrip 也可以透過藍牙接收感測�
 
 (DexcomG7-notification-reader)=
 
-## 5. Notification Reader (G7, ONE+ and Stelo)
+## 5. 通知讀取器（G7、ONE+ 和 Stelo）
 
-官方 Dexcom App 會持續連線至感測器。 **AAPS** reads the glucose value directly from the notification of the Dexcom app, without any other app in between.
+官方 Dexcom App 會持續連線至感測器。 **AAPS** 會直接從 Dexcom App 的通知中讀取血糖值，不需要透過其他 App。
 
 ```{admonition} Trusted data source
 :class: note
-Readings from the Dexcom G7, ONE+ and Stelo apps are a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs can be allowed all the time.
+Dexcom G7、ONE+ 和 Stelo App 的讀取值是[可信任的血糖資料來源](#GettingStarted-TrustedBGSource)：可以一直允許微量注射。
 ```
 
-Compared to the other methods on this page, the Notification Reader has limits:
+與本頁的其他方法相比，通知讀取器有以下限制：
 
-- **No trend arrow** and **no backfill**: readings missed while the phone was off or out of range are lost.
-- Each reading gets the time the notification appeared, not the exact time of the sensor reading.
-- Only values between 40 and 405 mg/dL (2.2 and 22.5 mmol/L) are read. "LOW" and "HIGH" are not read.
-- Stelo gives a reading every 15 minutes.
+- **沒有趨勢箭頭**，也**無法補回資料**：手機關機或超出範圍期間錯過的讀取值會遺失。
+- 每筆讀取值的時間都是通知出現的時間，而非感測器讀取值的確切時間。
+- 只會讀取介於 40 至 405 mg/dL（2.2 至 22.5 mmol/L）之間的數值。不會讀取「LOW」和「HIGH」。
+- Stelo 每 15 分鐘提供一次讀取值。
 
-### Set up the Dexcom app
+### 設定 Dexcom App
 
 - 請保持安裝 Dexcom App，並讓它連線至感測器。
-- Make sure the Dexcom app shows the current glucose value in its notification. 通知必須保持顯示：請勿將通知設為靜音或隱藏。
-- Use the same glucose units (mg/dL or mmol/L) in the Dexcom app as in **AAPS**. Otherwise **AAPS** cannot read the value.
+- 確認 Dexcom App 的通知中顯示目前的血糖值。通知必須保持顯示：請勿將通知設為靜音或隱藏。
+- Dexcom App 使用的血糖單位（mg/dL 或 mmol/L）必須與 **AAPS** 相同。否則 **AAPS** 無法讀取該數值。
 
 ### 在 AAPS 中進行配置
 
-- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and confirm the switch.
+- 在 [**組態建置工具 → 血糖來源**](#Config-Builder-bg-source)中選取 **通知讀取器**，並確認切換開關。
 
-  ![BG Source: Notification Reader selected](../images/NotificationReader_BgSource.png)
+  ![血糖來源：已選取通知讀取器](../images/NotificationReader_BgSource.png)
 
-- Back on the main screen, **AAPS** shows **Permissions Required**. Next to **Notification Access**, tap **Grant**.
+- 返回主畫面後，**AAPS** 會顯示 **需要權限**。在 **通知存取權**旁，點選 **授予**。
 
-  ![Permissions Required: Notification Access](../images/NotificationReader_Permissions.png)
+  ![需要權限：通知存取權](../images/NotificationReader_Permissions.png)
 
-- Android opens its notification access list (its name depends on your Android version, for example *Notification read, reply & control*). Select **AAPS**, turn on **Allow notification access** and confirm with **Allow**.
+- Android 會開啟通知存取權清單（名稱依 Android 版本而異，例如 *讀取、回覆及控制通知*）。選取 **AAPS**，開啟 **允許通知存取權**，並點選 **允許**確認。
 
-  ![Android asks to allow notification access for AAPS](../images/NotificationReader_AllowDialog.png)
+  ![Android 詢問是否允許 AAPS 存取通知](../images/NotificationReader_AllowDialog.png)
 
-  Android warns that **AAPS** could read all your notifications. **AAPS** only reads the notifications of supported CGM apps and ignores all others.
+  Android 會警告 **AAPS** 可能讀取您的所有通知。 **AAPS** 只會讀取支援的 CGM App 通知，並忽略其他所有通知。
 
-  ![Notification access allowed for AAPS](../images/NotificationReader_AccessOn.png)
+  ![已允許 AAPS 存取通知](../images/NotificationReader_AccessOn.png)
 
-- If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because **AAPS** was not installed from the Play Store. Open the **AAPS** app info (long press the **AAPS** icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. 接著返回通知存取權畫面，並允許存取。
-- Readings appear in **AAPS** when the Dexcom app shows a new value.
+- 如果 **允許通知存取權**呈現灰色，無法選取（*受限設定控制*），表示 Android 封鎖了此功能，因為 **AAPS** 並非從 Play 商店安裝。 Open the **AAPS** app info (long press the **AAPS** icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. 接著返回通知存取權畫面，並允許存取。
+- Dexcom App 顯示新數值時，讀取值就會出現在 **AAPS** 中。
 
 ```{warning}
-If the Dexcom app notification shows more than one glucose number, or none, **AAPS** skips that notification.
+如果 Dexcom App 通知中顯示多個或沒有血糖數值，**AAPS** 就會略過該通知。
 ```

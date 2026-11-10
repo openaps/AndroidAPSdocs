@@ -474,19 +474,19 @@ Einstellungen sollten selbsterklärend sein.
 
 **„Nicht stören“-Modus übergehen** (standardmäßig eingeschaltet): Die Alarme von **AAPS** klingeln auch dann, wenn das Smartphone stumm geschaltet oder im Modus „Nicht stören“ ist. Schalte die Option aus, wenn **AAPS** diese Modi beachten soll: Die Alarme klingeln dann nicht, und im Modus „Nicht stören“ vibrieren sie nur, auf dem Smartphone und auf der Smartwatch. Loop-Vorschläge, die während „Nicht stören“ eintreffen, werden ohne Ton angezeigt.
 
-When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Wischst Du die Alarm-Benachrichtigung in der Benachrichtigungsleiste weg, wird der Alarm stummgeschaltet. Öffnest Du **AAPS** später, wird ein Alarm, auf den Du nicht reagiert hast, erneut angezeigt.
+Wenn ein Alarm losgeht, bietet der Alarmbildschirm **Stumm schalten für 5 Minuten**, **Alarm stummschalten** (der Bildschirm bleibt offen, damit Du die Meldung lesen kannst) und **Stummschalten und schließen** als Optionen an. Wischst Du die Alarm-Benachrichtigung in der Benachrichtigungsleiste weg, wird der Alarm stummgeschaltet. Öffnest Du **AAPS** später, wird ein Alarm, auf den Du nicht reagiert hast, erneut angezeigt.
 
 (preferences-alarm-sound-volume-vibration)=
-### Alarm sound, volume and vibration
+### Alarmton, Lautstärke und Vibration
 
-- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
-- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
-- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
-- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+- **Ton**: Die Alarmtöne von **AAPS** sind fest eingebaut und lassen sich nicht ändern.
+- **Lautstärke**: **AAPS** hat keine eigene Lautstärkeeinstellung. Ist **„Nicht stören“-Modus übergehen** eingeschaltet, richten sich die Alarme nach der Alarmlautstärke des Smartphones. Ist die Einstellung ausgeschaltet, richten sie sich nach der Benachrichtigungslautstärke.
+- **Benachrichtigungslautstärke schrittweise erhöhen** (standardmäßig eingeschaltet): Der Alarm beginnt leise und wird lauter. Schalte die Einstellung aus, damit der Alarm sofort mit voller Lautstärke klingelt.
+- **Vibration**: Gehe in den Einstellungen des Smartphones zu **Apps** > **AAPS** > **Benachrichtigungen**. Dort erscheint nach dem ersten Alarm die Liste **AAPS Alarme**. Tippe auf einen Alarm, um seine **Vibration** ein- oder auszuschalten. Lass diese Alarme eingeschaltet.
 
 ![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
 
-- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
+- Glukosealarme (hoch, niedrig, keine Daten) kommen von Deiner CGM-App oder von Nightscout: Stelle Ton und Vibration dort ein.
 
 (preferences-maintenance-settings)=
 ## Wartungseinstellungen

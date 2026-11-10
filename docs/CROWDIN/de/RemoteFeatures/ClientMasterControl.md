@@ -334,27 +334,86 @@ Wird ein Client aus einer Sicherung wiederhergestellt, die seinen Befehlszähler
 
 ## Fehlerbehebung
 
-| Symptom                                                                                                                                              | Was Du prüfen solltest                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Der Client meldet, dass der **Master offline ist**                                                                                                   | Das Smartphone des Masters ist wach und **AAPS** läuft; beide Smartphones sind in **NSClientV3** verbunden; **Websockets** sind auf beiden eingeschaltet; dieselbe Nightscout-Seite.                                                                                                                                                                                                                                               |
-| Der Client meldet, dass er **nicht gekoppelt** ist                                                                                                   | Kopple ihn erneut über **Verwalten → Mit Master koppeln**. Prüfe, ob der Client in der Liste **Autorisierte Clients** des Masters als **Aktiv** angezeigt wird.                                                                                                                                                                                                                                                                    |
-| Befehl wird vom Master **abgelehnt**                                                                                                                 | Der Master prüft den Befehl erneut gegen seinen aktuellen Zustand, z. B. existiert das gewählte Profil nicht mehr oder der Pumpentyp passt nicht. Prüfe das auf dem Master.                                                                                                                                                                                                                                                        |
-| Befehle **schlagen fehl** oder der Master ist oft **offline**                                                                                        | Websockets sind für die Remote-Steuerung des **AAPSClient** auf beiden Smartphones **zwingend**. Wenn die Websocket-Verbindung immer wieder abbricht, funktioniert die Remote-Steuerung nicht. Siehe [Fehlerbehebung für NSClient](../GettingHelp/TroubleshootingNsClient.md).                                                                                                                                                     |
-| Die Kopplung wird abgebrochen mit *„Das Kopplungs-Secret konnte nicht gespeichert werden“*                                                           | Es wurde nichts geändert. Starte die Kopplung erneut. Schlägt sie weiter fehl, starte **AAPSClient** neu und versuche es noch einmal.                                                                                                                                                                                                                                                                                              |
-| Nach der Kopplung passiert nichts                                                                                                                    | Stelle sicher, dass **Client-Steuerung erlauben** auf dem Master EINGESCHALTET ist und der Master mit Nightscout verbunden ist.                                                                                                                                                                                                                                                                                                    |
-| Die QR-Code-Optionen lassen sich im Dialog **Client hinzufügen** nicht auswählen                                                                     | Der Dialog nennt den Grund. *Kein Admin-Token*: Gib dem Master ein Admin-Token Deines Nightscout oder füge den Client mit der **PIN** hinzu. *Nicht verbunden*: Warte, bis der Master in **NSClientV3** *verbunden* anzeigt.                                                                                                                                                                                                       |
-| *„Nightscout hat bereits ein Token mit diesem Namen und anderen Rechten“*                                                                            | Eines Deiner eigenen Nightscout-Token heißt `aaps-` plus diesem Namen. Wähle einen anderen Namen für den Client.                                                                                                                                                                                                                                                                                                                   |
-| *„Ein Client mit diesem Namen ist bereits in der Liste“*                                                                                             | Wähle einen anderen Namen oder entferne zuerst diesen Client.                                                                                                                                                                                                                                                                                                                                                                      |
-| Der Client meldet *„Dieser Code stammt von einer anderen AAPS-Version“*                                                                              | Master und Client müssen **dieselbe** Version von **AAPS** verwenden. Aktualisiere das ältere Gerät.                                                                                                                                                                                                                                                                                                                               |
-| Der Client meldet *„Dieser Code ist abgelaufen“*                                                                                                     | Ein Code, der koppelt, gilt etwa zwei Minuten. Füge den Client auf dem Master erneut hinzu, um einen neuen Code zu bekommen.                                                                                                                                                                                                                                                                                                       |
-| Der Client meldet *„Dieses Smartphone ist bereits gekoppelt“*                                                                                        | Entkoppele es zuerst (**Verwalten → Mit Master koppeln → Entkoppeln**) und scanne dann erneut. Ein Code **nur Nightscout** funktioniert auch auf einem gekoppelten Smartphone.                                                                                                                                                                                                                                                     |
-| Der Client meldet *„Der Master hat den Befehl abgelehnt: Dieses Smartphone schreibt mit einem anderen als dem ihm zugeordneten Token in Nightscout“* | Der Client hat vorher sein eigenes Nightscout-Token verwendet und schreibt jetzt mit einem anderen, zum Beispiel nachdem ein Token in seine Nightscout-Einstellungen eingetragen wurde. Entferne den Client auf dem Master und füge ihn erneut hinzu (siehe [Das eigene Nightscout-Token des Clients](#client-master-control-own-token)).                                                                                          |
-| Das NSClient-Protokoll auf dem Client zeigt *„✕ SETTINGS … refused“*, und seine Einstellungen folgen dem Master nicht mehr                           | Jemand anderes hat das Einstellungsdokument des Masters geschrieben, oder der Master hat einen neuen Schlüssel (zum Beispiel, nachdem seine Daten gelöscht wurden). Ein gekoppelter Client übernimmt einen neuen Schlüssel von selbst, wenn er sich das nächste Mal mit Nightscout verbindet. Ein Smartphone, das Nightscout nur liest, braucht noch einmal den QR-Code des Masters (**Nur Nightscout lesen → QR-Code anzeigen**). |
-| Die Karte des Clients zeigt *„Verwendet das Nightscout-Token …“* in Rot                                                                              | Der Client schreibt noch mit einem Token, das mehr Rechte hat, als er braucht. Der Master schickt ihm nach der Kopplung sein eigenes Token, aber nur, wenn der Master ein Admin-Token hat. Prüfe das Token des Masters oder richte den Client noch einmal mit einem QR-Code ein.                                                                                                                                                   |
-| Ein Client kann Nightscout nicht mehr lesen                                                                                                          | Sein Token wurde gelöscht, zum Beispiel weil der Client auf dem Master entfernt wurde. Füge ihn erneut hinzu.                                                                                                                                                                                                                                                                                                                      |
-| Auf der Nightscout-Website eingegebene Behandlungen werden nicht übernommen                                                                          | Im [geschützten Modus](#client-master-control-hardened-mode) ist das so gewollt: Gib sie stattdessen auf einem gekoppelten Client ein.                                                                                                                                                                                                                                                                                             |
-
 Bei Problemen mit Nightscout oder der Synchronisation lies zuerst [Fehlerbehebung für NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+### Koppeln
+
+**Die QR-Code-Optionen lassen sich im Dialog Client hinzufügen nicht auswählen**
+
+Der Dialog nennt den Grund:
+
+- *Kein Admin-Token*: Gib dem Master ein Admin-Token Deines Nightscout oder füge den Client mit der **PIN** hinzu.
+- *Nicht verbunden*: Warte, bis der Master in **NSClientV3** *verbunden* anzeigt.
+
+**„Nightscout hat bereits ein Token mit diesem Namen und anderen Rechten“**
+
+Eines Deiner eigenen Nightscout-Token heißt `aaps-` plus diesem Namen. Wähle einen anderen Namen für den Client.
+
+**„Ein Client mit diesem Namen ist bereits in der Liste“**
+
+Wähle einen anderen Namen oder entferne zuerst diesen Client.
+
+**Der Client meldet „Dieser Code stammt von einer anderen AAPS-Version“**
+
+Master und Client müssen **dieselbe** Version von **AAPS** verwenden. Aktualisiere das ältere Gerät.
+
+**Der Client meldet „Dieser Code ist abgelaufen“**
+
+Ein Code, der koppelt, gilt etwa zwei Minuten. Füge den Client auf dem Master erneut hinzu, um einen neuen Code zu bekommen.
+
+**Der Client meldet „Dieses Smartphone ist bereits gekoppelt“**
+
+Entkoppele es zuerst (**Verwalten → Mit Master koppeln → Entkoppeln**) und scanne dann erneut. Ein Code **nur Nightscout** funktioniert auch auf einem gekoppelten Smartphone.
+
+**Die Kopplung wird abgebrochen mit „Das Kopplungs-Secret konnte nicht gespeichert werden“**
+
+Es wurde nichts geändert. Starte die Kopplung erneut. Schlägt sie weiter fehl, starte **AAPSClient** neu und versuche es noch einmal.
+
+**Der Client meldet, dass er nicht gekoppelt ist**
+
+Kopple ihn erneut über **Verwalten → Mit Master koppeln**. Prüfe, ob der Client in der Liste **Autorisierte Clients** des Masters **Aktiv** ist.
+
+**Nach der Kopplung passiert nichts**
+
+Stelle sicher, dass **Client-Steuerung erlauben** auf dem Master EINGESCHALTET ist und der Master mit Nightscout verbunden ist.
+
+### Kommandos
+
+**Der Client meldet, dass der Master offline ist, oder Befehle schlagen fehl**
+
+Prüfe Folgendes:
+
+- das Master-Smartphone ist nicht im Ruhezustand und **AAPS** läuft,
+- beide Smartphones sind in **NSClientV3** mit derselben Nightscout-Seite verbunden,
+- **Websockets** sind auf beiden Smartphones aktiviert.
+
+Websockets sind für die Remote-Steuerung über **AAPSClient** **zwingend erforderlich**. Wenn die Websocket-Verbindung immer wieder abbricht, funktioniert die Remote-Steuerung nicht. Siehe [Fehlerbehebung für NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+**Der Master lehnt einen Befehl ab**
+
+Der Master prüft jeden Befehl erneut gegen seinen aktuellen Zustand, z. B. existiert das gewählte Profil nicht mehr oder der Pumpentyp passt nicht. Prüfe das auf dem Master.
+
+**Auf der Nightscout-Website eingegebene Behandlungen werden nicht übernommen**
+
+Das ist im [geschützten Modus](#client-master-control-hardened-mode) so vorgesehen. Gib sie stattdessen auf einem gekoppelten Client ein.
+
+### Nightscout-Token und -Einstellungen
+
+**Der Client meldet „Der Master hat den Befehl abgelehnt: Dieses Smartphone schreibt mit einem anderen als dem ihm zugeordneten Token in Nightscout“**
+
+Der Client hat vorher sein eigenes Nightscout-Token verwendet und schreibt jetzt mit einem anderen, zum Beispiel nachdem ein Token in seine Nightscout-Einstellungen eingetragen wurde. Entferne den Client auf dem Master und füge ihn erneut hinzu (siehe [Das eigene Nightscout-Token des Clients](#client-master-control-own-token)).
+
+**Die Karte des Clients zeigt „Verwendet das Nightscout-Token …“ in Rot**
+
+Der Client schreibt noch mit einem Token, das mehr Rechte hat, als er braucht. Der Master schickt dem Client nach der Kopplung sein eigenes Token, aber nur, wenn der Master ein Admin-Token hat. Prüfe das Token des Masters oder richte den Client noch einmal mit einem QR-Code ein.
+
+**Das NSClient-Protokoll auf dem Client zeigt „✕ SETTINGS … refused“, und seine Einstellungen folgen dem Master nicht mehr**
+
+Jemand anderes hat das Einstellungsdokument des Masters geschrieben, oder der Master hat einen neuen Schlüssel (zum Beispiel, nachdem seine Daten gelöscht wurden). Ein gekoppelter Client übernimmt den neuen Schlüssel von selbst, wenn er sich das nächste Mal mit Nightscout verbindet. Ein Smartphone, das Nightscout nur liest, braucht noch einmal den QR-Code des Masters (**Nur Nightscout lesen → QR-Code anzeigen**).
+
+**Ein Client kann Nightscout nicht mehr lesen**
+
+Sein Token wurde gelöscht, zum Beispiel weil der Client auf dem Master entfernt wurde. Füge ihn erneut hinzu.
 
 ---
 

@@ -52,55 +52,55 @@ Android APS（**AAPS**）属于混合闭环系统，也叫人工胰腺系统（A
 
 AAPS的“中枢”是您自己构建的 **应用程序**。构建过程有详细的逐步操作指南。然后你需要在一部[兼容的](../Getting-Started/Phones.md)**安卓智能手机**上安装**AAPS  应用程序**（**1**）。有的用户倾向于用一部专门的手机来安装闭环，而非平时用的手机。这样（尤其是苹果手机用户）就无需将生活中的其他事务迁移至安卓平台，仅需通过该安卓设备运行AAPS闭环即可。
 
-除了 **AAPS** 之外，**安卓智能手机**还需要安装另一个 App。 This [additional app](../Getting-Started/CompatiblesCgms.md) receives glucose data from a sensor (**2**) by Bluetooth, and then sends the data internally on the phone to the **AAPS app**.
+除了 **AAPS** 之外，**安卓智能手机**还需要安装另一个 App。[这类APP](../Getting-Started/CompatiblesCgms.md)通过蓝牙从传感器 (**2**) 获取血糖数据，然后在手机内部将数据转发至** AAPS 应用**。
 
-**AAPS** 采用的是 OpenAPS 的决策过程(也就是**算法**)。 Beginners start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. 使用哪个算法 (oref0或 oref1) 取决于哪个算法最适合你的具体情况。两种算法均通过整合多维度参数，在每次接收探头新数据时进行实时运算， The algorithm then sends instructions to the insulin pump (**3**) on how much insulin to deliver by Bluetooth. All the information can be sent by mobile data or Wi-Fi to the internet (**4**). 如果需要的话，这些数据也可以分享给别人或者收集起来以供分析。 Optionally, you can also pair a [smartwatch](../Getting-Started/Watches.md) (**5**) with the phone to see your data at a glance and, with some watches, send basic commands to **AAPS**.
+**AAPS** 采用的是 OpenAPS 的决策过程(也就是**算法**)。初学者最开始可以使用基础的 **oref0** 算法，对AAPS比较熟悉之后可以切换到新的 **oref1** 算法。使用哪个算法 (oref0或 oref1) 取决于哪个算法最适合你的具体情况。两种算法均通过整合多维度参数，在每次接收探头新数据时进行实时运算，随后通过蓝牙向胰岛素泵（**3**）发送输注指令，告诉它需要输注多少胰岛素。所有运行数据可通过移动网络或Wi-Fi发送到网上（**4**）。如果需要的话，这些数据也可以分享给别人或者收集起来以供分析。您还可以选择将[智能手表](../Getting-Started/Watches.md)（**5**）与手机配对，快速查看数据，并且部分部分型号手表可以向 **AAPS** 发送基础操作指令。
 
 ## AAPS系统有哪些优势？
 
-**AAPS**采用的OpenAPS算法根据用户定义的参数（关键参数包括基础率、胰岛素敏感系数（ISF）、碳水系数（IC）、胰岛素作用时长（DIA）等），在无需人工干预的情况下，每5分钟响应探头新数据以调控血糖水平。
+**AAPS**采用的OpenAPS算法可以根据用户设定参数（基础率、胰岛素敏感系数、碳水系数、胰岛素作用时长等关键参数）调控血糖，每 5 分钟根据传感器新数据作出响应。
 
-Some of the reported advantages of using **AAPS** are extensive fine-tunable options, **Automations** and increased transparency of the system for the patient/caregiver. This can result in better control over your diabetes (or that of someone you are caring for), which in turn may give improved quality of life and increased peace of mind.
+对患者或者护理人员来说，使用**AAPS**的优势主要包括可以对各种参数进行精细的微调，各类**自动化操作**以及系统运行情况的高度透明。这有助于更好地管理自己（或您的家人）的糖尿病，进而改善生活质量、更加安心。
 
-投入时间，**AAPS**有可能带来以下好处
+当你在**AAPS**上投入精力，它可能带来以下好处：
 
 - 减轻管理 1 型糖尿病的压力与负担；
 
-- 精简因疾病产生的​​琐碎管理决策；
+- 减少 1 型糖尿病日常需要频繁做出的相关决策；
 
-- 根据实时数据提供个性化的动态胰岛素剂量，从而减少对低血糖治疗的需求，减少高血糖的发生；
+- 根据实时数据提供个性化的动态胰岛素剂量，从而降低低血糖风险和高血糖的发生；
 
-- 强化用户对​​胰岛素参数调优的知识储备与实操信心；
+- 强化用户对​​胰岛素参数调整优化的知识储备与实操信心；
 
-- 创建契合生活方式的​​自动化规则（**自动化**）；
+- 创建符合自身生活方式的自动规则（**自动化**）；
 
 - 改善睡眠质量，并总体上减少夜间干预的频率；
 
-- 为1型糖尿病患者的照护者提供远程监控和胰岛素输注管理功能；以及
+- 为1型糖尿病患者的护理人员提供远程监控和胰岛素输注管理功能；以及
 
-- 通过使用由**AAPS**控制的安卓手机，实现​​便携糖尿病设备集约化管理（包括动态和胰岛素控制装置）。
+- 通过使用由**AAPS**控制的安卓手机，可以更方便地集中管理糖尿病设备（包括动态血糖仪和胰岛素泵等）。
 
 
-**AAPS**最终能够​​赋能患者​​更高效地管理糖尿病，实现​​血糖稳定​​并改善​​远期健康收益​​。
+Ultimately, **AAPS** can empower individuals to better manage their diabetes, resulting in stable blood sugars and improved long term health outcomes.
 
 ### 具体优势包括：
 
 #### 1) 算法安全特性
 要了解oref0与oref1算法的内置安全机制，[请点击此处](https://openaps.org/reference-design/)。用户可自主设定安全限制参数。
 
-#### 2) Hardware flexibility
+#### 2）丰富的硬件兼容性
 
-**AAPS** works with a wide range of insulin pumps and sensors and offers flexibility as life changes. 例如，如果你用德康（Dexcom）的动态，但对它底板上的胶过敏，那你还可以换成雅培的Libre动态。 Users don't have to rebuild or reinstall the **AAPS** app, just select a different pump or BG source in **Configuration** to change your hardware. **AAPS** is independent of particular pump drivers and also contains a "virtual pump" so users can safely experiment before using it on themselves.
+**AAPS** 可适配多款胰岛素泵与血糖传感器，能够随生活状态变化灵活调整。例如，如果你用德康（Dexcom）的动态，但对它底板上的胶过敏，那你还可以换成雅培的Libre动态。用户无需重新编译或重装 **AAPS** 应用，只需在**配置项**中更换胰岛素泵或血糖数据源，即可切换硬件。 **AAPS**不依赖特定的泵驱动程序，并内置"虚拟泵"功能，便于用户在实际使用前进行安全测试。
 
-#### 3) Highly customisable, with wide parameters
+#### 3) 高度可定制，有丰富的参数可以调节
 
-用户可便捷地添加或删除功能模块，而且 **AAPS** 对开环和闭环模式都支持。以下是**AAPS**系统的潜在功能示例：
+用户可便捷地添加或删除功能模块，而且 **AAPS** 对开环和闭环模式都支持。下面列举一些 **AAPS** 系统能够实现的功能：
 
- a) The ability to set a lower **BG** target 30 min before eating; you can set the target as low as 72 mg/dL (4.0 mmol/L).
+ a) 可在吃饭前 30 分钟调低**血糖**目标值，最低可设至 72 mg/dL（4.0 mmol/L）。
 
- b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). 该自动化规则将根据您预设的持续时间内生效，并可限定仅在一周内的特定日期、每日具体时段，甚至特定地理位置触发。
+ b) 如果存在胰岛素抵抗而导致血糖偏高，可以在**AAPS** 中设置一条**自动规则**：（例如）当血糖高于 8 mmol/L（144 mg/dL）时自动切换至 120% 配置文件（相比常规**配置**文件，基础率提升 20%，其他参数同步强化）。生效时间会根据你设定的时间执行。甚至可以甚至仅在每周特定时间、特定时段，甚至特定位置生效。
 
- c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin suspension for a set time period, directly via the phone.
+ c) 如果孩子在你不知道的情况下突然运动，**AAPS** 支持直接通过手机，在一定时间段内暂停胰岛素输注。
 
  d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. 若系统计算的补充剂量超出实际需求，用户可通过"取消"功能直接中止缺失基础胰岛素的补注。
 

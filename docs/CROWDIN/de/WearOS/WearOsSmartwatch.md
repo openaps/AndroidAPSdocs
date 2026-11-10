@@ -318,7 +318,7 @@ Diese Plätze funktionieren nur auf Smartwatches mit **Wear OS 5 oder älter**, 
 
 ## AAPSv2 Watchface - Legende
 
-![Legende AAPSv2 Watchface](../images/Watchface_Legend.png)
+![Legende AAPSv2 Watchface](../images/wearos/Watchface_Legend.png)
 
 A - Zeit seit der letzten Loop-Aktion
 
