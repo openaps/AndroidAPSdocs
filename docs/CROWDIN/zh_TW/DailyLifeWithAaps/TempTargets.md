@@ -96,11 +96,11 @@ AAPS 會以 160 mg/dL 或 8.9 mmol/L 為目標，持續 1 小時。
 
     <br />### 啟用臨時目標
     
-    滑動至所需的預設值（其數值會載入編輯器），可視需要在編輯器中調整**目標**／**持續時間**，然後點選 **▶ 啟用**。 A confirmation shows the exact target, duration and reason before anything starts:
+    滑動至所需的預設值（其數值會載入編輯器），可視需要在編輯器中調整**目標**／**持續時間**，然後點選 **▶ 啟用**。啟動前會顯示確認畫面，列出確切的目標、持續時間和原因：
     
-    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
+    ![啟動確認畫面](../images/v4/TempTarget/TempTarget8.png)
     
-    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+    確認後，臨時目標會立即開始（或在所選的**啟動**時間開始），並持續設定的**時間長度**。
     
     ```{admonition} 編輯數值只會套用一次，不會變更預設值
     :class: important
