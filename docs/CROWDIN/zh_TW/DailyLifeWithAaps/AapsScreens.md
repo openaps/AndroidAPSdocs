@@ -422,9 +422,9 @@ AAPS 不會只根據目前的血糖值決定胰島素劑量；每次循環（約
 
 大多數使用者發現以下附加圖表配置足夠：
 
-* Graph 1 with IOB, BAS
-* Graph 2 with COB, Sensitivity change
-* Graph 3 with Deviations and BGI.
+* 圖表 1：活性胰島素、基礎率
+* 圖表 2：活性碳水化合物、敏感度變化
+* 圖表 3：偏差與血糖影響。
 
 #### 絕對胰島素（ABS）
 
