@@ -22,7 +22,7 @@
 
     <br />1. 在主畫面上，**點選設定檔名稱**（星號圖示旁）。系統會開啟[設定檔畫面](#ProfileSwitch-manage-v4)，並顯示目前執行中的<strong>設定檔</strong>卡片，卡片上會標示<strong>作用中</strong>。
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
+       ![在主畫面點選設定檔名稱，開啟設定檔畫面](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. 若要保留相同的<strong>設定檔</strong>，請維持選取<strong>作用中</strong>卡片。若要同時變更<strong>設定檔</strong>，請滑動至另一張卡片。
     3. 點選右下方的圓形<strong>▶</strong>按鈕（<strong>啟用</strong>）。系統會開啟<strong>啟用</strong>畫面。
