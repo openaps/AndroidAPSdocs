@@ -102,14 +102,14 @@ Ultimately, **AAPS** can empower individuals to better manage their diabetes, re
 
  c) 如果孩子在你不知道的情况下突然运动，**AAPS** 支持直接通过手机，在一定时间段内暂停胰岛素输注。
 
- d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. 若系统计算的补充剂量超出实际需求，用户可通过"取消"功能直接中止缺失基础胰岛素的补注。
+ d) 在您游泳之后重新连接管路，**AAPS** 会计算断开期间缺少的基础胰岛素量，并结合当前血糖情况，小心地补输胰岛素。如果不需要补充胰岛素，用户可通过"取消"功能直接停止基础胰岛素的补注。
 
- e) **AAPS** 支持为不同场景创建多个配置文件（profile），并支持便捷切换。 For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”) and unannounced meals (“**UAM**”)) can be set to only work during the daytime, if you are worried about night-time hypos.
+ e) **AAPS** 支持为不同场景创建多个配置文件（profile），并支持便捷切换。例如，如果你担心夜间低血糖，可以把用于快速降低高血糖的功能（微型大剂量（**SMB**）、未通知膳食（**UAM**）等）设置为仅在白天生效。
 
 以上均为示例，全套功能为日常生活提供了极大的灵活性，包括运动、疾病、激素周期_等_。最终，还是需要用户来决定如何灵活运用这些功能，而且没有放之四海而皆准的通用自动化规则（automations）。
 
-#### 4) Remote monitoring
-There are multiple possible monitoring channels (Sugarmate, Dexcom Follow, xDrip, Android Auto _etc._) which are useful for parents/carers and adults in certain scenarios (sleeping/driving) who need customisable alerts. In some apps (xDrip) you can also turn alarms off totally, which is great if you have a new sensor “soaking” or settling down that you don’t want to loop with yet.
+#### 4）远程监控
+Aaps支持多种监控渠道（Sugarmate、Dexcom Follow、xDrip、Android Auto _等_）。这些渠道适合家长 / 照料人员，以及需要在（睡眠、驾驶等）场景进行自定义提醒的成年用户。 In some apps (xDrip) you can also turn alarms off totally, which is great if you have a new sensor “soaking” or settling down that you don’t want to loop with yet.
 
 #### 5) Remote control
 A significant advantage of **AAPS** over commercial systems is that it is possible for followers, using authenticated text (SMS) commands or a paired **AAPSClient** app to send a wide range of commands back to the **AAPS** system. This feature is used extensively by parents of kids with type 1 diabetes who use **AAPS**.
