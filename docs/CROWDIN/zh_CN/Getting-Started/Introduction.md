@@ -114,9 +114,9 @@ Aaps支持多种监控渠道（Sugarmate、Dexcom Follow、xDrip、Android Auto 
 #### 5) 远程控制
 **AAPS** 相比商用系统的一个重要优势是，监护人员可通过经过身份验证的短信（SMS）指令，或是配对的 **AAPSClient** 应用，向 **AAPS** 下发各类操作指令。 1 型糖尿病患儿的家长是**AAPS**该功能的主要使用者。
 
-远程控制功能十分实用：例如，孩子在操场上忙着玩，一会要吃点小零食，这时你就可以用手机给个提前大剂量。 It is also possible to monitor the system from a smartwatch (_e.g._ Garmin) or send basic commands from it (_e.g._ a Wear OS watch such as the Samsung Galaxy Watch).
+远程控制功能十分实用：例如，孩子在操场上忙着玩，一会要吃点小零食，这时你就可以用手机给个提前大剂量。你还可以用智能手表（_比如_佳明）查看系统状态，或是通过手表（_比如_搭载 Wear OS 系统的三星 Galaxy Watch）发送基础指令。
 
-#### 6) No commercial constraints, due to open application interfaces
+#### 6）开放应用接口，无商业限制
 除了采用开放源代码的方法，允许随时查看 **AAPS** 的源代码之外，提供标准开放式编程接口也给其他开发人员提供了贡献新想法的机会。 **AAPS** 与 Nightscout 紧密集成。这加快了开发速度，并让用户能通过附加功能进一步提升糖尿病管理的便利性。 Good examples for such integrations are [Nightscout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), xDrip, [M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) etc. 开源开发者和商业系统开发者之间一直在进行对话。 Many of the OS-AID innovations are gradually adopted by commercial systems, where developments are understandably slower, partly because interfaces between systems from different companies (pumps, apps, sensors _etc_) need to be carefully negotiated and licenced. 这也会延缓那些方便患者（或有特殊需求的小部分患者）但不能产生可观利润的创新。
 
 #### 7) Detailed app interface
