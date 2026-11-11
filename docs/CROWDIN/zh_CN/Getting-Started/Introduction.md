@@ -109,10 +109,10 @@ Ultimately, **AAPS** can empower individuals to better manage their diabetes, re
 以上均为示例，全套功能为日常生活提供了极大的灵活性，包括运动、疾病、激素周期_等_。最终，还是需要用户来决定如何灵活运用这些功能，而且没有放之四海而皆准的通用自动化规则（automations）。
 
 #### 4）远程监控
-Aaps支持多种监控渠道（Sugarmate、Dexcom Follow、xDrip、Android Auto _等_）。这些渠道适合家长 / 照料人员，以及需要在（睡眠、驾驶等）场景进行自定义提醒的成年用户。 In some apps (xDrip) you can also turn alarms off totally, which is great if you have a new sensor “soaking” or settling down that you don’t want to loop with yet.
+Aaps支持多种监控渠道（Sugarmate、Dexcom Follow、xDrip、Android Auto _等_）。这些渠道适合家长 / 监护人员，以及需要在（睡眠、驾驶等）场景进行自定义提醒的成年用户。在某些应用（如xDrip+）中，您还可以完全关闭警报，这对于刚启动预热还不准备接入闭环的新探头非常有用。
 
-#### 5) Remote control
-A significant advantage of **AAPS** over commercial systems is that it is possible for followers, using authenticated text (SMS) commands or a paired **AAPSClient** app to send a wide range of commands back to the **AAPS** system. This feature is used extensively by parents of kids with type 1 diabetes who use **AAPS**.
+#### 5) 远程控制
+**AAPS** 相比商用系统的一个重要优势是，监护人员可通过经过身份验证的短信（SMS）指令，或是配对的 **AAPSClient** 应用，向 **AAPS** 下发各类操作指令。 1 型糖尿病患儿的家长是**AAPS**该功能的主要使用者。
 
 The remote control features can be very useful: for example, in the playground, if you want to pre-bolus for a snack from your own phone, and your child is busy playing. It is also possible to monitor the system from a smartwatch (_e.g._ Garmin) or send basic commands from it (_e.g._ a Wear OS watch such as the Samsung Galaxy Watch).
 
