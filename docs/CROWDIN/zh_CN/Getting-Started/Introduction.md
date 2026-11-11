@@ -123,13 +123,13 @@ Aaps支持多种监控渠道（Sugarmate、Dexcom Follow、xDrip、Android Auto 
 使用 **AAPS** 可以方便地跟踪以下信息：泵内胰岛素量、管路使用时长、探头使用时长、泵电池使用时长、活性胰岛素_等_。很多操作可直接在 **AAPS** 上完成（如泵充盈、断开管路_等_），无需在胰岛素泵本体操作，泵可以一直放在您（或您的家属）的口袋或腰带上。
 
 #### 8）易用性与成本优势
-**AAPS** gives people who currently can’t afford to self-fund, or don’t have funding/insurance, access to a hybrid closed looping system which is conceptually years ahead, in terms of development, of the commercial systems. You currently need a reporting server (Nightscout or Tidepool) to set up **AAPS**, although it is not required for day-to-day running of the **AAPS** loop. Many people continue to use Nightscout for collecting their data, and for remote monitoring. 虽然 **AAPS** 本身是免费的，但通过一些第三方平台来搭建 Nightscout 可能会产生费用（0 - 12 欧元），费用高低取决于您需要何种级别的支持（见对照表），以及设置后是否要继续使用 Nightscout。 **AAPS**兼容多种价格亲民（起价约150欧元）的[安卓手机](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)。针对特定地点和语言也有不同的版本，并支持[视障人士](#accessibility-for-users-aaps-who-are-partially-or-completely-blind)使用。
+**AAPS** 为那些目前无力自费、没有资金或保险支持的人提供了使用混合闭环系统的途径，这套系统在开发理念层面，相比商用系统领先数年。配置**AAPS**时需要一个上报服务器（Nightscout 或 Tidepool），但**AAPS**闭环的日常运行并不依赖它。也有很多用户会继续使用 Nightscout，用于数据采集和远程监测。虽然 **AAPS** 本身是免费的，但通过一些第三方平台来搭建 Nightscout 可能会产生费用（0 - 12 欧元），费用高低取决于您需要何种级别的支持（见对照表），以及设置后是否要继续使用 Nightscout。 **AAPS**兼容多种价格亲民（起价约150欧元）的[安卓手机](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)。针对特定地点和语言也有不同的版本，并支持[视障人士](#accessibility-for-users-aaps-who-are-partially-or-completely-blind)使用。
 
-#### 9) Support
-没有完美无缺的胰岛素自动给药系统。不管是商业化产品还是开源系统都会在通信和临时硬件故障等方面遇到许多同类型的问题。 Facebook、Discord 和 Github 上有很多来自世界各地的AAPS用户，他们很多人参与了AAPS的设计和开发，而且也是**AAPS**的使用者，你可以在这些线上社区里得到所需要的支持。此外，还有 Facebook 支持小组和诊所/商业公司为商用 APS 系统提供的帮助，毕竟与这些系统的用户或前用户交谈，可以获得有关常见故障、教育计划质量和持续支持水平的反馈。
+#### 9) 技术支持
+没有任何自动胰岛素输注系统是完美的。不管是商业化产品还是开源系统都会在通信和临时硬件故障等方面遇到许多同类型的问题。 Facebook、Discord 和 Github 上有很多来自世界各地的AAPS用户，他们很多人参与了AAPS的设计和开发，而且也是**AAPS**的使用者，你可以在这些线上社区里得到所需要的支持。此外，还有 Facebook 支持小组和诊所/商业公司为商用 APS 系统提供的帮助，毕竟与这些系统的用户或前用户交谈，可以获得有关常见故障、教育计划质量和持续支持水平的反馈。
 
-#### 10) Predictability, transparency and safety
-**AAPS** is transparent, logical and predictable, which may make it easier to know when a setting is wrong, and to adjust it accordingly. 你可以精准地看到系统正在做什么，为什么这么做，然后给它设定操作限制，这能让你始终掌握系统的控制权（还有相应的责任）。这样既能增强用户信心，也能睡个安稳觉。
+#### 10）可预测性、透明度与安全性
+**AAPS** 具备透明、符合逻辑、可预测的特点，这方便使用者及时发现参数设置错误并做出调整。你可以精准地看到系统正在做什么，为什么这么做，然后给它设定操作限制，这能让你始终掌握系统的控制权（还有相应的责任）。这样既能增强用户信心，也能睡个安稳觉。
 
 #### 11) Access to advanced features through development (dev) modes including full closed loop
 本 **AAPS** 文档侧重于 **AAPS** 开发项目的** "主 （master）"**分支。然而，研发工作一直在进行。更有经验的用户可能希望探索**开发分支**中的实验功能。创新研发的核心战略聚焦于​​全闭环系统（full closed looping）的实现​​（不必输注餐前大剂量_等_），致力于最大程度提升1型糖尿病患者的生活便利性。
