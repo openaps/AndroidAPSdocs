@@ -119,10 +119,10 @@ Aaps支持多种监控渠道（Sugarmate、Dexcom Follow、xDrip、Android Auto 
 #### 6）开放应用接口，无商业限制
 除了通过开源方式可以随时查看 **AAPS** 的源代码外，开放编程接口这一核心思路，也为其他开发者提供机会，贡献新的想法。 **AAPS** 与 Nightscout 深度集成。这加快了开发速度，并让用户能通过附加功能进一步提升糖尿病管理的便利性。代表性例子有 [Nightscout](https://nightscout.github.io/)、[Nightscout Reporter](https://nightscout-reporter.zreptil.de/)、xDrip、[M5 Stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) 等。开源开发者和商业系统开发者之间一直在进行沟通交流。很多 OS‑AID 领域的创新正逐渐被商用系统采用，而商用系统迭代速度较慢也在情理之中，部分原因是由于不同厂商的系统（泵、应用、传感器_等_）设备接口，需要经过复杂协商与授权。有些创新对患者（或是一小部分有特殊需求的患者群体）十分实用，但无法产生可观收益，也会延缓这类创新的推出。
 
-#### 7) Detailed app interface
-使用 **AAPS** 可以方便地跟踪以下信息：泵内胰岛素量、管路使用时长、探头使用时长、泵电池使用时长、活性胰岛素_等_。 Many actions can be done through the **AAPS** app (priming the pump, disconnecting the pump _etc_.), instead of on the pump itself, which means the pump can stay in your pocket or belt (or that of someone you are caring for).
+#### 7) 详细的 App 界面
+使用 **AAPS** 可以方便地跟踪以下信息：泵内胰岛素量、管路使用时长、探头使用时长、泵电池使用时长、活性胰岛素_等_。很多操作可直接在 **AAPS** 上完成（如泵充盈、断开管路_等_），无需在胰岛素泵本体操作，泵可以一直放在您（或您的家属）的口袋或腰带上。
 
-#### 8) Accessibility and affordability
+#### 8）易用性与成本优势
 **AAPS** gives people who currently can’t afford to self-fund, or don’t have funding/insurance, access to a hybrid closed looping system which is conceptually years ahead, in terms of development, of the commercial systems. You currently need a reporting server (Nightscout or Tidepool) to set up **AAPS**, although it is not required for day-to-day running of the **AAPS** loop. Many people continue to use Nightscout for collecting their data, and for remote monitoring. 虽然 **AAPS** 本身是免费的，但通过一些第三方平台来搭建 Nightscout 可能会产生费用（0 - 12 欧元），费用高低取决于您需要何种级别的支持（见对照表），以及设置后是否要继续使用 Nightscout。 **AAPS**兼容多种价格亲民（起价约150欧元）的[安卓手机](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)。针对特定地点和语言也有不同的版本，并支持[视障人士](#accessibility-for-users-aaps-who-are-partially-or-completely-blind)使用。
 
 #### 9) Support
