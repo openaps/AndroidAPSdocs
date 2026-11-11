@@ -117,7 +117,7 @@ Aaps支持多种监控渠道（Sugarmate、Dexcom Follow、xDrip、Android Auto 
 远程控制功能十分实用：例如，孩子在操场上忙着玩，一会要吃点小零食，这时你就可以用手机给个提前大剂量。你还可以用智能手表（_比如_佳明）查看系统状态，或是通过手表（_比如_搭载 Wear OS 系统的三星 Galaxy Watch）发送基础指令。
 
 #### 6）开放应用接口，无商业限制
-除了采用开放源代码的方法，允许随时查看 **AAPS** 的源代码之外，提供标准开放式编程接口也给其他开发人员提供了贡献新想法的机会。 **AAPS** 与 Nightscout 紧密集成。这加快了开发速度，并让用户能通过附加功能进一步提升糖尿病管理的便利性。 Good examples for such integrations are [Nightscout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), xDrip, [M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) etc. 开源开发者和商业系统开发者之间一直在进行对话。 Many of the OS-AID innovations are gradually adopted by commercial systems, where developments are understandably slower, partly because interfaces between systems from different companies (pumps, apps, sensors _etc_) need to be carefully negotiated and licenced. 这也会延缓那些方便患者（或有特殊需求的小部分患者）但不能产生可观利润的创新。
+除了通过开源方式可以随时查看 **AAPS** 的源代码外，开放编程接口这一核心思路，也为其他开发者提供机会，贡献新的想法。 **AAPS** 与 Nightscout 深度集成。这加快了开发速度，并让用户能通过附加功能进一步提升糖尿病管理的便利性。代表性例子有 [Nightscout](https://nightscout.github.io/)、[Nightscout Reporter](https://nightscout-reporter.zreptil.de/)、xDrip、[M5 Stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) 等。开源开发者和商业系统开发者之间一直在进行沟通交流。很多 OS‑AID 领域的创新正逐渐被商用系统采用，而商用系统迭代速度较慢也在情理之中，部分原因是由于不同厂商的系统（泵、应用、传感器_等_）设备接口，需要经过复杂协商与授权。有些创新对患者（或是一小部分有特殊需求的患者群体）十分实用，但无法产生可观收益，也会延缓这类创新的推出。
 
 #### 7) Detailed app interface
 使用 **AAPS** 可以方便地跟踪以下信息：泵内胰岛素量、管路使用时长、探头使用时长、泵电池使用时长、活性胰岛素_等_。 Many actions can be done through the **AAPS** app (priming the pump, disconnecting the pump _etc_.), instead of on the pump itself, which means the pump can stay in your pocket or belt (or that of someone you are caring for).
