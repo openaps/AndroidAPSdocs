@@ -102,7 +102,7 @@ Ultimately, **AAPS** can empower individuals to better manage their diabetes, re
 
  c) 如果孩子在你不知道的情况下突然运动，**AAPS** 支持直接通过手机，在一定时间段内暂停胰岛素输注。
 
- d) 在您游泳之后重新连接管路，**AAPS** 会计算断开期间缺少的基础胰岛素量，并结合当前血糖情况，小心地补输胰岛素。如果不需要补充胰岛素，用户可通过"取消"功能直接停止基础胰岛素的补注。
+ d) 在您游泳之后重新连接管路，**AAPS** 会计算断开期间缺少的基础胰岛素量，并结合当前血糖情况，小心地补输胰岛素。 Any insulin not required can be overridden by just “cancelling” the missed basal.
 
  e) **AAPS** 支持为不同场景创建多个配置文件（profile），并支持便捷切换。例如，如果你担心夜间低血糖，可以把用于快速降低高血糖的功能（微型大剂量（**SMB**）、未通知膳食（**UAM**）等）设置为仅在白天生效。
 
@@ -131,7 +131,7 @@ Aaps支持多种监控渠道（Sugarmate、Dexcom Follow、xDrip、Android Auto 
 #### 10）可预测性、透明度与安全性
 **AAPS** 具备透明、符合逻辑、可预测的特点，这方便使用者及时发现参数设置错误并做出调整。你可以精准地看到系统正在做什么，为什么这么做，然后给它设定操作限制，这能让你始终掌握系统的控制权（还有相应的责任）。这样既能增强用户信心，也能睡个安稳觉。
 
-#### 11) Access to advanced features through development (dev) modes including full closed loop
+#### 11）通过开发（dev）模式获得高级功能，包含全闭环模式
 本 **AAPS** 文档侧重于 **AAPS** 开发项目的** "主 （master）"**分支。然而，研发工作一直在进行。更有经验的用户可能希望探索**开发分支**中的实验功能。创新研发的核心战略聚焦于​​全闭环系统（full closed looping）的实现​​（不必输注餐前大剂量_等_），致力于最大程度提升1型糖尿病患者的生活便利性。
 
 #### 12) Ability to contribute yourself to further improvements
