@@ -55,14 +55,14 @@ Disse autentiseringsappene lager et tidsbegrenset 6-sifret engangspassord, på s
 
 På telefonen går du til **Apper > AAPS > Tillatelser**. Pass på at **SMS** og **Telefon** er tillatt.
 
-![bilde](../images/remote-control-08.png)
+![bilde](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android kan blokkere **SMS**-tillatelsen for apper som ikke er installert fra en appbutikk, slik som **AAPS**. Hvis du ser denne meldingen når du gir **SMS**-tillatelsen, åpner du telefonens **Innstillinger > Apper > AAPS**, trykker på **⋮**-menyen (øverst til høyre) og velger **Tillat begrensede innstillinger**. Gi deretter **SMS**-tillatelsen på nytt.
 ```
 
-![Appen ble nektet tilgang til SMS](../images/sms_permission_restricted.png)
+![Appen ble nektet tilgang til SMS](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### Synkronisering av dato og klokkeslett
 
@@ -82,7 +82,7 @@ Nå som telefoninnstillingene er kontrollert, går du i selve **AAPS**-appen til
 
 Aktiver **Tillat fjernkommandoer via SMS**. Valgene **Ekstra obligatorisk PIN på slutten av token** og **Oppsett av autentisering** vises først når dette er aktivert:
 
-![Innstillinger for SMS-kommunikasjon](../images/sms_communicator_settings.png)
+![Innstillinger for SMS-kommunikasjon](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Tillatte telefonnumre
@@ -97,7 +97,7 @@ Merk at «+» foran nummeret kan være nødvendig eller ikke, avhengig av hvor d
 
 Hvis du skal legge til mer enn ett telefonnummer, skiller du dem med semikolon, **UTEN mellomrom mellom numrene** (dette er viktig!). Velg **OK**:
 
-![Tillatte telefonnumre](../images/sms_allowed_numbers.png)
+![Tillatte telefonnumre](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### Minimum avstand mellom fjernboluser
 
@@ -115,7 +115,7 @@ Kravene til PIN-koden er:
 
 For en sikrere PIN-kode bør du ikke bruke samme siffer mange ganger (_f.eks._ 111111) eller en tallrekke (_f.eks._ 123456).
 
-![Ekstra obligatorisk PIN på slutten av token](../images/sms_pin.png)
+![Ekstra obligatorisk PIN på slutten av token](../images/remote_control_and_following/sms_pin.png)
 
 #### Oppsett av autentisering
 
@@ -123,7 +123,7 @@ For en sikrere PIN-kode bør du ikke bruke samme siffer mange ganger (_f.eks._ 1
 * Åpne autentiseringsappen du har installert på _omsorgspersonens telefon_, sett opp en ny tilkobling og
 * Bruk omsorgspersonens telefon til å skanne QR-koden som vises under **Skann koden for å sette opp AAPS OTP-koder**.
 
-![Oppsett av autentisering med QR-kode](../images/sms_authenticator_setup.png)
+![Oppsett av autentisering med QR-kode](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * Under **Test engangspassord** skriver du inn engangskoden fra autentiseringsappen på omsorgspersonens telefon, etterfulgt av PIN-koden din, i **Kode for å sjekke**:
 
@@ -134,7 +134,7 @@ Eksempel:
 
 Hvis det du skrev inn er riktig, endres den røde teksten «FEIL PIN» automatisk til en grønn «OK». **Det er ingen knapp du skal trykke på!** Prosessen er nå fullført, det er ingen «OK»-knapp du må trykke på etter at du har skrevet inn koden:
 
-![Test engangspassord og Tilbakestill autentiseringsfunksjoner](../images/sms_authenticator_test.png)
+![Test engangspassord og Tilbakestill autentiseringsfunksjoner](../images/remote_control_and_following/sms_authenticator_test.png)
 
 Nå skal SMS-kommandoer være satt opp.
 
@@ -146,7 +146,7 @@ Bruk knappen **Tilbakestill autentiseringsfunksjoner** nederst på skjermen **Op
 
 1)  For å kontrollere at alt er riktig satt opp, tester du forbindelsen ved å sende «bg» som SMS fra omsorgspersonens telefon til **AAPS**-telefonen. Du skal få et svar som ligner på dette:
 
-![bilde](../images/remote-control-06.png)
+![bilde](../images/remote_control_and_following/remote-control-06.png)
 
 Hvis du ikke får noe svar, se avsnittet [Feilsøking](#SMSCommands-troubleshooting) nedenfor.
 
@@ -154,7 +154,7 @@ Hvis du ikke får noe svar, se avsnittet [Feilsøking](#SMSCommands-troubleshoot
 
 Når du sender en SMS-kommando for første gang, bør du gjøre det i nærheten av **AAPS**-telefonen, så du ser hvordan det fungerer:
 
-![bilde](../images/remote-control-16.png)
+![bilde](../images/remote_control_and_following/remote-control-16.png)
 
 Omsorgspersonens telefon får en SMS som svar fra **AAPS**, som bekrefter om SMS-fjernkommandoen ble utført.
 
@@ -182,7 +182,7 @@ For å unngå føling er det lurt å begynne forsiktig, ved å gi **mindre insul
 
 Kommandoene må sendes på engelsk. Svaret kommer på ditt eget språk hvis svarteksten allerede er [oversatt](#translations-translate-strings-for-AAPS-app). Kommandoene skiller ikke mellom store og små bokstaver, du kan bruke begge deler.
 
-![Eksempel på SMS-kommandoer](../images/SMSCommands.png)
+![Eksempel på SMS-kommandoer](../images/remote_control_and_following/SMSCommands.png)
 
 **Tabellene over SMS-kommandoer** nedenfor viser alle mulige SMS-kommandoer. _Eksempelverdier_ er tatt med for å gjøre det lettere å forstå. Kommandoene har det samme området av mulige verdier (mål, profilprosent osv.) som er tillatt i selve **AAPS**-appen.
 
@@ -191,11 +191,11 @@ Kommandoene må sendes på engelsk. Svaret kommer på ditt eget språk hvis svar
 
 Noen SMS-kommandoer gir svar med en gang, og noen SMS-kommandoer krever sterk **autentisering** gjennom autentiseringsappen. En enkel forespørsel som «**BG**» (som ber om en oppdatering av gjeldende glukose) er rask å skrive, trenger ingen autentisering og gir statusinformasjonen fra **AAPS** som vist nedenfor:
 
-![bilde](../images/remote-control-06.png)
+![bilde](../images/remote_control_and_following/remote-control-06.png)
 
 Kommandoer som trenger mer sikkerhet, krever at du skriver inn en kode, for eksempel:
 
-![SMS autentisert](../images/remote-control-07.png)
+![SMS autentisert](../images/remote_control_and_following/remote-control-07.png)
 
 Kolonnen *Aut.* i tabellene nedenfor viser om slik sterk autentisering kreves for hver kommando.
 
@@ -210,7 +210,7 @@ Kolonnen *Aut.* i tabellene nedenfor viser om slik sterk autentisering kreves fo
 
 | Kommando             | Aut. | Funksjon og *svar*                                                                                                  |
 | -------------------- | ---- | ------------------------------------------------------------------------------------------------------------------- |
-| PUMPE                | Nei  | Sist tilkoblet: 1 min siden<br/>Midl. basal: 0,00E/t @11:38 5/30min<br/>IOB: 0,5E Reserv: 34E Batt: 100 |
+| PUMP                 | Nei  | Sist tilkoblet: 1 min siden<br/>Midl. basal: 0,00E/t @11:38 5/30min<br/>IOB: 0,5E Reserv: 34E Batt: 100 |
 | PUMP DISCONNECT *30* | Ja   | Kobler fra pumpen i *30* minutter                                                                                   |
 | PUMP CONNECT         | Ja   | Pumpen tilkoblet igjen                                                                                              |
 
@@ -311,12 +311,12 @@ Det kan ha en av disse årsakene:
 ### Ingen svar i det hele tatt på SMS-kommandoer
 
 På omsorgspersonens telefon og/eller **AAPS**-telefonen kan du prøve å slå av disse valgene:
-* **Send som chatmelding** ![Slå av SMS som chatmelding](../images/SMSdisableChat.png)
+* **Send som chatmelding** ![Slå av SMS som chatmelding](../images/remote_control_and_following/SMSdisableChat.png)
 * Hvis du bruker Android Meldinger-appen eller Google Meldinger-appen, slå av RCS-meldinger:
   - åpne den aktuelle SMS-samtalen i Meldinger
   - Velg menyen med tre prikker øverst til høyre
   - velg «Detaljer»
-  - Aktiver «Send bare SMS- og MMS-meldinger» ![Slå av RCS som chatmelding](../images/SMSdisableRCS.png)
+  - Aktiver «Send bare SMS- og MMS-meldinger» ![Slå av RCS som chatmelding](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### Feil ved utføring av kommandoer
 
@@ -331,7 +331,7 @@ Det er flere mulige grunner til at kommandoen ikke lykkes:
 
 Vanlige feil vises i eksemplene nedenfor:
 
-![bilde](../images/remote-control-17.png)
+![bilde](../images/remote_control_and_following/remote-control-17.png)
 
 ### Hvordan kan jeg stoppe en kommando når den er autentisert?
 
