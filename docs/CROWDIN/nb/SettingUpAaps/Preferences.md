@@ -91,7 +91,7 @@ Velg mellom lyst tema, mørkt tema eller å følge telefonens systeminnstilling.
 
 Obligatorisk for å kunne [eksportere innstillinger](../Maintenance/ExportImportSettings.md), siden de er kryptert fra versjon 2.7.
 
-If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+Hvis du har glemt hovedpassordet, se [Hvordan tilbakestiller jeg hovedpassordet?](#FAQ-reset-master-password)
 
 **Biometrisk beskyttelse fungerer kanskje ikke på OnePlus-telefoner. Dette er et kjent problem med OnePlus på noen telefoner.**
 
@@ -374,7 +374,7 @@ Når du bruker NSClientV3, må alle opplastere bruke Nightscout API v3. Hvis en 
 - I Nightscout oppretter du et *[Admin-token](https://nightscout.github.io/nightscout/security/#create-a-token)* (krever [Nightscout 15](https://nightscout.github.io/update/update/) for å bruke V3-API-et) og skriver det inn i **Nightscout tilgangstoken** (ikke API Secret!). På **AAPSClient** kan du i stedet skanne QR-koden fra hovedtelefonen, som setter opp et eget token for klienten. En klient som er sammenkoblet med PIN, får sitt eget token fra hovedtelefonen etter sammenkoblingen. Se [Klientens eget Nightscout-token](#client-master-control-own-token).
 - Dette gjør at data kan leses og skrives mellom Nightscout-nettstedet og **AAPS**.
 - Dobbeltsjekk for skrivefeil her hvis du står fast i opplæringsmål 1.
-- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+- La «Bruk websockets» være på (anbefalt). Websockets er **påkrevd** for fjernstyring fra **AAPSClient**, på begge telefonene.
 
 (Preferences-nsclient-synchronization)=
 ### Synkronisering
@@ -474,19 +474,19 @@ Innstillingene bør forklare seg selv.
 
 **Overstyr ikke forstyrr-modus** (på som standard): **AAPS**-alarmene ringer selv når telefonen er lydløs eller i Ikke forstyrr. Slå det av hvis **AAPS** skal respektere disse modusene: da ringer ikke alarmene, og i Ikke forstyrr vibrerer de bare, på telefonen og på klokken. Forslag fra loop som kommer under Ikke forstyrr, vises uten lyd.
 
-When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Hvis du sveiper bort alarmvarselet i varslingspanelet, dempes alarmen. Når du åpner **AAPS** senere, vises en alarm du ikke har svart på, på nytt.
+Når en alarm ringer, har alarmskjermen valgene **Demp i 5 minutter**, **Demp alarm** (skjermen forblir åpen, så du kan lese meldingen) og **Demp og lukk**. Hvis du sveiper bort alarmvarselet i varslingspanelet, dempes alarmen. Når du åpner **AAPS** senere, vises en alarm du ikke har svart på, på nytt.
 
 (preferences-alarm-sound-volume-vibration)=
-### Alarm sound, volume and vibration
+### Alarmlyd, volum og vibrasjon
 
-- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
-- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
-- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
-- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+- **Lyd**: alarmlydene i **AAPS** er innebygd og kan ikke endres.
+- **Volum**: **AAPS** har ingen egen voluminnstilling. Når **Overstyr ikke forstyrr-modus** er på, følger alarmene alarmvolumet på telefonen. Når den er av, følger de varselvolumet.
+- **Øk varselvolumet gradvis** (på som standard): alarmen starter lavt og blir høyere. Slå det av hvis alarmen skal ringe med fullt volum med en gang.
+- **Vibrasjon**: i telefonens innstillinger går du til **Apper** > **AAPS** > **Varsler**. Listen **AAPS-alarmer** vises der etter den første alarmen. Trykk på en alarm for å slå **Vibrasjon** av eller på. La disse alarmene være slått på.
 
-![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+![AAPS-alarmer i varslingsinnstillingene på telefonen](../images/preferences/settings_alarm_channels.png) ![Vibrasjonsinnstilling for én AAPS-alarm](../images/preferences/settings_alarm_channel.png)
 
-- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
+- Glukosealarmer (høy, lav, ingen data) kommer fra CGM-appen din eller Nightscout: still inn lyd og vibrasjon for dem der.
 
 (preferences-maintenance-settings)=
 ## Vedlikeholdsinnstillinger
