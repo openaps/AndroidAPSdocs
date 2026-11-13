@@ -96,11 +96,11 @@ Når du velger et kort, lastes **målet** og **varigheten** inn i redigeringsfel
 
     <br />### Aktivere et midlertidig mål
     
-    Sveip til forhåndsinnstillingen du vil bruke (verdiene lastes inn i redigeringsfeltet), juster eventuelt **målet**/**varigheten** i redigeringsfeltet, og trykk så på **▶ Aktiver**. A confirmation shows the exact target, duration and reason before anything starts:
+    Sveip til forhåndsinnstillingen du vil bruke (verdiene lastes inn i redigeringsfeltet), juster eventuelt **målet**/**varigheten** i redigeringsfeltet, og trykk så på **▶ Aktiver**. En bekreftelse viser nøyaktig mål, varighet og årsak før noe starter:
     
-    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
+    ![Bekreftelse av aktivering](../images/v4/TempTarget/TempTarget8.png)
     
-    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+    Når du har bekreftet, starter det midlertidige målet med en gang (eller på tidspunktet du valgte i **Aktivering**), og det varer i den valgte **varigheten**.
     
     ```{admonition} Å endre tallene gjelder bare én gang — forhåndsinnstillingen endres ikke
     :class: important

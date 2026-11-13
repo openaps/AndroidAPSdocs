@@ -172,7 +172,7 @@ Gå tilbake med pilen øverst til venstre. Veiviseren viser nå «**Passord defi
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**IKKE MIST HOVEDPASSORDET DITT**. Noter det _f.eks._ på Google Drive, som er et godt sted fordi Google tar sikkerhetskopi for deg. Smarttelefonen eller PC-en din kan krasje, og da har du kanskje ingen kopi. Hvis du glemmer hovedpassordet ditt, kan det bli vanskelig å gjenopprette profilkonfigurasjonen og framgangen din gjennom **Opplæringsmålene** senere. See [How to reset the master password?](#FAQ-reset-master-password)
+**IKKE MIST HOVEDPASSORDET DITT**. Noter det _f.eks._ på Google Drive, som er et godt sted fordi Google tar sikkerhetskopi for deg. Smarttelefonen eller PC-en din kan krasje, og da har du kanskje ingen kopi. Hvis du glemmer hovedpassordet ditt, kan det bli vanskelig å gjenopprette profilkonfigurasjonen og framgangen din gjennom **Opplæringsmålene** senere. Se [Hvordan tilbakestiller jeg hovedpassordet?](#FAQ-reset-master-password)
 ```
 
 Når du er ferdig, trykker du på «**NESTE**» for å gå til neste skjerm.
@@ -243,7 +243,7 @@ Trykk på «**Nightscout URL**» og skriv inn adressen til din egen Nightscout-s
 
 Trykk på «**Nightscout tilgangstoken**» og skriv inn tilgangstokenet for Nightscout-serveren din. Uten dette tokenet fungerer ikke tilgangen. Hvis du ikke har det ennå, se dokumentasjonen om å sette opp rapporteringsserveren.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+La «**Bruk websockets**» stå på for kommunikasjon med Nightscout i sanntid. Websockets er **påkrevd** for fjernstyring fra **AAPSClient**, på begge telefonene.
 
 De andre delene kan stå med standardverdiene for nå. De beskrives her, slik at du vet hvor du finner dem senere:
 

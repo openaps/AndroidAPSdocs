@@ -53,7 +53,7 @@ Hvis minimalt karbohydratopptak (min_5m_carbimpact) brukes i stedet for verdien 
 
 Vanligvis oppdager __AAPS__ karbohydratopptak gjennom **BS**-avvik. Hvis du har registrert karbohydrater, men **AAPS** ikke kan se opptaket av dem gjennom **BS**-avvik, bruker det i stedet metoden [min_5m_carbimpact](#Preferences-min_5m_carbimpact) til å beregne opptaket (såkalt «fallback»). Siden denne metoden bare beregner det minimale karbohydratopptaket uten å ta hensyn til **BS**-avvik, kan den gi feil COB-verdier.
 
-![Hint om feil COB-verdi](../images/Calculator_SlowCarbAbsorption.png)
+![Hint om feil COB-verdi](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 I skjermbildet ovenfor ble karbohydratopptaket 66 % av tiden beregnet med min_5m_carbimpact i stedet for verdien som ble funnet fra avvik. Dette tyder på at du kan ha hatt mindre **COB** enn algoritmen beregnet.
 

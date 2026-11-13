@@ -309,13 +309,13 @@ Hvis **AAPS** måtte begrense dosen, for eksempel fordi den beregnede bolusen er
     
     [Hurtigknappene](#quickwizards) på telefonen som har **Vis på klokke** slått på, innenfor sine gyldige timer. En karbo-oppføring viser karbohydratene i g, en insulin-oppføring den faste dosen i E. Et trykk kjører oppføringen etter en bekreftelse på klokken. Det er ingenting å stille inn på klokken: rediger oppføringene på telefonen, og slå på **Vis på klokke** under **Enhetsvalg** for hver oppføring du vil ha på flisen. Utenfor de gyldige timene til alle oppføringene dine viser flisen **Ingen konfigurasjon tilgjengelig**.
     
-    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
+    ![En hurtigknapp med Vis på klokke slått på, og flisen den vises på](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Scene tile
+    ### Scene-flisen
     
-    ![Scene tile](../images/wearos/tiles/tile_scene.png)
+    ![Scene-flisen](../images/wearos/tiles/tile_scene.png)
     
-    The [Scenes](#scenes-from-watch) of the phone. Hver av de fire plassene settes til **Automatisk**, **Ingen** eller én scene i flisinnstillingene. En **Automatisk** plass tar den neste scenen fra telefonens liste som ingen annen plass har tatt. En plass satt til en scene som ikke finnes lenger på telefonen, viser **Utilgjengelig**.
+    [Scenene](#scenes-from-watch) på telefonen. Hver av de fire plassene settes til **Automatisk**, **Ingen** eller én scene i flisinnstillingene. En **Automatisk** plass tar den neste scenen fra telefonens liste som ingen annen plass har tatt. En plass satt til en scene som ikke finnes lenger på telefonen, viser **Utilgjengelig**.
     
     ![Innstillinger for Scene-flisen, fire plasser satt til Automatisk](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,17 +361,17 @@ Hvis **AAPS** måtte begrense dosen, for eksempel fordi den beregnede bolusen er
     
     Merk: ikke alle skjermer tåler alltid på like godt. Det kan gi innbrenning i skjermen, særlig på eldre OLED-skjermer. Klokkene demper vanligvis skjermen for å hindre innbrenning; sjekk bruksanvisningen, produsenten eller internett for råd.
     
-    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
+    ![Urskive på nattbordet](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
+    ![Forenklet brukergrensesnitt](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Phone alarms on the watch
+    ## Telefonalarmer på klokken
     
-    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![En telefonalarm på klokken](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. Klokken vibrerer, og igjen hvert halve minutt i fem minutter til du svarer. Et varsel viser tittelen og teksten til alarmen, med de samme svarene som påminnelsen [Tid for å spise](#WearOsSmartwatch-wizard-carb-time):
+    Klokken viser alarmene fra telefonen, så du ser hvorfor telefonen lager lyd, og kan svare fra håndleddet. Klokken vibrerer, og igjen hvert halve minutt i fem minutter til du svarer. Et varsel viser tittelen og teksten til alarmen, med de samme svarene som påminnelsen [Tid for å spise](#WearOsSmartwatch-wizard-carb-time):
     
     * **Demp**, eller et sveip: alarmen stopper, og alarmskjermen på telefonen lukkes.
     * **Demp i 5 min**: alarmen stopper og ringer igjen etter fem minutter, på telefonen og på klokken.

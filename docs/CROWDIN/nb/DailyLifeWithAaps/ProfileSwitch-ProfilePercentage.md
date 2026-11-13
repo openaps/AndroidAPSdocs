@@ -22,7 +22,7 @@ Du trenger minst én lagret **profil**. En **profilprosent** brukes alltid gjenn
 
     <br />1. På hovedskjermen, **trykk på profilnavnet** (ved siden av stjerneikonet). [Profilskjermen](#ProfileSwitch-manage-v4) åpnes på kortet til **profilen** som kjører, merket **AKTIV**.
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
+       ![Trykk på profilnavnet på hovedskjermen for å åpne profilskjermen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. For å beholde den samme **profilen**, la **AKTIV**-kortet være valgt. For å bytte **profil** samtidig, sveip til et annet kort.
     3. Trykk på den runde **▶**-knappen (**Aktiver**) nederst til høyre. Skjermen **Aktiver** åpnes.

@@ -102,40 +102,40 @@ Ultimately, **AAPS** can empower individuals to better manage their diabetes, re
 
  c) 如果孩子在你不知道的情况下突然运动，**AAPS** 支持直接通过手机，在一定时间段内暂停胰岛素输注。
 
- d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. 若系统计算的补充剂量超出实际需求，用户可通过"取消"功能直接中止缺失基础胰岛素的补注。
+ d) 在您游泳之后重新连接管路，**AAPS** 会计算断开期间缺少的基础胰岛素量，并结合当前血糖情况，小心地补输胰岛素。如果不需要补充胰岛素，用户可通过"取消"功能直接停止基础胰岛素的补注。
 
- e) **AAPS** 支持为不同场景创建多个配置文件（profile），并支持便捷切换。 For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”) and unannounced meals (“**UAM**”)) can be set to only work during the daytime, if you are worried about night-time hypos.
+ e) **AAPS** 支持为不同场景创建多个配置文件（profile），并支持便捷切换。例如，如果你担心夜间低血糖，可以把用于快速降低高血糖的功能（微型大剂量（**SMB**）、未通知膳食（**UAM**）等）设置为仅在白天生效。
 
 以上均为示例，全套功能为日常生活提供了极大的灵活性，包括运动、疾病、激素周期_等_。最终，还是需要用户来决定如何灵活运用这些功能，而且没有放之四海而皆准的通用自动化规则（automations）。
 
-#### 4) Remote monitoring
-There are multiple possible monitoring channels (Sugarmate, Dexcom Follow, xDrip, Android Auto _etc._) which are useful for parents/carers and adults in certain scenarios (sleeping/driving) who need customisable alerts. In some apps (xDrip) you can also turn alarms off totally, which is great if you have a new sensor “soaking” or settling down that you don’t want to loop with yet.
+#### 4）远程监控
+Aaps支持多种监控渠道（Sugarmate、Dexcom Follow、xDrip、Android Auto _等_）。这些渠道适合家长 / 监护人员，以及需要在（睡眠、驾驶等）场景进行自定义提醒的成年用户。在某些应用（如xDrip+）中，您还可以完全关闭警报，这对于刚启动预热还不准备接入闭环的新探头非常有用。
 
-#### 5) Remote control
-A significant advantage of **AAPS** over commercial systems is that it is possible for followers, using authenticated text (SMS) commands or a paired **AAPSClient** app to send a wide range of commands back to the **AAPS** system. This feature is used extensively by parents of kids with type 1 diabetes who use **AAPS**.
+#### 5) 远程控制
+**AAPS** 相比商用系统的一个重要优势是，监护人员可通过经过身份验证的短信（SMS）指令，或是配对的 **AAPSClient** 应用，向 **AAPS** 下发各类操作指令。 1 型糖尿病患儿的家长是**AAPS**该功能的主要使用者。
 
-The remote control features can be very useful: for example, in the playground, if you want to pre-bolus for a snack from your own phone, and your child is busy playing. It is also possible to monitor the system from a smartwatch (_e.g._ Garmin) or send basic commands from it (_e.g._ a Wear OS watch such as the Samsung Galaxy Watch).
+远程控制功能十分实用：例如，孩子在操场上忙着玩，一会要吃点小零食，这时你就可以用手机给个提前大剂量。你还可以用智能手表（_比如_佳明）查看系统状态，或是通过手表（_比如_搭载 Wear OS 系统的三星 Galaxy Watch）发送基础指令。
 
-#### 6) No commercial constraints, due to open application interfaces
-除了采用开放源代码的方法，允许随时查看 **AAPS** 的源代码之外，提供标准开放式编程接口也给其他开发人员提供了贡献新想法的机会。 **AAPS** 与 Nightscout 紧密集成。这加快了开发速度，并让用户能通过附加功能进一步提升糖尿病管理的便利性。 Good examples for such integrations are [Nightscout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), xDrip, [M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) etc. 开源开发者和商业系统开发者之间一直在进行对话。 Many of the OS-AID innovations are gradually adopted by commercial systems, where developments are understandably slower, partly because interfaces between systems from different companies (pumps, apps, sensors _etc_) need to be carefully negotiated and licenced. 这也会延缓那些方便患者（或有特殊需求的小部分患者）但不能产生可观利润的创新。
+#### 6）开放应用接口，无商业限制
+除了通过开源方式可以随时查看 **AAPS** 的源代码外，开放编程接口这一核心思路，也为其他开发者提供机会，贡献新的想法。 **AAPS** 与 Nightscout 深度集成。这加快了开发速度，并让用户能通过附加功能进一步提升糖尿病管理的便利性。代表性例子有 [Nightscout](https://nightscout.github.io/)、[Nightscout Reporter](https://nightscout-reporter.zreptil.de/)、xDrip、[M5 Stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) 等。开源开发者和商业系统开发者之间一直在进行沟通交流。很多 OS‑AID 领域的创新正逐渐被商用系统采用，而商用系统迭代速度较慢也在情理之中，部分原因是由于不同厂商的系统（泵、应用、传感器_等_）设备接口，需要经过复杂协商与授权。有些创新对患者（或是一小部分有特殊需求的患者群体）十分实用，但无法产生可观收益，也会延缓这类创新的推出。
 
-#### 7) Detailed app interface
-使用 **AAPS** 可以方便地跟踪以下信息：泵内胰岛素量、管路使用时长、探头使用时长、泵电池使用时长、活性胰岛素_等_。 Many actions can be done through the **AAPS** app (priming the pump, disconnecting the pump _etc_.), instead of on the pump itself, which means the pump can stay in your pocket or belt (or that of someone you are caring for).
+#### 7) 详细的 App 界面
+使用 **AAPS** 可以方便地跟踪以下信息：泵内胰岛素量、管路使用时长、探头使用时长、泵电池使用时长、活性胰岛素_等_。很多操作可直接在 **AAPS** 上完成（如泵充盈、断开管路_等_），无需在胰岛素泵本体操作，泵可以一直放在您（或您的家属）的口袋或腰带上。
 
-#### 8) Accessibility and affordability
-**AAPS** gives people who currently can’t afford to self-fund, or don’t have funding/insurance, access to a hybrid closed looping system which is conceptually years ahead, in terms of development, of the commercial systems. You currently need a reporting server (Nightscout or Tidepool) to set up **AAPS**, although it is not required for day-to-day running of the **AAPS** loop. Many people continue to use Nightscout for collecting their data, and for remote monitoring. 虽然 **AAPS** 本身是免费的，但通过一些第三方平台来搭建 Nightscout 可能会产生费用（0 - 12 欧元），费用高低取决于您需要何种级别的支持（见对照表），以及设置后是否要继续使用 Nightscout。 **AAPS**兼容多种价格亲民（起价约150欧元）的[安卓手机](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)。针对特定地点和语言也有不同的版本，并支持[视障人士](#accessibility-for-users-aaps-who-are-partially-or-completely-blind)使用。
+#### 8）易用性与成本优势
+**AAPS** 为那些目前无力自费、没有资金或保险支持的人提供了使用混合闭环系统的途径，这套系统在开发理念层面，相比商用系统领先数年。配置**AAPS**时需要一个上报服务器（Nightscout 或 Tidepool），但**AAPS**闭环的日常运行并不依赖它。也有很多用户会继续使用 Nightscout，用于数据采集和远程监测。虽然 **AAPS** 本身是免费的，但通过一些第三方平台来搭建 Nightscout 可能会产生费用（0 - 12 欧元），费用高低取决于您需要何种级别的支持（见对照表），以及设置后是否要继续使用 Nightscout。 **AAPS**兼容多种价格亲民（起价约150欧元）的[安卓手机](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)。针对特定地点和语言也有不同的版本，并支持[视障人士](#accessibility-for-users-aaps-who-are-partially-or-completely-blind)使用。
 
-#### 9) Support
-没有完美无缺的胰岛素自动给药系统。不管是商业化产品还是开源系统都会在通信和临时硬件故障等方面遇到许多同类型的问题。 Facebook、Discord 和 Github 上有很多来自世界各地的AAPS用户，他们很多人参与了AAPS的设计和开发，而且也是**AAPS**的使用者，你可以在这些线上社区里得到所需要的支持。此外，还有 Facebook 支持小组和诊所/商业公司为商用 APS 系统提供的帮助，毕竟与这些系统的用户或前用户交谈，可以获得有关常见故障、教育计划质量和持续支持水平的反馈。
+#### 9) 技术支持
+没有任何自动胰岛素输注系统是完美的。不管是商业化产品还是开源系统都会在通信和临时硬件故障等方面遇到许多同类型的问题。 Facebook、Discord 和 Github 上有很多来自世界各地的AAPS用户，他们很多人参与了AAPS的设计和开发，而且也是**AAPS**的使用者，你可以在这些线上社区里得到所需要的支持。此外，还有 Facebook 支持小组和诊所/商业公司为商用 APS 系统提供的帮助，毕竟与这些系统的用户或前用户交谈，可以获得有关常见故障、教育计划质量和持续支持水平的反馈。
 
-#### 10) Predictability, transparency and safety
-**AAPS** is transparent, logical and predictable, which may make it easier to know when a setting is wrong, and to adjust it accordingly. 你可以精准地看到系统正在做什么，为什么这么做，然后给它设定操作限制，这能让你始终掌握系统的控制权（还有相应的责任）。这样既能增强用户信心，也能睡个安稳觉。
+#### 10）可预测性、透明度与安全性
+**AAPS** 具备透明、符合逻辑、可预测的特点，这方便使用者及时发现参数设置错误并做出调整。你可以精准地看到系统正在做什么，为什么这么做，然后给它设定操作限制，这能让你始终掌握系统的控制权（还有相应的责任）。这样既能增强用户信心，也能睡个安稳觉。
 
-#### 11) Access to advanced features through development (dev) modes including full closed loop
-本 **AAPS** 文档侧重于 **AAPS** 开发项目的** "主 （master）"**分支。然而，研发工作一直在进行。更有经验的用户可能希望探索**开发分支**中的实验功能。创新研发的核心战略聚焦于​​全闭环系统（full closed looping）的实现​​（不必输注餐前大剂量_等_），致力于最大程度提升1型糖尿病患者的生活便利性。
+#### 11）通过开发（dev）模式获得高级功能，包含全闭环模式
+This **AAPS** documentation focuses on the mainstream **“master”** branch of **AAPS**. 然而，研发工作一直在进行。更有经验的用户可能希望探索**开发分支**中的实验功能。这些研发创新聚焦于全闭环策略的实现​​（不必输注餐前大剂量_等_），目标是最大程度提升1型糖尿病患者的生活便利性。
 
-#### 12) Ability to contribute yourself to further improvements
-1型糖尿病可能非常令人沮丧和孤独。当掌控了自己的控糖技术以后，你就有了为其他糖友提供帮助的能力，在“把关怀与支持传递下去”的路途上，哪怕只有些许的效果你都会很有成就感。你可以自学自教，发现问题并去寻找新的研究进展和文献资料，乃至为问题的解决贡献一份力量。在社区中，还有其他人有着同样的追求，你可以与他们交流想法，一起合作。这是#WeAreNotWaiting运动的精髓。
+#### 12）可自主参与项目迭代优化
+1 型糖尿病常会带来强烈的挫败感和孤独感。当掌控了自己的控糖技术以后，你就有了为其他糖友提供帮助的能力，在“把关怀与支持传递下去”的路途上，哪怕只有些许的效果你都会很有成就感。你可以通过不断的学习、发现问题、寻找新方案，甚至参与功能开发与文档编写，贡献自己的力量。在社区中，还有其他人有着同样的追求，你可以与他们交流想法，共同探讨合作。这是#WeAreNotWaiting运动的精髓。
 
 ## AAPS与MDI（每日多次胰岛素注射）和开环（open loop）的比较
 

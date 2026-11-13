@@ -146,7 +146,7 @@ Dexcom G7、ONE+ 和 Stelo App 的讀取值是[可信任的血糖資料來源](#
 
   ![已允許 AAPS 存取通知](../images/NotificationReader_AccessOn.png)
 
-- 如果 **允許通知存取權**呈現灰色，無法選取（*受限設定控制*），表示 Android 封鎖了此功能，因為 **AAPS** 並非從 Play 商店安裝。 Open the **AAPS** app info (long press the **AAPS** icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. 接著返回通知存取權畫面，並允許存取。
+- 如果 **允許通知存取權**呈現灰色，無法選取（*受限設定控制*），表示 Android 封鎖了此功能，因為 **AAPS** 並非從 Play 商店安裝。開啟 **AAPS** App 資訊（長按 **AAPS** 圖示 > **App 資訊**），點選右上角的三點選單，然後選取 **允許受限設定**。接著返回通知存取權畫面，並允許存取。
 - Dexcom App 顯示新數值時，讀取值就會出現在 **AAPS** 中。
 
 ```{warning}

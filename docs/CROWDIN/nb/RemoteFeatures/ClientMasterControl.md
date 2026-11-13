@@ -57,7 +57,7 @@ Handlinger som kan utløses fra en klient: **bolus**, **karbohydrater / eKarbo**
 - **Hovedenheten** kjører det vanlige `full`-bygget av **AAPS** og er koblet til pumpen din.
 - **Hovedenheten** bruker **NSClientV3** med din Nightscout og viser *tilkoblet*. Gi den et **admin-token** for din Nightscout: med det kan hovedenheten lage et eget token for hver klient og vise det til klienten som en QR-kode.
 - **Klienten** kjører **[AAPSClient](AapsClient.md)** (eller **AAPSClient2** / **AAPSClient3** for flere pasienter — se [Om AAPSClient, AAPSClient2 og AAPSClient3](#remotecontrol-aapsclient-versions)). Den må bruke den **samme** Nightscout. Hvis du setter den opp med hovedenhetens QR-kode, får klienten Nightscout-adressen og tokenet fra hovedenheten; ellers må du først sette opp **NSClientV3** på den selv.
-- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. A command is only valid for a few seconds: without websockets it fails instead of arriving late. Når klientstyring er på, holder **AAPS** websockets på, både på hovedenheten og på sammenkoblede klienter. Your Nightscout host must support websockets.
+- Websockets er **påkrevd** for fjernstyring fra **AAPSClient**, på begge telefonene. En kommando gjelder bare i noen få sekunder: uten websockets mislykkes den i stedet for å komme fram for sent. Når klientstyring er på, holder **AAPS** websockets på, både på hovedenheten og på sammenkoblede klienter. Nightscout-verten din må støtte websockets.
 ```
 
 Sammenkobling og synkronisering er to forskjellige ting:
@@ -334,27 +334,86 @@ Hvis en klient gjenopprettes fra en sikkerhetskopi som setter kommandotelleren d
 
 ## Feilsøking
 
-| Symptom                                                                                                                       | Hva du bør sjekke                                                                                                                                                                                                                                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Klienten sier at **hovedenheten er frakoblet**                                                                                | Hovedtelefonen er våken og kjører **AAPS**; begge telefonene er tilkoblet i **NSClientV3**; **websockets** er på på begge; samme Nightscout-nettsted.                                                                                                                                                                                                                 |
-| Klienten sier at den **ikke er sammenkoblet**                                                                                 | Par på nytt fra **Administrer → Koble til hovedenhet**. Sjekk at klienten er **Aktiv** i hovedenhetens liste **Autoriserte klienter**.                                                                                                                                                                                                                                |
-| Kommandoen **avvises** av hovedenheten                                                                                        | Hovedenheten kontrollerer den på nytt mot sin nåværende tilstand — for eksempel finnes ikke den valgte profilen lenger, eller pumpetypen stemmer ikke. Sjekk på nytt på hovedenheten.                                                                                                                                                                                 |
-| Commands **fail** or the master is often **offline**                                                                          | Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).                                                                                                                             |
-| Sammenkoblingen avbrytes med *«Paringshemmeligheten kunne ikke lagres»*                                                       | Ingenting ble endret. Start sammenkoblingen på nytt; hvis det fortsatt ikke virker, start **AAPSClient** på nytt og prøv en gang til.                                                                                                                                                                                                                                 |
-| Ingenting skjer etter sammenkoblingen                                                                                         | Sjekk at **Tillat klientstyring** er PÅ på hovedenheten, og at hovedenheten er koblet til Nightscout.                                                                                                                                                                                                                                                                 |
-| QR-kode-alternativene kan ikke velges i dialogen **Ny klient**                                                                | Dialogen forklarer hvorfor. *Ikke et admin-token*: gi hovedenheten et admin-token for din Nightscout, eller legg til klienten med **PIN**. *Ikke tilkoblet*: vent til hovedenheten viser *tilkoblet* i **NSClientV3**.                                                                                                                                                |
-| *«Nightscout har et token med dette navnet og andre rettigheter»*                                                             | Ett av dine egne Nightscout-token heter `aaps-` pluss dette navnet. Velg et annet navn for klienten.                                                                                                                                                                                                                                                                  |
-| *«En klient med dette navnet finnes allerede i listen»*                                                                       | Velg et annet navn, eller fjern den klienten først.                                                                                                                                                                                                                                                                                                                   |
-| Klienten sier *«Denne koden er fra en annen AAPS-versjon»*                                                                    | Hovedenheten og klienten må kjøre den **samme** versjonen av **AAPS**. Oppdater den eldste.                                                                                                                                                                                                                                                                           |
-| Klienten sier *«Denne koden har utløpt»*                                                                                      | En kode som parer, virker i omtrent to minutter. Legg til klienten på nytt på hovedenheten for å få en ny kode.                                                                                                                                                                                                                                                       |
-| Klienten sier *«Denne telefonen er allerede sammenkoblet»*                                                                    | Koble den fra først (**Administrer → Koble til hovedenhet → Koble fra**), og skann så på nytt. En **Bare Nightscout**-kode virker også på en sammenkoblet telefon.                                                                                                                                                                                                    |
-| Klienten sier *«Hovedenheten avviste forespørselen: Denne telefonen skriver til Nightscout med et annet token enn sitt eget»* | Klienten brukte sitt eget Nightscout-token før og skriver nå med et annet, for eksempel etter at et token ble skrevet inn i Nightscout-innstillingene dens. Fjern klienten på hovedenheten og legg den til på nytt (se [Klientens eget Nightscout-token](#client-master-control-own-token)).                                                                          |
-| NSClient-loggen på klienten viser *«✕ SETTINGS … refused»* og innstillingene dens følger ikke lenger hovedenheten             | Noen andre har skrevet hovedenhetens innstillingsdokument, eller hovedenheten har en ny nøkkel (for eksempel etter at dataene dens ble slettet). En sammenkoblet klient henter en ny nøkkel selv neste gang den kobler til Nightscout. En telefon som bare leser Nightscout, trenger hovedenhetens QR-kode på nytt (**Bare lesetilgang til Nightscout → vis koden**). |
-| Klientens kort viser *«Bruker Nightscout-tokenet …»* i rødt                                                                   | Klienten skriver fortsatt med et token som har flere rettigheter enn den trenger. Hovedenheten sender den dens eget token etter sammenkoblingen, men bare hvis hovedenheten har et admin-token. Sjekk hovedenhetens token, eller sett opp klienten på nytt med en QR-kode.                                                                                            |
-| En klient kan ikke lenger lese Nightscout                                                                                     | Tokenet dens ble slettet, for eksempel fordi klienten ble fjernet på hovedenheten. Legg den til på nytt.                                                                                                                                                                                                                                                              |
-| Behandlinger som registreres på Nightscout-nettstedet, blir ikke brukt                                                        | Forventet i [herdet modus](#client-master-control-hardened-mode): registrer dem på en sammenkoblet klient i stedet.                                                                                                                                                                                                                                                   |
-
 Ved problemer med Nightscout / synkronisering, se først [Feilsøking av NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+### Sammenkobling
+
+**QR-kode-alternativene kan ikke velges i dialogen Ny klient**
+
+Dialogen forklarer hvorfor:
+
+- *Ikke et admin-token*: gi hovedenheten et admin-token for din Nightscout, eller legg til klienten med **PIN**.
+- *Ikke tilkoblet*: vent til hovedenheten viser *tilkoblet* i **NSClientV3**.
+
+**«Nightscout har et token med dette navnet og andre rettigheter»**
+
+Ett av dine egne Nightscout-token heter `aaps-` pluss dette navnet. Velg et annet navn for klienten.
+
+**«En klient med dette navnet finnes allerede i listen»**
+
+Velg et annet navn, eller fjern den klienten først.
+
+**Klienten sier «Denne koden er fra en annen AAPS-versjon»**
+
+Hovedenheten og klienten må kjøre den **samme** versjonen av **AAPS**. Oppdater den eldste.
+
+**Klienten sier «Denne koden har utløpt»**
+
+En kode som parer, virker i omtrent to minutter. Legg til klienten på nytt på hovedenheten for å få en ny kode.
+
+**Klienten sier «Denne telefonen er allerede sammenkoblet»**
+
+Koble den fra først (**Administrer → Koble til hovedenhet → Koble fra**), og skann så på nytt. En **Bare Nightscout**-kode virker også på en sammenkoblet telefon.
+
+**Sammenkoblingen avbrytes med «Paringshemmeligheten kunne ikke lagres»**
+
+Ingenting ble endret. Start sammenkoblingen på nytt. Hvis det fortsatt ikke virker, start **AAPSClient** på nytt og prøv én gang til.
+
+**Klienten sier at den ikke er sammenkoblet**
+
+Par på nytt fra **Administrer → Koble til hovedenhet**. Sjekk at klienten er **Aktiv** i hovedenhetens liste **Autoriserte klienter**.
+
+**Ingenting skjer etter sammenkoblingen**
+
+Sjekk at **Tillat klientstyring** er PÅ på hovedenheten, og at hovedenheten er koblet til Nightscout.
+
+### Kommandoer
+
+**Klienten sier at hovedenheten er frakoblet, eller kommandoer mislykkes**
+
+Sjekk at:
+
+- hovedenhetstelefonen er våken og **AAPS** kjører,
+- begge telefonene er tilkoblet i **NSClientV3**, til det samme Nightscout-nettstedet,
+- **websockets** er slått på på begge telefonene.
+
+Websockets er **påkrevd** for fjernstyring fra **AAPSClient**. Hvis websocket-tilkoblingen stadig faller ut, virker ikke fjernstyringen. Se [Feilsøking av NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+**En kommando blir avvist av hovedenheten**
+
+Hovedenheten kontrollerer hver kommando på nytt mot sin nåværende tilstand: for eksempel finnes ikke den valgte profilen lenger, eller pumpetypen stemmer ikke. Sjekk på hovedenheten.
+
+**Behandlinger som registreres på Nightscout-nettstedet, blir ikke brukt**
+
+Dette er forventet i [herdet modus](#client-master-control-hardened-mode). Registrer dem heller på en sammenkoblet klient.
+
+### Nightscout-token og innstillinger
+
+**Klienten sier «Hovedenheten avviste forespørselen: Denne telefonen skriver til Nightscout med et annet token enn sitt eget»**
+
+Klienten brukte sitt eget Nightscout-token før og skriver nå med et annet, for eksempel etter at et token ble skrevet inn i Nightscout-innstillingene dens. Fjern klienten på hovedenheten og legg den til på nytt (se [Klientens eget Nightscout-token](#client-master-control-own-token)).
+
+**Klientens kort viser «Bruker Nightscout-tokenet …» i rødt**
+
+Klienten skriver fortsatt med et token som har flere rettigheter enn den trenger. Hovedenheten sender klienten dens eget token etter sammenkoblingen, men bare hvis hovedenheten har et admin-token. Sjekk hovedenhetens token, eller sett opp klienten på nytt med en QR-kode.
+
+**NSClient-loggen på klienten viser «✕ SETTINGS … refused», og innstillingene dens følger ikke lenger hovedenheten**
+
+Noen andre har skrevet hovedenhetens innstillingsdokument, eller hovedenheten har en ny nøkkel (for eksempel etter at dataene dens ble slettet). En sammenkoblet klient tar i bruk den nye nøkkelen av seg selv neste gang den kobler til Nightscout. En telefon som bare leser Nightscout, trenger hovedenhetens QR-kode på nytt (**Bare lesetilgang til Nightscout → vis koden**).
+
+**En klient kan ikke lenger lese Nightscout**
+
+Tokenet dens ble slettet, for eksempel fordi klienten ble fjernet på hovedenheten. Legg den til på nytt.
 
 ---
 
