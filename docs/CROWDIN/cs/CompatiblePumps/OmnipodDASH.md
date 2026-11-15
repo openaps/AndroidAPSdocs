@@ -535,7 +535,7 @@ Zvolte, zda má **AAPS** přehrát zvuk se svými oznámeními, když si není j
 
 Stáří **Baterie pumpy** se nehlásí: baterie i zásobník inzulínu jsou součástí každého podu a baterie vždy vydrží déle než samotný pod (maximálně 80 hodin).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

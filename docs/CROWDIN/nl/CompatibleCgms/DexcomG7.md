@@ -40,7 +40,9 @@ De officiële Dexcom-app blijft met de sensor verbonden. xDrip leest de glucosew
 
 ```{admonition} Not a trusted data source
 :class: note
-**AAPS** ziet xDrip in de Companion App-modus niet als een [vertrouwde bron van BG-gegevens](#GettingStarted-TrustedBGSource): SMB's zijn niet altijd toegestaan.
+**AAPS** does not consider xDrip in Companion App mode a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs are not allowed all the time.
+
+To read the Dexcom app notifications without xDrip, as a trusted data source, use the [Notification Reader](#DexcomG7-notification-reader).
 ```
 
 ### De notificaties van de Dexcom-app lezen
@@ -101,3 +103,52 @@ Versie 9.0+ nodig
 - Voorwaarden voor koppelen: ga akkoord met het koppelen van de sensor aan Juggluco. Zorg dat het scherm niet vergrendeld is tijdens het koppelen. Als het koppelen mislukt, wacht dan 5 minuten voordat je het opnieuw probeert.
 
 - Uitzondering: Wear OS-horloges kunnen koppelen zonder op een akkoordknop te drukken.
+
+(DexcomG7-notification-reader)=
+
+## 5. Notification Reader (G7, ONE+ and Stelo)
+
+De officiële Dexcom-app blijft met de sensor verbonden. **AAPS** reads the glucose value directly from the notification of the Dexcom app, without any other app in between.
+
+```{admonition} Trusted data source
+:class: note
+Readings from the Dexcom G7, ONE+ and Stelo apps are a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs can be allowed all the time.
+```
+
+Compared to the other methods on this page, the Notification Reader has limits:
+
+- **No trend arrow** and **no backfill**: readings missed while the phone was off or out of range are lost.
+- Each reading gets the time the notification appeared, not the exact time of the sensor reading.
+- Only values between 40 and 405 mg/dL (2.2 and 22.5 mmol/L) are read. "LOW" and "HIGH" are not read.
+- Stelo gives a reading every 15 minutes.
+
+### Set up the Dexcom app
+
+- Houd de Dexcom-app geïnstalleerd en verbonden met de sensor.
+- Make sure the Dexcom app shows the current glucose value in its notification. De notificaties moeten zichtbaar blijven: zet ze niet op stil en verberg ze niet.
+- Use the same glucose units (mg/dL or mmol/L) in the Dexcom app as in **AAPS**. Otherwise **AAPS** cannot read the value.
+
+### Configuratie in AAPS
+
+- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and confirm the switch.
+
+  ![BG Source: Notification Reader selected](../images/NotificationReader_BgSource.png)
+
+- Back on the main screen, **AAPS** shows **Permissions Required**. Next to **Notification Access**, tap **Grant**.
+
+  ![Permissions Required: Notification Access](../images/NotificationReader_Permissions.png)
+
+- Android opens its notification access list (its name depends on your Android version, for example *Notification read, reply & control*). Select **AAPS**, turn on **Allow notification access** and confirm with **Allow**.
+
+  ![Android asks to allow notification access for AAPS](../images/NotificationReader_AllowDialog.png)
+
+  Android warns that **AAPS** could read all your notifications. **AAPS** only reads the notifications of supported CGM apps and ignores all others.
+
+  ![Notification access allowed for AAPS](../images/NotificationReader_AccessOn.png)
+
+- If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because **AAPS** was not installed from the Play Store. Open the **AAPS** app info (long press the **AAPS** icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Ga dan terug naar het scherm voor toegang tot meldingen en sta de toegang toe.
+- Readings appear in **AAPS** when the Dexcom app shows a new value.
+
+```{warning}
+If the Dexcom app notification shows more than one glucose number, or none, **AAPS** skips that notification.
+```

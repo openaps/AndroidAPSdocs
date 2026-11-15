@@ -211,7 +211,7 @@ Op het horloge:
 
 Je ziet een wifi-koppelingscode en een IP-adres en poort verschijnen:
 
-![Horlogescherm met de wifi-koppelingscode en het IP-adres en de poort](../images/wearos/ADB03.png)
+![Horlogescherm met de wifi-koppelingscode en het IP-adres en de poort](../images/wearos/watch_wifi_pairing_code.png)
 
 - In de terminal: `adb pair ipaddress:port` Bijv. `adb pair 10.10.1.125:36299`
 - Je wordt gevraagd om de koppelingscode. Voer die in.

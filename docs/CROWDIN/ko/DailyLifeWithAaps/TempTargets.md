@@ -23,7 +23,7 @@
 
 ### TT - 활동
 
-![TT 활동](../images/TempTarget2.png)
+![TT 활동](../images/v4/TempTarget/TempTarget2.png)
 
 **혈당 목표 (기본 프리셋, 조정 가능)**
 
@@ -46,7 +46,7 @@ AAPS는 1시간 30분 동안 140 mg/dL 또는 7.8 mmol/L에 도달하려고 합�
 
 ### TT - 식사 직전
 
-![TT 식사 직전](../images/TempTarget1.png)
+![TT 식사 직전](../images/v4/TempTarget/TempTarget1.png)
 
 **혈당 목표 (기본 프리셋, 조정 가능)**
 
@@ -63,7 +63,7 @@ AAPS는 45분 동안 90 mg/dL 또는 5.0 mmol/L에 도달하려고 합니다
 
 ### TT - 저혈당
 
-![TT 저혈당](../images/TempTarget3.png)
+![TT 저혈당](../images/v4/TempTarget/TempTarget3.png)
 
 **혈당 목표 (기본 프리셋, 조정 가능)**
 
@@ -96,11 +96,11 @@ AAPS는 1시간 동안 160 mg/dL 또는 8.9 mmol/L에 도달하려고 합니다
 
     <br />### 임시 목표 활성화
     
-    원하는 프리셋으로 밀어 이동하고(그 값이 편집기에 불러와집니다), 필요하면 편집기에서 **목표**/**기간**을 조정한 다음 **▶ 활성화**를 탭하십시오. 무엇이든 시작되기 전에 확인 화면에 정확한 목표, 기간, 이유가 표시됩니다:
+    원하는 프리셋으로 밀어 이동하고(그 값이 편집기에 불러와집니다), 필요하면 편집기에서 **목표**/**기간**을 조정한 다음 **▶ 활성화**를 탭하십시오. A confirmation shows the exact target, duration and reason before anything starts:
     
-    ![활성화 확인](../images/TempTarget8.png)
+    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    확인하면 임시 목표가 바로(또는 선택한 **활성화** 시간에) 시작되고 설정한 **기간** 동안 실행됩니다.
+    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
     ```{admonition} 숫자를 바꾸는 것은 이번 한 번만 적용됩니다 — 프리셋은 바뀌지 않습니다
     :class: important
@@ -148,13 +148,13 @@ AAPS는 1시간 동안 160 mg/dL 또는 8.9 mmol/L에 도달하려고 합니다
 
 가장 빠른 방법은 메인 화면의 **목표 칩**(현재 목표 범위를 표시)을 탭하는 것입니다:
 
-![메인 화면의 목표 칩](../images/TempTarget6.png)
+![메인 화면의 목표 칩](../images/v4/TempTarget/TempTarget6.png)
 
 그러면 위에서 설명한 **임시 목표** 화면이 열립니다. 프리셋으로 밀어 이동하고 **▶ 활성화**를 탭하십시오. 같은 화면은 **관리** → **임시 목표**로도 열 수 있습니다.
 
 (TempTargets-carbs-dialog)= 탄수화물을 입력할 때는 **임시 목표** 화면을 열 필요가 전혀 없습니다. **탄수화물 대화 상자**(**처치** → **탄수화물**)의 맨 위에 **저혈당 임시 목표 시작**, **식사 직전 임시 목표 시작**, **활동 임시 목표 시작** 스위치가 있습니다. 하나를 켜면 해당 프리셋이 탄수화물 입력과 함께 활성화됩니다:
 
-![탄수화물 대화 상자의 임시 목표 스위치](../images/TempTarget5.png)
+![탄수화물 대화 상자의 임시 목표 스위치](../images/v4/TempTarget/TempTarget5.png)
 
     {admonition} 자동 저혈당 임시 목표
     :class: note
@@ -171,7 +171,7 @@ AAPS는 1시간 동안 160 mg/dL 또는 8.9 mmol/L에 도달하려고 합니다
 3. 편집기에서 **임시 목표** 및/또는 **기간**을 조정하십시오.
 4. 상단 툴바에 나타나는 **저장** 아이콘을 탭하십시오.
 
-![프리셋 편집 — 툴바의 저장 아이콘, 동작 표시줄의 되돌리기](../images/TempTarget7.png)
+![프리셋 편집 — 툴바의 저장 아이콘, 동작 표시줄의 되돌리기](../images/v4/TempTarget/TempTarget7.png)
 
 편집기의 값이 기본 제공 프리셋의 공장 기본값과 다른 동안에는 동작 표시줄에 **↺ 되돌리기** 버튼도 나타납니다. 이 버튼을 탭하면 프리셋의 원래 목표와 기간이 복원됩니다.
 
@@ -179,7 +179,7 @@ AAPS는 1시간 동안 160 mg/dL 또는 8.9 mmol/L에 도달하려고 합니다
 
 임시 목표가 실행 중이면 메인 화면의 목표 칩에 목표와 남은 시간이 표시됩니다. 목표 칩을 탭하십시오. **임시 목표** 화면에서 실행 중인 프리셋이 **활성**으로 강조 표시되고, 아래쪽 툴바 끝의 **▶ 활성화** 버튼 바로 왼쪽에 빨간색 **✗ 취소** 버튼이 나타납니다. 이 버튼을 탭하고 확인하십시오:
 
-![실행 중인 임시 목표 취소](../images/TempTarget9.png)
+![실행 중인 임시 목표 취소](../images/v4/TempTarget/TempTarget9.png)
 
 실행 중인 임시 목표는 **Wear OS 워치**, 페어링된 **클라이언트** 또는 **자동화** 규칙(*임시 목표 중지*)으로도 중지할 수 있습니다.
 
@@ -231,6 +231,6 @@ AAPS는 1시간 동안 160 mg/dL 또는 8.9 mmol/L에 도달하려고 합니다
 
 이렇게 하려면 **설정** → **OpenAPS SMB**를 열고 *'높은 임시 목표에서 SMB 활성화'*를 끄십시오.
 
-![높은 임시 목표에서 SMB 활성화 설정](../images/TempTargetSMB.png)
+![높은 임시 목표에서 SMB 활성화 설정](../images/v4/TempTarget/TempTargetSMB.png)
 
 이렇게 하면 COB > 0이고 *'낮은 임시 목표에서 SMB 활성화'* 또는 *'항상 SMB 활성화'*가 켜져 있고 OpenAPS SMB가 활성이더라도 **AAPS**는 **SMB**를 주입하지 않습니다.

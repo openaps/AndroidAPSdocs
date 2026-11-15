@@ -23,7 +23,7 @@ Avsnitten nedan sammanfattar funktionerna i **Tillfälligt målvärde – Träni
 
 ### TT – Träning
 
-![TT Träning](../images/TempTarget2.png)
+![TT Träning](../images/v4/TempTarget/TempTarget2.png)
 
 **BG-målvärde (standardförinställning, kan justeras)**
 
@@ -46,7 +46,7 @@ Användare kan också vilja tänka på att:
 
 ### TT – Äta snart
 
-![TT Äta snart](../images/TempTarget1.png)
+![TT Äta snart](../images/v4/TempTarget/TempTarget1.png)
 
 **BG-målvärde (standardförinställning, kan justeras)**
 
@@ -63,7 +63,7 @@ Beroende på **BG**-nivån kommer **AAPS** att ”öka” insulinet inom gränse
 
 ### TT – Hypo
 
-![TT Hypo](../images/TempTarget3.png)
+![TT Hypo](../images/v4/TempTarget/TempTarget3.png)
 
 **BG-målvärde (standardförinställning, kan justeras)**
 
@@ -96,11 +96,11 @@ När du väljer ett kort för en förinställning läses dess **målvärde** och
 
     <br />### Aktivera ett tillfälligt målvärde
     
-    Svep till den förinställning du vill ha (dess värden läses in i redigeraren), justera vid behov **målvärde**/**varaktighet** i redigeraren och tryck sedan på **▶ Aktivera**. En bekräftelse visar exakt målvärde, varaktighet och orsak innan något startar:
+    Svep till den förinställning du vill ha (dess värden läses in i redigeraren), justera vid behov **målvärde**/**varaktighet** i redigeraren och tryck sedan på **▶ Aktivera**. A confirmation shows the exact target, duration and reason before anything starts:
     
-    ![Bekräftelse av aktivering](../images/TempTarget8.png)
+    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    När du har bekräftat startar det tillfälliga målvärdet direkt (eller vid den valda tiden för **Aktivering**) och gäller under den inställda **varaktigheten**.
+    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
     ```{admonition} Att ändra siffrorna gäller bara en gång – det ändrar inte förinställningen
     :class: important
@@ -148,13 +148,13 @@ Du kan också ställa in ett tillfälligt målvärde utan att öppna denna skär
 
 Det snabbaste sättet är att trycka på **målvärdeschipet** på huvudskärmen (det visar ditt aktuella målintervall):
 
-![Målvärdeschipet på huvudskärmen](../images/TempTarget6.png)
+![Målvärdeschipet på huvudskärmen](../images/v4/TempTarget/TempTarget6.png)
 
 Då öppnas skärmen **Tillfälligt målvärde** som beskrivs ovan – svep till en förinställning och tryck på **▶ Aktivera**. Du kommer också till samma skärm via **Hantera** → **Tillfälligt målvärde**.
 
 (TempTargets-carbs-dialog)= När du anger kolhydrater behöver du inte öppna skärmen **Tillfälligt målvärde** alls: **dialogrutan Kolhydrater** (**Behandlingar** → **Kolhydrater**) har reglagen **Starta "Hypo"**, **Starta "Äta snart"** och **Starta "Träning"** högst upp. Slå på ett av dem så aktiveras motsvarande förinställning samtidigt som kolhydraterna registreras:
 
-![TT-reglagen i dialogrutan Kolhydrater](../images/TempTarget5.png)
+![TT-reglagen i dialogrutan Kolhydrater](../images/v4/TempTarget/TempTarget5.png)
 
     {admonition} Automatiskt TT Hypo
     :class: note
@@ -171,7 +171,7 @@ Varje förinställnings **målvärde** och **varaktighet** redigeras direkt på 
 3. Justera **Tillfälligt målvärde** och/eller **Varaktighet** i redigeraren.
 4. Tryck på ikonen **Spara** som visas i det övre verktygsfältet.
 
-![Redigera en förinställning – ikonen Spara i verktygsfältet, Återställ i åtgärdsfältet](../images/TempTarget7.png)
+![Redigera en förinställning – ikonen Spara i verktygsfältet, Återställ i åtgärdsfältet](../images/v4/TempTarget/TempTarget7.png)
 
 Medan redigeraren skiljer sig från fabriksvärdena för en inbyggd förinställning visas också knappen **↺ Återställ** i åtgärdsfältet – tryck på den för att återställa förinställningens ursprungliga målvärde och varaktighet.
 
@@ -179,7 +179,7 @@ Medan redigeraren skiljer sig från fabriksvärdena för en inbyggd förinställ
 
 Medan ett tillfälligt målvärde är aktivt visar målvärdeschipet på huvudskärmen målvärdet och hur lång tid som är kvar. Tryck på det – på skärmen **Tillfälligt målvärde** är den aktiva förinställningen markerad som **AKTIV**, och en röd knapp **✗ Avbryt** visas i slutet av verktygsfältet längst ner, precis till vänster om knappen **▶ Aktivera**. Tryck på den och bekräfta:
 
-![Avbryta ett aktivt tillfälligt målvärde](../images/TempTarget9.png)
+![Avbryta ett aktivt tillfälligt målvärde](../images/v4/TempTarget/TempTarget9.png)
 
 Ett aktivt tillfälligt målvärde kan också stoppas från en **Wear OS-klocka**, från en parkopplad **klient** eller av en regel i **Automation** (*Avbryt tillfälligt målvärde*).
 
@@ -231,6 +231,6 @@ Avancerat, [mål 9](#objectives-objective9): Om du använder OpenAPS SMB och har
 
 För att göra detta öppnar du **Inställningar** → **OpenAPS SMB** och inaktiverar *'Aktivera SMB vid högt tillfälligt målvärde'*.
 
-![Inställningen Aktivera SMB vid högt tillfälligt målvärde](../images/TempTargetSMB.png)
+![Inställningen Aktivera SMB vid högt tillfälligt målvärde](../images/v4/TempTarget/TempTargetSMB.png)
 
 Då ger **AAPS** inga **SMB:er**, även med COB > 0, *'Aktivera SMB vid lågt tillfälligt målvärde'* eller *'Aktivera SMB alltid'* på och OpenAPS SMB aktivt.

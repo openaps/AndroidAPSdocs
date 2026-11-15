@@ -22,7 +22,7 @@ Potrzebujesz co najmniej jednego zapisanego **profilu**. **Procent profilu** zaw
 
     <br />1. Na ekranie głównym **dotknij nazwy profilu** (obok ikony gwiazdki). Otworzy się [ekran Profil](#ProfileSwitch-manage-v4) na karcie działającego **profilu**, oznaczonej **AKTYWNY**.
     
-       ![Dotknij nazwy profilu na ekranie głównym, aby otworzyć ekran Profil](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Aby zostawić ten sam **profil**, zostaw zaznaczoną kartę **AKTYWNY**. Aby jednocześnie zmienić **profil**, przesuń palcem do innej karty.
     3. Dotknij okrągłego przycisku **▶** (**Aktywuj**) w prawym dolnym rogu. Otworzy się ekran **Aktywuj**.
@@ -169,7 +169,7 @@ Zawsze chodzi o to, ustawienia **profilu** z której godziny mają zastąpić us
     - 22:00 **-10 h** -> 12:00
     - Z powodu ujemnego przesunięcia czasu zamiast ustawień, które normalnie obowiązują o 12:00, zostaną użyte ustawienia z 22:00.
 
-![Kierunki przesunięcia czasu w zmianie profilu](../images/ProfileSwitch_PlusMinus2.png)
+![Kierunki przesunięcia czasu w zmianie profilu](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 Ten mechanizm zapisywania kopii **profilu** pozwala dużo dokładniej liczyć przeszłe wartości i śledzić zmiany **profilu**.
 

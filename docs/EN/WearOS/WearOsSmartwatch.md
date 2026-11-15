@@ -222,7 +222,7 @@ On the watch:
 
 You will see a Wi-Fi pairing code and IP address and port appearing:
 
-![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/ADB03.png)
+![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/watch_wifi_pairing_code.png)
 
 - In the terminal:
 `adb pair ipaddress:port`
@@ -343,7 +343,7 @@ These slots only work on watches running **Wear OS 5 or older**, where the custo
 
 ## AAPSv2 watchface - Legend
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+![Legend AAPSv2 watchface](../images/wearos/Watchface_Legend.png)
 
 A - time since last loop run
 

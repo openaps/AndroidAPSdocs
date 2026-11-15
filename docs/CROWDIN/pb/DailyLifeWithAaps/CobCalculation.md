@@ -84,7 +84,7 @@ Se os carboidratos foram superestimados ou subestimados, isso pode ser corrigido
 
 A tela **Histórico de tratamentos** pode ser usada para corrigir um registro de carboidratos errado, excluindo-o. Isso pode acontecer porque o usuário superestimou ou subestimou os carboidratos inseridos:
 
-![Excluir um registro de carboidratos do Histórico de tratamentos](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Excluir um registro de carboidratos do Histórico de tratamentos](../images/treatments_history_delete_carbs.png)
 
 1. Verifique e anote o **COB** e o **IOB** atuais na tela principal do **AAPS**.
 2. Abra o **Histórico de tratamentos** (menu lateral → *Histórico de tratamentos*), aba **Carboidratos e bólus**. Dependendo da bomba, os carboidratos podem aparecer junto com a insulina em uma linha ou como um registro separado (por exemplo, com a Dana RS).

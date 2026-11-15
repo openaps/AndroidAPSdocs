@@ -535,7 +535,7 @@ Välj om **AAPS** ska spela upp ett ljud med sina aviseringar när det är osäk
 
 Åldern för **Pumpbatteri** rapporteras inte: batteriet och insulinreservoaren är inbyggda i varje pod, och batteriet räcker alltid längre än själva podden (högst 80 timmar).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

@@ -8,7 +8,7 @@ The loop status is shown on the main screen with one of the icons below.
 
 See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode and on the other icons in the picture (4 to 6).
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Loop status](../images/main/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ If this option is enabled, the sensitivity detection (autosens) can raise the ta
 
 If the target is modified due to sensitivity detection, it will be displayed with a green background on your main screen.
 
-![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
+![Target modified by autosens](../images/main/main_target_modified_by_autosens.png)
 
 This setting is available when one of "Use dynamic sensitivity" or "Use Autosens" are enabled.
 

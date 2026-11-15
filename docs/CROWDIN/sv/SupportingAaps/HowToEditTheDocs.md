@@ -22,37 +22,37 @@ I vårt exempel gör vi en ändring i AndroidAPSdocs. Det här kan göras på vi
 
 1. Gå till <https://github.com/openaps/AndroidAPSdocs> och tryck på Fork (forka) uppe till höger för att göra en egen kopia av repot.
 
-![Forka repot](../images/PR0.png)
+![Forka repot](../images/docs_pr_fork_repository.png)
 
 2. Gå till valfri sida och navigera till den sida du vill redigera. Du kan klicka på länken "Edit in GitHub" (redigera i GitHub) uppe till höger. Det går bara på engelska sidor. 
 
-![redigera dokumentet](../images/PR1.png)
+![redigera dokumentet](../images/docs_pr_edit_on_github.png)
 
 Eller klicka på pennikonen som visas i den övre listen på sidan som du vill redigera. Du måste redan vara inloggad på ditt GitHub-konto för att göra detta (om du inte har ett konto är det enkelt att skapa ett).
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. Båda alternativen i steg 2 skapar en ny gren (branch) i DITT repo där dina ändringar sparas. Gör dina ändringar i filen.
 
 Vi använder markdown för sidorna i dokumentationen. Filerna har filändelsen ".md". Markdown-specifikationen är inte fast, och just nu använder vi myst_parser för våra markdown-filer. Var noga med att använda rätt syntax, som [beskrivs nedan](#edit-the-docs-code-syntax).
 
-![Redigera grenen](../images/PR3.png)
+![Redigera grenen](../images/docs_pr_edit_file.png)
 
 4. Du har arbetat i fliken "<>Edit file" (redigera filen). Välj fliken "Preview changes" (förhandsgranska ändringarna) för att se med nya ögon att allt du har ändrat ser ut som du tänkt dig (kontrollera även stavfel). Om du ser något mer som behöver förbättras går du tillbaka till redigeringsfliken och gör fler ändringar. 
 
-![förhandsgranskningsläge](../images/PR5.png)
+![förhandsgranskningsläge](../images/docs_pr_preview_changes.png)
 
 5. När du är klar med dina ändringar scrollar du längst ner på sidan. I rutan längst ner skriver du dina kommentarer i textfältet med texten "Add an optional extended description..." (lägg till en valfri utförlig beskrivning). Standardrubriken innehåller filnamnet. Försök att skriva en mening som förklarar **varför** du gör ändringen. När du anger orsaken förstår granskarna lättare vad du vill uppnå med din PR.
 
-![kommentarer till commit](../images/PR4.png)
+![kommentarer till commit](../images/docs_pr_commit_description.png)
 
 6. Klicka på den gröna knappen "Propose file changes" (föreslå filändringar) eller "Commit changes" (spara ändringarna). På sidan som visas klickar du på "Create Pull Request" (skapa pull request), och på nästa sida klickar du igen på "Create Pull Request".
 
-![skapa pull request](../images/PR6.png)
+![skapa pull request](../images/docs_pr_create_pull_request.png)
 
 7. Nu har du öppnat en pull request (PR). GitHub ger din PR ett nummer. Det står efter rubriken och ett #-tecken. Gå tillbaka till den här sidan för att se om du har fått återkoppling (eller, om du får GitHub-aviseringar via e-post, får du e-post om allt som händer med din PR). Ändringen finns nu i en lista med PR:er som teamet granskar. De kan ge återkoppling innan ändringen tas in i den officiella dokumentationen för AAPS! Om du vill följa hur det går med din PR kan du klicka på klockikonen uppe till höger i ditt GitHub-konto och se alla dina PR:er.
 
-![Följa din PR](../images/PR7.png)
+![Följa din PR](../images/docs_pr_tracking.png)
 
 PS: Din fork och din gren finns kvar på ditt eget GitHub-konto. När du har fått en avisering om att din PR har slagits ihop (merged) kan du ta bort din gren om du inte behöver den längre (aviseringsområdet i steg 7 visar en länk för att ta bort grenen när den har stängts eller slagits ihop). Om du följer den här metoden nästa gång du redigerar, börjar dina ändringar alltid från en uppdaterad version av AndroidAPSdocs-repona. Om du väljer ett annat sätt att starta en PR (till exempel att börja redigera från master-grenen i ditt forkade repo) måste du först se till att ditt repo är uppdaterat. Gör då en "compare" (jämförelse) och slå ihop alla ändringar som har kommit sedan du senast uppdaterade din fork. Eftersom många glömmer att uppdatera sina repon rekommenderar vi att du använder PR-metoden ovan tills du är van vid att göra en "compare".
 

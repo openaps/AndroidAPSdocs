@@ -84,7 +84,7 @@ Karbonhidratlar fazla veya eksik tahmin edildiyse, bu [burada](#screens-bolus-ca
 
 Hatalı bir karbonhidrat girdisi, **Tedavi geçmişi** ekranında silinerek düzeltilebilir. Bunun nedeni, kullanıcının karbonhidrat girdisini fazla veya eksik tahmin etmiş olması olabilir:
 
-![Tedavi geçmişinden bir karbonhidrat girdisini silme](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Tedavi geçmişinden bir karbonhidrat girdisini silme](../images/treatments_history_delete_carbs.png)
 
 1. **AAPS** ana ekranındaki güncel **AKRB** ve **AİNS** değerlerine bakın ve not edin.
 2. **Tedavi geçmişi**'ni açın (gezinme çekmecesi → *Tedavi geçmişi*), **Karbonhidrat ve bolus** sekmesi. Pompaya bağlı olarak karbonhidratlar insülinle birlikte tek satırda veya ayrı bir girdi olarak görünebilir (ör. Dana RS ile).

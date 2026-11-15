@@ -535,7 +535,7 @@ TBR, SMB 또는 볼러스가 주입되었는지 불확실할 때와 주입이 �
 
 **펌프 배터리** 사용 기간은 보고되지 않습니다: 배터리와 인슐린 레저버가 각 Pod에 들어 있으며, 배터리는 항상 Pod 자체보다 오래 갑니다 (최대 80시간).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

@@ -22,37 +22,37 @@ In unserem Beispiel nehmen wir nun eine Änderung an der AndroidAPS-Dokumentatio
 
 1. Gehe zu <https://github.com/openaps/AndroidAPSdocs> und klicke auf "Fork" oben rechts, um Deine eigene Kopie des Repositories (dt. Quellcode) zu machen.
 
-![Fork repo](../images/PR0.png)
+![Fork repo](../images/docs_pr_fork_repository.png)
 
 2. Wechsle zu einer beliebigen Seite und navigiere zu der Seite, die du bearbeiten möchtest. Du kannst oben rechts in der Ecke auf den „Edit in GitHub"-Link klicken. Das ausschließlich für die englisch-sprachigen (Original-) Seiten möglich. 
 
-![edit doc](../images/PR1.png)
+![edit doc](../images/docs_pr_edit_on_github.png)
 
 Oder klicke auf das Stift-Symbol, das in der oberen Leiste der zu bearbeitenden Seiteninhalte erscheint. Du musst in Deinem GitHub-Konto angemeldet sein, um dies zu tun (falls Du noch keines hast, kannst Du es problemlos einrichten).
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. Beide Optionen in Schritt 2 führen dazu, dass ein neuer Branch in DEINEM kopierten Repository erstellt wird, wo die Änderungen gespeichert werden sollen. Editiere die Datei.
 
 Wir verwenden Markdown für die Dokumentation. Die Dateien haben die Endung „.md“. Die Markdown-Spezifikation ist nicht festgelegt. Wir verwenden derzeit den myst_parser für unsere Markdown-Dateien. Achte auf die [unten](#edit-the-docs-code-syntax) beschriebene richtige Syntax.
 
-![Edit branch](../images/PR3.png)
+![Edit branch](../images/docs_pr_edit_file.png)
 
 4. Du arbeitest im "<>Edit file" Reiter. Wähle den Reiter „Preview changes“, um alles noch einmal mit frischem Blick anzusehen und sicherzugehen, dass Deine Änderungen so aussehen, wie Du es wolltest (achte auf Tippfehler). Wenn du etwas entdeckst, das ausgebessert werden muss, wechsle wieder zum edit Reiter, um die Ausbesserungen vorzunehmen. 
 
-![preview mode](../images/PR5.png)
+![preview mode](../images/docs_pr_preview_changes.png)
 
 5. Wenn du mit deinen Änderungen fertig bist, scrolle zum Seitenende. In der Box am Seitenende solltest du deine Kommentare im Textfeld namens "Add an optional extended description..." einfügen. Der Standardtitel beinhaltet den Dateinamen. Versuche einen Satz dazu zu schreiben, **warum** du etwas geändert hast. Die Angabe des Grundes hilft den Admins zu verstehen, was du mit deinem PR bezweckst.
 
-![commit comments](../images/PR4.png)
+![commit comments](../images/docs_pr_commit_description.png)
 
 6. Klicke auf den grünen "Propose file changes" (Änderungen vorschlagen) oder "Commit changes" (Änderungen integrieren) Button. Auf der Seite, die dann erscheint, klicke auf "Create Pull Request" und auf der dann erscheinenden Seite klicke auf "Create Pull Request".
 
-![create pull request](../images/PR6.png)
+![create pull request](../images/docs_pr_create_pull_request.png)
 
 7. Das war der letzte Schritt zur Erstellung eines pull requests, PR. GitHub ordnet dem PR eine Nummer, die du nach dem Titel findest, zu und einen Hashtag. Rufe diese Seite wieder auf, um Feedback zu erhalten (oder du erhältst automatisch E-Mail Benachrichtigungen über Aktivitäten bei deinem PR, wenn du Github entsprechend konfiguriert hast). Die Änderung wird nun in einer Liste von PRs enthalten sein, die das Team überprüfen wird. Es wird gegebenenfalls Rückmeldungen dazu geben, bevor die Änderung in die Hauptdokumentation für AAPS einfließt! Wenn du den Fortschritt des PR überprüfen willst, kannst du auf das Logo mit der Glocke in der oberen rechten Ecke deines GitHub-Kontos klicken, wo du dann alle deine PRs siehst.
 
-![PR tracking](../images/PR7.png)
+![PR tracking](../images/docs_pr_tracking.png)
 
 PS: dein Fork und Branch befinden sich nach wie vor auf deinem persönlichen GitHub Konto. Nachdem Du die Benachrichtigung erhalten hast, dass Dein PR integriert wurde, kannst Du Deinen Branch löschen, wenn Du damit fertig bist (der Benachrichtigungsbereich in Schritt 7 stellt Dir einen Link zur Verfügung, um den Branch zu löschen, wenn er geschlossen oder integriert wurde). Künftige Änderungen werden immer mit einer aktuellen Version des AndroidAPS Repositories beginnen, wenn du diese Vorgehensweise verwendest. Wenn Du einen PR auf anderem Weg beginnst (z. B. indem Du vom Master-Branch Deines Forks aus bearbeitest), musst Du sicherstellen, dass Dein Repository aktuell ist. Führe dazu zuerst ein „compare“ durch und übernimm alle Änderungen, die seit Deiner letzten Aktualisierung des Forks hinzugekommen sind. Da häufig vergessen wird, die eigenen Repositories auf dem aktuellen Stand zu halten, empfehlen wir, den PR Prozess wie oben beschrieben zu verwenden, bis du dich mit der Ausführung von "compares" vertraut gemacht hast.
 

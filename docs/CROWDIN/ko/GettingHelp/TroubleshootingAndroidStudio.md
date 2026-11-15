@@ -192,7 +192,7 @@ Cause: error: invalid source release: 21
 
   32비트 OS인지 64비트 OS인지 확인하는 방법은 인터넷에서 찾을 수 있습니다. 예: [이 페이지](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Unable to start daemon process 스크린샷](../images/AndroidStudioWin10_32bitError.png)
+  ![Unable to start daemon process 스크린샷](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Gradle 다시 동기화
@@ -237,7 +237,7 @@ apk가 성공적으로 빌드되었으며 휴대폰으로 옮길 수 있습니�
 
 ## Apk가 설치되지 않음
 
-![휴대폰 앱이 설치되지 않음](../images/Update_AppNotInstalled.png)
+![휴대폰 앱이 설치되지 않음](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * “app-full-release.apk” 파일을 휴대폰으로 옮겼는지 확인하십시오.
 * 이 오류는 보통 새 apk가 설치된 **AAPS**와 다른 키 저장소로 서명되었다는 뜻입니다. 이전 키 저장소가 아직 있으면 그것을 선택하고 다시 빌드하십시오. 그렇지 않으면 [새 키 저장소로 AAPS 재설치하기](#reinstall-aaps)를 보십시오.

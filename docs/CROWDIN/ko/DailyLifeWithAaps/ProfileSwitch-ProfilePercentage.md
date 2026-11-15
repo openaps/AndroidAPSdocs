@@ -22,7 +22,7 @@
 
     <br />1. 메인 화면에서 **프로파일 이름을 탭**하십시오(별 아이콘 옆). [프로파일 화면](#ProfileSwitch-manage-v4)이 실행 중인 **프로파일**의 카드에서 열립니다. 이 카드에는 **활성** 표시가 있습니다.
     
-       ![메인 화면에서 프로파일 이름을 탭하여 프로파일 화면 열기](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. 같은 **프로파일**을 유지하려면 **활성** 카드를 선택된 상태로 두십시오. 동시에 **프로파일**을 바꾸려면 다른 카드로 밀어 넘기십시오.
     3. 오른쪽 아래의 둥근 **▶** 버튼(**활성화**)을 탭하십시오. **활성화** 화면이 열립니다.
@@ -169,7 +169,7 @@ mg/dL/U          | 낮추는 데 필요한 U
     - 22:00 **-10 h** -> 12:00
     - 음의 시간 이동 때문에 보통 12:00에 사용하는 설정 대신 22:00(오후 10시)의 설정이 사용됩니다.
 
-![프로파일 전환 시간 이동 방향](../images/ProfileSwitch_PlusMinus2.png)
+![프로파일 전환 시간 이동 방향](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 **프로파일**의 스냅샷을 저장하는 이 방식 덕분에 과거를 훨씬 더 정확하게 계산할 수 있고 **프로파일** 변경을 추적할 수 있습니다.
 

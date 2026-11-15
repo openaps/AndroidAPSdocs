@@ -22,7 +22,7 @@ Necesitas al menos un **Perfil** guardado. Un **Porcentaje del perfil** siempre 
 
     <br />1. En la pantalla principal, **toca el nombre del perfil** (junto al icono de la estrella). Se abre la [pantalla de Perfil](#ProfileSwitch-manage-v4) en la tarjeta del **Perfil** en uso, marcada como **ACTIVO**.
     
-       ![Toca el nombre del perfil en la pantalla principal para abrir la pantalla de Perfil](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Para mantener el mismo **Perfil**, deja seleccionada la tarjeta **ACTIVO**. Para cambiar también de **Perfil**, desliza a otra tarjeta.
     3. Toca el botón redondo **▶** (**Activar**) abajo a la derecha. Se abre la pantalla **Activar**.
@@ -169,7 +169,7 @@ La pregunta es siempre: ¿los ajustes del **Perfil** de qué hora deben sustitui
     - 22:00 **-10 h** -> 12:00
     - Se usarán los ajustes de las 22:00 (10 de la noche) en lugar de los ajustes que se usan normalmente a las 12:00, por el desplazamiento de hora negativo.
 
-![Sentido del desplazamiento de hora en el cambio de perfil](../images/ProfileSwitch_PlusMinus2.png)
+![Sentido del desplazamiento de hora en el cambio de perfil](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 

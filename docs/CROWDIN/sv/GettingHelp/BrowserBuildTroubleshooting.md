@@ -89,6 +89,7 @@ Right after the repository is created, GitHub may not have read its workflow fil
 - **"The secret is too short"**, **"The secret is not a valid code"** eller **"The secret does not contain a keystore"**: fel text klistrades in i hemligheten, ofta själva ordet `KEYSTORE_SET`, eller bara en del av koden. Öppna **Settings** → **Secrets and variables** → **Actions** i ditt repo, redigera `KEYSTORE_SET` och klistra in den långa koden från **Copy secret** (kopiera hemlighet) igen (gör först om steg 2 på inställningssidan om du har stängt den).
 - **"Keystore, password or alias is wrong"**: kontrollera lösenordet och aliaset för din keystore och gör sedan om steg 2 och 3 på inställningssidan.
 - **"Google Drive access has expired or was revoked"**: gör om [steg 6](#aaps-builder-google-drive) och uppdatera hemligheten `GDRIVE_OAUTH2`.
+- **"Process completed with exit code 1" and a red line with only a link to `services.gradle.org`**, after less than a minute: the build could not download Gradle, a tool it needs to build the app. The Gradle website was not responding. Your repository and your settings are fine. Wait half an hour, then [run the build again](#aaps-ci-rerun).
 - **Another error**: [read the build log](#aaps-ci-read-the-logs), then [run the build again](#aaps-ci-rerun). If it fails again the same way, ask for help with the name of the failed step and the error lines. Dela aldrig innehållet i dina hemligheter.
 
 ### Step 5: the app

@@ -8,7 +8,7 @@
 
 Вижте [Екрани на AAPS > Главният екран > Статус на кръга](#AapsScreens-loop-status) за информация как да изберете режима на кръга и за другите икони на снимката (4 до 6).
 
-![Статус на кръга](../images/Home2020_LoopStatus.png)
+![Статус на кръга](../images/main/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ Autosens следи отклоненията на кръвната захар (�
 
 Ако целта е променена заради определянето на чувствителност, тя се показва със зелен фон на главния екран.
 
-![Цел, променена от autosens](../images/Home2020_DynamicTargetAdjustment.png)
+![Цел, променена от autosens](../images/main/main_target_modified_by_autosens.png)
 
 Тази настройка е достъпна, когато е включена „Използвай динамична чувствителност“ или „Използвай Autosens“.
 

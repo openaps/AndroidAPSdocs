@@ -21,7 +21,7 @@
 
 - Деинсталирането на **AAPS** изтрива всичките му настройки, вашите [цели](../SettingUpAaps/CompletingTheObjectives.md) и текущата връзка с помпата. Връщате ги, като импортирате своя **файл с настройки**, затова се уверете, че имате скорошен такъв.
 - Файлът с настройки не съдържа историята на леченията и на кръвната захар. Ако качвате данни в [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), можете да ги заредите обратно след преинсталирането (стъпка 8).
-- Нужна ви е вашата [**главна парола**](#Preferences-master-password): файлът с настройки е шифрован с нея.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Потребители на Omnipod и Medtrum:** първо прочетете [Помпи без маркуч](#ExportImportSettings-tubeless-pumps). Файлът ви с настройки трябва да е експортиран по време на пода или пача, който носите в момента.
 - Ако е нужно, [настройте приемника за CGM/източника на КЗ](../Getting-Started/CompatiblesCgms.md), преди да започнете.
 

@@ -97,6 +97,8 @@ Ayarlarınızı, [AAPS kurulumu](#SetupWizard-StoragePermission) sırasında se�
 
 **Not**: _Dışa aktarılan ayarlar AAPS ana parolanızla şifrelenir: dışa aktarmada kullanılan ana parola olmadan ayar dosyasını içe aktaramazsınız!_
 
+If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+
 ### Ayarları dışa veya içe aktarma
 Ayarları dışa veya içe aktarmak için **menüyü** (☰) açın ve **Bakım**'ı seçin. **Dosya yönetimi** altında, **Ayarları dışa aktar** ve **Ayarları içe aktar** yanındaki **Yerel** ve **Bulut** çipleri, ayar dosyasının nereye kaydedileceğini veya nereden okunacağını seçer: **Yerel**, telefonunuzdaki AAPS dizinidir; **Bulut** ise bir [Bulut Dizini](#preferences-maintenance-cloud) ayarlandıktan sonra kullanılabilir. Bir çipe dokunmak onu açar veya kapatır; her zaman en az biri seçili kalır ve iki satır aynı seçimi paylaşır. Ardından başlatmak için **Ayarları dışa aktar** veya **Ayarları içe aktar** seçeneğinin kendisine dokunun.
 

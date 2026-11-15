@@ -84,7 +84,7 @@ Als koolhydraten over- of onderschat zijn, kun je dit corrigeren in het scherm *
 
 Je kunt het scherm **Behandelingen geschiedenis** gebruiken om een foute koolhydraatinvoer te corrigeren door deze te verwijderen. Misschien heeft de gebruiker de koolhydraten over- of onderschat bij het invoeren:
 
-![Een koolhydraatinvoer verwijderen uit Behandelingen geschiedenis](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Een koolhydraatinvoer verwijderen uit Behandelingen geschiedenis](../images/treatments_history_delete_carbs.png)
 
 1. Controleer de actuele **COB** en **IOB** op het hoofdscherm van **AAPS** en onthoud ze.
 2. Open **Behandelingen geschiedenis** (zijmenu → *Behandelingen geschiedenis*), tabblad **Koolhydraten en bolus**. Afhankelijk van de pomp worden de koolhydraten samen met de insuline in één regel getoond, of als aparte invoer (bijv. bij Dana RS).

@@ -172,7 +172,7 @@ Android requires special permission for apps if they want to send you notificati
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Будь ласка, **НЕ ВТРАЧАЙТЕ СВІЙ ГОЛОВНИЙ ПАРОЛЬ**. Запишіть його, _наприклад_, на Google Drive — це гарне місце, бо Google робить для вас резервну копію. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+Будь ласка, **НЕ ВТРАЧАЙТЕ СВІЙ ГОЛОВНИЙ ПАРОЛЬ**. Запишіть його, _наприклад_, на Google Drive — це гарне місце, бо Google робить для вас резервну копію. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 Коли закінчите, натисніть «**ДАЛІ**», щоб перейти до наступного екрана.

@@ -97,6 +97,8 @@ Você também pode alterar o **Diretório do AAPS** na tela **Manutenção** (**
 
 **Observação**: _As configurações exportadas serão criptografadas com a sua senha mestra do AAPS: sem a senha mestra usada na exportação você não conseguirá importar o arquivo de configurações!_
 
+If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+
 ### Exportar ou importar configurações
 Para exportar ou importar configurações, abra o **menu** (☰) e selecione **Manutenção**. Em **Gerenciamento de arquivos**, os chips **Local** e **Nuvem** ao lado de **Exportar configurações** e **Importar configurações** escolhem onde o arquivo de configurações é salvo ou de onde é lido: **Local** é o diretório do AAPS no seu telefone, **Nuvem** fica disponível quando um [Diretório da nuvem](#preferences-maintenance-cloud) estiver configurado. Tocar em um chip liga ou desliga esse chip; pelo menos um fica sempre selecionado, e as duas linhas usam a mesma escolha. Depois toque no próprio **Exportar configurações** ou **Importar configurações** para começar.
 

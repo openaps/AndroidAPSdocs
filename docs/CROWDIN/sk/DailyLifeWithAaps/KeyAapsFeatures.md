@@ -8,7 +8,7 @@ Stav okruhu sa zobrazuje na hlavnej obrazovke jednou z ikon nižšie.
 
 Ako zvoliť režim okruhu a čo znamenajú ďalšie ikony na obrázku (4 až 6), nájdete v časti [Obrazovky AAPS > Hlavná obrazovka > Stav okruhu](#AapsScreens-loop-status).
 
-![Stav okruhu](../images/Home2020_LoopStatus.png)
+![Stav okruhu](../images/main/main_loop_status.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -168,7 +168,7 @@ Ak je táto možnosť zapnutá, detekcia citlivosti (autosens) môže zvýšiť 
 
 Ak je cieľ upravený detekciou citlivosti, zobrazí sa na hlavnej obrazovke so zeleným pozadím.
 
-![Cieľ upravený pomocou autosens](../images/Home2020_DynamicTargetAdjustment.png)
+![Cieľ upravený pomocou autosens](../images/main/main_target_modified_by_autosens.png)
 
 Toto nastavenie je dostupné, keď je zapnutá jedna z možností „Použiť dynamickú citlivosť“ alebo „Použiť Autosens“.
 

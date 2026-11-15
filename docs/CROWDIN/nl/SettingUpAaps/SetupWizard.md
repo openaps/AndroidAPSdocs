@@ -172,7 +172,7 @@ Ga terug met de pijl linksboven. De wizard toont nu "**Wachtwoord ingesteld!**":
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**RAAK JE HOOFDWACHTWOORD NIET KWIJT**. Schrijf het op, _bijv._ in Google Drive. Dat is een goede plek, want Google maakt er een back-up van voor je. Je smartphone of pc kan crashen, en dan heb je misschien geen actuele kopie. Als je je hoofdwachtwoord vergeet, kan het later moeilijk zijn om je profielconfiguratie en je voortgang in de **Doelen** terug te halen.
+**RAAK JE HOOFDWACHTWOORD NIET KWIJT**. Schrijf het op, _bijv._ in Google Drive. Dat is een goede plek, want Google maakt er een back-up van voor je. Je smartphone of pc kan crashen, en dan heb je misschien geen actuele kopie. Als je je hoofdwachtwoord vergeet, kan het later moeilijk zijn om je profielconfiguratie en je voortgang in de **Doelen** terug te halen. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 Als je klaar bent, druk je op "**VOLGENDE**" om naar het volgende scherm te gaan.

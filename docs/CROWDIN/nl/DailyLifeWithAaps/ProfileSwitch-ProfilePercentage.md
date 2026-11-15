@@ -22,7 +22,7 @@ Je hebt minstens één opgeslagen **Profiel** nodig. Een **Profiel percentage** 
 
     <br />1. Tik op het hoofdscherm **op de profielnaam** (naast het sterpictogram). Het [Profiel-scherm](#ProfileSwitch-manage-v4) opent op de kaart van het actieve **Profiel**, gemarkeerd met **ACTIEF**.
     
-       ![Tik op de profielnaam op het hoofdscherm om het Profiel-scherm te openen](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Wil je hetzelfde **Profiel** houden, laat dan de kaart **ACTIEF** geselecteerd. Wil je tegelijk van **Profiel** wisselen, veeg dan naar een andere kaart.
     3. Tik op de ronde knop **▶** (**Activeer**) rechtsonder. Het scherm **Activeer** opent.
@@ -169,7 +169,7 @@ Het gaat er altijd om van welk uur de instellingen van het **Profiel** de instel
     - 22:00 **-10 h** -> 12:00
     - De instellingen van 22:00 (10 uur 's avonds) worden gebruikt in plaats van de instellingen die normaal om 12:00 gelden, door de negatieve tijdverschuiving.
 
-![Richting van de tijdverschuiving bij een profiel wissel](../images/ProfileSwitch_PlusMinus2.png)
+![Richting van de tijdverschuiving bij een profiel wissel](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 

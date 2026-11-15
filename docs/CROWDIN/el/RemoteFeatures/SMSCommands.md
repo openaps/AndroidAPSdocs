@@ -210,7 +210,7 @@ The default minimum time delay between bolus commands is 15 minutes, counted fro
 
 | Εντολή               | Έλεγχος | Λειτουργία και *Απάντηση*                                                                            |
 | -------------------- | ------- | ---------------------------------------------------------------------------------------------------- |
-| ΑΝΤΛΙΑ               | Όχι     | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP                 | Όχι     | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
 | PUMP DISCONNECT *30* | Ναι     | Αποσυνδέει την αντλία για *30* λεπτά                                                                 |
 | PUMP CONNECT         | Ναι     | Η αντλία επανασυνδέθηκε                                                                              |
 

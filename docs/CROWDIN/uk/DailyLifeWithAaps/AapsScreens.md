@@ -9,7 +9,7 @@
 
 ## Головний екран
 
-![Головний екран](../images/Home_Homescreen.png)
+![Головний екран](../images/main/Home_Homescreen.png)
 
 Це перший екран, який ви побачите, коли відкриєте **AAPS**. На ньому є більшість інформації, потрібної вам щодня.
 
@@ -33,13 +33,13 @@
 * червоний = нижче діапазону
 * жовтий = вище діапазону
 
-![Коло ГК у діапазоні, зелене](../images/Home_Delta.png) ![Коло ГК вище діапазону, жовте](../images/Home_Delta_high.png) ![Коло ГК нижче діапазону, червоне](../images/Home_Delta_low.png)
+![Коло ГК у діапазоні, зелене](../images/main/Home_Delta.png) ![Коло ГК вище діапазону, жовте](../images/main/Home_Delta_high.png) ![Коло ГК нижче діапазону, червоне](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
 #### Статус петлі
 
-![Статус петлі](../images/Home2020_LoopStatus.png)
+![Статус петлі](../images/main/main_loop_status.png)
 
 Поруч із колом ГК значок показує робочий режим петлі (на малюнку згори донизу):
 
@@ -166,7 +166,7 @@
 
 Щоб **змінити відсоток профілю** (і його тривалість), торкніться назви профілю, а потім торкніться круглої кнопки **▶** (Активувати) внизу справа на екрані профілю. В **AAPS** 3.x цей екран відкривався довгим натисканням на назву профілю; в **AAPS** 4 довге натискання нічого не робить. Крок за кроком: [Зміна відсотка профілю](#ProfileSwitch-change-percentage).
 
-![Профіль з активним перемиканням профілю](../images/Home2020_ProfileSwitch.png)
+![Профіль з активним перемиканням профілю](../images/main/main_profile_switch.png)
 
 1. Звичайний вигляд при стандартній активації профілю.
 2. Перемикання профілю з відсотком 90 % і залишком тривалості 9 хвилин — назва профілю стає жовтою, поки діє тимчасове перемикання профілю.
@@ -174,7 +174,7 @@
 
 #### Ціль
 
-![Залишок тривалості тимчасової цілі](../images/Home2020_TT.png)
+![Залишок тривалості тимчасової цілі](../images/main/main_temp_target.png)
 
 Поточна цільова глюкоза крові показана під назвою профілю.
 
@@ -200,7 +200,7 @@
 
 #### IOB, COB, базал і чутливість
 
-![IOB, COB, базал і чутливість](../images/Home2020_TBR.png)
+![IOB, COB, базал і чутливість](../images/main/main_iob_cob_basal_sensitivity.png)
 
 1. **Шприц**: активний інсулін (IOB) — кількість інсуліну, що ще діє у вашому організмі  
     Активний інсулін дорівнював би нулю, якби працював лише ваш стандартний базал і не залишалося інсуліну від попередніх болюсів. 
@@ -234,7 +234,7 @@
 
 ### Розділ C — Рядок статусу
 
-![Рядок статусу](../images/Home2020_StatusLights.png)
+![Рядок статусу](../images/main/main_status_row.png)
 
 Рядок статусу дає візуальне попередження про
 
@@ -320,7 +320,7 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 Натисніть значок **олівця** у верхньому правому куті графіка, щоб відкрити налаштування графіка:
 
-![Налаштування головного графіка](../images/Home2020_MainGraphSetting.png)
+![Налаштування головного графіка](../images/main/main_graph_settings.png)
 
 * **Висота графіка** змінює висоту графіка.
 * **ACT** накладає криву активності інсуліну: суцільна жовто-зелена лінія <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (не плутайте з пунктирним жовтим прогнозом UAM)
@@ -408,7 +408,7 @@ AAPS дозує інсулін не лише за вашою поточною Г
 
 Щоб налаштувати додатковий графік, натисніть значок **олівця** у його верхньому правому куті:
 
-![Додаткові налаштування графіків](../images/Home2020_AdditionalGraphSetting.png)
+![Додаткові налаштування графіків](../images/main/main_additional_graph_settings.png)
 
 Виберіть чипи, які відповідають даним, що ви хочете бачити на цьому графіку; кнопка **Видалити** видаляє графік.
 
@@ -490,7 +490,7 @@ Steps are drawn as columns, and the heart rate as a curved line that breaks wher
 
 ### Розділ F — Панель швидкого запуску
 
-![Панель швидкого запуску](../images/Home2020_Buttons.png)
+![Панель швидкого запуску](../images/main/main_quicklaunch_toolbar.png)
 
 Плаваюча панель унизу екрана містить ваші дії **[швидкого запуску](../DailyLifeWithAaps/QuickLaunch.md)**. Маленька **шестерня** відкриває налаштування швидкого запуску, де ви вибираєте, які кнопки показувати (терапія, записи Careportal, дії CGM, екрани панелі **Керувати**, кнопки [Швидкого майстра](../DailyLifeWithAaps/QuickWizards.md), [Сцени](../DailyLifeWithAaps/Scenes.md) тощо).
 
@@ -502,7 +502,7 @@ Steps are drawn as columns, and the heart rate as a curved line that breaks wher
 
 #### Інсулін
 
-![Діалог інсуліну](../images/Home2020_ButtonInsulin.png)
+![Діалог інсуліну](../images/v4/Screens/insulin_dialog.png)
 
 Щоб ввести певну кількість інсуліну без [калькулятора болюса](#aaps-screens-bolus-wizard).
 
@@ -520,7 +520,7 @@ If you do not want to bolus through the pump but record an insulin amount (i.e. 
 
 #### Вуглеводи
 
-![Діалог вуглеводів](../images/Home2020_ButtonCarbs.png)
+![Діалог вуглеводів](../images/v4/Screens/carbs_dialog.png)
 
 Щоб записати вуглеводи без болюса.
 
@@ -574,7 +574,7 @@ If you do not want to bolus through the pump but record an insulin amount (i.e. 
 
 ## Калькулятор болюса
 
-![Калькулятор болюса](../images/Home2020_BolusWizard_v2.png)
+![Калькулятор болюса](../images/v4/Screens/bolus_wizard.png)
 
 Коли ви хочете зробити болюс на їжу, зазвичай ви робите його саме тут.
 
@@ -618,7 +618,7 @@ If you do not want to bolus through the pump but record an insulin amount (i.e. 
 
 **Встановити нагадування** (нагадування про їжу): коли введено час прийому вуглеводів у майбутньому, з’являється перемикач «**Встановити нагадування**», щоб у вказаний час вам нагадали з’їсти вуглеводи, які ви ввели в **AAPS**:
 
-![Нагадування для майбутніх вуглеводів](../images/Home2021_BolusWizard_EatingReminder.png)
+![Нагадування для майбутніх вуглеводів](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
 The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
@@ -640,7 +640,7 @@ The reminder starts when the bolus has been delivered. While it runs, a **Time t
 
 #### Неправильне визначення COB
 
-![Повільне засвоєння вуглеводів](../images/Calculator_SlowCarbAbsorption.png)
+![Повільне засвоєння вуглеводів](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Якщо ви бачите попередження вище після використання калькулятора болюса, **AAPS** виявив, що розраховане значення COB може бути неправильним. Тож якщо ви хочете зробити ще один болюс після попереднього прийому їжі з COB, остерігайтеся передозування!
 
@@ -719,7 +719,7 @@ The reminder starts when the bolus has been delivered. While it runs, a **Time t
 
 ## Профіль
 
-![Профіль](../images/Screenshots_Profile.png)
+![Профіль](../images/screens/Screenshots_Profile.png)
 
 **Керувати → Профіль** (або дотик до назви профілю на головному екрані) відкриває екран профілю: ваші профілі як карусель карток, які можна гортати, з кнопками, щоб додати, редагувати, клонувати, видалити і **активувати** профіль.
 
@@ -733,7 +733,7 @@ The reminder starts when the bolus has been delivered. While it runs, a **Time t
 
 ## NSClient
 
-![NSClient](../images/Screenshots_NSClient.png)
+![NSClient](../images/screens/Screenshots_NSClient.png)
 
 **Конфігурація → Звʼязок → NSClientV3 → Відкрити плагін** показує статус з’єднання з вашим сайтом Nightscout: URL, статус websocket, чергу і журнал синхронізації.
 
@@ -745,7 +745,7 @@ The reminder starts when the bolus has been delivered. While it runs, a **Time t
 
 ## Джерело ГК — xDrip, BYODA...
 
-![Екран джерела ГК](../images/Screenshots_BGSource.png)
+![Екран джерела ГК](../images/screens/Screenshots_BGSource.png)
 
 **Конфігурація → Джерело ГК → Відкрити плагін** показує історію значень CGM і дає змогу видалити значення у разі збою (наприклад, компресійне зниження) або дубльованих значень.
 

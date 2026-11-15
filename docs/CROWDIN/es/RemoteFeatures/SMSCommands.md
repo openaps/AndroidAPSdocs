@@ -210,7 +210,7 @@ La columna *Aut.* de las tablas de abajo indica si cada comando necesita esta au
 
 | Comando              | Aut. | Función y *respuesta*                                                                                |
 | -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| BOMBA                | No   | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP                 | No   | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
 | PUMP DISCONNECT *30* | Sí   | Para desconectar la bomba durante *30* minutos                                                       |
 | PUMP CONNECT         | Sí   | Bomba reconectada                                                                                    |
 

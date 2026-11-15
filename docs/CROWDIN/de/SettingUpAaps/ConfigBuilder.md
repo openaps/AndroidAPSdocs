@@ -166,19 +166,19 @@ Diese Diagramme zeigen genau, wie sich DIA und Wirkmaximum über den Bereich der
 
 DIA anpassen:
 
-```{image} ../images/iob_remaining_static_peak.png
+```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
 Wirkmaximum anpassen:
 
-```{image} ../images/iob_remaining_static_dia.png
+```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
 Zum Schluss ein Vergleich, bei dem DIA und Wirkmaximum gleichzeitig angepasst werden. Dabei werden beide Werte im gleichen Verhältnis geändert, sodass `49/35 ~ 7/5`. Oder ebenso `120/93 ~ 9/7`. Die Abstände bleiben unabhängig von der Ausgangs-DIA oder dem Ausgangs-Wirkmaximum gleich, solange die relative Änderung für beide gleich ist.
 
-```{image} ../images/iob_remaining_uniform.png
+```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 

@@ -192,7 +192,7 @@ Cause: error: invalid source release: 21
 
   There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Screenshot Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Gradle Resync
@@ -237,7 +237,7 @@ Your apk was built successfully and can be transferred to your phone!
 
 ## ה-apk לא הותקן
 
-![בטלפון: האפליקציה לא הותקנה](../images/Update_AppNotInstalled.png)
+![בטלפון: האפליקציה לא הותקנה](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * ודאו שהעברתם את הקובץ "app-full-release.apk" לטלפון שלכם.
 * השגיאה הזו בדרך כלל אומרת שה-apk החדש חתום באמצעות keystore אחר מזה של ה-**AAPS** המותקן. אם ה-keystore הקודם עדיין אצלכם, בחרו בו ובנו שוב. אחרת, ראו [התקנה מחדש של AAPS עם keystore חדש](#reinstall-aaps).

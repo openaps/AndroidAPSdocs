@@ -84,7 +84,7 @@ Pokud bylo množství sacharidů přeceněno nebo podceněno, lze to opravit na 
 
 Obrazovku **Historie ošetření** lze použít k opravě chybného záznamu sacharidů tak, že ho smažete. Může to být proto, že uživatel zadal příliš mnoho nebo příliš málo sacharidů:
 
-![Smazání záznamu sacharidů z historie ošetření](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Smazání záznamu sacharidů z historie ošetření](../images/treatments_history_delete_carbs.png)
 
 1. Zkontrolujte a zapamatujte si aktuální **COB** a **IOB** na hlavní obrazovce **AAPS**.
 2. Otevřete **Historii ošetření** (postranní nabídka → *Historie ošetření*), karta **Sacharidy a bolusy**. Podle typu pumpy se sacharidy mohou zobrazit společně s inzulínem na jednom řádku, nebo jako samostatný záznam (např. u Dana RS).

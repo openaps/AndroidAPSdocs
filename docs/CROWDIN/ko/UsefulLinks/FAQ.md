@@ -74,7 +74,7 @@ AAPS 메인 화면의 [루프 아이콘](#AapsScreens-loop-status)으로 펌프 
   * AAPS와 사용하는 다른 앱(예: xDrip, Juggluco, BYODA)의 현재 [apk](../SettingUpAaps/BuildingAaps.md),
   * 키 저장소 파일(apk를 빌드할 때 만든 파일)과 그 비밀번호,
   * AAPS와 다른 앱의 최신 설정 내보내기 파일,
-  * **AAPS** 마스터 비밀번호: 이것이 없으면 설정 파일을 가져올 수 없습니다.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ dev 버전은 실제 루프용이 아니라 테스트용입니다: 계속하기 
 
 1. AAPS 디렉터리의 `extra` 하위 폴더(보통 `AAPS/extra`)에 `PasswordReset`이라는 빈 파일(파일 확장자 없음)을 만드십시오.
 2. **AAPS**를 다시 시작하십시오. 펌프가 연결되어 있어야 합니다: **AAPS**에 "펌프를 기다리는 중…"이 표시되고, 30초 안에 펌프 일련번호를 읽어야 합니다.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. **AAPS**에 "비밀번호가 설정되었습니다!"가 표시됩니다: 이제 마스터 비밀번호는 **펌프 일련번호**입니다. `PasswordReset` 파일은 자동으로 삭제됩니다.
+
 4. **설정** > **보안** > **마스터 비밀번호**를 열고 새 비밀번호를 설정하십시오.
 
 제시간에 펌프에 연결되지 않으면 아무것도 바뀌지 않습니다: 펌프 연결을 확인하고 다시 시도하십시오.

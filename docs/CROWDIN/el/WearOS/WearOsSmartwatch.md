@@ -211,7 +211,7 @@ After basic setup of your watch according to the video above, go to the playstor
 
 Θα δείτε να εμφανίζονται ένας κωδικός σύζευξης Wi-Fi, η διεύθυνση IP και η θύρα:
 
-![Οθόνη ρολογιού με τον κωδικό σύζευξης Wi-Fi, τη διεύθυνση IP και τη θύρα](../images/wearos/ADB03.png)
+![Οθόνη ρολογιού με τον κωδικό σύζευξης Wi-Fi, τη διεύθυνση IP και τη θύρα](../images/wearos/watch_wifi_pairing_code.png)
 
 - Στο τερματικό: `adb pair ipaddress:port` Π.χ. `adb pair 10.10.1.125:36299`
 - Θα σας ζητηθεί ο κωδικός σύζευξης. Πληκτρολογήστε τον.

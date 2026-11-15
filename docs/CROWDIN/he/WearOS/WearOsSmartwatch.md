@@ -211,7 +211,7 @@ On the watch:
 
 יופיעו קוד צימוד של Wi-Fi, כתובת IP ופורט:
 
-![מסך השעון מציג את קוד הצימוד של Wi-Fi, את כתובת ה-IP ואת הפורט](../images/wearos/ADB03.png)
+![מסך השעון מציג את קוד הצימוד של Wi-Fi, את כתובת ה-IP ואת הפורט](../images/wearos/watch_wifi_pairing_code.png)
 
 - In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299`
 - You will be asked for the pairing code. Enter it.

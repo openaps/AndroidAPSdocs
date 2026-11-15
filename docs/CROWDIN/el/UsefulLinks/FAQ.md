@@ -74,7 +74,7 @@
   * το τρέχον [apk](../SettingUpAaps/BuildingAaps.md) του AAPS και κάθε άλλης εφαρμογής που χρησιμοποιείτε (π.χ. xDrip, Juggluco, BYODA).
   * το αρχείο keystore σας (από τη δημιουργία του apk) και τον κωδικό του,
   * τα πιο πρόσφατα αρχεία εξαγωγής ρυθμίσεων από το AAPS και τις άλλες εφαρμογές σας,
-  * τον κύριο κωδικό του **AAPS**: χωρίς αυτόν δεν μπορείτε να εισαγάγετε το αρχείο ρυθμίσεων.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@
 
 1. Δημιουργήστε ένα κενό αρχείο με όνομα `PasswordReset` (χωρίς επέκταση αρχείου) στον υποφάκελο `extra` του φακέλου AAPS (συνήθως `AAPS/extra`).
 2. Κάντε επανεκκίνηση του **AAPS**. Η αντλία σας πρέπει να είναι συνδεδεμένη: το **AAPS** δείχνει «Αναμονή για την αντλία…» και πρέπει να διαβάσει τον σειριακό αριθμό της αντλίας μέσα σε 30 δευτερόλεπτα.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. Το **AAPS** δείχνει «Ο κωδικός ορίστηκε!»: ο κύριος κωδικός σας είναι τώρα ο **σειριακός αριθμός της αντλίας**. Το αρχείο `PasswordReset` διαγράφεται αυτόματα.
+
 4. Ανοίξτε **Ρυθμίσεις** > **Προστασία** > **Κύριος κωδικός** και ορίστε νέο κωδικό.
 
 Αν η αντλία δεν απαντήσει εγκαίρως, δεν αλλάζει τίποτα: ελέγξτε τη σύνδεση της αντλίας και δοκιμάστε ξανά.

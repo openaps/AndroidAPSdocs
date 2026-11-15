@@ -59,7 +59,7 @@ For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwat
 
 Άλλες δυσκολίες είναι ότι είναι δύσκολο να έχετε αρκετή διάρκεια μπαταρίας, και τα ρολόγια με αρκετή μπαταρία είναι συχνά ογκώδη και χοντρά. Οι χρήστες αναφέρουν ότι παλεύουν με το λειτουργικό σύστημα και τις ρυθμίσεις εξοικονόμησης ενέργειας, ότι δυσκολεύονται να ξεκινήσουν αισθητήρες στο ρολόι, ότι η εμβέλεια Bluetooth είναι κακή (για να διατηρείται η σύνδεση και με τον αισθητήρα και με την αντλία) και ότι η αντοχή στο νερό είναι αμφίβολη. Παραδείγματα φαίνονται στις παρακάτω φωτογραφίες.
 
-![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![image](../images/watch_standalone_aaps_and_xdrip.png)
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
@@ -88,7 +88,7 @@ If you are interested in setting up a standalone watch, read the posts and comme
 
 Μετά την [εγκατάσταση του **AAPS** στο ρολόι σας](../WearOS/WearOsSmartwatch.md), θα μπορείτε αυτόματα να επιλέξετε το watchface που προτιμάτε από αυτά τα watchface που είναι φτιαγμένα για το **AAPS**. Στα περισσότερα ρολόγια, απλά πατάτε παρατεταμένα στην αρχική οθόνη μέχρι να μικρύνει η οθόνη και σύρετε δεξιά για να επιλέξετε άλλη οθόνη:
 
-![image](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![image](../images/watchfaces_aaps_selection.png)
 
 Αυτές είναι οι βασικές οθόνες που περιέχονται στο **AAPS**. Υπάρχουν [περισσότερα watchface](#WearOS_changing-to-AAPS-watchface) και μπορείτε επίσης να χρησιμοποιήσετε [επιπλοκές](#Watchfaces-complications).
 
@@ -155,7 +155,7 @@ If you are interested in setting up a standalone watch, read the posts and comme
 
 Το **WatchDrip+** είναι μια συνοδευτική εφαρμογή που φτιάχνει η κοινότητα και δείχνει δεδομένα γλυκόζης και κυκλώματος σε διάφορα μοντέλα έξυπνων ρολογιών, κυρίως των μαρκών Xiaomi (_π.χ._ Mi Band) και Amazfit:
 
-![image](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![image](../images/watch_watchdrip_plus.png)
 
 Από την έκδοση 0.5, το **WatchDrip+** διαβάζει τα δεδομένα του απευθείας από το **AAPS**, χωρίς να χρειάζεται το xDrip+ ως ενδιάμεσο. Στο τηλέφωνο **AAPS**:
 
@@ -170,9 +170,9 @@ If you are interested in setting up a standalone watch, read the posts and comme
 
 ### Ρολόι Pebble
 
-![image](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![image](../images/watch_pebble.png)
 
-![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![image](../images/watch_pebble_watchface.png)
 
 
 Τα ρολόγια Pebble ([δεν παράγονται πλέον](https://en.wikipedia.org/wiki/Pebble_(watch))) πουλιόνταν από το 2013 έως το 2016 και μπορεί ακόμα να βρεθούν μεταχειρισμένα. Η Fitbit ανέλαβε την περιουσία της Pebble. Οι χρήστες Pebble μπορούν να χρησιμοποιούν το watchface Urchin για να βλέπουν δεδομένα του Nightscout. Τα δεδομένα που μπορούν να εμφανιστούν περιλαμβάνουν IOB, τον τρέχοντα ενεργό προσωρινό βασικό ρυθμό και τις προβλέψεις. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.

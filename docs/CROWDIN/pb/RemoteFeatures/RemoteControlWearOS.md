@@ -309,13 +309,13 @@ Se o **AAPS** precisou limitar a dose, por exemplo porque o bólus calculado est
     
     Os itens do [Assistente rápido](#quickwizards) do telefone que têm **Mostrar no relógio** ativado, dentro do horário válido deles. Um item de carboidratos mostra os carboidratos em g, um item de insulina mostra a dose fixa em U. Um toque executa o item depois de uma confirmação no relógio. Não há nada para configurar no relógio: edite os itens no telefone e ative **Mostrar no relógio** em **Seleção do dispositivo** para cada item que você quer no bloco. Fora do horário válido de todos os seus itens, o bloco mostra **Nenhuma configuração disponível**.
     
-    ![Um item do Assistente rápido com Mostrar no relógio ativado, e o bloco em que ele aparece](../images/quickwizard_watch_phone.png)
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Bloco Cenário
+    ### Scene tile
     
-    ![Bloco Cenário](../images/wearos/tiles/tile_scene.png)
+    ![Scene tile](../images/wearos/tiles/tile_scene.png)
     
-    Os [Cenários](#scenes-from-watch) do telefone. Cada um dos quatro lugares é definido como **Automático**, **Nenhum** ou um cenário nas configurações do bloco. Um lugar **Automático** pega o próximo cenário da lista do telefone que nenhum outro lugar já pegou. Um lugar definido para um cenário que não existe mais no telefone mostra **Indisponível**.
+    The [Scenes](#scenes-from-watch) of the phone. Cada um dos quatro lugares é definido como **Automático**, **Nenhum** ou um cenário nas configurações do bloco. Um lugar **Automático** pega o próximo cenário da lista do telefone que nenhum outro lugar já pegou. Um lugar definido para um cenário que não existe mais no telefone mostra **Indisponível**.
     
     ![Configurações do bloco Cenário, quatro lugares definidos como Automático](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,17 +361,17 @@ Se o **AAPS** precisou limitar a dose, por exemplo porque o bólus calculado est
     
     Observação: nem todas as telas lidam bem com o modo sempre ligado. Isso pode causar marcas permanentes na tela (burn-in), principalmente nas telas OLED mais antigas. Os relógios normalmente escurecem a tela para evitar o burn-in; consulte o manual do usuário, o fabricante ou a internet para obter conselhos.
     
-    ![Mostrador na mesa de cabeceira](../images/Watchface_nightstand.jpg)
+    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![UI simplificada](../images/Watchface_simplified_ui.png)
+    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Alarmes do telefone no relógio
+    ## Phone alarms on the watch
     
-    ![Um alarme do telefone no relógio](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    O relógio mostra os alarmes do telefone, assim você vê por que o telefone está fazendo barulho e pode responder pelo pulso. O relógio vibra, e de novo a cada meio minuto durante cinco minutos, até você responder. Uma notificação mostra o título e o texto do alarme, com as mesmas respostas do lembrete [Hora de comer](#WearOsSmartwatch-wizard-carb-time):
+    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. O relógio vibra, e de novo a cada meio minuto durante cinco minutos, até você responder. Uma notificação mostra o título e o texto do alarme, com as mesmas respostas do lembrete [Hora de comer](#WearOsSmartwatch-wizard-carb-time):
     
     * **Silenciar**, ou deslizar: o alarme para, e a tela de alarme no telefone fecha.
     * **Silenciar 5 min**: o alarme para e toca de novo depois de cinco minutos, no telefone e no relógio.

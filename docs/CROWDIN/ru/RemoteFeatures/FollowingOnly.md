@@ -20,7 +20,7 @@ A good overview of the extensive options available for following **AAPS** is at 
 
 ### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) and [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
-![изображение](../images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
+![изображение](../images/following_dexcom_follow.png)
 
 * Dexcom Follow is compatible with a wide range of handsets (both Android and iPhone). Dexcom Follow можно использовать, даже если вы не используете официальное приложение Dexcom для получения данных.
 
@@ -47,7 +47,7 @@ For Dexcom Follow, the sensor data is then exported from the **AAPS** phone eith
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
-![изображение](../images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
+![изображение](../images/following_nightguard.png)
 
 Достоинства (как указывают пользователи):
 
@@ -73,7 +73,7 @@ For Dexcom Follow, the sensor data is then exported from the **AAPS** phone eith
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
-![изображение](../images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
+![изображение](../images/following_nightwatch.png)
 
 
 * Nightwatch markets itself as a Nightscout client and monitors the user’s Nightscout glucose levels on either Android phone or tablet.
@@ -132,7 +132,7 @@ If you want, you can then become a "releaser" and [share a Personal Testflight x
 
 
 
-![изображение](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
+![изображение](../images/following_xdrip4ios.png)
 
 "What is **Shuggah**?" A group of Ukrainian developers copied the project code for xDrip4iOS (which is shared publicly on GitHub) and released it on the App Store under a business account. The Shuggah release is in no way managed by the xDrip4iOS developers.
 
@@ -140,9 +140,9 @@ The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/a
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
-![изображение](../images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
+![изображение](../images/following_sugarmate.png)
 
-![изображение](../images/21b83c41-85c6-4619-a702-a65450768855.png)
+![изображение](../images/following_sugarmate_graph.png)
 
 
 [Sugarmate](https://sugarmate.io/) можно закачать из App Store. Sugarmate is compatible with:
@@ -155,7 +155,7 @@ The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/a
 
 ### [Spike](https://spike-app.com/) (iOS)
 
-![изображение](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
+![изображение](../images/following_spike.png)
 
 Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more.
 
@@ -175,7 +175,7 @@ See [here](../Getting-Started/Watches.md).
 
 ### M5Stack
 
-![изображение](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
+![изображение](../images/following_m5stack.png)
 
 The M5Stack is a small box which can be programmed for many applications, Martin's project [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) is displaying sensor glucose values and trends, IOB and COB. Он находится в пластиковой коробке, оснащен цветным дисплеем, слотом для карт Micro SD, 3 кнопками, динамиком и внутренним аккумулятором. It is a great blood sugar monitor and is relatively easy to set up if you have a Nightscout account. Users typically run it on their home Wi-Fi, but some users report using it as a display when motorbiking, by running it off a phone Wi-Fi hotspot.
 
@@ -183,9 +183,9 @@ The M5Stack is a small box which can be programmed for many applications, Martin
 
 SugarPixel — это устройство для системы вторичного оповещения об уровне глюкозы для приложений Dexcom или Nightscout на смартфоне пользователя. Устройство отображает показания уровня сахара в крови в режиме реального времени. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customizable display options and native multi-user following.
 
-![изображение](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
+![изображение](../images/following_sugarpixel.png)
 
-![изображение](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
+![изображение](../images/following_sugarpixel_led_display.png)
 
 * SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with color-coded glucose values.
 * The standard face displays BG, Trend Arrow, and Delta. Дельта - это изменение + или - от последнего показания.

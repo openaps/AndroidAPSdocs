@@ -97,6 +97,8 @@ Det anbefales å eksportere innstillingene regelmessig, særlig før og etter en
 
 **Merk**: _De eksporterte innstillingene krypteres med AAPS-hovedpassordet ditt: uten hovedpassordet som ble brukt ved eksporten, kan du ikke importere innstillingsfilen!_
 
+Hvis du har glemt hovedpassordet, kan du [tilbakestille det](#FAQ-reset-master-password), men innstillingsfiler som ble eksportert med det gamle passordet, trenger fortsatt det gamle.
+
 ### Eksportere eller importere innstillinger
 For å eksportere eller importere innstillinger åpner du **menyen** (☰) og velger **Vedlikehold**. Under **Filbehandling** velger brikkene **Lokal** og **Sky** ved siden av **Eksporter innstillinger** og **Importer innstillinger** hvor innstillingsfilen lagres til eller leses fra: **Lokal** er AAPS-mappen på telefonen din, **Sky** er tilgjengelig når en [Skymappe](#preferences-maintenance-cloud) er satt opp. Et trykk på en brikke slår den på eller av; minst én er alltid valgt, og begge radene bruker det samme valget. Trykk deretter på selve **Eksporter innstillinger** eller **Importer innstillinger** for å starte.
 

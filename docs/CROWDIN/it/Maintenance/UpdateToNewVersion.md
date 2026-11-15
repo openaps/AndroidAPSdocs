@@ -40,4 +40,4 @@ Dopo aver installato il nuovo apk:
 - assicurati di aver importato le tue impostazioni; e
 - controlla le impostazioni di **AAPS** in **Impostazioni** e assicurati che siano ancora corrette.
 
-![About dialog with the AAPS version installed](../images/about_dialog_version.png)
+![About dialog with the AAPS version installed](../images/update/about_dialog_version.png)

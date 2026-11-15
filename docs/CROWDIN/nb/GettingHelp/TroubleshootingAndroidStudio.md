@@ -192,7 +192,7 @@ Hvis du får feilmeldingen ovenfor, må du laste ned en riktig JVM-versjon før 
 
   På nettet finnes det informasjon om hvordan du finner ut om du har et 32-bits eller 64-bits operativsystem, for eksempel [denne siden](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Skjermbilde: Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Skjermbilde: Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Synkroniser Gradle på nytt (Gradle Resync)
@@ -237,7 +237,7 @@ Apk-filen din ble bygget uten feil og kan overføres til telefonen!
 
 ## Apk-filen ble ikke installert
 
-![Telefonen: appen ble ikke installert](../images/Update_AppNotInstalled.png)
+![Telefonen: appen ble ikke installert](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Pass på at du har overført filen «app-full-release.apk» til telefonen.
 * Denne feilen betyr vanligvis at den nye apk-filen er signert med en annen keystore-fil enn din installerte **AAPS**. Hvis du fortsatt har den forrige keystore-filen din, velger du den og bygger på nytt. Ellers, se [Installere AAPS på nytt med en ny keystore-fil](#reinstall-aaps).

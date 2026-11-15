@@ -211,7 +211,7 @@ På klokken:
 
 Du vil se en Wi-Fi-sammenkoblingskode, en IP-adresse og en port:
 
-![Klokkeskjerm som viser Wi-Fi-sammenkoblingskoden, IP-adressen og porten](../images/wearos/ADB03.png)
+![Klokkeskjerm som viser Wi-Fi-sammenkoblingskoden, IP-adressen og porten](../images/wearos/watch_wifi_pairing_code.png)
 
 - I terminalen: `adb pair ipaddress:port` F.eks. `adb pair 10.10.1.125:36299`
 - Du blir bedt om sammenkoblingskoden. Skriv den inn.

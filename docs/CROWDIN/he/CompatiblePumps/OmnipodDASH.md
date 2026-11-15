@@ -535,7 +535,7 @@ Ensure you have read and understand this whole guide, have read and understand t
 
 הגיל של **סוללת המשאבה** לא מדווח: הסוללה ומכל האינסולין מובנים בכל פוד, והסוללה תמיד מחזיקה יותר זמן מהפוד עצמו (80 שעות לכל היותר).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

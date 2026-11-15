@@ -535,7 +535,7 @@ La [fila de estado](#screens-sensor-level-battery) de la pantalla principal mues
 
 No se informa la edad de la **Batería de la bomba**: la batería y el reservorio de insulina están dentro de cada pod, y la batería siempre dura más que el propio pod (máximo 80 horas).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

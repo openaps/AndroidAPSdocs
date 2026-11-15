@@ -291,13 +291,13 @@ Programvaran för klockan, **AAPSClient** Wear-apk, kan laddas ned direkt från 
 
 För att ladda ned programvaran klickar du på den klockapp som passar klientappen på telefonen: **wear-aapsclient-release_**_version_ hör till **AAPSClient**, **wear-aapsclient2-release_**_version_ hör till **AAPSClient2** (se [Om AAPSClient, AAPSClient2 och AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![image](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+![image](../images/github_release_wear_aapsclient_apk.png)
 
 
 Välj sedan ”Spara som” och spara filen på ett lämpligt ställe på datorn:
 
 
-![image](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+![image](../images/save_as_wear_aapsclient_apk.png)
 
 
 

@@ -40,4 +40,4 @@ These steps are the same for every build method. Перевірте в [Прим
 - make sure you have imported your settings; and
 - please check your **AAPS** settings under **Settings** and ensure these remain accurate.
 
-![Вікно «Про застосунок» з версією встановленого AAPS](../images/about_dialog_version.png)
+![Вікно «Про застосунок» з версією встановленого AAPS](../images/update/about_dialog_version.png)

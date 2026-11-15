@@ -211,7 +211,7 @@ På klockan:
 
 En Wi-Fi-parkopplingskod, IP-adress och port visas:
 
-![Klockans skärm som visar Wi-Fi-parkopplingskoden, IP-adressen och porten](../images/wearos/ADB03.png)
+![Klockans skärm som visar Wi-Fi-parkopplingskoden, IP-adressen och porten](../images/wearos/watch_wifi_pairing_code.png)
 
 - I terminalen: `adb pair ipaddress:port` Till exempel: `adb pair 10.10.1.125:36299`
 - Du blir ombedd att ange parkopplingskoden. Ange den.

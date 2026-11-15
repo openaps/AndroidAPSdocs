@@ -89,7 +89,7 @@
 - Πρέπει να ολοκληρώσετε την ενεργοποίηση του patch μέσα σε 60 λεπτά από την εκκίνησή του. Αν δεν τα καταφέρετε, απορρίψτε το patch.
 ```
 
-![Το βήμα Σύζευξη Patch](../images/EOPatch/Bild6.png) ![Πρώτο αίτημα σύζευξης Bluetooth](../images/EOPatch/Bild7.png) ![Δεύτερο αίτημα σύζευξης Bluetooth με τον κωδικό πρόσβασης (passkey)](../images/EOPatch/Bild8.png)
+![Το βήμα Σύζευξη Patch](../images/EOPatch/eopatch_pairing.png) ![Πρώτο αίτημα σύζευξης Bluetooth](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Δεύτερο αίτημα σύζευξης Bluetooth με τον κωδικό πρόσβασης (passkey)](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@
 
 Αν εξέχει βελόνα ή αν το patch είναι βρεγμένο, βρώμικο ή η αυτοκόλλητη ταινία του είναι διπλωμένη, πατήστε **Απόρριψη** και χρησιμοποιήστε ένα νέο patch.
 
-![Το βήμα Προετοιμασία για την τοποθέτηση του Patch](../images/EOPatch/Bild9.png)
+![Το βήμα Προετοιμασία για την τοποθέτηση του Patch](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Σημείο τοποθέτησης
 
@@ -123,7 +123,7 @@
 - Αν το patch δεν κολλήσει εντελώς, μπορεί να μπει αέρας ανάμεσα στο patch και στο δέρμα σας. Αυτό εξασθενεί την κόλλα και την αντοχή του patch στο νερό.
 ```
 
-![Το βήμα Επισύναψη του Patch](../images/EOPatch/Bild10.png)
+![Το βήμα Επισύναψη του Patch](../images/EOPatch/eopatch_attaching.png)
 
 ### Έλεγχος ασφαλείας
 
@@ -133,7 +133,7 @@
 Για ασφαλή χρήση, μη γυρίσετε τον μοχλό δράσης της βελόνας μέχρι να ολοκληρωθεί ο έλεγχος ασφαλείας.
 ```
 
-![Το βήμα Επισύναψη του Patch με το κουμπί Έναρξη ελέγχου ασφαλείας](../images/EOPatch/Bild11.png) ![Έλεγχος ασφαλείας σε εξέλιξη](../images/EOPatch/Bild12.png)
+![Το βήμα Επισύναψη του Patch με το κουμπί Έναρξη ελέγχου ασφαλείας](../images/EOPatch/eopatch_start_safety_check.png) ![Έλεγχος ασφαλείας σε εξέλιξη](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@
 
 Όσο δεν υπάρχει ενεργό patch, το **AAPS** δείχνει την αντλία σε αναστολή και καταγράφει προσωρινό βασικό ρυθμό 0 U/h, ώστε να μη μετράει βασική ινσουλίνη στο IOB μέχρι να ενεργοποιηθεί το επόμενο patch.
 
-![Η οθόνη της αντλίας EOPatch2 με το κουμπί DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Η σελίδα Απόρριψη Patch](../images/EOPatch/Bild14.png) ![Το παράθυρο επιβεβαίωσης Απόρριψη Patch](../images/EOPatch/Bild15.png) ![Η απόρριψη του patch ολοκληρώθηκε](../images/EOPatch/Bild16.png)
+![Η οθόνη της αντλίας EOPatch2 με το κουμπί DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![Η σελίδα Απόρριψη Patch](../images/EOPatch/eopatch_discard_patch.png) ![Το παράθυρο επιβεβαίωσης Απόρριψη Patch](../images/EOPatch/eopatch_discard_confirm.png) ![Η απόρριψη του patch ολοκληρώθηκε](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@
 
 Η χορήγηση ινσουλίνης αναστέλλεται για τον χρόνο που επιλέξατε.
 
-![Η οθόνη της αντλίας EOPatch2 με το κουμπί SUSPEND](../images/EOPatch/Bild17.png) ![Το παράθυρο επιβεβαίωσης αναστολής](../images/EOPatch/Bild18.png) ![Το παράθυρο Χρόνος Αναστολής Βασικού](../images/EOPatch/Bild19.png)
+![Η οθόνη της αντλίας EOPatch2 με το κουμπί SUSPEND](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Το παράθυρο επιβεβαίωσης αναστολής](../images/EOPatch/eopatch_suspend_confirm.png) ![Το παράθυρο Χρόνος Αναστολής Βασικού](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@
 1. Ανοίξτε την οθόνη της αντλίας (**Διαχείριση** → **Αντλία**) και πατήστε **Συνέχιση αντλίας**.
 1. Στο παράθυρο **Συνέχιση χορήγησης ινσουλίνης** πατήστε **Επιβεβαίωση**.
 
-![Η οθόνη της αντλίας EOPatch2 με το κουμπί RESUME](../images/EOPatch/Bild20.png) ![Το παράθυρο Συνέχιση χορήγησης ινσουλίνης](../images/EOPatch/Bild21.png)
+![Η οθόνη της αντλίας EOPatch2 με το κουμπί RESUME](../images/EOPatch/eopatch_pump_screen_resume.png) ![Το παράθυρο Συνέχιση χορήγησης ινσουλίνης](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@
 
 Όταν πατήσετε **Επιβεβαίωση** στην ειδοποίηση, το **AAPS** χειρίζεται τον συναγερμό. Για τους περισσότερους συναγερμούς, αυτό απενεργοποιεί το patch. Για τον συναγερμό **Ακατάλληλη θερμοκρασία**, το κουμπί είναι **Επανάληψη**.
 
-![Συναγερμός EOPatch2](../images/EOPatch/Bild22.png) ![Συναγερμός EOPatch2 αφού απενεργοποιήθηκε το patch](../images/EOPatch/Bild23.png)
+![Συναγερμός EOPatch2](../images/EOPatch/eopatch_alarm.png) ![Συναγερμός EOPatch2 αφού απενεργοποιήθηκε το patch](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@
 
 Οι προειδοποιήσεις είναι για καταστάσεις μέσης ή χαμηλής προτεραιότητας. Μια προειδοποίηση εμφανίζεται ως ειδοποίηση στην οθόνη **Επισκόπηση**.
 
-![Προειδοποίηση EOPatch2 στην οθόνη Επισκόπηση](../images/EOPatch/Bild24.png)
+![Προειδοποίηση EOPatch2 στην οθόνη Επισκόπηση](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

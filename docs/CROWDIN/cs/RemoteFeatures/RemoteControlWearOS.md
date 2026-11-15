@@ -309,13 +309,13 @@ Pokud **AAPS** musel dávku omezit, například protože vypočtený bolus je vy
     
     Položky [Rychlého bolusu](#quickwizards) v telefonu, které mají zapnuté **Zobrazit na hodinkách**, v rámci své doby platnosti. Položka se sacharidy ukazuje sacharidy v g, položka s inzulínem pevnou dávku v U. Klepnutí položku spustí po potvrzení v hodinkách. V hodinkách není co nastavit: položky upravte v telefonu a u každé položky, kterou chcete mít na dlaždici, zapněte **Zobrazit na hodinkách** v části **Výběr zařízení**. Mimo dobu platnosti všech vašich položek dlaždice ukazuje **Není dostupná žádná konfigurace**.
     
-    ![Položka Rychlého bolusu se zapnutým Zobrazit na hodinkách a dlaždice, na které se objeví](../images/quickwizard_watch_phone.png)
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Dlaždice Scéna
+    ### Scene tile
     
-    ![Dlaždice Scéna](../images/wearos/tiles/tile_scene.png)
+    ![Scene tile](../images/wearos/tiles/tile_scene.png)
     
-    [Scény](#scenes-from-watch) z telefonu. Každá ze čtyř pozic je v nastavení dlaždice nastavená na **Automaticky**, **Žádný** nebo na jednu scénu. Pozice **Automaticky** vezme další scénu ze seznamu v telefonu, kterou si nevzala žádná jiná pozice. Pozice nastavená na scénu, která už v telefonu neexistuje, ukazuje **Nedostupný**.
+    The [Scenes](#scenes-from-watch) of the phone. Každá ze čtyř pozic je v nastavení dlaždice nastavená na **Automaticky**, **Žádný** nebo na jednu scénu. Pozice **Automaticky** vezme další scénu ze seznamu v telefonu, kterou si nevzala žádná jiná pozice. Pozice nastavená na scénu, která už v telefonu neexistuje, ukazuje **Nedostupný**.
     
     ![Nastavení dlaždice Scéna, čtyři pozice nastavené na Automaticky](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,17 +361,17 @@ Pokud **AAPS** musel dávku omezit, například protože vypočtený bolus je vy
     
     Poznámka: ne všechny displeje snášejí trvale zapnutý režim dobře. Může dojít k vypálení obrazu, hlavně u starších OLED displejů. Hodinky obvykle displej ztlumí, aby k vypálení nedošlo; radu najdete v návodu k hodinkám, u výrobce nebo na internetu.
     
-    ![Ciferník na nočním stolku](../images/Watchface_nightstand.jpg)
+    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Zjednodušené rozhraní](../images/Watchface_simplified_ui.png)
+    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Alarmy telefonu na hodinkách
+    ## Phone alarms on the watch
     
-    ![Alarm telefonu na hodinkách](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    Hodinky ukazují alarmy telefonu, takže vidíte, proč telefon vydává zvuk, a můžete reagovat přímo ze zápěstí. Hodinky zavibrují, a pak znovu každou půlminutu po dobu pěti minut, dokud nezareagujete. Oznámení ukazuje název a text alarmu se stejnými možnostmi jako připomínka [Čas na jídlo](#WearOsSmartwatch-wizard-carb-time):
+    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. Hodinky zavibrují, a pak znovu každou půlminutu po dobu pěti minut, dokud nezareagujete. Oznámení ukazuje název a text alarmu se stejnými možnostmi jako připomínka [Čas na jídlo](#WearOsSmartwatch-wizard-carb-time):
     
     * **Ztišit** nebo odsunutí: alarm skončí a obrazovka alarmu v telefonu se zavře.
     * **Ztlumit na 5 min**: alarm skončí a znovu zazvoní za pět minut, v telefonu i v hodinkách.

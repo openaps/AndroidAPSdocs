@@ -40,7 +40,9 @@ Die offizielle Dexcom-App bleibt mit dem Sensor verbunden. xDrip liest die Gluko
 
 ```{admonition} Not a trusted data source
 :class: note
-**AAPS** betrachtet xDrip im Modus Companion App nicht als [vertrauenswürdige BZ-Quelle](#GettingStarted-TrustedBGSource): SMBs sind durchgehend erlaubt.
+**AAPS** betrachtet xDrip im Modus Companion App nicht als [vertrauenswürdige BZ-Datenquelle](#GettingStarted-TrustedBGSource): SMBs können nicht durchgehend erlaubt werden.
+
+Um die Benachrichtigungen der Dexcom-App ohne xDrip als vertrauenswürdige Datenquelle zu lesen, nutze den [Benachrichtigungsleser](#DexcomG7-notification-reader).
 ```
 
 ### Benachrichtigungen der Dexcom-App auslesen
@@ -101,3 +103,52 @@ Version 9.0+ ist erforderlich
 - Koppelungs-Voraussetzungen: Zulassen, dass sich der Sensor mit Juggluco koppelt. Stelle sicher, dass der Bildschirm während des Koppelns nicht gesperrt ist. Wenn die Verbindung fehlschlägt, warte 5 Minuten, bevor Du es erneut versuchst.
 
 - Ausnahme: Wear OS Smartwatches können sich auch ohne ein explizites „zulassen“ koppeln.
+
+(DexcomG7-notification-reader)=
+
+## 5. Benachrichtigungsleser (G7, ONE+ und Stelo)
+
+Die offizielle Dexcom-App bleibt mit dem Sensor verbunden. **AAPS** liest den Glukosewert direkt aus der Benachrichtigung der Dexcom-App, ohne eine weitere App dazwischen.
+
+```{admonition} Trusted data source
+:class: note
+Werte aus den Apps für Dexcom G7, ONE+ und Stelo sind eine [vertrauenswürdige BZ-Datenquelle](#GettingStarted-TrustedBGSource): SMBs können durchgehend erlaubt werden.
+```
+
+Im Vergleich zu den anderen Methoden auf dieser Seite hat der Benachrichtigungsleser Einschränkungen:
+
+- **Kein Trendpfeil** und **kein Backfill**: Werte, die verpasst werden, während das Smartphone aus oder außer Reichweite ist, gehen verloren.
+- Jeder Wert erhält den Zeitpunkt, zu dem die Benachrichtigung erschienen ist, nicht den genauen Zeitpunkt der Sensormessung.
+- Es werden nur Werte zwischen 40 und 405 mg/dl (2,2 und 22,5 mmol/l) gelesen. „LOW“ und „HIGH“ werden nicht gelesen.
+- Stelo liefert alle 15 Minuten einen Wert.
+
+### Dexcom-App einrichten
+
+- Lass die Dexcom-App installiert und mit dem Sensor verbunden.
+- Achte darauf, dass die Dexcom-App den aktuellen Glukosewert in ihrer Benachrichtigung anzeigt. Ihre Benachrichtigungen müssen sichtbar bleiben: Schalte sie nicht stumm und blende sie nicht aus.
+- Verwende in der Dexcom-App dieselbe Glukoseeinheit (mg/dl oder mmol/l) wie in **AAPS**. Sonst kann **AAPS** den Wert nicht lesen.
+
+### Konfiguration in AAPS
+
+- Wähle **Benachrichtigungsleser** unter [**Konfiguration → BZ-Quelle**](#Config-Builder-bg-source) und bestätige den Wechsel.
+
+  ![BG Source: Notification Reader selected](../images/NotificationReader_BgSource.png)
+
+- Zurück auf dem Startbildschirm zeigt **AAPS** **Berechtigungen erforderlich** an. Tippe neben **Zugriff auf Benachrichtigungen** auf **Berechtigung erteilen**.
+
+  ![Permissions Required: Notification Access](../images/NotificationReader_Permissions.png)
+
+- Android öffnet seine Liste für den Zugriff auf Benachrichtigungen (ihr Name hängt von Deiner Android-Version ab, z. B. *Benachrichtigungen lesen, beantworten und steuern*). Wähle **AAPS**, aktiviere **Zugriff auf Benachrichtigungen zulassen** und bestätige mit **Zulassen**.
+
+  ![Android asks to allow notification access for AAPS](../images/NotificationReader_AllowDialog.png)
+
+  Android warnt, dass **AAPS** alle Deine Benachrichtigungen lesen könnte. **AAPS** liest nur die Benachrichtigungen unterstützter CGM-Apps und ignoriert alle anderen.
+
+  ![Notification access allowed for AAPS](../images/NotificationReader_AccessOn.png)
+
+- Ist **Zugriff auf Benachrichtigungen zulassen** ausgegraut (*Durch eingeschränkte Einstellung festgelegt*), blockiert Android das, weil **AAPS** nicht aus dem Play Store installiert wurde. Öffne die App-Info von **AAPS** (lange auf das **AAPS**-Symbol drücken > **App-Info**), tippe oben rechts auf das Menü mit den drei Punkten und wähle **Eingeschränkte Einstellungen zulassen**. Gehe dann zurück zum Bildschirm für den Zugriff auf Benachrichtigungen und erlaube ihn.
+- Werte erscheinen in **AAPS**, sobald die Dexcom-App einen neuen Wert anzeigt.
+
+```{warning}
+Zeigt die Benachrichtigung der Dexcom-App mehr als einen Glukosewert oder gar keinen an, überspringt **AAPS** diese Benachrichtigung.
+```

@@ -291,13 +291,13 @@ b)  使用者不想輸入驗證碼（簡訊指令需要輸入驗證碼）。
 
 若要下載軟體，請點選與手機用戶端應用程式相符的手錶應用程式：**wear-aapsclient-release_**_version_ 對應 **AAPSClient**，**wear-aapsclient2-release_**_version_ 對應 **AAPSClient2**（請參閱 [AAPSClient、AAPSClient2 和 AAPSClient3 簡介](#remotecontrol-aapsclient-versions)）：
 
-![圖像](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+![圖像](../images/github_release_wear_aapsclient_apk.png)
 
 
 然後點擊“另存為”，並將文件儲存到電腦上的方便位置：
 
 
-![圖像](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+![圖像](../images/save_as_wear_aapsclient_apk.png)
 
 
 

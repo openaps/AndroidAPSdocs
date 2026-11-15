@@ -309,13 +309,13 @@ Als **AAPS** de dosis moest beperken, bijvoorbeeld omdat de berekende bolus bove
     
     De [QuickWizard](#quickwizards)-items van de telefoon waarbij **Weergeven op smartwatch** aan staat, binnen hun geldige uren. Een koolhydraten-item toont zijn koolhydraten in g, een insuline-item zijn vaste dosis in E. Een tik voert het item uit na een bevestiging op het horloge. Op het horloge is niets in te stellen: bewerk de items op de telefoon, en zet **Weergeven op smartwatch** aan onder **Apparaatkeuze** voor elk item dat je op de tegel wilt. Buiten de geldige uren van al je items toont de tegel **Geen configuratie beschikbaar**.
     
-    ![Een QuickWizard-item met Weergeven op smartwatch aan, en de tegel waarop het verschijnt](../images/quickwizard_watch_phone.png)
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Tegel Scène
+    ### Scene tile
     
-    ![Tegel Scène](../images/wearos/tiles/tile_scene.png)
+    ![Scene tile](../images/wearos/tiles/tile_scene.png)
     
-    De [Scènes](#scenes-from-watch) van de telefoon. Elk van de vier plaatsen staat in de instellingen van de tegel op **Automatisch**, **Geen** of één scène. Een plaats op **Automatisch** neemt de volgende scène uit de lijst van de telefoon die nog niet door een andere plaats is gekozen. Een plaats met een scène die niet meer op de telefoon bestaat, toont **Niet beschikbaar**.
+    The [Scenes](#scenes-from-watch) of the phone. Elk van de vier plaatsen staat in de instellingen van de tegel op **Automatisch**, **Geen** of één scène. Een plaats op **Automatisch** neemt de volgende scène uit de lijst van de telefoon die nog niet door een andere plaats is gekozen. Een plaats met een scène die niet meer op de telefoon bestaat, toont **Niet beschikbaar**.
     
     ![Instellingen van de tegel Scène, vier plaatsen op Automatisch](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,17 +361,17 @@ Als **AAPS** de dosis moest beperken, bijvoorbeeld omdat de berekende bolus bove
     
     Let op: niet alle schermen kunnen goed tegen altijd aan. Het kan inbranden van het scherm veroorzaken, vooral bij oudere OLED-schermen. Horloges dimmen het scherm meestal om inbranden te voorkomen; kijk voor advies in je handleiding, bij de fabrikant of op internet.
     
-    ![Watchface op het nachtkastje](../images/Watchface_nightstand.jpg)
+    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Vereenvoudigde interface](../images/Watchface_simplified_ui.png)
+    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Alarmen van de telefoon op het horloge
+    ## Phone alarms on the watch
     
-    ![Een alarm van de telefoon op het horloge](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    Het horloge toont de alarmen van de telefoon, zodat je ziet waarom de telefoon geluid maakt en je vanaf je pols kunt reageren. Het horloge trilt, en daarna elke halve minuut, vijf minuten lang, tot je reageert. Een melding toont de titel en de tekst van het alarm, met dezelfde antwoorden als de herinnering [tijd om te eten](#WearOsSmartwatch-wizard-carb-time):
+    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. Het horloge trilt, en daarna elke halve minuut, vijf minuten lang, tot je reageert. Een melding toont de titel en de tekst van het alarm, met dezelfde antwoorden als de herinnering [tijd om te eten](#WearOsSmartwatch-wizard-carb-time):
     
     * **Stil**, of wegvegen: het alarm stopt, en het alarmscherm op de telefoon sluit.
     * **Demp 5 min**: het alarm stopt en gaat na vijf minuten opnieuw af, op de telefoon en op het horloge.

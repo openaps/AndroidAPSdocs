@@ -211,7 +211,7 @@ Saatte:
 
 Bir Wi-Fi eşleştirme kodu ile IP adresi ve port görünür:
 
-![Wi-Fi eşleştirme kodunu, IP adresini ve portu gösteren saat ekranı](../images/wearos/ADB03.png)
+![Wi-Fi eşleştirme kodunu, IP adresini ve portu gösteren saat ekranı](../images/wearos/watch_wifi_pairing_code.png)
 
 - Terminalde: `adb pair ipaddress:port` Örnek: `adb pair 10.10.1.125:36299`
 - Sizden eşleştirme kodu istenir. Kodu girin.

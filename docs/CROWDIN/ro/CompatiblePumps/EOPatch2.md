@@ -89,7 +89,7 @@ Când auziți semnalul sonor, apăsați **Începeți asocierea**.
 - You must finish activating the patch within 60 minutes of it booting. Dacă nu reușiți, eliminați plasturele.
 ```
 
-![Pasul Asocierea plasturelui](../images/EOPatch/Bild6.png) ![Prima cerere de asociere Bluetooth](../images/EOPatch/Bild7.png) ![A doua cerere de asociere Bluetooth, cu cheia de acces](../images/EOPatch/Bild8.png)
+![Pasul Asocierea plasturelui](../images/EOPatch/eopatch_pairing.png) ![Prima cerere de asociere Bluetooth](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![A doua cerere de asociere Bluetooth, cu cheia de acces](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@ Selectați insulina cu care ați umplut plasturele și apăsați **Următor**. *
 
 If a needle sticks out, or if the patch is wet, dirty or its adhesive tape is folded, press **Discard** instead and use a new patch.
 
-![Pasul Pregătiți-vă pentru atașarea plasturelui](../images/EOPatch/Bild9.png)
+![Pasul Pregătiți-vă pentru atașarea plasturelui](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Locul de inserție
 
@@ -123,7 +123,7 @@ Check the infusion site, then press **Start safety check**.
 - If the patch does not stick completely, air can get between the patch and your skin. This weakens the adhesive and the water resistance of the patch.
 ```
 
-![Pasul Se atașează plasturele](../images/EOPatch/Bild10.png)
+![Pasul Se atașează plasturele](../images/EOPatch/eopatch_attaching.png)
 
 ### Verificare de siguranță
 
@@ -133,7 +133,7 @@ Verificarea de siguranță durează aproximativ 30 de secunde. When it is finish
 For safe use, do not turn the needle action lever until the safety check is complete.
 ```
 
-![Pasul Se atașează plasturele cu butonul Începeți verificarea de siguranță](../images/EOPatch/Bild11.png) ![Safety check in progress](../images/EOPatch/Bild12.png)
+![Pasul Se atașează plasturele cu butonul Începeți verificarea de siguranță](../images/EOPatch/eopatch_start_safety_check.png) ![Safety check in progress](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@ After that, the wizard continues straight on to activating a new patch (see abov
 
 While no patch is active, **AAPS** shows the pump as suspended and records a 0 U/hr temporary basal, so no basal insulin is counted in IOB until the next patch is activated.
 
-![Ecranul pompei EOPatch2 cu butonul DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Pagina Eliminați plasturele](../images/EOPatch/Bild14.png) ![Discard Patch confirmation dialog](../images/EOPatch/Bild15.png) ![Eliminarea plasturelui s-a finalizat](../images/EOPatch/Bild16.png)
+![Ecranul pompei EOPatch2 cu butonul DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![Pagina Eliminați plasturele](../images/EOPatch/eopatch_discard_patch.png) ![Discard Patch confirmation dialog](../images/EOPatch/eopatch_discard_confirm.png) ![Eliminarea plasturelui s-a finalizat](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@ Suspendarea administrării insulinei anulează și orice bolus extins și orice 
 
 Administrarea insulinei este suspendată pentru timpul ales.
 
-![Ecranul pompei EOPatch2 cu butonul SUSPEND](../images/EOPatch/Bild17.png) ![Suspend confirmation dialog](../images/EOPatch/Bild18.png) ![Basal Suspending Time dialog](../images/EOPatch/Bild19.png)
+![Ecranul pompei EOPatch2 cu butonul SUSPEND](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Suspend confirmation dialog](../images/EOPatch/eopatch_suspend_confirm.png) ![Basal Suspending Time dialog](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@ The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you op
 1. Deschideți ecranul pompei (**Gestionați** → **Pompă**) și apăsați **Reluați pompa**.
 1. In the **Resume insulin delivery** dialog, press **Confirm**.
 
-![Ecranul pompei EOPatch2 cu butonul RESUME](../images/EOPatch/Bild20.png) ![Resume insulin delivery dialog](../images/EOPatch/Bild21.png)
+![Ecranul pompei EOPatch2 cu butonul RESUME](../images/EOPatch/eopatch_pump_screen_resume.png) ![Resume insulin delivery dialog](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@ Alarms are for urgent, top-priority situations and need your action straight awa
 
 When you press **Confirm** on the notification, **AAPS** handles the alarm. Pentru majoritatea alarmelor, aceasta dezactivează plasturele. For an **Inappropriate temperature** alarm, the button is **Retry**.
 
-![EOPatch2 alarm](../images/EOPatch/Bild22.png) ![EOPatch2 alarm after the patch was deactivated](../images/EOPatch/Bild23.png)
+![EOPatch2 alarm](../images/EOPatch/eopatch_alarm.png) ![EOPatch2 alarm after the patch was deactivated](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@ The different alarms are explained below.
 
 Warnings are for medium- or low-priority situations. O atenționare apare ca notificare pe ecranul **Prezentare generală**.
 
-![Atenționare EOPatch2 afișată pe ecranul Prezentare generală](../images/EOPatch/Bild24.png)
+![Atenționare EOPatch2 afișată pe ecranul Prezentare generală](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

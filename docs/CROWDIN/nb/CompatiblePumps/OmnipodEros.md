@@ -591,7 +591,7 @@ Knappene nederst på pumpeskjermen endrer seg etter situasjonen. Knapper som ikk
   Skjermbildet ovenfor er fra en eldre **AAPS**-versjon. I **AAPS** 4 er dette en tekstknapp med navnet **Angi tid** på Omnipod-pumpeskjermen.
   ```
 
-- **Pause:** Pauser insulinleveringen på den aktive poden. Vises bare hvis den er aktivert i innstillingene (**Vis knappen Pause levering på pumpeskjermen**).
+- **Pause:** Pauser insulinleveringen på den aktive poden. Vises bare hvis det er slått på i innstillingene (**Vis knappen Pause levering på pumpeskjermen**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 

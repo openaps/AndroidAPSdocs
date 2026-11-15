@@ -84,7 +84,7 @@ Jeśli wprowadzono za dużo lub za mało węglowodanów, możesz to poprawić na
 
 Na ekranie **Historia leczenia** możesz poprawić błędny wpis węglowodanów, usuwając go. Może to wynikać z tego, że wprowadzono za dużo lub za mało węglowodanów:
 
-![Usuwanie wpisu węglowodanów z historii leczenia](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Usuwanie wpisu węglowodanów z historii leczenia](../images/treatments_history_delete_carbs.png)
 
 1. Sprawdź i zapamiętaj aktualne **COB** i **IOB** na ekranie głównym **AAPS**.
 2. Otwórz **Historia leczenia** (menu boczne → *Historia leczenia*), zakładka **Węglowodany i bolus**. Zależnie od pompy węglowodany mogą być pokazane razem z insuliną w jednej linii albo jako osobny wpis (np. w Dana RS).

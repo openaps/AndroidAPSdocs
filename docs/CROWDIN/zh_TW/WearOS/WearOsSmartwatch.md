@@ -210,7 +210,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 畫面上會顯示 Wi-Fi 配對碼、IP 位址和連接埠：
 
-![顯示 Wi-Fi 配對碼、IP 位址和連接埠的手錶畫面](../images/wearos/ADB03.png)
+![顯示 Wi-Fi 配對碼、IP 位址和連接埠的手錶畫面](../images/wearos/watch_wifi_pairing_code.png)
 
 - 在終端機中： `adb pair ipaddress:port` 例如 `adb pair 10.10.1.125:36299`
 - 系統會要求輸入配對代碼。輸入該代碼。

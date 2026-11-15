@@ -22,37 +22,37 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 1. Πηγαίνετε στο <https://github.com/openaps/AndroidAPSdocs> και πατήστε «Fork» πάνω δεξιά για να φτιάξετε το δικό σας αντίγραφο του αποθετηρίου.
 
-![Fork του αποθετηρίου](../images/PR0.png)
+![Fork του αποθετηρίου](../images/docs_pr_fork_repository.png)
 
 2. Πηγαίνετε σε οποιαδήποτε σελίδα και μεταβείτε στη σελίδα που θέλετε να επεξεργαστείτε. Μπορείτε να κάνετε κλικ στον σύνδεσμο «Edit in GitHub» πάνω δεξιά. Αυτό γίνεται μόνο για τις αγγλικές σελίδες. 
 
-![επεξεργασία εγγράφου](../images/PR1.png)
+![επεξεργασία εγγράφου](../images/docs_pr_edit_on_github.png)
 
 Ή κάντε κλικ στο εικονίδιο με το μολύβι που εμφανίζεται στην πάνω γραμμή του περιεχομένου της σελίδας που θέλετε να επεξεργαστείτε. Για να το κάνετε αυτό, πρέπει να έχετε ήδη συνδεθεί στον λογαριασμό σας στο GitHub (αν δεν έχετε λογαριασμό, η δημιουργία του είναι εύκολη).
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. Και οι δύο επιλογές στο Βήμα 2 θα δημιουργήσουν έναν νέο κλάδο (branch) στο ΔΙΚΟ ΣΑΣ αποθετήριο, όπου θα αποθηκευτούν οι αλλαγές σας. Κάντε τις αλλαγές σας στο αρχείο.
 
 Χρησιμοποιούμε markdown για τις σελίδες της τεκμηρίωσης. Τα αρχεία έχουν την κατάληξη ".md". Η προδιαγραφή του Markdown δεν είναι σταθερή και προς το παρόν χρησιμοποιούμε το myst_parser για τα αρχεία markdown. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
-![Επεξεργασία στον κλάδο](../images/PR3.png)
+![Επεξεργασία στον κλάδο](../images/docs_pr_edit_file.png)
 
 4. Δουλεύετε στην καρτέλα «<>Edit file» (επεξεργασία αρχείου). Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Αν βλέπετε μια απαραίτητη βελτίωση, επιστρέψτε στην καρτέλα επεξεργασίας για να κάνετε περισσότερες βελτιώσεις. 
 
-![λειτουργία προεπισκόπησης](../images/PR5.png)
+![λειτουργία προεπισκόπησης](../images/docs_pr_preview_changes.png)
 
 5. Όταν τελειώσετε τις επεξεργασίες σας, μεταβείτε στο κάτω μέρος της σελίδας. Στο πλαίσιο στο κάτω μέρος, γράψτε τα σχόλιά σας στο πεδίο κειμένου που γράφει «Add an optional extended description...» (προσθέστε μια προαιρετική εκτενή περιγραφή). Ο προεπιλεγμένος τίτλος έχει το όνομα του αρχείου. Προσπαθήστε να γράψετε μια πρόταση που εξηγεί τον **λόγο** της αλλαγής. Αν γράψετε τον λόγο, οι ελεγκτές καταλαβαίνουν καλύτερα τι θέλετε να κάνετε με το PR.
 
-![σχόλια του commit](../images/PR4.png)
+![σχόλια του commit](../images/docs_pr_commit_description.png)
 
 6. Κάντε κλικ στο πράσινο κουμπί «Propose file changes» ή «Commit changes». Στη σελίδα που εμφανίζεται, κάντε κλικ στο «Create Pull Request» και ξανά στην επόμενη σελίδα κάντε κλικ στο «Create Pull Request».
 
-![δημιουργία pull request](../images/PR6.png)
+![δημιουργία pull request](../images/docs_pr_create_pull_request.png)
 
 7. Έτσι ολοκληρώνεται το άνοιγμα ενός pull request (PR). Το GitHub δίνει στο PR έναν αριθμό, που βρίσκεται μετά τον τίτλο και το σύμβολο #. Γυρίστε σε αυτή τη σελίδα για να δείτε αν υπάρχουν σχόλια (ή, αν λαμβάνετε τις ειδοποιήσεις του GitHub με email, θα λαμβάνετε email για κάθε δραστηριότητα στο PR). Η αλλαγή σας είναι τώρα σε μια λίστα με PR που η ομάδα θα ελέγξει και ίσως σας δώσει σχόλια, πριν μπει στην κύρια τεκμηρίωση του AAPS! Αν θέλετε να ελέγξετε την πρόοδο του PR, μπορείτε να κάνετε κλικ στο εικονίδιο με το καμπανάκι πάνω δεξιά στον λογαριασμό σας στο GitHub και να δείτε όλα τα PR σας.
 
-![Παρακολούθηση PR](../images/PR7.png)
+![Παρακολούθηση PR](../images/docs_pr_tracking.png)
 
 Υ.Γ.: Το fork και ο κλάδος σας θα μείνουν στον προσωπικό σας λογαριασμό στο GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Για μελλοντικές αλλαγές, αν ακολουθήσετε αυτή τη διαδικασία, οι αλλαγές θα ξεκινούν πάντα από μια ενημερωμένη έκδοση των αποθετηρίων του AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Επειδή συχνά ξεχνάμε να ενημερώσουμε τα αποθετήριά μας, προτείνουμε να χρησιμοποιείτε τη διαδικασία PR που περιγράφεται παραπάνω, μέχρι να εξοικειωθείτε με τα «compare».
 

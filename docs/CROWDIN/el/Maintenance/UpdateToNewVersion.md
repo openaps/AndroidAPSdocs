@@ -40,4 +40,4 @@ These steps are the same for every build method. Ελέγξτε στις [Σημ
 - make sure you have imported your settings; and
 - please check your **AAPS** settings under **Settings** and ensure these remain accurate.
 
-![Παράθυρο «Σχετικά» με την εγκατεστημένη έκδοση του AAPS](../images/about_dialog_version.png)
+![Παράθυρο «Σχετικά» με την εγκατεστημένη έκδοση του AAPS](../images/update/about_dialog_version.png)

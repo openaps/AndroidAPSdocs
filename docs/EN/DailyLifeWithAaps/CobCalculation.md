@@ -53,7 +53,7 @@ If minimal carbs absorption (min_5m_carbimpact) is used instead of value calcula
 
 Ordinarily __AAPS__ detects carb absorption through **BG** deviations. In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![Hint on wrong COB value](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 In the screenshot above, 66% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
 
@@ -84,7 +84,7 @@ If carbs are over or underestimated this can be corrected through the **Treatmen
 
 The **Treatments history** screen can be used to correct a faulty carb entry by deleting it. This may be because the user over or underestimated the carb entry:
 
-![Deleting a carb entry from Treatments history](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Deleting a carb entry from Treatments history](../images/treatments_history_delete_carbs.png)
 
 1. Check and remember actual **COB** and **IOB** on the **AAPS** main screen.
 2. Open **Treatments history** (drawer menu → *Treatments history*), tab **Carbs and bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).

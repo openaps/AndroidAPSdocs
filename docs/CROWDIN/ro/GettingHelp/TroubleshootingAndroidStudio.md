@@ -192,7 +192,7 @@ Dacă primiți mesajul de eroare de mai sus, trebuie să descărcați versiunea 
 
   There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Captură de ecran: Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Captură de ecran: Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Resincronizare Gradle
@@ -237,7 +237,7 @@ Your apk was built successfully and can be transferred to your phone!
 
 ## Apk not installed
 
-![phone app not installed](../images/Update_AppNotInstalled.png)
+![phone app not installed](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Asigurați-vă că ați transferat fișierul „app-full-release.apk” pe telefon.
 * This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).

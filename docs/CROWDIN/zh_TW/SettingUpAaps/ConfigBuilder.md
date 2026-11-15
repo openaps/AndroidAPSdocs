@@ -160,29 +160,29 @@ AAPS 使用數學公式來模擬胰島素作用的時間軸，並透過 **DIA** 
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-由於基礎率會間接影響 AAPS 中 IOB 的衰減，因此基礎率過高可能會掩蓋 DIA 過長的問題，反之亦然。建議先仔細調整基礎率，再調整 DIA 和峰值。另外，DIA 和峰值的設定會彼此影響，也就是說，DIA 的效果取決於峰值，反之亦然。
+由於基礎率會間接影響 **AAPS** 中活性胰島素的衰減，因此過高的基礎率可能會掩蓋過長的 DIA，反之亦然。建議先謹慎調整基礎率，再調整 DIA 和峰值。此外，請留意 DIA 和峰值設定會互相影響，也就是 DIA 的作用取決於峰值，反之亦然。
 
-這些圖表顯示在允許的數值範圍內，DIA 和峰值對 IOB 曲線的確切影響。
+以下圖表顯示在允許的數值範圍內，DIA 和峰值對活性胰島素曲線的確切影響。
 
 調整 DIA：
 
-```{image} ../images/iob_remaining_static_peak.png
+```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
 調整峰值：
 
-```{image} ../images/iob_remaining_static_dia.png
+```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-最後，以下比較了同時調整 DIA 和峰值的情況。此處的邏輯是，兩個數值都以相同的相對幅度調整，因此 `49/35 ~ 7/5`。同樣地，`120/93 ~ 9/7`。只要兩者的相對變化相同，無論 DIA 或峰值的基準值為何，間隔都會一致。
+最後，以下比較同時調整 DIA 和峰值的情況。此處的原理是兩個數值都依照相同的相對幅度調整，因此 `49/35 ~ 7/5`。同樣地，`120/93 ~ 9/7`。只要兩者的相對變化相同，無論基準 DIA 或峰值為何，各區間都會一致。
 
-```{image} ../images/iob_remaining_uniform.png
+```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-請注意，以這種方式調整 DIA 和峰值時，曲線上的每個點都會以相同的相對幅度移動。
+請注意，依照這種方式調整 DIA 和峰值時，曲線上的每個點都會以相同的相對幅度位移。
 
 ````
 

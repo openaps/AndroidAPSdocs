@@ -91,6 +91,8 @@ Wähle zwischen dem hellen Design, dem dunklen Design oder der Systemeinstellung
 
 Da ab Version 2.7 die Einstellungen verschlüsselt sind, wird ein Passwort benötigt, um die [Einstellungen exportieren](../Maintenance/ExportImportSettings.md) zu können.
 
+Wenn Du Dein Master-Passwort vergessen hast, siehe [Wie setze ich das Master-Passwort zurück?](#FAQ-reset-master-password)
+
 **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
 
 ![Set master password](../images/preferences/master_password_dialog.png)
@@ -472,7 +474,19 @@ Einstellungen sollten selbsterklärend sein.
 
 **„Nicht stören“-Modus übergehen** (standardmäßig eingeschaltet): Die Alarme von **AAPS** klingeln auch dann, wenn das Smartphone stumm geschaltet oder im Modus „Nicht stören“ ist. Schalte die Option aus, wenn **AAPS** diese Modi beachten soll: Die Alarme klingeln dann nicht, und im Modus „Nicht stören“ vibrieren sie nur, auf dem Smartphone und auf der Smartwatch. Loop-Vorschläge, die während „Nicht stören“ eintreffen, werden ohne Ton angezeigt.
 
-Wenn ein Alarm klingelt, bietet der Alarmbildschirm **Alarm stummschalten** (der Bildschirm bleibt offen, damit Du die Meldung lesen kannst) und **Stummschalten und schließen** an. Wischst Du die Alarm-Benachrichtigung in der Benachrichtigungsleiste weg, wird der Alarm stummgeschaltet. Öffnest Du **AAPS** später, wird ein Alarm, auf den Du nicht reagiert hast, erneut angezeigt.
+Wenn ein Alarm losgeht, bietet der Alarmbildschirm **Stumm schalten für 5 Minuten**, **Alarm stummschalten** (der Bildschirm bleibt offen, damit Du die Meldung lesen kannst) und **Stummschalten und schließen** als Optionen an. Wischst Du die Alarm-Benachrichtigung in der Benachrichtigungsleiste weg, wird der Alarm stummgeschaltet. Öffnest Du **AAPS** später, wird ein Alarm, auf den Du nicht reagiert hast, erneut angezeigt.
+
+(preferences-alarm-sound-volume-vibration)=
+### Alarmton, Lautstärke und Vibration
+
+- **Ton**: Die Alarmtöne von **AAPS** sind fest eingebaut und lassen sich nicht ändern.
+- **Lautstärke**: **AAPS** hat keine eigene Lautstärkeeinstellung. Ist **„Nicht stören“-Modus übergehen** eingeschaltet, richten sich die Alarme nach der Alarmlautstärke des Smartphones. Ist die Einstellung ausgeschaltet, richten sie sich nach der Benachrichtigungslautstärke.
+- **Benachrichtigungslautstärke schrittweise erhöhen** (standardmäßig eingeschaltet): Der Alarm beginnt leise und wird lauter. Schalte die Einstellung aus, damit der Alarm sofort mit voller Lautstärke klingelt.
+- **Vibration**: Gehe in den Einstellungen des Smartphones zu **Apps** > **AAPS** > **Benachrichtigungen**. Dort erscheint nach dem ersten Alarm die Liste **AAPS Alarme**. Tippe auf einen Alarm, um seine **Vibration** ein- oder auszuschalten. Lass diese Alarme eingeschaltet.
+
+![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+
+- Glukosealarme (hoch, niedrig, keine Daten) kommen von Deiner CGM-App oder von Nightscout: Stelle Ton und Vibration dort ein.
 
 (preferences-maintenance-settings)=
 ## Wartungseinstellungen

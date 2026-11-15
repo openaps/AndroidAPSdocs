@@ -309,7 +309,7 @@ Musste **AAPS** die Dosis begrenzen, zum Beispiel weil der berechnete Bolus übe
     
     Die [QuickWizard](#quickwizards)-Einträge des Smartphones, bei denen **Show on Watch** eingeschaltet ist, innerhalb ihrer gültigen Uhrzeiten. Ein Kohlenhydrat-Eintrag zeigt seine Kohlenhydrate in g, ein Insulin-Eintrag seine feste Dosis in IE. Ein Tippen führt den Eintrag nach einer Bestätigung auf der Smartwatch aus. Auf der Smartwatch gibt es nichts einzustellen: Bearbeite die Einträge auf dem Smartphone und schalte für jeden Eintrag, den Du auf der Kachel haben möchtest, unter **Device Selection** **Show on Watch** ein. Außerhalb der gültigen Uhrzeiten aller Deiner Einträge zeigt die Kachel **Keine Konfiguration verfügbar**.
     
-    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/quickwizard_watch_phone.png)
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
     ### Kachel Szene
     
@@ -361,9 +361,9 @@ Musste **AAPS** die Dosis begrenzen, zum Beispiel weil der berechnete Bolus übe
     
     Hinweis: Nicht alle Displays können always-on gut handhaben. Es kann dazu führen, dass sich der Bildschirm einbrennt, insbesondere auf den älteren OLED-Displays. Die Uhren verdunkeln das Display im Allgemeinen, um das Einbrennen zu verhindern; bitte informiere Dich über das Handbuch , Angaben des Herstellers oder das Internet für Ratschläge.
     
-    ![Watchface Nightstand](../images/Watchface_nightstand.jpg)
+    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Simplified UI](../images/Watchface_simplified_ui.png)
+    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     

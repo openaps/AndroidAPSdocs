@@ -33,7 +33,7 @@ Per evitarlo ci sono due possibilità:
    * Seleziona il tuo **Profilo** e tocca **▶ Attiva**
    * Set '**Time shift**' according to your destination and tap **Activate**.
    
-   ![Cambio profilo con sfasamento temporale](../images/ProfileSwitchTimeShift2.png)
+   ![Cambio profilo con sfasamento temporale](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * e.g. Vienna -> New York: **Profile Switch** +6 hours
    * e.g. Vienna -> Sydney: **Profile Switch** -8 hours
@@ -118,14 +118,14 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
    * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF: **Set automatically** under **Time zone** in the screenshot below).
    * Purtroppo alcune versioni di Android hanno un solo interruttore per attivare l'impostazione automatica sia dell'ora sia del fuso orario. You’ll have to turn this off for now.
 
-![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
+![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
 2. Find a timezone that has the same time as your current location but doesn't use DST.
    
    * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Per l'ora dell'Europa centrale (CET) potrebbe essere "Brazzaville" (Congo). Change your phone's timezone to Congo.
 
-![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
+![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
 3. In **AAPS** refresh your pump and switch to your desired **Profile**.
 

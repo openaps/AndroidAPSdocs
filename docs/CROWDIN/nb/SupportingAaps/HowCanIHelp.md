@@ -8,13 +8,13 @@ Utviklerne er foreldre, omsorgspersoner, pårørende og personer med diabetes so
 
 (donate-to-aaps)=
 
-### How can I donate?
+### Hvordan kan jeg donere?
 
-You can support **AAPS** in several ways:
+Du kan støtte **AAPS** på flere måter:
 
-* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
-* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
-* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+* **Nightscout Foundation:** doner på [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** bidra på [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone) til arbeidet med å få AAPS sertifisert som medisinsk utstyr.
+* **Bitcoin:** send til denne adressen **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
 
 ## Jeg kan skrive kode! Hvordan deltar jeg?
 

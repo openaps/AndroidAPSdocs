@@ -22,7 +22,7 @@ Why use a **Profile Percentage** rather than a temporary basal adjustment? To be
 
     <br />1. На головному екрані **натисніть на назву профілю** (поруч зі значком зірочки). Відкриється [екран профілю](#ProfileSwitch-manage-v4) на картці поточного **профілю**, позначеній **АКТИВНИЙ**.
     
-       ![Натисніть на назву профілю на головному екрані, щоб відкрити екран профілю](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Щоб залишити той самий **профіль**, не змінюйте вибрану картку **АКТИВНИЙ**. Щоб одночасно змінити **профіль**, проведіть до іншої картки.
     3. Натисніть на круглу кнопку **▶** (**Активувати**) унизу праворуч. Відкриється екран **Активувати**.
@@ -169,7 +169,7 @@ When a temporary switch is running, the **ACTIVE** card shows its percentage and
     - 22:00 **-10 год** -> 12:00
     - Через від’ємний зсув часу будуть використані налаштування з 22:00 замість налаштувань, які зазвичай діють о 12:00.
 
-![Напрямки зсуву часу при перемиканні профілю](../images/ProfileSwitch_PlusMinus2.png)
+![Напрямки зсуву часу при перемиканні профілю](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 

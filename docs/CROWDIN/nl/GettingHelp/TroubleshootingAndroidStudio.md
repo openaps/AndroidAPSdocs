@@ -192,7 +192,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
   Op internet staat informatie over hoe je kunt zien of je een 32-bit of 64-bit besturingssysteem hebt, bijvoorbeeld [deze pagina](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Screenshot Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Gradle opnieuw synchroniseren
@@ -237,7 +237,7 @@ Je apk is goed gebouwd en kan naar je telefoon worden overgezet!
 
 ## Apk niet geïnstalleerd
 
-![telefoon app niet geïnstalleerd](../images/Update_AppNotInstalled.png)
+![telefoon app niet geïnstalleerd](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Controleer of je inderdaad het bestand "app-full-release.apk" naar jouw telefoon hebt overgebracht.
 * Deze fout betekent meestal dat de nieuwe apk met een andere keystore is ondertekend dan je geïnstalleerde **AAPS**. Heb je je vorige keystore nog, kies deze dan en bouw opnieuw. Zie anders [AAPS opnieuw installeren met een nieuwe keystore](#reinstall-aaps).

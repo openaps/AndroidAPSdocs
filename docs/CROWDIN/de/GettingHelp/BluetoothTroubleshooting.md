@@ -52,7 +52,7 @@ Ping @XiTatiON im Discord-Kanal #omnipod-dash an, um Apps, die zur Liste hinzuge
 
 - **MINI-App**  Die App basiert offenbar auf der myBMW-App und verhält sich daher vermutlich genauso
 
-- **BM2** App zur Überwachung von Solarbatterien, die in manchen Wohnmobilen und Camping-Solaranlagen verwendet wird: Solange die App lief, verhinderte sie die Aktivierung eines neuen Pods. Als Abhilfe kannst Du die App während der Aktivierung eines neuen Pods beenden („Beenden erzwingen“). Das Ausführen der App danach schien die Funktion des DASH (auf einem Pixel 8 Pro mit Android 16) zu beeinträchtigen.
+- **BM2** App zur Überwachung von Solarbatterien, die in manchen Wohnmobilen und Camping-Solaranlagen verwendet wird: Solange die App lief, verhinderte sie die Aktivierung eines neuen Pods. Als Abhilfe kannst Du die App während der Aktivierung eines neuen Pods beenden („Stopp erzwingen“). Das Ausführen der App danach schien die Funktion des DASH (auf einem Pixel 8 Pro mit Android 16) zu beeinträchtigen.
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 

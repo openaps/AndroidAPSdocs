@@ -89,7 +89,7 @@
 - Трябва да завършите активирането на пача до 60 минути след включването му. Ако не успеете, изхвърлете пача.
 ```
 
-![Стъпката „Сдвояване на Patch“](../images/EOPatch/Bild6.png) ![Първа заявка за сдвояване през Bluetooth](../images/EOPatch/Bild7.png) ![Втора заявка за сдвояване през Bluetooth с ключа за достъп](../images/EOPatch/Bild8.png)
+![Стъпката „Сдвояване на Patch“](../images/EOPatch/eopatch_pairing.png) ![Първа заявка за сдвояване през Bluetooth](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Втора заявка за сдвояване през Bluetooth с ключа за достъп](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@
 
 Ако стърчи игла или ако пачът е мокър, замърсен или залепващата му лента е прегъната, вместо това натиснете **Изхвърли** и използвайте нов пач.
 
-![Стъпката „Подгответе се за закрепване на Patch“](../images/EOPatch/Bild9.png)
+![Стъпката „Подгответе се за закрепване на Patch“](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Локация
 
@@ -123,7 +123,7 @@
 - Ако пачът не залепне напълно, между пача и кожата може да влезе въздух. Това отслабва лепилото и водоустойчивостта на пача.
 ```
 
-![Стъпката „Закрепяне на Patch“](../images/EOPatch/Bild10.png)
+![Стъпката „Закрепяне на Patch“](../images/EOPatch/eopatch_attaching.png)
 
 ### Проверка за безопасност
 
@@ -133,7 +133,7 @@
 За безопасна употреба не завъртайте лоста за действие на иглата, докато проверката за безопасност не завърши.
 ```
 
-![Стъпката „Закрепяне на Patch“ с бутона „Стартирайте проверката за безопасност“](../images/EOPatch/Bild11.png) ![Проверката за безопасност е в ход](../images/EOPatch/Bild12.png)
+![Стъпката „Закрепяне на Patch“ с бутона „Стартирайте проверката за безопасност“](../images/EOPatch/eopatch_start_safety_check.png) ![Проверката за безопасност е в ход](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@
 
 Докато няма активен пач, **AAPS** показва помпата като спряна и записва временен базал 0 U/ч. Така в IOB не се отчита базален инсулин, докато не бъде активиран следващият пач.
 
-![Екранът на помпата EOPatch2 с бутона DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Страницата „Изхвърлете Patch“](../images/EOPatch/Bild14.png) ![Диалог за потвърждение „Изхвърлете Patch“](../images/EOPatch/Bild15.png) ![Изхвърлянето на Patch е завършено](../images/EOPatch/Bild16.png)
+![Екранът на помпата EOPatch2 с бутона DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![Страницата „Изхвърлете Patch“](../images/EOPatch/eopatch_discard_patch.png) ![Диалог за потвърждение „Изхвърлете Patch“](../images/EOPatch/eopatch_discard_confirm.png) ![Изхвърлянето на Patch е завършено](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@
 
 Подаването на инсулин се спира за избраното от вас време.
 
-![Екранът на помпата EOPatch2 с бутона SUSPEND](../images/EOPatch/Bild17.png) ![Диалог за потвърждение на спирането](../images/EOPatch/Bild18.png) ![Диалогът „Време за спиране на базала“](../images/EOPatch/Bild19.png)
+![Екранът на помпата EOPatch2 с бутона SUSPEND](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Диалог за потвърждение на спирането](../images/EOPatch/eopatch_suspend_confirm.png) ![Диалогът „Време за спиране на базала“](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@
 1. Отворете екрана на помпата (**Управление** → **Помпа**) и натиснете **Възстанови помпата**.
 1. В диалога **Възобновяване доставянето на инсулин** натиснете **Потвърждаване**.
 
-![Екранът на помпата EOPatch2 с бутона RESUME](../images/EOPatch/Bild20.png) ![Диалогът „Възобновяване доставянето на инсулин“](../images/EOPatch/Bild21.png)
+![Екранът на помпата EOPatch2 с бутона RESUME](../images/EOPatch/eopatch_pump_screen_resume.png) ![Диалогът „Възобновяване доставянето на инсулин“](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@
 
 Когато натиснете **Потвърждаване** в известието, **AAPS** обработва алармата. При повечето аларми това деактивира пача. При аларма **Неподходяща температура** бутонът е **Отново**.
 
-![Аларма на EOPatch2](../images/EOPatch/Bild22.png) ![Аларма на EOPatch2, след като пачът е деактивиран](../images/EOPatch/Bild23.png)
+![Аларма на EOPatch2](../images/EOPatch/eopatch_alarm.png) ![Аларма на EOPatch2, след като пачът е деактивиран](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@
 
 Предупрежденията са за ситуации със среден или нисък приоритет. Предупреждението се показва като известие на екрана **Общ преглед**.
 
-![Предупреждение от EOPatch2 на екрана „Общ преглед“](../images/EOPatch/Bild24.png)
+![Предупреждение от EOPatch2 на екрана „Общ преглед“](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

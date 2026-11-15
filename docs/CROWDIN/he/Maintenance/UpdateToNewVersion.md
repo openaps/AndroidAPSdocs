@@ -40,4 +40,4 @@ After you installed the new apk:
 - לוודא שייבאתם את ההגדרות שלכם; וגם
 - יש לבדוק את הגדרות **AAPS** שלכם תחת **הגדרות** ולוודא שהן עדיין נכונות.
 
-![חלון אודות עם גרסת AAPS המותקנת](../images/about_dialog_version.png)
+![חלון אודות עם גרסת AAPS המותקנת](../images/update/about_dialog_version.png)

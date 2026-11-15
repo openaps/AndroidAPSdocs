@@ -89,7 +89,7 @@ EOPatch2 설정은 두 가지 방법 중 하나로 엽니다:
 - 패치가 부팅된 후 60분 안에 패치 활성화를 끝내야 합니다. 끝내지 못하면 패치를 폐기하십시오.
 ```
 
-![패치 페어링 단계](../images/EOPatch/Bild6.png) ![첫 번째 블루투스 페어링 요청](../images/EOPatch/Bild7.png) ![패스키가 표시된 두 번째 블루투스 페어링 요청](../images/EOPatch/Bild8.png)
+![패치 페어링 단계](../images/EOPatch/eopatch_pairing.png) ![첫 번째 블루투스 페어링 요청](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![패스키가 표시된 두 번째 블루투스 페어링 요청](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@ EOPatch2 설정은 두 가지 방법 중 하나로 엽니다:
 
 바늘이 튀어나와 있거나, 패치가 젖었거나 더럽거나, 접착 테이프가 접혀 있으면 대신 **폐기**를 누르고 새 패치를 사용하십시오.
 
-![패치 부착 준비 단계](../images/EOPatch/Bild9.png)
+![패치 부착 준비 단계](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### 부착 위치
 
@@ -123,7 +123,7 @@ EOPatch2 설정은 두 가지 방법 중 하나로 엽니다:
 - 패치가 완전히 붙지 않으면 패치와 피부 사이에 공기가 들어갈 수 있습니다. 그러면 패치의 접착력과 방수 기능이 약해집니다.
 ```
 
-![패치 부착 단계](../images/EOPatch/Bild10.png)
+![패치 부착 단계](../images/EOPatch/eopatch_attaching.png)
 
 ### 안전 점검
 
@@ -133,7 +133,7 @@ EOPatch2 설정은 두 가지 방법 중 하나로 엽니다:
 안전한 사용을 위해 안전 점검이 끝날 때까지 바늘 작동 레버를 돌리지 마십시오.
 ```
 
-![안전 점검 시작 버튼이 있는 패치 부착 단계](../images/EOPatch/Bild11.png) ![안전 점검 진행 중](../images/EOPatch/Bild12.png)
+![안전 점검 시작 버튼이 있는 패치 부착 단계](../images/EOPatch/eopatch_start_safety_check.png) ![안전 점검 진행 중](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@ EOPatch2 설정은 두 가지 방법 중 하나로 엽니다:
 
 활성 패치가 없는 동안 **AAPS**는 펌프를 일시 중지 상태로 표시하고 0 U/hr 임시 기저를 기록합니다. 그래서 다음 패치가 활성화될 때까지 기저 인슐린이 IOB에 포함되지 않습니다.
 
-![패치 폐기/교체(DISCARD/CHANGE PATCH) 버튼이 있는 EOPatch2 펌프 화면](../images/EOPatch/Bild13.png) ![패치 폐기 페이지](../images/EOPatch/Bild14.png) ![패치 폐기 확인 대화 상자](../images/EOPatch/Bild15.png) ![패치 폐기 완료](../images/EOPatch/Bild16.png)
+![패치 폐기/교체(DISCARD/CHANGE PATCH) 버튼이 있는 EOPatch2 펌프 화면](../images/EOPatch/eopatch_pump_screen_discard.png) ![패치 폐기 페이지](../images/EOPatch/eopatch_discard_patch.png) ![패치 폐기 확인 대화 상자](../images/EOPatch/eopatch_discard_confirm.png) ![패치 폐기 완료](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@ EOPatch2 설정은 두 가지 방법 중 하나로 엽니다:
 
 선택한 시간 동안 인슐린 주입이 일시 중지됩니다.
 
-![일시 중지(SUSPEND) 버튼이 있는 EOPatch2 펌프 화면](../images/EOPatch/Bild17.png) ![일시 중지 확인 대화 상자](../images/EOPatch/Bild18.png) ![기저 중지 시간 대화 상자](../images/EOPatch/Bild19.png)
+![일시 중지(SUSPEND) 버튼이 있는 EOPatch2 펌프 화면](../images/EOPatch/eopatch_pump_screen_suspend.png) ![일시 중지 확인 대화 상자](../images/EOPatch/eopatch_suspend_confirm.png) ![기저 중지 시간 대화 상자](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@ EOPatch2 설정은 두 가지 방법 중 하나로 엽니다:
 1. 펌프 화면(**관리** → **펌프**)을 열고 **펌프 재개**를 누르십시오.
 1. **인슐린 주입 재개** 대화 상자에서 **확인**을 누르십시오.
 
-![재개(RESUME) 버튼이 있는 EOPatch2 펌프 화면](../images/EOPatch/Bild20.png) ![인슐린 주입 재개 대화 상자](../images/EOPatch/Bild21.png)
+![재개(RESUME) 버튼이 있는 EOPatch2 펌프 화면](../images/EOPatch/eopatch_pump_screen_resume.png) ![인슐린 주입 재개 대화 상자](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@ EOPatch2 설정은 두 가지 방법 중 하나로 엽니다:
 
 알림에서 **확인**을 누르면 **AAPS**가 알람을 처리합니다. 대부분의 알람에서는 이때 패치가 비활성화됩니다. **부적합한 온도** 알람에서는 버튼이 **재시도**입니다.
 
-![EOPatch2 알람](../images/EOPatch/Bild22.png) ![패치가 비활성화된 후의 EOPatch2 알람](../images/EOPatch/Bild23.png)
+![EOPatch2 알람](../images/EOPatch/eopatch_alarm.png) ![패치가 비활성화된 후의 EOPatch2 알람](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@ EOPatch2 설정은 두 가지 방법 중 하나로 엽니다:
 
 경고는 중간 또는 낮은 우선순위의 상황을 위한 것입니다. 경고는 **개요** 화면에 알림으로 나타납니다.
 
-![개요 화면에 표시된 EOPatch2 경고](../images/EOPatch/Bild24.png)
+![개요 화면에 표시된 EOPatch2 경고](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

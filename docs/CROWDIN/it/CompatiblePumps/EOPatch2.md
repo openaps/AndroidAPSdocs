@@ -89,7 +89,7 @@ When you hear the beep, press **Start pairing**.
 - You must finish activating the patch within 60 minutes of it booting. Se non ci riesci, scarta la patch.
 ```
 
-![Patch pairing step](../images/EOPatch/Bild6.png) ![First Bluetooth pairing request](../images/EOPatch/Bild7.png) ![Second Bluetooth pairing request with the passkey](../images/EOPatch/Bild8.png)
+![Patch pairing step](../images/EOPatch/eopatch_pairing.png) ![First Bluetooth pairing request](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Second Bluetooth pairing request with the passkey](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@ Remove the adhesive tape from the patch, then press **Next**.
 
 If a needle sticks out, or if the patch is wet, dirty or its adhesive tape is folded, press **Discard** instead and use a new patch.
 
-![Passo Preparazione per il fissaggio della patch](../images/EOPatch/Bild9.png)
+![Passo Preparazione per il fissaggio della patch](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Posizione del sito
 
@@ -123,7 +123,7 @@ Controlla il sito di infusione, poi premi **Avvia controllo di sicurezza**.
 - Se la patch non aderisce completamente, può entrare aria tra la patch e la pelle. Questo indebolisce l'adesivo e la resistenza all'acqua della patch.
 ```
 
-![Passo Fissaggio della patch](../images/EOPatch/Bild10.png)
+![Passo Fissaggio della patch](../images/EOPatch/eopatch_attaching.png)
 
 ### Controllo di sicurezza
 
@@ -133,7 +133,7 @@ Il controllo di sicurezza dura circa 30 secondi. When it is finished, the patch 
 For safe use, do not turn the needle action lever until the safety check is complete.
 ```
 
-![Passo Fissaggio della patch con il pulsante Avvia controllo di sicurezza](../images/EOPatch/Bild11.png) ![Controllo di sicurezza in corso](../images/EOPatch/Bild12.png)
+![Passo Fissaggio della patch con il pulsante Avvia controllo di sicurezza](../images/EOPatch/eopatch_start_safety_check.png) ![Controllo di sicurezza in corso](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@ After that, the wizard continues straight on to activating a new patch (see abov
 
 While no patch is active, **AAPS** shows the pump as suspended and records a 0 U/hr temporary basal, so no basal insulin is counted in IOB until the next patch is activated.
 
-![La schermata del micro EOPatch2 con il pulsante DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Pagina Scarta patch](../images/EOPatch/Bild14.png) ![Discard Patch confirmation dialog](../images/EOPatch/Bild15.png) ![Lo scarto della patch è completato](../images/EOPatch/Bild16.png)
+![La schermata del micro EOPatch2 con il pulsante DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![Pagina Scarta patch](../images/EOPatch/eopatch_discard_patch.png) ![Discard Patch confirmation dialog](../images/EOPatch/eopatch_discard_confirm.png) ![Lo scarto della patch è completato](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@ Suspending insulin delivery also cancels any extended bolus and temporary basal.
 
 Insulin delivery is suspended for the time you chose.
 
-![La schermata del micro EOPatch2 con il pulsante SUSPEND](../images/EOPatch/Bild17.png) ![Finestra di conferma della sospensione](../images/EOPatch/Bild18.png) ![Finestra Tempo sospensione basale](../images/EOPatch/Bild19.png)
+![La schermata del micro EOPatch2 con il pulsante SUSPEND](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Finestra di conferma della sospensione](../images/EOPatch/eopatch_suspend_confirm.png) ![Finestra Tempo sospensione basale](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@ Gli screenshot qui sopra sono di una versione precedente di **AAPS**. In **AAPS*
 1. Apri la schermata del micro (**Gestisci** → **Micro**) e premi **Riprendi micro**.
 1. In the **Resume insulin delivery** dialog, press **Confirm**.
 
-![La schermata del micro EOPatch2 con il pulsante RESUME](../images/EOPatch/Bild20.png) ![Finestra Riprendi erogazione insulina](../images/EOPatch/Bild21.png)
+![La schermata del micro EOPatch2 con il pulsante RESUME](../images/EOPatch/eopatch_pump_screen_resume.png) ![Finestra Riprendi erogazione insulina](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@ Alarms are for urgent, top-priority situations and need your action straight awa
 
 Quando premi **Conferma** sulla notifica, **AAPS** gestisce l'allarme. Per la maggior parte degli allarmi, questo disattiva la patch. For an **Inappropriate temperature** alarm, the button is **Retry**.
 
-![Allarme EOPatch2](../images/EOPatch/Bild22.png) ![Allarme EOPatch2 dopo la disattivazione della patch](../images/EOPatch/Bild23.png)
+![Allarme EOPatch2](../images/EOPatch/eopatch_alarm.png) ![Allarme EOPatch2 dopo la disattivazione della patch](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@ The different alarms are explained below.
 
 Warnings are for medium- or low-priority situations. A warning appears as a notification on the **Overview** screen.
 
-![EOPatch2 warning shown on the Overview screen](../images/EOPatch/Bild24.png)
+![EOPatch2 warning shown on the Overview screen](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

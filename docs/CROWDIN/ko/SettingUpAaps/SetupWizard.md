@@ -172,7 +172,7 @@ Android 16에서는 다음 단계를 따르십시오. 다른 버전에서는 제
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**마스터 비밀번호를 절대 잃어버리지 마십시오**. 비밀번호를 _예를 들어_ Google Drive에 적어 두십시오. Google Drive는 Google이 백업해 주므로 좋은 장소입니다. 스마트폰이나 PC가 고장 나면 실제 사본이 하나도 없을 수 있습니다. 마스터 비밀번호를 잊어버리면 나중에 프로파일 구성과 **목표** 진행 상황을 복구하기 어려울 수 있습니다.
+**마스터 비밀번호를 절대 잃어버리지 마십시오**. 비밀번호를 _예를 들어_ Google Drive에 적어 두십시오. Google Drive는 Google이 백업해 주므로 좋은 장소입니다. 스마트폰이나 PC가 고장 나면 실제 사본이 하나도 없을 수 있습니다. 마스터 비밀번호를 잊어버리면 나중에 프로파일 구성과 **목표** 진행 상황을 복구하기 어려울 수 있습니다. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 다 되면 "**다음**"을 눌러 다음 화면으로 가십시오.

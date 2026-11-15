@@ -84,7 +84,7 @@ Si les glucides ont été surestimés ou sous-estimés, vous pouvez les corriger
 
 L'écran **Historique Traitements** permet de corriger une saisie de glucides erronée en la supprimant. L'utilisateur a peut-être surestimé ou sous-estimé les glucides saisis :
 
-![Supprimer une saisie de glucides dans l'Historique Traitements](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Supprimer une saisie de glucides dans l'Historique Traitements](../images/treatments_history_delete_carbs.png)
 
 1. Vérifiez et notez les **GA** et l'**IA** actuels sur l'écran principal d'**AAPS**.
 2. Ouvrez l'**Historique Traitements** (menu latéral → *Historique Traitements*), onglet **Glucides et bolus**. Selon la pompe, les glucides peuvent apparaître avec l'insuline sur une seule ligne ou comme une entrée séparée (par ex. avec la Dana RS).

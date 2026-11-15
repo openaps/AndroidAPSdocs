@@ -23,7 +23,7 @@ Le sezioni sotto riassumono le caratteristiche del **target temporaneo Attività
 
 ### TT - Attività fisica
 
-![TT Attività fisica](../images/TempTarget2.png)
+![TT Attività fisica](../images/v4/TempTarget/TempTarget2.png)
 
 **BG Target (default preset, adjustable)**
 
@@ -46,7 +46,7 @@ Users may also wish to consider:
 
 ### TT - Pasto a breve
 
-![TT Pasto a breve](../images/TempTarget1.png)
+![TT Pasto a breve](../images/v4/TempTarget/TempTarget1.png)
 
 **BG Target (default preset, adjustable)**
 
@@ -63,7 +63,7 @@ Depending on **BG** level, **AAPS** will "increase" insulin usage within the use
 
 ### TT - Ipoglicemia
 
-![TT Ipoglicemia](../images/TempTarget3.png)
+![TT Ipoglicemia](../images/v4/TempTarget/TempTarget3.png)
 
 **BG Target (default preset, adjustable)**
 
@@ -98,7 +98,7 @@ Selecting a preset card loads its **target** and **duration** into the editor.
     
     Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. A confirmation shows the exact target, duration and reason before anything starts:
     
-    ![Activation confirmation](../images/TempTarget8.png)
+    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
     After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
@@ -148,13 +148,13 @@ Un target temporaneo si può impostare anche senza aprire questa schermata:
 
 The quickest way is to tap the **target chip** on the main screen (it shows your current target range):
 
-![Chip del target nella schermata principale](../images/TempTarget6.png)
+![Chip del target nella schermata principale](../images/v4/TempTarget/TempTarget6.png)
 
 This opens the **Temp Target** screen described above — swipe to a preset and tap **▶ Activate**. The same screen is also reachable via **Manage** → **Temp Target**.
 
 (TempTargets-carbs-dialog)= When entering carbs, you don't need to open the **Temp Target** screen at all: the **Carbs dialog** (**Treatments** → **Carbs**) has **Start Hypo TT**, **Start Eating soon TT** and **Start Activity TT** toggles at the top. Switch one on and the corresponding preset is activated together with the carb entry:
 
-![Interruttori TT nella finestra CHO](../images/TempTarget5.png)
+![Interruttori TT nella finestra CHO](../images/v4/TempTarget/TempTarget5.png)
 
     {admonition} Automatic Hypo TT
     :class: note
@@ -171,7 +171,7 @@ Each preset's **target** and **duration** are edited directly on the **Temp Targ
 3. Adjust **Temporary target** and/or **Duration** in the editor.
 4. Tap the **Save** icon that appears in the top toolbar.
 
-![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/TempTarget7.png)
+![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/v4/TempTarget/TempTarget7.png)
 
 While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
 
@@ -179,7 +179,7 @@ While the editor differs from a built-in preset's factory values, a **↺ Revert
 
 Mentre un target temporaneo è in corso, il chip del target nella schermata principale mostra il target e il tempo che resta. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Toccalo e conferma:
 
-![Annullare un target temporaneo in corso](../images/TempTarget9.png)
+![Annullare un target temporaneo in corso](../images/v4/TempTarget/TempTarget9.png)
 
 A running temporary target can also be stopped from a **Wear OS watch**, from a paired **client**, or by an **Automation** rule (*Stop temp target*).
 
@@ -231,6 +231,6 @@ Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have
 
 To action this open **Settings** → **OpenAPS SMB** and deactivate *'Enable SMB with high temp target'*.
 
-![Preferenza Abilita SMB con target temporanei "alti"](../images/TempTargetSMB.png)
+![Preferenza Abilita SMB con target temporanei "alti"](../images/v4/TempTarget/TempTargetSMB.png)
 
 This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS SMB active.

@@ -309,13 +309,13 @@ Om **AAPS** var tvungen att begränsa dosen, till exempel för att den beräknad
     
     De [snabbknappar](#quickwizards) på telefonen som har **Visa på klocka** påslaget, inom sina giltiga tider. En kolhydratpost visar sina kolhydrater i g, en insulinpost sin fasta dos i U. Ett tryck kör posten efter en bekräftelse på klockan. Det finns inget att ställa in på klockan: redigera posterna på telefonen, och slå på **Visa på klocka** under **Enhetsval** för varje post som du vill ha på brickan. Utanför de giltiga tiderna för alla dina poster visar brickan **Ingen konfiguration tillgänglig**.
     
-    ![En snabbknapp med Visa på klocka påslaget, och brickan där den visas](../images/quickwizard_watch_phone.png)
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Brickan Scen
+    ### Scene tile
     
-    ![Brickan Scen](../images/wearos/tiles/tile_scene.png)
+    ![Scene tile](../images/wearos/tiles/tile_scene.png)
     
-    Telefonens [scener](#scenes-from-watch). Var och en av de fyra platserna ställs in på **Automatisk**, **Inget** eller en scen i brickans inställningar. En plats med **Automatisk** tar nästa scen i telefonens lista som ingen annan plats har tagit. En plats som är inställd på en scen som inte längre finns på telefonen visar **Ej tillgänglig**.
+    The [Scenes](#scenes-from-watch) of the phone. Var och en av de fyra platserna ställs in på **Automatisk**, **Inget** eller en scen i brickans inställningar. En plats med **Automatisk** tar nästa scen i telefonens lista som ingen annan plats har tagit. En plats som är inställd på en scen som inte längre finns på telefonen visar **Ej tillgänglig**.
     
     ![Inställningar för brickan Scen, fyra platser inställda på Automatisk](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,17 +361,17 @@ Om **AAPS** var tvungen att begränsa dosen, till exempel för att den beräknad
     
     Obs! Alla skärmar klarar inte Alltid på särskilt bra. Det kan orsaka inbränning på skärmen, särskilt på äldre OLED-skärmar. Klockor dämpar oftast skärmen för att förhindra inbränning. Läs i bruksanvisningen, fråga tillverkaren eller sök på internet för råd.
     
-    ![Urtavla för nattduksbordet](../images/Watchface_nightstand.jpg)
+    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Förenklat gränssnitt](../images/Watchface_simplified_ui.png)
+    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Telefonens larm på klockan
+    ## Phone alarms on the watch
     
-    ![Ett larm från telefonen på klockan](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    Klockan visar telefonens larm, så att du ser varför telefonen låter och kan svara direkt från handleden. Klockan vibrerar, och sedan igen var 30:e sekund i fem minuter tills du svarar. En avisering visar larmets titel och text, med samma svar som påminnelsen [Dags att äta](#WearOsSmartwatch-wizard-carb-time):
+    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. Klockan vibrerar, och sedan igen var 30:e sekund i fem minuter tills du svarar. En avisering visar larmets titel och text, med samma svar som påminnelsen [Dags att äta](#WearOsSmartwatch-wizard-carb-time):
     
     * **Tysta**, eller svep: larmet slutar, och larmskärmen på telefonen stängs.
     * **Tysta 5 min**: larmet slutar och ringer igen efter fem minuter, på telefonen och på klockan.

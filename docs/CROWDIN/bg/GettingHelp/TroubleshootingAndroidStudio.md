@@ -192,7 +192,7 @@ Cause: error: invalid source release: 21
 
   В интернет има информация как да определите дали имате 32-битова или 64-битова операционна система – напр. [тази](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Снимка на екрана: Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Снимка на екрана: Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Gradle Resync
@@ -237,7 +237,7 @@ Cause: error: invalid source release: 21
 
 ## Apk не е инсталиран
 
-![приложението на телефона не е инсталирано](../images/Update_AppNotInstalled.png)
+![приложението на телефона не е инсталирано](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Уверете се, че сте прехвърлили файла „app-full-release.apk“ на телефона си.
 * Тази грешка обикновено означава, че новият apk е подписан с различно хранилище за ключове от инсталирания ви **AAPS**. Ако все още имате предишното си хранилище за ключове, изберете го и компилирайте отново. В противен случай вижте [Преинсталиране на AAPS с ново хранилище за ключове](#reinstall-aaps).

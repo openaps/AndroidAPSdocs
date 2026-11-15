@@ -114,7 +114,7 @@ Am Ende jeder Zeile zeigen kleine Symbole, woher die Daten stammen oder wohin si
 (screens-bolus-carbs)=
 ### Kohlenhydrate & Bolus
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![Carbs & bolus](../images/Maintenance/TreatmentsView1.png)
 
 Auf diesem Reiter kannst Du die Bolus- und Kohlenhydrateingaben einsehen. Jeder Bolus (Zeile **1**) zeigt neben der Insulinmenge das verbleibende zugehörige IOB an. Der Ursprung des Bolus kann entweder sein:
 * Mahlzeit (manuell eingegeben über die Knöpfe Insulin, QuickWizard oder Bolus-Rechner)
@@ -141,7 +141,7 @@ Mit dem Behandlungsverlauf kannst Du fehlerhafte Kohlenhydrat-Einträge korrigie
 
 ### Temporäre Basalrate
 
-![Temp Basal](../images/TreatmentsView2.png)
+![Temp Basal](../images/Maintenance/TreatmentsView2.png)
 
 Die durch den Loop gesetzten **temporäre Basalraten** werden hier angezeigt. Wirkt ein Eintrag noch auf das IOB, wird diese Information neben der Rate angezeigt (Zeile **1**). Das können sein:
 * Positives IOB, wenn die temporäre Basalrate höher war als die im Profil festgelegte
@@ -153,13 +153,13 @@ Links an einer Zeile bedeutet ein rotes S „Suspend“: Das passiert, wenn gera
 
 ### Temporäres Ziel
 
-![Temporäres Ziel](../images/TreatmentsView3.png)
+![Temporäres Ziel](../images/Maintenance/TreatmentsView3.png)
 
 Hier kann die Historie der temporären Ziele eingesehen werden.
 
 ### Profilwechsel
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profile Switch](../images/Maintenance/TreatmentsView4.png)
 
 Die Historie der Profilwechsel ist hier zu sehen. Bei jedem Profilwechsel siehst Du möglicherweise mehrere Einträge: Zeile **1**, gespeichert sowohl in NS als auch im Pumpenverlauf, entspricht dem tatsächlichen Wechsel. Zeile **2**, gespeichert in Nightscout, aber nicht im Pumpenverlauf, entspricht der Anforderung eines Profilwechsels durch den Anwender.
 
@@ -169,14 +169,14 @@ Mit dem Knopf **Klonen** in Zeile **2** kannst Du eine Kopie eines **Profilwechs
 
 ### Careportal
 
-![Care portal](../images/TreatmentsView5.png)
+![Care portal](../images/Maintenance/TreatmentsView5.png)
 
 Dieser Reiter zeigt alle Notizen und Careportal-Einträge, die in Nightscout erfasst wurden.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### AAPS-Modus
 
-![AAPS-Modus](../images/TreatmentsView6.png)
+![AAPS-Modus](../images/Maintenance/TreatmentsView6.png)
 
 Dieser Reiter zeigt den Verlauf der Änderungen des [Loop-Status](#AapsScreens-loop-status): Open, Closed, LGS, Unterbrechung, Getrennt.
 

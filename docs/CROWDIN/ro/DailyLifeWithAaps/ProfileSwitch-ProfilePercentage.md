@@ -22,7 +22,7 @@ Aveți nevoie de cel puțin un **Profil** salvat. A **Profile Percentage** is al
 
     <br />1. Pe ecranul principal, **apăsați numele profilului** (lângă pictograma stea). The [Profile screen](#ProfileSwitch-manage-v4) opens on the card of the running **Profile**, marked **ACTIVE**.
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Pentru a păstra același **Profil**, lăsați selectat cardul **ACTIV**. To change **Profile** at the same time, swipe to another card.
     3. Apăsați butonul rotund **▶** (**Activați**) din dreapta jos. Se deschide ecranul **Activați**.
@@ -169,7 +169,7 @@ It is always a question of which hour’s **Profile’s** settings should replac
     - 22:00 **-10 h** -> 12:00
     - Vor fi utilizate setările de la ora 22:00 (10 pm) în loc de setările utilizate în mod normal la ora 12:00, datorită decalării negative a timpului.
 
-![Sensul decalării orare a profilului](../images/ProfileSwitch_PlusMinus2.png)
+![Sensul decalării orare a profilului](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 Acest mecanism de a face instantanee ale **profilului** permite un calcul mult mai precis al trecutului și posibilitatea de a urmări modificările **profilului**.
 

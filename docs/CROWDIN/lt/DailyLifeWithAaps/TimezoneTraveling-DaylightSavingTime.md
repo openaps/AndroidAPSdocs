@@ -33,7 +33,7 @@ Kad to išvengtumėte, yra du būdai:
    * Pasirinkite savo **profilį** ir bakstelėkite **▶ Aktyvuoti**
    * Nustatykite '**Laiko perstūmimas**' pagal kelionės tikslą ir bakstelėkite **Aktyvuoti**.
    
-   ![Profilio keitimas su laiko perstūmimu](../images/ProfileSwitchTimeShift2.png)
+   ![Profilio keitimas su laiko perstūmimu](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * pvz., Viena -> Niujorkas: **Profilio keitimas** +6 valandos
    * pvz., Viena -> Sidnėjus: **Profilio keitimas** -8 valandos
@@ -118,14 +118,14 @@ Jei bolusą leidžiate su **AAPS** skaičiuotuvu, nenaudokite **AAO** ir **AIO**
    * Kai kuriuose telefonuose yra du nustatymai: vienas automatiškai nustato laiką (geriausia jį palikti įjungtą), kitas automatiškai nustato laiko juostą (jį turite IŠJUNGTI: **Set automatically** skiltyje **Time zone** toliau pateiktoje ekrano kopijoje).
    * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. Kol kas šį nustatymą turėsite išjungti.
 
-![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
+![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
 2. Find a timezone that has the same time as your current location but doesn't use DST.
    
    * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Centrinės Europos laikui (CET) tai galėtų būti "Brazzaville" (Kongas). Pakeiskite telefono laiko juostą į Kongo laiko juostą.
 
-![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
+![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
 3. **AAPS** programėlėje atnaujinkite pompos būseną ir perjunkite į norimą **profilį**.
 

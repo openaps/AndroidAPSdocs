@@ -89,6 +89,7 @@ Right after the repository is created, GitHub may not have read its workflow fil
 - **„The secret is too short“**, **„The secret is not a valid code“** или **„The secret does not contain a keystore“**: в секрета е поставен грешен текст – често самата дума `KEYSTORE_SET` или само част от кода. Във вашето хранилище отворете **Settings** → **Secrets and variables** → **Actions**, редактирайте `KEYSTORE_SET` и поставете отново дългия код от **Copy secret** (първо направете отново стъпка 2 на страницата за настройка, ако сте я затворили).
 - **„Keystore, password or alias is wrong“**: проверете паролата и псевдонима на хранилището за ключове, след това направете отново стъпки 2 и 3 на страницата за настройка.
 - **„Google Drive access has expired or was revoked“**: направете отново [стъпка 6](#aaps-builder-google-drive) и актуализирайте секрета `GDRIVE_OAUTH2`.
+- **"Process completed with exit code 1" and a red line with only a link to `services.gradle.org`**, after less than a minute: the build could not download Gradle, a tool it needs to build the app. The Gradle website was not responding. Your repository and your settings are fine. Wait half an hour, then [run the build again](#aaps-ci-rerun).
 - **Another error**: [read the build log](#aaps-ci-read-the-logs), then [run the build again](#aaps-ci-rerun). If it fails again the same way, ask for help with the name of the failed step and the error lines. Никога не споделяйте съдържанието на своите секрети.
 
 ### Step 5: the app

@@ -22,7 +22,7 @@ Você precisa ter pelo menos um **Perfil** salvo. Uma **Porcentagem do perfil** 
 
     <br />1. Na tela principal, **toque no nome do perfil** (ao lado do ícone de estrela). A [tela Perfil](#ProfileSwitch-manage-v4) abre no cartão do **Perfil** em uso, marcado como **ATIVO**.
     
-       ![Toque no nome do perfil na tela principal para abrir a tela Perfil](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Para manter o mesmo **Perfil**, deixe o cartão **ATIVO** selecionado. Para trocar de **Perfil** ao mesmo tempo, deslize para outro cartão.
     3. Toque no botão redondo **▶** (**Ativar**) no canto inferior direito. A tela **Ativar** abre.
@@ -169,7 +169,7 @@ A questão é sempre: as configurações do **Perfil** de qual hora devem substi
     - 22:00 **-10 h** -> 12:00
     - Por causa do deslocamento de tempo negativo, as configurações das 22:00 são usadas no lugar das configurações normais das 12:00.
 
-![Direções do deslocamento de tempo na troca de perfil](../images/ProfileSwitch_PlusMinus2.png)
+![Direções do deslocamento de tempo na troca de perfil](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 

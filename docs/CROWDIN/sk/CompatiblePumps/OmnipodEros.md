@@ -281,7 +281,7 @@ Deaktivácia Podu (pri expirácii alebo pri zlyhaní Podu):
 
 Nasledujúci postup ukazuje, ako pozastaviť a obnoviť podávanie inzulínu.
 
-*POZNÁMKA – ak nevidíte tlačidlo **Pozastaviť***, je predvolene skryté. Zapnite **Zobraziť tlačidlo „Pozastaviť“ na obrazovke pumpy** v [nastaveniach Omnipodu](#OmnipodEros-omnipod-settings) v časti **Iné**.
+*POZNÁMKA – ak nevidíte tlačidlo **Pozastaviť***, je predvolene skryté. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Pozastavenie podávania inzulínu
 
@@ -591,7 +591,7 @@ Tlačidlá v dolnej časti obrazovky pumpy sa menia podľa situácie. Tlačidlá
   Snímka obrazovky vyššie pochádza zo staršej verzie **AAPS**. V **AAPS** 4 je to textové tlačidlo **Nastaviť čas** na obrazovke pumpy Omnipod.
   ```
 
-- **Pozastaviť:** Pozastaví podávanie inzulínu v aktívnom Pode. Zobrazí sa iba vtedy, ak je zapnuté v nastaveniach (**Zobraziť tlačidlo „Pozastaviť“ na obrazovke pumpy**).
+- **Pozastaviť:** Pozastaví podávanie inzulínu v aktívnom Pode. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Poskytuje notifikácie AAPS a zvukové výstrahy telefónu, keď nie je isté, �
 
 Poskytuje rozšírené nastavenia na pomoc pri ladení.
 
-- **Zobraziť tlačidlo „Pozastaviť“ na obrazovke pumpy:** Skryje alebo zobrazí tlačidlo **Pozastaviť** na obrazovke pumpy Omnipod.
+- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
 - **Zobraziť tlačidlo Protokol pulzov v menu Správa Podu:** Toto nastavenie je stále v zozname, ale súčasná verzia obrazovky pumpy nemá tlačidlo **Protokol pulzov**.
 
 - **Zobraziť tlačidlo Štatistika RileyLink v menu Správa Podu:** Skryje alebo zobrazí tlačidlo **Štatistika RileyLink** na obrazovke pumpy Omnipod.

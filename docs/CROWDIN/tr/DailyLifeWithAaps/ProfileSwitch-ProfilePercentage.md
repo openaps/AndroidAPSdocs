@@ -22,7 +22,7 @@ En az bir kayıtlı **Profil**'e ihtiyacınız var. **Profil yüzdesi** her zama
 
     <br />1. Ana ekranda **profil adına dokunun** (yıldız simgesinin yanında). [Profil ekranı](#ProfileSwitch-manage-v4), çalışan **Profil**'in **AKTİF** olarak işaretli kartında açılır.
     
-       ![Profil ekranını açmak için ana ekranda profil adına dokunun](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Aynı **Profil**'i korumak için **AKTİF** kartı seçili bırakın. Aynı anda **Profil**'i de değiştirmek için başka bir karta kaydırın.
     3. Sağ alttaki yuvarlak **▶** düğmesine (**Etkinleştir**) dokunun. **Etkinleştir** ekranı açılır.
@@ -169,7 +169,7 @@ Her zaman şu sorudur: hangi saatin **Profil** ayarları, şimdiki saatin ayarla
     - 22:00 **-10 sa** -> 12:00
     - Negatif zaman kayması nedeniyle normalde 12:00'de kullanılan ayarlar yerine 22:00 (akşam 10) ayarları kullanılacaktır.
 
-![Profil değişiminde zaman kaydırmanın yönleri](../images/ProfileSwitch_PlusMinus2.png)
+![Profil değişiminde zaman kaydırmanın yönleri](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 **Profil**'in anlık görüntülerini alan bu mekanizma, geçmişin çok daha kesin hesaplanmasını ve **Profil** değişikliklerinin izlenebilmesini sağlar.
 

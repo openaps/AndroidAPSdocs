@@ -172,7 +172,7 @@ Sol üst köşedeki okla geri dönün. Sihirbaz artık "**Parola belirlendi!**" 
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Lütfen **ANA PAROLANIZI KAYBETMEYİN**. Parolanızı bir yere not edin, _örneğin_ Google Drive'a. Google Drive iyi bir yerdir, çünkü Google onu sizin için yedekler. Akıllı telefonunuz veya bilgisayarınız çökebilir ve elinizde güncel bir kopya olmayabilir. Ana parolanızı unutursanız, profil yapılandırmanızı ve **Görevler**'deki ilerlemenizi daha sonra geri yüklemek zor olabilir.
+Lütfen **ANA PAROLANIZI KAYBETMEYİN**. Parolanızı bir yere not edin, _örneğin_ Google Drive'a. Google Drive iyi bir yerdir, çünkü Google onu sizin için yedekler. Akıllı telefonunuz veya bilgisayarınız çökebilir ve elinizde güncel bir kopya olmayabilir. Ana parolanızı unutursanız, profil yapılandırmanızı ve **Görevler**'deki ilerlemenizi daha sonra geri yüklemek zor olabilir. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 İşiniz bittiğinde bir sonraki ekrana geçmek için "**İLERİ**" düğmesine basın.

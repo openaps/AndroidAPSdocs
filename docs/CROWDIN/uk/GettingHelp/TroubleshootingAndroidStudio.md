@@ -192,7 +192,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
   В інтернеті є інформація про те, як визначити, 32-бітна чи 64-бітна у вас ОС, наприклад [ця](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Знімок екрана: Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Знімок екрана: Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Повторна синхронізація Gradle
@@ -237,7 +237,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Apk не встановлено
 
-![застосунок на телефоні не встановлено](../images/Update_AppNotInstalled.png)
+![застосунок на телефоні не встановлено](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Переконайтеся, що ви перенесли файл «app-full-release.apk» на телефон.
 * Ця помилка зазвичай означає, що новий apk підписаний іншим keystore, ніж ваш встановлений **AAPS**. Якщо у вас ще є ваш попередній keystore, виберіть його і зберіть знову. Інакше див. [Перевстановлення AAPS з новим keystore](#reinstall-aaps).

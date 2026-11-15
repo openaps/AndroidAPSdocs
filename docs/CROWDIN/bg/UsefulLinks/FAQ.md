@@ -74,7 +74,7 @@ AAPS се използва за управление на помпата и за
   * текущия [apk](../SettingUpAaps/BuildingAaps.md) на AAPS и на всички други приложения, които използвате (напр. xDrip, Juggluco, BYODA).
   * файла с хранилището за ключове (от компилирането на apk) и паролата за него,
   * последните файлове с експорт на настройките от AAPS и от другите ви приложения,
-  * главната парола на **AAPS**: без нея не можете да импортирате файла с настройки.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ AAPS се използва за управление на помпата и за
 
 1. Създайте празен файл с име `PasswordReset` (без разширение на файла) в подпапката `extra` на директорията на AAPS (обикновено `AAPS/extra`).
 2. Рестартирайте **AAPS**. Помпата ви трябва да е свързана: **AAPS** показва „Чакаме помпата…“ и трябва да прочете серийния номер на помпата в рамките на 30 секунди.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. **AAPS** показва „Паролата е зададена!“: главната ви парола вече е **серийният номер на помпата**. Файлът `PasswordReset` се изтрива автоматично.
+
 4. Отворете **Настройки** > **Защита** > **Главна парола** и задайте нова парола.
 
 Ако помпата не бъде достигната навреме, нищо не се променя: проверете връзката с помпата и опитайте отново.

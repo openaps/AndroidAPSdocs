@@ -23,7 +23,7 @@ Následující části shrnují vlastnosti **dočasného cíle Aktivita**, **do�
 
 ### DC - Aktivita
 
-![DC Aktivita](../images/TempTarget2.png)
+![DC Aktivita](../images/v4/TempTarget/TempTarget2.png)
 
 **Cílová glykémie (výchozí předvolba, lze upravit)**
 
@@ -46,7 +46,7 @@ Uživatelé mohou také zvážit:
 
 ### DC - Před jídlem
 
-![DC Před jídlem](../images/TempTarget1.png)
+![DC Před jídlem](../images/v4/TempTarget/TempTarget1.png)
 
 **Cílová glykémie (výchozí předvolba, lze upravit)**
 
@@ -63,7 +63,7 @@ Podle hodnoty **glykémie** **AAPS** „zvýší“ dávkování inzulínu v rá
 
 ### DC - Hypoglykémie
 
-![DC Hypoglykémie](../images/TempTarget3.png)
+![DC Hypoglykémie](../images/v4/TempTarget/TempTarget3.png)
 
 **Cílová glykémie (výchozí předvolba, lze upravit)**
 
@@ -96,11 +96,11 @@ Výběrem karty předvolby se její **cíl** a **trvání** načtou do editoru.
 
     <br />### Aktivace dočasného cíle
     
-    Přejeďte na požadovanou předvolbu (její hodnoty se načtou do editoru), případně v editoru upravte **cíl**/**trvání** a pak klepněte na **▶ Aktivovat**. Než se cokoli spustí, zobrazí se potvrzení s přesným cílem, trváním a důvodem:
+    Přejeďte na požadovanou předvolbu (její hodnoty se načtou do editoru), případně v editoru upravte **cíl**/**trvání** a pak klepněte na **▶ Aktivovat**. A confirmation shows the exact target, duration and reason before anything starts:
     
-    ![Potvrzení aktivace](../images/TempTarget8.png)
+    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    Po potvrzení se dočasný cíl spustí ihned (nebo ve zvoleném čase **Aktivace**) a běží po nastavenou **dobu trvání**.
+    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
     ```{admonition} Úprava čísel je jednorázová – předvolbu nemění
     :class: important
@@ -148,13 +148,13 @@ Dočasný cíl lze nastavit i bez otevření této obrazovky:
 
 Nejrychlejší způsob je klepnout na **štítek cíle** na hlavní obrazovce (ukazuje váš aktuální cílový rozsah):
 
-![Štítek cíle na hlavní obrazovce](../images/TempTarget6.png)
+![Štítek cíle na hlavní obrazovce](../images/v4/TempTarget/TempTarget6.png)
 
 Tím se otevře výše popsaná obrazovka **Dočasný cíl** – přejeďte na předvolbu a klepněte na **▶ Aktivovat**. Stejná obrazovka je dostupná také přes **Spravovat** → **Dočasný cíl**.
 
 (TempTargets-carbs-dialog)= Při zadávání sacharidů nemusíte obrazovku **Dočasný cíl** vůbec otevírat: **dialog Sacharidy** (**Ošetření** → **Sacharidy**) má nahoře přepínače **Spustit dočasný cíl Hypoglykémie**, **Spustit dočasný cíl Před jídlem** a **Spustit dočasný cíl Aktivita**. Když jeden zapnete, aktivuje se odpovídající předvolba spolu se zadáním sacharidů:
 
-![Přepínače DC v dialogu Sacharidy](../images/TempTarget5.png)
+![Přepínače DC v dialogu Sacharidy](../images/v4/TempTarget/TempTarget5.png)
 
     {admonition} Automatický DC Hypoglykémie
     :class: note
@@ -171,7 +171,7 @@ Tím se otevře výše popsaná obrazovka **Dočasný cíl** – přejeďte na p
 3. V editoru upravte **Dočasný cíl** a/nebo **Trvání**.
 4. Klepněte na ikonu **Uložit**, která se objeví na horní liště.
 
-![Úprava předvolby – ikona Uložit na horní liště, Vrátit na panelu akcí](../images/TempTarget7.png)
+![Úprava předvolby – ikona Uložit na horní liště, Vrátit na panelu akcí](../images/v4/TempTarget/TempTarget7.png)
 
 Dokud se hodnoty v editoru liší od továrních hodnot vestavěné předvolby, objeví se na panelu akcí také tlačítko **↺ Vrátit** – klepnutím na něj obnovíte původní cíl a trvání předvolby.
 
@@ -179,7 +179,7 @@ Dokud se hodnoty v editoru liší od továrních hodnot vestavěné předvolby, 
 
 Když běží dočasný cíl, štítek cíle na hlavní obrazovce ukazuje cíl a zbývající čas. Klepněte na něj – na obrazovce **Dočasný cíl** je běžící předvolba zvýrazněna jako **AKTIVNÍ** a na konci spodní lišty, hned vlevo od tlačítka **▶ Aktivovat**, se objeví červené tlačítko **✗ Zrušit**. Klepněte na něj a potvrďte:
 
-![Zrušení běžícího dočasného cíle](../images/TempTarget9.png)
+![Zrušení běžícího dočasného cíle](../images/v4/TempTarget/TempTarget9.png)
 
 Běžící dočasný cíl lze zastavit také z **hodinek Wear OS**, ze spárovaného **klienta** nebo pravidlem **Automatizace** (*Stop dočasného cíle*).
 
@@ -231,6 +231,6 @@ Pokročilé, [cíl 9](#objectives-objective9): Pokud používáte OpenAPS SMB a 
 
 Pro nastavení otevřete **Nastavení** → **OpenAPS SMB** a vypněte *„Povolit SMB při vysokém dočasném cíli“*.
 
-![Předvolba Povolit SMB při vysokém dočasném cíli](../images/TempTargetSMB.png)
+![Předvolba Povolit SMB při vysokém dočasném cíli](../images/v4/TempTarget/TempTargetSMB.png)
 
 Tím zajistíte, že **AAPS** nebude podávat **SMB**, a to ani při COB > 0, při zapnutém *„Povolit SMB při nízkém dočasném cíli“* nebo *„Povolit SMB vždy“* a aktivním OpenAPS SMB.

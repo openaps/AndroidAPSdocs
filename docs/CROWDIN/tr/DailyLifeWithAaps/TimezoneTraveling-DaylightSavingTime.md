@@ -33,7 +33,7 @@ Bunu önlemek için iki olasılık vardır:
    * **Profil**inizi seçin ve **▶ Etkinleştir** düğmesine dokunun
    * '**Zaman kaydırma**' değerini varış yerinize göre ayarlayın ve **Etkinleştir** düğmesine dokunun.
    
-   ![Zaman kaydırmalı profil değişimi](../images/ProfileSwitchTimeShift2.png)
+   ![Zaman kaydırmalı profil değişimi](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * ör. Viyana -> New York: **Profil değişimi** +6 saat
    * ör. Viyana -> Sidney: **Profil değişimi** -8 saat
@@ -118,14 +118,14 @@ Pompanıza ve CGM kurulumunuza bağlı olarak, saatteki ani değişiklikler **AA
    * Bazı telefonlarda iki ayar vardır: biri saatin otomatik ayarı için (ideal olarak açık kalmalıdır), diğeri saat diliminin otomatik ayarı için (bunu KAPATMALISINIZ: aşağıdaki ekran görüntüsünde **Time zone** (Saat dilimi) altındaki **Set automatically** (Otomatik olarak ayarla)).
    * Ne yazık ki bazı Android sürümlerinde hem saatin hem de saat diliminin otomatik ayarı için tek bir anahtar vardır. Bunu şimdilik kapatmanız gerekecek.
 
-![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
+![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
 2. Bulunduğunuz yerle aynı saati kullanan, ancak yaz saati uygulamayan bir saat dilimi bulun.
    
    * Bu ülkelerin listesi mevcuttur [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Orta Avrupa Saati (CET) için bu, "Brazzaville" (Kongo) olabilir. Telefonunuzun saat dilimini Kongo olarak değiştirin.
 
-![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
+![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
 3. **AAPS**'te pompanızı yenileyin ve istediğiniz **Profil**e geçin.
 

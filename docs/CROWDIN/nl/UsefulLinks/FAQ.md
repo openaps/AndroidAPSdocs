@@ -74,7 +74,7 @@ Je moet dezelfde noodapparatuur bij je hebben als elke andere T1D met insulinepo
   * de huidige [apk](../SettingUpAaps/BuildingAaps.md) van AAPS en van andere apps die je gebruikt (bijv. xDrip, Juggluco, BYODA).
   * je keystore-bestand (van het bouwen van de apk) en het wachtwoord ervan,
   * je laatste geëxporteerde instellingenbestanden van AAPS en je andere apps,
-  * je **AAPS** hoofdwachtwoord: zonder dit wachtwoord kun je het instellingenbestand niet importeren.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ Ben je je hoofdwachtwoord vergeten, dan kun je het resetten naar het serienummer
 
 1. Maak een leeg bestand met de naam `PasswordReset` (zonder bestandsextensie) in de submap `extra` van je AAPS map (meestal `AAPS/extra`).
 2. Start **AAPS** opnieuw. Je pomp moet verbonden zijn: **AAPS** toont "Wachten op pomp…" en moet het serienummer van de pomp binnen 30 seconden uitlezen.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. **AAPS** toont "Wachtwoord ingesteld!": je hoofdwachtwoord is nu het **serienummer van je pomp**. Het bestand `PasswordReset` wordt automatisch verwijderd.
+
 4. Open **Instellingen** > **Beveiliging** > **Hoofdwachtwoord** en stel een nieuw wachtwoord in.
 
 Wordt de pomp niet op tijd bereikt, dan verandert er niets: controleer de verbinding met de pomp en probeer het opnieuw.

@@ -21,7 +21,7 @@
 
 - הסרת **AAPS** מוחקת את כל ההגדרות שלו, את [המשימות](../SettingUpAaps/CompletingTheObjectives.md) שלכם ואת החיבור הנוכחי למשאבה. מקבלים אותם בחזרה על ידי ייבוא **קובץ ההגדרות**, לכן ודאו שיש לכם קובץ עדכני.
 - קובץ ההגדרות אינו כולל את היסטוריית הטיפולים ואת היסטוריית ערכי הסוכר. אם אתם מעלים נתונים ל-[Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), אפשר לטעון אותם בחזרה אחרי ההתקנה מחדש (שלב 8).
-- צריך את [**הסיסמה הראשית**](#Preferences-master-password): קובץ ההגדרות מוצפן באמצעותה.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **משתמשי Omnipod ו-Medtrum:** קראו קודם את [משאבות ללא צינורית](#ExportImportSettings-tubeless-pumps). קובץ ההגדרות חייב להיות מיוצא בזמן הפוד או הפאץ' שמחובר אליכם עכשיו.
 - אם צריך, [הגדירו את המקלט של ה-CGM / מקור ערכי הסוכר](../Getting-Started/CompatiblesCgms.md) לפני שמתחילים.
 

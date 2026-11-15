@@ -23,7 +23,7 @@ The sections below summarize the features of **Temp-Target Activity**, **Temp-Ta
 
 ### CT - Activité
 
-![CT Activité](../images/TempTarget2.png)
+![CT Activité](../images/v4/TempTarget/TempTarget2.png)
 
 **Cible de glycémie (préréglage par défaut, ajustable)**
 
@@ -46,7 +46,7 @@ Les utilisateurs peuvent aussi envisager de :
 
 ### CT - Repas imminent
 
-![CT Repas imminent](../images/TempTarget1.png)
+![CT Repas imminent](../images/v4/TempTarget/TempTarget1.png)
 
 **Cible de glycémie (préréglage par défaut, ajustable)**
 
@@ -63,7 +63,7 @@ Selon la **glycémie**, **AAPS** va « augmenter » l'insuline donnée, dans l
 
 ### CT - Hypo
 
-![CT Hypo](../images/TempTarget3.png)
+![CT Hypo](../images/v4/TempTarget/TempTarget3.png)
 
 **Cible de glycémie (préréglage par défaut, ajustable)**
 
@@ -96,11 +96,11 @@ Quand vous sélectionnez une carte de préréglage, sa **cible** et sa **durée*
 
     <br />### Activer une cible temporaire
     
-    Faites glisser jusqu'au préréglage voulu (ses valeurs sont chargées dans l'éditeur), ajustez si besoin la **cible**/la **durée** dans l'éditeur, puis appuyez sur **▶ Activer**. Une confirmation affiche la cible exacte, la durée et la raison avant que quoi que ce soit démarre :
+    Faites glisser jusqu'au préréglage voulu (ses valeurs sont chargées dans l'éditeur), ajustez si besoin la **cible**/la **durée** dans l'éditeur, puis appuyez sur **▶ Activer**. A confirmation shows the exact target, duration and reason before anything starts:
     
-    ![Confirmation d'activation](../images/TempTarget8.png)
+    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    Après votre confirmation, la cible temporaire démarre tout de suite (ou à l'heure d'**Activation** choisie) et dure pendant la **durée** définie.
+    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
     ```{admonition} Modifier les valeurs ne sert qu'une fois — cela ne change pas le préréglage
     :class: important
@@ -148,13 +148,13 @@ Une cible temporaire peut aussi être définie sans ouvrir cet écran :
 
 Le moyen le plus rapide est d'appuyer sur la **pastille de cible** de l'écran principal (elle affiche votre plage cible actuelle) :
 
-![Pastille de cible sur l'écran principal](../images/TempTarget6.png)
+![Pastille de cible sur l'écran principal](../images/v4/TempTarget/TempTarget6.png)
 
 Cela ouvre l'écran **Cible Temp** décrit plus haut — faites glisser jusqu'à un préréglage et appuyez sur **▶ Activer**. Le même écran est aussi accessible par **Gestion** → **Cible Temp**.
 
 (TempTargets-carbs-dialog)= Quand vous saisissez des glucides, vous n'avez pas du tout besoin d'ouvrir l'écran **Cible Temp** : la **boîte de dialogue Glucides** (**Traitements** → **Glucides**) a en haut les interrupteurs **Début Traitement Hypo**, **Début Repas Imminent** et **Début Activités**. Activez-en un et le préréglage correspondant est activé en même temps que la saisie des glucides :
 
-![Interrupteurs de CT dans la boîte de dialogue Glucides](../images/TempTarget5.png)
+![Interrupteurs de CT dans la boîte de dialogue Glucides](../images/v4/TempTarget/TempTarget5.png)
 
     {admonition} CT Hypo automatique
     :class: note
@@ -171,7 +171,7 @@ La **cible** et la **durée** de chaque préréglage se modifient directement su
 3. Ajustez la **Cible Temp** et/ou la **Durée** dans l'éditeur.
 4. Appuyez sur l'icône **Enregistrer** qui apparaît dans la barre d'outils du haut.
 
-![Modifier un préréglage — icône Enregistrer dans la barre d'outils, Rétablir dans la barre d'actions](../images/TempTarget7.png)
+![Modifier un préréglage — icône Enregistrer dans la barre d'outils, Rétablir dans la barre d'actions](../images/v4/TempTarget/TempTarget7.png)
 
 Tant que l'éditeur est différent des valeurs d'usine d'un préréglage intégré, un bouton **↺ Rétablir** apparaît aussi dans la barre d'actions — appuyez dessus pour remettre la cible et la durée d'origine du préréglage.
 
@@ -179,7 +179,7 @@ Tant que l'éditeur est différent des valeurs d'usine d'un préréglage intégr
 
 Pendant qu'une cible temporaire est en cours, la pastille de cible de l'écran principal affiche la cible et son temps restant. Appuyez dessus — sur l'écran **Cible Temp**, le préréglage en cours est mis en évidence comme **ACTIF**, et un bouton rouge **✗ Annuler** apparaît au bout de la barre d'outils en bas, juste à gauche du bouton **▶ Activer**. Appuyez dessus et confirmez :
 
-![Annuler une cible temporaire en cours](../images/TempTarget9.png)
+![Annuler une cible temporaire en cours](../images/v4/TempTarget/TempTarget9.png)
 
 Une cible temporaire en cours peut aussi être arrêtée depuis une **montre Wear OS**, depuis un **client** associé, ou par une règle d'**Automatisation** (*Arrêter la cible temp*).
 
@@ -231,6 +231,6 @@ Avancé, [objectif 9](#objectives-objective9) : si vous utilisez OpenAPS SMB et
 
 Pour cela, ouvrez **Paramètres** → **OpenAPS SMB** et désactivez *« Activer les SMB avec Cibles Temp hautes »*.
 
-![Préférence Activer les SMB avec Cibles Temp hautes](../images/TempTargetSMB.png)
+![Préférence Activer les SMB avec Cibles Temp hautes](../images/v4/TempTarget/TempTargetSMB.png)
 
 Ainsi, **AAPS** ne donnera pas de **SMB**, même avec des GA > 0, *« Activer les SMB avec Cibles Temp basses »* ou *« Activer en permanence les SMB »* activé et OpenAPS SMB actif.

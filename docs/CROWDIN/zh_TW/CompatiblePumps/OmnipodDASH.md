@@ -535,7 +535,7 @@ Pod 到期、關機及儲液槽低液量警示。 Pod 啟動期間變更這些�
 
 不會回報**幫浦電池**的使用時間：電池和胰島素儲液槽都裝在 Pod 內，而且電池的續航時間一定比 Pod 本身的使用時間長（最長 80 小時）。
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

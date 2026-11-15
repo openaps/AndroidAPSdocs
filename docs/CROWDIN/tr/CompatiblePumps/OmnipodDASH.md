@@ -535,7 +535,7 @@ Ana ekrandaki [durum satırı](#screens-sensor-level-battery) insülininizin ve 
 
 **Pompa pili** yaşı bildirilmez: pil ve insülin rezervuarı her Pod'un içinde yerleşiktir ve pil her zaman Pod'un kendisinden daha uzun dayanır (en fazla 80 saat).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

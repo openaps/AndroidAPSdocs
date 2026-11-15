@@ -22,37 +22,37 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 1. Перейдіть на <https://github.com/openaps/AndroidAPSdocs> і натисніть Fork у верхньому правому куті, щоб створити власну копію репозиторію.
 
-![Fork репозиторію](../images/PR0.png)
+![Fork репозиторію](../images/docs_pr_fork_repository.png)
 
 2. Перейдіть на будь-яку сторінку, а потім на сторінку, яку хочете редагувати. Ви можете натиснути посилання "Edit in GitHub" у верхньому правому куті. Це можливо лише для англійських сторінок. 
 
-![Редагування документа](../images/PR1.png)
+![Редагування документа](../images/docs_pr_edit_on_github.png)
 
 Або натисніть значок олівця, який з'являється у верхній панелі вмісту сторінки, яку треба редагувати. Для цього ви вже маєте бути увійшли у свій обліковий запис Github (якщо у вас його немає, створити його нескладно).
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. Будь-який із варіантів у кроці 2 створить нову гілку у ВАШОМУ репозиторії, де будуть збережені ваші зміни. Внесіть зміни у файл.
 
 Для сторінок документації ми використовуємо markdown. Файли мають розширення ".md". Специфікація Markdown не є фіксованою, і зараз для наших markdown-файлів ми використовуємо myst_parser. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
-![Гілка редагування](../images/PR3.png)
+![Гілка редагування](../images/docs_pr_edit_file.png)
 
 4. Ви працювали на вкладці "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Якщо ви бачите, що ще щось треба покращити, поверніться на вкладку редагування і внесіть ще зміни. 
 
-![Режим попереднього перегляду](../images/PR5.png)
+![Режим попереднього перегляду](../images/docs_pr_preview_changes.png)
 
 5. Коли закінчите редагування, прокрутіть сторінку вниз. У полі внизу напишіть свої коментарі в текстовому полі з написом "Add an optional extended description..." (додайте розширений опис, необов'язково). Стандартний заголовок містить назву файлу. Спробуйте додати речення, яке пояснює **причину** зміни. Пояснення причини допомагає рецензентам зрозуміти, чого ви хочете досягти цим PR.
 
-![Коментарі до коміту](../images/PR4.png)
+![Коментарі до коміту](../images/docs_pr_commit_description.png)
 
 6. Натисніть зелену кнопку "Propose file changes" або "Commit changes". На сторінці, що з'явиться, натисніть "Create Pull Request", а потім на наступній сторінці знову натисніть "Create Pull Request".
 
-![Створення pull request](../images/PR6.png)
+![Створення pull request](../images/docs_pr_create_pull_request.png)
 
 7. На цьому pull request (PR) відкрито. GitHub дає PR номер, який стоїть після заголовка і знака #. Повертайтеся на цю сторінку, щоб перевірити відгуки (або, якщо ви отримуєте сповіщення GitHub електронною поштою, вам прийдуть листи про всі дії з PR). Тепер ваша зміна є в списку PR, які команда перегляне. Команда може дати вам відгук, перш ніж зміна потрапить в основну документацію AAPS! Якщо ви хочете стежити за станом PR, натисніть значок дзвіночка у верхньому правому куті вашого облікового запису GitHub: там видно всі ваші PR.
 
-![Відстеження PR](../images/PR7.png)
+![Відстеження PR](../images/docs_pr_tracking.png)
 
 P.S. Ваш fork і гілка залишаться у вашому особистому обліковому записі GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Якщо для наступних змін ви будете робити так само, ви завжди почнете з актуальної версії репозиторію AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Люди часто забувають оновлювати свої репозиторії, тому ми радимо робити PR так, як описано вище, доки ви не навчитеся робити "compare".
 

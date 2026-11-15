@@ -21,7 +21,7 @@ Jei raktų saugyklą vis dar turite, šis puslapis jums nereikalingas: naudokite
 
 - Pašalinus **AAPS**, ištrinami visi jos nustatymai, jūsų [mokymo etapai](../SettingUpAaps/CompletingTheObjectives.md) ir dabartinis ryšys su pompa. Juos atgausite importavę savo **nustatymų failą**, todėl įsitikinkite, kad turite naują jo kopiją.
 - Nustatymų faile nėra jūsų terapijos ir gliukozės istorijos. Jei duomenis siunčiate į [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), po įdiegimo iš naujo galėsite juos įkelti atgal (8 žingsnis).
-- Jums reikės [**pagrindinio slaptažodžio**](#Preferences-master-password): nustatymų failas juo užšifruotas.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Omnipod ir Medtrum naudotojai:** pirmiausia perskaitykite [Pompos be vamzdelio](#ExportImportSettings-tubeless-pumps). Jūsų nustatymų failas turi būti eksportuotas naudojant tą Pod ar pompą (patch), kurią nešiojate dabar.
 - Jei reikia, prieš pradėdami [nustatykite savo NGJ / glikemijos šaltinio imtuvą](../Getting-Started/CompatiblesCgms.md).
 

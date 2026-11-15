@@ -192,7 +192,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
   En internet hay información sobre cómo saber si tienes un sistema operativo de 32 o de 64 bits, p. ej. [esta](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Captura de pantalla de Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Captura de pantalla de Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Volver a sincronizar Gradle
@@ -237,7 +237,7 @@ Si tu compilación terminó correctamente pero recibes avisos del compilador o d
 
 ## Apk no instalado
 
-![app del teléfono no instalada](../images/Update_AppNotInstalled.png)
+![app del teléfono no instalada](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Asegúrate de haber pasado el archivo «app-full-release.apk» a tu teléfono.
 * Este error suele significar que el nuevo apk está firmado con un almacén de claves distinto del de tu **AAPS** instalado. Si todavía tienes tu almacén de claves anterior, selecciónalo y compila de nuevo. Si no, mira [Reinstalar AAPS con un nuevo almacén de claves](#reinstall-aaps).

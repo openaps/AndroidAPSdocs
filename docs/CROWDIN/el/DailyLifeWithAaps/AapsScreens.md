@@ -9,7 +9,7 @@
 
 ## Η κύρια οθόνη
 
-![Κύρια οθόνη](../images/Home_Homescreen.png)
+![Κύρια οθόνη](../images/main/Home_Homescreen.png)
 
 Αυτή είναι η πρώτη οθόνη που βλέπετε όταν ανοίγετε το **AAPS** και περιέχει τις περισσότερες πληροφορίες που χρειάζεστε καθημερινά.
 
@@ -33,13 +33,13 @@
 * κόκκινο = κάτω από το εύρος
 * κίτρινο = πάνω από το εύρος
 
-![Κύκλος BG εντός εύρους, πράσινος](../images/Home_Delta.png) ![Κύκλος BG πάνω από το εύρος, κίτρινος](../images/Home_Delta_high.png) ![Κύκλος BG κάτω από το εύρος, κόκκινος](../images/Home_Delta_low.png)
+![Κύκλος BG εντός εύρους, πράσινος](../images/main/Home_Delta.png) ![Κύκλος BG πάνω από το εύρος, κίτρινος](../images/main/Home_Delta_high.png) ![Κύκλος BG κάτω από το εύρος, κόκκινος](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
 #### Κατάσταση κυκλώματος
 
-![Κατάσταση κυκλώματος](../images/Home2020_LoopStatus.png)
+![Κατάσταση κυκλώματος](../images/main/main_loop_status.png)
 
 Δίπλα στον κύκλο BG, ένα εικονίδιο δείχνει τον τρόπο λειτουργίας του κυκλώματος (από πάνω προς τα κάτω στην εικόνα):
 
@@ -166,7 +166,7 @@
 
 Για να **αλλάξετε το ποσοστό του προφίλ** (και τη διάρκειά του), πατήστε το όνομα του προφίλ και μετά πατήστε το στρογγυλό κουμπί **▶** (Ενεργοποίηση) κάτω δεξιά στην οθόνη Προφίλ. Στο **AAPS** 3.x αυτή η οθόνη άνοιγε με παρατεταμένο πάτημα στο όνομα του προφίλ· στο **AAPS** 4 το παρατεταμένο πάτημα δεν κάνει τίποτα. Βήμα προς βήμα: [Αλλαγή του ποσοστού προφίλ](#ProfileSwitch-change-percentage).
 
-![Προφίλ με ενεργή αλλαγή προφίλ](../images/Home2020_ProfileSwitch.png)
+![Προφίλ με ενεργή αλλαγή προφίλ](../images/main/main_profile_switch.png)
 
 1. Κανονική εμφάνιση με ενεργοποίηση ενός τυπικού προφίλ.
 2. Αλλαγή προφίλ με ποσοστό 90% και υπόλοιπη διάρκεια 9 λεπτά — το όνομα του προφίλ γίνεται κίτρινο όσο τρέχει μια προσωρινή αλλαγή προφίλ.
@@ -174,7 +174,7 @@
 
 #### Στόχος
 
-![Υπολειπόμενη διάρκεια προσωρινού στόχου](../images/Home2020_TT.png)
+![Υπολειπόμενη διάρκεια προσωρινού στόχου](../images/main/main_temp_target.png)
 
 Ο τρέχων στόχος γλυκόζης αίματος εμφανίζεται κάτω από το όνομα του προφίλ.
 
@@ -200,7 +200,7 @@
 
 #### IOB, COB, βασικός ρυθμός και ευαισθησία
 
-![IOB, COB, βασικός ρυθμός και ευαισθησία](../images/Home2020_TBR.png)
+![IOB, COB, βασικός ρυθμός και ευαισθησία](../images/main/main_iob_cob_basal_sensitivity.png)
 
 1. **Σύριγγα**: ινσουλίνη στον οργανισμό (IOB) - ποσότητα ενεργής ινσουλίνης στο σώμα σας  
     Η τιμή της ινσουλίνης στον οργανισμό θα ήταν μηδέν αν έτρεχε μόνο ο κανονικός βασικός ρυθμός σας και δεν υπήρχε υπόλοιπο ινσουλίνης από προηγούμενα bolus. 
@@ -234,7 +234,7 @@
 
 ### Ενότητα C - Γραμμή κατάστασης
 
-![Γραμμή κατάστασης](../images/Home2020_StatusLights.png)
+![Γραμμή κατάστασης](../images/main/main_status_row.png)
 
 Η γραμμή κατάστασης δίνει οπτική προειδοποίηση για
 
@@ -320,7 +320,7 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 Πατήστε το εικονίδιο με το **μολύβι** πάνω δεξιά στο γράφημα για να ανοίξουν οι ρυθμίσεις του γραφήματος:
 
-![Ρύθμιση κύριου γραφήματος](../images/Home2020_MainGraphSetting.png)
+![Ρύθμιση κύριου γραφήματος](../images/main/main_graph_settings.png)
 
 * Το **Ύψος γραφήματος** ρυθμίζει πόσο ψηλό σχεδιάζεται το γράφημα.
 * Το **ACT** προσθέτει την καμπύλη δράσης της ινσουλίνης: μια συνεχής κιτρινοπράσινη γραμμή <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (μην τη μπερδέψετε με την κίτρινη διακεκομμένη πρόβλεψη UAM)
@@ -408,7 +408,7 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 Για να ρυθμίσετε ένα πρόσθετο γράφημα, πατήστε το εικονίδιο με το **μολύβι** πάνω δεξιά σε αυτό:
 
-![Πρόσθετες ρυθμίσεις γραφημάτων](../images/Home2020_AdditionalGraphSetting.png)
+![Πρόσθετες ρυθμίσεις γραφημάτων](../images/main/main_additional_graph_settings.png)
 
 Επιλέξτε τα chips για τα δεδομένα που θέλετε να βλέπετε σε αυτό το γράφημα· το κουμπί **Αφαίρεση** διαγράφει το γράφημα.
 
@@ -490,7 +490,7 @@ Steps are drawn as columns, and the heart rate as a curved line that breaks wher
 
 ### Ενότητα F - Γραμμή εργαλείων QuickLaunch
 
-![Γραμμή εργαλείων QuickLaunch](../images/Home2020_Buttons.png)
+![Γραμμή εργαλείων QuickLaunch](../images/main/main_quicklaunch_toolbar.png)
 
 Η αιωρούμενη γραμμή εργαλείων στο κάτω μέρος της οθόνης περιέχει τις ενέργειες **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)**. Το μικρό **γρανάζι** ανοίγει τη ρύθμιση του QuickLaunch, όπου επιλέγετε ποια κουμπιά εμφανίζονται (θεραπείες, καταχωρήσεις Careportal, ενέργειες CGM, οι οθόνες του φύλλου **Διαχείριση**, κουμπιά [Γρήγορου Οδηγού](../DailyLifeWithAaps/QuickWizards.md), [Σενάρια](../DailyLifeWithAaps/Scenes.md) και άλλα).
 
@@ -502,7 +502,7 @@ Steps are drawn as columns, and the heart rate as a curved line that breaks wher
 
 #### Ινσουλίνη
 
-![Διάλογος ινσουλίνης](../images/Home2020_ButtonInsulin.png)
+![Διάλογος ινσουλίνης](../images/v4/Screens/insulin_dialog.png)
 
 Για να δώσετε μια ποσότητα ινσουλίνης χωρίς να χρησιμοποιήσετε τον [υπολογιστή bolus](#aaps-screens-bolus-wizard).
 
@@ -520,7 +520,7 @@ If you do not want to bolus through the pump but record an insulin amount (i.e. 
 
 #### Υδατάνθρακες
 
-![Διάλογος υδατανθράκων](../images/Home2020_ButtonCarbs.png)
+![Διάλογος υδατανθράκων](../images/v4/Screens/carbs_dialog.png)
 
 Για να καταγράψετε υδατάνθρακες χωρίς bolus.
 
@@ -574,7 +574,7 @@ If you do not want to bolus through the pump but record an insulin amount (i.e. 
 
 ## Οδηγός Bolus
 
-![Οδηγός Bolus](../images/Home2020_BolusWizard_v2.png)
+![Οδηγός Bolus](../images/v4/Screens/bolus_wizard.png)
 
 Όταν θέλετε να κάνετε bolus γεύματος, συνήθως θα το κάνετε από εδώ.
 
@@ -618,7 +618,7 @@ If you do not want to bolus through the pump but record an insulin amount (i.e. 
 
 **Ορισμός ειδοποίησης** (υπενθύμιση φαγητού): όταν καταχωρηθεί χρόνος υδατανθράκων στο μέλλον, εμφανίζεται ένας διακόπτης "**Ορισμός ειδοποίησης**", ώστε να σας θυμίσει τη συγκεκριμένη ώρα πότε να φάτε τους υδατάνθρακες που καταχωρήσατε στο **AAPS**:
 
-![Ορισμός ειδοποίησης για μελλοντικούς υδατάνθρακες](../images/Home2021_BolusWizard_EatingReminder.png)
+![Ορισμός ειδοποίησης για μελλοντικούς υδατάνθρακες](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
 The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
@@ -640,7 +640,7 @@ The reminder starts when the bolus has been delivered. While it runs, a **Time t
 
 #### Λανθασμένη ανίχνευση COB
 
-![Αργή απορρόφηση υδατανθράκων](../images/Calculator_SlowCarbAbsorption.png)
+![Αργή απορρόφηση υδατανθράκων](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Αν δείτε την παραπάνω προειδοποίηση μετά τη χρήση του οδηγού bolus, το **AAPS** ανίχνευσε ότι η υπολογισμένη τιμή COB μπορεί να είναι λάθος. Γι' αυτό, αν θέλετε να κάνετε ξανά bolus μετά από προηγούμενο γεύμα με COB, προσέξτε τον κίνδυνο υπερδοσολογίας!
 
@@ -719,7 +719,7 @@ The reminder starts when the bolus has been delivered. While it runs, a **Time t
 
 ## Προφίλ
 
-![Προφίλ](../images/Screenshots_Profile.png)
+![Προφίλ](../images/screens/Screenshots_Profile.png)
 
 Το **Διαχείριση → Προφίλ** (ή ένα πάτημα στο όνομα του προφίλ στην κύρια οθόνη) ανοίγει την οθόνη Προφίλ: τα προφίλ σας ως κάρτες που αλλάζετε με σύρσιμο, με κουμπιά για προσθήκη, επεξεργασία, αντιγραφή, διαγραφή και **ενεργοποίηση** ενός προφίλ.
 
@@ -733,7 +733,7 @@ The reminder starts when the bolus has been delivered. While it runs, a **Time t
 
 ## NSClient
 
-![NSClient](../images/Screenshots_NSClient.png)
+![NSClient](../images/screens/Screenshots_NSClient.png)
 
 Το **Διαμόρφωση → Επικοινωνία → NSClientV3 → Άνοιγμα πρόσθετου** δείχνει την κατάσταση της σύνδεσης με τον ιστότοπο Nightscout σας: URL, κατάσταση websocket, ουρά και αρχείο καταγραφής της δραστηριότητας συγχρονισμού.
 
@@ -745,7 +745,7 @@ The reminder starts when the bolus has been delivered. While it runs, a **Time t
 
 ## Πηγή BG - xDrip, BYODA...
 
-![Οθόνη πηγής BG](../images/Screenshots_BGSource.png)
+![Οθόνη πηγής BG](../images/screens/Screenshots_BGSource.png)
 
 Το **Διαμόρφωση → Πηγή BG → Άνοιγμα πρόσθετου** δείχνει το ιστορικό των τιμών CGM και δίνει τη δυνατότητα να αφαιρέσετε τιμές σε περίπτωση σφάλματος (π.χ. compression low, ψευδώς χαμηλή τιμή από πίεση) ή διπλών τιμών.
 

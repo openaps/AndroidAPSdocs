@@ -291,13 +291,13 @@ The software for the watch, **AAPSClient** Wear apk, can be downloaded directly 
 
 Om de software te downloaden, klik je op de horloge-app die past bij de client-app op de telefoon: **wear-aapsclient-release_**_versie_ hoort bij **AAPSClient**, **wear-aapsclient2-release_**_versie_ hoort bij **AAPSClient2** (zie [Over AAPSClient, AAPSClient2 en AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![Afbeelding](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+![Afbeelding](../images/github_release_wear_aapsclient_apk.png)
 
 
 Kies dan "save as" (opslaan als) en sla het bestand op een handige plek op je computer op:
 
 
-![Afbeelding](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+![Afbeelding](../images/save_as_wear_aapsclient_apk.png)
 
 
 

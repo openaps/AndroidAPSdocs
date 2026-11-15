@@ -97,6 +97,8 @@ Rekomenduojama reguliariai eksportuoti nustatymus, ypač prieš konfigūracijos 
 
 **Pastaba**: _Eksportuoti nustatymai užšifruojami jūsų AAPS pagrindiniu slaptažodžiu: be pagrindinio slaptažodžio, kuris buvo naudotas eksportuojant, nustatymų failo importuoti negalėsite!_
 
+If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+
 ### Nustatymų eksportavimas ir importavimas
 Norėdami eksportuoti ar importuoti nustatymus, atidarykite **meniu** (☰) ir pasirinkite **Servisas**. Skiltyje **Failų tvarkymas** ženkleliai **Vietinė saugykla** ir **Debesis** šalia **Eksportuoti nustatymus** ir **Importuoti nustatymus** nurodo, kur nustatymų failas išsaugomas arba iš kur nuskaitomas: **Vietinė saugykla** – tai AAPS aplankas jūsų telefone, **Debesis** galima naudoti, kai nustatytas [Debesies aplankas](#preferences-maintenance-cloud). Bakstelėjus ženklelį, jis įjungiamas arba išjungiamas; bent vienas visada lieka pasirinktas, o abiem eilutėms galioja tas pats pasirinkimas. Tada bakstelėkite pačią eilutę **Eksportuoti nustatymus** arba **Importuoti nustatymus**, kad pradėtumėte.
 

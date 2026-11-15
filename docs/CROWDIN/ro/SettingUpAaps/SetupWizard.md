@@ -172,7 +172,7 @@ Reveniți cu săgeata din colțul din stânga sus. Asistentul afișează acum �
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. Calculatorul sau telefonul dumneavoastră inteligent se pot defecta și este posibil să nu aveți nicio copie. Dacă uitați parola principală, vă poate fi dificil să vă recuperați configurația profilului și să progresați prin **Obiective** la o dată ulterioară.
+Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. Calculatorul sau telefonul dumneavoastră inteligent se pot defecta și este posibil să nu aveți nicio copie. Dacă uitați parola principală, vă poate fi dificil să vă recuperați configurația profilului și să progresați prin **Obiective** la o dată ulterioară. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 Când ați terminat, apăsați „**URMĂTOR**” pentru a trece la ecranul următor.

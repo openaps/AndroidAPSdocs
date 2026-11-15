@@ -1,6 +1,6 @@
 # Fernüberwachung
 
-![Überwachung von Kindern](../images/KidsMonitoring.png)
+![Überwachung von Kindern](../images/remote_control_and_following/KidsMonitoring.png)
 
 __AAPS__ bietet verschiedene Funktionen zur Fernüberwachung von Kindern mit Typ-1-Diabetes und ermöglicht außerdem Remote-Befehle, mit denen Anweisungen an __AAPS__ gesendet werden. Der __AAPSClient__ kann auch zur Remote-Überwachung genutzt werden. Du kannst damit __AAPS__-Follower Deines Freundes oder Partners sein.
 

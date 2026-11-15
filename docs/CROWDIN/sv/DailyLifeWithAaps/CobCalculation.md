@@ -84,7 +84,7 @@ Om kolhydraterna är över- eller underskattade kan du rätta det på skärmen *
 
 På skärmen **Behandlingshistorik** kan du rätta en felaktig kolhydratpost genom att ta bort den. Det kan bero på att du över- eller underskattade mängden kolhydrater:
 
-![Ta bort en kolhydratpost i Behandlingshistorik](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Ta bort en kolhydratpost i Behandlingshistorik](../images/treatments_history_delete_carbs.png)
 
 1. Kontrollera och kom ihåg aktuella **COB** och **IOB** på huvudskärmen i **AAPS**.
 2. Öppna **Behandlingshistorik** (sidomenyn → *Behandlingshistorik*), fliken **Kolhydrater och bolus**. Beroende på pumpen kan kolhydraterna visas på samma rad som insulinet eller som en egen post (t.ex. med Dana RS).

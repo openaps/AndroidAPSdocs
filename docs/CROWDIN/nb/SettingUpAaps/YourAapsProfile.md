@@ -31,7 +31,7 @@ De fire siste parameterne (BS-mål, basaldoser, insulinsensitivitetsfaktorer og 
 
 Skjermbilder fra **AAPS** av en _eksempel_-profil vises nedenfor. Merk at eksempelprofilen nedenfor har mange tidspunkter. Når du starter med **AAPS**, er profilen din sannsynligvis mye enklere.
 
-![Eksempel på aktiv profil](../images/Profile-Example-Active.png)
+![Eksempel på aktiv profil](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## BS-mål
@@ -55,7 +55,7 @@ Hvis målet i **Profilen** din er svært bredt (si 3 mmol/L [50 mg/dL] eller mer
 
 **Figuren nedenfor** viser et eksempel på hvordan målet kan settes i en **AAPS**-profil.
 
-![Mål](../images/Profile_Target.png)
+![Mål](../images/v4/Profiles/Profile_Target.png)
 
 **BS**-mål settes etter dine egne ønsker og behov. Hvis du for eksempel er bekymret for føling om natten, kan du sette målet litt høyere, til 117 mg/dL (6,5 mmol/L), fra kl. 21:00 til 07:00. Hvis du vil være sikker på at du har rikelig med aktivt insulin (IOB) om morgenen før du tar bolus til frokost, kan du sette et lavere mål på 81 mg/dL (4,5 mmol/L) fra kl. 07:00 til 08:00.
 
@@ -89,7 +89,7 @@ Omvendt kan en for lav basaldose gi høyt BS, og loopen klarer ikke å få nivå
 
 **Figuren nedenfor** viser et eksempel på hvordan basaldosene kan settes i en **AAPS**-profil.
 
-![Basaldoser](../images/Profile_BasalRates.png)
+![Basaldoser](../images/v4/Profiles/Profile_BasalRates.png)
 
 Å sette basaldosene riktig gjøres ved prøving og feiling, og bør gjøres i samråd med diabetesteamet ditt.
 
@@ -147,7 +147,7 @@ En **høyere / svakere ISF** (f.eks. 45 i stedet for 35) betyr at insulin senker
 
 En **ISF** som er for lav (og dermed mer aggressiv, noe som ikke er uvanlig) kan føre til «overkorreksjoner», fordi **AAPS** regner ut at brukeren trenger mer insulin for å korrigere et høyt **BS** enn det som egentlig trengs. Det kan gi «berg-og-dal-bane» i BS-nivået (særlig når du faster), som vist på bildet nedenfor. I så fall bør **ISF**-verdien økes for å gjøre **AAPS** mindre aggressiv. Da gir **AAPS** mindre korreksjonsdoser, og du unngår at et høyt **BS** blir overkorrigert og ender i et lavt **BS**.
 
-![ISF for lav](../images/isf.jpg)
+![ISF for lav](../images/v4/Profiles/isf.jpg)
 
 Omvendt kan en **ISF** som er satt for høyt, føre til underkorreksjoner, slik at **BS** blir liggende over målet – særlig merkbart om natten.
 
@@ -155,7 +155,7 @@ Omvendt kan en **ISF** som er satt for høyt, føre til underkorreksjoner, slik 
 
 Se **figuren nedenfor** for et eksempel på hvordan ISF-verdier kan settes i en **AAPS**-profil.
 
-![Profil-ISF](../images/Profile_ISF.png)
+![Profil-ISF](../images/v4/Profiles/Profile_ISF.png)
 
 Et enkelt utgangspunkt for å finne ISF på dagtid er å basere den på den totale døgndosen din (TDD) med 1700-regelen (94 for mmol/L). Du finner mer om dette i kapittel 7 i [«Think like a Pancreas»](https://amzn.eu/d/iVU0RGe) av Gary Scheiner.
 
@@ -213,7 +213,7 @@ En **høyere / svakere IK** = mer mat per enhet, altså får du mindre insulin f
 
 **Figuren nedenfor** viser et eksempel på en brukers **IK** og hvordan den kan settes i en **AAPS-profil**. Når du legger inn disse verdiene, skriver du bare siste del av forholdet, så et insulin-til-karbohydratforhold på 1:3,5 legges inn som «3,5».
 
-![Profil-IK](../images/Profile_ICR.png)
+![Profil-IK](../images/v4/Profiles/Profile_ICR.png)
 
 Hvis **BS** fortsatt er høyere enn før måltidet etter at maten er fordøyd og **IOB** er tilbake på null, er **IK** sannsynligvis for svak (_dvs._ tallet er for høyt og bør senkes gradvis). Omvendt: hvis **BS** er lavere enn før måltidet, er **IK** for sterk (_dvs._ tallet er for lavt og bør økes gradvis).
 
@@ -292,7 +292,7 @@ Hvis du gjør endringer i **Profilen** din, pass på at du redigerer riktig **Pr
 
 Profilhjelper tilbyr datasett fra to ulike sykehus for barn, for å finne en startprofil for barnet ditt opp til 18 år.
 
-![Profilhjelper barn 1](../images/ProfileHelperKids1.png)
+![Profilhjelper barn 1](../images/v4/Profiles/ProfileHelperKids1.png)
 
 1. Pass på at du er på fanen **Profil 1**.
 2. Under **Profiltype**, pass på at «Standard profil» er valgt.
@@ -303,7 +303,7 @@ Profilhjelper tilbyr datasett fra to ulike sykehus for barn, for å finne en sta
 7. Åpne fanen **Sammenligning**. En sammenligning av de to justerte profilene vises (se skjermbildet nedenfor).
 8. Hvis du vil begynne å justere profilen din ut fra ett av disse forslagene, bruk **Dupliser**-knappen nederst i sammenligningen.
 
-![Profilhjelper barn 2](../images/ProfileHelperKids2.png)
+![Profilhjelper barn 2](../images/v4/Profiles/ProfileHelperKids2.png)
 
 ### Bytte profil
 
@@ -312,7 +312,7 @@ Se [Profilbytte og profilprosent](../DailyLifeWithAaps/ProfileSwitch-ProfilePerc
 (your-aaps-profile-clone-profile-switch)=
 ### Dupliser et profilbytte til en ny profil
 
-![Profilbytte](../images/TreatmentsView4.png)
+![Profilbytte](../images/Maintenance/TreatmentsView4.png)
 
 [Behandlingshistorikk](#aaps-screens-treatments) viser alle tidligere **Profilbytter**. Når du går til fanen **Profilbytte**, kan du bruke et tidligere **Profilbytte** som grunnlag for å lage en ny **Profil**. I så fall blir tidsforskyving og prosent brukt på den nye lokale profilen. Bruk **Dupliser**-knappen som vises på linje **2**.
 
@@ -335,14 +335,14 @@ Det kan være nyttig når du skal gjøre større endringer i en mer omfattende *
 
 For å gjøre dette er det viktig å duplisere hele **databaseposten**, som består av flere profiler, i Nightscout-editoren (blå pil på skjermbildet nedenfor). De nye databasepostene får da dagens dato. Etter lagring kan den endrede/nye **Profilen** aktiveres i **AAPS** med et vanlig [profilbytte](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-![Dupliser databaseposter](../images/Nightscout_Profile_Editor.PNG)
+![Dupliser databaseposter](../images/v4/Profiles/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### Sammenligne to profiler
 
 Du kan også bruke [Profilhjelper](#aaps-screens-profile-helper) (meny ☰ → **Profilhjelper**) til å sammenligne to ulike profiler eller profilbytter (prosent av en av profilene dine som er brukt i et [profilbytte](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) tidligere).
 
-![Profilhjelper 1](../images/ProfileHelper1.png)
+![Profilhjelper 1](../images/v4/Profiles/ProfileHelper1.png)
 
 1. Pass på at du er på fanen **Profil 1**.
 2. Under **Profiltype**, velg «Tilgjengelige profiler» for å velge blant alle lagrede **Profiler**.
@@ -352,4 +352,4 @@ Du kan også bruke [Profilhjelper](#aaps-screens-profile-helper) (meny ☰ → *
 6. Velg **Profilbyttet** du vil sammenligne med.
 7. Åpne fanen **Sammenligning**. En sammenligning av de to profilene vises (se skjermbildet nedenfor).
 
-![Profilhjelper 2](../images/ProfileHelper2.png)
+![Profilhjelper 2](../images/v4/Profiles/ProfileHelper2.png)

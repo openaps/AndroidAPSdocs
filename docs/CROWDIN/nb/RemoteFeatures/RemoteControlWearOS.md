@@ -309,7 +309,7 @@ Hvis **AAPS** måtte begrense dosen, for eksempel fordi den beregnede bolusen er
     
     [Hurtigknappene](#quickwizards) på telefonen som har **Vis på klokke** slått på, innenfor sine gyldige timer. En karbo-oppføring viser karbohydratene i g, en insulin-oppføring den faste dosen i E. Et trykk kjører oppføringen etter en bekreftelse på klokken. Det er ingenting å stille inn på klokken: rediger oppføringene på telefonen, og slå på **Vis på klokke** under **Enhetsvalg** for hver oppføring du vil ha på flisen. Utenfor de gyldige timene til alle oppføringene dine viser flisen **Ingen konfigurasjon tilgjengelig**.
     
-    ![En hurtigknapp med Vis på klokke slått på, og flisen den vises på](../images/quickwizard_watch_phone.png)
+    ![En hurtigknapp med Vis på klokke slått på, og flisen den vises på](../images/wearos/quickwizard_watch_phone.png)
     
     ### Scene-flisen
     
@@ -361,9 +361,9 @@ Hvis **AAPS** måtte begrense dosen, for eksempel fordi den beregnede bolusen er
     
     Merk: ikke alle skjermer tåler alltid på like godt. Det kan gi innbrenning i skjermen, særlig på eldre OLED-skjermer. Klokkene demper vanligvis skjermen for å hindre innbrenning; sjekk bruksanvisningen, produsenten eller internett for råd.
     
-    ![Urskive på nattbordet](../images/Watchface_nightstand.jpg)
+    ![Urskive på nattbordet](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Forenklet brukergrensesnitt](../images/Watchface_simplified_ui.png)
+    ![Forenklet brukergrensesnitt](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     

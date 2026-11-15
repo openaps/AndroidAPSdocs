@@ -32,9 +32,9 @@ Hvis siden din er hostet på Azure, har mange opplevd at tilkoblingsproblemene b
 
 En løsning på tilkoblingsproblemer i Azure er å sette HTTP protocol til 2.0 og Websockets til ON under Application settings
 
-    {admonition} Remote control needs websockets
+    {admonition} Fjernstyring trenger websockets
     :class: important
-    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+    Websockets er **påkrevd** for fjernstyring fra **AAPSClient**, på begge telefonene. Hvis websocket-tilkoblingen stadig faller ut, virker ikke fjernstyringen. Synkronisering av data virker fortsatt, men langsommere. Nightscout-verten din må støtte websockets.
 
 * Ingen BS-måling fra Nightscout
 

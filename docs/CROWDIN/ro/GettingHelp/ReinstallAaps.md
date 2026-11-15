@@ -21,7 +21,7 @@ If you still have your keystore, you don't need this page: reuse it and [update 
 
 - Uninstalling **AAPS** deletes all its settings, your [objectives](../SettingUpAaps/CompletingTheObjectives.md) and the current pump connection. Le recuperați importând **fișierul de setări**, așa că asigurați-vă că aveți unul recent.
 - Fișierul de setări nu conține istoricul tratamentelor și al glicemiei. If you upload to [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), you can load it back after the reinstall (step 8).
-- Aveți nevoie de [**parola principală**](#Preferences-master-password): fișierul de setări este criptat cu ea.
+- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
 - **Omnipod and Medtrum users:** read [Tubeless pumps](#ExportImportSettings-tubeless-pumps) first. Your settings file must have been exported during the pod or patch you are wearing now.
 - Dacă este nevoie, [configurați receptorul sursei CGM/glicemie](../Getting-Started/CompatiblesCgms.md) înainte de a începe.
 

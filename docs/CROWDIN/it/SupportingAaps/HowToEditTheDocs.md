@@ -22,37 +22,37 @@ For our example we are going to make an edit to AndroidAPSdocs. This can be done
 
 1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
 
-![Fork repo](../images/PR0.png)
+![Fork repo](../images/docs_pr_fork_repository.png)
 
 2. Go to any page and navigate to the page you want to edit. You can click on the "Edit in GitHub" link in the upper right corner. Questo è possibile solo per le pagine in inglese. 
 
-![edit doc](../images/PR1.png)
+![edit doc](../images/docs_pr_edit_on_github.png)
 
 Oppure clicca sull'icona della matita che compare nella barra in alto del contenuto della pagina da modificare. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Fai le tue modifiche al file.
 
 We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Fai attenzione a usare la sintassi corretta, come [descritto sotto](#edit-the-docs-code-syntax).
 
-![Edit branch](../images/PR3.png)
+![Edit branch](../images/docs_pr_edit_file.png)
 
 4. You have been working in the "<>Edit file" tab. Seleziona la scheda "Preview changes" (anteprima delle modifiche) per guardare il testo con occhi nuovi e controllare che tutto quello che hai cambiato sia come volevi (controlla i refusi). If you see a needed improvement, go back to the edit tab to make more improvements. 
 
-![modalità anteprima](../images/PR5.png)
+![modalità anteprima](../images/docs_pr_preview_changes.png)
 
 5. Quando hai finito le modifiche, scorri fino in fondo alla pagina. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". Il titolo predefinito contiene il nome del file. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
 
-![commenti del commit](../images/PR4.png)
+![commenti del commit](../images/docs_pr_commit_description.png)
 
 6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
 
-![create pull request](../images/PR6.png)
+![create pull request](../images/docs_pr_create_pull_request.png)
 
 7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
 
-![PR tracking](../images/PR7.png)
+![PR tracking](../images/docs_pr_tracking.png)
 
 PS: Your fork and branch will still be sitting on your own personal GitHub account. Quando ricevi la notifica che la tua PR è stata unita (merge), puoi eliminare il tuo branch se non ti serve più (l'area delle notifiche del passo 7 ti darà un link per eliminare il branch quando sarà chiuso o unito). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. Se scegli un altro metodo per iniziare una PR (per esempio partendo dal branch master del tuo repository forkato), devi prima assicurarti che il tuo repository sia aggiornato: esegui un "compare" (confronto) e unisci tutti gli aggiornamenti arrivati dall'ultima volta che hai aggiornato il tuo fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 

@@ -89,7 +89,7 @@
 - Ви повинні завершити активацію патча протягом 60 хвилин після його запуску. Якщо не вдається, викиньте патч.
 ```
 
-![Крок «Спарювання патча»](../images/EOPatch/Bild6.png) ![Перший запит на спарювання через Bluetooth](../images/EOPatch/Bild7.png) ![Другий запит на спарювання через Bluetooth з ключем доступу](../images/EOPatch/Bild8.png)
+![Крок «Спарювання патча»](../images/EOPatch/eopatch_pairing.png) ![Перший запит на спарювання через Bluetooth](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Другий запит на спарювання через Bluetooth з ключем доступу](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@
 
 Якщо стирчить голка, або патч мокрий, брудний чи його клейка стрічка загнулася, натисніть натомість **Викинути** і використайте новий патч.
 
-![Крок «Підготовка до прикріплення патча»](../images/EOPatch/Bild9.png)
+![Крок «Підготовка до прикріплення патча»](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Місце введення
 
@@ -123,7 +123,7 @@
 - Якщо патч прилип не повністю, між патчем і шкірою може потрапити повітря. Це послаблює клей і водостійкість патча.
 ```
 
-![Крок «Прикріплення патча»](../images/EOPatch/Bild10.png)
+![Крок «Прикріплення патча»](../images/EOPatch/eopatch_attaching.png)
 
 ### Перевірка безпеки
 
@@ -133,7 +133,7 @@
 Для безпечного використання не повертайте важіль введення голки, доки перевірка безпеки не завершиться.
 ```
 
-![Крок «Прикріплення патча» з кнопкою «Почати перевірку безпеки»](../images/EOPatch/Bild11.png) ![Триває перевірка безпеки](../images/EOPatch/Bild12.png)
+![Крок «Прикріплення патча» з кнопкою «Почати перевірку безпеки»](../images/EOPatch/eopatch_start_safety_check.png) ![Триває перевірка безпеки](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@
 
 Поки немає активного патча, **AAPS** показує помпу як призупинену і записує тимчасовий базал 0 Од/год, тому базальний інсулін не враховується в IOB, доки не буде активовано наступний патч.
 
-![Екран помпи EOPatch2 з кнопкою DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Сторінка «Викинути патч»](../images/EOPatch/Bild14.png) ![Вікно підтвердження «Викинути патч»](../images/EOPatch/Bild15.png) ![Патч викинуто](../images/EOPatch/Bild16.png)
+![Екран помпи EOPatch2 з кнопкою DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![Сторінка «Викинути патч»](../images/EOPatch/eopatch_discard_patch.png) ![Вікно підтвердження «Викинути патч»](../images/EOPatch/eopatch_discard_confirm.png) ![Патч викинуто](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@
 
 Введення інсуліну призупиняється на вибраний час.
 
-![Екран помпи EOPatch2 з кнопкою SUSPEND](../images/EOPatch/Bild17.png) ![Вікно підтвердження призупинення](../images/EOPatch/Bild18.png) ![Вікно «Час призупинення базалу»](../images/EOPatch/Bild19.png)
+![Екран помпи EOPatch2 з кнопкою SUSPEND](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Вікно підтвердження призупинення](../images/EOPatch/eopatch_suspend_confirm.png) ![Вікно «Час призупинення базалу»](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@
 1. Відкрийте екран помпи (**Керувати** → **Помпа**) і натисніть **Відновити помпу**.
 1. У вікні **Відновити введення інсуліну** натисніть **Підтвердити**.
 
-![Екран помпи EOPatch2 з кнопкою RESUME](../images/EOPatch/Bild20.png) ![Вікно «Відновити введення інсуліну»](../images/EOPatch/Bild21.png)
+![Екран помпи EOPatch2 з кнопкою RESUME](../images/EOPatch/eopatch_pump_screen_resume.png) ![Вікно «Відновити введення інсуліну»](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@
 
 Коли ви натискаєте **Підтвердити** у сповіщенні, **AAPS** обробляє сигнал тривоги. Для більшості сигналів тривоги це деактивує патч. Для сигналу **Неприйнятна температура** кнопка називається **Повторити**.
 
-![Сигнал тривоги EOPatch2](../images/EOPatch/Bild22.png) ![Сигнал тривоги EOPatch2 після деактивації патча](../images/EOPatch/Bild23.png)
+![Сигнал тривоги EOPatch2](../images/EOPatch/eopatch_alarm.png) ![Сигнал тривоги EOPatch2 після деактивації патча](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@
 
 Попередження призначені для ситуацій середнього або низького пріоритету. Попередження з'являється як сповіщення на екрані **Огляд**.
 
-![Попередження EOPatch2 на екрані «Огляд»](../images/EOPatch/Bild24.png)
+![Попередження EOPatch2 на екрані «Огляд»](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

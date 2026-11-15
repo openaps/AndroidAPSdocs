@@ -22,37 +22,37 @@
 
 1. 前往 <https://github.com/openaps/AndroidAPSdocs>，然後在右上角點擊 Fork 來製作自己的儲存庫副本。
 
-![Fork庫](../images/PR0.png)
+![Fork庫](../images/docs_pr_fork_repository.png)
 
 2. 查看任何頁面，導航到你想編輯的頁面。你可以點擊右上角的「在 GitHub 編輯」連結。這僅適用於英文頁面。 
 
-![編輯文件](../images/PR1.png)
+![編輯文件](../images/docs_pr_edit_on_github.png)
 
 或點擊頁面內容上方出現的鉛筆圖示以進行編輯。你需要已經登錄到你的GitHub帳號才能執行此操作（如果你還沒有帳號，他們的設置非常簡單）。
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. 這兩種選擇中的任何一個都將在你的庫中建立一個新分支，你的編輯將儲存在該分支中。對文件進行編輯。
 
 我們使用Markdown語法來編寫文件頁面。檔案的副檔名是「.md」。 Markdown 規格並非固定不變；目前我們使用 myst_parser 處理 Markdown 檔案。請確保使用正確的語法，如[以下所述](#edit-the-docs-code-syntax)。
 
-![編輯分支](../images/PR3.png)
+![編輯分支](../images/docs_pr_edit_file.png)
 
 4. 你正在“<>編輯文件”標籤中工作。選取「預覽變更」分頁，重新檢視內容，確認修改結果符合預期（並檢查是否有錯字）。如果你看到需要改進的地方，請返回編輯標籤進行更多改進。 
 
-![預覽模式](../images/PR5.png)
+![預覽模式](../images/docs_pr_preview_changes.png)
 
 5. 當你完成編輯後，滾動到頁面底部。在底部的框中，在“添加可選擴展描述...”的文本字段中提供你的評論。預設標題為文件名。嘗試添加一句解釋**更改原因**的語句。說明原因有助於審核者了解你嘗試透過PR進行的操作。
 
-![提交評論](../images/PR4.png)
+![提交評論](../images/docs_pr_commit_description.png)
 
 6. 點擊綠色的“建議文件更改”或“提交更改”按鈕。在出現的頁面中點擊“建立Pull Request”，然後在下一頁再次點擊“建立Pull Request”。
 
-![建立Pull Request](../images/PR6.png)
+![建立Pull Request](../images/docs_pr_create_pull_request.png)
 
 7. 這樣就完成了Pull Request的提交。 GitHub為PR分配了一個編號，位於標題後面和井號之後。返回此頁面檢查反饋（或者，如果你已啟用GitHub通知，你將透過電子郵件收到關於PR活動的通知）。現在，你的編輯將在一個PR列表中，團隊將審核並可能在合併到AAPS主要文件之前提供反饋！如果你想查看PR的進展，你可以點擊GitHub帳號右上角的鐘形標誌，查看所有的PR。
 
-![PR追蹤](../images/PR7.png)
+![PR追蹤](../images/docs_pr_tracking.png)
 
 附註：你的Fork和分支將仍保留在你個人的GitHub帳號上。當你收到通知你的PR已合併後，如果你已經完成了他，你可以刪除你的分支（步驟7的通知區域將提供一個連結，用於在分支被關閉或合併後刪除他）。對於未來的編輯，如果你按照此流程，編輯將始終從AndroidAPSdocs庫的最新版本開始。如果您選擇使用其他方式建立 PR（例如，從 fork 儲存庫的 master 分支開始編輯），請先執行「compare」並合併自上次更新 fork 以來的所有更新，確保儲存庫保持在最新狀態。由於人們往往忘記更新他們的庫，我們建議你按照上述PR流程進行，直到你熟悉執行“比較”。
 

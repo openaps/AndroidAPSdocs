@@ -291,13 +291,13 @@ Programul pentru ceas, fișierul apk **AAPSClient** Wear, poate fi descărcat di
 
 To download the software, click on the watch app that matches the client app on the phone: **wear-aapsclient-release_**_version_ goes with **AAPSClient**, **wear-aapsclient2-release_**_version_ goes with **AAPSClient2** (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![imagine](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+![imagine](../images/github_release_wear_aapsclient_apk.png)
 
 
 Then "save as" and save the file to a convenient location on your computer:
 
 
-![imagine](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+![imagine](../images/save_as_wear_aapsclient_apk.png)
 
 
 

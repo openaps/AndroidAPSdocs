@@ -309,13 +309,13 @@ Güncel toplam sonuç sayfasında gösterilir; böylece onaylamak üzere olduğu
     
     Telefondaki [Hızlı Asistan](#quickwizards) girişlerinden **Saatte Göster** açık olanlar, geçerli saatleri içinde. Karbonhidrat girişi karbonhidratını g olarak, insülin girişi sabit dozunu Ü olarak gösterir. Bir dokunuş, saatte onaydan sonra girişi çalıştırır. Saatte ayarlanacak bir şey yoktur: girişleri telefonda düzenleyin ve panelde görmek istediğiniz her giriş için **Cihaz Seçimi** altında **Saatte Göster** seçeneğini açın. Tüm girişlerinizin geçerli saatleri dışında panel **Mevcut yapılandırma yok** gösterir.
     
-    ![Saatte Göster açık bir Hızlı Asistan girişi ve göründüğü panel](../images/quickwizard_watch_phone.png)
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Senaryo paneli
+    ### Scene tile
     
-    ![Senaryo paneli](../images/wearos/tiles/tile_scene.png)
+    ![Scene tile](../images/wearos/tiles/tile_scene.png)
     
-    Telefondaki [Senaryolar](#scenes-from-watch). Dört yerin her biri panel ayarlarında **Otomatik**, **Hiçbiri** veya bir senaryo olarak ayarlanır. **Otomatik** bir yer, telefonun listesinden başka bir yerin almadığı sonraki senaryoyu alır. Telefonda artık bulunmayan bir senaryoya ayarlanmış bir yer **Mevcut değil** gösterir.
+    The [Scenes](#scenes-from-watch) of the phone. Dört yerin her biri panel ayarlarında **Otomatik**, **Hiçbiri** veya bir senaryo olarak ayarlanır. **Otomatik** bir yer, telefonun listesinden başka bir yerin almadığı sonraki senaryoyu alır. Telefonda artık bulunmayan bir senaryoya ayarlanmış bir yer **Mevcut değil** gösterir.
     
     ![Senaryo paneli ayarları, dört yer Otomatik olarak ayarlı](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,17 +361,17 @@ Güncel toplam sonuç sayfasında gösterilir; böylece onaylamak üzere olduğu
     
     Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. Saatler yanmayı önlemek için genellikle ekranı karartır; öneriler için kullanım kılavuzunuza, üreticiye veya internete bakın.
     
-    ![Komodin üzerindeki saat arayüzü](../images/Watchface_nightstand.jpg)
+    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Basitleştirilmiş kullanıcı arayüzü](../images/Watchface_simplified_ui.png)
+    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Saatte telefon alarmları
+    ## Phone alarms on the watch
     
-    ![Saatte bir telefon alarmı](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    Saat, telefonun alarmlarını gösterir; böylece telefonun neden ses çıkardığını görür ve bileğinizden yanıt verebilirsiniz. Saat titreşir ve siz yanıt verene kadar beş dakika boyunca her yarım dakikada bir tekrar titreşir. Bir bildirim, alarmın başlığını ve metnini [yemek vakti](#WearOsSmartwatch-wizard-carb-time) hatırlatıcısıyla aynı yanıtlarla gösterir:
+    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. Saat titreşir ve siz yanıt verene kadar beş dakika boyunca her yarım dakikada bir tekrar titreşir. Bir bildirim, alarmın başlığını ve metnini [yemek vakti](#WearOsSmartwatch-wizard-carb-time) hatırlatıcısıyla aynı yanıtlarla gösterir:
     
     * **Sessize al** veya kaydırma: alarm durur ve telefondaki alarm ekranı kapanır.
     * **5 dk sessiz**: alarm durur ve beş dakika sonra telefonda ve saatte tekrar çalar.

@@ -281,7 +281,7 @@ Norėdami išjungti Pod (pasibaigus naudojimo laikui arba sugedus Pod):
 
 Toliau parodyta, kaip sustabdyti ir atnaujinti insulino tiekimą.
 
-*PASTABA - jei nematote mygtuko **Sustabdyti***, jis pagal numatymą paslėptas. [Omnipod nustatymų](#OmnipodEros-omnipod-settings) skiltyje **Kiti** įjunkite **Pompos ekrane rodyti mygtuką Sustabdyti insulino tiekimą**.
+*PASTABA - jei nematote mygtuko **Sustabdyti***, jis pagal numatymą paslėptas. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Insulino tiekimo sustabdymas
 
@@ -591,7 +591,7 @@ Mygtukai pompos ekrano apačioje keičiasi pagal situaciją. Mygtukai, kurių da
   Aukščiau esanti ekrano kopija yra iš ankstesnės **AAPS** versijos. **AAPS** 4 versijoje tai yra tekstinis mygtukas **Nustatyti laiką** Omnipod pompos ekrane.
   ```
 
-- **Sustabdyti:** sustabdo insulino tiekimą aktyviame Pod. Rodomas tik jei įjungtas nustatymuose (**Pompos ekrane rodyti mygtuką Sustabdyti insulino tiekimą**).
+- **Sustabdyti:** sustabdo insulino tiekimą aktyviame Pod. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ AAPS pranešimai ir garsiniai telefono perspėjimai, kai neaišku, ar laikina ba
 
 Papildomi nustatymai, padedantys ieškoti klaidų.
 
-- **Pompos ekrane rodyti mygtuką Sustabdyti insulino tiekimą:** paslepia arba rodo mygtuką **Sustabdyti** Omnipod pompos ekrane.
+- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
 - **Pod valdymo meniu rodyti mygtuką Pulse log:** šis nustatymas dar rodomas sąraše, tačiau dabartinėje pompos ekrano versijoje mygtuko **Pulse Log** nėra.
 
 - **Pod valdymo meniu rodyti mygtuką RileyLink statistika:** paslepia arba rodo mygtuką **RileyLink statistika** Omnipod pompos ekrane.

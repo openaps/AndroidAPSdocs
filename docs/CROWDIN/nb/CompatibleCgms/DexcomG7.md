@@ -41,6 +41,8 @@ Den offisielle Dexcom-appen forblir koblet til sensoren. xDrip leser blodsukkerv
 ```{admonition} Not a trusted data source
 :class: note
 **AAPS** regner ikke xDrip i Companion App-modus som en [pålitelig BS-datakilde](#GettingStarted-TrustedBGSource): SMB-er er ikke tillatt hele tiden.
+
+Bruk [Varslingsleser](#DexcomG7-notification-reader) hvis du vil lese varslingene fra Dexcom-appen uten xDrip og ha en pålitelig datakilde.
 ```
 
 ### Lese varslingene fra Dexcom-appen
@@ -101,3 +103,52 @@ Versjon 9.0 eller nyere kreves
 - Krav for sammenkobling: Godta å koble sensoren sammen med Juggluco. Pass på at skjermen ikke er låst under sammenkoblingen. Hvis sammenkoblingen mislykkes, vent 5 minutter før du prøver igjen.
 
 - Unntak: Wear OS-klokker kan koble seg sammen uten at du trykker på en godta-knapp.
+
+(DexcomG7-notification-reader)=
+
+## 5. Varslingsleser (G7, ONE+ og Stelo)
+
+Den offisielle Dexcom-appen forblir koblet til sensoren. **AAPS** leser glukoseverdien direkte fra varslingen til Dexcom-appen, uten noen annen app imellom.
+
+```{admonition} Trusted data source
+:class: note
+Målinger fra Dexcom G7-, ONE+- og Stelo-appene er en [pålitelig BS-datakilde](#GettingStarted-TrustedBGSource): SMB-er kan tillates hele tiden.
+```
+
+Sammenlignet med de andre metodene på denne siden har Varslingsleser noen begrensninger:
+
+- **Ingen trendpil** og **ingen utfylling av hull (backfill)**: målinger som ble tapt mens telefonen var av eller utenfor rekkevidde, er borte.
+- Hver måling får tidspunktet da varslingen kom, ikke det nøyaktige tidspunktet for sensormålingen.
+- Bare verdier mellom 40 og 405 mg/dL (2,2 og 22,5 mmol/L) blir lest. «LOW» og «HIGH» blir ikke lest.
+- Stelo gir en måling hvert 15. minutt.
+
+### Sett opp Dexcom-appen
+
+- Behold Dexcom-appen installert og koblet til sensoren.
+- Sørg for at Dexcom-appen viser den aktuelle glukoseverdien i varslingen sin. Varslingene fra appen må være synlige: Ikke demp eller skjul dem.
+- Bruk de samme glukoseenhetene (mg/dL eller mmol/L) i Dexcom-appen som i **AAPS**. Ellers kan ikke **AAPS** lese verdien.
+
+### Konfigurasjon i AAPS
+
+- Velg **Varslingsleser** i [**Konfigurasjon → BS-kilde**](#Config-Builder-bg-source) og bekreft byttet.
+
+  ![BS-kilde: Varslingsleser valgt](../images/NotificationReader_BgSource.png)
+
+- Når du er tilbake på hovedskjermen, viser **AAPS** meldingen **Tillatelser kreves**. Ved siden av **Tilgang til varsler** trykker du på **Tillat**.
+
+  ![Tillatelser kreves: Tilgang til varsler](../images/NotificationReader_Permissions.png)
+
+- Android åpner listen over varslingstilgang (navnet avhenger av Android-versjonen, for eksempel *Notification read, reply & control* på engelsk). Velg **AAPS**, slå på **Tillat tilgang til varsler** og bekreft med **Tillat**.
+
+  ![Android ber om å tillate varslingstilgang for AAPS](../images/NotificationReader_AllowDialog.png)
+
+  Android advarer om at **AAPS** kan lese alle varslingene dine. **AAPS** leser bare varslingene fra støttede CGM-apper og ignorerer alle andre.
+
+  ![Varslingstilgang tillatt for AAPS](../images/NotificationReader_AccessOn.png)
+
+- Hvis **Tillat tilgang til varsler** er nedtonet (*Styrt av begrenset innstilling*), blokkerer Android det fordi **AAPS** ikke ble installert fra Play Store. Åpne appinfo for **AAPS** (trykk og hold på **AAPS**-ikonet > **Appinfo**), trykk på menyen med tre prikker øverst til høyre og velg **Tillat begrensede innstillinger**. Gå så tilbake til skjermen for varslingstilgang og tillat den.
+- Målingene vises i **AAPS** når Dexcom-appen viser en ny verdi.
+
+```{warning}
+Hvis varslingen fra Dexcom-appen viser mer enn ett glukosetall, eller ingen, hopper **AAPS** over den varslingen.
+```

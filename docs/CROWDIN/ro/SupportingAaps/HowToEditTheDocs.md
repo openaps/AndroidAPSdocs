@@ -22,37 +22,37 @@ For our example we are going to make an edit to AndroidAPSdocs. This can be done
 
 1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
 
-![Fork repo](../images/PR0.png)
+![Fork repo](../images/docs_pr_fork_repository.png)
 
 2. Mergeți la orice pagină și navigați la pagina pe care doriți să o editați. You can click on the "Edit in GitHub" link in the upper right corner. Acest lucru este posibil doar pentru paginile în limba engleză. 
 
-![editarea documentului](../images/PR1.png)
+![editarea documentului](../images/docs_pr_edit_on_github.png)
 
 Or click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Faceți modificările în fișier.
 
 Folosim Markdown pentru paginile documentației. The files have the suffix ".md". Specificația Markdown nu este fixă și momentan folosim myst_parser pentru fișierele noastre Markdown. Aveți grijă să folosiți sintaxa corectă, așa cum este [descrisă mai jos](#edit-the-docs-code-syntax).
 
-![Editați ramura](../images/PR3.png)
+![Editați ramura](../images/docs_pr_edit_file.png)
 
 4. You have been working in the "<>Edit file" tab. Selectați fila „Preview changes” (previzualizați modificările) pentru a verifica încă o dată dacă tot ce ați schimbat arată așa cum ați dorit (verificați greșelile de scriere). If you see a needed improvement, go back to the edit tab to make more improvements. 
 
-![mod previzualizare](../images/PR5.png)
+![mod previzualizare](../images/docs_pr_preview_changes.png)
 
 5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". Titlul implicit conține numele fișierului. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
 
-![trimite comentarii](../images/PR4.png)
+![trimite comentarii](../images/docs_pr_commit_description.png)
 
 6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
 
-![inițiați o cerere de fuziune (pull request)](../images/PR6.png)
+![inițiați o cerere de fuziune (pull request)](../images/docs_pr_create_pull_request.png)
 
 7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
 
-![Monitorizare cereri de fuziune (PR)](../images/PR7.png)
+![Monitorizare cereri de fuziune (PR)](../images/docs_pr_tracking.png)
 
 PS: Your fork and branch will still be sitting on your own personal GitHub account. După ce primiți o notificare că PR-ul a fost integrat (merged), puteți șterge ramura, dacă nu mai aveți nevoie de ea (zona de notificări de la Pasul 7 va oferi un link pentru ștergerea ramurii, după ce aceasta a fost închisă sau integrată). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. Dacă alegeți altă metodă pentru a începe un PR (de exemplu, editarea pornind de la ramura master a depozitului dumneavoastră obținut prin fork), trebuie să vă asigurați că depozitul este actualizat: faceți mai întâi un „compare” (comparare) și integrați toate actualizările apărute de când ați actualizat ultima dată fork-ul. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 

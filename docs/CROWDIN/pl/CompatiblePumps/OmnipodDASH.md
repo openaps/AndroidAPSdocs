@@ -535,7 +535,7 @@ Wybierz, czy **AAPS** ma odtwarzać dźwięk z powiadomieniami, gdy nie ma pewno
 
 Wiek **Bateria pompy** nie jest pokazywany: bateria i zbiornik insuliny są wbudowane w każdy Pod, a bateria zawsze działa dłużej niż sam Pod (maksymalnie 80 godzin).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

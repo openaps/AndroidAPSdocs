@@ -89,7 +89,7 @@
 - יש לסיים את הפעלת הפאץ' תוך 60 דקות מרגע שהתחיל לפעול. אם זה לא אפשרי, יש להשליך את הפאץ'.
 ```
 
-![השלב צימוד הפאץ'](../images/EOPatch/Bild6.png) ![בקשת צימוד Bluetooth ראשונה](../images/EOPatch/Bild7.png) ![בקשת צימוד Bluetooth שנייה עם מפתח הגישה](../images/EOPatch/Bild8.png)
+![השלב צימוד הפאץ'](../images/EOPatch/eopatch_pairing.png) ![בקשת צימוד Bluetooth ראשונה](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![בקשת צימוד Bluetooth שנייה עם מפתח הגישה](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@
 
 אם מחט בולטת, או אם הפאץ' רטוב, מלוכלך או שסרט ההדבקה שלו מקופל, יש ללחוץ במקום זאת על **השלכה** ולהשתמש בפאץ' חדש.
 
-![השלב הכנה לחיבור הפאץ'](../images/EOPatch/Bild9.png)
+![השלב הכנה לחיבור הפאץ'](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### מיקום האתר
 
@@ -123,7 +123,7 @@
 - אם הפאץ' לא נדבק לגמרי, אוויר יכול להיכנס בין הפאץ' לעור. זה מחליש את ההדבקה ואת העמידות של הפאץ' למים.
 ```
 
-![השלב הדבקת הפאץ'](../images/EOPatch/Bild10.png)
+![השלב הדבקת הפאץ'](../images/EOPatch/eopatch_attaching.png)
 
 ### בדיקת בטיחות
 
@@ -133,7 +133,7 @@
 לשימוש בטוח, אין לסובב את מנוף החדרת המחט עד שבדיקת הבטיחות הסתיימה.
 ```
 
-![השלב הדבקת הפאץ' עם הלחצן התחלת בדיקת בטיחות](../images/EOPatch/Bild11.png) ![בדיקת הבטיחות מתבצעת](../images/EOPatch/Bild12.png)
+![השלב הדבקת הפאץ' עם הלחצן התחלת בדיקת בטיחות](../images/EOPatch/eopatch_start_safety_check.png) ![בדיקת הבטיחות מתבצעת](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@
 
 כשאין פאץ' פעיל, **AAPS** מציג את המשאבה כמושהית ורושם בזאלי זמני של 0 U/hr, כך שאינסולין בזאלי לא נספר ב-IOB עד שמופעל הפאץ' הבא.
 
-![מסך המשאבה EOPatch2 עם הלחצן DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![הדף השלכת הפאץ'](../images/EOPatch/Bild14.png) ![חלון האישור של השלכת הפאץ'](../images/EOPatch/Bild15.png) ![השלכת הפאץ' הושלמה בהצלחה](../images/EOPatch/Bild16.png)
+![מסך המשאבה EOPatch2 עם הלחצן DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![הדף השלכת הפאץ'](../images/EOPatch/eopatch_discard_patch.png) ![חלון האישור של השלכת הפאץ'](../images/EOPatch/eopatch_discard_confirm.png) ![השלכת הפאץ' הושלמה בהצלחה](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@
 
 מתן האינסולין מושהה לזמן שבחרתם.
 
-![מסך המשאבה EOPatch2 עם הלחצן SUSPEND](../images/EOPatch/Bild17.png) ![חלון אישור ההשהיה](../images/EOPatch/Bild18.png) ![החלון זמן השעיית הבאזלי](../images/EOPatch/Bild19.png)
+![מסך המשאבה EOPatch2 עם הלחצן SUSPEND](../images/EOPatch/eopatch_pump_screen_suspend.png) ![חלון אישור ההשהיה](../images/EOPatch/eopatch_suspend_confirm.png) ![החלון זמן השעיית הבאזלי](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@
 1. יש לפתוח את מסך המשאבה (**ניהול** ← **משאבה**) וללחוץ על **חידוש פעולת המשאבה**.
 1. בחלון **חידוש הזרקת האינסולין**, יש ללחוץ על **אישור**.
 
-![מסך המשאבה EOPatch2 עם הלחצן RESUME](../images/EOPatch/Bild20.png) ![החלון חידוש הזרקת האינסולין](../images/EOPatch/Bild21.png)
+![מסך המשאבה EOPatch2 עם הלחצן RESUME](../images/EOPatch/eopatch_pump_screen_resume.png) ![החלון חידוש הזרקת האינסולין](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@
 
 כשלוחצים על **אישור** בהתראה, **AAPS** מטפל בהתראה. ברוב ההתראות, פעולה זו משביתה את הפאץ'. בהתראה **טמפרטורה לא מתאימה**, הלחצן הוא **ניסיון חוזר**.
 
-![התראה של EOPatch2](../images/EOPatch/Bild22.png) ![התראה של EOPatch2 אחרי שהפאץ' הושבת](../images/EOPatch/Bild23.png)
+![התראה של EOPatch2](../images/EOPatch/eopatch_alarm.png) ![התראה של EOPatch2 אחרי שהפאץ' הושבת](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@
 
 אזהרות מיועדות למצבים בעדיפות בינונית או נמוכה. אזהרה מופיעה כהתראה ב**מסך הסקירה**.
 
-![אזהרה של EOPatch2 שמוצגת במסך הסקירה](../images/EOPatch/Bild24.png)
+![אזהרה של EOPatch2 שמוצגת במסך הסקירה](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

@@ -53,7 +53,7 @@ Hvis minimalt karbohydratopptak (min_5m_carbimpact) brukes i stedet for verdien 
 
 Vanligvis oppdager __AAPS__ karbohydratopptak gjennom **BS**-avvik. Hvis du har registrert karbohydrater, men **AAPS** ikke kan se opptaket av dem gjennom **BS**-avvik, bruker det i stedet metoden [min_5m_carbimpact](#Preferences-min_5m_carbimpact) til å beregne opptaket (såkalt «fallback»). Siden denne metoden bare beregner det minimale karbohydratopptaket uten å ta hensyn til **BS**-avvik, kan den gi feil COB-verdier.
 
-![Hint om feil COB-verdi](../images/Calculator_SlowCarbAbsorption.png)
+![Hint om feil COB-verdi](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 I skjermbildet ovenfor ble karbohydratopptaket 66 % av tiden beregnet med min_5m_carbimpact i stedet for verdien som ble funnet fra avvik. Dette tyder på at du kan ha hatt mindre **COB** enn algoritmen beregnet.
 
@@ -84,7 +84,7 @@ Hvis karbohydratene er over- eller undervurdert, kan dette korrigeres i skjermen
 
 Skjermen **Behandlingshistorikk** kan brukes til å korrigere en feil karbohydratoppføring ved å slette den. Dette kan skyldes at du over- eller undervurderte karbohydratene du registrerte:
 
-![Slette en karbohydratoppføring fra Behandlingshistorikk](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Slette en karbohydratoppføring fra Behandlingshistorikk](../images/treatments_history_delete_carbs.png)
 
 1. Sjekk og husk gjeldende **COB** og **IOB** på hovedskjermen i **AAPS**.
 2. Åpne **Behandlingshistorikk** (sidemenyen → *Behandlingshistorikk*), fanen **Karbo og bolus**. Avhengig av pumpen kan karbohydratene vises sammen med insulin på én linje, eller som en egen oppføring (for eksempel med Dana RS).

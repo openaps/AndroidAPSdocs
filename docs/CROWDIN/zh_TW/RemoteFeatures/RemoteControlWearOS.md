@@ -309,13 +309,13 @@
     
     顯示手機上已開啟 **在手錶上顯示**，且目前時間在有效時段內的 [QuickWizard](#quickwizards) 項目。碳水化合物項目會顯示碳水化合物克數，胰島素項目則會顯示固定劑量（單位為 U）。在手錶上點選項目並確認後，即會執行該項目。無須在手錶上設定：請在手機上編輯項目，並在各項目 **裝置選擇** 中開啟 **在手錶上顯示**，即可將項目顯示在資訊方塊上。如果目前不在任何項目的有效時段內，資訊方塊會顯示 **沒有可用的設定**。
     
-    ![已開啟「在手錶上顯示」的 QuickWizard 項目，以及顯示該項目的資訊方塊](../images/quickwizard_watch_phone.png)
+    ![已開啟「在手錶上顯示」的 QuickWizard 項目，以及顯示該項目的方塊](../images/wearos/quickwizard_watch_phone.png)
     
-    ### 場景資訊方塊
+    ### 場景方塊
     
-    ![場景資訊方塊](../images/wearos/tiles/tile_scene.png)
+    ![場景方塊](../images/wearos/tiles/tile_scene.png)
     
-    顯示手機上的[場景](#scenes-from-watch)。您可以在資訊方塊設定中，將四個位置分別設為 **自動**、**無** 或其中一個場景。設為 **自動** 的位置會從手機的場景清單中選取下一個尚未被其他位置使用的場景。如果某個位置設定的場景已不在手機上，該位置就會顯示 **無法使用**。
+    手機上的[場景](#scenes-from-watch)。您可以在資訊方塊設定中，將四個位置分別設為 **自動**、**無** 或其中一個場景。設為 **自動** 的位置會從手機的場景清單中選取下一個尚未被其他位置使用的場景。如果某個位置設定的場景已不在手機上，該位置就會顯示 **無法使用**。
     
     ![場景資訊方塊設定，四個位置皆設為「自動」](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -361,9 +361,9 @@
     
     注意：並非所有螢幕都能很好地處理永遠開啟功能。這可能會導致螢幕燒灼，特別是在較舊的 OLED 螢幕上。手錶通常會調暗螢幕以防止燒灼；請查閱你的使用手冊、製造商或網路上的建議。
     
-    ![手錶夜間模式](../images/Watchface_nightstand.jpg)
+    ![手錶夜間模式](../images/wearos/Watchface_nightstand.jpg)
     
-    ![簡化 UI](../images/Watchface_simplified_ui.png)
+    ![簡化 UI](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     

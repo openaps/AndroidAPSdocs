@@ -40,7 +40,9 @@ Dexcom BYODA 現在是非常舊的應用程式版本，且無法更新。不適�
 
 ```{admonition} Not a trusted data source
 :class: note
-**AAPS** 不會將 Companion App 模式下的 xDrip 視為[可信任的血糖資料來源](#GettingStarted-TrustedBGSource)：微量注射並非一直都能使用。
+**AAPS** 不會將 Companion App 模式下的 xDrip 視為[可信任的血糖資料來源](#GettingStarted-TrustedBGSource)：無法一直允許微量注射。
+
+若要在不使用 xDrip 的情況下讀取 Dexcom App 通知，並將其作為可信任的資料來源，請使用[通知讀取器](#DexcomG7-notification-reader)。
 ```
 
 ### 讀取 Dexcom App 通知
@@ -101,3 +103,52 @@ Dexcom App 連線至 G7 感測器時，xDrip 也可以透過藍牙接收感測�
 - 配對要求：同意將傳感器與 Juggluco 配對。確保配對期間螢幕未被鎖定。如果配對失敗，請等待 5 分鐘再試。
 
 - 例外：Wear OS 手錶可以在不按同意按鈕的情況下配對。
+
+(DexcomG7-notification-reader)=
+
+## 5. 通知讀取器（G7、ONE+ 和 Stelo）
+
+官方 Dexcom App 會持續連線至感測器。 **AAPS** 會直接從 Dexcom App 的通知中讀取血糖值，不需要透過其他 App。
+
+```{admonition} Trusted data source
+:class: note
+Dexcom G7、ONE+ 和 Stelo App 的讀取值是[可信任的血糖資料來源](#GettingStarted-TrustedBGSource)：可以一直允許微量注射。
+```
+
+與本頁的其他方法相比，通知讀取器有以下限制：
+
+- **沒有趨勢箭頭**，也**無法補回資料**：手機關機或超出範圍期間錯過的讀取值會遺失。
+- 每筆讀取值的時間都是通知出現的時間，而非感測器讀取值的確切時間。
+- 只會讀取介於 40 至 405 mg/dL（2.2 至 22.5 mmol/L）之間的數值。不會讀取「LOW」和「HIGH」。
+- Stelo 每 15 分鐘提供一次讀取值。
+
+### 設定 Dexcom App
+
+- 請保持安裝 Dexcom App，並讓它連線至感測器。
+- 確認 Dexcom App 的通知中顯示目前的血糖值。通知必須保持顯示：請勿將通知設為靜音或隱藏。
+- Dexcom App 使用的血糖單位（mg/dL 或 mmol/L）必須與 **AAPS** 相同。否則 **AAPS** 無法讀取該數值。
+
+### 在 AAPS 中進行配置
+
+- 在 [**組態建置工具 → 血糖來源**](#Config-Builder-bg-source)中選取 **通知讀取器**，並確認切換開關。
+
+  ![血糖來源：已選取通知讀取器](../images/NotificationReader_BgSource.png)
+
+- 返回主畫面後，**AAPS** 會顯示 **需要權限**。在 **通知存取權**旁，點選 **授予**。
+
+  ![需要權限：通知存取權](../images/NotificationReader_Permissions.png)
+
+- Android 會開啟通知存取權清單（名稱依 Android 版本而異，例如 *讀取、回覆及控制通知*）。選取 **AAPS**，開啟 **允許通知存取權**，並點選 **允許**確認。
+
+  ![Android 詢問是否允許 AAPS 存取通知](../images/NotificationReader_AllowDialog.png)
+
+  Android 會警告 **AAPS** 可能讀取您的所有通知。 **AAPS** 只會讀取支援的 CGM App 通知，並忽略其他所有通知。
+
+  ![已允許 AAPS 存取通知](../images/NotificationReader_AccessOn.png)
+
+- 如果 **允許通知存取權**呈現灰色，無法選取（*受限設定控制*），表示 Android 封鎖了此功能，因為 **AAPS** 並非從 Play 商店安裝。開啟 **AAPS** App 資訊（長按 **AAPS** 圖示 > **App 資訊**），點選右上角的三點選單，然後選取 **允許受限設定**。接著返回通知存取權畫面，並允許存取。
+- Dexcom App 顯示新數值時，讀取值就會出現在 **AAPS** 中。
+
+```{warning}
+如果 Dexcom App 通知中顯示多個或沒有血糖數值，**AAPS** 就會略過該通知。
+```

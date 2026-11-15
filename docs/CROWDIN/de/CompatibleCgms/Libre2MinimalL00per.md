@@ -88,7 +88,7 @@ Viele Leute haben gefragt, ob diese Methode mit einem bereits aktiven Sensor fun
 
 1.  **ZUERST** stelle sicher, dass Du die unten gezeigten Konfigurationsänderungen und Einstellungen in xDrip vorgenommen sowie OOP2 installiert und konfiguriert hast.
 
-2.  **DANACH**, mache mit *Schritt 5* weiter und **STELLE SICHER**, dass Du LL vor dem neuen Start (erzwungen) geschlossen hast. Dann folge dem Prozess bis zum Ende.
+2.  **DANACH**, mache mit *Schritt 5* weiter und **STELLE SICHER**, dass Du LL vor dem neuen Start beendet hast („Stopp erzwingen“). Dann folge dem Prozess bis zum Ende.
 
 *HINWEIS: Du wirst den aktivierten FSL 2 Sensor nicht mit dem Lesegerät nutzen können, WENN ER nicht als Erstes mit dem Lesegerät gestartet wurde. Wenn er ZUERST mit dem Lesegerät gestartet WURDE, kannst Du den Sensor **scannen** und Messwerte SOWOHL vom Sensor als auch über Apps wie LL und xDrip abrufen.*
 

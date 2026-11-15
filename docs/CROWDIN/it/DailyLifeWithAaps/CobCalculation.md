@@ -84,7 +84,7 @@ If carbs are over or underestimated this can be corrected through the **Treatmen
 
 The **Treatments history** screen can be used to correct a faulty carb entry by deleting it. This may be because the user over or underestimated the carb entry:
 
-![Cancellare un inserimento di carboidrati dalla Cronologia trattamenti](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Cancellare un inserimento di carboidrati dalla Cronologia trattamenti](../images/treatments_history_delete_carbs.png)
 
 1. Check and remember actual **COB** and **IOB** on the **AAPS** main screen.
 2. Open **Treatments history** (drawer menu → *Treatments history*), tab **Carbs and bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).

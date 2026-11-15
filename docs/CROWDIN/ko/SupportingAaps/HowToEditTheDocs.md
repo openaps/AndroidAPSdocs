@@ -22,37 +22,37 @@
 
 1. <https://github.com/openaps/AndroidAPSdocs>로 가서 오른쪽 위의 Fork를 눌러 저장소의 내 복사본을 만드십시오.
 
-![저장소 fork](../images/PR0.png)
+![저장소 fork](../images/docs_pr_fork_repository.png)
 
 2. 아무 페이지로 가서 편집할 페이지로 이동하십시오. 오른쪽 위에 있는 "Edit in GitHub"(GitHub에서 편집) 링크를 누를 수 있습니다. 이것은 영어 페이지에서만 가능합니다. 
 
-![문서 편집](../images/PR1.png)
+![문서 편집](../images/docs_pr_edit_on_github.png)
 
 또는 편집할 페이지 내용의 위쪽 막대에 나타나는 연필 아이콘을 누르십시오. 이 작업을 하려면 먼저 GitHub 계정에 로그인해야 합니다(계정이 없다면 쉽게 만들 수 있습니다).
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. 2단계의 두 가지 방법 중 어느 것을 쓰든, 사용자의 저장소에 새 브랜치가 만들어지고 편집 내용은 그 브랜치에 저장됩니다. 파일을 편집하십시오.
 
 문서 페이지에는 Markdown을 사용합니다. 파일 확장자는 ".md"입니다. Markdown 사양은 고정되어 있지 않으며, 지금은 Markdown 파일에 myst_parser를 사용합니다. [아래 설명](#edit-the-docs-code-syntax)대로 올바른 문법을 사용하도록 주의하십시오.
 
-![브랜치 편집](../images/PR3.png)
+![브랜치 편집](../images/docs_pr_edit_file.png)
 
 4. 지금까지 "<>Edit file"(파일 편집) 탭에서 작업했습니다. "Preview changes"(변경 사항 미리 보기) 탭을 눌러 새로운 눈으로 다시 보고, 바꾼 내용이 모두 의도한 대로 보이는지 확인하십시오(오타 확인). 더 고칠 부분이 보이면 편집 탭으로 돌아가서 더 수정하십시오. 
 
-![미리 보기 모드](../images/PR5.png)
+![미리 보기 모드](../images/docs_pr_preview_changes.png)
 
 5. 편집을 마쳤으면 페이지 맨 아래로 스크롤하십시오. 맨 아래 상자에서 "Add an optional extended description..."(선택 사항인 자세한 설명 추가)라고 적힌 텍스트 필드에 설명을 적으십시오. 기본 제목에는 파일 이름이 들어 있습니다. 변경한 **이유**를 설명하는 문장을 하나 넣으십시오. 이유를 알려 주면 검토자가 이 PR로 무엇을 하려는지 이해하기 쉽습니다.
 
-![커밋 설명](../images/PR4.png)
+![커밋 설명](../images/docs_pr_commit_description.png)
 
 6. 초록색 "Propose file changes"(파일 변경 제안) 또는 "Commit changes"(변경 사항 커밋) 버튼을 누르십시오. 나타나는 페이지에서 "Create Pull Request"(Pull Request 만들기)를 누르고, 다음 페이지에서 다시 "Create Pull Request"를 누르십시오.
 
-![Pull Request 만들기](../images/PR6.png)
+![Pull Request 만들기](../images/docs_pr_create_pull_request.png)
 
 7. 이제 Pull Request(PR)가 만들어졌습니다. GitHub가 PR에 번호를 붙입니다. 번호는 제목 뒤에 # 기호와 함께 표시됩니다. 이 페이지로 돌아와서 의견이 있는지 확인하십시오(GitHub 알림을 이메일로 받도록 설정했다면, PR에 활동이 있을 때마다 이메일을 받습니다). 이제 편집 내용은 팀이 검토할 PR 목록에 들어갑니다. 팀은 AAPS의 메인 문서에 반영하기 전에 의견을 줄 수도 있습니다! PR 진행 상황을 확인하려면 GitHub 계정의 오른쪽 위에 있는 종 모양 아이콘을 눌러 자신의 PR을 모두 볼 수 있습니다.
 
-![PR 추적](../images/PR7.png)
+![PR 추적](../images/docs_pr_tracking.png)
 
 참고: fork와 브랜치는 그대로 개인 GitHub 계정에 남아 있습니다. PR이 병합되었다는 알림을 받은 뒤, 더 이상 필요 없으면 브랜치를 지워도 됩니다(PR이 닫히거나 병합되면 7단계의 알림 영역에 브랜치 삭제 링크가 나옵니다). 앞으로도 이 방법을 따르면 편집은 항상 AndroidAPSdocs 저장소의 최신 버전에서 시작합니다. 다른 방법으로 PR을 시작한다면(예: fork한 저장소의 master 브랜치에서 편집 시작), 먼저 "compare"(비교)를 하고 마지막으로 fork를 업데이트한 뒤에 생긴 변경 사항을 병합하여 저장소를 최신 상태로 만들어야 합니다. 저장소 업데이트를 잊는 일이 많으므로, "compare"에 익숙해질 때까지는 위에서 설명한 PR 과정을 사용할 것을 권장합니다.
 

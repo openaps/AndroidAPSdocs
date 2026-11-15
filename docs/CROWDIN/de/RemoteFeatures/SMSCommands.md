@@ -55,14 +55,14 @@ Diese Authenticator-Apps erzeugen einen zeitlich begrenzten, 6-stelligen Code al
 
 Gehe auf Deinem Smartphone zu **Apps > AAPS > Berechtigungen**. Stelle sicher, dass **SMS** und **Telefon** zugelassen sind.
 
-![grafik](../images/remote-control-08.png)
+![grafik](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android kann die **SMS**-Berechtigung für Apps blockieren, die nicht aus einem App Store installiert wurden, wie **AAPS**. Siehst Du diese Meldung, wenn Du die **SMS**-Berechtigung erteilst, öffne auf dem Smartphone **Einstellungen > Apps > AAPS**, tippe auf das Menü **⋮** (oben rechts) und wähle **Eingeschränkte Einstellungen zulassen**. Erteile dann erneut die **SMS**-Berechtigung.
 ```
 
-![App was denied access to SMS](../images/sms_permission_restricted.png)
+![App was denied access to SMS](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### Datum und Uhrzeit synchronisieren
 
@@ -82,7 +82,7 @@ Nachdem die Smartphone-Einstellungen geprüft sind, gehe in der **AAPS**-App sel
 
 Aktiviere **Erlaube Remote-Steuerung per SMS**. Die Optionen **Zusätzliche obligatorische PIN am Token-Ende** und **Konfiguration der Authenticator App** erscheinen erst, wenn das aktiviert ist:
 
-![SMS Communicator settings](../images/sms_communicator_settings.png)
+![SMS Communicator settings](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Erlaubte Telefonnummern
@@ -97,7 +97,7 @@ Bitte beachte, dass je nach Deinem Standort ein vorangestelltes "+" erforderlich
 
 Möchtest Du mehr als eine Rufnummer hinterlegen, müssen diese durch ein Semikolon und **OHNE Leerzeichen** (das ist wichtig!) getrennt werden. Wähle **OK**:
 
-![Erlaubte Telefonnummern](../images/sms_allowed_numbers.png)
+![Erlaubte Telefonnummern](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### Minimaler Abstand Remote-Bolus
 
@@ -115,7 +115,7 @@ Anforderungen an die PIN sind:
 
 Für eine sicherere PIN verwende nicht viele gleiche Ziffern (_z. B._ 111111) oder eine Zahlenfolge (_z. B._ 123456).
 
-![Zusätzliche obligatorische PIN am Token-Ende](../images/sms_pin.png)
+![Zusätzliche obligatorische PIN am Token-Ende](../images/remote_control_and_following/sms_pin.png)
 
 #### Konfiguration der Authenticator App
 
@@ -123,7 +123,7 @@ Für eine sicherere PIN verwende nicht viele gleiche Ziffern (_z. B._ 111111) od
 * Öffne die auf dem _Eltern-/Betreuenden-Smartphone_ installierte Authenticator-App und füge ein neues Konto bzw. eine neue Verbindung hinzu und
 * Scanne mit dem Smartphone der betreuenden Person den QR-Code unter **2. Scanne den Code zum Einrichten von AndroidAPS OTP-Codes**.
 
-![Authenticator setup with QR code](../images/sms_authenticator_setup.png)
+![Authenticator setup with QR code](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * Gib unter **3. Teste das Einmal-Passwort** bei **Zu prüfender Code** den Einmal-Code aus der Authenticator-App auf dem Smartphone der betreuenden Person ein, gefolgt von Deiner PIN:
 
@@ -134,7 +134,7 @@ Beispiel:
 
 Wenn der Eingabe richtig ist, ändert sich der rote Text „FALSCHE PIN“ automatisch in ein grünes „OK“. **Es gibt kein Bestätigungsfeld, auf das Du tippen kannstt!** Der Prozess ist nun abgeschlossen, es gibt keine "OK"-Taste, die Du nach Eingabe des Codes drücken musst:
 
-![Test One-Time-Password and Reset Authenticators](../images/sms_authenticator_test.png)
+![Test One-Time-Password and Reset Authenticators](../images/remote_control_and_following/sms_authenticator_test.png)
 
 Es ist nun alles für die Nutzung der SMS-Befehle eingerichtet.
 
@@ -146,7 +146,7 @@ Mit der Schaltfläche **Authentifikatoren zurücksetzen** unten auf dem Bildschi
 
 1) Um zu überprüfen, ob alles richtig eingerichtet ist, teste die Verbindung, indem Du „bg“ als SMS-Nachricht vom Eltern-Smartphone an das **AAPS**-Smartphone schickst. Die Rückmeldung sollte in etwa so aussehen:
 
-![grafik](../images/remote-control-06.png)
+![grafik](../images/remote_control_and_following/remote-control-06.png)
 
 Wenn Du keine Rückmeldung bekommst, schaue im Abschnitt [Problembehebung](#SMSCommands-troubleshooting) nach.
 
@@ -154,7 +154,7 @@ Wenn Du keine Rückmeldung bekommst, schaue im Abschnitt [Problembehebung](#SMSC
 
 Wenn Du das allererste Mal einen SMS-Befehl schicken möchtest, schaue, dass das **AAPS**-Smartphone neben Dir liegt, sodass Du auf beiden Geräten nachverfolgen kannst was passiert:
 
-![grafik](../images/remote-control-16.png)
+![grafik](../images/remote_control_and_following/remote-control-16.png)
 
 Das Eltern-/Betreuenden-Smartphone wird eine SMS von **AAPS** erhalten, die bestätigt, dass der SMS-Befehl erfolgreich remote ausgeführt wurde.
 
@@ -182,7 +182,7 @@ Um Hypos zu vermeiden, solltest Du zu Beginn **weniger Insulin** bolen, als es D
 
 Kommandos müssen in Englisch gesendet werden, die Antwort erhältst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits [übersetzt ist](#translations-translate-strings-for-AAPS-app). In den Befehlen ist die Groß- oder Kleinschreibung nicht relevant.
 
-![Beispiele für SMS-Kommandos](../images/SMSCommands.png)
+![Beispiele für SMS-Kommandos](../images/remote_control_and_following/SMSCommands.png)
 
 Die **Tabellen der SMS-Befehle** unten zeigen alle verfügbaren SMS-Befehle. Um die Nutzung noch verständlicher zu machen, sind auch _Beispiele_ enthalten. Die Gültigkeitsbereiche der Befehle (Zielwerte, Prozentsätze der Profile etc.) sind mit denen der **AAPS**-App identisch.
 
@@ -191,11 +191,11 @@ Die **Tabellen der SMS-Befehle** unten zeigen alle verfügbaren SMS-Befehle. Um 
 
 Einige SMS-Befehle führen zu einer sofortigen Reaktion, und einige SMS-Befehle erfordern eine starke **-Authentifizierung** über die Authenticator-App. Eine einfache Abfrage wie „**BG**“, die den aktuellen Glukosewert (engl. Bloodglucose) abfragt, ist schnell eingetippt und braucht nicht authentifiziert zu werden. Sie gibt die unten gezeigte **AAPS**-Statusinformation zurück:
 
-![grafik](../images/remote-control-06.png)
+![grafik](../images/remote_control_and_following/remote-control-06.png)
 
 Befehle, die kritischer sind und daher zusätzlich abgesichert werden, benötigen einen weiteren einzugebenden Code, wie zum Beispiel:
 
-![SMS authenticated](../images/remote-control-07.png)
+![SMS authenticated](../images/remote_control_and_following/remote-control-07.png)
 
 Die Spalte *Auth* in den folgenden Tabellen zeigt, ob eine solch starke Authentifizierung für den jeweiligen Befehl erforderlich ist.
 
@@ -311,12 +311,12 @@ Es könnte aus einem dieser Gründe sein:
 ### Keinerlei Reaktion auf SMS-Befehle
 
 Versuche auf dem Eltern-/Betreuenden-Smartphone und/oder dem **AAPS**-Smartphone die folgenden Optionen deaktivieren:
-* **Als Chat-Nachricht senden** ![SMS als Chatnachricht deaktivieren](../images/SMSdisableChat.png)
+* **Als Chat-Nachricht senden** ![SMS als Chatnachricht deaktivieren](../images/remote_control_and_following/SMSdisableChat.png)
 * Wenn Du die Android Messages-App oder die Google Messages-App nutzt, deaktiviere RCS-Nachrichten:
   - Öffne den entsprechenden SMS-Nachrichtenverlauf
   - Klicke auf die drei Punkte in der oberen rechten Ecke
   - Wähle DETAILS aus
-  - Aktiviere „Nur SMS und MMS senden“ ![Disable RCS as chat message](../images/SMSdisableRCS.png)
+  - Aktiviere „Nur SMS und MMS senden“ ![Disable RCS as chat message](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### Fehler beim Ausführen der Befehle
 
@@ -331,7 +331,7 @@ Es gibt verschiedene Gründe, warum der Befehl möglicherweise nicht erfolgreich
 
 Die folgenden Beispiele zeigen häufige Fehler:
 
-![grafik](../images/remote-control-17.png)
+![grafik](../images/remote_control_and_following/remote-control-17.png)
 
 ### Wie kann ich einen Befehl stoppen, nachdem er bereits authentifiziert wurde?
 

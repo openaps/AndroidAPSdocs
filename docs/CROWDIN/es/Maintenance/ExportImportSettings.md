@@ -97,6 +97,8 @@ Se recomienda exportar los ajustes con regularidad, sobre todo antes y después 
 
 **Nota**: _Los ajustes exportados se cifran con tu contraseña maestra de AAPS: sin la contraseña maestra usada para exportar no podrás importar el archivo de ajustes._
 
+If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+
 ### Exportar o importar ajustes
 Para exportar o importar ajustes, abre el **menú** (☰) y elige **Mantenimiento**. En **Gestión de archivos**, los chips **Local** y **Nube** junto a **Exportar ajustes** e **Importar ajustes** eligen dónde se guarda o desde dónde se lee el archivo de ajustes: **Local** es el directorio de AAPS en tu teléfono; **Nube** está disponible cuando hay un [Directorio en la nube](#preferences-maintenance-cloud) configurado. Al tocar un chip, se activa o se desactiva; al menos uno queda siempre elegido, y las dos filas usan la misma elección. Después toca **Exportar ajustes** o **Importar ajustes** para empezar.
 

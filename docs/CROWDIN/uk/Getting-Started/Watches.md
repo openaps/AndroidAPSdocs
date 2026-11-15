@@ -59,7 +59,7 @@ For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwat
 
 Інші труднощі: важко отримати достатній час роботи від батареї, а годинники з достатньою батареєю часто великі й товсті. Користувачі повідомляють про боротьбу з налаштуваннями ОС та енергозбереження, труднощі із запуском сенсорів на годиннику, малий радіус дії Bluetooth (для підтримки з'єднання і з сенсором, і з помпою) та сумнівну водостійкість. Приклади показано на фото нижче.
 
-![зображення](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![зображення](../images/watch_standalone_aaps_and_xdrip.png)
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
@@ -88,7 +88,7 @@ If you are interested in setting up a standalone watch, read the posts and comme
 
 Після [встановлення **AAPS** на годинник](../WearOS/WearOsSmartwatch.md) ви відразу зможете вибрати бажаний циферблат з цих циферблатів **AAPS**. На більшості годинників достатньо довго натиснути на головний екран, доки він не зменшиться, і провести вправо, щоб вибрати інший екран:
 
-![зображення](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![зображення](../images/watchfaces_aaps_selection.png)
 
 Це базові екрани, вбудовані в **AAPS**. Є [інші циферблати](#WearOS_changing-to-AAPS-watchface), а також можна використовувати [віджети](#Watchfaces-complications).
 
@@ -155,7 +155,7 @@ Google переносить Fitbit у Google Health і видаляє сторо
 
 **WatchDrip+** – супутній застосунок, створений спільнотою. Він показує дані глюкози та петлі на різних моделях розумних годинників, переважно марок Xiaomi (_наприклад_, Mi Band) та Amazfit:
 
-![зображення](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![зображення](../images/watch_watchdrip_plus.png)
 
 Починаючи з версії 0.5, **WatchDrip+** отримує дані безпосередньо з **AAPS**, без xDrip+ як посередника. На телефоні з **AAPS**:
 
@@ -170,9 +170,9 @@ Google переносить Fitbit у Google Health і видаляє сторо
 
 ### Годинник Pebble
 
-![зображення](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![зображення](../images/watch_pebble.png)
 
-![зображення](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![зображення](../images/watch_pebble_watchface.png)
 
 
 Годинники Pebble ([зараз знято з виробництва](https://en.wikipedia.org/wiki/Pebble_(watch))) продавали з 2013 до 2016 року, їх ще можна знайти вживаними. Активи Pebble перейшли до Fitbit. Користувачі Pebble можуть переглядати дані Nightscout за допомогою циферблата Urchin. Серед даних, які можна показати: IOB, поточна швидкість тимчасового базалу та прогнози. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.

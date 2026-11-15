@@ -97,6 +97,8 @@ You can also change the **AAPS directory** on the **Maintenance** screen (**menu
 
 **注意**：_导出的设置将使用您的AAPS主密码进行加密：如果没有用于导出的主密码，您将无法导入设置文件！_
 
+If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+
 ### 导入导出设置
 To export or import settings, open the **menu** (☰) and select **Maintenance**. Under **File management**, the **Local** and **Cloud** chips next to **Export settings** and **Import settings** choose where the settings file is saved to or read from: **Local** is the AAPS directory on your phone, **Cloud** is available once a [Cloud Directory](#preferences-maintenance-cloud) is set up. Tapping a chip turns it on or off; at least one always stays selected, and both rows share the same choice. Then tap **Export settings** or **Import settings** itself to start.
 

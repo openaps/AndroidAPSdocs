@@ -535,7 +535,7 @@ Zvoľte, či má **AAPS** pri svojich notifikáciách prehrať zvuk, keď si nie
 
 Vek **Batéria pumpy** sa nezobrazuje: batéria aj zásobník inzulínu sú zabudované v každom Pode a batéria vždy vydrží dlhšie ako samotný Pod (maximálne 80 hodín).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

@@ -29,7 +29,7 @@
 - **將<u>關閉</u>所有[自動化](../DailyLifeWithAaps/Automations.md)功能**
 - **關閉<u></u> [DynISF](#Open-APS-features-DynamicISF)、[AutoISF](#Open-APS-features-auto-isf)、[AutoSens](#Open-APS-features-autosens)**，以避免它們嘗試調整你的設定檔。
 - 測試期間請勿進行手動操作（手動注射、臨時目標等…）：讓系統僅使用**設定檔**中的設定。
-- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. 需要尋求建議時，截圖請一併包含上述圖表。
+- 對於[其他圖表](#AapsScreens-section-g-additional-graphs)：圖表 1 使用活性胰島素和基礎率。圖表 2 使用活性碳水化合物（以及敏感度變化）。圖表 3 使用偏差和血糖影響。需要尋求建議時，截圖請一併包含上述圖表。
 - COB=0[*](#profiletuning-cob-zero)
 
 理想情況下，也應避免以下其他可能影響資料、導致結論不準確的因素：

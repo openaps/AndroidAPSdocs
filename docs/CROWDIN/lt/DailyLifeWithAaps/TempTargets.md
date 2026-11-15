@@ -23,7 +23,7 @@ Toliau trumpai aprašomos **laikino tikslo „Sportas“**, **laikino tikslo „
 
 ### LT – Sportas
 
-![LT sportas](../images/TempTarget2.png)
+![LT sportas](../images/v4/TempTarget/TempTarget2.png)
 
 **KG tikslas (numatytasis ruošinys, keičiamas)**
 
@@ -46,7 +46,7 @@ Naudotojai taip pat gali apsvarstyti:
 
 ### LT – Netrukus valgysiu
 
-![LT Netrukus valgysiu](../images/TempTarget1.png)
+![LT Netrukus valgysiu](../images/v4/TempTarget/TempTarget1.png)
 
 **KG tikslas (numatytasis ruošinys, keičiamas)**
 
@@ -63,7 +63,7 @@ Priklausomai nuo **KG** lygio, **AAPS** „padidins“ insulino tiekimą nevirš
 
 ### LT – Hipo
 
-![LT Hipo](../images/TempTarget3.png)
+![LT Hipo](../images/v4/TempTarget/TempTarget3.png)
 
 **KG tikslas (numatytasis ruošinys, keičiamas)**
 
@@ -98,7 +98,7 @@ Selecting a preset card loads its **target** and **duration** into the editor.
     
     Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. A confirmation shows the exact target, duration and reason before anything starts:
     
-    ![Activation confirmation](../images/TempTarget8.png)
+    ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
     After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
@@ -148,13 +148,13 @@ A temporary target can also be set without opening this screen:
 
 Greičiausias būdas – bakstelėti **tikslo ženklelį** pagrindiniame ekrane (jame rodomas dabartinis tikslo intervalas):
 
-![Tikslo ženklelis pagrindiniame ekrane](../images/TempTarget6.png)
+![Tikslo ženklelis pagrindiniame ekrane](../images/v4/TempTarget/TempTarget6.png)
 
 This opens the **Temp Target** screen described above — swipe to a preset and tap **▶ Activate**. The same screen is also reachable via **Manage** → **Temp Target**.
 
 (TempTargets-carbs-dialog)= Įvesdami angliavandenius, ekrano **Laikinas tikslas** galite visai neatidaryti: lango **Angliavandeniai** (**Terapija** → **Angliavandeniai**) viršuje yra jungikliai **Pradėti Hipo LT**, **Pradėti Netrukus valgysiu LT** ir **Pradėti Sporto LT**. Switch one on and the corresponding preset is activated together with the carb entry:
 
-![LT jungikliai lange Angliavandeniai](../images/TempTarget5.png)
+![LT jungikliai lange Angliavandeniai](../images/v4/TempTarget/TempTarget5.png)
 
     {admonition} Automatinis Hipo LT
     :class: note
@@ -171,7 +171,7 @@ Each preset's **target** and **duration** are edited directly on the **Temp Targ
 3. Adjust **Temporary target** and/or **Duration** in the editor.
 4. Tap the **Save** icon that appears in the top toolbar.
 
-![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/TempTarget7.png)
+![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/v4/TempTarget/TempTarget7.png)
 
 While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
 
@@ -179,7 +179,7 @@ While the editor differs from a built-in preset's factory values, a **↺ Revert
 
 Kol laikinas tikslas aktyvus, pagrindinio ekrano tikslo ženklelyje rodomas tikslas ir likęs laikas. Bakstelėkite jį – ekrane **Laikinas tikslas** aktyvus ruošinys pažymėtas **AKTYVUS**, o apačioje esančios įrankių juostos gale, iškart į kairę nuo mygtuko **▶ Aktyvuoti**, rodomas raudonas mygtukas **✗ Atšaukti**. Tap it and confirm:
 
-![Cancelling a running temp target](../images/TempTarget9.png)
+![Cancelling a running temp target](../images/v4/TempTarget/TempTarget9.png)
 
 A running temporary target can also be stopped from a **Wear OS watch**, from a paired **client**, or by an **Automation** rule (*Stop temp target*).
 
@@ -231,6 +231,6 @@ Pažengusiems, [9 mokymo etapas](#objectives-objective9): jei naudojate OpenAPS 
 
 Norėdami tai padaryti, atidarykite **Nustatymai** → **OpenAPS SMB** ir išjunkite *„Naudoti SMB esant aukštesniam laikinam gliukozės tikslui“*.
 
-![Nustatymas „Naudoti SMB esant aukštesniam laikinam gliukozės tikslui“](../images/TempTargetSMB.png)
+![Nustatymas „Naudoti SMB esant aukštesniam laikinam gliukozės tikslui“](../images/v4/TempTarget/TempTargetSMB.png)
 
 Taip **AAPS** neskirs **SMB**, net jei AAO > 0, įjungta *„Naudoti SMB esant žemesniam laikinam gliukozės tikslui“* arba *„Naudoti SMB visada“* ir aktyvus OpenAPS SMB.

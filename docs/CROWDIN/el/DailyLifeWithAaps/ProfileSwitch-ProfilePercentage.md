@@ -22,7 +22,7 @@ Why use a **Profile Percentage** rather than a temporary basal adjustment? To be
 
     <br />1. Στην κύρια οθόνη, **πατήστε το όνομα του προφίλ** (δίπλα στο εικονίδιο με το αστέρι). Η [οθόνη Προφίλ](#ProfileSwitch-manage-v4) ανοίγει στην κάρτα του **Προφίλ** που τρέχει, με την ένδειξη **ΕΝΕΡΓΟ**.
     
-       ![Πατήστε το όνομα του προφίλ στην κύρια οθόνη για να ανοίξει η οθόνη Προφίλ](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Για να κρατήσετε το ίδιο **Προφίλ**, αφήστε επιλεγμένη την κάρτα **ΕΝΕΡΓΟ**. Για να αλλάξετε και **Προφίλ** ταυτόχρονα, σύρετε σε άλλη κάρτα.
     3. Πατήστε το στρογγυλό κουμπί **▶** (**Ενεργοποίηση**) κάτω δεξιά. Ανοίγει η οθόνη **Ενεργοποίηση**.
@@ -169,7 +169,7 @@ mg/dl/U          | U για μείωση
     - 22:00 **-10 h** -> 12:00
     - Θα χρησιμοποιηθούν οι ρυθμίσεις από τις 22:00 (10 μ.μ.) αντί των ρυθμίσεων που χρησιμοποιούνται κανονικά στις 12:00 λόγω της αρνητικής χρονικής μετατόπισης.
 
-![Κατεύθυνση της χρονικής μετατόπισης στην αλλαγή προφίλ](../images/ProfileSwitch_PlusMinus2.png)
+![Κατεύθυνση της χρονικής μετατόπισης στην αλλαγή προφίλ](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 

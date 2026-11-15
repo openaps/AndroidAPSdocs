@@ -22,37 +22,37 @@ Para nuestro ejemplo, vamos a hacer un cambio en AndroidAPSdocs. Esto se puede h
 
 1. Ve a <https://github.com/openaps/AndroidAPSdocs> y pulsa Fork arriba a la derecha para hacer tu propia copia del repositorio.
 
-![Hacer fork del repositorio](../images/PR0.png)
+![Hacer fork del repositorio](../images/docs_pr_fork_repository.png)
 
 2. Ve a cualquier página y navega hasta la página que quieres editar. Puedes hacer clic en el enlace «Edit in GitHub» en la esquina superior derecha. Esto solo es posible en las páginas en inglés. 
 
-![editar doc](../images/PR1.png)
+![editar doc](../images/docs_pr_edit_on_github.png)
 
 O haz clic en el icono del lápiz que aparece en la barra superior del contenido de la página que quieres editar. Para hacer esto, debes haber iniciado sesión en tu cuenta de GitHub (si no tienes una, es fácil crearla).
 
-![RTD io](../images/PR2.png)
+![RTD io](../images/docs_pr_pencil_icon.png)
 
 3. Cualquiera de las dos opciones del paso 2 creará una rama nueva en TU repositorio, donde se guardarán tus cambios. Haz tus cambios en el archivo.
 
 Usamos markdown para las páginas de la documentación. Los archivos tienen la extensión «.md». La especificación de Markdown no es fija y por ahora usamos myst_parser para nuestros archivos markdown. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
-![Editar rama](../images/PR3.png)
+![Editar rama](../images/docs_pr_edit_file.png)
 
 4. Has estado trabajando en la pestaña «<>Edit file». Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Si ves que hace falta una mejora, vuelve a la pestaña de edición para hacer más mejoras. 
 
-![modo vista previa](../images/PR5.png)
+![modo vista previa](../images/docs_pr_preview_changes.png)
 
 5. Cuando hayas terminado tus cambios, desplázate hasta el final de la página. En el recuadro de abajo, escribe tus comentarios en el campo de texto que dice «Add an optional extended description...». El título predeterminado tiene el nombre de archivo. Intenta incluir una frase que explique el **motivo** del cambio. Describir la razón ayuda a los revisores a entender lo que estás intentando hacer con la PR.
 
-![comentarios del commit](../images/PR4.png)
+![comentarios del commit](../images/docs_pr_commit_description.png)
 
 6. Haz clic en el botón verde «Propose file changes» o «Commit changes». En la página que aparece, haz clic en «Create Pull Request» y otra vez en la página siguiente haz clic en «Create Pull Request».
 
-![crear pull request](../images/PR6.png)
+![crear pull request](../images/docs_pr_create_pull_request.png)
 
 7. Eso completa la apertura de una solicitud de PR. GitHub asigna al PR un número, ubicado después del título y una marca de hash. Vuelve a esta página para ver si hay comentarios (o, si recibes las notificaciones de GitHub por correo electrónico, recibirás correos sobre cualquier actividad en el PR). ¡Ahora tu cambio estará en una lista de PR que el equipo revisará y quizá comentará antes de añadirlo a la documentación principal de AAPS! Si quieres ver el progreso de la PR, puedes hacer clic en el logo de la campana en la esquina superior derecha de tu cuenta de GitHub y ver todos tus PRs.
 
-![Seguimiento de PR](../images/PR7.png)
+![Seguimiento de PR](../images/docs_pr_tracking.png)
 
 PD: Tu fork y tu rama seguirán en tu propia cuenta personal de GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Para cambios futuros, si sigues este procedimiento, tus cambios siempre empezarán con una versión actualizada de los repositorios de AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Como la gente suele olvidar actualizar sus repositorios, te recomendamos usar el proceso de PR descrito arriba hasta que sepas hacer bien los «compares».
 

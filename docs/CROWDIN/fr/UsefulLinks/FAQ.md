@@ -74,7 +74,7 @@ Vous devez avoir avec vous le même équipement d'urgence que toute autre person
   * l'[apk](../SettingUpAaps/BuildingAaps.md) actuel d'AAPS et des autres applications que vous utilisez (par ex. xDrip, Juggluco, BYODA).
   * votre fichier keystore (créé lors de la compilation de l'apk) et son mot de passe,
   * vos derniers fichiers d'export des paramètres d'AAPS et de vos autres applications,
-  * votre mot de passe principal **AAPS** : sans lui, vous ne pouvez pas importer le fichier de paramètres.
+  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -293,7 +293,11 @@ Si vous avez oublié votre mot de passe principal, vous pouvez le réinitialiser
 
 1. Créez un fichier vide nommé `PasswordReset` (sans extension de fichier) dans le sous-dossier `extra` de votre répertoire AAPS (en général `AAPS/extra`).
 2. Redémarrez **AAPS**. Votre pompe doit être connectée : **AAPS** affiche « En attente de la pompe… » et doit lire le numéro de série de la pompe dans les 30 secondes.
+  
+  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+
 3. **AAPS** affiche « Mot de passe défini ! » : votre mot de passe principal est maintenant le **numéro de série de la pompe**. Le fichier `PasswordReset` est supprimé automatiquement.
+
 4. Ouvrez **Paramètres** > **Protection** > **Mot de passe principal** et définissez un nouveau mot de passe.
 
 Si la pompe n'est pas jointe à temps, rien ne change : vérifiez la connexion de la pompe et réessayez.

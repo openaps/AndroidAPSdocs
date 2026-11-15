@@ -53,7 +53,7 @@ In der **COB**-Kurve wird ein orangener Punkt angezeigt, wenn die minimale Kohle
 
 Normalerweise erkennt __AAPS__ eine Kohlenhydrat-Aufnahme anhand von **Glukosewert**-Veränderungen. Für den Fall, dass Du Kohlenhydrate eingegeben hast, aber **AAPS** die erwartete Absorption nicht durch **Glukosewert**-Veränderungen erkennen kann, wird als sog. Fallback zur Berechnung der Absorption die [min_5m_carbimpact](#Preferences-min_5m_carbimpact)-Methode verwendet. Da dieses Verfahren nur die minimale Kohlenhydrat-Aufnahme ohne Berücksichtigung von Glukosewert-Änderungen berechnet, kann dies zu falschen COB-Werten führen.
 
-![Hinweis fehlerhafte COB Werte](../images/Calculator_SlowCarbAbsorption.png)
+![Hinweis fehlerhafte COB Werte](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 In der Abbildung oben wurde 66% der Kohlenhydrat-Resorption durch min_5m_carbimpact statt des Wertes, der bei Abweichungen festgestellt wurde, mathematisch berechnet. Das deutet darauf hin, dass weniger Kohlenhydrate aktiv sind (**COB**), als es vom Algorithmus berechnet wurde.
 
@@ -84,7 +84,7 @@ Wurden Kohlenhydrate über- oder unterschätzt, kannst Du das wie [hier](#screen
 
 Im Bildschirm **Behandlungsverlauf** kannst Du einen falschen Kohlenhydrat-Eintrag korrigieren, indem Du ihn löschst. Dies kann dann notwendig sein, wenn die Kohlenhydratmenge über- oder unterschätzt wurde:
 
-![Deleting a carb entry from Treatments history](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Deleting a carb entry from Treatments history](../images/treatments_history_delete_carbs.png)
 
 1. Prüfe und merke Dir die aktuellen Werte für **COB** und **IOB** auf dem **AAPS**-Startbildschirm.
 2. Öffne den **Behandlungsverlauf** (Menü → *Behandlungsverlauf*), Reiter **Kohlenhydrate & Bolus**. Je nach Pumpe werden die Kohlenhydrate zusammen mit dem Insulin in einer Zeile oder als eigener Eintrag angezeigt (z. B. bei der Dana RS).

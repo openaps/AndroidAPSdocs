@@ -291,13 +291,13 @@ Oprogramowanie na zegarek, **AAPSClient** Wear apk, możesz pobrać bezpośredni
 
 Aby pobrać oprogramowanie, kliknij aplikację na zegarek, która pasuje do aplikacji opiekuna na telefonie: **wear-aapsclient-release_**_wersja_ pasuje do **AAPSClient**, **wear-aapsclient2-release_**_wersja_ pasuje do **AAPSClient2** (zobacz [O AAPSClient, AAPSClient2 i AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![image](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+![image](../images/github_release_wear_aapsclient_apk.png)
 
 
 Następnie wybierz „save as” (zapisz jako) i zapisz plik w wygodnym miejscu na komputerze:
 
 
-![image](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+![image](../images/save_as_wear_aapsclient_apk.png)
 
 
 

@@ -9,7 +9,7 @@
 
 ## 메인 화면
 
-![메인 화면](../images/Home_Homescreen.png)
+![메인 화면](../images/main/Home_Homescreen.png)
 
 **AAPS**를 열면 처음 보게 되는 화면이며, 매일 필요한 정보 대부분이 들어 있습니다.
 
@@ -33,13 +33,13 @@ CGM의 최신 혈당 측정값은 왼쪽의 큰 원 안에 표시되며, 이전 
 * 빨간색 = 범위 아래
 * 노란색 = 범위 위
 
-![범위 안의 혈당 원, 녹색](../images/Home_Delta.png) ![범위 위의 혈당 원, 노란색](../images/Home_Delta_high.png) ![범위 아래의 혈당 원, 빨간색](../images/Home_Delta_low.png)
+![범위 안의 혈당 원, 녹색](../images/main/Home_Delta.png) ![범위 위의 혈당 원, 노란색](../images/main/Home_Delta_high.png) ![범위 아래의 혈당 원, 빨간색](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
 #### 루프 상태
 
-![루프 상태](../images/Home2020_LoopStatus.png)
+![루프 상태](../images/main/main_loop_status.png)
 
 혈당 원 옆의 아이콘은 루프의 실행 모드를 보여 줍니다(그림에서 위에서 아래 순서).
 
@@ -166,7 +166,7 @@ CGM의 최신 혈당 측정값은 왼쪽의 큰 원 안에 표시되며, 이전 
 
 **프로파일 퍼센트를 변경**하려면(기간 포함) 프로파일 이름을 누른 다음, 프로파일 화면 오른쪽 아래의 둥근 **▶**(활성화) 버튼을 누르십시오. **AAPS** 3.x에서는 프로파일 이름을 길게 눌러 이 화면을 열었습니다. **AAPS** 4에서는 길게 눌러도 아무 일도 일어나지 않습니다. 단계별 안내: [프로파일 퍼센트 변경](#ProfileSwitch-change-percentage).
 
-![활성 프로파일 전환이 있는 프로파일](../images/Home2020_ProfileSwitch.png)
+![활성 프로파일 전환이 있는 프로파일](../images/main/main_profile_switch.png)
 
 1. 일반 표시: 표준 프로파일이 활성화된 상태입니다.
 2. 특정 퍼센트 90%와 남은 시간 9분인 프로파일 전환 — 임시 프로파일 전환이 실행되는 동안 프로파일 이름은 노란색으로 바뀝니다.
@@ -174,7 +174,7 @@ CGM의 최신 혈당 측정값은 왼쪽의 큰 원 안에 표시되며, 이전 
 
 #### 목표
 
-![임시 목표 남은 시간](../images/Home2020_TT.png)
+![임시 목표 남은 시간](../images/main/main_temp_target.png)
 
 현재 목표 혈당은 프로파일 이름 아래에 표시됩니다.
 
@@ -200,7 +200,7 @@ CGM의 최신 혈당 측정값은 왼쪽의 큰 원 안에 표시되며, 이전 
 
 #### IOB, COB, 기저 및 민감도
 
-![IOB, COB, 기저 및 민감도](../images/Home2020_TBR.png)
+![IOB, COB, 기저 및 민감도](../images/main/main_iob_cob_basal_sensitivity.png)
 
 1. **주사기**: 활성 인슐린(IOB) - 몸 안의 활성 인슐린 양  
     표준 기저만 실행 중이고 이전 볼러스에서 남은 인슐린이 없다면 활성 인슐린 값은 0입니다. 
@@ -234,7 +234,7 @@ oref 알고리즘이 0 임시 기저만으로는 저혈당을 막을 수 없어�
 
 ### 섹션 C - 상태 표시줄
 
-![상태 표시줄](../images/Home2020_StatusLights.png)
+![상태 표시줄](../images/main/main_status_row.png)
 
 상태 표시줄은 다음 항목에 대해 시각적인 경고를 표시합니다.
 
@@ -320,7 +320,7 @@ MiaoMiao 2와 같은 추가 트랜스미터가 있는 CGM에서 작동합니다.
 
 그래프 오른쪽 위의 **연필** 아이콘을 누르면 그래프 설정이 열립니다:
 
-![메인 그래프 설정](../images/Home2020_MainGraphSetting.png)
+![메인 그래프 설정](../images/main/main_graph_settings.png)
 
 * **그래프 높이**는 그래프를 그리는 높이를 조정합니다.
 * **ACT**는 인슐린 활동 곡선을 겹쳐 표시합니다: 노란 연두색 실선 <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span>(노란색 점선인 UAM 예측과 혼동하지 마십시오)
@@ -408,7 +408,7 @@ AAPS는 현재 혈당만 보고 인슐린을 주입하지 않습니다. 루프 �
 
 추가 그래프를 구성하려면 그래프 오른쪽 위의 **연필** 아이콘을 누르십시오:
 
-![추가 그래프 설정](../images/Home2020_AdditionalGraphSetting.png)
+![추가 그래프 설정](../images/main/main_additional_graph_settings.png)
 
 이 그래프에서 보고 싶은 데이터에 해당하는 칩을 선택하십시오. **삭제** 버튼은 그래프를 삭제합니다.
 
@@ -490,7 +490,7 @@ SMB는 이 그래프에 파란색 삼각형으로 표시되며, 그날의 가장
 
 ### 섹션 F - QuickLaunch 툴바
 
-![QuickLaunch 툴바](../images/Home2020_Buttons.png)
+![QuickLaunch 툴바](../images/main/main_quicklaunch_toolbar.png)
 
 화면 아래쪽에 떠 있는 툴바에는 **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)** 동작이 들어 있습니다. 작은 **톱니바퀴**를 누르면 QuickLaunch 구성이 열리며, 여기서 표시할 버튼을 고릅니다(처치, 케어포털 항목, CGM 동작, **관리** 시트의 화면, [빠른 마법사](../DailyLifeWithAaps/QuickWizards.md) 버튼, [장면](../DailyLifeWithAaps/Scenes.md) 등).
 
@@ -502,7 +502,7 @@ SMB는 이 그래프에 파란색 삼각형으로 표시되며, 그날의 가장
 
 #### 인슐린
 
-![인슐린 대화 상자](../images/Home2020_ButtonInsulin.png)
+![인슐린 대화 상자](../images/v4/Screens/insulin_dialog.png)
 
 [볼러스 계산기](#aaps-screens-bolus-wizard)를 사용하지 않고 일정한 양의 인슐린을 주입할 때 사용합니다.
 
@@ -520,7 +520,7 @@ SMB는 이 그래프에 파란색 삼각형으로 표시되며, 그날의 가장
 
 #### Carbs
 
-![탄수화물 대화 상자](../images/Home2020_ButtonCarbs.png)
+![탄수화물 대화 상자](../images/v4/Screens/carbs_dialog.png)
 
 볼러스 없이 탄수화물을 기록할 때 사용합니다.
 
@@ -574,7 +574,7 @@ SMB는 이 그래프에 파란색 삼각형으로 표시되며, 그날의 가장
 
 ## 볼러스 마법사
 
-![볼러스 마법사](../images/Home2020_BolusWizard_v2.png)
+![볼러스 마법사](../images/v4/Screens/bolus_wizard.png)
 
 식사 볼러스를 주입할 때 보통 여기에서 합니다.
 
@@ -618,7 +618,7 @@ SMB는 이 그래프에 파란색 삼각형으로 표시되며, 그날의 가장
 
 **알람 설정**(식사 알림): 미래의 탄수화물 시간을 입력하면 "**알람 설정**" 스위치가 나타납니다. 이 스위치를 켜면 정한 시각에 **AAPS**에 입력한 탄수화물을 먹으라고 알려 줍니다:
 
-![미래 탄수화물에 대한 알람 설정](../images/Home2021_BolusWizard_EatingReminder.png)
+![미래 탄수화물에 대한 알람 설정](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
 알림은 볼러스 주입이 끝났을 때 시작합니다. 알림이 진행되는 동안 메인 화면의 **식사할 시간** 바가 남은 시간을 세며, **정지**와 **+5분**이 함께 표시됩니다. **+5분**은 대기 종료 시간을 5분 뒤로 미루며, 바에는 전체 대기 시간이 표시됩니다. 시간이 되면 알림이 부드러운 주방 타이머 같은 전용 소리로 울립니다. 알람 화면에는 **알람 음소거**(화면은 열린 채로 있음)와 **음소거 후 닫기** 외에 **+5분**도 있으며, 이것은 새로 5분 대기를 시작합니다. 알림이 울린 후 바에는 *시간이 되었습니다*와 함께 **+5분**과 **닫기**가 표시됩니다. **음소거 후 닫기**를 누르면 바도 사라집니다. 바와 알람은 **AAPSClient**와 [시계](#WearOsSmartwatch-wizard-carb-time)에도 표시됩니다. 알림은 휴대폰 시계 앱에 타이머를 만들지 않습니다. Android가 **AAPS**의 알람 설정을 허용하지 않으면, 마법사가 Android 설정에서 **AAPS**에 대해 *알람 및 리마인더*를 허용하도록 요청합니다. 과거의 탄수화물 시간에는 종 아이콘이 제공되지 않습니다.
 
@@ -640,7 +640,7 @@ SMB는 이 그래프에 파란색 삼각형으로 표시되며, 그날의 가장
 
 #### Wrong COB detection
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+![Slow carb absorption](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 볼러스 마법사를 사용한 후 위의 경고가 보이면, **AAPS**가 계산된 COB 값이 틀릴 수 있다고 감지한 것입니다. 따라서 COB가 남아 있는 이전 식사 후에 다시 볼러스를 주입하려면 과다 주입에 주의해야 합니다!
 
@@ -719,7 +719,7 @@ SMB는 이 그래프에 파란색 삼각형으로 표시되며, 그날의 가장
 
 ## Profile
 
-![Profile](../images/Screenshots_Profile.png)
+![Profile](../images/screens/Screenshots_Profile.png)
 
 **관리 → 프로파일**(또는 메인 화면에서 프로파일 이름 누르기)은 프로파일 화면을 엽니다. 프로파일이 옆으로 넘길 수 있는 카드 캐러셀로 표시되며, 프로파일을 추가, 편집, 복사, 삭제, **활성화**하는 버튼이 있습니다.
 
@@ -733,7 +733,7 @@ SMB는 이 그래프에 파란색 삼각형으로 표시되며, 그날의 가장
 
 ## NSClient
 
-![NSClient](../images/Screenshots_NSClient.png)
+![NSClient](../images/screens/Screenshots_NSClient.png)
 
 **구성 → 통신 → NSClientV3 → 플러그인 열기**는 Nightscout 사이트와의 연결 상태를 보여 줍니다: URL, 웹소켓 상태, 대기열, 동기화 활동 로그.
 
@@ -745,7 +745,7 @@ SMB는 이 그래프에 파란색 삼각형으로 표시되며, 그날의 가장
 
 ## 혈당 출처 - xDrip, BYODA...
 
-![혈당 출처 화면](../images/Screenshots_BGSource.png)
+![혈당 출처 화면](../images/screens/Screenshots_BGSource.png)
 
 **구성 → 혈당 출처 → 플러그인 열기**는 CGM 측정값 이력을 보여 주며, 오류(예: 압박으로 인한 저혈당 값)나 중복 측정값이 있으면 측정값을 삭제할 수 있습니다.
 

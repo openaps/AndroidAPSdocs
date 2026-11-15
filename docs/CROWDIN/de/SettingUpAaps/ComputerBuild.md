@@ -255,7 +255,7 @@ Irgendwann wird sich Android Studio schließen und neu starten. Du wirst gefragt
 
 Nur für Windows-Benutzer: Wenn Deine Firewall um Erlaubnis bittet, lasse den Zugriff zu:
 
- ![Firewall permission java](../images/AndroidStudio361_18.png)
+ ![Firewall permission java](../images/Building-the-App/AndroidStudio361_18.png)
 
 Nachdem das Projektarchiv erfolgreich geklont wurde, wird Android Studio das geklonte Projekt öffnen.
 

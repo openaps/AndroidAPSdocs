@@ -89,7 +89,7 @@ Keď začujete pípnutie, stlačte **Spustiť párovanie**.
 - Aktiváciu pumpy musíte dokončiť do 60 minút od jej spustenia. Ak to nestihnete, pumpu zahoďte.
 ```
 
-![Krok Párovanie pumpy](../images/EOPatch/Bild6.png) ![Prvá žiadosť o spárovanie cez Bluetooth](../images/EOPatch/Bild7.png) ![Druhá žiadosť o spárovanie cez Bluetooth s prístupovým kľúčom](../images/EOPatch/Bild8.png)
+![Krok Párovanie pumpy](../images/EOPatch/eopatch_pairing.png) ![Prvá žiadosť o spárovanie cez Bluetooth](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Druhá žiadosť o spárovanie cez Bluetooth s prístupovým kľúčom](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@ Z pumpy odstráňte lepiacu pásku a potom stlačte **Ďalej**.
 
 Ak ihla trčí von alebo ak je pumpa mokrá, špinavá alebo má prehnutú lepiacu pásku, stlačte namiesto toho **Zahodiť** a použite novú pumpu.
 
-![Krok Pripravte sa na pripojenie pumpy](../images/EOPatch/Bild9.png)
+![Krok Pripravte sa na pripojenie pumpy](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### Miesto aplikácie
 
@@ -123,7 +123,7 @@ Skontrolujte miesto vpichu a potom stlačte **Spustiť kontrolu bezpečnosti**.
 - Ak pumpa celkom nepriľne, medzi pumpu a kožu sa môže dostať vzduch. To oslabuje lepidlo a vodotesnosť pumpy.
 ```
 
-![Krok Pripojenie pumpy](../images/EOPatch/Bild10.png)
+![Krok Pripojenie pumpy](../images/EOPatch/eopatch_attaching.png)
 
 ### Kontrola bezpečnosti
 
@@ -133,7 +133,7 @@ Kontrola bezpečnosti trvá asi 30 sekúnd. Po jej skončení pumpa raz pípne. 
 Kvôli bezpečnému používaniu neotáčajte pákou ihly, kým sa kontrola bezpečnosti nedokončí.
 ```
 
-![Krok Pripojenie pumpy s tlačidlom Spustiť kontrolu bezpečnosti](../images/EOPatch/Bild11.png) ![Prebieha bezpečnostná kontrola](../images/EOPatch/Bild12.png)
+![Krok Pripojenie pumpy s tlačidlom Spustiť kontrolu bezpečnosti](../images/EOPatch/eopatch_start_safety_check.png) ![Prebieha bezpečnostná kontrola](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@ Potom sprievodca pokračuje priamo aktiváciou novej pumpy (pozrite vyššie). A
 
 Kým nie je aktívna žiadna pumpa, **AAPS** zobrazuje pumpu ako pozastavenú a zaznamená dočasný bazál 0 U/h. Do IOB sa tak nezapočíta žiadny bazálny inzulín, kým sa neaktivuje ďalšia pumpa.
 
-![Obrazovka pumpy EOPatch2 s tlačidlom DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Stránka Zahodiť pumpu](../images/EOPatch/Bild14.png) ![Dialóg na potvrdenie zahodenia pumpy](../images/EOPatch/Bild15.png) ![Zahodenie pumpy je dokončené](../images/EOPatch/Bild16.png)
+![Obrazovka pumpy EOPatch2 s tlačidlom DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![Stránka Zahodiť pumpu](../images/EOPatch/eopatch_discard_patch.png) ![Dialóg na potvrdenie zahodenia pumpy](../images/EOPatch/eopatch_discard_confirm.png) ![Zahodenie pumpy je dokončené](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@ Pozastavenie podávania inzulínu zruší aj prebiehajúci predĺžený bolus a 
 
 Podávanie inzulínu sa pozastaví na zvolený čas.
 
-![Obrazovka pumpy EOPatch2 s tlačidlom SUSPEND](../images/EOPatch/Bild17.png) ![Dialóg na potvrdenie pozastavenia](../images/EOPatch/Bild18.png) ![Dialóg Čas pozastavenia bazálu](../images/EOPatch/Bild19.png)
+![Obrazovka pumpy EOPatch2 s tlačidlom SUSPEND](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Dialóg na potvrdenie pozastavenia](../images/EOPatch/eopatch_suspend_confirm.png) ![Dialóg Čas pozastavenia bazálu](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@ Snímky obrazovky vyššie pochádzajú zo staršej verzie **AAPS**. V **AAPS** 
 1. Otvorte obrazovku pumpy (**Spravovať** → **Pumpa**) a stlačte **Obnoviť pumpu**.
 1. V dialógu **Obnoviť podávanie inzulínu** stlačte **Potvrdiť**.
 
-![Obrazovka pumpy EOPatch2 s tlačidlom RESUME](../images/EOPatch/Bild20.png) ![Dialóg Obnoviť podávanie inzulínu](../images/EOPatch/Bild21.png)
+![Obrazovka pumpy EOPatch2 s tlačidlom RESUME](../images/EOPatch/eopatch_pump_screen_resume.png) ![Dialóg Obnoviť podávanie inzulínu](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@ Alarmy sú určené pre naliehavé situácie s najvyššou prioritou a vyžaduj�
 
 Keď na notifikácii stlačíte **Potvrdiť**, **AAPS** alarm spracuje. Pri väčšine alarmov sa tým pumpa deaktivuje. Pri alarme **Nevhodná teplota** je tlačidlo **Opakovať**.
 
-![Alarm EOPatch2](../images/EOPatch/Bild22.png) ![Alarm EOPatch2 po deaktivácii pumpy](../images/EOPatch/Bild23.png)
+![Alarm EOPatch2](../images/EOPatch/eopatch_alarm.png) ![Alarm EOPatch2 po deaktivácii pumpy](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@ Jednotlivé alarmy sú vysvetlené nižšie.
 
 Upozornenia sú určené pre situácie so strednou alebo nízkou prioritou. Upozornenie sa zobrazí ako notifikácia na obrazovke **Prehľad**.
 
-![Upozornenie EOPatch2 zobrazené na obrazovke Prehľad](../images/EOPatch/Bild24.png)
+![Upozornenie EOPatch2 zobrazené na obrazovke Prehľad](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

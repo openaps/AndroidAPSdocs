@@ -115,7 +115,7 @@ At the end of each line, small icons show where the data comes from or has been 
 (screens-bolus-carbs)=
 ### Carbs and bolus
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![Carbs & bolus](../images/Maintenance/TreatmentsView1.png)
 
 On this tab you can view the bolus and carbs log.
 Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
@@ -143,7 +143,7 @@ The Treatments history can be used to correct faulty carb entries (_i.e._ you ov
 
 ### Temp basal
 
-![Temp Basal](../images/TreatmentsView2.png)
+![Temp Basal](../images/Maintenance/TreatmentsView2.png)
 
 The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). It can be:
 * Positive IOB if the temp basal was higher than the one set in the Profile
@@ -155,13 +155,13 @@ On the left of a line, a red S means “Suspend”: it happens when basal is not
 
 ### Temporary target
 
-![Temporary target](../images/TreatmentsView3.png)
+![Temporary target](../images/Maintenance/TreatmentsView3.png)
 
 The history of temporary targets can be seen here.
 
 ### Profile switch
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profile Switch](../images/Maintenance/TreatmentsView4.png)
 
 The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
 
@@ -171,7 +171,7 @@ You can use the **Clone** button shown on line **2** to make a copy of a **Profi
 
 ### Careportal
 
-![Care portal](../images/TreatmentsView5.png)
+![Care portal](../images/Maintenance/TreatmentsView5.png)
 
 This tab shows all notes and careportal entries recorded in Nightscout.
 
@@ -179,7 +179,7 @@ This tab shows all notes and careportal entries recorded in Nightscout.
 (aaps-screens-running-mode)=
 ### Running mode
 
-![Running mode](../images/TreatmentsView6.png)
+![Running mode](../images/Maintenance/TreatmentsView6.png)
 
 This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 

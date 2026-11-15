@@ -2,7 +2,7 @@
 
 O Freestyle Libre 3 (FSL3) precisa de uma configuração própria para enviar os valores de glicose para o AAPS. Há duas formas de enviar os valores do Freestyle Libre 3 (FSL3) para o AAPS.
 
-![FL3](../images/d912c1d3-06d2-4b58-ad7c-025ca1980fae.jpeg)
+![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
 
 Os métodos abaixo usam a app separada Juggluco. Usa o Juggluco para receber do sensor os dados em bruto, em intervalos de 1 minuto, que depois são enviados para o xDrip ou para o AAPS. Os sensores novos podem ser iniciados com a app Libre 3 ou diretamente no Juggluco. O guia abaixo mostra como iniciar um sensor com a app Juggluco. Se o sensor foi iniciado com uma conta LibreView com sessão iniciada, também é possível alternar entre o Juggluco e a app Libre 3 como recetor.
 

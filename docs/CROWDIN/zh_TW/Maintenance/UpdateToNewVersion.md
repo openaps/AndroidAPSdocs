@@ -40,4 +40,4 @@
 - 確認已匯入設定；以及
 - 請前往**設定**檢查 **AAPS** 設定，並確認內容正確。
 
-![顯示已安裝 AAPS 版本的「關於」對話方塊](../images/about_dialog_version.png)
+![顯示已安裝 AAPS 版本的「關於」對話方塊](../images/update/about_dialog_version.png)

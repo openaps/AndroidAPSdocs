@@ -211,7 +211,7 @@ Sur la montre :
 
 Un code d'appairage Wi-Fi, l'adresse IP et le port s'affichent :
 
-![Écran de la montre avec le code d'appairage Wi-Fi, l'adresse IP et le port](../images/wearos/ADB03.png)
+![Écran de la montre avec le code d'appairage Wi-Fi, l'adresse IP et le port](../images/wearos/watch_wifi_pairing_code.png)
 
 - Dans le terminal : `adb pair ipaddress:port` Par ex. `adb pair 10.10.1.125:36299`
 - Le code d'appairage vous sera demandé. Saisissez-le.

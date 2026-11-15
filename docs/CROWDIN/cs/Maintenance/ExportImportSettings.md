@@ -97,6 +97,8 @@ Doporučujeme exportovat nastavení pravidelně, hlavně před změnami konfigur
 
 **Poznámka**: _Exportovaná nastavení budou zašifrována vaším hlavním heslem AAPS: bez hlavního hesla použitého při exportu nebudete moci soubor s nastavením importovat!_
 
+If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+
 ### Export nebo import nastavení
 Chcete-li exportovat nebo importovat nastavení, otevřete **nabídku** (☰) a vyberte **Údržba**. V části **Správa souborů** určují štítky **Lokálně** a **Cloud** vedle položek **Exportovat nastavení** a **Importovat nastavení**, kam se soubor s nastavením uloží nebo odkud se načte: **Lokálně** je adresář AAPS v telefonu, **Cloud** je k dispozici, jakmile nastavíte [Cloudový adresář](#preferences-maintenance-cloud). Klepnutím štítek zapnete nebo vypnete; alespoň jeden zůstane vždy vybraný a oba řádky sdílejí stejnou volbu. Potom klepněte přímo na **Exportovat nastavení** nebo **Importovat nastavení** a spusťte akci.
 

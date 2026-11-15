@@ -89,7 +89,7 @@
 - 您必須在貼片啟動後 60 分鐘內完成貼片註冊。若無法完成，請丟棄貼片。
 ```
 
-![貼片配對步驟](../images/EOPatch/Bild6.png) ![第一個藍牙配對要求](../images/EOPatch/Bild7.png) ![第二個藍牙配對要求與密碼金鑰](../images/EOPatch/Bild8.png)
+![貼片配對步驟](../images/EOPatch/eopatch_pairing.png) ![第一個藍牙配對要求](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![第二個藍牙配對要求與密碼金鑰](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -106,7 +106,7 @@
 
 如果有針頭露出，或貼片潮濕、髒污，或膠帶摺起，請改按 **丟棄**，並改用新的貼片。
 
-![「準備貼上貼片」步驟](../images/EOPatch/Bild9.png)
+![「準備貼上貼片」步驟](../images/EOPatch/eopatch_prepare_attaching.png)
 
 ### 輸注部位
 
@@ -123,7 +123,7 @@
 - 如果貼片沒有完全貼合，空氣可能會進入貼片與外觀之間。這會降低黏性和貼片的防水性。
 ```
 
-![「貼上貼片」步驟](../images/EOPatch/Bild10.png)
+![「貼上貼片」步驟](../images/EOPatch/eopatch_attaching.png)
 
 ### 安全檢查
 
@@ -133,7 +133,7 @@
 為確保安全，請等安全檢查完成後再轉動針頭操作桿。
 ```
 
-![「貼上貼片」步驟中的「開始安全檢查」按鈕](../images/EOPatch/Bild11.png) ![正在進行安全檢查](../images/EOPatch/Bild12.png)
+![「貼上貼片」步驟中的「開始安全檢查」按鈕](../images/EOPatch/eopatch_start_safety_check.png) ![正在進行安全檢查](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -165,7 +165,7 @@
 
 沒有貼片啟動時，**AAPS** 會將幫浦顯示為已暫停，並記錄 0 U/hr 的臨時基礎率。因此，在下一片貼片註冊前，不會將任何基礎胰島素計入 IOB。
 
-![EOPatch2 幫浦畫面及「捨棄／更換貼片」按鈕](../images/EOPatch/Bild13.png) ![捨棄貼片頁面](../images/EOPatch/Bild14.png) ![捨棄貼片確認對話方塊](../images/EOPatch/Bild15.png) ![已完成捨棄貼片](../images/EOPatch/Bild16.png)
+![EOPatch2 幫浦畫面及「捨棄／更換貼片」按鈕](../images/EOPatch/eopatch_pump_screen_discard.png) ![捨棄貼片頁面](../images/EOPatch/eopatch_discard_patch.png) ![捨棄貼片確認對話方塊](../images/EOPatch/eopatch_discard_confirm.png) ![已完成捨棄貼片](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -191,7 +191,7 @@
 
 胰島素輸注會暫停你選擇的時間。
 
-![EOPatch2 幫浦畫面及「暫停」按鈕](../images/EOPatch/Bild17.png) ![暫停確認對話方塊](../images/EOPatch/Bild18.png) ![基礎率暫停時間對話方塊](../images/EOPatch/Bild19.png)
+![EOPatch2 幫浦畫面及「暫停」按鈕](../images/EOPatch/eopatch_pump_screen_suspend.png) ![暫停確認對話方塊](../images/EOPatch/eopatch_suspend_confirm.png) ![基礎率暫停時間對話方塊](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -203,7 +203,7 @@
 1. 開啟幫浦畫面（**管理** → **幫浦**），然後按下 **恢復幫浦**。
 1. 在 **恢復胰島素輸注**對話方塊中，按下 **確認**。
 
-![EOPatch2 幫浦畫面及「恢復」按鈕](../images/EOPatch/Bild20.png) ![恢復胰島素輸注對話方塊](../images/EOPatch/Bild21.png)
+![EOPatch2 幫浦畫面及「恢復」按鈕](../images/EOPatch/eopatch_pump_screen_resume.png) ![恢復胰島素輸注對話方塊](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -224,7 +224,7 @@
 
 在通知上按下 **確認**後，**AAPS** 會處理此警報。對大多數警報而言，這會停用貼片。如果是**溫度不適**警報，按鈕會顯示為**重試**。
 
-![EOPatch2 警報](../images/EOPatch/Bild22.png) ![貼片停用後出現的 EOPatch2 警報](../images/EOPatch/Bild23.png)
+![EOPatch2 警報](../images/EOPatch/eopatch_alarm.png) ![貼片停用後出現的 EOPatch2 警報](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
@@ -249,7 +249,7 @@
 
 警告適用於中度或低度優先情況。警告會以通知的形式顯示在**總覽**畫面上。
 
-![顯示在總覽畫面上的 EOPatch2 警告](../images/EOPatch/Bild24.png)
+![顯示在總覽畫面上的 EOPatch2 警告](../images/EOPatch/eopatch_warning_overview.png)
 
 ```{admonition} Older screenshot
 :class: note

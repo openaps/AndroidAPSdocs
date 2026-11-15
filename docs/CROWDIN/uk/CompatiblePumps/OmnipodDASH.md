@@ -535,7 +535,7 @@
 
 Вік **Батарея помпи** не показується: батарея і резервуар для інсуліну вбудовані в кожен Pod, і батарея завжди працює довше, ніж сам Pod (максимум 80 годин).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

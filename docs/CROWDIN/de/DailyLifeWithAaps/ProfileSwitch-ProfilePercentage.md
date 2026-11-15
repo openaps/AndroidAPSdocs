@@ -22,7 +22,7 @@ Du brauchst mindestens ein gespeichertes **Profil**. Ein **Prozentsatz des Profi
 
     <br />1. Tippe auf dem Startbildschirm **auf den Profilnamen** (neben dem Stern-Symbol). Der [Profil-Bildschirm](#ProfileSwitch-manage-v4) öffnet sich mit der Karte des laufenden **Profils**, die mit **AKTIV** markiert ist.
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Um das gleiche **Profil** beizubehalten, lass die Karte **AKTIV** ausgewählt. Um gleichzeitig das **Profil** zu wechseln, wische zu einer anderen Karte.
     3. Tippe unten rechts auf den runden Knopf **▶** (**Aktivieren**). Der Bildschirm **Aktivieren** öffnet sich.
@@ -169,7 +169,7 @@ Es geht immer um die Frage, die **Profil**einstellungen welcher Uhrzeit sollen d
     - 22:00 **-10 h** -> 12:00
     - Die Einstellungen von 22:00 Uhr werden anstelle der normalerweise um 12:00 Uhr programmierten Einstellungen verwendet.
 
-![Richtung der Zeitverschiebung für Profile](../images/ProfileSwitch_PlusMinus2.png)
+![Richtung der Zeitverschiebung für Profile](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 Durch diese Momentaufnahmen des **Profils** lässt sich die Vergangenheit viel genauer berechnen, und Änderungen am **Profil** lassen sich nachverfolgen.
 

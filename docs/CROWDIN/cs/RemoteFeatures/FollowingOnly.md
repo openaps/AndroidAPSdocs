@@ -20,7 +20,7 @@ Nejběžnější strategie používané ve spojení s **AAPS** jsou podrobněji 
 
 ### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) a [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
-![obrázek](../images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
+![obrázek](../images/following_dexcom_follow.png)
 
 * Dexcom Follow je kompatibilní s širokou škálou telefonů (jak Android, tak iPhone). Dexcom Follow lze použít i v případě, že nepoužíváte oficiální aplikaci Dexcom pro příjem dat senzoru.
 
@@ -47,7 +47,7 @@ Pro Dexcom Follow se pak data ze senzoru exportují z telefonu s **AAPS** buď p
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
-![obrázek](../images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
+![obrázek](../images/following_nightguard.png)
 
 Výhody (podle zkušeností uživatelů):
 
@@ -73,7 +73,7 @@ Nevýhody (podle zkušeností uživatelů)
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
-![obrázek](../images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
+![obrázek](../images/following_nightwatch.png)
 
 
 * Nightwatch se představuje jako klient Nightscoutu a sleduje glykémie uživatele z Nightscoutu na telefonu nebo tabletu s Androidem.
@@ -132,7 +132,7 @@ Pokud chcete, můžete se pak stát „releaserem“ a [sdílet osobní Testflig
 
 
 
-![obrázek](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
+![obrázek](../images/following_xdrip4ios.png)
 
 „Co je **Shuggah**?“ Skupina ukrajinských vývojářů zkopírovala kód projektu xDrip4iOS (který je veřejně sdílený na GitHubu) a vydala ho v App Store pod firemním účtem. Vydání Shuggah vývojáři xDrip4iOS nijak nespravují.
 
@@ -140,9 +140,9 @@ Pokud chcete, můžete se pak stát „releaserem“ a [sdílet osobní Testflig
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
-![obrázek](../images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
+![obrázek](../images/following_sugarmate.png)
 
-![obrázek](../images/21b83c41-85c6-4619-a702-a65450768855.png)
+![obrázek](../images/following_sugarmate_graph.png)
 
 
 [Sugarmate](https://sugarmate.io/) si můžete stáhnout do iPhonu z App Store. Sugarmate je kompatibilní s:
@@ -155,7 +155,7 @@ Uživatelé Sugarmate uvádějí, že v USA ji lze používat s Apple CarPlay a 
 
 ### [Spike](https://spike-app.com/) (iOS)
 
-![obrázek](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
+![obrázek](../images/following_spike.png)
 
 Spike lze používat jako hlavní přijímač nebo jako aplikaci pro sledování a poskytuje glykémii, alarmy, IOB a další.
 
@@ -175,7 +175,7 @@ Viz [zde](../Getting-Started/Watches.md).
 
 ### M5Stack
 
-![obrázek](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
+![obrázek](../images/following_m5stack.png)
 
 M5Stack je malá krabička, kterou lze naprogramovat pro mnoho použití. Martinův projekt [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) zobrazuje hodnoty glukózy ze senzoru a trendy, IOB a COB. Je v plastové krabičce a má barevný displej, slot na kartu micro SD, 3 tlačítka, reproduktor a vnitřní baterii. Je to skvělý monitor glykémie a jeho nastavení je poměrně snadné, pokud máte účet Nightscout. Uživatelé ho obvykle provozují na domácí Wi-Fi, ale někteří ho používají i jako displej při jízdě na motorce, připojený k Wi-Fi hotspotu z telefonu.
 
@@ -183,9 +183,9 @@ M5Stack je malá krabička, kterou lze naprogramovat pro mnoho použití. Martin
 
 SugarPixel je zařízení, které slouží jako druhý displej a systém výstrah pro kontinuální monitorování glukózy. Připojuje se k aplikaci Dexcom nebo k Nightscoutu v telefonu uživatele. Zařízení zobrazuje hodnoty glykémie v reálném čase. Tento hardwarový monitor CGM nabízí zvukové výstrahy s náhodně generovanými tóny (jsou neuvěřitelně hlasité), vibrační výstrahy pro sluchově postižené, nastavitelné možnosti zobrazení a vestavěné sledování více uživatelů.
 
-![obrázek](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
+![obrázek](../images/following_sugarpixel.png)
 
-![obrázek](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
+![obrázek](../images/following_sugarpixel_led_display.png)
 
 * SugarPixel má několik možností zobrazení v mg/dl a mmol/l, aby vyhověl potřebám uživatele, s barevně odlišenými hodnotami glykémie.
 * Standardní ciferník zobrazuje glykémii, šipku trendu a deltu. Delta je změna (+ nebo -) oproti poslední hodnotě.

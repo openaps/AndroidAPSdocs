@@ -21,7 +21,7 @@
 - Dexcom G6 및 ONE 트랜스미터는 Dexcom 수신기(또는 t:slim 펌프)와 휴대폰의 앱 하나에 동시에 연결할 수 있습니다.
 - xDrip을 수신기로 사용할 때는 먼저 Dexcom 앱을 삭제하십시오. **xDrip과 Dexcom 앱을 동시에 트랜스미터에 연결할 수 없습니다!**
 - Clarity가 필요하고 xDrip 알람도 사용하고 싶다면, xDrip으로 로컬 브로드캐스트하는 [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)(G6만 해당)를 사용하십시오.
-- xDrip을 공식 Dexcom 앱의 동반 앱(companion app)으로 사용할 수도 있지만, 혈당 측정값이 늦게 들어올 수 있습니다.
+- You can also use xDrip as a companion app of the official Dexcom app, but you might experience delays in BG readings. To read the Dexcom app notifications without xDrip, as a trusted data source, use the [Notification Reader](#DexcomG6-notification-reader).
 - 현재 트랜스미터에서 xDrip은 항상 트랜스미터의 [자체 알고리즘(native algorithm)](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)을 사용합니다. 이것을 끌 이유는 없습니다. [선제적 재시작(Preemptive restart)](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html)은 오래된 트랜스미터(펌웨어 1.6.5.25 이하)에서만 작동하며, 여기서는 10일 후 센서가 멈추는 것을 막기 위해 필요합니다. 최신(Firefly) 트랜스미터는 이를 무시합니다. 재시작을 시도하기 전에 [센서 재시작](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html)을 읽어 보십시오.
 - 센서와 트랜스미터 자체에 관한 모든 내용은 [xDrip Dexcom 페이지](https://navid200.github.io/xDrip/docs/Dexcom_page.html)에 설명되어 있습니다.
 
@@ -52,6 +52,53 @@ Dexcom BYODA는 이제 매우 오래된 버전의 앱이며 업데이트할 수 
 
 -   Select '640G/Eversense' as data source.
 -   값을 받으려면 xDrip에서 'start sensor' 명령을 실행해야 합니다. 이 작업은 Build Your Own Dexcom App이 제어하는 현재 센서에 영향을 주지 않습니다.
+
+(DexcomG6-notification-reader)=
+## If using G6 or ONE with the Notification Reader
+
+The official Dexcom G6 or ONE app stays connected to the transmitter. **AAPS** reads the glucose value directly from the notification of the Dexcom app, without any other app in between.
+
+```{admonition} Trusted data source
+:class: note
+Readings from the Dexcom G6 and ONE apps are a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs can be allowed all the time.
+```
+
+Compared to BYODA or xDrip, the Notification Reader has limits:
+
+- **No trend arrow** and **no backfill**: readings missed while the phone was off or out of range are lost.
+- Each reading gets the time the notification appeared, not the exact time of the sensor reading.
+- Only values between 40 and 405 mg/dL (2.2 and 22.5 mmol/L) are read. "LOW" and "HIGH" are not read.
+
+### Set up the Dexcom app
+
+-   Keep the Dexcom app installed and connected to the transmitter.
+-   Make sure the Dexcom app shows the current glucose value in its notification. Dexcom 앱의 알림은 계속 보여야 합니다: 알림을 무음으로 하거나 숨기지 마십시오.
+-   Use the same glucose units (mg/dL or mmol/L) in the Dexcom app as in **AAPS**. Otherwise **AAPS** cannot read the value.
+
+### AAPS 설정
+
+-   Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and confirm the switch.
+
+    ![BG Source: Notification Reader selected](../images/NotificationReader_BgSource.png)
+
+-   Back on the main screen, **AAPS** shows **Permissions Required**. Next to **Notification Access**, tap **Grant**.
+
+    ![Permissions Required: Notification Access](../images/NotificationReader_Permissions.png)
+
+-   Android opens its notification access list (its name depends on your Android version, for example *Notification read, reply & control*). Select **AAPS**, turn on **Allow notification access** and confirm with **Allow**.
+
+    ![Android asks to allow notification access for AAPS](../images/NotificationReader_AllowDialog.png)
+
+    Android warns that **AAPS** could read all your notifications. **AAPS** only reads the notifications of supported CGM apps and ignores all others.
+
+    ![Notification access allowed for AAPS](../images/NotificationReader_AccessOn.png)
+
+-   If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because **AAPS** was not installed from the Play Store. Open the **AAPS** app info (long press the **AAPS** icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. 그런 다음 알림 액세스 화면으로 돌아가서 허용하십시오.
+-   Readings appear in **AAPS** when the Dexcom app shows a new value.
+
+```{warning}
+If the Dexcom app notification shows more than one glucose number, or none, **AAPS** skips that notification.
+```
 
 
 (DexcomG6-troubleshooting-g6)=

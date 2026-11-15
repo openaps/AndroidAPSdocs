@@ -535,7 +535,7 @@ De [statusregel](#screens-sensor-level-battery) op het hoofdscherm toont de leef
 
 De leeftijd van de **Pomp batterij** wordt niet gemeld: de batterij en het insulinereservoir zitten in elke pod, en de batterij gaat altijd langer mee dan de pod zelf (maximaal 80 uur).
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note

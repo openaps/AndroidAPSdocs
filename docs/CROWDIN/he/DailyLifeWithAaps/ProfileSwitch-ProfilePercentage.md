@@ -22,7 +22,7 @@ When first embarking on your **AAPS** journey, you will need to create a **Profi
 
     <br />1. במסך הראשי, **יש ללחוץ על שם הפרופיל** (ליד סמל הכוכב). [מסך הפרופיל](#ProfileSwitch-manage-v4) נפתח על הכרטיס של ה**פרופיל** הפעיל, שמסומן **פעיל**.
     
-       ![לחיצה על שם הפרופיל במסך הראשי פותחת את מסך הפרופיל](../images/ProfileSwitch2.png)
+       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. כדי להשאיר את אותו **פרופיל**, יש להשאיר את הכרטיס **פעיל** בחור. כדי להחליף **פרופיל** באותו זמן, יש להחליק לכרטיס אחר.
     3. יש ללחוץ על הלחצן העגול **▶** (**הפעלה**) בפינה התחתונה. נפתח המסך **הפעלה**.
@@ -169,7 +169,7 @@ It is always a question of which hour’s **Profile’s** settings should replac
     - 22:00 **-10 שעות** -> 12:00
     - הגדרות מ-22:00 ישמשו במקום ההגדרות המשמשות בדרך כלל ב-12:00 בגלל שינוי הזמן השלילי.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Profile switch timeshift directions](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
 מנגנון זה של שמירת תמונות מצב של ה**פרופיל** מאפשר חישוב מדויק בהרבה של העבר ואפשרות לעקוב אחר שינויים ב**פרופיל**.
 

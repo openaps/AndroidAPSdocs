@@ -31,11 +31,11 @@ Google führt die [Android-Entwicklerverifizierung](#android-developer-verificat
 
 Wähle in der rechten oberen Ecke im Google-Menü die Drive-App aus.
 
-![Start Drive App](../images/GoogleDriveInWebbrowser.png)
+![Start Drive App](../images/install/GoogleDriveInWebbrowser.png)
 
 Klicke oben links auf **Neu** (oder klicke mit der rechten Maustaste in einen leeren Bereich unter Deinen Dateien und Ordnern) und wähle **Datei hochladen**.
 
-![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
+![Upload apk file with Google Drive App](../images/install/GoogleDriveUploadFile.png)
 
 Die APK-Datei sollte jetzt auf Google Drive hochgeladen werden.
 
@@ -43,17 +43,17 @@ Die APK-Datei sollte jetzt auf Google Drive hochgeladen werden.
 
 Wechsel zu Deinem Mobilgerät und starte dort die Google Drive-App. Es handelt sich um eine vorinstallierte App und Du findest sie dort wo auch die anderen Google-Apps sind oder Du suchst mit dem App-Namen danach.
 
-![start the Google Drive app](../images/GoogleDriveMobileAPPLaunch.png)
+![start the Google Drive app](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Starte die APK-Installation durch Tippen auf den Dateinamen in der Google Drive App des Smartphones.
 
-![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
+![launch the apk installation](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Falls Du eine Sicherheitswarnung bekommst, dass Du im Moment keine Apps aus Google Drive installieren darfst, tippe auf „Einstellungen“ und erteile die Erlaubnis für diesen kurzen Moment. Entziehe sie anschließend wieder, da es ein Sicherheitsrisiko darstellt, sie dauerhaft aktiviert zu lassen.
 
-![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Security Notice Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Security Notice Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Security Notice Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 Nach Abschluss der Installation bist Du mit diesem Schritt fertig.
 

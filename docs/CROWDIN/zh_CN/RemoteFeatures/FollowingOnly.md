@@ -20,7 +20,7 @@
 
 ### Dexcom Follow（[Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) 和 [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080)）
 
-![image](../images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
+![image](../images/following_dexcom_follow.png)
 
 * Dexcom Follow与多种手机（Android和iPhone）兼容。即使您不使用官方Dexcom应用程序接收传感器数据，也可以使用Dexcom Follow。
 
@@ -46,7 +46,7 @@ For Dexcom Follow, the sensor data is then exported from the **AAPS** phone eith
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
-![image](../images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
+![image](../images/following_nightguard.png)
 
 优点（用户报告）：
 
@@ -72,7 +72,7 @@ For Dexcom Follow, the sensor data is then exported from the **AAPS** phone eith
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
-![image](../images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
+![image](../images/following_nightwatch.png)
 
 
 * Nightwatch自称是Nightscout客户端，可在Android手机或平板电脑上监控用户的Nightscout血糖水平。
@@ -129,7 +129,7 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 
 
 
-![image](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
+![image](../images/following_xdrip4ios.png)
 
 **Shuggah**是什么？乌克兰某开发团队复制了xDrip4iOS（其代码在GitHub上公开共享）的项目代码，并通过企业账户在App Store上发布。 Shuggah版本完全不受xDrip4iOS原开发团队管理。
 
@@ -137,9 +137,9 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
-![image](../images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
+![image](../images/following_sugarmate.png)
 
-![image](../images/21b83c41-85c6-4619-a702-a65450768855.png)
+![image](../images/following_sugarmate_graph.png)
 
 
 [Sugarmate](https://sugarmate.io/)可从App Store下载到iPhone上。 Sugarmate与以下设备兼容：
@@ -152,7 +152,7 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 
 ### [Spike](https://spike-app.com/) (iOS)
 
-![image](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
+![image](../images/following_spike.png)
 
 Spike可以用作主接收器或跟踪器应用程序，提供血糖、警报和IOB等信息。
 
@@ -172,7 +172,7 @@ Spike可以用作主接收器或跟踪器应用程序，提供血糖、警报和
 
 ### M5Stack
 
-![image](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
+![image](../images/following_m5stack.png)
 
 M5Stack是一个小盒子，可用于多种应用程序编程。 Martin的项目[M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki)可以显示传感器血糖值和趋势、IOB和COB。它装在一个塑料盒子里，配备彩色显示屏、micro SD卡插槽、3个按钮、扬声器和内置电池。它是一个很棒的血糖监测器，如果您有Nightscout帐户，设置起来也相对容易。用户通常在家中的Wi-Fi上运行它，但一些用户报告说，通过运行手机Wi-Fi热点，可以在骑摩托车时使用它作为显示屏。
 
@@ -180,9 +180,9 @@ M5Stack是一个小盒子，可用于多种应用程序编程。 Martin的项目
 
 SugarPixel是一种用于连续血糖监测的备选葡萄糖显示警报系统的设备，可与Dexcom应用程序或Nightscout应用程序连接在用户的智能手机上。该设备实时显示血糖读数。 This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customizable display options and native multi-user following.
 
-![image](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
+![image](../images/following_sugarpixel.png)
 
-![image](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
+![image](../images/following_sugarpixel_led_display.png)
 
 * SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with color-coded glucose values.
 * 标准界面显示血糖值、趋势箭头和变化量。变化量是指与上一次读数相比的增加或减少量。

@@ -33,7 +33,7 @@ To avoid this there are two possibilities:
    * יש לבחור את ה**פרופיל** ולהקיש על **▶ הפעלה**
    * יש להגדיר '**היסט זמן**' בהתאם למקום היעד ולהקיש על **הפעלה**.
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![Profile switch with time shift](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
    * למשל וינה ← ניו יורק: **החלפת פרופיל** +6 שעות
    * למשל וינה ← סידני: **החלפת פרופיל** -8 שעות
@@ -118,14 +118,14 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
    * בחלק מהטלפונים יש שתי הגדרות: אחת להגדרה אוטומטית של השעה (רצוי להשאיר אותה מופעלת) ואחת להגדרה אוטומטית של אזור הזמן (אותה יש לכבות: **Set automatically** תחת **Time zone** בצילום המסך שלהלן).
    * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
 
-![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
+![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
 2. Find a timezone that has the same time as your current location but doesn't use DST.
    
    * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * עבור שעון מרכז אירופה (CET) זה יכול להיות "Brazzaville" (קונגו). יש לשנות את אזור הזמן בטלפון לקונגו.
 
-![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
+![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
 3. ב-**AAPS** יש לרענן את המשאבה ולעבור ל**פרופיל** הרצוי.
 
