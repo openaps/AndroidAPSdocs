@@ -228,16 +228,6 @@ The settings are the same as the DASH settings, in three sections:
 
 There is no **Advanced Settings** section: Bluetooth bonding is not available for Omnipod 5.
 
-(omnipod5-certificate-store)=
-### Certificate store
-
-In engineering mode builds, the settings have one more item: **Certificate store** (*Import and manage the Omnipod 5 pairing certificate*). It lists the **Installed certificates** (*Controller* followed by a number) and lets you:
-
-- **Import certificate** by pasting a certificate string from a trusted source. This only makes the certificate available for pairing: it does not pair with a pod.
-- Remove a certificate. This is only possible when there is no active pod.
-
-You do not need the certificate store for normal use: **AAPS** gets the certificate for you on the first **Activate Pod**.
-
 (omnipod5-troubleshooting)=
 ## Troubleshooting
 
