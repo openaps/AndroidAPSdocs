@@ -184,7 +184,7 @@ Aaps支持多种监控渠道（Sugarmate、Dexcom Follow、xDrip、Android Auto 
 | CGM         | [Nightscout 作为血糖数据源](../CompatibleCgms/CgmNightscoutUpload.md)   | ![可用](../images/available.png)    | ![可用](../images/available.png)                  | ![可用](../images/available.png)                        | ![可用](../images/available.png)    |
 
 _表格说明：_
-1. **Rig**是一种随身携带的小型计算机，不带显示器。一种支持的设备类型是英特尔 Edison + Explorer Board，另一种是 Raspberry Pi + Explorer HAT 或 Adafruit RFM69HCW Bonnet。 The first APS systems were based on this setup, as mobile phones were not capable of running the required algorithms. 用这些系统的已经越来越少，因为手机上的设置变得更容易，而且手机还带有显示屏。英特尔公司也停止了英特尔 Edison 的销售。优秀的 OpenAPS 算法 **oref0** 和 **oref1** 现已被整合到 AAPS 和 Trio 中。
+1. **Rig**是一种随身携带的小型计算机，不带显示器。支持的设备类型有两类：一类是 Intel Edison + Explorer 开发板；另一类是树莓派 + Explorer HAT 扩展板，或 Adafruit RFM69HCW Bonnet 射频板。 The first APS systems were based on this setup, as mobile phones were not capable of running the required algorithms. 用这些系统的已经越来越少，因为手机上的设置变得更容易，而且手机还带有显示屏。英特尔公司也停止了英特尔 Edison 的销售。优秀的 OpenAPS 算法 **oref0** 和 **oref1** 现已被整合到 AAPS 和 Trio 中。
 
 
 2022年，多名国际专家共同起草的 《开源自动胰岛素输注系统：国际专家共识与保健专业人员实践指南》（国际专家共识）发表在了[_《柳叶刀：糖尿病与内分泌学》_, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) 上（糖尿病与内分泌学领域最牛X的期刊），其中就包含了开源闭环系统的指南。 It is well worth a read (including for your diabetes clinic) and summarizes the main technical differences between the different open-source hybrid closed loop systems.
