@@ -187,17 +187,17 @@ _表格说明：_
 1. **Rig**是一种随身携带的小型计算机，不带显示器。支持的设备类型有两类：一类是 Intel Edison + Explorer 开发板；另一类是树莓派 + Explorer HAT 扩展板，或 Adafruit RFM69HCW Bonnet 射频板。最早的自动胰岛素输注系统采用该硬件方案，因为当时手机还无法运行对应算法的能力。用这些系统的已经越来越少，因为手机上的设置变得更容易，而且手机还带有显示屏。英特尔公司也停止了英特尔 Edison 的销售。优秀的 OpenAPS 算法 **oref0** 和 **oref1** 现已被整合到 AAPS 和 Trio 中。
 
 
-2022年，多名国际专家共同起草的 《开源自动胰岛素输注系统：国际专家共识与保健专业人员实践指南》（国际专家共识）发表在了[_《柳叶刀：糖尿病与内分泌学》_, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) 上（糖尿病与内分泌学领域最牛X的期刊），其中就包含了开源闭环系统的指南。 It is well worth a read (including for your diabetes clinic) and summarizes the main technical differences between the different open-source hybrid closed loop systems.
+2022年，多名国际专家共同起草的 《开源自动胰岛素输注系统：国际专家共识与保健专业人员实践指南》（国际专家共识）发表在了[_《柳叶刀：糖尿病与内分泌学》_, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) 上（糖尿病与内分泌学领域最牛X的期刊），其中就包含了开源闭环系统的指南。这篇文献很值得阅读（不管是患者本人还是提供给医生），它归纳总结了不同开源混合闭环系统的主要技术差异。
 
-百闻不如一见，不管什么系统不实际用一回怎么也不会有真正的体验，所以多去论坛、社群里面跟用过的人交流交流。 Most people find that **AAPS** is incredibly sophisticated in comparison to other hybrid closed loop systems (particularly the commercial systems), with a huge number of potentially customizable settings and features, discussed above. Some people can find this a little overwhelming at the beginning, but there is no rush to investigate all the possibilities at once. You can progress as slowly or as fast as you would like, and there is help available at every step of the way.
+百闻不如一见，不管什么系统不实际用一回怎么也不会有真正的体验，所以多去论坛、社群里面跟用过的人交流交流。多数使用者认为，相较于其他混合闭环系统（尤其是商用系统），**AAPS** 功能十分强大，具备非常多可自定义的设置和功能，前文已有介绍。有些人一开始会觉得这有点让人难以适应，不用着急，可以慢慢将所有功能都摸索清楚。你可以按照自己的节奏来熟悉掌握，在使用过程中的每一步都能找到帮助。
 
 
 ## AAPS是否使用人工智能或任何机器学习算法？
 
-The current version of **AAPS** (4.0) does not have any machine learning algorithms, multiple-parameter insulin response models, or artificial intelligence. 因此，该系统在运作方式上是公开和透明的，不仅专家能看懂，临床医生和病人也能弄明白。 It also means that if you have a sharply varying schedule (maybe switching from a stressful week at work to a relaxing holiday) and are likely to need a significantly different amount of insulin, you can immediately switch **AAPS** to run a weaker/stronger customized profile. 如果是那些能“自动学习”的系统，类似的调整可以自动执行，但相比之下需要等一段时间才能调整胰岛素剂量（那些系统需要等指标的趋势发生变化才能做出调整）。
+**AAPS**当前版本 (4.0) 不包含任何机器学习算法、多参数胰岛素响应模型或人工智能（AI）。因此，该系统在运作方式上是公开和透明的，不仅专家能看懂，临床医生和病人也能弄明白。这也意味着，如果你的作息波动很大（比如从紧张工作日转到轻松的假期），胰岛素需求量会明显变化，你可以立刻把**AAPS**切换到一个更弱/更强的配置文件。如果是那些能“自动学习”的系统，类似的调整可以自动执行，但相比之下需要等一段时间才能调整胰岛素剂量（那些系统需要等指标的趋势发生变化才能做出调整）。
 
-(which-system-is-right-for-me-or-my-dependent)=
-## Which system is right for me or someone I am caring for?
+哪一种系统适合我或者我的家人
+## 哪一种系统适合我或者我的家人？
 
 实际上，选哪种系统往往取决于你在用或者能拿到哪种胰岛素泵，以及你要用哪种手机（苹果还是安卓）。如果还没有泵，那可选择的范围比较大。技术正在不断发展，不断有旧型号的泵在下架，也不断有新的泵和动态上市。大多数开源系统都能支持主流的动态（雅培和德康），新的动态发布一年左右一般也能支持（具体实践取决于安全和稳定性的测试进度）。
 
