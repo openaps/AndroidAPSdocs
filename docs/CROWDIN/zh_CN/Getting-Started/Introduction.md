@@ -201,9 +201,9 @@ _表格说明：_
 
 实际上，选哪种系统往往取决于你在用或者能拿到哪种胰岛素泵，以及你要用哪种手机（苹果还是安卓）。如果还没有泵，那可选择的范围比较大。技术正在不断发展，不断有旧型号的泵在下架，也不断有新的泵和动态上市。大多数开源系统都能支持主流的动态（雅培和德康），新的动态发布一年左右一般也能支持（具体实践取决于安全和稳定性的测试进度）。
 
-大多数 **AAPS** 用户表示，拥有一个能在夜间睡眠时自动调整基础率的系统后，他们的入框率更高了，糖化HbA1c 降低了，生活质量也得到了改善，而大多数混合闭环系统都是如此。 Some people have a preference for a very simple system which is not very customizable (which means you may prefer a commercial system), and others find this lack of control very frustrating (you may prefer an open-source system). If you (or someone you are caring for) are newly diagnosed, a common route is to get used to using MDI plus a glucose sensor first, then progress to a pump which has the potential for looping, then progress to **AAPS**, but some people (especially small kids) may go straight to a pump.
+大多数 **AAPS** 用户表示，拥有一个能在夜间睡眠时自动调整基础率的系统后，他们的入框率更高了，糖化HbA1c 降低了，生活质量也得到了改善，而大多数混合闭环系统都是如此。有些人喜欢用起来比较简单、自定义选项少的系统，不想搞太多的个性化配置(这意味着你可能适合商业闭环系统)， 而其他人则认为那样缺乏对系统的控制感，用起来不放心(那可能会喜欢开源闭环系统)。如果您或您的家人是新糖，一般来说应该先用每日多针+动态的方式，然后再转为用泵（支持闭环的泵），最后用上**AAPS**， 但有些人(尤其是小孩)可能会直接上泵。
 
-关键的一点是 **AAPS** 用户必须积极主动地区查找问题、解决问题，遇到问题需要到相应的社群寻求帮助。这跟使用商业化产品的思维方式和体验截然不同。 **AAPS** 用户拥有更多的控制权，但责任也更重，这得提前做好心理建设。
+需要特别注意的是，**AAPS** 使用者需要积极主动地自行排查和解决问题，并借助社区帮助。这和使用商用系统的思路有很大区别。 **AAPS** 用户拥有更多的控制权，但同时也要承担对应的责任，这是在使用前必须清楚的。
 
 ## 像AAPS这样的开源系统安全吗？
 
