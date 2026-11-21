@@ -12,13 +12,13 @@ A fórmula usada pelo **AAPS** é:
 
 O efeito do **Perfil** do utilizador será:
 
-- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _aumentar_ o **IHC** - aumenta a quantidade de hidratos de carbono absorvidos a cada 5 minutos e assim encurta o tempo total de absorção;
 
 - _aumentar_ o **FSI** - diminui os hidratos de carbono absorvidos a cada 5 minutos e assim prolonga o tempo total de absorção; e
 
-- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
+- _alterar_ a **Percentagem do Perfil** - aumenta/diminui os dois valores e por isso não tem efeito no tempo de absorção dos hidratos de carbono.
 
-For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. Por cada 20 mg/dl que a **glicose** do utilizador sobe, o **AAPS** calcula 1 g de hidratos de carbono como absorvido. A **IA** positiva também afeta o cálculo dos **HCA**. Assim, se o **AAPS** previr que a **glicose** do utilizador desça 20 mg/dl por causa da **IA** e, em vez disso, ela ficar estável, o **AAPS** também calcula 1 g de hidratos de carbono como absorvido.
+Por exemplo, se o **FSI** do **Perfil** do utilizador for 100 e o **IHC** for 5, o fator de sensibilidade aos hidratos de carbono do utilizador será 20. Por cada 20 mg/dl que a **glicose** do utilizador sobe, o **AAPS** calcula 1 g de hidratos de carbono como absorvido. A **IA** positiva também afeta o cálculo dos **HCA**. Assim, se o **AAPS** previr que a **glicose** do utilizador desça 20 mg/dl por causa da **IA** e, em vez disso, ela ficar estável, o **AAPS** também calcula 1 g de hidratos de carbono como absorvido.
 
 Os hidratos de carbono também serão absorvidos pelos métodos descritos abaixo, conforme o algoritmo de sensibilidade selecionado no **AAPS** do utilizador.
 
@@ -47,7 +47,7 @@ Se for usada a absorção mínima de hidratos de carbono (min_5m_carbimpact) em 
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Deteção de valores de HCA errados
 
-**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. Neste caso, mostra ao utilizador uma dica adicional no ecrã de confirmação, depois de usar o assistente de bólus.
+O **AAPS** avisa o utilizador se este estiver prestes a dar um bólus com **HCA** de uma refeição anterior, se o algoritmo detetar que o cálculo atual dos **HCA** está incorreto. Neste caso, mostra ao utilizador uma dica adicional no ecrã de confirmação, depois de usar o assistente de bólus.
 
 ### Como é que o AAPS deteta valores de HCA errados?
 
@@ -62,7 +62,7 @@ Na captura de ecrã acima, em 66 % do tempo a absorção dos hidratos de carbono
 - Pondere cancelar o tratamento - prima «Cancelar» em vez de OK.
 - Calcule novamente a próxima refeição com o assistente de bólus, sem marcar **HCA**.
 - Se precisar de um bólus de correção, introduza-o manualmente.
-- Be careful not to overdose or stack insulin!
+- Tenha cuidado para não dar insulina a mais nem acumular insulina!
 
 
 ### Porque é que o algoritmo não deteta corretamente os HCA?
