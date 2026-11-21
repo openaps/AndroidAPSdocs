@@ -72,7 +72,7 @@ Confirme com "**ALLOW**" (Permitir) que você quer dar ao **AAPS** acesso ao dir
 
 ### Notificações
 
-Android requires special permission for apps if they want to send you notifications.
+O Android exige uma permissão especial para que os apps possam enviar notificações para você.
 
 Embora seja útil desativar as notificações, _por exemplo_ de apps de redes sociais, é essencial que você permita que o **AAPS** envie notificações para você.
 
@@ -122,7 +122,7 @@ Siga estes passos no Android 16; em outras versões, as telas serão um pouco di
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. No Android 12, clique em `Battery` (Bateria); no Android 13 ou mais recente, clique em `App battery usage` (Uso da bateria pelo app).
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
@@ -172,7 +172,7 @@ Volte com a seta no canto superior esquerdo. O assistente agora mostra "**Senha 
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**NÃO PERCA A SUA SENHA MESTRA**. Anote-a, _por exemplo_ no Google Drive, que é um bom lugar, porque o Google faz o backup para você. O seu smartphone ou PC pode travar, e talvez você não tenha nenhuma cópia atual. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date. See [How to reset the master password?](#FAQ-reset-master-password)
+**NÃO PERCA A SUA SENHA MESTRA**. Anote-a, _por exemplo_ no Google Drive, que é um bom lugar, porque o Google faz o backup para você. O seu smartphone ou PC pode travar, e talvez você não tenha nenhuma cópia atual. Se você esquecer a sua Senha mestra, pode ser difícil recuperar mais tarde a configuração do seu perfil e o seu progresso nos **Objetivos**. Veja [Como redefinir a senha mestra?](#FAQ-reset-master-password)
 ```
 
 Quando terminar, toque em "**Avançar**" para ir para a próxima tela.
@@ -243,7 +243,7 @@ Toque em "**URL do Nightscout**" e digite o endereço do seu servidor Nightscout
 
 Toque em "**Token de acesso do Nightscout**" e digite o token de acesso do seu servidor Nightscout. Sem este token, o acesso não funciona. Se você ainda não tem o token, consulte a documentação sobre a configuração do servidor de relatórios.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+Leave "**Use websockets**" enabled for real-time communication with Nightscout. Os websockets são **obrigatórios** para o controle remoto pelo **AAPSClient**, nos dois telefones.
 
 Por enquanto, as outras seções podem ficar com os valores padrão. Elas são descritas aqui para que você saiba onde encontrá-las mais tarde:
 
@@ -505,7 +505,7 @@ Toque em "**Abrir objetivos**":
 
 Aqui iniciamos o Objetivo 1, mesmo que, neste momento, a nossa configuração ainda não esteja totalmente pronta para concluir este Objetivo. Mas este é o começo.
 
-Press the "**Start**" button of **Objective 1**:
+Toque no botão "**Iniciar**" do **Objetivo 1**:
 
 ![Lista de objetivos](../images/setup-wizard/Wizard-Objectives-List.png)
 
