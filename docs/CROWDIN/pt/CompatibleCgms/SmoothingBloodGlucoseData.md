@@ -2,21 +2,21 @@
 
 Se os dados da **glicose** forem instáveis ou tiverem ruído, o **AAPS** pode administrar insulina de forma errada, o que leva a hiperglicemias ou hipoglicemias. Se vir erros ou dados instáveis no seu CGM, é importante desativar o loop até o problema estar resolvido. Conforme o seu CGM, estes problemas podem vir da configuração do CGM no **AAPS** (ver mais abaixo) ou de um problema no local do sensor CGM (que pode exigir a troca do sensor).
 
-## Smoothing data within AAPS
+## Suavizar os dados no AAPS
 
 O **AAPS** permite suavizar os dados dentro do **AAPS**, em vez de na app do CGM. Abra o **menu** (☰), selecione [**Configuração**](../SettingUpAaps/ConfigBuilder.md) e depois **Suavização**. Há quatro opções e só uma pode estar ativa de cada vez: **Sem suavização**, **Suavização exponencial**, **Suavização por média** e **Unscented Kalman Filter**.
 
 ![Configuração > Suavização](../images/v4/Configuration/configuration_smoothing.png)
 
-### Exponential smoothing
+### Suavização exponencial
 
 Em geral, esta é a opção recomendada para começar, porque é a mais agressiva a eliminar o ruído e reescreve o valor mais recente. No entanto, veja na tabela abaixo outras recomendações específicas.
 
-### Average smoothing
+### Suavização por média
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
+Esta opção funciona de forma parecida com a suavização retroativa (back smoothing) que existia antes em algumas plataformas de CGM. Reage mais às mudanças recentes do valor da glicose e, por isso, tem mais tendência para reagir de forma errada a dados de CGM com ruído.
 
-### No Smoothing
+### Sem suavização
 
 Use esta opção apenas se os dados do seu CGM já forem bem suavizados pela app coletora antes de serem enviados para o **AAPS**.
 
@@ -26,14 +26,14 @@ Esta opção usa um modelo estatístico para estimar continuamente o seu valor r
 
 (smoothing-xdrip-dexcom-g6)=
 
-## Suggestions to use smoothing
+## Sugestões para usar a suavização
 
 Também pode mudar o método de suavização automaticamente, por exemplo conforme a idade do sensor, com a [ação de Automatização](#automations-automation-action) **Alterar suavização**.
 
-|               | Exponential |  Average   | No Smoothing |
-| ------------- |:-----------:|:----------:|:------------:|
-| G5/G6/ONE     |  If noisy   |            | Recommended  |
-| G7/ONE+/Stelo |  If noisy   | Se estável |              |
+|               |  Exponencial   |  Average   | Sem suavização |
+| ------------- |:--------------:|:----------:|:--------------:|
+| G5/G6/ONE     | Se tiver ruído |            |  Recomendado   |
+| G7/ONE+/Stelo | Se tiver ruído | Se estável |                |
 
 Os sensores Libre têm ruído e podem precisar de suavização. Ao usar a ligação direta do xDrip ou a fonte de dados de app modificada (que recebe de outra app, incluindo o Juggluco), a [suavização já é feita dentro da app](#libre2-value-smoothing-raw-values).
 
