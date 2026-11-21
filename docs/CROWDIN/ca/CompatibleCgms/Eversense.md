@@ -1,17 +1,17 @@
 # Eversense
 
-There are four different methods to access the readings from Eversense:
+Hi ha quatre mètodes diferents per obtenir les lectures d'Eversense:
 
 - ESEL en mode Companion
 - ESEL en mode Patched (aplicació modificada)
-- xDrip companion app
-- Notification Reader (built into **AAPS**)
+- Aplicació complementària xDrip
+- Lector de notificacions (integrat a **AAPS**)
 
 ## ESEL
 
 Obteniu i instal·leu l'[aplicació ESEL](https://github.com/BernhardRo/Esel/tree/master/apk) seguint aquestes [instruccions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- In ESEL, open the three dots menu (⋮) at the top right and select **Settings** (also available from the ☰ menu). In the settings:
+- A ESEL, obriu el menú de tres punts (⋮) a la part superior dreta i seleccioneu **Settings** (també disponible des del menú ☰). A la configuració:
   - Activeu "Send to AAPS and xDrip"
   - **Desactiveu** "Send to Nightscout"
   - Com que les dades de glucèmia d'Eversense poden ser sorolloses, es recomana activar "Smooth Data" a ESEL.
@@ -29,7 +29,7 @@ Llegeix les dades de les notificacions de l'aplicació Eversense (funciona amb l
    - Desactiveu l'opció "Get data from patched Eversense App"
    - Per recuperar les dades que falten (backfill): activeu "Fill missing data from eversensedms.com"
    - Com a adreça electrònica i contrasenya, introduïu les dades d'inici de sessió d'Eversense
-3. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
+3. Seleccioneu «MM640g» com a origen de glucèmia a [**Configurador → Origen glucèmia**](#Config-Builder-bg-source).
 
 ### Aplicació Eversense modificada
 
@@ -49,26 +49,26 @@ Llegeix les dades de les notificacions de l'aplicació Eversense (funciona amb l
 
 ![ESEL Broadcast](../images/ESELpatch.png)
 
-If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
+Si feu servir ESEL amb una instal·lació nova d'Eversense per primer cop, poden passar fins a 15 min fins que apareguin els primers valors a xDrip!
 
-4. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
+4. Seleccioneu «MM640g» com a origen de glucèmia a [**Configurador → Origen glucèmia**](#Config-Builder-bg-source).
 
 ## xDrip
 
-xDrip can read notifications from the vendor app, like ESEL does. No es poden recuperar les dades que falten.
+xDrip pot llegir les notificacions de l'aplicació del fabricant, igual que ESEL. No es poden recuperar les dades que falten.
 
-- Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip “Companion App” must be selected.
+- Descarregueu i instal·leu xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- A xDrip, cal seleccionar «Companion App» com a origen de dades.
 - Seleccioneu xDrip a [**Configurador → Origen glucèmia**](#Config-Builder-bg-source).
 - Ajusteu la configuració de xDrip segons les explicacions de la pàgina [Configuració de xDrip](../CompatibleCgms/xDrip.md).
 - Activeu el [Suavitzat exponencial](../CompatibleCgms/SmoothingBloodGlucoseData.md) a AAPS.
 
 ## Lector de notificacions
 
-**AAPS** can read the glucose values directly from the notifications posted by the official Eversense app, without any other app in between. No es poden recuperar les dades que falten.
+**AAPS** pot llegir els valors de glucèmia directament de les notificacions de l'aplicació oficial d'Eversense, sense cap altra aplicació entremig. No es poden recuperar les dades que falten.
 
-- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and grant **AAPS** access to notifications when asked.
-- Make sure the Eversense app shows the current glucose value in its notification.
+- Seleccioneu **Lector de notificacions** a [**Configurador → Origen glucèmia**](#Config-Builder-bg-source) i doneu a **AAPS** accés a les notificacions quan ho demani.
+- Assegureu-vos que l'aplicació Eversense mostra el valor de glucèmia actual a la seva notificació.
 
 ```{warning}
 La freqüència de lectura dels valors de glucèmia no sempre és de 5 minuts i hi pot haver duplicats.
