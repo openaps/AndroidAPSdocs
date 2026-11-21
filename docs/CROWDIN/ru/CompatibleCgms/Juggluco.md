@@ -4,7 +4,7 @@
 
 Для подключения датчика следуйте [инструкциям](https://www.juggluco.nl/Jugglucohelp/introhelp.html).
 
-## Основные настройки для всех НМГ систем
+## Основные настройки для всех систем CGM
 
 ### Отключите выгрузку в Nightscout
 
@@ -18,13 +18,13 @@ You shouldn't let any other app upload data (blood glucose and treatments) to Ni
 
 ## Из Juggluco в AAPS
 
-Juggluco может передавать гликемию непосредственно в AAPS, что позволяет использовать СМБ всегда, когда вы используете [доверенный датчик](#GettingStarted-TrustedBGSource).
+Juggluco может передавать гликемию непосредственно в AAPS, что позволяет всегда использовать SMB, если вы используете [доверенный датчик](#GettingStarted-TrustedBGSource).
 
 При использовании датчика Libre 2/2+/3/3+ гликемия будет отправляться в AAPS ежеминутно, однако это не приведет к ежеминутным же расчетам.
 
 В Juggluco поставьте галочку у xDrip broadcast (не ставьте у Patched Libre), проставьте галочку у пакета androidaps и сохраните выбор. Select the xDrip BG data source in AAPS.
 
-Применить подходящее [сглаживание](./SmoothingBloodGlucoseData.md) в AAPS.
+Примените достаточное [сглаживание](./SmoothingBloodGlucoseData.md) в AAPS.
 
 ![Из Juggluco в AAPS](../images/juggluco/Juggluco-AAPS.png)
 
