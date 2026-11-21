@@ -8,16 +8,16 @@
 
 Коли **AAPS** встановлено вперше, кожне завдання треба виконати, перш ніж перейти до наступного. Нові функції відкриваються поступово, у міру того як ви проходите кожне **Завдання**.
 
-**Завдання 1–8** проведуть вас від налаштування **AAPS** на смартфоні до «базової» гібридної закритої петлі. This will take about 6 weeks to complete. Ви можете дійти до **Завдання 5** з віртуальною помпою (і тим часом вводити інсулін іншим способом). **Завдання 9 і 10** призначені для перевірки складніших функцій **AAPS**, щоб краще контролювати діабет. На їх виконання піде до 3 місяців, можливо, більше. Детальніше про орієнтовний розподіл часу дивіться тут: [Скільки часу це займе?](#preparing-how-long-will-it-take)
+**Завдання 1–8** проведуть вас від налаштування **AAPS** на смартфоні до «базової» гібридної закритої петлі. На виконання знадобиться близько 6 тижнів. Ви можете дійти до **Завдання 5** з віртуальною помпою (і тим часом вводити інсулін іншим способом). **Завдання 9 і 10** призначені для перевірки складніших функцій **AAPS**, щоб краще контролювати діабет. На їх виконання піде до 3 місяців, можливо, більше. Детальніше про орієнтовний розподіл часу дивіться тут: [Скільки часу це займе?](#preparing-how-long-will-it-take)
 
 As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
 
-## Backup your settings
+## Створіть резервну копію налаштувань
 
 ```{admonition} Note
 :class: note
 
-Exporting your **AAPS** settings is recommended after completing each **Objective**!
+Після виконання кожного **Завдання** рекомендовано експортувати налаштування **AAPS**!
 ```
 
 Наполегливо рекомендуємо [експортувати налаштування](../Maintenance/ExportImportSettings.md) після кожного виконаного завдання, щоб не втратити прогрес в **AAPS**. Експорт створює **файл налаштувань** (.json). Збережіть його копію в одному або кількох безпечних місцях (наприклад, Google Drive, жорсткий диск, вкладення в email _тощо_). Так увесь прогрес в **AAPS** буде збережено. Якщо ви втратите телефон або випадково видалите прогрес, json-файл можна знову завантажити в **AAPS**, імпортувавши недавній файл налаштувань. Резервний **файл налаштувань** також потрібен, якщо з будь-якої причини вам потрібен новий смартфон для **AAPS** (новіша модель, втрачений або зламаний телефон _тощо_)
@@ -27,16 +27,16 @@ Exporting your **AAPS** settings is recommended after completing each **Objectiv
 Якщо у вас немає резервної копії налаштувань і з вашим смартфоном для **AAPS** щось станеться, **Завдання** доведеться почати з самого початку. Проходження **Завдань** потребує часу. Краще уникнути ситуації, коли їх доводиться проходити знову, наприклад через втрату смартфона.
 
 (objectives-objective1)=
-## Objective 1: Setting up visualization and monitoring, analyzing basals and ratios
+## Завдання 1: Налаштування візуалізації та моніторингу, аналіз базальних подач та коефіцієнтів
 
-**Завдання 1** вимагає від користувача зробити базове технічне налаштування в **AAPS**. No progress can be made until this step has been completed.
+**Завдання 1** вимагає від користувача зробити базове технічне налаштування в **AAPS**. Поки цей крок не виконано, далі рухатися не можна.
 
 - Виберіть правильний CGM/FGM у [Конфігурація → Джерело ГК](#Config-Builder-bg-source). Більше інформації див. у розділі [Джерело ГК](../Getting-Started/CompatiblesCgms.md).
 - Виберіть правильну помпу в [Конфігурація → Помпа](#Config-Builder-pump), щоб ваша помпа могла зв'язуватися з **AAPS**. Виберіть **Віртуальна помпа**, якщо ваша модель помпи не має драйвера **AAPS** для петлі, або якщо ви хочете пройти перші **Завдання**, поки вводите інсулін іншою системою. Більше інформації див. у розділі [інсулінова помпа](../Getting-Started/CompatiblePumps.md).
-- If using Nightscout:
+- Якщо ви використовуєте Nightscout:
   - Виконайте інструкції на сторінці [Nightscout](../SettingUpAaps/Nightscout.md), щоб **Nightscout** міг отримувати та показувати дані **AAPS**.
   - Зверніть увагу: URL у **NSClientV3** має бути **_без_ "/api/v1/"** у кінці — див. [Налаштування → NSClientV3](#Preferences-nsclient).
-- If using Tidepool:
+- Якщо ви використовуєте Tidepool:
   - Виконайте інструкції на сторінці [Tidepool](../SettingUpAaps/Tidepool.md), щоб **Tidepool** міг отримувати та показувати дані **AAPS**.
 
 Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
@@ -54,7 +54,7 @@ Note: *You may need to wait for the next sensor glucose reading to arrive before
   - _Примітка_: **AAPS** не приймає базальні швидкості нижче 0,05 Од/год. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Після виконання цього завдання поверніться до свого звичайного **Профілю**.
 - Імітуйте «прийняття душу»: [від'єднайте помпу](#AapsScreens-loop-status) в **AAPS** на 1 год.
   - _Підказка_: натисніть значок петлі на головному екрані, щоб відкрити діалог петлі, потім виберіть тривалість у розділі **Від’єднати помпу**.
-- End "taking a shower" by reconnecting your pump.
+- Завершіть «прийняття душу», знову під'єднавши помпу.
   - _Підказка_: натисніть значок «від'єднано», щоб знову відкрити діалог петлі, і виберіть **Знову під’єднати помпу**.
 - Встановити власну [**Тимчасову ціль**](../DailyLifeWithAaps/TempTargets.md) на 10 хв.
   - _Підказка_: натисніть цільовий діапазон на головному екрані, щоб відкрити екран тимчасової цілі.
@@ -70,13 +70,13 @@ Note: *You may need to wait for the next sensor glucose reading to arrive before
 
 Деякі користувачі вважають **Завдання 3** найважчим. Будь ласка, читайте документацію **AAPS** разом із питаннями. Якщо після пошуку в документації **AAPS** ви справді не знаєте відповіді, пошукайте в групі [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) або [Discord](https://discord.gg/4fQUWHZ4Mw) за словами "Objective 3" (бо, швидше за все, ваше питання вже ставили, і група на нього відповіла). Ці групи можуть дати дружні підказки або направити вас до потрібної частини документації **AAPS**.
 
-In the meantime :
+Тим часом:
 - Щоб у відкритій петлі зменшити кількість сповіщень / рішень, які ви маєте приймати (тимчасові базали), задайте у своєму **Профілі** широкий цільовий діапазон, _наприклад_ 90–150 мг/дл або 5,0–8,5 ммоль/л.
-- You might want to set a wider upper limit, or even disable Open Loop, at night.
+- Можливо, вночі варто задати ширшу верхню межу або навіть вимкнути відкриту петлю.
 
-Щоб продовжити **Завдання 3**, торкніться рядка з питанням, щоб відкрити його. Please read each question carefully and select your answer(s).
+Щоб продовжити **Завдання 3**, торкніться рядка з питанням, щоб відкрити його. Уважно прочитайте кожне запитання і виберіть свою відповідь (відповіді).
 
-For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for 1 hour before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
+На кожне запитання може бути більше однієї правильної відповіді! Якщо вибрано неправильну відповідь, запитання буде заблоковано на 1 годину, після чого ви зможете повернутися і відповісти на нього знову. Майте на увазі, що під час наступної спроби порядок відповідей може змінитися. Це потрібно, щоб ви уважно їх читали і справді розуміли, чи правильна кожна відповідь.
 
 ```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: note
@@ -87,14 +87,14 @@ For each question, there may be more than one answer that is correct! If an inco
 
 Мета **Завдання 4** — зрозуміти, як часто **AAPS** порівнює базальну швидкість користувача з рівнем глюкози і рекомендує зміни тимчасового базалу. У цьому **Завданні** ви вперше ввімкнете відкриту петлю, приймете 20 запропонованих змін тимчасового базалу і, за потреби, вручну застосуєте їх на помпі. Ви також побачите, як діють [**Тимчасові цілі**](../DailyLifeWithAaps/TempTargets.md). Якщо ви ще не знаєте, як задати зміну тимчасового базалу в **AAPS**, перегляньте дії з помпою на панелі **Керувати** ([Куди зникла вкладка «Дії»?](#screens-action-tab)).
 
-Мінімальний час для виконання цього завдання: **7 днів**. This is a mandatory wait time. Перейти до наступного **Завдання** раніше неможливо, навіть якщо всі зміни базалу вже застосовано.
+Мінімальний час для виконання цього завдання: **7 днів**. Це обов'язковий час очікування. Перейти до наступного **Завдання** раніше неможливо, навіть якщо всі зміни базалу вже застосовано.
 
 - Виберіть відкриту петлю: натисніть [значок петлі](#AapsScreens-loop-status) на головному екрані й виберіть **Відкрита петля** як робочий режим.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Переконайтеся, що ці зміни базалу видно в **AAPS** і в **Nightscout**.
-- За потреби використовуйте [**Тимчасові цілі**](../DailyLifeWithAaps/TempTargets.md). After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
+- Вручну виконайте щонайменше 20 рекомендацій тимчасового базалу протягом 7 днів: введіть їх у свою (фізичну) помпу і підтвердьте в AAPS, що ви їх прийняли. Переконайтеся, що ці зміни базалу видно в **AAPS** і в **Nightscout**.
+- За потреби використовуйте [**Тимчасові цілі**](../DailyLifeWithAaps/TempTargets.md). Після лікування гіпо використовуйте заздалегідь задану «тимчасову ціль Гіпо», щоб система не перекоригувала під час відскоку глюкози.
 - Якщо на цьому етапі ви ще в [простому режимі](#preferences-simple-mode), зараз, мабуть, добрий час його вимкнути.
 
-To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Крім того, мінімальний відсоток для рекомендованих змін базалу можна змінити налаштуванням «**Мінімальна зміна в режимі відкритої петлі**» в **Налаштування → Петля**. The higher the value, the fewer change notifications you will receive.
+To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Крім того, мінімальний відсоток для рекомендованих змін базалу можна змінити налаштуванням «**Мінімальна зміна в режимі відкритої петлі**» в **Налаштування → Петля**. Що більше значення, то менше сповіщень про зміни ви отримуватимете.
 
 ![Мінімальна зміна для запиту у відкритій петлі](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
@@ -104,7 +104,7 @@ To reduce the number of proposed basal rate changes while in Open Loop, you can 
 Не обов'язково виконувати кожну рекомендацію системи!
 ```
 (objectives-objective5)=
-## Objective 5: Understanding your open loop, including its temp basal recommendations
+## Завдання 5: Розуміння вашої відкритої петлі, включно з її рекомендаціями щодо тимчасового базалу
 
 У **Завданні 5** ви почнете розуміти, як визначаються рекомендації тимчасового базалу. Це включає [логіку визначення базалу](#aaps-screens-how-predictions-become-a-dosing-decision), аналіз впливу через спостереження за [лініями прогнозу на екрані **Огляд AAPS**](#aaps-screens-prediction-lines) (або в Nightscout) та перегляд детальних розрахунків на екрані плагіна **OpenAPS SMB** (**Конфігурація → APS → Відкрити плагін**).
 
@@ -126,7 +126,7 @@ To reduce the number of proposed basal rate changes while in Open Loop, you can 
 ![blank](../images/blank.png)
 
 (objectives-objective6)=
-## Objective 6: Starting to close the loop with Low Glucose Suspend
+## Завдання 6: Початок закритої петлі з призупиненням при низькій глюкозі (LGS)
 
 ![Знак попередження](../images/sign_warning.png)
 ```{admonition} Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
@@ -136,7 +136,7 @@ To reduce the number of proposed basal rate changes while in Open Loop, you can 
 
 У **Завданні 6** ви закриєте петлю й увімкнете режим **Зупинка базалу при низькому ГК** (LGS), поки [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) встановлено на нуль. Щоб виконати це **завдання**, ви маєте пробути в режимі LGS 5 днів. Використайте цей час, щоб перевірити, чи точні налаштування вашого **Профілю** і чи не спрацьовує LGS надто часто.
 
-Мінімальний час для виконання цього завдання: **5 днів**. This is a mandatory wait time. Ви не можете перейти до наступного **Завдання**, поки цей час не мине.
+Мінімальний час для виконання цього завдання: **5 днів**. Це обов'язковий час очікування. Ви не можете перейти до наступного **Завдання**, поки цей час не мине.
 
 Дуже важливо, щоб ваш поточний **Профіль** (базал, ISF, IC) був добре перевірений, перш ніж ви закриєте петлю в режимі **LGS**. Неправильні налаштування **Профілю** можуть призвести до гіпо, які доведеться лікувати вручну. Точний **Профіль** допоможе зменшити потребу лікувати низьку глюкозу протягом цих 5 днів.
 
@@ -153,17 +153,17 @@ To reduce the number of proposed basal rate changes while in Open Loop, you can 
 
 ![Приклад від'ємного IOB](../images/objectives/Objective6_negIOB.png)
 
-- Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
+- Задайте цільовий діапазон трохи вище, ніж зазвичай, просто для безпеки, щоб мати запас.
 - Увімкніть режим «Зупинка базалу при низькому ГК»: натисніть значок петлі на головному екрані й виберіть **Зупинка базалу при низькому ГК** як робочий режим.
-- Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
-- You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
+- Стежте за активними тимчасовими базалами за бірюзовим текстом базалу на екрані ОГЛЯД або за бірюзовим базалом на графіку ОГЛЯДУ.
+- Ви можете тимчасово бачити піки після лікування гіпо, бо базал не можна підвищити під час відскоку.
 
 (objectives-objective7)=
-## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
+## Завдання 7: Налаштування закритої петлі, підвищення maxIOB вище 0 та поступове зниження цілей ГК
 
 Щоб виконати **Завдання 7**, вам треба закрити петлю й підвищити [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). У **Завданні 6** **maxIOB** автоматично обнулювався через режим зупинки базалу при низькому ГК. Тепер це вже не так. **AAPS** почне використовувати задане вами значення maxIOB, щоб коригувати високу глюкозу. У [простому режимі](#preferences-simple-mode) **AAPS** задає maxIOB автоматично, і вам не потрібно його змінювати.
 
-Мінімальний час для виконання цього завдання: **1 день**. This is a mandatory wait time. Перейти до наступного **Завдання**, поки цей час не мине, неможливо.
+Мінімальний час для виконання цього завдання: **1 день**. Це обов'язковий час очікування. Перейти до наступного **Завдання**, поки цей час не мине, неможливо.
 
 - Виберіть **Закрита петля**: натисніть [значок петлі](#AapsScreens-loop-status) на головному екрані й виберіть **Закрита петля** як робочий режим. Залишайтеся в режимі **Закрита петля** протягом 1 дня.
 
@@ -173,7 +173,7 @@ To reduce the number of proposed basal rate changes while in Open Loop, you can 
 
 ![максимальний добовий базал](../images/MaxDailyBasal2.png)
 
-This recommendation should be seen as a starting point. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
+Цю рекомендацію варто сприймати як відправну точку. Якщо ви використовуєте це правило, але AAPS вводить забагато інсуліну, коли рівень глюкози росте, можливо, вам треба:
 * lower the "Max IOB for SMB" value;
 * перегляньте налаштування **Профілю**, змінюючи лише одну річ за раз.
 
@@ -182,11 +182,11 @@ This recommendation should be seen as a starting point. If you use this rule but
 Коли ви впевнено знатимете, яке значення **maxIOB** підходить для вашої петлі, знизьте **цілі ГК** до бажаного рівня.
 
 (objectives-objective8)=
-## Objective 8: Adjust basals and ratios if needed, and then enable Autosens
+## Завдання 8: За потреби відкоригуйте базальні подачі та коефіцієнти, а потім увімкніть Autosens
 
 У цьому **завданні** ви знову оціните, як працює ваш **Профіль**, і використаєте функцію [Autosens](#Open-APS-features-autosens) як індикатор неправильних налаштувань.
 
-Мінімальний час для виконання цього завдання: **7 днів**. This is a mandatory wait time. Перейти до наступного **Завдання**, поки цей час не мине, неможливо.
+Мінімальний час для виконання цього завдання: **7 днів**. Це обов'язковий час очікування. Перейти до наступного **Завдання**, поки цей час не мине, неможливо.
 
 Увімкніть [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) на 7 днів (у [простому режимі](#preferences-simple-mode) він увімкнений за замовчуванням) і стежте за [білою лінією на графіку екрана **Огляд**](#AapsScreens-section-g-additional-graphs), яка показує, як ваша чутливість до інсуліну зростає або падає через фізичне навантаження, гормони тощо. Стежте за екраном плагіна **OpenAPS SMB** (**Конфігурація → APS → Відкрити плагін**), де видно, як **AAPS** відповідно змінює чутливість, базал і цілі.
 
@@ -195,11 +195,11 @@ This recommendation should be seen as a starting point. If you use this rule but
 Крім того, можна разово скористатися [Autotune](#autotune-how-autotune-calculates-adjustments), щоб перевірити, чи ваш базал усе ще точний, або провести звичайний тест базалу.
 
 (objectives-objective9)=
-## Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+## Завдання 9: Увімкнення додаткових функцій oref1 для денного використання, таких як супермікроболюс (SMB)
 
-У **Завданні 9** ви освоїте та почнете використовувати **«Super Micro Bolus (SMB)»** як одну з основних функцій. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, and why basal is set to zero temporarily after SMBs are given (zero-temping).
+У **Завданні 9** ви освоїте та почнете використовувати **«Super Micro Bolus (SMB)»** як одну з основних функцій. Опрацювавши обов'язкові матеріали, ви добре зрозумієте, що таке SMB, як вони працюють і чому після SMB базал тимчасово встановлюється на нуль (нульовий тимчасовий базал).
 
-Мінімальний час для виконання цього завдання: **28 днів**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+Мінімальний час для виконання цього завдання: **28 днів**. Це обов'язковий час очікування. Ви не можете перейти до наступного завдання, доки не мине цей час.
 
 - [Розділ про SMB у цій документації](#Open-APS-features-super-micro-bolus-smb) та [опис oref1 у документації openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) обов'язково прочитайте, щоб зрозуміти **SMB** і поняття **нульового тимчасового базалу (zero-temping)**.
 - Після цього можна [підвищити maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over), щоб **SMB** працювали ефективніше. Тепер maxIOB включає весь **IOB**, а не лише накопичений базал. Цей поріг призупиняє **SMB**, доки IOB не опуститься нижче цього значення (_наприклад_, **maxIOB** встановлено на 7 Од, і на їжу введено болюс 8 Од: SMB будуть призупинені й не вводитимуться, доки **IOB** не опуститься нижче 7 Од). Добрий початок — встановити **maxIOB** = **середній болюс на їжу + 3 × максимальний добовий базал**, де «максимальний добовий базал» — це найбільше погодинне значення в будь-якому часовому відрізку доби. See [objective 7](#objectives-objective7) as reference.
@@ -210,7 +210,7 @@ This recommendation should be seen as a starting point. If you use this rule but
 
 **Автоматизація** стає доступною, коли розпочато **Завдання 10**.
 
-Мінімальний час для виконання цього завдання: **28 днів**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+Мінімальний час для виконання цього завдання: **28 днів**. Це обов'язковий час очікування. Ви не можете перейти до наступного завдання, доки не мине цей час.
 
 Спершу прочитайте сторінку документації [Автоматизація](../DailyLifeWithAaps/Automations.md).
 
@@ -224,11 +224,11 @@ This recommendation should be seen as a starting point. If you use this rule but
 - У розділі **Дія** торкніться «**ДОД**» і виберіть «**Сповіщення**».
   - Введіть повідомлення в картці дії, наприклад «Моя перша автоматизація».
 - Торкніться значка **Зберегти** (вгорі праворуч) і переконайтеся, що правило **Увімкнено**.
-- Wait until the time triggers the notification (note that depending on your phone, it can be a few minutes late)
+- Зачекайте, доки час не запустить сповіщення (залежно від телефону воно може запізнитися на кілька хвилин)
 
 Потім можете спробувати налаштувати кориснішу **Автоматизацію**. На сторінці документації є кілька прикладів, а в групі [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) можна пошукати знімки екрана за словом "Automation". Також є окремий канал у спільноті [Discord](https://discord.gg/4fQUWHZ4Mw).
 
-Наприклад, якщо щоранку перед школою чи роботою ви в той самий час їсте той самий сніданок, можна створити **Автоматизацію**, наприклад «ціль-перед-сніданком», яка за 30 хвилин до сніданку встановить трохи нижчу **Тимчасову ціль**. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
+Наприклад, якщо щоранку перед школою чи роботою ви в той самий час їсте той самий сніданок, можна створити **Автоматизацію**, наприклад «ціль-перед-сніданком», яка за 30 хвилин до сніданку встановить трохи нижчу **Тимчасову ціль**. У такому випадку ваша умова, ймовірно, міститиме «Повторюваний час», тобто вибрані дні тижня (понеділок, вівторок, середа, четвер, п'ятниця) і певний час (06:30). Дія буде «Запустити тимчасову ціль» з нижчим, ніж зазвичай, значенням цілі та тривалістю 30 хвилин.
 
 ## Коли всі завдання виконано
 
@@ -241,10 +241,10 @@ This recommendation should be seen as a starting point. If you use this rule but
 ![Подробиці виконаного завдання](../images/objectives/objective_1_details.png)
 
 (CompletingTheObjectives-go-back-in-objectives)=
-## Go back in objectives
+## Повернення до попередніх завдань
 
 Якщо з якоїсь причини ви хочете повернутися назад у **Завданнях**, відкрийте завершене **Завдання** через «**Більше**» і торкніться «**Скинути стан «завершено»**»:
 
-![Go back in objectives](../images/objectives/Objective_ClearFinished.png)
+![Повернення до попередніх завдань](../images/objectives/Objective_ClearFinished.png)
 
 Так само **Завдання**, над яким ви зараз працюєте, можна почати знову через «**Скинути стан «розпочато»**».
