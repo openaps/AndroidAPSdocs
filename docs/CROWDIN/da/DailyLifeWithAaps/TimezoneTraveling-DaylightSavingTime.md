@@ -1,134 +1,134 @@
-# Timezone Change and Daylight Saving
+# Skift af tidszone og sommertid
 
-When the time zone of your phone changes, **AAPS** calculates **IOB**, basal and sensitivity for the past again from scratch, about 10 seconds after the change. While this runs, the graphs and values on the main screen may take a moment to update.
+Når tidszonen på din telefon ændres, beregner **AAPS** **IOB**, basal og følsomhed for fortiden helt forfra, ca. 10 sekunder efter ændringen. Mens det kører, kan det tage et øjeblik, før graferne og værdierne på hovedskærmen bliver opdateret.
 
 (timezone-traveling-with-pumps)=
 
-## Timezone change for Omnipod Dash
+## Skift af tidszone for Omnipod Dash
 
-* Refresh the pump status in **Manage → Pump**
-* Temporarily select a different **Profile** and then switch back to your original or desired **Profile**
+* Opdater pumpestatus i **Administrer → Pumpe**
+* Vælg midlertidigt en anden **profil**, og skift så tilbage til din oprindelige eller ønskede **profil**
 
-## Timezone change for DanaR, Korean DanaR
+## Skift af tidszone for DanaR, koreansk DanaR
 
-There is no issue with changing timezone in phone because pump doesn't use history
+Det er ikke et problem at skifte tidszone på telefonen, fordi pumpen ikke bruger historik
 
 (timezone-traveling-danarv2-danars)=
 
-## Timezone change for DanaRv2, DanaRS, Dana-i
+## Skift af tidszone for DanaRv2, DanaRS, Dana-i
 
-These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
+Disse pumper kræver særlig omhu, fordi **AAPS** bruger historikken fra pumpen, men posterne i pumpen har ikke noget tidszonestempel. **Det betyder, at hvis du skifter tidszone på din telefon, bliver posterne læst med en anden tidszone og bliver dobbelte.**
 
-To avoid this there are two possibilities:
+For at undgå dette er der to muligheder:
 
-### Option 1: Keep home time and timeshift profile
+### Mulighed 1: Behold hjemmetiden, og lav tidsforskydning på profilen
 
-* Turn off 'Automatic date and time' in your phone's settings (manual time zone change).
+* Slå »Automatisk dato og tid« (Automatic date and time) fra i telefonens indstillinger (manuelt skift af tidszone).
 
-* Your phone must keep your standard time as at home for the whole travel period.
+* Din telefon skal beholde din normale tid hjemmefra i hele rejseperioden.
 
-* Time-shift your **Profile** according to time difference between home time and destination time.
+* Lav tidsforskydning på din **profil** efter tidsforskellen mellem hjemmetiden og tiden på rejsemålet.
    
-   * Tap the **Profile** name on the main screen to open the [Profile screen](#ProfileSwitch-manage-v4)
-   * Select your **Profile** and tap **▶ Activate**
-   * Set '**Time shift**' according to your destination and tap **Activate**.
+   * Tryk på **profilnavnet** på hovedskærmen for at åbne [profilskærmen](#ProfileSwitch-manage-v4)
+   * Vælg din **profil**, og tryk på **▶ Aktiver**
+   * Indstil »**Tidsforskydning**« efter dit rejsemål, og tryk på **Aktiver**.
    
-   ![Profile switch with time shift](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
+   ![Profilskift med tidsforskydning](../images/v4/Profiles/ProfileSwitchTimeShift2.png)
    
-   * e.g. Vienna -> New York: **Profile Switch** +6 hours
-   * e.g. Vienna -> Sydney: **Profile Switch** -8 hours
+   * f.eks. Wien -> New York: **Profilskift** +6 timer
+   * f.eks. Wien -> Sydney: **Profilskift** -8 timer
 
-### Option 2: Delete pump history
+### Mulighed 2: Slet pumpehistorikken
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+* Slå »Automatisk dato og tid« (Automatic date and time) fra i telefonens indstillinger (manuelt skift af tidszone)
 
-When you get off the plane:
+Når du står af flyet:
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
-* clear history in pump
-* change time in pump
-* turn on phone
-* let phone connect to the pump and fine-tune time
+* sluk pumpen
+* skift tidszone på telefonen
+* sluk telefonen, tænd pumpen
+* ryd historikken i pumpen
+* skift tiden i pumpen
+* tænd telefonen
+* lad telefonen forbinde til pumpen og finjustere tiden
 
 (timezone-traveling-insight)=
 
-## Timezone Change for Insight
+## Skift af tidszone for Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Driveren tilpasser automatisk pumpens tid til telefonens tid.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in **AAPS** despite the time change.
+Insight gemmer også historikposter om, hvornår tiden blev ændret, og fra hvilken (gammel) tid til hvilken (ny) tid. Så kan det korrekte tidspunkt bestemmes i **AAPS** trods tidsskiftet.
 
-It may cause inaccuracies in the **TDDs**. But it shouldn't be a problem.
+Det kan give unøjagtigheder i **TDD**. Men det burde ikke være et problem.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+Så Insight-brugeren behøver ikke bekymre sig om skift af tidszone og tid. Der er én undtagelse fra denne regel: Insight-pumpen har et lille indbygget batteri, der holder tiden osv. i gang, mens du skifter det »rigtige« batteri. Hvis batteriskiftet tager for lang tid, løber dette indbyggede batteri tør for strøm, uret nulstilles, og du bliver bedt om at indtaste tid og dato, når du har sat et nyt batteri i. I så fald springer AAPS alle poster fra før batteriskiftet over i beregningen, da det korrekte tidspunkt ikke kan bestemmes sikkert.
 
-## Timezone Change for Accu-Chek Combo
+## Skift af tidszone for Accu-Chek Combo
 
-The [Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+[Combo-driveren](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) tilpasser automatisk pumpens tid til telefonens tid. Combo kan ikke gemme tidszoner, kun lokal tid, og det er præcis det, driveren programmerer ind i pumpen. Derudover gemmer den tidszonen i de lokale AAPS-indstillinger, så den kan omregne pumpens lokale tid til et fuldt tidsstempel med tidszoneforskydning. Brugeren behøver ikke gøre noget; hvis tiden på Combo afviger for meget fra telefonens aktuelle tid, bliver pumpens tid tilpasset automatisk.
 
-Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
+Bemærk dog, at det tager noget tid, da det kun kan gøres i fjernterminal-tilstanden, som generelt er langsom. Det er en begrænsning i Combo, som ikke kan løses.
 
-## Timezone Change for Medtrum
+## Skift af tidszone for Medtrum
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Driveren tilpasser automatisk pumpens tid til telefonens tid.
 
-Time zone changes keep the history intact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and **IOB**. If you change time manually double check the **IOB**.
+Skift af tidszone bevarer historikken; kun TDD kan blive påvirket. Hvis du skifter tiden manuelt på telefonen, kan det give problemer med historikken og **IOB**. Hvis du skifter tiden manuelt, så kontroller **IOB** en ekstra gang.
 
-When the time zone or time changes running **TBRs** are stopped.
+Når tidszonen eller tiden ændres, bliver aktive **TBR** stoppet.
 
 (time-adjustment-daylight-savings-time-dst)=
 
-## DAYLIGHT SAVING (DST)
+## SOMMERTID (DST)
 
-Time adjustment for daylight savings time.
+Tidsjustering ved sommertid.
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. For some pumps it is better to make time zone adjustments while awake before DST takes place and not during the night.
+Afhængigt af din pumpe og CGM-opsætning kan spring i tiden give problemer, så **AAPS** ikke virker korrekt. For nogle pumper er det bedre at justere tidszonen, mens du er vågen før skiftet til sommertid, og ikke om natten.
 
-### DST automatic adjustment for most pumps
+### Automatisk tilpasning til sommertid for de fleste pumper
 
-* However, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
-* After DST has taken place, make a **Profile Switch** to the desired **Profile** to enable the **Loop**: tap the profile name on the main screen, then the round **▶** button (see [Activating a profile](#ProfileSwitch-manage-v4)).
-* You will also receive a notification on **AAPS** main screen prior to DST change that the **Loop** has been disabled temporarily. This message will appear without beep, vibration or similar sound.
+* Men **loopet** bliver deaktiveret i 3 timer EFTER skiftet til sommertid (normalt fra kl. 1), og **AAPS** går tilbage til baggrundsbasal som valgt i din **profil**. Det sker af sikkerhedsgrunde – **IOB** kan være for høj på grund af dobbelt bolus fra før skiftet til sommertid.
+* Efter skiftet til sommertid laver du et **profilskift** til den ønskede **profil** for at aktivere **loopet**: tryk på profilnavnet på hovedskærmen og derefter på den runde knap **▶** (se [Aktivering af en profil](#ProfileSwitch-manage-v4)).
+* Du får også en notifikation på **AAPS**-hovedskærmen før skiftet til sommertid om, at **loopet** er midlertidigt deaktiveret. Denne besked vises uden bip, vibration eller lignende lyd.
 
-If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
+Hvis du giver bolus med **AAPS'** beregner, så brug ikke **COB**- og **IOB**-data, medmindre du er sikker på, at disse data er helt korrekte. Vær forsigtig, og brug ikke denne funktion i et par timer efter skiftet til sommertid.
 
-### DST for Accu-Chek Insight
+### Sommertid for Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* Skiftet til sommertid sker automatisk. Du skal ikke gøre noget.
 
-### DST for Accu-Chek Combo
+### Sommertid for Accu-Chek Combo
 
-* Change to DST is done automatically. No action required.
+* Skiftet til sommertid sker automatisk. Du skal ikke gøre noget.
 
-### DST for Medtrum
+### Sommertid for Medtrum
 
-* Change to DST is done automatically. No action required.
+* Skiftet til sommertid sker automatisk. Du skal ikke gøre noget.
 
-### DST for Omnipod Dash
+### Sommertid for Omnipod Dash
 
-* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. NOTE THIS OPTION MAY CAUSE YOUR POD TO PREMATURELY EXPIRE. PLEASE HAVE SUPPLIES WITH YOU IF OPTING FOR THE FEATURE BELOW.
+* Enten lader du **AAPS** midlertidigt gå tilbage til baggrundsbasal efter skiftet til sommertid, som forklaret ovenfor.
+* Ellers, hvis du ikke vil have, at **AAPS** midlertidigt går tilbage til baggrundsbasal om natten, kan du skifte tidszone dagen før skiftet til sommertid for at undgå forstyrrelser om natten. BEMÆRK: DENNE MULIGHED KAN FÅ DIN POD TIL AT UDLØBE FOR TIDLIGT. HAV TILBEHØR MED DIG, HVIS DU VÆLGER FUNKTIONEN NEDENFOR.
 
-#### Actions to take before the clock change
+#### Det skal du gøre før tidsskiftet
 
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a desired time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
+1. Slå alle telefonindstillinger FRA, der automatisk indstiller telefonens tidszone, så brugeren kan skifte til en ønsket tidszone, der ikke bruger sommertid. Hvordan du slår det til, afhænger af din smartphone og Android-version.
    
-   * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF: **Set automatically** under **Time zone** in the screenshot below).
-   * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+   * Nogle telefoner har to indstillinger: én til automatisk indstilling af tiden (som helst skal forblive slået til) og én til automatisk indstilling af tidszonen (som du skal slå FRA: **Indstil automatisk** under **Tidszone** på skærmbilledet nedenfor).
+   * Desværre har nogle Android-versioner kun én kontakt til automatisk indstilling af både tid og tidszone. Du skal slå dette fra indtil videre.
 
 ![Screenshot_20260329-110315 (1)](../images/android_date_time_automatic.png)
 
-2. Find a timezone that has the same time as your current location but doesn't use DST.
+2. Find en tidszone, der har samme tid som dit nuværende sted, men ikke bruger sommertid.
    
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Congo). Change your phone's timezone to Congo.
+   * En liste over disse lande findes på [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * For centraleuropæisk tid (CET) kan det være »Brazzaville« (Congo). Skift telefonens tidszone til Congo.
 
 ![Screenshot_20260329-111830](../images/android_date_time_manual.png)
 
-3. In **AAPS** refresh your pump and switch to your desired **Profile**.
+3. Opdater din pumpe i **AAPS**, og skift til din ønskede **profil**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
+4. Kontroller **IOB** og **COB** i **AAPS**, og hvis de er unøjagtige, så deaktiver **loopet** i mindst én DIA eller den maksimale absorptionstid for kulhydrater (**Maks. absorptionstid**), alt efter hvad der er længst.
 
-5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
+5. Det skal du gøre efter tidsskiftet. Et godt tidspunkt at skifte tilbage til den lokale tidszone er, når **IOB** er lav. F.eks. en time før et måltid, som f.eks. morgenmad. Helst skal både din **COB** og din **IOB** være tæt på nul.
