@@ -1,222 +1,222 @@
-# How to edit the docs
+# Com editar la documentació
 
-**This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+**Aquesta descripció només serveix per editar la documentació en anglès. Tota la informació nova s'ha d'afegir primer en anglès. Si voleu traduir a altres idiomes (gràcies), feu servir [Crowdin](https://crowdin.com/project/androidapsdocs).**
 
 For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
 
 ## General
 
-For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
+Per a qualsevol pregunta, comentari o idea nova, podeu contactar amb l'equip de documentació a [Discord](https://discord.gg/4fQUWHZ4Mw).
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+En algun moment us proposaran que feu una pull request (PR). Així és com els vostres canvis a la documentació arriben de debò a les pàgines web d'AAPS, que es desen a GitHub. De fet, fer una PR no és gaire difícil i és una molt bona manera de col·laborar. Ara mateix esteu llegint aquesta documentació perquè persones com vosaltres han fet PR. No us preocupeu per fer un error o per editar els documents equivocats. Els vostres canvis es revisen abans de fusionar-los amb el repositori "oficial" de la documentació d'AAPS. No podeu fer malbé els originals per cap error durant el procés. El procés general és:
 
-- Make edits and improvements to code or documentation by editing the existing content.
-- Double-check that your edits look good to you.
-- Make a few notes of what's changed so people may understand the edits.
-- Create a pull request, which asks the administrators to use your changes.
-- They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+- Feu canvis i millores al codi o a la documentació editant el contingut que ja existeix.
+- Comproveu bé que els vostres canvis us semblen correctes.
+- Escriviu unes quantes notes sobre què ha canviat perquè la gent pugui entendre els canvis.
+- Creeu una pull request, que demana als administradors que facin servir els vostres canvis.
+- Ells la revisaran i (1) fusionaran els vostres canvis, (2) us escriuran un comentari sobre els vostres canvis, o (3) començaran un document nou amb els vostres canvis.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Nota: si apreneu millor amb imatges, hi ha un vídeo de YouTube [aquí](https://youtu.be/4b6tsL0_kzg) que mostra el procés d'una PR.)
 
-For our example we are going to make an edit to AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+Com a exemple, farem un canvi a AndroidAPSdocs. Això es pot fer en qualsevol ordinador Windows, Mac, etc. (qualsevol ordinador amb accés a Internet).
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. Aneu a <https://github.com/openaps/AndroidAPSdocs> i premeu Fork a la part superior dreta per fer la vostra pròpia còpia del repositori.
 
-![Fork repo](../images/docs_pr_fork_repository.png)
+![Fer un fork del repositori](../images/docs_pr_fork_repository.png)
 
-2. Go to any page and navigate to the page you want to edit. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. Aneu a qualsevol pàgina i navegueu fins a la pàgina que voleu editar. Podeu fer clic a l'enllaç "Edit in GitHub" a la cantonada superior dreta. Això només és possible a les pàgines en anglès. 
 
-![edit doc](../images/docs_pr_edit_on_github.png)
+![Editar el document](../images/docs_pr_edit_on_github.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+O feu clic a la icona del llapis que apareix a la barra superior del contingut de la pàgina que voleu editar. Per fer-ho, cal que ja hàgiu iniciat la sessió al vostre compte de GitHub (si no en teniu cap, és fàcil crear-ne un).
 
 ![RTD io](../images/docs_pr_pencil_icon.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. Qualsevol de les dues opcions del pas 2 crearà una branca nova al VOSTRE repositori, on es desaran els vostres canvis. Feu els vostres canvis al fitxer.
 
-We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+Fem servir markdown per a les pàgines de la documentació. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
-![Edit branch](../images/docs_pr_edit_file.png)
+![Editar la branca](../images/docs_pr_edit_file.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. Heu estat treballant a la pestanya "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Si veieu que cal alguna millora, torneu a la pestanya d'edició per fer més millores. 
 
-![preview mode](../images/docs_pr_preview_changes.png)
+![mode de previsualització](../images/docs_pr_preview_changes.png)
 
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
+5. Quan hàgiu acabat els canvis, desplaceu-vos fins a la part inferior de la pàgina. Al quadre de la part inferior, escriviu els vostres comentaris al camp de text que diu "Add an optional extended description...". El títol per defecte conté el nom del fitxer. Intenteu afegir una frase que expliqui el **motiu** del canvi. Explicar el motiu ajuda els revisors a entendre què voleu fer amb la PR.
 
-![commit comments](../images/docs_pr_commit_description.png)
+![comentaris del commit](../images/docs_pr_commit_description.png)
 
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
+6. Feu clic al botó verd "Propose file changes" o "Commit changes". A la pàgina que apareix, feu clic a "Create Pull Request" i, a la pàgina següent, torneu a fer clic a "Create Pull Request".
 
-![create pull request](../images/docs_pr_create_pull_request.png)
+![crear una pull request](../images/docs_pr_create_pull_request.png)
 
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
+7. Amb això heu obert una pull request (PR). GitHub dona un número a la PR, que es troba després del títol i d'un símbol #. Torneu a aquesta pàgina per veure si hi ha comentaris (o, si rebeu les notificacions de GitHub per correu electrònic, rebreu correus que us avisaran de qualsevol activitat a la PR). Ara el canvi serà a la llista de PR que l'equip revisarà i potser comentarà abans d'afegir-lo a la documentació principal d'AAPS! Si voleu veure com avança la PR, podeu fer clic a la icona de la campana a la cantonada superior dreta del vostre compte de GitHub i veure totes les vostres PR.
 
-![PR tracking](../images/docs_pr_tracking.png)
+![Seguiment de la PR](../images/docs_pr_tracking.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+PD: El vostre fork i la vostra branca es quedaran al vostre compte personal de GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Per a canvis futurs, si seguiu aquest procediment, els canvis sempre començaran amb una versió actualitzada dels repositoris d'AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Com que la gent sovint s'oblida d'actualitzar els seus repositoris, us recomanem que feu servir el procés de PR descrit més amunt fins que estigueu familiaritzats amb les comparacions ("compares").
 
 (edit-the-docs-code-syntax)=
 
-## Code syntax
+## Sintaxi del codi
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+Fem servir markdown per a les pàgines de la documentació. Els fitxers tenen l'extensió ".md".
 
-Markdown is a very simple text formatting language which separates text content from text formatting.
+Markdown és un llenguatge molt senzill per donar format al text, que separa el contingut del text del seu format.
 
-The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
+Qui escriu només marca, per exemple, un títol com a títol de nivell 1, i el processador de markdown genera el codi HTML necessari per mostrar el títol en HTML.
 
-The idea behind this is that
+La idea és que
 
-- the writer should think about the text and not the formatting first,
+- qui escriu ha de pensar primer en el text i no en el format,
 - the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
-- you can generate several output formats from one markdown file.
+- es poden generar diversos formats de sortida a partir d'un sol fitxer markdown.
 
-Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
+Markdown no és un estàndard 100% fix, i intentem mantenir-nos tan a prop de l'estàndard com sigui possible per
 
-- stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+- podem seguir sent flexibles per canviar d'eines de markdown quan calgui o quan ho imposi l'evolució de les eines i dels serveis SaaS de markdown, i
+- poder fer servir serveis de traducció per traduir l'anglès a un altre idioma, com el francès o l'alemany. Aquests serveis funcionen amb markdown, però no amb codis de format complexos, perquè no poden separar el contingut del disseny, cosa que podria ser greu.
 
-### Headlines
+### Títols
 
-- Headline 1: `# headline`
-- Headline 2: `## headline`
-- Headline 3: `### headline`
-- Headline 4: `#### headline`
+- Títol 1: `# headline`
+- Títol 2: `## headline`
+- Títol 3: `### headline`
+- Títol 4: `#### headline`
 
-We try to avoid further levels of headlines.
+Intentem evitar més nivells de títols.
 
-### Text format
+### Format del text
 
-- **bold**: `**text**`
-- *italic*: `*text*`
-- ***bold italic***: `***text***`
+- **negreta**: `**text**`
+- *cursiva*: `*text*`
+- ***negreta i cursiva***: `***text***`
 
-### Ordered list
+### Llista numerada
 
-    1. first
-    1. second
-    1. third
+    1. primer
+    1. segon
+    1. tercer
     
 
-1. first
-2. second
-3. third
+1. primer
+2. segon
+3. tercer
 
-### Unordered list
+### Llista sense numerar
 
-    - one element
-    - another element
-    - and another element
+    - un element
+    - un altre element
+    - i un altre element
     
 
-- one element
-- another element
-- and another element
+- un element
+- un altre element
+- i un altre element
 
-### Multi level list
+### Llista de diversos nivells
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+Podeu posar llistes dins de llistes si sagneu el nivell següent 4 espais més a la dreta que l'anterior.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
-    1. six
+    1. primer
+    1. segon
+    1. tercer
+      1. un element
+      1. un altre element
+      1. i un altre element
+    1. quatre
+    1. cinc
+    1. sis
     
 
-1. first
-2. second
-3. third 
-    1. one element
-    2. another element
-    3. and another element
-4. four
-5. five
-6. six
+1. primer
+2. segon
+3. tercer 
+    1. un element
+    2. un altre element
+    3. i un altre element
+4. quatre
+5. cinc
+6. sis
 
-### Images
+### Imatges
 
-To include images you use this markdown syntax.
+Per incloure imatges, feu servir aquesta sintaxi de markdown.
 
-- images: `![alt text](../images/file.png)`
+- imatges: `![alt text](../images/file.png)`
 
-The type of image should be PNG or JPEG.
+El tipus d'imatge ha de ser PNG o JPEG.
 
-Image names should conform to one of the following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Image names should conform to one of the following naming rules. A l'exemple faig servir png com a extensió. Si feu servir JPEG, feu servir jpeg com a extensió.
 
-- `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
+- `filename-image-xx.png` on xx és un número únic de dues xifres per a les imatges d'aquest fitxer.
 - `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+Les imatges són a la carpeta images per a l'anglès, i Crowdin les copia automàticament als altres idiomes. No cal que feu res per a això!
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+Ara mateix no traduïm les imatges: les imatges han de tenir el **mínim text possible** perquè les puguin entendre els lectors que no parlen anglès.
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+(make-a-PR-image-size)= Feu servir una mida raonable per a les imatges, que s'han de poder llegir en un ordinador, una tauleta i un mòbil.
 
-- Screenshots from web pages images should be up to **1050 pixels wide**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
+- Les captures de pantalla de pàgines web han de tenir com a màxim **1050 píxels d'amplada**.
+- Els diagrames de processos han de tenir com a màxim **1050 píxels d'amplada**.
+- Les captures de pantalla de l'aplicació han de tenir com a màxim **500 píxels d'amplada**. No les poseu una al costat de l'altra si no cal.
 - Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
 
-### Links
+### Enllaços
 
-#### External links
+#### Enllaços externs
 
-External links are links to external web sites.
+Els enllaços externs són enllaços a llocs web externs.
 
-- external link: `[alt text](www.url.tld)`
+- enllaç extern: `[alt text](www.url.tld)`
 
-#### Internal links to the start of a md file
+#### Enllaços interns a l'inici d'un fitxer md
 
-Internal links to pages are links to the start of a md file which is hosted on our own server.
+Els enllaços interns a pàgines són enllaços a l'inici d'un fitxer md que és al nostre propi servidor.
 
-- internal link to .md page: `[alt text](../folder/file.md)`
+- enllaç intern a una pàgina .md: `[alt text](../folder/file.md)`
 
-#### Internal links to named inline references
+#### Enllaços interns a referències amb nom dins del text
 
-Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+Els enllaços interns a referències amb nom són enllaços a qualsevol punt d'un fitxer md que és al nostre propi servidor i on s'ha posat una referència per enllaçar-hi.
 
-Add a named reference at the location in the target md file you want to jump to.
+Afegiu una referència amb nom al lloc del fitxer md de destinació on voleu saltar.
 
 `(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+La referència amb nom ha de ser única en tots els fitxers md d'AndroidAPSDocs, i no només dins del seu propi fitxer md!
 
-Therefore it is a good practice to start with the filename and then the reference name you select.
+Per això és una bona pràctica començar amb el nom del fitxer i després el nom de referència que trieu.
 
-Use only lowercase letters and hyphenate words.
+Feu servir només minúscules i separeu les paraules amb guions.
 
-Then link this reference in the text you are writing with the following kind of link.
+Després, enllaceu aquesta referència al text que escriviu amb un enllaç d'aquest tipus.
 
-- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Enllaços interns a referències amb nom: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### Notes, avisos i notes plegables
 
-You can add notes and warning boxes to documentation.
+Podeu afegir quadres de nota i d'avís a la documentació.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Please use these carefully as the documentation should be as easy to read as possible.
+Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Feu-los servir amb compte, perquè la documentació ha de ser tan fàcil de llegir com sigui possible.
 
 #### Notes
 
     ```{admonition} Note headline
     :class: note
-    This is a note.
+    Això és una nota.
     ```
     
 
-```{admonition} Note headline :class: note This is a note.
+```{admonition} Note headline :class: note Això és una nota.
 
-    <br />#### Warnings
+    <br />#### Avisos
     
     ````
     ```{admonition} Warning
     :class: warning
-    This is a warning.
+    Això és un avís.
     
 
     ```{admonition} Warning headline
@@ -224,342 +224,342 @@ Furthermore you can add collapsing notes for detailed information, so that users
     This is a warning.
     ```
     
-    #### Collapsing Notes
+    #### Notes plegables
     
     
 
     {admonition} further detailed readings for interested readers
     :class: dropdown
     
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
+    Aquest quadre està plegat,
+    això vol dir que hi podeu posar contingut més llarg,
+    sense que ocupi massa espai a la pàgina.
     
 
 ````
 
-```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
+```{admonition} further detailed readings for interested readers :class: dropdown Aquest quadre està plegat, això vol dir que hi podeu posar contingut més llarg, sense que ocupi massa espai a la pàgina.
 
 ```
 
-## Tables
+## Taules
 
 Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
 
-## Style Guide
+## Guia d'estil
 
-### Contents
+### Continguts
 
-1. English language writing tips
+1. Consells per escriure en anglès
 
-2. AAPS-specific writing notes
+2. Notes d'escriptura específiques d'AAPS
 
-3. Useful references
+3. Referències útils
 
-### ![Image](../images/styleguide01.png) 1\. English language writing tips
+### ![Imatge](../images/styleguide01.png) 1\. Consells per escriure en anglès
 
-#### Use language that is appropriate for the reader
+#### Feu servir un llenguatge adequat per al lector
 
-Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
+Feu servir un anglès senzill sempre que pugueu. Això ajuda els lectors que no tenen l'anglès com a llengua materna i també facilita la traducció dels documents d'AAPS a altres idiomes. Escriviu com si parléssiu amb l'usuari: imagineu que esteu asseguts a l'altre costat de la taula de la persona per a qui escriviu. Recordeu que la majoria d'usuaris d'AAPS no tenen formació en programació. La diabetis també té moltes paraules tècniques i abreviatures. Tingueu en compte que algunes persones poden tenir un diagnòstic recent, poden tenir menys experiència que vosaltres amb la diabetis o poden haver rebut una formació diferent sobre la diabetis. Si feu servir una forma curta o una abreviatura, escriviu-la sencera la primera vegada que la feu servir i poseu l'abreviatura just després entre parèntesis, per exemple «super micro bolus (SMB)». També enllaceu-la al glossari. També podeu afegir entre parèntesis els termes tècnics que el lector potser no coneix.
 
 Instead of: *“What causes high postprandial BG peaks in closed loop?”*
 
 Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
-##### Use plain words that everyone can understand
+##### Feu servir paraules senzilles que tothom pugui entendre
 
-Find an A-Z of alternative words to make your writing easier to understand here:
+Trobareu aquí una llista de l'A a la Z de paraules alternatives per fer que el vostre text sigui més fàcil d'entendre:
 
 <https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
 
-#### Privacy/licensing concerns:
+#### Privacitat i llicències:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Sobretot si graveu vídeos o feu captures de pantalla, assegureu-vos de no mostrar les vostres dades privades (clau API, contrasenyes). Assegureu-vos que el contingut de YouTube no és públic a les llistes i que només es pot veure amb un enllaç des de la documentació. No crideu l'atenció sobre materials que infringeixen drets d'autor (BYODA, etc.).
 
-#### Keep sentences short, get to the point
+#### Feu frases curtes i aneu al gra
 
-- Clear writing should have an average sentence length of 15 to 20 words.
+- Un text clar té frases de 15 a 20 paraules de mitjana.
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- Això no vol dir que totes les frases hagin de tenir la mateixa llargada. Sigueu directes. Varieu el text barrejant frases curtes (com l'anterior) amb frases més llargues (com aquesta).
 
-- Stick to one main idea in a sentence, plus perhaps one other related point.
+- Poseu una sola idea principal a cada frase, i potser un altre punt relacionat.
 
-- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way.
+- És possible que de tant en tant escriviu alguna frase llarga, sobretot quan intenteu explicar una cosa complicada. Però la majoria de frases llargues es poden dividir d'alguna manera.
 
-- Remove weak words: “you can”, “there is/are/were”, “in order to”.
+- Traieu les paraules febles: “you can” (podeu), “there is/are/were” (hi ha/hi havia), “in order to” (per tal de).
 
-- Place keywords near the beginning of titles, sentences and paragraphs.
+- Poseu les paraules clau a prop de l'inici dels títols, de les frases i dels paràgrafs.
 
-- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+- Sigueu visuals! Sempre que pugueu, afegiu un diagrama breu, una captura de pantalla o un vídeo.
 
-#### Don't be afraid to give instructions
+#### No tingueu por de donar instruccions
 
-Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
+Les ordres són la manera més ràpida de donar instruccions, però de vegades qui escriu té por de donar ordres i escriu “hauríeu de fer això” en lloc de simplement “feu això”. Potser hi ha qui pensa que les ordres sonen massa dures. Sovint ho podeu resoldre posant davant la paraula «si us plau». Però si una cosa s'ha de fer sí o sí, és millor no dir «si us plau», perquè dona al lector l'opció de dir que no.
 
 Instead of: *“You should just think of it as a complete statement.”*
 
-Use: *“Think of it as a complete statement.”*
+Feu servir: *“Penseu-hi com en una frase completa.”*
 
-#### Mostly use active verbs, rather than passive verbs
+#### Feu servir sobretot verbs en veu activa, i no en veu passiva
 
-Example of an **active verb**:
+Exemple de **verb en veu activa**:
 
-- *“The pump (subject) delivers (verb) the insulin (object).”*
+- *“La bomba (subjecte) lliura (verb) la insulina (objecte).”*
 
-“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+Aquí, “lliura” és un verb en veu activa. La frase diu primer qui fa el lliurament i després què es lliura.
 
-Example of a **passive verb**:
+Exemple de **verb en veu passiva**:
 
 - *“The insulin (subject) is delivered (verb) by the pump (object).”*
 
-*“delivered”* is a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+*“delivered”* is a passive verb here. El subjecte i l'objecte han canviat de lloc, comparat amb la frase en veu activa. Hem hagut de fer la frase més llarga afegint “és” i “per la”. També penseu a començar amb el verb en veu activa.
 
-Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+En lloc de: *“Podeu connectar la vostra bomba amb el telèfon des del menú de la bomba d'AAPS, i hi ha diverses bombes disponibles que podeu connectar.”*
 
-Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
+Feu servir: *“Connecteu la bomba que vulgueu al telèfon des del menú de la bomba d'AAPS.”*
 
-Passive verbs can cause problems:
+Els verbs en veu passiva poden causar problemes:
 
-- They can be confusing.
+- Poden confondre.
 
-- They often make writing more long-winded.
+- Sovint fan el text més llarg del necessari.
 
-- They make writing less lively.
+- Fan el text menys viu.
 
-##### Good uses of passives
+##### Bons usos de la veu passiva
 
-There are times when it might be appropriate to use a passive.
+De vegades pot ser adequat fer servir la veu passiva.
 
-- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+- Per fer una cosa menys agressiva: «aquesta factura no ha estat pagada» (passiva) és més suau que «no heu pagat aquesta factura» (activa).
 
-- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+- Per evitar donar la culpa: «s'ha comès un error» (passiva) en lloc de «Heu comès un error» (activa).
 
-- When you don't know who or what the doer is - 'the England team has been picked'.
+- Quan no sabeu qui o què fa l'acció: «l'equip d'Anglaterra ha estat seleccionat».
 
-- If it simply sounds better.
+- Si simplement sona millor.
 
-#### Avoid nominalisations
+#### Eviteu les nominalitzacions
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
+Una nominalització és el nom d'una cosa que no és un objecte físic, com ara un procés, una tècnica o una emoció. Les nominalitzacions es formen a partir de verbs.
 
-For example:
+Per exemple:
 
-| Verb      | Nominalization |
-| --------- | -------------- |
-| complete  | completion     |
-| introduce | introduction   |
-| provide   | provision      |
-| fail      | failure        |
+| Verb         | Nominalització |
+| ------------ | -------------- |
+| completar    | compleció      |
+| introduir    | introducció    |
+| proporcionar | provisió       |
+| fallar       | fallada        |
 
-They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+Sovint es fan servir **en lloc** dels verbs d'on vénen, però poden fer que sembli que no passa res de debò. Si n'hi ha massa, el text pot ser molt avorrit i pesat.
 
-Instead of: *“The implementation of the method has been done by a team.”*
+En lloc de: *“La implementació del mètode ha estat feta per un equip.”*
 
-Use: *“A team has implemented the method.”*
+Feu servir: *“Un equip ha implementat el mètode.”*
 
-#### Use lists where appropriate
+#### Feu servir llistes quan convingui
 
-Lists are excellent for splitting information up. There are two main types of list:
+Les llistes són excel·lents per dividir la informació. Hi ha dos tipus principals de llista:
 
-- A continuous sentence with several listed points picked out at the beginning, middle or end.
+- Una frase seguida amb diversos punts destacats al principi, al mig o al final.
 
-- Separate bullet points with an introductory statement.
+- Punts separats amb una frase d'introducció.
 
-In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+A la llista de punts de més amunt, cada punt és una frase completa, per això cada un comença amb majúscula i acaba amb punt. Feu servir punts en lloc de números o lletres, perquè criden l'atenció sobre cada punt sense donar informació extra que calgui processar.
 
-#### Mythbusting
+#### Falsos mites
 
-- You can start a sentence with **and, but, because, so or however**.
+- Podeu començar una frase amb **i, però, perquè, així que o tanmateix**.
 
-- You can split infinitives. So you can say **“to boldly go”**.
+- En anglès, podeu separar l'infinitiu (split infinitive). Així, podeu dir **“to boldly go”**.
 
-- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
+- En anglès, podeu acabar una frase amb una preposició. De fet, és una cosa **we should stand up for** (que hem de defensar).
 
-- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+- I **podeu** fer servir la mateixa **paraula** dues vegades en una frase si no **podeu** trobar una **paraula** millor.
 
-#### Optimizing writing style by purpose
+#### Adaptar l'estil d'escriptura a l'objectiu
 
-To keep the documentation clear and short, we write different sections of the documentation in different styles.
+Per mantenir la documentació clara i curta, escrivim les diferents seccions de la documentació en estils diferents.
 
-An “explanation” style is used for the introduction, background and knowledge development sections.
+L'estil d'“explicació” es fa servir per a les seccions d'introducció, de context i d'aprenentatge.
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+L'estil de “guia pràctica” (amb el mínim d'explicació) es fa servir per a la compilació, la configuració d'AAPS i algunes seccions de resolució de problemes.
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+Un tutorial ajuda l'alumne a aconseguir uns coneixements bàsics. L'usuari **aprendrà fent**.
 
-![Image](../images/styleguide02.png)
+![Imatge](../images/styleguide02.png)
 
-##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Imatge](../images/styleguide03.png) Tutorials (per exemple, ensenyar a un nen a muntar clares d'ou)
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- el narrador parla directament al lector: En aquest tutorial **aprendreu** a en alguns casos poc freqüents, es pot fer servir «nosaltres» per transmetre la idea de «fem això junts»
 
-- Future Tense -> to show the final target
+- Futur -> per mostrar l'objectiu final
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Imperatiu -> per fer les tasques -> passos concrets; eviteu els conceptes abstractes
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Passat -> per mostrar les tasques fetes -> resultats visibles, ràpids i immediats
 
-- Minimum Explanations -> strict necessary to complete the task - **what and why**
+- Explicacions mínimes -> només el necessari per completar la tasca: **què i per què**
 
-- Ignore options/alternatives/…. No ambiguity
+- No parleu d'opcions ni d'alternatives…. Sense ambigüitats
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Transicions entre passos: acabeu cada pas amb una frase que porti al pas següent de manera lògica. Exemple: *Ara heu instal·lat el client de Let’s Encrypt, però abans d'obtenir els certificats, heu d'assegurar-vos que tots els ports necessaris estan oberts. Per fer-ho, actualitzareu la configuració del tallafoc al pas següent.*
 
-- **Tutorial** Title (Level 1 heading)
+- Títol del **tutorial** (títol de nivell 1)
 
-- Introduction (no heading)
+- Introducció (sense títol)
 
-- Prerequisites (Level 2 heading)
+- Requisits previs (títol de nivell 2)
 
-- Steps:
+- Passos:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Pas 1 — Fer la primera cosa (títol de nivell 2)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Pas 2 — Fer la cosa següent (títol de nivell 2)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Pas n — Fer l'última cosa (títol de nivell 2)
 
-- Conclusion (Level 2 heading)
+- Conclusió (títol de nivell 2)
     
-    - **The Language of Tutorials**
+    - **El llenguatge dels tutorials**
         
-        *In this tutorial, you will…*
+        *En aquest tutorial, fareu…*
         
-        Describe what the learner will accomplish (note - not: “you will learn…”).
+        Descriviu què aconseguirà l'alumne (atenció: no «aprendreu…»).
         
-        *First, do x. Now, do y. Now that you have done y, do z.*
+        *Primer, feu x. Ara, feu y. Ara que heu fet y, feu z.*
         
-        No room for ambiguity or doubt.
+        No deixeu lloc per a l'ambigüitat ni el dubte.
         
-        *We must always do x before we do y because… (see Explanation for more details).*
+        *Sempre hem de fer x abans de fer y perquè… (vegeu l'explicació per a més detalls).*
         
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
+        Expliqueu les accions el mínim possible i amb el llenguatge més senzill possible. Enllaceu a una explicació més detallada.
         
-        *The output should look something like this…*
+        *El resultat hauria de ser semblant a això…*
         
-        Give your learner clear expectations.
+        Doneu a l'alumne unes expectatives clares.
         
-        *Notice that… Remember that…*
+        *Fixeu-vos que… Recordeu que…*
         
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
+        Doneu a l'alumne moltes pistes perquè pugui confirmar que va pel bon camí i orientar-se.
         
-        *You have built a secure, three-layer hylomorphic stasis engine…*
+        *Heu construït un motor d'estasi hilomòrfic segur de tres capes…*
         
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
+        Descriviu (i admireu, amb moderació) què ha aconseguit l'alumne (atenció: no «heu après…»)
 
-##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
+##### ![Imatge](../images/styleguide05.png) Guies pràctiques (per exemple, una recepta)
 
-A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
+L'objectiu d'una guia pràctica és ajudar un usuari que ja té coneixements a fer bé una tasca concreta.
 
-- HOW-to
+- COM FER-HO
 
 - narrator directly talks to the reader: In this guide **you** will
 
-- Future Tense -> to show the final target
+- Futur -> per mostrar l'objectiu final
 
-- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
+- Imperatiu condicional -> per obtenir X, feu Y -> passos concrets; eviteu els conceptes abstractes
 
-- Minimum Explanations -> strict necessary to complete the task -> **what and why**
+- Explicacions mínimes -> només el necessari per completar la tasca -> **què i per què**
 
-- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
+- No parleu d'opcions ni d'alternatives…. Sense ambigüitats, però podeu enllaçar a l'entrada de referència o d'explicació
 
-- **How-to**: Title (Level 1 heading)
+- **Guia pràctica**: títol (títol de nivell 1)
 
-- Introduction paragraph
+- Paràgraf d'introducció
 
-- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+- Requisits previs opcionals (paràgraf, o títol de nivell 2 si n'hi ha més d'un)
 
-- Steps:
+- Passos:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Pas 1 — Fer la primera cosa (títol de nivell 2)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Pas 2 — Fer la cosa següent (títol de nivell 2)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Pas n — Fer l'última cosa (títol de nivell 2)
 
-- Conclusion paragraph
+- Paràgraf de conclusió
     
-    - **The Language of How-To Guides**
+    - **El llenguatge de les guies pràctiques**
         
-        *This guide shows you how to…*
+        *Aquesta guia us mostra com…*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        Descriviu clarament el problema o la tasca que la guia ensenya a resoldre.
         
-        *If you want x, do y. To achieve w, do z.*
+        *Si voleu x, feu y. Per aconseguir w, feu z.*
         
-        Use conditional imperatives.
+        Feu servir imperatius condicionals.
         
-        *Refer to the x reference guide for a full list of options.*
+        *Vegeu la guia de referència de x per a una llista completa d'opcions.*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        No ompliu la vostra guia pràctica amb totes les coses possibles que l'usuari podria fer relacionades amb x.
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Imatge](../images/styleguide07.png) Explicació (per exemple, la ciència que explica per què les clares d'ou es posen fermes quan les munteu)
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+Una explicació aclareix, aprofundeix i amplia el que el lector entén d'un tema.
 
-- WHY
+- PER QUÈ
 
-- Start with **About**
+- Comenceu amb **Sobre**
 
-- Provide context, link ALL relevant references
+- Doneu context i enllaceu TOTES les referències importants
 
-- Discuss options/alternatives
+- Parleu de les opcions i les alternatives
 
-- Don’t instruct or provide reference (link to them)
+- No doneu instruccions ni informació de referència (enllaceu-hi)
 
-- State the unknown/moving targets etc…
+- Indiqueu el que és desconegut, els objectius que canvien, etc.…
 
-- **About** Title (Level 1 heading)
+- Títol **Sobre** (títol de nivell 1)
 
-- Introduction (no heading)
+- Introducció (sense títol)
 
-- Optional Prerequisites (Level 2 heading)
+- Requisits previs opcionals (títol de nivell 2)
 
-- Subtopic 1 (level 2 heading)
+- Subtema 1 (títol de nivell 2)
 
-- Conclusion (Level 2 heading)
+- Conclusió (títol de nivell 2)
     
-    - **The Language of Explanation**
+    - **El llenguatge de l'explicació**
     
-    *The reason for x is because historically, y…*
+    *El motiu de x és que, històricament, y…*
     
-    Explain.
+    Expliqueu.
     
-    *W is better than z, because…*
+    *W és millor que z, perquè…*
     
     Offer judgements and even opinions where appropriate.
     
-    *An x in system y is analogous to a w in system z. However…*
+    *Una x al sistema y és com una w al sistema z. Tanmateix…*
     
-    Provide context that helps the reader.
+    Doneu context que ajudi el lector.
     
-    *Some users prefer w (because z). This can be a good approach, but…*
+    *Alguns usuaris prefereixen w (perquè z). Pot ser una bona manera de fer-ho, però…*
     
-    Weigh up alternatives.
+    Compareu les alternatives.
     
-    *An x interacts with a y as follows:…*
+    *Una x interactua amb una y de la manera següent:…*
     
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    Mostreu com funciona el mecanisme per dins, per ajudar a entendre per què una cosa fa el que fa.
 
-### 2\. AAPS-specific writing/updating notes
+### 2\. Notes per escriure i actualitzar la documentació d'AAPS
 
-#### Author & Editor
+#### Autor i editor
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+Per escriure o actualitzar la documentació d'AAPS, penseu que el procés té dues etapes. Les pot fer la mateixa persona en moments diferents, o més d'una persona.
 
-An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+Un **autor (per exemple, vosaltres!)** escriu o edita una secció de la documentació en un to breu i proper, i després la passa a l'editor.
 
-The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help.
+L'**editor (per exemple, un altre usuari d'AAPS, o la persona que rep la pull request)** revisa que es compleixi la guia d'estil i edita la secció perquè sigui clara i accessible, traient tantes paraules com pugui (sobretot a les seccions de tutorial i de guia pràctica). Llegir el text en veu alta pot ajudar.
 
-#### General AAPS points
+#### Punts generals d'AAPS
 
 - For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
 
-- For consistency, use “AAPS” rather than “Android APS”.
+- Per ser coherents, feu servir “AAPS” i no “Android APS”.
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- Indiqueu clarament la versió d'Android Studio o d'AAPS per a la qual escriviu, o de la qual són les captures de pantalla.
 
-### 3\. Useful References
+### 3\. Referències útils
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 
