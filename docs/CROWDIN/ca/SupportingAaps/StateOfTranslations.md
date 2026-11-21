@@ -1,16 +1,16 @@
-# State of translation for the app and the documentation
+# Estat de la traducció de l'aplicació i de la documentació
 
 L'estat s'actualitza una vegada per hora i només mostra l'estat a Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
+Compte: el percentatge de revisió sempre és més baix o igual que el percentatge de traducció, però Crowdin el mostra a sobre de les traduccions.
 Per saber si queda feina per fer, és millor mirar només el percentatge de traducció.
 ```
 
 ```{admonition} needed time for final publication
 Després de traduir a Crowdin, cada dia hi ha una sincronització programada que envia les traduccions a GitHub com a pull request (PR).
 
-The acceptance of the PR is a manual task which will be done as fast as possible.
+L'acceptació del PR es fa a mà i es farà tan aviat com sigui possible.
 ```
 
 ## estat de la traducció de l'aplicació
