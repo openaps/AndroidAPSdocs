@@ -13,11 +13,11 @@ A troca física do cartucho/reservatório não pode ser feita pelo **AAPS**, ela
 
 1. No **AAPS**, desconecte a bomba: toque no [ícone do loop](#AapsScreens-loop-status) na tela principal e selecione **Desconectar bomba** por 1 hora. O ícone muda para um plugue cinza, que mostra que a bomba está desconectada.
 
-2. Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
+2. Troque fisicamente o reservatório de insulina: desconecte a bomba do corpo e troque o reservatório/cartucho e a cânula conforme as instruções do fabricante.
 
-3. Prime/fill the tubing and cannula: this can be done directly on the pump. Elimine todas as bolhas do tubo.
+3. Purgue/preencha o tubo e a cânula: isso pode ser feito diretamente na bomba. Elimine todas as bolhas do tubo.
 
-4. Attach the new cannula to the body. Depois que a cânula é inserida e a agulha é retirada, a cânula fica com um pequeno espaço de ar, que também precisa ser purgado. Para registrar isso no **AAPS** e purgar o local: abra **Purgar/Preencher** (no painel de status expandido da tela principal, no painel **Gerenciar** ou como botão do [acesso rápido](QuickLaunch.md)) e marque **Registrar troca de local da bomba** e/ou **Registrar troca de cartucho de insulina**, conforme o caso, para registrar a troca. Agora toque na quantidade padrão de preenchimento da cânula (normalmente cerca de 0,3 U, mas confira se este valor está correto para a sua cânula) e selecione **OK**. Leia a mensagem de resumo e confirme a purga tocando em **OK**.
+4. Coloque a nova cânula no corpo. Depois que a cânula é inserida e a agulha é retirada, a cânula fica com um pequeno espaço de ar, que também precisa ser purgado. Para registrar isso no **AAPS** e purgar o local: abra **Purgar/Preencher** (no painel de status expandido da tela principal, no painel **Gerenciar** ou como botão do [acesso rápido](QuickLaunch.md)) e marque **Registrar troca de local da bomba** e/ou **Registrar troca de cartucho de insulina**, conforme o caso, para registrar a troca. Agora toque na quantidade padrão de preenchimento da cânula (normalmente cerca de 0,3 U, mas confira se este valor está correto para a sua cânula) e selecione **OK**. Leia a mensagem de resumo e confirme a purga tocando em **OK**.
 
    ![Purgar/Preencher no painel Gerenciar com uma bomba com tubo](../images/v4/Screens/manage_sheet_tube_pump.png)
 
@@ -57,7 +57,7 @@ Como você não recebe insulina enquanto a bomba está desconectada, você deve 
 (pumps-cannulas-announce-insulin)=
 ## Informar insulina já administrada sem dar o bólus
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Uma linha **Hora** (definida como **Agora**) permite então registrar a hora real da injeção: você pode ignorá-la se a injeção foi dada há pouco tempo. Se o bólus foi dado há algum tempo, use **-** para voltar a hora (_por exemplo,_ -30 min), ou abra a linha com a seta para escolher a data e a hora exatas. O **AAPS** então considera a duração da ação da insulina e calcula a insulina que ainda resta no corpo.
+Para informar a insulina administrada pela bomba enquanto o **AAPS** estava desconectado, ou por injeções de caneta: abra o [diálogo Insulina](#aaps-screens-buttons-insulin) (**Tratamentos** na navegação inferior, ou um botão do acesso rápido), digite a quantidade em unidades e ative **Bólus será apenas registrado (não administrado pela bomba)**. Uma linha **Hora** (definida como **Agora**) permite então registrar a hora real da injeção: você pode ignorá-la se a injeção foi dada há pouco tempo. Se o bólus foi dado há algum tempo, use **-** para voltar a hora (_por exemplo,_ -30 min), ou abra a linha com a seta para escolher a data e a hora exatas. O **AAPS** então considera a duração da ação da insulina e calcula a insulina que ainda resta no corpo.
 
 Se você usa o **AAPS** como cuidador, pode desconectar (e reconectar) a bomba à distância muito facilmente por [comando SMS](../RemoteFeatures/SMSCommands.md), com comandos como "pump disconnect 120" e "pump connect 120". A duração da desconexão remota pode ser de 1 a 120 min (neste exemplo, são 120 minutos). Isso é muito útil quando é difícil acessar o telefone com o **AAPS**: guardado na cintura de uma criança que está correndo para a piscina, ou bem guardado (ou em uso) por um adolescente.
 
@@ -92,7 +92,7 @@ A melhor estratégia é muito pessoal, e é melhor descobri-la por tentativa e e
 
 ![Diálogo Perfil do usuário para rotação do local](../images/SiteRotation/Type.png)
 
-*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
+*Observação: esta configuração decide se o diálogo Rotação do local (Modo de edição) abre automaticamente quando uma nova entrada é feita com o botão "Purgar/Preencher" ou com o botão "Inserção do sensor".*
 
 - Para uma troca de local feita diretamente na bomba, você precisa abrir o modo de visualização e editar a nova entrada para escolher o local e a seta
 
@@ -100,7 +100,7 @@ O modo de edição permite escolher o local, a seta e a nota da entrada selecion
 
 - A entrada em edição aparece abaixo das imagens do corpo, com o ícone do tipo (cânula ou sensor)
 - As vistas da frente e de trás aparecem lado a lado: toque na área onde você colocou a cânula ou o sensor
-- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
+- Quando um local é selecionado (destacado em verde), a lista abaixo mostra todas as entradas feitas nesse local nos últimos 45 dias.
 
 ![Modo de edição](../images/SiteRotation/EditMode.png)
 
