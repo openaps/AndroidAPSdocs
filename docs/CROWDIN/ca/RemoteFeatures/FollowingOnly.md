@@ -86,7 +86,7 @@ Inconvenients (segons els usuaris)
 
 * Necessita Android 5.0 o posterior.
 
-* It has a dark UI, large readings and buttons, designed for usage at night.
+* Té una interfície fosca, valors i botons grans, i està pensada per fer-la servir de nit.
 
 ### xDrip (Android)
 
@@ -114,7 +114,7 @@ Si l'origen de les dades d'**AAPS** no és xDrip però podeu mostrar les dades d
 
 ![imatge](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
+xDripSwift va néixer adaptant l'aplicació original xDrip a iOS i es va convertir en «xDrip for iOS», que s'escriu **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ El [grup de Facebook de xDrip4iOS](https://www.facebook.com/groups/8539946150568
 * Apple iPad (necessita la versió de programari 13.0 o posterior)
 * Google Android (deseu l'aplicació web a la pantalla d'inici)
 
-Usuaris de Sugarmate diuen que als EUA es pot fer servir amb Apple CarPlay per veure els valors de glucèmia mentre conduïu. Encara no se sap si això és possible en països de fora dels EUA. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
+Usuaris de Sugarmate diuen que als EUA es pot fer servir amb Apple CarPlay per veure els valors de glucèmia mentre conduïu. Encara no se sap si això és possible en països de fora dels EUA. Si en sabeu més, afegiu-ne els detalls aquí a la documentació amb una [pull request](../SupportingAaps/HowToEditTheDocs.md), que és ràpid i fàcil.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
@@ -200,7 +200,7 @@ SugarPixel és un dispositiu secundari de visualització i alertes de glucèmia 
 ![Seguir amb Nightscout Clock](../images/remote_control_and_following/FollowingNightscoutClock.png)
 
 * El rellotge admet les unitats mmol/l i mg/dl, i té alarmes sonores.
-* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
+* Hi ha diverses pantalles disponibles. Vegeu [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) per a una visió general.
 * Configurar el dispositiu només necessita uns quants passos senzills. Un cop configurat, només necessita corrent i Wi-Fi per funcionar.
 * El dispositiu Ulanzi TC001 és molt més barat que el SugarPixel.
 * El programari i les instruccions d'instal·lació són a [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
