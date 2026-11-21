@@ -17,7 +17,7 @@ Integrar un rellotge intel·ligent amb **AAPS** pot ser útil en moltes situacio
 
 ## Avantatges específics per a pares i cuidadors que fan servir **AAPS**
 
-For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS** phone. Això pot ser útil, per exemple, si el telèfon d'**AAPS** està guardat dins d'un cinturó per a la bomba.
+En el cas d'un nen, si el seu telèfon d'**AAPS** és a prop, un cuidador pot fer servir un rellotge intel·ligent per monitorar o fer canvis sense haver de fer servir el telèfon d'**AAPS**. Això pot ser útil, per exemple, si el telèfon d'**AAPS** està guardat dins d'un cinturó per a la bomba.
 
 Un rellotge intel·ligent es pot fer servir _a més de_ les opcions basades en el TELÈFON per al control remot o per [només seguir](../RemoteFeatures/FollowingOnly.md), o _en lloc_ d'elles.
 
@@ -49,19 +49,19 @@ La millor manera de triar un rellotge intel·ligent és buscar publicacions sobr
 
 ## Android complet
 
-Sembla una opció atractiva, oi? However, at present, only a few enthusiasts are experimenting with **AAPS** on a stand-alone watch. Hi ha pocs rellotges intel·ligents amb una interfície raonable que també funcionin bé fent servir **AAPS** i l'aplicació del CGM de manera autònoma. Alguns models populars són el LEMFO LEM 15 Pro i el 16. Haureu d'instal·lar al rellotge l'APK «full» d'**AAPS** (l'APK que normalment s'instal·la al telèfon intel·ligent) en lloc de l'APK «wear» d'**AAPS**.
+Sembla una opció atractiva, oi? Tot i així, de moment només uns quants entusiastes experimenten amb **AAPS** en un rellotge autònom. Hi ha pocs rellotges intel·ligents amb una interfície raonable que també funcionin bé fent servir **AAPS** i l'aplicació del CGM de manera autònoma. Alguns models populars són el LEMFO LEM 15 Pro i el 16. Haureu d'instal·lar al rellotge l'APK «full» d'**AAPS** (l'APK que normalment s'instal·la al telèfon intel·ligent) en lloc de l'APK «wear» d'**AAPS**.
 
 No hi ha cap especificació clara que us digui si un rellotge funcionarà bé per fer servir **AAPS** de manera autònoma, però aquests paràmetres us poden ajudar:
 
 1)  Android 12 o més recent. 2)  Que es pugui treure el watchface del mode «quadrat» perquè el text sigui més gran i més fàcil de llegir. 3)  Una durada de la bateria molt bona. 4)  Un bon abast Bluetooth.
 
-La majoria de les frustracions amb els rellotges **AAPS** autònoms vénen d'haver d'interactuar amb una pantalla molt petita i del fet que la interfície actual de l'aplicació AAPS completa no està dissenyada per a un rellotge. You may prefer to use a stylus to edit **AAPS** settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
+La majoria de les frustracions amb els rellotges **AAPS** autònoms vénen d'haver d'interactuar amb una pantalla molt petita i del fet que la interfície actual de l'aplicació AAPS completa no està dissenyada per a un rellotge. Potser preferiu fer servir un llapis tàctil per editar la configuració d'**AAPS** al rellotge, perquè la pantalla és petita, i alguns botons d'AAPS potser no es veuen a la pantalla del rellotge.
 
 Altres dificultats són que costa aconseguir prou durada de bateria, i els rellotges amb prou bateria sovint són grans i gruixuts. Els usuaris expliquen que han de lluitar amb el sistema operatiu i la configuració d'estalvi d'energia, que costa iniciar sensors al rellotge, que l'abast Bluetooth és pobre (per mantenir la connexió amb el sensor i amb la bomba) i que la resistència a l'aigua és dubtosa. A les fotos següents en podeu veure exemples.
 
 ![imatge](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
-If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
+Si us interessa configurar un rellotge autònom, llegiu les publicacions i els comentaris del grup de Facebook d'**AAPS** (bones paraules per cercar són «standalone» i «Lemfo») i de Discord per obtenir més informació.
 
 ## Wear OS
 
@@ -175,7 +175,7 @@ Podeu llegir-ne més, i també com configurar-los, al [lloc web de WatchDrip+](h
 ![imatge](../images/watches/watch_pebble_watchface.png)
 
 
-Els rellotges Pebble ([ja no es fabriquen](https://en.wikipedia.org/wiki/Pebble_(watch))) es van vendre del 2013 al 2016, i potser encara es poden trobar de segona mà. Fitbit es va quedar els actius de Pebble. Els usuaris de Pebble poden fer servir el watchface Urchin per veure les dades de Nightscout. Les dades que es poden mostrar inclouen l'IOB, la taxa basal temporal activa i les prediccions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
+Els rellotges Pebble ([ja no es fabriquen](https://en.wikipedia.org/wiki/Pebble_(watch))) es van vendre del 2013 al 2016, i potser encara es poden trobar de segona mà. Fitbit es va quedar els actius de Pebble. Els usuaris de Pebble poden fer servir el watchface Urchin per veure les dades de Nightscout. Les dades que es poden mostrar inclouen l'IOB, la taxa basal temporal activa i les prediccions. Si feu servir el llaç obert, podeu fer servir IFTTT per crear una miniaplicació que, si es rep un avís d'**AAPS**, enviï un SMS o una notificació de Pushover.
 
 ### [Rellotges Bluejay](https://bluejay.website/)
 
