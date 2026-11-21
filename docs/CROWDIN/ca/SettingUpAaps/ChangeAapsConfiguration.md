@@ -1,43 +1,43 @@
 # Making changes to your AAPS configuration
 
-After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
+Després de completar l'**[Assistent de configuració](../SettingUpAaps/SetupWizard.md)**, no cal tornar a executar tot l'assistent si només voleu canviar algunes parts de la configuració d'**AAPS**.
 
-There are three routes to change **AAPS**' configuration. As to which route you take, it is simply a matter of convenience or personal preference, as each route leads to the same settings.
+Hi ha tres camins per canviar la configuració d'**AAPS**. El camí que trieu és només una qüestió de comoditat o de preferència personal, perquè tots porten a la mateixa configuració.
 
-These are as follows:
+Són aquestes:
 
-1. The **Configuration** screen,
-2. The **Settings** screen or
-3. A plugin's **Settings**, opened from its category in **Configuration**.
+1. La pantalla **Configurador**,
+2. La pantalla **Configuració** o
+3. La **Configuració** d'un plugin, oberta des de la seva categoria al **Configurador**.
 
-Here we explain which option is most convenient for each situation:
+Aquí expliquem quina opció és més pràctica en cada situació:
 
-## Configuration
+## Configuració
 
-Open the **menu** (☰) in the top-left corner of the main screen and choose **Configuration**:
+Obriu el **menú** (☰) a la cantonada superior esquerra de la pantalla principal i trieu **Configurador**:
 
-![Open Configuration from the top-left menu](../images/v4/Configuration/configuration_menu.png)
+![Obrir el Configurador des del menú de dalt a l'esquerra](../images/v4/Configuration/configuration_menu.png)
 
-**Configuration** is used to **choose which plugins are active** — your CGM, pump, APS algorithm, sensitivity detection, synchronization and more, grouped by category. It is the same screen the Setup Wizard configured for you.
+El **Configurador** serveix per **triar quins plugins estan actius**: el vostre CGM, la bomba, l'algoritme APS, la detecció de sensibilitat, la sincronització i més, agrupats per categoria. És la mateixa pantalla que l'Assistent de configuració va configurar per a vosaltres.
 
-The documentation of the Configuration screen is available [here](../SettingUpAaps/ConfigBuilder.md).
+La documentació de la pantalla Configurador és [aquí](../SettingUpAaps/ConfigBuilder.md).
 
-## Settings
+## Configuració
 
-Tap the **Settings** (gear) icon in the top-right corner of the main screen. This opens the settings of **all enabled plugins in a single place**, grouped into expandable sections:
+Toqueu la icona **Configuració** (engranatge) a la cantonada superior dreta de la pantalla principal. Això obre la configuració de **tots els plugins activats en un sol lloc**, agrupada en seccions desplegables:
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![La pantalla Configuració amb les seves seccions desplegables](../images/v4/Configuration/settings_overview.png)
 
-This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+Aquest camí és bo si no esteu segurs d'on trobar una opció de configuració, però pot ser una mica pesat si sabeu que voleu canviar la configuració d'un sol plugin concret.
 
-The documentation of the settings is available [here](../SettingUpAaps/Preferences.md).
+La documentació de la configuració és [aquí](../SettingUpAaps/Preferences.md).
 
-## A plugin's Settings
+## La Configuració d'un plugin
 
-Inside **Configuration**, open a category and tap "**Settings**" underneath the active plugin. You are taken directly to the settings of **that plugin only**:
+Dins del **Configurador**, obriu una categoria i toqueu «**Configuració**» sota el plugin actiu. Aneu directament a la configuració **només d'aquest plugin**:
 
-![Settings and Open plugin underneath the active plugin](../images/v4/Configuration/configuration_open_plugin.png)
+![Configuració i Obrir plugin sota el plugin actiu](../images/v4/Configuration/configuration_open_plugin.png)
 
-For example, this is a good route if you know that you want to change the configuration for your pump: open **Configuration → Pump**, then tap "**Settings**" under the selected pump.
+Per exemple, aquest camí és bo si sabeu que voleu canviar la configuració de la vostra bomba: obriu **Configurador → Bomba** i després toqueu «**Configuració**» sota la bomba seleccionada.
 
-This is a "shortcut" to the same settings shown on the general **Settings** screen.
+És una «drecera» a la mateixa configuració que es mostra a la pantalla general de **Configuració**.
