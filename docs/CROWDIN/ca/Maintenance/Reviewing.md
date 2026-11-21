@@ -54,7 +54,7 @@ Més avall hi ha les estadístiques del temps en rang estret (TITR), 70–140 mg
 
 **Parleu dels objectius amb el vostre endocrinòleg**
 
-La vostra diabetis pot ser diferent. Qualsevol objectiu proposat s'ha de parlar amb el vostre endocrinòleg o amb el vostre equip mèdic. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
+La vostra diabetis pot ser diferent. Qualsevol objectiu proposat s'ha de parlar amb el vostre endocrinòleg o amb el vostre equip mèdic. Si es fan servir bé, les estadístiques d'AAPS poden ser una eina eficaç per seguir les tendències de la __glucèmia__ i el vostre progrés.
 
 ![Estadístiques](../images/Maintenance/statistics3.png)
 
@@ -117,7 +117,7 @@ Al final de cada línia, unes icones petites mostren d'on vénen les dades o on 
 ![Carbohidrats i bolus](../images/Maintenance/TreatmentsView1.png)
 
 En aquesta pestanya podeu veure el registre de bolus i carbohidrats. Cada bolus (línia **1**) mostra l'IOB associat que queda al costat de la quantitat d'insulina. L'origen del bolus pot ser:
-* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
+* Àpat (introduït manualment amb els botons Insulina, Assistent ràpid o Calculadora de bolus)
 * SMB, quan es fa servir la funció SMB
 
 Les entrades de carbohidrats (línia **2**) es mostren amb la quantitat en grams.
@@ -147,9 +147,9 @@ Aquí es mostren les **basals temporals** aplicades pel llaç. Quan una entrada 
 * IOB positiu si la basal temporal era més alta que la definida al perfil
 * IOB negatiu per a una basal temporal zero (com a la línia **1**) o si la basal temporal era més baixa que la definida al perfil
 
-Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
+Eliminar les entrades només afecta els vostres informes a Nightscout i probablement falsejarà el vostre IOB real; no es recomana.
 
-On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. Per exemple, és una situació normal durant el canvi d'un pod.
+A l'esquerra d'una línia, una S vermella vol dir «Suspend» (suspès): passa quan la basal no s'està lliurant en aquest moment. Per exemple, és una situació normal durant el canvi d'un pod.
 
 ### Objectiu temporal
 
@@ -178,7 +178,7 @@ Aquesta pestanya mostra totes les notes i entrades del portal de cures registrad
 
 ![Mode de funcionament](../images/Maintenance/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
+Aquesta pestanya mostra l'historial de canvis de l'[estat del llaç](#AapsScreens-loop-status): obert, tancat, LGS, suspès, desconnectat.
 
 ### Entrada d'usuari
 
