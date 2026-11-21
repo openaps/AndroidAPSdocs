@@ -367,11 +367,11 @@ Unpair it first (**Manage → Pair with master → Unpair**), then scan again. A
 
 **Pairing is cancelled with "The pairing secret could not be stored"**
 
-Nothing was changed. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+Nothing was changed. Avvia di nuovo l'accoppiamento. Se continua a non riuscire, riavvia **AAPSClient** e prova ancora una volta.
 
-**The client says it is not paired**
+**Il client dice che non è accoppiato**
 
-Pair again from **Manage → Pair with master**. Check that the client is **Active** in the master's **Authorized clients** list.
+Pair again from **Manage → Pair with master**. Controlla che il client sia **Attivo** nell'elenco **Client autorizzati** del master.
 
 **Nothing happens after pairing**
 
@@ -379,25 +379,25 @@ Make sure **Allow client control** is ON on the master, and that the master is c
 
 ### Comandi
 
-**The client says the master is offline, or commands fail**
+**Il client dice che il master è offline, oppure i comandi non riescono**
 
-Check that:
+Controlla che:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- il telefono master sia attivo (non in sospensione) e **AAPS** sia in esecuzione,
+- entrambi i telefoni siano collegati in **NSClientV3** allo stesso sito Nightscout,
+- i **websockets** siano attivi su entrambi i telefoni.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+I websockets sono **obbligatori** per il controllo remoto da **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**Il master rifiuta un comando**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+Il master controlla di nuovo ogni comando in base al suo stato attuale: per esempio, il profilo scelto non esiste più, oppure il tipo di micro non corrisponde. Controlla sul master.
 
 **Treatments entered on the Nightscout website are not applied**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+Questo è normale in [modalità protetta](#client-master-control-hardened-mode). Inseriscili invece su un client accoppiato.
 
-### Nightscout tokens and settings
+### Token e impostazioni di Nightscout
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
@@ -405,11 +405,11 @@ The client used its own Nightscout token before and now writes with another one,
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-The client still writes with a token that has more rights than it needs. The master sends the client its own token after pairing, but only if the master has an admin token. Controlla il token del master, oppure configura di nuovo il client con un codice QR.
+The client still writes with a token that has more rights than it needs. Dopo l'accoppiamento il master invia al client il suo token, ma solo se il master ha un token admin. Controlla il token del master, oppure configura di nuovo il client con un codice QR.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes the new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**).
+Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). Un client accoppiato riceve da solo la nuova chiave la prossima volta che si collega a Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**).
 
 **A client can no longer read Nightscout**
 
