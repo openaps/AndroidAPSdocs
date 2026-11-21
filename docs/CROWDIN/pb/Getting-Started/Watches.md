@@ -59,7 +59,7 @@ A maioria das frustrações com relógios independentes com **AAPS** vem de inte
 
 Outros desafios são que é difícil conseguir uma duração de bateria suficiente, e os relógios com bateria suficiente costumam ser grandes e grossos. Os usuários relatam dificuldades com o sistema operacional e as configurações de economia de energia, dificuldade para iniciar sensores no relógio, alcance de Bluetooth fraco (para manter a conexão com o sensor e com a bomba) e resistência à água duvidosa. Há exemplos nas fotos abaixo.
 
-![imagem](../images/watch_standalone_aaps_and_xdrip.png)
+![imagem](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
@@ -88,7 +88,7 @@ As mudanças recentes no **Wear OS** estragam aos poucos os mostradores personal
 
 Depois de [instalar o **AAPS** no seu relógio](../WearOS/WearOsSmartwatch.md), você poderá escolher automaticamente o seu mostrador preferido entre estes mostradores dedicados ao **AAPS**. Na maioria dos relógios, basta manter pressionada a tela inicial até ela diminuir e deslizar para a direita para escolher outra tela:
 
-![imagem](../images/watchfaces_aaps_selection.png)
+![imagem](../images/watches/watchfaces_aaps_selection.png)
 
 Estas são as telas básicas incluídas no **AAPS**; há [mais mostradores](#WearOS_changing-to-AAPS-watchface) e você também pode usar [complicações](#Watchfaces-complications).
 
@@ -122,7 +122,7 @@ Há alguns mostradores para Garmin que se integram ao [AAPS](https://apps.garmin
 
 ![Configuração > Comunicação: o cartão Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-O [AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) se integra diretamente ao **AAPS**. Ele mostra dados do status do loop (insulina ativa (IOB), basal temporária) além das leituras de glicose, e envia as leituras de frequência cardíaca ao **AAPS**. Ele está disponível na loja ConnectIQ; ative o plugin **Garmin** em **Configuração → Comunicação**. ![Mostrador AAPS Glucose Watch com campos numerados](../images/Garmin_WF-annotated.png)
+O [AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) se integra diretamente ao **AAPS**. Ele mostra dados do status do loop (insulina ativa (IOB), basal temporária) além das leituras de glicose, e envia as leituras de frequência cardíaca ao **AAPS**. Ele está disponível na loja ConnectIQ; ative o plugin **Garmin** em **Configuração → Comunicação**. ![Mostrador AAPS Glucose Watch com campos numerados](../images/watches/Garmin_WF-annotated.png)
 
 1. Maior e menor valor de glicose no gráfico
 2. Variação da glicose por minuto
@@ -155,7 +155,7 @@ Abaixo estão algumas opções de relógios só para acompanhamento, populares e
 
 O **WatchDrip+** é um app companheiro feito pela comunidade que mostra dados de glicose e do loop em vários modelos de smartwatch, principalmente das marcas Xiaomi (_por exemplo_, Mi Band) e Amazfit:
 
-![imagem](../images/watch_watchdrip_plus.png)
+![imagem](../images/watches/watch_watchdrip_plus.png)
 
 Desde a versão 0.5, o **WatchDrip+** lê os dados diretamente do **AAPS**, sem o xDrip+ como intermediário. No telefone **AAPS**:
 
@@ -170,9 +170,9 @@ Você pode ler mais sobre eles, incluindo como configurá-los, no [site do Watch
 
 ### Relógio Pebble
 
-![imagem](../images/watch_pebble.png)
+![imagem](../images/watches/watch_pebble.png)
 
-![imagem](../images/watch_pebble_watchface.png)
+![imagem](../images/watches/watch_pebble_watchface.png)
 
 
 Os relógios Pebble ([já descontinuados](https://en.wikipedia.org/wiki/Pebble_(watch))) foram vendidos de 2013 a 2016 e ainda podem ser encontrados usados. A Fitbit assumiu os ativos da Pebble. Os usuários do Pebble podem usar o mostrador Urchin para ver os dados do Nightscout. Os dados que podem ser mostrados incluem IOB, a basal temporária ativa e as previsões. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
