@@ -32,9 +32,9 @@ Se o seu site está hospedado no Azure, muitas pessoas notaram que os problemas 
 
 Uma solução alternativa para problemas de conexão no Azure é definir em Application settings o HTTP protocol para 2.0 e Websockets para ON
 
-    {admonition} Remote control needs websockets
+    {admonition} O controle remoto precisa de websockets
     :class: important
-    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+    Os websockets são **obrigatórios** para o controle remoto pelo **AAPSClient**, nos dois telefones. Se a conexão websocket cair com frequência, o controle remoto não funciona. A sincronização de dados continua funcionando, mas mais devagar. O seu servidor (host) do Nightscout precisa suportar websockets.
 
 * Nenhuma leitura de glicose do Nightscout
 
@@ -42,6 +42,6 @@ Se o **AAPS** conecta corretamente ao Nightscout, mas a glicose aparece como N/A
 
 * Se você ainda recebe um erro...
 
-Verifique o tamanho do seu banco de dados no MongoDB (ou pelo plugin de tamanho do banco de dados no Nightscout). Se você usa o plano gratuito do MongoDB, 496MB significa que ele está cheio e precisa ser limpo. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
+Verifique o tamanho do seu banco de dados no MongoDB (ou pelo plugin de tamanho do banco de dados no Nightscout). Se você usa o plano gratuito do MongoDB, 496MB significa que ele está cheio e precisa ser limpo. [Siga estas instruções do Nightscout para verificar o tamanho do seu banco de dados e apagar dados](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Antes de apagar dados do seu banco de dados, e se você ainda não fez isso, considere doar os seus dados do AAPS para o projeto Open Humans (para pesquisa). As instruções estão na [página de configuração do Open Humans](../SupportingAaps/OpenHumans.md).
