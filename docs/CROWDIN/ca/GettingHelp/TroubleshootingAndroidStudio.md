@@ -49,7 +49,7 @@ Torneu a clonar el codi font tal com es descriu a la documentació i no permeteu
 
   * Heu de rebre un missatge que indica quina versió de Git està instal·lada, com es veu a la captura de pantalla de dalt. En aquest cas, aneu al [Pas 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get a message saying
+  * Si rebeu un missatge que diu
     ```
     Git: command not found
     ```
@@ -57,15 +57,15 @@ Torneu a clonar el codi font tal com es descriu a la documentació i no permeteu
 
   * [Comprovar la instal·lació de Git](#BuildingAaps-steps-for-installing-git)
 
-  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
+  * Si feu servir Windows i acabeu d'instal·lar Git, heu de reiniciar l'ordinador perquè Git estigui disponible a tot el sistema després de la instal·lació
 
-  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
+  * Si Git està instal·lat, heu reiniciat l'ordinador (si feu servir Windows) i Git encara no es troba:
 
   * Cerqueu a l'ordinador un fitxer «git.exe».
 
     Apunteu-vos en quin directori està desat.
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Afegiu el directori on heu trobat la vostra instal·lació de Git.
+  * Aneu a les variables d'entorn de Windows, seleccioneu la variable «PATH» i feu clic a Edit (editar). Afegiu el directori on heu trobat la vostra instal·lació de Git.
 
   * Deseu i tanqueu.
 
@@ -139,7 +139,7 @@ O bé:
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
+Si rebeu el missatge d'error anterior, heu de descarregar una versió correcta de JVM abans de tornar a provar de compilar:
 
 1.  Comproveu a la [taula de requisits](#Building-APK-recommended-specification-of-computer-for-building-apk-file) quina versió de JVM necessiteu per a la versió d'**AAPS** que compileu, i apunteu-la.
 
@@ -212,7 +212,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Generate Signed APK s'ha completat amb 0 variants de compilació
 
-When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
+Quan genereu l'apk signat, és possible que rebeu l'avís que la generació s'ha fet correctament però que s'han generat '0 build variants' (0 variants de compilació):
 
 ![APK generat amb 0 variants de compilació](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -237,7 +237,7 @@ El vostre apk s'ha compilat correctament i es pot transferir al telèfon!
 
 ## L'apk no s'ha instal·lat
 
-![phone app not installed](../images/studioTroubleshooting/Update_AppNotInstalled.png)
+![aplicació no instal·lada al telèfon](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Assegureu-vos que heu transferit el fitxer «app-full-release.apk» al vostre telèfon.
 * Aquest error normalment vol dir que el nou apk està signat amb un magatzem de claus diferent del de l'**AAPS** que teniu instal·lat. Si encara teniu el magatzem de claus anterior, seleccioneu-lo i torneu a compilar. Si no, vegeu [Reinstal·lar AAPS amb un nou magatzem de claus](#reinstall-aaps).
@@ -252,7 +252,7 @@ El vostre apk s'ha compilat correctament i es pot transferir al telèfon!
 
 ## L'apk s'ha instal·lat però és la versió antiga
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
+Si heu compilat l'aplicació correctament, l'heu transferit al telèfon i l'heu instal·lat correctament però el número de versió no canvia, potser us heu oblidat d'[actualitzar la vostra còpia local](#Update-to-new-version-update-your-local-copy)
 
 ## Res de tot això no ha funcionat
 
