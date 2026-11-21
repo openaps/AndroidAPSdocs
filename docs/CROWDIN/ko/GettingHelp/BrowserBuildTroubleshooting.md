@@ -22,11 +22,11 @@ You already have this repository, for example from an earlier attempt. Close the
 
 (aaps-builder-ts-user-not-found)=
 
-#### "No GitHub user with this name"
+#### "이 이름의 GitHub 사용자가 없습니다"
 
 ![No GitHub user](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
 
-- 1단계에서 **"No GitHub user with this name"**(이 이름의 GitHub 사용자가 없음)이 표시되는 경우: 이메일이 아니라 GitHub 프로필에 표시된 GitHub 사용자 이름을 입력하십시오.
+- 1단계에서 **"이 이름의 GitHub 사용자가 없습니다"**라는 메시지가 표시되는 경우: 이메일이 아니라 GitHub 프로필에 표시된 GitHub 사용자 이름을 입력하십시오.
 - **"Build AAPS" 또는 "Run workflow" 버튼이 없거나 저장소가 비어 있는 경우**: 저장소가 템플릿으로 만들어지지 않았습니다. 그 저장소를 삭제하고(**Settings** → 페이지 맨 아래 → **Delete this repository**) **Create my private repository** 버튼으로 [1단계](#aaps-builder-step1)를 다시 하십시오.
 
 ### Step 3: the secret
