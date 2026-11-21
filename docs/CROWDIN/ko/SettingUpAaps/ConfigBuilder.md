@@ -160,29 +160,29 @@ In this example, the peak setting is 55 minutes, DIA is 8 hours and [insulin con
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+AAPS에서 기저 주입량은 IOB 감소에 간접적으로 영향을 주므로, 너무 높은 기저 주입량은 너무 긴 DIA를 가릴 수 있고, 그 반대도 마찬가지입니다. 따라서 DIA와 피크를 조정하기 전에 먼저 기저 주입량을 신중하게 조정하는 것이 좋습니다. 또한 DIA와 피크 설정은 서로 영향을 줍니다. 즉, DIA의 효과는 피크에 따라 달라지고, 그 반대도 마찬가지입니다.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+아래 차트는 허용되는 값의 전체 범위에서 DIA와 피크가 IOB 곡선에 주는 정확한 영향을 보여 줍니다.
 
-Adjusting DIA:
+DIA 조정:
 
 ```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Adjusting peak:
+피크 조정:
 
 ```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+마지막으로, DIA와 피크를 함께 조정한 비교입니다. 두 값을 같은 비율로 조정한다는 것이 기본 원리이며, 따라서 `49/35 ~ 7/5`입니다. 마찬가지로 `120/93 ~ 9/7`입니다. 두 값의 상대적인 변화가 같다면, 기준 DIA나 피크와 관계없이 간격은 일정합니다.
 
 ```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+DIA와 피크를 이렇게 조정하면 곡선의 모든 점이 같은 비율만큼 이동합니다.
 
 ````
 
