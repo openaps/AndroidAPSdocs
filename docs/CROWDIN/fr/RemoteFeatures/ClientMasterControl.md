@@ -340,7 +340,7 @@ Pour les problèmes de Nightscout / de synchronisation, voir d'abord [Dépannage
 
 **The QR code options cannot be chosen in the New client dialog**
 
-The dialog says why:
+La fenêtre explique pourquoi :
 
 - *Pas un jeton admin* : donnez au maître un jeton admin de votre Nightscout, ou ajoutez le client avec le **PIN**.
 - *Non connecté* : attendez que le maître affiche *connecté* dans **NSClientV3**.
@@ -365,13 +365,13 @@ Un code qui appaire est valable environ deux minutes. Ajoutez de nouveau le clie
 
 Dissociez-le d'abord (**Gestion → Associer au maître → Dissocier**), puis scannez de nouveau. Un code **Nightscout uniquement** fonctionne aussi sur un téléphone appairé.
 
-**Pairing is cancelled with "The pairing secret could not be stored"**
+**L'appairage est annulé avec « Le secret d'appairage n'a pas pu être enregistré »**
 
-Rien n'a été changé. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+Rien n'a été changé. Relancez l'appairage. Si cela échoue encore, redémarrez **AAPSClient** et réessayez une fois.
 
-**The client says it is not paired**
+**Le client indique qu'il n'est pas appairé**
 
-Appairez de nouveau depuis **Gestion → Associer au maître**. Check that the client is **Active** in the master's **Authorized clients** list.
+Appairez de nouveau depuis **Gestion → Associer au maître**. Vérifiez que le client est **Actif** dans la liste **Clients autorisés** du maître.
 
 **Rien ne se passe après l'appairage**
 
@@ -379,25 +379,25 @@ Vérifiez que **Autoriser le contrôle client** est ACTIVÉ sur le maître, et q
 
 ### Commandes
 
-**The client says the master is offline, or commands fail**
+**Le client indique que le maître est hors ligne, ou les commandes échouent**
 
-Check that:
+Vérifiez que :
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- le téléphone maître n'est pas en veille et qu'**AAPS** fonctionne,
+- les deux téléphones sont connectés dans **NSClientV3**, au même site Nightscout,
+- les **websockets** sont activés sur les deux téléphones.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Les websockets sont **obligatoires** pour le contrôle à distance depuis **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**Une commande est refusée par le maître**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+Le maître vérifie de nouveau chaque commande par rapport à son état actuel : par exemple, le profil choisi n'existe plus, ou le type de pompe ne correspond pas. Vérifiez sur le maître.
 
 **Les traitements saisis sur le site web Nightscout ne sont pas appliqués**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+C'est normal en [mode renforcé](#client-master-control-hardened-mode). Saisissez-les plutôt sur un client appairé.
 
-### Nightscout tokens and settings
+### Jetons Nightscout et paramètres
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
@@ -405,11 +405,11 @@ Le client utilisait avant son propre jeton Nightscout et écrit maintenant avec 
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-Le client écrit encore avec un jeton qui a plus de droits que nécessaire. The master sends the client its own token after pairing, but only if the master has an admin token. Vérifiez le jeton du maître, ou configurez de nouveau le client avec un QR code.
+Le client écrit encore avec un jeton qui a plus de droits que nécessaire. Le maître envoie au client son propre jeton après l'appairage, mais seulement si le maître a un jeton administrateur. Vérifiez le jeton du maître, ou configurez de nouveau le client avec un QR code.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-Quelqu'un d'autre a écrit le document de paramètres du maître, ou le maître a une nouvelle clé (par exemple après l'effacement de ses données). A paired client takes the new key by itself the next time it connects to Nightscout. Un téléphone qui lit seulement Nightscout a de nouveau besoin du QR code du maître (**Lecture Nightscout uniquement → afficher le code**).
+Quelqu'un d'autre a écrit le document de paramètres du maître, ou le maître a une nouvelle clé (par exemple après l'effacement de ses données). Un client appairé prend la nouvelle clé tout seul la prochaine fois qu'il se connecte à Nightscout. Un téléphone qui lit seulement Nightscout a de nouveau besoin du QR code du maître (**Lecture Nightscout uniquement → afficher le code**).
 
 **Un client ne peut plus lire Nightscout**
 
