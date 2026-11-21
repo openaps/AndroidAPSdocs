@@ -1,15 +1,15 @@
-# Добро пожаловать в Документацию по AndroidAPS (AAPS)
+# Добро пожаловать в документацию AAPS
 
 ![изображение](./images/basic-outline-of-AAPS.png)
 
 ```{admonition} Latest Release
 :class: note
 
-31 October 2026: Version 4.0.0 is out. Прочитайте [Release Notes](#latestrelease), чтобы узнать, что изменилось, для обновления воспользуйтесь [инструкцией](./Maintenance/UpdateToNewVersion.md).
+31 October 2026: Version 4.0.0 is out. Прочитайте [Примечания к изменениям в версиях](#latestrelease), чтобы узнать, что нового, и для обновления следуйте [инструкции по обновлению](./Maintenance/UpdateToNewVersion.md).
 
 ```
 
-Android APS (**AAPS**) является приложением с открытым исходным кодом для людей, страдающих инсулинозависимым диабетом. Это система искусственной поджелудочной железы (APS), которая работает на смартфонах Android. **AAPS** использует алгоритм OpenAPS и нацелен на воплощение функциональности реальной поджелудочной железы - содержание СК (сахара, глюкозы в крови) в здоровых пределах при помощи автоматизированной подачи инсулина. To use **AAPS** you need **three** compatible devices: **(1)** an Android phone, **(2)** a continuous glucose monitor (CGM), and **(3)** an FDA/CE approved insulin pump. You can also add **(4)** cloud services to remotely control **AAPS**, share your data, and store it on a reporting server, and **(5)** a smartwatch.
+Android APS (**AAPS**) является приложением с открытым исходным кодом для людей, страдающих инсулинозависимым диабетом. Это система искусственной поджелудочной железы (APS), которая работает на смартфонах Android. **AAPS** использует алгоритм OpenAPS и стремится делать то же, что и настоящая поджелудочная железа: удерживать уровень ГК в здоровых пределах с помощью автоматической подачи инсулина. To use **AAPS** you need **three** compatible devices: **(1)** an Android phone, **(2)** a continuous glucose monitor (CGM), and **(3)** an FDA/CE approved insulin pump. You can also add **(4)** cloud services to remotely control **AAPS**, share your data, and store it on a reporting server, and **(5)** a smartwatch.
 
 This documentation explains how to set up and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy **Search docs** function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
 
@@ -17,7 +17,7 @@ This documentation explains how to set up and use **AAPS**. You can navigate thr
 
 Section **1) Getting Started**, the [Introduction](Getting-Started/Introduction.md) explains the general concept of what an artificial pancreas system (APS) is designed to do. В нем описывается история замкнутых циклов в целом, почему был разработан **AAPS**, его сравнение с другими подобными системами и описание безопасности применения **AAPS**. Оно дает советы о том, как говорить с вашей врачебной командой об **AAPS**, рассказывает, почему вы должны собирать **AAPS** самостоятельно вместо простого скачивания сборки, показывает типичное подключение системы **AAPS**. Так же оно затрагивает доступность, и кому, вероятнее всего, полезнее использовать **AAPS**.
 
-[Подготовка к AAPS](./Getting-Started/PreparingForAaps.md) дает более детальную информацию о безопасности системы, рассказывает, какие телефоны, НМГ и инсулиновые помпы совместимы с **AAPS**. Она дает общую картину того, через что вам предстоит пройти, так же показывает примерную таблицу сроков получения полной функциональности **AAPS**. Эта секция позволяет технически подготовиться к сборке вашей конфигурации **AAPS** как можно более эффективно и быстро. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
+[Подготовка к работе с AAPS](./Getting-Started/PreparingForAaps.md) дает более подробную информацию о безопасности, а также о телефонах, CGM (системах непрерывного мониторинга глюкозы) и инсулиновых помпах, которые совместимы с **AAPS**. Она дает общую картину того, через что вам предстоит пройти, так же показывает примерную таблицу сроков получения полной функциональности **AAPS**. Эта секция позволяет технически подготовиться к сборке вашей конфигурации **AAPS** как можно более эффективно и быстро. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
 
 Теперь, когда у вас есть четкое понимание всего процесса, вы можете начать собирать свой цикл (петлю) на базе **AAPS**.
 
@@ -29,7 +29,7 @@ Section **4) [Configure AAPS](./SettingUpAaps/SetupWizard.md)** covers setting u
 
 Section **5) [Daily life with AAPS](./DailyLifeWithAaps/AapsScreens.md)** covers key **AAPS** features, to help you use (and customize) **AAPS**. This includes understanding the screens, carbs-on-board, sensitivity, DynamicISF, profile switching, temp targets, extended carbs (or eCarbs), automations, and [reviewing your data](./Maintenance/Reviewing.md) in the history browser and statistics. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, [traveling with AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md), and sports. Частые вопросы и ответы на них находятся в секции "Решение проблем".
 
-Section **6) [Remote AAPS features](./RemoteFeatures/RemoteControl.md)** highlights a real strength of **AAPS**. Имеется множество различных возможностей для удаленного управления или мониторинга **AAPS**. Данная секция одинаково полезна как для тех, кто заботится о детях с диабетом при помощи **AAPS**, так и для взрослых, которые хотят следить за своими показателями удобнее, чем на телефоне (на часах, в машине, _т. д._), или для тех, кто хочет дать важным для них людям так же следить за показателями. Так же данный раздел описывает процесс настройки Android Auto для просмотра уровня СК в машине.
+Section **6) [Remote AAPS features](./RemoteFeatures/RemoteControl.md)** highlights a real strength of **AAPS**. Имеется множество различных возможностей для удаленного управления или мониторинга **AAPS**. Данная секция одинаково полезна как для тех, кто заботится о детях с диабетом при помощи **AAPS**, так и для взрослых, которые хотят следить за своими показателями удобнее, чем на телефоне (на часах, в машине, _т. д._), или для тех, кто хочет дать важным для них людям так же следить за показателями. Также в этом разделе описана настройка Android Auto для просмотра уровня ГК в машине.
 
 Section **7) [Wear OS smartwatches](./WearOS/BuildingAapsWearOS.md)** gives information and procedures to use an Android **Wear OS** smartwatch with the dedicated **AAPS** watchfaces or custom watchfaces, either as a remote control of your phone or just a display indicator.
 
@@ -49,9 +49,9 @@ Section **12) Resources**, contains archived or additional documentation, includ
 
 ```{admonition} SAFETY NOTICE
 :class: danger
-Безопасность **AAPS** зависит от функций безопасности ваших устройств (телефона, помпы, сенсора НМГ). Используйте только полностью работоспособную, одобренную FDA/CE инсулиновую помпу и систему НМГ. Не используйте сломанные, модифицированные или самодельные инсулиновые помпы или трансмиттеры НМГ. Используйте только оригинальные расходники (сертеры, канюли и инсулиновые резервуары), одобренные производителем к использованию с вашей помпой или НМГ. Использование непроверенных или модифицированных расходников может привести к неточностям и ошибкам дозирования инсулина, что создаст значительный риск для пользователя. 
+Безопасность **AAPS** зависит от функций безопасности ваших устройств (телефона, помпы, сенсора НМГ). Используйте только полностью работоспособную, одобренную FDA/CE инсулиновую помпу и систему НМГ. Не используйте сломанные, модифицированные или самодельные инсулиновые помпы или трансмиттеры НМГ. Используйте только оригинальные расходные материалы (устройства для установки, катетеры и инсулиновые резервуары), одобренные производителем для использования с вашей помпой и CGM. Использование непроверенных или модифицированных расходников может привести к неточностям и ошибкам дозирования инсулина, что создаст значительный риск для пользователя. 
 
-Не пользуйтесь **AAPS**, если вы принимаете ингибиторы SGLT-2 (глифлозины), поскольку они снижают уровень СК. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+Не пользуйтесь **AAPS**, если вы принимаете ингибиторы SGLT-2 (глифлозины), поскольку они снижают уровень ГК. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
 ```
 
 ```{admonition} Disclaimer
