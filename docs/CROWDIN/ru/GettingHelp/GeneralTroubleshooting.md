@@ -29,7 +29,7 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 * Lost keystore, or new keystore: [Reinstalling AAPS](#reinstall-aaps)
 * Updating **AAPS**: [with AAPS Builder](#aaps-builder-updates), [with a browser build (fork)](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
 
-### Installing
+### Установка
 
 * [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
 * Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
@@ -52,9 +52,9 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## Bluetooth related issues
+## Проблемы, связанные с Bluetooth
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Об известных проблемах с соединением Bluetooth, обрывах связи с помпой или Pod, а также о проблемах активации и соединения см. [Проблемы с Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
@@ -66,21 +66,21 @@ For known issues with Bluetooth connections, dropouts of pump/pods, or activatio
 
 **AAPS** can help you find the right settings for your phone: open the **menu** (☰) > **About** and tap **Don't kill my app?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). The [setup wizard](#setup-wizard-bluetooth-battery-optimisation) also asks you to turn off battery optimization for **AAPS** and Bluetooth.
 
-Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
+В Android есть настройки экономии батареи, которые включены по умолчанию. Эти настройки автоматически приостанавливают приложения, которые не нужны для работы системы, чтобы снизить расход батареи приложениями, которым не нужно работать все время.
 
 When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip**.
 
-It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
+Важно отключить оптимизацию батареи, чтобы **AAPS** и другие вспомогательные приложения все время оставались активными.
 
-Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
+В зависимости от модели и производителя телефона это может понадобиться отключить в нескольких местах и настройках.
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+***ПРИМЕЧАНИЕ:** Выполните шаги ниже, чтобы отключить оптимизацию батареи для службы Bluetooth, если на вашем телефоне есть такая возможность. Те же шаги подходят для **AAPS** и других приложений, но снимки экрана показывают это только для службы Bluetooth.*
 
-#### Pixel phones (stock Android)
+#### Телефоны Pixel (чистый Android)
 
-* Go to the Android settings, select "Apps".
+* Перейдите в настройки Android и выберите «Приложения».
 
-  ![Настройки Android¦приложений](../images/troubleshooting/pixel/01_androidsettings.png)
+  ![Настройки Android¦Приложения](../images/troubleshooting/pixel/01_androidsettings.png)
 
 * Выберите "Просмотреть все приложения"
 
@@ -121,7 +121,7 @@ Depending on your phone model and make there may be more than one location and s
 
   ![Unrestricted](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### Huawei phones
+#### Телефоны Huawei
 
 See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
 
@@ -131,7 +131,7 @@ See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones
 
 ## Непрерывный мониторинг гликемии
 
-Useful links to known issues and steps to resolve for CGMs.
+Полезные ссылки на известные проблемы с CGM и способы их решения.
 
 * [General](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
@@ -146,7 +146,7 @@ Useful links to known issues and steps to resolve for CGMs.
 
 ## Помпы
 
-Useful links to known issues and steps to resolve for Pumps
+Полезные ссылки на известные проблемы с помпами и способы их решения
 
 * [Accu-Chek Combo](#combov2-tips-for-basic-usage)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
@@ -165,9 +165,9 @@ Useful links to known issues and steps to resolve for Pumps
 
 ## Телефоны
 
-Useful links to known issues and steps to resolve for Phones
+Полезные ссылки на известные проблемы с телефонами и способы их решения
 
-* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
+* [Список проверенных телефонов и устройств](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
 * [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
 
@@ -175,7 +175,7 @@ Useful links to known issues and steps to resolve for Phones
 
 (generaltroubleshooting-remote-control)=
 
-## Remote control
+## Удаленное управление
 
 * [AAPSClient and remote control (pairing, commands not received)](#client-master-control-troubleshooting)
 * ['Nightscout access token' issues](#remotecontrol-nightscout-access-token)
@@ -188,7 +188,7 @@ Useful links to known issues and steps to resolve for Phones
 
 ## Смарт-часы
 
-Useful links to known issues and steps to resolve for Smartwatches
+Полезные ссылки на известные проблемы со смарт-часами и способы их решения
 
 * [Устранение неполадок в приложении Wear](#Watchfaces-troubleshooting-the-wear-app)
 * [Watch and phone do not communicate](#wear-os-watch-phone-communication)
